@@ -1,0 +1,14 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+cd canvases on the pages: 124 in 56 papers
+  maths identical to the product: 118   differing (refs / index): 6
+
+better 0 / same 118 / worse 0 / unreadable 0 / other 6
+  OTHER Abundance-in-numerical-dimension-one-for-termi#0 tikzcd: product 0 pairs, rebuilt 2 -- not the same maths
+  OTHER Counterexamples-to-weak-chromatic-splitting-sp#1 CD: product 0 pairs, rebuilt 0 -- not the same maths
+  OTHER Global-quantum-geometric-Langlands-at-irration#0 tikzcd: product 0 pairs, rebuilt 0 -- not the same maths
+  OTHER Irrational-cubic-fourfolds-with-geometric-K3-c#0 tikzcd: product 1 pairs, rebuilt 1 -- not the same maths
+  OTHER Log-abundance-for-compact-Kahler-spaces-under-#4 tikzcd: product 0 pairs, rebuilt 0 -- not the same maths
+  OTHER Rationality-of-the-Canonical-Unramified-Arthur#0 tikzcd: product 0 pairs, rebuilt 0 -- not the same maths
+
+totals over the comparable canvases: product 6 pairs -> rebuilt 6 pairs over 3.0pt
+wrote _work/regen102.txt (56 papers)

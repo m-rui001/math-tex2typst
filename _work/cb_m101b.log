@@ -1,0 +1,41 @@
+单 2（m101b-pgf）已跑完。工作目录 E:/math，只落 `_work/probe101b_pgf_nodes.py` + `_work/label101b_pgf_nodes.txt`（+ 空的 `_work/m101_err.txt`），中间 `_work/m101b_*` 编译产物已按条款 1 删除。条款 1-8 遵守：未开 typst，未碰 tools//community.md/typst//preprints/；10 个坐标全部由 `probe101a_rot_variants.ink_offsets()` 这一把尺打印（未复制私有副本）；篇名目录用 `os.listdir("_work/flat")` + `startswith(stem[:40])` 且要求恰一命中（8 篇各 1 命中，无 AMBIGUOUS/NOSITE）；每案编译前删同名 `.pdf`，回执带 mtime 与字节数；stderr 单独进 `_work/m101_err.txt`（空）。
+
+## 关键读数（pt；页坐标 y 向下，left/right/top/bottom = 墨盒边缘 − 点中心）
+
+节点行（真节点 = 声明选项串 + 真实文字，只排这一个 `\node` + 一个 `\fill` 点）：
+
+| # | 篇/图 | 选项串 | 真实文字 | 盒宽×高 | left | right | top | bottom | inner sep | font= |
+|---|-------|--------|----------|---------|------|-------|-----|--------|-----------|-------|
+| 01 | P1 pic0 | `anchor=east,rotate=90,red!65!black` | `uncapped band` | 9.96×66.72 | −5.29 | 4.67 | 3.50 | 70.22 | no | no |
+| 02 | P2 pic0 | `rotate=90,anchor=south` | `progress $-x_1$` | 10.93×56.33 | −13.37 | −2.44 | −27.92 | 28.41 | no | no |
+| 03 | P2 pic1 | `rotate=90,anchor=south` | `height $x_1$` | 10.80×39.83 | −13.24 | −2.44 | −19.67 | 20.16 | no | no |
+| 04 | P3 pic1 | `anchor=east,rotate=90` | `$-1\le y\le1$` | 10.09×49.52 | −5.67 | 4.42 | 3.52 | 53.04 | no | no |
+| 05 | P4 pic1 | `anchor=west,rotate=-63` | `$R_{\mathrm{out}}$` | 14.11×21.88 | −2.71 | 11.40 | 0.81 | 22.69 | no | no |
+| 06 | P5 pic3 | `rotate=90,anchor=south` | `return bridge` | 9.96×57.66 | −13.24 | −3.28 | −28.84 | 28.82 | no | no |
+| 07 | P6 pic1 | `rotate=90,anchor=south` | `$D_2$ (second variable)` | 10.80×90.02 | −13.80 | −2.99 | −45.01 | 45.01 | no | no |
+| 08 | P6 pic2 | `rotate=45,anchor=south,inner sep=3pt` | `$r_\delta(y)$` | 22.50×22.50 | −17.25 | 5.25 | −17.25 | 5.25 | **yes** | no |
+| 09 | P7 pic0 | `rotate=90,anchor=south,font=\footnotesize` | `backward time` | 7.97×54.32 | −9.75 | −1.78 | −27.15 | 27.17 | no | **yes** |
+| 10 | P8 pic2 | `rotate=34,anchor=south` | `$a=b_f$` | 28.18×21.03 | −19.52 | 8.67 | −16.68 | 4.35 | no | no |
+
+对照行（同文字、同 inner sep/font，仅 `anchor=center` 且无 rotate；这样减出来才是 anchor+rotate 的净挪动）：
+
+| # | 对照选项串 | 盒宽×高 | left | right | top | bottom |
+|---|-----------|---------|------|-------|-----|--------|
+| 01 | `red!65!black,anchor=center` | 66.72×9.96 | −33.35 | 33.37 | −5.29 | 4.67 |
+| 02 | `anchor=center` | 56.33×10.93 | −28.41 | 27.92 | −5.98 | 4.95 |
+| 03 | `anchor=center` | 39.83×10.80 | −20.16 | 19.67 | −5.29 | 5.51 |
+| 04 | `anchor=center` | 49.52×10.09 | −24.76 | 24.76 | −5.67 | 4.42 |
+| 05 | `anchor=center` | 19.05×10.80 | −9.78 | 9.28 | −5.13 | 5.68 |
+| 06 | `anchor=center` | 57.66×9.96 | −28.82 | 28.84 | −5.29 | 4.67 |
+| 07 | `anchor=center` | 90.02×10.80 | −45.01 | 45.02 | −5.29 | 5.51 |
+| 08 | `inner sep=3pt,anchor=center` | 21.86×10.80 | −10.93 | 10.93 | −5.29 | 5.51 |
+| 09 | `font=\footnotesize,anchor=center` | 54.32×7.97 | −27.17 | 27.15 | −3.46 | 4.51 |
+| 10 | `anchor=center` | 26.71×10.80 | −14.00 | 12.71 | −5.75 | 5.05 |
+
+## 读数说明（供 A 判读）
+
+- 全部 10 案落在 pgf 的「先把节点转、再把转过的 anchor 放到点上」这一条上，无一例外：`anchor=south`+rot90 把墨盒推到**点左侧**（转过的南边成了东/右边，02/03/06/07/09 全是 right≈−2~−3、left≈−13），`anchor=east`+rot90 把墨盒推到**点下方**（01/04 bottom≈+53~+70），`anchor=west`+rot−63 推到**右下**（05），`anchor=south`+rot45/34 推到**左上**（08/10）。
+- 对照行四偏移基本对称（left≈−right），确认对照页确实是无 anchor 居中；两行相减即 anchor+rotate 的净位移。
+- 条款 7 相关：`inner sep=3pt`（08）与 `font=\footnotesize`（09）在本探针里**只**按选项串排页，**未**并入各篇图片级的 `every node/.style={font=\small}`（P1/P2/P4/P7/P8 有、P3/P5/P6 无）；即 08/09 的盒是「选项串自身」的盒。若 A 要把这 10 个盒与真图逐像素比，P1/P2/P4/P7/P8 需再叠 `font=\small`——回执里已逐行标出该字样来源（选项串 vs 未写），未按常识写死。
+
+回执全文：`_work/label101b_pgf_nodes.txt`（13716 B，10 NODE 行 + 10 CTRL 行，每行附 pdf 的 mtime/bytes 与 `ink_offsets` 原始返回元组）。

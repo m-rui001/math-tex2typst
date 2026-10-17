@@ -1,0 +1,7 @@
+papers with off-page ink: 6
+  Canonical-conformal-limits-of-subcritical-FK-planar-maps-Septe   1 pages  worst 516pt  [99]
+  Strongly-rational-unitary-vertex-operator-algebras-and-conform   1 pages  worst 161pt  [20]
+  Quantitative-Superexponential-Bounds-for-van-der-Waerden-Numbe   1 pages  worst 37pt  [18]
+  Perfect-completeness-for-2-to-1-games-September-23-2026          1 pages  worst 20pt  [31]
+  Complex-Matrix-Multiplication-Below-2.258-and-Rectangular-Boun   1 pages  worst 14pt  [51]
+  All-temperature-pressure-for-orthogonally-invariant-Ising-spin   1 pages  worst 4pt  [30]

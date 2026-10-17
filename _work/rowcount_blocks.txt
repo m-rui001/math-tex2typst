@@ -1,0 +1,23 @@
+==== D274 lines=335
+  block L248-L312 rows=65 bareWidths=[6]
+    head1: | 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+    last : | $Y(0)e^{CT}<\eta^2$ | Gronwall 相容初值条件 | main.tex:561 | 首穿排除论证 | bootstrap 开机失败 |
+==== D309 lines=416
+  block L309-L415 rows=107 bareWidths=[6]
+    head1: | 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+    last : | $k=m-1$ 顶型 | 唯一外坐标极限为 $t$ | build/sections/02-affine.tex:176 | §15 外坐标归零 | 改动则误差不可控 |
+==== D341 lines=561
+  block L479-L556 rows=78 bareWidths=[6]
+    head1: | 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+    last : | $h^{-\varepsilon}$ | 管极大算子范数 | build/sections/10-bochner-riesz.tex:181-184 | 维数三结论 | 定量强度退回已知 |
+==== D368 lines=1821
+  block L743-L814 rows=72 bareWidths=[6]
+    head1: | 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+    last : | $\xi=u\mathbf n+X$ 分解与 $W=\alpha(s)^2$ | converse 基本量 | static_ad/boosted/boosted-converse.tex:72,97-98 | 图斜
+  block L1689-L1749 rows=61 bareWidths=[6]
+    head1: | 记号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+    last : | $\varpi\{T:T=S\}=1$ | 局部化终点 | shared/localization/smooth-localization.tex:63-72 | 等号类的边界识别 | 假设 (a) 或 (b) 失败
+==== D544 lines=248
+  block L165-L219 rows=55 bareWidths=[6]
+    head1: | 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+    last : | 约化取用的取舍 | 不用其额外结论 | 02-reductions.tex:102-105 | §4 里放弃维数性质路线的决定 | 改动则需重走"最高度"路线 |

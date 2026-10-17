@@ -1,0 +1,9 @@
+pre_fence_at_273=False hits=8
+ 283 fence=0 \rank | 其中每个 $Z_s$ 对称、满足 $(Z_s)_{ii}=(Z_s)_{0i}$，并且 $\sum_{s\in L}\rank Z_s\le R_*$。
+ 285 fence=0 \rank | 我一开始想走的路线是纯线性代数：把 $w$ 看成 $\mathbb F^{p_*}$ 方向的分块矩阵直接按标签对角化，或者干脆做谱分解。这条路死得很实在：谱投影的像根本不尊重 $p_s\otimes(\cdot)$ 这个张量结构，拆出来的块既给不出 $\lvert L\rvert\le R_*$ 也
+ 289 fence=0 \rank | 拿到平坦层以后，$Q$ 取 $V_{j+2}$ 对其限制配对根子的商，$Q$ 上的诱导配对非退化；首尾秩相等意味着 $V_j$ 的像铺满整个 $Q$，且与 $V_j$ 配对为零的向量自动与 $V_{j+2}$ 配对为零。选择子坐标 $s_a$ 定义算子 $M_a[f]=[s_af]$。`04-mom
+ 305 fence=0 \rank | 接着定义有效检验空间 $C_i=\{x\in\mathcal X:\text{对每个 }e\in\mathcal E\text{ 有 }x_e\in S_{i,e}^{+}\otimes S_{i,e}^{-}\}$，并在每张叶上固定它的一组基（`04-moments.tex:210-219`）。存
+ 311 fence=0 \rank | 证明里我先把计数账抄全：对称秩 $r$ 矩阵在 $d_B$ 维坐标空间上可写 $ZHZ^{\mathsf T}$，$Z$ 有 $r$ 个独立列、$H$ 是可逆对称 $r$ 阶阵；验证取所选列基 $Z$ 的左逆 $L$ 令 $H=LxL^{\mathsf T}$，投影 $ZL$ 从左侧固定 $x$、由
+ 313 fence=0 \rank | 第一条性质（`04-moments.tex:312-362`）的关键是先把线性部分当形式变量。固定非零剖面并写 $x_e=Z_eH_eZ_e^{\mathsf T}$，$r_e=\rank x_e$；标签 $l$ 的原子的单个索引矩阵贡献在 $l\in f$ 时是正向式 $Z_e^{\mathsf 
+ 343 fence=0 \rank | 第二条岔路，我以为 $w\in W$ 的秩分解可以走谱路线。死因我在 §15 写过一句，这里补全推理：谱分解给出的直和项是 $w$ 自身的不变子空间，而 $W$ 的定义（`02-geometry.tex:157-168`）要求每个块都落在由点矩 $v(s,z)v(s,z)^{\mathsf T}$ 
+ 393 fence=0 \rank | | $\sum_e\rank x_e\le K$ | $C_i$ 内剖面的总分量秩 | `04-moments.tex:222-223` | 低秩剖面计数 | $2^{An}$ 的秩数组个数失效 |

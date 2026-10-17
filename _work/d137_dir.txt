@@ -1,0 +1,25 @@
+exact=True siblings=["Strict-convexity-and-differentiability-of-the-planar-exponential-first-passage-limit-shape-September-24-2026"]
+build/sections/strict/links.tex                 59030B  1240L
+build/sections/strict/foundations.tex           52326B  1100L
+build/sections/strict/access.tex                46457B   930L
+build/sections/strict/improvement.tex           40085B   820L
+build/sections/strict/probability.tex           27311B   622L
+build/sections/differentiability/witnesses.tex    20185B   483L
+build/sections/differentiability/crossings.tex    18785B   413L
+build/sections/consequences.tex                 15489B   330L
+build/sections/differentiability/endpoints.tex    13640B   327L
+build/sections/introduction.tex                 10990B   218L
+build/sections/strict/phases.tex                10548B   189L
+build/sections/differentiability/scales.tex      8122B   215L
+build/sections/differentiability/preliminaries.tex     5615B   143L
+build/sections/strict/preliminaries.tex          4853B    99L
+build/sections/differentiability/conclusion.tex     3499B    77L
+build/main.tex                                   3328B    91L
+build/sections/strict/conclusion.tex             2083B    51L
+total=342346B files=17
+
+HEAD600=# D137 平面指数第一通过的极限形状：严格凸与可微的链路逼近与改进界
+
+论文：`Strict-convexity-and-differentiability-of-the-planar-exponential-first-passage-limit-shape`（队列行 119）。
+正文唯一来源：`preprints/Strict-convexity-and-differentiability-of-the-planar-exponential-first-passage-limit-shape-September-24-2026/build/sections/`，即 `strict/*.tex` 五件主文加 `differentiability/*.tex` 六件与 `introduction.tex`、`consequences.tex`、`main.tex`，共 17 个 `.tex`。
+Lean 登记（`lean/formalization.yaml:1390--1392`）三行原文为 `comparator_config: ComparatorChallenges/PlanarFirstPassage.json`、`declaration: OAI.PlanarFPP.manuscriptMain`、`file: OAI/Probability/FirstPassag

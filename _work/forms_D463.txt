@@ -1,0 +1,6 @@
+note=D463-对数Kodaira维数与整条纤维的形变.md
+bytes=175435 lines=878
+total-tex-mentions=142
+ONE-PREFIX=141
+WITH-BUILD=1
+sample: 07-descent.tex=26, 08-numerical-extension.tex=20, 02-parameter.tex=16, 05-model-comparison.tex=15, 03-root-hodge.tex=13, 01-introduction.tex=12, 06-marking.tex=12, 04-constancy.tex=10

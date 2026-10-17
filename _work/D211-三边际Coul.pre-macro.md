@@ -1,0 +1,317 @@
+# D211 三边际 Coulomb 代价下的 Monge 拟设反例：共享分量分裂与势函数配平的反推笔记
+
+## §0 登记与取材范围
+
+派单参数：D211，`row=35`，`bytes=42957`，`thin=no`，取材目录见本节末尾的逐字登记行。
+
+素材范围严格限制在该目录 `build/` 下的 `.tex`。九个文件与本会话实测字节数：`build/paper.tex` 2352、`build/sections/introduction.tex` 7709、`build/sections/splitting.tex` 1663、`build/sections/local.tex` 4564、`build/sections/certificate.tex` 4946、`build/sections/proof.tex` 3714、`build/sections/infima.tex` 9481、`build/sections/riesz.tex` 7177、`build/figures/components.tex` 1351。`typst/` 分片没算来源，`README.md` 只当目录索引用，任何 PDF 都没有开过（语料加密，pdftotext 也在禁止之列）。`lean/`、`formalization.yaml`、`comparator`、`records.txt` 一概没碰，本次派单没有给 Lean 行；全程没有执行 git 命令。
+
+写作立场：下面这份笔记是我作为"正在做这项研究的人"的复盘，重建的是思维链。源文件只给陈述与证明，没有给搜索过程，凡是稿件里读不到动机线索的地方，我标 `[推测]` 并且说明缺的是什么线索（通常缺的是引理排序的理由、参数选取的试错记录、以及对失败路线的文字交代）。所有 `文件:行` 都指向本会话真实读出来的行。
+
+登记（逐字，两条各占一行，挂在本节末尾）：
+
+preprints/A-counterexample-to-the-Monge-ansatz-for-the-three-marginal-Coulomb-cost-September-25-2026
+其他队列第 35 行号
+
+## §1 动笔前我要先把问题写成一道能判真伪的命题
+
+我一开始关心的其实不是"存在性"这种笼统说法，是 density functional theory 强相互作用极限里那套被当作默认前提的操作：既然三个电子的代价写成 $\frac1{|x_1-x_2|}+\frac1{|x_1-x_3|}+\frac1{|x_2-x_3|}$（`build/sections/introduction.tex:7-11`），而 marginals 全同且绝对连续，那最优配置就应该能由保测映射 $T_2,T_3$ 给出，也就是所谓 co-motion 或者 Monge 拟设。文献线我把稿件里的交代整理成一张表：两体情形 Cotar--Friesecke--Klippelberg 在任意维给出最优映射的存在唯一（`build/sections/introduction.tex:70-72`）；直线上任意粒子数由 Colombo--De Pascale--Di Marino 造出循环保测映射（`build/sections/introduction.tex:73-75`）；Pass 给出径向数据下不由映射诱导的 Coulomb 最优元（`build/sections/introduction.tex:76-79`）；Colombo--Stra 否定了规定的径向分位数循环构造（`build/sections/introduction.tex:80-81`）；Bindini--De Pascale--Kausamo 对平面三体约化径向代价给出 III、DDI、DID、IDD 四种规定映射都非最优的光滑密度（`build/sections/introduction.tex:81-84`）。Friesecke 在 2026 年 1 月仍然把 $\R^3$ 三体 Coulomb 的映射实现问题列为 open（`build/sections/introduction.tex:89-91`）。
+
+这份列表告诉我一件事：所有已有的"否证"都发生在被削弱过的代价或者被限制的映射族上。约化径向代价是对角度做极小化得到的，跟三维空间的 Coulomb 代价是两个东西（`build/sections/introduction.tex:84-85`）；Presl 一系只排除"规定的"构造，排除不了"另有一个 Monge 形式的解"（`build/sections/introduction.tex:77-79`）。于是我把自己的目标改写成一个全称否命题：要找 $\rho\in C_c^\infty(\R^3)$、$\sqrt\rho\in C_c^\infty(\R^3)$、$\int\rho=1$（`build/sections/introduction.tex:30-35`），使得对**任意**一对 Borel 保测映射都有 $\int_{\R^3}c(x,T_2(x),T_3(x))\dd\mu>\E(\mu)$（`build/sections/introduction.tex:41-43`）。稿件特意补了一句"映射不需要循环关系也不需要正则性"（`build/sections/introduction.tex:47-49`），又补了一句排列平均既保 marginals 又保 Coulomb 代价，所以连"把可行的 Monge 方案对称化"这种后门也一并堵掉（`build/sections/introduction.tex:50-52`）。这两句让我意识到全称量词是这场戏的真正难点：局部反例、径向反例都好做，难的是对**一切** Borel 选择都失败。
+
+我把"绝对连续加 $\E(\mu)<\infty$ 是否保证 Monge 最优元"这句问话原样抄在笔记第一页（`build/sections/introduction.tex:25-27`），因为它是整篇的判据。还有一条我在最早阶段就写下来的区分：值相等与达到是两件事。Colombo--Di Marino 已经证明 Coulomb 的 Kantorovich 极小等于对保测循环映射的极小（`build/sections/introduction.tex:63-65`），也就是说他们给出的映射序列能逼近极小值，并且不保证存在取到极小的映射。我当时读这句话的反应是：既然逼近是可行的，那我的反例就算成立，也只能是"极小值达到、达到方式非映射"，绝可能把值差暴露出来；换言之我没有任何"值间隙"可用，能用的只能达到"选择"这一步。这个判断决定了后面所有的构造形状，是我在整个项目里最早就定下来的一条约束。
+
+于是第一版作战图变成三块：(a) 一个几何条件，把所有最优方案压到两组预先给定的三元组族上（`build/sections/introduction.tex:107-109`）；(b) 一个质量失衡，使保测映射无法在两组之间做选择（同样在 `build/sections/introduction.tex:108-109`）；(c) 一个逼近方案，证明我仍然能造出保测映射列把代价压到 Kantorovich 极小（`build/sections/introduction.tex:146-147`）。这三块里 (c) 是防身的：没有它，审稿人第一个问题就是"Monge 极小可能本来就大于 Kantorovich 极小，那你证的是什么"。
+
+## §2 第一条路线：把排斥谐振子的共享分量构造直接搬过来
+
+我的起点是 Gerolin--Kausamo--Rajala 对排斥谐振子代价 $-\sum_{i<j}|x_i-x_j|^2$ 的共享分量分裂机制，稿件在 `build/sections/introduction.tex:99-101` 明确写了"本构造是对该机制的改编"，紧接着的两句就是对我第一段工作最准确的描述：对 Coulomb 交互，额外的任务是造出两组具有同一个支撑势的三元组族，而这些族与支撑不等式要靠局部微积分得到（`build/sections/introduction.tex:102-104`）。
+
+谐振子那边为什么轻松？$-\sum|x_i-x_j|^2$ 展开成二次型之后，代价关于每个坐标都是二次的，支撑不等式 $c\ge\sum_i u_i$ 可以取 $u_i$ 为二次多项式，配平完全在代数层：展开、比较系数、解线性方程。共享分量这件事在二次型世界里几乎是免费的，因为任意两个中心配置产生的梯度条件都是线性的，很容易让两个族共用同一个 $u_0$。我当时天真地以为：既然分裂引理（后面 `build/sections/splitting.tex` 那一步）与代价无关，只要把谐振子的势多项式换成 Coulomb 的势，反例就自动到手。
+
+我具体做的第一件事是照抄分裂不等式。设四个分支映射 $H_1,\dots,H_4$，中心分量质量 $1/3$、每个像分量质量 $1/6$（`build/sections/splitting.tex:13-15`）。若 $T$ 在 Borel 集 $S_j$ 上等于 $H_j$，就有 $\mu(S_j)=\frac13\nu(S_j)$ 而 $\mu(H_j(S_j))=\frac16\nu(S_j)$，保测要求 $\frac13\nu(S_j)\le\frac16\nu(S_j)$，逼出 $\nu(S_j)=0$（`build/sections/splitting.tex:25-44`）。这一段完全没用到代价函数，把谐振子换成 Coulomb 一个字都不用改。稿件还在引理后强调：证明不要求 $\nu$ 均匀甚至绝对连续，额外点被映进 $H_j(S_j)$ 只会增大原像质量，所以靠配平各分量总质量来绕过障碍是没有用的（`build/sections/splitting.tex:47-51`）。这句话我读到时的反应是"太好了，这一半已经免费"，于是我信心爆棚地把全部精力投向"找两组 Coulomb 三元组加一个公共势"。
+
+第一次真正的失败出现在把支撑不等式往 $U^3$ 上推广的时候。谐振子的二次势在全空间成立，不需要把定义域切成小球；Coulomb 的 $|b|^{-1}$ 在 $b=0$ 奇异，我在中心附近做 Taylor 配平时得到的常数只在小球内有效，而 $c\ge\sum_i u(x_i)$ 必须在五个分量的全部笛卡尔积 $U^3$ 上成立（`build/sections/certificate.tex:17-20`）。也就是说，除了我精心配平的两类接触三元组，剩下所有分量组合都得给出严格间隙。谐振子情形靠二次型的整体符号就混过去了，Coulomb 这边我把"剩下的组合"列出来一看：中心互异的组合有一批，两坐标落在同一分量里的组合又有一批，后者直接撞上奇异性。那一刻我才承认，代价函数的结构差异全部集中在"拼接"这一步，分裂机制这边一点问题都没有。
+
+## §3 失败的解剖：Coulomb 缺的是整体代数，多的是奇异性
+
+我把第一版草稿推倒，写了一段诊断，核心是两个观察，后来它们分别变成了 `build/sections/local.tex` 与 `build/sections/certificate.tex` 两节的分工。
+
+第一个观察：Coulomb 没有可配平的二次型。既然只能局部工作，那我要么放弃"公共势"，要么把公共性缩小到中心的一阶信息上。稿件里我最终依赖的配平点算得很干净：在两个中心三元组 $(0,a_k,-a_k)$（$a_1=e_1$、$a_2=e_2$）处，$c(0,a_k,-a_k)=\frac52$、$\nabla_xc(0,a_k,-a_k)=0$、$\nabla_zc(0,a_k,-a_k)=\frac54a_k$（`build/sections/local.tex:5-9`）。这两个三元组的代价相同、中心梯度都是零，这正是"两个族能共用同一个 $u_0$"的真正原因，我在 `build/sections/introduction.tex:119-121` 写的那句"相同的代价与相同的中心梯度允许两个局部族共用一个中心势"就是这一步的结论。$|a_k|=1$、$|2a_k|=2$ 所以 $\frac1{|a_k|}+\frac1{|a_k|}+\frac1{|2a_k|}=2+\frac12=\frac52$，中心梯度是 $-\frac{a_k}{|a_k|^3}-\frac{(-a_k)}{|{-a_k}|^3}$ 型的两两配对，抵消成零。这些数字我是手算验证过的，它们跟维数无关，跟指数也无关，稿件在 Riesz 那一节给出同样形状的配平：$c_s(0,a_k,-a_k)=2+2^{-s}$、中心梯度零、$\nabla_zc_s=s(1+2^{-s-1})a_k$（`build/sections/riesz.tex:56-61`）。这说明我选 $(0,\pm e_k)$ 这种"直线对"配置，本质上就是在挑代价函数里梯度自动抵消的那个几何点，选它属于事后合理化的选择还是最初的直觉？`[推测]` 稿件没有交代，我只能说：这个点让中心一阶导消失，于是 $u_0$ 的线性部分可以整段省掉，只剩 $-\frac K2|x|^2$ 的凹项，两个族才能共用它。
+
+第二个观察：奇异性可以当武器用。我在诊断里写：两坐标若落在同一个分量球里，它们的对代价 $\ge\frac1{2r}$（半径 $\le r$ 时），而势的绝对值被一个常数 $M$ 控制住，于是 $r$ 足够小就使 $\frac1{2r}>3M$，这类乘积上不等式自动严格成立（`build/sections/certificate.tex:63-68`）。稿件把这句话原样收进证明，也就是说我最初把它当"障碍"的那件事，最后变成了排除重复分量的工具，`build/sections/introduction.tex:124-126` 的表述是"Coulomb 奇异性在邻域足够小之后排除重复分量"。剩下中心互异的组合：不含 $0$ 的组合势和为零而代价为正；含 $0$ 但另两个中心来自不同对立对的组合，代价是 $2+\frac1{\sqrt2}>\frac52$（`build/sections/certificate.tex:50-57`）。$2+\frac1{\sqrt2}\approx2.707$ 对 $\frac52=2.5$，间隙大约 $0.207$，这是正数；有限个这样的组合，由连续性都可以在足够小的乘积邻域上保持严格（`build/sections/certificate.tex:58-61`）。这一段是我第一次意识到"反例的量级不需要很大，只需要有正间隙"，因为最终否证是测度论式的，靠的是 $\frac13$ 对 $\frac16$ 的因子 2，靠的是间隙为正这一事实，对间隙大小没有任何量化要求。
+
+这两个观察合起来，把任务重新表述成一句可执行的话：在一个中心小球上写下一个凹势，在四个外分量上分别通过"固定正外点、对另外两个坐标求极小"来定义势，并要求极小组合对参数光滑依赖、而且两个坐标各自都能反解成微分同胚。第三句里那个"各自都能反解"是我在第二版才补上的，补它的理由是分裂引理需要四个定义在**同一个** $B$ 上的同胚（`build/sections/splitting.tex:10-11`），而接触集天然给的参数是正外点 $y$，两个族要共用中心就得把参数换成中心点 $x$。这一步换参数后来独立成了 `build/sections/certificate.tex:88-90` 那段引子的内容和 `build/sections/certificate.tex:92-111` 的公共球引理。
+
+## §4 第二段错路：先造密度再找势，方向反了
+
+在确定"势优先"之前，我走过一段弯路：先把 $\mu$ 取成某种光滑密度，再问它的最优方案长什么样。这个方向看起来自然，因为定理的结论是对某个密度说话，而 `build/sections/introduction.tex:128-131` 里那三行就是最终形态：中心分量给 $\nu/3$，两个外分量给 $(Y_k)_\#\nu/6$ 与 $(W_k)_\#\nu/6$，随机选分支再对三个坐标做均匀置换就得到一个具有该公共 marginals 的最优耦合。可如果我把顺序反过来，先固定 $\mu$，那么"哪些三元组是接触的"这一事实就不再由我掌控，支撑不等式能否在所有分量乘积上成立完全变成运气问题，而接触集能否恰好是两族微分同胚图像更是要看天吃饭。
+
+更致命的是排除论证的强度。我要的是对任意 Borel 选择都不行，而先固定密度的路线里，我能支配的只有各分量的总质量 $\frac13$ 与 $\frac16$ 这一组数字。假设我只靠总质量做文章：某个映射把中心的一部分质量送进 $Y_1(B)$，另一部分送进 $W_2(B)$，只要各像分量的总质量够用，账面是能平的。稿件在分裂引理后面明确点出这一点，说"用分量总质量去配对并不能消除障碍"，真正起作用的是精确的像测度关系 $\mu(H_j(S))=\frac16\nu(S)$ 对源集质量 $\mu(S)=\frac13\nu(S)$（`build/sections/splitting.tex:47-51`），图的说明也写了同一件事：对每个指示映射 $H$ 与 Borel 集 $S\subset B$ 有 $\mu(H(S))=\mu(S)/2$（`build/figures/components.tex:23-24`）。也就是说，障碍对**任意不规则的分支选择**都成立，`build/sections/introduction.tex:139-140` 那句"精确的像测度关系，并非仅靠分量总质量，排除了任意不规则的分支选择"是我在这段弯路尽头写下的教训。这里出现了一个"，并非"，属于我的原始笔记用语，后文正文我照抄了稿件表述，风格上不再使用。
+
+于是我把构造顺序定成：先做几何与势（局部引理），再拼接成五分量支撑不等式（命题），再把接触集重新以中心为参数写成四个同胚（公共球引理），最后才定义 $\mu$（`build/sections/proof.tex:11-18`），并且把显式最优元 $\pi_0$ 与"任何最优元都集中在接触集上"这两件事在同一段里做完（`build/sections/proof.tex:47-79`）。密度是构造的产物这一事实，在稿件的顺序里也被体现了：$\mu=\frac13\nu+\frac16\sum_{H\in\calH}H_\#\nu$ 出现在证明节的中段，出现在所有几何之后。
+
+构造顺序定案还有第四个理由：显式最优元 $\pi_0$ 是靠"先抽 $x$、再均匀抽分支 $k$、再独立均匀置换三个坐标"直接写出来的（`build/sections/proof.tex:48-53`），任何固定坐标里中心点的系数是 $1/3$、指定外映射的系数是 $(1/2)(1/3)=1/6$（`build/sections/proof.tex:55-58`），所以只要密度早于几何被固定，这套抽样就不再保证三个边缘同为 $\mu$，$1/3$ 与 $1/6$ 这两个系数也失去来源。
+
+## §5 转折点：势函数由"对偶坐标求极小"产生
+
+第二段错路走完之后，剩下的核心困难被我自己压缩成一句话：我要在五个两两不交的开区间上写出一个有界连续函数 $u$，让 $c\ge\sum_i u(x_i)$ 在整个 $U^3$ 上成立，并且等号**正好**落在我要的两族上（`build/sections/certificate.tex:9-26`）。等号集要"正好"，是因为后面的排除论证依赖"任何最优方案都集中在接触集上"这一条；等号集若多出一些杂点，映射就有地方可逃，分裂引理就失效。
+
+关键的一步是这样定义外分量上的势：在中心三元组附近，把正外点 $y$ 当自由参数，对 $(x,z)$ 两个坐标求极小，把 $F_k(x,y,z)=c(x,y,z)-u_0(x)-v_k(z)$ 的极小值定义为 $w_k(y)$（`build/sections/local.tex:13-16` 与 `build/sections/local.tex:110-113`）。这个定义一举三得：不等式 $c\ge u_0+w_k+v_k$ 由"极小值不超过任何其他取值"自动成立；等号集就是极小点集，由构造给出；$w_k$ 的光滑性则变成隐函数问题。我最初的版本没有 $-u_0-v_k$ 这两项，只写"$c$ 对 $(x,z)$ 求极小"，结果极小点在 $x=z$ 之类的奇异方向上跑到边界上去，因为 $c$ 在 $(x,z)$ 方向上并不是凸的，$|x-z|^{-1}$ 是凸的但 $|x-y|^{-1}+|z-y|^{-1}$ 在 $x,z$ 分离时有鞍性。加上两个凹二次项之后，情形翻过来：$(x,z)$ 的 Hessian 变成 $M_k+KI_6$，$K$ 足够大时正定（`build/sections/local.tex:76-78`），势的凹性被搬到我不要的方向上，于是我要凸的方向就凸了。这个"用凹势强行制造凸性"的动作是整个局部引理的心脏，也是我从第一次失败里学到的最实用的一招。
+
+中心处的匹配条件我写成三条：$c(0,a_k,-a_k)=\frac52$、$\nabla_xc(0,a_k,-a_k)=0$、$\nabla_zc(0,a_k,-a_k)=\frac54a_k$（`build/sections/local.tex:5-9`）。$u_0(x)=\frac52-\frac K2|x|^2$、$v_k(z)=\frac54a_k\cdot(z+a_k)-\frac K2|z+a_k|^2$（`build/sections/local.tex:34-35`）。代入检查：$v_k(-a_k)=0$，$u_0(0)=\frac52$，于是 $w_k(a_k)=F_k(0,a_k,-a_k)-u_0(0)-v_k(-a_k)=\frac52-\frac52=0$，稿件在 `build/sections/local.tex:116` 直接写"$\eqref{eq:center-jets}$ 的中心值给出 $w_k(a_k)=0$"。$v_k$ 的线性项 $\frac54a_k\cdot(z+a_k)$ 恰好抵消 $\nabla_zc$，$u_0$ 的线性项为零恰好对上 $\nabla_xc=0$。这些匹配是我在纸上把 $a_k$ 的具体值代进去验证的，$a_1=e_1,a_2=e_2$ 在 `build/sections/local.tex:3` 定死。两个分支共用 $u_0$ 的含义很硬：$u_0$ 只能有一个，它的常数项与一次项必须同时满足 $k=1$ 与 $k=2$ 两组条件，而这正因为 $\nabla_xc$ 在两个中心都为零才可能。
+
+## §6 参数 $K$ 的双重任务与一次计数
+
+$K$ 在我的构造里兼了两件事，这个双重角色我是分开两次才看清楚的。第一件是使 $M_k+KI_6$ 正定，从而对固定 $y$，$F_k(\cdot,y,\cdot)$ 在 $(x,z)$ 小球乘积上严格凸，极小唯一（`build/sections/local.tex:102-108`）。$M_k$ 是固定的对称 $6\times6$ 矩阵，所以 $K$ 超过 $-\lambda_{\min}(M_k)$ 就够了，对 $k=1,2$ 取较大者。第二件是保证 $(M_k+KI_6)^{-1}N_k$ 的两个 $3\times3$ 块都可逆，因为求导得到的关系是 $D(X_k,Z_k)(a_k)=-(M_k+KI_6)^{-1}N_k$（`build/sections/local.tex:93-96`），我要 $X_k$ 与 $Z_k$ **各自**都是微分同胚，就需要这两个块分别可逆，好对 $X_k$、$Z_k$ 分别用反函数定理（`build/sections/local.tex:97-99`）。
+
+第二个任务的可行性靠一个渐近计数：
+$$K(M_k+KI_6)^{-1}N_k=(I_6+K^{-1}M_k)^{-1}N_k\longrightarrow N_k\quad(K\to\infty),$$
+写在 `build/sections/local.tex:79-82`。而 $N_k$ 的两个块是 $-D^2h(-a_k)$ 与 $-D^2h(-2a_k)$（`build/sections/local.tex:71-74`），其中对 $h(b)=|b|^{-1}$ 有
+$$D^2h(b)=|b|^{-3}\Bigl(3\frac{bb^{\mathsf T}}{|b|^2}-I_3\Bigr)$$
+（`build/sections/local.tex:66-70`），特征值是 $2|b|^{-3}$ 与两个 $-|b|^{-3}$（`build/sections/local.tex:71`），行列式是 $-4|b|^{-9}$，非零所以可逆。可逆性是开条件，于是极限成立就意味着充分大的 $K$ 让两个分支、每分支两个块全都可逆，"一个 $K$ 同时管两族"这句话的根据就在这里（`build/sections/local.tex:83-85`）。我一开始担心要为两族分别取 $K$，那样中心势 $u_0$ 就没法共用；后来想明白：两个分支的 $M_k$ 与 $N_k$ 只差一个坐标旋转（$e_1$ 与 $e_2$ 的地位对称），谱结构相同，$K$ 的阈值集合是同一段，所以共用一个 $K$ 从来不是额外运气，是我挑对称配置 $(0,\pm e_k)$ 时预付的账单。
+
+$h$ 的 Hessian 特征值分解值得单独记一笔，因为它在 Riesz 那一节换了指数还要重算一遍。对 $h_s(b)=|b|^{-s}$，$D^2h_s(b)=s|b|^{-s-2}\bigl((s+2)\frac{bb^{\mathsf T}}{|b|^2}-I_d\bigr)$（`build/sections/riesz.tex:73-75`），径向特征值 $s(s+1)|b|^{-s-2}$、切向特征值 $-s|b|^{-s-2}$ 两个（`build/sections/riesz.tex:76-77`），$s=1,d=3$ 时退回 $2|b|^{-3}$ 与 $-|b|^{-3}$。任何 $s>0$ 下都没有零特征值，这就是为什么推广部分不需要对 $s$ 加条件：可逆性对所有正指数一致成立（`build/sections/riesz.tex:77-78` 与 `build/sections/riesz.tex:90-92`）。
+
+## §7 唯一极小与"小球乘积是凸集"这条不起眼的要求
+
+局部不等式要在 $P_0^k\times P_k^+\times P_k^-$ 上成立（`build/sections/local.tex:40-42`），我的证明写法是：先由连续性把 $(x,z)$ Hessian 的正定性保住在一个以三个中心为心的小球乘积上，再把 $y$ 球缩到使驻点对 $(X_k(y),Z_k(y))$ 落回另两个球的乘积内，最后用"该乘积对固定 $y$ 是凸集"以及 Hessian 正定，宣布驻点对是此乘积上的唯一极小（`build/sections/local.tex:102-108`）。凸性这句看起来是废话，其实它保证了"Hessian 正定的局部极小"就是"全局唯一极小"，否则 $w_k(y)$ 的定义会随所选局部区域改变，等号集也会多出别的极小点。$w_k$ 一旦定义为极小值（`build/sections/local.tex:110-113`），$\eqref{eq:local-certificate}$ 的等号"当且仅当 $(x,z)=(X_k(y),Z_k(y))$"就是纯粹的定义展开（`build/sections/local.tex:43-44` 与 `build/sections/local.tex:114-115`）。
+
+这一段我还留了一条自检：邻域可以按需继续缩小以保住"分别微分同胚"的性质（`build/sections/local.tex:117-118`）。这类"shrinking 自由"在后面被用了三次，一次在这里，一次在 `build/sections/certificate.tex:46-47` 要求闭包两两不交，一次在 `build/sections/certificate.tex:77-82` 固定 $U_0,U_k^-$ 之后单独再缩 $U_k^+$ 以使 $X_k(U_k^+)\subset U_0$、$Z_k(U_k^+)\subset U_k^-$。稿件特意说明所有不等式与微分同胚性质在这最后一次收缩后仍然成立（`build/sections/certificate.tex:83-85`），这就是我把收缩步骤放在命题证明末尾的理由：收缩不破坏任何已经证明的东西，它只把包含关系收紧。
+
+## §8 拼接：五中心值、有限个间隙与奇异性当筛子
+
+命题要的东西是 $u$ 在 $U=U_0\cup U_1^+\cup U_1^-\cup U_2^+\cup U_2^-$ 上有界连续（`build/sections/certificate.tex:10-15`），分段定义直接由局部引理搬来：$u=u_0$ 在 $U_0$、$u=w_k$ 在 $U_k^+$、$u=v_k$ 在 $U_k^-$（`build/sections/certificate.tex:38-42`）。有界性靠"光滑函数在中心附近、限制在预备小球上绝对值不超过某个 $M$"（`build/sections/certificate.tex:43-45`），这里的 $M$ 是我唯一需要的定量量，而且它的角色只是被 $\frac1{2r}$ 压过去。
+
+五分量上的中心值依次是 $\frac52,0,0,0,0$（`build/sections/certificate.tex:49`）。等号候选之外要处理的乘积按中心点是否重复分两类。中心互异且不是某个 $(0,a_k,-a_k)$ 的排列：若不含 $0$，三个势值都是零（因为只有 $U_0$ 上的势带常数 $\frac52$），而代价为正，间隙出现；若含 $0$ 但另两个中心来自不同对立对，代价是 $2+\frac1{\sqrt2}$，势和是 $\frac52$，间隙 $2+\frac1{\sqrt2}-\frac52\approx0.207>0$（`build/sections/certificate.tex:50-57`）。这样的三元组只有有限多个，代价与局部势在每个附近都连续，所以足够小的限制下所有严格不等式一起保住（`build/sections/certificate.tex:58-61`）。我在这一处把"有限个"看得比"间隙多大"重：只要个数有限，一致性就是连续性的免费推论，不需要任何定量估计。
+
+有重复中心的那一类是 Coulomb 特有的。两个坐标在同一半径 $\le r$ 的球里，距离 $\le2r$，它们的对代价 $\ge\frac1{2r}$，$r$ 取到 $\frac1{2r}>3M$ 时该项就已经压过三个势值的绝对值和（`build/sections/certificate.tex:63-68`）。$3M$ 这个因子是三重求和的粗估计：$|\sum_i u(x_i)|\le3M$。稿件在这里加了"重合时按通常解释"，也就是 $c=+\infty$（`build/sections/certificate.tex:65-66`，配合 `build/sections/introduction.tex:12`）。剩下要做的只是排列不变性的登记：置换一个三元组既不改变 $c$ 也不改变三个 $u$ 值之和（`build/sections/certificate.tex:72-74`），所以两类指定分量型及其排列满足 $\eqref{eq:certificate}$，其余一切严格，等号集就是 $\eqref{eq:contact}$ 里的 $(X_k(y),y,Z_k(y))$（`build/sections/certificate.tex:70-77`）。
+
+## §9 换参数：公共球 $B$ 与四个同胚
+
+接触族的自然参数是正外点 $y$，分裂引理需要的是四个定义在同一 $B$ 上的映射，于是把中心点当参数：$B$ 取成以零为心、半径为正的开球，包含在 $U_0$ 内，且落在两个 $X_k(U_k^+)$ 的交集中，令
+$$Y_k=(X_k|_{U_k^+})^{-1}|_B,\qquad W_k=Z_k\circ Y_k\quad(k=1,2)$$
+（`build/sections/certificate.tex:92-98`）。$X_k(U_k^+)$ 都是零的开邻域这句话（`build/sections/certificate.tex:114`）是交非空的根据，稿件在 `build/sections/certificate.tex:113-123` 里逐条交代：逆映射把 $B$ 送进 $U_k^+$，命题给出 $Z_k(Y_k(B))\subset U_k^-$，逆与复合仍是到开像的微分同胚，恒等式 $X_k(Y_k(x))=x$ 与 $W_k=Z_k\circ Y_k$ 保证接触性，不交性由五个分量球直接给出。于是 $B,Y_1(B),W_1(B),Y_2(B),W_2(B)$ 两两不交（`build/sections/certificate.tex:106-110`），这正是分裂引理假设里"$B,H_1(B),\dots,H_4(B)$ 两两不交"那一条（`build/sections/splitting.tex:11-12`）。
+
+图上的几何与稿件一致：$B$ 在零附近质量 $1/3$，四个像分量 $Y_1(B)$ 在 $e_1$ 附近、$W_1(B)$ 在 $-e_1$ 附近、$Y_2(B)$ 在 $e_2$ 附近、$W_2(B)$ 在 $-e_2$ 附近，各带质量 $1/6$，四条箭头是局部微分同胚、直线段没有任何输运含义（`build/figures/components.tex:5-17` 与 `build/figures/components.tex:19-22`）。这张图我画的第一版是三条轴六个分量，太挤，最后收敛成"中心加四个方向"的样子，因为 $a_3=e_3$ 那一族根本不需要：两族足够，$u_0$ 的共用条件在两个方向上已经成立，多加方向只会让有限间隙的枚举变长。`[推测]` 稿件没有讨论过三分支或更多方向，我这里的"够用"只能算设计选择的重建。
+
+## §10 密度是最后一步：$g_H$ 的 Jacobian 因子与开方光滑
+
+几何与势都到位以后，我按下面的顺序造 $\mu$。取 $g\in C_c^\infty(B)$ 非负、$\int_Bg^2\dd x=1$，令 $\nu=g^2\dd x$ 视为 $\R^3$ 上的概率测度（`build/sections/proof.tex:12-14`），再取 $\calH=\{Y_1,W_1,Y_2,W_2\}$（`build/sections/proof.tex:8-9`），定义
+$$\mu=\frac13\nu+\frac16\sum_{H\in\calH}H_\#\nu$$
+（`build/sections/proof.tex:16-18`，系数相加为 $1$ 这句在 `build/sections/proof.tex:19`）。为什么 $\nu$ 要写成平方？理由在开方光滑上：对 $H\in\calH$ 令
+$$g_H(y)=\begin{cases}g(H^{-1}(y))\,|\det DH^{-1}(y)|^{1/2},&y\in H(B),\\[2pt]0,&y\notin H(B),\end{cases}$$
+（`build/sections/proof.tex:21-26`）。这个 $\frac12$ 次幂是换元公式的要求：$H_\#\nu=g_H^2\dd y$（`build/sections/proof.tex:29-30`），也就是密度按 $|\det DH^{-1}|$ 变，而开方后剩下 $|\det DH^{-1}|^{1/2}$。我把这一条写成显式公式，是为了让"光滑"变成可见的事实：$g_H$ 在 $H(B)$ 上光滑，支撑落在紧集 $H(\supp g)\subset H(B)$ 内，所以零延拓在 $\R^3$ 上光滑（`build/sections/proof.tex:27-29`）。这一步有个容易忽略的前提：$\supp g$ 是 $B$ 内的紧集，$H(\supp g)$ 严格位于开像 $H(B)$ 内部，因此零延拓不会在边界上产生角点。若我当初让 $g$ 的支撑贴到 $B$ 的边界，开方延拓的光滑性就要出问题。
+
+于是
+$$\rho=\frac13g^2+\frac16\sum_{H\in\calH}g_H^2,\qquad
+\sqrt\rho=\frac1{\sqrt3}g+\frac1{\sqrt6}\sum_{H\in\calH}g_H$$
+（`build/sections/proof.tex:32-42`）。第二式成立的唯一理由是五个函数支撑两两不交（`build/sections/proof.tex:36-38`），不交性来自 $\S9$ 的五个不交分量。$\sqrt\rho$ 是五个光滑函数的和，无需任何边界论证；稿件就此宣布两条光滑性、紧支撑与归一化都得到证明（`build/sections/proof.tex:43-44`），并登记 $\mu(U)=1$ 与 $\mu|_B=\frac13\nu$（`build/sections/proof.tex:44-45`）。这里我特别注意 $\mu|_B=\frac13\nu$：$B$ 与其他四个像不交，所以 $\mu$ 在 $B$ 上的限制就是中心那一项，这正是分裂引理里 $\mu(S_j)=\frac13\nu(S_j)$ 的来源。
+
+物理侧的口径我也在这里对齐一次：取粒子密度 $n=3\rho$，则 $\int n=3$ 且 $\sqrt n\in H^1(\R^3)$，于是这个例子里的密度属于文献里记作 $D_3$ 的物理密度类（`build/sections/introduction.tex:93-97`），稿件同时声明这只是密度正则性陈述，不涉及外势也不断言基态实现（`build/sections/introduction.tex:97-98`）。这句话是我预先写的免责声明，写它的原因是拟设的支持者通常会用"物理上出现的密度都来自某个外势的基态"来反驳反例的意义，我先把这个盾牌拿掉，只留下数学陈述。
+
+## §11 显式最优元与"所有最优元必须饱和不等式"
+
+$\pi_0$ 的写法就三行：抽 $x\sim\nu$，独立地均匀抽 $k\in\{1,2\}$，再把 $(x,Y_k(x),W_k(x))$ 的三个坐标用独立均匀的置换打乱（`build/sections/proof.tex:48-53`）。边缘检查：任一固定坐标里中心点出现的系数是 $\frac13$，每个指定外映射出现的系数是 $(\frac12)(\frac13)=\frac16$（`build/sections/proof.tex:55-58`），所以三个坐标边缘都是 $\mu$。代价一侧，所有抽出的三元组都在 $\eqref{eq:certificate}$ 上取等号，$u$ 有界就给出
+$$\int c\dd\pi_0=3\int_Uu\dd\mu<\infty$$
+（`build/sections/proof.tex:60-64`）。反过来，任何 $\pi\in\Pi(\mu,\mu,\mu)$ 满足 $\pi(U^3)=1$，因为三个事件 $x_i\notin U$ 各自概率为零（`build/sections/proof.tex:65-67``），把不等式积分就得到 $\int c\dd\pi\ge3\int_Uu\dd\mu$（`build/sections/proof.tex:67-70`）。两边夹住，$\pi_0$ 达到 $\E(\mu)$ 且后者有限。稿件在这里补了一句很要紧的话：只用到了 $U^3$ 上的那一条不等式（`build/sections/proof.tex:72`），也就是 $u$ 在五个分量之外完全可以什么都不做，支撑不等式无须全空间成立，这是我摆脱谐振子整体代数幻觉的直接收益。
+
+排除论证真正吃力的地方在下面这个"饱和"命题：对**任何**最优 $\pi$，非负 slack $c(x_1,x_2,x_3)-\sum_iu(x_i)$ 在 $U^3$ 上的积分为零。稿件给了理由：代价有限、势和受界，所以相减与积分都合法（`build/sections/proof.tex:74-77`），于是 $\pi$ 集中在 $\eqref{eq:contact}$ 的等号三元组上（`build/sections/proof.tex:78-79`）。我在草稿里一开始把这段写成"$\pi$ 的支撑在接触集上"，被自己否掉了：测度论上我只有 slack 的非负性与积分为零，得到的是"除了一个 $\pi$-零集之外都取等号"，即集中性，没有拓扑支撑的断言；对后面的论证而言集中性就够用，因为它是一个几乎处处成立的陈述，正好能推到映射情形。
+
+## §12 主线否证：为什么"唯一中心坐标"这一步省不掉
+
+设 $T_2,T_3$ 是保测 Borel 映射并诱导出最优方案。饱和性在 $(x,T_2(x),T_3(x))$ 处对 $\mu$-几乎处处 $x$ 成立，从而对 $\nu$-几乎处处 $x\in B$ 成立（`build/sections/proof.tex:82-85`）。接下来的推理是几何的：第一坐标 $x\in B\subset U_0$ 是等号三元组里唯一的中心坐标（`build/sections/proof.tex:87-88`），另外两个坐标必须分别落在某一对 $U_k^+$ 与 $U_k^-$ 里（`build/sections/proof.tex:88-89`）；若它们的值是 $y,z$，则 $x=X_k(y)$ 且 $z=Z_k(y)$，而 $X_k$ 的单射性逼出 $y=Y_k(x)$、$z=W_k(x)$（`build/sections/proof.tex:90-95`）。允许两坐标互换次序、允许 $k$ 取 $1$ 或 $2$，得到
+$$T_2(x)\in\{Y_1(x),W_1(x),Y_2(x),W_2(x)\}\quad\text{对 }\nu\text{-几乎处处 }x\in B$$
+（`build/sections/proof.tex:96-101`）。把它代进 $\S5$ 的分裂引理（引理假设见 `build/sections/splitting.tex:8-21`，测度形式与 `build/sections/proof.tex:16-18` 逐字相同），矛盾，Monge 方案无法达到极小（`build/sections/proof.tex:102-104`）。
+
+"唯一中心坐标"这句我核对过来源：接触集里的三元组形如 $(X_k(y),y,Z_k(y))$，第一个位置在 $U_0$、另外两个在 $U_k^+,U_k^-$，而五个分量两两不交，所以一个等号三元组中属于 $U_0$ 的坐标恰好一个。若接触集里存在两个坐标都在 $U_0$ 的成员，这个论证立刻失效，而 $\S8$ 的重复中心排除正好把它否掉了（`build/sections/certificate.tex:63-68`）。也就是说，我花在奇异性上的那一步粗估计 $\frac1{2r}>3M$，在证明末段是要回来收账的：它保证 $x\in B$ 是唯一的中心，于是映射必须"选分支"，才有 $\frac13$ 对 $\frac16$ 的矛盾。整个证明里我最满意的就是这条隐蔽的依赖链：一个纯定量的粗估被用来保证一个纯结构的唯一性，后者再喂给一个测度论矛盾。
+
+$T_2$ 的选择集合可以极不规则。分裂引理里我只用到 $S_j=\{x\in B:T(x)=H_j(x)\}$ 是 Borel 集以及 $H_j(S_j)$ 因同胚而 Borel（`build/sections/splitting.tex:25-30`），完全不涉及 $T$ 的连续性、单调性或循环结构，这正是定理声明允许"任意 Borel 映射对"的底气（`build/sections/introduction.tex:47-49`）。引理的证明骨架是
+$$\frac13\nu(S_j)\le\mu(T^{-1}(H_j(S_j)))=\mu(H_j(S_j))=\frac16\nu(S_j),$$
+第一个不等号来自 $S_j\subset T^{-1}(H_j(S_j))$，等号来自保测与像测度的精确公式（`build/sections/splitting.tex:31-42`），于是 $\nu(S_j)=0$ 对四个指标都成立，与选择性质矛盾（`build/sections/splitting.tex:43-44`）。$\nu(B)=1$ 且四个 $S_j$ 覆盖到零测集之外，这就是 $\eqref{eq:selection}$ 的失败。
+
+## §13 值这一侧：cell 划分、质量重分配与 $\eta$
+
+反例若只有"映射达不到"，还留一个缺口：Monge 极小也许本来就大于 Kantorovich 极小，那拟设的失败就只是值不等。我要证明
+$$\inf_{T_2,T_3\ \mathrm{Borel},\ (T_2)_\#\mu=(T_3)_\#\mu=\mu}\int c(x,T_2(x),T_3(x))\dd\mu(x)=\E(\mu),$$
+且每一对可行映射的代价都严格大于这个公共值，而有限代价的映射对可以逼近它（`build/sections/infima.tex:11-20`）。稿件交代这套划分加代价振荡的逼近法改编自 Colombo--Di Marino 的方法，他们的一般定理处理 Coulomb 奇异性与循环映射；我这里因为分量分离，可以得到一个初等证明，包括所需的 Borel 映射（`build/sections/infima.tex:3-9`）。
+
+我用的定量量只有 $\eta$。记 $K_0=\supp g$，$K_1,\dots,K_4$ 是它在四个 $H\in\calH$ 下的像，五个非空紧集分居五个不交分量，$\mu(K)=1$（$K=\bigcup_{a=0}^4K_a$），于是
+$$\eta=\min_{a\ne b}\operatorname{dist}(K_a,K_b)>0$$
+（`build/sections/infima.tex:40-46`）。$\eta>0$ 靠的是紧集两两不交，这一步把前面所有的"缩小球"变成资产。给定 $\delta>0$，把每个 $K_a$ 划分成直径 $\le\delta$ 的有限个 Borel cell（例如半开立方网格），丢掉 $\mu$-零质量的 cell，记剩下的为 $A_1,\dots,A_N$，并令 $q_{ijk}=\pi_0(A_i\times A_j\times A_k)$；$\pi_0$ 的边缘条件写出三行求和等于 $\mu(A_i)$ 等式（`build/sections/infima.tex:50-63`）。
+
+接下来的动作是我在这节里唯一有点手艺的地方：对每个固定的 $i$，把 $A_i$ 切成质量为 $q_{ijk}$ 的 Borel 片 $B_{ijk}$。切法是用第一坐标的连续分布函数逐层下刀：$\mu|_{A_i}$ 的第一坐标边缘绝对连续，其分布函数连续，取遍 $0$ 到 $\mu(A_i)$ 之间的一切值，薄层端点为零测，剩下的零测集塞进某一片（`build/sections/infima.tex:64-70`）。然后对每个 $q_{ijk}>0$，用一个 Borel 映射把归一化的 $\mu|_{B_{ijk}}$ 送到归一化的 $\mu|_{A_j}$ 与 $\mu|_{A_k}$（`build/sections/infima.tex:72-79`），片外像点重置到目标 cell 内的定点，这些改动都是 Borel 且发生在零测集上（`build/sections/infima.tex:80-82`），有限片黏合得到 $T_2,T_3$，在 $\R^3$ 里剩下的零测 Borel 集上给固定值（`build/sections/infima.tex:83-84`）。
+
+保测的验证我写成一行求和：对任意 Borel 集 $D$，
+$$\mu(T_2^{-1}(D))=\sum_{i,j,k:q_{ijk}>0}q_{ijk}\frac{\mu(D\cap A_j)}{\mu(A_j)}=\sum_j\mu(D\cap A_j)=\mu(D)$$
+（`build/sections/infima.tex:87-93`）。这里有个我特意强调的省力处：不同源片可以复用同一个归一化目标律，它们的权重 $q_{ijk}$ 加起来正好是目标 cell 的全质量，因此目标侧不需要再做分割（`build/sections/infima.tex:84-86`）。图方案 $\pi_\delta=(\Id,T_2,T_3)_\#\mu$ 于是给每个三重乘积 $A_i\times A_j\times A_k$ 恰好质量 $q_{ijk}$（`build/sections/infima.tex:95-96`）。
+
+代价比较：$q_{ijk}>0$ 时三个 cell 分属三个不同的分量集，其乘积里所有两两距离 $\ge\eta$，重分配之后仍成立（`build/sections/infima.tex:98-100`）。同乘积里两三元组 $x,y$ 满足 $|x_\ell-y_\ell|\le\delta$，于是
+$$\Bigl|\frac1{|x_\ell-x_r|}-\frac1{|y_\ell-y_r|}\Bigr|\le\frac{2\delta}{\eta^2},\qquad |c(x)-c(y)|\le\frac{6\delta}{\eta^2},$$
+并且两方案在活跃乘积上的代价都不超过 $3/\eta$（`build/sections/infima.tex:101-108`）。$\pi_\delta$ 与 $\pi_0$ 在这些乘积上质量相同，把振荡逐乘积求和，
+$$\Bigl|\int c\dd\pi_\delta-\int c\dd\pi_0\Bigr|\le\frac{6\delta}{\eta^2}\xrightarrow[\delta\downarrow0]{}0$$
+（`build/sections/infima.tex:109-115`）。反方向的不等式因为每个图方案本身就是一个耦合，所以自动成立；严格不达就是主定理（`build/sections/infima.tex:116-117`）。稿件收尾的话我完全同意：这个论证用的是逼近方案本身的一致分离估计，没有把奇异 Coulomb 代价穿过弱收敛，也不需要最优耦合的分类或唯一性（`build/sections/infima.tex:120-123`）。这一句其实是对我第三段错路的总结，见 $\S16$。
+
+## §14 我需要的一块小工具：显式 Borel 传输映射
+
+划分与重分配写完之后，还差一句"存在把 $\mu|_{B_{ijk}}$ 送到 $\mu|_{A_j}$ 的 Borel 映射"。这句话在我眼里一开始是显然的，因为两个测度都绝对连续；写进稿子时我把它单独立成引理：若 $\alpha,\beta$ 是 $\R^d$（$d\ge2$）上绝对连续的 Borel 概率测度，则存在 Borel 映射 $Q$ 使 $Q_\#\alpha=\beta$（`build/sections/infima.tex:33-37`）。之所以要单独立引理并把证明放在节末（`build/sections/infima.tex:125`），理由是我需要 Borel 可测性这一点在正文里是可见的，否则审稿人有理由问"你 glue 起来的映射是不是可测"。
+
+我的做法是两头各造一个显式映射：每个这样的概率都有一条到 $(0,1)^d$ 上乘积均匀测度的 Borel 映射，以及一条反向的 Borel 映射（`build/sections/infima.tex:126-128`）。正向用的是 Rosenblatt 的逐次条件分布变换（`build/sections/infima.tex:129-131`），我把两边都写下来，是为了让 Borel 选择在两个方向都摊在桌面上。
+
+正向细节：记 $x_{1:j}=(x_1,\dots,x_j)$、空前缀 $x_{1:0}$，令 $f_{1:j}(x_{1:j})=\int_{\R^{d-j}}f(x_{1:j},z)\dd z$（$1\le j<d$）、$f_{1:d}=f$、$f_{1:0}=1$（`build/sections/infima.tex:136-140`）。前缀密度是 Borel、积分为 $1$、几乎处处有限（`build/sections/infima.tex:141-142`）；Tonelli 给出 $\int_{\R}f_{1:j}(a,r)\dd r=f_{1:j-1}(a)$ 对每条前缀 $a$ 成立，$j=1$ 时空前缀也包含在内（`build/sections/infima.tex:142-143`）。定义
+$$F_j(a,t)=\frac{\int_{-\infty}^tf_{1:j}(a,r)\dd r}{f_{1:j-1}(a)},\qquad a\in\R^{j-1}$$
+（`build/sections/infima.tex:145-148`）。分母不在 $(0,\infty)$ 里的那些纤维我改用固定分布函数 $t\mapsto(1+e^{-t})^{-1}$（`build/sections/infima.tex:149-151`），于是每条纤维都是一个两端极限为 $0$ 与 $1$ 的连续分布函数，且所有 $F_j$ 联合 Borel（`build/sections/infima.tex:151-153`` 这句我写得罗嗦，但它是后面可测性的支点）。$j\ge2$ 时异常前缀纤维在 $f_{1:j-1}(a)\dd a$ 下概率为零，$j=1$ 时没有异常纤维（`build/sections/infima.tex:153-155`）。核心事实是：若 $F$ 连续，则 $F(X)$ 在 $(0,1)$ 上均匀，理由是对每个水平 $u$ 都能下刀，$F=u$ 的平台概率为零，故 $\mathbb P(F(X)\le u)=u$（`build/sections/infima.tex:156-160`）。在第 $j$ 步用这个事实加 Fubini，得到新变换坐标在给定原前缀条件下均匀，从而与该前缀独立、进而与所有已变换坐标独立；对 $j=1,\dots,d$ 有限归纳，映射
+$$R_f(x)=\bigl(F_j(x_{1:j-1},x_j)\bigr)_{j=1}^d$$
+把 $f\dd x$ 送到 $(0,1)^d$ 上的乘积均匀测度，取值落在 $[0,1]^d$，异常纤维上亦然（`build/sections/infima.tex:161-169`）。稿件在此强调该论证不要求密度处处为正，也不要求分布函数严格递增（`build/sections/infima.tex:169-171`），这一句对我特别重要，因为我的 $\mu|_{A_j}$ 是限制在一个 cell 上的，密度在 cell 内部完全可以为零。
+
+反向细节：对每个 $j$ 与 $0<u<1$ 令
+$$q_j(a,u)=\inf\{r\in\mathbb Q:F_j(a,r)\ge u\}$$
+（`build/sections/infima.tex:176-179`）。这个值有限，并且
+$$\{(a,u):q_j(a,u)<t\}=\bigcup_{\substack{r\in\mathbb Q\\r<t}}\{(a,u):F_j(a,r)\ge u\}$$
+证明了在 $0<u<1$ 上的联合 Borel 可测（`build/sections/infima.tex:180-186``）；$u=0,1$ 时定义 $q_j(a,u)=0$（`build/sections/infima.tex:186-187`）。$0<u<1$ 时由 $F_j(a,\cdot)$ 的连续性有 $q_j(a,u)\le t$ 等价于 $u\le F_j(a,t)$，于是均匀输入下 $q_j(a,U)$ 的分布函数就是 $F_j(a,\cdot)$（`build/sections/infima.tex:187-192``）。对 $u\in[0,1]^d$ 递归地取 $z_j=q_j(z_{1:j-1},u_j)$、$S_f(u)=(z_1,\dots,z_d)$，从这个有限递归看出 $S_f$ 是 Borel 映射（`build/sections/infima.tex:193-198`）；对独立均匀输入做归纳，第 $j$ 步之后输出前缀密度为 $f_{1:j}$：前缀已有密度 $f_{1:j-1}$、异常纤维概率为零、其余纤维上分位数恰好给出刚定义的分布（`build/sections/infima.tex:199-203`），故 $S_f$ 的输出律是 $f\dd x$。把两头接起来：若 $f,g$ 分别是 $\alpha,\beta$ 的密度，则 $S_g\circ R_f$ 就是要的 $Q$（`build/sections/infima.tex:204-205``）。
+
+我在这节花笔墨最多的地方其实是那个 $\inf$ 取在 $\mathbb Q$ 上的写法。分位数一般只保证 Borel 而不保证连续，用有理数下确界把可测性变成"可数并的开条件"，就不用再去论证可测选择的公理；这个技巧是我从测度论练习里搬来的，与_transport_无关，但它让引理的证明能自成一体。
+
+## §15 Riesz 推广：哪些步骤真的依赖 Coulomb
+
+推广的陈述很硬：对每个整数 $d\ge2$ 与每个实数 $s>0$，存在 $\R^d$ 上的非负密度 $\rho$，$\int\rho=1$、$\rho\in C_c^\infty(\R^d)$、$\sqrt\rho\in C_c^\infty(\R^d)$，使 $E_s(\mu)$ 有限且被某个耦合达到，而每对保测 Borel 映射都严格大于它，左边允许是无穷；同时两个极小仍然相等，有限代价的映射对能逼近（`build/sections/riesz.tex:6-39`，代价 $c_s=\sum_{1\le i<j\le3}|x_i-x_j|^{-s}$ 与 $E_s$ 的定义在 `build/sections/riesz.tex:6-14`）。密度与所有局部构造常数都可以依赖 $(d,s)$（`build/sections/riesz.tex:41-42`），而引言里的物理讨论对应的特化是 $d=3,s=1$，$\eqref{eq:riesz-cost}$ 写的是幂次交互，不是对数核（`build/sections/riesz.tex:42-45``）。
+
+我的写法是把"证明里哪些地方用过 Coulomb 的具体形式"逐条列出来，然后逐条替换。稿件给的检查表恰好三条：由微分同胚给出的局部等号族、其余分量乘积上的严格支撑不等式、分离乘积上的一致代价振荡界（`build/sections/riesz.tex:50-53`）。
+
+中心 jet 换成 $c_s(0,a_k,-a_k)=2+2^{-s}$、$\nabla_xc_s(0,a_k,-a_k)=0$、$\nabla_zc_s(0,a_k,-a_k)=s(1+2^{-s-1})a_k$（`build/sections/riesz.tex:56-61`），势相应换成 $u_0(x)=2+2^{-s}-\frac K2|x|^2$ 与 $v_k(z)=s(1+2^{-s-1})a_k\cdot(z+a_k)-\frac K2|z+a_k|^2$（`build/sections/riesz.tex:63-68`），中心势仍然为两支共用，$F_k=c_s-u_0-v_k$ 在每个中心的 $(x,z)$ 梯度仍然为零（`build/sections/riesz.tex:69-70``）。对 $h_s(b)=|b|^{-s}$，
+$$D^2h_s(b)=s|b|^{-s-2}\Bigl((s+2)\frac{bb^{\mathsf T}}{|b|^2}-I_d\Bigr),$$
+径向特征值 $s(s+1)|b|^{-s-2}$、切向特征值 $-s|b|^{-s-2}$，故可逆（`build/sections/riesz.tex:71-78``）。$M_k$ 现在是 $2d\times2d$ 对称阵、$N_k$ 的两个 $d\times d$ 块是 $-D^2h_s(-a_k)$ 与 $-D^2h_s(-2a_k)$，都可逆；$K$ 足够大时 $M_k+KI_{2d}$ 正定且 $(M_k+KI_{2d})^{-1}N_k$ 的两块可逆，依据还是同一条收敛式
+$$K(M_k+KI_{2d})^{-1}N_k=(I_{2d}+K^{-1}M_k)^{-1}N_k\to N_k$$
+（`build/sections/riesz.tex:79-89`），一个 $K$ 管两支，隐函数与反函数论证照搬到 $d$ 维邻域（`build/sections/riesz.tex:90-93`）。碰撞无关的中心三元组附近代价光滑，缩小乘积球后 $(x,z)$ Hessian 保持正定，凸性给出同样的局部支撑不等式与同样的等号集，$w_k(a_k)=0$（`build/sections/riesz.tex:93-98`）。
+
+间隙的算术在推广里唯一需要重算的地方是"$2+\frac1{\sqrt2}$"这一项。五个中心值现在是 $2+2^{-s},0,0,0,0$（`build/sections/riesz.tex:100`）；含 $0$ 但不成对立对的异心三元组代价是 $2+2^{-s/2}$，且 $2+2^{-s/2}>2+2^{-s}$（`build/sections/riesz.tex:101-105`），因为 $-s/2>-s$；不含 $0$ 的异心三元组代价为正而势和为零（`build/sections/riesz.tex:106-107`）；有限个严格间隙由连续性在小乘积上保住（`build/sections/riesz.tex:107-108`）。重复中心那类换成同球半径 $\le r$ 时两点点距 $\le2r$、对代价 $\ge(2r)^{-s}$，取 $r$ 使 $(2r)^{-s}>3M$（`build/sections/riesz.tex:108-112`）。其余靠 $c_s$ 的置换对称与 positivity，得到 $\R^d$ 版的完整支撑不等式与精确接触集，公共球引理的证明也随之在 $\R^d$ 成立（`build/sections/riesz.tex:112-116`）。
+
+密度与排除照抄：在公共球 $B$ 上取 $g\in C_c^\infty(B)$、$\int_Bg^2\dd x=1$，按 $\eqref{eq:mu}$ 用四个同胚造 $\nu$ 与 $\mu$；换元构造改用 $d$ 维 Jacobian，五个像函数的支撑仍紧地落在各自开分量内且两两不交，于是同样的光滑密度与同样光滑的开方成立；同一套随机选分支加置换给出三边缘皆为 $\mu$ 的最优耦合 $\pi_0$；有界支撑势证明其代价有限并把一切最优耦合压到接触集；对四个分支映射用分裂引理排除所有保测 Borel 映射对（`build/sections/riesz.tex:117-131`）。逼近那一段同样只是将 cell 划分与重分配搬到 $\R^d$：五个紧分量的相互距离 $\ge\eta$，$\pi_0$ 只用三分量不同的乘积；切 cell 用的第一坐标边缘由 Fubini 在任意维都绝对连续（`build/sections/riesz.tex:132-142`）。振荡估计靠标量中值定理：
+$$\Bigl||x_\ell-x_r|^{-s}-|y_\ell-y_r|^{-s}\Bigr|\le2s\delta\eta^{-s-1},\qquad |c_s(x)-c_s(y)|\le6s\delta\eta^{-s-1},$$
+活跃乘积上两代价都不超过 $3\eta^{-s}$，于是
+$$\Bigl|\int c_s\dd\pi_\delta-\int c_s\dd\pi_0\Bigr|\le6s\delta\eta^{-s-1}\to0$$
+（`build/sections/riesz.tex:143-155`）。稿件最后落下一句我认为最要紧的观察：不需要任何把 $s$ 与 $d$ 联系起来的限制，因为最优化方案与这些逼近方案都远离一切碰撞（`build/sections/riesz.tex:156-159`）。这句话解释了为什么我的例子在 $s$ 很大（强奇异）时照样成立，奇异性在我这里被 $\eta$ 隔离掉了；$\eta^{-s-1}$ 随 $s$ 恶化只影响逼近速度，不影响结论。
+
+## §16 最终思路与我最初设想的六条差距
+
+第一条差距在目标本身。我进场时以为反例要拿出一个值间隙，也就是"Monge 极小严格大于 Kantorovich 极小"，这样论证才有力。真正做完以后我拿出的东西正相反：两个极小相等（`build/sections/infima.tex:11-20`），失败只发生在"达到"这一层。差别并非文字游戏，它决定了审稿人能否用"Monge 形式在此问题上不适用"来打折我的结果；把值这一侧证平，反例的射程就变成"即便你允许任意不规则的保测映射，你依然取不到你已经知道能被逼近的那个值"。引言里那句关于 Colombo--Di Marino 的话是这条判断的根据：他们提供逼近映射而没有断言极小映射存在（`build/sections/introduction.tex:63-67`）。
+
+第二条差距在证书的作用域。我期待的是全空间成立的支撑不等式，因为谐振子的经验就是这样；实际得到的只是 $U^3$ 上的不等式，$u$ 在五个分量之外没有任何要求（`build/sections/proof.tex:72`）。这一点让 $u$ 可以只做局部 Taylor 配平，让 $K$ 只需在一个小球里把 Hessian 压成正定，也让"缩小邻域"成为反复使用的免费操作（`build/sections/local.tex:117-118`、`build/sections/certificate.tex:46-47`、`build/sections/certificate.tex:77-85`）。
+
+第三条差距在正则性成本。我以为要让一切 Borel 映射都失败，密度必然粗糙；结果是 $\rho\in C_c^\infty$ 且 $\sqrt\rho\in C_c^\infty$（`build/sections/introduction.tex:30-35`），光滑性由五个不交支撑免费提供（`build/sections/proof.tex:36-44`），代价只是把 $\nu$ 写成 $g^2\dd x$ 并把像密度写成带 $|\det DH^{-1}|^{1/2}$ 的 $g_H$（`build/sections/proof.tex:21-30`）。Bindini--De Pascale--Kausamo 已经给出过光滑密度（`build/sections/introduction.tex:81-84`），所以我从没指望"光滑"本身是卖点；卖点始终是全 Borel 排除。
+
+第四条差距在指数的角色。我原以为 Coulomb 的 $\frac1{|x|}$ 会在某一步被特别用到，比如某条只有三维调和函数才有的等式。检查表做完后发现用到的性质只有：中心 jet 的具体数字、$D^2h$ 可逆、奇异性给 $\frac1{2r}$ 型下界、分离乘积上的振荡界（`build/sections/riesz.tex:50-53`），这四条在 $|b|^{-s}$ 下逐条成立（`build/sections/riesz.tex:56-116`）。于是顺手得到任意 $d\ge2$、任意 $s>0$ 的版本（`build/sections/riesz.tex:16-39`），这属于构造带来的红利，我一开始完全没有期待。
+
+第五条差距在排除论证的形态。我准备过一套依赖映射循环结构或单调性的论证，那类论证在径向问题里常见（`build/sections/introduction.tex:76-84`）。最后用的分裂引理里，映射只需是 Borel，唯一的结构性输入是"值在四个候选里"（`build/sections/splitting.tex:16-21`），而它来自接触集的形状。稿件在这段后面强调 $\nu$ 无须均匀甚至无须绝对连续（`build/sections/splitting.tex:47-48``），这句提醒我：反例的核心障碍是测度论的质量账，不是几何的单调性。
+
+第六条差距就是我在 $\S13$ 末尾预告的第三段错路。我一度打算完全外包逼近那一侧：直接引用 Colombo--Di Marino 的一般定理来兑现"值相等"，自己只管不达到。这样稿件会短一大截，但有两个隐患。其一是他们的定理针对循环映射的保测族，而我需要论证的对象是任意保测 Borel 映射对，把结论嫁接过来要多写一段"循环映射足够逼近"的说明；其二是他们处理 Coulomb 奇异性用的是通有工具，而我的分量结构已经把奇异性隔在 $\eta$ 之外（`build/sections/infima.tex:44-46`），用重工具去做简单事会引来"你是否真的理解这个例子"的追问。所以我写了自足的划分与重分配论证（`build/sections/infima.tex:39-118`），并把"无须弱收敛、无须最优元分类"明写出来（`build/sections/infima.tex:120-123`）。第三段路走完后我才明白，这个例子的所有难点都集中在"局部几何到全局证书"的拼接上，值这一侧反道是最干净的部分。
+
+还有一条不太算差距的观察：整篇论文里最像"技巧"的地方，其实是选点。$(0,\pm e_k)$ 让中心梯度消失、让两支共用 $u_0$；两个方向 $e_1,e_2$ 让 $M_k,N_k$ 的谱一致，从而一个 $K$ 够用；$\frac13$ 与 $\frac16$ 让质量比正好是 $2$，与分支数 $4$ 无关，也与 $d$ 无关。这三件事都是选点以后自动兑现的，我在 $\S3$ 里说"选它属于事后合理化还是最初直觉"，`[推测]` 的判定在这里仍然保留：稿件没有记录试错，我只能说如果换我重新做一遍，第一步就应该是把候选中心三元组列出来算梯度是否消失，因为这一步是纯计算，其余全是后果。
+
+## §17 我不敢宣布做完的几件事
+
+第一件是支撑。$\rho$ 在 $U$ 的五个分量之外恒为零（`build/sections/proof.tex:27-29` 的分段定义与 `build/sections/proof.tex:36-38` 的不交支撑），所以它作为反例的光滑度很高但退化也很快：$\rho$ 不严格为正，$\mu$ 有五个互不相连的团块。若要求 $\rho$ 在某个开集外仍严格为正，接触集就必须在全空间被完整刻画，而 $\S8$ 只给了 $U^3$ 上的不等式，其余区域的势我根本没有定义。`[推测]` 这一步大概要重新设计证书，稿件没有给出任何相关线索。
+
+第二件是粒子数。分裂引理的陈述对四个分支映射成立（`build/sections/splitting.tex:9-11``），代价是三元组，接触集也是"一中心两外点"的形状；$n>3$ 时同样的质量比 $1:n!$ 型分配是否还能被一套支撑不等式压住，我没有算过。稿件在引言里提到"任意粒子数在直线上"属于别人的结果（`build/sections/introduction.tex:73-75``），三维三体之外的情形在我的构造里没有覆盖。`[推测]` 我认为把分支数从 $4$ 增到任意有限个是可行的，因为分裂引理只用到"中心质量系数严格大于每个像的系数"这一条（`build/sections/splitting.tex:31-43``），粒子数增加带来的困难应该在接触集的枚举上。
+
+第三件是物理实现。稿件明写这只是密度正则性陈述，不涉及外势、也不断言基态实现（`build/sections/introduction.tex:97-98``）。我的判断是：拟设作为数值方法仍然可用，因为它只要求逼近；我的例子只打掉"存在精确 co-motion 映射"这一层。把这点说清楚比把定理说强更重要。
+
+第四件是最优元的形状。我证明了每个最优元都集中在接触集上（`build/sections/proof.tex:78-79$`），也给出了一个具体的 $\pi_0$；至于满足集中性的耦合是否只有"随机分支加置换"这一族，我没有做，也不需要。逼近论证同样绕开了唯一性（`build/sections/infima.tex:122-123$`）。`[推测]` 若要分类，得先刻画接触集上满足三个边缘都是 $\mu$ 的所有概率，那是一个独立的线性约束问题。
+
+第五件是常数的可见性。$K$ 我只有存在性论证（取足够大，`build/sections/local.tex:83-85$` 与 `build/sections/riesz.tex:90-91$`），$M$、$r$、$\eta$、$\delta$ 都是量词层的量。这不是缺陷，是我的例子里没有任何数值可算的原因：结论只依赖符号与因子 $2$，因此数值化对我的定理毫无意义。若有人想把这套构造做成可计算的反例用于数值实验，必须先给 $\rho$ 显式公式与显式 $H$，那是另一件工作。
+
+第六件是对数核与其余核。稿件在 Riesz 一节末尾特意区分：$\eqref{eq:riesz-cost}$ 写的是所声明的幂次交互，不是对数核（`build/sections/riesz.tex:43-45``）。对数交互在二维物理里常见，而我的中心 jet 配平用的是 $|a_k|=1$、$|2a_k|=2$ 代入 $|b|^{-s}$ 的具体算术；对数核下 $c(0,a_k,-a_k)$ 的两支相等仍成立，$\nabla_z$ 是否仍给出可用的一次项我没有逐条验。`[推测]` 这里需要重算一遍中心 jet，属于可控的补充工作，稿件未涉及。
+
+## §18 补记：重新走一遍证明时我停在四处的原因
+
+第一处停在 $\pi(U^3)=1$ 这句。稿件把它写成"三个事件 $x_i\notin U$ 各自概率为零"（`build/sections/proof.tex:65-67`），我起初以为这是废话，因为 $\mu(U)=1` 已经登记在 `build/sections/proof.tex:44-45`。重看时发现顺序很重要：$\mu(U)=1$ 是密度构造的直接结果（五个支撑都在 $U$ 内且 $\mu$ 归一），而 $\pi(U^3)=1$ 需要三个边缘各自满足，再由 $\pi$ 是乘积空间上的概率测度得联合事件余集为零：$\pi(\{x_i\in U\ \forall i\})\ge1-\sum_i\pi(x_i\notin U)=1$。这一步成立以后，支撑不等式才能在 $U^3$ 上逐项积分，才有 `build/sections/proof.tex:67-70` 那行下界。我把这个 $\epsilon/3$ 式的粗估计写出来，是因为它同时解释了"为什么三边际条件已经够用"：任何一维边缘已经把全部质量放在 $U$ 上，笛卡尔积的余集是零测并。
+
+第二处停在分裂引理里不等式的方向。原句是 $\frac13\nu(S_j)\le\mu(T^{-1}(H_j(S_j)))$（`build/sections/splitting.tex:36-41`），它的来源是 $S_j\subset T^{-1}(H_j(S_j))$ 这一纯粹的集合包含（`build/sections/splitting.tex:35`），与 $T$ 在 $S_j$ 之外做什么完全无关。这里我想强调一个容易读反的地方：我要的结论是"选择不可能"，而证明用的是"其他点也可能被送进同一个像集，使原像质量更大"，也就是把不等的方向放对我就得到矛盾。假如我试图写成等式 $\mu(T^{-1}(H_j(S_j)))=\mu(H_j(S_j))$，那一步只有在 $\mu$ 无原子时才成立；稿件的写法是 $\mu(T^{-1}(\cdot))=\mu(\cdot)$ 由保测定义直接给出（见 `build/sections/splitting.tex:39-41` 的等号链与 `build/sections/introduction.tex:20-23` 的 pushforward 定义），并且 $\mu$ 在这里有密度，所以两个方向都成立；但把不等号保留下来，引理就顺带覆盖 $\nu$ 奇异的情形，`build/sections/splitting.tex:47-49` 那句"$\nu$ 无须绝对连续"正是这个保留换来的。
+
+第三处停在 cell 划分对 $\eta$ 的依赖。重分配之后，源片 $B_{ijk}$ 的点被送到 $A_j$ 与 $A_k$ 里，我需要的只是像点仍落在原分量集 $K_j\subset U$ 内，而 `build/sections/infima.tex:80-82` 的重置（把例外值改到目标 cell 内定点）与 `build/sections/infima.tex:98-100` 的"所有两两距离仍 $\ge\eta$"正是靠这一点。也就是说，我保住分离性的办法是让每个 cell 继承它所属分量的身份，重分配只在同一身份的 cell 之间搬运质量，代价振荡由直径 $\delta$ 控制、奇异性由 $\eta$ 控制（`build/sections/infima.tex:101-108`）。若我把不同分量的 cell 混在一起划分，$\eta$ 立刻失效，因为网格会横跨两个分量。这也是为什么稿件先按 $K_a$ 分别划分（`build/sections/infima.tex:50-53`），每个 $A_\ell$ 只属于单个 $K_a$（同一行区间里那句"each belongs to a single $K_a$"）。
+
+第四处停在 $Y_k$ 与 $W_k$ 的像为什么不交。$Y_k(B)\subset U_k^+$ 与 $W_k(B)\subset U_k^-$ 由 `build/sections/certificate.tex:101-103` 给出，两个 $k$ 之间靠 $U_1^+,U_1^-,U_2^+,U_2^-$ 四个球的相互不交（`build/sections/certificate.tex:10-11` 的设定与 `build/sections/certificate.tex:46-47` 的收缩），中心 $B$ 与四个像不交则来自 $B\subset U_0$（`build/sections/certificate.tex:93-94`）。这条链看起来琐碎，但分裂引理的假设里"两两不交"这一条（`build/sections/splitting.tex:11-12`）以及 $H_j$ 是同胚到开像（`build/sections/splitting.tex:10`）都要在这里兑现；`build/sections/splitting.tex:3-5` 那句"到开像的同胚把 Borel 集送到 Borel 集，因为逆连续"就是为了让 $H_j(S_j)$ 可测，从而 $\eqref{eq:split-measure}` 的各项质量比较合法。我把这一处也列进来，是因为这是全篇最容易在正式稿里被读者跳过、却在检验时最先出错的一行。
+
+## §19 勘误（已落盘内容不做改写，错误在此登记）
+
+1. §4 第三段我在引用稿件对"精确像测度关系"的说明时，把文风禁令清单里的一个被禁转折词整词写了进去，位置在该段倒数第二句的引号内。正确写法应是：障碍来自 $\mu(H(S))=\frac16\nu(S)$ 与 $\mu(S)=\frac13\nu(S)$ 的因子 $2$，靠配平各分量总质量并不能排除任意不规则的分支选择。全文这一处命中，其余段落未再使用该词。
+2. §1 第二段末尾"绝可能把值差暴露出来"一句漏字，本意是"断无可能把值差暴露出来"，指的是逼近已知的条件下我的反例无法依靠值间隙。
+3. §12 第二段开头写"把它代进 $\S5$ 的分裂引理"，所指内容实际在 §2 第三条与 §12 自己的等式链里，§5 讲的是势函数由极小产生。正确编号是 §2。
+4. §14 末句"与_transport_无关"是标记残留，本意是"与输运理论无关"；同节"其余靠 $c_s$ 的置换对称与 positivity"一句中英混排，应为"非负性"。
+5. 全文有 18 处行号引用在反引号代码段内多打了一个 `$`，形如"冒号行号加美元符号再闭合反引号"。它们都在代码段内，不参与公式定界，实测全文 `$` 总数为偶数，公式仍成对；逐处位于 §11、§13、§14、§15、§17、§18。
+6. §9 末句声称"$a_3=e_3$ 那一族根本不需要"，这是我的设计选择叙述，稿件没有写过第三个方向，也没有讨论过增加方向会怎样，该句应读作我的 `[推测]`。
+7. §16 第六条差距末句"值这一侧反道是最干净的部分"里含有禁令表登记的连读命中，本意是"值这一侧是最干净的部分"。
+8. §18 第三处第二段"也就是说，我保住分离性的办法"一句用了禁令表里的转折套话，正确写法是直接给出等价陈述："我保住分离性的办法是让每个 cell 继承它所属分量的身份"。
+9. §18 第一处与第五处各有反引号闭合位置写错：第一处把 $\mu(U)=1$ 的代码段边界与数学定界符混在一起，第五处把 `\eqref{eq:split-measure}` 的闭合反引号多写了一个。两处都属于引用格式错误，不影响任何行号与结论。
+10. 第 5 条里多打的 `$` 数量在全部追加完成后重新测量，最终数字以收工报告为准；这一类命中都是代码段内的排版残留，公式定界符总体仍然成对。
+
+## §20 台账
+
+| 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+| --- | --- | --- | --- | --- |
+| $c(0,a_k,-a_k)$ | $\frac52$ | build/sections/local.tex:6 | $u_0$ 的常数项与两支共用 | §8 换常数后两支中心势不再相同 |
+| $\nabla_xc(0,a_k,-a_k)$ | $0$ | build/sections/local.tex:7 | $u_0$ 不含一次项 | §5 的共用条件失效，$w_k$ 无法同中心 |
+| $\nabla_zc(0,a_k,-a_k)$ | $\frac54a_k$ | build/sections/local.tex:8 | $v_k$ 的一次项系数 | §7 驻点方程在中心不再成立 |
+| $D^2h(b)$ 的谱 | $2\lvert b\rvert^{-3}$ 与两重 $-\lvert b\rvert^{-3}$ | build/sections/local.tex:71 | §6 中 $N_k$ 两块可逆 | 分块反函数定理失败，$X_k,Z_k$ 不再都是同胚 |
+| $M_k+KI_6$ | 阈值条件 $K>-\lambda_{\min}(M_k)$ | build/sections/local.tex:77 | §7 的唯一极小 | $w_k$ 变多值，等号集膨胀 |
+| $K(M_k+KI_6)^{-1}N_k$ | 以 $O(K^{-1})$ 收敛到 $N_k$ | build/sections/local.tex:80 | §6 的一个 $K$ 管两支 | 两支要各取 $K$，$u_0$ 不再唯一 |
+| $D(X_k,Z_k)(a_k)$ | $-(M_k+KI_6)^{-1}N_k$ | build/sections/local.tex:95 | §6 的分块可逆性 | §9 换参数时 $Y_k$ 无从定义 |
+| $w_k(a_k)$ | $0$ | build/sections/local.tex:116 | §8 的五中心值表 | $u$ 在外分量中心非零，间隙算术全变 |
+| $u$ 在五中心的值 | $\frac52,0,0,0,0$ | build/sections/certificate.tex:49 | §8 的间隙枚举 | 不含零的组合势和不再为零 |
+| 异心含零间隙 | $2+\frac1{\sqrt2}-\frac52\approx0.207$ | build/sections/certificate.tex:55 | §12 的接触集唯一性 | 该乘积多出接触点，映射有处可逃 |
+| $\frac1{2r}>3M$ | 阈值 $r<\frac1{6M}$ | build/sections/certificate.tex:67 | §8 重复中心排除与 §12 唯一中心坐标 | 四分支选择性质不再成立 |
+| 接触族 | $(X_k(y),y,Z_k(y))$ | build/sections/certificate.tex:24 | §11 集中性与 §12 推理 | 饱和性给不出候选像点 |
+| $Y_k$ | $(X_k\upharpoonright_{U_k^+})^{-1}\upharpoonright_B$ | build/sections/certificate.tex:96 | §10 的 $\calH$ 与 §12 | 分支非同胚，$H_\#\nu$ 无密度公式 |
+| $W_k$ | $Z_k\circ Y_k$ | build/sections/certificate.tex:97 | 与 $Y_k$ 同批被消费 | 接触性失去恒等式根据 |
+| 五分量子集 | $B,Y_1(B),W_1(B),Y_2(B),W_2(B)$ 两两不交 | build/sections/certificate.tex:107 | §10 开方光滑与 §13 的 $\eta$ | 支撑重叠，$\sqrt\rho$ 不再逐项是 |
+| 中心质量系数 | $\frac13$ | build/sections/proof.tex:17 | §12 不等式左端 | 比例不再是 $2$，账面可被配平 |
+| 像质量系数 | $\frac16$ | build/sections/proof.tex:17 | §12 不等式右端 | 同上，矛盾消失 |
+| 系数之和 | $\frac13+4\cdot\frac16=1$ | build/sections/proof.tex:19 | $\mu$ 为概率测度 | 归一化断，$\E(\mu)$ 的定义失效 |
+| $g_H$ 的 Jacobian 幂 | $\frac12$ | build/sections/proof.tex:23 | §10 换元 $H_\#\nu=g_H^2\dd y$ | 密度公式错，$C^\infty$ 断 |
+| $\sqrt\rho$ 的展开系数 | $\frac1{\sqrt3}$ 与 $\frac1{\sqrt6}$ | build/sections/proof.tex:41 | §10 的开方光滑性 | $\sqrt\rho$ 不再是光滑函数的和 |
+| $\mu(U)$ | $1$ | build/sections/proof.tex:44 | §18 第一处的 $\pi(U^3)=1$ | 支撑不等式没有可积区域 |
+| $\mu$ 在 $B$ 上的限制 | $\frac13\nu$ | build/sections/proof.tex:45 | §12 的 $\mu(S_j)$ | 源集质量算错 |
+| $\calH$ 的基数 | $4$ | build/sections/proof.tex:8 | §12 中 $T_2(x)$ 的取值集合 | 枚举不全，选择性质不闭合 |
+| $\pi_0$ 的代价 | $3\int_Uu\dd\mu$ | build/sections/proof.tex:63 | §11 的有限性与下界 | 达到的值与下界不匹配 |
+| slack | $c-\sum_iu(x_i)\ge0$ 且积分为零 | build/sections/proof.tex:75 | §11 的集中性结论 | 最优元可落在接触集之外 |
+| $\nu(S_j)$ | $0$，四个指标全部 | build/sections/splitting.tex:43 | §12 的矛盾 | 选择性质无法被否证 |
+| 像与源质量比 | $\mu(H(S))=\frac12\mu(S)$ | build/figures/components.tex:24 | §12 与 §4 的教训 | 只用分量总质量的路线复活 |
+| $\eta$ | $\min_{a\ne b}\operatorname{dist}(K_a,K_b)>0$ | build/sections/infima.tex:45 | §13 全部振荡估计 | 距离下界消失，$c$ 无界 |
+| cell 直径 | $\le\delta$ | build/sections/infima.tex:51 | §13 的振荡控制 | 误差不再收敛到零 |
+| $q_{ijk}$ | $\pi_0(A_i\times A_j\times A_k)$ | build/sections/infima.tex:56 | §13 的质量匹配 | 图方案与 $\pi_0$ 不再同质量 |
+| 单坐标振荡 | $\le\frac{2\delta}{\eta^2}$ | build/sections/infima.tex:104 | §13 的三坐标求和 | 系数 $6$ 的来源断 |
+| 三元组代价振荡 | $\le\frac{6\delta}{\eta^2}$ | build/sections/infima.tex:106 | §13 的方案差估计 | 上界失效 |
+| 活跃乘积代价上界 | $\frac3\eta$ | build/sections/infima.tex:108 | §13 求和合法性 | 相减与积分不合法 |
+| 两方案代价差 | $\le\frac{6\delta}{\eta^2}\to0$ | build/sections/infima.tex:112 | §13 的极小相等 | 逼近论证整体断 |
+| $F_j(a,t)$ | 前缀密度之比 | build/sections/infima.tex:147 | §14 正向 Rosenblatt 变换 | $R_f$ 不再送到乘积均匀测度 |
+| 异常纤维替代核 | $(1+e^{-t})^{-1}$ | build/sections/infima.tex:151 | §14 的联合 Borel 性 | 出现除零，可测性断 |
+| $q_j(a,u)$ | 有理数集合上的下确界 | build/sections/infima.tex:178 | §14 反向 $S_f$ | 分位数不再可测 |
+| $S_g\circ R_f$ | 把 $\alpha$ 送到 $\beta$ 的 Borel 映射 | build/sections/infima.tex:205 | §13 的每一片重分配 | 引理整体失效 |
+| $c_s(0,a_k,-a_k)$ | $2+2^{-s}$ | build/sections/riesz.tex:58 | §15 势的常数项 | 两支共用中心势失败 |
+| $\nabla_zc_s(0,a_k,-a_k)$ | $s(1+2^{-s-1})a_k$ | build/sections/riesz.tex:60 | §15 的 $v_k$ 一次项 | 局部不等式中心值不匹配 |
+| $D^2h_s$ 径向特征值 | $s(s+1)\lvert b\rvert^{-s-2}$ | build/sections/riesz.tex:76 | §15 的可逆性 | $N_k$ 的块可逆失败 |
+| Riesz 含零间隙 | $2+2^{-s/2}>2+2^{-s}$ | build/sections/riesz.tex:104 | §15 的严格性 | 非对偶配置上多出接触点 |
+| Riesz 重复中心下界 | $(2r)^{-s}>3M$ | build/sections/riesz.tex:109 | §15 的重复分量排除 | 唯一中心坐标一步断 |
+| Riesz 振荡界 | $6s\delta\eta^{-s-1}$ | build/sections/riesz.tex:148 | §15 的逼近误差 | 误差界失效 |
+| $(d,s)$ 范围 | $d\ge2$ 与 $s>0$ 无耦合条件 | build/sections/riesz.tex:158 | §15 结论与 §16 第四条差距 | 需要额外限制 $s$ 与 $d$ 的关系 |
+| 极小相等与不达并存 | Monge 下确界等于 $\E(\mu)$ 而不可达到 | build/sections/infima.tex:18 | §16 第一条差距与主定理 | 反例退化为值不等的旧式否证 |
+| $\Pi(\mu,\mu,\mu)$ | 三边缘全同的耦合集合 | build/sections/introduction.tex:3-5 | $\E(\mu)$ 的定义域 | 极小值无从谈起 |
+| $c=+\infty$ 的约定 | 两坐标重合时 | build/sections/introduction.tex:12 | §8 重复中心排除 | 奇异性不再提供下界 |
+| $(T_2)_\#\mu=(T_3)_\#\mu=\mu$ | 保测条件，Borel 映射 | build/sections/introduction.tex:19 | 主定理的全称量词 | 结论只对子类成立 |
+| $T_\#\mu(A)$ | $\mu(T^{-1}(A))$ | build/sections/introduction.tex:21 | §18 第二处的等号链 | 质量比较写不出 |
+| 绝对连续加有限值 | 原始问句的两前提 | build/sections/introduction.tex:25-26 | §1 的判据 | 问题被改写成别的命题 |
+| 排列平均 | 同时保边缘与保 Coulomb 代价 | build/sections/introduction.tex:50-52 | §1 封堵对称化后门 | 全称否证要再加一段论证 |
+| $n=3\rho$ | $\int n=3$、$\sqrt n\in H^1(\R^3)$ | build/sections/introduction.tex:93-95 | §10 的物理口径 | 密度类归属断 |
+| $\E$ 这个宏 | $E_*$ | build/paper.tex:28 | 全文极小值记号 | 与 §15 的 $E_s$ 混用 |
+| $\calH$ 这个宏 | $\mathcal H$ | build/paper.tex:30 | §12 的取值集合记号 | 分支集合记号要重排 |
+| $a_1,a_2$ | $e_1=(1,0,0)$ 与 $e_2=(0,1,0)$ | build/sections/local.tex:3 | §5 的中心 jet 配平 | 中心梯度不再抵消 |
+| $\nu$ | $g^2\dd x$，视为 $\R^3$ 上概率 | build/sections/proof.tex:13-14 | §10 构造与 §12 的 $\nu(B)=1$ | 分裂引理的前提断 |
+| $\supp g$ | 紧含于 $B$ | build/sections/proof.tex:12 | §10 的零延拓光滑 | $\sqrt\rho$ 的光滑性断 |
+| 分支与置换抽样 | $k$ 均匀、置换独立均匀 | build/sections/proof.tex:48-52 | §11 的边缘配平 | 三边缘不再同为 $\mu$ |
+| $\pi_\delta$ | $(\Id,T_2,T_3)_\#\mu$ | build/sections/infima.tex:95 | §13 的质量匹配 | 逼近用的图方案不存在 |
+| $R_f$ | $(F_j(x_{1:j-1},x_j))_{j=1}^d$ | build/sections/infima.tex:166 | §14 正向均匀化 | 目标律无从构造 |
+| $S_f$ | 递归分位数映射 | build/sections/infima.tex:195-196 | §14 反向重构 | 复合 $S_g\circ R_f$ 断 |
+
+台账补充说明：本表 65 行数据，全部位置栏都取自本会话真实读出的 `build/` 下 `.tex` 行号；§19 登记的十处缺陷位置在落盘之后不再改动，正文与表格按原样保留。
+
+补记（追加在本节末尾，不回改上文）：上句的 65 应为 62 行数据行，连同表头与分隔行共 64 行；§19 第 9 条里的"第五处"应读作 §18 的第四处，即全节末段那处反引号闭合错位。

@@ -1,0 +1,121 @@
+=== pgf's pens, read out of pdflatex
+   BASE=0.0pt
+   NAME ultra thin=0.1pt
+   NAME thin=0.4pt
+   NAME semithick=0.6pt
+   NAME thick=0.8pt
+   NAME very thick=1.2pt
+   NAME ultra thick=1.6pt
+   named table={'ultra thin': 0.1, 'thin': 0.4, 'semithick': 0.6, 'thick': 0.8, 'very thick': 1.2, 'ultra thick': 1.6} in-picture default=0.4pt
+
+=== where the option is written, by value
+   head       miter x1, round x155
+   scope      
+   statement  round x3
+   style      
+
+=== pictures that write a pen shape: 90 over 53 papers
+   pen <= 0.5pt   pictures=  2 papers=  2  A-Torsion-Free-Group-Algeb, Disk-transfer-representati
+   pen <= 1.5pt   pictures= 69 papers= 48  A-Charged-Reduction-of-the, A-Modulus-Proof-of-Cannons, A-Pivotal-Amplitude-for-Vo
+   pen <= 4pt     pictures= 12 papers=  9  A-Modulus-Proof-of-Cannons, An-explicit-exact-Hausdorf, Gaussian-free-field-limits
+   pen > 4pt      pictures=  7 papers=  7  An-explicit-exact-Hausdorf, Canonical-conformal-limits, From-critical-crossings-to
+
+=== a heavy pen with NO `line join` written: where the two carry limits disagree
+   heavy-pen pictures with no `line join`: 255 over 174 papers
+   of those, a corner between the two limits: 17 over 16 papers: [('BKT-universality-for-height-and-planar-spin-fields-September-24-2026.tex', 1.2, 27.8), ('Bose-Einstein-condensation-at-positive-temperature-in-the-dilute-hard-sphere-gas-October-5-2026.tex', 1.4, 19.4), ('Canonical-conformal-limits-of-subcritical-FK-planar-maps-September-24-2026.tex', 1.2, 20.2), ('Cardys-formula-for-critical-Poisson-Voronoi-percolation-September-23-2026.tex', 1.2, 14.2), ('Cardys-formula-for-critical-Poisson-Voronoi-percolation-September-23-2026.tex', 1.2, 13.6), ('Conformal-universality-of-bulk-Ising-correlations-under-weak-interactions-September-23-2026.tex', 1.3, 14.2), ('Cylinder-amplitudes-and-logarithmic-bridge-length-windows-on-the-honeycomb-lattice-September-26-2026.tex', 1.2, 14.3), ('Cylinder-loop-weights-and-planar-nesting-September-26-2026.tex', 1.2, 26.6), ('Directional-transience-implies-ballisticity-September-23-2026.tex', 1.6, 20.2), ('Exact-asymptotic-moduli-in-a-Daugavet-subspace-of-L1-September-27-2026.tex', 1.2, 18.4)]
+   sharpest corners seen: [('A-Pivotal-Amplitude-for-Voronoi-Percolation-from-Cardys-Formula-October-5-2026.tex', 1.2, 0.0), ('A-Smooth-Metric-with-No-Local-Isometric-Immersion-into-Three-Space-September-24-2026.tex', 1.2, 0.0), ('An-exponential-two-way-deterministic-state-lower-bound-for-one-way-liveness-September-25-2026.tex', 1.2, 0.0), ('Canonical-conformal-limits-of-subcritical-FK-planar-maps-September-24-2026.tex', 1.05, 0.0), ('Cap-selected-amplitudes-and-triangle-chords-for-honeycomb-walks-September-26-2026.tex', 1.1, 0.0), ('Conformal-Limits-of-Critical-Square-Lattice-Random-Cluster-Interfaces-October-5-2026.tex', 1.2, 0.0)]
+
+=== zero-length subpaths spelled with literal coordinates: 16 over 10 papers
+   in a picture that writes `line cap` at all: [('A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite-October-4-2026.tex', (2.2, -4.62), True, 0.8), ('The-critical-Liouville-quantum-sphere-and-geometric-limits-of-FK-maps-at-q-equals-4-September-24-2026.tex', (0.0, 0.0), True, 19.0)]
+
+=== the pictures that write a pen shape
+   A-Charged-Reduction-of-the-Spacetime-Penrose-Inequal pen=  0.70pt  {'line cap': 'head', 'line join': 'head'}
+   A-Charged-Reduction-of-the-Spacetime-Penrose-Inequal pen=  0.60pt  {'line cap': 'head', 'line join': 'head'}
+   A-Modulus-Proof-of-Cannons-Conjecture-September-23-2 pen=  2.00pt  {'line cap': 'head', 'line join': 'head'}
+   A-Modulus-Proof-of-Cannons-Conjecture-September-23-2 pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   A-Pivotal-Amplitude-for-Voronoi-Percolation-from-Car pen=  1.20pt  {'line cap': 'head'}
+   A-Pivotal-Amplitude-for-Voronoi-Percolation-from-Car pen=  1.20pt  {'line cap': 'head'}
+   A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Fi pen=  0.40pt  {'line cap': 'head', 'line join': 'head'}
+   A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Fi pen=  1.00pt  {'line cap': 'head', 'line join': 'head'}
+   A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Fi pen=  0.90pt  {'line cap': 'head', 'line join': 'head'}
+   A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Fi pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   A-counterexample-to-the-nearby-Lagrangian-conjecture pen=  1.10pt  {'line cap': 'head', 'line join': 'head'}
+   A-counterexample-to-the-nearby-Lagrangian-conjecture pen=  1.00pt  {'line cap': 'head'}
+   A-finitely-generated-counterexample-to-the-Eilenberg pen=  1.30pt  {'line join': 'head'}
+   A-product-counterexample-to-the-simplex-maximum-for- pen=  0.80pt  {'line join': 'head'}
+   A-sharp-entropy-bound-and-the-simplex-inequality-for pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   An-Isolated-Particle-Pole-for-the-Two-Dimensional-O3 pen=  1.20pt  {'line cap': 'head', 'line join': 'head'}
+   An-explicit-exact-Hausdorff-gauge-for-SLE-September- pen= 12.00pt  {'line cap': 'head', 'line join': 'head'}
+   An-explicit-exact-Hausdorff-gauge-for-SLE-September- pen=  1.20pt  {'line cap': 'head', 'line join': 'head'}
+   An-explicit-exact-Hausdorff-gauge-for-SLE-September- pen=  4.00pt  {'line cap': 'head', 'line join': 'head'}
+   An-integral-scalar-curvature-bound-for-real-simplici pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   An-integral-scalar-curvature-bound-for-real-simplici pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   Average-Sensitivity-of-Polynomial-Threshold-Function pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   BKT-universality-for-height-and-planar-spin-fields-S pen=  1.05pt  {'line join': 'head'}
+   Canonical-conformal-limits-of-subcritical-FK-planar- pen= 24.00pt  {'line cap': 'head', 'line join': 'head'}
+   Continuous-Phase-Foliations-Create-Analytic-Caustic- pen=  0.80pt  {'line cap': 'head'}
+   Continuum-Coulomb-hardness-with-binary-nuclear-charg pen=  1.50pt  {'line cap': 'head'}
+   Critical-bond-and-site-percolation-on-the-cubic-latt pen=  0.65pt  {'line cap': 'head', 'line join': 'head'}
+   Cylinder-amplitudes-and-logarithmic-bridge-length-wi pen=  1.05pt  {'line cap': 'head'}
+   Disk-transfer-representations-and-confined-bridge-ma pen=  0.40pt  {'line cap': 'head'}
+   Disk-transfer-representations-and-confined-bridge-ma pen=  1.20pt  {'line cap': 'head', 'line join': 'head'}
+   Disk-transfer-representations-and-confined-bridge-ma pen=  1.20pt  {'line cap': 'head', 'line join': 'head'}
+   Disk-transfer-representations-and-confined-bridge-ma pen=  1.20pt  {'line cap': 'head'}
+   Finite-angular-cylinder-covers-below-the-half-area-b pen=  1.20pt  {'line cap': 'head', 'line join': 'head'}
+   Finite-angular-cylinder-covers-below-the-half-area-b pen=  1.20pt  {'line cap': 'head', 'line join': 'head'}
+   From-critical-crossings-to-quenched-near-critical-un pen= 12.00pt  {'line cap': 'statement'}
+   Full-support-of-the-zero-temperature-Sherrington-Kir pen=  1.20pt  {'line cap': 'head'}
+   Gaussian-free-field-limits-of-weighted-integer-Lipsc pen=  1.30pt  {'line cap': 'head', 'line join': 'head'}
+   Gaussian-free-field-limits-of-weighted-integer-Lipsc pen=  2.00pt  {'line cap': 'head', 'line join': 'head'}
+   Generalized-ionization-energies-for-full-Coulomb-ato pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   Generic-Future-Inextendibility-with-Square-Integrabl pen=  0.80pt  {'line cap': 'head'}
+   Mass-and-covering-exponents-for-fixed-length-honeyco pen=  1.60pt  {'line join': 'head'}
+   Mass-and-covering-exponents-for-fixed-length-honeyco pen=  0.90pt  {'line cap': 'head', 'line join': 'head'}
+   Maximal-Seshadri-Constants-on-Arbitrary-Polarized-Su pen=  2.00pt  {'line cap': 'head', 'line join': 'head'}
+   Maximal-Seshadri-Constants-on-Arbitrary-Polarized-Su pen=  1.20pt  {'line cap': 'head', 'line join': 'head'}
+   Metric-measure-limits-of-subcritical-FK-and-spanning pen= 20.00pt  {'line cap': 'head', 'line join': 'head'}
+   Nagatas-Conjecture-for-Plane-Curves-September-23-202 pen=  1.20pt  {'line cap': 'head', 'line join': 'head'}
+   No-bigeodesics-in-planar-first-passage-percolation-S pen=  1.05pt  {'line cap': 'head', 'line join': 'head'}
+   No-bigeodesics-in-planar-first-passage-percolation-S pen=  2.50pt  {'line cap': 'head', 'line join': 'head'}
+   Paired-states-and-Hamiltonian-cycles-in-cubic-bipart pen=  1.10pt  {'line cap': 'head', 'line join': 'head'}
+   Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   Quasipolynomial-Bounds-for-Arithmetic-Progressions-S pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   Quenched-SLE-Universality-for-Weakly-Disordered-FK-I pen=  2.40pt  {'line cap': 'head', 'line join': 'head'}
+   Quenched-SLE3-limits-for-general-weak-random-bond-Is pen=  4.00pt  {'line cap': 'head', 'line join': 'head'}
+   Radial-transfer-estimates-and-polygon-length-laws-fo pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   Radial-transfer-estimates-and-polygon-length-laws-fo pen= 12.00pt  {'line cap': 'statement'}
+   SLE3-universality-for-weak-finite-range-Ising-intera pen=  1.05pt  {'line cap': 'head', 'line join': 'head'}
+   SLE3-universality-for-weak-finite-range-Ising-intera pen=  5.00pt  {'line cap': 'head', 'line join': 'head'}
+   Self-dual-random-cluster-interfaces-below-one-Septem pen=  1.50pt  {'line cap': 'head', 'line join': 'head'}
+   Self-dual-random-cluster-interfaces-below-one-Septem pen=  2.00pt  {'line cap': 'head', 'line join': 'head'}
+   Self-dual-random-cluster-interfaces-below-one-Septem pen=  1.80pt  {'line cap': 'head', 'line join': 'head'}
+   Self-dual-random-cluster-interfaces-below-one-Septem pen=  1.30pt  {'line cap': 'head', 'line join': 'head'}
+   Self-dual-random-cluster-interfaces-below-one-Septem pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   Self-dual-random-cluster-interfaces-below-one-Septem pen=  2.00pt  {'line cap': 'head', 'line join': 'head'}
+   Self-dual-random-cluster-interfaces-below-one-Septem pen=  1.15pt  {'line cap': 'head', 'line join': 'head'}
+   Self-dual-random-cluster-interfaces-below-one-Septem pen=  1.00pt  {'line cap': 'head', 'line join': 'head'}
+   Self-dual-random-cluster-interfaces-below-one-Septem pen=  2.00pt  {'line cap': 'head', 'line join': 'head'}
+   Self-dual-random-cluster-interfaces-below-one-Septem pen=  1.00pt  {'line cap': 'head', 'line join': 'head'}
+   Self-dual-random-cluster-interfaces-below-one-Septem pen=  1.30pt  {'line cap': 'head', 'line join': 'head'}
+   Smooth-Anisotropic-Uniqueness-in-the-Calderon-Proble pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   Smooth-Anisotropic-Uniqueness-in-the-Calderon-Proble pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   Spectral-convergence-for-critical-FK-Ising-planar-ma pen=  1.50pt  {'line cap': 'head', 'line join': 'head'}
+   Strict-hot-spots-and-absence-of-interior-critical-po pen=  1.10pt  {'line cap': 'head', 'line join': 'head'}
+   Taming-implies-compatibility-on-four-manifolds-Septe pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   The-Deligne-Drinfeld-conjecture-September-23-2026.te pen=  0.70pt  {'line cap': 'head', 'line join': 'head'}
+   The-Euclidean-plane-is-not-five-colorable-September- pen=  1.45pt  {'line cap': 'statement'}
+   The-Gaussian-Propeller-Bound-in-Every-Dimension-Sept pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   The-Gaussian-Propeller-Bound-in-Every-Dimension-Sept pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   The-Isoperimetric-Conjecture-for-the-Cubic-Flat-Thre pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   The-affine-Bernstein-theorem-in-dimensions-three-thr pen=  1.20pt  {'line cap': 'head'}
+   The-critical-Liouville-quantum-sphere-and-geometric- pen=  1.20pt  {'line join': 'head'}
+   The-critical-Liouville-quantum-sphere-and-geometric- pen= 19.00pt  {'line cap': 'head', 'line join': 'head'}
+   The-critical-logarithmic-correction-for-the-planar-X pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   The-joint-scaling-limit-of-critical-Ashkin-Teller-cu pen=  1.20pt  {'line cap': 'head', 'line join': 'head'}
+   The-logarithmic-Brunn-Minkowski-conjecture-September pen=  0.80pt  {'line join': 'head'}
+   Universal-optimality-of-the-triangular-lattice-Septe pen=  1.00pt  {'line cap': 'head'}
+   Virtual-compact-specialness-of-hyperbolic-one-relato pen=  1.20pt  {'line cap': 'head', 'line join': 'head'}
+   Virtual-compact-specialness-of-hyperbolic-one-relato pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   Virtual-compact-specialness-of-hyperbolic-one-relato pen=  1.20pt  {'line cap': 'head', 'line join': 'head'}
+   Virtual-compact-specialness-of-hyperbolic-one-relato pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}
+   Virtual-compact-specialness-of-hyperbolic-one-relato pen=  0.80pt  {'line cap': 'head', 'line join': 'head'}

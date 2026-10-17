@@ -1,0 +1,55 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{fit}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.geometric}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\A}{\mathbb A}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\sm}{\mathrm{sm}}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Hilb}{Hilb}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\td}{td}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\im}{im}
+\begin{document}
+\begin{tikzpicture}[
+ box/.style={draw=linkblue!70,rounded corners=2pt,fill=linkblue!3,align=center,text width=38mm,minimum height=12mm,font=\small,inner sep=4pt},
+ arrow/.style={-{Stealth[length=2mm]},semithick,draw=linkblue!80},
+ every node/.style={font=\small}]
+\node[box] (low) at (0,2.1) {Low-degree relations\\and no small curves};
+\node[box] (param) at (5,2.1) {Constraint space $X$\\with highly connected\\punctured smooth cone};
+\node[box] (curves) at (0,0) {Binary addition\\matrices on curves};
+\node[box] (division) at (5,0) {Division algebra\\extension};
+\node[box] (row) at (10,0) {New triangular\\power identity};
+\node[box] (ideal) at (10,-2.1) {Ordered basis and\\one monomial ideal};
+\draw[arrow] (low)--(param);
+\draw[arrow] (param)--(division);
+\draw[arrow] (curves)--(division);
+\draw[arrow] (division)--(row);
+\draw[arrow] (row)-- node[right,align=left]{after all\\rows} (ideal);
+\draw[arrow] (row.north) -- (10,3.2) -- node[above]{finite extension; retain low-degree relations} (0,3.2) -- (low.north);
+\end{tikzpicture}
+\end{document}

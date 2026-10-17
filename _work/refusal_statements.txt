@@ -1,0 +1,79 @@
+---- A-Fully-Polynomial-Randomized-Approximation- | statement
+     \node[below=3pt] at (\row0) {$u$}
+---- A-Fully-Polynomial-Randomized-Approximation- | statement
+     \fill[black!4] (a0)--(a1)--(a2)--(a3)--cycle
+---- A-sharp-entropy-bound-and-the-simplex-inequa | statement
+     \fill[gray!8] (-1.4,-1,1)--(1.4,-1,1)--(1.4,1.3,1)
+    --(-1.4,1.3,1)--cycle
+---- Combinatorial-Invariance-of-Kazhdan-Lusztig- | statement
+     \path (comparison.south west) -- (reciprocity.south east)
+      coordinate[midway] (middle)
+---- Critical-bond-and-site-percolation-on-the-cu | statement
+     \fill[black!3] (1,-1,-1)--(1,1,-1)--(1,1,1)--(1,-1,1)--cycle
+---- Critical-strip-crossing-mass-on-the-honeycom | ifnum
+---- Cylinder-amplitudes-and-logarithmic-bridge-l | statement
+     \FiniteSquare{.70}{-1.08}{}
+  \node[finite label,left]  at (.35,-1.08) {$L$}
+---- Diagonal-Fourier-extension-for-positively-cu | statement
+     \node[amap box] (phase) at (-.235\textwidth,0)
+  {Positively curved chart\\Insertion into an allowed phase}
+---- Elliptic-capacity-propagation-and-Fourier-re | statement
+     \draw[capacityellipse] (0,0) ellipse (1.00 and .37)
+---- Equality-and-rigidity-in-the-spacetime-Penro | statement
+     \node[branch,below=9mm of base,xshift=-.33\textwidth] (strong)
+ {$n\ge3$, strong decay\\Circle completion\\
+  Rough conformal double\\Riemannian mass bound}
+---- Finite-angular-cylinder-covers-below-the-hal | transform
+---- Finite-angular-cylinder-covers-below-the-hal | transform
+---- Finite-cylinder-approximation-of-ruled-sets- | pgfmath
+---- Finite-generation-for-the-Kn-local-sphere-Se | transform
+---- GOE-bulk-universality-for-fixed-degree-rando | statement
+     \draw[edge] (av1)--(aw1) (av2)--(aw2)
+---- Gaussian-free-field-limits-of-weighted-integ | statement
+     \pinskzero
+    \pinsgroup{0}{.95}{T}{pinsplus}
+    \pinsgroup{0}{-.95}{B}{pinsminus}
+    \pinsgroup{-1.70}{0}{L}{pinsminus}
+    \pinsgroup{1.70}{0}{R}{pinsplus}
+    \draw[pins move,pinsplus] (0,1.23)--(0,1.72)
+      node[midway,right=3pt] {$(1)\ a_+e$}
+---- Harmonic-heights-and-the-Artin-K-pi-1-conjec | transform
+---- Harmonic-heights-and-the-Artin-K-pi-1-conjec | transform
+---- Harmonic-heights-and-the-Artin-K-pi-1-conjec | transform
+---- Mass-and-covering-exponents-for-fixed-length | statement
+     \draw[blue!65!black,very thick] plot[smooth] coordinates {(-1.1,-1.5) (-.5,-.8) (-.6,0) (.1,.1) (.8,.35) (.6,.9) (1.1,1.4)}
+---- Monochromatic-finite-sums-and-products-in-th | statement
+     \path (prediction.south) -- (alignment.south)
+   node[midway,below=13mm,result] (deduction)
+   {Product-chain selection and a positive weighted count\\
+    Theorem~\ref{thm:main} and Corollary~\ref{cor:distinct-expressions}}
+---- No-percolation-at-criticality-on-quasi-trans | scoped
+---- Nonuniqueness-with-local-conservation-for-th | statement
+     \draw[blue!55!black,line width=1.1pt,domain=-2.2:2.2,samples=70]
+    plot ({10.3+\x},{2.55+.23*tanh(1.35*\x)})
+---- Polynomial-PEPS-approximation-of-gapped-squa | statement
+     \geometryrow{0}{\textbf{Main: initial}\\before the exchange}
+  \geometryband{0}{-8}{0}{C}
+  \geometryband{0}{0}{1}{A}
+  \geometryband{0}{1}{2}{B}
+
+  \geometryrow{-.82}{\textbf{Auxiliary}\\three nested births}
+  \geometrybandat{-.82}{-8}{-6}{C}{-7.22}
+  \geometryband{-.82}{-6}{-5}{B}
+  \geometryband{
+---- Radius-of-comparison-equals-half-the-mean-di | transform
+---- Strong-diffeomorphic-approximation-in-three- | statement
+     \node[font=\bfseries] at (1,.7,2.55) {Input face prism}
+---- The-Deligne-Drinfeld-conjecture-September-23 | scoped
+---- The-joint-scaling-limit-of-critical-Ashkin-T | statement
+     \draw[very thick,teal!70!black] plot[smooth] coordinates
+   {(0,0.8) (1,1.15) (2,0.9) (3,1.35) (4,1.0) (5,1.2) (6,0.9)}
+---- Thompsons-group-F-is-nonamenable-September-2 | statement
+     \node[anchor=west,align=left,text width=5.2cm] at (5.45,3.15)
+    {\textcolor{parentblue}{Separated pairs}\\
+     \(D(D-1)\) terms, each with\\
+     mean in \([\alpha-\eta,\alpha+\eta]\)}
+---- Translative-covering-densities-of-order-n-lo | statement
+     \draw[edge,dashed] (six) to[out=135,in=45,looseness=5] (six)
+---- Universal-Tensor-Squares-for-Symmetric-Group | pgfmath
+refusals shown: 944

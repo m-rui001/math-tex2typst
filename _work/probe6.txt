@@ -1,0 +1,87 @@
+notes=734 ptab keys=732
+notes not in ptab=["D258", "D259"]
+ptab keys with falsy dir=["D113"]
+ptab keys not among notes=[]
+D259 record=null
+preprints matching 'split':
+   Weil-classes-and-Hodge-classes-on-abelian-powers-September-30-2026
+
+S-prefixed ref occurrences: total=28 notes=13 {"D146": 6, "D181": 1, "D188": 1, "D210": 1, "D242": 2, "D300": 1, "D317": 1, "D318": 3, "D364": 2, "D369": 1, "D370": 7, "D384": 1, "D51": 1}
+   D146:221 \eqref{eq:profile-dilation} <<者是 §4 的膨胀估计 
+   D146:482 \eqref{eq:signed-cluster-diameter} <<为 §1 的 $M$），
+   D146:602 \eqref{eq:admissible-sets} <<a u$（即 §5 的 
+   D146:725 \eqref{eq:field-union-bound} <<$ 给 §9 的并集界 
+   D146:842 \eqref{eq:profile-dilation} <<差。触发点是 §4 的 
+   D146:899 \eqref{eq:admissible-sets} <<；§9 引用 §5 的 
+   D181:113 \ref{eq:A-free} <<的自由(见 §6 的 $
+   D188:551 \eqref{eq:semistable-support} <<2、§12.4 给出；$
+   D210:128 \eqref{eq:ledger-thinned-density} <<留到 §12 的参数账（
+   D242:187 \eqref{mat:pair-inequality} <<恰好是 §7 分对命题 
+   D242:201 \eqref{mat:deficit-reduction} <<）先于 §6 的化简式 
+   D300:227 \eqref{eq:insertion} <<、以及 §10 收账时 
+   D317:204 \eqref{eq:sum-decomposition} <<一边用 §5 的分解 `
+   D318:383 \ref{har:subsec:small} <<oute 把构造施于 §
+   D318:383 \ref{har:subsec:small} << 行称"零次除子恰是 §
+   D318:383 \ref{har:subsec:small} <<3 行称"有限生成由 §
+   D364:155 \eqref{eq:prelim-atom-covariance} <<性，这点我在\n§3 的 
+   D364:230 \ref{thm:distribution} <<，§8（Theorem~
+   D369:71 \ref{act:constraint} << §3 的 Lemma~
+   D370:65 \ref{local-question} <<权重的一致上界（$\S$
+   D370:65 \ref{shell-moment} <<tion} 与 $\S$
+   D370:65 \ref{residue-count} <<相对的整体计数（$\S$
+   D370:161 \ref{wrong-turns} <<最贵的一次绕路，$\S$
+   D370:227 \ref{wrong-turns} <<个声明的价值在 $\S$
+   D370:303 \ref{local-question} <<ion}\n\n把 $\S$
+   D370:352 \ref{...} <<77 行用了 `$\S$
+   D384:583 \eqref{eq:B22} <<。§8 的求和恒等式 $
+   D51:886 \eqref{eq:translation-commutator} << §9 相同的换位子式（
+
+FULL DUMP of non-fence occurrences whose arg is not in the material label set:
+
+@@@ D117:231 [body] arg=None cmd=ref
+第 0 节我把 maximal 的困难押在"算子族的极大化"上，读完 `maximal.tex` 才发现这一节的第一个句子就把接口交给了 jumps：`maximal.tex:3-4` 逐字 "The estimate of Section~\ref{sec{jumps}} allows different truncation / endpoints at every output position. We first use this freedom on a finite / mesh, choosing the endpoints that maximize each output."。也就是说，逐点自由选取端对的权力是 jumps 造出来的机器，maximal 只负责把它消化进三线性形式的右端。这一节补第 6 节留在半路的引用（`maximal.tex:95-124` 的识别段我还没写过），第 11 节再回来接硬截断比较。
+
+@@@ D124:804 [body] arg='lem:lem:pair-bound' cmd=ref
+> submeasure of $\nu$, as in Lemma~\ref{lem:lem:pair-bound}.
+
+@@@ D244:68 [body] arg='式 253' cmd=ref
+精细密度是整个引理最锋利的部分。设 $K(s,y)$ 为 $W(s,a)\psi(a)^2\,\mathrm d a$ 在 $a\mapsto sJ(a)$ 下的推前密度（02-passages.tex:114-116），则每个残差类 $j\equiv h\pmod P$ 的展开时间密度在 $L^1(\R)$ 意义下 $o(1)$ 逼近 $Q_{N,h}(t)=\sum_{k\in\Z}K(t,Nt-h-kP)$（02-passages.tex:117-123），再折回 $\mathbb T$。我第一遍抄这个公式时把归一化弄错过：以为 $Q_{N,h}$ 对 $t$ 积分等于该残差类的全部质量。核对 02-passages.tex:294-300 才纠正：$\sum_kK(t,y-kP)$ 是周长 $P$ 圆上的密度，平均值为 $\tfrac1P\int_\mathbb T W(t,a)\psi(a)^2\,\mathrm d a$，残差类各取 $\frac1P$ 份额才是正确的读法。还有一条当时差点漏掉、后来反复被引用的细节：取整误差在系数质量层面吸收（02-passages.tex:250-265 的 \eqref{式 253} 型估计），格点 $j/N$ 本身绝不被 $m\Delta_N$ 平移（02-passages.tex:262-265），因此快变量 $Ns$ 的相位是锁死的；配合 $cm,N$ 皆整数得到 $\operatorname{e}(-N(z+k))=\operatorname{e}(-Nz)$（03-signals.tex:283-287），这是 §8 信号能以频率 $N$ 振荡而不被折叠打散的前提。
+
+@@@ D259:818 [body] arg='spread:period-selection' cmd=ref
+"Let $Z$ and $a\theta^4+w$ be as in Proposition~\ref{spread:period-selection}"、
+
+@@@ D259:820 [body] arg='spread:hilbert-loci' cmd=ref
+Lemma~\ref{spread:hilbert-loci}"、"Since $\Pi$ was chosen outside
+
+@@@ D259:821 [body] arg='spread:chern-constancy' cmd=ref
+$\mathcal E_{\mathrm{Hilb}}$"、"Lemma~\ref{spread:chern-constancy} therefore gives
+
+@@@ D346:102 [body] arg='H' cmd=ref
+有了 \eqref{H} 里的 $H$，还差最后一块拼图：$H$ 里要能造出长度恰好 $\ell$、两端颜色不同的路径。Lemma clq:coloured-path 正是这句话：设 $s\ge4$，$H$ 连通非二部无 $K_s$，$\delta(H)\ge s$，且对任意不相邻两点 $\{a,b\}$ 有 $\lvert N_H[\{a,b\}]\rvert\ge2s$，则对任意非常值 $\chi\colon V(H)\to\{0,1\}$ 与 $1\le\ell\le2s-2$，存在长度恰 $\ell$ 且两端异色的路径（03-clique-rotations.tex:42-54）。
+
+@@@ D370:65 [body] arg='local-question' cmd=ref
+于是我把第一层的目标改写成一个更弱、但恰好够用的形式：只要上界，不要渐近；而且上界允许带 $\kappa_K=\operatorname*{Res}_{s=1}\zeta_K(s)$ 这个因子。理由在 `paper.tex:181`--`184`：把 Dedekind zeta 的留数保留在展开后的理想计数里，就够了；Stark 的例外零点下降（Stark 1974）加上 Shiu 定理（Pollack 的一致形式）提供了不依赖 subconvexity 的所需界；奇数次排除了 Stark 例外零点二选一里出现的二次子域。这一步是整篇稿子的支点，我把它拆成两个问题：局部权重的一致上界（$\S$\ref{local-question} 与 $\S$\ref{shell-moment}）与留数相对的整体计数（$\S$\ref{residue-count}）。
+
+@@@ D370:65 [body] arg='shell-moment' cmd=ref
+于是我把第一层的目标改写成一个更弱、但恰好够用的形式：只要上界，不要渐近；而且上界允许带 $\kappa_K=\operatorname*{Res}_{s=1}\zeta_K(s)$ 这个因子。理由在 `paper.tex:181`--`184`：把 Dedekind zeta 的留数保留在展开后的理想计数里，就够了；Stark 的例外零点下降（Stark 1974）加上 Shiu 定理（Pollack 的一致形式）提供了不依赖 subconvexity 的所需界；奇数次排除了 Stark 例外零点二选一里出现的二次子域。这一步是整篇稿子的支点，我把它拆成两个问题：局部权重的一致上界（$\S$\ref{local-question} 与 $\S$\ref{shell-moment}）与留数相对的整体计数（$\S$\ref{residue-count}）。
+
+@@@ D370:65 [body] arg='residue-count' cmd=ref
+于是我把第一层的目标改写成一个更弱、但恰好够用的形式：只要上界，不要渐近；而且上界允许带 $\kappa_K=\operatorname*{Res}_{s=1}\zeta_K(s)$ 这个因子。理由在 `paper.tex:181`--`184`：把 Dedekind zeta 的留数保留在展开后的理想计数里，就够了；Stark 的例外零点下降（Stark 1974）加上 Shiu 定理（Pollack 的一致形式）提供了不依赖 subconvexity 的所需界；奇数次排除了 Stark 例外零点二选一里出现的二次子域。这一步是整篇稿子的支点，我把它拆成两个问题：局部权重的一致上界（$\S$\ref{local-question} 与 $\S$\ref{shell-moment}）与留数相对的整体计数（$\S$\ref{residue-count}）。
+
+@@@ D370:161 [body] arg='wrong-turns' cmd=ref
+我最在意的是"$\kappa_K$ 留在右边"这件事的代数后果：展开恒等式前面的系数是 $1/(\sqrt D\,\kappa_K)$，与这里的 $\kappa_K y/q$ 相除，$\kappa_K$ 正好消掉，剩下 $y/(q\sqrt D)=y/Q$。`geometry.tex:117`--`119` 就写成了 $\frac{r^{n-1}}{\sqrt D\kappa_K}\cdot\frac{\kappa_K rQ}{q}=r^n$。这就是留数相对形式的全部红利：我不需要任何 saving，只需要 main term 的形状与它带对的因子。我原先以为必须省下一个 $D^{-\delta}$，因而一头扎进 subconvexity；这个误解是我最贵的一次绕路，$\S$\ref{wrong-turns} 里我再把它失败的细节摊开。
+
+@@@ D370:227 [body] arg='wrong-turns' cmd=ref
+我读这段时最意外的反道是最后那句声明：论证对每个固定 $x$、固定 $r$ 用同一常数，没有把缩小半径与包极限交换（`geometry.tex:146`--`149`）。这个声明的价值在 $\S$\ref{wrong-turns} 第九条里我已经认过账。另一个细节是"逐点选择可以不可测"：因为我只需要对每个 $x$ 单独用一个 $w_x$，最后的集合包含关系 $xB(r)\subset\{\Lambda:\exists v\in\Lambda\cap(w_x+[-b_0r,b_0r]^n)\}$ 是逐点成立的，测度论层面没有任何选择公理的负担。
+
+@@@ D370:303 [body] arg='local-question' cmd=ref
+把 $\S$\ref{local-question} 这个标题留着，是为了把第四点的准确问法写下来，免得以后自己又退回粗版本。问题应当这样问：对所有满足 $L_\ell\subset R_\ell$ 且 $R_\ell L_\ell=R_\ell$ 的局部全模 $L_\ell$（亦即 `packets.tex:24`--`27` 那一类），一致地控制
+
+@@@ D380:215 [body] arg='eq:source-N' cmd=label
+（二）两套标签体系并存。引言里的公式标签是 \label{eq:height-convention}（`01-introduction.tex:37`）、\label{eq:bsd-main}（54）、\label{eq:normalized-quotient}（143）、\label{eq:intro-inequality}（157）、\label{eq:intro-pair}（159）；正文第 5 节以后一律是 \label{eq:source-N} 加手写 \tag{N}，N 从 2 到 24，其中 (2)--(8) 在第 5 节、(9)--(16) 在第 6 节、(17) 在第 9 节、(18)--(19) 在第 7 节、(20)--(21) 在第 8 节、(22)--(24) 在第 10 节。编号顺序与文件顺序不同（17 早于 18、19），进一步说明第 5--10 节是从各自独立成稿的技术片段合并来的，合并时只手改了标签名，编号没重排。
+
+@@@ D473:60 [body] arg='...' cmd=ref
+换测度引理（main.tex:455-484，即 Lemma \ref{...}，本文按 main.tex 行号引用）：$0<T<\infty$ 几乎必然、$\mathbb E|\log T|^2<\infty$；叶概率按 $e^{X_\tau}$ 重加权时家谱律保持；根标记保持；$\mathbb E\log\sum v_\tau e^{X_\tau}=\mathbb E X_\varnothing$。
+
+@@@ D517:185 [body] arg='3' cmd=ref
+分析侧的输入是弱范数方程与方差的接力（04-volume.tex:589--615）：对 $b$ 积分 \eqref{3} 用法，用 $\bar\sigma\le1$ 与 $\bar e\ge\frac53\lvert\nabla b\rvert^2$，得 $P-\mathbf E b\ge\frac49\mathbf E\lvert\nabla\sqrt b\rvert^2$；$\bar e/b$ 的可积性经磨光给出 $c=\sqrt b\in H^1$。取 $G(c)=c+\frac{c^5}{40}-\frac{c^9}{1152}$，$H(b)=G(c)$，Sobolev 链式法则在有界范围与 $c=0$ 处都合法；关键导数界是 $G'(c)=1+\frac{b^2}{8}-\frac{b^4}{128}$，把它对 $z=b^2/4\in[0,1]$ 平方比较：正量 $1+z/2-z^2/8$ 的平方是 $1+z-z^3/8+z^4/64\le1+z$，于是 $G'\in[0,\frac{\sqrt{4+b^2}}{2}]\subseteq[0,\frac{\sqrt K}{2}]$。加权方差就此接上：$\operatorname{Var}(H(b))\le\frac14\mathbf E\lvert\nabla\sqrt b\rvert^2\le\frac9{16}(P-\mathbf E b)$，改写即 $J=16(\mathbf E H(b))^2-\mathbf E\Phi(b)\ge0$（04-volume.tex:616--621）。而 $b$ 的分布是满足两条约束的 $[0,2]$ 概率测度，障碍引理宣告 $J<0$，矛盾。$\tau=0$ 落定，恒等式再送回来就是两块二次矩相等。

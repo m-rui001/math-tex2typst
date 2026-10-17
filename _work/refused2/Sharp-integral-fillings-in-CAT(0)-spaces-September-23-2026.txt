@@ -1,0 +1,20 @@
+REFUSED []
+  raw:      C=C\mathbin{\vrule height 1.4ex depth -0.3ex width .07ex\vrule height .07ex depth 0ex width .7ex} E+C\mathbin{\vrule height 1.4ex depth -0.3ex width .
+  cleaned:  C=C\mathbin{\vrule height 1.4ex depth -0.3ex width .07ex\vrule height .07ex depth 0ex width .7ex} E+C\mathbin{\vrule height 1.4ex depth -0.3ex width .
+  warn: }(Y\setminus E), rendering as TeX: C=C\mathbin{\vrule height 1.4ex depth -0 ^ unexpected control sequence \vrule expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+REFUSED []
+  raw:      C\mathbin{\vrule height 1.4ex depth -0.3ex width .07ex\vrule height .07ex depth 0ex width .7ex}\{u>t\}
+  cleaned:  C\mathbin{\vrule height 1.4ex depth -0.3ex width .07ex\vrule height .07ex depth 0ex width .7ex}\{u>t\}
+  warn: th .7ex}\{u>t\}, rendering as TeX: C\mathbin{\vrule height 1.4ex depth -0.3 ^ unexpected control sequence \vrule expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+REFUSED []
+  raw:      \|C\mathbin{\vrule height 1.4ex depth -0.3ex width .07ex\vrule height .07ex depth 0ex width .7ex} E\|=\|C\|\mathbin{\vrule height 1.4ex depth -0.3ex w
+  cleaned:  \|C\mathbin{\vrule height 1.4ex depth -0.3ex width .07ex\vrule height .07ex depth 0ex width .7ex} E\|=\|C\|\mathbin{\vrule height 1.4ex depth -0.3ex w
+  warn:  width .7ex} E., rendering as TeX: \|C\mathbin{\vrule height 1.4ex depth -0 ^ unexpected control sequence \vrule expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+REFUSED []
+  raw:      a(t)=\mu\{u>t\},\qquad U_t=A\mathbin{\vrule height 1.4ex depth -0.3ex width .07ex\vrule height .07ex depth 0ex width .7ex}\{u>t\},\qquad P(t)=\mathbf 
+  cleaned:  a(t)=\mu\{u>t\},\qquad U_t=A\mathbin{\vrule height 1.4ex depth -0.3ex width .07ex\vrule height .07ex depth 0ex width .7ex}\{u>t\},\qquad P(t)=\mathbf{
+  warn: (\partial U_t),, rendering as TeX: t=A\mathbin{\vrule height 1.4ex depth -0 ^ unexpected control sequence \vrule expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+REFUSED []
+  raw:      a(t)=\mu\{u>t\},\qquad e(t)=\int_{\{u>t\}}|Du|^2\,d\mu, \qquad P(t)=\mathbf M\bigl(\partial(A\mathbin{\vrule height 1.4ex depth -0.3ex width .07ex\vru
+  cleaned:  a(t)=\mu\{u>t\},\qquad e(t)=\int_{\{u>t\}}|Du|^2\,d\mu, \qquad P(t)=\mathbf{M}\bigl(\partial(A\mathbin{\vrule height 1.4ex depth -0.3ex width .07ex\vr
+  warn: }\{u>t\})\bigr), rendering as TeX: l(A\mathbin{\vrule height 1.4ex depth -0 ^ unexpected control sequence \vrule expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"

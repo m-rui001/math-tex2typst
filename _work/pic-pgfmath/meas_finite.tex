@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{pgf}
+\usepackage{tikz}
+\newwrite\meas
+\immediate\openout\meas=meas_finite.txt\relax
+\begin{document}
+\begin{tikzpicture}[scale=0.95]
+ \foreach \i in {-4,...,4} {\foreach \j in {-4,...,4} {
+   \pgfmathsetmacro{\cx}{\i+.35*\j}
+   \pgfmathsetmacro{\cy}{\j+.35*\i}
+   \pgfmathsetmacro{\lx}{\cx-.5}
+   \pgfmathsetmacro{\ly}{\cy-.5}
+   \pgfmathsetmacro{\hx}{\cx+.5}
+   \pgfmathsetmacro{\hy}{\cy+.5}
+   \immediate\write\meas{CELL i=\i\space j=\j\space cx=\cx\space cy=\cy\space lo=\lx,\ly\space hi=\hx,\hy}
+ }}
+\end{tikzpicture}
+\end{document}

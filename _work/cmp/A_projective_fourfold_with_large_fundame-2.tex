@@ -1,0 +1,72 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{patterns}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\newcommand{\DoNotLoadEpstopdf}{}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\BB}{\mathbb B}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cS}{\mathcal S}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Jac}{Jac}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\codim}{codim}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Latex,
+  every node/.style={font=\small},
+  marked/.style={blowaccent,line width=1.5pt}]
+  \coordinate (sw) at (3.6,.65);
+  \coordinate (se) at (7.8,.65);
+  \coordinate (nw) at (4.5,3.25);
+  \coordinate (ne) at (8.7,3.25);
+  \fill[black!3] (sw)--(se)--(ne)--(nw)--cycle;
+  \foreach \t in {.25,.5,.75}{
+    \draw[black!23] ($(sw)!\t!(nw)$)--($(se)!\t!(ne)$);
+    \draw[black!23] ($(sw)!\t!(se)$)--($(nw)!\t!(ne)$);
+  }
+  \draw[black!55] (sw)--(se)--(ne)--(nw)--cycle;
+  \coordinate (el) at ($(sw)!.5!(nw)$);
+  \coordinate (er) at ($(se)!.5!(ne)$);
+  \draw[marked] (el)--(er);
+  \node[above=6pt] at (6.65,3.25)
+    {$G=\mathbb P^1_{\mathrm{curve}}\times\mathbb P^1_{\mathrm{normal}}$};
+  \node[fill=white,inner sep=2pt,text=blowaccent] at (6.15,1.95)
+    {$\widehat Y\cap G=E\times\{q\}$};
+  \node[below=4pt] at (5.7,.65) {curve direction};
+
+  \draw[marked] (0,.7)--(2.05,.7);
+  \node[below=5pt] at (1.025,.7) {$E\subset Y_1\subset T$};
+  \draw[->,line width=.75pt] (3.45,1.65)--(1.65,1.05);
+  \node[align=center] at (1.6,2.35)
+    {original blowdown\\$G\longrightarrow\mathbb P^1_{\mathrm{curve}}$};
+
+  \draw[black!65,line width=.8pt] (11.1,.75)--(11.7,2.65);
+  \fill[blowaccent] (11.4,1.7) circle (2.8pt);
+  \node[right=5pt,align=left] at (11.4,1.7) {$q$\\in $Y_0$};
+  \draw[->,line width=.75pt] (8.7,1.9)--(10.7,1.9);
+  \node[align=center] at (10.35,3.65)
+    {other blowdown\\$G\longrightarrow\mathbb P^1_{\mathrm{normal}}$};
+  \node[below=6pt,align=center] at (11.1,.6)
+    {image curve\\in $T'$};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,22 @@
+notes=203
+BY_LOCATION={"body": 4565, "head": 18, "table": 35, "display_math": 4}
+
+LEAD_WORDS(top20)=[["Lemma~", 360], ["Theorem~", 197], ["Proposition~", 153], ["Equation~", 121], ["Section~", 75], ["Corollary~", 34], ["Definition~", 14], ["and~", 12], ["Appendix~", 9], ["Sections~", 8], ["Table~", 6], ["Lemmas~", 6], ["Figure~", 6], ["Propositions~", 4], ["Equations~", 4], ["Remark~", 4], ["Part~", 3], ["Thm~", 3], ["Formula~", 2], ["Condition~", 2]]
+
+REF_PREFIX(top20)=[["eq", 1031], ["lem", 251], ["thm", 173], ["prop", 124], ["sec", 88], ["rel", 26], ["(no-colon)", 24], ["cor", 22], ["path", 22], ["geo", 17], ["mat", 17], ["main", 16], ["found", 15], ["har", 15], ["int", 13], ["tr", 13], ["def", 12], ["sc", 12], ["bc", 12], ["probability", 11]]
+
+SAMPLES:
+D08-Mezard-Par:35|\begin{theorem}\label{main:theorem}
+D08-Mezard-Par:36|Under \eqref{model:integrability}--\eqref{model:positivity}, the thermodynamic
+D08-Mezard-Par:38|\begin{equation}\label{main:formula}
+D08-Mezard-Par:117|\label{model:edge}\\
+D08-Mezard-Par:122|\label{model:site-message}
+D08-Mezard-Par:138|U_{\theta_j}(x_1^j,\ldots,x_{p-1}^j;\eps)\right),\label{model:vs}\\
+D08-Mezard-Par:139|V_{\rm e}&=C_\theta(x_1,\ldots,x_p).\label{model:ve}
+D08-Mezard-Par:216|\begin{lemma}[Insertion calculus]\label{tree:insertion}
+D08-Mezard-Par:221|\eqref{tree:Y-recursion} uses the kernels before insertion.  The new
+D08-Mezard-Par:222|kernels are \eqref{tree:updated-kernel}.
+D08-Mezard-Par:230|\begin{equation}\label{tree:density}
+D08-Mezard-Par:260|\begin{equation}\label{tree:telescoping}
+D08-Mezard-Par:268|\begin{equation}\label{tree:Q-rule}
+D08-Mezard-Par:282|\begin{equation}\label{tree:log-series}

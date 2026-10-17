@@ -1,0 +1,20 @@
+== nested filled paths, this generation against the one before the fix
+   (25 points inside the inner box must read the paper; 25 in the band between the two boxes must read the fill)
+  A-Linear-Clock-for-Random-Walk-on-Tree-Weigh p35   even_odd=True  fill=(242, 242, 242)    hole paper 0 -> 24 of 25 ring fill after 25/25 (before 25/25)  OK
+  A-Linear-Clock-for-Random-Walk-on-Tree-Weigh p35   even_odd=True  fill=(242, 242, 242)    hole paper 0 -> 25 of 25 ring fill after 25/25 (before 25/25)  OK
+  A-Torsion-Free-Group-Algebra-That-Is-Not-Dir p29   even_odd=True  fill=(209, 209, 209)    hole paper 0 -> 25 of 25 ring fill after 23/25 (before 23/25)  OK
+  A-Torsion-Free-Group-Algebra-with-Zero-Divis p23   even_odd=True  fill=(233, 233, 233)    hole paper 0 -> 25 of 25 ring fill after 25/25 (before 25/25)  OK
+  BKT-universality-for-height-and-planar-spin- p32   even_odd=True  fill=(230, 230, 255)    hole paper 0 -> 22 of 25 ring fill after 25/25 (before 25/25)  OK
+  Essential-Singularity-of-the-Correlation-Len p52   even_odd=True  fill=(224, 224, 255)    hole paper 0 -> 22 of 25 ring fill after 13/25 (before 13/25)  INK-COVERED
+  Essential-Singularity-of-the-Correlation-Len p52   even_odd=True  fill=(224, 224, 255)    hole paper 0 -> 24 of 25 ring fill after 11/25 (before 20/25)  INK-COVERED
+  Exponential-decay-in-two-dimensional-classic p10   even_odd=True  fill=(236, 236, 236)    hole paper 0 -> 25 of 25 ring fill after 25/25 (before 25/25)  OK
+  Pure-Point-Spectrum-for-the-Two-Dimensional- p60   even_odd=True  fill=(224, 224, 224)    hole paper 0 -> 8 of 25 ring fill after 25/25 (before 25/25)  INK-COVERED
+  Pure-Point-Spectrum-for-the-Two-Dimensional- p60   even_odd=True  fill=(219, 219, 255)    hole paper 0 -> 8 of 25 ring fill after 25/25 (before 25/25)  INK-COVERED
+  Quantitative-Superexponential-Bounds-for-van p18   even_odd=True  fill=(232, 232, 255)    hole paper 0 -> 23 of 25 ring fill after 21/25 (before 21/25)  OK
+  Rigidity-of-Smooth-Billiards-with-a-Continuo p1    even_odd=True  fill=(235, 239, 242)    hole paper 0 -> 25 of 25 ring fill after  7/25 (before 7/25)  INK-COVERED
+  The-Gaussian-free-field-limit-of-integer-Lip p49   even_odd=True  fill=(240, 240, 240)    hole paper 1 -> 10 of 25 ring fill after 20/25 (before 20/25)  INK-COVERED
+  The-Gaussian-free-field-limit-of-integer-Lip p49   even_odd=True  fill=(225, 225, 225)    hole paper 0 -> 6 of 25 ring fill after 20/25 (before 20/25)  INK-COVERED
+  The-Gaussian-free-field-limit-of-integer-Lip p49   even_odd=True  fill=(225, 225, 225)    hole paper 0 -> 6 of 25 ring fill after 20/25 (before 20/25)  INK-COVERED
+  The-critical-Liouville-quantum-sphere-and-ge p164  even_odd=True  fill=(241, 207, 197)    hole paper 0 -> 18 of 25 ring fill after  5/25 (before 5/25)  INK-COVERED
+  The-critical-logarithmic-correction-for-the- p13   even_odd=True  fill=(223, 223, 223)    hole paper 0 -> 21 of 25 ring fill after 25/25 (before 25/25)  OK
+holes read on the page: 17 over 12 papers

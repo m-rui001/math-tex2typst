@@ -1,0 +1,11 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+   hook     page: shaft 1.921cm, 2 barb piece(s)  mid right -0.060  mid right -0.026
+          ours: 1 extra segment(s)  mid right +0.150  (hook key +1)
+   r hook   page: shaft 1.972cm, 0 barb piece(s)
+          ours: 0 extra segment(s)  (hook key +0)
+   l hook   page: shaft 1.972cm, 0 barb piece(s)
+          ours: 0 extra segment(s)  (hook key +0)
+   down     page: shaft 1.421cm, 2 barb piece(s)  mid right -0.060  mid right -0.026
+          ours: 1 extra segment(s)  mid right +0.150  (hook key +1)
+   down l   page: shaft 1.472cm, 0 barb piece(s)
+          ours: 0 extra segment(s)  (hook key +0)

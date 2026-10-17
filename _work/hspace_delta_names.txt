@@ -1,0 +1,13 @@
+A-cubic-lower-bound-for-border-determinantal-complexity-of-the-permanent-September-24-2026
+Cylinder-loop-weights-and-planar-nesting-September-26-2026
+Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026
+Donovans-Conjecture-over-Algebraic-Closures-of-Prime-Fields-September-24-2026
+Nuclear-dimension-and-Jiang-Su-stability-without-elementary-subquotients-September-23-2026
+Simulating-One-Tape-Time-in-Two-Fifths-Power-Space-September-25-2026
+The-Margulis-Platonov-conjecture-over-number-fields-September-23-2026
+The-Stable-Hurewicz-Image-of-the-Sphere-at-Two-September-25-2026
+The-abelianity-conjecture-for-special-compact-Kahler-manifolds-September-23-2026
+The-normalized-volume-gap-in-dimension-four-September-24-2026
+The-two-primary-Birch-Swinnerton-Dyer-formula-in-Selmer-corank-at-most-one-September-24-2026
+Weak-pure-infiniteness-and-O-infinity-absorption-September-25-2026
+standalone-overview

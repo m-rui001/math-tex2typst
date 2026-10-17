@@ -1,0 +1,81 @@
+################ D25  (D25-Crouzeix完整不等式直接证明.md)
+before: bytes=399742 lines=2784
+ROW line=255  sites=8  pipes 12->4  $=8(parity even)
+OLD| | 核心产出 | 一条数不等式 $\|P[A]\|\le2\max_{W(A)}\|P\|$ | 一个算子对象：正定 $S$，$\|S\|\|S^{-1}\|\le2$，使 $Sf(A)S^{-1}$ 为压缩 |
+NEW| | 核心产出 | 一条数不等式 $\lVert P[A]\rVert\le2\max_{W(A)}\lVert P\rVert$ | 一个算子对象：正定 $S$，$\lVert S\rVert\lVert S^{-1}\rVert\le2$，使 $Sf(A)S^{-1}$ 为压缩 |
+ROW line=259  sites=4  pipes 8->4  $=8(parity even)
+OLD| | 常数的来源 | Parseval 权重配平（$1$ 对 $1,\tfrac12$）给出 $\gamma^2\le4$ | 相似条件数 $\|S\|\|S^{-1}\|\le2$ |
+NEW| | 常数的来源 | Parseval 权重配平（$1$ 对 $1,\tfrac12$）给出 $\gamma^2\le4$ | 相似条件数 $\lVert S\rVert\lVert S^{-1}\rVert\le2$ |
+ROW line=315  sites=2  pipes 8->6  $=4(parity even)
+OLD| | $\|\cdot\|_\partial$ | `main.tex:368-371` | `\|H\|_\partial^2=\int_\T\HS{H(h(\mu))}^2\,d\tau(\mu)`，把边界 $L^2$ HS 范数的平方记成一个范数平方 |
+NEW| | $\lVert \cdot\rVert_\partial$ | `main.tex:368-371` | `\|H\|_\partial^2=\int_\T\HS{H(h(\mu))}^2\,d\tau(\mu)`，把边界 $L^2$ HS 范数的平方记成一个范数平方 |
+ROW line=596  sites=6  pipes 11->5  $=28(parity even)
+OLD| | $K\ge0$ 与两个边际 $=1$ | 第 200-204 行 | 上面第五、六步 | 只有 $\int K=1$ 而 $K$ 不变号：$T$ 不是正算子，第 260 行的 Jensen 步 $\|(Tu)(\mu)\|^2\le\int K\|u\|^2$ 不成立（需要 $K\ge0$ **且**边际 $=1$ 同时成立）。若 $K\ge0$ 但边际 $=\kappa\ne1$：$\|T\|\le\kappa$，第 7 节右端权重从 2 变成 $1+\kappa^2$，最终 $\gamma\le2$ 变成依赖 $\kappa$ 的数（敏感度见第 16 节） |
+NEW| | $K\ge0$ 与两个边际 $=1$ | 第 200-204 行 | 上面第五、六步 | 只有 $\int K=1$ 而 $K$ 不变号：$T$ 不是正算子，第 260 行的 Jensen 步 $\lVert (Tu)(\mu)\rVert^2\le\int K\lVert u\rVert^2$ 不成立（需要 $K\ge0$ **且**边际 $=1$ 同时成立）。若 $K\ge0$ 但边际 $=\kappa\ne1$：$\lVert T\rVert\le\kappa$，第 7 节右端权重从 2 变成 $1+\kappa^2$，最终 $\gamma\le2$ 变成依赖 $\kappa$ 的数（敏感度见第 16 节） |
+ROW line=700  sites=4  pipes 9->5  $=22(parity even)
+OLD| | 权重 2（非常数项） | 第 251 行右端 | $2=1+1$：一份来自 $u$ 自身，一份来自 $Tu$（$\|T\|\le1$） | 若 $\|T\|\le\kappa$（例如边际归一化被改成 $\int K=\kappa$），右端变 $\lvert C_0\rvert_2^2+(1+\kappa^2)\sum_{k\ge1}\lvert C_k\rvert_2^2$。回代到 `thm:domain` 的 `eq:weighted-dual` 会给对角块权重 $\frac{1}{1+\kappa^2}$ 之类，最终 $\gamma^2\le4$ 变成依赖 $\kappa$ 的界；关键是配平被打破。当 $\kappa=1$ 才正好回到 2。[分析] |
+NEW| | 权重 2（非常数项） | 第 251 行右端 | $2=1+1$：一份来自 $u$ 自身，一份来自 $Tu$（$\lVert T\rVert\le1$） | 若 $\lVert T\rVert\le\kappa$（例如边际归一化被改成 $\int K=\kappa$），右端变 $\lvert C_0\rvert_2^2+(1+\kappa^2)\sum_{k\ge1}\lvert C_k\rvert_2^2$。回代到 `thm:domain` 的 `eq:weighted-dual` 会给对角块权重 $\frac{1}{1+\kappa^2}$ 之类，最终 $\gamma^2\le4$ 变成依赖 $\kappa$ 的界；关键是配平被打破。当 $\kappa=1$ 才正好回到 2。[分析] |
+ROW line=702  sites=2  pipes 7->5  $=8(parity even)
+OLD| | $K\ge0$ | 第 260 行 | Jensen | 变号则 $\|T\|\le1$ 失效（符号核的 $L^2$ 范数可远大于 1），右不等式失效。左不等式**不依赖** $K\ge0$，它只是 Parseval 丢项 |
+NEW| | $K\ge0$ | 第 260 行 | Jensen | 变号则 $\lVert T\rVert\le1$ 失效（符号核的 $L^2$ 范数可远大于 1），右不等式失效。左不等式**不依赖** $K\ge0$，它只是 Parseval 丢项 |
+ROW line=703  sites=2  pipes 7->5  $=6(parity even)
+OLD| | 两个边际 $=1$ | 第 260、261 行 | 各用一次（Jensen 与 Fubini） | 只证一个边际，$T$ 只在一侧受控，$\|T\|_{L^2\to L^2}$ 未知 |
+NEW| | 两个边际 $=1$ | 第 260、261 行 | 各用一次（Jensen 与 Fubini） | 只证一个边际，$T$ 只在一侧受控，$\lVert T\rVert_{L^2\to L^2}$ 未知 |
+ROW line=705  sites=2  pipes 7->5  $=18(parity even)
+OLD| | $d\tau$ 归一化（$dt/2\pi$） | 第 178 行 | $\int1\,d\tau=1$，边际"$=1$"的写法成立 | 用 $dt$ 则边际变 $2\pi$，$\int K=2\pi$，$\|T\|\le2\pi$，权重 2 会被 $2\pi$ 污染 |
+NEW| | $d\tau$ 归一化（$dt/2\pi$） | 第 178 行 | $\int1\,d\tau=1$，边际"$=1$"的写法成立 | 用 $dt$ 则边际变 $2\pi$，$\int K=2\pi$，$\lVert T\rVert\le2\pi$，权重 2 会被 $2\pi$ 污染 |
+ROW line=708  sites=2  pipes 7->5  $=8(parity even)
+OLD| | 左不等式的独立价值 | 第 249-250 行 | 在 `thm:domain` 里被用来把 $\sum\lvert U_k\rvert_2^2$ 换成 $\|FG\|_\partial^2$（上界方向的估计用在 $FG$ 上） | 只有右不等式时 $\sum_k\lvert U_k\rvert_2^2$ 无法用边界范数控制，`eq:diagonal-functional` 出不来 |
+NEW| | 左不等式的独立价值 | 第 249-250 行 | 在 `thm:domain` 里被用来把 $\sum\lvert U_k\rvert_2^2$ 换成 $\lVert FG\rVert_\partial^2$（上界方向的估计用在 $FG$ 上） | 只有右不等式时 $\sum_k\lvert U_k\rvert_2^2$ 无法用边界范数控制，`eq:diagonal-functional` 出不来 |
+ROW line=709  sites=2  pipes 7->5  $=14(parity even)
+OLD| | 不对称核的取向声明 | 第 279-285 行：`In particular, \eqref{eq:kernel-fourier-action} uses this coefficient orientation and does not require symmetry of the kernel.` | 防止把 $s_{kj}$ 与 $\beta_{jk}$ 混用 | 若误用 $s_{jk}$，$T$ 变成另一个算子（转置），$\|T\|\le1$ 仍可能成立（对偶算子同范数），但与 $b_k\circ h$ 的展开不再匹配，Parseval 分解出的负频系数不再是 $Tu$，第三步等式失效。这段"对照 companion 记号"的文字存在的理由就是防这个错 |
+NEW| | 不对称核的取向声明 | 第 279-285 行：`In particular, \eqref{eq:kernel-fourier-action} uses this coefficient orientation and does not require symmetry of the kernel.` | 防止把 $s_{kj}$ 与 $\beta_{jk}$ 混用 | 若误用 $s_{jk}$，$T$ 变成另一个算子（转置），$\lVert T\rVert\le1$ 仍可能成立（对偶算子同范数），但与 $b_k\circ h$ 的展开不再匹配，Parseval 分解出的负频系数不再是 $Tu$，第三步等式失效。这段"对照 companion 记号"的文字存在的理由就是防这个错 |
+ROW line=1043  sites=10  pipes 15->5  $=20(parity even)
+OLD| | $\|F(z)\|\le1$ on $\partial\Omega$ | `main.tex:324` | 只用于第 4.2 步的第三个不等号（边界乘子界） | 若改成 $\le\kappa$：链上多一个 $\kappa$，最终 $\gamma\le2\kappa$，与缩放齐次性一致（$F/\kappa$ 即回到 $\kappa=1$）。若改成**面积分** $\int_\Omega\|F\|^2\le1$：第三个不等号 $\|FG\|_\partial\le(\sup\|F\|)\|G\|_\partial$ 需要 sup，假设必须 $L^\infty$ 型。详见第 10.7 节 |
+NEW| | $\lVert F(z)\rVert\le1$ on $\partial\Omega$ | `main.tex:324` | 只用于第 4.2 步的第三个不等号（边界乘子界） | 若改成 $\le\kappa$：链上多一个 $\kappa$，最终 $\gamma\le2\kappa$，与缩放齐次性一致（$F/\kappa$ 即回到 $\kappa=1$）。若改成**面积分** $\int_\Omega\lVert F\rVert^2\le1$：第三个不等号 $\lVert FG\rVert_\partial\le(\sup\lVert F\rVert)\lVert G\rVert_\partial$ 需要 sup，假设必须 $L^\infty$ 型。详见第 10.7 节 |
+ROW line=1044  sites=2  pipes 7->5  $=10(parity even)
+OLD| | $\gamma=\|F[A]\|$ 与前置分情形 | `main.tex:329` | 三处除 $\gamma$；推 $a>0$ | 不分情形则 $\gamma=0$ 时 $\frac a\gamma$ 无意义 |
+NEW| | $\gamma=\lVert F[A]\rVert$ 与前置分情形 | `main.tex:329` | 三处除 $\gamma$；推 $a>0$ | 不分情形则 $\gamma=0$ 时 $\frac a\gamma$ 无意义 |
+ROW line=1046  sites=2  pipes 7->5  $=16(parity even)
+OLD| | $x,y$ 单位 | `main.tex:329` | $\lvert X\rvert_2=\lvert Y\rvert_2=1$，从而 $\operatorname{tr} P_0=\operatorname{tr} Q_0=1$ | 非单位则 $\lvert P_0\rvert_2^2$ 带上 $\|x\|^4$，$d_N\le(a/\gamma)\sqrt{d_N}$ 里左右同次仍能齐次消掉，$\gamma$ 会跟着缩。分情形 $\gamma=0$ 后标准化是免费的 |
+NEW| | $x,y$ 单位 | `main.tex:329` | $\lvert X\rvert_2=\lvert Y\rvert_2=1$，从而 $\operatorname{tr} P_0=\operatorname{tr} Q_0=1$ | 非单位则 $\lvert P_0\rvert_2^2$ 带上 $\lVert x\rVert^4$，$d_N\le(a/\gamma)\sqrt{d_N}$ 里左右同次仍能齐次消掉，$\gamma$ 会跟着缩。分情形 $\gamma=0$ 后标准化是免费的 |
+ROW line=1344  sites=6  pipes 11->5  $=18(parity even)
+OLD| | $\|F(z)\|\le1$ on $\partial\Omega$ | `main.tex:324` | 第 (3) 个不等号 | 改成 $\le\kappa$ ⇒ $\gamma\le2\kappa$（齐次，无矛盾）。改成 $\int_\Omega\|F\|^2\le1$ ⇒ 第 (3) 步需要 sup，$L^2$ 假设不够。论文选 $\partial\Omega$ 上的 sup ，并非 $\Omega$ 内的 sup；$\|F\|$ 次调和 ⇒ 两者相等，这一步论文未述。Lean 把假设直接设在圆周上：`DomainBound.lean:96-97` 的 `exact hF _ (le_of_eq (hcircle _ (Faber.unitPoint_norm t)))` 只用 `hcircle` 把点拉回圆周，**绕开最大模原理** |
+NEW| | $\lVert F(z)\rVert\le1$ on $\partial\Omega$ | `main.tex:324` | 第 (3) 个不等号 | 改成 $\le\kappa$ ⇒ $\gamma\le2\kappa$（齐次，无矛盾）。改成 $\int_\Omega\lVert F\rVert^2\le1$ ⇒ 第 (3) 步需要 sup，$L^2$ 假设不够。论文选 $\partial\Omega$ 上的 sup ，并非 $\Omega$ 内的 sup；$\lVert F\rVert$ 次调和 ⇒ 两者相等，这一步论文未述。Lean 把假设直接设在圆周上：`DomainBound.lean:96-97` 的 `exact hF _ (le_of_eq (hcircle _ (Faber.unitPoint_norm t)))` 只用 `hcircle` 把点拉回圆周，**绕开最大模原理** |
+ROW line=1345  sites=2  pipes 7->5  $=18(parity even)
+OLD| | $\gamma=\|F[A]\|$ 与 $a>0$ | `main.tex:329`、`:355` | 最后一步除 $a^2$；$d_N\le(a/\gamma)\sqrt{d_N}$ 要 $\gamma>0$ | $\gamma=0$ 已前置分情形排除；$a=0$ 由 $G=F$ 的测试排除。若没有 eq:singular（只有一个 attainer），$a>0$ 的论证出不来 |
+NEW| | $\gamma=\lVert F[A]\rVert$ 与 $a>0$ | `main.tex:329`、`:355` | 最后一步除 $a^2$；$d_N\le(a/\gamma)\sqrt{d_N}$ 要 $\gamma>0$ | $\gamma=0$ 已前置分情形排除；$a=0$ 由 $G=F$ 的测试排除。若没有 eq:singular（只有一个 attainer），$a>0$ 的论证出不来 |
+ROW line=1609  sites=4  pipes 8->4  $=6(parity even)
+OLD| | `a nonnegative kernel with integral one in each variable makes the map from the positive part to the negative part an $L^2$ contraction`（136-138） | $K=1+s+\bar s$ 的三条性质（`lem:faber` 第 (6)(7) 条）⇒ `prop:coefficients` 前两步 | "integral one in each variable" = 两个角向边际恒等式（`main.tex:233`），"contraction" = $\|Tf\|_2\le\|f\|_2$ |
+NEW| | `a nonnegative kernel with integral one in each variable makes the map from the positive part to the negative part an $L^2$ contraction`（136-138） | $K=1+s+\bar s$ 的三条性质（`lem:faber` 第 (6)(7) 条）⇒ `prop:coefficients` 前两步 | "integral one in each variable" = 两个角向边际恒等式（`main.tex:233`），"contraction" = $\lVert Tf\rVert_2\le\lVert f\rVert_2$ |
+ROW line=1871  sites=2  pipes 9->7  $=16(parity even)
+OLD| | $C,\ \theta\in(0,1)$ | `main.tex:304` `For the fixed $A,h$, there are constants $C<\infty$ and $0<\theta<1$` | 同上无对应；Lean 用 `IsUnit (algebraDenominator c g A u)`（`FaberCalculus.lean:139` 的 `hunit`）与 `hu : 1 < R` | $\|b_k(A)\|\le C\theta^k$ 保证级数绝对收敛 | **论文自己写了 "For the fixed $A,h$"**，即这个 $C,\theta$ 不一致于 $A$。Lean 绕开它，也就回避了"一致性"问题（与 15.3 未述清单第 4 条呼应） | 一致性问题论文未讨论，是我列的悬案（19.1） |
+NEW| | $C,\ \theta\in(0,1)$ | `main.tex:304` `For the fixed $A,h$, there are constants $C<\infty$ and $0<\theta<1$` | 同上无对应；Lean 用 `IsUnit (algebraDenominator c g A u)`（`FaberCalculus.lean:139` 的 `hunit`）与 `hu : 1 < R` | $\lVert b_k(A)\rVert\le C\theta^k$ 保证级数绝对收敛 | **论文自己写了 "For the fixed $A,h$"**，即这个 $C,\theta$ 不一致于 $A$。Lean 绕开它，也就回避了"一致性"问题（与 15.3 未述清单第 4 条呼应） | 一致性问题论文未讨论，是我列的悬案（19.1） |
+ROW line=1872  sites=2  pipes 9->7  $=8(parity even)
+OLD| | $\gamma=\|F[A]\|$ | `main.tex:329` | `let γ := ‖tensorPolynomial A F‖`（`DomainCore.lean:32`）、`hγ : 0 < γ`（`:37`） | 归一化标尺；最终要证 $\gamma\le2$ | $\gamma=0$ 必须分流（论文 `main.tex:329`；Lean `by_cases hγ0`，`DomainCore.lean:33`），因为后面有 $a/\gamma^2$ | 两边完全对齐的一处 |
+NEW| | $\gamma=\lVert F[A]\rVert$ | `main.tex:329` | `let γ := ‖tensorPolynomial A F‖`（`DomainCore.lean:32`）、`hγ : 0 < γ`（`:37`） | 归一化标尺；最终要证 $\gamma\le2$ | $\gamma=0$ 必须分流（论文 `main.tex:329`；Lean `by_cases hγ0`，`DomainCore.lean:33`），因为后面有 $a/\gamma^2$ | 两边完全对齐的一处 |
+ROW line=1876  sites=2  pipes 9->7  $=24(parity even)
+OLD| | $\delta$（外逼近厚度） | `main.tex:464` `For $0<\delta<1$, choose a finite Euclidean $\delta$-net …`、`:468` `$\Omega_\delta=\{z:\Phi_\delta(z)<1\}$`、`:510` `$\delta_j=1/(j+1)$` | `Geometry.exists_exponential_outer` 的 `ε` 参数 + `δ := min (1/2) (ε/(2*C))`（`OuterApproximation.lean:70`）；主证明里 `obtain ⟨δ,hδ,hδV⟩ := (isCompact_numericalRange A).exists_thickening_subset_open hV hWV`（`CompleteBound.lean:82`） | 两重身份：网格精度、支撑函数下移量 | `0<δ<1` 的上界 1 是**任意的**（只为参数化好看）；真正的敏感度在 Lean 的 `min (1/2) (·)`：那个 $\tfrac12$ 保证 $h_K(\nu)+\delta$ 不把 $\Omega_\delta$ 撑出包含 $K$ 的最小范围。$[推测]$ 主要服务于 `axis_support_bound` 里的 $\|z\|\le L$ 结论 | 论文侧的两个 $\delta$ 同量级是我在 11.3 表里记的"刻意合并" |
+NEW| | $\delta$（外逼近厚度） | `main.tex:464` `For $0<\delta<1$, choose a finite Euclidean $\delta$-net …`、`:468` `$\Omega_\delta=\{z:\Phi_\delta(z)<1\}$`、`:510` `$\delta_j=1/(j+1)$` | `Geometry.exists_exponential_outer` 的 `ε` 参数 + `δ := min (1/2) (ε/(2*C))`（`OuterApproximation.lean:70`）；主证明里 `obtain ⟨δ,hδ,hδV⟩ := (isCompact_numericalRange A).exists_thickening_subset_open hV hWV`（`CompleteBound.lean:82`） | 两重身份：网格精度、支撑函数下移量 | `0<δ<1` 的上界 1 是**任意的**（只为参数化好看）；真正的敏感度在 Lean 的 `min (1/2) (·)`：那个 $\tfrac12$ 保证 $h_K(\nu)+\delta$ 不把 $\Omega_\delta$ 撑出包含 $K$ 的最小范围。$[推测]$ 主要服务于 `axis_support_bound` 里的 $\lVert z\rVert\le L$ 结论 | 论文侧的两个 $\delta$ 同量级是我在 11.3 表里记的"刻意合并" |
+ROW line=1882  sites=2  pipes 9->7  $=14(parity even)
+OLD| | $n$（底维） | 同上 | `0 < n`、`NeZero n`（`DomainCore.lean:30`） | $W(A)$ 非空需要 $\mathbb C^n$ 有单位向量 | $n=0$ 时 `numericalRange A = ∅`、`rangeMaximum = sSup ∅ = 0`（Mathlib 约定），结论变成 $\|0\|\le2\cdot0$ 仍真。Lean 拒绝处理，故加 `hn`。⇒ **`numericalRange_nonempty hn A`（`NumericalRange.lean`）是 $0<n$ 的真实消费者** | 论文写 "positive integers $n,m$"（`main.tex:324`、`:59`），与 Lean 一致 |
+NEW| | $n$（底维） | 同上 | `0 < n`、`NeZero n`（`DomainCore.lean:30`） | $W(A)$ 非空需要 $\mathbb C^n$ 有单位向量 | $n=0$ 时 `numericalRange A = ∅`、`rangeMaximum = sSup ∅ = 0`（Mathlib 约定），结论变成 $\lVert 0\rVert\le2\cdot0$ 仍真。Lean 拒绝处理，故加 `hn`。⇒ **`numericalRange_nonempty hn A`（`NumericalRange.lean`）是 $0<n$ 的真实消费者** | 论文写 "positive integers $n,m$"（`main.tex:324`、`:59`），与 Lean 一致 |
+ROW line=1884  sites=4  pipes 11->7  $=8(parity even)
+OLD| | $x_1=x_2=1/\sqrt2$、$\|x^*Ax\|=2\|x_1x_2\|\le1$ | `main.tex:530` | `norm_le_one_of_mem_sharpnessRange`（`Sharpness.lean:36`）+ `nlinarith [sq_nonneg (‖u 0‖ - ‖u 1‖)]`（`:50`） | 证明 $W(A)\subseteq\overline{\mathbb D}$ | 论文的 $1/\sqrt2$ 是取等点；Lean 用 AM-GM 形式，**没有显式给出取等点**（不需要） | 一个"论文给等号情形、Lean 只要不等式"的省略例 |
+NEW| | $x_1=x_2=1/\sqrt2$、$\lvert x^*Ax\rvert=2\lvert x_1x_2\rvert\le1$ | `main.tex:530` | `norm_le_one_of_mem_sharpnessRange`（`Sharpness.lean:36`）+ `nlinarith [sq_nonneg (‖u 0‖ - ‖u 1‖)]`（`:50`） | 证明 $W(A)\subseteq\overline{\mathbb D}$ | 论文的 $1/\sqrt2$ 是取等点；Lean 用 AM-GM 形式，**没有显式给出取等点**（不需要） | 一个"论文给等号情形、Lean 只要不等式"的省略例 |
+ROW line=1885  sites=4  pipes 11->7  $=24(parity even)
+OLD| | $A=\begin{pmatrix}0&2\\0&0\end{pmatrix}$ | `main.tex:528` | `def sharpnessMatrix := !![0, 2; 0, 0]`（`Sharpness.lean:32`） | 唯一反例 | 那个 **2**（，并非 1）就是让 $\|A\|=2$ 且 $W(A)\subseteq\overline{\mathbb D}$ 同时成立的选择：一般地 $\begin{pmatrix}0&t\\0&0\end{pmatrix}$ 给出 $\|A\|=t$、$\max_{W(A)}\lvert z\rvert=t/2$，比值恒为 2。论文取 $t=2$ 是为了让右端恰为 1。**Lean 用 `sharpnessCoefficients := ![0, 1]`（`:34`）把 $P(z)=z$ 编成 $B_0=0,B_1=1$，与 `main.tex:526` 的 "$m=1$, $P(z)=z$" 一致** | "比值恒为 2"是我的**外部计算**（单参数族），论文只给 $t=2$ |
+NEW| | $A=\begin{pmatrix}0&2\\0&0\end{pmatrix}$ | `main.tex:528` | `def sharpnessMatrix := !![0, 2; 0, 0]`（`Sharpness.lean:32`） | 唯一反例 | 那个 **2**（，并非 1）就是让 $\lVert A\rVert=2$ 且 $W(A)\subseteq\overline{\mathbb D}$ 同时成立的选择：一般地 $\begin{pmatrix}0&t\\0&0\end{pmatrix}$ 给出 $\lVert A\rVert=t$、$\max_{W(A)}\lvert z\rvert=t/2$，比值恒为 2。论文取 $t=2$ 是为了让右端恰为 1。**Lean 用 `sharpnessCoefficients := ![0, 1]`（`:34`）把 $P(z)=z$ 编成 $B_0=0,B_1=1$，与 `main.tex:526` 的 "$m=1$, $P(z)=z$" 一致** | "比值恒为 2"是我的**外部计算**（单参数族），论文只给 $t=2$ |
+ROW line=1886  sites=4  pipes 15->11  $=22(parity even)
+OLD| | $(1,i,j,k)$ 四元组 | `main.tex:514-518`（Toeplitz-Hausdorff 重证）：`$(2\Re(\bar uv),2\Im(\bar uv),\|u\|2-\|v\|2)$` ranges over the unit sphere in $\R^3$ | `Convexity.lean`：`bloch`（`:84`）、`norm_sq_three`/`norm_bloch`/`bloch_surjective_sphere`/`threeLinear`/`threeLinear_ker_ne_bot`/`twoForm`/`twoForm_bloch`/`convex_twoForm`/`convex_quadratic_range`（13 条声明，273 行） | 用 Bloch 球参数化把 $W(A)$ 写成实二次映射像，再由 $\R^3\to\R^2$ 线性核非空得凸性 | 三个 2（$2\Re,2\Im$）**必须是同一个 2**，否则像不在半径 $\|u\|^2+\|v\|^2=1$ 的球面上（`norm_bloch` 与 `bloch_surjective_sphere` 就是这条）；换成 $(\Re,\Im,\cdot)$ 会掉到半球。$\R^3$ 的 3 与"核非空"需要 $\dim\ker\ge1$（`threeLinear_ker_ne_bot`），即线性映射 $\R^3\to\R^2$ 的秩亏，这在 `Convexity.lean` 里是一个独立引理 | 我在 12.1 补步 4、5 手算过恒等式与符号相容性 |
+NEW| | $(1,i,j,k)$ 四元组 | `main.tex:514-518`（Toeplitz-Hausdorff 重证）：`$(2\Re(\bar uv),2\Im(\bar uv),\|u\|2-\|v\|2)$` ranges over the unit sphere in $\R^3$ | `Convexity.lean`：`bloch`（`:84`）、`norm_sq_three`/`norm_bloch`/`bloch_surjective_sphere`/`threeLinear`/`threeLinear_ker_ne_bot`/`twoForm`/`twoForm_bloch`/`convex_twoForm`/`convex_quadratic_range`（13 条声明，273 行） | 用 Bloch 球参数化把 $W(A)$ 写成实二次映射像，再由 $\R^3\to\R^2$ 线性核非空得凸性 | 三个 2（$2\Re,2\Im$）**必须是同一个 2**，否则像不在半径 $\lVert u\rVert^2+\lVert v\rVert^2=1$ 的球面上（`norm_bloch` 与 `bloch_surjective_sphere` 就是这条）；换成 $(\Re,\Im,\cdot)$ 会掉到半球。$\R^3$ 的 3 与"核非空"需要 $\dim\ker\ge1$（`threeLinear_ker_ne_bot`），即线性映射 $\R^3\to\R^2$ 的秩亏，这在 `Convexity.lean` 里是一个独立引理 | 我在 12.1 补步 4、5 手算过恒等式与符号相容性 |
+ROW line=2550  sites=2  pipes 7->5  $=6(parity even)
+OLD| | $\gamma$（$\|F[A]\|$） | `:330` 起全程用 $\gamma$ 作尺度 | `let γ := ‖tensorPolynomial A F‖`（`DomainCore.lean:32`）+ `hγ : 0 < γ`（:37）+ `exists_singular_pair`（:40） | 9.2、9.4、18.3 |
+NEW| | $\gamma$（$\lVert F[A]\rVert$） | `:330` 起全程用 $\gamma$ 作尺度 | `let γ := ‖tensorPolynomial A F‖`（`DomainCore.lean:32`）+ `hγ : 0 < γ`（:37）+ `exists_singular_pair`（:40） | 9.2、9.4、18.3 |
+after: bytes=400111 (delta +369) lines=2784 rows_fixed=24 sites_fixed=82 sites_registered=0
+[DRY] nothing written to the note
+D25 file-count \lVert  = 44
+D25 file-count \lvert  = 209
+D25 file-count \mid  = 0
+D25 file-count \upharpoonright = 0
+D25 file-count \Vert  = 0

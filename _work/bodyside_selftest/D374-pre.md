@@ -1,0 +1,277 @@
+# D374 无理角三角形台球遍历性：双层构造与两步极限的论证缝隙地图
+
+派单编号 D374。这一单的素材薄得罕见：build 目录下 .tex 合计只有 38,052 字节，全部集中在一个文件 `build/source/main.tex`（825 行）。我按薄素材的规矩办：不凑长度，把力气花在论证的缝隙上。下面每一处引文定位都是本会话真实读到的 `文件:行`，读不到对应位置的判断一律标 `[推测]` 并说明缺口在哪。
+
+## §0 派单参数、素材实测与双登记
+
+派单行（`.tools/wave.txt` 中以 D374 开头的那一行）给出的四个参数：`row=198`、`bytes=38052`、`thin=yes`、`dir=preprints/Ergodicity-of-triangular-billiards-with-an-irrational-angle-September-25-2026`。我按这四个参数办事，不用别的参数来源。
+
+素材实测。`find build -name '*.tex'` 只命中一个文件：`build/source/main.tex`，`wc -c` 实量 38,052 字节，`wc -l` 实量 825 行，与派单给的 `bytes` 完全一致。`build/source/` 下另有 `references.bib`（12 条文献），我把它当引文索引读了，正文素材仍只认 main.tex。`build/` 下没有另一版式 `build/*.tex`。目录里还有 README.md（只当索引用，登记题名、作者 OpenAI、日期 September 25, 2026）与 PDF、typst 目录，按硬约束一律不作来源。
+
+取证账目：分段读完 main.tex 用去 7 次调用（每次 120 行上下），对 main.tex 做环境起点与公式标签的行号核验用去 2 次 grep，读 references.bib 用去 1 次，合计 10 次正文类调用，未超 15 次上限；README、目录列举、字节量测属于不读正文的动作，另记。首次落盘落在总第 16 次调用。
+
+论文的一句话概括：每个至少含一个对 $\pi$ 无理的角的非退化欧氏三角形的单位速率台球流，对归一化面积乘均匀角测度是遍历的；不要求任何-genericity-或丢番图条件；撞上顶点的轨线从零测度例外集中剔除（main.tex:42-47）。我把这份笔记写成对该证明的复盘：初始动机（§1）、三条候选路线各自的死点（§2、§3、§4）、构造选择的理由（§5）、定理的精确范围（§6）、两块估计的用量级（§7）、刚性命题的两步极限（§8）、挠率收尾（§9）、谱推论（§10）、与最初设想的差异（§11）、悬空处（§12）、台账（§13）。
+
+两条登记：
+- preprints/Ergodicity-of-triangular-billiards-with-an-irrational-angle-September-25-2026
+- 其他队列第 198 行号
+
+## §1 初始动机与猜想：从一个二分的缺口说起
+
+我一开始的出发点是有理多边形台球的那套完整图景。角的有理倍数条件让反射群有限，展开（unfolding）把台球变成紧平移表面上的测地流，Kerckhoff--Masur--Smillie 证明了有理多边形在几乎每个方向上唯一遍历（main.tex:64-68，引文键 KMS，另见 Masur--Tabachnikov 手册 §3.2 与 §3.5 的叙述，main.tex:68）。这套机器的输入就写在 main.tex:64-66：有理多边形把相空间切成有限多个方向不变曲面。我的问题是反着问的：输入一旦被抽掉，剩下的三角形（也就是至少一个角对 $\pi$ 无理的）到底怎么样。
+
+文献给出的中间地带很拥挤，但每一家都差最后一公里。KMS 的有理逼近加 Baire 范畴论证给出一族稠密 $G_\delta$ 的遍历桌面，可就不断言每个无理三角形（main.tex:69-71，原文写得非常直白：does not assert ergodicity for each irrational triangle）。Vorobets 给出定量化的充分逼近条件，要求角有异常快的同时有理逼近，他的例子含无理直角三角形（main.tex:73-77）。Chaika--Forni 对每个固定 $n\ge3$ 给出 $n$ 边形空间中稠密 $G_\delta$ 集的完整流弱混合（main.tex:77-79）。三家的共同形状是：要么"典型"（范畴意义），要么"特殊可逼近"（度量意义），没有一家敢说"每一个"。
+
+与此同时，数值文献在唱反调。Wang--Casati--Prosen 与 Zahradova--Slipantschuk--Bandtlow--Just 对无理直角三角形与全无理等腰三角形的数值研究对遍历性提出了怀疑（main.tex:81-85，引文键 WCP、ZSBJ）。原文对这批证据的定性我认为写得恰到好处：有限时间证据不足以确立正测度不变集的存在，给平均值的极慢收敛留了余地（main.tex:83-85）。[推测] 为什么留余地：台球流的遍历性在数值上表现为时间平均对空间平均的偏差按 $o(1)$ 消失，若收敛速率比如 $(\log T)^{-1}$ 级别，任何可计算时长都区分不了遍历与"遍历但极慢"，而 main.tex 本身没有给出收敛速率的任何主张，我无法从这 38KB 素材里核实作者是否做过这种对照实验。
+
+我最初的猜想形态很朴素：三角形是角的三元组 $(\alpha,\beta,\gamma)$ 决定的，相似类之间台球动力学等价（保时数改写可差一个常数倍速率），所以无理角三角形遍历性猜想的完整陈述应该是一个关于二维角参数空间的逐点命题。这篇论文证明的恰好就是这个逐点命题在"至少一个坐标无理"的开集上的全部情形（main.tex:88-104）。我最初的猜想里没有"不需要丢番图条件"这一条的把握；读完 §8 与 §9 我会承认，这个无条件的来源是角度假设被隔离到证明的最后一行，分析部分对三角形只用到非退化性。
+
+还有一个动机性的观察值得记下：三角形情形连"$\alpha/\pi$ 无理"这种条件都带冗余。三个角之和是 $\pi$，若 $\alpha/\pi$ 无理而 $\beta/\pi$、$\gamma/\pi$ 皆有理，则 $\alpha/\pi=1-\beta/\pi-\gamma/\pi$ 有理，矛盾；所以"恰一个无理、两个有理"的组合根本不存在，论文的 remark 明确写出了这一点（main.tex:706-708）。定理实际覆盖的组合只剩两类：三角全无理，或一有理两无理（main.tex:106-108 说明了定理也包含后一类）。
+
+## §2 候选路线一：反射展开与平移表面机器，卡在哪里
+
+第一条我会想到、也最顺手的路线：把有理多边形的展开流程照搬。对有理多边形，沿被碰边做反射展开，轨线变成直线；有限反射群把有限份拷贝粘成紧致黎曼曲面配全纯 1-形式，Veech 二分、$\mathrm{SL}(2,\R)$-作用、仿射不变流形这一整套都可以调用。
+
+它卡在群是有限的这件事上。角一旦出现无理倍数，两两反射生成的群是无限的：沿顶点 $\alpha$ 连翻两次就是转角 $2\alpha$，$2\alpha/\pi$ 无理意味着这些转角在圆群里稠密，展开出来的"表面"是无穷叶覆盖，面积无限，紧致性第一时间就没了；全纯几何的机器（平铺、周期映射、Gauss-Manin 联络）都建立在有限生成上，无法跟着走。main.tex:245-247 的坐标变换规律给了我一个精确的痛点图像：换图表 $z'=e^{i\phi}z+c$ 时角向系数按 $u_j'=e^{-ij\phi}u_j$ 变换，$\phi$ 取遍稠密集合时，"系数是整体定义的函数"这件事只能对满足 $e^{2ij\alpha}=1$ 的平行截面成立，这正是论文收尾用的代数事实（main.tex:692-694），在有理情形它给出有限的模式筛，在无理情形它把除零模外全部杀掉。也就是说：同一条变换规律，有理时服务于"分解成有限张平移表面"，无理时服务于"消元"。两条路在同一个公式处分岔，而有限展开的这条路在分岔点上就断了。
+
+我的第一次失败尝试是修补式的：把无理三角形当作有理多边形的极限，指望 KMS 的方向遍历性在参数极限下稳定。失败原因在结构层面：有理多边形的遍历性陈述是关于"某一固定方向流在特定平移表面上"的，参数一动，表面本身、周期结构、方向集合全部同时变；我没有可用的连续依赖定理把"几乎每个方向"从一个表面传到下一个表面。Vorobets 的工作恰好说明这种传递要多难：他的充分条件要求角有异常快的同时有理逼近（main.tex:73-77），逼近速度必须压倒表面复杂度的增长，而"异常快"的补集（比如代数无理角）根本不在他覆盖范围内。[推测] 用 Liouville 型角去喂 Vorobets 条件是这条路线的自然极限形态，main.tex 没有讨论代数无理角，我无法核实作者是否考虑并排除过这条路。
+
+第二条修补：只用展开的局部版本。台球在两次碰撞之间本来就可以逐段展开成直线段，不需要整体曲面。这个局部观点论文采纳了，并且用它处理了两件脏活：撞顶点轨线是零测（固定穿边序列下，顶点碰撞在位置-方向空间里是"直线过定点"的零测条件，对序列、顶点、时间方向取可数并仍零测，main.tex:198-203）；以及有限时间内不会出现无穷多次反射的 accumulation（只可能在顶点发生：在固定正角度的楔形里展开连续反射，避开锥尖的直线在极角上最多扫过 $\pi$，于是只横穿有限多个楔形扇区，main.tex:205-218）。这两段是展开机器报废后剩下的全部可用零件：局部的、逐段的、不承诺整体曲面的。整体对象则改由"双层"来承担（§5）。
+
+## §3 候选路线二：范畴与 genericity，卡在量词上
+
+第二条路线是把结论弱化成 genericity：证明"几乎所有三角形遍历"或"三角空间中存在稠密 $G_\delta$ 遍历集"，这类陈述用 KMS 的逼近加范畴论证几乎是现成的（main.tex:69-71 明说同一工作给出稠密 $G_\delta$ 桌面族的完整流遍历性）。
+
+我认真考虑过这条路，因为它便宜。卡点在量词，在研究定位上。范畴结论与"例外集可以是稠密的零测集"完全兼容：数值文献怀疑的那些三角形（main.tex:81-85）若真的存在正测度不变集，它们组成的集合照样可以是零测且稠密，与任何 $G_\delta$ genericity 结论和平共处。换言之，genericity 路线对这篇论文想回答的问题不构成部分答案，它连"逼近每一个"的梯度都没有：Baire 语言里没有任何量化"离例外集有多远"的工具。Chaika--Forni 的弱混合结果同样按 $n$ 固定取稠密 $G_\delta$（main.tex:77-79），形状一样。
+
+更麻烦的是方向的问题。genericity 文献里大量结论是"对几乎每个方向"的（KMS 的原文形态，main.tex:66-67），而台球完整流的遍历性比"几乎每个方向遍历"强，完整流把方向也平均进去。[推测] 从"几乎每方向"到"完整流"在无理情形应需要方向集合的联合正则性，main.tex 没有展开这个技术缺口，我只看到论文对 KMS 的转述，无法独立核实这一判断的难度。论文最终证明的对象始终是完整单位速率流在 $Q\times S^1$ 上对 $\mu$ 的遍历性（main.tex:88-104），从头到尾没有经过方向逐条论证，这是它绕开 genericity 陷阱的方式：把"方向"留在角向 Fourier 变量 $\theta$ 里做分析（§7、§8），一次处理所有方向。
+
+这条路的第三个卡点是可检验性。范畴结论的存在性证明给不出任何具体三角形，Vorobets 的例子靠构造超快逼近专门落进他的条件里（main.tex:76-77）。若我想对自己相信的"每个无理角三角形都遍历"负责，就必须证明一个对角度算术性质零假设的定理。main.tex:94 的条件只有 $\alpha/\pi,\beta/\pi,\gamma/\pi$ 中至少一个无理，没有 Diophantine 下界，没有逼近速率要求，连 Liouville 角都包括在内。这个量词强度本身就是对路线二的拒绝，论文在 intro 里把这三家 generic/approximable 的结果与自己的目标明确对立起来（main.tex:79-81：These results distinguish generic or specially approximable tables from a conclusion for every triangle having an irrational angle）。
+
+于是路线二在我这里整体作废：它给出的东西在我需要的方向上没有刻度。真正可用的教训只有一条，就是把角度假设与解析论证分离（main.tex:162-164：This isolates the angle hypothesis from the analytic argument），角度只在最后一步进入。这条设计原则我是在承认路线二失败之后才看懂它的价值的：正因为分析部分对三角形只要求非退化（main.tex:180-182 明确说无理假设直到 §6 即 sec:conclusion 才被用到），任何角度的无理都行，genericity 才变得无关紧要。
+
+## §4 候选路线三：直接移植 Forni--Moll 框架，卡在正则性预算上
+
+第三条路线最技术也最危险：调用 Forni--Moll 的平坦曲面分析框架。素材显示这篇论文的骨架确实就是这个框架：带锥点平坦曲面的角向 Fourier 分解与 Cauchy--Riemann 恒等式把输运不变性与系数导数之间的递推联系起来（main.tex:120-124，引文键 FM，arXiv:2510.18128，见 references.bib:75-84）。他们的工作里有两条现成定理：Theorem 4.1 在非同调有理（non-rational holonomy）下证明对两个水平方向都不变的 $L^2$ 函数是常数；Corollary 4.2 把结论推广到水平 Sobolev 空间 $H^{1,0}$ 里的测地不变函数，$H^{1,0}$ 由锥适配光滑域关于两个水平方向导数平方可积的完备化定义（main.tex:124-129）。
+
+看起来只差一步：台球流的不变指示函数 $f=\mathbf 1_A$ 满足 $Xf=0$，套 Corollary 4.2 就完了。卡点在于 Corollary 4.2 的前提是正则性预算，而预算恰恰是 $f$ 没有的：有界不变指示函数先验上没有 $H^{1,0}$ 正则性（main.tex:129-131 原文：A bounded invariant indicator has no such regularity a priori）。这不是修辞性的缺口，是实打实的：$\mathbf 1_A$ 的梯度是测度，水平导数不在 $L^2$ 里，$H^{1,0}$ 范数是无穷大。想引用该推论，就得先证明 $f$ 自动正则，而这本身就是遍历性论证的目标之一，循环了。
+
+我在这个死点前犯过一个典型错误：试图用 hypoelliptic 型的正则性来提升预算。想法是 $Xf=0$ 加上测度保持流的非可交换结构，也许 $f$ 沿横方向也自动光滑。平坦情形 $[X,Y]$ 只在锥点处有分布性曲率（main.tex:229-231 说 $X,Y$ 局部交换），标准 hypoelliptic 估计的交换子项在这里是空集级别的支撑，给不出 $Yf$ 的任何 $L^2$ 控制；而论文后面所有环节（比如 $P_{m-1}Yf$ 的配对）都刻意避免声明 $Yf\in L^2$（main.tex:520-522：The construction below obtains it without assuming $Yf\in L^2$；main.tex:647-649 再次强调对 $Yg^{(s)}$ 不做完整 $L^2$ 断言）。[推测] 我当时想走通的正是这类"单方向输运方程自动横正则"的引理，在光滑系数情形成立，但这里系数 $f$ 本身只有 $L^\infty$，方程 $Xf=0$ 是带无界系数的输运，并非散度型，hypoelliptic 机器完全不相干；素材里没有作者留下这条尝试的任何痕迹，失败链是我自己的复盘。
+
+正确的转向发生在把目标从"$f$ 的正则性"降格为"系数的正则性"之后。main.tex:132-135 把新路线图说得非常克制：对每个角向系数单独做局部化能量估计，先得到每个系数各自的 $L^2$ 梯度界；原文明确否认这构成"平方可导的系数族"（This is a bound on individual coefficients, not a square-summable family of gradients）；剩下的全部工作就是证明这些梯度逐个为零。这三行是整篇论文概念上的转折点：预算对象从 $f$ 换到 $(f_j)_j$，每个 $f_j$ 是 $L^2$ 的、带平联络的线丛截面，梯度问题变成线丛上的标量问题，能量估计（§7）才变得可打。FM 框架的贡献与本文新增部分的边界线，我认为就画在这里：递推与恒等式是借的，"对仅有 $Xh=0$ 局部分布意义的有界 $h$ 逐系数拿梯度界、再把梯度逼为零"的两步极限是新的（main.tex:147-159 的策略段整段都在讲这个新部分）。
+
+还有一个细节让我确信作者对循环性高度警惕：main.tex:234-236 声明所有 $L^2$ 等式按时间逐个使用、时间积分下靠 Fubini，不要求存在对一切时刻同时逐点不变的代表元；main.tex:463-466 特别注明有界系数引理的假设是局部分布方程，区别于对整体可测流的不变性，就是为了下一步能把该引理用在弱极限 $g^{(s)}$ 上而无须先建立新的整体不变性陈述。这两处是防循环的阀门，我读到时有种作者替未来的读者（也就是试图找漏洞的我）提前上锁的感觉。
+
+<!-- D374 write-probe -->
+
+## §5 构造选择：为什么是定向平坦双层
+
+局部展开只能干脏活（数零测集、排除有限时间 accumulation），干不了分析的正活：能量估计需要在一个连通表面上对截断的截面做分部积分，Stokes 论证需要整体定义的微分式，收尾需要绕单个顶点的闭合回路。所以必须有一个整体对象，条件有三：紧致支撑（面积估计才成立）、反射变成直线延续（才谈得上测地流）、锥点处的完整挠率信息保留（最后消元才可用）。
+
+论文的构造（main.tex:184-190）：取两个闭三角形拷贝、沿对应边粘合、赋相反定向、删去三个顶点，得连通定向平坦曲面 $M$；其完备化紧致，在删去点集 $V$（三个顶点）处有锥角 $2\alpha,2\beta,2\gamma$；开边是正则的，跨边延续由一侧欧氏图表的反射描述；定向平坦图表之间的转移是旋转加平移。
+
+我逐个对照被我放弃的候选。候选一：无穷反射展开。§2 已述，群无限、叶数无限、面积无限，紧致支撑的 $L^2$ 世界直接消失。候选二：直接在相空间 $Q\times S^1$ 上带边界等同做分析。边的两端点处识别不 Hausdorff，测试函数在顶点邻域的支撑控制无法表述。候选三：双层恰好是"让反射变直线延续"的最小粘合：只需要两张拷贝，因为反射本身是二阶现象（翻两次回到同定向），叶数与角度算术无关，无理角不再让构造爆炸。代价是顶点保留为锥点，锥角是 $2\alpha$ ，并非 $\alpha$：这正是双层的账，两拷贝各贡献一个 $\alpha$。
+
+测度与流的对应关系（main.tex:192-197）：$SM$ 上取归一化 Liouville 测度 $\nu$，$\Psi_t$ 为测地流；折回三角形把 $\Psi_t$ 送到台球流；远离边处有两个等权叶，折回映射把 $\nu$ 送到 $\mu$；每条正则台球段从两个初始叶各有一升格，时间映射置换这两个叶选择。这个"等权两叶"就是归一化常数里 $2\pi\operatorname{Area}(Q)$ 与 $\mu$、$\nu$ 互换无杂因子的来源。例外集记账在 main.tex:198-218：撞顶点（任一时间方向）零测；有限时间内反射不 accumulation（楔形展开下避尖直线极角至多扫 $\pi$，横穿扇区数有限；终止于锥尖的直线同样有限）；在补集上正则测地流对一切时间有定义，平坦图表内是定角平移，保面积乘角测度，逐段拼接保 $\nu$，折回保 $\mu$；跨边在上层无奇性。
+
+流与算子语言（main.tex:220-236）：平坦图表内 $v=(\cos\theta,\sin\theta)$，$\partial=\tfrac12(\partial_{x_1}-i\partial_{x_2})$、$\bar\partial=\tfrac12(\partial_{x_1}+i\partial_{x_2})$，则 $X=e^{i\theta}\partial+e^{-i\theta}\bar\partial$、$Y=ie^{i\theta}\partial-ie^{-i\theta}\bar\partial$（eq:XY，main.tex:225-228）；两者是 $SM$ 上的前向与横向水平向量场，局部交换（main.tex:229-231）；对每时刻 $\Psi_t$ 几乎处处不变的有界函数按分布意义满足 $Xf=0$（对紧支撑光滑函数测试，main.tex:231-233）。等式的使用规则：$L^2$ 内按固定时间分开用，时间积分下靠 Fubini 用，不要求一个对全体实时间逐点不变的公共代表元（main.tex:234-236）。这条规则我读作对可测流零集漂移的预防，因为它保证后文每个弱极限论证里进场的对象只需要局部分布方程。
+
+系数的整体身份（main.tex:238-264）：纤维向 Fourier 投影整体良定义，局部写 $P_ju=u_j(x)e^{ij\theta}$；换图表 $z'=e^{i\phi}z+c$ 时 $\theta'=\theta+\phi$、$u_j'=e^{-ij\phi}u_j$，故系数是平坦酉线丛的截面；导数变换 $(\partial u_j)'=e^{-i(j+1)\phi}\partial u_j$、$(\bar\partial u_j)'=e^{-i(j-1)\phi}\bar\partial u_j$（main.tex:248-252），$\partial$ 把模数上移一层、$\bar\partial$ 下移一层。平坦梯度指这些平凡化里的弱梯度，对紧支撑于正则曲面的光滑截面测试；$L^2$ 梯度只意味着该表面上的整体有限范数，既不指定锥尖处的迹，也不承诺算子域的完备化成员资格（main.tex:253-257）。这个免责定义与 §4 的正则性缺口直接呼应：作者把"我们只拥有多少"写进定义本身。范式恒等式 $\|\nabla u\|_2^2=\|Xu\|_2^2+\|Yu\|_2^2=\sum_j\|\nabla u_j\|_2^2$（main.tex:260-264），内积取复的、对第一个变量线性（main.tex:265-266）。模恒等式（eq:modes，main.tex:266-270）：$(Xu)_j=\partial u_{j-1}+\bar\partial u_{j+1}$、$(Yu)_j=i\partial u_{j-1}-i\bar\partial u_{j+1}$，两组和中项的酉转移因子相同，且分布意义同样成立（main.tex:271-272）。eq:modes 是全篇的发动机：$Xf=0$ 把模 $j$ 的导数与模 $j\pm1$ 的导数绑进递推，而 §8 的尾和正是利用这个递推在奇偶步长下望远镜成一个端点。
+
+## §6 主定理的精确范围与边界语言
+
+定理陈述的全部构件（main.tex:88-104）：$Q$ 是非退化欧氏三角形内部，角 $\alpha,\beta,\gamma$，假设 $\alpha/\pi,\beta/\pi,\gamma/\pi$ 至少一个无理（main.tex:89-94）；结论：开边上镜面反射的单位速率台球流 $\Phi_t$ 在 $Q\times S^1$ 上对概率测度 $d\mu=\dfrac{dA\,d\theta}{2\pi\operatorname{Area}(Q)}$ 遍历（main.tex:95-99）；撞顶点轨线在两个时间方向都被丢弃（main.tex:100）；不变集的解析定义是对一切 $t\in\R$ 有 $\mu(\Phi_t^{-1}A\triangle A)=0$ 蕴含 $\mu(A)\in\{0,1\}$（main.tex:101-103）。
+
+对陈述的几点个人核对。第一，测度用对称差为零来定义"不变"，绕开了逐点代表元的选取问题，与 §5 末尾的使用规则（main.tex:234-236）是同一套纪律的两端。第二，归一化常数 $2\pi\operatorname{Area}(Q)$ 不是摆设：它是 $\nu$ 折回推送为 $\mu$ 的等权要求（main.tex:194-197），也与谱推论的边界前置因子 $2/(\pi\operatorname{Area}(Q))=4/(\operatorname{vol}(S^1)\operatorname{Area}(Q))$（main.tex:799-801）在同一口径上。第三，边界语言（main.tex:106-111）：结论是关于指定概率测度的完整流遍历性，对唯一遍历性、混合性、逐条轨线行为不作任何声明。这段限定与摘要的"不需要 genericity 或丢番图条件"（main.tex:45）合起来读，作者对可主张范围与不可主张范围的切割是自觉的。
+
+覆盖组合的分类账：三角全无理包含在内，一有理两无理包含在内（main.tex:106-108）；"恰一无理两有理"因角和为 $\pi$ 而不存在（main.tex:706-708）；全有理情形落在定理范围外。为什么框架本身在全有理处失效，main.tex 只在收尾给出线索：消元依赖相位 $e^{2ij\alpha}\ne1$（main.tex:692-694），全有理时对某些 $j\ne0$ 相位为 1，非零平行模杀不掉，双层上 $f$ 只能推到"在这些模上常数"为止。[推测] 全有理三角形的遍历性由 Veech 型理论与 KMS 处理（main.tex:64-68 的背景段），作者把定理范围停在无理一侧应是有意让本文贡献聚焦于"逐点而无 Diophantine"的无理情形；素材没有给"为何不把两条腿缝成一个定理"的讨论，我读到的只是范围声明本身。
+
+常数依赖的预算行（main.tex:166-168 与 main.tex:708-709 两处互相印证）：分析估计中的常数允许依赖固定三角形，禁止依赖 Fourier 指标与小平滑参数。我把它理解为整篇论文的记账规则：所有 "$C$" 都是三角形的函数 $C(Q)$，而 §8 的两步极限里真正生死攸关的一致界（比如 $\|\nabla h_j\|_2\le CH$ 对一切 $j,\varepsilon$）恰好只动用这条规则允许的依赖。非退化性（角有正下界、边长有界）把这些常数压成有限，这在锥邻域嵌入半径 $c\,r(x)$ 的存在性论证里是隐性的（main.tex:282-283：固定锥点附近有半径 $c\,r(x)$ 的嵌入圆盘，$c>0$；远端由紧性）。[推测] $c$ 与 $K$ 可显式取为角的正弦的某个下界函数，素材未给出显式形式，我不编。
+
+## §7 两块估计：局部化能量估计与有界系数估计
+
+### §7.1 只在位置侧、避开锥点的光滑化
+
+ sec:smoothing（main.tex:273-364）供给全部解析环节的度量输入。距离函数 $r(x)=d(x,V)$（完备双层上到锥点集的距离）。几何引理（main.tex:279-287）：存在 $K>0$，对一切足够小的 $\varepsilon>0$，凡中心满足 $r(x)>K\varepsilon$ 者携带一个嵌入平坦圆盘，半径 $4\varepsilon$；并且对固定 $L$ 有锥邻域面积律 $\operatorname{Area}\{r\le L\varepsilon\}=O_L(\varepsilon^2)$（eq:area）。面积律的量级来源我能直接复核：锥尖邻域是扇形，面积随半径平方增长，$\varepsilon^2$ 是几何必然；下标 $L$ 声明常数依赖 $L$ 而（按 §6 的预算行）不依赖 $\varepsilon$。
+
+核与算子（main.tex:289-301）：单位圆盘内非负、光滑、径向、质量一的 $\rho$，缩放 $\rho_\varepsilon(y)=\varepsilon^{-2}\rho(y/\varepsilon)$；在 $r>K\varepsilon$ 的中心处，于嵌入平坦圆盘内做 $(S_\varepsilon u)(x,\theta)=\int_{\R^2}\rho_\varepsilon(y)u(x-y,\theta)\,dy$，方向沿平行输运保持不动。径向性保证结果与所选定向平坦图表无关。$\{r>K\varepsilon\}$ 名为安全区。
+
+lem:smoothing 的性质清单（main.tex:303-330），逐条带行号：其一，安全区上 $S_\varepsilon$ 与 $\varepsilon\nabla S_\varepsilon$ 一致地 $L^2(SM)\to L^2$ 有界，与 $X,Y$ 局部交换（含分布意义），且 $\|S_\varepsilon u\|_\infty\le\|u\|_\infty$（main.tex:306-309）。其二，对每个固定 $u\in L^2(SM)$，$\varepsilon\|YS_\varepsilon u\|_{L^2(r>K\varepsilon)}\to0$（eq:small-derivative，main.tex:310-313），且在紧正则集上 $S_\varepsilon u\to u$ 局部 $L^2$。其三（$L>K+4$ 固定）：$g\in L^2(SM)$ 在 $\{r<L\varepsilon\}$ 上为零蕴含 $S_\varepsilon g$ 支撑在 $\{r\ge(L-1)\varepsilon\}$，零延拓后空间支撑紧；对偶恒等式 $\langle YS_\varepsilon u,g\rangle=-\langle u,YS_\varepsilon g\rangle$（eq:adjoint，main.tex:315-322），左配对只用安全中心；若 $Xg\in L^2$ 分布意义成立，则 $X(S_\varepsilon g)=S_\varepsilon(Xg)$ 且 $\|XS_\varepsilon g\|_2\le C\|Xg\|_2$（eq:commute，main.tex:323-328），零延拓约定相同。
+
+证明里我认为值得抄进自己工具箱的三步（main.tex:332-364）。第一步，图表内它就是固定角的普通空间卷积，核与 $\varepsilon$ 倍一阶导核在两个空间变量方向绝对积分一致有界，Young 型论证给出全部 $L^2$ 界，交换性与 $L^\infty$ 压缩同源（main.tex:333-339）。第二步，eq:small-derivative 先对光滑紧支撑输入直接验证（小尺度下卷积不碰锥尖、一阶导一致 $L^2$ 有界），再用密度与一致标度导数界升到一般 $L^2$ 输入（main.tex:341-347）：这是"先算光滑的、再密度收口"的标准纪律，和 §4 的预算恐惧一脉相承。第三步，对偶恒等式的几何内容（main.tex:349-356）：把短弧反向，平行输运随之反向，而径向核不变，于是核满足 $Y_xK_\varepsilon(x-y)=-Y_yK_\varepsilon(x-y)$（公共图表内、角经平行输运认同），配 Fubini 得转移，全程不需要对 $g$ 求导；$g$ 有界但未必有任何导数，这正是 §8 里 $g_\varepsilon$ 的处境。支撑位移靠 $r$ 的三角不等式，卷积在安全区边界附近恒为零，零延拓不产生边界导数项（main.tex:358-363）。
+
+关键设计我单独标记：整个光滑化只对位置、不对角向。理由在结构层：角向卷积会把不同 $j$ 的模混起来，而 eq:modes 递推、尾和 $U$ 的单端点方程 $XU=B$、"配对只涉及模 $m$ 与 $m-2$"这一切（main.tex:637-638）都建立在模数守恒上。代价是光滑后的场对角向仍不可微，沿轨线的微积分合法性要另行偿还，论文用一整段（main.tex:563-582）偿还：可数平坦图表覆盖，每个图表内对几乎每个角切片光滑场有光滑空间代表元，轨线在图表内停留期间图表角恒定，撞到例外切片意味着停在一个含有理时间的开区间上，对每个图表每个有理时间用测度保持论证该初始状态集零测，去掉可数并后微积分对几乎每条好轨线的每次图表访问都成立。这段是全篇我认为最"手工"的合法化，它处理的正是"不做角向光滑"的账单。
+
+### §7.2 局部化能量估计 lem:energy
+
+陈述（main.tex:378-387）：$w\in L^2(SM)$ 空间支撑紧，分布意义 $Xw,Yw\in L^2(SM)$；若 $Xw$ 在 $M\setminus E$ 上为零（$E$ 可测），则对每个 $j\in\Z$ 有 $\|\nabla w_j\|_2^2\le4\|Xw\|_2\|\mathbf 1_E\nabla w\|_2$（eq:energy）。
+
+证明链逐环定位。环一，Cauchy--Riemann 等范数（eq:CR-norms，main.tex:390-394）：$\|\partial w_j\|_2^2=\|\bar\partial w_j\|_2^2=\tfrac14\|\nabla w_j\|_2^2$。论证：两范数平方之差正比于 $\int dw_j\wedge d\overline{w_j}$；原式 $w_j\,d\overline{w_j}$ 整体良定义，因为常模酉转移因子相消（对照 main.tex:250-251 的指数 $-(j+1)\phi$ 与 $-(j-1)\phi$ 之差恰好是 $-2\phi$……实际相消发生在 $w_j$ 与其共轭的因子乘积里），且支撑紧在正则曲面内，Stokes 给出零（main.tex:395-400）。我核对过这一步的线性代数：$|dw_j\wedge d\bar w_j|\propto|\partial w_j|^2-|\bar\partial w_j|^2$ 型差，积分为零即等范数。环二，递推差（main.tex:402-407）：记 $D_j=\|\partial w_j\|_2^2$，由 eq:modes 与环一得 $D_j-D_{j+2}=\operatorname{Re}\langle(Xw)_{j+1},\partial w_j-\bar\partial w_{j+2}\rangle$；$(Xw)_{j+1}$ 在 $E$ 外为零，配对可限制到 $E$（main.tex:408）。环三，尾消失（main.tex:409-410）：$D_k\to0$（$k\to+\infty$），因为 $w$ 的水平导数按 Fourier 模平方可和。这是全证明唯一动用平方可和处，而平方可和属于正则测试场 $w\in L^2$ 带 $Xw,Yw\in L^2$，与被估计的原不变函数无关（main.tex:371-372 的预告句）。环四，望远镜（步长 2）加 Cauchy--Schwarz：$D_j\le\|Xw\|_2\bigl(\sum_{k\ge0}\|\mathbf 1_E(\partial w_{j+2k}-\bar\partial w_{j+2k+2})\|_2^2\bigr)^{1/2}$（main.tex:411-416）；逐点地，内和对 $\ell$ 求和由 $2\sum_\ell(|\partial w_\ell|^2+|\bar\partial w_\ell|^2)=\sum_\ell|\nabla w_\ell|^2$ 控制（main.tex:417-421）；Parseval 与环一收尾得 eq:energy（main.tex:422）。
+
+量级解读：系数 4 是环一的 $\tfrac14$ 翻转；结构是"梯度全范数平方 $\le$（扰动源 $\|Xw\|_2$）$\times$（扰动区上梯度 $\|\mathbf 1_E\nabla w\|_2$）"，一次型界，并非二次型界。它的用法预告在 main.tex:368-370：全梯度只在不满足输运不变性的地方付费，截断不变函数的代价被关进小的锥环带。我认为这条引理是全文与 FM 原文（其 Sobolev 论证的骨架，Lemma 3.3、Corollary 4.2、Lemma 5.1，见 main.tex:373-375 的致敬句）分道之处：FM 在带正则性的函数类内论证，这里把同型不等式限制到支撑紧的 $L^2$ 场上重证，换取对原始 $f$ 的零先验要求。
+
+### §7.3 有界系数估计 lem:bounded-modes
+
+陈述（main.tex:425-433）：固定非退化三角形的正则双层 $M$ 上，$h\in L^\infty(SM)$、$\|h\|_\infty\le H$、$Xh=0$ 局部分布意义成立，则每个系数有整体平方可积平坦梯度，且 $\|\nabla h_j\|_2\le CH$（eq:bounded-modes），对一切 $j\in\Z$。
+
+证明（main.tex:435-461）：取光滑空间截断 $\chi_\varepsilon$，在 $r\le(K+1)\varepsilon$ 为零、$r\ge(K+2)\varepsilon$ 为一、$\|\nabla\chi_\varepsilon\|_{\infty}\le C/\varepsilon$；小 $\varepsilon$ 下过渡区是互不相交的锥环带（main.tex:436-439）。令 $w=\chi_\varepsilon S_\varepsilon h$，顶点附近零延拓：空间支撑紧、水平导数平方可积。局域交换给 $Xw=(X\chi_\varepsilon)S_\varepsilon h$，支撑在过渡环带 $E_\varepsilon$ 上，其总面积 $O(\varepsilon^2)$（main.tex:440-447，面积律来自 eq:area 的两层邻域相减）。环带上核导数估计加 $h$ 有界给逐点界 $\lvert Xw\rvert+\lvert\nabla w\rvert\le CH/\varepsilon$（main.tex:448-451）。于是 eq:energy 右端两因子都不超过 $CH$（main.tex:452）：$\|Xw\|_2\le(CH/\varepsilon)\cdot O(\varepsilon)=CH$，用环带 $L^2$ 范数里"逐点 $1/\varepsilon$、面积 $\varepsilon^2$"的一次方根乘积；$\|\mathbf 1_{E_\varepsilon}\nabla w\|_2$ 同算。得 $\|\nabla w_j\|_2\le CH$，对 $\varepsilon$ 与 $j$ 一致（main.tex:453）。逐固定 $j$，$w_j$ 局部 $L^2$ 收敛到 $h_j$、梯度整体有界取弱收敛子列，正则图表内测试把弱极限认作 $\nabla h_j$，下半连续给 eq:bounded-modes（main.tex:455-459）。收口免责声明：既不指派锥尖处的迹，也不断言对 $j$ 的平方可和（main.tex:459-461）。
+
+我做一个敏感性分析来回答"为什么截断带宽度选成 $\varepsilon$ 的常数倍"。设过渡发生在 $[a\varepsilon,b\varepsilon]$：逐点导数 $H/\varepsilon$、面积 $\sim\varepsilon^2$ 的组合里，$\|Xw\|_2$ 的 $\varepsilon$ 幂次恰好相消，$O(1)$ 界其实对一切固定比例 $a,b$ 成立；真正必须咬死 $\delta\asymp\varepsilon$ 的原因在别处：$S_\varepsilon h$ 的梯度逐点界 $CH/\varepsilon$ 只在安全区内通过核估计取得，而零延拓要与 §7.1 的支撑位移Compatible（$L>K+4$ 一侧的要求，main.tex:315）。换言之，宽度选择是接口约束，不是最优性约束；eq:energy 的乘积结构（一次因子配对一次因子）才是让 $\varepsilon$ 幂相消的设计核心。这个观察帮助我回答 §12 的一个潜在质疑：常数 $C$ 依赖三角形，经由 $K$（嵌入半径几何）与面积律的 $O(\varepsilon^2)$ 隐含常数。
+
+lem:bounded-modes 的假设措辞（main.tex:463-466）我已在 §4 引过：局部分布方程、区别于对整体可测流的不变性；这句免责声明是给 §8 第二个极限用的入场券，弱极限 $g^{(s)}$ 只有局部方程可用，若引理要求整体不变性，链条就在 $s\to0$ 处断掉。
+
+## §8 刚性命题的主证：端点方程、长线段平均与两步极限
+
+sec:rigidity（main.tex:468-676）是全篇的心脏，prop:rigidity 的陈述（main.tex:476-483）：若 $f\in L^\infty(SM)$ 对每个 $t\in\R$ 几乎处处 $\Psi_t$-不变，则作为正则曲面上的分布 $\partial f_j=\bar\partial f_j=0$ 对一切 $j\in\Z$ 成立。开头把记号立稳：$H=\|f\|_\infty$，$H=0$ 平凡；由不变性有 $Xf=0$（§5 的分布推导），lem:bounded-modes 就位可用；固定一个 $m\in\Z$，此后整个论证只针对这个 $m$（main.tex:485-488）。
+
+### §8.1 端点方程：无穷递推塌缩成一项
+
+定义尾和与端点场（eq:tail，main.tex:490-496）：$U=\sum_{k\ge0}P_{m+2k}f\in L^2(SM)$，$B=e^{i(m-1)\theta}\bar\partial f_m\in L^2(SM)$，后者是模 $m-1$ 的整体场。$U$ 的 $L^2$ 合法性我随手核过：$f\in L^\infty$、$\nu$ 有限，$P_j$ 是正交投影，部分和 $\|U_N\|_2\le\|f\|_2$，Hilbert 空间正交级数收敛。$B$ 的 $L^2$ 合法性由 lem:bounded-modes 逐系数给出。递推 eq:modes 蕴含 $XU=B$（eq:endpoint，main.tex:497-500），严格验证走有限尾：$XU_N=B+e^{i(m+2N+1)\theta}\partial f_{m+2N}$（main.tex:501-504）。我展开过这个望远镜：对 $U_N$ 施加 $X$、按 $(Xu)_j=\partial u_{j-1}+\bar\partial u_{j+1}$ 逐模写出，链内相邻模的 $\partial$ 与 $\bar\partial$ 两两对消（用 $Xf=0$ 即 $(Xf)_j=0$），只剩下端 $\bar\partial f_m$（乘 $e^{i(m-1)\theta}$ 认同为模 $m-1$ 场，即 $B$）与远端 $\partial f_{m+2N}$。
+
+远端余项 $R_N=e^{i(m+2N+1)\theta}\partial f_{m+2N}$ 的处理是全文我第一次拍到桌子叫好的一步（main.tex:505-513）：其 $L^2$ 范数由 lem:bounded-modes 一致有界（$\le CH$），但一致有界不足以来消去；消去靠"模逃逸"：对任意固定 $\varphi\in L^2(SM)$，$|\langle R_N,\varphi\rangle|\le CH\|P_{m+2N+1}\varphi\|_2\to0$（Parseval 尾和）。原文特意补了一句：范数未必趋零，弱极限为零即可（main.tex:512）。加上 $U_N\to U$（$L^2$），分布意义 $XU=B$ 得证（main.tex:513-514）。这一步是"逐系数、非平方可和"预算哲学（§4、§7.2 环三）的兑现处：整条论证里从没有要求 $\sum_j\|\nabla f_j\|^2$ 有限。
+
+安全圆盘上光滑化方程：$XYS_\varepsilon U=YS_\varepsilon B$（eq:smoothed-equation，main.tex:515-518），由 $XU=B$ 与 §7.1 的交换性得。目标的代数内核（main.tex:519-522）：要证 $\langle B,P_{m-1}Yf\rangle=0$；而 eq:modes 在模 $m-1$ 给出 $P_{m-1}Yf=-2iB$，所以该恒等式一旦成立就逼出 $B=0$；构造全程不假设 $Yf\in L^2$。我独立验算过 $-2i$ 的来源：$(Yf)_{m-1}=i\partial f_{m-2}-i\bar\partial f_m$，$Xf=0$ 的第 $m-1$ 模给 $\partial f_{m-2}+\bar\partial f_m=0$，代入得 $(Yf)_{m-1}=-2i\bar\partial f_m$，再乘 $e^{i(m-1)\theta}$ 认同模场即 $-2iB$。验算通过让我放心：这个常数与 §7.2 的 eq:CR-norms、eq:modes 三线闭合。
+
+### §8.2 带净空的长线段与坏集测度
+
+固定 $s>0$，取 $T=s/\varepsilon$，固定 $L>K+4$（main.tex:524-527）。时间尺度的双重任务原文一句点破（main.tex:526-527）：丢弃的质量保持在 $s$ 阶，而端点误差在固定 $s$ 下随 $\varepsilon\to0$ 消失。好集 $G_\varepsilon$：正则状态其轨线在 $0\le t\le T$ 全程满足 $r(\Psi_tz)>L\varepsilon$（main.tex:528-529）。坏集估计（eq:bad-measure，main.tex:530-538）：距离函数沿单位速率路径 1-Lipschitz，故间距不超过 $\varepsilon$、点数至多 $T/\varepsilon+2$ 的时间网格能侦测 $\{r\le(L+1)\varepsilon\}$ 内一切失败事件；测度保持加 eq:area 得 $\nu(SM\setminus G_\varepsilon)\le C(T\varepsilon+\varepsilon^2)=C(s+\varepsilon^2)$。量级逐层拆：网格每点贡献一个 $C\varepsilon^2$ 的坏邻域（两次乘 $\varepsilon$ 是"该时刻处于 $(L+1)\varepsilon$-邻域"的面积律，第三次 $\varepsilon$ 来自 Lipschitz 把时长换成测度），点数 $T/\varepsilon$，总账 $C\cdot(T/\varepsilon)\cdot\varepsilon^2=C\,T\varepsilon=Cs$，再加初始即坏的 $\varepsilon^2$ 层。奇异状态的零集可以忽略（main.tex:539）。
+
+截断与平均（eq:average，main.tex:541-544）：$a_\varepsilon=f\mathbf 1_{G_\varepsilon}$，$g_\varepsilon=\frac1T\int_0^Ta_\varepsilon\circ\Psi_{-t}\,\,d t$。三条即得性质：$|g_\varepsilon|\le H$；若被积函数在 $z$ 非零则 $z$ 位于从 $\Psi_{-t}z$ 出发的好线段时刻 $t$ 处，于是 $g_\varepsilon=0$ 在 $\{r<L\varepsilon\}$ 上（这是把 $g_\varepsilon$ 送进 §7.1 第三条支撑位移的凭据，main.tex:545-548）；两个关键界（eq:average-bounds，main.tex:549-553）$\|g_\varepsilon-f\|_2\le CH\sqrt{s+\varepsilon^2}$ 与 $\|Xg_\varepsilon\|_2\le2H/T$。第一界的出处我推了一遍：由不变性 $f=f\circ\Psi_{-t}$（a.e. 逐 $t$），$f-g_\varepsilon=\frac1T\int_0^T(f-a_\varepsilon)\circ\Psi_{-t}\,\,d t$，Minkowski 移进积分号、测度保持换回原变量，得 $\|f-g_\varepsilon\|_2\le\|f\mathbf 1_{SM\setminus G_\varepsilon}\|_2\le H\sqrt{C(s+\varepsilon^2)}$；原文列的三个 ingredients（invariance、Minkowski、eq:bad-measure，main.tex:548-549）恰好是这三步。第二界走弱恒等式（main.tex:554-561）：$Xg_\varepsilon=(a_\varepsilon-a_\varepsilon\circ\Psi_{-T})/T$，验证靠对紧支撑光滑正则场测试、流变量替换、对其 $t$-导数积分；原文着重声明它没有对 $\mathbf 1_{G_\varepsilon}$ 求导（main.tex:560-561），这是"截断的代价只按端点差付一次、付在 $L^2$ 界上"的会计学。
+
+### §8.3 沿线段积分与第一个极限
+
+沿轨线的微积分合法化（main.tex:563-582）我在 §7.1 末尾已经展开评论：可数图表覆盖、角切片例外集、轨线在图表内图表角恒定、含理时数的测度论证、可数并剔除；此处只记结果：对几乎每条好线段，恒等式 $XYS_\varepsilon U=YS_\varepsilon B$ 沿线积分合法，两端点由正则延拓处理（main.tex:581-582）。
+
+变元代换加基本定理给出线段恒等式（eq:segment-identity，main.tex:584-590）：$\langle YS_\varepsilon B,g_\varepsilon\rangle=\frac1T\int_{G_\varepsilon}\overline{f(z)}\bigl[(YS_\varepsilon U)(\Psi_Tz)-(YS_\varepsilon U)(z)\bigr]\,d\nu(z)$。右端估计（main.tex:591-597）：两端点都在安全区，Cauchy--Schwarz 加测度保持给绝对值 $\le\frac{2H}{s}\,\varepsilon\|YS_\varepsilon U\|_{L^2(r>K\varepsilon)}=o(1)$（$\varepsilon\to0$、$s$ 固定），依据 eq:small-derivative，且原文强调"这里 $U$ 是固定的"（main.tex:597）：eq:small-derivative 的极限只对固定 $L^2$ 输入声明，$U$ 恰是那个固定输入，不许在极限过程里让它依赖 $\varepsilon$。随后 $w_\varepsilon=S_\varepsilon g_\varepsilon$ 配 §7.1 支撑延拓，对偶恒等式 eq:adjoint 把线段恒等式转手成配对小量（eq:pairing-small，main.tex:599-604）：$\langle B,Yw_\varepsilon\rangle=o(1)$。同一引理加 eq:average-bounds 给 $\|\nabla w_\varepsilon\|_2\le CH/\varepsilon$、$\|Xw_\varepsilon\|_2\le CH/T$，空间支撑紧；lem:energy 取 $E=M$（main.tex:605-614）得固定-$s$ 界（eq:fixed-s-bound，main.tex:612-614）：$\|\nabla(w_\varepsilon)_j\|_2^2\le CH^2/s$ 对一切 $j$。
+
+固定-$s$ 界是我计算过最心痒的一步：$4\|Xw_\varepsilon\|_2\|\nabla w_\varepsilon\|_2\le4\cdot\frac{CH}{T}\cdot\frac{CH}{\varepsilon}=\frac{CH^2}{T\varepsilon}$，而 $T\varepsilon=s$ 恰好就是那个被固定的参数。两条退化线（$\varepsilon\to0$ 时 $1/\varepsilon$、$T\to\infty$ 时 $1/T$）在乘积里合成一个不受控常数 $1/s$；$\varepsilon$ 被消掉了，$s$ 留下了。这解释了为什么论证必须分两步：$s\to0$ 会让该界爆炸，$\varepsilon\to0$ 却只经过配对恒等式里的 $o(1)$。
+
+第一极限（$\varepsilon\to0$，$s$ 固定，main.tex:616-649）：取列与子列使 $w_\varepsilon\rightharpoonup g^{(s)}$（$L^2$ 弱）；$\{|u|\le H\}$ 是 $L^2$ 中闭凸集故弱闭，$\|g^{(s)}\|_\infty\le H$（main.tex:617-620）；对固定光滑紧支撑测试场，卷积对称性给 $\langle w_\varepsilon-g_\varepsilon,\varphi\rangle=\langle g_\varepsilon,S_\varepsilon\varphi-\varphi\rangle\to0$（main.tex:621-626），一致 $L^2$ 界加稠密性说明 $g_\varepsilon$ 与 $w_\varepsilon$ 同一弱极限（main.tex:627-628）；于是 $Xg^{(s)}=0$ 且 $\|g^{(s)}-f\|_2\le CH\sqrt s$（eq:limit-function，main.tex:629-635）：前者由 eq:average-bounds 或 $Xw_\varepsilon$ 的界转手，后者是弱下半连续。配对侧：$B$ 是模 $m-1$ 场，$\langle B,Yw_\varepsilon\rangle$ 只激活模 $m$ 与 $m-2$ 的系数导数（main.tex:637-638）；固定-$s$ 界允许再抽子列使这两个梯度在整体 $L^2$ 空间弱收敛，正则图表内测试把极限认作 $g^{(s)}$ 对应系数的梯度；$B$ 固定于 $L^2$，转极限得第一极限配对（eq:first-limit，main.tex:639-646）：$\langle B,P_{m-1}Yg^{(s)}\rangle=0$。原文在此再次挂免贵声明：该投影导数只是 eq:modes 的两项组合，不断言 $Yg^{(s)}$ 整体 $L^2$（main.tex:647-649）。
+
+第二极限（$s\to0$，main.tex:651-667）：明言弃用退化中的 eq:fixed-s-bound（main.tex:652）；改由 $g^{(s)}$ 有界且解精确局部方程，lem:bounded-modes 给出 $\|\nabla(g^{(s)})_j\|_2\le CH$，对 $s$ 一致（main.tex:653-658）。取 $s_n\downarrow0$，相应的 $g^{(s_n)}$ 由 eq:limit-function 强收敛到 $f$（界 $CH\sqrt{s_n}\to0$，main.tex:659-661）；相关梯度 $L^2$ 有界，每个弱子列极限在局部被认作 $f$ 的对应梯度；eq:first-limit 转极限得 $\langle B,P_{m-1}Yf\rangle=0$（main.tex:662-667）。
+
+收口（main.tex:668-676）：$Xf=0$ 在第 $m-1$ 模说 $\partial f_{m-2}=-\bar\partial f_m$；配上 $(Yf)_{m-1}$ 的表示得 $P_{m-1}Yf=-2iB$，故 $0=\langle B,-2iB\rangle$ 逼 $\|B\|_2=0$、即 $\bar\partial f_m=0$；$m$ 任意，递推再给 $\partial f_j=0$ 对一切 $j$。我对这里有一处符号级备注：按 main.tex:265-266 的内积约定（对第一变元线性），$\langle B,-2iB\rangle=-2i\|B\|_2^2$，而原文 main.tex:672 写 $0=\left\langle B,-2iB\right\rangle=2i\left\lVert B\right\rVert_2^2$，一个模符号的出入；无论取哪个符号，等式等于零都强制 $B=0$，结论不动。我把这处记在 §12 与勘误里备查。
+
+两步极限的哲学我最后总结成一句话：第一极限造出一个缓冲对象 $g^{(s)}$，它同时具备三件原始序列没有的东西：有界、满足精确局部方程、与 $f$ 的 $L^2$ 距离 $O(\sqrt s)$；第二极限靠这三件东西把一致性从 $1/s$ 的废墟里救回来。$g^{(s)}$ 不是近似不变函数（它只对"截断的好线段"平均而来，不再对全流不变），但它不需要：lem:bounded-modes 只要局部方程。整个结构的脆弱点我数下来只有两处：其一，eq:pairing-small 的 $o(1)$ 依赖 $U$ 固定，任何让尾和依赖 $\varepsilon$ 的改动都会拆掉 eq:small-derivative 的前提；其二，eq:fixed-s-bound 到第一极限转手的梯度识别，只覆盖两个模，若目标配对激活无穷多模，固定-$s$ 界就不够用。这两处都是设计约束，现行选择恰好绕开。
+
+## §9 挠率收尾与角度假设的真实岗位
+
+定理收束（main.tex:680-699）：重标顶点使 $\alpha/\pi$ 无理；取不变可测集 $A$，其指示升格为 $SM$ 上有界不变 $f$；prop:rigidity 说每个系数零平坦梯度；每个正则图表内有常数代表元，这些常数在酉转移下互相咬合，于是每个系数是平行截面（main.tex:684-687）。绕角度为 $\alpha$ 的顶点一圈，其穿孔锥（锥角 $2\alpha$）的 development 给出挠率旋转 $-2\alpha$（模 $2\pi$，main.tex:689-691）；模 $j$ 的平行系数必须被相位 $e^{2ij\alpha}$ 固定（main.tex:692-693）：我按 §5 的转移律验算一遍，绕圈总转角 $\phi=-2\alpha$，系数乘 $e^{-ij\phi}=e^{2ij\alpha}$，不变性要求 $(e^{2ij\alpha}-1)u_j=0$，与原文吻合。$\alpha/\pi$ 无理时 $j\ne0$ 的相位离开 1，系数逐点湮灭（main.tex:693-694）；零阶系数在连通曲面 $M$ 上是常数（main.tex:695）；Fourier 完备性说 $f$ 几乎处处常数；指示函数与 $A$ 同质量，积分只能 0 或 1，$\mu(A)\in\{0,1\}$（main.tex:696-699）。
+
+remark 把角度假设的岗位钉死（main.tex:701-710）：全部分析论证适用于固定非退化三角形的双层；单个无理角就足以消去一切非零平行模，这就是定理同时覆盖一有理两无理与三无理三角形的原因；三度和为 $\pi$ 排除"恰一无理"组合；分析估计的常数允许依赖三角形。我读到这里回头看 §8，才确认这个"隔离"有多彻底：从 eq:tail 到 eq:first-limit，没有任何一步写过 $\alpha$ 的不等式性质，没有丢番图下界、没有 $|e^{2ij\alpha}-1|$ 的下界估计（它甚至不需要，因为湮灭是精确代数论证：要么相位为 1 要么截面为零）。Vorobets 型条件之所以在文献里存在（main.tex:73-77），正是因为在逼近式证明里 $|e^{2ij\alpha}-1|$ 的下界就是命脉；本文把命脉换成了"先刚性、后消元"的顺序，角度只在消元处出场一次。
+
+连通性我单独记一笔：零阶系数成为"整体常数"用的是 $M$ 连通（main.tex:186 的构造句与 main.tex:695 的引用）。若当初取两个不相交拷贝再粘（定向相同），跨边延续就不再是反射，是平移，双层机制失效；若取定向相同但坚持粘合，$M$ 在边处不可定向、水平场 $X,Y$ 的全局定义受威胁。定向相反这个设计细节在 §5 我只当装饰读过，到 §9 才明白它是连通性与可定向性两个需求的唯一交集（三角形情形两者本可兼得，因为粘合沿边反转局部定向，两拷贝赋相反定向后整体成为可定向闭曲面去掉三点）。[推测] 这段"为什么相反定向"是我从构造与用途倒推的，原文没有展开历史动机，素材不足以引行号作证。
+
+## §10 谱推论：定理第一次也是唯一一次走出动力系统
+
+sec:spectral（main.tex:712-817）把遍历性兑换成三份谱学后果。setup（main.tex:717-728）：$Q$ 满足定理假设，边界条件固定取 Dirichlet（$B=D$）或 Neumann（$B=N$）；$(u_j)$ 是对应 Laplacian 的任意完备标准正交特征基，$-\Delta_Bu_j=\lambda_j^2u_j$，$0\le\lambda_1\le\lambda_2\le\cdots$ 按重数排列；密度一集按 $\#(S\cap\{1,\ldots,N\})/N\to1$ 定义。
+
+三项结论逐条核对。其一（main.tex:731-740）：存在密度一集 $S_{\mathrm{int}}$，对每个 Schwartz 核紧支撑于 $Q\times Q$ 内的经典零阶拟微分算子 $A$，$\langle Au_j,u_j\rangle_{L^2(Q)}\to\int_{Q\times S^1}\sigma_0(A)\,d\mu$；欧氏度量把单位余切与 $Q\times S^1$ 认同。这里 $\mu$ 就是 §6 的概率测度，闭环从我看 $\mu$ 第一次出场（main.tex:98）到这里完成一半。其二（main.tex:741-767）：边界 $\Gamma$ 取三条开边之并；$\lambda_j>0$ 时 $h_j=\lambda_j^{-1}$；Cauchy 数据 $u_j^b$ 按 $B=D$ 取 $h_j\partial_\nu u_j|_\Gamma$、按 $B=N$ 取 $u_j|_\Gamma$（main.tex:744-749）；碰撞截面 $B^*\Gamma=\{(s,\eta)\in T^*\Gamma:\lvert\eta\rvert<1\}$，$s$ 为弧长、$\eta$ 为有向切余切变量；存在 $S_\partial\subset\{j:\lambda_j>0\}$ 密度一，使对一切 $a\in C_c^\infty(T^*\Gamma)$ 与紧支零阶半经典量子化 $A_h=\operatorname{Op}_h(a)$，$\langle A_{h_j}u_j^b,u_j^b\rangle_{L^2(\Gamma)}\to\dfrac{2}{\pi\operatorname{Area}(Q)}\int_{B^*\Gamma}a(s,\eta)w_B(\eta)\,d s\,d\eta$，权重 $w_D(\eta)=\sqrt{1-\eta^2}$、$w_N(\eta)=(1-\eta^2)^{-1/2}$（main.tex:763-766）；Cauchy 数据不作单位边界范数再归一（main.tex:767）。我检查过 $w_N$ 在 $\lvert\eta\rvert\to1^-$ 的发散：$(1-\eta^2)^{-1/2}$ 在有限区间上可积，瑕点是平方可积意义上的边缘行为，陈述合法。其三（main.tex:768-772）：实特征基情形存在密度一 $S_{\mathrm{nod}}$，结点域数（$Q\setminus\{u_j=0\}$ 的连通分支数）沿 $\lambda_j\to\infty$、$j\in S_{\mathrm{nod}}$ 趋于无穷。
+
+证明的假设核验与外部定理搬运（main.tex:775-811）：把 $\overline Q$ 放入足够大的平坦环面；边界 Lipschitz，三条光滑开边加有限个余维二奇点，相邻边横截相交；于是三角形同时满足 Burq §2、Hassell--Zelditch Definition 3.1、Hezari Definition 1.16（含后者的度量延拓条件）的分段光滑假设（main.tex:776-782）；定理本身供给所需台球流遍历性（main.tex:782）；其一定位为 Zelditch--Zworski 的内部量子遍历性定理，按 Burq Theorem 2 与 Remark 2.1 的 D/N 表述转写（main.tex:783-786）。
+
+其二的前置工作是一段独立的 ergodicity 传递论证（main.tex:787-797），我单独拆给它，因为它是全文唯一一次"流遍历 $\Rightarrow$ 映射遍历"的方向使用：丢掉撞顶点与擦边两个零集后，碰撞截面携带不变测度 $ds\,d\eta$；边界-飞行坐标把流（模零集）认同为碰撞映射在正自由飞行时间屋顶 $\tau$ 下的 suspension，Liouville 测度对应 $\propto ds\,d\eta\,dt$、$0\le t<\tau$；$\tau$ 几乎处处正且被 $Q$ 的直径控制；若碰撞映射有正测度且补正测度的不变集，其 suspension 给出流的非平凡不变集，与定理矛盾。屋顶有界这一条我确认它的作用是双向可测账目：suspension 测度的有限性与不变集的饱和化都不溢出。随后引用 Hassell--Zelditch Theorem 1.1、式 (1.3)-(1.5) 与 Section 7 得边界结论，前置因子按其原式 $4/(\operatorname{vol}(S^1)\operatorname{Area}(Q))=2/(\pi\operatorname{Area}(Q))$ 归并（main.tex:797-801），并核对法向约定：原文用内法向、本文用外法向，Dirichlet 数据差一个符号、二次配对不变（main.tex:802-803）。其三定位 Hezari Theorem 1.6（main.tex:805-808）；有限个零频率项不影响密度；三个密度一集可换有限交以同时用一条子列（main.tex:809-810）。
+
+自限声明（main.tex:813-817）：子列可依赖三角形、边界条件、特征基的选取；零密度例外子列仍然存在；不断言量子唯一遍历性，无等分布速率、无混合、无谱统计定律。这段与我 §11 第 4 条呼应：论文在动力学与谱学两侧都做了同一纪律的范围收缩。
+
+## §11 最终思路与最初设想的差异
+
+把成品与动笔前我脑中的图纸对齐，差异有七处，我按冲击量级排序。
+
+第一，论证体裁。我预期这属于多边形台球动力学的兵器谱：展开、平移表面、方向流、分数积分或 continued-fraction 式重正化。交付物实际是调和分析加一阶输运方程的 PDE 混合体：一对水平向量场、一族酉线丛系数、两步弱极限，最后接一段纯代数（挠率相位）。全篇没有调用任何方向流的结果。
+
+第二，角度假设的岗位。我以为无理数的丢番图性质迟早进场（Liouville 角难、有界型角易、Vorobets 条件就是这种世界观的定量版，main.tex:73-77）。实际证明里角度只在 main.tex:692-694 进场一次，用的是相位 $e^{2ij\alpha}$ 等于 1 与否的精确二分，全程没有 $|e^{2ij\alpha}-1|$ 的下界需求。顺序换了命脉：先刚性后消元的证明里，逼近质量无关紧要。
+
+第三，量词形态。我默认"逐点证明每个三角形"需要整体结构定理（Veech 型分类）作为地基。实际地基是两块估计（§7）加两步极限（§8），承诺的只是"有界不变函数几乎处处为常数"这一遍历性的等价弱命题，速率、混合、逐轨线一概不碰（main.tex:106-111、813-817 两处自限互相印证）。
+
+第四，光滑化的维度。我初稿思路里位置和角向一起磨，图省事；实际方案只磨位置（main.tex:148-153 的策略段），角向不动以保全 eq:modes 的模数结构，代价用 main.tex:563-582 整段可数例外论证支付。这个取舍在素材里被明说了吗？没有明说"试过角向光滑"，但从"keeping the direction parallel"（main.tex:296-297）与配对只涉及两模（main.tex:637-638）两处可以反推其必要性。[推测] 策略段（main.tex:154-158）强调"第二步极限给出与剩余逼近参数无关的新界，然后才让弱极限逼近 $f$"，这种先立后破的行文口吻像是有过一稿试图一步极限而被 $1/s$ 爆炸卡住的历史；素材无迭代记录，我把这条判断的置信度标为低。
+
+第五，例外集的账。我以为顶点问题是边角料。实际"撞顶点零测"与"有限时间无 accumulation"占据构造节的实质篇幅（main.tex:198-218），后者的证明（楔形展开下避尖直线极角至多扫 $\pi$）是我不可能预先想到的干净一招。
+
+第六，双层与"完整相空间"的关系。我最初的图景里 $Q\times S^1$ 是分析场所；实际分析全部搬到 $SM$ 上做，$Q\times S^1$ 只在首尾出现（陈述在 main.tex:95-96、折回在 main.tex:194-197 与测度对应）。中途换舞台是为了让截断与 Stokes 有合法的"空间支撑紧"语言（§5）。
+
+第七，结论的边界语言。我起草介绍时会写"证明了无理三角形台球遍历"；论文自己坚持写全"对指定概率测度 $\mu$ 的、丢弃顶点例外轨线后的、完整单位速率流的遍历性，不含唯一遍历与混合"（main.tex:42-47、88-111）。这属于写作纪律差异，但对本笔记是实质：台账里每个常数都受"仅依赖固定三角形"这条预算线约束（main.tex:166-168、708-709）。
+
+## §12 悬空的缝隙、可复核清单与"定理若成立必须先有什么"
+
+素材薄（一个 825 行文件、无附录无图），我把缝隙分成三类处理：当场重算过的、读不到出处而 [推测] 的、以及若定理为真则世界必须长成什么样的。
+
+当场重算过、认为无缝的环节（各附行号）：$-2i$ 系数关系的双恒等式验算（§8.1，对照 main.tex:668-674）；$\|g_\varepsilon-f\|_2$ 界的 Minkowski 推导（§8.2，对照 main.tex:548-553）；eq:fixed-s-bound 里 $T\varepsilon=s$ 的幂次相消（§8.3，对照 main.tex:605-614）；挠率相位 $e^{2ij\alpha}$ 与转移律 $e^{-ij\phi}$ 的一致性（§9，对照 main.tex:246、690-693）；锥面积律 $O(\varepsilon^2)$ 在环带两因子中的双消费（§7.3，对照 main.tex:285-287、446-453）；eq:CR-norms 里 $w_jd\overline{w_j}$ 的整体性（§7.2，对照 main.tex:395-400）。
+
+符号级出入一处：main.tex:672 在"对第一变元线性"的内积约定（main.tex:265-266）下把 $\langle B,-2iB\rangle$ 写成 $2i\lVert B\rVert_2^2$，按该约定应为 $-2i\lVert B\rVert_2^2$；取模为零的结论两头都成立，我判断属誊写级瑕疵，登记于 §13 后勘误。[推测] 出入来源是把共轭线性变元的约定顺手带进了行内计算；素材没有第二处同类计算可对照，置信度中。
+
+一条越界的推广疑点，必须诚实登记：我逐环节检查，证明里"三角形"三字的实质参与仅限非退化性（锥角 $2\theta_i<2\pi$，保证 §5 的无 accumulation 论证与嵌入半径几何）与角和关系（main.tex:706-708 的组合分类，属陈述侧记账，不属分析侧）。任意多边形的定向双层同样是紧平坦锥曲面（锥角 $2\theta_i$、Gauss--Bonnet 校验通过：$\sum_i(2\pi-2\theta_i)=2n\pi-2(n-2)\pi=4\pi$），照此阅读，同一论证似乎给出"任何含无理角比的多边形台球流遍历"，这强于素材的定理范围。而文献里平行等长边之类的几何条件常作为多边形遍历性的必要事项出现（main.tex 本身没讲）。[推测] 两种解释我都保留：或者我漏看了某个真正用了 $n=3$ 的环节（最可疑的是 §7.1 嵌入圆盘一致半径 $K$ 与 $L>K+4$ 的链条在多边形更多锥点下是否仍均匀，我找不到反例但也没有证明），或者作者把主张刻意收在三角形这一最有名的开案例上。素材不足以下结论，这正是薄素材该登记的东西。
+
+读不到出处、只能存 [推测] 的清单（每条附理由）：其一，FM 的 Theorem 4.1 与 Corollary 4.2 的精确陈述，我只能转引 main.tex:120-130 作者自己的摘要句，硬约束禁读外部材料，故本文与 FM 的创新边界只能按 main.tex:132-135 的自我申报划线，我对自我申报保持不信任惯例。其二，WCP 与 ZSBJ 的数值细节（main.tex:81-85 只有定性一句），无法核实其"非遍历迹象"的具体形态。其三，Vorobets 定义 1.3 的条件原文（main.tex:73-77 只给转述）。其四，Hezari 度量延拓条件、Hassell--Zelditch 假设清单的核验（main.tex:776-782）整段按信任接受。其五，定向双层是否首创：main.tex:62-63 把相空间构造与撞点例外零集追溯到 Zemlyakov--Katok，[推测] 双层的直系前身可能在其中，但素材不含 ZK 内容，无法确认。其六，常数 $K$、$c$ 的显式形式（§6 末）未给出。
+
+定理若成立，世界必须先长成这样（我从素材能严格推出的必要条件）：其一，有界不变函数自动刚性（prop:rigidity）必须无丢番图假设地成立，这意味着数值文献看到的"停滞"只能是次多项式慢的平均收敛（main.tex:83-85 原文正是这么预留的）；其二，碰撞映射对 $ds\,d\eta$ 必须遍历（§10 的 suspension 论证使其成为定理的直接推论，若哪个无理多边形被数值找到稳定不变模式，第一个倒下的就是定理本体）；其三，无理直角三角形全体落入定理（$\pi/2$ 有理、其余两角共轭无理发，main.tex:106-108），WCP 的怀疑对象（main.tex:81-84）必须全部是遍历的；其四，谱侧不得出现 QUE：定理只给密度一子列，零密度例外子列仍合法存活（main.tex:813-817），若日后有人在某个无理三角形上证明全列量子等分布趋零，与本定理无冲突，冲突的是与本定理的推论 cor:quantum 的"密度一"限定词。其五，若 §12 第 3 段的推广阅读成立，"每个含无理角的多边形遍历"必须是真命题，那么经典障碍（平行边、可分解方向）在有理情形扮演的角色必须全部被"至少一个无理角"自动排除；这个包袱的重量是我对推广阅读存疑的核心原因。
+
+写作层面的自白收个尾：这份笔记我原本打算写成"证明检查报告"，动笔到 §8 之后改成了"思维链重建"，因为 38KB 的素材给不出逐行核对的余裕，却足够支撑一个更诚实的问题：一个人（或一个写作过程）要在什么顺序上想，才会把角度假设留到倒数第二段才用。这本身是论文最深的的设计声明。
+
+## §13 台账
+
+下表逐行取自本会话对 `build/source/main.tex` 的真实阅读，位置栏为 `文件:行`。薄素材声明：main.tex 只有 825 行，表中每一行都对应我读到的原文；凡我读不到更细出处的判断，正文与 §12 已标 `[推测]`，此表不引入新的推测量。
+
+| 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+| --- | --- | --- | --- | --- |
+| $d\mu=dA\,d\theta/(2\pi\operatorname{Area}(Q))$ | 相空间概率测度 | main.tex:98 | 定理陈述、折叠推送、谱极限积分 | 换归一化则 $\nu\mapsto\mu$ 推送失配（main.tex:194-197），§10 前置因子连锁错位 |
+| $2\alpha,2\beta,2\gamma$ | 双层去顶点后的锥角 | main.tex:187 | 挠率 development、无 accumulation 楔形论证 | 改单层锥角 $\alpha$ 则反射不成直线延续，$SM$ 分析整体失据 |
+| $\nu$ | 归一化 Liouville 测度 | main.tex:192-193 | $G_\varepsilon$ 坏集账目、配对积分 | 改未归一化则坏集与 $\sqrt{s}$ 界各差常数因子 |
+| $X=e^{i\theta}\partial+e^{-i\theta}\bar\partial$ | 测地向量场 | main.tex:226 | $Xf=0$、eq:modes、光滑化交换 | 改 $e^{\pm i\theta}$ 符号则递推奇偶结构变，§8.1 尾和塌缩失败 |
+| $Y=ie^{i\theta}\partial-ie^{-i\theta}\bar\partial$ | 横向向量场 | main.tex:227 | 配对 $\langle B,Yw_\varepsilon\rangle$、能量分解 | 去 $i$ 因子则 eq:XY 与 eq:modes 对消全乱 |
+| $u_j'=e^{-ij\phi}u_j$ | 系数图表转移律 | main.tex:246 | 线丛身份、平行截面方程 | 翻转指数符号则挠率相位改向，§9 消元账目需重写 |
+| $(\partial u_j)'=e^{-i(j+1)\phi}\partial u_j$ | $\partial$ 升模转移 | main.tex:250 | eq:modes 两项同因子、Stokes 整体性 | 指数错一项则 $(Xu)_j$ 两项无法粘合 |
+| $(\bar\partial u_j)'=e^{-i(j-1)\phi}\bar\partial u_j$ | $\bar\partial$ 降模转移 | main.tex:251 | 同上 | 同上 |
+| $\lVert\nabla u\rVert_2^2=\lVert Xu\rVert_2^2+\lVert Yu\rVert_2^2$ | 能量三分解 | main.tex:262 | 能量引理尾消失 $D_k\to0$ | 失效则望远镜求和无端点锚 |
+| $(Xu)_j=\partial u_{j-1}+\bar\partial u_{j+1}$ | 模递推 | main.tex:268 | 端点方程 $XU=B$、收口 $\partial f_{m-2}=-\bar\partial f_m$ | 步长由 2 改 1 则尾和不再单端点 |
+| $(Yu)_j=i\partial u_{j-1}-i\bar\partial u_{j+1}$ | 模递推 | main.tex:269 | 系数关系 $P_{m-1}Yf=-2iB$ | 常数变则收口代数错位，$B=0$ 的强迫仍成立 |
+| $K$ | $r>K\varepsilon$ 的中心带半径 $4\varepsilon$ 嵌入平坦盘 | main.tex:279-281 | $S_\varepsilon$ 图表表述、安全区定义 | 缩小 $K$ 则卷积盘越锥点、图表表述失效 |
+| $\operatorname{Area}\{r\le L\varepsilon\}=O_L(\varepsilon^2)$ | 锥尖二次面积律 | main.tex:285-286 | 坏集估计、环带 $L^2$ 账目 | 改一次律则 lem:bounded-modes 环带界随 $\varepsilon\to0$ 发散 |
+| $\rho_\varepsilon(y)=\varepsilon^{-2}\rho(y/\varepsilon)$ | 径向质量一核 | main.tex:290-291 | $S_\varepsilon$ 图表无关性、对偶对称 | 核非径向则卷积依赖图表选择，整体不可定义 |
+| $\lVert S_\varepsilon u\rVert_\infty\le\lVert u\rVert_\infty$ | $L^\infty$ 压缩 | main.tex:308-309 | 第一极限的弱闭集 $\{\lvert u\rvert \le H\}$ | 失去则 $g^{(s)}$ 有界无源，lem:bounded-modes 不可用  |
+| $\varepsilon\lVert YS_\varepsilon u\rVert_{L^2(r>K\varepsilon)}\to0$ | 标度导数小量 | main.tex:311-313 | segment-identity 端点 $o(1)$ | 失去则 eq:pairing-small 右端不小，配对论证全空 |
+| 支撑位移：$g$ 零于 $\{r<L\varepsilon\}$ 推出 $S_\varepsilon g$ 支撑于 $\{r\ge(L-1)\varepsilon\}$ | 支撑外推一层 | main.tex:315-318 | 零延拓合法性、对偶恒等式前提 | 失去则 $w_\varepsilon$ 无紧支撑，lem:energy 不适用 |
+| $\langle YS_\varepsilon u,g\rangle=-\langle u,YS_\varepsilon g\rangle$ | 对偶恒等式 | main.tex:319-321 | 线段恒等式转配对小量 | 不成立则配对落在非光滑 $g_\varepsilon$ 上，分部积分非法 |
+| $X(S_\varepsilon g)=S_\varepsilon(Xg)$，$\lVert XS_\varepsilon g\rVert_2\le C\lVert Xg\rVert_2$ | 输运交换与 $L^2$ 压缩 | main.tex:323-327 | 光滑化方程 $XYS_\varepsilon U=YS_\varepsilon B$ | 失去则光滑化方程不真，§8.3 开头即断 |
+| $\lVert\nabla w_j\rVert_2^2\le4\lVert Xw\rVert_2\lVert\mathbf 1_E\nabla w\rVert_2$ | 局部化能量不等式 | main.tex:383-386 | lem:bounded-modes 环带界、eq:fixed-s-bound | 一次型乘积结构变掉则 $\varepsilon$ 幂相消失败 |
+| $\lVert\partial w_j\rVert_2^2=\lVert\bar\partial w_j\rVert_2^2=\tfrac14\lVert\nabla w_j\rVert_2^2$ | CR 等范数 | main.tex:391-394 | $D_j$ 递推差、Parseval 收口 | 失效则差公式须改写且望远镜对不上 |
+| $D_j-D_{j+2}=\operatorname{Re}\langle(Xw)_{j+1},\partial w_j-\bar\partial w_{j+2}\rangle$ | 半链递推差 | main.tex:405-407 | 望远镜求和 | 指标错则配对不能限制到 $E$ |
+| $D_k\to0$（$k\to+\infty$） | 尾消失 | main.tex:409-410 | 望远镜余项吸收（需测试场水平导数按模平方可和） | 不成立则 $D_j$ 不等于配对级数，能量引理作废 |
+| $\lVert\nabla h_j\rVert_2\le CH$ | 有界系数界 | main.tex:430-432 | 第二极限的 $s$-一致界、模逃逸弱收敛 | 失效则 $g^{(s)}$ 无均匀梯度界，第二极限断 |
+| $\lvert\nabla\chi_\varepsilon\rvert\le C/\varepsilon$ | 截断梯度 | main.tex:436-438 | 环带逐点界 $CH/\varepsilon$ | 宽度与光滑半径失配则零延拓账目乱 |
+| $\operatorname{Area}(E_\varepsilon)=O(\varepsilon^2)$ | 过渡环带总面积 | main.tex:446-447 | $\lVert Xw\rVert_2$ 中一个 $\varepsilon$ 相消 | 改线性律则环带 $L^2$ 界发散 |
+| $\lvert Xw\rvert+\lvert\nabla w\rvert\le CH/\varepsilon$ | 环带逐点界 | main.tex:448-451 | eq:energy 两因子各 $\le CH$ | 量级变则乘积不再 $O(1)$ |
+| $T=s/\varepsilon$ | 时间尺度双任务 | main.tex:524-527 | 坏集主项 $s$、导数小量因子 $\varepsilon$ | 改 $T=\varepsilon^{-a}$，$a\ne1$ 则 $T\varepsilon=s$ 相消破坏，固定-$s$ 界失效 |
+| $\nu(SM\setminus G_\varepsilon)\le C(s+\varepsilon^2)$ | 坏轨集测度 | main.tex:535-537 | $\sqrt{s+\varepsilon^2}$ 逼近界 | 失去则 $g_\varepsilon$ 不逼近 $f$，缓冲对象不存在 |
+| $g_\varepsilon=\frac1T\int_0^T a_\varepsilon\circ\Psi_{-t}\,\,d t$ | 长线段平均 | main.tex:542-543 | 测试场 $w_\varepsilon$ 的来源 | 改平均窗形式则支撑清零性质与 $Xg_\varepsilon$ 弱恒等式都要重证 |
+| $\lVert g_\varepsilon-f\rVert_2\le CH\sqrt{s+\varepsilon^2}$ | 逼近质量 | main.tex:550-551 | 第一极限的 limit-function 距离 | 失去则 $g^{(s)}$ 与 $f$ 无量化联系 |
+| $\lVert Xg_\varepsilon\rVert_2\le2H/T$ | 输运小量 | main.tex:550-552 | eq:fixed-s-bound 的 $1/T$ 因子 | 失去则乘积 $T\varepsilon$ 不是 $s$，$\varepsilon$-一致失败 |
+| $Xg_\varepsilon=(a_\varepsilon-a_\varepsilon\circ\Psi_{-T})/T$ | 弱恒等式（不对指示函数求导） | main.tex:554-561 | 上一行的合法性来源 | 改强微分则触 $\mathbf 1_{G_\varepsilon}$ 的导数，非法 |
+| $\lVert\nabla(w_\varepsilon)_j\rVert_2^2\le CH^2/s$ | 固定-$s$ 界（随 $s\to0$ 退化） | main.tex:612-614 | 仅供第一极限抽梯度子列 | 若拿去第二极限，$1/s$ 爆炸直接击穿论证 |
+| $U=\sum_{k\ge0}P_{m+2k}f$，$B=e^{i(m-1)\theta}\bar\partial f_m$ | 尾和与端点场 | main.tex:492-495 | 端点方程、光滑化方程 | 尾和改全和则 $X$ 作用不再单端点 |
+| $XU_N=B+e^{i(m+2N+1)\theta}\partial f_{m+2N}$ | 有限尾验证 | main.tex:501-504 | 远端项模逃逸弱收敛 | 不用 $Xf=0$ 则链内对消不闭合 |
+| $\lvert\langle R_N,\varphi\rangle\rvert\le CH\lVert P_{m+2N+1}\varphi\rVert_2\to0$ | 模逃逸界 | main.tex:507-512 | $N\to\infty$ 得 $XU=B$（范数不必趋零） | 失去 bounded-modes 一致界则弱收敛定义动摇 |
+| $\langle B,Yw_\varepsilon\rangle=o(1)$ | 配对小量核心 | main.tex:602-603 | 第一极限的出发点 | 对偶恒等式任何环节失效则到不了此式 |
+| $\lVert g^{(s)}-f\rVert_2\le CH\sqrt s$ | 缓冲距离 | main.tex:629-632 | 第二极限的强收敛 | 失去则强极限不是 $f$，配对转手无效 |
+| $\langle B,P_{m-1}Yg^{(s)}\rangle=0$ | 第一极限配对 | main.tex:644-645 | 沿 $s_n\downarrow0$ 转手 | 梯度识别错则收口 $\lVert B\rVert_2=0$ 逼不出 |
+| $P_{m-1}Yf=-2iB$ | 收口系数关系 | main.tex:669-671 | 强迫 $B=0$ | 关系退化为 $0=0$ 则全链空转 |
+| $e^{2ij\alpha}$ | 绕 $\alpha$ 顶点的挠率相位 | main.tex:692-693 | 消去全部非零模 | 若 $\alpha/\pi$ 有理则某些 $j\ne0$ 相位为 $1$，消元失败，定理出范围 |
+| $w_D(\eta)=\sqrt{1-\eta^2}$ | Dirichlet 边界权重 | main.tex:764 | 边界 QE 的极限测度 | 与 $w_N$ 互换则边界条件口径颠倒 |
+| $w_N(\eta)=(1-\eta^2)^{-1/2}$ | Neumann 边界权重 | main.tex:765 | 同上 | 擦边方向 $\lvert\eta\rvert\to1^-$ 为可积奇点 |
+| $2/(\pi\operatorname{Area}(Q))$ | 边界前置因子 | main.tex:759-760 与 main.tex:800-801 | 与 $d\mu$ 归一化口径咬合 | 改动则 HZ 原式 $4/(\operatorname{vol}(S^1)\operatorname{Area}(Q))$ 与 $\mu$ 归一不匹配 |
+| $O_L(\varepsilon^2)$ 双消费 | 同一面积律供环带界与坏集界 | main.tex:286 供 main.tex:446-447 与 main.tex:535-537 | 两估计共用几何输入 | 面积律证伪则 lem:bounded-modes 与坏集估计同时塌 |
+
+## 勘误（追加于台账之后，按类别登记，不就地改动已落盘文字）
+
+一、文风禁串命中，共 4 处（行号为登记时本稿实际行号，保留待本体侧机械清理）：L59 "输运，并非散度型"（命中串：，并非）；L73 "锥角是 $2\alpha$ ，并非 $\alpha$"（命中串：，并非）；L111 "一次型界，并非二次型界"（命中串：，并非）；L163 "就不再是反射，是平移"（命中串：，是）。除上述 4 处外，两类禁串、五个过渡套语、长破折号、整行分隔线、emoji 与勾选符均经全文检索确认零命中。
+
+二、台账裸竖线，1 处：L231 第四格内 $\{|u|\le H\}$ 含两枚裸 `|`，致该行竖线总数为 8 ，并非 6；正确写法应为 $\{\lvert u\rvert\le H\}$，本体侧可对该串机械替换。其余 2 行表头与 45 行数据行经逐行竖线计数确认每行恰 6 枚，无空单元格、无占位字符、未重复表头。
+
+三、锚点替换事故（自报，属"禁止改写已落盘内容"的违反）：追加台账时我把 §12 末句的锚点写错，原句"这个顺序本身就是论文最深的设计声明。"被替换成 L209 现存文本"这本身是论文最深的的设计声明。"，脱落"顺序"二字、多出"的"一字。已落盘文本保持原样，原句在此完整重述供本体侧修复对照：这个顺序本身就是论文最深的设计声明。
+
+四、记号约定：§5 至 §8 中出现的 `\eps` 为 `\varepsilon` 的速记，沿用素材宏定义（main.tex:28）；台账节一律写全 `\varepsilon`。此条防误读，不属错误。
+
+五、协议残留：L65 的 `<!-- D374 write-probe -->` 一行是落盘探针协议线，按协议保留、不删除。
+
+六、素材疑点转引备查：main.tex:672 在 main.tex:265-266 声明的"对第一变元线性"内积约定下，$\langle B,-2iB\rangle$ 应为 $-2i\lVert B\rVert_2^2$，原文写作 $2i\lVert B\rVert_2^2$；两种符号下"等于零强制 $B=0$"均成立，结论不受影响。详见正文 §8 末段与 §12，此处仅登记出处，属素材侧事项。
+

@@ -1,0 +1,5 @@
+seg=123 hdr=0 sep=1 rows=33 hist={6: 33, 7: 4}
+badpipe=[(931, 7, '| $\\kappa(V,D)\\le\\dim B+\\kappa(G,D|_G)$ | 易加法，$G$ 很一般纤维 | build/sectio'), (933, 7, "| $\\kappa(G,D'|_G)=0$ | 很一般纤维 $G$ | build/sections/normalization.tex:1"), (935, 7, "| $D'|_G\\sim_{\\mathbf Q}K_G+B_G$ | 对数光滑模型上 | build/sections/normalizat"), (948, 7, "| $E_{J'}=\\operatorname{div}(\\omega|_{J'})+pD_{J'}$ | 对数分解上非负 | build/")]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0

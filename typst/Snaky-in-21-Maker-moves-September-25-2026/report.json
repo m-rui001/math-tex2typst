@@ -1,0 +1,32 @@
+{
+  "paper": "Snaky-in-21-Maker-moves-September-25-2026",
+  "ok": true,
+  "typ_lines": 1526,
+  "included_pdf_pages": 0,
+  "formulas": 545,
+  "math_failed": 0,
+  "labels": 102,
+  "equations": 39,
+  "theorems": 11,
+  "figures": 6,
+  "tables": 11,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 6
+  },
+  "samples": {
+    "formulas": "545",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "[WARNING] Could not load include file ../verification/certificate.txt at E:\\math\\_work\\flat\\_work_tex\\Snaky-in-21-Maker-moves-September-25-2026.tex line 2085 column 17\n[WARNING] Could not load include",
+  "packages_unsupported": [
+    "listings"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Snaky-in-21-Maker-moves-September-25-2026.tex"
+}

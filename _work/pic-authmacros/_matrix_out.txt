@@ -1,0 +1,11 @@
+A-Logarithmic-Independence-Bound-for-Clique-Free-Graphs-September-25-2026      pics 1->1 | raw 0->0 | canvas 1->1 
+A-projective-fourfold-with-large-fundamental-group-and-non-Stein-universal-cov pics 3->3 | raw 0->0 | canvas 3->3 
+An-explicit-exact-Hausdorff-gauge-for-SLE-September-26-2026                    pics 3->3 | raw 0->0 | canvas 3->3 
+Buffered-comparison-and-stopping-band-resolution-in-critical-Ising-September-2 pics 1->1 | raw 0->0 | canvas 1->1 
+Canonical-conformal-limits-of-subcritical-FK-planar-maps-September-24-2026     pics 8->8 | raw 0->0 | canvas 8->8 
+Cylinder-amplitudes-and-logarithmic-bridge-length-windows-on-the-honeycomb-lat pics 4->4 | raw 1->0 | canvas 0->1 flips: [(0, False, True)]
+Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25- pics 3->3 | raw 1->0 | canvas 2->3 flips: [(1, False, True)]
+Polynomial-PEPS-approximation-of-gapped-square-grid-ground-states-September-24 pics 2->2 | raw 1->0 | canvas 1->2 flips: [(0, False, True)]
+Stable-Self-Similar-Blowup-for-a-Supercritical-Defocusing-Schrodinger-Equation pics 2->2 | raw 0->0 | canvas 2->2 
+The-strong-thin-tree-conjecture-September-23-2026                              pics 1->1 | raw 0->0 | canvas 1->1 
+pictures whose decision changed: 3, of which converted -> refused: 0

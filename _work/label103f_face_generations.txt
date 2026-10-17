@@ -1,0 +1,51 @@
+collision face, same gauge, two generations of products
+run151 canvases 110   run152 canvases 94
+pairs  run151 foreign 47 on-ink 154   run152 foreign 19 on-ink 151
+
+-- canvases on both sides whose pair tally changed: 8 --
+   A-continuum-temperature-singularity-for-a-ra#1   foreign 0->0   on-ink 2->1
+   A-finite-entropy-system-without-a-smooth-pos#1   foreign 0->0   on-ink 2->1
+   Polynomial-vacuum-representations-and-bridge#2   foreign 0->0   on-ink 4->3
+   Strong-diffeomorphic-approximation-in-three-#2   foreign 2->0   on-ink 2->1
+   The-Bass-trace-conjecture-for-complex-group-#0   foreign 0->0   on-ink 6->7
+   The-logarithmic-Brunn-Minkowski-conjecture-S#0   foreign 0->0   on-ink 4->2
+   Ultraflat-real-Littlewood-polynomials-Octobe#0   foreign 0->0   on-ink 3->2
+   Uniform-Interior-C1alpha-Estimates-for-Infin#0   foreign 1->0   on-ink 1->1
+
+-- left the face (25): what they carried last generation --
+   A-sharp-entropy-bound-and-the-simplex-inequa#0   foreign 2 on-ink 0   p | >1
+   Bochner-Riesz-Multipliers-in-Three-Dimension#0   foreign 3 on-ink 0   D | D | D
+   Canonical-conformal-limits-of-subcritical-FK#1   foreign 2 on-ink 0   f | 0
+   Cardys-formula-for-critical-Poisson-Voronoi-#5   foreign 1 on-ink 0   2
+   Choiceless-polynomial-time-with-counting-doe#1   foreign 0 on-ink 1   −1
+   Commuting-Division-Coefficient-Forms-and-the#1   foreign 0 on-ink 1   P
+   Deterministic-Polynomial-Factorization-over-#1   foreign 0 on-ink 1   =Ne
+   Generalized-Cartan-Hadamard-isoperimetry-and#1   foreign 0 on-ink 1   M
+   Maximal-Seshadri-Constants-on-Arbitrary-Pola#0   foreign 2 on-ink 0   (0,0) | (a,0)
+   Maximal-multipoint-Seshadri-constants-in-pos#0   foreign 1 on-ink 0   (a,0)
+   Nagatas-Conjecture-for-Plane-Curves-Septembe#0   foreign 1 on-ink 0   (1+a/9,−a(1+a/9))
+   Nonuniqueness-with-local-conservation-for-th#0   foreign 3 on-ink 0   1 | 1 | 3
+   Polynomial-Hitting-Lists-for-Noncommutative-#0   foreign 0 on-ink 1   orderin
+   Positive-Metric-Entropy-for-the-Standard-Map#1   foreign 3 on-ink 0   forward | -level | Q
+   Renewal-and-changes-of-law-for-critical-hone#6   foreign 0 on-ink 1   p
+   Self-dual-random-cluster-interfaces-below-on#9   foreign 2 on-ink 0   trueelectrode | B
+   Square-lattice-FK-interfaces-and-nested-loop#2   foreign 1 on-ink 0   c
+   The-critical-Liouville-quantum-sphere-and-ge#3   foreign 1 on-ink 0   0
+   The-higher-dimensional-Erdos-distinct-distan#2   foreign 1 on-ink 0   x
+   The-spherical-magnetization-law-for-the-thre#0   foreign 0 on-ink 2   real | real
+   Unconditional-time-lower-bounds-for-Weisfeil#0   foreign 1 on-ink 1   d | ∈F
+   Uniform-marked-polygon-estimates-and-sharp-f#0   foreign 2 on-ink 0   n | s
+   Variable-dimension-Weisfeiler-Leman-equivale#5   foreign 0 on-ink 1   t(v,3)
+   Virtual-compact-specialness-of-hyperbolic-on#2   foreign 0 on-ink 1   Γ
+   Weighted-Dilation-Graphs-Smooth-Shifted-Prim#1   foreign 0 on-ink 2   visit | visit
+
+-- arrived on the face (9): what they carry now --
+   A-linear-cycle-and-edge-decomposition-of-eve#0   foreign 0 on-ink 1   O 1.17pt 2
+   Cardys-formula-for-critical-Poisson-Voronoi-#0   foreign 0 on-ink 1   O 2.31pt 2
+   Cylinder-loop-weights-and-planar-nesting-Sep#0   foreign 0 on-ink 1   O 1.32pt input1
+   Gaussian-free-field-limits-of-weighted-integ#1   foreign 0 on-ink 8   O 3.25pt staysfixedin | O 2.66pt K | O 2.66pt ,L,R
+   Mass-and-covering-exponents-for-fixed-length#0   foreign 0 on-ink 1   O 2.88pt e
+   Self-dual-random-cluster-interfaces-below-on#3   foreign 1 on-ink 0   F 3.75pt β
+   The-affine-Bernstein-theorem-in-dimensions-t#0   foreign 0 on-ink 2   O 2.04pt 0 | O 3.22pt 0
+   The-crossing-number-of-complete-bipartite-gr#0   foreign 0 on-ink 1   O 3.90pt −1
+   Uniform-quasipolynomial-time-trace-reconstru#0   foreign 0 on-ink 1   O 1.81pt e

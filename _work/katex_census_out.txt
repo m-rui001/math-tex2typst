@@ -1,0 +1,63 @@
+files=734 spans=825318 katex_refused=28271 files_hit=556 unclosed_spans=5
+top  10 commands cover 11784 spans, 41.7% of refused
+top  20 commands cover 14551 spans, 51.5% of refused
+top  40 commands cover 17819 spans, 63.0% of refused
+top  80 commands cover 21090 spans, 74.6% of refused
+top 150 commands cover 23767 spans, 84.1% of refused
+top 300 commands cover 26334 spans, 93.1% of refused
+--- distinct undefined commands=741
+\E              2744
+\eps            2044
+\dd             1447
+\Q              1242
+\C              905
+\OO             805
+\PP             746
+\F              672
+\norm           671
+\tr             508
+\Id             349
+\EE             296
+\id             295
+\Tr             294
+\Hom            285
+\T              282
+\D              245
+\rank           243
+\supp           240
+\dist           238
+\Var            221
+\Prob           204
+\HS             201
+\abs            198
+\one            196
+\eqref          187
+\ord            178
+\Ric            175
+\Sym            173
+\cO             170
+\im             158
+\Ext            151
+\e              145
+\Rm             139
+\vol            137
+\Spec           136
+\kk             129
+\op             128
+\ind            123
+\SL             119
+--- other error classes=44
+    108  KaTeX parse error: Can't use function '$' in math mode 
+     30  KaTeX parse error: Expected group as argument to '\H' 
+     14  KaTeX parse error: Expected 'EOF', got '}' 
+     12  KaTeX parse error: No such environment: psmallmatrix 
+     11  KaTeX parse error: Unexpected end of input in a macro argu
+      9  KaTeX parse error: Expected '}', got 'EOF' at end of input
+      6  KaTeX parse error: Double superscript 
+      5  KaTeX parse error: Can't use function '\(' in math mode 
+      5  KaTeX parse error: Expected group after '_' 
+      4  KaTeX parse error: Can't use function '$' in math mode 
+
+$
+      4  KaTeX parse error: Extra } 
+      3  KaTeX parse error: Got function '\H' with no arguments as 

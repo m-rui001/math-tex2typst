@@ -1,0 +1,33 @@
+{
+  "paper": "Finite-generation-for-the-Kn-local-sphere-September-24-2026",
+  "ok": true,
+  "typ_lines": 2096,
+  "included_pdf_pages": 0,
+  "formulas": 1875,
+  "math_failed": 0,
+  "labels": 235,
+  "equations": 5,
+  "theorems": 4,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_refused": 1
+  },
+  "samples": {
+    "formulas": "1875",
+    "cetz_refused": "\\begin{tikzpicture}[ x=.98\\linewidth,y=1cm, every node/.style={font=\\small,inner sep=1pt}, heading/.style={anchor="
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\renewcommand\\bibsection",
+    "\\letlet"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\Finite-generation-for-the-Kn-local-sphere-September-24-2026\\main.typ:1890:7\n     │\n1890 │ $ U lt.tri J = P_m times \"GL\"_r \\( bb(Z)_p \\) . $\n     │        ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\Finite-generation-for-the-Kn-local-sphere-September-24-2026\\main.typ:1925:104\n     │\n1925 │   #emph[Let $M_B$ be a finite locally free $B$-module with the coefficient action of $G$, and let $U lt.tri J$ be a finite marking level. If \n     │                                                                                                         ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 2,
+  "source": "E:\\math\\_work\\flat\\Finite-generation-for-the-Kn-local-sphere-September-24-2026.tex"
+}

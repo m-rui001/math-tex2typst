@@ -1,0 +1,57 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+papers scanned: 724  floor: 0.20 pt
+wrote _work/overflow_run133.json
+  +3 escapes  now    5 / worst   9.00 pt  p176  BKT-universality-for-height-and-planar-spin-fields-S
+        p38  over  9.00  '𝑞'
+        p99  over  7.77  'Cauchy: 𝐻(𝜌𝑧+ 𝑡𝑢ℓ) once.'
+        p99  over  7.09  '(c) Coefficient detachment'
+  +2 escapes  now    3 / worst   6.67 pt  p157  The-nonmaximal-anti-de-Sitter-Penrose-Inequality-and
+        p4   over  6.67  'Spatial Lorentz'
+        p4   over  4.57  'Horizon area and gravity'
+        p4   over  2.07  'Original graph'
+  +2 escapes  now    3 / worst   8.16 pt  p124  The-canonical-massive-continuum-limit-of-the-two-dim
+        p120 over  8.16  'inclined'
+        p86  over  7.80  'Second regulator'
+        p120 over  6.35  'first step'
+  +2 escapes  now   11 / worst   7.80 pt  p61  The-Gaussian-free-field-limit-of-integer-Lipschitz-h
+        p49  over  7.80  'anchored high patch'
+        p49  over  7.50  '𝑞𝐿'
+        p49  over  7.37  '𝑞𝐿'
+  +2 escapes  now    3 / worst   5.81 pt  p105  Projective-Space-Bases-of-Lagrangian-Fibrations-Sept
+        p4   over  5.81  '(Sections\xa09–10)'
+        p100 over  1.28  '𝑥−𝑧'
+        p100 over  1.28  '𝑦−𝑥'
+  +2 escapes  now    2 / worst   7.83 pt  p53  Perfect-completeness-for-2-to-1-games-September-23-2
+        p31  over  7.83  'fresh tape'
+        p31  over  7.59  'fresh tape'
+  +2 escapes  now    2 / worst   8.84 pt  p53  Hellinger-contraction-with-arbitrary-Boolean-output-
+        p3   over  8.84  'Lemma\xa04.1'
+        p3   over  7.65  '0 < 𝑠≤.84'
+  +2 escapes  now    2 / worst   5.33 pt  p51  Constant-factor-hardness-of-uniform-sparsest-cut-Sep
+        p41  over  5.33  'amplitude response'
+        p41  over  4.67  'signed width'
+  +2 escapes  now    2 / worst   7.81 pt  p19  A-Nearly-Quartic-Separation-Between-Randomized-and-Q
+        p6   over  7.81  '…'
+        p6   over  7.81  '…'
+  +1 escapes  now    1 / worst   2.77 pt  p19  Velocity-Field-Detection-of-Computation-in-Forced-Na
+        p5   over  2.77  '𝑛 processor'
+  +1 escapes  now    1 / worst   9.95 pt  p21  Turn-Based-Stochastic-Mean-Payoff-Games-in-Determini
+        p15  over  9.95  '4 at gaps < 𝑞.'
+  +1 escapes  now   32 / worst   7.14 pt  p42  The-Deligne-Drinfeld-conjecture-September-23-2026
+        p30  over  7.14  '𝘊:'
+        p30  over  7.14  '𝘈:'
+        p30  over  7.14  '𝘉:'
+  +1 escapes  now    1 / worst   9.50 pt  p67  Semialgebraic-universal-covers-of-normal-projective-
+        p5   over  9.50  'projection'
+  +1 escapes  now   13 / worst   9.59 pt  p19  Maximal-Seshadri-Constants-on-Arbitrary-Polarized-Su
+        p11  over  9.59  '𝑦0'
+        p11  over  9.59  '𝑦1'
+        p11  over  9.59  '𝑦2'
+  +1 escapes  now    2 / worst  12.69 pt  p65  Hilberts-tenth-problem-over-the-rational-numbers-Sep
+        p16  over 12.69  'For each ambient prime 𝑞∣𝑀𝐾(𝑠̃𝑖):'
+        p16  over  0.21  'evaluation'
+TOTAL escapes: 1966 over 724 papers  (reference 2190)
+  math+bottom      899 escapes over 212 papers
+  math+top         827 escapes over 209 papers
+  prose+bottom     132 escapes over  69 papers
+  prose+top        108 escapes over  64 papers

@@ -1,0 +1,21 @@
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D233-\xe5\xbc\xba\xe7\x98\xa6\xe6\xa0\x91\xe7\x9a\x84\xe5\xa4\x9a\xe9\xa1\xb9\xe5\xbc\x8f\xe6\x97\xb6\xe9\x97\xb4\xe6\x9e\x84\xe9\x80\xa0.md'
+bytes=111903 lines=359 cr=0 heads=18
+first_head=b'## \xc2\xa70 \xe4\xbb\xbb\xe5\x8a\xa1\xe7\x99\xbb\xe8\xae\xb0\xe4\xb8\x8e\xe5\x8f\x96\xe6\x9d\x90\xe8\xaf\xb4\xe6\x98\x8e'
+last_head=(352)b'## \xc2\xa717 \xe5\x8b\x98\xe8\xaf\xaf\xe8\xa1\xa5\xe6\x8a\xa5\xe3\x80\x81\xe4\xb8\x89\xe5\xa4\x84\xe5\x88\x86\xe5\xb2\x94\xe5\x9b\x9e\xe7\x9c\x8b\xe4\xb8\x8e\xe7\xa6\xbb\xe5\x9c\xba\xe6\xb8\x85\xe7\x82\xb9'
+head_shape=b'\xc2\xa7 -> next \xc2\xa718'
+std_hdr=[212] sep=[213, 334]
+last_row_cols=5
+build=b'preprints\\A-polynomial-time-construction-of-strong-thin-trees-September-23-2026\\build' tex=12 bytes=135078 cite_sites=62
+  source/sections/tree_geometry.tex        43337 B   886 lines cited=14
+  source/sections/signing_interface.tex    24020 B   582 lines cited=5
+  source/sections/extraction.tex           23089 B   511 lines cited=19
+  source/sections/introduction.tex          9382 B   165 lines cited=6
+  source/sections/signing.tex               8757 B   207 lines cited=5
+  source/sections/fractional_rounding.tex    8254 B   176 lines cited=3
+  source/sections/iteration.tex             6697 B   151 lines cited=5
+  source/sections/normalization.tex         5875 B   131 lines cited=4
+  source/figures/metric_geometry.tex        2053 B    44 lines cited=0   aux
+  source/macros.tex                         1756 B    49 lines cited=0   aux
+  source/main.tex                           1209 B    34 lines cited=0   aux
+  source/sections/main-theorem.tex           649 B    16 lines cited=1
+

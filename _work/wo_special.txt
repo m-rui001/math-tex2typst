@@ -1,0 +1,136 @@
+=== rows in D80 / D94 / D66 (in-flight writers) ===
+D94-L326-I01 | D94-正则轨迹剪枝与量子奇偶下界.md | sec_line=326 | fam=macro,count | kind=mechanical-target-given
+   Q: 勘误一条(实测口径修正,不动正文):§5.3(c) 我写"我在 tex 里 grep 到 11 处 uniform",完成 §7 后复核命令 `grep -o "uniform" sections/*.lean` 应为 `grep -o "
+   F: 应为 `grep -o "u→`grep -o "uniform" sections/*.tex`
+D94-L326-I03 | D94-正则轨迹剪枝与量子奇偶下界.md | sec_line=326 | fam=macro,anchor,count,ordermove | kind=mechanical-target-given
+   Q: 补记一条勘误(落盘后复核时做的引用编号修正,逐字引文内 `\ref`/`\eqref` 的解析值以 Section 6 计数器重算):§3 引文尾句 Corollary 5.4 应为 Corollary 6.3;§5.14(a) 引文 Co
+   F: 应为 Corollary 6→Corollary 6.3;§5.14(a) 引文 Corollary 5.3 应 / 应为 Corollary 6→Corollary 6.3;§5.14(a) 引文 Corollar
+in-flight rows total = 2
+
+=== mechanical-count-correction + mechanical-delete ===
+---- D277-L172-I02 | D277-欧拉函数值个数的渐近公式.md | kind=mechanical-count-correction | sec_line=172 | sec_head=## §14 自检记录 | fam=count,table
+   stated= cur= verified=yes
+   Q: 勘误补记一条，挂在 §13 之后、不打乱编号：§14 末段"竖线字符只存在于该表内"说过头了。正文行内公式里确实存在若干绝对值竖线，分布在 §3 路线一的 finite-map 不等式、§6 顶层的 $y^{1/(8B_y)}$ 前后文、§
+   F: 
+   E: 
+   V: re-measure ledger_rows: author=35 now=35
+---- D296-L550-I02 | D296-粗糙化阈端的高度普适性与低温平面自旋场极限.md | kind=mechanical-count-correction | sec_line=550 | sec_head=## §34 收工复测后的勘误与终审申报 | fam=count,banstring,probe
+   stated=548 cur=548 verified=
+   Q: 一、文风类命中的登记（第 33 节结论的更正）。收工逐模式实测：转折连接类在全篇命中 1 处，位置在第 33 节末段、全文第 548 行，句式结构是"先否定一个做法、再用两字转折连接词引出替代做法"。本节不写出被检出的字面，也不写出检索模式
+   F: 
+   E: 
+   V: claim 1 处 (nothing recomputed)
+---- D362-L447-I09 | D362-椭圆平方点有限性与A_2曲线Zilber-Pink.md | kind=mechanical-count-correction | sec_line=447 | sec_head=## §19 勘误与申报 | fam=btick,count,banstring,table
+   stated=81;187;81;187 cur=81 verified=
+   Q: （八）（六）的计量更正：改用按字符计数并绕开 shell 对中文的假零以后，实测如下。长停顿号一族共 2 个字符，全部落在第 81 行同一段里（两个行内断句符），（六）说的"一处"是按行统计的口径，以本条的 2 个字符为准。「而」字否定比较
+   F: 
+   E: 
+   V: claim 3 处 (nothing recomputed)
+---- D365-L468-I03 | D365-端点逐点收敛：高维薛定谔方程的等号情形.md | kind=mechanical-delete | sec_line=468 | sec_head=## §21 勘误与申报 | fam=macro
+   stated= cur=47 verified=no
+   Q: 排版类（一处）： - §1 第二段里抄写阈值时多打了一个右花括号，形如 `$s_n=\frac{n}{2(n+1)}}$`，该式右侧的多余右括号请删除；正确式子已在同段开头以 `$s_n=\frac{n}{2(n+1)}$` 出现过一次，语
+   F: 请删除
+   E: 
+   V: sig=`$s_n=\frac{n}{2(n+1)}}$` found at [47]
+---- D370-L415-I03 | D370-素数次数环面包在任意局部型下的等分布.md | kind=mechanical-delete | sec_line=415 | sec_head=## §14 勘误补记（只能落在文末，故在台账之后） | fam=count,table
+   stated=413 cur=413 verified=yes
+   Q: 八、行数自述错误。第 413 行写"台账共三十九行"，实测数据行为 52 行（规格规定的两行表头不计），满足 ≥30 的要求且远多于自述值。请以实测为准，那句自述请改写为 52 行或直接删除。
+   F: 改写为 52 行或直接删除→52 行或直接删除
+   E: 
+   V: re-measure ledger_rows: author=52 now=52
+---- D370-L415-I07 | D370-素数次数环面包在任意局部型下的等分布.md | kind=mechanical-delete | sec_line=415 | sec_head=## §14 勘误补记（只能落在文末，故在台账之后） | fam=probe
+   stated=91 cur=91 verified=
+   Q: 十二、探针标记。第 91 行留着一条 HTML 注释形式的落盘探针标记（"仅作机制校验"那句），它是我做 Edit 机制校验时留下的，可以安全删除；我不再改动任何已落盘内容，所以在此申报，交本体侧处理。
+   F: 可以安全删除
+   E: 
+   V: no verbatim signature; author's line kept
+---- D371-L826-I10 | D371-任意阶本原四次环面包线的等分布.md | kind=mechanical-count-correction | sec_line=826 | sec_head=## §17 落盘结构申报与追加勘误（本节为物理文末） | fam=btick,count
+   stated= cur= verified=no
+   Q: 再补一句，只为让上面的自报计数不被我自己的追加动作污染：那句"字节 79,593、`$` 1988、反引号 623" 是该补记块落盘之前的实测；补记块落盘后全文实测 80,595 字节，`sleep 90` 之后连续两次复量与时间戳检查均为
+   F: 
+   E: 
+   V: re-measure bytes: author=80595 now=82945
+---- D376-L234-I02 | D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md | kind=mechanical-delete | sec_line=234 | sec_head=## §13 勘误与合规登记(文末追加) | fam=count,banstring
+   stated=121;24;57;71;111 cur=24 verified=no
+   Q: 甲类,禁用的对举与过渡串。其一,那组"不只…X…Y"对举连接词命中一行一处(第 121 行,§7 第二段):起因是转述素材 03-characters.tex 第 15 到 17 行的英文句式 not just X but its imag
+   F: 直接删除
+   E: 
+   V: sig=`.bib` found at [24] ; author's line 121 drifted
+---- D391-L223-I01 | D391-色重叠在素数三处有限装配失效.md | kind=mechanical-count-correction | sec_line=223 | sec_head=## §15 补记：勘误补充、扩展记录与后续议程 | fam=macro,count,banstring,table,probe
+   stated= cur= verified=no
+   Q: 对 §13 的自检结论补一条更正：长停顿号类在落盘正文中有四处命中，分别位于本文件第 94、131、146、152 行附近（含 §10 末段的对举处与 §5 的两处夹注）。按派单指令，此类禁串不就地改字，只在此按类别名申报，申报时不复写串本
+   F: 换成 `\mid`→`\mid` / 换成 `\mid` 形式，记→`\mid` 形式，记号语义不变
+   E: 
+   V: re-measure bytes: author=25000 now=71460
+---- D391-L225-I01 | D391-色重叠在素数三处有限装配失效.md | kind=mechanical-count-correction | sec_line=225 | sec_head=### 15.1 勘误补充（第二批申报，按类别名） | fam=macro,count,banstring,table,probe
+   stated= cur= verified=no
+   Q: 对 §13 的自检结论补一条更正：长停顿号类在落盘正文中有四处命中，分别位于本文件第 94、131、146、152 行附近（含 §10 末段的对举处与 §5 的两处夹注）。按派单指令，此类禁串不就地改字，只在此按类别名申报，申报时不复写串本
+   F: 换成 `\mid`→`\mid` / 换成 `\mid` 形式，记→`\mid` 形式，记号语义不变
+   E: 
+   V: re-measure bytes: author=25000 now=71460
+---- D394-L446-I04 | D394-一般素数处的过滤色分裂.md | kind=mechanical-count-correction | sec_line=446 | sec_head=## 24. 收稿补记 | fam=btick,count,table
+   stated= cur= verified=no
+   Q: 本笔之后的实测：86,147 字节，净增 1,654，452 行，`## ` 小节 25 个即编号 0 到 24 连续，台账仍是表头一次加数据行 67 行，美元定界符总数 1,739 个（其中 7 个属于第 22 节登记的那类不成对用法：六
+   F: 
+   E: 
+   V: re-measure bytes: author=86147 now=86924
+---- D434-L601-I05 | D434-积分期望阈值处的图分解.md | kind=mechanical-delete | sec_line=601 | sec_head=## §31 勘误与自报 | fam=other
+   stated= cur= verified=
+   Q: 4. §22 末段（"我自己把这条链从头算了一次"起头）中间保留了一段放弃整理的代数比较，含一个问号占位的指数与中文省略号；其末尾的 $m=1$ 校验是有效的，中间两句建议删除。
+   F: 建议删除
+   E: 
+   V: no verbatim signature
+---- D466-L236-I01 | D466-固定长度六角蜂窝行走的质量与覆叠指数.md | kind=mechanical-count-correction | sec_line=236 | sec_head=## 16. 申报补正 | fam=btick,macro,count,english,table
+   stated= cur= verified=
+   Q: 第 15 节其五那一段对英文残留的计数与分布写错了，这里更正，正文不回改。实测残留共 10 处，分布在六节：第 4 节 1 处（"平衡"类形容词）、第 6 节 1 处（几何形容词）、第 8 节 1 处（"收费"类动词）、第 10 节 2 处
+   F: 
+   E: 
+   V: claim 10 处 (nothing recomputed)
+---- D539-L297-I07 | D539-比较半径恰为平均维数之半.md | kind=mechanical-count-correction | sec_line=297 | sec_head=## §17 勘误 | fam=count,banstring,probe
+   stated= cur= verified=no
+   Q: 第六类，本节前文的位置申报有误，补记如下。第三类里我写的段落序号有两处不准：第 6 节那处命中实在该节第 6 段的第二句，第 7 节那处实在该节第 6 段的末句；第 8 节与第 9 节两处确在各自末段首句，申报无误。另有一处口径补正：第三类
+   F: 
+   E: 
+   V: re-measure bytes: author=22123 now=99279
+---- D545-L237-I05 | D545-阿瑟滤过的有理性：从幂零奇性支集到矩量判据.md | kind=mechanical-count-correction | sec_line=237 | sec_head=## §15 自检 | fam=count,table,typo
+   stated= cur= verified=
+   Q: 复核更正一：第 13 节数据行经实测为 46 行，前段所记 45 行系成文时清点笔误，以 46 为准，仍满足不少于 30 行的闸门。复核更正二：§14 类别一所记"成对共七处"亦系清点笔误，实测该类符号为 8 对共 16 个字符、分布 6 
+   F: 
+   E: 
+   V: claim 46 行 (nothing recomputed)
+---- D556-L228-I04 | D556-标量势与慢时钟：受迫流体中的停机探测.md | kind=mechanical-count-correction | sec_line=228 | sec_head=## §17 阅读札记与勘误补录（二） | fam=btick,count,banstring,table
+   stated=26 cur=26 verified=
+   Q: 勘误补录（二），承接 §14，按类别申报实测计数：连接词反转族，实测命中 1 处，位于第 26 行（§2 第五段"拼接问题"句内，逗号后紧跟族内连接形态）；未翻译英文术语残留类，实测命中 6 行，行号为 88、92、114、116、118、
+   F: 
+   E: 
+   V: claim 1 处 (nothing recomputed)
+---- D556-L238-I01 | D556-标量势与慢时钟：受迫流体中的停机探测.md | kind=mechanical-count-correction | sec_line=238 | sec_head=## §18 勘误补录（三）与末次核对 | fam=anchor,count,table
+   stated= cur= verified=yes
+   Q: 越界动作申报。上一笔追加（即 §16、§17 两节落盘的那一次 Edit）中，我把锚点错取为台账最后一个数据行的整行文本，替换段未将该行原样回写，导致标号为 $1/[16(N+1)]$、位置栏 bcs-prefix.tex:61 的"标签方
+   F: 
+   E: bcs-prefix.tex:61=>\[
+   V: re-measure ledger_rows: author=34 now=34
+---- D573-L206-I02 | D573-双圆柱覆盖的斜率场扰动与半面积下界反例.md | kind=mechanical-count-correction | sec_line=206 | sec_head=## §16 自检与复核口径 | fam=count
+   stated= cur= verified=no
+   Q: 体量：首块（§0 到 §6 七节）实测 17,983 字节，低于本协议的 20,000 硬下限，属永久缺口，我在 §17 按类别申报，未用脚本整档重写来补，只在后续追加里把总规模做足。各次追加的单笔字节数都在 25,000 以内，具体数字以
+   F: 
+   E: 
+   V: re-measure bytes: author=17983 now=73298
+---- D744-L427-I02 | D744-平面XY模型临界对数修正与振幅提取笔记.md | kind=mechanical-count-correction | sec_line=427 | sec_head=## §17 收笔自检与二次登记 | fam=count,banstring
+   stated=230 cur=230 verified=
+   Q: 二次登记一处:§14 第三类申报当时写装饰性长停顿号扫描零命中,与实测不符,实际命中 1 处(位于 §7 末段,行号 230,成对出现的装饰破折号);该句已落盘不回头改,以本节此句为准,禁串总数按"对比句式 1、转场习语 1、装饰破折号 1
+   F: 
+   E: 
+   V: claim 1 处 (nothing recomputed)
+---- D745-L445-I02 | D745-半平面双二聚体环的曲线标度极限.md | kind=mechanical-count-correction | sec_line=445 | sec_head=## §23 勘误补记 | fam=count,probe
+   stated=18;427;441 cur=18 verified=
+   Q: 一，推测标记的计数更正。第 21 节写"共 9 处"，实测为 15 枚：其中 3 枚是登记与申报句里的自指（第 18 行、第 427 行、第 441 行），其余 12 枚是正文里对未读区间判断的实际标注，落在第 32、154、162、202
+   F: 
+   E: 
+   V: claim 15 枚 (nothing recomputed)
+---- D758-L711-I08 | D758-圆周率的无理性指数等于2.md | kind=mechanical-count-correction | sec_line=711 | sec_head=## §21 补充申报 | fam=btick,cite,count,banstring,english,table,probe
+   stated=7;55;259;629;665 cur=7 verified=
+   Q: 末补一段，把 §19 第三类与第四类的申报数字纠正为实测值，此前写得偏少，以本段为准。双字转折连读禁串实测 5 处，位于第 7 行（§0 素材清点）、第 55 行（§2 第五条路线的提法）、第 259 行（§9 核对等号与不等号那一句）、第
+   F: 
+   E: 
+   V: claim 5 处 (nothing recomputed)

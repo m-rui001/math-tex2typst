@@ -1,0 +1,22 @@
+`\frac`-family inside tikzpictures: 74 sites over 35 papers
+   simple (both sides one atom) sites=56     papers=27
+   group-sided                  sites=18     papers=12
+   spelling nobrace             sites=49     papers=22
+   spelling braced              sites=25     papers=15
+
+simple sites by command:
+   \frac       29
+   \tfrac      26
+   \dfrac      1
+
+samples:
+   A-Fully-Polynomial-Randomized-Approximation- \tfrac  nobrace  1 / 2
+   A-Nonspectrahedral-Hyperbolicity-Cone-Septem \frac   braced   du_s / ds
+   A-Three-Manifold-Without-Conjugate-Points-an \frac   nobrace  1 / 4
+   A-Three-Manifold-Without-Conjugate-Points-an \frac   nobrace  3 / 4
+   A-classification-of-finite-Euclidean-Ramsey- \frac   nobrace  1 / 2
+   A-classification-of-finite-Euclidean-Ramsey- \frac   nobrace  1 / n
+   A-finitely-generated-counterexample-to-the-E \frac   nobrace  1 / 4
+   A-finitely-generated-counterexample-to-the-E \frac   nobrace  1 / 2
+   A-finitely-generated-counterexample-to-the-E \frac   nobrace  3 / 4
+   A-hyperbolic-group-with-no-geometric-CAT0-ac \frac   nobrace  1 / 2

@@ -1,0 +1,30 @@
+{
+  "paper": "A-Cyclic-Polytabloid-Proof-of-Saxls-Conjecture-September-24-2026",
+  "ok": true,
+  "typ_lines": 482,
+  "included_pdf_pages": 0,
+  "formulas": 466,
+  "math_failed": 0,
+  "labels": 72,
+  "equations": 3,
+  "theorems": 1,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:picture": 1,
+    "unhandled_div_class:samepage": 2
+  },
+  "samples": {
+    "formulas": "466"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `gt.tri` is deprecated, use `gt.closed` instead\n   ┌─ \\\\?\\E:\\math\\typst\\A-Cyclic-Polytabloid-Proof-of-Saxls-Conjecture-September-24-2026\\main.typ:79:410\n   │\n79 │ All representations and tensor products are over $bb(C)$ and are finite-dimensional. A partition $lambda tack.r n$ is padded with zero parts when necessary; its length is $\"len\" \\( lambda \\)$ and its conjugate is $lambda^t$, where $lambda_j^t = \\# { i : lambda_i gt.eq j }$. We identify $lambda$ with its diagram ${ \\( i \\, j \\) : 1 lt.eq j lt.eq lambda_i }$. For partitions of the same size, write $lambda gt.tri.eq mu$ if $sum_(i = 1)^k lambda_i gt.eq sum_(i = 1)^k mu_i$ for every $k gt.eq 1$. Conjugation reverses this order:\n   │                                                                                                                                                                                                                                                                                                                                                                                                                           ^^^\n\nwarning: `gt.tri` is deprecated, use `gt.closed` instead\n   ┌─ \\\\?\\E:\\math\\typst\\A-Cyclic-Polytabloid-Proof-of-Saxls-Conjecture-September-24-2026\\main.typ:81:12\n   │\n81 │ $ lambda gt.tri.eq mu quad arrow.l.r.double quad mu^t gt.tri.eq lambda^t . quad \"(2.1)\" $ <tools:conjugate-dominance>\n   │             ^^^\n\nwarning: `gt.tri` is deprecated, use `gt.closed` instead\n   ┌─ \\\\?\\E:\\math\\typst\\A-Cyclic-Polytabloid-Proof-of-Saxls-Conjecture-September-24-2026\\main.typ:81:57\n   │\n81 │ $ lambda gt.tri.eq mu quad arrow.l.r.double quad mu^t gt.tri.eq lambda^t . quad \"(2.1)\" $ <tools:conjugate-dominance>\n   │                                                          ^^^\n\nwarning: `gt.tri` is deprecated, use `gt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\A-Cyclic-Polytabloid-Proof-of-Saxls-Conjecture-September-24-2026\\main.typ:137:57\n    │\n137 │  Then $S^tau$ occurs in $M^theta$ if and only if $tau gt.tri.eq theta$, and $S^theta$ occurs once. The word module of any content obtained by reordering the parts of $theta$ is also isomorphic to $M^theta$.]\n    │                                                          ^^^\n\nwarning: `gt.tri` is deprecated, use `gt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\A-Cyclic-Polytabloid-Proof-of-Saxls-Conjecture-September-24-2026\\main.typ:146:35\n    │\n146 │   For sufficiency, suppose $tau gt.tri.eq theta$ and induct on $ell$. For $ell = 1$, necessarily $tau = \\( n \\)$. For $ell > 1$, put $t = theta_ell$. There are at least $t$ columns of $tau$, since $tau_1 gt.eq theta_1 gt.eq t$. Delete a bottom box from each of the $t$ tallest columns, choosing the rightmost columns first among equal heights, and call the remaining diagram $nu$. Its column heights are still nonincreasing: unequal adjacent heights differ by at least one, and within any group of equal heights precisely a suffix is lowered. Thus $nu$ is a partition and $tau \\/ nu$ is a horizontal $t$-strip. For every $k gt.eq 1$ its loss in the first $k$ rows is\n    │                                    ^^^\n\nwarning: `gt.tri` is deprecated, use `gt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\A-Cyclic-Polytabloid-Proof-of-Saxls-Conjecture-September-24-2026\\main.typ:150:320\n    │\n150 │   For completeness, dominance at $ell$ gives $\"len\" \\( tau \\) lt.eq ell$, and dominance at $ell - 1$ gives $tau_ell lt.eq t$. All $tau_ell$ columns of height $ell$ are therefore selected, so the last row disappears and $\"len\" \\( nu \\) lt.eq ell - 1$. Hence all remaining initial sums equal the total $n - t$, and $nu gt.tri.eq \\( theta_1 \\, dots.h \\, theta_(ell - 1) \\)$. Induction gives a chain ending at $nu$; appending the deleted strip gives (2.6) ending at $tau$.\n    │                                                                                                                                                                                                                              ",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 11,
+  "source": "E:\\math\\_work\\flat\\A-Cyclic-Polytabloid-Proof-of-Saxls-Conjecture-September-24-2026.tex"
+}

@@ -1,0 +1,232 @@
+==== D25  lines 1854-1890  (file D25-Crouzeix完整不等式直接证明.md)
+L1854| ### 16.1 一览表（按是否进入最终常数排序）
+L1855| 
+L1856| | 值 | 论文位置 | Lean 对应 | 作用 | 敏感度（改坏的后果） | 我的判定 |
+L1857| |---|---|---|---|---|---|
+L1858| | $C=2$（最终常数） | `main.tex:62-65` `eq:main`、`:324` `thm:domain`、`:450` | `complete_crouzeix : UniversalBound 2`（`CompleteBound.lean:65`）、`expLevel_domain_bound : ‖_‖ ≤ 2`（`DomainBound.lean:69`）、`analytic_domain_core`（`DomainCore.lean:29`） | 全定理的断言 | 不可降：`main.tex:526-530` 的例子；Lean 侧 `uniform_sharpness`（`Sharpness.lean:75`）。见 16.2 | 论文证了不可降（`main.tex:65` 一句 + 12.3 的验算） |
+L1859| | $4=2^2$（对角能量放大） | `main.tex:420` `=4(\HS{P_0}^2+\tfrac12\sum_{k\ge1}\HS{P_k}^2)`、`:421` `\le 4a^2/\gamma^2` | `anti_diagonal_energy` 等式右侧的 `4 * (…) / 8`（`BoundaryEnergy.lean:57-70`）、`DomainCore.lean:77` `hPE … ≤ 4*a/γ^2` | 来自 $P+P^*$ 把 $b_0$ 项系数翻倍再平方 | 只估 $P$ 不估 $P+P^*$ ⇒ 失去 $\Re$ 半正定信息，块正定不等式无从调用；4 本身在"只剩 $b_0$"时取等 | 等号可达是**外部计算**，论文未验证等号情形 |
+L1860| | $8$（合并上界） | `main.tex:450` `\le 8a^2/\gamma^2` | `DomainCore.lean:111` `hb : 2*a ≤ 8*a/γ^2` | $4+4$（$P$、$Q$ 两路各 $4a^2/\gamma^2$） | 8 与块不等式的 2 相除得 4，开方得 2；任一侧常数恶化都直接进最终 $C$ | 算术恒等，无需判定 |
+L1861| | $2$（块正定系数） | `main.tex:442-444` `$0\le\tr(\Delta^{1/2}(J\Delta J)\Delta^{1/2})=\HS{P+P^*}^2+\HS{Q+Q^*}^2-2\HS{M+L^*}^2$` | `positive_block_hsSq : 2*hsSq Z ≤ hsSq U + hsSq V`（`PositiveBlocks.lean:35`）+ 证书 `J := fromBlocks 1 0 0 (-1)`（`:40`） | $2\lvert M+L^*\rvert_2^2\le\lvert P+P^*\rvert_2^2+\lvert Q+Q^*\rvert_2^2$ | 等号可达（$U=V$、$Z$ 与其同秩）。这是 $C=2$ 的第二个不可压缩因子。若改用粗化 AM-GM，常数会变大 | $[推测]$ "改用 AM-GM 会到 $2\sqrt2$ 量级"是素材的推测，我保留但不背书 |
+L1862| | $\tfrac12$（系数权重） | `main.tex:395`、`:397` `\HS{P_0}^2+\tfrac12\sum_{k\ge1}\HS{P_k}^2\le a^2/\gamma^2`、`:400` `d_N` 定义、`:420` | `singular_diagonal_estimates` 结论里的 `(1/2 : ℝ) * ∑'`（`PolynomialEnergy.lean:183-186`）、`weighted_sequence_dual` 结论（`BoundaryEnergy.lean:112`） | 与 `faberWeight` 互逆：$1/w_k$，$w_0=1,w_{k\ge1}=2$ | 必须与 4 那条等式的 $(1+\tfrac12+\tfrac12+\cdots)$ 结构完全一致，否则 `linarith` 闭合不了（`DomainCore.lean:111`）。**$\tfrac12$ 不是选出来的，是被 `anti_diagonal_energy` 的等式反推的** | 论文只用不证；"唯一性"是我的读法 |
+L1863| | $2$（非零系数权重） | `main.tex:251` `\le\HS{C_0}^2+2\sum_{k=1}^N\HS{C_k}^2`、`:391` | `def faberWeight (k:ℕ) : ℝ := if k = 0 then 1 else 2`（`BoundaryEnergy.lean:106`） | 上界侧能量权重（`prop:coefficients` 右端） | 见 16.3 专条 | 论文未证此权重可改进，16.3 的分析是**外部计算** |
+L1864| | $d\tau(e^{it})=dt/(2\pi)$ | `main.tex:178`（全文唯一一次声明测度归一化） | `circleMeasure`（出现 33 次；`TaylorFourier.lean` 的 `angularMeasure`/`circleMeasure`）、`scalar_circle_parseval`/`matrix_circle_parseval`/`euclidean_circle_parseval` | 归一化为**概率测度**，使"固定一个变量时积分为 1"（`main.tex:204`）成立 | 用未归一化 $dt$ ⇒ $K$ 的马尔可夫性（`:260` 的 $\int K=1$）变成 $\int K=2\pi$，收缩引理要额外 $2\pi$ 因子，一路传到 4、8。**$2\pi$ 不进最终常数，正是因为归一化了** | 论文只声明一次，未讨论选择；我的"归一化省掉 $2\pi$"是外部计算 |
+L1865| | $\pi$ | 只在 `main.tex:178` 的 $dt/(2\pi)$ 与图注中出现 | 全目录 `Real.pi` **仅 2 处**：`HolomorphicReflection.lean:82` `0 < ∫ θ in (0:ℝ)..2*Real.pi, u (circleMap 0 R θ)` 与 `:86` `⟨Real.pi / 2, …⟩`；主链一律用 `Angle`/`unitPoint`（`TaylorFourier.lean:92` `def unitPoint (t : Angle) : ℂ := fourier 1 t`）与 `circleMeasure` | 圆周参数化 | 因归一化，$\pi$ 全篇不参与不等式。Lean 里 $\pi$ 只出现在反射原理的实分析角落（对 $[0,2\pi]$ 积分取正的 $\pi/2$ 处），与 $C=2$ 无关 | 这是一条"形式化让冗余常数现形"的实测证据，我可以背书（两处的行号我未逐字复核，标素材实测） |
+L1866| | $\HS C=(\operatorname{tr}(C^*C))^{1/2}$（未归一化 HS） | `main.tex:180` + `main.tex:13` 宏 `\newcommand{\HS}[1]{\lvert #1\rvert_2}` | `hsSq`（`PositiveBlocks.lean:15`）、`hsVector`/`hsSq_eq_norm_hsVector_sq`（`HilbertSchmidt.lean:28/31/45`） | 使 $M_m(\mathbb C)$ 成为 Hilbert 空间且 $\HS{C_k}$ 不带 $1/\sqrt m$ | **若归一化（除以 $\sqrt m$），$m$ 会显式进常数，"complete"就没了** | `main.tex:180` 那句 "unnormalized … which makes each finite-dimensional matrix space a Hilbert space" 是论文自己写的，我引为设计声明 |
+L1867| | $1+\sqrt2$ | `main.tex:82`（Crouzeix-Palencia 的完整界） | 无对应（Lean 只形式化 2） | 历史比较 | 用来说明 complete 情形的已知最好值；不参与本文 | 论文未推导其来源，见第 3 节的 `[背景]` 标记 |
+L1868| | $11.08$ | `main.tex:76`（Crouzeix 2007 的 universal complete bound） | 无 | 历史 | 全文唯一的小数常数 | $[推测]$ 素材猜"来自数值优化的界"，我无法核实，保留为推测 |
+L1869| | $0<r<1$ | `main.tex:183`（$h$ 在 $\lvert\lambda\rvert>r$ 单叶亚纯） | `hR : 1 < R` + `hg : AnalyticOnNhd ℂ g (ball 0 R)`（`DomainBound.lean:64-65`、`ExteriorCollar.lean:77-78`），关系为 $r=1/R$ | 解析边界 ⇒ 共形映射越过 $\mathbb T$ | $r<1$ 严格是"$\partial\Omega$ 实解析"的等价表述；若 $r=1$（仅连续边界），$g$ 只在开圆盘解析，`chordDenominator_ne_zero`（`DividedDifferences.lean:103`）需要的 `convex_ball 0 R` 与 `AnalyticOnNhd` 立刻失效（调用点 `ExteriorCollar.lean:89`） | 论文的"regular real-analytic"与 $r<1$ 的等价性论文未证，见 5.3 表 |
+L1870| | $C_\rho,\ \rho\in(r,1)$（几何衰减） | `main.tex:196-197` `\|s_{kj}\|\le C_\rho\rho^{k+j}` | **Lean 无对应**：`FaberEnergy`/`BoundaryKernel`/`DividedDifferences` 三个文件里 `rho`、`C_`、`tsum`、`summable` 均不出现（实测）；收敛性改由 `algebraGenerating = (c-u²•deriv g u) • Ring.inverse (algebraDenominator c g A u)`（`FaberCalculus.lean:68`）与 `ringInverse_geometric`（`:41`）在完备 Banach 代数里闭式给出 | 论文用它证 $s(\lambda,\mu)$ 的正则收敛与 $\mathbb T^2$ 上绝对一致收敛（`main.tex:198-200`） | 这是一处**真实的路线差异**：论文走系数衰减估计，Lean 走闭式求逆 + `CompleteSpace`。论文侧放宽它 ⇒ `main.tex:200` 的绝对一致收敛失去依据；Lean 侧根本没有这一步可放宽 | 我在 8.4 其四已引用过这条差异 |
+L1871| | $C,\ \theta\in(0,1)$ | `main.tex:304` `For the fixed $A,h$, there are constants $C<\infty$ and $0<\theta<1$` | 同上无对应；Lean 用 `IsUnit (algebraDenominator c g A u)`（`FaberCalculus.lean:139` 的 `hunit`）与 `hu : 1 < R` | $\|b_k(A)\|\le C\theta^k$ 保证级数绝对收敛 | **论文自己写了 "For the fixed $A,h$"**，即这个 $C,\theta$ 不一致于 $A$。Lean 绕开它，也就回避了"一致性"问题（与 15.3 未述清单第 4 条呼应） | 一致性问题论文未讨论，是我列的悬案（19.1） |
+L1872| | $\gamma=\|F[A]\|$ | `main.tex:329` | `let γ := ‖tensorPolynomial A F‖`（`DomainCore.lean:32`）、`hγ : 0 < γ`（`:37`） | 归一化标尺；最终要证 $\gamma\le2$ | $\gamma=0$ 必须分流（论文 `main.tex:329`；Lean `by_cases hγ0`，`DomainCore.lean:33`），因为后面有 $a/\gamma^2$ | 两边完全对齐的一处 |
+L1873| | $a$（交叉能量） | `main.tex:341` `$a^2=\sum_{k\ge0}\HS{M_k}^2$`、`:355` `Taking $G=F$ … shows that $a>0$` | `let a := ∫ t, hsSq (M t) ∂circleMeasure`（`DomainCore.lean:63`）、`hapos : 0 < a` 用反证（`:65-74`） | 全部中间界的公共量 | **Lean 的 $a$ 是论文 $a^2$ 的上界**（靠 `finite_negative_bessel`，`BoundaryEnergy.lean:90`），因此 Lean 全程写 `a/γ²` 而论文写 `a²/γ²`，见 17.3。$a>0$ 在 Lean 是反证 + `nlinarith [sq_pos_of_pos hγ]`，在论文是一句话 | 这是全文最大的一处"同一字母不同量"，16.4 冲突表第 6 行 |
+L1874| | $a^2/\gamma^2$ 型界对 $d_N=0$ 的处理 | `main.tex:405-406` `$d_N\le(a/\gamma)\sqrt{d_N}$, which gives $d_N\le a^2/\gamma^2$ including when $d_N=0$` | `weighted_coefficient_dual` 的 `by_cases hs0 : s = 0`（`Duality.lean:40`） | 除法前的零分支 | 论文与 Lean **都**显式处理了，是两套叙述少见的完全对齐点 | 我在 10.3 补步 23 与 Lean 观察 3 里写过 |
+L1875| | $\varepsilon$、$\rho=M+\varepsilon/2$ | `thm:main` 的极限段（`main.tex:513-531`） | `apply le_of_forall_pos_le_add; intro ε hε; let ρ := M+ε/2`（`CompleteBound.lean:72-74`）、`hρ : 0 < ρ`、`hMρ : M < ρ`、结尾 `2*ρ = 2*rangeMaximum A B+ε`（`:97`） | 把"sup ，并非 max"与"$\le2$ ，并非 $<2$"缝起来 | $\varepsilon/2$ 的那个 $\tfrac12$ **是配平常数**：$2\rho=2M+\varepsilon$。取 $\rho=M+\varepsilon$ 得 $2M+2\varepsilon$，仍成立但要多一次 $\varepsilon\mapsto\varepsilon/2$。Lean 用 `dsimp [ρ,M]; ring` 一行完成（`:97`） | 论文侧没有 $\varepsilon$（用序列 $\delta_j$），这是叙述路线差，见 17.4 差异点 |
+L1876| | $\delta$（外逼近厚度） | `main.tex:464` `For $0<\delta<1$, choose a finite Euclidean $\delta$-net …`、`:468` `$\Omega_\delta=\{z:\Phi_\delta(z)<1\}$`、`:510` `$\delta_j=1/(j+1)$` | `Geometry.exists_exponential_outer` 的 `ε` 参数 + `δ := min (1/2) (ε/(2*C))`（`OuterApproximation.lean:70`）；主证明里 `obtain ⟨δ,hδ,hδV⟩ := (isCompact_numericalRange A).exists_thickening_subset_open hV hWV`（`CompleteBound.lean:82`） | 两重身份：网格精度、支撑函数下移量 | `0<δ<1` 的上界 1 是**任意的**（只为参数化好看）；真正的敏感度在 Lean 的 `min (1/2) (·)`：那个 $\tfrac12$ 保证 $h_K(\nu)+\delta$ 不把 $\Omega_\delta$ 撑出包含 $K$ 的最小范围。$[推测]$ 主要服务于 `axis_support_bound` 里的 $\|z\|\le L$ 结论 | 论文侧的两个 $\delta$ 同量级是我在 11.3 表里记的"刻意合并" |
+L1877| | $1/(j+1)$ | `main.tex:510` `Taking, for example, $\delta_j=1/(j+1)$ completes the construction.` | 主证明不需要具体序列：Lean 直接一次 `exists_exponential_outer … hδ`（`CompleteBound.lean:83`），不构造序列 | 论文用它把"每个 $\delta$ 有外逼近"变成可数序列以取极限 | **差异点**：论文用序列 $\delta_j\to0$ 做极限；Lean 用 `le_of_forall_pos_le_add`（`CompleteBound.lean:72`）绕开序列，只取一个 $\delta$。⇒ Lean 少了一个"可数选择 / 对角线"的依赖，是**紧性论证改成 $\varepsilon$-论证**的典型改写 | 我在 11.1 记过"序列选择不重要"，与此互证 |
+L1878| | $D_\delta$ 含 $1,-1,i,-i$ | `main.tex:464` `…choose a finite Euclidean $\delta$-net $D_\delta$ of unit directions that includes $1,-1,i,-i$`、`:484` `The four axis directions ensure it is positive` | `exists_axis_net`（`SupportNets.lean:53`）的五个结论 `1 ∈ D ∧ -1 ∈ D ∧ Complex.I ∈ D ∧ -Complex.I ∈ D` + `D := S.image Subtype.val ∪ {1,-1,Complex.I,-Complex.I}`（`:61`） | 让 Hessian 正定（把 $\mathbb C$ 视 $\R^2$，四个轴向的 $\nu\nu^{\mathsf T}$ 张满对称阵锥） | **这四点必需**：只有一个方向的网 ⇒ $\Phi_\delta$ 的次水平集退化成条带（无界），`hc : IsCompact {expLevel ≤ 1}`（`DomainBound.lean:65`）不成立 ⇒ `exists_expLevel_exterior` 不能用。Lean 里由 `axis_support_bound`（`SupportNets.lean`）+ `hbound`（`OuterApproximation.lean:111-114`）显式消费这四个成员 | 我在 11.2 补步 4、5 给出"两用"的分解（Hessian 只需 $\{1,i\}$） |
+L1879| | $N=\#D$、$t=(N+1)/\delta$ | `main.tex:464-484` 的"$t$ 充分大"（论文未给公式） | `let N : ℝ := Fintype.card D`（`OuterApproximation.lean:78`）、`let t := (N+1)/δ`（`:80`）、`htδ : t*δ = N+1`（`:82`）、`hsumlt : N*Real.exp (-t*δ) < 1` 用 `linarith [Real.add_one_le_exp (N+1)]`（`:89-91`） | 使 $\sum_\nu e^{-t\delta}=Ne^{-(N+1)}<1$ | **Lean 把论文的"充分大"钉成闭式**。$N+1$ ，并非 $N$ 是为了只用 $x+1\le e^x$；换 $t=N/\delta$ 会需要 $Ne^{-N}<1$（$N=1$ 时 $=e^{-1}<1$ 仍成立，但 $N$ 的定义方式让 `add_one_le_exp` 直接用不上）。$[推测]$ 选 $N+1$ 纯粹为最短证明 | 论文的 $t_\delta$ 存在性（11.2 补步 2 第 3 步）在此被具体化，**外部计算** |
+L1880| | $L=2(M+1)$、$C=1+L+M$ | **仅 Lean**：`OuterApproximation.lean:67-68`（`M` 是 $K$ 的半径界，来自 `hK.isBounded.exists_pos_norm_le`） | 同上 | 给 $\Omega_\delta$ 统一有界半径 `hbound : ‖z‖ ≤ L`，再用 `isCompact_closedBall 0 L` 证紧 | **论文未述**：论文的紧性论证在 `main.tex:482` 用"一个固定矩形"；Lean 用闭球且必须显式给 $L,C$。这里 2 与 $1+L+M$ 里的两个 1 都是"随便取大一点"的平凡选择（敏感度低，只影响 `linarith` 可行性，不影响定理常数） | 论文用矩形、Lean 用闭球，是 11.2 补步 4 的一处形式化分歧 |
+L1881| | $M_m(\mathbb C)$、$m$（系数维） | `main.tex:51-56`（一致于 $m$）、`:247` `For every positive integer $m$` | `0 < m`（`UniversalBound`，`Model.lean:29`）、`hm : 0 < m` 全程携带 | "complete" 的实质 | $m$ 不进任何常数，这是本文的核心诉求。**Lean 需要 $0<m$ 的真正原因是 `NeZero m` 与 `Fin m` 非空**（`DomainCore.lean:31` `let : NeZero m := ⟨Nat.ne_of_gt hm⟩`），并非数学必需 | 我在 10.8 的逐项清点给出论文侧的 $m$-无关性证据 |
+L1882| | $n$（底维） | 同上 | `0 < n`、`NeZero n`（`DomainCore.lean:30`） | $W(A)$ 非空需要 $\mathbb C^n$ 有单位向量 | $n=0$ 时 `numericalRange A = ∅`、`rangeMaximum = sSup ∅ = 0`（Mathlib 约定），结论变成 $\|0\|\le2\cdot0$ 仍真。Lean 拒绝处理，故加 `hn`。⇒ **`numericalRange_nonempty hn A`（`NumericalRange.lean`）是 $0<n$ 的真实消费者** | 论文写 "positive integers $n,m$"（`main.tex:324`、`:59`），与 Lean 一致 |
+L1883| | $d$（次数） | `main.tex:49` `$P(z)=\sum_{k=0}^d B_kz^k$` | `Fin (d+1) → Matrix (Fin m) (Fin m) ℂ`（`Model.lean:16`），**无 $0<d$** | 有限性保证 $P[A]$ 有意义 | 论文若要求 $d\ge1$，Lean 覆盖更广（$d=0$ 平凡）。这是 17.3 差异 (1) | $[推测]$ 题面用 `Fin (d+1) →` ，并非 `Polynomial`，是为了免掉"次数恰好为 $d$"的歧义 |
+L1884| | $x_1=x_2=1/\sqrt2$、$\|x^*Ax\|=2\|x_1x_2\|\le1$ | `main.tex:530` | `norm_le_one_of_mem_sharpnessRange`（`Sharpness.lean:36`）+ `nlinarith [sq_nonneg (‖u 0‖ - ‖u 1‖)]`（`:50`） | 证明 $W(A)\subseteq\overline{\mathbb D}$ | 论文的 $1/\sqrt2$ 是取等点；Lean 用 AM-GM 形式，**没有显式给出取等点**（不需要） | 一个"论文给等号情形、Lean 只要不等式"的省略例 |
+L1885| | $A=\begin{pmatrix}0&2\\0&0\end{pmatrix}$ | `main.tex:528` | `def sharpnessMatrix := !![0, 2; 0, 0]`（`Sharpness.lean:32`） | 唯一反例 | 那个 **2**（，并非 1）就是让 $\|A\|=2$ 且 $W(A)\subseteq\overline{\mathbb D}$ 同时成立的选择：一般地 $\begin{pmatrix}0&t\\0&0\end{pmatrix}$ 给出 $\|A\|=t$、$\max_{W(A)}\lvert z\rvert=t/2$，比值恒为 2。论文取 $t=2$ 是为了让右端恰为 1。**Lean 用 `sharpnessCoefficients := ![0, 1]`（`:34`）把 $P(z)=z$ 编成 $B_0=0,B_1=1$，与 `main.tex:526` 的 "$m=1$, $P(z)=z$" 一致** | "比值恒为 2"是我的**外部计算**（单参数族），论文只给 $t=2$ |
+L1886| | $(1,i,j,k)$ 四元组 | `main.tex:514-518`（Toeplitz-Hausdorff 重证）：`$(2\Re(\bar uv),2\Im(\bar uv),\|u\|2-\|v\|2)$` ranges over the unit sphere in $\R^3$ | `Convexity.lean`：`bloch`（`:84`）、`norm_sq_three`/`norm_bloch`/`bloch_surjective_sphere`/`threeLinear`/`threeLinear_ker_ne_bot`/`twoForm`/`twoForm_bloch`/`convex_twoForm`/`convex_quadratic_range`（13 条声明，273 行） | 用 Bloch 球参数化把 $W(A)$ 写成实二次映射像，再由 $\R^3\to\R^2$ 线性核非空得凸性 | 三个 2（$2\Re,2\Im$）**必须是同一个 2**，否则像不在半径 $\|u\|^2+\|v\|^2=1$ 的球面上（`norm_bloch` 与 `bloch_surjective_sphere` 就是这条）；换成 $(\Re,\Im,\cdot)$ 会掉到半球。$\R^3$ 的 3 与"核非空"需要 $\dim\ker\ge1$（`threeLinear_ker_ne_bot`），即线性映射 $\R^3\to\R^2$ 的秩亏，这在 `Convexity.lean` 里是一个独立引理 | 我在 12.1 补步 4、5 手算过恒等式与符号相容性 |
+L1887| | $R_i/3$、$2R_i/3$（领子覆盖） | `main.tex:591` `the third-radius disks $V_i=B(\zeta_i,R_i/3)$ that cover the circle`、`:594` `$\|\zeta_i-\zeta_j\|<(R_i+R_j)/3\le2R_i/3<R_i$` | **Lean 有同一个 $\tfrac13$**：`ConformalCollar.lean:124` `refine ⟨S/3,by positivity,E,?_,?_,?_,hEd⟩` 配三次 `simpa only [show 3*(S/3) = S by ring]`（`:125-127`），以及 `:142` `refine ⟨r/3,by positivity,f,…⟩` + `:143`/`:146` 的 `3*(r/3)=r by ring`；另 `AnalyticCharts.lean:141` `let r := min (d/3) e` 与 `:143` `3*r ≤ d` | 从局部解析延拓拼出整圈领子时的 3 倍标准选取（Lebesgue 数的粗略版） | $\tfrac13$ 是**纯粹的技术宽松选择**，敏感度极低（$\tfrac14,\tfrac12$ 同样可行）；但三处 `ring` 恒等式说明 Lean 必须**精确知道**"取三分之一再乘三回到原半径"，即覆盖数 3 出现在等式，并非不等式里。⇒ 论文里"三个同心半径"的直觉在 Lean 是一组 `3*(S/3)=S` 的算术 | 我在 5.2 步 4 手算过论文的三重不等式链 |
+L1888| | $c\ne0$、$c_0$、$c=1/g'(0)$ | `main.tex:165` `$h(\lambda)=c\lambda+c_0+O(\lambda^{-1}),\ c\ne0$`、`:187` `leading coefficient $c^{-k}$`、`:613` `pole with coefficient $c=1/g'(0)\ne0$` | `hc : c ≠ 0`（`DomainBound.lean:78`、`ExteriorCollar.lean:78`）+ `hc0`、`Faber.faberBasis_zero hc g`、`Faber.faberBasis_degree`（`FaberPolynomials.lean`） | 首项系数 $c^{-k}$ 进 $b_k$；$c\ne0$ 保证 $h$ 在无穷是简单极 | $c\ne0$ 若失败 ⇒ $h$ 在无穷无极 ⇒ 非双全纯。Lean 里 `hc` 的**具体消费点**：`algebraDenominator` 在 $u=0$ 处 $=c\bullet1$ 的可逆性（`ExteriorCollar.lean:55-58`，`isUnit_iff_ne_zero.mpr hc`），以及 `chordDenominator_ne_zero`（`DividedDifferences.lean:103`）。⇒ **$c\ne0$ 不只是几何要求，它是对角项 $b_0=1$ 与"斜率不为零"的来源** | 论文未采用 $c>0$ 的相位归一化（`main.tex:236`），见 14.3 |
+L1889| | $b_0=1$ | `main.tex:187` `Then $b_0=1$`、`:313` `$b_0(A)=I$ gives both integrals`、`:337-339` `Since $b_0=1$ …` | `hb0 : b 0 = 1`（`DomainCore.lean:16`）、`Faber.faberBasis_zero hc g`、`hC0 : fourierCoeff … 0 = Vᴴ * U`（`DomainCore.lean:60-62`，用 `hb0` 经 `map_one, mul_one`） | 常数项归一化 ⇒ $P_0=X^*X$、$Q_0=Y^*Y$、$L_0^*=M_0$ | **全文最关键的"1"**：若 $b_0\ne1$，`eq:means`（`main.tex:339`）三条恒等式全废，`anti_diagonal_energy` 的 $4\lvert \text{coeff }0\rvert_2$ 变成 $4\lvert V^*R_0V\rvert_2$，无法与 $X^*X$ 比较，块矩阵的对角块就不是 $X^*X$、$Y^*Y$，整个 $\gamma^2\le4$ 崩。**Lean 里 `hb0` 只被 `hC0` 用了一次，但那一次是致命的**（`DomainCore.lean:62, 84, 93, 97`） | 我在 9.4 补步 7 与 9.6 表里从论文侧独立给过同一条 |
+L1890| | $\lambda/(\lambda-\mu)$ 的 $2\Re=1$ | `main.tex:229` `For distinct $\lambda,\mu\in\T$, one has $2\Re(\lambda/(\lambda-\mu))=1$` | `BoundaryKernel.lean` 的 `boundaryCoefficient_eq_taylor`/`boundaryKernel_character`/`unitPoint_ne_zero` 与 `FaberEnergy.lean` 的 `re_circle_fraction`/`circle_nonneg_of_off_point`/`boundaryKernel_nonneg_off_diagonal` | 把 Szegő 核的实部换成 1 ⇒ $K=1+s+\bar s$（`main.tex:202`）积分恰为 1 | 这是 $K$ 的**归一化来源**；若右端是 $c\ne1$，马尔可夫核收缩（`markov_kernel_contraction`）需要归一化，权重 $1,2$ 全部重标。**该恒等式只在 $\lambda\ne\mu$ 成立**，`main.tex:229` 的 "distinct" 与 Lean 的 `chordDenominator_off_diagonal`/`_diagonal` 分流（`DividedDifferences.lean:140-146`）一一对应 | 我在 6.2 补步里手算过 $2\Re\frac{\lambda}{\lambda-\mu}=1$（用 $\mu/\lambda+\bar{\mu/\lambda}$ 型对称化） |
+
+==== D25  lines 1870-1890  (file D25-Crouzeix完整不等式直接证明.md)
+L1870| | $C_\rho,\ \rho\in(r,1)$（几何衰减） | `main.tex:196-197` `\|s_{kj}\|\le C_\rho\rho^{k+j}` | **Lean 无对应**：`FaberEnergy`/`BoundaryKernel`/`DividedDifferences` 三个文件里 `rho`、`C_`、`tsum`、`summable` 均不出现（实测）；收敛性改由 `algebraGenerating = (c-u²•deriv g u) • Ring.inverse (algebraDenominator c g A u)`（`FaberCalculus.lean:68`）与 `ringInverse_geometric`（`:41`）在完备 Banach 代数里闭式给出 | 论文用它证 $s(\lambda,\mu)$ 的正则收敛与 $\mathbb T^2$ 上绝对一致收敛（`main.tex:198-200`） | 这是一处**真实的路线差异**：论文走系数衰减估计，Lean 走闭式求逆 + `CompleteSpace`。论文侧放宽它 ⇒ `main.tex:200` 的绝对一致收敛失去依据；Lean 侧根本没有这一步可放宽 | 我在 8.4 其四已引用过这条差异 |
+L1871| | $C,\ \theta\in(0,1)$ | `main.tex:304` `For the fixed $A,h$, there are constants $C<\infty$ and $0<\theta<1$` | 同上无对应；Lean 用 `IsUnit (algebraDenominator c g A u)`（`FaberCalculus.lean:139` 的 `hunit`）与 `hu : 1 < R` | $\|b_k(A)\|\le C\theta^k$ 保证级数绝对收敛 | **论文自己写了 "For the fixed $A,h$"**，即这个 $C,\theta$ 不一致于 $A$。Lean 绕开它，也就回避了"一致性"问题（与 15.3 未述清单第 4 条呼应） | 一致性问题论文未讨论，是我列的悬案（19.1） |
+L1872| | $\gamma=\|F[A]\|$ | `main.tex:329` | `let γ := ‖tensorPolynomial A F‖`（`DomainCore.lean:32`）、`hγ : 0 < γ`（`:37`） | 归一化标尺；最终要证 $\gamma\le2$ | $\gamma=0$ 必须分流（论文 `main.tex:329`；Lean `by_cases hγ0`，`DomainCore.lean:33`），因为后面有 $a/\gamma^2$ | 两边完全对齐的一处 |
+L1873| | $a$（交叉能量） | `main.tex:341` `$a^2=\sum_{k\ge0}\HS{M_k}^2$`、`:355` `Taking $G=F$ … shows that $a>0$` | `let a := ∫ t, hsSq (M t) ∂circleMeasure`（`DomainCore.lean:63`）、`hapos : 0 < a` 用反证（`:65-74`） | 全部中间界的公共量 | **Lean 的 $a$ 是论文 $a^2$ 的上界**（靠 `finite_negative_bessel`，`BoundaryEnergy.lean:90`），因此 Lean 全程写 `a/γ²` 而论文写 `a²/γ²`，见 17.3。$a>0$ 在 Lean 是反证 + `nlinarith [sq_pos_of_pos hγ]`，在论文是一句话 | 这是全文最大的一处"同一字母不同量"，16.4 冲突表第 6 行 |
+L1874| | $a^2/\gamma^2$ 型界对 $d_N=0$ 的处理 | `main.tex:405-406` `$d_N\le(a/\gamma)\sqrt{d_N}$, which gives $d_N\le a^2/\gamma^2$ including when $d_N=0$` | `weighted_coefficient_dual` 的 `by_cases hs0 : s = 0`（`Duality.lean:40`） | 除法前的零分支 | 论文与 Lean **都**显式处理了，是两套叙述少见的完全对齐点 | 我在 10.3 补步 23 与 Lean 观察 3 里写过 |
+L1875| | $\varepsilon$、$\rho=M+\varepsilon/2$ | `thm:main` 的极限段（`main.tex:513-531`） | `apply le_of_forall_pos_le_add; intro ε hε; let ρ := M+ε/2`（`CompleteBound.lean:72-74`）、`hρ : 0 < ρ`、`hMρ : M < ρ`、结尾 `2*ρ = 2*rangeMaximum A B+ε`（`:97`） | 把"sup ，并非 max"与"$\le2$ ，并非 $<2$"缝起来 | $\varepsilon/2$ 的那个 $\tfrac12$ **是配平常数**：$2\rho=2M+\varepsilon$。取 $\rho=M+\varepsilon$ 得 $2M+2\varepsilon$，仍成立但要多一次 $\varepsilon\mapsto\varepsilon/2$。Lean 用 `dsimp [ρ,M]; ring` 一行完成（`:97`） | 论文侧没有 $\varepsilon$（用序列 $\delta_j$），这是叙述路线差，见 17.4 差异点 |
+L1876| | $\delta$（外逼近厚度） | `main.tex:464` `For $0<\delta<1$, choose a finite Euclidean $\delta$-net …`、`:468` `$\Omega_\delta=\{z:\Phi_\delta(z)<1\}$`、`:510` `$\delta_j=1/(j+1)$` | `Geometry.exists_exponential_outer` 的 `ε` 参数 + `δ := min (1/2) (ε/(2*C))`（`OuterApproximation.lean:70`）；主证明里 `obtain ⟨δ,hδ,hδV⟩ := (isCompact_numericalRange A).exists_thickening_subset_open hV hWV`（`CompleteBound.lean:82`） | 两重身份：网格精度、支撑函数下移量 | `0<δ<1` 的上界 1 是**任意的**（只为参数化好看）；真正的敏感度在 Lean 的 `min (1/2) (·)`：那个 $\tfrac12$ 保证 $h_K(\nu)+\delta$ 不把 $\Omega_\delta$ 撑出包含 $K$ 的最小范围。$[推测]$ 主要服务于 `axis_support_bound` 里的 $\|z\|\le L$ 结论 | 论文侧的两个 $\delta$ 同量级是我在 11.3 表里记的"刻意合并" |
+L1877| | $1/(j+1)$ | `main.tex:510` `Taking, for example, $\delta_j=1/(j+1)$ completes the construction.` | 主证明不需要具体序列：Lean 直接一次 `exists_exponential_outer … hδ`（`CompleteBound.lean:83`），不构造序列 | 论文用它把"每个 $\delta$ 有外逼近"变成可数序列以取极限 | **差异点**：论文用序列 $\delta_j\to0$ 做极限；Lean 用 `le_of_forall_pos_le_add`（`CompleteBound.lean:72`）绕开序列，只取一个 $\delta$。⇒ Lean 少了一个"可数选择 / 对角线"的依赖，是**紧性论证改成 $\varepsilon$-论证**的典型改写 | 我在 11.1 记过"序列选择不重要"，与此互证 |
+L1878| | $D_\delta$ 含 $1,-1,i,-i$ | `main.tex:464` `…choose a finite Euclidean $\delta$-net $D_\delta$ of unit directions that includes $1,-1,i,-i$`、`:484` `The four axis directions ensure it is positive` | `exists_axis_net`（`SupportNets.lean:53`）的五个结论 `1 ∈ D ∧ -1 ∈ D ∧ Complex.I ∈ D ∧ -Complex.I ∈ D` + `D := S.image Subtype.val ∪ {1,-1,Complex.I,-Complex.I}`（`:61`） | 让 Hessian 正定（把 $\mathbb C$ 视 $\R^2$，四个轴向的 $\nu\nu^{\mathsf T}$ 张满对称阵锥） | **这四点必需**：只有一个方向的网 ⇒ $\Phi_\delta$ 的次水平集退化成条带（无界），`hc : IsCompact {expLevel ≤ 1}`（`DomainBound.lean:65`）不成立 ⇒ `exists_expLevel_exterior` 不能用。Lean 里由 `axis_support_bound`（`SupportNets.lean`）+ `hbound`（`OuterApproximation.lean:111-114`）显式消费这四个成员 | 我在 11.2 补步 4、5 给出"两用"的分解（Hessian 只需 $\{1,i\}$） |
+L1879| | $N=\#D$、$t=(N+1)/\delta$ | `main.tex:464-484` 的"$t$ 充分大"（论文未给公式） | `let N : ℝ := Fintype.card D`（`OuterApproximation.lean:78`）、`let t := (N+1)/δ`（`:80`）、`htδ : t*δ = N+1`（`:82`）、`hsumlt : N*Real.exp (-t*δ) < 1` 用 `linarith [Real.add_one_le_exp (N+1)]`（`:89-91`） | 使 $\sum_\nu e^{-t\delta}=Ne^{-(N+1)}<1$ | **Lean 把论文的"充分大"钉成闭式**。$N+1$ ，并非 $N$ 是为了只用 $x+1\le e^x$；换 $t=N/\delta$ 会需要 $Ne^{-N}<1$（$N=1$ 时 $=e^{-1}<1$ 仍成立，但 $N$ 的定义方式让 `add_one_le_exp` 直接用不上）。$[推测]$ 选 $N+1$ 纯粹为最短证明 | 论文的 $t_\delta$ 存在性（11.2 补步 2 第 3 步）在此被具体化，**外部计算** |
+L1880| | $L=2(M+1)$、$C=1+L+M$ | **仅 Lean**：`OuterApproximation.lean:67-68`（`M` 是 $K$ 的半径界，来自 `hK.isBounded.exists_pos_norm_le`） | 同上 | 给 $\Omega_\delta$ 统一有界半径 `hbound : ‖z‖ ≤ L`，再用 `isCompact_closedBall 0 L` 证紧 | **论文未述**：论文的紧性论证在 `main.tex:482` 用"一个固定矩形"；Lean 用闭球且必须显式给 $L,C$。这里 2 与 $1+L+M$ 里的两个 1 都是"随便取大一点"的平凡选择（敏感度低，只影响 `linarith` 可行性，不影响定理常数） | 论文用矩形、Lean 用闭球，是 11.2 补步 4 的一处形式化分歧 |
+L1881| | $M_m(\mathbb C)$、$m$（系数维） | `main.tex:51-56`（一致于 $m$）、`:247` `For every positive integer $m$` | `0 < m`（`UniversalBound`，`Model.lean:29`）、`hm : 0 < m` 全程携带 | "complete" 的实质 | $m$ 不进任何常数，这是本文的核心诉求。**Lean 需要 $0<m$ 的真正原因是 `NeZero m` 与 `Fin m` 非空**（`DomainCore.lean:31` `let : NeZero m := ⟨Nat.ne_of_gt hm⟩`），并非数学必需 | 我在 10.8 的逐项清点给出论文侧的 $m$-无关性证据 |
+L1882| | $n$（底维） | 同上 | `0 < n`、`NeZero n`（`DomainCore.lean:30`） | $W(A)$ 非空需要 $\mathbb C^n$ 有单位向量 | $n=0$ 时 `numericalRange A = ∅`、`rangeMaximum = sSup ∅ = 0`（Mathlib 约定），结论变成 $\|0\|\le2\cdot0$ 仍真。Lean 拒绝处理，故加 `hn`。⇒ **`numericalRange_nonempty hn A`（`NumericalRange.lean`）是 $0<n$ 的真实消费者** | 论文写 "positive integers $n,m$"（`main.tex:324`、`:59`），与 Lean 一致 |
+L1883| | $d$（次数） | `main.tex:49` `$P(z)=\sum_{k=0}^d B_kz^k$` | `Fin (d+1) → Matrix (Fin m) (Fin m) ℂ`（`Model.lean:16`），**无 $0<d$** | 有限性保证 $P[A]$ 有意义 | 论文若要求 $d\ge1$，Lean 覆盖更广（$d=0$ 平凡）。这是 17.3 差异 (1) | $[推测]$ 题面用 `Fin (d+1) →` ，并非 `Polynomial`，是为了免掉"次数恰好为 $d$"的歧义 |
+L1884| | $x_1=x_2=1/\sqrt2$、$\|x^*Ax\|=2\|x_1x_2\|\le1$ | `main.tex:530` | `norm_le_one_of_mem_sharpnessRange`（`Sharpness.lean:36`）+ `nlinarith [sq_nonneg (‖u 0‖ - ‖u 1‖)]`（`:50`） | 证明 $W(A)\subseteq\overline{\mathbb D}$ | 论文的 $1/\sqrt2$ 是取等点；Lean 用 AM-GM 形式，**没有显式给出取等点**（不需要） | 一个"论文给等号情形、Lean 只要不等式"的省略例 |
+L1885| | $A=\begin{pmatrix}0&2\\0&0\end{pmatrix}$ | `main.tex:528` | `def sharpnessMatrix := !![0, 2; 0, 0]`（`Sharpness.lean:32`） | 唯一反例 | 那个 **2**（，并非 1）就是让 $\|A\|=2$ 且 $W(A)\subseteq\overline{\mathbb D}$ 同时成立的选择：一般地 $\begin{pmatrix}0&t\\0&0\end{pmatrix}$ 给出 $\|A\|=t$、$\max_{W(A)}\lvert z\rvert=t/2$，比值恒为 2。论文取 $t=2$ 是为了让右端恰为 1。**Lean 用 `sharpnessCoefficients := ![0, 1]`（`:34`）把 $P(z)=z$ 编成 $B_0=0,B_1=1$，与 `main.tex:526` 的 "$m=1$, $P(z)=z$" 一致** | "比值恒为 2"是我的**外部计算**（单参数族），论文只给 $t=2$ |
+L1886| | $(1,i,j,k)$ 四元组 | `main.tex:514-518`（Toeplitz-Hausdorff 重证）：`$(2\Re(\bar uv),2\Im(\bar uv),\|u\|2-\|v\|2)$` ranges over the unit sphere in $\R^3$ | `Convexity.lean`：`bloch`（`:84`）、`norm_sq_three`/`norm_bloch`/`bloch_surjective_sphere`/`threeLinear`/`threeLinear_ker_ne_bot`/`twoForm`/`twoForm_bloch`/`convex_twoForm`/`convex_quadratic_range`（13 条声明，273 行） | 用 Bloch 球参数化把 $W(A)$ 写成实二次映射像，再由 $\R^3\to\R^2$ 线性核非空得凸性 | 三个 2（$2\Re,2\Im$）**必须是同一个 2**，否则像不在半径 $\|u\|^2+\|v\|^2=1$ 的球面上（`norm_bloch` 与 `bloch_surjective_sphere` 就是这条）；换成 $(\Re,\Im,\cdot)$ 会掉到半球。$\R^3$ 的 3 与"核非空"需要 $\dim\ker\ge1$（`threeLinear_ker_ne_bot`），即线性映射 $\R^3\to\R^2$ 的秩亏，这在 `Convexity.lean` 里是一个独立引理 | 我在 12.1 补步 4、5 手算过恒等式与符号相容性 |
+L1887| | $R_i/3$、$2R_i/3$（领子覆盖） | `main.tex:591` `the third-radius disks $V_i=B(\zeta_i,R_i/3)$ that cover the circle`、`:594` `$\|\zeta_i-\zeta_j\|<(R_i+R_j)/3\le2R_i/3<R_i$` | **Lean 有同一个 $\tfrac13$**：`ConformalCollar.lean:124` `refine ⟨S/3,by positivity,E,?_,?_,?_,hEd⟩` 配三次 `simpa only [show 3*(S/3) = S by ring]`（`:125-127`），以及 `:142` `refine ⟨r/3,by positivity,f,…⟩` + `:143`/`:146` 的 `3*(r/3)=r by ring`；另 `AnalyticCharts.lean:141` `let r := min (d/3) e` 与 `:143` `3*r ≤ d` | 从局部解析延拓拼出整圈领子时的 3 倍标准选取（Lebesgue 数的粗略版） | $\tfrac13$ 是**纯粹的技术宽松选择**，敏感度极低（$\tfrac14,\tfrac12$ 同样可行）；但三处 `ring` 恒等式说明 Lean 必须**精确知道**"取三分之一再乘三回到原半径"，即覆盖数 3 出现在等式，并非不等式里。⇒ 论文里"三个同心半径"的直觉在 Lean 是一组 `3*(S/3)=S` 的算术 | 我在 5.2 步 4 手算过论文的三重不等式链 |
+L1888| | $c\ne0$、$c_0$、$c=1/g'(0)$ | `main.tex:165` `$h(\lambda)=c\lambda+c_0+O(\lambda^{-1}),\ c\ne0$`、`:187` `leading coefficient $c^{-k}$`、`:613` `pole with coefficient $c=1/g'(0)\ne0$` | `hc : c ≠ 0`（`DomainBound.lean:78`、`ExteriorCollar.lean:78`）+ `hc0`、`Faber.faberBasis_zero hc g`、`Faber.faberBasis_degree`（`FaberPolynomials.lean`） | 首项系数 $c^{-k}$ 进 $b_k$；$c\ne0$ 保证 $h$ 在无穷是简单极 | $c\ne0$ 若失败 ⇒ $h$ 在无穷无极 ⇒ 非双全纯。Lean 里 `hc` 的**具体消费点**：`algebraDenominator` 在 $u=0$ 处 $=c\bullet1$ 的可逆性（`ExteriorCollar.lean:55-58`，`isUnit_iff_ne_zero.mpr hc`），以及 `chordDenominator_ne_zero`（`DividedDifferences.lean:103`）。⇒ **$c\ne0$ 不只是几何要求，它是对角项 $b_0=1$ 与"斜率不为零"的来源** | 论文未采用 $c>0$ 的相位归一化（`main.tex:236`），见 14.3 |
+L1889| | $b_0=1$ | `main.tex:187` `Then $b_0=1$`、`:313` `$b_0(A)=I$ gives both integrals`、`:337-339` `Since $b_0=1$ …` | `hb0 : b 0 = 1`（`DomainCore.lean:16`）、`Faber.faberBasis_zero hc g`、`hC0 : fourierCoeff … 0 = Vᴴ * U`（`DomainCore.lean:60-62`，用 `hb0` 经 `map_one, mul_one`） | 常数项归一化 ⇒ $P_0=X^*X$、$Q_0=Y^*Y$、$L_0^*=M_0$ | **全文最关键的"1"**：若 $b_0\ne1$，`eq:means`（`main.tex:339`）三条恒等式全废，`anti_diagonal_energy` 的 $4\lvert \text{coeff }0\rvert_2$ 变成 $4\lvert V^*R_0V\rvert_2$，无法与 $X^*X$ 比较，块矩阵的对角块就不是 $X^*X$、$Y^*Y$，整个 $\gamma^2\le4$ 崩。**Lean 里 `hb0` 只被 `hC0` 用了一次，但那一次是致命的**（`DomainCore.lean:62, 84, 93, 97`） | 我在 9.4 补步 7 与 9.6 表里从论文侧独立给过同一条 |
+L1890| | $\lambda/(\lambda-\mu)$ 的 $2\Re=1$ | `main.tex:229` `For distinct $\lambda,\mu\in\T$, one has $2\Re(\lambda/(\lambda-\mu))=1$` | `BoundaryKernel.lean` 的 `boundaryCoefficient_eq_taylor`/`boundaryKernel_character`/`unitPoint_ne_zero` 与 `FaberEnergy.lean` 的 `re_circle_fraction`/`circle_nonneg_of_off_point`/`boundaryKernel_nonneg_off_diagonal` | 把 Szegő 核的实部换成 1 ⇒ $K=1+s+\bar s$（`main.tex:202`）积分恰为 1 | 这是 $K$ 的**归一化来源**；若右端是 $c\ne1$，马尔可夫核收缩（`markov_kernel_contraction`）需要归一化，权重 $1,2$ 全部重标。**该恒等式只在 $\lambda\ne\mu$ 成立**，`main.tex:229` 的 "distinct" 与 Lean 的 `chordDenominator_off_diagonal`/`_diagonal` 分流（`DividedDifferences.lean:140-146`）一一对应 | 我在 6.2 补步里手算过 $2\Re\frac{\lambda}{\lambda-\mu}=1$（用 $\mu/\lambda+\bar{\mu/\lambda}$ 型对称化） |
+
+==== D28  lines 1148-1188  (file D28-双曲群无几何CAT0作用.md)
+L1148| 
+L1149| ## 9 常数与参数账目表（素材五 5.1 全表保留，敏感度栏照录）
+L1150| 
+L1151| | 记号 | 值/定义 | 来源 | 作用 | 敏感度 |
+L1152| | --- | --- | --- | --- | --- |
+L1153| | α | 小正参，fan 指数余量 | 03:18-19（f=2−α）；04:462 | 控 fan 期望出现 N^{2−α} vs 几何值 2 | 只需 α>0、7α<β，取多小都行，不敏感 |
+L1154| | β | =8α（规定取法） | 04:463；07:18 | top 指数余量；定 β−7α=α | 8 非最优；任何 7<c<… 均可，8 让 β−7α=α 最简 |
+L1155| | δ | 小正参，长装饰余量 | 03:21（h−δ）；04:463 | 六字母/2h 装饰余量 | 同 α，不敏感 |
+L1156| | κ | min{β−7α, α/5, δ} | 03 rank/fragment 段；Fragment.lean:20 | 单位面积最小边界收益 | 1/5、7 皆粗化界，未证最优 |
+L1157| | C₀ | =1/κ | 03 separator 段 | 分离子预算与面积界比例因子 | 与 κ 反比，α→0 爆炸 |
+L1158| | D | =15 | 03-diagrams.tex | 每顶点最大 face 数 | 模板属性（deg≤7 与 fan 结构），可精确验 |
+L1159| | 面积界 | ≤60C₀ℓ | thm:diagram 证明尾 | 线性填充常数 C | 60=4·15 [补]，论文不追常数 |
+L1160| | c | 2√2 | 03 separator 段 | 平面分离子常数 | Lean 完全不用（D17），非本质 |
+L1161| | K | ≥(924/κ)² | 03 separator 段 | 递归终止阈值 | 粗界拼装；Lean 对应 144c²≤K |
+L1162| | $\lvert F\rvert$ | 212=32+2·90 | 02；Template.lean:40 | field 总数，一切指数基数 | 精确、decide 可判 |
+L1163| | $\lvert R\rvert$ | 98=7+1+90 | 02；IncidenceTemplate.lean:18 | row 总数 | 精确 |
+L1164| | Σk_i | 31；Σ(k_i−2)=17 | 02 | 核心指数 32−17−12=3 | 精确 |
+L1165| | h(F) | 212−(17+12+180)=3 | 04 sample:eq-h | 主匹配期望量级 N³ | 精确；分配由模板唯一决定 |
+L1166| | E\|Ω\| | N^{3−β−90δ} | sample:eq-master-mean | 主匹配非空 | α 完全消掉：(17+7α)+(12+β−7α)=29+β |
+L1167| | t_max(β+90δ) | <1/2 | 04:460；SamplingStage.lean:52 | 每个 overlap 余量 ≥1/2 | 关键约束；Lean 显式 98=8+90 |
+L1168| | 3−β_j−90δ_j | >0 | 07:20 | 对角序列主计数仍正 | ε_j<1/400 保证 |
+L1169| | 位置对数 | 15 无序/30 Lean 有序 | 04:470；SixCounts.lean:21 | 六字母并界规模 | 差 2 倍被 Chernoff 常数吸收 |
+L1170| | union 规模 | 15N² | 04 Chernoff 段 | 全部 (r,q) 与偏移同时好 | 精确 |
+L1171| | ε_N | N^{−(1−δ)/4} | 04 | 相对误差阈值 | 需 δ<1 ⇒ Lean 显式 hδ |
+L1172| | Chernoff 指数 | /3（论文）vs 4（Lean） | 04；Chernoff.lean:84 | 尾概率 | 常数无关本质 |
+L1173| | E[six-pair] | N^{1−δ} | 04 | 每对均匀 | 需 δ<1 |
+L1174| | M | 存在性（论文）/8（Lean） | 05；ConditionalStar.lean:222 | 使 B√(1/t+2M²η)+2BMη→0 | 8 任一可行常数 |
+L1175| | 25(1+ε)/(1−ε) | 位移逐点上界 | 05；MetricProduct.lean:431(25R) | 合法化 bounded-test | 25=5×5（5 字母×CS） |
+L1176| | r | √3/2 | 05 hexagon 段 | 余弦和论证输入 | 边长和 6、\|3−s\| 检查唯一确定 |
+L1177| | −1/4 | ⟨h_H,h_{H'}⟩ | 06:108-112 | nonnegative：¾−¼−¼−¼=0 | 精确 |
+L1178| | ½,¼,−½ | 例外乘积 | 06:216-219 | 例外恒等式输入 | 精确 |
+L1179| | a,b | arccos(1/√3), arccos(1/3), 2a+b=π | 06:318-321 | 局部测地长 π ⇒ 对径 | 精确可验 |
+L1180| | d(H₀,B₀)² | 1/3；d(c,B₀)²=1/12；参数 1/3 | 06 exceptional 段 | h₀=M_C⊕x_D | 精确；Lean exceptionalRadius=1/2 |
+L1181| | ε_j | <1/(400j)；98jε_j<98/400<½ | 07:15,22 | 一次满足全部有限测试 | 400 可换（Lean 用 1000） |
+L1182| | L,M,D（转移） | 代入长/旧词代入面积/校准词面积 | 07:53 | 呈现常数无关性 | 新常数 MC_old·L+D |
+L1183| | 双曲常数 | L=18，K=3L²C，3(112K)+2 | IndexedFillingValue.lean:6705-6710 | BH 隐含链显式化 | 论文没给这些数 |
+L1184| | N | \|S_n\|（论文）/2(n+1)（Lean） | 02:42-45；TableSelection.lean:60 | 唯一趋参 | 群结构无关（D12） |
+L1185| 
+L1186| 5.2 禁止写入的十条"最优性"主张（逐条素材照录）：κ 最优与 1/5 可改进性；β>7α 中 7 的最优与临界情形；
+L1187| D=15、60C₀ℓ 常数最优；六字母（，并非五/七）必要 [推测] N⁴·N^{−3−δ}=N^{1−δ}→∞ 而五字母 N^{−δ}→0 不够
+L1188| [计算]；25 与 M 不可改进；极限构型唯一性；G_j 无挠/gd=2/不可 cubulate/非虚特殊；K 大小有效；不同 j
+
+==== D36  lines 588-606  (file D36-投影体体积的单纯形最大反例.md)
+L588| 
+L589| 出处行号均指 build/main.tex；"作用"列写该数在哪一步被谁吃掉；"敏感度"列写改动它的后果，论文未证最优处标 [推测]。
+L590| 
+L591| | 记号 | 值 | 出处 | 作用 | 敏感度 |
+L592| | --- | --- | --- | --- | --- |
+L593| | d(反例维数) | 20 | Thm 1(:90-100) | 使 r=s=10 的两因子乘积恰落入 ℝ²⁰；c₂₀ 的维数 | 两因子乘积 d=19 最优分劈 9×10 比值 0.994937<1（我方 awk 复算），d 再小更难；[推测] 20 是该族极小失败维，论文未述 |
+L594| | r, s(块维数) | 10, 10 | :91-93 | Prop 3 可乘加 Prop 5 给值 c₁₀² | 9×9 比值 0.976161 翻不过 c₁₈；10×10=1.015231 刚翻过；更大平方块在更高维都翻（11×11=1.053004、12×12=1.089579，我方复算）；[推测] 10 是"平方乘积"临界 |
+L595| | d=20 其它分劈 | 9×11=1.011743、8×12=1.001218、7×13=0.983473 | 未述 | 同维不同拆法的超额谱（我方复算） | 8×12 属边缘成功；中央 10×10 超额最大、最对称，故入选 [推测] |
+L596| | 泛函指数 d−1 | 19 | eq:functional(:56) | 令 R 齐次不变且乘积可乘（§9(c) 唯一性） | 改成别的 α 二者同失，multiplicative 结构整体塌；非自由参数 |
+L597| | 因子 1/2 | (eq:facet) 前缀 | :157-158；存在理由 :142-143 | 进/出双端点配对；决定 c_d 绝对值与 eq:proposed-bound 带量纲形态 | 无量纲比值检验对全局归一化误差免疫（§9(c)），但 c_d 作为猜想右端必须精确；论文专为此自证 Lemma 2 |
+L598| | 面积-法向量(坐标 facet) | −e_i/(d−1)! | :324-325 | ΠT_d 的 d 条边线段 | 面积 1/(d−1)! 直接进 (d−1)! 分母账 |
+L599| | 面积-法向量(斜 facet) | w/(d−1)! | :325-328 | ΠT_d 的第 d+1 条线段 | Jacobian 1/√d 与 ‖w‖=√d 互锁，任一处算错差 √d 因子（§8(c) 给了两个具体错误值） |
+L600| | κ_j | \|B₂^j\| | :52-53 | 只在 Lemma 4 逼近段界内出现(:288) | 不参与最终比值；纯分析机器 |
+L601| | \|T_d\| | 1/d! | :315 | R 分母 \|T_d\|^{d−1} | 错则 c_d 全错 |
+L602| | \|ΠT_d\| | (d+1)/((d−1)!)^d | :316 | R 分子 | d+1 来自立方体加线段的纤维论证(:336-345) |
+L603| | c_d | (d+1)d^d/d! | eq:functional(:57) | 逐维 benchmark | 化简链在 :351-352；d=3 给 18 与 Chen et al 吻合(:78-79)，d=2 给 6（图注面积 3 ÷ \|T₂\|=1/2）；渐近 e^d√(d/2π)（我方 Stirling 复算，c₁₀=30 313.05 对 e^10√(10/2π)=27 788 偏差即修正项） |
+L604| | c₁₀ | 17 187 500/567=11·2²·5⁸/(3⁴·7) | :469 | Thm 1 因子值；Cor 6 增长引擎 | 约分账 110 000 000 000/3 628 800（§9(b) 复核 ✓，≈30 313.051） |
+L605| | c₂₀ | 21·20²⁰/20!≈9.0510×10⁸ | 由 eq:functional | Thm 1 基准 | 论文从未写十进制值（未述），数值为我方 awk 复算 9.050959×10⁸ |
+L606| | R₂₀(K) | (11·10¹⁰/10!)²≈9.1888×10⁸ | :393-394 | 被比较量 | 与 c₂₀ 之比即定理全部；awk 复算 9.188811×10⁸ ✓ |
+
+==== D41  lines 527-544  (file D41-敏感度与块敏感度的超二次分离.md)
+L527| 全篇风险都在指数账上，逐格登记。"动了会坏在哪"列里凡属我的推演后果，并非论文明言的，机制都取自第 5、6、7、12、13 节已核对的不等式。
+L528| 
+L529| | 记号 | 值 | 用在哪 | 动了会坏在哪 |
+L530| |---|---|---|---|
+L531| | $d$ | 任意 $\ge1$；种子取 9 | 每层净赚 $2^d$；比值 $2^d/(4(d+2)^2)$ | $d=8$ 时 $256<4\cdot100$，种子不过线；$d\to\infty$ 才有"任意常数 $C$" |
+L532| | $M$ | 声明 $\ge3$；定理取整数 $\ge9^{d+1}$ | $\epsilon=\max(r,t)/M\le2/3^{d+1}$；$k/M^2=2+1/M^2$；labelling 的 $3^{16}M^{-20}<1$ | 与 $d$ 脱钩则 $V_d$ 以 $3^d$ 失控，常数 2 变 $3^{O(d)}$，$9^d$ 反杀 $2^d$；$M<3$ 时 labelling 存在性先塌 |
+L533| | $L$ | $d+2$ | 初始块尺寸、中心距 $2L$、$S_{0,0}\le L$、常数 $2L$ 与 $4L^2$ | 取 $d+1$ 则中心距 $2d+2$，三角不等式在等号处失去唯一中心；取更大只让分母 $4L^2$ 变肥 |
+L534| | $k$ | $2M^2+1$ | 行数、出度 $M^2=(k-1)/2$、块每层 $\times k$、维度底 $(kr)^\ell$ | 改小则 $k/M^2<2$，每层净赚跌破 2；偶数则正则锦标赛不存在，$r+M^2$ 条件数与出度账全重写 |
+L535| | $r$ | $\lceil\sqrt M\rceil$ | 每行孩子数、target 数、块尺寸底 $r^\ell$、标签字母表 | $r<M^{4/13}$ 时 $k^{16}r^{-104}>1$，labelling 概率法失效；$r$ 过大顶穿 $\epsilon$ 预算且 $rS'_1$ 膨胀 |
+L536| | $t$ | 16 | 被禁构型规模、$\|\mathcal T\|<t$、系数 $tS'_0$、$\max(r,t)\le2\sqrt M$ | $t\le11$ 时 union bound 的 $M$ 指数 $2t-\frac{t(t-1)}2+t\ge0$ 收不拢；$t\ge19$ 时 $M\ge81$ 供不出 $t\le2\sqrt M$ |
+L537| | $H_\ell$ | $d+1-\ell$ | 每层谓词数；顶层 $H_d=1$ 使 $J_{d,\cdot}=0$ | 不递减则顶层联合档案悬空，$v$ 的边界多一层 |
+L538| | $Q$ | $H_\ell+1=H_{\ell-1}$ | target 谓词指标；gate 指标 $Q-q\in[1,H]$；链 $g'<g<Q$ | 边界 $Q-q\ge1$ 靠 $q\le H$，越界则上一层无此谓词 |
+L539| | $N_\ell$ | $LM(kr)^\ell$ | 第 $\ell$ 层比特数，$N_\ell=kr\,N_{\ell-1}$ | 恒等式，动不得 |
+L540| | 出度 | $M^2$（正则） | $M^2S'_0$、$M^2J'_0$、每 clause $r+M^2$ 条件 | 出度上限 $D$ 变化时每层净赚变 $k/D^2$，$k=2D+1$ 关系一破利润就不是 2 |
+L541| | $\|\mathcal T\|$ | $\le t-1=15$ | 零侧 $tS'_0$ | 见 $t$；无 labelling 时退化为 $kS'_0$，利润归零 |
+L542| | $\|\mathcal G\|$ | $\le3$；孤点 $\le1$ | $S'_1+3J'_1$、$3J'_1$、$v$ 继承系数 3 | $\binom m2\le m$ 是硬账；系数变 4 则 $\epsilon$ 预算需 $\le4^{-d}$，$M\ge16^{d+1}$ |
+L543| | $S_{0,0},S_{0,1},J_{0,b}$ | $\le L,\le LM,=0$ | 比较序列 $U_0=L,V_0=0$ | 半径不连续则 $V_0>0$，$V$ 不再由 $\epsilon L(3^\ell-1)$ 控制 |
+L544| | $\epsilon$ | $\max(r,t)/M\le2/3^{d+1}$ | $U_d\le2L$ 的封口 | 封口式 $\frac{3^{\ell+1}-3-2\ell}{3^{d+1}}<1$ 全靠它 |
+
+==== D44  lines 440-452  (file D44-小finitistic维数无穷的代数.md)
+L440| 全文数值我逐个数过去，集中登记如下。表后给依赖链。
+L441| 
+L442| | 符号 | 数值或阈值 | 出现位置 | 被谁消费 | 若改动断在哪一步 |
+L443| | --- | --- | --- | --- | --- |
+L444| | $k$ | $\mathbb C$（特征 0） | `06:254`、`01:25` | $e=(1+z_0)/2$ 的 $1/2$；$p_\chi$ 的 $1/\lvert Z_m\rvert$ | 特征 2 下 $e$ 不存在，§2 全线塌（姊妹例走特征 2 是另一条机器） |
+L445| | $\lvert I\rvert$ | 3 | `02:47` | $z_N$ 中心性测试借第三指标；$W_{ij}$ 非空 | $=2$ 时 `02:216-220` 无外部指标可用 |
+L446| | 生成元 | 15（$T,u,v,w$） | `02:90-94` | 有限展示引理 | 少任一截面，参数族 $S(r)$ 无处定义 |
+L447| | $\lambda$ | $-\varepsilon_i,\ +\varepsilon_i,\ \varepsilon_i-\varepsilon_j$ | `02:53-58` | 共轭规则、表格原像、$a+b$ 不变量 | $U,V$ 同号则 $T_i$ 共轭不变量变 $a-b$，矩阵实现行列位对调 |
+L448| | $S_m$ | $\mathbb F_2[t]/(t^m-1)$ | `02:252` | 有限商 $F_m\le\operatorname{GL}_5(S_m)$ | 换 $\mathbb F_2[t]/(t^m)$ 则 $t$ 不可逆，负参数失踪 |
+L449| | 矩阵尺寸 | $5\times5$，指标 $0..4$ | `02:254-263` | $U:0\to i$、$V:i\to4$、$W:i\to j$、$z_N:I+t^NE_{04}$ | 4×4 容不下接口位加三个内部指标 |
+L450| | $Z_m$ | $\cong(\mathbb Z/2)^m$，$\|Z_m\|=2^m$ | `02:246-248`、`02:331-340` | 特征 $\chi_m$ 与 $p_\chi$ 定义域 | 独立性失败则 $\chi_m$ 不存在 |
+L451| | $\chi_m$ | $+1$（$q<m-1$），$-1$（$q=m-1$） | `02:335-339` | 灭绝时刻 $m$ 的设定旋钮 | $-1$ 前移则时长缩短，后移则越界 |
+L452| | $e,e_q$ | $(1+z_q)/2$ | `02:320-327` | $H^{\circ j}$ 乘积公式 eq:selection-iterates | 换 $(1-z)/2$ 要与 $\chi_m$ 同时翻号 |
+
+==== D50  lines 412-440  (file D50-非坐标多项式与三维仿射零纤维.md)
+L412| 这一节把全篇出现的每个具体数值、系数、次数、指数对集中登记，一行一个，位置给出 tex 行号与 Lean 文件:行号，最后一列写"若改动它，链条在哪一步断"。项数与次数是我用 sympy 在 $(h,u,v,w)$ 上展开实测的（`sp.Poly(...).terms()` 计数、`sp.degree`/`sp.total_degree`），凡标注"实测"的都可复算。
+L413| 
+L414| | 符号/数据 | 数值或表达式 | 位置 | 被谁消费 | 若改动的断点 |
+L415| |---|---|---|---|---|
+L416| | 变量序 | $(h,u,v,w)=(X_0,X_1,X_2,X_3)$ | `paper.tex:313`；`Identities.lean:49-52` | `criticalPoint` 的 if 链、`extendedF` 的 `fourInclusion` | 换序后 `CriticalPoint.lean` 五条 `norm_num` 全灭 |
+L417| | 权重 | $\mathrm{wt}(h,u,v,w)=(2,1,1,0)$ | 我 §4 反推 | 齐次性、$h\mid x^2+y^3$ | 权重改则 $S$ 五单项不再齐权 4，整除性失去唯一通道 |
+L418| | $x$ | $u^3+hv$；次数 $(1,3,1,0)$，总 3 | `paper.tex:87-88`；`Identities.lean:53` | cusp、提升引理第一关系 $U^3+hV-x$ | $u^3\to u^2$：$x^2+y^3$ 首项无法配对相消（§4(c)） |
+L419| | $y$ | $-u^2+hw$；次数 $(1,2,0,1)$，总 2 | `paper.tex:88-89`；`Identities.lean:54` | cusp、$y^2W-b$ 线性方程 | 符号改 $+u^2$：$y^3$ 展开变号，$h\mid x^2+y^3$ 破产 |
+L420| | $S$ | $2u^3v+3u^4w+h(v^2-3u^2w^2)+h^2w^3$；实测 5 单项式，次数 $(2,4,2,3)$，总 5，全项齐权 4 | `paper.tex:90-93`；`Identities.lean:19-20` | `eq:cusp`、`eq:compat`、`substitute_S` | 任一系数（2 或 3）改动：`cusp_universal` 的 `ring` 立刻失败；我实测系数是唯一解（§4） |
+L421| | $s$ | $S(h,u,v,w)$ | `paper.tex:89-93`；`Identities.lean:55` | 平移量、$B$、$T$ | $s$ 没有独立自由度，它的改动就是 $S$ 的改动，断点继承上一行 |
+L422| | cusp 恒等式 | $x^2+y^3=hs$（权 6） | `paper.tex:257`；`Identities.lean:61` | `eq:base`、单位理想论证、$B$ 平面化 | 恒等式一断，`eq:Bplane` 与 `eq:compat` 同时失效 |
+L423| | $p$ | $-2s^2x+3sy^2-3s^3y$；实测展开 67 单项式，次数 $(7,14,6,10)$；三单项的权 $11,8,14$（不齐次） | `paper.tex:97-100`；`Identities.lean:22-23` | $F$、`eq:shiftidentity`、$h=1+p$ | 任一项系数改动，$X^2+Y^3=x^2+y^3-sp$ 的 $s^6$ 相消失败（§5） |
+L424| | $F$ | $h-p(x,y,s)-1$；实测 69 单项式，$(\deg_h,\deg_u,\deg_v,\deg_w)=(7,14,6,10)$，总次数 17，首项 $+3h^7w^{10}$，常数项 $-1$，$h$ 项 $+h$ | `paper.tex:97-100`；`Identities.lean:57` | 定理全部四条合取支 | $-1$ 去掉：$F=0$ 与 $h-p=0$ 合一，§3 的撞墙复现；常数改 $c$ 则 $P$ 的 $h=2$ 变根式 |
+L425| | 平移量 | $(a,b)=(s^3,-s^2)$，$a^2+b^3=0$，$2m=3n$ 最小互素解 $(3,2)$，$c^4=1$ 取 $c=1$ | `paper.tex:260-262`；`Identities.lean:58-59` | `eq:shiftidentity`、$X=Y=0$ 锥 | $k\ge2$ 使次数翻倍、$B$ 图形多出 $s^6$ 残项（§5(d)） |
+L426| | $X$ | $x+s^3$；实测 30 单项式，总 15 | `paper.tex:261`；`Identities.lean:58` | `eq:ambient`、`fiberEquiv_symm_X0` | $s^3$ 换号则 $X^2$ 多出 $-2xs^3$，与 $Y^3$ 的 $+3ys^2$ 不再配对，`eq:shiftidentity` 差一项 |
+L427| | $Y$ | $y-s^2$；实测 16 单项式，总 10 | `paper.tex:261`；`Identities.lean:59` | `eq:ambient`、`fiberEquiv_symm_X1` | 指数 2 若降到 1，$Y^3$ 展开出 $-3y^2s$ 型项，权 $s$ 的自由度不够抵消，$p$ 里多出无法吸收的项 |
+L428| | shift 恒等式 | $X^2+Y^3=x^2+y^3-sp$ | `paper.tex:264-266`；`Identities.lean:36-39,63` | `eq:Bplane`、`eq:ambient` | 论文注 "the terms $s^6$ from the square and cube cancel"（265-266 行）就是这条 |
+L429| | ambient 恒等式 | $X^2+Y^3=s(1+F)$ | `paper.tex:310-312`；`Identities.lean:66-69` | `critical_of_ambient_identity`、微分障碍 | 这条一断，梯度论证退回展开 69 项硬算 |
+L430| | $B$ 的两关系 | $h-1-p=0$、$x^2+y^3-sh=0$ | `paper.tex:270-273`；`Plane.lean:21-22` | 平面化、单位理想 | 第二关系换 $x^2-y^3$ 型：尖点变节点，$h,y$ 不再是单位理想 |
+L431| | $B$ 的参数化 | $s=X^2+Y^3,\;x=X-s^3,\;y=Y+s^2,\;h=1+p$ | `paper.tex:279-286`；`Plane.lean:75,84` | `Plane.equivalence`、`eq:fiber` | 四式是 `forward`/`backward` 双向验证的内容，任一式改动后复合回去不再是恒等，平面识别一步断 |
+L432| | 单位理想论证常数 | 模 $(h,y)$ 得 $x^2=0$ 与 $1=2s^2x$，平方给 $1=4s^4x^2=0$ | `paper.tex:288-290`；`Plane.lean:47` | `bezout`、$r,q$ 的存在性 | 系数 2 若在特征 2 归零则论证失效；这是全篇对 $2,3,4$ 唯一显式消费点 |
+L433| | $\alpha$ | $1+2s^2x+4s^5$；实测 93 单项式，次数 $(10,20,10,15)$，总 25 | `paper.tex:350-353`；`Identities.lean:25-26` | `eq:certificate`、$T$、$r=\alpha(1+\beta y)$ | 我在 §7 重建过它的来历：$h\bmod y$ 在 $x^2=0$ 世界的逆 $1+2s^2x$ 加缺陷回喂项 $4s^5$；改 $4s^5$ 系数证书差一项 |
+L434| | $\beta$ | $(3s^3-3sy)(1+2s^2x)-4s^4y^2$；实测 233 单项式，次数 $(11,23,11,15)$，总 28 | `paper.tex:350-353`；`Identities.lean:28-29` | 同上、$q=\beta^2$、逆公式 $u=hT-\beta x$ | $\beta$ 一改，$q=\beta^2$ 与 $rh+qy^2=1$ 立刻不再成立，$W_0$ 不再同时解两方程，第六步理想等式失配 |
+L435| | 证书恒等式 | $\alpha h+\beta y-1=(1+2s^2x)(h-1-p)-4s^4(x^2+y^3-sh)$ | `paper.tex:356-359`；`Identities.lean:41-45` | 单位理想在 $B$ 里的显式见证、`FiberFormulas` 的 `hb` | 两系数 $(1+2s^2x)$、$-4s^4$ 由"$y$ 的幂次只允许 $y^1$"唯一决定，改动即出现 $y^3$ 残项 |
+L436| | 临界点 $P$ | $(h,u,v,w)=(2,0,-\tfrac12,\tfrac12)$ | `paper.tex:113,313`；`CriticalPoint.lean:19-20` | `eval_F`、`critical_derivatives`、`F_not_coordinate` | $h$ 由 $1=1/h+1/h$ 反解确定，改则 $s=1$ 归一失败（§7 层四） |
+L437| | $P$ 上的导出值 | 实测：$x=-1$、$y=1$、$s=1$、$p=2$、$F=-1$、$X=Y=0$、$\alpha=3$、$\beta=-4$、$T=\alpha u+\beta(v+uw)=2$ | `paper.tex:314-317`；`CriticalPoint.lean:27-40` | `eq:UG` 的检验、雅可比论证 | Lean 逐条以 `norm_num` 固定：`eval_x/eval_y/eval_s/eval_p/eval_F` 五条 |
+L438| | 证书在 $P$ 的两边 | 我算：左边 $\alpha h+\beta y-1=3\cdot2+(-4)\cdot1-1=1$；右边 $(1+2s^2x)(h-1-p)-4s^4(x^2+y^3-sh)=(-1)(-1)-4\cdot0=1$ | 对照 `eq:certificate` | 恒等式的点检验 | 两边同非零正说明 $P\notin\{F=0\}$：残量恰好是 $(1+2s^2x)F\big\|_P$ |
+L439| | 临界点发族 | 我算：$P_\lambda=(2\lambda^5,0,-1/(2\lambda^2),1/(2\lambda^3))$，$\lambda\in\mathbb C^\times$，该处 $s=\lambda$、$x=-\lambda^3$、$y=\lambda^2$、$F=-1$、$\nabla F=0$（sympy 逐分量验证恒等于零） | §7 层四；论文只登记一点 | 说明障碍非孤立点 | 台账阶段我把 $w$ 分量写成了 $1/(2\lambda)$，复算发现 $s$ 变成 $\lambda(\lambda^6+1)/2$、$F\ne-1$、梯度非零，遂改回 $1/(2\lambda^3)$。这一处错是我自己的，论文没有这个族 |
+L440| | 提升引理输入 | $h,x,y,s\in B$，$x^2+y^3=hs$，$(h,y)=B$ | `paper.tex:165-168`；`Lifting.lean:23-25` | 引理全部六步 | 单位理想换成 $(h,y)\ne B$：$h=y=x=s=0$ 时 $C\cong\mathbb C[U,V,W]/(U^2)$，非既约，§6(d) 的退化检验 |
+
+==== D68  lines 1334-1372  (file D68-相容性熵与Thorp扫描的谱.md)
+L1334| ## §41 台账续表二（本轮 §33 至 §40 的取数）
+L1335| 
+L1336| | 记号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+L1337| | --- | --- | --- | --- | --- |
+L1338| | $\alpha=1/64$、$\beta=1/256$、$c_{0}=1/8$ | 分数密度线的三枚绝对常数 | `07-fractional-density.tex:58-61` | 粗界指数 $1-\alpha$ 与入门阈值 $16/\beta$ | $\beta$ 一动则 $16/\beta$ 与 $s=\lfloor n^{1-\beta}\rfloor$ 同时移位，自举起点不再绝对 |
+L1339| | $q\ge16/\beta$ | 门槛即 $4096$，$d$ 的下界与 $q$ 无关 | `07-fractional-density.tex:71-87` | 归纳假设的合法范围 | 阈值若依赖 $q$，基例就取不到一致尺寸 |
+L1340| | $a=2^{\lceil d/2\rceil}$、$b=2^{\lfloor d/2\rfloor}$、$\delta=d^{-1/2}$ | $n=ab$、$a,b=\Theta(\sqrt n)$ | `07-fractional-density.tex:62-66` | 平衡分割与 $\epsilon=\delta/(2+\delta)$ | 分割失衡则 $\frac{n!}{\lvert H\rvert\lvert V\rvert}=n+O((a+b)\log n)$ 的展开改样 |
+L1341| | $p_{0}=(1+\delta)q$ | 同时给 $M_{n}((1+\delta)p_{0})\le1+c_{0}$ 与 $M_{n}(p_{0})\le\exp(n^{1-\alpha})$ | `07-fractional-density.tex:76-85` | 递推闭合的那一步估计 | 少一枚因子 $1+\delta$ 则小层次余项求和失去余量 |
+L1342| | $\operatorname{Tr}(B^{1/2}AB^{1/2})^{2r}\le\operatorname{Tr}(A^{r}B^{r}A^{r}B^{r})$ | 正幂比较在 $P=4r$、$q=4$ 下的形态 | `07-fractional-density.tex:46-53` | 粗界的四因子式 | 换成单次幂则 $M_{n}(p_{0})$ 无从落到该迹上 |
+L1343| | $M_{n}(p)\ge1$ 与 $0\le Q_{n}\le I$ | 由常数项得来 | `07-fractional-density.tex:26-31` | 密度归一时"除以一个至少为 $1$ 的数"那句 | 下界失则 $\rho$ 的 $1+\delta/2$ 矩界失去归一 |
+L1344| | $(e^{-l-1},e^{-l}]$ | 谱箱，$\operatorname{Tr}F_{l}\le2e^{(1-\delta)(l+1)/2}$、$\operatorname{Tr}F_{l}^{2}\le2e^{-\delta l}$ | `07-fractional-density.tex:147-161` | $\lVert f_{l}\rVert_{2+\delta}^{2+\delta}\le Ce^{-\delta l/2}$ | 箱宽若改等差则两端的指数对消不成立 |
+L1345| | $\mathbb E_{U_{m}}\rho^{1+\delta/2}\le(C'/\delta)^{2+\delta}$ | 免掉逆 Hausdorff--Young 换来的可积性 | `07-fractional-density.tex:171-175` | 散度下界里的 $\epsilon$ | $\delta$ 若取 $(\log d)^{-1}$ 则 $\epsilon\log a$ 不再发散 |
+L1346| | $\epsilon=\delta/(2+\delta)$ | $D(\mu\|\nu_{*})\ge\epsilon D(\mu\|U_{m})-O(\log d)$ | `07-fractional-density.tex:179-187` | 吸收 $\mathbb E_{\zeta}[R_{X}+R_{Y}]$ 的那笔余量 | 系数只剩 $o(1)$ 则坏格与高值无处付账 |
+L1347| | $D(P\|R)\ge\mathbb E_{P}W-\log\mathbb E_{R}e^{W}$ | 允许支撑外取 $-\infty$，只要指数期望为正 | `07-fractional-density.tex:188-193` | 三处势的构造 | 去掉允许 $-\infty$ 那句，被堵候选再也压不出负贡献 |
+L1348| | $\nu(\mathcal E)$ | $\le\exp(-n+O(na^{-1/16}\log a+(a+b)\log d))$ | `07-fractional-density.tex:195-203` | 粗矩 $\exp(O(n^{31/32}\log n))$ | 主项若只到 $n\log n$ 级则 $M_{n}(p_{0})$ 的次指数性失 |
+L1349| | $J$ | 行暴露后列间总相关，$J\ge n-\mathbb E_{\zeta}[R_{X}+R_{Y}]-O(na^{-1/16}\log a)$ | `07-fractional-density.tex:210-220` 与 `07-fractional-density.tex:260-270` | 散度下界的负主项 | 暴露不按 $t_{j}$ 递减则比值 $\frac{t_{j}}{t_{j}+\eta}$ 不再成立 |
+L1350| | $\eta=a^{-1/16}$ | 软化参数，配 $\mathbb E\log Z\le a^{-1/16}$ | `07-fractional-density.tex:238-258` | 好格上归一项的 Jensen 界 | $\eta$ 改取 $a^{-1/8}$ 则与 $a^{1/8}a^{-1/4}$ 那笔比较同时改样 |
+L1351| | $a^{1/8}$ 与 $a^{-1/4}$ | 坏格阈与高候选阈 | `07-fractional-density.tex:232-236` | $D_{X}$、$D_{Y}$ 两笔账 | 两阈若不满足倒数和小于 $1$，补集质量压不住 |
+L1352| | $\mathbb E e^{\gamma R_{X}}\le e$ | $\gamma=(\log a)/16$，内和 $\sum_{a\ge s>h_{0}}(2e^{2}a^{1/16}/s)^{s}$ | `07-fractional-density.tex:287-299` | $D_{X}\ge\frac{\log a}{16}\mathbb E_{\zeta}R_{X}-1$ | 指定冲突者概率不为零则乘积展开失去分格 |
+L1353| | $C_{*}=2(4e)^{2}$ | 调和无穷范数界的绝对常数 | `07-fractional-density.tex:328-334` | 一层次奇异值推论 | 常数若依赖 $d$，比较 $n^{-\beta k/4}$ 就不成立 |
+L1354| | $\Pr(\{w_{1},\ldots,w_{k}\}=D)\le(k/n)^{k}$ | 中点元组落在指定 $k$ 点集的概率 | `07-fractional-density.tex:339-344` | $\mathbb E G(w)$ 的归一 | 对换保持性一失，占用边际不再是 $k/n$ |
+L1355| | $n^{c}(2d)^{k-c}$ | 固定有根森林下起点数目，森林数至多 $\binom{k}{c}k^{k-c}$ | `07-fractional-density.tex:372-383` | $\mathbb E G(w)\le(C_{*}dk/n)^{k/2}$ | 每层起点选择若多于两个，置换那句就崩 |
+L1356| | $\lVert T_{n}(\lambda)\rVert_{\mathrm{op}}\le(\cdot)^{k/4}$ | 由正平方开方，$1\le k\le n/(2d)$ | `07-fractional-density.tex:387-397` | 小层次的正则贡献 $o(1)$ | 层次超出 $n/(2d)$ 则调和空间那套论证不适用 |
+L1357| | $s=\lfloor n^{1-\beta}\rfloor$ | $\sum_{1\le k\le s}2^{k}n^{2k-p\beta k/4}=o(1)$ | `07-fractional-density.tex:419-435` | 低层余项至多 $1/16$ | 形状数若按 $\exp(O(k^{2}))$ 估，该和发散 |
+L1358| | $r_{\lambda}\ge\exp(cs)$ | 靠 Catalan 数 $\frac{1}{s+1}\binom{2s}{s}$ 或 $n!/(2s)^{n}$ | `07-fractional-density.tex:443-456` | 每个剩余块的正则重数 | 唱票条件一去掉，子表可扩展那句即失 |
+L1359| | $\exp\{(1+d^{-1/2})n^{1-\alpha}-cd^{-1/2}\lfloor n^{1-\beta}\rfloor\}=o(1)$ | 全凭 $\beta<\alpha$ | `07-fractional-density.tex:470-476` | $M_{n}((1+\delta)p_{0})\le1+c_{0}$ | 两常数顺序写反则大块余项永远不小于 $1/16$ |
+L1360| | $f(g)=\operatorname{Tr}\mathcal L(g^{-1})Z$ | $\mathbb E_{g}\lvert f(g)\rvert^{2}=\operatorname{Tr}(Z^{*}Z)$ | `07-fractional-density.tex:16-25` | 谱分箱处 $\lVert f_{l}\rVert_{\infty}$ 与 $\lVert f_{l}\rVert_{2}$ 的来源 | 归一若按概率迹写，两界各差 $\lvert G\rvert$ 的一次幂 |
+L1361| | $\lVert T^{r}\rVert_{\mathrm{HS}}^{2}\le\lVert Q\rVert_{\mathrm{op}}^{r-s}\operatorname{Tr}Q^{s}$ | $r\ge s\ge1$，不用正规性 | `01-preliminaries.tex:63-71` | 幂的放大与 §8 的谱转换 | 一旦要求正规，非正规扫描就被排除在结论之外 |
+L1362| | $t_{\mathrm{mix}}(d)\ge\lceil(2/n)\log_{2}(3n!/4)\rceil$ | 等于 $2d-O(1)$，支撑至多 $2^{tn/2}$ 条 | `01-preliminaries.tex:36-45` | 下界一侧的全部 | 币串计数若改按路径数估，$3/4$ 的质量门槛不显 |
+L1363| | 行数超过 $n/2$ 的形状 | 被一枚扫描归零，符号表示被任一非空层归零 | `01-preliminaries.tex:23-27` | 分档时成批剔除 | Young 规则那句一失，转置朝向就无人管 |
+L1364| | $\lVert T_{n}(\lambda)\rVert_{\mathrm{op}}<1$ | 每个固定二进 $n$、每个非平凡块 | `01-preliminaries.tex:29-34` | 归纳基例的公共正指数 | 边连通那句失则只剩渐近间隙，基例取不出 |
+L1365| | $\lVert v-mU_{G}\rVert_{1}^{2}\le\sum_{\lambda\ne\mathbf 1}D_{\lambda}\lVert\widehat v(\lambda)\rVert_{\mathrm{HS}}^{2}$ | 概率时左边是 $4\lVert v-U_{G}\rVert_{\mathrm{TV}}^{2}$ | `01-preliminaries.tex:52-57` | 卡方散度到全变差 | 不归一约定一改，度定理里 $D_{\lambda}$ 的次幂全变 |
+L1366| | $\lVert\mu-U_{G}\rVert_{\mathrm{TV}}\le1-m+\tfrac12\lVert v-mU_{G}\rVert_{1}$ | 条件 $0\le v\le\mu$ | `01-preliminaries.tex:57-61` | 删坐标后丢失质量的支付 | 该式若换成 $L^{2}$ 版本，$1-m$ 项要平方 |
+L1367| | $m_{\lambda}(r)=\binom{r}{k}f^{\bar\lambda}$ | $k\le r\le n-k$，$D_{\lambda}\le\binom{n}{k}f^{\bar\lambda}$ | `01-preliminaries.tex:74-83` | 元组模的重数与维数上界 | $r$ 超出该区间则首行余格不再与尾部隔开 |
+L1368| | $D_{\lambda}\ge\binom{n}{k}f^{\bar\lambda}\exp(-\frac{k}{n-2k+1})$ | $0\le k\le n/2$ | `01-preliminaries.tex:84-100` | 钩膨胀给出的维数下界 | 分母若改用 $n-k$，$k$ 近 $n/2$ 时该项爆炸 |
+L1369| | $\sup_{n}\sum_{\lambda\vdash n}D_{\lambda}^{-32}<\infty$ | 配 $\log D_{\lambda}\ge(\log2)\sqrt{\ell}/2$，$\ell=n-\max(\lambda_{1},\lambda'_{1})$ | `01-preliminaries.tex:104-123` | 负维数幂的绝对可选 | 指数 $32$ 若降到 $2$，$2^{h-1}$ 那一档不够付账 |
+L1370| | $\lVert A_{2}A_{1}\rVert_{S^{P}}\le\big\|\lvert A_{2}\rvert^{P/q}\lvert A_{1}^{*}\rvert^{P/q}\big\|_{S^{q}}^{q/P}$ | $P\ge q\ge1$，Araki--Lieb--Thirring 形式 | `01-preliminaries.tex:132-180` | 一切四因子迹不等式 | 虚幂在支撑上的酉性一失，$\operatorname{Re}z=1$ 那侧边界守不住 |
+L1371| | $\lVert f\rVert_{L^{u}(U_{G})}\le\big(\sum_{\rho}D_{\rho}\operatorname{Tr}\lvert E_{\rho}\rvert^{u'}\big)^{1/u'}$ | 逆 Hausdorff--Young，$2\le u\le\infty$ | `01-preliminaries.tex:182-207` | §12 那条路线的可积性来源 | `07` 不用它，改走上表谱分箱那一行 |
+L1372| | $\prod_{i=1}^{j}s_{i}(CA)\le\big(\prod_{i=1}^{j}s_{i}(C^{v}A^{v})\big)^{1/v}$ | 只管乘积，不管单个奇异值 | `01-preliminaries.tex:209-230` | 递推从幂回到指定指标 | 忘掉前面那些指标，回到 $s_{j}$ 时链上就断一环 |

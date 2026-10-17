@@ -1,0 +1,50 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usetikzlibrary{patterns}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{positioning}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\Id}{\mathrm{Id}}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\Lip}{Lip}
+\newcommand{\leexp}{\mathrel{\leq_{\mathrm{exp}}}}
+\newcommand{\geexp}{\mathrel{\geq_{\mathrm{exp}}}}
+\newcommand{\eqexp}{\mathrel{=_{\mathrm{exp}}}}
+\begin{document}
+\begin{tikzpicture}[x=4.6cm,y=3.0cm,>=Stealth,font=\small]
+\begin{scope}
+\draw[->] (0,0)--(1.1,0) node[right] {$\kappa$};
+\draw[->] (0,0)--(0,1.08) node[above] {$F(\kappa)$};
+\draw[very thick,linkblue] (0,0)--(.36,0)--(1,.72);
+\draw[dashed,gray] (1,0)--(1,.72)--(0,.72);
+\node[left] at (0,.72) {$v$};
+\node[below] at (.36,0) {$\tau$};
+\node[below] at (1,0) {$1$};
+\node[above left] at (.8,.5) {slope $\beta=v/\ell$};
+\node[below=16pt] at (.55,0) {Canonical deficit profile};
+\end{scope}
+\begin{scope}[xshift=7.0cm]
+\draw[->] (0,0)--(1.1,0) node[right] {$\kappa$};
+\draw[->] (0,0)--(0,1.08) node[above] {$\kappa-F(\kappa)/v$};
+\draw[very thick,linkblue] (0,0)--(.36,.55)--(1,0);
+\draw[dashed,gray] (.36,0)--(.36,.55)--(0,.55);
+\node[left] at (0,.55) {$\tau$};
+\node[below] at (.36,0) {$\tau$};
+\node[below] at (1,0) {$1$};
+\node[above] at (.75,.3) {$\tau(1-\kappa)/\ell$};
+\node[below=16pt] at (.55,0) {Remaining orientation exponent};
+\end{scope}
+\end{tikzpicture}
+\end{document}

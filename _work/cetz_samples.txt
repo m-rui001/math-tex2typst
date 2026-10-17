@@ -1,0 +1,151 @@
+### grid
+\begin{tikzpicture}[x=.52cm,y=.52cm,>=Latex,font=\small]
+ \definecolor{rowshade}{RGB}{182,218,223}
+ \definecolor{columnshade}{RGB}{249,221,167}
+ \foreach \n in {0,...,6}{
+  \foreach \k in {0,...,6}{
+   \ifnum\k>\n
+    \fill[columnshade] (\k,-\n) rectangle ++(1,-1);
+   \else
+    \fill[rowshade] (\k,-\n) rectangle ++(1,-1);
+   \fi
+  }
+ }
+ \draw[step=1,gray!60,thin] (0,0) grid (7,-7);
+ \draw[->] (0,.
+
+===================
+
+### unclassified
+\begin{tikzpicture}[
+  x=1cm,y=1cm,>=Stealth,
+  every node/.style={font=\small},
+  interface/.style={draw=black!65,rounded corners=2pt,align=center,
+    text width=54mm,minimum height=11mm,inner sep=5pt},
+  endpoint/.style={interface,text width=117mm,fill=black!3},
+  flow/.style={draw=black!65,->,line width=.8pt}
+]
+  \node[endpoint] (input) at (0,0)
+    {$X_0$ generates $A/k$; two independent clas
+
+===================
+
+### to/edge path
+\begin{tikzpicture}[
+  >=Latex,
+  every node/.style={font=\normalsize},
+  every edge/.style={draw,->,semithick},
+  baseline=(current bounding box.center)
+]
+  \node (F) at (0,0) {$F$};
+  \node (next) at (3,1.1) {$A_{i+1}$};
+  \node (cover) at (6.2,1.1) {$\widehat A_i$};
+  \node (base) at (6.2,-1.1) {$A_i$};
+  \path (F) edge node[above,sloped] {$f_{i+1}$} (next);
+  \draw[semithick,{Hooks[right]}-Lat
+
+===================
+
+### foreach leftover
+\begin{tikzpicture}[
+  x=1cm,y=1cm,>=Stealth,
+  every node/.style={font=\small},
+  plus/.style={draw=blue!65!black,line width=1pt},
+  minus/.style={draw=red!65!black,line width=1pt},
+  guide/.style={draw=black!35,densely dashed,line width=.4pt}
+]
+  \node[anchor=west,font=\small\bfseries] at (0,.85)
+    {(a) Common departure bands};
+  \node[align=center] at (2.0,.35) {positive\\tape};
+  \node[align
+
+===================
+
+### bezier controls
+\begin{tikzpicture}[x=1.2cm,y=1cm,
+  reference/.style={draw=black!28,densely dashed,line width=.5pt},
+  selected/.style={draw=black,line width=1.4pt},
+  vertex/.style={circle,fill=black,inner sep=1.6pt}]
+  \foreach \i in {0,...,5} {
+    \coordinate (t\i) at (\i,1.7);
+    \coordinate (c\i) at (\i,0);
+  }
+  \foreach \i [evaluate=\i as \j using int(\i+1)] in {0,...,4} {
+    \draw[reference] (t\i)--(t
+
+===================
+
+### scope
+\begin{tikzpicture}[font=\small,>=latex,
+  layer/.style={line width=.65pt,draw=black!55},
+  connection/.style={line width=1.35pt,draw=blue!45!black},
+  guide/.style={draw=black!25,densely dotted,line width=.45pt}]
+
+  \begin{scope}[shift={(0,.75)}]
+    \node[anchor=west,font=\small\bfseries] at (0,5.3) {A window layer};
+    \draw[->,black!65] (0,0) -- (3.9,0) node[below] {start $x$};
+    \draw[->,b
+
+===================
+
+### clip
+\begin{tikzpicture}[x=1.55cm,y=1.55cm,>=Latex,font=\small]
+ \begin{scope}
+  \clip (-.25,-1.1) rectangle (4.4,1.65);
+  \fill[blue!5] (0,0) circle (3);
+ \end{scope}
+ \fill (0,0) circle (1.4pt) node[left] {$0$};
+ \draw[->,gray] (0,0)--(3,0) node[midway,below] {$r$};
+ \node[blue!45!black] at (1.15,1.34) {base ball $B_r$};
+ \draw[red!65!black,dashed,thick] (3.08,.65) circle (.85);
+ \fill[red!65!black] 
+
+===================
+
+### arc
+\begin{tikzpicture}[x=0.91cm,y=0.91cm,font=\small,
+  aperture/.style={line width=0.7pt},
+  comparison/.style={draw=figuregray,dashed,line width=0.6pt},
+  dimension/.style={<->,>=Stealth,line width=0.45pt}]
+  \begin{scope}[shift={(3.05,0)}]
+    \node[font=\small\bfseries] at (0,2.10) {Common coarsening};
+    \fill[figuregray!7] (-2.8,-1.35) rectangle (2.8,1.35);
+    \draw[comparison] (-2.8,-1.35) r
+
+===================
+
+### plot coordinates
+\begin{tikzpicture}[x=1.45cm,y=1.45cm,>=Stealth,font=\small]
+ \draw[gray!65,densely dotted] (0,0) circle[radius=1.46];
+ \draw[gray!65,densely dotted] (4.4,0) circle[radius=1.46];
+ \filldraw[fill=gray!15,draw=black] (0,0) circle[radius=.22];
+ \filldraw[fill=gray!15,draw=black] (4.4,0) circle[radius=.22];
+ \node at (0,0) {$s$};
+ \node at (4.4,0) {$t$};
+ \draw[very thick] (.22,0)--(.65,0);
+ \draw[ver
+
+===================
+
+### other
+\begin{tikzpicture}[font=\small,>=Latex,
+ box/.style={draw,rounded corners=2pt,align=center,text width=5.2cm,
+ minimum height=11mm,inner sep=5pt},node distance=9mm and 12mm]
+ \node[box,dashed] (analytic) {Uniform Hecke zero-free theorem\\from the companion};
+ \node[box,below=of analytic] (primes) {Polynomially bounded auxiliary primes};
+ \node[box,below=of primes] (table) {Finite fields and\\prima
+
+===================
+
+### ellipse
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,
+  axes/.style={gray!65,thin},
+  capacityellipse/.style={draw=linkblue,fill=linkblue!8,thick}]
+  \foreach \x/\name in {0/U,4.2/V,8.4/X_v} {
+    \begin{scope}[shift={(\x,0)}]
+      \draw[axes,->] (-1.25,0)--(1.35,0);
+      \draw[axes,->] (0,-.85)--(0,1.15);
+      \node at (0,-1.15) {\(\name\)-plane};
+    \end{scope}
+  }
+  \begin{scope}[shift={(.12,.20)},rot

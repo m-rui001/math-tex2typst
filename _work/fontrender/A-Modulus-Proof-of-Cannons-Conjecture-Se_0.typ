@@ -1,0 +1,31 @@
+#import "@preview/cetz:0.5.0"
+#let page_rotate = rotate
+#set page(width: 18cm, height: 20cm, margin: 1.5cm)
+#set text(lang: "en", size: 11pt)
+
+#cetz.canvas({
+  import cetz.draw: *
+  rect((0, 1.25), (7, 1.72), fill: rgb("#f7f7f7"))
+  rect((0, -1.72), (7, -1.25), fill: rgb("#f7f7f7"))
+  rect((0, -1.72), (7, 1.72), stroke: (paint: rgb("#8c8c8c")))
+  line((0, 1.25), (7, 1.25), (0, -1.25), (7, -1.25), stroke: (paint: rgb("#8c8c8c")))
+  content((1.9, 1.49), [#text(size: 9pt)[top band: $H_N=0$]])
+  content((1.9, -1.49), [#text(size: 9pt)[bottom band: $H_N=1$]])
+  content((0.1, 1.15), [#text(size: 9pt)[$"mathcal" Q$]], anchor: "north-west")
+  line((0, 0.13), (0.37, 0.03), (0.69, 0.19), (1.04, 0.05), (1.34, 0.2), (1.64, -0.04), (1.98, 0.08), (2.28, -0.09), (2.6, 0.04), (2.91, -0.13), (3.19, 0.06), (3.53, -0.09), (3.84, 0.09), (4.16, -0.02), (4.48, 0.15), (4.81, 0.01), (5.13, 0.18), (5.47, 0.04), (5.8, 0.2), (6.1, 0.05), (6.41, 0.2), (6.7, 0.08), (7, 0.2), stroke: (paint: rgb("#36657d"), thickness: 2.0pt))
+  line((1.34, 0.2), (1.42, 0.37), (1.59, 0.32), (2.28, -0.09), (2.18, -0.28), (2.38, -0.24), (4.81, 0.01), (4.89, -0.21), (5.03, -0.15), (6.1, 0.05), (6.04, -0.14), (6.22, -0.19), stroke: (paint: rgb("#36657d"), thickness: 1.1pt))
+  content((1.95, 0.4), [#text(fill: rgb("#36657d"))[#text(size: 9pt)[$C_{N,t} subset \{H_N=t\}$]]], anchor: "south")
+  bezier((4.9, 1.72), (3.72, 0.79), (4.4, 1.32), (3.88, 1.29), stroke: (paint: rgb("#a46f30"), dash: "dashed"))
+  bezier((3.72, 0.79), (4.1, -0.8), (3.5, 0.34), (4.24, -0.24), stroke: (paint: rgb("#a46f30")))
+  bezier((4.1, -0.8), (5.1, -1.72), (4, -1.24), (4.94, -1.29), stroke: (paint: rgb("#a46f30"), dash: "dashed"))
+  circle((3.72, 0.79), radius: 0.05292, fill: rgb("#a46f30"))
+  circle((4.1, -0.8), radius: 0.05292, fill: rgb("#a46f30"))
+  line((3.72, 0.79), (4.1, -0.8), fill: rgb("#a46f30"))
+  content((3.96, 0.74), [#text(size: 9pt)[$H_N<t$]], anchor: "west")
+  content((3.89, -0.86), [#text(size: 9pt)[$H_N>t$]], anchor: "east")
+  content((4.27, -0.46), [#text(fill: rgb("#a46f30"))[#text(size: 9pt)[$eta$]]], anchor: "west")
+  content((7.32, 0.82), [#text(size: 9pt)[strict-side#linebreak()extension]], anchor: "west")
+  line((7.2, 0.86), (5.1, 1.18), stroke: (paint: rgb("#595959")))
+  content((7.32, -0.85), [#text(size: 9pt)[strict-side#linebreak()extension]], anchor: "west")
+  line((7.2, -0.82), (5.05, -1.36), stroke: (paint: rgb("#595959")))
+})

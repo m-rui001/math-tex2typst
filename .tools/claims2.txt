@@ -1,0 +1,20 @@
+claimed=147 unclaimed=15 multi=0
+
+UNCLAIMED
+L14   A-Direct-Proof-of-Optimal-Max-Cut-Hardness-September-23-2026
+L48   An-exponential-two-way-deterministic-state-lower-bound-for-one-way-liveness-Se
+L82   Integral-and-fractional-expectation-thresholds-are-equivalent-September-23-202
+L85   Memory-and-precision-in-noiseless-Gaussian-regression-September-27-2026
+L92   Nonuniqueness-for-Bounded-Measurable-Scalar-Conductivities-in-Three-Dimensions
+L98   Posterior-replicas-and-conditional-information-in-Gaussian-regression-Septembe
+L99   Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026
+L104  Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026
+L109  Rigidity-of-the-Turing-degrees-September-24-2026
+L110  Routing-densities-and-representation-contraction-for-Thorp-sweeps-September-26
+L116  Smooth-counterexamples-to-Yaus-nodal-upper-bound-in-dimensions-three-and-four-
+L121  Subpolynomial-query-complexity-for-well-conditioned-log-concave-sampling-Septe
+L129  The-complete-Crouzeix-theorem-September-23-2026
+L146  The-second-Kahn-Kalai-conjecture-September-24-2026
+L147  The-sharp-factor-of-IID-threshold-for-the-free-Ising-model-on-regular-trees-Se
+
+MULTI

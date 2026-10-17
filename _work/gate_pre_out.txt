@@ -1,0 +1,64 @@
+D25 片段数=32 反向还原 bytes=399742  log-before=399742  match=True
+  PRE  {'size': 399742, 'secs': 24, 'contig': True, 'rows': 36, 'math': 8454, 'problems': []}
+  POST {'size': 400111, 'secs': 24, 'contig': True, 'rows': 36, 'math': 8454, 'problems': []}
+  文件 D25-Crouzeix完整不等式直接证明.md  pre_bytes=399742 post_bytes=400111
+D32 片段数=11 反向还原 bytes=151624  log-before=151624  match=True
+  PRE  {'size': 151624, 'secs': 19, 'contig': True, 'rows': 44, 'math': 4560, 'problems': []}
+  POST {'size': 151813, 'secs': 19, 'contig': True, 'rows': 44, 'math': 4560, 'problems': []}
+  文件 D32-Tingley问题正解.md  pre_bytes=151624 post_bytes=151813
+D65 片段数=4 反向还原 bytes=130263  log-before=130263  match=True
+  PRE  {'size': 130263, 'secs': 22, 'contig': True, 'rows': 40, 'math': 3308, 'problems': []}
+  POST {'size': 130335, 'secs': 22, 'contig': True, 'rows': 40, 'math': 3308, 'problems': []}
+  文件 D65-渐近中点一致凸与树空间的无界菱形畸变.md  pre_bytes=130263 post_bytes=130335
+D47 片段数=3 反向还原 bytes=126546  log-before=126546  match=True
+  PRE  {'size': 126546, 'secs': 22, 'contig': True, 'rows': 123, 'math': 3667, 'problems': []}
+  POST {'size': 126600, 'secs': 22, 'contig': True, 'rows': 123, 'math': 3667, 'problems': []}
+  文件 D47-无共轭点但无非正曲率度量的三流形.md  pre_bytes=126546 post_bytes=126600
+D36 片段数=4 反向还原 bytes=115172  log-before=115172  match=True
+  PRE  {'size': 115172, 'secs': 17, 'contig': True, 'rows': 47, 'math': 1785, 'problems': []}
+  POST {'size': 115217, 'secs': 17, 'contig': True, 'rows': 47, 'math': 1785, 'problems': []}
+  文件 D36-投影体体积的单纯形最大反例.md  pre_bytes=115172 post_bytes=115217
+D26 片段数=3 反向还原 bytes=188412  log-before=188412  match=True
+  PRE  {'size': 188412, 'secs': 17, 'contig': True, 'rows': 34, 'math': 4817, 'problems': []}
+  POST {'size': 188439, 'secs': 17, 'contig': True, 'rows': 34, 'math': 4817, 'problems': []}
+  文件 D26-加倍Hilbert子集无双Lipschitz有限维嵌入.md  pre_bytes=188412 post_bytes=188439
+D28 片段数=3 反向还原 bytes=151904  log-before=151904  match=True
+  PRE  {'size': 151904, 'secs': 23, 'contig': True, 'rows': 42, 'math': 1873, 'problems': []}
+  POST {'size': 151931, 'secs': 23, 'contig': True, 'rows': 42, 'math': 1873, 'problems': []}
+  文件 D28-双曲群无几何CAT0作用.md  pre_bytes=151904 post_bytes=151931
+D29 片段数=3 反向还原 bytes=192274  log-before=192274  match=True
+  PRE  {'size': 192274, 'secs': 35, 'contig': True, 'rows': 57, 'math': 4560, 'problems': []}
+  POST {'size': 192301, 'secs': 35, 'contig': True, 'rows': 57, 'math': 4560, 'problems': []}
+  文件 D29-Borsuk覆盖断言九维反例.md  pre_bytes=192274 post_bytes=192301
+D41 片段数=3 反向还原 bytes=124840  log-before=124840  match=True
+  PRE  {'size': 124840, 'secs': 30, 'contig': True, 'rows': 39, 'math': 4053, 'problems': []}
+  POST {'size': 124867, 'secs': 30, 'contig': True, 'rows': 39, 'math': 4053, 'problems': []}
+  文件 D41-敏感度与块敏感度的超二次分离.md  pre_bytes=124840 post_bytes=124867
+D68 片段数=3 反向还原 bytes=371407  log-before=371407  match=True
+  PRE  {'size': 371407, 'secs': 53, 'contig': True, 'rows': 37, 'math': 12821, 'problems': []}
+  POST {'size': 371428, 'secs': 53, 'contig': True, 'rows': 37, 'math': 12821, 'problems': []}
+  文件 D68-相容性熵与Thorp扫描的谱.md  pre_bytes=371407 post_bytes=371428
+D30 片段数=2 反向还原 bytes=136494  log-before=136494  match=True
+  PRE  {'size': 136494, 'secs': 17, 'contig': True, 'rows': 42, 'math': 4379, 'problems': []}
+  POST {'size': 136512, 'secs': 17, 'contig': True, 'rows': 42, 'math': 4379, 'problems': []}
+  文件 D30-负pinched三维Kähler流形无有界全纯坐标.md  pre_bytes=136494 post_bytes=136512
+D34 片段数=2 反向还原 bytes=147518  log-before=147518  match=True
+  PRE  {'size': 147518, 'secs': 20, 'contig': True, 'rows': 76, 'math': 4528, 'problems': []}
+  POST {'size': 147536, 'secs': 20, 'contig': True, 'rows': 76, 'math': 4528, 'problems': []}
+  文件 D34-无团图的对数独立数界.md  pre_bytes=147518 post_bytes=147536
+D24 片段数=1 反向还原 bytes=130730  log-before=130730  match=True
+  PRE  {'size': 130730, 'secs': 17, 'contig': True, 'rows': 106, 'math': 3415, 'problems': []}
+  POST {'size': 130739, 'secs': 17, 'contig': True, 'rows': 106, 'math': 3415, 'problems': []}
+  文件 D24-Kaplansky拟迹猜想反例.md  pre_bytes=130730 post_bytes=130739
+D364 片段数=1 反向还原 bytes=71226  log-before=71226  match=True
+  PRE  {'size': 71226, 'secs': 23, 'contig': True, 'rows': 41, 'math': 1368, 'problems': []}
+  POST {'size': 71235, 'secs': 23, 'contig': True, 'rows': 41, 'math': 1368, 'problems': []}
+  文件 D364-平面Schrödinger端点收敛的H三分之一次幂全程.md  pre_bytes=71226 post_bytes=71235
+D44 片段数=1 反向还原 bytes=105112  log-before=105112  match=True
+  PRE  {'size': 105112, 'secs': 19, 'contig': True, 'rows': 58, 'math': 3344, 'problems': []}
+  POST {'size': 105121, 'secs': 19, 'contig': True, 'rows': 58, 'math': 3344, 'problems': []}
+  文件 D44-小finitistic维数无穷的代数.md  pre_bytes=105112 post_bytes=105121
+D50 片段数=0 反向还原 bytes=101104  log-before=101104  match=True
+  PRE  {'size': 101104, 'secs': 14, 'contig': True, 'rows': 48, 'math': 3276, 'problems': []}
+  POST {'size': 101104, 'secs': 14, 'contig': True, 'rows': 48, 'math': 3276, 'problems': []}
+  文件 D50-非坐标多项式与三维仿射零纤维.md  pre_bytes=101104 post_bytes=101104

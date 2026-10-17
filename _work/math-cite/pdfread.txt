@@ -1,0 +1,2 @@
+LATEX: '∥φ∥row ≤\n√\n2 ∥φ∥2\n(?, Lemma 2.9, Equation (19)).\n(1)\nReferences\nDickson. A non-structure theorem for C∗-algebras. 2014.\n1\n'
+TYPST: 'Bibliography\nEquation with a citation \nmoved out of its text run:\n1, Lemma 2.9, Equation (19\n𝐩𝐡𝐢≤[2]\nBibliography\n[1] Dickson, “A non-\nstructure theorem.” \n2014.\n[2] Pisier, “Similarity \nproblems.” 1999.\n'

@@ -1,0 +1,41 @@
+修前=208 修后=185 消失=23 新增=0
+--- 消失的站
+  D139-单格覆盖的n对数n阶界：采样器层级与电路和的反推笔记.md                  :352  KaTeX parse error: Unexpected end of input in a ma
+  D157-Nagata猜想平面曲线反推笔记：正规束多项式与指数集行插值.md              :826  KaTeX parse error: Unexpected end of input in a ma
+  D163-四次多项式无平方因子值的数域行列式路线与自适应辅助素数.md                 :189  KaTeX parse error: Can't use function '$' in math 
+  D163-四次多项式无平方因子值的数域行列式路线与自适应辅助素数.md                 :189  KaTeX parse error: Unexpected end of input in a ma
+  D233-强瘦树的多项式时间构造.md                                 :368  KaTeX parse error: Unexpected end of input in a ma
+  D30-负pinched三维Kähler流形无有界全纯坐标.md                    :93   KaTeX parse error: Unexpected end of input in a ma
+  D326-方格随机簇临界界面共形极限的构思重建.md                          :40   KaTeX parse error: Unexpected end of input in a ma
+  D351-把hypersymplectic四流形变形成hyperkahler三元组.md        :78   KaTeX parse error: Unexpected end of input in a ma
+  D351-把hypersymplectic四流形变形成hyperkahler三元组.md        :78   KaTeX parse error: Unexpected end of input in a ma
+  D351-把hypersymplectic四流形变形成hyperkahler三元组.md        :78   KaTeX parse error: Unexpected end of input in a ma
+  D351-把hypersymplectic四流形变形成hyperkahler三元组.md        :78   KaTeX parse error: Unexpected end of input in a ma
+  D351-把hypersymplectic四流形变形成hyperkahler三元组.md        :78   KaTeX parse error: Unexpected end of input in a ma
+  D396-复配中的过滤乘积与保边界压缩.md                              :115  KaTeX parse error: Unexpected end of input in a ma
+  D446-分裂切丛在有理连通流形上的自动可积性.md                          :107  KaTeX parse error: Unexpected end of input in a ma
+  D463-对数Kodaira维数与整条纤维的形变.md                         :19   KaTeX parse error: Unexpected end of input in a ma
+  D480-临界方格FK界面的自然占有测度.md                             :210  KaTeX parse error: Unexpected end of input in a ma
+  D521-具有偶数个素因子的素数前驱.md                               :176  KaTeX parse error: Unexpected end of input in a ma
+  D57-两个拟阵公共基的近似计数.md                                 :74   KaTeX parse error: Unexpected end of input in a ma
+  D575-十维光滑非二次仿射极大整图.md                               :100  KaTeX parse error: Unexpected end of input in a ma
+  D576-光滑闭曲面到欧氏四维空间的等距浸入.md                           :175  KaTeX parse error: Unexpected end of input in a ma
+  D582-量子海森堡铁磁体的低温自发磁化.md                             :102  KaTeX parse error: Unexpected end of input in a ma
+  D750-三维量子Heisenberg铁磁体磁化的第一格点修正.md                  :533  KaTeX parse error: Unexpected end of input in a ma
+  D750-三维量子Heisenberg铁磁体磁化的第一格点修正.md                  :533  KaTeX parse error: Can't use function '$' in math 
+--- 新增的站
+--- 原地不动的族分布（前 12）
+   59  
+   49  KaTeX parse error: Can't use function '$' in mat
+   12  KaTeX parse error: No such environment: psmallma
+    8  KaTeX parse error: Expected '}', got 'EOF' at en
+    7  KaTeX parse error: Expected group after '_' 
+    7  KaTeX parse error: Double subscript 
+    7  KaTeX parse error: Expected 'EOF', got '#' 
+
+#̲#
+    6  KaTeX parse error: Can't use function '\(' in ma
+    6  KaTeX parse error: Double superscript 
+    5  KaTeX parse error: Expected 'EOF', got '\right' 
+    5  KaTeX parse error: Expected group after '^' 
+    2  KaTeX parse error: Can't use function '\mathbf' 

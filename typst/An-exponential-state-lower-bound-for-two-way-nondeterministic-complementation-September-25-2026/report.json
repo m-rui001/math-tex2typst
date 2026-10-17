@@ -1,0 +1,33 @@
+{
+  "paper": "An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026",
+  "ok": true,
+  "typ_lines": 603,
+  "included_pdf_pages": 0,
+  "formulas": 472,
+  "math_failed": 0,
+  "labels": 66,
+  "equations": 1,
+  "theorems": 3,
+  "figures": 3,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 3
+  },
+  "samples": {
+    "formulas": "472",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "flafter",
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026.tex"
+}

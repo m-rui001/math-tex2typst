@@ -1,0 +1,13 @@
+canvases built: before 918, after 918
+canvases changed: 300 over 231 papers, lost: 0
+   script groups written: 936   still braced on a changed line: 2
+   still braced> Spontaneous-magnetization-in | content((2.475, -2.12), [#text(size: 9pt)[$rho (u)=v, rho (v)=u$ #linebreak()$"div" \1_(v arrow.r u)=\1_{\{v\}
+    4  Sharp-mass-bounds-for-the-two-dimensional-O4-model-September
+    4  Rigidity-of-Smooth-Billiards-with-a-Continuous-Caustic-Colla
+    3  Nonuniqueness-of-percolation-on-nonamenable-quasi-transitive
+    3  Mass-and-covering-exponents-for-fixed-length-honeycomb-walks
+    3  Finite-tensor-savings-and-exact-Fourier-circuits-September-2
+    3  Directional-transience-implies-ballisticity-September-23-202
+    3  Cutoff-throughout-the-high-temperature-Sherrington-Kirkpatri
+    3  A-projective-fourfold-with-large-fundamental-group-and-non-S
+wrote _work/regen_needed.txt with 231 papers

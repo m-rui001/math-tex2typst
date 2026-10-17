@@ -1,0 +1,78 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{amscd}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\DeclareMathOperator{\Bun}{Bun}
+\DeclareMathOperator{\Loc}{Loc}
+\DeclareMathOperator{\LS}{LS}
+\DeclareMathOperator{\SS}{SS}
+\DeclareMathOperator{\QCoh}{QCoh}
+\DeclareMathOperator{\IndCoh}{IndCoh}
+\DeclareMathOperator{\Perf}{Perf}
+\DeclareMathOperator{\Rep}{Rep}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\IC}{IC}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\Fl}{Fl}
+\DeclareMathOperator{\Shv}{Shv}
+\DeclareMathOperator{\Perv}{Perv}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Nilp}{Nilp}
+\DeclareMathOperator{\Gal}{Gal}
+\newcommand{\Gd}{\widehat G}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cN}{\mathcal N}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cY}{\mathcal Y}
+\newcommand{\cX}{\mathcal X}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\bA}{\mathbb A}
+\newcommand{\bP}{\mathbb P}
+\newcommand{\bG}{\mathbb G}
+\newcommand{\bQ}{\mathbb Q}
+\newcommand{\bZ}{\mathbb Z}
+\newcommand{\bC}{\mathbb C}
+\newcommand{\bF}{\mathbb F}
+\newcommand{\bR}{\mathbb R}
+\newcommand{\et}{\mathrm{\acute et}}
+\newcommand{\restr}{\mathrm{restr}}
+\newcommand{\lcc}{\mathrm{lcc}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\pt}{\mathrm{pt}}
+\newcommand{\pH}{{}^{p}\!H}
+\newcommand{\Hecke}{\mathsf H}
+\newcommand{\boxt}{\boxtimes}
+\newcommand{\xto}[1]{\xrightarrow{#1}}
+\newcommand{\into}{\hookrightarrow}
+\begin{document}
+\begin{CD}
+ \delta_s^*\Hecke^s_{I,\boldsymbol V}(\Psi F)
+       @>{\delta_s^*c_{I,\boldsymbol V}}>>
+             \delta_s^*\Psi \Hecke^{\bar\eta}_{I,\boldsymbol V}(F)\\
+ @V{\mathrm{fusion}}V{\sim}V
+       @VV{\operatorname{Ex}^*_{\delta}\,,\ \Psi(\mathrm{fusion})}V\\
+ \Hecke^s_{J,\boldsymbol W}(\Psi F)
+       @>{c_{J,\boldsymbol W}}>>
+             \Psi \Hecke^{\bar\eta}_{J,\boldsymbol W}(F),
+\end{CD}
+\end{document}

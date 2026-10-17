@@ -1,0 +1,37 @@
+#100i on control152_rows.json: the two labels of every on-ink face row, our page vs the pdflatex control
+dx/dy is box 2 from box 1 on that page; equal offsets with bigger widths = metrics, different offsets = placement
+
+### The-Blockwise-Alperin-Weight-Conjecture-Sept#0  row 4.56  'Smallorbitgivesanextensionwithsmall' vs '=1'
+ours     dx   -3.07 dy   -2.79  depth  6.21  |  b1 w 149.30 h 10.26 @9.0 Smallorbitgivesanexten |  b2 w  14.00 h  9.00 @9.0 when𝑂𝑝(𝐽)=1(7) |  pair at ink (186.7, 84.9)
+ctl       (a label is missing on this page:  b1=0 b2=0)
+
+### Irrational-cubic-fourfolds-with-geometric-K3#0  row 4.12  '⇢X' vs 'Morifactorization'
+ours     dx   19.29 dy    1.81  depth  3.87  |  b1 w  23.16 h 11.00 @11.0 𝐏4⇢𝑋                   |  b2 w  63.40 h  8.03 @8.03 Morifactorizat |  pair at ink (185.7, 1.3)
+ctl       (a label is missing on this page:  b1=0)
+
+### Finite-Monoid-Computations-and-a-Uniform-Gen#0  row 3.92  'continuation' vs 'firstmismatch'
+ours     dx   27.75 dy    9.04  depth  3.50  |  b1 w  57.46 h 12.54 @11.0 continuation           |  b2 w  64.55 h 12.54 @11.0 firstmismatch  |  pair at ink (173.5, 60.5)
+ctl       dx   26.82 dy    9.33  depth  1.58  |  b1 w  59.41 h 10.91 @10.91 continuation           |  b2 w  68.33 h 10.91 @10.91 firstmismatch  |  pair at ink (174.4, 60.8)
+
+### The-crossing-number-of-complete-bipartite-gr#0  row 3.90  '−1' vs 'Transversechords:'
+ours     dx  -45.30 dy    5.52  depth  5.48  |  b1 w  14.06 h 11.00 @11.0 −1                     |  b2 w  84.69 h 12.54 @11.0 Transversechor |  pair at ink (0.0, 83.6)
+ctl       dx    7.93 dy   50.18  depth  0.00  |  b1 w  13.94 h 11.05 @10.91 −1                     |  b2 w  88.16 h 10.91 @10.91 Transversechor |  pair at ink (2.5, 41.9)
+ctl       dx  -37.11 dy    8.15  depth  2.90  |  b1 w  13.94 h 11.05 @10.91 −1                     |  b2 w  88.16 h 10.91 @10.91 Transversechor |  pair at ink (10.4, 83.9)
+
+### Polynomial-vacuum-representations-and-bridge#2  row 3.43  'Conesphere' vs 'pΛ'
+ours     dx   36.95 dy   -5.93  depth  3.07  |  b1 w  56.03 h 12.54 @11.0 Conesphere𝑂            |  b2 w  10.91 h  9.00 @9.0 𝑝Λrtimes⟨𝜔⟩    |  pair at ink (15.4, 50.5)
+ctl       (a label is missing on this page:  b1=0 b2=0)
+
+### The-Blockwise-Alperin-Weight-Conjecture-Sept#0  row 3.36  'Valuedliftandmarked-coverdescent' vs 'p'
+ours     dx   49.62 dy   -1.81  depth  3.71  |  b1 w 136.60 h 10.26 @9.0 Valuedliftandmarked-co |  b2 w   3.71 h  6.30 @6.3 Nosuchmarked𝐽- |  pair at ink (199.4, 72.7)
+ctl       (a label is missing on this page:  b1=0 b2=16)
+
+### Cylinder-amplitudes-and-logarithmic-bridge-l#0  row 3.32  'y' vs 'Firstmeansleft;'
+ours     dx  -49.56 dy    5.27  depth  3.73  |  b1 w   4.41 h  9.00 @9.0 𝑦                      |  b2 w  58.53 h 10.26 @9.0 Firstmeansleft |  pair at ink (10.1, 148.6)
+ctl       dx   -0.96 dy   54.27  depth  0.00  |  b1 w   4.54 h  8.97 @8.97 y                      |  b2 w  66.32 h  8.97 @8.97 Firstmeansleft |  pair at ink (30.6, 105.6)
+ctl       dx  -63.32 dy    8.07  depth  0.90  |  b1 w   4.54 h  8.97 @8.97 y                      |  b2 w  66.32 h  8.97 @8.97 Firstmeansleft |  pair at ink (30.6, 151.8)
+
+### Disk-transfer-representations-and-confined-b#1  row 3.10  'block' vs '2'
+ours     dx  169.67 dy   90.01  depth  0.00  |  b1 w  24.29 h 12.54 @11.0 block𝐴                 |  b2 w   5.50 h 11.00 @11.0 2              |  pair at ink (49.5, 14.2)
+ours     dx   14.89 dy   -8.18  depth  2.82  |  b1 w  24.29 h 12.54 @11.0 block𝐴                 |  b2 w   5.50 h 11.00 @11.0 2              |  pair at ink (204.3, 104.2)
+ctl       (a label is missing on this page:  b1=0)

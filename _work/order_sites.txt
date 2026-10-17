@@ -1,0 +1,55 @@
+parsed ORDER sites total = 149
+families:
+  DELIM-GROUP      77
+  \F               21
+  \d               16
+  \OOo             12
+  \T               5
+  \diff            5
+  \du              4
+  \asy             2
+  \dv              2
+  \ot              2
+  \alphah          1
+  \asypto          1
+  \lambdah         1
+notes touched = 35
+per note:
+  D362     21
+  D25      20
+  D96      16
+  D492     12
+  D58      7
+  D429     7
+  D312     6
+  D761     6
+  D71      5
+  D213     5
+  D264     5
+  D750     5
+  D160     4
+  D214     4
+  D171     3
+  D44      2
+  D81      2
+  D165     2
+  D125     1
+  D131     1
+  D145     1
+  D163     1
+  D196     1
+  D198     1
+  D212     1
+  D228     1
+  D333     1
+  D353     1
+  D375     1
+  D389     1
+  D537     1
+  D560     1
+  D616     1
+  D694     1
+  D706     1
+flagged (in-flight / unverified) sites = 0
+filename resolution:
+  unresolved/ambiguous = 0

@@ -1,0 +1,34 @@
+{
+  "paper": "Routing-densities-and-representation-contraction-for-Thorp-sweeps-September-26-2026",
+  "ok": true,
+  "typ_lines": 2296,
+  "included_pdf_pages": 0,
+  "formulas": 2568,
+  "math_failed": 0,
+  "labels": 230,
+  "equations": 135,
+  "theorems": 3,
+  "figures": 1,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "2568",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark"
+  ],
+  "macros_skipped": [
+    "\\renewcommandrenewcommand"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Routing-densities-and-representation-contraction-for-Thorp-sweeps-September-26-2026.tex"
+}

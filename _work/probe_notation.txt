@@ -1,0 +1,43 @@
+==== D77-特征二下的五边形退化与Deligne--Drinfeld猜想证明反推.md (124326 chars, 558 lines)
+   backslash two                \\two                              3
+   ^{\two}                      \^\{\\two\}                        3
+   ^(2)                         \^\(2\)                            0
+   ^{2}                         \^\{2\}                            0
+   ^2 bare                      \^2(?![0-9])                       163
+   \operatorname{Lie}           \\operatorname\{Lie\}              5
+   \Lie                         \\Lie(?![A-Za-z])                  8
+   \mathfrak f                  \\mathfrak\s*\{?f                  5
+   \dim_{\mathbb Q}             \\dim_\{?\\mathbb\s*\{?Q           19
+   \overline L_n                \\overline\s*\{?\\?L_n             18
+
+==== D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md (145349 chars, 3121 lines)
+   backslash root               \\root                             5
+   \text{root }                 \\text\{root \}                    0
+   \text{<lowercase>            \\text\{[a-z]                      6
+   \text{third }                \\text\{third \}                   1
+   \text{curvature }            \\text\{curvature \}               2
+   \text{slope }                \\text\{slope \}                   1
+   \sqrt                        \\sqrt                             45
+   \operatorname                \\operatorname                     37
+   \mathrm{                     \\mathrm\{                         11
+   root bare word (any)         root                               32
+
+==== D238-平方差自由集的固定幂节省.md (44319 chars, 884 lines)
+   \math P                      \\math\s+P                         2
+   \mathcal P                   \\mathcal\s*P(?![A-Za-z])          42
+   \mathbb P                    \\mathbb\s*\{?P(?![A-Za-z])        0
+   \P                           \\P(?![A-Za-z])                    0
+   \mathcal Z_{\math P}         \\mathcal\s*\{?Z\?_\{\\math\s+P    0
+   \mathcal Z_{\mathcal P}      \\mathcal\s*\{?Z\?_\{\\mathcal\s*P 0
+   \mathcal Z                   \\mathcal\s*\{?Z                   5
+
+==== D26-加倍Hilbert子集无双Lipschitz有限维嵌入.md (125302 chars, 1270 lines)
+   \inner                       \\inner                            4
+   \norm                        \\norm                             45
+   \langle                      \\langle                           58
+   \rangle                      \\rangle                           58
+
+==== D30-负pinched三维Kähler流形无有界全纯坐标.md (98426 chars, 1019 lines)
+   \math then non-letter        \\math(?![A-Za-z])                 3
+   E:\math path                 E:\\math                           3
+

@@ -1,0 +1,16 @@
+\documentclass[tikz,border=10pt]{standalone}
+\begin{document}
+\begin{tikzpicture}
+  \coordinate (a) at (0,0);
+  \coordinate (b) at (3,0);
+  \draw[->] (a) to[bend left=15] node[below, name=L] {X} (b);
+  \path (a) to[bend left=15] coordinate[midway] (m);
+  \makeatletter
+  \def\report##1##2{\pgf@process{\pgfpointanchor{##1}{center}}\typeout{CASE angle=15 side=below ##1=##2:\the\pgf@x/\the\pgf@y}}
+  \report{m}{mid}
+  \report{L}{label}
+  \pgf@process{\pgfpointanchor{L}{south}}\typeout{CASE angle=15 side=below label.south:\the\pgf@x/\the\pgf@y}
+  \pgf@process{\pgfpointanchor{a}{center}}\typeout{CASE angle=15 side=below a:\the\pgf@x/\the\pgf@y}
+  \makeatother
+\end{tikzpicture}
+\end{document}

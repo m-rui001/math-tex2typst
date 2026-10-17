@@ -1,0 +1,25 @@
+[WARNING] Could not convert TeX math y = z \tag{star}, rendering as TeX:
+  y = z \tag{star}
+            ^
+  unexpected control sequence \tag
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \deg_{\rm wt}A_i\le\omega_i, rendering as TeX:
+  \deg_{\rm wt}A_i\le\omega_i
+            ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \sum_{i,j=1}^{10}U^{ij}\partial_{ij}(\det D^2u)^{-11/12}=0 \quad\hbox{on }\R^{10}, rendering as TeX:
+  11/12}=0 \quad\hbox{on }\R^{10}
+                     ^
+  unexpected control sequence \hbox
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \left\| \frac{\partial u}{\partial x} \right\|_{L^2} \bigl( \langle a, b \rangle \bigr) \left[ \sup_{t \in (0,T]} \norm{v(t)} \right], rendering as TeX:
+  {t \in (0,T]} \norm{v(t)} \right]
+                     ^
+  unexpected control sequence \norm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \operatorname{tr}(A) \DeclareMathOperatorSample \mathrm{diag} \tfrac12 \binom{n}{k} \overbrace{a+b}^{\text{note}} \underbrace{c_d}_{\substack{i \in I \\ j \in J}} \left( \frac{ \sum_{k} \lambda_k }{ 1 + \prod_{j} (1 - p_j) } \right)^{\!\!2}, rendering as TeX:
+  MathOperatorSample \mathrm{diag} \tfrac1
+                     ^
+  unexpected control sequence \DeclareMathOperatorSample
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"

@@ -1,0 +1,43 @@
+{
+  "paper": "Kadisons-similarity-theorem-through-uniform-derivation-estimates-September-23-2026",
+  "ok": true,
+  "typ_lines": 871,
+  "included_pdf_pages": 0,
+  "formulas": 886,
+  "math_failed": 0,
+  "labels": 88,
+  "equations": 41,
+  "theorems": 3,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "886"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "accsupp"
+  ],
+  "macros_skipped": [
+    "\\let\\AstraOriginalMapsto",
+    "\\let\\AstraOriginalHookrightarrow",
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand",
+    "\\let\\AstraOriginalLongmapsto",
+    "\\let\\AstraOriginalLongrightarrow",
+    "\\renewcommandrenewcommand",
+    "\\let\\mapsto",
+    "\\let\\longrightarrow",
+    "\\providecommand\\doi",
+    "\\renewcommand\\bibsection",
+    "\\renewcommand\\@maketitle"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Kadisons-similarity-theorem-through-uniform-derivation-estimates-September-23-2026.tex"
+}

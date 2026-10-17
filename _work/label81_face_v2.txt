@@ -1,0 +1,22 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+canvases on the pages: 1055 in 572 papers
+  carrying a #box( frame: 418   with >=2 content() bodies: 1055
+rendering 1055 canvases (one per page)
+canvases rendered: 1055   typst refused: 8
+canvases with a collision: 418 in 282 papers
+foreign-ink pairs: 856   ink-on-ink pairs: 278
+  foreign vertical centre distance <=6pt: 143   >6pt: 713
+  ink-on-ink  vertical centre distance <=6pt: 198   >6pt: 80
+  worst 12.5pt  'newvertices' into a 40x68pt box  Cycle-clique-Ramsey-numbers-September-25-202#1 (boxes=2 ink=19, 3 foreign / 0 on-ink)
+  worst 12.5pt  'Centers:' into a 27x27pt box  Finite-cylinder-approximation-of-ruled-sets-#0 (boxes=82 ink=14, 11 foreign / 0 on-ink)
+  worst 12.5pt  'leftshift' into a 26x81pt box  The-crossing-number-of-complete-bipartite-gr#1 (boxes=1 ink=9, 2 foreign / 0 on-ink)
+  worst 12.0pt  'q=z−p' into a 28x49pt box  Mass-and-covering-exponents-for-fixed-length#0 (boxes=5 ink=64, 5 foreign / 0 on-ink)
+  worst 12.0pt  'Anisolatedcontact' into a 12x13pt box  A-two-dimensional-area-law-from-a-global-spe#3 (boxes=4 ink=14, 0 foreign / 1 on-ink)
+  worst 11.1pt  'retainedarch' into a 67x116pt box  Cylinder-amplitudes-and-logarithmic-bridge-l#3 (boxes=10 ink=16, 5 foreign / 0 on-ink)
+  worst 11.0pt  'w=(1,1)' into a 38x38pt box  A-product-counterexample-to-the-simplex-maxi#0 (boxes=4 ink=6, 2 foreign / 0 on-ink)
+  worst 11.0pt  'm=1−k' into a 179x83pt box  Sharp-binary-information-contraction-on-the-#0 (boxes=1 ink=19, 3 foreign / 0 on-ink)
+  worst 11.0pt  'RΓ' into a 11x11pt box  Filtered-chromatic-splitting-at-generic-prim#2 (boxes=0 ink=43, 0 foreign / 8 on-ink)
+  worst 11.0pt  'A=WI' into a 33x33pt box  No-percolation-at-criticality-on-quasi-trans#1 (boxes=12 ink=11, 1 foreign / 0 on-ink)
+  worst 10.3pt  'T=0' into a 100x100pt box  Slope-field-perturbations-of-the-two-cylinde#0 (boxes=3 ink=7, 2 foreign / 0 on-ink)
+  worst 10.3pt  '(Section5)' into a 96x96pt box  The-trace-cone-classifies-Razak-Jacelon-stab#0 (boxes=10 ink=16, 1 foreign / 0 on-ink)
+pairs in _work/label81_pairs.json, papers in _work/regen81.txt

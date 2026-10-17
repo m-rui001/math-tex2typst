@@ -1,0 +1,23 @@
+rounded in products: rect paths 120, node frames 946
+papers whose pictures ask for rounded corners: 219  of them with nothing rounded: 21
+  A-Power-Saving-for-Polynomial-Differences-at-Prime-Arguments
+  A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite-Oct
+  A-counterexample-to-Kaplanskys-quasitrace-conjecture-Septemb
+  A-marked-tensor-obstruction-to-four-dimensional-disk-embeddi
+  An-explicit-exact-Hausdorff-gauge-for-SLE-September-26-2026
+  Blochs-Law-for-Finite-Range-Heisenberg-Ferromagnets-in-Three
+  Conformal-Limits-of-Critical-Square-Lattice-Random-Cluster-I
+  Constant-factor-hardness-of-directed-feedback-vertex-set-Sep
+  Milnes-rationality-conjecture-for-abelian-varieties-Septembe
+  Nonhomeomorphic-closed-aspherical-four-manifolds-with-the-sa
+  Ordinary-two-point-correlations-of-multiplicative-functions-
+  Polynomial-Time-Unitary-Synthesis-from-a-Boolean-Oracle-Octo
+  Polynomial-removal-fails-for-ordered-binary-matrices-Septemb
+  Quadratic-Strong-Operator-Paving-over-Arbitrary-Maximal-Abel
+  Rigidity-of-Smooth-Billiards-with-a-Continuous-Caustic-Colla
+  Routing-densities-and-representation-contraction-for-Thorp-s
+  Simulating-One-Tape-Time-in-Two-Fifths-Power-Space-September
+  The-Deligne-Drinfeld-conjecture-September-23-2026
+  The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-w
+  The-spherical-magnetization-law-for-the-three-dimensional-qu
+  Thomason-Model-Structures-in-Every-Strict-Higher-Dimension-S

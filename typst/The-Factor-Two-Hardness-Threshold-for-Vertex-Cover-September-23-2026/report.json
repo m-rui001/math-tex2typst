@@ -1,0 +1,34 @@
+{
+  "paper": "The-Factor-Two-Hardness-Threshold-for-Vertex-Cover-September-23-2026",
+  "ok": true,
+  "typ_lines": 706,
+  "included_pdf_pages": 0,
+  "formulas": 469,
+  "math_failed": 0,
+  "labels": 97,
+  "equations": 2,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "469",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark"
+  ],
+  "macros_skipped": [
+    "\\defdef"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-Factor-Two-Hardness-Threshold-for-Vertex-Cover-September-23-2026.tex"
+}

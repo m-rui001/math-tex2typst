@@ -1,0 +1,702 @@
+{
+ "A-Counterexample-to-Kuroshs-Division-Ring-Problem-September-23-2026": {
+  "total": 17,
+  "worst": 3.02,
+  "pages": 46,
+  "hits": [
+   [
+    3.02,
+    36,
+    "𝑈𝑠𝑐: forward term"
+   ],
+   [
+    2.32,
+    36,
+    "𝑠2"
+   ],
+   [
+    2.2,
+    36,
+    "𝑠1"
+   ]
+  ]
+ },
+ "A-Polynomial-Time-2-Approximation-for-Shortest-Common-Superstring-September-24-2026": {
+  "total": 4,
+  "worst": 9.59,
+  "pages": 19,
+  "hits": [
+   [
+    9.59,
+    7,
+    "𝑓𝑖(𝑥)"
+   ],
+   [
+    7.9,
+    10,
+    "top"
+   ],
+   [
+    6.35,
+    10,
+    "middle"
+   ]
+  ]
+ },
+ "A-Power-Saving-for-Polynomial-Differences-at-Prime-Arguments-October-5-2026": {
+  "total": 3,
+  "worst": 9.71,
+  "pages": 43,
+  "hits": [
+   [
+    9.71,
+    13,
+    "(𝑢, 𝜎𝑟∗)"
+   ],
+   [
+    7.74,
+    13,
+    "(𝑢, 𝜎𝑎)"
+   ],
+   [
+    7.69,
+    13,
+    "(𝑢, 𝜎1)"
+   ]
+  ]
+ },
+ "A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite-October-4-2026": {
+  "total": 2,
+  "worst": 2.22,
+  "pages": 31,
+  "hits": [
+   [
+    2.22,
+    29,
+    "𝑄"
+   ],
+   [
+    1.45,
+    29,
+    "𝑃"
+   ]
+  ]
+ },
+ "A-boundary-field-gap-for-the-spin-one-Heisenberg-chain-September-24-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 29,
+  "hits": []
+ },
+ "A-counterexample-to-Kaplanskys-quasitrace-conjecture-September-23-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 17,
+  "hits": []
+ },
+ "A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026": {
+  "total": 9,
+  "worst": 9.47,
+  "pages": 62,
+  "hits": [
+   [
+    9.47,
+    5,
+    "Faithful"
+   ],
+   [
+    9.47,
+    5,
+    "model"
+   ],
+   [
+    9.36,
+    5,
+    "Formal Frobenius algebra"
+   ]
+  ]
+ },
+ "A-linear-list-coloring-bound-in-terms-of-the-Hadwiger-number-September-23-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 42,
+  "hits": []
+ },
+ "A-marked-tensor-obstruction-to-four-dimensional-disk-embedding-September-24-2026": {
+  "total": 8,
+  "worst": 8.06,
+  "pages": 54,
+  "hits": [
+   [
+    8.06,
+    12,
+    "𝑦"
+   ],
+   [
+    5.93,
+    12,
+    "𝐷𝑦,𝑗"
+   ],
+   [
+    5.93,
+    12,
+    "𝐷𝑧,𝑗"
+   ]
+  ]
+ },
+ "A-polynomial-time-algorithm-for-three-machine-unit-job-scheduling-September-24-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 21,
+  "hits": []
+ },
+ "A-power-saving-for-intersective-polynomial-differences-with-an-exponent-depending-only-on-the-degree-October-5-2026": {
+  "total": 1,
+  "worst": 9.58,
+  "pages": 47,
+  "hits": [
+   [
+    9.58,
+    16,
+    "𝑖 uniform on [ℓ𝑠]"
+   ]
+  ]
+ },
+ "A-proof-of-Seymours-second-neighborhood-conjecture-September-23-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 15,
+  "hits": []
+ },
+ "Almost-everywhere-Fourier-convergence-in-L-log-L-September-23-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 77,
+  "hits": []
+ },
+ "An-Irrational-Trace-Counterexample-to-Reduced-Baum-Connes-September-23-2026": {
+  "total": 8,
+  "worst": 6.52,
+  "pages": 23,
+  "hits": [
+   [
+    6.52,
+    18,
+    "𝐵𝑃"
+   ],
+   [
+    6.52,
+    18,
+    "𝐵𝑃"
+   ],
+   [
+    6.52,
+    18,
+    "𝐶2"
+   ]
+  ]
+ },
+ "Bi-Lipschitz-Absorption-of-c0-Without-a-Linear-Copy-of-c0-September-26-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 27,
+  "hits": []
+ },
+ "Blochs-Law-for-Finite-Range-Heisenberg-Ferromagnets-in-Three-Dimensions-October-5-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 38,
+  "hits": []
+ },
+ "Bounded-Step-Walks-on-Gaussian-Primes-September-26-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 30,
+  "hits": []
+ },
+ "Constant-factor-hardness-of-directed-feedback-vertex-set-September-23-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 29,
+  "hits": []
+ },
+ "Counterexamples-to-the-Hahn-Wilson-conjecture-at-height-two-September-26-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 79,
+  "hits": []
+ },
+ "Cutoff-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026": {
+  "total": 12,
+  "worst": 7.45,
+  "pages": 171,
+  "hits": [
+   [
+    7.45,
+    54,
+    "𝑇𝘛"
+   ],
+   [
+    7.0,
+    54,
+    "𝑇𝘛"
+   ],
+   [
+    6.24,
+    54,
+    "𝑗"
+   ]
+  ]
+ },
+ "Deterministic-Polynomial-Factorization-over-Prime-Fields-October-4-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 50,
+  "hits": []
+ },
+ "Endpoint-convergence-for-the-planar-Schrodinger-equation-September-24-2026": {
+  "total": 12,
+  "worst": 5.9,
+  "pages": 90,
+  "hits": [
+   [
+    5.9,
+    84,
+    "𝐻𝐼,2"
+   ],
+   [
+    5.9,
+    84,
+    "𝐻𝐼,2"
+   ],
+   [
+    5.9,
+    84,
+    "𝐼= 𝐻𝐼,0"
+   ]
+  ]
+ },
+ "Exact-Derandomization-of-Logarithmic-Space-L-equals-RL-equals-BPL-September-23-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 109,
+  "hits": []
+ },
+ "Finite-tensor-savings-and-exact-Fourier-circuits-September-25-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 48,
+  "hits": []
+ },
+ "Invariant-projection-counterexamples-for-every-irrational-rotation-September-27-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 51,
+  "hits": []
+ },
+ "Lipschitz-Equivalent-Separable-Banach-Spaces-Need-Not-Be-Linearly-Isomorphic-September-24-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 25,
+  "hits": []
+ },
+ "Metric-measure-limits-of-subcritical-FK-and-spanning-tree-planar-maps-September-24-2026": {
+  "total": 18,
+  "worst": 9.1,
+  "pages": 232,
+  "hits": [
+   [
+    9.1,
+    80,
+    "𝑞0"
+   ],
+   [
+    9.1,
+    80,
+    "𝑞0"
+   ],
+   [
+    9.09,
+    179,
+    "𝑡1"
+   ]
+  ]
+ },
+ "Milnes-rationality-conjecture-for-abelian-varieties-September-23-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 38,
+  "hits": []
+ },
+ "No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026": {
+  "total": 2,
+  "worst": 12.49,
+  "pages": 42,
+  "hits": [
+   [
+    12.49,
+    35,
+    "mark 𝑀(1,1)"
+   ],
+   [
+    3.56,
+    35,
+    "mark 𝑀(1,1)"
+   ]
+  ]
+ },
+ "Nonhomeomorphic-closed-aspherical-four-manifolds-with-the-same-homotopy-type-October-4-2026": {
+  "total": 23,
+  "worst": 5.38,
+  "pages": 64,
+  "hits": [
+   [
+    5.38,
+    35,
+    "𝑈𝑎"
+   ],
+   [
+    5.38,
+    35,
+    "𝑈𝑎"
+   ],
+   [
+    5.38,
+    35,
+    "𝑈𝑏"
+   ]
+  ]
+ },
+ "Nonuniqueness-of-percolation-on-nonamenable-quasi-transitive-graphs-September-24-2026": {
+  "total": 10,
+  "worst": 12.73,
+  "pages": 55,
+  "hits": [
+   [
+    12.73,
+    44,
+    "𝑔𝐽"
+   ],
+   [
+    12.73,
+    44,
+    "ℎ𝐽"
+   ],
+   [
+    12.44,
+    44,
+    "𝑢= 𝑔0"
+   ]
+  ]
+ },
+ "Ordinary-two-point-correlations-of-multiplicative-functions-September-24-2026": {
+  "total": 8,
+  "worst": 8.46,
+  "pages": 87,
+  "hits": [
+   [
+    8.46,
+    60,
+    "6"
+   ],
+   [
+    7.68,
+    60,
+    "1"
+   ],
+   [
+    5.83,
+    60,
+    "𝑢"
+   ]
+  ]
+ },
+ "Polynomial-Time-Unitary-Synthesis-from-a-Boolean-Oracle-October-5-2026": {
+  "total": 1,
+  "worst": 9.21,
+  "pages": 21,
+  "hits": [
+   [
+    9.21,
+    15,
+    "order 𝑘< 𝑑; controlled by 𝑧"
+   ]
+  ]
+ },
+ "Polynomial-removal-fails-for-ordered-binary-matrices-September-25-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 12,
+  "hits": []
+ },
+ "Prescribed-large-volume-charges-on-threefolds-with-trivial-canonical-bundle-September-24-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 52,
+  "hits": []
+ },
+ "Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere-September-23-2026": {
+  "total": 16,
+  "worst": 11.72,
+  "pages": 146,
+  "hits": [
+   [
+    11.72,
+    70,
+    "𝑋1"
+   ],
+   [
+    11.72,
+    70,
+    "𝑋1"
+   ],
+   [
+    11.58,
+    70,
+    "𝑋2"
+   ]
+  ]
+ },
+ "Quadratic-Strong-Operator-Paving-over-Arbitrary-Maximal-Abelian-Subalgebras-September-25-2026": {
+  "total": 1,
+  "worst": 1.45,
+  "pages": 57,
+  "hits": [
+   [
+    1.45,
+    49,
+    "short arc: 𝑋𝐽"
+   ]
+  ]
+ },
+ "Rigidity-of-Smooth-Billiards-with-a-Continuous-Caustic-Collar-September-24-2026": {
+  "total": 2,
+  "worst": 6.38,
+  "pages": 148,
+  "hits": [
+   [
+    6.38,
+    2,
+    "𝜕Ω"
+   ],
+   [
+    2.24,
+    2,
+    "𝜕Ω"
+   ]
+  ]
+ },
+ "Rokhlins-multiple-mixing-problem-for-one-transformation-September-23-2026": {
+  "total": 4,
+  "worst": 1.45,
+  "pages": 40,
+  "hits": [
+   [
+    1.45,
+    16,
+    "𝐿𝐴(𝑥)"
+   ],
+   [
+    1.45,
+    16,
+    "𝐿𝐵(𝑦)"
+   ],
+   [
+    1.45,
+    16,
+    "𝐽𝑠(𝑐)"
+   ]
+  ]
+ },
+ "Routing-densities-and-representation-contraction-for-Thorp-sweeps-September-26-2026": {
+  "total": 6,
+  "worst": 4.82,
+  "pages": 95,
+  "hits": [
+   [
+    4.82,
+    9,
+    "1"
+   ],
+   [
+    4.75,
+    9,
+    "input"
+   ],
+   [
+    4.72,
+    9,
+    "0"
+   ]
+  ]
+ },
+ "Simulating-One-Tape-Time-in-Two-Fifths-Power-Space-September-25-2026": {
+  "total": 1,
+  "worst": 7.35,
+  "pages": 17,
+  "hits": [
+   [
+    7.35,
+    12,
+    "1"
+   ]
+  ]
+ },
+ "Staggered-extraction-for-exact-matrix-multiplication-over-every-field-September-24-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 35,
+  "hits": []
+ },
+ "Subpolynomial-query-complexity-for-well-conditioned-log-concave-sampling-September-26-2026": {
+  "total": 2,
+  "worst": 10.04,
+  "pages": 56,
+  "hits": [
+   [
+    10.04,
+    17,
+    "the sole closing trace: cost 𝑑𝑏"
+   ],
+   [
+    8.14,
+    37,
+    "supplies center"
+   ]
+  ]
+ },
+ "The-Deligne-Drinfeld-conjecture-September-23-2026": {
+  "total": 25,
+  "worst": 7.14,
+  "pages": 42,
+  "hits": [
+   [
+    7.14,
+    30,
+    "𝘊:"
+   ],
+   [
+    7.14,
+    30,
+    "𝘈:"
+   ],
+   [
+    7.14,
+    30,
+    "𝘉:"
+   ]
+  ]
+ },
+ "The-Euclidean-plane-is-not-five-colorable-September-23-2026": {
+  "total": 11,
+  "worst": 12.72,
+  "pages": 63,
+  "hits": [
+   [
+    12.72,
+    58,
+    "𝑧𝐵"
+   ],
+   [
+    12.72,
+    58,
+    "𝑧𝐵"
+   ],
+   [
+    12.72,
+    58,
+    "𝑧𝐵"
+   ]
+  ]
+ },
+ "The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-September-25-2026": {
+  "total": 9,
+  "worst": 7.8,
+  "pages": 61,
+  "hits": [
+   [
+    7.8,
+    49,
+    "anchored high patch"
+   ],
+   [
+    7.78,
+    49,
+    "𝑞𝐿"
+   ],
+   [
+    7.73,
+    49,
+    "𝑞𝑅"
+   ]
+  ]
+ },
+ "The-Unique-Games-Theorem-September-23-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 59,
+  "hits": []
+ },
+ "Thomason-Model-Structures-in-Every-Strict-Higher-Dimension-September-25-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 35,
+  "hits": []
+ },
+ "Uniform-computation-of-the-squared-logarithmic-k-server-bound-September-24-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 17,
+  "hits": []
+ },
+ "Unitarizability-Implies-Amenability-for-Countable-Groups-September-23-2026": {
+  "total": 4,
+  "worst": 5.27,
+  "pages": 19,
+  "hits": [
+   [
+    5.27,
+    13,
+    "𝐹: label 𝑗"
+   ],
+   [
+    5.06,
+    13,
+    "𝐹: label 𝑖"
+   ],
+   [
+    4.99,
+    13,
+    "𝑐(𝑥, 𝑗)𝑣𝑗"
+   ]
+  ]
+ },
+ "Virasoro-Constraints-for-Projective-Complete-Intersections-September-24-2026": {
+  "total": 0,
+  "worst": 0.0,
+  "pages": 48,
+  "hits": []
+ },
+ "quantitative-lower-bounds-for-trace-reconstruction-September-24-2026": {
+  "total": 4,
+  "worst": 8.64,
+  "pages": 44,
+  "hits": [
+   [
+    8.64,
+    37,
+    "odd root"
+   ],
+   [
+    7.99,
+    37,
+    "𝜎"
+   ],
+   [
+    1.53,
+    37,
+    "𝑌𝐼1 = 𝑉𝐺+ 𝐻𝐼1"
+   ]
+  ]
+ }
+}

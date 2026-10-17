@@ -1,0 +1,37 @@
+dash names the emitter never reads -- statements inside a tikzpicture, corpus-wide
+source = _work/flat/*.tex (flattened), counted by literal key
+
+key                       stmts canvases   papers
+densely dashed              273      171      114
+densely dotted              154       83       67
+dash pattern                  7        5        4
+dash dot                      2        2        2
+
+UNION: 436 statements / 228 canvases / 146 papers of 724
+
+papers, by canvas count:
+   3  Quenched-SLE-Universality-for-Weakly-Disordered-FK-Ising-Interfaces-Oc
+   3  SLE3-universality-for-weak-finite-range-Ising-interactions-September-2
+   2  A-Fully-Polynomial-Randomized-Approximation-Scheme-for-Perfect-Matchin
+   2  A-Polynomial-Time-2-Approximation-for-Shortest-Common-Superstring-Sept
+   2  A-counterexample-to-the-nearby-Lagrangian-conjecture-September-23-2026
+   2  A-two-dimensional-area-law-from-a-global-spectral-gap-September-24-202
+   2  Buffered-comparison-and-stopping-band-resolution-in-critical-Ising-Sep
+   2  Canonical-conformal-limits-of-subcritical-FK-planar-maps-September-24-
+   2  Directional-transience-implies-ballisticity-September-23-2026
+   2  Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-Septe
+   2  Global-classical-solutions-of-the-three-dimensional-relativistic-Vlaso
+   2  Localization-costs-and-information-growth-for-exact-Gaussian-observati
+   2  Logarithmic-Relative-Fluctuations-in-the-Weakly-Disordered-Planar-Isin
+   2  Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September
+   2  Metric-measure-limits-of-subcritical-FK-and-spanning-tree-planar-maps-
+   2  Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-
+   2  Nearly-minimal-maxima-and-positive-minima-of-Littlewood-polynomials-Oc
+   2  No-bigeodesics-in-planar-first-passage-percolation-September-24-2026
+   2  Nonuniqueness-of-percolation-on-nonamenable-quasi-transitive-graphs-Se
+   2  Planar-Graph-Metrics-Embed-into-L1-with-Constant-Distortion-September-
+   2  Positive-Metric-Entropy-for-the-Standard-Map-at-Large-Parameters-Septe
+   2  Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere-September-23-2026
+   2  Self-dual-random-cluster-interfaces-below-one-September-23-2026
+   2  Signed-cylinder-propagation-and-marked-polygons-on-the-honeycomb-latti
+   2  Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-Octo

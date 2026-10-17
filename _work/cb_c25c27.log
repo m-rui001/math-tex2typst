@@ -1,0 +1,42 @@
+收工报告（按规格第 5 条，每份分别给数）：
+
+**C25（arXiv:1511.08164，Chi Li，2015-11-25，「Minimizing normalized volumes of valuations」）**
+- 成品：`E:\math\被引笔记\C25-最小化赋值的正规化体积.md`
+- 字节：26,194 B（≥ 22,000 B）
+- 行数：224 行
+- CR：0
+- 全文 `$` 总数：1,044（偶）
+- 反引号数：352（偶）
+- 小节数：10（`## 0`–`## 9`，外加 `### 4.1`）
+- 取证次数：约 7 次 Read（全部针对 `被引素材/1511.08164/main.tex`）
+- `Write` 次数：1（仅落骨架），其余 9 节均用 `Edit` 追加
+- 数学跨度：76 个 `$$` 块 + 968 个内联 `$`；展示式 ≥ 5 条，数学占比 ≥ 25%
+- 引用接缝：登记 D307（`LiProperness`）、D476（`LiMinimizing`），未读对应稿
+
+**C26（arXiv:1512.03887，Taro Fujisawa，2015-12-12，「A remark on the decomposition theorem for direct images of canonical sheaves tensorized with semipositive vector bundles」）**
+- 成品：`E:\math\被引笔记\C26-典范层直接像分解定理附半正向量丛之注记.md`
+- 字节：22,456 B（≥ 22,000 B）
+- 行数：264 行
+- CR：0
+- 全文 `$` 总数：634（偶）
+- 反引号数：286（偶）
+- 小节数：15（`## 0`–`## 14`）
+- 取证次数：2 次 Read（针对 `被引素材/1512.03887/main.tex`）
+- `Write` 次数：1（仅落骨架），其余 14 节均用 `Edit` 追加
+- 数学跨度：54 个 `$$` 块 + 580 个内联 `$`；数学占比较高
+- 引用接缝：登记 D318（`Fujisawa2015`）、D385（`Fujisawa2015`），未读对应稿
+
+**C27（arXiv:1603.05765，Caucher Birkar，2016-03-18，「Anti-pluricanonical systems on Fano varieties」）**
+- 成品：`E:\math\被引笔记\C27-Fano簇上的反典范系统.md`
+- 字节：33,729 B（≥ 22,000 B）
+- 行数：298 行
+- CR：0
+- 全文 `$` 总数：1,722（偶）
+- 反引号数：692（偶）
+- 小节数：13（`## 0`–`## 12`）
+- 取证次数：约 8 次 Read（针对 `被引素材/1603.05765/main.tex`，含 Grep 检索章节目录）
+- `Write` 次数：1（仅落骨架），其余 12 节均用 `Edit` 追加
+- 数学跨度：14 个 `$$` 块 + 1,708 个内联 `$`；展示式 + 大量内联公式覆盖主定理陈述与证明骨架
+- 引用接缝：登记 D307（`BirkarComplements`）、D476（`BirkarComplements`），未读对应稿
+
+三份稿合计 82,379 字节；落盘后均 sleep 90 秒复量未回滚；无 PDF 抽取、无 git 命令、无被禁词；数学记号按 preamble 翻译为 KaTeX 形（`\bQ`→`\mathbb{Q}`、`\cO`→`\mathcal{O}`、`\fm`→`\mathfrak{m}`、`\vol`→`\operatorname{vol}`、`\lct`→`\operatorname{lct}`、`\Pic`→`\operatorname{Pic}`、`\NEbar`→`\overline{\operatorname{NE}}` 等），未出现 `\fam`/`\Bbb`/`\Cal`/`\rm` 等裸字体开关与排版内部名。

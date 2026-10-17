@@ -1,0 +1,474 @@
+{
+ "curated": {
+  "mathcal": [
+   67022,
+   702
+  ],
+  "mathrm": [
+   20453,
+   637
+  ],
+  "mathbb": [
+   19497,
+   713
+  ],
+  "operatorname": [
+   18935,
+   687
+  ],
+  "text": [
+   12236,
+   702
+  ],
+  "bigl": [
+   12087,
+   705
+  ],
+  "bigr": [
+   12087,
+   705
+  ],
+  "mathbf": [
+   10674,
+   558
+  ],
+  "mathfrak": [
+   10618,
+   311
+  ],
+  "mathsf": [
+   8912,
+   336
+  ],
+  "overline": [
+   6969,
+   502
+  ],
+  "rangle": [
+   6799,
+   484
+  ],
+  "langle": [
+   6428,
+   483
+  ],
+  "mid": [
+   6085,
+   371
+  ],
+  "circ": [
+   4794,
+   422
+  ],
+  "mathscr": [
+   2895,
+   120
+  ],
+  "oplus": [
+   2146,
+   306
+  ],
+  "substack": [
+   2008,
+   411
+  ],
+  "binom": [
+   1969,
+   324
+  ],
+  "big": [
+   1920,
+   253
+  ],
+  "boldsymbol": [
+   1788,
+   127
+  ],
+  "varnothing": [
+   1730,
+   370
+  ],
+  "notin": [
+   1605,
+   414
+  ],
+  "hbox": [
+   1443,
+   341
+  ],
+  "dot": [
+   1427,
+   127
+  ],
+  "xrightarrow": [
+   1384,
+   180
+  ],
+  "cong": [
+   1024,
+   153
+  ],
+  "bullet": [
+   1006,
+   93
+  ],
+  "bigoplus": [
+   981,
+   227
+  ],
+  "limsup": [
+   814,
+   204
+  ],
+  "dagger": [
+   798,
+   59
+  ],
+  "bigcup": [
+   766,
+   292
+  ],
+  "foreach": [
+   685,
+   210
+  ],
+  "lVert": [
+   546,
+   200
+  ],
+  "rVert": [
+   546,
+   200
+  ],
+  "underline": [
+   543,
+   42
+  ],
+  "colon": [
+   433,
+   79
+  ],
+  "liminf": [
+   393,
+   153
+  ],
+  "lvert": [
+   384,
+   168
+  ],
+  "leftrightarrow": [
+   372,
+   40
+  ],
+  "star": [
+   352,
+   39
+  ],
+  "rvert": [
+   351,
+   168
+  ],
+  "bigotimes": [
+   347,
+   106
+  ],
+  "bigcap": [
+   341,
+   155
+  ],
+  "Bigr": [
+   325,
+   114
+  ],
+  "Bigl": [
+   323,
+   114
+  ],
+  "not": [
+   312,
+   142
+  ],
+  "hat": [
+   312,
+   19
+  ],
+  "mathtt": [
+   312,
+   8
+  ],
+  "tikzset": [
+   229,
+   4
+  ],
+  "check": [
+   225,
+   26
+  ],
+  "aleph": [
+   216,
+   14
+  ],
+  "Big": [
+   212,
+   56
+  ],
+  "middle": [
+   199,
+   88
+  ],
+  "iint": [
+   194,
+   53
+  ],
+  "twoheadrightarrow": [
+   166,
+   50
+  ],
+  "leftarrow": [
+   164,
+   42
+  ],
+  "supset": [
+   153,
+   61
+  ],
+  "filldraw": [
+   129,
+   40
+  ],
+  "trianglelefteq": [
+   110,
+   8
+  ],
+  "varprojlim": [
+   104,
+   33
+  ],
+  "tilde": [
+   98,
+   11
+  ],
+  "underbrace": [
+   90,
+   36
+  ],
+  "coprod": [
+   88,
+   40
+  ],
+  "emptyset": [
+   82,
+   12
+  ],
+  "xleftarrow": [
+   81,
+   31
+  ],
+  "fbox": [
+   81,
+   19
+  ],
+  "hbar": [
+   74,
+   9
+  ],
+  "bigg": [
+   69,
+   32
+  ],
+  "sqsubseteq": [
+   65,
+   2
+  ],
+  "ddot": [
+   59,
+   13
+  ],
+  "angle": [
+   59,
+   21
+  ],
+  "dfrac": [
+   55,
+   29
+  ],
+  "bigsqcup": [
+   51,
+   25
+  ],
+  "clip": [
+   49,
+   19
+  ],
+  "mbox": [
+   47,
+   36
+  ],
+  "propto": [
+   47,
+   19
+  ],
+  "vec": [
+   45,
+   5
+  ],
+  "vdots": [
+   42,
+   21
+  ],
+  "approx": [
+   41,
+   15
+  ],
+  "ominus": [
+   36,
+   15
+  ],
+  "restriction": [
+   35,
+   6
+  ],
+  "varinjlim": [
+   33,
+   16
+  ],
+  "upharpoonright": [
+   31,
+   4
+  ],
+  "Bbbk": [
+   27,
+   4
+  ],
+  "Bigg": [
+   26,
+   11
+  ],
+  "dots": [
+   26,
+   15
+  ],
+  "odot": [
+   25,
+   10
+  ],
+  "overset": [
+   22,
+   15
+  ],
+  "stackrel": [
+   22,
+   19
+  ],
+  "biggl": [
+   22,
+   16
+  ],
+  "biggr": [
+   22,
+   16
+  ],
+  "choose": [
+   21,
+   2
+  ],
+  "vert": [
+   20,
+   4
+  ],
+  "underset": [
+   18,
+   7
+  ],
+  "genfrac": [
+   12,
+   1
+  ],
+  "shade": [
+   9,
+   2
+  ],
+  "iiint": [
+   9,
+   2
+  ],
+  "rightarrow": [
+   6,
+   3
+  ],
+  "tbinom": [
+   6,
+   3
+  ],
+  "nearrow": [
+   5,
+   3
+  ],
+  "strut": [
+   5,
+   4
+  ],
+  "Biggl": [
+   5,
+   4
+  ],
+  "Biggr": [
+   5,
+   4
+  ],
+  "pattern": [
+   4,
+   1
+  ],
+  "shadedraw": [
+   4,
+   1
+  ],
+  "pic": [
+   4,
+   1
+  ],
+  "overleftarrow": [
+   4,
+   3
+  ],
+  "oint": [
+   4,
+   3
+  ],
+  "mathstrut": [
+   3,
+   2
+  ],
+  "wp": [
+   3,
+   1
+  ],
+  "phantom": [
+   2,
+   2
+  ],
+  "ddots": [
+   1,
+   1
+  ],
+  "coloneqq": [
+   1,
+   1
+  ],
+  "hphantom": [
+   1,
+   1
+  ],
+  "sideset": [
+   1,
+   1
+  ]
+ },
+ "tikz_inline_by_paper": [
+  [
+   "A-polynomial-time-algorithm-for-three-machine-unit-job-scheduling-September-24-2026",
+   3829
+  ]
+ ]
+}

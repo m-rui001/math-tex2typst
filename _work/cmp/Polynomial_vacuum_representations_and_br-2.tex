@@ -1,0 +1,35 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{tikz}
+\renewcommand*\l@subsection{\@dottedtocline{2}{1.5em}{3.6em}}
+\renewcommand*\l@subsubsection{\@dottedtocline{3}{3.8em}{4.6em}}
+\DeclareMathOperator{\Pf}{Pf}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Span}{span}
+\begin{document}
+\begin{tikzpicture}[>=stealth, every node/.style={align=center}]
+\node[text width=5.4cm] (physical) at (-3.35,2.3)
+  {Physical plane \(\mathbb C\)\\terminal radius \(|z|\)};
+\node[text width=5.4cm] (cone) at (-3.35,0)
+  {Cone sphere \(O\)\\\(A,B,C\): orders \(6,3,2\)\\\(q\): regular mark};
+\node[text width=5.4cm] (torus) at (3.35,2.3)
+  {Auxiliary torus \(\mathcal T\)\\doubled arc has homology \(u\)};
+\node[text width=5.4cm] (pillow) at (3.35,0)
+  {Pillowcase \(\mathcal P\)\\four branch corners\\labelled \(A,B,C,q\)};
+\draw[->] (physical) -- node[right, font=\small]
+  {quotient by\\\(p\Lambda\rtimes\langle\omega\rangle\)} (cone);
+\draw[->] (torus) -- node[right, font=\small]
+  {double cover\\branched at four corners} (pillow);
+\draw[<->] (cone.east) -- (pillow.west);
+\node[font=\small] at (0,-1.1)
+  {Topological identification of marked spheres only};
+\end{tikzpicture}
+\end{document}

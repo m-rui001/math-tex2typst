@@ -1,0 +1,15 @@
+
+Virtual-compact-specialness-of-hyperbolic-one-relator-groups-September-25-2026
+   maths strings 4497   carrying an escaped punctuation: all=679  inside a canvas=0
+   bare `/`: all=14  inside a canvas=0
+      body  : $r in F \( X \)$
+      body  : $ G = F \( X \) \/ chevron.l #h(-0.16667em) chevron.l r chevron.r #h(-0.16667em) chevron.r $
+      body  : $ pi_1 \( C \) tilde.equiv H quad upright("and") quad C arrow.r S_Lambda $
+
+Cutoff-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026
+   maths strings 5089   carrying an escaped punctuation: all=1958  inside a canvas=1
+   bare `/`: all=141  inside a canvas=0
+      canvas: $\|U_i\|_( ell^2) lt.eq C$
+      body  : $beta < 1 \/ 4$
+      body  : $O \( n log n \)$
+      body  : $O \( n log n \)$

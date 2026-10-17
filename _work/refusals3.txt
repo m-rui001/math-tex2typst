@@ -1,0 +1,74 @@
+Canonical-conformal-limits-of-subcritical-FK-planar- formulas  1725 refused    1
+Thomason-Model-Structures-in-Every-Strict-Higher-Dim formulas   821 refused    9
+A-rational-obstruction-to-strong-chromatic-splitting formulas  1064 refused   12
+Uniform-marked-polygon-estimates-and-sharp-finite-br formulas  2902 refused    8
+The-higher-dimensional-Erdos-distinct-distances-conj formulas  2331 refused   37
+Finite-generation-for-the-Kn-local-sphere-September- formulas  1875 refused    2
+Sharp-integral-fillings-in-CAT(0)-spaces-September-2 formulas  1093 refused    8
+Uniformization-of-complete-Kahler-manifolds-with-pos formulas  1934 refused    5
+Planar-Graph-Metrics-Embed-into-L1-with-Constant-Dis formulas   783 refused   32
+Cylinder-loop-weights-and-planar-nesting-September-2 formulas  2394 refused    3
+Entanglement-with-zero-distillable-secret-key-in-loc formulas  1072 refused    3
+Conditional-good-minimal-models-for-compact-Kahler-f formulas  2350 refused   24
+The-height-three-chromatic-overlap-an-explicit-filtr formulas  2529 refused   10
+The-PCP-for-PPAD-conjecture-a-quasilinear-reduction- formulas  2368 refused   20
+Generalized-Cartan-Hadamard-isoperimetry-and-Euclide formulas   960 refused    6
+Modularity-of-elliptic-curves-over-imaginary-quadrat formulas   586 refused   21
+Absolutely-Continuous-Spectrum-for-Weak-Disorder-And formulas  2088 refused    4
+Filtered-chromatic-splitting-at-generic-primes-Septe formulas  1976 refused    2
+The-arithmetic-category-and-stable-recovery-of-latti formulas   633 refused    0
+Disk-transfer-representations-and-confined-bridge-ma formulas  2096 refused    0
+Hilberts-tenth-problem-over-the-rational-numbers-Sep formulas  1467 refused   17
+The-low-temperature-Sherrington-Kirkpatrick-free-ene formulas  3179 refused    0
+Blochs-Conjecture-for-Surfaces-with-pg-equals-q-equa formulas   993 refused    3
+Log-abundance-in-characteristic-zero-September-24-20 formulas  1589 refused   16
+The-critical-logarithmic-correction-for-the-planar-X formulas  1783 refused   16
+QAOA-attains-the-SK-ground-state-energy-in-the-therm formulas  1207 refused   10
+A-Coulomb-Ground-State-Density-without-Kohn-Sham-Ens formulas  1158 refused    1
+A-finite-Smith-Toda-complex-V4-at-the-prime-1009-Sep formulas  1183 refused    2
+A-finite-time-singularity-of-Calabi-flow-on-projecti formulas  1313 refused   14
+Open-Homomorphisms-of-Global-Solvably-Closed-Galois- formulas   605 refused    2
+Ambiently-homeomorphic-isolated-hypersurface-germs-i formulas  1119 refused   13
+An-explicit-counterexample-to-the-Auslander-Reiten-c formulas   743 refused    1
+Close-Separable-Cstar-Algebras-Without-Spatial-Conju formulas   245 refused    2
+A-Charged-Reduction-of-the-Spacetime-Penrose-Inequal formulas  2362 refused    0
+A-high-arity-counterexample-to-Pixton-completeness-i formulas  1017 refused    3
+Log-abundance-for-compact-Kahler-spaces-under-logari formulas  3113 refused   12
+An-L3-bound-for-the-trilinear-Hilbert-transform-Octo formulas  2321 refused   11
+Equidistribution-of-Prime-Degree-Torus-Packets-with- formulas   457 refused   11
+The-complete-Crouzeix-theorem-September-23-2026      formulas   606 refused   11
+Boundary-graph-deformations-for-the-spacetime-Penros formulas  3389 refused    2
+
+TOTAL formulas 63429 refused 354 (0.56%)
+
+-- refusal classes --
+  231  other
+        A-rational-obstruction-to-strong-chromat: H^i_v(X,\widehat\mathbb Z_p[1/p])
+        A-rational-obstruction-to-strong-chromat: H^j_{\mathrm{pro\acute et}}(\Omega_C^d,\widehat\mathbb Z_p(j))
+   41  tikzcd
+        Thomason-Model-Structures-in-Every-Stric: \begin{equation}  \begin{tikzcd}[column sep=large]  P_B(X) \arrow[r,"\gamma_{B,X}"] \arrow[d] &  N_n V_B(X) \arrow[d]\\  P_B(X') \arrow[r,"\gamma_{B,X'}"'] & N_n V_B(X').
+        Thomason-Model-Structures-in-Every-Stric: \begin{equation} \label{eq:couniversal-cover-spans} \begin{tikzcd}[column sep=large]  N_n X \arrow[d,"N_n j_1"'] &  N_n X \arrow[l,equal] \arrow[r,equal]              \ar
+   16  mathring-widehat
+        Uniform-marked-polygon-estimates-and-sha: (-1)^{\widetilde{\cal W}_{ab}}
+        Uniform-marked-polygon-estimates-and-sha: -2\pi\widetilde{\cal W}
+   15  control-space
+        The-higher-dimensional-Erdos-distinct-di: \sum_{Y:\,(X,Y)\in\mathcal R,\ Z_{X,Y}=Z}t_x(Y)  \le \exp(\varepsilon s).
+        Cylinder-loop-weights-and-planar-nesting: \begin{equation} \begin{split}  \mathcal A\ \ge\  B(x)&-B(z)-2p\int(D z_r+r D_z)-2\sum_{I:\rm far}g_I\int x_I D_z  -(x,J_o z)\\  &-\int \Theta z_r-b_1\int r-s(h)(B(x)+B(z
+   15  mathchoice
+        Generalized-Cartan-Hadamard-isoperimetry: Cr^{-1}\left(\mathchoice{{\setbox0=\hbox{$\displaystyle\int$}\vcenter{\hbox{$\textstyle-$}}\kern-.5\wd0}}{{\setbox0=\hbox{$\textstyle\int$}\vcenter{\hbox{$\scriptstyle-$}
+        Generalized-Cartan-Hadamard-isoperimetry: \begin{equation} \label{eq:equality-frozen-comparison}  \left(\mathchoice{{\setbox0=\hbox{$\displaystyle\int$}\vcenter{\hbox{$\textstyle-$}}\kern-.5\wd0}}{{\setbox0=\hbox
+   13  align-env
+        Canonical-conformal-limits-of-subcritica: \begin{align*}  &\mathbb E\bigl[F(\mu_n,K_n(a_n))g(z_n(v_*))\bigr]\  &\hspace{12mm}-  \mathbb E\left[F(\mu_n,K_n(a_n))\int g\,\mathrm d\mu_n\right]  \longrightarrow0. \en
+        Planar-Graph-Metrics-Embed-into-L1-with-: \begin{align}  \min_{k\in K_\nu}d_J(k,v)&\le\delta+220a  &&\text{if $v$ is in the layer of $\nu$ or is a child portal},  \label{int:near-portal}\\  d_J(k,v)&\ge\delta-10a
+   10  custom-macro
+        Uniform-marked-polygon-estimates-and-sha: [-J(-p)^t\allowbreak{\bf1}Q_+(p)-2\pi W/(p h_*)-(2c-\ell_\Sigma)]_i/(-ip),
+        Uniformization-of-complete-Kahler-manifo: \begin{equation}  \operatorname{Lip}\left(G_k^{-1}\bigm|_{B(e^{-\nu s_{k+1}})}\right)  \le e^{\Delta s_k}  \label{eq:unif:inverse-tube} \end{equation}
+    7  text-with-math
+        Finite-generation-for-the-Kn-local-spher: S^{N_i}X^i_\nu/S^{N_i+1}X^i_\nu  \quad\text{is countable-dimensional for all sufficiently large $\nu$}.
+        Finite-generation-for-the-Kn-local-spher: \mathcal N_m=H^1(\mathcal V_m^{\vee}),\qquad  (\mathcal N_m^r)_{\mathrm{ind}}  =\{(\xi_1,\ldots,\xi_r):\xi_1,\ldots,\xi_r        \text{ are $\mathbb Q_p$-linearly indepen
+    4  array-env
+        Cylinder-loop-weights-and-planar-nesting: \begin{array}{c|c|c}  &\text{sign matrix}&\text{order matrix at }r=0\\\hline\noalign{\vskip 3pt} \text{same group}&  \begin{pmatrix}+&-&+\\-&+&+\\+&+&+\end{pmatrix}&2I_3\
+        The-PCP-for-PPAD-conjecture-a-quasilinea: \begin{array}{ccc}  W_k^{00}(i,j)&\xrightarrow{\ \alpha_i\ }&W_{a_i k}^{10}(i,j)\\  {\scriptstyle\beta_j}\big\downarrow&&        \big\downarrow{\scriptstyle\beta_j}\\  W_
+    2  cases-env
+        Log-abundance-in-characteristic-zero-Sep: \omega(X)=\omega(R(X))=  \begin{cases}  -\infty,&\text{if }R(X)\text{ is a point},\\  \kappa(R(X)),&\text{if }\dim R(X)>0.  \end{cases}
+        A-high-arity-counterexample-to-Pixton-co: e_C=  \begin{cases}  [p],&\text{if a heavy flag $p$ has been chosen},\\  c_1(\omega_{C/S})/(2h-2),&\text{if $B=\varnothing$}.  \end{cases}

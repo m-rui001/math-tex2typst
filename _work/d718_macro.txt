@@ -1,0 +1,14 @@
+PREAMBLE DEFS (3)
+manuscript/main.tex:25| \newcommand{\abs}[1]{\lvert #1\rvert}
+manuscript/main.tex:26| \newcommand{\norm}[1]{\lVert #1\rVert}
+manuscript/main.tex:27| \DeclareMathOperator{\re}{Re}
+
+NEW REGION (line 1086..1260) counts
+\re       total= 11 lines=3 in_backtick_lines=[]
+\norm     total=  5 lines=2 in_backtick_lines=[]
+\abs      total=  0 lines=0 in_backtick_lines=[]
+\langl    total=  0 lines=0 in_backtick_lines=[]
+\inner    total=  0 lines=0 in_backtick_lines=[]
+\ip       total=  0 lines=0 in_backtick_lines=[]
+
+WHOLE NOTE: re=11 norm=5 abs=0

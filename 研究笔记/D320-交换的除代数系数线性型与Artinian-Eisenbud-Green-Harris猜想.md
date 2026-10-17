@@ -1,0 +1,464 @@
+# D320 研究笔记：交换的除代数系数线性型与 Artinian Eisenbud--Green--Harris 猜想
+
+## 0 登记与规格执行说明
+
+派单编号 D320。派单行：D320 row=144 bytes=154938 thin=no dir=preprints/...（完整目录名见下一行）。
+
+- preprints/Commuting-Division-Coefficient-Forms-and-the-Artinian-Eisenbud-Green-Harris-Conjecture-September-23-2026
+- 其他队列第 144 行号
+
+以上两条逐字登记，均落在正文前 5,000 字符内，各占一行。
+
+来源清点（本会话 `wc -c` 与 `ls` 实测）：`build` 下共 11 个 `.tex`。paper.tex 2,964 字节、bibliography.tex 9,903 字节、sections/01-introduction.tex 17,773 字节、02-reduction.tex 7,084 字节、03-low-relations.tex 20,580 字节、04-parameters.tex 14,709 字节、05-curves.tex 18,921 字节、06-descent.tex 19,487 字节、07-index.tex 19,056 字节、08-assembly.tex 16,346 字节、09-consequences.tex 8,115 字节，合计 154,938 字节。README.md 只用作索引（标题、作者 OpenAI、日期 September 23, 2026），typst 分片不算来源，PDF 一律不读。全部主干我按 01 到 09 逐节通读，正文引用行号取自我的真实 Read 输出。
+
+体例：以第一人称重建"我"在这篇论文背后的思维链。论文本身只呈现成品，没有交代失败路线与试错过程，因此凡属重建我都标注 [推测] 并说明证据缺口。前向引用都指向本笔记真实存在的节号。
+
+## 1 出发点：猜想到达我手里时的形状
+
+我最先面对的对象极朴素：$S=\mathbb C[x_1,\ldots,x_n]$ 带标准分次，齐次理想 $I$ 的每一层 $(S/I)_d$ 的维数构成 Hilbert 函数 $H_{S/I}(d)=\dim_\mathbb C(S/I)_d$（01-introduction.tex:7）。理想同时被两件事约束：它包含的方程，以及它的分片维数。EGH 猜想断言这两件事在极端具体处握手：若 $I$ 包含一条次数为 $a_1,\ldots,a_n$ 的齐次正则序列 $f_1,\ldots,f_n$，那么 $I$ 的 Hilbert 函数应同某个包含纯幂 $x_i^{a_i}$ 的单项式理想一致。
+
+正则序列给出的第一件事实是 Hilbert 级数只依赖次数：
+\[
+\Hilb_{S/(f_1,\ldots,f_n)}(t)=\prod_{i=1}^n(1+t+\cdots+t^{a_i-1}),\qquad a_i=\deg f_i
+\]
+（01-introduction.tex:11-12）。所以商是 Artinian 的。猜想把我引向 Artinian 形态：变量数与序列长相等，$2\le a_1\le\cdots\le a_n$（01-introduction.tex:34）。
+
+EGH 猜想的几何出身是 Castelnuovo 理论的延拓，01-introduction.tex:16-18 明确交代了出处（EGH93 第 4 节先给二次情形，再提议任意次数的纯幂比较）；Cayley--Bacharach 式的解释已经在 EGH93 第 3 节出现、并在 EGH96 第 2.1 节展开（01-introduction.tex:19-21）。纯幂模型的价值在于把几何约束翻译成"指数有界的单项式"的组合问题（01-introduction.tex:21-23）。
+
+我接手时，已知版图是这样的 [基于 01 节文献段的复述，动机排序是我自己的重建]：
+
+- Caviglia--Maclagan 证明了 $a_i>\sum_{j<i}(a_j-1)$（$i\ge3$）的范围（01-introduction.tex:123-124），Caviglia--De Stefani 把严格不等号推到非严格（01-introduction.tex:124-126）。
+- 二次情形：Chen 处理至多四个变量（01-introduction.tex:126-127），Caviglia--De Stefani--Sbarra 给出五个二次型的独立证明并系统综述猜想（01-introduction.tex:127-130）。
+- 依赖额外结构的结果：Abedelfatah 处理全部因子分解为线性型的序列（01-introduction.tex:133-134）；Cooper 处理有限约化完备交集的子集（01-introduction.tex:135-136）；Chong 用 liaison 处理 sequentially bounded licci 理想（01-introduction.tex:137-141）。
+- 最新近：Abedelfatah 六变量二次几乎完备交集（01-introduction.tex:144-145）；Kuzmanovski 在初始次数足够大时给出指定次数区间的比较（01-introduction.tex:145-148）。
+
+共同短板一目了然：要么限定次数区间，要么限定理想的额外结构。我想要的陈述没有任何限定：任意正长度、任意 $\deg\ge2$、特征零任意域、一个理想实现全次数的 Hilbert 函数（01-introduction.tex:63-71 的摘要口气）。这个"无附加结构"的要求决定了我后面必须付出什么。
+
+## 2 最先走死的几条路
+
+[推测。论文没有失败记录，这一节是我按成品结构反推的思维史：成品里每一个奇怪部件，都对应一条走死的路留下的伤疤。]
+
+第一条路是平展退化：既然正则序列的商 Hilbert 级数只依赖次数，能否在 Hilbert 概形里把 $(f_1,\ldots,f_n)$ 直接连到 $(x_1^{a_1},\ldots,x_n^{a_n})$？卡点在于：同一条连线上必须同时拖动 $I$。取初始理想保 Hilbert 函数，却保不住"包含同一族正则序列"这件事；取 $\GL_n$ 轨道闭包，纯幂点根本不在一般序列的轨道闭包里（一般序列的系数是刚性数据，退化不会同时消掉所有交叉项）。失败的核心：我需要一个逐元素生效的机制，需要一个一个地、对 $I_d$ 中每个齐次元提取出可用的指数信息。全局退化给不了这种逐元素性。
+
+第二条路是压缩：把 $I$ 逐次替换为 lex 最大的单项式集合，再指望它成理想。压缩本身在特征零是成立的，但纯幂约束 $x_i^{a_i}\in J$ 未必随压缩保持：被替换掉的原型元素 $f_i$ 的信息以什么形式进入比较，直接决定 $J$ 是否自动含纯幂。成品里 Clements--Lindstr\"om 定理的位置（01-introduction.tex:81-83）恰好说明：压缩是事后免费获得的，比较本身必须另有来源。失败的核心：压缩是包装工艺，发动机得另外造。
+
+第三条路是 liaison 与结构定理：Chong 的路线在 licci 情形有效，因为偶联保持 Hilbert 函数差的可控性。但对一般 $I$，连第一步"存在最小首连"都无法保证。
+
+第四条路是"只用结合代数恒等式"的纯形式操作：想直接在 $\mathbb C[x]$ 内做变量替换 $x_i\mapsto \ell_i$ 把 $f_i$ 化成幂。线性替换的自由度只有 $n^2$ 维，而序列的模数空间维数远大于它，一般轨道根本碰不到纯幂。
+
+这些死路把我逼到一个奇怪的位置：既然找不到把 $f_i$ 变成纯幂的变量替换，那就扩大系数世界，允许"新变量"是带非交换系数的线性型，只要它们作为整体互相交换。这个念头就是成品的主定理（01-introduction.tex:33-56）。
+
+## 3 转折点：交换的除代数系数线性型
+
+关键一步是把"变量"本身换掉。我允许一个有限生成域扩张 $k/\mathbb C$ 和一个中心除 $k$-代数 $\Delta$，在 $\Delta[x_1,\ldots,x_n]$ 里造一个交换分次 $k$-子代数 $A$，由有限多个两两交换的线性型生成，其中有特别的 $t_1,\ldots,t_n\in A_1$，满足三角恒等式
+\[
+t_i^{a_i}=c_i f_i+\sum_{l<i}B_{il}f_l+\sum_{d>i}C_{id}t_d,\qquad c_i\in k^\times
+\]
+（01-introduction.tex:44-46，即 eq:construction-triangular）。系数 $c_i$、乘子 $B_{il}$、$C_{id}$ 齐次，且 $A$ 在 $k[x]$ 上有限；更强的是
+\[
+\{t_1^alpha_1\cdots t_n^alpha_n:\alpha\in\Z_{\ge0}^n\}
+\]
+构成整个 $\Delta[x]$ 作为左 $\Delta$-空间的基（01-introduction.tex:50-55）。注意基覆盖整个多项式代数，只限在完备交集商里，这正是它超越 Hilbert 函数比较的地方，也是配套论文做分解转移的接口（01-introduction.tex:58-61）。
+
+让我反复犹豫的是"交换"二字的精确含义。01-introduction.tex:287 的约定：系数在 $\Delta$ 里、$\Delta$ 非交换；线性型作为多项式代数的整体元素交换，各自的系数无需交换。02-reduction.tex:3-6 把这层区分说成整个方法的支点：交换性给我结合代数（能拿基），除性给我线性代数（能数最小指数）。
+
+三角恒等式为什么长这个形状 [推测，从恒等式的用法定向重建其由来]：对任何包含 $f_1,\ldots,f_n$ 的理想 $I$，扩展理想 $\Delta I$ 里每个齐次元素按 $t$-基展开，取最小指数；$t_i^{a_i}$ 的三角形式保证 $a_i\mathbf e_i$ 恰是该展开里最小，于是纯幂指数自动落进最小指数集合。方向、下标 $l<i$ 与 $d>i$ 的分工，都是为了这个比较在字典序 $\alpha_n,\alpha_{n-1},\ldots,\alpha_1$（02-reduction.tex:124-126）下逐字成立。
+
+## 4 代数骨架：有序基判别与单项式抽取
+
+这一节全部来自 02-reduction.tex，它不引入任何几何，是我整场施工里唯一"先付账后干活"的部分。
+
+有序基判别（02-reduction.tex:14）：设 $f_1,\ldots,f_n$ 正则、$\deg f_i=a_i>0$，若存在如上 $k,\Delta,A,t_i$ 满足三角恒等式（02-reduction.tex:23-27），则 $A$ 在 $k[x]$ 上有限，且 $t^\alpha$ 集是 $\Delta[x]$ 的左 $\Delta$-基（02-reduction.tex:31-33）。
+
+证明的链条我在草稿纸上顺过多次才敢信：
+- 正则性给出 $\operatorname{Hilb}_{S/(f)}(t)=\prod(1-t^{a_i})/(1-t)^n$（02-reduction.tex:40-44），于是 $f_i$ 无公共射影零点，域扩张后仍无。
+- 把 $N=\Delta[x]$ 看作右 $A$-模：$A$ 夹在 $k[x]$ 与有限自由 $k[x]$-模 $N$ 之间，故 $A$ 有限、$N$ Noether（02-reduction.tex:48-55）。
+- 断言 $t_1,\ldots,t_n$ 是 $N$-正则列。第一步：几何点处若所有 $t_j=0$，按 $i$ 增大读三角恒等式得 $f_1=\cdots=f_n=0$，迫使所有 $x_j=0$，再由有限性得 $A/(t)$ 零维（02-reduction.tex:57-63）。第二步：令 $\mathfrak m=A_{>0}$。中心变量 $x_j$ 是 $N$-正则列（$N$ 在 $k[x]$ 上自由）；商是 $\Delta$，$A$ 的正次元素在其上零作用；故 $t$ 列在 $N_{\mathfrak m}$ 上正则，支撑维 $\le n$、深度 $n$，Cohen--Macaulay 模的参数系定理收工（02-reduction.tex:65-75，引 Stacks Prop 10.103.4, Tag 00N6）。第三步：分次论证把局部结论升回整体，非零齐次元素不会被 $A\setminus\mathfrak m$ 中元素零化，因为后者非零常数项在最低次存活（02-reduction.tex:76-80）。
+- 计数：$\operatorname{Hilb}_{N/\sum Nt_j}(t)=(1-t)^n\operatorname{Hilb}_N(t)=\dim_k\Delta$（02-reduction.tex:83-86），每个正次分量 $N_d=\sum_j N_{d-1}t_j$；$d$ 次基元素个数 $\binom{n+d-1}{n-1}=\dim_\Delta N_d$（02-reduction.tex:95-96），张成加维数相等给出基。
+
+单项式抽取（02-reduction.tex:104）：对任何包含 $f_i$ 的齐次理想 $I$，存在一个单项式理想 $J\ni x_i^{a_i}$ 使 $\dim_\mathbb C(S/J)_d=\dim_\mathbb C(S/I)_d$ 对所有 $d$（02-reduction.tex:109-113）。做法：把 $I$ 扩成 $N$ 的双边理想 $\Delta I$；对每个非零齐次元素取 $t$-基展开下按序 $\alpha_n,\ldots,\alpha_1$ 的最小指数，得集合 $E$。右乘 $t_j$ 把 $E$ 平移 $\mathbf e_j$ 且不动左系数，故 $E+\mathbf e_j\subset E$（02-reduction.tex:128-130）；在除代数上做消元说明每层 $E$ 的基数就是 $(\Delta I)_d$ 的左维（02-reduction.tex:130-132）。三角恒等式把 $t_i^{a_i}-\sum_{d>i}C_{id}t_d$ 放进 $\Delta I$，而 $C_{id}t_d$ 的每一项指数都真大于 $a_i\mathbf e_i$，故 $a_i\mathbf e_i\in E$（02-reduction.tex:134-142）。取 $J=\langle x^\alpha:\alpha\in E\rangle$（02-reduction.tex:144-147）；最后 $N/\Delta I\simeq\Delta\otimes_\mathbb C(S/I)$ 作为分次左 $\Delta$-空间，补集计数给出 Hilbert 函数（02-reduction.tex:149-153）。
+
+到这里我手里只剩一个纯构造任务：造出三角恒等式。02-reduction.tex:156-163 交代了施工顺序：从第 $n$ 行做到第 $1$ 行；在次数 $b=a_i$ 的阶段，新行的约束只看 $\operatorname{Sym} U$ 的次数 $b$ 部分；若把已造好的高次行原样保留为 $a_d$ 次方程，它们在 $\deg b$ 层根本说不出话。对策是把旧行重编码为一次与二次关系的推论，关系生成元次数永远 $\le b$。这句话是我全部几何苦役的判决书：旧恒等式要在低次世界里活下来，就得给它们造一个"只看一、二次"的记忆装置，而记忆装置的几何必须干净到能支撑后面每一层归纳。
+
+## 5 归纳数据与单纯因子：低次关系的全部痛处
+
+3 节（03-low-relations.tex）把上面那句判决书展开成归纳数据 (i)-(iv)（03-low-relations.tex:26-43）：中心域 $k$ 与除代数 $\Delta_0$；形式一次型空间 $U$（$\dim U\ge3$，含 $x_1,\ldots,x_n$），评估映射到 $\Delta_0[x]_1$ 且像两两交换（03-low-relations.tex:29-37）；由一次、二次生成且在评估下消失的理想 $Q\subset\operatorname{Sym}_k U$，$\operatorname{Sym} U/Q$ 在 $k[x]$ 上有限（03-low-relations.tex:37-39）；$d>i$ 的行 $t_d$ 已在 $\operatorname{Sym} U/Q$ 中成立（03-low-relations.tex:40-43）。外加一条几何保险丝：任意代数闭扩张后，特征集 $\mathcal C(Q)=V_+(Q)\subset\mathbb P(U^\vee)$ 不含次数 $\le D$ 的整曲线，其中
+\[
+D=\bigl(\max_j a_j\bigr)^2
+\]
+（03-low-relations.tex:23-24 与 45-49）。$D$ 的平方来历要到引理 3.3 才看清：曲线度界要压过 $b(b-1)$，而 $b$ 可取到 $\max a_j$，于是取平方兜底（03-low-relations.tex:435 明确核对 $D\ge b(b-1)$）。不要求 $\mathcal C(Q)$ 光滑、约化、不可约（03-low-relations.tex:50-51）：保险丝只保险一件事，我尽量不给它加戏。
+
+阶段 $i$ 的方程组：$\mathfrak j=(Q,f_l\ (l\le i),t_d\ (d>i))\subset\operatorname{Sym}_k U$（03-low-relations.tex:63-66），关注 $\mathfrak j_b$，$b=a_i$。先证 $\mathfrak j_b$ 无基点：每个生成元次数 $\le b$；基点会零化所有生成元；沿 $i+1,\ldots,n$ 读旧三角行推出其余 $f_d$ 也零，再由正则序列 Hilbert 级数迫使所有 $x_j=0$，与 $\mathcal C(Q)$ 上有限性矛盾（03-low-relations.tex:73-92）。
+
+对 $\lambda\in(\operatorname{Sym}^b U)^\vee$ 定义 $w_\lambda(\ell)=\lambda(\ell^b)$，取
+\[
+W=\{w_\lambda:\lambda|_{\mathfrak j_b}=0\}
+\]
+（03-low-relations.tex:94-98）。特征零里纯幂张满 $\operatorname{Sym}^b U$，$W$ 就是 $\mathfrak j_b$ 的逐次零化子的多项式化身。于是"$\sum_m \ell_m^b\in\mathfrak j_b$"等价于"$\sum_m w(\ell_m)=0$ 对一切 $w\in W$"（03-low-relations.tex:101-107）。这组方程将定义参数空间 $X\subset\mathbb P(U^{\oplus M})$（03-low-relations.tex:189-190）。
+
+引理 3.3（单纯因子，03-low-relations.tex:114-212）是全节的心脏：若 $Q$ 一次、二次生成且特征集不含度 $\le b(b-1)$ 的整曲线，则任意代数闭扩张后每个非零 $w\in W$ 都带一个重数 $1$ 的不可约因子。证明分三段，我抄下自己最在意的估计：
+
+第一段，重因子必为线性。对 $Q$ 的一次或二次生成元 $q$，湮灭 $q\,\operatorname{Sym}^{b-\deg q}U$ 翻译成常系数微分方程 $q(\partial)w=0$（03-low-relations.tex:133-139，微分算子配对引 Emsalem--Iarrobino）。设 $w=p^r h$、$r\ge2$、$p\nmid h$：二次 $q$ 情形最低 $p$-进阶项是 $r(r-1)p^{r-2}h\,q(\nabla p)\pmod{p^{r-1}}$（03-low-relations.tex:146-152）。于是超曲面 $p=0$ 上的射影梯度落在 $\mathcal C(Q)$ 内。若梯度映射非常值，取一条切向被微分检测的曲线截面：次数 $\le\deg p$；归一化后偏导数是 $\mathcal O(\deg p-1)$ 的提升截面，去掉公共基点除子后像曲线的度数 $\le\deg p(\deg p-1)\le b(b-1)$，违背保险丝（03-low-relations.tex:159-173）。梯度若常值，Euler 恒等式把 $p=0$ 压进一个超平面，不可约性迫使 $p$ 线性（03-low-relations.tex:174-177）。
+
+第二段，若无单纯因子则 $w=c\prod_\nu p_\nu^{m_\nu}$，$m_\nu\ge2$，$p_\nu$ 互异线性；对数微分给出 $q(\partial)w/w$ 的双极点展开（03-low-relations.tex:179-194），综合一次方程可知 $w$ 的整体射影梯度映射像也在 $\mathcal C(Q)$ 内；限制到变化方向上是一条线，偏导数截面属于 $\mathcal O_{\mathbb P^1}(b-1)$，非零公因子去掉后得到像度 $\le b-1$ 的曲线，仍违背（03-low-relations.tex:195-203）。
+
+第三段，梯度常值意味着 $w$ 实际只依赖一个坐标，齐次性给 $w=c\,p^b$；对应泛函是"在 $p$ 处取值"（差非零标量），它湮灭 $\mathfrak j_b$ 与无基点矛盾（03-low-relations.tex:205-211）。$b=2$ 也一并覆盖：二次型有重因子即纯平方（03-low-relations.tex:428-429）。
+
+起手数据的制造（03-low-relations.tex:219-395）是我整个工程里最漂亮的一手：取偶数 $v_0$ 与普通线性型 $L_1,\ldots,L_{v_0}$ 使平方张满 $\mathbb C[x]_2$（极化，03-low-relations.tex:292-294）；引入斜 Laurent 代数，符号 $y_{\rho j}^{\pm1}$，同行异生成元反交换、异行交换（03-low-relations.tex:297-305）；把平方（中心、代数无关）局部化，得中心
+\[
+k=\C(y_{\rho j}^2:1\le\rho\le m,\ 1\le j\le v_0)
+\]
+与有限维除代数 $\Delta_0$，基是零一指数单项式（03-low-relations.tex:307-315）。中心恰为 $k$ 的验证靠奇偶向量计算：一行内与第 $j$ 个生成元交换当且仅当 $\sum_{l\ne j}\alpha_l\equiv0\pmod2$，写 $T=\sum_l\alpha_l$ 得 $\alpha_j=T$ 对所有 $j$，$v_0$ 偶迫使 $T=0$、$\alpha=0$（03-low-relations.tex:316-322）。评估 $s_\rho=\sum_j y_{\rho j}L_j(x)$，于是 $s_\rho^2=q_\rho(x)=\sum_j y_{\rho j}^2 L_j(x)^2$，各行之间交换（03-low-relations.tex:324-331）；系数向量联合代数无关，$Q=(s_\rho^2-q_\rho)$，商在 $k[x]$ 上有限（03-low-relations.tex:332-336）。
+
+剩下的是曲线排除。引理 3.4（有界曲线的定义域，03-low-relations.tex:229-275）：度 $\le D$ 的整曲线 $Z\subset\mathbb P^{n-1}_\Omega$ 定义在中间域 $F_0$ 上，$\operatorname{trdeg}_\mathbb C F_0\le d_*(n,D)$，其中 $d_*=\binom{n-1+D}{D}^2$（03-low-relations.tex:274）。证明走 Chow 形式的超平面入射描述（引 Guerra96）：过 $Z$ 中点的一对超平面的入射簇不可约、维数 $2n-3$，其像是对偶积空间里的双齐次除子，两块的次数均为 $\deg Z$；系数有限个方程重构 $Z$（03-low-relations.tex:239-269）。
+
+主计数（03-low-relations.tex:351-393）：设楼上真有一条度 $\le D$ 的整曲线 $T$，投影像为 $Z$，映射度 $d$，$\deg T=d\deg Z$，故 $d\le D$、$\deg Z\le D$。取 $Z$ 的定义域 $F_0$；记每块系数长 $r=\binom{n+1}{2}$；$mr$ 个系数在 $\mathbb C$ 上联合独立故对 $F_0$ 的超越度 $\ge mr-d_*$；扫描法保留"整块全独立"的块，弃块至多 $d_*$ 个，故至少 $m-d_*$ 块在 $F_0$ 上联合独立（03-low-relations.tex:360-373）。把保留的泛型二次型限制到 $Z$：零点除子非空、约化、支在光滑轨迹、两两不交，还能避开某个固定坐标的零点；在第 $\rho$ 个除子零点处 $q_\rho/x_j^2$ 估值 $1$、其余保留函数估值 $0$，于是它们在 $\Omega(Z)^\times/\Omega(Z)^{\times2}$ 中类独立；而 $T$ 的函数域含它们全部平方根（方程 $s_\rho^2=q_\rho$），独立平方类的基本次数公式给出
+\[
+d\ge 2^{m-d_*}
+\]
+（03-low-relations.tex:374-392）。选 $m\ge2$ 使 $2^{m-d_*}>D$，矛盾收工（03-low-relations.tex:393-394）。$n=1$ 时目标是点、楼上无曲线，取 $m=2$ 即可（03-low-relations.tex:347-349）。
+
+保持引理（03-low-relations.tex:404-426）：若 $\operatorname{Sym}\widetilde U/\widetilde Q$ 在 $\operatorname{Sym} U/Q$ 上有限，则特征集之间诱导处处定义的有限射影，且 $\mathcal O(1)$ 拉回是 $\mathcal O(1)$；楼上有一条度 $\le D$ 的整曲线就迫使楼下有一条（曲线度数=像度乘映射度数）。这就是"保险丝永不断"的完整理由；后面每一层有限齐次扩张只须引用它。
+
+## 6 参数空间的高连通：射影几何替我打工
+
+第 4 节（04-parameters.tex）处理
+\[
+Y=\{(\ell_1,\ldots,\ell_M)\in U^{\oplus M}:\ \textstyle\sum_m w(\ell_m)=0\ (\forall w\in W)\},\quad X=\PP(Y)
+\]
+（04-parameters.tex:86-90）。我要两件事：$X$ 几何不可约；去掉奇异轨迹的仿射锥连通度任意高。两件事都从单纯因子性质来。
+
+引理 4.1（非零水平与 join，04-parameters.tex:17-72）是拓扑核心：$w$ 非零齐次、$\deg b\ge2$、带一个单纯因子，则 $w^{-1}(1)$ 连通，且光滑超曲面 $F_w=\{\sum_m w(\ell_m)=1\}$ 同伦于 $M$ 份 $w^{-1}(1)$ 的 join，于是 $\widetilde H_j(F_w;\Z)=0$（$0\le j\le 2M-2$）（04-parameters.tex:24-31）。连通性证明数单调：$w^{-1}(1)\to\mathbb P(U)\setminus\{w=0\}$ 是 $b$ 次循环覆盖，沿单纯因子光滑点的小经线以生成元置换 $b$ 个根，单值群传递（04-parameters.tex:34-41）。join 断言用开覆盖 $V_-=\{\operatorname{Re}f<2/3\}$、$V_+=\{\operatorname{Re}f>1/3\}$：在 $V_-$ 上对 $1-f(x)$ 连续开 $c$ 次根，把 $V_-$ 认同为收缩因子的积；交叠区同时可开两种根，同伦推挤给出 join，迭代到 $M$ 份；join 的整系数同调公式含 Tor 项，连接 $M$ 个连通空间在 $2M-2$ 以下约化同调归零（04-parameters.tex:42-71）。欧拉恒等式顺带保证任何非零齐次水平都光滑（04-parameters.tex:70-71）。我特别珍惜这段的"整系数"三个字：第 7 节指标计算要用整数环上的 $K$ 理论，同调若只到有理数，一切免谈。
+
+主定理 4.2（04-parameters.tex:74-105）：给定 $W$（$\dim W=s$）满足单纯因子条件，取 $h\ge2$、$M\ge2h+4s+10$、$N_*=M\dim U$，则 $X$ 是几何不可约、余维 $s$ 的完全交集（$s$ 个 $b$ 次方程），
+\[
+\operatorname{codim}_X\operatorname{Sing}X\ge M-2s+1>h,
+\]
+一般 $h$ 维线性截面落在 $X_{\mathrm{sm}}$ 内且光滑；复嵌入后非零锥 $Y^o$ 与其单位截面 $Y_1$ 均 $(M+2h)$-连通（04-parameters.tex:92-104）。
+
+我的推进路线（证明 04-parameters.tex:107-331）分五段。
+
+第一段把单纯因子假设传到扩张闭包上：无重数一因子的形式组成有限多个乘法映射像的并（$\sum_\nu a_\nu\deg p_\nu=b$、$a_\nu\ge2$），它与 $\mathbb P(W)$ 的交几何为空（04-parameters.tex:110-115）。
+
+第二段维数与奇异轨迹：坏 Jacobian 秩要求存在 $[w]\in\mathbb P(W)$ 使 $\nabla w(\ell_1)=\cdots=\nabla w(\ell_M)=0$；非零 $w$ 的梯度零集维数 $\le r-1$；入射计数
+\[
+\dim\{\text{defective rank}\}\le N_*-M+s-1
+\]
+（04-parameters.tex:122-135，eq:parameter-jacobian）。每个 $Y$ 的分量维数 $\ge N_*-s$，而 $M>2s-1$ 排除分量整体藏进坏秩轨迹，故一切分量维数恰 $d=N_*-s$、一般光滑；$s$ 方程成正则列，完备交集 Cohen--Macaulay、无嵌入素、约化（04-parameters.tex:136-143）。原点外锥投影局部是 $\times\mathbb C^\times$，$Y$ 光滑当且仅当 $X$ 光滑，且
+\[
+\operatorname{codim}_Y(Y\setminus Y^o)\ge c:=M-2s+1
+\]
+（04-parameters.tex:144-153，eq:parameter-omitted）。
+
+第三段余补同调。入射开簇 $\mathcal H=\{(\ell,[w]):\sum_m w(\ell_m)\ne0\}$，向 $\mathbb C^{N_*}\setminus Y$ 的投影是秩 $s-1$ 仿射丛（对固定 $\ell$，纤维是 $W^\vee$ 上取值为 1 的仿射超平面），故同伦等价（04-parameters.tex:157-173）。另一方面 $\mathcal H$ 经赋值映到 $\mathcal B=\mathcal O_{\mathbb P(W)}(1)^\times$，欧拉恒等式使它为光滑满射，纤维恰是各 $F_w$（04-parameters.tex:175-184）。紧支撑导出像的 Leray 谱序列：$q=2N_*-2$，纤维上 $R^qp_!\Z=\Z$、$R^ip_!\Z=0$（$i>q$ 或 $q-(2M-2)\le i<q$）（04-parameters.tex:186-202）；顶上层局部由复定向给常数（04-parameters.tex:203-209）。底是实 $2s$ 维流形，紧支撑上同调 $\le 2s$ 以上为零（引 Schapira Prop 5.1.2(ii)），谱序列中 $2s-j+2M-1>2s$ 的度数不可能，故
+\[
+H_j(\mathcal H;\Z)\cong H_j(\mathcal B;\Z)\quad(0\le j\le 2M-2)
+\]
+（04-parameters.tex:211-239，eq:parameter-complement-homology）；$\mathcal B$ 收缩到 $S^{2s-1}$（04-parameters.tex:240-241）。
+
+第四段搬到光滑锥。闭开序列加余补对偶给 $H_c^{2d-j}(Y;\Z)\cong H_{2s+j-1}(\mathcal H;\Z)$（$0\le j\le\kappa=M+2h$），兼容范围 $2s+\kappa-1\le2M-2$（04-parameters.tex:243-260，eq:parameter-complement-range）；删去 $Y\setminus Y^o$ 不动左边，因为删集的实维数 $\le2(d-c)$ 而 $2d-j-1>2(d-c)$ 且 $\kappa\le2c-2$（04-parameters.tex:261-273）；两式皆由 $M\ge2h+4s+10$ 兑现（04-parameters.tex:274-276）。纤维对偶收尾：
+\[
+H_0(Y^o;\Z)=\Z,\qquad \widetilde H_j(Y^o;\Z)=0\quad(1\le j\le\kappa)
+\]
+（04-parameters.tex:277-281）。每个分量稠密交 $Y^o$，不同分量的光滑轨迹不相交，$H_0$ 无约化故分量唯一：$X$ 整（04-parameters.tex:282-285）。
+
+第五段从同调到同伦：只剩基本群。拟射影 Lefschetz 定理（Hamm 与 Lefschetz 型，引 Hamm-Le 85 Thm 1.1.3(ii)）把 $X_{\mathrm{sm}}$ 的型写成光滑曲面截面粘贴高维胞腔（04-parameters.tex:287-299）；$\operatorname{codim}_X\operatorname{Sing}X>h\ge2$ 使一般曲面截面避开奇异轨迹，它是 $\mathbb P^{s+2}$ 里 $s$ 个 $b$ 次超曲面的光滑完备交集，标准论证（可逆线性组合、Bertini、平滑 Lefschetz 到维数 2）给单连通（04-parameters.tex:301-314）。$Y^o$ 是 $\mathcal O_{X_{\mathrm{sm}}}(-1)$ 去零截面：圆丛正合列中 $\pi_1(S^1)=\Z$ 满射到 $\pi_1(Y^o)$，后者阿贝尔且化子 $H_1=0$ 故平凡（04-parameters.tex:316-321）；CW 型加 Hurewicz 逐层给 $\pi_j(Y^o)=0$（$1\le j\le\kappa$）（04-parameters.tex:322-325）；径向收缩把连通度传给 $Y_1$（04-parameters.tex:327）。Bertini 顺手给光滑 $h$ 维线性截面（04-parameters.tex:328-329）。节尾预告：整圆公共缩放与逐块 $b$ 次单位根独立作用保持 $Y$ 与光滑轨迹，径向收缩对之等变（04-parameters.tex:334-341）：这是给第 7 节预留的把手。
+
+## 7 曲线上的二元幂加法：矩阵束来自哪里
+
+第 5 节（05-curves.tex）造"把两个幂并成一个"的机器。目标恒等式 $z^b=u^b+v^b$：若我手里有 $\ell_1^b+\cdots+\ell_M^b$，就需要一种两两合并的代数操作，且合并矩阵必须住在未来的除代数里。
+
+命题 5.1（二元加法数据，05-curves.tex:19-83）：给定 $b\ge2$、本原根 $\zeta$，取
+\[
+G=(\mu_b^b/\mu_b)\rtimes(\Z/b),\qquad e=b^b
+\]
+（对角子群作商、循环置换 $b$ 个因子）（05-curves.tex:21-23）。存在光滑连通射影曲线 $C,T_0$、连通 étale $G$-覆盖 $C\to T_0$、真正 $G$-线性化的线丛 $L$，满足：
+
+- $g_T=b-1$，$g(C)-1=e(g_T-1)$，$\deg L=e$（05-curves.tex:31-33）。
+- 截面 $a_\alpha$（$|\alpha|=b$）按 $b$ 次单项式表示搬运，形式坐标 $p_0,\ldots,p_{b-1}$ 记号 $a_\alpha=p^\alpha$；定义
+\[
+z=\frac1b\sum_j p_j^b,\quad u=-\frac1b\sum_j\zeta^{-j}p_j^b,\quad v=p_0\cdots p_{b-1}
+\]
+（05-curves.tex:42-44），则 $p_j^b=z-\zeta^j u$、$z^b=u^b+v^b$（05-curves.tex:47-49）；$z$ 不变，$u,v$ 各携特征 $\chi,\psi:G\to\mu_b$；笔射 $u,v$ 无基点，给次数 $e$ 的态射 $\pi:C\to\mathbb P^1$ 且 $L=\pi^*\mathcal O(1)$（05-curves.tex:50-53）。
+- 一般 $A\in\operatorname{Pic}^0(C)$（定义域 $\kappa$）：$E_A=H^0(C,AL^{g_T})$ 维数 $e$，乘法给同构 $H^0(C,AL^{g_T+j})=E_A\otimes_\kappa\operatorname{Sym}^j_\kappa\langle u,v\rangle$（05-curves.tex:55-60）；于是每个 $a\in H^0(C,L)$ 以线性矩阵多项式 $M_a(U,V)\in\operatorname{End}_\kappa(E_A)[U,V]$ 作用，矩阵多项式族互相交换、保持全部多项式恒等式，且 $M_u=U\,\mathrm{id}$、$M_v=V\,\mathrm{id}$、$M_z^b=(U^b+V^b)\,\mathrm{id}$（05-curves.tex:61-69）；对 $A$ 的依赖在 $\operatorname{Pic}^0(C)$ 的一般 $G$-稳定开集上代数；搬运律
+\[
+M_{g_*a}(U,V)=(g_{\mathrm{coeff}}M_a)(\chi(g)U,\psi(g)V)
+\]
+（05-curves.tex:70-77，eq:matrix-transport）。
+- $G$ 在 $\operatorname{Pic}^1(C)$ 上的作用自由；对任何特征 $\xi$ 存在连续等变映射 $\operatorname{Pic}^1(C)\to S^1$（05-curves.tex:78-82）。
+
+构造细节（引理 5.2，05-curves.tex:95-210）值得慢慢回味。在 $\mathbb P^{b-1}$ 里取逐坐标 $b$ 次乘幂映射对直线 $[u:z]\mapsto[z-u:z-\zeta u:\cdots]$ 的原像；$p_j^b$ 上只有 $b-2$ 个独立线性关系（$b=2$ 时无方程）（05-curves.tex:102-109）。不可约性：设 $s=u/z$，一般纤维上 $(p_j/p_0)^b=(1-\zeta^js)/(1-s)$，这 $b-1$ 个函数在 $\mathbb C(s)^\times/\mathbb C(s)^{\times b}$ 里张自由 $(\Z/b)$-子模：在 $s=\zeta^{-j}$ 处的赋值独立检测第 $j$ 个指数，于是 Kummer 扩张次数 $b^{b-1}$，论证对合数 $b$ 同样成立（05-curves.tex:110-121）。相位变换加循环置换给 $\widetilde G=\mu_b^b\rtimes(\Z/b)$，标量子群是对角 $\mu_b$，商出 $G$，作用忠实（05-curves.tex:128-136）。不变量 $t=s^b$ 给次数 $b^b=|G|$ 的 Galois 覆盖（05-curves.tex:138-142）。Kummer 覆盖只在 $s=\zeta^{-j}$ 分歧指数 $b$；$s=1$ 处虽有多个比值同极点，同时添加仍给局部指数 $b$，因为 $\mathbb C[[x]]$ 内每个单位有 $b$ 次根（05-curves.tex:144-149）。再取 $T_0$：$d^b=t(t-1)/(t-2)$，四点的赋值 $1,1,-1,-1$，全分歧，中间扩张都在 $2$ 处分歧，而 $C'\to\mathbb P^1_t$ 在 $2$ 处不分歧，两 Galois 扩张线性无关；纤维积归一化得 $C$，覆盖 $C\to T_0$ étale（05-curves.tex:154-170）。分歧相消的账：$0,1,\infty$ 上方两个原分歧指数都是 $b$，完全局部坐标里添加同一个 $b$ 次均匀化子根，归一化后分歧消掉（05-curves.tex:172-175 附近）。Riemann--Hurwitz：$2g_T-2=-2b+4(b-1)=2b-4$、$g(C)-1=|G|(g_T-1)$（05-curves.tex:172-176）。$b=2$ 时从 $\mathbb P^1$ 出发得亏格 1 曲线间四次 étale $C_2\times C_2$-覆盖（05-curves.tex:177-179）。把 $\mathcal O(b)|_{C'}$ 拉回为 $L$：$u,z$ 无公共零点，$\deg\mathcal O(b)|_{C'}=b^{b-1}$、覆盖度 $b$，故 $\deg L=b^b=e$；标准线性化降到 $G$（对角标量在 $b$ 次作用平凡）（05-curves.tex:181-193）。恒等式核对：曲线方程给 $p_j^b=z-\zeta^ju$，相乘给 $v^b=\prod_j(z-\zeta^ju)=z^b-u^b$（05-curves.tex:201-205）；$u=v=0$ 迫使 $z=0$ 被排除，故笔射无基点、$L=\pi^*\mathcal O(1)$ 且 $\pi$ 有限次数 $e$（05-curves.tex:206-209）。图中 $C$ 是纤维积归一化、两条投影各 $b$ 次（05-curves.tex:212-233 的图注）。
+
+矩阵化（引理 5.3，05-curves.tex:246-341）用的是"平凡像射"的把戏，与 van den Bergh、Kulkarni 的广义 Clifford 代数对应以及 CKM12 Prop 2.5 的平凡前推表述同谱系（01-introduction.tex:206-210 有出处交代；05-curves.tex:239-244 就地重申）。要点：一般 $A$ 使 $AL^{g_T-1}$ 为 $\operatorname{Pic}^{g-1}$ 的一般度 $g-1$ 线丛，有效簇是 $\operatorname{Sym}^{g-1}C$ 的像、维数 $g-1$，真闭于 $g$ 维 Picard 簇，故 $H^0=H^1=0$（Riemann--Roch）；$g=1$ 时零次有效簇只余平凡丛（05-curves.tex:252-264）。开集取 $\operatorname{Pic}^0(C)$ 余集并平移，$L$ 线性化保证 $G$-稳定（05-curves.tex:264-266）。置 $\mathcal V=\pi_*(AL^{g_T})$：$\pi$ 有限故 $\mathcal V$ 是 $\mathbb P^1$ 上秩 $e$ 丛；投射公式配前述消失给 $H^*(\mathbb P^1,\mathcal V(-1))=0$；对几何点 $q$ 的正合列把 $H^0(\mathbb P^1,\mathcal V)$ 认同 $\mathcal V|_q$，评估同构（在 $\kappa$ 上同样成立，因同构可在闭包上验证），故 $\dim E_A=e$；扭转 $\mathcal O(j)$ 取截面证自由分模分解（05-curves.tex:268-294）。于是 $\mathcal M_A=\bigoplus_{j\ge0}H^0(C,AL^{g_T+j})\cong E_A\otimes_\kappa\kappa[U,V]$；截面乘法是分次 1 自同态，由零次值唯一决定，形如 $M_a(U,V)=A_aU+B_aV$；乘法交换使矩阵多项式族交换；恒等式作为零自同态保留，$M_z^b$ 的关系随 $z^b=u^b+v^b$ 落定。作者特别注明：这并不主张一切 $A_a,B_a$ 两两交换（05-curves.tex:295-315）：交换的只是"整块矩阵多项式"，这正是 02 节区分的矩阵版本。代数性靠对 $\operatorname{Pic}^0(C)\times C$ 上规范化万有线丛（沿选定曲线点取常数）做上同调与基变换（Stacks Lemma 30.22.1, Tag 07VK）（05-curves.tex:317-326）。搬运恒等式的最终核对：万有线在不同参数点上的认同相差标量、在自同态上标量消失，于是搬运构成真正的作用；$g_*u=\chi(g)u$、$g_*v=\psi(g)v$ 代入即得 eq:matrix-transport（05-curves.tex:328-341）。
+
+$\operatorname{Pic}^1$ 的两件差事（05-curves.tex:343-430）：其一，自由性（引理 5.4，05-curves.tex:350-367）：若 $g\ne1$（阶 $r$）固定 $[V]\in\operatorname{Pic}^1(C)$，重标号把 $r$ 次复合的标量吸收为 $\langle g\rangle$-线性化；自由子群沿 étale 覆盖 $q:C\to C/\langle g\rangle$ 下降给 $V=q^*V_0$，次数方程 $1=\deg V=r\deg V_0$ 矛盾（05-curves.tex:356-366）。其二，特征映射（引理 5.5，05-curves.tex:369-430）：$\mu_b\cong\Z/b$；覆盖单值群复合 $\xi$ 得 $\bar\alpha\in H^1(T;\Z/b)$；$H_1(T;\Z)$ 自由提升为 $\alpha\in H^1(T;\Z)$；$\omega=b^{-1}q^*\alpha$ 在 $C$ 上整周期：闭道的投影若单值平凡则其 $\alpha$-周期被 $b$ 整除；积分模 $\Z$ 再指数得 $f_C:C\to S^1$，满足 $f_C(gc)=\xi(g)f_C(c)$（05-curves.tex:380-403）。Abel 映射 $a:c\mapsto\mathcal O(c)$ 等变，把 $\operatorname{Pic}^1(C)$ 的平移不变实 1-形式与 $C$ 上调和 1-形式认同且诱导整系数 $H^1$-同构（Milne Jacobian Prop 2.2、Thm 2.5），故 $\omega$ 来自万有不变形式 $\widetilde\omega$，积分给 $f_\xi$（05-curves.tex:405-420）。最后用 $f_\xi(g_*A)/f_\xi(A)$ 在连通 Picard 簇上常值（拉回相同故差平移不变且被 Abel 拉回零化，注入性收工），在 Abel 像上等于 $\xi(g)$，处处成立（05-curves.tex:421-430）。
+
+命题 5.1 的合拢（05-curves.tex:432-439）：引理 5.2 供 (i)(ii)，引理 5.3 供 (iii)，引理 5.4、5.5 对 étale 覆盖 $C\to T_0$ 供 (iv)。
+
+## 8 等变下降与行列式修正：把模的秩熬成 Euler 示性数
+
+第 6 节（06-descent.tex）起定理 6.1（06-descent.tex:11-68）：已知中心除 $k$-代数 $\Delta_0$（度 $e_0$）、$U$（$\dim\ge3$）、$W$（$\dim=s$、单纯因子）、整数依序选定
+\[
+h\ge\max\bigl(\{2\}\cup\{v_p(e_0)s(p^{v_p(b)}-1):p\mid e_0\}\bigr),\qquad M\ge2h+4s+10
+\]
+（06-descent.tex:22-27，eq:division-parameters），$e_0=1$ 时素数集为空。取 05 节曲线与 $G$，$e=|G|=b^b$、$g_T=b-1$；置
+\[
+B=\prod_{m=2}^M\Pic^0(C),\quad H=G^{M-1},\quad e_1=|H|,\quad K=k(B\times X\times R),\quad F=K^H
+\]
+（06-descent.tex:37-53），$R$ 是带忠实线性 $H$-作用的仿射空间。万有一般 $A_m$ 的截面张量积 $E=\bigotimes_{m=2}^M H^0(C_K,A_m\otimes L^{g_T})$，搬运给 $\operatorname{End}_K(E)$ 半线性 $H$-作用；不变代数 $\Delta_1=\operatorname{End}_K(E)^H$ 是 $F$ 上度 $e_1$ 的中心单代数，且
+\[
+\Delta=(\Delta_0\otimes_k F)\otimes_F\Delta_1
+\]
+是度 $e_0e_1$ 的中心除代数；$\Delta$ 在 $K$ 上的标量扩张认同 $\Delta_0\otimes_k\operatorname{End}_K(E)$，下降作用里 $H$ 逐点固定 $\Delta_0$（06-descent.tex:54-68）。
+
+合法性速查：定理 4.2 供 $X$ 几何整、奇异余维 $>h$、 punctured 锥 $(M+2h)$-连通（06-descent.tex:71-74）；Picard 因子几何整故 $K$ 是域，$R$ 上作用使扩张忠实，不动域定理给 $\operatorname{Gal}(K/F)=H$（06-descent.tex:75-79）；$\dim_K E=e_1$ 来自命题 5.1 (iii) 的 $\dim E_A=e$（06-descent.tex:81-84）；万有线搬运差一个底线上丛，标量在自同态上消失故作用真实；Galois 下降（Stacks Tag 0CDR）交回中心单代数（06-descent.tex:85-93）。节末声明：除性尚未证明；且一切在一般域上完成，不需要在整个 $B\times X$ 上扩展为 Azumaya 丛（06-descent.tex:94-98）。
+
+除性的判据我称之为"数因子游戏"：中心单代数度 $d$ 时，任何有限右模维数被 $d$ 整除（分裂域上立见），商叫简约秩；若一切简约秩被 $d$ 整除，非零真右理想（简约秩在 $0$ 与 $d$ 之间）即不存在（06-descent.tex:100-105）。目标：$e_0e_1\mid r$。辅助积
+\[
+P=\prod_{m=2}^M\Pic^1(C),\qquad Z=B\times P
+\]
+登场，双重身份：自由作用让等变层下降商；行列式线丛把 $B$ 与 $P$ 耦合、把简约秩熬成 Euler 示性数（06-descent.tex:106-119）。
+
+命题 6.2（秩到 Euler，06-descent.tex:121-144）交付两条数值恒等式。复嵌入后取矩阵等幂 $\epsilon$、$\beta'=\beta\epsilon$，则对每个 $x\in X_{\mathrm{sm}}(\mathbb C)$，
+\[
+\int_Z\ch(\beta'|_{Z\times x})\td(Z)=\pm r
+\]
+（06-descent.tex:127-136，eq:descent-fiber-index，符号只依赖曲线因子）；而在复基变换前，对每个整数 $l$，
+\[
+p(l)=\chi(Z\times X,\beta\otimes\cO_X(l))/e_0\in e_0e_1\Z
+\]
+（06-descent.tex:137-141，eq:descent-twist-divisibility）；复基变换后 $p(l)$ 恰是 $\beta'\otimes\mathcal O_X(l)$ 的通常 Euler 示性数（06-descent.tex:142-143）。
+
+证明的流水账（06-descent.tex:146-415）我按三步消化。
+
+第一步，剥掉搬运的标量歧义（06-descent.tex:146-267）。给定简约秩 $r$ 的右 $\Delta$-模，拉到 $K$ 并张量 $\operatorname{End}_K(E)$ 的标准左模 $E$，得 $T=B\times X\times R$ 一般点上的 $\mathcal F_\eta$：右 $\Delta_0$-作用交换、维数 $e_0r$（张 $E$ 除掉了 $e_1$）；搬运对各万有 $A_m$ 的标量权重为逐块一次（06-descent.tex:148-157）。对 $g\in H$，两个代表同一 Picard 参数的线丛族其 Hom 丛是底线上丛的拉回：
+\[
+J_g=\bigotimes_{m=2}^M(q_m)_*\mathcal Hom(g_*A_m,A_m),\qquad
+J_g\otimes g_*\cF_\eta\simeq\cF_\eta,\quad J_g\otimes g_*J_{g'}\simeq J_{gg'}
+\]
+（06-descent.tex:159-173，eq:hom-line-transport）。引理 6.3 把 $\mathcal F_\eta$ 延成 $T$ 上相干丛：取有限多个有理截面及其 $\Delta_0$-倍数生成 $\mathcal F_0$，把 corrected-transport 像求和即不变（Noether 性保相干，组合律在理截面内成立）（06-descent.tex:179-196）。第二步，行列式修正：
+\[
+\cD=\bigotimes_{m=2}^M\left((\det R\Gamma_C(A_m\otimes V_m))^{-1}\otimes\det R\Gamma_C(A_m)\otimes\det R\Gamma_C(V_m)\right)
+\]
+（06-descent.tex:198-209，eq:determinant-correction），$V_m$ 是 $\operatorname{Pic}^1$ 上的规范化万有线；Knudsen--Mumford 的系数上同调形式语言，Deligne 配对视角：每因子是 $A_m,V_m$ 的逆 Deligne 配对张固定线 $\det R\Gamma_C(\mathcal O_C)$（06-descent.tex:210-222）。引理 6.4：权算账。$\chi(A)=1-g_C$、$\chi(A\otimes V)=\chi(V)=2-g_C$（$\chi(A)$ 用 Euler--Poincaré），行列式内标量的指数是 Euler 示性数，于是 $\mathcal D$ 的每因子带权重 $(-1,0)$（分别对 $A,V$）（06-descent.tex:224-248）：第一项抵掉 $\mathcal F$ 的权重 1，第二项不留对 $V$ 认同的依赖，群律检查里 $A$-认同的标量改动在 $\mathcal F$ 与 $\mathcal D$ 上权重相反、$V$ 改动权重为零，协圈消失、等变成真（06-descent.tex:248-259）。$R$ 的原点 $H$-固定，沿 $R=0$ 的导出限制有有限等变 Koszul 分解（$X$ 奇异也无妨），交错 Tor 类给出 $Z\times X$ 上的等变相干类 $\beta$；非等变看，$\beta$ 是从 $B\times X$ 拉回类张 $\mathcal D$（06-descent.tex:260-267）。
+
+第二步，抽取简约秩。复嵌入后 $\epsilon$-像正合、除每处矩阵模维数 $e_0$；$B\times X_{\mathrm{sm}}\times R$ 光滑连通，其上 $\mathcal F$ 完美、局部自由分解交错秩恒为 $e_0r$，导出限制保秩，故对每个 $x\in X_{\mathrm{sm}}$：
+\[
+\beta'|_{Z\times x}=\operatorname{pr}_B^*\gamma_x\otimes\cD,\qquad \gamma_x\in K^0(B),\quad \rk\gamma_x=r
+\]
+（06-descent.tex:269-287，eq:beta-fiber-factorization）。引理 6.5（混合 Picard 配对）：对任意 $\gamma\in K^0(B)$，
+\[
+\int_Z\ch(\operatorname{pr}_B^*\gamma\otimes\cD)\td(Z)=\pm\rk\gamma
+\]
+（06-descent.tex:289-296）。计算压缩到单个曲线对：Grothendieck--Riemann--Roch 给 $c_1$ 关系
+\[
+c_1\!\left((\det Rq_*(A\otimes V))^{-1}\otimes\det Rq_*A\otimes\det Rq_*V\right)=-q_*(av),\quad a=c_1(A),\ v=c_1(V)
+\]
+（06-descent.tex:297-305）：带符号指数和 $-e^{a+v}+e^a+e^v$ 的二次部分为零、四次部分 $-av$，曲线无四次 Todd 项。规范化砍掉纯参数二次分量；$\deg A=0$ 使 $a$ 无纯曲线分量，$v$ 的纯曲线分量对 $q_*(av)$ 无贡献；所得类纯混合于 $H^1(\operatorname{Pic}^0)$ 与 $H^1(\operatorname{Pic}^1)$ 之间。用 $\mathcal O_C(-c_0)$ 把 $\operatorname{Pic}^1$ 认同 $\operatorname{Pic}^0$（选择差平移、作用于整系数 $H^1$ 平凡），Abel 拉回把混合分量认成 $C\times C$ 对角类混合部分，交配形式在 $H^1(C,\Z)$ 上幺模：$\theta=\sum\Lambda_{ij}b_i\wedge p_j$ 满足
+\[
+\int_{\Pic^0\times\Pic^1}\frac{\theta^{d}}{d!}=\pm\det\Lambda=\pm1,\qquad d=2g_C
+\]
+（06-descent.tex:306-336，并自注这是 Mukai 傅里叶--Mukai 计算的数值对应面，06-descent.tex:326-328）。各曲线因子分块独立故 $Z$ 上同一单位计算成立；Picard 切丛平凡，$\operatorname{td}(Z)=1$；混合项每侧一次，故取 $P$ 顶次必已取 $B$ 顶次，$\ch(\gamma)$ 的正次项全零，只剩秩（06-descent.tex:337-344）。eq:descent-fiber-index 就此落定（06-descent.tex:346-348）。
+
+第三步，整除性。引理 6.6（torsor 上的 Euler 示性数，06-descent.tex:353-385）：$\delta:T'\to Q$ 为阶 $a$ 常群 torsor，则 $\chi(T',\delta^*\alpha)=a\,\chi(Q,\alpha)$。机制：$d=[\delta_*\mathcal O_{T'}]-a$ 在 $G_0(Q)$ 上按支撑维滤过降阶（积分支上两丛同秩、稠密开同构，滤过商生成元见 Stacks Lemma 42.23.2, Tag 02S9），故幂零；拉回后 $\delta^*d=0$，投射公式给 $(a+d)d=0$，$\mathbb Q$ 上 $a+d$ 可逆故 $d$ 零化一切，Euler 示性数取值于 $\Z$ 湮没扭量（06-descent.tex:361-385）。命题 6.2 收尾：$H$ 在 $P$ 自由（命题 5.1 (iv)），商投影是有限 étale $H$-torsor（Stacks Tag 07S7；取平移之并的 ample 线丛保射影性）；等变相干层连同 $\Delta_0$-作用沿 torsor 下降（Stacks Prop 35.5.2, Tag 023R），$\mathcal O_X(1)$ 已线性化故扭曲 $\beta\otimes\mathcal O_X(l)$ 同享（06-descent.tex:387-399）。下降层的每个上同调群是 $\Delta_0/k$ 的有限右模，$k$-维数被 $e_0^2$ 整除；引理 6.6 上楼再乘 $|H|=e_1$：
+\[
+\chi(Z\times X,\beta\otimes\cO_X(l))\in e_0^2e_1\Z
+\]
+（06-descent.tex:400-408）。上同调维数随平坦基变换守恒（Stacks Tag 02KH），$\mathbb C$ 上等幂归约除 $e_0$，全句证毕（06-descent.tex:409-415）。
+
+收束语（06-descent.tex:417-422）：Euler 示性数等于带符号简约秩，且每个代数扭曲被 $e_0e_1$ 整除，两句话之间隔着一个 $X$ 的几何尚未上场；比较留给 07。我读到这里的心态很复杂：两个"同一对象的不同侧面"若同余式相容，除性立至；若不等价，全部前功尽弃。07 节用高连通性做桥。
+
+## 9 等变指标：整系数 K 理论收网
+
+第 7 节（07-index.tex）兑现 06 结尾的承诺。记号承接定理 6.1。
+
+铺路（07-index.tex:19-52）：$\mathbb T=(S^1)^M$；块作用点特征给 $\rho:H\to\mathbb T$，$H'=\rho(H)$ 保持锥；$H'$ 与标量 $S^1$ 在单位锥 $Y_1$ 上交换作用，径向收缩等变，$Y_1$ 是 $(M+2h)$-连通（07-index.tex:26-32）。引理 7.1（07-index.tex:34-85）：存在 $H'$-等变映射
+\[
+\Phi:\mathbb T\times\PP^h(\C)\to X_{\sm}
+\]
+（$H'$ 在 $\mathbb T$ 平移、在 $\mathbb P^h$ 平凡），且有 $H'\times S^1$-等变提升 $\widetilde\Phi:\mathbb T\times S^{2h+1}\to Y_1$；忘掉等变时 $\Phi$ 同伦于 $\Phi_0$ 复合投影，且 $\Phi_0^*\mathcal O_X(-1)\simeq\mathcal O_{\mathbb P^h}(-1)$；另有 $H$-等变映射 $\vartheta:P\to\mathbb T$。构造：主丛 $\mathbb T\to\mathbb T/H'$ 与 $S^{2h+1}\to\mathbb P^h$ 之积给 $H'\times S^1$-主丛，等变提升即相伴丛（纤维 $Y_1$）的截面；底有维数 $M+2h$ 的有限 CW 结构，逐胞扩张时 $a$-胞上的障碍是 $S^{a-1}\to Y_1$ 的零伦类（07-index.tex:54-66）。同伦：相对 $\mathbb T\times\mathbb P^h\times[0,1]$（维数 $M+2h+1$）逐胞延拓，最大障碍落在 $\pi_{M+2h}(Y_1)=0$（07-index.tex:67-75）；$t_0$ 处的圈等变映射认同 tautological 线丛，给出所需同构（07-index.tex:76-79）。$\vartheta$：$H=G^{M-1}$ 的特征逐因子分解，每因子用引理 5.5 的圆值映射实现，乘积组装（07-index.tex:80-85）。
+
+指标机（07-index.tex:87-204）：把 $\beta'$ 沿 $\gamma(z,t)=(z,\Phi(\vartheta(p),t))$ 拉回为 $\sigma$；$H$ 在 $Z$ 自由，商 $V=Z/H$ 光滑射影，$\gamma$ 诱生 $V\times\mathbb P^h\to(Z\times X_{\mathrm{sm}})/H$ 的商映射，拉回类 $\tau\in K^0(V\times\mathbb P^h(\mathbb C))$。注意这些映射连续，拉回类未必代数，因此必须有整系数前推。引理 7.2（07-index.tex:131-204）：对光滑复射影 $V$、$\xi\in K^0(V\times\mathbb P^h)$，存在唯一 $I_V(\xi)\in K^0(\mathbb P^h)$ 使
+\[
+\ch(I_V(\xi))=\int_V\ch(\xi)\td(T_V)
+\]
+（07-index.tex:136-139）。这被认作 Atiyah--Hirzebruch 可微 Riemann--Roch 的特例（07-index.tex:125-128），作者给的是显式 Thom 类证明：嵌入 $i:V\hookrightarrow\mathbb P^a$，法丛 $\nu$ 取 Koszul 约定（零截面限制 $\lambda_{-1}(\nu^\vee)$）；Thom 类的 ch 除通常上 Thom 类给 $\operatorname{td}(\nu)^{-1}$（分裂原理），故 $\ch(i_!\xi)=i_*(\ch(\xi)\operatorname{td}(\nu)^{-1})$，配合切-法正合列得环境积分公式（07-index.tex:142-175）。整性：$K^0(\mathbb P^a\times\mathbb P^h)=\Z[v,u]/(v^{a+1},u^{h+1})$、$u=1-[\mathcal O_{\mathbb P^h}(-1)]$，写 $i_!\xi=\sum c_{ij}v^iu^j$（$c_{ij}\in\Z$）；每个 $\int_{\mathbb P^a}\ch(v^i)\operatorname{td}=\chi(\mathbb P^a,(1-[\mathcal O(-1)])^i)\in\Z$（Hirzebruch--Riemann--Roch 逐线丛相加）；单值性因 $\ch(u)=1-e^{-H}$ 首项 $H$、$\mathbb Q$-上线性无关（07-index.tex:176-198）。出处交代：Hatcher Prop 2.24、Thm 2.25、pp.113-114，Borel--Serre 7 节（07-index.tex:199-203）。
+
+命题 7.3（07-index.tex:211-341）：存在光滑 $h$ 维线性截面 $D_0\subset X_{\mathrm{sm}}$（$\mathbb P^{h+s}(\mathbb C)$ 中 $s$ 个 $b$ 次超曲面的完备交集）与整数 $q_0,\ldots,q_h\in e_1\Z$、$q_0=\pm r$，使对一切 $l$，
+\[
+\sum_{j=0}^h q_j\,\chi\!\left(D_0,(1-[\cO_{D_0}(-1)])^j\otimes\cO_{D_0}(l)\right)\in e_0e_1\Z
+\]
+（07-index.tex:216-224，eq:index-section-divisibility）。推演：等变类 $\beta'$ 在自由光滑商上下降为拓扑丛类，沿商拉回给 $\tau$；$Z\to V$ 是 $e_1$ 次 étale、$T_Z$ 为拉回，引理 7.2 得
+\[
+\int_Z\ch(\sigma)\td(T_Z)=e_1\,\ch(I_V(\tau))=\ch\!\left(\sum_j q_j u^j\right),\qquad q_j\in e_1\Z
+\]
+（07-index.tex:240-248，eq:index-family）。同伦性使同一式在 $(z,t)\mapsto(z,\Phi_0(t))$ 的拉回上成立；在 $\mathbb P^h$ 一点取值只剩 $q_0$，左边按 eq:descent-fiber-index 是 $\pm r$，故 $q_0=\pm r$：这一步白送 $e_1\mid r$（07-index.tex:249-259）。整除性传递到截面：$D_0$ 的存在来自 $\operatorname{codim}_X(X\setminus X_{\mathrm{sm}})>h$ 与 Bertini（07-index.tex:260-267）；取 $h+1$ 个在 $D_0$ 上无公共零点的线性型给 $f:D_0\to\mathbb P^h$、$f^*\mathcal O(-1)\simeq\mathcal O_{D_0}(-1)$；$j:D_0\hookrightarrow X_{\mathrm{sm}}$ 与 $\Phi_0\circ f$ 从同一线丛单位标架丛提升到 $Y_1$，在 $D_0\times[0,1]$（实维 $2h+1$）上逐胞同伦（07-index.tex:268-288）；于是 $(\ast)$ 把纤维积分认成 $\ch(\sum_j q_j(1-[\mathcal O_{D_0}(-1)])^j)$（07-index.tex:290-297）。定义 $p_{D_0}(l)=\chi(Z\times D_0,\beta'|_{Z\times D_0}\otimes\mathcal O_{D_0}(l))$；光滑积上的 Hirzebruch--Riemann--Roch 给
+\[
+p_{D_0}(l)=\sum_{j=0}^h q_j\,\chi(D_0,(1-[\cO_{D_0}(-1)])^j\otimes\cO_{D_0}(l))
+\]
+（07-index.tex:298-312，eq:index-section-rr）。整除性保留：$d-h$ 个超平面在 $X$ 上有 Koszul 分解（沿 $D_0$ 横切、公零点外某方程局部为单位故正合），导出张 $\beta$、过复嵌入与等幂归约，
+\[
+p_{D_0}(l)=\sum_{a=0}^{d-h}(-1)^a\binom{d-h}{a}p(l-a)\in e_0e_1\Z
+\]
+（07-index.tex:314-341，eq:index-koszul-difference）。
+
+收尾（07-index.tex:343-476）：置 $Q_*(u)=\sum_j (q_j/e_1)u^j\in\Z[u]$，常数项 $Q_*(0)=\pm r/e_1$，一切扭曲指标被 $e_0$ 整除。引理 7.4（$p$-进截断，07-index.tex:355-400）：素数 $p$、$v\ge1$、$A,Q\in\Z[u]$，$\bar A$ 在 $u=0$ 处恰阶 $\nu\ge0$，若 $h\ge v\nu$ 且 $AQ\equiv0\pmod{(p^v,u^{h+1})}$，则 $p^v\mid Q(0)$。构造链 $Q_0=Q,\ldots,Q_v$：模 $p$ 写 $A=u^\nu B$、$B$ 可逆，递推迫使 $Q_i$ 直到次数 $m_i=h-(i+1)\nu$ 的系数全被 $p$ 整除，截断除以 $p$ 得 $Q_{i+1}$，常数项一路缩水到 $Q(0)/p^{v-1}$ 再被 $p$ 整除；$\nu=0$ 同式涵盖（07-index.tex:367-400）。定理 6.1 收官（07-index.tex:402-476）：$e_0=1$ 时 $q_0\in e_1\Z$ 已毕；设 $e_0>1$。$D_0$ 的 Hilbert 级数 $(1-t^b)^s/(1-t)^{h+s+1}$；充分正扭曲的 Euler 示性数同意于 Hilbert 函数，乘 $(1-[\mathcal O(-1)])^j$ 等效乘 $(1-t)^j$ 的有限差分（差有限多个初始系数、整数）；eq:index-section-rr 汇成
+\[
+\sum_{l\ge0}\frac{p_{D_0}(l)}{e_1}t^l=Q_*(1-t)\frac{(1-t^b)^s}{(1-t)^{h+s+1}}+R(t),\qquad R(t)\in\Z[t]
+\]
+（07-index.tex:407-423，eq:index-hilbert-series），而左边系数全被 $e_0$ 整除。乘 $(1-t)^{h+s+1}$、模 $e_0$ 系数为零、代 $t=1-u$：
+\[
+Q_*(u)\left(1-(1-u)^b\right)^s\equiv0\pmod{(e_0,u^{h+s+1})}
+\]
+（07-index.tex:425-434）；设 $A_b(u)=\frac{1-(1-u)^b}{u}\in\Z[u]$，消公因式 $u^s$（$\Z/e_0$ 上单项式逐系数消去，合数无妨）：
+\[
+A_b(u)^s Q_*(u)\equiv0\pmod{(e_0,u^{h+1})}
+\]
+（07-index.tex:435-447，eq:index-final-congruence；$s=0$ 时因子为 $1$，常数项立给 $e_0\mid Q_*(0)$）。逐素数 $p\mid e_0$：写 $v=v_p(e_0)$、$b=p^ac$（$p\nmid c$）；模 $p$ 有 $1-(1-u)^b=1-(1-u^{p^a})^c=c\,u^{p^a}+\cdots$，故 $A_b^s$ 恰阶 $\nu=s(p^a-1)$ 且首系数非零；$h$ 的选取恰是 $h\ge v_p(e_0)s(p^{v_p(b)}-1)$，引理 7.4 给 $p^v\mid Q_*(0)$；不要求 $b$ 为素数幂；遍历 $p$ 得
+\[
+e_0\mid Q_*(0),\qquad e_0e_1\mid q_0=\pm r
+\]
+（07-index.tex:448-470）。模任意，真右理想被除性排除，$\Delta$ 除（07-index.tex:471-476）。
+
+## 10 装配：Veronese 关系、加法链条与归纳闭合
+
+第 8 节（08-assembly.tex）把全部零件拧成第 $i$ 行。
+
+先备"一次二次关系实现二元加法"的有限扩张引理 8.1（08-assembly.tex:15-71）：$b$ 次单位根 $\zeta\in k$、交换 $k$-代数 $A\ni u,v$；对每个 $|\alpha|=b$ 引入符号 $T_\alpha$，置 $D_j=T_{b\mathbf e_j}$、
+\[
+z=\frac1b\sum_j D_j,\quad u_T=-\frac1b\sum_j\zeta^{-j}D_j,\quad v_T=T_{(1,\ldots,1)}
+\]
+（08-assembly.tex:22-25），商掉关系 $T_\alpha T_\beta=T_\gamma T_\delta$（只要 $\alpha+\beta=\gamma+\delta$）与 $D_j=z-\zeta^ju_T$、$u_T=u$、$v_T=v$（08-assembly.tex:27-35）。则 $A'$ 在 $A$ 上有限，且 $z^b=u^b+v^b$、$T_\alpha^b=\prod_j D_j^{\alpha_j}$（08-assembly.tex:36-40，eq:veronese-monic）；$A$ 分次、$u,v$ 一次时关系齐次、每符号 $T_\alpha$ 赋次 1 后定义关系仅一次与二次（08-assembly.tex:41-45）。有界性证明用指数单位交换算法：同总指数的乘积两两相等；$z$ 整（$z^b=u^b+v^b\in A$）、诸 $D_j\in A[z]$、诸 $T_\alpha$ 在 $A[z]$ 上整（08-assembly.tex:47-71）。这条引理就是把 05 节曲线恒等式"翻译进 $\operatorname{Sym} U$ 低次世界"的语法书。
+
+命题 8.2（归纳步，08-assembly.tex:73-356）的演出顺序：取 $b=a_i$、$e_0=\deg\Delta_0$、$s=\dim_k W$（08-assembly.tex:97-101）；依序选
+\[
+h\ge\max(\{2\}\cup\{v_p(e_0)s(p^{v_p(b)}-1):p\mid e_0\}),\qquad
+M\ge\max\{2h+4s+10,\ \dim_k\Sym_k^bU\}
+\]
+（08-assembly.tex:108-116，eq:assembly-h、eq:assembly-M）。定理 4.2 供 $X$；曲线供 $\chi,\psi$；$M-1$ 份拷贝，$H=G^{M-1}$、$e_1=|H|$，逐块特征 $\chi_m,\psi_m$；递归权重
+\[
+\lambda_M=1,\qquad \lambda_{m-1}=\lambda_m\chi_m,\qquad \eta_1=\lambda_1,\quad \eta_m=\lambda_m\psi_m\ (m\ge2)
+\]
+（08-assembly.tex:131-136，eq:assembly-weights）；$H$ 以点特征 $\eta_m^{-1}$ 作用于锥第 $m$ 块：次数 $b$ 方程不变（各 $\eta_m^b=1$），且给 $\mathcal O_X(1)$ 的自然线性化（08-assembly.tex:138-141）。中心扩张同 06：$B$、$K=k(B\times X\times R)$、$F=K^H$，Galois 群 $H$；$E=\bigotimes_{m=2}^M E_{A_m}$（$\dim_K e_1$）、$\Delta_1$ 为 $\operatorname{End}_K(E)$ 的下降；定理 6.1 使
+\[
+\Delta=(\Delta_0\otimes_k F)\otimes_F\Delta_1
+\]
+除（08-assembly.tex:143-159）。顺序声明（08-assembly.tex:160-162）：$e_0,s,b$ 定在 $h$ 前、$M$ 定在 $e_1$ 前，eq:assembly-h 不含 $e_1$，这是高连通预算能提前锁定的命门。
+
+不变和的构造：$\mathcal O_X(1)$ 一般纤维是半线性一维 $H$-空间，Galois 下降给不变生成元 $\tau$；沿 $k$-基把锥块坐标除以 $\tau$ 组装 $\ell_m\in U_K$；搬运即 $g^{-1}$ 拉回，逆点作用 $\eta_m^{-1}$ 交 $g\ell_m=\eta_m(g)\ell_m$（08-assembly.tex:164-176，eq:leaf-weights）：除以不变量不颠倒特征。约束方程给 $S_b=\sum_m\ell_m^b\in(\mathfrak j_K)_b$；各 $\eta_m^b=1$ 使 $S_b$ 不变、落在 $(\mathfrak j_F)_b$（08-assembly.tex:179-185）。断言 $S_b$ 有形如 $c_if_i+\sum_{l<i}B_{il}f_l+\sum_{d>i}C_{id}t_d\pmod{Q_F}$ 且 $c_i\in F^\times$（08-assembly.tex:186-190，eq:invariant-sum）：置 $V_b=Q_b+\sum_{l<i}f_l\operatorname{Sym}^{b-a_l}U+\sum_{d>i}t_d\operatorname{Sym}^{b-1}U$，则 $\mathfrak j_b=V_b+kf_i$；若 $f_i\in V_b$ 则非零 $f_i$-系数可任意吸收（08-assembly.tex:191-200）。若 $f_i\notin V_b$：特征零纯幂张满 $\operatorname{Sym}^bU$，代数闭包上以不超过 $\dim\operatorname{Sym}^bU$ 个幂表出 $f_i$、标量吸进 $b$ 次根、零型补位，$M$ 的下界保证锥上有点使 $\sum_m\ell_m^b=f_i$；于是 $\mathfrak j_b/V_b$ 的 $f_i$-系数在 $X$ 上不恒为零，几何不可约推到一般点非零；除以 $\tau$ 只乘一个非零标量的 $b$ 次幂；$V_b,\mathfrak j_b$ 定义在 $k$ 上，$F$ 上的不变线性代数交回 eq:invariant-sum（08-assembly.tex:201-216）。
+
+K 上的加法链（08-assembly.tex:218-277）：$s_1'=\ell_1$；第 $m$ 环引入全套新符号 $T_{m,\alpha}$（每个 $b$ 次单项式 $p^\alpha$ 一个，形式次数 1），按命题 5.1 的第 $m$ 张量因子乘法矩阵取值、代入 $U_1=s'_{m-1}$、$U_2=\ell_m$（eq:link-substitution）；$s_m'$ 取对应 $z$ 的对角符号之组合（08-assembly.tex:220-233）。交换性保持：新联系数的矩阵与 $\Delta_0$ 及先前张量因子逐系数交换；两输入互相交换且与一切旧型交换；输入中心化新系数代数 $\operatorname{End}_K(E_{A_m})$；代入是良定义 $K$-代数同态，保留矩阵多项式交换恒等式（08-assembly.tex:235-255）：单环内部矩阵无需逐系数交换，论证不依赖它。每环施加对换二次关系、对角一次关系与 $u_T=s'_{m-1}$、$v_T=\ell_m$ 的辨识；这些在评估下是曲线截面恒等式的镜像；引理 8.1 给有限性与 $(s_m')^b=(s'_{m-1})^b+\ell_m^b$，链尾 $(s_M')^b=\sum_m\ell_m^b=S_b$（08-assembly.tex:257-277，eq:telescoping-links）。
+
+等变与下降（08-assembly.tex:279-355）：第 $m$ 环符号空间取单项式的 $b$ 次表示乘特征 $\lambda_m$、半线性延过 $K$；对换关系在对角相位、置换与公共扭转下稳定，对角关系亦然；$u_T,v_T,z$ 权重依次 $\lambda_m\chi_m=\lambda_{m-1}$、$\lambda_m\psi_m=\eta_m$、$\lambda_m$，恰配输入输出的规定权重（归纳自 eq:leaf-weights 起步），整个一、二次关系理想稳定（08-assembly.tex:279-297）。评估的等变性强过关系的稳定：把搬运恒等式 eq:matrix-transport 代入矩阵多项式的一次齐性与输入权重，得
+\[
+g\bigl(M_a(s'_{m-1},\ell_m)\bigr)=\lambda_m(g)\,M_{g_*a}(s'_{m-1},\ell_m)
+\]
+恰是扭转符号的规定作用（08-assembly.tex:298-322）。取半线性 Galois 下降的不变空间：扩大形式空间降到 $F$，关系理想的一次与二次部分降到有限维，$Q_{\mathrm{new}}$ 由它们生成；标量扩张与乘法映射交换，旧理想只由一二成生成故升到 $K$ 复原；等变评估把不变型送进 $\Delta[x]$，两两交换（08-assembly.tex:323-335）。$\lambda_M=1$ 使 $s_M'$ 不变，令 $t_i=s_M'$；eq:invariant-sum 加 eq:telescoping-links 给出新三角行（08-assembly.tex:336-341）。归纳条件收尾：有限性可在忠实平坦扩张 $F\subset K$ 上检查（逐环已证）；引理 3.5 保无小曲线；中心变量仍评估为自身；形式空间含 $U_F$；$K$ 在 $k$ 上有限生成故不变域 $F$ 也是，中心仍为原 $\mathbb C$ 的有限生成扩张（08-assembly.tex:342-355）。
+
+定理（construction 定理）收官（08-assembly.tex:358-375）：命题 3.2 供初始数据（尚无三角行）；归纳步按 $i=n,n-1,\ldots,1$ 执行；每一步旧恒等式都作为"至多二次生成理想的推论"存活，故后来更小的 $a_i$ 不侵蚀先前的幂恒等式；有限步后得全部 $\eqref{eq:triangular}$；$A$ 取诸评估型生成的交换分次代数，引理 2.1 交回有限性与整基。推论（Artinian EGH）即定理构造加命题 2.2（08-assembly.tex:377-382）。
+
+## 11 一般性与推论：离开构造之后
+
+第 9 节（09-consequences.tex）不再碰除代数。
+
+特征零推广（推论 char 0 的证明，09-consequences.tex:12-40）：$I=S_F$ 平凡；否则先在 $\mathbb C$ 上做线性坐标变换使 $f_1,\ldots,f_c,x_{c+1},\ldots,x_n$ 正则，前 $c$ 个在 $\mathbb C[x_1,\ldots,x_c]$ 中的像成满长正则列（09-consequences.tex:13-18）；Artinian 结论对"所有该次数满列及所有含它们的理想"普遍成立，恰是 Caviglia--Maclagan Artinian 归约的前提（引 CM08 Prop 10），遂把 $c<n$ 拉回 $n$ 变量（09-consequences.tex:20-25）；lex 嵌入模 $P_F$ 给 LPP 形状（09-consequences.tex:24-26）。任意特征零 $F$：取 $I$ 与 $f_i$ 系数生成的 $\mathbb Q$-有限生成子域 $F_0$，$I_0F[x]=I$，平坦性把正则性降到 $F_0$；嵌入 $F_0\hookrightarrow\mathbb C$，复情形后按同一指数集回译单项式理想；分片维数与两次域扩张交换，Hilbert 等式与逐次 lex 选择一并降回（09-consequences.tex:28-40）。配套论文在同范围证 Betti 不等式（引 BettiCompanion Cor 1.2 与 CK14 Thm 4.1）（09-consequences.tex:42-47）。
+
+局部上同调推论（09-consequences.tex:49-99）：Caviglia--Sbarra 条件定理（其 Thm 4.4）输入的是对固定 $P_F$、固定次序、固定 Hilbert 函数的唯一 LPP 理想；补齐 $n-c$ 个线性型、降像、对每个含像序列的理想套 Artinian 比较，前提集齐；Clements--Lindstr\"om 像的原像即 $J$，其 Hilbert 级数比较按全 $\Z$-分次逐系数成立，给出
+\[
+\dim_F H^i_{\mathfrak m}(S_F/I)_j\le\dim_F H^i_{\mathfrak m}(S_F/J)_j
+\]
+（09-consequences.tex:69-74）。$c<n$ 时含正维数商；$c=n$ 时回归 Hilbert 函数本身（09-consequences.tex:95-99）。
+
+二次 Cayley--Bacharach（09-consequences.tex:101-172）：$\Omega\subset\mathbb P^r_F$ 为 $r$ 个二次型套成的零维 scheme-theoretic 完备交集、度 $2^r$；$k\le r$、$k$ 次超曲面 $X$ 不包含 $\Omega$ 时
+\[
+\deg(\Omega\cap X)\le2^r-2^{r-k}
+\]
+（09-consequences.tex:112-116），scheme 长度口径、无约化假设（09-consequences.tex:118-120）。两拍完成。第一拍（数值断言 $\mathrm{IV}_m$）：若 $\Gamma\subset\Omega$ 在 $m$ 次不独立（$H_\Gamma(m)<\deg\Gamma$），取不在 $\Omega$ 上消没的线性型 $\ell$，它对两坐标环非零因子；像的二次型在 $S/(\ell)$ 中仍正则；$\deg\Gamma=\sum_j\dim A_j$、$H_\Gamma(m)=\sum_{j\le m}\dim A_j$，存在 $e\ge m+1$ 使 $A_e\ne0$；EGH 换出含全体平方元的单项式理想，存活的 $e$ 次单项式无平方、其 $2^e$ 个因子全部存活，$\deg\Gamma\ge2^e\ge2^{m+1}$（09-consequences.tex:123-144，并声明此即 EGH93 第 3 节 $\mathrm{IV}_m$ 的特征零版）。第二拍：$X$ 不含 $\Omega$ 且 $k\le r-1$ 时置 $Z=\Omega\cap X$、残基 $I_\Gamma=(I_\Omega:I_Z)$、$m=r-k-1$；残基对偶（EGH93 §3 p.195 的现代形态）给 $\deg\Gamma-H_\Gamma(m)=\dim_F(I_Z/I_\Omega)_k>0$（不等号因为 $X$ 的方程属于 $I_Z$ 不属于 $I_\Omega$；互补次数和 $2r-r-1=r-1$）；在代数闭包上可用（平坦扩张保长度、Hilbert 函数、残基、包含），第一拍与次数恒等式给 $\deg(\Omega\cap X)=2^r-\deg\Gamma\le2^r-2^{r-k}$（09-consequences.tex:146-169）。$k=r$ 时不等式化为"真闭子概形次数 $\le2^r-1$"的整数组（09-consequences.tex:170-171）。
+
+二次特例的余味：全 $a_i=2$ 时完备交集 Hilbert 级数 $(1+t)^n$，含全体平方元的单项式理想的标准单项式对应 $\{1,\ldots,n\}$ 的子集族在下封闭（01-introduction.tex:250-256）；它从同一 ordered-basis 构造顺带落出，无需独立二次定理。
+
+## 12 最终思路与最初设想的距离
+
+把第 2 节的幻肢痛与第 11 节后的全貌并排，我数出四层落差。
+
+其一，对象层级移位。最初我寻找 $f_i$ 与纯幂之间的桥（一个变形、一次压缩、一条 liaison）。成品里桥根本不在 $\mathbb C[x]$ 内部，而在更大的 $\Delta[x]$：保留旧变量的同时把变量族扩张成含 $t_i$ 的交换族，旧序列经由三角恒等式在 $A$ 里被 $t_i$ 的幂"从上方罩住"。比较从"路径"变成"同一基底的两种坐标"。
+
+其二，归纳方向倒置。自然欲望是从 $f_1$ 起逐行造 $t_i$；成品从 $i=n$ 倒着往下（01-introduction.tex:162、08-assembly.tex:361-362），配合"旧行只许以一次、二次关系的推论形式存活"的纪律（02-reduction.tex:156-163），因为新阶段的约束只看 $\deg b$ 层、而 $b$ 只会越用越小。
+
+其三，几何部件的必要性远超预期。最初我以为除代数只是个记号装置；实际每一零件都承重：$\mathcal C(Q)$ 无小曲线（保单纯因子，03 全节）、join 连通度（04 全节）、curve $z^b=u^b+v^b$（05 全节）、$\operatorname{Pic}^0$ 供矩阵、$\operatorname{Pic}^1$ 供自由作用与特征映射的双 Picard 分工（01-introduction.tex:215-222）、行列式修正 $\mathcal D$ 与混合 Picard 配对把简约秩熬成 Euler 数（06 全节）、$(M+2h)$-连通支撑等变映射与整系数 $K$-前推（07 全节）。01-introduction.tex:238-241 自证渊源：高连通代数参数空间与有限商呼应 Godeaux--Serre 逼近（Totaro95 之 5 节），指标拓扑限制呼应 Antieau--Williams Thm 3.4；新意在于行列式修正与整 $K$ 理论前推把"新群阶的整除性"与"旧代数度数的整除性"分家，于是连通度预算在 $h$ 处一次性锁死、无须随 $e_1$ 追加（08-assembly.tex:160-162 的顺序声明）。
+
+其四，"除法"的证明方式。直觉上除性该构造性地证明（把不可逆元素逐出）；成品用数论式反证：一切有限右模简约秩被 $e_0e_1$ 整除，故真右理想不存在（06-descent.tex:100-105、07-index.tex:471-475）。整条链 $h$ 的 $p$-进界、截断引理、$A_b(u)^sQ_*\equiv0$ 同余式都是为这一个"数整除"服务的。
+
+约定层面还有两处容易误读的精细（01-introduction.tex:285-299）：中心 $k$ 的抽象嵌入 $\mathbb C$ 只供拓扑与数值比较，除性永远在 $k$ 上用秩整除证明、绝不从复特化倒推；各阶段嵌入无须彼此延长。射影空间参数化直线、$\operatorname{Sym} U$ 里的形似型与函数 $w(\ell)$ 的两种身份靠微分时严格区分。这些纪律是防翻车的护栏。
+
+## 13 自检
+
+- 落盘探针：首块写完后 `wc -c` 基线，经 Edit 追加单行后复量增长，探针通过；sleep 90 复量在收工处执行。
+- 文风禁令扫描 [推测口径]：按规格以类别名自查：四字过渡套语、两字转折连接词、长停顿号、整行分隔线、装饰性符号、五列表表头唯一性。扫描以字符串计数为准，本节不复写禁串原文。
+- 前向引用核对：第 2 节提及的第 3 节以后各节均已真实存在；节号 0 到 14 连续。
+- 台账：全文唯一五列表位于末节，表头两行逐字、数据行恰 30 行以上、每行六个竖线、格内数学用 $...$、限制与整除用 \mid、无裸竖线、无占位空格。
+- 取证：成功取证调用 15 次（其中一次 Read 因路径笔误失败、未计入有效取证），首次落盘位于全部取证调用结束后的下一次调用，落在第 16 到 30 的窗口；未使用 git、未读 PDF、未读禁区清单中任何文件。
+- 若后续追加发现落盘错误，按规格在文末继续补勘误段（类别名口径）。
+探针行：落盘机制确认。
+
+## 14 台账
+
+下面这张表是全文唯一的五列表。符号取自 01 到 09 各节的真实构件，位置栏一律是本会话我逐行 Read 过的 `文件:行`（均在 `build/sections/` 下同名文件）；"被谁消费"栏写下游依赖它的部件，"若改动断在哪一步"栏写它失效时归纳链最先崩掉的位置。单元格内数学直接 $...$，限制记号用 \mid，整除用 \mid，无裸竖线。
+
+| 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+| --- | --- | --- | --- | --- |
+| $H_{S/I}(d)=\dim_{\mathbb C}(S/I)_d$ | Hilbert 函数的逐次维数 | 01-introduction.tex:7 | 猜想的全部陈述与比较 | 陈述本身失去对象 |
+| $\prod_{i=1}^n(1+t+\cdots+t^{a_i-1})$ | 正则序列商只依赖次数 | 01-introduction.tex:12 | 02-reduction.tex:42 的无公共零点 | 正则序列计数全线失效 |
+| $2\le a_1\le\cdots\le a_n$ | Artinian 形态的次数约束 | 01-introduction.tex:34 | 构造定理的输入顺序 | 归纳执行次序失去依据 |
+| $t_i^{a_i}=c_if_i+\sum_{l<i}B_{il}f_l+\sum_{d>i}C_{id}t_d$ | 三角恒等式，$c_i\in k^\times$ | 01-introduction.tex:45 | 02-reduction.tex:24 有序基判别 | 单项式抽取失去入口 |
+| $\{t^{\alpha}:\alpha\in\Z_{\ge0}^n\}$ | 整个 $\Delta[x]$ 的左 $\Delta$-基 | 01-introduction.tex:51 | 02-reduction.tex:32 与 02:95 | 指数比较失去坐标系 |
+| $x_1>\cdots>x_n$ | 变量字典序 | 01-introduction.tex:76 | Clements--Lindstr\"om 的 LPP 组装 | lex 极大代表无法写出 |
+| $\dim_F(S_F/J)_d=\dim_F(S_F/I)_d$ | 特征零推广的目标等式 | 01-introduction.tex:104 | 09-consequences.tex:12 的推广证明 | 推广第一步即失效 |
+| $\alpha_n,\alpha_{n-1},\ldots,\alpha_1$ | 最小指数比较的下标顺序 | 02-reduction.tex:125 | 02-reduction.tex:134 至 142 的 $a_i\mathbf e_i\in E$ | 三角恒等式比较方向翻转 |
+| $\binom{n+d-1}{n-1}=\dim_\Delta N_d$ | 次数 $d$ 的基元素计数 | 02-reduction.tex:95 | 有序基判别的线性无关收束 | 张成成立而基不成立 |
+| $N/\Delta I\simeq\Delta\otimes_{\mathbb C}(S/I)$ | 扩张商的分次同构 | 02-reduction.tex:150 | 补集计数给出 Hilbert 等式 | 单项式抽取最后一步断链 |
+| $D=(\max_j a_j)^2$ | 曲线排除的统一度阈值 | 03-low-relations.tex:23 | $\mathcal C(Q)$ 无度 $\le D$ 曲线的保险丝 | 单纯因子引理的度预算落空 |
+| $\mathfrak j=(Q,f_l\ (l\le i),t_d\ (d>i))$ | 阶段理想，关注 $\mathfrak j_b$ | 03-low-relations.tex:64 | $W$ 的定义与新行的目标方程 | 新三角行没有目标方程组 |
+| $W=\{w_\lambda:\lambda\mid_{\mathfrak j_b}=0\}$ | 零化子的多项式化，$s=\dim W$ | 03-low-relations.tex:97 | 04-parameters.tex:86 的 $Y$ 定义 | 元组方程失去微分表述 |
+| $q(\partial)w=0$ | 常系数微分方程刻画 | 03-low-relations.tex:138 | 引理 3.3 梯度曲线计数 | 重因子线性化的通道漏掉 |
+| $r(r-1)p^{r-2}h\,q(\nabla p)$ | 二次生成元的最低 $p$-进阶项 | 03-low-relations.tex:150 | 迫使 $[v_p]\in\mathcal C(Q)$ | 二次方程的消没信息不可读 |
+| $\deg p(\deg p-1)\le b(b-1)$ | 梯度像曲线的次数预算 | 03-low-relations.tex:170 | 无小曲线假设产生矛盾 | 阈值与保险丝不再咬合 |
+| $w=c\,p^b$ | 常梯度情形的纯幂结论 | 03-low-relations.tex:208 | 03:211 与无基点矛盾 | $W$ 可含纯幂则连通性崩塌 |
+| $k=\mathbb C(y_{\rho j}^2:1\le\rho\le m,\ 1\le j\le v_0)$ | 平方生成的中心域 | 03-low-relations.tex:310 | $\Delta_0$ 除代数与中心验证 | 泛型独立性无从谈起 |
+| $s_\rho=\sum_j y_{\rho j}L_j(x)$ | 异行间交换的评估式 | 03-low-relations.tex:325 | 初始关系 $s_\rho^2=q_\rho(x)$ | $Q$ 不再是恒等式理想 |
+| $d_*(n,D)=\binom{n-1+D}{D}^2$ | 曲线定义域的超越度上界 | 03-low-relations.tex:274 | 保留块数 $m-d_*$ 的估计 | 平方类独立计数失准 |
+| $r=\binom{n+1}{2}$ | 每块二次型系数长度 | 03-low-relations.tex:361 | 超越度账目 $mr-d_*$ | 弃块数量失去界 |
+| $d\ge 2^{m-d_*}$ | 覆盖次数下界 | 03-low-relations.tex:390 | 选 $m$ 使 $2^{m-d_*}>D$ 的矛盾 | 与 $d\le D$ 不再冲突 |
+| $\widetilde H_j(F_w;\Z)=0$（$0\le j\le 2M-2$） | join 水平的整系数同调消失 | 04-parameters.tex:30 | Leray 谱序列的纤维控制 | 余补同调比较失去输入 |
+| $M\ge 2h+4s+10$ | 块数总预算 | 04-parameters.tex:83 | 04:258 与 04:271 两段范围核对 | 连通性结论不在作用范围 |
+| $\operatorname{codim}_X\operatorname{Sing}X\ge M-2s+1$ | 奇异轨迹余维下界 $c$ | 04-parameters.tex:95 | 07 节线性截面避开奇轨迹 | 曲面截面单连通失据 |
+| $Y^o$ 与 $Y_1$ 均 $(M+2h)$-连通 | punctured 光滑锥连通度 | 04-parameters.tex:104 | 07-index.tex:60 逐胞截面延拓 | 等变映射 $\Phi$ 造不出来 |
+| $\dim\{\text{坏秩轨迹}\}\le N_*-M+s-1$ | Jacobian 亏秩维数界 | 04-parameters.tex:133 | 完全交集性 $d=N_*-s$ 与 $c$ | 一切维数与光滑断言失效 |
+| $H_j(\mathcal H;\Z)\cong H_j(\mathcal B;\Z)$（$0\le j\le 2M-2$） | 余补同调经 $\mathcal B$ 转移 | 04-parameters.tex:237 | $\mathcal B$ 收缩到 $S^{2s-1}$ 计算 | 光滑锥同调无从得到 |
+| $g_T=b-1$，$g(C)-1=e(g_T-1)$，$\deg L=e$ | 曲线三件不变量 | 05-curves.tex:32 | Riemann--Hurwitz 账目与 $\dim E_A=e$ | 矩阵空间维数失去根据 |
+| $G=(\mu_b^b/\mu_b)\rtimes(\Z/b)$，$e=b^b$ | 二元加法群与阶 | 05-curves.tex:22 | $H=G^{M-1}$、$e_1=\lvert H\rvert$ 的下降阶 | 下降群的阶账目错乱 |
+| $z^b=u^b+v^b$ | 二元幂加法恒等式 | 05-curves.tex:48 | $M_z^b=(U^b+V^b)\mathrm{id}$（05:68） | 链条拼接失去核心恒等式 |
+| $H^0(C,AL^{g_T+j})=E_A\otimes_\kappa\operatorname{Sym}^j\langle u,v\rangle$ | 自由分次模分解 | 05-curves.tex:59 | 乘法矩阵的一次线性化 | 矩阵多项式退为非线性 |
+| $M_{g_*a}(U,V)=(g_{\mathrm{coeff}}M_a)(\chi(g)U,\psi(g)V)$ | 搬运律 | 05-curves.tex:73 | 08-assembly.tex:302 起等变核对 | 权重体系无法闭合 |
+| $1=\deg V=r\deg V_0$ | Picard 不动点下降矛盾 | 05-curves.tex:365 | $\operatorname{Pic}^1(C)$ 上 $G$-作用自由 | torsor 商的光滑性失去根据 |
+| $h\ge\max(\{2\}\cup\{v_p(e_0)s(p^{v_p(b)}-1):p\mid e_0\})$ | 连通度预算的下界 | 06-descent.tex:23 | 07 截断引理的零阶度 $\nu$ | $e_0$-整除性提取失败 |
+| $K=k(B\times X\times R)$，$F=K^H$ | 一般域与不变域 | 06-descent.tex:52 | $\operatorname{Gal}(K/F)=H$ 与 $\Delta_1$ 的中心 | 下降代数中心认错 |
+| $\Delta=(\Delta_0\otimes_k F)\otimes_F\Delta_1$ | 目标代数，度 $e_0e_1$ | 06-descent.tex:63 | 最终目标 $e_0e_1\mid r$ | 除性陈述不复存在 |
+| $\int_Z\ch(\beta'\mid_{Z\times x})\operatorname{td}(Z)=\pm r$ | 纤维指标回收简约秩 | 06-descent.tex:134 | 07:255 至 257 与 $q_0=\pm r$ 对照 | 秩与指标之间的桥断开 |
+| $\mathcal D=\bigotimes_m(\det R\Gamma_C(A_m\otimes V_m))^{-1}\otimes\det R\Gamma_C(A_m)\otimes\det R\Gamma_C(V_m)$ | 行列式修正线丛 | 06-descent.tex:203 | 权重 $(-1,0)$（06:244）抵消标量 | 等变真层性不成立 |
+| $\chi(A)=1-g_C$，$\chi(A\otimes V)=2-g_C$ | 修正指数核算 | 06-descent.tex:236 | 权重 $(-1,0)$ 的推导 | $\mathcal D$ 指数写错、标量残留 |
+| $\int_{\operatorname{Pic}^0\times\operatorname{Pic}^1}\theta^{d}/d!=\pm\det\Lambda=\pm1$ | 混合 Picard 幺模配对 | 06-descent.tex:334 | 抽秩 $\pm\operatorname{rk}\gamma$（06:292） | Euler 数不再等于秩 |
+| $\chi(T',\delta^*\alpha)=a\,\chi(Q,\alpha)$ | 常群 torsor 的 Euler 公式 | 06-descent.tex:358 | $\chi\in e_0^2e_1\Z$（06:407） | 上楼整除性成孤证 |
+| $K^0(\mathbb P^h(\mathbb C))=\Z[u]/(u^{h+1})$，$u=1-[\mathcal O(-1)]$ | 射影空间整系数 $K$-基 | 07-index.tex:120 | 07:183 起 $c_{ij}\in\Z$ 的展开 | 前推退化为有理系数 |
+| $\ch(I_V(\xi))=\int_V\ch(\xi)\operatorname{td}(T_V)$ | 整系数前推的刻画式 | 07-index.tex:137 | eq:index-family（07:245） | 拓扑类无法转成整数账 |
+| $q_j\in e_1\Z$，$q_0=\pm r$ | 指标系数整除与首项 | 07-index.tex:217 | $Q_*(0)=\pm r/e_1$（07:345） | $e_0$-整除失去作用对象 |
+| $p_{D_0}(l)=\sum_a(-1)^a\binom{d-h}{a}p(l-a)\in e_0e_1\Z$ | Koszul 有限差分转移 | 07-index.tex:330 | 生成函数账目（07:421） | 整除性传不进截面 |
+| $\nu=s(p^a-1)$ | $A_b(u)^s$ 模 $p$ 的零阶度 | 07-index.tex:457 | $h\ge v\nu$ 与截断引理 | $p^v\mid Q_*(0)$ 推不出 |
+| $A_b(u)^sQ_*(u)\equiv0\pmod{(e_0,u^{h+1})}$ | 最终同余式 | 07-index.tex:441 | 逐素数得 $e_0e_1\mid q_0=\pm r$ | 除性证明最后一步断 |
+| $\lambda_M=1$，$\lambda_{m-1}=\lambda_m\chi_m$，$\eta_m=\lambda_m\psi_m$ | 权重递归 | 08-assembly.tex:133 | 输入输出权重核对（08:289） | 链条关系不再等变 |
+| $g\ell_m=\eta_m(g)\ell_m$ | 锥坐标的半线性化 | 08-assembly.tex:173 | $S_b$ 的不变性（08:183） | 不变和落不回 $\mathfrak j_F$ |
+| $(s_m')^b=(s'_{m-1})^b+\ell_m^b$，$(s_M')^b=S_b$ | 加法链伸缩和 | 08-assembly.tex:269 | 新行 $t_i=s_M'$（08:337） | 幂和无法拼接成一行 |
+| $\dim_F H^i_{\mathfrak m}(S_F/I)_j\le\dim_F H^i_{\mathfrak m}(S_F/J)_j$ | 局部上同调极值不等式 | 09-consequences.tex:70 | Caviglia--Sbarra 定理的输入 | 推论陈述失去唯一 $J$ |
+| $\deg(\Omega\cap X)\le 2^r-2^{r-k}$ | 二次 Cayley--Bacharach 界 | 09-consequences.tex:115 | 第一拍数值断言 $\mathrm{IV}_m$ | 残基对偶没有输入 |
+| $\deg\Gamma\ge 2^{m+1}$ | 不独立条件的次数后果 | 09-consequences.tex:143 | 第二拍残基次数比较 | CB 界无法闭合 |
+| $\dim_F(I_Z/I_\Omega)_k>0$ | 残基正性 | 09-consequences.tex:154 | 迫使 $\Gamma$ 在 $m=r-k-1$ 不独立 | 残基层不独立失去证据 |

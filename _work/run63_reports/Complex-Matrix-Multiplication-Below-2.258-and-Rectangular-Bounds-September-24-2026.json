@@ -1,0 +1,35 @@
+{
+  "paper": "Complex-Matrix-Multiplication-Below-2.258-and-Rectangular-Bounds-September-24-2026",
+  "ok": true,
+  "typ_lines": 2710,
+  "included_pdf_pages": 0,
+  "formulas": 1701,
+  "math_failed": 0,
+  "labels": 281,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 3,
+  "tables": 7,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "1701",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "listings",
+    "upquote"
+  ],
+  "macros_skipped": [
+    "\\renewcommand\\ttdefault"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "warning: `gt.tri` is deprecated, use `gt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Complex-Matrix-Multiplication-Below-2.258-and-Rectangular-Bounds-September-24-2026\\main.typ:114:172\n    │\n114 │ A restriction is obtained by a linear map on each of the three sides. In particular, a local zeroing-out sets selected variables on each side to zero. A degeneration $U gt.tri.eq V$ permits these maps to depend polynomially or Laurent polynomially on a parameter and extracts the transformed tensor’s first nonzero coefficient, after an overall rescaling. The maps may be composed finitely many times. Finitely many parameters can be replaced by sufficiently separated powers of a single parameter.\n    │                                                                                                                                                                             ^^^\n\nwarning: `gt.tri` is deprecated, use `gt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Complex-Matrix-Multiplication-Below-2.258-and-Rectangular-Bounds-September-24-2026\\main.typ:214:40\n    │\n214 │  In particular, if $T^(⊗ n) ⊗ cal(A) gt.tri.eq xor.big_(ell = 1)^L chevron.l a \\, b \\, c chevron.r$ and $upright(underline(R)) \\( cal(A) \\) lt.eq R$, then \n    │                                         ^^^\n\nwarning: `gt.tri` is deprecated, use `gt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Complex-Matrix-Multiplication-Below-2.258-and-Rectangular-Bounds-September-24-2026\\main.typ:234:18\n    │\n234 │ $ U ⊗ cal(A)_G gt.tri.eq xor.big_(s = 1)^K #scale(x: 120%, y: 120%)[\\(] U_s ⊗ chevron.l 1 \\, m \\, 1 chevron.r #scale(x: 120%, y: 120%)[\\)] . quad \"(3.5)\" $ <alg:group-identity>\n    │                   ^^^\n\nwarning: `gt.tri` is deprecated, use `gt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Complex-Matrix-Multiplication-Below-2.258-and-Rectangular-Bounds-September-24-2026\\main.typ:340:7\n    │\n340 │ $ T gt.tri.eq T' = A + B + C \\, quad A = x_0 \\( y_0 z_2 + y_1 z_1 \\) \\, quad B = \\( x_2 y_0 + x_1 y_1 \\) z_0 \\, quad C = x_0 y_2 z_0 . quad \"(3.9)\" $ <alg:five>\n    │        ^^^\n\nwarning: `gt.tri` is deprecated, use `gt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Complex-Matrix-Multiplication-Below-2.258-and-Rectangular-Bounds-September-24-2026\\main.typ:554:33\n    │\n554 │     $ cal(T) \\( P \\) ⊗ cal(A) gt.tri.eq xor.big_(lambda in Lambda) #scale(x: 120%, y: 120%)[\\(] P_(w \\( lambda \\)) ⊗ chevron.l a \\, b \\, c chevron.r #scale(x: 120%, y: 120%)[\\)] . quad \"(4.1)\" $ <val:strong-identity>\n    │                                  ^^^\n\nwarning: `gt.tri` is deprecated, use `gt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\Complex-Matrix-Multiplication-Below-2.258-and-Rectangular-Bounds-September-24-2026\\main.typ:1791:24\n     │\n1791 │   $ T^(⊗ n) ⊗ cal(A) gt.tri.eq xor.big_(ell = 1)^L chevron.l a \\, b \\, c chevron.r \\, #h(2em) upright(underline(R)) \\( cal(A) \\) lt.eq R . $\n     │                         ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 6,
+  "source": "E:\\math\\_work\\flat\\Complex-Matrix-Multiplication-Below-2.258-and-Rectangular-Bounds-September-24-2026.tex"
+}

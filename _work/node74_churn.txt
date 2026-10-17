@@ -1,0 +1,28 @@
+canvases built: 918 (refused both ways: 14)
+canvases moved: 178 in 153 papers, 947 lines
+started drawing: 0   stopped drawing: 0
+wrote _work/regen_needed.txt (153 papers)
+  A-Counterexample-to-Kaplanskys-Direct-Finitene#0 line 30
+    old content((-2.375, -1.714), [#text(size: 9pt)[one boundary]], anchor: "north")
+    new content((-2.375, -1.814), [#text(size: 9pt)[one boundary]], anchor: "north")
+  A-Counterexample-to-Rysers-Covering-Conjecture#0 line 7
+    old line((-0.4132, -0.183), (-2.489, -1.102), stroke: (thickness: 0.4pt), mark: (end: (symbol: ")>", fill: black)))
+    new line((-0.9161, -0.4057), (-2.061, -0.9129), stroke: (thickness: 0.4pt), mark: (end: (symbol: ")>", fill: black)))
+  A-Counterexample-to-Walls-D2-Problem-October-6#0 line 10
+    old line((6.2, 0.917), (6.2, -0.917), stroke: (thickness: 0.4pt), mark: (end: (symbol: ")>", fill: black)))
+    new line((6.2, 0.7369), (6.2, -0.8284), stroke: (thickness: 0.4pt), mark: (end: (symbol: ")>", fill: black)))
+  A-Gepner-stability-condition-on-every-smooth-q#0 line 8
+    old line((1.155, 1.1), (0.2954, 1.1), stroke: (thickness: 0.4pt), mark: (end: (symbol: ">>", fill: black)))
+    new line((1.143, 1.1), (0.3072, 1.1), stroke: (thickness: 0.4pt), mark: (end: (symbol: ">>", fill: black)))
+  A-Nearly-Quartic-Separation-Between-Randomized#0 line 8
+    old line((0, -1.355), (0, -0.625), stroke: (thickness: 0.4pt), mark: (end: (symbol: ")>", fill: black)))
+    new line((0, -1.274), (0, -0.625), stroke: (thickness: 0.4pt), mark: (end: (symbol: ")>", fill: black)))
+  A-Negative-Solution-to-the-Finite-Lattice-Repr#1 line 10
+    old line((-0.3786, 0.183), (-2.621, 1.267), stroke: (thickness: 0.4pt))
+    new line((-0.3916, 0.1893), (-2.453, 1.185), stroke: (thickness: 0.4pt))
+  A-PD4-group-without-an-aspherical-manifold-mod#0 line 3
+    old content((3.305, 0), [#text(size: 9pt)[$N arrow.r.long Q tilde.eq "BG"$#linebreak()reflection]])
+    new content((3.329, 0), [#text(size: 9pt)[$N arrow.r.long Q tilde.eq "BG"$#linebreak()reflection]])
+  A-boundary-only-obstruction-to-four-dimensiona#2 line 7
+    old line((-0.3618, 0.3947), (-1.288, 1.405), stroke: (thickness: 0.4pt))
+    new line((-0.4608, 0.5027), (-1.205, 1.315), stroke: (thickness: 0.4pt))

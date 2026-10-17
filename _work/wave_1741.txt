@@ -1,0 +1,32 @@
+# 派发队列（2026-10-12 17:41 立，档位 3：每腾一位补一个，一条消息最多并列 3 个 Agent）
+# 预检 17:43 已过：19 个目录名全部有 build/**.tex；与台账 tex 字节和逐一对齐（8/8 MATCH，无一名写错）。
+
+## 队首：半截稿追加批（Write=0，只用 Edit 文末追加，单笔 ≤25,000 B）
+顺序 D619 → D622 → D623 → D625 → D626（D616 已在飞）
+
+- D619 row=438 note=D619-各有限维下的希尔伯特-史密斯猜想.md dir=The-Hilbert-Smith-conjecture-in-every-finite-dimension-September-23-2026 tex=155499 size=24272 gap_size=47228 gap_dlm=638
+- D622 row=441 note=D622-轴对称电真空外部克尔-纽曼-彭罗斯不等式.md dir=The-Kerr-Newman-Penrose-Inequality-for-Axisymmetric-Electrovacuum-Exteriors-October-5-2026 tex=316553 size=22179 gap_size=49321 gap_dlm=708
+- D623 row=442 note=D623-素数三处的凯尔韦尔不变量问题.md dir=The-Kervaire-Invariant-Problem-at-the-Prime-Three-September-24-2026 tex=328421 size=20237 gap_size=51263 gap_dlm=640
+- D625 row=444 note=D625-一般凸体的马勒猜想.md dir=The-Mahler-Conjecture-for-General-Convex-Bodies-September-22-2026 tex=226195 size=19085 gap_size=52415 gap_dlm=1000（dlm=0，整篇没写定界符）
+- D626 row=445 note=D626-全局函数域上的Margulis-Platonov猜想.md dir=The-Margulis-Platonov-conjecture-over-global-function-fields-October-5-2026 tex=289291 size=23422 gap_size=48078 gap_dlm=722
+
+D617 row=436：53,591 B / math=1,170 / hdr=0 rows=0 → 缺 ~17,000 B 体量与五列台账表；已在派队里（在飞或已静默，看 fleet_watch 增长再定）。
+
+## 队中：已派零落盘重发（同号原地重发，禁止再 --take；已确认 11 个都无文件，故无并发同篇风险）
+D585 row=408 dir=Stabilizer-Orbits-and-Thick-Tensor-Ideals-of-Dualizable-Kn-Local-Spectra-September-24-2026 tex=117141
+D586 row=409 dir=Stable-Self-Similar-Blowup-for-a-Supercritical-Defocusing-Schrodinger-Equation-on-the-Torus-September-24-2026 tex=193644
+D587 row=410 dir=Stretched-exponential-barriers-for-typical-SK-initial-states-September-24-2026 tex=220673
+D589 row=412 dir=Strong-Ulam-Stability-Characterizes-Amenability-October-5-2026 tex=58918
+D590 row=413 dir=Strong-diffeomorphic-approximation-in-three-dimensions-for-1-le-p-le-2-September-24-2026 tex=230482
+D591 row=414 dir=Strong-diffeomorphic-approximation-in-three-dimensions-for-p-gt-2-September-24-2026 tex=512152
+D592 row=415 dir=Strongly-rational-unitary-vertex-operator-algebras-and-conformal-nets-September-25-2026 tex=171652
+D593 row=416 dir=Subset-Sum-in-Time-2-power-0-49n-October-4-2026 tex=111865
+D594 row=417 dir=Symplectic-Ball-Packings-in-Higher-Dimensions-September-23-2026 tex=147917
+D595 row=418 dir=Tame-Hecke-Eigensheaves-with-Several-Marked-Points-October-5-2026 tex=159162
+D597 row=420 dir=Temperedness-at-ramified-places-for-globally-generic-exceptional-groups-October-5-2026 tex=75924
+
+## 队尾：新建批（取号要 --take，dry-run 已核过 row 连续）
+D628 row=447 dir=The-Mezard-Parisi-formula-for-diluted-spin-glasses-September-23-2026 tex=128849
+D629 row=448 dir=The-PCP-for-PPAD-conjecture-a-quasilinear-reduction-September-25-2026 tex=570829
+D630 row=449 dir=The-Penrose-inequality-for-maximal-asymptotically-hyperbolic-initial-data-October-5-2026 tex=331483
+（17:41 dry-run：next-id=631 taken=451 queue=560 inflight=9）

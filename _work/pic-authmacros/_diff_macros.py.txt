@@ -1,0 +1,52 @@
+--- a/t2t/macros.py
++++ b/t2t/macros.py
+@@ -117,16 +117,30 @@
+                    for ref in refs):
+                 bad.add(name)
+                 del table[name]
+                 changed = True
+ 
+ 
+-UNSAFE = ("\\if", "\\csname", "\\expandafter", "\\else", "\\fi", "\\@if",
+-          "\\edef", "\\let", "\\futurelet", "\\noexpand", "\\romannumeral",
+-          "\\begingroup", "\\BeginAccSupp", "\\EndAccSupp", "\\pdfliteral",
+-          "\\ActualText", "\\special", "\\protect")
++UNSAFE = ("csname", "expandafter", "else", "fi", "edef", "let", "futurelet",
++          "noexpand", "romannumeral", "begingroup", "BeginAccSupp", "EndAccSupp",
++          "pdfliteral", "ActualText", "special", "protect")
++
++# TeX ends a control word at the first non-letter, and the safety test has to read a name the
++# same way: as a substring `\fi` stands inside `\fill`, so every \newcommand that fills a path --
++# which is how a TikZ picture is drawn -- was refused as a conditional. `\if` is a family
++# (\ifx, \ifdim, \@ifnextchar) rather than one word, so it still marks its whole prefix.
++CONTROL_WORD = re.compile(r"\\([@A-Za-z]+)")
++
++
++def _unsafe(body):
++    """Whether a macro body holds a conditional or a piece of PDF plumbing."""
++    for m in CONTROL_WORD.finditer(body):
++        bare = m.group(1).lstrip("@")
++        if bare in UNSAFE or bare.startswith("if"):
++            return True
++    return False
+ 
+ 
+ def _parse_one(text, after, cmd):
+     i = skip_spaces(text, after)
+     if text[i:i + 1] == "*":
+         i += 1
+@@ -201,13 +215,13 @@
+             body = body + "\n" + text[i + 1:end2 - 1] + "\n\\relax"
+             i = end2
+     if cmd.startswith("\\DeclareMath"):
+         kind = "operator"
+     else:
+         kind = "env" if cmd == "\\newenvironment" else "macro"
+-    if any(u in body for u in UNSAFE):
++    if _unsafe(body):
+         raise ValueError("conditional body")
+     if nargs == 0:
+         nargs = max_iter(body)
+     if optional_first and opt is None:
+         opt = ""
+     return Macro(mname, nargs, opt, body, kind), i

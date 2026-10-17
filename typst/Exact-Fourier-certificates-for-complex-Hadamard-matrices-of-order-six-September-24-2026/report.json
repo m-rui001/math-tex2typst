@@ -1,0 +1,32 @@
+{
+  "paper": "Exact-Fourier-certificates-for-complex-Hadamard-matrices-of-order-six-September-24-2026",
+  "ok": true,
+  "typ_lines": 930,
+  "included_pdf_pages": 0,
+  "formulas": 538,
+  "math_failed": 0,
+  "labels": 87,
+  "equations": 45,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 3,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "538",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "[WARNING] Could not load include file certificate/verify.py at E:\\math\\_work\\flat\\_work_tex\\Exact-Fourier-certificates-for-complex-Hadamard-matrices-of-order-six-September-24-2026.tex line 1981 column",
+  "packages_unsupported": [
+    "listings"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Exact-Fourier-certificates-for-complex-Hadamard-matrices-of-order-six-September-24-2026.tex"
+}

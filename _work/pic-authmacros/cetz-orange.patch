@@ -1,0 +1,15 @@
+--- a/t2t/cetz.py
++++ b/t2t/cetz.py
+@@ -17,7 +17,11 @@
+ RGB = {
+     "black": (0, 0, 0), "white": (255, 255, 255), "red": (255, 0, 0),
+     "green": (0, 128, 0), "blue": (0, 0, 255), "gray": (128, 128, 128),
+-    "grey": (128, 128, 128), "yellow": (255, 255, 0), "orange": (255, 165, 0),
++    # xcolor's own answer, not the CSS one: `\extractcolorspecs{orange}` answers rgb/1,0.5,0
++    # (_work/pic-authmacros/m_colors.tex), and a figure that separates two families by ink
++    # (`orange!65!black`, measured off the compiled page as #a65300) draws the second family in the
++    # yellower #a66b00 CSS orange when the table carries that instead.
++    "grey": (128, 128, 128), "yellow": (255, 255, 0), "orange": (255, 128, 0),
+     "purple": (128, 0, 128), "brown": (165, 42, 42), "pink": (255, 192, 203),
+     "cyan": (0, 255, 255), "magenta": (255, 0, 255),
+     "lightgray": (192, 192, 192), "lightgrey": (192, 192, 192),

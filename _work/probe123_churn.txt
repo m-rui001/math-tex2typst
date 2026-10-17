@@ -1,0 +1,19 @@
+pictures emitted=918  unchanged=0  changed=918
+changed only by miter-limit=831 over 496 papers (pen >=4pt: 3)
+changed by a written cap/join=67 (+ limit too=20) over 51 papers (pen >=4pt: 9)
+pictures the converter still refuses=11 papers
+miter-only canvases with a literal corner under 32deg=29, in the disagreement band [11.5,29)=12, beveled by both=14
+   BKT-universality-for-height-and-planar-spin-fields-September-24-2026 corner=0.0deg pen=1.2pt both-bevel
+   Exponential-decay-in-two-dimensional-classical-On-models-September-23-2026 corner=0.0deg pen=0.8pt both-bevel
+   Pure-Point-Spectrum-for-the-Two-Dimensional-Anderson-Model-at-Every-Positive-Disorder-September-23-2026 corner=0.0deg pen=0.8pt both-bevel
+   The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-September-25-2026 corner=0.0deg pen=2.0pt both-bevel
+   The-Margulis-Platonov-conjecture-over-number-fields-September-23-2026 corner=0.0deg pen=0.4pt both-bevel
+   Variable-dimension-Weisfeiler-Leman-equivalence-on-general-and-subcubic-graphs-September-25-2026 corner=0.0deg pen=1.15pt both-bevel
+   Directional-transience-implies-ballisticity-September-23-2026 corner=3.2deg pen=1.6pt both-bevel
+   Renewal-and-changes-of-law-for-critical-honeycomb-walks-September-26-2026 corner=3.8deg pen=0.8pt both-bevel
+   Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere-September-23-2026 corner=6.2deg pen=0.4pt both-bevel
+   A-doubling-Hilbert-subset-with-no-finite-dimensional-bi-Lipschitz-embedding-September-25-2026 corner=6.7deg pen=0.8pt both-bevel
+   Finite-tensor-savings-and-exact-Fourier-circuits-September-25-2026 corner=9.5deg pen=0.4pt both-bevel
+   Maximal-Multipoint-Seshadri-Constants-in-Higher-Dimensions-October-5-2026 corner=9.5deg pen=1.2pt both-bevel
+   Maximal-multipoint-Seshadri-constants-in-positive-characteristic-October-5-2026 corner=9.9deg pen=0.8pt both-bevel
+   Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September-26-2026 corner=10.3deg pen=0.8pt both-bevel

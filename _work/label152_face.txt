@@ -1,0 +1,26 @@
+emitter face at depth >3 pt, on the label81_pairs population joined to control152_rows.json
+onink: rows 8 (unique 8) over 7 canvases / 7 papers
+foreign: rows 10 (unique 8) over 5 canvases / 5 papers
+union: 11 canvases / 11 papers
+
+-- onink --
+    4.56  The-Blockwise-Alperin-Weight-Conjecture-September-23-202#0  'Smallorbitgivesanextensionwithsmall' vs '=1'
+    4.12  Irrational-cubic-fourfolds-with-geometric-K3-categories-#0  '⇢X' vs 'Morifactorization'
+    3.92  Finite-Monoid-Computations-and-a-Uniform-Generalized-Sta#0  'continuation' vs 'firstmismatch'
+    3.90  The-crossing-number-of-complete-bipartite-graphs-Septemb#0  '−1' vs 'Transversechords:'
+    3.43  Polynomial-vacuum-representations-and-bridge-mass-for-ho#2  'Conesphere' vs 'pΛ'
+    3.36  The-Blockwise-Alperin-Weight-Conjecture-September-23-202#0  'Valuedliftandmarked-coverdescent' vs 'p'
+    3.32  Cylinder-amplitudes-and-logarithmic-bridge-length-window#0  'y' vs 'Firstmeansleft;'
+    3.10  Disk-transfer-representations-and-confined-bridge-mass-S#1  'block' vs '2'
+
+-- foreign --
+   10.26  An-Irrational-Trace-Counterexample-to-Reduced-Baum-Conne#0  'attachments'
+   10.26  Spontaneous-magnetization-in-the-quantum-Heisenberg-ferr#2  'originaledge'
+   10.26  Spontaneous-magnetization-in-the-quantum-Heisenberg-ferr#2  'originaledge'
+   10.26  Spontaneous-magnetization-in-the-quantum-Heisenberg-ferr#2  'routededge'
+   10.26  Spontaneous-magnetization-in-the-quantum-Heisenberg-ferr#2  'routededge'
+    9.78  Cylinder-amplitudes-and-logarithmic-bridge-length-window#0  ':oldfirst'
+    8.30  Cylinder-amplitudes-and-logarithmic-bridge-length-window#0  ':oldsecond'
+    4.45  Uniform-marked-polygon-estimates-and-sharp-finite-bridge#2  'p'
+    3.87  Critical-strip-crossing-mass-on-the-honeycomb-lattice-Se#2  'west'
+    3.87  Critical-strip-crossing-mass-on-the-honeycomb-lattice-Se#2  'east'

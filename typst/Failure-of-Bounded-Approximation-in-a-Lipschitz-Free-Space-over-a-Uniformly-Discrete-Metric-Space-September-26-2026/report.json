@@ -1,0 +1,32 @@
+{
+  "paper": "Failure-of-Bounded-Approximation-in-a-Lipschitz-Free-Space-over-a-Uniformly-Discrete-Metric-Space-September-26-2026",
+  "ok": true,
+  "typ_lines": 566,
+  "included_pdf_pages": 0,
+  "formulas": 452,
+  "math_failed": 0,
+  "labels": 48,
+  "equations": 3,
+  "theorems": 2,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "452",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Failure-of-Bounded-Approximation-in-a-Lipschitz-Free-Space-over-a-Uniformly-Discrete-Metric-Space-September-26-2026.tex"
+}

@@ -1,0 +1,45 @@
+========================================================================
+KaTeX 未解析长尾治理计划 (katex long-tail plan)
+========================================================================
+
+[FRESH CENSUS  re-run after D256/D278/D535 edits]
+  spans          = 857603
+  refused        = 511   (was 514 @01:10)
+  filesHit       = 196
+  distinct undef = 57 (cover 159 spans)
+  other classes  = 39 (cover 352 spans)
+  baseline snapshot: refused 3,119 / filesHit 318 (katex_refused ~3,935 家族已闭合)
+
+[CLASS TOTALS over 511 refused sites]
+  ORDER     = 149
+  JUDGMENT  = 223
+  KEEP      = 8
+  WAIVER    = 131
+  说明: ORDER=据文件内证据可导出正确写法（含精确替换串）;
+        JUDGMENT=意图清楚但须作者新写; KEEP=故意引用/broken 形式的勘误或专名缩写;
+        WAIVER=尺子误报（非数学 / KaTeX 实可渲）。
+
+========================================================================
+PART A — 未解析控制序列 (per-macro)
+========================================================================
+
+### \F   count=21   class=ORDER
+    判据: 有限域记号：正文另有 \mathbb F / \Z 拼写，逐字补 \mathbb{F}；替换 \F -> \mathbb{F}
+    精确替换: \F  ->  \mathbb{F}
+    - D145:253
+      行: (d) 失败路线。[推测] 第一条：用随机哈希但不去等差，即 $J$ 取整个 $\F_P$。则边上 $h_X+h_Y=2h_Z$ 不强制相等，存活事件退化为两点约束，计数少一个 $P$ 因子，$D$ 的下界掉到 $\tfrac13H(\alpha)$ 以下。[推测] 第二条：跳过 exact 边际类型而只用软约束（频率接近）。则 $V_N$ 与 $B_N$ 的阶数关系变成大偏差形式，`values
+    - D212:80
+      行: 核的一致有界是第二个调度器：$h:=2^9$ 满足 $h\ge\lvert \ker(Q_{k+1}\to Q_k)\rvert$ 对一切 $k\ge0$（`03-geometry.tex:42-46`）。$k\ge1$ 时核元素形如 $I+2^kA$ 模 $2^{k+1}$，由 $A$ 的九个二元元素决定，所以 $\lvert \ker\rvert=2^9=512$；而 $k=0$ 的核是 $Q
+    - D214:60
+      行: 这副面孔在 $\Z[\theta][X]$ 里成立，因此对任何域的特化都成立。论文用两副面孔的策略在 proof-flow.tex:4-42 里画得很清楚：同一张图，左边分支在 $\mathbb C$ 上用永久投影，右边分支在 $K=\overline{\F}_2$ 上用平面曲线几何。最后两条分支在 $\mathbb C$ 里汇合：几何在特征 2 提供的开集，被拿回到复数上做投影。这个"integ
+    - D214:85
+      行: 第二副面孔开工（adjugate.tex）。设定：$K=\overline{\F}_2$，取两两不同的 $\bar\theta_1,\dots,\bar\theta_k$，对每个 $X\in\operatorname{Mat}_k(K)$ 写 $A=t\bar D+uX$、$M=sI_k+A$、$F_X=\det M$、$C_X=V(F_X)\subset\mathbb P^2_K$（adjuga
+    - D214:139
+      行: lem:characteristic-transfer（transfer.tex:18-121）。输入：$F(\theta,x)\in\Z[\theta][x]$ 对 $x$（$v$ 个变量）齐次次数 $r\ge2$；某个 $\bar\theta\in\overline\F_2^a$ 处仿射梯度零点集维 $\le v-\delta$。构造 $\mathcal Z=\Proj(\Z[\theta][
+    - D214:204
+      行: `[推测]` 动笔前我以为这类论文的主引理会是某种表示不变量（类似 Hessian 或奇点余维）的直接计算；成品却是一个三段式：组合 gadget 造形式（selector）、算术几何控奇异（adjugate-conductor-dimension-transfer）、射影计数换下界（polar）。中段整段运行在 $\overline{\F}_2$，这在我最初的蓝图里根本没有位置。跨特征搬运（tr
+===PARTC===
+PART A — 未解析控制序列 (per-macro)
+PART B — 其它 KaTeX 拒渲类 (per-class)
+PART C — 逐篇索引 (note -> ORDER/JUDGMENT/KEEP/WAIVER), 按 ORDER 降序
+PART D — 摘要 (plan.md style)

@@ -1,0 +1,17 @@
+% Control case: what xcolor actually answers for the colour names cetz.py's table carries.
+% \extractcolorspecs resolves a name through xcolor's own definition, so the numbers are the ones
+% pdflatex inks with, not the CSS values an author might expect.
+\documentclass{article}
+\usepackage{xcolor}
+\makeatletter
+\newcommand{\probe}[1]{\extractcolorspecs{#1}{\mymodel}{\myspec}%
+  \typeout{COLOR:#1=\mymodel/\myspec}}
+\makeatother
+\begin{document}
+\probe{red}\probe{green}\probe{blue}\probe{cyan}\probe{magenta}\probe{yellow}
+\probe{black}\probe{white}\probe{gray}\probe{grey}\probe{orange}\probe{purple}
+\probe{violet}\probe{teal}\probe{olive}\probe{lime}\probe{brown}\probe{pink}
+\probe{darkgray}\probe{lightgray}\probe{darkgrey}\probe{lightgrey}\probe{olive}
+\probe{red!60!black}\probe{orange!65!black}\probe{blue!60!black}\probe{cyan!28}
+\probe{orange!35}\probe{cyan!28}\probe{black!12}\probe{black!45}\probe{black!6}
+\end{document}

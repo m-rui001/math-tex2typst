@@ -1,0 +1,50 @@
+=== L1 | L1-Embeddings-of-Graphs-of-Bounded-Treewidth-September-23-20 | notes=D13
+=== L3 | A-classification-of-finite-Euclidean-Ramsey-configurations-S | notes=D15
+=== L7 | A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture- | notes=D162,D23
+    D162: ### 0.1 本篇在队列中的位置与目录
+    D162: 队列第 6 行号，日期 2026-09-23。论文目录（覆盖审计用的完整串）：
+    D162: `paper.tex` 的 `\input` 顺序（实测第 46-51 行区间内的六行）是 `01-introduction`、`03-pairing`、`02-criterion`、`04-hypergraph`、`05-prescription`、`06-cellular-automata`，而 `02-criterion.tex:51` 内部又 `\input{sections/02a-embedding.tex}`。文件名编号与
+=== L8 | A-counterexample-to-Kaplanskys-quasitrace-conjecture-Septemb | notes=D162,D24
+    D162: ### 0.1 本篇在队列中的位置与目录
+    D162: 队列第 6 行号，日期 2026-09-23。论文目录（覆盖审计用的完整串）：
+    D162: `paper.tex` 的 `\input` 顺序（实测第 46-51 行区间内的六行）是 `01-introduction`、`03-pairing`、`02-criterion`、`04-hypergraph`、`05-prescription`、`06-cellular-automata`，而 `02-criterion.tex:51` 内部又 `\input{sections/02a-embedding.tex}`。文件名编号与
+    D24: 文末的台账补表把本笔记的位置坐标统一收到 `preprints/A-counterexample-to-Kaplanskys-quasitrace-conjecture-September-23-2026/build/` 下 `*.tex` 的逐字行号上；补表前我核对过 `.tools/lean_queue.txt`，队列第 8 行逐字等于 `A-counterexample-to-Kaplanskys-quasitrace-conje
+=== L9 | A-Counterexample-to-Rysers-Covering-Conjecture-September-23- | notes=D127,D19
+=== L15 | A-direct-proof-of-the-complete-Crouzeix-inequality-September | notes=D25
+=== L16 | A-doubling-Hilbert-subset-with-no-finite-dimensional-bi-Lips | notes=D26
+=== L63 | Compatibility-entropy-and-the-spectrum-of-a-Thorp-sweep-Sept | notes=D68,D82
+    D68: Thorp 一线在队列里有三篇。为避免把别篇的结论当输入，我在开头把边界钉住，并且声明我的推演只从 `build/sections/00`…`16` 这套 tex 出发。
+    D68: 本篇（队列 63 行）的量是相容性熵与转移算子的奇异谱：一次扫描 $T_n$ 的全部奇异值被一个有界正则矩 $Z_n(p_*)$ 收住。
+    D68: 队列 65 行的 `Conditional coordinate sweeps and analytic transfer` 处理条件化之后的 Schatten 矩界与解析迁移，另一个 agent 正在写它的笔记 `D67`，我没有读那篇论文的任何内容，也不把它的任何陈述当作我的前提。
+    D68: 队列 110 行的 `Routing densities and representation contraction for Thorp sweeps` 处理路由密度与表示压缩，还没派单。本篇 tex 确实引用了它，只引一处：`00:89`
+=== L65 | Conditional-coordinate-sweeps-and-analytic-transfer-Septembe | notes=D67
+=== L73 | Exponential-decay-in-two-dimensional-classical-On-models-Sep | notes=D166
+    D166: `sections/annulus.tex` 的 14,879 B，合计 65,503 B，和队列台账给的数字对得上。
+    D166: 但没有把书目本身当论证来源。typst 分片、`素材/`、`INDEX.md`、`队列台账.md`、
+=== L82 | Integral-and-fractional-expectation-thresholds-are-equivalen | notes=D85
+=== L85 | Memory-and-precision-in-noiseless-Gaussian-regression-Septem | notes=NONE
+=== L92 | Nonuniqueness-for-Bounded-Measurable-Scalar-Conductivities-i | notes=D12
+=== L93 | Perfect-completeness-for-2-to-1-games-September-23-2026 | notes=D114,D12
+    D114: 队列第 93 行，题名 Perfect completeness for 2 to 1 games。素材目录 `E:\math\preprints\Perfect-completeness-for-2-to-1-games-September-23-2026\build\`，扁平布局，九个 `*.tex` 分片加 `main.tex`、`references.bib`、`figures\`。本文全部逐字引文都来自这些 tex 分片，行号
+=== L95 | Planar-Graph-Metrics-Embed-into-L1-with-Constant-Distortion- | notes=D13,D132
+=== L98 | Posterior-replicas-and-conditional-information-in-Gaussian-r | notes=NONE
+=== L99 | Power-law-violations-of-Yaus-nodal-upper-bound-September-23- | notes=D90
+    D90: 对象：队列 99 行 `Power-law violations of Yau's nodal upper bound`，署名 OpenAI，2026-09-23。
+=== L100 | Product-projection-localization-and-the-QAC0-parity-lower-bo | notes=D134
+    D134: 队列行 100。论文题目 `Product-projection localization and the QAC⁰ parity lower bound`，`build/main.tex:3-4` 的标题字段逐字为 `\title{Product-projection localization and the\\` 与 `\texorpdfstring{$\QAC$}{QAC0} parity lower bound}`，日期在 `m
+=== L107 | Replacing-Gaussian-observations-in-memory-constrained-infere | notes=D95
+    D95: 对象:队列 107 行,OpenAI 预印本 `Replacing Gaussian observations in memory-constrained inference`,2026-09-27。
+    D95: 我先把边界钉死,因为这篇的词面风险太高:摘要里有 "uniform spherical signal",而 Lean 队列里存在一条
+=== L110 | Routing-densities-and-representation-contraction-for-Thorp-s | notes=NONE
+=== L116 | Smooth-counterexamples-to-Yaus-nodal-upper-bound-in-dimensio | notes=NONE
+=== L120 | Subpolynomial-dimension-reduction-in-Lp-September-23-2026 | notes=D92
+    D92: 写在前面的话:这份笔记按"正在做这项研究的我"的视角展开。我读的对象是队列 120 行的 preprint《Subpolynomial dimension reduction in $L_p$》(署名 OpenAI, 2026-09-23, 目录 `E:\math\preprints\Subpolynomial-dimension-reduction-in-Lp-September-23-2026\`)。取证纪律:正文素材只来自 `bu
+=== L121 | Subpolynomial-query-complexity-for-well-conditioned-log-conc | notes=NONE
+=== L125 | Talagrands-discrete-convexity-conjecture-September-23-2026 | notes=D85
+=== L126 | Taming-implies-compatibility-on-four-manifolds-September-23- | notes=D82
+=== L129 | The-complete-Crouzeix-theorem-September-23-2026 | notes=D25
+=== L131 | The-crossing-number-of-complete-bipartite-graphs-September-2 | notes=D115
+=== L146 | The-second-Kahn-Kalai-conjecture-September-24-2026 | notes=NONE
+=== L147 | The-sharp-factor-of-IID-threshold-for-the-free-Ising-model-o | notes=D166
+    D166: `sections/annulus.tex` 的 14,879 B，合计 65,503 B，和队列台账给的数字对得上。
+    D166: 但没有把书目本身当论证来源。typst 分片、`素材/`、`INDEX.md`、`队列台账.md`、

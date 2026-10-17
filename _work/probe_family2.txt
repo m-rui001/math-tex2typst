@@ -1,0 +1,22 @@
+==== D26-加倍Hilbert子集无双Lipschitz有限维嵌入.md
+   N_macro          total=3    math=1   code=0   fenced=2   text_outside_math=0
+   R_macro          total=33   math=26  code=0   fenced=7   text_outside_math=0
+   av               total=0    math=0   code=0   fenced=0   text_outside_math=0
+   bare_math        total=9    math=0   code=9   fenced=0   text_outside_math=0
+   diam             total=1    math=0   code=0   fenced=1   text_outside_math=0
+   inner            total=4    math=3   code=0   fenced=1   text_outside_math=0
+   norm             total=45   math=2   code=0   fenced=43  text_outside_math=0
+==== D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md
+   bare_math        total=4    math=0   code=4   fenced=0   text_outside_math=0
+   mathtt_root      total=8    math=8   code=0   fenced=0   text_outside_math=0
+   root             total=1    math=0   code=1   fenced=0   text_outside_math=0
+   two              total=1    math=0   code=1   fenced=0   text_outside_math=0
+==== D30-负pinched三维Kähler流形无有界全纯坐标.md
+   bare_math        total=3    math=1   code=2   fenced=0   text_outside_math=0
+==== D77-特征二下的五边形退化与Deligne--Drinfeld猜想证明反推.md
+   bare_math        total=1    math=0   code=1   fenced=0   text_outside_math=0
+   two              total=3    math=3   code=0   fenced=0   text_outside_math=0
+==== D238-平方差自由集的固定幂节省.md
+   bare_math        total=1    math=1   code=0   fenced=0   text_outside_math=0
+
+GRAND: flagged-family math-span occurrences=8 ; non-render (code+fenced) occurrences=19

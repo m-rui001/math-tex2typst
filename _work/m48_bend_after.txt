@@ -1,0 +1,44 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+== ¢Ù is tikz-cd's `bend left=deg` pgf's `to`, and which side does each of us bend to?
+   bend15     page: chord 3.972cm  apex -0.300 along 0.5014  arm 0.3913*chord  0.2925*chord*sin+15 = -0.301
+              label ink 0.137x0.246 centre -0.199 from the curve, at 0.4984 of the chord
+          ours: bezier apex -0.316 from its own chord, along 0.5000
+   bend22     page: chord 3.973cm  apex -0.435 along 0.5014  arm 0.3912*chord  0.2925*chord*sin+22 = -0.435
+              label ink 0.137x0.246 centre -0.199 from the curve, at 0.4984 of the chord
+          ours: bezier apex -0.458 from its own chord, along 0.5000
+   bend45     page: chord 3.991cm  apex -0.824 along 0.5014  arm 0.3909*chord  0.2925*chord*sin+45 = -0.826
+              label ink 0.137x0.246 centre -0.199 from the curve, at 0.4984 of the chord
+          ours: bezier apex -0.865 from its own chord, along 0.5000
+   bare       page: chord 3.974cm  apex -0.580 along 0.5014  arm 0.3912*chord  0.2925*chord*sin+30 = -0.581
+              label ink 0.137x0.246 centre -0.199 from the curve, at 0.4985 of the chord
+          ours: bezier apex -0.611 from its own chord, along 0.5000
+   right22    page: chord 3.973cm  apex +0.435 along 0.5014  arm 0.3912*chord  0.2925*chord*sin-22 = +0.435
+              label ink 0.137x0.246 centre -0.200 from the curve, at 0.4982 of the chord
+          ours: bezier apex +0.458 from its own chord, along 0.5000
+   down-left  page: chord 2.725cm  apex -0.399 along 0.5021  arm 0.3929*chord  0.2925*chord*sin+30 = -0.399
+              label ink 0.137x0.246 centre -0.250 from the curve, at 0.5021 of the chord
+          ours: bezier apex -0.329 from its own chord, along 0.4999
+== ¢Ú how far does a label hang off its own arrow -- page vs our law
+   h-f       page: 'f'          ink 0.137x0.246 centre -0.200 from the shaft (near edge +0.077), along 0.4966
+           ours: label '$f$' centre -0.187 from the shaft, along 0.5000 (law 0.077 + half-box)
+   h-frac    page: 'a'          ink 0.136x0.176 centre -0.311 from the shaft (near edge +0.223), along 0.5035
+   h-frac    page: 'b'          ink 0.111x0.176 centre -0.132 from the shaft (near edge +0.044), along 0.5035
+           ours: label '$a / b$' centre -0.187 from the shaft, along 0.5000 (law 0.077 + half-box)
+   h-long    page: 'abcdefghij' ink 1.372x0.246 centre -0.200 from the shaft (near edge +0.077), along 0.5000
+           ours: label '$a b c d e f g h' centre -0.187 from the shaft, along 0.5000 (law 0.077 + half-box)
+   h-swap    page: 'f'          ink 0.137x0.246 centre +0.184 from the shaft (near edge +0.061), along 0.4966
+           ours: label '$f$' centre +0.187 from the shaft, along 0.5000 (law 0.077 + half-box)
+   v-f       page: 'f'          ink 0.137x0.246 centre -0.151 from the shaft (near edge +0.028), along 0.4995
+           ours: label '$f$' centre -0.437 from the shaft, along 0.5000 (law 0.077 + half-box)
+== ¢Û does a long arrow label push the next column?
+   nolabel   page: cell centres A 0.494 B 2.327 gap 1.833cm  delta +0.000 vs nolabel
+      ours: cell x ['0.000', '3.200'] label []
+   short     page: cell centres A 0.494 B 2.327 gap 1.833cm  delta +0.000 vs nolabel
+      ink 'f'            x 1.327..1.464
+      ours: cell x ['0.000', '3.200'] label ["'$f$'@1.600"]
+   long      page: cell centres A 0.494 B 2.327 gap 1.833cm  delta +0.000 vs nolabel
+      ink 'abcdefghij'   x 0.717..2.089
+      ours: cell x ['0.000', '3.200'] label ["'$a b c d e f'@1.600"]
+   descr     page: cell centres A 0.494 B 2.327 gap 1.833cm  delta +0.000 vs nolabel
+      ink 'abcdefghij'   x 0.717..2.089
+      ours: cell x ['0.000', '3.200'] label ["'$a b c d e f'@1.600"]

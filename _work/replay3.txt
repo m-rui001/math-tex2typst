@@ -1,0 +1,25 @@
+distinct residue formulas: 598
+sample converted: '$\\( partial_v + tau_1 \\) X_0 = delta beta_1 + delta tau_1 thin xi_1 + tau_1 upright(d)_
+still refused: 440 ; converted on replay: 158
+    86  env:tikzcd              \begin{tikzcd}[column sep=large] U \arrow[r,"e"] \arrow[d,"\pi"'] & X\\ V & \
+    37  env:array               \alpha_{\mathrm{tot}}= \inf\left\{\alpha\ge0: \begin{array}{l} \text{there ex
+    32  env:aligned             \begin{aligned} J^\mathrm{sw}_{T,k}&=\sum_{S\prec T}J_S+J_{T,k},& L^\mathrm{s
+    19  \mathbb                 \mathbb{E}_\mathrm{sites}\mathbb{E}_{\mathcal{D},\rm routes} [\mathbf{1}_{\ma
+    15  \mathcal                \mathcal{A}=\sum_{\substack{u\text{ in the integer port boxes}\\ \text{satisf
+    14  \operatorname           \operatorname{Mass}\left((f_k)_*\alpha_k\bigm|_{h^{-1}([-\ell-1,-\ell])}\righ
+    13  \rm                     Z_{j,\rm in}\leq2M_bk_bE_*\qquad(|l|\leq2c). 
+    12  \text                   F_U=\{z:\text{the rule in \eqref{l:lt:score} selects }U\}\subseteq U. 
+    12  \sum                    \sum_\ell\dim_{y_\ell} \bigl(Y_\ell\cap(y_\ell+H_\ell)\bigr) \geq\operatornam
+    12  env:CD                  \begin{CD} B_V(\Psi(Q\boxtimes L)) @>{c_V(Q\boxtimes L)}>> \Psi A_V(Q\boxtime
+    11  env:gathered            \begin{gathered} \text{a proper k-coloring of \mathbb{R}^2 exists} \\ \Longle
+    10  \eqref                 \eqref{eq:add-available-congruences}
+     8  \le                     L_y\le2\left(\frac{W}{s_n}\right)^{2/n}<2 \qquad\text{for \nu-almost every }y
+     8  \mathrm                 S_F^{\mathrm{in}} =\overline{\bigcup_{w\ {\rm quasi\text{-}prime\ divisor}} I
+     8  env:cases               \begin{cases} g_*(\alpha)\le-\tfrac12,&\text{if \alpha matches the list},\\ g
+     7  \ge                     B_i(t)\ge R(H_i),\qquad K_{V_i}+B_i(t)+\mathbf{M}_i(t)_{V_i}\sim_{\mathbb{Q}}
+     6  \left                   \left|\mathbb{E}_A\langle X_I,X_J\rangle-\alpha\right| \leq\eta \qquad\text{w
+     6  env:split               \begin{split} D_0I(2\tau)^q\leq C_\mathrm{out}q^{-n/2} \int_{\mathcal{M}}\rho
+     6  \ref                   (\ref*{geo:secants)
+     5  \mu                     K_{W'}+T'=\mu^*(K_W+T)+E, \qquad E\geq0\ \text{and \mu-exceptional}. 
+     5  \nu                     f(v)\nu(dv)K(v,do),\qquad f(v)>0\quad \text{for \nu-almost every openly filla
+     4  \quad                   H^j(W_e)_b=0\quad\text{whenever }j+b>B, \qquad b=\text{\rho_e-weight}. 

@@ -1,0 +1,38 @@
+{
+  "paper": "Cutoff-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026",
+  "ok": true,
+  "typ_lines": 4029,
+  "included_pdf_pages": 0,
+  "formulas": 3324,
+  "math_failed": 0,
+  "labels": 541,
+  "equations": 2,
+  "theorems": 0,
+  "figures": 3,
+  "tables": 3,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 3
+  },
+  "samples": {
+    "formulas": "3324",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl",
+    "bookmark"
+  ],
+  "macros_skipped": [
+    "\\newcommandnewcommand",
+    "\\defdef",
+    "\\defdef",
+    "\\renewcommand\\P"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Cutoff-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026.tex"
+}

@@ -1,0 +1,14 @@
+=== D710 bytes=72266 heads=19 B/sec=3803
+dir=Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026 tex=10 total=171741B unc=3 15911B
+  UNC     1441B   30L build/figures/induction.tex
+  UNC     2345B   69L build/main.tex
+  UNC    12125B  261L build/references.tex
+last5=## §14 一页导读：依赖关系重述 || ## §15 勘误申报 || ## §16 补充：三条最易误读的等式 || ## §17 结语：这份笔记覆盖到哪里 || ## §18 勘误补遗
+=== D627 bytes=114948 heads=28 B/sec=4105
+dir=The-Margulis-Platonov-conjecture-over-number-fields-September-23-2026 tex=11 total=292290B unc=1 10660B
+  UNC    10660B  294L build/references.tex
+last5=## §23 勘误 || ## §24 台账 || ## §25 追加批勘误申报 || ## §26 台账 || ## §27 追加批补充勘误与越界申报
+=== D718 bytes=122826 heads=24 B/sec=5118
+dir=Uniform-quasipolynomial-time-trace-reconstruction-October-5-2026 tex=8 total=98116B unc=1 5606B
+  UNC     5606B  132L build/references/references.tex
+last5=## §19 矩松弛这一层的初等账：setup.tex 逐条补齐 || ## §20 分离一侧的逐行技术账：separation.tex 五百四十九行 || ## §21 多尺度一侧的逐行技术账：multiscale.tex 未入账条目 || ## §22 台账续表与本批追加的登记 || ## §23 台账行数更正

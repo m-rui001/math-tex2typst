@@ -1,0 +1,11 @@
+################ D50  (D50-非坐标多项式与三维仿射零纤维.md)
+before: bytes=101104 lines=591
+REGISTERED line=438 sites=1 reason=单枚未配对 \|：$(1+2s^2x)F\big\|_P$ 是限制/求值号，非绝对值/范数；本篇自述只用 \mid（整除）与 \lvert\rvert（绝对值），无 \upharpoonright 凭据 ⇒ 不发明，原样登记
+KEEP| | 证书在 $P$ 的两边 | 我算：左边 $\alpha h+\beta y-1=3\cdot2+(-4)\cdot1-1=1$；右边 $(1+2s^2x)(h-1-p)-4s^4(x^2+y^3-sh)=(-1)(-1)-4\cdot0=1$ | 对照 `eq:certificate` | 恒等式的点检验 | 两边同非零正说明 $P\notin\{F=0\}$：残量恰好是 $(1+2s^2x)F\big\|_P$ |
+after: bytes=101104 (delta +0) lines=591 rows_fixed=0 sites_fixed=0 sites_registered=1
+[DRY] nothing written to the note
+D50 file-count \lVert  = 0
+D50 file-count \lvert  = 1
+D50 file-count \mid  = 5
+D50 file-count \upharpoonright = 0
+D50 file-count \Vert  = 0

@@ -1,0 +1,18 @@
+==== D26 L362-378 ====
+362  |3. **[推测，我补的] 直接对上确界速率建模**。若想在论文里写 $\delta(\varepsilon)$ 的显式公式，需要对 $K$ 的几何有额外信息（哪张 sheet、哪个好点逼近极值），而 $K$ 是从**所有** sheet 的好点收集来的，其形状对 $f$ 完全不可控。这一处不可控正是作者把"速率"从证明里逐出去的原因；Lean 版把 $\delta$ 做成坏集最右端到 $A$ 的距离（第 12 节），存在但从不估计，是同一事实的机器呈现。
+363  |
+364  |## 5 方差恒等式与沿线段积分：两台每天开工的机器
+365  |
+366  |对应素材 2.5，tex:198-204。恒等式 (eq:variance)（tex:199-203）：
+367  |
+368  |```tex
+369  |\begin{equation}\label{eq:variance}
+370  | \left\langle\norm{G-a}^2\right\rangle
+371  | =\left\langle\norm{G}^2\right\rangle-\norm a^2
+372  |       -2\inner{a}{\langle G\rangle-a}.
+373  |\end{equation}
+374  |```
+375  |
+376  |直接展开验证：$\langle\|G-a\|^2\rangle=\langle\|G\|^2\rangle-2\inner a{\langle G\rangle}+\|a\|^2$，再把 $-2\inner a{\langle G\rangle}+\|a\|^2$ 拆成 $-\|a\|^2-2\inner a{\langle G\rangle-a}$，与 tex 形式一致。素材特别注明"论文写 $\langle\|G\|^2\rangle-\norm a^2-\ldots$，即 $-\norm a^2$ 项来自展开常数项"，我按上面两步核对通过。它的意义是把"$L^2$ 偏差"分解成三样可分别
+377  |
+378  |线积分约定（tex:204 原样）：

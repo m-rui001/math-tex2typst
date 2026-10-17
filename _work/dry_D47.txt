@@ -1,0 +1,18 @@
+################ D47  (D47-无共轭点但无非正曲率度量的三流形.md)
+before: bytes=126546 lines=751
+ROW line=594  sites=2  pipes 7->5  $=12(parity even)
+OLD| | $C$(Lemma 4.1) | 依赖 $\chi$;Lean 取 $C=18+D$ | $\|P'\|\le C\delta$、domination | 只作传递,动它经 $C_e,C_m$ 回冲 $\delta_0$ |
+NEW| | $C$(Lemma 4.1) | 依赖 $\chi$;Lean 取 $C=18+D$ | $\lVert P'\rVert\le C\delta$、domination | 只作传递,动它经 $C_e,C_m$ 回冲 $\delta_0$ |
+ROW line=595  sites=6  pipes 11->5  $=6(parity even)
+OLD| | $C_0$ | $\|P\|\le C_0,\|P'\|\le C_0\delta,\|P'p\|^2\le C_0\delta(-F'')$ | 第 15 节三条 $S$ 估计 | 同上,纯传递 |
+NEW| | $C_0$ | $\lVert P\rVert\le C_0,\lVert P'\rVert\le C_0\delta,\lVert P'p\rVert^2\le C_0\delta(-F'')$ | 第 15 节三条 $S$ 估计 | 同上,纯传递 |
+ROW line=597  sites=4  pipes 9->5  $=8(parity even)
+OLD| | $C_m$ | $a(0)+\sqrt{2C_0a(0)}+2\sqrt{2C_0a(0)/3}$ | $\|S(p,e)-Lp_1\|\le C_m\delta L\|p_1\|$ | 增大直接吃 $\delta\le1/(2C_m)$ 与赤字分配 |
+NEW| | $C_m$ | $a(0)+\sqrt{2C_0a(0)}+2\sqrt{2C_0a(0)/3}$ | $\lVert S(p,e)-Lp_1\rVert\le C_m\delta L\lVert p_1\rVert$ | 增大直接吃 $\delta\le1/(2C_m)$ 与赤字分配 |
+after: bytes=126600 (delta +54) lines=751 rows_fixed=3 sites_fixed=12 sites_registered=0
+[DRY] nothing written to the note
+D47 file-count \lVert  = 12
+D47 file-count \lvert  = 21
+D47 file-count \mid  = 0
+D47 file-count \upharpoonright = 0
+D47 file-count \Vert  = 0

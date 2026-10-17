@@ -1,0 +1,70 @@
+18 | 卡点全在 $x$ 上。标量迹对半分是 $\lambda(p)=\tfrac12\lambda(1)$，那个是 rank zero 直接可及的对象；带上系数以后 $\lambda(px)$ 是一个双线性泛函，投影 $p$ 必须同时对整条系数族成立。作者自己把这句话挑明了（`01_introduction.tex:84-85`）：
+
+23 | 我的初始猜想里第二个误判是"一个 $p$ 就够"。Definition~16 的 halving 形式与 standard 的 all-$m$ 形式靠 `\cite[Propositions~5.7, 5.20 and 5.23]{CCEGSTW}` 对接（`01_introduction.tex:81-83`），这一步是外部接口，不是我要证的东西；但 $B$ 的常数拷贝在 $B^\omega$ 里是否忠实、$\Lambda_\omega$ 之外那些抽象 trace 会不会跑进来捣乱，这两件事必须自己交代。`02_rr_preliminaries.tex:76-82` 给了 faithful 的论证，`02_rr_preliminaries.tex:61-62` 明确"没有额外的抽象 trace 进入这套记号"，这是我读完全稿才意识到的、必须写进定义的防线。
+
+55 | (c) 机械理由：这个约定在 `05_rr_packing.tex:129-131` 被真正消费，backward 构造 $K_{i-1}$ 时要把 $\Phi_i$ 的系数压缩 $v_l$ 拆成 unitary 组合并纳入下一层测试；"系数绝对值和至多 $2$"这个 $2$ 一路传到 `05_rr_packing.tex:157` 的 $\le 4E_{i-1}$（那里是 $2^2$ 的来源）。半径 $R>0$ 出现在 `02_rr_preliminaries.tex:38-42` 的 ball 约定里，配合 `07_unital_preliminaries.tex:244-255` 的 clipping lift。
+
+69 | (b) 中间步骤：$p\in B^\omega\cap B'$ 与 $\lambda(px)=\tfrac12\lambda(x)$ 是两个独立结论，前者来自对中心子的检测（`06_rr_completion.tex:100-102`），后者是恒等式；$\Lambda_\omega$ 的闭凸包扩张由仿射弱星连续性完成（`02_rr_preliminaries.tex:93-97`）。
+
+98 | (b) 中间步骤（论文在 `03_rr_projections.tex:65-111` 给全了，我把骨架抄给自己）：先证任意大的正交正元族存在，$E\cong C(X)$ 且 $X$ 无限；再由 $cAd\ne 0$ 得到 $z=cyd$，用极分解把 $\supp(z^*z)$ 与 $\supp(zz^*)$ 的 trace 拉平；迭代 $k$ 次得到 $\tau(\supp(e))\le 1/k$。
+
+102 | (d) 失败路线（推测）：其一，试图用 $A$ 里的 projection 代替 positive element，这在投影稀少的简单代数里根本不存在；论文正是把这条正元版本同时供给 `08_unital_ranks.tex:20-25` 的 rank approximation 用。其二，MASS 换成 $\supp$ 的连续演算近似（$(e-1/n)_+$ 之类）会让 trace 等式变成不等式，最后 $1/k$ 的除法式 `03_rr_projections.tex:106-109` 就闭合不了。其三，若 $A$ 有有限维表示，$\tau(\supp(e))<\delta$ 与 faithful 性冲突；`main.tex:57` 与 `01_introduction.tex:96-97` 的排除条件就是为这类反例留的。
+
+113 | (b) 中间步骤：$\lVert a-b\rVert<1/8$ 且 $g$ 谱在 $[1/2,\infty)$ 上，故 $a\ge \tfrac12$ 于 $g$ 角内、$b> \tfrac12-\tfrac18=\tfrac38$ 于该角；$\tau(g)\cdot\tfrac38\le\tau(gbg)\le\tau(b)$。fullness 的论证用商范数（`03_rr_projections.tex:142-149`）：$\lVert\pi(a)\rVert\le 1/2$ 与 $\lVert\pi(b)\rVert\le 5/8$，而 $\pi|_A$ 等距 contradict $\lVert b\rVert=1$。
+
+115 | (c) 常数理由：$1/8$ 与 $1/2$ 的间距决定 $3/8$ 与 $5/8$；$\tfrac83$ 是它的倒数。同一个 $1/8$/$3/8$ 模板在 `03_rr_projections.tex:170-177`（column splitting）与 `03_rr_projections.tex:343-353`（insertion，$\tfrac83$ 与 $\tfrac58$）反复复用，说明这是一个刻意固定的"谱切割余量"，不是巧合。$n$ 与 $\delta$ 的关系是 $8/(3n)<\delta$，即 $n>8/(3\delta)$，这是我第一次推导时漏掉的 $8/3$ 放大。
+
+151 | (c) 常数理由：质量损失系数 $3$ 与距离系数 $5$ 都来自同一个 $1/8$ 谱余量（$\tfrac83$ 与 $\tfrac83+2$）。`05_rr_packing.tex:210-213` 逐字复用这两个常数，`05_rr_packing.tex:313-319` 的 Cauchy--Schwarz 求和里那个 $5$ 直接进到 $\sqrt{15HE_N}$（$5\times 3$ 来自 $Y_i$ 的 $3\eta$ 上界与 $L_i$ 累加到 $E_N$）。
+
+164 | (b) 中间步骤：把 $T:E\to E^K\oplus A$ 取二伴随，$T(M)=(0,\dots,0,1)$；弱星闭凸包映射到弱闭凸包，再由 Hahn--Banach 得弱闭包等于范数闭包，于是有限凸组合 $\sum_l\lambda_l v_l\otimes v_l^*$ 同时满足 `04_rr_weighted.tex:56-57` 的两条近似。质量损失 $c=1-\sum_l\lambda_l v_l^*v_l$ 满足 $0\le\tau(c)<\mu$，而 $\tau(q)-\tau(\Phi(q))=\tau(qc)$。中心化估计用映射 $a\otimes b\mapsto aqb$ 的范数不超过 $\tau(q)$。
+
+166 | (c) 指数理由：$\mu=\eta^2$（`04_rr_weighted.tex:115`）。为什么是平方：$\Phi$ 的质量误差以 $\mu$ 线性出现，而能量界 `04_rr_weighted.tex:263` 是 $\lVert b_q-xb_qx^*\rVert_{1,\tau}\le 3\mu\tau(q)$，经过 Lemma~\ref{r:weighted:square-root} 开方以后成为 $\sqrt{\mu}\sim\eta$ 的一次项，这正是 `04_rr_weighted.tex:140-141` 里那条 $\tfrac{2\beta}{\sigma}+\tfrac{(2+\sqrt2)\beta}{\sigma^2}<\eta$ 的匹配要求。
+
+194 | (b) 中间步骤：$G\simeq$ 标量 Gram 矩阵，保留特征值 $\ge\sigma$ 的列成 $W$，删去列满足 $\lVert W_-^*W_-\rVert\le\sigma+\beta$，故 $\tau(W_-W_-^*)\le m(\sigma+\beta)\tau(q)$；$X=W^*W\ge(\sigma/2)(1_k\otimes q)$ 保证 $X^{-1/2}$ 存在，`04_rr_weighted.tex:201-208` 的 resolvent 公式给出 $\lVert X^{-1/2}-Y^{-1/2}\rVert\le\lVert X-Y\rVert/(2a^{3/2})$，$a=\sigma/2$，于是 $\beta$ 项被 $1/\sigma$ 与 $1/\sigma^2$ 放大，形成 $\tfrac{(2+\sqrt2)\beta}{\sigma^2}$。
+
+209 | 我之前一直想"让 $e\le q_j$ 几乎中心"。真相是：$e$ 可以极不中心，只要 $U_j^*xU_j$ 是近似标量矩阵，$y=U_j(1_{k_j}\otimes e)U_j^*$ 的系数 trace 与能量就只通过标量 $\alpha=\Tr(T_0)/k$、$\beta_0=\Tr(T_0^*T_0)/k$ 依赖于 $e$，剩下的误差全部由 $\eta$ 与 mass discrepancy $\delta_\tau$ 支付（`05_rr_packing.tex:19-27`）。这是本节后面所有估计能不看块数的根本原因。
+
+227 | (b) 中间步骤：取 $T_0\in M_k(\C)$ 使 $\lVert T-T_0\otimes q\rVert<\eta$；由 $T$ 是压缩得 $\lVert T_0\rVert\le 2$（`05_rr_packing.tex:31-33`）。用 $\tau(yx)=(\Tr\otimes\tau)(P_eTP_e)$ 把迹搬到矩阵 corner 里，$T_0\otimes q$ 与 $P_e=1_k\otimes e$ 交换，所以把 $P_eTP_e$ 换成 $T_0\otimes e$ 只付 $\eta\tau(y)$（一次迹）与 $3\eta\tau(y)$（平方迹，靠 $\lVert R^*R-S^*S\rVert\le(\lVert R\rVert+\lVert S\rVert)\lVert R-S\rVert$ 与 $\lVert R\rVert,\lVert S\rVert\le 2$）。标量参照量 $\
+
+232 | 系数 $10$ 的来源在 `05_rr_packing.tex:71-72`：mass discrepancy 的系数是 $2+2\beta_0\le 10$；$6\eta$ 则是 $\eta$ 乘以 $(1+2\beta_0)\le 1+\!8$ 再被压成 $6$ 与 $\eta$ 的一次项组合（原文把 $\eta(\tau(y)+c\tau(p))$ 与平方项合并后写成 $6\eta$，我核对到的是"一次项 $\eta$ 系数 1，平方项 $\eta$ 系数 3，两者对 $y$ 与 $p$ 各一份"）。
+
+236 | (d) 失败路线（推测）：其一，把 $y$ 直接取成 $q_j$ 的子投影而不放进矩阵 block，$\alpha,\beta_0$ 就不存在，中心化误差无法用 $\eta$ 表示。其二，试图用 $\lVert[x,y]\rVert$ 的算子范数版本，$P_eTP_e$ 与 $T_0\otimes e$ 的差在算子范数下仍然只由 $\eta$ 控制，但 $\tau(y)$ 权重换成 1，`05_rr_packing.tex:262-266` 的加权求和立刻发散。其三，若允许 $c$ 依赖 $\tau$，(a) 中的 $c\tau(p)$ 项就不是标量倍，正负抵消失败。
+
+244 | (b) 中间步骤：第 $i$ 轮的老块重叠 $\tau(Z_{i-1}\Phi_i(r))=\sum_l\lambda_l\lVert Z_{i-1}v_lr\rVert_{2,\tau}^2\le 4E_{i-1}$（`05_rr_packing.tex:154-158`，系数 $4=(2)^2$ 来自 $\lVert[Z_{i-1},v_l]\rVert\le 2\sqrt{E_{i-1}}$ 与 $\lVert v_l\rVert$ 拆分系数和 2 的两倍）。轮内目标质量 $\eta\tau(r)-2\eta^3\le C_i\le\eta(1+\eta^2)\le 2\eta$，采样质量 `05_rr_packing.tex:232-234` 给出 $\eta\tau(r)-3\eta^2\le Y_i\le 3\eta$。重叠的四行链 `05_rr_packing.tex:238-243` 得到 $L_i\le 4\e
+
+248 | (d) 失败路线（推测）：其一，把 $E_i$ 定义成累加而非递推闭合量，则 $L_i\le E_i-E_{i-1}$ 这一可求和结构不见，`05_rr_packing.tex:298` 的 $3N\eta^2$ 会变成 $3N^2\eta$。其二，让 $1000$ 降为 $321$，插式闭合勉强，但 `05_rr_packing.tex:300` 的余项式需要 $\sum_i L_i\le E_N$，$L_i$ 界与 $E_i-E_{i-1}$ 界必须同号，一旦余量不足整轮论证要重排。其三，若把 $\eta$ 与 $N$ 独立选取（不满足 $N\eta=H$），`05_rr_packing.tex:321-325` 的 $E_N\le\eta e^{1000H}$ 与 $N\eta^2=H\eta$ 无法同时趋零。
+
+258 | (c) 三个常数的出处：$(1-\eta)^N\le e^{-H}$ 给出 $e^{-H}$，它只由 $H$ 控制，是"先选 $H$ 再放大 $N$"这条顺序的全部理由；$3N\eta^2$ 来自每轮 $3\eta^2$ 的质量残留，$3E_N$ 来自 $3L_i$ 的累加；$\sqrt{15HE_N}$ 中的 $15=3\times 5$，因为 $\sum_i Y_i\le 3N\eta=3H$ 与 $\sum_i L_i\le E_N$ 相乘再乘位移界里的 $5$（`05_rr_packing.tex:313-319`）。半化误差 (line 330-333) $\tfrac12 e^{-H}+5H\eta+\tfrac32 E_N+\sqrt{15HE_N}$ 里 $5H\eta=\tfrac12\cdot 10 N\eta^2$ 是把 $7N\eta^2$ 与残余项合并后的粗界。
+
+275 | (c) 这条引理是"指定族 $\Lambda_\omega$"与"$D$ 的范数"之间的唯一桥梁；`06_rr_completion.tex:17-18` 的 "if $\lVert z\rVert_{2,\lambda}=0$ for every $\lambda\in\Lambda_\omega$, then $z=0$" 后面被用了三次（`06_rr_completion.tex:57-68`、`:100-102`）。误差随维度增长率：无，纯 sup/limit 交换。
+
+302 | (c) 系数理由：$[p,x]=[p,x-a]$，两端各 $\le\lVert p\rVert\lVert x-a\rVert_{2,\lambda}\le\delta$，和为 $2\delta$；$\lambda(px)-\tfrac12\lambda(x)$ 拆成 $\lambda(p(x-a))-\tfrac12\lambda(x-a)$ 加两项 $\le\delta$，其中 $\lvert\lambda(p(x-a))\rvert\le\lVert x-a\rVert_{2,\lambda}<\delta$（因 $\lVert p\rVert\le1$ 且 $\lambda$ 正），合计 $1+\tfrac12=\tfrac32$。这一步是 uniform 2-density 的用法，也是为什么 $B$ 不必范数可分（`06_rr_completion.tex:103-104`）。
+
+304 | (d) 失败路线（推测）：若 $A$ 在 $B$ 中不 dense（例如只取 norm closure），$\delta$ 无法趋零，中心性与 half 恒等式只能对 $A$ 成立；若跳过 `06_rr_completion.tex:84-91` 的密度证明（用 uniform 2-Cauchy 逐点收敛），推论的 $T(B)\to T(A)$ 同胚就缺一环。
+
+365 | (c) 常数的机械理由：为什么开集用 $(j,\infty)$ 而闭集用 $[j,\infty)$ 会让界差一：非整正 $s$ 计数为 $\lfloor s\rfloor$；正整数 $s$ 计数为 $s-1$，差恰为 $1$；$s=0$ 差为 $0$（`08_unital_ranks.tex:89-92`）。这个"至多一"的偏置正是被 $d_\tau(c)<\delta$ 吸收的量。上端点 $\lVert c\rVert=L$ 的情形也被单独核对（`08_unital_ranks.tex:91-92`）。$L$ 无关于 $b,\delta$ 的一致界（`08_unital_ranks.tex:38-39` 明说），因为 $\lVert c\rVert$ 可能任意大：压缩 $c=\sum e^{1/2}x_i b x_i^*e^{1/2}$ 的范数由 frame 系数控制，而 `08_unital_ranks.tex:56-58`
+
+396 | (c) 为什么需要 $k_\eta$ 这条精确恒等式：$p\le\mathbf 1_{[\eta,1]}(h)$ 是 $D^{**}$ 里的序关系，不能直接代入乘积；而 $k_\eta(h)p=p$ 是 $D$ 内的等式，靠 $(1-k_\eta(h))p=0$ 与核投影 $\mathbf 1_{\{1\}}(k_\eta(h))=\mathbf 1_{[\eta,1]}(h)$ 才把序关系搬回来（`08_unital_ranks.tex:296-305`）。作者特意补一句"does not require any normal trace on $D^{**}$ to be faithful"。$\delta=1/\ell$ 的逐坐标选取使投影缺陷 $(p_\ell-p_\ell^2)^2\le p_\ell-p_\ell^2$ 的 2-范数趋零，这是 $p$ 真为投影的原因。
+
+424 | (c) 三层容差的机械理由（`09_unital_centering.tex:101-110`）：多项式逼近误差 $a=\delta/(16m)$ 给出 $2a=\delta/(8m)$；$\alpha=\delta/(4m)$ 是投影供给的切割损失；$\kappa=\min\{\delta/(4m),(\delta/(8mC))^2\}$ 保证只要 $\tau(u-v)<\kappa$ 就有整条移动角界 $\le\delta/(4m)$。run 推进量 $\tau(a_j)>\delta/(2m)>\kappa$ 里三个 $\delta/(4m)$ 相加恰好是 $\tfrac{3\delta}{4m}$，与 $\delta/m$ 之间留下 $\delta/(4m)$ 的余量；$K=\lfloor1/\kappa\rfloor+1$ 使 $K\kappa>1$ 与 $\tau(q-w)\le1$ 矛盾。误差随维度增长率：无，$m
+
+474 | (c) $4(1-\tau(h))+2\eta$ 的出处：$\lVert\phi(c)-\pi(c)\rVert_{2,\tau}^2\le\tau(q-h)\le 1-\tau(h)$ 与 $\lVert\rho(c)-\pi(c)\rVert_{2,\tau}^2\le\tau(q-P)\le 1-\tau(h)+\eta$，平方三角不等式 $(a+b)^2\le 2a^2+2b^2$ 给出 $2(1-\tau(h))+2(1-\tau(h)+\eta)$。损失以 $\tau(q)$ 计量所以无矩阵尺寸因子（`10_unital_averaging.tex:177-179`）。
+
+484 | (c) 指数链条：$3\eta$（`10_unital_averaging.tex:235-241`，来自 $T_0$ 在 $\{1\}\cup E\cup\{a^2\}$ 上的 $\eta$ 逼近与 Schwarz 的 $T_i(a)^2\le T_i(a^2)$）；$6\eta$（$4\sum\beta_i(1-\tau(h_i))+2\eta$，其中 $4=2^2$ 来自 replacement 界里的 $4(1-\tau(h))$）；$18\eta=2(3\eta)+2(6\eta)$；$72\eta=4\cdot18\eta$，因子 $4$ 是 $\lVert[r_i,a]\rVert\le 2\lVert a-\rho_i\psi_i(a)\rVert$ 的平方。四阶矩 $3-2\sum_i\beta_i^2$ 来自 $\tau(z_i^4)\le\tau(z_{i-1}^4)+6\beta_i\sum_{j<i}\
+
+500 | (c) $R^{-3}$ 与 $R^{-2}$ 的指数理由：标量不等式 $|s-g_R(s)|\le|s|^4/R^3$ 在 $|s|>R$ 时给 $|s|-R\le|s|\le|s|^4/R^3$，在 $|s|\le R$ 时为零；$|s^2-g_R(s)^2|\le|s|^4/R^2$ 同理。这两个幂次决定了最终一致性质 $\Gamma$ 里误差的可见度：取 $R=N$ 时它们是 $3/N^3$ 与 $3/N^2$，`11_unital_gamma.tex:159-164` 的 $\epsilon_N(t)$ 里那两个次级项 $\frac{3|t|}{N^{7/2}}$、$\frac{3t^2}{2N^3}$ 正是它俩与 $N^{-1/2}$、$N^{-1}$ 组合的结果。
+
+665 | (b) 中间步骤（`:44-66`）：考虑所有有限维单侧 $E^0$、order-zero 映射 $\theta:E^0\to A$ 与自伴压缩 $b_x\in E^0$，误差函数 $L(\sigma)=1-\sigma(\theta(1))+\sum_{x\in\mathcal F}\sigma((x-\theta(b_x))^2)$ 是 $T$ 上非负连续仿射函数。固定 $\sigma$ 时用 `12_nonunital_framework.tex:92-95` 的 hyperfiniteness 在 $M_\sigma$ 里取有限维单侧子代数按 $2$-norm 逼近该元组（仍用自伴压缩），经 `\ref{n:eq:kaplansky}` 提升并选一个坐标，使 $L(\sigma)$（含单位亏量项）任意小。断言：对每个 $\kappa>0$ 存在有限凸组合使最大值小于 $\kappa$。反证：否则把该凸包与开凸集 $\{f
+
+669 | (d) 失败路线（推测）：其一，若跳过凸平均而试图在单条迹 $\sigma$ 上取一个模型然后声明界对全体 $T$ 成立，$\theta$ 的选取依赖 $\sigma$，$M_\sigma$ 里的有限维子代数在另一条迹 $\sigma'$ 下可能毫无逼近力；作者必须声明在每个 $\sigma$ 处 $L(\sigma)$ 可任意小（`:55-57`），这个全称才能进入分离论证。其二，若用 $C(T)$ 上的紧集覆盖加逐块模型，块数会进界，这正是第 14 节末尾我说过的"块数不进界"动机在另一条路线上的体现。其三，$E_i$ 用平方和 $\sum_x(x-x^{(i)})^2$ 而不是范数和，是为了让 $\tau(E_i)$ 与 tracial $L^2$ 几何直接对接，后面 `14_nonunital_models.tex:203` 的 $|\tau(p_i(x-x^{(i)}))|\le\sqrt{t_i\tau(p_iE_i
+
+683 | (b) 中间步骤：支撑式 $\theta=h\pi$ 来自 `12_nonunital_framework.tex:64-68`。选择命题的三元组用 $(h,z,a)=(g(\theta(e_{11})),f(\theta(e_{11})),f(\theta(e_{11})))$：支撑条件 $hz=z$ 就是 $gf=f$（逐点验：$s\ge\tfrac12$ 时 $g=1$、$f=2s-1$，乘积 $=f$；$s<\tfrac12$ 时 $f=0$），迹不等式取等号；得投影 $v$ 满足 $g(\theta(e_{11}))v=v$、$\tau(v)=\tau(f(\theta(e_{11})))$，且 $v\le\pi(e_{11})$。$\pi(e_{j1})v\in D$ 因为 $\pi(e_{j1})g(\theta(e_{11}))=\pi(e_{j1})g(h)\in D$（这里是 `12_nonunital_fr
+
+739 | (c) 所以 $\lambda^{3/2}$ 的 $3/2$ 次幂有明确的组合理由：$\lambda$ 来自所选投影的总迹，$R_\tau$ 里的 $\lambda^2/2$ 来自两两重叠（无序对计数除以 $2$），二者在 $\sqrt{2\lambda R_\tau}$ 里合成 $\lambda^{3/2}$。它与模型个数、矩阵尺寸、$\lvert\mathcal F\rvert$ 都无关，这正是 16 分片能用 $\lambda^{-1}$ 步放大到任意比例的前提：每步代价 $\lambda^{3/2}$、步数 $\lambda^{-1}$，累积 $\lambda^{1/2}\to0$（`16_nonunital_amplification.tex:4-8` 的说明）。
+
+741 | (d) 失败路线（推测）：其一，$Y_i$ 里 $K$ 的选择是自由参数，我试着把 $Y_i=s_{i-1}+E_i$（不带 $K$）代进去，那么联合代价给不出 $H_\tau$ 的小界，$R_\tau+H_\tau\le\lambda^2/2+\lambda(1+\Delta)+\lambda K^{-1}$ 里 $K$ 消失，交换子界 $\sqrt{H_\tau}$ 不趋于零；$K$ 的作用就是用同一份代价在重叠与模型误差之间做加权，把权重 $K$ 放在 $E_i$ 上使后者除 $K$ 后更小。其二，若把容差从 $K^{-1}$ 改为与 $i$ 相关（比如 $K^{-1}/N$），代价求和会引入 $N$，破坏"与模型个数无关"。其三，从 $D$ 搬回 $A$ 只取"一个良好坐标"，这一步依赖 `12_nonunital_framework.tex:51-57` 那条通用推论（有限多个连续表达式的 limit-trace 界给
+
+759 | (d) 失败路线（推测）：若跳过逐坐标递增而在固定 $n$ 上一次处理整个稠密序列，$\mathcal F$ 无穷，`14_nonunital_models.tex:108` 的 $2mC_0$ 里 $m=\lvert\mathcal F\rvert$ 就发散，模型误差界失去意义。递增 $n$ 与 $\rho=1/n$ 的配对是这个发散的唯一解药。
+
+846 | (d) 失败路线（推测）：其一，我想把 `\ref{n:eq:mcduff}` 的单侧同态沿 $\Aom\cap A'\to D\cap A'$ 提升成同态，这条路一般不通：跨商提升同态需要额外维数或抬升条件，而 `12_nonunital_framework.tex:62-63` 只保证 order-zero 映射可跨任意商提升，所以 $\psi$ 只能是 order-zero，$\psi(1)+J=1_D$ 而非 $\psi(1)=1$；CLS 的 tracially large 定义正是为补偿这一点而设。其二，$u$ 在 $\Fw$ 中作单位只用到了模消影；若消影 ideal 不完全落在 $J$ 内，$\Fw$ 与 $D$ 上的迹不能同时谈，引理 `\ref{n:lem:generalized}` 的"每条广义极限迹是过 $D$ 的迹的有限倍数"就没有可乘的结构。其三，若 $A$ 有有限维商（本假设下单性与无单位排除了它，
+

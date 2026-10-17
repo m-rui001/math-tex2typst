@@ -1,0 +1,5 @@
+seg=207 hdr=0 sep=0 rows=42 hist={6: 42}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0

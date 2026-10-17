@@ -1,0 +1,32 @@
+{
+  "paper": "A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026",
+  "ok": true,
+  "typ_lines": 305,
+  "included_pdf_pages": 0,
+  "formulas": 266,
+  "math_failed": 0,
+  "labels": 30,
+  "equations": 10,
+  "theorems": 3,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "266",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "flafter"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026.tex"
+}

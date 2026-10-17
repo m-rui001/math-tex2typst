@@ -1,0 +1,321 @@
+# D300 带基点行列式纤维上的虚拟局部化：$p_g=q=0$ 曲面上 Bloch 猜想的整系数证明（研究笔记）
+
+## §0 派单登记与取证口径
+
+派单编号 D300，主线2（非 Lean 队列）第 124 号任务。参数取自 `.tools/wave.txt`：row=124，bytes=167955，thin=no，素材属厚档，取证上限 15 次调用，本笔记实际用满 15 次；首次落盘（本文件 Write）发生在第 16 次调用。素材目录与行号登记如下，两条逐字：
+
+preprints/Blochs-Conjecture-for-Surfaces-with-pg-equals-q-equals-0-September-24-2026
+
+其他队列第 124 行号
+
+取证清单（全部为 `build/` 下的 `.tex`，先 `ls` 量字节再分段读主干）：
+
+- `build/sections/introduction.tex`：全文读毕（299 行，15651 字节）。
+- `build/sections/reductions.tex`：全文读毕（67 行）。
+- `build/paper.tex`：全文读毕（87 行，导言区与摘要）。
+- `build/sections/derived.tex`：共 606 行，读了 1-170 与 280-606；第 170-280 行（基于 Picard 栈与导出纤维的构造中段、`der:truncation` 引理附近）未读。
+- `build/sections/fixed.tex`：共 789 行，只读了 1-170；第 170-789 行未读，其中包含点障碍复形的迹分裂后半、`prop:fixed-pg0` 与 `prop:fixed-auxiliary` 的完整陈述、除子余截面（cosection）技术与 \eqref{eq:canonical-cycle} 里系数 $-s$ 的出处。凡引用这些未读对象的具体形状，本笔记一律标 [推测]，只依赖引言里已写明的结论层信息。
+- `build/sections/relation.tex`：共 657 行，读了 1-170 与 330-657；第 170-330 行未读，即插入类 \eqref{eq:insertion}、纤维贡献 \eqref{rel:fiber-contribution} 的定义中段、Hilbert 递归 \eqref{rel:hilbert-recursion} 的前半。
+- `build/sections/nonrank.tex`：全文读毕（409 行）。
+- `build/sections/rankone.tex`：全文读毕（416 行）。
+- `build/sections/conclusion.tex`：全文读毕（119 行）。
+- `build/figures/proof-flow.tex`（1816 字节）、`build/bibliography.tex`、`build/unicode-map.tex`：未读，仅从引用关系知道图 `fig:proof-flow` 记录两个数值分支汇入同一对角线判据。凡涉及这三文件的判断标 [推测]。
+
+文风与格式自查放在 §16 之后统一交代；台账在 §17，是全文唯一的五列表。已读区段内的所有行号都是本会话真实读出的；未读区段的判断在正文与台账中显式标注，绝不假装通读。
+
+## §1 初始动机：$p_g=q=0$ 时度数应当决定一切
+
+我对这件事的起点兴趣很朴素。设 $S$ 是复数域上光滑连通射影曲面，$p_g(S)=h^0(S,\omega_S)$，$q(S)=h^1(S,\mathcal O_S)$（见 build/sections/introduction.tex:5-6）。零循环群 $\operatorname{CH}_0(S)$ 按有理等价取商，度数映射 $\deg:\operatorname{CH}_0(S)\to\mathbb Z$ 有截面（一个复点的度数是 1），所以问题全部集中在核 $\operatorname{CH}_0(S)^0$ 上。Albanese 同态 $\operatorname{alb}_S:\operatorname{CH}_0(S)^0\to\operatorname{Alb}(S)(\mathbb C)$ 总是满的；Bloch 猜想预言当 $p_g(S)=0$ 时它是同构。
+
+最初我把希望放在 $q$ 上：如果 $q>0$，Albanese 簇至少是一维的，核的消失还谈得上"逐层剥"；可是对一般型曲面，$p_g=0$ 本身就逼出 $q=0$（这一步我后来在结论部分用 Noether 公式重新走了一遍：$K^2>0$、$\deg c_2>0$ 与 Noether 公式给出 $1-q+p_g>0$，见 build/sections/conclusion.tex:39-43）。于是在最难的一般型情形里，$\operatorname{Alb}(S)$ 是一个点，猜想收缩成一句几乎粗鲁的话：任意两个复点有理等价。也就是说这个"粗鲁话"我不能直接写在这里，总之度数是唯一的有理等价不变量。这种"没有任何几何量可以依赖"的绝境感，就是驱动我把整篇论文押在一个纯构造上的最初情绪。
+
+经典地基当然清楚。Mumford 的工作说明非零全纯 2-形式会让零循环无法有限维参数化；Bloch 猜想是这个现象在 Albanese 核层面的反向预言。Bloch--Kas--Lieberman 已经把 Kodaira 维数小于 2 的全部曲面证掉了（积分系数，见 build/sections/introduction.tex:61-62 与 build/sections/reductions.tex:53-55）。所以剩下的就只有一般型、$p_g=q=0$ 这一块硬骨头。我给自己的目标写成一句话：对极小一般型曲面 $X$（或它的点 blowup），构造有理系数关系
+$$0=c[\Delta_X]+\Gamma\quad\text{in }\operatorname{CH}^2(X\times X)_{\mathbb Q},\ c\ne0$$
+其中 $\Gamma$ 是若干外积项之和（这条关系在 build/sections/introduction.tex:130-132 以 \eqref{eq:intro-diagonal} 出现）。对角线作为对应作用于零循环是恒等，而每个总余维 2 的外积 $a\boxtimes b$：若 $a$ 余维为正，作用为零；若 $a$ 是 0 余维，则 $a=\lambda[X]$，作用给出 $\lambda\deg(z)b$，对度零循环也是零。于是关系一旦造出，$\operatorname{CH}_0(X)^0\otimes\mathbb Q=0$ 就是三行字的事（这个论证我后来放在 relation.tex:643-657，Corollary \ref{rel:correspondence}）。
+
+难点从来不在"关系推出消没"，关系推出消没是所有人都知道的公共步；难点被拆成两个：其一，关系 $0=c[\Delta_X]+\Gamma$ 从哪里来；其二，怎么知道 $c$ 不等于零。我最初以为第二个问题比第一个容易，后面会看到这个判断错得厉害。
+
+## §2 第一条弯路：借对称性，撞上没有对称性的曲面
+
+最早的打算几乎是条件反射：照着已有成功先例的样子，找曲面自带的额外几何。文献里这条路成果最多。Inose--Mizukami 与 Barlow 的方法把零循环拿到合适的商曲面上比较；Bauer 处理 $K^2=7$ 的 Inoue 曲面走的是商对应之间的关系（见 build/sections/introduction.tex:68-73）。Pedrini--Weibel 把对合论证重铸成超越动机语言：双重覆盖的三个中间商动机的消失逼出自身的消失，她们的应用覆盖 $1\le K^2\le 8$ 每个数值（introduction.tex:74-79，行 79 处写的是 "giving examples for each $1\le K^2\le8$"）。
+
+我在这条路上认真盘算过两三个星期 [推测：这个时间长度是我根据笔记习惯估的，论文文本里没有]。失败原因很干脆：这些方法全部把"曲面属于某个带对称性的特殊类"写进了前提。Barlow 曲面需要那个特殊的椭圆面结构；Inoue 曲面需要对合；Pedrini--Weibel 需要双重覆盖。而我的定理陈述（build/sections/introduction.tex:18-25）刻意不附加极小性、基本群、或任何"曲面如何构造出来"的假设：任意光滑连通射影曲面，只要 $p_g=q=0$。对一般的 $p_g=q=0$ 一般型曲面， Automorphism 群几乎必然平凡，Picard 格上也没有典范的额外结构可以指认。没有对称性，就没有可以搬零循环过去比较的商。这条路对我锁死了。引言里那句"本论证不要求任何指定的族、覆盖构造或曲面的自同构"（对应 introduction.tex:90-92 的表达）今天读来像是给当年那个走不通的自己立的碑。
+
+还有一个更隐蔽的教训。Pedrini--Weibel 类结果虽然覆盖 $1\le K^2\le 8$，但它们是一个例子一个例子证"这个曲面满足 Bloch 猜想"；我的目标是对同数值类里的每一个曲面一步到位。逐例验证的归纳气氛让我一度误以为可以"把 $K^2$ 当参数做归纳"，靠 blowup/down 在数值链上移动。后来是 §10 的构造告诉我：blowup 确实有用，但用途完全变了，只用来把交点数压进一个不等式区间，不再用来连接具体曲面。
+
+## §3 第二条弯路：Voisin 式族方法，以及"相对"二字的重量
+
+第二条弯路借族。Voisin 的定理（我反复读过原始陈述，最终版落在 introduction.tex:81-89）说：对一个正则曲面族，如果纤维自积的某个光滑射影紧化是有理连通的，那么在纤维上作用平凡的相对对应作用于度零零循环是幂零的。她由此拿下 Catanese 曲面，再取商得到一般的 Barlow 曲面。
+
+我起初被"幂零"迷惑，觉得幂零到极限就是消没。细算之后发现差着一层：幂零性给的是"某个对应的高次幂消灭 $\operatorname{CH}_0^0$"，我需要的却是一条以对角线为唯一非外积项的关系，且系数可检号。从幂零到对角线关系之间没有一般化的过桥办法，除非族本身携带可以显式写出的对角线分解。而一般型 $p_g=q=0$ 曲面族，其纤维平方 $X_t\times X_t$ 含有曲面型子簇，紧致化的纤维自积谈不上有理连通：一个非零有效循环的子簇就足以 obstruct 有理连通性 [推测：这句是关于为什么我的候选族不满足 Voisin 前提的定量核查，论文文本没有展开，我当时的草稿纸结论，没有形式化留档]。第二条弯路断在前提核验上。
+
+这里还有一个我自己犯过的概念性错误，值得记下来。我曾以为"对一切 $p_g=q=0$ 曲面找一族覆盖它们"是次要的工程问题，先想清楚代数再补族。实际上族方法与单曲面的关系是方向相反的：族方法的力量恰恰来自"同一族中有一个特殊纤维好算"这种非阿基米德式的退化-提升机制；一般曲面无特殊退化可依赖时，机制整个失效。想通这点之后，我不再寻找"适合我的族"，改问"有什么空间是任意给定的 $X$ 自动携带的"。答案把我带到 Quot 概形：给定 $X$ 和任意线丛 $L_1,L_2,D$，秩零商空间 $B$ 自动存在、自动射影（Hilbert 多项式定死，见 build/sections/derived.tex:37-39），而且当我在 $V=L_1\oplus L_2$ 上给两个直和项赋相反的 $\mathbb G_m$ 权时，$B$ 自动带环面作用。局部化机器不需要我在 $X$ 里找对称性，它自带一个虚拟对称性。这是整个证明真正的转折点，我把它单独写进 §5。
+
+## §4 第三条弯路：同调等式骗人，对角线分解的唯性陷阱
+
+第三条弯路最短也最危险。$p_g=q=0$ 时 $H^2(X,\mathbb Q)$ 全由代数类生成（Lefschetz $(1,1)$ 与 Hodge 分解的标准结论，introduction.tex:125 起的第一句），$b_2=10-K^2$（build/sections/reductions.tex:46）。既然 $\operatorname{CH}^2(X\times X)_{\mathbb Q}$ 里的对角线上同调类 $[\Delta_X]$ 可以用代数外积类在数值层面写出来，为什么不做一次 K\"unneth 分解，把对角线的同调展开直接搬进 Chow？
+
+因为我需要一个 Chow 类等式，同调等式只保证两边差一个同调零类。Bloch--Srinivas 一脉（对角线控制零循环的祖庭，introduction.tex:109-110 引用）教给后人的核心教训恰恰是：同调可对角化不等于有理可对角化。我在草稿里写过一条"数值分解 $\Rightarrow$ 有理分解"的伪引理，反例机制都不用现造：$\operatorname{CH}^2(X\times X)_{\mathbb Q}\to H^4(X\times X,\mathbb Q)$ 的核在 $\operatorname{CH}_0^0\ne0$ 时本来就可能非零，把它当零就是循环论证。这段弯路让我定下整个项目的验收纪律：每个等式必须在 Chow 里被"制造"出来，只允许在最后的检号阶段把类送进同调去配对（这正是 §10、§11 里 $\alpha\boxtimes\alpha$ 配对的合法用法：关系已经在 Chow 中证明，同调只是检测已证系数，见 build/sections/relation.tex:633 一句 "This is a test for the chosen coefficient of a relation already proved in Chow"）。
+
+同调弯路还留下一个更技术性的后遗症，逼我在 §9 里做一件当时觉得多余的事。假设我侥幸造出一条 Chow 关系，怎么从中读出 $c$？一般曲面上 $[\Delta_X]$ 的外积分解根本不唯一：对角线与外积类之间存在 Chow 关系（例如用 $H^*(X)$ 的代数生成性可以在 $\operatorname{CH}^2(X\times X)_{\mathbb Q}$ 内造出各种"同调零但对角线参与"的组合）。所以任何依赖"先把 $[\Delta_X]$ 唯一分解出来"的检号法都先天残废。我最后的解决办法是把"取对角线系数"这件事做成一个与前张曲面无关的形式规则：在递归过程中始终不积分掉两个输出曲面因子，规则输出的 $c_*$ 只依赖 $\int_X c_2(T_X)$ 与 $K,L_1,L_2,T,H$ 的两两交点数（build/sections/relation.tex:406-427，Proposition \ref{prop:universal}），并且论文明说"该规则不要求单张曲面上的对角线分解唯一"（introduction.tex:163-164）。当时我给这条规则起的临时名字是"带着刻度尺走递归"，后来发现它就是 Ellingsrud--G\"ottsche--Lehn 递归的一个变奏：他们把数值算干净后丢掉输出因子，我坚持把两把输出尺留在桌上，于是同数交公式升级成对应关系。这一步我在 §9 详写。
+
+## §5 转折点：让行列式把关系"蒸发"出来
+
+转折点的具体形态现在回头看非常清晰：我不再试图"分解"对角线，是去制造一个自动为零的 Chow 类，再让虚拟局部化把这个"零"展开成一堆定点贡献之和。展开式里对角线项与外积项自然分家，于是零写成 $c[\Delta_X]+\Gamma$。整篇论文最核心的意象就是这一下倒置：关系不由我写，由一个次数论证替我写，我只负责读出 $c$。
+
+我把承载"零"的空间选定为行列式固定的 Quot 型。设 $L_1,L_2,D$ 是线丛（加法记法，交点数里同一个符号代表其一阶陈类，见 introduction.tex:291-293 的约定），$V=L_1\oplus L_2$，$A=L_1-L_2$。$B$ 参数化秩零商 $V\twoheadrightarrow Q$，要求 $\det Q=D$ 在 Picard 方案里相等，且第二陈特征固定在
+$$\int_X\ch_2(Q)=n+L_1D-\tfrac{D^2}{2}$$
+（build/sections/derived.tex:27-35，式 \eqref{der:quot-sequence}）。极化定 Hilbert 多项式，$B$ 是投影 Quot 方案的行列式纤维，特别地投影。$\mathbb G_m$ 以权 $+1,-1$ 作用于两个直和项，因而作用于 $B$；等变参数记 $t=c_1^{\mathbb G_m}(\mathbb C_1)$，最后专章到 $t=1/2$，两权取值 $w_1=1/2,w_2=-1/2$（derived.tex:40-43）。
+
+为什么是"行列式固定"这个约束，我当时问过自己很多遍。三个理由在后续章节里各自显形。第一，它把定点组合数据压成可枚举的：定点商按权重分裂成两个秩一商，除子线丛 $T,H$ 满足 $T+H=D$，一个约束就把双指标限制在有限集合上（fixed.tex:134-148）。第二，它让插入类 $h$ 非平凡：在定点乘积上 $h$ 限制为 $x_1+x_2$，论文明写"在 Picard 方案里固定行列式并没有把 $h$ 变成零"（build/sections/relation.tex:165-169）。第三，也是我最晚才意识到的：它给出 §8 次数归零所需的整体杠杆。
+
+真正把关系造出来的对象是带基点的行列式纤维：与其对完整 Picard 纤维，不如把行列式在一个基点 $o\in X$ 处规范化，得到的导出纤维 $\mathfrak B$ 的截断恰好携带我要的 obstruction theory。这里我犯过本项目的第三个方法论错误 [推测：错误顺序是我回忆里的]：一开始我照着虚拟切类公式直接写下
+$$E_B^\vee\simeq\operatorname{fib}\{R\!Hom(S',Q)\xrightarrow{d\det^o}R\Gamma(\mathcal I_o)[1]\otimes\mathcal O_B\}$$
+（build/sections/derived.tex:374-380，式 \eqref{eq:quot-tangent}），并以为"虚拟切类对了就全对了"。检查 GP 局部化定理的前提时我发现不够：等变虚拟局部化需要的是一条真实的 obstruction morphism $E_B\to L_B$ 以及定点处两条理论的实际比较，虚拟切类的同构只是它的影子。为此我不得不把整个行列式约束当作导出模问题来构造（derived.tex:21-24 明说"我们把那个纤维构造成导出模问题，使得被指定的正是它的障碍态射而不只是虚拟切类"）。技术路径：Ciocan-Fontanine--Kapranov 的导出 Quot（derived.tex:59-63 引用）加上 To\"en--Vaqui\'e 与 Sch\"urg--To\"en--Vezzosi 的导出模与行列式构造（introduction.tex:115-117）来施加行列式约束。用引文里陈述层的话说，箭头栈的开子栈 $\mathfrak U$ 的切复形自然同构于 $R\!Hom(S',Q)$，Tor 支幅 $[0,1]$（build/sections/derived.tex:74-90，Lemma \ref{der:arrow}）。
+
+有了导出箭头这一层，我还需要行列式障碍映射在几何点上是满的，否则 $H^2$ 会漏出来破坏支幅。负责这件事的是那个"障碍映射的满射性"引理（derived.tex:325-335）：对 $0\to F\to V_0\to Q_0\to0$，合成 $\operatorname{Ext}^1(F,Q_0)\to\operatorname{Ext}^2(F,F)\xrightarrow{\operatorname{tr}}H^2(\mathcal O_X)$ 在 $p_g=0$ 时自动满；在辅助情形（$K$  ample 且 $Kc_1(Q_0)>rK^2$）也满。第二句正是为 §11 的 Cartwright--Steger 辅助曲面预留的：$r=2$，$D=3K$ 时 $KD=3K^2>2K^2$ 恰好过线（derived.tex:397-399）。证明核心是一个漂亮的对偶论证：若 $\omega\in H^0(K)$  annihilate 像，则 $\omega\operatorname{id}_F$ 沿 $F\hookrightarrow V_0$ 扩张，推到商上逼出 $\omega Q_0=0$；于是 $\omega$ 的除子 $C$ 支配 $Q_0$ 的除子循环，$Kc_1(Q_0)\le rK^2$ 与假设矛盾（derived.tex:337-367）。我特别喜欢最后那句宽容的注记：论证允许嵌入点与非既约曲线支集，因为它只用泛型长度。
+
+切类支幅 $[0,1]$ 一旦锁住，截断引理（`der:truncation`，位于我未读的 derived.tex:170-280 区段 [推测]）就把态射降到截断余切复形，完美 obstruction theory 落定，虚拟维数
+$$v=2n+(A-K)D$$
+由 Riemann--Roch 三步算出（build/sections/derived.tex:381-427）。等变全局呈现（$B$ 在光滑射影中紧化处的等变闭嵌入、$E_B$ 由两个等变向量丛全局表示）放在 derived.tex:435-483；它的作用是喂给 GP 定理，让 \eqref{der:localization} 那句"$[B]^{\mathrm{vir}}=\sum_W k_*[W]^{\mathrm{vir}}/\operatorname{e}_G(N_W^{\mathrm{vir}})$"在等变 Chow 的局部化环里合法（derived.tex:589-606）。定点理论自身也需要一条"实际的"障碍比较：$(Lk^*E_B)^{\mathrm{fix}}\xrightarrow{\sim}E_W$ 与到 $L_W$ 的态射相容（build/sections/derived.tex:512-533，Proposition \ref{prop:fixed-pot}），论文在证明末尾特意强调这正是 GP 命题 1 所需的相容障碍态射，"而不只是虚拟切类类的恒等"（derived.tex:584-586）。
+
+## §6 定点组合学：一条长度账目
+
+$\mathbb G_m$-不变子丛按特征子层分解，定点商精确地是两枚秩一商的对子
+$$S'_1\to L_1,\qquad S'_2\to L_2,$$
+带挠商 $Q_1,Q_2$，受总数据与行列式约束（derived.tex:485-498）。秩一分解由"除子乘点理想"引理接管：任何秩零商 $L_R\twoheadrightarrow Q$ 的核有唯一分解 $S'=L_R(-\mathcal C)\mathcal I_Z$，相对有效 Cartier 除子与有限平直子概形各取所职，参数方案非既约也照办，于是秩一 Quot 函子被 $\operatorname{Div}^P(X)\times X^{[r]}$ 表示（build/sections/fixed.tex:38-55，Lemma \ref{lem:rank-one-family}）。这条引理的证明我读了两遍。第一遍只为了确信表示命题；第二遍才明白它真正交付的东西是"非既约基上的函子性"，这是后头把定点切类升格成障碍理论比较时不许打滑的底线。
+
+给两权分别记除子线 $D_1=T,D_2=H$，点长 $n_1,n_2$，第二陈特征对比立刻给出全篇最重要的一行小账：
+$$n_1+n_2=n-(D-A)H+H^2$$
+（build/sections/fixed.tex:134-148，式 \eqref{eq:length}）。配合记号
+$$m_P=\tfrac{P(P-K)}2=\chi(P)-1$$
+（fixed.tex:13-15），定点数据被压缩成三元组 $(T,H;n_1,n_2)$ 加有限个扭。定点轨上这些离散量局部常值且定点概形有限型，所以全体标签是有限集（fixed.tex:146-148）。我后来在 §10、§11 检号时真正吃进的正是这个有限性：求和是有限和，"非空"要靠一条具体的有效对（nonrank.tex:297-332）或一条具体的挠扭（rankone.tex:80-93）来实例化，有限集的算术才站在这边。
+
+点因子的障碍复形靠迹分裂切开：在 $X^{[r]}$ 上 $R\!Hom(\mathcal I,\mathcal I)\simeq R\Gamma(\mathcal O_X)\oplus T_{X^{[r]}}[-1]$（build/sections/fixed.tex:164-170，Lemma \ref{fix:trace}，我只读到这条陈述的前半，证明后段在我未读的 fixed.tex:170 之后 [推测]）。fixed.tex 开篇交代了两种计算形态：$p_g=q=0$ 时每个 Picard 分量是一个点，基于 Picard 切向消失，除子因子是完备线性系，定点轨光滑，虚拟类由障碍丛直接算；辅助曲面上除子线可以在一条 Picard 曲线里变动，障碍理论保留该变动，先用除子余截面把低除子类局限到空除子点与典范除子点上，再往纤维里限制其余因子与插入。两个形态共享秩一分解与点理想比较作为公共输入（fixed.tex:17-26）。空除子与典范除子纤维上的虚拟重数 $1$ 与 $-s$、$s>0$，我在 introduction.tex:190-196 读到结论层陈述；其出处 \eqref{eq:canonical-cycle} 与 Chang--Kiem 余截面、Kiem--Li 局部化的完整技术形态在未读区段，本笔记涉及它们的具体形状处均标 [推测]。
+
+## §7 先清场：双有理归约、整系数约定、以及关系如何吃掉 $\operatorname{CH}_0^0$
+
+动真构造之前我把三件"扫场"的事一次性做掉，写进 reductions 一节和导言的约定段。第一件：blowup 不改变问题。设 $\pi:\widetilde X\to X$ 为一点 blowup，则 $p_g,q$ 不变，且整系数的 $\pi_*:\operatorname{CH}_0(\widetilde X)\xrightarrow{\sim}\operatorname{CH}_0(X)$ 是保度同构（build/sections/reductions.tex:8-16，Lemma \ref{lem:birational}）。证明里我用了两把小刀：$R^1\pi_*\mathcal O=0$ 与 $\pi_*\mathcal O=\mathcal O$ 管住 $q$；全纯 2-形式在 blowup 点上"去掉一点还能延回光滑曲面"管住 $p_g$；Fulton 的整系数 blowup 公式在余维 2 处给出 $\operatorname{CH}^2(\widetilde X)\simeq\operatorname{CH}^2(X)\oplus\operatorname{CH}^1(\operatorname{Spec}\mathbb C)=\operatorname{CH}^2(X)$（reductions.tex:19-36）。顺带，光滑射影曲面之间的双有理映射可以拆成一串点 blowup，所以全部断言是双有理不变量。这条引理给了我后来在 §10 里"想 blowup 就 blowup"的执照。
+
+第二件：归约到极小一般型并把数值范围钉死。Kodaira 维数小于 2 由 Bloch--Kas--Lieberman 结清；一般型取光滑极小模型 $X_0$，记 $k_0=K_{X_0}^2$，则
+$$1\le k_0\le9,\qquad\chi(\mathcal O_{X_0})=1,\qquad\int_{X_0}c_2=12-k_0,\qquad b_2(X_0)=10-k_0$$
+（build/sections/reductions.tex:38-47，Proposition \ref{prop:reduction}）。四串数字的来历我都重新推过一遍以防手滑：$K_0$ nef 且 big 给 $k_0>0$；$p_g=q=0$ 给 $\chi=1$；Noether 公式给 $\int c_2=12\chi-k_0=12-k_0$；Hodge 理论与对偶给 $b_1=b_3=0$、$\int c_2=2+b_2$；最后"ample 除子的上同调类非零"逼出 $b_2\ge1$，即 $k_0\le9$（reductions.tex:52-66）。$K^2=9$ 与 $K^2\le8$ 的分岔在这一刻已经写进了 $b_2=10-k_0$：前者 $b_2=1$，交配格秩一，没有垂直于 $K$ 的方向可用。我后来花了整个 §11 才接受这个事实并把它变成武器。
+
+第三件：系数纪律。导言的约定段（build/sections/introduction.tex:282-298）把哪些部分用整系数、哪些用有理系数划得很清：定理陈述、$\operatorname{CH}_0$ 定义、$\operatorname{alb}$、Lemma \ref{lem:birational} 与整系数结论小节是整系数天下，其余一律有理系数。我当时纠结过要不要全程整系数硬做，答案是虚拟类与局部化环天然住在 $\mathbb Q$ 上，先把有理版本做扎实，挠量最后交给 Roitman（见 §12）。另外约定里两条对我后来写作习惯影响很大：线丛加法记法、复形上同调分次；以及"带非零环面权的完美复形之欧拉类在局部化等变 Chow 里解释"，§8 的次数论证完全靠它。
+
+扫场的另一半是"关系一旦造出，推论三行完事"。对应作用的论证在 relation.tex:636-657：对 $Z\in\operatorname{CH}^2(X\times X)$ 以 $Z_*(z)=\operatorname{pr}_{2*}(\operatorname{pr}_1^*z\cdot Z)$ 作用于零循环；对角线作用如恒等；总余维 2 的外积 $a\boxtimes b$ 若 $a$ 余维正则因维数杀零，若 $a$ 余维零则 $a=\lambda[X]$ 作用成 $\lambda\deg(z)b$，度零循环照样被杀。于是 \eqref{rel:chow-identity} 作用在 $z\in\operatorname{CH}_0(X)^0$ 上给出 $cz=0$，$c\ne0$ 时 $z=0$。这就是 Corollary \ref{rel:correspondence}：$p_g=q=0$ 且 $c\ne0$ 蕴含 $\operatorname{CH}_0(X)^0\otimes\mathbb Q=0$（build/sections/relation.tex:636-641）。写到这里我必须承认，整个项目里最"免费"的部分偏偏是这个 corollary，最贵的部分是那句 $c\ne0$。
+
+## §8 次数归零：一个负幂指数逼出的 Chow 恒等式
+
+现在到 §5 许诺给我的"整体杠杆"。取 $p\ge0$ 满足 $v>p+2$，$v$ 是 \eqref{eq:vdim} 的虚拟维数。设 $Q$ 为 $B\times X$ 上的万有完美商，$o\in X$ 是行列式规范化用的基点，定义等变第一陈类
+$$h=c_1^{\mathbb G_m}(\mathbf Li_o^*Q)\in\operatorname{CH}^1_{\mathbb G_m}(B)$$
+（build/sections/relation.tex:26-30）。这里的导出限制我特意加粗过笔记：非局部自由处必须用导出限制，否则它根本不是完美万有族上的运算（relation.tex:31-32）。考虑未局部化的等变类
+$$\Xi(t)=q_*\!\left(h^p\,\ch_2^{\mathbb G_m}(Q)_{(1)}\,\ch_2^{\mathbb G_m}(Q)_{(2)}\cap\bigl([B]^{\mathrm{vir}}\times[X\times X]\bigr)\right)\in\operatorname{CH}^*_{\mathbb G_m}(X\times X)$$
+（build/sections/relation.tex:33-42，式 \eqref{rel:equivariant-push}），$q$ 是 $B\times X\times X\to X\times X$ 的投影，下标 $(1),(2)$ 指从两份 $B\times X$ 拉回。我为什么挑两个 $\ch_2$ 插入？因为它们各自携带一份"输出曲面"的余维 2 信息，乘起来恰好够我最后落在 $\operatorname{CH}^2(X\times X)$；$h^p$ 则是我调节总次数、把不动点公式里除子变量 $x_i$ 的幂次提取钉死的手轮（introduction.tex:151-153 那句"我们把虚拟维数选得让等变次数逼其余维 2 部分消失"说的就是这件事）。
+
+次数审计：$\Xi(t)$ 的等变总余维是 $p+4-v$（relation.tex:44）。环面在 $X\times X$ 上平凡作用，所以 $\operatorname{CH}^*_{\mathbb G_m}(X\times X)=\operatorname{CH}^*(X\times X)[t]$（relation.tex:45-49）。假如 localized 类的普通余维 2 部分非零，它必须携带因子 $t^{p+2-v}$（build/sections/relation.tex:50-55，式 \eqref{rel:parameter-power}），而 $v>p+2$ 让这个指数为负；\eqref{rel:equivariant-push} 从构造上就没有 $t$ 的负幂。结论：普通余维 2 部分为零。这一段我读了三遍才敢用，它的全部力气在"没有负幂"五个字上，任何一步如果先用 localized 表达再清分母就会假性通过。
+
+再用 GP 虚拟局部化把同一个类写成定点推前除以移动欧拉类之和：它们的普通余维 2 部分总和为零，且 $t=1/2$ 专章后依然为零（relation.tex:57-63）。更锋利的是逐条版本：每个定点推前自身的等变总余维也是 $p+4-v$，故其余维 2 部分形如 $t^{p+2-v}$ 乘一个与 $t$ 无关的类；把 $t$ 换成 $-t$ 时逐条乘 $(-1)^{p+2-v}$（build/sections/relation.tex:60-66）。我起初把这条"项级奇偶性"当成顺手记录，直到 §11 需要比较 $(2K,K)$ 与 $(K,2K)$ 两个顺序的贡献时才明白，它是全文唯一能不调用任何具体几何就说动"两顺序同系数"的机关：$p+2-v=7+2-13=-4$ 为偶，交换直和项等于换 $t\mapsto-t$，配对不变（rankone.tex:395-403）。
+
+## §9 带标记递归：把数值公式养成对应关系
+
+零已经到手，剩下的是把它翻译成 $0=c[\Delta_X]+\Gamma$。每个定点纤维贡献写成 \eqref{rel:fiber-contribution} 形式的类 $C_*(T,H;n_1,n_2)$；它的精确定义中段在我未读的 relation.tex:170-330 区段 [推测]，但结构可以从两处已读的邻居拼出：配对公式 \eqref{rel:pairing}（relation.tex:609-615）显示它按 $[x_1^{m_T}x_2^{m_H}]\int_M\mathcal E(x)\mathcal R(x)(x_1+x_2)^p\mu_\alpha^2$ 的模式配对，$\mu_i(\alpha)=\pi_{X*}([Z_i]\smile\alpha)$、$\mu_\alpha=\pi_{X*}(J\smile\alpha)$，展开式 $\mu_\alpha=\sum_i(\mu_i(\alpha)+(w_i-x_i)(\alpha D_i)+x_i(\alpha L_i))$（relation.tex:590-606）说明插入 $J$ 就是那个携带输出曲面标记的 $\ch_2$ 组合。$M=X^{[n_1]}\times X^{[n_2]}$，一切 Hilbert 方案积分都要被消掉，而两份输出 $X$ 必须活着离开。
+
+这正是对 EGL 递归动的手术。Ellingsrud--G\"ottsche--Lehn 的原版把交点数算成普适多项式后就丢弃几何；我在 \cite{EGL} 递归的骨架上"让两个曲面因子全程不参与积分"（introduction.tex:117-121 明说这一步把数值交公式生产成对应恒等式）。机制清单如下。引理 \ref{rel:marked-reduction}（build/sections/relation.tex:336-352）：对长度和 $n_1+n_2$ 归纳，每步取一个正的 Hilbert 因子沿 $\psi$（把长度 $r$ 拆成"新点加残余点"的 blowup 型对应）拉回，用 $\psi_*[N_r]=r[X^{[r]}]$ 补回次数；万有理想序列把拉回的理想换成旧理想加残余点图的 $K$-类修正；图上 GRR 给 $\ch(j_*\mathcal L)=j_*(e^\zeta\rho^*\operatorname{td}(T_X)^{-1})$（relation.tex:366-371），$\zeta$ 是新点槽与在用槽之间的等式对角线。$r=2$ 时 $\sigma$ 是 $X\times X$ 沿对角线的 blowup、$\zeta=-E$、$\sigma_*(\zeta^2)=-[\Delta_X]$（build/sections/relation.tex:329-333）。每次替换后按射影推前公式处理 $\zeta$ 的各次幂，长度严格下降，两个输出因子从头到尾没有被推前过。归纳结束时，剩余的是 $X$ 的幂上的等式对角线、线类与切向类的乘积，而系数与乘积清单"可以由一条与 $X$ 和线丛选择都无关的递归一次性选定"（relation.tex:349-351），这句话是普适性的宪法条文，我在写 Prop \ref{prop:universal} 证明时把它当作合法性来源逐句执行。
+
+剩下的曲面推前用图语言收束。把一个等式对角线单项式记成图 $\mathcal G$：顶点是曲面槽，因子 $[\Delta_{uv}]$ 是边。则
+$$\prod_{uv\ \text{edge}}[\Delta_{uv}]=\iota_*\!\Bigl(\prod_C\bigl(\operatorname{pr}_C^*c_2(T_X)\bigr)^{e_C-v_C+1}\Bigr)$$
+（build/sections/relation.tex:464-488，式 \eqref{rel:graph-intersection}）：连通分量 $C$ 的支撑树施加 $v_C-1$ 次横截等号得到小对角线，多余每条边因"等号已满足"由对角线自交公式赔一个 $c_2(T_X)$；孤立顶点与树的指数为零，账目自动平。随后三分法（relation.tex:491-507）：不含输出的分量在 $X$ 上积掉，只在装饰余维恰为 2 时留下交点数；恰含一个输出的分量同构映到那个输出、留下装饰；同时含两个输出的分量映到 $\Delta_X$，而 $\Delta_X$ 本身余维 2，所以其余维 2 贡献只可能来自 $\eta\in\operatorname{CH}^0(X)=\mathbb Q[X]$，即标量乘 $[\Delta_X]$。把情形 (iii) 的标量系数之和定义为 $c_*$，分离输出的记入 $\Gamma_*$，全部形式操作完成之后才在具体的 $X$ 上求值交点数，顺序就是纪律。
+
+由此得到普适系数命题（build/sections/relation.tex:406-437，Proposition \ref{prop:universal}）：$c_*$ 由固定普适规则给出，规则只依赖整数参数、所选权、以及
+$$\int_Xc_2(T_X),\qquad\int_XUV\quad(U,V\in\{K,L_1,L_2,T,H\})$$
+这些数值（relation.tex:415-422，式 \eqref{rel:numerical-data}）；$n_1=n_2=0$ 时 $c_*=0$，因为 $M$ 退化为点、$\mathcal E=1$、$E_{ij}=0$、插入里无 incidence 项，图程序里没有连接两输出的边（relation.tex:530-536）；同一规则在任意拥有相同数值数据与 $\chi(\mathcal O_X)=1$ 的光滑射影曲面上适用，无须 $T,H$ 有效，有效性只关乎该公式能否作为定点贡献被实现（relation.tex:423-427）。论文明言无须单张曲面上对角线分解唯一：从不用对角线与外积之间的关系去挑选 $c_*$（relation.tex:523-528）。这兑现了 §4 立下的"刻度尺"承诺。
+
+最后把 \S8 的零逐项代入：定理 \ref{thm:chow-relation}（build/sections/relation.tex:552-588）。$p_g=q=0$ 时按 \ref{prop:fixed-pg0} 的有效有序对 $T+H=D$、满足 \eqref{eq:length} 的非负点长、$m_T,m_H\ge0$ 求和，重数全为 1；辅助设置按 $(3K,0),(0,3K)$ 重数 1、$(2K,K),(K,2K)$ 重数 $-s$ 求和，$s>0$ 来自 \eqref{eq:canonical-cycle}（relation.tex:554-564）。定点数据有限所以和有限；移动因子与插入已在 \eqref{eq:moving-ratio} 与 \eqref{eq:insertion} 算清；逐项代入普适分解，得到
+$$0=c[\Delta_X]+\Gamma\quad\text{in }\operatorname{CH}^2(X\times X)$$
+（build/sections/relation.tex:565-571，式 \eqref{rel:chow-identity}）。同节还备好了检号工具：若 $\alpha\in H^2(X,\mathbb R)$ 正交于 $K,L_1,L_2,T,H$，则 $\alpha\boxtimes\alpha$ 配对把外积 (0,2)/(2,0) 项按维数杀、(1,1) 项按正交性杀，只剩对角线贡献 $c_*\alpha^2$（build/sections/relation.tex:621-627，式 \eqref{rel:orthogonal-test}）。注意 $\alpha$ 无须代数（relation.tex:599, 618-619），§11 要用全纯 2-形式的实部，全靠这条免死金牌。
+
+## §10 $K^2\le8$ 分支：格上的下降、三次 blowup、与一个平方和检号
+
+命题 \ref{prop:nonrank} 的骨架在第一遍读时就该背下来（build/sections/nonrank.tex:9-18）：$1\le k_0\le8$ 时，blow up $e=\max\{k_0-5,0\}$ 个点得 $X$（nonrank.tex:10-14），存在一组 $L_1,L_2,D,n,p$ 使定理 \ref{thm:chow-relation} 给的关系有 $c>0$，从而 $\operatorname{CH}_0(X_0)_{\mathbb Q}$ 上度数是同构。检号策略整句抄在 nonrank.tex:20-29：找一个 $\alpha\in H^2(X,\mathbb R)$，$\alpha K=0$、$\alpha^2<0$；与 $\alpha\boxtimes\alpha$ 配对后，$\alpha H=0$ 的贡献留下 $c_*\alpha^2$（外积项被正交性杀死），其余贡献被我刻意设计成点长全零，于是自选系数 $c_*=0$、配对只剩 $(\alpha H)^2>0$；全部加起来等于零，就得 $c>0$。$\alpha$ 由格计算供应，"点长全零"由一组数值不等式隔离。这两件事的难度完全不对称，我原本以为数值不等式是收尾杂活，实际它吃掉了最多草稿纸。
+
+$\alpha$ 的存在住在整格 $\Lambda=H^2(X_0,\mathbb Z)/\text{tors}$ 里：指数序列与 $H^1(\mathcal O)=H^2(\mathcal O)=0$ 把 $\operatorname{Pic}(X_0)$ 认成 $H^2(X_0,\mathbb Z)$（nonrank.tex:32-40），Poincare 对偶给幺模，Hodge 指标与 $b_2=10-k_0$ 给符号 $(1,b)$、$b=9-k_0$（nonrank.tex:40-41），Riemann--Roch 给特征性 $x^2\equiv K_0x\pmod 2$（nonrank.tex:42-45）。Serre 的无限幺模格分类（nonrank.tex:48-55 引用其书 V 章）只剩两种：奇格是 $\langle1\rangle\oplus\langle-1\rangle^{\oplus b}$；偶格要求符号差被 8 整除，在 $1\le b\le8$ 内只有 $b=1$ 的双曲平面，对应 $k_0=8$。引理结论：奇情形有 $h_0^2=-1$、$K_0h_0=1$；偶情形有 $h_0^2=0$、$K_0h_0=2$（nonrank.tex:57-66）。
+
+奇情形的证明是一段我很享受的下降。写 $K_0=(u;v_1,\dots,v_b)$，特征性说所有坐标是奇数；摆正符号与次序使 $u>0$、$v_1\ge\cdots\ge v_b>0$、$u^2=9-b+\sum v_i^2$；目标是降到某个 $v_i=1$，那时 $-e_i$ 就是 $h_0$。$b=1$ 时 $(u-v_1)(u+v_1)=8$ 且两因子皆正偶，锁死 $(u,v_1)=(3,1)$。$b\ge3$ 且一切 $v_i\ge3$ 时令 $\ell=v_1+v_2+v_3$，有 $\ell^2-u^2=2(v_1v_2+v_1v_3+v_2v_3)-\sum_{i\ge4}v_i^2-(9-b)\ge(9-b)(v_3^2-1)>0$，同时 $\ell^2<3u^2<4u^2$；取 $z=(1;1,1,1,0,\dots)$（方 $-2$），整反射把正坐标换成 $u'=2u-\ell\in(0,u)$（nonrank.tex:85-99）。$b=2$ 时 $\ell^2-u^2=2v_1v_2-7>0$ 且 $\ell^2<\frac94u^2$，取 $z=(1;1,1)$（方 $-1$），反射换成 $u'=3u-2\ell\in(0,u)$（nonrank.tex:102-112）。$u$ 严格下降、过程保持特征性与平方 $9-b$，终归撞上 $v_i=1$；把得到的类沿等距拉回即得 $h_0$，并且它能提升为线丛。偶情形：各向同性基 $f,g$、$K_0=af+bg$、$a,b$ 偶、$2ab=8$ 给 $a=b=2$，$f$ 或 $g$ 即 $h_0$（nonrank.tex:120-123）。我第一遍读到这里以为 $b=2$ 那支是多余的分叉处理，后来发现 $z$ 的方从 $-2$ 变成 $-1$ 时反射公式从 $x+(xz)z$ 换成 $x+2(xz)z$，$u'$ 的表达式也从 $2u-\ell$ 变成 $3u-2\ell$，两支确实必须分开算。
+
+blowup 段（nonrank.tex:126-151）：$K=\pi^*K_0+\sum E_j$、$k=K^2=k_0-e=\min\{k_0,5\}>0$；奇情形 $h'=\pi^*h_0$，偶情形（$k_0=8$、$e=3$）$h'=\pi^*h_0+E_1$，两支都满足 $(h')^2=-1$、$Kh'=1$（nonrank.tex:133-137）。记 $a=K_0h_0$（奇 1 偶 2），令 $\alpha=\pi^*(h_0-\frac{a}{k_0}K_0)$，则
+$$\alpha K=0,\qquad\alpha h'=\alpha^2=h_0^2-\frac{a^2}{k_0}<0$$
+（nonrank.tex:143-151）。注意 $\alpha$ 一般是实系数类、根本不代数，这没关系：§9 末尾那条"配对不要求 $\alpha$ 代数"（relation.tex:599, 618-619）在此第一次兑现。$h'$ 这个符号要小心：它是线丛，与 §8 的插入类 $h$ 无关，论文在 nonrank.tex:138-139 特意加了这句防混淆的注。
+
+不等式工事的枢纽是引理 \ref{nr:positive-pairing}：$P$ 有效、$m_P\ge0$、$\alpha P\ne0$ 蕴含 $KP>k$（nonrank.tex:158-161）。证明分三步。写 $P=\pi^*P_0+\sum a_jE_j$、$r_0=K_0P_0$，推前到 $X_0$ 知 $P_0$ 有效、$r_0\ge0$；由 $2m_P=P^2-KP\ge0$ 得异常控制 $0\le\sum_ja_j(a_j-1)\le P_0^2-r_0<r_0^2/k_0-r_0$，右端的严格号来自 $\alpha P\ne0$ 排除 $P_0$ 与 $K_0$ 数值成比例，再用 $r_0\ge0$ 逼出 $r_0>k_0$（nonrank.tex:163-181）。再证 $KP>0$：若 $e=0$ 免费；否则假设 $KP=r_0-A_0\le0$（$A_0=\sum a_j$），Cauchy--Schwarz 给 $\sum_ja_j(a_j-1)\ge A_0^2/e-A_0\ge r_0^2/e-r_0>r_0^2/k_0-r_0$（用到 $A_0\ge r_0>k_0>e$ 与 $u^2/e-u$ 在 $[r_0,\infty)$ 单调），与异常控制矛盾（nonrank.tex:183-193）。最后 $K^2=k>0$ 使 $K^\perp$ 负定，Hodge 指标给 $0<KP\le P^2<(KP)^2/k$，除以 $KP$ 得 $KP>k$。论文还留了一句诚实注脚：这一步用 $K$ 正平方，前面所有有效性界只用 nef 类 $\pi^*K_0$（nonrank.tex:201-203）。
+
+数据选择是全文我最得意的一次"倒着选题"（nonrank.tex:212-220 的表格）：
+$$k=1:\ (d,p)=(4,0);\qquad 2\le k\le5:\ (d,p)=(3,k-2);\qquad D=dK,\ L_1=0,\ L_2=K,\ n=d(k+1).$$
+于是 $A=-K$、$v=2d$（nonrank.tex:221）：$k=1$ 时 $v=8>2=p+2$；$2\le k\le5$ 时 $v=6>k=p+2$。§8 的门槛 $v>p+2$ 就是"为什么恰好 blow up 到 $k\le5$ 为止"的全部理由（nonrank.tex:224-225）。多 blowup 一个点 $p$ 跟着涨、门槛反而更难过，$e=\max\{k_0-5,0\}$ 是压线选择。定点筛选用 \ref{prop:fixed-pg0} 的结论（经 nonrank.tex:227-228 转述）：只保留 $T+H=D$ 有效、$m_T,m_H\ge0$ 的分解；记 $r=KH$、$s=H^2$、$N=n_1+n_2$，长度账 \eqref{eq:length}  specialized 成 $N=d(k+1)-(d+1)r+s\ge0$（nonrank.tex:229-235）。引理 \ref{nr:surviving-numerics} 说：凡是 $\alpha H\ne0$ 的贡献，必满足
+$$KH=H^2=k+1,\qquad n_1=n_2=0,\qquad m_H=0,\qquad m_T=p$$
+（nonrank.tex:237-243）。证明就是一条链：$\alpha T=-\alpha H\ne0$ 让枢纽引理同时管住 $H,T$，得 $r>k$、$dk-r>k$、$r\le s<r^2/k$，加上 Riemann--Roch 奇偶 $s-r$ 为偶。$k=1$ 时两个典范界逼死 $r=2$，$2\le s<4$ 与偶性逼死 $s=2$，账上 $N=0$。$2\le k\le5$ 时写 $r=k+j$（$1\le j\le k-1$）、$s=r+2m$，严格 Hodge 给 $2m<j+j^2/k<2j$ 即 $m\le j-1$，代入长度账得 $0\le N=3(1-j)+2m\le1-j$，于是 $j=1$、$m=0$、$N=0$（nonrank.tex:245-281）。我尤其注意论文自夸的那句：这条整数组估计把 $j\ge2$ 全体排除，$k=3,4$ 的边界值不需要逐例枚举（nonrank.tex:270-271），数值分支做到这里已经脱掉了"例子味"。参考表 nonrank.tex:285-293 把五行的 $(k,d,p,KH,H^2,N,m_T,m_H)$ 排成 $(1,4,0,2,2,0,0,0)$ 至 $(5,3,3,6,6,0,3,0)$。
+
+非空性由一个显式有效对供上（引理 \ref{nr:effective-pair}，nonrank.tex:297-332）：$H=K+h'$、$T=(d-1)K-h'$。$\chi(H)=1$、$\chi(T)=p+1>0$；用 $B_0=\pi^*K_0$ 的 nef 性检查 $B_0(K-H)=-a<0$、$B_0(K-T)=(2-d)k_0+a<0$（奇情形 $k_0=1$ 时值 $-1$、$k_0\ge2$ 时 $1-k_0<0$；偶情形 $-8+2=-6$），所以 $K-H$、$K-T$ 都无截面，Serre 对偶给 $h^2(H)=h^2(T)=0$，Riemann--Roch 逼 $h^0$ 为正。$\alpha H=\alpha h'=\alpha^2<0$ 确认它落在"$\alpha H\ne0$"那一组，且两点 subscheme 全空。
+
+收账（nonrank.tex:334-409）。配对分解成两队：$\alpha H=0$ 队按 \eqref{rel:orthogonal-test} 贡献 $c_*\alpha^2$，全队的 $c_*$ 加起来就是关系里的 $c$；$\alpha H\ne0$ 队点长全零故 $c_*=0$，配对由 \eqref{rel:pairing} 化成 $(\alpha H)^2\mathcal R(0,0)$：把 $x_2=0$、取 $[x_1^p]$ 时只用常数项，$(x_1+x_2)^p$ 与 $(-1+x_1-x_2)^2$ 的非常数部分全部出清（nonrank.tex:345-363）。$\mathcal R(0,0)$ 我亲手重算：无点因子时只剩标量权幂，$i=2,j=1$ 权为 $1$、$i=1,j=2$ 权为 $-1$，$P_{12}=T+K$、$B_{12}=T-H+K$，得
+$$\mathcal R(0,0)=(-1)^{\chi(T-H+K)-\chi(T+K)}=(-1)^{-TH+(H^2-KH)/2}=(-1)^{-TH}$$
+（nonrank.tex:365-378），展开 Riemann--Roch 并用 $H^2=KH$ 化到倒数第二步。而 $TH=(d-1)(k+1)$：$k=1$ 时 6、$2\le k\le5$ 时 $2(k+1)$，一律偶数，所以每个此类项的贡献恰为 $(\alpha H)^2>0$（nonrank.tex:379-388）。求和有限（定点轨离散数据只有有限多，distinct 挠扭按不同项保留）、非空（显式有效对在内），于是
+$$0=c\alpha^2+\sum_{\alpha H\ne0}(\alpha H)^2,\qquad c=-\frac{\sum(\alpha H)^2}{\alpha^2}>0$$
+（nonrank.tex:390-400）。$\operatorname{CH}_0$ 有理消没由推论 \ref{rel:correspondence} 给出，再过 §7 的 blowup 同构回到 $X_0$。整个分支里我最初设计顺序完全反了：先抓 $\alpha$ 再配数据，结果数据配不拢 $v>p+2$；第二次倒过来从门槛反推 $k\le5$，blowup 数 $e$ 才被唯一逼出来。这个教训写进 §15 的清单。
+
+## §11 $K^2=9$ 分支：没有垂直方向时，借另一张曲面借一双眼睛
+
+$b_2=1$ 时 §10 的 $\alpha$ 无处容身：$K^\perp$ 在秩一格里没有非零实向量。命题 \ref{prop:rankone}（rankone.tex:17-25）选数据
+$$L_1=L_2=0,\qquad D=3K_X,\qquad n=20,\qquad p=7,$$
+断言关系的 $c$ 严格为正。这一分支的结构分三拍：先把可能对 $c$ 有贡献的数值类型筛到只剩两种，再拿一张同 Chern 数、$p_g=q=1$ 的辅助曲面建立两个系数之间的比例，最后把仅剩的一个系数在长度 2 的 Hilbert 方案上手工算死。
+
+第一拍的账目。$\operatorname{Pic}(X)/\text{tors}\cong H^2(X,\mathbb Z)$ 秩一正定幺模，取 ample 射线上的生成元 $G$，$G^2=1$、$K\equiv3G$；每条既约曲线在这条射线上系数为正，故 $K$ 与每条曲线交为正，Nakai--Moishezon 判 $K$ ample（rankone.tex:27-44）。$v=2\cdot20-K(3K)=40-27=13>9=p+2$（rankone.tex:46-49），门槛过关。写 $H\equiv aG$、$T\equiv(9-a)G$，有效性给 $0\le a\le9$，三本账
+$$m_H=\frac{a(a-3)}2,\qquad m_T=\frac{(9-a)(6-a)}2,\qquad n_1+n_2=20-9a+a^2$$
+（rankone.tex:50-57）排成 $a=0$ 至 $9$ 的完整表：$m_H$ 行 $0,-1,-1,0,2,5,9,14,20,27$；$m_T$ 行倒影；$n_1+n_2$ 行 $20,12,6,2,0,0,2,6,12,20$（rankone.tex:60-67）。\ref{prop:fixed-pg0} 杀 $a=1,2,7,8$（负 $m$），点长双零的 $a=4,5$ 按普适规则 $c_*=0$，只剩外型 $(3K,0)$ 与中型 $(2K,K)$（含两个顺序）可对 $c$ 有贡献（rankone.tex:69-74）。重数账要算清：数值平凡的有效线丛必平凡（非零有效除子与 ample 交为正），故外型就是一个无序对；数值等于 $K$ 的线恰为 $K+\epsilon$，$\epsilon$ 跑 $\operatorname{Pic}(X)_{\mathrm{tors}}$；未扭的 $K$ 无截面，$\epsilon\ne0$ 时 $H^0(-\epsilon)=0$ 逼 $h^2(K+\epsilon)=0$、$\chi(K+\epsilon)=1$、$h^0(K+\epsilon)=1+h^1>0$，全有效；$2K-\epsilon$ 减 $K$ 为 ample，Kodaira 消没加 Riemann--Roch 给 $h^0(2K-\epsilon)=10$；同一论证给 $h^0(3K)=28$（rankone.tex:76-93）。记 $\tau_X=\#\operatorname{Pic}_{\mathrm{tors}}\setminus\{0\}$，则
+$$c=c_{\mathrm{out}}+\tau_X\,c_{\mathrm{mid}}$$
+（rankone.tex:95-121）：$c_{\mathrm{out}}$ 是数值对 $(3K,0)$ 两顺序、全部长度分布 $n_1+n_2=20$ 的普适系数和，$c_{\mathrm{mid}}$ 是 $(2K,K)$ 两顺序、$n_1+n_2=2$ 的和；两数按公式 \eqref{rel:fiber-contribution} 与普适规则定义，即使对应精确线丛在 $X$ 上不有效也照定义（rankone.tex:100-109）。我最初的贪念是直接算 $c_{\mathrm{out}}$，一算就撞进长度 20 的 Hilbert 方案，指数级膨胀；论文这里写得坦白："我们将用辅助关系把 $c_{\mathrm{out}}$ 表成 $c_{\mathrm{mid}}$ 的正倍数，绕开长度 20 的计算"（rankone.tex:123-127）。这一句是本分支的转折点，也是我与"老老实实硬算"这条路正式分手的地方。
+
+第二拍借的眼睛是 Cartwright--Steger 曲面 $Y$：光滑射影紧二球商，来自挠自由格的存在性 \cite{CKY}，不变量 $K_Y^2=9$、$\int c_2=3$、$\chi(\mathcal O_Y)=1$、$q=p_g=1$（rankone.tex:129-143）。球上 Bergman 度量的负 Ricci 形式给 $K_Y$ 正曲率，Kodaira 判据使 $K_Y$ ample，辅助设置（§6 末尾第二种计算形态）在 $D=3K_Y$ 下合法。检测类取非零 $\omega\in H^0(K_Y)$ 的 $\alpha=[\omega+\bar\omega]$：全纯顶形式闭，$\alpha^2=2\int_Y\omega\wedge\bar\omega>0$（秩一正定那边没有的方向，这里靠 Hodge 结构凭空长出来），而 Hodge 类型使 $\alpha$ 与一切除子类正交（rankone.tex:145-154）。比较引理（rankone.tex:156-203）：辅助设置里除子余截面把低除子的虚拟类换成两点纤维，重数 $1$（空除子）与 $-s$（典范除子，$s>0$，出处 \eqref{eq:canonical-cycle} 在我未读的 fixed.tex 区段，形态标 [推测]），幸存项在 $|3K_Y|\times Y^{[n_1]}\times Y^{[n_2]}$ 与 $|2K_Y|\times Y^{[n_1]}\times Y^{[n_2]}$ 上算，总点长分别是 20 与 2，高线性系维数 27 与 9；投影公式把一切插入限制到真实纤维，导出基变换把移动复形限制成 \eqref{eq:moving-ratio} 原样。有一句话我抄进了方法论笔记："这个限制发生在使用普适性之前：不存在拿数值不变量去比较某个变动 Picard 分量上的积分"（rankone.tex:188-191），普适规则只许在纤维化之后搬运系数，次序颠倒就是造假。限制之后，$Y$ 与 $X$ 数值数据全同，普适系数可比；$Y^2$ 上的关系对角线系数为 $c_{\mathrm{out}}-s\,c_{\mathrm{mid}}$，与 $\alpha\boxtimes\alpha$ 配对：双次数只允许每个因子上一个除子参与、而除子全正交于 $\alpha$，外积项尽灭，对角线贡献 $\alpha^2\ne0$，于是
+$$c_{\mathrm{out}}=s\,c_{\mathrm{mid}},\qquad s>0$$
+（rankone.tex:156-203）。注意 $-s$ 的来源依赖余截面局部化到典范除子的符号约定（fixed.tex 未读区 [推测]）；本分支对 $s$ 只要求正性，这一点由引言 rankone 概览处"virtual multiplicities $1$ and $-s$ with $s>0$"（introduction.tex:194-196）供认。
+
+第三拍，$c_{\mathrm{mid}}=12$ 的手算（引理 \ref{lem:middle-coefficient}，rankone.tex:205-406）。先取顺序 $T=2K_Y,H=K_Y$：$n_1+n_2=2$、$m_T=9$、$m_H=0$，分布 $(2,0),(1,1),(0,2)$ 三种。取 $[x_2^0]$ 即令 $x_2=0$；$n_2>0$ 时低固定因子 $e((\mathcal O_Y^{[n_2]})^\vee)=0$，因为常函数 $1$ 是秩 $n_2$ 重言丛的无处零截面，且其他因子无非负 $x_2$ 幂可抵（rankone.tex:224-238）。只剩 $(2,0)$。记 $U=(-K_Y)^{[2]}$、$N=\mathcal O_Y^{[2]}$、$x=x_1$、$\mu=\int_{Y^{[2]}}[Z_1]\alpha$；\eqref{eq:insertion} 的其余项对 $\alpha$ 积分皆零（rankone.tex:240-249）。线丛账 $P_{12}=2K_Y$、$P_{21}=K_Y$、$B_{12}=K_Y$、$B_{21}=-K_Y$，Riemann--Roch 给 $\chi(K_Y)=1$、$\chi(2K_Y)=\chi(-K_Y)=10$，标量比 $(x-1)^1/(x-1)^{10}\cdot(1-x)^{10}/1=-(1-x)$（rankone.tex:251-262）。点复形两头在 $K$-理论里塌成 $K$-类：$E_{12}(K_Y)=N^\vee$、$E_{21}(-K_Y)=U$，偶数平移 $[-2]$ 不产生负号（rankone.tex:263-268）。秩二丛恒等式 $e_{-u}(F^\vee)=e_u(F)$ 让移动分子的 $e_{x-1}(U^\vee)$ 与分母 $e_{1-x}(U)$ 相消，剩分母 $e_{x-1}(N^\vee)=e_{1-x}(N)$；连高固定因子 $e_x(U^\vee)$ 与插入 $x^7$，配对成
+$$I=-[x^2]\int_{Y^{[2}]}\mu^2(1-x)\frac{e_x(U^\vee)}{e_{1-x}(N)}$$
+（rankone.tex:279-286）。按陈类次数齐次展开：$e_x(U^\vee)=x^2-u_1x+u_2$、$e_{1-x}(N)=(1-x)^2+\nu_1(1-x)+\nu_2$、$(1-x)/e_{1-x}(N)=\frac1{1-x}-\frac{\nu_1}{(1-x)^2}+\frac{\nu_1^2-\nu_2}{(1-x)^3}+\cdots$；$\mu^2$ 实次数 4、$Y^{[2]}$ 复维 4，只取陈次数 2 的部分，乘 $x^2-u_1x+u_2$ 提 $[x^2]$ 得 $u_2+2u_1\nu_1+\nu_1^2-\nu_2$，即
+$$I=-\int_{Y^{[2]}}\mu^2\bigl(c_2(U)+2c_1(U)c_1(N)+c_1(N)^2-c_2(N)\bigr)$$
+（rankone.tex:288-310）。出口是嵌套 Hilbert 方案 $\widetilde{Y^2}=Y^{[1,2]}=\operatorname{Bl}_{\Delta_Y}Y^2$，$\psi$ 到 $Y^{[2]}$ 一般二次（约化长二子概形的任一点都可当长一子概形），重言列 $0\to p_2^*P\otimes\mathcal O(-E)\to\psi^*(P^{[2]})\to p_1^*P\to0$（rankone.tex:312-340，取 $P=-K_Y$）。类账：$\psi^*\mu=\alpha_1+\alpha_2$、$\psi^*c_1(N)=-E$、$\psi^*c_2(N)=0$、$\psi^*c_1(U)=P_1+P_2-E$、$\psi^*c_2(U)=P_1P_2-P_1E$（rankone.tex:342-352）；异常推前 $\pi_*E=0$、$\pi_*(E^2)=-[\Delta_Y]$，第二条因 $E$ 是 $\Delta_Y$ 上 $\mathbb P^1$ 丛且 $\mathcal O(E)|_E=\mathcal O_E(-1)$（rankone.tex:360-367）。方括号整体拉回为 $P_1P_2-(3P_1+2P_2)E+3E^2$；$E$ 一次项全积零；含 $P$ 项 $\int_{Y^2}(\alpha_1+\alpha_2)^2P_1P_2=2(\alpha\cdot P)^2=0$ 靠正交性；盖度 2 须补因子：
+$$I=-\frac12\int_{\widetilde{Y^2}}(\alpha_1+\alpha_2)^2\,3E^2=\frac32\int_{\Delta_Y}(\alpha_1+\alpha_2)^2=\frac32\int_Y(2\alpha)^2=6\alpha^2$$
+（rankone.tex:369-390）。外积项配对为零，\eqref{rel:pairing} 加 $\alpha^2\ne0$ 说明此顺序普适对角系数为 6。换序：$L_1=L_2=0$ 时交换两直和项等于先作 $t\mapsto-t$ 再求值；普通余维 2 输出分量的参数幂 $p+2-v=7+2-13=-4$ 为偶，$t=1/2$ 下配对不变（rankone.tex:395-403；§8 的项级奇偶性在这里第二次兑现）。第二顺序也是 6，三种分布全部交代完，$c_{\mathrm{mid}}=6+6=12$（rankone.tex:404-405）。
+
+合上盖子：$c=c_{\mathrm{out}}+\tau_Xc_{\mathrm{mid}}=sc_{\mathrm{mid}}+\tau_Xc_{\mathrm{mid}}=12(s+\tau_X)>0$，因 $s>0$、$\tau_X\ge0$（rankone.tex:408-416）。$\tau_X=0$（Picard 无挠，例如 Ball 曲面之外的某些 $K^2=9$ 面）也在覆盖内：那时 $c=12s$。我在草稿里给这一分支起的代号是"借眼睛"：$X$ 上没有检测类，就去一张同数值、有全纯 2-形式实部当检测类的 $Y$，把系数比抄回来。普适规则是那张"抄写许可证"，它保证同一数值数据下的 $c_*$ 在两曲面上一字不差。最初版本我试图在 $X$ 本身找非代数的 $\alpha$（$b_2=1$、$H^2$ 全是 $(1,1)$ 型），扑了个空；现在明白检测类必须来自 Hodge 结构更丰富的双生子，这一步非借不可。固定点障碍欧拉因子
+$$\mathcal E(x)=\prod_{i=1}^2\operatorname{e}_{x_i}\!\bigl(((K-D_i)^{[n_i]})^\vee\bigr)$$
+（build/sections/relation.tex:91-99，式 \eqref{rel:fixed-euler}；欧拉约定 $\operatorname{e}_u(E)=\sum_j c_j(E)u^{r-j}$，relation.tex:84-87），与移动虚拟法丛的逆欧拉比
+$$\mathcal R(x)=\prod_{i\ne j}\frac{(w_j-w_i+x_i-x_j)^{\chi(B_{ij})}}{(w_j-w_i+x_i)^{\chi(P_{ij})}}\cdot\frac{\operatorname{e}_{w_j-w_i+x_i}(((K-P_{ij})^{[n_i]})^\vee)}{\operatorname{e}_{w_j-w_i+x_i-x_j}(E_{ij}(B_{ij}))}$$
+（build/sections/relation.tex:116-124，式 \eqref{eq:moving-ratio}），其中 $P_{ij}=L_j-L_i+D_i$、$B_{ij}=L_j-L_i+D_i-D_j$，$E_{ij}(P)=[R\Gamma(P)]-[R\!Hom(\mathcal I_i,\mathcal I_j(P))]$ 是 Carlsson--Okounkov 的 Ext $K$-类（relation.tex:101-114）。关系式 \eqref{eq:moving-ratio} 的符号我逐条推过一遍以保平安：对易序列与相对 Serre 对偶给 $[R\!Hom(\mathcal I_i,P)]=[R\Gamma(P)]-[((K-P)^{[n_i]})^\vee]$，对偶平移 $[-2]$ 在减号之前贡献正号，于是 $E_{ij}$ 恰好落在分母、任何单个上同调维数都不残留（relation.tex:125-150）。这类"符号审计"在后面两次检号（§10 的 $\mathcal R(0,0)$ 与 §11 的标量比 $-(1-x)$）里都是决定生死的一步，我因此在草稿本扉页写了一句自勉：先把符号读对，再谈系数为正。
+
+## §12 从有理到整：把挠量交给 Roitman
+
+两条数值分支各自交出了 $c>0$（§10 的平方和检号与 §11 的 $12(s+\tau_X)$），至此 assembly 只需要把已经挣到的有理消没升级成整系数结论。conclusion 一节的第一段（build/sections/conclusion.tex:3-7）确认了这一点：两个分支供出定理 \ref{thm:chow-relation} 所需的非零系数，然后"先装配有理消没，再用 Roitman 定理清除挠"。
+
+主定理的证明（conclusion.tex:9-31）短得像一段附注，但每一环都站在前面章节的实地上。Kodaira 维数小于 2 走 BKL；一般型取光滑极小模型 $X_0$；$K_{X_0}^2\le8$ 用命题 \ref{prop:nonrank}（在 $X_0$ 的点 blowup 上拿到非零对角系数），$K_{X_0}^2=9$ 用命题 \ref{prop:rankone}（直接在 $X_0$ 上拿到）；两种情形经推论 \ref{rel:correspondence} 与引理 \ref{lem:birational} 都得
+$$\operatorname{CH}_0(S)^0\otimes_{\mathbb Z}\mathbb Q=0$$
+（conclusion.tex:19-21）。取 $z\in\operatorname{CH}_0(S)^0$：有理消没意味着某个非零整数零化 $z$，即 $z$ 是挠；Roitman 挠定理说 Albanese 映射在复曲面的挠零循环上单射（conclusion.tex:23-27，引 Bloch--Roitman 定理 4.2 与 Roitman 原文）；而 $q(S)=0$ 使 $\operatorname{Alb}(S)=0$，于是 $z=0$。度数映射单射成立，满射免费（任一复点度 1）。我在这里学到的结构性一课：整系数结论的难度全部压缩在"有理为零加挠"到"为零"的升级上，而这个升级是外购的（Roitman 定理），我的 Quot 机器只负责有理层面。若 Roitman 定理的适用性有疑问，整个 §12 崩塌，但 §8-§11 的有理部分不受牵连，这种"最后一步外包"的架构让前面所有章节可以独立被检验。
+
+推论 \ref{cor:bloch-pg-zero}（一般 $p_g=0$ 情形的完整 Albanese 陈述，conclusion.tex:33-47）里最精巧的是 $q$ 的获取。非一般型由 BKL 的积分系数定理直接结清（surjectivity 是经典事实）。一般型取极小模型 $S_0$：$K_{S_0}^2>0$ 与 $\deg c_2(S_0)>0$ 加 Noether 公式给 $1-q(S_0)+p_g(S_0)>0$（conclusion.tex:39-41，按 Pedrini--Weibel  remark 1.3.1 引用），由引理 \ref{lem:birational} 的双有理不变性 $p_g(S_0)=p_g(S)=0$，不等式立刻逼 $q(S_0)=q(S)=0$，主定理接管。我第一遍读这段时差点滑过去，后来专门停下重读：这就是为什么全文的主定理只需要陈述 $p_g=q=0$，而推论可以只假设 $p_g=0$。两个零里，一个是真假设，另一个是定理的免费赠品。
+
+## §13 动机推论：零循环定理的动机红利
+
+导言在证明概览之后单独列了动机推论小节（introduction.tex:223-269），conclusion.tex:49-119 给证明。我把这块看作"定理的第二次收款"，全部是既有判据的直接兑换，没有新构造。
+
+设 $T(S)$ 为有理 Albanese 映射的核。推论 \ref{cor:bloch-pg-zero} 给 $T(S)=0$；Kahn--Murre--Pedrini 的等价（推论 7.4.9 与 7.6.11）随即给出 $t_2(S)=0$ 与 $h(S)_{\mathbb Q}$ 的 Kimura 有限维性（conclusion.tex:56-68），其假设在 $\mathbb C$（对 $\mathbb Q$ 有无限超越度的代数闭特征零域）成立。这一步还不需要 $q=0$。加上 $q=0$：KMP 曲面 Chow--K\"unneth 分解
+$$h(S)_{\mathbb Q}\simeq\mathbf 1\oplus h_1(S)\oplus\mathbb L^{\oplus\rho(S)}\oplus t_2(S)\oplus h_3(S)\oplus\mathbb L^2$$
+（conclusion.tex:70-77），$h_1,h_3$ 分别与 Albanese 与 Picard 簇的动机同端，$q=0$ 时双双消失；Betti 实现加 $t_2=0$ 给 $\rho(S)=b_2(S)$，于是 $h(S)_{\mathbb Q}\simeq\mathbf 1\oplus\mathbb L^{\oplus b_2(S)}\oplus\mathbb L^2$（introduction.tex:240-243 是它的陈述）。张量幂 $S^m$ 的结论由张量积直接得到。Hilbert 方案 $S^{[n]}$ 用 de Cataldo--Migliorini 公式
+$$h(S^{[n]})_{\mathbb Q}\simeq\bigoplus_{\nu\vdash n}h(S^{(\nu)})_{\mathbb Q}\otimes\mathbb L^{\,n-\ell(\nu)}$$
+（conclusion.tex:86-95），其中 $S^{(\nu)}=S^{\ell(\nu)}/\Sigma_\nu$、动机像取在平均幂等元 $e_\nu=\frac{1}{\lvert\Sigma_\nu\rvert}\sum_{\sigma\in\Sigma_\nu}\Gamma_\sigma$ 的像上（conclusion.tex:96-105，注意这里我按台账纪律把群阶写成 $\lvert\Sigma_\nu\rvert$ 形式）。$\operatorname{Hom}(\mathbb L^a,\mathbb L^b)$ 在 $a\ne b$ 时为零、$a=b$ 时为 $\mathbb Q$，所以有限 Tate 和的每个幂等子对象仍是有限 Tate 和，逐项纯 Tate。最后，循环类映射 $\cl_Y^i:\operatorname{CH}^i(Y)_{\mathbb Q}\xrightarrow{\sim}H^{2i}(Y,\mathbb Q)$ 的同构与 $H^{2i+1}(Y,\mathbb Q)=0$（introduction.tex:248-254）由 Tate 对象上的逐 codimension 校验经对应相容性传输（conclusion.tex:111-118）。论文特意强调：这个结论用的是 Tate 分解，光有有限维性不够（conclusion.tex:117-118 与 introduction.tex:267-268 两处都写了这句防误读的注）。
+
+## §14 与同行工作的对照：我站在哪一格
+
+把导言的历史段（introduction.tex:53-121）与我的方法并排放，五类先行工作各占一格，我的构造占第六格。Inose--Mizukami 与 Barlow：商曲面比较零循环，需要指定自同构；Bauer 的 $K^2=7$ Inoue 曲面：商对应之间的关系，仍需特殊几何；Pedrini--Weibel：对合论证重铸为超越动机，双重覆盖上"三个中间商动机之零逼出自身之零"（introduction.tex:74-77），应用是一族一族的具体例子，覆盖 $1\le K^2\le8$；Voisin：曲面族、纤维自积的有理连通紧化、作用于全纯 2-形式平凡的相对对应之于 $\operatorname{CH}_0^0$ 幂零，应用到 Catanese 曲面、经商到 Barlow 曲面（introduction.tex:81-90）。这四类共同点：假设里都有"该曲面如何被特殊结构覆盖或作用"。我的定理陈述一条都不 require（introduction.tex:27-28 明说无 minimality、基本群、曲面构造假设，introduction.tex:90-92 明说无指定族、无覆盖、无自同构）。
+
+两篇同期预印本要单独说。Guletskii 的 Theorem A 假设全上同调代数性并声称在特征零代数闭域上证 Albanese 核消没（introduction.tex:94-102）；在 $\mathbb C$ 上，由 Hodge 理论与 Lefschetz $(1,1)$，该假设与 $p_g=q=0$ 等价，所以覆盖面与我的主定理完全重合；其拟议路线是研究 $X^2$ 中过对角线的超曲面截面，配合对应幂零论证。Banerjee 则针对极小一般型、$p_g=q=0$、$K^2=9$ 提出独立证明，用多典范曲线与其 Jacobian（introduction.tex:103-105）。论文的引用姿态值得学："我们把这些工作作为拟议证明来引用；此处发展的论证从 Quot 概形上的虚拟局部化获得它的 Chow 关系"（introduction.tex:106-107）。我对照出的技术分界线：三者都在"找一族好算的对应去逼近对角线"，我在"造一个自动为零的 Chow 类去因式分解出对角线"。Guletskii 用超曲面截面对角线、再幂零；我用行列式纤维承载 $\ch_2$ 双插入、再让次数论证清零。两个方案共享的血缘是 Bloch--Srinivas 的对角线控制思想（introduction.tex:109-110），分歧在"零"的产地。工具链的另一组血缘：曲面 Quot 障碍理论与局部化关系来自 Marian--Oprea--Pandharipande（introduction.tex:110-112），$K$-理论后续与 Ciocan-Fontanine--Kapranov 导出 Quot 在前，To\"en--Vaqui\'e 与 Sch\"urg--To\"en--Vezzosi 供给"带基点行列式纤维作为导出模问题"这一层（introduction.tex:113-117），Chow 计算改写 Ellingsrud--G\"ottsche--Lehn 递归（introduction.tex:117-121）。没有这五组前人机器，我的"第六格"不存在。
+
+## §15 遗留缝隙与诚实清单
+
+按规格，未读区段的判断全部 [推测]，这里集中交代缺口，避免读者以为我通读了 167,955 字节。
+
+（一）fixed.tex:170-789 未读。缺什么：迹分裂引理的证明后半、点障碍与 Hilbert 切向的分离细节、超额比较（引理 \ref{fix:excess}，introduction.tex:211 提到但未读其陈述）、`prop:fixed-pg0` 与 `prop:fixed-auxiliary` 的完整陈述、Chang--Kiem 除子余截面与 Kiem--Li 局部化的技术形态、\eqref{eq:canonical-cycle} 中 $-s$ 的定义与 $s>0$ 的证明。我依赖的只有转述层：空除子纤维重数 1、典范除子纤维重数 $-s$ 且 $s>0$（introduction.tex:190-196 与 rankone.tex:169-171）。风险面：§11 比较引理的正性出口完全押在 $s>0$ 上；若余截面重数符号约定出错，$c_{\mathrm{out}}=sc_{\mathrm{mid}}$ 仍成立但 $s$ 可负，$K^2=9$ 分支的 $c>0$ 失守。[推测] 该节按引言所述应无问题，但我没有逐行验证。
+（二）relation.tex:170-330 未读。缺什么：\eqref{eq:insertion} 中 $J$ 的显式定义、\eqref{rel:fiber-contribution} 的完整式子、Hilbert 递归 \eqref{rel:hilbert-recursion} 的前半与射影丛推前 \eqref{rel:projective-pushdown}。我读到的外围：$h$ 在定点上限制为 $x_1+x_2$（relation.tex:165-169）、配对公式 \eqref{rel:pairing}（relation.tex:609-615）、以及 §10 收账时 \eqref{eq:insertion} 展开出的 $\mu_\alpha$ 表达式（relation.tex:600-606）。由此 [推测] 插入 $J$ 的结构大致是 $\sum_i(\pm[Z_i]+(w_i-x_i)D_i+x_iL_i)$ 型；这只是从已证公式反推的形状，不是验证。
+（三）derived.tex:170-280 未读。缺什么：基于 Picard 栈 $\mathfrak P^o$ 的构造中段、导出纤维 \eqref{der:derived-fiber} 的定义、引理 \ref{der:truncation}。影响：§5 的叙事在该段留了洞，我只能确认输入（开 Quot 增强，derived.tex:74-170）与输出（障碍满射引理起，derived.tex:325 起）两端。
+（四）figures/proof-flow.tex、bibliography.tex、unicode-map.tex 未读。图 \ref{fig:proof-flow} 我只有引言的一句话描述（记录数值分支汇入同一对角线判据，introduction.tex:218-219）；书目仅按正文 \cite 键名转述，未核。
+（五）叙事层的自认：本笔记第一人称的"心路"（何时放弃哪条弯路、时间长度、草稿纸细节）是为满足研究笔记体裁做的重建，具体年份与时长均 [推测]；论文文本只提供了方法边界（哪些假设不需要），没有提供发现顺序。
+（六）范围诚实：全文约定一切在 $\mathbb C$ 上（introduction.tex:284），我对任意特征零代数闭域的零循环陈述没有主张，与 Guletskii 拟议范围的区别要写明；定理 \ref{thm:bloch} 的积分系数结论依赖 Roitman 定理只在复情形以引用形式给出的单射性。
+（七）结构脆弱点自查：整棵依赖树的根是 `prop:quot-pot`（完美障碍理论存在且态射被指定）与 `prop:universal`（普适系数规则良定义）；前者我读到了完整证明（derived.tex:370-427），后者读到了完整证明（relation.tex:406-537）；两处我最不放心的都恰好是"族上的相容性"，并非"点上的计算"，而我在这两处的重演程度是"逐句读懂、未独立重证"。
+（八）遗留开放问题清单。其一，积分层面的构造缺口：Quot 机器全程在 $\mathbb Q$ 系数虚拟类上工作（derived.tex:12-13 明确"本节所有虚拟类与等变 Chow 群取有理系数"），整系数升级外包给 Roitman；能否让障碍理论本身携带积分信息，我没有任何思路 [推测]。其二，维数壁垒：$\ch_2$ 双插入、EGL 递归、$c_2(T_X)$ 补偿因子全部是曲面现象，同一手法推向三维及以上时，我在 §8 依赖的"$\operatorname{CH}^*_G(X\times X)=\operatorname{CH}^*(X\times X)[t]$"仍然成立，但 §9 的图论三分法里"恰含两个输出的分量贡献 $\Delta_{X*}(\eta)$、其余维数被 $\operatorname{CH}^0$ 卡死"这一机制会被高维剩余维数破坏；这是我对推广困难来源的判断，论文未讨论，标 [推测]。其三，系数 $c$ 的内在含义：§10 给出 $c=-\sum(\alpha H)^2/\alpha^2$、§11 给出 $c=12(s+\tau_X)$，两个表达式都依赖数据选择 $(d,p,n,L_1,L_2)$；不同选择下的 $c$ 是否只差一个普适因子，我没有验证，[推测] 它们一般不同，因为 $c$ 本来就是"某个具体形式的零"展开出来的。其四，与 Guletskii 拟议路线的关系（过对角线的超曲面截面加幂零论证 vs. 我的行列式纤维加次数清零）是否存在转化桥梁，超出我能在此断言的范围 [推测]。
+（九）台账核对说明：§17 每行"位置"栏都是本会话真实 Read 出的 `文件:行`，行号按 build 目录内相对路径给出；凡结论仅来自转述（如 $s>0$ 出自 introduction.tex:194-196 与 rankone.tex:169-171，其原始定义 \eqref{eq:canonical-cycle} 在未读区段）的行，被消费栏里注明"转述"。
+（十）如果重做一遍。顺序上我会先做 §11 的 $K^2=9$ 分支：它不依赖格下降、blowup 设计与枢纽不等式，三拍结构（筛选、借曲面比系数、长度 2 手算）能最快验证"普适系数可跨曲面搬运"这个全篇最冒险的机制；§10 反倒是把同一机制放在更复杂数值地形上跑第二遍。当年我先攻 $K^2\le8$ 是因为平方和检号看起来更初等，这个选择让"借眼睛"想法晚到了好一阵 [推测：时间感来自回忆，论文无此信息]。另一处会改的设计：$p$ 的选取（§10 的 $p=k-2$ 与 §11 的 $p=7$）我当作自由度用来调节次数账；若一开始就把 $h^p$ 解释为"给 $x_1^{m_T}$ 提取配平"，数据表会更容易讲清楚。
+
+## §16 勘误
+
+一，落盘次序。两次追加操作误把中间段落当锚点，造成两处结构错位：（a）§7 至 §9 组整体落在 §5 至 §6 之前（紧跟探针行之后）；（b）§6 最后一段被从首句后切开，§10 至 §11 组插在切口中，该段残尾落在 §11 之后。按规格"禁止删除、回滚、改写、重排任何已落盘内容"，字符未作任何移动或改写；正文逻辑阅读顺序应以小节编号 §0 至 §17 为准，`## ` 标题的物理出现次序与编号不完全同调，交付报告中如实申报。除上述两处外，所有小节内部文字完整连续。
+
+二，探针行。落盘协议要求的探针标记行保留在 §4 结尾与 §7 标题之间，不作为正文内容理解；其字节计入总尺寸。
+
+三，文风自查（只报类别，不复写命中串）。四字过渡套语：正文 §1 有一处已落盘命中，按不可改写规则保留原位，不申报位置细节；其余小节经逐段自查无命中。两字转折连接词：全文零命中。长停顿号：全文零命中，人名连接一律用连字符对，数值区间用短横。五列表表头：全文仅 §17 一处，表头两行逐字，数据行不再重复表头，每行恰好六个竖线，单元格内无裸竖线（限制算子用 \mid、绝对值用 \lvert 与 \rvert、范数用 \lVert 与 \rVert、群阶亦用 \lvert 与 \rvert）。行内公式全部 $...$；独立公式置于成对 $ 之间；前向引用（见 §N）核对过均指向存在的小节；全文 LF 换行；无装饰性加粗列表、无表意符号、无聊天残留、无能力声明；小标题均未复述所在节首句。
+
+四，事实口径补充。§14 转述 Guletskii 与 Banerjee 时沿用论文的"拟议证明"姿态（introduction.tex:106-107），本笔记不对这两篇预印本的正确性作独立判断。
+
+## §17 台账
+
+下表"位置"栏全部为本会话真实读出的 `文件:行`（相对 build 目录）。
+
+| 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+| --- | --- | --- | --- | --- |
+| $0=c[\Delta_X]+\Gamma$ | 目标关系，$c\ne0$ | build/sections/introduction.tex:131 | §8 装配、§7 作用论证 | §12 装配失去唯一起点 |
+| $1\le k_0\le 9$ | 数值区间 | build/sections/reductions.tex:44 | §10 与 §11 的分岔调度 | 两分支不能覆盖全部情形 |
+| $\chi(\mathcal O_{X_0})=1$ | 由 $p_g=q=0$ 得 | build/sections/reductions.tex:45 | §9 普适规则公共假设 | 跨曲面搬运系数失效 |
+| $\int c_2=12-k_0$ | Noether 输出 | build/sections/reductions.tex:46 | §9 数值规则输入 | $c_*$ 与 §11 手算全错 |
+| $b_2=10-k_0$ | Hodge 加对偶 | build/sections/reductions.tex:46 | §10 格符号、§11 的 $b_2=1$ | 找不到 $\alpha$ 或分岔错误 |
+| $\pi_*:\operatorname{CH}_0(\widetilde X)\to\operatorname{CH}_0(X)$ 同构 | 整系数保度 | build/sections/reductions.tex:12 | §7、§10 回传、§12 | blowup 策略整体作废 |
+| $\det Q=D$（Picard 方案中相等） | 约束 | build/sections/derived.tex:32 | §6 枚举有限性、§8 | 定点标签不再有限 |
+| $\int_X\ch_2(Q)=n+L_1D-\frac{D^2}{2}$ | Hilbert 多项式 | build/sections/derived.tex:33 | §10 §11 数据选择 | §6 长度账重做 |
+| $w_1=\frac12,\ w_2=-\frac12$ | $t=\frac12$ 专章值 | build/sections/derived.tex:43 | §8 §9 §10 §11 权重账 | $\mathcal R$ 的符号崩坏 |
+| $E_B^\vee\simeq\operatorname{fib}\{R\!Hom(S',Q)\to R\Gamma(\mathcal I_o)[1]\}$ | 虚拟切类 | build/sections/derived.tex:377 | §5、§6 比较 | 障碍理论无从建立 |
+| $\operatorname{Ext}^1(F,Q_0)\to H^2(\mathcal O_X)$ 满 | 条件 $p_g=0$ 或 $Kc_1(Q_0)>rK^2$ | build/sections/derived.tex:330 | §5 支幅、§11 辅助设置 | 虚拟类不存在 |
+| $v=2n+(A-K)D$ | 虚拟维数 | build/sections/derived.tex:383 | §8 门槛 $v>p+2$ | 次数清零整体失效 |
+| $[B]^{\mathrm{vir}}=\sum_W k_*[W]^{\mathrm{vir}}/\operatorname{e}_G(N_W^{\mathrm{vir}})$ | GP 局部化 | build/sections/derived.tex:596 | §8 §9 展开 | 关系无从产生 |
+| $S'=L(-\mathcal C)\mathcal I_Z$ | 除子乘点分解 | build/sections/fixed.tex:43 | §6 §9、§10 显式对 | 定点结构标签混乱 |
+| $U=\operatorname{Div}^P(X)\times X^{[r]}$ | 表示方案 | build/sections/fixed.tex:51 | §6 维数、§11 计数 | $m_P$ 积分不成立 |
+| $m_P=\frac{P(P-K)}{2}$ | 虚拟除子维数 | build/sections/fixed.tex:14 | §10 §11 的 $m<0$ 筛选 | 筛选集改变 |
+| $n_1+n_2=n-(D-A)H+H^2$ | 长度账 | build/sections/fixed.tex:144 | §10 survivors、§11 的 $a$ 表 | 两分支账目全错 |
+| $\Xi(t)$ 的等变总余维 $=p+4-v$ | 次数审计 | build/sections/relation.tex:44 | §8 起点 | 清零论证不成立 |
+| $t^{p+2-v}$ | 所需伴随幂（负） | build/sections/relation.tex:53 | §8 核心、§11 换序奇偶 | 两处清零同时崩 |
+| $h$ 在定点限制为 $x_1+x_2$ | 非零插入 | build/sections/relation.tex:169 | §5 §8 | 无 $x$ 幂提取 |
+| $\mathcal E(x)=\prod_i\operatorname{e}_{x_i}(((K-D_i)^{[n_i]})^\vee)$ | 固定欧拉因子 | build/sections/relation.tex:94 | §6 §11 配对 | §11 积分作废 |
+| $\mathcal R(x)$（$E_{ij}$ 在分母） | 移动逆欧拉 | build/sections/relation.tex:118 | §10 $\mathcal R(0,0)$、§11 标量比 | 贡献符号错乱 |
+| $\sigma_*(\zeta^2)=-[\Delta_X]$ | 递归种子 | build/sections/relation.tex:332 | §9 对角项来源 | 无 $c[\Delta_X]$ 项 |
+| 对角自交补偿 $c_2(T_X)^{e_C-v_C+1}$ | 图规则 | build/sections/relation.tex:478 | §9 曲面推前 | 分解与 $c_*$ 定义崩塌 |
+| $c_*$ 仅依赖 $\int c_2$ 与 $K,L_1,L_2,T,H$ 两两交 | 普适性 | build/sections/relation.tex:418 | §11 搬运到 $Y$ | 比较引理无效 |
+| $n_1=n_2=0\Rightarrow c_*=0$ | 规则输出 | build/sections/relation.tex:423 | §10 收账、§11 排除 $a=4,5$ | 两队的账目作废 |
+| $0=c[\Delta_X]+\Gamma$ 于 $\operatorname{CH}^2(X\times X)$ | Chow 关系 | build/sections/relation.tex:568 | §12 唯一输入 | 全文中断 |
+| $c\ne0\Rightarrow\operatorname{CH}_0(X)^0\otimes\mathbb Q=0$ | 对应作用 | build/sections/relation.tex:640 | §12 | 消没无落点 |
+| $e=\max\{k_0-5,0\}$ | blowup 数 | build/sections/nonrank.tex:12 | §10 数据设计 | 门槛 $v>p+2$ 失守 |
+| 符号 $(1,b)$，$b=9-k_0$ | 格不变量 | build/sections/nonrank.tex:41 | §10 Serre 分类 | $h_0$ 不存在 |
+| $x^2\equiv K_0x\pmod 2$ | 特征性 | build/sections/nonrank.tex:44 | §10 下降奇偶 | 反射不保特征 |
+| $u'=2u-\ell$ | $b\ge3$ 下降 | build/sections/nonrank.tex:99 | §10 终止性 | 撞不到 $v_i=1$ |
+| $u'=3u-2\ell$ | $b=2$ 下降 | build/sections/nonrank.tex:111 | §10 终止性 | 同上 |
+| $(h')^2=-1$，$Kh'=1$ | blowup 后提升 | build/sections/nonrank.tex:136 | §10 显式有效对 | 平方和可能为空 |
+| $\alpha^2=h_0^2-\frac{a^2}{k_0}<0$ | 负号来源 | build/sections/nonrank.tex:150 | §10 $c$ 表达式方向 | $c$ 由正翻负 |
+| $KP>k$ | 枢纽不等式 | build/sections/nonrank.tex:160 | §10 survivors 引理 | 点长隔离失败 |
+| $(d,p)=(4,0)$ 或 $(3,k-2)$，$n=d(k+1)$，$v=2d$ | 数据表 | build/sections/nonrank.tex:215 | §10 门槛 | 定理条件不满足 |
+| $KH=H^2=k+1$，$m_H=0$，$m_T=p$ | 幸存数值 | build/sections/nonrank.tex:240 | §10 配对化简 | 平方和账作废 |
+| $TH=(d-1)(k+1)$ 为偶 | 奇偶 | build/sections/nonrank.tex:383 | §10 每号 $+1$ | 符号翻转 |
+| $c=-\sum(\alpha H)^2/\alpha^2>0$ | 检号产出 | build/sections/nonrank.tex:399 | §12 前半装配 | $k_0\le8$ 分支无非零系数 |
+| $D=3K$，$n=20$，$p=7$ | 数据 | build/sections/rankone.tex:21 | §11 全局 | 一处改动全部重算 |
+| $v=13>9=p+2$ | 门槛 | build/sections/rankone.tex:48 | §11 关系合法性 | §11 无关系可用 |
+| $G^2=1$，$K\equiv 3G$ | 秩一格 | build/sections/rankone.tex:36 | §11 $a$ 表、$K$ ample | 筛选表不成立 |
+| $n_1+n_2=20-9a+a^2$ | 长度账 | build/sections/rankone.tex:56 | §11 排除 | 排除集错误 |
+| $h^0(3K)=28$，$h^0(2K-\epsilon)=10$ | 有效重数 | build/sections/rankone.tex:93 | §11 重数账 | $c_{\mathrm{out}}$ 系数错 |
+| $c=c_{\mathrm{out}}+\tau_Xc_{\mathrm{mid}}$ | 系数分解 | build/sections/rankone.tex:120 | §11 装配 | 终式 $12(s+\tau_X)$ 不成立 |
+| $K_Y^2=9$，$\int_Yc_2=3$，$q=p_g=1$ | CS 不变量 | build/sections/rankone.tex:135 | §11 辅助设置 | 数值搬运失败 |
+| $\alpha^2=2\int_Y\omega\wedge\bar\omega>0$ | 检测类（转述自其构造） | build/sections/rankone.tex:150 | §11 比较式提取 | 提不出 $c_{\mathrm{out}}-sc_{\mathrm{mid}}=0$ |
+| $c_{\mathrm{out}}=sc_{\mathrm{mid}}$，$s>0$ | 比例（$s$ 之原始定义在未读区，转述） | build/sections/rankone.tex:159 | §11 正性 | $c>0$ 失守 |
+| $c_{\mathrm{mid}}=12$ | 显式值 | build/sections/rankone.tex:211 | §11 | $c$ 的显式值改变 |
+| $I=6\alpha^2$ | 单顺序配对 | build/sections/rankone.tex:389 | §11 半账 | 12 变 6 |
+| $p+2-v=-4$ 为偶 | 参数幂奇偶 | build/sections/rankone.tex:400 | §11 两顺序同值 | 两顺序相消 |
+| $c=12(s+\tau_X)>0$ | 终式 | build/sections/rankone.tex:413 | §12 后半装配 | $K^2=9$ 分支无非零系数 |
+| 挠元经 Roitman 归零（$\operatorname{Alb}=0$） | 整系数升级 | build/sections/conclusion.tex:25 | §12 出口 | 只剩有理结论 |
+| $1-q+p_g>0$ | Noether 推论 | build/sections/conclusion.tex:41 | §12 推论的 $q=0$ | $p_g=0$ 推论不成立 |
+| $h(S)_{\mathbb Q}\simeq\mathbf 1\oplus\mathbb L^{\oplus b_2}\oplus\mathbb L^2$ | Tate 分解 | build/sections/introduction.tex:242 | §13 全部 | 循环类同构无据 |
+（七）结构脆弱点自查：整棵依赖树的根是 `prop:quot-pot`（完美障碍理论存在且态射被指定）与 `prop:universal`（普适系数规则良定义）；前者我读到了完整证明（derived.tex:370-427），后者读到了完整证明（relation.tex:406-537）；两处我最不放心的都恰好是"族上的相容性"，并非"点上的计算"，而我在这两处的重演程度是"逐句读懂、未独立重证"。
+
+## §18 勘误补记（收工前追加）
+
+一，探针行。落盘协议的探针行在完成双测（前 12517 字节、后 12624 字节、增量 107 字节、探针通过）之后，被后续一次追加的锚点匹配范围吞掉，现已不在文件内。规格禁止删除已落盘内容，此为操作失误，如实申报；探针的证据链是两次实测与当时的工具返回，不依赖该行继续存在。§16 第二条关于"探针行保留在 §4 与 §7 之间"的陈述自本补记起作废，以本节为准。
+
+二，§16 第一条的错位清单需补一条第三次错位：追加 §16、§17 时误以 §15 的第（六）条为锚点插入，使第（七）条整段被重复落盘两份，一份在 §15 原位（第 232 行），一份在 §17 台账之后（第 309 行，即本补记锚点所在）。两份文字逐字相同，均未改写；建议阅读时把后一份当作 §15 尾段的物理落盘记录。
+
+三，更正 §16 第三条的自查结论，两处"零命中"经终检不成立，改为（只报类别与计数，不复写命中形态）：两字转折连接词类共 4 处行级命中（第 106、235、232、309 行，其中 232 与 309 源于重复段）；长停顿号类共 18 字符命中、分布于 9 行（第 70、82、90、94、98、102、156、178、202 行）；四字过渡套语类 1 处命中（第 30 行），与 §16 原报一致；五列表表头类维持原报：全文一处表、表头两行、数据 56 行、逐行竖线数恰为 6、单元格无裸竖线、无套反引号的单元格数学。四字对举句型（先否定后转折的成套结构）全文零命中；单纯的否定判断用字两处（第 78、227 行）为独立用法，不构成禁串。
+
+四，格式审计补充：第 243 行的 §16 自检文字为作说明用途含三个字面美元符，这是全文美元符总数为奇数（实测 1863）的唯一单行来源；公式区全部成对，无裸单美元符的公式。全文无整行水平线，无 emoji，无打勾符。
+
+五，落盘复量安排：收工后执行 sleep 90，随后两次 `wc -c` 加一次 `ls -l --time-style=full-iso`；实测数字进交付报告。若字节数回退，将在报告中写"落盘被回滚"，不再改动本稿。

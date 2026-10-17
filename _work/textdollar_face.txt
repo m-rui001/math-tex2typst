@@ -1,0 +1,27 @@
+{"f":"D101-欧氏平面不可五色：刚性-谱-调色板三段论证的反推笔记.md","li":120,"kind":"NO-SPAN","frag":"\\text{a proper $k$-coloring of $\\R^2$ exists}"}
+{"f":"D101-欧氏平面不可五色：刚性-谱-调色板三段论证的反推笔记.md","li":122,"kind":"NO-SPAN","frag":"\\text{a weak measurable $k$-coloring of $\\R^2$ exists}"}
+{"f":"D114-二对一博弈的完美完全性：采样与双侧解码归约的反推笔记.md","li":295,"kind":"NO-SPAN","frag":"\\text{$M$ lies in a good row fiber for some $A$}"}
+{"f":"D114-二对一博弈的完美完全性：采样与双侧解码归约的反推笔记.md","li":302,"kind":"NO-SPAN","frag":"\\text{the fiber of $AM$ for $A$ is good}"}
+{"f":"D121-分拆原理不蕴含选择公理：对称模型的支撑下降与可定义性刻画反推笔记.md","li":247,"kind":"NO-SPAN","frag":"\\text{every nonwellorderable surjective image of $A$ is in bijection with $A$.}"}
+{"f":"D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md","li":100,"kind":"NO-SPAN","frag":"\\text{for $\\mu$-almost every $x$}"}
+{"f":"D139-单格覆盖的n对数n阶界：采样器层级与电路和的反推笔记.md","li":352,"kind":"INLINE","res":"Unexpected end of input in a macro argument, e","pos":null,"body":"\"4^D\\\\cdot(\\\\text{\"","leak":"(body 里没有 $)","frag":"\"\\\\text{$s$ 的固定幂}\""}
+{"f":"D143-关系代数与树周游：单向活性指数下界的反推笔记.md","li":303,"kind":"NO-SPAN","frag":"\\text{$a$ does not pair left $i$ with right $i$}"}
+{"f":"D163-四次多项式无平方因子值的数域行列式路线与自适应辅助素数.md","li":189,"kind":"INLINE","res":"Unexpected end of input in a macro argument, e","pos":null,"body":"\"S_{f,k}(X)=\\\\#\\\\{1\\\\le n\\\\le X:f(n)\\\\text{ 是 $k\"","leak":"\"$k\"","frag":"\"\\\\text{ 是 $k$-power-free}\""}
+{"f":"D188-五次型Gepner稳定条件构造手记.md","li":318,"kind":"DISPLAY","res":"RENDERS","pos":null,"body":"\"\\n \\\\begin{aligned}\\n &\\\\text{非零对象称为 high}\\\\iff p_b=0\\\\ \\\\text{或}\\\\ N","leak":"\"$E$ 在 }\\\\mathcal B_b\\\\text{ 中每个非零商都是 high}\\\\},\\\\\\\\\\n &\\\\mathcal F_b^\\\\eta=\\\\{E:\\\\text{$E$ 在 }\\\\mathcal B_b\\\\text{ 中每个非零子对象都是 low}\\\\}.\\n \\\\end{aligned}\\n\"","frag":"\"\\\\text{$E$ 在 }\""}
+{"f":"D188-五次型Gepner稳定条件构造手记.md","li":319,"kind":"DISPLAY","res":"RENDERS","pos":null,"body":"\"\\n \\\\begin{aligned}\\n &\\\\text{非零对象称为 high}\\\\iff p_b=0\\\\ \\\\text{或}\\\\ N","leak":"\"$E$ 在 }\\\\mathcal B_b\\\\text{ 中每个非零商都是 high}\\\\},\\\\\\\\\\n &\\\\mathcal F_b^\\\\eta=\\\\{E:\\\\text{$E$ 在 }\\\\mathcal B_b\\\\text{ 中每个非零子对象都是 low}\\\\}.\\n \\\\end{aligned}\\n\"","frag":"\"\\\\text{$E$ 在 }\""}
+{"f":"D30-负pinched三维Kähler流形无有界全纯坐标.md","li":93,"kind":"INLINE","res":"Unexpected end of input in a macro argument, e","pos":null,"body":"\"\\\\neg\\\\exists F\\\\,(\\\\text{\"","leak":"(body 里没有 $)","frag":"\"\\\\text{$F$ 有界全纯}\""}
+{"f":"D337-高度二上Hahn--Wilson猜想的fp型反例.md","li":20,"kind":"DISPLAY","res":"RENDERS","pos":null,"body":"\"\\n\\\\{X:\\\\text{$X$ 的 fp 型 }\\\\le n\\\\}=\\\\operatorname{Thick}(\\\\mathrm{BP","leak":"\"$X$ 的 fp 型 }\\\\le n\\\\}=\\\\operatorname{Thick}(\\\\mathrm{BP}\\\\langle n\\\\rangle_p^\\\\wedge).\\n\"","frag":"\"\\\\text{$X$ 的 fp 型 }\""}
+{"f":"D396-复配中的过滤乘积与保边界压缩.md","li":115,"kind":"INLINE","res":"Unexpected end of input in a macro argument, e","pos":null,"body":"\"Q_s(t,N)=\\\\{y\\\\in C(t,N):\\\\text{至少 $s\"","leak":"\"$s\"","frag":"\"\\\\text{至少 $s$ 个槽在 }\""}
+{"f":"D41-敏感度与块敏感度的超二次分离.md","li":341,"kind":"DISPLAY","res":"RENDERS","pos":null,"body":"\"\\\\text{$\\\\mathcal G$ 贡献}\\\\le S'_1+3J'_1,\"","leak":"\"$\\\\mathcal G$ 贡献}\\\\le S'_1+3J'_1,\"","frag":"\"\\\\text{$\\\\mathcal G$ 贡献}\""}
+{"f":"D42-无挠群代数含零因子.md","li":844,"kind":"NO-SPAN","frag":"\\text{$U$ an integer}"}
+{"f":"D44-小finitistic维数无穷的代数.md","li":40,"kind":"DISPLAY","res":"RENDERS","pos":null,"body":"\"\\\\exists A\\\\,\\\\forall m\\\\ge1\\\\,\\\\exists N_m:\\\\ \\\\text{$N_m$ 有限生成}\\\\we","leak":"\"$N_m$ 有限生成}\\\\wedge\\\\ 2m-2\\\\le \\\\operatorname{pd}_A N_m<\\\\infty .\"","frag":"\"\\\\text{$N_m$ 有限生成}\""}
+{"f":"D56-depth-three布尔电路的平方根指数下界.md","li":664,"kind":"NO-SPAN","frag":"\\text{active added size-$u$ clauses containing this literal}"}
+{"f":"D56-depth-three布尔电路的平方根指数下界.md","li":683,"kind":"NO-SPAN","frag":"\\text{branch-$1$ steps processing size }"}
+{"f":"D57-两个拟阵公共基的近似计数.md","li":74,"kind":"INLINE","res":"Unexpected end of input in a macro argument, e","pos":null,"body":"\"\\\\sum_{S} f_q(S)\\\\cdot \\\\mathbf 1[\\\\text{\"","leak":"(body 里没有 $)","frag":"\"\\\\text{$S$ 是 transversal}\""}
+{"f":"D582-量子海森堡铁磁体的低温自发磁化.md","li":102,"kind":"INLINE","res":"Unexpected end of input in a macro argument, e","pos":null,"body":"\"\\\\mathbb P_P(\\\\text{\"","leak":"(body 里没有 $)","frag":"\"\\\\text{$i$ 之后下一钉在 $T$}\""}
+{"f":"D61-choiceless带计数P时间不含P时间.md","li":305,"kind":"NO-SPAN","frag":"\\text{for the two edges $e,e'$ of each face $f\\in F(v)$ at $v$}"}
+{"f":"D64-装箱问题的加性难度与无界配置间隙.md","li":389,"kind":"NO-SPAN","frag":"\\text{for every root-to-leaf path $\\pi$ in $T^\\sigma$}"}
+{"f":"D708-正特征下一致非交换矩阵击中点.md","li":282,"kind":"NO-SPAN","frag":"\\text{$h_f\\bmod z^N$ 的系数列}"}
+{"f":"D750-三维量子Heisenberg铁磁体磁化的第一格点修正.md","li":533,"kind":"INLINE","res":"Unexpected end of input in a macro argument, e","pos":null,"body":"\"r=\\\\sum_{n\\\\ge1}(\\\\text{\"","leak":"(body 里没有 $)","frag":"\"\\\\text{$n$ 圈的返回贡献}\""}
+{"f":"D81-Foulkes-Howe规范映射的二次稳定门槛.md","li":390,"kind":"NO-SPAN","frag":"\\text{for every product $P$ of $b$ vectors}"}
+sites=26  RENDERS(静默)=5  拒渲=21  不在跨度=0

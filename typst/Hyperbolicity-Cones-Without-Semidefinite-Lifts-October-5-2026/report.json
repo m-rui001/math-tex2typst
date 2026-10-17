@@ -1,0 +1,28 @@
+{
+  "paper": "Hyperbolicity-Cones-Without-Semidefinite-Lifts-October-5-2026",
+  "ok": true,
+  "typ_lines": 1107,
+  "included_pdf_pages": 0,
+  "formulas": 830,
+  "math_failed": 0,
+  "labels": 98,
+  "equations": 15,
+  "theorems": 0,
+  "figures": 0,
+  "tables": 4,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "830"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Hyperbolicity-Cones-Without-Semidefinite-Lifts-October-5-2026.tex"
+}

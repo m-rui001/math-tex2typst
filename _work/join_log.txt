@@ -1,0 +1,297 @@
+E:/math/研究笔记\D09-MaxCut最优NP难度.md	282	lem:restriction（decoding.tex:186-207）的前提写明"$\widetilde Q_{g0}+\widetilde Q_{g1}	 =\widetilde Q_{h0}+\widetilde Q_{h1}$ for all $g,h\in[s]$"（公共对和性质），结论 eq:restriction-mass。prop:decoding（decoding.tex:240-248）：
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	458	$\int u_w^3/6=\frac1{48}\int(w^2-y^2)^3=\frac1{48}(2w^7-3\cdot\frac{2w^7}{3}+3\cdot\frac{2w^7}{5}-\frac{2w^7}{7})	=\frac{2w^7}{105}$。除以 $2w$（变分公式的系数）得 $\delta M$ 列 $w^2/3,w^4/15,w^6/105$；
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	1042	与 $(\mathcal DP)_r$ 连起来：$\mathcal DR=(\mathcal DP)_r+\alpha_rP_r=(\gamma P-1)_r+\alpha_rR	=\gamma_rP+\gamma R-P_r\cdot0+\alpha_rR$，$P_r=R$，故 $\mathcal DR=(\gamma+\alpha_r)R+\gamma_rP$，
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	1044	正是 model.tex:89。类似地 $\mathcal DS=(\mathcal DQ)_r+\alpha_rQ_r=(\gamma Q-P)_r+\alpha_rS	=\gamma_rQ+\gamma S-R+\alpha_rS$，即 model.tex:90。再对 $R,S$ 各用一次交换子（此时 $\alpha_r$
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	1101	$\mathcal W=RS_r-SR_r=\frac{2r}3\cdot\frac{4r^2}5-\frac{4r^3}{15}\cdot\frac23	=\frac{8r^3}{15}-\frac{8r^3}{45}=\frac{24-8}{45}r^3=\frac{16}{45}r^3$，与 model.tex:126 吻合。
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	1161	右端 $=\frac{r(\ell-1)/(\ell+1)+(n-m)/2}{(r-H)(r+H)}=\frac{(m+n)(\ell-1)+(n-m)(\ell+1)}{2mn(\ell+1)}	=\frac{2n\ell-2m}{2mn(\ell+1)}=\frac{\ell/m-1/n}{1+\ell}$。
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	1176	model.tex:252-258 给了两个样本导数 $\frac{d}{dm}\log\frac{\ell(m+n)}{(1+\ell)^2}	=\frac{1-\ell}{1+\ell}w+\frac{1+\ell}{m+n}$ 与 $(\frac1{mn})_m=-\frac{n+m\ell}{m^2n^2}$。
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	1183	故 $X_rZ_{rr}-Z_rX_{rr}=\kappa R(dR_r+3\kappa S_r)-(dR+3\kappa S)\kappa R_r=3\kappa^2(RS_r-SR_r)	=3\kappa^2\mathcal W$；链式法则 $X_r=X_mm_m$ 等给出 $X_rZ_{rr}-Z_rX_{rr}=m_r^3(X_mZ_{mm}-Z_mX_{mm})$
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	1197	于是解出 $\beta_m+\rho\beta=-\frac{\beta(1+\ell)}{m+n}$ 与 $\rho B=\frac{2\ell}{n^3}-\frac2{m^3}	+\beta(\frac1{m^2}+\frac\ell{n^2}+\frac{1+\ell}{mn})$（model.tex:326-334）。
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	1541	第一分量 $\frac{45}2\cdot(\frac4{15}\cdot\frac1{105}-\frac1{15}\cdot\frac6{105})	=\frac{45}2\cdot\frac{4-6}{1575}=\frac{45}2\cdot(-\frac2{1575})=-\frac1{35}$；
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	1543	第二分量 $\frac{45}2\cdot(-\frac23\cdot\frac1{105}+\frac13\cdot\frac6{105})	=\frac{45}2\cdot\frac{-2+6}{315}=\frac{45}2\cdot\frac4{315}=\frac27$。与 transport.tex:62-64 吻合，
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	1656	$\frac{d}{du}\frac{k-d}u=\frac{uk'-（k-d)}{u^2}$，故 $-t^2\cdot\frac{tk'-k+d}{t^2}=-(tk'-k+d)	=k-t\phi''-d$（$k'=\phi''$）。
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	1660	$k(u)>d+u\kappa=\lambda+(u-h)\kappa$（transport.tex:329-335，注意 $\lambda+(u-h)\kappa	=d+h\kappa+(u-h)\kappa=d+u\kappa$ 是 $I=0$ 的直接推论）；
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	2062	一次回路能量差 $\frac{P^2-s^2}2=\int_0^\tau\dot E\,dt=-\varepsilon\int_0^\tau xf(x)dt	=:\varepsilon Q$，这给出"精确的能量商"：$Q$ 本身关于 $(s,\varepsilon)$ 光滑
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	2071	代入 $\alpha=4,\beta=-\frac{20}3,\gamma=\frac85$：$4\pi s^2-5\pi s^4+\pi s^6=\pi s^2(4-5s^2+s^4)	=\pi s^2(s^2-1)(s^2-4)$。取负号即 $Q(s,0)$。$4-5s^2+s^4=(s^2-1)(s^2-4)$ 的根 $s=1,2$
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	2301	=\tfrac{\pi}{8}$；$\int_0^{2\pi}\cos^2\sin^2=2B(\tfrac32,\tfrac32)=2\cdot\tfrac{(\sqrt\pi/2)^2}{2}	=\tfrac{\pi}{4}$；$\int_0^{2\pi}\sin^2=\pi$。代回：
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	2321	$f(x)=x^4-10x^2+5$，$x=\sqrt5 u$ 给 $\mu f(\sqrt5u)=\tfrac1{10}(25u^4-50u^2+5)	=\tfrac12(5u^4-10u^2+1)$，且 $F'(x)=f(x)$ 在换元后 damping 系数正是这个式子，
+E:/math/研究笔记\D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	195	$\gamma=\sigma+1/2$ 代入 $L^{\cl}_{\gamma,1}$：$\Gamma(\gamma+1)/(2\sqrt\pi\Gamma(\gamma+3/2))	=\Gamma(\sigma+3/2)/(2\sqrt\pi\Gamma(\sigma+2))$，乘 $2(\sigma/(1+\sigma))^\sigma$ 与第一步相同 ✓。
+E:/math/研究笔记\D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	221	故最大值 $=W^{1+\sigma}(q^{-\sigma}-q^{-1-\sigma})=W^{p}q^{-\sigma}(1-1/q)=W^{p}(\sigma/(1+\sigma))^\sigma	\cdot1/(1+\sigma)=A_\sigma W^p$ ✓，逐项对上 `spectral.tex:12` 的 $A_\sigma$。
+E:/math/研究笔记\D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	401	我把平方求和那一步写全：$\|h(A)-h(B)\|_{\HS}^2=\sum_{ij}(h(\lambda_i)-h(\nu_j))^2|\langle v_i,w_j\rangle|^2	\le L^2\sum_{ij}(\lambda_i-\nu_j)^2|\langle v_i,w_j\rangle|^2=L^2\|A-B\|_{\HS}^2$ ✓。
+E:/math/研究笔记\D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	421	于是 $|h_s'(t)|=|f'(s^2+t)-f'(s^2)|\le\sup_{|u|\le A|s|}|f''(s^2+u)|\cdot|t|	\asymp(s^2-2A|s|)^{\beta-2}\cdot A|s|\asymp|s|^{2\beta-4}\cdot|s|=O(|s|^{2\beta-3})$，
+E:/math/研究笔记\D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	490	第一式的推导我在第 5 节已备好：$\mu'(z)=c\int_{\R}(s^2+z+\delta)^{\beta-1}ds	=\sigma(z+\delta)^{\beta-1/2}=\sigma(z+\delta)^{\sigma-1}$（`matrix-field.tex:164-168` 逐字如此），
+E:/math/研究笔记\D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	582	换元 $v=(y+\delta)t$ 得 $c_\beta(y+\delta)^{\beta-1}\int_0^\infty t^\beta/(1+t)^2dt	=c_\beta c_\beta^{-1}(y+\delta)^{\beta-1}=(y+\delta)^{\beta-1}=f'(y)$ ✓（`rank-one.tex:50-53`），
+E:/math/研究笔记\D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	627	代回 $e^{\mathsf T}X_s(B)e=e^{\mathsf T}K^2e-2s\,e^{\mathsf T}Be+s^2=(s-e^{\mathsf T}Be)^2	+\bigl(e^{\mathsf T}K^2e-(e^{\mathsf T}Be)^2\bigr)\ge0$ ✓。注意配方那一步正是第 4 节
+E:/math/研究笔记\D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	776	$E=\operatorname{tr}(f(A_2)D)-\operatorname{tr}(f(A_2)U^{*}DU)-\operatorname{tr}(f(A_2)(UDU^{*}-D))	=\operatorname{tr}\bigl(f(A_2)(2D-UDU^{*}-U^{*}DU)\bigr)$ ✓，$A_2=X_s(B)$ 即 \eqref{eq:trace-fixed-s}。
+E:/math/研究笔记\D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	854	两解之差满足 $\varepsilon\|\delta B(x)\|\le\varepsilon^{-1}L_{\widehat M}\int\|\delta B\|	+\varepsilon^{-1}\|\delta C\|\cdot(\text{含 }u\text{ 的项})$，Gronwall 给
+E:/math/研究笔记\D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	875	紧界（`connecting-path.tex:176-180`）就是取迹：$\|C\|_{\HS}^2=\operatorname{tr}(CC^{\mathsf T})	\le2\varepsilon\operatorname{tr}K+\ell\sup_B|\operatorname{tr}\widehat M(B)|$ ✓（用了 $\theta\le1$），
+E:/math/研究笔记\D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	1163	$\overline I$ 上连续（取连续代表元）给出 $a=Cu$ 的一致界（$|Cu(x)|\le\|C\|_{\mathrm{op}}|u(x)|	\le\|C\|_{\HS}\sup|u|$）。两者合起来就是第 15 节里的 $\mathcal K$。而 $B'$ 的量级是
+E:/math/研究笔记\D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	1235	前两项在 $\mathcal K$ 上被同一个 $C$ 界住（$|a|^{2q}$ 有界、$|a^{\mathsf T}(K^2-B^2)a|\le	(|a|^2\kappa^2+|a|^2\|B\|^2)$ 有界），故 $\varepsilon_n^{-1}\|M(B_n)-a_na_n^{\mathsf T}\|_{\HS}^2\le C$，
+E:/math/研究笔记\D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	1335	我补 Young 的参数选取：$\int W|v|^2\le\lVert W\rVert_p\lVert v\rVert_{2p'}^2	\le 2^{1/p}\lVert W\rVert_p\lVert v'\rVert_2^{1/p}\lVert v\rVert_2^{2-1/p}$。写成
+E:/math/研究笔记\D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	1351	$\lVert(\sqrt W-\sqrt{W_n})v\rVert_2^2\le\lVert W-W_n\rVert_p\lVert v\rVert_{2p'}^2	\le C_p\lVert W-W_n\rVert_p\lVert v\rVert_{H^1}^2$ ✓，第一用 $(\sqrt a-\sqrt b)^2\le|a-b|$，
+E:/math/研究笔记\D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	1399	左边正是 $\int|a'|^2+a^{\mathsf T}K^2a$ ✓，故 $\mathcal E_K(a)=\int|a'|^2+a^{\mathsf T}K^2a-\int m^q	\le\int(Wm-m^q)$ ✓；第二式是第 3 节验算过的逐点极大化。然后套 Theorem 2.1 得
+E:/math/研究笔记\D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	1448	（把 $(I+F)^{-1}(\Lambda+E)=\Lambda+E+(\text{含 }F\text{ 的项})$ 展开，$\lVert F(\Lambda+E)\rVert	\le g_R(\lVert\Lambda\rVert+e_R)$，我核对过这一步的合并与论文写法一致）✓。
+E:/math/研究笔记\D116-有限因子的生成子问题：相对生成与扰动独立性的反推笔记.md	980	补第一与第三：$\lVert C_d\rVert_2=\lVert\Phi(\mathcal C_d)\rVert_2=(\sum_w|\mathcal C_d(w)|^2)^{1/2}	\le(\sum_w|A^d(w)|^2)^{1/2}=\lVert A^d\rVert_{\ell^2}$ ✓；
+E:/math/研究笔记\D116-有限因子的生成子问题：相对生成与扰动独立性的反推笔记.md	1332	补：Lipschitz 那条来自 $|f_\xi(u)-f_\eta(u)|=|\lVert e_u\xi\rVert_2-\lVert e_u\eta\rVert_2|	\le\lVert e_u(\xi-\eta)\rVert_2\le\lVert\xi-\eta\rVert_2$（反向三角 + 投影的收缩性）。
+E:/math/研究笔记\D116-有限因子的生成子问题：相对生成与扰动独立性的反推笔记.md	1563	$d_mq_m=\begin{pmatrix}1&0\\0&0\end{pmatrix}\cdot\frac12\begin{pmatrix}1&1\\1&1\end{pmatrix}	=\frac12\begin{pmatrix}1&1\\0&0\end{pmatrix}$，
+E:/math/研究笔记\D116-有限因子的生成子问题：相对生成与扰动独立性的反推笔记.md	1623	反向 $\lVert\varphi\rVert=\sup_{a\in P,\lVert a\rVert\le1}\lvert\varphi(a)\rVert	=\sup\lvert\varphi(E_Pa)\rvert\le\lVert\Phi(\varphi)\rVert$（$P$ 含单位且 $E_P$ 在 $P$ 上为恒等）✓。
+E:/math/研究笔记\D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md	740	故 $\E_{\rm cuts}p_i\le(1120k^2/\rho_h)\E\lvert X_i-m_i\rvert	\le(1120k^2/\rho_h)\E\lvert X_i-X_i'\rvert$，末步是 Jensen，$X_i'$ 是同格独立副本。
+E:/math/研究笔记\D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md	750	在 $x$ 处的子测度质量 $\sum_{y:\,2^{-\ell}\le\lvert x-y\rvert<2^{1-\ell}}\pi_h(x,y)	\le\nu(\{x\})$，总权重等于该带在 $\pi_h$ 下的质量，因此化为
+E:/math/研究笔记\D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md	837	$C_k\E[\mathbf1_{E_n}\sum_{\ell\ge a_n}c_\ell(\nu_{\omega,n})]	\ge k\varepsilon n-nm^b\log(k+1)\ge k\varepsilon n/2$。
+E:/math/研究笔记\D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md	875	$\log|kS|\le nm^b\log(k+1)$ 时若改用 $\lvert k\mathcal D_b\rvert\le\binom{k+m^b-1}{m^b-1}	\le(k+1)^{m^b}$ 的更精细版本，结论不变，只是常数略好；
+E:/math/研究笔记\D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md	877	$\log|kS|\le nm^b\log(k+1)$ 时若改用 $\lvert k\mathcal D_b\rvert\le\binom{k+m^b-1}{m^b-1}	\le(k+1)^{m^b}$ 的更精细版本，结论不变，只是常数略好；
+E:/math/研究笔记\D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md	935	$\gamma>0$ 的验算是全节的枢纽：$\gamma=bh-m\log(b+1)-db\alpha	=b(h-d\alpha)-m\log(b+1)>0$，正是上一条不等式的重写。
+E:/math/研究笔记\D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md	1082	$\E[\Delta_v(\tau_{j+n})\mid\mathcal F_{j+n}]\ge\Delta_v(\mathsf D_{R_{j+n}}\mu)	=\Delta_{v/\lvert R_{j+n}\rvert}(\mu)\ge\delta$。
+E:/math/研究笔记\D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md	1086	求和得 $\E[g_j-g_{j+n}\mid\mathcal F_{j+n}]	\ge(\delta-5/M)c_\ell\ge(\delta/2)c_\ell$。
+E:/math/研究笔记\D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md	1183	$\lceil\sigma_{j+n_i}\rceil-\lceil\sigma_j\rceil	\le\sigma_{j+n_i}-\sigma_j+1\le A'n_i+1$，故
+E:/math/研究笔记\D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md	1268	$\sum_{u\in\Lambda^n}(\operatorname{diam}\varphi_u(K_\Phi))^a	=(\operatorname{diam}K_\Phi)^a(\sum_i\lvert r_i\rvert^{a})^n\to0$。
+E:/math/研究笔记\D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md	419	"$\Psi\Phi(u)=t f(u)t^{-1}=u$"，$\Phi(u)=a(u)$，$\Psi(a(u))=t\,b(a(u))\,t^{-1}	=t f(u)t^{-1}=u$，用到 $ba=f$；$\Phi\Psi(p)=s\,a(b(p))\,s^{-1}=s\,g(p)\,s^{-1}=p$，
+E:/math/研究笔记\D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md	422	$g$ 的共轭关系，没有哪一侧可以省。最后是有限呈现：给定 $P=\langle y_1,\ldots,y_r	\mid R_1,\ldots,R_m\rangle$ 与每个 $y_i$ 在 $g$ 下的像的字 $w_i$，
+E:/math/研究笔记\D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md	477	是链映射：$\partial F'+F'\partial=\partial F+F\partial-\partial H\partial-H\partial\partial	=F^2-F^2=0$（用 $\partial F=F\partial$ 与 $\partial^2=0$）。逐次数验证
+E:/math/研究笔记\D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md	496	$\partial((-1)^pF'a\otimes Hb)=(-1)^p\partial F'a\otimes Hb+(-1)^p(-1)^{p'}	F'a\otimes\partial Hb$。用 $F-F'=\partial H+H\partial$ 与 $F',F$ 为链映射，
+E:/math/研究笔记\D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md	567	$\partial(F(a)-H_{q-1}\partial a)=F\partial a-\partial H_{q-1}\partial a	=(\partial H_{q-2}+F_{q-1}-c_{q-1})\partial a=F_{q-1}\partial a-c_{q-1}\partial a$，
+E:/math/研究笔记\D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md	633	$M\otimes_R R^{k}\cong M^{k}$ 用到张量与有限直和交换，而 $M^{k}=(R^{\mathcal I})^{k}	\cong (R^{k})^{\mathcal I}=C^{\mathcal I}$ 用有限指数集的乘积与积可换。这里没有任何
+E:/math/研究笔记\D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md	708	$\iota_i(u)\mapsto\iota_{i+1}(u)$ 与 $\iota_i(u)=\iota_{i+1}(f(u))\mapsto\iota_{i+2}(f(u))	=\iota_{i+1}(u)$ 一致。逆映射 $\tau(\iota_i(u))=\iota_i(f(u))$ 我按同样方式验过：
+E:/math/研究笔记\D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md	723	$E(ju\otimes c)=jut\otimes f_*c=jtf(u)\otimes f_*c=jt\otimes f(u)f_*c=jt\otimes f_*(uc)	=E(j\otimes uc)$，用到 $f_*$ 与左平移相容。锥复形的正合性用两次数：
+E:/math/研究笔记\D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md	1057	$\mathsf{PresentedGroup}\ (\mathsf{Set.range}\ (\lambda n\mapsto	\mathsf{FreeGroup.mk}\ (r\ n)))\to^{\ast}K$，
+E:/math/研究笔记\D179-先把电荷折成能量亏损-带电时空Penrose约化的反推笔记.md	231	$\operatorname{sym}\nabla X=-uK,\qquad	\nabla^2u=B(u,X,\nabla X)+\frac c2\int\nu^\flat\otimes\nu^\flat\,\dd A\,\dd\pi.$
+E:/math/研究笔记\D185-Wall-D2问题反例-循环塔与四行扭曲边界矩阵.md	192	$\C_\rho$，$v\cdot g=\rho(g)v$，并给出 $C_*(T;L)=\C_\rho\otimes_{\Z[\pi_1(T)]}	C_*(\widetilde T;\Z)$；第 27 行补了一句"因此胞腔链有有限支撑，即使 $T$ 本身无限"。
+E:/math/研究笔记\D191-把生成量与存储量拆开算-最坏情况子集和的低空间算法.md	440	过滤的层级我最后写成两层。对每个 $i$ 定义 $\ell_i=\lfloor L_i\rfloor	=\max\{\lfloor s-\tau\rfloor,\lfloor(\log N_i)/2\rfloor\}$（程序用位长算，第 249--255 行），
+E:/math/研究笔记\D191-把生成量与存储量拆开算-最坏情况子集和的低空间算法.md	509	工作量的指数是那个精确熵界。$\operatorname E t_i\le	11\binom{g-c}{e-c}/\binom{g/2}{e-c}$，取对数后是 $gE(k)+O(\log n)$，
+E:/math/研究笔记\D216-线性次高斯与维度无关对数Sobolev不等式的反证路线.md	192	合起来得 $\limsup_j\varepsilon_j^{-2}\Ent(f_j^{2})\le2\lVert h\rVert_2^{2}+2s(1-\lVert Dh\rVert_2^{2})	\le2\max(P,s)<2R$，与极大性矛盾（`03-critical.tex:296-302`）。
+E:/math/研究笔记\D218-严格椭圆方向零一律的反向重构笔记.md	224	Paley--Zhigulinskii 味道的那一段在 `03-radius.tex:186-201`：$Z=\sum_{i=i_0}^{N}	\1_{\mathcal R_{i-1}}\1_{G_i}$，$G_i=\{R_i>Bai,\ L_i\le i\}$。各项不独立，但被独立的
+E:/math/研究笔记\D218-严格椭圆方向零一律的反向重构笔记.md	709	"$\EE_{\mathbf Q_N}\lvert E\rVert$"，定界符左右不配对，正确写法应是	$\EE_{\mathbf Q_N}\lvert E\rvert$；同一行后面的 $\lVert e\rVert$ 用法是对的。五，第 5 节
+E:/math/研究笔记\D224-一个无固定价格群的反例日记.md	157	想写成 $\operatorname{Cost}(\mathcal R_{\Gamma\curvearrowright X})\le	\operatorname{Cost}(\mathcal R_{\Gamma\curvearrowright Y_M})$ 之类，好把 $Y_M$ 的小成本传回 $X$。
+E:/math/研究笔记\D224-一个无固定价格群的反例日记.md	161	我又试图用 $M$ 重标度，写出 $\operatorname{Cost}(\mathcal R_{\Gamma\curvearrowright Y_M})\le M\,	\operatorname{Cost}(\mathcal R_{\Gamma\curvearrowright X})$ 这种粗界，量级 $M$ 完全淹没了我想要的
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	243	与 $\mathsf E=\bigotimes_x((e^\kappa-1)I_m+\mathbf 1\mathbf 1^T)	\succeq\lambda I$，其中 $\lambda=(e^\kappa-1)^n$，再用 Schur 乘积保半
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	285	$\lVert B\rVert_{\mathrm{op}}^4\le\sum_r s_r^4	=\E_{x^0,x^1,y^0,y^1}\prod B$，把 $\Omega=\{0,1\}^2$ 每个角度的拷贝图
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	300	$\lvert\mathcal Z_{\math P}((g_v))\rvert\le\prod_v	Z_{\mathcal P}(g_v)^{1/d}$。证明的第一层：乘积律 $\mu_{\mathcal P}$ 在
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	305	Cauchy-Schwarz：$\lvert\Lambda(a)\rvert^2\le	\Lambda(a\circ\phi_+)\Lambda(a\circ\phi_-)$，两个折叠值非负
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	336	$\lVert\E_B g\rVert_{\mathcal P\setminus B}	=\lVert\E_B g\rVert_{\mathcal P}\le\lVert g\rVert_{\mathcal P}$
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	348	$R^{-\gamma}\lVert g_v\rVert_2\prod_{w\ne v}	\lVert g_w\rVert_{2(d-1)}$，常数恰为 1。证明架构我读得很慢，因为它把
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	390	分布是混合 $(1-\eta_p)\mathrm{Unif}(\Omega_p)	+\eta_p\mathrm{Unif}(\F_p^2)$（tuples.tex:680-687）。算术前进一步：
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	403	$\sum_{U\supseteq B}\E(\lvert f_U\rvert^2\mid z_B)	\le4M^24^{\lvert B\rvert}$。系数显式：对 $B$ 上全体特征求和使每个
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	430	$\lVert\mathcal L^{\mathcal F}f\rVert_{2r}	\le2M(k+1)A_r^k$，$A_r=2eK_{2r}\,2^{(r+3)/4}$。
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	461	$D\bigl\lvert\sum_{\xi}\mathfrak g(\xi)	\widehat F(-\xi)\widehat J(\xi)\bigrvert\ll H^{-1/3}$，
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	464	$\mathfrak g(\xi)=\varphi(q)^{-1}\sum_{m\in(\Z/q)^\times}	e(\xi m^2)$ 是归一化单位 Gauss 和（kernel.tex:21-28）。
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	468	$k_0(n)=\frac DN\mathbf 1_{1\le n\le N}	\mathbf 1_{n\equiv r(D)}\sum_{\xi\in\Xi}\mathfrak g(\xi)e(-\xi n)$
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	471	$k(n)=\sum_{m\le\sqrt N}\mathbf 1_{n=m^2}\frac{2m}N	\rho_D(m)\sum_{u\le H}\mu^2(u)(-1)^{\omega(u)}w_u(m)$
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	475	$w_p(m)=\frac{p\mathbf 1_{p\mid m}-1}{p-1}	=\frac1{p-1}\sum_{j=1}^{p-1}e(jm/p)$，完全筛恒等式
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	477	$\sum_{u\mid\mathrm{rad}(q)}(-1)^{\omega(u)}w_u	=\prod_{p\mid q}(1-w_p)=\frac q{\varphi(q)}\mathbf 1_{(m,q)=1}$
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	486	$\lvert\sum_{m\le L}e(\alpha m^2+\theta m)\rvert^2	\ll M+\sum_{j\le M}\min(M,\lVert2\alpha j\rVert^{-1})$，线性 twist
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	488	均匀；按 $\lfloor q/4\rfloor$ 分块，块内两点圈距 $\ge1/(2q)$（$2ah\not	\equiv0$ 即使 $q$ 偶也成立），块贡献 $O(M+q\log2q)$，合计
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	493	$\le D'H\le DH$，故小弧 $\lvert S\rvert\ll	DHN^{-1/20}\sqrt{\log N}$；模型核所有中心分母 $\le DH\le N^{3\beta/2}$
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	504	大弧上两边都归约到中心系数：$S_0(\alpha)=c_0(\alpha_0)V_N(y)	+O(qD^2H^3/N)$，$S(\alpha)=c(\alpha_0)V_N(y)
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	522	为零，需纯上界：素数幂 Gauss 和 $|G_j(a)|^2=p^{-j}$（同一 $(m,n)\mapsto	(m-n,m+n)$ 双射）、加权版本 $|B_j|\le2p^{-j/2}$（$j=1$ 单独核比
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	525	$\lvert c(\alpha_0)\rvert\le3^{\omega(q_1)}q_1^{-1/2}\ll q_1^{-1/3}	\le H^{-1/3}$，显式常数可用 $p<729$ 的有限乘积
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	528	$\mathcal B_h(F,J)=N^{-1}\int S_h(\alpha)	\widetilde F(-\alpha)\widetilde J(\alpha)d\alpha$（无共轭！展开时由
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	558	$Z_{\mathcal S}(g)\le\lambda^d	\max_{A'\subseteq[N']}\mathcal Y(N',A')+\cdots$ 加 $C_{\rm tr}N^{-\sigma_0}$，
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	566	$\lvert Z_{\mathcal S}(g)-Z_{\mathcal S}(g_{\le H})\rvert	\le C_\varepsilon H^{-\gamma}q_BN^\varepsilon$。
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	577	$Z_{\mathcal S}(g_{\le H})\le\lambda^d\max_j	Z_{\mathcal S}(h_j^H)$。transfer.tex:310-311 特意点破："平均 by $D$ 是
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	583	一次大导体（这次无特殊化）；$h_j^{Q'}$ 只依赖 $\mathcal S'=\mathcal	P_{N'}\setminus B$，而把 $B\cap\mathcal P_{N'}$ 平均掉正好从全提升
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	586	$Z_{\mathcal S}(h_j^{Q'})=Z_{\mathcal S'}(h_j^{Q'})	\le Z_{\mathcal P_{N'}}(u'_j)=Y(N',A'_j)$（transfer.tex:314-351）。
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	610	情形一：24 个圈槽全落同一区间，概率 $\sum_iw_i^{24}\le	(\max w_i)^{23}\ll N^{-23\tau}$；其余槽不管，普通 Hölder 用 $d$ 阶矩
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	626	$B$-特征复原成整数纤维 $\frac{D}{\lvert I_i\rvert}	\sum_{n\in I_i,\,n\equiv a_i(D)}1_Ae(-n\xi)$，$D=M_0R$，$a_2-a_1$ 严格
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	649	$\bigotimes_p\mu_p-\bigotimes_p(\mu_p-\varepsilon_p)	=\sum_{B\ne\varnothing}(-1)^{\lvert B\rvert+1}\kappa_B$，
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	651	$\kappa_B=(\bigotimes_{p\in B}\varepsilon_p)\otimes	(\bigotimes_{p\notin B}\mu_p)$，质量 $\eta_B$
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	658	由 multilinearity，$Y(N,A)=\E_{\boldsymbol s}\int\Phi_{\boldsymbol s}	d\bigotimes\mu_p$（induction.tex:58-71，$1_A=\E_sf_s$ 的提升线性化）。
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	663	$\sum_Bq_B\eta_B=\prod_{p\in\mathcal P_N}(1+p\eta_p)-1\le	\prod_{p\ge P}(1+p^{-3})-1\le1/4$（induction.tex:120-126）把计数一次性
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	668	$n_B=\lceil N/(M_0q_B)^2\rceil$，$\lambda_B\le1+M_0^2N^{2\tau-1}	=:1+u_N$。好 $\boldsymbol s$ 的首项换成 $K_3N^{-\sigma_0}$（收缩命题），
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	688	$\mathcal Y(N)\le KN^{-\sigma_0}+(1+u_N)\theta C_0N^{-a_0}	\le\kappa N^{-a_0}+(1-\kappa)C_0N^{-a_0}$，
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	695	均值不等式与衰减定理：$\lvert A\rvert/N\le Y(N,A)^{1/d}\le C_0^{1/d}	N^{-a_0/d}$，定理得证，$c=a_0/d$（induction.tex:303-318）。
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	807	二、核指数表。kernel.tex:473-482 四行：$DHN^{-1/20}\sqrt{\log N}\le	N^{\beta+\beta/2-1/20}\sqrt{\log N}=N^{-0.049985}\sqrt{\log N}$
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	810	$DH^2N^{-1/10}\le N^{2\beta-0.1}=N^{-0.09998}$；$qD^2H^3/N\le	N^{1/10+2\beta+1.5\beta-1}=N^{-0.899965}$；最后一行
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	812	$qD^2H^2(1+|y|N)/\sqrt N\le N^{1/10+2\beta+\beta-1/2}(1+2)\le	3N^{-0.29997}$（$|y|\le2N^{-9/10}$ 使 $1+|y|N\le3$）。全部对得上，
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	818	$2p-1$ 项各贡献 1，非零 $(p-1)^2$ 项和为 $-1$，合计 $2p-1-(p-1)^2	\cdot$... 直接算：固定 $a\ne0$ 对 $b$ 求和为 0，故只剩 $a=0$ 或 $b=0$
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	823	$|B_j|\le2p^{-j/2}$：$j\ge2$ 时 $(p\cdot p^{-1}\cdot p^{-(j-2)/2}	+p^{-j/2})/(p-1)$ 放成 $2p^{-j/2}$ 用 $(p+1)/(p-1)\le2$；$j=1$ 比值
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	841	$A_r=2eK_{2r}\,2^{(r+3)/4}$ 与 transversal 界 $(2K_{2r})^j\cdot	(j^j/j!)\le(2eK_{2r})^j$、平方函数 $2M2^{k(r+3)/4}$ 相乘得
+E:/math/研究笔记\D248-曲面反例如何杀死Shafarevich全纯凸性.md	199	取商得到的 pro-2 群无穷。证明走 filtered Golod：$I$ 为 $(f_\lambda=	r_\lambda-1)$ 生成的闭双边理想，$R=A/I$，$C(n)=\dim_{\F_2}R/R_{\ge n}$。
+E:/math/研究笔记\D248-曲面反例如何杀死Shafarevich全纯凸性.md	201	首字母分解给出满射 $\bigoplus_i R/R_{\ge n-w_i}\twoheadrightarrow	R_{>0}/R_{\ge n}$，其核维数至多 $\sum_\lambda C(n-v_\lambda)$。论文
+E:/math/研究笔记\D248-曲面反例如何杀死Shafarevich全纯凸性.md	213	$(1-\sum_i t^{w_i}+\sum_\lambda t^{v_\lambda})\sum_{n\ge1}C(n)t^{n-1}	\ge 1/(1-t)$，与假设符号矛盾。
+E:/math/研究笔记\D248-曲面反例如何杀死Shafarevich全纯凸性.md	308	$0$ 处：令 $\eta=vY_j$，局部方程 $\eta^2=v^2(q(z)-\bar\omega^j s)	=1+O(v^2)$，所以 $\eta=\pm1$ 给出基点截面在全族上的两个整体提升
+E:/math/研究笔记\D248-曲面反例如何杀死Shafarevich全纯凸性.md	342	我在第 259 到 266 行这里停过很久：表面关系把 $c_2$ 换成 $([x,y]	c_0c_1)^{-1}$ 之类会不会破坏权的设计？读细后确认不会：曲面关系只给
+E:/math/研究笔记\D248-曲面反例如何杀死Shafarevich全纯凸性.md	415	单值关系。适配基取逐次差分：$u_{i\ell,j}=\delta_{T_1}^{\,i}	\delta_{T_2}^{\,\ell}(a_{0,j})$，$0\le i,\ell<4$，其中
+E:/math/研究笔记\D248-曲面反例如何杀死Shafarevich全纯凸性.md	478	$f(\xi,\eta)\mapsto(1+\xi)^{b_1}(1+\eta)^{b_2}	f\bigl((1+\xi)^{-1}-1,(1+\eta)^{-1}-1\bigr)$（eq:frattini-involution，
+E:/math/研究笔记\D248-曲面反例如何杀死Shafarevich全纯凸性.md	576	$G(t)>\frac{3\cdot49\cdot249\cdot53^2}{200^2\cdot50^2}	=\frac{102817827}{100000000}>\frac{257}{250}$；
+E:/math/研究笔记\D248-曲面反例如何杀死Shafarevich全纯凸性.md	579	$1-P(t)+tG(t)+\frac1{100}+\frac1{100}=1-G(t)+\frac1{50}	<-\frac1{125}<0$。无穷关系族有界次数内有限、代价级数收敛，其余族
+E:/math/研究笔记\D250-典型初态出发的低温SK热浴混合上界重建笔记.md	295	$\widehat H_G(x)/n=\sum_kc_k\langle x,\Pi_{>k}g_k\rangle_n+\tfrac12\sum_kc_k^2d_k	+\tfrac12\langle x,H_0WH_0x\rangle_n$。
+E:/math/研究笔记\D250-典型初态出发的低温SK热浴混合上界重建笔记.md	409	${\rm KL}\bigl(N(\sqrt{1-\delta}g,\delta I)\Vert N(\sqrt{1-\delta}\widetilde g,\delta I)\bigr)	=\tfrac{1-\delta}{2\delta}\|g-\widetilde g\|^2$，这条也记在 Lugosi--Neu 引理 11 里。
+E:/math/研究笔记\D250-典型初态出发的低温SK热浴混合上界重建笔记.md	430	$\mathbb E\,{\rm KL}(\pi_G\Vert\nu(\cdot\mid G^\circ))	=\mathbb E\,{\rm KL}\bigl(\pi_G\Vert\overline\pi(\cdot\mid G^\circ)\bigr)+{\rm KL}(\mathcal SP\Vert\mathcal SQ_f)$。
+E:/math/研究笔记\D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md	521	$0\to K\to H_{3}(\T_{s})\xrightarrow{\partial}H\otimes E	\xrightarrow{\overline{1\otimes\tau}}H/\pi_{*}D$，且外部 page 的像经 $\partial$
+E:/math/研究笔记\D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md	545	$0\to H_{2}(L)\to H_{2}(L,\gamma_{p})\xrightarrow{\partial}H_{1}(\gamma_{p})=\Z\to	H_{1}(L)=\Z/k$ 给出唯一相对类 $S_{p}$，$\partial S_{p}=k\gamma_{p}$。
+E:/math/研究笔记\D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md	721	$\alpha_{\nu,j}\colon(D_{\nu},-s_{d_{\nu}})_{\Z_{\ell}}\perp	(H\otimes U_{j,\ell},s_{h}\otimes e)\xrightarrow{\sim}(\Lambda_{\nu},s_{\nu})_{\Z_{\ell}}$，
+E:/math/研究笔记\D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md	729	$s_{d_{\nu}}(\operatorname{pr}_{\nu}l,\operatorname{pr}_{\nu}l')=	s_{d_{\nu}}(l,l')-\tfrac14s_{h}(\pi_{\nu*}l,\pi_{\nu*}l')$；积形式在 $v_{j}$
+E:/math/研究笔记\D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md	735	$J_{j}=\alpha_{1,j}(\mathcal I\oplus1)\alpha_{0,j}^{-1}\colon	(F_{0},s_{0})\xrightarrow{\sim}(F_{1},s_{1})$（eq:arith-two-J，
+E:/math/研究笔记\D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md	793	$\omega_{i,j}=U^{i-1}V^{j-1}\,dU/\partial_{V}\widetilde P	=-U^{i-1}V^{j-1}\,dV/\partial_{U}\widetilde P$
+E:/math/研究笔记\D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md	817	$B_{\nu}(x\otimes y+\bar x\otimes\bar y,\ x\otimes y+\bar x\otimes\bar y)	=-4I_{H}I_{E}/\lvert 1-\lambda\rvert^{2}$
+E:/math/研究笔记\D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md	826	$(e+e^{\mathsf t})(y,\bar y)=\frac{1+\lambda^{-1}}{i(1-\lambda^{-1})}\,	i(e-e^{\mathsf t})(y,\bar y)$，比值非零实数，两号照传，埃尔米特形式在该实位
+E:/math/研究笔记\D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md	853	构造：$C_{\ell}=\{\gamma\in G(\Q_{\ell}):	\rho(\gamma)(\Lambda_{0}\otimes\Z_{\ell})=\Lambda_{0}\otimes\Z_{\ell}\}$
+E:/math/研究笔记\D284-一个无限有限表示的残余有限二元群.md	352	相邻的交换子只有 $[x_{(i,s),(j,t)}(a_{st}),x_{(j,t),(k,v)}(a'_{tv})]	=x_{(i,s),(k,v)}(a_{st}a'_{tv})$ 这一类非平凡项，
+E:/math/研究笔记\D323-条件性极小模型：紧Kähler四维流形非消灭的整条反推路线.md	1081	$H^1(V,\mathcal I_D\otimes\OO_V(mJ))\hookrightarrow	H^1(M,\OO_M(mL-\lfloor F\rfloor))$（`completion.tex:136-141`），并且我注明这一步
+E:/math/研究笔记\D348-六角晶格桥长对数窗口的反推之路.md	380	开 $k$ 次根、$k\to\infty$ 得 $W\le Ce^{-cD/h}$，从而 $\sum_{d=D}^{2D}K_d(h)^2\le	C\sqrt D e^{-cD/h}$。要单指定高就用正通量夹 $K_D(h)\le CK_d(Ch)$、对 $\asymp D$
+E:/math/研究笔记\D348-六角晶格桥长对数窗口的反推之路.md	383	推论：高 $\sim h$ 的带内、固定壁源的拱与桥满足 $\mu\{\diam\omega>s\}\le	Ch^{-1/4}e^{-cs/h}$（$s\ge C_0h$，11.tex:85）。
+E:/math/研究笔记\D348-六角晶格桥长对数窗口的反推之路.md	426	每个损失都 $o(h^{13/12}(\log h)^{-1/12})$，留下的仍这量级，平均质量 $\ge	ch^{-1/4}(\log h)^{-7/12}$。若桥占其半、对 $d\in[h,2h]$ 求和即毕；否则某带内拱质量
+E:/math/研究笔记\D348-六角晶格桥长对数窗口的反推之路.md	431	（$\asymp R$ 位置）、$y=0$ 下接两条不相交路径，每条连接子质量 $\ge	R^{-1/4}(\log h)^{-C}$、直径 $O(R)$、长度 $O(R^{4/3})$。右连接子直接用受长生长；
+E:/math/研究笔记\D348-六角晶格桥长对数窗口的反推之路.md	444	输出逆向重数 $\le CT_R$，其未标记质量 $\ge cR(R^{-1/4}(\log h)^{-C})^2a_h/(\sqrt R\log	R)\ge h^{-1/4}(\log h)^{-C}$（11.tex:399）。连接子长 $\le CR^{4/3}$、$R\le2h(\log
+E:/math/研究笔记\D348-六角晶格桥长对数窗口的反推之路.md	447	固定桥向得 $\sum_{1\le H\le2R_0}\mu\{\omega\in{\cal B}_H:\ell_-\le\lvert\omega\rvert\le	2\ell_+\}\ge ch^{3/4}(\log h)^{-C}$（11.tex:416），即定理。桥那半因 $[h,2h]\subset
+E:/math/研究笔记\D348-六角晶格桥长对数窗口的反推之路.md	464	$Q,R$ 的 $n^{5/48}$、$n^{-7/24}$（04.tex:30），最终窗宽 $\ell_+/\ell_-=	(\log h)^{5/8}$ 就这么定下来。它不是选的，是我每一步对数损失结算出来的。这一点
+E:/math/研究笔记\D348-六角晶格桥长对数窗口的反推之路.md	778	§24 压力尾求积。第三级，纯结构性 [推测]：$1/48$、$1/12$ 的指数流水、$0\le A_{m+1}-A_m\le	cB_{m+1}^2$ 之后 $\sum B_m$ 发散的每步常数。我给这三级的意义是：若日后要形式化或证伪，
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	92	$N^{-6}\sum_{\nu',z',j}\lvert c_{\nu',z',j}\rvert^3	\le P(\kappa,\eta)N^{10\kappa+\eta}m(d)\mathcal K_\kappa(d)^{1/2}$。
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	214	$G^3\ge w^2\lVert c\rVert_2^2\lVert c\rVert_\infty	\ge w^2\lVert c\rVert_3^3$，再对 domination 用 $\ell^3$ 三角不等式
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	270	$\lVert B_d\rVert_{L^{3/2}(S^2)}	\le C(\delta^2\sum_\nu b_\nu^{3/2})^{2/3}$，
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	291	$\sum_i m(d^{(i)})\mathcal K_\kappa(d^{(i)})^{1/2}	\le C\int H_d^{3/2}$（`eq:density-cost`），常数绝对，
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	304	令 $q_j$ 为该测试选中的全部非零坐标，$\rho_j=m(q_j)/W_\kappa(E_j)	\ge\mathcal K_\kappa(r_j)/2$，残量 $r_{j+1}=r_j-q_j$；每步至少去掉一个
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	323	$\sum\lvert c_{\nu',z',j}\rvert^3\le	CN^6P(\kappa,\eta)M(s)^{3/2}N^{\gamma_0}\log^2(2+N)\delta^2\sum_\nu b_\nu(d)^{3/2}$，
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	341	结论：$\lvert\{\lvert F\rvert>\mu\}\cap\bigcup_{\mathcal B}B\rvert	\le C\mu^{-3}P(\kappa,\eta)M(s)^{3/2}N^{\gamma_0}\log^2(2+N)$
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	353	$\Omega_{B,\widetilde B}=\{\xi\in Q_0:\lvert q+s_0\nabla\phi(\xi)\rvert	\le H\mu^{20}\}$（`04-sparse.tex:57-63`）。若它非空，则
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	374	一致地 $\sum_{\mathcal B}b_\nu^{B,u}\le C\delta^2	\int_{\Gamma_\nu}\lvert h_*\rvert^2$（`eq:sparse-joint-mass`，
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	420	$\sum_{\nu,z}\lvert\widehat d_{\nu,z}^{B,u}\rvert^2	=(D\delta)^2\lVert h_*\rVert_2^2\le C\delta^2$
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	441	$N^6$ 恰好抵消，得 $\sum_{\mathcal B,z',j}\lvert c\rvert^3\le	CPM^{3/2}N^{\gamma_0}\log^2$。样本总数
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	444	立方误差和至多 $CN^7N^{-9}=CN^{-2}$，用 $\lvert a+b\rvert^3\le	4(\lvert a\rvert^3+\lvert b\rvert^3)$ 与 $P,M\ge1$ 把误差并进去，
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	465	若 $\phi''\ge cI$，则 $\lVert G\rVert_{L^4(\R^3)}	\le(\pi/c)^{1/4}\lVert g\rVert_{L^2(\R^2)}$（`eq:elementary-lfour`）。
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	470	$H'_{m,\omega}(r)=\int_{-r}^{r}\omega^{\mathsf T}\phi''(m/2+s\omega)	\omega\,\dd s\ge2cr$（`05-global.tex:53-59`），于是 $H_{m,\omega}$ 严格增，
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	480	$\lVert F\rVert_4+\lVert F\rVert_\infty+\lVert\nabla F\rVert_\infty	\le C_{\mathrm b}\lVert h\rVert_3$（`eq:basic-bounds`，
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	536	$\lvert A_\mu\rvert\le CP(\theta,\theta)M(\theta)^{3/2}	J^3(1+\log(1/\mu))^3\mu^{-3-\tau/2}$（`eq:global-distribution`）。
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	553	$p>4$ 干脆利落：$\lVert F\rVert_p^p\le	\lVert F\rVert_\infty^{p-4}\lVert F\rVert_4^4\le C_{\mathrm b}^p\lVert h\rVert_3^p$
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	563	恒定，二阶矩恒等式给 $\int\lvert y'\rvert^2\lvert G\rvert^2\dd y'\le	B_g(1+t)^2$（`05-global.tex:364-371`）；取
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	571	$C^{\mathrm{best}}_{\Sigma,p}\ge B_f^{-1}\min\{d_g^{1/3},d_g^{1/4}\}	(p-3)^{-1/p}$（`05-global.tex:398-405`）。这是"时间集中"型 Knapp 反例的
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	585	$E_\Sigma f(x)=e(x\cdot v_0)\int g(\zeta)e((L^{\mathsf T}x)'\cdot\zeta+	(L^{\mathsf T}x)_3\phi(\zeta))\dd\zeta$。物理变量代换 $y=L^{\mathsf T}x$
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	588	输入侧两条 Hölder：$\lVert g\rVert_3^3\le(\sup_AJ_\Sigma)^2	\int_{\Sigma_{\mathrm{chart}}}\lvert f\rvert^3\dd\sigma$ 与有限测度嵌入
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	590	$\lVert f\rVert_{L^3}\le\sigma(\Sigma_{\mathrm{chart}})^{1/3-1/p}	\lVert f\rVert_{L^p}$（`06-surfaces.tex:40-48`）。窗口分割后逐块套
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	601	Lee--Rogers--Seeger 传输：紧抛物面 $\Sigma=\{(y,\lvert y\rvert^2):	\lvert y\rvert\le1\}$、$\dd\sigma=w(y)\dd y$、$w=\sqrt{1+4\lvert y\rvert^2}$；
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	604	$\lVert\int_{\lvert y\rvert\le1}g(y)e^{i(\tau\lvert y\rvert^2-\xi\cdot y)}	\dd y\rVert_{L^p(\R^3_{\xi,\tau})}\le C_p\lVert g\rVert_{L^p}$，
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	608	给 $\lVert e^{it\Delta}f\rVert_{L^p(\R^2\times[0,1])}\le	C_p\lVert f\rVert_{B^p_{\alpha,2}}$，$\alpha=2(1-2/p)-2/p=2-6/p$
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	633	Fourier 级数，分部积分给 $\lVert A_k\rVert_\infty\le	C_m(1+\lvert k\rvert)^{-m}$（$m>3$），系数绝对可和、共同紧频率支撑、
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	902	$50J\gamma_0\le50\cdot\frac{34}{\tau}\cdot\frac{25}{2}\cdot10^{-6}\tau^2	=0.02125\tau$，而 $\frac{17}{800}=0.02125$ 恰好相等。
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	915	（`05-global.tex:110-117`）。解出 $\#\mathcal Q\le	\frac{125\cdot96}{\pi}C_{\mathrm b}^7\mu^{-7}\approx\frac{12000}{\pi}C_{\mathrm b}^7\mu^{-7}$，
+E:/math/研究笔记\D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	921	Hölder 给 $\int H_q^{3/2}\ge(\int H_q)^{3/2}/|\operatorname{supp}|^{1/2}	\ge(\pi m(q))^{3/2}/(3\sqrt{\pi La})=\frac{\pi}{3}m(q)\sqrt{m(q)/(La)}$，
+E:/math/研究笔记\D359-把单位代价编辑距离压进l1：指数内常数外的匹配夹逼.md	506	于是 $w=2\lceil\log_2A_k\rceil+3=O(k\log k)$，关于 $k$ 只是多项式。对数尺度上 $\log\bigl((h/24)^k/(16w)\bigr)=k\log k-\log(16w)	=k\log k-O(\log\log k)$，那个多项式损失贡献的 $O(\log\log k)$ 被 $k\log k$ 完全吞掉，阻碍量 $\exp(\Omega(k\log k))$ 原样保留。
+E:/math/研究笔记\D360-电磁尾迹与Kerr-Newman-Penrose不等式反例构造笔记.md	176	$\dd V_\delta(\widetilde E,\widetilde B,\partial_\phi)=\frac{f_rh_\theta-f_\theta h_r}{r^2\sin\theta}	=-\frac{s^2cc'\sin^4\theta}{r^2}$（`01-construction.tex:109-113`）要有非零的方位分量，
+E:/math/研究笔记\D360-电磁尾迹与Kerr-Newman-Penrose不等式反例构造笔记.md	243	这就是 `01-construction.tex:49-51` 里 $\operatorname{div}_\delta\sigma	=2\dd V_\delta(\widetilde E,\widetilde B,\cdot)$ 的全部来历。
+E:/math/研究笔记\D360-电磁尾迹与Kerr-Newman-Penrose不等式反例构造笔记.md	278	而 $(\mathcal E\times_g\mathcal B)^\flat_g(Z)=\dd V_g(\mathcal E,\mathcal B,Z)	=u^{-6}\dd V_\delta(\widetilde E,\widetilde B,Z)$（`01-construction.tex:212-217`），
+E:/math/研究笔记\D360-电磁尾迹与Kerr-Newman-Penrose不等式反例构造笔记.md	406	$\int_{\R^3}|y||H|\,\dd y\sim\int_L^\infty\rho^{-4}\rho\,\rho^2\dd\rho	 =\int_L^\infty\dd\rho/\rho$，对数发散。
+E:/math/研究笔记\D360-电磁尾迹与Kerr-Newman-Penrose不等式反例构造笔记.md	462	$0\ge\Delta_\Sigma r=\tr_{T_p\Sigma}\nabla_g^2r-H_\Sigma\nu_\Sigma(r)	 =|\nabla_gr|_g(H_{S_R}-H_\Sigma)$（`03-geometry.tex:130-134`），
+E:/math/研究笔记\D360-电磁尾迹与Kerr-Newman-Penrose不等式反例构造笔记.md	528	$0\le A-64\pi=\int_{\Sph^2}((2+v)^4-16)\dd A_{\Sph^2}	 \le4M^3\int_{\Sph^2}v\,\dd A_{\Sph^2}\le C_As^2/L^2$。
+E:/math/研究笔记\D360-电磁尾迹与Kerr-Newman-Penrose不等式反例构造笔记.md	584	于是 $\int H\dd x\ge\frac{s^2}{M^3}\cdot\frac{4\pi}{3}\cdot\int_{2L}^\infty r^{-2}\dd r	 =\frac{s^2}{M^3}\cdot\frac{4\pi}{3}\cdot\frac1{2L}=\frac{2\pi s^2}{3M^3L}$，
+E:/math/研究笔记\D360-电磁尾迹与Kerr-Newman-Penrose不等式反例构造笔记.md	630	$K$ 对称加 $\eta$ 的 Killing 方程给 $\operatorname{div}_g(K(\cdot,\eta)^{\sharp_g})	=(\operatorname{div}_gK)(\eta)=2\dd V_g(\mathcal E,\mathcal B,\eta)$；
+E:/math/研究笔记\D360-电磁尾迹与Kerr-Newman-Penrose不等式反例构造笔记.md	633	边界项直接算：$J_{\mathrm{EM}}(r)=\frac12\int_0^\pi hf_\theta\dd\theta	 =s^2c^2\int_0^\pi\sin^3\theta\cos^2\theta\dd\theta=\frac{4s^2c^2}{15}$
+E:/math/研究笔记\D360-电磁尾迹与Kerr-Newman-Penrose不等式反例构造笔记.md	822	一、`sections/02-elliptic.tex:97-103` 的 $\lvert D^jN_H(x)\rvert	\le C_ja\int_L^\infty\rho^{-4}\rho^{-1-j}\rho^2\dd\rho$ 里那三个 $\rho$ 幂的组合，
+E:/math/研究笔记\D364-平面Schrödinger端点收敛的H三分之一次幂全程.md	525	合并成 $r^{-4/3+4/p}$（`09-endpoint.tex:344`）；再把 $m_{J,Q}^{2-2/p}=m_{J,Q}\cdot m_{J,Q}^{1-2/p}\le m_{J,Q}\cdot(r^2)^{1-2/p}	=m_{J,Q}\,r^{2-4/p}$ 折进去（用到 $m_{J,Q}\le r^2$ 与 $2-2/p>1$，`09-endpoint.tex:347`），$r$ 的总指数
+E:/math/研究笔记\D365-端点逐点收敛：高维薛定谔方程的等号情形.md	262	$P=\frac{2}{1-\beta}=\frac{2(n+1)}{n-1}=q_{n-1},\qquad	\mathcal T_\beta(V,\nu)=\sum_{Q\text{ a }K^2\text{-cube}}\nu(Q)^\beta\lVert V\rVert_{L^P(Q)}^2$。
+E:/math/研究笔记\D368-时空Penrose不等式的等号与刚性.md	256	其中 $\mathcal S=-u\Ric_g+2u(K^2-\tau K)+\mathcal L_XK-(\divg X)K	 -\divg(K(X,\cdot))g-\sym(J\otimes X^\flat)$。这正是 Killing 初始数据方程组
+E:/math/研究笔记\D368-时空Penrose不等式的等号与刚性.md	520	$\omega=\omega_3=2\pi^2$，ADM 归一 $E=\frac1{6\omega}\lim\int(\partial_jg_{ij}	-\partial_ig_{jj})\,dA$、$P_i=\frac1{3\omega}\lim\int(K_{ij}-\tau g_{ij})n^j\,dA$
+E:/math/研究笔记\D368-时空Penrose不等式的等号与刚性.md	1160	$\langle u,f\rangle=\int f\,d\Lambda$、$\langle X,\alpha\rangle=\int\alpha_x(v)	\,d\Lambda(x,v)$；单位球条件 $\lvert v\rvert_g\le1$ 与正性给出测度意义的
+E:/math/研究笔记\D368-时空Penrose不等式的等号与刚性.md	1213	$\widetilde\nabla^{,i}(\Omega T)_{ij}=\Omega^{-1}(\nabla^iT_{ij}+2T_{ij}\nabla^i\log\Omega	-(\operatorname{tr}_gT)\partial_j\log\Omega)$（`three/02-strict-direction.tex:62-67`），
+E:/math/研究笔记\D368-时空Penrose不等式的等号与刚性.md	1530	核过：$\mathfrak m'(a)=\frac12\cdot\frac23(a/\omega)^{-1/3}\cdot\frac1\omega	=\frac{1}{3\omega}(a/\omega)^{-1/3}$，故 $6\omega\mathfrak m'(A)=2(A/\omega)^{-1/3}$；
+E:/math/研究笔记\D371-任意阶本原四次环面包线的等分布.md	328	$(\widehat w_{12}\widehat w_{34},-\widehat w_{13}\widehat w_{24},\widehat w_{14}\widehat w_{23})	=\epsilon(v)z(I,w)$，$z(I,w):=\Psi(w)/\Nm I$（`exterior.tex:126-140`）。
+E:/math/研究笔记\D371-任意阶本原四次环面包线的等分布.md	469	$\sum_{\Tr z=m,\ z\in\mathcal R}M(z)\ll\sqrt D\,A_{\phi}\prod_{p\in S}(1-p^{-1})Z_p	\prod_{p\in\mathcal P_Y}\E_p b_p$，$Z_p=\prod_{\mathfrak p\mid p,\ \mathfrak p\subset R}
+E:/math/研究笔记\D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md	271	半正定性由一行配方得到：$\sum_{g,h}a_ga_h\varphi_j(k_{N_j;g,h})	=\frac1{N_j}\sum_{i=1}^{N_j}\varphi_j((\sum_g a_gx_{i,g})^2)\ge0$（`rows.tex:264-271$ 之前`），
+E:/math/研究笔记\D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md	303	$\lvert\varphi_j(U_j)\rvert\le C_{d,r,M}N_j^{\lfloor(d+r)/2\rfloor-d/2-r}	\le C_{d,r,M}N_j^{-r/2}\to0$，常数与 $j,\varphi_j$ 无关（`rows.tex:365-386`）。
+E:/math/研究笔记\D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md	401	$\lVert P_F^{1/2}-P_{hF}^{1/2}\rVert_{\HS}^2\le\lVert P_F-P_{hF}\rVert_1	\le\frac{\lvert F\mathbin{\triangle}hF\rvert}{n}<\delta$，
+E:/math/研究笔记\D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md	411	$\lvert\mathbb E\exp(\iu\ell tq_F)\rvert	\le(1+4\ell^2t^2\lVert B_F\rVert_{\HS}^2)^{-1/4}\le(1+t^2)^{-1/4}$（`gaussian.tex:274-281`）。
+E:/math/研究笔记\D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md	427	$P_E^r=\frac1{n^r}\sum_{g_1,\dots,g_r\in E}	R_{g_1,g_2}\cdots R_{g_{r-1},g_r}\,v_{g_1}v_{g_r}^{\mathsf T}$（`gaussian.tex:288-294`）。
+E:/math/研究笔记\D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md	430	$q_E=\sum_{r=1}^{D}\frac{c_r}{n^r}\sum_{g_1,\dots,g_r\in E}	R_{g_1,g_2}\cdots R_{g_{r-1},g_r}\,(\xi_{g_1}\xi_{g_r}-R_{g_r,g_1})$（`gaussian.tex:296-303`），
+E:/math/研究笔记\D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md	434	$\widetilde Q_{N,E}=\sum_{r=1}^{D}\frac{c_r}{n^r}\sum_{g_1,\dots,g_r\in E}	k_{N;g_1,g_2}\cdots k_{N;g_{r-1},g_r}(z_{N,g_1}z_{N,g_r}-k_{N;g_r,g_1})$，乘法按展示顺序，
+E:/math/研究笔记\D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md	502	$\limsup_{j}\lVert\bar\alpha_h(V_{N_j})-V_{N_j}\rVert_{2,\varphi_j}	\le t\sqrt2(\sqrt\delta+2\eta)<\eps/4$（`gaussian.tex:396-400`），以及
+E:/math/研究笔记\D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md	504	$\lim_{j}\lvert\varphi_j(V_{N_j}^{\ell})\rvert	=\lvert\mathbb E\exp(\iu\ell tq_F)\rvert\le(1+t^2)^{-1/4}<\eps/4$（`gaussian.tex:401-406`），
+E:/math/研究笔记\D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md	567	$\sup_{\tau\in\T_\omega(A)}\lVert x\rVert_{2,\tau}	=\lim_{j\to\omega}\sup_{\sigma\in\T(A)}\lVert x_j\rVert_{2,\sigma}$ 且
+E:/math/研究笔记\D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md	569	$\sup_{\tau\in\T_\omega(A)}\lvert\tau(x)\rvert	=\lim_{j\to\omega}\sup_{\sigma\in\T(A)}\lvert\sigma(x_j)\rvert$；
+E:/math/研究笔记\D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md	638	$\lvert\tau(ay_i^{(r)})-\frac{\tau(a)}k\rvert	=\tau(a)\lvert\int_{\mathbb T}f_i^{(r)}\,d\mu-\frac1k\rvert\le e_r$（`splittings.tex:158-163`）。
+E:/math/研究笔记\D379-每个四维Kakeya集有满Hausdorff维数.md	29	Liu, Xi, Zhan 后来把 maximal-function 参数推到 $(159+\sqrt{145})/56	\approx 3.0543$。这些数字离四维差了近一个整维度。Wolff 的 hairbrush
+E:/math/研究笔记\D379-每个四维Kakeya集有满Hausdorff维数.md	748	消费方式：这是 unbounded regime 的 starting configuration。$n_i(0)	\sim_{\log} 1$ 是初始条件，uniform convergence 允许把 $f_i(r) \approx dr$
+E:/math/研究笔记\D379-每个四维Kakeya集有满Hausdorff维数.md	1055	pruning 之后可能把整个 substantial 集合删掉了。改为 "mass $\ge	N_0^{-o(1)}$"，即随 $N_0$ 增大而衰减速度比任何固定幂次慢。这保证了
+E:/math/研究笔记\D381-对数空间类的精确去随机化.md	310	$\mathfrak d_{u,f}(H,H')^s\le C\mathfrak d_{u,f}(P,P')^s+C\mathfrak d_{u,f}(I,I')^s	+C\frac fu\sum_i\lVert U_i-U_i'\rVert_{f;s}^s$。
+E:/math/研究笔记\D381-对数空间类的精确去随机化.md	395	$\bigl(\int\sum_{H\in\mathcal H}\sum_y\lvert H(T_{m_*};y)^{1/s}-H(d,v;y)^{1/s}\rvert^s\,d\mu\bigr)^{1/s}	\le C_{\mathrm{buf}}c_*2^{-p}$，$C_{\mathrm{buf}}$ 与组数、行宽、所请求精度无关。
+E:/math/研究笔记\D381-对数空间类的精确去随机化.md	441	由于 $h_*\le\epsilon\log_2B$，直接相对记账 $2^{Ch_*}B^{-1/(2s)}	\le\tfrac14 2^{-D_1h_*}\le\tfrac14\lambda_M$。这段是我整个写作里改顺序次数最多的地方：
+E:/math/研究笔记\D381-对数空间类的精确去随机化.md	474	$\mathbb E\bigl[\lvert\bar W_L(z_L)-W_L(z_L)\rvert^8\mid X_f(z_L)=1\bigr]	\le N\frac f{\pi_f}C^82^{-8p}$（引言第 243 行）。
+E:/math/研究笔记\D384-二维O4格点模型的精确质量渐近.md	267	$\sum_{r=1}^M p(u_r)+\ell f(0)=\frac{W}{\pi}\int_{\R}\epsilon_{\rm in}\,\dd x-\ell m_*	 +\Bigl[\sum_{r=1}^M\epsilon(u_r)-W\int_{\R}\epsilon_{\rm in}(x)d(x)\,\dd x\Bigr]$，
+E:/math/研究笔记\D384-二维O4格点模型的精确质量渐近.md	269	配套 $W\int\epsilon_{\rm in}d=\frac{W}{\pi}\int\epsilon_{\rm in}	 +\sum_r(K*\epsilon_{\rm in})(u_r)-\ell((K_1-K_3)*\epsilon_{\rm in})(0)$，
+E:/math/研究笔记\D384-二维O4格点模型的精确质量渐近.md	282	于是对反函数 $x=x(s)$，$\bigl\lvert\frac{\dd}{\dd s}\epsilon(x(s))\bigr\rvert	 =\bigl\lvert\epsilon'(x(s))/d(x(s))\bigr\rvert\le C$。
+E:/math/研究笔记\D384-二维O4格点模型的精确质量渐近.md	285	$\sum_{\text{these cells}}g(s_r)-W\int_\alpha^\beta g(s)\,\dd s	 =-\frac{g'(\beta)-g'(\alpha)}{24W}+O\!\bigl(\frac{\operatorname{poly}(b)}{W^2}\bigr)$，
+E:/math/研究笔记\D384-二维O4格点模型的精确质量渐近.md	416	$\lim_{m\to\infty}\limsup_{s\to\infty}\limsup_{\beta\to\infty}	\lvert h_i^B(mL^s)-h_i^F(mL^s)\rvert=0$，$m$ 沿充分大 dyadic 整数趋于无穷，内层极限在 $m,s$ 固定时取。
+E:/math/研究笔记\D384-二维O4格点模型的精确质量渐近.md	480	另一处对应是 $W=\frac{rX}{b}\asymp\frac{\beta(\log\beta)^2\,\e^{\pi\beta}\beta^{-1/2}}{\beta}	=\beta^{-1/2}(\log\beta)^2\e^{\pi\beta}$，与命题 `prop:brownian-parity` 要求的
+E:/math/研究笔记\D384-二维O4格点模型的精确质量渐近.md	544	（$h_i^M(n)=-\partial_\zeta^2\log Z_i^M(n;\zeta)\big|_{\zeta=0}$，$\lim_m\limsup_s\limsup_\beta	\lvert h_i^B-h_i^F\rvert=0$），两条的极限顺序不可交换。
+E:/math/研究笔记\D398-有限同余格的刻画与不可判定性.md	286	$J(x)=1+\max(\{2^{2^{x!}},a(x)\}\cup\{R(c,h):1\le c,h\le x\}	\cup\{\operatorname{HJ}(a,c,s):1\le a,c,s\le x\})$
+E:/math/研究笔记\D406-紧Kahler四流形上有限极小模型程序.md	293	一个公共的充分可除 Veronese 一次生成，$\mathcal{O}_{\operatorname{Proj}_{Z}\mathcal{R}_{r}}(1)	\simeq\mathcal{O}_{T'}(rD')$ 作为真实丛同构成立（03-steps.tex:224 的编号式），
+E:/math/研究笔记\D406-紧Kahler四流形上有限极小模型程序.md	347	$a(E,X_{i+1},\Delta_{i+1}+t\mathbf{H})-a(E,X_i,\Delta_i+t\mathbf{H})	=(1-t/\lambda_i)(a(E,X_{i+1},\Delta_{i+1})-a(E,X_i,\Delta_i))\geq0$
+E:/math/研究笔记\D408-径向扫掠的有限三角逼近.md	509	$h_1\int_{-1/2}^{1/2}\frac{\frac14+\eta^2(\frac{s^2}{4}+s^4+\frac1{960})}{\sqrt{1+\eta^2((\frac14+s^2)^2+2s^2)}}\,ds	=h_1\bigl(\frac14-\frac{\eta^2}{960}+O(\eta^4)\bigr)$。这是定理给的任意标签三角形之外的一个特定三角形公式，二者一般不相同。
+E:/math/研究笔记\D408-径向扫掠的有限三角逼近.md	518	$\frac{h_1}{2}\int_{-1}^{1}\frac{R_\delta(r)^2}{\sqrt{1+\delta^2(\alpha(r)^2+2\beta(r)^2)}}\,dr	=\frac{h_1}{2}\bigl(\frac12-\frac{\delta^2}{240}+O(\delta^3)\bigr)$。覆盖对 $0<\delta\le\frac12$ 成立，严格节省要先取充分小的这种 $\delta$ 再选 $N$。柱数恰为每区间两根，并且我没有任何证据支持"倾斜趋于零时柱数仍一致有界"，这句话我在笔记里写成明确的未知项。
+E:/math/研究笔记\D413-温和Hecke特征层的Frobenius结构.md	303	$R\operatorname{Hom}(D_\tau\boxtimes L_1,D_\tau\boxtimes L_2)\simeq	R\operatorname{Hom}(D_\tau,D_\tau)\otimes_E R\Gamma(C^{I},L_1^{\vee}\otimes L_2)$。
+E:/math/研究笔记\D413-温和Hecke特征层的Frobenius结构.md	797	$\mathsf H_{I,(V_i)}(q_{!}Q)\simeq(q\times\mathrm{id}_{U_1^{I}})_{!}\mathsf H_{I,(V_i)}(Q)	\simeq q_{!}Q\boxtimes\bigl(\boxtimes_{i\in I}(V_i)_{\sigma_1}\bigr)$，
+E:/math/研究笔记\D424-中性库原原子的外层电子半径.md	138	$R_m=\inf\{r:T(r)\le m\}$，其中 $T(r)=\int_{\lvert x\rvert>r}\rho\,	\mathrm{d}x$ 是单调下降的尾函数。$L^1$ 型的整体逼近允许一小撮质量
+E:/math/研究笔记\D424-中性库原原子的外层电子半径.md	176	$L^2$ 环形界 $\|\#\{i:\alpha u<\lvert x_i\rvert<\beta u\}\|_{L^2}	\le C_{\alpha,\beta}(\max\{u^{-3},1\}+\sqrt{D_0u})$ 是补文推论 4.9
+E:/math/研究笔记\D424-中性库原原子的外层电子半径.md	207	定量地看，比较估计给我的只有单边上界 $H_j(y)\le C_{\mathrm{cap}}	\lvert y\rvert^{-4}$（`02-inputs.tex:126--134`），单边下界要经过
+E:/math/研究笔记\D424-中性库原原子的外层电子半径.md	372	$\lvert\sigma_\ell-k(F_{\ell,+})^{3/2}\rvert\le q_\ell^{-8}	\lvert x\rvert^{-6}$（`03-scales.tex:50--56`）。齐次性检查只有一行：
+E:/math/研究笔记\D424-中性库原原子的外层电子半径.md	411	$\widetilde p=p_j+\mathbf 1_{\{\text{第 }j\text{ 步坏数据}\}}	\mathbf 1_{\{r_j\le\lvert y\rvert<2r_j\}}\mu_j$，再取条件期望
+E:/math/研究笔记\D424-中性库原原子的外层电子半径.md	528	$\int e_\ell=(4\pi/3)q_\ell^{-8}(a_\ell^{-3}-S^{-3})	\le(32\pi/3)q_\ell^{-5}\to0$，再按固定球内密度
+E:/math/研究笔记\D424-中性库原原子的外层电子半径.md	581	$\mathcal A$，$\sup_{\theta\in G_\ell}\lVert	\sigma_\ell(\theta,\cdot)-\rho_*\rVert_{C(\mathcal A)}\to0$。证明
+E:/math/研究笔记\D424-中性库原原子的外层电子半径.md	597	$P_\ell(a,b)=\sum_{i}\int_{s_\ell\mathcal A(a,b)}	\mathcal K_{x_i}(y)\,\mathrm{d}y$ 为同环带内平滑包的质量；条件积分
+E:/math/研究笔记\D424-中性库原原子的外层电子半径.md	600	$\int_{\mathcal A(a,b)}\sigma_\ell\,\mathrm{d}x	=s_\ell^3\,\mathbb E[P_\ell(a,b)\mid\mathcal F_{j_\ell}]$（
+E:/math/研究笔记\D424-中性库原原子的外层电子半径.md	627	$\lVert\#\{\alpha u<\lvert x_i\rvert<\beta u\}\rVert_{L^2}\le	C_{\alpha,\beta}(\max\{u^{-3},1\}+\sqrt{D_0u})$，
+E:/math/研究笔记\D424-中性库原原子的外层电子半径.md	651	$1$ 外的期望质量由另一条单位半径界 $\mathbb E\#\{\lvert x_i\rvert>1\}	\le C(1+\sqrt{D_0})$ 兜住（`02-inputs.tex:26--27`），它来自补文
+E:/math/研究笔记\D424-中性库原原子的外层电子半径.md	660	常数与 $M$ 无关，取上极限即 $\limsup_\ell s_\ell^3\mathbb E	\#\{\lvert x_i\rvert>Ms_\ell\}\le CM^{-3}$。定理级输出
+E:/math/研究笔记\D424-中性库原原子的外层电子半径.md	708	有限个坏电荷会毁掉逐点收敛式陈述。有限阈值论证把"所有 $Z\ge	Z_{\min}(m)$"作为原子单元，坏的前段被整段切除，这正是广义猜想
+E:/math/研究笔记\D424-中性库原原子的外层电子半径.md	731	$\gamma=19/2-3w$（`02-inputs.tex:167--171`），带误差阶 $q_\ell^{-8}	\lvert x\rvert^{-6}$（`03-scales.tex:51--55`），下势障系数
+E:/math/研究笔记\D424-中性库原原子的外层电子半径.md	765	$Z_{\mathrm{bar}}(s)$（其中并入 $Z\ge Z_0$ 与 $2\varepsilon Z^{-1/3}	\le s$）。改 $L_1,h_l,h_h,\xi$ 只改比较事件及其小性要求，不改观测、
+E:/math/研究笔记\D442-双曲性锥没有半正定提升.md	392	二次力矩矩阵正定），测试点 $(A_{c,\varepsilon},t_{c,\varepsilon},y_{c,\varepsilon})	=\Lambda_s(x(c+\varepsilon s))$，断言两件事：
+E:/math/研究笔记\D442-双曲性锥没有半正定提升.md	395	$t_{c,\varepsilon}-\operatorname{tr}(A_{c,\varepsilon}^{-1}Q(y_{c,\varepsilon}))	=-\kappa_c\varepsilon^4+o(\varepsilon^4)$（`05-obstruction.tex:111-136`）。
+E:/math/研究笔记\D442-双曲性锥没有半正定提升.md	475	取 $b$ 次 Taylor 多项式 $f_{c,b}(\varepsilon,z)=\sum_{|\alpha|\le b}	\frac{\partial^\alpha f(c)}{\alpha!}\varepsilon^{|\alpha|}z^\alpha$，置
+E:/math/研究笔记\D442-双曲性锥没有半正定提升.md	489	立刻碰壁：$E_Q$ 在 $A$ 方向必然退化（§6 的 $A_{c,\varepsilon}\succeq	a_c\varepsilon^4I$ 说明可行集边界贴近它），严格可行假设不可用。论文给的
+E:/math/研究笔记\D442-双曲性锥没有半正定提升.md	510	可行引理，得可行点 $\widetilde x_\varepsilon=(A_\varepsilon+\Delta A_\varepsilon,	t_\varepsilon+\Delta t_\varepsilon,y_\varepsilon+\Delta y_\varepsilon)$，三个扰动
+E:/math/研究笔记\D442-双曲性锥没有半正定提升.md	514	$(A+\Delta A)^{-1}-A^{-1}=O(\varepsilon^{-4})\cdot O(\varepsilon^{16})\cdot O(\varepsilon^{-4})	=O(\varepsilon^{8})$；$Q$ 二次且 $y_\varepsilon$ 有界，
+E:/math/研究笔记\D442-双曲性锥没有半正定提升.md	517	迹扰动 $=O(\varepsilon^8)\cdot O(1)+O(\varepsilon^{-4})\cdot O(\varepsilon^{16})	=O(\varepsilon^8)$。于是
+E:/math/研究笔记\D442-双曲性锥没有半正定提升.md	519	$t+\Delta t-\operatorname{tr}((A+\Delta A)^{-1}Q(y+\Delta y))	=-\kappa_c\varepsilon^4+o(\varepsilon^4)+O(\varepsilon^8)<0$
+E:/math/研究笔记\D442-双曲性锥没有半正定提升.md	662	$b=16$ 时逆扰动是 $\|\Delta A\|\cdot\|A^{-1}\|^2=O(\varepsilon^{16})\cdot	O(\varepsilon^{-8})=O(\varepsilon^{8})$，我先前在扉页写的 $2b-4=28$
+E:/math/研究笔记\D442-双曲性锥没有半正定提升.md	665	迹差 $=O(\varepsilon^8)\cdot O(1)+O(\varepsilon^{-4})\cdot O(\varepsilon^{16})	=O(\varepsilon^8)$，两处 $\varepsilon^8$ 同阶汇合后才与 $\varepsilon^4$
+E:/math/研究笔记\D514-大素数间隙的正下密度.md	167	$\mathbb{E}_X[\chi_\delta(m)\prod_r D_{F_r}(m;\mathbf{b}^{(r)})]	=L^{-t}\{\mathfrak{S}(\mathcal{H})\mathcal{C}+O(L^{-1/2}(\log L)^A)\}$
+E:/math/研究笔记\D514-大素数间隙的正下密度.md	511	完全混合导数：$(-1)^j\partial_1\cdots\partial_j\widetilde{F}_j	=f_j+Tf_{j+1}$。$T$ 算子 $\int_0^\infty f_{j+1}(\mathbf{t},u)du$
+E:/math/研究笔记\D514-大素数间隙的正下密度.md	712	标准 BV：$\sum_{q\le x^{1/2}(\log x)^{-b}}\max_{(c,q)=1}|\psi(x;q,c)-x/\varphi(q)|	\ll_A x(\log x)^{-A}$。
+E:/math/研究笔记\D514-大素数间隙的正下密度.md	749	密度和 $\mathcal{A}_\delta=\sum_{\mathbf{d}\text{ squarefree}}\rho_\delta(\mathbf{d})	\prod_\gamma\mu(d_\gamma)\prod_r F_r((\log d_{r,\ell}/L))$。
+E:/math/研究笔记\D514-大素数间隙的正下密度.md	996	$D_{F_j}(m;U\cup\{a\})=\sum_{d_u\mid(m+u),u\in U}\sum_{d_a\mid(m+a)}	\mu(d_a)\prod_{u\in U}\mu(d_u)\cdot F_j((\log d_u/L)_{u\in U},\log d_a/L)$。
+E:/math/研究笔记\D514-大素数间隙的正下密度.md	1010	取 $v_j=0$：$F_j(\mathbf{v}',0)=\int_{s_1\ge v_1}\cdots\int_{s_{j-1}\ge v_{j-1}}	\int_0^\infty f_j(\mathbf{s}',s_j)ds_j\,d\mathbf{s}'=\int_{s_i\ge v_i}Tf_j(\mathbf{s}')d\mathbf{s}'=F_{j-1}^{Tf_j}(\mathbf{v}')$。
+E:/math/研究笔记\D514-大素数间隙的正下密度.md	1060	乘起来：$\prod_p(1+C_M p^{-1-1/L})\le\exp(C_M\sum_p p^{-1-1/L})	\le\exp(C_M\log(2L))\ll L^{C_M}$。
+E:/math/研究笔记\D514-大素数间隙的正下密度.md	1090	$\prod_p H_p(\mathbf{z})-\prod_p H_p(0)=\sum_{p_0}	(H_{p_0}(\mathbf{z})-H_{p_0}(0))\prod_{p<p_0}H_p(\mathbf{z})\prod_{p>p_0}H_p(0)$。
+E:/math/研究笔记\D514-大素数间隙的正下密度.md	1094	$|H_p(\mathbf{z})|\le\exp(C_M/p)$ 给出 $\prod_{p\le Y}|H_p(\mathbf{z})|	\le\exp(C_M\sum_{p\le Y}1/p)\ll(\log Y)^{C'_M}$。
+E:/math/研究笔记\D584-任意度量上随机k服务器竞争的平方对数阶.md	156	$V:=\mathbb{E}\sum_{t}\sum_{v\ne\mathrm{root}} r_{|v|-1}\lvert q_v(t)-q_v(t-1)\rvert	\le C_1\ell P+D_{\mathcal T}$（`03_allocation_data.tex:33--38`），
+E:/math/研究笔记\D627-数域上的Margulis-Platonov猜想.md	409	具体地，谱原子公式（`palettes.tex:530--534`）写：对每个 $\pi$，$\mathbb{E}_\mu[\mathrm{tr}\,\pi(c_h)]=0$（$h\neq e$），因此 $c_h$ 的分布均匀。这一均匀性正是 prop:palette-measure 所需要的"所有坐标边缘均匀"条件，而加性平移不变性在 Fourier 侧对应支撑在平凡表示上。`palettes.tex:540--624` 的"加性不变性→$\mathcal{S}$ 恒定"段则通过 eq:palette-density-alternative（`palettes.tex:641--646`）和指标函数 $\mathbf{1}_\mathcal{S}(c_h)$ 在 $T_b$ 下的 $L^2$ 恒等式，把 $T_b$-不变测度下"$\mathbf{1}_\mathcal{S}$ 期望"等于"$\mathcal{S}$ 密度"$|	\mathcal{S}|/|\mathcal{F}|$，再令 $b$ 遍历 $J(k)$ 得出 $\mathbf{1}_\mathcal{S}$ 恒等于 $|
+E:/math/研究笔记\D629-编码路径与两尺度组合实现拟线性归约.md	470	$(E_u,E_u,0)\xrightarrow{2}(E_u,E_v,0)\xrightarrow{3\uparrow}(E_u,E_v,1)	\xrightarrow{1}(E_v,E_v,1)\xrightarrow{3\downarrow}(E_v,E_v,0)$。
+E:/math/研究笔记\D65-渐近中点一致凸与树空间的无界菱形畸变.md	718	勘误第六条,Banakh 的节号。第 11 节写 [Banakh2000, $\S$2.IV],tex 实际是 general-forests.tex:37 的 `\cite[\S2.II]{Banakh2000}`。我大概在复述"沿 Ghoussoub--Maurey--Schachermayer 那条线"时把罗马数字记串了。	勘误第七条,$\eta$ 的在场与缺席。第 7 节我引 paired.tex:97 当作主定理中点断言的落点,但 :97 是证明段里的近似版本,带 $-\eta$ 与 $(0<\eta<1)$(:92-98);无 $\eta$ 的最终陈述在 introduction.tex:104($\widehat\delta_X(t)\ge\sqrt{1+t^2/12}-1$)与 general-forests.tex:30(eq:general-forest-modulus,同一式)。台账第 16 节按这两个行号记。
+E:/math/研究笔记\D711-球形Laughlin能隙一致稳定性的反推.md	1482	$\mathcal{R}_{n,q}\big(C_{q}(f)\mathbf{1}-P_{n,q}D_{q}(f)P_{n,q}\big)\mathcal{R}_{n,q}^{*}	\ge c\,S_{L,p}$。这里 $\mathcal{R}_{n,q}$ 是把零模空间映到旗标坐标的代表映射，$S_{L,p}$ 是
+E:/math/研究笔记\D711-球形Laughlin能隙一致稳定性的反推.md	1510	$\int_{SU(2)}\langle S_{L_{1},3/2}^{g}\rangle_{\psi}\,dg	\le\dfrac{h}{3c(q+1)}\sum_{j=0}^{q}f_{L_{1},3/2}(j)\le\dfrac{Ch}{q+1}$
+E:/math/研究笔记\D711-球形Laughlin能隙一致稳定性的反推.md	1668	$\frac{d}{dt}\operatorname{Tr}(\rho_{t}A)	=\operatorname{Re}\sum_{x}\int\operatorname{Tr}(\rho_{t}J_{y}^{*}C_{xy})\,dy$。
+E:/math/研究笔记\D726-无限制前模性-素数二处的全Hecke代数.md	246	$K$ 的 Hecke 特征，它的水平是 $|\operatorname{disc}K|\operatorname{Norm}	(\mathfrak f)$，其中 $\mathfrak f$ 是特征导子；固定水平下只有有限多对
+E:/math/研究笔记\D726-无限制前模性-素数二处的全Hecke代数.md	504	不可约 Banach 对象；在特征和 $\gamma_1+\gamma_2$ 处，单对象的描述按 $\gamma_1,	\gamma_2$ 的关系分三种情形给出，涉及连续施泰因贝格
+E:/math/研究笔记\D726-无限制前模性-素数二处的全Hecke代数.md	684	（regular-point.tex:252--261）。证明的关键是算子 $u=\left(\begin{smallmatrix}	1&1\\0&1\end{smallmatrix}\right)$：在 $\sigma\otimes U$ 上 $u$ 是"负的幂幺
+E:/math/研究笔记\D726-无限制前模性-素数二处的全Hecke代数.md	810	$A(N)$ 里，保持同一个驯顺水平 $N$。命题说：设 $N\ge5$ 奇，$\lambda:A(N)\to	\OO_E$ 是连续系数点，关联二维行列式 $(t_\lambda,d_\lambda)$；若 $E'/E$ 有限、
+E:/math/研究笔记\D752-球面随机感知机的自由能：任意有界势下变分公式的两类增量证明.md	122	反设沿子列期望压力比 $S(q)+\alpha V(q)$ 高出正间隙。泊松化在 $\alpha$ 处只改 $o(1)$：耦合计数、期望绝对差 $O(\sqrt N)$、每图案有界对数增量。取 $\alpha\delta< $ 间隙，构造接触目标	$$J_N=F_N-\sum_iw_iq_ih_i+S(q)+t(V(q)+\delta)+\sum_{j\le N}2^{-j}(u_j-\tfrac32)^2$$
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	195	$(\mathcal{Z}^{2p}(X)\otimes_{\mathbb{Q}}\overline{\mathbb{Q}})\cap H^{2p}(X,\mathbb{Q})	=\mathcal{Z}^{2p}(X)$（`02-tensors.tex:64-67`），由基扩张比较系数即得，
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	199	$\Hom(A,B)\otimes_{\mathbb{Z}}\mathbb{Q}\simeq	\Hom_{\mathrm{Hdg}}(H^1(B,\mathbb{Q}),H^1(A,\mathbb{Q}))$，
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	386	$k=\int_S f_1^*\alpha_1\smile\cdots\smile f_4^*\alpha_4\in	\overline{\mathbb{Q}}^\times$；非零靠原积分乘上 $\prod_i m_i$，代数性
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	405	给出 $D_i\in\mathcal{Z}^2(B(v_i)\times B(v_i)')\otimes_{\mathbb{Q}}	\overline{\mathbb{Q}}$（`03-surface.tex:60-82`）。素材强调这里整个上同调类
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	414	其后各旧一次因子产生 $3+2+1=6$ 次符号改变，故 $K=(-1)^6\,t_\alpha\otimes t_\beta	=t_\alpha\otimes t_\beta$；对 $A$ 积分得精确公式
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	431	$\operatorname{span}_{\mathbb{C}}\{h(U(v_i)_{\lambda_i}):	h\in\Hom_{\mathrm{Hdg}}(U(v_i),H^1(S,\mathbb{Q}))\}$，且
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	470	是 $G(F\otimes_{\mathbb{Q}}\mathbb{R})\simeq \operatorname{SU}(2,1)\times	\prod_{\tau\neq\mu}\operatorname{SU}(3)$ 中的余格点阵（Borel-Harish-Chandra），
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	479	$\psi_P(v\otimes p,v'\otimes p')=\operatorname{Tr}_{E/F}	(\delta\,h_V(v,v')h_P(p,p'))$（`04-theta.tex:109-117`）。交错性来自
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	543	$\operatorname{Sym}^2((\mathcal{F}_W)_{c\mu})	=\operatorname{Sym}^2(Q^*\otimes W_\mu^*)$ 再施 $\operatorname{alt}_2$，
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	570	(i) 的证明是有理坐标下的乘积公式：$\mathbb{V}_W=\mathbb{V}_{W_1}\perp	\mathbb{V}_{W_2}$ 有理辛直和后，总参考输入变成适配坐标的另一个有限输入，
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	620	$\int_{X'}\pi^*\xi\wedge\overline{\pi^*\xi'}	=\deg(\pi)\int_X\xi\wedge\overline{\xi'}\neq0$；两端商紧且无挠，无尖点项、
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	712	就此落定（`05b-frobenius.tex:265-271`）。转入 Albanese：$\alpha([x])=	a_{j(x)}(x)$ 从普通点自由群线性升到 $\widetilde A_S(k)$，
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	718	$X_0^3-N_1X_0^2+qN_2X_0-q^3N_3	=-qY_0X_0^2+qX_0Y_0X_0+q^3Z_0X_0-q^3X_0Z_0=0$，只用已证的两个交换
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	776	第二步 Weil 权重筛根：$P_\Phi(X)=\det(X-\Phi\mid V_\ell\widetilde A_S)	\in\mathbb{Z}[X]$ 的一切复根绝对值 $q^{1/2}$（对 $\mathbb{F}_q$ 上任意
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	818	$\operatorname{span}_{\mathbb{C}}\{f(U(v_j)_1):	f\in\Hom_{\mathrm{Hdg}}(U(v_j),H^1(Y,\mathbb{Q}))\}$，更深层次保持，
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	852	$\vartheta_i\in\operatorname{span}_{\mathbb{C}}	\{h(U(v_i)_1):h\in\Hom_{\mathrm{Hdg}}(U(v_i),H^1(Y,\mathbb{Q}))\}$；
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	964	$\CH^r(A)\otimes_{\mathbb{Z}}\mathbb{Q}_\ell\to	H^{2r}_{\mathrm{\acute et}}(\bar A,\mathbb{Q}_\ell(r))^{G_q}$ 满，
+E:/math/研究笔记\D772-CM阿贝尔簇的有理Hodge猜想.md	971	$\operatorname{cl}_\ell(m^{-1}(\pi_m)_*z_m)	=m^{-1}\sum_\sigma\sigma(\alpha)=\alpha$，除以 $m$ 在 $\mathbb{Q}_\ell$
+E:/math/研究笔记\D89-酉化蕴含均称-Dixmier离散群问题的机器化拆解.md	507	范数界走分解 $\pi(g)=\begin{pmatrix}\one&D(g)\\0&\one\end{pmatrix}	\begin{pmatrix}U(g)&0\\0&U(g)\end{pmatrix}$（`:225-233`），
+E:/math/研究笔记\D89-酉化蕴含均称-Dixmier离散群问题的机器化拆解.md	608	$\lVert\frac1d\sum_{t\in S}R_tf\rVert_2^2	=1-\frac1{2d^2}\sum_{t,t'\in S}\lVert R_tf-R_{t'}f\rVert_2^2$，
+E:/math/研究笔记\D89-酉化蕴含均称-Dixmier离散群问题的机器化拆解.md	696	$\#\{(x,i):x\in U,\ xs_i\in V\}\le\lVert A\rVert\lVert\one_U\rVert_2\lVert\one_V\rVert_2	=n\rho^\ell\sqrt{|U||V|}$。
+E:/math/研究笔记\D89-酉化蕴含均称-Dixmier离散群问题的机器化拆解.md	812	$|w^{\mathsf T}Mz-w_0^{\mathsf T}Mz_0|\le\lVert w-w_0\rVert L\lVert z\rVert	+\lVert w_0\rVert L\lVert z-z_0\rVert\le L/2$，
+E:/math/研究笔记\D89-酉化蕴含均称-Dixmier离散群问题的机器化拆解.md	1148	(d) [推测] 候选失败路线一：把 $D(g)$ 估成 $\lVert T\rVert+\lVert U(g)TU(g)^{-1}\rVert	\le2\lVert T\rVert$。
+E:/math/研究笔记\D89-酉化蕴含均称-Dixmier离散群问题的机器化拆解.md	1304	$\lVert W_\ell(s)\rVert_{\HS}^2=\Tr(W_\ell(s)^*W_\ell(s))	=\sum_{i,j:s_i=s_j}\Tr(P_iP_j)$，
+E:/math/研究笔记\D89-酉化蕴含均称-Dixmier离散群问题的机器化拆解.md	1306	而 $\Tr(P_iP_j)=\Tr(v_iv_i^*v_jv_j^*)=(v_i^*v_j)\Tr(v_iv_j^*)	=\lvert v_i^*v_j\rvert^2$（秩一算子的迹与内积配对），
+E:/math/研究笔记\D96-残差球上的记忆与样本下界：无噪高斯回归中 streaming learner 的反推笔记.md	585	终端 $i=J$：$D\ge d-2J\ge\frac{3d}4$ 给 $D-1\ge p$，$\frac{8\epsilon}r\ge1$ 用全测度，否则 02:28--30 的 $\min\{1,(8\epsilon/R)^{D-1}\}$ 直接压过 $(8\epsilon/r)^p$。回溯步 $i+1\to i$ 里，$\S$20 的态最大给出	$\E_N\max_{v'}F_{v'}(N)\le w^{1/m}2^{3d}U_0$，$U_0=G^{J-i-1}(8\epsilon/r')^p$，
+E:/math/研究笔记\D238-平方差自由集的固定幂节省.md	486	大弧上两边都归约到中心系数：$S_0(\alpha)=c_0(\alpha_0)V_N(y) +O(qD^2H^3/N)$，$S(\alpha)=c(\alpha_0)V_N(y)	+O(qD^2H^2(1+\lvert y\rvert N)/\sqrt N)$（kernel.tex:269-320，周期分段
+E:/math/研究笔记\D348-六角晶格桥长对数窗口的反推之路.md	440	输出逆向重数 $\le CT_R$，其未标记质量 $\ge cR(R^{-1/4}(\log h)^{-C})^2a_h/(\sqrt R\log R)\ge h^{-1/4}(\log h)^{-C}$（11.tex:399）。连接子长 $\le CR^{4/3}$、$R\le2h(\log	h)^{1/64}$ 合长 $<\ell_+$，输出全落 $[\ell_-,2\ell_+]$，对 $R\in[R_0,2R_0]$ 求和转回
+E:/math/研究笔记\D348-六角晶格桥长对数窗口的反推之路.md	442	固定桥向得 $\sum_{1\le H\le2R_0}\mu\{\omega\in{\cal B}_H:\ell_-\le\lvert\omega\rvert\le 2\ell_+\}\ge ch^{3/4}(\log h)^{-C}$（11.tex:416），即定理。桥那半因 $[h,2h]\subset	[1,2R_0]$ 同界。L:thm:finite 的补全（11.tex:423）把 §9 桥界、§13 帽、§14 直径尾、
+E:/math/研究笔记\D371-任意阶本原四次环面包线的等分布.md	468	$\sum_{\Tr z=m,\ z\in\mathcal R}M(z)\ll\sqrt D\,A_{\phi}\prod_{p\in S}(1-p^{-1})Z_p \prod_{p\in\mathcal P_Y}\E_p b_p$，$Z_p=\prod_{\mathfrak p\mid p,\ \mathfrak p\subset R}	(1-\Nm(\mathfrak p)^{-1})^{-1}$（`sieve.tex:509-517`）。
+E:/math/研究笔记\D627-数域上的Margulis-Platonov猜想.md	409	具体地，谱原子公式（`palettes.tex:530--534`）写：对每个 $\pi$，$\mathbb{E}_\mu[\mathrm{tr}\,\pi(c_h)]=0$（$h\neq e$），因此 $c_h$ 的分布均匀。这一均匀性正是 prop:palette-measure 所需要的"所有坐标边缘均匀"条件，而加性平移不变性在 Fourier 侧对应支撑在平凡表示上。`palettes.tex:540--624` 的"加性不变性→$\mathcal{S}$ 恒定"段则通过 eq:palette-density-alternative（`palettes.tex:641--646`）和指标函数 $\mathbf{1}_\mathcal{S}(c_h)$ 在 $T_b$ 下的 $L^2$ 恒等式，把 $T_b$-不变测度下"$\mathbf{1}_\mathcal{S}$ 期望"等于"$\mathcal{S}$ 密度"$| \mathcal{S}|/|\mathcal{F}|$，再令 $b$ 遍历 $J(k)$ 得出 $\mathbf{1}_\mathcal{S}$ 恒等于 $|	\mathcal{S}|/|\mathcal{F}|$ 即常数，矛盾于 $\mathcal{S}$ 非空真子集。

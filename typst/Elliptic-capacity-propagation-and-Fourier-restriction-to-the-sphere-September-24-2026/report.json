@@ -1,0 +1,34 @@
+{
+  "paper": "Elliptic-capacity-propagation-and-Fourier-restriction-to-the-sphere-September-24-2026",
+  "ok": true,
+  "typ_lines": 2514,
+  "included_pdf_pages": 0,
+  "formulas": 2244,
+  "math_failed": 0,
+  "labels": 240,
+  "equations": 1,
+  "theorems": 0,
+  "figures": 3,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "cetz_refused": 1,
+    "cetz_converted": 2
+  },
+  "samples": {
+    "formulas": "2244",
+    "cetz_refused": "\\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth, axes/.style={gray!65,thin}, capacityellipse/.style={draw=linkblue,fill=li",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Elliptic-capacity-propagation-and-Fourier-restriction-to-the-sphere-September-24-2026.tex"
+}

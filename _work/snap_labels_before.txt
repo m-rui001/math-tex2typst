@@ -1,0 +1,47 @@
+A-counterexample-to-Hadwigers-conjecture-Sep pics  1 canvas  1 raw 0
+A-Counterexample-to-Kaplanskys-Direct-Finite pics  2 canvas  2 raw 0
+A-counterexample-to-the-Colin-de-Verdiere-ch pics  3 canvas  3 raw 0
+A-finite-entropy-system-without-a-smooth-pos pics  3 canvas  3 raw 0
+A-finitely-generated-counterexample-to-the-E pics  2 canvas  2 raw 0
+A-Fully-Polynomial-Randomized-Approximation- pics  3 canvas  3 raw 0
+A-linear-cycle-and-edge-decomposition-of-eve pics  1 canvas  1 raw 0
+A-Logarithmic-Independence-Bound-for-Clique- pics  1 canvas  1 raw 0
+A-Negative-Solution-to-the-Finite-Lattice-Re pics  2 canvas  2 raw 0
+A-nine-dimensional-counterexample-to-Borsuks pics  3 canvas  3 raw 0
+A-strict-inverse-first-power-bound-for-univa pics  1 canvas  1 raw 0
+Almost-Linear-Time-Maximum-Cardinality-Match pics  3 canvas  3 raw 0
+An-Almost-Linear-Approximation-Scheme-for-Ed pics  2 canvas  2 raw 0
+Asymptotic-midpoint-uniform-convexity-and-un pics  3 canvas  3 raw 0
+Canonical-conformal-limits-of-subcritical-FK pics  8 canvas  8 raw 0
+Close-Separable-Cstar-Algebras-Without-Spati pics  1 canvas  1 raw 0
+Combinatorial-Invariance-of-Kazhdan-Lusztig- pics  2 canvas  2 raw 0
+Correspondence-Coloring-Graphs-with-a-Forbid pics  1 canvas  1 raw 0
+Counterexamples-to-the-duality-conjecture-fo pics  2 canvas  2 raw 0
+Cycle-clique-Ramsey-numbers-September-25-202 pics  2 canvas  2 raw 0
+Deterministic-nonbipartite-Ramanujan-graphs- pics  2 canvas  2 raw 0
+Endpoint-pointwise-convergence-for-the-Schro pics  2 canvas  2 raw 0
+Entropy-and-Face-Dimension-of-the-Perfect-Ma pics  2 canvas  2 raw 0
+Finite-Congruence-Lattices-Characterization- pics  4 canvas  4 raw 0
+Fixed-energy-universality-for-weak-Anderson- pics  1 canvas  1 raw 0
+GOE-bulk-universality-for-fixed-degree-rando pics  1 canvas  1 raw 0
+Independent-products-in-real-L1-asymptotic-m pics  1 canvas  1 raw 0
+L1-Embeddings-of-Graphs-of-Bounded-Treewidth pics  1 canvas  1 raw 0
+Marked-polygon-correlations-and-one-arc-boun pics  2 canvas  2 raw 0
+Mass-and-covering-exponents-for-fixed-length pics 10 canvas 10 raw 0
+Midpoint-lenses-in-segment-spaces-September- pics  1 canvas  1 raw 0
+Nonuniqueness-of-percolation-on-nonamenable- pics  4 canvas  4 raw 0
+Ordinary-two-point-correlations-of-multiplic pics  2 canvas  2 raw 0
+Paired-states-and-Hamiltonian-cycles-in-cubi pics  1 canvas  1 raw 0
+Parabolic-intersections-in-Artin-groups-Sept pics  1 canvas  1 raw 0
+Planar-Graph-Metrics-Embed-into-L1-with-Cons pics  3 canvas  3 raw 0
+Purely-Cosmetic-Surgery-on-Knots-in-the-Thre pics  6 canvas  6 raw 0
+Short-Egyptian-fractions-September-25-2026   pics  1 canvas  1 raw 0
+The-Euclidean-plane-is-not-five-colorable-Se pics  3 canvas  3 raw 0
+The-Grothendieck-homotopy-hypothesis-via-ele pics  5 canvas  2 raw 0  SHORT
+The-low-temperature-Sherrington-Kirkpatrick- pics  2 canvas  1 raw 0  SHORT
+The-Margulis-Platonov-conjecture-over-number pics  1 canvas  1 raw 0
+The-sharp-factor-of-IID-threshold-for-the-fr pics  1 canvas  1 raw 0
+The-Sharp-Terminal-Leave-in-Random-Triangle- pics  2 canvas  2 raw 0
+The-spherical-magnetization-law-for-the-thre pics  2 canvas  2 raw 0
+Variable-dimension-Weisfeiler-Leman-equivale pics  6 canvas  6 raw 0
+TOTAL papers 46 pics 113 canvas 109 raw 0

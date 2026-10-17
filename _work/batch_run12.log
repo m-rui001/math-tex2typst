@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "E:\math\tools\batch_typst.py", line 74, in <module>
+    main()
+    ~~~~^^
+  File100/727 compiled=100 elapsed=35s
+120/727 compiled=120 elapsed=41s
+140/727 compiled=140 elapsed=48s
+160/727 compiled=160 elapsed=55s
+180/727 compiled=180 elapsed=67s
+200/727 compiled=200 elapsed=79s
+220/727 compiled=220 elapsed=92s
+240/727 compiled=240 elapsed=105s
+260/727 compiled=260 elapsed=116s
+280/727 compiled=280 elapsed=126s
+line 780, in replace
+    os.replace(self, target)
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'E:\\math\\typst\\batch-report.tmp' -> 'E:\\math\\typst\\batch-report.json'

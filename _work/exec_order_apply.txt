@@ -1,0 +1,23 @@
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D761  D761-离散群的l1-Bass猜想.md  size=85659 lines=564 CR=0
+   hit D761:281 \dv occ@140 ctx=..._{\R}U_j(v-u)K_j(\mathrm dY_j(u),Y_j(v))\dv$ 看作时间参数上的一形式，由 $Y_j(u+1)=gY_j(u)$ 与变元平移...
+   hit D761:287 \du occ@73 ctx=...er}}K_j((\mu_{j+1}*Y_j),(\mu_{j+1}*Y_j))\du$（两个卷积展开后，同时平移把滞后差 $a-b$ 的分布变成偶函数的自卷积 $\...
+   hit D761:303 \du occ@132 ctx=..._{\mathrm{per}}\sum_a\eta_j(u-t_i-a)^{2}\du\le\lVert\eta_j\rVert_\infty\le C/\delta...
+   hit D761:303 \du occ@321 ctx=...er}}\sum_\omega\lvert\partial_iY_j\rvert\du\le Ca_jl_i$，平方因子配对至多 $\le8\delta_j$，所以积...
+   hit D761:303 \dv occ@473 ctx=...-612`）。全符号级另有轨道质量 $\int_{\R}Y_{b_*}(v)_y\dv\le1$（情形 (i) 下 $g^{-a}y$ 互异），因此系数界与匹配周期的...
+   hit D761:315 \du occ@86 ctx=...上取测度 $\mathrm d\vartheta_j(u,y)=Y_j(u)_y\du$，$\mathcal H_j=L^2(\vartheta_j)$，定义算子核...
+   edited_lines=4 groups=5 bytes 85659 -> 85707 (delta +48) parity_ok=True
+   WRITTEN md5 9d77e39f9337 -> 38247c826a0e
+
+EXECUTED groups by family:
+  \du              3
+  \dv              2
+EXECUTED groups by note:
+  D761     5
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D761     \dv            declared=2   replaced=2   OK
+  D761     \du            declared=4   replaced=4   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=5 covering declared sites=6 of 149

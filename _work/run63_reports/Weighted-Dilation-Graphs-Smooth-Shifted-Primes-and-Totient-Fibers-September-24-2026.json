@@ -1,0 +1,32 @@
+{
+  "paper": "Weighted-Dilation-Graphs-Smooth-Shifted-Primes-and-Totient-Fibers-September-24-2026",
+  "ok": true,
+  "typ_lines": 1966,
+  "included_pdf_pages": 0,
+  "formulas": 1649,
+  "math_failed": 0,
+  "labels": 257,
+  "equations": 2,
+  "theorems": 1,
+  "figures": 3,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 3
+  },
+  "samples": {
+    "formulas": "1649",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\renewcommand\\@maketitle"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Weighted-Dilation-Graphs-Smooth-Shifted-Primes-and-Totient-Fibers-September-24-2026.tex"
+}

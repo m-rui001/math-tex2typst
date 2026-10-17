@@ -1,0 +1,16 @@
+=== typst ===
+$a #h(2em) upright("ZQCT000001") quad b$
+
+$a #h(2em) upright("ZQCT000012x") quad b$
+
+\$a \\qquad\\text{\\citep\[Lemma\~2.9, Equation\~(19)\]{Dickson2014}} b\$
+
+$a #h(2em) upright("ZQCT000003") .$<x>
+
+$parallel phi parallel_(upright(r o w)) lt.eq sqrt(2) thin parallel phi parallel^2 #h(2em) upright("ZQCT000004") .$
+
+=== stderr ===
+[WARNING] Could not convert TeX math a \qquad\text{\citep[Lemma~2.9, Equation~(19)]{Dickson2014}} b, rendering as TeX:
+  a \qquad\text{\citep[Lemma~2.9, Equation
+                  ^
+  expecting text

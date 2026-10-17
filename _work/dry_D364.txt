@@ -1,0 +1,12 @@
+################ D364  (D364-平面Schrödinger端点收敛的H三分之一次幂全程.md)
+before: bytes=71226 lines=673
+ROW line=453  sites=2  pipes 8->6  $=2(parity even)
+OLD| | $C\|f\|_{H^{1/3}}$ 端点界 | 主极大常数 | `09-endpoint.tex:461` | 全文落点 | 三柱松一格即退等号 |
+NEW| | $C\lVert f\rVert_{H^{1/3}}$ 端点界 | 主极大常数 | `09-endpoint.tex:461` | 全文落点 | 三柱松一格即退等号 |
+after: bytes=71235 (delta +9) lines=673 rows_fixed=1 sites_fixed=2 sites_registered=0
+[DRY] nothing written to the note
+D364 file-count \lVert  = 14
+D364 file-count \lvert  = 11
+D364 file-count \mid  = 0
+D364 file-count \upharpoonright = 0
+D364 file-count \Vert  = 0

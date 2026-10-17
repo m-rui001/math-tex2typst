@@ -1,0 +1,7 @@
+ORDER total=517
+EXECUTABLE=0 over 0 notes
+STALE(quote absent)=0  PARTIAL(fix already present)=0  MALFORMED/lookup=517
+
+top notes by executable count:
+
+family mix: 

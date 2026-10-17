@@ -1,0 +1,10 @@
+file = E:/math/研究笔记\D718-均匀拟多项式时间迹重建的反推笔记.md
+bytes=74009 lines=1085 CR=0 heads=18  B/sec=4112
+first_heads = ["## §0 取材范围与登记", "## §1 初始动机与猜想"]
+last_heads = ["## §15 勘误", "## §16 补勘误", "## §17 再补勘误"]
+tail3 = ["", "两字连词形态落在本体侧机械清理通道可一次清除的类别内；第一节那处口语连接语不在该清单内，请单独处理。本稿自此不再追加勘误。", ""]
+sep_rows=1 std_hdr=1
+dir_raw = preprints/Uniform-quasipolynomial-time-trace-reconstruction-October-5-2026
+tex=8 total=98116B
+  UNCITED     3846B   65L  build/manuscript/history.tex
+  UNCITED     5606B  132L  build/references/references.tex

@@ -1,0 +1,288 @@
+=== rejection counts over 352 raw pairs ===
+kind-mismatch-not-aligned    103
+no-common-core               91
+no-defect-noun               66
+CLEAN                        66
+too-short                    14
+generic-bad-unpinned         5
+length-ratio                 3
+empty-or-identical           2
+ellipsis                     2
+
+=== samples of CLEAN (66) ===
+D268-L1073-I02 | D268-单元格有界列联表FPRAS的反向推导笔记.md | verdict=EXEC
+   clause: $N_{\mathrm{av}}$ 我从 $10^{624}$ 更正为 $10^{482}$，$J_*$ 从 $10^{658}$ 更正为 $10^{516}$，这两条的误差全部来自 $\eta^{-2}$ 那一步
+   mk=更正为 badkind=math bad='10^{658}'
+   goodkind=math good='10^{516}' core='10^{'
+   nb=1 ng=0 bad_all=[[1060, 1], [1077, 1]] good_all=[[1077, 1]] flags=[]
+D231-L193-I03 | D231-有理二元挠椭圆曲线的逐点2-反定理推导笔记.md | verdict=ALREADY-DONE
+   clause: 第三条：§10 有两处笔误留存原样、不改动，在此纠正：其一如"对边比特是 multiline ar 多项式"，应读作"multilinear 多项式"
+   mk=应读作 badkind=quote bad='对边比特是 multiline ar 多项式'
+   goodkind=quote good='multilinear 多项式' core='multiline'
+   nb=0 ng=2 bad_all=[[199, 1]] good_all=[[133, 2], [199, 1]] flags=[]
+D431-L151-I05 | D431-光滑各向同性弹性逆问题的全局唯一性.md | verdict=EXEC
+   clause: §8 组装段里正交标架第三向量误写成 $e_3=v_1\times v_2$ 的错符号，正确记法应为 $e_3(v)=e_1(v)\times e_2(v)$（素材出处 `sections/transport-matching.tex:530-531`），登记不改
+   mk=应为 badkind=math bad='e_3=v_1\\times v_2'
+   goodkind=math good='e_3(v)=e_1(v)\\times e_2(v)' core='\\times '
+   nb=1 ng=0 bad_all=[[91, 1], [161, 1]] good_all=[[161, 1]] flags=[]
+D541-L387-I03 | D541-临界福尔廷卡斯泰尔恩伊辛图上的随机游走收敛到刘维尔布朗运动 | verdict=KEEP-DECLARATION
+   clause: 行 87 之外，新增三处：行 271 一处（§16 第二段，出现在引号内的对照短语里，该句正确读法是"耦合只按子列逐一供给，对原列没有一致性承诺"）、行 279 一处（§17 第三段短语"作为笔记某字论文主张"，应读作"作为笔记的私人延伸"）、以及行 279 一处禁止性过渡语（该句应直接删去过渡语读作"于是精确时钟的代价被搬到了 §6 与
+   mk=应读作 badkind=quote bad='作为笔记某字论文主张'
+   goodkind=quote good='作为笔记的私人延伸' core='作为笔记'
+   nb=0 ng=0 bad_all=[[393, 1]] good_all=[[393, 1]] flags=[]
+D357-L346-I05 | D357-盘转移表示与受限桥质量.md | verdict=EXEC
+   clause: 类别三，公式笔误三处：其一，§8 末段"作_ansatz_为单项式和"应读作"作单项式和的 ansatz"
+   mk=应读作 badkind=quote bad='作_ansatz_为单项式和'
+   goodkind=quote good='作单项式和的 ansatz' core='ansatz'
+   nb=1 ng=0 bad_all=[[102, 1], [352, 1]] good_all=[[352, 1]] flags=[]
+D94-L326-I01 | D94-正则轨迹剪枝与量子奇偶下界.md | verdict=CONFLICT-RISK
+   clause: 勘误一条(实测口径修正,不动正文):§5.3(c) 我写"我在 tex 里 grep 到 11 处 uniform",完成 §7 后复核命令 `grep -o "uniform" sections/*.lean` 应为 `grep -o "uniform" sections/*.tex`:实测 occurrence
+   mk=应为 badkind=bt bad='grep -o "uniform" sections/*.lean'
+   goodkind=bt good='grep -o "uniform" sections/*.tex' core='grep -o "uniform" sections/*.'
+   nb=0 ng=0 bad_all=[[328, 1]] good_all=[[328, 1]] flags=[]
+D358-L144-I05 | D358-Donovan猜想在素域代数闭包上的证明.md | verdict=EXEC
+   clause: 类别四，大小写笔误：§7 第四段"GENERIC 代数可分"应为"generic 代数可分"（对应原文 generic algebra is separable，`build/sections/07_extensions.tex:447-448`）
+   mk=应为 badkind=quote bad='GENERIC 代数可分'
+   goodkind=quote good='generic 代数可分' core=' 代数可分'
+   nb=1 ng=0 bad_all=[[117, 1], [154, 1]] good_all=[[154, 1]] flags=[]
+D357-L346-I03 | D357-盘转移表示与受限桥质量.md | verdict=EXEC
+   clause: 类别三，公式笔误三处：其一，§8 末段"作_ansatz_为单项式和"应读作"作单项式和的 ansatz"
+   mk=应读作 badkind=quote bad='作_ansatz_为单项式和'
+   goodkind=quote good='作单项式和的 ansatz' core='ansatz'
+   nb=1 ng=0 bad_all=[[102, 1], [352, 1]] good_all=[[352, 1]] flags=[]
+
+=== samples of no-defect-noun (66) ===
+D15-L565-I05 | D15-有限欧氏Ramsey配置分类.md | verdict=NO-VERBATIM
+   clause: 第 459 行的 `` `:166-168$ `` 应读作 `` `:166-168` ``，即 `pairs:exact-moment` 的公式行号
+   mk=应读作 badkind=bt2 bad=' `:166-168$ '
+   goodkind=bt2 good=' `:166-168` ' core=' `:166-168'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D13-L307-I26 | D13-有界树宽图的L1嵌入.md | verdict=NO-VERBATIM
+   clause: 1 节"期渡 Lee-Sidiropoulos"：应为"经过 Lee-Sidiropoulos"，指 dominating tree 的随机中间件
+   mk=应为 badkind=quote bad='期渡 Lee-Sidiropoulos'
+   goodkind=quote good='经过 Lee-Sidiropoulos' core=' Lee-Sidiropoulos'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D527-L177-I10 | D527-QAOA在热力学先行极限下达到SK基态能量.md | verdict=EXEC
+   clause: E7 §13 行文中把 08-regular-maxcut.tex 简写为"08:"前缀（首次出现处已给全名），§14 把 07-positive-temperature.tex 简写为"07:"，同 §16 本节的"05:""03:"用法
+   mk=写为 badkind=quote bad='08:'
+   goodkind=quote good='07:' core='0'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D186-L338-I04 | D186-固定粒子停机测试的构造路径.md | verdict=NO-VERBATIM
+   clause: §21 验收项第 5 条写"落点 §17 第 18 节第二条"，应读作"落点 §18 的未答问题第二条"
+   mk=应读作 badkind=quote bad='落点 §17 第 18 节第二条'
+   goodkind=quote good='落点 §18 的未答问题第二条' core='落点 §1'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D324-L392-I05 | D324-观测路径之后的条件信息收缩.md | verdict=NO-VERBATIM
+   clause: §7 里"这个推法 my 论文里的位置有点特殊"应读作"这个推法在论文里的位置有点特殊"
+   mk=应读作 badkind=quote bad='这个推法 my 论文里的位置有点特殊'
+   goodkind=quote good='这个推法在论文里的位置有点特殊' core='论文里的位置有点特殊'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D186-L338-I03 | D186-固定粒子停机测试的构造路径.md | verdict=NO-VERBATIM
+   clause: §21 验收项第 5 条写"落点 §17 第 18 节第二条"，应读作"落点 §18 的未答问题第二条"
+   mk=应读作 badkind=quote bad='落点 §17 第 18 节第二条'
+   goodkind=quote good='落点 §18 的未答问题第二条' core='落点 §1'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D184-L518-I03 | D184-十一块箭头与hub测试-Kurosh除环问题反例.md | verdict=NO-VERBATIM
+   clause: §5 第 4 段中"把 $\ell_n\le n$ 这类不等式当作显式条件检查"应为"把 $i_n\le n$ 这类不等式当作显式条件检查"，那里的下标是日程表里的基域指标
+   mk=应为 badkind=quote bad='把 $\\ell_n\\le n$ 这类不等式当作显式条件检查'
+   goodkind=quote good='把 $i_n\\le n$ 这类不等式当作显式条件检查' core='_n\\le n$ 这类不等式当作显式条件检查'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D346-L439-I03 | D346-圈团Ramsey数猜想的闭合之路.md | verdict=NO-VERBATIM
+   clause: "下界染色"行第二格中的那个英文词应读作"不相交"，全格读法为：$n-1$ 个两两不相交的红 $K_{m-1}$，团间全蓝
+   mk=应读作 badkind=quote bad='下界染色'
+   goodkind=quote good='不相交' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+
+=== samples of kind-mismatch-not-aligned (103) ===
+D275-L625-I09 | D275-用矩阵能量的曲率拿下dyadic三角Hilbert型的L3 | verdict=NO-VERBATIM
+   clause: 据此更正 §33 倒数第四条里"两字转折连接词类命中 0 次"那句：该处应为 1 次，成因是那条自检文字写在本条之前、我当时漏掉了自己刚在第六处里造出的那一个
+   mk=应为 badkind=quote bad='两字转折连接词类命中 0 次'
+   goodkind=bare good='1' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D335-L298-I03 | D335-连续库仑谱下确界在二进制核电荷编码下的QMA难.md | verdict=EXEC
+   clause: §11 末尾"再抬 $Z_*e^{-1.2D$ 去掉限制"漏了一个右定界符，应为 $Z_*e^{-1.2D}$ 这一加性项（对应 04-continuum.tex 第 743 到 745 行）
+   mk=应为 badkind=quote bad='再抬 $Z_*e^{-1.2D$ 去掉限制'
+   goodkind=math good='Z_*e^{-1.2D}' core='Z_*e^{-1.2D'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D353-L281-I02 | D353-素数域上多项式确定性因子分解的研究笔记.md | verdict=NO-VERBATIM
+   clause: 同时该句前半中"§7 无穷格不可除性论证的暖身"的小节编号有误，强迫分离论证在 §6，应读作 §6
+   mk=应读作 badkind=quote bad='§7 无穷格不可除性论证的暖身'
+   goodkind=bare good='§6' core='§'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D251-L432-I08 | D251-沿Lipschitz方向Hilbert变换的一致L2界.m | verdict=NO-VERBATIM
+   clause: "数据行 $34$ 行"应为 $52$ 行
+   mk=应为 badkind=quote bad='数据行 $34$ 行'
+   goodkind=math good='52' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D398-L726-I09 | D398-有限同余格的刻画与不可判定性.md | verdict=NO-VERBATIM
+   clause: 第四，§9 里我最初把 $S$ 的硬连记作 `sections/diophantine.tex:178`， 复核后改为 177 行，改动已在追加前完成，落盘只有一版
+   mk=改为 badkind=bt bad='sections/diophantine.tex:178'
+   goodkind=bare good='177' core='17'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D201-L220-I04 | D201-无挠反例与分离谱带构造.md | verdict=NO-VERBATIM
+   clause: - 正文里散落三处本应删掉的孤立美元号：§4 末"到 `:335`"后的多余 `$`、§10 首段残句"到 `:18`"后的多余 `$`（该句已被截断，见上）、§11"到 `:111`"后的多余 `$`
+   mk=多余 badkind=quote bad='到 `:335`'
+   goodkind=bt good='$' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D226-L247-I02 | D226-最迟锚点归纳与谱紧掩模下的最坏情形痕迹重构样本上界.md | verdict=NO-VERBATIM
+   clause: 第二，§11 初稿在描述 $\mathcal Q(g)$ 对复坐标的延拓约定时同样误用该连接结构，现文为"复数直接平方、不取模方"，语义与 part-1.tex 第 304 行的 squares, not absolute squares 一致
+   mk=误用 badkind=quote bad='复数直接平方、不取模方'
+   goodkind=math good='\\mathcal Q(g)' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D307-L330-I03 | D307-法诺收缩上有界klt补标的阈值反推.md | verdict=NO-VERBATIM
+   clause: 第 §7 节末尾出现一处未定义宏 `\G_m`，应作 $\mathfrak mathbb Q$-环面或多单项式框架下的环面作用，依据 `build/sections/constrained-minimum.tex:117-118`
+   mk=应作 badkind=bt bad='\\G_m'
+   goodkind=math good='\\mathfrak mathbb Q' core='\\'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+
+=== samples of generic-bad-unpinned (5) ===
+D478-L234-I05 | D478-虚二次域上椭圆曲线的模性.md | verdict=KEEP-DECLARATION
+   clause: 本勘误节第一条统计需补充修正：未译英文残留总数应为九处，新增的两处都在 §11 第三条，一处把"机构"一词写成了英文原词，另一处把"次数"一词写成了英文原词
+   mk=写成了 badkind=quote bad='次数'
+   goodkind=quote good='机构' core=''
+   nb=2 ng=1 bad_all=[[134, 1], [144, 1], [244, 1]] good_all=[[134, 1], [244, 1]] flags=['SHORT-BAD(2)']
+D04-L361-I03 | D04-乘性函数二点关联.md | verdict=KEEP-DECLARATION
+   clause: 编号本身没有重复，缺的是排布次序：正解是把第 $31$ 至 $33$ 节整块搬到第 $30$ 节末段与第 $34$ 节题记之间
+   mk=搬到 badkind=math bad='33'
+   goodkind=math good='30' core='3'
+   nb=34 ng=49 bad_all=[[117, 1], [223, 3], [303, 1], [363, 1], [367, 4], [371, 1], [375, 1], [379, 1], [405, 1], [407, 1], [411, 1], [419, 2], [421, 1], [429, 3], [431, 1], [473, 1], [477, 1], [483, 1], [485, 1], [495, 1], [535, 2], [575, 2], [621, 3], [661, 1], [663, 2], [695, 1], [728, 1], [734, 1]] good_all=[[55, 1], [121, 1], [125, 1], [135, 1], [193, 1], [209, 1], [217, 2], [223, 3], [233, 1], [237, 2], [259, 1], [295, 1], [299, 1], [313, 1], [318, 1], [351, 1], [367, 2], [369, 1], [413, 1], [423, 1], [429, 8], [471, 1], [483, 1], [523, 2], [563, 1], [571, 2], [587, 1], [619, 2], [621, 1], [623, 1], [661, 3], [685, 1], [715, 1], [728, 1], [732, 1]] flags=['SHORT-BAD(2)']
+D290-L549-I04 | D290-任意MASA上的逼近铺砌：从混合多项式到无期望三段装配.m | verdict=KEEP-DECLARATION
+   clause: 第 22 节一处"延拓"误写为"延置"
+   mk=误写为 badkind=quote bad='延置'
+   goodkind=quote good='延拓' core='延'
+   nb=1 ng=1 bad_all=[[426, 1], [557, 1]] good_all=[[252, 1], [557, 1]] flags=['SHORT-BAD(2)']
+D576-L260-I01 | D576-光滑闭曲面到欧氏四维空间的等距浸入.md | verdict=KEEP-DECLARATION
+   clause: §23 复述首块缺口时把"字节"误写为"字体"一处（"首块 $18999$ 字体的永久缺口"句中），按类别登记于错字类，落盘文本不作就地改动
+   mk=误写为 badkind=quote bad='字体'
+   goodkind=quote good='字节' core='字'
+   nb=1 ng=15 bad_all=[[250, 1], [262, 2]] good_all=[[17, 2], [187, 5], [232, 2], [246, 1], [250, 1], [254, 2], [256, 1], [258, 1], [262, 1]] flags=['SHORT-BAD(2)']
+D174-L805-I03 | D174-光滑度量下Yau节点集上界的三维与四维反例.md | verdict=KEEP-DECLARATION
+   clause: 英文残留三处（一处代词、一处过去分词、一处由"密度"误植的定语），后者涉及的两处统一改为"正定度量"
+   mk=改为 badkind=quote bad='密度'
+   goodkind=quote good='正定度量' core='度'
+   nb=23 ng=2 bad_all=[[33, 1], [109, 1], [127, 1], [145, 1], [164, 3], [254, 1], [424, 1], [430, 1], [516, 1], [524, 2], [552, 1], [557, 2], [611, 1], [649, 1], [672, 1], [684, 1], [689, 1], [707, 1], [811, 1], [831, 1]] good_all=[[633, 1], [635, 1], [811, 1]] flags=['SHORT-BAD(2)']
+
+=== samples of ellipsis (2) ===
+D342-L165-I02 | D342-临界SK模型单点热浴混合的多项式指数.md | verdict=NO-VERBATIM
+   clause: 类别"四字过渡套语"与"两字转折连接词"：我在 §4 描述 $k=nr^3$ 门槛那一行，误把 $\log^{10}n$ 打成了一个含省略号的残缺串（写作 $\log^{2... }$）
+   mk=打成了 badkind=math bad='\\log^{2... }'
+   goodkind=math good='\\log^{10}n' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D460-L206-I02 | D460-紧Kähler空间在对数Iitaka亚可加性假设下的对数丰 | verdict=NO-VERBATIM
+   clause: 另外 §4 程序段有一处中英混杂的草稿自纠残留："若给一条半ample/nee...（更正：nef）有理线"，应读作"若给一条 nef 有理线"，"nee" 为笔误、括注为思考残留，保留原样
+   mk=应读作 badkind=quote bad='若给一条半ample/nee...（更正：nef）有理线'
+   goodkind=quote good='若给一条 nef 有理线' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+
+=== samples of length-ratio (3) ===
+D204-L45-I05 | D204-四维盘嵌入猜想的边界障碍：从自由群问题到Frobenius | verdict=NO-VERBATIM
+   clause: 三个共轭子独立选取加上 Lemma geo:spanning：$\operatorname{span}_{\mathbb C}\{\operatorname{Ad}\rho(c):c\in\mathcal H\}=\operatorname{End}_{\mathbb C}(\mathfrak l)$（deformation.tex 第 
+   mk=换成 badkind=math bad='\\operatorname{span}_{\\mathbb C}\\{\\operatorname{Ad}\\rho(c):c\\in\\mathcal H
+   goodkind=math good='\\mathfrak l' core='\\mathfrak l'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D743-L243-I02 | D743-单相伯努利极小元临界维数七研究笔记.md | verdict=NO-VERBATIM
+   clause: - 缺陷一（台账符号式）：§14 的 $\theta$ 行把算子范数平方误写成求和式，正确形态应为 $\lVert A\rVert_{\mathrm{op}}^{2}\le\theta$，出处 `certificate-proof.tex:310-315`
+   mk=误写成 badkind=math bad='\\lVert A\\rVert_{\\mathrm{op}}^{2}\\le\\theta'
+   goodkind=math good='\\theta' core='\\theta'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D743-L243-I02 | D743-单相伯努利极小元临界维数七研究笔记.md | verdict=NO-VERBATIM
+   clause: - 缺陷一（台账符号式）：§14 的 $\theta$ 行把算子范数平方误写成求和式，正确形态应为 $\lVert A\rVert_{\mathrm{op}}^{2}\le\theta$，出处 `certificate-proof.tex:310-315`
+   mk=应为 badkind=math bad='\\theta'
+   goodkind=math good='\\lVert A\\rVert_{\\mathrm{op}}^{2}\\le\\theta' core='\\theta'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+
+=== samples of empty-or-identical (2) ===
+D201-L220-I04 | D201-无挠反例与分离谱带构造.md | verdict=NO-VERBATIM
+   clause: - 正文里散落三处本应删掉的孤立美元号：§4 末"到 `:335`"后的多余 `$`、§10 首段残句"到 `:18`"后的多余 `$`（该句已被截断，见上）、§11"到 `:111`"后的多余 `$`
+   mk=多余 badkind=bt bad='$'
+   goodkind=bt good='$' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D201-L220-I02 | D201-无挠反例与分离谱带构造.md | verdict=NO-VERBATIM
+   clause: - 正文里散落三处本应删掉的孤立美元号：§4 末"到 `:335`"后的多余 `$`、§10 首段残句"到 `:18`"后的多余 `$`（该句已被截断，见上）、§11"到 `:111`"后的多余 `$`
+   mk=多余 badkind=bt bad='$'
+   goodkind=bt good='$' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+
+=== samples of no-common-core (91) ===
+D321-L496-I08 | D321-快速消失外力下一条粒子如何判定停机.md | verdict=NO-VERBATIM
+   clause: 另登记一处数字笔误（不改已落盘正文，只在此说明）：§0 第 15 行写的"三个 tex 都在 13k-18k 之间"应为"四个"，即 main.tex 16440、addressed.tex 17913、alternating.tex 13428、lattice.tex 17419 四个文件落在该区间，references.tex 283
+   mk=应为 badkind=quote bad='三个 tex 都在 13k-18k 之间'
+   goodkind=quote good='四个' core='个'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D541-L387-I03 | D541-临界福尔廷卡斯泰尔恩伊辛图上的随机游走收敛到刘维尔布朗运动 | verdict=KEEP-DECLARATION
+   clause: 行 87 之外，新增三处：行 271 一处（§16 第二段，出现在引号内的对照短语里，该句正确读法是"耦合只按子列逐一供给，对原列没有一致性承诺"）、行 279 一处（§17 第三段短语"作为笔记某字论文主张"，应读作"作为笔记的私人延伸"）、以及行 279 一处禁止性过渡语（该句应直接删去过渡语读作"于是精确时钟的代价被搬到了 §6 与
+   mk=读作 badkind=quote bad='作为笔记的私人延伸'
+   goodkind=quote good='于是精确时钟的代价被搬到了 §6 与 §9 两侧' core='的'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D367-L232-I04 | D367-负曲率熵等式与局部对称性.md | verdict=NO-VERBATIM
+   clause: 这里我读到的关键仍是"有限 $R$"：不试图让级数收敛，只截到足够高的有限阶，靠 $f^{-n}$ 把点搬到可控邻域来逼 $q$
+   mk=搬到 badkind=math bad='f^{-n}'
+   goodkind=math good='q' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D190-L554-I02 | D190-树加权平面地图随机游走的线性时钟研究笔记.md | verdict=NO-VERBATIM
+   clause: §18 差距一里"我 originally 预期"混排了英文，应作"我原先预期"
+   mk=应作 badkind=quote bad='我 originally 预期'
+   goodkind=quote good='我原先预期' core='预期'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D291-L185-I02 | D291-面积可控的端替换与CKS类中的Bondi-Penrose不 | verdict=NO-VERBATIM
+   clause: 术语残留三处：§1 的"外most"应读作"最外"，§1 与 §13 的"sharp常数/sharp 陈述"应读作"最佳常数/取等陈述"，§5 末段的"超polynomial衰减"应读作"比任意固定幂次更快的衰减"
+   mk=应读作 badkind=quote bad='超polynomial衰减'
+   goodkind=quote good='比任意固定幂次更快的衰减' core='衰减'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D183-L367-I03 | D183-一条平面尾迹顶穿Kohn-Sham系综表示.md | verdict=NO-VERBATIM
+   clause: §15 里"的sup 小于"是中英夹杂的疏漏，应读作"的上确界小于"
+   mk=应读作 badkind=quote bad='的sup 小于'
+   goodkind=quote good='的上确界小于' core='小于'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D137-L928-I02 | D137-平面指数第一通过limshape的严格凸与可微：链路逼近与 | verdict=NO-VERBATIM
+   clause: 英文残留两处：第 25 节正文有一枚 mesh（该写"步长"），第 28 节正文有一枚 rare-fast（该写"稀有快速跨越"）
+   mk=该写 badkind=quote bad='步长'
+   goodkind=quote good='稀有快速跨越' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D390-L207-I03 | D390-一致离散空间上Lipschitz自由空间的逼近失效.md | verdict=NO-VERBATIM
+   clause: 文字错处一处：§10 倒数第二段"全程不测度系数的符号"漏了"依赖"二字，应读作"全程不依赖测度系数的符号"，语义以 §7 末段对应表述为准
+   mk=应读作 badkind=quote bad='依赖'
+   goodkind=quote good='全程不依赖测度系数的符号' core='依赖'
+   nb=None ng=None bad_all=None good_all=None flags=[]
+
+=== samples of too-short (14) ===
+D267-L130-I02 | D267-非谱双曲性锥的精确半正定提升反推笔记.md | verdict=EXEC
+   clause: （1）LaTeX 命令 `\succe0` 出现 3 处，均在 §4，漏打了命令结尾的 `q`，渲染时应为 `\succeq 0`
+   mk=应为 badkind=bt bad='q'
+   goodkind=bt good='\\succeq 0' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D268-L1046-I03 | D268-单元格有界列联表FPRAS的反向推导笔记.md | verdict=NO-VERBATIM
+   clause: 这里的余量恰好是 $8$ 倍，也就是 $16$ 这个数字的存在理由：若把 $B$ 改成 $8Ad^2$，比值界从 $1/8$ 变 $1/4$，人口修正的上下界就会挤到 $\frac13$ 与 $3$，后续 $T\in[1/8,4]$ 那一步（面邻域体积的 $4V_a(v)$ 系数）就要重推
+   mk=改成 badkind=math bad='B'
+   goodkind=math good='8Ad^2' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D460-L206-I02 | D460-紧Kähler空间在对数Iitaka亚可加性假设下的对数丰 | verdict=NO-VERBATIM
+   clause: 行内记号失误登记：首落块（§0--§4）里有四处代码区间断尾误打成了 `$`、正确符号应为闭合反引号，位置在"形态的陈述"、"陈述"两处（§3，涉及 `02-inductive-reduction.tex:140-150` 与 `02-inductive-reduction.tex:496-504` 的括注）与"陈述""思路"两处（§4，
+   mk=应为 badkind=bt bad='$'
+   goodkind=quote good='形态的陈述' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D302-L140-I05 | D302-三维Bochner--Riesz猜想的熵与packet证明 | verdict=NO-VERBATIM
+   clause: $0<p<p_*$ 时若 $z^-=1$ 负侧已矛盾，故 $z^-<1$，跳变估计加 $D^+\ge0$ 给 $D^-\ge(1+m-p)(1-z^-)$，于是 $F(p)+D^-$ 恰是把 $z$ 换成 $1$ 的 $F(p)$，补条给 $\ge1+s$，矛盾收口（08:428-443）
+   mk=换成 badkind=math bad='z'
+   goodkind=math good='1' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D528-L245-I07 | D528-单位核电荷连续库仑能量问题的QMA难性.md | verdict=NO-VERBATIM
+   clause: 按缩放单位（`sections/wells.tex:11`）与 $v$ 的径向衰减（同前 39--41），该量级应写作与 $1/d$ 同阶、且 $d\approx D=\log\lambda$
+   mk=应写作 badkind=math bad='v'
+   goodkind=math good='1/d' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D499-L834-I01 | D499-轨道形底与对数Iitaka次可加性.md | verdict=NO-VERBATIM
+   clause: 节 $6$ 与节 $8$ 的公式没有用到该写法，节 $12$ 的公式同样没有
+   mk=该写 badkind=math bad='8'
+   goodkind=math good='12' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D313-L251-I09 | D313-次临界FK平面图的典范共形极限.md | verdict=NO-VERBATIM
+   clause: 若把面积归一化里的 $A$ 换成独立随机变量，`03-encoding.tex:272`--`276` 指出的跨块实际高度联合律就没有了，§8 的分位数迁移随之失效
+   mk=换成 badkind=math bad='A'
+   goodkind=bt good='03-encoding.tex:272' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]
+D398-L726-I09 | D398-有限同余格的刻画与不可判定性.md | verdict=NO-VERBATIM
+   clause: 第四，§9 里我最初把 $S$ 的硬连记作 `sections/diophantine.tex:178`， 复核后改为 177 行，改动已在追加前完成，落盘只有一版
+   mk=记作 badkind=math bad='S'
+   goodkind=bt good='sections/diophantine.tex:178' core=''
+   nb=None ng=None bad_all=None good_all=None flags=[]

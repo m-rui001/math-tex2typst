@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{pgf}
+\newwrite\meas
+\immediate\openout\meas=meas_pgfmath.txt\relax
+\newcommand{\tm}[1]{\pgfmathtruncatemacro\v{#1}\immediate\write\meas{T #1 == \v}\relax}
+\newcommand{\sm}[1]{\pgfmathsetmacro\w{#1}\immediate\write\meas{S #1 == \w}\relax}
+\begin{document}
+% the operator table of the picture: row+column<=10
+\tm{1+1<=10}
+\tm{1+9<=10}
+\tm{1+10<=10}
+\tm{10+1<=10}
+% each relational operator on its own
+\tm{3<2}
+\tm{2<3}
+\tm{3>2}
+\tm{2>3}
+\tm{3<=3}
+\tm{3>=3}
+\tm{2<=3}
+\tm{4>=3}
+\tm{3=3}
+\tm{3=4}
+\tm{3==3}
+\tm{3==4}
+\tm{3!=3}
+\tm{3!=4}
+\tm{3<>3}
+\tm{3<>4}
+\tm{0=0}
+\tm{1=0}
+% precedence against + and *: is (1+2)<4 or 1+(2<4)?
+\tm{1+2<4}
+\tm{4<1+2}
+\tm{2*3>5}
+\tm{1+1<=10}
+% is == looser than < ?  2 == (1<1) is 0, (2==1)<1 is 1
+\tm{2==1<1}
+\tm{2<1==1}
+\tm{1+1==1<1}
+\tm{0<1==1}
+\tm{1<2<3}
+\tm{2<3<1}
+% the shape of a non-integer result, and a boolean written by setmacro
+\sm{1+1<=10}
+\sm{10+1<=10}
+\sm{1/3<1}
+\sm{2/3>1/2}
+% floor / ceil / int / mod as pgfmath computes them
+\tm{floor(8/5)}
+\tm{floor(2/5)}
+\tm{floor(-0.6)}
+\tm{floor(-1)}
+\tm{ceil(-0.6)}
+\tm{ceil(0.2)}
+\tm{int(-0.6)}
+\tm{int(0.6)}
+\sm{floor(2/5)}
+\sm{floor(-0.6)}
+\tm{mod(8,5)}
+\tm{mod(2,5)}
+\tm{mod(-8,5)}
+% truncatemacro on a non-integer: truncation or rounding?
+\tm{2.7}
+\tm{-2.7}
+\tm{0.5}
+\tm{1.5}
+\tm{2.5}
+\sm{2.7}
+\end{document}

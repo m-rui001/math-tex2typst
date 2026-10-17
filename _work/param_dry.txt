@@ -1,0 +1,3 @@
+E:\math\_work\param_macro_expand.py:81: SyntaxWarning: invalid escape sequence '\|'
+  """定义体不得引入裸竖线：\| 与 | 都换成成对的 \lVert/\rVert、\lvert/\rvert。"""
+APPLY=False notes=0 expanded=0 noargs=0 leftarg=0 bytes=+0

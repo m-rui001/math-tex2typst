@@ -1,0 +1,18 @@
+################ D65  (D65-渐近中点一致凸与树空间的无界菱形畸变.md)
+before: bytes=130263 lines=753
+ROW line=341  sites=8  pipes 14->6  $=12(parity even)
+OLD| | $s=\|y\|/(12\|x\|)$ 与 $1/12$ | 折扣常数 12 | paired.tex:13,87-88 | eq:paired 的 $\sqrt{\|x\|^2+\|y\|^2/12}$ | 分母若为 $Cs^2$,优化给折扣 $1/C$;$C\ne12$ 时全篇三处常数同换底,证明结构不变 |
+NEW| | $s=\lVert y\rVert/(12\lVert x\rVert)$ 与 $1/12$ | 折扣常数 12 | paired.tex:13,87-88 | eq:paired 的 $\sqrt{\lVert x\rVert^2+\lVert y\rVert^2/12}$ | 分母若为 $Cs^2$,优化给折扣 $1/C$;$C\ne12$ 时全篇三处常数同换底,证明结构不变 |
+ROW line=342  sites=2  pipes 8->6  $=12(parity even)
+OLD| | $\varepsilon^2/48$ | $48=12\cdot2^2$ | diamonds.tex:21-23 | 层级损失 $\varepsilon=2$ 时 $4/48=1/12$ | $z=(y_i-y_j)/2$ 的除 2 来自凸配对恒等式,改动即失 $\|x\pm z\|\le R$ |
+NEW| | $\varepsilon^2/48$ | $48=12\cdot2^2$ | diamonds.tex:21-23 | 层级损失 $\varepsilon=2$ 时 $4/48=1/12$ | $z=(y_i-y_j)/2$ 的除 2 来自凸配对恒等式,改动即失 $\lVert x\pm z\rVert\le R$ |
+ROW line=348  sites=6  pipes 12->6  $=18(parity even)
+OLD| | $\eta$ 预算 | $0<\eta<1$,$\|x-P_Hx\|<\eta$;lens 侧 $\|Q_Hx\|<\eta$、$\|P_H(y_i-y_j)\|<2\eta$ | paired.tex:93-98;diamonds.tex:28-45 | 中心逼近与透镜取极限两处 $\eta\downarrow0$ | 有限 $\eta$ 不取极限,模数下界带 $-\eta$ 残项,主定理陈述失配;论文未追踪有限 $\eta$ 形式 [推测] |
+NEW| | $\eta$ 预算 | $0<\eta<1$,$\lVert x-P_Hx\rVert<\eta$;lens 侧 $\lVert Q_Hx\rVert<\eta$、$\lVert P_H(y_i-y_j)\rVert<2\eta$ | paired.tex:93-98;diamonds.tex:28-45 | 中心逼近与透镜取极限两处 $\eta\downarrow0$ | 有限 $\eta$ 不取极限,模数下界带 $-\eta$ 残项,主定理陈述失配;论文未追踪有限 $\eta$ 形式 [推测] |
+after: bytes=130335 (delta +72) lines=753 rows_fixed=3 sites_fixed=16 sites_registered=0
+[DRY] nothing written to the note
+D65 file-count \lVert  = 48
+D65 file-count \lvert  = 19
+D65 file-count \mid  = 0
+D65 file-count \upharpoonright = 0
+D65 file-count \Vert  = 0

@@ -1,0 +1,211 @@
+ 235  no verbatim signature
+ 177  SIG found at [LINES]
+  45  no verbatim signature; author's line kept
+   3  claim 1 处 (nothing recomputed)
+   2  SIG found at [LINES] ; author's line 1 drifted
+   2  re-measure bytes: author=25000 now=71460
+   1  SIG found at [LINES] ; author's line 162 drifted
+   1  SIG found at [LINES] ; author's line 161 drifted
+   1  SIG found at [LINES] ; author's line 390 drifted
+   1  SIG found at [LINES] ; author's line 5 drifted
+   1  SIG found at [LINES] ; author's line 49 drifted
+   1  SIG found at [LINES] ; author's line 238 drifted
+   1  SIG found at [LINES] ; author's line 110 drifted
+   1  SIG found at [LINES] ; author's line 276 drifted
+   1  SIG found at [LINES] ; author's line 4 drifted
+   1  SIG found at [LINES] ; author's line 535 drifted
+   1  re-measure ledger_rows: author=345 now=55
+   1  SIG found at [LINES] ; author's line 59 drifted
+   1  SIG found at [LINES] ; author's line 1110 drifted
+   1  re-measure ledger_rows: author=35 now=35
+   1  SIG found at [LINES] ; author's line 16 drifted
+   1  SIG found at [LINES] ; author's line 7 drifted
+   1  SIG found at [LINES] ; author's line 981 drifted
+   1  SIG found at [LINES] ; author's line 862 drifted
+   1  SIG found at [LINES] ; author's line 47 drifted
+   1  SIG found at [LINES] ; author's line 596 drifted
+   1  SIG found at [LINES] ; author's line 22 drifted
+   1  SIG found at [LINES] ; author's line 141 drifted
+   1  SIG found at [LINES] ; author's line 180 drifted
+   1  claim 3 处 (nothing recomputed)
+   1  re-measure ledger_rows: author=52 now=52
+   1  re-measure bytes: author=80595 now=82945
+   1  SIG found at [LINES] ; author's line 121 drifted
+   1  SIG found at [LINES] ; author's line 41 drifted
+   1  SIG found at [LINES] ; author's line 153 drifted
+   1  re-measure bytes: author=86147 now=86924
+   1  SIG found at [LINES] ; author's line 464 drifted
+   1  claim 182 个 (nothing recomputed)
+   1  SIG found at [LINES] ; author's line 45 drifted
+   1  claim 10 处 (nothing recomputed)
+   1  SIG found at [LINES] ; author's line 245 drifted
+   1  re-measure bytes: author=81844 now=83738
+   1  re-measure bytes: author=22123 now=99279
+   1  claim 46 行 (nothing recomputed)
+   1  re-measure bytes: author=21994 now=93491
+   1  re-measure bytes: author=32525 now=93491
+   1  SIG found at [LINES] ; author's line 44 drifted
+   1  re-measure ledger_rows: author=34 now=34
+   1  re-measure bytes: author=17983 now=73298
+   1  re-measure bytes: author=24750 now=73774
+   1  re-measure ledger_rows: author=2 now=31
+   1  SIG found at [LINES] ; author's line 455 drifted
+   1  re-measure bytes: author=11937 now=139121
+   1  claim 15 枚 (nothing recomputed)
+   1  re-measure bytes: author=100946 now=105116
+   1  claim 5 处 (nothing recomputed)
+   1  claim 1021 行 (nothing recomputed)
+   1  SIG found at [LINES] ; author's line 25 drifted
+   1  claim 306 个 (nothing recomputed)
+
+=== examples of each of the top shapes ===
+SHAPE no verbatim signature
+   id=D04-L361-I03 kind=mechanical-target-given fam=anchor,ordermove,table
+   VNOTE=no verbatim signature
+   FIX=搬到第 $30$ 节末段与第→第 $30$ 节末段与第 $34$ 节题记之间
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 162 drifted
+   id=D100-L1586-I06 kind=mechanical-target-given fam=btick,count,banstring,ordermove,typo
+   VNOTE=sig=`O(Q^{-33/40})` found at [297, 1551] ; author's line 162 drifted
+   FIX=改写为“源头是 tex 本身→“源头是 tex 本身”
+   EVID=
+SHAPE no verbatim signature; author's line kept
+   id=D103-L789-I06 kind=mechanical-target-given fam=count,banstring
+   VNOTE=no verbatim signature; author's line kept
+   FIX=改写为"屏障因此属于被绕过的→"屏障因此属于被绕过的那一类，谈不上被突破"后得 0
+   EVID=
+SHAPE SIG found at [LINES]
+   id=D12-L461-I03 kind=mechanical-target-given fam=macro
+   VNOTE=sig=`ComparatorChallenges/BarnetteHamiltoni` found at [6]
+   FIX=替换为 $\text{Lef→$\text{Left}=(A\times\mathrm{Fin}\ / 移到"$\text{gadg→"$\text{gadget\_hall}$ 的 $2\lvert
+   EVID=paper.tex:257-259=>OUT-OF-RANGE(70); BMatching.lean:22=>NO-SUCH-FILE-UNDER-build
+SHAPE SIG found at [LINES] ; author's line 161 drifted
+   id=D145-L733-I05 kind=mechanical-target-given fam=macro,count,table
+   VNOTE=sig=`\rvert` found at [237, 245, 249, 251, 269] ; author's line 161 drifted
+   FIX=换成 `\lvert`→`\lvert` / 改为 `\neq`→`\neq`
+   EVID=algebra.tex:48=>\phi_i^-(z)=(0,Y_i^-(z)),\qquad
+SHAPE SIG found at [LINES] ; author's line 390 drifted
+   id=D15-L565-I03 kind=mechanical-target-given fam=macro
+   VNOTE=sig=`\epsilon` found at [103, 107, 240, 348, 349] ; author's line 390 drifted
+   FIX=应读作 `` `:80` `→`` `:80` ``，指向 `04-pairs.tex:80` 的
+   EVID=04-pairs.tex:80=>\qquad A=C_{HH}+\epsilon I_H>0.
+SHAPE SIG found at [LINES] ; author's line 5 drifted
+   id=D162-L475-I04 kind=mechanical-target-given fam=anchor,count,ordermove,table
+   VNOTE=sig=`OAI/RingTheory/DirectFiniteness/Finite` found at [36, 384, 550, 551] ; author's line 5 drifted
+   FIX=改为第 18 节台账第 5 →第 18 节台账第 5 行与第 45 行，复测后错位命中 0
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 49 drifted
+   id=D163-L534-I03 kind=mechanical-target-given fam=macro,count,table
+   VNOTE=sig=`\rvert` found at [109, 111, 254, 260, 313] ; author's line 49 drifted
+   FIX=改为 `\rvert`→`\rvert` / 改为 `\rvert` 写法→`\rvert` 写法，第 187 行与第 334 行各一次换行插入
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 238 drifted
+   id=D166-L820-I02 kind=mechanical-target-given fam=btick,macro,table,typo
+   VNOTE=sig=`annulus.tex` found at [9, 11, 102, 153, 211] ; author's line 238 drifted
+   FIX=改为逐行成对闭合的 `$..→逐行成对闭合的 `$...$`， / 改成与 `annulus.t→与 `annulus.tex` 第 238 行一致的 $s\le r
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 110 drifted
+   id=D190-L554-I02 kind=mechanical-target-given fam=macro
+   VNOTE=sig=`01-introduction.tex` found at [13, 14, 22, 40, 45] ; author's line 110 drifted
+   FIX=正确写法是 $Q_h^T=\→$Q_h^T=\operatorname{Law}((B^h_t)_
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 276 drifted
+   id=D190-L554-I07 kind=mechanical-target-given fam=other
+   VNOTE=sig=`inp:bands` found at [122] ; author's line 276 drifted
+   FIX=记作"第 276--278 →"第 276--278 行"，随后正文改用"第 275--278 行
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 4 drifted
+   id=D197-L164-I01 kind=mechanical-target-given fam=btick,macro,count,ordermove,table,typo
+   VNOTE=sig=`\Xi` found at [101, 138, 202, 212, 239] ; author's line 4 drifted
+   FIX=改为成对空括号的规范记法）以→对空括号的规范记法）以及一处中英混排的笔误做过原位改写，均未删除任何
+   EVID=main.tex:58-62=>In the orthonormal basis $e_m$, $m=-1,0,1$, of $\C^3$, let; main.tex:59-62=>\[; kernel.tex:174=>limiting
+SHAPE SIG found at [LINES] ; author's line 535 drifted
+   id=D204-L45-I05 kind=mechanical-target-given fam=btick,macro,ordermove
+   VNOTE=sig=`\operatorname` found at [43, 113, 115, 125, 135] ; author's line 535 drifted
+   FIX=换成参照值只改动 $\mat→参照值只改动 $\mathfrak m\mathfrak n^3$ / 换成 $\mathfrak →$\mathfrak l$ 的任意自同态
+   EVID=
+SHAPE re-measure ledger_rows: author=345 now=55
+   id=D207-L425-I01 kind=mechanical-target-given fam=count,banstring,table
+   VNOTE=re-measure ledger_rows: author=345 now=55
+   FIX=更正为两处短语与一行成对长停→两处短语与一行成对长停顿号，分别位于 §18 末段、§19 末段与
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 1 drifted
+   id=D212-L360-I04 kind=mechanical-target-given fam=macro,table
+   VNOTE=sig=`$\lvert S\rVert=12$` found at [350] ; author's line 1 drifted
+   FIX=正确写法是 `$\lvert→`$\lvert S\rvert=12$`，同节后面几行与台账第 1
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 59 drifted
+   id=D220-L659-I04 kind=mechanical-target-given fam=macro,table
+   VNOTE=sig=`\Phi` found at [30, 33, 72, 80, 128] ; author's line 59 drifted
+   FIX=改为 $\Phi^*\geq→$\Phi^*\geq n/(u+c)$ ，并非 $\sum 1/v
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 1110 drifted
+   id=D251-L432-I02 kind=mechanical-target-given fam=macro
+   VNOTE=sig=`\langle b(u)\Psi_z,g\rvert\rangle` found at [157] ; author's line 1110 drifted
+   FIX=应为 `\langle b(→`\langle b(u)\Psi_z,g\rangle` / 应为 `\langle b(→`\langle b(u)\Psi_z,g\rangle`，所指是
+   EVID=
+SHAPE re-measure ledger_rows: author=35 now=35
+   id=D277-L172-I02 kind=mechanical-count-correction fam=count,table
+   VNOTE=re-measure ledger_rows: author=35 now=35
+   FIX=
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 16 drifted
+   id=D284-L897-I01 kind=mechanical-target-given fam=macro,typo
+   VNOTE=sig=`steinberg.tex` found at [15, 18, 100, 116, 234] ; author's line 16 drifted
+   FIX=正确写法是 $\prod_{→$\prod_{s=0}^{b-1}$ / 应读作"分次部分"，指的是按→"分次部分"，指的是按 $v$ 之前标签数 $a$ 的过滤所得的分级
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 7 drifted
+   id=D286-L169-I04 kind=mechanical-target-given fam=macro,banstring,table,typo
+   VNOTE=sig=`\sigma` found at [115, 203, 236, 238] ; author's line 7 drifted
+   FIX=应读作"不实则"，即系数向量→"不实则"，即系数向量缺乏实性时 $\sigma(k)$ 不再自伴、
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 981 drifted
+   id=D29-L1062-I06 kind=mechanical-target-given fam=other
+   VNOTE=sig=`### 依赖链` found at [985] ; author's line 981 drifted
+   FIX=记作 ten-labels.→ten-labels.tex:185-200，而"块尺寸 $3,2,2$"的字面落 / 记作 ten-labels.→ten-labels.tex:185-200，而"块尺寸 $3,2,
+   EVID=six-labels.tex:47=>\item Every vertex link is a cycle of length five.; six-labels.tex:50-53=>\item If $a,b\in C$ are dis
+SHAPE SIG found at [LINES] ; author's line 862 drifted
+   id=D29-L1076-I11 kind=mechanical-target-given fam=btick,anchor,table
+   VNOTE=sig=`### 本表续体` found at [954] ; author's line 862 drifted
+   FIX=移到第 864 行，另一张带→第 864 行，另一张带"记号"表头的下移到第 891 行，于是旧文
+   EVID=
+SHAPE claim 1 处 (nothing recomputed)
+   id=D296-L550-I02 kind=mechanical-count-correction fam=count,banstring,probe
+   VNOTE=claim 1 处 (nothing recomputed)
+   FIX=
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 47 drifted
+   id=D333-L153-I02 kind=mechanical-target-given fam=btick,anchor,english,table,typo
+   VNOTE=sig=`Stabilizing` found at [119] ; author's line 47 drifted
+   FIX=应为“映射”→“映射” / 应为“不可约”→“不可约”
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 596 drifted
+   id=D335-L298-I03 kind=mechanical-target-given fam=btick,macro
+   VNOTE=sig=`\langle` found at [76, 78, 124, 130, 162] ; author's line 596 drifted
+   FIX=应读作重叠 $\langle→重叠 $\langle\psi_j,\psi_i\rangle$ 的 / 去掉限制"漏了一个右定界符，→限制"漏了一个右定界符，应为 $Z_*e^{-1.2D}$ 这一加性
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 22 drifted
+   id=D336-L397-I01 kind=mechanical-target-given fam=btick,count,probe
+   VNOTE=sig=`文件:行` found at [406, 408] ; author's line 22 drifted
+   FIX=换成一对额外的定界符，出现在→一对额外的定界符，出现在当前行号 22、36、60、80、90、92
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 141 drifted
+   id=D356-L925-I01 kind=mechanical-target-given fam=btick,macro,banstring,english,table,probe,typo
+   VNOTE=sig=`\mathcal` found at [86, 92, 207, 210, 218] ; author's line 141 drifted
+   FIX=应为 "rw^2\sum\l→"rw^2\sum\lvert c\rvert^3\le\mathc
+   EVID=
+SHAPE SIG found at [LINES] ; author's line 180 drifted
+   id=D356-L982-I01 kind=mechanical-target-given fam=btick,count,banstring,english,ordermove,table,probe
+   VNOTE=sig=`全稿除首行一级标题之外` found at [963] ; author's line 180 drifted
+   FIX=改为「同样地」→「同样地」 / 改为「本单位于其他队列的行号→「本单位于其他队列的行号：」
+   EVID=
+SHAPE claim 3 处 (nothing recomputed)
+   id=D362-L447-I09 kind=mechanical-count-correction fam=btick,count,banstring,table
+   VNOTE=claim 3 处 (nothing recomputed)
+   FIX=
+   EVID=
+SHAPE re-measure ledger_rows: author=52 now=52
+   id=D370-L415-I03 kind=mechanical-delete fam=count,table
+   VNOTE=re-measure ledger_rows: author=52 now=52
+   FIX=改写为 52 行或直接删除→52 行或直接删除
+   EVID=

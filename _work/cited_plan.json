@@ -1,0 +1,2258 @@
+[
+ {
+  "cid": "C01",
+  "arxiv": "1210.2092",
+  "dir": "被引素材/1210.2092",
+  "title": "Rationally connected manifolds and semipositivity of the Ricci curvature",
+  "authors": [
+   "Frédéric Campana",
+   "Jean-Pierre Demailly",
+   "Thomas Peternell"
+  ],
+  "published": "2012-10-07",
+  "abstract": "This work establishes a structure theorem for compact Kähler manifolds with semipositive anticanonical bundle. Up to finite étale cover, it is proved that such manifolds split holomorphically and isometrically as a product of Ricci flat varieties and of rationally connected manifolds. The proof is based on a characterization of rationally connected manifolds through the non existence of certain twisted contravariant tensor products of the tangent bundle, along with a generalized holonomy principle for pseudoeffective line bundles. A crucial ingredient for this is the characterization of uniruledness by the property that the anticanonical bundle is not pseudoeffective.",
+  "tex_total": 59244,
+  "texs": [
+   {
+    "path": "被引素材/1210.2092/main.tex",
+    "bytes": 59244,
+    "lines": 1327
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D289",
+   "D305",
+   "D318",
+   "D385",
+   "D447",
+   "D451",
+   "D471"
+  ],
+  "bib_keys": {
+   "Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026": [
+    "CDP2015"
+   ],
+   "Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026": [
+    "CDP2015"
+   ],
+   "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026": [
+    "CDP2015"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "CDP2015"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "CDP2015"
+   ],
+   "Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026": [
+    "CDP2015"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "CDP2015"
+   ]
+  }
+ },
+ {
+  "cid": "C02",
+  "arxiv": "1412.7744",
+  "dir": "被引素材/1412.7744",
+  "title": "A brief introduction to Enriques surfaces",
+  "authors": [
+   "Igor V. Dolgachev"
+  ],
+  "published": "2014-12-24",
+  "abstract": "This is a brief introduction to the theory of Enriques surfaces over arbitrary algebraically closed fields. Some new results about automorphism groups of Enriques surfaces are also included.",
+  "tex_total": 93941,
+  "texs": [
+   {
+    "path": "被引素材/1412.7744/main.tex",
+    "bytes": 93941,
+    "lines": 1027
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D289",
+   "D305",
+   "D318",
+   "D385",
+   "D447",
+   "D451",
+   "D471"
+  ],
+  "bib_keys": {
+   "Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026": [
+    "Dolgachev2016"
+   ],
+   "Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026": [
+    "Dolgachev2016"
+   ],
+   "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026": [
+    "Dolgachev2016"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "Dolgachev2016"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "Dolgachev2016"
+   ],
+   "Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026": [
+    "Dolgachev2016"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "Dolgachev2016"
+   ]
+  }
+ },
+ {
+  "cid": "C03",
+  "arxiv": "2202.13814",
+  "dir": "被引素材/2202.13814",
+  "title": "The Nonvanishing problem for varieties with nef anticanonical bundle",
+  "authors": [
+   "Vladimir Lazić",
+   "Shin-ichi Matsumura",
+   "Thomas Peternell",
+   "Nikolaos Tsakanikas",
+   "Zhixin Xie"
+  ],
+  "published": "2022-02-28",
+  "abstract": "We prove that if $(X,Δ)$ is a threefold pair with mild singularities such that ${-}(K_X+Δ)$ is nef, then the numerical class of ${-}(K_X+Δ)$ is effective.",
+  "tex_total": 131457,
+  "texs": [
+   {
+    "path": "被引素材/2202.13814/antican.tex",
+    "bytes": 131457,
+    "lines": 1612
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D289",
+   "D305",
+   "D318",
+   "D385",
+   "D447",
+   "D451",
+   "D471"
+  ],
+  "bib_keys": {
+   "Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026": [
+    "LMPTX2023"
+   ],
+   "Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026": [
+    "LMPTX2023"
+   ],
+   "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026": [
+    "LMPTX2023"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "LMPTX2023"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "LMPTX2023"
+   ],
+   "Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026": [
+    "LMPTX2023"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "LMPTX2023"
+   ]
+  }
+ },
+ {
+  "cid": "C04",
+  "arxiv": "2305.19109",
+  "dir": "被引素材/2305.19109",
+  "title": "Two Non-Vanishing results concerning the Anti-Canonical Bundle",
+  "authors": [
+   "Niklas Müller"
+  ],
+  "published": "2023-05-30",
+  "abstract": "Let $(X, Δ)$ be a klt threefold pair with nef anti-log canonical bundle $-(K_X+Δ)$. We show that $κ(X, -(K_X+Δ))\\geq 0$. To do so, we prove a more general equivariant non-vanishing result for anti-log canonical bundles, which is valid in any dimension.",
+  "tex_total": 83164,
+  "texs": [
+   {
+    "path": "被引素材/2305.19109/NonVanishing3.tex",
+    "bytes": 83164,
+    "lines": 1208
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D289",
+   "D305",
+   "D318",
+   "D385",
+   "D447",
+   "D451",
+   "D471"
+  ],
+  "bib_keys": {
+   "Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026": [
+    "Muller2025"
+   ],
+   "Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026": [
+    "Muller2025"
+   ],
+   "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026": [
+    "Muller2025"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "Muller2025"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "Muller2025"
+   ],
+   "Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026": [
+    "Muller2025"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "Muller2025"
+   ]
+  }
+ },
+ {
+  "cid": "C05",
+  "arxiv": "2609.26716",
+  "dir": "被引素材/2609.26716",
+  "title": "Compact Kähler surfaces with semipositive anticanonical bundle",
+  "authors": [
+   "Yifan Chen",
+   "Simion Filip",
+   "Song Sun",
+   "Valentino Tosatti",
+   "Junsheng Zhang"
+  ],
+  "published": "2026-09-22",
+  "abstract": "We classify compact Kähler surfaces with semipositive anticanonical bundle. In particular, we resolve a question of Demailly--Peternell--Schneider: any blowup of $\\mathbb{P}^2$ at 9 points on a smooth cubic has semipositive anticanonical bundle.",
+  "tex_total": 81886,
+  "texs": [
+   {
+    "path": "被引素材/2609.26716/New_version.tex",
+    "bytes": 81886,
+    "lines": 1412
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D289",
+   "D305",
+   "D318",
+   "D385",
+   "D447",
+   "D451",
+   "D471"
+  ],
+  "bib_keys": {
+   "Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026": [
+    "CFSTZ2026"
+   ],
+   "Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026": [
+    "CFSTZ2026"
+   ],
+   "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026": [
+    "CFSTZ2026"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "CFSTZ2026"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "CFSTZ2026"
+   ],
+   "Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026": [
+    "CFSTZ2026"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "CFSTZ2026"
+   ]
+  }
+ },
+ {
+  "cid": "C06",
+  "arxiv": "math/0006205",
+  "dir": "被引素材/math_0006205",
+  "title": "Pseudo-effective line bundles on compact Kähler manifolds",
+  "authors": [
+   "Jean-Pierre Demailly",
+   "Thomas Peternell",
+   "Michael Schneider"
+  ],
+  "published": "2000-06-27",
+  "abstract": "The goal of this work is to pursue the study of pseudo-effective line bundles and vector bundles. Our first result is a generalization of the Hard Lefschetz theorem for cohomology with values in a pseudo-effective line bundle. The Lefschetz map is shown to be surjective when (and, in general, only when) the pseudo-effective line bundle is twisted by its multiplier ideal sheaf. This result has several geometric applications, e.g. to the study of compact Kähler manifolds with pseudo-effective canonical or anti-canonical line bundles. Another concern is to understand pseudo-effectivity in more algebraic terms. In this direction, we introduce the concept of an \"almost\" nef line bundle, and mean by this that the degree of the bundle is nonnegative on sufficiently generic curves. It can be shown that pseudo-effective line bundles are almost nef, and our hope is that the converse also holds true. This can be checked in some cases, e.g. for the canonical bundle of a projective 3-fold. From this, we derive some geometric properties of the Albanese map of compact Kähler 3-folds.",
+  "tex_total": 162792,
+  "texs": [
+   {
+    "path": "被引素材/math_0006205/main.tex",
+    "bytes": 162792,
+    "lines": 3835
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D289",
+   "D305",
+   "D318",
+   "D385",
+   "D447",
+   "D451",
+   "D471"
+  ],
+  "bib_keys": {
+   "Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026": [
+    "DPS2001"
+   ],
+   "Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026": [
+    "DPS2001"
+   ],
+   "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026": [
+    "DPS2001"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "DPS2001"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "DPS2001"
+   ],
+   "Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026": [
+    "DPS2001"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "DPS2001"
+   ]
+  }
+ },
+ {
+  "cid": "C07",
+  "arxiv": "1703.03175",
+  "dir": "被引素材/1703.03175",
+  "title": "On generic nefness of tangent sheaves",
+  "authors": [
+   "Wenhao Ou"
+  ],
+  "published": "2017-03-09",
+  "abstract": "We show that the tangent bundle of a projective manifold with nef anticanonical class is generically nef. That is, its restriction to a curve cut out by general sufficiently ample divisors is a nef vector bundle. This confirms a conjecture of Peternell. As a consequence, the second Chern class of such a manifold has non-negative intersections with ample divisors. We also investigate under which conditions these positivities are strict, and answer a question of Yau.",
+  "tex_total": 80892,
+  "texs": [
+   {
+    "path": "被引素材/1703.03175/Generic_nefness_of_tangent_sheaves_v3.tex",
+    "bytes": 80892,
+    "lines": 1275
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D289",
+   "D305",
+   "D385",
+   "D447",
+   "D451",
+   "D471"
+  ],
+  "bib_keys": {
+   "Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026": [
+    "Ou2023"
+   ],
+   "Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026": [
+    "Ou2023"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "Ou2023"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "Ou2023"
+   ],
+   "Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026": [
+    "Ou2023"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "Ou2023"
+   ]
+  }
+ },
+ {
+  "cid": "C08",
+  "arxiv": "1011.1602",
+  "dir": "被引素材/1011.1602",
+  "title": "Computation of the highest coefficients of weighted Ehrhart quasi-polynomials of rational polyhedra",
+  "authors": [
+   "Velleda Baldoni",
+   "Nicole Berline",
+   "Jesús A. De Loera",
+   "Matthias Köppe",
+   "Michèle Vergne"
+  ],
+  "published": "2010-11-07",
+  "abstract": "This article concerns the computational problem of counting the lattice points inside convex polytopes, when each point must be counted with a weight associated to it. We describe an efficient algorithm for computing the highest degree coefficients of the weighted Ehrhart quasi-polynomial for a rational simple polytope in varying dimension, when the weights of the lattice points are given by a polynomial function h. Our technique is based on a refinement of an algorithm of A. Barvinok [Computing the Ehrhart quasi-polynomial of a rational simplex, Math. Comp. 75 (2006), pp. 1449--1466] in the unweighted case (i.e., h = 1). In contrast to Barvinok's method, our method is local, obtains an approximation on the level of generating functions, handles the general weighted case, and provides the coefficients in closed form as step polynomials of the dilation. To demonstrate the practicality of our approach we report on computational experiments which show even our simple implementation can compete with state of the art software.",
+  "tex_total": 100240,
+  "texs": [
+   {
+    "path": "被引素材/1011.1602/top-ehrhart.tex",
+    "bytes": 100240,
+    "lines": 2141
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D318",
+   "D385",
+   "D447",
+   "D451",
+   "D471"
+  ],
+  "bib_keys": {
+   "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026": [
+    "BaldoniBerlineDeLoeraKoeppeVergne2012"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "BaldoniBerlineDeLoeraKoeppeVergne2012"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "BaldoniBerlineDeLoeraKoeppeVergne2012"
+   ],
+   "Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026": [
+    "BaldoniBerlineDeLoeraKoeppeVergne2012"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "BaldoniBerlineDeLoeraKoeppeVergne2012"
+   ]
+  }
+ },
+ {
+  "cid": "C09",
+  "arxiv": "1607.04684",
+  "dir": "被引素材/1607.04684",
+  "title": "Kollár--Nadel type vanishing theorem",
+  "authors": [
+   "Osamu Fujino"
+  ],
+  "published": "2016-07-15",
+  "abstract": "We prove an analytic generalization of Kollár's vanishing theorem, which contains the Nadel vanishing theorem as a special case.",
+  "tex_total": 10576,
+  "texs": [
+   {
+    "path": "被引素材/1607.04684/main.tex",
+    "bytes": 10576,
+    "lines": 328
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D305",
+   "D385",
+   "D447",
+   "D451",
+   "D471"
+  ],
+  "bib_keys": {
+   "Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026": [
+    "Fujino2018"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "Fujino2018"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "Fujino2018"
+   ],
+   "Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026": [
+    "Fujino2018"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "Fujino2018"
+   ]
+  }
+ },
+ {
+  "cid": "C10",
+  "arxiv": "math/0405285",
+  "dir": "被引素材/math_0405285",
+  "title": "The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension",
+  "authors": [
+   "Sébastien Boucksom",
+   "Jean-Pierre Demailly",
+   "Mihai Paun",
+   "Thomas Peternell"
+  ],
+  "published": "2004-05-14",
+  "abstract": "We prove that a holomorphic line bundle on a projective manifold is pseudo-effective if and only if its degree on any member of a covering family of curves is non-negative. This is a consequence of a duality statement between the cone of pseudo-effective divisors and the cone of ``movable curves'', which is obtained from a general theory of movable intersections and approximate Zariski decomposition for closed positive (1,1)-currents. As a corollary, a projective manifold has a pseudo-effective canonical bundle if and only if it is is not uniruled. We also prove that a 4-fold with a canonical bundle which is pseudo-effective and of numerical class zero in restriction to curves of a covering family, has non negative Kodaira dimension.",
+  "tex_total": 126472,
+  "texs": [
+   {
+    "path": "被引素材/math_0405285/main.tex",
+    "bytes": 126472,
+    "lines": 3050
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D289",
+   "D385",
+   "D447",
+   "D471",
+   "D476"
+  ],
+  "bib_keys": {
+   "Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026": [
+    "BDPP2013"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "BDPP2013"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "BDPP2013"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "BDPP2013"
+   ],
+   "Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026": [
+    "BDPP"
+   ]
+  }
+ },
+ {
+  "cid": "C11",
+  "arxiv": "math/0703344",
+  "dir": "被引素材/math_0703344",
+  "title": "Bergman kernels and the pseudoeffectivity of relative canonical bundles",
+  "authors": [
+   "Bo Berndtsson",
+   "Mihai Paun"
+  ],
+  "published": "2007-03-12",
+  "abstract": "The main result of the present article is a (practically optimal) criterium for the pseudoeffectivity of the twisted relative canonical bundles of surjective projective maps. Our theorem has several applications in algebraic geometry; to start with, we obtain the natural analytic generalization of some semipositivity results due to E. Viehweg and F. Campana. As a byproduct, we give a simple and direct proof of a recent result due to C. Hacon--J. McKernan, S. Takayama and H. Tsuji concerning the extension of twisted pluricanonical forms. More applications will be offered in the sequel of this article.",
+  "tex_total": 102786,
+  "texs": [
+   {
+    "path": "被引素材/math_0703344/main.tex",
+    "bytes": 102786,
+    "lines": 2663
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D289",
+   "D305",
+   "D385",
+   "D447",
+   "D471"
+  ],
+  "bib_keys": {
+   "Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026": [
+    "BerndtssonPaun2008"
+   ],
+   "Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026": [
+    "BerndtssonPaun2008"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "BerndtssonPaun2008"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "BerndtssonPaun2008"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "BerndtssonPaun2008"
+   ]
+  }
+ },
+ {
+  "cid": "C12",
+  "arxiv": "1408.4308",
+  "dir": "被引素材/1408.4308",
+  "title": "Movable curves and semistable sheaves",
+  "authors": [
+   "Daniel Greb",
+   "Stefan Kebekus",
+   "Thomas Peternell"
+  ],
+  "published": "2014-08-19",
+  "abstract": "This paper extends a number of known results on slope-semistable sheaves from the classical case to the setting where polarisations are given by movable curve classes. As applications, we obtain new flatness results for reflexive sheaves on singular varieties, as well as a characterisation of finite quotients of Abelian varieties via a Chern class condition.",
+  "tex_total": 109050,
+  "texs": [
+   {
+    "path": "被引素材/1408.4308/main.tex",
+    "bytes": 109050,
+    "lines": 2667
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D289",
+   "D385",
+   "D447",
+   "D471"
+  ],
+  "bib_keys": {
+   "Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026": [
+    "GKP2016"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "GrebKebekusPeternell2016"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "GrebKebekusPeternell2016"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "GKP2016",
+    "GrebKebekusPeternell2016"
+   ]
+  }
+ },
+ {
+  "cid": "C13",
+  "arxiv": "1805.11558",
+  "dir": "被引素材/1805.11558",
+  "title": "Białynicki-Birula decomposition for reductive groups",
+  "authors": [
+   "Joachim Jelisiejew",
+   "Łukasz Sienkiewicz"
+  ],
+  "published": "2018-05-29",
+  "abstract": "We generalize the Białynicki-Birula decomposition from actions of $G_m$ on smooth varieties to actions of linearly reductive group ${\\bf G}$ on finite type schemes and algebraic spaces. We also provide a relative version and briefly discuss the case of algebraic stacks. We define the Białynicki-Birula decomposition functorially: for a fixed ${\\bf G}$-scheme $X$ and a monoid $\\overline{\\bf G}$ which partially compactifies ${\\bf G}$, the BB decomposition parameterizes ${\\bf G}$-schemes over $X$ for which the ${\\bf G}$-action extends to the $\\overline{\\bf G}$-action. The freedom of choice of $\\overline{\\bf G}$ makes the theory richer than the $G_m$-case.",
+  "tex_total": 188609,
+  "texs": [
+   {
+    "path": "被引素材/1805.11558/main.tex",
+    "bytes": 188609,
+    "lines": 3545
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D305",
+   "D385",
+   "D447",
+   "D471"
+  ],
+  "bib_keys": {
+   "Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026": [
+    "JS2018"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "JelisiejewSienkiewicz2019"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "JelisiejewSienkiewicz2019"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "JelisiejewSienkiewicz2019"
+   ]
+  }
+ },
+ {
+  "cid": "C14",
+  "arxiv": "2602.13821",
+  "dir": "被引素材/2602.13821",
+  "title": "Vanishing theorems for pseudo-effective line bundles",
+  "authors": [
+   "Xiankui Meng",
+   "Chenghao Qing",
+   "Xiangyu Zhou"
+  ],
+  "published": "2026-02-14",
+  "abstract": "In the present paper, we establish a general Kawamata-Viehweg-Kollár-Nadel type vanishing theorem for higher direct images in terms of numerical dimension for closed positive currents on compact Kähler manifolds, unifying a number of important vanishing theorems.",
+  "tex_total": 84120,
+  "texs": [
+   {
+    "path": "被引素材/2602.13821/Vanishing_psef_line_bundles_MQZ.tex",
+    "bytes": 84120,
+    "lines": 1186
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D318",
+   "D385",
+   "D447",
+   "D471"
+  ],
+  "bib_keys": {
+   "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026": [
+    "MengQingZhou2026"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "MengQingZhou2026"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "MengQingZhou2026"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "MengQingZhou2026"
+   ]
+  }
+ },
+ {
+  "cid": "C15",
+  "arxiv": "1005.0614",
+  "dir": "被引素材/1005.0614",
+  "title": "New outlook on the Minimal Model Program, II",
+  "authors": [
+   "Alessio Corti",
+   "Vladimir Lazić"
+  ],
+  "published": "2010-05-04",
+  "abstract": "We prove that the finite generation of adjoint rings proved in [Cascini and Lazić] implies all the foundational results of the Minimal Model Program: the Rationality, Cone and Contraction theorems, the existence of flips, and termination of flips with scaling in the presence of a big boundary.",
+  "tex_total": 53900,
+  "texs": [
+   {
+    "path": "被引素材/1005.0614/mmp.tex",
+    "bytes": 53900,
+    "lines": 1278
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D385",
+   "D447",
+   "D471"
+  ],
+  "bib_keys": {
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "CortiLazic2013"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "CortiLazic2013"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "CortiLazic2013"
+   ]
+  }
+ },
+ {
+  "cid": "C16",
+  "arxiv": "1009.3188",
+  "dir": "被引素材/1009.3188",
+  "title": "New outlook on the Minimal Model Program, I",
+  "authors": [
+   "Paolo Cascini",
+   "Vladimir Lazić"
+  ],
+  "published": "2010-09-16",
+  "abstract": "We give a new and self-contained proof of the finite generation of adjoint rings with big boundaries. As a consequence, we show that the canonical ring of a smooth projective variety is finitely generated.",
+  "tex_total": 148270,
+  "texs": [
+   {
+    "path": "被引素材/1009.3188/section2.tex",
+    "bytes": 33147,
+    "lines": 496
+   },
+   {
+    "path": "被引素材/1009.3188/section4.tex",
+    "bytes": 29943,
+    "lines": 405
+   },
+   {
+    "path": "被引素材/1009.3188/section5.tex",
+    "bytes": 28111,
+    "lines": 359
+   },
+   {
+    "path": "被引素材/1009.3188/section6.tex",
+    "bytes": 19317,
+    "lines": 259
+   },
+   {
+    "path": "被引素材/1009.3188/section3.tex",
+    "bytes": 16650,
+    "lines": 392
+   },
+   {
+    "path": "被引素材/1009.3188/macros.tex",
+    "bytes": 13107,
+    "lines": 470
+   },
+   {
+    "path": "被引素材/1009.3188/section1.tex",
+    "bytes": 6280,
+    "lines": 85
+   },
+   {
+    "path": "被引素材/1009.3188/fg.tex",
+    "bytes": 1715,
+    "lines": 52
+   }
+  ],
+  "tex_n": 8,
+  "notes": [
+   "D385",
+   "D447",
+   "D471"
+  ],
+  "bib_keys": {
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "CasciniLazic2012"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "CasciniLazic2012"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "CasciniLazic2012"
+   ]
+  }
+ },
+ {
+  "cid": "C17",
+  "arxiv": "1706.08814",
+  "dir": "被引素材/1706.08814",
+  "title": "A decomposition theorem for projective manifolds with nef anticanonical bundle",
+  "authors": [
+   "Junyan Cao",
+   "Andreas Höring"
+  ],
+  "published": "2017-06-27",
+  "abstract": "Let X be a simply connected projective manifold with nef anticanonical bundle. We prove that X is a product of a rationally connected manifold and a manifold with trivial canonical bundle. As an application we describe the MRC fibration of any projective manifold with nef anticanonical bundle.",
+  "tex_total": 101111,
+  "texs": [
+   {
+    "path": "被引素材/1706.08814/main.tex",
+    "bytes": 101111,
+    "lines": 2048
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D385",
+   "D447",
+   "D471"
+  ],
+  "bib_keys": {
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "CaoHoring"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "CaoHoring"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "CaoHoring"
+   ]
+  }
+ },
+ {
+  "cid": "C18",
+  "arxiv": "2105.14308",
+  "dir": "被引素材/2105.14308",
+  "title": "Structure theorem for projective klt pairs with nef anti-canonical divisor",
+  "authors": [
+   "Shin-ichi Matsumura",
+   "Juanyong Wang"
+  ],
+  "published": "2021-05-29",
+  "abstract": "In this paper, we establish a structure theorem for projective klt pairs $(X,Δ)$ with nef anti-log canonical divisor; specifically, we prove that, up to replacing $X$ with a finite quasi-étale cover, $X$ admits a locally trivial rationally connected fibration onto a projective klt variety with numerically trivial canonical divisor. This structure theorem generalizes previous works for smooth projective varieties and reduces several structure problems to the singular Beauville-Bogomolov decomposition for Calabi-Yau varieties. As an application, projective varieties of klt Calabi-Yau type, which naturally appear as an outcome of the Log Minimal Model Program, are decomposed into building block varieties: rationally connected varieties and Calabi-Yau varieties.",
+  "tex_total": 134861,
+  "texs": [
+   {
+    "path": "被引素材/2105.14308/main.tex",
+    "bytes": 134861,
+    "lines": 2661
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D385",
+   "D447",
+   "D471"
+  ],
+  "bib_keys": {
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "MatsumuraWangV3"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "MatsumuraWangV3"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "MatsumuraWangV3"
+   ]
+  }
+ },
+ {
+  "cid": "C19",
+  "arxiv": "2506.23218",
+  "dir": "被引素材/2506.23218",
+  "title": "Beauville--Bogomolov--Yau decomposition for Kähler generalized pairs",
+  "authors": [
+   "Shin-ichi Matsumura",
+   "Juanyong Wang",
+   "Xiaojun Wu",
+   "Qimin Zhang"
+  ],
+  "published": "2025-06-29",
+  "abstract": "In this paper, we establish the Beauville--Bogomolov--Yau decomposition for generalized pairs in the Kähler setting, thereby extending this structure theorem to the natural framework of the Kähler generalized Minimal Model Program. More precisely, we prove that, after passing to a finite quasi-étale cover, a Kähler generalized klt pair $(X,Δ,\\boldsymbolβ)$ of Calabi--Yau type admits a locally constant fibration $(X,Δ)\\to Y$ over a Calabi--Yau variety $Y$ whose fiber $(F,Δ|_{F})$ is rationally connected. Equivalently, after base change to the universal cover of $Y$, the fibration becomes a product, and its global structure is determined by a monodromy action preserving the pair $(F,Δ|_{F})$. As a principal application, when the nef b-part $\\boldsymbolβ$ vanishes, we show that the monodromy can be eliminated after a further finite quasi-étale cover, yielding a product decomposition into a rationally connected pair, strict Calabi--Yau varieties, irreducible holomorphic symplectic varieties, and complex tori. The proof introduces new analytic methods involving relative projectivity, localized positivity and flatness of direct image sheaves, generalized pairs in the analytic Minimal Model Program, and foliations on singular Kähler varieties.",
+  "tex_total": 399736,
+  "texs": [
+   {
+    "path": "被引素材/2506.23218/arXiv_0909_2026.tex",
+    "bytes": 399736,
+    "lines": 13385
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D385",
+   "D447",
+   "D471"
+  ],
+  "bib_keys": {
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "MatsumuraWangWuZhang2026"
+   ],
+   "Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026": [
+    "MatsumuraWangWuZhang2026"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "MatsumuraWangWuZhang2026"
+   ]
+  }
+ },
+ {
+  "cid": "C20",
+  "arxiv": "0812.2563",
+  "dir": "被引素材/0812.2563",
+  "title": "A Sparse Flat Extension Theorem for Moment Matrices",
+  "authors": [
+   "Monique Laurent",
+   "Bernard Mourrain"
+  ],
+  "published": "2008-12-15",
+  "abstract": "In this note we prove a generalization of the flat extension theorem of Curto and Fialkow for truncated moment matrices. It applies to moment matrices indexed by an arbitrary set of monomials and its border, assuming that this set is connected to 1. When formulated in a basis-free setting, this gives an equivalent result for truncated Hankel operators.",
+  "tex_total": 42475,
+  "texs": [
+   {
+    "path": "被引素材/0812.2563/main.tex",
+    "bytes": 42475,
+    "lines": 955
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D207",
+   "D210"
+  ],
+  "bib_keys": {
+   "A-counterexample-to-Hadwigers-conjecture-September-23-2026": [
+    "laurentmourrain2009"
+   ],
+   "A-counterexample-to-the-Colin-de-Verdiere-chromatic-conjecture-September-23-2026": [
+    "laurentmourrain2009"
+   ]
+  }
+ },
+ {
+  "cid": "C21",
+  "arxiv": "1109.4382",
+  "dir": "被引素材/1109.4382",
+  "title": "Numerical triviality and pullbacks",
+  "authors": [
+   "Brian Lehmann"
+  ],
+  "published": "2011-09-20",
+  "abstract": "Let f: X \\to Z be a surjective morphism of smooth complex projective varieties with connected fibers. Suppose that L is a pseudo-effective divisor on X that is f-numerically trivial. We show that there is a divisor D on Z such that L is numerically equivalent to f^*D.",
+  "tex_total": 37333,
+  "texs": [
+   {
+    "path": "被引素材/1109.4382/trivmorph.tex",
+    "bytes": 37333,
+    "lines": 520
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D318",
+   "D385"
+  ],
+  "bib_keys": {
+   "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026": [
+    "Lehmann2015"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "Lehmann2015"
+   ]
+  }
+ },
+ {
+  "cid": "C22",
+  "arxiv": "1203.0893",
+  "dir": "被引素材/1203.0893",
+  "title": "Thin shell implies spectral gap up to polylog via a stochastic localization scheme",
+  "authors": [
+   "Ronen Eldan"
+  ],
+  "published": "2012-03-05",
+  "abstract": "We consider the isoperimetric inequality on the class of high-dimensional isotropic convex bodies. We establish quantitative connections between two well-known open problems related to this inequality, namely, the thin shell conjecture, and the conjecture by Kannan, Lovasz, and Simonovits, showing that the corresponding optimal bounds are equivalent up to logarithmic factors. In particular we prove that, up to logarithmic factors, the minimal possible ratio between surface area and volume is attained on ellipsoids. We also show that a positive answer to the thin shell conjecture would imply an optimal dependence on the dimension in a certain formulation of the Brunn-Minkowski inequality. Our results rely on the construction of a stochastic localization scheme for log-concave measures.",
+  "tex_total": 83940,
+  "texs": [
+   {
+    "path": "被引素材/1203.0893/main.tex",
+    "bytes": 83940,
+    "lines": 1609
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D176",
+   "D242"
+  ],
+  "bib_keys": {
+   "A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026": [
+    "Eldan2013"
+   ],
+   "The-sharp-factor-of-IID-threshold-for-the-free-Ising-model-on-regular-trees-September-26-2026": [
+    "Eldan2013"
+   ]
+  }
+ },
+ {
+  "cid": "C23",
+  "arxiv": "1412.0940",
+  "dir": "被引素材/1412.0940",
+  "title": "Counting independent sets in graphs",
+  "authors": [
+   "Wojciech Samotij"
+  ],
+  "published": "2014-12-02",
+  "abstract": "In this short survey article, we present an elementary, yet quite powerful, method of enumerating independent sets in graphs. This method was first employed more than three decades ago by Kleitman and Winston and has subsequently been used numerous times by many researchers in various contexts. Our presentation of the method is illustrated with several applications of it to `real-life' combinatorial problems. In particular, we derive bounds on the number of independent sets in regular graphs, sum-free subsets of $\\{1, \\ldots, n\\}$, and $C_4$-free graphs and give a short proof of an analogue of Roth's theorem on $3$-term arithmetic progressions in sparse random sets of integers which was originally formulated and proved by Kohayakawa, Łuczak, and Rödl.",
+  "tex_total": 53881,
+  "texs": [
+   {
+    "path": "被引素材/1412.0940/KW-survey.tex",
+    "bytes": 53881,
+    "lines": 542
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D207",
+   "D210"
+  ],
+  "bib_keys": {
+   "A-counterexample-to-Hadwigers-conjecture-September-23-2026": [
+    "samotij2015"
+   ],
+   "A-counterexample-to-the-Colin-de-Verdiere-chromatic-conjecture-September-23-2026": [
+    "samotij2015"
+   ]
+  }
+ },
+ {
+  "cid": "C24",
+  "arxiv": "1511.04222",
+  "dir": "被引素材/1511.04222",
+  "title": "A vanishing theorem of Koll'ar-Ohsawa type",
+  "authors": [
+   "Shin-ichi Matsumura"
+  ],
+  "published": "2015-11-13",
+  "abstract": "For proper surjective holomorphic maps from K\"ahler manifolds to analytic spaces, we give a decomposition theorem for the cohomology groups of the canonical bundle twisted by Nakano semi-positive vector bundles by means of the higher direct image sheaves, by using the theory of harmonic integrals developed by Takegoshi. As an application, we prove a vanishing theorem of Koll'ar-Ohsawa type by combining the L^2-method for the dbar-equation.",
+  "tex_total": 47122,
+  "texs": [
+   {
+    "path": "被引素材/1511.04222/main.tex",
+    "bytes": 47122,
+    "lines": 1339
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D318",
+   "D385"
+  ],
+  "bib_keys": {
+   "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026": [
+    "Matsumura2018"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "Matsumura2018"
+   ]
+  }
+ },
+ {
+  "cid": "C25",
+  "arxiv": "1511.08164",
+  "dir": "被引素材/1511.08164",
+  "title": "Minimizing normalized volumes of valuations",
+  "authors": [
+   "Chi Li"
+  ],
+  "published": "2015-11-25",
+  "abstract": "For any $\\mathbb{Q}$-Gorenstein klt singularity $(X,o)$, we introduce a normalized volume function $\\widehat{\\rm vol}$ that is defined on the space of real valuations centered at $o$ and consider the problem of minimizing $\\widehat{\\rm vol}$. We prove that the normalized volume has a uniform positive lower bound by proving an Izumi type estimate for any $\\mathbb{Q}$-Gorenstein klt singularity. Furthermore, by proving a properness estimate, we show that the set of real valuations with uniformly bounded normalized volumes is compact, and hence reduce the existence of minimizers for the normalized volume functional $\\widehat{\\rm vol}$ to a conjectural lower semicontinuity property. We calculate candidate minimizers in several examples to show that this is an interesting and nontrivial problem. In particular, by using an inequality of de-Fernex-Ein-Mustaţă, we show that the divisorial valuation associated to the exceptional divisor of the standard blow up is a minimizer of $\\widehat{\\rm vol}$ for a smooth point. Finally the relation to Fujita's work on divisorial stability is also pointed out.",
+  "tex_total": 101033,
+  "texs": [
+   {
+    "path": "被引素材/1511.08164/main.tex",
+    "bytes": 101033,
+    "lines": 1734
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D307",
+   "D476"
+  ],
+  "bib_keys": {
+   "Bounded-klt-complements-for-Fano-contractions-September-25-2026": [
+    "LiProperness"
+   ],
+   "Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026": [
+    "LiMinimizing"
+   ]
+  }
+ },
+ {
+  "cid": "C26",
+  "arxiv": "1512.03887",
+  "dir": "被引素材/1512.03887",
+  "title": "A remark on the decomposition theorem for direct images of canonical sheaves tensorized with semipositive vector bundles",
+  "authors": [
+   "Taro Fujisawa"
+  ],
+  "published": "2015-12-12",
+  "abstract": "The purpose of this short note is to give a remark on the decomposition theorem for direct images of canonical sheaves tensorized with Nakano semipositive vector bundles. Although our result is a direct consequence of Takegoshi's work, it was not stated explicitly in his article. Here we give the precise statement and the proof.",
+  "tex_total": 10295,
+  "texs": [
+   {
+    "path": "被引素材/1512.03887/main.tex",
+    "bytes": 10295,
+    "lines": 361
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D318",
+   "D385"
+  ],
+  "bib_keys": {
+   "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026": [
+    "Fujisawa2015"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "Fujisawa2015"
+   ]
+  }
+ },
+ {
+  "cid": "C27",
+  "arxiv": "1603.05765",
+  "dir": "被引素材/1603.05765",
+  "title": "Anti-pluricanonical systems on Fano varieties",
+  "authors": [
+   "Caucher Birkar"
+  ],
+  "published": "2016-03-18",
+  "abstract": "In this paper, we study the linear systems $|-mK_X|$ on Fano varieties $X$ with klt singularities. In a given dimension $d$, we prove $|-mK_X|$ is non-empty and contains an element with \"good singularities\" for some natural number $m$ depending only on $d$; if in addition $X$ is $ε$-lc for some $ε&gt;0$, then we show that we can choose $m$ depending only on $d$ and $ε$ so that $|-mK_X|$ defines a birational map. Further, we prove Shokurov's conjecture on boundedness of complements, and show that certain classes of Fano varieties form bounded families.",
+  "tex_total": 349529,
+  "texs": [
+   {
+    "path": "被引素材/1603.05765/main.tex",
+    "bytes": 349529,
+    "lines": 6998
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D307",
+   "D476"
+  ],
+  "bib_keys": {
+   "Bounded-klt-complements-for-Fano-contractions-September-25-2026": [
+    "BirkarComplements"
+   ],
+   "Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026": [
+    "BirkarComplements"
+   ]
+  }
+ },
+ {
+  "cid": "C28",
+  "arxiv": "1605.02284",
+  "dir": "被引素材/1605.02284",
+  "title": "Injectivity theorem for pseudo-effective line bundles and its applications",
+  "authors": [
+   "Osamu Fujino",
+   "Shin-ichi Matsumura"
+  ],
+  "published": "2016-05-08",
+  "abstract": "We formulate and establish a generalization of Kollár's injectivity theorem for adjoint bundles twisted by suitable multiplier ideal sheaves. As applications, we generalize Kollár's torsion-freeness, Kollár's vanishing theorem, and a generic vanishing theorem for pseudo-effective line bundles. Our approach is not Hodge theoretic but analytic, which enables us to treat singular Hermitian metrics with nonalgebraic singularities. For the proof of the main injectivity theorem, we use $L^{2}$-harmonic forms on noncompact Kähler manifolds. For applications, we prove a Bertini-type theorem on the restriction of multiplier ideal sheaves to general members of free linear systems.",
+  "tex_total": 137181,
+  "texs": [
+   {
+    "path": "被引素材/1605.02284/main.tex",
+    "bytes": 137181,
+    "lines": 3630
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D318",
+   "D385"
+  ],
+  "bib_keys": {
+   "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026": [
+    "FM2016"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "FM2016"
+   ]
+  }
+ },
+ {
+  "cid": "C29",
+  "arxiv": "1606.08894",
+  "dir": "被引素材/1606.08894",
+  "title": "Existence of valuations with smallest normalized volume",
+  "authors": [
+   "Harold Blum"
+  ],
+  "published": "2016-06-28",
+  "abstract": "Li introduced the normalized volume of a valuation due to its relation to K-semistability. He conjectured that over a klt singularity there exists a valuation with smallest normalized volume. We prove this conjecture and provide an example to show that such a valuation need not be divisorial.",
+  "tex_total": 98391,
+  "texs": [
+   {
+    "path": "被引素材/1606.08894/normvolumev8.tex",
+    "bytes": 98391,
+    "lines": 1914
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D307",
+   "D476"
+  ],
+  "bib_keys": {
+   "Bounded-klt-complements-for-Fano-contractions-September-25-2026": [
+    "BlumExistence"
+   ],
+   "Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026": [
+    "BlumExistence"
+   ]
+  }
+ },
+ {
+  "cid": "C30",
+  "arxiv": "1609.05543",
+  "dir": "被引素材/1609.05543",
+  "title": "Singularities of linear systems and boundedness of Fano varieties",
+  "authors": [
+   "Caucher Birkar"
+  ],
+  "published": "2016-09-18",
+  "abstract": "We study log canonical thresholds (also called global log canonical threshold or $α$-invariant) of $\\mathbb{R}$-linear systems. We prove existence of positive lower bounds in different settings, in particular, proving a conjecture of Ambro. We then show that the Borisov-Alexeev-Borisov conjecture holds, that is, given a natural number $d$ and a positive real number $ε$, the set of Fano varieties of dimension $d$ with $ε$-log canonical singularities forms a bounded family. This implies that birational automorphism groups of rationally connected varieties are Jordan which in particular answers a question of Serre. Next we show that if the log canonical threshold of the anti-canonical system of a Fano variety is at most one, then it is computed by some divisor, answering a question of Tian in this case.",
+  "tex_total": 151301,
+  "texs": [
+   {
+    "path": "被引素材/1609.05543/main.tex",
+    "bytes": 151301,
+    "lines": 3615
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D307",
+   "D476"
+  ],
+  "bib_keys": {
+   "Bounded-klt-complements-for-Fano-contractions-September-25-2026": [
+    "BirkarBAB"
+   ],
+   "Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026": [
+    "BAB"
+   ]
+  }
+ },
+ {
+  "cid": "C31",
+  "arxiv": "1703.00292",
+  "dir": "被引素材/1703.00292",
+  "title": "A general extension theorem for cohomology classes on non reduced analytic spaces",
+  "authors": [
+   "Junyan Cao",
+   "Jean-Pierre Demailly",
+   "Shin-Ichi Matsumura"
+  ],
+  "published": "2017-03-01",
+  "abstract": "The main purpose of this paper is to generalize the celebrated L${}^2$ extension theorem of Ohsawa-Takegoshi in several directions : the holomorphic sections to extend are taken in a possibly singular hermitian line bundle, the subvariety from which the extension is performed may be non reduced, the ambient manifold is K{ä}hler and holomorphically convex, but not necessarily compact.",
+  "tex_total": 66133,
+  "texs": [
+   {
+    "path": "被引素材/1703.00292/main.tex",
+    "bytes": 66133,
+    "lines": 1409
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D318",
+   "D385"
+  ],
+  "bib_keys": {
+   "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026": [
+    "CDM2017"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "CDM2017"
+   ]
+  }
+ },
+ {
+  "cid": "C32",
+  "arxiv": "1707.05561",
+  "dir": "被引素材/1707.05561",
+  "title": "Stability of Valuations: Higher Rational Rank",
+  "authors": [
+   "Chi Li",
+   "Chenyang Xu"
+  ],
+  "published": "2017-07-18",
+  "abstract": "Given a klt singularity $x\\in (X, D)$, we show that a quasi-monomial valuation $v$ with a finitely generated associated graded ring is the minimizer of the normalized volume function $\\widehat{\\rm vol}_{(X,D),x}$, if and only if $v$ induces a degeneration to a K-semistable log Fano cone singularity. Moreover, such a minimizer is unique among all quasi-monomial valuations up to rescaling. As a consequence, we prove that for a klt singularity $x\\in X$ on the Gromov-Hausdorff limit of Kähler-Einstein Fano manifolds, the intermediate K-semistable cone associated to its metric tangent cone is uniquely determined by the algebraic structure of $x\\in X$, hence confirming a conjecture by Donaldson-Sun.",
+  "tex_total": 245162,
+  "texs": [
+   {
+    "path": "被引素材/1707.05561/main.tex",
+    "bytes": 245162,
+    "lines": 3299
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D307",
+   "D476"
+  ],
+  "bib_keys": {
+   "Bounded-klt-complements-for-Fano-contractions-September-25-2026": [
+    "LiXuStable"
+   ],
+   "Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026": [
+    "LiXuHigherRank"
+   ]
+  }
+ },
+ {
+  "cid": "C33",
+  "arxiv": "1803.04756",
+  "dir": "被引素材/1803.04756",
+  "title": "A pseudo-quasi-polynomial algorithm for solving mean-payoff parity games",
+  "authors": [
+   "Laure Daviaud",
+   "Marcin Jurdzinski",
+   "Ranko Lazic"
+  ],
+  "published": "2018-03-13",
+  "abstract": "In a mean-payoff parity game, one of the two players aims both to achieve a qualitative parity objective and to minimize a quantitative long-term average of payoffs (aka. mean payoff). The game is zero-sum and hence the aim of the other player is to either foil the parity objective or to maximize the mean payoff. Our main technical result is a pseudo-quasi-polynomial algorithm for solving mean-payoff parity games. All algorithms for the problem that have been developed for over a decade have a pseudo-polynomial and an exponential factors in their running times; in the running time of our algorithm the latter is replaced with a quasi-polynomial one. By the results of Chatterjee and Doyen (2012) and of Schewe, Weinert, and Zimmermann (2018), our main technical result implies that there are pseudo-quasi-polynomial algorithms for solving parity energy games and for solving parity games with weights. Our main conceptual contributions are the definitions of strategy decompositions for both players, and a notion of progress measures for mean-payoff parity games that generalizes both parity and energy progress measures. The former provides normal forms for and succinct representations of winning strategies, and the latter enables the application to mean-payoff parity games of the order-theoretic machinery that underpins a recent quasi-polynomial algorithm for solving parity games.",
+  "tex_total": 95719,
+  "texs": [
+   {
+    "path": "被引素材/1803.04756/strategy-decompositions.tex",
+    "bytes": 31912,
+    "lines": 657
+   },
+   {
+    "path": "被引素材/1803.04756/progress-measures.tex",
+    "bytes": 24320,
+    "lines": 532
+   },
+   {
+    "path": "被引素材/1803.04756/introduction.tex",
+    "bytes": 17353,
+    "lines": 318
+   },
+   {
+    "path": "被引素材/1803.04756/lifting.tex",
+    "bytes": 10695,
+    "lines": 224
+   },
+   {
+    "path": "被引素材/1803.04756/winsets-to-decompositions.tex",
+    "bytes": 6239,
+    "lines": 128
+   },
+   {
+    "path": "被引素材/1803.04756/main.tex",
+    "bytes": 4757,
+    "lines": 128
+   },
+   {
+    "path": "被引素材/1803.04756/macros.tex",
+    "bytes": 443,
+    "lines": 19
+   }
+  ],
+  "tex_n": 7,
+  "notes": [
+   "D355",
+   "D80"
+  ],
+  "bib_keys": {
+   "Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026": [
+    "DaviaudJurdzinskiLazic2018"
+   ],
+   "Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026": [
+    "DaviaudJurdzinskiLazic2018"
+   ]
+  }
+ },
+ {
+  "cid": "C34",
+  "arxiv": "1810.12733",
+  "dir": "被引素材/1810.12733",
+  "title": "A new proof of Kiselman's minimum principle for plurisubharmonic functions",
+  "authors": [
+   "Fusheng Deng",
+   "Zhiwei Wang",
+   "Liyou Zhang",
+   "Xiangyu Zhou"
+  ],
+  "published": "2018-10-30",
+  "abstract": "We give a new proof of Kiselman's minimum principle for plurisubharmonic functions, based on Ohsawa-Takegoshi extension theorem.",
+  "tex_total": 15043,
+  "texs": [
+   {
+    "path": "被引素材/1810.12733/main.tex",
+    "bytes": 15043,
+    "lines": 316
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D305",
+   "D471"
+  ],
+  "bib_keys": {
+   "Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026": [
+    "DWZZ2018"
+   ],
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "DengWangZhangZhou2018"
+   ]
+  }
+ },
+ {
+  "cid": "C35",
+  "arxiv": "1907.01114",
+  "dir": "被引素材/1907.01114",
+  "title": "A Minimizing Valuation is Quasi-monomial",
+  "authors": [
+   "Chenyang Xu"
+  ],
+  "published": "2019-07-02",
+  "abstract": "We prove a version of Jonsson-Mustaţǎ's Conjecture, which says for any graded sequence of ideals, there exists a quasi-monomial valuation computing its log canonical threshold. As a corollary, we confirm Chi Li's conjecture that a minimizer of the normalized volume function is always quasi-monomial. Applying our techniques to a family of klt singularities, we show that the volume of klt singularities is a constructible function. As a corollary, we prove that in a family of klt log Fano pairs, the K-semistable ones form a Zariski open set. Together with [Jia17], we conclude that all K-semistable klt Fano varieties with a fixed dimension and volume are parametrized by an Artin stack of finite type, which then admits a separated good moduli space by [BX18, ABHLX19], whose geometric points parametrize K-polystable klt Fano varieties.",
+  "tex_total": 79182,
+  "texs": [
+   {
+    "path": "被引素材/1907.01114/quasimonomial-20191115.tex",
+    "bytes": 79182,
+    "lines": 985
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D307",
+   "D476"
+  ],
+  "bib_keys": {
+   "Bounded-klt-complements-for-Fano-contractions-September-25-2026": [
+    "XuQuasimonomial"
+   ],
+   "Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026": [
+    "XuQuasiMonomial"
+   ]
+  }
+ },
+ {
+  "cid": "C36",
+  "arxiv": "2005.08303",
+  "dir": "被引素材/2005.08303",
+  "title": "Uniqueness of the minimizer of the normalized volume function",
+  "authors": [
+   "Chenyang Xu",
+   "Ziquan Zhuang"
+  ],
+  "published": "2020-05-17",
+  "abstract": "We confirm a conjecture of Chi Li which says that the minimizer of the normalized volume function for a klt singularity is unique up to rescaling. This is achieved by defining stability thresholds for valuations, and then showing that a valuation is a minimizer if and only if it is K-semistable, and that K-semistable valuation is unique up to rescaling. As applications, we prove a finite degree formula for volumes of klt singularities and an effective bound of the local fundamental group of a klt singularity.",
+  "tex_total": 71923,
+  "texs": [
+   {
+    "path": "被引素材/2005.08303/uniqueness.tex",
+    "bytes": 71923,
+    "lines": 1056
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D307",
+   "D476"
+  ],
+  "bib_keys": {
+   "Bounded-klt-complements-for-Fano-contractions-September-25-2026": [
+    "XuZhuangUniqueness"
+   ],
+   "Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026": [
+    "MinimizerUniqueness"
+   ]
+  }
+ },
+ {
+  "cid": "C37",
+  "arxiv": "2006.11238",
+  "dir": "被引素材/2006.11238",
+  "title": "Geometry of polarised varieties",
+  "authors": [
+   "Caucher Birkar"
+  ],
+  "published": "2020-06-19",
+  "abstract": "In this paper we investigate the geometry of projective varieties polarised by ample and more generally nef and big Weil divisors. First we study birational boundedness of linear systems. We show that if $X$ is a projective variety of dimension $d$ with $ε$-lc singularities for $ε&gt;0$, and if $N$ is a nef and big Weil divisor on $X$ such that $N-K_X$ is pseudo-effective, then the linear system $|mN|$ defines a birational map for some natural number $m$ depending only on $d,ε$. This is key to proving various other results. For example, it implies that if $N$ is a big Weil divisor (not necessarily nef) on a klt Calabi-Yau variety of dimension $d$, then the linear system $|mN|$ defines a birational map for some natural number $m$ depending only on $d$. It also gives new proofs of some known results, for example, if $X$ is an $ε$-lc Fano variety of dimension $d$ then taking $N=-K_X$ we recover birationality of $|-mK_X|$ for bounded $m$. We prove similar birational boundedness results for nef and big Weil divisors $N$ on projective klt varieties $X$ when both $K_X$ and $N-K_X$ are pseudo-effective (here $X$ is not assumed $ε$-lc). Using the above, we show boundedness of polarised varieties under some natural conditions. We extend these to boundedness of semi-log canonical Calabi-Yau pairs polarised by effective ample Weil divisors not containing lc centres. We will briefly discuss applications to existence of projective coarse moduli spaces of such polarised Calabi-Yau pairs.",
+  "tex_total": 164494,
+  "texs": [
+   {
+    "path": "被引素材/2006.11238/main.tex",
+    "bytes": 164494,
+    "lines": 3680
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D307",
+   "D476"
+  ],
+  "bib_keys": {
+   "Bounded-klt-complements-for-Fano-contractions-September-25-2026": [
+    "BirkarPolarised"
+   ],
+   "Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026": [
+    "BirkarPolarised"
+   ]
+  }
+ },
+ {
+  "cid": "C38",
+  "arxiv": "2108.10303",
+  "dir": "被引素材/2108.10303",
+  "title": "Hadwiger's conjecture implies a conjecture of Füredi-Gyárfás-Simonyi",
+  "authors": [
+   "Stijn Cambie"
+  ],
+  "published": "2021-08-23",
+  "abstract": "One of the most important open problems in the field of graph colouring or even graph theory is the conjecture of Hadwiger. This conjecture was the inspiration for many mathematical works, one of them being the work of Füredi, Gyárfás and Simonyi in which they \"risked\" to conjecture the precise bound for a graph with independence number $2$ to contain a certain connected matching. We prove that their conjecture would be a corollary of Hadwiger's conjecture or equivalently if their risky conjecture would be false, then Hadwiger's conjecture would be false as well.",
+  "tex_total": 10092,
+  "texs": [
+   {
+    "path": "被引素材/2108.10303/ReductionConjs.tex",
+    "bytes": 10092,
+    "lines": 164
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D207",
+   "D210"
+  ],
+  "bib_keys": {
+   "A-counterexample-to-Hadwigers-conjecture-September-23-2026": [
+    "cambie2021"
+   ],
+   "A-counterexample-to-the-Colin-de-Verdiere-chromatic-conjecture-September-23-2026": [
+    "cambie2021"
+   ]
+  }
+ },
+ {
+  "cid": "C39",
+  "arxiv": "2110.07346",
+  "dir": "被引素材/2110.07346",
+  "title": "Fast value iteration: A uniform approach to efficient algorithms for energy games",
+  "authors": [
+   "Michaël Cadilhac",
+   "Antonio Casares",
+   "Pierre Ohlmann"
+  ],
+  "published": "2021-10-14",
+  "abstract": "We study algorithms for solving parity, mean-payoff and energy games. We propose a systematic framework, which we call Fast value iteration, for describing, comparing, and proving correctness of such algorithms. The approach is based on potential reductions, as introduced by Gurvich, Karzanov and Khachiyan (1988). This framework allows us to provide simple presentations and correctness proofs of known algorithms, unifying the Optimal strategy improvement algorithm by Schewe (2008) and the quasi dominions approach by Benerecetti et al. (2020), amongst others. The new approach also leads to novel symmetric versions of these algorithms, highly efficient in practice, but for which we are unable to prove termination. We report on empirical evaluation, comparing the different fast value iteration algorithms, and showing that they are competitive even to top parity game solvers.",
+  "tex_total": 103672,
+  "texs": [
+   {
+    "path": "被引素材/2110.07346/main.tex",
+    "bytes": 16278,
+    "lines": 251
+   },
+   {
+    "path": "被引素材/2110.07346/potential_reductions.tex",
+    "bytes": 16051,
+    "lines": 209
+   },
+   {
+    "path": "被引素材/2110.07346/instancesFVI.tex",
+    "bytes": 14524,
+    "lines": 228
+   },
+   {
+    "path": "被引素材/2110.07346/appendix-comparisons.tex",
+    "bytes": 9415,
+    "lines": 97
+   },
+   {
+    "path": "被引素材/2110.07346/experiments.tex",
+    "bytes": 8771,
+    "lines": 144
+   },
+   {
+    "path": "被引素材/2110.07346/preliminaries.tex",
+    "bytes": 7196,
+    "lines": 101
+   },
+   {
+    "path": "被引素材/2110.07346/appendix-correctnessMetaAlg.tex",
+    "bytes": 6754,
+    "lines": 111
+   },
+   {
+    "path": "被引素材/2110.07346/conclusion.tex",
+    "bytes": 4625,
+    "lines": 58
+   }
+  ],
+  "tex_n": 15,
+  "notes": [
+   "D355",
+   "D80"
+  ],
+  "bib_keys": {
+   "Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026": [
+    "CadilhacCasaresOhlmann2025"
+   ],
+   "Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026": [
+    "CadilhacCasaresOhlmann2025"
+   ]
+  }
+ },
+ {
+  "cid": "C40",
+  "arxiv": "2205.10915",
+  "dir": "被引素材/2205.10915",
+  "title": "Stable degenerations of singularities",
+  "authors": [
+   "Chenyang Xu",
+   "Ziquan Zhuang"
+  ],
+  "published": "2022-05-22",
+  "abstract": "For any Kawamata log terminal (klt) singularity and any minimizer of its normalized volume function, we prove that the associated graded ring is always finitely generated, as conjectured by Chi Li. As a consequence, we complete the last step of establishing the Stable Degeneration Conjecture proposed by Chi Li and the first named author for an arbitrary klt singularity.",
+  "tex_total": 163760,
+  "texs": [
+   {
+    "path": "被引素材/2205.10915/HRFG-local.tex",
+    "bytes": 163760,
+    "lines": 1660
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D307",
+   "D476"
+  ],
+  "bib_keys": {
+   "Bounded-klt-complements-for-Fano-contractions-September-25-2026": [
+    "XuZhuangStable"
+   ],
+   "Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026": [
+    "StableDegeneration"
+   ]
+  }
+ },
+ {
+  "cid": "C41",
+  "arxiv": "2402.03975",
+  "dir": "被引素材/2402.03975",
+  "title": "Smoothed analysis of deterministic discounted and mean-payoff games",
+  "authors": [
+   "Bruno Loff",
+   "Mateusz Skomra"
+  ],
+  "published": "2024-02-06",
+  "abstract": "We devise a policy-iteration algorithm for deterministic two-player discounted and mean-payoff games, that runs in polynomial time with high probability, on any input where each payoff is chosen independently from a sufficiently random distribution. This includes the case where an arbitrary set of payoffs has been perturbed by a Gaussian, showing for the first time that deterministic two-player games can be solved efficiently, in the sense of smoothed analysis. More generally, we devise a condition number for deterministic discounted and mean-payoff games, and show that our algorithm runs in time polynomial in this condition number. Our result confirms a previous conjecture of Boros et al., which was claimed as a theorem and later retracted. It stands in contrast with a recent counter-example by Christ and Yannakakis, showing that Howard's policy-iteration algorithm does not run in smoothed polynomial time on stochastic single-player mean-payoff games. Our approach is inspired by the analysis of random optimal assignment instances by Frieze and Sorkin, and the analysis of bias-induced policies for mean-payoff games by Akian, Gaubert and Hochart.",
+  "tex_total": 232966,
+  "texs": [
+   {
+    "path": "被引素材/2402.03975/section_ergodic.tex",
+    "bytes": 63387,
+    "lines": 603
+   },
+   {
+    "path": "被引素材/2402.03975/section_algorithms.tex",
+    "bytes": 62195,
+    "lines": 528
+   },
+   {
+    "path": "被引素材/2402.03975/section_intro.tex",
+    "bytes": 42358,
+    "lines": 243
+   },
+   {
+    "path": "被引素材/2402.03975/section_det_mean_payoff_games.tex",
+    "bytes": 22306,
+    "lines": 280
+   },
+   {
+    "path": "被引素材/2402.03975/Smoothed_analysis.tex",
+    "bytes": 17068,
+    "lines": 533
+   },
+   {
+    "path": "被引素材/2402.03975/section_one_player_simplified.tex",
+    "bytes": 16620,
+    "lines": 124
+   },
+   {
+    "path": "被引素材/2402.03975/section_conclusion.tex",
+    "bytes": 4217,
+    "lines": 44
+   },
+   {
+    "path": "被引素材/2402.03975/figure_complexity_classes.tex",
+    "bytes": 2524,
+    "lines": 80
+   }
+  ],
+  "tex_n": 10,
+  "notes": [
+   "D355",
+   "D80"
+  ],
+  "bib_keys": {
+   "Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026": [
+    "LoffSkomra2024"
+   ],
+   "Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026": [
+    "LoffSkomra2024"
+   ]
+  }
+ },
+ {
+  "cid": "C42",
+  "arxiv": "2512.01401",
+  "dir": "被引素材/2512.01401",
+  "title": "Dense Matchings of Linear Size in Graphs with Independence Number 2",
+  "authors": [
+   "Jung Hon Yip"
+  ],
+  "published": "2025-12-01",
+  "abstract": "For a real number $c &gt; 4$, we prove that every graph $G$ with $α(G) \\leq 2$ and $|V(G)| \\geq ct$ has a matching $M$ with $|M| = t$ such that the number of non-adjacent pairs of edges in $M$ is at most: \\begin{equation*} \\left( \\frac{1}{c\\left(c-1\\right)^2} + O_c\\left(t^{-1/3} \\right) \\right) \\binom{t}{2}. \\end{equation*} This is related to an open problem of Seymour (2016) about Hadwiger's Conjecture, who asked if there is a constant $\\varepsilon &gt; 0$ such that every graph $G$ with $α(G) \\leq 2$ has $\\text{had}(G) \\geq (\\frac{1}{3} + \\varepsilon) |V(G)|$.",
+  "tex_total": 33941,
+  "texs": [
+   {
+    "path": "被引素材/2512.01401/main.tex",
+    "bytes": 33941,
+    "lines": 523
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D207",
+   "D210"
+  ],
+  "bib_keys": {
+   "A-counterexample-to-Hadwigers-conjecture-September-23-2026": [
+    "yip2025"
+   ],
+   "A-counterexample-to-the-Colin-de-Verdiere-chromatic-conjecture-September-23-2026": [
+    "yip2025"
+   ]
+  }
+ },
+ {
+  "cid": "C43",
+  "arxiv": "2603.07555",
+  "dir": "被引素材/2603.07555",
+  "title": "A symmetric recursive algorithm for mean-payoff games",
+  "authors": [
+   "Pierre Ohlmann"
+  ],
+  "published": "2026-03-08",
+  "abstract": "We propose a new deterministic symmetric recursive algorithm for solving mean-payoff games.",
+  "tex_total": 72490,
+  "texs": [
+   {
+    "path": "被引素材/2603.07555/main.tex",
+    "bytes": 71855,
+    "lines": 969
+   },
+   {
+    "path": "被引素材/2603.07555/macros.tex",
+    "bytes": 635,
+    "lines": 27
+   }
+  ],
+  "tex_n": 2,
+  "notes": [
+   "D355",
+   "D80"
+  ],
+  "bib_keys": {
+   "Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026": [
+    "Ohlmann2026"
+   ],
+   "Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026": [
+    "Ohlmann2026"
+   ]
+  }
+ },
+ {
+  "cid": "C44",
+  "arxiv": "2607.06334",
+  "dir": "被引素材/2607.06334",
+  "title": "Improved subexponential analysis of the Random-Action-Removal algorithm for 2-player turn-based games and non-binary AUSOs",
+  "authors": [
+   "Uri Zwick"
+  ],
+  "published": "2026-07-07",
+  "abstract": "We give a concise description and an improved analysis of the Random-Action-Removal algorithm for solving 2-player, 0-sum, turn-based, possibly infinite duration, stochastic or non-stochastic games played on graphs, or on finite sets of states. More generally, the algorithm can be used to find the sink of an Acyclic Unique Sink Orientation (AUSO) of a non-binary hypercube. The families of games that can be solved by the algorithm include discounted and non-discounted stochastic games (SGs) and Mean Payoff Games (MPGs). The obtained algorithm is the fastest known randomized algorithm for solving such games, slightly improving on a much more complicated algorithm of Hansen and Zwick (STOC 2015). The Random-Action-Removal algorithm is an adaptation of the Random-Facet algorithm used to solve linear programming (LP) problems, or, more generally, LP-type problems. Two dual variants of the Random-Facet algorithm were developed independently by Kalai (STOC 1992) and by Matou{š}ek, Sharir and Welzl (SoCG 1992). For LP problems, the algorithm of Kalai is a primal \\emph{simplex} algorithm, while the algorithm of Matou{š}ek, Sharir and Welzl is a dual \\emph{simplex} algorithm. The Random-Action-Removal algorithm for games or AUSOs is an adaptation of the dual algorithm of Matou{š}ek, Sharir and Welzl, and is a randomized \\emph{strategy iteration} algorithm. Our improved analysis shows that the Random-Action-Removal algorithm solves games with~$n$ states and $m\\ge 2n$ actions in $e^{O(\\sqrt{n\\ln(m/n)})}$ time. This improves on a previous $e^{O(\\sqrt{n\\ln(m/\\sqrt n)})}$ bound for the algorithm that follows from the analysis of Matou{š}ek, Sharir and Welzl (SoCG 1992). An $e^{O(\\sqrt{n\\ln(m/n)})}$ bound, with worse constant factors, was previously obtained using a much more complicated algorithm for solving LP and LP-type problems of Hansen and Zwick (STOC 2015).",
+  "tex_total": 102079,
+  "texs": [
+   {
+    "path": "被引素材/2607.06334/RAR-arXiv.tex",
+    "bytes": 99418,
+    "lines": 984
+   },
+   {
+    "path": "被引素材/2607.06334/my_style.tex",
+    "bytes": 2661,
+    "lines": 107
+   }
+  ],
+  "tex_n": 2,
+  "notes": [
+   "D355",
+   "D80"
+  ],
+  "bib_keys": {
+   "Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026": [
+    "Zwick2026"
+   ],
+   "Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026": [
+    "Zwick2026"
+   ]
+  }
+ },
+ {
+  "cid": "C45",
+  "arxiv": "2609.26222",
+  "dir": "被引素材/2609.26222",
+  "title": "The Scaling Window of Random $k$-SAT",
+  "authors": [
+   "Gaia Carenini"
+  ],
+  "published": "2026-08-11",
+  "abstract": "We prove a general upper bound for scaling windows of sparse monotone covering problems. From that, we deduce that for every fixed value $k\\geq 3$, the window of random $k$-SAT is $O(n/\\log n)$, improving the Friedgut-Bourgain bound of $O(n/\\log\\log n)$. We also show that random signed Not-All-Equal-$k$-SAT and hypergraph non-two-colourability (Property B) have windows of the same order. Our upper bound for scaling windows of sparse monotone covering problems follows from a general strategy combining the strengthening of Bourgain's sharp threshold theorem by Keevash, Lifshitz, Long, and Minzer with a local-to-random replacement principle. This provides a systematic method for proving scaling-window bounds, addressing a question of Perkins.",
+  "tex_total": 96434,
+  "texs": [
+   {
+    "path": "被引素材/2609.26222/main.tex",
+    "bytes": 96434,
+    "lines": 2310
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D458",
+   "D729"
+  ],
+  "bib_keys": {
+   "Linear-Variance-of-the-Random-3-SAT-Hitting-Time-October-5-2026": [
+    "Carenini2026"
+   ],
+   "Variance-of-the-Random-k-SAT-Hitting-Time-September-27-2026": [
+    "Carenini"
+   ]
+  }
+ },
+ {
+  "cid": "C46",
+  "arxiv": "alg-geom/9408003",
+  "dir": "被引素材/alg_geom_9408003",
+  "title": "Local Positivity of Ample Line Bundles",
+  "authors": [
+   "Lawrence Ein",
+   "Oliver Küchle",
+   "Robert Lazarsfeld"
+  ],
+  "published": "1994-08-09",
+  "abstract": "Let $L$ be a nef line bundle on a smooth complex projective variety $X$ of dimension $n$. Demailly has introduced a very interesting invariant --- the Seshadri constant $ε(L,x)$ --- which in effect measures how positive $L$ is locally near a given point $x \\in X$. For instance, Seshadri's criterion for ampleness may be phrased as stating that $L$ is ample if and only if there exists a positive number $e &gt; 0$ such that $ε(L,x) &gt; e$ for all $x \\in X$, and if $L$ is VERY ample, then $ε(L,x) \\ge 1$ for every $x$. We prove the somewhat surprising result that in each dimension $n$ there is a uniform lower bound on the Seshadri constant of an ample line bundle $L$ at a very general point of $X$. Specifically, $ε(L,x) \\ge (1/n) $ for all $x \\in X$ outside the union of countably many proper subvarieties of $X$. Examples of Miranda show that there cannot exist a bound (independent of $X$ and $L$) that holds at every point. The proof draws inspiration from two sources: first, the arguments used to prove boundedness of Fano manifolds of Picard number one; and secondly some of the geometric ideas involving zero-estimates appearing in the work of Faltings and others on Diophantine approximation and transcendence theory. We give some elementary applications of the main theorem to adjoint and pluricanonical linear series.",
+  "tex_total": 54104,
+  "texs": [
+   {
+    "path": "被引素材/alg_geom_9408003/main.tex",
+    "bytes": 54104,
+    "lines": 1273
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D318",
+   "D385"
+  ],
+  "bib_keys": {
+   "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026": [
+    "EKL1995"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "EKL1995"
+   ]
+  }
+ },
+ {
+  "cid": "C47",
+  "arxiv": "math/0005136",
+  "dir": "被引素材/math_0005136",
+  "title": "On the critical exponents of random k-SAT",
+  "authors": [
+   "David B. Wilson"
+  ],
+  "published": "2000-05-13",
+  "abstract": "There has been much recent interest in the satisfiability of random Boolean formulas. A random k-SAT formula is the conjunction of m random clauses, each of which is the disjunction of k literals (a variable or its negation). It is known that when the number of variables n is large, there is a sharp transition from satisfiability to unsatisfiability; in the case of 2-SAT this happens when m/n --&gt; 1, for 3-SAT the critical ratio is thought to be m/n ~ 4.2. The sharpness of this transition is characterized by a critical exponent, sometimes called ν=ν_k (the smaller the value of νthe sharper the transition). Experiments have suggested that ν_3 = 1.5+-0.1, ν_4 = 1.25+-0.05, ν_5=1.1+-0.05, ν_6 = 1.05+-0.05, and heuristics have suggested that ν_k --&gt; 1 as k --&gt; infinity. We give here a simple proof that each of these exponents is at least 2 (provided the exponent is well-defined). This result holds for each of the three standard ensembles of random k-SAT formulas: m clauses selected uniformly at random without replacement, m clauses selected uniformly at random with replacement, and each clause selected with probability p independent of the other clauses. We also obtain similar results for q-colorability and the appearance of a q-core in a random graph.",
+  "tex_total": 38262,
+  "texs": [
+   {
+    "path": "被引素材/math_0005136/sqrt.tex",
+    "bytes": 38262,
+    "lines": 779
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D458",
+   "D729"
+  ],
+  "bib_keys": {
+   "Linear-Variance-of-the-Random-3-SAT-Hitting-Time-October-5-2026": [
+    "Wilson2002"
+   ],
+   "Variance-of-the-Random-k-SAT-Hitting-Time-September-27-2026": [
+    "Wilson"
+   ]
+  }
+ },
+ {
+  "cid": "C48",
+  "arxiv": "math/0106147",
+  "dir": "被引素材/math_0106147",
+  "title": "A reduction map for nef line bundles",
+  "authors": [
+   "Thomas Bauer",
+   "Frederic Campana",
+   "Thomas Eckl",
+   "Stefan Kebekus",
+   "Thomas Peternell",
+   "Slawomir Rams",
+   "Tomasz Szemberg",
+   "Lorenz Wotzlaw"
+  ],
+  "published": "2001-06-18",
+  "abstract": "In a recent preprint, H. Tsuji gave a number of interesting assertions on the structure of pseudo-effective line bundles on projective manifolds. In particular, he postulated the existence of an almost-holomorphic \"reduction map\", whose fibers are maximal subvarieties on which the line bundle is numerically trivial. The purpose of this note is to give a simple, algebraic proof of the existence of a reduction map in the case where the line bundle is nef.",
+  "tex_total": 25871,
+  "texs": [
+   {
+    "path": "被引素材/math_0106147/main.tex",
+    "bytes": 25871,
+    "lines": 663
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D318",
+   "D385"
+  ],
+  "bib_keys": {
+   "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026": [
+    "BCEKPRSW2002"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "BCEKPRSW2002"
+   ]
+  }
+ },
+ {
+  "cid": "C49",
+  "arxiv": "math/0211159",
+  "dir": "被引素材/math_0211159",
+  "title": "The entropy formula for the Ricci flow and its geometric applications",
+  "authors": [
+   "Grisha Perelman"
+  ],
+  "published": "2002-11-11",
+  "abstract": "We present a monotonic expression for the Ricci flow, valid in all dimensions and without curvature assumptions. It is interpreted as an entropy for a certain canonical ensemble. Several geometric applications are given. In particular, (1) Ricci flow, considered on the space of riemannian metrics modulo diffeomorphism and scaling, has no nontrivial periodic orbits (that is, other than fixed points); (2) In a region, where singularity is forming in finite time, the injectivity radius is controlled by the curvature; (3) Ricci flow can not quickly turn an almost euclidean region into a very curved one, no matter what happens far away. We also verify several assertions related to Richard Hamilton's program for the proof of Thurston geometrization conjecture for closed three-manifolds, and give a sketch of an eclectic proof of this conjecture, making use of earlier results on collapsing with local lower curvature bound.",
+  "tex_total": 107201,
+  "texs": [
+   {
+    "path": "被引素材/math_0211159/main.tex",
+    "bytes": 107201,
+    "lines": 1848
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D274",
+   "D308"
+  ],
+  "bib_keys": {
+   "An-L2-Einstein-Gap-for-Nonnegatively-Curved-Four-Manifolds-October-5-2026": [
+    "Perelman"
+   ],
+   "Bounded-scalar-curvature-and-smooth-extension-of-four-dimensional-Ricci-flow-September-24-2026": [
+    "PerelmanEntropy"
+   ]
+  }
+ },
+ {
+  "cid": "C50",
+  "arxiv": "math/0308143",
+  "dir": "被引素材/math_0308143",
+  "title": "The moduli b-divisor of an lc-trivial fibration",
+  "authors": [
+   "Florin Ambro"
+  ],
+  "published": "2003-08-14",
+  "abstract": "We study positivity properties of the moduli (b-)divisor associated to a relative log pair $(X,B)/Y$ with relatively trivial log canonical class.",
+  "tex_total": 64189,
+  "texs": [
+   {
+    "path": "被引素材/math_0308143/main.tex",
+    "bytes": 64189,
+    "lines": 2027
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D307",
+   "D476"
+  ],
+  "bib_keys": {
+   "Bounded-klt-complements-for-Fano-contractions-September-25-2026": [
+    "AmbroModuli"
+   ],
+   "Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026": [
+    "AmbroCBF"
+   ]
+  }
+ },
+ {
+  "cid": "C51",
+  "arxiv": "math/0406345",
+  "dir": "被引素材/math_0406345",
+  "title": "Weighted Bergman spaces and the integral means spectrum of conformal mappings",
+  "authors": [
+   "Haakan Hedenmalm",
+   "Serguei Shimorin"
+  ],
+  "published": "2004-06-17",
+  "abstract": "We study the so-called integral means spectrum for univalent functions on the unit disk. Using an inequality of Prawitz (generalizing the classical area theorem of Gronwall), we find -- by applying a Moebius mapping to lift the result to the bidisk -- that it is possible to obtain rather strong estimates from above on the integral means spectrum.",
+  "tex_total": 130100,
+  "texs": [
+   {
+    "path": "被引素材/math_0406345/main.tex",
+    "bytes": 130100,
+    "lines": 3127
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D40",
+   "D54"
+  ],
+  "bib_keys": {
+   "A-strict-inverse-first-power-bound-for-univalent-functions-September-24-2026": [
+    "HedenmalmShimorin"
+   ],
+   "Brennans-conjecture-and-sharp-inverse-square-integral-means-September-24-2026": [
+    "HedenmalmShimorin2005"
+   ]
+  }
+ },
+ {
+  "cid": "C52",
+  "arxiv": "math/0503651",
+  "dir": "被引素材/math_0503651",
+  "title": "Moment inequalities for functions of independent random variables",
+  "authors": [
+   "Stephane Boucheron",
+   "Olivier Bousquet",
+   "Gabor Lugosi",
+   "Pascal Massart"
+  ],
+  "published": "2005-03-29",
+  "abstract": "A general method for obtaining moment inequalities for functions of independent random variables is presented. It is a generalization of the entropy method which has been used to derive concentration inequalities for such functions [Boucheron, Lugosi and Massart Ann. Probab. 31 (2003) 1583-1614], and is based on a generalized tensorization inequality due to Latala and Oleszkiewicz [Lecture Notes in Math. 1745 (2000) 147-168]. The new inequalities prove to be a versatile tool in a wide range of applications. We illustrate the power of the method by showing how it can be used to effortlessly re-derive classical inequalities including Rosenthal and Kahane-Khinchine-type inequalities for sums of independent random variables, moment inequalities for suprema of empirical processes and moment inequalities for Rademacher chaos and U-statistics. Some of these corollaries are apparently new. In particular, we generalize Talagrand's exponential inequality for Rademacher chaos of order 2 to any order. We also discuss applications for other complex functions of independent random variables, such as suprema of Boolean polynomials which include, as special cases, subgraph counting problems in random graphs.",
+  "tex_total": 0,
+  "texs": [],
+  "tex_n": 0,
+  "notes": [
+   "D458",
+   "D729"
+  ],
+  "bib_keys": {
+   "Linear-Variance-of-the-Random-3-SAT-Hitting-Time-October-5-2026": [
+    "BBLM2005"
+   ],
+   "Variance-of-the-Random-k-SAT-Hitting-Time-September-27-2026": [
+    "BBLM"
+   ]
+  }
+ },
+ {
+  "cid": "C53",
+  "arxiv": "math/0504020",
+  "dir": "被引素材/math_0504020",
+  "title": "The Picard scheme",
+  "authors": [
+   "Steven L. Kleiman"
+  ],
+  "published": "2005-04-01",
+  "abstract": "We develop in detail most of the theory of the Picard scheme that Grothendieck sketched in two Bourbaki talks and in commentaries on them. Also, we review in brief much of the rest of the theory developed by Grothendieck and by others. But we begin with a twelve-page historical introduction, which traces the development of the ideas from Bernoulli to Grothendieck, and which may appeal to a wider audience.",
+  "tex_total": 325849,
+  "texs": [
+   {
+    "path": "被引素材/math_0504020/main.tex",
+    "bytes": 325849,
+    "lines": 6614
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D318",
+   "D385"
+  ],
+  "bib_keys": {
+   "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026": [
+    "Kleiman2005"
+   ],
+   "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026": [
+    "Kleiman2005"
+   ]
+  }
+ },
+ {
+  "cid": "C54",
+  "arxiv": "math/0511225",
+  "dir": "被引素材/math_0511225",
+  "title": "Curvature of vector bundles associated to holomorphic fibrations",
+  "authors": [
+   "Bo Berndtsson"
+  ],
+  "published": "2005-11-09",
+  "abstract": "Let $L$ be a (semi)-positive line bundle over a Kahler manifold, $X$, fibered over a complex manifold $Y$. Assuming the fibers are compact and non-singular we prove that the hermitian vector bundle $E$ over $Y$ whose fibers over points $y$ are the spaces of global sections over $X_y$ to $L\\gr K_{X/Y}$ endowed with the $L^2$-metric is (semi)-positive in the sense of Nakano. We also discuss various applications, among them a partial result on a conjecture of Griffiths on the positivity of ample bundles. This is a revised and much expanded version of a previous preprint with the title `` Bergman kernels and the curvature of vector bundles''.",
+  "tex_total": 73968,
+  "texs": [
+   {
+    "path": "被引素材/math_0511225/main.tex",
+    "bytes": 73968,
+    "lines": 2091
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D305",
+   "D451"
+  ],
+  "bib_keys": {
+   "Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026": [
+    "Berndtsson2009"
+   ],
+   "Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026": [
+    "Berndtsson2009"
+   ]
+  }
+ },
+ {
+  "cid": "C55",
+  "arxiv": "math/0511254",
+  "dir": "被引素材/math_0511254",
+  "title": "Inversion of adjunction on log canonicity",
+  "authors": [
+   "Masayuki Kawakita"
+  ],
+  "published": "2005-11-10",
+  "abstract": "We prove inversion of adjunction on log canonicity.",
+  "tex_total": 12057,
+  "texs": [
+   {
+    "path": "被引素材/math_0511254/main.tex",
+    "bytes": 12057,
+    "lines": 300
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D307",
+   "D476"
+  ],
+  "bib_keys": {
+   "Bounded-klt-complements-for-Fano-contractions-September-25-2026": [
+    "Kawakita"
+   ],
+   "Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026": [
+    "KawakitaInversion"
+   ]
+  }
+ },
+ {
+  "cid": "C56",
+  "arxiv": "math/0610203",
+  "dir": "被引素材/math_0610203",
+  "title": "Existence of minimal models for varieties of log general type",
+  "authors": [
+   "Caucher Birkar",
+   "Paolo Cascini",
+   "Christopher D. Hacon",
+   "James McKernan"
+  ],
+  "published": "2006-10-05",
+  "abstract": "We prove that the canonical ring of a smooth projective variety is finitely generated.",
+  "tex_total": 226044,
+  "texs": [
+   {
+    "path": "被引素材/math_0610203/termination.tex",
+    "bytes": 226044,
+    "lines": 4401
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D307",
+   "D476"
+  ],
+  "bib_keys": {
+   "Bounded-klt-complements-for-Fano-contractions-September-25-2026": [
+    "BCHM"
+   ],
+   "Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026": [
+    "BCHM"
+   ]
+  }
+ },
+ {
+  "cid": "C57",
+  "arxiv": "math/9804058",
+  "dir": "被引素材/math_9804058",
+  "title": "Extending Triangulations and Semistable Reduction",
+  "authors": [
+   "D. Abramovich",
+   "J. M. Rojas"
+  ],
+  "published": "1998-04-09",
+  "abstract": "We show that a projective triangulation of a subcomplex of a polyhedral complex can be extended to the whole complex. As a result, we show that the weak semistable reduction result of Abramovich - Karu alg-geom/9707012 can be refined, so that the resulting morphism is semistable in codimension 1.",
+  "tex_total": 34580,
+  "texs": [
+   {
+    "path": "被引素材/math_9804058/main.tex",
+    "bytes": 34580,
+    "lines": 843
+   }
+  ],
+  "tex_n": 1,
+  "notes": [
+   "D471",
+   "D476"
+  ],
+  "bib_keys": {
+   "Metric-descent-and-rank-preserving-contractions-September-26-2026": [
+    "AbramovichRojas1998"
+   ],
+   "Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026": [
+    "AbramovichRojasTriangulations"
+   ]
+  }
+ }
+]

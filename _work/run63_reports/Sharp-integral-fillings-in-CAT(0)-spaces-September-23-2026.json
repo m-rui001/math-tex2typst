@@ -1,0 +1,54 @@
+{
+  "paper": "Sharp-integral-fillings-in-CAT(0)-spaces-September-23-2026",
+  "ok": true,
+  "typ_lines": 1225,
+  "included_pdf_pages": 0,
+  "formulas": 1093,
+  "math_failed": 0,
+  "labels": 165,
+  "equations": 0,
+  "theorems": 1,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "1093",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "flafter",
+    "bookmark"
+  ],
+  "macros_skipped": [
+    "\\providecommand\\DoNotLoadEpstopdf",
+    "\\letlet",
+    "\\letlet",
+    "\\letlet",
+    "\\letlet",
+    "\\letlet",
+    "\\letlet",
+    "\\newcommandnewcommand",
+    "\\let\\expandafter",
+    "\\let\\expandafter",
+    "\\let\\expandafter",
+    "\\let\\expandafter",
+    "\\let\\expandafter",
+    "\\let\\expandafter",
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Sharp-integral-fillings-in-CAT(0)-spaces-September-23-2026.tex"
+}

@@ -1,0 +1,28 @@
+canvases walked 1058, built 928
+shapes filled with no `stroke:` said: 3575   canvases 508   papers 310
+   verb fill      shapes  3004  canvases  479  papers  293
+      A-boundary-only-obstruction-to-four-dime#0  circle((7.8, 0), radius: 0.07056, fill: black)
+      A-boundary-only-obstruction-to-four-dime#0  circle((9.8, 0), radius: 0.07056, fill: black)
+      A-boundary-only-obstruction-to-four-dime#1  rect((-1.9, -1.25), (1.9, 1.25), fill: rgb("#f2f2f2"))
+   verb path      shapes   337  canvases   17  papers   11
+      An-integral-scalar-curvature-bound-for-r#0  line((1.907, 0.437), (1.15, 0.874), (0.3931, 0.437), (0.3931, -0.437), (1.15, -0.874), (1.907, -0.43
+      Canonical-conformal-limits-of-subcritica#2  rect((3.674, 0.01), (4.07, 0.57), fill: rgb("#ffe7cf"))
+      Canonical-conformal-limits-of-subcritica#2  rect((9.042, 0.01), (9.438, 0.57), fill: rgb("#ffe7cf"))
+   verb draw      shapes   218  canvases   52  papers   40
+      A-linear-list-coloring-bound-in-terms-of#0  rect((0.1, 3.85), (2.35, 5.75), fill: rgb("#f7f7f7"))
+      A-linear-list-coloring-bound-in-terms-of#0  rect((4.1, 5.2), (6.35, 6.1), fill: rgb("#f5f5ff"))
+      A-linear-list-coloring-bound-in-terms-of#0  rect((7.6, 3.85), (9.8, 5.75), fill: rgb("#f5f5ff"))
+   verb filldraw  shapes    16  canvases    8  papers    7
+      Canonical-conformal-limits-of-subcritica#5  rect((3.13, 1.33), (4.18, 3.37), fill: rgb("#fae2d3"))
+      Metric-measure-limits-of-subcritical-FK-#0  rect((10.4, 0.2), (15, 0.95), fill: black)
+      Nonuniqueness-for-Bounded-Measurable-Sca#0  rect((-3.68, -2.3), (3.68, 2.3), fill: rgb("#f0f0f0"))
+
+by call, splitting the black fills that hide their ring:
+   circle                    1208
+   rect (visible ring)       1142
+   circle (visible ring)     1011
+   line (visible ring)        181
+   rect                        19
+   line                         9
+   arc (visible ring)           5
+wrote E:\math\_work\regen52.txt

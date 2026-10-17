@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{amsmath}
+\newcommand{\dd}{\,dm}
+\begin{document}
+\setcounter{equation}{5}
+
+% A: the Giglis shape -- label on its own line, \notag on every row but the last
+\begin{align}
+\label{eq:A}
+R(f)=\int_M&
+-a \notag\\
+&+b \notag\\
+&-c .
+\end{align}
+See \eqref{eq:A}.
+
+% B: control, differing in one feature: \notag on the LAST row only
+\begin{align}
+\label{eq:B}
+S(f)=\int_M&
+-a \\
+&+b \notag.
+\end{align}
+See \eqref{eq:B}.
+
+% C: control, one feature from A: no \notag anywhere
+\begin{align}
+\label{eq:C}
+T(f)=\int_M&
+-a \notag\\
+&+b .
+\end{align}
+See \eqref{eq:C}.
+
+% D: every row tagged -- LaTeX must print no number at all
+\begin{align}
+U(f)=\int_M&
+-a \notag\\
+&+b \notag.
+\end{align}
+
+% E: \nonumber instead of \notag, same shape as A
+\begin{align}
+\label{eq:E}
+V(f)=\int_M&
+-a \nonumber\\
+&+b .
+\end{align}
+See \eqref{eq:E}.
+\end{document}

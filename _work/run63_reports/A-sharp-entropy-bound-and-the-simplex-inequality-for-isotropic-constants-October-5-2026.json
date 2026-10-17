@@ -1,0 +1,30 @@
+{
+  "paper": "A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026",
+  "ok": true,
+  "typ_lines": 1283,
+  "included_pdf_pages": 0,
+  "formulas": 1215,
+  "math_failed": 0,
+  "labels": 177,
+  "equations": 21,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "cetz_refused": 1
+  },
+  "samples": {
+    "formulas": "1215",
+    "cetz_refused": "\\begin{tikzpicture}[scale=1.25, x={(1cm,0cm)},y={(0.45cm,0.35cm)},z={(0cm,1.5cm)}, line cap=round,line join=roun"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026.tex"
+}

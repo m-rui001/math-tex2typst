@@ -1,0 +1,20 @@
+  <KaTeX parse error: Got function '\>       5 处
+  \lc                                        5 处
+  \root                                      4 处
+
+KEEP 家族 (逐字引用/专名，不动):
+  \math                                      2 处
+  <KaTeX parse error: Expected 'EOF',>       1 处
+  <KaTeX parse error: {equation} can >       1 处
+  \DeclareMathOperator                       1 处
+  \ltl                                       1 处
+  <KaTeX parse error: {CD} can be use>       1 处
+  <KaTeX parse error: No such environ>       1 处
+
+WAIVER 家族 (尺子误报，本会话不施于全库):
+  <KaTeX parse error: Can't use funct>     112 处
+  <KaTeX parse error: Expected 'EOF',>      11 处
+  <KaTeX parse error: Unexpected end >       7 处
+  \math                                      1 处
+
+尺子候选修复(建议、未落库): $..$..$ 相邻被粘连时应把含裸 $ 的跨度改判 IUNCLOSED 后重切，可消解绝大多数 "$ 在数学模式" 误报；另：围栏内 \`code\` 未闭合反引号会漏空，fenceMask 应支持奇偶配对回退。

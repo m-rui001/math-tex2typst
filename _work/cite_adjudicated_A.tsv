@@ -1,0 +1,48 @@
+note	citation	verdict-code	correct-string-or-NONE	evidence(file:line — verbatim 40-char fragment)
+D109	03_angular_gain.tex:897-929	WRONG-LINE	03_angular_gain.tex:872-919	build/sections/03_angular_gain.tex:872 — \label{ang:bad-directions}
+D109	03_angular_gain.tex:897-929	WRONG-LINE	03_angular_gain.tex:872-919	build/sections/03_angular_gain.tex:907 — \ge\delta^{c_1}\right\}
+D110	postprocess.tex:112	ABBREVIATED	hierarchy_assigned_postprocess.tex:112	build/source/sections/hierarchy_assigned_postprocess.tex:112 — where the last step uses $C_4\ge3$
+D110	postprocess.tex:50	ABBREVIATED	hierarchy_assigned_postprocess.tex:50	build/source/sections/hierarchy_assigned_postprocess.tex:50 — S(B)=B\bigl(x,r_1+(C_3+1)\delta
+D131	boxes.tex:244	WRONG-FILE	02-rational-boxes.tex:244	build/appendices/02-rational-boxes.tex:244 — This includes constant curves.
+D131	boxes.tex:186	WRONG-FILE	04-metric-globalization.tex:186-189	build/appendices/04-metric-globalization.tex:187 — increasing order of the sum
+D277	duction.tex:86-93	ABBREVIATED	introduction.tex:86-93	build/source/introduction.tex:88 — extreme complete fibers
+D277	duction.tex:82-84	ABBREVIATED	introduction.tex:82-84	build/source/introduction.tex:83 — The errors are uniform in the phase;
+D328	renorm.tex:526	ABBREVIATED	renormalization.tex:526-527	build/sections/renormalization.tex:526 — \begin{pmatrix}L&B_j
+D328	renorm.tex:536	ABBREVIATED	renormalization.tex:536-537	build/sections/renormalization.tex:536 — \begin{pmatrix}1&B_j^{(d)}
+D328	renorm.tex:186	ABBREVIATED	renormalization.tex:186	build/sections/renormalization.tex:186 — \|\mathcal R_j(h)-T_jh\|_R\le
+D328	renorm.tex:201	ABBREVIATED	renormalization.tex:201	build/sections/renormalization.tex:201 — e^{-cD/R}
+D328	renorm.tex:95	ABBREVIATED	renormalization.tex:95	build/sections/renormalization.tex:95 — N_R(U(A))\le C\bigl(1+L^{-1}N_r(A)
+D328	renorm.tex:558	ABBREVIATED	renormalization.tex:558	build/sections/renormalization.tex:558 — \|F_z\|_\infty\le Cr^{-2}\|h\|_r
+D328	renorm.tex:516	ABBREVIATED	renormalization.tex:516-517	build/sections/renormalization.tex:517 — M=\lceil(\log L)^2\rceil
+D328	renorm.tex:95	ABBREVIATED	renormalization.tex:95	build/sections/renormalization.tex:95 — N_R(U(A))\le C\bigl(1+L^{-1}N_r(A)
+D328	renorm.tex:186	ABBREVIATED	renormalization.tex:186	build/sections/renormalization.tex:186 — \|\mathcal R_j(h)-T_jh\|_R\le
+D328	renorm.tex:201	ABBREVIATED	renormalization.tex:201	build/sections/renormalization.tex:201 — e^{-cD/R}
+D328	renorm.tex:255	ABBREVIATED	renormalization.tex:255	build/sections/renormalization.tex:255 — 2^{k-1}\tau(G)\prod_{i=1}^k\|f_i\|_\infty
+D328	renorm.tex:526-527	ABBREVIATED	renormalization.tex:526-527	build/sections/renormalization.tex:527 — \|D_j\|\le\rho,\qquad \|B_j\|\le C_L
+D328	renorm.tex:536-537	ABBREVIATED	renormalization.tex:536-537	build/sections/renormalization.tex:537 — \|D_j^{(d)}\|\le\rho
+D328	renorm.tex:558	ABBREVIATED	renormalization.tex:558	build/sections/renormalization.tex:558 — \|F_z\|_\infty\le Cr^{-2}\|h\|_r
+D328	renorm.tex:85	ABBREVIATED	renormalization.tex:85	build/sections/renormalization.tex:85 — U(A)=A+B_{2R}
+D328	renorm.tex:143	ABBREVIATED	renormalization.tex:143	build/sections/renormalization.tex:143 — are disjoint and $f_1f_2$ when they
+D328	renorm.tex:187	ABBREVIATED	renormalization.tex:187	build/sections/renormalization.tex:187 — \|D\mathcal R_j(h)-T_j\|\le C_L\|h\|_r
+D328	renorm.tex:423	ABBREVIATED	renormalization.tex:423	build/sections/renormalization.tex:423 — \begin{lemma}[Distinguished fields]
+D328	renorm.tex:519	ABBREVIATED	renormalization.tex:519	build/sections/renormalization.tex:519 — \begin{proposition}[Bulk, marked, and
+D328	renorm.tex:516	ABBREVIATED	renormalization.tex:516	build/sections/renormalization.tex:517 — M=\lceil(\log L)^2\rceil
+D328	renorm.tex:118-121	ABBREVIATED	renormalization.tex:118-121	build/sections/renormalization.tex:118 — The linear rule sends a short input
+D328	renorm.tex:197	ABBREVIATED	renormalization.tex:197	build/sections/renormalization.tex:197 — is replaced by $e^{2N_R(Q)}$
+D436	history.tex:10	WRONG-LINE	history.tex:6	build/sections/history.tex:6 — Abouzaid and Blumberg proved
+D436	history.tex:12	WRONG-LINE	history.tex:6	build/sections/history.tex:6 — Bai and Xu obtained an integral bound
+D436	history.tex:14	WRONG-LINE	history.tex:8	build/sections/history.tex:8 — are simply connected, and Smale
+D436	history.tex:16	WRONG-LINE	history.tex:8	build/sections/history.tex:8 — independent of that companion
+D436	hints.tex:68	ABBREVIATED	handles.tex:68	build/appendices/handles.tex:68 — $2,\ldots,D-2$.
+D436	history.tex:14	WRONG-LINE	history.tex:8	build/sections/history.tex:8 — nontrivial fundamental group
+D436	history.tex:16	WRONG-LINE	history.tex:8	build/sections/history.tex:8 — independent of that companion
+D436	history.tex:16	WRONG-LINE	history.tex:8	build/sections/history.tex:8 — independent of that companion
+D53	braid.tex:59-66	ABBREVIATED	braids.tex:59-66	build/sections/braids.tex:64 — aL_j=abaCab=babCab=baCbab
+D56	common.tex:41-47	WRONG-LINE	common.tex:9-15	build/latex/common.tex:9 — \newtheorem{theorem}{Theorem}[section]
+D587	08-n-locking.tex:331	ABBREVIATED	08-narrow-locking.tex:331	build/sections/08-narrow-locking.tex:331 — \delta^2/h=O(\rho^{32})
+D587	08-n-locking.tex:331	INSTRUMENT-FP	NONE	D587 note:485 — 正确形式是 `08-narrow-locking.tex:331` (errata register quoting the malformed string, not a position claim)
+D596	finit-jet.tex:13	ABBREVIATED	finite-jet.tex:13	build/sections/finite-jet.tex:13 — |\nabla f_N(b,x)|+|x|^{N-1}
+D62	alt.tex:77-140	ABBREVIATED	alternative.tex:77-140	build/sections/alternative.tex:77 — Alternative proof of \Cref{lem:logdet}
+D62	alt.tex:20-67	ABBREVIATED	alternative.tex:20-67	build/sections/alternative.tex:20 — Alternative proof of \Cref{lem:scalar}
+D62	alt.tex:7-9	ABBREVIATED	alternative.tex:7-9	build/sections/alternative.tex:7 — alternative route to \Cref{lem:scalar
+D92	papers.tex:511-518	ABBREVIATED	paper.tex:511-518	build/paper.tex:516 — independent Poisson counts

@@ -1,0 +1,15 @@
+IN_WAVE=14
+D499	row=322	bytes=240344	thin=no	dir=preprints/Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026
+D463	row=286	bytes=312643	thin=no	dir=preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026
+D358	row=182	bytes=368323	thin=no	dir=preprints/Donovans-Conjecture-over-Algebraic-Closures-of-Prime-Fields-September-24-2026
+D225	row=49	bytes=222509	thin=no	dir=preprints/A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026
+D710	row=526	bytes=171741	thin=no	dir=preprints/Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026
+D266	row=90	bytes=144144	thin=no	dir=preprints/An-Almost-Linear-Approximation-Scheme-for-Edit-Distance-September-24-2026
+D713	row=529	bytes=202562	thin=no	dir=preprints/Uniform-effective-log-Iitaka-fibrations-for-fourfolds-September-26-2026
+D235	row=59	bytes=154351	thin=no	dir=preprints/A-power-saving-for-intersective-polynomial-differences-with-an-exponent-depending-only-on-the-degree-October-5-2026
+D325	row=149	bytes=124641	thin=no	dir=preprints/Conditional-permutations-in-a-revealed-switching-environment-September-26-2026
+D476	row=299	bytes=324051	thin=no	dir=preprints/Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026
+D627	row=446	bytes=292290	thin=no	dir=preprints/The-Margulis-Platonov-conjecture-over-number-fields-September-23-2026
+D701	row=517	bytes=66303	thin=no	dir=preprints/Turn-Based-Stochastic-Mean-Payoff-Games-in-Deterministic-Quasipolynomial-Time-October-5-2026
+D718	row=534	bytes=98116	thin=no	dir=preprints/Uniform-quasipolynomial-time-trace-reconstruction-October-5-2026
+D727	row=543	bytes=100075	thin=no	dir=preprints/Vanishing-of-higher-bounded-Hochschild-cohomology-September-23-2026

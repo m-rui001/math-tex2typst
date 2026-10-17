@@ -1,0 +1,52 @@
+#103b: unrotated `anchor:` node, both font tiers, three paddings -- pt, relative to the
+dot the picture puts at (0,0).  pgf = probe101b.run_page, ours = probe81.render,
+ruler = probe101a.ink_offsets.  delta is ours - pgf on the edge the anchor names.
+
+east / node at 9pt / pgf [anchor=east,font=\small]
+  pgf   box  61.70 x   8.97  left  -65.21 right   -3.52 top   -4.77 bottom    4.20  (bytes=11513 mtime=2026-10-17 12:53:53)
+  no pad    box  55.90 x  10.26  left  -55.90 right   -0.00 top   -6.14 bottom    4.12  right edge delta  +3.52 pt
+  pad 0.1cm box  55.90 x  10.26  left  -58.73 right   -2.83 top   -6.14 bottom    4.12  right edge delta  +0.68 pt
+  pad em    box  55.90 x  10.26  left  -58.90 right   -3.00 top   -6.14 bottom    4.12  right edge delta  +0.52 pt
+
+east / node at 10pt / pgf [anchor=east]
+  pgf   box  66.72 x   9.96  left  -70.21 right   -3.49 top   -5.30 bottom    4.67  (bytes=12826 mtime=2026-10-17 12:53:54)
+  no pad    box  62.11 x  11.40  left  -62.11 right    0.00 top   -6.82 bottom    4.58  right edge delta  +3.49 pt
+  pad 0.1cm box  62.11 x  11.40  left  -64.94 right   -2.83 top   -6.82 bottom    4.58  right edge delta  +0.66 pt
+  pad em    box  62.11 x  11.40  left  -65.44 right   -3.33 top   -6.82 bottom    4.58  right edge delta  +0.16 pt
+
+west / node at 9pt / pgf [anchor=west,font=\small]
+  pgf   box  61.70 x   8.97  left    3.52 right   65.22 top   -4.77 bottom    4.20  (bytes=11512 mtime=2026-10-17 12:53:56)
+  no pad    box  55.90 x  10.26  left   -0.00 right   55.90 top   -6.14 bottom    4.12  left edge delta  -3.52 pt
+  pad 0.1cm box  55.90 x  10.26  left    2.83 right   58.73 top   -6.14 bottom    4.12  left edge delta  -0.69 pt
+  pad em    box  55.90 x  10.26  left    3.00 right   58.90 top   -6.14 bottom    4.12  left edge delta  -0.52 pt
+
+west / node at 10pt / pgf [anchor=west]
+  pgf   box  66.72 x   9.96  left    3.52 right   70.24 top   -5.30 bottom    4.67  (bytes=12822 mtime=2026-10-17 12:53:57)
+  no pad    box  62.11 x  11.40  left   -0.00 right   62.11 top   -6.82 bottom    4.58  left edge delta  -3.52 pt
+  pad 0.1cm box  62.11 x  11.40  left    2.83 right   64.94 top   -6.82 bottom    4.58  left edge delta  -0.69 pt
+  pad em    box  62.11 x  11.40  left    3.33 right   65.44 top   -6.82 bottom    4.58  left edge delta  -0.19 pt
+
+south / node at 9pt / pgf [anchor=south,font=\small]
+  pgf   box  61.70 x   8.97  left  -30.85 right   30.85 top  -12.27 bottom   -3.30  (bytes=11510 mtime=2026-10-17 12:53:58)
+  no pad    box  55.90 x  10.26  left  -27.95 right   27.95 top  -10.15 bottom    0.11  bottom edge delta  +3.41 pt
+  pad 0.1cm box  55.90 x  10.26  left  -27.95 right   27.95 top  -12.99 bottom   -2.73  bottom edge delta  +0.58 pt
+  pad em    box  55.90 x  10.26  left  -27.95 right   27.95 top  -13.15 bottom   -2.89  bottom edge delta  +0.41 pt
+
+south / node at 10pt / pgf [anchor=south]
+  pgf   box  66.72 x   9.96  left  -33.35 right   33.37 top  -13.24 bottom   -3.28  (bytes=12826 mtime=2026-10-17 12:53:59)
+  no pad    box  62.11 x  11.40  left  -31.05 right   31.06 top  -11.28 bottom    0.12  bottom edge delta  +3.40 pt
+  pad 0.1cm box  62.11 x  11.40  left  -31.06 right   31.06 top  -14.11 bottom   -2.71  bottom edge delta  +0.57 pt
+  pad em    box  62.11 x  11.40  left  -31.06 right   31.06 top  -14.61 bottom   -3.21  bottom edge delta  +0.07 pt
+
+north / node at 9pt / pgf [anchor=north,font=\small]
+  pgf   box  61.70 x   8.97  left  -30.85 right   30.85 top    2.74 bottom   11.70  (bytes=11512 mtime=2026-10-17 12:54:01)
+  no pad    box  55.90 x  10.26  left  -27.95 right   27.95 top   -2.12 bottom    8.14  top edge delta  -4.86 pt
+  pad 0.1cm box  55.90 x  10.26  left  -27.95 right   27.95 top    0.71 bottom   10.97  top edge delta  -2.03 pt
+  pad em    box  55.90 x  10.26  left  -27.95 right   27.95 top    0.88 bottom   11.14  top edge delta  -1.86 pt
+
+north / node at 10pt / pgf [anchor=north]
+  pgf   box  66.72 x   9.96  left  -33.35 right   33.37 top    2.65 bottom   12.62  (bytes=12827 mtime=2026-10-17 12:54:02)
+  no pad    box  62.11 x  11.40  left  -31.05 right   31.06 top   -2.36 bottom    9.04  top edge delta  -5.01 pt
+  pad 0.1cm box  62.11 x  11.40  left  -31.06 right   31.06 top    0.47 bottom   11.87  top edge delta  -2.18 pt
+  pad em    box  62.11 x  11.40  left  -31.06 right   31.06 top    0.97 bottom   12.37  top edge delta  -1.68 pt
+

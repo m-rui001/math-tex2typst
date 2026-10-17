@@ -1,0 +1,31 @@
+{
+  "paper": "The-unique-threshold-bound-state-of-the-SU-N-BFSS-model-September-24-2026",
+  "ok": true,
+  "typ_lines": 1060,
+  "included_pdf_pages": 0,
+  "formulas": 991,
+  "math_failed": 0,
+  "labels": 163,
+  "equations": 17,
+  "theorems": 5,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 3,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "991",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-unique-threshold-bound-state-of-the-SU-N-BFSS-model-September-24-2026.tex"
+}

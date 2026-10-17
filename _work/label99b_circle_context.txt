@@ -1,0 +1,488 @@
+
+== canvases holding a degenerate line(), with every path verb counted
+
+### A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Maps-October-5-
+    paths={'circle': 8, 'line': 7}  degenerate=2
+      #cetz.canvas({
+      import cetz.draw: *
+      circle((0, 0), radius: 1.522, fill: rgb("#f2f2f2"), stroke: none)
+      circle((0, 0), radius: 0.5775, fill: rgb("#f2f2f2"), stroke: none)
+  >>> line((0, 0), (0, 0), fill: rgb("#f2f2f2"), stroke: none)
+      circle((0, 0), radius: 1.522, stroke: (thickness: 0.4pt, miter-limit: 10))
+      circle((0, 0), radius: 0.5775, stroke: (thickness: 0.4pt, miter-limit: 10))
+      content((0, 0), [#text(size: 9pt)[$u_m=0$]])
+      content((-1.596, 0), [$u_m=1$], anchor: "east")
+      line((0.5148, 0.432), (1.038, 0.8707), stroke: (paint: rgb("#0000a6"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: rgb("#0000
+      line((-0.5148, 0.432), (-1.038, 0.8707), stroke: (paint: rgb("#0000a6"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: rgb("#00
+      line((-0.5148, -0.432), (-1.038, -0.8707), stroke: (paint: rgb("#0000a6"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: rgb("#
+      line((0.5148, -0.432), (1.038, -0.8707), stroke: (paint: rgb("#0000a6"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: rgb("#00
+      arc((1.039, 0.3374), start: 18deg, stop: 153deg, radius: 1.092, stroke: (paint: rgb("#a60000"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbo
+      content((0, 1.617), [#text(fill: rgb("#a60000"))[dual period $C_m$]], anchor: "south")
+      content((0, -1.68), [#text(fill: rgb("#0000a6"))[primal current $upright(d) u_m$]], anchor: "north")
+      line((1.995, 0.63), (3.255, 0.63), stroke: (thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      content((2.625, 0.0525), [unit-period#linebreak()recovery])
+      circle((5.25, 0), radius: 1.522, fill: rgb("#f2f2f2"), stroke: none)
+      circle((5.25, 0), radius: 0.5775, fill: rgb("#f2f2f2"), stroke: none)
+  >>> line((5.25, 0), (5.25, 0), fill: rgb("#f2f2f2"), stroke: none)
+      circle((5.25, 0), radius: 1.522, stroke: (thickness: 0.4pt, miter-limit: 10))
+      circle((5.25, 0), radius: 0.5775, stroke: (thickness: 0.4pt, miter-limit: 10))
+      arc((6.289, 0.3374), start: 18deg, stop: 330deg, radius: 1.092, stroke: (paint: rgb("#a60000"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbo
+      content((5.25, 0), [$alpha_m$])
+      content((5.25, 1.617), [#text(fill: rgb("#a60000"))[exact period $1$]], anchor: "south")
+      content((5.25, -1.68), [$| chevron.l upright(d) u_m, alpha_m chevron.r |=1$], anchor: "north")
+      })
+
+### A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite-October-4-202
+    paths={'circle': 8, 'line': 2}  degenerate=1
+      #cetz.canvas({
+      import cetz.draw: *
+      content((0, -2.82), [#text(size: 9pt)[Band returning to an inner cone disk]], anchor: "west")
+      circle((2.2, -4.62), radius: 1.19, fill: rgb("#d1d1d1"), stroke: none)
+      circle((2.2, -4.62), radius: 0.68, fill: rgb("#d1d1d1"), stroke: none)
+  >>> line((2.2, -4.62), (2.2, -4.62), fill: rgb("#d1d1d1"), stroke: none)
+      circle((2.2, -4.62), radius: 1.19, stroke: (thickness: 0.4pt, cap: "round", join: "round"))
+      circle((2.2, -4.62), radius: 0.68, stroke: (thickness: 0.4pt, cap: "round", join: "round"))
+      content((2.2, -4.62), [#text(size: 9pt)[$D_Q$]])
+      content((2.2, -3.15), [#text(size: 9pt)[$D_P$]])
+      content((2.2, -3.68), [#box(inset: 0.03528cm, stroke: none, fill: rgb("#ffffff"), [#set text(hyphenate: false, top-edge: "cap-height", bottom-edge: "b
+      content((3.39, -4.62), [#text(size: 9pt)[$P$]], anchor: "west")
+      content((2.85, -4.62), [#text(size: 9pt)[$Q$]], anchor: "west")
+      content((2.2, -6.18), [#text(size: 8pt)[$"ePe"^(-1)Q$ splits into $P,Q$]])
+      line((4.18, -4.62), (5.29, -4.62), stroke: (thickness: 0.8pt, cap: "round", join: "round"), mark: (end: (symbol: ")>", fill: black)))
+      content((4.75, -3.88), [#text(size: 8pt)[cap#linebreak()both sides]])
+      circle((6.7, -4.62), radius: 1.05, stroke: (thickness: 0.4pt, cap: "round", join: "round"))
+      circle((10.18, -4.62), radius: 1.05, stroke: (thickness: 0.4pt, cap: "round", join: "round"))
+      circle((6.7, -5.05), radius: (0.7, 0.4), fill: rgb("#d1d1d1"), stroke: (thickness: 0.4pt, cap: "round", join: "round"))
+      circle((10.18, -5.05), radius: (0.7, 0.4), fill: rgb("#d1d1d1"), stroke: (thickness: 0.4pt, cap: "round", join: "round"))
+      content((6.7, -4.25), [#text(size: 9pt)[$D_P$]])
+      content((10.18, -4.25), [#text(size: 9pt)[$D_Q$]])
+      content((6.7, -5.05), [#text(size: 8pt)[cap]])
+      content((10.18, -5.05), [#text(size: 8pt)[cap]])
+      content((6.25, -4.73), [#box(inset: 0.01764cm, stroke: none, fill: rgb("#ffffff"), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "boun
+      content((9.73, -4.73), [#box(inset: 0.01764cm, stroke: none, fill: rgb("#ffffff"), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "boun
+      content((8.43, -4.62), [#text(size: 9pt)[$+$]])
+      content((8.44, -3.23), [#text(size: 8pt)[two capped spheres]])
+      content((8.44, -6.05), [#text(size: 8pt)[Both caps use the same lift of $K_ Lambda arrow.r X$.]])
+      content((8.44, -6.6), [#text(size: 9pt)[$[ tilde(f) ]=[ tilde(f)_1]+[ tilde(f)_2]$]])
+      })
+
+### A-Torsion-Free-Group-Algebra-with-Zero-Divisors-September-23-2026
+    paths={'circle': 12, 'line': 2}  degenerate=1
+      #cetz.canvas({
+      import cetz.draw: *
+      circle((0, 0), radius: 0.9379, fill: rgb("#e9e9e9"), stroke: none)
+      circle((0, 0), radius: 0.4316, fill: rgb("#e9e9e9"), stroke: none)
+  >>> line((0, 0), (0, 0), fill: rgb("#e9e9e9"), stroke: none)
+      circle((0, 0), radius: 0.9379, stroke: (thickness: 0.6pt, miter-limit: 10))
+      circle((0, 0), radius: 0.4316, stroke: (thickness: 0.6pt, miter-limit: 10))
+      content((0, 0), [#text(size: 9pt)[$a$]])
+      content((-1.22, 0), [#text(size: 9pt)[$b$]])
+      content((0, -1.369), [#text(size: 9pt)[disk and band#linebreak()\(an annulus\)]])
+      line((1.369, 0), (3.071, 0), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ")>", fill: black)))
+      content((2.224, 0.1328), [#text(size: 7pt)[remove#linebreak()annulus;#linebreak()cap#linebreak()complements]], anchor: "south")
+      circle((4.191, 0), radius: 0.8549, fill: rgb("#f9f9f9"), stroke: none)
+      circle((4.191, 0), radius: 0.8549, stroke: (thickness: 0.6pt, miter-limit: 10))
+      circle((4.191, -0.3154), radius: (0.6889, 0.2075), fill: rgb("#e9e9e9"), stroke: none)
+      circle((4.191, -0.3154), radius: (0.6889, 0.2075), stroke: (thickness: 0.6pt, miter-limit: 10))
+      content((4.191, -0.3154), [#text(size: 9pt)[$a$]])
+      content((4.191, 0.2656), [#text(size: 9pt)[$S_1$]])
+      content((5.42, 0), [#text(size: 9pt)[$+$]])
+      circle((6.64, 0), radius: 0.8549, fill: rgb("#f9f9f9"), stroke: none)
+      circle((6.64, 0), radius: 0.8549, stroke: (thickness: 0.6pt, miter-limit: 10))
+      circle((6.64, -0.3154), radius: (0.6889, 0.2075), fill: rgb("#e9e9e9"), stroke: none)
+      circle((6.64, -0.3154), radius: (0.6889, 0.2075), stroke: (thickness: 0.6pt, miter-limit: 10))
+      content((6.64, -0.3154), [#text(size: 9pt)[$b$]])
+      content((6.64, 0.2656), [#text(size: 9pt)[$S_2$]])
+      content((5.395, -1.369), [#text(size: 9pt)[$[S]=[S_1]+[S_2] "in" H_2( tilde(X) ; bb(Z) )$]])
+      })
+
+### A-typical-start-upper-bound-for-low-temperature-SK-Glauber-dynamics-Se
+    paths={'rect': 2, 'line': 20, 'circle': 13}  degenerate=5
+      #cetz.canvas({
+      import cetz.draw: *
+      rect((-0.05, -0.75), (7.3, 0.9), fill: rgb("#f7f7f7"), stroke: none)
+      rect((7.3, -0.75), (13.5, 0.9), fill: rgb("#f7f7ff"), stroke: none)
+      line((7.3, -0.75), (7.3, 0.9), stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10))
+      content((3.6, 0.63), [#text(size: 9pt)[$S$]])
+      content((10.4, 0.63), [#text(size: 9pt)[$S^( upright(c) )$]])
+      circle((0.65, 0), radius: 0.05, fill: rgb("#e0e0e0"), stroke: (paint: rgb("#333333"), thickness: 0.8pt, miter-limit: 10))
+      circle((2.5, 0), radius: 0.275, fill: rgb("#ffffff"), stroke: (paint: rgb("#00008c"), thickness: 0.8pt, miter-limit: 10))
+      circle((4.4, 0), radius: 0.275, fill: rgb("#ffffff"), stroke: (paint: rgb("#00008c"), thickness: 0.8pt, miter-limit: 10))
+      circle((6.3, 0), radius: 0.275, fill: rgb("#ffebeb"), stroke: (paint: rgb("#a60000"), thickness: 1.2pt, miter-limit: 10))
+      circle((8.3, 0), radius: 0.275, fill: rgb("#ffebeb"), stroke: (paint: rgb("#a60000"), thickness: 1.2pt, miter-limit: 10))
+      circle((10.3, 0), radius: 0.275, fill: rgb("#ffffff"), stroke: (paint: rgb("#00008c"), thickness: 0.8pt, miter-limit: 10))
+      circle((12.8, 0), radius: 0.05, fill: rgb("#e0e0e0"), stroke: (paint: rgb("#333333"), thickness: 0.8pt, miter-limit: 10))
+      line((0.925, 0), (2.211, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  >>> line((2.5, 0), (2.5, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+      line((2.789, 0), (4.111, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  >>> line((4.4, 0), (4.4, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+      line((4.689, 0), (6.004, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+      line((6.596, 0), (8.004, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+      line((8.596, 0), (10.01, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  >>> line((10.3, 0), (10.3, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+      line((10.59, 0), (12.53, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+      line((6.596, 0), (8.004, 0), stroke: (paint: rgb("#a60000"), thickness: 1.1pt, miter-limit: 10))
+      content((0.65, -0.375), [#text(size: 9pt)[$x_( upright(f) )^((0))$]], anchor: "north")
+      content((12.8, -0.375), [#text(size: 9pt)[$x_( upright(f) )^((1))$]], anchor: "north")
+      content((6.3, -0.3962), [#text(size: 9pt)[$u$]], anchor: "north")
+      content((8.3, -0.3962), [#text(size: 9pt)[$v$]], anchor: "north")
+      content((7.3, 0.48), [#box(inset: 0.05292cm, stroke: none, fill: rgb("#ffffff"), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds
+      content((6.7, -1.12), [#text(size: 9pt)[Every step has a coarse endpoint; coarse outputs avoid $cal(D)_R$.]])
+      content((7.3, -1.85), [#text(size: 9pt)[Expand the crossing step into single-spin flips: length $ell lt.eq R$.]])
+      line((7.3, -2.25), (7.3, -3.4), stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10))
+      circle((3.8, -2.85), radius: 0.275, fill: rgb("#ffebeb"), stroke: (paint: rgb("#a60000"), thickness: 1.2pt, miter-limit: 10))
+      circle((4.9, -2.85), radius: 0.09, fill: rgb("#595959"), stroke: none)
+      circle((6.2, -2.85), radius: 0.15, fill: rgb("#ffebeb"), stroke: (paint: rgb("#a60000"), thickness: 0.8pt, miter-limit: 10))
+      circle((8.4, -2.85), radius: 0.15, fill: rgb("#ffebeb"), stroke: (paint: rgb("#a60000"), thickness: 0.8pt, miter-limit: 10))
+      circle((9.7, -2.85), radius: 0.09, fill: rgb("#595959"), stroke: none)
+      circle((10.8, -2.85), radius: 0.275, fill: rgb("#ffebeb"), stroke: (paint: rgb("#a60000"), thickness: 1.2pt, miter-limit: 10))
+      line((4.096, -2.85), (4.803, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  >>> line((4.9, -2.85), (4.9, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+      line((4.997, -2.85), (6.036, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+      line((6.364, -2.85), (8.236, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+      line((8.564, -2.85), (9.603, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  >>> line((9.7, -2.85), (9.7, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+      line((9.797, -2.85), (10.5, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+      line((6.364, -2.85), (8.236, -2.85), stroke: (paint: rgb("#a60000"), thickness: 1.1pt, miter-limit: 10))
+      content((7.3, -2.65), [#text(fill: rgb("#a60000"))[#text(size: 9pt)[boundary edge]]], anchor: "south")
+      content((3.8, -3.246), [#text(size: 9pt)[$u=y_0$]], anchor: "north")
+      content((6.2, -3.114), [#text(size: 9pt)[$y_t$]], anchor: "north")
+      content((8.4, -3.114), [#text(size: 9pt)[$y_(t+1)$]], anchor: "north")
+      content((10.8, -3.246), [#text(size: 9pt)[$v=y_ ell$]], anchor: "north")
+      content((2.65, -2.85), [#text(size: 9pt)[$S$]])
+      content((12, -2.85), [#text(size: 9pt)[$S^( upright(c) )$]])
+      content((7.3, -3.83), [#text(fill: rgb("#a60000"))[#text(size: 9pt)[$d_H(u, partial S),#h(0.3333em) d_H(v, partial S) lt.eq ell lt.eq R arrow.r.double
+      })
+
+### Essential-Singularity-of-the-Correlation-Length-in-the-Planar-XY-Model
+    paths={'rect': 6, 'circle': 11, 'line': 5}  degenerate=2
+      #cetz.canvas({
+      import cetz.draw: *
+      rect((0.3, 0.3), (4.3, 4.3), fill: rgb("#e8e8e8"), stroke: none)
+      rect((0.8, 0.8), (3.8, 3.8), fill: rgb("#ffffff"), stroke: none)
+      rect((0.3, 0.3), (4.3, 4.3), stroke: (paint: rgb("#a6a6a6"), thickness: 0.4pt, miter-limit: 10))
+      rect((0.8, 0.8), (3.8, 3.8), stroke: (paint: rgb("#a6a6a6"), thickness: 0.4pt, miter-limit: 10))
+      content((2.3, 4.05), [#text(size: 9pt)[$h=0$]])
+      content((3.78, 3.78), [#text(size: 9pt)[$D$]], anchor: "north-east")
+      rect((1.27, 1.92), (1.77, 2.68), fill: rgb("#d1d1ff"), stroke: none)
+      rect((2.83, 1.92), (3.33, 2.68), fill: rgb("#ffe3c7"), stroke: none)
+      content((1.52, 2.3), [#text(size: 9pt)[$f$]])
+      content((3.08, 2.3), [#text(size: 9pt)[$g$]])
+      circle((2.3, 2.3), radius: (1.27, 0.82), stroke: (paint: rgb("#0000a6"), thickness: 0.8pt, miter-limit: 10))
+      line((1.94, 3.086), (2.2, 3.118), stroke: (paint: rgb("#0000a6"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ")>", fill: rgb("#0000a6"))
+      line((1.77, 1.17), (2.83, 1.17), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (start: (symbol: ")>", fill: black), end: (symbol: ")>", fill: bla
+      content((2.3, 1.17), [#text(size: 9pt)[$c n$]], anchor: "north")
+      content((2.3, -0.2), [#text(size: 9pt)[Pinned covariance below $T$]])
+      circle((8.6, 2.3), radius: 1.68, fill: rgb("#e0e0ff"), stroke: none)
+      circle((8.6, 2.3), radius: 1.4, fill: rgb("#e0e0ff"), stroke: none)
+  >>> line((8.6, 2.3), (8.6, 2.3), fill: rgb("#e0e0ff"), stroke: none)
+      circle((8.6, 2.3), radius: 0.42, fill: rgb("#e0e0ff"), stroke: none)
+      circle((8.6, 2.3), radius: 0.35, fill: rgb("#e0e0ff"), stroke: none)
+  >>> line((8.6, 2.3), (8.6, 2.3), fill: rgb("#e0e0ff"), stroke: none)
+      circle((8.6, 2.3), radius: 1.4, stroke: (paint: rgb("#00008c"), thickness: 0.4pt, miter-limit: 10))
+      circle((8.6, 2.3), radius: 1.68, stroke: (paint: rgb("#00008c"), thickness: 0.4pt, miter-limit: 10))
+      circle((8.6, 2.3), radius: 0.35, stroke: (paint: rgb("#00008c"), thickness: 0.4pt, miter-limit: 10))
+      circle((8.6, 2.3), radius: 0.42, stroke: (paint: rgb("#00008c"), thickness: 0.4pt, miter-limit: 10))
+      circle((8.6, 2.3), radius: 0.035, fill: black, stroke: none)
+      content((8.6, 2.3), [#text(size: 9pt)[$0$]], anchor: "north-east")
+      circle((11.2, 2.3), radius: 0.035, fill: black, stroke: none)
+      content((11.2, 2.3), [#text(size: 9pt)[$x$]], anchor: "west")
+      line((9.05, 2.3), (11.13, 2.3), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10, dash: "dashed"))
+      content((9.5, 3.35), [#text(size: 9pt)[$4R$]])
+      content((8.77, 1.88), [#text(size: 8pt)[$R$]], anchor: "north-west")
+      arc((8.27, 3.16), start: 111deg, stop: 145deg, radius: 0.92, stroke: (paint: rgb("#000099"), thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: 
+      content((8.6, 0.22), [#text(size: 9pt)[$delta log_"LR"_i in [u,v] subset (T,w')$]])
+      content((8.6, -0.2), [#text(size: 9pt)[Circulation tilts above $T$]])
+      })
+
+### Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-Oct
+    paths={'line': 7}  degenerate=1
+      #cetz.canvas({
+      import cetz.draw: *
+      content((0, 0), [#box(width: 12.29cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#69839e"), thickness: 0.4pt, miter-limit: 10), fill: rgb("#f8
+      content((0, -2.064), [#box(width: 5.894cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#69839e"), thickness: 0.4pt, miter-limit: 10), fill: rgb
+      content((0, -2.045), [#box(width: 5.894cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#69839e"), thickness: 0.4pt, miter-limit: 10), fill: rgb
+      content((2.947, -4.61), [#box(width: 5.894cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#69839e"), thickness: 0.4pt, miter-limit: 10), fill: 
+      content((-2.947, -4.552), [#box(width: 5.894cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#69839e"), thickness: 0.4pt, miter-limit: 10), fill
+      content((2.947, -6.556), [#box(width: 12.29cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#69839e"), thickness: 0.4pt, miter-limit: 10), fill:
+      line((2.947, -0.5819), (2.947, -2.064), stroke: (paint: rgb("#466687"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.2cm, 
+      line((-2.947, -0.5819), (-2.947, -2.045), stroke: (paint: rgb("#466687"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.2cm
+  >>> line((0, -2.626), (0, -2.626), stroke: (paint: rgb("#466687"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.2cm, fill: rgb
+      line((2.947, -3.228), (2.947, -4.028), stroke: (paint: rgb("#466687"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.2cm, f
+      line((-2.947, -3.17), (-2.947, -3.97), stroke: (paint: rgb("#466687"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.2cm, f
+      line((2.947, -5.192), (2.947, -6.556), stroke: (paint: rgb("#466687"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.2cm, f
+      line((-2.947, -5.134), (-2.947, -6.556), stroke: (paint: rgb("#466687"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.2cm,
+      })
+
+### Quantitative-Superexponential-Bounds-for-van-der-Waerden-Numbers-Septe
+    paths={'circle': 9, 'line': 6}  degenerate=1
+      #cetz.canvas({
+      import cetz.draw: *
+      circle((0, 0), radius: 1.485, fill: rgb("#e8e8ff"), stroke: none)
+      circle((0, 0), radius: 1.05, fill: rgb("#e8e8ff"), stroke: none)
+  >>> line((0, 0), (0, 0), fill: rgb("#e8e8ff"), stroke: none)
+      circle((0, 0), radius: 1.05, stroke: (paint: rgb("#a0a0a0"), thickness: 0.4pt, miter-limit: 10))
+      circle((0, 0), radius: 1.485, stroke: (paint: rgb("#a0a0a0"), thickness: 0.4pt, miter-limit: 10, dash: "dashed"))
+      line((-2.1, 0.63), (2.226, 0.63), stroke: (paint: rgb("#a0a0a0"), thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ")>", fill: rgb("#a0a0a0"))
+      content((-1.911, 0.63), [#text(size: 9pt)[$ell$]], anchor: "south-east")
+      content((2.121, 0.63), [#text(size: 9pt)[$t$]], anchor: "south")
+      line((-1.345, 0.63), (-0.84, 0.63), stroke: (paint: rgb("#0000b2"), thickness: 2.0pt, miter-limit: 10))
+      line((0.84, 0.63), (1.345, 0.63), stroke: (paint: rgb("#0000b2"), thickness: 2.0pt, miter-limit: 10))
+      circle((-0.84, 0.63), radius: 0.05644, fill: rgb("#0000b2"), stroke: none)
+      circle((0.84, 0.63), radius: 0.05644, fill: rgb("#0000b2"), stroke: none)
+      circle((-1.345, 0.63), radius: 0.05644, fill: rgb("#ffffff"), stroke: (paint: rgb("#0000b2"), thickness: 0.7pt, miter-limit: 10))
+      circle((1.345, 0.63), radius: 0.05644, fill: rgb("#ffffff"), stroke: (paint: rgb("#0000b2"), thickness: 0.7pt, miter-limit: 10))
+      line((0, 0), (0, 0.63), stroke: (thickness: 0.4pt, miter-limit: 10))
+      line((0, 0.483), (0.147, 0.483), (0.147, 0.63), stroke: (paint: rgb("#a0a0a0"), thickness: 0.4pt, miter-limit: 10))
+      circle((0, 0), radius: 0.03528, fill: black, stroke: none)
+      content((0, 0), [#text(size: 9pt)[$0$]], anchor: "north-east")
+      content((0, 0.63), [#text(size: 9pt)[$z_0$]], anchor: "south")
+      content((2.783, 0.105), [#box(width: 6.3cm, inset: 0.3333em, [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds"); #text(size: 9pt)
+      })
+
+### Quasipolynomial-Bounds-for-Arithmetic-Progressions-September-23-2026
+    paths={'line': 9}  degenerate=1
+      #cetz.canvas({
+      import cetz.draw: *
+      content((0, 0), [#box(width: 5.153cm, inset: 0.1764cm, stroke: (thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, top-edge: "bounds", b
+      content((6.153, 0), [#box(width: 5.153cm, inset: 0.1764cm, stroke: (thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, top-edge: "bounds
+      content((0, -2.05), [#box(width: 5.153cm, inset: 0.1764cm, stroke: (thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, top-edge: "bounds
+      content((6.153, -2.05), [#box(width: 5.153cm, inset: 0.1764cm, stroke: (thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, top-edge: "bo
+      content((6.153, -4.1), [#box(width: 5.153cm, inset: 0.1764cm, stroke: (thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, top-edge: "bou
+      line((2.576, 0), (3.576, 0), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      line((3.576, 0), (2.576, 0), stroke: none)
+      line((1.576, -0.525), (4.577, -1.525), stroke: none)
+      line((3.576, -2.05), (2.576, -2.05), stroke: none)
+      line((2.576, -2.05), (3.576, -2.05), stroke: none)
+      line((6.153, -1.525), (6.153, -0.525), stroke: none)
+      line((6.153, -0.525), (6.153, -1.525), stroke: none)
+  >>> line((6.153, -2.05), (6.153, -2.05), stroke: none)
+      line((6.153, -2.575), (6.153, -3.575), stroke: none)
+      })
+
+### Rigidity-of-Smooth-Billiards-with-a-Continuous-Caustic-Collar-Septembe
+    paths={'circle': 8, 'line': 1}  degenerate=1
+      #cetz.canvas({
+      import cetz.draw: *
+      circle((0, 0), radius: (2.55, 1.7), fill: rgb("#ebeff2"), stroke: none)
+      circle((0, 0), radius: (2.295, 1.286), fill: rgb("#ebeff2"), stroke: none)
+  >>> line((0, 0), (0, 0), fill: rgb("#ebeff2"), stroke: none)
+      circle((0, 0), radius: (2.55, 1.7), stroke: (thickness: 0.8pt, miter-limit: 10))
+      circle((0, 0), radius: (2.465, 1.57), stroke: (paint: rgb("#234f70"), thickness: 0.4pt, miter-limit: 10))
+      circle((0, 0), radius: (2.38, 1.432), stroke: (paint: rgb("#234f70"), thickness: 0.4pt, miter-limit: 10))
+      circle((0, 0), radius: (2.295, 1.286), stroke: (paint: rgb("#234f70"), thickness: 0.4pt, miter-limit: 10))
+      circle((-1.901, 0), radius: 0.04939, fill: black, stroke: none)
+      circle((1.901, 0), radius: 0.04939, fill: black, stroke: none)
+      content((0, -2.023), [#text(size: 9pt)[A full caustic collar]])
+      content((1.998, 1.36), [#text(size: 9pt)[$partial Omega$]], anchor: "west")
+      })
+
+### Sharpness-of-the-Cyclic-Integral-Floer-Bound-Below-the-Stable-Morse-Nu
+    paths={'line': 21, 'circle': 18}  degenerate=5
+      #cetz.canvas({
+      import cetz.draw: *
+      line((-0.305, 0), (3.477, 0), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: rgb("#808080"))))
+      content((0, -2.185), [#text(size: 7pt)[0]], anchor: "north")
+      content((0.61, -2.185), [#text(size: 7pt)[1]], anchor: "north")
+      content((1.22, -2.185), [#text(size: 7pt)[2]], anchor: "north")
+      content((1.83, -2.185), [#text(size: 7pt)[3]], anchor: "north")
+      content((2.44, -2.185), [#text(size: 7pt)[4]], anchor: "north")
+      content((3.05, -2.185), [#text(size: 7pt)[5]], anchor: "north")
+      content((1.525, 1.564), [$delta_j$])
+      line((5.295, 0), (9.077, 0), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: rgb("#808080"))))
+      content((5.6, -2.185), [#text(size: 7pt)[0]], anchor: "north")
+      content((6.21, -2.185), [#text(size: 7pt)[1]], anchor: "north")
+      content((6.82, -2.185), [#text(size: 7pt)[2]], anchor: "north")
+      content((7.43, -2.185), [#text(size: 7pt)[3]], anchor: "north")
+      content((8.04, -2.185), [#text(size: 7pt)[4]], anchor: "north")
+      content((8.65, -2.185), [#text(size: 7pt)[5]], anchor: "north")
+      content((7.125, 1.564), [$(e_C* delta )_j$])
+      line((10.89, 0), (14.68, 0), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: rgb("#808080"))))
+      content((11.2, -2.185), [#text(size: 7pt)[0]], anchor: "north")
+      content((11.81, -2.185), [#text(size: 7pt)[1]], anchor: "north")
+      content((12.42, -2.185), [#text(size: 7pt)[2]], anchor: "north")
+      content((13.03, -2.185), [#text(size: 7pt)[3]], anchor: "north")
+      content((13.64, -2.185), [#text(size: 7pt)[4]], anchor: "north")
+      content((14.25, -2.185), [#text(size: 7pt)[5]], anchor: "north")
+      content((12.72, 1.564), [$(e_M* delta )_j$])
+  >>> line((0, 0), (0, 0), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((0, 0), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+      line((0.61, 0), (0.61, -0.23), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((0.61, -0.23), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+      line((1.22, 0), (1.22, 0.23), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((1.22, 0.23), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+      line((1.83, 0), (1.83, -0.23), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((1.83, -0.23), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+      line((2.44, 0), (2.44, -0.23), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((2.44, -0.23), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+      line((3.05, 0), (3.05, -0.23), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((3.05, -0.23), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+      content((1.22, 0.299), [#text(size: 7pt)[$1$]], anchor: "south")
+      content((0.61, -0.299), [#text(size: 7pt)[$-1$]], anchor: "north")
+  >>> line((5.6, 0), (5.6, 0), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((5.6, 0), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+      line((6.21, 0), (6.21, -0.23), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((6.21, -0.23), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+  >>> line((6.82, 0), (6.82, 0), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((6.82, 0), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+  >>> line((7.43, 0), (7.43, 0), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((7.43, 0), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+      line((8.04, 0), (8.04, -0.46), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((8.04, -0.46), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+      line((8.65, 0), (8.65, -0.46), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((8.65, -0.46), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+      content((6.82, 0.069), [#text(size: 7pt)[$0$]], anchor: "south")
+      content((8.04, -0.529), [#text(size: 7pt)[$-2$]], anchor: "north")
+  >>> line((11.2, 0), (11.2, 0), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((11.2, 0), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+      line((11.81, 0), (11.81, -0.23), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((11.81, -0.23), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+      line((12.42, 0), (12.42, -1.15), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((12.42, -1.15), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+      line((13.03, 0), (13.03, 0.92), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((13.03, 0.92), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+      line((13.64, 0), (13.64, -1.38), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((13.64, -1.38), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+      line((14.25, 0), (14.25, -1.84), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((14.25, -1.84), radius: 0.07056, fill: rgb("#0000a6"), stroke: none)
+      content((13.03, 0.92), [#text(size: 9pt)[$4$]], anchor: "west")
+      })
+
+### The-Bass-trace-conjecture-for-complex-group-rings-September-24-2026
+    paths={'line': 11, 'circle': 1}  degenerate=1
+      #cetz.canvas({
+      import cetz.draw: *
+      line((-1.4, 1.05), (0, 1.05), (0, 3.15), close: true, fill: rgb("#e8e8ff"), stroke: none)
+      line((0, 1.05), (1.4, 1.05), (0, 3.15), close: true, fill: rgb("#d1d1ff"), stroke: none)
+      line((-1.4, 1.05), (0, 1.05), (-2.1, 0), close: true, fill: rgb("#ffeede"), stroke: none)
+      line((0, 1.05), (1.4, 1.05), (-2.1, 0), close: true, fill: rgb("#ffe1c2"), stroke: none)
+      line((0, 1.05), (-2.1, 0), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10))
+  >>> line((-2.1, 0), (-2.1, 0), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10))
+      line((-2.1, 0), (1.4, 1.05), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10))
+      line((1.4, 1.05), (0, 1.05), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10))
+      line((0, 1.05), (0, 3.15), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10))
+      line((-2.1, 0), (2.1, 0), (0, 3.15), close: true, stroke: (thickness: 0.8pt, miter-limit: 10))
+      line((-1.4, 1.05), (1.4, 1.05), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      circle((0, 1.05), radius: 0.07056, fill: black, stroke: none)
+      content((0.04989, 1), [#box(inset: 0.03528cm, stroke: none, fill: rgb("#ffffff"), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bound
+      content((-0.462, 1.764), [$F_2$])
+      content((0.462, 1.764), [$F_2$])
+      content((-1.134, 0.651), [$F_2$])
+      content((-0.2625, 0.7035), [$F_2$])
+      content((-0.693, 1.121), [$F_1$], anchor: "south")
+      content((0.693, 1.121), [$F_1$], anchor: "south")
+      })
+
+### The-Kakeya-maximal-conjecture-in-three-dimensions-September-23-2026
+    paths={'line': 18, 'rect': 9}  degenerate=2
+      #cetz.canvas({
+      import cetz.draw: *
+      line((-0.24, 0), (9.76, 0), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      content((9.76, 0), [#text(size: 9pt)[depth$"/"b$]], anchor: "west")
+      line((0, 0.0371), (0, -0.0371), stroke: (thickness: 0.4pt, miter-limit: 10))
+      content((0, -0.0371), [#text(size: 9pt)[$0$]], anchor: "north")
+      line((2.4, 0.0371), (2.4, -0.0371), stroke: (thickness: 0.4pt, miter-limit: 10))
+      content((2.4, -0.0371), [#text(size: 9pt)[$1- ell$]], anchor: "north")
+      line((5.6, 0.0371), (5.6, -0.0371), stroke: (thickness: 0.4pt, miter-limit: 10))
+      content((5.6, -0.0371), [#text(size: 9pt)[$1- tau$]], anchor: "north")
+      line((8, 0.0371), (8, -0.0371), stroke: (thickness: 0.4pt, miter-limit: 10))
+      content((8, -0.0371), [#text(size: 9pt)[$1$]], anchor: "north")
+      content((-0.24, 0.53), [#text(size: 9pt)[$V$]], anchor: "east")
+  >>> line((0, 0.53), (0, 0.53), stroke: (paint: rgb("#808080"), thickness: 0.8pt, miter-limit: 10))
+      rect((0, 0.4293), (0.96, 0.6307), fill: rgb("#cdd6df"), stroke: (paint: rgb("#1d466f"), thickness: 0.4pt, miter-limit: 10))
+      content((-0.24, 1.06), [#text(size: 9pt)[$U$]], anchor: "east")
+      line((0, 1.06), (2.4, 1.06), stroke: (paint: rgb("#808080"), thickness: 0.8pt, miter-limit: 10))
+      rect((2.4, 0.9593), (3.36, 1.161), fill: rgb("#cdd6df"), stroke: (paint: rgb("#1d466f"), thickness: 0.4pt, miter-limit: 10))
+      content((-0.24, 1.59), [#text(size: 9pt)[$Y$]], anchor: "east")
+      line((0, 1.59), (5.6, 1.59), stroke: (paint: rgb("#808080"), thickness: 0.8pt, miter-limit: 10))
+      rect((5.6, 1.489), (6.56, 1.691), fill: rgb("#cdd6df"), stroke: (paint: rgb("#1d466f"), thickness: 0.4pt, miter-limit: 10))
+      content((-0.24, 2.12), [#text(size: 9pt)[$X$]], anchor: "east")
+      line((0, 2.12), (8, 2.12), stroke: (paint: rgb("#808080"), thickness: 0.8pt, miter-limit: 10))
+      rect((8, 2.019), (8.96, 2.221), fill: rgb("#cdd6df"), stroke: (paint: rgb("#1d466f"), thickness: 0.4pt, miter-limit: 10))
+      line((8, 2.412), (8.96, 2.412), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (start: (symbol: ">>", fill: black), end: (symbol: ">>", fill: blac
+      content((8.48, 2.412), [#text(size: 9pt)[$zeta$]], anchor: "south")
+      content((0, 2.942), [#text(size: 9pt)[Distinct speeds: $0< tau < ell <1$]], anchor: "west")
+      line((-0.24, -5.2), (9.76, -5.2), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      content((9.76, -5.2), [#text(size: 9pt)[depth$"/"b$]], anchor: "west")
+      line((0, -5.163), (0, -5.237), stroke: (thickness: 0.4pt, miter-limit: 10))
+      content((0, -5.237), [#text(size: 9pt)[$0$]], anchor: "north")
+      line((4, -5.163), (4, -5.237), stroke: (thickness: 0.4pt, miter-limit: 10))
+      content((4, -5.237), [#text(size: 9pt)[$1"/"2$]], anchor: "north")
+      line((8, -5.163), (8, -5.237), stroke: (thickness: 0.4pt, miter-limit: 10))
+      content((8, -5.237), [#text(size: 9pt)[$1$]], anchor: "north")
+      content((-0.24, -4.67), [#text(size: 9pt)[$V$]], anchor: "east")
+  >>> line((0, -4.67), (0, -4.67), stroke: (paint: rgb("#808080"), thickness: 0.8pt, miter-limit: 10))
+      rect((0, -4.771), (0.96, -4.569), fill: rgb("#cdd6df"), stroke: (paint: rgb("#1d466f"), thickness: 0.4pt, miter-limit: 10))
+      content((-0.24, -4.14), [#text(size: 9pt)[$U$]], anchor: "east")
+      line((0, -4.14), (4, -4.14), stroke: (paint: rgb("#808080"), thickness: 0.8pt, miter-limit: 10))
+      rect((4, -4.241), (4.96, -4.039), fill: rgb("#cdd6df"), stroke: (paint: rgb("#1d466f"), thickness: 0.4pt, miter-limit: 10))
+      content((-0.24, -3.61), [#text(size: 9pt)[$Y$]], anchor: "east")
+      line((0, -3.61), (4, -3.61), stroke: (paint: rgb("#808080"), thickness: 0.8pt, miter-limit: 10))
+      rect((4, -3.711), (4.96, -3.509), fill: rgb("#cdd6df"), stroke: (paint: rgb("#1d466f"), thickness: 0.4pt, miter-limit: 10))
+      content((-0.24, -3.08), [#text(size: 9pt)[$X$]], anchor: "east")
+      line((0, -3.08), (8, -3.08), stroke: (paint: rgb("#808080"), thickness: 0.8pt, miter-limit: 10))
+      rect((8, -3.181), (8.96, -2.979), fill: rgb("#cdd6df"), stroke: (paint: rgb("#1d466f"), thickness: 0.4pt, miter-limit: 10))
+      rect((4, -4.325), (4.96, -3.425), stroke: (paint: rgb("#1d466f"), thickness: 0.4pt, miter-limit: 10, dash: "dashed"))
+      content((5.28, -3.875), [#text(size: 9pt)[one joint middle group]], anchor: "west")
+      content((0, -2.524), [#text(size: 9pt)[Tied speeds: $tau = ell =1"/"2$]], anchor: "west")
+      })
+
+### The-critical-Liouville-quantum-sphere-and-geometric-limits-of-FK-maps-
+    paths={'circle': 12, 'line': 10, 'rect': 5}  degenerate=1
+      #cetz.canvas({
+      import cetz.draw: *
+      circle((0, 0), radius: 4.1, stroke: (paint: rgb("#595959"), thickness: 0.4pt, cap: "round", join: "round"))
+      circle((0, 0), radius: 3.69, stroke: (paint: rgb("#8c8c8c"), thickness: 0.4pt, cap: "round", join: "round"))
+      circle((0, 0), radius: 3.854, fill: rgb("#f1cfc5"), stroke: none)
+      circle((0, 0), radius: 3.731, fill: rgb("#f1cfc5"), stroke: none)
+  >>> line((0, 0), (0, 0), fill: rgb("#f1cfc5"), stroke: none)
+      merge-path({line((-3.649, 0.5125), (-3.392, 0.5125)); arc((-3.392, 0.5125), start: -180deg, stop: -291.2deg, radius: 0.3175cm); line((-2.96, 0.8085), 
+      merge-path({line((3.649, 0.5125), (3.392, 0.5125)); arc((3.392, 0.5125), start: -0deg, stop: 111.2deg, radius: 0.3175cm); line((2.96, 0.8085), (2.513,
+      rect((-1.435, 1.558), (1.435, 2.952), fill: rgb("#f1cfc5"), stroke: none, radius: 2pt)
+      merge-path({line((-3.731, 0.5125), (-3.392, 0.5125)); arc((-3.392, 0.5125), start: -180deg, stop: -291.2deg, radius: 0.3175cm); line((-2.96, 0.8085), 
+      merge-path({line((3.731, 0.5125), (3.392, 0.5125)); arc((3.392, 0.5125), start: -0deg, stop: 111.2deg, radius: 0.3175cm); line((2.96, 0.8085), (2.513,
+      rect((-1.291, 1.701), (1.291, 2.808), fill: rgb("#ffffff"), stroke: none, radius: 1pt)
+      circle((0, 0), radius: 0.8815, fill: rgb("#ffffff"), stroke: none)
+      circle((0, 0), radius: 0.8815, stroke: (paint: rgb("#737373"), thickness: 0.4pt, cap: "round", join: "round"))
+      content((0, 0), [#text(size: 8pt)[omitted#linebreak()central disk#linebreak()$f=0$]])
+      circle((-3.772, 0.5125), radius: (0.5125, 0.4715), stroke: (paint: rgb("#000073"), thickness: 0.4pt, cap: "round", join: "round"))
+      circle((3.772, 0.5125), radius: (0.5125, 0.4715), stroke: (paint: rgb("#000073"), thickness: 0.4pt, cap: "round", join: "round"))
+      circle((-1.312, 2.255), radius: (0.5125, 0.4715), stroke: (paint: rgb("#000073"), thickness: 0.4pt, cap: "round", join: "round"))
+      circle((1.312, 2.255), radius: (0.5125, 0.4715), stroke: (paint: rgb("#000073"), thickness: 0.4pt, cap: "round", join: "round"))
+      line((-2.521, 1.097), (-2.44, 1.307), (-3.014, 1.527), (-3.095, 1.317), close: true, fill: rgb("#cc774f"), stroke: none)
+      line((2.44, 1.307), (2.521, 1.097), (3.095, 1.317), (3.014, 1.527), close: true, fill: rgb("#cc774f"), stroke: none)
+      merge-path({line((-3.341, 0.5125), (-3.392, 0.5125)); arc((-3.392, 0.5125), start: -180deg, stop: -291.2deg, radius: 0.3175cm); line((-2.96, 0.8085), 
+      merge-path({line((3.341, 0.5125), (3.392, 0.5125)); arc((3.392, 0.5125), start: -0deg, stop: 111.2deg, radius: 0.3175cm); line((2.96, 0.8085), (2.513,
+      rect((-1.148, 1.927), (1.148, 2.624), fill: black, stroke: (paint: rgb("#9a74b1"), thickness: 0.4pt, cap: "round", join: "round"))
+      rect((-0.9225, 2.081), (0.9225, 2.398), stroke: (paint: rgb("#a888bc"), thickness: 0.4pt, cap: "round", join: "round"))
+      content((0, 2.511), [#text(size: 8pt)[$V:#h(0.3333em) f=b$]])
+      line((-0.9225, 2.255), (-0.615, 2.183), (-0.2665, 2.327), (0.082, 2.193), (0.4715, 2.316), (0.9225, 2.255), stroke: (paint: rgb("#6e3990"), thickness:
+      circle((-0.9225, 2.255), radius: 0.04233, fill: rgb("#6e3990"), stroke: none)
+      circle((0.9225, 2.255), radius: 0.04233, fill: rgb("#6e3990"), stroke: none)
+      content((-0.9225, 2.245), [#text(size: 7pt)[$q_0$]], anchor: "north")
+      content((0.9225, 2.245), [#text(size: 7pt)[$q_1$]], anchor: "north")
+      content((0.9225, 2.398), [#text(fill: rgb("#6e3990"))[#text(size: 7pt)[$R$]]], anchor: "west")
+      merge-path({line((-4.612, 0.5125), (-3.392, 0.5125)); arc((-3.392, 0.5125), start: -180deg, stop: -291.2deg, radius: 0.3175cm); line((-2.96, 0.8085), 
+      merge-path({line((-1.414, 2.255), (-1.301, 2.255)); arc((-1.301, 2.255), start: -180deg, stop: -270deg, radius: 0.07056cm); line((-1.23, 2.326), (-1.2
+      merge-path({line((1.414, 2.255), (2.081, 2.255)); arc((2.081, 2.255), start: -180deg, stop: -68.78deg, radius: 0.3175cm); line((2.513, 1.959), (2.96, 
+      content((0, 3.054), [#text(size: 9pt)[$S:#h(0.3333em) f gt.eq b$]], anchor: "south")
+      content((-2.398, 2.378), [#text(size: 9pt)[$T_0$]], anchor: "south-east")
+      content((2.398, 2.378), [#text(size: 9pt)[$T_1$]], anchor: "south-west")
+      content((0, 4.715), [#text(size: 9pt)[$f=0$ near and outside $|z|=2$]])
+      content((5.699, 2.849), [#box(width: 2.9cm, inset: 0.3333em, [#set text(hyphenate: false, top-edge: "cap-height", bottom-edge: "baseline"); #align(cen
+      content((4.92, -1.333), [#text(size: 9pt)[$O:#h(0.3333em) f gt.eq 0$]])
+      line((4.366, -1.333), (3.813, -1.168), stroke: (paint: rgb("#666666"), thickness: 0.4pt, cap: "round", join: "round"))
+      content((-5.412, -1.23), [#box(width: 2.4cm, inset: 0.3333em, [#set text(hyphenate: false, top-edge: "cap-height", bottom-edge: "baseline"); #align(ce
+      line((-4.51, -1.23), (-3.587, -1.23), stroke: (paint: rgb("#666666"), thickness: 0.4pt, cap: "round", join: "round"))
+      content((0, -4.141), [#text(size: 9pt)[attachment circle $|z|=2$]], anchor: "north")
+      content((0, -2.768), [#text(size: 8pt)[$partial O$: radius strictly below $2$]])
+      line((0, -3.136), (0, -3.69), stroke: (paint: rgb("#666666"), thickness: 0.4pt, cap: "round", join: "round"))
+      line((-5.535, -5.084), (-4.674, -5.084), stroke: (paint: rgb("#197d69"), thickness: 3.2pt, cap: "round", join: "round"))
+      content((-4.489, -5.084), [#text(size: 8pt)[lowered reference core]], anchor: "west")
+      rect((1.127, -5.186), (1.947, -4.981), fill: rgb("#cc774f"), stroke: none)
+      content((2.132, -5.084), [#text(size: 8pt)[transverse marker]], anchor: "west")
+      line((-5.535, -5.699), (-4.674, -5.699), stroke: (paint: rgb("#6e3990"), thickness: 1.2pt, cap: "round", join: "round"))
+      content((-4.489, -5.699), [#text(size: 8pt)[graph certificate in $V$]], anchor: "west")
+      line((1.127, -5.699), (1.947, -5.699), stroke: (paint: rgb("#4d4d4d"), thickness: 0.8pt, cap: "round", join: "round"), mark: (end: (symbol: ">>", leng
+      content((2.132, -5.699), [#text(size: 8pt)[reference transit]], anchor: "west")
+      })

@@ -1,0 +1,19 @@
+\documentclass[tikz]{standalone}
+\usepackage{xcolor}
+\begin{document}
+\begin{tikzpicture}[font=\small]
+  \fill[black] (0,0) circle (1.5pt);
+  \begin{scope}[shift={(7.1cm,.35cm)},
+   x={(1.3cm,0cm)},y={(.42cm,.36cm)},z={(0cm,1.28cm)}]
+    \fill[red] (0,0,0) circle (1.5pt);
+    \fill[green] (2,0,0) circle (1.5pt);
+    \fill[blue] (2,1.4,0) circle (1.5pt);
+    \fill[cyan] (0,1.4,0) circle (1.5pt);
+    \fill[magenta] (1,.7,2.55) circle (1.5pt);
+    \fill[olive] (2.12,1.4,.65) circle (1.5pt);
+    \fill[orange] (-.15,0,.72) circle (1.5pt);
+    \fill[teal] (1.6,.7,1.7) circle (1.5pt);
+    \fill[pink] (.8,.56,1.7) circle (1.5pt);
+  \end{scope}
+\end{tikzpicture}
+\end{document}

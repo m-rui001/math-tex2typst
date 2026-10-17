@@ -1,0 +1,32 @@
+{
+  "paper": "A-surface-counterexample-to-Shafarevich-holomorphic-convexity-September-23-2026",
+  "ok": true,
+  "typ_lines": 746,
+  "included_pdf_pages": 0,
+  "formulas": 548,
+  "math_failed": 0,
+  "labels": 82,
+  "equations": 35,
+  "theorems": 3,
+  "figures": 2,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 2
+  },
+  "samples": {
+    "formulas": "548",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\A-surface-counterexample-to-Shafarevich-holomorphic-convexity-September-23-2026\\main.typ:478:77\n    │\n478 │ Write $hat(K)$ for the closure of $K$ in $hat(F)$. The normal subgroup $K lt.tri F$ has the induced pro-2 topology: if $N lt.tri K$ has 2-power index, its $F$-core $N_0$ is the intersection of finitely many conjugates of $N$. The group $K \\/ N_0$ embeds in a product of finite 2-groups, and $F \\/ N_0$ is an extension of $F \\/ K$ by $K \\/ N_0$, hence is also a finite 2-group. This proves the required cofinality and identifies the pro-2 completion of $K$ with its closure in $hat(F)$.\n    │                                                                              ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\A-surface-counterexample-to-Shafarevich-holomorphic-convexity-September-23-2026\\main.typ:478:125\n    │\n478 │ Write $hat(K)$ for the closure of $K$ in $hat(F)$. The normal subgroup $K lt.tri F$ has the induced pro-2 topology: if $N lt.tri K$ has 2-power index, its $F$-core $N_0$ is the intersection of finitely many conjugates of $N$. The group $K \\/ N_0$ embeds in a product of finite 2-groups, and $F \\/ N_0$ is an extension of $F \\/ K$ by $K \\/ N_0$, hence is also a finite 2-group. This proves the required cofinality and identifies the pro-2 completion of $K$ with its closure in $hat(F)$.\n    │                                                                                                                              ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 2,
+  "source": "E:\\math\\_work\\flat\\A-surface-counterexample-to-Shafarevich-holomorphic-convexity-September-23-2026.tex"
+}

@@ -1,0 +1,34 @@
+{
+  "paper": "Critical-bond-and-site-percolation-on-the-cubic-lattice-September-24-2026",
+  "ok": true,
+  "typ_lines": 633,
+  "included_pdf_pages": 0,
+  "formulas": 485,
+  "math_failed": 0,
+  "labels": 67,
+  "equations": 3,
+  "theorems": 3,
+  "figures": 2,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "cetz_refused": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "485",
+    "cetz_refused": "\\begin{tikzpicture}[ x={(1.10cm,-0.55cm)}, y={(-1.10cm,-0.55cm)}, z={(0cm,1.18cm)}, font=\\small, line join=rou",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Critical-bond-and-site-percolation-on-the-cubic-lattice-September-24-2026.tex"
+}

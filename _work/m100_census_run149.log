@@ -1,0 +1,22 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+canvases on the pages: 1055 in 572 papers
+  carrying a #box( frame: 418   with >=2 content() bodies: 1055
+rendering 1055 canvases (one per page)
+canvases rendered: 1055   typst refused: 8
+canvases with a collision: 114 in 97 papers
+foreign-ink pairs: 48   ink-on-ink pairs: 158
+  foreign vertical centre distance <=6pt: 8   >6pt: 40
+  ink-on-ink  vertical centre distance <=6pt: 110   >6pt: 48
+  worst 12.0pt  'Squares:sidelength' into a 27x27pt box  Finite-cylinder-approximation-of-ruled-sets-#0 (boxes=2 ink=14, 3 foreign / 0 on-ink)
+  worst 10.3pt  'attachments' into a 99x51pt box  An-Irrational-Trace-Counterexample-to-Reduce#0 (boxes=2 ink=19, 1 foreign / 0 on-ink)
+  worst 10.3pt  'tentranslations' into a 153x95pt box  Critical-bond-and-site-percolation-on-the-cu#1 (boxes=2 ink=25, 2 foreign / 0 on-ink)
+  worst 10.3pt  'originaledge' into a 125x91pt box  Spontaneous-magnetization-in-the-quantum-Hei#2 (boxes=2 ink=34, 4 foreign / 0 on-ink)
+  worst 10.3pt  'untouched' into a 94x113pt box  Self-dual-random-cluster-interfaces-below-on#4 (boxes=3 ink=18, 1 foreign / 0 on-ink)
+  worst 9.8pt  ':oldfirst' into a 45x45pt box  Cylinder-amplitudes-and-logarithmic-bridge-l#0 (boxes=1 ink=67, 2 foreign / 1 on-ink)
+  worst 8.0pt  'cleanboundary' into a 119x119pt box  The-Gaussian-free-field-limit-of-integer-Lip#1 (boxes=4 ink=28, 1 foreign / 0 on-ink)
+  worst 7.2pt  'west' into a 61x35pt box  Critical-strip-crossing-mass-on-the-honeycom#2 (boxes=2 ink=10, 2 foreign / 0 on-ink)
+  worst 5.8pt  'thencolumn' into a 59x8pt box  The-crossing-number-of-complete-bipartite-gr#2 (boxes=0 ink=27, 0 foreign / 3 on-ink)
+  worst 5.4pt  'Ŵ' into a 10x5pt box  A-universal-group-of-type-F-infinity-Septemb#0 (boxes=0 ink=6, 0 foreign / 1 on-ink)
+  worst 4.8pt  'height' into a 8x8pt box  A-Linear-Clock-for-Random-Walk-on-Tree-Weigh#0 (boxes=0 ink=15, 0 foreign / 2 on-ink)
+  worst 4.7pt  'forward' into a 163x105pt box  Positive-Metric-Entropy-for-the-Standard-Map#1 (boxes=1 ink=16, 3 foreign / 0 on-ink)
+pairs in _work/label81_pairs.json, papers in _work/regen81.txt

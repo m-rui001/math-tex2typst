@@ -1,0 +1,50 @@
+== anchors on the page ==
+   1047 anchor: "south"
+   1035 anchor: "west"
+    964 anchor: "north"
+    653 anchor: "east"
+    130 anchor: "south-east"
+    128 anchor: "north-east"
+    117 anchor: "south-west"
+    110 anchor: "north-west"
+      1 anchor: "center"
+== refusal census ==
+pictures 1040  converted 1005  refused 35
+
+-- refusal stages --
+   5  transform
+   4  foreach
+   2  pgfmath
+   1  statement:\path (F) edge node[above,sloped] {$f_{i+1}$} (next)
+   1  statement:\node[below=3pt] at (\row0) {$u$}
+   1  statement:\fill[black!4] (a0)--(a1)--(a2)--(a3)--cycle
+   1  statement:\fill[gray!8] (-1.4,-1,1)--(1.4,-1,1)--(1.4,1.3,1) --(-1.4,1
+   1  statement:\path (comparison.south west) -- (reciprocity.south east) co
+   1  statement:\fill[black!3] (1,-1,-1)--(1,1,-1)--(1,1,1)--(1,-1,1)--cycle
+   1  ifnum
+   1  statement:\FiniteSquare{.70}{-1.08}{} \node[finite label,left] at (.35
+   1  statement:\node[amap box] (phase) at (-.235\textwidth,0) {Positively c
+   1  statement:\draw[capacityellipse] (0,0) ellipse (1.00 and .37)
+   1  statement:\node[branch,below=9mm of base,xshift=-.33\textwidth] (stron
+   1  statement:\pinskzero \pinsgroup{0}{.95}{T}{pinsplus} \pinsgroup{0}{-.9
+   1  statement:\draw[edge] (av1)--(aw1) (av2)--(aw2)
+   1  statement:\draw[blue!65!black,very thick] plot[smooth] coordinates {(-
+   1  statement:\path (A) edge node[left,note] {reduction} (A0)
+   1  statement:\path (prediction.south) -- (alignment.south) node[midway,be
+   1  statement:\draw[blue!55!black,line width=1.1pt,domain=-2.2:2.2,samples
+   1  statement:\geometryrow{0}{\textbf{Main: initial}\\before the exchange}
+   1  statement:\node[font=\bfseries] at (1,.7,2.55) {Input face prism}
+   1  unsupported:def
+   1  scoped
+   1  statement:\draw[very thick,teal!70!black] plot[smooth] coordinates {(0
+   1  statement:\node[anchor=west,align=left,text width=5.2cm] at (5.45,3.15
+   1  statement:\draw[edge,dashed] (six) to[out=135,in=45,looseness=5] (six)
+
+-- samples --
+wrote _work/refusal_stages.txt
+== shots ==
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+_work/shot_Finite-generation_p5.png -> page 5 of 6 hits
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+_work/shot_Renewal-and-changes-of-l_p31.png  page 31  caption 'A repeated crossing of a transverse cut in an upward run. The segment '
+VERIFY_DONE

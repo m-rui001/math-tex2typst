@@ -1,0 +1,30 @@
+{
+  "paper": "Counterexamples-to-the-Hahn-Wilson-conjecture-at-height-two-September-26-2026",
+  "ok": true,
+  "typ_lines": 1950,
+  "included_pdf_pages": 0,
+  "formulas": 1643,
+  "math_failed": 2,
+  "labels": 191,
+  "equations": 0,
+  "theorems": 7,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 3
+  },
+  "samples": {
+    "formulas": "1643",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Counterexamples-to-the-Hahn-Wilson-conjecture-at-height-two-September-26-2026.tex"
+}

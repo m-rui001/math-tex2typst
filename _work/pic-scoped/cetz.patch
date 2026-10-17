@@ -1,0 +1,164 @@
+--- a/t2t/cetz.py
++++ b/t2t/cetz.py
+@@ -586,7 +586,7 @@
+     inner, end = bracketed(one, 0)
+     if inner is None or end >= len(one):
+         return None
+-    t = _transform(opts(inner), xf)
++    t = _transform(opts(inner), xf, names)
+     if t is None or t[:4] != (1.0, 0.0, 0.0, 1.0):
+         return None
+     rest = one[end:].strip()
+@@ -2299,7 +2299,11 @@
+     return None if got is None else (got[0] * UNITS["pt"] if got[1] else got[0])
+ 
+ 
+-ROTATE = re.compile(r"^\s*\{?\s*(-?[\d.]+)\s*(?:deg)?\s*"
++# a braced angle is a pgfmath expression, measured (_work/pic-scoped/m_rotate_expr.tex):
++# `rotate={45/2+90}` lands exactly where `rotate={112.5}` does. A `deg` suffix belongs only to
++# a plain number: TeX itself errors on `rotate={45/2+90 deg}` (PGF Math: unknown operator `d'),
++# so an expression angle carrying a letter refuses.
++ROTATE = re.compile(r"^\s*\{?\s*([^:{}(]+?)\s*(deg)?\s*"
+                     r"(?:[:(=]\s*\(?\s*(-?[\d.]+)\s*,\s*(-?[\d.]+)\s*\)?\s*)?\}?\s*$")
+ 
+ 
+@@ -2317,16 +2321,19 @@
+ 
+ 
+ def _rotate_spec(val):
+-    """rotate=45 or rotate around={45:(1,2)} -> (degrees, centre or None); None if unreadable."""
++    """rotate=45, rotate={45/2+90} or rotate around={45:(1,2)} -> (degrees, centre); None unreadable."""
+     m = ROTATE.match(val.strip())
+     if not m:
+         return None
+-    ang = expr(m.group(1))
++    angle = m.group(1)
++    if m.group(2) and not re.fullmatch(r"-?[\d.]+", angle):
++        return None
++    ang = expr(angle)
+     if ang is None:
+         return None
+-    if m.group(2) is None:
++    if m.group(3) is None:
+         return (ang, None)
+-    centre = point("(%s, %s)" % (m.group(2), m.group(3)), None)
++    centre = point("(%s, %s)" % (m.group(3), m.group(4)), None)
+     return None if centre is None else (ang, centre)
+ 
+ 
+@@ -2370,12 +2377,16 @@
+     return pair if len(pair) == 2 else (along[0] * pair[0], along[1] * pair[0])
+ 
+ 
+-def _transform(o, outer=IDENT):
++def _transform(o, outer=IDENT, names=None):
+     """Options that move the coordinate system -> a scope's matrix, axes and origin; None if unreadable.
+ 
+     Measured against pdflatex (_work/probe_3d_basis.py, _work/probe_3d_order.py): 'shift' counts user
+     units of the *enclosing* axes (so it is taken through outer's matrix), while 'xshift' and the axis
+-    lengths are absolute dimensions and 'scale' a factor. A scale or a 'rotate' turns the whole
++    lengths are absolute dimensions and 'scale' a factor. A 'shift' may also name a node; measured
++    (_work/pic-scoped/m_shift_name.tex) its canvas point then translates the origin verbatim -- under
++    x=2cm a `shift={(A)}` on a node two centimetres out moves two centimetres, not four, and stays
++    put through an enclosing `rotate=90`, because a name is a point of the page, not a count of
++    units. A scale or a 'rotate' turns the whole
+     canvas, so it stretches all three axes whichever order the options come in and whether or not
+     this scope mentions them; 'x={(a,b)}' and 'z={(0cm,1.5cm)}' write one axis as a vector of the
+     canvas the page is measured in, and an axis the scope leaves out carries over from outer. A slant
+@@ -2395,11 +2406,17 @@
+         if not isinstance(val, str):
+             continue
+         if key == "shift":
+-            got = point(val.strip().strip("{}"), None)
++            inside = val.strip().strip("{}")
++            got = point(inside, None)
+             if got is None:
+-                return None
+-            vx, vy = _delta(outer, got[0], got[1])
+-            dx, dy = dx + vx, dy + vy
++                got = point(inside, None, names) if names else None
++                if got is None:
++                    return None
++                # a named point already carries the page: it shifts by its own centimetres
++                dx, dy = dx + got[0], dy + got[1]
++            else:
++                vx, vy = _delta(outer, got[0], got[1])
++                dx, dy = dx + vx, dy + vy
+         elif key in ("rotate", "rotate around"):
+             spec = _rotate_spec(val)
+             if spec is None:
+@@ -2458,19 +2475,30 @@
+             inner[10] + outer[10], inner[11] + outer[11])
+ 
+ 
+-def _walk_scopes(body, xf, out):
+-    """Collect (statement, transform) pairs; False on a scope we cannot read."""
++def _walk_scopes(body, xf, out, names=None, styles=None):
++    """Collect (statement, transform) pairs; False on a scope we cannot read.
++
++    With a names table handed in, each statement is registered the moment the walk passes it, so a
++    later `shift={(A)}` finds the point A already placed -- in TeX as here a name a scope shifts
++    onto has to exist before the scope opens.
++    """
+     pos = 0
+     while True:
+         m = SCOPE.search(body, pos)
+         if not m:
+-            out.extend((s, xf) for s in split_statements(body[pos:]))
++            for s in split_statements(body[pos:]):
++                out.append((s, xf))
++                if names is not None:
++                    register(s, names, xf, styles)
+             return True
+         if m.group(1) == "end":
+             return False
+-        out.extend((s, xf) for s in split_statements(body[pos:m.start()]))
++        for s in split_statements(body[pos:m.start()]):
++            out.append((s, xf))
++            if names is not None:
++                register(s, names, xf, styles)
+         o, start = _opts_at(body, m.end())
+-        inner = _transform(o, xf) if o is not None else None
++        inner = _transform(o, xf, names) if o is not None else None
+         if inner is None:
+             return False
+         depth, i = 1, start
+@@ -2480,15 +2508,15 @@
+                 return False
+             depth += 1 if n.group(1) == "begin" else -1
+             i = n.end()
+-        if not _walk_scopes(body[start:n.start()], _compose(xf, inner), out):
++        if not _walk_scopes(body[start:n.start()], _compose(xf, inner), out, names, styles):
+             return False
+         pos = i
+ 
+ 
+-def scoped(body, xf=IDENT):
++def scoped(body, xf=IDENT, names=None, styles=None):
+     """Statements paired with their enclosing transform; None to refuse."""
+     out = []
+-    return out if _walk_scopes(body, xf, out) else None
++    return out if _walk_scopes(body, xf, out, names, styles) else None
+ 
+ 
+ CD_ENV = re.compile(r"\\begin\{tikzcd\}(\[[^\]]*\])?(.*?)\\end\{tikzcd\}", re.S)
+@@ -2987,14 +3015,14 @@
+     if cols is None or UNSUPPORTED.search(cols[1]):
+         return None
+     pal, body = cols
+-    placed = scoped(body, base)
+-    if placed is None:
+-        return None
+     styles = picture_styles(head)
+     styles.update(extra)
++    # names fills as the walk passes each statement, so a scope's `shift={(A)}` reads a node
++    # the walk has already placed; every statement is still registered before any is translated
+     names = {}
+-    for stmt, xf in placed:
+-        register(stmt, names, xf, styles)
++    placed = scoped(body, base, names, styles)
++    if placed is None:
++        return None
+     lines = []
+     for stmt, xf in placed:
+         got = translate_statement(stmt, names, xf, pal, styles)

@@ -1,0 +1,35 @@
+{
+  "paper": "Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026",
+  "ok": true,
+  "typ_lines": 890,
+  "included_pdf_pages": 0,
+  "formulas": 811,
+  "math_failed": 1,
+  "labels": 101,
+  "equations": 5,
+  "theorems": 5,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "811",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\let\\manuscriptoriginalhookrightarrow",
+    "\\defdef",
+    "\\let\\manuscriptoriginallongmapsto",
+    "\\defdef"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n   ┌─ \\\\?\\E:\\math\\typst\\Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026\\main.typ:33:13\n   │\n33 │ $ H = G_0 lt.tri.eq G_1 lt.tri.eq dots.h.c lt.tri.eq G_s = G $\n   │              ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n   ┌─ \\\\?\\E:\\math\\typst\\Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026\\main.typ:33:27\n   │\n33 │ $ H = G_0 lt.tri.eq G_1 lt.tri.eq dots.h.c lt.tri.eq G_s = G $\n   │                            ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n   ┌─ \\\\?\\E:\\math\\typst\\Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026\\main.typ:33:46\n   │\n33 │ $ H = G_0 lt.tri.eq G_1 lt.tri.eq dots.h.c lt.tri.eq G_s = G $\n   │                                               ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026\\main.typ:278:91\n    │\n278 │   If $H$ is closed in $Gamma$ and $H \\/ K$ is finite, choose an open normal subgroup $N lt.tri.eq_o Gamma$ with $H ∩ N subset.eq K$. Then $H \\/ K$ is a quotient of the subgroup $H \\/ \\( H ∩ N \\)$ of $Gamma \\/ N$. The latter is a quotient of a tower stage, so 5 gives $d \\( H \\/ K \\) lt.eq l$. For each open normal $K$ of $H$, the tuples in $H^l$ whose images generate $H \\/ K$ form a nonempty clopen subset. These subsets have the finite intersection property, by applying the same bound to the quotient by an intersection of finitely many such $K$. Compactness gives a tuple generating every finite quotient, hence topologically generating $H$. This proves (i).\n    │                                                                                            ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026\\main.typ:407:15\n    │\n407 │   Choose $N lt.tri.eq_o Gamma$ contained in $U$ and in the kernel of the action on $X$, and put $Q = Gamma \\/ N$ and $overline(U) = U \\/ N$. The finite groupoid\n    │                ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026\\main.typ:455:13\n    │\n455 │ $ 1 = K_t lt.tri.eq K_(t - 1) lt.tri.eq dots.h.c lt.tri.eq K_0 = Gamma \\, #h(2em) t lt.eq l \\, $\n    │              ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026\\main.typ:455:33\n    │\n455 │ $ 1 = K_t lt.tri.eq K_(t - 1) lt.tri.eq dots.h.c lt.tri.eq K_0 = Gamma \\, #h(2em) t lt.eq l \\, $\n    │                                  ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026\\main.typ:455:52\n    │\n455 │ $ 1 = K_t lt.tri.eq K_(t - 1) lt.tri.eq dots.h.c lt.tri.eq K_0 = Gamma \\, #h(2em) t lt.eq l \\, $\n    │                                                     ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026\\main.typ:474:46\n    │\n474 │   For a closed subgroup $H lt.eq E$ and $N lt.tri.eq_o H$, choose $M lt.tri.eq_o E$ with $H ∩ M subset.eq N$. Then $H \\/ N$ is a quotient of the subgroup $H \\/ \\( H ∩ M \\)$ of $E \\/ M$. Under the asserted generator bound, for each $N lt.tri.eq_o H$ the set of tuples in $H^l$ generating $H \\/ N$ is nonempty and closed. These sets have the finite intersection property, by replacing finitely many $N$ by their intersection. Compactness supplies a tuple generating every finite quotient of $H$, hence topologically generating $H$.\n    │                                               ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026\\main.typ:474:72\n    │\n474 │   For a closed s",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 19,
+  "source": "E:\\math\\_work\\flat\\Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026.tex"
+}

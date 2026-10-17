@@ -1,0 +1,113 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+plain        $x_i^2$
+  south  typst h= 19.39 y0= -19.39 y1=  -0.00 esc=+0.00
+         pgf   h= 17.34 y0= -17.54 y1=  -0.20 esc=+0.00
+  north  typst h= 19.39 y0=  +0.00 y1= +19.39 esc=+0.00
+         pgf   h= 17.34 y0=  +0.20 y1= +17.54 esc=+0.00
+  west   typst h= 19.39 y0=  -9.69 y1=  +9.69 esc=+0.00
+         pgf   h= 17.34 y0=  -8.67 y1=  +8.67 esc=+0.00
+  none   typst h= 19.39 y0=  -9.69 y1=  +9.69 esc=+0.00
+         pgf   h= 17.34 y0=  -8.67 y1=  +8.67 esc=+0.00
+
+prose        Abg
+  south  typst h= 14.57 y0= -14.57 y1=  -0.00 esc=+0.00
+         pgf   h= 15.50 y0= -15.70 y1=  -0.20 esc=+0.00
+  north  typst h= 14.57 y0=  +0.00 y1= +14.57 esc=+0.00
+         pgf   h= 15.50 y0=  +0.20 y1= +15.70 esc=+0.00
+  west   typst h= 14.57 y0=  -7.29 y1=  +7.29 esc=+0.00
+         pgf   h= 15.50 y0=  -7.75 y1=  +7.75 esc=+0.00
+  none   typst h= 14.57 y0=  -7.29 y1=  +7.29 esc=+0.00
+         pgf   h= 15.50 y0=  -7.75 y1=  +7.75 esc=+0.00
+
+frac         $\frac{a}{b}$
+  south  typst h= 18.93 y0= -18.93 y1=  -0.00 esc=+0.00
+         pgf   h= 17.00 y0= -17.20 y1=  -0.20 esc=+0.00
+  north  typst h= 18.93 y0=  +0.00 y1= +18.93 esc=+0.00
+         pgf   h= 17.00 y0=  +0.20 y1= +17.20 esc=+0.00
+  west   typst h= 18.93 y0=  -9.47 y1=  +9.47 esc=+0.00
+         pgf   h= 17.00 y0=  -8.50 y1=  +8.50 esc=+0.00
+  none   typst h= 18.93 y0=  -9.47 y1=  +9.47 esc=+0.00
+         pgf   h= 17.00 y0=  -8.50 y1=  +8.50 esc=+0.00
+
+frac-real    $R_c'(t)=-\dfrac{q-1}{R_c(t)}$
+  south  typst h= 24.54 y0= -24.54 y1=  -0.00 esc=+0.00
+         pgf   h= 16.62 y0= -16.82 y1=  -0.20 esc=+0.00
+  north  typst h= 24.54 y0=  +0.00 y1= +24.54 esc=+0.00
+         pgf   h= 16.62 y0=  +0.20 y1= +16.82 esc=+0.00
+  west   typst h= 24.54 y0= -12.27 y1= +12.27 esc=+0.00
+         pgf   h= 16.62 y0=  -8.31 y1=  +8.31 esc=+0.00
+  none   typst h= 24.54 y0= -12.27 y1= +12.27 esc=+0.00
+         pgf   h= 16.62 y0=  -8.31 y1=  +8.31 esc=+0.00
+
+sqrt         $\sqrt{n(p,0)}$
+  south  typst h= 21.06 y0= -21.06 y1=  -0.00 esc=+0.00
+         pgf   h= 19.00 y0= -19.19 y1=  -0.20 esc=+0.00
+  north  typst h= 21.06 y0=  +0.00 y1= +21.06 esc=+0.00
+         pgf   h= 19.00 y0=  +0.20 y1= +19.19 esc=+0.00
+  west   typst h= 21.06 y0= -10.53 y1= +10.53 esc=+0.00
+         pgf   h= 19.00 y0=  -9.50 y1=  +9.50 esc=+0.00
+  none   typst h= 21.06 y0= -10.53 y1= +10.53 esc=+0.00
+         pgf   h= 19.00 y0=  -9.50 y1=  +9.50 esc=+0.00
+
+leftright    $2R+\left\|v-w\right\|_\infty$
+  south  typst h= 18.38 y0= -18.38 y1=  -0.00 esc=+0.00
+         pgf   h= 17.10 y0= -17.30 y1=  -0.20 esc=+0.00
+  north  typst h= 18.38 y0=  +0.00 y1= +18.38 esc=+0.00
+         pgf   h= 17.10 y0=  +0.20 y1= +17.30 esc=+0.00
+  west   typst h= 18.38 y0=  -9.19 y1=  +9.19 esc=+0.00
+         pgf   h= 17.10 y0=  -8.55 y1=  +8.55 esc=+0.00
+  none   typst h= 18.38 y0=  -9.19 y1=  +9.19 esc=+0.00
+         pgf   h= 17.10 y0=  -8.55 y1=  +8.55 esc=+0.00
+
+stackrel     $A \overset{f}{\to} B$
+  south  typst h= 17.46 y0= -17.46 y1=  -0.00 esc=+0.00
+         pgf   h= 15.50 y0= -15.70 y1=  -0.20 esc=+0.00
+  north  typst h= 17.46 y0=  +0.00 y1= +17.46 esc=+0.00
+         pgf   h= 15.50 y0=  +0.20 y1= +15.70 esc=+0.00
+  west   typst h= 17.46 y0=  -8.73 y1=  +8.73 esc=+0.00
+         pgf   h= 15.50 y0=  -7.75 y1=  +7.75 esc=+0.00
+  none   typst h= 17.46 y0=  -8.73 y1=  +8.73 esc=+0.00
+         pgf   h= 15.50 y0=  -7.75 y1=  +7.75 esc=+0.00
+
+limits       $\sum_{k=1}^{n} k$
+  south  typst h= 21.26 y0= -21.26 y1=  -0.00 esc=+0.00
+         pgf   h= 17.64 y0= -17.84 y1=  -0.20 esc=+0.00
+  north  typst h= 21.26 y0=  +0.00 y1= +21.26 esc=+0.00
+         pgf   h= 17.64 y0=  +0.20 y1= +17.84 esc=+0.00
+  west   typst h= 21.26 y0= -10.63 y1= +10.63 esc=+0.00
+         pgf   h= 17.64 y0=  -8.82 y1=  +8.82 esc=+0.00
+  none   typst h= 21.26 y0= -10.63 y1= +10.63 esc=+0.00
+         pgf   h= 17.64 y0=  -8.82 y1=  +8.82 esc=+0.00
+
+rows-math    $A_1$\\$B_2$
+  south  typst h= 35.31 y0= -35.31 y1=  +0.00 esc=+0.00
+         pgf   h= 14.94 y0= -15.14 y1=  -0.20 esc=+0.00
+  north  typst h= 35.31 y0=  +0.00 y1= +35.31 esc=+0.00
+         pgf   h= 14.94 y0=  +0.20 y1= +15.14 esc=+0.00
+  west   typst h= 35.31 y0= -17.65 y1= +17.65 esc=+0.00
+         pgf   h= 14.94 y0=  -7.47 y1=  +7.47 esc=+0.00
+  none   typst h= 35.31 y0= -17.65 y1= +17.65 esc=+0.00
+         pgf   h= 14.94 y0=  -7.47 y1=  +7.47 esc=+0.00
+
+rows-prose   Abg\\Cde
+  south  typst h= 28.96 y0= -28.96 y1=  -0.00 esc=+0.00
+         pgf   h= 15.50 y0= -15.70 y1=  -0.20 esc=+0.00
+  north  typst h= 28.96 y0=  +0.00 y1= +28.96 esc=+0.00
+         pgf   h= 15.50 y0=  +0.20 y1= +15.70 esc=+0.00
+  west   typst h= 28.96 y0= -14.48 y1= +14.48 esc=+0.00
+         pgf   h= 15.50 y0=  -7.75 y1=  +7.75 esc=+0.00
+  none   typst h= 28.96 y0= -14.48 y1= +14.48 esc=+0.00
+         pgf   h= 15.50 y0=  -7.75 y1=  +7.75 esc=+0.00
+
+rows-mixed   \textbf{Added}\\$\widetilde\alpha$ closed.
+  south  typst h= 30.12 y0= -30.12 y1=  -0.00 esc=+0.00
+         pgf   h= 13.84 y0= -14.04 y1=  -0.20 esc=+6.02
+  north  typst h= 30.12 y0=  +0.00 y1= +30.12 esc=+0.00
+         pgf   h= 13.84 y0=  +0.20 y1= +14.04 esc=+6.02
+  west   typst h= 30.12 y0= -15.06 y1= +15.06 esc=+0.00
+         pgf   h= 13.84 y0=  -6.92 y1=  +6.92 esc=+6.02
+  none   typst h= 30.12 y0= -15.06 y1= +15.06 esc=+0.00
+         pgf   h= 13.84 y0=  -6.92 y1=  +6.92 esc=+6.02
+
+constructs whose anchor never moves the box: none

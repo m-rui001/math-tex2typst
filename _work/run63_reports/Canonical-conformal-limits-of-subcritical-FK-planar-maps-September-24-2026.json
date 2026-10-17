@@ -1,0 +1,42 @@
+{
+  "paper": "Canonical-conformal-limits-of-subcritical-FK-planar-maps-September-24-2026",
+  "ok": true,
+  "typ_lines": 2539,
+  "included_pdf_pages": 0,
+  "formulas": 1725,
+  "math_failed": 0,
+  "labels": 287,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 6,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 8
+  },
+  "samples": {
+    "formulas": "1725",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\newcommandnewcommand",
+    "\\letlet",
+    "\\let\\label",
+    "\\newcommandnewcommand",
+    "\\newcommandnewcommand",
+    "\\defdef",
+    "\\letlet",
+    "\\letlet",
+    "\\letlet",
+    "\\letlet",
+    "\\letlet"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Canonical-conformal-limits-of-subcritical-FK-planar-maps-September-24-2026.tex"
+}

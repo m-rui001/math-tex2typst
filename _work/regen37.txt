@@ -1,0 +1,12 @@
+regenerating 105 papers
+10/105 compiled=10 elapsed=4s
+20/105 compiled=20 elapsed=7s
+30/105 compiled=30 elapsed=14s
+40/105 compiled=40 elapsed=21s
+50/105 compiled=50 elapsed=22s
+60/105 compiled=60 elapsed=24s
+70/105 compiled=70 elapsed=38s
+80/105 compiled=80 elapsed=48s
+90/105 compiled=90 elapsed=48s
+100/105 compiled=100 elapsed=55s
+DONE 105 compiled=105

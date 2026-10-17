@@ -1,0 +1,175 @@
+census3 yardstick reproduced: notes=164 total=4395 (this run all-notes total=4395 notes=164)
+D476 hits=0 ; D71 hits=7 ; in-scope total=4388 notes=163
+CAT occ={"C": 3586, "B": 761, "D": 30, "E": 5, "A": 6}
+CAT notes={"A": 1, "B": 41, "C": 139, "D": 13, "E": 5}
+CAT occ incl D476/D71={"C": 3593, "B": 761, "D": 30, "E": 5, "A": 6}
+PAT occ=[["fence-verbatim", 2291], ["blockquote-verbatim", 860], ["prose-leak", 736], ["inline-quote-verbatim", 305], ["indented-verbatim", 78], ["material-voice-line", 52], ["table-cell", 30], ["heading-leak", 18], ["label-name-mention", 7], ["self-heading-anchor", 6], ["arg-not-a-material-label", 3], ["ellipsis-placeholder", 1], ["numeric-arg", 1]]
+fence-in-scope=2292 fence-all=2299
+table rows=30 (of which also inside a fence: [["D47", 461]])
+declared-verbatim words on C lines=101 ; on B lines=76 ; on E lines=0
+head occurrences=18 in 1 notes: [["D137", 79], ["D137", 98], ["D137", 113], ["D137", 132], ["D137", 153], ["D137", 178], ["D137", 215], ["D137", 282], ["D137", 376], ["D137", 418], ["D137", 555], ["D137", 591]]
+B advice buckets={"keep-as-code": 7, "delete-token": 65, "rewrite-as-pos": 689}
+B by lead top=[[null, 531], ["Lemma", 111], ["Proposition", 49], ["Theorem", 26], ["Corollary", 12], ["Section", 5], ["Definition", 5], ["Remark", 3], ["Thm", 3], ["Table", 3], ["Prop", 3], ["Sections", 2], ["Equation", 2], ["rule", 1]]
+audit: B occurrences whose arg token also appears in the note's OWN headings=41 notes={"D105": 2, "D131": 2, "D132": 1, "D137": 30, "D318": 1, "D346": 3, "D90": 1, "D94": 1}
+
+TOP15 NOTES (in-scope hits, with cat breakdown):
+  D114    203  A=0 B=0 C=203 D=0 E=0  dominant=fence-verbatim
+  D112    122  A=0 B=57 C=65 D=0 E=0  dominant=blockquote-verbatim
+  D146    103  A=0 B=50 C=52 D=1 E=0  dominant=\eqref{}
+  D93      97  A=0 B=0 C=97 D=0 E=0  dominant=blockquote-verbatim
+  D124     96  A=0 B=27 C=69 D=0 E=0  dominant=blockquote-verbatim
+  D90      86  A=0 B=46 C=39 D=1 E=0  dominant=\eqref{}
+  D300     82  A=0 B=82 C=0 D=0 E=0  dominant=\eqref{}
+  D80      82  A=0 B=0 C=82 D=0 E=0  dominant=blockquote-verbatim
+  D101     81  A=0 B=0 C=81 D=0 E=0  dominant=indented-verbatim
+  D364     79  A=0 B=79 C=0 D=0 E=0  dominant=\eqref{}
+  D97      77  A=0 B=0 C=76 D=1 E=0  dominant=blockquote-verbatim
+  D142     71  A=0 B=0 C=71 D=0 E=0  dominant=fence-verbatim
+  D107     70  A=0 B=0 C=70 D=0 E=0  dominant=fence-verbatim
+  D137     69  A=0 B=59 C=10 D=0 E=0  dominant=Lemma~\ref{}
+  D75      63  A=0 B=0 C=63 D=0 E=0  dominant=fence-verbatim
+
+E CASES:
+  D244:68 arg='式 253' arg-not-a-material-label | 精细密度是整个引理最锋利的部分。设 $K(s,y)$ 为 $W(s,a)\psi(a)^2\,\mathrm d a$ 在 $a\mapsto sJ(a)$ 下的推前密度（02-passages.tex:114-116），则每个残差类 $j\equiv h\pmod P$ 的展开时间密度在 $L^1(\R)$ 意义下 $o(1)$ 逼近 $Q_{N,h}(t)=\sum_{k\in\Z}K(t,N
+  D346:102 arg='H' arg-not-a-material-label | 有了 \eqref{H} 里的 $H$，还差最后一块拼图：$H$ 里要能造出长度恰好 $\ell$、两端颜色不同的路径。Lemma clq:coloured-path 正是这句话：设 $s\ge4$，$H$ 连通非二部无 $K_s$，$\delta(H)\ge s$，且对任意不相邻两点 $\{a,b\}$ 有 $\lvert N_H[\{a,b\}]\rvert\ge2s$，则对任意非常值 $\c
+  D380:215 arg='eq:source-N' arg-not-a-material-label | （二）两套标签体系并存。引言里的公式标签是 \label{eq:height-convention}（`01-introduction.tex:37`）、\label{eq:bsd-main}（54）、\label{eq:normalized-quotient}（143）、\label{eq:intro-inequality}（157）、\label{eq:intro-pair}（159）；正文第
+  D473:60 arg='...' ellipsis-placeholder | 换测度引理（main.tex:455-484，即 Lemma \ref{...}，本文按 main.tex 行号引用）：$0<T<\infty$ 几乎必然、$\mathbb E|\log T|^2<\infty$；叶概率按 $e^{X_\tau}$ 重加权时家谱律保持；根标记保持；$\mathbb E\log\sum v_\tau e^{X_\tau}=\mathbb E X_\varnothin
+  D517:185 arg='3' numeric-arg | 分析侧的输入是弱范数方程与方差的接力（04-volume.tex:589--615）：对 $b$ 积分 \eqref{3} 用法，用 $\bar\sigma\le1$ 与 $\bar e\ge\frac53\lvert\nabla b\rvert^2$，得 $P-\mathbf E b\ge\frac49\mathbf E\lvert\nabla\sqrt b\rvert^2$；$\bar e/b
+
+SAMPLE inline-quote-verbatim (30, note: how many carry CJK>40):
+  count=305 with cjk>40=147 with decl-word=101
+  D10:281 cjk=5 | 迹规则归约（cyc:180-195）："Lemma~\ref{lem:cocycle-prefixes} implies that a word in $V_1,\ldots,V_m$ and their inverses has trace one if i
+  D10:382 cjk=19 | 陈述尾部的接口约定（gen:26-33）："Here the target in the second estimate is the original $C$; the new completion is \[ C'=C A_w^*, \] where $A
+  D10:438 cjk=5 | 单槽句（gen:180-182）："This estimate uses $A_{w_k}^{(k)}$ as a single unitary slot of $F_{j,k}$. Thus the tolerance chosen in \eqref{eq
+  D10:480 cjk=6 | Thm 6.1 证明主体（amp:39-52）："Apply Theorem~\ref{thm:rank-step} with $n=3$ and $n=4$"，以及
+  D101:88 cjk=97 | (b) 推导补步。结论拆成两支。下界支：反设 chi(R^2) <= 5，由定义（introduction.tex:4--6 的 least such k）单调性给出一个 proper 5-coloring；thm:transfer 的 (=>)（transf
+  D101:88 cjk=97 | (b) 推导补步。结论拆成两支。下界支：反设 chi(R^2) <= 5，由定义（introduction.tex:4--6 的 least such k）单调性给出一个 proper 5-coloring；thm:transfer 的 (=>)（transf
+  D101:1845 cjk=142 | 转折点九，从"数值验证属于证明之外"改到"证书是证明的一部分"。触发文本是 angular.tex:568--570 的图注句 "The rational certificate in Section~\ref{sec:angular-certificate-
+  D102:631 cjk=48 | (b) 定参链：C_0（锚定）-> T=200C_0 -> c=c(T)（严格性）-> v 同时满足三条件（1/12 给标尺 10P 收尾、c/1000 给除 (1-delta)、v^2 条件给 K^2 回预算）-> N_* 让两小量指数衰减到位 -> L 抬
+  D104:202 cjk=2 | 引理（lem:rational-codes，elliptic.tex:49-55）："Every rational number has exactly one code satisfying \eqref{eq:rational-code}. Any fix
+  D104:246 cjk=7 | 代表点条件（eq:representative，elliptic.tex:240-246）："$Q\ne O,\ y(Q)\ge0,\ W(Q)>1,\ Q+t\ne O$ and $x(Q)\ge x(Q+t)\ (t\in\mathcal T)$."引理 
+  D104:279 cjk=4 | 括号选择（elliptic.tex:296-313）："On input $u\in\mathbb N$, require a representative $Q$ satisfying \[ W(Q)\le u+W_1<\max\{W(Q+P),W(Q-P)
+  D104:281 cjk=8 | 窗口恒等式与系统（elliptic.tex:321-338）："The quadratic main terms in \eqref{eq:quadratic-sequence} suggest the identity \[ (2k)^2-2k^2-\big
+  D104:283 cjk=4 | 误差核算（elliptic.tex:341-358）："$\log\frac{L_0}{D_0}=2a_E(k^2-r)+e,\ |e|\le6c_E$"；"The error has six terms when multiplicity is counte
+  D104:283 cjk=4 | 误差核算（elliptic.tex:341-358）："$\log\frac{L_0}{D_0}=2a_E(k^2-r)+e,\ |e|\le6c_E$"；"The error has six terms when multiplicity is counte
+  D104:363 cjk=4 | 设计说明（power.tex:116-124）："The ratio in Lemma~\ref{lem:pell-sequences} suggests taking $c$ as the integer quotient of $y_{n+1}(bu)$ 
+  D104:375 cjk=4 | 唯一性段（power.tex:264-277）："For fixed $b,n$, the soundness argument first fixes $c$. The formula in \eqref{eq:power-input} then fixes
+  D104:375 cjk=4 | 唯一性段（power.tex:264-277）："For fixed $b,n$, the soundness argument first fixes $c$. The formula in \eqref{eq:power-input} then fixes
+  D104:413 cjk=2 | 系统（power.tex:310-319）："Require $x\le y$ and use three calls to Proposition~\ref{prop:power} to specify \[ B=2^{y+1},\qquad H=B^x,\
+  D104:415 cjk=5 | 无进位论证（power.tex:325-333）："Every coefficient is at most $\sum_{j=0}^y\binom yj=2^y<B$, so this is the base-$B$ expansion of $N$ wit
+  D104:463 cjk=29 | 证明核心段：无进位（computation.tex:216-219）"The sum in \eqref{eq:machine-state-partition} has at most $s<B$ in each digit, so it has no car
+  D104:511 cjk=2 | 组装（computation.tex:347-358）："Given the recursively enumerable set $S\subseteq\mathbb N^n$, choose the machine of Lemma~\ref{lem:co
+  D104:511 cjk=2 | 组装（computation.tex:347-358）："Given the recursively enumerable set $S\subseteq\mathbb N^n$, choose the machine of Lemma~\ref{lem:co
+  D104:511 cjk=2 | 组装（computation.tex:347-358）："Given the recursively enumerable set $S\subseteq\mathbb N^n$, choose the machine of Lemma~\ref{lem:co
+  D104:517 cjk=2 | 划界（consequences.tex:35-40）："The bounds in Corollary~\ref{cor:unique-h10} are existential... The coefficients of $F_a$, and therefo
+  D104:593 cjk=170 | 第二阶段，[推测] 我推测自己也走过 CCO 综述里的老路：成对 Pell 加"指数截断"。main.tex:94-97 明说 Cantone--Cuzziol--Omodeo 的配对 Pell 表示带着一个待替换的 exponential cutoff（"t
+  D110:125 cjk=81 | 这一步的**机械理由清单**（我自己的版本）：\(\frac{1+\rho}{q}\) 出现在分母、\(c\) 出现在分子，所以树的棵数是 \(cq/(1+\rho)\)；\(\rho\) 是自由参数，可以取 \(u\)，代价线性、收益是把 \(z_e\) 的
+  D110:633 cjk=53 | 第三步，小性。同片 91-93 行逐字："The smallness condition in Proposition~\ref{prop:hierarchy-bags} holds eventually because \(s^\epsilon\le q^{
+  D112:372 cjk=11 | "The symmetric cutoff in \eqref{eq:X-M} is part of the definition."）。第二条在 rank-one 部分被反复消费，
+  D112:437 cjk=12 | "The symmetric cutoff in \eqref{eq:X-M} is part of the definition."写成定义级声明的原因，也是
+  D112:690 cjk=1 | \eqref{eq:P-kernel}。`rank-one.tex:141-142` 用"by the same calculation as $\mu'(d)$ in Lemma~\ref{lem:mu}"
+
+SAMPLE material-voice-line (30, note: how many carry CJK>40):
+  count=52 with cjk>40=0 with decl-word=0
+  D100:539 cjk=0 | which is Equation~\eqref{eq:principal-correction-residue} with
+  D100:553 cjk=0 | \begin{equation}\label{old-eq:5.14}
+  D100:804 cjk=0 | For the low estimate, apply Equation~\eqref{eq:part-II-normalized-low}
+  D112:281 cjk=0 | "The first term on the right of \eqref{eq:tail} is odd in $s$ and cancels at every symmetric cutoff;
+  D112:981 cjk=0 | \eqref{path:equivariance} only concerns sign matrices, which commute with the fixed matrix $K$."
+  D124:734 cjk=0 | \eqref{eq:pair-flag} linear in the exceptional probabilities."
+  D156:348 cjk=0 | \eqref{stop:uniform-energy}：
+  D185:506 cjk=0 | "The splitting in \eqref{eq:split-boundary} is stronger than ordinary third-homology
+  D259:820 cjk=0 | Lemma~\ref{spread:hilbert-loci}"、"Since $\Pi$ was chosen outside
+  D259:821 cjk=0 | $\mathcal E_{\mathrm{Hilb}}$"、"Lemma~\ref{spread:chern-constancy} therefore gives
+  D28:817 cjk=0 | "Under independent uniform leaves, Equation~\eqref{energy:inductive-mean} applies by
+  D28:818 cjk=0 | Equations~\eqref{energy:variance} and~\eqref{energy:normalization}."
+  D28:818 cjk=0 | Equations~\eqref{energy:variance} and~\eqref{energy:normalization}."
+  D28:957 cjk=0 | inequalities in Equation~\eqref{energy:fractional-angle} hold."
+  D28:1065 cjk=0 | Proposition~\ref{prop:configuration}."
+  D360:798 cjk=0 | \eqref{eq:negative-limit}, and positivity of the quadratic coefficient"
+  D53:17 cjk=0 | "\begin{theorem}\label{thm:main}
+  D53:21 cjk=0 | Definition~\ref{def:matrix}.
+  D53:60 cjk=0 | "\begin{lemma}\label{lem:commuting-form}
+  D53:69 cjk=0 | \begin{equation}\label{eq:pairing-definition}
+  D53:88 cjk=0 | "\begin{lemma}\label{lem:centralizer-character}
+  D53:110 cjk=0 | "\begin{equation}\label{eq:braid-centers-definition}
+  D53:115 cjk=0 | "\begin{lemma}\label{lem:braid-centers}
+  D53:122 cjk=0 | \begin{equation}\label{eq:braid-shift}
+  D53:126 cjk=0 | \begin{equation}\label{eq:braid-central-pairing}
+  D53:142 cjk=0 | "\begin{proposition}\label{prop:braid-angle}
+  D53:146 cjk=0 | \begin{equation}\label{eq:braid-angle-bound}
+  D53:167 cjk=0 | "\begin{proposition}\label{prop:triangle-obstruction}
+  D53:170 cjk=0 | \begin{equation}\label{eq:strict-ratios}
+  D53:193 cjk=0 | "\begin{lemma}\label{lem:mirror-action}
+
+SAMPLE indented-verbatim (30, note: how many carry CJK>40):
+  count=78 with cjk>40=0 with decl-word=0
+  D101:80 cjk=0 | \begin{theorem}\label{thm:main}
+  D101:116 cjk=0 | \begin{theorem}[Transfer of colorability]\label{thm:transfer}
+  D101:118 cjk=0 | \begin{equation}\label{eq:source-1}
+  D101:180 cjk=0 | \label{lem:palettes-continuous-factor}
+  D101:324 cjk=0 | \begin{equation}\label{eq:source-2}
+  D101:401 cjk=0 | \eqref{eq:source-4};
+  D101:512 cjk=0 | Typical points form a conull set.  By Lemma~\ref{lem:palettes-density-proper},
+  D101:596 cjk=0 | \begin{equation}\label{eq:source-13}
+  D101:704 cjk=0 | $H_i$.  Section~\ref{sec:transitions} supplies the transition graphs
+  D101:732 cjk=0 | \label{eq:source-24}
+  D101:742 cjk=0 | \label{prop:interface-cycle}
+  D101:793 cjk=0 | \label{lem:transitions-disk-averages}
+  D101:797 cjk=0 | \label{eq:source-17}
+  D101:808 cjk=0 | proves \eqref{eq:source-17}.  Thus this inequality has no exceptional
+  D101:825 cjk=0 | \label{lem:transitions-missing-edge}
+  D101:830 cjk=0 | \label{eq:source-18}
+  D101:845 cjk=0 | The negation of \eqref{eq:source-14}, and nonnegativity of $D_{ij}$,
+  D101:860 cjk=0 | \eqref{eq:source-18}, with a bound uniform over the two shifts.
+  D101:892 cjk=0 | \label{eq:source-22}
+  D101:908 cjk=0 | Theorem~\ref{thm:cyclic-local-finiteness}.
+  D101:914 cjk=0 | positive coordinates of \eqref{eq:source-22} form a clique in the
+  D101:965 cjk=0 | \label{eq:interfaces-annulus-area}
+  D101:973 cjk=0 | \label{lem:interfaces-cover}
+  D101:1010 cjk=0 | \label{lem:interfaces-core-loop}
+  D101:1029 cjk=0 | Lemma~\ref{lem:transitions-disk-averages} gives $a\in H_i$.
+  D101:1036 cjk=0 | all closed hole disks by \eqref{eq:interfaces-annulus-area}.
+  D101:1039 cjk=0 | The pointwise inequality \eqref{eq:source-17} therefore gives
+  D101:1049 cjk=0 | \label{eq:interfaces-mesh-measure}
+  D101:1055 cjk=0 | contradicting Lemma~\ref{lem:interfaces-cover}.  This argument also
+  D101:1070 cjk=0 | \label{lem:interfaces-graph-word}
+
+SAMPLE B prose-leak on lines that also carry a declaration word (20):
+  D105:204 | 这一片标签很特别：\label{sec:repair} 与 \label{sec:metric} 同挂在 repair.tex:2-3 一节开头（"The finite negative-type semimetric"），而正文文件 metric.tex 是这一节的续篇。修补是
+  D105:204 | 这一片标签很特别：\label{sec:repair} 与 \label{sec:metric} 同挂在 repair.tex:2-3 一节开头（"The finite negative-type semimetric"），而正文文件 metric.tex 是这一节的续篇。修补是
+  D129:65 | (a) tex 逐字，\eqref{eq:ext-domination}（`extremal.tex:86-89`）：
+  D129:422 | 结构上，正文用 `## 数字 标题` 记法，节号从 $0$ 连续到本节的 $19$ 共二十节，无缺号、无重复号；每个被逐条拆解的引理走 (a) tex 逐字引用加文件行号、(b) 中间步骤补齐、(c) 假设/常数/指数的机械理由、(d) 两到三条标注为推测的失败路线这套四段式，覆
+  D131:328 | `01:99--102` 有一段我认为最容易被读者误读的话，逐字：The two conclusions of Lemma~\ref{canon:fibers} have distinct roles. Rational chains will supply continuati
+  D132:126 | Lemma~\ref{geo:chord-separation}（geometry.tex:156--166）。(a) 原文：`Let $uv$ be an edge of a noncrossing circular graph.  Any graph path from th
+  D132:128 | Lemma~\ref{geo:gap}（geometry.tex:168--182）。(a) 原文：`Every graph path avoiding $S$ lies in one of the open circular gaps between consecutive v
+  D132:130 | Lemma~\ref{geo:skipping}（geometry.tex:184--200）。(a) 原文：`Either the walk visits $i$, or one of its edges has endpoints strictly on opposite s
+  D132:132 | Lemma~\ref{geo:outerplanar}（geometry.tex:202--217）。(a) 原文：`Every active graph $G_I$ is outerplanar and has no $K_{2,3}$ minor.`（geometry.tex
+  D132:134 | Lemma~\ref{geo:sublevel}（geometry.tex:219--235）是 packing 的连通性来源。(a) 原文：`Put $q_i=d_I(o,(i,H))$, taking $q_i=+\infty$ outside that component.
+  D132:148 | (b) 补步。第一，$t<30a$ 分支里"$31a$"的来历：entrance midpoint 满足 $b_i\le t+a<31a$，而 $d_J(o,\text{midpoint})=b_i$，故每个 entrance midpoint 到 $o$ 距离 $<31a$，两
+  D132:164 | Lemma~\ref{geo:padding}（geometry.tex:364--418）。(a) 原文：条件式 `\dist(b_i,T)>\rho+2a,`（geometry.tex:368，式 geo:padding-condition），结论 `then every p
+  D132:166 | Lemma~\ref{geo:portal-levels}（geometry.tex:425--452）。(a) 原文：`Fix a step $\delta>1000a$.`（geometry.tex:426）；`is within $\delta+220a$ of one o
+  D132:170 | Lemma~\ref{sets:vertical}（sets.tex:56--91）承担"上界与列数无关"这件事。(a) 原文：
+  D132:176 | Lemma~\ref{sets:component-refinement}（sets.tex:155--192）是我原本完全没预料到的装置。(a) 原文：
+  D132:226 | (b) 补步。性质 (iii) 的完整链条有四段，我按顺序补：先由 Lemma~\ref{int:common-formula} 得球内只有一个 node 公式 $F_\nu$ 生效且同名；再由 Lemma~\ref{int:depth} 得该公式在球内可能选中的原子名 $\le
+  D132:226 | (b) 补步。性质 (iii) 的完整链条有四段，我按顺序补：先由 Lemma~\ref{int:common-formula} 得球内只有一个 node 公式 $F_\nu$ 生效且同名；再由 Lemma~\ref{int:depth} 得该公式在球内可能选中的原子名 $\le
+  D132:226 | (b) 补步。性质 (iii) 的完整链条有四段，我按顺序补：先由 Lemma~\ref{int:common-formula} 得球内只有一个 node 公式 $F_\nu$ 生效且同名；再由 Lemma~\ref{int:depth} 得该公式在球内可能选中的原子名 $\le
+  D132:247 | Lemma~\ref{int:common-formula}（interpolation.tex:244--274）与 Lemma~\ref{int:depth}（interpolation.tex:276--322）是"名单有限"的两条腿。(a) 原文：`For $x\in Y
+  D132:247 | Lemma~\ref{int:common-formula}（interpolation.tex:244--274）与 Lemma~\ref{int:depth}（interpolation.tex:276--322）是"名单有限"的两条腿。(a) 原文：`For $x\in Y
+
+C/material-voice-line sample:
+  D100:539 ind=False prevfence? | which is Equation~\eqref{eq:principal-correction-residue} with
+  D100:553 ind=False prevfence? | \begin{equation}\label{old-eq:5.14}
+  D100:804 ind=False prevfence? | For the low estimate, apply Equation~\eqref{eq:part-II-normalized-low}
+  D112:281 ind=False prevfence? | "The first term on the right of \eqref{eq:tail} is odd in $s$ and cancels at every symmetric cutoff;
+  D112:981 ind=False prevfence? | \eqref{path:equivariance} only concerns sign matrices, which commute with the fixed matrix $K$."
+  D124:734 ind=False prevfence? | \eqref{eq:pair-flag} linear in the exceptional probabilities."
+  D156:348 ind=False prevfence? | \eqref{stop:uniform-energy}：
+  D185:506 ind=False prevfence? | "The splitting in \eqref{eq:split-boundary} is stronger than ordinary third-homology
+  D259:820 ind=False prevfence? | Lemma~\ref{spread:hilbert-loci}"、"Since $\Pi$ was chosen outside
+  D259:821 ind=False prevfence? | $\mathcal E_{\mathrm{Hilb}}$"、"Lemma~\ref{spread:chern-constancy} therefore gives
+  D28:817 ind=False prevfence? | "Under independent uniform leaves, Equation~\eqref{energy:inductive-mean} applies by
+  D28:818 ind=False prevfence? | Equations~\eqref{energy:variance} and~\eqref{energy:normalization}."
+  D28:818 ind=False prevfence? | Equations~\eqref{energy:variance} and~\eqref{energy:normalization}."
+  D28:957 ind=False prevfence? | inequalities in Equation~\eqref{energy:fractional-angle} hold."
+  D28:1065 ind=False prevfence? | Proposition~\ref{prop:configuration}."

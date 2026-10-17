@@ -1,0 +1,34 @@
+{
+  "paper": "Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026",
+  "ok": true,
+  "typ_lines": 3207,
+  "included_pdf_pages": 0,
+  "formulas": 3547,
+  "math_failed": 0,
+  "labels": 331,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:minipage": 2,
+    "unhandled_div_class:picture": 2
+  },
+  "samples": {
+    "formulas": "3547"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "listings"
+  ],
+  "macros_skipped": [
+    "\\providecommand\\mathscr"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026.tex"
+}

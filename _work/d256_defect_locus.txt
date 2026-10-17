@@ -1,0 +1,4 @@
+D256 total_lines=286
+  head(1-189) emDash=0 ershi=0 bc=0 contrast=0 cc=0 size=71528
+  tail(190-) emDash=36 ershi=1 bc=0 contrast=1 cc=0 size=25055
+  head markers=0

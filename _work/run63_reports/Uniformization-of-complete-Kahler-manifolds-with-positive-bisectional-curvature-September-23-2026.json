@@ -1,0 +1,43 @@
+{
+  "paper": "Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026",
+  "ok": true,
+  "typ_lines": 2010,
+  "included_pdf_pages": 0,
+  "formulas": 1931,
+  "math_failed": 0,
+  "labels": 263,
+  "equations": 16,
+  "theorems": 2,
+  "figures": 0,
+  "tables": 1,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "1931"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark",
+    "accsupp"
+  ],
+  "macros_skipped": [
+    "\\renewcommand\\@maketitle",
+    "\\newcommandnewcommand",
+    "\\let\\OriginalMapsto",
+    "\\let\\OriginalLongmapsto",
+    "\\renewcommand\\mapsto",
+    "\\renewcommandrenewcommand",
+    "\\let\\longrightarrow",
+    "\\let\\OriginalLongrightarrow",
+    "\\let\\OriginalCapitalLongrightarrow",
+    "\\renewcommand\\longrightarrow",
+    "\\renewcommand\\Longrightarrow"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026.tex"
+}

@@ -1,0 +1,54 @@
+{"nid": "D177", "path": "E:/math/研究笔记\\D177-把时钟停在50的零熵映射.md", "anchor_line": 416, "k": 1, "old": "动力学性质。", "new": "动力学性质。\n"}
+{"nid": "D177", "report": "deficit=1 planned=1"}
+{"nid": "D195", "path": "E:/math/研究笔记\\D195-一个PD4群没有闭非正曲流形模型.md", "anchor_line": 82, "k": 1, "old": "正的转折点。", "new": "正的转折点。\n"}
+{"nid": "D195", "report": "deficit=1 planned=1"}
+{"nid": "D198", "path": "E:/math/研究笔记\\D198-单调图性质尖锐阈值猜想的显式宽度界.md", "anchor_line": 334, "k": 1, "old": "失去锚点 |", "new": "失去锚点 |\n"}
+{"nid": "D198", "report": "deficit=1 planned=1"}
+{"nid": "D202", "path": "E:/math/研究笔记\\D202-无扭群环失去直有限性的构造复盘.md", "anchor_line": 79, "k": 1, "old": "落盘探针。）", "new": "落盘探针。）\n"}
+{"nid": "D202", "report": "deficit=1 planned=1"}
+{"nid": "D205", "path": "E:/math/研究笔记\\D205-闭Ricci流有界标量曲率与有限时间全曲率爆炸.md", "anchor_line": 83, "k": 1, "old": "ity 换。", "new": "ity 换。\n"}
+{"nid": "D205", "report": "deficit=1 planned=1"}
+{"nid": "D214", "path": "E:/math/研究笔记\\D214-边界行列式复杂度三次下界之路.md", "anchor_line": 78, "k": 1, "old": "下来是对的。", "new": "下来是对的。\n"}
+{"nid": "D214", "path": "E:/math/研究笔记\\D214-边界行列式复杂度三次下界之路.md", "anchor_line": 131, "k": 1, "old": "2/64$（transfer.tex:240-249）。", "new": "2/64$（transfer.tex:240-249）。\n"}
+{"nid": "D214", "path": "E:/math/研究笔记\\D214-边界行列式复杂度三次下界之路.md", "anchor_line": 246, "k": 1, "old": "似列收敛 |", "new": "似列收敛 |\n"}
+{"nid": "D214", "path": "E:/math/研究笔记\\D214-边界行列式复杂度三次下界之路.md", "anchor_line": 283, "k": 1, "old": "的三次钉死。", "new": "的三次钉死。\n"}
+{"nid": "D214", "path": "E:/math/研究笔记\\D214-边界行列式复杂度三次下界之路.md", "anchor_line": 297, "k": 1, "old": "见交付报告。", "new": "见交付报告。\n"}
+{"nid": "D214", "report": "deficit=5 planned=5"}
+{"nid": "D224", "path": "E:/math/研究笔记\\D224-一个无固定价格群的反例日记.md", "anchor_line": 19, "k": 1, "old": "想当成事实。", "new": "想当成事实。\n"}
+{"nid": "D224", "report": "deficit=1 planned=1"}
+{"nid": "D227", "path": "E:/math/研究笔记\\D227-Hadwiger数线性表染色界-研究反推.md", "anchor_line": 67, "k": 1, "old": "成立的基础。", "new": "成立的基础。\n"}
+{"nid": "D227", "report": "deficit=1 planned=1"}
+{"nid": "D234", "path": "E:/math/研究笔记\\D234-Heilbronn三角形下界的幂改进.md", "anchor_line": 255, "k": 1, "old": "值不成立 |", "new": "值不成立 |\n"}
+{"nid": "D234", "report": "deficit=1 planned=1"}
+{"nid": "D242", "path": "E:/math/研究笔记\\D242-熵界协方差对数与单纯形不等式.md", "anchor_line": 325, "k": 1, "old": "文到此收束。", "new": "文到此收束。\n"}
+{"nid": "D242", "report": "deficit=1 planned=1"}
+{"nid": "D256", "path": "E:/math/研究笔记\\D256-正特征三维fold数值维一丰盈性的反推笔记.md", "anchor_line": 188, "k": 1, "old": "式无来源 |", "new": "式无来源 |\n"}
+{"nid": "D256", "report": "deficit=1 planned=1"}
+{"nid": "D264", "path": "E:/math/研究笔记\\D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md", "anchor_line": 204, "k": 2, "old": "性与有理像。", "new": "性与有理像。\n\n"}
+{"nid": "D264", "report": "deficit=2 planned=2"}
+{"nid": "D266", "path": "E:/math/研究笔记\\D266-几乎线性编辑距离近似方案的反推.md", "anchor_line": 79, "k": 1, "old": "$ 有富余。", "new": "$ 有富余。\n"}
+{"nid": "D266", "report": "deficit=1 planned=1"}
+{"nid": "D274", "path": "E:/math/研究笔记\\D274-非负曲率四维流形的L2-Einstein间隙.md", "anchor_line": 332, "k": 2, "old": "针的注释行。", "new": "针的注释行。\n\n"}
+{"nid": "D274", "report": "deficit=2 planned=2"}
+{"nid": "D295", "path": "E:/math/研究笔记\\D295-紧对数光滑Kähler纤维化的B半振幅.md", "anchor_line": 53, "k": 1, "old": "于常规验证。", "new": "于常规验证。\n"}
+{"nid": "D295", "report": "deficit=1 planned=1"}
+{"nid": "D298", "path": "E:/math/研究笔记\\D298-Gersten猜想在无Baumslag-Solitar子群的单关系群上的证明路径.md", "anchor_line": 65, "k": 1, "old": "的猜测一致。", "new": "的猜测一致。\n"}
+{"nid": "D298", "report": "deficit=1 planned=1"}
+{"nid": "D314", "path": "E:/math/研究笔记\\D314-三角形弦的平均长度与真空盖选中的振幅.md", "anchor_line": 149, "k": 1, "old": "后面的台账。", "new": "后面的台账。\n"}
+{"nid": "D314", "report": "deficit=1 planned=1"}
+{"nid": "D330", "path": "E:/math/研究笔记\\D330-有向反馈点集常数因子难近度的重构笔记.md", "anchor_line": 59, "k": 1, "old": "程没有硬币。", "new": "程没有硬币。\n"}
+{"nid": "D330", "report": "deficit=1 planned=1"}
+{"nid": "D339", "path": "E:/math/研究笔记\\D339-平面XY模型临界中心磁化的对数修正与振幅确定.md", "anchor_line": 54, "k": 1, "old": "\"里剖出来。", "new": "\"里剖出来。\n"}
+{"nid": "D339", "report": "deficit=1 planned=1"}
+{"nid": "D382", "path": "E:/math/研究笔记\\D382-六阶复Hadamard矩阵的精确Fourier证书.md", "anchor_line": 38, "k": 1, "old": "ts）上面。", "new": "ts）上面。\n"}
+{"nid": "D382", "report": "deficit=1 planned=1"}
+{"nid": "D389", "path": "E:/math/研究笔记\\D389-正位移匹配矩阵的指数PSD秩.md", "anchor_line": 47, "k": 1, "old": "一节一节记。", "new": "一节一节记。\n"}
+{"nid": "D389", "report": "deficit=1 planned=1"}
+{"nid": "D431", "path": "E:/math/研究笔记\\D431-光滑各向同性弹性逆问题的全局唯一性.md", "anchor_line": 224, "k": 1, "old": "项主动复核。", "new": "项主动复核。\n"}
+{"nid": "D431", "report": "deficit=1 planned=1"}
+{"nid": "D436", "path": "E:/math/研究笔记\\D436-稳定Morse数以下的哈密顿不动点.md", "anchor_line": 361, "k": 1, "old": "工实测为准。", "new": "工实测为准。\n"}
+{"nid": "D436", "report": "deficit=1 planned=1"}
+{"nid": "D437", "path": "E:/math/研究笔记\\D437-二十二维中低于稳定莫尔斯数的哈密顿不动点.md", "anchor_line": 360, "k": 1, "old": "是文末一节。", "new": "是文末一节。\n"}
+{"nid": "D437", "report": "deficit=1 planned=1"}
+{"nid": "D457", "path": "E:/math/研究笔记\\D457-从伴随除子的约化支撑提升截面.md", "anchor_line": 58, "k": 1, "old": "+k>0$。", "new": "+k>0$。\n"}
+{"nid": "D457", "report": "deficit=1 planned=1"}

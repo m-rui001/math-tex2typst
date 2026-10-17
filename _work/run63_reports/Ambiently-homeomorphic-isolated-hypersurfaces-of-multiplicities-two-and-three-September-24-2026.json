@@ -1,0 +1,31 @@
+{
+  "paper": "Ambiently-homeomorphic-isolated-hypersurfaces-of-multiplicities-two-and-three-September-24-2026",
+  "ok": true,
+  "typ_lines": 777,
+  "included_pdf_pages": 0,
+  "formulas": 654,
+  "math_failed": 0,
+  "labels": 83,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 2,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "654"
+  },
+  "pandoc_json_warn": "[WARNING] Could not load include file ../verification/support/supplied_finite_rank.py at E:\\math\\_work\\flat\\_work_tex\\Ambiently-homeomorphic-isolated-hypersurfaces-of-multiplicities-two-and-three-Sept",
+  "packages_unsupported": [
+    "listings",
+    "bookmark"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Ambiently-homeomorphic-isolated-hypersurfaces-of-multiplicities-two-and-three-September-24-2026.tex"
+}

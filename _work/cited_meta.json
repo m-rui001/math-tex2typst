@@ -1,0 +1,224 @@
+[
+ {
+  "arxiv": "1210.2092",
+  "title": "Rationally connected manifolds and semipositivity of the Ricci curvature",
+  "authors": [
+   "Frédéric Campana",
+   "Jean-Pierre Demailly",
+   "Thomas Peternell"
+  ],
+  "published": "2012-10-07",
+  "abstract": "This work establishes a structure theorem for compact Kähler manifolds with semipositive anticanonical bundle. Up to finite étale cover, it is proved that such manifolds split holomorphically and isometrically as a product of Ricci flat varieties and of rationally connected manifolds. The proof is based on a characterization of rationally connected manifolds through the non existence of certain twisted contravariant tensor products of the tangent bundle, along with a generalized holonomy principle for pseudoeffective line bundles. A crucial ingredient for this is the characterization of uniruledness by the property that the anticanonical bundle is not pseudoeffective.",
+  "req": "1210.2092"
+ },
+ {
+  "arxiv": "1412.7744",
+  "title": "A brief introduction to Enriques surfaces",
+  "authors": [
+   "Igor V. Dolgachev"
+  ],
+  "published": "2014-12-24",
+  "abstract": "This is a brief introduction to the theory of Enriques surfaces over arbitrary algebraically closed fields. Some new results about automorphism groups of Enriques surfaces are also included.",
+  "req": "1412.7744"
+ },
+ {
+  "arxiv": "2202.13814",
+  "title": "The Nonvanishing problem for varieties with nef anticanonical bundle",
+  "authors": [
+   "Vladimir Lazić",
+   "Shin-ichi Matsumura",
+   "Thomas Peternell",
+   "Nikolaos Tsakanikas",
+   "Zhixin Xie"
+  ],
+  "published": "2022-02-28",
+  "abstract": "We prove that if $(X,Δ)$ is a threefold pair with mild singularities such that ${-}(K_X+Δ)$ is nef, then the numerical class of ${-}(K_X+Δ)$ is effective.",
+  "req": "2202.13814"
+ },
+ {
+  "arxiv": "2305.19109",
+  "title": "Two Non-Vanishing results concerning the Anti-Canonical Bundle",
+  "authors": [
+   "Niklas Müller"
+  ],
+  "published": "2023-05-30",
+  "abstract": "Let $(X, Δ)$ be a klt threefold pair with nef anti-log canonical bundle $-(K_X+Δ)$. We show that $κ(X, -(K_X+Δ))\\geq 0$. To do so, we prove a more general equivariant non-vanishing result for anti-log canonical bundles, which is valid in any dimension.",
+  "req": "2305.19109"
+ },
+ {
+  "arxiv": "2609.26716",
+  "title": "Compact Kähler surfaces with semipositive anticanonical bundle",
+  "authors": [
+   "Yifan Chen",
+   "Simion Filip",
+   "Song Sun",
+   "Valentino Tosatti",
+   "Junsheng Zhang"
+  ],
+  "published": "2026-09-22",
+  "abstract": "We classify compact Kähler surfaces with semipositive anticanonical bundle. In particular, we resolve a question of Demailly--Peternell--Schneider: any blowup of $\\mathbb{P}^2$ at 9 points on a smooth cubic has semipositive anticanonical bundle.",
+  "req": "2609.26716"
+ },
+ {
+  "arxiv": "math/0006205",
+  "title": "Pseudo-effective line bundles on compact Kähler manifolds",
+  "authors": [
+   "Jean-Pierre Demailly",
+   "Thomas Peternell",
+   "Michael Schneider"
+  ],
+  "published": "2000-06-27",
+  "abstract": "The goal of this work is to pursue the study of pseudo-effective line bundles and vector bundles. Our first result is a generalization of the Hard Lefschetz theorem for cohomology with values in a pseudo-effective line bundle. The Lefschetz map is shown to be surjective when (and, in general, only when) the pseudo-effective line bundle is twisted by its multiplier ideal sheaf. This result has several geometric applications, e.g. to the study of compact Kähler manifolds with pseudo-effective canonical or anti-canonical line bundles. Another concern is to understand pseudo-effectivity in more algebraic terms. In this direction, we introduce the concept of an \"almost\" nef line bundle, and mean by this that the degree of the bundle is nonnegative on sufficiently generic curves. It can be shown that pseudo-effective line bundles are almost nef, and our hope is that the converse also holds true. This can be checked in some cases, e.g. for the canonical bundle of a projective 3-fold. From this, we derive some geometric properties of the Albanese map of compact Kähler 3-folds.",
+  "req": "math/0006205"
+ },
+ {
+  "arxiv": "1703.03175",
+  "title": "On generic nefness of tangent sheaves",
+  "authors": [
+   "Wenhao Ou"
+  ],
+  "published": "2017-03-09",
+  "abstract": "We show that the tangent bundle of a projective manifold with nef anticanonical class is generically nef. That is, its restriction to a curve cut out by general sufficiently ample divisors is a nef vector bundle. This confirms a conjecture of Peternell. As a consequence, the second Chern class of such a manifold has non-negative intersections with ample divisors. We also investigate under which conditions these positivities are strict, and answer a question of Yau.",
+  "req": "1703.03175"
+ },
+ {
+  "arxiv": "1011.1602",
+  "title": "Computation of the highest coefficients of weighted Ehrhart quasi-polynomials of rational polyhedra",
+  "authors": [
+   "Velleda Baldoni",
+   "Nicole Berline",
+   "Jesús A. De Loera",
+   "Matthias Köppe",
+   "Michèle Vergne"
+  ],
+  "published": "2010-11-07",
+  "abstract": "This article concerns the computational problem of counting the lattice points inside convex polytopes, when each point must be counted with a weight associated to it. We describe an efficient algorithm for computing the highest degree coefficients of the weighted Ehrhart quasi-polynomial for a rational simple polytope in varying dimension, when the weights of the lattice points are given by a polynomial function h. Our technique is based on a refinement of an algorithm of A. Barvinok [Computing the Ehrhart quasi-polynomial of a rational simplex, Math. Comp. 75 (2006), pp. 1449--1466] in the unweighted case (i.e., h = 1). In contrast to Barvinok's method, our method is local, obtains an approximation on the level of generating functions, handles the general weighted case, and provides the coefficients in closed form as step polynomials of the dilation. To demonstrate the practicality of our approach we report on computational experiments which show even our simple implementation can compete with state of the art software.",
+  "req": "1011.1602"
+ },
+ {
+  "arxiv": "1607.04684",
+  "title": "Kollár--Nadel type vanishing theorem",
+  "authors": [
+   "Osamu Fujino"
+  ],
+  "published": "2016-07-15",
+  "abstract": "We prove an analytic generalization of Kollár's vanishing theorem, which contains the Nadel vanishing theorem as a special case.",
+  "req": "1607.04684"
+ },
+ {
+  "arxiv": "math/0405285",
+  "title": "The pseudo-effective cone of a compact Kähler manifold and varieties of negative Kodaira dimension",
+  "authors": [
+   "Sébastien Boucksom",
+   "Jean-Pierre Demailly",
+   "Mihai Paun",
+   "Thomas Peternell"
+  ],
+  "published": "2004-05-14",
+  "abstract": "We prove that a holomorphic line bundle on a projective manifold is pseudo-effective if and only if its degree on any member of a covering family of curves is non-negative. This is a consequence of a duality statement between the cone of pseudo-effective divisors and the cone of ``movable curves'', which is obtained from a general theory of movable intersections and approximate Zariski decomposition for closed positive (1,1)-currents. As a corollary, a projective manifold has a pseudo-effective canonical bundle if and only if it is is not uniruled. We also prove that a 4-fold with a canonical bundle which is pseudo-effective and of numerical class zero in restriction to curves of a covering family, has non negative Kodaira dimension.",
+  "req": "math/0405285"
+ },
+ {
+  "arxiv": "math/0703344",
+  "title": "Bergman kernels and the pseudoeffectivity of relative canonical bundles",
+  "authors": [
+   "Bo Berndtsson",
+   "Mihai Paun"
+  ],
+  "published": "2007-03-12",
+  "abstract": "The main result of the present article is a (practically optimal) criterium for the pseudoeffectivity of the twisted relative canonical bundles of surjective projective maps. Our theorem has several applications in algebraic geometry; to start with, we obtain the natural analytic generalization of some semipositivity results due to E. Viehweg and F. Campana. As a byproduct, we give a simple and direct proof of a recent result due to C. Hacon--J. McKernan, S. Takayama and H. Tsuji concerning the extension of twisted pluricanonical forms. More applications will be offered in the sequel of this article.",
+  "req": "math/0703344"
+ },
+ {
+  "arxiv": "1408.4308",
+  "title": "Movable curves and semistable sheaves",
+  "authors": [
+   "Daniel Greb",
+   "Stefan Kebekus",
+   "Thomas Peternell"
+  ],
+  "published": "2014-08-19",
+  "abstract": "This paper extends a number of known results on slope-semistable sheaves from the classical case to the setting where polarisations are given by movable curve classes. As applications, we obtain new flatness results for reflexive sheaves on singular varieties, as well as a characterisation of finite quotients of Abelian varieties via a Chern class condition.",
+  "req": "1408.4308"
+ },
+ {
+  "arxiv": "1805.11558",
+  "title": "Białynicki-Birula decomposition for reductive groups",
+  "authors": [
+   "Joachim Jelisiejew",
+   "Łukasz Sienkiewicz"
+  ],
+  "published": "2018-05-29",
+  "abstract": "We generalize the Białynicki-Birula decomposition from actions of $G_m$ on smooth varieties to actions of linearly reductive group ${\\bf G}$ on finite type schemes and algebraic spaces. We also provide a relative version and briefly discuss the case of algebraic stacks. We define the Białynicki-Birula decomposition functorially: for a fixed ${\\bf G}$-scheme $X$ and a monoid $\\overline{\\bf G}$ which partially compactifies ${\\bf G}$, the BB decomposition parameterizes ${\\bf G}$-schemes over $X$ for which the ${\\bf G}$-action extends to the $\\overline{\\bf G}$-action. The freedom of choice of $\\overline{\\bf G}$ makes the theory richer than the $G_m$-case.",
+  "req": "1805.11558"
+ },
+ {
+  "arxiv": "2602.13821",
+  "title": "Vanishing theorems for pseudo-effective line bundles",
+  "authors": [
+   "Xiankui Meng",
+   "Chenghao Qing",
+   "Xiangyu Zhou"
+  ],
+  "published": "2026-02-14",
+  "abstract": "In the present paper, we establish a general Kawamata-Viehweg-Kollár-Nadel type vanishing theorem for higher direct images in terms of numerical dimension for closed positive currents on compact Kähler manifolds, unifying a number of important vanishing theorems.",
+  "req": "2602.13821"
+ },
+ {
+  "arxiv": "1005.0614",
+  "title": "New outlook on the Minimal Model Program, II",
+  "authors": [
+   "Alessio Corti",
+   "Vladimir Lazić"
+  ],
+  "published": "2010-05-04",
+  "abstract": "We prove that the finite generation of adjoint rings proved in [Cascini and Lazić] implies all the foundational results of the Minimal Model Program: the Rationality, Cone and Contraction theorems, the existence of flips, and termination of flips with scaling in the presence of a big boundary.",
+  "req": "1005.0614"
+ },
+ {
+  "arxiv": "1009.3188",
+  "title": "New outlook on the Minimal Model Program, I",
+  "authors": [
+   "Paolo Cascini",
+   "Vladimir Lazić"
+  ],
+  "published": "2010-09-16",
+  "abstract": "We give a new and self-contained proof of the finite generation of adjoint rings with big boundaries. As a consequence, we show that the canonical ring of a smooth projective variety is finitely generated.",
+  "req": "1009.3188"
+ },
+ {
+  "arxiv": "1706.08814",
+  "title": "A decomposition theorem for projective manifolds with nef anticanonical bundle",
+  "authors": [
+   "Junyan Cao",
+   "Andreas Höring"
+  ],
+  "published": "2017-06-27",
+  "abstract": "Let X be a simply connected projective manifold with nef anticanonical bundle. We prove that X is a product of a rationally connected manifold and a manifold with trivial canonical bundle. As an application we describe the MRC fibration of any projective manifold with nef anticanonical bundle.",
+  "req": "1706.08814"
+ },
+ {
+  "arxiv": "2105.14308",
+  "title": "Structure theorem for projective klt pairs with nef anti-canonical divisor",
+  "authors": [
+   "Shin-ichi Matsumura",
+   "Juanyong Wang"
+  ],
+  "published": "2021-05-29",
+  "abstract": "In this paper, we establish a structure theorem for projective klt pairs $(X,Δ)$ with nef anti-log canonical divisor; specifically, we prove that, up to replacing $X$ with a finite quasi-étale cover, $X$ admits a locally trivial rationally connected fibration onto a projective klt variety with numerically trivial canonical divisor. This structure theorem generalizes previous works for smooth projective varieties and reduces several structure problems to the singular Beauville-Bogomolov decomposition for Calabi-Yau varieties. As an application, projective varieties of klt Calabi-Yau type, which naturally appear as an outcome of the Log Minimal Model Program, are decomposed into building block varieties: rationally connected varieties and Calabi-Yau varieties.",
+  "req": "2105.14308"
+ },
+ {
+  "arxiv": "2506.23218",
+  "title": "Beauville--Bogomolov--Yau decomposition for Kähler generalized pairs",
+  "authors": [
+   "Shin-ichi Matsumura",
+   "Juanyong Wang",
+   "Xiaojun Wu",
+   "Qimin Zhang"
+  ],
+  "published": "2025-06-29",
+  "abstract": "In this paper, we establish the Beauville--Bogomolov--Yau decomposition for generalized pairs in the Kähler setting, thereby extending this structure theorem to the natural framework of the Kähler generalized Minimal Model Program. More precisely, we prove that, after passing to a finite quasi-étale cover, a Kähler generalized klt pair $(X,Δ,\\boldsymbolβ)$ of Calabi--Yau type admits a locally constant fibration $(X,Δ)\\to Y$ over a Calabi--Yau variety $Y$ whose fiber $(F,Δ|_{F})$ is rationally connected. Equivalently, after base change to the universal cover of $Y$, the fibration becomes a product, and its global structure is determined by a monodromy action preserving the pair $(F,Δ|_{F})$. As a principal application, when the nef b-part $\\boldsymbolβ$ vanishes, we show that the monodromy can be eliminated after a further finite quasi-étale cover, yielding a product decomposition into a rationally connected pair, strict Calabi--Yau varieties, irreducible holomorphic symplectic varieties, and complex tori. The proof introduces new analytic methods involving relative projectivity, localized positivity and flatness of direct image sheaves, generalized pairs in the analytic Minimal Model Program, and foliations on singular Kähler varieties.",
+  "req": "2506.23218"
+ }
+]

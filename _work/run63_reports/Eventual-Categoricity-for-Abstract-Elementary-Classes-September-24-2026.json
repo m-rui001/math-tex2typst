@@ -1,0 +1,32 @@
+{
+  "paper": "Eventual-Categoricity-for-Abstract-Elementary-Classes-September-24-2026",
+  "ok": true,
+  "typ_lines": 2258,
+  "included_pdf_pages": 0,
+  "formulas": 1752,
+  "math_failed": 0,
+  "labels": 221,
+  "equations": 17,
+  "theorems": 5,
+  "figures": 2,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 2
+  },
+  "samples": {
+    "formulas": "1752",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n     ┌─ \\\\?\\E:\\math\\typst\\Eventual-Categoricity-for-Abstract-Elementary-Classes-September-24-2026\\main.typ:1296:78\n     │\n1296 │   $ B gt.eq C quad upright(\"all-dominated over \") C + b' \\, #h(2em) b' tack.r.double p_C . $\n     │                                                                               ^^^^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 1,
+  "source": "E:\\math\\_work\\flat\\Eventual-Categoricity-for-Abstract-Elementary-Classes-September-24-2026.tex"
+}

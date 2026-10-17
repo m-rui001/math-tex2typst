@@ -1,0 +1,32 @@
+{
+  "paper": "Strong-diffeomorphic-approximation-in-three-dimensions-for-p-gt-2-September-24-2026",
+  "ok": true,
+  "typ_lines": 2338,
+  "included_pdf_pages": 0,
+  "formulas": 1946,
+  "math_failed": 0,
+  "labels": 293,
+  "equations": 27,
+  "theorems": 8,
+  "figures": 5,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 4,
+    "cetz_refused": 1
+  },
+  "samples": {
+    "formulas": "1946",
+    "cetz_converted": "1",
+    "cetz_refused": "\\begin{tikzpicture}[font=\\small,>=Latex] \\begin{scope}[x=1.3cm,y=1.3cm] \\node[font=\\bfseries] at (1.15,2.97) {Output fa"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Strong-diffeomorphic-approximation-in-three-dimensions-for-p-gt-2-September-24-2026.tex"
+}

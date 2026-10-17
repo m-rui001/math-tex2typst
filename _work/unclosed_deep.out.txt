@@ -1,0 +1,96 @@
+==================== D222 D222-Calabi流在复射影空间上的有限时间奇点构造.md
+per-line counts of "$$" occurrences and single-$ parity:
+  L34 contains $$ occurrences=2 :: "$$H_t + b^2 \\mathcal{A} H = 0.$$"
+  L66 contains $$ occurrences=2 :: "$$H_t + (1 + xH)^2 \\widehat{\\mathcal{A}} H = 0, \\qquad \\widehat{\\mathcal{A}} = (x\\partial_"
+  L72 contains $$ occurrences=2 :: "$$Q(y\\partial_y)(G-1) = \\frac{y^2}{2}\\left(\\frac{1}{G} - \\frac{1}{c}\\right), \\qquad Q(D) ="
+  L95 contains $$ occurrences=2 :: "$$p''' + \\frac{30}{s} p'' + \\frac{B}{s^2} p' + \\frac{C}{s^3}(p - d) + \\frac{p}{1+p} = 0,$$"
+  L141 contains $$ occurrences=2 :: "$$\\widehat{\\mathcal{P}} V = -[\\widehat{\\mathcal{P}} F + N(F,V)] =: f,$$"
+  L149 contains $$ occurrences=2 :: "$$\\mathcal{T}_1 = e^{-\\mathcal{L}} + K,$$"
+  L159 contains $$ occurrences=2 :: "$$|V(t,0)| \\le C \\sigma^{p_0} = C \\rho^{(-2+2\\delta)/2} = C \\rho^{-1+\\delta}.$$"
+  L191 contains $$ occurrences=2 :: "$$S(\\omega(t))(p) = 110(1 - H(t,0)) = 110\\left(1 - F(t,0) - V(t,0)\\right).$$"
+  L195 contains $$ occurrences=2 :: "$$S(\\omega(t))(p) = 110 - 110 \\rho^{-1} G'(0) + O(\\rho^{-1+\\delta}).$$"
+  L199 contains $$ occurrences=2 :: "$$S(\\omega(t))(p) = 110 + a \\rho^{-1} + O(\\rho^{-1+\\delta}) = 110 + a(T_*-t)^{-1/2} + O((T"
+  L203 contains $$ occurrences=2 :: "$$S(\\omega(t))(p) \\sim a(T_*-t)^{-1/2}.$$"
+  L229 contains $$ occurrences=2 :: "$$F(t,x) = \\rho^{-1} h(x/\\rho) = \\rho^{-1} \\left(\\frac{(c-1)\\rho}{x} + O(\\rho^3/x^3)\\right"
+  L235 contains $$ occurrences=2 :: "$$b = 1 + v_* F + v_* V \\ge 1 - |v_* F| - |v_* V| \\ge 1 - \\frac{1}{4} - \\frac{1}{4} = \\fra"
+  L311 contains $$ occurrences=2 :: "$$K(H) = w^{-1}(w v_*^2 H)'' \\approx x^{-(n-1)}(x^{n-1} \\cdot x^2 \\cdot H)'' = x^{-(n-1)}("
+  L315 contains $$ occurrences=2 :: "$$K(H) \\approx (n+1)(n+2)xH + 2(n+1)x^2 H' + x^3 H'' = x(x\\partial_x + n+1)(x\\partial_x + "
+  L347 contains $$ occurrences=2 :: "$$\\mathcal{T}_1 = e^{-\\mathcal{L}} + K,$$"
+span pairing sequence (last 12 before break / around report):
+  INLINE  open@L189c56 -> close@L189c66
+  INLINE  open@L189c71 -> close@L189c81
+  INLINE  open@L189c87 -> close@L191c1
+  DISPLAY open@L191 -> close@L195  <== MULTILINE
+  DISPLAY open@L195 -> close@L199  <== MULTILINE
+  DISPLAY open@L199 -> close@L203  <== MULTILINE
+  DISPLAY open@L203 -> close@L229  <== MULTILINE
+  DISPLAY open@L229 -> close@L235  <== MULTILINE
+  DISPLAY open@L235 -> close@L311  <== MULTILINE
+  DISPLAY open@L311 -> close@L315  <== MULTILINE
+  DISPLAY open@L315 -> close@L347  <== MULTILINE
+  *** D-ORPHAN open@L347c39
+FIRST-UNCLOSED kind=DUNCLOSED line=347 col=39
+==================== D245 D245-高温SK谱隙论文的思维链反推.md
+per-line counts of "$$" occurrences and single-$ parity:
+span pairing sequence (last 12 before break / around report):
+  INLINE  open@L352c2 -> close@L352c18
+  INLINE  open@L352c64 -> close@L352c68
+  INLINE  open@L352c80 -> close@L352c91
+  INLINE  open@L353c2 -> close@L353c35
+  INLINE  open@L353c91 -> close@L353c93
+  INLINE  open@L353c98 -> close@L353c100
+  INLINE  open@L353c112 -> close@L353c124
+  INLINE  open@L356c213 -> close@L356c267
+  INLINE  open@L356c309 -> close@L356c319
+  LITERAL$ at L356c348
+  INLINE  open@L356c356 -> close@L356c358
+  *** I-ORPHAN open@L356c403
+FIRST-UNCLOSED kind=IUNCLOSED line=356 col=403
+  every $ occurrence on L356 (col:prev|cur|next):
+    col=213 prev="\"" next="\\" ctx="名：其一为\"$\\lvert"
+    col=267 prev="*" next=" " ctx="rm G_*$ / 弱残差"
+    col=309 prev="1" next="\"" ctx="89-891$\"所在行，其"
+    col=319 prev="\"" next="\\" ctx="行，其二为\"$\\lvert"
+    col=348 prev="n" next=" " ctx="lpha n$ 对一切构型"
+    col=356 prev=" " next="x" ctx="对一切构型 $x$ 同时 "
+    col=358 prev="x" next=" " ctx="切构型 $x$ 同时 / "
+    col=403 prev="6" next="\"" ctx="92-396$\"所在行。两"
+==================== D752 D752-球面随机感知机的自由能：任意有界势下变分公式的两类增量证明.md
+per-line counts of "$$" occurrences and single-$ parity:
+  L24 contains $$ occurrences=2 :: "$$S(m)=\\frac{1}{2}\\int_0^1\\left(\\frac{1}{D_m(t)}-\\frac{1}{1-t}\\right)dt,$$"
+  L26 contains $$ occurrences=2 :: "$$V_f(m)=\\sup_v\\mathbb{E}_B\\left[f\\left(B_1+\\int_0^1 m(t)v_t\\,dt\\right)-\\frac{1}{2}\\int_0^"
+  L30 contains $$ occurrences=2 :: "$$\\lim_{N\\to\\infty}\\mathbb{E}p_N=\\inf_{m\\in\\mathcal{U}}\\{\\alpha V_{\\beta\\phi}(m)+S(m)\\}=:\\"
+  L60 contains $$ occurrences=2 :: "$$\\partial_tU+\\tfrac12\\partial_{xx}U+\\tfrac{m(t)}2(\\partial_xU)^2=0,\\qquad U(1,x)=f(x),$$"
+  L62 contains $$ occurrences=2 :: "$$\\mathbb E\\Bigl[f(X_1^v)-\\tfrac12\\int_0^1 m(t)v_t^2\\,dt\\Bigr]=U_{-1}(0)-\\tfrac12\\mathbb E"
+  L68 contains $$ occurrences=2 :: "$$\\dot V(q)=-\\tfrac12\\sum_{i=0}^{k-1}w_i\\dot q_i\\,c_i\\qquad(\\texttt{paper.tex:624-630}).$$"
+  L74 contains $$ occurrences=2 :: "$$l_n(h)=\\frac1n\\mathbb E\\log\\sum_\\gamma v_\\gamma\\int_{S_n}\\exp\\bigl(z(\\gamma)\\cdot x-n h_"
+  L78 contains $$ occurrences=2 :: "$$l_n(h)\\longrightarrow\\min_{q_0\\le\\cdots\\le q_{k-1};\\ 0\\le q_i<1}\\Bigl\\{S(q)-\\sum_i w_i h"
+  L80 contains $$ occurrences=2 :: "$$2h(u)=A_q(q(u)),\\qquad A_q(r)=\\int_0^r\\frac{dt}{D_q(t)^2}\\quad(0\\le r<1),$$"
+  L92 contains $$ occurrences=2 :: "$$B_N(x,x')=\\frac1N\\sum_{a=1}^{M_N}f'(b_a(x))f'(b_a(x')),\\qquad C_N(x)=\\frac1N\\sum_{a=1}^{"
+  L94 contains $$ occurrences=2 :: "$$B_{\\ell j}=a(R_{\\ell j})\\ (\\ell\\ne j),\\qquad B_{\\ell\\ell}=a_{\\rm d},\\qquad C_\\ell=c,\\qqu"
+  L96 contains $$ occurrences=2 :: "$$c+a_{\\rm d}=\\int r\\,a(r)\\,\\mu(dr),\\qquad a(r)=A_q(r)=\\int_0^r\\frac{dt}{D_q(t)^2}\\quad(\\m"
+  L102 contains $$ occurrences=2 :: "$$\\sum_{a\\le M_N}f(b_a(x))+z\\cdot\\mathcal Y(x)+\\frac{\\lVert z\\rVert^2}2C_N(x)+Q(x,z)+{\\rm "
+  L104 contains $$ occurrences=2 :: "$$\\Delta_{N,L}(v)\\ \\ge\\ \\log\\nu_{N,L}(I_L)-C_0-o_N(1)+\\mathbb{E}\\log\\Bigl\\langle e^{LC_N(x"
+  L107 contains $$ occurrences=2 :: "$$L\\bigl((c+a_{\\rm d})/2+l_L(h)\\bigr)+d\\,V(q),\\qquad h=A_q(q)/2,$$"
+  L109 contains $$ occurrences=2 :: "$$L\\bigl(S(q)+\\alpha V(q)-\\epsilon_L\\bigr)-\\lVert f\\rVert_\\infty,\\qquad \\epsilon_L\\to0$$"
+  L113 contains $$ occurrences=2 :: "$$\\liminf_N\\ \\inf_{v\\in\\mathcal G_N}\\Delta_{N,L}(v)\\ \\ge\\ \\log p_L-C_0+L(P-\\epsilon_L)-\\lV"
+  L115 contains $$ occurrences=2 :: "$$\\int\\Delta_{N,L}\\,d\\pi=\\mathcal F_{N+L}-\\mathcal F_N\\quad\\text{精确成立}$$"
+  L122 contains $$ occurrences=2 :: "反设沿子列期望压力比 $S(q)+\\alpha V(q)$ 高出正间隙。泊松化在 $\\alpha$ 处只改 $o(1)$：耦合计数、期望绝对差 $O(\\sqrt N)$、每图案有界"
+  L132 contains $$ occurrences=2 :: "$$\\sup_N\\bigl\\lvert\\mathbb{E}p_N[f_j]-\\mathbb{E}p_N[f]\\bigr\\rvert\\le\\alpha e^{2K_0}\\,\\math"
+  L136 contains $$ occurrences=2 :: "$$X_{m,v}=B_1+\\int_0^1 m(t)v_t\\,dt,\\qquad \\mathbb{E}_B\\lvert X_{m,v}\\rvert^2\\le2+2K_1,$$"
+  L138 contains $$ occurrences=2 :: "$$\\sup_{m\\in\\mathcal U}\\lvert V_{f_j}(m)-V_f(m)\\rvert\\le\\sup_{\\lvert x\\rvert\\le R}\\lvert f"
+  L221 contains $$ occurrences=2 :: "$$\\frac1{D_m(t)}-\\frac1{1-t}=\\frac{1-t-D_m(t)}{(1-t)D_m(t)}\\ge0,$$"
+span pairing sequence (last 12 before break / around report):
+  INLINE  open@L120c466 -> close@L120c468
+  INLINE  open@L120c473 -> close@L120c549
+  INLINE  open@L122c11 -> close@L122c28
+  INLINE  open@L122c41 -> close@L122c48
+  INLINE  open@L122c54 -> close@L122c59
+  INLINE  open@L122c72 -> close@L122c83
+  INLINE  open@L122c97 -> close@L122c125
+  DISPLAY open@L122 -> close@L132  <== MULTILINE
+  DISPLAY open@L132 -> close@L136  <== MULTILINE
+  DISPLAY open@L136 -> close@L138  <== MULTILINE
+  DISPLAY open@L138 -> close@L221  <== MULTILINE
+  *** D-ORPHAN open@L221c64
+FIRST-UNCLOSED kind=DUNCLOSED line=221 col=64

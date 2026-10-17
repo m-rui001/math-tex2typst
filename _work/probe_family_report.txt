@@ -1,0 +1,640 @@
+====================================================================================================
+D26  D26-加倍Hilbert子集无双Lipschitz有限维嵌入.md  lines=1270
+-- counts by (family, region, in-math-span) --
+   inner          fenced   in_math=False  1
+   inner          text     in_math=True   3
+   math_bare      code     in_math=False  9
+   mathbbP        fenced   in_math=False  12
+   mathbbP        text     in_math=True   34
+   mathcal_bare   fenced   in_math=False  2
+   mathcal_bare   text     in_math=True   4
+-- hits --
+   [D26] math_bare    L4     c10   region=code   in_math=False | TeX 源：`E:\math\preprints\A-doubling-Hilbert-subset-with-no-finite-dimensional-bi-Lipschitz-embeddin
+   [D26] math_bare    L5     c9    region=code   in_math=False | Lean：`E:\math\lean\OAI\Geometry\DoublingHilbert\`，28 个 `.lean` 文件；按 `wc -l` 合计 4664 行，这是素材当前的唯一口径（
+   [D26] math_bare    L5     c157  region=code   in_math=False | 这是素材当前的唯一口径（早期草稿曾误报 27 个文件 / 4819 行，素材已订正，第 12 节按 28/4664 对账）。挑战配置 `E:\math\lean\ComparatorChallenges\DoublingHilbert.json`；`E:\math\lean\formalization.yaml` 第 
+   [D26] math_bare    L5     c214  region=code   in_math=False |  对账）。挑战配置 `E:\math\lean\ComparatorChallenges\DoublingHilbert.json`；`E:\math\lean\formalization.yaml` 第 87 行条目。
+   [D26] math_bare    L6     c7    region=code   in_math=False | 素材：`E:\math\研究笔记\素材\DoublingHilbert-素材.md`（20.5 万字节，§一定理总览、§二逐引理重构 2.1 到 2.10、§三叙事时间线、§四 Lean 取证
+   [D26] mathcal_bare L65    c27   region=text   in_math=True  | 构造的一句话版本，先建立直觉再进细节：$S$ 是 $\mathcal H=\R^2\oplus\bigoplus_{j\ge1}\R^{N_j}\cong\ell_2$ 里的点集 $(p,w)$，底座 $p\in\R^2$，尾巴 $
+   [D26] mathcal_bare L120   c2    region=fenced in_math=False | (fenced block)
+   [D26] mathbbP      L126   c47   region=text   in_math=True  | 第 $j$ 层着色：横条 $\{(x,y):qr_j<y<(q+1)r_j\}$（$q\in\mathbb Z$）按 $q\equiv i-1\pmod{N_j}$ 染色得 $H_{j,i}$；竖条 $\{(x,y):qW_jr_j<x<(q+1)W_jr_j\}$ 同法
+   [D26] mathcal_bare L129   c17   region=fenced in_math=False | (fenced block)
+   [D26] mathbbP      L325   c13   region=fenced in_math=False | (fenced block)
+   [D26] mathbbP      L326   c11   region=fenced in_math=False | (fenced block)
+   [D26] mathbbP      L338   c2    region=fenced in_math=False | (fenced block)
+   [D26] mathbbP      L338   c38   region=fenced in_math=False | (fenced block)
+   [D26] mathbbP      L340   c2    region=fenced in_math=False | (fenced block)
+   [D26] mathbbP      L341   c11   region=fenced in_math=False | (fenced block)
+   [D26] mathbbP      L349   c82   region=text   in_math=True  | 态）：把 $Q$ 上归一化面积测度当概率测度，$(s_n,t_n)=(\|G_V^x(p)\|^2,\|G_V^y(p)\|^2)$。拆 $\mathbb E t_n=\mathbb E[t_n;A-s_n<\delta]+\mathbb E[t_n;A-s_n\ge\delta]$：第一项 $\le B+\varep
+   [D26] mathbbP      L349   c96   region=text   in_math=True  | 积测度当概率测度，$(s_n,t_n)=(\|G_V^x(p)\|^2,\|G_V^y(p)\|^2)$。拆 $\mathbb E t_n=\mathbb E[t_n;A-s_n<\delta]+\mathbb E[t_n;A-s_n\ge\delta]$：第一项 $\le B+\varepsilon$（逐点蕴涵），第
+   [D26] mathbbP      L349   c124  region=text   in_math=True  | (p)\|^2,\|G_V^y(p)\|^2)$。拆 $\mathbb E t_n=\mathbb E[t_n;A-s_n<\delta]+\mathbb E[t_n;A-s_n\ge\delta]$：第一项 $\le B+\varepsilon$（逐点蕴涵），第二项 $\le D^2\cdot\mathbb P\{A
+   [D26] mathbbP      L349   c202  region=text   in_math=True  | E[t_n;A-s_n\ge\delta]$：第一项 $\le B+\varepsilon$（逐点蕴涵），第二项 $\le D^2\cdot\mathbb P\{A-s_n\ge\delta\}\le D^2\mathbb E(A-s_n)/\delta$（Markov 加 $t_n\le D^2$）。先 $n\to\
+   [D26] mathbbP      L349   c236  region=text   in_math=True  | \varepsilon$（逐点蕴涵），第二项 $\le D^2\cdot\mathbb P\{A-s_n\ge\delta\}\le D^2\mathbb E(A-s_n)/\delta$（Markov 加 $t_n\le D^2$）。先 $n\to\infty$ 再 $\varepsilon\downarrow0$。
+   [D26] mathbbP      L350   c23   region=text   in_math=True  | 3. **假设的形态是关键**：期望假设 $\mathbb E(A-s_n)\to0$，不是逐点假设。因为 eq:eta 只能给出 $\eta_n=\langle A-\|G_V^x\|^2\rangle_Q\to0$ 这种
+   [D26] mathbbP      L354   c74   region=text   in_math=True  | *双极限顺序（先 $n$ 后 $\varepsilon$）**：若 $\varepsilon$ 固定（比如取 1），只能得 $\limsup\mathbb E t_n\le B+1$，太弱。第 7 节末需要 $\limsup\langle\|G_V^y\|^2\rangle\le B$ **精确**成立，才能与 $\|
+   [D26] inner        L372   c10   region=fenced in_math=False | (fenced block)
+   [D26] inner        L376   c56   region=text   in_math=True  | 直接展开验证：$\langle\|G-a\|^2\rangle=\langle\|G\|^2\rangle-2\inner a{\langle G\rangle}+\|a\|^2$，再把 $-2\inner a{\langle G\rangle}+\|a\|^2$ 拆成 $-\|a\|^2
+   [D26] inner        L376   c98   region=text   in_math=True  | ngle=\langle\|G\|^2\rangle-2\inner a{\langle G\rangle}+\|a\|^2$，再把 $-2\inner a{\langle G\rangle}+\|a\|^2$ 拆成 $-\|a\|^2-2\inner a{\langle G\rangle-a}$，与 tex 形式一致
+   [D26] inner        L376   c148  region=text   in_math=True  | gle}+\|a\|^2$，再把 $-2\inner a{\langle G\rangle}+\|a\|^2$ 拆成 $-\|a\|^2-2\inner a{\langle G\rangle-a}$，与 tex 形式一致。素材特别注明"论文写 $\langle\|G\|^2\rangle-\norm a^2-\ldot
+   [D26] mathbbP      L566   c204  region=text   in_math=True  | $(s,t)=(\|G_V^x(p)\|^2,\|G_V^y(p)\|^2)\in K$ a.e.，概率测度取 $Q$ 上归一化面积测度，$\mathbb E(A-s)=\eta_n\to0$，得 (eq:Vynorm)（tex:294-296）：
+   [D26] mathbbP      L723   c178  region=text   in_math=True  | 个独立标准正态随机变量，比如二进制展开加 Box–Muller；Lean 侧若要做这条会需要现成引理或显式构造 [推测]）。令 $c_p=(\mathbb E|g_1|^p)^{1/p}\in(0,\infty)$：高斯的全部有限矩存在且非零，这是"$1\le p<\infty$ 通吃"的真正凭据。对有限支撑实序列 $
+   [D26] math_bare    L871   c9    region=code   in_math=False | 登记条目（`E:\math\lean\formalization.yaml` 第 87 行附近，逐字）：title 为 "A doubling Hilbert subset with no fin
+   [D26] math_bare    L871   c275  region=code   in_math=False | 记的 id 是 PDF，而本笔记的数学内容一律取自 `build/main.tex`，PDF 只当索引用，从未作为读取来源。挑战配置 `E:\math\lean\ComparatorChallenges\DoublingHilbert.json` 逐字：
+   [D26] mathcal_bare L949   c569  region=text   in_math=True  | `+1/-1` 噪声源于此。`coordinate j i = 2 + Nat.pair j i` 给底座留坐标 0/1、层间块正交，是 $\mathcal H=\R^2\oplus\bigoplus_j\R^{N_j}$ 的直接实现。论文以"显然"处理的距离比较在这里逐条成引理，其中 `point_dist_same
+   [D26] mathcal_bare L965   c262  region=text   in_math=True  | ntalEnergy + verticalEnergy`。`anisotropic_energy_bound` 结论 $\overline{\mathcal E}_{\text{horiz}}\le\text{hc}\cdot t$、$\overline{\mathcal E}_{\text{vert}}\le2\va
+   [D26] mathcal_bare L965   c320  region=text   in_math=True  |  $\overline{\mathcal E}_{\text{horiz}}\le\text{hc}\cdot t$、$\overline{\mathcal E}_{\text{vert}}\le2\varepsilon+16CD^2/W_j+\text{vc}\cdot t$，证明七步机械分解：记号与六个 `IsBo
+   [D26] mathbbP      L1049  c16   region=text   in_math=True  | 2. `NNReal` 与 $\mathbb R$ 双向换算：`LipschitzWith` 吃 `D : NNReal`，估计要 $(D:\mathbb R)$、$(2D)^2$、`⟨D, le_trans 
+   [D26] mathbbP      L1049  c71   region=text   in_math=True  | 2. `NNReal` 与 $\mathbb R$ 双向换算：`LipschitzWith` 吃 `D : NNReal`，估计要 $(D:\mathbb R)$、$(2D)^2$、`⟨D, le_trans zero_le_one hD⟩` 手工装回；`exact_mod_cast`(32) 主要把 $\mathbb
+   [D26] mathbbP      L1049  c154  region=text   in_math=True  | (2D)^2$、`⟨D, le_trans zero_le_one hD⟩` 手工装回；`exact_mod_cast`(32) 主要把 $\mathbb N$ 基数/正性穿到 $\mathbb R$（`colors j`、`(N : ℝ)^3`）。
+   [D26] mathbbP      L1049  c174  region=text   in_math=True  | s zero_le_one hD⟩` 手工装回；`exact_mod_cast`(32) 主要把 $\mathbb N$ 基数/正性穿到 $\mathbb R$（`colors j`、`(N : ℝ)^3`）。
+   [D26] mathbbP      L1116  c9    region=text   in_math=True  | | $c_p=(\mathbb E\|g\|^p)^{1/p}$ | tex:393（cor:lp） | 归一化 Gauss 级数精确等距 | 有限性来自"高斯全体有限矩"，$p=\infty$ 
+   [D26] mathbbP      L1139  c51   region=text   in_math=True  | | $D^2$（尾部质量） | Markov 项的分子 | main.tex:193 | 同句的 $\mathbb E t_n\le B+\varepsilon+D^2\mathbb E(A-s_n)/\delta$ | 盒子无界则该右端无界，lem:compact 第二断言整体
+   [D26] mathbbP      L1139  c85   region=text   in_math=True  | | Markov 项的分子 | main.tex:193 | 同句的 $\mathbb E t_n\le B+\varepsilon+D^2\mathbb E(A-s_n)/\delta$ | 盒子无界则该右端无界，lem:compact 第二断言整体失效 |
+   [D26] mathbbP      L1150  c158  region=text   in_math=True  | .tex:293；eq:Vynorm main.tex:295 | 不消失则 $\eta_n$ 不趋零，main.tex:184 的假设 $\mathbb E(A-s_n)\to0$ 落空，eq:vertical main.tex:252 整支断 |
+   [D26] mathbbP      L1154  c13   region=text   in_math=True  | | $c_p$ | $(\mathbb E\lvert g_1\rvert^p)^{1/p}\in(0,\infty)$ | main.tex:393 | $J_px=c_p^{-1}\lim_m\sum
+   [D26] mathbbP      L1165  c342  region=text   in_math=True  | 01），三条界喂 eq:Hrate 的余项与 eq:eta 的 $\frac{4D^2}{n}$，后者喂 lem:compact 的假设 $\mathbb E(A-s_n)\to0$（main.tex:293），出来是 eq:Vynorm，再与 eq:variance 夹出 eq:vertical。能量 $\varep
+   [D26] mathbbP      L1207  c97   region=fenced in_math=False | (fenced block)
+   [D26] mathbbP      L1208  c15   region=fenced in_math=False | (fenced block)
+   [D26] mathbbP      L1218  c6    region=fenced in_math=False | (fenced block)
+   [D26] mathbbP      L1218  c42   region=fenced in_math=False | (fenced block)
+   [D26] mathbbP      L1220  c6    region=fenced in_math=False | (fenced block)
+   [D26] mathbbP      L1221  c15   region=fenced in_math=False | (fenced block)
+   [D26] mathbbP      L1233  c119  region=text   in_math=True  | s:\exists t,\ (s,t)\in K,\ t\ge B+\varepsilon\}$。它是 $\pi_1\bigl(K\cap(\mathbb R\times[B+\varepsilon,\infty))\bigr)$：闭集与紧集的交紧，紧集的连续像紧，故 $E_\varepsilon$ 是 $\mathb
+   [D26] mathbbP      L1233  c203  region=text   in_math=True  | s[B+\varepsilon,\infty))\bigr)$：闭集与紧集的交紧，紧集的连续像紧，故 $E_\varepsilon$ 是 $\mathbb R$ 的紧子集。
+   [D26] mathbbP      L1242  c2    region=text   in_math=True  | $\mathbb E t_n=\mathbb E[t_n;\,A-s_n<\delta]+\mathbb E[t_n;\,A-s_n\ge\delta]$。
+   [D26] mathbbP      L1242  c16   region=text   in_math=True  | $\mathbb E t_n=\mathbb E[t_n;\,A-s_n<\delta]+\mathbb E[t_n;\,A-s_n\ge\delta]$。
+   [D26] mathbbP      L1242  c46   region=text   in_math=True  | $\mathbb E t_n=\mathbb E[t_n;\,A-s_n<\delta]+\mathbb E[t_n;\,A-s_n\ge\delta]$。
+   [D26] mathbbP      L1243  c82   region=text   in_math=True  | s_n<\delta\}$ 上由第一断言逐点有 $t_n\le B+\varepsilon$，故该项 $\le(B+\varepsilon)\mathbb P\{A-s_n<\delta\}\le B+\varepsilon$。第二项：$t_n\le D^2$（main.tex:178 的盒子右端）给 $\le D^2
+   [D26] mathbbP      L1243  c174  region=text   in_math=True  | a\}\le B+\varepsilon$。第二项：$t_n\le D^2$（main.tex:178 的盒子右端）给 $\le D^2\,\mathbb P\{A-s_n\ge\delta\}$，再套 main.tex:190 的 Markov。两行合起来正是 main.tex:192-193。
+   [D26] mathbbP      L1245  c70   region=text   in_math=True  | 步 7（极限顺序不可换）。对固定的 $\varepsilon$（及其 $\delta$）令 $n\to\infty$：$\limsup_n\mathbb E t_n\le B+\varepsilon+D^2\cdot\lim_n\mathbb E(A-s_n)/\delta=B+\varepsilon$。再对 $\v
+   [D26] mathbbP      L1245  c115  region=text   in_math=True  | 令 $n\to\infty$：$\limsup_n\mathbb E t_n\le B+\varepsilon+D^2\cdot\lim_n\mathbb E(A-s_n)/\delta=B+\varepsilon$。再对 $\varepsilon=1,1/2,1/3,\ldots$ 取交，得 $\limsup_n\m
+   [D26] mathbbP      L1245  c203  region=text   in_math=True  | delta=B+\varepsilon$。再对 $\varepsilon=1,1/2,1/3,\ldots$ 取交，得 $\limsup_n\mathbb E t_n\le B$，即 main.tex:185。反过来先令 $\varepsilon\downarrow0$ 则 $\delta$ 也随之趋零（$E_\var
+   [D26] mathbbP      L1245  c344  region=text   in_math=True  | elta$ 也随之趋零（$E_\varepsilon$ 单调缩小但 $\delta(\varepsilon)$ 无下界），最后一项 $D^2\mathbb E(A-s_n)/\delta$ 不再由 $n$ 的极限消灭。main.tex:195 那句 "First let $n\to\infty$, and then $
+   [D26] mathbbP      L1247  c258  region=text   in_math=True  | .tex:241），有限色、每片是可测集上的可测函数；逐点取值于 $K$ 由 eq:Kbounds（main.tex:244）；均值假设 $\mathbb E(A-s_n)=\langle A-\lVert G_V^x\rVert^2\rangle_Q=\eta_n\to0$ 正是 eq:eta（main.tex:28
+   [D26] mathbbP      L1263  c21   region=text   in_math=True  | [推测] 其一，把单侧结论升级成双侧 $\mathbb E t_n\to B$。需要 $\liminf_n\mathbb E t_n\ge B$，即存在把 $Q$ 上导数分布实际推向 $(A,B)$ 的选法。eq:nea
+   [D26] mathbbP      L1263  c54   region=text   in_math=True  | [推测] 其一，把单侧结论升级成双侧 $\mathbb E t_n\to B$。需要 $\liminf_n\mathbb E t_n\ge B$，即存在把 $Q$ 上导数分布实际推向 $(A,B)$ 的选法。eq:nearmax（main.tex:214-218）只锁住一个点、eq:K
+   [D26] math_bare    L1269  c18   region=code   in_math=False | 机器侧一行：本节的对应物在 `E:\math\lean\OAI\Geometry\DoublingHilbert\`（28 个 `.lean`、`wc -l` 合计 4664 行，与第 0 节口径一致，本次在目录里
+   [D26] math_bare    L1269  c121  region=code   in_math=False | ilbert\`（28 个 `.lean`、`wc -l` 合计 4664 行，与第 0 节口径一致，本次在目录里重数过），挑战配置 `E:\math\lean\ComparatorChallenges\DoublingHilbert.json` 只点名 `OAI.DoublingHilbert.main` 一个定理，
+
+====================================================================================================
+D30  D30-负pinched三维Kähler流形无有界全纯坐标.md  lines=1019
+-- counts by (family, region, in-math-span) --
+   math_bare      code     in_math=False  2
+   math_bare      text     in_math=True   1
+   mathbbP        fenced   in_math=False  3
+   mathbbP        text     in_math=True   20
+   mathcal_bare   fenced   in_math=False  7
+   mathcal_bare   text     in_math=True   56
+-- hits --
+   [D30] math_bare    L4     c11   region=code   in_math=False | TeX 源码：`E:\math\preprints\A-negatively-pinched-Kahler-threefold-without-bounded-holomorphic-coordina
+   [D30] math_bare    L5     c9    region=code   in_math=False | Lean：`E:\math\lean\OAI\Geometry\Kahler\`。被认证的顶层定理是 `OAI.PinchedHartogs.main_theorem`，比对配置 `Compara
+   [D30] mathbbP      L8     c12   region=text   in_math=True  | 记号约定与论文一致。$\mathbb B=\{z\in\mathbb C^2:|z|<1\}$ 是基球，$S=\{|\xi|=1\}$ 是其边界球面，$\sigma$ 是归一到总质量 $1$ 的表面测度
+   [D30] mathbbP      L8     c28   region=text   in_math=True  | 记号约定与论文一致。$\mathbb B=\{z\in\mathbb C^2:|z|<1\}$ 是基球，$S=\{|\xi|=1\}$ 是其边界球面，$\sigma$ 是归一到总质量 $1$ 的表面测度。$\psi(z)=-\log(
+   [D30] mathbbP      L13    c58   region=text   in_math=True  | - 有界全纯坐标（bounded holomorphic coordinates）。指一个全纯映射 $F:M\to\mathbb C^n$，像集在欧氏目标里有界，且其复 Jacobian 行列式处处非零。有界区域自动有这种坐标（坐标函数本身）；本文要造的 $M$ 没有。
+   [D30] mathbbP      L14    c64   region=text   in_math=True  | - Hartogs 度量。指由基上的光滑实函数 $\phi$ 决定的 Hartogs 域 $M_\phi=\{(z,w)\in\mathbb B\times\mathbb C:e^{\phi(z)}|w|^2<1\}$ 上、位势 $\mathcal K_\lambda=\lambda\psi-\log(1
+   [D30] mathbbP      L14    c79   region=text   in_math=True  | s 度量。指由基上的光滑实函数 $\phi$ 决定的 Hartogs 域 $M_\phi=\{(z,w)\in\mathbb B\times\mathbb C:e^{\phi(z)}|w|^2<1\}$ 上、位势 $\mathcal K_\lambda=\lambda\psi-\log(1-e^{\phi}|w|^2)
+   [D30] mathcal_bare L14    c117  region=text   in_math=True  | M_\phi=\{(z,w)\in\mathbb B\times\mathbb C:e^{\phi(z)}|w|^2<1\}$ 上、位势 $\mathcal K_\lambda=\lambda\psi-\log(1-e^{\phi}|w|^2)$ 的复 Hessian 所给的 Kähler 度量；它是 Calabi 由
+   [D30] mathbbP      L93    c139  region=text   in_math=True  | xists F\,(\text{$F$ 有界全纯}\wedge\text{Jacobian 处处非零})$，尾句"$M$ 不双全等于任何 $\mathbb C^3$ 里有界区域"是这一否定的直接推论（最后一跳在 `02:169-171` 的链式法则）。
+   [D30] mathcal_bare L128   c30   region=text   in_math=True  | 第 1 层，解析原料（§3、§4）：§3 给射影分离集 $\mathcal P_k$、齐次峰 $P_k$（`peaks:polynomial`）、峰上界（`peaks:bounds`）、patch 单峰近似（`peaks:patches`
+   [D30] mathcal_bare L130   c51   region=text   in_math=True  | 第 3 层，全局几何（§7）：`lem metric:complete`，$M_\phi$ 可缩、$\mathcal K_\lambda$ 给光滑正定完备 Kähler 度量并严格 psh exhaustion。
+   [D30] mathcal_bare L213   c19   region=fenced in_math=False | (fenced block)
+   [D30] mathcal_bare L237   c2    region=fenced in_math=False | (fenced block)
+   [D30] mathcal_bare L238   c41   region=fenced in_math=False | (fenced block)
+   [D30] mathbbP      L279   c135  region=text   in_math=True  | 。$d(z)=\det\frac{\partial(F_1,F_2,F_3)}{\partial(z_1,z_2,w)}(z,0)$ 在 $\mathbb B$ 上全纯无零。
+   [D30] mathbbP      L294   c5    region=text   in_math=True  | 5. $\mathbb B$ 单连通 + $d$ 无零 ⇒ 全纯对数 $\ell$ 存在（$d^{-1}\partial d$ 的原函数，`02:155-159`）。$H=2\ell$ 使
+   [D30] mathbbP      L326   c43   region=fenced in_math=False | (fenced block)
+   [D30] mathbbP      L332   c38   region=fenced in_math=False | (fenced block)
+   [D30] mathbbP      L333   c43   region=fenced in_math=False | (fenced block)
+   [D30] mathcal_bare L351   c76   region=text   in_math=True  | 0\ge1$、整数 $k\ge D_0^2$，选 $\CP^1$ 中极大 $D_0/\sqrt k$-分离直线集，每条取一单位代表，集记 $\mathcal P_k$，$N_k=|\mathcal P_k|$。峰（`peaks:polynomial`）：$P_k(z)=\sum_{p\in\mathcal P_k}\l
+   [D30] mathcal_bare L351   c96   region=text   in_math=True  | 2$，选 $\CP^1$ 中极大 $D_0/\sqrt k$-分离直线集，每条取一单位代表，集记 $\mathcal P_k$，$N_k=|\mathcal P_k|$。峰（`peaks:polynomial`）：$P_k(z)=\sum_{p\in\mathcal P_k}\langle z,p\rangle^k$。
+   [D30] mathcal_bare L351   c151  region=text   in_math=True  | cal P_k$，$N_k=|\mathcal P_k|$。峰（`peaks:polynomial`）：$P_k(z)=\sum_{p\in\mathcal P_k}\langle z,p\rangle^k$。结论（`peaks:count`、`peaks:gaussian`、`peaks:global`）：
+   [D30] mathbbP      L359   c49   region=text   in_math=True  | 4. 全局界 $|P_k|\le C|z|^k$：$u=0$ 给 $S$ 上界，齐次性扩到全 $\mathbb C^2$（含球外）。
+   [D30] mathcal_bare L368   c29   region=text   in_math=True  | patch 定义 $y=-k\log|\xi_1|$、$\mathcal U_{k,p}=\{0\le y<R_0\}$。结论：$D_0>\max\{1,2\sqrt{2R_0}\}$ 且 $k\ge\max\{D_0^2,2R_0\}
+   [D30] mathcal_bare L370   c110  region=text   in_math=True  | D_0/\sqrt k$，$D_0>2\sqrt{2R_0}$ 使两半径和 $<D_0/\sqrt k$ ⇒ 互斥。单峰近似：$\xi\in\mathcal U_{k,p}$、$p'\ne p$ 时 $\sqrt kd(\xi,p')\ge D_0-\sqrt{2R_0}$（三角不等式），其余峰按 `peaks:gau
+   [D30] mathcal_bare L419   c25   region=fenced in_math=False | (fenced block)
+   [D30] mathcal_bare L458   c9    region=text   in_math=True  | $$\int_{\mathcal U_{k,p}}\xi_1^nA_{j,p}d\sigma=\frac{\overline{\widehat S_p(n-k)}}k\int_0^{R_0}e^{
+   [D30] mathcal_bare L499   c15   region=fenced in_math=False | (fenced block)
+   [D30] mathbbP      L542   c18   region=text   in_math=True  | 对每个有限 $L>0$，级数在 $\mathbb B$ 上局部 $C^\infty$ 收敛，和光滑、$\phi(0)=0$、$h\ge I$。
+   [D30] mathbbP      L552   c64   region=text   in_math=True  | 若 $L>\frac{5\log Q}{d_3}$（`base:amplitude`），则无 $H\in\mathcal O(\mathbb B),C_H\in\R$ 满足 `base:no-minorant`。半径 `base:radii`：$r_N=1-\frac\eta{k_N}$。
+   [D30] mathcal_bare L552   c53   region=text   in_math=True  | 若 $L>\frac{5\log Q}{d_3}$（`base:amplitude`），则无 $H\in\mathcal O(\mathbb B),C_H\in\R$ 满足 `base:no-minorant`。半径 `base:radii`：$r_N=1-\frac\eta{k_N
+   [D30] mathcal_bare L615   c2    region=fenced in_math=False | (fenced block)
+   [D30] mathcal_bare L618   c12   region=fenced in_math=False | (fenced block)
+   [D30] mathbbP      L624   c73   region=text   in_math=True  |  域与光滑正度量。$M_\phi=\{t<1\}$ 开。$(z,w)\mapsto(z,e^{\phi/2}w)$ 是 $M_\phi\to\mathbb B\times\D$ 光滑实微分同胚（逆 $(z,u)\mapsto(z,e^{-\phi/2}u)$）⇒ 可缩，不需全纯平凡化（`07:32-33`："no ho
+   [D30] mathcal_bare L626   c257  region=text   in_math=True  | （`07:124`："This argument does not require a minimizing geodesic"）。同法 $\mathcal K_\lambda\le R$ 次水平集紧 ⇒ 严格 psh exhaustion。
+   [D30] mathcal_bare L643   c322  region=text   in_math=True  | $（指标 0），度量 $G+V$。约定 `(curv:coordinate-formula)` $R_{a\bar b c\bar d}=-\mathcal K_{ac\bar b\bar d}+\widehat g^{p\bar e}\mathcal K_{ac\bar e}\mathcal K_{p\bar b\b
+   [D30] mathcal_bare L643   c370  region=text   in_math=True  | $R_{a\bar b c\bar d}=-\mathcal K_{ac\bar b\bar d}+\widehat g^{p\bar e}\mathcal K_{ac\bar e}\mathcal K_{p\bar b\bar d}$。对称张量 `(curv:symmetric-tensor)` $(S_P)_{a\
+   [D30] mathcal_bare L643   c391  region=text   in_math=True  | -\mathcal K_{ac\bar b\bar d}+\widehat g^{p\bar e}\mathcal K_{ac\bar e}\mathcal K_{p\bar b\bar d}$。对称张量 `(curv:symmetric-tensor)` $(S_P)_{a\bar b c\bar d}=P_{a\b
+   [D30] mathcal_bare L661   c59   region=text   in_math=True  | 机制（导数表 → 代入公式）：三阶 $(2,1)$ 型（未归一）`curv:third-derivatives`：$\mathcal K_{ik\bar j}=xA_{ik\bar j}$、$\mathcal K_{iv\bar j}=qh_{i\bar j}$、$\mathcal K_{vv\
+   [D30] mathcal_bare L661   c97   region=text   in_math=True  | 型（未归一）`curv:third-derivatives`：$\mathcal K_{ik\bar j}=xA_{ik\bar j}$、$\mathcal K_{iv\bar j}=qh_{i\bar j}$、$\mathcal K_{vv\bar v}=q(1+2x)$（$A_{ik\bar j}=h_{i\bar
+   [D30] mathcal_bare L661   c134  region=text   in_math=True  | cal K_{ik\bar j}=xA_{ik\bar j}$、$\mathcal K_{iv\bar j}=qh_{i\bar j}$、$\mathcal K_{vv\bar v}=q(1+2x)$（$A_{ik\bar j}=h_{i\bar j,k}$）。四阶 $(2,2)$ 型 `curv:fourth-der
+   [D30] mathcal_bare L661   c235  region=text   in_math=True  | $A_{ik\bar j}=h_{i\bar j,k}$）。四阶 $(2,2)$ 型 `curv:fourth-derivatives`：$\mathcal K_{ik\bar j\bar l}=\lambda(S_I)+xB_{ik\bar j\bar l}+q(S_h)$、$\mathcal K_{ik\bar j
+   [D30] mathcal_bare L661   c305  region=text   in_math=True  | \mathcal K_{ik\bar j\bar l}=\lambda(S_I)+xB_{ik\bar j\bar l}+q(S_h)$、$\mathcal K_{ik\bar j\bar v}=qA_{ik\bar j}$、$\mathcal K_{iv\bar j\bar v}=q(1+2x)h_{i\bar j}
+   [D30] mathcal_bare L661   c349  region=text   in_math=True  | {ik\bar j\bar l}+q(S_h)$、$\mathcal K_{ik\bar j\bar v}=qA_{ik\bar j}$、$\mathcal K_{iv\bar j\bar v}=q(1+2x)h_{i\bar j}$、$\mathcal K_{vv\bar v\bar v}=q(1+6x+6x^2)$
+   [D30] mathcal_bare L661   c398  region=text   in_math=True  | r v}=qA_{ik\bar j}$、$\mathcal K_{iv\bar j\bar v}=q(1+2x)h_{i\bar j}$、$\mathcal K_{vv\bar v\bar v}=q(1+6x+6x^2)$。链式法则核对完备性：四水平导两配对给 $qS_h$，第三配对含 $s_{ik}s_{\bar j
+   [D30] mathcal_bare L661   c500  region=text   in_math=True  | 6x+6x^2)$。链式法则核对完备性：四水平导两配对给 $qS_h$，第三配对含 $s_{ik}s_{\bar j\bar l}=0$；$\mathcal K_{ik\bar v}=\mathcal K_{vv\bar j}=0$，"No vanishing of pure third horizontal deri
+   [D30] mathcal_bare L661   c522  region=text   in_math=True  | 平导两配对给 $qS_h$，第三配对含 $s_{ik}s_{\bar j\bar l}=0$；$\mathcal K_{ik\bar v}=\mathcal K_{vv\bar j}=0$，"No vanishing of pure third horizontal derivatives is needed"（`08
+   [D30] mathcal_bare L671   c144  region=text   in_math=True  | u_1,u_2))^2$、$b_P=\operatorname{Im}P(u_1,u_2)$、$m_P=a_{P+V}-a_P-a_V$；$\mathcal H_T=T_{u_1\bar u_1u_2\bar u_2}-\operatorname{Re}T_{u_1\bar u_2u_1\bar u_2}$。结论 `(
+   [D30] mathcal_bare L671   c262  region=text   in_math=True  | rname{Re}T_{u_1\bar u_2u_1\bar u_2}$。结论 `(curv:sectional)` $K_g=\frac{\mathcal H_R}{2a_{\widehat g}}$；`(curv:xi-definition)` $\Xi^{a\bar b}=u_1^a\overline{u_2^b
+   [D30] mathcal_bare L671   c402  region=text   in_math=True  | u_1^a\overline{u_2^b}-u_2^a\overline{u_1^b}$；`(curv:xi-contraction)` $\mathcal H_T=-\frac12T_{a\bar bc\bar d}\Xi^{a\bar b}\Xi^{c\bar d}$；`(curv:S-contraction)` 
+   [D30] mathcal_bare L671   c493  region=text   in_math=True  | T_{a\bar bc\bar d}\Xi^{a\bar b}\Xi^{c\bar d}$；`(curv:S-contraction)` $\mathcal H_{S_P}=a_P+3b_P^2$。
+   [D30] mathcal_bare L673   c187  region=text   in_math=True  | bar u_2}$，$U_j=u_j+\bar u_j$ 展开给 $R^\R(U_1,U_2,U_2,U_1)=A-B-\bar B+A=2\mathcal H_R$，除实面积得 `curv:sectional`。$\mathcal H_{S_P}$：$c_P=P(u_1,u_2)$，直接缩 `curv:symmetr
+   [D30] mathcal_bare L673   c225  region=text   in_math=True  | (U_1,U_2,U_2,U_1)=A-B-\bar B+A=2\mathcal H_R$，除实面积得 `curv:sectional`。$\mathcal H_{S_P}$：$c_P=P(u_1,u_2)$，直接缩 `curv:symmetric-tensor` 得 $P(u_1,u_1)P(u_2,u_2)+|c_
+   [D30] mathcal_bare L675   c77   region=text   in_math=True  | a_{\widehat g}>0$ 由实线性无关保证分母正；定义允许水平/竖直投影退化（`08:252-253`）。`[推测]` 若误把 $\mathcal H_{S_P}=a_P$（忽略 $3b_P^2$），`prop curv:tensor` 里 $\lambda(a_I+3b_I^2)$ 少一项，§9 `pinc
+   [D30] mathbbP      L683   c88   region=text   in_math=True  | t{a_Da_V}$ 用在 §9；单调性用在 $D\ge(1+x)h$ ⇒ $m_D\ge(1+x)m_h$；$V$ 复秩 1（$\dim_\mathbb C$ 纤维 $=1$）用在 $a_V=b_V^2$。`[推测]` 若纤维维 $>1$，$a_V=b_V^2$ 失，`pinch:algebra` 等号分类（要混合块
+   [D30] mathcal_bare L687   c210  region=text   in_math=True  | （用 $|b_Ib_V|\le\sqrt{a_Ia_V}\le m_I/2$）。结论 `curv:contracted-errors`：$|\mathcal H_{T_4}|\le Cxa_I$，$|\mathcal H_{T_3}|\le C\sqrt q\sqrt{a_Im_I}$，更细 `curv:mixed-e
+   [D30] mathcal_bare L687   c240  region=text   in_math=True  | e m_I/2$）。结论 `curv:contracted-errors`：$|\mathcal H_{T_4}|\le Cxa_I$，$|\mathcal H_{T_3}|\le C\sqrt q\sqrt{a_Im_I}$，更细 `curv:mixed-error` $|\mathcal H_{T_3}|\le C
+   [D30] mathcal_bare L687   c308  region=text   in_math=True  | $|\mathcal H_{T_3}|\le C\sqrt q\sqrt{a_Im_I}$，更细 `curv:mixed-error` $|\mathcal H_{T_3}|\le C\sqrt q\|\Xi_{HH}\|\|\Xi_{\rm mix}\|$。分子 `curv:negative-numerator`：
+   [D30] mathcal_bare L689   c4    region=text   in_math=True  | $$-\mathcal H_R=\lambda(a_I+3b_I^2)+q(a_h+3b_h^2)+4a_V+m_D+6b_Db_V-\mathcal H_{T_4}-\mathcal 
+   [D30] mathcal_bare L689   c68   region=text   in_math=True  | $$-\mathcal H_R=\lambda(a_I+3b_I^2)+q(a_h+3b_h^2)+4a_V+m_D+6b_Db_V-\mathcal H_{T_4}-\mathcal H_{T_3}.$$
+   [D30] mathcal_bare L689   c85   region=text   in_math=True  | R=\lambda(a_I+3b_I^2)+q(a_h+3b_h^2)+4a_V+m_D+6b_Db_V-\mathcal H_{T_4}-\mathcal H_{T_3}.$$
+   [D30] mathcal_bare L691   c29   region=text   in_math=True  | 机制：$T_4$ 配对两 $\Xi_{HH}$ ⇒ $|\mathcal H_{T_4}|\le Cx\|\Xi_{HH}\|^2\le Cxa_I$；$T_3$（恰三水平指标）配对 $\Xi_{HH}$ 与 $\Xi_{\rm mix
+   [D30] mathcal_bare L691   c144  region=text   in_math=True  | I$；$T_3$（恰三水平指标）配对 $\Xi_{HH}$ 与 $\Xi_{\rm mix}$ ⇒ `curv:mixed-error`；$\mathcal H_{S_V}=4a_V$、$\mathcal H_{S_{D+V}-S_D-S_V}=m_D+6b_Db_V$（用 $a_V=b_V^2$），合并 `curv:
+   [D30] mathcal_bare L691   c168  region=text   in_math=True  | {HH}$ 与 $\Xi_{\rm mix}$ ⇒ `curv:mixed-error`；$\mathcal H_{S_V}=4a_V$、$\mathcal H_{S_{D+V}-S_D-S_V}=m_D+6b_Db_V$（用 $a_V=b_V^2$），合并 `curv:tensor-identity`。
+   [D30] mathcal_bare L737   c323  region=text   in_math=True  | \rm e}\sqrt q$，$R=-\lambda S_I-qS_h-S_V-(S_{D+V}-S_D-S_V)+T_4+T_3$。则 $\mathcal H_R<0$ 于每条实二平面。
+   [D30] mathcal_bare L739   c94   region=text   in_math=True  | lambda\ge\max(1,C)$ 启用 `curv:D-bounds`。若假有序列 $\lambda\to\infty$ 使 $F=-\mathcal H_R\le0$（`pinch:leading-numerator`）。
+   [D30] mathcal_bare L741   c864  region=text   in_math=True  | $ + 一 $\Xi_{\rm mix}$，$\Xi_{\rm mix}\to0$ ⇒ `pinch:vanishing-error` $|\mathcal H_{\widetilde T_3}|\le C'q^{-1/4}\|\Xi_{HH}\|\|\Xi_{\rm mix}\|=o(x^{-1/2})$（显式 $q
+   [D30] mathcal_bare L749   c68   region=text   in_math=True  | 几何结论（域、完备）来自 `lem metric:complete`。取任意有限 $\lambda\ge\lambda_0$ ⇒ $-\mathcal H_R>0$ 逐点。
+   [D30] mathcal_bare L750   c140  region=text   in_math=True  | h\le CI$、分量型与对称、$C_{\rm e}x/C_{\rm e}\sqrt q$ 闭范数界）⇒ 紧；$G,D,R$ 连续 ⇒ $-\mathcal H_R$ 有严格正最小与有限最大；$G+V$ 一致正定有界 ⇒ $a_{G+V}$ 上下有界 ⇒ `curv:sectional` 给双侧界。
+   [D30] mathbbP      L779   c53   region=text   in_math=True  | > probabilities $\mu_N$ on the unit sphere $S\subset\mathbb C^2$ such that ... $\longrightarrow-\infty$, while $\int_S\operatorname{Re}H(r_N\x
+   [D30] mathbbP      L779   c212  region=text   in_math=True  | xi)\,d\mu_N(\xi)=\operatorname{Re}H(0)$ for every holomorphic $H$ on $\mathbb B$.
+   [D30] math_bare    L827   c27   region=text   in_math=True  | 一处取证数据我必须如实记下并解释：素材头部写"$E:\math\lean\OAI\Geometry\Kahler$ 108 个 `.lean`、约 18,688 行"，而素材 §4.1 表格又写"36 个 `.lean`、约 600
+   [D30] mathcal_bare L851   c70   region=text   in_math=True  | 3. `sectional`（:66）：因子 2 约定硬编进定义 `.../(2*realArea (g p) u v)`，与论文 $K=\mathcal H_R/(2a_{\widehat g})$ 对齐；`IsNegativelyPinched`（:86）用 `LinearIndependent ℝ ![u,v]
+   [D30] mathcal_bare L857   c82   region=text   in_math=True  | assical.choice` 许可）：`BaseTestSystem.lean:78 choose P hP using hex`（选 $\mathcal P_k$）、`HartogsCompletenessSupport.lean:133`、:201（测地线 $\gamma$ 存在）、`PinchingEstima
+   [D30] mathcal_bare L857   c245  region=text   in_math=True  | .lean:257`、`PinchingLimit.lean:76`、`Obstruction.lean:60`。这些把"取一列""存在 $\mathcal P_k$"落成 choice。
+   [D30] mathcal_bare L891   c214  region=text   in_math=True  | ed 也只用截面 | 若把假设换成 Ricci 版本：pinch:positivity 两 regime 反证全断，反证需要逐平面 $F=-\mathcal H_R\le0$，Ricci 平均值保留不下这个信息 |
+   [D30] mathbbP      L892   c53   region=text   in_math=True  | | $\psi(z)=-\log(1-\lvert z\rvert^2)$ | 双曲模型位势，归一由 $\mathbb B\subset\mathbb C^2$ 单位球钉死 | 02-reduction.tex:13-15; 01-introduction.tex:97 | $I$、
+   [D30] mathbbP      L892   c69   region=text   in_math=True  | | $\psi(z)=-\log(1-\lvert z\rvert^2)$ | 双曲模型位势，归一由 $\mathbb B\subset\mathbb C^2$ 单位球钉死 | 02-reduction.tex:13-15; 01-introduction.tex:97 | $I$、$\mathcal K_\lam
+   [D30] mathcal_bare L892   c144  region=text   in_math=True  | bb C^2$ 单位球钉死 | 02-reduction.tex:13-15; 01-introduction.tex:97 | $I$、$\mathcal K_\lambda$、06-base-potential.tex:84-88 的对数增长 $\psi(r_N\xi)\le\log(k_N/\eta)$ | 换模
+   [D30] mathcal_bare L894   c50   region=text   in_math=True  | | $t=e^{\phi}\lvert w\rvert^2$，$M_\phi=\{t<1\}$，$\mathcal K_\lambda=\lambda\psi-\log(1-t)$ | Hartogs 域与位势骨架 | 02-reduction.tex:71-79; 07-ha
+   [D30] mathbbP      L895   c9    region=text   in_math=True  | | 维数：基 $\mathbb B\subset\mathbb C^2$、$M\subset\mathbb C^3$ | 基 2 复维 + 纤维 1 复维 = 3 | 02-reduction.t
+   [D30] mathbbP      L895   c25   region=text   in_math=True  | | 维数：基 $\mathbb B\subset\mathbb C^2$、$M\subset\mathbb C^3$ | 基 2 复维 + 纤维 1 复维 = 3 | 02-reduction.tex:13; 01-introd
+   [D30] mathbbP      L895   c47   region=text   in_math=True  | | 维数：基 $\mathbb B\subset\mathbb C^2$、$M\subset\mathbb C^3$ | 基 2 复维 + 纤维 1 复维 = 3 | 02-reduction.tex:13; 01-introduction.tex:40 | $N_k\a
+   [D30] mathcal_bare L896   c47   region=text   in_math=True  | | Kähler 结构 | $\widehat g=\partial\bar\partial\mathcal K$；$R$ 仅 $(2,2)$ 型分量；Kähler 对称减独立分量 | 07-hartogs-metric.tex:64-65; 08-curvature.t
+   [D30] mathcal_bare L896   c173  region=text   in_math=True  | s-metric.tex:64-65; 08-curvature.tex:59-64; 08-curvature.tex:84-85 | $\mathcal H_T$ 收缩定义 08-curvature.tex:246-250; pinch:positivity 对称性假设 09-pinching.tex:175-17
+   [D30] mathcal_bare L897   c145  region=text   in_math=True  |  02-reduction.tex:81-84; 08-curvature.tex:244-245 | curv:sectional $K=\mathcal H_R/(2a_{\widehat g})$（08-curvature.tex:255-261）; metric:gradient-convention 07-h
+   [D30] mathcal_bare L899   c28   region=text   in_math=True  | | $P_k$，$N_k$ | $P_k=\sum_{\mathcal P_k}\langle z,p\rangle^k$；$\frac{k}{D_0^2}\le N_k\le\frac{4k}{D_0^2}$ | 03-peaks.
+   [D30] mathcal_bare L924   c267  region=text   in_math=True  | 的两 regime 反证 | $C_{\rm e}=\infty$ 则第二 regime 的 $o(x^{-1/2})$ 间隙被误差抵掉，$\mathcal H_R<0$ 证不出 |
+   [D30] mathcal_bare L941   c232  region=text   in_math=True  | 数 3 与 Kähler 结构的使用点也各自挂清：前者在 $N_k$ 增长率与 $a_V=b_V^2$，后者在 $(2,2)$ 型分解与 $\mathcal H_T$ 收缩；两处的失败模式互不相干。
+
+====================================================================================================
+D77  D77-特征二下的五边形退化与Deligne--Drinfeld猜想证明反推.md  lines=558
+-- counts by (family, region, in-math-span) --
+   math_bare      code     in_math=False  1
+   mathbbP        text     in_math=True   50
+   mathcal_bare   text     in_math=False  10
+   mathcal_bare   text     in_math=True   12
+   two            text     in_math=True   3
+-- hits --
+   [D77] math_bare    L3     c18   region=code   in_math=False | 对象: 队列 133 行, `E:\math\preprints\The-Deligne-Drinfeld-conjecture-September-23-2026\`, 标题 The Deligne--Drinf
+   [D77] mathcal_bare L164   c44   region=text   in_math=False | (a) 原文逐字(陈述): "In \(U(\mathfrak h)\) let \(\mathcal U_{\ell,<r}\) be the span of all products of exactly \(\ell\) symbols from \(\{a_
+   [D77] mathcal_bare L164   c360  region=text   in_math=False | +a_2+v_{12},v_{13}+v_{23},u_{13}+u_{23})+\chi(a_1,v_{12},u_{12})\pmod{\mathcal U_{m+r,<r}}\). For \(r=0\) the indicated lower-count subspace is zero." (144-156)
+   [D77] mathcal_bare L271   c79   region=text   in_math=False | : "For \(n\geq2\), evaluation \(\delta\mapsto\delta(\alpha)\) takes \(\mathcal D_n(\Q)\) into \(W_n\). Its images \(V_n=\{\delta(\alpha):\delta\in\mathcal D_n(\
+   [D77] mathcal_bare L271   c155  region=text   in_math=False | al D_n(\Q)\) into \(W_n\). Its images \(V_n=\{\delta(\alpha):\delta\in\mathcal D_n(\Q)\}\), \(V=\bigoplus_{n\geq2}V_n\), form a rational Lie subalgebra under th
+   [D77] mathcal_bare L285   c82   region=text   in_math=False | For every \(n>0\) and every characteristic-zero extension \(K/\Q\), \(\mathcal D_n(K)=\mathcal D_n(\Q)\otimes_{\Q}K\). For \(n\geq2\), the image of evaluation i
+   [D77] mathcal_bare L285   c98   region=text   in_math=False | ) and every characteristic-zero extension \(K/\Q\), \(\mathcal D_n(K)=\mathcal D_n(\Q)\otimes_{\Q}K\). For \(n\geq2\), the image of evaluation is \(V_n\otimes_{
+   [D77] mathcal_bare L307   c113  region=text   in_math=False | ends to an isomorphism of the completed linear path categories with \(\mathcal C(I;\CC)\). Both preserve coproducts and all specified operations, and their asso
+   [D77] mathcal_bare L329   c24   region=text   in_math=False | (a) 原文逐字: "If \(\psi\in\mathcal D^p L\) and \(\phi\in\mathcal D^q L\), then \(\{\psi,\phi\}\in\mathcal D^{p+q}L\)
+   [D77] mathcal_bare L329   c54   region=text   in_math=False | (a) 原文逐字: "If \(\psi\in\mathcal D^p L\) and \(\phi\in\mathcal D^q L\), then \(\{\psi,\phi\}\in\mathcal D^{p+q}L\). Consequently every Lie word 
+   [D77] mathcal_bare L329   c95   region=text   in_math=False | mathcal D^p L\) and \(\phi\in\mathcal D^q L\), then \(\{\psi,\phi\}\in\mathcal D^{p+q}L\). Consequently every Lie word of length at least two in homogeneous ele
+   [D77] mathbbP      L448   c27   region=text   in_math=True  | 开工时我把 $R=\Z_{(2)}=\{a/b\in\mathbb Q: 2\nmid b\}$ 当成收口用的技术装置 (02-algebra.tex:6), 认定维数事实与系数环无关。守恒式 $\dim_{\mathbb Q}W_
+   [D77] mathbbP      L448   c105  region=text   in_math=True  | Q: 2\nmid b\}$ 当成收口用的技术装置 (02-algebra.tex:6), 认定维数事实与系数环无关。守恒式 $\dim_{\mathbb Q}W_n=\dim_{{\mathbb F_2}}\overline L_n$ (eq:saturated-dimension, 02-algebra.tex:3
+   [D77] mathbbP      L448   c126  region=text   in_math=True  | 技术装置 (02-algebra.tex:6), 认定维数事实与系数环无关。守恒式 $\dim_{\mathbb Q}W_n=\dim_{{\mathbb F_2}}\overline L_n$ (eq:saturated-dimension, 02-algebra.tex:356-365) 只在饱和格上成立, 剩余域
+   [D77] mathbbP      L448   c222  region=text   in_math=True  | $ (eq:saturated-dimension, 02-algebra.tex:356-365) 只在饱和格上成立, 剩余域必须是 ${\mathbb F_2}=\Z_{(2)}/(2)$ (02-algebra.tex:6-7); 换成 $\Z$ 时奇分母清不掉, 换成奇剩余特征 $p$ 时 $2$ 变可逆元, 
+   [D77] mathbbP      L454   c67   region=text   in_math=True  | 权侧的第一本账由 01-introduction.tex:13-14 定为字母总数: $L=\operatorname{Lie}_{\mathbb Q}\langle x,y\rangle$, $\operatorname{wt}(x)=\operatorname{wt}(y)=1$, $\dim_{\math
+   [D77] mathbbP      L454   c152  region=text   in_math=True  | le x,y\rangle$, $\operatorname{wt}(x)=\operatorname{wt}(y)=1$, $\dim_{\mathbb Q}L_n=\frac1n\sum_{d\mid n}\mu(d)2^{n/d}$ 逐权给 $2,6,18,56,186,630$ 于 $n=3,5,7,9,11,
+   [D77] mathbbP      L454   c266  region=text   in_math=True  | n/d}$ 逐权给 $2,6,18,56,186,630$ 于 $n=3,5,7,9,11,13$。第一版我把这本账直接当成 $\dim_{\mathbb Q}W_n$ 的同阶上界去比, 于是认定目标值也该在这一量级; 真实目标 $d_n$ 在同批权上是 $1,1,1,1,2,3$, 差了近一个数量级, 原因是下界一侧
+   [D77] mathbbP      L460   c186  region=text   in_math=True  | ame{wt}=1$ 而 $n>2$ (03:81-83); $r=0$ 支灭因为单字母 $C$ 的 ordinary Lie 代数是 ${\mathbb F_2} C$, 原始权 $2$ (05:357-359)。再叠上 $r>m\Rightarrow f=0$ (lem:even-indices, 05:49), 
+   [D77] mathbbP      L460   c423  region=text   in_math=True  | $ 的两次出现, 我起初当成两道独立筛子, 结果把 $d_{n,r}\ne0$ 的区域放大了两次, 直到把 $d_{n,r}=\dim_{{\mathbb F_2}}\mathfrak f_{\mathrm{odd},n,r}$ (eq:free-dimensions, 05:378) 逐格列表才发现两式的零点集重合。
+   [D77] mathbbP      L460   c564  region=text   in_math=True  | 8) 逐格列表才发现两式的零点集重合。$F^{n+1}\overline L_n=0$ (05:415) 保证 $\sum_r\dim_{{\mathbb F_2}}\operatorname{gr}^r_F\overline L_n=\dim_{{\mathbb F_2}}\overline L_n$, 夹逼链于是写
+   [D77] mathbbP      L460   c619  region=text   in_math=True  |  $\sum_r\dim_{{\mathbb F_2}}\operatorname{gr}^r_F\overline L_n=\dim_{{\mathbb F_2}}\overline L_n$, 夹逼链于是写作 $\dim_{\mathbb Q}V_n\le\dim_{\mathbb Q}W_n=\dim_{{\ma
+   [D77] mathbbP      L460   c663  region=text   in_math=True  | }^r_F\overline L_n=\dim_{{\mathbb F_2}}\overline L_n$, 夹逼链于是写作 $\dim_{\mathbb Q}V_n\le\dim_{\mathbb Q}W_n=\dim_{{\mathbb F_2}}\overline L_n\le\sum_rd_{n,r}=d_n$
+   [D77] mathbbP      L460   c685  region=text   in_math=True  | m_{{\mathbb F_2}}\overline L_n$, 夹逼链于是写作 $\dim_{\mathbb Q}V_n\le\dim_{\mathbb Q}W_n=\dim_{{\mathbb F_2}}\overline L_n\le\sum_rd_{n,r}=d_n$ (eq:dimension-squeeze
+   [D77] mathbbP      L460   c706  region=text   in_math=True  | rline L_n$, 夹逼链于是写作 $\dim_{\mathbb Q}V_n\le\dim_{\mathbb Q}W_n=\dim_{{\mathbb F_2}}\overline L_n\le\sum_rd_{n,r}=d_n$ (eq:dimension-squeeze, 08:91-96), 中间等号吃的是饱
+   [D77] mathcal_bare L464   c15   region=text   in_math=True  | 排列侧的账我一开始就记错。$\mathcal A_d$ 的超平面是 $z_i=0$ ($1\le i\le d$) 与 $z_i-z_j=0$, $z_i+z_j=0$ ($1\le i<j\le d$) (
+   [D77] mathbbP      L466   c733  region=text   in_math=True  | q:enveloping-fiber, 02:92-96)。$q=4$ 遗忘第 $2$ 股时核是 $\operatorname{Lie}_{\mathbb Q}\langle a,b,c\rangle$ 三枚自由生成元 (02:164-170), 商纤维上 $u,v$ 的作用化为 $\operatorname{ad}_
+   [D77] mathcal_bare L468   c69   region=text   in_math=True  | 计数函数只认 $u$: count 是 $u$ 符号的枚数, $a,v$ 计 $0$ (03:136-137)。前导五边形是四项和模 $\mathcal U_{m+r,<r}$ (eq:leading-pentagon, 03:148-155), 其中 $\mathcal U_{\ell,<r}$ 是"恰 $\el
+   [D77] mathcal_bare L468   c129  region=text   in_math=True  | 五边形是四项和模 $\mathcal U_{m+r,<r}$ (eq:leading-pentagon, 03:148-155), 其中 $\mathcal U_{\ell,<r}$ 是"恰 $\ell$ 枚符号且 $u$ 少于 $r$ 枚"的张成 (03:145-147), $r=0$ 时该余项空间为零 (03:15
+   [D77] mathbbP      L482   c98   region=text   in_math=True  | C^{i_0}BC^{i_1}\cdots BC^{i_r})=s_0^{i_0}s_1^{i_1}\cdots s_r^{i_r}\in{\mathbb F_2}[s_0,\ldots,s_r]$ (05:261-264), 记 $P=\mathcal P_r(f)$。第 $i$ 个识别把 $s_{i-1}$ 与 $
+   [D77] mathbbP      L482   c287  region=text   in_math=True  | P=P(t_0,\ldots,t_{i-2},t_{i-1},t_{i-1},t_i,\ldots,t_{r-1})$, 目标环统一为 ${\mathbb F_2}[t_0,\ldots,t_{r-1}]$ (05:267-273)。位移不变性 $\!f(C,B+s(C))=f(C,B)\!$ (eq:polynomi
+   [D77] mathbbP      L482   c636  region=text   in_math=True  |  行列式 $\prod_{0\le a<b\le r-1}(t_b-t_a)$ (05:288), 阶数 $\binom r2$, 在 ${\mathbb F_2}(t_0,\ldots,t_{r-1})$ 上可逆 (05:291-292), 于是全部 $R_iP=0$; $r=1$ 时矩阵退化为 $(1)$ (05:
+   [D77] mathbbP      L482   c761  region=text   in_math=True  | 部 $R_iP=0$; $r=1$ 时矩阵退化为 $(1)$ (05:295)。这里我犯过一次致命的简化: 想把 $t_i$ 直接代进 ${\mathbb F_2}_2$ 去解这个方程组, 而 ${\mathbb F_2}_2$ 只有 $0,1$ 两个值, $r\ge3$ 时行列式天生为零; 论文特意写明该论证对偶数 
+   [D77] mathbbP      L482   c790  region=text   in_math=True  | $ (05:295)。这里我犯过一次致命的简化: 想把 $t_i$ 直接代进 ${\mathbb F_2}_2$ 去解这个方程组, 而 ${\mathbb F_2}_2$ 只有 $0,1$ 两个值, $r\ge3$ 时行列式天生为零; 论文特意写明该论证对偶数 $r$ 同样成立, 既从不除以 $r$ 也不把 $t_i$
+   [D77] mathcal_bare L482   c15   region=text   in_math=True  | 编码本身是一一线性映射: $\mathcal P_r(C^{i_0}BC^{i_1}\cdots BC^{i_r})=s_0^{i_0}s_1^{i_1}\cdots s_r^{i_r}\in{\mathbb
+   [D77] mathcal_bare L482   c147  region=text   in_math=True  | }\cdots s_r^{i_r}\in{\mathbb F_2}[s_0,\ldots,s_r]$ (05:261-264), 记 $P=\mathcal P_r(f)$。第 $i$ 个识别把 $s_{i-1}$ 与 $s_i$ 并为同一个 $t_{i-1}$, 写作 $R_iP=P(t_0,\ldots,t_{i-
+   [D77] mathcal_bare L484   c273  region=text   in_math=True  | e{ad}_C^kB,\;k\ge0\}$ 张成的子代数, 因为 $[C,g_k]=g_{k+1}$ (05:309-315); 展开式 $\mathcal P_r(g_{k_1}\cdots g_{k_r})=\prod_{i=1}^r(s_{i-1}-s_i)^{k_i}=d_1^{k_1}\cdots d_r^{
+   [D77] mathbbP      L486   c1261 region=text   in_math=True  | ara}$ 导子投影成 $[g,f]$ 与 $[f,g]$, 组合 $[g,f]-[f,g]+[f,g]=[g,f]=[f,g]$ 在 ${\mathbb F_2}$ 上成立 (05:512-518)。我最初把这里当成循环论证的怀疑点, 因为它看着像在借 $W$ 的括号封闭性, 实则 $\operatorname{pr
+   [D77] mathcal_bare L486   c124  region=text   in_math=True  | 是 $\mathrm{der}$, 且 $D^2$ 在 $B,C$ 上为零故在 $S$ 上为零 (05:113-118); Ore 扩张 $\mathcal E=S[X;D]/(X^2)$ 配 $Xq=qX+Dq$ (05:121-122), $X^2$ 居中故商不引入 $S$ 内关系, $S$ 嵌入 $\mathca
+   [D77] mathcal_bare L486   c207  region=text   in_math=True  | X;D]/(X^2)$ 配 $Xq=qX+Dq$ (05:121-122), $X^2$ 居中故商不引入 $S$ 内关系, $S$ 嵌入 $\mathcal E$ (05:124-126); 代入 $x\mapsto X$, $y\mapsto B$ 给出 $x^2\mapsto0$, $[x,y]\mapsto C$
+   [D77] two          L496   c373  region=text   in_math=True  | $ 有限性 (由 $3r\le n$ 卡住)。我第一版没意识到 $d_n$ 与二元自由 Lie $\dim_{\mathbb Q}L_n^{\two}=\frac1n\sum_{d\mid n}\mu(d)2^{n/d}$ 之间的关系, 把后者当"上界"去比, 于是 $d_3=1$ 对 $2$、$d_5=1$ 对 $6
+   [D77] mathbbP      L496   c358  region=text   in_math=True  | n$ 上求和吃 $\sum_r$ 有限性 (由 $3r\le n$ 卡住)。我第一版没意识到 $d_n$ 与二元自由 Lie $\dim_{\mathbb Q}L_n^{\two}=\frac1n\sum_{d\mid n}\mu(d)2^{n/d}$ 之间的关系, 把后者当"上界"去比, 于是 $d_3=1$ 对 $
+   [D77] mathbbP      L504   c974  region=text   in_math=True  | ame{ad}_x^{n-1}y$ 张的一维线, 其 $x^{n-1}y$ 系数为 $1$ (07:551-553)。低权端 $\dim_{\mathbb Q}W_1=\dim_{\mathbb Q}W_2=0$ (lem:low-weights, 02:13), 权重 $1$ 的两侧差是 $-\alpha t_{12
+   [D77] mathbbP      L504   c994  region=text   in_math=True  | 一维线, 其 $x^{n-1}y$ 系数为 $1$ (07:551-553)。低权端 $\dim_{\mathbb Q}W_1=\dim_{\mathbb Q}W_2=0$ (lem:low-weights, 02:13), 权重 $1$ 的两侧差是 $-\alpha t_{12}-\beta t_{34}$ (02:
+   [D77] mathbbP      L504   c1150 region=text   in_math=True  | (02:17-18), 权重 $2$ 上三元式对 $[x,y]$ 给 $3[x,y]$ (02:20-21), 系数 $3$ 奇数, 在 $\mathbb Q$ 与 ${\mathbb F_2}$ 里都归不到零。收口一格在 $r=1$: 目标是被 $z_k$ 张的一维线 (08:172-173), 前导投影的系数是 $
+   [D77] mathbbP      L504   c1165 region=text   in_math=True  | $2$ 上三元式对 $[x,y]$ 给 $3[x,y]$ (02:20-21), 系数 $3$ 奇数, 在 $\mathbb Q$ 与 ${\mathbb F_2}$ 里都归不到零。收口一格在 $r=1$: 目标是被 $z_k$ 张的一维线 (08:172-173), 前导投影的系数是 $1$ 由于基域是 ${\mat
+   [D77] mathbbP      L504   c1251 region=text   in_math=True  | 归不到零。收口一格在 $r=1$: 目标是被 $z_k$ 张的一维线 (08:172-173), 前导投影的系数是 $1$ 由于基域是 ${\mathbb F_2}$ (08:178), 而 $\tau_n$ 本身不必有这个约化 (08:179-180, 台账 392 行)。
+   [D77] mathcal_bare L504   c698  region=text   in_math=True  | )}{(2\pi i)^3}=\frac{i\,\zeta(3)}{4\pi^3}$, 非零只需正性 (07:545)。深度一侧的份额是 $\mathcal D^pL$ 的: $\psi\in\mathcal D^pL$, $\phi\in\mathcal D^qL$ 给 $\{\psi,\phi\}\in\mathc
+   [D77] mathcal_bare L504   c724  region=text   in_math=True  | eta(3)}{4\pi^3}$, 非零只需正性 (07:545)。深度一侧的份额是 $\mathcal D^pL$ 的: $\psi\in\mathcal D^pL$, $\phi\in\mathcal D^qL$ 给 $\{\psi,\phi\}\in\mathcal D^{p+q}L$ (lem:depth-ad
+   [D77] mathcal_bare L504   c748  region=text   in_math=True  |  (07:545)。深度一侧的份额是 $\mathcal D^pL$ 的: $\psi\in\mathcal D^pL$, $\phi\in\mathcal D^qL$ 给 $\{\psi,\phi\}\in\mathcal D^{p+q}L$ (lem:depth-addition, 08:22-23), 长 $\g
+   [D77] mathcal_bare L504   c782  region=text   in_math=True  |  的: $\psi\in\mathcal D^pL$, $\phi\in\mathcal D^qL$ 给 $\{\psi,\phi\}\in\mathcal D^{p+q}L$ (lem:depth-addition, 08:22-23), 长 $\ge2$ 的齐次 Lie 词深度一分支为零 (08:25-26), 权
+   [D77] mathbbP      L508   c517  region=text   in_math=True  | _{17}=\frac87\approx1.14$, 奇偶抖动往 $\rho$ 收。我最初给的指数界是 $2$ 一级, 来自 $\dim_{\mathbb Q}L_n=\frac1n\sum_{d\mid n}\mu(d)2^{n/d}$, 于是猜 $\dim_{\mathbb Q}W_n\le\frac2n2^n$;
+   [D77] mathbbP      L508   c579  region=text   in_math=True  |  $\dim_{\mathbb Q}L_n=\frac1n\sum_{d\mid n}\mu(d)2^{n/d}$, 于是猜 $\dim_{\mathbb Q}W_n\le\frac2n2^n$; 与真值比, $n=13$ 处 $\frac{630}{3}=210$ 倍, $n=9$ 处 $\frac{56}1=56$
+   [D77] mathbbP      L512   c78   region=text   in_math=True  | : $\operatorname{H}^0(\mathrm{GC}_2)\cong\widehat{\operatorname{Lie}_{\mathbb Q}\langle e_3,e_5,e_7,\ldots\rangle}$ (01:123-126) 由 Willwacher 的 $\operatorname{H
+   [D77] mathbbP      L512   c670  region=text   in_math=True  | hi\}=D_\psi(\phi)-D_\phi(\psi)+[\psi,\phi]$ (eq:ihara, 01:46-48), 在 ${\mathbb F_2}$ 上三个符号全塌成一个; 计数侧的对应是 $\delta_-B=C$ 使计数降 $1$ 而 $\delta_+C=[A,B]$ 使计数升 $2$ (05:
+   [D77] mathbbP      L540   c191  region=text   in_math=True  | 想 (05:491), 因此在 $A=0$ 下下降; 投影与 $\delta_-$ 交换 (05:493), $\delta_-$ 在 ${\mathbb F_2}\langle C,B\rangle$ 上的像就是 $\mathrm{lem:shift-invariance}$ 里的 $D$ (05:494)。诱导的前
+   [D77] mathbbP      L542   c166  region=text   in_math=True  | }=D_\psi(\phi)-D_\phi(\psi)+[\psi,\phi]$ (eq:ihara, 01:46-48) 组合, 在 ${\mathbb F_2}$ 上减号与加号并成一个, 于是 $[g,f]-[f,g]+[f,g]=[g,f]=[f,g]$。这里我一度担心循环, 像在借 $W$ 的括号封闭性; 实则
+   [D77] mathbbP      L546   c184  region=text   in_math=True  | 72) 的约化 $\overline M_n\subset\overline L_n\subset K_n/2K_n$ 有维数 $\dim_\mathbb Q V_n$ 与 $\dim_\mathbb Q W_n$ (08:73-75)。这里最痛一步在 $\mathrm{lem:hall-saturation}$ (0
+   [D77] mathbbP      L546   c207  region=text   in_math=True  | subset\overline L_n\subset K_n/2K_n$ 有维数 $\dim_\mathbb Q V_n$ 与 $\dim_\mathbb Q W_n$ (08:73-75)。这里最痛一步在 $\mathrm{lem:hall-saturation}$ (08:40-48) 的下半: $v=\sum_i
+   [D77] mathbbP      L546   c319  region=text   in_math=True  | {lem:hall-saturation}$ (08:40-48) 的下半: $v=\sum_ic_iw_i\in K$ 与 $c_i\in\mathbb Q$, 我要证 $c_i\in\Z_{(2)}$; 反证取最小 $e\ge1$ 使全部 $2^ec_i\in\Z_{(2)}$ 且至少一枚是单位 (08:55-56
+   [D77] mathbbP      L546   c604  region=text   in_math=True  | "就把单位那枚锁死, 约化非零。这里的最小 $e$ 是把 $v_2$ 的极大负值取反, 我最初把两者搞混过一次。上层的等式 $(\sum_i\mathbb Q w_i)\cap K=\sum_i\Z_{(2)}w_i$ (08:45-47) 就是这一枚最小 $e$ 撑起来的。
+   [D77] mathbbP      L548   c322  region=text   in_math=True  | e{gr}^1$ 上的目标是被 $z_k$ 张的一维线 (08:172-173), 前导投影因此是同构, 系数是 $1$ 只依赖基域是 ${\mathbb F_2}$ (08:178); $\tau_n$ 本身不必有这约化 (08:179-180)。这里我最初以为 $\sigma_n$ 是典范的, 结果 $\tau_n
+   [D77] mathbbP      L548   c422  region=text   in_math=True  | n$ 本身不必有这约化 (08:179-180)。这里我最初以为 $\sigma_n$ 是典范的, 结果 $\tau_n$ 的前导系数在 $\mathbb Q$ 上是 $-\lambda^n\sum_{q\ge1}q^{-n}$ (07:542-543) 那一级, 约化到 ${\mathbb F_2}$ 时 $\lam
+   [D77] mathbbP      L548   c491  region=text   in_math=True  | $\mathbb Q$ 上是 $-\lambda^n\sum_{q\ge1}q^{-n}$ (07:542-543) 那一级, 约化到 ${\mathbb F_2}$ 时 $\lambda^n$ 与 $\sum$ 都不落在 $\Z_{(2)}$; 走"非典范选取"这一步是必须的, 台账 392 行记的就是这里。跨特征的
+   [D77] mathbbP      L548   c591  region=text   in_math=True  | $\sum$ 都不落在 $\Z_{(2)}$; 走"非典范选取"这一步是必须的, 台账 392 行记的就是这里。跨特征的守恒式 $\dim_\mathbb Q W_n=\dim_{\mathbb F_2}\overline L_n$ (eq:saturated-dimension, 02:356-365) 只在饱和格上
+   [D77] mathbbP      L548   c611  region=text   in_math=True  | }$; 走"非典范选取"这一步是必须的, 台账 392 行记的就是这里。跨特征的守恒式 $\dim_\mathbb Q W_n=\dim_{\mathbb F_2}\overline L_n$ (eq:saturated-dimension, 02:356-365) 只在饱和格上成立, 台账 393 行记的 "饱和性一
+   [D77] mathbbP      L550   c30   region=text   in_math=True  | 逐层维数 $d_{n,r}$ 的两侧对账在 $\dim_{\mathbb F_2}\operatorname{gr}^r\overline M_n\le d_{n,r}$ (08:167) 与逐 $r$ 求和等号 (08:168-171)
+   [D77] mathbbP      L550   c131  region=text   in_math=True  | \overline M_n\le d_{n,r}$ (08:167) 与逐 $r$ 求和等号 (08:168-171)。左端由 $\dim_\mathbb Q V_n=\dim_\mathbb Q W_n=d_n$ (eq:dimension-equality, 08:157) 与饱和性给, 每格缺量非负于是逐项零缺。
+   [D77] mathbbP      L550   c150  region=text   in_math=True  | {n,r}$ (08:167) 与逐 $r$ 求和等号 (08:168-171)。左端由 $\dim_\mathbb Q V_n=\dim_\mathbb Q W_n=d_n$ (eq:dimension-equality, 08:157) 与饱和性给, 每格缺量非负于是逐项零缺。这里我曾误以为"和等号 $\Right
+   [D77] two          L552   c365  region=text   in_math=True  | bb Q W_2=0$ (lem:low-weights, 02:13), 二元自由 Lie 侧 $\dim_\mathbb Q L_1^{\two}=2$ (即 $x,y$) 与 $\dim_\mathbb Q L_2^{\two}=1$ (即 $[x,y]$, 系数 $3$ 由三元式对 $[x,y]$ 给, 02:
+   [D77] two          L552   c407  region=text   in_math=True  |  Lie 侧 $\dim_\mathbb Q L_1^{\two}=2$ (即 $x,y$) 与 $\dim_\mathbb Q L_2^{\two}=1$ (即 $[x,y]$, 系数 $3$ 由三元式对 $[x,y]$ 给, 02:20-21), $\mathfrak f_{\mathrm{odd}}$ 侧 $d_
+   [D77] mathbbP      L552   c104  region=text   in_math=True  | :39) 用逐权有限维 (08:207) 与固定权里只出现有限多对正权 (08:209-210); $\operatorname{Lie}_\mathbb Q\langle e_3,e_5,\ldots\rangle\to V$ 逐权给 $\sigma_{2k+1}$ (08:192-196), Hall 基像独立由前
+   [D77] mathbbP      L552   c271  region=text   in_math=True  | 8:198-200), 于是同构在权分次拓扑下连续, 与它的逆互成连续映射 (08:211-212)。权 $1,2$ 的入口: $\dim_\mathbb Q W_1=\dim_\mathbb Q W_2=0$ (lem:low-weights, 02:13), 二元自由 Lie 侧 $\dim_\mathbb Q L
+   [D77] mathbbP      L552   c290  region=text   in_math=True  | 次拓扑下连续, 与它的逆互成连续映射 (08:211-212)。权 $1,2$ 的入口: $\dim_\mathbb Q W_1=\dim_\mathbb Q W_2=0$ (lem:low-weights, 02:13), 二元自由 Lie 侧 $\dim_\mathbb Q L_1^{\two}=2$ (即 $x,
+   [D77] mathbbP      L552   c350  region=text   in_math=True  |  W_1=\dim_\mathbb Q W_2=0$ (lem:low-weights, 02:13), 二元自由 Lie 侧 $\dim_\mathbb Q L_1^{\two}=2$ (即 $x,y$) 与 $\dim_\mathbb Q L_2^{\two}=1$ (即 $[x,y]$, 系数 $3$ 由三元式对
+   [D77] mathbbP      L552   c392  region=text   in_math=True  | s, 02:13), 二元自由 Lie 侧 $\dim_\mathbb Q L_1^{\two}=2$ (即 $x,y$) 与 $\dim_\mathbb Q L_2^{\two}=1$ (即 $[x,y]$, 系数 $3$ 由三元式对 $[x,y]$ 给, 02:20-21), $\mathfrak f_{\math
+
+====================================================================================================
+D106  D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md  lines=3121
+-- counts by (family, region, in-math-span) --
+   math_bare      code     in_math=False  4
+   mathbbP        fenced   in_math=False  7
+   mathbbP        text     in_math=True   4
+   mathcal_bare   fenced   in_math=False  23
+   mathcal_bare   text     in_math=True   188
+   root           code     in_math=False  1
+   root           text     in_math=True   4
+   two            code     in_math=False  1
+-- hits --
+   [D106] two          L5     c19   region=code   in_math=False | `E:\math\preprints\two-limit-cycles-for-quintic-lienard-systems-September-24-2026\build\` 下的
+   [D106] math_bare    L5     c4    region=code   in_math=False | `E:\math\preprints\two-limit-cycles-for-quintic-lienard-systems-September-24-2026\build\` 下的
+   [D106] math_bare    L7     c5    region=code   in_math=False | （`E:\math\lean\formalization.yaml` 第 1438-1440 行）、书目条目（同文件 794 行附近，只有标题与 pdf 路径）
+   [D106] math_bare    L8     c10   region=code   in_math=False | 、模块目录 `E:\math\lean\OAI\Analysis\LienardCycles\` 本身、以及
+   [D106] math_bare    L9     c4    region=code   in_math=False | `E:\math\lean\ComparatorChallenges\QuinticLienard.json`。
+   [D106] mathcal_bare L144   c10   region=text   in_math=True  |    的峰集合 $\mathcal T_\phi$ 是开区间射线，宽度 $r(0,t)$ 在 $\mathcal I_\phi$ 上是光滑递增双射，
+   [D106] mathcal_bare L144   c49   region=text   in_math=True  |    的峰集合 $\mathcal T_\phi$ 是开区间射线，宽度 $r(0,t)$ 在 $\mathcal I_\phi$ 上是光滑递增双射，
+   [D106] mathcal_bare L147   c37   region=text   in_math=True  |    $\Delta(r)=M_+(0,r)-M_-(0,r)$ 在 $\mathcal I=\mathcal I_+\cap\mathcal I_-$（单个开区间）上的
+   [D106] mathcal_bare L147   c48   region=text   in_math=True  |    $\Delta(r)=M_+(0,r)-M_-(0,r)$ 在 $\mathcal I=\mathcal I_+\cap\mathcal I_-$（单个开区间）上的
+   [D106] mathcal_bare L147   c64   region=text   in_math=True  |    $\Delta(r)=M_+(0,r)-M_-(0,r)$ 在 $\mathcal I=\mathcal I_+\cap\mathcal I_-$（单个开区间）上的
+   [D106] mathcal_bare L166   c32   region=text   in_math=True  | 如果端点只是相切（比如 $a=0$），可积性就断了，这正是 $\mathcal T_\phi$ 要求 $a(t)<0<b(t)$ 严格的原因。
+   [D106] mathcal_bare L228   c92   region=text   in_math=True  | H^2)$（模型侧）或 $r/(r^2-M^2)$（真实侧） | model.tex:48、fitting.tex:598 | 运输算子 $\mathcal D$、外部导数 $-\mathcal D/\alpha$ | 若写成 $1/(r^2-H^2)$ 则 model.tex:876 的 $-\kappa/\alph
+   [D106] mathcal_bare L228   c111  region=text   in_math=True  | -M^2)$（真实侧） | model.tex:48、fitting.tex:598 | 运输算子 $\mathcal D$、外部导数 $-\mathcal D/\alpha$ | 若写成 $1/(r^2-H^2)$ 则 model.tex:876 的 $-\kappa/\alpha$ 系数错 |
+   [D106] mathcal_bare L233   c4    region=text   in_math=True  | | $\mathcal T_\phi$ | $\{t>0:a(t)<0<b(t)\}$，空集或开射线 | arcs.tex:383-394 | prop:cycle-matching 的
+   [D106] mathcal_bare L233   c96   region=text   in_math=True  | t>0:a(t)<0<b(t)\}$，空集或开射线 | arcs.tex:383-394 | prop:cycle-matching 的 $\mathcal I=\mathcal I_+\cap\mathcal I_-$ 单区间性 | 若允许切向端点，可积性 $dy/\sqrt{2u}$ 失，零点到轨道的反向不成立 |
+   [D106] mathcal_bare L233   c107  region=text   in_math=True  | b(t)\}$，空集或开射线 | arcs.tex:383-394 | prop:cycle-matching 的 $\mathcal I=\mathcal I_+\cap\mathcal I_-$ 单区间性 | 若允许切向端点，可积性 $dy/\sqrt{2u}$ 失，零点到轨道的反向不成立 |
+   [D106] mathcal_bare L233   c123  region=text   in_math=True  |  arcs.tex:383-394 | prop:cycle-matching 的 $\mathcal I=\mathcal I_+\cap\mathcal I_-$ 单区间性 | 若允许切向端点，可积性 $dy/\sqrt{2u}$ 失，零点到轨道的反向不成立 |
+   [D106] mathcal_bare L237   c136  region=text   in_math=True  | tex:253、259-266 | 小宽展开 eq:arc-small-width、model.tex:111-116 | 改成别的值则 $\mathcal W=\frac{16}{45}r^3$ 的首项系数错，起不了号 |
+   [D106] mathcal_bare L243   c4    region=text   in_math=True  | | $\mathcal W$ | $RS_r-SR_r=\frac{16}{45}r^3+O(r^4)$ | model.tex:47、126 | thm:model-inequalit
+   [D106] mathcal_bare L244   c100  region=text   in_math=True  |  | model.tex:31-34 | transport.tex:233-237 的 $C_r\le0$ 源项 | 号反则 $w'=-(\mathcal T/\alpha)w+(C_r/\alpha)(\lambda-k)$ 的源项变负 |
+   [D106] mathcal_bare L245   c4    region=text   in_math=True  | | $\mathcal D$ | $\kappa\partial_\lambda-\alpha\partial_r$ | model.tex:66 | eq:model:PQ-trans
+   [D106] mathcal_bare L245   c172  region=text   in_math=True  | q:model:W-transport 的全部推导 | 换成 $\partial_\lambda-\alpha\partial_r$ 则 $\mathcal D\mathcal W$ 的 $(2\gamma+3\alpha_r)$ 系数不出现 |
+   [D106] mathcal_bare L245   c182  region=text   in_math=True  | transport 的全部推导 | 换成 $\partial_\lambda-\alpha\partial_r$ 则 $\mathcal D\mathcal W$ 的 $(2\gamma+3\alpha_r)$ 系数不出现 |
+   [D106] mathcal_bare L246   c63   region=text   in_math=True  | | $\gamma$ | $(r^2+H^2+2rHH_r)/(r^2-H^2)^2$ | model.tex:49 | $\mathcal DP=\gamma P-1$、$\gamma_{rr}-\sigma_0\gamma_r$ 的目标号 | 分母少一次幂则 $\gamma_{rr}$ 的项数变，C
+   [D106] mathcal_bare L248   c8    region=text   in_math=True  | | $w,\ \mathcal S$ | $w=\ell_m/\ell$，$\mathcal S=\ell_{mm}/\ell-\frac32w^2$，$w_m=\mathcal S+\frac
+   [D106] mathcal_bare L248   c39   region=text   in_math=True  | | $w,\ \mathcal S$ | $w=\ell_m/\ell$，$\mathcal S=\ell_{mm}/\ell-\frac32w^2$，$w_m=\mathcal S+\frac12w^2$ | model.tex:160-171 | mo
+   [D106] mathcal_bare L248   c82   region=text   in_math=True  | hcal S$ | $w=\ell_m/\ell$，$\mathcal S=\ell_{mm}/\ell-\frac32w^2$，$w_m=\mathcal S+\frac12w^2$ | model.tex:160-171 | model:Riccati 的 $\mathcal S$ 显式与三 case 的号 | $
+   [D106] mathcal_bare L248   c144  region=text   in_math=True  | 2$，$w_m=\mathcal S+\frac12w^2$ | model.tex:160-171 | model:Riccati 的 $\mathcal S$ 显式与三 case 的号 | $\frac32$ 改 $\frac12$ 则 Schwarzian 恒等式不成立 |
+   [D106] mathcal_bare L249   c116  region=text   in_math=True  | odel.tex:176-177 | 行列式恒等式 $X_mZ_{mm}-Z_mX_{mm}=\frac{3\kappa^2}{m_r^3}\mathcal W$ | 把 $3\kappa Q$ 写成 $\kappa Q$ 则右边系数不再是 $3\kappa^2$ |
+   [D106] mathcal_bare L251   c17   region=text   in_math=True  | | $D_*$ | $(m-n)\mathcal S$ 加中括号项乘 $w$ 再加 $\frac{m+n}{2}w^2$ | model.tex:199-203 | $\mathcal W=0$ 的等价号（引理 
+   [D106] mathcal_bare L251   c85   region=text   in_math=True  | n)\mathcal S$ 加中括号项乘 $w$ 再加 $\frac{m+n}{2}w^2$ | model.tex:199-203 | $\mathcal W=0$ 的等价号（引理 model:endpoint-algebra） | 中括号系数变则 Case 1、2 的 $D_*>0$ 分解不成 |
+   [D106] mathcal_bare L255   c169  region=text   in_math=True  | ian-formula 的两端赋值差 | $\frac{3}{4y^2}$ 换成别的则 $\frac32$ 系数与 Case 3 的基线 $\mathcal S_0$ 全错 |
+   [D106] mathcal_bare L260   c12   region=text   in_math=True  | | $T,\ A,\ \mathcal S_0$ | $T=2\ell z_1^3-\ell z_1^2-z_1+2$，$A=2\ell z_1^3-3\ell z_1^2+3z_1-2$，$\math
+   [D106] mathcal_bare L260   c97   region=text   in_math=True  |  $T=2\ell z_1^3-\ell z_1^2-z_1+2$，$A=2\ell z_1^3-3\ell z_1^2+3z_1-2$，$\mathcal S_0=\frac32(\ell^2-z_1^{-2})$ | model.tex:752-757 | 两个因式分解 eq:baseline-factorizat
+   [D106] mathcal_bare L260   c217  region=text   in_math=True  | :752-757 | 两个因式分解 eq:baseline-factorization、eq:Delta-factorization | $\mathcal S_0$ 的 $\frac32$ 一改，基线与真实 $\mathcal S$ 的差 model.tex:806-811 不再正 |
+   [D106] mathcal_bare L260   c253  region=text   in_math=True  | ization、eq:Delta-factorization | $\mathcal S_0$ 的 $\frac32$ 一改，基线与真实 $\mathcal S$ 的差 model.tex:806-811 不再正 |
+   [D106] mathcal_bare L262   c27   region=text   in_math=True  | | $j_\kappa,\Theta_\kappa,\mathcal L_\kappa$ | 参考特征三元组，$j(0,z)=z$，$\Theta(0,z)=\mathcal L(0,z)=0$ | fitting.tex:50-7
+   [D106] mathcal_bare L262   c80   region=text   in_math=True  | pa,\Theta_\kappa,\mathcal L_\kappa$ | 参考特征三元组，$j(0,z)=z$，$\Theta(0,z)=\mathcal L(0,z)=0$ | fitting.tex:50-76 | 斜率场 $J_\kappa$、曲率比较、拟合的存在性 | 初值若不为 0，$\Theta=zs/3
+   [D106] mathcal_bare L266   c14   region=text   in_math=True  | | $\partial_z\mathcal L_\kappa$ | $\int_0^s 2\cosh(2\Theta_\kappa)\partial_z\Theta_\kappa/q\,dq>0$ | fi
+   [D106] mathcal_bare L286   c29   region=text   in_math=True  | 台账读法上的三点自我提醒。第一，$\alpha$ 与 $\mathcal D$ 在 arcs 侧用真实 $M$、在 model 侧用模型 $H$，
+   [D106] mathcal_bare L289   c5    region=text   in_math=True  | 第二，$\mathcal S$ 一个符号在本篇有两处出现：model.tex:167 定义为 Schwarzian，model.tex:755 与
+   [D106] mathcal_bare L290   c22   region=text   in_math=True  | model.tex:805 是它的基线 $\mathcal S_0$ 与差 $\mathcal S-\mathcal S_0$，实际都是同一个量在不同点的取值。
+   [D106] mathcal_bare L290   c40   region=text   in_math=True  | model.tex:805 是它的基线 $\mathcal S_0$ 与差 $\mathcal S-\mathcal S_0$，实际都是同一个量在不同点的取值。
+   [D106] mathcal_bare L290   c51   region=text   in_math=True  | model.tex:805 是它的基线 $\mathcal S_0$ 与差 $\mathcal S-\mathcal S_0$，实际都是同一个量在不同点的取值。
+   [D106] mathcal_bare L398   c91   region=text   in_math=True  | r$ 交换子而直接写 $Dv=(DM)_r$，会得到 $Dv=-2Mr(1-v^2)/q^2+ \alpha_r v$ 这类多余项，后续 $\mathcal D(R/G)$ 的项数不对，model.tex:98-105 的
+   [D106] mathcal_bare L499   c3    region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L507   c6    region=text   in_math=True  | 第二步 $\mathcal T_\phi$ 上闭：$t_2>t_1$ 时端点序取弱极限 $a(t_2)\le a(t_1)$、$b(t_2)\ge b(t_1)$，
+   [D106] mathcal_bare L508   c12   region=text   in_math=True  | 所以若 $t_1\in\mathcal T_\phi$ 则更大峰也在，上闭（arcs.tex:420-426）。
+   [D106] mathcal_bare L520   c31   region=text   in_math=True  | (c) 理由：为什么需要"开射线"这个结论，并非"开集"：$\mathcal I=\mathcal I_+\cap\mathcal I_-$
+   [D106] mathcal_bare L520   c42   region=text   in_math=True  | (c) 理由：为什么需要"开射线"这个结论，并非"开集"：$\mathcal I=\mathcal I_+\cap\mathcal I_-$
+   [D106] mathcal_bare L520   c58   region=text   in_math=True  | (c) 理由：为什么需要"开射线"这个结论，并非"开集"：$\mathcal I=\mathcal I_+\cap\mathcal I_-$
+   [D106] mathcal_bare L531   c11   region=text   in_math=True  | - [推测] 若 $\mathcal T_\phi$ 非上闭（我把端点序的弱极限方向写反），则会得到一个开集
+   [D106] mathcal_bare L545   c3    region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L545   c14   region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L545   c30   region=fenced in_math=False | (fenced block)
+   [D106] mathbbP      L593   c23   region=text   in_math=True  | 第三个参数会把拟合从"坐标"变成"纤维"，$\mathbb R^2$ 上的 Jacobian 论证就没了立足点。
+   [D106] mathbbP      L598   c28   region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L616   c12   region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L627   c12   region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L637   c28   region=text   in_math=True  | 初值 $j(0,z)=z$、$\Theta(0,z)=\mathcal L(0,z)=0$ 来自 arcs.tex:344-348 在峰处的展开
+   [D106] mathbbP      L649   c20   region=text   in_math=True  | 满射（bijection onto $\mathbb R$）用两个"挡不住"论证：$z$ 大正时角度在 0 附近为正且不能下穿 0
+   [D106] mathcal_bare L653   c2    region=text   in_math=True  | $\mathcal L$ 的正则是 $\Theta=O(s)$ 使被积函数有界（fitting.tex:151-161）。
+   [D106] mathcal_bare L657   c36   region=text   in_math=True  | 用 $z$ 标签才能对任意 $s>0$ 全局定义 $j,\Theta,\mathcal L$ 而不涉及"基高"。
+   [D106] mathcal_bare L689   c9    region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L718   c11   region=text   in_math=True  |   $L(r)\ge\mathcal L_\kappa$ 会变成 $\le$，Case 3 的 $\kappa_+>\kappa_-$ 结论反过来，
+   [D106] mathcal_bare L841   c21   region=text   in_math=True  | 则 $L_{\mathrm{mod}}=\mathcal L_\kappa(r,\lambda+\kappa t)$，链式法则加参考方程得
+   [D106] mathcal_bare L842   c62   region=text   in_math=True  | $(L_{\mathrm{mod}})_r=\frac{2H}{r^2-H^2}+\kappa t_r\partial_z\mathcal L_\kappa(r,z)$，
+   [D106] mathcal_bare L843   c62   region=text   in_math=True  | 代回第二式，$\kappa$ 消掉给 $R=\frac{r(1-H_r^2)}{r^2-H^2}t_r\partial_z\mathcal L_\kappa>0$
+   [D106] mathcal_bare L845   c44   region=text   in_math=True  | $R=\partial_\lambda H_r=(1-H_r^2)\partial_z\mathcal L_0(r,\lambda)>0$ 直接参数微分（fitting.tex:506-531）。
+   [D106] mathcal_bare L849   c25   region=text   in_math=True  | 也让 model.tex:806-811 的 $\mathcal S-\mathcal S_0$ 表达式里 $2bz_1-\frac{d^2}2$ 这类
+   [D106] mathcal_bare L849   c36   region=text   in_math=True  | 也让 model.tex:806-811 的 $\mathcal S-\mathcal S_0$ 表达式里 $2bz_1-\frac{d^2}2$ 这类
+   [D106] mathcal_bare L856   c22   region=text   in_math=True  |   全局正性必须靠 $\partial_z\mathcal L_\kappa>0$；我早期笔记里"用展开定号"那页是错的。
+   [D106] mathcal_bare L858   c34   region=text   in_math=True  |   $R$ 的表达会多出 $t_r$ 项而 $\partial_z\mathcal L_0$ 前因子配不上，正性论证出现空洞。
+   [D106] mathbbP      L868   c22   region=fenced in_math=False | (fenced block)
+   [D106] mathbbP      L874   c28   region=fenced in_math=False | (fenced block)
+   [D106] mathbbP      L881   c33   region=text   in_math=True  | 故对目标 $\operatorname{arctanh}v\in\mathbb R$ 有唯一 $\kappa$，再回代得唯一 $\lambda$。
+   [D106] mathcal_bare L965   c33   region=text   in_math=True  | ### 6.1 目标归约：从 $(R/G)_r\le0$ 到 $\mathcal W\ge0$（model.tex:16-60）
+   [D106] mathbbP      L972   c30   region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L984   c11   region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L987   c14   region=text   in_math=True  | (b) 中间步骤。定义 $\mathcal W=RS_r-SR_r$、$\alpha=r/(r^2-H^2)$、
+   [D106] mathcal_bare L992   c68   region=text   in_math=True  | $R_r(PS-QR)-R(PS_r-QR_r)=P(R_rS-RS_r)+Q(-RR_r+RR_r)=P(SR_r-RS_r)=-P\mathcal W$。
+   [D106] mathcal_bare L993   c15   region=text   in_math=True  | 所以 $(R/G)_r=-P\mathcal W/G^2$，因 $P>0,G\ne0$，$(R/G)_r\le0$ 与 $\mathcal W\ge0$ 完全等价
+   [D106] mathcal_bare L993   c62   region=text   in_math=True  | 所以 $(R/G)_r=-P\mathcal W/G^2$，因 $P>0,G\ne0$，$(R/G)_r\le0$ 与 $\mathcal W\ge0$ 完全等价
+   [D106] mathcal_bare L994   c48   region=text   in_math=True  | （model.tex:60 "It therefore suffices to prove $\mathcal W\geq0$"）。
+   [D106] mathcal_bare L995   c47   region=text   in_math=True  | 这一步我一开始想直接对 $R/G$ 硬算三阶导，结果是七项；换成 Wronskian 型 $\mathcal W$
+   [D106] mathcal_bare L1005  c11   region=text   in_math=True  | - [推测] 若 $\mathcal W$ 的号只在 $P>0$ 之外再需要 $Q>0$，则 $\kappa=0$（此时 $Q$ 仍正）无碍，
+   [D106] mathcal_bare L1010  c16   region=text   in_math=True  | ### 6.2 运输算子与 $\mathcal D\mathcal W$ 的闭合（model.tex:62-105）
+   [D106] mathcal_bare L1010  c26   region=text   in_math=True  | ### 6.2 运输算子与 $\mathcal D\mathcal W$ 的闭合（model.tex:62-105）
+   [D106] mathcal_bare L1015  c2    region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L1019  c2    region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L1019  c12   region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L1020  c22   region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L1024  c11   region=text   in_math=True  | (b) 中间步骤。$\mathcal D$ 是"弧运输恒等式"在模型数据上的体现：弧侧 $DH=H/(r^2-H^2)-\lambda$
+   [D106] mathcal_bare L1030  c21   region=text   in_math=True  | $\partial_\lambda$：$\mathcal DP+\kappa P_\lambda\cdot0$... 关键是 $\mathcal D$ 本身含
+   [D106] mathcal_bare L1030  c65   region=text   in_math=True  | $\partial_\lambda$：$\mathcal DP+\kappa P_\lambda\cdot0$... 关键是 $\mathcal D$ 本身含
+   [D106] mathcal_bare L1032  c5    region=text   in_math=True  | 所以 $\mathcal D(\partial_\lambda H)$ 与 $\partial_\lambda(\mathcal DH)$ 不同，差 $\alpha_\lambda H_r
+   [D106] mathcal_bare L1032  c57   region=text   in_math=True  | 所以 $\mathcal D(\partial_\lambda H)$ 与 $\partial_\lambda(\mathcal DH)$ 不同，差 $\alpha_\lambda H_r$
+   [D106] mathcal_bare L1035  c56   region=text   in_math=True  | the coefficient of $\partial_\lambda$ is $\kappa$"。结果 $\mathcal DP=\gamma P-1$、
+   [D106] mathcal_bare L1036  c2    region=text   in_math=True  | $\mathcal DQ=\gamma Q-P$。这里 $\gamma$ 的出现是 $\alpha$ 对 $r$ 求导与 $H_r$ 项合并的产物：
+   [D106] mathcal_bare L1039  c6    region=text   in_math=True  | 交换子 $\mathcal D(f_r)=(\mathcal Df)_r+\alpha_rf_r$（model.tex:86）用于把 $R=\mathcal DP_r$
+   [D106] mathcal_bare L1039  c23   region=text   in_math=True  | 交换子 $\mathcal D(f_r)=(\mathcal Df)_r+\alpha_rf_r$（model.tex:86）用于把 $R=\mathcal DP_r$
+   [D106] mathcal_bare L1039  c71   region=text   in_math=True  | 交换子 $\mathcal D(f_r)=(\mathcal Df)_r+\alpha_rf_r$（model.tex:86）用于把 $R=\mathcal DP_r$
+   [D106] mathcal_bare L1040  c5    region=text   in_math=True  | 与 $(\mathcal DP)_r$ 连起来：$\mathcal DR=(\mathcal DP)_r+\alpha_rP_r=(\gamma P-1)_r+\alpha_rR =\ga
+   [D106] mathcal_bare L1040  c26   region=text   in_math=True  | 与 $(\mathcal DP)_r$ 连起来：$\mathcal DR=(\mathcal DP)_r+\alpha_rP_r=(\gamma P-1)_r+\alpha_rR =\gamma_rP+\gamma R-P_r\c
+   [D106] mathcal_bare L1040  c39   region=text   in_math=True  | 与 $(\mathcal DP)_r$ 连起来：$\mathcal DR=(\mathcal DP)_r+\alpha_rP_r=(\gamma P-1)_r+\alpha_rR =\gamma_rP+\gamma R-P_r\cdot0+\alpha_r
+   [D106] mathcal_bare L1040  c143  region=text   in_math=True  |  P-1)_r+\alpha_rR =\gamma_rP+\gamma R-P_r\cdot0+\alpha_rR$，$P_r=R$，故 $\mathcal DR=(\gamma+\alpha_r)R+\gamma_rP$，
+   [D106] mathcal_bare L1041  c22   region=text   in_math=True  | 正是 model.tex:89。类似地 $\mathcal DS=(\mathcal DQ)_r+\alpha_rQ_r=(\gamma Q-P)_r+\alpha_rS =\gamma_rQ+\gamma S-R+\al
+   [D106] mathcal_bare L1041  c35   region=text   in_math=True  | 正是 model.tex:89。类似地 $\mathcal DS=(\mathcal DQ)_r+\alpha_rQ_r=(\gamma Q-P)_r+\alpha_rS =\gamma_rQ+\gamma S-R+\alpha_rS$，即 mod
+   [D106] mathcal_bare L1043  c8    region=text   in_math=True  | 把四式代入 $\mathcal D(RS_r-SR_r)$，用 Leibniz 展开，含 $\alpha_{rr}$ 的两项分别是
+   [D106] mathcal_bare L1045  c45   region=text   in_math=True  | $\alpha_{rr}$ cancel"（model.tex:98-99）：出现在 $\mathcal D(R_r)$ 的 $\alpha_{rr}R$ 乘 $S$
+   [D106] mathcal_bare L1046  c7    region=text   in_math=True  | 与出现在 $\mathcal D(S_r)$ 的 $\alpha_{rr}S$ 乘 $R$，相减对消。同理 $(\gamma+2\alpha_r)$ 层
+   [D106] mathcal_bare L1047  c23   region=text   in_math=True  | 贡献 $2(\gamma+\alpha_r)\mathcal W$，加外层 $(\gamma+\alpha_r)\mathcal W$ 合计
+   [D106] mathcal_bare L1047  c57   region=text   in_math=True  | 贡献 $2(\gamma+\alpha_r)\mathcal W$，加外层 $(\gamma+\alpha_r)\mathcal W$ 合计
+   [D106] mathcal_bare L1048  c21   region=text   in_math=True  | $(2\gamma+3\alpha_r)\mathcal W$；$\gamma_r$ 层贡献 $\gamma_r(SQ... )$ 整理成 $\gamma_rG_r$，
+   [D106] mathcal_bare L1051  c9    region=text   in_math=True  | (c) 理由：$\mathcal D$ 里 $\kappa\partial_\lambda$ 的系数必须是 $\kappa$（二次 profile
+   [D106] mathcal_bare L1052  c18   region=text   in_math=True  | 基升时斜率变化率），换成别的数 $\mathcal DP=\gamma P-1$ 的 $-1$ 会变；$-1$ 这个常数后来
+   [D106] mathcal_bare L1054  c12   region=text   in_math=True  | 保证"外向导数 $=-\mathcal D/\alpha$"的符号固定，是整个"首次零点"论证的方向基础。
+   [D106] mathcal_bare L1055  c2    region=text   in_math=True  | $\mathcal D\mathcal W$ 是 $\mathcal W$ 的线性方程加源 $\gamma_rG_r-\gamma_{rr}G$，
+   [D106] mathcal_bare L1055  c12   region=text   in_math=True  | $\mathcal D\mathcal W$ 是 $\mathcal W$ 的线性方程加源 $\gamma_rG_r-\gamma_{rr}G$，
+   [D106] mathcal_bare L1055  c27   region=text   in_math=True  | $\mathcal D\mathcal W$ 是 $\mathcal W$ 的线性方程加源 $\gamma_rG_r-\gamma_{rr}G$，
+   [D106] mathcal_bare L1060  c13   region=text   in_math=True  | - [推测] 若我在 $\mathcal DQ$ 的推导里漏掉 $-P$（即忘了 $\partial_\kappa$ 微分 $\kappa\partial_\lambda$
+   [D106] mathcal_bare L1061  c15   region=text   in_math=True  |   系数产生的 $P$），$\mathcal DS$ 少一项 $-R$，则 $\alpha_{rr}$ 的对消不成立，
+   [D106] mathcal_bare L1062  c4    region=text   in_math=True  |   $\mathcal D\mathcal W$ 里残留 $\alpha_{rr}$，闭合失败。
+   [D106] mathcal_bare L1062  c14   region=text   in_math=True  |   $\mathcal D\mathcal W$ 里残留 $\alpha_{rr}$，闭合失败。
+   [D106] mathcal_bare L1065  c19   region=text   in_math=True  | - [推测] 若我把交换子写成 $(\mathcal Df)_r$（符号方向反），则 $(2\gamma+3\alpha_r)$ 变成
+   [D106] mathcal_bare L1083  c2    region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L1097  c2    region=text   in_math=True  | $\mathcal W=RS_r-SR_r=\frac{2r}3\cdot\frac{4r^2}5-\frac{4r^3}{15}\cdot\frac23 =\frac{8r^3}{
+   [D106] mathcal_bare L1099  c9    region=text   in_math=True  | 零点关系：若 $\mathcal W=0$ 且 $R>0$，令 $\sigma_0=R_r/R$，则 $RS_r=SR_r$ 给 $S_r=\sigma_0S$，
+   [D106] mathcal_bare L1101  c73   region=text   in_math=True  | 的号是 $\gamma_{rr}-\sigma_0\gamma_r>0$（model.tex:144-148），条件是 $\kappa>0,\mathcal W=0$。
+   [D106] mathcal_bare L1110  c11   region=text   in_math=True  | - [推测] 若 $\mathcal W$ 的小宽首项是偶次幂或系数为 0，"从正值出发"的起点就没了，
+   [D106] mathcal_bare L1130  c2    region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L1132  c6    region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L1138  c26   region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L1151  c19   region=text   in_math=True  | $w=(\log\ell)_m$、$\mathcal S=\{n(m)\}$ 即 Schwarzian（model.tex:172），
+   [D106] mathcal_bare L1152  c6    region=text   in_math=True  | $w_m=\mathcal S+\frac12w^2$ 是 $\ell_{mm}=\ell(w_m+w^2)$ 与 Schwarzian 定义的直接合并。
+   [D106] mathcal_bare L1159  c50   region=text   in_math=True  | 即 $rH_r-H=\lambda r^2P\cdot\frac1r$... 具体是 $H=r\,\mathcal H(\lambda r,\kappa r^3)$ 求导得
+   [D106] mathcal_bare L1160  c6    region=text   in_math=True  | $H_r=\mathcal H+r\mathcal H_\lambda\lambda+r\mathcal H_\kappa3\kappa r^2=H/r+\lambda P+3\kappa 
+   [D106] mathcal_bare L1160  c18   region=text   in_math=True  | $H_r=\mathcal H+r\mathcal H_\lambda\lambda+r\mathcal H_\kappa3\kappa r^2=H/r+\lambda P+3\kappa Q$
+   [D106] mathcal_bare L1160  c45   region=text   in_math=True  | $H_r=\mathcal H+r\mathcal H_\lambda\lambda+r\mathcal H_\kappa3\kappa r^2=H/r+\lambda P+3\kappa Q$
+   [D106] mathcal_bare L1161  c5    region=text   in_math=True  | （用 $\mathcal H=H/r$、$P=r\mathcal H_\lambda$、$Q=r^3\mathcal H_\kappa$ 的定义对得上），
+   [D106] mathcal_bare L1161  c25   region=text   in_math=True  | （用 $\mathcal H=H/r$、$P=r\mathcal H_\lambda$、$Q=r^3\mathcal H_\kappa$ 的定义对得上），
+   [D106] mathcal_bare L1161  c51   region=text   in_math=True  | （用 $\mathcal H=H/r$、$P=r\mathcal H_\lambda$、$Q=r^3\mathcal H_\kappa$ 的定义对得上），
+   [D106] mathcal_bare L1172  c3    region=text   in_math=True  | $B\mathcal S+[\frac{B(1+\ell)}{m+n}-B_m]w+\frac{(m+n)^2}{2m^2n^2}w^2$（model.tex:246-251），
+   [D106] mathcal_bare L1176  c107  region=text   in_math=True  | +3\kappa S_r)-(dR+3\kappa S)\kappa R_r=3\kappa^2(RS_r-SR_r) =3\kappa^2\mathcal W$；链式法则 $X_r=X_mm_m$ 等给出 $X_rZ_{rr}-Z_rX_{rr}=m_r^3(X_mZ_{mm}-Z_mX_{mm})$
+   [D106] mathcal_bare L1204  c25   region=text   in_math=True  | 而 $3\kappa^2$ 因子说明它同时是 $\mathcal W$ 的正倍数，因此 $\kappa\ne0$ 时 $\mathcal W=0$
+   [D106] mathcal_bare L1204  c61   region=text   in_math=True  | 而 $3\kappa^2$ 因子说明它同时是 $\mathcal W$ 的正倍数，因此 $\kappa\ne0$ 时 $\mathcal W=0$
+   [D106] mathcal_bare L1223  c2    region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L1270  c4    region=text   in_math=True  | 故 $\mathcal S=\{f,y\}\vert_{-m}-\ell^2\{f,y\}\vert_{n}$，展开：
+   [D106] mathcal_bare L1328  c23   region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L1353  c41   region=text   in_math=True  | （lem:arc-data），峰斜率 $z=d+\kappa t$；终值 $L=\mathcal L_\kappa(r,z(r))$，
+   [D106] mathcal_bare L1354  c12   region=text   in_math=True  | $\partial_z\mathcal L_\kappa>0$（fit:references），链式给
+   [D106] mathcal_bare L1355  c59   region=text   in_math=True  | $L_r\vert_{d,\kappa}=\sinh(2\theta)/r+\kappa t_r\partial_z\mathcal L_\kappa>0$，
+   [D106] mathcal_bare L1360  c38   region=text   in_math=True  | 具体是 $1-2n/m+\ell(2m/n-1)=\ell-1$），与 $\mathcal W=0$ 矛盾，故零点不在对角线
+   [D106] mathcal_bare L1366  c34   region=text   in_math=True  | 同一标量角方程给正终点角，model.tex:637-643）。$\mathcal S$ 的四个组在 $m>n,\ell\ge1$ 下
+   [D106] mathcal_bare L1369  c27   region=text   in_math=True  | （因 $\ell\ge1$ 且 $n<m$），故 $\mathcal S>0$（model.tex:644-650）。
+   [D106] mathcal_bare L1378  c10   region=text   in_math=True  | 分支内 $w_m=\mathcal S+\frac12w^2>0$（$\mathcal S>0$），故 $w>0$ 于分支内部
+   [D106] mathcal_bare L1378  c36   region=text   in_math=True  | 分支内 $w_m=\mathcal S+\frac12w^2>0$（$\mathcal S>0$），故 $w>0$ 于分支内部
+   [D106] mathcal_bare L1380  c34   region=text   in_math=True  | $\ell>1,w<0$ 违反已证结论；$w=0$ 时 $w_m=\mathcal S>0$、$\ell_{mm}=\ell(w_m+w^2)=\mathcal S>0$，
+   [D106] mathcal_bare L1380  c73   region=text   in_math=True  | ell>1,w<0$ 违反已证结论；$w=0$ 时 $w_m=\mathcal S>0$、$\ell_{mm}=\ell(w_m+w^2)=\mathcal S>0$，
+   [D106] mathcal_bare L1385  c9    region=text   in_math=True  | 加 $(m-n)\mathcal S>0$、$w\ge0$、$\frac{m+n}2w^2\ge0$ 得 $D_*>0$，故此 case 无零点
+   [D106] mathcal_bare L1390  c34   region=text   in_math=True  | $\tilde m=m/N,\tilde w=Nw,\tilde{\mathcal S}=N^2\mathcal S,\tilde D_*=ND_*,\tilde w_*=Nw_*$
+   [D106] mathcal_bare L1390  c49   region=text   in_math=True  | $\tilde m=m/N,\tilde w=Nw,\tilde{\mathcal S}=N^2\mathcal S,\tilde D_*=ND_*,\tilde w_*=Nw_*$
+   [D106] mathcal_bare L1391  c35   region=text   in_math=True  | （model.tex:704-718）；齐次幂次差（$w$ 一次、$\mathcal S$ 两次、$D_*$ 一次）正说明这些量的量纲。
+   [D106] mathcal_bare L1395  c5    region=text   in_math=True  | 固定 $\mathcal S$，把 $D_*$ 写成 $w$ 的二次式；其对 $w$ 的导数在 $w_*$ 处乘 $z_1^2$ 得
+   [D106] mathcal_bare L1400  c8    region=text   in_math=True  | 下面用基线 $\mathcal S_0=\frac32(\ell^2-z_1^{-2})$（即 $\mathcal S$ 公式里去掉 $b,d$ 项剩下的部分，
+   [D106] mathcal_bare L1400  c50   region=text   in_math=True  | 下面用基线 $\mathcal S_0=\frac32(\ell^2-z_1^{-2})$（即 $\mathcal S$ 公式里去掉 $b,d$ 项剩下的部分，
+   [D106] mathcal_bare L1403  c18   region=text   in_math=True  | 两条多项式恒等式：$(z_1-1)\mathcal S_0+[\cdots]w_*+\frac{z_1+1}2w_*^2=\frac{z_1-1}{2z_1^4}AT$，
+   [D106] mathcal_bare L1414  c19   region=text   in_math=True  | 故 $d^2<4bz_1$；此时 $\mathcal S-\mathcal S_0=(2bz_1-\frac{d^2}2)+\ell^2(2b+\frac{d^2}2-d)-\frac d{z_1}>0$
+   [D106] mathcal_bare L1414  c30   region=text   in_math=True  | 故 $d^2<4bz_1$；此时 $\mathcal S-\mathcal S_0=(2bz_1-\frac{d^2}2)+\ell^2(2b+\frac{d^2}2-d)-\frac d{z_1}>0$
+   [D106] mathcal_bare L1421  c4    region=text   in_math=True  | 把 $\mathcal S$ 重写成 $(2bz_1-\frac{d^2}2)+\ell^2(2b+\frac{d^2}2-d+\frac32)-\frac d{z_1}-\frac{3
+   [D106] mathcal_bare L1422  c50   region=text   in_math=True  | （model.tex:828-835）：若首括号非负，$-d/z_1>2/z_1^2$ 直接给 $\mathcal S>0$；
+   [D106] mathcal_bare L1425  c41   region=text   in_math=True  | 严格支配 $-\frac{3}{2z_1^2}$，$\ell^2$ 项正，故 $\mathcal S>0$（model.tex:836-848）；
+   [D106] mathcal_bare L1436  c30   region=text   in_math=True  | $T<0$ 用 $z_1>2$ 的显式估计，两支都归到 $\mathcal S>\mathcal S_0$ 或 $\mathcal S>0$。
+   [D106] mathcal_bare L1436  c41   region=text   in_math=True  | $T<0$ 用 $z_1>2$ 的显式估计，两支都归到 $\mathcal S>\mathcal S_0$ 或 $\mathcal S>0$。
+   [D106] mathcal_bare L1436  c58   region=text   in_math=True  | $T<0$ 用 $z_1>2$ 的显式估计，两支都归到 $\mathcal S>\mathcal S_0$ 或 $\mathcal S>0$。
+   [D106] mathcal_bare L1440  c45   region=text   in_math=True  |   $(w_*-w)/(m-n)$ 的号无法确定；$w>0$ 靠 $\partial_z\mathcal L_\kappa>0$，这条正性是唯一入口。
+   [D106] mathcal_bare L1451  c14   region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L1452  c3    region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L1452  c37   region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L1453  c18   region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L1453  c28   region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L1472  c9    region=text   in_math=True  | 外指方向是 $-\mathcal D/\alpha$，其 $\lambda$ 分量为 $-\kappa/\alpha$，$r$ 分量为 $1$），
+   [D106] mathcal_bare L1473  c8    region=text   in_math=True  | 故总导数 $=\mathcal W_r-\frac\kappa\alpha\mathcal W_\lambda=-\frac1\alpha\mathcal D\mathcal W$
+   [D106] mathcal_bare L1473  c38   region=text   in_math=True  | 故总导数 $=\mathcal W_r-\frac\kappa\alpha\mathcal W_\lambda=-\frac1\alpha\mathcal D\mathcal W$
+   [D106] mathcal_bare L1473  c70   region=text   in_math=True  | 故总导数 $=\mathcal W_r-\frac\kappa\alpha\mathcal W_\lambda=-\frac1\alpha\mathcal D\mathcal W$
+   [D106] mathcal_bare L1473  c80   region=text   in_math=True  | athcal W_r-\frac\kappa\alpha\mathcal W_\lambda=-\frac1\alpha\mathcal D\mathcal W$
+   [D106] mathcal_bare L1475  c4    region=text   in_math=True  | 使 $\mathcal W>0$ 对充分小 $s$ 成立。在任意零点 $\mathcal D\mathcal W=-G(\gamma_{rr}-\sigma_0\gamma_r)<0$
+   [D106] mathcal_bare L1475  c37   region=text   in_math=True  | 使 $\mathcal W>0$ 对充分小 $s$ 成立。在任意零点 $\mathcal D\mathcal W=-G(\gamma_{rr}-\sigma_0\gamma_r)<0$
+   [D106] mathcal_bare L1475  c47   region=text   in_math=True  | 使 $\mathcal W>0$ 对充分小 $s$ 成立。在任意零点 $\mathcal D\mathcal W=-G(\gamma_{rr}-\sigma_0\gamma_r)<0$
+   [D106] mathcal_bare L1478  c4    region=text   in_math=True  | 故 $\mathcal W>0$ 处处（$\kappa>0$）。
+   [D106] mathcal_bare L1480  c19   region=text   in_math=True  | $P,Q$、它们的 $r$ 导与 $\mathcal W$ 在 $(\lambda,\kappa)\mapsto(-\lambda,-\kappa)$ 下不变
+   [D106] mathcal_bare L1481  c39   region=text   in_math=True  | （model.tex:892-900）。$\kappa=0$：光滑依赖给 $\mathcal W\ge0$（非严格），
+   [D106] mathcal_bare L1483  c15   region=text   in_math=True  | 因为 $(R/G)_r=-P\mathcal W/G^2$ 只需要 $\ge0$ 的 $\mathcal W$；局部一致性与 $G>0$ 已知。
+   [D106] mathcal_bare L1483  c45   region=text   in_math=True  | 因为 $(R/G)_r=-P\mathcal W/G^2$ 只需要 $\ge0$ 的 $\mathcal W$；局部一致性与 $G>0$ 已知。
+   [D106] mathcal_bare L1488  c52   region=text   in_math=True  | total derivative along a characteristic."是方法论上的自白：$\mathcal W$ 的号是标量场的号，
+   [D106] mathcal_bare L1490  c22   region=text   in_math=True  | 不能混淆。这就是我为什么必须先把号归到 $\mathcal W$（6.1）再闭合。
+   [D106] mathcal_bare L1496  c13   region=text   in_math=True  | - [推测] 若我用 $\mathcal W_\lambda$ 的号做二阶导检验（Sylvester 型判据），需要
+   [D106] mathcal_bare L1497  c4    region=text   in_math=True  |   $\mathcal W$ 的临界结构分类，远比"首次零点"复杂；这条路我在草稿里试过并放弃。
+   [D106] mathcal_bare L1526  c13   region=text   in_math=True  | (b) 中间步骤。设 $\mathcal A(\psi)$ 为缩放 profile $\psi$ 在基高 0、宽度 1 处的
+   [D106] mathcal_bare L1528  c2    region=text   in_math=True  | $\mathcal A$ 在 $(0,0)$ 的导数矩阵由抛物变分表给出 $J=\begin{pmatrix}1/3&1/15\\2/3&4/15\end{pmatrix}$
+   [D106] mathcal_bare L1535  c96   region=text   in_math=True  | ho k(h)s+\rho^3\phi''(h)\frac{s^2}2+\rho^5\phi'''(h)\frac{s^3}6+\rho^7\mathcal R$
+   [D106] mathcal_bare L1538  c85   region=text   in_math=True  |  $\rho^{2j+1}$。写 $g=g_2+\rho^5\eta$，$\eta=\phi'''(h)\frac{s^3}6+\rho^2\mathcal R$。
+   [D106] mathcal_bare L1562  c13   region=text   in_math=True  | - [推测] 若我用 $\mathcal A$ 的三次展开，并非隐函数线性化，$\det J$ 的非零性会变成
+   [D106] mathcal_bare L1603  c19   region=text   in_math=True  |    得 $D(\kappa_r)=\mathcal T\kappa_r-C_r(\lambda-k)$，
+   [D106] mathcal_bare L1604  c5    region=text   in_math=True  |    $\mathcal T=\alpha_r+\frac{CQ}P-(C_\kappa-\frac QPC_\lambda)(\lambda-k)$
+   [D106] mathcal_bare L1606  c43   region=text   in_math=True  | 7. 沿特征 $w(s)=\kappa_r(h(s),s)$：$w'=-\frac{\mathcal T}\alpha w+\frac{C_r}\alpha(\lambda-k)$，
+   [D106] mathcal_bare L1609  c24   region=text   in_math=True  |    $\mu=e^{\int_{s_1}^s\mathcal T/\alpha}$ 使 $(\mu w)'\ge0$，故 $w(r)>0$
+   [D106] mathcal_bare L1616  c17   region=text   in_math=True  | 所有 $M$ 的依赖都被吸进 $\mathcal T$（$\kappa_r$ 的系数）里，"creates no additional independent
+   [D106] mathcal_bare L1617  c38   region=text   in_math=True  | source"；这就是为什么源项只剩 $C_r(\lambda-k)$。$\mathcal T$ 只需连续不需定号，
+   [D106] mathbbP      L1634  c10   region=fenced in_math=False | (fenced block)
+   [D106] root         L1750  c38   region=text   in_math=True  | （这里的 $8a_4$ 就是 $2b_0$，公共部分；奇次部分的分母 $(\root h)^3$ 与 $u^{3/2}$ 对应），
+   [D106] root         L1873  c55   region=text   in_math=True  | 从 $a_3<0,a_1\ge0,a_5\ge0$ 得 $0<\text{third }a\,h$，分母 $\root h$ 的幂用 `div_pos`+`nlinarith`），
+   [D106] root         L1913  c15   region=text   in_math=True  | $8a_4+(-a_1)/(\root T)^3\le\text{curvature }a\,h$，即 $\delta$ 的具体形式取为
+   [D106] root         L1914  c10   region=text   in_math=True  | $(-a_1)/(\root T)^3>0$，用 `root h\le\root T` 与 `pow_le_pow_left₀`、`div_le_div` 单调化，
+   [D106] root         L1914  c36   region=code   in_math=False | $(-a_1)/(\root T)^3>0$，用 `root h\le\root T` 与 `pow_le_pow_left₀`、`div_le_div` 单调化，
+   [D106] mathcal_bare L1973  c51   region=text   in_math=True  | （CoefficientCases.lean:110-118，$a_1<0$ 时 slope 在 $\mathcal{N}[>]0$ 趋于 atBot，
+   [D106] mathcal_bare L2013  c14   region=text   in_math=True  |   穷尽性陈述本身依赖 $\mathcal I$ 是单个开区间。
+   [D106] mathcal_bare L2183  c2    region=text   in_math=True  | $\mathcal W=RS_r-SR_r\ge 0$ 的符号没有理由保持不变。我算过最简单的情形（只平移 $\lambda$），
+   [D106] mathcal_bare L2184  c2    region=text   in_math=True  | $\mathcal W$ 里多出 $\kappa$ 的交叉项，在 $\kappa$ 变号时可正可负。所以这条弱化也走不通。
+   [D106] mathbbP      L2248  c2    region=text   in_math=True  | $\mathbb R^2\setminus\{0\}$ 全是周期轨道），而这要求把 $f_1,\dots,f_5$ 全部塞进 $\delta$，
+   [D106] mathbbP      L2567  c22   region=fenced in_math=False | (fenced block)
+   [D106] mathbbP      L2575  c28   region=fenced in_math=False | (fenced block)
+   [D106] mathcal_bare L2600  c47   region=text   in_math=True  | $\partial_r(R/G)\le0$（逐字与推导在第 6.1-6.2 节），等价地 $\mathcal W=RS_r-SR_r\ge0$。
+   [D106] mathcal_bare L2609  c6    region=text   in_math=True  | 最重的 $\mathcal W\ge0$ 在那里）与真实多项式的初等符号（application.tex 的四格）。
+   [D106] mathcal_bare L2621  c12   region=text   in_math=True  | 也就是第 6 节的 $\mathcal W\ge0$ 与第 7 节的形状比较。反过来，若计数端需要_generic_
+   [D106] mathcal_bare L2640  c5    region=text   in_math=True  |    $\mathcal W\ge0$（第 6 节，最长的一节）。
+   [D106] mathcal_bare L2962  c68   region=text   in_math=True  | | L Characteristic | 5 | 435 | 18578 | fitting.tex/model.tex 的特征线 $\mathcal D$ | 未读，按前缀推断 |
+   [D106] mathcal_bare L2978  c22   region=text   in_math=True  |    $f_\nu$ 的倒数平方积分界、$\mathcal W\ge0$）里，$\mathcal W$ 的全局正性
+   [D106] mathcal_bare L2978  c41   region=text   in_math=True  |    $f_\nu$ 的倒数平方积分界、$\mathcal W\ge0$）里，$\mathcal W$ 的全局正性
+   [D106] mathcal_bare L2979  c21   region=text   in_math=True  |    我在 tex 侧只复算到原点处 $\mathcal W=\frac{16}{45}r^3$；
+   [D106] mathcal_bare L3049  c5    region=text   in_math=True  | 1. $\mathcal W=RS_r-SR_r\ge0$ 的全局正性（model.tex 的 Theorem~thm:model-inequality 核心）。
+   [D106] mathcal_bare L3050  c16   region=text   in_math=True  |    我只独立复算了原点端：$\mathcal W=\tfrac{16}{45}r^3+O(r^5)$ 型的首项正性。
+
+====================================================================================================
+D238  D238-平方差自由集的固定幂节省.md  lines=884
+-- counts by (family, region, in-math-span) --
+   math_bare      text     in_math=True   2
+   mathbbP        text     in_math=True   34
+   mathcal_bare   text     in_math=True   78
+-- hits --
+   [D238] mathcal_bare L93    c35   region=text   in_math=True  | 的注记把这个反例写得极小：取不同素数 $p,q\le Q<pq$，$\mathcal P=\{p,q\}$，
+   [D238] mathbbP      L106   c39   region=text   in_math=True  | $X_{\mathcal P}=\prod_{p\in\mathcal P}\mathbb F_p$ 上：$X_{\mathcal P}$ 的特征
+   [D238] mathcal_bare L106   c5    region=text   in_math=True  | $X_{\mathcal P}=\prod_{p\in\mathcal P}\mathbb F_p$ 上：$X_{\mathcal P}$ 的特征
+   [D238] mathcal_bare L106   c28   region=text   in_math=True  | $X_{\mathcal P}=\prod_{p\in\mathcal P}\mathbb F_p$ 上：$X_{\mathcal P}$ 的特征
+   [D238] mathcal_bare L106   c58   region=text   in_math=True  | $X_{\mathcal P}=\prod_{p\in\mathcal P}\mathbb F_p$ 上：$X_{\mathcal P}$ 的特征
+   [D238] mathcal_bare L107   c9    region=text   in_math=True  | 只覆盖分母为 $\mathcal P$ 中素数乘积平方free部分的频率，全集合的有理
+   [D238] mathcal_bare L127   c6    region=text   in_math=True  | 素数集 $\mathcal P$（全部 $\ge P$）和实函数 $g$，定义
+   [D238] mathbbP      L128   c20   region=text   in_math=True  | $Z_{\mathcal P}(g)=\mathbb E\prod_{v\in V}g(z_v)$，
+   [D238] mathcal_bare L128   c5    region=text   in_math=True  | $Z_{\mathcal P}(g)=\mathbb E\prod_{v\in V}g(z_v)$，
+   [D238] mathcal_bare L129   c34   region=text   in_math=True  | 其中 $(z_v)_{v\in V}$ 服从某个待构造的 $X_{\mathcal P}$ 上的概率律
+   [D238] mathcal_bare L130   c7    region=text   in_math=True  | $\mu_{\mathcal P}=\bigotimes_{p}\mu_p$。$d$ 次根
+   [D238] mathcal_bare L131   c18   region=text   in_math=True  | $\lVert g\rVert_{\mathcal P}=Z_{\mathcal P}(g)^{1/d}$ 要成为半范。
+   [D238] mathcal_bare L131   c33   region=text   in_math=True  | $\lVert g\rVert_{\mathcal P}=Z_{\mathcal P}(g)^{1/d}$ 要成为半范。
+   [D238] mathbbP      L136   c3    region=text   in_math=True  | $|\mathbb E g|\le\lVert g\rVert$ 的均值控制。真正需要的东西比图模板自由得多：
+   [D238] mathcal_bare L140   c2    region=text   in_math=True  | $\mathcal P_N$ 为 $P$ 到 $N^\beta$ 之间的素数，$\beta=10^{-5}$
+   [D238] mathcal_bare L143   c16   region=text   in_math=True  | $\le Q$、素因子全在 $\mathcal P_N$ 内的有理 Fourier 系数（含零频），即
+   [D238] mathcal_bare L144   c4    region=text   in_math=True  | $G=\mathcal L_{[N],\mathcal P_N,Q}1_A$（lifts.tex:40-46），然后
+   [D238] mathcal_bare L144   c20   region=text   in_math=True  | $G=\mathcal L_{[N],\mathcal P_N,Q}1_A$（lifts.tex:40-46），然后
+   [D238] mathcal_bare L145   c12   region=text   in_math=True  | $Y(N,A)=Z_{\mathcal P_N}(G)$（transfer.tex:53-57）。$G$ 的常系数恰为
+   [D238] mathcal_bare L149   c2    region=text   in_math=True  | $\mathcal Y(N):=\max_A Y(N,A)\ll N^{-a_0}$（induction.tex:21-25, 39-51），
+   [D238] mathbbP      L160   c19   region=text   in_math=True  | $\Q_p^*=\{u^2:u\in\mathbb F_p^\times\}$，
+   [D238] mathbbP      L163   c18   region=text   in_math=True  | （三）条件混合：对均值零的 $f:\mathbb F_p\to\mathbb C$，
+   [D238] mathbbP      L163   c32   region=text   in_math=True  | （三）条件混合：对均值零的 $f:\mathbb F_p\to\mathbb C$，
+   [D238] mathbbP      L164   c8    region=text   in_math=True  | $\lVert\mathbb E[f(z_v)\mid(z_w)_{w\ne v}]\rVert_2\le p^{-1/64}\lVert f\rVert_2$
+   [D238] mathbbP      L195   c25   region=text   in_math=True  | 由 $-1=a+b$（$S=\{x^2:x\in\mathbb F_p\}$ 与 $-1-S$ 各 $(p+1)/2$ 元必相交，$a,b$
+   [D238] mathbbP      L280   c8    region=text   in_math=True  | $\lvert\mathbb E\prod_{(u,v)}A_p(z_v-z_u)-2^{-m}\rvert\le m\delta_p$
+   [D238] mathbbP      L284   c49   region=text   in_math=True  | $\lVert B\rVert_{\mathrm{op}}^4\le\sum_r s_r^4 =\mathbb E_{x^0,x^1,y^0,y^1}\prod B$，把 $\Omega=\{0,1\}^2$ 每个角度的拷贝图
+   [D238] mathcal_bare L297   c13   region=text   in_math=True  | $g,g_v$，$Z_{\mathcal P}(g)\ge0$ 且
+   [D238] math_bare    L298   c20   region=text   in_math=True  | $\lvert\mathcal Z_{\math P}((g_v))\rvert\le\prod_v Z_{\mathcal P}(g_v)^{1/d}$。证明的第一层：乘积律 $\mu_{\mathcal P}$ 在
+   [D238] mathcal_bare L298   c8    region=text   in_math=True  | $\lvert\mathcal Z_{\math P}((g_v))\rvert\le\prod_v Z_{\mathcal P}(g_v)^{1/d}$。证明的第一层：乘积律 $\mu_{\m
+   [D238] mathcal_bare L298   c55   region=text   in_math=True  | $\lvert\mathcal Z_{\math P}((g_v))\rvert\le\prod_v Z_{\mathcal P}(g_v)^{1/d}$。证明的第一层：乘积律 $\mu_{\mathcal P}$ 在
+   [D238] mathcal_bare L298   c96   region=text   in_math=True  | P}((g_v))\rvert\le\prod_v Z_{\mathcal P}(g_v)^{1/d}$。证明的第一层：乘积律 $\mu_{\mathcal P}$ 在
+   [D238] mathcal_bare L315   c21   region=text   in_math=True  | 极大赋值 $M=\max_a\lvert\mathcal Z_{\mathcal P}((f_{a(v)}))\rvert$，
+   [D238] mathcal_bare L315   c33   region=text   in_math=True  | 极大赋值 $M=\max_a\lvert\mathcal Z_{\mathcal P}((f_{a(v)}))\rvert$，
+   [D238] mathcal_bare L318   c31   region=text   in_math=True  | 沿反排序列折叠到底得到常赋值，最后一步是某个对角值 $Z_{\mathcal P}(f_i)$，
+   [D238] mathcal_bare L319   c16   region=text   in_math=True  | 故 $M=\max_i Z_{\mathcal P}(f_i)$（functional.tex:146-149）。$M=0$ 时
+   [D238] mathcal_bare L321   c14   region=text   in_math=True  | $f_v=g_v/(Z_{\mathcal P}(g_v)+\epsilon)^{1/d}$ 再令 $\epsilon\downarrow0$
+   [D238] mathcal_bare L327   c5    region=text   in_math=True  | $Z_{\mathcal P}(g_1+g_2)$ 逐项 Hölder 得
+   [D238] mathbbP      L329   c3    region=text   in_math=True  | $|\mathbb E g|\le\lVert g\rVert$ 由单槽边缘均匀加常数 1 填入其余 $d-1$ 槽；
+   [D238] mathbbP      L332   c8    region=text   in_math=True  | $\lVert\mathbb E_B g\rVert_{\mathcal P\setminus B} =\lVert\mathbb E_B g\rVert_{\mathcal P}\le\lVe
+   [D238] mathbbP      L332   c59   region=text   in_math=True  | $\lVert\mathbb E_B g\rVert_{\mathcal P\setminus B} =\lVert\mathbb E_B g\rVert_{\mathcal P}\le\lVert g\rVert_{\mathcal P}$
+   [D238] mathcal_bare L332   c29   region=text   in_math=True  | $\lVert\mathbb E_B g\rVert_{\mathcal P\setminus B} =\lVert\mathbb E_B g\rVert_{\mathcal P}\le\lVert g\rVert_{\mathcal 
+   [D238] mathcal_bare L332   c80   region=text   in_math=True  | athbb E_B g\rVert_{\mathcal P\setminus B} =\lVert\mathbb E_B g\rVert_{\mathcal P}\le\lVert g\rVert_{\mathcal P}$
+   [D238] mathcal_bare L332   c110  region=text   in_math=True  | setminus B} =\lVert\mathbb E_B g\rVert_{\mathcal P}\le\lVert g\rVert_{\mathcal P}$
+   [D238] mathbbP      L333   c38   region=text   in_math=True  | （functional.tex:198-204, 229-242）：把 $\mathbb E_B$ 写成群 $G_B$ 上的平移平均，
+   [D238] mathcal_bare L340   c5    region=text   in_math=True  | $X_{\mathcal P}$ 的特征由约化分母整除 $\prod_{p\in\mathcal P}p$ 的
+   [D238] mathcal_bare L340   c41   region=text   in_math=True  | $X_{\mathcal P}$ 的特征由约化分母整除 $\prod_{p\in\mathcal P}p$ 的
+   [D238] mathbbP      L345   c6    region=text   in_math=True  | $L^2(\mathbb F_p)=\mathbb C1\oplus H_p^0$，
+   [D238] mathbbP      L345   c19   region=text   in_math=True  | $L^2(\mathbb F_p)=\mathbb C1\oplus H_p^0$，
+   [D238] mathbbP      L347   c21   region=text   in_math=True  | $L^2(Y_p,\lambda_p)=\mathbb C1\oplus K_p^0$；$T_p$ 保常数故
+   [D238] mathbbP      L360   c7    region=text   in_math=True  | $a(y)=\mathbb E_xK(x,y)$、$b_f(y)=\mathbb E_xf(x)K(x,y)$ 由 list-mixing 同时控制
+   [D238] mathbbP      L360   c34   region=text   in_math=True  | $a(y)=\mathbb E_xK(x,y)$、$b_f(y)=\mathbb E_xf(x)K(x,y)$ 由 list-mixing 同时控制
+   [D238] mathbbP      L363   c10   region=text   in_math=True  | $Z_0^{-1}\mathbb E_yL(y)\lvert b_f(y)\rvert^2/a(y)$，$a$ 可以很小甚至为零，
+   [D238] mathbbP      L383   c34   region=text   in_math=True  | 独立均匀列表取值，例外律的对分布是 $\mathrm{Unif}(\mathbb F_p^2)$，于是全律对
+   [D238] mathbbP      L384   c63   region=text   in_math=True  | 分布是混合 $(1-\eta_p)\mathrm{Unif}(\Omega_p) +\eta_p\mathrm{Unif}(\mathbb F_p^2)$（tuples.tex:680-687）。算术前进一步：
+   [D238] mathbbP      L391   c35   region=text   in_math=True  | lifts.tex 全节是误差分析的弹药库。先记装置：$f:I\to\mathbb C$，
+   [D238] mathcal_bare L393   c13   region=text   in_math=True  | $q_U$ 的频率块，$\mathcal L_{I,\mathcal P,Q}f=\sum_{q_U\le Q}f_U$，
+   [D238] mathcal_bare L393   c27   region=text   in_math=True  | $q_U$ 的频率块，$\mathcal L_{I,\mathcal P,Q}f=\sum_{q_U\le Q}f_U$，
+   [D238] mathcal_bare L394   c8    region=text   in_math=True  | 任意保留族 $\mathcal F$（完整分母类的子集族）都可以。核心断言
+   [D238] mathbbP      L396   c21   region=text   in_math=True  | $\sum_{U\supseteq B}\mathbb E(\lvert f_U\rvert^2\mid z_B) \le4M^24^{\lvert B\rvert}$。系数显式：对 $B$ 上全体特征求和使每个
+   [D238] mathcal_bare L408   c20   region=text   in_math=True  | 平方函数 $S=(\sum_{U\in\mathcal F}\lvert f_U\rvert^2)^{1/2}$ 的矩：展开
+   [D238] mathbbP      L409   c6    region=text   in_math=True  | $T_r=\mathbb E S^{2r}$ 的前 $r-1$ 个因子、固定支撑、把最后一个按与
+   [D238] mathbbP      L417   c2    region=text   in_math=True  | $\mathbb E_{X^1}D_U=f_U$，Jensen 转移、随机符号化，逐颜色类用 Khintchine
+   [D238] mathcal_bare L422   c8    region=text   in_math=True  | $\lVert\mathcal L^{\mathcal F}f\rVert_{2r} \le2M(k+1)A_r^k$，$A_r=2eK_{2r}\,2^{(r+3)/4}$。
+   [D238] mathcal_bare L422   c20   region=text   in_math=True  | $\lVert\mathcal L^{\mathcal F}f\rVert_{2r} \le2M(k+1)A_r^k$，$A_r=2eK_{2r}\,2^{(r+3)/4}$。
+   [D238] mathcal_bare L424   c25   region=text   in_math=True  | 是 $M Q^{o(1)}$，一致于区间位置、$\mathcal P$、$\mathcal F$
+   [D238] mathcal_bare L424   c38   region=text   in_math=True  | 是 $M Q^{o(1)}$，一致于区间位置、$\mathcal P$、$\mathcal F$
+   [D238] mathcal_bare L434   c6    region=text   in_math=True  | 截断族 $\mathcal F$ 也随之变化，任何依赖 $\mathcal F$ 的常数都会毁掉
+   [D238] mathcal_bare L434   c30   region=text   in_math=True  | 截断族 $\mathcal F$ 也随之变化，任何依赖 $\mathcal F$ 的常数都会毁掉
+   [D238] mathbbP      L444   c25   region=text   in_math=True  | kernel.tex 负责把"$y-x$ 是 $\mathbb F_p$ 中非零平方"的有限域信息换成"$y-x$ 是
+   [D238] mathbbP      L491   c2    region=text   in_math=True  | $\mathbb E_m\rho_D(m)e(\alpha_Dm^2)=e(\alpha_Dr)$ 当且仅当
+   [D238] mathcal_bare L506   c2    region=text   in_math=True  | $\mathcal B_h(F,J)=N^{-1}\int S_h(\alpha) \widetilde F(-\alpha)\widetilde J(\alpha)d\alpha$
+   [D238] mathcal_bare L509   c2    region=text   in_math=True  | $\mathcal B_k(F,J)$ 逐项含 $F(x)J(x+m^2)=0$，与权重符号无关
+   [D238] mathbbP      L528   c6    region=text   in_math=True  | $1_A=\mathbb E_s f_s$（transfer.tex:59-64），$M_0$ 因子刻意保留进估计。
+   [D238] mathcal_bare L530   c43   region=text   in_math=True  | 精确纤维引理（transfer.tex:70-117）：钉住 $B\subseteq\mathcal P_N$ 的
+   [D238] mathcal_bare L535   c5    region=text   in_math=True  | $Z_{\mathcal S}(g)\le\lambda^d \max_{A'\subseteq[N']}\mathcal Y(N',A')+\cdots$ 加 $C_{\rm tr}N^
+   [D238] mathcal_bare L535   c54   region=text   in_math=True  | $Z_{\mathcal S}(g)\le\lambda^d \max_{A'\subseteq[N']}\mathcal Y(N',A')+\cdots$ 加 $C_{\rm tr}N^{-\sigma_0}$，
+   [D238] mathcal_bare L542   c12   region=text   in_math=True  | $\lvert Z_{\mathcal S}(g)-Z_{\mathcal S}(g_{\le H})\rvert \le C_\varepsilon H^{-\gamma}q_BN^\varepsil
+   [D238] mathcal_bare L542   c30   region=text   in_math=True  | $\lvert Z_{\mathcal S}(g)-Z_{\mathcal S}(g_{\le H})\rvert \le C_\varepsilon H^{-\gamma}q_BN^\varepsilon$。
+   [D238] mathcal_bare L552   c5    region=text   in_math=True  | $Z_{\mathcal S}(g_{\le H})\le\lambda^d\max_j Z_{\mathcal S}(h_j^H)$。transfer.tex:310-311 特意点破：
+   [D238] mathcal_bare L552   c49   region=text   in_math=True  | $Z_{\mathcal S}(g_{\le H})\le\lambda^d\max_j Z_{\mathcal S}(h_j^H)$。transfer.tex:310-311 特意点破："平均 by $D$ 是
+   [D238] mathcal_bare L557   c31   region=text   in_math=True  | 一次大导体（这次无特殊化）；$h_j^{Q'}$ 只依赖 $\mathcal S'=\mathcal P_{N'}\setminus B$，而把 $B\cap\mathcal P_{N'}$ 平均掉正好从全提升
+   [D238] mathcal_bare L557   c43   region=text   in_math=True  | 一次大导体（这次无特殊化）；$h_j^{Q'}$ 只依赖 $\mathcal S'=\mathcal P_{N'}\setminus B$，而把 $B\cap\mathcal P_{N'}$ 平均掉正好从全提升
+   [D238] mathcal_bare L557   c80   region=text   in_math=True  | 特殊化）；$h_j^{Q'}$ 只依赖 $\mathcal S'=\mathcal P_{N'}\setminus B$，而把 $B\cap\mathcal P_{N'}$ 平均掉正好从全提升
+   [D238] mathcal_bare L559   c5    region=text   in_math=True  | $Z_{\mathcal S}(h_j^{Q'})=Z_{\mathcal S'}(h_j^{Q'}) \le Z_{\mathcal P_{N'}}(u'_j)=Y(N',A'_j)$（
+   [D238] mathcal_bare L559   c30   region=text   in_math=True  | $Z_{\mathcal S}(h_j^{Q'})=Z_{\mathcal S'}(h_j^{Q'}) \le Z_{\mathcal P_{N'}}(u'_j)=Y(N',A'_j)$（transfer.tex:314-351）。
+   [D238] mathcal_bare L559   c60   region=text   in_math=True  | $Z_{\mathcal S}(h_j^{Q'})=Z_{\mathcal S'}(h_j^{Q'}) \le Z_{\mathcal P_{N'}}(u'_j)=Y(N',A'_j)$（transfer.tex:314-351）。
+   [D238] mathcal_bare L578   c2    region=text   in_math=True  | $\mathcal L_{[N]}f_s=\sum_iw_i\mathcal L_{I_i}f_s$，积分变成"每槽独立
+   [D238] mathcal_bare L578   c31   region=text   in_math=True  | $\mathcal L_{[N]}f_s=\sum_iw_i\mathcal L_{I_i}f_s$，积分变成"每槽独立
+   [D238] mathcal_bare L617   c25   region=text   in_math=True  | $\rho$ 的好赋值成立）拼成严格递推。记 $\mathcal Y(n)=\max_AY(n,A)$
+   [D238] mathbbP      L626   c26   region=text   in_math=True  | 由 multilinearity，$Y(N,A)=\mathbb E_{\boldsymbol s}\int\Phi_{\boldsymbol s} d\bigotimes\mu_p$（induction.tex:58-71，$1
+   [D238] mathbbP      L626   c119  region=text   in_math=True  | s}\int\Phi_{\boldsymbol s} d\bigotimes\mu_p$（induction.tex:58-71，$1_A=\mathbb E_sf_s$ 的提升线性化）。
+   [D238] mathcal_bare L630   c29   region=text   in_math=True  | $\sum_Bq_B\eta_B=\prod_{p\in\mathcal P_N}(1+p\eta_p)-1\le \prod_{p\ge P}(1+p^{-3})-1\le1/4$（induction.tex:120-126）把计数一
+   [D238] mathcal_bare L633   c23   region=text   in_math=True  | $\le\eta_B(\lambda_B^d\mathcal Y(n_B)+K_2N^{-\sigma_0})$，
+   [D238] mathcal_bare L637   c2    region=text   in_math=True  | $\mathcal Y(N)\le KN^{-\sigma_0}+(1+u_N)\bigl((1-\rho) \mathcal Y(n_\varnothing)+\rho\sum_{
+   [D238] mathcal_bare L637   c56   region=text   in_math=True  | $\mathcal Y(N)\le KN^{-\sigma_0}+(1+u_N)\bigl((1-\rho) \mathcal Y(n_\varnothing)+\rho\sum_{q_B\le N^\tau}\eta_B\mathcal Y(n_B) \bigr)$，$u_N\to0$。
+   [D238] mathcal_bare L637   c112  region=text   in_math=True  | bigl((1-\rho) \mathcal Y(n_\varnothing)+\rho\sum_{q_B\le N^\tau}\eta_B\mathcal Y(n_B) \bigr)$，$u_N\to0$。
+   [D238] mathcal_bare L651   c2    region=text   in_math=True  | $\mathcal Y(N)\le KN^{-\sigma_0}+(1+u_N)\theta C_0N^{-a_0} \le\kappa N^{-a_0}+(1-\kappa)C_0
+   [D238] mathbbP      L656   c9    region=text   in_math=True  | 可达。最后，$|\mathbb E G|=\lvert A\rvert/N$（非零特征在均匀边缘下零均值）接
+   [D238] mathcal_bare L668   c6    region=text   in_math=True  | $Q,H,\mathcal P_N$ 随 $N$ 动。表下说明（parameter-roles.tex:23-26）：
+   [D238] mathcal_bare L721   c34   region=text   in_math=True  | 两边同时动。其五，半范的零空间：$\lVert g\rVert_{\mathcal P}=0$ 的
+   [D238] mathcal_bare L743   c12   region=text   in_math=True  | $Y(N,A)=Z_{\mathcal P_N}(G)$ 无误，但 §7 首段引用的算子式中误写
+   [D238] math_bare    L744   c14   region=text   in_math=True  | $\mathcal Z_{\math P}$，应为 $\mathcal Z_{\mathcal P}$；其二，§7 末段
+   [D238] mathcal_bare L744   c2    region=text   in_math=True  | $\mathcal Z_{\math P}$，应为 $\mathcal Z_{\mathcal P}$；其二，§7 末段
+   [D238] mathcal_bare L744   c28   region=text   in_math=True  | $\mathcal Z_{\math P}$，应为 $\mathcal Z_{\mathcal P}$；其二，§7 末段
+   [D238] mathcal_bare L744   c40   region=text   in_math=True  | $\mathcal Z_{\math P}$，应为 $\mathcal Z_{\mathcal P}$；其二，§7 末段
+   [D238] mathbbP      L775   c2    region=text   in_math=True  | $\mathbb F_p^2$ 双射（$p$ 奇），$\sum_{a,b}e(kab/p)=p$（$a$ 或 $b$ 为零共
+   [D238] mathcal_bare L835   c105  region=text   in_math=True  | }=\max\{3,(C_*r^n/c_*)^{16}\}$ | build/sections/tuples.tex:471-475 | $\mathcal P_N$ 素数下限与 $M_0$ 定义 | 降 $P$ 则配对补偿不足，切割正性连带半范全崩 |
+   [D238] mathbbP      L843   c26   region=text   in_math=True  | | $Z_{\mathcal P}(g)$ | $\mathbb E\prod_{v\in V}g(z_v)$ | build/sections/functional.tex:31-37 | $Y(N,A)$ 与密度不等式全链 |
+   [D238] mathcal_bare L843   c7    region=text   in_math=True  | | $Z_{\mathcal P}(g)$ | $\mathbb E\prod_{v\in V}g(z_v)$ | build/sections/functional.tex:31-37 | 
+   [D238] mathcal_bare L844   c23   region=text   in_math=True  | | 带符号 Hölder | $\lvert\mathcal Z((g_v))\rvert\le\prod_v Z(g_v)^{1/d}$ | build/sections/functional.tex:43-54 | 三角
+   [D238] mathcal_bare L847   c17   region=text   in_math=True  | | 提升矩界 | $\lVert\mathcal L^{\mathcal F}f\rVert_{2r}\le2M(k+1)A_r^k$ | build/sections/lifts.tex:68-91 | 全文所
+   [D238] mathcal_bare L847   c29   region=text   in_math=True  | | 提升矩界 | $\lVert\mathcal L^{\mathcal F}f\rVert_{2r}\le2M(k+1)A_r^k$ | build/sections/lifts.tex:68-91 | 全文所有 $N^{o(1)}$
+   [D238] mathcal_bare L878   c4    region=text   in_math=True  | | $\mathcal P_N$ | $[P,N^\beta]$ 内的素数集 | build/sections/transfer.tex:42-50 | $Y(N,A)$ 的定义域与张量
+-- D238 extra counters (whole file, raw string counts) --
+   mathcal P    42
+   mathcal{P}   0
+   mathbb P     0
+   mathbb{P}    0
+   bare \P      0
+   math P       2
+-- D238 \math P occurrences by line --
+   L298   | ...$\lvert\mathcal Z_{\math P}((g_v))\rvert\le\prod_v Z_{\mathcal P}(g_v)^{1/d}$。证明的第一层：乘积律 $\mu_{\...
+   L744   | ...$\mathcal Z_{\math P}$，应为 $\mathcal Z_{\mathcal P}$；其二，§7 末段...
+

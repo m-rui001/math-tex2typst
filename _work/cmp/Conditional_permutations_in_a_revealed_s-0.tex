@@ -1,0 +1,28 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+\newcommand{\TV}{\mathrm{TV}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\HS}{\mathrm{HS}}
+\newcommand{\E}{\mathbb E}
+\newcommand{\one}{\mathbf1}
+\newcommand{\id}{\mathrm{id}}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\tr}{tr}
+\begin{document}
+\begin{tikzpicture}[>=Stealth, node distance=18mm]
+\node (a) {$[m]$};
+\node[right=24mm of a] (f) {$F_0$};
+\node[right=30mm of f] (g) {$F_T$};
+\node[right=24mm of g] (b) {$[m]$};
+\draw[->] (a)-- node[above] {$\iota_0$} (f);
+\draw[->] (f)-- node[above] {$T_e$} (g);
+\draw[->] (g)-- node[above] {$\iota_T^{-1}$} (b);
+\draw[->] (a.south) to[out=-45,in=-135] node[below] {$g_e=\iota_T^{-1}T_e\iota_0$} (b.south);
+\end{tikzpicture}
+\end{document}

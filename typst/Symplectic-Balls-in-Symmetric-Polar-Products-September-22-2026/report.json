@@ -1,0 +1,30 @@
+{
+  "paper": "Symplectic-Balls-in-Symmetric-Polar-Products-September-22-2026",
+  "ok": true,
+  "typ_lines": 493,
+  "included_pdf_pages": 0,
+  "formulas": 506,
+  "math_failed": 0,
+  "labels": 52,
+  "equations": 3,
+  "theorems": 5,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "506"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Symplectic-Balls-in-Symmetric-Polar-Products-September-22-2026.tex"
+}

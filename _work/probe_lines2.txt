@@ -1,0 +1,52 @@
+  19  content: unclosed delimiter й░йд \\?\C:\Users\hp\AppData\Local\Temp\tmp
+          content((2, 0.53), [radial contraction#linebreak()stops at ( Y_)])
+          content((1.7, 0.49), [test: (_n)])
+          content((9.72, 2.96), [A complete transit with $D^f$-length at most $B_0$ must enter the $rho$-collar, since \[ e^ Hm_*w
+  12  content: unknown symbol modifier й░йд \\?\C:\Users\hp\AppData\Local\Tem
+          content((2.45, -0.88), [$Q=Q_1"IQ"_2, |E(I)|gt.eq31$])
+          content((7.3, 0.95), [old class#linebreak()weight $gt.eq12$], fill: rgb("#f5f5f5"))
+          content((0, 0), [Spectral vectors#linebreak() ${h_n}=1$, radius $delta_n$#linebreak()$m_t{"TU"_"th"_n}^2gt.eq4gamma$])
+   9  content: expected function, found content й░йд \\?\C:\Users\hp\AppData\
+          content((0.3, -0.85), [Compress (U_j) using (D_y,j);#linebreak()(D_z,j) remains available in (E).])
+          content((6.75, 0.65), [Heat on;#linebreak()$beta$ off#linebreak()($v=r$)])
+          content((5, -1.9), [Remaining smooth canonical case#linebreak()(W) non-uniruled, non-Moishezon, (q(W)=0) (a(W)>0): Propo
+   4  content: unknown variable: eq0 й░йд \\?\C:\Users\hp\AppData\Local\Temp\
+          content((0.75, 1.28), [$.eq0$])
+          content((0.85, 0.72), [$"fgt".eq0$])
+          content((6.2, -1.55), [$E "Igt".eq0$ for the two blocks#linebreak()Section~sec:coupling])
+   3  content: unknown variable: eq1 й░йд \\?\C:\Users\hp\AppData\Local\Temp\
+          content((7.3, -5.85), [${{"macroblock" "skips"}}"Plt".eq1$])
+          content((1.65, -1.35), [$0lt.eq "slt".eq1, 0<s_"Hlt".eq1$])
+          content((0, -1.782), [$-1lt.eq "xlt".eq1$])
+   2  content: the character `^` is not valid in code й░йд \\?\C:\Users\hp\Ap
+          content((3, 0), [(y^i,1)#linebreak()(w^i,1y^i,1=a_i,0)])
+          content((6.1, 1.6), [(f)#linebreak()(ord_F_D(f^*t)=m_D)])
+   2  content: unknown variable: eq2 й░йд \\?\C:\Users\hp\AppData\Local\Temp\
+          content((0, 1.55), [explicit rational entries; $"dlt".eq2"ns"^2$])
+          content((1.575, 1.418), [$lambda_"vgt".eq2/3$])
+   2  content: expected expression й░йд \\?\C:\Users\hp\AppData\Local\Temp\tm
+          content((0, 0), [block A: $kappa/$])
+          content((3.68, 1.5), [slope $beta=v/$])
+   2  content: unexpected end of block comment й░йд \\?\C:\Users\hp\AppData\L
+          content((4.12, -2.44), [$L_*/3+O(b_m)$])
+          content((7.03, -6.39), [Tensoring the six outputs adds their limiting rates: $6dot.op C_*/6=C_*$.])
+   2  content: unknown variable: eq4 й░йд \\?\C:\Users\hp\AppData\Local\Temp\
+          content((3.87, -1.032), [$q<"plt".eq4$:#linebreak()first remove row $p=4$,#linebreak()then column $q=1$.])
+          content((4.2, -0.85), [$p_0$#linebreak() detectors for $b$, $.eq4$])
+   2  content: the character `~` is not valid in code й░йд \\?\C:\Users\hp\Ap
+          content((0, -1.8), [Weighted densities are close to $1/2$ at small widths#linebreak()after excluding configurations that
+          content((0, -1.6), [Fixed-cut comparisons and local error ideals#linebreak()(Section~sec:sequence-models)])
+   1  content: unknown variable: h0 й░йд \\?\C:\Users\hp\AppData\Local\Temp\t
+          content((6.25, 6.4), [Original exterior#linebreak() is closed. On $S$: $|h|>b_2>2b_3$.#linebreak()At the distinguished e
+   1  content: unexpected equals sign й░йд \\?\C:\Users\hp\AppData\Local\Temp
+          content((-2.25, 1.64), [(a)-cap collar#linebreak()(=_A)])
+   1  content: unknown variable: r0 й░йд \\?\C:\Users\hp\AppData\Local\Temp\t
+          content((4.65, 0.43), [$R(u_s)=R(v)+s "dR"_v(h)+o(s) ("sarrow".r0).$])
+   1  content: unclosed label й░йд \\?\C:\Users\hp\AppData\Local\Temp\tmpp8cv
+          content((8.9, -0.07), [(=5p/3, s_1<s_2)])
+   1  content: unclosed label й░йд \\?\C:\Users\hp\AppData\Local\Temp\tmpd5b5
+          content((0, 0.8512), [(K<0)])
+   1  content: unclosed label й░йд \\?\C:\Users\hp\AppData\Local\Temp\tmp_cfe
+          content((-0.27, -0.576), [(K<0)])
+   1  content: unknown variable: t0 й░йд \\?\C:\Users\hp\AppData\Local\Temp\t
+          content((1.598, -2.068), [$t0:\ b(t)arrow.r-infinity$])

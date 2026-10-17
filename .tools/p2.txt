@@ -1,0 +1,31 @@
+=== D139 ===
+HDR line numbers: [372]
+BQ 9: > `n\log n+n\log\log n+5n$~\cite{Rog57}.` —— overview.tex:30
+BQ 13: > `$n^{\log_2\log n+O(1)}$~\cite{Rog59}.` —— overview.tex:38
+BQ 17: > `\theta_L(K)\le Cn\log n\,(\log\log n)^{10/3+o(1)}` —— overview.tex:42
+BQ 43: > `P_{b,t_z}(\eps)\le e^{-c b^{0.70}},` —— blocks.tex:91
+BQ 51: > `\le C'\exp\bigl(s-c's^{1.4}\bigr)\longrightarrow0.` —— final.tex:164
+BQ 57: > `no estimate on a single successful` —— overview.tex:110
+BQ 63: > `many cosets can contain no usable anchor.` —— blocks.tex:428
+BQ 81: > `The fixed vector` —— hierarchy.tex:232
+BQ 93: > `\E_{w_1,\ldots,w_k,x}(A(x)-\bar g)^2` —— sampler.tex:60
+BQ 99: > `union bound over $H$ would be insufficient under the allowed bound` —— sampler.tex:187
+BQ 105: > `moment estimate alone gives a good approximation at most base points. A` —— sampler.tex:9
+BQ 115: > `In Li and Liu's two-stage construction, one auxiliary correction is chosen for an entire weighted` —— overview.tex:76
+BQ 121: > ` b_{i+1}\le \tfrac12 b_i,\qquad` —— hierarchy.tex:26
+BQ 127: > ` \le b_r^{-a}\sum_{k=0}^{r-1}2^{-ak}` —— hierarchy.tex:266
+BQ 133: > `$y=x-\sum_{j\notin S}d_jw_j$，even though that offset involves the other` —— blocks.tex:325（该行的原文为 `y=x-\sum_{j\notin 
+key=\u800c\u4e0d\u662f -> [170, 276, 331]
+key=\u800c\u662f -> [113, 472]
+key=\u503c\u5f97\u6ce8\u610f -> [362]
+key=\u6362\u53e5\u8bdd -> [23]
+key=eqref{} -> [350, 491]
+key=\u2014 -> [9, 13, 17, 43, 51, 57, 63, 81, 93, 99, 105, 115, 121, 127, 133]
+=== D140 ===
+HDR line numbers: [1289]
+key=\u800c\u4e0d\u662f -> [895, 1117, 1228]
+key=\u800c\u662f -> [974]
+key=\u503c\u5f97\u6ce8\u610f -> []
+key=\u6362\u53e5\u8bdd -> []
+key=eqref{} -> []
+key=\u2014 -> [146]

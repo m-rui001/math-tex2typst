@@ -1,0 +1,35 @@
+{
+  "paper": "Quenched-SLE-Universality-for-Weakly-Disordered-FK-Ising-Interfaces-October-5-2026",
+  "ok": true,
+  "typ_lines": 1089,
+  "included_pdf_pages": 0,
+  "formulas": 658,
+  "math_failed": 0,
+  "labels": 137,
+  "equations": 11,
+  "theorems": 2,
+  "figures": 3,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 3
+  },
+  "samples": {
+    "formulas": "658",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "enumerate",
+    "bookmark"
+  ],
+  "macros_skipped": [
+    "\\renewcommand\\P"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Quenched-SLE-Universality-for-Weakly-Disordered-FK-Ising-Interfaces-October-5-2026.tex"
+}

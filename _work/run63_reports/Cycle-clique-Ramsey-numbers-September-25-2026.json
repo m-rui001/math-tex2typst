@@ -1,0 +1,32 @@
+{
+  "paper": "Cycle-clique-Ramsey-numbers-September-25-2026",
+  "ok": true,
+  "typ_lines": 1183,
+  "included_pdf_pages": 0,
+  "formulas": 902,
+  "math_failed": 0,
+  "labels": 125,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 2,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 2
+  },
+  "samples": {
+    "formulas": "902",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "[WARNING] Could not load include file ../verification/code/original_checker.py at E:\\math\\_work\\flat\\_work_tex\\Cycle-clique-Ramsey-numbers-September-25-2026.tex line 2885 column 17\n",
+  "packages_unsupported": [
+    "listings"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Cycle-clique-Ramsey-numbers-September-25-2026.tex"
+}

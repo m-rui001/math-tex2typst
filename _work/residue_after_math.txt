@@ -1,0 +1,21 @@
+tex-quoted strings rendered as math: 1190 in 375 papers
+
+by \begin{} environment:
+    588  (no env)
+    297  equation
+     88  align
+     71  align*
+     59  tikzcd
+     29  array
+     22  split
+      9  psmallmatrix
+      8  CD
+      8  aligned
+      4  cases
+      4  gathered
+      1  gather
+      1  equation*
+
+by first macro:
+
+worst papers: The-PCP-for-PPAD-conjecture-a-quasilinear-reduction-September-25-2026(45), The-higher-dimensional-Erdos-distinct-distances-conjecture-September-23-2026(44), Planar-Graph-Metrics-Embed-into-L1-with-Constant-Distortion-September-23-2026(34), Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026(27), Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026(25), Hilberts-tenth-problem-over-the-rational-numbers-September-24-2026(21), Canonical-ampleness-of-compact-hyperbolic-Kahler-manifolds-September-23-2026(20), Ambiently-homeomorphic-isolated-hypersurface-germs-in-C4-with-multiplicities-four-and-five-September-27-2026(18), Log-abundance-in-characteristic-zero-September-24-2026(18), The-complete-Crouzeix-theorem-September-23-2026(18)

@@ -1,0 +1,44 @@
+D10-自由群因子同构.md led=1 fu=1 ji=0 sep=2
+D100-准Riemann假设：Re-s大于八分之七的无零点半平面与Dirich led=1 fu=1 ji=0 sep=2
+D101-欧氏平面不可五色：刚性-谱-调色板三段论证的反推笔记.md led=1 fu=1 ji=0 sep=2
+D103-Landau-Siegel零点的均匀排除：加权环面jet与绝对零点间隙 led=1 fu=1 ji=0 sep=3
+D104-单折Diophantine表示：幂关系与椭圆曲线互定义性的反推笔记.m led=2 fu=1 ji=0 sep=2
+D106-五次Lienard系统的两个极限环：model-fitting-arc led=1 fu=1 ji=0 sep=4
+D131-紧Kahler流形万有覆叠分裂：可去奇点与度量全局化的反推笔记.md led=1 fu=1 ji=0 sep=2
+D139-单格覆盖的n对数n阶界：采样器层级与电路和的反推笔记.md led=1 fu=1 ji=0 sep=2
+D155-实L1独立乘积的averaged中点模与AUC重范化障碍.md led=3 fu=1 ji=0 sep=1
+D217-方向零一律的有限程依赖证明路线复盘.md led=3 fu=1 ji=0 sep=1
+D228-局部Penrose不等式与共形微扰的四次障碍.md led=1 fu=1 ji=0 sep=2
+D234-Heilbronn三角形下界的幂改进.md led=4 fu=1 ji=0 sep=1
+D25-Crouzeix完整不等式直接证明.md led=3 fu=1 ji=3 sep=2
+D29-Borsuk覆盖断言九维反例.md led=3 fu=1 ji=3 sep=4
+D297-素数阶Ryser猜想的平衡反例-分裂线与铅笔预算.md led=1 fu=1 ji=0 sep=2
+D34-无团图的对数独立数界.md led=1 fu=1 ji=2 sep=4
+D35-最短公共超串的多项式时间二近似.md led=2 fu=1 ji=1 sep=3
+D37-Seymour第二邻域猜想证明.md led=3 fu=2 ji=1 sep=3
+D41-敏感度与块敏感度的超二次分离.md led=3 fu=1 ji=2 sep=2
+D42-无挠群代数含零因子.md led=2 fu=2 ji=0 sep=1
+D44-小finitistic维数无穷的代数.md led=2 fu=2 ji=0 sep=2
+D47-无共轭点但无非正曲率度量的三流形.md led=2 fu=2 ji=0 sep=1
+D49-中心圆盘极大算子的端点梯度界.md led=4 fu=1 ji=2 sep=2
+D52-c0的双Lipschitz吸收而无线性拷贝.md led=3 fu=1 ji=1 sep=2
+D560-正规射影簇的半代数万有覆叠分类.md led=2 fu=1 ji=0 sep=2
+D578-包络面积与刚性视角下的时空彭罗斯不等式.md led=4 fu=1 ji=3 sep=4
+D623-素数三处的凯尔韦尔不变量问题.md led=3 fu=1 ji=0 sep=1
+D644-算术对应范畴与格因子稳定恢复研究笔记.md led=3 fu=1 ji=0 sep=1
+D68-相容性熵与Thorp扫描的谱.md led=4 fu=1 ji=3 sep=4
+D69-立方格上的临界键与位渗流.md led=3 fu=1 ji=0 sep=1
+D711-球形Laughlin能隙一致稳定性的反推.md led=3 fu=1 ji=2 sep=3
+D76-非平凡Markov型迫使超反身.md led=3 fu=1 ji=2 sep=2
+D80-均值对策博弈随机化准多项式求解的支撑预算递归.md led=2 fu=1 ji=0 sep=2
+D82-分离电流与密度分裂-四维tamed推compatible笔记.md led=3 fu=1 ji=1 sep=2
+D85-三十二行签名阵列与标签耦合：Talagrand离散凸性猜想的反推笔记.m led=1 fu=1 ji=0 sep=2
+D90-固定指数的生产链-Yau节点上界幂律反例取证笔记.md led=1 fu=1 ji=0 sep=2
+D91-短埃及分数最小项数的双重对数阶.md led=2 fu=1 ji=0 sep=2
+D97-容量小于4的辛球嵌入极化积：对称Mahler猜想的Gromov宽度路线反 led=1 fu=1 ji=0 sep=2
+flag=38
+(False, False, False)=616
+(True, False, False)=96
+(False, False, True)=13
+(True, False, True)=5
+(True, True, False)=4

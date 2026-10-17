@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}
+\begin{document}
+\maketitle
+\begin{abstract}
+Abstract text with $x+y$.
+\end{abstract}
+\section{Intro}
+Text with \(a_b\) inline and a citation \cite{Ref1} plus \ref{eq:num} and \eqref{eq:num2}.
+\begin{equation}\label{eq:num}
+  x = \frac{1}{2}
+\end{equation}
+\begin{align}\label{eq:num2}
+  a &= b \
+  c &= d
+\end{align}
+\[
+  y = z \tag{star}
+\]
+\begin{equation*}
+  p = q
+\end{equation*}
+\begin{theorem}[Main]\label{thm:m}
+  Something holds for all $n$.
+\end{theorem}
+\begin{lemma}\label{lem:l}
+  Aux.
+\end{lemma}
+\begin{proof}
+  Trivial since \ref{thm:m}.
+\end{proof}
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+    \node (a) at (0,0) {A};
+    \draw (a) -- (1,1) node[right] {B};
+  \end{tikzpicture}
+  \caption{A caption. \label{fig:f}}
+\end{figure}
+\begin{table}
+  \caption{T. \label{tab:t}}
+  \begin{tabular}{lcr}
+    \hline
+    A & B \ \hline
+    1 & 2 \
+    \hline
+  \end{tabular}
+\end{table}
+\begin{itemize}
+  \item one
+  \item two
+\end{itemize}
+Text\footnote{A note.} more.
+
+\subsection{Sub}
+\begin{enumerate}
+ \item first
+\end{enumerate}
+\input{inc}
+\appendix
+\section{Appendix A}
+Bla.
+\end{document}

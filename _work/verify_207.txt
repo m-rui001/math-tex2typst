@@ -1,0 +1,10 @@
+D111 bytes=121417 CR=0 lines=1116 gate={'size': 121417, 'secs': 27, 'contig': True, 'rows': 34, 'math': 3033, 'problems': []}
+   \rank x0
+   \norm x0
+   \abs x0
+   \pair x0
+D207 bytes=117030 CR=0 lines=431 gate={'size': 117030, 'secs': 25, 'contig': True, 'rows': 55, 'math': 2628, 'problems': []}
+   \rank x0
+   \norm x0
+   \abs x0
+   \pair x0

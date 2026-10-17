@@ -1,0 +1,18 @@
+################ D68  (D68-相容性熵与Thorp扫描的谱.md)
+before: bytes=371407 lines=1600
+ROW line=1346  sites=2  pipes 8->6  $=8(parity even)
+OLD| | $\epsilon=\delta/(2+\delta)$ | $D(\mu\|\nu_{*})\ge\epsilon D(\mu\|U_{m})-O(\log d)$ | `07-fractional-density.tex:179-187` | 吸收 $\mathbb E_{\zeta}[R_{X}+R_{Y}]$ 的那笔余量 | 系数只剩 $o(1)$ 则坏格与高值无处付账 |
+NEW| | $\epsilon=\delta/(2+\delta)$ | $D(\mu\Vert \nu_{*})\ge\epsilon D(\mu\Vert U_{m})-O(\log d)$ | `07-fractional-density.tex:179-187` | 吸收 $\mathbb E_{\zeta}[R_{X}+R_{Y}]$ 的那笔余量 | 系数只剩 $o(1)$ 则坏格与高值无处付账 |
+ROW line=1347  sites=1  pipes 7->6  $=6(parity even)
+OLD| | $D(P\|R)\ge\mathbb E_{P}W-\log\mathbb E_{R}e^{W}$ | 允许支撑外取 $-\infty$，只要指数期望为正 | `07-fractional-density.tex:188-193` | 三处势的构造 | 去掉允许 $-\infty$ 那句，被堵候选再也压不出负贡献 |
+NEW| | $D(P\Vert R)\ge\mathbb E_{P}W-\log\mathbb E_{R}e^{W}$ | 允许支撑外取 $-\infty$，只要指数期望为正 | `07-fractional-density.tex:188-193` | 三处势的构造 | 去掉允许 $-\infty$ 那句，被堵候选再也压不出负贡献 |
+ROW line=1370  sites=2  pipes 8->6  $=6(parity even)
+OLD| | $\lVert A_{2}A_{1}\rVert_{S^{P}}\le\big\|\lvert A_{2}\rvert^{P/q}\lvert A_{1}^{*}\rvert^{P/q}\big\|_{S^{q}}^{q/P}$ | $P\ge q\ge1$，Araki--Lieb--Thirring 形式 | `01-preliminaries.tex:132-180` | 一切四因子迹不等式 | 虚幂在支撑上的酉性一失，$\operatorname{Re}z=1$ 那侧边界守不住 |
+NEW| | $\lVert A_{2}A_{1}\rVert_{S^{P}}\le\big\lVert \lvert A_{2}\rvert^{P/q}\lvert A_{1}^{*}\rvert^{P/q}\big\rVert_{S^{q}}^{q/P}$ | $P\ge q\ge1$，Araki--Lieb--Thirring 形式 | `01-preliminaries.tex:132-180` | 一切四因子迹不等式 | 虚幂在支撑上的酉性一失，$\operatorname{Re}z=1$ 那侧边界守不住 |
+after: bytes=371428 (delta +21) lines=1600 rows_fixed=3 sites_fixed=5 sites_registered=0
+[DRY] nothing written to the note
+D68 file-count \lVert  = 87
+D68 file-count \lvert  = 128
+D68 file-count \mid  = 29
+D68 file-count \upharpoonright = 0
+D68 file-count \Vert  = 12

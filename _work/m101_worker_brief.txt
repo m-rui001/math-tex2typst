@@ -1,0 +1,68 @@
+# 代跑简报 m101（A 名下，命令行 codebuddy 免费模型）
+
+时间：2026-10-17 09:16 立单，09:25 改写（`fast-model` 死于 `429 Credits exhausted`，改用免费档
+`--model hy3` 与 `--model deepseek-v4.1-flash`，两者 09:25 实测能跑）。领单人＝A（`tools/t2t/cetz.py`
+的单写者持有者）。**单 1（m101a）A 已自己跑完**（`_work/probe101a_rot_variants.py` →
+`_work/label101a_rot_variants.txt`），本简报只剩两张单。
+
+## 永久条款（每一单都守，违反即作废）
+
+1. **落盘范围只许** `_work/probe101*.py`、`_work/label101*.txt`、`_work/m101*.*`（中间产物一律带这个前缀，
+   看过就自己删）。**不许**改 `tools/` 下任何文件、不许改 `_work/community.md`、不许动 `typst/` 与
+   `preprints/` 下任何在制品。
+2. **不许开 `typst`**（既不许 `tools/batch_typst.py`／`tools/summarize_typst.py` 这类跑批，也不许单文件
+   `typst compile`）：typst 那一侧由 A 自己量，同一库里两个 typst 写者会打架。你们允许的只有
+   **`pdflatex` 造控制图、`fitz` 读 PDF、`cetz.build()` 这类纯函数、以及只读 `typst/<篇>/main.typ` 的文本**。
+3. **数字必须是这把尺打印出来的**，不许由对称性／常识推断。每个读数旁边写上它来自哪个文件的哪一行输出。
+4. **探针只能调自己那把尺的函数**：需要已有量具的行为就 `import` 它（`sys.path.insert(0, "_work")` 之后
+   `import probe100h_rot_anchors as h`／`import probe101a_rot_variants as p`），**不许在探针里复制一份私有副本**
+   （私有副本＝第二把尺，两把尺会打架，这条在轴 68 记过一次）。
+5. 论文目录名**只能 glob**：台账与 tsv 里的名字被截断过、日期后缀凭记忆写必错。写法＝
+   `[n for n in os.listdir("typst") if n.startswith(stem[:40])]`，并要求**恰一个命中**，否则报 `AMBIGUOUS`／`NOSITE` 继续下一张。
+6. 任何脚本**跑完要把回执写文件**（`label101*.txt`）并在 stdout 原样打一遍；`PYTHONIOENCODING=utf-8`，
+   stderr 单独重定向到 `_work/m101_err.txt`（不要让 traceback 覆盖回执）。
+7. 判据不成立就**照实报负结果**（「这一档读不出」「两边同形」「页上无墨」都是合格结论），不许为了有数字而放宽阈值。
+8. pdflatex 的中间文件按案例序号命名会**复用同一串文件名**：一次编译失败会留下上一代的 pdf，读到的数就是谎话。
+   每案编译前把同名 `.pdf` 删掉，并在回执里带上该 pdf 的 mtime 与字节数。
+
+## 单 2（m101b-pgf）＝pgf 侧：这 10 个真节点的文字墨落在声明点的哪一侧
+
+名单＝`_work/m100_rot_anchor.tsv` 的 10 行（篇名／图序／锚点名／选项串／声明的坐标）。
+新建 `_work/probe101b_pgf_nodes.py`：对每一行取**那个节点真实的文字内容**（从 `_work/flat/<篇名>.tex` 里
+按 tsv 给的选项串与坐标定位该 `\node[...] at (x,y) {文字};` 语句，把原文整串打进回执），
+排一页 standalone：
+
+```
+\fill (x,y) circle (1.2pt);          % 同一个声明坐标上的点，用来当尺的参照
+\node[<该节点的完整选项串>] at (x,y) {<真实文字>};
+```
+
+（`\fill` 那一点上原本可能已有别的墨，所以控制页只排这一个节点＋这一个点，别把整张图搬过来。）
+量**文字墨盒相对该点**的 `left/right/top/bottom` 四个偏移——用 `probe101a_rot_variants.ink_offsets()`
+（同一把尺，墨档＝span bbox 的并），不要另写。每行再打：盒宽×盒高、该选项串里的 `inner sep`／`font=`
+有没有写、字号折不算（不写就是 normal＝10pt，`\footnotesize`＝8pt，`\scriptsize`＝7pt，
+**pgf 侧的折法以你们排出来的盒为准，不要按常识写死**）。
+
+对照行：每案旁边给同一文字**不旋转、无 anchor**（`anchor=center`）那一页的四个偏移，
+这样「anchor＋rotate 挪了多少」是一行减法就能读的。
+
+回执 `_work/label101b_pgf_nodes.txt`，10 行 + 10 对照行。
+
+## 单 3（m101c）＝§7 `every edge` 那一行的前提检查
+
+台账 §7 那行写的是：`every edge/.style={…}` 定义 **4 处／4 篇**，其中**带笔的只有 2 处**
+（`semithick`／`thick`，两处都另带 `draw, ->`）。这一行能不能立案，取决于**那两支笔在页上有没有墨**。
+新建 `_work/probe101c_every_edge.py`：
+1. 在 `_work/flat/*.tex` 里找出这 4 处定义（拼写候选：`every edge/.style=`、`every edge=`、
+   `\tikzset{every edge/.style=...}`；把每处的**原文整串**打出来）。
+2. 对每处所在的那张图：数**这一族到底有没有 `edge` 算子被走到**——源里找裸 `edge[`／`edge `／`;edge`（
+   pgf 的 `edge` 是 `to` 家族里独立的一段，`\draw (a) edge (b)` 画的是那条支线）。**逐处给源语句原文**。
+   轴 73 已经量过 `every edge` 对裸 `--` 零作用，所以这一族只有真写了 `edge` 的语句才算走得到。
+3. 造该图控制页（standalone，带该篇正文字号——字号从 `typst/<篇名>/main.typ` 的 `#set text(size:)` 读），
+   量「这些支线在控制页上有没有墨」＝该图笔画条数、以及**非默认线宽**的条数（fitz 读 `get_drawings()` 的
+   `width`）。
+4. 我们这一侧**不排页**：只从 `typst/<篇名>/main.typ` 里把那一张画布的串**当文本读**，数它写了几个
+   `thickness:`、值各是多少（纯字符串计数，不 compile）。
+5. 回执结论只写三档之一：**页上有墨且我们的笔不一致**（＝真案，给出行数／篇数）、
+   **页上无墨**（＝零行动）、**这些声明根本到不了任何路径**（＝零行动，说明它是 inert 的）。
+   **不许改任何码。** 回执 `_work/label101c_every_edge.txt`。

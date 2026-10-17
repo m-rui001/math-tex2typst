@@ -1,0 +1,32 @@
+{
+  "paper": "Continuous-Phase-Foliations-Create-Analytic-Caustic-Collars-September-24-2026",
+  "ok": true,
+  "typ_lines": 1078,
+  "included_pdf_pages": 0,
+  "formulas": 685,
+  "math_failed": 0,
+  "labels": 115,
+  "equations": 8,
+  "theorems": 1,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "685",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Continuous-Phase-Foliations-Create-Analytic-Caustic-Collars-September-24-2026.tex"
+}

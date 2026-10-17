@@ -1,0 +1,49 @@
+
+== hash  A-nondegenerate-counterexample-to-the-Morse-number-A  needles=['phi_H', 'chi (M)']
+   A-nondegenerate-counterexample   p3   # Fix ( phi_H^1)= chi (M)+128
+   A-nondegenerate-counterexample   p3   Morse (M)-# Fix ( phi_H^1)
+
+== hash  A-two-dimensional-area-law-from-a-global-spectral-ga  needles=['A_h']
+   A-two-dimensional-area-law-fro   p47  A_h#_p B_h
+
+== hash  Edit-Distance-in-l1-Matching-Bounds-up-to-Constants-  needles=['#']
+   Edit-Distance-in-l1-Matching-B   p7   1)𝑚. Append a marker #𝐵, where # is absent from all payloads.
+   Edit-Distance-in-l1-Matching-B   p7   More formally, the new alphabet is the disjoint union of {#} and one set {𝑟} × 𝒜︀𝑠−1,𝑝𝑗 for each
+   Edit-Distance-in-l1-Matching-B   p7   #. The full length and alphabet bounds are
+   Edit-Distance-in-l1-Matching-B   p8   Lemma 3.2. (Marked payloads). Let 𝑇, 𝑝, 𝑞≥1 be integers, let Γ be an alphabet, and let # ∉Γ. For
+   Edit-Distance-in-l1-Matching-B   p8   𝑋= 𝑈1#𝑞⋯𝑈𝑇#𝑞,
+   Edit-Distance-in-l1-Matching-B   p8   𝑌= 𝑉1#𝑞⋯𝑉𝑇#𝑞,
+   Edit-Distance-in-l1-Matching-B   p8   would have its source partner between their source partners, inside this source payload, where # doe
+   Edit-Distance-in-l1-Matching-B   p8   source payload (no #)
+   Edit-Distance-in-l1-Matching-B   p8   #^q
+   Edit-Distance-in-l1-Matching-B   p8   no source #
+
+== hash  Localization-costs-and-information-growth-for-Grigor  needles=['# net', '2^j']
+   Localization-costs-and-informa   p77  # net lt.eq (1+4 dot.op 2^j)^v
+
+== hash  Sharp-integral-fillings-in-CAT(0)-spaces-September-2  needles=['arrow.r.bar', 'F_#']
+   Sharp-integral-fillings-in-CAT   p14  {t} times A arrow.r.bar (F_t)_#A
+   Sharp-integral-fillings-in-CAT   p14  D_h=F_#([0,h] times A)
+
+== fused  Eventual-Categoricity-for-Abstract-Elementary-Classe  needles=['W_s', 'q_s', 'partial W']
+   Eventual-Categoricity-for-Abst   p71  W_s0,f_s0
+   Eventual-Categoricity-for-Abst   p71  W_s1,f_s1
+   Eventual-Categoricity-for-Abst   p71  partial W_s0
+   Eventual-Categoricity-for-Abst   p71  partial W_s1
+   Eventual-Categoricity-for-Abst   p71  q_s0
+   Eventual-Categoricity-for-Abst   p71  q_s1
+
+== fused  Exact-Derandomization-of-Logarithmic-Space-Lossy-sam  needles=['1^n']
+   Exact-Derandomization-of-Logar   p104 1^n0
+
+== fused  Localization-costs-and-information-growth-for-Grigor  needles=['# net', '2^j']
+   Localization-costs-and-informa   p77  # net lt.eq (1+4 dot.op 2^j)^v
+
+== fused  Smooth-Anisotropic-Uniqueness-in-the-Calderon-proble  needles=['T_y', 'yx']
+   Smooth-Anisotropic-Uniqueness-   p26  T_y1=1, T_yx^i=y^i.
+
+== fused  The-complexity-of-identifying-a-graph-by-Weisfeiler-  needles=['l1', 'l 1']
+   The-complexity-of-identifying-   p20  l1
+
+== fused  The-hypercube-Ramsey-number-has-linear-order  needles=['n2', 'N lt']
+   The-hypercube-Ramsey-number-ha   p6   2𝑛→∞, N lt.eq n2^n

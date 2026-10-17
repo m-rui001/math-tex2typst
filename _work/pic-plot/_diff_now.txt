@@ -1,0 +1,182 @@
+--- --- a/t2t/cetz.py
++++ +++ b/t2t/cetz.py
+@@ -127,6 +127,9 @@
+     "asin": lambda x: math.degrees(math.asin(x)), "acos": lambda x: math.degrees(math.acos(x)),
+     "atan": lambda x: math.degrees(math.atan(x)), "atan2": lambda y, x: math.degrees(math.atan2(y, x)),
+     "sqrt": math.sqrt, "abs": abs, "exp": math.exp, "ln": math.log, "log10": math.log10,
++    # pgfmath's `tanh` is sinh/cosh over the raw argument (pgfmathfunctions.misc.code.tex:113), so
++    # unlike `tan` it takes no angle: measured on TeX's own sample of `tanh(-2.97)`, -0.994807.
++    "tanh": math.tanh,
+     "round": lambda x: float(round(x)), "int": lambda x: float(int(x)),
+     "min": min, "max": max, "pow": lambda a, b: a ** b, "mod": lambda a, b: a % b,
+ }
+@@ -1765,7 +1768,46 @@
+     return out
+ 
+ 
+-PLOT_SMOOTH_MIN = 8
++PLOT_TENSION = 0.2775
++
++
++def _support(p, ahead, behind, t):
++    """p moved `t` of the way along the vector from the knot behind it to the one ahead."""
++    return tuple(p[k] + t * (ahead[k] - behind[k]) for k in range(2))
++
++
++def smooth_curve(pts, tension=0.5):
++    r"""`plot[smooth]`'s knots -> the cubic pieces pdf draws between them; (start, stop, c1, c2).
++
++    Measured off the compiled control PDFs in `_work/pic-plot/meas/`: `smooth` swaps the plot
++    handler for pgf's `\pgfplothandlercurveto` (tikz.code.tex:1233), which holds a *support* at
++    every knot and draws each piece as the cubic from that support to the next one's. The support
++    at an interior knot is `0.2775 * tension` times the vector between its two neighbours, so
++
++        piece i:  c1 = p_i + t (p_{i+1} - p_{i-1})      c2 = p_{i+1} - t (p_{i+2} - p_i)
++
++    and the two ends carry no support at all -- `law_3` reads `c1 = p_0` on the first piece and
++    `c2 = p_n` on the last, so two knots come out of the two knots' own controls and TeX draws them
++    as one straight piece (`law_2`). The default `tension=0.5` sets t to 0.13875 (pgf's own
++    `\pgfsetplottension{0.5}` multiplies by 0.2775), and on knots (0,0) (1,1) (2,0) (3,1) (4,0) that
++    puts the first piece's far control at (1,1) - 0.13875*(2,0) = (0.7225, 1) -- the measured number
++    (`law_p5`, `law_tension` reads 0.445 there for `tension=1`).
++
++    A value written on `smooth` itself is ignored by TeX and changes nothing (`law_smoothvalue`);
++    only `tension=` moves t (`law_tension` reads 0.2775 for `tension=1`).
++
++    pgf builds the supports in the user space and the page transform is applied afterwards; every
++    control here is an affine combination of knots, so building them from transformed knots -- all
++    this converter holds -- gives the same pieces under `scale=`, `x=`/`y=` and a rotated scope.
++    """
++    t = PLOT_TENSION * tension
++    out = []
++    for i in range(len(pts) - 1):
++        a, b = pts[i], pts[i + 1]
++        c1 = a if i == 0 else _support(a, b, pts[i - 1], t)
++        c2 = b if i + 2 == len(pts) else _support(b, pts[i + 2], a, -t)
++        out.append((a, b, c1, c2))
++    return out
+ 
+ 
+ def _plot_operand(rest, pos):
+@@ -1786,12 +1828,12 @@
+ 
+ 
+ def plot_points(rest, pos, names, xf, scope):
+-    r"""`plot` -> its points and the text after it; None when we would draw it wrong.
++    r"""`plot` -> its points, its cubic pieces and the text after it; None when we draw it wrong.
+ 
+     Two operands are worth drawing: a written-out `coordinates { (0,0) (1,2) ... }` list, and a
+-    function or parametric pair over `domain=` with `samples=`. pgf joins dense samples with
+-    straight pieces, so `smooth` on a sample plot is the same polyline; on a handful of written
+-    points it is a spline, and that is not what a polyline gives, so it refuses.
++    function or parametric pair over `domain=` with `samples=`. pgf feeds both the same way, so
++    `plot` answers with its knots and, when `smooth` asked for the curveto handler, with the
++    measured cubic pieces between them (`pieces` is None when the knots join by straight lines).
+ 
+     `scope` is the statement's own option list: papers write `domain=` and `samples=` on the
+     `\draw` far more often than on the `plot`, and pgf reads them from either.
+@@ -1801,10 +1843,17 @@
+         return None
+     po = {**scope, **opts(m.group(1)[1:-1])} if m.group(1) else dict(scope)
+     keys = {str(k).strip() for k in po}
+-    if keys & {"only marks", "each", "mesh", "surfaces"} or any(
++    if keys & {"only marks", "each", "mesh", "surfaces", "smooth cycle"} or any(
+             k.startswith("mark") for k in keys):
++        # `smooth cycle` runs pgf's closed-curve handler, whose end knots do carry a support -- a
++        # different measured law from `smooth_curve`, so it stays quoted rather than opened up
+         return None
+     smooth = "smooth" in keys
++    tension = 0.5
++    if smooth and po.get("tension") is not None:
++        tension = expr(str(po["tension"]).replace(" ", ""))
++        if tension is None:
++            return None
+     start = pos + m.end()
+     lit = re.match(r"\s*coordinates\s*", rest[start:])
+     if lit:
+@@ -1817,33 +1866,35 @@
+             if p is None:
+                 return None
+             pts.append(p)
+-        return None if len(pts) < (PLOT_SMOOTH_MIN if smooth else 2) else (pts, end)
+-    operand, end = _plot_operand(rest, start) or (None, None)
+-    var = str(po.get("variable") or "\\x").strip()
+-    dom = re.split(r"\s*:\s*", str(po.get("domain") or "").strip())
+-    if operand is None or len(dom) != 2 or not var.startswith("\\"):
+-        return None
+-    # a domain end may be a written expression (`1:sqrt(3)`), so read it the way the y-values are
+-    # read; a variable inside it would be a domain that depends on itself, which pgf does not do
+-    lo = expr(dom[0].replace(" ", ""))
+-    hi = expr(dom[1].replace(" ", ""))
+-    if lo is None or hi is None:
+-        return None
+-    n = max(2, int(float(po.get("samples") or 25)))
+-    if smooth and n < PLOT_SMOOTH_MIN:
+-        return None
+-    pts = []
+-    for i in range(n):
+-        t = lo + (hi - lo) * i / (n - 1)
+-
+-        def value(src, _t="%.10g" % t):
+-            return expr(re.sub(re.escape(var) + r"(?![a-zA-Z])", _t, src))
+-        y = value(operand[1])
+-        x = t if operand[0] is None else value(operand[0])
+-        if x is None or y is None:
+-            return None
+-        pts.append(_apply(xf, x, y))
+-    return pts, end
++    else:
++        operand, end = _plot_operand(rest, start) or (None, None)
++        var = str(po.get("variable") or "\\x").strip()
++        dom = re.split(r"\s*:\s*", str(po.get("domain") or "").strip())
++        if operand is None or len(dom) != 2 or not var.startswith("\\"):
++            return None
++        # a domain end may be a written expression (`1:sqrt(3)`), so read it the way the y-values are
++        # read; a variable inside it would be a domain that depends on itself, which pgf does not do
++        lo = expr(dom[0].replace(" ", ""))
++        hi = expr(dom[1].replace(" ", ""))
++        if lo is None or hi is None:
++            return None
++        # `samples=70` measured over TeX's own PDF (`_work/pic-plot/meas/fn70.pdf`): 70 knots,
++        # 69 straight pieces, the first at the domain's own end and the step (hi-lo)/69
++        n = max(2, int(float(po.get("samples") or 25)))
++        pts = []
++        for i in range(n):
++            t = lo + (hi - lo) * i / (n - 1)
++
++            def value(src, _t="%.10g" % t):
++                return expr(re.sub(re.escape(var) + r"(?![a-zA-Z])", _t, src))
++            y = value(operand[1])
++            x = t if operand[0] is None else value(operand[0])
++            if x is None or y is None:
++                return None
++            pts.append(_apply(xf, x, y))
++    if len(pts) < 2:
++        return None
++    return pts, end, (smooth_curve(pts, tension) if smooth else None)
+ 
+ 
+ def _along(a, b, t):
+@@ -2017,9 +2068,19 @@
+             got = plot_points(rest, pos, names, xf, o)
+             if got is None:
+                 return None
+-            # plot continues the path it sits on, so its points join the running polyline
+-            poly.extend(got[0])
+-            cursor, pos = None, got[1]
++            pts, end, pieces = got
++            if pieces is None:
++                # plot continues the path it sits on, so its points join the running polyline
++                poly.extend(pts)
++            else:
++                # `sm_after.pdf` measured: TeX starts the spline as its own subpath at the first
++                # knot -- the point the path stood on before is left where it is, with no join drawn
++                # to it -- and carries on *from* the last knot, so the polyline resumes there
++                flush()
++                for a, b, c1, c2 in pieces:
++                    add(("bezier", (a, b, c1, c2)))
++                poly.append(pts[-1])
++            cursor, pos = None, end
+             continue
+         m = re.match(r"\s*arc\s*(?=[\[(])", chunk)
+         if m:

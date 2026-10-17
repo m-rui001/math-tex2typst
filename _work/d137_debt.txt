@@ -1,0 +1,42 @@
+note=D137-平面指数第一通过limshape的严格凸与可微：链路逼近与改进界的反推笔记.md bytes=215682 lines=866 CR=0
+
+FILE | bytes | lines | fullpath_in_note | basename_in_note | refcolon
+build/sections/differentiability/endpoints.tex         13314B   327L cite=0 base=0 refs=0
+build/main.tex                                          3238B    91L cite=0 base=1 refs=0
+build/sections/consequences.tex                        15160B   330L cite=0 base=4 refs=3
+build/sections/differentiability/crossings.tex         18373B   413L cite=0 base=9 refs=9
+build/sections/strict/phases.tex                       10360B   189L cite=0 base=11 refs=10
+build/sections/differentiability/conclusion.tex         3423B    77L cite=0 base=13 refs=13
+build/sections/differentiability/witnesses.tex         19703B   483L cite=0 base=13 refs=13
+build/sections/strict/conclusion.tex                    2033B    51L cite=0 base=13 refs=13
+build/sections/differentiability/scales.tex             7908B   215L cite=0 base=15 refs=15
+build/sections/differentiability/preliminaries.tex      5473B   143L cite=0 base=17 refs=17
+build/sections/strict/preliminaries.tex                 4755B    99L cite=0 base=17 refs=17
+build/sections/introduction.tex                        10773B   218L cite=0 base=19 refs=18
+build/sections/strict/probability.tex                  26690B   622L cite=0 base=35 refs=35
+build/sections/strict/access.tex                       45528B   930L cite=0 base=38 refs=38
+build/sections/strict/improvement.tex                  39266B   820L cite=0 base=58 refs=57
+build/sections/strict/foundations.tex                  51227B  1100L cite=0 base=79 refs=79
+build/sections/strict/links.tex                        57791B  1240L cite=0 base=83 refs=81
+
+heads=24 first=(10, '## 0 初始动机与猜想') last2=[(769, '## 22 Lean 对照：`manuscriptMain` 到底登记了什么'), (800, '## 23 常数台账')]
+title_shape_sample:
+  79| ## 3 正下界 $b(n)\ge c_0$：Proposition~\ref{prop:fb-positive}
+  98| ## 4 初始化上界 $b(n)\le C_s n^{3/4}$：Proposition~\ref{prop:fb-upper}
+  113| ## 5 把非局部标定换成局部位势：Lemma~\ref{found:lem-network} 与 Lemma~\ref{found:lem-finite-cell}
+  132| ## 6 插值、局部包络与线性尺度尾部：Lemma~\ref{found:lem-envelope} 与 Lemma~\ref{found:lem-gauge-tail}
+  153| ## 7 相位约定与列独立性：Lemma~\ref{phases:locality}
+  178| ## 8 观察域、条件收费与选中割：Lemma~\ref{access:conditioning} 与 Lemma~\ref{access:selected-cuts}
+  215| ## 9 带电荷隧道、走廊与有限体积收集界：Lemma~\ref{access:accounting} 与 Proposition~\ref{access:collection}
+  245| ## 10 概率工具箱：稀疏路径界、匹配压缩与薄图尾部
+  282| ## 11 行集中与共同二进位截断水平：Lemma~\ref{probability:rows} 与 Lemma~\ref{probability:dyadic}
+  308| ## 12 带符号链接：$X_{j,k}$ 的定义与两个一阶矩界
+  342| ## 13 两个几何输入：极端点模与坏区间剥离
+  376| ## 14 主提取：Proposition~\ref{links:extraction}
+  418| ## 15 两个截断估计：Proposition~\ref{links:asymmetric} 与 Proposition~\ref{links:matched}
+  439| ## 16 局部替换：把大正代价搬到备用道路上
+  555| ## 17 收缩常数的选取顺序：Proposition~\ref{improvement:contraction-proposition}
+  591| ## 18 平边排除与率 $\lambda$ 的耦合：Theorem~\ref{thm:exponential-shape} 的收尾
+
+symbol_hdr_lines=[804] sep_count=1
+last8=['', '', '', '', '', '', '', '']

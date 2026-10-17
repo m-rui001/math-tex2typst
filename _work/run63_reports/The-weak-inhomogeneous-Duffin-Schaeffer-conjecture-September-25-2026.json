@@ -1,0 +1,31 @@
+{
+  "paper": "The-weak-inhomogeneous-Duffin-Schaeffer-conjecture-September-25-2026",
+  "ok": true,
+  "typ_lines": 2324,
+  "included_pdf_pages": 0,
+  "formulas": 1877,
+  "math_failed": 0,
+  "labels": 223,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 2,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:picture": 1
+  },
+  "samples": {
+    "formulas": "1877"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-weak-inhomogeneous-Duffin-Schaeffer-conjecture-September-25-2026.tex"
+}

@@ -1,0 +1,32 @@
+{
+  "paper": "Pointwise-Multiple-Ergodic-Averages-for-Mixing-Transformations-October-4-2026",
+  "ok": true,
+  "typ_lines": 645,
+  "included_pdf_pages": 0,
+  "formulas": 510,
+  "math_failed": 0,
+  "labels": 92,
+  "equations": 7,
+  "theorems": 2,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "dangling_ref": 1
+  },
+  "samples": {
+    "formulas": "510",
+    "dangling_ref": "fig:square"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\newcommandnewcommand"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Pointwise-Multiple-Ergodic-Averages-for-Mixing-Transformations-October-4-2026.tex"
+}

@@ -1,0 +1,34 @@
+D09:379 pipes=7
+    | $e_{k_0}$ | $2^{\ell+r-2k_0+1}\le\tau_0/4$ | affine_games.tex:377（eq:affine-validity-k-margins） | 不变列表引理的失败概率 | 放大：$g|_H=h$ 的强制断 |
+D25:1870 pipes=9
+    | $C_\rho,\ \rho\in(r,1)$（几何衰减） | `main.tex:196-197` `|s_{kj}|\le C_\rho\rho^{k+j}` | **Lean 无对应**：`FaberEnergy`/`BoundaryKernel`/`DividedDifferences` 三个文件里 `rho`、`C_`、`tsum`、`summable` 均不出现（实测）；收敛性改由 `algebraGenerating = (c-u²•deriv g u) • Ring.inverse (algebraDenominator c g A u)`（`FaberCalculus.lean:68`）与 `ringInverse_geometric`（`:41`）在完备 Banach 代数里闭式给出 | 论文用它证 $s(\lambda,\mu)$ 的正则收敛与 $\mathbb T^2$ 上绝对一致收敛（`main.tex:198-200`） | 这是一处**真实的路线差异**：论文走系数衰减估计，Lean 走闭式求逆 + `CompleteSpace`。论文侧放宽它 ⇒ `main.tex:200` 的绝对一致收敛失去依据；Lean 侧根本没有这一步可放宽 | 我在 8.4 其四已引用过这条差异 |
+D25:1886 pipes=15
+    | $(1,i,j,k)$ 四元组 | `main.tex:514-518`（Toeplitz-Hausdorff 重证）：`$(2\Re(\bar uv),2\Im(\bar uv),|u|^2-|v|^2)$` ranges over the unit sphere in $\R^3$ | `Convexity.lean`：`bloch`（`:84`）、`norm_sq_three`/`norm_bloch`/`bloch_surjective_sphere`/`threeLinear`/`threeLinear_ker_ne_bot`/`twoForm`/`twoForm_bloch`/`convex_twoForm`/`convex_quadratic_range`（13 条声明，273 行） | 用 Bloch 球参数化把 $W(A)$ 写成实二次映射像，再由 $\R^3\to\R^2$ 线性核非空得凸性 | 三个 2（$2\Re,2\Im$）**必须是同一个 2**，否则像不在半径 $\|u\|^2+\|v\|^2=1$ 的球面上（`norm_bloch` 与 `bloch_surjective_sphere` 就是这条）；换成 $(\Re,\Im,\cdot)$ 会掉到半球。$\R^3$ 的 3 与"核非空"需要 $\dim\ker\ge1$（`threeLinear_ker_ne_bot`），即线性映射 $\R^3\to\R^2$ 的秩亏，这在 `Convexity.lean` 里是一个独立引理 | 我在 12.1 补步 4、5 手算过恒等式与符号相容性 |
+D25:1887 pipes=9
+    | $R_i/3$、$2R_i/3$（领子覆盖） | `main.tex:591` `the third-radius disks $V_i=B(\zeta_i,R_i/3)$ that cover the circle`、`:594` `$|\zeta_i-\zeta_j|<(R_i+R_j)/3\le2R_i/3<R_i$` | **Lean 有同一个 $\tfrac13$**：`ConformalCollar.lean:124` `refine ⟨S/3,by positivity,E,?_,?_,?_,hEd⟩` 配三次 `simpa only [show 3*(S/3) = S by ring]`（`:125-127`），以及 `:142` `refine ⟨r/3,by positivity,f,…⟩` + `:143`/`:146` 的 `3*(r/3)=r by ring`；另 `AnalyticCharts.lean:141` `let r := min (d/3) e` 与 `:143` `3*r ≤ d` | 从局部解析延拓拼出整圈领子时的 3 倍标准选取（Lebesgue 数的粗略版） | $\tfrac13$ 是**纯粹的技术宽松选择**，敏感度极低（$\tfrac14,\tfrac12$ 同样可行）；但三处 `ring` 恒等式说明 Lean 必须**精确知道**"取三分之一再乘三回到原半径"，即覆盖数 3 出现在等式，并非不等式里。⇒ 论文里"三个同心半径"的直觉在 Lean 是一组 `3*(S/3)=S` 的算术 | 我在 5.2 步 4 手算过论文的三重不等式链 |
+D28:1162 pipes=8
+    | |F| | 212=32+2·90 | 02；Template.lean:40 | field 总数，一切指数基数 | 精确、decide 可判 |
+D28:1163 pipes=8
+    | |R| | 98=7+1+90 | 02；IncidenceTemplate.lean:18 | row 总数 | 精确 |
+D34:533 pipes=7
+    | $A_r$ | $4+8(r-2)+(1+r(r-2))\log2$ | `optimizer:207-209` | $\log(1+kb_r(e^{-8x}))\le A_rx$ 的系数 | Lean 直接以 $\log2\le1$ 落地：`log_multiplier_le` 系数 $5+10k+k^2$（$k=r-2$），恰为 $A_r|_{\log2=1}$（§17 差异表第 14 条） |
+D34:654 pipes=9
+    | `Model.lean` | 13 | 0 | `averageDegree G = 2·|E|/|V|`（`Model.lean:7-9`），对应 `introduction:6-7` |
+D34:658 pipes=7
+    | `FiniteEntropy.lean` | 365 | 24 | `divergence`、`tv := (∑|p−q|)/2`（`:30`）、Pinsker 链（`sqrt_sub_sq_le_relTerm`、`:153`），§9 熵工具 |
+D34:660 pipes=7
+    | `FiniteCoupling.lean` | 386 | 17 | 本地 `def dist := (∑|p−q|)/2`（`:25`）、`exists_threshold_law`（`:77`，用 `Icc 0 1` 上的 Lebesgue 阈值律）、`joint_of_trials`（`:132`）、`shared_rejection`（`:273`）、`sharp_bound_le`（`:336`），引理 5.1 |
+D34:739 pipes=9
+    | 16 | 引理 5.1 用 $\|\cdot\|_{\mathrm{TV}}$（`entropy:80-82` 定义） | `FiniteCoupling.lean:25` 另定义 `def dist (p q : I → ℝ) := (∑ i, |p i - q i|)/2`，与 `FiniteEntropy.lean:30` 的 `tv` 同式不同名 | 重复定义（两处 TV），形式化内冗余；`sharp_bound_le`（`:336`）补上"$\le2\mathrm{TV}$"宽松形式 |
+D43:562 pipes=6
+    | $\deg H|_{\text{line}}$ | $2h(\lvert S\rvert-1)<q-1$ | 幂和证书 $\sum H=-E_{ii}$ | $\ge q-1$ 则幂和不零，证书塌 |
+D49:444 pipes=7
+    | $25r_l,D(q)$ | 一致界集 | Prop 4.3 sup/ess sup、`$|x-q|\le21r_k$` | 与 $26r_l$（局部性）差值裕度，缩窄则格上界不成立 |
+D53:514 pipes=8
+    | 每块新增生成元 | 37 | assembly.tex:13-15, 39-45 | |S| 计数、别名相容性 | 改动即换 k，回到上行 |
+D103:598 pipes=5
+    | `(1/4)*log|Algebra.norm ℚ Δ| ≤ N^4/2*log(N^4) + (Σα0+Σ(α1+α2))*(log N + 1/2*log q + log 8)`（64-67） | `paper.tex:573-577` 的 (eq:upper) 逐字 |
+D103:601 pipes=5
+    | `S₁*(...)-log 4*N^4*U ≤ (1/4)log|N(Δ)|`（85-87） | `paper.tex:651-657` 的 (eq:lower)，$\sum_{p\le U}\log p\ll U$ 被具体化成 $\log4\cdot U$ |
+D103:602 pipes=5
+    | `Σα0*(log U - C log q - C δ (log U)²/log q - CH H) - C*N^4*U ≤ (1/4)log|N(Δ)|`（89-96） | (eq:lower) 与引理 2.1 (eq:mass) 的合并 |

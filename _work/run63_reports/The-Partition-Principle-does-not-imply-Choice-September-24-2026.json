@@ -1,0 +1,30 @@
+{
+  "paper": "The-Partition-Principle-does-not-imply-Choice-September-24-2026",
+  "ok": true,
+  "typ_lines": 1108,
+  "included_pdf_pages": 0,
+  "formulas": 888,
+  "math_failed": 0,
+  "labels": 124,
+  "equations": 3,
+  "theorems": 3,
+  "figures": 3,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 3
+  },
+  "samples": {
+    "formulas": "888",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n   ┌─ \\\\?\\E:\\math\\typst\\The-Partition-Principle-does-not-imply-Choice-September-24-2026\\main.typ:41:103\n   │\n41 │ $ V subset.eq W subset.eq V \\[ G \\] \\, #h(2em) upright(\"Ord\")^W = upright(\"Ord\")^V \\, #h(2em) W tack.r.double sans(Z F) + sans(P P) + sans(A C)_(upright(\"WO\")) + not sans(A C) . $\n   │                                                                                                        ^^^^^^\n\nwarning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n    ┌─ \\\\?\\E:\\math\\typst\\The-Partition-Principle-does-not-imply-Choice-September-24-2026\\main.typ:362:276\n    │\n362 │   #emph[The forcing $bb(R)$ is countably closed and satisfies the $mu$-chain condition. It adds no countable sequences of ground elements, preserves $kappa = ℵ_1^V$, and preserves every ground cardinal at least $mu$. In particular it preserves $mu$ and $mu^(+)$. If $V tack.r.double sans(C H)$, it preserves all cardinals.]\n    │                                                                                                                                                                                                                                                                                     ^^^^^^\n\nwarning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n    ┌─ \\\\?\\E:\\math\\typst\\The-Partition-Principle-does-not-imply-Choice-September-24-2026\\main.typ:562:73\n    │\n562 │   #emph[The set $A$ is not wellorderable in $W$. In particular $W tack.r.double not sans(A C)$.]\n    │                                                                          ^^^^^^\n\nwarning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n    ┌─ \\\\?\\E:\\math\\typst\\The-Partition-Principle-does-not-imply-Choice-September-24-2026\\main.typ:953:11\n    │\n953 │ $ W tack.r.double sans(Z F) + sans(P P) + sans(A C)_(upright(\"WO\")) + not sans(A C) . $\n    │            ^^^^^^\n\nwarning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n     ┌─ \\\\?\\E:\\math\\typst\\The-Partition-Principle-does-not-imply-Choice-September-24-2026\\main.typ:1054:34\n     │\n1054 │ $ Q^M = { p in \\| M \\| : M tack.r.double p in bb(Q) } \\, $\n     │                                   ^^^^^^\n\nwarning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n     ┌─ \\\\?\\E:\\math\\typst\\The-Partition-Principle-does-not-imply-Choice-September-24-2026\\main.typ:1062:85\n     │\n1062 │ $ sigma tilde.op_G tau & quad arrow.l.r.double quad \\( exists p in G \\) med M tack.r.double p forces sigma = tau \\,\\\n     │                                                                                      ^^^^^^\n\nwarning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n     ┌─ \\\\?\\E:\\math\\typst\\The-Partition-Principle-does-not-imply-Choice-September-24-2026\\main.typ:1063:91\n     │\n1063 │ \"\"_G med E_G med \\[ tau \\]_G & quad arrow.l.r.double quad \\( exists p in G \\) med M tack.r.double p forces sigma in tau . quad \"(8.3)\" $ <eq:internal-name-equivalence>\n     │                                                                                            ^^^^^^\n\nwarning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n     ┌─ \\\\?\\E:\\math\\typst\\The-Partition-Principle-does-not-imply-Choice-September-24-2026\\main.typ:1069:11\n     │\n1069 │ $ W tack.r.double phi \\( \\[ arrow(tau) \\]_G \\) quad arrow.l.r.double quad \\( exists p in G \\) med M tack.r.double p forces_(upright(\"HS\")_(cal(S))) phi \\( arrow(tau) \\) . $\n     │            ^^^^^^\n\nwarning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n     ┌─ \\\\?\\E:\\math\\typst\\The-Partition-Principle-does-not-imply-Choice-September-24-2026\\main.typ:1069:107\n     │\n1069 │ $ W tack.r.double phi \\( \\[ arrow(tau) \\]_G \\) quad arrow.l.r.double quad \\( exists p in G \\) med M tack.r.double p forces_(upright(\"HS\")_(cal(S))) phi \\( arrow(tau) \\",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 12,
+  "source": "E:\\math\\_work\\flat\\The-Partition-Principle-does-not-imply-Choice-September-24-2026.tex"
+}

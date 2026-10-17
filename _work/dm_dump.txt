@@ -1,0 +1,436 @@
+=== 0 | D100-准Riemann假设：Re-s大于八分之七的无零点半平面与Dirichlet-L函数显式公式路线的反推笔记.md | line 498 | INLINE | errlen 55
+BODY: '=3-\\frac{8x}9+... $ 注意 $(1-x)+(2-\\frac{8x}9)=3-\\frac{17x}9=D_x'
+LINE: 我自己推一遍：$x+(1-x)r=(2-\frac{8x}9)(t-r)-\frac{4x}9$ 移项得 $r[(1-x)+(2-\frac{8x}9)]=\frac{4x}9+(2-\frac{8x}9)t-x$，左括号 $=3-\frac{8x}9+... $ 注意 $(1-x)+(2-\frac{8x}9)=3-\frac{17x}9=D_x$ ✓；右 $=(2-\frac{8x}9)t-\frac{5x}9$ ✓。与论文完全一致，所以 $D_x$ 是两条线斜率的绝对值之和，这个解释在论文里没写出来。代端点：$r_*(\frac32)=\frac{3-\frac{16x}9-\frac{5x}9}{D_x}=\frac{3-\frac{21x}9}{3-\frac{17x}9}=1$ ✓；$r_*(1)=\frac{2-\frac{13x}9}{3-\frac{17x}9}$，在 $x\in[0,\frac12]$ 上单调性我验算 $x=\frac12$ 得 $\frac{2-\frac{13}{18}}{3-\frac{17}{18}}=\frac{23/18}{37/18}=\frac{23}{37}$ ✓ 即 $\frac{23}{37}$ 是 $x=\frac12$ 处的值，也就是 $D_x$ 的最大值 $\frac{37}{18}$ 出现在 $x=\frac12$（$y=0$）。$t-r_*(t)=\frac{(1-x)t+\frac{5x}9}{D_x}$ 我同样代入 $t=1,x=\frac12$ 验得 $\frac{1-\frac{4}9}{3-\frac{17}{18}}=\frac{5/9}{37/18}=\frac{10}{37}$？这与论文"在 $t=1$ 时为 $\frac{1-\frac{4x}9}{3-\frac{17x}9}\ge\frac13$"的形式不同：论文的分子是 $1-\frac{4x}9$，我的推导给 $(1-x)+\frac{5x}9=1-\frac{4x}9$ ✓ 一致；代 $x=\frac12$ 得 $\frac{1-\frac29}{\frac{37}{18}}=\frac{7/9}{37/18}=\frac{14}{37}\approx0.378$，而 $\frac13\approx0.333$，不等式成立 ✓（我上面 $\frac{10}{37}$ 那次是把 $\frac{5x}9$ 误写成减号，已改）。
+
+=== 1 | D104-单折Diophantine表示：幂关系与椭圆曲线互定义性的反推笔记.md | line 553 | INLINE | errlen 55
+BODY: '"）加收尾 "Impose $v=h_R'
+LINE: $\xi$ 块（witness-ledger.tex:51-72）：四个 itemize 块（$Q,R$ 码与代表测试、五邻点与 $[2]Q$ 码及五个加法元组与五个高度元组、两个邻值最大与 $L_0,D_0$、四松弛量 "u+W_1-h_Q,\ N_Q-u-W_1-1,\ \kappa D_0-L_0,\ \kappa L_0-D_0$"）加收尾 "Impose $v=h_R$. Here the already present internal coordinate $h_R$ and the displayed output $v$ are distinct variables fixed to the same value... The integer indices $k,r$ and the real quantities in the growth proof are not variables of this tuple."
+
+=== 2 | D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md | line 1177 | INLINE | errlen 55
+BODY: 'X_{rr}=X_{mm}m_m^2+X_mn... $ 只有 $m_m^3'
+LINE: （因为 $X_r=X_mm_m$、$X_{rr}=X_{mm}m_m^2+X_mn... $ 只有 $m_m^3$ 项 survive 在反对称组合里，
+
+=== 3 | D113-三维有界可测标量电导率的非唯一性：分块与标量化的反推笔记.md | line 843 | INLINE | errlen 55
+BODY: '(-\\partial_1h_1-\\partial_3h_3)-(-\\partial_1h_2) $…… 原文说改变量为 $-\\operatorname{div} h=-q'
+LINE: 第三个矩为零 $\Rightarrow\int q=0$，于是取 $\operatorname{div} h=q$，把第一列加上 $(\partial_2h_1,-\partial_1h_1-\partial_3h_3,\partial_2h_3)^t$、第二列加上 $(\partial_2h_2,-\partial_1h_2,0)^t$。这两列都无散度（我逐项核算第一列：$\partial_1\partial_2h_1-\partial_2\partial_1h_1-\partial_2\partial_3h_3+\partial_3\partial_2h_3=0$ ✓；第二列：$\partial_1\partial_2h_2-\partial_2\partial_1h_2=0$ ✓），而它们对 $F^1_2-F^2_1$ 的改变是 $(-\partial_1h_1-\partial_3h_3)-(-\partial_1h_2) $…… 原文说改变量为 $-\operatorname{div} h=-q$ ✓（即 $-\partial_1h_1-\partial_2h_2-\partial_3h_3$；我漏看了加到第一列的第 3 行分量的 $\partial_2h_3$ 与第二列第 3 行 0 的贡献关系，实际取的是 $3\times$ 列指标：第一列第 2 行 $=-\partial_1h_1-\partial_3h_3$，第二列第 1 行 $=\partial_2h_2$，故 $q$ 的新值 $=q+(-\partial_1h_1-\partial_3h_3)-\partial_2h_2=q-\operatorname{div} h$ ✓，与原文一致）。
+
+=== 4 | D115-完全二分图交叉数：Zarankiewicz式与交点归一化的反推笔记.md | line 24 | INLINE | errlen 55
+BODY: '\\lfloor m/2\\rfloor\\lfloor(m-1)/2\\rfloor\\lfloor n/2\\rfloor\\lfloor(n-1)/2\\rfloor 这四个取整看，想知道它们到底是被谁逼出来的。论文没有把这段心理写出来，只给了一个恒等式，                        （即                 那一条）逐字是：\n\n\n\n\n\n\n\n\n我当时的猜想很朴素：这个式子一定先由上界构造写死，再由下界证明被迫接受。理由是我把       的两条写法对照着展开。第一条写法里 $\\lfloor r/2\\rfloor'
+LINE: 我坐下来第一件事，是盯着 $\lfloor m/2\rfloor\lfloor(m-1)/2\rfloor\lfloor n/2\rfloor\lfloor(n-1)/2\rfloor 这四个取整看，想知道它们到底是被谁逼出来的。论文没有把这段心理写出来，只给了一个恒等式，`introduction.tex:23-27`（即 `\label{eq:dr}` 那一条）逐字是：
+
+=== 5 | D115-完全二分图交叉数：Zarankiewicz式与交点归一化的反推笔记.md | line 404 | INLINE | errlen 55
+BODY: '\\Phi                                                                     conclusion.tex:48-52     Lemma~\\ref{lem:additive} and the annihilation property of $\\Phi'
+LINE: 这个计算给了我一条论文没有明说的理解线：`lem:additive` 之所以要把结论弱化成"模 $\mathcal L$"，正是因为 $J^{ik}$ 里的局部项依赖每个顶点各自独立的 gap 选择，而 $\mathcal L$ 恰好是这些选择所张开的歧义空间；`detector.tex:5-7` 说 $\Phi` annihilates the additive ambiguity in Lemma~\ref{lem:additive}，配合 `conclusion.tex:48-52` 的 `Lemma~\ref{lem:additive} and the annihilation property of $\Phi$ imply` 与 `R_{ik}=X_i-Y_k`，闭合了整条逻辑：我不需要证明各顶点 gap 相容，只需要一个把 $\mathcal L$ 杀掉的线性映射。`eq:detector-support-bound`（`detector.tex:129-132`）与 $B_{pp}=0$ 则负责把 $b_p$ 侧的残留也清掉。
+
+=== 6 | D117-最大三角Hilbert变换对称点估计：跳跃控制与热流两侧的反推笔记.md | line 42 | INLINE | errlen 55
+BODY: '"，左侧三线性形式对 $(A_0,A_1,A_2)\\mapsto(tA_0,tA_1,tA_2)'
+LINE: 机械理由（对称点在哪一维取到）：$\Phi$ 关于 $R$ 是三次齐的，$R\mapsto tR$ 让能量乘 $t^3$。输入取 $L^3$、输出取 $L^{3/2}$ 时，双线性配对 $\int F_0\,B(F_1,F_2)$ 的三个因子各贡献一次齐性，总次数 3 与能量次数 3 相同。若把能量换成 $\operatorname{tr}P^{q/2}$（奇异值 $q$ 次和），则 `matrix.tex:151` 那一行 "$\le\frac34\lVert L\rVert_{\mathrm{op}}^2\Phi(R^*R)$." 的推导要用 $x^2y^2/(x+y)\le(xy)^{3/2}/2\le(x^3+y^3)/4`，右端恰是立方；取 $q\ne3$ 时这个 AM-GM 链的末项不再与 $\mathcal S(A)=\sum h^2|A_v|^3$（`heat.tex:53`）同次，缩放论证立刻失配。具体地说，`maximal.tex:29` 的结论右侧是 "$\le C\prod_{v=0}^2\left(\sum_{i,j}h^2|A_v(i,j)|^3\right)^{1/3}.$"，左侧三线性形式对 $(A_0,A_1,A_2)\mapsto(tA_0,tA_1,tA_2)$ 是 $t^3$ 次，右侧也是 $t^3$ 次；换成 $q$ 次能量后右侧变 $t^q$，只能在 $q=3$ 闭合。这就是"对称点"在机器里的真实含义：它是一次齐性的交点。
+
+=== 7 | D123-Petty射影体积猜想四维以上：球面核心与范数刚性的反推笔记.md | line 179 | INLINE | errlen 55
+BODY: '\\left.\\mathcal F(A)\\right|_{\\operatorname{ker} A}\n =-\\frac{k}{n(n+k)}I_{\\operatorname{ker} A}.`\n\n(b) 补齐。连续性来自                        ，分母 $\\mathbb E_{\\sigma} g_A^k>0'
+LINE: 核块计算逐字（`sections/05_position.tex:356-359`）：`$\left.\mathcal F(A)\right|_{\operatorname{ker} A}
+
+=== 8 | D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md | line 480 | INLINE | errlen 55
+BODY: '样本是否落在 $B'
+LINE: 观测"$样本是否落在 $B$"给出的信息下界是
+
+=== 9 | D134-乘积投影定位给出QAC零度parity下界：bootstrap与深度收缩的反推笔记.md | line 349 | INLINE | errlen 55
+BODY: '"；初值由 $W_N(T_0(z))=1'
+LINE: （c）每个指数与常数的来历。$0<a<b$：$a$ 是衰减率指数，$b$ 是被覆盖的计数区间上端；$b>a$ 保证 `polynomial.tex:45` 的 "Since $a<b$, we have $m\ge2r$ once $N$ is sufficiently large."，而 $m\ge2r$ 后面被用了两次（$\frac{m+r}{m-r}\le3$ 与 $\beta$ 的常数项）。$u>(a+b)/2$：真正的增长率是 $\gamma=(a+b)/2$（`polynomial.tex:130`），因为 $\ell=O(N^\gamma\log N)$、$\log W_N(p)=O\!\left(N^\gamma(\log N)^2\right)$（`polynomial.tex:131-135`），$u$ 只要严格大于 $\gamma$ 就能把 $\deg p=r+\ell$ 与 $\log W_N(p)$ 同时塞进 $o(N^u)$（`polynomial.tex:136`）。$\gamma$ 天生是 $(a+b)/2$ 的理由：$\sqrt{mr}\asymp N^{(a+b)/2}$，这是 Chebyshev 在长度 $m-r$ 的区间上压制 $m^r$ 增长所需次数的自然量级。$W_N(fg)\le W_N(f)W_N(g)$（`polynomial.tex:104-105`）来自系数卷积与 $N^{k+j}=N^kN^j$；由此 $\prod_{j=1}^r(1+N/j)\le(1+N)^r$（`polynomial.tex:107`），因为每个因子 $1-x/j$ 的带权范数是 $1+N/j$ 且 $1/j\le1$。$\beta=W_N(z)=\frac{m+r+2N}{m-r}\le3+2N$（`polynomial.tex:111`）的两半由 `polynomial.tex:113-115` 交代："Here $m\ge2r$ controls the constant coefficient, while the positive integer $m-r\ge1$ controls the linear coefficient. This bound remains valid when $m>N$."。$A=2\beta+1$（`polynomial.tex:117`）是 $A^2-2\beta A-1\ge0$ 的显式解，`polynomial.tex:119-122` 逐字给出归纳两行："$ 2\beta A^j+A^{j-1}\le A^{j+1}$" 与 "$A^2-2\beta A-1=2\beta\ge0$"；初值由 $W_N(T_0(z))=1$、$W_N(T_1(z))=\beta\le A$ 起（`polynomial.tex:123-124`）。$A\le7+4N\le11(1+N)$（`polynomial.tex:124-125`）是 $\beta\le3+2N$ 的两倍加一，故 $W_N(p)\le(1+N)^r\bigl(11(1+N)\bigr)^\ell$、$\deg p\le r+\ell$（`polynomial.tex:127-128`）。取对数得 $\log W_N(p)\le r\log(1+N)+\ell\bigl(\log 11+\log(1+N)\bigr)=O(N^\gamma(\log N)^2)$。
+
+=== 10 | D134-乘积投影定位给出QAC零度parity下界：bootstrap与深度收缩的反推笔记.md | line 412 | INLINE | errlen 55
+BODY: '"，理由 "since $\\sigma\'>\\alpha,\\sigma'
+LINE: 其中 "where the last inequality is $\mathcal B_{d-1}(\sigma',\beta')$."（`depth_reduction.tex:95`）。模式计数在 `depth_reduction.tex:96`："There are at most $(1+N)^{\lceil N^\alpha\rceil+1}$ patterns."，账目在 `depth_reduction.tex:100-104`："$ \exp\!\left((\lceil N^\alpha\rceil+1)\log(1+N)-N^{\sigma'}\right)\le\exp(-N^\sigma)$"，理由 "since $\sigma'>\alpha,\sigma$."（`depth_reduction.tex:104`）。
+
+=== 11 | D134-乘积投影定位给出QAC零度parity下界：bootstrap与深度收缩的反推笔记.md | line 462 | INLINE | errlen 55
+BODY: '"，而                               是关键一句："Each $B_j'
+LINE: 单门验算：$(I-2P)A'(I-2P)=A'-2PA'-2A'P+4PA'P$，四个系数的绝对值之和 $1+2+2+4=9=3^2$，$k$ 个独立门给出 $3^{2k}=9^k$。共轭由 $V$ 作用后 `depth_reduction.tex:146-152` 变成 $B_1B_2B_3$，其中 "$ B_1=VP_{\mathrm{left}}V^\dagger,\qquad B_2=VA'V^\dagger,\qquad B_3=VP_{\mathrm{right}}V^\dagger.$"，而 `depth_reduction.tex:153-155` 是关键一句："Each $B_j$ is therefore a contraction to which \Cref{lem:propagation} applies. No commutation between these three factors is asserted or needed."。三段截断的指数选取在 `depth_reduction.tex:157-165`：
+
+=== 12 | D134-乘积投影定位给出QAC零度parity下界：bootstrap与深度收缩的反推笔记.md | line 595 | INLINE | errlen 55
+BODY: '，递推得 $g_i=g-3i\\eta'
+LINE: 于是 `bootstrap.tex:139-142`："Writing $g_i=t_i-s_i$, we have $ g_i=g-3i\eta,\qquad t_{i+1}-t_i=g_{i+1}. $" 我验算过：$g_{i+1}=t_{i+1}-s_{i+1}=(2t_i-s_i-3\eta)-t_i=t_i-s_i-3\eta=g_i-3\eta$，递推得 $g_i=g-3i\eta$；$t_{i+1}-t_i=t_i-s_i-3\eta=g_i-3\eta=g_{i+1}$。步长取 $g_{i+1}$ 这件事让"$t$ 的推进量"与"当前间隙"绑定，正是 `bootstrap.tex:119` 那句 "advance the mismatch exponent by almost the current gap" 的实现。取 $K=\lceil2/g\rceil$，`bootstrap.tex:143-148`：
+
+=== 13 | D134-乘积投影定位给出QAC零度parity下界：bootstrap与深度收缩的反推笔记.md | line 604 | INLINE | errlen 55
+BODY: '" 再取 $J\\le K'
+LINE: 以及 `bootstrap.tex:149-151`："$ t_K=t+\sum_{i=1}^K g_i>t+Kg/2\ge t+1>1. $" 再取 $J\le K$ 为第一个 $t_J>1$ 的指标，`bootstrap.tex:152-154`："This index and every exponent in the chain are independent of \(N\). The assertion \(\cB_d(s_J,t_J)\) is trivial."。回推的论证在 `bootstrap.tex:174-183`：
+
+=== 14 | D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md | line 215 | INLINE | errlen 55
+BODY: '"\n\n这里最后一条我按原样记录：表格第 45 行的正文是                                      。\n跨代数的关键等式：\n\n>                         "The last two identities are not $I'
+LINE: > `idempotents.tex:44-45` " (000,01,1) & A_0,B',C' & A_0+B'+C'\\" 与 " (001,01,1) & A_1+B'+C'.$"
+
+=== 15 | D145-复杂矩阵乘法低于2.258与矩形界：证书层级与标签补全的反推笔记.md | line 115 | INLINE | errlen 55
+BODY: '"，若真那样计费则 $\\log R_N'
+LINE: (d) 失败路线。[推测] 我试过把每层的辅助张量按分支数乘算（即 $\operatorname{rank}(\mathcal A)$ 每分支各付一次），`371` 明确说 "This does not charge \(\rank(\mathcal A)\) once per \(\ell$"，若真那样计费则 $\log R_N$ 变成 $t$ 倍级，$D-A$ 不再相消，指数界直接退回平凡值。[推测] 第二条是不固定条件词频而让频率随输出漂移，此时下一辅助张量的规模依赖被选出的 direct 输出，违反 `def:strong` 第三条与 `lem:hierarchy` 的"公共尺寸"要求。[推测] 第三条是用典型子空间的存在性论证代替精确类型，误差从 $o(N)$ 变成指数小集合的补，无法保证所有计数被 `lem:group` 覆盖，剩下的 $O(\log N)$ 项就无处安放。
+
+=== 16 | D145-复杂矩阵乘法低于2.258与矩形界：证书层级与标签补全的反推笔记.md | line 489 | INLINE | errlen 58
+BODY: '。\n\n(b) 中间步骤。先补 $\\alpha'
+LINE: (a) 原文。目标设定 `07-certificates.tex:13--21`："Use base two, distinguished side \(X\), and its color \(\colB\). After \(b\) base factors, regard the \(X\)-coordinates as binary words of length \(b\); the logarithmic base cost is \(b\log2\). We seek a final leaf law for which \(X\) is uniform on all these words and \(S=\HH(X)=b\log2\). By \cref{cor:balance} and the output-size lower bound, such a law gives \( w\!\left(\min\{1,2T/(b\log2)\}\right)=2. \)" 泄漏恒等式 `07-certificates.tex:43--50`：$\mathrm H(X)-S=\sum_{\nu\text{ nonincident}}\mathbb P(\nu)\,\mathrm I(X;\text{child}\mid\nu)$，并接一句"The terms on the right are nonnegative.  Thus \(S=\HH(X)\) precisely when every nonincident choice at a positive-mass node is independent of \(X\), conditional on the preceding choices." 维护条件 `07-certificates.tex:55--62` 的三条：色 $\mathsf B$ 恰容 $P$、其余色恰容 $Q$；每色的条件律使 $X$ 在其容许集上均匀；其条件入射熵恰为该集大小的对数。`lem:uniform-update` 在 `07-certificates.tex:66--87`，更新式 `eq:minus-rho`、`eq:minus-h`、`eq:plus-rho`、`eq:plus-h` 与 "$b'=mb$"。终点 `07-certificates.tex:141--143`：$\alpha\ge\min\{1,2D/\log2\}$。脚本 `07-certificates.tex:146--154`：$-2,+2,+2,-3,+2,-2,+3$，"A minus sign means center \(\colB\)... Resolving the first tie as \(\colA\), the centers are \(\colB,\colA,\colC,\colB,\colC,\colB,\colA$." 数值闭链 `07-certificates.tex:202--212`：$\frac{2D_{288}}{\log2}>\frac{2}{0.6932}\bigl[\frac{0.5625\cdot1.098}{4}+\frac{0.463\cdot0.635}{48}+\frac{0.360\cdot0.628}{288}\bigr]=\frac{1548637}{3327360}>0.465$。
+
+=== 17 | D148-三维相对论VlasovMaxwell整体经典解的符号增量bootstrap与延迟锥消去.md | line 402 | INLINE | errlen 55
+BODY: '130         行引用了                          （$1456'
+LINE: 第六，依赖关系的精确管理。`setup.tex` 第 $130`--$140` 行引用了 `figure-dependencies.tex`（$1456$ B）中的条件依赖图。我从正文各节的"假设"声明反推出这张图的拓扑结构：`retarded.tex` 无 bootstrap 假设 → `occupation.tex` 假设 (eq:bootstrap) → `direct.tex` 假设 (eq:bootstrap) → `cancellation.tex` 假设 (eq:bootstrap) → `direction.tex` 假设 (eq:bootstrap) 但不用改进占据 → `selection.tex` 同时用基线估计和方向改进 → `closure.tex` 组装所有 → `continuation.tex` 独立于 bootstrap（纯 PDE 理论）。`introduction.tex` 第 $190$--$214$ 行把策略概述为"两次使用有符号恒等式"：第一次给方向界（只靠基线），第二次给选取上的系数界（同时用改进占据）。
+
+=== 18 | D155-实L1独立乘积的averaged中点模与AUC重范化障碍.md | line 533 | INLINE | errlen 55
+BODY: '\\mathbb E|Z-1|=\\int_0^1(1-z)e^{-z}dz+\\int_1^\\infty(z-1)e^{-z}dz=(2-2/e)+(1/e)= $... 用正文给的对称式更快，$2/e\\approx0.736'
+LINE: 指数律下 $\rho=2/e$（`obstruction.tex:78`）：$\mathbb E|Z-1|=2\mathbb E(Z-1)_+=2\int_1^\infty e^{-s}\,ds=2/e$。核对另一路：$\mathbb E|Z-1|=\int_0^1(1-z)e^{-z}dz+\int_1^\infty(z-1)e^{-z}dz=(2-2/e)+(1/e)= $... 用正文给的对称式更快，$2/e\approx0.736$，落在 $(0,2)$ 内，于是 $t_0=a\rho/(2b)$ 大约 $0.37a/b$。
+
+=== 19 | D163-四次多项式无平方因子值的数域行列式路线与自适应辅助素数.md | line 189 | INLINE | errlen 55
+BODY: '-power-free 的定义包含负整数而排除零（01-introduction.tex:4-6），这条约定在 $f'
+LINE: 这一节把 02-sieve.tex 的每一步拆开来核对，因为我在这个文件上返工最多。记号沿用正文：$\rho_f(q)=\#\{a\in\Z/q\Z:f(a)\equiv0\pmod q\}$，$S_{f,k}(X)=\#\{1\le n\le X:f(n)\text{ 是 $k$-power-free}\}$（01-introduction.tex:7-10）。$k$-power-free 的定义包含负整数而排除零（01-introduction.tex:4-6），这条约定在 $f$ 有整根时会影响计数，正文用"次数至少二因此无被计数的零值"处理掉（02-sieve.tex:34-36）。
+
+=== 20 | D18-Tachikawa第二猜想反例.md | line 990 | INLINE | errlen 55
+BODY: 'E$'
+LINE: 第二类是旧表把推导量当成给定值。旧表"$\Lambda$ 的阶 $2\times400+\dim F$"：tex 只给 $\dim E=400$（algebra.tex:129）和 $\Lambda$ 的形状（triangular.tex:108），$\dim F$ 全文没出现过，旧表把一个我能算但论文没写的量写成了论文给的数。"$\operatorname{pd}_{B^e}(\operatorname{Res} E)\le8$" 同理：bimodule.tex:630 的原话是 "$E$$B^e$-投射消解长度不超过 $8$"，讲长度，我用 pd 记号转写，属于口径外推，新表里我照 tex 的说法写"投射消解长度 $\le8$"。
+
+=== 21 | D18-Tachikawa第二猜想反例.md | line 990 | INLINE | errlen 55
+BODY: '-投射消解长度不超过 $8'
+LINE: 第二类是旧表把推导量当成给定值。旧表"$\Lambda$ 的阶 $2\times400+\dim F$"：tex 只给 $\dim E=400$（algebra.tex:129）和 $\Lambda$ 的形状（triangular.tex:108），$\dim F$ 全文没出现过，旧表把一个我能算但论文没写的量写成了论文给的数。"$\operatorname{pd}_{B^e}(\operatorname{Res} E)\le8$" 同理：bimodule.tex:630 的原话是 "$E$$B^e$-投射消解长度不超过 $8$"，讲长度，我用 pd 记号转写，属于口径外推，新表里我照 tex 的说法写"投射消解长度 $\le8$"。
+
+=== 22 | D211-三边际Coulomb代价的Monge拟设反例.md | line 227 | INLINE | errlen 55
+BODY: '\\mu(U)=1         build/sections/proof.tex:44-45                                                                                                                                                                                                                build/sections/proof.tex:67-70` 那行下界。我把这个 $\\epsilon/3'
+LINE: 第一处停在 $\pi(U^3)=1$ 这句。稿件把它写成"三个事件 $x_i\notin U$ 各自概率为零"（`build/sections/proof.tex:65-67`），我起初以为这是废话，因为 $\mu(U)=1` 已经登记在 `build/sections/proof.tex:44-45`。重看时发现顺序很重要：$\mu(U)=1$ 是密度构造的直接结果（五个支撑都在 $U$ 内且 $\mu$ 归一），而 $\pi(U^3)=1$ 需要三个边缘各自满足，再由 $\pi$ 是乘积空间上的概率测度得联合事件余集为零：$\pi(\{x_i\in U\ \forall i\})\ge1-\sum_i\pi(x_i\notin U)=1$。这一步成立以后，支撑不等式才能在 $U^3$ 上逐项积分，才有 `build/sections/proof.tex:67-70` 那行下界。我把这个 $\epsilon/3$ 式的粗估计写出来，是因为它同时解释了"为什么三边际条件已经够用"：任何一维边缘已经把全部质量放在 $U$ 上，笛卡尔积的余集是零测并。
+
+=== 23 | D218-严格椭圆方向零一律的反向重构笔记.md | line 705 | INLINE | errlen 55
+BODY: '"，定界符左右不配对，正确写法应是 $\\mathbb E_{\\mathbf Q_N}\\lvert E\\rvert'
+LINE: "$\EE_{\mathbf Q_N}\lvert E\rVert$"，定界符左右不配对，正确写法应是 $\mathbb E_{\mathbf Q_N}\lvert E\rvert$；同一行后面的 $\lVert e\rVert$ 用法是对的。五，第 5 节
+
+=== 24 | D219-素数1009上有限Smith-Toda复形V4的构造追记.md | line 49 | INLINE | errlen 55
+BODY: ')。第二处卡点更本质:有限化之后,残余候选里 $k=p'
+LINE: 第二版也走不通,卡点有两处。第一处是规模:$s=qk+1$ 在 $k$ 大时有二十万以上的条带要处理,直接计算是痴人说梦,必须先有有限截断。截断的来源后来找到了两条互补的:正性引理 $w\geq s$(归一化 cobar 里每条约化余巴因子至少吃掉权重 1;$01\text{-}01-framework.tex:142\text{-}155$)给出 $(q-1)k\leq u_4-1$,但这只把 $k$ 压到十万量级,仍然没法逐点算;真正锋利的是 May 上界页的字母计数,它把 $k$ 一步压到 $k\leq p+2$,再对 $k\geq2$ 把位置 3 以上的字母排除($01\text{-}01-framework.tex:244\text{-}276$,$03\text{-}may$ 与 $04$ 文件对应节:`build/sections/03-may-and-first-obstruction.tex:18\text{-}69$)。第二处卡点更本质:有限化之后,残余候选里 $k=p$ 那一行的群根本不为零。May 页上结结实实躺着两个单项式 $cyb\,A^{N+1}$ 与 $ayb\,B\,A^{N}$($03\text{:}359\text{-}384$ 的穷举表),代数消灭这条路在这里是死的,只能换武器。这一点对我冲击挺大:它说明"全代数"的第二版方案即使算力无限也到不了终点,最后一步必须借同伦层面的关系,比如 $\beta$ 幂的消灭。
+
+=== 25 | D219-素数1009上有限Smith-Toda复形V4的构造追记.md | line 182 | INLINE | errlen 55
+BODY: '3p^2? $ 不对,重算: $N_0p=p^3-2p^2+p'
+LINE: 符号矩阵(`03:264-273`)我专门重算:取第一、二、四行 $r_1=(1,-1,0)$、$r_2=(1,0,1)$、$r_4=(-1,-1,1)$,行列式 $=1\cdot(0\cdot1-1\cdot(-1))-(-1)\cdot(1\cdot1-1\cdot(-1))+0=1+2=3$,在 $\mathbb F_{1009}$ 非零,论文说的 minor 3 得到独立确认。Frobenius 残权(`04:257-261`):$\operatorname{wt}(xacA^{p-1})=3+p+2p^2$、$\lambda_0$ 减出后 $\mathcal R=(u_4+2-\lambda_0)/p$:代 $u_4=p^3+p^2+p+1$ 得 $\mathcal R=p^2-p=p(p-1)$,对;第二行 $\lambda_0=3+2p^2$、$\mathcal R=(p^3+p^2+2p-2-2p^2+3)/p$?我按原式 $\mathcal R=(w-\lambda_0)/p$、$w=u_4+2=p^3+p^2+p+3$、$\lambda_0=2p^2+3$ 重算得 $(p^3-p^2+p)/p=p^2-p+1$,对。$k=p-1$ 两行 $\lambda_0=np$ 直接给 $N_0p/p=N_0$ 减余:$(u_4+p-1-N_0p)/p$:代 $u_4=p^3+p^2+p+1$、$N_0=p^2-2p+1$,分子 $=p^3+p^2+p+1+p-1-p^3+2p^2-p=p^2+p$?我算得 $3p^2? $ 不对,重算: $N_0p=p^3-2p^2+p$;分子 $=(p^3+p^2+p+1)+(p-1)-(p^3-2p^2+p)=3p^2+1$;除以 $p$ 不整除,但残权定义取商权重上界,原文在 `04:259-261` 明说后两行的 $\lambda_0$ 是 $np$($n=N_0,N_0-1$),对应 $\mathcal R$ 打印为 $3p+1$、$3p+2$:我按 $w=u_4+p-1=p^3+p^2+2p$、$(w-N_0p)/p=(3p^2+2p)/p=3p+2$;第二行 $n=N_0-1$ 少一个 $p$ 得 $3p+3$?原文打印 $3p+1$。第一行(`$n=N_0$`,`a=1`)对应 $\mathcal R=3p+1$、第二行(`$n=N_0-1$`)对应 $3p+2$,我这边推出 $3p+2$ 与 $3p+3$。差一拍的原因:两行的商次数 $a$ 不同,所需系数权重 $\lambda_0$ 也不同(第一项核次数 $2p+1$ 还是 $2p-1$?)。我在 `04:239-261` 与 `04:441-444` 的框架里重读:残权 $\mathcal R=(w-\lambda_0)/p$ 用"最小系数权" $\lambda_0$,对 $n=N_0$: $\lambda_0=N_0p$,得 $3p+2$,可文中该格印 $3p+1$。两种读法:要么 $w$ 该格是 $u_4+p-1$ 而我展开差一($u_4+p-1=p^3+p^2+2p$,对),要么表中行配的是 $n=N_0$ 且 $w$ 的取法不同。我最终按原文的后续使用(所有商权重要等于 $\mathcal R$ 的方程如 `04:538-541`)反推:两个方程 $(2,p+2)$ 与 $(3,2p+2)$ 之和 $=3p+2$ 对应 $n=N_0-1$ 行,而 $n=N_0$ 行的 $H^1$ 计算以 $4p>3p+1$ 截断($04:459\text{-}461$),说明确实是 $3p+1$。$u_4+p-1$ 减 $N_0p$ 再除 $p$ 我给不出第三遍算式来调和,记录为未决疑点(1):我的算术或论文表有一个 $p$ 的移位,后续全部推导只用"约 $3p$ 量级且 $<4p$"这一点,疑点不动摇结论。[推测] 差一拍来自商权重里 $\eta$ 记号 $p+1$ 对 $u_2$ 的一次修正(`04:277-278`)。
+
+=== 26 | D249-从全局谱隙到二维纠缠面积律.md | line 44 | INLINE | errlen 55
+BODY: 'e^{-gt}`(第 243 到 245 行)只用到全局隙。但那里的对象是算子期望的范数,配合 Poisson 时钟做空间截断(第 51 到 69 行),全程避开 Schmidt 秩语言。投影子的梦碎与收缩积的重生,是这整条链上我最想记下的转折。\n\n路线二:相关衰减直通熵。指数聚类定理把谱隙与分隔可观测量的连通相关衰减挂钩(                 第 30 到 32 行),Brandão--Horodecki 在一维确实从区域级相关衰减拿到熵界(第 26 到 29 行)。二维为什么不行?原文第 32 到 33 行给了判决书:an entropy estimate requires control of the reduced state\'s full spectrum。约化密度矩阵的熵依赖全谱,连通相关只触及少数低次矩。这条墙逼出的替代物写在                  第 34 到 69 行:对边缘谱的负对数(意外量)做矩生成函数控制,中心就是熵本身,方差型预算以边界穿越边数为代价。第 214 到 217 行还补了一句诚实的话:这个集中估计控制围绕熵中心的波动,熵中心本身还没被界住。半句话都不吹。\n\n路线三:借用局部间隙。二维已有成果几乎都带额外假设:Anshu、Arad、Gosset 的子体积界要求plaquette 投影子、无阻挠与均匀局部隙(                 第 60 到 66 行),第 71 到 75 行进一步写明局部间隙假设 concerning restrictions of the Hamiltonian, it is stronger than a gap for the full system alone。我早期确实想偷懒:熵是区域性质,凭什么不能对区域限制的哈密顿量要隙?失败重建如下。[推测] 限制哈密顿量的基态与全系统基态的边缘对不上,条件化这一步没有任何普适机制;而区域上唯一的态也根本没有"隙"可言,因为它不是任何算子的基态。成稿对这一点的系统性回应是把"隙"的用法全部改写成算子序:                    第 263 到 271 行构造 $M_i'
+LINE: 路线一:二维直接平移 AGSP。一维无阻挠链的投影子幂次把误差压到指数小的同时秩只按常数倍增长,链条叠链条就出面积律(`00-history.tex` 第 19 到 23 行是这套机制的文献位置)。我预期的二维版本:对区域 $A$ 造一个保持 $\Omega$、收缩正交补、且作用在 $A$ 边界附近薄壳上的近似投影,幂次足够多后误差小于壳的维数余量。失败点重建如下。[推测] 一维的秩递推依赖"切割只有一条边"的拓扑事实;二维壳含 $O(n)$ 个格点,壳上允许的重叠支撑使每次复合的秩预算至少按 $q^{cn}$ 增长,与幂次需求形成死循环。成稿里唯一保留的投影子精神是 `09-amplification.tex` 第 237 到 253 行:可探测性引理式的收缩积 $D=\prod G_i$ 保基态、压激发,衰减率 $e^{-gt}`(第 243 到 245 行)只用到全局隙。但那里的对象是算子期望的范数,配合 Poisson 时钟做空间截断(第 51 到 69 行),全程避开 Schmidt 秩语言。投影子的梦碎与收缩积的重生,是这整条链上我最想记下的转折。
+
+=== 27 | D25-Crouzeix完整不等式直接证明.md | line 1490 | INLINE | errlen 58
+BODY: '|s_{kj}|\\le C_\\rho\\rho^{k+j}     prop:coefficients                                                       lem:exterior-collar` 附录里那些 Carathéodory、反射、"第三半径"步骤全部依赖边界解析性，所以退化逼近一定会撞墙。\n\n$[推测]'
+LINE: $[推测]$ 其一，直接用 Minkowski 和 $K+\overline{D(0,\varepsilon)}$。它给凸紧集、$\operatorname{dist}\to0$，但边界一般只是 Lipschitz（平直段接圆弧处有角），**不是实解析 Jordan 曲线** ⇒ `lem:exterior-collar` 的 Schwarz 反射不能做 ⇒ 没有单叶领子 ⇒ 没有 $|s_{kj}|\le C_\rho\rho^{k+j}` ⇒ `prop:coefficients` 的核 $K$ 无从定义。失败机制是"正则性不足"，与"逼近不够好"无关。这一点我很想确认作者是否考虑过：`lem:exterior-collar` 附录里那些 Carathéodory、反射、"第三半径"步骤全部依赖边界解析性，所以退化逼近一定会撞墙。
+
+=== 28 | D253-阿贝尔覆盖Gale对应与Hodge猜想自幂-工作笔记.md | line 56 | INLINE | errlen 55
+BODY: '\\Delta-挠子                             build/paper.tex:757-770                                                                build/paper.tex:772-781                                              build/paper.tex:1460-1470`)是同一哲学的另一面。\n\n检测纤维选的是 Abel 映射 $u:B^{(n)}\\to\\Pic^n B'
+LINE: 线的存在性定了,下一步是它在哪里被"看见"。局部系统 $\mathcal L=(\pi_*k_Z)_\chi$ 在 $U=(B\setminus D)^{(n)}$ 外(即遇到分支点的除子)纤维为零:抬升组的稳定子含活动挠素,像经乘积特征非平凡,置换表示的 $\chi$ 分量为零(`build/paper.tex:750-756`)。对角线上仍有 $\Delta-挠子`结构,证明用deck 位移沿置换循环的乘积恒等这一手(`build/paper.tex:757-770`);单值群的作用可以从"让 $n$ 个点沿回路走、乘各自位移"直接读出,与 $\phi$ 在移动路径和(带重数)上的值一致(`build/paper.tex:772-781`)。这些细节给我印象很深:单值群不用抽象计算，是搬动除子的可视化操作,后面圆盘扭曲公式(`build/paper.tex:1460-1470`)是同一哲学的另一面。
+
+=== 29 | D26-加倍Hilbert子集无双Lipschitz有限维嵌入.md | line 769 | INLINE | errlen 55
+BODY: '与目标和弦数、失真无关"，外加 $K_B'
+LINE: 先回答"它比第 9 节强在哪"。三条：环境从"每个 $L_p$"扩到"每个无限维实 Banach 空间"（$L_p$ 只是特例）；拓扑从"可分完备度量子集"升级到**紧**（thm:main 的 $S$ 含整个底座平面，压根不紧，摘要那句 "even for compact subsets of Hilbert space" 靠的正是这次升级）；量化保持"$与目标和弦数、失真无关"，外加 $K_B$ 只依赖环境空间。多用的机器：FIP 紧致化引理（把无穷障碍切成有限证书）、对角枚举 $X_j$、有限维 Dvoretzky（严格失真 $<2$）、平移缩放装配加覆盖账。付出的代价同样明码：集不再固定（依赖 $B$），doubling 常数从 76800 爆炸为 $\Lambda=1+6\lambda^8\approx2.7\times10^{39}$，且"同一度量空间"这种零漂移不再是显然的。证明四段，$\lambda=76800$，tex:422 有句口径声明 "We use closed balls below; the same estimates work for open balls."（下文覆盖账都用闭球陈述，开球版本同估计，这是为了装配时中心选取干净。）
+
+=== 30 | D261-稀疏一般图最大基数匹配的几乎线性时间.md | line 143 | INLINE | errlen 55
+BODY: '(P+B)S^{O(1/a)+o_a(1)} 的总时间、在每条路径上、对固定充分大参数的所有充分大尺寸做到；实现要么返回精确的交换流改动以及必要时完整残量可达集 $R_0'
+LINE: 引理（第 42 到 68 行）声称这件事可以只用 $(P+B)S^{O(1/a)+o_a(1)} 的总时间、在每条路径上、对固定充分大参数的所有充分大尺寸做到；实现要么返回精确的交换流改动以及必要时完整残量可达集 $R_0$，要么报告检测到的随机失败，要么在确定性先决条件检查上挂起；它使用 $O(\log S)$ 个价格步实例，每个到达且前提有效的实例有 $2^{-\sigma}S^{-60}$ 的条件失败额度；对全新子 ledger 的所有更新与所有必要物理扫描都被限制在 $O(P)$ 个表示的关联与 bin 权重之内（除第 52 行那个式子里的 padding 与亚多项式因子）。$P=O_a(S)$ 是假设之一（第 48 行），它稍后由 §13 的重置周期论证自动成立。
+
+=== 31 | D275-用矩阵能量的曲率拿下dyadic三角Hilbert型的L3界.md | line 301 | INLINE | errlen 55
+BODY: '\\le3m_i\\sum_{j>k}... $ 作者给出的上界是 $3E_i'
+LINE: 其中 $j=k$ 允许（这就是"出现一次"包含 $j=k>i$ 的意思），$D_{>i}$ 是 $D$ 到大于 $i$ 的指标的压缩。压缩是压缩映射，$\lVert D_{>i}\rVert_{\mathrm{op}}\le\norm D_{\mathrm{op}}\le1$，故绝对值 $\le3m_i\sum_{j>k}... $ 作者给出的上界是 $3E_i$，我要把中间一步补出来：$\abs{x^*D_{>i}x}\le\norm x^2=\sum_{j>i}m_j^2\abs{D_{ji}}^2=\sum_{j>i}q_j^2\abs{D_{ij}}^2$（用 $m_j^2=q_j^2$ 与 $D$ 对称），乘上 $\abs{m_i}\le q_i$ 得 $\le\frac{}{}q_i\sum_{j>i}q_j^2\abs{D_{ij}}^2=E_i$。所以情形一的总贡献绝对值 $\le3E_i$，对 $i$ 求和得 $3E$。
+
+=== 32 | D29-Borsuk覆盖断言九维反例.md | line 521 | INLINE | errlen 55
+BODY: 'a-h=s-(N_k-N_{k-1})+... $ 即 $k-s=a-h'
+LINE: **(c) 机械理由**：四个记号 $s,a,h$ 与 $m=N_k$ 的互锁关系 $s+a=m$、$a-h=s-(N_k-N_{k-1})+... $ 即 $k-s=a-h$，是后文分诊（正维/零维）的代数底座，18 节兑现。
+
+=== 33 | D317-任意接近却寻不到共轭酉的分离Cstar代数.md | line 125 | INLINE | errlen 55
+BODY: '):因为右正则 $\\rho'
+LINE: 引理 `lem:ambient`(`main.tex:488`)的第一件事是交换子 $D'=\{Y\otimes I_K:Y\in\lambda(G)'\}$(`\eqref{eq:commutant}`,`main.tex:490`)。论证在 `main.tex:500` 到 `main.tex:506`:和所有 $I\otimes E_{xy}$ 交换,先用对角矩阵单位消掉非对角块、再用其余矩阵单位把对角块逼成相同,于是任何这种算子形如 $Y\otimes I$;第一因子的 $\lambda(g)\otimes I$ 再压出 $Y\in\lambda(G)'$。这里我留意到 $\rho(g)\otimes I\in D'$(`\text{main.tex:506}$):因为右正则 $\rho$ 与左正则 $\lambda$ 交换,所以 $\rho(g)\in\lambda(G)'$,张 $I$ 就落进 $D'$。这个 $\rho(g)\otimes I$ 后面 §21 被我拿来做 $z_i$。[推测] $I\otimes E_{xy}$ 全塞进 $D$ 的动机,论文没直说,我判断正是为了让 $D'$ 被强制成"第一因子独立、第二因子常数"这种极窄形状,从而检验式里 $z_i$ 只能从 $\lambda(G)'\otimes I$ 里取。
+
+=== 34 | D339-平面XY模型临界中心磁化的对数修正与振幅确定.md | line 296 | INLINE | errlen 55
+BODY: '\\lvert \\nabla^a \\eta_l(v)\\rvert $ | $\\le C_a (1+\\mathrm{dist}(v,0))^{-1-a}'
+LINE: | $\lvert \nabla^a \eta_l(v)\rvert $ | $\le C_a (1+\mathrm{dist}(v,0))^{-1-a}$ | build/sections/inputs.tex:607 | 贴墙与近源位置估算 | §11 与 §13  |
+
+=== 35 | D339-平面XY模型临界中心磁化的对数修正与振幅确定.md | line 404 | INLINE | errlen 55
+BODY: 'm(J) = $ const、'
+LINE: 回到 §1 那句"幂次本身不锁死归一化"：$s \asymp J^3$、$R$ 与 $q$ 与 $J$ 无关；进入尺度 $m = qRs$ 随 $J$ 增长的方式是 $m(J) \asymp J^3$；$i(J) = O(\log J)$ 是这个 $m(J)$ 对应的 RG 指数。$i(J)$ 与 $J$ 关系"对数"这一点很重要，因为 §10 说"对任何固定 $c > 0$，$[cJ, 8J]$ 在 $J$ 大时都落在进入之后"，前提是 $i(J) = o(J)$。$i(J) = O(\log J)$ 显然满足这个前提。若强行让 $s$ 与 $J$ 无关，$m(J) = $ const、$i(J)$ 也会常数化，"[cJ, 8J] 全在进入之后"就要靠"进入之前尺度短、进入之后尺度长"这种粗界；作者选择 $s \asymp J^3$ 是把"进入之后"的窗口拉宽到一个能容纳 $O_L(\log j)$ 累积误差的宽度，同时让 §4 的 $e^{-cs} = e^{-c J^3}$ 与 §12 的终端 $D^4/j^2 = O(j^{-8/5})$ 都能各自独立收敛。这个"两层收敛各自独立"是 §14 的"绝对可和 + 首项有限"能生效的物理层原因。
+
+=== 36 | D342-临界SK模型单点热浴混合的多项式指数.md | line 360 | INLINE | errlen 55
+BODY: '同一指数"才是归纳能跑起来的原因。第二，左端是后测度 $\\mu_{h_s}'
+LINE: 并且这成立只在一个质量至多 $e^{-a_*k}$ 的积分植入例外集之外，$\mathcal G$ 始终施加；在保留事件上，根是唯一的正则根（profile-amplification.tex:30-31）。我要把这条陈述的三处"故意不对称"记清楚，因为它们比结论本身更能告诉我作者付出了什么。第一，$a_*$ 与 $r_1$ 无关，而 $c$ 依赖 $r_1$：前者要保证沿观测路径向后归纳时每层的指数损失同阶可累加，后者只在紧区间内部起作用，写 §12.1 时我只注意到"$o(1)$ 必须先于 $n$ 选"，没注意到"$同一指数"才是归纳能跑起来的原因。第二，左端是后测度 $\mu_{h_s}$ 的二乘积，右端却以 $nr$ 为尺度，而 $k=nr^3$ 里的 $r$ 是同一次幂：把两者对照，一次偏差的概率代价是 $e^{-cn}$，而它在 $k$ 标度上的例外预算是 $e^{-a_*k}$，两者之比对 $r$ 的幂次差正好 $r^3$ 对 $1$，这就是 §5 里"环带质量按 $p^3$ 归一"的另一面。第三，"唯一正则根"是保留事件的一部分内容，它对应我 §6 写的"事件先定"纪律：相消与一致都必须在一个已经固定了根的事件里陈述。
+
+=== 37 | D343-蜂窝格临界带穿越质量幂律-1-4的求取全程复盘.md | line 176 | INLINE | errlen 55
+BODY: '（第 82 到 86 行）加混合特殊化附近唯一性与有理延拓。Glue 配对内部转置劈分把 $m'
+LINE: 右端在可去奇点处按延拓理解。证明四步（第 59 到 162 行）。第一步对称与归并（第 65 到 92 行）：交换盒穿过 Glue 两侧证明行对称；升序归并或删除特殊化下 $P_N=S_sP_{\rm red}$、$H_N=S_sH_{\rm red}$，反射列恒等式给 $S_s^{\mathsf t}P_N^-=P_{\rm red}^-$ 与 $S_s^{\mathsf t}H_N^-=H_{\rm red}^-$，后者靠投影后的源方程 $ (I-T_{\rm red}^{(1),-})S_s^{\mathsf t}H_N^-=\mathsf b_{\rm red}^-S_s^{\mathsf t}P_N^-=\mathsf b_{\rm red}^-P_{\rm red}^- $（第 82 到 86 行）加混合特殊化附近唯一性与有理延拓。Glue 配对内部转置劈分把 $m$ 归约到更小带：两半各走插入与投影一条路，全程不需要 $S_s^{\mathsf t}S_s=I$ 这种事实（第 89 到 92 行）。参数的 $\pi$ 平移下占据符号成对相消（第 92 行）。第二步独立反射对称 $u_j\leftrightarrow3\lambda-u_j$（第 94 到 103 行）：靠交换把该行搬到顶；顶端口全空置，每次进入该行都是一段先上后下的区间，位移 $\ell\ge1$ 的区间权重 $AUB^{\ell-1}$，在此反射下不变；区间有序互斥；论证对物理参数附近绝对收敛和成立故为有理恒等式；$a_j=c$ 时 $AU=0$ 这些激发消失，平行行可直接删去。第三步源扇区的多项式界（第 104 到 132 行）：加末行 $y$ 并把其占据末槽扇区等同于先行单源态，末盒静止性
+
+=== 38 | D35-最短公共超串的多项式时间二近似.md | line 899 | INLINE | errlen 55
+BODY: 'B_A(s;N_T) = $ 被阻塞出现数 $\\le N_T(s)'
+LINE: | (2.4) | `eq:block-count` | $B_A(s;N_T) = $ 被阻塞出现数 $\le N_T(s)$ | `02-counts.tex:26` | 唯一性论证 |
+
+=== 39 | D375-平面XY模型关联长度的本质奇点.md | line 390 | INLINE | errlen 55
+BODY: '\\lVert \\partial_b^rK_s\\rVert $ | $\\le C_{R_0,r}s^{2r}'
+LINE: | $\lVert \partial_b^rK_s\rVert $ | $\le C_{R_0,r}s^{2r}$ | sections/entry.tex:196 | 初值导数 $Cs_k^2$ | slaving 起点断  |
+
+=== 40 | D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md | line 173 | INLINE | errlen 55
+BODY: '\\lvert B\\rvert $ | 分量在 $D'
+LINE: | $\lvert B\rvert $ | 分量在 $D$ 上的度数 | 02-cycles.tex:41 | §4 分量满射、§9 两次度数计算(04:29-30, 04:61-64) | 稳定子公式一改,全部度数等式断链  |
+
+=== 41 | D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md | line 197 | INLINE | errlen 55
+BODY: 'p\\mid\\lvert B\\cap P\\rvert $ | 经 $A\\to R'
+LINE: | $p\mid\lvert B\cap P\rvert $ | 经 $A\to R$ 满分解 | 04-quotient.tex:31-35 | 式 (4.2) 单点版 | 分解不满则整除断,满性靠秩局部常正  |
+
+=== 42 | D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md | line 207 | INLINE | errlen 55
+BODY: '\\lvert B\\rvert $ 公式 | 无 $\\Omega'
+LINE: | 自由传递纤维 | 经典点的几何纤维是自由传递 $G$-集 | 02-cycles.tex:52-54 | 引理 2.1 传递性与 $\lvert B\rvert $ 公式 | 无 $\Omega$-点时(见第 5 行台账)需另证  |
+
+=== 43 | D38-Jacobsthal函数二次界.md | line 946 | INLINE | errlen 55
+BODY: '；合计仍是 2.52，但落成的第一个结论是                                 （367 行）$11/75 < I'
+LINE: (d) 预算切分的错位。论文口径：$1+0.66+0.52+0.34=2.52$，对 $I_{\text{full}}=8/3$ 得 $I>0.14$。Lean 口径：前三项和只证到 $43/20$（=1+0.64+0.51），尾部单独一枚 `actual_omission_tail_lt`（`SourceRootReference.lean:329`）$ \sum' \text{omissionLossTerm}(n+3) < 37/100$；合计仍是 2.52，但落成的第一个结论是 `actual_I_gt_eleven_seventyfive`（367 行）$11/75 < I$，即 0.1467，比论文的 0.14 略强，随后 374 行 `actual_I_gt_source_margin` 再降到 $14/100<I$ 与论文对齐。余量定理 `source_reference_coefficient_margin`（388 行）：`2/100 < -(1)/100 + 2*signedCoefficientI/costMass`，正是 $-a_\star+2I/M_g>0.02$；$M_g\le 4e^\gamma$ 的化身是 `costMass_lt_eight`（383 行），路线 `costMass ≤ 2·(2*exp γ)` 加 `exp_gamma_lt_two`（377 行）$e^\gamma<2$，比论文的 $e^\gamma<1.95$ 松，靠 $I$ 的 11/75 补回来了。最大的缺口在 Remark：论文的尖锐常数 $I>0.2229793730$ 与见证分数 $b=693147180559946/10^{15}$，我全树 grep 这两个数串，0 命中。那段验算没进机器。[推测] 因为它是一次单点数值实验，形式化它需要建浮点区间验证的脚手架，而主链用 0.14 已经够用，性价比不成立。
+
+=== 44 | D38-Jacobsthal函数二次界.md | line 999 | INLINE | errlen 55
+BODY: 'A> $ 所有 $\\log B'
+LINE: | $E(u)$ | $C\exp(-c\sqrt{u\log w})$ | PNT 显式误差，素数期望 $V(b)=C_w/b(1+O(E(b)))$ | 全文对 PNT 唯一的大额借贷（Lean 侧 104 行 HadamardSupport）；指数从 $\sqrt{\cdot}$ 退化到 $\log^{-A}$ 时，第 6 节第二道闸门（误差质量 $o(1)$）要求 $A> $ 所有 $\log B$ 幂的总次数，会牵动 $C_s$ 与 $\alpha_{\max}$ |
+
+=== 45 | D390-一致离散空间上Lipschitz自由空间的逼近失效.md | line 17 | INLINE | errlen 55
+BODY: '\\left\\lVert \\cdot\\right\\rVert $、'
+LINE: 编译顺序见 main.tex:14--20：introduction、reduction、blocks、operators、walks、tests、references。宏定义集中在 common.tex:32--44：$\R$、$\N$、$\mathcal F$（即 $\mathcal F$）、$\operatorname{Lip}$、$\Vert \cdot\Vert _{\mathrm{Lip}}$、$\mathrm{TV}$、$\left\lVert \cdot\right\rVert $、$\left\lvert \cdot\right\rvert $、$\operatorname{dist}$、$\mathbb E$、$\mathbb P$、$\operatorname{Id}$、$\operatorname{supp}$；环境按 common.tex:18--25 编号并共享节内计数器。
+
+=== 46 | D390-一致离散空间上Lipschitz自由空间的逼近失效.md | line 17 | INLINE | errlen 55
+BODY: '；环境按 common.tex:18--25 编号并共享节内计数器。\n\n取证调用共 15 次：1 次目录结构与字节清点；9 次 Read 全文（main、common、introduction、reduction、blocks、operators、walks、tests、references，build 下无 source 分片版式，ls -R 已探明）；3 次 Grep 盘点定理环境（13 处 begin，其中 theorem 2、corollary 1、proposition 1、lemma 8、remark 2）、eqref 消费点 15 处、Cref 引理消费点 18 处；2 次 Grep 关键常数行号（$300p^2'
+LINE: 编译顺序见 main.tex:14--20：introduction、reduction、blocks、operators、walks、tests、references。宏定义集中在 common.tex:32--44：$\R$、$\N$、$\mathcal F$（即 $\mathcal F$）、$\operatorname{Lip}$、$\Vert \cdot\Vert _{\mathrm{Lip}}$、$\mathrm{TV}$、$\left\lVert \cdot\right\rVert $、$\left\lvert \cdot\right\rvert $、$\operatorname{dist}$、$\mathbb E$、$\mathbb P$、$\operatorname{Id}$、$\operatorname{supp}$；环境按 common.tex:18--25 编号并共享节内计数器。
+
+=== 47 | D396-复配中的过滤乘积与保边界压缩.md | line 37 | INLINE | errlen 55
+BODY: '2\\dim P< $ 某个 $2q'
+LINE: 路线 C（几何侧的第一次乱撞）：既然稳的消失到手，我顺手想一步到位地用一般位置把 $f$ 挪开稀疏集 $Z$，不管障碍语言。设 $Z=Z_s$，其维数是 $t\lfloor s\rfloor$（`01-introduction.tex:76`），余维数 $q=D-t\lfloor s\rfloor$；挪一个 $\dim P$ 维的源避开余维 $q$ 的目标子集，维数计数要 $2\dim P< $ 某个 $2q$ 级的界。麻烦在于 $\dim P$ 在批量放大时按 $\ell d_P$ 线性增长，而我能控制的余维数比是 $a$ 定的常数，两头跑不赢。论文给出的正确门槛是 $\dim P\le 2q-5$（`03-stable-avoidance.tex:341`），带 -5 的余量来自 Freudenthal 的 (2q-3)-连通与逐单纯形提升时的纤维 (2q-4)-连通（`03-stable-avoidance.tex:460,481`）；也就是说一般位置只能作为「稳定提升之后 realization」的部件，独立当主攻必输。这一败在我后来的结构里有了名分：它变成了 §8 的 padding 递归里被逐批检查的不变量。
+
+=== 48 | D436-稳定Morse数以下的哈密顿不动点.md | line 268 | INLINE | errlen 55
+BODY: '\\mathbb{CP}^1                                           ,Morse 计数从常数级跳到 $4\\lambda(C)'
+LINE: 第五条,直接吹爆四次点之外的路线换 $Y$。[推测] 若不吹爆,直接用 $\mathbb{CP}^1\times\mathbb{CP}^1$ 与对角圆作用,半转不动集是 $4$ 个孤立点(每个 $\mathbb{CP}^1$ 上两个坐标的不动点组合,`involution.tex:206` 到 `involution.tex:210` 的公式在未吹爆时给出 $2\times 2=4$ 个点),固定的分支维数为 $0$,不动点总数只剩 $4\,\#\mathrm{Crit}(h|_{\text{pt}})=4$ 级别,完全绕不开 $\lambda(M)$ 的巨大数值;把点吹成 $\mathbb{CP}^1`,分支从 $4$ 个点变成 $4$ 份 $X\times\mathbb{CP}^1`,Morse 计数从常数级跳到 $4\lambda(C)$,恰比 $\lambda(M)$ 低 $16$。吹爆在这里的双重身份(制造 $Y$ 的自由度、给不动分支升维)是我最晚才看穿的机关,`introduction.tex:43` 一句"fixed set consists of four exceptional projective lines"当时被我读了三遍才配得上其分量。
+
+=== 49 | D450-平面Mumford-Shah极小元的内部正则性.md | line 38 | INLINE | errlen 55
+BODY: '\\int_V\\lvert w\\rvert^2\\le 2\\int_V\\lvert w-g\\rvert^2+2\\lvert V\\rvert\\,\\lVert g\\rVert_\\infty^2            reductions.tex:333-343`)。这笔账放在 §5 细说。\n\n死胡同 (二), 指望单调性公式直接碾过有界分支。爆破后 $H'
+LINE: 死胡同 (一), 直接引用经典正则定理。经典理论的假设清单上写着: 闭集可求长且约化、函数局部有界、pair 属于局部 Sobolev 比较类的弱极小。我们的容许类一条都不给: $K$ 只有 $\mathcal H^1(K)<\infty$, rectifiable 结构未知; $u$ 只有 $L^2$, 连 $L^\infty_{\mathrm{loc}}$ 都没有; 比较类是原 $L^2\cap W^{1,2}$ 表述, 与弱 $SBV$ 表述之间隔着一层粘合 (`reductions.tex:4-9`)。假设不对, 任何引用都是空转。出路是先把 pair 升格, 这就是 `reductions.tex` 整节; 它还要处理一个反向问题: 经典理论的有限能量竞争者如何落回原类的 $L^2$ 全局可积, 尾部用 $\int_V\lvert w\rvert^2\le 2\int_V\lvert w-g\rvert^2+2\lvert V\rvert\,\lVert g\rVert_\infty^2` 这类初等界收尾 (`reductions.tex:333-343`)。这笔账放在 §5 细说。
+
+=== 50 | D47-无共轭点但无非正曲率度量的三流形.md | line 191 | INLINE | errlen 55
+BODY: 'B_1,B_2"这句要紧:周期在 $\\delta'
+LINE: (c) 每个数与假设的机械理由。$1/9$、$18$、$1/18$、$9$:两次标架转换各乘 $\le3$ 的裕度堆出来的,Lean 把它们硬编码进 `PassageBounds`(`NoConjugatePoints.lean:1291-1297`:`sqnorm q/9 ≤ qform ... ≤ 18*sqnorm q`、`sqnorm (deriv ... ) ≤ C^2 δ^2 sqnorm q`、`0 ≤ qform (-deriv (deriv ...))`、`... ≤ C*δ*qform (-P'')`),而 `hC : 18 ≤ C` 把 $C$ 的下界与 $P$ 的上界捆在一起(见第 16、19 节)。$\|P'\|\le C\delta$:管道光滑性的全部,第 15 节 $S(e,e)\le C_eL$ 直接吃它。核心条款 $|P'p|^2\le C\delta\,p^{\mathsf T}(-P'')p$ 把一阶导逐点钉在二阶凹度上,是能量 $E$ 里 $P'p\,w$ 交叉项可被 $-\frac12F''w^2$ 与 $|\xi|_Q^2$ 吸收的原因;没有它,第 13 节 gauge 恒等式里的 $\mu$ 惩罚对 $p^{\mathsf T}\Delta z$ 的压制没有来源。"常数不依赖 $B_1,B_2"这句要紧:周期在 $\delta$ 之后才被压到尖点尺度(第 8 节),若估计含 $B$,选择顺序死循环。为什么写"依赖 $\chi$ 的某 $C$"而不显式化:$\chi$ 是提前一次性固定的存在性对象,全篇从不展开它,$C_{1,2}$ 经传递压进单个 $C$,这是把自由函数藏进常数的标准手法。
+
+=== 51 | D47-无共轭点但无非正曲率度量的三流形.md | line 318 | INLINE | errlen 55
+BODY: "\\dot x^{\\mathsf T}Q''\\dot x=p^{\\mathsf T}P(2QP'QP'Q-QP''Q)Pp=2p^{\\mathsf T}P'... $ 逐项合并后恰是完备平方展开:"
+LINE: (b) 机制推演。测地线三件套:Lagrangian $\tfrac12(v^2+\dot x^{\mathsf T}Q\dot x)$,$x$ 循环给 $p=Q\dot x$ 守恒;单位速度配 $\dot x^{\mathsf T}Q\dot x=\dot x^{\mathsf T}p=p^{\mathsf T}Q^{-1}p=F$;竖直方程 $\ddot t=\tfrac12\dot x^{\mathsf T}Q'\dot x$,由 $Q'=-QP'Q$ 得 $\dot x^{\mathsf T}Q'\dot x=(Pp)^{\mathsf T}(-QP'Q)(Pp)=-p^{\mathsf T}P'p=-F'$,故 $\dot v=-\tfrac12F'$。$F''=p^{\mathsf T}P''p\le0$:凹性从矩阵假设变成标量函数的凹性,这是把二维族约成一维动力的枢纽。能量恒等式(var:113-127):对坐标线性变分 $(t+rw,x+rz)$ 求能量二阶导,裸式 $\int(\dot w^2+\dot z^{\mathsf T}Q\dot z+2w\dot z^{\mathsf T}Q'\dot x+\tfrac12w^2\dot x^{\mathsf T}Q''\dot x)$;代 $Q'\dot x=-QP'p$(由 $\dot x=Pp$ 与 $Q'=-QP'Q$)把交叉项成 $-2w\dot z^{\mathsf T}QP'p$;代 $Q''=2QP'QP'Q-QP''Q$ 得 $\dot x^{\mathsf T}Q''\dot x=p^{\mathsf T}P(2QP'QP'Q-QP''Q)Pp=2p^{\mathsf T}P'... $ 逐项合并后恰是完备平方展开:$|\dot z|_Q^2-2w\dot z^{\mathsf T}QP'p+w^2|P'p|_Q^2$ 吸收 $2QP'QP'Q$ 那一半并剩下 $-w^2p^{\mathsf T}P''p$ 的一半系数 $\tfrac12$。我核对过:展示式的三个非负项与这三步一一对应,没有余项。端点项(var:129-141):内禀二阶变分 $=I_{[a,c]}(V)+[\langle T,D_rW\rangle]$;坐标线性变分的 $\partial_r^2\alpha\equiv0$ 给 $D_rW=\Gamma(V,V)$。Christoffel 非零类型 $\Gamma^t_{ij}=-\tfrac12Q'_{ij}$、$\Gamma^i_{tj}=\tfrac12(PQ')^i{}_j$(我从 $g_{tt}=1$、$g_{ti}=0$ 验 $\Gamma^t_{ij}=-\tfrac12\partial_tg_{ij}$ ✓)。边界上 $w=0$ 只剩 $-\tfrac12z^{\mathsf T}Q'z\partial_\tau$;germ 处 $Q'(0)=-\kappa e_1e_1^{\mathsf T}$(用 $Q=I$、$P'(0)=\kappa e_1e_1^{\mathsf T}$)给出 $\frac\kappa2 z_1^2\partial_\tau$。符号:入口 $\dot\tau>0$ 时 $-[\cdot]_a^c$ 取 $+\langle T(a),\Gamma\rangle$、$\langle T,\partial_\tau\rangle=+\dot\tau>0$,贡献 $\ge0$;出口 $\dot\tau<0$ 与减号相乘同样 $\ge0$(var:152-155)。
+
+=== 52 | D47-无共轭点但无非正曲率度量的三流形.md | line 593 | INLINE | errlen 55
+BODY: 'P\\in[1/9,18]Q? $ 即 $\\tfrac19\\operatorname{Id}\\preceq P\\preceq18\\operatorname{Id}'
+LINE: | $P,Q$ 界 | $P\in[1/9,18]Q? $ 即 $\tfrac19\operatorname{Id}\preceq P\preceq18\operatorname{Id}$,$Q\in[\tfrac1{18},9]$ | 度量等价性、Lean `PassageBounds` 首条 | 放大即一切 $C$ 放大;$18\le C$ 捆死(Lean `hC`) |
+
+=== 53 | D48-矩阵乘法九四分之次.md | line 391 | INLINE | errlen 55
+BODY: "）。在 $\\mathcal K'"
+LINE: 块二，乘性（`728-768`，Lemma `lem:multiplicativity`）。补推。设 $\mathcal K$ 非空紧凸（逐点收敛拓扑），每个非零 $z$ 的 $P_z:\lambda\mapsto\lambda(zx)/\lambda(z)$ 把 $\mathcal K$ 映到自身，则 $\mathcal K$ 含乘性态。证明：$\lambda(z)\ge1$ 使每个 $P_z$ 逐点连续；$\mathbb R^S$ Hausdorff 局部凸，Schauder-Tychonoff 不动点定理（Tych35）给 $P_z$ 的不动点 $\mu$。冻 $c=\mu(z)$，子集 $\mathcal K'=\{\lambda:\lambda(zx)=c\lambda(x)\ \forall x\}$ 非空紧（$c$ 固定使定义方程对 $\lambda$ 线性 ⟹ 凸）；取 $x=1$ 得 $\lambda(z)=c$ 全在 $\mathcal K'$，故都被 $P_z$ 固定；且每个 $P_w$ 保 $\mathcal K'$（`(P_w\lambda)(zx)=\lambda(zwx)/\lambda(w)=c\lambda(wx)/\lambda(w)=c(P_w\lambda)(x)$）。在 $\mathcal K'$ 里重复、保留先前冻住的方程，归纳得任意有限个 $P_z$ 有公共不动点；不动点集闭，紧 + 有限交性质 ⟹ 全部非零 $z$ 的同时不动点，满足 $\lambda(zx)=\lambda(z)\lambda(x)$（$z\ne0$）。可加性给 $\lambda(0)=0$ 处理乘零。
+
+=== 54 | D48-矩阵乘法九四分之次.md | line 407 | INLINE | errlen 55
+BODY: '。）再 $\\delta\\downarrow0'
+LINE: （左边 $K=\operatorname{R}(s)^{-1}K$ 吸收 $\operatorname{R}(s)$，$K/n\to k$ 加 $\operatorname{R}(D)/n$ 常数，此处 tex 把 $\operatorname{R}(s)K^j$ 的 $j$ 根写成 $nk+\operatorname{R}(D)$ 形式，见 `880-883$。）再 $\delta\downarrow0$（$n$ 固定，$u$ 已从不等式消失）：$nk+\operatorname{R}(D)\ge nd^\nu$。再 $n\to\infty$（$D$ 固定）：$k\ge d^\nu$，与 $k<d^\nu$ 矛盾。故 $\mathcal K$ 非空。
+
+=== 55 | D505-混合变换的逐点多重遍历平均.md | line 145 | INLINE | errlen 55
+BODY: '\\S$10 的通道闭合与 $\\S$14 的最小支撑博弈都要吃"'
+LINE: selected.tex:289-290 那一行，我在草稿里差点写成一句废话。它写的是：把条件从 $(P_i)_{i\in J}$ 提到完整数组 $P$ 还多需要一步，仅由"自己的参数"版本推不出来。我最初的反应是这句话太谨慎了，条件期望的塔性质难道不给吗。塔性质给的方向恰好相反：对一个更小的 $\sigma$-代数条件，独立性可以保留；对一个更大的 $\sigma$-代数条件，独立性一般会破掉。我写下"由塔性质立得"的那一行，是我在这篇稿子里最接近致命的一次错误，因为它破坏的是后面整台机器的前提：$\S$10 的通道闭合与 $\S$14 的最小支撑博弈都要吃"$\lvert J\rvert\le3$ 时给完整 $P$ 是乘积律"这条。
+
+=== 56 | D505-混合变换的逐点多重遍历平均.md | line 163 | INLINE | errlen 55
+BODY: '\\S$16 里 $Z=\\mathsf M_b(Y)'
+LINE: 速度重整的作用在两处。第一处是让"选取长度"在新系统里仍由同一个 $N_a$ 决定：因为 $N_a$ 定义在 $C$ 上、与相位无关，而第 $b$ 槽保留速度 $1$，$\mathsf M_b(Y)\to C$ 的复合把旧的选择器原样带过来（selected.tex:184-187 的函子性在 $\rho$ 上的证明就是把测试函数换成 $G_i\circ\rho$ 再用等变性与 Fubini）。第二处是把输入角色换成输出角色的唯一手段：$\S$16 里 $Z=\mathsf M_b(Y)$ 的第 $j$ 槽旧速度要乘上 $\frac{j}{b}$（correlations.tex:184-185），这种乘法律只有在我把整个数组做成一个流、并且允许有理速度时才说得清。
+
+=== 57 | D506-选择长度下的四重平均逐点收敛.md | line 133 | INLINE | errlen 55
+BODY: "Z_n'= $ 方差 $\\varepsilon^2/128"
+LINE: （build/sections/04-packing.tex:181-185）。左边取 $Z_n'= $ 方差 $\varepsilon^2/128$ 的独立正态并用 $\mathbb E\max_{n\le l}g_n\ge c\sqrt{\log l}$（build/sections/04-packing.tex:197-199），分离性把增量方差从下方顶住 $\ge(\varepsilon/4)^2$ 量级的差；比较本身我对 $\beta^{-1}\log\sum_ne^{\beta z_n}$ 沿独立高斯插值做分部积分，导数是 $\frac\beta4\mathbb E\sum_{n,n'}p_np_{n'}(\mathbb E\lvert Z_n-Z_{n'}\rvert^2-\mathbb E\lvert Z_n'-Z_{n'}'\rvert^2)$，其中 $p_n=e^{\beta z_n}/\sum_je^{\beta z_j}$，当第一个增量方差占优时它非负，令 $\beta\to\infty$ 就比较了期望极大值（build/sections/04-packing.tex:186-196）。我特意把这段写在正文，因为它是全稿唯一一处我自己不放心"引用是否够用"的估计，材料的处理方式就是当场把导数算出来。
+
+=== 58 | D517-正曲率Einstein四维流形分类的两块耦合证明之路.md | line 232 | INLINE | errlen 55
+BODY: 'P_- $ 为总负自旋 $1'
+LINE: 右端方括号非负，两条结论在闭不等式 $v+b\le2$、$x+y\le2$ 下依旧成立。论证：$P_- $ 为总负自旋 $1$ 投影，最高 Hessian 型是 $P_+P_-$；在该型上 $-U_D\le y$，故 $\mathcal P\le A_0:=4+y-\frac52\widetilde Q$，$A_0$ 只作用正因子且与 $P_-$ 交换；在整个高正子空间 $A_0\ge4+y-2x\ge0$，由 $x+y\le2$；于是算子序里 $P_-A_0P_-\le A_0$，配实向量恒等式给逐 $a$ 界；代 $a=dm$、除 $24m$、$m=M^2$ 得证。方括号非负由同一恒等式与 $A_0$ 的下界：$\frac7{12}(4+y)e-\frac54B\ge\frac7{12}(4+y-2x)e\ge0$。论文还提前备好一句：之后的估计可把 $\lvert p-q\rvert^2$ 换成 $(\lvert p\rvert+\lvert q\rvert)^2$ 而不等号方向不变（05-hessian.tex:611--615），§15 的四次段果然用了这个松弛。
+
+=== 59 | D52-c0的双Lipschitz吸收而无线性拷贝.md | line 347 | INLINE | errlen 55
+BODY: '2\\lVert u\\rvert $ | 05:26-34,54-61 | $2^h,4^h'
+LINE: | $\chi$ 与操作界 | 斜率 2；3、4、$2\lVert u\rvert $ | 05:26-34,54-61 | $2^h,4^h$、平台 $\varepsilon/2$ | 平台半径变则案二 $3\theta/8$ 拼法断  |
+
+=== 60 | D52-c0的双Lipschitz吸收而无线性拷贝.md | line 356 | INLINE | errlen 55
+BODY: 'q=\\lVert Q\\rvert $ | 06:243, 02:29-37 | $\\operatorname{Lip} F\\le1+L_K\\max\\{1,q\\}'
+LINE: | $L_K,q$ | $\operatorname{Lip} K\le3$；$q=\lVert Q\rvert $ | 06:243, 02:29-37 | $\operatorname{Lip} F\le1+L_K\max\{1,q\}$，反界 $\max\{1+L_Kq/c_g,q/c_g\}$ | 3 由 $1+2$（范数差+归一化）拼成，去 $\zeta$ 的 1-Lip 则变  |
+
+=== 61 | D534-Siegel三维簇曲线中的四元数除法点.md | line 109 | INLINE | errlen 55
+BODY: '。无穷位上平行输运认全整一次上同调格，交叉配对仍属 $\\tfrac14\\mathbb{Z}'
+LINE: \lvert\operatorname{Tr}(\beta_i\alpha_j)\rvert^2\le\operatorname{Tr}(\beta_i^2)\operatorname{Tr}(\alpha_j^2)\le C(dh)^c$。无穷位上平行输运认全整一次上同调格，交叉配对仍属 $\tfrac14\mathbb{Z}$；紧中心圆盘上两点 Hodge 范数经该输运一致可比，正范数的 Cauchy--Schwarz 加 Rosati 界给同一大小界；注意这最后一步里两个被输运算子不必都是中心处的 Hodge 自同构（03-arithmetic.tex:454-461）。
+
+=== 62 | D54-Brennan猜想与sharp逆平方积分均值.md | line 727 | INLINE | errlen 55
+BODY: '\\lVert L^n\\rvert $ 先验 | $1\\le\\lVert L^n\\rvert \\le625\\cdot4^n'
+LINE: | $\lVert L^n\rvert $ 先验 | $1\le\lVert L^n\rvert \le625\cdot4^n$ | `01:215-220` | $\rho$ 的存在与 $1\le\rho\le4$ | 无此界则 $\rho$ 可能无穷、预解式不收敛  |
+
+=== 63 | D54-Brennan猜想与sharp逆平方积分均值.md | line 742 | INLINE | errlen 55
+BODY: 'y^k/\\lVert F-\\xi\\rvert $，极点 $+\\infty'
+LINE: | $V_\xi^F$ | $y^k/\lVert F-\xi\rvert $，极点 $+\infty$ | `03:20-25` | 临界方程、配对、传输权重 | 定义改动牵动 $G_F$、$H(F,w)$、$(V/k)^4$  |
+
+=== 64 | D54-Brennan猜想与sharp逆平方积分均值.md | line 747 | INLINE | errlen 55
+BODY: 'k(\\operatorname{Im}w)^{k-1}\\lVert Q_F(w)\\rvert $ |              | 分支上无除法的临界值比较 | 用 $V'
+LINE: | $H(F,w)$ | $k(\operatorname{Im}w)^{k-1}\lVert Q_F(w)\rvert $ | `04:438-442` | 分支上无除法的临界值比较 | 用 $V$ 直接算需在根处除法，连续性断  |
+
+=== 65 | D562-Brenier映射的三分之一阶锐利稳定性.md | line 76 | INLINE | errlen 55
+BODY: 'a/a^{3} $ 的平方根结构，即 $\\sqrt a'
+LINE: 转折的第二拍来自一个"坏消息变好消息"的读法：指数 $1/3$ 不是调出来的，是平衡出来的。映射距离平方是 $b/2+ab^2$，主项 $b/2$ 来自换岗测度；目标距离平方是 $ab^2$，来自被搬运质量 $a$ 乘位移平方 $b^2$。两式的幂次在 $b=a/2$ 下之比恰是 $a/a^{3} $ 的平方根结构，即 $\sqrt a$ 对 $a^{3/2}$，指数比 $1/3$ 由"质量一次、位移二次"这两个不可动的计数决定。也就是说，任何证明都必须在某处偿还这半次与一次半之间的欠账，问题因此从"我能证多好"变成"欠账发生在哪一步"。注意：这里我真正想要的答案是定位欠账，并非假装它能被消灭。
+
+=== 66 | D58-实Littlewood多项式极大值的渐近最小.md | line 457 | INLINE | errlen 55
+BODY: '\\lvert \\lambda_{a_i}\\rvert $，$2\\sum w_i<1'
+LINE: | $w_i$ | $\lvert \lambda_{a_i}\rvert $，$2\sum w_i<1$ | spreading:39, packing:40 | Lemma 3.1 输入 | 等号情形闭区间无法严格入槽  |
+
+=== 67 | D585-稳定子轨道局部稠密性与厚张量理想链.md | line 77 | INLINE | errlen 55
+BODY: '0<\\lvert t\\rvert <\\lvert a_1\\rvert $） | 04-deformations.tex:612 | 非零性检验 | 若 $a_1=0'
+LINE: | $\alpha_x,\ a_1$ | $a_1=\alpha_x'(0)\ne0$，$\alpha_x(t)\ne0$（$0<\lvert t\rvert <\lvert a_1\rvert $） | 04-deformations.tex:612 | 非零性检验 | 若 $a_1=0$ 则 $\nu_x$ 可能为零态射  |
+
+=== 68 | D59-向后交织算子与传递交换子.md | line 200 | INLINE | errlen 55
+BODY: '=2(0+1+\\dots+(m-1))+... $ 让我直接算：窗 $\\{-m,\\dots,m-1\\}'
+LINE: (b) `weights:94-108`：令 $d(j)=j+1$（$j\ge0$）、$d(j)=-j$（$j<0$），$a_j(x)\ge c\,d(j)$。因 $S_x^ne_j=\exp(-\sum_{r=0}^{n-1}a_{j+r}(x))e_{j+n}$，每纤维幂范数由 $\exp(-c\min_j\sum_{r=0}^{n-1}d(j+r))$ 控制。$d$ 在 $j=-1$ 与 $j=0$ 取双最小 $0$，长度 $n$ 的窗 $\sum d$ 最小当窗尽量对称跨这两谷：$n=2m$ 取 $j=-m$ 得 $\sum_{r=0}^{2m-1}d(-m+r)=m(m+1)$，$n=2m+1$ 得 $(m+1)^2$，两者都 $=\lfloor(n+1)^2/4\rfloor$。界与 $x$ 无关，积分即得 $\|S^n\|$。拟零：$\|S^n\|^{1/n}\le e^{-c\lfloor(n+1)^2/4\rfloor/n}\to0$（指数二次除以 $n$ 仍线性发散）。非零：$S(1\otimes e_0)=e^{-c}(1\otimes e_1)\ne0$。我核算 $n=2m$、$j=-m$ 的窗指标：$r=0\to j=-m$（$d=m$），$r=2m-1\to j=m-1$（$d=m$），对称地 $d$ 值取 $m,m-1,\dots,1,0,0,1,\dots,m$（两次谷），和 $=2(0+1+\dots+(m-1))+... $ 让我直接算：窗 $\{-m,\dots,m-1\}$，$d(-1)=0,d(0)=1,d(-2)=2,d(1)=2$... 实际 $d$ 在负 $j$ 是 $-j$、非负 $j$ 是 $j+1$，故窗 $j=-m$ 时 $d=m$，$j=m-1$ 时 $d=m$，$j=-1$ 时 $0$，$j=0$ 时 $1$。配对：$\sum_{j=-m}^{m-1}d(j)=\sum_{j=-m}^{-1}(-j)+\sum_{j=0}^{m-1}(j+1)=\sum_{i=1}^{m}i+\sum_{i=1}^{m}i=m(m+1)$。核对通过。
+
+=== 69 | D59-向后交织算子与传递交换子.md | line 299 | INLINE | errlen 55
+BODY: '\\lVert S\\rvert $ | introduction.tex:46; GlobalOperators.lean:140 | 范数、非零、'
+LINE: | $e^{-10}$ | $\lVert S\rvert $ | introduction.tex:46; GlobalOperators.lean:140 | 范数、非零、$S(1\otimes e_0)=e^{-c}e_1$ | 若 $\beta_0\ne e^{-c}$，$\lVert S_x\rvert =\sup\beta_j$ 不再是 $e^{-c}$，中心两权的唯一性（弥散侧）断  |
+
+=== 70 | D59-向后交织算子与传递交换子.md | line 305 | INLINE | errlen 55
+BODY: '\\lVert V_x\\rvert $ 无界，'
+LINE: | $L(x)$ | $\sup_j\widetilde b_j(x)$，$1\le L<\infty$ 于 $X_*$ | intertwiner.tex:95 | 归一化除数 $b_j=\widetilde b_j/L$ | 若 $L(x)=\infty$（$X_*$ 外），除数不存在；若全局统一除数，$\lVert V_x\rvert $ 无界，$V$ 不定义  |
+
+=== 71 | D60-模谱均值的有界恢复.md | line 1154 | INLINE | errlen 55
+BODY: '\\lvert 1-cd\\rvert $ 界 | $H_0=0'
+LINE: | $H_0=\left\lVert a\xi \right\rVert\left\lVert x\xi \right\rVert$ | 正，随 $\delta$ 变 | `05:176-177` | 除以 $H_0$ 得 $\lvert 1-cd\rvert $ 界 | $H_0=0$ 时除法崩，靠 $E$ 小矩形非零排除  |
+
+=== 72 | D601-迹重构定量下界的反推笔记.md | line 212 | INLINE | errlen 55
+BODY: '\\mathcal F=\\{每个 $j'
+LINE: 拟合事件 $\mathcal F=\{每个 $j$ 层顶点 $I$ 有 $|Y_I|\le T_j/8$，$1\le j<b\}$ 依赖朝向比特。投影引理说 $\mathrm{TV}(\mathcal K_{\rm tree}\widetilde\mu_i,\mathrm{Tr}(U_b^+))\le o(\Delta)+(\prod_jT_j)E_{i-1}$，$\widetilde\nu_i$ 同理，误差对 $i$ 一致。见 layout.tex:74 到 layout.tex:91。证明用 Hoeffding：每个 $Y_I$ 是至多 $(T_{j+1}+1)t_j$ 个独立公平比特的中心和、系数模至多一，故 $\mathrm{Prob}(|Y_I|>T_j/8)\le2\exp(-cT_j^2/(T_{j+1}t_j))\le2\exp(-c'N^\epsilon)$；顶点数被 $O_B(N)$ 限制，联合界给 $\mathrm{Prob}(\mathcal F^c)\le\exp(-N^{\epsilon/2})=o(\Delta)$。见 layout.tex:93 到 layout.tex:104。
+
+=== 73 | D65-渐近中点一致凸与树空间的无界菱形畸变.md | line 227 | INLINE | errlen 55
+BODY: 'g(0)=N(z)\\ge 1- $…注意这里中心 $z'
+LINE: 我把这步补全:设 $g(r)=N(z+ry)$,$g$ 凸且 $g(0)=N(z)\ge 1- $…注意这里中心 $z$ 取单位,一般 $N(z)=1$ 时 $g(0)=1$,凸函数割线单调:$\frac{g(r)-g(0)}{r}\ge\frac{g(t_0)-g(0)}{t_0}$,移项即得。原子的 AUC 增量在 $t_0$ 处是 $\gamma$,放大到 $r$ 处至少 $\gamma r/t_0$。
+
+=== 74 | D65-渐近中点一致凸与树空间的无界菱形畸变.md | line 326 | INLINE | errlen 55
+BODY: '= $ 父边长度 $=2\\ell'
+LINE: - $\varepsilon=2$ 定死:它由"中间点距离 $= $ 父边长度 $=2\ell$"与 $y_j$ 除 $\ell$ 的归一共同给出,分子分母同步,与 $k,m$ 无关,这正是每层损失均匀的来源。若把 $y_j$ 改除父边长 $2^{k-m}$,分离量变 $1$,$\varepsilon^2/48$ 变 $1/192$,层级损失缩 4 倍,线性阶仍对、常数退化。
+
+=== 75 | D65-渐近中点一致凸与树空间的无界菱形畸变.md | line 388 | INLINE | errlen 55
+BODY: '+$1,取 $\\sigma_{v_1}=-1'
+LINE: 修正装置在同一个例子上跑:门 $g=v_1$,$m_g=\sup_{w\succeq v_1}|k([v_1,w])|=1$,$\sum_g m_g^2=1\le1$ 闭合。$H$ 内后缀只有 $[r,r]$,$f$-和为 $1\ge 2sm_g=1/2$,所以入选最段,原号 $+$1,取 $\sigma_{v_1}=-1$,$c=-e_{v_1}$。$v^+=c+k=0$,$v^-=c-k=-2e_{v_1}$。验证 $\rho(f+sv^\pm)\le\sqrt{1+12s^2}$:$v^+$ 侧 $\rho(e_r)=1$;取 $s=1/4$,$v^-$ 侧的候选段族:单点族 $\{[r,r]\},\{[v_1,v_1]\}$ 给 $1+4s^2=1.25$,穿越段族 $\{[r,v_1]\}$ 给 $(1-2s)^2=0.25$,都 $\le 1+12s^2=1.1875$?单点族 1.25 超了 1.1875!慢:检查,单点族的和 $(f+s v^-)([r,r])^2+(f+sv^-)([v_1,v_1])^2=1^2+(-2s)^2=1+4s^2=1.25$,大于 1.1875。我的 $s$ 取值触到阈值边界条件了吗?重读 paired:57:"若 $|\alpha_i|\le 2sm_g$ 则小账",此处 $\alpha=1$(段 $[r,v_1]$ 的 $f$-和)与阈值 $2s m_g = 0.5$:段 $[r,v_1]$ 的 $\beta=-2s$、$\alpha=1$,乘积 $-0.5<0$ 非正交叉,不需付账;真正的极优族是全局 sup,证明控制的是每个具体不相交族的 $(\alpha_i+s\beta_i)^2$ 之和 $\le 1+12s^2$。取族 $\{[r,r],[v_1,v_1]\}$:$\alpha_1=1,\beta_1=0$;$\alpha_2=0,\beta_2=-2$;和 $=1+4s^2=1.25$。而断言要它 $\le 1+12s^2=1.1875$。差在何处?回到定义:$s$ 在参数化不等式里是自由正数,budget $1+12s^2$ 是证明的**结论性**常数,而 $\rho(f+sv^\pm)^2\le1+12s^2$ 的推导对小交叉用的是 $2s\alpha_i\beta_i\le 8s^2m_g^2$,对纯尾用的是 $s^2\sum\beta_i^2\le 4s^2$:此例纯尾笔 $s^2\cdot 4=4s^2=0.25$、头笔 $\le\rho(f)^2=1$,总账 $1.25\le 1+12\cdot 0.0625=1.75$?$12s^2$ 在 $s=1/4$ 是 $0.75$,$1+0.75=1.75\ge1.25$ 闭合。我上面把 $1+12s^2$ 误算成 1.1875:$12\cdot(1/4)^2=12/16=0.75$。修正:天真例的爆表判据重算, $(1+s)^2=1.5625$ 对 $1.75$:天真测试在此例反而不爆,真正的爆表要 $s\to 0$ 线性项赢二次项:$2s>12s^2\Leftrightarrow s<1/6$,取 $s=1/20$:天真 $1.1025$ 对 $1.03$,爆。玩具例复算结论:修正后的账 $1+4s^2+8s^2$ 结构与我第 7 节一致,且这一轮手误恰好演示了"8 与 4 两笔都是真预算、不是记号游戏":删纯尾笔 $4s^2$ 此例仍过($1\le 1+0.75$),删到 $1+8s^2$ 边界例:族 $\{[r,r],[v_1,v_1]\}$ 给 $1.25$ 对 $1+8s^2=1.5$:也过;要卡住小账必须 $\alpha_i\beta_i$ 同段共存,即穿越段例族,取 $k([v_1,v_2])$ 累积型尾(下一段),账才吃紧。这一节保留误算原文,因为它暴露了我对"哪笔账何时紧"的直觉是后补的,不是一次到位的。
+
+=== 76 | D65-渐近中点一致凸与树空间的无界菱形畸变.md | line 718 | INLINE | errlen 55
+BODY: '\\S$2.IV],tex 实际是 general-forests.tex:37 的                            。我大概在复述"沿 Ghoussoub--Maurey--Schachermayer 那条线"时把罗马数字记串了。 勘误第七条,'
+LINE: 勘误第六条,Banakh 的节号。第 11 节写 [Banakh2000, $\S$2.IV],tex 实际是 general-forests.tex:37 的 `\cite[\S2.II]{Banakh2000}`。我大概在复述"沿 Ghoussoub--Maurey--Schachermayer 那条线"时把罗马数字记串了。 勘误第七条,$\eta$ 的在场与缺席。第 7 节我引 paired.tex:97 当作主定理中点断言的落点,但 :97 是证明段里的近似版本,带 $-\eta$ 与 $(0<\eta<1)$(:92-98);无 $\eta$ 的最终陈述在 introduction.tex:104($\widehat\delta_X(t)\ge\sqrt{1+t^2/12}-1$)与 general-forests.tex:30(eq:general-forest-modulus,同一式)。台账第 16 节按这两个行号记。
+
+=== 77 | D72-L1的Daugavet子空间的精确渐近模数.md | line 761 | INLINE | errlen 55
+BODY: '\\lVert y-C(y)\\rvert =1-\\lVert C(y)\\rvert $；moduli:35 的 $2\\vert x\\vert/t'
+LINE: | clip 高度 $\vert x\vert/t$ | 逐点，随 $t$ 反比缩小 | moduli:24-26 | moduli:48-50 的 $\lVert y-C(y)\rvert =1-\lVert C(y)\rvert $；moduli:35 的 $2\vert x\vert/t$ | 改常数高度则 $\min\{\vert x\vert,t\vert y\vert\}$ 与 $t\lVert C(y)\rvert$ 不对齐，(eq:overlap-identity) 第三段失去抓手  |
+
+=== 78 | D72-L1的Daugavet子空间的精确渐近模数.md | line 787 | INLINE | errlen 55
+BODY: '2=\\lVert g\\rvert +\\lVert g^{(k)}\\rvert $ | construction:224,230 | construction:185 与 (kw:coefficient-bound) | 球半径若 $>1'
+LINE: | $108$ | $54\cdot2$，$2=\lVert g\rvert +\lVert g^{(k)}\rvert $ | construction:224,230 | construction:185 与 (kw:coefficient-bound) | 球半径若 $>1$ 则 $2$ 变大，$q$ 的可用额度随之缩小  |
+
+=== 79 | D75-vanDerWaerden数的定量超指数下界.md | line 96 | INLINE | errlen 55
+BODY: '-2\\times10^{-5}k\\log k+\\frac{k^{0.9}\\log k}{ } $... 精确地说              给出系数 $2c-\\gamma/80=1/50000-1/8000=-21/200000<0'
+LINE: $p=k^{-1/20}$：flip 概率。它要满足两个反向不等式。第一，`perturb:rich-bound` 要 $2q^{2D}p^{\gamma k/4}<1$，取对数得 $2D\log q+\frac{\gamma k}{4}\log p$ 为负，即 $-2\times10^{-5}k\log k+\frac{k^{0.9}\log k}{ } $... 精确地说 `06:237-241` 给出系数 $2c-\gamma/80=1/50000-1/8000=-21/200000<0$，这一项里根本没有 $p$：$p^{\gamma k/4}=k^{-\gamma k/80}$，其对数 $-\frac{\gamma k}{80}\log k$。第二，`perturb:affine-bound` 要 $T_{\mathrm{aff}}e^{-pk/4}=o(1)$，即 $pk\gg k^{0.9}\log k$。$p=k^{-1/20}$ 给 $pk=k^{19/20}$（`06:180` 明写 `$pk=k^{19/20}$`），刚好压过 $k^{0.9}\log k$。所以 $1/20$ 是被 $1-1/10$ 与"$p<1/2$、以及第一项的 $1/80$ 系数还要留给 $\gamma/4$ 用"共同夹出来的。
+
+=== 80 | D75-vanDerWaerden数的定量超指数下界.md | line 353 | INLINE | errlen 55
+BODY: '1/8-1/32-1/250=(125-25-4)/1000\\cdot... $，精确地 $=0.125-0.03125-0.004=0.08975'
+LINE: (c) 常数的机械理由。$1/32$ 是 $1/8$ 与"还要吃掉邻居损失"之间的分割：$1/8$ 是尾部系数，$1/32$ 让 $z_E$ 比 $\mathbb P(E)$ 的指数慢 4 倍，剩下 $2/500$ 付邻居。三者的算术余量：$1/8-1/32-1/250=(125-25-4)/1000\cdot... $，精确地 $=0.125-0.03125-0.004=0.08975$，乘 $100$ 得 $8.975>\log2=0.693$，余量极大。$l(E)\ge100$ 就是这个"乘 100"的来源：论文只需 $1/8-1/32-2/500\ge(\log2)/l$，用 $l\ge100$ 换成一个绝对不等式检查。$1/500$ 的选取同理只要比 $1/32$ 小得多，与 $500$ 无关紧要。$h>D^2$ 与 $h_0=D^2$ 一致，这解释了 `setup:dilation` 里 $h_0=D^2$ 的第二重作用：它同时是"短周期消失"的界与"权重和收敛"的下限。若 $h_0$ 小于 $D^2$ 的某个倍数，$\sup 6D\log(CDh)/h$ 会在小 $h$ 处变大，`04:144` 的界要用 $6\log(CDh_0')/h_0'$，只要 $h_0'\to\infty$ 且 $\log h_0'/h_0'\cdot D\to0$；$h_0=D^2$ 让 $6\log(CD^3)/D$ 这一形式最干净。
+
+=== 81 | D75-vanDerWaerden数的定量超指数下界.md | line 443 | INLINE | errlen 55
+BODY: '|av_i|\\le\\frac{4MH}{h}\\cdot\\frac{a h}{k}\\cdot\\frac{k}{h}... $，论文给 $|av_i|\\le4MH/h'
+LINE: (b) `05:149-172`。设 $j_*$ 处标签重数 $m'>k/M$，$j_\pm$ 为其极端出现指标。`dichotomy:path` 给 $j_+-j_-=ah$，$m'-1\le a<k/h$。记 $L_i=|V(y_i(n_{j_*}))|$。实代表差 $\Delta_i=\tilde y_i(n_{j_+})-\tilde y_i(n_{j_-})$ 满足 $|\Delta_i|\le L_i\le2H$（同一区间内两点的代表差以区间长为界）。由 `dichotomy:path-equations`，$\Delta_i\equiv av_i\pmod1$。又 $|av_i|\le\frac{4MH}{h}\cdot\frac{a h}{k}\cdot\frac{k}{h}... $，论文给 $|av_i|\le4MH/h$（用 $a<k/h$ 与 $|v_i|\le4MH/k$ 相乘：$a|v_i|<(k/h)(4MH/k)=4MH/h$），$|\Delta_i-av_i|\le2H+4MH/h<1$（$h\ge1$、$H$ 小）。整数 $\Delta_i-av_i$ 为 $0$。故 $|v_i|=L_i'/a\le L_i/(m'-1)\le(2M/k)L_i$。
+
+=== 82 | D75-vanDerWaerden数的定量超指数下界.md | line 730 | INLINE | errlen 55
+BODY: 'F=\\lvert U\\rvert +\\lvert V\\rvert $ | $\\log F'
+LINE: | $R,m$ | $R=O(k\log k)$，$2m=O(k^3\log k)$ | 02:144-146, 02:181 | `count:global` 的 $F=\lvert U\rvert +\lvert V\rvert $ | $\log F$ 变大，$T_{\mathrm{glob}}$ 失去 $o(M)$  |
+
+=== 83 | D75-vanDerWaerden数的定量超指数下界.md | line 876 | INLINE | errlen 55
+BODY: 'k\\ge k_* $ 有 $k^{1/5}+2k^{1/10}+1<2k^{1/2}<k'
+LINE: (b) 推导补全。$h_0<2M<k$ 的链条逐项验证：$D=\lceil k^{1/10}\rceil\le k^{1/10}+1$，故 $h_0=D^2\le(k^{1/10}+1)^2=k^{1/5}+2k^{1/10}+1$；$2M\ge2k^{1/2}$；对 $k\ge k_* $ 有 $k^{1/5}+2k^{1/10}+1<2k^{1/2}<k$ 成立（两侧都是幂律，指数 $1/5<1<1/2$ 的比较在 $k$ 大时逐项生效，左侧 $k^{1/2}\ll k$）。$\lambda$ 的定义（`02-setup.tex:23-31`）取遍 $\ell\le h_0$ 的素数，每个素数幂至多 $2M$，因此 $\log\lambda\le h_0\log(2M)=O(k^{1/5}\log k)$，这正是 `02-setup.tex:97-101` 阶数组里的第三式。$O(\cdot)$ 的绝对性由 `02-setup.tex:5-8` 明文规定：所有常数为绝对常数、所有极限在 $k\to\infty$ 下取；`02-setup.tex:9-10` 另加一条纪律：构造中任何阈值都不依赖最终色数 $r$，这条纪律到 `07-transfers.tex:73-74` 才被兑现（"it is absolute and uniform in the number of colors"）。
+
+=== 84 | D750-三维量子Heisenberg铁磁体磁化的第一格点修正.md | line 533 | INLINE | errlen 55
+BODY: '，再逐阶估计。这在物理上就是玻色和的微扰读法。它在我的纸面上死于两条：一是 $n'
+LINE: 第一条：按返回圈数逐阶展开。既然 $q_i$ 是"在整数个周期后返回"的概率，最直接的写法是按圈数 $n$ 展开，$r=\sum_{n\ge1}(\text{$n$ 圈的返回贡献})$，再逐阶估计。这在物理上就是玻色和的微扰读法。它在我的纸面上死于两条：一是 $n$ 可以大到 $\beta/L$ 量级，逐阶误差累加会吃掉 $\beta^{-5/2}$ 的预算；二是将 Bose 和截断到 $n\le n_0$ 就直接丢掉要证的第二项系数。素材 `04-profiles.tex:5-8` 把这条说得很清楚：空间截断让它成为有限体积测试向量，而**不**截断周期数；`04-capacity.tex:130-134` 补了判据的好处：对返回次数完全不做展开。
+
+=== 85 | D758-圆周率的无理性指数等于2.md | line 261 | INLINE | errlen 55
+BODY: '= $"，并非"'
+LINE: 证明在其光滑完备模型上做：每个点处清掉齐次单项式坐标的最大极点，每个单项式的极点阶至多 $R$ 乘以 §7 里那个极大值；当极大值为正时某坐标的纯幂达到该界，当极大值为零时常数单项式达到该界，所得截面没有公共零点，于是次数正好等于 $R\deg_W C$。我特别核对"$= $"，并非"$\le$"的必要性：$A-(1+\sigma)E$ 的半正性右端系数 $(1+\sigma)$ 与曲线不等式的 $(1+\sigma)$ 必须同尺度，若这里只有一半，正性就会打折。
+
+=== 86 | D79-均称性反用与位移障碍-F群非均称性证明笔记.md | line 56 | INLINE | errlen 55
+BODY: 'x_g = $ 某个 g 的轨道平均, 断言 $x_{hg} = f(x_g)'
+LINE: 接受"要 Hilbert 值对象"之后, 我一度想这样用 Benyamini-Sternfeld 型位移映射 (论文 Lemma 1.2) f: 令 $x_g = $ 某个 g 的轨道平均, 断言 $x_{hg} = f(x_g)$ 型的函数方程给出 g 上的离散动力系, 再用 f 的位移正下界给出轨道不闭合。断点: f 与群作用之间没有任何交换律, $F\ni g\mapsto$ 球中点的函数空间上没有等变性来源; 我需要的其实只是"平均的位移在 Følner 极限下趋零", 而点态轨道论证把"平均"错误地放到了"逐点"层。这条线只活了半天, 但它教会我把 B-S 映射看成"对平均算子的不动点障碍", 为 §4 的转折埋了雷。
+
+=== 87 | D79-均称性反用与位移障碍-F群非均称性证明笔记.md | line 104 | INLINE | errlen 58
+BODY: 'J\'." (finite-proof.tex:77-79)。\n\n(b) 推导补全: $[0,1]\\setminus(I\\cup J)'
+LINE: (a) 逐字引用: "If $I<J$ and $I'<J'$ are pairs of internal basic intervals, there is an $h\in F$ whose restrictions carry $I$ affinely onto $I'$ and $J$ affinely onto $J'." (finite-proof.tex:77-79)。
+
+=== 88 | D80-均值对策博弈随机化准多项式求解的支撑预算递归.md | line 2021 | INLINE | errlen 55
+BODY: '2^J   04:26                   07:231` 的多项式 $P(L)'
+LINE: | $\varepsilon$ | $2^{-J}$ | `04:23`、`04:26` | `04a` 与 `06:82`、`06:183`、`06:292` 的失败概率；`05:451` 的 $2s\varepsilon$；`06:394`--`396` | 分析专用、算法不构造分母 $2^J`（`04:26`）；若把它变成实际参数则位长爆炸，`07:231` 的多项式 $P(L)$ 断 |
+
+=== 89 | D80-均值对策博弈随机化准多项式求解的支撑预算递归.md | line 2023 | INLINE | errlen 55
+BODY: 'c>0` 无法保证，witness $u'
+LINE: | $\delta$ | $\lfloor B/(4s)\rfloor$ | `03:261`、`04:85` | 紧化位移量；`03:283` 的 $\delta\ge32$；`04a:89` 的 $nB/\delta\le8ns$ 更新数 | 取 $B/(2s)$ 则 `03:284` 的 $2\delta\le hB$ 断（变成 $2\delta\le B/s$ 仍 $\le hB$，但 `03:283` 的 $B-2\delta\ge B/2$ 失效），`03:265` 的 $c>0` 无法保证，witness $u$ 不再是 subsolution |
+
+=== 90 | D85-三十二行签名阵列与标签耦合：Talagrand离散凸性猜想的反推笔记.md | line 658 | INLINE | errlen 55
+BODY: '2^{-h}>... $ 严格地：'
+LINE: bin 的入选与 $h\ge64r$。剩余集合权重 $<2^{-64r}$（等于的进了 $\mathcal G_0$），落在唯一的 $h$ 使 $2^{-(h+1)}<w\le2^{-h}$，由 $w<2^{-64r}$ 得 $2^{-h}>... $ 严格地：$h$ 是 $\lceil-\log_2w\rceil$ 型指标，$w<2^{-64r}$ 蕴含 $h\ge64r$。
+
+=== 91 | D85-三十二行签名阵列与标签耦合：Talagrand离散凸性猜想的反推笔记.md | line 684 | INLINE | errlen 55
+BODY: '\\log T+D\\cdot... $，实测 $D=1'
+LINE: `[推测]` 失败路线二：用 4 行（$w^2$ 的幂次 $P=2$）配 $D=1$ 的门槛。断在 `lem:covering` 的 $h$ 下限：$P-D=1$，需要 $G\cdot1>k=4$ 即 $G\ge5$，看似可行；但 bin 里 $|\mathcal H|\rho^r\le2^{h+1}$ 与目标族门槛 $2^{Dh}=2^{h}$ 会让 covering 的残余项需要 $\pi m$ 压过 $\log T+D\cdot... $，实测 $D=1$ 时 $m=2^{h}$ 太小，$\pi m^2=2^{-16h}\cdot2^{2h}=2^{-14h}\to0$，残余项指数变成正，爆掉。$D$ 与 $m=2^{Dh}$ 必须大到让 $\pi m^2$ 二次占优。
+
+=== 92 | D86-循环Hadamard猜想的机器与笔头-特征交替积与二进制残迹.md | line 47 | INLINE | errlen 55
+BODY: '\\S$2.4)。它们共同把可行空间挤到唯一一条路上: 一切信息都得在分圆整环的局部化里用赋值和残迹来表达, 且符号数组 ('
+LINE: 四条路线, 断点分别是: 差集投影丢失刚性 (§2.1), 解析估计与精确等式之间没有翻译器 (§2.2), 有限算力与 $\forall u$ 之间没有归约 (§2.3), 命题强度自伤 ($\S$2.4)。它们共同把可行空间挤到唯一一条路上: 一切信息都得在分圆整环的局部化里用赋值和残迹来表达, 且符号数组 ($\pm1$ 本身) 这个信息必须有专门的一步去消费。最后这句话就是 §3 的转折点的胚胎。
+
+=== 93 | D92-Lp次多项式降维-重尾矩台账与截断ramp.md | line 230 | INLINE | errlen 55
+BODY: ')。(paper.tex:572-588)。裁剪:"For $T>1'
+LINE: (a) 逐字(节点引文)。构造 $Y$:"On the region $\{\|v\|_\infty>1\}$, this is an ordinary signed compound Poisson sum… For each $j\ge0$, independently sample the region $A_j=\{2^{-j-1}<\|v\|_\infty\le2^{-j}\}$… Consequently $\sum_{j\ge0}Y^{(j)}$ converges in $L_2$ with values in the finite dimensional space $\R^E$."(paper.tex:551-569)。特征函数与尾:\E e^{i\theta Y_e}=\exp(p\int_0^\infty(\cos(\theta u)-1)u^{-p-1}du)$、$c_pa^{-p}\le\Prob(|Y_e|>a)\le C_pa^{-p}$($a\ge1$)。(paper.tex:572-588)。裁剪:"For $T>1$, let $[Y]_T$ denote coordinatewise clipping to $[-T,T]$, and set $F=P[Y]_T$. Then $F\in V$ and $\|F\|_\infty\le HT$."(paper.tex:624-629)。误差与选择:"$\sum_e\sigma_e|\mathbb E|F_e|^p-b|\le C_pH^{2-p}$"(`eq:below-weighted-error`, paper.tex:678-681);"Choose $T=\exp(A_{p,\eta}H^{2-p})$, $K=HT$… $\log K=O_{p,\eta}((\log n)^{2-p})$."(paper.tex:683-705)
+
+=== 94 | D92-Lp次多项式降维-重尾矩台账与截断ramp.md | line 234 | INLINE | errlen 55
+BODY: '(\\log n)^{1-p}\\cdot O((\\log n)^{2-p})… $ 即 $(\\log n)^{-\\,(p-1)}'
+LINE: (c) 机械理由。这里回答"$p$ 与 $D$ 各被哪一步消费":$p\in(1,2)$ 消费于(i)$p/(2-p)$ 有限性决定整段可用小跳二矩,(ii)$|t|^p-h_a(t)\le a^{p-2}|t|^2$ 要求 $p<2$(指数 $p-2<0$ 才让 $a$ 的幂把高端压小),(iii)误差 $C_pH^{2-p}$ 的指数 $2-p=\gamma(p)$ 全部来自"$H(a/T)^{p-1}$ 与 $(T/a)^{2-p}$ 平衡"这一步的代数,$\gamma$ 不是装饰,是两次幂次相减的残值。$D$ 只在 `eq:eta-choice` 出现,$\eta$ 经 $A_{p,\eta}$ 进入 $T$ 的指数,再进 $\log K$ 的常数,$C_{p,D}$ 的依赖链是 $D\rightsquigarrow\eta\rightsquigarrow A\rightsquigarrow T,K\rightsquigarrow d$。"$o(1)$ 的来源"在本段的答案:平衡式 $a=T/H\ge2$ 需 $\log H=o(H^{2-p})$(paper.tex:689 逐字用 little-o),$d$ 里 $K^{2p}=e^{2p\log K}$ 而 $\log K=O(H^{2-p})$,故 $\log d/\log n\to0$,速率 $(\log n)^{1-p}\cdot O((\log n)^{2-p})… $ 即 $(\log n)^{-\,(p-1)}$。$T$ 与 $K$ 分离消费:$T$ 管裁剪($|Y|\le T$),$K=HT$ 管投影放大;Lean 用 $T=H e^{A(H^{2-p}+1)}$、$K=H^2e^{A(H^{2-p}+1)}$(BelowTwo.lean:33-35),多出的 $+1$ 与额外 $H$ 是为把"充分大 $n$"的渐近话改写成 $n\ge2$ 的全域话。
+
+=== 95 | D92-Lp次多项式降维-重尾矩台账与截断ramp.md | line 284 | INLINE | errlen 55
+BODY: 'J<\\sup\\lvert Z_e\\rvert $ 时 $\\cosh s-1\\le C_0s^2'
+LINE: | $J$ | $C'_pH2^{2\ell}\ge1$, $O_{p,\eta}$ 可取定 | paper.tex:940-944 | MGF 正规化 $\mathbb E e^{\pm W_e/J}\le e^{C_0}$;截断误差 $C_pJ^pn^{-3}$ | $J<\sup\lvert Z_e\rvert $ 时 $\cosh s-1\le C_0s^2$ 的小量前提断  |
+
+=== 96 | D93-方向瞬态蕴含弹道性反推笔记.md | line 130 | INLINE | errlen 55
+BODY: 'p_hc_2/B   02-geometry.tex:208-210                       :297`)。取 $B'
+LINE: 矛盾的形状于是成了:多项式下界 $p_hc_2/B`(`02-geometry.tex:208-210`)对上指数上界 $C'e^{-c'B}$(`:297`)。取 $B$ 大即反证。
+
+=== 97 | D93-方向瞬态蕴含弹道性反推笔记.md | line 636 | INLINE | errlen 55
+BODY: 'c                                                                 07-stages.tex                           [断言点]   :88-149                          eq:24   eq:13`),其逐次质量累积表我按 $d^{k}'
+LINE: (c) 机械理由。$C_*=2J_0+2$:因子 2 把"每次分裂约占两个块"记入预算,$+2$ 处理余段与末端;这个 $C_*$ 之后被 N07 直接消费,方式是 `06-kernels.tex:67` 的 $r=r_{H/C_*}$ 与 `07-stages.tex` 里 $r_s$ 的换算($r_s$ 由 N03-3 的 $n(r_s)=s$ 反解定义)。$p'$ 任意、$g_0$ 固定:N07-1 的失败概率预算是 $e^{-2Kb}$(`07-stages.tex:43-44`),而 `07-stages.tex:268-270` 明说种子常数与 retry 数在 $b$ 之前固定,即 $g_0$ 必须先于 $K,b$ 定好。"without initial separation":消费在 `07-stages.tex:360-372` 的注入步骤,那里的 $\mu_t^{\otimes k}$ 零分离,靠有界椭圆脚本注入 $r_{s_{\rm fl}}$。$pc$:两因子分别来自 N02-1 的 $p$(条件化相消)与 `eq:13` 的 $c`,是全篇"概率货币"最直接的乘积形态。"ordered endpoint groups":有序性保证后续拼接中间隙可累加,见 `07-stages.tex` 的 ${\rm sep}\ge r_s$ 假设。`[断言点]`:`:88-149` 的 $k$ 次迭代我核对了开头设定与所用方程(`eq:24`、`eq:13`),其逐次质量累积表我按 $d^{k}$ 型估计理解,原文给出的是操作描述。
+
+=== 98 | D93-方向瞬态蕴含弹道性反推笔记.md | line 886 | INLINE | errlen 55
+BODY: '\\mathbb E L=\\infty   eq:1   02-geometry.tex:116`)的空间半径一阶矩断,§03 的 $\\bar L'
+LINE: | $p_h$ | $p_h=P_0(D_h)>0$,记录词原始概率 | `02-geometry.tex:9,35,60` | `eq:2` 宽度均值界 `02-geometry.tex:45`;记录几乎必然出现 `02-geometry.tex:63-69`;$\epsilon_0$ `02-geometry.tex:250`;多项式下界 $p_hc_2/B$ `02-geometry.tex:209` | $p_h=0$ 则 $\mathbb E L=\infty`,`eq:1`(`02-geometry.tex:116`)的空间半径一阶矩断,§03 的 $\bar L$ 有限性失去来源 |
+
+=== 99 | D94-正则轨迹剪枝与量子奇偶下界.md | line 424 | INLINE | errlen 55
+BODY: "\\lvert\\langle T\\chi,G\\psi\\rvert\\le\\exp(m^{r'}-m^s)+2\\exp(m^{r'}-\\theta)<... $ 我照原文写成 $\\exp(m^{r'}-m^s)+2\\exp(m^{r'}-m^\\theta)=O(\\exp(-m^q))"
+LINE: 分裂段用 $Q=\mathbf 1_{H_A\le m^v}$(`05-transport.tex:251`),低带项 $\lvert\langle QT\chi,QG\psi\rvert\le\exp(-m^s)\exp(m^{r'})$(`05-transport.tex:252-255`)一因子来自带估计、一因子来自 $\lVert G\rVert$。高带项要先立 $m^{v_0}+m^{r'}<m^v$ 渐近成立(`05-transport.tex:257`),它由 $\max\{b,r'\}<v_0<v$ 保证;次数移位随即给出 $(I-Q)G\mathbf 1_{H_A\le m^{v_0}}=0$(`05-transport.tex:258-260`),于是 $\lVert(I-Q)G\psi\rVert\le\lVert G\rVert\lVert\mathbf 1_{H_A>m^{v_0}}\psi\rVert\le\exp(m^{r'}-m^\theta)$(`05-transport.tex:261-267`),其中输入尾假设以阈值指数 $v_0>b$、精度指数 $\theta<v_0$ 被调用。由 $Q$ 与 $I-Q$ 的正交性合并(`05-transport.tex:268-274`):$\lvert\langle T\chi,G\psi\rvert\le\exp(m^{r'}-m^s)+2\exp(m^{r'}-\theta)<... $ 我照原文写成 $\exp(m^{r'}-m^s)+2\exp(m^{r'}-m^\theta)=O(\exp(-m^q))$,理由是 $s>r'>q$ 与 $\theta>r'>q$;`05-transport.tex:275-277` 记下这两条严格间隙支付 $G$ 的两次全局范数使用,并给出与 $m$ 无关的常数 $C_0$ 使 $0\le a_m\le C_0\exp(-m^q)$ 渐近成立(`05-transport.tex:277-280`)。`05-transport.tex:281-282` 补一句:全程没假设 $G$ 与计数投影可换。这句我看得很重,因为 $G$ 是传播命题造出的任意算符,不是 $H_A$ 的谱函数,能用的只有正交投影的分解,正是一进一退不要求交换性的凭据。
+
+=== 100 | D95-用独立行替换高斯行的Cd代价.md | line 754 | INLINE | errlen 55
+BODY: '\\lceil\\log b_w\\rceil   $b_w\\ge e^{q-1}$'
+LINE: - `[推测]` 若 $q_w$ 取 $\lfloor\log b_w\rfloor$ ，并非 $\lceil\log b_w\rceil`,`$b_w\ge e^{q-1}$$ 会变成 $b_w<e^q$,覆盖数的推导 `03:122-127` 需要"$j$ 极大化且 $q$ 是上取整"才能给每球质量 $\ge e^{q-1}R_j^\ell$;用下取整则每球质量 $\ge e^{q}R_j^\ell$ 但 $b_w$ 可能 $<e^q$,不等式方向断。$-q+Cd$ 变成 $-q+q'+Cd$,相消不完全。
+
+=== 101 | D95-用独立行替换高斯行的Cd代价.md | line 1617 | INLINE | errlen 55
+BODY: 'T+1     07:147                                                 07:157` 的 $T>d/4'
+LINE: | $N$ (padding 后状态基数) | $(T+2)2^M$ | `07-streaming-applications.tex:136` | §7 `lem:r-stopping-reduction` 与 §5.7 `rfib:block` 的 $\log N\le d^2$ 前提 | 若 $T+2$ 换成 $T+1`,与 `07:147` $p\le(T+1)2^M\epsilon^{d-1}$ 联立会少一 padding 状态,`07:157` 的 $T>d/4$ 无记忆前提断在边界情形 |
+
+=== 102 | D95-用独立行替换高斯行的Cd代价.md | line 1670 | INLINE | errlen 55
+BODY: '\\epsilon\\le1/10   07:130     00:107                         07b:30                              07:152                                               07a:81` 的 $L\\ge\\log10>\\log4'
+LINE: - $\epsilon\le1/10`:`07:130` 与 `00:107` 两处独立声明。上限 1/10 保证 (i) `07b:30` 的 radius condition 成立,(ii) `07:152` 的 $L\le C(M+1+\log d)/d$ 里的 $C$ 可以选绝对,(iii) `07a:81` 的 $L\ge\log10>\log4$ 保正;三处联立要求 $\log(1/\epsilon)\ge\log10$ 与 §6 表里"若允许 $\epsilon>1/10$"一栏对齐。
+
+=== 103 | D95-用独立行替换高斯行的Cd代价.md | line 1675 | INLINE | errlen 55
+BODY: 'p\\ge3/5   07:149                                                                                                                                    07a:12   07b:52   07c:27                                    07b:27` 的 $2/3-25/42=1/14'
+LINE: - $p\ge3/5`:`07:149`。摘要里"success at least $2/3$"与这里的 $3/5$ 是两个不同门槛:$3/5$ 是"无记忆下界 $T>d/4$"与"$p\le(T+1)2^M\epsilon^{d-1}$ 联立"这一具体比较里的选择;$2/3$ 是端点主定理的假设(`07a:12`、`07b:52`、`07c:27`)。两者之间的差 $2/3-3/5=1/15$ 未被论文明说,只在 `07b:27` 的 $2/3-25/42=1/14$ 处出现"两个减法"里的第二个,这是端点分片内部才用到的簿记。
+
+=== 104 | D95-用独立行替换高斯行的Cd代价.md | line 1798 | INLINE | errlen 55
+BODY: 'p_0=3/5`,再落到可测版本;所得固定种子的均匀先验实验保留成功至少 $3/5'
+LINE: - `07-streaming-applications.tex:298-303`: 证明先做种子约化并取 $p_0=3/5`,再落到可测版本;所得固定种子的均匀先验实验保留成功至少 $3/5$、条件初始状态律、同一状态界与同一时间上界,转移与终端输出的随机数仍是新鲜的。
+
+=== 105 | D95-用独立行替换高斯行的Cd代价.md | line 1894 | INLINE | errlen 58
+BODY: '\\dfrac13=2/3-1/3` 同型;这里我把两处并排看,才确认四条端点式的分子都来自这同一个减法。\n5. $d-k-1\\ge d/3'
+LINE: 4. 系数 $\dfrac2{15}$ 是 $p-\eta=2/3-8/15$(`07a-density-endpoints.tex:117-121`),与该分片一层的 $\dfrac13=2/3-1/3` 同型;这里我把两处并排看,才确认四条端点式的分子都来自这同一个减法。
+
+=== 106 | D95-用独立行替换高斯行的Cd代价.md | line 1898 | INLINE | errlen 55
+BODY: '(                                   ),尾部走卡方加切比雪夫给 $O(1/d)'
+LINE: - 临界半径: 块行 $m=\lfloor d/10\rfloor`(`07-streaming-applications.tex:313-315`),势行 $\ell=\lfloor d/2\rfloor`(`07-streaming-applications.tex:317-322`),$\rho=1/2$(`07-streaming-applications.tex:368`),尾部走卡方加切比雪夫给 $O(1/d)$(`07-streaming-applications.tex:357-363`),$p=3/5$(`07-streaming-applications.tex:290`),$p-\eta$ 折成 $1/2$(`07-streaming-applications.tex:365-367`),位移 $\log4$,维数因子 $a-1$ 且 $a=d-\ell\ge d/2$;乘积约 $\dfrac12\cdot\dfrac12\cdot0.399\approx0.100$。
+
+=== 107 | D95-用独立行替换高斯行的Cd代价.md | line 1945 | INLINE | errlen 55
+BODY: '\\det(gg^{\\mathsf T})^{-1/2}   01-information-and-densities.tex:186                         01-information-and-densities.tex:195-198`)是同一行列式的两次出场: 一次固定 $g'
+LINE: 4. Jacobian $\det(gg^{\mathsf T})^{-1/2}`(`01-information-and-densities.tex:186`)与 Gram--Schmidt 的卡方乘积(`01-information-and-densities.tex:195-198`)是同一行列式的两次出场: 一次固定 $g$ 让测度改变,一次让 $G$ 随机、把行列式拆成距离乘积。§5.3 的混合矩展开用的正是后者。
+
+=== 108 | D96-残差球上的记忆与样本下界：无噪高斯回归中 streaming learner 的反推笔记.md | line 585 | INLINE | errlen 55
+BODY: "\\S$20 的态最大给出 $\\mathbb E_N\\max_{v'}F_{v'}(N)\\le w^{1/m}2^{3d}U_0"
+LINE: 终端 $i=J$：$D\ge d-2J\ge\frac{3d}4$ 给 $D-1\ge p$，$\frac{8\epsilon}r\ge1$ 用全测度，否则 02:28--30 的 $\min\{1,(8\epsilon/R)^{D-1}\}$ 直接压过 $(8\epsilon/r)^p$。回溯步 $i+1\to i$ 里，$\S$20 的态最大给出 $\mathbb E_N\max_{v'}F_{v'}(N)\le w^{1/m}2^{3d}U_0$，$U_0=G^{J-i-1}(8\epsilon/r')^p$，
+

@@ -1,0 +1,41 @@
+E:\math\_work\arxiv_crawl.py:41: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  tf.extractall(d)
+crawled=38 ok=37 fail=1
+0812.2563 OK tex=1 bytes=13894
+1109.4382 OK tex=1 bytes=37333
+1203.0893 OK tex=1 bytes=25807
+1412.0940 OK tex=1 bytes=53881
+1511.04222 OK tex=1 bytes=12932
+1511.08164 OK tex=1 bytes=32732
+1512.03887 OK tex=1 bytes=3299
+1603.05765 OK tex=1 bytes=90527
+1605.02284 OK tex=1 bytes=35315
+1606.08894 OK tex=1 bytes=98391
+1609.05543 OK tex=1 bytes=42511
+1703.00292 OK tex=1 bytes=18950
+1707.05561 OK tex=1 bytes=72680
+1803.04756 OK tex=7 bytes=95719
+1810.12733 OK tex=1 bytes=4790
+1907.01114 OK tex=1 bytes=79182
+2005.08303 OK tex=1 bytes=71923
+2006.11238 OK tex=1 bytes=44046
+2108.10303 OK tex=1 bytes=10092
+2110.07346 OK tex=15 bytes=103672
+2205.10915 OK tex=1 bytes=163760
+2402.03975 OK tex=10 bytes=232966
+2512.01401 OK tex=1 bytes=33941
+2603.07555 OK tex=2 bytes=72490
+2607.06334 OK tex=2 bytes=102079
+2609.26222 OK tex=1 bytes=96434
+alg-geom/9408003 OK tex=1 bytes=18884
+math/0005136 OK tex=1 bytes=38262
+math/0106147 OK tex=1 bytes=9288
+math/0211159 OK tex=1 bytes=34085
+math/0308143 OK tex=1 bytes=19227
+math/0406345 OK tex=1 bytes=34109
+math/0503651 DOWNLOAD_FAIL  
+math/0504020 OK tex=1 bytes=98956
+math/0511225 OK tex=1 bytes=24546
+math/0511254 OK tex=1 bytes=4185
+math/0610203 OK tex=1 bytes=226044
+math/9804058 OK tex=1 bytes=12433

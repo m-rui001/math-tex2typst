@@ -1,0 +1,21 @@
+
+\documentclass{article}
+\usepackage{tikz}
+\pagestyle{empty}
+\makeatletter
+\def\dt@pt#1{#1\typeout{PT \the\pgf@x,\the\pgf@y}}
+\let\dt@move\pgfpathmoveto
+\def\pgfpathmoveto#1{\dt@pt{#1}\typeout{MOVE}\dt@move{#1}}
+\let\dt@curve\pgfpathcurveto
+\def\pgfpathcurveto#1#2#3{\dt@pt{#1}\dt@pt{#2}\dt@pt{#3}\typeout{CURVE}\dt@curve{#1}{#2}{#3}}
+\let\dt@line\pgfpathlineto
+\def\pgfpathlineto#1{\dt@pt{#1}\typeout{LINE}\dt@line{#1}}
+\makeatother
+\begin{document}
+\tikzset{slot/.style={circle,minimum size=8mm,inner sep=2pt,font=\small}}
+\tikzset{slotd/.style={circle,draw,minimum size=8mm,inner sep=2pt,font=\small}}
+\tikzset{box/.style={rectangle,minimum size=8mm,inner sep=2pt,font=\small}}
+\begin{tikzpicture}[x=1cm,y=1cm]
+\draw (0,0) to[loop] (0,0);
+\end{tikzpicture}
+\end{document}

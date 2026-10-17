@@ -1,0 +1,50 @@
+heads=24 lines=1260
+    3| ## §0 取材范围与登记
+   23| ## §1 初始动机与猜想
+   51| ## §2 三条被挡死的路线
+   63| ## §3 转折点：从区分两条串到分离每个错误前缀
+   89| ## §4 分离定理与多尺度策略
+  133| ## §5 多尺度单步：把信号搬到更粗的尺度
+  241| ## §6 频率配对与 Gram 链：为什么乘积还留着信号
+  375| ## §7 高斯围道：把平衡乘积还原成单个特征
+  473| ## §8 尺度调度与迹生成恒等式
+  647| ## §9 同时延拓与分离界
+  751| ## §10 译码器：前缀检验、松弛与有界搜索
+  881| ## §11 整数参数与比特复杂度
+  943| ## §12 复盘：与最初设想的差异
+  957| ## §13 台账
+ 1006| ## §14 补记：几处量级与常数来源的再核对
+ 1060| ## §15 勘误
+ 1070| ## §16 补勘误
+ 1078| ## §17 再补勘误
+ 1086| ## §18 相关工作这条线：history.tex 逐行落账
+ 1108| ## §19 矩松弛这一层的初等账：setup.tex 逐条补齐
+ 1132| ## §20 分离一侧的逐行技术账：separation.tex 五百四十九行
+ 1152| ## §21 多尺度一侧的逐行技术账：multiscale.tex 未入账条目
+ 1178| ## §22 台账续表与本批追加的登记
+ 1253| ## §23 台账行数更正
+
+first_new_section_line=1086
+
+MACRO-LIKE in new region=18
+ 1118| 矩阵列的定义（setup.tex:35--46）。固定候选前缀 $u\in\{0,1\}^d$ 与整数 $D\ge1$，在剩余位置 $U=\{d+1,\ldots,n\}$ 上改用符号变量 $Y_i=2X_i-1$，于是 $Y_i^2=1$。阵列由 $J\subseteq U$、$|J|\le2D$ 的实数 $m_J$ 组成，含 $m_\
+ 1120| 线性泛函与术语的精确含义（setup.tex:48--54）。对次数至多 $2D$ 的多项式，先把 $i\le d$ 的 $X_i$ 代成 $u_i$，其余比特按 $(1+Y_i)/2$ 展开，化简 $Y_i^2=1$，再令 $\mathcal E[\prod_{i\in J}Y_i]=m_J$，并复线性延拓。术语"固定 $u$ 的 $2
+ 1122| 初等矩界（setup.tex:56--82）。结论三条：$|m_J|\le1$（$|J|\le2D$）；任意至多 $2D$ 个不同输入比特乘积在 $\mathcal E}$ 下的值模至多一；在次数至多 $D$ 的多项式上 $\langle P,R\rangle_{\mathcal E}=\mathcal E[P\overline R]$ 
+ 1124| 差分泛函与它的粗界（setup.tex:84--98）。取真串 $x$ 与错误前缀 $u$，满足 $u_i=x_i$（$i<d$）而 $u_d=1-x_d$；对固定 $u$ 的正矩泛函写 $\Delta[P]=\mathcal E[P]-P(x)$。于是 $\Delta[X_d]=\pm1$，而 $P$ 只用严格早于 $d$ 的位置时 $
+ 1128| 分离定理陈述里两处易滑过的量（setup.tex:114--128）。$D_*=4^{\lceil\log_2Y\rceil+H}\le4^{H+1}Y^2$；定理要求泛函的阶 $2D$ 满足 $D\ge D_*$，而被找到的非空秩集只需 $|I|\le D_*$；同一个符号在陈述里同时充当门槛与上限，我核对过：$D\ge D_*$ 保证
+ 1130| 阶 $k$ 特征与它的两件配套物（setup.tex:137--163）。特征是一列多项式 $f_j=\sum_{i_1<\cdots<i_k=j}X_{i_1}\cdots X_{i_k}\prod_{h=1}^{k-1}z_h^{i_{h+1}-i_h}$，$j\in[n]$，其中 $z_h=\exp(-a_h+\mathrm i\t
+ 1142| 归纳的全部界（separation.tex:85--137）。起步用一阶特征 $f_i^{(0)}=X_i$、衰减 $s_0=4$、频率零；前缀相符给 $i<d$ 时 $\Delta[X_i]=0$，而 $|\Delta[X_d]|=1$，又 $|\Delta[X_i]|\le2$，于是 $|\mathcal S_{f^{(0)}}(4,
+ 1146| 带控制阻尼的乘积（separation.tex:187--228）。结论：$z$ 为至多 $N$ 个 $e^{-a_j+\mathrm i\theta_j}$ 的非空乘积、$a_j\ge\gamma\min\{|\theta_j|,N\theta_j^2\}$ 时，有绝对常数 $c_3>0$ 使 $\re\frac{1+z}{1-z}\g
+ 1148| 到迹坐标的精确恒等式（separation.tex:230--327）。定义 $k$ 个复变量的多项式 $F(Z_0,\ldots,Z_{k-1})=\sum_{1\le i_1<\cdots<i_k\le n}\Delta[\prod_rX_{i_r}]Z_0^{i_1}\prod_{r=1}^{k-1}Z_r^{i_{r+1}-i_r
+ 1150| 同时延拓与分离界（separation.tex:331--548）。Cayley 变换把圆盘变成半平面：$\lvert Z-q\rvert\le p$ 等价于 $\re\frac{1+Z}{1-Z}\ge q/p$（$\lvert Z\rvert<1$）；验证是写 $w=(1+Z)/(1-Z)$，把 $\lvert pw-(1+q)\rv
+ 1156| 策略声明（multiscale.tex:3--12）。信号 $\mathcal S_f(s,\omega)$ 把距第一个不符点约 $1/s$ 以外的位置打折；单步命题要做的事是把这样的信号搬到小得多的衰减参数上，允许提高特征阶，同时把信号对数的损耗压在八倍以内。紧接着两句我当初读得太快：新参数的辐角控制同等重要，因为那些界后来决定能否从输
+ 1158| 单步命题的输入输出（multiscale.tex:14--44）。绝对常数 $0<\beta,\eta_0<1$ 与 $C_0,C_1\ge1$。前提是 $0<S\le4$、$0<S'\le\min\{1,\eta_0S\}$、$4k\le D$，以及对某 $\beta S\le s\le S$ 与 $\lvert\omega\rvert
+ 1164| 窗、和式与统一界（multiscale.tex:56--60、77--91）。$\sigma=K\sqrt E/S'$、$W(l)=\exp(-l^2/(2\sigma^2))$、$b=\beta S'$。对实 $t$ 定义 $A(t)=\sum_{j=1}^nf_jW(j-d)e^{\mathrm it(j-d)}$ 与 $B_x(t)
+ 1166| 倾斜与内点信号（multiscale.tex:92--121）。断言存在某个 $\lvert s_1/s-1\rvert\le10^{-4}$ 使 $\lvert P(e^{-s_1+\mathrm i\omega})\rvert\ge\frac12e^{-E}$。工具是方差 $\sigma^{-2}$ 的中心实正态变量 $V$，由 $W
+ 1174| Gram 链（multiscale.tex:278--305）。$v_0,\ldots,v_J$ 在复 Hilbert 空间内，内积对第一个变量线性，$\norm{v_0}=1$，且对某 $\xi\ge0$ 有 $\lvert\norm{v_i}^2-1\rvert\le\xi$（$0\le i\le J$）与 $\lvert\langl
+ 1176| 平衡乘积（multiscale.tex:307--399）。先取足够大的绝对 $C_3$，使好频率供出的所有频率模都不超过 $C_3S$；一至四个形如 $A(t)$ 或 $\overline{A(t)}$（$\lvert t\rvert\le C_3S$）的因子之积称为平衡，条件是其带符号频率之和的模至多 $b$，共轭会改变一个频率的符号
+ 1199| | $\mathcal E[P\overline R]$ | 半正定 Hermite 型 | setup.tex:62 | 商空间内积 | Gram 链前提失效 |
+ 1221| | $4q\le4p\operatorname{Re}w$ | 圆盘化半平面的核对 | separation.tex:343 | 路径定义 | $R$ 的表达式改变 |
+
+BRACE-IMBALANCE=1
+ 1122| diff=-1 | 初等矩界（setup.tex:56--82）。结论三条：$|m_J|\le1$（$|J|\le2D$）；任意至多 $2D$ 个不同输入比特乘积在 $\mathcal E}$ 下的值模至多一；在次数至多 $D$ 的多项式上 $\langle P,R\rangle_{\mathcal E}=\mathcal E[P\overline R]$ 是半正定 Hermite 型，对第一个变

@@ -1,0 +1,17 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Finfty}{F_\infty}
+\newcommand{\FPinfty}{FP_\infty}
+\begin{document}
+\begin{tikzcd}[column sep=large]
+ U \arrow[r,hook,"\iota"]
+   \arrow[rr,bend right=24,hook,"f=\kappa\iota"']
+ & \widehat W \arrow[r,hook,"\kappa"] & U.
+\end{tikzcd}
+\end{document}

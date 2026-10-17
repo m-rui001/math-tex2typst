@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "E:\math\_work\probe_refusal_stages.py", line 94, in <module>
+    why = classify(tex.stem, m.group(0), tex)
+  File "E:\math\_work\probe_refusal_stages.py", line 30, in classify
+    core = cetz.expand_linewidth(cetz.MATH_ENVELOPE.sub("", pic), convert.line_cm(path))
+                                                                  ~~~~~~~~~~~~~~~^^^^^^
+  File "E:\math\tools\t2t\convert.py", line 183, in line_cm
+    m = typst_margins(p)
+  File "E:\math\tools\t2t\convert.py", line 163, in typst_margins
+    g = p.geometry
+        ^^^^^^^^^^
+AttributeError: 'WindowsPath' object has no attribute 'geometry'

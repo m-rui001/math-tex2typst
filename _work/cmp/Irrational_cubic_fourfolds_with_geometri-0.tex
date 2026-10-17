@@ -1,0 +1,32 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\C}{\mathbb C}
+\DeclareMathOperator{\Ku}{Ku}
+\DeclareMathOperator{\NS}{NS}
+\DeclareMathOperator{\Hdg}{Hdg}
+\DeclareMathOperator{\MRC}{MRC}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\id}{id}
+\begin{document}
+\begin{tikzcd}[column sep=large,row sep=large]
+ & \mathbf P^4\dashrightarrow X
+   \arrow[dl,"\text{smooth factorization}" description]
+   \arrow[dr,"\text{Mori factorization}" description] & \\
+ \text{whole integral surface blocks}
+   \arrow[d,"\text{Proposition~\ref{gw:net-center}}" description]
+ && \text{endpoint corrections }v+s
+   \arrow[d,"\text{Theorem~\ref{sf:vanishing}}" description] \\
+ c_u(f)=1 && c_u(f)=0
+\end{tikzcd}
+\end{document}

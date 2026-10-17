@@ -1,0 +1,252 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+on-ink face: 8 rows over 7 canvases / 7 papers
+
+=== The-Blockwise-Alperin-Weight-Conjecture-September-#0  worst 4.56  (2 rows)
+  4.56  dx71.84 dy 3.42  'Smallorbitgivesanextensionwithsmall' x '=1'                    apart-in-x
+        box1=(189.8,87.6,341.3,97.9)  w151.6 h10.3
+        box2=(186.7,84.9,200.7,93.9)  w14.0 h9.0
+  3.36  dx16.83 dy 3.79  'Valuedliftandmarked-coverdescent' x 'p'                     apart-in-x
+        box1=(199.4,74.5,336.0,84.8)  w136.6 h10.3
+        box2=(249.0,72.7,252.8,79.0)  w3.7 h6.3
+  -- content() calls carrying those texts --
+       5: content((3.2, -1.645), [#box(width: 5.994cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false
+       6: content((0, -1.791), [#box(width: 12.49cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, 
+       2: import cetz.draw: *
+       3: content((0, 0), [#box(width: 12.49cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, top-e
+       4: content((-3.2, -1.645), [#box(width: 5.994cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: fals
+       7: content((0, -3.896), [#box(width: 12.49cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, 
+       8: content((0, -5.816), [#box(width: 12.49cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, 
+       9: line((0, -0.7452), (0, -1.145), stroke: (thickness: 0.6pt, miter-limit: 10))
+      10: line((0, -1.145), (-3.2, -1.145), stroke: (thickness: 0.6pt, miter-limit: 10))
+      11: line((-3.2, -1.145), (-3.2, -1.645), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+      12: line((0, -0.7452), (0, -1.145), stroke: (thickness: 0.6pt, miter-limit: 10))
+      13: line((0, -1.145), (3.2, -1.145), stroke: (thickness: 0.6pt, miter-limit: 10))
+      14: line((3.2, -1.145), (3.2, -1.645), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+      15: line((-3.2, -2.827), (-3.2, -1), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+      16: line((3.2, -2.827), (3.2, -1), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+      17: line((0, -2.581), (0, -3.281), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+      18: line((0, -4.511), (0, -5.211), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+  -- source picture 0 --
+     \begin{tikzpicture}[   every node/.style={font=\small,align=center},   stage/.style={draw=black!55,rounded corners=2pt,inner sep=7pt},   flow/.style={-{Stealth[length=5pt
+     \coordinate (branch-top) at ($(twist.south)+(0,-9mm)$)
+     \coordinate (branch-split) at ($(twist.south)+(0,-4mm)$)
+     \node[stage,text width=5.5cm,anchor=north] (genus)   at ($(branch-top)+(-3.2cm,0)$)   {Differential estimate and divisor-degree divisibility\\Sharp inseparable genus boun
+     \node[stage,text width=5.5cm,anchor=north] (lift)   at ($(branch-top)+(3.2cm,0)$)   {Valued lift and marked-cover descent\\Small orbit gives an extension    with small $p
+     \node[fit=(genus)(lift),inner sep=0pt,outer sep=0pt] (branches) {}
+     \node[stage,text width=12cm,below=10mm of branches] (specialization)   {Section comparison, finite presentation, and connectedness\\    No such marked $J$-cover over $L$ 
+     \node[stage,text width=12cm,below=7mm of specialization] (count)   {Every Sylow orbit has size divisible by $p^h$\\    Uniform tuple divisibility (\Cref{thm:tuple-divisib
+     \node[stage,text width=12cm,below=7mm of count] (blocks)   {Chain inversion and central trace limits (\Cref{sec:group})\\    $l(B)=|W_p(B)|$}
+     \draw[flow] (twist.south) -- (branch-split) -| (genus.north)
+     \draw[flow] (twist.south) -- (branch-split) -| (lift.north)
+     \draw[flow] (genus.south) -- (genus.south |- specialization.north)
+     \draw[flow] (lift.south) -- (lift.south |- specialization.north)
+     \draw[flow] (specialization.south) -- (count.north)
+     \draw[flow] (count.south) -- (blocks.north)
+     \end{tikzpicture}
+
+=== Irrational-cubic-fourfolds-with-geometric-K3-categ#0  worst 4.12  (1 rows)
+  4.12  dx39.41 dy 0.33  '⇢X'                   x 'Morifactorization'     same-baseline
+        box1=(185.7,-1.4,208.8,9.6)  w23.2 h11.0
+        box2=(205.0,0.5,268.4,8.5)  w63.4 h8.0
+  -- content() calls carrying those texts --
+      11: content((5.91, -0.01492), [#text(size: 0.73em)[$upright("Mori factorization")$]])
+  -- source picture 0 --
+     \begin{tikzcd}[column sep=large,row sep=large]  & \mathbf P^4\dashrightarrow X    \arrow[dl,"\text{smooth factorization}" description]    \arrow[dr,"\text{Mori factorizat
+
+=== Finite-Monoid-Computations-and-a-Uniform-Generaliz#0  worst 3.92  (1 rows)
+  3.92  dx31.29 dy 9.04  'continuation'         x 'firstmismatch'         apart-in-x
+        box1=(176.8,61.2,234.2,73.7)  w57.5 h12.5
+        box2=(204.5,70.2,269.1,82.8)  w64.5 h12.5
+  -- content() calls carrying those texts --
+       6: content((0.5175, 1.305), [seed 1], anchor: "east", padding: 0.1176cm)
+       7: content((0.5175, 0.725), [seed 2], anchor: "east", padding: 0.1176cm)
+       8: content((0.5175, 0.145), [seed 3], anchor: "east", padding: 0.1176cm)
+      13: content((3.105, -0.58), [seed union agrees with $pi$], anchor: "south", padding: 0.1176cm)
+      14: content((6.555, -0.58), [continuation], anchor: "north", padding: 0.1176cm)
+      17: content((7.59, -0.435), [$q$], anchor: "south", padding: 0.1176cm)
+      18: content((7.659, -0.899), [first mismatch], anchor: "north", padding: 0.1176cm)
+       3: rect((0.69, 1.16), (4.14, 1.45), fill: rgb("#ebebeb"), stroke: (thickness: 0.4pt, miter-limit: 10))
+       4: rect((1.38, 0.58), (4.83, 0.87), fill: rgb("#ebebeb"), stroke: (thickness: 0.4pt, miter-limit: 10))
+       5: rect((2.07, 0), (5.52, 0.29), fill: rgb("#ebebeb"), stroke: (thickness: 0.4pt, miter-limit: 10))
+      12: line((7.762, -0.58), (8.28, -0.58), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+  -- source picture 0 --
+     \begin{tikzpicture}[x=0.69cm,y=0.58cm,>=Stealth]   \draw[fill=black!8] (1,2) rectangle (6,2.5)
+     \draw[fill=black!8] (2,1) rectangle (7,1.5)
+     \draw[fill=black!8] (3,0) rectangle (8,0.5)
+     \node[anchor=east] at (0.75,2.25) {seed 1}
+     \node[anchor=east] at (0.75,1.25) {seed 2}
+     \node[anchor=east] at (0.75,0.25) {seed 3}
+     \draw[densely dashed] (1,-0.2) -- (1,-1.5)
+     \draw[densely dashed] (8,-0.2) -- (8,-1.5)
+     \draw[very thick] (1,-1) -- (11,-1)
+     \draw[->] (11.25,-1) -- (12,-1)
+     \node[above] at (4.5,-1) {seed union agrees with $\pi$}
+     \node[below] at (9.5,-1) {continuation}
+     \draw (10.88,-1.13) -- (11.12,-0.87)
+     \draw (10.88,-0.87) -- (11.12,-1.13)
+     \node[above] at (11,-0.75) {$q$}
+     \node[below] at (11.1,-1.55) {first mismatch}
+     \end{tikzpicture}
+
+=== The-crossing-number-of-complete-bipartite-graphs-S#0  worst 3.90  (1 rows)
+  3.90  dx 9.98 dy 6.29  '−1'                   x 'Transversechords:'     apart-in-x
+        box1=(47.9,85.6,62.0,96.6)  w14.1 h11.0
+        box2=(2.6,91.1,87.3,103.6)  w84.7 h12.5
+  -- content() calls carrying those texts --
+      14: content((0, -2.016), [Transverse chords:#linebreak()signed intersection $+1$.])
+  -- source picture 0 --
+     \begin{tikzpicture}[scale=1.05,>=Stealth]   \draw[gray!65] (0,0) circle (1.15)
+     \draw[->,very thick] (-1.15,0)--(1.15,0)
+     \draw[->,very thick,blue!65!black] (0,-1.15)--(0,1.15)
+     \foreach \x/\y in {-1.15/0,1.15/0,0/-1.15,0/1.15}     \fill (\x,\y) circle (1.5pt)
+     \node[left] at (-1.15,0) {$-1$}
+     \node[right] at (1.15,0) {$+1$}
+     \node[below] at (0,-1.15) {$-1$}
+     \node[above] at (0,1.15) {$+1$}
+     \node[align=center] at (0,-1.92) {Transverse chords:\\signed intersection $+1$.}
+     \end{tikzpicture}
+
+=== Polynomial-vacuum-representations-and-bridge-mass-#2  worst 3.43  (1 rows)
+  3.43  dx13.01 dy 7.70  'Conesphere'           x 'pΛ'                    apart-in-x
+        box1=(46.3,58.0,105.0,70.5)  w58.8 h12.5
+        box2=(83.2,52.1,94.1,61.1)  w10.9 h9.0
+  -- content() calls carrying those texts --
+       4: content((-3.35, 0), [#box(width: 5.635cm, inset: 0.3333em, [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds"); #align(center)[Cone sphere $O$#linebre
+  -- source picture 2 --
+     \begin{tikzpicture}[>=stealth, every node/.style={align=center}] \node[text width=5.4cm] (physical) at (-3.35,2.3)   {Physical plane \(\mathbb C\)\\terminal radius \(|z|\
+     \node[text width=5.4cm] (cone) at (-3.35,0)   {Cone sphere \(O\)\\\(A,B,C\): orders \(6,3,2\)\\\(q\): regular mark}
+     \node[text width=5.4cm] (torus) at (3.35,2.3)   {Auxiliary torus \(\mathcal T\)\\doubled arc has homology \(u\)}
+     \node[text width=5.4cm] (pillow) at (3.35,0)   {Pillowcase \(\mathcal P\)\\four branch corners\\labelled \(A,B,C,q\)}
+     \draw[->] (physical) -- node[right, font=\small]   {quotient by\\\(p\Lambda\rtimes\langle\omega\rangle\)} (cone)
+     \draw[->] (torus) -- node[right, font=\small]   {double cover\\branched at four corners} (pillow)
+     \draw[<->] (cone.east) -- (pillow.west)
+     \node[font=\small] at (0,-1.1)   {Topological identification of marked spheres only}
+     \end{tikzpicture}
+
+=== Cylinder-amplitudes-and-logarithmic-bridge-length-#0  worst 3.32  (1 rows)
+  3.32  dx22.50 dy 5.90  'y'                    x 'Firstmeansleft;'       apart-in-x
+        box1=(61.2,148.0,65.6,157.0)  w4.4 h9.0
+        box2=(11.6,153.3,70.1,163.6)  w58.5 h10.3
+  -- content() calls carrying those texts --
+      80: content((1.9, -4.12), [#text(size: 9pt)[$B(y"/"x)$]])
+      85: content((0.85, -3.35), [#text(size: 9pt)[$T$: new first#linebreak()$y$]])
+      88: content((3.05, -4.98), [#text(size: 9pt)[$B$: old second#linebreak()$y$]])
+      93: content((1.9, -5.66), [#text(size: 9pt)[First means left;#linebreak()$s= "old" "right""/""old" "left"$.]])
+  -- source picture 0 --
+     \begin{tikzpicture}[   x=1cm,y=1cm,   font=\small,   finite boundary/.style={draw=black!30,line width=.4pt},   finite arc/.style={draw=black,line width=1.05pt,line cap=ro
+     \node[anchor=east,font=\footnotesize] at (13.4,0)     {Separate drawings are alternative states.}
+     \FiniteSquare{.70}{-1.08}{}   \node[finite label,left]  at (.35,-1.08) {$L$}
+     \node[finite label,below] at (.70,-1.43) {$B$}
+     \node[finite label,right] at (1.05,-1.08) {$R$}
+     \node[finite label,above] at (.70,-.73) {$T$}
+     \node[finite label] at (.70,-1.96) {vacant ($1$)}
+     \node at (3.05,-.43) {$u$}
+     \FiniteSquare{2.50}{-1.08}{     \draw[finite arc] (-.35,0) .. controls (-.13,0) and (0,.13) .. (0,.35);}   \FiniteSquare{3.60}{-1.08}{     \draw[finite arc] (0,-.35) .. c
+     \node at (5.65,-.43) {$U$}
+     \FiniteSquare{5.10}{-1.08}{     \draw[finite arc] (-.35,0) .. controls (-.13,0) and (0,-.13) .. (0,-.35);}   \FiniteSquare{6.20}{-1.08}{     \draw[finite arc] (0,.35) .. 
+     \node at (8.25,-.43) {$v$}
+     \FiniteSquare{7.70}{-1.08}{\draw[finite arc] (-.35,0)--(.35,0);}   \FiniteSquare{8.80}{-1.08}{\draw[finite arc] (0,-.35)--(0,.35);}   \node[finite label] at (8.25,-1.70) 
+     \node at (10.65,-.43) {$w$}
+     \FiniteSquare{10.65}{-1.08}{     \draw[finite arc] (-.35,0) .. controls (-.13,0) and (0,.13) .. (0,.35)
+     \draw[finite arc] (0,-.35) .. controls (0,-.13) and (.13,0) .. (.35,0);}   \node[finite label] at (10.65,-1.70) {$LT,BR$}
+     \node at (12.55,-.43) {$W$}
+     \FiniteSquare{12.55}{-1.08}{     \draw[finite arc] (-.35,0) .. controls (-.13,0) and (0,-.13) .. (0,-.35)
+     \draw[finite arc] (0,.35) .. controls (0,.13) and (.13,0) .. (.35,0);}   \node[finite label] at (12.55,-1.70) {$LB,TR$}
+     \draw[black!20] (0,-2.25)--(13.4,-2.25)
+     \node[finite heading] at (0,-2.62) {(b) The swap $B(s)$}
+     \node[finite heading] at (4.30,-2.62) {(c) Triangle $P$}
+     \node[finite heading] at (10.35,-2.62) {(d) Cap $C$}
+     \draw[finite boundary] (1.90,-3.32)--(2.70,-4.12)--(1.90,-4.92)--(1.10,-4.12)--cycle
+     \node at (1.90,-4.12) {$B(y/x)$}
+     \foreach \p in {(1.50,-3.72),(2.30,-3.72),(1.50,-4.52),(2.30,-4.52)}     \fill[black!45] \p circle (1.2pt)
+     \node[finite label,align=center] at (.85,-3.35) {$T$: new first\\$y$}
+     \node[finite label,align=center] at (3.05,-3.35) {$R$: new second\\$x$}
+     \node[finite label,align=center] at (.85,-4.98) {$L$: old first\\$x$}
+     \node[finite label,align=center] at (3.05,-4.98) {$B$: old second\\$y$}
+     \draw[black!40,line width=.35pt] (1.40,-3.66)--(1.10,-3.50)
+     \draw[black!40,line width=.35pt] (2.40,-3.66)--(2.73,-3.50)
+     \draw[black!40,line width=.35pt] (1.40,-4.58)--(1.10,-4.79)
+     \draw[black!40,line width=.35pt] (2.40,-4.58)--(2.73,-4.79)
+     \node[finite label,align=center] at (1.90,-5.66)     {First means left
+     \\$s=\text{old right}/\text{old left}$.}
+     \draw[black!20] (4.05,-2.88)--(4.05,-5.96)
+     \node[finite label] at (7.13,-3.09) {$m\longmapsto(qm,m/q)$}
+     \FiniteTriangle{4.90}{-4.06}{}   \FiniteTriangle{6.40}{-4.06}{     \draw[finite arc] (0,-.33) .. controls (0,-.14) and (-.09,-.07) .. (-.24,.09);}   \FiniteTriangle{7.90}
+     \node[finite label] at (6.40,-4.73) {$X$}
+
+=== Disk-transfer-representations-and-confined-bridge-#1  worst 3.10  (1 rows)
+  3.10  dx 4.12 dy 8.95  'block'                x '2'                     stacked
+        box1=(204.3,109.8,231.3,122.3)  w27.0 h12.5
+        box2=(219.2,101.6,224.7,112.6)  w5.5 h11.0
+  -- content() calls carrying those texts --
+       5: content((0, 1.732), [#text(fill: rgb("#0000a6"))[block $A$]])
+      10: circle((-1.018, 0.588), radius: 0.04586, fill: black, stroke: none)
+      12: circle((7.201e-17, 1.176), radius: 0.04586, fill: black, stroke: none)
+      14: circle((1.018, 0.588), radius: 0.04586, fill: black, stroke: none)
+      16: circle((1.018, -0.588), radius: 0.04586, fill: black, stroke: none)
+      18: circle((7.201e-17, -1.176), radius: 0.04586, fill: black, stroke: none)
+      20: circle((-1.018, -0.588), radius: 0.04586, fill: black, stroke: none)
+      30: content((5.46, -1.732), [#text(fill: rgb("#0000a6"))[block $A$]])
+      35: circle((4.442, -0.588), radius: 0.04586, fill: black, stroke: none)
+      37: circle((5.46, -1.176), radius: 0.04586, fill: black, stroke: none)
+      39: circle((6.478, -0.588), radius: 0.04586, fill: black, stroke: none)
+      41: circle((6.478, 0.588), radius: 0.04586, fill: black, stroke: none)
+      43: circle((5.46, 1.176), radius: 0.04586, fill: black, stroke: none)
+      45: circle((4.442, 0.588), radius: 0.04586, fill: black, stroke: none)
+       4: arc((-1.176, 1.44e-16), start: 180deg, stop: 0deg, radius: 1.176, stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, cap: "round", join: "round"))
+       6: content((0, 2.184), [Upper disk])
+       7: bezier((-1.018, 0.588), (7.201e-17, 1.176), (-0.4387, 0.5228), (-0.2334, 0.6413), stroke: (paint: rgb("#404040"), thickness: 0.8pt, cap: "round", join: "round"))
+       8: bezier((1.018, 0.588), (1.018, -0.588), (0.6721, 0.1185), (0.6721, -0.1185), stroke: (paint: rgb("#404040"), thickness: 0.8pt, cap: "round", join: "round"))
+       9: bezier((7.201e-17, -1.176), (-1.018, -0.588), (-0.2334, -0.6413), (-0.4387, -0.5228), stroke: (paint: rgb("#404040"), thickness: 0.8pt, cap: "round", join: "round"))
+      11: content((-1.218, 0.7035), [$1$])
+      13: content((8.615e-17, 1.407), [$2$])
+      15: content((1.218, 0.7035), [$3$])
+      17: content((1.218, -0.7035), [$4$])
+      21: content((-1.218, -0.7035), [$6$])
+      23: content((0, -0.2625), [#text(fill: rgb("#808080"))[end]])
+      24: circle((-1.176, 0), radius: 0.0635, fill: rgb("#b20000"), stroke: none)
+      26: circle((1.176, 0), radius: 0.0635, fill: rgb("#b20000"), stroke: none)
+      29: arc((4.284, -1.44e-16), start: -180deg, stop: 0deg, radius: 1.176, stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, cap: "round", join: "round"))
+      31: content((5.46, 2.184), [Lower disk])
+      32: bezier((4.442, -0.588), (4.442, 0.588), (4.788, -0.1185), (4.788, 0.1185), stroke: (paint: rgb("#404040"), thickness: 0.8pt, cap: "round", join: "round"))
+      33: bezier((5.46, -1.176), (6.478, -0.588), (5.693, -0.6413), (5.899, -0.5228), stroke: (paint: rgb("#404040"), thickness: 0.8pt, cap: "round", join: "round"))
+      34: bezier((6.478, 0.588), (5.46, 1.176), (5.899, 0.5228), (5.693, 0.6413), stroke: (paint: rgb("#404040"), thickness: 0.8pt, cap: "round", join: "round"))
+      36: content((4.242, -0.7035), [$1$])
+      38: content((5.46, -1.407), [$2$])
+      46: content((4.242, 0.7035), [$6$])
+      48: content((5.46, -0.2625), [#text(fill: rgb("#808080"))[end]])
+      49: circle((4.284, 0), radius: 0.0635, fill: rgb("#b20000"), stroke: none)
+      51: circle((6.636, 0), radius: 0.0635, fill: rgb("#b20000"), stroke: none)
+      53: content((2.73, -2.247), [Identify equally numbered ports and the two copies of the seam.])
+  -- source picture 1 --
+     \begin{tikzpicture}[scale=1.05,line cap=round,line join=round,  arcpath/.style={thick,black!75},seamblock/.style={very thick,blue!65!black}] \begin{scope} \draw[fill=gray
+     \draw[seamblock] (180:1.12) arc (180:0:1.12)
+     \node[blue!65!black] at (0,1.65) {block $A$}
+     \node at (0,2.08) {Upper disk}
+     \draw[arcpath] (150:1.12) .. controls (130:.65) and (110:.65) .. (90:1.12)
+     \draw[arcpath] (30:1.12) .. controls (10:.65) and (-10:.65) .. (-30:1.12)
+     \draw[arcpath] (-90:1.12) .. controls (-110:.65) and (-130:.65) .. (-150:1.12)
+     \foreach \a/\k in {150/1,90/2,30/3,-30/4,-90/5,-150/6}{  \fill (\a:1.12) circle (1.3pt)
+     \node at (\a:1.34) {$\k$};} \draw[gray] (0,0) circle (2.2pt)
+     \node[gray] at (0,-.25) {end}
+     \fill[red!70!black] (-1.12,0) circle (1.8pt) node[left=4pt] {$f$}
+     \fill[red!70!black] (1.12,0) circle (1.8pt) node[right=4pt] {$f'$}
+     \end{scope} \begin{scope}[xshift=5.2cm] \draw[fill=gray!4] (0,0) circle (1.12)
+     \draw[seamblock] (-180:1.12) arc (-180:0:1.12)
+     \node[blue!65!black] at (0,-1.65) {block $A$}
+     \node at (0,2.08) {Lower disk}
+     \draw[arcpath] (-150:1.12) .. controls (-170:.65) and (170:.65) .. (150:1.12)
+     \draw[arcpath] (-90:1.12) .. controls (-70:.65) and (-50:.65) .. (-30:1.12)
+     \draw[arcpath] (30:1.12) .. controls (50:.65) and (70:.65) .. (90:1.12)
+     \foreach \a/\k in {-150/1,-90/2,-30/3,30/4,90/5,150/6}{  \fill (\a:1.12) circle (1.3pt)
+     \node at (\a:1.34) {$\k$};} \draw[gray] (0,0) circle (2.2pt)
+     \node[gray] at (0,-.25) {end}
+     \fill[red!70!black] (-1.12,0) circle (1.8pt) node[left=4pt] {$f$}
+     \fill[red!70!black] (1.12,0) circle (1.8pt) node[right=4pt] {$f'$}
+     \end{scope} \node at (2.6,-2.14) {Identify equally numbered ports and the two copies of the seam.}
+     \end{tikzpicture}
+
+shape tally:
+  apart-in-x      6 rows /  5 canvases
+  same-baseline   1 rows /  1 canvases
+  stacked         1 rows /  1 canvases

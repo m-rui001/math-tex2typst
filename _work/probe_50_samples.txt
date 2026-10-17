@@ -1,0 +1,80 @@
+canvases walked 1058, built 928
+canvases that change: 228   papers: 165
+decisions that moved, by kind and site:
+   stroke-width@point     nodes  767  canvases   89  papers   66
+   stroke-width@frame     nodes  283  canvases   64  papers   54
+   ink@bare               nodes  229  canvases   85  papers   61
+   fill@point             nodes   88  canvases   14  papers   11
+   ink@box                nodes   32  canvases   17  papers   15
+   stroke-paint@box       nodes   16  canvases    7  papers    7
+   ink@frame              nodes    3  canvases    1  papers    1
+wrote E:\math\_work\regen50.txt (165 papers)
+the tally's upper bound was 390 canvases / 282 papers
+
+== stroke-width@point
+   A-counterexample-to-Hadwigers-conjecture#0  {'font': '\\small', 'circle': True, 'fill': 'black', 'inner sep': '2pt', 'label': ['left:$A_1$']}
+      stroke: [] -> ['stroke: none']
+   A-counterexample-to-Hadwigers-conjecture#0  {'font': '\\small', 'circle': True, 'fill': 'black', 'inner sep': '2pt', 'label': ['left:$A_2$']}
+      stroke: [] -> ['stroke: none']
+   A-counterexample-to-Hadwigers-conjecture#0  {'font': '\\small', 'circle': True, 'fill': 'black', 'inner sep': '2pt', 'label': ['right:$B_1$']}
+      stroke: [] -> ['stroke: none']
+   A-counterexample-to-Hadwigers-conjecture#0  {'font': '\\small', 'circle': True, 'fill': 'black', 'inner sep': '2pt', 'label': ['right:$B_2$']}
+      stroke: [] -> ['stroke: none']
+
+== stroke-width@frame
+   A-boundary-field-gap-for-the-spin-one-He#0  {'font': '\\small', 'site': True, 'draw': True, 'minimum width': '9mm', 'minimum height': '8mm'}
+      stroke: [] -> ['stroke: (thickness: 0.4pt)']
+   A-boundary-field-gap-for-the-spin-one-He#0  {'font': '\\small', 'site': True, 'draw': True, 'minimum width': '9mm', 'minimum height': '8mm'}
+      stroke: [] -> ['stroke: (thickness: 0.4pt)']
+   A-boundary-field-gap-for-the-spin-one-He#0  {'font': '\\small', 'site': True, 'draw': True, 'minimum width': '9mm', 'minimum height': '8mm'}
+      stroke: [] -> ['stroke: (thickness: 0.4pt)']
+   A-boundary-field-gap-for-the-spin-one-He#0  {'font': '\\small', 'site': True, 'draw': True, 'minimum width': '9mm', 'minimum height': '8mm'}
+      stroke: [] -> ['stroke: (thickness: 0.4pt)']
+
+== ink@bare
+   A-hyperbolic-group-with-no-geometric-CAT#1  {'font': '\\scriptsize', 'anchor': 'west', 'text': 'black!65'}
+      ink: None -> rgb("#595959")
+   A-linear-list-coloring-bound-in-terms-of#0  {'font': '\\footnotesize', 'above': True, 'text': 'blue!70!black'}
+      ink: None -> rgb("#0000b2")
+   A-linear-list-coloring-bound-in-terms-of#0  {'font': '\\footnotesize', 'above': True, 'text': 'orange!85!black'}
+      ink: None -> rgb("#d96d00")
+   A-Modulus-Proof-of-Cannons-Conjecture-Se#0  {'font': '\\small', 'anchor': 'north west', 'text': 'black!65'}
+      ink: None -> rgb("#595959")
+
+== fill@point
+   A-finite-entropy-system-without-a-smooth#0  {'point': True, 'label': ['above left:{$x$}'], 'circle': True, 'fill': True, 'inner sep': '1.6pt'}
+      fill: None -> black
+   A-finite-entropy-system-without-a-smooth#0  {'point': True, 'label': ['below right:{$y$}'], 'circle': True, 'fill': True, 'inner sep': '1.6pt'}
+      fill: None -> black
+   A-finite-entropy-system-without-a-smooth#0  {'point': True, 'label': ['above right:{$z_0$}'], 'circle': True, 'fill': True, 'inner sep': '1.6pt'}
+      fill: None -> black
+   A-finite-entropy-system-without-a-smooth#0  {'point': True, 'label': ['below left:{$w_0$}'], 'circle': True, 'fill': True, 'inner sep': '1.6pt'}
+      fill: None -> black
+
+== ink@box
+   A-hyperbolic-group-with-no-geometric-CAT#0  {'fano label': True, 'anchor': 'west', 'text': 'orange!75!black', 'font': '\\small', 'fill': 'white', 'inner sep': '1.5pt'}
+      ink: None -> rgb("#bf6000")
+   A-hyperbolic-group-with-no-geometric-CAT#1  {'fan label': True, 'text': 'orange!75!black', 'anchor': 'east', 'font': '\\small', 'fill': 'white', 'inner sep': '1.5pt'}
+      ink: None -> rgb("#bf6000")
+   A-projective-fourfold-with-large-fundame#1  {'font': '\\small', 'arrblue': True, 'fill': 'white', 'inner sep': '1pt'}
+      ink: None -> rgb("#1f5791")
+   A-projective-fourfold-with-large-fundame#1  {'font': '\\small', 'arrred': True, 'fill': 'white', 'inner sep': '1pt'}
+      ink: None -> rgb("#a53a25")
+
+== stroke-paint@box
+   A-projective-fourfold-with-large-fundame#1  {'font': '\\small', 'arrblue': True, 'fill': 'white', 'inner sep': '1pt'}
+      stroke: ['stroke: (paint: rgb("#1f5791"))'] -> ['stroke: none']
+   A-projective-fourfold-with-large-fundame#1  {'font': '\\small', 'arrred': True, 'fill': 'white', 'inner sep': '1pt'}
+      stroke: ['stroke: (paint: rgb("#a53a25"))'] -> ['stroke: none']
+   Essential-Singularity-of-the-Correlation#0  {'font': '\\small', 'blue!65!black': True, 'fill': 'white', 'inner sep': '1pt'}
+      stroke: ['stroke: (paint: rgb("#0000a6"))'] -> ['stroke: none']
+   Essential-Singularity-of-the-Correlation#0  {'font': '\\small', 'orange!75!black': True, 'fill': 'white', 'inner sep': '1pt'}
+      stroke: ['stroke: (paint: rgb("#bf6000"))'] -> ['stroke: none']
+
+== ink@frame
+   Talagrands-discrete-convexity-conjecture#0  {'present': True, 'bit': True, 'fill': 'black', 'text': 'white', 'circle': True, 'draw': True, 'minimum size': '4mm', 'inner sep': '0pt'}
+      ink: None -> rgb("#ffffff")
+   Talagrands-discrete-convexity-conjecture#0  {'present': True, 'bit': True, 'fill': 'black', 'text': 'white', 'circle': True, 'draw': True, 'minimum size': '4mm', 'inner sep': '0pt'}
+      ink: None -> rgb("#ffffff")
+   Talagrands-discrete-convexity-conjecture#0  {'present': True, 'bit': True, 'fill': 'black', 'text': 'white', 'circle': True, 'draw': True, 'minimum size': '4mm', 'inner sep': '0pt'}
+      ink: None -> rgb("#ffffff")

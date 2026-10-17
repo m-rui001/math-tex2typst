@@ -1,0 +1,47 @@
+total rows 4592  ORDER rows 517
+ORDER notes 310
+ORDER kind counts: {'mechanical-target-given': 496, 'mechanical-count-correction': 16, 'mechanical-delete': 5}
+ORDER cat/kind: {'mechanical-target-given': 496, 'mechanical-count-correction': 16, 'mechanical-delete': 5}
+ORDER with fix nonempty: 503
+ORDER without fix: 14
+ORDER fam tokens top: [('macro', 188), ('count', 187), ('btick', 160), ('table', 135), ('banstring', 114), ('typo', 112), ('other', 58), ('anchor', 54), ('ordermove', 50), ('probe', 39), ('english', 32), ('cite', 26)]
+ORDER label top: [('其二', 18), ('其一', 14), ('第一类', 10), ('其三', 8), ('第一', 7), ('第一条', 6), ('第三类', 6), ('其四', 6), ('第四类', 5), ('类别四', 5), ('第二类', 5), ('三', 4), ('第一处', 4), ('其五', 4), ('四', 3), ('五', 3), ('第三条', 3), ('一', 3), ('庚类', 3), ('类别五', 3), ('其六', 3), ('第六类', 3), ('收口之后我又跑了一次全量自检', 2), ('二', 2), ('第二条', 2)]
+ORDER sec_head top: [('## 勘误', 13), ('## 22 勘误', 7), ('## §15 勘误', 7), ('## §16 勘误', 7), ('## §17 勘误', 7), ('## §17 勘误与落盘记录', 6), ('## §14 勘误', 6), ('### 视角差异勘误', 6), ('## 廿一、追加部分的定位与行内勘误', 5), ('## 33. 勘误', 5), ('## §13 勘误', 5), ('## §12 勘误申报（按类别，交本体侧机械清理）', 5), ('## §16 勘误与缺陷申报', 5), ('### 本节自检', 4), ('## 20 勘误', 4), ('## §17 落盘结构申报与追加勘误（本节为物理文末）', 4), ('## §12 勘误与申报', 4), ('## §24 勘误登记（追加式，不回滚任何正文）', 3), ('## 十五、勘误与追加纪律申报', 3), ('## 32 勘误', 3)]
+verified col values: {'': 291, 'no': 208, 'yes': 18}
+stated col values sample: {'': 415, '53': 3, '1': 2, '16': 2, '153': 2, '195': 2, '201;504;560': 2, '90;230': 2, '162': 1, '765': 1}
+cur col values sample: {'': 253, '43': 5, '9': 4, '76': 4, '56': 4, '7': 4, '15': 4, '201': 4, '53': 4, '90': 4}
+evidence nonempty: 125
+verify_note nonempty: 517
+quote empty: 0
+quote len stats: min 32 max 120
+fix len stats: min 3 max 117
+SAMPLE D04-L361-I03 | D04-乘性函数二点关联.md | sec_line=361 | kind=mechanical-target-given | fam=anchor,ordermove,table | stated= | cur= | verified=
+   QUOTE: 落错的块（本节必须申报，我不自行搬动）：第四笔与第五笔追加时我把锚点取在了第 $27$ 节末段与第 $32$ 节末段，两处都不是当时的文件末段，结果第 $31$、第 $32$、第 $33$ 三节整块落在了第 $27$ 节末段与第 $28$ 
+   FIX  : 搬到第 $30$ 节末段与第→第 $30$ 节末段与第 $34$ 节题记之间
+   EVID : 
+   VNOTE: no verbatim signature
+SAMPLE D04-L475-I08 | D04-乘性函数二点关联.md | sec_line=475 | kind=mechanical-target-given | fam=count,table | stated= | cur= | verified=
+   QUOTE: 其一，本节的台账数据行全部落在文件末段，与全文唯一那一份表头之间隔着第 $34$ 节的正文，按连续块计数的读数因此停在原值，行数没有减少、也没有被计入，实质侧的台账只增了 $37$ 行，每行竖线数都过了一遍量尺；要让它进入计数，正解是把第 
+   FIX  : 搬到第 $30$ 节末段与第→第 $30$ 节末段与第 $34$ 节题记之间，那一步归本体侧，我不
+   EVID : 
+   VNOTE: no verbatim signature
+SAMPLE D08-L1126-I01 | D08-Mezard-Parisi公式.md | sec_line=1126 | kind=mechanical-target-given | fam=btick,english,typo | stated= | cur= | verified=
+   QUOTE: **机械缺陷的就位修复清单（越界动作一并申报）。** 本轮落笔时"行内代码的闭合反引号误写成美元定界符"这一类混淆发生了七次：§14 一处、§17 一处、§19 三处、§20 两处，均按规格就地改回正确反引号。其中两处的受影响行还捎带了素材
+   FIX  : 改回正确反引号→正确反引号 / 删掉一个括号内标签形态，§2→一个括号内标签形态，§21 插入装置句删掉一个未译英文量名
+   EVID : 
+   VNOTE: no verbatim signature
+SAMPLE D10-L1062-I02 | D10-自由群因子同构.md | sec_line=1062 | kind=mechanical-target-given | fam=count,banstring | stated= | cur= | verified=
+   QUOTE: 一、长停顿号类别。§24 第七节把它记作旧稿遗留，实测不成立：全文该字符的命中行共七行，全部落在本轮新节，按行号为 743、792、845、883、889、1041、1058，字符总数十三枚，其中 §20 内三行、§18 与 §19 各一行
+   FIX  : 记作旧稿遗留，实测不成立：全→旧稿遗留，实测不成立：全文该字符的命中行共七行，全部落在本轮新节，按
+   EVID : 
+   VNOTE: no verbatim signature
+SAMPLE D100-L1586-I06 | D100-准Riemann假设：Re-s大于八分之七的无零点 | sec_line=1586 | kind=mechanical-target-given | fam=btick,count,banstring,ordermove,typo | stated=162 | cur=297 | verified=no
+   QUOTE: 禁串实测（对全文件跑 `grep -o <串> | wc -l` 与 `grep -c <正则>`；这些串在本段一律只给编号和计数，不复述其字形，理由很实际：把它们抄进自检段落自己就会造成命中）。提示层 5 个短语按验收清单顺序的命中依次是
+   FIX  : 改写为“源头是 tex 本身→“源头是 tex 本身”
+   EVID : 
+   VNOTE: sig=`O(Q^{-33/40})` found at [297, 1551] ; author's line 162 drifted
+SAMPLE D103-L789-I06 | D103-Landau-Siegel零点的均匀排除：加权环面 | sec_line=789 | kind=mechanical-target-given | fam=count,banstring | stated=765 | cur=765 | verified=
+   QUOTE: 禁词与句式的复查结果：规格文风禁令列明的五个禁词，逐个计数检索，结果均为 0；规格禁止的对照句式（前半句否定配同一个转折连接词）按其给定的正则检索，第一次得 1（第 765 行那处涉及"屏障"与"绕过"两个说法的对照），改写为"屏障因此属于
+   FIX  : 改写为"屏障因此属于被绕过的→"屏障因此属于被绕过的那一类，谈不上被突破"后得 0
+   EVID : 
+   VNOTE: no verbatim signature; author's line kept

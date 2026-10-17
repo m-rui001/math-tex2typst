@@ -1,0 +1,7 @@
+NOTE	LINE	OCC	LINE_TEXT
+# post-repair recount: sites=5 notes=4 files=734
+D217	16	1	<!-- 锚点行：本行是本稿末段协议记录起点，后续追加一律锚在文件当前最后一段之后，本行与其下探针行永久保留原位原文 -->
+D30	6	1	素材：`研究笔记\素材\Kähler负pinched三维fold-素材.md`（131,178 字节，末尾 `<!-- 完 -->`）。
+D374	65	1	<!-- D374 write-probe -->
+D374	274	1	五、协议残留：L65 的 `<!-- D374 write-probe -->` 一行是落盘探针协议线，按协议保留、不删除。
+D45	1	1	<!-- 恢复副本：由 transcript agent-ageneral-purpose-43f5727da3aa401d.jsonl 重放 Write/Edit 序列重建（2026-10-08 18:05）。原稿被重复派遣的 agent 用 Write 覆盖丢失。 -->

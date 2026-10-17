@@ -1,0 +1,26 @@
+D587 line 222: 第 4 步（`08-narrow-locking.tex:287` 到 `08-narrow-locking.tex:348`）估递归值代价。积掉未变的第三阶段留下边界差 $U=\Phi(q,X_q^x+\delta Y)+\Phi(q,X_q^x-\delta Y)-2\Phi(q,X_q^x)$（`08-narrow-locking.tex:290` 到 `08-narrow-locking.tex:293`，标签 `eq:narrow-U`），起初视作第二阶段末整个原始高斯前缀的函数，$\mathbb E_0$ 是其基倾斜律期望，断言 $\widetilde\Psi-\Psi_0\le\log\mathbb E_0e^U$（`08-narrow-locking.tex:296` 到 `08-narrow-locking.tex:299`，标签 `eq:narrow-recursive
+  narrow@222 | 第 4 步（`08-narrow-locking.tex:287` 到 `08-narrow-locking.tex:348`）估递归值代价。积掉未变的第三阶段留下边界差 $U=\Phi(q,X_q^x+\delta Y)+\Phi(q,X_q^x-\delta Y)-2\Phi(q,X_q^x)$（`08-narrow-locking.tex:290` 到 `08-narrow-locking.
+  narrow@485 | - 第 222 行（第 17 节）：位置引用 `08-n-locking.tex:331` 漏了窄环文件名中的中间段，正确形式是 `08-narrow-locking.tex:331`，同一行后半给出的 `08-narrow-locking.tex:336` 是对的。
+
+D95 header line4: 本仓库路径 `E:\math\preprints\Replacing-Gaussian-observations-in-memory-constrained-inference-September-27-2026\`。
+Traceback (most recent call last):
+  File "<stdin>", line 27, in <module>
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\re\__init__.py", line 177, in search
+    return _compile(pattern, flags).search(string)
+           ~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\re\__init__.py", line 350, in _compile
+    p = _compiler.compile(pattern, flags)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\re\_compiler.py", line 748, in compile
+    p = _parser.parse(p, flags)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\re\_parser.py", line 980, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\re\_parser.py", line 459, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+                ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       not nested and not items))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\re\_parser.py", line 543, in _parse
+    code = _escape(source, this, state)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\re\_parser.py", line 442, in _escape
+    raise source.error("bad escape %s" % escape, len(escape))
+re.PatternError: bad escape \m at position 2

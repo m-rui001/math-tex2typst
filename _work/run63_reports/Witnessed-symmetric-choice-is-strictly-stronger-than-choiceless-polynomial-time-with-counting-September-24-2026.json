@@ -1,0 +1,30 @@
+{
+  "paper": "Witnessed-symmetric-choice-is-strictly-stronger-than-choiceless-polynomial-time-with-counting-September-24-2026",
+  "ok": true,
+  "typ_lines": 1266,
+  "included_pdf_pages": 0,
+  "formulas": 882,
+  "math_failed": 0,
+  "labels": 132,
+  "equations": 1,
+  "theorems": 3,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "882",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n     ┌─ \\\\?\\E:\\math\\typst\\Witnessed-symmetric-choice-is-strictly-stronger-than-choiceless-polynomial-time-with-counting-September-24-2026\\main.typ:1165:11\n     │\n1165 │ $ D tack.r.double hat(psi)_n quad arrow.l.r.double quad psi upright(\" evaluates to true on \") A . $\n     │            ^^^^^^\n\nwarning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n     ┌─ \\\\?\\E:\\math\\typst\\Witnessed-symmetric-choice-is-strictly-stronger-than-choiceless-polynomial-time-with-counting-September-24-2026\\main.typ:1173:13\n     │\n1173 │   $ D tack.r.double G_t \\( macron(a) \\, v \\) & quad arrow.l.r.double quad v = \"val\"_A \\( t \\, macron(a) \\) #h(2em) upright(\"for every \") v in D \\,\\\n     │              ^^^^^^\n\nwarning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n     ┌─ \\\\?\\E:\\math\\typst\\Witnessed-symmetric-choice-is-strictly-stronger-than-choiceless-polynomial-time-with-counting-September-24-2026\\main.typ:1174:9\n     │\n1174 │ D tack.r.double F_theta \\( macron(a) \\) & quad arrow.l.r.double quad theta upright(\" is true at \") macron(a) \\, quad \"(9.1)\" $ <eval:graph-invariant>\n     │          ^^^^^^\n\nwarning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n     ┌─ \\\\?\\E:\\math\\typst\\Witnessed-symmetric-choice-is-strictly-stronger-than-choiceless-polynomial-time-with-counting-September-24-2026\\main.typ:1238:17\n     │\n1238 │ $ A_(b^0) tack.r.double psi quad arrow.l.r.double quad A_(b^1) tack.r.double psi . $\n     │                  ^^^^^^\n\nwarning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n     ┌─ \\\\?\\E:\\math\\typst\\Witnessed-symmetric-choice-is-strictly-stronger-than-choiceless-polynomial-time-with-counting-September-24-2026\\main.typ:1238:70\n     │\n1238 │ $ A_(b^0) tack.r.double psi quad arrow.l.r.double quad A_(b^1) tack.r.double psi . $\n     │                                                                       ^^^^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 5,
+  "source": "E:\\math\\_work\\flat\\Witnessed-symmetric-choice-is-strictly-stronger-than-choiceless-polynomial-time-with-counting-September-24-2026.tex"
+}

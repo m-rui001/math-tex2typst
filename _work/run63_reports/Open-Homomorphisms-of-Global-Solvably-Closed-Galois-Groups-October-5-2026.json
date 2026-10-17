@@ -1,0 +1,30 @@
+{
+  "paper": "Open-Homomorphisms-of-Global-Solvably-Closed-Galois-Groups-October-5-2026",
+  "ok": true,
+  "typ_lines": 633,
+  "included_pdf_pages": 0,
+  "formulas": 605,
+  "math_failed": 0,
+  "labels": 67,
+  "equations": 5,
+  "theorems": 2,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "605",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Open-Homomorphisms-of-Global-Solvably-Closed-Galois-Groups-October-5-2026\\main.typ:287:37\n    │\n287 │ Choose an open normal subgroup $U lt.tri.eq cal(G)$ contained in $G_F$, and put\n    │                                      ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Open-Homomorphisms-of-Global-Solvably-Closed-Galois-Groups-October-5-2026\\main.typ:365:140\n    │\n365 │   Choose $R$ by Lemma 12 and choose any lift $gamma$ of $gamma_0$. Put $C = chevron.l gamma chevron.r$. Take an open normal subgroup $U' lt.tri.eq cal(G)$ contained in $U ∩ beta^(- 1) \\( P_L \\)$; for example, take the core of this open subgroup in $cal(G)$. Let $F' \\/ bb(Q)$ be the finite Galois extension with $G_(F') = U'$. The map\n    │                                                                                                                                             ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 2,
+  "source": "E:\\math\\_work\\flat\\Open-Homomorphisms-of-Global-Solvably-Closed-Galois-Groups-October-5-2026.tex"
+}

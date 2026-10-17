@@ -1,0 +1,57 @@
+== run77 23:29 ==
+Ran 29 tests in 4.031s
+
+OK
+rows: 724
+  cetz_converted            1002 over 559 papers
+  cetz_refused                27 over  26 papers
+  cetz_split                   9 over   7 papers
+  figure_content_unhandled     0 over   0 papers
+  empty figures               13 over   9 papers
+  quoted pictures             27  (refused pictures shown as source)
+
+most refused in one paper:
+   1  Universal-Tensor-Squares-for-Symmetric-Groups-September-24-2026
+   1  Translative-covering-densities-of-order-n-log-n-September-23-202
+   1  The-maximum-number-of-mutually-unbiased-bases-in-dimension-six-S
+   1  The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-Septe
+   1  The-crossing-number-of-complete-graphs-September-23-2026
+   1  The-Deligne-Drinfeld-conjecture-September-23-2026
+   1  The-Critical-Spin-Field-of-the-Planar-XY-Model-October-5-2026
+   1  Strong-diffeomorphic-approximation-in-three-dimensions-for-p-gt-
+   1  Snaky-in-21-Maker-moves-September-25-2026
+   1  Polynomial-PEPS-approximation-of-gapped-square-grid-ground-state
+files with residue: 0 ; occurrences: 0
+quoted LaTeX on the page: 27 blocks over 26 papers
+zones: {}
+papers scanned: 724 ; compiled: 724
+dangling_ref: 17 occurrences over 12 papers
+       4  Uniform-marked-polygon-estimates-and-sharp-f  fig:strip-double-row
+       2  The-Kervaire-Invariant-Problem-at-the-Prime-  finite:enclosures
+       2  Maximal-Multipoint-Seshadri-Constants-in-Hig  fig:node-compression
+       1  The-dyadic-case-of-the-Erdos-similarity-conj  fig:routing
+       1  The-Strong-Hyperkahler-SYZ-Conjecture-Septem  fig:rotation
+       1  Positive-scalar-curvature-and-uniform-codime  fig:topology-compression
+       1  Pointwise-Multiple-Ergodic-Averages-for-Mixi  fig:square
+       1  Maximal-Seshadri-Constants-on-Arbitrary-Pola  fig:compression
+       1  Finite-angular-cylinder-covers-below-the-hal  fig:construction
+       1  Exact-asymptotic-moduli-in-a-Daugavet-subspa  fig:moduli
+       1  A-boundary-field-gap-for-the-spin-one-Heisen  apptr:coupling-table
+       1  A-Smooth-Metric-with-No-Local-Isometric-Imme  fig:pulse
+missing_bibkey: 1 occurrences over 1 papers
+       1  Exact-Birch-Swinnerton-Dyer-Formula-from-Low  Dv
+
+'[??]' / '??' in the generated Typst: 343 files, 2856 marks
+      64  Tangent-flow-uniqueness-2026-09-24
+      60  Giglis-distributional-curvature-characteriza
+      60  The-canonical-massive-continuum-limit-of-the
+      58  The-Penrose-inequality-for-maximal-asymptoti
+      56  The-nonmaximal-anti-de-Sitter-Penrose-Inequa
+      52  Cutoff-throughout-the-high-temperature-Sherr
+      46  Spacetime-Penrose-inequalities-enclosing-are
+      40  The-mean-analytic-rank-of-quadratic-twists-o
+      34  Hellinger-contraction-with-arbitrary-Boolean
+      34  Localization-costs-and-information-growth-fo
+
+macros skipped: {'\\defdef': 587, '\\renewcommandrenewcommand': 63, '\\letlet': 41, '\\newcommandnewcommand': 36, '\\renewcommand\\P': 21, '\\renewcommand\\bibsection': 13}
+== done ==

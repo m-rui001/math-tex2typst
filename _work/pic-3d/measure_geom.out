@@ -1,0 +1,53 @@
+== asharp (origin shift 2.7317, -2.6905 cm)
+   black    measured=(  0.0000,  0.0000) cetz=(  0.0000,  0.0000) err=0.0000 cm
+   red      measured=(  1.1875,  1.4375) cetz=(  1.1875,  1.4375) err=0.0000 cm
+   green    measured=(  2.4813,  2.4438) cetz=(  2.4813,  2.4438) err=0.0001 cm
+   blue     measured=( -1.0188,  2.4438) cetz=( -1.0187,  2.4438) err=0.0001 cm
+   cyan     measured=( -1.6157,  1.5907) cetz=( -1.6156,  1.5906) err=0.0000 cm
+   magenta  measured=(  0.5625,  2.3126) cetz=(  0.5625,  2.3125) err=0.0001 cm
+   olive    measured=( -2.2619,  2.2269) cetz=( -2.2619,  2.2269) err=0.0001 cm
+   orange   measured=(  2.3126,  0.7813) cetz=(  2.3125,  0.7812) err=0.0001 cm
+   violet   measured=(  0.0000,  1.8751) cetz=(  0.0000,  1.8750) err=0.0001 cm
+   teal     measured=( -2.6658,  2.6246) cetz=( -2.6658,  2.6245) err=0.0001 cm
+   worst deviation 0.0001 cm
+== critical (origin shift 3.0028, -1.2327 cm)
+   black    measured=(  0.0000,  0.0000) cetz=(  0.0000,  0.0000) err=0.0000 cm
+   red      measured=(  2.2001, -1.1800) cetz=(  2.2000, -1.1800) err=0.0001 cm
+   green    measured=(  0.0000, -2.2801) cetz=(  0.0000, -2.2800) err=0.0001 cm
+   blue     measured=(  0.0000,  0.0800) cetz=(  0.0000,  0.0800) err=0.0000 cm
+   cyan     measured=(  2.2001,  1.1800) cetz=(  2.2000,  1.1800) err=0.0001 cm
+   magenta  measured=( -2.2001, -1.1800) cetz=( -2.2000, -1.1800) err=0.0001 cm
+   olive    measured=(  0.5720, -0.1532) cetz=(  0.5720, -0.1532) err=0.0000 cm
+   orange   measured=(  1.1000, -1.7300) cetz=(  1.1000, -1.7300) err=0.0000 cm
+   teal     measured=(  2.3801,  0.0000) cetz=(  2.3800,  0.0000) err=0.0001 cm
+   pink     measured=( -2.9501, -1.6301) cetz=( -2.9500, -1.6300) err=0.0001 cm
+   brown    measured=( -2.4001, -1.9051) cetz=( -2.4000, -1.9050) err=0.0001 cm
+   gray     measured=( -2.9501, -0.9900) cetz=( -2.9500, -0.9900) err=0.0001 cm
+   lime     measured=(  0.0000,  1.1800) cetz=(  0.0000,  1.1800) err=0.0000 cm
+   worst deviation 0.0001 cm
+== diffeo (origin shift 0.0527, -3.9188 cm)
+   black    measured=(  0.0000,  0.0000) cetz=(  0.0000,  0.0000) err=0.0000 cm
+   red      measured=(  7.1002,  0.3500) cetz=(  7.1000,  0.3500) err=0.0002 cm
+   green    measured=(  9.7003,  0.3500) cetz=(  9.7000,  0.3500) err=0.0003 cm
+   blue     measured=( 10.2883,  0.8540) cetz=( 10.2880,  0.8540) err=0.0003 cm
+   cyan     measured=(  7.6882,  0.8540) cetz=(  7.6880,  0.8540) err=0.0002 cm
+   magenta  measured=(  8.6943,  3.8661) cetz=(  8.6940,  3.8660) err=0.0003 cm
+   olive    measured=( 10.4443,  1.6860) cetz=( 10.4440,  1.6860) err=0.0003 cm
+   orange   measured=(  6.9052,  1.2716) cetz=(  6.9050,  1.2716) err=0.0002 cm
+   teal     measured=(  9.4743,  2.7781) cetz=(  9.4740,  2.7780) err=0.0003 cm
+   pink     measured=(  8.3755,  2.7277) cetz=(  8.3752,  2.7276) err=0.0003 cm
+   worst deviation 0.0003 cm
+== plainz (origin shift 0.8227, -1.0527 cm)
+   black    measured=(  0.0000,  0.0000) cetz=(  0.0000,  0.0000) err=0.0000 cm
+   red      measured=(  1.0000,  0.0000) cetz=(  1.0000,  0.0000) err=0.0000 cm
+   green    measured=(  0.0000,  1.0000) cetz=(  0.0000,  1.0000) err=0.0000 cm
+   blue     measured=( -0.3850, -0.3850) cetz=( -0.3850, -0.3850) err=0.0000 cm
+   cyan     measured=( -0.7700, -0.7700) cetz=( -0.7700, -0.7700) err=0.0000 cm
+   worst deviation 0.0000 cm
+== plainz_scale2 (origin shift 1.6455, -2.1054 cm)
+   black    measured=(  0.0000,  0.0000) cetz=(  0.0000,  0.0000) err=0.0000 cm
+   red      measured=(  2.0001,  0.0000) cetz=(  2.0000,  0.0000) err=0.0001 cm
+   green    measured=(  0.0000,  2.0001) cetz=(  0.0000,  2.0000) err=0.0001 cm
+   blue     measured=( -0.7700, -0.7700) cetz=( -0.7700, -0.7700) err=0.0000 cm
+   cyan     measured=( -1.5400, -1.5400) cetz=( -1.5400, -1.5400) err=0.0000 cm
+   worst deviation 0.0001 cm

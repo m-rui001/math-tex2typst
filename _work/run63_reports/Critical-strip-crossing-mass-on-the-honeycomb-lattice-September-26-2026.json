@@ -1,0 +1,34 @@
+{
+  "paper": "Critical-strip-crossing-mass-on-the-honeycomb-lattice-September-26-2026",
+  "ok": true,
+  "typ_lines": 809,
+  "included_pdf_pages": 0,
+  "formulas": 666,
+  "math_failed": 0,
+  "labels": 90,
+  "equations": 46,
+  "theorems": 0,
+  "figures": 5,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:minipage": 1,
+    "unhandled_div_class:samepage": 1,
+    "cetz_converted": 4,
+    "cetz_refused": 1
+  },
+  "samples": {
+    "formulas": "666",
+    "cetz_converted": "1",
+    "cetz_refused": "\\begin{tikzpicture}[x=1cm,y=1cm,font=\\small] \\foreach \\j/\\wt in {0/1,1/A,2/A,3/B,4/B,5/U,6/U,7/E,8/F}{ \\begin{scope}[xs"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Critical-strip-crossing-mass-on-the-honeycomb-lattice-September-26-2026.tex"
+}

@@ -1,0 +1,64 @@
+ORDER rows: 517
+drift-buckets[gt20] = 30
+drift-buckets[le20] = 440
+note-loaded = 517
+quote-exact-1 = 470
+quote-exact-multi = 0
+quote-missing = 47
+quote-prefix-16 = 4
+quote-prefix-24 = 13
+quote-prefix-40 = 16
+quote-prefix-60 = 6
+quote-prefix-80 = 1
+quote-sec-line-drift = 470
+quote-sec-line-match = 0
+quote-unmatched-any = 7
+
+=== rows whose quote is NOT found verbatim ===
+D12-L461-I03 | D12-Barnette猜想-三次二部平面图Hamilton圈.md | kind=mechanical-target-given | fam=macro | prefix=(16, [465])
+D162-L475-I04 | D162-Kaplansky直接有限性猜想在特征二的反例：从配对恒等式到终止有限 | kind=mechanical-target-given | fam=anchor,count,ordermove,table | prefix=None
+D166-L820-I02 | D166-二维经典O(n)模型的指数衰减：聚类、旋转与环面尺度反推笔记.md | kind=mechanical-target-given | fam=btick,macro,table,typo | prefix=(40, [828])
+D181-L848-I02 | D181-完备锥上的斜率配平与没有小Cohen-Macaulay模的三维完备局部 | kind=mechanical-target-given | fam=macro | prefix=(24, [852])
+D191-L839-I03 | D191-把生成量与存储量拆开算-最坏情况子集和的低空间算法.md | kind=mechanical-target-given | fam=ordermove,probe | prefix=(40, [848])
+D191-L839-I04 | D191-把生成量与存储量拆开算-最坏情况子集和的低空间算法.md | kind=mechanical-target-given | fam=btick,macro,banstring | prefix=(40, [855])
+D194-L420-I13 | D194-同余格表示问题的否定解答：一条被格形状逼出来的群论路线.md | kind=mechanical-target-given | fam=other | prefix=(60, [441])
+D216-L798-I05 | D216-线性次高斯与维度无关对数Sobolev不等式的反证路线.md | kind=mechanical-target-given | fam=macro | prefix=(60, [811])
+D218-L693-I06 | D218-严格椭圆方向零一律的反向重构笔记.md | kind=mechanical-target-given | fam=other | prefix=None
+D236-L1164-I03 | D236-平面半线的幂次节省.md | kind=mechanical-target-given | fam=macro | prefix=(60, [1171])
+D236-L1164-I04 | D236-平面半线的幂次节省.md | kind=mechanical-target-given | fam=other | prefix=(40, [1174])
+D238-L734-I02 | D238-平方差自由集的固定幂节省.md | kind=mechanical-target-given | fam=macro,typo | prefix=(24, [742])
+D238-L734-I03 | D238-平方差自由集的固定幂节省.md | kind=mechanical-target-given | fam=macro,ordermove,probe | prefix=None
+D250-L690-I03 | D250-典型初态出发的低温SK热浴混合上界重建笔记.md | kind=mechanical-target-given | fam=other | prefix=(40, [697])
+D250-L804-I01 | D250-典型初态出发的低温SK热浴混合上界重建笔记.md | kind=mechanical-target-given | fam=btick,count,table,probe | prefix=(40, [806])
+D264-L932-I01 | D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md | kind=mechanical-target-given | fam=banstring,table,probe | prefix=(24, [934])
+D284-L897-I01 | D284-一个无限有限表示的残余有限二元群.md | kind=mechanical-target-given | fam=macro,typo | prefix=(24, [899])
+D323-L1392-I04 | D323-条件性极小模型：紧Kähler四维流形非消灭的整条反推路线.md | kind=mechanical-target-given | fam=btick,count,typo | prefix=(40, [1407])
+D356-L837-I01 | D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md | kind=mechanical-target-given | fam=cite,anchor,banstring,ordermove,typo | prefix=(24, [839])
+D356-L925-I01 | D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md | kind=mechanical-target-given | fam=btick,macro,banstring,english,table,probe,typo | prefix=(24, [927])
+D356-L982-I01 | D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md | kind=mechanical-target-given | fam=btick,count,banstring,english,ordermove,table,probe | prefix=(40, [984])
+D359-L651-I02 | D359-把单位代价编辑距离压进l1：指数内常数外的匹配夹逼.md | kind=mechanical-target-given | fam=anchor,probe,typo | prefix=(60, [659])
+D360-L912-I10 | D360-电磁尾迹与Kerr-Newman-Penrose不等式反例构造笔记.m | kind=mechanical-target-given | fam=count,banstring | prefix=(24, [946])
+D365-L468-I03 | D365-端点逐点收敛：高维薛定谔方程的等号情形.md | kind=mechanical-delete | fam=macro | prefix=None
+D368-L649-I02 | D368-时空Penrose不等式的等号与刚性.md | kind=mechanical-target-given | fam=btick,cite,banstring,table | prefix=(16, [654])
+D371-L732-I02 | D371-任意阶本原四次环面包线的等分布.md | kind=mechanical-target-given | fam=btick,macro,count | prefix=(60, [737])
+D371-L732-I04 | D371-任意阶本原四次环面包线的等分布.md | kind=mechanical-target-given | fam=btick,macro | prefix=(24, [745])
+D371-L826-I04 | D371-任意阶本原四次环面包线的等分布.md | kind=mechanical-target-given | fam=ordermove,table | prefix=(24, [838])
+D371-L826-I06 | D371-任意阶本原四次环面包线的等分布.md | kind=mechanical-target-given | fam=btick,macro,count,probe | prefix=(24, [850])
+D371-L826-I09 | D371-任意阶本原四次环面包线的等分布.md | kind=mechanical-target-given | fam=btick,count,banstring,ordermove,table | prefix=(24, [872])
+D371-L826-I10 | D371-任意阶本原四次环面包线的等分布.md | kind=mechanical-count-correction | fam=btick,count | prefix=(40, [882])
+D373-L724-I05 | D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md | kind=mechanical-target-given | fam=other | prefix=(40, [745])
+D380-L245-I03 | D380-低Selmer余秩推出精确BSD公式.md | kind=mechanical-target-given | fam=btick,macro,cite,banstring,typo | prefix=(40, [256])
+D384-L610-I05 | D384-二维O4格点模型的精确质量渐近.md | kind=mechanical-target-given | fam=banstring | prefix=(40, [626])
+D398-L726-I09 | D398-有限同余格的刻画与不可判定性.md | kind=mechanical-target-given | fam=other | prefix=(40, [774])
+D424-L851-I01 | D424-中性库原原子的外层电子半径.md | kind=mechanical-target-given | fam=btick,count,table | prefix=(40, [853])
+D452-L209-I07 | D452-每个无理旋转的不变投影反例.md | kind=mechanical-target-given | fam=anchor | prefix=(60, [214])
+D527-L177-I10 | D527-QAOA在热力学先行极限下达到SK基态能量.md | kind=mechanical-target-given | fam=count,english,table,probe | prefix=(16, [197])
+D581-L353-I05 | D581-谱标量曲率与一致乌雷松宽度.md | kind=mechanical-target-given | fam=macro | prefix=(80, [385])
+D65-L708-I02 | D65-渐近中点一致凸与树空间的无界菱形畸变.md | kind=mechanical-target-given | fam=macro,count,table | prefix=None
+D65-L708-I05 | D65-渐近中点一致凸与树空间的无界菱形畸变.md | kind=mechanical-target-given | fam=macro,count,table | prefix=(24, [733])
+D711-L1794-I04 | D711-球形Laughlin能隙一致稳定性的反推.md | kind=mechanical-target-given | fam=btick,count,ordermove,table | prefix=(40, [1811])
+D76-L605-I06 | D76-非平凡Markov型迫使超反身.md | kind=mechanical-target-given | fam=btick,macro,count | prefix=(16, [617])
+D772-L1028-I03 | D772-CM阿贝尔簇的有理Hodge猜想.md | kind=mechanical-target-given | fam=other | prefix=(24, [1037])
+D772-L1028-I04 | D772-CM阿贝尔簇的有理Hodge猜想.md | kind=mechanical-target-given | fam=btick,typo | prefix=(40, [1050])
+D772-L1126-I03 | D772-CM阿贝尔簇的有理Hodge猜想.md | kind=mechanical-target-given | fam=anchor,table | prefix=None
+D776-L624-I02 | D776-时空Penrose不等式与围面积.md | kind=mechanical-target-given | fam=macro,banstring,table,typo | prefix=None

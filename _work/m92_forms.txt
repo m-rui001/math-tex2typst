@@ -1,0 +1,21 @@
+hash-bare              FAILED  ['\\\\?\\C:\\Users\\hp\\AppData\\Local\\Temp\\m92_kvqbifyu\\hash-bare.typ:2:3: error: unknown variable: B']
+hash-string            ok        A#B
+hash-sym               ok        A#B
+hash-esc               ok        A#B
+fused-top              FAILED  ['\\\\?\\C:\\Users\\hp\\AppData\\Local\\Temp\\m92_kvqbifyu\\fused-top.typ:2:1: error: unknown variable: n2']
+fused-space            ok        n2nc
+fused-group            FAILED  ['\\\\?\\C:\\Users\\hp\\AppData\\Local\\Temp\\m92_kvqbifyu\\fused-group.typ:2:4: error: unknown variable: s0']
+fused-group-space      ok        Ws0
+fused-group-string     ok        Ws0
+fused-l1               FAILED  ['\\\\?\\C:\\Users\\hp\\AppData\\Local\\Temp\\m92_kvqbifyu\\fused-l1.typ:2:1: error: unknown variable: l1']
+fused-rA2              FAILED  ['\\\\?\\C:\\Users\\hp\\AppData\\Local\\Temp\\m92_kvqbifyu\\fused-rA2.typ:2:3: error: unknown variable: A2']
+fused-1n0              FAILED  ['\\\\?\\C:\\Users\\hp\\AppData\\Local\\Temp\\m92_kvqbifyu\\fused-1n0.typ:2:3: error: unknown variable: n0x']
+fused-underscore-digits FAILED  ['\\\\?\\C:\\Users\\hp\\AppData\\Local\\Temp\\m92_kvqbifyu\\fused-underscore-digits.typ:2:4: error: unknown variable: ab12']
+star-slash             FAILED  ['\\\\?\\C:\\Users\\hp\\AppData\\Local\\Temp\\m92_kvqbifyu\\star-slash.typ:2:3: error: unexpected end of block comment']
+star-slash-space       ok        L∗ 3
+star-slash-paren       ok        L∗ 3
+star-slash-ast         ok        L∗ 3
+slash-slash            FAILED  ['\\\\?\\C:\\Users\\hp\\AppData\\Local\\Temp\\m92_kvqbifyu\\slash-slash.typ:2:0: error: unclosed delimiter']
+slash-slash-space      FAILED  ['\\\\?\\C:\\Users\\hp\\AppData\\Local\\Temp\\m92_kvqbifyu\\slash-slash-space.typ:2:4: error: expected expression']
+slash-head             FAILED  ['\\\\?\\C:\\Users\\hp\\AppData\\Local\\Temp\\m92_kvqbifyu\\slash-head.typ:2:3: error: unknown variable: og']
+slash-tail             ok        a b

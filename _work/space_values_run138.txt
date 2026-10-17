@@ -1,0 +1,13 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+case                     typst gap pt   pdflatex gap pt
+pandoc \!                -11.000        -1.822           $A\!B$
+tex \! = -0.1667em       -1.834         -1.822           $A\!B$
+no space                 -0.000         0.000            $AB$
+pandoc \;                -0.000         3.033            $A\;B$
+tex \; = 0.2778em        3.056          3.033            $A\;B$
+pandoc \enspace          -0.000         5.455            $A\enspace B$
+tex \enspace = 0.5em     5.500          5.455            $A\enspace B$
+pandoc \, (thin)         1.833          1.822            $A\,B$
+tex \, = 0.1667em        1.834          1.822            $A\,B$
+pandoc \: (med)          2.444          2.422            $A\:B$
+tex \: = 0.2222em        2.444          2.422            $A\:B$

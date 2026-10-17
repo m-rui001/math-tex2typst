@@ -1,0 +1,34 @@
+{
+  "paper": "Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026",
+  "ok": true,
+  "typ_lines": 1194,
+  "included_pdf_pages": 0,
+  "formulas": 945,
+  "math_failed": 0,
+  "labels": 146,
+  "equations": 3,
+  "theorems": 1,
+  "figures": 3,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 3
+  },
+  "samples": {
+    "formulas": "945",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "flafter"
+  ],
+  "macros_skipped": [
+    "\\renewcommand\\bibfont"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026.tex"
+}

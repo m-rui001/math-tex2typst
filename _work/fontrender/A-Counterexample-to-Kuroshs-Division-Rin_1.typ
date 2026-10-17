@@ -1,0 +1,30 @@
+#import "@preview/cetz:0.5.0"
+#let page_rotate = rotate
+#set page(width: 18cm, height: 20cm, margin: 1.5cm)
+#set text(lang: "en", size: 11pt)
+
+#cetz.canvas({
+  import cetz.draw: *
+  content((6, 5.9), [#text(size: 9pt)[One old block $i$, with three repeat positions at $delta =0$]])
+  content((0.4, 4.275), (2.4, 5.125), [#text(size: 9pt)[hub $1$]], frame: "rect", fill: rgb("#ffffff"), stroke: (paint: rgb("#595959")))
+  content((0.4, 1.925), (2.4, 2.775), [#text(size: 9pt)[leaf $(i,1)$]], frame: "rect", fill: rgb("#ffffff"), stroke: (paint: rgb("#595959")))
+  line((1.4, 4.7), (1.4, 2.35), stroke: (paint: rgb("#0000a6"), thickness: 0.85pt), mark: (end: ">"))
+  content((1.4, 3.525), [$U_{i,1}$], anchor: "west")
+  content((5, 4.275), (7, 5.125), [#text(size: 9pt)[hub $2$]], frame: "rect", fill: rgb("#ffffff"), stroke: (paint: rgb("#595959")))
+  content((5, 1.925), (7, 2.775), [#text(size: 9pt)[leaf $(i,2)$]], frame: "rect", fill: rgb("#ffffff"), stroke: (paint: rgb("#595959")))
+  line((6, 4.7), (6, 2.35), stroke: (paint: rgb("#0000a6"), thickness: 0.85pt), mark: (end: ">"))
+  content((6, 3.525), [$U_{i,2}$], anchor: "west")
+  content((9.6, 4.275), (11.6, 5.125), [#text(size: 9pt)[hub $3$]], frame: "rect", fill: rgb("#ffffff"), stroke: (paint: rgb("#595959")))
+  content((9.6, 1.925), (11.6, 2.775), [#text(size: 9pt)[leaf $(i,3)$]], frame: "rect", fill: rgb("#ffffff"), stroke: (paint: rgb("#595959")))
+  line((10.6, 4.7), (10.6, 2.35), stroke: (paint: rgb("#0000a6"), thickness: 0.85pt), mark: (end: ">"))
+  content((10.6, 3.525), [$U_{i,3}$], anchor: "west")
+  content((4.75, -0.425), (7.25, 0.425), [#text(size: 9pt)[common hub $*$]], frame: "rect", fill: rgb("#ffffff"), stroke: (paint: rgb("#595959")))
+  line((6, 0), (1.4, 2.35), stroke: (thickness: 0.85pt), mark: (end: ">"))
+  content((3.47, 1.293), [$U_{i,*}$], anchor: "south")
+  line((6, 0), (6, 2.35), stroke: (thickness: 0.85pt), mark: (end: ">"))
+  content((6, 1.175), [$U_{i,*}$], anchor: "west")
+  line((6, 0), (10.6, 2.35), stroke: (thickness: 0.85pt), mark: (end: ">"))
+  content((8.53, 1.293), [$U_{i,*}$], anchor: "south")
+  content((6, -1.03), [#text(size: 9pt)[The common hub uses the same matrix pair at every repeat position.]])
+  content((6, -1.62), [#text(size: 9pt)[Reverse arrows are zero at the base point and supply derivative directions.]])
+})

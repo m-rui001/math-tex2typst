@@ -1,0 +1,30 @@
+{
+  "paper": "Spectral-scalar-curvature-and-Urysohn-width-in-dimension-three-October-5-2026",
+  "ok": true,
+  "typ_lines": 591,
+  "included_pdf_pages": 0,
+  "formulas": 410,
+  "math_failed": 0,
+  "labels": 84,
+  "equations": 9,
+  "theorems": 0,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "410"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Spectral-scalar-curvature-and-Urysohn-width-in-dimension-three-October-5-2026.tex"
+}

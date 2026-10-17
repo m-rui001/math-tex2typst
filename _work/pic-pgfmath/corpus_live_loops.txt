@@ -1,0 +1,26 @@
+A-CH-Obstruction-to-a-Prescribed-Categoricity-Threshold-September-24-2026#0 2c09b665
+A-Counterexample-to-Kuroshs-Division-Ring-Problem-September-23-2026#2 9fae7464
+A-Fully-Polynomial-Randomized-Approximation-Scheme-for-Perfect-Matchings-in-General-Graphs-September-23-2026#0 2ec6626f
+A-Gepner-stability-condition-on-every-smooth-quintic-threefold-September-24-2026#0 78463d74
+A-finite-entropy-system-without-a-smooth-positive-volume-model-September-25-2026#2 fa55ed73
+A-uniform-Hilbert-transform-estimate-for-Lipschitz-directions-September-25-2026#0 00e9b59a
+Canonical-conformal-limits-of-subcritical-FK-planar-maps-September-24-2026#4 44fe21b4
+Conditional-permutations-in-a-revealed-switching-environment-September-26-2026#1 f9755567
+Continuous-Phase-Foliations-Create-Analytic-Caustic-Collars-September-24-2026#0 076e13f8
+Critical-strip-crossing-mass-on-the-honeycomb-lattice-September-26-2026#0 2f3b216f
+Critical-strip-crossing-mass-on-the-honeycomb-lattice-September-26-2026#1 None
+Finite-Circle-Obstructions-Binary-Codes-and-Histogram-Embeddings-for-Edit-Distance-September-27-2026#0 5bb530af
+Finite-cylinder-approximation-of-ruled-sets-September-27-2026#0 None
+QMA-hardness-of-continuum-Coulomb-energy-with-unit-nuclear-charges-September-24-2026#0 ed3e0ca3
+Quantum-Depletion-and-Momentum-Distribution-in-the-Dilute-Hard-Sphere-Bose-Gas-October-5-2026#0 38b51e0c
+Quantum-Depletion-for-Fixed-Bounded-Repulsive-Potentials-October-5-2026#0 7710cebf
+Radial-transfer-estimates-and-polygon-length-laws-for-honeycomb-walks-September-26-2026#0 999613d0
+Renewal-and-changes-of-law-for-critical-honeycomb-walks-September-26-2026#8 5da98ffe
+Signed-tensor-densities-and-diagram-budgets-for-coordinate-sweeps-September-26-2026#1 4ce95b51
+Subpolynomial-dimension-reduction-in-Lp-September-23-2026#0 15d4a5ba
+The-crossing-number-of-complete-graphs-September-23-2026#2 0454b254
+The-exact-reconstruction-threshold-for-the-three-state-symmetric-channel-September-25-2026#0 03f25b0d
+The-maximum-number-of-mutually-unbiased-bases-in-dimension-six-September-24-2026#1 4aa901fe
+The-sharp-singularity-rate-for-biased-symmetric-sign-matrices-October-4-2026#0 27850c45
+Universal-Tensor-Squares-for-Symmetric-Groups-September-24-2026#0 None
+TOTAL 25 CONVERTED 22

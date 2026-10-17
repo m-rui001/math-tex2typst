@@ -1,0 +1,235 @@
+== D101 odd=1 consecutive=0
+  189|    for the representation of $E_{\rm disc}.
+  190|    \end{lemma}                                       (transfer.tex:25--43，末句排版略有删节)
+== D104 odd=1 consecutive=0
+  553|$\xi$ 块（witness-ledger.tex:51-72）：四个 itemize 块（$Q,R$ 码与代表测试、五邻点与 $[2]Q$ 码及五个加法元组与五个高度元组、两个邻值最大与 $L_0,D_0$、四松弛量 "u+W_1-h_Q,\ N_Q-u-W_1-1,\ \kappa D_0-L
+  554|
+== D115 odd=3 consecutive=0
+  24|我坐下来第一件事，是盯着 $\lfloor m/2\rfloor\lfloor(m-1)/2\rfloor\lfloor n/2\rfloor\lfloor(n-1)/2\rfloor 这四个取整看，想知道它们到底是被谁逼出来的。论文没有把这段心理写出来，只给了一个恒等式，`introduction
+  25|
+  302|(c) 假设与常数的逐个理由。$\frac12$ 的来源不是归一化，我在第 5 节会看到它来自弦公式 `eq:chord-formula`（`intersections.tex:69-73`）里的 $\frac12$，而 $\pm$ 两次平移的"平均"负责的是另一件事：把同一根辐条上两个版本的相反序
+  303|
+  404|这个计算给了我一条论文没有明说的理解线：`lem:additive` 之所以要把结论弱化成"模 $\mathcal L$"，正是因为 $J^{ik}$ 里的局部项依赖每个顶点各自独立的 gap 选择，而 $\mathcal L$ 恰好是这些选择所张开的歧义空间；`detector.tex:5-7` 
+  405|
+== D117 odd=1 consecutive=0
+  42|机械理由（对称点在哪一维取到）：$\Phi$ 关于 $R$ 是三次齐的，$R\mapsto tR$ 让能量乘 $t^3$。输入取 $L^3$、输出取 $L^{3/2}$ 时，双线性配对 $\int F_0\,B(F_1,F_2)$ 的三个因子各贡献一次齐性，总次数 3 与能量次数 3 相同。若把能量
+  43|
+== D120 odd=3 consecutive=1
+  328|> as \(RU\), where \(U$ is uniform on \(S^3\) and independent of \(R\).
+  329|> The coordinate \(\langle e,U\rangle$ has density
+  329|> The coordinate \(\langle e,U\rangle$ has density
+  330|> \((2/\pi)\sqrt{1-u^2}\) on \([-1,1]\). The same threshold comparison as
+  366|> Appendix~\ref{cert:arithmetic} gives \(R(0.29)>0.9312526$ and
+  367|> \(|R'|<0.03\) on this interval, whence
+== D124 odd=1 consecutive=0
+  480|观测"$样本是否落在 $B$"给出的信息下界是
+  481|$h_2((P(B)+Q(B))/2)-\tfrac12h_2(P(B))-\tfrac12h_2(Q(B))$，
+== D139 odd=1 consecutive=0
+  472|- 竖线：77 行数据中有 76 行恰为 6 个竖线；第 381 行（$R^2$ 行）第三栏含一处双竖线写法，使该行读到 8 个竖线，清理方式是把该栏里的范数写法换成 `\lVert y\rVert_\infty\le R$ 与 `\lVert y\rVert` 成对形式，替换前后列数与其余四栏文字
+  473|- 数学包裹：`$` 共 3,386 个，`\(` 与 `\)` 各 0 与 2 个（两处 `\)` 出现在逐字引文与 Lean 片段内），合计远超 1,000 的下限；正文无裸露 ASCII 数学，代码栏内的 Lean 原文按逐字原则保留。
+== D140 odd=2 consecutive=0
+  215|> `idempotents.tex:44-45` " (000,01,1) & A_0,B',C' & A_0+B'+C'\\" 与 " (001,01,1) & A_1+B'+C'.$"
+  216|
+  349|> `envelopes.tex:128-129` "h_{\ell,E}:U\to U$ for $\ell\in\{2,3\}$ and"
+  350|
+== D145 odd=3 consecutive=0
+  75|(b) 中间步骤。构造在 `154--235`，我按顺序把略写的地方补全。第一步取 $d=\lceil\sqrt{\log K}\rceil+3$、$Q=\lceil((d+1)K)^{1/(d-2)}\rceil$。由 $Q^{d-2}\ge(d+1)K$ 得 $Q^{d}\ge(d+1)KQ^{
+  76|
+  115|(d) 失败路线。[推测] 我试过把每层的辅助张量按分支数乘算（即 $\operatorname{rank}(\mathcal A)$ 每分支各付一次），`371` 明确说 "This does not charge \(\rank(\mathcal A)\) once per \(\ell$"，若
+  116|
+  719|(c) 第一条的证据链指向另一篇论文。`AuxiliarySeparation/Main.lean:9--15` 的模块 doc comment 逐字写 "Theorem 1.1 gives a uniform arithmetic-operation bound for complex squar
+  720|
+== D146 odd=1 consecutive=0
+  907|其余风格项我核对过：规格禁止的那五个提示层短语命中数为 0；长破折号命中数为 0；独占整行的三横线命中数为 0；emoji 命中数为 0；`\(`/`\)` 各 0 次（成对成立）；正文数学全部在 `$...$` 内，每行 `$` 数为偶（唯一例外是逐字引用 tex 的 display 环境按源文件
+  908|
+== D148 odd=1 consecutive=0
+  402|第六，依赖关系的精确管理。`setup.tex` 第 $130`--$140` 行引用了 `figure-dependencies.tex`（$1456$ B）中的条件依赖图。我从正文各节的"假设"声明反推出这张图的拓扑结构：`retarded.tex` 无 bootstrap 假设 → `occu
+  403|
+== D15 odd=4 consecutive=0
+  374|- 为何 $b$ 只需 $\int b>0$ ，并非 $=1$：下游 `04-pairs.tex:198-202` 把 $\int b$ 吸收进 $\zeta_n$，`:230-231$ 要求 $\zeta_n>0$；归一化在 Riemann 和那一步会额外引入 $n^{-k}$ 的取整误差，留着 
+  375|
+  439|> "Suppose that a finitely supported function $\nu:\Gamma\to\mathbb Q$ has zero pushforward on each $\Gamma/\Lambda_i$, and satisfies $\sum_\gamma\nu(
+  440|
+  572|2. 第 394 行的 `` `:230-231$ `` 应读作 `` `:230-231` ``，指向 `04-pairs.tex:230-231` 固定 $n$ 的那句。
+  573|3. 第 428 行的 `` `:85$ `` 应读作 `` `:85` ``，指向 `04-pairs.tex:85` 附近关于 $UP_V=0$ 的句子；同段的"It preserves diagonal factors"在 `04-pairs.tex:88` 之上、`:85-88` 区间内。
+  574|4. 第 459 行的 `` `:166-168$ `` 应读作 `` `:166-168` ``，即 `pairs:exact-moment` 的公式行号。
+  575|
+== D21 odd=2 consecutive=0
+  267|环 3：`completion.tex:150--153` 把 `The two factors generating $W_m$ have Specht type $\rho_m` 用作 $W_m\subseteq S^{\rho_m}\otimes_\mathbb C S^{\rho_m}$，这
+  268|
+  303|> `Let $m\geq3$, $K=2m-1$, and $F=B_m\setminus B_{m-2}.`
+  304|> `Number its positions along the path by`
+== D211 odd=1 consecutive=0
+  227|第一处停在 $\pi(U^3)=1$ 这句。稿件把它写成"三个事件 $x_i\notin U$ 各自概率为零"（`build/sections/proof.tex:65-67`），我起初以为这是废话，因为 $\mu(U)=1` 已经登记在 `build/sections/proof.tex:44-4
+  228|
+== D218 odd=2 consecutive=0
+  701|`05-entropy$ 那一段" 两处，我在行内代码反引号之内多打了一个美元符号；因为它们在反引号
+  702|之内，不构成本文行内公式的定界符，但会让全文 `$` 计数多出两个。三，第 11 节
+  703|"`05-entropy.tex:142-144$ 的公式" 与第 12 节 "`06-posterior-contact.tex:18-20$）" 同样
+  704|是反引号内的多余 `$`，合计四处，同上不影响公式配对。四，第 10 节我把端点矩写成
+== D229 odd=1 consecutive=0
+  186|分部积分 `eq:tensor-integration-by-parts`（`02-tensor.tex:273`--`276`，$\int\mathfrak{m}athrm{d}\alpha\wedge\beta=-(-1)^{|\alpha|}\int\alpha\wedge\mathfrak{
+  187|
+== D234 odd=1 consecutive=0
+  464|（三）"某类否定加某类转折" 直接连成一个字符串的位置：行 406。修正方向：把 "≤ 与 <$" 对照写成两句独立陈述。
+  465|
+== D24 odd=1 consecutive=0
+  429|读第一遍时我把它当成记账练习，准备跳过。停下来重读是因为一句"$determined by this tuple"：$a,b$ 完全由生成元组写出，没有任何选择、没有依赖 $\tau$、没有依赖 $B$ 的其他性质。这意味着缺陷下界是**构造给出的代数常量**，并非对某个特定拟迹做的估计。主定理要的
+  430|
+== D244 odd=2 consecutive=0
+  14|先把定理本身钉在墙上。Theorem 1.1（01-introduction.tex:18-27）说：存在 $\mathbb T^3$ 的 $C^\infty$ 保体积微分同胚 $T$ 与实函数 $f\in L^2_0(\mathbb T^3,\mu)$，使得 $\{f\circ T^n:n\in\
+  15|
+  167|5. 杂字符残留二（未配对的行内公式定界符）：§0 第三段末尾"$密度恰好为 1"处出现单个定界符、该段行内无与之成对的另一枚，属排版手滑；语义应读作不带定界符的短语"密度恰好为 1"。全文收工时若 `$` 总数呈奇数，即由这一枚造成，其余皆成对。语义应读作不带定界符的短语。
+  168|
+== D249 odd=1 consecutive=0
+  44|路线一:二维直接平移 AGSP。一维无阻挠链的投影子幂次把误差压到指数小的同时秩只按常数倍增长,链条叠链条就出面积律(`00-history.tex` 第 19 到 23 行是这套机制的文献位置)。我预期的二维版本:对区域 $A$ 造一个保持 $\Omega$、收缩正交补、且作用在 $A$ 边界附近
+  45|
+== D25 odd=1 consecutive=0
+  1490|$[推测]$ 其一，直接用 Minkowski 和 $K+\overline{D(0,\varepsilon)}$。它给凸紧集、$\operatorname{dist}\to0$，但边界一般只是 Lipschitz（平直段接圆弧处有角），**不是实解析 Jordan 曲线** ⇒ `lem:exte
+  1491|
+== D252 odd=1 consecutive=0
+  203|2. 文字性笔误两处，原文保留：其一，§2 首段末尾的代码区间误写为 `(fourier.tex:32-36$)`，多了一个美元符，应读作 `fourier.tex:32-36`；其二，§11 首段中 `(`completion.tex:27$` 一处反引号与美元符连写错误，应读作 `complet
+  204|3. 风格闸门修复一次。§14 初稿出现一个三字转述套语（属禁令表中四字过渡套语同类的违规项），已在落盘后立即用同义短语替换；按派单要求，此处以类别名登记该违例，不复写禁串。
+== D253 odd=1 consecutive=0
+  56|线的存在性定了,下一步是它在哪里被"看见"。局部系统 $\mathcal L=(\pi_*k_Z)_\chi$ 在 $U=(B\setminus D)^{(n)}$ 外(即遇到分支点的除子)纤维为零:抬升组的稳定子含活动挠素,像经乘积特征非平凡,置换表示的 $\chi$ 分量为零(`build/pa
+  57|
+== D26 odd=1 consecutive=0
+  769|先回答"它比第 9 节强在哪"。三条：环境从"每个 $L_p$"扩到"每个无限维实 Banach 空间"（$L_p$ 只是特例）；拓扑从"可分完备度量子集"升级到**紧**（thm:main 的 $S$ 含整个底座平面，压根不紧，摘要那句 "even for compact subsets of H
+  770|
+== D261 odd=1 consecutive=0
+  143|引理（第 42 到 68 行）声称这件事可以只用 $(P+B)S^{O(1/a)+o_a(1)} 的总时间、在每条路径上、对固定充分大参数的所有充分大尺寸做到；实现要么返回精确的交换流改动以及必要时完整残量可达集 $R_0$，要么报告检测到的随机失败，要么在确定性先决条件检查上挂起；它使用 $O(\
+  144|
+== D27 odd=1 consecutive=0
+  39|- "`P_{ij}^{(1)}$ is the orthogonal projector onto pair spin $Q-1$"（`01:30-32`）。两粒子自旋合成里相对角动量一的通道恰好是总自旋 $Q-1$，所以"pair spin $Q-1$"与下一句 "This is relativ
+  40|- "in tensor positions $i,j$" 与 "The sum preserves the antisymmetric subspace"：$P_{ij}^{(1)}$ 定义在张量积上，限制到 $\bigwedge^NU_Q$ 之前必须先说不变性，否则 $H_{N,Q}$ 的定义不
+== D28 odd=1 consecutive=0
+  715|$2M²η 不趋 0。证据是 "The order is important" 的直接命令句。
+  716|
+== D300 odd=1 consecutive=0
+  243|三，文风自查（只报类别，不复写命中串）。四字过渡套语：正文 §1 有一处已落盘命中，按不可改写规则保留原位，不申报位置细节；其余小节经逐段自查无命中。两字转折连接词：全文零命中。长停顿号：全文零命中，人名连接一律用连字符对，数值区间用短横。五列表表头：全文仅 §17 一处，表头两行逐字，数据行不再重
+  244|
+== D317 odd=1 consecutive=0
+  269|整套反例的假设是"可分 $C^*$-代数、可分 Hilbert 空间",我把每一处可分性对齐:`main.tex:321` 说 $G$ 可数故 $K=\ell^2(G)$ 可分;$L=K\otimes K$ 两个可分的张量积可分;$H=\bigoplus_{n\ge1}L$ 可数个可分之直和可分(`
+  270|
+== D339 odd=1 consecutive=0
+  359|`$` 计数：见收工时 `grep -c '\$'`。行内数学与显示数学都用 `$...$` 或 `$$...$$`；未发现 `\(` `\)`。
+  360|
+== D342 odd=1 consecutive=0
+  360|并且这成立只在一个质量至多 $e^{-a_*k}$ 的积分植入例外集之外，$\mathcal G$ 始终施加；在保留事件上，根是唯一的正则根（profile-amplification.tex:30-31）。我要把这条陈述的三处"故意不对称"记清楚，因为它们比结论本身更能告诉我作者付出了什么。第一，
+  361|
+== D356 odd=1 consecutive=0
+  929|"rw^2\sum\lvert c\rvert^3\le\mathcal A_m(c)^3" 外加成对 $；
+  930|该行其余四格与六个竖线均无误。请本体侧机械修正。
+== D369 odd=1 consecutive=0
+  360|台账补记（格式类勘误，交本体侧机械清理）：本稿落盘时另有 17 处 `file:行` 引用在其行内代码反引号内多带了一个行尾 `$`，分布于第 131、135、147、153、159、159、167、177、179、187、187、189、203、245、261、294、296 行（形如引用末尾多一
+  361|
+== D370 odd=1 consecutive=0
+  332|第九件，$g_\infty$ 的自由度只剩排序。`adelic.tex:129`--`133` 说任何允许的实对角化子是 $[B_\sigma dP]$，对角部分只平移环面并重排符号分量、置换部分只重排嵌入。[推测] 这解释了为什么 $\sigma$ 必须作为数据包的一部分写进 $\mathcal 
+  333|
+== D389 odd=1 consecutive=0
+  64|还有一个细节值得单独记下：附录式平滑定理（§10）处理的是匹配在多面体坐标 $x_e$ 上的平均，那边完全没有 $\rho 的踪影；$\rho$ 只活在主矩阵。这说明位移技巧的用武之地在"分解语义"层面，纯组合计数层面用不着它。
+  65|
+== D39 odd=2 consecutive=0
+  654|文件数与行数先立账。在仓库根 `E:\math\lean\OAI\Geometry\IsometricImmersion` 下，`find . -name "*.lean" | wc -l` 输出 447；`wc -l $(find . -name "*.lean") | tail -1` 输出 5
+  655|
+  666|给复测的人（包括回到这里检查的未来的我）留一条最短路径：在仓库根依次跑 `find . -name "*.lean" | wc -l`、`wc -l $(find . -name "*.lean") | tail -1`、`grep -rhE "^theorem " --include="*.lea
+  667|
+== D397 odd=2 consecutive=0
+  147|第一条代换（`sections/coding.tex:66-172`）分离不同标号的长区间，再靠一个公共偏移找回字母匹配。取 $m$ 与每字母一个独立均匀长 $m$ 二元词，$u=\lfloor m/8\rfloor$；选 $0<\alpha<1/2$ 使 $\gamma=1-\alpha-2H_2
+  148|
+  149|第二条代换（`sections/coding.tex:174-261`）控制的是一种局部事件：两码字区间之间长而近乎完全的匹配，除非标号相同且有一对匹配在两个块首的相对标号相等。取 $\epsilon$ 使 $2H_2(\epsilon)<\tfrac18$、$\epsilon<\tfrac1{10
+  150|
+== D401 odd=2 consecutive=0
+  417|申报八，一处不准确的自我表述。§20 末段把本稿自造的 partial 与 full 范数缩写说成"素材的 `\part`、`\full`"，实际上素材把这两个算子写成展开形式 $\operatorname{Part}$ 与 $\operatorname{Full}`，见 `build/sectio
+  418|
+  419|申报九，上一段自身还带着一处排版破损：原文 `\operatorname{Full}` 的行内公式收尾符被误写成反引号，正确的定界符应是美元号，即应读作"$\operatorname{Backslash operatorname{Full}}$"这种展开形式的算子名，公式在此处会连同那个反引号一起吃
+  420|
+== D407 odd=4 consecutive=0
+  303|十，文体违规的追加申报：§6、§7、§8、§9、§10 共十一段落里使用了成对的中文长停顿号作插入语分隔，全文实测该字符二十四次、合计十二对；按本单文风禁令它应零命中，正确写法本应改用括号、冒号或"，即"式衔接。因铁律一禁止对已落盘内容做任何删改，此处仅作类别指认、不复现原字符，亦不声称已消除；这十
+  304|
+  305|十一，本条订正第十条里两处自查计数，并给出全稿最终的宏名复量口径。其一，那根长停顿号字符的实测数：全稿共四十六个该字符、成对使用二十三次、分布于十一个正文叙述段落（自 §6 起至 §10 止）；第十条写的二十四次、十二对是误数，以本条为准。每个该字符都在同一位置成对出现，功能相当于插入语边界，可移植
+  306|
+  307|十二，补一条小订正：第十条说数学区内反射层双星记号在 §1 与 §11 各有一对，复量后实为三个段落，§1、§5、§11 各一，均为 $ 号内的反射层标准记号，非装饰性标记，无新增违规，只是出处清点漏了一节；交付报告按三处口径申报。
+  308|
+  309|十三，收稿前的最后数码申报：全稿数学定界符（dollar 号 $ 的本形）总数为偶数，且除指称该字符本身的散文标点用法四处（即第十条、第十一条、第十二条与本条，各一）之外，其余定界符一律成对出现在同一段落内并同段闭合；圆括号反斜杠式的另一形定界符全稿未用，因此配对检验对本报而言化简为 dollar 
+  310|
+== D409 odd=1 consecutive=0
+  103|$
+  104|
+== D410 odd=1 consecutive=0
+  218|`fields.tex:654`-`655` 行还有一句我特意留着提醒自己：三个事件之间无须独立。支撑它的是 `lem:disjoint-conjugate-selmer`（$W\cap\sigma W=0$，`fields.tex:597`-`620$ 行）与 `lem:field-evaluat
+  219|
+== D436 odd=1 consecutive=0
+  268|第五条,直接吹爆四次点之外的路线换 $Y$。[推测] 若不吹爆,直接用 $\mathbb{CP}^1\times\mathbb{CP}^1$ 与对角圆作用,半转不动集是 $4$ 个孤立点(每个 $\mathbb{CP}^1$ 上两个坐标的不动点组合,`involution.tex:206` 到 `i
+  269|
+== D450 odd=1 consecutive=0
+  38|死胡同 (一), 直接引用经典正则定理。经典理论的假设清单上写着: 闭集可求长且约化、函数局部有界、pair 属于局部 Sobolev 比较类的弱极小。我们的容许类一条都不给: $K$ 只有 $\mathcal H^1(K)<\infty$, rectifiable 结构未知; $u$ 只有 $L^
+  39|
+== D456 odd=1 consecutive=0
+  281|拉回复形 `$G$` 的层结构我也重述：`$G_i=L^{-is}\otimes_CF_i=\mathcal O_Y(-is)^{b_i}$`（`complex.tex:237-239`），`$G/F_Y$` 在次 `$i$` 的逐层是 `$\mathcal O_E(l)^{b_i}$`、`$l=-
+  282|
+== D458 odd=1 consecutive=0
+  68|藏起来的部分还剩下什么分布，是这套设计能不能用的生死线。素材给的答案在 `main.tex:351-360`：条件于 `$\mathcal E$`，藏起来的 ordinary 条款是非根上独立均匀的 proper 3-条款，test 条款藏起来的非根部分是独立的均匀 proper 2-条款，两族之间
+  69|
+== D47 odd=1 consecutive=0
+  191|(c) 每个数与假设的机械理由。$1/9$、$18$、$1/18$、$9$:两次标架转换各乘 $\le3$ 的裕度堆出来的,Lean 把它们硬编码进 `PassageBounds`(`NoConjugatePoints.lean:1291-1297`:`sqnorm q/9 ≤ qform ... 
+  192|
+== D48 odd=1 consecutive=0
+  407|（左边 $K=\operatorname{R}(s)^{-1}K$ 吸收 $\operatorname{R}(s)$，$K/n\to k$ 加 $\operatorname{R}(D)/n$ 常数，此处 tex 把 $\operatorname{R}(s)K^j$ 的 $j$ 根写成 $nk+\op
+  408|
+== D49 odd=1 consecutive=0
+  352|前缀后的抵消（`assembly:182-225`）：直接微 $w_{\mathbf n}$，第 $k$ 步项 $W_{\mathbf a}\nabla\pi_k(x;n_{k-1},n_k)J_{k,\mathbf n}$，$W_{\mathbf a}=\prod_{s<k}\pi_s$、$J_{
+  353|
+== D52 odd=1 consecutive=0
+  603|本轮追加的正文（本文件第 390 行及之后）共引入 1,870 枚数学定界符字符，逐行配对全通过：新写的每一行都以成对开合结束，没有半截行内代码把闭合反引号误写成同形字符的情形。全文定界符计数 4,721、为奇，源头在旧稿第 102 行的一处 `\(` 与 `$` 错口配对（旧稿 §3 的引述句，前
+  604|
+== D534 odd=2 consecutive=1
+  108|就收敛，含分歧扩张也在内，因为除幂项的分母恰整除相应阶乘（03-arithmetic.tex:414-425）。迹的整性有一段单独的推导（03-arithmetic.tex:427-444）：Abel 簇自同构的特征多项式整且与 Weil 上同调选择无关，由度数多项式 $\deg(n-u)$ 刻画；
+  109|\lvert\operatorname{Tr}(\beta_i\alpha_j)\rvert^2\le\operatorname{Tr}(\beta_i^2)\operatorname{Tr}(\alpha_j^2)\le C(dh)^c$。无穷位上平行输运认全整一次上同调格，交叉配对仍属 $\tf
+  109|\lvert\operatorname{Tr}(\beta_i\alpha_j)\rvert^2\le\operatorname{Tr}(\beta_i^2)\operatorname{Tr}(\alpha_j^2)\le C(dh)^c$。无穷位上平行输运认全整一次上同调格，交叉配对仍属 $\tf
+  110|
+== D59 odd=1 consecutive=0
+  302|| $\beta_{-1},\beta_0$ | 均 $e^{-c}$，全轴最大 | weights.tex:43 | $\lVert S_x\rvert =e^{-c}$、弥散侧片标识 | 若 $\beta_{-1}\ne\beta_0$，中心两权不等，`conclusion:104` 的"$=e
+  303|| $\delta$ | $T_{m+1}-T_m\in\{0,N_m\}$ | weights.tex:11,55 | 跨块增量两式 | 若 $\delta\notin\{0,N_m\}$，`eq:residue-nesting` 破，跨块单调两下界 $\ge c$ 不再保证 |
+== D601 odd=1 consecutive=0
+  212|拟合事件 $\mathcal F=\{每个 $j$ 层顶点 $I$ 有 $|Y_I|\le T_j/8$，$1\le j<b\}$ 依赖朝向比特。投影引理说 $\mathrm{TV}(\mathcal K_{\rm tree}\widetilde\mu_i,\mathrm{Tr}(U_b^+))\l
+  213|
+== D68 odd=1 consecutive=0
+  1077|第四，一条假设没被证明，是被搬进前提。`weightedCompatibility_bound` 需要 `hmgf : uniformMean (fun r : Rows A D => Real.exp ((1/400*Real.log m)*clumpCount (m^(1/100:ℝ)) r))
+  1078|
+== D79 odd=1 consecutive=0
+  104|(a) 逐字引用: "If $I<J$ and $I'<J'$ are pairs of internal basic intervals, there is an $h\in F$ whose restrictions carry $I$ affinely onto $I'$ and $J$ af
+  105|
+== D80 odd=2 consecutive=0
+  2021|| $\varepsilon$ | $2^{-J}$ | `04:23`、`04:26` | `04a` 与 `06:82`、`06:183`、`06:292` 的失败概率；`05:451` 的 $2s\varepsilon$；`06:394`--`396` | 分析专用、算法不构造分母 $2^J`
+  2022|| $128s$ | 小宽度分档阈值 | `03:259`、`04:82`、`04:160`、`05:457`、`06:323` | `lem:tightening-projection` 前提；`proc:solve` 与 `proc:orient` 的 $\mathsf{Basic}$ 直接返回
+  2228|对照 tex：`thm:bit-complexity`（`07:11`--`16`）说的"$2^{O(\log^2(L+2))}$ 位、逐带"在 Lean 里就是 `total_bound`（`:74`--`81`）+ `total_quasi`（`:140`--`143`）+ `MainClaim
+  2229|
+== D85 odd=1 consecutive=0
+  939|| $E_k$ 的 $k$ 允许重复 | 定义级许可 | `sections/00_intro.tex:15` | `03_density.tex:51-56` 的重分组；`03_density.tex:79-80` 的重复 32 次；`Model.lean:44-46` 的 `Fin k → Fi
+  940|| $31/32$ | union bound 产出 | `sections/03_density.tex:18`；`sections/03_density.tex:49` | `03_density.tex:49` 的 $\ge1/2$；`Main.lean:43` 的 `calc (1/2:ℝ)
+== D92 odd=1 consecutive=0
+  220|(a) 逐字(要点):"On $\Omega=(0,\infty)\times\{1,\ldots,m\}$, set $d\nu(r,t)=pr^{-p-1}dr$ on each copy indexed by $t$, $g_e(t)=(x_i(t)-x_j(t))/\delta_e$, $v
+  221|
+== D93 odd=5 consecutive=0
+  158|差异五:$d\ge2$ 的角色比我预想的弱,而 $d\ge3$ 的角色比我预想的强。我原以为 $d\ge2$ 是问题本质的门槛(一维确实有反例,见 §1 末),$d\ge3$ 只是零一律的方便。实际文本里,$d\ge2$ 只在三处内部引理被显式重提(`04-gaussian.tex:445,461,
+  159|
+  179|(c) 机械理由。$d\ge2$:一维有反例,由 `:76-80` 明说(Solomon 零速度瞬态);$d\ge2$ 在证明里的消费点见 N04 组三处 `dge2$。$\ell\in S^{d-1}$:归一化只用于让 $v\cdot\ell$ 的符号与 $\|v\|$ 解耦,以及配合 `Mode
+  180|
+  391|(c) 机械理由。$\lambda$ 是 `eq:4` 里那个"某个小正指数",在本条只以"可截断"的方式被消费,所以指数值不影响结论形式;$z/10$、$.3$ 两个具体数字:`.3>0$ 与 $P_0^+$ 侧的界足够大时,`eq:11` 右端已经 $\ge$ 左端可能达到的量,故可先手把"大 
+  392|
+  630|> For each fixed \(k\ge2,\ p'>0\), there are constants \(C_*,c_0,g_0>0$ such that for all sufficiently large integer \(H\), putting \(r=r_{H/C_*}\),
+  631|> \[ P\big(\Gamma_H^\pi\{{\rm sep}(\text{endpoints})\ge c_0 r\}\ge g_0\big)>1-p' \tag{30}\label{eq:30} \]
+  636|(c) 机械理由。$C_*=2J_0+2$:因子 2 把"每次分裂约占两个块"记入预算,$+2$ 处理余段与末端;这个 $C_*$ 之后被 N07 直接消费,方式是 `06-kernels.tex:67` 的 $r=r_{H/C_*}$ 与 `07-stages.tex` 里 $r_s$ 的换算($
+  637|
+== D95 odd=2 consecutive=0
+  1617|| $N$ (padding 后状态基数) | $(T+2)2^M$ | `07-streaming-applications.tex:136` | §7 `lem:r-stopping-reduction` 与 §5.7 `rfib:block` 的 $\log N\le d^2$ 前提 | 若 
+  1618|| $p$ (输出容量) | $\le(T+1)2^M\epsilon^{d-1}$ | `07-streaming-applications.tex:147` | §7 `lem:r-stopping-reduction` 与 `07a:74` 的 $p=2/3$ | 若 $\epsilon^{d
+  1675|- $p\ge3/5`:`07:149`。摘要里"success at least $2/3$"与这里的 $3/5$ 是两个不同门槛:$3/5$ 是"无记忆下界 $T>d/4$"与"$p\le(T+1)2^M\epsilon^{d-1}$ 联立"这一具体比较里的选择;$2/3$ 是端点主定理的假设(
+  1676|
+== D97 odd=2 consecutive=0
+  748|> \(\epsilon_k\to0$ such that, simultaneously for every \(v+it\in D\),
+  749|> \begin{equation}\label{eq:uniform-slice}
+  818|> right semicircle.  Suppose \(1/2\le r<1$ and set
+  819|> \[
+printed=87

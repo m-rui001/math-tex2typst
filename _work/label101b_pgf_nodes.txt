@@ -1,0 +1,157 @@
+#101b: the 10 real rotate+anchor nodes -- text ink relative to the declared point (pt)
+gauge: probe101a_rot_variants.ink_offsets()  [span bbox union; dot = \fill circle 1.2pt]
+coords: page coordinates, y grows down; left/right/top/bottom = ink edge minus dot centre
+source rows: _work/m100_rot_anchor.tsv lines 4-13
+
+papers (flat file = _work/flat/<name>.tex):
+  P1  A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Maps-October-5-2026   flat=A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Maps-October-5-2026.tex
+  P2  A-directional-zero-one-law-under-strict-ellipticity-September-23-2026   flat=A-directional-zero-one-law-under-strict-ellipticity-September-23-2026.tex
+  P3  Finite-triangular-approximation-of-radial-sweeps-September-27-2026   flat=Finite-triangular-approximation-of-radial-sweeps-September-27-2026.tex
+  P4  Generic-C1-Future-Inextendibility-Near-Rotating-Subextremal-Kerr-Spacetimes-September-23-2026   flat=Generic-C1-Future-Inextendibility-Near-Rotating-Subextremal-Kerr-Spacetimes-September-23-2026.tex
+  P5  Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September-26-2026   flat=Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September-26-2026.tex
+  P6  Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026   flat=Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026.tex
+  P7  The-Boltzmann-Grad-limit-for-stable-radial-potentials-on-regular-kinetic-intervals-September-23-2026   flat=The-Boltzmann-Grad-limit-for-stable-radial-potentials-on-regular-kinetic-intervals-September-23-2026.tex
+  P8  uniform-bounds-for-planar-polynomial-limit-cycles-September-24-2026   flat=uniform-bounds-for-planar-polynomial-limit-cycles-September-24-2026.tex
+
+== NODE readings (10) ==
+NODE 01  P1 pic=0 anchor=east  tsv line 4
+  src _work/flat/A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Maps-October-5-2026.tex:751
+  raw: \node[anchor=east,rotate=90,red!65!black] at (-0.93,2.45) {uncapped band};
+  text {uncapped band}  opt {anchor=east,rotate=90,red!65!black}
+  inner sep written: no   font= written: no   nominal: 10pt (normal, font= not written)
+  pdf m101b_node_00.pdf  rc=0  mtime=2026-10-17 09:28:23  bytes=12895
+  box   9.96 x  66.72  left   -5.29 right    4.67 top    3.50 bottom   70.22   [ink_offsets=(9.96259880065918, 66.71954154968262, -5.2947797775268555, 4.667819023132324, 3.496042251586914, 70.21558380126953)]
+  ctrl opt {red!65!black,anchor=center}  pdf m101b_ctrl_00.pdf  mtime=2026-10-17 09:28:24  bytes=12896
+
+NODE 02  P2 pic=0 anchor=south  tsv line 5
+  src _work/flat/A-directional-zero-one-law-under-strict-ellipticity-September-23-2026.tex:1373
+  raw: \node[rotate=90,anchor=south] at (-.45,-1.95) {progress $-x_1$};
+  text {progress $-x_1$}  opt {rotate=90,anchor=south}
+  inner sep written: no   font= written: no   nominal: 10pt (normal, font= not written)
+  pdf m101b_node_01.pdf  rc=0  mtime=2026-10-17 09:28:26  bytes=36232
+  box  10.93 x  56.33  left  -13.37 right   -2.44 top  -27.92 bottom   28.41   [ink_offsets=(10.932756423950195, 56.327064514160156, -13.371245384216309, -2.4384889602661133, -27.9162540435791, 28.410810470581055)]
+  ctrl opt {anchor=center}  pdf m101b_ctrl_01.pdf  mtime=2026-10-17 09:28:27  bytes=36229
+
+NODE 03  P2 pic=1 anchor=south  tsv line 6
+  src _work/flat/A-directional-zero-one-law-under-strict-ellipticity-September-23-2026.tex:2108
+  raw: \node[rotate=90,anchor=south] at (-1.0,2.3) {height $x_1$};
+  text {height $x_1$}  opt {rotate=90,anchor=south}
+  inner sep written: no   font= written: no   nominal: 10pt (normal, font= not written)
+  pdf m101b_node_02.pdf  rc=0  mtime=2026-10-17 09:28:28  bytes=28011
+  box  10.80 x  39.83  left  -13.24 right   -2.44 top  -19.67 bottom   20.16   [ink_offsets=(10.803640365600586, 39.83306884765625, -13.242280006408691, -2.4386396408081055, -19.6683349609375, 20.16473388671875)]
+  ctrl opt {anchor=center}  pdf m101b_ctrl_02.pdf  mtime=2026-10-17 09:28:29  bytes=28012
+
+NODE 04  P3 pic=1 anchor=east  tsv line 7
+  src _work/flat/Finite-triangular-approximation-of-radial-sweeps-September-27-2026.tex:653
+  raw: \node[anchor=east,rotate=90] at (-1.17,0) {$-1\le y\le1$};
+  text {$-1\le y\le1$}  opt {anchor=east,rotate=90}
+  inner sep written: no   font= written: no   nominal: 10pt (normal, font= not written)
+  pdf m101b_node_03.pdf  rc=0  mtime=2026-10-17 09:28:30  bytes=25715
+  box  10.09 x  49.52  left   -5.67 right    4.42 top    3.52 bottom   53.04   [ink_offsets=(10.091714859008789, 49.524085998535156, -5.672489166259766, 4.419225692749023, 3.5159149169921875, 53.040000915527344)]
+  ctrl opt {anchor=center}  pdf m101b_ctrl_03.pdf  mtime=2026-10-17 09:28:31  bytes=25713
+
+NODE 05  P4 pic=1 anchor=west  tsv line 8
+  src _work/flat/Generic-C1-Future-Inextendibility-Near-Rotating-Subextremal-Kerr-Spacetimes-September-23-2026.tex:4076
+  raw: \node[anchor=west,rotate=-63] at (3.7,1.95) {$R_{\mathrm{out}}$};
+  text {$R_{\mathrm{out}}$}  opt {anchor=west,rotate=-63}
+  inner sep written: no   font= written: no   nominal: 10pt (normal, font= not written)
+  pdf m101b_node_04.pdf  rc=0  mtime=2026-10-17 09:28:32  bytes=17656
+  box  14.11 x  21.88  left   -2.71 right   11.40 top    0.81 bottom   22.69   [ink_offsets=(14.113374710083008, 21.8791561126709, -2.710369110107422, 11.403005599975586, 0.8083038330078125, 22.68745994567871)]
+  ctrl opt {anchor=center}  pdf m101b_ctrl_04.pdf  mtime=2026-10-17 09:28:34  bytes=17647
+
+NODE 06  P5 pic=3 anchor=south  tsv line 9
+  src _work/flat/Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September-26-2026.tex:1289
+  raw: \node[rotate=90,anchor=south] at (3.03,1.47) {return bridge};
+  text {return bridge}  opt {rotate=90,anchor=south}
+  inner sep written: no   font= written: no   nominal: 10pt (normal, font= not written)
+  pdf m101b_node_05.pdf  rc=0  mtime=2026-10-17 09:28:35  bytes=13034
+  box   9.96 x  57.66  left  -13.24 right   -3.28 top  -28.84 bottom   28.82   [ink_offsets=(9.96259880065918, 57.66353797912598, -13.243877410888672, -3.281278610229492, -28.840700149536133, 28.822837829589844)]
+  ctrl opt {anchor=center}  pdf m101b_ctrl_05.pdf  mtime=2026-10-17 09:28:36  bytes=13035
+
+NODE 07  P6 pic=1 anchor=south  tsv line 10
+  src _work/flat/Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026.tex:961
+  raw: \node[rotate=90,anchor=south] at (-0.15,1.68) {$D_2$ (second variable)};
+  text {$D_2$ (second variable)}  opt {rotate=90,anchor=south}
+  inner sep written: no   font= written: no   nominal: 10pt (normal, font= not written)
+  pdf m101b_node_06.pdf  rc=0  mtime=2026-10-17 09:28:38  bytes=29847
+  box  10.80 x  90.02  left  -13.80 right   -2.99 top  -45.01 bottom   45.01   [ink_offsets=(10.803640365600586, 90.02126502990723, -13.796257972717285, -2.992617607116699, -45.01482963562012, 45.00643539428711)]
+  ctrl opt {anchor=center}  pdf m101b_ctrl_06.pdf  mtime=2026-10-17 09:28:39  bytes=29848
+
+NODE 08  P6 pic=2 anchor=south  tsv line 11
+  src _work/flat/Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026.tex:1982
+  raw: \node[rotate=45,anchor=south,inner sep=3pt] at (2.011,0.861) {$r_\delta(y)$};
+  text {$r_\delta(y)$}  opt {rotate=45,anchor=south,inner sep=3pt}
+  inner sep written: yes   font= written: no   nominal: 10pt (normal, font= not written)
+  pdf m101b_node_07.pdf  rc=0  mtime=2026-10-17 09:28:40  bytes=25662
+  box  22.50 x  22.50  left  -17.25 right    5.25 top  -17.25 bottom    5.25   [ink_offsets=(22.500505447387695, 22.50050926208496, -17.249004364013672, 5.251501083374023, -17.249120712280273, 5.2513885498046875)]
+  ctrl opt {inner sep=3pt,anchor=center}  pdf m101b_ctrl_07.pdf  mtime=2026-10-17 09:28:41  bytes=25657
+
+NODE 09  P7 pic=0 anchor=south  tsv line 12
+  src _work/flat/The-Boltzmann-Grad-limit-for-stable-radial-potentials-on-regular-kinetic-intervals-September-23-2026.tex:354
+  raw: \node[rotate=90,anchor=south,font=\footnotesize] at (-2.72,1.5) {backward time};
+  text {backward time}  opt {rotate=90,anchor=south,font=\footnotesize}
+  inner sep written: no   font= written: yes   nominal: 8pt (font=\footnotesize)
+  pdf m101b_node_08.pdf  rc=0  mtime=2026-10-17 09:28:43  bytes=11336
+  box   7.97 x  54.32  left   -9.75 right   -1.78 top  -27.15 bottom   27.17   [ink_offsets=(7.970100402832031, 54.32420349121094, -9.747543334960938, -1.7774429321289062, -27.150999069213867, 27.17320442199707)]
+  ctrl opt {font=\footnotesize,anchor=center}  pdf m101b_ctrl_08.pdf  mtime=2026-10-17 09:28:44  bytes=11333
+
+NODE 10  P8 pic=2 anchor=south  tsv line 13
+  src _work/flat/uniform-bounds-for-planar-polynomial-limit-cycles-September-24-2026.tex:5382
+  raw: \node[rotate=34,anchor=south] at (1.05,0.96) {$a=b_f$};
+  text {$a=b_f$}  opt {rotate=34,anchor=south}
+  inner sep written: no   font= written: no   nominal: 10pt (normal, font= not written)
+  pdf m101b_node_09.pdf  rc=0  mtime=2026-10-17 09:28:45  bytes=25502
+  box  28.18 x  21.03  left  -19.52 right    8.67 top  -16.68 bottom    4.35   [ink_offsets=(28.1844539642334, 21.02809715270996, -19.519126892089844, 8.665327072143555, -16.678565979003906, 4.349531173706055)]
+  ctrl opt {anchor=center}  pdf m101b_ctrl_09.pdf  mtime=2026-10-17 09:28:46  bytes=25495
+
+== CONTROL readings (10): same text, anchor=center, no rotate ==
+CTRL 01  P1  opt {red!65!black,anchor=center}
+  pdf m101b_ctrl_00.pdf  rc=0  mtime=2026-10-17 09:28:24  bytes=12896
+  box  66.72 x   9.96  left  -33.35 right   33.37 top   -5.29 bottom    4.67   [ink_offsets=(66.71954345703125, 9.96259880065918, -33.34669494628906, 33.37284851074219, -5.294506072998047, 4.668092727661133)]
+  delta node-ctrl: dw -56.76 dh  56.76  dleft   28.05 dright  -28.71 dtop    8.79 dbottom   65.55
+
+CTRL 02  P2  opt {anchor=center}
+  pdf m101b_ctrl_01.pdf  rc=0  mtime=2026-10-17 09:28:27  bytes=36229
+  box  56.33 x  10.93  left  -28.41 right   27.92 top   -5.98 bottom    4.95   [ink_offsets=(56.328067779541016, 10.932756423950195, -28.41104507446289, 27.917022705078125, -5.978384017944336, 4.954372406005859)]
+  delta node-ctrl: dw -45.40 dh  45.39  dleft   15.04 dright  -30.36 dtop  -21.94 dbottom   23.46
+
+CTRL 03  P2  opt {anchor=center}
+  pdf m101b_ctrl_02.pdf  rc=0  mtime=2026-10-17 09:28:29  bytes=28012
+  box  39.83 x  10.80  left  -20.16 right   19.67 top   -5.29 bottom    5.51   [ink_offsets=(39.834068298339844, 10.803640365600586, -20.16419792175293, 19.669870376586914, -5.294349670410156, 5.50929069519043)]
+  delta node-ctrl: dw -29.03 dh  29.03  dleft    6.92 dright  -22.11 dtop  -14.37 dbottom   14.66
+
+CTRL 04  P3  opt {anchor=center}
+  pdf m101b_ctrl_03.pdf  rc=0  mtime=2026-10-17 09:28:31  bytes=25713
+  box  49.52 x  10.09  left  -24.76 right   24.76 top   -5.67 bottom    4.42   [ink_offsets=(49.52408981323242, 10.091714859008789, -24.76028823852539, 24.76380157470703, -5.673200607299805, 4.418514251708984)]
+  delta node-ctrl: dw -39.43 dh  39.43  dleft   19.09 dright  -20.34 dtop    9.19 dbottom   48.62
+
+CTRL 05  P4  opt {anchor=center}
+  pdf m101b_ctrl_04.pdf  rc=0  mtime=2026-10-17 09:28:34  bytes=17647
+  box  19.05 x  10.80  left   -9.78 right    9.28 top   -5.13 bottom    5.68   [ink_offsets=(19.05084991455078, 10.804643630981445, -9.775093078613281, 9.2757568359375, -5.128900527954102, 5.675743103027344)]
+  delta node-ctrl: dw  -4.94 dh  11.07  dleft    7.06 dright    2.13 dtop    5.94 dbottom   17.01
+
+CTRL 06  P5  opt {anchor=center}
+  pdf m101b_ctrl_05.pdf  rc=0  mtime=2026-10-17 09:28:36  bytes=13035
+  box  57.66 x   9.96  left  -28.82 right   28.84 top   -5.29 bottom    4.67   [ink_offsets=(57.66353225708008, 9.96259880065918, -28.82379150390625, 28.839740753173828, -5.294254302978516, 4.668344497680664)]
+  delta node-ctrl: dw -47.70 dh  47.70  dleft   15.58 dright  -32.12 dtop  -23.55 dbottom   24.15
+
+CTRL 07  P6  opt {anchor=center}
+  pdf m101b_ctrl_06.pdf  rc=0  mtime=2026-10-17 09:28:39  bytes=29848
+  box  90.02 x  10.80  left  -45.01 right   45.02 top   -5.29 bottom    5.51   [ink_offsets=(90.02125930786133, 10.803640365600586, -45.006168365478516, 45.01509094238281, -5.2946624755859375, 5.508977890014648)]
+  delta node-ctrl: dw -79.22 dh  79.22  dleft   31.21 dright  -48.01 dtop  -39.72 dbottom   39.50
+
+CTRL 08  P6  opt {inner sep=3pt,anchor=center}
+  pdf m101b_ctrl_07.pdf  rc=0  mtime=2026-10-17 09:28:41  bytes=25657
+  box  21.86 x  10.80  left  -10.93 right   10.93 top   -5.29 bottom    5.51   [ink_offsets=(21.858230590820312, 10.803640365600586, -10.930463790893555, 10.927766799926758, -5.294709205627441, 5.5089311599731445)]
+  delta node-ctrl: dw   0.64 dh  11.70  dleft   -6.32 dright   -5.68 dtop  -11.95 dbottom   -0.26
+
+CTRL 09  P7  opt {font=\footnotesize,anchor=center}
+  pdf m101b_ctrl_08.pdf  rc=0  mtime=2026-10-17 09:28:44  bytes=11333
+  box  54.32 x   7.97  left  -27.17 right   27.15 top   -3.46 bottom    4.51   [ink_offsets=(54.32421112060547, 7.970100402832031, -27.17165756225586, 27.15255355834961, -3.4606800079345703, 4.509420394897461)]
+  delta node-ctrl: dw -46.35 dh  46.35  dleft   17.42 dright  -28.93 dtop  -23.69 dbottom   22.66
+
+CTRL 10  P8  opt {anchor=center}
+  pdf m101b_ctrl_09.pdf  rc=0  mtime=2026-10-17 09:28:46  bytes=25495
+  box  26.71 x  10.80  left  -14.00 right   12.71 top   -5.75 bottom    5.05   [ink_offsets=(26.709409713745117, 10.804643630981445, -13.995224952697754, 12.714184761047363, -5.7519731521606445, 5.052670478820801)]
+  delta node-ctrl: dw   1.48 dh  10.22  dleft   -5.52 dright   -4.05 dtop  -10.93 dbottom   -0.70
+

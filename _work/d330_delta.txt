@@ -1,0 +1,6 @@
+snap contains FEI(而非)=1 BC(而不是)=0
+cur  contains FEI(而非)=0 BC(而不是)=0 NO(，并非)=1
+probe line L61 = '<!-- D330 落盘探针行 -->'  hasFEI=False
+DIFF L237 at char 195
+   OLD '_v$ 的全体弧，得 $\\widehat G$。结论是精确式而非近似式：$\\operatorname{DFVS}(\\wi'
+   NEW '_v$ 的全体弧，得 $\\widehat G$。结论是精确式，并非近似式：$\\operatorname{DFVS}(\\w'

@@ -1,0 +1,67 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usetikzlibrary{fit}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{mathrsfs}
+\newcommand{\DoNotLoadEpstopdf}{}
+\newcommand{\Gd}{\check G}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cN}{\mathcal N}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\Dlc}{D_{\mathrm{lcc}}}
+\newcommand{\et}{\mathrm{et}}
+\DeclareMathOperator{\Bun}{Bun}
+\DeclareMathOperator{\Hecke}{Hecke}
+\DeclareMathOperator{\SS}{SS}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Rep}{Rep}
+\DeclareMathOperator{\Perf}{Perf}
+\DeclareMathOperator{\Loc}{Loc}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\IC}{IC}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\QCoh}{QCoh}
+\DeclareMathOperator{\IndCoh}{IndCoh}
+\DeclareMathOperator{\Nilp}{Nilp}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Perv}{Perv}
+\DeclareMathOperator{\supp}{supp}
+\begin{document}
+\begin{tikzpicture}[>=Stealth,baseline=(current bounding box.center)]
+\node (D) at (0,0) {$D$};
+\node (W) at (3,0) {$W_0$};
+\node (P) at (3,1.8) {$P$};
+\node (H) at (6.2,1.8) {$H_1$};
+\node (O) at (6.2,0) {$\cB\times L$};
+\node (B) at (9,1.8) {$\cB$};
+\draw[->] (P) -- node[above] {$\operatorname{pr}_1$} (H);
+\draw[->] (P) -- node[left] {$\operatorname{pr}_2$} (W);
+\draw[->] (H) -- node[right] {$q_{H,1}$} (O);
+\draw[->] (W) -- node[below] {$q_{H,2}$} (O);
+\draw[->] (W) -- node[below] {\small second input} (D);
+\draw[->] (H) -- node[above] {$p_1$} (B);
+\end{tikzpicture}
+\end{document}

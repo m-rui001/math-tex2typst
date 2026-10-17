@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{graphicx}
+\begin{document}
+
+\section{One}
+\label{sec:one}
+
+\begin{figure}
+\centering
+X\label{fig:inbody}
+\caption{Cap A.}\label{fig:a}\label{fig:b}
+\end{figure}
+
+\begin{table}
+\caption{Cap B.}\label{tab:a}\label{tab:b}
+\begin{tabular}{cc}1&2\end{tabular}
+\end{table}
+
+\begin{table}
+\begin{tabular}{cc}1&2\end{tabular}
+\caption{Cap C.}
+\label{tab:c}
+\label{tab:d}
+\end{table}
+
+Plain prose\label{span:inpara} continues here.
+
+\label{bare:between}
+
+Between paragraphs.
+
+\begin{figure}
+\centering
+Y
+\caption{Cap D.}\label{fig:d}
+\phantomsection\label{fig:e}
+\end{figure}
+
+\ref{fig:a} \ref{fig:b} \ref{tab:a} \ref{tab:b} \ref{tab:c} \ref{tab:d}
+\ref{span:inpara} \ref{bare:between} \ref{fig:d} \ref{fig:e}
+
+\end{document}

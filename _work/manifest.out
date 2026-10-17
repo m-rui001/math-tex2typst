@@ -1,0 +1,160 @@
+=== FREE SPACE NOW ===
+C: free=0.15 GB
+
+=== RELEVANT RUNNING PROCESSES ===
+   13 x msedge
+   12 x Qoder CN
+    1 x codex-windows-sandbox-service
+--- C:\Users\hp\.bun
+        434 MB  age=   8.3d  [d] install
+--- C:\Users\hp\.codex
+        438 MB  age=   3.9d  [d] plugins
+        307 MB  age=  17.0d  [d] sessions
+         57 MB  age=   3.9d  [f] thread_history_1.sqlite
+         53 MB  age=   0.3d  [f] logs_2.sqlite
+         30 MB  age=  17.0d  [d] cache
+         24 MB  age=  17.0d  [d] .tmp
+         24 MB  age=   3.9d  [d] .sandbox-bin
+          4 MB  age=  17.0d  [d] sqlite
+          4 MB  age=   3.9d  [f] thread_history_1.sqlite-wal
+          1 MB  age=   0.3d  [f] logs_2.sqlite-wal
+          0 MB  age=  12.2d  [f] queue_1.sqlite-wal
+          0 MB  age=   3.9d  [f] models_cache.json
+--- C:\Users\hp\.zcode
+        309 MB  age=   3.0d  [d] cli
+        181 MB  age=   3.0d  [d] v2
+          2 MB  age=   3.0d  [d] skills
+          0 MB  age=   7.9d  [d] tmp
+          0 MB  age=  18.0d  [d] workspace
+          0 MB  age=   7.8d  [d] feedback
+          0 MB  age=  18.0d  [d] plugin-workspace
+--- C:\Users\hp\.marscode
+        314 MB  age= 388.3d  [d] ai-chat
+         59 MB  age= 388.3d  [d] .ckg
+          4 MB  age= 388.3d  [d] .ripgrep
+          0 MB  age= 368.3d  [d] .code_contribution
+          0 MB  age= 388.3d  [f] config.json
+          0 MB  age= 388.3d  [f] vscode.mcp.config.json
+          0 MB  age= 388.3d  [d] chat
+          0 MB  age= 388.3d  [d] .agent
+          0 MB  age= 388.3d  [d] .code_contribution_changelog
+--- C:\Users\hp\.workbuddy
+        208 MB  age=  18.0d  [d] logs
+--- C:\Users\hp\.cache
+      1,315 MB  age=  17.0d  [d] codex-runtimes
+          6 MB  age= 384.0d  [d] mathlib
+          0 MB  age=  36.8d  [d] huggingface
+          0 MB  age= 421.7d  [d] selenium
+          0 MB  age= 126.3d  [d] gdown
+          0 MB  age=  37.8d  [d] modelscope
+          0 MB  age= 408.7d  [d] puppeteer
+--- C:\Users\hp\AppData\Roaming\Tencent\xwechat
+        772 MB  age= 431.8d  [d] xplugin
+        369 MB  age=  31.0d  [d] radium
+         81 MB  age=   0.2d  [d] log
+          2 MB  age= 431.7d  [d] net
+          1 MB  age= 288.2d  [d] net_1
+          1 MB  age= 195.1d  [d] net_2
+          0 MB  age=   2.8d  [d] net_3
+          0 MB  age=  42.7d  [d] confsdk
+          0 MB  age= 422.2d  [d] ilink
+          0 MB  age= 431.8d  [d] uh
+--- C:\Users\hp\AppData\Roaming\Tencent\WeChat
+        976 MB  age= 769.0d  [d] XPlugin
+         17 MB  age= 564.1d  [d] radium
+          1 MB  age= 554.1d  [d] 1
+          0 MB  age= 459.8d  [d] 2
+          0 MB  age= 561.2d  [d] cdncomm
+          0 MB  age= 686.9d  [d] ilink
+          0 MB  age= 769.0d  [d] All Users
+          0 MB  age= 432.0d  [d] bak
+          0 MB  age= 769.0d  [d] crash
+          0 MB  age=  62.0d  [d] log
+--- C:\Users\hp\AppData\Roaming\Tencent\WeMeet
+        759 MB  age= 114.3d  [d] Global
+          2 MB  age= 400.8d  [d] Users
+--- C:\Users\hp\AppData\Local\Microsoft\Edge\User Data
+        468 MB  age=   0.0d  [d] Default
+        169 MB  age= 327.0d  [d] ProvenanceData
+         39 MB  age=   0.8d  [d] component_crx_cache
+         20 MB  age=  16.3d  [d] Edge Entity Extraction
+         14 MB  age= 387.8d  [d] Edge Wallet
+         12 MB  age= 836.1d  [d] Subresource Filter
+         11 MB  age=   0.0d  [d] GrShaderCache
+          9 MB  age=   8.7d  [d] OneAuth
+          5 MB  age=  63.9d  [d] Edge Shopping
+          4 MB  age=   0.1d  [d] BrowserMetrics
+          4 MB  age=   0.1d  [f] BrowserMetrics-spare.pma
+          4 MB  age= 460.2d  [d] Safe Browsing
+          3 MB  age= 155.9d  [d] EdgeLanguageDetectionModel
+          3 MB  age= 836.1d  [d] Speech Recognition
+--- C:\Users\hp\AppData\Local\MathWorks
+      1,303 MB  age=  13.2d  [d] ServiceHost
+         39 MB  age= 449.0d  [d] -Ze-xmqrYBwPxtz4uM8WLa3rLkPwf4jv97qF0EoNODs
+          9 MB  age= 465.2d  [d] MATLAB
+          0 MB  age=  13.2d  [d] MATLABConnector
+          0 MB  age= 465.2d  [d] -mySnnNiprJPzE0a4lH3nxmMDat658_XZJ57owUdd2s
+          0 MB  age=  13.2d  [d] mwEndpointRegistry
+--- C:\Users\hp\AppData\Roaming\Code\User\globalStorage\saoudrizwan.claude-dev
+        776 MB  age=  66.1d  [d] puppeteer
+          3 MB  age=  66.1d  [d] cache
+          0 MB  age=  66.1d  [d] tasks
+          0 MB  age=  66.1d  [d] state
+          0 MB  age=  66.1d  [d] settings
+          0 MB  age=  31.1d  [d] checkpoints
+--- C:\Users\hp\AppData\Local\Programs\Quark
+      1,469 MB  age=   4.0d  [d] 7.3.5.1009
+      1,248 MB  age=  60.9d  [d] 7.0.7.940
+        571 MB  age=  89.1d  [d] components
+         14 MB  age=  17.0d  [f] quark.exe
+         14 MB  age=  11.4d  [d] Temp
+          3 MB  age=  11.5d  [f] unins000.exe
+          1 MB  age=  17.0d  [f] quark_proxy.exe
+          1 MB  age=  11.5d  [f] unins000.dat
+          0 MB  age= 221.0d  [d] Dictionaries
+          0 MB  age=   1.8d  [f] debug.log
+--- C:\Users\hp\AppData\Local\Quark\User Data\updates
+        378 MB  age=  11.5d  [f] 46076fa642e3a2b04266c2b55094ebbf.exe
+--- C:\Users\hp\Documents\NetSarang Computer\8\Xftp\Temporary\online1\mengxr\KoopmanLab\data
+      3,671 MB  age= 122.2d  [f] ns_V1e-3_N5000_T50.mat
+        615 MB  age= 122.3d  [f] burgers_data_R10.mat
+
+=== .qoder-cn\logs age buckets ===
+  runs: total=290 items  older-than-today=230 (969 MB)  today=60
+  sessions: total=7 items  older-than-today=5 (89 MB)  today=2
+
+=== Temp top-level (age, MB) ===
+      5,405 MB  age=   0.2d  qoder-cli-cn
+        274 MB  age=   4.8d  st-content
+        240 MB  age=   3.8d  vscode-stable-user-x64
+        102 MB  age=   4.8d  mate-smoke2
+         57 MB  age=   6.1d  Clash Verge-2.5.7-updater-EULDUK
+         36 MB  age=   0.1d  8C8A563B-6279-4B1A-B1C8-3447E3D823A1
+         25 MB  age=   6.9d  hist.db
+         25 MB  age=   6.9d  tm_hist_copy.db
+         25 MB  age=   6.9d  tm_hist.db
+         10 MB  age=   1.8d  awesome-pi
+          8 MB  age=  24.8d  DiagOutputDir
+          6 MB  age=   5.0d  _check.pdf
+          4 MB  age=   2.9d  snap1803
+          4 MB  age=   1.9d  pi-browser-smoke.js
+          4 MB  age=   3.9d  5f789ea9-75f9-4763-bc11-0430bf2cd108.tmp.js
+          3 MB  age=   1.7d  tmpebsqmm3u
+          3 MB  age=   1.7d  aac
+          3 MB  age=   5.1d  pi-bash-cc24e458e17a4ba7.log
+
+=== updater / leftover installer dirs ===
+        506 MB  C:\Users\hp\AppData\Local\@genieworkbuddy-desktop-updater
+        341 MB  C:\Users\hp\AppData\Local\@zcodedesktop-updater
+        212 MB  C:\Users\hp\AppData\Local\qoder-updater
+        208 MB  C:\Users\hp\AppData\Local\qoder-cn-updater
+        152 MB  C:\Users\hp\AppData\Local\eleckoi-desktop-updater
+        105 MB  C:\Users\hp\AppData\Roaming\Code\CachedExtensionVSIXs
+        279 MB  C:\Users\hp\AppData\Roaming\Tencent\WeMeet\Global\UpdatePackages
+        300 MB  C:\Users\hp\AppData\Local\javasharedresources
+        242 MB  C:\Users\hp\AppData\Local\NRC
+        368 MB  C:\Users\hp\AppData\Local\Microsoft\vscode-cpptools
+        543 MB  C:\Users\hp\AppData\Local\npm-cache
+        339 MB  C:\Users\hp\AppData\Local\pip\Cache
+
+=== DONE ===

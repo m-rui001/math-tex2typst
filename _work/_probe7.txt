@@ -1,0 +1,273 @@
+ORDER total=517
+== fam=btick n=160
+  D08-L1126-I01 | stated= cur= ver=
+    FIX: 改回正确反引号→正确反引号 / 删掉一个括号内标签形态，§2→一个括号内标签形态，§21 插入装置句删掉一个未译英文量名
+    QUO: **机械缺陷的就位修复清单（越界动作一并申报）。** 本轮落笔时"行内代码的闭合反引号误写成美元定界符"这一类混淆发生了七次：§14 一处、§17 一处、§19 三处、§20 两处，均按规格就地改回正确反引号。其中两处的受影响行还捎带了素材
+    NOTE: no verbatim signature
+  D100-L1586-I06 | stated=162 cur=297 ver=no
+    FIX: 改写为“源头是 tex 本身→“源头是 tex 本身”
+    QUO: 禁串实测（对全文件跑 `grep -o <串> | wc -l` 与 `grep -c <正则>`；这些串在本段一律只给编号和计数，不复述其字形，理由很实际：把它们抄进自检段落自己就会造成命中）。提示层 5 个短语按验收清单顺序的命中依次是
+    NOTE: sig=`O(Q^{-33/40})` found at [297, 1551] ; author's line 162 drifted
+  D107-L2990-I11 | stated=2242;2331;2937;2940;2469 cur=2242 ver=
+    FIX: 改回、第 2940 行那句含→第 2940 行那句含混的自注改写为说明句、第 2469 行一枚未译 / 换成中文、第 2908 行的→中文、第 2908 行的节号写法统一成带 `§` 的形式
+    QUO: 2. 本批我自己追加的块里有 14 处单字符级更正，全部只动错位的那一处，位置是：第 2242 行补一枚行内定界符、第 2278、2314、2331、2364、2434、2446、2447、2449、2455（两处）、2459、2761、2
+    NOTE: no verbatim signature; author's line kept
+  D147-L601-I01 | stated= cur=69 ver=no
+    FIX: 应读作 03-tree.te→03-tree.tex 的 206 到 238 段
+    QUO: 先按"已落盘内容不可改写"的纪律，把正文中我确认的笔误在此更正，供收稿方参考：§4.1 (b) 段 Hahn--Banach 起步处多写了一个因子 $t$（原式衍文，正确表述是 $\ell(tv)=t\lVert v\rVert$ 的线性起
+    NOTE: sig=`build/sections/02` found at [69, 79, 105, 161, 165]
+  D15-L565-I02 | stated= cur= ver=
+    FIX: 应读作的内容如下（原文保留，→的内容如下（原文保留，不做删除）：
+    QUO: 行内定界符勘误四处，均为把代码片段尾反引号误写成美元符，位置与应读作的内容如下（原文保留，不做删除）：
+    NOTE: no verbatim signature
+  D154-L671-I15 | stated= cur= ver=
+    FIX: 改为一对半角连字符或改为冒号→一对半角连字符或改为冒号）、跨文件行号区间的写法 3 处、代码区间尾
+    QUO: - 自我更正记录：本文件在分批落盘过程中共做了 18 处等长或近等长的字符级替换，未删除任何已成段论证。分类计数为：先否定再转折句式 7 处、被禁引导语 2 处、码位 U+2014 的长破折号 6 个字符（合成 3 对，改为一对半角连字符或
+    NOTE: no verbatim signature
+== fam=macro n=144
+  D12-L461-I03 | stated= cur=6 ver=no
+    FIX: 替换为 $\text{Lef→$\text{Left}=(A\times\mathrm{Fin}\ / 移到"$\text{gadg→"$\text{gadget\_hall}$ 的 $2\lvert
+    QUO: 第三，"之一"这句仍成立，只是排序要补。 4. 视角：旧表横向比较论文与 Lean 的形状差（流对 Hall、同伦对位势），本表纵向追踪单个量的下游消费者。两处会给出不同的"改动代价"：旧表说"流消失"是叙述差异，本表说它等价于把容量三元组
+    NOTE: sig=`ComparatorChallenges/BarnetteHamiltoni` found at [6]
+  D12-L522-I22 | stated= cur=61 ver=no
+    FIX: 写法是：$P$ 为森林且 $→$P$ 为森林且 $\lvert P\rvert=k$ $\impl
+    QUO: 旧稿里 "Hamilton 圈 $\iff$ 补连通 2-正则" 这条链，正式写法是：$P$ 为森林且 $\lvert P\rvert=k$ $\implies$ $E(T)\setminus P$ 的对偶边集 $\iff$ 连通、$2$-
+    NOTE: sig=`\setminus` found at [61, 97, 260, 280, 383]
+  D125-L576-I01 | stated= cur=526 ver=no
+    FIX: 改为逗号与 $\lVert\→逗号与 $\lVert\cdot\rVert$ 写法）
+    QUO: 文风与格式自检（在本文件上跑工具核对，结果是写这段之前的状态）：规格禁止的那五个短语命中数为 $0$；被禁的长破折号字符命中数为 $0$（我最初在 §12(c) 落了一个，已就地改为逗号与 $\lVert\cdot\rVert$ 写法）；独
+    NOTE: sig=`位置(文件:行)` found at [526]
+  D129-L418-I05 | stated= cur=284 ver=no
+    FIX: 改为独立名称以恢复连续编号，→独立名称以恢复连续编号，正文既有内容一律只做追加、未删除也未回滚
+    QUO: 取证与落盘过程上，我按 main.tex、introduction、extremal、hierarchies、smallcells、variance、unbounded、bounded 的顺序读，再读 `Main.lean` 与 compa
+    NOTE: sig=`MeasureTheory/Falconer` found at [284, 396]
+  D13-L499-I22 | stated= cur=11 ver=no
+    FIX: 统一成同一条引理实例的保守写→同一条引理实例的保守写法
+    QUO: 与论文 `04-perturbations.tex:101` 的 $U_{\mathrm{bag}}=3N(N-1)$ 相比少了因子 3，因为扰动 $g$ 的 Lipschitz 常数确实是 1（`04-perturbations.tex:
+    NOTE: sig=`\mathrm` found at [11, 30, 32, 36, 88]
+  D145-L733-I05 | stated=161;309;37 cur=237 ver=no
+    FIX: 换成 `\lvert`→`\lvert` / 改为 `\neq`→`\neq`
+    QUO: (e) 其余排版残留。把绝对值或集合基数写成 ASCII 竖线的正文行共 19 行：31、73、75、79、95、111、199、375、379、395、397、415、443、451、455、457、471、493、500，规格要求这类写
+    NOTE: sig=`\rvert` found at [237, 245, 249, 251, 269] ; author's line 161 drifted
+== fam=other n=58
+  D13-L307-I26 | stated= cur= ver=
+    FIX: 应为"经过 Lee-Sidi→"经过 Lee-Sidiropoulos"，指 dominating
+    QUO: - 1.1 节"期渡 Lee-Sidiropoulos"：应为"经过 Lee-Sidiropoulos"，指 dominating tree 的随机中间件。
+    NOTE: no verbatim signature
+  D13-L307-I27 | stated= cur= ver=
+    FIX: 应为"阶梯状并联度量"，对应→"阶梯状并联度量"，对应 GNRS 的 series-paralle
+    QUO: - 1.1 节"某些级列并联度量"：应为"阶梯状并联度量"，对应 GNRS 的 series-parallel 下界例。
+    NOTE: no verbatim signature
+  D15-L565-I04 | stated=394 cur=394 ver=
+    FIX: 应读作 `` `:230-2→`` `:230-231` ``，指向 `04-pairs.tex:
+    QUO: 2. 第 394 行的 `` `:230-231$ `` 应读作 `` `:230-231` ``，指向 `04-pairs.tex:230-231` 固定 $n$ 的那句。
+    NOTE: no verbatim signature; author's line kept
+  D15-L565-I05 | stated=428 cur=428 ver=
+    FIX: 应读作 `` `:85` `→`` `:85` ``，指向 `04-pairs.tex:85` 附
+    QUO: 3. 第 428 行的 `` `:85$ `` 应读作 `` `:85` ``，指向 `04-pairs.tex:85` 附近关于 $UP_V=0$ 的句子；同段的"It preserves diagonal factors"在 `04-p
+    NOTE: no verbatim signature; author's line kept
+  D15-L565-I06 | stated=459 cur=459 ver=
+    FIX: 应读作 `` `:166-1→`` `:166-168` ``，即 `pairs:exact-mo
+    QUO: 4. 第 459 行的 `` `:166-168$ `` 应读作 `` `:166-168` ``，即 `pairs:exact-moment` 的公式行号。
+    NOTE: no verbatim signature; author's line kept
+  D186-L338-I04 | stated= cur= ver=
+    FIX: 改成了显式数值 $t_6=6→了显式数值 $t_6=67{,}240{,}999$，读法按数值为准
+    QUO: 3. §20 中"最迟要到第七千二百万个时间单位"这一汉语数量级写法不规范，我在同句内改成了显式数值 $t_6=67{,}240{,}999$，读法按数值为准。
+    NOTE: no verbatim signature
+== fam=count n=49
+  D04-L475-I08 | stated= cur= ver=
+    FIX: 搬到第 $30$ 节末段与第→第 $30$ 节末段与第 $34$ 节题记之间，那一步归本体侧，我不
+    QUO: 其一，本节的台账数据行全部落在文件末段，与全文唯一那一份表头之间隔着第 $34$ 节的正文，按连续块计数的读数因此停在原值，行数没有减少、也没有被计入，实质侧的台账只增了 $37$ 行，每行竖线数都过了一遍量尺；要让它进入计数，正解是把第 
+    NOTE: no verbatim signature
+  D10-L1062-I02 | stated= cur= ver=
+    FIX: 记作旧稿遗留，实测不成立：全→旧稿遗留，实测不成立：全文该字符的命中行共七行，全部落在本轮新节，按
+    QUO: 一、长停顿号类别。§24 第七节把它记作旧稿遗留，实测不成立：全文该字符的命中行共七行，全部落在本轮新节，按行号为 743、792、845、883、889、1041、1058，字符总数十三枚，其中 §20 内三行、§18 与 §19 各一行
+    NOTE: no verbatim signature
+  D103-L789-I06 | stated=765 cur=765 ver=
+    FIX: 改写为"屏障因此属于被绕过的→"屏障因此属于被绕过的那一类，谈不上被突破"后得 0
+    QUO: 禁词与句式的复查结果：规格文风禁令列明的五个禁词，逐个计数检索，结果均为 0；规格禁止的对照句式（前半句否定配同一个转折连接词）按其给定的正则检索，第一次得 1（第 765 行那处涉及"屏障"与"绕过"两个说法的对照），改写为"屏障因此属于
+    NOTE: no verbatim signature; author's line kept
+  D198-L285-I04 | stated= cur= ver=
+    FIX: 应为 Lemma 3.1;"→Lemma 3.1;"Lemma 2.1"在 §15 指 build/sectio / 应为 Lemma 3.1;"→Lemma 3.1;"Lemma 2.1"在 §15 指 build
+    QUO: 3. §11 与 §13 中提到的"Lemma 2.1 的精确平均"指原文 build/sections/graph.tex:25-40 的精确平均引理,按原文分节计数其编号应为 Lemma 3.1;"Lemma 2.1"在 §15 指 b
+    NOTE: no verbatim signature
+  D20-L556-I04 | stated= cur= ver=
+    FIX: 换成约 $19{,}000$→约 $19{,}000$ 字节的更紧凑版本，其中包含对本会话刚落盘内
+    QUO: 三、落盘纪律有一次越界，在此单独申报：本会话第一次追加（§八与 §九 的初稿）单次写入约 $28{,}999$ 字节，超过单次 $25{,}000$ 字节上限；紧接着我在一次 Edit 里把这两节整段替换成约 $19{,}000$ 字节的更
+    NOTE: no verbatim signature
+  D201-L220-I04 | stated= cur=76 ver=no
+    FIX: 删掉的孤立美元号：§4 末"→的孤立美元号：§4 末"到 `:335`"后的多余 `$`、§10
+    QUO: - 正文里散落三处本应删掉的孤立美元号：§4 末"到 `:335`"后的多余 `$`、§10 首段残句"到 `:18`"后的多余 `$`（该句已被截断，见上）、§11"到 `:111`"后的多余 `$`。依规格我不回改已落盘处，仅在此声明：
+    NOTE: sig=`:111` found at [76, 116]
+== fam=banstring n=37
+  D179-L349-I03 | stated=139;147;157;174 cur=139 ver=
+    FIX: 应为 Krylov--Saf→Krylov--Safonov
+    QUO: 连接号误用：§6 第 139 行两处、§7 第 147 行两处与第 157 行一处、§8 第 174 行一处共六处人名连接号写成了半角短横（Michael–Simon、Krylov–Safanov、De Giorgi–Nash、Leray–
+    NOTE: no verbatim signature; author's line kept
+  D183-L367-I03 | stated= cur= ver=
+    FIX: 改成"也就是说"，另一处同一→"也就是说"，另一处同一四字转折语改成"得到的结论是"，一处三字因果
+    QUO: 2. 三处触犯文风禁令的中文连接词做了最小替换：一处四字转折语改成"也就是说"，另一处同一四字转折语改成"得到的结论是"，一处三字因果语改成"由此是"。语义未变。
+    NOTE: no verbatim signature
+  D20-L556-I03 | stated= cur= ver=
+    FIX: 改成"全在一条外部定理的逆否→"全在一条外部定理的逆否里"与"也因此落在 amenable 之外"
+    QUO: 二、§13.1 第五条与 §13.2 第四条各有一处命中文风禁令的二字转折连接词写法，已就地改成"全在一条外部定理的逆否里"与"也因此落在 amenable 之外"，语义不变。
+    NOTE: no verbatim signature
+  D202-L279-I02 | stated= cur=73 ver=no
+    FIX: 改写为“，并非”→“，并非” / 改为逗号，把两处禁用连接词改→逗号，把两处禁用连接词改写为“，并非”句式
+    QUO: 其一，三处在位修订。本稿在追加 §9 至 §12 的同时，对 §3、§7 末段的三处文字做过原位最小修订：把两处中文长破折号改为逗号，把两处禁用连接词改写为“，并非”句式。动因是文风禁令要求这些字符串全文零命中，而已落盘段落若保留则整体退稿
+    NOTE: sig=`，并非` found at [73, 217]
+  D211-L235-I08 | stated= cur= ver=
+    FIX: 正确写法是直接给出等价陈述：→直接给出等价陈述："我保住分离性的办法是让每个 cell 继承它所属
+    QUO: 8. §18 第三处第二段"也就是说，我保住分离性的办法"一句用了禁令表里的转折套话，正确写法是直接给出等价陈述："我保住分离性的办法是让每个 cell 继承它所属分量的身份"。
+    NOTE: no verbatim signature
+  D212-L360-I06 | stated= cur= ver=
+    FIX: 换成同义表达（例如把那类"前→同义表达（例如把那类"前项否定、后项转折"的句式改成"B 落到别处"
+    QUO: 文风闸门的修复，动了措辞、未动内容：初稿落盘后我按规格做字符串扫描，发现规格文风禁令首行所列的那类转折写法共五处（§1、§3、§4、§6、§11 各一处），第三行所列的过渡套语共四处（§3、§7、§9、§10 各一次）。这九处我逐句替换成同
+    NOTE: no verbatim signature
+== fam=anchor n=25
+  D04-L361-I03 | stated= cur= ver=
+    FIX: 搬到第 $30$ 节末段与第→第 $30$ 节末段与第 $34$ 节题记之间
+    QUO: 落错的块（本节必须申报，我不自行搬动）：第四笔与第五笔追加时我把锚点取在了第 $27$ 节末段与第 $32$ 节末段，两处都不是当时的文件末段，结果第 $31$、第 $32$、第 $33$ 三节整块落在了第 $27$ 节末段与第 $28$ 
+    NOTE: no verbatim signature
+  D162-L475-I04 | stated=5;45 cur=36 ver=no
+    FIX: 改为第 18 节台账第 5 →第 18 节台账第 5 行与第 45 行，复测后错位命中 0
+    QUO: 引用与指向类： - 前向引用核对：正文中出现的全部节号与小节号指向都在本文件里有对应实节。曾有两条错位指向，一条落在本文件没有的更大节号上，一条落在台账里不含该常数的行号上；现分别改为第 18 节台账第 5 行与第 45 行，复测后错位命中
+    NOTE: sig=`OAI/RingTheory/DirectFiniteness/Finite` found at [36, 384, 550, 551] ; author's line 5 drifted
+  D177-L324-I07 | stated= cur= ver=
+    FIX: 改为指向 §7.2→指向 §7.2
+    QUO: 6. §6.1 末尾我写了一个指向 §7 第三小节的前向引用，而 §7 实际只有两个小节，已改为指向 §7.2。
+    NOTE: no verbatim signature
+  D18-L1000-I11 | stated= cur= ver=
+    FIX: 应为 271、algebra→271、algebra.tex:130 应为 129、bimodule.tex:2 / 应为 20、bimodule→20、bimodule.tex:464 应为 465、bimodule.tex:5
+    QUO: 10. 偏离登记，三处。(a) 初次落盘时我凭记忆写错过十一处行号，都落在被引行的相邻一行（algebra.tex:270 应为 271、algebra.tex:130 应为 129、bimodule.tex:21 应为 20、bimodu
+    NOTE: no verbatim signature
+  D342-L576-I04 | stated= cur= ver=
+    FIX: 改为 `cap-multis→`cap-multiscale.tex:80` / 改为 `cap-multis→`cap-multiscale.tex:80` 这种文件与行号写法，
+    QUO: 其三，交叉引用残片类。§18 首段我留下一个由小写字母与冒号构成的素材内部标签残片，用来指称单层曲率归纳命题；它属于规格禁止抄入正文的引用形态。同一指称在本节后半与 §23 已改为 `cap-multiscale.tex:80` 这种文件与
+    NOTE: no verbatim signature
+  D357-L346-I01 | stated= cur= ver=
+    FIX: 搬到 §13 之后，块内次序→§13 之后，块内次序不变，无需改动任何一行既有内容
+    QUO: 类别一，小节次序：§14 至 §19 六节因锚点重复命中被插入在 §10 与 §11 之间，文件实读顺序为 §0 至 §10、§14 至 §19、§11 至 §13、§20 至 §23。请求本体侧把 §14 至 §19 整块搬到 §13 之
+    NOTE: no verbatim signature
+== fam=typo n=17
+  D173-L304-I06 | stated= cur= ver=
+    FIX: 应为 01-prelimin→01-preliminaries.tex:53 到 01-preliminarie / 应为 01-prelimin→01-preliminaries.tex:53 到 01-preli
+    QUO: 引用订正三：第 2 节我把 Diaconis--Shahshahani 的引注位置写成"01-preliminaries.tex:53 到 00-introduction.tex:55"，第二个文件名是笔误，应为 01-preliminar
+    NOTE: no verbatim signature
+  D206-L289-I05 | stated= cur= ver=
+    FIX: 应读作 `inertia-m→`inertia-minimality.tex:176-180`
+    QUO: 4. §15 第 6 条里"（`inertia-minimality.tex:176-180` 之前那段）"同型笔误，应读作 `inertia-minimality.tex:176-180`。
+    NOTE: no verbatim signature
+  D206-L289-I06 | stated= cur=223 ver=no
+    FIX: 写为 `in:cycle-f→`in:cycle-fabilities` / 写为 `in:cycle-f→`in:cycle-fabilities` 再自我更正，应只读作 `
+    QUO: 5. §13 开头把引理名误写为 `in:cycle-fabilities` 再自我更正，应只读作 `in:cycle-families`（`inertia-minimality.tex:115`）。
+    NOTE: sig=`in:cycle-fabilities` found at [223]
+  D231-L193-I03 | stated= cur= ver=
+    FIX: 应读作"multilinea→"multilinear 多项式"
+    QUO: 第三条：§10 有两处笔误留存原样、不改动，在此纠正：其一如"对边比特是 multiline ar 多项式"，应读作"multilinear 多项式"；其二如"两个实现相同图数据的互 disjoint 实现"，"disjoint"应读作"两
+    NOTE: no verbatim signature
+  D301-L174-I02 | stated= cur= ver=
+    FIX: 应为 Ordering），属→Ordering），属专名笔误，与文风禁令无关，阅读时按正确键名理解
+    QUO: 1. §3 第三段把伴发手稿的条目键名拼错了一处（应为 Ordering），属专名笔误，与文风禁令无关，阅读时按正确键名理解。
+    NOTE: no verbatim signature
+  D358-L144-I05 | stated= cur= ver=
+    FIX: 应为"generic 代数可→"generic 代数可分"（对应原文 generic algebr
+    QUO: 类别四，大小写笔误：§7 第四段"GENERIC 代数可分"应为"generic 代数可分"（对应原文 generic algebra is separable，`build/sections/07_extensions.tex:447-4
+    NOTE: no verbatim signature
+== fam=table n=9
+  D12-L522-I16 | stated= cur=6 ver=no
+    FIX: 换成正式排版，同时把每一步的→正式排版，同时把每一步的出处钉到 `paper.tex` 行号，后面
+    QUO: 旧稿第 0 节我用的箭头是 Unicode 的 `⟺`、`⟹`，长度记号是裸竖线。这里在同一批论断上换成正式排版，同时把每一步的出处钉到 `paper.tex` 行号，后面台账表就沿用这套记法：
+    NOTE: sig=`paper.tex` found at [6, 362, 369, 373, 374]
+  D319-L178-I04 | stated= cur= ver=
+    FIX: 换成绝对值约定要求的写法，含→绝对值约定要求的写法，含义仍是同一个量
+    QUO: 其二，绝对值竖线记号。§6 一处集合基数的记号、§8 一处长度记号，原本写成竖线形式，我换成绝对值约定要求的写法，含义仍是同一个量。
+    NOTE: no verbatim signature
+  D346-L439-I03 | stated= cur= ver=
+    FIX: 应读作"不相交"，全格读法为→"不相交"，全格读法为：$n-1$ 个两两不相交的红 $K_{m-1
+    QUO: 其二，"下界染色"行第二格中的那个英文词应读作"不相交"，全格读法为：$n-1$ 个两两不相交的红 $K_{m-1}$，团间全蓝。两处原文照留，以本条为准。另记：正文有两条以坚线字符开头的散文行（分属 §7 与 §8 的句内式），它们属于行
+    NOTE: no verbatim signature
+  D349-L575-I03 | stated= cur= ver=
+    FIX: 统一为限制竖线形式，此后的正→限制竖线形式，此后的正文（§15 等）已统一
+    QUO: 其二，§6 末尾的压缩行列式里，限制算子一处用了别的记号并附带了口径说明；按规格该记号应统一为限制竖线形式，此后的正文（§15 等）已统一。两处所指算子相同，不构成数学差异。
+    NOTE: no verbatim signature
+  D388-L620-I08 | stated= cur= ver=
+    FIX: 应为"裸竖线"，此处用代号是→"裸竖线"，此处用代号是为了避免在同一段里重复同一字形
+    QUO: 说明定位：上面补记里的"裸X线云云"指的是同节"竖线合规"条目中那个竖线类名词的第二种写法，正写应为"裸竖线"，此处用代号是为了避免在同一段里重复同一字形。这是本节最后一处更正，台账表体到此为止不再动。
+    NOTE: no verbatim signature
+  D41-L779-I01 | stated= cur= ver=
+    FIX: 换成"记号"，正文里那份五列→"记号"，正文里那份五列规格表头仍只有第 15 节一处，本轮不重抄、
+    QUO: 本节把本轮追加（第 19 到第 28 节）新增的判断逐行归档。位置栏全部是本会话真实读到的文件行号：四个分节文件与主文件各按全份读过，区间取自其中的具体段落。表头首格换成"记号"，正文里那份五列规格表头仍只有第 15 节一处，本轮不重抄、不
+    NOTE: no verbatim signature
+== fam=english n=7
+  D137-L928-I02 | stated= cur= ver=
+    FIX: 该写"步长"），第 28 节→"步长"），第 28 节正文有一枚 rare-fast（该写"稀有快
+    QUO: 其一，英文残留两处：第 25 节正文有一枚 mesh（该写"步长"），第 28 节正文有一枚 rare-fast（该写"稀有快速跨越"）。另有 Gamma 一词沿用旧稿既有术语，第 20、21、22 节里已经在用，本笔保持同形以维持术语一致
+    NOTE: no verbatim signature
+  D324-L392-I05 | stated= cur= ver=
+    FIX: 应读作"更锐利的 Liebe→"更锐利的 Liebeck--Shalev 估计"
+    QUO: 第四类是中英夹杂，这一类我不动，只在下面登记应读作什么。§7 里"这个推法 my 论文里的位置有点特殊"应读作"这个推法在论文里的位置有点特殊"；§9 里"只条件在终点上会 due to 凸性把期望距离压得更小"应读作"只条件在终点上会由凸
+    NOTE: no verbatim signature
+  D388-L508-I08 | stated= cur= ver=
+    FIX: 应为"含（inclusion→"含（inclusion）" / 应为"那对配对的界"→"那对配对的界"
+    QUO: - 笔误串行清单（正文已落盘，不改动，此处备案）：§0 第一段"单态含"应为"含（inclusion）"；§0 同段"合子代数量子代数"应为"合子子代数"；§2.3 首句"我最初的算算是"应为"我最初的打算是"；§3.5 末句"那对双双配对
+    NOTE: no verbatim signature
+  D407-L281-I06 | stated= cur= ver=
+    FIX: 应读作"熔合""加上 nef→"熔合""加上 nef 对偶""用固定 Kahler 类截出紧凸截面
+    QUO: 五，§2 末段与 §8 末段各有一处中英文夹杂（一个连接动词、一个"加 nef 对偶"前的"切片"词），分别应读作"熔合""加上 nef 对偶""用固定 Kahler 类截出紧凸截面"。
+    NOTE: no verbatim signature
+  D434-L601-I04 | stated= cur= ver=
+    FIX: 应为"该层到其箱"，位置 `→"该层到其箱"，位置 `D434-积分期望阈值处的图分解.md:37
+    QUO: 3. §20 末段有一处中英夹杂（"该层into箱"），应为"该层到其箱"，位置 `D434-积分期望阈值处的图分解.md:373` 段末。
+    NOTE: no verbatim signature
+  D475-L215-I05 | stated= cur=5 ver=no
+    FIX: 应为书目文件 `biblio→书目文件 `bibliography.tex` 的 75-79 行）
+    QUO: 其四，未译英文残留约十处（按位置类别）：§1 括注处一个嵌入动词、§1 问题编号处一个英文词、§3 书名处一个英文词、§4 一个拼错的文献文件名（正确应为书目文件 `bibliography.tex` 的 75-79 行）、§5 一个动词、
+    NOTE: sig=`bibliography.tex` found at [5, 23, 27, 37, 41]
+== fam=ordermove n=5
+  D191-L839-I03 | stated= cur=14 ver=no
+    FIX: 移到探针行之后，把 §1 正→探针行之后，把 §1 正文与 §2 整块上移到 §0 之后，
+    QUO: 二，块位置。第二次追加把 §3、§4、§5 插在 §0 之前；第三次追加把 §6、§7 插在 §1 之前， 并使 §1 的标题行在替换中丢失。为满足"§0 在前、`## §` 编号连续"两条硬要求， 我做了三次 Edit 搬运：把 §0 整
+    NOTE: sig=`## §` found at [14, 36, 67, 100, 138]
+  D199-L253-I05 | stated= cur= ver=
+    FIX: 换成'独立于 $k$ 的单一→'独立于 $k$ 的单一 $g$ 同时破所有 $k$'会撞墙"，属于 / 换成'先 $g$ 后所有 $→'先 $g$ 后所有 $k$'"即可，其余推导与后续引用不变，主定理
+    QUO: 五、§22 第十二条的开头一句"把'$g_k$ 在 $k$ 之前选'这条量词顺序反过来"表述含混。论文里主定理原句是"the metric is chosen after $k$ and may depend on it"（sections
+    NOTE: no verbatim signature
+  D371-L826-I04 | stated= cur= ver=
+    FIX: 应为 §0 至 §17 递增→§0 至 §17 递增、台账置于 §17 之后或保留 §16 原位由闸门判定 / 应为 §0 至 §17 递增→§0 至 §17 递增、台账置于 §17 之后或保留 §16 原位由
+    QUO: 其二，§5 的末段被劈成两半，前半在 §5 原位（止于行 277 附近）， 后半四行（行 826 至行 829）滞留在全文件末尾、§8 之后。 内容一字未丢、未改，只是位置错。我不做整档重写，请把这三段（§6, §7, §8）与那四行 交机
+    NOTE: no verbatim signature
+  D569-L265-I01 | stated= cur= ver=
+    FIX: 换成了 §28 至 §30 →了 §28 至 §30 的新文本，结果文件一度从 §26 跳到 §2
+    QUO: 原 §27（勘误附录，三笔补记）连同其标题在本会话倒数第二次追加中被我误删：那次 Edit 的锚取块过宽，把 §26 之后、原 §27 全文一并换成了 §28 至 §30 的新文本，结果文件一度从 §26 跳到 §28。这属于禁止的删除与重
+    NOTE: no verbatim signature
+  D605-L332-I05 | stated= cur= ver=
+    FIX: 去掉有限前缀后只剩小步，见 →有限前缀后只剩小步，见 `08-completion.tex:146
+    QUO: 基本程序不抽取素除子，圈秩引理取 $k=3$ 给出负收缩只有有限多个，故去掉有限前缀后只剩小步，见 `08-completion.tex:146--151`。在纯小步的尾上，特殊终止（见 `02-preliminaries.tex:220-
+    NOTE: no verbatim signature
+== fam=cite n=4
+  D251-L432-I08 | stated= cur= ver=
+    FIX: 改成中性句式"重心不在……它→中性句式"重心不在……它落在……"，技术内容、公式与行号引用一字未动
+    QUO: 7. 违例与就地修复：§30 讲第三个转折的那一句原带一组两字转折连接词的连读形式，属文风禁令表第一类，收工前的全量扫描才把它抓到。我把该句改成中性句式"重心不在……它落在……"，技术内容、公式与行号引用一字未动，这是本节以外全文唯一一处就
+    NOTE: no verbatim signature
+  D279-L335-I03 | stated= cur= ver=
+    FIX: 改写为"绕开直接算，做法是"→"绕开直接算，做法是"），句子命题内容与行号引用未动
+    QUO: 三，本节之外有一次就地改动需要申报：§7 首段原本含一个两字转折连接词，落在禁令的第一类里，为了让本文件的该类命中数为零，我在追加本节前对该短语做了一次最小替换（把句子里的连接结构改写为"绕开直接算，做法是"），句子命题内容与行号引用未动。
+    NOTE: no verbatim signature
+  D298-L392-I02 | stated= cur= ver=
+    FIX: 改回单侧上界加逐点下界，旧句→单侧上界加逐点下界，旧句不回改，以 §19 附注为准
+    QUO: 先记三笔勘误，均按类别申报。第一类，记号形状转录过强一处：§17 末段把 $M_0$ 写成双侧一致界，本轮在 §19 附注里按 annuli.tex:701--702 的原文改回单侧上界加逐点下界，旧句不回改，以 §19 附注为准。第二类，
+    NOTE: no verbatim signature
+  D356-L837-I01 | stated=180 cur=180 ver=
+    FIX: 归位到 §6 末尾、§7 标→§6 末尾、§7 标题之前： / 应为 "本单位于其他队列的行→"本单位于其他队列的行号"，登记串本身"其他队列第 180 行号"逐
+    QUO: - 类别：续写覆盖事故。第三次追加时误将 §6 末段整段作为锚点替换掉， 该段原文在此照抄补录，供本体侧机械清理时归位到 §6 末尾、§7 标题之前： "我对这一节的整体印象：它把 Bourgain--Guth 与 Kim 附录里的稀疏球策
+    NOTE: no verbatim signature; author's line kept
+== fam=probe n=2
+  D370-L415-I07 | stated=91 cur=91 ver=
+    FIX: 可以安全删除
+    QUO: 十二、探针标记。第 91 行留着一条 HTML 注释形式的落盘探针标记（"仅作机制校验"那句），它是我做 Edit 机制校验时留下的，可以安全删除；我不再改动任何已落盘内容，所以在此申报，交本体侧处理。
+    NOTE: no verbatim signature; author's line kept
+  D431-L151-I06 | stated= cur=67 ver=no
+    FIX: 应为 `pmatrix`→`pmatrix` / 写为缺字形式（应为 `pma→缺字形式（应为 `pmatrix` 环境的完整闭合），纯排版误字、不
+    QUO: 3. §7 末段矩阵环境名一处闭合标记误写为缺字形式（应为 `pmatrix` 环境的完整闭合），纯排版误字、不伤数学内容，移交机械修正通道。
+    NOTE: sig=`pmatrix` found at [67, 77, 105]

@@ -1,0 +1,66 @@
+papers read: 724
+
+call (函数调用原样印出): 13 处 / 4 篇
+   A-nondegenerate-counterexample-to-the-Morse- p1 | The Morse-number form of the Arnold conjecture asks whether #Fix0(𝜙1
+   A-nondegenerate-counterexample-to-the-Morse- p1 | #Fix0(𝜙1
+   A-nondegenerate-counterexample-to-the-Morse- p15 | #Fix0(𝜙1
+   A-nondegenerate-counterexample-to-the-Morse- p20 | #Fix0(𝜙1
+   Hamiltonian-Fixed-Points-Below-the-Stable-Mo p1 | #Fix0(𝜙1
+   Hamiltonian-Fixed-Points-Below-the-Stable-Mo p1 | #Fix0(𝜙1
+
+dollar (数学定界符 $ 上页): 56 处 / 2 篇
+   The-exact-reconstruction-threshold-for-the-t p46 | for j in $(seq -1 26); do ./grid '$j'; done
+   The-exact-reconstruction-threshold-for-the-t p49 | for j in 0 1 2; do ./interval '$j'; done
+   The-exact-reconstruction-threshold-for-the-t p49 | for j in -1 $(seq 0 26); do ./grid '$j'; done
+   standalone-mezard-parisi-formula p1 | Fix an even integer $p\ge2$, a real number $\alpha>0$, a random function $\theta:\{-1,1\}
+   standalone-mezard-parisi-formula p1 | ^p\to\mathbb R$, and a real random variable $h$. Assume
+   standalone-mezard-parisi-formula p1 | $$
+
+angle (标签 <name> 上页): 0 处 / 0 篇
+
+bs2 (双反斜杠 \\ 上页): 1 处 / 1 篇
+   standalone-mezard-parisi-formula p2 | \Phi_r=\inf_{\substack{\zeta\in\mathcal M_{r+1}\\0<m_1<\cdots<m_r<1}}\mathcal B_r(\zeta,m).
+
+bscmd (反斜杠控制词上页): 879 处 / 247 篇
+   A-C1-Counterexample-to-the-Entropy-Conjectur p16 | [10] M. Misiurewicz, “A short proof of the variational principle for a \mathbb Z_+^N action on a
+   A-CH-Obstruction-to-a-Prescribed-Categoricit p29 | B. T. Hart and S. Shelah, “Categoricity over 𝑃 for first order 𝑇 or categoricity for \phi\in
+   A-CH-Obstruction-to-a-Prescribed-Categoricit p29 | L_{\omega_1\omega} can stop at \aleph_k while holding for \aleph_0,\ldots,\aleph_{k-1}”, Israel
+   A-Codimension-One-Bound-for-the-Singular-Set p36 | [16] C. Brena, C. De Lellis, and F. Franceschini, “C^\infty rectifiability of stationary varifolds”. [Online].
+   A-Counterexample-to-Kaplanskys-Direct-Finite p29 | [21] OpenAI, “A universal group of type F_\infty”. 2026.
+   A-Counterexample-to-Kuroshs-Division-Ring-Pr p45 | C. Procesi, “The invariant theory of n\times n matrices”, Advances in Mathematics, vol. 19, no. 3,
+
+bsbrk (字面 \[ \] \( \)): 25 处 / 14 篇
+   Cardys-formula-for-critical-Poisson-Voronoi- p25 | 𝑗̂𝑒= 𝑋𝑃( 𝟏ℬ︀𝑒\(𝐵𝑠∪𝐵𝑡) ),
+   Critical-bond-and-site-percolation-on-the-cu p5 | 𝐷𝑈= 𝟏{𝑠∉𝑊𝑈}{𝐹(𝐶𝐺\𝑊𝑈(𝑠)) −𝐹(𝐶𝐺\(𝑊𝑈∪𝑈)(𝑠))},
+   Critical-bond-and-site-percolation-on-the-cu p5 | 𝐶𝐺\(𝑊𝑈∪𝑈)(𝑠) = 𝐶𝐺\𝑈(𝑠).
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \node at (0,-1.15) {\(\name\)-plane};
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \node at (.05,1.4) {\(E+u_0\)};
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \node at (4.15,1.4) {\(E+v_0\)};
+
+brace (花括号包着的调用参数): 19 处 / 18 篇
+   A-classification-of-finite-Euclidean-Ramsey- p24 | det 𝑀 allows us to cancel the tensor evaluation error 𝐷𝑏 through the selected columns: the adjugate
+   A-power-saving-for-intersective-polynomial-d p13 | product using any subset of the four corners again comes from a graph of the stated kind: an unordered
+   Choiceless-polynomial-time-with-counting-doe p2 | Any input order may be used to list the rows and columns: changing it does not change consistency. ◻
+   Deforming-hypersymplectic-four-manifolds-to- p48 | of this kind: start with any closed representative and solve (7.13) for an exact correction. Uniqueness
+   Exact-Fourier-certificates-for-complex-Hadam p27 | Equation numbers in the code comments use the original numbering: the reference in expand_degree1
+   Finite-Congruence-Lattices-Characterization- p111 | nontrivial-adjoint kind: on an odd orthogonal plane such a field has the two singular lines as eigenspaces
+
+void (引用取不到值): 0 处 / 0 篇
+
+tilde (硬空格 ~ 上页): 435 处 / 227 篇
+   A-C1-Counterexample-to-the-Entropy-Conjectur p16 | https://pi.math.cornell.edu/~hatcher/AT/AT.pdf
+   A-Complete-Local-Domain-Without-a-Small-Cohe p16 | [18] F. Hirzebruch, “Arrangements of lines and algebraic surfaces,” in Arithmetic and Geometry, Vol.~II,
+   A-Conditional-Reduction-for-Algebraic-Kuga-S p25 | Chapter II, Theorems 5.3 and 8.8; Chapter VI, §9.2. https://people.math.harvard.edu/~demarco/
+   A-Conditional-Reduction-for-Algebraic-Kuga-S p25 | 1993, Lemma 9.2, p.  77. Corrected electronic edition: https://www.mat.univie.ac.at/~michor/
+   A-Counterexample-to-Kaplanskys-Direct-Finite p28 | tions,” in Infinite and Finite Sets, Vol.~II, vol. 10, in Colloquia Mathematica Societatis János Bolyai,
+   A-Counterexample-to-Kaplanskys-Direct-Finite p28 | ~p_erdos/1975-34.pdf
+
+hash (裸井号 # 上页): 2125 处 / 331 篇
+   A-C1-Counterexample-to-the-Entropy-Conjectur p12 | #{0 ≤𝑖< 𝑟: 𝐹𝑚𝑖𝑥∉𝑉} ≤𝜏𝑟+ 𝐽
+   A-C1-Counterexample-to-the-Entropy-Conjectur p12 | #{0 ≤𝑖< 𝑘𝑥: 𝐹𝑚𝑖𝑥∉𝑉} < 𝜏𝑘𝑥.
+   A-Codimension-One-Bound-for-the-Singular-Set p3 | then 𝑉𝑟= (𝜂𝑟)#𝑉 is the varifold pushforward, whose weight is 𝑟−𝑚(𝜂𝑟)#𝜇. Translated blow-ups will
+   A-Codimension-One-Bound-for-the-Singular-Set p4 | 𝑉𝑝,𝑟= (𝜂𝑝,𝑟)#𝑉.
+   A-Codimension-One-Bound-for-the-Singular-Set p4 | Thus the weight of 𝑉𝑝,𝑟 is 𝑟−𝑚(𝜂𝑝,𝑟)#𝜇. After translating 𝑝 to the origin we abbreviate 𝑉𝑝,𝑟 to 𝑉𝑟. We use
+   A-Codimension-One-Bound-for-the-Singular-Set p5 | 𝑖(𝜂𝑝,𝑟𝑖)# ( ℋ︀𝑠
+
+rawtex (井号转义写法 #\;): 0 处 / 0 篇

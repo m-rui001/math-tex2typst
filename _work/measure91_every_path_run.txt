@@ -1,0 +1,28 @@
+== A: `every path/.style={line width=2pt}` on the picture brackets -- what does it reach?
+   plain path                  l w=1.993 r=[149.71, 133.77, 319.79, 133.77]
+   statement writes 0.4pt      l w=0.398 r=[148.91, 134.57, 318.99, 134.57]
+   statement writes thin       l w=0.398 r=[148.91, 134.57, 318.99, 134.57]
+   to/bend                     c w=1.993 r=[149.71, 125.8, 319.79, 158.96]
+   arrow                       l w=1.993 r=[149.71, 133.77, 318.34, 133.77]; cc w=1.594 r=[315.71, 130.26, 318.99, 137.28]
+   double                      ll w=1.993 r=[149.71, 125.8, 319.79, 154.14]
+   fill                        lll w=None r=[148.71, 124.8, 318.79, 153.15]
+   node frame                  re w=1.993 r=[149.71, 125.8, 163.82, 139.25]
+   circle node                 cccc w=1.993 r=[149.71, 125.8, 169.13, 145.22]
+   edge between nodes          l w=1.993 r=[163.82, 131.53, 318.0, 131.53]
+
+== B: precedence -- `every path` against the head's own key and an invoked style
+   head key vs every path                   every path/.style={line width=2pt}, line w -> l w=1.993
+   invoked style vs every path              every path/.style={line width=2pt}, my/.st -> l w=0.797
+   same pair, written the other way round   my/.style={line width=0.8pt}, every path/. -> l w=0.797
+   every path carries a NAME                every path/.style={ultra thick}            -> l w=1.594
+   statement name vs every path length      every path/.style={line width=2pt}         -> l w=0.100
+   every node on a frame                    every node/.style={line width=2pt}         -> re w=1.993
+   every node must NOT reach a path         every node/.style={line width=2pt}, line w -> l w=0.996
+   every path width with a head cap key     every path/.style={line width=2pt}, line c -> l w=1.993
+
+== C: `every edge` -- is it the same rule as `every path`?
+   an edge written inside a path \draw (0,1) -- (6,1);                                    -> 0.398
+   an `edge` operator           \path (0,1) edge (6,1);                                  -> NO RULE
+   edge drawn as a path         \draw (0,1) edge (6,1);                                  -> NO RULE
+   both, plain path             \draw (0,1) -- (6,1);                                    -> 0.398
+   both, edge operator          \draw (0,1) edge (6,1);                                  -> NO RULE

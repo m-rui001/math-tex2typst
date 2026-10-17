@@ -1,0 +1,80 @@
+D238-L298
+   file          D238-平方差自由集的固定幂节省.md
+   line          298
+   OLD           '\\lvert\\mathcal Z_{\\math P}((g_v))\\rvert'
+   NEW           '\\lvert\\mathcal Z_{\\mathcal P}((g_v))\\rvert'
+   OLD hits whole-file=1  on-that-line=1   NEW hits whole-file=0
+   OLD bytes=39  NEW bytes=42  delta=+3 (per occurrence, occurrences on line=1)
+   dollars before=4 after=4  parity_before=0 parity_after=0
+   line after replacement: $\lvert\mathcal Z_{\mathcal P}((g_v))\rvert\le\prod_v Z_{\mathcal P}(g_v)^{1/d}$。证明的第一层：乘积律 $\mu_{\mathcal P}$ 在
+
+D106-L1750
+   file          D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md
+   line          1750
+   OLD           '$(\\root h)^3$'
+   NEW           '$(\\mathtt{root}\\ h)^3$'
+   OLD hits whole-file=1  on-that-line=1   NEW hits whole-file=0
+   OLD bytes=13  NEW bytes=22  delta=+9 (per occurrence, occurrences on line=1)
+   dollars before=8 after=8  parity_before=0 parity_after=0
+   line after replacement: （这里的 $8a_4$ 就是 $2b_0$，公共部分；奇次部分的分母 $(\mathtt{root}\ h)^3$ 与 $u^{3/2}$ 对应），
+
+D106-L1873
+   file          D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md
+   line          1873
+   OLD           '$\\root h$'
+   NEW           '$\\mathtt{root}\\ h$'
+   OLD hits whole-file=1  on-that-line=1   NEW hits whole-file=0
+   OLD bytes=9  NEW bytes=18  delta=+9 (per occurrence, occurrences on line=1)
+   dollars before=6 after=6  parity_before=0 parity_after=0
+   line after replacement: 从 $a_3<0,a_1\ge0,a_5\ge0$ 得 $0<\text{third }a\,h$，分母 $\mathtt{root}\ h$ 的幂用 `div_pos`+`nlinarith`），
+
+D106-L1913
+   file          D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md
+   line          1913
+   OLD           '(-a_1)/(\\root T)^3\\le'
+   NEW           '(-a_1)/(\\mathtt{root}\\ T)^3\\le'
+   OLD hits whole-file=1  on-that-line=1   NEW hits whole-file=0
+   OLD bytes=21  NEW bytes=30  delta=+9 (per occurrence, occurrences on line=1)
+   dollars before=4 after=4  parity_before=0 parity_after=0
+   line after replacement: $8a_4+(-a_1)/(\mathtt{root}\ T)^3\le\text{curvature }a\,h$，即 $\delta$ 的具体形式取为
+
+D106-L1914
+   file          D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md
+   line          1914
+   OLD           '$(-a_1)/(\\root T)^3>0$'
+   NEW           '$(-a_1)/(\\mathtt{root}\\ T)^3>0$'
+   OLD hits whole-file=1  on-that-line=1   NEW hits whole-file=0
+   OLD bytes=22  NEW bytes=31  delta=+9 (per occurrence, occurrences on line=1)
+   dollars before=2 after=2  parity_before=0 parity_after=0
+   line after replacement: $(-a_1)/(\mathtt{root}\ T)^3>0$，用 `root h\le\root T` 与 `pow_le_pow_left₀`、`div_le_div` 单调化，
+
+D77-L496(sugg)
+   file          D77-特征二下的五边形退化与Deligne--Drinfeld猜想证明反推.md
+   line          496
+   OLD           'L_n^{\\two}'
+   NEW           'L_n^{(2)}'
+   OLD hits whole-file=1  on-that-line=1   NEW hits whole-file=0
+   OLD bytes=10  NEW bytes=9  delta=-1 (per occurrence, occurrences on line=1)
+   dollars before=86 after=86  parity_before=0 parity_after=0
+   line after replacement: 长度侧的分次母函数带 $v$: $L(u,v)=\sum_{k\ge1}\frac{\mu(k)}{k}\log\frac{1}{1-vV(u^k)}$, 系数 $\sum_rd_{n,r}u^nv^r$ 里 $v$ 就是生成元枚数即 $B$-count。上界一侧的等号在 cor:dimension-bound (05-image.tex:386) 是逐 $r$ 注入 $\operatorname{gr}_F^r\overline L_n\lhook\joinrel\to\mathfrak f_{\mathrm{odd},n,r}$ (05:390-392), 权 $n$ 上求和吃 $\sum_r$ 有限性 (由 $3r\le n$ 卡住)。我第一版没意识到 $d_n$ 与二元自由 Lie $\dim_{\mathbb Q}L_n^{(2)}=\frac1n\sum_{d\mid n}\m
+
+D77-L552a(sugg)
+   file          D77-特征二下的五边形退化与Deligne--Drinfeld猜想证明反推.md
+   line          552
+   OLD           'L_1^{\\two}=2'
+   NEW           'L_1^{(2)}=2'
+   OLD hits whole-file=1  on-that-line=1   NEW hits whole-file=0
+   OLD bytes=12  NEW bytes=11  delta=-1 (per occurrence, occurrences on line=1)
+   dollars before=44 after=44  parity_before=0 parity_after=0
+   line after replacement: 完成性一侧 $\widehat W=\prod_nW_n$ (01:39) 用逐权有限维 (08:207) 与固定权里只出现有限多对正权 (08:209-210); $\operatorname{Lie}_\mathbb Q\langle e_3,e_5,\ldots\rangle\to V$ 逐权给 $\sigma_{2k+1}$ (08:192-196), Hall 基像独立由前导项对账 (08:198-200), 于是同构在权分次拓扑下连续, 与它的逆互成连续映射 (08:211-212)。权 $1,2$ 的入口: $\dim_\mathbb Q W_1=\dim_\mathbb Q W_2=0$ (lem:low-weights, 02:13), 二元自由 Lie 侧 $\dim_\mathbb Q L_1^{(2)}=2$ (即 $x,y$) 与 $\dim_\mathbb Q 
+
+D77-L552b(sugg)
+   file          D77-特征二下的五边形退化与Deligne--Drinfeld猜想证明反推.md
+   line          552
+   OLD           'L_2^{\\two}=1'
+   NEW           'L_2^{(2)}=1'
+   OLD hits whole-file=1  on-that-line=1   NEW hits whole-file=0
+   OLD bytes=12  NEW bytes=11  delta=-1 (per occurrence, occurrences on line=1)
+   dollars before=44 after=44  parity_before=0 parity_after=0
+   line after replacement: 完成性一侧 $\widehat W=\prod_nW_n$ (01:39) 用逐权有限维 (08:207) 与固定权里只出现有限多对正权 (08:209-210); $\operatorname{Lie}_\mathbb Q\langle e_3,e_5,\ldots\rangle\to V$ 逐权给 $\sigma_{2k+1}$ (08:192-196), Hall 基像独立由前导项对账 (08:198-200), 于是同构在权分次拓扑下连续, 与它的逆互成连续映射 (08:211-212)。权 $1,2$ 的入口: $\dim_\mathbb Q W_1=\dim_\mathbb Q W_2=0$ (lem:low-weights, 02:13), 二元自由 Lie 侧 $\dim_\mathbb Q L_1^{\two}=2$ (即 $x,y$) 与 $\dim_\mathbb Q
+

@@ -1,0 +1,650 @@
+========= A-boundary-field-gap-for-the-spin-one-Heisenberg-chain-September-24-2026 1017 unexpected argument
+LINE:   $ E_0^(upright(o p p)) ( m ) + a m lt.eq frac(chevron.l psi_m , ( H_m^(upright(o p p)) + a m I ) psi_m chevron.r, chevron.l psi_m , psi_m chevron.r) = frac(H_m^(*), 500000 V_m) < 202100 / 500000 = alpha . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:116
+  │
+3 │   $ E_0^(upright(o p p)) ( m ) + a m lt.eq frac(chevron.l psi_m , ( H_m^(upright(o p p)) + a m I ) psi_m chevron.r, chevron.l psi_m , psi_m chevron.r) = frac(H_m^(*), 500000 V_m) < 202100 / 500000 = alpha . $
+  │                                                                                                                     ^^^^^^^^^^^^^^^
+========= A-CH-Obstruction-to-a-Prescribed-Categoricity-Threshold-September-24-2026 33 unexpected argument
+LINE: $ "(1.2)" quad upright("If ") K upright(" is categorical in some ") lambda gt.eq H ( K ) upright("","")\
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:0
+  │
+3 │ $ "(1.2)" quad upright("If ") K upright(" is categorical in some ") lambda gt.eq H ( K ) upright("","")\
+  │ ^
+========= A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in-Spatial-Dimensions-at-Least-Four-October-5-2026 374 unexpected argument
+LINE:   $ - Delta_g h - lambda B frac(chevron.l upright(d) phi.alt_R , upright(d) h chevron.r_g, sqrt(| upright(d) phi.alt_R |_g^2 + a_0^2)) , #h(2em) partial_nu h = 0 , quad h |_(S_R) = 0 . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:91
+  │
+3 │   $ - Delta_g h - lambda B frac(chevron.l upright(d) phi.alt_R , upright(d) h chevron.r_g, sqrt(| upright(d) phi.alt_R |_g^2 + a_0^2)) , #h(2em) partial_nu h = 0 , quad h |_(S_R) = 0 . $
+  │                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+========= A-closed-Ricci-flow-with-bounded-scalar-curvature-and-finite-time-curvature-blowup-September-24-2026 393 unexpected argument
+LINE: $ c ( x , t ) = frac(2 chevron.l "Rm" ( "Ric" ) , "Ric" chevron.r, | "Ric" |^2) quad upright("where ") | "Ric" | > 0 $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:67
+  │
+3 │ $ c ( x , t ) = frac(2 chevron.l "Rm" ( "Ric" ) , "Ric" chevron.r, | "Ric" |^2) quad upright("where ") | "Ric" | > 0 $
+  │                                                                    ^^^^^^^^^^^
+========= A-counterexample-to-Hadwigers-conjecture-September-23-2026 2049 unknown variable
+LINE:   $ "(14.5)" quad beta lt.eq h_j^theta lt.eq 1 quad upright(""almosteverywhere,foralmostevery"") theta . $ <eq:rare-unary-density-lower>
+error: unknown variable: almosteverywhere
+  ┌─ \\?\E:\math\_work\iso.typ:3:62
+  │
+3 │   $ "(14.5)" quad beta lt.eq h_j^theta lt.eq 1 quad upright(""almosteverywhere,foralmostevery"") theta . $ <eq:rare-unary-density-lower>
+  │                                                               ^^^^^^^^^^^^^^^^
+  │
+  = hint: if you meant to display multiple letters as is, try adding spaces between each letter: `a l m o s t e v e r y w h e r e`
+  = hint: or if you meant to display this as text, try placing it in quotes: `"almosteverywhere"`
+========= A-counterexample-to-Tachikawas-second-conjecture-September-23-2026 204 unexpected argument
+LINE:   $ frac("Hom"_G #scale(x: 120%, y: 120%)[(] N , ker ( P_0 arrow.r P_(- 1) ) #scale(x: 120%, y: 120%)[)], "im" #scale(x: 120%, y: 120%)[(] "Hom"_G ( N , P_1 ) arrow.r "Hom"_G ( N , ker ( P_0 arrow.r P_(- 1) ) ) #scale(x: 120%, y: 120%)[)]) . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:106
+  │
+3 │   $ frac("Hom"_G #scale(x: 120%, y: 120%)[(] N , ker ( P_0 arrow.r P_(- 1) ) #scale(x: 120%, y: 120%)[)], "im" #scale(x: 120%, y: 120%)[(] "Hom"_G ( N , P_1 ) arrow.r "Hom"_G ( N , ker ( P_0 arrow.r P_(- 1) ) ) #scale(x: 120%, y: 120%)[)]) . $
+  │                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+========= A-counterexample-to-the-Colin-de-Verdiere-chromatic-conjecture-September-23-2026 435 unexpected argument
+LINE: $ limsup_j frac("Tr" chevron.l H_j , H_j chevron.r, v_j) lt.eq eta , $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:52
+  │
+3 │ $ limsup_j frac("Tr" chevron.l H_j , H_j chevron.r, v_j) lt.eq eta , $
+  │                                                     ^^^
+========= A-density-uniform-condensate-bound-for-dilute-Bose-gases-September-27-2026 34 unexpected argument
+LINE: $ frac(chevron.l u_0 , gamma_(N , L , T)^(( 1 )) u_0 chevron.r, N) gt.eq c_(*) ( v ) . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:64
+  │
+3 │ $ frac(chevron.l u_0 , gamma_(N , L , T)^(( 1 )) u_0 chevron.r, N) gt.eq c_(*) ( v ) . $
+  │                                                                 ^
+========= A-dimension-free-logarithmic-Sobolev-inequality-for-subgaussian-log-concave-measures-September-23-2026 32 unexpected argument
+LINE: $ "(1.1)" quad sup_(| theta | = 1) bb(E) exp #h(-1em) (frac(chevron.l X , theta chevron.r^2, a^2)) lt.eq 2 . $ <eq:intro-subgaussian>
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:93
+  │
+3 │ $ "(1.1)" quad sup_(| theta | = 1) bb(E) exp #h(-1em) (frac(chevron.l X , theta chevron.r^2, a^2)) lt.eq 2 . $ <eq:intro-subgaussian>
+  │                                                                                              ^^^
+========= A-finite-Smith-Toda-complex-V4-at-the-prime-1009-September-23-2026 318 unexpected argument
+LINE:   $ p^2 - 27 / 2 p - 9 = frac(2 , 008 , 901, 2) > 0 . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:40
+  │
+3 │   $ p^2 - 27 / 2 p - 9 = frac(2 , 008 , 901, 2) > 0 . $
+  │                                         ^^^
+========= A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026 866 unexpected slash
+LINE: $ "Div"_P ( X / S ) times_S X_(/ S)^(\[ r_(upright(l o w)) \]) , $
+error: unexpected slash
+  ┌─ \\?\E:\math\_work\iso.typ:3:31
+  │
+3 │ $ "Div"_P ( X / S ) times_S X_(/ S)^(\[ r_(upright(l o w)) \]) , $
+  │                                ^
+========= A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026 887 unexpected slash
+LINE: $ rho : cal(Q)_(upright(l o w)) = "Div"_P ( X / S ) times_S X_(/ S)^(\[ r_(upright(l o w)) \]) arrow.r "Div"_P ( X / S ) $
+error: unexpected slash
+  ┌─ \\?\E:\math\_work\iso.typ:3:63
+  │
+3 │ $ rho : cal(Q)_(upright(l o w)) = "Div"_P ( X / S ) times_S X_(/ S)^(\[ r_(upright(l o w)) \]) arrow.r "Div"_P ( X / S ) $
+  │                                                                ^
+========= A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026 919 unexpected slash
+LINE: For a smooth morphism with a relative perfect obstruction theory, the obstruction sheaf is locally free and its virtual pullback is smooth pullback capped with its top Chern class. This follows by locally splitting the cotangent comparison onto the l
+error: unexpected slash
+  ┌─ \\?\E:\math\_work\iso.typ:3:793
+  │
+3 │ For a smooth morphism with a relative perfect obstruction theory, the obstruction sheaf is locally free and its virtual pullback is smooth pullback capped with its top Chern class. This follows by locally splitting the cotangent comparison onto the locally free relative cotangent; equivalently, the intrinsic cone is $\[ 0 / T_(upright(r e l)) \]$ and zero-section excess gives the Euler factor. The argument works on arbitrary base cycles, not just the fundamental cycle; compare [6] Proposition 7.3 and [34] Theorem 4.4. Here th
+========= A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026 927 unexpected slash
+LINE: Adjoin $m = 3 t_0$ independent surface positions to $cal(Q)$. At each position insert $"ch"_2^(bb(G)_m) ( Q )$, cap with the smoothly pulled virtual class, and push to $X_(/ S)^m$. This push is proper. The torus acts trivially on the output. Before l
+error: unexpected slash
+  ┌─ \\?\E:\math\_work\iso.typ:3:172
+  │
+3 │ Adjoin $m = 3 t_0$ independent surface positions to $cal(Q)$. At each position insert $"ch"_2^(bb(G)_m) ( Q )$, cap with the smoothly pulled virtual class, and push to $X_(/ S)^m$. This push is proper. The torus acts trivially on the output. Before localization the total codimension is $2 m - v$. An ordinary output component of codimension $4 t_0$ would therefore have equivariant exponent
+  │                                                                                                                                        
+========= A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026 960 unexpected slash
+LINE: The surviving fixed contribution must be expanded as a Chow class on $X_(/ S)^m$, with every output retained. Relative EGL recursion for surface pushforwards to a base appears in [29] Section 2.1, Lemma 2.1 and Proposition 2.2; the same work also tre
+error: unexpected slash
+  ┌─ \\?\E:\math\_work\iso.typ:3:73
+  │
+3 │ The surviving fixed contribution must be expanded as a Chow class on $X_(/ S)^m$, with every output retained. Relative EGL recursion for surface pushforwards to a base appears in [29] Section 2.1, Lemma 2.1 and Proposition 2.2; the same work also treats one and two marked curve outputs [29] Section 3.3, Lemma 3.4. The construction below retains an arbitrary finite set of surface outputs. This is the form that lets the codimension bound identify the Chow tensor left by localization.
+  │                                          
+========= A-hyperbolic-group-with-no-geometric-CAT0-action-September-25-2026 146 unknown variable
+LINE: $ r_(b_D , X_D) quad upright(""followedbythelooseletteredge,"") $
+error: unknown variable: followedbythelooseletteredge
+  ┌─ \\?\E:\math\_work\iso.typ:3:31
+  │
+3 │ $ r_(b_D , X_D) quad upright(""followedbythelooseletteredge,"") $
+  │                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  │
+  = hint: if you meant to display multiple letters as is, try adding spaces between each letter: `f o l l o w e d b y t h e l o o s e l e t t e r e d g e`
+  = hint: or if you meant to display this as text, try placing it in quotes: `"followedbythelooseletteredge"`
+========= A-Modulus-Proof-of-Cannons-Conjecture-September-23-2026 834 unknown variable
+LINE:   $ "(6.13)" quad sum_({ i , j } upright(""far,assignedto"") i) mu ( cal(D)_(i j) ) lt.eq C a^(Q l) mu ( Z ) . $ <eq:cost-total-upper>
+error: unknown variable: far
+  ┌─ \\?\E:\math\_work\iso.typ:3:43
+  │
+3 │   $ "(6.13)" quad sum_({ i , j } upright(""far,assignedto"") i) mu ( cal(D)_(i j) ) lt.eq C a^(Q l) mu ( Z ) . $ <eq:cost-total-upper>
+  │                                            ^^^
+  │
+  = hint: if you meant to display multiple letters as is, try adding spaces between each letter: `f a r`
+  = hint: or if you meant to display this as text, try placing it in quotes: `"far"`
+========= A-negatively-pinched-Kahler-threefold-without-bounded-holomorphic-coordinates-September-25-2026 190 unexpected argument
+LINE: $ d ( \[ xi \] , \[ p \] ) = sqrt(1 - | chevron.l xi , p chevron.r |^2) , $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:55
+  │
+3 │ $ d ( \[ xi \] , \[ p \] ) = sqrt(1 - | chevron.l xi , p chevron.r |^2) , $
+  │                                                        ^^^^^^^^^^^^^^^
+========= A-power-saving-for-square-difference-free-sets-September-24-2026 390 unknown variable
+LINE: $ underbrace((( Y_(( u , w ) , i) )_(i in \[ m_s \]))_(w in Pi_(+)), r upright(""lists,eachoflength"") m_s) quad arrow.l.r quad underbrace(( Y'_(u , ( w , i )) )_(( w , i ) in Pi_(+) times \[ m_s \]), upright("one list of length ") m_(s + 1) = r m_s)
+error: unknown variable: lists
+  ┌─ \\?\E:\math\_work\iso.typ:3:81
+  │
+3 │ $ underbrace((( Y_(( u , w ) , i) )_(i in \[ m_s \]))_(w in Pi_(+)), r upright(""lists,eachoflength"") m_s) quad arrow.l.r quad underbrace(( Y'_(u , ( w , i )) )_(( w , i ) in Pi_(+) times \[ m_s \]), upright("one list of length ") m_(s + 1) = r m_s) $
+  │                                                                                  ^^^^^
+  │
+  = hint: if you meant to display multiple letters as is, try adding spaces between each letter: `l i s t s`
+  = hint: or if you meant to display this as text, try placing it in
+========= A-product-counterexample-to-the-simplex-maximum-for-projection-body-volume-September-24-2026 138 unexpected argument
+LINE:   $ frac(\[ 0 , 1 \]^d + \[ 0 , w \], ( d - 1 ) !) . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:32
+  │
+3 │   $ frac(\[ 0 , 1 \]^d + \[ 0 , w \], ( d - 1 ) !) . $
+  │                                 ^^^^
+========= A-projective-fourfold-with-large-fundamental-group-and-non-Stein-universal-cover-October-5-2026 653 unexpected argument
+LINE: $ "(5.4)" quad cosh d ( x , y ) = frac(| 1 - chevron.l x , y chevron.r |, sqrt(1 - | x |^2) sqrt(1 - | y |^2)) . $ <mod:ball-distance>
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:74
+  │
+3 │ $ "(5.4)" quad cosh d ( x , y ) = frac(| 1 - chevron.l x , y chevron.r |, sqrt(1 - | x |^2) sqrt(1 - | y |^2)) . $ <mod:ball-distance>
+  │                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+========= A-quadratic-bound-for-Jacobsthals-function-September-25-2026 1276 unknown variable
+LINE:   $ cal(I)_(upright(bold(u))) = #scale(x: 120%, y: 120%)[{] ( p , q ) in cal(P) times cal(C) : & med ( p , q ) upright(""isnonstructured,and"")\
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:2
+  │
+3 │   $ cal(I)_(upright(bold(u))) = #scale(x: 120%, y: 120%)[{] ( p , q ) in cal(P) times cal(C) : & med ( p , q ) upright(""isnonstructured,and"")\
+  │   ^
+========= A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026 272 unexpected argument
+LINE:   $ sum_r lambda_r^(- 1) "tr" #scale(x: 120%, y: 120%)[(] ( partial_r F ( J ) ) J_r #scale(x: 120%, y: 120%)[)] = sum_(i , j , r) frac(F \[ lambda_i , lambda_j \], lambda_r) Theta_(i j r)^2 . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:164
+  │
+3 │   $ sum_r lambda_r^(- 1) "tr" #scale(x: 120%, y: 120%)[(] ( partial_r F ( J ) ) J_r #scale(x: 120%, y: 120%)[)] = sum_(i , j , r) frac(F \[ lambda_i , lambda_j \], lambda_r) Theta_(i j r)^2 . $
+  │                                                                                                                                                                     ^^^^^^^^
+========= A-surface-counterexample-to-Shafarevich-holomorphic-convexity-September-23-2026 127 unexpected argument
+LINE: $ G / overline(G^2 \[ G , G \]) , $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:26
+  │
+3 │ $ G / overline(G^2 \[ G , G \]) , $
+  │                           ^^^^
+========= A-Torsion-Free-Counterexample-to-Reduced-Baum-Connes-Injectivity-September-23-2026 1289 unknown variable
+LINE: $ b , med upright("profiles and matrix size") ; #h(2em) epsilon.alt , k , upright(""mesh,types,net"") ; #h(2em) K_1 , C , s , H_0 . $
+error: unknown variable: mesh
+  ┌─ \\?\E:\math\_work\iso.typ:3:84
+  │
+3 │ $ b , med upright("profiles and matrix size") ; #h(2em) epsilon.alt , k , upright(""mesh,types,net"") ; #h(2em) K_1 , C , s , H_0 . $
+  │                                                                                     ^^^^
+  │
+  = hint: if you meant to display multiple letters as is, try adding spaces between each letter: `m e s h`
+  = hint: or if you meant to display this as text, try placing it in quotes: `"mesh"`
+========= A-Torsion-Free-Group-Algebra-with-Zero-Divisors-September-23-2026 111 unknown variable
+LINE: $ ( macron(t) , u ) & upright(""ordinary,ordinary"") & upright(""ordinary,extra"") & upright(""extra,extra"")\
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:0
+  │
+3 │ $ ( macron(t) , u ) & upright(""ordinary,ordinary"") & upright(""ordinary,extra"") & upright(""extra,extra"")\
+  │ ^
+========= A-two-dimensional-area-law-from-a-global-spectral-gap-September-24-2026 1341 unexpected argument
+LINE: $ N = parallel cal(M)^(- s) upright(p r e)_k parallel , #h(2em) v = cal(M)^(- s) upright(p r e)_k / N , #h(2em) E_(upright(d e f)) = frac(chevron.l v , overline(tilde(H)) v chevron.r - tilde(E)_0, tilde(g)) , #h(2em) overline(tilde(H)) = 1 / k sum_(i
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:197
+  │
+3 │ $ N = parallel cal(M)^(- s) upright(p r e)_k parallel , #h(2em) v = cal(M)^(- s) upright(p r e)_k / N , #h(2em) E_(upright(d e f)) = frac(chevron.l v , overline(tilde(H)) v chevron.r - tilde(E)_0, tilde(g)) , #h(2em) overline(tilde(H)) = 1 / k sum_(i = 1)^k tilde(H)^(( i )) . $
+  │                                                                                                                                                                                                      ^^^^^^^^
+========= Abundance-after-nonvanishing-for-compact-Kahler-fourfolds-September-27-2026 1479 unexpected argument
+LINE: $ "(11.3)" quad frac(R \[ z_1^(- 1) , dots.h , z_(c - 1)^(- 1) , f^(- 1) \] eta, sum_(j = 1)^(c - 1) R \[ z_1^(- 1) , dots.h , hat(z_j^(- 1)) , dots.h , z_(c - 1)^(- 1) , f^(- 1) \] eta + R \[ z_1^(- 1) , dots.h , z_(c - 1)^(- 1) \] eta) . $ <eq:pola
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:47
+  │
+3 │ $ "(11.3)" quad frac(R \[ z_1^(- 1) , dots.h , z_(c - 1)^(- 1) , f^(- 1) \] eta, sum_(j = 1)^(c - 1) R \[ z_1^(- 1) , dots.h , hat(z_j^(- 1)) , dots.h , z_(c - 1)^(- 1) , f^(- 1) \] eta + R \[ z_1^(- 1) , dots.h , z_(c - 1)^(- 1) \] eta) . $ <eq:polar-cech>
+  │                                                ^^^^^^^^^^^^^^^
+========= Algebraicity-of-Weil-classes-on-split-abelian-eightfolds-September-18-2026 1069 expected content, found array
+LINE: $ "Hom"_(cal(D)_Lambda) ( X , Y ) = cases(delim: "{", xor.big_(x in X ∩ Y) Lambda x , & X prec Y ,, 0 , & upright("otherwise") ;) $
+error: expected content, found array
+  ┌─ \\?\E:\math\_work\iso.typ:3:41
+  │
+3 │ $ "Hom"_(cal(D)_Lambda) ( X , Y ) = cases(delim: "{", xor.big_(x in X ∩ Y) Lambda x , & X prec Y ,, 0 , & upright("otherwise") ;) $
+  │                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+========= Almost-Linear-Time-Maximum-Cardinality-Matching-in-Sparse-General-Graphs-September-24-2026 329 unknown variable
+LINE: $ #scale(x: 120%, y: 120%)[(] R + B + \# { upright(""externalpricing,point,oredgeoperations"") } #scale(x: 120%, y: 120%)[)] S^(O ( 1 / a ) + o_a ( 1 )) $
+error: unknown variable: externalpricing
+  ┌─ \\?\E:\math\_work\iso.typ:3:53
+  │
+3 │ $ #scale(x: 120%, y: 120%)[(] R + B + \# { upright(""externalpricing,point,oredgeoperations"") } #scale(x: 120%, y: 120%)[)] S^(O ( 1 / a ) + o_a ( 1 )) $
+  │                                                      ^^^^^^^^^^^^^^^
+  │
+  = hint: if you meant to display multiple letters as is, try adding spaces between each letter: `e x t e r n a l p r i c i n g`
+  = hint: or if you meant to display this as text, try placing it in quotes: `"externalpricing"`
+========= An-Artin-group-with-no-geometric-CAT-0-action-September-23-2026 235 unexpected argument
+LINE:   $ R_r = frac(ell ( Z_r )^2, N_r^2 D^2) quad ( 2 lt.eq r lt.eq 2 k ) , #h(2em) c_0 = frac(chevron.l s_1^2 , s_3^2 chevron.r, D^2) . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:126
+  │
+3 │   $ R_r = frac(ell ( Z_r )^2, N_r^2 D^2) quad ( 2 lt.eq r lt.eq 2 k ) , #h(2em) c_0 = frac(chevron.l s_1^2 , s_3^2 chevron.r, D^2) . $
+  │                                                                                                                               ^^^
+========= An-exact-Hausdorff-gauge-for-SLE-September-25-2026 564 unknown variable
+LINE: $ "(4.9)" quad mu_t ( B^(( c )) ) ( A ) = c^(- d) mu_(c^2 t) ( B ) ( c A ) quad upright(""almostsurely,forall"") t upright(" and Borel ") A subset bb(H) . $ <mass:scaling>
+error: unknown variable: almostsurely
+  ┌─ \\?\E:\math\_work\iso.typ:3:90
+  │
+3 │ $ "(4.9)" quad mu_t ( B^(( c )) ) ( A ) = c^(- d) mu_(c^2 t) ( B ) ( c A ) quad upright(""almostsurely,forall"") t upright(" and Borel ") A subset bb(H) . $ <mass:scaling>
+  │                                                                                           ^^^^^^^^^^^^
+  │
+  = hint: if you meant to display multiple letters as is, try adding spaces between each letter: `a l m o s t s u r e l y`
+  = hint: or if you meant to display this as text, try placing it in quotes: `"almostsurely"`
+========= An-FPRAS-for-Cell-Bounded-Contingency-Tables-September-24-2026 1040 unknown variable
+LINE:   $ "(67)" quad & \# { upright(""evaluationcalls,outerdraws,andtransitions"") }\
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:2
+  │
+3 │   $ "(67)" quad & \# { upright(""evaluationcalls,outerdraws,andtransitions"") }\
+  │   ^
+========= An-infinite-finitely-presented-periodic-group-September-23-2026 575 unknown variable
+LINE:   $ upright(""foreveryfixedtest,thereis"") N upright(" such that every length ") n gt.eq N upright(" has zero sum") . $
+error: unknown variable: foreveryfixedtest
+  ┌─ \\?\E:\math\_work\iso.typ:3:14
+  │
+3 │   $ upright(""foreveryfixedtest,thereis"") N upright(" such that every length ") n gt.eq N upright(" has zero sum") . $
+  │               ^^^^^^^^^^^^^^^^^
+  │
+  = hint: if you meant to display multiple letters as is, try adding spaces between each letter: `f o r e v e r y f i x e d t e s t`
+  = hint: or if you meant to display this as text, try placing it in quotes: `"foreveryfixedtest"`
+========= An-Isolated-Particle-Pole-for-the-Two-Dimensional-O3-Spin-Field-October-4-2026 431 unexpected argument
+LINE:   $ frac(e^(- d e_N ( w )) | chevron.l Omega , F psi chevron.r |^2, R_(N , w) ( w )) = frac(e^(- d e_N ( w )) chevron.l Omega , | psi | chevron.r^2, R_(N , w) ( w )) gt.eq c thin e^(- ( d + a ) e_N ( w )) , $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:68
+  │
+3 │   $ frac(e^(- d e_N ( w )) | chevron.l Omega , F psi chevron.r |^2, R_(N , w) ( w )) = frac(e^(- d e_N ( w )) chevron.l Omega , | psi | chevron.r^2, R_(N , w) ( w )) gt.eq c thin e^(- ( d + a ) e_N ( w )) , $
+  │                                                                     ^^^^^^^^^^^^^^^
+========= An-L3-bound-for-the-trilinear-Hilbert-transform-October-5-2026 792 expected content, found array
+LINE: $ "(5)" quad & sum_(I in cal(I)_m) | I | lr(|H_I #scale(x: 120%, y: 120%)[(] psi_a z_(a , I) , psi_b z_(b , I) ; Q #scale(x: 120%, y: 120%)[)]|)\
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:0
+  │
+3 │ $ "(5)" quad & sum_(I in cal(I)_m) | I | lr(|H_I #scale(x: 120%, y: 120%)[(] psi_a z_(a , I) , psi_b z_(b , I) ; Q #scale(x: 120%, y: 120%)[)]|)\
+  │ ^
+========= Approximation-Paving-over-Arbitrary-Maximal-Abelian-Subalgebras-September-25-2026 289 unclosed delimiter
+LINE:   $ lr(|⟨e_j , upright(bold(1))_(( lambda , oo )) ( B ) e⟩|) & = lr(|⟨e_j , upright(bold(1))_(( - oo , lambda \]) ( B ) e⟩|)\
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:2
+  │
+3 │   $ lr(|⟨e_j , upright(bold(1))_(( lambda , oo )) ( B ) e⟩|) & = lr(|⟨e_j , upright(bold(1))_(( - oo , lambda \]) ( B ) e⟩|)\
+  │   ^
+
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:67
+  │
+3 │   $ lr(|⟨e_j , upright(bold(1))_(( lambda , oo )) ( B ) e⟩|) & = lr(|⟨e_j , upright(bold(1))_(( - oo , lambda \]) ( B ) e⟩|)\
+  │                                                                    ^
+========= Arithmeticity-of-twisted-finite-correspondences-for-lattices-over-local-fields-September-23-2026 1401 unexpected argument
+LINE: $ "(7.1)" quad d s_X^2 = frac(d lambda^2, lambda^2) + frac(| d v |^2, 4 lambda^2) + frac(| d z - 1 / 2 \[ v , d v \] |^2, 4 lambda^4) , #h(2em) d p = frac(d n thin d lambda, lambda^(Q + 1)) . $ <eq:ray-metric>
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:122
+  │
+3 │ $ "(7.1)" quad d s_X^2 = frac(d lambda^2, lambda^2) + frac(| d v |^2, 4 lambda^2) + frac(| d z - 1 / 2 \[ v , d v \] |^2, 4 lambda^4) , #h(2em) d p = frac(d n thin d lambda, lambda^(Q + 1)) . $ <eq:ray-metric>
+  │                                                                                                                           ^^^^^^^^^^
+========= Asymptotically-minimal-maxima-of-real-Littlewood-polynomials-September-23-2026 605 unknown variable
+LINE: $ "(37)" quad c_alpha = inf_(E upright(""symmetric,open"")\
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:0
+  │
+3 │ $ "(37)" quad c_alpha = inf_(E upright(""symmetric,open"")\
+  │ ^
+========= Blochs-Law-for-Finite-Range-Heisenberg-Ferromagnets-in-Three-Dimensions-October-5-2026 546 unknown variable
+LINE: $ "(4.1)" quad bb(P)_P ( T' subset.eq cal(B)_P ) lt.eq p^(| T' |) quad upright("for every nonempty sparse ") T' upright(""atonegridtime,disjointfrom"") P . $ <eq:induction-assertion>
+error: unknown variable: atonegridtime
+  ┌─ \\?\E:\math\_work\iso.typ:3:122
+  │
+3 │ $ "(4.1)" quad bb(P)_P ( T' subset.eq cal(B)_P ) lt.eq p^(| T' |) quad upright("for every nonempty sparse ") T' upright(""atonegridtime,disjointfrom"") P . $ <eq:induction-assertion>
+  │                                                                                                                           ^^^^^^^^^^^^^
+  │
+  = hint: if you meant to display multiple letters as is, try adding spaces between each letter: `a t o n e g r i d t i m e`
+  = hint: or if you meant to display this as text, try placing i
+========= Bose-Einstein-condensation-at-positive-temperature-in-the-dilute-hard-sphere-gas-October-5-2026 45 unexpected argument
+LINE: m a t h b b N / L^3 arrow.r rho) frac(chevron.l u_(0 , L) , gamma_(N , L , T)^(( 1 )) u_(0 , L) chevron.r, N) > 0 . $
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:87
+  │
+3 │ m a t h b b N / L^3 arrow.r rho) frac(chevron.l u_(0 , L) , gamma_(N , L , T)^(( 1 )) u_(0 , L) chevron.r, N) > 0 . $
+  │                                                                                        ^
+
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:116
+  │
+3 │ m a t h b b N / L^3 arrow.r rho) frac(chevron.l u_(0 , L) , gamma_(N , L , T)^(( 1 )) u_(0 , L) chevron.r, N) > 0 . $
+  │                                                                                                                     ^
+========= Boundary-graph-deformations-for-the-spacetime-Penrose-inequality-September-27-2026 2024 unknown variable
+LINE: $ "(11.11)" quad b_(-) lt.eq h lt.eq b_(+) quad upright("on ") overline(Omega) ∩ "supp" K quad upright(""inthefirsttwostages,forallsufficientlylarge"") N . $ <four:eq:height-interval>
+error: unknown variable: inthefirsttwostages
+  ┌─ \\?\E:\math\_work\iso.typ:3:105
+  │
+3 │ $ "(11.11)" quad b_(-) lt.eq h lt.eq b_(+) quad upright("on ") overline(Omega) ∩ "supp" K quad upright(""inthefirsttwostages,forallsufficientlylarge"") N . $ <four:eq:height-interval>
+  │                                                                                                          ^^^^^^^^^^^^^^^^^^^
+  │
+  = hint: if you meant to display multiple letters as is, try adding spaces between each letter: `i n t h e f i r s t t w o s t a g e s`
+  = hint: or if you meant to display this as text, try p
+========= Bounded-klt-complements-for-Fano-contractions-September-25-2026 365 unexpected argument
+LINE:   $ f ( lambda ) = frac(chevron.l beta - beta' , lambda chevron.r, j' - j) . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:67
+  │
+3 │   $ f ( lambda ) = frac(chevron.l beta - beta' , lambda chevron.r, j' - j) . $
+  │                                                                    ^^^^^^
+========= Brownian-continuum-random-tree-limits-of-finite-Fortuin-Kasteleyn-maps-above-four-September-24-2026 324 unknown variable
+LINE:   $ cal(G)_L =  & { 0 upright(" is an ") L upright(""-cut,and"") B_a ( h , k ) gt.eq alpha k upright(" for ") a = 1 , 2 upright(" and all ") h gt.eq k gt.eq B } ,\
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:2
+  │
+3 │   $ cal(G)_L =  & { 0 upright(" is an ") L upright(""-cut,and"") B_a ( h , k ) gt.eq alpha k upright(" for ") a = 1 , 2 upright(" and all ") h gt.eq k gt.eq B } ,\
+  │   ^
+========= Cap-selected-amplitudes-and-triangle-chords-for-honeycomb-walks-September-26-2026 798 unknown variable
+LINE: upright(""leftsite,stage"") 0 & B - m_(- 1) - m_1\
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:37
+  │
+3 │ upright(""leftsite,stage"") 0 & B - m_(- 1) - m_1\
+  │                                      ^
+========= Computing-the-Random-3-SAT-Threshold-September-27-2026 478 unknown variable
+LINE: upright(""onerealposition,tworeservoiroccurrences"") & s 3 a n & 1 - w I_0 f_1 f_2 . $
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:85
+  │
+3 │ upright(""onerealposition,tworeservoiroccurrences"") & s 3 a n & 1 - w I_0 f_1 f_2 . $
+  │                                                                                      ^
+========= Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026 631 unexpected slash
+LINE: ], table.cell(rowspan: 1, colspan: 1)[Total time$/ d$
+error: unexpected closing bracket
+  ┌─ \\?\E:\math\_work\iso.typ:3:0
+  │
+3 │ ], table.cell(rowspan: 1, colspan: 1)[Total time$/ d$
+  │ ^
+  │
+  = hint: try using a backslash escape: \]
+
+error: unexpected slash
+  ┌─ \\?\E:\math\_work\iso.typ:3:49
+  │
+3 │ ], table.cell(rowspan: 1, colspan: 1)[Total time$/ d$
+  │                                                  ^
+========= Constant-factor-hardness-of-uniform-sparsest-cut-September-24-2026 369 unexpected argument
+LINE: $ "(21)" quad frac(chevron.l upright(bold(1))_D , sans(T) upright(bold(1))_D chevron.r, mu ( D )) lt.eq mu ( D ) + lambda_1 . $ <eq:internal-edge-bound>
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:88
+  │
+3 │ $ "(21)" quad frac(chevron.l upright(bold(1))_D , sans(T) upright(bold(1))_D chevron.r, mu ( D )) lt.eq mu ( D ) + lambda_1 . $ <eq:internal-edge-bound>
+  │                                                                                         ^^^^^^^^
+========= Continuum-Coulomb-hardness-with-binary-nuclear-charges-September-24-2026 172 unexpected argument
+LINE:  & = ( 1 - epsilon.alt ) ∥A^(1 / 2) q + frac(A^(- 1 / 2) B p, 1 - epsilon.alt)∥^2 - frac(chevron.l p , K p chevron.r, 1 - epsilon.alt) . $
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:137
+  │
+3 │  & = ( 1 - epsilon.alt ) ∥A^(1 / 2) q + frac(A^(- 1 / 2) B p, 1 - epsilon.alt)∥^2 - frac(chevron.l p , K p chevron.r, 1 - epsilon.alt) . $
+  │                                                                                                                                          ^
+========= Counterexamples-to-the-Hahn-Wilson-conjecture-at-height-two-September-26-2026 1496 expected expression
+LINE: $ H^(*) ( b ; bb(F)_p ) tilde.equiv cal(A) / / E ( Q_0 , Q_1 , Q_2 ) , $
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:44
+  │
+3 │ $ H^(*) ( b ; bb(F)_p ) tilde.equiv cal(A) / / E ( Q_0 , Q_1 , Q_2 ) , $
+  │                                             ^
+========= Counterexamples-to-the-Hahn-Wilson-conjecture-at-height-two-September-26-2026 1509 expected expression
+LINE:   The target spectral sequence collapses by the dimensions in Milnor’s dual Steenrod algebra calculation, recalled in [29] Theorem 3.1.1(b). The injective map and naturality then force the source to collapse page by page. Connectivity gives convergen
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:520
+  │
+3 │   The target spectral sequence collapses by the dimensions in Milnor’s dual Steenrod algebra calculation, recalled in [29] Theorem 3.1.1(b). The injective map and naturality then force the source to collapse page by page. Connectivity gives convergence, and the resulting map on mod-$p$ homology is injective. Dually $cal(A)$ surjects onto $H^(*) ( b ; bb(F)_p )$. There are no classes in the odd degrees of $Q_0 , Q_1 , Q_2$, so these primitives kill the degree-zero generator. The resulting quotient map from $cal(A) / / E ( Q
+========= Counterexamples-to-the-Hahn-Wilson-conjecture-at-height-two-September-26-2026 1757 expected expression
+LINE:   $ H^(*) ( b_1 ; bb(F)_p ) tilde.equiv cal(A) / / E ( Q_0 , Q_1 ) . $
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:48
+  │
+3 │   $ H^(*) ( b_1 ; bb(F)_p ) tilde.equiv cal(A) / / E ( Q_0 , Q_1 ) . $
+  │                                                 ^
+========= Counterexamples-to-weak-chromatic-splitting-sphere-kernels-and-descent-exponents-September-27-2026 350 unexpected slash
+LINE:   (Full finite tensor cube).  #emph[For $s gt.eq 0$ there is a natural equivalence of arrows over $upright(i d)_V$ in $cal(C)_(/ V)$: 
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:35
+  │
+3 │   (Full finite tensor cube).  #emph[For $s gt.eq 0$ there is a natural equivalence of arrows over $upright(i d)_V$ in $cal(C)_(/ V)$: 
+  │                                    ^
+
+error: unexpected slash
+  ┌─ \\?\E:\math\_work\iso.typ:3:127
+  │
+3 │   (Full finite tensor cube).  #emph[For $s gt.eq 0$ there is a natural equivalence of arrows over $upright(i d)_V$ in $cal(C)_(/ V)$: 
+  │                                                                                                                                ^
+========= Critical-local-smoothing-for-the-three-dimensional-wave-equation-September-24-2026 1859 unknown variable
+LINE:   $ t < q < cases(delim: "{", min ( p , lambda , c lambda ) , & upright("linear or constant quadratic cuts") ,, min ( p , lambda , ( c - 1 ) lambda ) , & upright(""nonconstantquadraticcuts,"") c > 1 .) $
+error: unknown variable: nonconstantquadraticcuts
+  ┌─ \\?\E:\math\_work\iso.typ:3:164
+  │
+3 │   $ t < q < cases(delim: "{", min ( p , lambda , c lambda ) , & upright("linear or constant quadratic cuts") ,, min ( p , lambda , ( c - 1 ) lambda ) , & upright(""nonconstantquadraticcuts,"") c > 1 .) $
+  │                                                                                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  │
+  = hint: if you meant to display multiple letters as is, try adding spaces between each letter: `n o n 
+========= Critical-mixing-in-the-Sherrington-Kirkpatrick-model-September-25-2026 588 unexpected argument
+LINE: $ frac(bb(E) parallel \[ H , upright(d) W \] / 2 parallel_(upright(H S))^2, upright(d) t) = frac(1 - 1 / n, 2) parallel H parallel_(upright(H S))^2 + frac("Tr" ( H^2 ) - ( "Tr" H )^2, 2 n) lt.eq 1 / 2 parallel H parallel_(upright(H S))^2 . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:76
+  │
+3 │ $ frac(bb(E) parallel \[ H , upright(d) W \] / 2 parallel_(upright(H S))^2, upright(d) t) = frac(1 - 1 / n, 2) parallel H parallel_(upright(H S))^2 + frac("Tr" ( H^2 ) - ( "Tr" H )^2, 2 n) lt.eq 1 / 2 parallel H parallel_(upright(H S))^2 . $
+  │                                                                             ^^^^^^^^^^^^
+========= Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026 143 expected expression
+LINE: For a finite group $F$, its rational Burnside ring is the product of copies of $bb(Q)$ indexed by conjugacy classes of subgroups. The $I$-mark of a finite $F$-set $X$ is $| X^I |$. We denote by $e_I^F$ the idempotent with mark one at the conjugacy cl
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:374
+  │
+3 │ For a finite group $F$, its rational Burnside ring is the product of copies of $bb(Q)$ indexed by conjugacy classes of subgroups. The $I$-mark of a finite $F$-set $X$ is $| X^I |$. We denote by $e_I^F$ the idempotent with mark one at the conjugacy class of $I$ and zero at all others. A finite $F$-set $X$ acts on cochains by multiplication by the transfer of $1$ along $X / / F arrow.r B F$; for an orbit, this is restriction followed by transfer. This agrees with the genuine Burnside action. The full mark $e_F^F$ will be use
+========= Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026 188 expected expression
+LINE: Write $bb(A) ( F )$ for the Burnside ring of a finite group $F$. Sending an $F$-set $S$ to the transfer of $1$ along $S / / F arrow.r B F$ gives a ring map
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:121
+  │
+3 │ Write $bb(A) ( F )$ for the Burnside ring of a finite group $F$. Sending an $F$-set $S$ to the transfer of $1$ along $S / / F arrow.r B F$ gives a ring map
+  │                                                                                                                          ^
+========= Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026 242 expected expression
+LINE: Continuity means that the homomorphism into the automorphism group of the chosen object has open kernel. Thus $cal(X)_Gamma ( B F ) = "Hom"_(upright(c t s)) ( Gamma , F ) / / F$. A finite section of $Gamma$ means a finite continuous quotient of a clo
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:172
+  │
+3 │ Continuity means that the homomorphism into the automorphism group of the chosen object has open kernel. Thus $cal(X)_Gamma ( B F ) = "Hom"_(upright(c t s)) ( Gamma , F ) / / F$. A finite section of $Gamma$ means a finite continuous quotient of a closed subgroup.
+  │                                                                                                                                                                             ^
+========= Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026 336 expected expression
+LINE:   $ "Iso" ( f alpha , beta ) / / "Aut" ( alpha ) , $
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:30
+  │
+3 │   $ "Iso" ( f alpha , beta ) / / "Aut" ( alpha ) , $
+  │                               ^
+========= Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026 395 expected expression
+LINE:   $ Y_j ( X ) = X^j / / Sigma_j $
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:21
+  │
+3 │   $ Y_j ( X ) = X^j / / Sigma_j $
+  │                      ^
+========= Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026 399 expected expression
+LINE:   $ pi_j : E_j ( X ) = Z_j ( X ) / / Q arrow.r B Q , #h(2em) z_j ( X ) = ( pi_j )_(!) 1 in pi_0 A_Q . $
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:34
+  │
+3 │   $ pi_j : E_j ( X ) = Z_j ( X ) / / Q arrow.r B Q , #h(2em) z_j ( X ) = ( pi_j )_(!) 1 in pi_0 A_Q . $
+  │                                   ^
+========= Cylinder-loop-weights-and-planar-nesting-September-26-2026 980 unexpected argument
+LINE:   $ parallel j^(*) b parallel_(cal(X)) gt.eq frac(| chevron.l j^(*) b , b chevron.r_(cal(X)) |, parallel b parallel_(cal(X))) = frac(parallel b parallel_2^2, parallel b parallel_(cal(X))) gt.eq c_xi parallel b parallel_2 . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:96
+  │
+3 │   $ parallel j^(*) b parallel_(cal(X)) gt.eq frac(| chevron.l j^(*) b , b chevron.r_(cal(X)) |, parallel b parallel_(cal(X))) = frac(parallel b parallel_2^2, parallel b parallel_(cal(X))) gt.eq c_xi parallel b parallel_2 . $
+  │                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+========= Disk-transfer-representations-and-confined-bridge-mass-September-26-2026 652 unknown variable
+LINE: $ "(5.4)" quad Phi_(N , alpha) = (product_i x_i^(- a_i / 2)) p_N ( x ) psi_(N , alpha) quad upright(""ispolynomial,ofdegree"") lt.eq N - 1 - a_i upright(" in ") x_i . $ <c2:eq-23>
+error: unknown variable: ispolynomial
+  ┌─ \\?\E:\math\_work\iso.typ:3:102
+  │
+3 │ $ "(5.4)" quad Phi_(N , alpha) = (product_i x_i^(- a_i / 2)) p_N ( x ) psi_(N , alpha) quad upright(""ispolynomial,ofdegree"") lt.eq N - 1 - a_i upright(" in ") x_i . $ <c2:eq-23>
+  │                                                                                                       ^^^^^^^^^^^^
+  │
+  = hint: if you meant to display multiple letters as is, try adding spaces between each letter: `i s p o l y n o m i a l`
+  = hint: or if you meant to display this as text, try placing it in quotes: `"ispolynomial
+========= Electromagnetic-tails-and-the-Kerr-Newman-Penrose-inequality-October-5-2026 377 unknown variable
+LINE:   $ D_R = D ∩ { r lt.eq R } quad upright(""iscompactandsmooth,with"") quad partial D_R = Gamma union.sq S_R . $
+error: unknown variable: iscompactandsmooth
+  ┌─ \\?\E:\math\_work\iso.typ:3:43
+  │
+3 │   $ D_R = D ∩ { r lt.eq R } quad upright(""iscompactandsmooth,with"") quad partial D_R = Gamma union.sq S_R . $
+  │                                            ^^^^^^^^^^^^^^^^^^
+  │
+  = hint: if you meant to display multiple letters as is, try adding spaces between each letter: `i s c o m p a c t a n d s m o o t h`
+  = hint: or if you meant to display this as text, try placing it in quotes: `"iscompactandsmooth"`
+========= Elementary-Positivity-of-Chromatic-Quasisymmetric-Functions-September-24-2026 946 unexpected argument
+LINE:   $ a_1 , dots.h , a_(n_0) = underbrace(1 , dots.h , 1, e) , 0 , dots.h , 0 $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:53
+  │
+3 │   $ a_1 , dots.h , a_(n_0) = underbrace(1 , dots.h , 1, e) , 0 , dots.h , 0 $
+  │                                                      ^
+========= Endpoint-convergence-for-the-planar-Schrodinger-equation-September-24-2026 1952 missing argument
+LINE:   $ sum_(j gt.eq k) sum_(I in cal(D)_j) m_(P_(I , k))^alpha lt.eq frac(m_(\[ 0 , 1 ))^alpha, 2^alpha - 2) . $
+error: missing argument: denom
+  ┌─ \\?\E:\math\_work\iso.typ:3:66
+  │
+3 │   $ sum_(j gt.eq k) sum_(I in cal(D)_j) m_(P_(I , k))^alpha lt.eq frac(m_(\[ 0 , 1 ))^alpha, 2^alpha - 2) . $
+  │                                                                   ^^^^^^^^^^^^^^^^^^^
+========= Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026 1079 unexpected argument
+LINE:  & = integral frac(u eta^2 ( - 2 | D |_(upright(bold(g)))^2 ), W + delta) thin d V_g + 2 integral frac(u eta chevron.l d eta , d W chevron.r_C, W + delta) thin d V_g . $
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:38
+  │
+3 │  & = integral frac(u eta^2 ( - 2 | D |_(upright(bold(g)))^2 ), W + delta) thin d V_g + 2 integral frac(u eta chevron.l d eta , d W chevron.r_C, W + delta) thin d V_g . $
+  │                                       ^
+
+error: unclosed delimiter
+  ┌─ \\?\E:\math\_work\iso.typ:3:168
+  │
+3 │  & = integral frac(u eta^2 ( - 2 | D |_(upright(bold(g)))^2 ), W + delta) thin d V_g + 2 integral frac(u eta chevron.l d eta , d W chevron.r_C, W + delta) thin d V_g . $
+  │                                                                       
+========= Exact-Fourier-certificates-for-complex-Hadamard-matrices-of-order-six-September-24-2026 139 unexpected argument
+LINE:   $ M sum_(t = 0)^5 K #scale(x: 120%, y: 120%)[(] t , kappa ( v_(+) ) #scale(x: 120%, y: 120%)[)] overline(K #scale(x: 120%, y: 120%)[(] t , kappa ( v_(-) ) #scale(x: 120%, y: 120%)[)]) = 0 . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:141
+  │
+3 │   $ M sum_(t = 0)^5 K #scale(x: 120%, y: 120%)[(] t , kappa ( v_(+) ) #scale(x: 120%, y: 120%)[)] overline(K #scale(x: 120%, y: 120%)[(] t , kappa ( v_(-) ) #scale(x: 120%, y: 120%)[)]) = 0 . $
+  │                                                                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+========= Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026 632 unexpected argument
+LINE:   $ frac(chevron.l alpha , lambda chevron.r, r) = mu_(+) - v / r . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:45
+  │
+3 │   $ frac(chevron.l alpha , lambda chevron.r, r) = mu_(+) - v / r . $
+  │                                              ^
+========= Expected-amenable-subalgebras-preserving-core-commutants-September-23-2026 436 unexpected argument
+LINE:   $ Pr_(s_j) ( | e - s_j | lt.eq b ) = frac(| \[ e - b , e + b \] ∩ \[ - B_j , B_j \] |, 2 B_j) lt.eq b / B_j . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:79
+  │
+3 │   $ Pr_(s_j) ( | e - s_j | lt.eq b ) = frac(| \[ e - b , e + b \] ∩ \[ - B_j , B_j \] |, 2 B_j) lt.eq b / B_j . $
+  │                                                                                ^^^^^^^^
+========= Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026 415 unexpected argument
+LINE:   $ 25 / 2 tau + 2 tau^2 lt.eq 1 / 320 + frac(1, 8 , 000 , 000) < 1 / 240 . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:53
+  │
+3 │   $ 25 / 2 tau + 2 tau^2 lt.eq 1 / 320 + frac(1, 8 , 000 , 000) < 1 / 240 . $
+  │                                                      ^^^
+========= Finite-Smith-Toda-Complexes-at-Varying-Primes-September-23-2026 138 expected expression
+LINE: $ B / / x := B \[ z \] , #h(2em) | z |_(upright(c h a i n)) = r + 1 , quad "wt" ( z ) = eta , quad partial z = x $
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:5
+  │
+3 │ $ B / / x := B \[ z \] , #h(2em) | z |_(upright(c h a i n)) = r + 1 , quad "wt" ( z ) = eta , quad partial z = x $
+  │      ^
+========= Finite-Smith-Toda-Complexes-at-Varying-Primes-September-23-2026 142 expected expression
+LINE: $ "(2.3)" quad B / / x tilde.eq B / x . $ <eq:found-null-cofiber>
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:18
+  │
+3 │ $ "(2.3)" quad B / / x tilde.eq B / x . $ <eq:found-null-cofiber>
+  │                   ^
+========= Finite-Smith-Toda-Complexes-at-Varying-Primes-September-23-2026 144 expected expression
+LINE:  It uses the specified universal null $z$. Consequently, an algebra map from $B / / x$ defined by a map from $B$ and a specified null of the image of $x$ induces the corresponding map of module cofibers using that null multiplied by the base input.]
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:81
+  │
+3 │  It uses the specified universal null $z$. Consequently, an algebra map from $B / / x$ defined by a map from $B$ and a specified null of the image of $x$ induces the corresponding map of module cofibers using that null multiplied by the base input.]
+  │                                                                                  ^
+
+error: unexpected closing bracket
+  ┌─ \\?\E:\math\_work\iso.typ:3:248
+  │
+3 │  It uses the specified universal null $z$. Consequently, an algebra map from $B / / x$ defined by a map from $B$
+========= Finite-Smith-Toda-Complexes-at-Varying-Primes-September-23-2026 417 expected expression
+LINE: The stable dual $J^or$ is a commutative algebra by the diagonal of $S ( V )$. Thus these are graded algebras when $X$ is. We will compare $B ( X ) / / t$ with $Phi ( X )$, and then compute $Phi ( X )$ as the reduction of $Q ( X )$ by $pi.alt$.
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:148
+  │
+3 │ The stable dual $J^or$ is a commutative algebra by the diagonal of $S ( V )$. Thus these are graded algebras when $X$ is. We will compare $B ( X ) / / t$ with $Phi ( X )$, and then compute $Phi ( X )$ as the reduction of $Q ( X )$ by $pi.alt$.
+  │                                                                                                                                                     ^
+========= Finite-Smith-Toda-Complexes-at-Varying-Primes-September-23-2026 495 expected expression
+LINE:  The unit-input algebra is equivalent, as a commutative $D$-algebra, to $D / / pi.alt$. Under the point and unit identifications of the partial and full terms, the first map of Equation (4.3) for $J^or ⊗ "Tr" Z$ is multiplication by $( p ( p - 1 ) )_
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:76
+  │
+3 │  The unit-input algebra is equivalent, as a commutative $D$-algebra, to $D / / pi.alt$. Under the point and unit identifications of the partial and full terms, the first map of Equation (4.3) for $J^or ⊗ "Tr" Z$ is multiplication by $( p ( p - 1 ) )_p$ on $cal(H) ( Z )$.]
+  │                                                                             ^
+
+error: unexpected closing bracket
+  ┌─ \\?\E:\math\_work\iso.typ:3:271
+  │
+3 │  The unit-input algebra is equivalent, as a commutative $D$-algebra, to $D / / pi.alt$. Under 
+========= Finite-Smith-Toda-Complexes-at-Varying-Primes-September-23-2026 506 expected expression
+LINE:   At $Z = upright(bold(1))$, both initial terms are $D$ in degree zero, and their map is multiplication by $pi.alt ( p - 1 )_p$. The factor $( p - 1 )_p$ is a unit and $pi.alt$ is a nonzerodivisor. The cofiber algebra thus has homotopy only in degree
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:397
+  │
+3 │   At $Z = upright(bold(1))$, both initial terms are $D$ in degree zero, and their map is multiplication by $pi.alt ( p - 1 )_p$. The factor $( p - 1 )_p$ is a unit and $pi.alt$ is a nonzerodivisor. The cofiber algebra thus has homotopy only in degree zero, equal to $D / pi.alt$, and its unit induces the quotient map. Choose a null of $pi.alt$ in this algebra. The resulting algebra map from $D / / pi.alt$ is an equivalence on underlying modules, hence an algebra equivalence. ◻
+  │                                            
+========= Finite-Smith-Toda-Complexes-at-Varying-Primes-September-23-2026 528 expected expression
+LINE: $ "(4.5)" quad B ( X ) / / t arrow.r^tilde.eq Phi ( X ) arrow.l^tilde.eq Q ( X ) ⊗_D ( D / / pi.alt ) . $ <eq:layer>
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:24
+  │
+3 │ $ "(4.5)" quad B ( X ) / / t arrow.r^tilde.eq Phi ( X ) arrow.l^tilde.eq Q ( X ) ⊗_D ( D / / pi.alt ) . $ <eq:layer>
+  │                         ^
+
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:90
+  │
+3 │ $ "(4.5)" quad B ( X ) / / t arrow.r^tilde.eq Phi ( X ) arrow.l^tilde.eq Q ( X ) ⊗_D ( D / / pi.alt ) . $ <eq:layer>
+  │                                                                                           ^
+========= Finite-Smith-Toda-Complexes-at-Varying-Primes-September-23-2026 537 expected expression
+LINE:   The universal property of the algebra quotient gives an algebra map from $B ( X ) / / t$ to this $J_2^or$ mapping algebra.
+error: expected expression
+  ┌─ \\?\E:\math\_work\iso.typ:3:85
+  │
+3 │   The universal property of the algebra quotient gives an algebra map from $B ( X ) / / t$ to this $J_2^or$ mapping algebra.
+  │                                                                                      ^
+========= Fontaine-Mazur-modularity-at-the-prime-2-September-23-2026 427 unexpected argument
+LINE:   $ C = accent(A \[ s_1 , dots.h , s_u \], ̂)^(thin frak(m)_A) . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:35
+  │
+3 │   $ C = accent(A \[ s_1 , dots.h , s_u \], ̂)^(thin frak(m)_A) . $
+  │                                    ^^^^^^
+========= GOE-bulk-universality-for-fixed-degree-random-regular-graphs-September-23-2026 402 unexpected argument
+LINE:   $ exp #scale(x: 120%, y: 120%)[(] chevron.l y , t chevron.r - parallel t parallel^2 / 2 #scale(x: 120%, y: 120%)[)] = sum_(j = 0)^oo frac(chevron.l "He"_j ( y ) , t^(⊗ j) chevron.r, j !) , #h(2em) t in D . $
+error: unexpected argument
+  ┌─ \\?\E:\math\_work\iso.typ:3:184
+  │
+3 │   $ exp #scale(x: 120%, y: 120%)[(] chevron.l y , t chevron.r - parallel t parallel^2 / 2 #scale(x: 120%, y: 120%)[)] = sum_(j = 0)^oo frac(chevron.l "He"_j ( y ) , t^(⊗ j) chevron.r, j !) , #h(2em) t in D . $
+  │                                                                                                                                                                                         ^^^

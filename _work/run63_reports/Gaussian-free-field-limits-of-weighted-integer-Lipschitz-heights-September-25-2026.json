@@ -1,0 +1,33 @@
+{
+  "paper": "Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25-2026",
+  "ok": true,
+  "typ_lines": 1765,
+  "included_pdf_pages": 0,
+  "formulas": 1336,
+  "math_failed": 0,
+  "labels": 227,
+  "equations": 0,
+  "theorems": 3,
+  "figures": 3,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 3,
+    "cetz_converted": 2,
+    "cetz_refused": 1
+  },
+  "samples": {
+    "formulas": "1336",
+    "cetz_converted": "1",
+    "cetz_refused": "\\begin{tikzpicture}[x=1cm,y=1cm,font=\\footnotesize] \\begin{scope} \\node[pins title] at (0,2.15) {(a) Initial place"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25-2026.tex"
+}

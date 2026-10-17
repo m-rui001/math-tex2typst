@@ -1,0 +1,32 @@
+{
+  "paper": "Taming-implies-compatibility-on-four-manifolds-September-23-2026",
+  "ok": true,
+  "typ_lines": 551,
+  "included_pdf_pages": 0,
+  "formulas": 452,
+  "math_failed": 0,
+  "labels": 69,
+  "equations": 2,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "452",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\renewcommand\\@maketitle"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Taming-implies-compatibility-on-four-manifolds-September-23-2026.tex"
+}

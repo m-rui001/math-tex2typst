@@ -1,0 +1,1 @@
+派单前必做三步查重；零落盘有四成因、判据只看 glob 与字节；规格矛盾比数值窗口更致命；欠账表要先按 biggest 是否 references/bibliography 筛掉 bib 号，同一篇允许二次入队；Agent 的 mode 只认六枚值（写手用 auto），inflight.txt 必须在拿到 launch 回执之后才写。

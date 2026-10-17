@@ -1,0 +1,10 @@
+## 20:42 增量（宏腿第二档：mathtools 成对定界符；修正 item 19 的残留账）
+
+**item 19 末尾那条「正文余 896 处」的账已被本档改写，以本档数字为准。** 追因：那条把未展开的原因全推给「素材里定位不到定义」，实际是 `_work/param_macro_expand.py` 的 `find_defs` 只认 `\newcommand`／`\renewcommand`／`\providecommand`／`\DeclareRobustCommand`／`\def` 五种写法，**mathtools 的 `\DeclarePairedDelimiter` 一条都没抓**。`grep` 实测 `preprints/*/build` 下 29 份 tex 用这个写法定义了 6 个宏（`\norm` 24、`\abs` 21、`\floor` 7、`\ceil` 7、`\ip` 6、`\set` 2），正好是残留名单的头部。（另查过 latex3 的 `\NewDocumentCommand`：`build/` 里 **0** 处，只在 `preprints/*/typst/` 的旧拷贝里出现 211 个文件——第一版 `grep` 没排除 `typst/` 就报了 269 次，是量具口径错，不是素材有定义。）
+
+**改法与落盘**。`find_defs` 加第三条模式，按花括号配平读 2 个（`Delimiter`：左、右定界符）或 3 个（`DelimiterX`：左、右、含 `#1` 的码体）体，拼成 `\left<L> <code> \right<R>`；定界符与控制词之间固定留一个空格，正是为了不再犯 item 19 记的那族「`\lVert` 吞字母」。全库落盘实测 **notes=51 expanded=284 noargs=280 leftarg=0 bytes=+5,122**，D60 一篇就吃掉 216 处（111,126→115,016）。本档自己引入的一处 `\right\rVert` 吞掉 `d`（D60:29 的积分微元）已由 `_work/vsplit_fix.py` 加空格修掉，+1 B；该脚本的号单现改成从命令行取，不再手打名单。复量：`gate_all total=734 bad=1`，那 1 是在飞的 D61（emDash=4、而是=1，交回后按收稿链清），`katex_census refused=1,010→946 files_hit=233 unclosed_spans=0`，`cite_audit cites=173,183 ok=173,182 absent=1 oob=0`。
+
+**残留的最终分类**（`_work/resid_split.py`，全库口径，含在飞号）：**总 800 处 = 行内代码 232（逐字引用素材，不该动，D143 独占 132）＋正文 568（单 token 实参形 444＋该篇素材确无定义 124）**。单 token 形如 `\norm x` 是刻意不猜的——`take_args` 只认花括号，猜单 token 会把 `\lvert`／`\rvert` 的配对弄坏；无定义的 124 处按「形义不明就登记不发明」留任，含 D60 的 `\set`。两台仪器（JS 那台与 py 这台）此前对 `\mathscr` 这类 KaTeX 自带命令的处置不一致，现共用同一份 KNOWN 名单；JS 那台另排除 `.tools/inflight.txt` 里的号，读数 771，py 这台全库读数 800，差的正是在飞那几篇。
+
+**在飞与腾位**。`inflight.txt` 现为 `D68 D63 D61`（追加批，Write 次数 0、只文末 Edit、单笔 ≤25,000 B、首块写死在第 3–6 次调用内落地）。下一梯队实测排队：D67（未引用素材 49,729 B）、D41（25,428）、D499（22,869）、D280（22,418）、D207（19,886）、D463（19,272）；D04 与 D500 同篇已划出梯队。今天派单前查重的实际拦阻不是编号占用，而是 mtime 失真——宏腿两档共落盘 78 与 51 篇，另加一次 16 篇和一次 1 篇的补空格，这些写入把它们全推到 20:1x–20:4x 的分钟桶里（实测 20:22 桶 25 篇、20:29 桶 9 篇、20:39 桶 50 篇、20:40 桶 1 篇），D63 因此看着像别人 9 分钟前在写；判据改用 `_work/D##.pre-param.md` 备份是否存在来区分「我改的」与「外部在飞」，注意第二档复用了同一批备份文件名，那 51 篇的快照现在是「第二档改前」而非「第一档改前」。同一批 `ls -t` 里 20:41 之后 D63（75,597→91,042）与 D61（114,554→153,697）相继由在飞写手落地，那才是外部写入。
+

@@ -1,0 +1,30 @@
+{
+  "paper": "Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026",
+  "ok": true,
+  "typ_lines": 457,
+  "included_pdf_pages": 0,
+  "formulas": 352,
+  "math_failed": 0,
+  "labels": 55,
+  "equations": 13,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "352",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026.tex"
+}

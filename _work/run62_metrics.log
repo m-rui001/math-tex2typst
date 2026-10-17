@@ -1,0 +1,33 @@
+== gate ==
+apptr:entry-table        before 1  after 1
+apptr:endpoint-table     before 1  after 1
+apptr:coupling-table     before 1  after 1
+floats before 3 after 5
+== tests ==
+----------------------------------------------------------------------
+Ran 14 tests in 2.193s
+
+OK
+== batch ==
+DONE 724 compiled=724
+== cetz ==
+rows: 724
+  cetz_converted             974 over 545 papers
+  cetz_refused                55 over  49 papers
+  cetz_split                   9 over   7 papers
+  figure_content_unhandled     0 over   0 papers
+  empty figures               13 over   9 papers
+  quoted pictures             54  (refused pictures shown as source)
+
+== residue ==
+files with residue: 0 ; occurrences: 0
+quoted LaTeX on the page: 54 blocks over 49 papers
+zones: {}
+== dangling ==
+ledger dangling_ref: 17 over 12 papers
+on the page: 1429 `[??]`, 0 pandoc-bracket leaks over 0 papers
+worst: [('Uniform-marked-polygon-estimates-and-sharp-finite-bridge-moments-September-26-2026', 4), ('Maximal-Multipoint-Seshadri-Constants-in-Higher-Dimensions-October-5-2026', 2), ('The-Kervaire-Invariant-Problem-at-the-Prime-Three-September-24-2026', 2), ('A-boundary-field-gap-for-the-spin-one-Heisenberg-chain-September-24-2026', 1), ('A-Smooth-Metric-with-No-Local-Isometric-Immersion-into-Three-Space-September-24-2026', 1), ('Exact-asymptotic-moduli-in-a-Daugavet-subspace-of-L1-September-27-2026', 1)]
+== heisenberg ==
+3
+15
+== DONE ==

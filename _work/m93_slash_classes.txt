@@ -1,0 +1,96 @@
+papers replayed: 724   slash-carrying emissions: 267 over 125 papers
+  already refused to the quoted fallback: 9 over 7 papers
+  maths spans with a BARE slash (page ships a stacked fraction): 258 over 121 papers
+  maths spans with slashes ONLY inside quotes (page already fine): 0 over 0 papers
+
+the bare slash, by what touches it (emission side):
+  1|2            20
+  3|4            8
+  )|2            8
+  a|2            7
+  3|2            5
+  1|3            4
+  1|6            4
+  X|u            4
+  b|3            4
+  M|4            4
+  2|j            4
+  3|5            3
+  4|5            3
+  1|4            3
+  i|3            3
+  N|2            3
+  l|2            3
+  )|4            3
+  2|2            3
+  ||2            3
+  1|q            3
+  1|(            3
+  a|9            3
+  2|3            3
+  a|h            3
+  i|5            3
+  u|J            2
+  2|d            2
+  d|2            2
+  1|t            2
+
+TeX that means a REAL stacked fraction, in the maths the emitter receives:
+  \over     0 maths spans
+  \nicefrac 0 maths spans
+  \binom    0 maths spans
+  \cfrac    0 maths spans
+  \dfrac    6 maths spans
+  \tfrac    25 maths spans
+
+first 45 bare-slash spans:
+   A-Charged-Reduction-of-the-Spacetime-Pen {b_3/4}                            b_3/4
+   A-Charged-Reduction-of-the-Spacetime-Pen {b_3/2}                            b_3/2
+   A-Charged-Reduction-of-the-Spacetime-Pen R_{g_b}/2\geq c_n^2|E_b|_{g_b}^2   R_(g_b)/2 gt.eq  c_n^2|E_b|_(g_b)^2
+   A-Charged-Reduction-of-the-Spacetime-Pen b_3/4\leq |h|\leq b_3              b_3/4 lt.eq  |h| lt.eq  b_3
+   A-Charged-Reduction-of-the-Spacetime-Pen \displaystyle
+      \mathcal D_N=\     cal(D)_N= overline( "component" "of"  \{|h|<c_h\}
+        "containing"
+   A-Charged-Reduction-of-the-Spacetime-Pen \displaystyle
+      \operatorname{     "supp" (K_( upright("new") )|_( cal(D)_N))
+       subset  \{x in   cal
+   A-Counterexample-to-Kuroshs-Division-Rin A/k                                A/k
+   A-Counterexample-to-Kuroshs-Division-Rin A^u/J_A(X_0)                       A^u/J_A(X_0)
+   A-Counterexample-to-Kuroshs-Division-Rin A'/k'                              A'/k'
+   A-Counterexample-to-Kuroshs-Division-Rin (A')^u/J_{A'}(X'_0)                (A')^u/J_(A')(X'_0)
+   A-Fixed-Particle-Test-for-Computation-in \Lambda^n z=j/\Lambda\pmod 1       Lambda^n z=j/ Lambda  (mod 1)
+   A-Fully-Polynomial-Randomized-Approximat 1/D                                1/D
+   A-Gepner-stability-condition-on-every-sm 1/5                                1/5
+   A-Gepner-stability-condition-on-every-sm 2/5                                2/5
+   A-Gepner-stability-condition-on-every-sm 3/5                                3/5
+   A-Gepner-stability-condition-on-every-sm 4/5                                4/5
+   A-Modulus-Proof-of-Cannons-Conjecture-Se s_{ij}\asymp R^2/d_{ij}^{\,2}      s_(i j) asymp  R^2/d_(i j)^(#h(0.1667em) 2)
+   A-Power-Saving-for-Polynomial-Difference \displaystyle j'_v\in\{(a-1)\ell_s    j'_v in  \{(a-1) ell_s+1, dots.h  ,a ell_s\},
+            bb(P) ( "reta
+   A-Three-Manifold-Without-Conjugate-Point X=x_1/B_1,\quad Y=x_2/B_2          X=x_1/B_1,    Y=x_2/B_2
+   A-classification-of-finite-Euclidean-Ram 1/t                                1/t
+   A-classification-of-finite-Euclidean-Ram t(1/t)=1                           t(1/t)=1
+   A-closed-Ricci-flow-with-bounded-scalar- h_c=r_c/\sqrt q                    h_c=r_c/ sqrt(q)
+   A-closed-Ricci-flow-with-bounded-scalar- |\operatorname{Ric}|\le C\delta^L( | "Ric" | lt.eq  C delta^L(r^2+b_0 theta^2)^(-a/2)
+   A-counterexample-to-the-Monge-ansatz-for 1/3                                1/3
+   A-counterexample-to-the-Monge-ansatz-for 1/6                                1/6
+   A-counterexample-to-the-Monge-ansatz-for 1/6                                1/6
+   A-counterexample-to-the-Monge-ansatz-for 1/6                                1/6
+   A-counterexample-to-the-Monge-ansatz-for 1/6                                1/6
+   A-counterexample-to-the-nearby-Lagrangia \|\Delta p_B\|\geq R(b)|t|(K\delta \| Delta  p_B\| gt.eq  R(b)|t|(K delta_0-C_1/c)
+   A-counterexample-to-the-nearby-Lagrangia K\delta_0>C_1/c,\quad \Delta p_B=0 K delta_0>C_1/c,     Delta  p_B=0#h(0.3333em) arrow.r.double.long#h(0.3333
+   A-finite-time-singularity-of-Calabi-flow {\beta/4}                          beta  /4
+   A-finite-time-singularity-of-Calabi-flow {\beta/2}                          beta  /2
+   A-power-saving-for-intersective-polynomi 1/r_*                              1/r_*
+   A-radial-continuum-phase-transition-with e/p                                e/p
+   A-radial-continuum-phase-transition-with d/p                                d/p
+   A-radial-continuum-phase-transition-with \rho=5p/3,\quad s_1<s_2            rho  =5p/3,    s_1<s_2
+   A-sharp-entropy-bound-and-the-simplex-in p_i=w_i/a_i                        p_i=w_i/a_i
+   A-translational-tile-with-no-fully-perio \mathbb Z^2\times\mathbb Z/\mathbb bb(Z)^2 times   bb(Z) / bb(Z)  Q
+   A-uniform-Hilbert-transform-estimate-for \sim G^{-1/4}d(i)                  tilde.op  G^(-1/4)d(i)
+   A-uniform-Hilbert-transform-estimate-for \displaystyle\frac{QH_j}{w}=G^{1/4    frac("QH"_j, w) =G^(1/4)
+   Additive-hardness-and-unbounded-configur [1/2,9/16)                         [1/2,9/16)
+   Almost-Linear-Time-Maximum-Cardinality-M u(d)>w_d/2                         u(d)>w_d/2
+   Almost-everywhere-Fourier-convergence-in 1/2                                1/2
+   Ambiently-homeomorphic-isolated-hypersur {1/2}                              1/2
+   An-explicit-exact-Hausdorff-gauge-for-SL P(k+1/2,0)                         P(k+1/2,0)

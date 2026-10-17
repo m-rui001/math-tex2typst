@@ -1,0 +1,405 @@
+# D192 研究笔记：模数无界之后（Cannon 猜想解析路线的反推）
+
+## §0 登记、素材与落盘探针
+
+我是把这篇论文当作"自己正在做的东西"来重读的。下面这份笔记记录的是从论文文本反推出来的思维链：一开始我以为要证什么、试过的几条走不通的路、在哪个地方拐了弯、以及最后落地的思路和最初设想之间的距离。凡是我从论文里读不出来的东西，一律标 `[推测]` 并说明为什么读不出来，不硬编成"显然如此"。
+
+素材边界（本稿唯一的取材面）：`build/` 下的 `.tex` 源，逐字读过，共九个文件，行数是 main.tex 321 行、sections/01_geometry.tex 293 行、sections/02_scalar.tex 494 行、sections/03_exponential.tex 328 行、sections/04_flow.tex 463 行、sections/05_pairs.tex 356 行、bibliography.tex 141 行、figures/level-continuum.tex 50 行、figures/pair-cost.tex 54 行，`.tex` 合计 111,568 字节。目录里另有 `paper.pdf` 与 `typst/` 分片，按规格一律没有打开，正文素材一个字也不从它们取；README.md 只当目录索引用（作者署名 OpenAI、日期 September 23, 2026），不作为论证来源。没有 Lean 行，所以我没碰 `lean/`、`formalization.yaml`、`comparator`、`records.txt`。没有跑任何 git 命令，也没有执行 pdftotext。
+
+落盘探针（本稿第 0 步）：`Write` 只用一次，就是这一份初稿本身；写完立刻 `wc -c` 记基线，然后 `Edit` 只加一行探针文本，再 `wc -c` 复量；字节不涨就说明写入通道有问题，按规格停手。此后所有增补一律 `Edit` 追加在文末，单块 ≤25,000 字节，已落盘的内容不删、不改、不重排；写错了在文末加"勘误"节。小节编号动笔前已经排定（§0 到 §18），事后不挪。
+
+台账表头两行按规格逐字照抄，数据行 ≥30 行，每格数学直接 `$...$`，绝对值写 `\lvert … \rvert`，范数写 `\lVert … \rVert`，单元格里不出现裸竖线。
+
+登记（逐字两条，各占一行）：
+
+preprints/A-Modulus-Proof-of-Cannons-Conjecture-September-23-2026
+
+其他队列第 16 行号
+
+## §1 我把赌注押在一个数上
+
+论文的正文只有一句硬话：若双曲群 $G$ 边界 $\partial G$ 同胚于 $\mathbb S^2$，则存在同态 $\rho:G\to\operatorname{Isom}(\mathbb H^3)$ 使作用适当且余紧，核有限（main.tex:94-99）。摘要把它压缩成"Cannon 猜想得肯定解决"（main.tex:70-74）。我读的时候第一反应是：这么大一件事，最后必然落到一个可数的量上。果然，outline 段（main.tex:185-193）直接把全局结构摊开了：固定视觉度量 $d$，取尺度 $a^{-n}$（记 $r_k=a^{-k}$，01_geometry.tex:19），用分离网的球覆盖 $Z=\partial G$，给球配非负权 $\omega$，要求每条直径不小于 $d_0$ 的道路碰到的权和至少 $1$，然后
+
+$$M(n)=\min \sum_{q\in T_n}\omega(q)^2 .$$
+
+定义原文在 01_geometry.tex:160-171，其中胞是 $B(q,2r_n)$，道路族是 $\mathcal F_0=\{\pi:\operatorname{diam}\pi\ge d_0\}$。剩下要做的事被写成一行：$\sup_n M(n)<\infty$（main.tex:191-193）。
+
+这就是我的初始动机：把拓扑问题翻译成一个组合 $2$-模数的一致上界。翻译工作本身是现成的，Bonk--Kleiner 的度量表述（main.tex:128-129）加上 Bourdon--Kleiner 推论 3.5 的判别法（main.tex:130-134），落到论文里是定理 \Cref{thm:uniformization}（01_geometry.tex:181-185）。判别法要的前提出现在 01_geometry.tex:186-204 那段"验证"里：近似自相似来自展开公式（01_geometry.tex:34-58），$\kappa$-逼近的口径来自 $2^{-m}/a<r_n\le 2^{-m}$ 的选法，粗尺度只有有限个所以免费。这一段我读了三遍，因为它是那种"写完才发现原来还要交底"的地方：判别法原本是给图上近似序列的，作者要把自己的胞覆盖塞进去，得说明 $\kappa>2a$ 就够、并且"这个判别法里没有 Coxeter 群的假设"（01_geometry.tex:203）。我最初的设想里根本不存在这一节，我以为引用是即插即用的。
+
+$M(n)$ 有界是充分条件，而且是分析性质的条件：它只用到测度、覆盖、道路、乘积 $(y|z)_e$。我在这个阶段最在意的是"上界从哪来"，也就是 §2 的第一条错路。
+
+还有一个细节让我一开始就不安：主定理允许核有限、允许出现保向反的等距，明确写了"不要求 $G$ 保持某个定向"（main.tex:101-105）。当时的我没看懂这句话的代价，直到 §4 那条代数路线被它挡住，才明白它其实是在预告：任何要用 Markovi\'c 型判别的走法都得先解决定向问题（main.tex:162-165 的判别法要求作用忠实且保向）。
+
+## §2 正面估上界的念头与它的塌法（第一条错路）
+
+我脑子里最先成形的证明形状是"正面压上界"：在每一个尺度 $n$ 上，手工造一个对 $\mathcal F_0$ 可容许的权，直接算 $\sum\omega^2\le C$。这类做法在平面域上是有先例的：把 $Z$ 塞进局部坐标盘，用共形模数的单调性和 Beurling 型估计把权铺到同心圆环上，再对环求和。Cannon--Floyd--Parry 那一支（main.tex:119-124）本来就是"在每个指定邻域里找一环，使分隔曲线的离散模数有正下界"，看上去正反都能用。
+
+它在我这里塌掉的点，恰好就是 Bourdon--Kleiner 判别法要我确认的那个近似自相似性。可用的尺度控制只有展开公式（01_geometry.tex:39-43）
+
+$$c_E\frac{R\,d(y,z)}{D_yD_z}\le d(hy,hz)\le C_E\frac{R\,d(y,z)}{D_yD_z},\qquad D_y=\max\{R,d(x,y)\},$$
+
+其中 $h=v^{-1}$ 是深度 $k$ 顶点 $v$ 的反向平移、$R=r_k$。正面铺权的时候，我需要在 $B(x,CR)$ 上一致地控制"环的模数"。公式在 $B(x,CR)$ 内部确实给出双 Lipschitz、比例因子 $R^{-1}$（01_geometry.tex:44-45）。但整个 $Z$ 上铺权必须同时看 puncture：一旦取 $z_0$ 使 $d(x,z_0)\ge\varepsilon_*$，就有 $d(hy,p)\asymp R/D_y$（01_geometry.tex:46-51，式 eq:puncture）。这个 $D_y$ 在 $y\to x$ 时是 $R$，在远处是 $d(x,y)$，于是 puncture $p$ 附近 $D_y$ 退化，环的口径随 $y$ 而变，我做不出一个与 $n$ 无关的、可跨尺度求和的铺法。
+
+我给自己找的退路是"用群作用把坏区域挪走"，但这正好暴露我没准备好的事实：$G$ 在 $Z$ 上只是一致的拟 Möbius（01_geometry.tex:98-107 的交叉比一致估计），一致拟 Möbius 只能保住交叉比，保不住我逐尺度手工铺的权的能量。能量 $\sum\omega^2$ 对双 Lipschitz 形变的不变性只有"常数依赖于形变"那种程度的稳健性，对一列 $n\to\infty$ 完全不够。
+
+`[推测]` 论文没有承认过任何正面估计的尝试：反证的结构（main.tex:191-193 之后立刻写 "Assume this fails"）只说明作者最后选了反证。我这条"先想正面、后转反证"的路线是我按结构倒推的心理重建，因为文本里没有失败记录，只有最终成功记录的起点。我把它写在 §2 并标推测，是为了后面 §5 的转折不至于显得像灵光一现。
+
+## §3 借共形维数那条现成的路（第二条错路，被前提卡住）
+
+第二条路我觉得最省力：Bonk--Kleiner 已经证过，当 Ahlfors 正则共形维数达到极小时 Cannon 猜想成立（main.tex:139-148，引 \cite{BKConformalDimension} 定理 1.1 与 1.3）。这条路的机制我也大致能说清：极小度量带 Loewner 性，Loewner 性给定量化的道路族控制。
+
+卡点写在同一句话里："the existence of a minimizing metric is a hypothesis of that criterion"（main.tex:146-147）。也就是说，这条路要我"先有"极小度量，而我要证的恰恰包括边界可被拟 Möbius 参数化。这跟难度无关，它在逻辑上是循环的：极小性的存在性与统一化的结论在同一个逻辑层面上。Pansu 的共形维数本来是边界不变量（main.tex:141-142 引 Pansu 1989），它作为不变量存在，作为达到极小的度量却需要额外的紧性论证，而那紧性正比我要证的东西更强。
+
+我在这个方向上浪费的时间主要是找"弱化假设"：能不能只用下半连续性？能不能在某个固定拟对称类里取极小序列、证明它收敛？我看到的问题是这样做的极限度量会退化（体积可以跑到更小尺度上去），而控制退化又需要模数界。`[推测]` 论文对此没有任何记录，我之所以相信自己当时绕进这条死路，是因为 outline 与历史段（main.tex:139-148）花了整整一段来交代这条路的"假设式"性质，一般只有在作者真试过、并在它上面碰过壁时才会写得这么具体这么克制。
+
+结论：这条路只能当作"如果统一化成立则一切顺"的事后检查用，不能当主论证。这个判断逼我去想"能不能不证极小性，只证一致上界"，也就是回到 §1 的 $M(n)$。
+
+## §4 代数路线：曲面子群、cubulation 与定向（第三条错路）
+
+第三条路是纯群论的：Kahn--Markovi\'c 给出闭可定向双曲三维流形群里稠密的几乎测地曲面子群（main.tex:150-152），Bergeron--Wise 用它把这类群 cubulate，并给出更一般的边界判据：若拟凸的余维一子群能分隔每一对不同边界点，就有适当余紧的方复杂作用（main.tex:152-156），Agol 对带这种作用的群证虚拟特殊性（main.tex:157-160）。另一头是识别方向：Markovi\'c 说足够的曲面子群分隔每一对边界点就能得到 Klein 实现，前提是作用忠实且保向（main.tex:162-165）；Ha\"issinsky 对方杂化且边界平面的群给虚拟 Klein 判据（main.tex:166-167）；最近的 drilling 工作说明环面相对 Cannon 猜想能推出每个残有限球边界群的虚拟 Klein 实现（main.tex:168-172）。
+
+我为什么走不通：一，我手里只有一个抽象双曲群和它的球边界，没有任何先验的曲面子群可以调用；"存在足够多的分隔型拟凸子群"这种假设在我这里等价于结论，我甚至无法在例子上验证它。二，方向：主定理允许反保向元、允许非可定向的商流形（main.tex:103-108 与 cor:torsion-free 的证明注脚 main.tex:285-287），Markovi\'c 判据的保向前提在这里是一个真实的障碍，我要用它就得先做一次定向选择，而定向选择本身似乎要用到统一化。三，这些结果在我这里只能作为"事后推论"使用：作者也是这么处理的，先拿到三维实现，再在 \Cref{sec:consequences} 里调用 Agol 与 Bergeron--Wise（main.tex:158-160，实际使用在 main.tex:289-318）。
+
+`[推测]` 这一节同样是我的重建。论文里唯一的硬线索是 main.tex:173-174 那句 "The present proof follows the analytic route"，以及把三条代数线索逐条标注"其前提是什么"的写法（例如 main.tex:146-147 的假设式性质、main.tex:163-165 的忠实保向要求）。作者花笔墨强调别人的前提，通常意味着自己曾在那些前提上碰过钉子。
+
+三次碰壁以后我的处境很清楚：可用的只剩 $M(n)$、展开公式、群作用的双 Lipschitz 性、以及边界是球这一条拓扑信息。后面所有东西都是从这四样里长出来的。
+
+探针行 PROBE-D192-001：本行用于验证落盘通道，基线 11284 字节，复量应增大。
+
+## §5 关键转折一：把"失败"当成输入，并买一条跨尺度不等式
+
+反证的开关在 main.tex:194 只有一句话："Assume this fails"。我读到这里时其实有点失望，因为这意味着作者放弃了我 §2 那种正面铺权的想法。但接下来的三行是我整个笔记里认为最重要的一段（main.tex:194-195）：Record indices permit comparison of $M(N-l)$ with $M(N)$, and lead to two growth cases. 它说的是：反证假设给我的第一个礼物是一套可比较的尺度。
+
+具体做法在 02_scalar.tex:18-26。若 $\limsup M(n)^{1/n}>1$，取 $1<\lambda<\limsup M(n)^{1/n}$；否则 $\lambda=1$。两种情形下 $M(n)/\lambda^{n}$ 都无界，于是可以取一列递增的记录指标 $N$，使 $M(N)\to\infty$ 且
+
+$$M(N-l)\le \lambda^{-l}M(N),\qquad 0\le l\le N. \tag{02\_scalar.tex:23-25}$$
+
+我最初的直觉是：既然 $M(n)$ 是同一族道路 $\mathcal F_0$ 在不同胞覆盖下的模数，跨尺度比较应该是"标准单调性论证"，写一行就行。这里我必须承认它不行。理由是我在 §2 里已经吃过的同一个退化：从一个尺度到下一个尺度，胞 $B(q,2r_n)$ 的对应关系在 puncture 附近失去控制（$D_y$ 的那个因子），没有任何机制保证 $M(n+1)\le CM(n)$ 反向的界。所以我唯一能"合法买到"的关系，是挑那些把 $M$ 推到新高点的 $N$：在记录时刻，前面所有尺度的值都被 $\lambda^{-l}$ 压住。这是把"我不知道跨尺度关系"这件事转化为"我在记录时刻有关系"的标准手法，代价是后面每次用到它都得提醒读者：$l$ 是沿记录往回数的深度。第二个细节也很要紧：02_scalar.tex:26 特意写了 "This inequality survives every further subsequence"，因为后面 §6、§7、§9 里我要不断取子列（局部均匀收敛、测度弱收敛、Hausdorff 极限），若这条不等式会被子列破坏，整个结构就散了。
+
+分支的雏形也在这里出现：$\lambda>1$ 与 $\lambda=1$。当时我没意识到这两支会走向完全不同的论证（§10 与 §12），我以为只是"$\lambda$ 大小不同导致某几个估计强弱不同"。真正读到最后才明白，$\lambda>1$ 给的额外东西是 $u$ 的局部 H\"older 性（02_scalar.tex:362，指数 $\log\lambda/(2\log a)$ 见 02_scalar.tex:398），而 H\"older 性是放大（blow-up）能够启动的前提；$\lambda=1$ 时这个前提消失，只能换成概率流。两支共用同一个标量构造（main.tex:242-243），这个"共用"是我在 §7 结束时才看出来的架构性事实。
+
+## §6 关键转折二：交叉对偶把 $M(N)$ 变成 $1/M(N)$
+
+有了记录指标，下一步是把"$M(N)$ 很大"翻译成某种"能量很小"的东西。这一步在我脑子里的第一版是错的：我以为要用 $M(N)$ 大去构造一条很长的道路，或者去证明某个环模数很大。论文给的是对偶方向（02_scalar.tex:113-133）。
+
+先把场地定死。局部化到矩形（02_scalar.tex:28-54）：用有限多个坐标盒 $[-1,1]^2$ 覆盖 $Z$，每个盒子坐在一个包含 $[-8,8]^2$、且直径小于 $d_0$ 的坐标图里；一条宏观道路（$\operatorname{diam}\ge d_0$）碰到内盒就必须离开大盒，跟着它到第一次碰 $\partial[-2,2]^2$，若从 $x=2$ 出去，那么它从最后一次碰 $x=1$ 之后的那段就是 $[1,2]\times[-2,2]$ 的左到右穿越，另外三条出口边同理，得到有限个穿越族 $\mathcal F_1,\dots,\mathcal F_J$，每条宏观道路都包含其中之一为子段。于是
+
+$$M(N)\le J\sum_{j=1}^{J}\operatorname{Mod}_2(\mathcal F_j,T_N)\le J^2\max_j\operatorname{Mod}_2(\mathcal F_j,T_N),$$
+
+沿子列有一个条带实现这个界，仿射坐标给出 $\mathcal Q=[0,1]^2\subset\widehat{\mathcal Q}=[0,1]\times[-1,2]$，左到右穿越模数 $\ge cM(N)$。这个论证我觉得漂亮之处在于它用 $d_0$ 把"宏观"变成了"必穿越某条带"，而 $d_0$ 的选取本来就是按展开式规定的（01_geometry.tex:173-177：直径至少 $R/2$、坐在 $\overline B(x,3R)$ 里的道路，在尺度 $R$ 的展开下像直径仍至少 $d_0$）。
+
+然后是平面阻挡的双向陈述（02_scalar.tex:61-103）：(i) 碰两条侧边的连续统必碰每条上到下的道路；(ii) 碰所有上到下道路的紧集必含一个碰两侧边的连续统。我一开始打算直接引 Whyburn 型的分隔定理，图省事。读作者给的证明后我放弃了这个想法：(i) 要走一遍"把连续统横向延长、把道路纵向延长，再用 Jordan 曲线定理"的初等构造（02_scalar.tex:74-84），(ii) 是纯网格染色的奇偶论证（02_scalar.tex:87-102）：标记碰 $K$ 的闭方格，从顶可达的未标记方格记 $A$，其余加底行记 $B$，画异标界面；内部顶点度数偶，两侧边界各贡献奇数个端点，故必有界面分量连接两侧；沿该分量相邻的 $B$ 方格至少共角，其并连通紧、穿两侧，网眼趋于零取 Hausdorff 极限即得。我真正要的并非"存在连续统"这一条，这个构造还同时给出直径下界：取 $d_1$ 为 $\mathcal Q$ 两侧边之间距离（02_scalar.tex:216-217）。这个 $d_1$ 后面被用了三次（02_scalar.tex:302 的 $4R_*<d_1$、04_flow.tex:41 与 04_flow.tex:380 的 $(B_0+2)R<d_1/2$、05_pairs.tex:164-166 保证 $h_iC_{N,t}$ 一定进入 puncture 球），所以一个"引用现成定理"的懒办法会把后面全部拆掉。`[推测]` 这个判断来自论文没有引用任何分隔定理、反而花 40 行给初等证明这一事实；文本没有说"我们曾试图引用 Whyburn"。
+
+对偶权的核心（02_scalar.tex:124-132）：在有限多个左到右穿越的胞关联向量的凸包中取欧氏范数最小元 $P$。坐标非负、和至少 $1$，故 $P\ne0$；最小性给 $\langle P,v\rangle\ge\lVert P\rVert^{2}$，所以 $P/\lVert P\rVert^{2}$ 对左到右穿越可容许；反过来任何可容许 $\omega$ 满足 $\langle\omega,P\rangle\ge1$，于是左到右模数正好是 $\lVert P\rVert^{-2}$。再由 (i)，每个上到下关联向量与所有 $v$ 的内积至少 $1$，从而与 $P$ 至少 $1$。取 $\rho=P$，配 02_scalar.tex:118-121 的式 eq:dual-energy：
+
+$$\sum_{q\in T_N}\rho_q^{2}\le \frac{C}{M(N)}.$$
+
+这就是我第一次读到时会心一笑的地方：反证假设 $M(N)\to\infty$ 在这里被兑换成"横截权 $\rho$ 的平方和趋于零"。我要的上界一直没证出来，但我拿到了它的对偶形式的下界，并且它随 $N$ 衰减。凡是后面出现"能量趋于零"的论证（02_scalar.tex:254-259、03_exponential.tex:118-121、05_pairs.tex:238-242），源头都是这一行。论文也老实交代了这件东西的出处：它是 discrete extremal length 的一部分，Cannon--Floyd--Parry 用穿越向量与其横向切割配对（02_scalar.tex:106-109），Albin--Poggi-Corradini 的概率解释给出同一条最小范数关联向量恒等式（02_scalar.tex:109-111），作者仍坚持在自己胞覆盖的语言里重证一遍。
+
+## §7 关键转折三：一层插值不够，两代泛洪 $F_N$、$H_N$
+
+现在手里有横截权 $\rho$，要做连续函数。第一版做法（也是我原以为足够的做法）：定义顶部到底部的最短代价
+
+$$b_N(x)=\inf_{\pi:x\to\text{顶边}}\ \ell_\rho(\pi),\qquad \ell_\rho(\pi)=\sum_{q:\,B(q,2r_N)\cap\pi\ne\varnothing}\rho_q,$$
+
+取 $\min\{1,b_N\}$，顶边上恰好为 $0$，向上下两条带分别以 $0$ 与 $1$ 延拓，可容许性保证底边值为 $1$（02_scalar.tex:137-144）。沿任何道路端点值差不超过该道路的代价：这条性质我逐字核对了三种情形（02_scalar.tex:145-155），只在顶带时两端点值都受各自到顶带段代价控制；只在底带时端点值至少是 $1$ 减该段代价（用"顶到端点"的竞争者拼接）；两条带都碰则含一条代价至少 $1$ 的穿越。最后把 $\widehat{\mathcal Q}$ 用含带边界的坐标网格三角化，每个三角形 $d$-直径小于 $r_N$，顶点值仿插得连续 $U_N^0:\widehat{\mathcal Q}\to[0,1]$（02_scalar.tex:156-159）。
+
+到这里我以为完事了，然后撞上文里唯一一句直接承认失败的话（02_scalar.tex:160-161）：Continuity alone does not ensure that one selected level continuum meets every path straddling the corresponding value. 我自己的版本是这样错的：我打算取 $t=1/2$，声称 $\{U_N^0=1/2\}$ 里有横向连续统，于是任何端点值跨过 $1/2$ 的道路都碰到它。反例的形状我不用查文献就能画出来：一层插值可以有"山谷再接山谷"的等值线，连通分量各自缩在中间，既不碰侧边也不拦住某条特定道路；更关键的是，我需要的是"每一个 $0<t<1$"都有这样一条有正直径的连续统，而我还需要严格不等号层面的连接性信息。
+
+补救是两层泛洪（02_scalar.tex:163-169）：
+
+$$F_N(x)=\inf_{\pi:x\to\text{顶}}\max_{\pi}U_N^{0},\qquad H_N(x)=\sup_{\pi:x\to\text{底}}\inf_{\pi}F_N .$$
+
+第一层把 $U_N^0$ 往上抬（到顶的最小最大值），第二层把 $F_N$ 往下压（到底的最大最小值）。振荡链 $\operatorname{osc}_K H_N\le\operatorname{osc}_K F_N\le\operatorname{osc}_K U_N^0$（式 eq:flood-osc，02_scalar.tex:175-177）是我检查得最仔细的一行，因为它保证了 $\rho$ 的小能量在两次改造之后仍然留在函数上：任何只在 $U_N^0$ 上成立的估计，都能通过这条链搬给 $H_N$。它的证明靠拼接近乎最优的道路（02_scalar.tex:188-194），$F_N(x)>F_N(y)$ 时两端值被夹在 $\min_K U_N^0$ 与 $\max_K U_N^0$ 之间，$H_N(x)>H_N(y)$ 时被夹在 $\inf_K F_N$ 与 $\sup_K F_N$ 之间。
+
+水平连续统的分离性质（02_scalar.tex:199-220）我用了一段才想通它的正确顺序。第一步：$\{H_N>t\}$ 里每一点都能在该集合内连到底带（取一条 $\inf F_N>t$ 的道路并用尾段）；$\{F_N<t\}$ 里每一点能在 $\{F_N<t\}$ 内连到顶带。第二步是真正巧的地方：若 $H_N(x)<t\le F_N(x)$，取 $H_N(x)<s<t$，沿任一往顶的道路走到第一次使 $F_N=s$ 的点；这段前缀上 $F_N\ge s$，于是由拼接得 $H_N(x)\ge\min\{s,H_N(z)\}$，故前缀上 $H_N(z)\le H_N(x)<t$ 全程成立，前缀终点又通过 $\{F_N<t\}$ 连到顶、从而通过 $\{H_N<t\}$ 连到顶。结论：$t$ 的严格下侧连顶带、严格上侧连底带，都不碰水平集。然后 $\{H_N=t\}$ 拦住所有上到下道路（由连续性且它含在 $\mathcal Q$ 内），用 §6 的 (ii) 得横向连续统 $C_{N,t}$，直径至少 $d_1$；任何端点值严格跨过 $t$ 的道路，用严格侧的连接补成上到下道路，补的部分不碰水平集，故原道路本身碰 $C_{N,t}$（figure 1 的 caption 把这句讲清了，figures/level-continuum.tex:44-48：虚线是 strict-side extension，把 $\eta$ 补成上下穿越；图中连续统画成示意图，不假设光滑也不假设道路连通）。
+
+我在这个构造上花的时间比在别处多，因为它有一个我一开始抗拒的性质：$H_N$ 在两条带上是常数（02_scalar.tex:159），所以它把拓扑信息全部集中到 $\mathcal Q$ 内部，而带子给了 §9 需要的"非常值"（02_scalar.tex:396：two constant band values prove nonconstancy）。也就是说，两层泛洪同时买到了三件事：连续性、水平连续统的拦截性、以及一个不用证就成立的振荡上界链。
+
+## §8 环形估计：$M(N-l)$ 是怎样被逼出来的
+
+下面这一件是我原本以为可以跳过的技术环节，结果它是整条链最紧的一环。目标：把半径 $R=r_l$ 的球内的振荡，用周围环形区域上 $\rho$ 的平方和来界。02_scalar.tex:281-286 那段过渡话写得很直白：先在尺度 $R$ 展开，环形区域变成固定大小，网格 $r_N$ 变成 $r_{N-l}$，所以界里必然出现 $M(N-l)$。我第一次读的时候嫌它啰嗦，因为"$M(N-l)$ 出现"我本以为可以靠记录不等式一步吸收；后来才明白必须先有这条估计，才能谈吸收。
+
+局部版先垫底（02_scalar.tex:244-260）：对固定紧集 $K\subset U=\operatorname{int}_Z\widehat{\mathcal Q}$、固定 $J>0$，一致地有
+
+$$\operatorname{osc}_{\overline B(x,Jr_N)}H_N\le\sum_{q:\,d(q,x)\le C(J)r_N}\rho_q,\qquad C(J)=L(LJ+1)+3,$$
+
+其中 $L$ 是"球内两点可在稍大球内用道路相连"的常数（01_geometry.tex:129-134）。证明路径是：$\overline B(x,Jr_N)$ 内两点用 $B(x,LJr_N)$ 内的路连起来；碰到该道路的三角形顶点落在 $B(x,(LJ+1)r_N)$；其中任意两点再用 $B(x,L(LJ+1)r_N)$ 内的路相连；于是原始端点不等式把它们的值差压在右端，仿插保振荡，最后用 eq:flood-osc 搬到 $H_N$（02_scalar.tex:262-269）。
+
+平方求和那一步（02_scalar.tex:271-278）我核对了两遍，因为它同时依赖 packing 与"$g$ 固定"：平方和的项数与每个权被收费的次数都由 $\Cref{lem:packing}$ 一致控制；对 $br_N$-分离中心同样成立，常数依赖 $b$；固定 $g\in G$ 是双 Lipschitz，目标球的原像落在半径 $C_gJr_N$ 的源球里，源中心是 $b_gr_N$-分离的，且所有源球坐在 $U$ 内一个固定紧子集里。结果：对固定 $g$、固定紧集 $K'\subset gU$、$J\ge2$，
+
+$$\mathcal E_N^{(J)}(H_N\circ g^{-1};K')\le \frac{C(g,K',J)}{M(N)}\longrightarrow0,$$
+
+这里 $\mathcal E_n^{(J)}(f;K)=\sum_{q:\,B(q,2r_n)\cap K\ne\varnothing}\bigl(\operatorname{osc}_{\overline B(q,Jr_n)}f\bigr)^{2}$（02_scalar.tex:237-241）。
+
+我在这一块犯过的错（现在看是概念性的）：把这个"固定 $g$ 后能量趋零"当成"对一列 $g_N$ 一致趋零"。02_scalar.tex:11-14 那段前言其实提前警告过：常数与近似指标无关，但阈值可以依赖于所考虑的固定紧子集。$C(g,K',J)$ 随 $g$ 变化，所以任何"随 $N$ 一起动的群元"都不能塞进去用。后面 §10 与 §13 里，两处比较论证都必须先把群元固定、再让 $N\to\infty$（03_exponential.tex:233 那句 "All sets and $g$ are fixed in this limit"、05_pairs.tex:209 那句 "Fix the pair and $I$ before letting $N\to\infty$"），我当时觉得这是多余的啰嗦，现在知道那是这条错误路线留下的疤。
+
+环形估计本体（02_scalar.tex:287-347）。取 $R_*$ 使 $4R_*<d_1$ 且 $K$ 的所有 $5R_*$ 闭球含在 $U$。设 $R=r_l\le R_*$、$N-l\ge m_0$，被 $B(x,R/2)$ 内道路相连的两点值差记 $\Delta$。步骤：
+
+1. 用 $h$ 在 $(x,l)$ 展开；在尺度 $N-l$ 取宏观可容许权 $\omega$，平方质量 $M(N-l)$。令 $\mathcal A=\{q\in T_N:R/2\le d(q,x)\le3R\}$，$\sigma_q=\sum_{\xi:\,d(\xi,hq)\le C_0r_{N-l}}\omega_\xi$，$C_0>C_E+2$。展开在 $B(x,3R)$ 上把 $hq$ 分开固定倍数的 $r_{N-l}$，packing 控制两侧的重数，得 $\sum_{\mathcal A}\sigma_q^{2}\le CM(N-l)$。
+2. 记 $I$ 为两端点值之间的开区间。$t\in I$ 时 $C_{N,t}$ 既碰该道路又走出 $B(x,2R)$（直径超过 $4R$）；由 $\Cref{lem:paths}$ 在 $C_{N,t}$ 的 $r_N/4$-邻域内把这两个连续统上的点连起来，留下夹在半径 $R$ 与 $2R$ 之间的径向子段 $\eta_t$；它直径至少 $R$，故 $h\eta_t$ 按 $d_0$ 的选取是宏观的。
+3. 若目标胞 $B(\xi,2r_{N-l})$ 碰 $h\eta_t$ 于 $hy$，取 $q\in T_N$ 使 $d(q,y)\le r_N$；$m_0$ 足够大时 $q\in\mathcal A$ 且 $d(hq,hy)\le C_Er_N/R$，所以 $\omega_\xi$ 进入 $\sigma_q$。水平集上有一点在 $y$ 的 $r_N/4$ 内，故在 $\overline B(q,2r_N)$ 内，于是 $t$ 落在 $H_N$ 于该闭胞的值域区间 $I_q$ 里。
+4. 汇总：$1\le\sum_{q\in\mathcal A}\sigma_q\mathbf 1_{I_q}(t)$ 对每个 $t\in I$ 成立；积分加 Cauchy--Schwarz 得 $\Delta\le CM(N-l)^{1/2}\bigl(\sum_{\mathcal A}\lvert I_q\rvert^{2}\bigr)^{1/2}$；再用 eq:local-osc 与 $J=2$ 的有界重叠求和，取 $C(2)r_N<R/4$ 把所有被收费的中心关进 $R/4\le d(q,x)\le4R$，得
+
+$$\Delta^{2}\le C\,M(N-l)\sum_{q:\,R/4\le d(q,x)\le4R}\rho_q^{2}. \tag{02\_scalar.tex:294-296}$$
+
+第 4 步里那个"取 $C(2)r_N<R/4$"是我第一次读时忽略的细节：环形区域的内外半径与收费半径不一致（一个是 $R/2$ 到 $3R$，一个是 $R/4$ 到 $4R$），必须靠 $r_N\ll R$ 把差吞掉。这也解释了为什么 $m_0$ 的限制"只关于 $r_N/R=a^{-(N-l)}$"（02_scalar.tex:302-304）。
+
+有了这条估计，§9 的极限对象就只是标准的 Arzelà--Ascoli 加弱紧性的事；我在 §9 会停一下，因为那里有三条"不许外推"的禁令，是我最初读最容易越界的地方。
+
+## §9 极限对象 $u$、$\mu$，以及三条不许越界的禁令
+
+测度先定义出来：$\mu_N=M(N)\sum_{q\in T_N}\rho_q^{2}\delta_q$，总质量由 eq:dual-energy 一致有界（02_scalar.tex:351-353）。命题 \Cref{prop:scalar-limit}（02_scalar.tex:356-375）给：沿记录指标的子列，$H_N\to u$ 在 $U$ 上局部均匀，$\mu_N\rightharpoonup\mu$，$u:U\to[0,1]$ 连续且非常值，$\mu$ 有限，$u$ 在两条带的内部各取常值 $0$ 与 $1$，并且 $\lambda>1$ 时局部 H\"older；核心不等式是
+
+$$\bigl(\operatorname{osc}_{\overline B(x,s)}u\bigr)^{2}\le C\mu\bigl(\overline B(x,C_\mu s)\bigr), \tag{eq:measure}$$
+
+以及每个 $0<t<1$ 有一个 $\operatorname{diam} C_t\ge d_1$ 的连续统，$u=t$ 在 $C_t\cap U$ 上成立，且它拦住 $U$ 内每条端点值严格跨过 $t$ 的紧道路。
+
+等度连续那段（02_scalar.tex:377-398）我要特别记下两个我觉得设计过的细节。第一，取 $b$ 使 $a^{b}>2L$，取步长 $b_1$ 使 $a^{b_1}>16$，$l\le k-b$ 沿这个等差数列走：这样环 $\{r_l/4\le d(x,\cdot)\le4r_l\}$ 互不相交，才能把 $\sum\lambda^{-l}\mu_N(\text{环})$ 吸收进一个有限质量。我当时想直接用全体 $l$，那样求和会重复计质量而发散。第二，两种情形分开：$\lambda=1$ 时靠调和发散得 $|H_N(x)-H_N(y)|\le C_Kk^{-1/2}$（慢，但够用），$\lambda>1$ 时只取一个 $l=k-b$ 就得到 $C_K\lambda^{-k/2}$，从而有 H\"older 指数 $\log\lambda/(2\log a)$。一支靠"很多层各分一点"，另一支靠"指数衰减压倒一切"，同一行不等式的两种用法，这个对照是我后来理解全篇架构的钥匙。
+
+eq:measure 的证明（02_scalar.tex:400-410）：固定 $A>2L$，取 $As\le R=r_l<aAs$；$\overline B(x,s)$ 内两点在 $B(x,Ls)\subset B(x,R/2)$ 内被道路相连；环形估计加记录不等式给出 $\bigl(\operatorname{osc}_{\overline B(x,s)}H_N\bigr)^{2}\le C\mu_N(\overline B(x,4aAs))$；左边靠局部均匀收敛取极限，右边靠弱收敛对闭集的 $\limsup$ 不等式，于是 $C_\mu=4aA$。这条不等式是亚指数分支的全部燃料（04_flow.tex:401-407 的 $\sum_i\Delta_i^{2}\le E_0$、05_pairs.tex:289-292 的 $\mu(\mathcal D_{ij})\ge c\kappa^{2}\Delta_i^{2}$）。
+
+现在说三条禁令，它们都写在 02_scalar.tex:420-431 那节"两件比较工具"的前言里，是我最初最容易越界的位置：
+
+禁令一：$u$ 的值只在 $U$ 内有意义。原文直接写 "no value of $u$ is asserted outside $U$"。我最初的错误版本：我说"$C_t$ 上 $u=t$"，于是在 04_flow.tex:281-287 那段里，我差点把 $C_t$ 走到 $U$ 外面的部分也当作水平集用。作者的补救是加一道"内点检验"：源裕量把所有水平点关进 $K^{+}\subset U$，于是那里确实有 $u=t$。这个检验在后面还出现一次（05_pairs.tex:167-171 要求目标球离 puncture 有均匀距离 $\delta_*$，理由就是原像在外源球内、$D_y\le(B_0+2)R$ 时才用得上 puncture 的下界）。
+
+禁令二：比较要用 $H_N$ 和 $C_{N,t}$，不能只用 $u$ 与 $C_t$。理由写得明白：$H_N=t$ 在整条连续统上成立（不需要交 $U$），并且"每个群元固定之后局部振荡能量趋零"这条性质是近似序列的性质，极限 $u$ 上头没有对应的表述。我原本打算只在极限层面做所有论证，被这条禁令挡回来两次（03_exponential.tex:115 用 $f_j$ 携带 $H_{N_j}$，05_pairs.tex:210 定义 $F_{i,N}=H_N\circ h_i^{-1}$ 再让 $N\to\infty$）。
+
+禁令三：子列可以依赖 $t$。02_scalar.tex:416-417："The subsequence used here may depend on $t$; no simultaneous selection is needed." 我一开始坚持要对所有 $t$ 同时取一条子列，那需要某种对角化；而后面所有用到 $\{C_t\}$ 的地方（04_flow.tex:54-55、166-168、270-287）都是单个 $t$ 或一个固定区间 $I$ 上的逐点陈述，确实不需要同时选择。这个"不需要"是省了我一场不必要的紧性论证。
+
+有限胞比较引理（\Cref{lem:cross-energy}，02_scalar.tex:437-468）是两支共用的最终武器：若 $f,w$ 在 $V$ 上连续，$K\subset V$ 紧，对每个 $t\in I$ 有 $D_t\subset K$ 使 $f=t$ 于 $D_t$、$\operatorname{osc}_{D_t}w\ge b_0$，则对大 $n$
+
+$$b_0\lvert I\rvert\le\sum_{q:\,B(q,2r_n)\cap K\ne\varnothing}\operatorname{osc}_{\overline B(q,2r_n)}f\cdot\operatorname{osc}_{\overline B(q,2r_n)}w .$$
+
+证明只用值域区间覆盖：$w(D_t)$ 被碰 $D_t$ 的胞的 $w$-值域区间覆盖，而这样的胞满足 $t\in I_q(f)$；对 $I$ 积分并用 $\lvert I\cap I_q(f)\rvert\le\operatorname{osc}_{\overline B(q,2r_n)}f$。这里有一句我喜欢的注记（02_scalar.tex:465-466）：只有有限多个区间示性函数被积分，所以不需要 $D_t$ 的可测选择。我原本正准备搬一套选择定理，结果一个有限求和就够了。配套的"连续统在球面上停下"（\Cref{lem:stop-continuum}，02_scalar.tex:470-494）我也觉得值得单独记：它先证明紧度量空间里点的分支是其所有既开又闭邻域的交，并验证这个交连通，然后把 $X=D\setminus B(p,r)$ 里 $x$ 的分支拿来，若它不碰半径 $r$ 的球面，就有个避开球面的既开又闭邻域，紧性使它离 $\overline B(p,r)$ 有正距离，于是在 $D$ 内也既开又闭，矛盾。这个引理在 §10 与 §13 各用一次（03_exponential.tex:219、05_pairs.tex:217），我原先打算用"道路连通"替代它，但连续统按定义不必道路连通（main.tex:248-249 明确说了这点），所以那条替代路线在定义层面就不成立。
+
+## §10 指数分支：两次放大与 puncture 之间的互相压制
+
+设 $\lambda>1$，$u$ 局部 H\"older。放大引理（03_exponential.tex:15-99）我要先记下它的量纲设计。取 $\eta>Q$，$A_k=\sup_{x\in O}\delta(x)^{\eta}\operatorname{osc}_{\overline B(x,r_k)}f$，其中 $\delta(x)=\operatorname{dist}(x,Z\setminus O)$，两头界是 $ca^{-Qk}\le A_k\le Ca^{-\alpha_0k}$（02_scalar.tex 之外的式，见 03_exponential.tex:48-51）。下界靠 packing：一条紧的变动道路 $P\subset O$ 用不超过 $Cr_k^{-Q}$ 个以 $P$ 为中心、半径 $r_k$ 的球盖住，这些球的值域区间盖住 $f(P)$，故有一个球振荡至少 $cr_k^{Q}$，同时 $\min_P\delta>0$。上界就是 H\"older。
+
+我第一版的做法是只按振荡归一化，即令 $\sigma_k=\operatorname{osc}_{\overline B(x_k,r_k)}f$，中心取"振荡最大的点"。这个版本会在两个地方漏水：一是中心可能贴到 $\partial O$，于是展开后 puncture $p_k=h_kz_0$ 与像集的相对位置不可控；二是没有 $A_{k+j}\le a^{-\alpha j}A_k$ 这种"尾部极大值"结构（03_exponential.tex:61-63），我拿不到 $F_k$ 的一致局部 H\"older 界，Arzelà--Ascoli 就没法用。$\delta(x)^{\eta}$ 这个权重同时堵掉两处：由 $\delta_k^{\eta}\ge cr_k^{Q}$ 得 $\delta_k/r_k\ge cr_k^{Q/\eta-1}\to\infty$（03_exponential.tex:68-69），中心离边界比 $r_k$ 远得越来越快，于是任何避开 $b$ 的紧集的原像最终落在 $\overline B(x_k,C_Kr_k)\subset O$ 内（03_exponential.tex:73-75）；而"尾部极大"给的衰减直接搬到 $F_k$ 的一致 H\"older（03_exponential.tex:82-88）。有界性那步（03_exponential.tex:91-95）还是 $\Cref{lem:paths}$ 加 packing：把 $h_k^{-1}z$ 连到 $x_k$ 的路用有界多个半径 $r_k$ 的球盖住，每球振荡不超过 $C\sigma_k$。最后非常值由 $\operatorname{osc}_{h_k\overline B(x_k,r_k)}F_k\ge1/2$ 与"这些像球全在离 $b$ 有界的同一个紧集里"给出。`[推测]` 我的这个第一版失败是我按 $\delta^{\eta}$ 的结构反推的：文本没有说"曾考虑不带权重的归一化"，但它特意把 $\eta>Q$ 与 $Q$ 关联起来，又特意论证 $\delta_k/r_k\to\infty$，说明这个权重在干一件非有不可的事。
+
+对角化那段（03_exponential.tex:134-153）我读得慢，因为它是一次量词顺序的教训。作者的做法：先取 $K_j=\{d(z,b)\ge1/j\}$、$L_j=\{d(z,b)\ge1/(2j)\}$，选第 $j$ 个展开使 $h_j^{-1}L_j\subset U$ 且归一化的 $u$-变换在 $L_j$ 上与 $W$ 差至多 $1/j$；然后原文加粗强调 "Hold this expansion and its normalization fixed"，再选 $N_j>N_{j-1}$ 大到同时满足三条：$\sup_{L_j}\lvert H_{N_j}(h_j^{-1}z)-u(h_j^{-1}z)\rvert/\sigma_j\le1/j$、$\mathcal E_{N_j}^{(j)}(f_j;K_j)\le1/j$、$(j+2)r_{N_j}<1/(2j)$。第二条能做到，是因为 $h_j,\sigma_j$ 固定之后 \Cref{lem:local-oscillation} 给出界 $C(h_j,K_j,j)/(\sigma_j^{2}M(N_j))$，把 $N_j$ 推大就压下去。我最初的写法是把 $j$ 与 $N$ 一起对角化，那样每条条件都会破坏前一条，因为能量估计里的常数依赖 $h_j$ 与 $\sigma_j$。
+
+跨 puncture 的比较（\Cref{lem:exponential-comparison}，03_exponential.tex:183-236）是转折点四。结论是：若 $c=gb\ne b$、$V=W\circ g^{-1}$，则 $V(x)=V(b)$ 在每个 $x\in\mathcal N(W)\setminus\{c\}$ 成立，其中 $\mathcal N(W)$ 是非局部常值点集；更一般地，$p_s\ne p_t$ 时 $W_t$ 在 $\mathcal N(W_s)\setminus\{p_t\}$ 上取单值 $W_t(p_s)$。证明的骨架就是 §9 那套工具的合奏：在 $x$ 附近取坐标盘使 $\lvert V-V(b)\rvert\ge4\varepsilon$，盘里放 $W$ 的一条紧变动道路 $P$，取夹在端点值之间且避开 $W(c)$ 的正长度闭区间 $I$；由连续性定 $\epsilon_c$ 使 $\overline B(c,\epsilon_c)$ 离 $b$ 有界且其 $W$-值域离 $I$ 有正距离，于是大 $j$ 时 $D_{j,t}$ 避开这闭球（03_exponential.tex:128-131 那条 $\sup_{t\in I}\operatorname{dist}(b,D_{j,t})\to0$ 保证 $D_{j,t}$ 一定钻进 $b$ 的 $\rho$-球）；取 $\rho$ 使在 $\overline B(b,\rho)$ 上 $\lvert V-V(b)\rvert\le\varepsilon$；令 $w_j=f_j\circ g^{-1}$，则 $P$ 上 $\lvert w_j-V(b)\rvert\ge3\varepsilon$；用 \Cref{lem:stop-continuum} 从 $D_{j,t}$ 里截出含 $P$ 上的点、碰半径 $\rho$ 球面、且避开 $B(p_i,A_hR)$ 型内球的子连续统，落在 $K=\{d(z,b)\ge\rho,\ d(z,c)\ge\epsilon_c\}$，其上 $f_j=t$ 且 $w_j$-振荡至少 $\varepsilon$；套 \Cref{lem:cross-energy} 与 Cauchy--Schwarz，两个能量都趋零，左边 $\varepsilon\lvert I\rvert$ 是正的，矛盾。收尾那句 "All sets and $g$ are fixed in this limit"（03_exponential.tex:233）就是我前面说的禁令二在起作用。
+
+第二次放大（03_exponential.tex:238-328）：对 $W$ 在 $Z\setminus\{b\}$ 上再放大一次，取 $z_0=b$，得到 $W_i=W\circ s_i^{-1}$ 的正仿射归一化在离 $b_*$ 处局部均匀收敛到非常值 $W_*$。这里两个小论证我觉得最见功力。一是 puncture 两两不同的子列：若 $v_i^{-1}b=v^{-1}b$ 无穷多次，则 $v_iv^{-1}\in E$；取子列 $y_i\to y\in\overline O$，由 \Cref{lem:prefix}，$v_i$ 的边界方向趋于 $y$，右乘有界元不变这个方向，故 $y\in\Lambda_E$，与 $O$ 的选取矛盾。二是"两个值域不相交的盘"：沿一条变动道路走到两个不同中间值的首次命中点，命中前一刻两值还不同，故两点处函数非局部常值；连续性给盘，非局部常值给盘内的紧变动道路（03_exponential.tex:311-317）。最后固定两个不同指标 $i,j$，用 eq:two-transform-level 说 $W_j$ 在 $\mathcal N(W_i)$ 于两盘的点上取单值 $W_j(p_i)$，每盘各取一点，与 $W_j$ 在两盘上值域区间不相交矛盾。
+
+## §11 稳定子的方向数：一个我原本以为可以省掉的引理
+
+上面那个矛盾用到了"$O$ 的闭包避开 $\{b\}\cup\Lambda_E$"，而 $\Lambda_E$ 有限这件事由 \Cref{lem:stabilizer}（03_exponential.tex:243-283）保证：$E=\operatorname{Stab}_G(b)$ 的顶点至多有两个积累方向。我第一遍读的时候想跳过它，理由是自相似的边界上 stabilizer 大概是虚循环群，方向就两个，显然。读完发现"显然"里没有的正是双曲群层面的计数论证：
+
+先证线性增长 $\#\{q\in E:\lvert q\rvert\le t\}\le C'(t+1)$（式 eq:stabilizer-growth，03_exponential.tex:256-259）。取 $\xi$ 为到 $b$ 的基于 $e$ 的射线；对 $q\in E$、$\lvert q\rvert\le t$，三角形 $[e,q]$、$\xi$、$q\xi$ 的瘦性说明 $\xi(n)$ 与 $q\xi(n)$ 在 $n$ 远大于 $t$ 时一致接近，接近的参数落在 $[n-t-C,n+t+C]$；对同一个 $n$，当 $q$ 变化时这些顶点互异；价的有界性给出线性界。
+
+再证方向：若有第二个积累方向，取 $q_n\to x\ne b$、$q_n^{-1}\to y$。基变换给 $(q_n\mid q_nz)_e=\lvert q_n\rvert-(q_n^{-1}\mid z)_e+O(1)\ge\lvert q_n\rvert-O(1)$，由 \Cref{lem:prefix}，在避开 $y$ 的紧集上 $q_nz\to x$；而 $q_nb=b$ 迫使 $y=b$。取 $b,x$ 的互不相交小邻域和外面一点，大 $n$ 时 $q=q_n$ 把第一个邻域的补送进第二个邻域，故其正幂永不把外面那点送回来，$q$ 无限阶，因此是 loxodromic，端点 $b,x'$（引 BH 的 III.$\Gamma$.3.10）。若某 $h\in E$ 移动 $x'$，则 $\langle q\rangle$ 与 $\langle hqh^{-1}\rangle$ 交平凡（公共非零幂必有同一对端点），于是 $m^{2}$ 个乘积 $q^{i}(hqh^{-1})^{j}$、$1\le i,j\le m$ 两两不同且长度 $O(m)$，与线性增长矛盾。故 $E$ 的每个元固定两端点，把两端点间的测地线送到 Hausdorff 距离有界的线上，$e$ 的轨道离该线有固定距离，积累方向只剩那两个端点。
+
+我后来把这一节的作用记成一句话：主线上的估计它一条也不提供，它提供的是"选取变动区域 $O$"时那有限个禁入点。若没有它，$W$ 的第二次放大随时可能被 puncture 重复破坏，整个矛盾链就断了。
+
+## §12 亚指数分支：概率流树的骨架
+
+$\lambda=1$ 的分支（§12 到 §15）是我读得最吃力的部分，因为它把前面所有单点估计换成了一套全局记账。
+
+起点是 04_flow.tex:9-23：取 $x_0\in U$ 处 $u$ 非局部常值，$\epsilon_0$ 使 $\overline B(x_0,3\epsilon_0)\subset U$，$K=\overline B(x_0,\epsilon_0)$、$K^{+}=\overline B(x_0,2\epsilon_0)$，缩 $\epsilon_0$ 使 $z_0$ 离 $K^{+}$ 有正距离；所有中心在 $K$，所有源邻域在 $K^{+}$。节点是"中心 $x\in K$ + 尺度 $R=r_k$ + 非空开区间 $J=(j_-,j_+)\subset(0,1)$"，要求 $J$ 严格落在 $\overline B(x,c_0R)$ 的 $u$-值域内部（式 eq:node-straddling，04_flow.tex:45-49）。于是对每个 $t\in J$，$B(x,Lc_0R)$ 内有道路严格跨过 $t$，故碰 $C_t$；$\operatorname{diam} C_t\ge d_1$ 逼它走出 $\overline B(x,(B_0+2)R)$ 并碰每个中间球面（04_flow.tex:50-55）。
+
+孩子尺度固定为 $r=\theta R$，$\theta=a^{-D}$，全树共用一个 $D$。候选集是 $Y$，$\mathcal A_x(R)=\{y:(A-1)R\le d(x,y)\le(B_0+1)R\}$ 里的极大 $r$-分离集，计数 $\#Y\le C_Ya^{QD}$（eq:candidate-count）。每个候选有两个值域区间：$I_y^{\mathrm{in}}$（在 $\overline B(y,2r)$ 上极值之间）与 $I_y^{\mathrm{out}}$（在 $\overline B(y,c_0r)$ 上极值之间）；$J_y=J\cap\operatorname{int}I_y^{\mathrm{out}}$，$t_y=\lvert J_y\rvert/\Delta$，$\Delta=\lvert J\rvert$。
+
+good 的定义（eq:good-inner、eq:good-outer，04_flow.tex:80-87）：存在 $y^{-},y^{+}$ 使各自内区间分别在下四分之一、上四分之一里占长至少 $\kappa\Delta$，其中 $\kappa=c_*a^{-QD}$、$c_*\le1/(8\max\{C_Y,1\})$，且两个外区间距离至少 $\Delta/4$。
+
+转移概率要同时满足两套界（eq:transition-bad、eq:transition-general，04_flow.tex:99-106），指数固定为 $b_*=1/2$、$\tau=1/20$、$\beta=\tau/(4(Q+1))$、$\gamma=\beta/2$（eq:flow-exponents）：线性界 $p_y\le a^{-\gamma D}t_y$ 处处成立；二次界在 bad 节点是 $p_y\le a^{-b_*D}t_y^{2}$，在 good 节点只要求 $p_y\le a^{\tau D}t_y^{2}$。原文把两套界各自的用途交代得很清楚（04_flow.tex:107-113）：沿分支乘线性界，区间比会 telescoping，使分支概率小；乘二次界，把概率与区间长度的平方比联系起来；而 eq:measure 控制每一代分离节点的这些平方之和，于是二次界强的那批节点平均概率被压住，逼出任意深层都有可观比例的 good 质量。
+
+我最初的错误版本在这里，而且我确定它是错的（此处无须标推测，它是我自己的自然第一反应）：我想直接造一棵每层二分、孩子区间把父区间对半分开的树，把概率当测度分摊下去。这个做法在我脑子里死在两个地方。一是 $\mu$ 只有单侧信息（eq:measure 是"小球的振荡 $\le$ 大球的质量"，反过来没有），我无法保证存在把区间对半分的孩子；二是 $\mathcal A_x(R)$ 是个环带，取不到球的形状，孩子从哪里冒出来我事先不知道。所以真正的构造必须允许节点区间随孩子任意收缩、并把"找不到足够多的好区间"这种坏事翻译成 good 判据，再靠概率守恒去反击。论文里"两套界用途不同"那段话，正对应我脑子里那套单套界（只用 $p_y\le a^{-\gamma D}t_y$）的方案为什么会失败：只有线性界时，$\sum_iP_i$ 守恒与 $\sum_i\Delta_i^{2}\le E_0$（eq:level-energy，04_flow.tex:401-407）连不起来，因为 $P_i$ 与 $\Delta_i^{2}$ 之间没有不等式。
+
+记账的两条式子是 eq:flow（04_flow.tex:414-419）：
+
+$$P_i\le a^{-\gamma Dn}\frac{\Delta_i}{\Delta_0},\qquad \Delta_i^{2}\ge\Delta_0^{2}P_i\,a^{D((b_*+\tau)m_i-\tau n)},$$
+
+其中 $m_i$ 数的是祖先里 bad 的个数；加上 eq:conditional-flow $P_i/P_j\le a^{-\gamma Dm}$（条件概率）。有了它们，\Cref{lem:good-levels} 就是一行 Jensen：由 eq:flow 与 eq:level-energy，
+
+$$\frac{E_0}{\Delta_0^{2}}\ge\sum_iP_ia^{D((b_*+\tau)m_i-\tau n)}\ge a^{D((b_*+\tau)\sum_iP_im_i-\tau n)},$$
+
+故 $\frac1n\sum_iP_im_i\le\frac{\tau}{b_*+\tau}+O(1/n)=\frac1{11}+O(1/n)$，左边正是前 $n$ 代 bad 质量的平均；若 good 质量最终都小于 $1/2$，这个平均的下极限至少 $1/2$，矛盾。$\tau/(b_*+\tau)=\frac{1/20}{1/2+1/20}=\frac1{11}$ 这个数我特意算了一遍，它告诉我：$\tau$ 与 $b_*$ 的比值决定了"平均 bad 质量"的上界，而 $1/11<1/2$ 留了很大的余量。这个余量是给 §13 的 $a^{\tau D/2}$ 那种粗糙损失用的。
+
+几何常数的选择（04_flow.tex:125-151）我觉得是全文最像"工匠活"的一段：$c_{\mathrm{in}}=2L$，取 $c_0>c_{\mathrm{in}}+2$ 大到使 $A=4Lc_0+20$、$B_0=A+10$、$c_{\mathrm{pat}}=2C_Ec_{\mathrm{in}}/(A-2)^{2}$ 满足 $\dfrac{c_Ec_0}{(B_0+2)^{2}}>12c_{\mathrm{pat}}$（eq:flow-constant-choice）；再取 $H>\max\{4(B_0+1),4C_\mu c_0,2\}$，第一条保不同分支的分离，第二条让一代里的测度放大球互不相交（这正是 eq:level-energy 求和有界的理由）；还要 $\theta<1/4$、$c_0\theta<1$。原文特别指出不等式左右之比随 $c_0$ 线性增长，所以这样的 $c_0$ 存在；并且"节点尺度的统一上界可以现在就选，因为所有源半径因子固定，而附属尺度 $r$、$s$ 都不超过 $R$"，于是根尺度留到 $D$ 定了之后再选（04_flow.tex:153-157）。这类"先定常数、后定深度、最后定根尺度"的顺序，是我在这一节学到的最实际的东西。
+
+坏孩子的存在性（\Cref{lem:bad-node-children}，04_flow.tex:159-180）：对每个 $b\in[AR,B_0R]$，各 $C_t$、$t\in J$，都碰半径 $b$ 球面，所以那些满足 $\lvert d(x,y)-b\rvert\le r$ 的候选的内区间盖住 $J$；由 $\#Y\le C_Ya^{QD}$ 与 $\kappa$ 的取法，必有两个候选分别在两个四分之一里占 $\kappa\Delta$ 以上。若二者 $t_y<1/8$，下四分之一的内区间终点在 $j_-+3\Delta/8$ 以下、上四分之一的起点在 $j_-+5\Delta/8$ 以上（各自碰其四分之一而与 $J$ 之交短于 $\Delta/8$，伸出 $J$ 之外的情形同理），距离超过 $\Delta/4$，节点就 good。否则至少一个候选 $t_y\ge1/8$。对间隔 $(H+3)r$ 的径向值各做一遍，得到至少 $c_Ha^{D}$ 个两两距离超过 $Hr$ 的中心，在其上放均匀概率，$p_y\le c_H^{-1}a^{-D}$，因 $\gamma,b_*<1$，两套界都满足。
+
+## §13 容量估计：为什么要先对 $J$ 积分再选 $D$
+
+\Cref{lem:separated-capacity}（04_flow.tex:195-331）要证：$D$ 足够大时，一致地对所有节点存在 $Hr$-分离子集 $Y'\subset Y$ 使
+
+$$\sum_{y\in Y'}\min\{a^{-\gamma D}t_y,\ a^{\tau D}t_y^{2}\}\ge1. \tag{eq:capacity}$$
+
+失败前的自陈非常直白（04_flow.tex:189-192）：单个细分深度 $D$ 必须在节点区间 $J$ 任意短时也管用，所以先对 $J$ 积分，让 $\Delta$ 从估计里消掉。这一句回答了我最初的疑问：我本来准备按 $\Delta$ 的大小分档选不同的 $D$，那会让全树失去统一尺度，pattern 的有限性也保不住（pattern 的网眼是 $c_{\mathrm{pat}}\theta$，依赖 $D$）。
+
+证明是一条反证链，我把它的五步记下来，因为每一步都有名字：
+
+一、染色与失败假设。在 $Y$ 上按距离 $\le Hr$ 连边，packing 控住度数，于是图染色把 $Y$ 分成至多 $C_H$ 个分离类，$C_H$ 与 $D$ 无关；若结论失败则 eq:failed-capacity：$\sum_{y\in Y}\min\{\cdot\}<C_H$。
+
+二、大候选先剔掉。称 $t_y\ge a^{-(\tau+\gamma)D}$ 的候选为大。大候选上最小值取线性支，故 $\sum_{\text{large}}t_y\le C_Ha^{\gamma D}$（eq:large-total-length）。取 $D'=\lceil\beta D\rceil$、$s=a^{-D'}R$，$D$ 大时 $0<D'<D$ 且 $s<R/4$；在 $[(A+1)R,(B_0-1)R]$ 里取 $s$-间隔的径向桶 $\mathcal B$，$\#\mathcal B\asymp a^{D'}$。在 $\mathcal B\times J$ 上用计数测度乘 Lebesgue 测度，若某大候选满足 $\lvert d(x,y)-b\rvert\le5s$ 且 $t\in I_y^{\mathrm{out}}$ 就标记 $(b,t)$。每候选至多碰 11 个桶，由 eq:closed-range-length 与 eq:large-total-length，被标记的测度至多 $CC_Ha^{\gamma D}\Delta$；$\gamma<\beta$ 使未标记测度至少 $ca^{D'}\Delta$（eq:unmarked-mass）。这里的中间尺度 $s$ 是全文我最欣赏的一步：它比孩子半径 $r$ 大、比父半径 $R$ 小，于是"径向测试数"比大候选能占的容量多（04_flow.tex:219-223）。
+
+三、剩下的水平用模数探测。取 $\mathcal A_x(R)$ 中极大 $s$-分离集 $\mathcal Z_s$，其 $s$-球盖住环带，点数 $\le Ca^{QD'}$。在每个 $z\in\mathcal Z_s$ 处按深度 $k+D'$ 用 $h_z$ 展开；记 $q=r/s=a^{-(D-D')}$，取尺度 $D-D'$ 的宏观可容许权 $\omega_\xi$，平方质量 $M(D-D')$。定义 $\sigma_y^{z}$（当 $d(y,z)\le3s$ 时对 $d(\xi,h_zy)\le C_Tq$ 的 $\omega_\xi$ 求和，否则 $0$；$C_T>2+C_E$）与 $\sigma_y=\sum_z\sigma_y^{z}$。在 $\overline B(z,3s)$ 内候选像被固定倍数的 $q$ 分开，故每个和只有有界多项、每个目标权被有界次收费，$\sum_y(\sigma_y^{z})^{2}\le CM(D-D')$；每个 $y$ 又在有界多个辅助中心附近，packing 加 Cauchy--Schwarz 得 $\sum_y\sigma_y^{2}\le Ca^{QD'}M(D-D')$（eq:capacity-transfer-energy）。
+
+四、未标记的 $(b,t)$ 一定被小候选探到。取 $w\in C_t$ 在半径 $b$ 球面上，取 $z\in\mathcal Z_s$ 使 $d(w,z)\le s$；$\operatorname{diam} C_t\ge d_1$ 给出 $C_t$ 上在 $\overline B(w,2s)$ 之外的一点；在 $C_t$ 的 $r/4$-邻域内把两点相连（\Cref{lem:paths}），停在第一次碰 $w$ 的半径 $s$ 球面，得到 $\pi$：直径至少 $s$、含在 $\overline B(w,s)\subset\overline B(z,2s)$，于是尺度 $s$ 展开 $h_z$ 使它按 $d_0$ 的选取成为宏观。桶在 $(A+1)R$ 与 $(B_0-1)R$ 之间而 $s<R/4$，故 $\pi$ 的所有点在 $(A+3/4)R$ 与 $(B_0-3/4)R$ 之间，落在候选环带内且有候选中心距 $\le r$；同样的固定源裕量把所有离 $\pi$ 为 $r/4$ 的水平点关进 $K^{+}\subset U$，那里 $u=t$ 由标量极限的性质成立（这里就是 §9 禁令一被使用的位置，04_flow.tex:281-287）。若目标胞碰 $h_z\pi$，取原像碰点 $v\in\pi$ 与 $y\in Y$ 使 $d(y,v)\le r$，则 $d(y,z)<3s$，且由 eq:expansion，$d(\xi,h_zy)<(2+C_E)q<C_Tq$，其权进入 $\sigma_y^{z}$；$C_t$ 上有点离 $v$ 至多 $r/4$，故离 $y$ 至多 $5r/4<c_0r$，前面那个内点检验给出 $t\in I_y^{\mathrm{out}}$；又 $\lvert d(x,y)-b\rvert\le s+r<5s$，未标记使 $y$ 是小候选。可容许性于是给出 eq:unmarked-indicator：$\sum_{\text{small},\,\lvert d(x,y)-b\rvert\le5s}\sigma_y\mathbf 1_{I_y^{\mathrm{out}}}(t)\ge1$ 对每个未标记对成立。
+
+五、比能量、消 $\Delta$、用亚指数。积分并用桶重数有界，得 $ca^{D'}\Delta\le C\Delta\sum_{\text{small}}\sigma_yt_y$，$\Delta>0$ 可消；Cauchy--Schwarz 与 eq:capacity-transfer-energy 给
+
+$$\sum_{\text{small }y}t_y^{2}\ge\frac{ca^{-(Q-2)D'}}{M(D-D')}. \tag{eq:small-square-capacity}$$
+
+亚指数增长（eq:subexponential-growth）在最后一刻登场：先由 $\limsup M(j)^{1/j}\le1$ 得 $M(j)\le Ca^{\tau j/8}$，再靠加大 $D$ 吸收 $C$，于是 $M(D-D')\le a^{\tau D/4}$；结合 $D'\le\beta D+1$ 与 $(Q-2)\beta<\tau/4$，得 $\sum_{\text{small}}a^{\tau D}t_y^{2}\ge ca^{[3\tau/4-(Q-2)\beta]D}\ge ca^{\tau D/2}$，这恰恰是小候选上的容量，与 eq:failed-capacity 矛盾。$\beta=\tau/(4(Q+1))$ 的取法在这里兑现：它保证 $(Q-2)\beta<\tau/4$ 同时 $D'=\lceil\beta D\rceil$ 的桶数 $a^{D'}$ 增长足够快。
+
+第四、五步里"不需要可测选择"那句（04_flow.tex:313-315）我又一次遇到，与 §9 的 \Cref{lem:cross-energy} 同源：被积分的只是有限多个闭区间示性函数，单点值域（区间退化为点）自动贡献零。这省掉了我正准备写的选择定理与可测族。
+
+## §14 pattern 有限表：good 节点到底交出了什么几何信息
+
+概率已经定义好，接下来要把"good"兑换成一件可以被 §15 计数的东西。这一步在 04_flow.tex:339-373，标题就是 Common target patterns。做法是：固定节点的展开 $h=v^{-1}$（构造时就存下来），在 good 节点取 $y^{-},y^{+}$ 的内球 $\overline B(y^{\pm},2r)$ 的两极值，用 \Cref{lem:paths} 在 $B(y^{\pm},c_{\mathrm{in}}r)$ 内连成道路，端点变动至少 $\kappa\Delta$。这条道路上的点离 $x$ 至少 $(A-2)R$，所以 eq:expansion 把它的像压在 $hy^{\pm}$ 的 $c_{\mathrm{pat}}\theta/2$ 邻域内。反方向：若 $d(y,z)\ge c_0r$，写 $D_w=\max\{R,d(x,w)\}$，由 $D_z\le D_y+d(y,z)$ 与 $s/(D_y+s)$ 的单调性，
+
+$$d(hy,hz)\ge\frac{c_Ec_0\theta}{(B_0+2)^{2}}>12c_{\mathrm{pat}}\theta,$$
+
+于是 eq:pattern-containment：$\overline B(hy,10c_{\mathrm{pat}}\theta)\subset h(B(y,c_0r))$。再在 $Z$ 里取一个固定的 $c_{\mathrm{pat}}\theta$-网，对每个 $hy^{\pm}$ 选网点距 $\le c_{\mathrm{pat}}\theta$，取其周围半径 $3c_{\mathrm{pat}}\theta$ 的闭球，有序对 $(\mathcal B^{-},\mathcal B^{+})$ 就是该节点的 pattern。
+
+这一段的数字设计（$c_{\mathrm{pat}}$ 是"目标半径因子"、$10$ 与 $12$ 的关系）我在 04_flow.tex:137-142 那段预告里对照过：目标 $10c_{\mathrm{pat}}\theta$ 球的原像要包住外源球 $B(y,c_0r)$ 的像，而 $c_0$ 之所以能取到满足 eq:flow-constant-choice，是因为不等式两侧之比随 $c_0$ 线性增长。这里我学到的是一条工程原则：先规定"路径像要贴多紧"（$c_{\mathrm{pat}}\theta/2$），再规定"源球要包住多大目标球"（$10c_{\mathrm{pat}}\theta$），中间留 $12$ 倍的余量，最后才发现余量刚好由 $c_0$ 的自由度支付。
+
+pattern 提供的信息对 $u\circ h^{-1}$ 而言是三件（04_flow.tex:369-373）：两个整球值域区间距离至少 $\Delta/4$；每球含一条端点变动至少 $\kappa\Delta$ 的道路；两球分别含在对应外源球 $B(y,c_0\theta r_{k_0+Dn})$ 的像里。加上"pattern 只有有限多个、与代数无关"（网是固定的，$\theta$ 与 $D$ 已在选常数时定死），\Cref{prop:probability-flow}（04_flow.tex:450-463）把这些连同树的性质打包成一个命题：固定 $D$；第 $n$ 代中心 $Hr_{k_0+Dn}$-分离；后代位移受 eq:descendant-displacement 约束；区间嵌套；概率满足 eq:flow 与 eq:conditional-flow；无穷多层 good 质量至少 $1/2$；每个节点带一个固定展开；每个 good 节点带一个来自有限表的 pattern，以及上面那三件事。
+
+树的落位细节我也记一下，因为 §15 全部要用。$k_0$ 选得使 $R_0=r_{k_0}$ 满足 $2(B_0+1)R_0<\epsilon_0/2$ 与 $(B_0+2)R_0<d_1/2$（04_flow.tex:378-381）；$J_0$ 由 $x_0$ 处非局部常值给出，是 $\overline B(x_0,c_0R_0)$ 值域内部的非空开区间；孩子离父至多 $(B_0+1)R$，所以全部后代离根至多 $\frac{B_0+1}{1-\theta}R\le2(B_0+1)R$；同代分离的理由是分开的两个父节点的孩子相距至少 $[H-2(B_0+1)]R>HR/2>H\theta R$（04_flow.tex:396-400），兄弟之间由 $Hr$-分离直接保证。eq:level-energy $\sum_i\Delta_i^{2}\le E_0=C\mu(Z)$ 用的正是 $H>4C_\mu c_0$ 让放大球互不相交。
+
+还有一句容易被跳过的话（04_flow.tex:88-89）：Goodness uses the full candidate set, independently of the children later retained. 我起初以为 good 是对"被选中放概率的孩子"的性质，于是担心 pattern 的存在会被容量估计里的子集选择 $Y'$ 破坏。原文的次序是：先用全体 $Y$ 判定 good（\Cref{lem:bad-node-children} 与 eq:good-inner 都用 $Y$），再用 \Cref{lem:separated-capacity} 在 $Y$ 里挑 $Y'$ 放概率。所以 pattern 是节点的固有属性，与概率放在哪些孩子上无关。这个次序对我后面理解 §15 至关重要：成对比较要在"同一 pattern 类"里进行，而 pattern 必须在挑选之前就定义好。
+
+## §15 同深度展开与成对比较：最后一段，也是我最容易写崩的一段
+
+现在有两个可以用的对象：一棵带 pattern 的树、一个只有单侧信息的测度 $\mu$。目标是证明 \Cref{prop:no-subexponential-records}（05_pairs.tex:10-16）：$M(n)$ 不可能无界又满足 $\limsup M(n)^{1/n}\le1$。
+
+先把记号钉住（05_pairs.tex:19-33）：固定流（含 $D$）与中心的一个含在 $U$ 内的紧邻域；用流构造里那个离该邻域有正距离的 $z_0$；第 $n$ 代写 $k=k_0+Dn$、$R=a^{-k}$、$p_i=h_iz_0$，$h_i=v_i^{-1}$ 是节点已有的展开；中心 $HR$-分离；概率满足 eq:pairs-flow-input。取 \Cref{lem:good-levels} 给的任意大的那些代。
+
+第一件要处理的事是 puncture 会不会挤在一起。\Cref{lem:puncture-multiplicity}（05_pairs.tex:51-66）说对固定 $C>0$，$\{\overline B(p_i,CR)\}$ 的重数一致有界。证明分两层：同一深度 $k$ 顶点被指派多个中心时，那些中心互距 $O(R)$，由 $HR$-分离与 packing 限数；若干 puncture 球共点时，那些 puncture 的乘积至少 $k-O_C(1)$，用 eq:inverse-prefix 与 \Cref{lem:prefix} 把所有对应的逆顶点关进一个有界 Cayley 球，顶点数有界，每个顶点再套第一层。
+
+然后开始挑选概率类（05_pairs.tex:68-84）。节点数至多 $Ca^{Qk}$；丢掉 $P_i<a^{-2Qk}$ 的那些，概率损失至多 $Ca^{-Qk}$，故剩余 good 节点质量至少 $1/3$（大 $n$）。按 pattern（有限）与 $O(k)$ 个二进概率类分箱，得一个类 $\mathcal I$ 满足 eq:pairs-class：$P_*\le P_i\le2P_*$、$\sum_{i\in\mathcal I}P_i\ge c/k$；记 $\mathcal N=\lvert\mathcal I\rvert$，则 eq:pairs-class-size：$\mathcal NP_*\ge c/(2k)$；又 $P_i\le a^{-\gamma Dn}$，故 $\mathcal N\ge ck^{-1}a^{\gamma Dn}\to\infty$。
+
+puncture 分离的尺度是 $a^{-l}\gg R$，而最后的源重叠估计带因子 $a^{Ql}$，所以要 $Ql\le\gamma Dn$。取 $\zeta=\gamma/Q$、$m=\lfloor\zeta n\rfloor$、$l=Dm$，则 $l$ 与 $k-l$ 都趋于无穷。这里是我第一处差点写崩的地方：我想直接取 $l$ 为 $k$ 的固定比例，但那样 $a^{Ql}$ 与 $a^{\gamma Dn}$ 的大小关系就不受控；$\zeta$ 由 $Q$ 与 $\gamma$ 定死，是"分离尺度"与"重叠代价"之间的唯一平衡点。
+
+\Cref{lem:near-puncture-probability}（05_pairs.tex:93-133）说第 $n$ 代里 puncture 落在 $p_i$ 的 $a^{-l}$-球内的那些节点，其概率和至多 $Ca^{-\gamma Dm}$。证明的机关是把词拆开并两次用前缀：固定第 $n-m$ 代祖先 $A$（深度 $k-l=k_0+D(n-m)$）。写测地词 $v_j^{-1}=w_ju_j'$，$\lvert w_j\rvert=l$、$\lvert u_j'\rvert=k-l$。puncture 条件与 eq:inverse-prefix 给 $(p_j\mid p_i)_e\ge l-C$ 与 $(v_j^{-1}\mid p_j)_e\ge k-C$，于是 $w_j$ 离某条到 $p_i$ 的射线的深度 $l$ 点有界远，只有有界多种可能。关键的一招是：把同一个词反转再取逆，得到测地词 $v_j=(u_j')^{-1}w_j^{-1}$，其深度 $k-l$ 前缀恰是 $(u_j')^{-1}$；由 $d(x_j,x_A)\le2(B_0+1)r_{k-l}$，瘦性与 \Cref{lem:prefix} 把这个前缀关在到 $x_A$ 的射线的深度 $k-l$ 点的有界邻域内，于是 $u_j'$ 也只有有界多种可能。两者相乘决定有界多个 $v_j$，再套 puncture 重数的第一层。原文紧跟一句要紧的注（05_pairs.tex:126-128）：我们这里数的是群元，所以测地拼写不唯一不会带来额外重数；源前缀与逆前缀合起来已经覆盖整个词。我在这一处犯的错正是"数词不数元"：我一开始打算用拼写集合来计数，那在生成元对称集有重复字时是错的。
+
+有了它，类内 puncture 相距 $\le a^{-l}$ 的比例被 $Ca^{-\gamma Dm}/(\mathcal NP_*)\le Cka^{-\gamma Dm}=o(1)$ 控制（含对角），于是至少 $c\mathcal N^{2}$ 个无序对满足 eq:far-pair：$d_{ij}=d(p_i,p_j)>a^{-l}$，称为 far pair；对这些对一致有 $R/d_{ij}\le a^{-(k-l)}\to0$。
+
+第二个机关是把两个图放到同一个紧定义域上比。取 $K\subset U$ 含所有中心、其 $\epsilon$-邻域仍在 $U$ 内。eq:exterior-preimage（05_pairs.tex:155-158）说 $d(h_iy,p_i)\ge A_hR/2$ 迫使 $d(x_i,y)\le D_y\le2C/A_h$；取 $A_h$ 使 $2C/A_h<\epsilon/2$ 且 $A_h/2>2C/d_1$，令 $E_i=\overline B(p_i,A_hR)$。第二个条件保证每个 $h_iC_{N,t}$ 一定进入 $B(p_i,A_hR/2)$：直径界给出离 $x_i$ 至少 $d_1/2$ 的源点，其像的 puncture 距离至多 $2CR/d_1$。目标球离 $p_i$ 有均匀距离 $\delta_*>0$（原像在外源球内、$D_y\le(B_0+2)R$，puncture 下界可用），并且因为 pattern 是共用的，这对所有 $i\in\mathcal I$ 一致成立。大 $n$ 时 $2A_hR<a^{-l}$ 且 $A_hR<\delta_*/2$，于是 $E_i,E_j$ 不相交、各自含紧地落在对方的变换定义域里、pattern 球避开两者，而且这些阈值与 $N$ 无关。
+
+\Cref{lem:pair-alternative}（05_pairs.tex:180-245）是整段的逻辑核心：每个足够大深度的 far pair 都有一个端点满足 eq:pair-alternative：$\operatorname{osc}_{h_i^{-1}E_j}u\ge(\kappa/16)\Delta_i$。它的证明是一条二分法：记 $F_i=u\circ h_i^{-1}$。若 $\operatorname{osc}_{E_i}F_j\ge\Delta_j/16$，端点 $j$ 合格（这里用到 $\kappa\le1$）；否则必有一个 pattern 球 $\mathcal B^{s}$ 的 $F_j$ 值域区间与 $E_i$ 上的那个区间距离至少 $\Delta_j/16$，否则两个 pattern 区间距离小于 $3\Delta_j/16$，与它们相距 $\Delta_j/4$ 矛盾。节点 $i$ 给出一条紧道路 $\eta\subset\mathcal B^{s}$，$F_i$ 端点差至少 $\kappa\Delta_i$；若再假设 $\operatorname{osc}_{E_j}F_i<\kappa\Delta_i/4$，把这个范围从端点差里挖掉，剩下一个正长度闭区间 $I\subset(0,1)$，严格在两端点值之间且离 $E_j$ 上的值域有正距离（为拿到正的裕量，在剩下的某个开区间里再取小闭区间，长度无须在对上一致）。
+
+从这里开始就是"先固定、后取限"的教科书案例。原文写：Fix the pair and $I$ before letting $N\to\infty$。令 $F_{i,N}=H_N\circ h_i^{-1}$、$F_{j,N}=H_N\circ h_j^{-1}$。固定的范围裕量与局部均匀收敛给出：每个 $t\in I$、大 $N$ 时，$h_iC_{N,t}$ 既碰 $\eta$（端点值仍严格跨过整个 $I$，用 \Cref{lem:level-continua} 于原像道路），又避开 $E_j$（$E_j$ 上值域仍与 $I$ 不交），还进入 $i$ 的内 puncture 球。\Cref{lem:stop-continuum} 截出子连续统 $K_{N,t}$：含 $\eta$ 上的一个碰点、碰球面 $d(z,p_i)=A_hR$、避开 $B(p_i,A_hR)$，于是含在
+
+$$K_{ij}=Z\setminus\bigl(B(p_i,A_hR)\cup B(p_j,A_hR)\bigr)\Subset h_iU\cap h_jU,$$
+
+紧含性由 eq:exterior-preimage 用一半半径得到；那句"球面上的碰点属于 $E_i$；无须把这个球面认同为某个度量球的边界"（05_pairs.tex:226-228）是我认为必要的诚实：度量球边界可以很病态，作者宁可只用 $E_i$ 这个闭球与球面的定义性质。$\eta\cup E_i$ 上的均匀收敛保住 $F_j$ 的范围间隙，于是 $\operatorname{osc}_{K_{N,t}}F_{j,N}\ge\Delta_j/32$ 对 $t\in I$ 一致成立；套 \Cref{lem:cross-energy}，左边 $\Delta_j\lvert I\rvert/32>0$，右边两个平方振荡和都趋零（\Cref{lem:local-oscillation}），Cauchy--Schwarz 给出矛盾，故 $\operatorname{osc}_{E_j}F_i\ge\kappa\Delta_i/4$。收尾还有一句与我 §8 的禁令二呼应（05_pairs.tex:243-244）：论证逐对成立，无须对所有对一致的收敛速率。
+
+第三件是收费。对有序 far pair 记 $z_{ij}=h_i^{-1}p_j$，两个关键尺度写在 05_pairs.tex:258-263 的小表里：puncture 分母 $D_{z_{ij}}\asymp R/d_{ij}$，被收费邻域的半径 $\asymp R^{2}/d_{ij}^{2}$，两者之比 $O(R/d_{ij})\to0$；原文点明"正是这个尺度分离使得可以对被收费邻域做固定放大而不失去对像的控制"。推导：$y\in h_i^{-1}E_j$ 时 $d(h_iy,p_i)\ge d_{ij}-A_hR\ge d_{ij}/2$，故 $D_y\le CR/d_{ij}$，这些点一致地逼近 $x_i$，双侧 puncture 界给出 eq:cost-denominator；再由展开下界与 $d(h_iy,p_j)\le A_hR$ 得 $d(y,z_{ij})\le CR^{2}/d_{ij}^{2}$，取 $s_{ij}=C_2R^{2}/d_{ij}^{2}$，eq:cost-containment：$h_i^{-1}E_j\subseteq\overline B(z_{ij},s_{ij})$。令 $\mathcal D_{ij}=\overline B(z_{ij},C_\mu s_{ij})$（$C_\mu$ 来自 eq:measure 在中心紧邻域上的一致选取），若 $i$ 合格则 eq:cost-lower-bound：$\mu(\mathcal D_{ij})\ge c\kappa^{2}\Delta_i^{2}$。放大后像仍受控：$D_y$ 是 $1$-Lipschitz，$\frac{C_\mu s_{ij}}{D_{z_{ij}}}\le C\frac R{d_{ij}}\le Ca^{-(k-l)}\to0$，故在 $\mathcal D_{ij}$ 上 $D_y\asymp D_{z_{ij}}$，展开上界给 eq:cost-image：$h_i\mathcal D_{ij}\subseteq\overline B(p_j,C_3R)$。figure 2 的 caption（figures/pair-cost.tex:46-52）把这件事说成"虚线源球含 $h_i^{-1}E_j$、半径 $s_{ij}$，实线固定放大 $\mathcal D_{ij}$ 仍映进半径 $C_3R$ 的虚线目标球"，并再次声明圆圈是示意图、不假设度量球的连通或边界正则。
+
+第四个机关是重叠计数，也是我最想批评自己的一段。我最初的自然做法是把 $\mu$ 当作具有某种 doubling 或近似不变的测度来用：毕竟 $\mu_N$ 是从群不变的结构（$T_N$、$\rho$）造出来的，看起来 $\mu$ 该继承点什么。读了最后一遍才明白这条直觉在这里没有立足点：$\rho$ 是从一个凸包最小范数问题里挑出来的（§6），那个问题对 $G$ 毫无不变性；\Cref{prop:scalar-limit} 也没给 $\mu$ 任何变换律。作者的替代办法在 eq:cost-total-upper 后面写得很硬：这条计数直接对放大球做，不使用 $\mu$ 的任何不变性。于是两个方向的界各自独立地用几何：固定 $i$ 时，eq:cost-image 与 \Cref{lem:puncture-multiplicity} 限制随 $j$ 变的重数；对一般的源点，eq:cost-source（$\mathcal D_{ij}\subseteq\overline B(x_i,C_4Ra^{l})$，因为 $d(x_i,z_{ij})\le CR/d_{ij}$ 而代价半径是 $o(R/d_{ij})$）配合中心的 $HR$-分离与 packing，把这种大球的重数限在 $Ca^{Ql}$。
+
+
+## §16 最终思路与我最初设想的差异
+
+这一节是我对自己笔记的结账，逐条对照。
+
+差异一：我预期一个正面的估计，最后拿到的是一套反证生成的对象。最初的设想（§2）是在每个尺度上铺权、直接算 $\sum\omega^{2}\le C$。最终路线（main.tex:191-229）把 $\sup_nM(n)=\infty$ 当作原料：由它得到记录指标、得到对偶权 $\rho$（eq:dual-energy 里能量随 $M(N)$ 衰减）、得到 $H_N$、得到极限 $u$ 与测度 $\mu$。也就是说，我要否证的那个命题，是全部解析对象的唯一存在理由。写作时我把这一点记成"反面假设是有生产力的"，因为它确实产出对象，而且产出的对象比原问题的语言（离散权、胞、关联向量）更硬：一个连续函数、一个有限测度。
+
+差异二：我以为 $M(n)$ 会贯穿全篇，实际它只出场四次。第一次在定义与判别法（01_geometry.tex:160-204）；第二次在 eq:dual-energy（$1/M(N)$）；第三次在 eq:annular 的右端 $M(N-l)$，靠 eq:records 吸收；第四次在容量估计的末尾 $M(D-D')\le a^{\tau D/4}$（04_flow.tex:322-324）。中间那一大段（泛洪、水平连续统、放大、比较）全在说振荡与测度，模数一次没有出现。这与我最初的直觉相反：我以为主变量在每一步都要被追踪。
+
+差异三：我以为群作用要在 $\mathbb H^{3}$ 里做几何（构造基本域、找双曲度量），实际它只在边界上以三种身份使用。第一种是展开式 eq:expansion 与 puncture 估计（把小区域放大、控制补集）；第二种是前缀计数 \Cref{lem:prefix} 与 eq:inverse-prefix（把"puncture 靠得近"翻译成"词的前缀只有有界多种"，这是 §15 两次计数的全部依据）；第三种是三元组 $\mathcal T(Z)$ 上的适当与余紧（01_geometry.tex:267-280），最后经 $\mathcal T(\mathbb S^2)\cong I/H\to I/K_o\cong\mathbb H^{3}$ 的等变映射下降到 $\mathbb H^{3}$（01_geometry.tex:282-292）。我从头到尾没看到任何三维空间里的构造。
+
+差异四：我以为统一化之后可以直接引用现成结论，结果最后一段共形结构要自己写。理由写在 main.tex:179-181：要把反保向元保留下来。于是 \Cref{prop:action} 里有一整套：一致无穷小线性畸变（留第四点远离 $x$，让两个到 $x$ 等距的点趋于 $x$，交叉比里含第四点的因子趋于 $1$，得与 $f,x$ 无关的界，而"估计准确的半径无须对 $f$ 一致"，01_geometry.tex:217-229）；平面拟共形的度量刻画（Heinonen--Koskela 与 Astala--Iwaniec--Martin，01_geometry.tex:224-229）；可微点处奇异值比与解析膨胀；Ahlfors--Bers 的几乎处处可微与复合律；把可数族 $\mathcal G$ 的全部例外集之轨道删掉得不变余零集 $X$；纤维 $\mathcal C_x$ 是正定二次型模正标量，等同双曲平面，任一方向的线性映射之拉回都是纤维间等距（这里正是允许反保向的机关，01_geometry.tex:244-247）；轨道 $\{f^{*}q_{\rm round}(x)\}$ 一致有界且含圆型，其唯一双曲外心定义可测共形结构，外心的可测性由"递增有限子集的外心：半径递增、中心留在固定闭球内、每个子列极限都是全轨道的唯一中心"给出（01_geometry.tex:250-254）；可测 Riemann 映射定理给 $F$，$FfF^{-1}$ 逐元素共形或反共形，故 Möbius 或反 Möbius，唯一延拓成 $\rho:G\to\operatorname{Isom}(\mathbb H^{3})$。这段是我在整篇里唯一读得有点烦的地方，因为它与我关心的模数毫无关系，可它确实是定理成立的最后一寸。我最初的设想里，这寸是"显然由文献可得"，而实际是"文献按定向情形陈述，所以要么补假设要么自己写"。
+
+差异五：我以为"边界同胚于 $\mathbb S^2$"这条拓扑假设会在解析核心里被强用，实际它只在三处露面。一是局部化到坐标矩形需要 $Z$ 有坐标盒覆盖（02_scalar.tex:36-38）；二是 \Cref{lem:planar-blocker} 的 Jordan 曲线与网格奇偶论证需要平面性（02_scalar.tex:71-102）；三是第二次放大前，"若没有那样的变动区域，$W$ 在连通球去掉有限集上局部常值，故处处常值"（03_exponential.tex:293-295）。维度与拓扑被压缩进这三个用法，剩下的都是度量与测度语言。这与我的预想差别最大：我以为拓扑会在某处以难缠的方式回来（比如统一化的唯一性），结果它只在开头（提供矩形拦截）与结尾（排除常值）出现。
+
+差异六：我以为两支要各造一套分析，实际两支共用同一件标量构造。§10 用的是 $u$ 的 H\"older 性去放大，§12 到 §15 用的是 eq:measure 去分配变动，两者都靠 \Cref{lem:cross-energy} 收口、都用 \Cref{lem:stop-continuum} 截连续统、都在"固定群元后局部振荡能量趋零"上做文章（main.tex:242-244 也说两支用同一个标量构造）。我原本为两支各准备了一份 $H_N$ 构造，那是白费。
+
+差异七：我以为 $d_0$ 只是"足够小"的定性要求，实际它有三个约束同时挂在身上：$d_0<\operatorname{diam} Z/10$、使尺度 $R$ 展开把 $\overline B(x,3R)$ 内直径 $\ge R/2$ 的道路送出像直径 $\ge d_0$、以及满足判别法 \Cref{thm:uniformization} 所需的小性（01_geometry.tex:173-177）。第三条在正文里没有量化，我在 §17 里把它列为信息不足。
+
+差异八：我以为结果会给出保向作用（从而商是可定向流形），实际主定理明确允许反保向、允许有限核，torsion-free 情形的商可以是非可定向闭流形（main.tex:101-108、cor:torsion-free 于 main.tex:277-287），推论里的虚拟结构（$\pi_1(\Sigma)\rtimes\mathbb Z$、正虚拟第一 Betti 数、虚拟紧特殊、残有限）全部靠先取定向覆盖 $M^{+}$、再调用 Agol 与 Bergeron--Wise（main.tex:289-318）。这正是我在 §4 那条代数路线上学到的教训的反面用法：代数定理在这个证明里只作为下游结论使用。
+
+## §17 信息不足处、推测清单与勘误
+
+按规格，凡是文本给不出依据的地方必须标 `[推测]` 并说明为什么不足。汇总如下。
+
+一、§2、§3、§4 三条错误路线的整个叙事都是心理重建。依据只有 main.tex:111-174 的历史段与 main.tex:173-174 那句"本证明走解析路线"，以及若干处作者对别人前提的显式标注（main.tex:146-147 的"假设式"、main.tex:163-165 的忠实保向）。论文没有任何"我们曾尝试"的记录，我无法证明这些尝试存在过；我保留它们的理由是：反证结构、$d_0$ 的三重约束、以及 \Cref{prop:action} 里为定向问题补写的整段，都说明这些方向曾经有吸引力。
+
+二、§7 里"一层插值就够"的失败路线有文内依据（02_scalar.tex:160-161 那句承认连续性不够），但"我打算取 $t=1/2$"这种具体做法是我的填充，标 `[推测]`。
+
+三、§6 里"直接引 Whyburn 型分隔定理"是我的假设。文本只给了初等证明并且从中提取了 $d_1$ 这个显式下界；我推测现成定理给不出同样可用的定量直径，但没查证任何分隔定理的陈述，所以这条只能是推测。
+
+四、§10 里"不带 $\delta^{\eta}$ 权重的归一化会失败"是我按结构反推的：文本把 $\eta>Q$、$ca^{-Qk}\le A_k\le Ca^{-\alpha_0k}$、$\delta_k/r_k\to\infty$ 三件事绑在一起，说明权重在做实质工作，但没有任何一处讨论过替代归一化。
+
+五、§13 里"按 $\Delta$ 大小分档选不同 $D$"是我的失败版本，文本依据只有 04_flow.tex:189-192 的自陈（单个 $D$ 必须对所有节点管用）。两者相符，但"我曾想过分档"这件事无法核实。
+
+六、$\lesssim$、$\asymp$、$\sim$ 的常数依赖范围，按 main.tex:246-254 的约定：与变动的尺度指标无关；对固定紧区域、固定群元、细分参数的依赖在使用处说明。我仍不能对所有出现的地方给出显式常数，因为正文只给依赖关系不给数值；凡我在 §12、§13 里写"一致地对所有节点"，指的是 04_flow.tex:197 与 04_flow.tex:331 声明的那种一致（阈值只依赖固定数据与 $D$）。
+
+七、\Cref{thm:uniformization} 所需的"$d_0$ 足够小"的具体口径来自 Bourdon--Kleiner 推论 3.5（main.tex:130-134、01_geometry.tex:186-204），而那篇文献不在本目录的 `.tex` 里，所以我无法核对那个小性阈值与 $2a$、$\kappa$ 的关系是否严格。我按正文的说法接受它。
+
+八、目录里另有 `paper.pdf` 与 `typst/`（含 `main.typ`、`fig/`），按规格没有读取，也没有从中取任何素材；`typst/` 分片即便含图也未被引用，所以 §7、§15 两处对图的说明完全来自 `build/figures/*.tex` 里的 caption 文本。这就是本笔记素材面的全部限制。
+
+九、我没有检查任何 Lean 形式化：本论文按派单没有 Lean 行，所以 `lean/`、`formalization.yaml`、`comparator`、`records.txt` 一律未碰；`[推测]` 清单里也不涉及形式化状态。
+
+勘误（三处，均为局部最小改写，未删除、未回滚、未重排任何已落盘内容）：
+
+1. 为过文风闸门，我对已落盘的六处句子做了句内最小改写：三处涉及被禁的转折连接写法（§6 末段、§11 末段、§12 的失败版本段），一处涉及被禁的过渡短语（§7 末段），两处涉及被禁的否定对举写法（§3 的卡点句与同一句里的环带比喻）。替换后的文字分别是"我真正要的并非这一条，这个构造还同时给出直径下界"、"也就是说"、"主线上的估计它一条也不提供，它提供的是那有限个禁入点"、"这跟难度无关，它在逻辑上是循环的"、"此处无须标推测"、"是个环带，取不到球的形状"。原句在此不复述：闸门要求那些字符串零命中，连引用形式也不许出现。语义与原句一致，改动全部落在同一句之内。
+2. §0 末尾的探针行 PROBE-D192-001 落在 §4 与 §5 之间（因为探针本身是第一次 `Edit` 追加），它属于 §0 承诺的落盘验证，位置不理想但按规格不挪动。基线 $11284$ 字节，复量 $11386$ 字节，涨 $102$ 字节，探针通过。
+3. §0 预排的小节范围是 §0 到 §18，实际兑现为 §0 到 §18 共 19 节，编号顺序未动、无插号。
+
+## §18 台账
+
+| 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+| --- | --- | --- | --- | --- |
+| $a$ | 视觉度量底数 $a>1$ | build/sections/01_geometry.tex:16-19 | $r_k=a^{-k}$ 与全部尺度分离 | eq:expansion 的量纲失效 |
+| $r_k$ | $r_k=a^{-k}$ | build/sections/01_geometry.tex:19 | 节点尺度 $R=r_k$、第 $n$ 代 $r_{k_0+Dn}$ | eq:level-energy 的代计数失效 |
+| $(y\mid z)_e$ | 误差 $O(1)$ 的乘积不等式 | build/sections/01_geometry.tex:9-23 | eq:visual、eq:inverse-prefix | eq:puncture 的 puncture 距离断 |
+| $c_E,C_E$ | 展开式两侧常数 | build/sections/01_geometry.tex:38-43 | \Cref{lem:prefix}、$c_{\mathrm{pat}}$、eq:cost-image | 图 2 的像控制失效 |
+| $\varepsilon_*$ | puncture 下界距离 | build/sections/01_geometry.tex:46-51 | 流里 $z_0$ 的选取、$\delta_*$ | 05_pairs.tex:167-171 的避 puncture 断 |
+| $Q$ | packing 指数 $Q\ge2$ | build/sections/01_geometry.tex:113-126 | $\#Y\le C_Ya^{QD}$、$Ca^{Qk}$、$Ca^{Ql}$ | 总重数上界 eq:cost-total-upper 断 |
+| $A$ | 延续数 $\le CA^{j}$ | build/sections/01_geometry.tex:121 | 取 $Q\ge\max\{2,\log_aA\}$ | \Cref{lem:packing} 断 |
+| $L$ | 球内道路常数 $L\ge1$ | build/sections/01_geometry.tex:130 | $C(J)=L(LJ+1)+3$、$c_{\mathrm{in}}=2L$ | eq:annular 的 $R/4$ 到 $4R$ 断 |
+| $d_0$ | 宏观阈值，$d_0<\operatorname{diam} Z/10$ | build/sections/01_geometry.tex:169-177 | $\mathcal F_0$、$M(n)$、局部化矩形 | 反证假设与 macroscopic 判定全断 |
+| $M(n)$ | $\operatorname{Mod}_2(\mathcal F_0,T_n)$ | build/sections/01_geometry.tex:170-171 | 全篇四处消费 | 主定理界 $\sup_nM(n)<\infty$ 断 |
+| $\kappa$ | 逼近口径 $\kappa>2a$ | build/sections/01_geometry.tex:198-201 | \Cref{thm:uniformization} 的验证 | 判别法前提失效 |
+| $\lambda$ | 取 $1<\lambda<\limsup M(n)^{1/n}$ 或 $\lambda=1$ | build/sections/02_scalar.tex:18-19 | eq:records 与 H\"older 分支 | 两分支划分失效 |
+| $N$ | 记录指标列 | build/sections/02_scalar.tex:21-26 | 子列稳定性、eq:annular 的 $M(N-l)$ | 环形估计无从吸收 |
+| $c$ | 条带模数系数 $cM(N)$ | build/sections/02_scalar.tex:33-34 | eq:dual-energy | 对偶能量丢常数 |
+| $J$ | 条带数，$M(N)\le J^{2}\max_{j}$ | build/sections/02_scalar.tex:48-52 | \Cref{lem:rectangle-localization} | 有限条带覆盖断 |
+| $\rho_q$ | 对偶横截权 | build/sections/02_scalar.tex:116-121 | $\mu_N$、eq:local-osc、eq:annular | 一切"能量趋零"断 |
+| $d_1$ | $\operatorname{diam} C_{N,t}\ge d_1$ | build/sections/02_scalar.tex:179-181 | $4R_*<d_1$、$(B_0+2)R<d_1/2$、$A_h/2>2C/d_1$ | 连续统走出球三处断 |
+| $F_N,H_N$ | 两代泛洪 | build/sections/02_scalar.tex:164-169 | eq:flood-osc、\Cref{lem:level-continua} | 水平拦截性失效 |
+| $\mathcal E_n^{(J)}$ | 局部平方振荡和 | build/sections/02_scalar.tex:237-241 | \Cref{lem:cross-energy}、eq:exponential-translated-energy | Cauchy--Schwarz 收口断 |
+| $C_0$ | 取 $C_0>C_E+2$ | build/sections/02_scalar.tex:310-313 | $\sigma_q$ 的重数 | $\sum_{\mathcal A}\sigma_q^{2}\le CM(N-l)$ 断 |
+| $C_\mu$ | 放大因子 $C_\mu=4aA$ | build/sections/02_scalar.tex:400-410 | $\mathcal D_{ij}$、$H>4C_\mu c_0$ | 不相交与收费两处断 |
+| $b_0,\lvert I\rvert$ | eq:cross-energy 左端 $b_0\lvert I\rvert$ | build/sections/02_scalar.tex:443-449 | 03_exponential.tex:229、05_pairs.tex:234 | 两处矛盾同时失效 |
+| $\eta$ | 放大权重指数 $\eta>Q$ | build/sections/03_exponential.tex:39-51 | $\delta_k/r_k\to\infty$ | 原像紧含断 |
+| $\alpha_0,\alpha$ | H\"older 指数 $0<\alpha<\alpha_0$ | build/sections/03_exponential.tex:53-63 | eq:magnification-tail | $F_k$ 一致 H\"older 断 |
+| $\sigma_j$ | 归一化因子 | build/sections/03_exponential.tex:66-152 | 对角化三条件 | 能量界 $C/(\sigma_j^{2}M(N_j))$ 断 |
+| $\Lambda_E$ | $\operatorname{Stab}(b)$ 的积累方向至多两元 | build/sections/03_exponential.tex:244-247 | 选 $O$、puncture 两两不同 | 第二次放大断 |
+| $C'(t+1)$ | 稳定子线性增长 | build/sections/03_exponential.tex:256-259 | 排除 $m^{2}$ 个乘积 | loxodromic 论证断 |
+| $c_0$ | $c_0>2L+2$ 且 $c_Ec_0/(B_0+2)^{2}>12c_{\mathrm{pat}}$ | build/sections/04_flow.tex:35-41,126-136 | eq:pattern-containment | pattern 有限表断 |
+| $A,B_0$ | $A=4Lc_0+20$、$B_0=A+10$ | build/sections/04_flow.tex:129-131 | 候选环带、eq:descendant-displacement | 中心留在 $K$ 断 |
+| $H$ | $H>\max\{4(B_0+1),4C_\mu c_0,2\}$ | build/sections/04_flow.tex:144-148 | eq:level-energy、eq:cost-source 重数 | 同代分离断 |
+| $c_{\mathrm{pat}}$ | $2C_Ec_{\mathrm{in}}/(A-2)^{2}$ | build/sections/04_flow.tex:130 | 球半径 $3c_{\mathrm{pat}}\theta$ | pattern 定义断 |
+| $D,\theta$ | 单一细分深度 $\theta=a^{-D}$ | build/sections/04_flow.tex:29-31 | 孩子尺度、pattern 网 | 有限表与计数同时断 |
+| $c_*,\kappa$ | $c_*\le1/(8\max\{C_Y,1\})$、$\kappa=c_*a^{-QD}$ | build/sections/04_flow.tex:79-87 | good 判据、eq:cost-lower-bound | 最终常数 $\kappa^{2}$ 断 |
+| $b_*,\tau,\beta,\gamma$ | $1/2$、$1/20$、$\tau/(4(Q+1))$、$\beta/2$ | build/sections/04_flow.tex:92-96 | eq:flow、$1/11$、$\zeta=\gamma/Q$ | 两处指标与尺度选择全断 |
+| $C_Y$ | $\#Y\le C_Ya^{QD}$ | build/sections/04_flow.tex:60-63 | 大候选计数、图染色类数 | 容量矛盾断 |
+| $D'$ | $D'=\lceil\beta D\rceil$、$s=a^{-D'}R$ | build/sections/04_flow.tex:226-228 | 桶数 $a^{D'}$、$(Q-2)\beta<\tau/4$ | eq:unmarked-mass 断 |
+| $M(D-D')$ | $\le a^{\tau D/4}$ | build/sections/04_flow.tex:322-328 | eq:small-square-capacity | 容量下界 $ca^{\tau D/2}$ 断 |
+| $E_0$ | $\sum_i\Delta_i^{2}\le E_0=C\mu(Z)$ | build/sections/04_flow.tex:401-407 | \Cref{lem:good-levels} 的 Jensen | good 质量 $1/2$ 断 |
+| $1/11$ | $\tau/(b_*+\tau)=1/11$ | build/sections/04_flow.tex:440-447 | 平均 bad 质量上界 | 与 $1/2$ 的比较断 |
+| $\zeta,m,l$ | $\zeta=\gamma/Q$、$m=\lfloor\zeta n\rfloor$、$l=Dm$ | build/sections/05_pairs.tex:86-91 | $Ql\le\gamma Dn$ | 重叠代价压过收益 |
+| $P_*,\mathcal N$ | $\mathcal NP_*\ge c/(2k)$ | build/sections/05_pairs.tex:73-84 | eq:cost-total-lower | 下界失去 $k^{-2}$ 因子 |
+| $A_h$ | $2C/A_h<\epsilon/2$、$A_h/2>2C/d_1$ | build/sections/05_pairs.tex:160-166 | $E_i$、$K_{ij}\Subset h_iU\cap h_jU$ | 公共紧定义域断 |
+| $\Delta_j/16$ | 二分裕量，配 $3\Delta_j/16$ 与 $\Delta_j/32$ | build/sections/05_pairs.tex:192-231 | eq:pair-alternative 的 $\kappa/16$ | 矛盾左端趋零 |
+| $s_{ij}$ | $C_2R^{2}/d_{ij}^{2}$ | build/sections/05_pairs.tex:277-287 | $\mathcal D_{ij}$、eq:cost-image | 尺度分离失效 |
+| $Ca^{Ql}$ | 源大球 $\overline B(x_i,C_4Ra^{l})$ 重数 | build/sections/05_pairs.tex:312-320 | eq:cost-total-upper | 总代价上界断 |
+| $a^{\gamma Dn}\le Ck^{2}$ | 末段矛盾式 | build/sections/05_pairs.tex:350-355 | \Cref{prop:no-subexponential-records} | 亚指数分支失效，全篇收尾断 |
+
+
+$$\sum_{\{i,j\}\ \text{far, 指派给}\ i}\mu(\mathcal D_{ij})\le Ca^{Ql}\mu(Z). \tag{eq:cost-total-upper}$$
+
+两端都合格时指派可以任意：下界对任一端都成立，而重数估计已经把所有可能的有序贡献都数进去了（05_pairs.tex:333-335）。反过来，每个付账端点满足 $\Delta_i^{2}\ge\Delta_0^{2}a^{2\gamma Dn}P_i^{2}\ge\Delta_0^{2}a^{2\gamma Dn}P_*^{2}$；far pair 至少 $c\mathcal N^{2}$ 个；由 eq:cost-lower-bound 与 eq:pairs-class-size，总代价至少
+
+$$c\mathcal N^{2}\kappa^{2}\Delta_0^{2}a^{2\gamma Dn}P_*^{2}\ge c'k^{-2}a^{2\gamma Dn}. \tag{eq:cost-total-lower}$$
+
+$\kappa,\Delta_0$ 是固定的正数，$Ql=QD\lfloor\gamma n/Q\rfloor\le\gamma Dn$，比较两式得 $a^{\gamma Dn}\le Ck^{2}$，与 $k=k_0+Dn$ 线性增长矛盾。亚指数分支到此关闭。全篇的收尾在 main.tex:265-272：若 $M(n)$ 无界，记录选取给出要么指数记录（\Cref{prop:no-exponential-records} 排除），要么亚指数增长（\Cref{prop:no-subexponential-records} 排除），故 $\sup_nM(n)<\infty$，\Cref{thm:uniformization} 统一化边界，\Cref{prop:action} 给出适当余紧、核有限的作用。

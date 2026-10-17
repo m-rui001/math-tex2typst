@@ -1,0 +1,30 @@
+{
+  "paper": "Thomason-Model-Structures-in-Every-Strict-Higher-Dimension-September-25-2026",
+  "ok": true,
+  "typ_lines": 1034,
+  "included_pdf_pages": 0,
+  "formulas": 821,
+  "math_failed": 9,
+  "labels": 83,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 10
+  },
+  "samples": {
+    "formulas": "821",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Thomason-Model-Structures-in-Every-Strict-Higher-Dimension-September-25-2026.tex"
+}

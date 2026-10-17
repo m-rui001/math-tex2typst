@@ -1,0 +1,32 @@
+{
+  "paper": "A-Fully-Polynomial-Randomized-Approximation-Scheme-for-Perfect-Matchings-in-General-Graphs-September-23-2026",
+  "ok": true,
+  "typ_lines": 1579,
+  "included_pdf_pages": 0,
+  "formulas": 859,
+  "math_failed": 0,
+  "labels": 158,
+  "equations": 2,
+  "theorems": 2,
+  "figures": 3,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 3
+  },
+  "samples": {
+    "formulas": "859",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\renewcommand\\labelitemi"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-Fully-Polynomial-Randomized-Approximation-Scheme-for-Perfect-Matchings-in-General-Graphs-September-23-2026.tex"
+}

@@ -1,0 +1,9 @@
+D616	row=435	note=D616-整数Lipschitz高度在双弧边界数据下的高斯自由场极限.md	size=21548	secmax=6	dir=The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-September-25-2026	tex=241590
+D617	row=436	note=D617-方差乘子为-1-over-arcsin-c-over-2-的平衡六顶点模型的高斯自由场极限.md	size=29288	secmax=8	dir=The-Gaussian-free-field-limit-of-the-balanced-six-vertex-model-with-variance-multiplier-1-over-arcsin-c-over-2-September-23-2026	tex=337225
+D619	row=438	note=D619-各有限维下的希尔伯特-史密斯猜想.md	size=24272	secmax=6	dir=The-Hilbert-Smith-conjecture-in-every-finite-dimension-September-23-2026	tex=155499
+D621	row=440	note=D621-三维的卡克亚极大猜想.md	size=31616	secmax=8	dir=The-Kakeya-maximal-conjecture-in-three-dimensions-September-23-2026	tex=359121
+D622	row=441	note=D622-轴对称电真空外部克尔-纽曼-彭罗斯不等式.md	size=22179	secmax=6	dir=The-Kerr-Newman-Penrose-Inequality-for-Axisymmetric-Electrovacuum-Exteriors-October-5-2026	tex=316553
+D623	row=442	note=D623-素数三处的凯尔韦尔不变量问题.md	size=20237	secmax=6	dir=The-Kervaire-Invariant-Problem-at-the-Prime-Three-September-24-2026	tex=328421
+D625	row=444	note=D625-一般凸体的马勒猜想.md	size=19085	secmax=6	dir=The-Mahler-Conjecture-for-General-Convex-Bodies-September-22-2026	tex=226195
+D626	row=445	note=D626-全局函数域上的Margulis-Platonov猜想.md	size=23422	secmax=6	dir=The-Margulis-Platonov-conjecture-over-global-function-fields-October-5-2026	tex=289291
+D627	row=446	note=D627-数域上的Margulis-Platonov猜想.md	size=27482	secmax=8	dir=The-Margulis-Platonov-conjecture-over-number-fields-September-23-2026	tex=292290

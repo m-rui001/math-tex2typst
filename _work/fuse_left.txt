@@ -1,0 +1,2 @@
+\betam x5 = \beta+m notes=D08
+\nuW x3 = \nu+W notes=D68

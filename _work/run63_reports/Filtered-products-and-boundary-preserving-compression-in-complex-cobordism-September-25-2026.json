@@ -1,0 +1,29 @@
+{
+  "paper": "Filtered-products-and-boundary-preserving-compression-in-complex-cobordism-September-25-2026",
+  "ok": true,
+  "typ_lines": 657,
+  "included_pdf_pages": 0,
+  "formulas": 621,
+  "math_failed": 0,
+  "labels": 77,
+  "equations": 6,
+  "theorems": 4,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:picture": 1
+  },
+  "samples": {
+    "formulas": "621"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Filtered-products-and-boundary-preserving-compression-in-complex-cobordism-September-25-2026.tex"
+}

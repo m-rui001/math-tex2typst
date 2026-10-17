@@ -1,0 +1,33 @@
+D177  lines=OK(418->418) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=72 expected=72) size_delta=OK(72)
+D195  lines=OK(662->662) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=24 expected=24) size_delta=OK(24)
+D198  lines=OK(343->343) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=11 expected=11) size_delta=OK(11)
+D202  lines=OK(335->335) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=19 expected=19) size_delta=OK(19)
+D205  lines=OK(567->567) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=59 expected=59) size_delta=OK(59)
+D214  lines=OK(300->300) cr0=OK(0) markers=OK(5->0 (want -5)) bytesidentical=OK(delta=142 expected=142) size_delta=OK(142)
+D224  lines=OK(760->760) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=65 expected=65) size_delta=OK(65)
+D227  lines=OK(550->550) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=24 expected=24) size_delta=OK(24)
+D234  lines=OK(491->491) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=22 expected=22) size_delta=OK(22)
+D242  lines=OK(328->328) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=19 expected=19) size_delta=OK(19)
+D256  lines=OK(190->190) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=53 expected=53) size_delta=OK(53)
+D264  lines=OK(1013->1013) cr0=OK(0) markers=OK(2->0 (want -2)) bytesidentical=OK(delta=63 expected=63) size_delta=OK(63)
+D266  lines=OK(744->744) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=36 expected=36) size_delta=OK(36)
+D274  lines=OK(335->335) cr0=OK(0) markers=OK(2->0 (want -2)) bytesidentical=OK(delta=88 expected=88) size_delta=OK(88)
+D295  lines=OK(328->328) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=17 expected=17) size_delta=OK(17)
+D298  lines=OK(401->401) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=26 expected=26) size_delta=OK(26)
+D314  lines=OK(761->761) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=68 expected=68) size_delta=OK(68)
+D330  lines=OK(352->352) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=29 expected=29) size_delta=OK(29)
+D339  lines=OK(409->409) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=29 expected=29) size_delta=OK(29)
+D382  lines=OK(497->497) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=24 expected=24) size_delta=OK(24)
+D389  lines=OK(367->367) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=83 expected=83) size_delta=OK(83)
+D431  lines=OK(227->227) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=89 expected=89) size_delta=OK(89)
+D436  lines=OK(363->363) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=51 expected=51) size_delta=OK(51)
+D437  lines=OK(363->363) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=78 expected=78) size_delta=OK(78)
+D457  lines=OK(284->284) cr0=OK(0) markers=OK(1->0 (want -1)) bytesidentical=OK(delta=35 expected=35) size_delta=OK(35)
+KEEP D217 markers=1 want=1 OK
+KEEP D30 markers=1 want=1 OK
+KEEP D374 markers=2 want=2 OK
+KEEP D45 markers=1 want=1 OK
+
+sites repaired=31  notes touched=25  bytes removed=1226
+corpus recount: markers=5  notes hit=4  files=734
+FAILURES: none

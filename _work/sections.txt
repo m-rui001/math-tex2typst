@@ -1,0 +1,39 @@
+538:### [KaTeX parse error: Can't use function '$' in math mode ]  count=101  class=WAIVER
+743:### [KaTeX parse error: Unexpected end of input in a macro argu]  count=97  class=JUDGMENT
+940:### [KaTeX parse error: Expected group as argument to '\H' ]  count=30  class=JUDGMENT
+1003:### [KaTeX parse error: Expected 'EOF', got '}' ]  count=26  class=JUDGMENT
+1058:### [KaTeX parse error: No such environment: psmallmatrix ]  count=12  class=JUDGMENT
+1085:### [KaTeX parse error: Expected '}', got 'EOF' at end of input]  count=10  class=JUDGMENT
+1108:### [KaTeX parse error: Extra } ]  count=9  class=JUDGMENT
+1129:### [KaTeX parse error: Expected group after '_' ]  count=7  class=JUDGMENT
+1146:### [KaTeX parse error: Double subscript ]  count=7  class=JUDGMENT
+1163:### [KaTeX parse error: Can't use function '\(' in math mode ]  count=6  class=WAIVER
+1178:### [KaTeX parse error: Double superscript ]  count=6  class=JUDGMENT
+1193:### [KaTeX parse error: Expected 'EOF', got '\right' ]  count=5  class=JUDGMENT
+1206:### [KaTeX parse error: Expected group after '^' ]  count=5  class=JUDGMENT
+1219:### [KaTeX parse error: Got function '\H' with no arguments as ]  count=3  class=JUDGMENT
+1228:### [KaTeX parse error: Can't use function '$' in math mode 
+1237:### [KaTeX parse error: Can't use function '\mathbf' in text mo]  count=2  class=WAIVER
+1244:### [KaTeX parse error: Expected & or \\ or \cr or \end at end ]  count=2  class=JUDGMENT
+1251:### [KaTeX parse error: Expected 'EOF', got '\end' 
+1256:### [KaTeX parse error: Expected 'EOF', got '_' ]  count=1  class=WAIVER
+1261:### [KaTeX parse error: Got function '\operatorname@' with no a]  count=1  class=JUDGMENT
+1266:### [KaTeX parse error: {equation} can be used only in display ]  count=1  class=KEEP
+1270:### [KaTeX parse error: Expected 'EOF', got '&' ]  count=1  class=WAIVER
+1275:### [KaTeX parse error: Expected '\right', got 'EOF' at end of ]  count=1  class=JUDGMENT
+1280:### [KaTeX parse error: Expected 'EOF', got '#' 
+1287:### [KaTeX parse error: Expected 'EOF', got '#' 
+1294:### [KaTeX parse error: Expected 'EOF', got '#' 
+1301:### [KaTeX parse error: Expected 'EOF', got '#' 
+1308:### [KaTeX parse error: Expected 'EOF', got '#' 
+1315:### [KaTeX parse error: Can't use function '$' in math mode 
+1322:### [KaTeX parse error: Expected 'EOF', got '#' 
+1329:### [KaTeX parse error: Got function '\textcolor' with no argum]  count=1  class=JUDGMENT
+1334:### [KaTeX parse error: Expected 'EOF', got '#' ]  count=1  class=JUDGMENT
+1339:### [KaTeX parse error: Expected 'EOF', got '#' 
+1346:### [KaTeX parse error: {CD} can be used only in display mode.]  count=1  class=KEEP
+1350:### [KaTeX parse error: Mismatch: \begin{pmatrix} matched by \e]  count=1  class=JUDGMENT
+1355:### [KaTeX parse error: No such environment: tikzcd ]  count=1  class=KEEP
+1359:### [KaTeX parse error: Can't use function '\]' in math mode ]  count=1  class=JUDGMENT
+1364:### [KaTeX parse error: Expected 'EOF', got '#' 
+1371:### [KaTeX parse error: Expected 'EOF', got '#' 

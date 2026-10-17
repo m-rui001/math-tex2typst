@@ -1,0 +1,8 @@
+nodes reaching the page inside a #box(: 1897, carrying width: 1276
+by measure named:
+     943  text width
+     586  refused:(none)
+     331  minimum width
+      35  refused:text width
+       2  minimum size
+BUG -- nodes with a readable measure but no width emitted: 0

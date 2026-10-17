@@ -1,0 +1,6 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+=== Global-quantum-geometric-Langlands-at-irration#0  env=tikzcd
+  product  on-ink 10 pairs, 7 over 3.0pt  4.76 'N'  3.36 'G'  3.58 '2'  3.29 '(M)'
+  rebuilt  on-ink 0 pairs, 0 over 3.0pt  
+  face rows from the census: 7

@@ -1,0 +1,33 @@
+{
+  "paper": "Topological-triviality-of-mu-constant-families-of-surface-singularities-September-24-2026",
+  "ok": true,
+  "typ_lines": 835,
+  "included_pdf_pages": 0,
+  "formulas": 674,
+  "math_failed": 1,
+  "labels": 65,
+  "equations": 8,
+  "theorems": 4,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:picture": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "674",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "amscd"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Topological-triviality-of-mu-constant-families-of-surface-singularities-September-24-2026.tex"
+}

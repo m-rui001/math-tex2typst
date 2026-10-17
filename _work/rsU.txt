@@ -1,0 +1,13 @@
+residual_total=419  inline_code=232  body=187  (body braced=38 bare=149)
+  D143   code=132  body=0
+  D25    code=17   body=19
+  D28    code=9    body=0
+  D35    code=9    body=0
+  D134   code=7    body=4
+  D116   code=6    body=0
+  D75    code=4    body=0
+  D09    code=3    body=0
+  D137   code=3    body=0
+  D233   code=3    body=0
+  D302   code=3    body=7
+  D578   code=3    body=0

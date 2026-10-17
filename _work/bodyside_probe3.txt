@@ -1,0 +1,54 @@
+FILE D196-从Cardy公式提取Voronoi逾渗色关键点振幅.md total_lines=209
+L141 len=964 :: 补两条自查纪律的总结，作为研究笔记的收束。其一，极限顺序就是定理内容的一部分。本文对 Assumption cardy 的全部依赖都按同一个模板兑现：固定半径、缓冲、域测试在网格趋零之前（01-inputs.tex:90-92），先取比 $L$ 再取阈值 $r_0(L)$（05-transfer.tex:810-817），先删中部额外测试再因子化两端积分（05-transfer.tex:164-176），先固定 excursion 尺度做排除再让尺度趋零（05-transfer.tex:460-464）。任何一处顺序颠倒，都会把"沿子序列成立"的定性输入用成它给不起的一致声明；支配引理的存在（05-transfer.tex:213-247）就是为了让我在结构上根本没有机会犯这类错，误差先被压进独立区域的期望，再谈条件化。其二，观测量决定工具的对称性预算。我选的观测量是带符号消息（零质量、偶、各向同性各管一段），每省一次对称性就丢一次幂：翻转对称给 $\alpha_j$ 的奇性（05-transfer.tex:769-774），旋转对称给投影 $\Pi$ 的资格（03-spectrum.tex:367-374），二者共同供出可积性门槛 $2$ 上方的全部余量；秩一收缩走另一条路，靠 $M_1\otimes M_1$ 在反对称张量上为零（05-transfer.tex:942-950），两条路的增益在 §15 的 $\zeta$ 选配里合并成 $\alpha=\min(\nu'/2,\zeta\xi)$ 这一个收束率（06-amplitude.tex:455-459）。[推测] 若把同一框架推向其它模型的关键点振幅，最先要复查的是这两条纪律各自的接口：目标模型是否有与 $\delta_B-\delta_W$ 对应的两状态帽结构，以及色翻转与旋转对称在其边界数据上是否仍然精确。[推测] 另一处可复查点：本文传输机件只消费了"四尖留一坐标"这一低秩事实，若某模型的界面配对在四状态以上仍带一个固定的带符号商，秩一分解或可替换成秩 $k$ 分解，其张量积论证需要 $M_1^{\ot
+L142 len=0 :: 
+L143 len=83 :: 收束一句：本笔记的反推工程到此闭环，所有判断都可在 §17 台账的位置栏里回查原文行号；凡台账位置栏到达不了的句子，正文内已就近标了 [推测]，两处标记体系互为审计。
+L144 len=0 :: 
+L145 len=49 :: ## §15 两尺度行列式与可求和的对数误差（标题为事后补插，正文原样保留，过程见 §17 勘误）
+L146 len=0 :: 
+L147 len=874 :: 尾巴允许扔掉远处插入；剩下 $|y|\le m$ 的近处插入，对 $f$ 归一化后的响应应当几乎与外矩形尺寸无关。两尺度行列式引理（06-amplitude.tex:358-412）断言：$100m\le R\le R'\le2R$、几乎每个 $0<|y|\le m$ 时 $\lvert K_R(y)f(R')-K_{R'}(y)f(R)\rvert\le C(m/R)^{2\lambda+\nu'}+Ce^{-cm^2}$，常数与 $y$ 到原点距离无关。构造：从 $10m$ 到 $R$ 的固定小分数铺比例 $L$ 的同心切口，全在两矩形之内、双插入之外，末半径向下取整到网格、与 $R$ 之比有赖于 $L$ 的正下界；先给所有切口强加公共 base-process 屏成功，扔掉的质量由几何级数 $\sum_j\exp(-cm^2L^{2j})\le Ce^{-c'm^2}$ 界住；第一切口处取 $a$＝改中心色的连接状态消息、$b_y$＝有无 $y$ 处公平点对该消息的差，各自零质量、范数至多 $2$ 与 $4$，且它们对 $R,R'$ 完全同构（构造只用公共内部 Poisson 变量与第一缝，甚至不需要 $0,y$ 邻域不相交）；$\ell_R,\ell_{R'}$ 为末切口上两外矩形穿越测试给出的有界线性泛函，$T$ 为中间复合转移，四个受限期望 $\ell_R(Ta),\ell_{R'}(Ta),\ell_R(Tb_y),\ell_{R'}(Tb_y)$ 的行列式就是 $T^{\otimes2}$ 作用在 $b_y\otimes a-a\otimes b_y$ 上经 $\ell_R\otimes\ell_{R'}$ 的求值，wedge 推论给 $C(m/R)^{2\lambda+\nu'}$；补回扔掉的事件每个标量因子有界，误差 $Ce^{-cm^2}$（06-amplitude.tex:369-412）。注意我全程没认出 $K_R$ 的主项是谁，行列式把未知因子自己消掉了，这是"振幅存在但值不显"的技术根源。
+L148 len=0 :: 
+L149 len=729  <<HAS-OUT :: 对数误差命题（06-amplitude.tex:414-478）收网。令 $g(R)=Rf'(R)/f(R)$，取 $\zeta=\frac{\nu'}{4(2+2\lambda+\nu')}$、$\eta=\frac{\nu'}8$、$m=R^\zeta$；指数引理给 $f(s)\ge s^{-\lambda-\eta}$；把行列式除以 $f(R)f(R')$ 在 $|y|\le m$ 积分，左边是两归一化近程核积分之差，右边 $CR^{2\lambda+2\eta}m^2[(m/R)^{2\lambda+\nu'}+e^{-cm^2}]\le CR^{-\nu'/2}$，幂次账 $-\nu'+2\eta+\zeta(2+2\lambda+\nu')=-\nu'/2$ 是设计好的；互补程由尾巴引理各 $\le CR^{-\zeta\xi}$；由 $g(R)=2\int K_R/f(R)$ 得二进摆动界 $\sup_{R\le R'\le2R}|g(R')-g(R)|\le CR^{-\alpha}$，$\alpha=\min(\nu'/2,\zeta\xi)$；$g(2^nR_0)$ 是 Cauchy 列，二进点间插回得 $g\to\gamma$ 且 $|g(R)-\gamma|\le C'R^{-\alpha}$；积分 $\log f(R)-\log f(R_0)=\int g\,ds/s$ 除以 $\log R$ 认 out $\gamma=-\lambda$（靠指数引理的另一侧），于是 $\lvert Rf'/f+\lambda\rvert\le CR^{-\alpha}$（06-amplitude.tex:423-477）。
+L150 len=0 :: 
+L151 len=9 :: ## §16 勘误
+L152 len=0 :: 
+L153 len=149 :: 一，追加事故：写 §13/§14 时误把"## §15"标题行当锚点整体替换，该标题一度从盘面上消失；随后以纯插入方式在 §15 正文前补回标题并注明，正文一字未删。代价是物理节序成为 §0 至 §13、§13、§14、§15、§16、§17，规格禁止重排已落盘内容，故保留此序，编号语义不受影响。
+L154 len=0 :: 
+L155 len=177 :: 二，§4 末段"第 5--7 节（对应论文的 02、03、04 节）、第 8--9 节（05-transfer）、第 11--13 节（06-amplitude）"是动笔前的小节框架预算数，与最终框架的对应关系应为：本笔记 §5 至 §9 覆盖论文 02、03、04 三节，§10 至 §12 覆盖论文 05 节，§13 至 §13 覆盖论文 06 节。
+L156 len=0 :: 
+L157 len=261 :: 三，§4 中"无符号四臂界只供得起 $A\sim t^{-5/4}$ 型信息"一句表述过急。严格账目：若从成功界 $Ct^{-2-\nu}A(b_*,t)A(t,R)$ 中删去插入因子 $t^{-2-\nu}$，剩 $O(A(b_*,t)A(t,R))=O(f(R))$（拟乘性），在环带 $\{m<|y|<R/100\}$ 内无任何径向衰减，积分吃面积因子即告失效；论文原句依据 00-introduction.tex:120-121 与 build/sections/06-amplitude.tex:190-231。
+L158 len=0 :: 
+L159 len=97 :: 四，§6 腔定义里 `(2\pi\Z\one)` 是手滑的未定义宏，应为 $2\pi\mathbb Z\mathbf 1$（build/sections/03-spectrum.tex:19）。
+L160 len=0 :: 
+L161 len=214 :: 五，英文残留按术语混排直读：§9"光滑度一条都不 imposed"读作完全不施加光滑性约束；§10"机器主轴承"为比喻；§11/§12 的 comparable、cancellation、base-process、wedge、excursion、screened、wired，§13 的 score、quad、Cauchy，§14 的 Lyapunov、Girsanov，均按通行术语理解，不再逐一回改以守"不回改已落盘"之例。
+L162 len=0 :: 
+L163 len=49  <<HAS-OUT :: 六，§15"认 out 出 $\gamma=-\lambda$"中 out 为衍字，读作"认出"。
+L164 len=0 :: 
+L165 len=9 :: ## §17 台账
+L166 len=0 :: 
+L167 len=44 :: | 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+L168 len=31 :: | --- | --- | --- | --- | --- |
+L169 len=252 :: | $\eta_\varepsilon$ 强度 $\varepsilon^{-2}$ | 齐次 Poisson 过程强度约定 | build/sections/00-introduction.tex:3 | $N_\varepsilon$ 定义与校准 $m_\varepsilon=\varepsilon^{-2}$（build/sections/01-inputs.tex:170） | 约定一改，§13 收尾的 $S_\varepsilon\sim a\varepsilon^{5/4}$ 换算断 |
+L170 len=206 :: | Cardy 值 $x^{1/3}{}_2F_1(\tfrac13,\tfrac23;\tfrac43;x)$ | 上半平面归一的穿越概率 | build/sections/00-introduction.tex:28-29 | Assumption cardy 的唯一内容（build/sections/00-introduction.tex:17-21） | 假设即 §0 登记对象，改动使全篇前提换页 |
+L171 len=164 :: | $\lim\varepsilon^{3/4}\mathbb E N_\varepsilon=c_V$ | 主定理结论，$c_V\in(0,\infty)$ | build/sections/00-introduction.tex:39 | 全文靶子与 §13 收尾 | 单点失败处，上游 §5 至 §13 全链皆为其服务 |
+L172 len=222 :: | $\lambda=5/4$ | 四交错臂指数兼基态本征值 | build/sections/01-inputs.tex:236 | §7 的 $Lh=-\lambda h$（build/sections/03-spectrum.tex:184）与 §13 指数三身份 | 幂次账 $-\nu'+2\eta+\zeta(2+2\lambda+\nu')$（build/sections/06-amplitude.tex:444-447）崩 |
+L173 len=136 :: | $f(R)=S_{1/R}$ | 中心插入关键点概率的欧氏缩放像 | build/sections/01-inputs.tex:172 | §13 整节的微分对象 | 定义错位则导数公式（build/sections/06-amplitude.tex:38）无主语 |
+L174 len=212 :: | $m_\varepsilon q_\varepsilon S_\varepsilon\to c$ | 单时刻校准极限 | build/sections/01-inputs.tex:180 | §13 的 $q_\varepsilon\sim(c/a)\varepsilon^{3/4}$（build/sections/06-amplitude.tex:500-508） | 缺它则 $c_V=Ba/c$ 表达式无来源 |
+L175 len=174 :: | $q_\varepsilon\mathbb E N_\varepsilon\to B$ | prescribed 归一化自身的极限 | build/sections/01-inputs.tex:181 | §13 收尾（build/sections/06-amplitude.tex:510-511） | 缺它则 $c_V$ 定义断最后一环 |
+L176 len=198 :: | $f(R)\asymp A(b_*,R)$ | 关键点概率等价四臂概率 | build/sections/01-inputs.tex:185 | §13 的 $Cf(R)t^{-2-\nu}$ 界与远外吸收（build/sections/06-amplitude.tex:226,344） | 失则归一化尾巴（build/sections/06-amplitude.tex:107）不成立 |
+L177 len=167 :: | $f(R)=R^{-5/4+o(1)}$ | 指数引理，有指数无振幅 | build/sections/01-inputs.tex:201 | §15 认 $\gamma=-\lambda$（build/sections/06-amplitude.tex:475-477）与 §2 失败路线登记 | 去它则对数导数极限无法识别 |
+L178 len=195 :: | $c(r/s)^g\le A(r,s)\le C(r/s)^{1+\alpha}$，$g\in(1,2)$ | 臂概率双侧幂界 | build/sections/01-inputs.tex:27-28 | §11 与 §13 的失败屏记账、下界吸收 | 下界失则 $Ce^{-c'R^2}$ 吸收（build/sections/06-amplitude.tex:296-299）无据 |
+L179 len=174 :: | $A(r,t)\asymp A(r,s)A(s,t)$ | 拟乘性 | build/sections/01-inputs.tex:28-29 | §2 迭代与 §13 臂因子合并（build/sections/06-amplitude.tex:226） | 失则 $A(b_*,t)A(t,R)$ 换 $f(R)$ 的 sandwich 断 |
+L180 len=156 :: | $C\exp(-cs^2)$ | 屏失败指数界 | build/sections/01-inputs.tex:37-39 | §12 重置记账（build/sections/05-transfer.tex:881-886）与 §15 丢弃质量 | 若退化幂率，$e^{-cm^2}$ 项在行列式里不可忽略 |
+L181 len=169 :: | $H_{\mathsf b}-H_{\mathsf w}=\mathbf 1_{\mathcal T}$ | 帽恒等式 | build/sections/02-annuli.tex:39 | §11 用对积分结构（build/sections/05-transfer.tex:639-641） | 失则带符号差经环域传输无代数把手 |
+L182 len=98 :: | $T^\pm(p,x,y)$ | 圆环数据传输极限，连续 | build/sections/02-annuli.tex:353-354 | §6 谱分析的全部对象 | 未定义则模方程无主语 |
+
+--- codepoints around each out in L149
+IDX 622 seg=/s$ 除以 $\log R$ 认 out $\gamma=-\lambda$
+  cps: 0020 8BA4 0020 006F 0075 0074 0020 0024 005C
+
+--- counts across file
+pat=认 out 出 count=1 hits=[163]
+pat=认out出 count=0 hits=[]
+pat=out 出 count=1 hits=[163]
+pat=认 count=12 hits=[29, 45, 60, 75, 87, 105, 107, 147, 149, 163, 177, 187]
+pat=出 count=38 hits=[3, 14, 23, 25, 31, 37, 39, 43, 47, 49, 60, 62, 64, 69, 79, 83, 93, 95, 97, 99]

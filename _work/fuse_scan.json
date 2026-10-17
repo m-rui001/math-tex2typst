@@ -1,0 +1,228 @@
+[
+ {
+  "tok": "\\lem",
+  "occ": 13,
+  "prefix": "\\le",
+  "tail": "m",
+  "notes": {
+   "D139": 12,
+   "D317": 1
+  }
+ },
+ {
+  "tok": "\\supp",
+  "occ": 12,
+  "prefix": "\\sup",
+  "tail": "p",
+  "notes": {
+   "D269": 1,
+   "D58": 2,
+   "D59": 6,
+   "D626": 2,
+   "D97": 1
+  }
+ },
+ {
+  "tok": "\\arctanh",
+  "occ": 12,
+  "prefix": "\\arctan",
+  "tail": "h",
+  "notes": {
+   "D97": 12
+  }
+ },
+ {
+  "tok": "\\Pic",
+  "occ": 8,
+  "prefix": "\\Pi",
+  "tail": "c",
+  "notes": {
+   "D144": 5,
+   "D253": 2,
+   "D259": 1
+  }
+ },
+ {
+  "tok": "\\range",
+  "occ": 7,
+  "prefix": "\\rang",
+  "tail": "e",
+  "notes": {
+   "D233": 1,
+   "D31": 6
+  }
+ },
+ {
+  "tok": "\\logeps",
+  "occ": 7,
+  "prefix": "\\log",
+  "tail": "eps",
+  "notes": {
+   "D302": 7
+  }
+ },
+ {
+  "tok": "\\Proj",
+  "occ": 4,
+  "prefix": "\\Pr",
+  "tail": "oj",
+  "notes": {
+   "D214": 1,
+   "D259": 3
+  }
+ },
+ {
+  "tok": "\\inner",
+  "occ": 4,
+  "prefix": "\\in",
+  "tail": "ner",
+  "notes": {
+   "D26": 3,
+   "D275": 1
+  }
+ },
+ {
+  "tok": "\\succe",
+  "occ": 3,
+  "prefix": "\\succ",
+  "tail": "e",
+  "notes": {
+   "D267": 3
+  }
+ },
+ {
+  "tok": "\\negMulLog",
+  "occ": 3,
+  "prefix": "\\neg",
+  "tail": "MulLog",
+  "notes": {
+   "D62": 3
+  }
+ },
+ {
+  "tok": "\\Real",
+  "occ": 2,
+  "prefix": "\\Re",
+  "tail": "al",
+  "notes": {
+   "D157": 2
+  }
+ },
+ {
+  "tok": "\\degavg",
+  "occ": 2,
+  "prefix": "\\deg",
+  "tail": "avg",
+  "notes": {
+   "D33": 2
+  }
+ },
+ {
+  "tok": "\\gen",
+  "occ": 2,
+  "prefix": "\\ge",
+  "tail": "n",
+  "notes": {
+   "D523": 2
+  }
+ },
+ {
+  "tok": "\\lambdah",
+  "occ": 1,
+  "prefix": "\\lambda",
+  "tail": "h",
+  "notes": {
+   "D125": 1
+  }
+ },
+ {
+  "tok": "\\textdollar",
+  "occ": 1,
+  "prefix": "\\text",
+  "tail": "dollar",
+  "notes": {
+   "D125": 1
+  }
+ },
+ {
+  "tok": "\\nullity",
+  "occ": 1,
+  "prefix": "\\nu",
+  "tail": "llity",
+  "notes": {
+   "D209": 1
+  }
+ },
+ {
+  "tok": "\\ltl",
+  "occ": 1,
+  "prefix": "\\lt",
+  "tail": "l",
+  "notes": {
+   "D216": 1
+  }
+ },
+ {
+  "tok": "\\Res",
+  "occ": 1,
+  "prefix": "\\Re",
+  "tail": "s",
+  "notes": {
+   "D257": 1
+  }
+ },
+ {
+  "tok": "\\ellr",
+  "occ": 1,
+  "prefix": "\\ell",
+  "tail": "r",
+  "notes": {
+   "D282": 1
+  }
+ },
+ {
+  "tok": "\\lean",
+  "occ": 1,
+  "prefix": "\\le",
+  "tail": "an",
+  "notes": {
+   "D30": 1
+  }
+ },
+ {
+  "tok": "\\Prim",
+  "occ": 1,
+  "prefix": "\\Pr",
+  "tail": "im",
+  "notes": {
+   "D344": 1
+  }
+ },
+ {
+  "tok": "\\alphah",
+  "occ": 1,
+  "prefix": "\\alpha",
+  "tail": "h",
+  "notes": {
+   "D560": 1
+  }
+ },
+ {
+  "tok": "\\setu",
+  "occ": 1,
+  "prefix": "\\set",
+  "tail": "u",
+  "notes": {
+   "D57": 1
+  }
+ },
+ {
+  "tok": "\\gtrimes",
+  "occ": 1,
+  "prefix": "\\gt",
+  "tail": "rimes",
+  "notes": {
+   "D762": 1
+  }
+ }
+]

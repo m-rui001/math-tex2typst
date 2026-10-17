@@ -1,0 +1,21 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+== the canvas build_cd emits for `A ->[f] \ar[dr,bend left=30,swap 'g'] ; row 2 has B`
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((2.6, -1.7), [$B$])
+  line((0.51, 0), (2.1, 0), mark: (end: ">"))
+  content((1.305, -0.45), [$f$])
+  line((0.3573, -0.2336), (0.8075, -1.603))
+  line((0.8075, -1.603), (2.243, -1.466), mark: (end: ">"))
+  content((0.469, -2.121), [$g$])
+})
+== the page it draws (PDF points, y grows DOWN)
+   ink  𝐴    centre (31.12, 31.14)
+   ink  𝐵    centre (104.68, 79.33)
+   ink  𝑓    centre (67.62, 42.77)
+   ink  𝑔    centre (44.28, 90.14)
+   line (45.58, 30.75) -> (83.56, 30.75)  length 37.98
+   line (41.25, 37.37) -> (54.01, 76.19)  length 40.86
+   line (54.01, 76.19) -> (87.64, 72.98)  length 33.78
+   bend: apex (54.01, 76.19) against the chord's midpoint (64.45, 55.18) -- the chord runs down-right, so up-right of it is left of travel

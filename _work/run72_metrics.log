@@ -1,0 +1,23 @@
+== run72 13:33 ==
+rows: 724
+  cetz_converted             991 over 553 papers
+  cetz_refused                38 over  33 papers
+  cetz_split                   9 over   7 papers
+  figure_content_unhandled     0 over   0 papers
+  empty figures               13 over   9 papers
+  quoted pictures             38  (refused pictures shown as source)
+
+most refused in one paper:
+files with residue: 0 ; occurrences: 0
+quoted LaTeX on the page: 38 blocks over 33 papers
+zones: {}
+== shots ==
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+_work/shot_Exponential-PSD-rank-of-_p19.png  page 19  caption 'Part of the matching associated with two cells. Filled vertices belong'
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+_work/shot_A-finite-time-singularit_p39.png  page 39  caption 'The cutoff regions in (6.13). Distances are schematic. Solid bands ind'
+== content calls ==
+canvas lines scanned: 22955
+calls written with '#'  : {'linebreak': 2169, 'box': 1101, 'text': 8}
+calls written WITHOUT '#' (literal on the page): {}
+== done ==

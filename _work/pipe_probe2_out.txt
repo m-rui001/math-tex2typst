@@ -1,0 +1,524 @@
+########## D25  D25-Crouzeix完整不等式直接证明.md  size=399742 lines=2784
+  count \lVert     = 6
+  count \rVert     = 6
+  count \lvert     = 219
+  count \rvert     = 219
+  count \Vert      = 0
+  count \vert      = 0
+  count \mid       = 0
+  count \|         = 418
+  SAMPLE \lVert (5 shown):
+     \lVert\cdot\rVert_{\mathrm{HS}}$。$[分析]$ 配合 `main.tex:180` 那句 `We u
+     \lVert F(z)\rVert\le1$（$\partial\Omega$ 上）归一化下 | `main.tex:324` | 
+     \lVert F[A]\rVert$（归一化标尺） | 变量；$\gamma=0$ 先分流 | `main.tex:329`（分流句
+     \lVert A\rVert=2$、$\max_{W(A)}\lvert z\rvert=1$ | `main.tex:528`（定
+     \lVert S\rVert\lVert S^{-1}\rVert\le2$ | `main.tex:76`、`main.tex:8
+  SAMPLE \lvert (12 shown):
+     \lvert X\rvert_2$ 是**未归一化**的 Hilbert--Schmidt 范数（即 $\operatorname{
+     \lvert\lambda\rvert>1\}\to\mathbb C\setminus\overline\Omega$（`main
+     \lvert\lambda\rvert=1\}$ 在 `main.tex:169` 文字里点明 |
+     \lvert x\rvert_2$ | `main.tex:13` `\newcommand{\HS}[1]{\lvert #1\r
+     \lvert \cdot\rvert_2$ 的未归一化是配套的一对选择，见下面第二条口径 |
+     \lvert\lambda\rvert>r$（含 $\infty$）单叶，$0<r<1$，把 $\lvert\lambda\rver
+     \lvert u(\mu)\rvert_2^2\,d\tau(\mu)=\sum_{n\in\mathbb Z}\lvert \wi
+     \lvert s_{kj}\rvert\le C_\rho\rho^{k+j}$ 全部失效，$T$ 不再是 $L^2$ 算子（核不收
+     \lvert s_{kj}\rvert\le C_\rho\rho^{k+j}$ 变成无衰减，$s$ 在 $\mathbb T^2$
+     \lvert s_{kj}\rvert\le C_\rho\rho^{k+j}$，双指标同时衰减；
+     \lvert s_{kj}\rvert\le C\rho^k$）时 $\sum_j$ 方向不收敛，$\sum_{j\ge1}\lve
+     \lvert C_0\rvert_2^2+2\sum_{k=1}^N$，常数项权重 1、非常数项权重 2。这个 $1,2,2,\do
+  SAMPLE \Vert (0 shown):
+  SAMPLE \mid (0 shown):
+  BODY \MID lines=0
+########## D32  D32-Tingley问题正解.md  size=151624 lines=921
+  count \lVert     = 54
+  count \rVert     = 54
+  count \lvert     = 3
+  count \rvert     = 3
+  count \Vert      = 0
+  count \vert      = 0
+  count \mid       = 0
+  count \|         = 639
+  SAMPLE \lVert (12 shown):
+     \lVert\varphi\right\rVert\le1$ and $\varphi(a)=\left\lVert a\right
+     \lVert a-b\right\rVert\le\left\lVert a-e\right\rVert+\left\lVert b
+     \lVert \rVert`，绝对值统一写 `\lvert \rvert`，单元内不出现竖线字符，表列因此不会破。
+     \lVert x\rVert=1$ 的点集，距离从 $X$ 继承 | main.tex:49 | thm:main 里 $f$ 的等
+     \lVert x\rVert$(main.tex:54) | 换成闭球则 $D_0=D_1=0$ 两端锚(main.tex:157)
+     \lVert f(x)-qf(y)\rVert-\lVert x-qy\rVert$，$q\in[0,1]$ | main.tex:
+     \lVert(a_n)\rVert_{\mathcal U}$ | $\lim_{\mathcal U}\lVert a_n\rVe
+     \lVert c\rVert\le\rho(v)\le1+\lVert c\rVert$，连续且唯一 | main.tex:136-
+     \lVert c\rVert=1$ 时唯一性失效，非严格凸下射线可交球面成一段，$p,r,s,u$ 不再是函数 |
+     \lVert x-z\rVert\le2$ | main.tex:228 | $A=p/d$ 与 $B=u/d$(main.tex:
+     \lVert x_0-ty\rVert$ | main.tex:243 | 证 $E$ 非空的第一颗种子；$C=\overline{
+     \lVert l\rVert\le1$ 的右端(main.tex:261)不再成立 |
+  SAMPLE \lvert (3 shown):
+     \lvert D_q\rvert$，$0\le M\le1$ | eq:defect(150), eq:defectbound(15
+     \lvert \rvert`，单元内不出现竖线字符，表列因此不会破。
+     \lvert D_q(x,y)\rvert$，$0\le M\le1$ | main.tex:150 与 159 | 取等式(mai
+  SAMPLE \Vert (0 shown):
+  SAMPLE \mid (0 shown):
+  BODY \MID lines=0
+########## D65  D65-渐近中点一致凸与树空间的无界菱形畸变.md  size=130263 lines=753
+  count \lVert     = 44
+  count \rVert     = 44
+  count \lvert     = 35
+  count \rvert     = 34
+  count \Vert      = 0
+  count \vert      = 1
+  count \mid       = 0
+  count \|         = 307
+  SAMPLE \lVert (12 shown):
+     \lVert\cdot\rVert_2$ 等价失效, lem:forest-structure 的自反断言(forest.tex:3
+     \lVert p_v\rVert$ | 段族允许相交时, paired.tex:55 的 $\sum_i\beta_i^2\le4$
+     \lVert u\rVert_2\le\rho(u)\le\lVert u\rVert_1$ | 双向夹 | forest-defi
+     \lVert Q_Hx\rVert<\eta$、general-forests.tex:17-19 的移植 | $Q_H$ 不压缩则
+     \lVert Q_Hx\rVert^2=\sum_g\lVert x\restriction_{J(U_g)}\rVert^2$ |
+     \lVert Q_Hz\rVert$ 下界 | 换成 $\ell_1$ 型聚合则 $\sum_g m_g^2$ 的上界失去来源, 修
+     \lVert w_j-d_j\rVert\to0$ 的近似吞掉一半, 增益降级后与 $\beta M$ 不再矛盾 |
+     \lVert p_v\rVert=1$ | obstruction.tex:87-89; 同款 general-forests.te
+     \lVert y\rVert(12\lVert x\rVert)^{-1}$ | 最优点 | paired.tex:86-87 | 
+     \lVert P_H(y_i-y_j)\rVert<2\eta$ 里的 2 是有限维预紧的对价, 省掉即无 Cauchy 对 |
+     \lVert x\pm y_j\rVert\le R$, $\lVert y_i-y_j\rVert\ge\varepsilon$ 
+     \lVert x\rVert^2\ge\varepsilon^2/48$(diamonds.tex:21-23) | 只给单侧上界则
+  SAMPLE \lvert (12 shown):
+     \lvert k([g,w])\rvert$ | 非零个数有限,$\sum_g m_g^2\le1$ | paired.tex:35
+     \lvert\alpha_i\rvert m_g$ | 改系数 $K$:小账出 $(8/K)s^2$、切割末步需 $\lvert\b
+     \lvert k([g,w])\rvert$ | 非零有限, $\sum_g m_g^2\le1$ | paired.tex:35-
+     \lvert\alpha_i'\rvert\ge2sm_g$(paired.tex:59-63) | 换 $Ksm_g$: 小账要求
+     \lvert\alpha_i\rvert m_g$ 要求 $K$ 小, 唯 $K=2$ 同闭 |
+     \lvert\alpha_i\alpha_i'\rvert\ge4s\lvert\alpha_i\rvert m_g$ | 线性覆盖
+     \lvert\beta_i\rvert\le2m_g$(paired.tex:50-51), 幅度放宽即断 |
+     \lvert\varphi(x+ty)\rvert=1$,超额 $\ge0$,$\inf_{y\in F',N(y)=1}(N(x+
+     \lvert\varphi(x)\rvert=1$ 的取法在复情形要乘单位相位,第四步的"$a,b\ge1$"仍成立,但第五步的比值
+     \lvert\lambda\rvert$,sup 保持,$\rho(\lambda u)=\lvert\lambda\rvert\r
+     \lvert u(v)\rvert\le\rho(u)$;故 $\rho(u)=0$ 时全部坐标为零,$u=0$。反向 $\rho(
+     \lvert(u+w)(S_i)\rvert\le\lvert u(S_i)\rvert+\lvert w(S_i)\rvert$,
+  SAMPLE \Vert (0 shown):
+  SAMPLE \mid (0 shown):
+  BODY \MID lines=0
+########## D47  D47-无共轭点但无非正曲率度量的三流形.md  size=126546 lines=751
+  count \lVert     = 8
+  count \rVert     = 8
+  count \lvert     = 27
+  count \rvert     = 27
+  count \Vert      = 0
+  count \vert      = 0
+  count \mid       = 0
+  count \|         = 76
+  SAMPLE \lVert (6 shown):
+     \lVert T_i\rVert^{2},\lVert T_i^{-1}\rVert^{2}\le3$ | build/sectio
+     \lVert\xi\rVert_Q$ 退化,能量记账失 |
+     \lVert P'\rVert\le C\delta$ | build/sections/cometric.tex:96 | §10
+     \lVert E'\rVert\le C_1\epsilon$,$\lVert E''\rVert\le C_2\epsilon$ 
+     \lVert\Phi_p\rVert^{2}_{\mathcal D^{*}}\le4\int v^{2}$ | build/sec
+     \lVert w\rVert_{\mathcal D}$,不除 $-F''$ | build/sections/turning.te
+  SAMPLE \lvert (12 shown):
+     \lvert u\rvert^{2}$ 不成矛盾 |
+     \lvert u\rvert^{2}$ 无从导出 |
+     \lvert u\rvert^{2}$ | build/sections/topology.tex:180 | §3 收尾与 §4 
+     \lvert H\rvert\le\sqrt2$ | build/sections/cometric.tex:37 | $P$ 的展
+     \lvert\cdot\rvert_Q^{2}$ 的正当性 | 下界趋零则 $\lVert\xi\rVert_Q$ 退化,能量记账失
+     \lvert P'p\rvert^{2}\le C\delta\, p^{\mathsf T}(-P'')p$ | build/se
+     \lvert a'\rvert\le1$ | 换 bump 则导数被二阶导吸收的发动机要重配常数 |
+     \lvert P'p\rvert^{2}\le3\delta^{2}(\cdot)\le3\delta\, p^{\mathsf T
+     \lvert P'p\rvert^{2}\le\frac{2(1+C_1)^{2}}{m}\delta\, p^{\mathsf T
+     \lvert\widetilde P'p\rvert^{2}\le3C\delta\, p^{\mathsf T}(-\wideti
+     \lvert\dot q_V\rvert^{2}ds$ | build/sections/variations.tex:37 | §
+     \lvert\dot z-P'p\,w\rvert_Q^{2}-\tfrac12F''w^{2})$ | build/section
+  SAMPLE \Vert (0 shown):
+  SAMPLE \mid (0 shown):
+  BODY \MID lines=0
+########## D36  D36-投影体体积的单纯形最大反例.md  size=115172 lines=839
+  count \lVert     = 4
+  count \rVert     = 4
+  count \lvert     = 35
+  count \rvert     = 35
+  count \Vert      = 0
+  count \vert      = 0
+  count \mid       = 1
+  count \|         = 62
+  SAMPLE \lVert (4 shown):
+     \lVert L^{-t}\nu_F\rVert\,s_F$（单位高棱柱法） | Lemma 4 面积账 | main.tex:25
+     \lVert L^{-t}\nu_F\rVert$ 写错则该段与 :326-328 的 $\sqrt d$ 互锁全部失锚；§12 结
+     \lVert w\rVert=\sqrt d$ 拉长；:342-343 与 Jacobian 互消 | $\sqrt d$ 两处不互
+     \lVert w\rVert\operatorname{vol}_{d-1}(\operatorname{proj}_{w^\per
+  SAMPLE \lvert (12 shown):
+     \lvert\langle v,u\rangle\rvert$；:223-224 亮度相加重构 | 缺 compact 则最值不取到
+     \lvert B_2^j\rvert$ | $j$ 维单位球体积 | main.tex:52-53 | 只在 Lemma 4 逼近段
+     \lvert\Pi K\rvert/\lvert K\rvert^{d-1}$ 与 $c_d=(d+1)d^d/d!$（eq:fun
+     \lvert\Pi K\rvert\le c_d\lvert K\rvert^{d-1}$） | 被否证对象 | main.tex:
+     \lvert\langle\nu_F,u\rangle\rvert$（Lemma 2） | 规范化承诺加亮度公式 | main.te
+     \lvert\Pi T_d\rvert$ 与 :68 带量纲形态同错；无量纲比值 :401 免疫（§9(c)） |
+     \lvert B\rvert\Pi A)\times(\lvert A\rvert\Pi B)$ | 交叉配对缩放 | main.t
+     \lvert A\rvert\Pi A)\times(\lvert B\rvert\Pi B)$ 则 :231 起错；$r=s=10
+     \lvert B\rvert s_F\nu_F,0)$ 与 $(0,\lvert A\rvert s_G\nu_G)$ | 两族线段
+     \lvert B\rvert^r\lvert A\rvert^s$ 整体错一档 |
+     \lvert B\rvert^r\lvert A\rvert^s\lvert\Pi A\rvert\lvert\Pi B\rvert
+     \lvert A\rvert\lvert B\rvert)^{r+s-1}}$ | 可乘性正式化 | main.tex:201-20
+  SAMPLE \Vert (0 shown):
+  SAMPLE \mid (1 shown):
+     \mid n$ 的子列，全称量词死掉；:434-435 那句 "and one factor of dimension betw
+  BODY \MID lines=1
+     二，只用整块 $T_{10}^k$ 不配尾块：只覆盖 $10\mid n$ 的子列，全称量词死掉；:434-435 那句 "an
+########## D26  D26-加倍Hilbert子集无双Lipschitz有限维嵌入.md  size=188412 lines=1270
+  count \lVert     = 7
+  count \rVert     = 7
+  count \lvert     = 3
+  count \rvert     = 3
+  count \Vert      = 0
+  count \vert      = 0
+  count \mid       = 0
+  count \|         = 288
+  SAMPLE \lVert (6 shown):
+     \lVert F_i(p)-F(p)\right\rVert\le Dr$ wherever the added displacem
+     \lVert F_i-F\rVert\le Dr$ main.tex:237 | $D$ 挪进下界则 main.tex:237 的偏
+     \lVert G_V^x\rVert^2$、$t_n=\lVert G_V^y\rVert^2$ 可测，因选取场按竖条颜色分片（ma
+     \lVert G_V^x\rVert^2\rangle_Q=\eta_n\to0$ 正是 eq:eta（main.tex:287-2
+     \lVert G_V^x\rVert^2\rangle$（main.tex:287）就没处安放，方差恒等式（main.tex:199
+     \lVert G_V^y\rVert^2\rangle$ 的上界带 $(A-\text{饱和值})/\kappa$ 型松弛，把 $\
+  SAMPLE \lvert (3 shown):
+     \lvert P\rvert/N$ main.tex:322；长度因子 main.tex:337 | 把 $n$ 从长边挪走则 ma
+     \lvert g_1\rvert^p)^{1/p}\in(0,\infty)$ | main.tex:393 | $J_px=c_p
+     \lvert Q\rvert=L_xL_y$ 有限且正（$L_x,L_y\ge l/2>0$，main.tex:229）；$s_n=
+  SAMPLE \Vert (0 shown):
+  SAMPLE \mid (0 shown):
+  BODY \MID lines=0
+########## D28  D28-双曲群无几何CAT0作用.md  size=151904 lines=1526
+  count \lVert     = 43
+  count \rVert     = 43
+  count \lvert     = 31
+  count \rvert     = 31
+  count \Vert      = 0
+  count \vert      = 0
+  count \mid       = 2
+  count \|         = 6
+  SAMPLE \lVert (12 shown):
+     \lVert u\rVert^2+\lVert v\rVert^2-d_T(u,v)^2)/2$ | 锥内积由距离定义 | 06-o
+     \lVert v_a\rVert^2\le5\sum_{k=2}^6\lVert v_{s_k}\rVert^2$ | 均值涨率改 
+     \lVert v_s\rVert^2=1$ | 能量归一 | 05-energy.tex:120 | 05-energy.tex:1
+     \lVert v_s\rVert^2\le25\frac{1+\varepsilon}{1-\varepsilon}$ | 位移逐点
+     \lVert m_t\rVert^2\le1/t$ | 归纳均值，单位方差 Sturm 界 | 05-energy.tex:202 
+     \lVert[u,v]_t\rVert^2=(1-t)\lVert u\rVert^2+t\lVert v\rVert^2-t(1-
+     \lVert\log_xy\rVert=d(x,y)$，方向为 $x$ 到 $y$ 的测地线方向；欧氏锥内 $\langle u,v
+     \lVert u\rVert^2+\lVert v\rVert^2-d(u,v)^2)/2$，非零向量时 $\langle u,v\
+     \lVert u\rVert\lVert v\rVert\cos\angle(u,v)$，角截断在 $\pi$；非负实数乘向量一律指
+     \lVert h\rVert^2+\frac1{|S|}\sum_{s\in S}\lVert v_s\rVert^2$（05-en
+     \lVert h\rVert$ 的测地线，交叉测地线中点凸性给
+     \lVert v_s\rVert^2=1$，重标定保持完备性、properness 与 $\operatorname{CAT}(0)
+  SAMPLE \lvert (12 shown):
+     \lvert F\rvert$ | 212=32+2·90 | 02；Template.lean:40 | field 总数，一切指
+     \lvert R\rvert$ | 98=7+1+90 | 02；IncidenceTemplate.lean:18 | row 总
+     \lvert S_n\rvert=2n$，唯一趋参 | 02-model.tex:44 | 四表全部 $N$ 幂概率；04-samp
+     \lvert E(\Gamma)\rvert=32$ | 核心字段与松散边分开计 | 02-model.tex:22 | 02-mo
+     \lvert\Omega_n\rvert=(1+o(1))N^{3-\beta-90\delta}$ | 重复计则期望指数要重推，0
+     \lvert\Omega_n\rvert=(1+o(1))N^{3-\beta-90\delta}$ | 主匹配计数 | 04-sa
+     \lvert G_j\rvert\chi(P_j)$ | 欧拉示性式乘法性 | 07-completion.tex:30 | 07-
+     \lvert G\rvert=1$ 分支 | 缺 02-model.tex:107 的 $C_2$ 商则平凡群排不掉，05-ener
+     \lvert G\rvert\chi(P)$ 强制 $\lvert G\rvert=1$，与商 $G\twoheadrightarr
+     \lvert W\rvert-\sum_{\rho:\,E_\rho\subseteq W}c_\rho(\theta),\qqua
+     \lvert\Omega_n\rvert=N^{h_\theta(\mathcal F)}=N^{3-\beta-90\delta}
+     \lvert W\rvert\}$，
+  SAMPLE \Vert (0 shown):
+  SAMPLE \mid (2 shown):
+     \mid\sigma\in\Omega_n\bigr]=o(a_N)$，
+     \mid u]\ge\lVert u\rVert^2+1$，强凸性令 $a_j=\mathbb E\lVert m_j\rVer
+  BODY \MID lines=2
+     bigl[\lvert A_\sigma-a_N\rvert\mid\sigma\in\Omega_n\bigr]=o(a_N)
+     质心方差不等式给 $\mathbb E[d(u,V_j)^2\mid u]\ge\lVert u\rVert^2+1$，强凸性令
+########## D29  D29-Borsuk覆盖断言九维反例.md  size=192274 lines=1093
+  count \lVert     = 36
+  count \rVert     = 36
+  count \lvert     = 71
+  count \rvert     = 71
+  count \Vert      = 0
+  count \vert      = 0
+  count \mid       = 0
+  count \|         = 98
+  SAMPLE \lVert (12 shown):
+     \lVert P_x-P_y\rVert_F^2=2-2\langle u,v\rangle^2$ | 两两距离只依赖线夹角 $\t
+     \lVert P_x-P_y\rVert_F^2$ | geometry.tex:32-37 | 直径对双充分诊 (geometry
+     \lVert v\rVert^2 f([v])$ | 二次齐次提升；$\lVert H(v)\rVert_1=\lVert v\rV
+     \lVert F(A)\rVert_1=\operatorname{tr}\lvert A\rvert$；$\sum_i F(A)_
+     \lVert\cdot\rVert_F$ | sections/geometry.tex:20 | 距离公式（geometry.te
+     \lVert P_x-P_y\rVert_F^{2}=2-2\langle u,v\rangle^{2}$ | 距离与夹角的唯一桥梁
+     \lVert P_x-P_y\rVert_F=\sqrt2$" 与 "$x\perp y$" 不再等价，admissible 定义（
+     \lVert P-Q\rVert_F$ 只能推到 $\le\sqrt2$、geometry.tex:121 的严格不等号消失；取 $
+     \lVert F(A)\rVert_1=\operatorname{tr}\lvert A\rvert$、$\sum_iF(A)_i
+     \lVert y\rVert_1=1\}$ | 奇限制映射（eq:norm-sphere-map） | sections/exten
+     \lVert y\rVert_F^{2}=3/4$（conclusion.tex:35）不成立，与新点的距离锁不到 $\sqrt2$
+     \lVert y\rVert_F^{2}=3/4$、Gram $=I_s+\tfrac14\mathbf1\mathbf1^{\ma
+  SAMPLE \lvert (12 shown):
+     \lvert S\rvert=k=4$ 的块账本 | $k\ge4$ 机件通用，但穷举仅在 $k=4$ 可行 | 改 $k=3$ 则
+     \lvert I\rvert\le k$、$a=\lvert J\rvert\ge h$ | (4.3) | 面大小上界 | $s\
+     \lvert A\rvert=1$、$\|F(A)\|_1=\operatorname{tr}\lvert A\rvert$ | §
+     \lvert R\rvert=4$；$(a\ b)(b\ c)(c\ a)=(b\ c)$ | Lem 6.2 | 三步输运净效果 
+     \lvert B_y\rvert-1)=4$、$\bigcup(B_y\setminus\{q_y\})$ 四面体 | Lem 6.
+     \lvert S\rvert$ 是"删选皆四面体"的基数许可 | 无 | 基数和若 $\ne4$，删选集不再是 4 元、不配叫四面体
+     \lvert R\rvert=6-t$、$t\ne4$、$t=3$、尺寸 $3,2,2$、$\{r,s,z\}$ 唯一扩张 | Th
+     \lvert A\rvert\pm A)$；$F=E_V(A_+)-E_V(A_-)$ | 正负谱分解（半因子 $1/2$）与带号延
+     \lvert A\rvert$；$\sum_i F(A)_i=\operatorname{tr}A$ | 质量守恒与带号质量守恒的双
+     \lvert S\rvert=4$ | 取 $k=3$ 则 $N_3=6$、标签降到六个，5.3 的四性质自足、十标签账本无从起；取
+     \lvert R\rvert=6-t$ 与机器穷举同时失效 |
+     \lvert_W)$ | 质量若不是 $r/k$，extension.tex:87 的 $k$ 对 $r$ 换式不成立，延拓在 $\
+  SAMPLE \Vert (0 shown):
+  SAMPLE \mid (0 shown):
+  BODY \MID lines=0
+########## D41  D41-敏感度与块敏感度的超二次分离.md  size=124840 lines=831
+  count \lVert     = 0
+  count \rVert     = 0
+  count \lvert     = 15
+  count \rvert     = 15
+  count \Vert      = 0
+  count \vert      = 0
+  count \mid       = 0
+  count \|         = 6
+  SAMPLE \lVert (0 shown):
+  SAMPLE \lvert (12 shown):
+     \lvert\mathcal G\rvert\le3$ 的边数账要重排 |
+     \lvert\mathcal T\rvert<t$ 的唯一出口，删掉它整个零侧计数无处收尾。
+     \lvert D(x)-D(y)\rvert\le1$；要把两个不同整数半径的谓词同时从零翻成一，$D$ 至少跨两格，于是 $J_{
+     \lvert\mathcal T\rvert<t$ 与 $\lvert\mathcal G\rvert\le3$
+     \lvert\mathcal T\rvert<t$ 的强制链在 `02-recurrences.tex:70-80`：对每个 $j\
+     \lvert\mathcal T\rvert<t$，每子句至多 $S'_0$ 个翻转，合计 $tS'_0$。
+     \lvert\mathcal G\rvert$ 满足 $\binom{m}{2}\le m$，得 $m\le3$（`02-recur
+     \lvert\mathcal G\rvert\le2$ 时被用到，素材仍写成 $S'_1+3J'_1$ 的一致包络，这是保守但安全的
+     \lvert\mathcal G\rvert=3$ 时导出图是三元环、孤点不并存。[推测] 素材取一致包络就没分情形，这条收紧只动 
+     \lvert D(x)-D(y)\rvert$ | 逐位翻转至多变 1 | 01-construction.tex:159-163 
+     \lvert\mathcal T\rvert$ | $<t$，贡献 $tS'_0$ | 02-recurrences.tex:70-
+     \lvert\mathcal G\rvert$ | $\le3$，由 $\binom{m}{2}\le m$ | 02-recurr
+  SAMPLE \Vert (0 shown):
+  SAMPLE \mid (0 shown):
+  BODY \MID lines=0
+########## D68  D68-相容性熵与Thorp扫描的谱.md  size=371407 lines=1600
+  count \lVert     = 95
+  count \rVert     = 95
+  count \lvert     = 136
+  count \rvert     = 136
+  count \Vert      = 20
+  count \vert      = 1
+  count \mid       = 34
+  count \|         = 268
+  SAMPLE \lVert (12 shown):
+     \lVert D_H^{p/4}D_J^{p/4}\rVert_4^4$。分箱定义在第 137--140 行，按 $\ell\le-
+     \lVert EF\rVert_4^4\le\exp(n^{0.59})\prod_zr_z^{1+C_1/\log n}$；第 1
+     \lVert EF\rVert_4^4\le\frac{n!}{\lvert H\rvert\lvert J\rvert}\big(
+     \lVert T_n\rVert_\lambda^2\le h(M_0k/n)^{\alpha k}$，$k=n-\lambda_1
+     \lVert L_If\rVert^2\ge2^{-r}\Pr(R\ge r)$ 成立；塔式性质把逐次条件期望合并成整集平均。
+     \lVert z_i\rVert_{2/(1-\theta)}+2\sum_c\log\lVert w_c\rVert_{2/(1-
+     \lVert EF\rVert_4^4\le\exp(n^{0.59})\prod_zr_z^{1+C_1/\log n}$ | `
+     \lVert L_If\rVert^2\ge2^{-r}\Pr(R\ge r)$ | 内容公式一旦换成别的中心特征，半壁下界立刻失 
+     \lVert P_H P_J\rVert_{4,\mathrm{reg}(G)}^{4}\le (R_H R_J)^{1+\epsi
+     \lVert e_g\rVert^{2}=\dim\mathcal C_\mu=D_\mu^{2}$；$f_W(g)=\langle
+     \lVert e_g\rVert^{2}$ 给出。我的体会是这段真正的难点只有一处：把 $\mathbb E Z_A=c_t I$ 
+     \lVert T_n(\lambda)\rVert_{\mathrm{op}}\le n^{-c_s k}$。`10-first-i
+  SAMPLE \lvert (12 shown):
+     \lvert H\rvert\lvert J\rvert}\big(\prod_zr_z\big)\Pr(\text{可逆序})$，
+     \lvert H\rvert\lvert J\rvert}=n+O(\sqrt n\log n)$。第 175 行的选法是 $C_0
+     \lvert T\rvert}Q_T$，若共同开关图有孤立点则 $\widetilde Q=0$；第 225--229 行留下带 $
+     \lvert j-k/2\rvert\ge t)\le2\exp(-2t^2/k)$ 以及 $\Pr(j=0\text{ 或 }k)
+     \lvert I\rvert=r}\lVert L_If\rVert^2\ge2^{-r}\Pr(R\ge r)$ 成立；塔式性质把
+     \lvert T_a\rvert^{2p}\le2$ 与 $\operatorname{Tr}_{G_b}\lvert T_b\rv
+     \lvert T_n\rvert^{2p'}\le O(na^{-1/16}+\sqrt n\log n)$，其中 $p'=p(1+
+     \lvert T_n\rvert^{2p'}\le\operatorname{Tr}(X^{p'/2}Y^{p'/2}X^{p'/2
+     \lvert T_n\rvert^{2p_n}\le1+\frac18$，$p_n\ge2$ 且 $\sup_np_n<\infty
+     \lvert z_{v,b}\rvert^2/w_{v,b}\le r_{v,b}$ 在第 159--161 行。第 176 行把 
+     \lvert x(h)y(k)\rvert^2]\le\exp(-n+Cn^{0.55})(C_2\log n)^{2(l+m)}$
+     \lvert p(h)\rvert^{2}\lvert w(y)\rvert^{2}$，再把条件翻成格语言：乘积 $hy$ 的中间位
+  SAMPLE \Vert (12 shown):
+     \Vert\prod_j\nu_j)$ 与 $D=\sum_jD_{\mathrm{KL}}(\nu_j\Vert\mu_j)$ 
+     \Vert\text{uniform})\le D+L_C$。后一条正是把逐条均匀参照换成参照 $\mu_j$ 的接口。
+     \Vert U_R)$ 控制，第 85 行的依据是数据处理不等式，前提是该桶内每个 $x$ 的概率比至少 $m^{0.05}$。两
+     \Vert q_0)\ge vq(E)-\log(1+q_0(E)(e^v-1))$ 用两次：$v=(\log a)/8$ 处理重
+     \Vert\operatorname{Unif}_u)}{\log B-1}$ 收费，第 82 行的验证是把 $z\log z-z
+     \Vert\operatorname{Unif}_u)}{\log B-1}$ | `13:78--82` | `13:89` 的
+     \Vert U_{c})$、$I=\sum_{c}\mathcal H(\nu_{c})-\mathcal H(\nu)$、$D=
+     \Vert q_{c})$，$U_{c}$ 是 $a!$ 个列置换上的均匀律；同一链式法则给出 $-\log p=I+D$ 与 $
+     \Vert U_H),\qquad J=\sum_{k=1}^{c}\mathbb E_h\,\mathcal D(Q_{u_k\
+     \Vert U_{S_r}),\qquad I=\sum_{k=1}^{c}H_Q(u_k\mid h)-H_Q(u\mid h)
+     \Vert U_{S_r})$、$S=\sum_k I_Q(h;u_k)$，则 $J=D_C+S$ 且 $\sum_kH_Q(u_
+     \Vert\prod_j\nu_j)$、$D=\sum_j\mathcal D(\nu_j\Vert\mu_j)$，则 $-\lo
+  SAMPLE \mid (12 shown):
+     \mid\mathcal L)\|P_{\rm light})
+     \mid h}\|U_{S_r}),\qquad
+     \mid h)-H_Q(u\mid h).
+     \mid h)=I+S.$$
+     \mid h)$ 对 $k$ 求和，$H(U_{S_r}^{\,c})=c\log(r!)$，而 $D_C$ 用无条件 $H(u
+     \mid h)$，故 $J=\sum_k[\log(r!)-H(u_k\mid h)]=\sum_k[\log(r!)-H(u_
+     \mid h)=\sum_k[\log(r!)-H(u_k\mid h)]-\big(c\log(r!)-\sum_kH(u_k
+     \mid h)$，整理成 $I+S$。结论是：$I$ 与 $D_C$ 相差 $S$，而 $S$ 是列对行的信息，本来已经被 $F
+     \mid A)$。声称 `06:56-59`：$I\ge N-C_1Nm^{-\varepsilon}-\frac{C_0}{\
+     \mid B)$。揭示全部 $B$，再按优先级揭示行，行内按列序。逐格 light 判据 $p(c)\le a^{-1/2}$，
+     \mid\mathcal S)$ 下做，逐点界保证每层平滑代价 $\le\log4+C\ell^{-4}j\log q$ 与该条
+     \mid z}f(x)\prod_{i\in I}\epsilon(x_i)$ 用的是零和性质；第 87 行的分类是 $u$ 个
+  BODY \MID lines=21
+     mathcal D(P_{\rm past}(\,\cdot\mid\mathcal L)\|P_{\rm light})
+     ^c\mathbb E_h\mathcal D(Q_{u_k\mid h}\|U_{S_r}),\qquad
+      I=\sum_{k=1}^cH_Q(u_k\mid h)-H_Q(u\mid h).
+     +S,\qquad \sum_kH_Q(u_k)-H_Q(u\mid h)=I+S.$$
+     cal D(Q_{u_k|h}\|U)=H(U)-H(u_k\mid h)$ 对 $k$ 求和，$H(U_{S_r}^{\,c}
+     u_k)$；$I_Q(h;u_k)=H(u_k)-H(u_k\mid h)$，故 $J=\sum_k[\log(r!)-H(u_
+     k\mid h)]=\sum_k[\log(r!)-H(u_k)]+\
+     +S$。第二条同理，左边 $\sum_kH(u_k)-H(u\mid h)=\sum_k[\log(r!)-H(u_k\mid 
+     _kH(u_k)\big)+\sum_kH(u_k)-H(u\mid h)$，整理成 $I+S$。结论是：$I$ 与 $D_C$
+     m_jH(B_j)$，$I=\sum_jH(B_j)-H(B\mid A)$。声称 `06:56-59`：$I\ge N-C_1
+########## D30  D30-负pinched三维Kähler流形无有界全纯坐标.md  size=136494 lines=1019
+  count \lVert     = 4
+  count \rVert     = 4
+  count \lvert     = 26
+  count \rvert     = 26
+  count \Vert      = 0
+  count \vert      = 0
+  count \mid       = 0
+  count \|         = 86
+  SAMPLE \lVert (3 shown):
+     \lVert f\rVert_\infty<1$，$f=-s_1$ 于 $[0,\alpha]$，$\int e^{-y}f=0$，
+     \lVert f\rVert_\infty}{4}>0$ | 04-densities-construction.tex:10-14
+     \lVert T_4\rVert\le C_4x$、$\lVert T_3\rVert\le C_3\sqrt q$；pinch:p
+  SAMPLE \lvert (12 shown):
+     \lvert I_\epsilon(1)+\Delta\rvert\le\Delta/8$、$I_\epsilon(\rho)\le
+     \lvert z\rvert^2)$ | 双曲模型位势，归一由 $\mathbb B\subset\mathbb C^2$ 单位球钉
+     \lvert w\rvert^2$，$M_\phi=\{t<1\}$，$\mathcal K_\lambda=\lambda\psi
+     \lvert P_k(z)\rvert\le C_P\lvert z\rvert^k$ | 05-logarithmic-tests
+     \lvert I_\epsilon(1)+\Delta\rvert\le\Delta/8$ 与 $C_{\rm off}\epsil
+     \lvert ZW_j\rvert\le K_*\sqrt{k_j}W_j$（04-densities-construction.t
+     \lvert Yy\rvert\le D_R$、$\lvert Y\theta\rvert\le D_R/k$ 等；只依赖 $R_0
+     \lvert F_\ell\rvert\le B$；$\lvert d(z)\rvert\le6B^3\delta^{-2}e^{\
+     \lvert d\rvert^2\le2\log6+6\log B+4\log\frac1{1-\lvert z\rvert}+\p
+     \lvert\partial_{z_j}F_\ell\rvert\le B\delta^{-1}$、纤维盘半径 $e^{-\phi/
+     \lvert\partial_wF_\ell\rvert\le Be^{\phi/2}$） | map:determinant-bo
+     \lvert z\rvert}$ | minorant 不存在性阈值：无 $H$ 使 $\operatorname{Re}H\le 
+  SAMPLE \Vert (0 shown):
+  SAMPLE \mid (0 shown):
+  BODY \MID lines=0
+########## D34  D34-无团图的对数独立数界.md  size=147518 lines=924
+  count \lVert     = 5
+  count \rVert     = 5
+  count \lvert     = 9
+  count \rvert     = 9
+  count \Vert      = 0
+  count \vert      = 0
+  count \mid       = 3
+  count \|         = 46
+  SAMPLE \lVert (5 shown):
+     \lVert\cdot\rVert`。旧表一个字没动，理由写在 §19.2。
+     \lVert a-b\rVert_{\mathrm{TV}}$ | $\frac12\sum_y\lvert a(y)-b(y)\r
+     \lVert K_u^j(v,\cdot)-K_u^j(z,\cdot)\rVert_{\mathrm{TV}}\le B_C\sq
+     \lVert p_i-p_{i'}\rVert_{\mathrm{TV}}$ | coupling.tex:19-31, :46-5
+     \lVert\cdot\rVert`；每一行的行内美元符个数为偶数，全文没有落单的 `\(` 或 `\)`。文风侧我用中性描述登记：
+  SAMPLE \lvert (8 shown):
+     \lvert E\rvert/n\ge2$ | `introduction:6-7,16` | 结论的分母与门槛 | $d\ge2$
+     \lvert E\rvert/n$ 隐含 $n>0$） | 只假设 `2 ≤ averageDegree G`；`Main.lean
+     \lvert\{V\to\mathrm{Bool}\}\rvert}{4}e_w(S,D)$，两侧同除 $2^{\lvert V\r
+     \lvert\cdot\rvert` 与 `\lVert\cdot\rVert`。旧表一个字没动，理由写在 §19.2。
+     \lvert E(G)\rvert/n$，前提 $d\ge2$ | introduction.tex:6-7, :16 | 结论式 
+     \lvert a(y)-b(y)\rvert$ | entropy.tex:78-82 | 行距、Pinsker 型不等式 | 断在
+     \lvert V(H)\rvert\ge n/2$ | closure.tex:117-123 | 从 $\Delta$ 回到 $d
+     \lvert\cdot\rvert` 与 `\lVert\cdot\rVert`；每一行的行内美元符个数为偶数，全文没有落单的 `\
+  SAMPLE \Vert (0 shown):
+  SAMPLE \mid (3 shown):
+     \mid v)=e_w(B_v,N(v))/h_v$（$\mu$ 对称给精确式），第二次参数取 $x$（$B_v\subsete
+     \mid v)\le\frac{2Cx^2}{s_v}(w(B_v)+e^{-x})\le42C^2x^{-4}+2Cx^3e^
+     \mid v)\le E_Cx^{-4}$ | entropy.tex:192-214 | $H_R$ 的平均 | 断在 ent
+  BODY \MID lines=1
+     $。条件概率 $\mathbb P_\mu(u\in B_v\mid v)=e_w(B_v,N(v))/h_v$（$\mu$ 对
+     7-213`：$\mathbb P_\mu(u\in B_v\mid v)\le\frac{2Cx^2}{s_v}(w(B_v)
+########## D24  D24-Kaplansky拟迹猜想反例.md  size=130730 lines=1018
+  count \lVert     = 2
+  count \rVert     = 2
+  count \lvert     = 1
+  count \rvert     = 1
+  count \Vert      = 0
+  count \vert      = 0
+  count \mid       = 0
+  count \|         = 28
+  SAMPLE \lVert (2 shown):
+     \lVert P-W\rVert<1/5$ | 多项式逼近容差 $\delta=\frac15$ | 05-algebra.tex:
+     \lVert P-W\rVert` 形式，绝对值写成 `\lvert\cdot\rvert`，表内无裸竖线；第 28 行那格我特意把
+  SAMPLE \lvert (1 shown):
+     \lvert\cdot\rvert`，表内无裸竖线；第 28 行那格我特意把原来的双竖线写法改掉了。
+  SAMPLE \Vert (0 shown):
+  SAMPLE \mid (0 shown):
+  BODY \MID lines=0
+########## D364  D364-平面Schrödinger端点收敛的H三分之一次幂全程.md  size=71226 lines=673
+  count \lVert     = 14
+  count \rVert     = 14
+  count \lvert     = 17
+  count \rvert     = 17
+  count \Vert      = 0
+  count \vert      = 0
+  count \mid       = 0
+  count \|         = 46
+  SAMPLE \lVert (10 shown):
+     \lVert v_Q\rVert_2^2\le C\lVert v\rVert_2^2$ 且 $\lvert Ev-Ev_Q\rve
+     \lVert v\rVert_2$。
+     \lVert g\rVert_2=\lVert v\rVert_2$、帽恒等式
+     \lVert v\rVert_2^2$ | 精确分解能量 | `02-preliminaries.tex:143` | 方块局部化 
+     \lVert v\rVert_2$ | 局部化误差 | `02-preliminaries.tex:168` | box 局域化 |
+     \lVert v_Q\rVert_2^2\le C\lVert v\rVert_2^2$ | 方块能量和 | `02-prelimi
+     \lVert … \rVert`，限制与配对一律成对；
+     \lVert G_N(J,Q)\rVert_2^2=r^2\lVert\widetilde G_{Nr}\rVert_2^2$（`0
+     \lVert G_N(J,Q)\rVert_2^2\le C N^{-2/3}r^2(Nr)^{2/3}(r^{-2}m_{J,Q}
+     \lVert … \rVert`，两张台账的每个数据单元格内均无裸竖线；
+  SAMPLE \lvert (12 shown):
+     \lvert\xi\rvert^2)^{1/3}$ | Sobolev 权 | `01-introduction.tex:7` | 
+     \lvert S(t)f\rvert$ 之局部 $L^1$ | 极大输出 | `01-introduction.tex:84` | 
+     \lvert\xi\rvert^2)^{1/3}$ 配对 |
+     \lvert\widehat f_j\rvert_2^2$ 型 | Sobolev 因子 | `09-endpoint.tex:49
+     \lvert\xi\rvert^2)^{1/3}$ | 环上等价 | `09-endpoint.tex:500` | 双因分解 | 
+     \lvert U_af-v\rvert=0$ | 高斯先极限 | `09-endpoint.tex:704` | Theorem 收
+     \lvert Ev_{\omega,n}(x,t)\rvert\le C_Ns^{-1}(1+\lvert x-b_n-2t\ome
+     \lvert\eta\rvert^2}$ 反复分部积分（`02-preliminaries.tex:214`），而时间被限制在 $\
+     \lvert Ev-Ev_Q\rvert\le C_{A,\eta}s^{-A}\lVert v\rVert_2$。
+     \lvert v_0\rvert^2)}Eg(y,\tau)$（`02-preliminaries.tex:435`）。关键在推前测
+     \lvert a_{\omega,n}\rvert^2\le C\lVert v\rVert_2^2$ | 精确分解能量 | `02
+     \lvert x-b_n-2t\omega\rvert/s)^{-N}$ | packet 尾界 | `02-preliminari
+  SAMPLE \Vert (0 shown):
+  SAMPLE \mid (0 shown):
+  BODY \MID lines=0
+########## D44  D44-小finitistic维数无穷的代数.md  size=105112 lines=585
+  count \lVert     = 1
+  count \rVert     = 1
+  count \lvert     = 11
+  count \rvert     = 11
+  count \Vert      = 0
+  count \vert      = 0
+  count \mid       = 0
+  count \|         = 2
+  SAMPLE \lVert (1 shown):
+     \lVert\cdot\rVert$ 写范数，五栏里不含裸竖线，每行竖线数固定为 $6$。其二，$\mathcal B^{-n}$ 
+  SAMPLE \lvert (9 shown):
+     \lvert Z_m\rvert$ | 特征 2 下 $e$ 不存在，§2 全线塌（姊妹例走特征 2 是另一条机器） |
+     \lvert I\rvert$ | 3 | `02:47` | $z_N$ 中心性测试借第三指标；$W_{ij}$ 非空 | $=2
+     \lvert Z_m\rvert=2^m$，随 $m$ 指数增长 | build/sections/02-selection-pro
+     \lvert S_m\rvert=2^m$ | build/sections/02-selection-process.tex:25
+     \lvert F_m\rvert\le\lvert\operatorname{GL}_5(S_m)\rvert\le 2^{25m}
+     \lvert Z_m\rvert}\sum_{z\in Z_m}\chi_m(z)^{-1}z$ | 单位元系数 $\lvert Z
+     \lvert Z_m\rvert=2^m$ 与 $\dim_{\mathbb F_2}S_m=m$ 是指数对线性的分界，$\sum_
+     \lvert Z_m\rvert^{-1}=2^{-m}$。粗估与正文给定值在栏内明确区分，例如 $2^{25m}$ 一格写着本文的
+     \lvert\cdot\rvert$ 写绝对值与阶、用 $\lVert\cdot\rVert$ 写范数，五栏里不含裸竖线，每行竖线数
+  SAMPLE \Vert (0 shown):
+  SAMPLE \mid (0 shown):
+  BODY \MID lines=0
+########## D50  D50-非坐标多项式与三维仿射零纤维.md  size=101104 lines=591
+  count \lVert     = 0
+  count \rVert     = 0
+  count \lvert     = 1
+  count \rvert     = 1
+  count \Vert      = 0
+  count \vert      = 0
+  count \mid       = 6
+  count \|         = 1
+  SAMPLE \lVert (0 shown):
+  SAMPLE \lvert (1 shown):
+     \lvert \rvert`，以免破列。
+  SAMPLE \Vert (0 shown):
+  SAMPLE \mid (6 shown):
+     \mid x^2+y^3$ 直接破产（相消是 $\mathrm{wt}$ 齐次里唯一的零化通道，除非引入 $v,w$ 的补偿项，
+     \mid x^2+y^3$ | 权重改则 $S$ 五单项不再齐权 4，整除性失去唯一通道 |
+     \mid x^2+y^3$ 破产 |
+     \mid`，绝对值写 `\lvert \rvert`，以免破列。
+     \mid x^2+y^3$ 失去相消通道，停在 `paper.tex:94-95` |
+     \mid x^2+y^3$ | 去掉任一微扰项，$x^2+y^3$ 留下 $h$ 的零次余量，$h$-整除停在 `paper.t
+  BODY \MID lines=2
+     项配对变成 $u^4\pm u^6$ 无法相消，整除性 $h\mid x^2+y^3$ 直接破产（相消是 $\mathrm{wt
+      小节，不回改那几节原文。表格单元一律避开裸竖线，整除写 `\mid`，绝对值写 `\lvert \rvert`，以免破列。

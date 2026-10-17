@@ -1,0 +1,30 @@
+{
+  "paper": "Pointwise-convergence-of-fourfold-ergodic-averages-for-mixing-transformations-October-4-2026",
+  "ok": true,
+  "typ_lines": 991,
+  "included_pdf_pages": 0,
+  "formulas": 785,
+  "math_failed": 0,
+  "labels": 106,
+  "equations": 18,
+  "theorems": 2,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "785",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Pointwise-convergence-of-fourfold-ergodic-averages-for-mixing-transformations-October-4-2026.tex"
+}

@@ -1,0 +1,31 @@
+rows with raw!=6 in the 11 flagged files: 274, fully explained by escaped pipe: 30
+genuinely miscounted rows: 244
+  D24 line 665 raw=5 eff=5 | | 断言 | 需要 | 提供的代数 | 放弃的性质 |
+  D24 line 667 raw=5 eff=5 | | (i) | 两因子都**单**且稳定有限 | $AW^*$-因子 $M$ + $C_r^*(\mathbb F_2)$ | $M$ 的可分性（且不声明它是 $W^*$-代数） 
+  D24 line 668 raw=5 eff=5 | | (ii) | **显式**可分代数，且拟迹丢失 | $B\otimes_{\min}R$ | 张量积的稳定性（它适当无穷，正是结论） |
+  D24 line 669 raw=5 eff=5 | | (iii) | **可分**、稳定有限、无迹 | $M$ 的有限生成子代数 $C$ | 单性 |
+  D24 line 841 raw=5 eff=5 | | 项目 | 论文 | Lean | 我的判断 |
+  D24 line 843 raw=5 eff=5 | | 缺陷不等式 | $\tau(a+b)-\tau(a)-\tau(b)\ge\frac1{144}$ | $\frac1{144}\le(\dots).\mathtt{re}$ 
+  D24 line 844 raw=5 eff=5 | | 公理 (i) | 一条 $\tau(x^*x)=\tau(xx^*)\ge0$ | `square_nonneg` + `square_swap` | 拆分只是形式化需要 |
+  D24 line 845 raw=5 eff=5 | | 公理 (iii) | 在每个 abelian $C^*$-子代数上线性 | 闭交换非单元 $*$-子代数上存在复线性 `f` 相合 | 存在式陈述，附 `linearOn` 还
+  D24 line 846 raw=5 eff=5 | | $2$-拟迹 | $\sigma$ 在左上角限制为 $\tau$ | `upperLeft` + `∃ σ`，另有 `extension_not_normalized` | 机
+  D24 line 847 raw=5 eff=5 | | Theorem 2.1 | 单一双箭头，引 MR | `State.lean` + `Quasitrace.lean` 两站，中间 15 文件 Cuntz 库 | 论文用外部定
+  D24 line 848 raw=5 eff=5 | | 陈类非零 | $c_p(G)=\prod z_i^{K_i}\ne0$ | 障碍论 `IntegralHomology.Obstruction` | 同结论不同工具 |
+  D24 line 849 raw=5 eff=5 | | $M_{48}$ 放大 | $M_k(A)\cong M_{48k}(B)$ | `actualDefectAmplificationEquiv` + `properlyInf
+  D24 line 850 raw=5 eff=5 | | 极分解 | 两行初等论证 | `Ultrapower/` 19 文件 | 机器留了备用路线 |
+  D28 line 477 raw=4 eff=4 | | 表项 ρ | c_ρ(θ) | 临界值 c_ρ |
+  D28 line 479 raw=4 eff=4 | | fan i | k_i−2+α | k_i−2 |
+  D28 line 480 raw=4 eff=4 | | top mark | 12+β−7α | 12 |
+  D28 line 481 raw=4 eff=4 | | four-letter entry | 2+δ | 2 |
+  D30 line 831 raw=4 eff=4 | | 论文构件 | 文件（行数） | 关键定理/定义 |
+  D30 line 833 raw=4 eff=4 | | 主定理 | `Main.lean` (44) | `controlled_potential` (:23)、`main_theorem` (:38) |
+  D30 line 834 raw=4 eff=4 | | 定义 | `Definitions.lean` (158) | `hartogs` (:18)、`sectional` (:66)、`IsNegativelyPinched` 
+  D30 line 835 raw=4 eff=4 | | 障碍引理 | `Obstruction.lean` (273) | `map_obstruction` (:249)、`jacobian_log_bound` (:228)、`
+  D30 line 836 raw=4 eff=4 | | §3 峰 | `BasePeaks.lean` (186)、`BaseSets.lean` (377) | `homogeneousPeak`/`meanCriterion`/
+  D30 line 837 raw=4 eff=4 | | §3 轮廓 | `BaseProfiles.lean` (295) | `RadialProfiles` (:172)、`cosh_strict_quadratic` (:20
+  D30 line 838 raw=4 eff=4 | | §4 密度 | `BaseDensityDefinitions.lean` (56)、`BaseDensityInduction.lean` (285)、`BaseDensit
+  D30 line 839 raw=4 eff=4 | | §5 测试 | `BaseLogTests.lean` (137)、`BaseMeans.lean` (45)、`BaseModelParameters.lean` (54)、
+D53 line511 repr: '|-|-|-|-|-|'
+D53 line510 first cell: 符号/数值 / line515 first cell: 记号
+D53 canonical header count: 1
+D53 dash-only separator count: 0

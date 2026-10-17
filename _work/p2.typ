@@ -1,0 +1,1 @@
+#set page(width:200pt,height:60pt)\n$ a \\ b $ and $ \|x\| $ and $ a \/ b $\n

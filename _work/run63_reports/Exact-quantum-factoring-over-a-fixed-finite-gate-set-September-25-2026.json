@@ -1,0 +1,34 @@
+{
+  "paper": "Exact-quantum-factoring-over-a-fixed-finite-gate-set-September-25-2026",
+  "ok": true,
+  "typ_lines": 512,
+  "included_pdf_pages": 0,
+  "formulas": 456,
+  "math_failed": 0,
+  "labels": 68,
+  "equations": 32,
+  "theorems": 1,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:minipage": 2
+  },
+  "samples": {
+    "formulas": "456"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "hypcap"
+  ],
+  "macros_skipped": [
+    "\\let\\originalthebibliography",
+    "\\renewcommand\\thebibliography"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Exact-quantum-factoring-over-a-fixed-finite-gate-set-September-25-2026.tex"
+}

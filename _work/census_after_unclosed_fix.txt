@@ -1,0 +1,61 @@
+files=734 spans=828063 katex_refused=3114 files_hit=318 unclosed_spans=0
+top  10 commands cover 1607 spans, 51.6% of refused
+top  20 commands cover 1878 spans, 60.3% of refused
+top  40 commands cover 2166 spans, 69.6% of refused
+top  80 commands cover 2456 spans, 78.9% of refused
+top 150 commands cover 2655 spans, 85.3% of refused
+top 300 commands cover 2783 spans, 89.4% of refused
+--- distinct undefined commands=267
+\norm           703
+\abs            204
+\eqref          188
+\HS             122
+\ip             109
+\Q              100
+\D              59
+\C              50
+\len            36
+\ee             36
+\Ktail          32
+\cdeg           31
+\const          30
+\logeps         30
+\X              30
+\Zmod           29
+\*              25
+\proj           23
+\ind            21
+\inner          20
+\F              20
+\Hom            20
+\Flevel         19
+\avg            18
+\Mat            16
+\clB            15
+\Ext            15
+\calP           15
+\BE             14
+\O              14
+\d              14
+\lem            13
+\dd             13
+\poly           13
+\fall           12
+\cite           12
+\OOo            12
+\E              11
+\HH             11
+\cO             11
+--- other error classes=38
+    106  KaTeX parse error: Can't use function '$' in math mode 
+     94  KaTeX parse error: Unexpected end of input in a macro argu
+     30  KaTeX parse error: Expected group as argument to '\H' 
+     16  KaTeX parse error: Expected 'EOF', got '}' 
+     12  KaTeX parse error: No such environment: psmallmatrix 
+     10  KaTeX parse error: Expected '}', got 'EOF' at end of input
+      9  KaTeX parse error: Extra } 
+      6  KaTeX parse error: Double superscript 
+      5  KaTeX parse error: Can't use function '\(' in math mode 
+      5  KaTeX parse error: Expected group after '_' 
+      4  KaTeX parse error: Double subscript 
+      3  KaTeX parse error: Expected group after '^' 

@@ -1,0 +1,425 @@
+==== D80 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D80-\xe5\x9d\x87\xe5\x80\xbc\xe5\xaf\xb9\xe7\xad\x96\xe5\x8d\x9a\xe5\xbc\x88\xe9\x9a\x8f\xe6\x9c\xba\xe5\x8c\x96\xe5\x87\x86\xe5\xa4\x9a\xe9\xa1\xb9\xe5\xbc\x8f\xe6\xb1\x82\xe8\xa7\xa3\xe7\x9a\x84\xe6\x94\xaf\xe6\x92\x91\xe9\xa2\x84\xe7\xae\x97\xe9\x80\x92\xe5\xbd\x92.md'
+bytes=251140 lines=2382 cr=0 heads=16
+first_head=b'## 0. \xe7\xb4\xa0\xe6\x9d\x90\xe5\x8f\xb0\xe8\xb4\xa6\xe4\xb8\x8e\xe5\x8f\x96\xe8\xaf\x81\xe8\xbe\xb9\xe7\x95\x8c'
+last_head=(2379)b'## 15. \xe5\x86\x8d\xe5\x8b\x98\xe8\xaf\xaf\xe7\xac\xac\xe4\xb8\x89\xe6\x9d\xa1\xef\xbc\x9a\xe7\xb1\xbb\xe5\x88\xab\xe7\x94\xb2\xe5\x91\xbd\xe4\xb8\xad\xe7\x9a\x84\xe5\x87\x86\xe7\xa1\xae\xe5\xae\x9a\xe4\xbd\x8d'
+head_shape=b'. -> next 16.'
+std_hdr=[1995] sep=[1996, 2334]
+last_row_cols=5
+build=b'preprints\\Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026\\build' tex=13 bytes=125801 cite_sites=53
+  source/sections/05-orientation.tex       28262 B   699 lines cited=6
+  source/sections/06-solving.tex           20333 B   441 lines cited=5
+  source/sections/01-introduction.tex      14709 B   262 lines cited=2
+  source/sections/03-budgets.tex           12993 B   327 lines cited=9
+  source/sections/07-complexity.tex        12181 B   268 lines cited=2
+  source/sections/02-boxes.tex             10855 B   250 lines cited=9
+  source/sections/04-algorithm.tex          7881 B   212 lines cited=5
+  source/sections/04a-termination.tex       5783 B   117 lines cited=1
+  source/sections/08-conclusion.tex         3981 B    84 lines cited=2
+  source/sections/09-comparison.tex         3895 B    83 lines cited=0   aux
+  source/figures/solver-recursion.tex       1895 B    43 lines cited=0   aux
+  source/preamble.tex                       1788 B    46 lines cited=1
+  source/main.tex                           1245 B    36 lines cited=11
+
+==== D95 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D95-\xe7\x94\xa8\xe7\x8b\xac\xe7\xab\x8b\xe8\xa1\x8c\xe6\x9b\xbf\xe6\x8d\xa2\xe9\xab\x98\xe6\x96\xaf\xe8\xa1\x8c\xe7\x9a\x84Cd\xe4\xbb\xa3\xe4\xbb\xb7.md'
+bytes=218577 lines=1720 cr=0 heads=8
+first_head=b'## \xc2\xa70 \xe5\x8f\x96\xe8\xaf\x81\xe8\xbe\xb9\xe7\x95\x8c:\xe7\x99\xbb\xe8\xae\xb0\xe4\xbd\x8d\xe7\xbd\xae\xe6\x80\x8e\xe4\xb9\x88\xe5\xae\x9a\xe4\xbd\x8d\xe5\x88\xb0\xe7\x9a\x84,\xe4\xbb\xa5\xe5\x8f\x8a\xe4\xb8\x80\xe6\x9d\xa1\xe5\xbf\x85\xe9\xa1\xbb\xe6\x8e\x92\xe9\x99\xa4\xe7\x9a\x84\xe5\x90\x8c\xe5\x90\x8d\xe5\x8d\x95'
+last_head=(1644)b'## \xc2\xa77 Streaming \xe7\xab\xaf\xe7\x82\xb9\xe5\x88\x86\xe7\x89\x87\xe7\x9a\x84\xe5\x9b\x9b\xe6\xae\xb5\xe5\xbc\x8f\xe8\xa1\xa5\xe6\x9d\xa1'
+head_shape=b'\xc2\xa7 -> next \xc2\xa78'
+std_hdr=[1573] sep=[1574]
+last_row_cols=5
+build=b'preprints\\Replacing-Gaussian-observations-in-memory-constrained-inference-September-27-2026\\build' tex=14 bytes=183726 cite_sites=267
+  sections/05-hybrids.tex                  33207 B   757 lines cited=43
+  sections/04-density-levels.tex           28783 B   691 lines cited=26
+  sections/06-fiber.tex                    27005 B   635 lines cited=49
+  sections/07-streaming-applications.tex   17851 B   392 lines cited=10
+  sections/01-information-and-densities.tex   15429 B   368 lines cited=18
+  sections/00-introduction.tex             14075 B   268 lines cited=26
+  sections/02-mixed-moments.tex            13702 B   323 lines cited=33
+  sections/03-critical-radius.tex           9371 B   237 lines cited=34
+  sections/07a-density-endpoints.tex        5965 B   135 lines cited=8
+  sections/07c-fiber-endpoint.tex           5811 B   125 lines cited=13
+  references.tex                            4409 B    93 lines cited=0   ZERO-CITED
+  sections/07b-hybrid-endpoint.tex          4052 B    97 lines cited=7
+  preamble.tex                              2714 B    63 lines cited=0   ZERO-CITED
+  main.tex                                  1352 B    41 lines cited=0   ZERO-CITED
+
+==== D93 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D93-\xe6\x96\xb9\xe5\x90\x91\xe7\x9e\xac\xe6\x80\x81\xe8\x95\xb4\xe5\x90\xab\xe5\xbc\xb9\xe9\x81\x93\xe6\x80\xa7\xe5\x8f\x8d\xe6\x8e\xa8\xe7\xac\x94\xe8\xae\xb0.md'
+bytes=235185 lines=1154 cr=0 heads=9
+first_head=b'## \xc2\xa70 \xe6\x9c\xac\xe7\xac\x94\xe8\xae\xb0\xe7\x9a\x84\xe5\x8f\x96\xe8\xaf\x81\xe8\xa7\x84\xe7\xba\xa6\xe4\xb8\x8e\xe5\xaf\xb9\xe8\xb1\xa1\xe7\x99\xbb\xe8\xae\xb0'
+last_head=(1088)b'## \xc2\xa78 \xe5\xa4\x96\xe9\x83\xa8\xe6\x96\x87\xe7\x8c\xae\xe6\xa3\x80\xe7\xb4\xa2'
+head_shape=b'\xc2\xa7 -> next \xc2\xa79'
+std_hdr=[881] sep=[882]
+last_row_cols=3
+build=b'preprints\\Directional-transience-implies-ballisticity-September-23-2026\\build' tex=12 bytes=204632 cite_sites=346
+  04-gaussian.tex                          37435 B   776 lines cited=21
+  03-fluctuations.tex                      31220 B   718 lines cited=26
+  08-stationary.tex                        30676 B   626 lines cited=43
+  02-geometry.tex                          26121 B   521 lines cited=93
+  07-stages.tex                            23462 B   564 lines cited=70
+  06-kernels.tex                           21502 B   435 lines cited=23
+  05-clipping.tex                          13999 B   301 lines cited=15
+  01-introduction.tex                      13049 B   254 lines cited=53
+  figures/forward-template.tex              2196 B    44 lines cited=0   aux
+  figures/tail-decorrelation.tex            1817 B    34 lines cited=0   aux
+  main.tex                                  1627 B    46 lines cited=2
+  figures/nested-opportunities.tex          1528 B    29 lines cited=0   aux
+
+==== D90 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D90-\xe5\x9b\xba\xe5\xae\x9a\xe6\x8c\x87\xe6\x95\xb0\xe7\x9a\x84\xe7\x94\x9f\xe4\xba\xa7\xe9\x93\xbe-Yau\xe8\x8a\x82\xe7\x82\xb9\xe4\xb8\x8a\xe7\x95\x8c\xe5\xb9\x82\xe5\xbe\x8b\xe5\x8f\x8d\xe4\xbe\x8b\xe5\x8f\x96\xe8\xaf\x81\xe7\xac\x94\xe8\xae\xb0.md'
+bytes=180136 lines=1210 cr=0 heads=9
+first_head=b'## \xc2\xa70 \xe5\x8f\x96\xe8\xaf\x81\xe5\x8f\xa3\xe5\xbe\x84\xe4\xb8\x8e\xe7\xb4\xa0\xe6\x9d\x90\xe5\x9c\xb0\xe5\x9b\xbe'
+last_head=(1123)b'## \xe5\xa4\x96\xe9\x83\xa8\xe6\x96\x87\xe7\x8c\xae\xe6\xa3\x80\xe7\xb4\xa2\xef\xbc\x88\xe5\x8d\xb3\xe5\x89\x8d\xe6\x96\x87\xe6\x89\xbf\xe8\xaf\xba\xe7\x9a\x84 \xc2\xa78\xef\xbc\x89'
+head_shape=b'NO-NUMERAL-HEADING'
+std_hdr=[992] sep=[993]
+last_row_cols=2
+build=b'preprints\\Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026\\build' tex=6 bytes=114307 cite_sites=687
+  sections/global.tex                      40131 B   906 lines cited=264
+  sections/envelopes.tex                   29404 B   660 lines cited=155
+  sections/waves.tex                       27011 B   709 lines cited=153
+  sections/introduction.tex                 7124 B   142 lines cited=61
+  sections/framework.tex                    7121 B   157 lines cited=47
+  main.tex                                  3516 B    90 lines cited=7
+
+==== D89 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D89-\xe9\x85\x89\xe5\x8c\x96\xe8\x95\xb4\xe5\x90\xab\xe5\x9d\x87\xe7\xa7\xb0-Dixmier\xe7\xa6\xbb\xe6\x95\xa3\xe7\xbe\xa4\xe9\x97\xae\xe9\xa2\x98\xe7\x9a\x84\xe6\x9c\xba\xe5\x99\xa8\xe5\x8c\x96\xe6\x8b\x86\xe8\xa7\xa3.md'
+bytes=146742 lines=1892 cr=0 heads=9
+first_head=b'## \xc2\xa70 \xe7\xb4\xa0\xe6\x9d\x90\xe5\x8f\xa3\xe5\xbe\x84\xe4\xb8\x8e\xe7\x99\xbb\xe8\xae\xb0\xe5\xbd\x92\xe5\xb1\x9e\xe6\xa0\xb8\xe5\xae\x9e'
+last_head=(1824)b'## \xe6\x96\x87\xe7\x8c\xae\xe6\xa3\x80\xe7\xb4\xa2\xe4\xb8\x8e\xe5\xa4\x96\xe9\x83\xa8\xe5\xaf\xb9\xe7\x85\xa7'
+head_shape=b'NO-NUMERAL-HEADING'
+std_hdr=[1441] sep=[1442]
+last_row_cols=5
+build=b'preprints\\Unitarizability-Implies-Amenability-for-Countable-Groups-September-23-2026\\build' tex=7 bytes=55005 cite_sites=183
+  sections/weights.tex                     14662 B   386 lines cited=27
+  sections/introduction.tex                11460 B   210 lines cited=47
+  sections/obstruction.tex                 10332 B   312 lines cited=31
+  sections/conclusion.tex                  10008 B   229 lines cited=56
+  sections/sparse.tex                       5572 B   122 lines cited=21
+  main.tex                                  2113 B    59 lines cited=1
+  figures/edge-factorization.tex             858 B    17 lines cited=0   aux
+
+==== D81 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D81-Foulkes-Howe\xe8\xa7\x84\xe8\x8c\x83\xe6\x98\xa0\xe5\xb0\x84\xe7\x9a\x84\xe4\xba\x8c\xe6\xac\xa1\xe7\xa8\xb3\xe5\xae\x9a\xe9\x97\xa8\xe6\xa7\x9b.md'
+bytes=125139 lines=910 cr=0 heads=9
+first_head=b'## \xc2\xa70 \xe9\x98\x85\xe8\xaf\xbb\xe8\x8a\x82\xe5\xa5\x8f\xe4\xb8\x8e\xe5\x9c\xb0\xe5\x9b\xbe'
+last_head=(831)b'## \xc2\xa78 \xe5\xa4\x96\xe9\x83\xa8\xe6\x96\x87\xe7\x8c\xae\xe6\xa3\x80\xe7\xb4\xa2\xe4\xb8\x8e\xe5\x85\x88\xe8\xa1\x8c\xe5\xb7\xa5\xe4\xbd\x9c\xe5\xaf\xb9\xe7\x85\xa7'
+head_shape=b'\xc2\xa7 -> next \xc2\xa79'
+std_hdr=[568] sep=[569]
+last_row_cols=4
+build=b'preprints\\Quadratic-Stabilization-of-the-Canonical-Foulkes-Howe-Map-September-25-2026\\build' tex=2 bytes=25022 cite_sites=266
+  paper.tex                                22016 B   475 lines cited=243
+  references.tex                            3006 B    65 lines cited=23
+
+==== D92 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D92-Lp\xe6\xac\xa1\xe5\xa4\x9a\xe9\xa1\xb9\xe5\xbc\x8f\xe9\x99\x8d\xe7\xbb\xb4-\xe9\x87\x8d\xe5\xb0\xbe\xe7\x9f\xa9\xe5\x8f\xb0\xe8\xb4\xa6\xe4\xb8\x8e\xe6\x88\xaa\xe6\x96\xadramp.md'
+bytes=84688 lines=372 cr=0 heads=9
+first_head=b'## \xc2\xa70 paper.tex \xe5\xb8\x83\xe5\xb1\x80\xe4\xb8\x8e\xe6\x9d\xa1\xe7\x9b\xae\xe5\x9c\xb0\xe5\x9b\xbe\xe5\xae\x9e\xe6\xb5\x8b'
+last_head=(344)b'## \xc2\xa78 \xe5\xa4\x96\xe9\x83\xa8\xe6\x96\x87\xe7\x8c\xae\xe6\xa3\x80\xe7\xb4\xa2(\xe4\xb8\x8e\xe8\xae\xba\xe6\x96\x87\xe5\x8f\xa3\xe5\xbe\x84\xe7\x89\xa9\xe7\x90\x86\xe5\x88\x86\xe6\xa0\x8f)'
+head_shape=b'\xc2\xa7 -> next \xc2\xa79'
+std_hdr=[270] sep=[271]
+last_row_cols=5
+build=b'preprints\\Subpolynomial-dimension-reduction-in-Lp-September-23-2026\\build' tex=2 bytes=58410 cite_sites=237
+  paper.tex                                56834 B  1468 lines cited=236
+  figures/truncation-ramp.tex               1576 B    39 lines cited=1
+
+==== D84 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D84-\xe9\xab\x98\xe4\xbd\x99\xe7\xbb\xb4Riesz\xe5\x8f\x98\xe6\x8d\xa2\xe4\xb8\x80\xe8\x87\xb4\xe7\x9f\xa9\xe5\xbd\xa2\xe6\x80\xa7\xe7\x9a\x84\xe4\xba\x94\xe6\xad\xa5\xe9\x93\xbe\xe6\x9d\xa1-\xe5\xbd\x92\xe4\xb8\x80\xe5\x8c\x96\xe9\xab\x98\xe5\xba\xa6\xe8\x83\xbd\xe9\x87\x8f\xe5\x8f\x8d\xe6\x8e\xa8\xe7\xac\x94\xe8\xae\xb0.md'
+bytes=218231 lines=1029 cr=0 heads=10
+first_head=b'## \xc2\xa70 \xe7\xb4\xa0\xe6\x9d\x90\xe5\x9d\x90\xe6\xa0\x87\xe3\x80\x81\xe8\xaf\xbb\xe5\x8f\x96\xe8\xa7\x84\xe5\x88\x99\xe4\xb8\x8e\xe5\xb7\xa5\xe4\xbd\x9c\xe5\xa7\xbf\xe6\x80\x81'
+last_head=(1001)b'## \xc2\xa79 \xe6\x9c\xaa\xe8\xa7\xa3\xe9\x97\xae\xe9\xa2\x98\xe4\xb8\x8e\xe4\xb8\x8b\xe4\xb8\x80\xe6\xad\xa5'
+head_shape=b'\xc2\xa7 -> next \xc2\xa710'
+std_hdr=[643] sep=[644, 855]
+last_row_cols=4
+build=b'preprints\\Riesz-transforms-and-uniform-rectifiability-in-higher-codimension-September-24-2026\\build' tex=11 bytes=186442 cite_sites=250
+  sections/02-flat-balls.tex               30656 B   728 lines cited=40
+  sections/03-planar-limits.tex            29022 B   643 lines cited=23
+  sections/05-fractional-rigidity.tex      26892 B   616 lines cited=21
+  sections/04-height-compactness.tex       22215 B   520 lines cited=12
+  sections/01-background.tex               19718 B   406 lines cited=33
+  sections/06-excess-propagation.tex       17431 B   428 lines cited=17
+  sections/07-packing-endpoint.tex         15254 B   359 lines cited=32
+  sections/00-introduction.tex             10267 B   199 lines cited=57
+  sections/08-consequences.tex              8396 B   193 lines cited=9
+  sections/09-geometric-conventions.tex     4224 B    80 lines cited=4
+  paper.tex                                 2367 B    60 lines cited=2
+
+==== D463 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D463-\xe5\xaf\xb9\xe6\x95\xb0Kodaira\xe7\xbb\xb4\xe6\x95\xb0\xe4\xb8\x8e\xe6\x95\xb4\xe6\x9d\xa1\xe7\xba\xa4\xe7\xbb\xb4\xe7\x9a\x84\xe5\xbd\xa2\xe5\x8f\x98.md'
+bytes=175435 lines=879 cr=0 heads=10
+first_head=b'## \xc2\xa70 \xe7\x99\xbb\xe8\xae\xb0\xe3\x80\x81\xe7\xb4\xa0\xe6\x9d\x90\xe8\xbe\xb9\xe7\x95\x8c\xe4\xb8\x8e\xe6\x9c\xac\xe7\xa8\xbf\xe8\xae\xb0\xe6\xb3\x95'
+last_head=(831)b'## \xc2\xa79 \xe6\x95\xb0\xe5\x80\xbc\xe5\x8f\xb0\xe8\xb4\xa6\xef\xbc\x9a\xe9\x93\xbe\xe8\xb7\xaf\xe9\x87\x8c\xe5\x8a\xa8\xe4\xb8\x8d\xe5\xbe\x97\xe7\x9a\x84\xe5\xb8\xb8\xe6\x95\xb0\xe4\xb8\x8e\xe5\xa2\x9e\xe9\x95\xbf\xe7\x8e\x87'
+head_shape=b'\xc2\xa7 -> next \xc2\xa710'
+std_hdr=[835] sep=[836]
+last_row_cols=5
+build=b'preprints\\Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026\\build' tex=15 bytes=312643 cite_sites=142
+  sections/03-root-hodge.tex               45007 B   985 lines cited=13
+  sections/08-numerical-extension.tex      38975 B   805 lines cited=20
+  sections/04-constancy.tex                37593 B   753 lines cited=10
+  sections/04-constancy-estimates.tex      32965 B   721 lines cited=10
+  sections/02-parameter.tex                32431 B   660 lines cited=16
+  sections/07-descent.tex                  29567 B   719 lines cited=26
+  sections/06-marking.tex                  24050 B   472 lines cited=12
+  references.tex                           18927 B   340 lines cited=0   ZERO-CITED
+  sections/01-introduction.tex             17462 B   338 lines cited=12
+  sections/09-ordinary-reduction.tex       16819 B   348 lines cited=7
+  sections/05-model-comparison.tex         13373 B   254 lines cited=15
+  main.tex                                  3230 B    90 lines cited=1
+  figures/whole-fiber-route.tex             1180 B    25 lines cited=0   aux
+  figures/combined-base.tex                  719 B    18 lines cited=0   aux
+  companion-locators.tex                     345 B     9 lines cited=0   ZERO-CITED
+
+==== D85 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D85-\xe4\xb8\x89\xe5\x8d\x81\xe4\xba\x8c\xe8\xa1\x8c\xe7\xad\xbe\xe5\x90\x8d\xe9\x98\xb5\xe5\x88\x97\xe4\xb8\x8e\xe6\xa0\x87\xe7\xad\xbe\xe8\x80\xa6\xe5\x90\x88\xef\xbc\x9aTalagrand\xe7\xa6\xbb\xe6\x95\xa3\xe5\x87\xb8\xe6\x80\xa7\xe7\x8c\x9c\xe6\x83\xb3\xe7\x9a\x84\xe5\x8f\x8d\xe6\x8e\xa8\xe7\xac\x94\xe8\xae\xb0.md'
+bytes=147750 lines=1172 cr=0 heads=10
+first_head=b'## \xc2\xa70 \xe5\x8f\x96\xe8\xaf\x81\xe5\x8f\xa3\xe5\xbe\x84\xe4\xb8\x8e\xe6\x9d\x90\xe6\x96\x99\xe8\xbe\xb9\xe7\x95\x8c'
+last_head=(1160)b'## \xc2\xa79 \xe6\x9c\xaa\xe5\x86\xb3\xe9\x97\xae\xe9\xa2\x98\xe4\xb8\x8e\xe4\xb8\x8b\xe6\xac\xa1\xe6\x8e\xa5\xe6\x89\x8b\xe6\xb8\x85\xe5\x8d\x95'
+head_shape=b'\xc2\xa7 -> next \xc2\xa710'
+std_hdr=[908] sep=[909]
+last_row_cols=4
+build=b'preprints\\Talagrands-discrete-convexity-conjecture-September-23-2026\\build' tex=7 bytes=30991 cite_sites=366
+  source/sections/00_intro.tex              8095 B   174 lines cited=100
+  source/sections/02_weights.tex            7959 B   209 lines cited=124
+  source/sections/01_covering.tex           5996 B   186 lines cited=60
+  source/references.tex                     3193 B    85 lines cited=11
+  source/sections/03_density.tex            3042 B    85 lines cited=66
+  source/main.tex                           1615 B    50 lines cited=3
+  source/figures/coupling.tex               1091 B    27 lines cited=2
+
+==== D78 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D78-\xe5\xaf\xb9\xe6\x95\xb0Brunn-Minkowski\xe7\x8c\x9c\xe6\x83\xb3\xe7\x9a\x84\xe7\x9f\xa9\xe5\x9d\x90\xe6\xa0\x87\xe4\xb8\x8e\xe5\xbc\xa0\xe9\x87\x8f\xe5\xb9\xb3\xe6\x96\xb9\xe8\xb7\xaf\xe7\xba\xbf.md'
+bytes=120552 lines=818 cr=0 heads=10
+first_head=b'## \xc2\xa70 \xe7\xb4\xa0\xe6\x9d\x90\xe3\x80\x81\xe5\x8f\xa3\xe5\xbe\x84\xe4\xb8\x8e\xe5\x8f\x96\xe8\xaf\x81\xe8\xbe\xb9\xe7\x95\x8c'
+last_head=(780)b'## \xc2\xa79 \xe8\x87\xaa\xe6\x9f\xa5\xe4\xb8\x8e\xe6\xb8\x85\xe7\x82\xb9'
+head_shape=b'\xc2\xa7 -> next \xc2\xa710'
+std_hdr=[551] sep=[552]
+last_row_cols=4
+build=b'preprints\\The-logarithmic-Brunn-Minkowski-conjecture-September-23-2026\\build' tex=10 bytes=58083 cite_sites=425
+  introduction.tex                         12127 B   227 lines cited=86
+  moment.tex                                8451 B   199 lines cited=74
+  tensor.tex                                7785 B   221 lines cited=41
+  measure.tex                               7562 B   187 lines cited=41
+  density.tex                               5614 B   152 lines cited=41
+  reduction.tex                             4885 B   121 lines cited=67
+  identities.tex                            4623 B   121 lines cited=32
+  variance.tex                              3572 B    95 lines cited=36
+  main.tex                                  1816 B    58 lines cited=4
+  figure-slabs.tex                          1648 B    40 lines cited=3
+
+==== D94 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D94-\xe6\xad\xa3\xe5\x88\x99\xe8\xbd\xa8\xe8\xbf\xb9\xe5\x89\xaa\xe6\x9e\x9d\xe4\xb8\x8e\xe9\x87\x8f\xe5\xad\x90\xe5\xa5\x87\xe5\x81\xb6\xe4\xb8\x8b\xe7\x95\x8c.md'
+bytes=145320 lines=526 cr=0 heads=16
+first_head=b'## \xc2\xa70 \xe6\x9d\xa5\xe6\xba\x90\xe3\x80\x81\xe5\x8f\x96\xe8\xaf\x81\xe5\x8f\xa3\xe5\xbe\x84\xe4\xb8\x8e\xe6\x88\x91\xe5\xae\x9e\xe9\x99\x85\xe6\x91\xb8\xe5\x88\xb0\xe7\x9a\x84\xe4\xb8\x9c\xe8\xa5\xbf'
+last_head=(492)b'## \xc2\xa715 \xe5\xb8\xb8\xe6\x95\xb0\xe4\xb8\x8e\xe5\x8f\x82\xe6\x95\xb0\xe5\x8f\xb0\xe8\xb4\xa6\xe7\xbb\xad\xe8\xa1\xa8(\xe6\x9c\xac\xe6\x89\xb9\xe6\x96\xb0\xe5\xa2\x9e\xe4\xb8\xa4\xe8\x8a\x82\xe7\x94\xa8\xe7\xac\xa6)'
+head_shape=b'\xc2\xa7 -> next \xc2\xa716'
+std_hdr=[237] sep=[238, 497]
+last_row_cols=5
+build=b'preprints\\Regular-trajectories-pruning-and-quantum-parity-September-24-2026\\build' tex=9 bytes=82383 cite_sites=385
+  sections/01-introduction.tex             14033 B   262 lines cited=26
+  sections/07-parity.tex                   12435 B   259 lines cited=17
+  sections/06-pruning.tex                  11919 B   280 lines cited=15
+  sections/05-transport.tex                11351 B   325 lines cited=188
+  sections/02-framework.tex                10954 B   240 lines cited=25
+  sections/03-filters.tex                   9673 B   294 lines cited=14
+  sections/04-propagation.tex               7803 B   225 lines cited=94
+  paper.tex                                 2760 B    73 lines cited=6
+  figures/transport.tex                     1455 B    38 lines cited=0   aux
+
+==== D452 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D452-\xe6\xaf\x8f\xe4\xb8\xaa\xe6\x97\xa0\xe7\x90\x86\xe6\x97\x8b\xe8\xbd\xac\xe7\x9a\x84\xe4\xb8\x8d\xe5\x8f\x98\xe6\x8a\x95\xe5\xbd\xb1\xe5\x8f\x8d\xe4\xbe\x8b.md'
+bytes=107699 lines=307 cr=0 heads=18
+first_head=b'## \xc2\xa70 \xe9\xa2\x98\xe5\xbd\x95\xe3\x80\x81\xe5\x8f\x96\xe6\x9d\x90\xe4\xb8\x8e\xe7\x99\xbb\xe8\xae\xb0'
+last_head=(300)b'## \xc2\xa717 \xe7\xa6\xbb\xe5\x9c\xba\xe6\xb8\x85\xe7\x82\xb9\xe4\xb8\x8e\xe5\x8b\x98\xe8\xaf\xaf\xe8\xa1\xa5\xe8\xae\xb0'
+head_shape=b'\xc2\xa7 -> next \xc2\xa718'
+std_hdr=[161] sep=[162, 277]
+last_row_cols=5
+build=b'preprints\\Invariant-projection-counterexamples-for-every-irrational-rotation-September-27-2026\\build' tex=16 bytes=160585 cite_sites=289
+  01-parameters.tex                        19819 B   410 lines cited=67
+  product-sampling.tex                     19612 B   447 lines cited=15
+  02-fields.tex                            16934 B   365 lines cited=40
+  04-obstruction.tex                       13776 B   351 lines cited=38
+  05-continuity.tex                        12680 B   290 lines cited=44
+  product-obstruction.tex                  12180 B   304 lines cited=13
+  03-couplings.tex                         12079 B   263 lines cited=21
+  00-introduction.tex                      12043 B   241 lines cited=37
+  product-couplings.tex                    11543 B   252 lines cited=0   ZERO-CITED
+  product-operator.tex                      9394 B   214 lines cited=0   ZERO-CITED
+  product-scales.tex                        7458 B   189 lines cited=5
+  glyph-mappings.tex                        3255 B    81 lines cited=0   ZERO-CITED
+  appendix-product.tex                      3253 B    71 lines cited=9
+  product-structure.tex                     3123 B    69 lines cited=0   ZERO-CITED
+  paper.tex                                 2152 B    62 lines cited=0   ZERO-CITED
+  figures/product-endpoint-conditioning.tex    1284 B    33 lines cited=0   aux
+
+==== D91 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D91-\xe7\x9f\xad\xe5\x9f\x83\xe5\x8f\x8a\xe5\x88\x86\xe6\x95\xb0\xe6\x9c\x80\xe5\xb0\x8f\xe9\xa1\xb9\xe6\x95\xb0\xe7\x9a\x84\xe5\x8f\x8c\xe9\x87\x8d\xe5\xaf\xb9\xe6\x95\xb0\xe9\x98\xb6.md'
+bytes=201622 lines=1502 cr=0 heads=11
+first_head=b'## \xc2\xa70 \xe5\xae\x9e\xe6\xb5\x8b\xe5\x8f\xb0\xe8\xb4\xa6\xef\xbc\x9a\xe7\x9b\xae\xe5\xbd\x95\xe5\xb8\x83\xe5\xb1\x80\xe3\x80\x81\xe5\xad\x97\xe8\x8a\x82\xe6\x95\xb0\xe3\x80\x81\xe8\xa1\x8c\xe6\x95\xb0'
+last_head=(1486)b'## \xc2\xa710 \xe8\x87\xaa\xe6\xa3\x80\xe4\xb8\x8e\xe7\x94\xb3\xe6\x8a\xa5'
+head_shape=b'\xc2\xa7 -> next \xc2\xa711'
+std_hdr=[1337] sep=[1110, 1338]
+last_row_cols=5
+build=b'preprints\\Short-Egyptian-fractions-September-25-2026\\build' tex=10 bytes=95823 cite_sites=577
+  prescribed.tex                           23361 B   580 lines cited=189
+  residues.tex                             15042 B   409 lines cited=69
+  introduction.tex                         12215 B   243 lines cited=57
+  descent.tex                              10283 B   263 lines cited=63
+  divisors.tex                              9872 B   274 lines cited=30
+  random.tex                                9233 B   257 lines cited=31
+  elementary.tex                            6766 B   171 lines cited=75
+  counting.tex                              5844 B   133 lines cited=53
+  main.tex                                  2038 B    63 lines cited=10
+  unicode-mappings.tex                      1169 B    30 lines cited=0   ZERO-CITED
+
+==== D265 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D265-ambient\xe5\x90\x8c\xe8\x83\x9a\xe4\xb8\x8e\xe9\x87\x8d\xe6\x95\xb0\xe7\x9a\x84\xe5\x88\x86\xe7\xa6\xbb.md'
+bytes=107055 lines=532 cr=0 heads=14
+first_head=b'## \xc2\xa70 \xe4\xbb\xbb\xe5\x8a\xa1\xe7\x99\xbb\xe8\xae\xb0\xe4\xb8\x8e\xe7\xb4\xa0\xe6\x9d\x90\xe8\xbe\xb9\xe7\x95\x8c'
+last_head=(487)b'## \xc2\xa713 \xe8\x83\x8c\xe6\x99\xaf\xe7\xaf\x87\xe5\xb8\xb8\xe9\x87\x8f\xe7\x9a\x84\xe7\xbb\xad\xe8\xa1\xa8'
+head_shape=b'\xc2\xa7 -> next \xc2\xa714'
+std_hdr=[364] sep=[365, 492]
+last_row_cols=5
+build=b'preprints\\Ambiently-homeomorphic-isolated-hypersurfaces-of-multiplicities-two-and-three-September-24-2026\\build' tex=10 bytes=98174 cite_sites=300
+  sections/local.tex                       19193 B   439 lines cited=55
+  sections/conclusion.tex                  17627 B   421 lines cited=41
+  sections/global.tex                      16316 B   407 lines cited=47
+  sections/introduction.tex                14009 B   247 lines cited=26
+  sections/seeds.tex                       13654 B   308 lines cited=49
+  sections/background.tex                  10855 B   227 lines cited=76
+  preamble.tex                              2096 B    54 lines cited=0   ZERO-CITED
+  sections/certificate.tex                  1872 B    21 lines cited=6
+  figures/proof-route.tex                   1511 B    34 lines cited=0   aux
+  paper.tex                                 1041 B    28 lines cited=0   ZERO-CITED
+
+==== D86 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D86-\xe5\xbe\xaa\xe7\x8e\xafHadamard\xe7\x8c\x9c\xe6\x83\xb3\xe7\x9a\x84\xe6\x9c\xba\xe5\x99\xa8\xe4\xb8\x8e\xe7\xac\x94\xe5\xa4\xb4-\xe7\x89\xb9\xe5\xbe\x81\xe4\xba\xa4\xe6\x9b\xbf\xe7\xa7\xaf\xe4\xb8\x8e\xe4\xba\x8c\xe8\xbf\x9b\xe5\x88\xb6\xe6\xae\x8b\xe8\xbf\xb9.md'
+bytes=83404 lines=254 cr=0 heads=11
+first_head=b'## \xc2\xa70 \xe5\x8f\x96\xe8\xaf\x81\xe5\x9f\xba\xe7\xba\xbf\xe4\xb8\x8e\xe9\x98\x85\xe8\xaf\xbb\xe5\x8f\xa3\xe5\xbe\x84'
+last_head=(248)b'## \xc2\xa710 \xe6\x9c\xac\xe7\xac\x94\xe8\xae\xb0\xe8\x87\xaa\xe8\xae\xa4\xe6\x9c\x80\xe8\x96\x84\xe5\xbc\xb1\xe7\x9a\x84\xe4\xb8\x89\xe5\xa4\x84'
+head_shape=b'\xc2\xa7 -> next \xc2\xa711'
+std_hdr=[170] sep=[171]
+last_row_cols=5
+build=b'preprints\\The-circulant-Hadamard-conjecture-September-23-2026\\build' tex=7 bytes=45714 cite_sites=234
+  sections/products.tex                    12962 B   296 lines cited=69
+  sections/introduction.tex                10657 B   221 lines cited=39
+  sections/contradiction.tex               10157 B   244 lines cited=86
+  sections/local.tex                        6656 B   141 lines cited=17
+  sections/reduction.tex                    2780 B    73 lines cited=23
+  main.tex                                  1930 B    63 lines cited=0   ZERO-CITED
+  macros.tex                                 572 B    18 lines cited=0   ZERO-CITED
+
+==== D769 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D769-\xe5\x90\x84\xe7\xbb\xb4\xe5\xba\xa6\xe4\xb8\xad\xe7\x9a\x84\xe5\xb8\xb8\xe4\xba\x8c\xe9\x87\x8d\xe7\x82\xb9\xe9\x97\xb4\xe9\x9a\x99.md'
+bytes=122743 lines=784 cr=0 heads=12
+first_head=b'## \xc2\xa70 \xe7\x99\xbb\xe8\xae\xb0\xe4\xb8\x8e\xe5\x87\xba\xe5\x8f\x91\xe7\x82\xb9'
+last_head=(722)b'## \xc2\xa711 \xe5\x8f\x82\xe6\x95\xb0\xe4\xb8\x8e\xe4\xbe\x9d\xe8\xb5\x96\xe5\x8f\xb0\xe8\xb4\xa6'
+head_shape=b'\xc2\xa7 -> next \xc2\xa712'
+std_hdr=[724] sep=[725]
+last_row_cols=5
+build=b'preprints\\The-ordinary-double-point-gap-in-every-dimension-September-24-2026\\build' tex=11 bytes=187166 cite_sites=220
+  sections/04-jet-interiority.tex          34294 B   799 lines cited=36
+  sections/06-filtrations.tex              27992 B   579 lines cited=30
+  sections/05-adjoint-semigroup.tex        25769 B   558 lines cited=14
+  sections/07-bootstrap.tex                25051 B   679 lines cited=24
+  sections/03-small-stabilizers.tex        23041 B   516 lines cited=24
+  sections/02-cone-reduction.tex           21478 B   502 lines cited=55
+  sections/01-introduction.tex             15124 B   292 lines cited=30
+  sections/08-conclusion.tex                7299 B   204 lines cited=7
+  preamble.tex                              4385 B   113 lines cited=0   ZERO-CITED
+  figures/proof-route.tex                   1741 B    40 lines cited=0   aux
+  paper.tex                                  992 B    33 lines cited=0   ZERO-CITED
+
+==== D529 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D529-\xe4\xbb\xbb\xe6\x84\x8f\xe6\x9e\x81\xe5\xa4\xa7\xe4\xba\xa4\xe6\x8d\xa2\xe5\xad\x90\xe4\xbb\xa3\xe6\x95\xb0\xe4\xb8\x8a\xe7\x9a\x84\xe4\xba\x8c\xe6\xac\xa1\xe5\xbc\xba\xe7\xae\x97\xe5\xad\x90\xe9\x93\xba\xe8\xae\xbe.md'
+bytes=93079 lines=334 cr=0 heads=12
+first_head=b'## 0 \xe7\x99\xbb\xe8\xae\xb0\xe4\xb8\x8e\xe5\x86\x99\xe4\xbd\x9c\xe7\xab\x8b\xe5\x9c\xba'
+last_head=(317)b'## 11 \xe5\x8b\x98\xe8\xaf\xaf'
+head_shape=b' -> next 12'
+std_hdr=[272] sep=[273]
+last_row_cols=5
+build=b'preprints\\Quadratic-Strong-Operator-Paving-over-Arbitrary-Maximal-Abelian-Subalgebras-September-25-2026\\build' tex=11 bytes=200714 cite_sites=226
+  source/sections/coloring.tex             41045 B   851 lines cited=37
+  source/sections/transfer.tex             37773 B   770 lines cited=19
+  source/sections/polynomials.tex          29839 B   682 lines cited=25
+  source/sections/invariant.tex            25292 B   494 lines cited=11
+  source/sections/kernels.tex              16378 B   351 lines cited=22
+  source/sections/reductions.tex           16245 B   361 lines cited=34
+  source/sections/introduction.tex         12742 B    90 lines cited=37
+  source/sections/completion.tex           12234 B   194 lines cited=40
+  source/references.tex                     5734 B   123 lines cited=0   aux
+  source/main.tex                           1940 B    52 lines cited=0   aux
+  source/figures/shortest-pair.tex          1492 B    40 lines cited=1
+
+==== D175 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D175-\xe8\x89\xaf\xe6\x9d\xa1\xe4\xbb\xb6\xe5\xaf\xb9\xe6\x95\xb0\xe5\x87\xb9\xe9\x87\x87\xe6\xa0\xb7\xe7\x9a\x84\xe6\xac\xa1\xe5\xa4\x9a\xe9\xa1\xb9\xe5\xbc\x8f\xe6\x9f\xa5\xe8\xaf\xa2\xe5\xa4\x8d\xe6\x9d\x82\xe5\xba\xa6\xe4\xb8\x8e\xe7\xbb\xb4\xe5\xba\xa6\xe6\x8c\x87\xe6\x95\xb0\xe9\x9b\xb6.md'
+bytes=92955 lines=250 cr=0 heads=12
+first_head=b'## 1 \xe7\x99\xbb\xe8\xae\xb0\xe3\x80\x81\xe5\x8f\x96\xe6\x9d\x90\xe4\xb8\x8e\xe9\x82\xbb\xe7\xaf\x87\xe5\x88\x86\xe5\xb7\xa5'
+last_head=(231)b'## 12 \xe8\x90\xbd\xe7\x9b\x98\xe4\xb8\x8e\xe8\x87\xaa\xe6\xa3\x80\xe8\xae\xb0\xe5\xbd\x95'
+head_shape=b' -> next 13'
+std_hdr=[67] sep=[68]
+last_row_cols=5
+build=b'preprints\\Subpolynomial-query-complexity-for-well-conditioned-log-concave-sampling-September-26-2026\\build' tex=12 bytes=192924 cite_sites=394
+  sections/numerics.tex                    36813 B   780 lines cited=80
+  sections/implementation.tex              33449 B   730 lines cited=64
+  sections/divergence.tex                  24830 B   536 lines cited=46
+  sections/sampling.tex                    18385 B   436 lines cited=35
+  sections/centering.tex                   18219 B   415 lines cited=11
+  sections/lower.tex                       17361 B   380 lines cited=66
+  sections/jets.tex                        13842 B   318 lines cited=15
+  sections/introduction.tex                13238 B   270 lines cited=58
+  sections/preliminaries.tex               11912 B   276 lines cited=17
+  main.tex                                  2803 B    75 lines cited=2
+  figures/divergence-trace-opening.tex      1241 B    32 lines cited=0   aux
+  figures/implementation-two-depths.tex      831 B    18 lines cited=0   aux
+
+==== D12 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D12-Barnette\xe7\x8c\x9c\xe6\x83\xb3-\xe4\xb8\x89\xe6\xac\xa1\xe4\xba\x8c\xe9\x83\xa8\xe5\xb9\xb3\xe9\x9d\xa2\xe5\x9b\xbeHamilton\xe5\x9c\x88.md'
+bytes=83967 lines=577 cr=0 heads=12
+first_head=b'## 0. \xe5\x86\x99\xe5\x9c\xa8\xe5\x89\x8d\xe9\x9d\xa2\xef\xbc\x9a\xe8\xbf\x99\xe6\x9d\xa1\xe7\xac\x94\xe8\xae\xb0\xe6\x8c\x89\xe4\xbb\x80\xe4\xb9\x88\xe9\xa1\xba\xe5\xba\x8f\xe8\xb5\xb0'
+last_head=(522)b'## \xe5\x85\xab\xe3\x80\x81\xe8\xa1\xa5\xe8\xae\xb0\xef\xbc\x88\xe5\xa4\x8d\xe6\xa0\xb8\xe6\x97\xa5\xe8\xbf\xbd\xe5\x8a\xa0\xef\xbc\x89\xef\xbc\x9a\xe7\xb4\xa0\xe6\x9d\x90\xe5\xae\x9a\xe4\xbd\x8d\xe3\x80\x81\xe9\x98\x9f\xe5\x88\x97\xe5\x9d\x90\xe6\xa0\x87\xe4\xb8\x8e\xe5\x8f\xa3\xe5\xbe\x84\xe5\xb7\xae\xe5\xbc\x82'
+head_shape=b'CN-NUMERAL \xe5\x85\xab\xe3\x80\x81 (last=\xe5\x85\xab), \xe6\x96\xb0\xe8\x8a\x82\xe5\x8f\xb7\xe6\x8c\x89\xe4\xb8\xad\xe6\x96\x87\xe5\xad\x97\xe5\xbd\xa2\xe7\xbb\xad\xef\xbc\x8c\xe5\x88\xab\xe5\x86\x99\xe6\x88\x90\xe9\x98\xbf\xe6\x8b\x89\xe4\xbc\xaf\xe6\x95\xb0\xe5\xad\x97'
+std_hdr=[371] sep=[372]
+last_row_cols=5
+build=b'preprints\\Paired-states-and-Hamiltonian-cycles-in-cubic-bipartite-planar-graphs-September-24-2026\\build' tex=2 bytes=39656 cite_sites=98
+  paper.tex                                37134 B   838 lines cited=97
+  triangle-figure.tex                       2522 B    60 lines cited=1
+
+==== D535 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D535-\xe5\xbc\xb1\xe6\x97\xa0\xe5\xba\x8fFK-Ising\xe7\x95\x8c\xe9\x9d\xa2\xe7\x9a\x84\xe6\xb7\xac\xe7\x81\xabSLE\xe6\x99\xae\xe9\x80\x82\xe6\x80\xa7.md'
+bytes=108019 lines=314 cr=0 heads=19
+first_head=b'## 0 \xe7\x99\xbb\xe8\xae\xb0\xe3\x80\x81\xe5\x8f\x96\xe6\x9d\x90\xe4\xb8\x8e\xe6\x9c\xac\xe7\xa8\xbf\xe7\xab\x8b\xe5\x9c\xba'
+last_head=(298)b'## 18 \xe8\xbf\xbd\xe5\x8a\xa0\xe6\x89\xb9\xe8\x87\xaa\xe6\xa3\x80\xe4\xb8\x8e\xe5\x8b\x98\xe8\xaf\xaf\xe7\xbb\xad\xe7\x99\xbb'
+head_shape=b' -> next 19'
+std_hdr=[161] sep=[162, 284]
+last_row_cols=5
+build=b'preprints\\Quenched-SLE-Universality-for-Weakly-Disordered-FK-Ising-Interfaces-October-5-2026\\build' tex=11 bytes=194407 cite_sites=289
+  sections/slits.tex                       42105 B   801 lines cited=37
+  sections/polygon.tex                     28127 B   544 lines cited=74
+  sections/tightness.tex                   27068 B   515 lines cited=35
+  sections/boundary.tex                    26252 B   528 lines cited=31
+  sections/pure.tex                        18621 B   342 lines cited=36
+  sections/identification.tex              18278 B   397 lines cited=18
+  sections/inputs.tex                      11769 B   242 lines cited=33
+  sections/introduction.tex                10885 B   201 lines cited=24
+  references.tex                            6054 B   141 lines cited=1
+  figures/gate.tex                          2754 B    69 lines cited=0   aux
+  main.tex                                  2494 B    69 lines cited=0   ZERO-CITED
+
+==== D256 ====
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D256-\xe6\xad\xa3\xe7\x89\xb9\xe5\xbe\x81\xe4\xb8\x89\xe7\xbb\xb4fold\xe6\x95\xb0\xe5\x80\xbc\xe7\xbb\xb4\xe4\xb8\x80\xe4\xb8\xb0\xe7\x9b\x88\xe6\x80\xa7\xe7\x9a\x84\xe5\x8f\x8d\xe6\x8e\xa8\xe7\xac\x94\xe8\xae\xb0.md'
+bytes=96555 lines=286 cr=0 heads=17
+first_head=b'## \xc2\xa70 \xe4\xbb\xbb\xe5\x8a\xa1\xe7\x99\xbb\xe8\xae\xb0\xe4\xb8\x8e\xe5\x8f\x96\xe6\x9d\x90\xe8\x8c\x83\xe5\x9b\xb4'
+last_head=(260)b'## \xc2\xa716 \xe7\xbb\x88\xe7\xab\xaf\xe5\xa5\x87\xe7\x82\xb9\xe5\x9c\xa8\xe7\x89\xb9\xe5\xbe\x81 $p$ \xe4\xb8\x8e\xe7\x89\xb9\xe5\xbe\x81\xe9\x9b\xb6\xef\xbc\x9a\xe8\xa1\x8c\xe4\xb8\xba\xe5\xb7\xae\xe5\xbc\x82\xe7\x9a\x84\xe8\xa7\xa3\xe5\x89\x96'
+head_shape=b'\xc2\xa7 -> next \xc2\xa717'
+std_hdr=[143] sep=[144, 279]
+last_row_cols=5
+build=b'preprints\\Abundance-in-numerical-dimension-one-for-terminal-threefolds-in-positive-characteristic-September-24-2026\\build' tex=8 bytes=163182 cite_sites=337
+  sections/preparation.tex                 41901 B   895 lines cited=79
+  sections/jets.tex                        30648 B   740 lines cited=55
+  sections/slopes.tex                      27609 B   630 lines cited=39
+  sections/cartier.tex                     23897 B   597 lines cited=61
+  sections/laurent.tex                     23516 B   535 lines cited=46
+  sections/introduction.tex                10853 B   207 lines cited=56
+  preamble.tex                              3702 B   104 lines cited=0   ZERO-CITED
+  paper.tex                                 1056 B    30 lines cited=1

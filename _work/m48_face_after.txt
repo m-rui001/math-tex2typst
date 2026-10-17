@@ -1,0 +1,81 @@
+### plain label   A \arrow[r,"f"] & B
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((2.6, 0), [$B$])
+  line((0.51, 0), (2.09, 0), mark: (end: ">"))
+  content((1.3, 0.187), [$f$])
+})
+### swapped label   A \arrow[r,"f"'] & B
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((2.6, 0), [$B$])
+  line((0.51, 0), (2.09, 0), mark: (end: ">"))
+  content((1.3, -0.187), [$f$])
+})
+### vertical label   A \arrow[d,"group and residue duality"] \\ B
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((0, -1.7), [$B$])
+  line((0, -0.4), (0, -1.3), mark: (end: ">"))
+  content((2.477, -0.85), [$g r o u p a n d r e s i d u e d u a l i t y$])
+})
+### bend left=22   A \arrow[rr,bend left=22,"f"] & & B
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((5.2, 0), [$B$])
+  bezier((0.51, 0), (4.69, 0), (2.021, 0.6107), (3.179, 0.6107), mark: (end: ">"))
+  content((2.6, 0.645), [$f$])
+})
+### bare bend left   A \arrow[rr,bend left,"f"] & & B
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((5.2, 0), [$B$])
+  bezier((0.51, 0), (4.69, 0), (1.922, 0.8151), (3.278, 0.8151), mark: (end: ">"))
+  content((2.6, 0.7983), [$f$])
+})
+### bend right=22   A \arrow[rr,bend right=22,"f"] & & B
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((5.2, 0), [$B$])
+  bezier((0.51, 0), (4.69, 0), (2.021, -0.6107), (3.179, -0.6107), mark: (end: ">"))
+  content((2.6, -0.645), [$f$])
+})
+### bend swapped   A \arrow[dr,bend left=30,"f"'] \\ & B
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((2.6, -1.7), [$B$])
+  bezier((0.3573, -0.2336), (2.243, -1.466), (1.234, -0.2823), (1.846, -0.6824), mark: (end: ">"))
+  content((1.28, -0.8806), [$f$])
+})
+### hook   A \arrow[r,hook] & B
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((2.6, 0), [$B$])
+  line((0.51, 0), (2.09, 0), mark: (end: ">"))
+  line((0.51, 0), (0.51, 0.3))
+})
+### equal   A \arrow[r,equal] & B
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((2.6, 0), [$B$])
+  line((0.51, 0.11), (2.09, 0.11))
+  line((0.51, -0.11), (2.09, -0.11))
+})
+### two labels   A \arrow[r,"f","g"] & B
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((2.6, 0), [$B$])
+  line((0.51, 0), (2.09, 0), mark: (end: ">"))
+  content((1.3, 0.187), [$f$])
+  content((1.3, -0.187), [$g$])
+})

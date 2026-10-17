@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "E:\math\_work\measure_fit_box.py", line 114, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "E:\math\_work\measure_fit_box.py", line 102, in main
+    got = run(name, stmt, keys)
+  File "E:\math\_work\measure_fit_box.py", line 93, in run
+    out[m.group(1)] = (float(m.group(2)) / PT, float(m.group(3)) / PT)
+                       ~~~~~^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'

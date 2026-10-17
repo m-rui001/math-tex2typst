@@ -1,0 +1,12 @@
+== D476
+note=E:/math/研究笔记\D476-广义对数典范Q对的极小模型与Mori纤维空间.md
+dir=Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026
+cite_form full=0 base=148
+== D530
+note=E:/math/研究笔记\D530-定量近Kerr演化与一般C2未来不可延伸.md
+dir=Quantitative-Near-Kerr-Evolution-and-Generic-C2-Future-Inextendibility-September-23-2026
+cite_form full=0 base=308
+== D71
+note=E:/math/研究笔记\D71-完美匹配多面体的熵与面维数.md
+dir=Entropy-and-Face-Dimension-of-the-Perfect-Matching-Polytope-September-23-2026
+cite_form full=0 base=268

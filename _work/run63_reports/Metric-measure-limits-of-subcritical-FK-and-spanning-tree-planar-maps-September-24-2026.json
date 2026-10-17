@@ -1,0 +1,32 @@
+{
+  "paper": "Metric-measure-limits-of-subcritical-FK-and-spanning-tree-planar-maps-September-24-2026",
+  "ok": true,
+  "typ_lines": 4782,
+  "included_pdf_pages": 0,
+  "formulas": 3501,
+  "math_failed": 0,
+  "labels": 558,
+  "equations": 26,
+  "theorems": 18,
+  "figures": 5,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 5
+  },
+  "samples": {
+    "formulas": "3501",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\renewcommandrenewcommand"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Metric-measure-limits-of-subcritical-FK-and-spanning-tree-planar-maps-September-24-2026.tex"
+}

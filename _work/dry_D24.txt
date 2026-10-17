@@ -1,0 +1,12 @@
+################ D24  (D24-Kaplansky拟迹猜想反例.md)
+before: bytes=130730 lines=1018
+ROW line=706  sites=2  pipes 8->6  $=8(parity even)
+OLD| | $\frac15$ | 多项式逼近容差 | Thm 5.1 | 推出 $\|P^*P-I\|<\frac{11}{25}$ | 需要 $<\sqrt{3/2}-1\approx0.225$，$\frac15=0.2$ 是就近取的 |
+NEW| | $\frac15$ | 多项式逼近容差 | Thm 5.1 | 推出 $\lVert P^*P-I\rVert<\frac{11}{25}$ | 需要 $<\sqrt{3/2}-1\approx0.225$，$\frac15=0.2$ 是就近取的 |
+after: bytes=130739 (delta +9) lines=1018 rows_fixed=1 sites_fixed=2 sites_registered=0
+[DRY] nothing written to the note
+D24 file-count \lVert  = 3
+D24 file-count \lvert  = 0
+D24 file-count \mid  = 0
+D24 file-count \upharpoonright = 0
+D24 file-count \Vert  = 0

@@ -1,0 +1,1 @@
+与线性类里已有的反例（paper.tex:80）：Kapovich 2005 造过无限双曲群其任意域有限维表示像有限；Tholozan-Tsouvalas 2025 用四元数双曲 lattice 的合适有限指标子群沿极大循环子群 amalgam，造出**残余有限却非线性**的双曲群。paper.tex:80 明说"nonlinearity alone does not exclude residual finiteness"，而 cor:nonlinear 记录更强特征：所有有限维表示之核有公共非单位元。我读出的定位是：$G$ 不是"又一个非线性双曲群"，而是"非残余有限 ⟹ 非线性"链条上的新点，比 TT2025 的反方向（残余有限 + 非线性）更靠近问题的核心。

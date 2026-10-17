@@ -1,0 +1,30 @@
+D114-二对一博弈的完美完全性：采样与双侧解码归约的反推笔记.md                 size= 241063 secs=34 contig=True rows=61
+    math=1630  dunpai=3 bt=872
+D127-Ryser覆盖猜想的反例：构造、选取与线覆盖计数的反推笔记.md              size=  98256 secs=17 contig=True rows=41
+    math=3774  dunpai=2 bt=2
+D131-紧Kahler流形万有覆叠分裂：可去奇点与度量全局化的反推笔记.md            size= 145506 secs=25 contig=True rows=40
+    math=3526  contrast=1 dunpai=6 bt=217
+D132-平面图度量嵌入L1的常数失真：几何生成插值与装配的反推笔记.md              size= 120817 secs=20 contig=True rows=44
+    math=3261  contrast=1 bt=12
+D134-乘积投影定位给出QAC零度parity下界：bootstrap与深度收缩的反推笔记.md  size= 114362 secs=21 contig=True rows=47
+    math=2564  bt=111
+D135-球面投影矩与正帽控制给出Riesz估计：图模型与停止核的反推笔记.md           size=  85664 secs=19 contig=True rows=45
+    math=2522  bt=1
+D136-交错抽取在每个域上都给出精确矩阵乘：联合抽取与叶体积的反推笔记.md            size= 103475 secs=19 contig=True rows=0
+    math=2932  hdr=0 sep=0 ledgerRows=0 bt=11
+D137-平面指数第一通过limshape的严格凸与可微：链路逼近与改进界的反推笔记.md      size= 214625 secs=24 contig=True rows=51
+    math=6592  dunpai=2 bt=24
+D138-对称Mahler猜想的等号情形：零亏量、单纯形与中位分割的反推笔记.md          size= 103586 secs=19 contig=True rows=47
+    math=2880  bt=83
+D139-单格覆盖的n对数n阶界：采样器层级与电路和的反推笔记.md                 size= 113577 secs=18 contig=True rows=77
+    math=3413  dunpai=3 bt=62
+D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md                 size=  94587 secs=20 contig=True rows=56
+    math=2846  dunpai=3 bt=11
+D141-弱MTW下的全局支撑与凸单射域：首刀支撑与度展开的反推笔记.md              size=  98713 secs=27 contig=True rows=37
+    math=2642  dunpai=7 bt=4
+D142-2NFA补全的指数状态下界：从序反转眼像到嵌套缺失预算的反推笔记.md           size= 122452 secs=14 contig=True rows=43
+    math=3302  bt=2
+D143-关系代数与树周游：单向活性指数下界的反推笔记.md                     size= 123229 secs=21 contig=True rows=41
+    math=3303  dunpai=4 bt=1498
+D144-三图等子的摊平记账：二次曲面上ample而无Griffiths正度量丛的反推笔记.md   size= 115272 secs=14 contig=True rows=44
+    math=2790  badLedgerRows=[0] dunpai=1 bt=5

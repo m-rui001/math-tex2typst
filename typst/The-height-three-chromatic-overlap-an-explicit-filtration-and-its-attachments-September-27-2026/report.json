@@ -1,0 +1,35 @@
+{
+  "paper": "The-height-three-chromatic-overlap-an-explicit-filtration-and-its-attachments-September-27-2026",
+  "ok": true,
+  "typ_lines": 2764,
+  "included_pdf_pages": 0,
+  "formulas": 2529,
+  "math_failed": 7,
+  "labels": 250,
+  "equations": 1,
+  "theorems": 3,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 7
+  },
+  "samples": {
+    "formulas": "2529",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [
+    "\\let\\hthreeOriginalThebibliography",
+    "\\renewcommand\\thebibliography"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-height-three-chromatic-overlap-an-explicit-filtration-and-its-attachments-September-27-2026.tex"
+}

@@ -1,0 +1,101 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+sub    pgf        h= 17.34  south_y1=-0.20  escape=+0.00  ink[-15.18  -2.00]
+  as emitted     h= 14.85  south_y1=-0.00  escape=+0.62  ink[-13.94  +0.62]
+  bot=descender  h= 16.98  south_y1=-0.00  escape=+0.00  ink[-16.08  -1.51]
+  bot=bounds     h= 17.72  south_y1=-0.00  escape=+0.00  ink[-16.81  -2.25]
+  top=ascender   h= 16.20  south_y1=-0.00  escape=+0.62  ink[-13.94  +0.62]
+  top=bounds     h= 16.52  south_y1=-0.00  escape=+0.62  ink[-13.94  +0.62]
+  both=asc-desc  h= 18.33  south_y1=-0.00  escape=+0.00  ink[-16.08  -1.51]
+  both=bounds    h= 19.39  south_y1=-0.00  escape=+0.00  ink[-16.81  -2.25]
+deep   pgf        h= 13.78  south_y1=-0.20  escape=+0.18  ink[-14.16  -3.35]
+  as emitted     h= 14.85  south_y1=-0.00  escape=+0.54  ink[-12.53  +0.54]
+  bot=descender  h= 16.98  south_y1=-0.00  escape=+0.00  ink[-14.67  -1.59]
+  bot=bounds     h= 19.05  south_y1=-0.00  escape=+0.00  ink[-16.74  -3.66]
+  top=ascender   h= 16.20  south_y1=-0.00  escape=+0.54  ink[-12.53  +0.54]
+  top=bounds     h= 12.19  south_y1=-0.00  escape=+0.54  ink[-12.53  +0.54]
+  both=asc-desc  h= 18.33  south_y1=-0.00  escape=+0.00  ink[-14.67  -1.59]
+  both=bounds    h= 16.40  south_y1=-0.00  escape=+0.34  ink[-16.74  -3.66]
+frac   pgf        h= 17.00  south_y1=+9.25  escape=+0.00  ink[ -6.88  +7.45]
+  as emitted     h= 14.85  south_y1=+6.42  escape=+1.62  ink[ -7.79  +8.04]
+  bot=descender  h= 16.98  south_y1=+8.55  escape=+0.00  ink[ -7.79  +8.04]
+  bot=bounds     h= 18.72  south_y1=+10.29  escape=+0.00  ink[ -7.79  +8.04]
+  top=ascender   h= 16.20  south_y1=+6.42  escape=+1.62  ink[ -7.79  +8.04]
+  top=bounds     h= 15.06  south_y1=+6.42  escape=+1.62  ink[ -7.79  +8.04]
+  both=asc-desc  h= 18.33  south_y1=+8.55  escape=+0.00  ink[ -7.79  +8.04]
+  both=bounds    h= 18.93  south_y1=+10.29  escape=+0.00  ink[ -7.79  +8.04]
+both   pgf        h= 18.98  south_y1=-0.20  escape=+0.00  ink[-16.08  -2.77]
+  as emitted     h= 14.85  south_y1=-0.00  escape=+0.54  ink[-14.22  +0.54]
+  bot=descender  h= 16.98  south_y1=-0.00  escape=+0.00  ink[-16.35  -1.59]
+  bot=bounds     h= 17.64  south_y1=-0.00  escape=+0.00  ink[-17.01  -2.25]
+  top=ascender   h= 16.20  south_y1=-0.00  escape=+0.54  ink[-14.22  +0.54]
+  top=bounds     h= 17.44  south_y1=-0.00  escape=+0.54  ink[-14.22  +0.54]
+  both=asc-desc  h= 18.33  south_y1=-0.00  escape=+0.00  ink[-16.35  -1.59]
+  both=bounds    h= 20.23  south_y1=+0.00  escape=+0.00  ink[-17.01  -2.25]
+plain  pgf        h= 13.89  south_y1=-0.20  escape=+0.00  ink[-12.14  -2.17]
+  as emitted     h= 14.85  south_y1=-0.00  escape=+0.00  ink[-12.53  -1.53]
+  bot=descender  h= 16.98  south_y1=-0.00  escape=+0.00  ink[-14.67  -3.67]
+  bot=bounds     h= 15.76  south_y1=-0.00  escape=+0.00  ink[-13.45  -2.45]
+  top=ascender   h= 16.20  south_y1=-0.00  escape=+0.00  ink[-12.53  -1.53]
+  top=bounds     h= 14.66  south_y1=-0.00  escape=+0.00  ink[-12.53  -1.53]
+  both=asc-desc  h= 18.33  south_y1=-0.00  escape=+0.00  ink[-14.67  -3.67]
+  both=bounds    h= 15.57  south_y1=-0.00  escape=+0.00  ink[-13.45  -2.45]
+paren  pgf        h= 16.60  south_y1=-0.20  escape=+0.00  ink[-13.80  -2.99]
+  as emitted     h= 14.85  south_y1=-0.00  escape=+0.54  ink[-12.53  +0.54]
+  bot=descender  h= 16.98  south_y1=-0.00  escape=+0.00  ink[-14.67  -1.59]
+  bot=bounds     h= 17.64  south_y1=-0.00  escape=+0.00  ink[-15.33  -2.25]
+  top=ascender   h= 16.20  south_y1=-0.00  escape=+0.54  ink[-12.53  +0.54]
+  top=bounds     h= 15.56  south_y1=-0.00  escape=+0.54  ink[-12.53  +0.54]
+  both=asc-desc  h= 18.33  south_y1=-0.00  escape=+0.00  ink[-14.67  -1.59]
+  both=bounds    h= 18.35  south_y1=-0.00  escape=+0.00  ink[-15.33  -2.25]
+sum    pgf        h= 17.64  south_y1=-0.20  escape=+0.00  ink[-16.97  -1.34]
+  as emitted     h= 14.87  south_y1=-0.00  escape=+3.40  ink[-15.39  +3.40]
+  bot=descender  h= 16.98  south_y1=-0.00  escape=+1.28  ink[-17.51  +1.28]
+  bot=bounds     h= 19.87  south_y1=-0.00  escape=+0.53  ink[-20.40  -1.61]
+  top=ascender   h= 16.22  south_y1=-0.00  escape=+3.40  ink[-15.39  +3.40]
+  top=bounds     h= 16.25  south_y1=-0.00  escape=+3.40  ink[-15.39  +3.40]
+  both=asc-desc  h= 18.33  south_y1=-0.00  escape=+1.28  ink[-17.51  +1.28]
+  both=bounds    h= 21.26  south_y1=-0.00  escape=+0.00  ink[-20.40  -1.61]
+mix    pgf        h= 17.34  south_y1=-0.20  escape=+0.00  ink[-15.18  -1.34]
+  as emitted     h= 14.85  south_y1=-0.00  escape=+0.62  ink[-13.94  +0.62]
+  bot=descender  h= 17.55  south_y1=-0.00  escape=+0.00  ink[-16.65  -2.08]
+  bot=bounds     h= 17.72  south_y1=-0.00  escape=+0.00  ink[-16.81  -2.25]
+  top=ascender   h= 17.17  south_y1=-0.00  escape=+0.62  ink[-13.94  +0.62]
+  top=bounds     h= 16.52  south_y1=-0.00  escape=+0.62  ink[-13.94  +0.62]
+  both=asc-desc  h= 19.87  south_y1=-0.00  escape=+0.00  ink[-16.65  -2.08]
+  both=bounds    h= 19.39  south_y1=-0.00  escape=+0.00  ink[-16.81  -2.25]
+rows   pgf        h= 14.94  south_y1=-0.20  escape=+0.00  ink[-12.80  -2.00]
+  as emitted     h= 29.51  south_y1=-0.00  escape=+0.54  ink[-27.20  +0.54]
+  bot=descender  h= 34.35  south_y1=-0.00  escape=+0.00  ink[-32.04  -1.59]
+  bot=bounds     h= 34.94  south_y1=-0.00  escape=+0.00  ink[-32.63  -2.17]
+  top=ascender   h= 33.18  south_y1=-0.00  escape=+0.54  ink[-28.55  +0.54]
+  top=bounds     h= 29.87  south_y1=-0.00  escape=+0.54  ink[-27.20  +0.54]
+  both=asc-desc  h= 38.02  south_y1=-0.00  escape=+0.00  ink[-33.39  -1.59]
+  both=bounds    h= 35.31  south_y1=+0.00  escape=+0.00  ink[-32.63  -2.17]
+text   pgf        h= 15.50  south_y1=-0.20  escape=+0.00  ink[-13.24  -3.28]
+  as emitted     h= 14.57  south_y1=-0.00  escape=+0.00  ink[-13.50  -0.96]
+  bot=descender  h= 17.28  south_y1=-0.00  escape=+0.00  ink[-16.21  -3.67]
+  bot=bounds     h= 17.19  south_y1=+0.00  escape=+0.00  ink[-16.12  -3.58]
+  top=ascender   h= 17.17  south_y1=-0.00  escape=+0.00  ink[-13.50  -0.96]
+  top=bounds     h= 15.01  south_y1=-0.00  escape=+0.00  ink[-13.50  -0.96]
+  both=asc-desc  h= 19.87  south_y1=-0.00  escape=+0.00  ink[-16.21  -3.67]
+  both=bounds    h= 17.63  south_y1=+0.00  escape=+0.00  ink[-16.12  -3.58]
+
+--- anchor law (which point the box hangs on) ---
+  $x_i^2$     anchor=south     emitted  h= 14.85  y0=-14.85 y1= -0.00  escape=+0.62
+  $x_i^2$     anchor=south     bounds   h= 19.39  y0=-19.39 y1= -0.00  escape=+0.00
+  $x_i^2$     anchor=north     emitted  h= 14.85  y0= +0.00 y1=+14.85  escape=+0.62
+  $x_i^2$     anchor=north     bounds   h= 19.39  y0= +0.00 y1=+19.39  escape=+0.00
+  $x_i^2$     draw             emitted  h= 14.85  y0= -7.42 y1= +7.42  escape=+0.62
+  $x_i^2$     draw             bounds   h= 19.39  y0= -9.69 y1= +9.69  escape=+0.00
+  $\frac{a}{b anchor=south     emitted  h= 14.85  y0= -8.43 y1= +6.42  escape=+1.62
+  $\frac{a}{b anchor=south     bounds   h= 18.93  y0= -8.65 y1=+10.29  escape=+0.00
+  $\frac{a}{b anchor=north     emitted  h= 14.85  y0= -8.43 y1= +6.42  escape=+1.62
+  $\frac{a}{b anchor=north     bounds   h= 18.93  y0= -8.65 y1=+10.29  escape=+0.00
+  $\frac{a}{b draw             emitted  h= 14.85  y0= -8.43 y1= +6.42  escape=+1.62
+  $\frac{a}{b draw             bounds   h= 18.93  y0= -8.65 y1=+10.29  escape=+0.00
+  Abg         anchor=south     emitted  h= 14.57  y0=-14.57 y1= -0.00  escape=+0.00
+  Abg         anchor=south     bounds   h= 17.63  y0=-17.63 y1= +0.00  escape=+0.00
+  Abg         anchor=north     emitted  h= 14.57  y0= +0.00 y1=+14.57  escape=+0.00
+  Abg         anchor=north     bounds   h= 17.63  y0= +0.00 y1=+17.63  escape=+0.00
+  Abg         draw             emitted  h= 14.57  y0= -7.29 y1= +7.29  escape=+0.00
+  Abg         draw             bounds   h= 17.63  y0= -8.81 y1= +8.81  escape=+0.00

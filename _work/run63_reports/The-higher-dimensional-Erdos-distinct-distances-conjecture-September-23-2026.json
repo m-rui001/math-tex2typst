@@ -1,0 +1,34 @@
+{
+  "paper": "The-higher-dimensional-Erdos-distinct-distances-conjecture-September-23-2026",
+  "ok": true,
+  "typ_lines": 2294,
+  "included_pdf_pages": 0,
+  "formulas": 2331,
+  "math_failed": 0,
+  "labels": 284,
+  "equations": 4,
+  "theorems": 13,
+  "figures": 3,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_refused": 1,
+    "cetz_converted": 2
+  },
+  "samples": {
+    "formulas": "2331",
+    "cetz_refused": "\\begin{tikzpicture}[ box/.style={draw=linkblue!65,rounded corners=2pt,fill=figuregray, align=center,font=\\",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "flafter"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-higher-dimensional-Erdos-distinct-distances-conjecture-September-23-2026.tex"
+}

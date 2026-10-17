@@ -1,0 +1,37 @@
+E:\math\_work\probe91_cd_cell_box.py:112: SyntaxWarning: invalid escape sequence '\G'
+  opens the rows to match: superscripts, `\Gamma` and an accent reach far above a word's own box,
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+distinct cell lines per class: 11pt 324   (0 uses skipped as `%%`/`#`/env text)
+CD_LINE_CM says 0.50cm = 14.2pt; the page says 11pt 16.6
+
+measured 306 distinct cell lines (506 uses)
+
+cls     cells    a (pt) b (pt/char)      rms   model minus ink, cm
+11pt      306      5.91       3.742     8.73   p10 +0.34  median +0.57  p90 +0.99
+       current model 15.59pt + 4.82pt/char; heights: median 11.96 pt, p90 14.85 pt
+
+widest cells in the corpus (ink pt / model cm / chars / uses):
+   205.5  11.77cm  66  '\\text{compact Weil trace classes}\\quad\n\\text' x1
+   193.8   9.22cm  51  '\\text{quadratic component model}\\quad\n\\text{' x1
+   182.4   9.56cm  53  '\\text{bilinear measure criterion}\\quad\n\\text' x1
+   170.2   9.73cm  54  '\\text{rational form of }\\mathcal F_Y\\mathcal' x1
+   155.5   5.99cm  32  '\\text{Laurent cocycles have primitives}'     x1
+   136.8   5.48cm  29  '\\text{whole integral surface blocks}'        x1
+   133.2   5.31cm  28  '\\text{Slope bounds and finite jets}'         x1
+   129.9   5.31cm  28  '\\left(\\operatorname{colim}_{S^\\vee}R\\Gamma(P' x1
+   124.9   4.63cm  24  '\\text{endpoint corrections }v+s'             x1
+   122.5   7.18cm  39  '\\bigl(\\varprojlim_\\ell\n       H^3_{\\mathrm{c' x1
+   117.5   5.65cm  30  'H^3_{\\mathrm{cts}}(G_3(k),E_{3,0}(k))[1/p]'  x1
+   113.1   4.46cm  23  '\\text{Orders of Laurent units}'              x1
+   111.7   4.97cm  26  'R\\Gamma_v(\\widetilde Y\\times\\underline{G^a},' x1
+   110.1   4.97cm  26  '\\pi_{-3}L_0\\operatorname*{holim}_\\ell L_1(T/' x1
+
+narrowest:
+     5.1   0.72cm   1  's'                                            x2
+     5.5   0.72cm   1  '0'                                            x11
+     5.8   0.72cm   1  '\\mathcal E'                                  x1
+     6.3   0.72cm   1  'Y'                                            x26
+     6.4   0.72cm   1  'V'                                            x11
+     6.4   0.72cm   1  'T'                                            x6
+
+wrote E:\math\_work\label91_cd_cells.json

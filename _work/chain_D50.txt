@@ -1,0 +1,10 @@
+### region_check D50 414
+seg=178 hdr=0 sep=2 rows=88 hist={6: 88, 7: 1}
+badpipe=[(438, 7, '| 证书在 $P$ 的两边 | 我算：左边 $\\alpha h+\\beta y-1=3\\cdot2+(-4)\\cdot1-1=1$；右边 $')]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+rc=0
+### pipe_table_check D50 (该篇该表窗口，表头竖线数=该表续行应有竖线数)
+TABLE D50 hdr=414 pipes=6 block=39 sep=1 rows=38 hist={6: 38, 7: 1} badpipe=[(438, 7, '| 证书在 $P$ 的两边 | 我算：左边 $\\alpha h+\\beta y-1=3\\cdot2+(-4)\\cdot1')]
+rc=0

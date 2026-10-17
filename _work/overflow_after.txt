@@ -1,0 +1,44 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+papers scanned: 52
+  +0 escapes  now    4 / worst   8.64 pt  p44  quantitative-lower-bounds-for-trace-reconstruction-S
+        p37  over  8.64  'odd root'
+        p37  over  7.99  '𝜎'
+        p37  over  1.53  '𝑌𝐼1 = 𝑉𝐺+ 𝐻𝐼1'
+  +0 escapes  now    0 / worst   0.00 pt  p48  Virasoro-Constraints-for-Projective-Complete-Interse
+  +0 escapes  now    4 / worst   5.27 pt  p19  Unitarizability-Implies-Amenability-for-Countable-Gr
+        p13  over  5.27  '𝐹: label 𝑗'
+        p13  over  5.06  '𝐹: label 𝑖'
+        p13  over  4.99  '𝑐(𝑥, 𝑗)𝑣𝑗'
+  +0 escapes  now    0 / worst   0.00 pt  p17  Uniform-computation-of-the-squared-logarithmic-k-ser
+  +0 escapes  now    0 / worst   0.00 pt  p35  Thomason-Model-Structures-in-Every-Strict-Higher-Dim
+  +0 escapes  now    0 / worst   0.00 pt  p59  The-Unique-Games-Theorem-September-23-2026
+  +0 escapes  now    9 / worst   7.80 pt  p61  The-Gaussian-free-field-limit-of-integer-Lipschitz-h
+        p49  over  7.80  'anchored high patch'
+        p49  over  7.78  '𝑞𝐿'
+        p49  over  7.73  '𝑞𝑅'
+  +0 escapes  now   11 / worst  12.72 pt  p63  The-Euclidean-plane-is-not-five-colorable-September-
+        p58  over 12.72  '𝑧𝐵'
+        p58  over 12.72  '𝑧𝐵'
+        p58  over 12.72  '𝑧𝐵'
+  +0 escapes  now   25 / worst   7.14 pt  p42  The-Deligne-Drinfeld-conjecture-September-23-2026
+        p30  over  7.14  '𝘊:'
+        p30  over  7.14  '𝘈:'
+        p30  over  7.14  '𝘉:'
+  +0 escapes  now    2 / worst  10.04 pt  p56  Subpolynomial-query-complexity-for-well-conditioned-
+        p17  over 10.04  'the sole closing trace: cost 𝑑𝑏'
+        p37  over  8.14  'supplies center'
+  +0 escapes  now    0 / worst   0.00 pt  p35  Staggered-extraction-for-exact-matrix-multiplication
+  +0 escapes  now    6 / worst   4.82 pt  p95  Routing-densities-and-representation-contraction-for
+        p9   over  4.82  '1'
+        p9   over  4.75  'input'
+        p9   over  4.72  '0'
+  +0 escapes  now    4 / worst   1.45 pt  p40  Rokhlins-multiple-mixing-problem-for-one-transformat
+        p16  over  1.45  '𝐿𝐴(𝑥)'
+        p16  over  1.45  '𝐿𝐵(𝑦)'
+        p16  over  1.45  '𝐽𝑠(𝑐)'
+  +0 escapes  now    2 / worst   6.38 pt  p148  Rigidity-of-Smooth-Billiards-with-a-Continuous-Caust
+        p2   over  6.38  '𝜕Ω'
+        p2   over  2.24  '𝜕Ω'
+  +0 escapes  now    1 / worst   1.45 pt  p57  Quadratic-Strong-Operator-Paving-over-Arbitrary-Maxi
+        p49  over  1.45  'short arc: 𝑋𝐽'
+TOTAL escapes: 221 over 52 papers  (reference 223)

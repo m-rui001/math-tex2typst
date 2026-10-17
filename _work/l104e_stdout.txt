@@ -1,0 +1,135 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+================ The-Blockwise-Alperin-Weight-Conjecture-September-23-2026 #0 ================
+-- statements carrying fit= or a placement --
+   },semithick}
+]
+\node[stage,text width=12cm] (twist)
+  {Marked genus-one curve: large divisor index\\
+   and independent absolute field differentials\\
+   \Cref{sec:twist}};
+\coordinate (branch-top) at ($(twist.south)+(0,
+-- emitted --
+   #cetz.canvas({
+     import cetz.draw: *
+     content((0, 0), [#box(width: 12.49cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, top-edge: "cap-height", bottom-edge: "baseline"); #align(center)[#text(size: 9pt)[Marked genus-one curve: large divisor index#linebreak()and independent absolute field differentials#linebreak()sec:twist]]])])
+     content((-3.2, -1.645), [#box(width: 5.994cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, top-edge: "cap-height", bottom-edge: "baseline"); #align(center)[#text(size: 9pt)[Differential estimate and divisor-degree divisibility#linebreak()Sharp inseparable genus bound \(sec:differentials\)]]])], anchor: "north")
+     content((3.2, -1.645), [#box(width: 5.994cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds"); #align(center)[#text(size: 9pt)[Valued lift and marked-cover descent#linebreak()Small orbit gives an extension with small $p$-part of its degree \(sec:valuations\)]]])], anchor: "north")
+     content((0, -4.617), [#box(width: 12.49cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds"); #align(center)[#text(size: 9pt)[Section comparison, finite presentation, and connectedness#linebreak()No such marked $J$-cover over $L$ with $[L:K_s]_p<p^h$#linebreak()when $O_p(J)=1$ \(sec:specialization\)]]])])
+     content((0, -6.723), [#box(width: 12.49cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds"); #align(center)[#text(size: 9pt)[Every Sylow orbit has size divisible by $p^h$#linebreak()Uniform tuple divisibility \(thm:tuple-divisibility\)]]])])
+     content((0, -8.643), [#box(width: 12.49cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds"); #align(center)[#text(size: 9pt)[Chain inversion and central trace limits \(sec:group\)#linebreak()$l(B)=|W_p(B)|$]]])])
+     line((0, -0.7452), (0, -1.145), stroke: (thickness: 0.6pt, miter-limit: 10))
+     line((0, -1.145), (-3.2, -1.145), stroke: (thickness: 0.6pt, miter-limit: 10))
+     line((-3.2, -1.145), (-3.2, -1.645), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+     line((0, -0.7452), (0, -1.145), stroke: (thickness: 0.6pt, miter-limit: 10))
+     line((0, -1.145), (3.2, -1.145), stroke: (thickness: 0.6pt, miter-limit: 10))
+     line((3.2, -1.145), (3.2, -1.645), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+     line((-3.2, -2.827), (-3.2, -3.827), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+     line((3.2, -2.827), (3.2, -3.827), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+     line((0, -5.408), (0, -6.108), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+     line((0, -7.338), (0, -8.038), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+   })
+
+================ A-counterexample-to-Kaplanskys-quasitrace-conjecture-September-23-2026 #0 ================
+-- statements carrying fit= or a placement --
+   \begin{scope}[on background layer]
+    \node[draw=blue!50!black,dashed,rounded corners=3pt,
+          inner xsep=4mm,inner ysep=8mm,fit=(e0)(er)] (window) {}
+-- emitted --
+   #cetz.canvas({
+     import cetz.draw: *
+     content((0, 0), [#box(width: 1.2cm, height: 0.9cm, inset: 0.3333em, radius: 2pt, stroke: (thickness: 0.4pt, miter-limit: 10), fill: rgb("#f5f5ff"), [#set text(hyphenate: false); #align(center + horizon)[#text(size: 9pt)[$E_0$]]])])
+     content((1.8, 0), [#box(width: 1.2cm, height: 0.9cm, inset: 0.3333em, radius: 2pt, stroke: (thickness: 0.4pt, miter-limit: 10), fill: rgb("#f5f5ff"), [#set text(hyphenate: false); #align(center + horizon)[#text(size: 9pt)[$E_1$]]])])
+     content((3.45, 0), [#text(size: 9pt)[$dots.h$]])
+     content((5.1, 0), [#box(width: 1.2cm, height: 0.9cm, inset: 0.3333em, radius: 2pt, stroke: (thickness: 0.4pt, miter-limit: 10), fill: rgb("#f5f5ff"), [#set text(hyphenate: false); #align(center + horizon)[#text(size: 9pt)[$E_R$]]])])
+     content((7.2, 0), [#box(width: 1.2cm, height: 0.9cm, inset: 0.3333em, radius: 2pt, stroke: (thickness: 0.4pt, miter-limit: 10), fill: rgb("#f5f5f5"), [#set text(hyphenate: false); #align(center + horizon)[#text(size: 9pt)[$E_(R+1)$]]])])
+     bezier((0.6, 0.45), (1.2, 0.45), (0.826, 0.5106), (0.974, 0.5106), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ")>", fill: black)))
+     content((0.9, 0.4954), [#text(size: 9pt)[$x_i$]], anchor: "south", padding: 0.1176cm)
+     bezier((1.2, -0.45), (0.6, -0.45), (0.974, -0.5106), (0.826, -0.5106), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ")>", fill: black)))
+     content((0.9, -0.4954), [#text(size: 9pt)[$x_i^*$]], anchor: "north", padding: 0.1176cm)
+     line((2.4, 0), (3.246, 0), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (start: (symbol: ")>", fill: black), end: (symbol: ")>", fill: black)))
+     line((3.654, 0), (4.5, 0), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (start: (symbol: ")>", fill: black), end: (symbol: ")>", fill: black)))
+     line((5.7, 0), (6.6, 0), stroke: (thickness: 0.4pt, miter-limit: 10, dash: "dashed"), mark: (start: (symbol: ")>", fill: black), end: (symbol: ")>", fill: black)))
+     rect((-1.007, -1.257), (6.107, 1.257), stroke: (paint: rgb("#000080"), thickness: 0.4pt, miter-limit: 10, dash: "dashed"), radius: 3pt)
+     content((2.55, 1.5), [#text(size: 9pt)[A word of length at most $R$, starting at level zero,#linebreak()stays in these levels]], anchor: "south", padding: 0.1176cm)
+     content((2.55, -1.5), [#text(size: 9pt)[$P_0:E_0^( plus.o 2m) arrow.r.long (E_0 plus.o dots.h plus.o E_R )^( plus.o m)$]], anchor: "north", padding: 0.1176cm)
+   })
+
+================ Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026 #2 ================
+-- statements carrying fit= or a placement --
+   \node[panel,fit=(t1)(k11)(k12)(k1q)] (p1) {}
+   \node[panel,fit=(t2)(k21)(k22)(k2q)] (p2) {}
+   \node[font=\small,above=3pt of p1] {First private chart}
+   \node[font=\small,above=3pt of p2] {Second private chart}
+   \node[font=\small,below=7pt of h] {\(K_{X_i}\cap K_{Y_j}=H\quad\text{for every }i,j\)}
+-- emitted --
+   #cetz.canvas({
+     import cetz.draw: *
+     content((0, 0), [#text(size: 9pt)[$H$]])
+     content((-2.4, 1.05), [#text(size: 9pt)[$T_1$]])
+     content((2.4, 1.05), [#text(size: 9pt)[$T_2$]])
+     content((-3.7, 2.2), [#text(size: 9pt)[$K_(X_1)$]])
+     content((-2.4, 2.2), [#text(size: 9pt)[$K_(X_2)$]])
+     content((-1.1, 2.2), [#text(size: 9pt)[$K_(X_q)$]])
+     content((1.1, 2.2), [#text(size: 9pt)[$K_(Y_1)$]])
+     content((2.4, 2.2), [#text(size: 9pt)[$K_(Y_2)$]])
+     content((3.7, 2.2), [#text(size: 9pt)[$K_(Y_q)$]])
+     content((-1.75, 2.2), [#text(size: 7pt)[$dots.h$]])
+     content((3.05, 2.2), [#text(size: 7pt)[$dots.h$]])
+     line((-2.653, 1.274), (-3.44, 1.97), stroke: (thickness: 0.4pt, miter-limit: 10))
+     line((-2.4, 1.279), (-2.4, 1.97), stroke: (thickness: 0.4pt, miter-limit: 10))
+     line((-2.147, 1.274), (-1.377, 1.955), stroke: (thickness: 0.4pt, miter-limit: 10))
+     line((2.147, 1.274), (1.36, 1.97), stroke: (thickness: 0.4pt, miter-limit: 10))
+     line((2.4, 1.279), (2.4, 1.97), stroke: (thickness: 0.4pt, miter-limit: 10))
+     line((2.653, 1.274), (3.423, 1.955), stroke: (thickness: 0.4pt, miter-limit: 10))
+     line((-0.1976, 0.08643), (-2.147, 0.9393), stroke: (thickness: 0.4pt, miter-limit: 10, dash: "densely-dashed"))
+     line((0.1976, 0.08643), (2.147, 0.9393), stroke: (thickness: 0.4pt, miter-limit: 10, dash: "densely-dashed"))
+     rect((-4.352, 0.5667), (-0.4484, 2.699), stroke: (paint: rgb("#b2b2b2"), thickness: 0.4pt, miter-limit: 10), radius: 3pt)
+     rect((0.4484, 0.5667), (4.352, 2.699), stroke: (paint: rgb("#b2b2b2"), thickness: 0.4pt, miter-limit: 10), radius: 3pt)
+     content((-2.4, 3.071), [#text(size: 9pt)[First private chart]])
+     content((2.4, 3.071), [#text(size: 9pt)[Second private chart]])
+     content((0, -0.7755), [#text(size: 9pt)[$K_(X_i) inter K_(Y_j)=H "for" "every" i,j$]])
+   })
+
+================ Perfect-completeness-for-2-to-1-games-September-23-2026 #0 ================
+-- statements carrying fit= or a placement --
+   \node[fit=(left)(right),inner sep=0pt] (cards) {}
+   \node[align=center,text width=14cm,below=5mm of cards.south]
+  {Neither decoder is supplied the hidden upper sum
+   $X=\sum_{0\ne v\in\ker A}v\otimes h_v$.}
+-- emitted --
+   #cetz.canvas({
+     import cetz.draw: *
+     content((3.2, 0), [#text(size: 9pt)[Latent sampling structure]])
+     content((11.1, 0.1), [#text(size: 9pt)[Original sampler:#linebreak()separate calls at the same node]])
+     content((3.2, -0.55), [#text(size: 9pt)[ancestors]])
+     content((3.2, -1.25), [#box(inset: 0.1764cm, radius: 2pt, stroke: (paint: rgb("#000073"), thickness: 0.4pt, miter-limit: 10), fill: rgb("#f7f7ff"), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds"); #align(center)[#text(size: 9pt)[$D_j$: upper matrix $M$]]])])
+     line((3.2, -0.78), (3.2, -0.9198), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ")>", fill: black)))
+     line((0, -1.25), (1, -1.25), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10, dash: "dashed"))
+     line((5.4, -1.25), (6.6, -1.25), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10, dash: "dashed"))
+     content((0.6, -1.78), [#text(size: 8pt)[upper#linebreak()cut]])
+     content((3.2, -2.05), [#text(size: 9pt)[$dots.v$]])
+     content((5.45, -2), [#text(size: 8pt)[$j>i$; not necessarily#linebreak()adjacent levels]])
+     content((3.2, -2.85), [#box(inset: 0.1764cm, radius: 2pt, stroke: (paint: rgb("#000073"), thickness: 0.4pt, miter-limit: 10), fill: rgb("#f7f7ff"), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds"); #align(center)[#text(size: 9pt)[$D_i$: lower matrix $S$]]])])
+     line((3.2, -1.58), (3.2, -1.82), stroke: (thickness: 0.4pt, miter-limit: 10))
+     line((3.2, -2.28), (3.2, -2.54), stroke: (thickness: 0.4pt, miter-limit: 10))
+     line((0, -2.85), (1, -2.85), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10, dash: "dashed"))
+     line((5.4, -2.85), (6.6, -2.85), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10, dash: "dashed"))
+     content((0.6, -3.38), [#text(size: 8pt)[lower#linebreak()cut]])
+     content((1.65, -3.95), [#text(size: 9pt)[ordinary $C$]])
+     content((4.7, -3.95), [#text(size: 9pt)[$C_* = D_(i-1)$]])
+     line((2.763, -3.16), (2.024, -3.684), stroke: (thickness: 0.4pt, miter-limit: 10))
+     line((3.623, -3.16), (4.337, -3.684), stroke: (thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ")>", fill: black)))
+     content((3.2, -4.65), [#box(width: 6.735cm, inset: 0.3333em, [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds"); #align(center)[#text(size: 8pt)[$C_*$ is the original sampler's latent child.#linebreak()The modified-$i$ law uses no path below $D_i$.]]])])
+     content((11.1, -1.45), [#box(width: 5.553cm, inset: 0.1764cm, radius: 2pt, stroke: (paint: rgb("#000073"), thickness: 0.4pt, miter-limit: 10), fill: rgb("#f7f7ff"), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds"); #align(center)[#text(size: 9pt)[Own bucket at $D_p$#linebreak()$h_(p,v) tilde.op nu_(D_p)$]]])])
+     content((11.1, -3.35), [#box(width: 5.553cm, inset: 0.1764cm, radius: 2pt, stroke: (paint: rgb("#000073"), thickness: 0.4pt, miter-limit: 10), fill: rgb("#f7f7ff"), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds"); #align(center)[#text(size: 9pt)[Stopped ancestor call at $D_p$#linebreak()$h' tilde.op nu_(D_p)$]]])])
+     line((11.1, -0.5), (11.1, -0.9138), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ")>", fill: black)))
+     content((11.1, -0.7069), [#text(size: 8pt)[fresh tape]], anchor: "west", padding: 0.1176cm)
+     line((11.1, -2.4), (11.1, -2.814), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ")>", fill: black)))
+     content((11.1, -2.607), [#text(size: 8pt)[fresh tape]], anchor: "west", padding: 0.1176cm)
+     content((11.1, -4.65), [#box(width: 6.035cm, inset: 0.3333em, [#set text(hyphenate: false, top-edge: "cap-height", bottom-edge: "baseline"); #align(center)[#text(size: 8pt)[Independent conditional on the domains and shared path;#linebreak()no call is reused in the other array.]]])])
+     content((-0.2, -5.35), [#box(width: 7.194cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10), fill: rgb("#fffff5"), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds"); #text(size: 9pt)[Left decoder: functions on $E$#linebreak() $E$, path through $D_i$, and $A$#linebreak() Full $S$#linebreak() $(M_D)_(D != D_j,D_i)$ on $E$#linebreak() $(h_v)_("Av" != 0)$ on $E$#linebreak() No $a_i$ or projection metadata is supplied.]])], anchor: "north-west")
+     content((14.5, -5.35), [#box(width: 7.194cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10), fill: rgb("#fffff5"), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds"); #text(size: 9pt)[Right decoder: functions on $O$#linebreak() $O$, path through $D_i$, $A$, and $a_i$#linebreak() Only $S mod chevron.l a_i chevron.r$#linebreak() $(M_D)_(D != D_j,D_i)$ on $O$#linebreak() $(h_v)_("Av" != 0)$ on $O$#linebreak() The missing component of $S$ is not supplied.]])], anchor: "north-east")
+     content((7.15, -9.496), [#box(width: 14.24cm, inset: 0.3333em, [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds"); #align(center)[#text(size: 9pt)[Neither decoder is supplied the hidden upper sum $X= sum_(0 != v in ker A)v ⊗ h_v$.]]])])
+   })
+

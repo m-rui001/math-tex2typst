@@ -1,0 +1,12 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+   A-C1-Counterexample-to-the-Entropy-Conjecture- body bare `/`=7     runaway bars on the page=4  worst deficit 188.2pt
+        crop p5 bar 83.8pt wide, ink above 4.2pt below 57.3pt -> r96_0_0.png
+        crop p5 bar 83.8pt wide, ink above 4.2pt below 57.3pt -> r96_0_1.png
+   A-Capacity-Criterion-for-Four-State-Potts-Reco body bare `/`=12    runaway bars on the page=7  worst deficit 36.4pt
+        crop p3 bar 22.5pt wide, ink above 5.5pt below 36.6pt -> r96_1_0.png
+        crop p3 bar 24.8pt wide, ink above 5.5pt below 38.9pt -> r96_1_1.png
+   A-Charged-Reduction-of-the-Spacetime-Penrose-I body bare `/`=98    runaway bars on the page=40  worst deficit 375.2pt
+        crop p3 bar 12.8pt wide, ink above 38.6pt below 49.7pt -> r96_2_0.png
+        crop p6 bar 40.5pt wide, ink above 11.2pt below 58.1pt -> r96_2_1.png
+
+3 papers read, 3 papers carry a runaway bar, 51 bars total

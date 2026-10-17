@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1.05cm,y=.9cm,>=Latex,font=\small]
+  \fill[orange!8] (-2.9,1.05) rectangle (2.9,1.55);
+  \fill[orange!8] (-2.9,-1.55) rectangle (2.9,-1.05);
+  \draw[orange!65!black,dashed] (-2.9,1.05) rectangle (2.9,1.55);
+  \draw[orange!65!black,dashed] (-2.9,-1.55) rectangle (2.9,-1.05);
+  \draw[orange!80!black,very thick] (-2.5,1.3)--(2.5,1.3);
+  \draw[orange!80!black,very thick] (-2.5,-1.3)--(2.5,-1.3);
+  \draw[gray,densely dotted] (-3.1,0)--(3.1,0);
+  \draw[blue!65!black,very thick] (-2.6,-.4)--(2.6,.4);
+  \draw[gray,dashed] (1.2,-1.3)--(1.2,1.3);
+  \fill (0,0) circle (1.4pt) node[below left] {$z$};
+  \fill (1.2,0) circle (1.4pt) node[below right] {$q=z+h$};
+  \fill[blue!65!black] (1.2,.185) circle (1.8pt)
+      node[above left=2pt] {$X=F_0(x)$};
+  \fill[orange!80!black] (1.2,1.3) circle (1.8pt)
+      node[above=5pt] {$Y_+(X)=q+dn$};
+  \fill[orange!80!black] (1.2,-1.3) circle (1.8pt)
+      node[below=5pt] {$Y_-(X)=q-dn$};
+  \draw[->] (-4.7,-1.5)--(-4.7,1.65) node[above] {$n$};
+  \node[anchor=east] at (-3.05,1.3) {$v=d$};
+  \node[anchor=east] at (-3.05,-1.3) {$v=-d$};
+  \node[blue!65!black,anchor=west] at (2.8,.48) {retained plate};
+  \node[anchor=west] at (3.2,0) {$v=0$};
+\end{tikzpicture}

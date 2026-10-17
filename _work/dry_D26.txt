@@ -1,0 +1,18 @@
+################ D26  (D26-加倍Hilbert子集无双Lipschitz有限维嵌入.md)
+before: bytes=188412 lines=1270
+ROW line=1090  sites=2  pipes 7->5  $=14(parity even)
+OLD| | $(1+4D)n^{-4}$、$4D^2r/L_x$ | tex:269 | 水平二阶矩的两项合成 | $\|u\|\le D$ 与均值误差的乘积结构；论文用 $D$、Lean 用 $2D$，系数不可逐项对齐（分歧 7），结构（常数次项 + $D$ 二次项，乘 $t$）一致 |
+NEW| | $(1+4D)n^{-4}$、$4D^2r/L_x$ | tex:269 | 水平二阶矩的两项合成 | $\lVert u\rVert\le D$ 与均值误差的乘积结构；论文用 $D$、Lean 用 $2D$，系数不可逐项对齐（分歧 7），结构（常数次项 + $D$ 二次项，乘 $t$）一致 |
+ROW line=1096  sites=2  pipes 7->5  $=18(parity even)
+OLD| | `horizontalCoefficient D = 4+8D(2D+1)` | Lean 侧；`Energy::horizontalCoefficient` | 水平能量 $\le$ 系数 $\times t$ | 由 2（平方三角）+ 2（均值系数）+ $2D$（$\|u\|$ 界）+ $(2D+1)$（均值定位）机械拼出，`unfold; nlinarith` 收尾；$D$ 大时 $16D^2$ 阶 ⇒ $t\ll1/D^2$，论文侧由 $n\to\infty$ 吸收 |
+NEW| | `horizontalCoefficient D = 4+8D(2D+1)` | Lean 侧；`Energy::horizontalCoefficient` | 水平能量 $\le$ 系数 $\times t$ | 由 2（平方三角）+ 2（均值系数）+ $2D$（$\lVert u\rVert$ 界）+ $(2D+1)$（均值定位）机械拼出，`unfold; nlinarith` 收尾；$D$ 大时 $16D^2$ 阶 ⇒ $t\ll1/D^2$，论文侧由 $n\to\infty$ 吸收 |
+ROW line=1116  sites=2  pipes 7->5  $=10(parity even)
+OLD| | $c_p=(\mathbb E\|g\|^p)^{1/p}$ | tex:393（cor:lp） | 归一化 Gauss 级数精确等距 | 有限性来自"高斯全体有限矩"，$p=\infty$ 无对象（$c_\infty=\infty$）；不除 $c_p$ 则下游常数乘 $c_p$ 幂。最优性论文未述，形式化缺席，此条仅论文有 |
+NEW| | $c_p=(\mathbb E\lVert g\rVert^p)^{1/p}$ | tex:393（cor:lp） | 归一化 Gauss 级数精确等距 | 有限性来自"高斯全体有限矩"，$p=\infty$ 无对象（$c_\infty=\infty$）；不除 $c_p$ 则下游常数乘 $c_p$ 幂。最优性论文未述，形式化缺席，此条仅论文有 |
+after: bytes=188439 (delta +27) lines=1270 rows_fixed=3 sites_fixed=6 sites_registered=0
+[DRY] nothing written to the note
+D26 file-count \lVert  = 10
+D26 file-count \lvert  = 3
+D26 file-count \mid  = 0
+D26 file-count \upharpoonright = 0
+D26 file-count \Vert  = 0

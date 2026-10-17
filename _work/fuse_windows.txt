@@ -1,0 +1,72 @@
+material_macro_tokens=
+D08:199 \betam -> \beta m | [SUB] e."（`trees:209`）。正性来自严格递增：$n_\beta\ge1$ 时 $n_\betam_{d+1}-m_d\ge m_{d+1}-m_d>0$，加上终端 $m_L=1$ 时给出
+D08:199 \betam -> \beta m | [SUB] _L=1$ 时给出真正的概率归一。同时严格递增使 $\gamma_\beta=m_d-n_\betam_{d+1}$ 在 $n_\beta\ge2$ 时**必负**，在 $n_\beta=1$
+D08:291 \betam -> \beta m | [SUB] 那句（`trees:209`）我在 §1 已核对：$n_\beta\ge1$ 给出 $n_\betam_{d+1}-m_d\ge m_{d+1}-m_d>0$。
+D08:293 \betam -> \beta m | [SUB] k$ 阶时恰有 $k-1$ 个 fresh 系数，全部为负，绝对值乘积 $\prod(n_\betam_{d_\beta+1}-m_{d_\beta})$，除以 $n$ 的逐层归一后正好是 $
+D08:381 \betam -> \beta m | [SUB] q$，两边乘 $-1$ 再移项得 $q+\sum_\beta(m_{d_\beta}-n_\betam_{d_\beta+1})=m_{d+1}$（子树根在深度 $d+1$，其入边项 $m_{
+D125:448 \lambdah -> \lambda h |   : IsGeodesic σ`。所以"每条"在项层面就是 $\lambda\sigma.\lambdah\sigma.\ldots$，即对任意 $\sigma$ 构造证明；没有"存在一条"、没有
+D139:276 \lem -> \le m |   a)` $\le O(b^{2/0.9}\log\log b)\le b^4$，于是 $\lem:usable$ 的全部假设在同一绝对截断下对每一层成立（481--482：Thus th
+D139:278 \lem -> \le m |  _ih_i^2$（hierarchy.tex:123--124）转成 2 范数形式，供 $\lem:sections$ 的 $\|y\|\le R$ 消费（final.tex:127--1
+D139:297 \lem -> \le m |  _r<B^{1/0.9}$、$\sum_{i=1}^r b_i\le2b_1$。逐块套 $\lem:usable$：首块用无 $H$ 的基底版本（blocks.tex:281--283），
+D139:307 \lem -> \le m |  首块 $i=1$：由 $\lem:block-cell$ 取 $\lambda_1$ 使 $t=y_1/h_1-\lamb
+D139:313 \lem -> \le m |  块去掉，让第 $r$ 块直接对接 $y_r$。失败在 $\bar g_r$ 的均值性质：$\lem:shear$ 之后需要每个 $y$ 都有非空模式，而 $g_r$ 可以在任意点为 0（b
+D139:335 \lem -> \le m |  致界（246--251）。[推测] 第二条：要求所有模式共用同一个固定二进制 cube。$\lem:usable$ 的锚点依赖后缀（hierarchy.tex:139--142），固定 c
+D139:352 \lem -> \le m |  124），$D=O(s^2+1)$、$R$ 被 $s$ 的固定多项式控制（125）。套 $\lem:sections$ 得至多 $(Cm^2)^D$ 个 $J_a$ 与 $\eqref{e
+D139:352 \lem -> \le m |  $ 用掉。把标签表限制在 $\sqrt m\le u_a\le U_n$（177）后套 $\lem:horizontal$，得洞集 $U_a=(\R^m/\Lambda_h)\setmin
+D139:354 \lem -> \le m |  相乘正好是"总负载 $\ge c_3\rho$"。阈值 $\sqrt m$ 有两重身份：$\lem:horizontal$ 的渐近形式需要 $\min u_a\ge\sqrt m$（pre
+D139:356 \lem -> \le m |  体与标签表都要重算，$\gamma_D$ 的半径账 $R$ 变成 $R(1+1/k)$，$\lem{sections}$ 的 $R\le M(1+\log\log n)^M$ 余量被吃掉，
+D139:383 \lem -> \le m |  1\log(b_1+1)+1)$ | hierarchy.tex:123--125 | $\lem:sections$ 的 $\lVert y\rVert\le R$ | 半径变大要求更大
+D139:442 \lem -> \le m |  lta$ | $\le n^{-2n}$ | final.tex:267--269 | $\lem:completion$ 判据 | 松到 $n^{-n}$ 时 $\delta<(1-\d
+D167:48 \langlev -> \langle v | [SUB] 3$ 中四个向量不可能有秩 $4$ 的 Gram 矩阵。非对角项用极化恒等式 $\left\langlev_i,v_j\right\rangle=(\lvert v_i\rvert^2+\lver
+D167:84 \langlev -> \langle v | [SUB] x:209` 到 `transform.tex:232`）用了端点支撑不等式 $\left\langlev_0,z\right\rangle\le(F_{u_r}(\lambda_r)-F_{u_
+D167:84 \langlev -> \langle v | [SUB] _{u_r}(\lambda_r)-F_{u_r}(\lambda))/r\le\left\langlev_r,z\right\rangle$（`transform.tex:215` 到 `tra
+D167:110 \langleg -> \langle g |  9`），以及线性增长 $P_*(\lambda)-P_*(\lambda_*)-\left\langleg,\lambda-\lambda_*\right\rangle\ge\gamma\lVer
+D167:110 \langlev -> \langle v | [SUB] 个几何量 $\eta=\min_{\lVert z\rVert=1}\max_i\left\langlev_i-g,z\right\rangle>0$、$\zeta=\min_{i<j}\oper
+D167:287 \langleg -> \langle g |  0$、$\zeta>0$ | 线性增长 $P_*-P_*(\lambda_*)-\left\langleg,\cdot\right\rangle\ge\gamma\lVert\cdot\rVert
+D216:775 \ltl -> \lt l |  $0\ltl=07-observations.tex:940$ 那种形式），我没有从素材里找到进一步的
+D244:177 \sqrth -> \sqrt h |  -blocks.tex:340-343）；密度到平方根积分的转换不等式 $(\sqrtg-\sqrth)^2\le|g-h|$ 加 Cauchy-Schwarz（04-blocks.tex:3
+D245:216 \ranglem -> \rangle m | [SUB] 场；新辅助场 $y^a=Jw^a-j\sum_l\langle \partial_lw^a\ranglem^{l-1}-j\sum_{b<a}\langle \partial_{y^b}w^a\r
+D282:145 \ellr -> \ell r | [SUB] 因子单独就贡献常数倍 $\ell\log\ell$；最大性 $R_\ell\le2n<R_\ellr_{\ell+1}$ 且多出的一项 $O(\log(\ell+2))$（all-lengt
+D292:44 \leqc -> \leq c |  ：它是双有理不变量。第三件：若 $V\to Z$ 支配、$Z$ 几何整，则 $c(V/k)\leqc(V_{\eta_Z}/k(Z))$（build/paper.tex:165-169），证
+D314:534 \deltaR -> \delta R |  可依赖 $\delta$。上界：同侧路径每个 port 质量至多 $\mathcal H(\deltaR)=O_\delta(R^{-1/4})$；到另一侧的路径，令 $r$ 是该源 port 
+D317:92 \lem -> \le m |  sup_g\lVert\pi_t(g)-\lambda(g)\rVert$ 都小,这是 $\lem{tree}$ 真正吃力的地方(见 `main.tex:365` 到 `main.tex:
+D33:406 \lceilD -> \lceil D | [SUB] threshold as stated, equivalently with $\left\lceilD^{1.01}\right\rceil$."。删圈边、留全部顶点；极大性使剩余图无长 $\
+D366:91 \toM -> \to M | [SUB] 现在进入构造侧。目标：PPT 映射 $L:M_{4}(\mathbb C)\toM_{4}(\mathbb C)$ 与二十个不同射影方向 $[x_i]$，使 §6 的机制把
+D366:119 \toM -> \to M | [SUB] ，收缩。对 PPT 自映射 $\Psi_1,\Psi_2:M_{m}(\mathbb C)\toM_{m}(\mathbb C)$，取 $A_i=\Psi_i^\dagger(I_m)\s
+D366:131 \toM -> \to M | [SUB] 小不超过 $\kappa<Q/K$"；输出是 $\Psi:M_{n}(\mathbb C)\toM_{D}(\mathbb C)$、$\Psi(E_{ij})=c_{qr}P_iP_j$（
+D374:153 \langleB -> \langle B |  gle=-2i\|B\|_2^2$，而原文 main.tex:672 写 $0=\left\langleB,-2iB\right\rangle=2i\left\lVert B\right\rVer
+D420:159 \ella -> \ell a | [SUB] 积性"，那需要额外的先验界；这里给出的路线只用了它已经证明的偶矩。之后对 $f=\sum_\ella_\ellf_\ell$ 一切实向量做同样结论，特征函数把联合向量 $(H(f_1),\l
+D497:98 \inX -> \in X | [SUB] .tex:217`）。于是 $x(\operatorname{Fr}_v)$ 对一切 $x\inX_{\ell}(M)$、$v\nmid\ell$ 有定义。若 $M/\mathbb Q$ 
+D497:106 \inX -> \in X | [SUB] 于是 $y$ 是 $z=|C|^{-1}\operatorname{cor}_{M/F}y\inX_{\ell}(F)$ 的限制（`sections/characters.tex:320`
+D497:116 \hookrightarrowX -> \hookrightarrow X | [SUB] me{Ind}_{\langle c\rangle}^{R}(\mathrm{sign})\hookrightarrowX_{\ell}(M)\hookrightarrow\mathbb Q_\ell[R]$，其
+D497:124 \inX -> \in X | [SUB] atorname{Gal}(B/\mathbb Q)$ 按非平凡特征作用的非零 $\psi\inX_{r}(B)$；`sections/identification.tex:57` 用忠实
+D497:128 \inX -> \in X | [SUB] 记 $C=\langle\gamma\rangle$）与每个真子群 $D<C$，存在 $x\inX_{\ell}(L)$ 满足 $x\inX_{\ell}(L)^{D}$、$E_Cx=0$
+D497:128 \inX -> \in X | [SUB] ngle$）与每个真子群 $D<C$，存在 $x\inX_{\ell}(L)$ 满足 $x\inX_{\ell}(L)^{D}$、$E_Cx=0$、$x\notin\sum_{i=1}^r
+D497:150 \toX -> \to X | [SUB] 的 $x$。沿 $\beta|_{U'}$ 拉回给出线性单射 $j:X_{\ell}(L)\toX_{\ell}(F')$，$y=j(x)$：单的原因是其定义同态像为开，而在开子群上为零的
+D497:154 \inX -> \in X | [SUB] 我的两个错就在这条链上。第一个错是想跳过 $H_i$：我以为 $E_Cx=0$ 与 $x\inX_{\ell}(L)^D$ 这两条就把 $x$ 卡住了。实际上求和里的 $\delta^j
+D497:222 \toX -> \to X | [SUB] 制到 $G_{F'}$ 给出两个拉回 $i_\beta,i_\sigma:X_{r}(L)\toX_{r}(F')$，两者都单：其底层同态像为开，而在有限指标子群上为零的加性 $\math
+D497:224 \inX -> \in X | [SUB] es$ 是大于 $1$ 的正有理整数、不是单位根；于是 $(a_q)_r=1$。每个 $x\inX_{r}(L)$ 在 $u$ 不分歧，故 $i_\beta(x)(\operatornam
+D497:226 \inX -> \in X | [SUB] _{v'})=i_a(x)(\operatorname{Fr}_{v'})$ 对每个 $x\inX_{r}(L)$ 成立。$a$ 模 $P_L$ 的选择起初可以依赖 $q$；$R$ 有限，
+D497:232 \inX -> \in X | [SUB] r}(L)$ 上诱导的作用交叉相容；记 $i$ 为公共的单值，则对 $t\in T$、$x\inX_{r}(L)$ 有 $i(\beta(t)\cdot x)=t\cdot i(x)=i(
+D506:113 \langlex -> \langle x | [SUB] 的一组正交基 $e_1,\dots,e_d$，对每个 $j$ 用并集界处理 $\lvert\langlex_n\otimes y_n,e_j\rangle\rvert\ge\varepsilon/
+D506:127 \langlex -> \langle x | [SUB] -packing.tex:148-158），于是每个被计数的指标给出系数向量 $v_n=(\langlex_n,B_jy_n\rangle)_{j=1}^r$ 且 $\lVert v_n\rVer
+D506:127 \langleA -> \langle A | [SUB] ^\perp$ 上的正投影，$B_j=Q_1A_jQ_2$。系数映射 $z\mapsto(\langleA_j,z\rangle_{\mathrm{HS}})_{j=1}^r$ 是收缩，留下的指标
+D506:129 \langlex -> \langle x | [SUB] 设 $G=\sum_jg_jB_j$（$g_j$ 独立标准正态），中心高斯变量 $Z_n=\langlex_n,Gy_n\rangle$ 的增量方差恰为 $\mathbb E\lvert Z_n-
+D506:189 \langleH -> \langle H |  H=h_b(x_Y(\text{角}))$，原相关是 $c\ne0$，线边缘恒等式给出 $\langleH,H_a\rangle=c$ 对每条线（build/sections/06-activat
+D506:247 \langleV -> \langle V |  。引理说：平方可积随机向量 $V$ 在可分实希尔伯特空间中，$V'$ 是其独立副本，若 $\langleV,V'\rangle=0$ 几乎处处，则 $V=0$ 几乎处处（build/section
+D506:247 \langleV -> \langle V |  落此球，此时两者范数至少 $\epsilon$、距离至多 $\epsilon/2$，故 $\langleV,V'\rangle=\frac12(\lVert V\rVert^2+\lVert V'
+D506:249 \langleg -> \langle g |  vation.tex:502-506）。现在假设那个积分几乎处处为零，条件参数独立给出 $\langleg(p,\cdot),u(e,\cdot)\rangle_{H_w}=0$ 对 $\alph
+D506:249 \langleg -> \langle g |  乎每对 $(p,e)$；对 $e$ 平均并条件于 $R(e)$、套用上面的恒等式，得到 $\langleg(p,\cdot),g(p',\cdot)\rangle_{H_w}=0$ 对 $\alp
+D508:300 \deltaM -> \delta M |  )\delta^2$ 塞进 $\frac1M-\frac{1-\delta}M=\frac\deltaM$,只需 $(1-\delta)\delta\le\frac1M$,而 $\delta\l
+D534:141 \lambdaG -> \lambda G | [SUB] L$、$P\notin I(W')$、以及属于表示 $P=\sum_{\lambda}A_\lambdaG_\lambda+AF_n+a^nB$；表示中一切系数的次数多项式于 $d$，联合仿射高度
+D534:141 \lambdaG -> \lambda G | [SUB] atorname{rem}_{\mathfrak{j}}H+\sum_\lambda C_\lambdaG_\lambda+aC+F_0D$，右边各项次数 $\le T+\Delta$，$\Del
+D548:230 \operatornameSm -> \operatorname Sm |  限多个仿射开覆盖。在其中一个开集（仍记 $S$）上取相对光滑轨迹 $\mathcal U=\operatornameSm(\mathcal V/S)$；平坦与有限呈现给出对每个被选正规纤维 $\mathcal 
+D560:149 \alphah -> \alpha h |   $h\circ\beta$ 用之并用交换性。射线极小逼 $h\circ\alpha=c_\alphah$，$\eta=\mathrm{d}\log h$ 为 $A$ 不变、下降到 $Z_A$ 
+D57:169 \setu -> \set u | [SUB]  $t\notin\{i,j\}$ 抽"一次幂"（$\partial_{u_t}$ 后 $\setu_t=0$），残留二次型在 $u_i,u_j$ 上的展开是 $2c^\sigma_{ji}
+D59:42 \mapstoK -> \mapsto K | [SUB] 把坐标"混洗"；单纯的平移 $Ve_j=e_{j-1}$ 给出的确是 $K_{\ge h}\mapstoK_{\ge h-1}$，但它在无限维里是**满**的（$V$ 酉），这本身没问题，问题在配
+D688:107 \langley -> \langle y |  K$ 的来源。令 $Q=\tfrac12(U+U^*)$，则对每个 $y$ 有 $E_y=\langley,(I-Q)y\rangle\ge q\lVert y\rVert_2^2$。这条不等式是
+D688:117 \langleF -> \langle F |  ,T))^{m_T}$，而调和性给 $\sum_{i\in T}(U^*F)_i=m_T-\langleF,(I-Q)F\rangle=\langle\zeta,Q\zeta\rangle+2\l
+D688:138 \langleu -> \langle u |  $\frac12\sum_ie_i=\langleu,(I-K)u\rangle=\frac qw(\langleu,f_{\mathcal 
+D688:138 \langleu -> \langle u |  c12\sum_ie_i=\langleu,(I-K)u\rangle=\frac qw(\langleu,f_{\mathcal H}\rangle-\lVert u\rVert_2^2)\le
+D688:149 \langlef -> \langle f | [SUB] $\lvert c_B\rvert\le1$ 合起来，得 $\mathbb E\lvert\langlef_{\mathcal H},u\rangle\rvert\le C_\beta NR^{-
+flagged_sites=37

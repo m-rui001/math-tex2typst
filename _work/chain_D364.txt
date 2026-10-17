@@ -1,0 +1,10 @@
+### region_check D364 432
+seg=242 hdr=0 sep=1 rows=23 hist={6: 22}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+rc=0
+### pipe_table_check D364 (该篇该表窗口，表头竖线数=该表续行应有竖线数)
+TABLE D364 hdr=432 pipes=6 block=22 sep=1 rows=21 hist={6: 22} badpipe=[]
+rc=0

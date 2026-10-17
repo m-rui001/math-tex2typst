@@ -1,0 +1,12 @@
+\documentclass[tikz]{standalone}
+\begin{document}
+\begin{tikzpicture}
+
+  \fill[black] (0,0) circle (1pt);
+  \coordinate (qfaxes) at (1,2);
+  \fill[blue] (3,2) circle (1pt);
+  \draw[red,line width=0.8pt] (qfaxes)--(3,2);
+  \draw[green,line width=0.8pt] (qfaxes)--(0,0);
+
+\end{tikzpicture}
+\end{document}

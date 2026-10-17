@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/uqGTY0eG4l3WX8+DqJ/hsOHsnuQ</id>
+  <title>arXiv Query: search_query=&amp;id_list=2007.14707&amp;start=0&amp;max_results=10</title>
+  <updated>2026-10-15T09:45:12Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2007.14707" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2007.14707v2</id>
+    <title>Planar random-cluster model: fractal properties of the critical phase</title>
+    <updated>2021-01-21T10:02:36Z</updated>
+    <link href="https://arxiv.org/abs/2007.14707v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2007.14707v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper is studying the critical regime of the planar random-cluster model on $\mathbb Z^2$ with cluster-weight $q\in[1,4)$. More precisely, we prove crossing estimates in quads which are uniform in their boundary conditions and depend only on their extremal lengths. They imply in particular that any fractal boundary is touched by macroscopic clusters, uniformly in its roughness or the configuration on said boundary. Additionally, they imply that any sub-sequential scaling limit of the collection of interfaces between primal and dual clusters is made of loops that are non-simple.
+  We also obtain a number of properties of so-called arm-events: three universal critical exponents (two arms in the half-plane, three arms in the half-plane and five arms in the bulk), quasi-multiplicativity and well-separation properties (even when arms are not alternating between primal and dual), and the fact that the four-arm exponent is strictly smaller than 2. These results were previously known only for Bernoulli percolation ($q = 1$) and the FK-Ising model ($q = 2$).
+  Finally, we prove new bounds on the one, two and four arms exponents for $q\in[1,2]$. These improve the previously known bounds, even for Bernoulli percolation.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-07-29T09:39:27Z</published>
+    <arxiv:comment>43 pages, 12 figures. Added since v1: remark 4.2 and section 6.5</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Probability Theory and Related Fields volume 181, 401-449 (2021)</arxiv:journal_ref>
+    <author>
+      <name>Hugo Duminil-Copin</name>
+    </author>
+    <author>
+      <name>Ioan Manolescu</name>
+    </author>
+    <author>
+      <name>Vincent Tassion</name>
+    </author>
+    <arxiv:doi>10.1007/s00440-021-01060-6</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00440-021-01060-6" title="doi"/>
+  </entry>
+</feed>

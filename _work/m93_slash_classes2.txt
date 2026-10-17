@@ -1,0 +1,78 @@
+papers replayed: 724   slash-carrying emissions: 267 over 125 papers
+  shipped AS MATHS (page stacks a fraction): 261 spans over 122 papers
+  already in the quoted fallback           : 6 spans over 4 papers
+     REF Pure-Point-Spectrum-for-the-Two-Dimensio L_*/3+O(b_m)                 "L_*/3+O(b_m)"
+     REF Pure-Point-Spectrum-for-the-Two-Dimensio L_*/2                        "L_*/2"
+     REF Relative-independence-of-the-separable-q W=E^*/X_0                    "W=E^*/X_0"
+     REF Staggered-extraction-for-exact-matrix-mu 6\cdot C_*/6=C_*             "6 dot.op C_*/6=C_*"
+     REF The-Kakeya-maximal-conjecture-in-three-d /b                           "/b"
+     REF The-Kakeya-maximal-conjecture-in-three-d /b                           "/b"
+  maths spans whose slashes are ALL inside quotes: 0
+
+slashes per maths span: {1: 246, 2: 14, 6: 1}
+  top>letter/letter      60
+  top>digit/digit        51
+  top>letter/digit       41
+  top>digit/letter       24
+  script>digit/digit     18
+  top>punct/digit        16
+  top>punct/letter       16
+  script>letter/letter   14
+  script>digit/letter    13
+  script>letter/digit    12
+  top>letter/punct       5
+  top>digit/punct        3
+  top>quote/digit        1
+  top>quote/quote        1
+  script>quote/digit     1
+  top>punct/punct        1
+  script>quote/letter    1
+  script>digit/punct     1
+  top>letter/quote       1
+
+`//` (a TeX row break, must NOT become two visible slashes):
+  maths strings the emitter receives that hold `//`: 0
+  emissions above that hold `//`: 0
+
+named fraction forms in the maths the emitter receives:
+  \frac     38 maths spans
+  \dfrac    6 maths spans
+  \tfrac    25 maths spans
+  \cfrac    0 maths spans
+  \binom    0 maths spans
+  \over     0 maths spans
+  \nicefrac 0 maths spans
+  \slash    0 maths spans
+
+30 maths spans with a slash inside a script group:
+   A-Power-Saving-for-Polynomial-Difference \displaystyle j'_v\in\{(a- j'_v in \{(a-1) ell_s+1, dots.h ,a ell_s\}, bb(P) ( "retained" "
+   A-classification-of-finite-Euclidean-Ram t(1/t)=1                   t(1/t)=1
+   A-closed-Ricci-flow-with-bounded-scalar- |\operatorname{Ric}|\le C\ | "Ric" | lt.eq C delta^L(r^2+b_0 theta^2)^(-a/2)
+   A-counterexample-to-the-nearby-Lagrangia \|\Delta p_B\|\geq R(b)|t| \| Delta p_B\| gt.eq R(b)|t|(K delta_0-C_1/c)
+   A-uniform-Hilbert-transform-estimate-for \sim G^{-1/4}d(i)          tilde.op G^(-1/4)d(i)
+   A-uniform-Hilbert-transform-estimate-for \displaystyle\frac{QH_j}{w frac("QH"_j, w) =G^(1/4)
+   Ambiently-homeomorphic-isolated-hypersur \operatorname{Re}(q/c)     "Re" (q/c)
+   An-explicit-exact-Hausdorff-gauge-for-SL P(k+1/2,0)                 P(k+1/2,0)
+   Conditional-permutations-in-a-revealed-s T^{(\ell)}\sim p_{n/K}     T^(( ell )) tilde.op p_(n/K)
+   Continuum-Coulomb-hardness-with-binary-n (1/2,h)                    (1/2,h)
+   Continuum-Coulomb-hardness-with-binary-n (3/2,h)                    (3/2,h)
+   Cylinder-amplitudes-and-logarithmic-brid B(y/x)                     B(y/x)
+   Cylinder-amplitudes-and-logarithmic-brid m\longmapsto(qm,m/q)       m arrow.r.long.bar ("qm",m/q)
+   Deterministic-nonbipartite-Ramanujan-gra (-s-e/20,s+e/20)           (-s-e/20,s+e/20)
+   Endpoint-pointwise-convergence-for-the-S f_i(s)=(-ks/2)_+           f_i(s)=(-"ks"/2)_+
+   Equality-cases-in-the-sharp-one-dimensio \|Q_hA_j\|_{\mathrm{HS}}^2 \|Q_"hA"_j\|_( upright("HS") )^2 lt.eq m(s_h+e_j)^(1/r)
+   Hilberts-tenth-problem-over-the-rational \displaystyle h(\widetilde h( tilde(A) ) lt.eq sum_(i=1)^3h( tilde(s)_i)+ log 3 lt.eq 3H_K|
+   Invariant-projection-counterexamples-for \mathbb P_j(H_k^{(1)}\mid  bb(P)_j(H_k^((1)) divides x) lt.eq e^(-L_j/400)
+   Invariant-projection-counterexamples-for \mathbb P_j(H_k^{(2)}\mid  bb(P)_j(H_k^((2)) divides y) lt.eq e^(-L_j/400)
+   Mass-and-covering-exponents-for-fixed-le B_g^2\lesssim(1+g)^{-1/2}  B_g^2 "lesssim" (1+g)^(-1/2)
+   Mass-and-covering-exponents-for-fixed-le h^{1/2+o(1)}               h^(1/2+o(1))
+   Memory-and-precision-in-noiseless-Gaussi \|f_j\|_q\le e^{Cd}R^a r^{ \|f_j\|_q lt.eq e^(C d)R^a r^(a-m(1-1/q))
+   Memory-and-precision-in-noiseless-Gaussi N^{1/q}                    N^(1/q)
+   Memory-and-precision-in-noiseless-Gaussi \displaystyle\int_{B(z,r)} integral_(B(z,r))h#h(0.1667em) d sigma lt.eq e^(C d)N^(1/q)("Rr"
+   Memory-and-precision-in-noiseless-Gaussi R'=R\exp(Cd/a)N^{1/(aq)}   R'=R exp ("Cd"/a)N^(1/("aq"))
+   Metric-measure-limits-of-subcritical-FK- J^*=P^*m^*=\Theta(N/\lambd J^*=P^*m^*= Theta (N/ lambda )
+   Nagatas-Conjecture-for-Plane-Curves-Sept \bigl(1+a/9,-a(1+a/9)\bigr (1+a/9,-a(1+a/9) )
+   Nagatas-Conjecture-for-Plane-Curves-Sept -a(1+a/9)                  -a(1+a/9)
+   Near-square-root-logarithmic-integrality d((s,x),(s,x'))\le C\tau(m d((s,x),(s,x')) lt.eq C tau (m/N)( log m)^2
+   Near-square-root-logarithmic-integrality \le C\sqrt m(\log m)^{5/2} lt.eq C sqrt(m) ( log m)^(5/2)
+script-group slashes total: 18

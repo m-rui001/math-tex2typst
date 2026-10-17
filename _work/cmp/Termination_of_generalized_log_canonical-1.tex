@@ -1,0 +1,32 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{tikz-cd}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\M}{\mathbf{M}}
+\DeclareMathOperator{\Exc}{Exc}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\Sing}{Sing}
+\DeclareMathOperator{\cent}{cent}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\IC}{IC}
+\DeclareMathOperator{\Gr}{Gr}
+\newcommand{\BM}{\mathrm{BM}}
+\begin{document}
+\begin{tikzcd}[column sep=3.2cm,row sep=large]
+ (Y_i,\Theta_i) \arrow[r,Rightarrow,"\Theta_i'\leq\Theta_i"]
+   \arrow[d,"h_i"'] &
+ (Y_i,\Theta_i') \arrow[r,dashed,"\text{finite small program}"] &
+ (Y_{i+1},\Theta_{i+1}) \arrow[d,"h_{i+1}"] \\
+ X_i \arrow[r,"f_i"'] & Z_i & X_{i+1}\arrow[l,"f_i^+"]
+\end{tikzcd}
+\end{document}

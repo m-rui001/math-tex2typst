@@ -1,0 +1,31 @@
+{
+  "paper": "Weak-pure-infiniteness-and-O-infinity-absorption-September-25-2026",
+  "ok": true,
+  "typ_lines": 1342,
+  "included_pdf_pages": 0,
+  "formulas": 1612,
+  "math_failed": 0,
+  "labels": 196,
+  "equations": 22,
+  "theorems": 3,
+  "figures": 1,
+  "tables": 1,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "1612"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl",
+    "bookmark"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Weak-pure-infiniteness-and-O-infinity-absorption-September-25-2026\\main.typ:590:309\n    │\n590 │ Recall that a $C^(*)$-algebra $D$ is #emph[exact] if tensoring every short exact sequence with $D$ in the minimal tensor norm preserves exactness. Thus exactness identifies the quotient norm on $\\( D ⊗_min J \\) \\/ \\( D ⊗_min I \\)$ with the spatial norm on $D ⊗_min \\( J \\/ I \\)$, for every closed ideal $I lt.tri J$. The next proof starts from a strict inequality between these norms.\n    │                                                                                                                                                                                                                                                                                                                      ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Weak-pure-infiniteness-and-O-infinity-absorption-September-25-2026\\main.typ:605:158\n    │\n605 │   Take a nonexact $C^(*)$-algebra $W$, whose existence is recorded in #cite(label(\"Pisier1995\")) Remark (i) following Theorem 1, pp. 163–164. There are $I lt.tri J$ such that the canonical surjection\n    │                                                                                                                                                               ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Weak-pure-infiniteness-and-O-infinity-absorption-September-25-2026\\main.typ:623:313\n    │\n623 │   The cutdown coefficients lie in $J$, and no quasicentrality is needed. This argument uses convergence on each fixed element of $J_D$. A related fixed-element cutdown mechanism appears in #cite(label(\"Pisier1995\")) proof of Lemma 3, p. 165; the calculation above establishes the stated formula for general $I lt.tri J$ and its approximate-identity net. Equations (6.4) and (6.5) show that the displayed quotient norm depends only on the functions $mu_(upright(bold(v)) \\, m)$. Applying the same compression argument in $J \\/ I$ shows the same for $parallel sum_j v_j ⊗ \\( d_j + I \\) parallel_min$.\n    │                                                                                                                                                                                                                                                                                                                          ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Weak-pure-infiniteness-and-O-infinity-absorption-September-25-2026\\main.typ:942:143\n    │\n942 │   which preserve the ideal kernels in the definition of exactness. For the unitization step, let $A_0$ be a nonunital exact algebra, let $I lt.tri D_0$ be a closed two-sided ideal, and write $q_0 : D_0 arrow.r D_0 \\/ I$. The scalar character $chi : tilde(A)_0 arrow.r bb(C)$ gives, for every $z in tilde(A)_0 ⊗_min D_0$, the bounded decomposition\n    │                                                                                                                                                ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 4,
+  "source": "E:\\math\\_work\\flat\\Weak-pure-infiniteness-and-O-infinity-absorption-September-25-2026.tex"
+}

@@ -1,0 +1,35 @@
+{
+  "paper": "The-Approximation-Threshold-for-Metric-k-Median-September-24-2026",
+  "ok": true,
+  "typ_lines": 1613,
+  "included_pdf_pages": 0,
+  "formulas": 1070,
+  "math_failed": 0,
+  "labels": 166,
+  "equations": 21,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "1070",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "hypcap",
+    "bookmark"
+  ],
+  "macros_skipped": [
+    "\\renewcommand\\bibsection"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-Approximation-Threshold-for-Metric-k-Median-September-24-2026.tex"
+}

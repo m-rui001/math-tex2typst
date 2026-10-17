@@ -1,0 +1,43 @@
+kinds: hole=17 (12 papers)  text=2 (2 papers)
+hole pictures=12  papers=12
+sites=19
+
+== statements carrying a fill rule
+
+[hole] A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-M#2  [scale=1.05,>=Stealth]  \fill[gray!10,even odd rule] (0,0) circle (1.45) (0,0) circle (.55)
+
+[hole] A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-M#2  \begin{scope}[xshift=5cm]   \fill[gray!10,even odd rule] (0,0) circle (1.45) (0,0) circle (.55)
+
+[hole] A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite#3  \fill[black!18,even odd rule]     (2.20,-4.62) circle (1.19cm)     (2.20,-4.62) circle (0.68cm)
+
+[hole] A-Torsion-Free-Group-Algebra-with-Zero-Divisors-Septembe#1  [x=0.83cm,y=0.83cm,>=Latex,font=\small,line width=0.6pt] \begin{scope}  \fill[gray!17,even odd rule] (0,0) circle (1.13) (0,0) circle (0.52)
+
+[hole] BKT-universality-for-height-and-planar-spin-fields-Septe#1  [scale=.70]  \fill[blue!10,even odd rule] (-3,-3) rectangle (3,3)                            (-2.15,-2.15) rectangle (2.15,2.15)
+
+[hole] Essential-Singularity-of-the-Correlation-Length-in-the-P#1  \end{scope} \begin{scope}[xshift=8.6cm,yshift=2.3cm]  \fill[blue!12,even odd rule] (0,0) circle (1.68) (0,0) circle (1.4)
+
+[hole] Essential-Singularity-of-the-Correlation-Length-in-the-P#1  \fill[blue!12,even odd rule] (0,0) circle (.42) (0,0) circle (.35)
+
+[hole] Exponential-decay-in-two-dimensional-classical-On-models#0  [scale=0.95]  \path[fill=gray!15,even odd rule]    (-1.78,-1.78) rectangle (1.78,1.78)    (-1.22,-1.22) rectangle (1.22,1.22)
+
+[text] Nonuniqueness-with-local-conservation-for-the-hard-spher#0  \begin{scope}[shift={(3.1,6.65)}]     \foreach \inner/\outer/\period in       {1.025/1.475/.36,.678/0.989/.16,.449/0.661/.0711}{       \begin{scope}[even odd rule]         \clip (0,0) circle[radius=\outer]           (0,0) circle[radius=\inner];         \foreach \k in {-23,...,23}{           \path[jetplus] ({\k*\period},-1.6)    
+
+[text] Positive-scalar-curvature-forces-rational-inessentiality#0  \draw[->] (z.south)--node[right] {$F_k$, nonzero degree} (1.85,-2.65)
+
+[hole] Pure-Point-Spectrum-for-the-Two-Dimensional-Anderson-Mod#1  [x=1cm,y=1cm,>=Stealth, line width=0.55pt]   \fill[black!12,even odd rule]     (-3.25,-3.25) rectangle (3.25,3.25)     (-2.60,-2.60) rectangle (2.60,2.60)
+
+[hole] Pure-Point-Spectrum-for-the-Two-Dimensional-Anderson-Mod#1  \fill[blue!14,even odd rule]     (-1.94,-1.94) rectangle (1.94,1.94)     (-1.45,-1.45) rectangle (1.45,1.45)
+
+[hole] Quantitative-Superexponential-Bounds-for-van-der-Waerden#0  [scale=1.05,>=Latex,     every node/.style={font=\small}]   \path[fill=blue!9,even odd rule]     (0,0) circle[radius={sqrt(2)}] (0,0) circle[radius=1]
+
+[hole] Rigidity-of-Smooth-Billiards-with-a-Continuous-Caustic-C#0  [scale=.85,>=Stealth] \fill[deepblue!9,even odd rule] (0,0) ellipse (3 and 2)  (0,0) ellipse (2.70 and 1.5133)
+
+[hole] The-Gaussian-free-field-limit-of-integer-Lipschitz-heigh#1  [x=0.42cm,y=0.42cm,>=Stealth,font=\small]   \fill[gray!12,even odd rule] (-7,-7) rectangle (7,7)                               (-5,-5) rectangle (5,5)
+
+[hole] The-Gaussian-free-field-limit-of-integer-Lipschitz-heigh#1  \fill[gray!24,even odd rule] (-1,-1) rectangle (1,1)                               (-.5,-.5) rectangle (.5,.5)
+
+[hole] The-Gaussian-free-field-limit-of-integer-Lipschitz-heigh#1  \fill[gray!24,even odd rule] (-1,-1) rectangle (1,1)                               (-.5,-.5) rectangle (.5,.5)
+
+[hole] The-critical-Liouville-quantum-sphere-and-geometric-limi#3  \fill[shortcutwall,even odd rule]   (0,0) circle (1.88) (0,0) circle (1.82)
+
+[hole] The-critical-logarithmic-correction-for-the-planar-XY-mo#0  \path[fill=gray!25,even odd rule]       (-1.56,-1.56) rectangle (1.56,1.56)       (-1.34,-1.34) rectangle (1.34,1.34)

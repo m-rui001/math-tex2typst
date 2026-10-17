@@ -1,0 +1,12 @@
+\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\newsavebox{\ba}\newsavebox{\bb}\newsavebox{\bc}\newsavebox{\bd}
+% non-uniform canvas: x=2cm y=3cm
+\savebox{\ba}{\hbox{\begin{tikzpicture}[x=2cm,y=3cm]\draw (0,0) circle (1);\end{tikzpicture}}}
+\savebox{\bb}{\hbox{\begin{tikzpicture}[x=2cm,y=3cm]\draw (0,0) circle (2cm);\end{tikzpicture}}}
+\savebox{\bc}{\hbox{\begin{tikzpicture}[x=2cm,y=3cm]\draw (0,0) arc[start angle=180,end angle=0,radius=1];\end{tikzpicture}}}
+\savebox{\bd}{\hbox{\begin{tikzpicture}[x=2cm,y=3cm]\draw (0,0) arc[start angle=180,end angle=0,radius=2cm];\end{tikzpicture}}}
+\typeout{M circle-bare=\the\wd\ba/\the\ht\ba\space circle-cm=\the\wd\bb/\the\ht\bb
+  \space arc-bare=\the\wd\bc/\the\ht\bc\space arc-cm=\the\wd\bd/\the\ht\bd}
+\end{document}

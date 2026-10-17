@@ -1,0 +1,35 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\newcommand{\reserveStatementSpace}{
+  \if@nobreak\else\Needspace{6\baselineskip}\fi}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\newcommand{\C}{\mathbb C}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cts}{\mathrm{cts}}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Spd}{Spd}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\RHom}{RHom}
+\newcommand{\Rlim}{R\!\varprojlim}
+\begin{document}
+\begin{tikzcd}[column sep=large]
+ E(R_T,C_T)\arrow[r,bend left=18,"i_T"]
+ &E(R_T,\Gamma_T)\arrow[l,bend left=18,"r_T"] .
+\end{tikzcd}
+\end{document}

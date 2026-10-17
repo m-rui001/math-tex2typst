@@ -1,0 +1,29 @@
+== A: a statement's own `line width=` (pgf's six names, then lengths, then \pgflinewidth)
+   rules read: 15 (cases: 15)
+   ultra thin                    y=134.71   width=  0.100 pt
+   thin                          y=134.57   width=  0.398 pt
+   semithick                     y=134.47   width=  0.598 pt
+   thick                         y=134.37   width=  0.797 pt
+   very thick                    y=134.17   width=  1.196 pt
+   ultra thick                   y=133.97   width=  1.594 pt
+   line width=0.4pt              y=134.57   width=  0.398 pt
+   line width=1pt                y=134.27   width=  0.996 pt
+   line width=2pt                y=133.77   width=  1.993 pt
+   line width=0.8mm              y=133.63   width=  2.268 pt
+   line width=1.5cm              y=146.06   width= 42.520 pt
+   line width=0.5bp              y=134.51   width=  0.500 pt
+   line width=1.2in              y=168.00   width= 86.401 pt
+   line width=\pgflinewidth      y=134.57   width=  0.398 pt
+   line width=2\pgflinewidth     y=133.97   width=  1.594 pt
+
+== B: the SAME width written on the picture's brackets, no statement writes a key
+   items=l        width=  1.993  rect=[149.71, 267.53, 319.79, 267.53]
+   items=l        width=  0.398  rect=[149.71, 239.18, 319.79, 239.18]
+   items=re       width=  1.993  rect=[227.69, 204.11, 241.81, 217.56]
+   items=cccc     width=  1.993  rect=[225.04, 172.78, 244.46, 192.2]
+   items=l        width=  1.993  rect=[149.71, 125.8, 206.4, 154.14]
+
+== C: does an `x=`/`scale=` transform price the pen?  (a length is a page length, per axis 71)
+   line width=2pt               -> ['1.993']
+   line width=2pt, scale=2      -> ['1.993']
+   line width=2pt, x=2cm        -> ['1.993']

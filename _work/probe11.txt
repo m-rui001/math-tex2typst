@@ -1,0 +1,23 @@
+CAT occ={"C": 3586, "B": 761, "D": 30, "A": 6, "E": 5}
+CAT notes={"C": 139, "B": 41, "D": 13, "E": 5, "A": 1}
+PAT occ={"fence-verbatim": 2291, "blockquote-verbatim": 860, "prose-leak": 736, "inline-quote-verbatim": 305, "indented-verbatim": 78, "material-voice-line": 52, "table-cell": 30, "heading-leak": 18, "label-name-mention": 7, "self-heading-anchor": 6, "arg-not-a-material-label": 3, "ellipsis-placeholder": 1, "numeric-arg": 1}
+C sub={"fence-verbatim": 2291, "blockquote-verbatim": 860, "inline-quote-verbatim": 305, "indented-verbatim": 78, "material-voice-line": 52}
+B sub={"prose-leak": 736, "heading-leak": 18, "label-name-mention": 7}
+B lead={"None": 531, "Lemma": 111, "Proposition": 49, "Theorem": 26, "Corollary": 12, "Section": 5, "Definition": 5, "Remark": 3, "Thm": 3, "Table": 3, "Prop": 3, "Sections": 2, "Equation": 2, "rule": 1, "Appendices": 1, "contradict": 1, "criterion": 1, "overlap": 1, "Assumption": 1}
+D notes={"D163": 9, "D242": 5, "D182": 3, "D156": 2, "D24": 2, "D26": 2, "D146": 1, "D229": 1, "D37": 1, "D47": 1, "D90": 1, "D91": 1, "D97": 1}
+E list={"D244:arg-not-a-material-label": 1, "D346:arg-not-a-material-label": 1, "D380:arg-not-a-material-label": 1, "D473:ellipsis-placeholder": 1, "D517:numeric-arg": 1}
+notes=163 total=4388
+TOP D114 hits=203 {"C": 203} dominantform=[('fence-verbatim', 202), ('inline-quote-verbatim', 1)]
+TOP D112 hits=122 {"C": 65, "B": 57} dominantform=[('blockquote-verbatim', 59), ('\\eqref{}', 55), ('inline-quote-verbatim', 4)]
+TOP D146 hits=103 {"C": 52, "B": 50, "D": 1} dominantform=[('\\eqref{}', 49), ('blockquote-verbatim', 45), ('inline-quote-verbatim', 7)]
+TOP D93 hits=97 {"C": 97} dominantform=[('blockquote-verbatim', 73), ('inline-quote-verbatim', 24)]
+TOP D124 hits=96 {"C": 69, "B": 27} dominantform=[('blockquote-verbatim', 67), ('\\eqref{}', 27), ('inline-quote-verbatim', 1)]
+TOP D90 hits=86 {"C": 39, "B": 46, "D": 1} dominantform=[('\\eqref{}', 46), ('fence-verbatim', 29), ('inline-quote-verbatim', 10)]
+TOP D300 hits=82 {"B": 82} dominantform=[('\\eqref{}', 45), ('\\ref{}', 25), ('Lemma~\\ref{}', 5)]
+TOP D80 hits=82 {"C": 82} dominantform=[('blockquote-verbatim', 77), ('inline-quote-verbatim', 5)]
+B advice={"B3 rewrite-as-pos(exact from index)": 443, "B3 rewrite-as-pos(check line no)": 246, "B1 delete-token(pos-str already covers it)": 65, "B2 keep-label-name-as-code": 7}
+multi-file same-label occurrences=0
+fence occurrences=2292 in 82 notes
+notes with only-C=112 ; with only-B=16
+busiest single line=["D182", 100] hits=8
+D156:591 occurrences=1 args=["var:recursion"]

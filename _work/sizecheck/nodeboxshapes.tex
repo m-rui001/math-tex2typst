@@ -1,0 +1,31 @@
+\documentclass[10pt]{article}
+\usepackage{tikz}
+\newcommand{\measure}[4]{%
+  \begin{tikzpicture}[font=#1]
+    \node[draw, inner sep=0pt, #2] (a) at (0,0) {#3};
+    \pgfextracty{\dimen0}{\pgfpointanchor{a}{north}}%
+    \pgfextracty{\dimen1}{\pgfpointanchor{a}{south}}%
+    \typeout{BOX #4 H=\the\dimen0\the\dimen1}%
+  \end{tikzpicture}%
+}
+\begin{document}
+\measure{\fontsize{10.0}{12.0}\selectfont}{}{one\\last}{normalsize,bare,1}
+\measure{\fontsize{10.0}{12.0}\selectfont}{}{one\\last}{normalsize,bare,2}
+\measure{\fontsize{10.0}{12.0}\selectfont}{}{one\\mid\\last}{normalsize,bare,3}
+\measure{\fontsize{10.0}{12.0}\selectfont}{align=center, }{one\\last}{normalsize,align,1}
+\measure{\fontsize{10.0}{12.0}\selectfont}{align=center, }{one\\last}{normalsize,align,2}
+\measure{\fontsize{10.0}{12.0}\selectfont}{align=center, }{one\\mid\\last}{normalsize,align,3}
+\measure{\fontsize{10.0}{12.0}\selectfont}{text width=5.7cm, align=left, }{one\\last}{normalsize,width,1}
+\measure{\fontsize{10.0}{12.0}\selectfont}{text width=5.7cm, align=left, }{one\\last}{normalsize,width,2}
+\measure{\fontsize{10.0}{12.0}\selectfont}{text width=5.7cm, align=left, }{one\\mid\\last}{normalsize,width,3}
+\measure{\fontsize{9.0}{11.0}\selectfont}{}{one\\last}{small,bare,1}
+\measure{\fontsize{9.0}{11.0}\selectfont}{}{one\\last}{small,bare,2}
+\measure{\fontsize{9.0}{11.0}\selectfont}{}{one\\mid\\last}{small,bare,3}
+\measure{\fontsize{9.0}{11.0}\selectfont}{align=center, }{one\\last}{small,align,1}
+\measure{\fontsize{9.0}{11.0}\selectfont}{align=center, }{one\\last}{small,align,2}
+\measure{\fontsize{9.0}{11.0}\selectfont}{align=center, }{one\\mid\\last}{small,align,3}
+\measure{\fontsize{9.0}{11.0}\selectfont}{text width=5.7cm, align=left, }{one\\last}{small,width,1}
+\measure{\fontsize{9.0}{11.0}\selectfont}{text width=5.7cm, align=left, }{one\\last}{small,width,2}
+\measure{\fontsize{9.0}{11.0}\selectfont}{text width=5.7cm, align=left, }{one\\mid\\last}{small,width,3}
+x
+\end{document}

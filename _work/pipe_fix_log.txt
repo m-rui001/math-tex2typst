@@ -1,0 +1,248 @@
+################ D25  (D25-Crouzeix完整不等式直接证明.md)
+before: bytes=399742 lines=2784
+ROW line=255  sites=8  pipes 12->4  $=8(parity even)
+OLD| | 核心产出 | 一条数不等式 $\|P[A]\|\le2\max_{W(A)}\|P\|$ | 一个算子对象：正定 $S$，$\|S\|\|S^{-1}\|\le2$，使 $Sf(A)S^{-1}$ 为压缩 |
+NEW| | 核心产出 | 一条数不等式 $\lVert P[A]\rVert\le2\max_{W(A)}\lVert P\rVert$ | 一个算子对象：正定 $S$，$\lVert S\rVert\lVert S^{-1}\rVert\le2$，使 $Sf(A)S^{-1}$ 为压缩 |
+ROW line=259  sites=4  pipes 8->4  $=8(parity even)
+OLD| | 常数的来源 | Parseval 权重配平（$1$ 对 $1,\tfrac12$）给出 $\gamma^2\le4$ | 相似条件数 $\|S\|\|S^{-1}\|\le2$ |
+NEW| | 常数的来源 | Parseval 权重配平（$1$ 对 $1,\tfrac12$）给出 $\gamma^2\le4$ | 相似条件数 $\lVert S\rVert\lVert S^{-1}\rVert\le2$ |
+ROW line=315  sites=2  pipes 8->6  $=4(parity even)
+OLD| | $\|\cdot\|_\partial$ | `main.tex:368-371` | `\|H\|_\partial^2=\int_\T\HS{H(h(\mu))}^2\,d\tau(\mu)`，把边界 $L^2$ HS 范数的平方记成一个范数平方 |
+NEW| | $\lVert \cdot\rVert_\partial$ | `main.tex:368-371` | `\|H\|_\partial^2=\int_\T\HS{H(h(\mu))}^2\,d\tau(\mu)`，把边界 $L^2$ HS 范数的平方记成一个范数平方 |
+ROW line=596  sites=6  pipes 11->5  $=28(parity even)
+OLD| | $K\ge0$ 与两个边际 $=1$ | 第 200-204 行 | 上面第五、六步 | 只有 $\int K=1$ 而 $K$ 不变号：$T$ 不是正算子，第 260 行的 Jensen 步 $\|(Tu)(\mu)\|^2\le\int K\|u\|^2$ 不成立（需要 $K\ge0$ **且**边际 $=1$ 同时成立）。若 $K\ge0$ 但边际 $=\kappa\ne1$：$\|T\|\le\kappa$，第 7 节右端权重从 2 变成 $1+\kappa^2$，最终 $\gamma\le2$ 变成依赖 $\kappa$ 的数（敏感度见第 16 节） |
+NEW| | $K\ge0$ 与两个边际 $=1$ | 第 200-204 行 | 上面第五、六步 | 只有 $\int K=1$ 而 $K$ 不变号：$T$ 不是正算子，第 260 行的 Jensen 步 $\lVert (Tu)(\mu)\rVert^2\le\int K\lVert u\rVert^2$ 不成立（需要 $K\ge0$ **且**边际 $=1$ 同时成立）。若 $K\ge0$ 但边际 $=\kappa\ne1$：$\lVert T\rVert\le\kappa$，第 7 节右端权重从 2 变成 $1+\kappa^2$，最终 $\gamma\le2$ 变成依赖 $\kappa$ 的数（敏感度见第 16 节） |
+ROW line=700  sites=4  pipes 9->5  $=22(parity even)
+OLD| | 权重 2（非常数项） | 第 251 行右端 | $2=1+1$：一份来自 $u$ 自身，一份来自 $Tu$（$\|T\|\le1$） | 若 $\|T\|\le\kappa$（例如边际归一化被改成 $\int K=\kappa$），右端变 $\lvert C_0\rvert_2^2+(1+\kappa^2)\sum_{k\ge1}\lvert C_k\rvert_2^2$。回代到 `thm:domain` 的 `eq:weighted-dual` 会给对角块权重 $\frac{1}{1+\kappa^2}$ 之类，最终 $\gamma^2\le4$ 变成依赖 $\kappa$ 的界；关键是配平被打破。当 $\kappa=1$ 才正好回到 2。[分析] |
+NEW| | 权重 2（非常数项） | 第 251 行右端 | $2=1+1$：一份来自 $u$ 自身，一份来自 $Tu$（$\lVert T\rVert\le1$） | 若 $\lVert T\rVert\le\kappa$（例如边际归一化被改成 $\int K=\kappa$），右端变 $\lvert C_0\rvert_2^2+(1+\kappa^2)\sum_{k\ge1}\lvert C_k\rvert_2^2$。回代到 `thm:domain` 的 `eq:weighted-dual` 会给对角块权重 $\frac{1}{1+\kappa^2}$ 之类，最终 $\gamma^2\le4$ 变成依赖 $\kappa$ 的界；关键是配平被打破。当 $\kappa=1$ 才正好回到 2。[分析] |
+ROW line=702  sites=2  pipes 7->5  $=8(parity even)
+OLD| | $K\ge0$ | 第 260 行 | Jensen | 变号则 $\|T\|\le1$ 失效（符号核的 $L^2$ 范数可远大于 1），右不等式失效。左不等式**不依赖** $K\ge0$，它只是 Parseval 丢项 |
+NEW| | $K\ge0$ | 第 260 行 | Jensen | 变号则 $\lVert T\rVert\le1$ 失效（符号核的 $L^2$ 范数可远大于 1），右不等式失效。左不等式**不依赖** $K\ge0$，它只是 Parseval 丢项 |
+ROW line=703  sites=2  pipes 7->5  $=6(parity even)
+OLD| | 两个边际 $=1$ | 第 260、261 行 | 各用一次（Jensen 与 Fubini） | 只证一个边际，$T$ 只在一侧受控，$\|T\|_{L^2\to L^2}$ 未知 |
+NEW| | 两个边际 $=1$ | 第 260、261 行 | 各用一次（Jensen 与 Fubini） | 只证一个边际，$T$ 只在一侧受控，$\lVert T\rVert_{L^2\to L^2}$ 未知 |
+ROW line=705  sites=2  pipes 7->5  $=18(parity even)
+OLD| | $d\tau$ 归一化（$dt/2\pi$） | 第 178 行 | $\int1\,d\tau=1$，边际"$=1$"的写法成立 | 用 $dt$ 则边际变 $2\pi$，$\int K=2\pi$，$\|T\|\le2\pi$，权重 2 会被 $2\pi$ 污染 |
+NEW| | $d\tau$ 归一化（$dt/2\pi$） | 第 178 行 | $\int1\,d\tau=1$，边际"$=1$"的写法成立 | 用 $dt$ 则边际变 $2\pi$，$\int K=2\pi$，$\lVert T\rVert\le2\pi$，权重 2 会被 $2\pi$ 污染 |
+ROW line=708  sites=2  pipes 7->5  $=8(parity even)
+OLD| | 左不等式的独立价值 | 第 249-250 行 | 在 `thm:domain` 里被用来把 $\sum\lvert U_k\rvert_2^2$ 换成 $\|FG\|_\partial^2$（上界方向的估计用在 $FG$ 上） | 只有右不等式时 $\sum_k\lvert U_k\rvert_2^2$ 无法用边界范数控制，`eq:diagonal-functional` 出不来 |
+NEW| | 左不等式的独立价值 | 第 249-250 行 | 在 `thm:domain` 里被用来把 $\sum\lvert U_k\rvert_2^2$ 换成 $\lVert FG\rVert_\partial^2$（上界方向的估计用在 $FG$ 上） | 只有右不等式时 $\sum_k\lvert U_k\rvert_2^2$ 无法用边界范数控制，`eq:diagonal-functional` 出不来 |
+ROW line=709  sites=2  pipes 7->5  $=14(parity even)
+OLD| | 不对称核的取向声明 | 第 279-285 行：`In particular, \eqref{eq:kernel-fourier-action} uses this coefficient orientation and does not require symmetry of the kernel.` | 防止把 $s_{kj}$ 与 $\beta_{jk}$ 混用 | 若误用 $s_{jk}$，$T$ 变成另一个算子（转置），$\|T\|\le1$ 仍可能成立（对偶算子同范数），但与 $b_k\circ h$ 的展开不再匹配，Parseval 分解出的负频系数不再是 $Tu$，第三步等式失效。这段"对照 companion 记号"的文字存在的理由就是防这个错 |
+NEW| | 不对称核的取向声明 | 第 279-285 行：`In particular, \eqref{eq:kernel-fourier-action} uses this coefficient orientation and does not require symmetry of the kernel.` | 防止把 $s_{kj}$ 与 $\beta_{jk}$ 混用 | 若误用 $s_{jk}$，$T$ 变成另一个算子（转置），$\lVert T\rVert\le1$ 仍可能成立（对偶算子同范数），但与 $b_k\circ h$ 的展开不再匹配，Parseval 分解出的负频系数不再是 $Tu$，第三步等式失效。这段"对照 companion 记号"的文字存在的理由就是防这个错 |
+ROW line=1043  sites=10  pipes 15->5  $=20(parity even)
+OLD| | $\|F(z)\|\le1$ on $\partial\Omega$ | `main.tex:324` | 只用于第 4.2 步的第三个不等号（边界乘子界） | 若改成 $\le\kappa$：链上多一个 $\kappa$，最终 $\gamma\le2\kappa$，与缩放齐次性一致（$F/\kappa$ 即回到 $\kappa=1$）。若改成**面积分** $\int_\Omega\|F\|^2\le1$：第三个不等号 $\|FG\|_\partial\le(\sup\|F\|)\|G\|_\partial$ 需要 sup，假设必须 $L^\infty$ 型。详见第 10.7 节 |
+NEW| | $\lVert F(z)\rVert\le1$ on $\partial\Omega$ | `main.tex:324` | 只用于第 4.2 步的第三个不等号（边界乘子界） | 若改成 $\le\kappa$：链上多一个 $\kappa$，最终 $\gamma\le2\kappa$，与缩放齐次性一致（$F/\kappa$ 即回到 $\kappa=1$）。若改成**面积分** $\int_\Omega\lVert F\rVert^2\le1$：第三个不等号 $\lVert FG\rVert_\partial\le(\sup\lVert F\rVert)\lVert G\rVert_\partial$ 需要 sup，假设必须 $L^\infty$ 型。详见第 10.7 节 |
+ROW line=1044  sites=2  pipes 7->5  $=10(parity even)
+OLD| | $\gamma=\|F[A]\|$ 与前置分情形 | `main.tex:329` | 三处除 $\gamma$；推 $a>0$ | 不分情形则 $\gamma=0$ 时 $\frac a\gamma$ 无意义 |
+NEW| | $\gamma=\lVert F[A]\rVert$ 与前置分情形 | `main.tex:329` | 三处除 $\gamma$；推 $a>0$ | 不分情形则 $\gamma=0$ 时 $\frac a\gamma$ 无意义 |
+ROW line=1046  sites=2  pipes 7->5  $=16(parity even)
+OLD| | $x,y$ 单位 | `main.tex:329` | $\lvert X\rvert_2=\lvert Y\rvert_2=1$，从而 $\operatorname{tr} P_0=\operatorname{tr} Q_0=1$ | 非单位则 $\lvert P_0\rvert_2^2$ 带上 $\|x\|^4$，$d_N\le(a/\gamma)\sqrt{d_N}$ 里左右同次仍能齐次消掉，$\gamma$ 会跟着缩。分情形 $\gamma=0$ 后标准化是免费的 |
+NEW| | $x,y$ 单位 | `main.tex:329` | $\lvert X\rvert_2=\lvert Y\rvert_2=1$，从而 $\operatorname{tr} P_0=\operatorname{tr} Q_0=1$ | 非单位则 $\lvert P_0\rvert_2^2$ 带上 $\lVert x\rVert^4$，$d_N\le(a/\gamma)\sqrt{d_N}$ 里左右同次仍能齐次消掉，$\gamma$ 会跟着缩。分情形 $\gamma=0$ 后标准化是免费的 |
+ROW line=1344  sites=6  pipes 11->5  $=18(parity even)
+OLD| | $\|F(z)\|\le1$ on $\partial\Omega$ | `main.tex:324` | 第 (3) 个不等号 | 改成 $\le\kappa$ ⇒ $\gamma\le2\kappa$（齐次，无矛盾）。改成 $\int_\Omega\|F\|^2\le1$ ⇒ 第 (3) 步需要 sup，$L^2$ 假设不够。论文选 $\partial\Omega$ 上的 sup ，并非 $\Omega$ 内的 sup；$\|F\|$ 次调和 ⇒ 两者相等，这一步论文未述。Lean 把假设直接设在圆周上：`DomainBound.lean:96-97` 的 `exact hF _ (le_of_eq (hcircle _ (Faber.unitPoint_norm t)))` 只用 `hcircle` 把点拉回圆周，**绕开最大模原理** |
+NEW| | $\lVert F(z)\rVert\le1$ on $\partial\Omega$ | `main.tex:324` | 第 (3) 个不等号 | 改成 $\le\kappa$ ⇒ $\gamma\le2\kappa$（齐次，无矛盾）。改成 $\int_\Omega\lVert F\rVert^2\le1$ ⇒ 第 (3) 步需要 sup，$L^2$ 假设不够。论文选 $\partial\Omega$ 上的 sup ，并非 $\Omega$ 内的 sup；$\lVert F\rVert$ 次调和 ⇒ 两者相等，这一步论文未述。Lean 把假设直接设在圆周上：`DomainBound.lean:96-97` 的 `exact hF _ (le_of_eq (hcircle _ (Faber.unitPoint_norm t)))` 只用 `hcircle` 把点拉回圆周，**绕开最大模原理** |
+ROW line=1345  sites=2  pipes 7->5  $=18(parity even)
+OLD| | $\gamma=\|F[A]\|$ 与 $a>0$ | `main.tex:329`、`:355` | 最后一步除 $a^2$；$d_N\le(a/\gamma)\sqrt{d_N}$ 要 $\gamma>0$ | $\gamma=0$ 已前置分情形排除；$a=0$ 由 $G=F$ 的测试排除。若没有 eq:singular（只有一个 attainer），$a>0$ 的论证出不来 |
+NEW| | $\gamma=\lVert F[A]\rVert$ 与 $a>0$ | `main.tex:329`、`:355` | 最后一步除 $a^2$；$d_N\le(a/\gamma)\sqrt{d_N}$ 要 $\gamma>0$ | $\gamma=0$ 已前置分情形排除；$a=0$ 由 $G=F$ 的测试排除。若没有 eq:singular（只有一个 attainer），$a>0$ 的论证出不来 |
+ROW line=1609  sites=4  pipes 8->4  $=6(parity even)
+OLD| | `a nonnegative kernel with integral one in each variable makes the map from the positive part to the negative part an $L^2$ contraction`（136-138） | $K=1+s+\bar s$ 的三条性质（`lem:faber` 第 (6)(7) 条）⇒ `prop:coefficients` 前两步 | "integral one in each variable" = 两个角向边际恒等式（`main.tex:233`），"contraction" = $\|Tf\|_2\le\|f\|_2$ |
+NEW| | `a nonnegative kernel with integral one in each variable makes the map from the positive part to the negative part an $L^2$ contraction`（136-138） | $K=1+s+\bar s$ 的三条性质（`lem:faber` 第 (6)(7) 条）⇒ `prop:coefficients` 前两步 | "integral one in each variable" = 两个角向边际恒等式（`main.tex:233`），"contraction" = $\lVert Tf\rVert_2\le\lVert f\rVert_2$ |
+ROW line=1871  sites=2  pipes 9->7  $=16(parity even)
+OLD| | $C,\ \theta\in(0,1)$ | `main.tex:304` `For the fixed $A,h$, there are constants $C<\infty$ and $0<\theta<1$` | 同上无对应；Lean 用 `IsUnit (algebraDenominator c g A u)`（`FaberCalculus.lean:139` 的 `hunit`）与 `hu : 1 < R` | $\|b_k(A)\|\le C\theta^k$ 保证级数绝对收敛 | **论文自己写了 "For the fixed $A,h$"**，即这个 $C,\theta$ 不一致于 $A$。Lean 绕开它，也就回避了"一致性"问题（与 15.3 未述清单第 4 条呼应） | 一致性问题论文未讨论，是我列的悬案（19.1） |
+NEW| | $C,\ \theta\in(0,1)$ | `main.tex:304` `For the fixed $A,h$, there are constants $C<\infty$ and $0<\theta<1$` | 同上无对应；Lean 用 `IsUnit (algebraDenominator c g A u)`（`FaberCalculus.lean:139` 的 `hunit`）与 `hu : 1 < R` | $\lVert b_k(A)\rVert\le C\theta^k$ 保证级数绝对收敛 | **论文自己写了 "For the fixed $A,h$"**，即这个 $C,\theta$ 不一致于 $A$。Lean 绕开它，也就回避了"一致性"问题（与 15.3 未述清单第 4 条呼应） | 一致性问题论文未讨论，是我列的悬案（19.1） |
+ROW line=1872  sites=2  pipes 9->7  $=8(parity even)
+OLD| | $\gamma=\|F[A]\|$ | `main.tex:329` | `let γ := ‖tensorPolynomial A F‖`（`DomainCore.lean:32`）、`hγ : 0 < γ`（`:37`） | 归一化标尺；最终要证 $\gamma\le2$ | $\gamma=0$ 必须分流（论文 `main.tex:329`；Lean `by_cases hγ0`，`DomainCore.lean:33`），因为后面有 $a/\gamma^2$ | 两边完全对齐的一处 |
+NEW| | $\gamma=\lVert F[A]\rVert$ | `main.tex:329` | `let γ := ‖tensorPolynomial A F‖`（`DomainCore.lean:32`）、`hγ : 0 < γ`（`:37`） | 归一化标尺；最终要证 $\gamma\le2$ | $\gamma=0$ 必须分流（论文 `main.tex:329`；Lean `by_cases hγ0`，`DomainCore.lean:33`），因为后面有 $a/\gamma^2$ | 两边完全对齐的一处 |
+ROW line=1876  sites=2  pipes 9->7  $=24(parity even)
+OLD| | $\delta$（外逼近厚度） | `main.tex:464` `For $0<\delta<1$, choose a finite Euclidean $\delta$-net …`、`:468` `$\Omega_\delta=\{z:\Phi_\delta(z)<1\}$`、`:510` `$\delta_j=1/(j+1)$` | `Geometry.exists_exponential_outer` 的 `ε` 参数 + `δ := min (1/2) (ε/(2*C))`（`OuterApproximation.lean:70`）；主证明里 `obtain ⟨δ,hδ,hδV⟩ := (isCompact_numericalRange A).exists_thickening_subset_open hV hWV`（`CompleteBound.lean:82`） | 两重身份：网格精度、支撑函数下移量 | `0<δ<1` 的上界 1 是**任意的**（只为参数化好看）；真正的敏感度在 Lean 的 `min (1/2) (·)`：那个 $\tfrac12$ 保证 $h_K(\nu)+\delta$ 不把 $\Omega_\delta$ 撑出包含 $K$ 的最小范围。$[推测]$ 主要服务于 `axis_support_bound` 里的 $\|z\|\le L$ 结论 | 论文侧的两个 $\delta$ 同量级是我在 11.3 表里记的"刻意合并" |
+NEW| | $\delta$（外逼近厚度） | `main.tex:464` `For $0<\delta<1$, choose a finite Euclidean $\delta$-net …`、`:468` `$\Omega_\delta=\{z:\Phi_\delta(z)<1\}$`、`:510` `$\delta_j=1/(j+1)$` | `Geometry.exists_exponential_outer` 的 `ε` 参数 + `δ := min (1/2) (ε/(2*C))`（`OuterApproximation.lean:70`）；主证明里 `obtain ⟨δ,hδ,hδV⟩ := (isCompact_numericalRange A).exists_thickening_subset_open hV hWV`（`CompleteBound.lean:82`） | 两重身份：网格精度、支撑函数下移量 | `0<δ<1` 的上界 1 是**任意的**（只为参数化好看）；真正的敏感度在 Lean 的 `min (1/2) (·)`：那个 $\tfrac12$ 保证 $h_K(\nu)+\delta$ 不把 $\Omega_\delta$ 撑出包含 $K$ 的最小范围。$[推测]$ 主要服务于 `axis_support_bound` 里的 $\lVert z\rVert\le L$ 结论 | 论文侧的两个 $\delta$ 同量级是我在 11.3 表里记的"刻意合并" |
+ROW line=1882  sites=2  pipes 9->7  $=14(parity even)
+OLD| | $n$（底维） | 同上 | `0 < n`、`NeZero n`（`DomainCore.lean:30`） | $W(A)$ 非空需要 $\mathbb C^n$ 有单位向量 | $n=0$ 时 `numericalRange A = ∅`、`rangeMaximum = sSup ∅ = 0`（Mathlib 约定），结论变成 $\|0\|\le2\cdot0$ 仍真。Lean 拒绝处理，故加 `hn`。⇒ **`numericalRange_nonempty hn A`（`NumericalRange.lean`）是 $0<n$ 的真实消费者** | 论文写 "positive integers $n,m$"（`main.tex:324`、`:59`），与 Lean 一致 |
+NEW| | $n$（底维） | 同上 | `0 < n`、`NeZero n`（`DomainCore.lean:30`） | $W(A)$ 非空需要 $\mathbb C^n$ 有单位向量 | $n=0$ 时 `numericalRange A = ∅`、`rangeMaximum = sSup ∅ = 0`（Mathlib 约定），结论变成 $\lVert 0\rVert\le2\cdot0$ 仍真。Lean 拒绝处理，故加 `hn`。⇒ **`numericalRange_nonempty hn A`（`NumericalRange.lean`）是 $0<n$ 的真实消费者** | 论文写 "positive integers $n,m$"（`main.tex:324`、`:59`），与 Lean 一致 |
+ROW line=1884  sites=4  pipes 11->7  $=8(parity even)
+OLD| | $x_1=x_2=1/\sqrt2$、$\|x^*Ax\|=2\|x_1x_2\|\le1$ | `main.tex:530` | `norm_le_one_of_mem_sharpnessRange`（`Sharpness.lean:36`）+ `nlinarith [sq_nonneg (‖u 0‖ - ‖u 1‖)]`（`:50`） | 证明 $W(A)\subseteq\overline{\mathbb D}$ | 论文的 $1/\sqrt2$ 是取等点；Lean 用 AM-GM 形式，**没有显式给出取等点**（不需要） | 一个"论文给等号情形、Lean 只要不等式"的省略例 |
+NEW| | $x_1=x_2=1/\sqrt2$、$\lvert x^*Ax\rvert=2\lvert x_1x_2\rvert\le1$ | `main.tex:530` | `norm_le_one_of_mem_sharpnessRange`（`Sharpness.lean:36`）+ `nlinarith [sq_nonneg (‖u 0‖ - ‖u 1‖)]`（`:50`） | 证明 $W(A)\subseteq\overline{\mathbb D}$ | 论文的 $1/\sqrt2$ 是取等点；Lean 用 AM-GM 形式，**没有显式给出取等点**（不需要） | 一个"论文给等号情形、Lean 只要不等式"的省略例 |
+ROW line=1885  sites=4  pipes 11->7  $=24(parity even)
+OLD| | $A=\begin{pmatrix}0&2\\0&0\end{pmatrix}$ | `main.tex:528` | `def sharpnessMatrix := !![0, 2; 0, 0]`（`Sharpness.lean:32`） | 唯一反例 | 那个 **2**（，并非 1）就是让 $\|A\|=2$ 且 $W(A)\subseteq\overline{\mathbb D}$ 同时成立的选择：一般地 $\begin{pmatrix}0&t\\0&0\end{pmatrix}$ 给出 $\|A\|=t$、$\max_{W(A)}\lvert z\rvert=t/2$，比值恒为 2。论文取 $t=2$ 是为了让右端恰为 1。**Lean 用 `sharpnessCoefficients := ![0, 1]`（`:34`）把 $P(z)=z$ 编成 $B_0=0,B_1=1$，与 `main.tex:526` 的 "$m=1$, $P(z)=z$" 一致** | "比值恒为 2"是我的**外部计算**（单参数族），论文只给 $t=2$ |
+NEW| | $A=\begin{pmatrix}0&2\\0&0\end{pmatrix}$ | `main.tex:528` | `def sharpnessMatrix := !![0, 2; 0, 0]`（`Sharpness.lean:32`） | 唯一反例 | 那个 **2**（，并非 1）就是让 $\lVert A\rVert=2$ 且 $W(A)\subseteq\overline{\mathbb D}$ 同时成立的选择：一般地 $\begin{pmatrix}0&t\\0&0\end{pmatrix}$ 给出 $\lVert A\rVert=t$、$\max_{W(A)}\lvert z\rvert=t/2$，比值恒为 2。论文取 $t=2$ 是为了让右端恰为 1。**Lean 用 `sharpnessCoefficients := ![0, 1]`（`:34`）把 $P(z)=z$ 编成 $B_0=0,B_1=1$，与 `main.tex:526` 的 "$m=1$, $P(z)=z$" 一致** | "比值恒为 2"是我的**外部计算**（单参数族），论文只给 $t=2$ |
+ROW line=1886  sites=4  pipes 15->11  $=22(parity even)
+OLD| | $(1,i,j,k)$ 四元组 | `main.tex:514-518`（Toeplitz-Hausdorff 重证）：`$(2\Re(\bar uv),2\Im(\bar uv),\|u\|2-\|v\|2)$` ranges over the unit sphere in $\R^3$ | `Convexity.lean`：`bloch`（`:84`）、`norm_sq_three`/`norm_bloch`/`bloch_surjective_sphere`/`threeLinear`/`threeLinear_ker_ne_bot`/`twoForm`/`twoForm_bloch`/`convex_twoForm`/`convex_quadratic_range`（13 条声明，273 行） | 用 Bloch 球参数化把 $W(A)$ 写成实二次映射像，再由 $\R^3\to\R^2$ 线性核非空得凸性 | 三个 2（$2\Re,2\Im$）**必须是同一个 2**，否则像不在半径 $\|u\|^2+\|v\|^2=1$ 的球面上（`norm_bloch` 与 `bloch_surjective_sphere` 就是这条）；换成 $(\Re,\Im,\cdot)$ 会掉到半球。$\R^3$ 的 3 与"核非空"需要 $\dim\ker\ge1$（`threeLinear_ker_ne_bot`），即线性映射 $\R^3\to\R^2$ 的秩亏，这在 `Convexity.lean` 里是一个独立引理 | 我在 12.1 补步 4、5 手算过恒等式与符号相容性 |
+NEW| | $(1,i,j,k)$ 四元组 | `main.tex:514-518`（Toeplitz-Hausdorff 重证）：`$(2\Re(\bar uv),2\Im(\bar uv),\|u\|2-\|v\|2)$` ranges over the unit sphere in $\R^3$ | `Convexity.lean`：`bloch`（`:84`）、`norm_sq_three`/`norm_bloch`/`bloch_surjective_sphere`/`threeLinear`/`threeLinear_ker_ne_bot`/`twoForm`/`twoForm_bloch`/`convex_twoForm`/`convex_quadratic_range`（13 条声明，273 行） | 用 Bloch 球参数化把 $W(A)$ 写成实二次映射像，再由 $\R^3\to\R^2$ 线性核非空得凸性 | 三个 2（$2\Re,2\Im$）**必须是同一个 2**，否则像不在半径 $\lVert u\rVert^2+\lVert v\rVert^2=1$ 的球面上（`norm_bloch` 与 `bloch_surjective_sphere` 就是这条）；换成 $(\Re,\Im,\cdot)$ 会掉到半球。$\R^3$ 的 3 与"核非空"需要 $\dim\ker\ge1$（`threeLinear_ker_ne_bot`），即线性映射 $\R^3\to\R^2$ 的秩亏，这在 `Convexity.lean` 里是一个独立引理 | 我在 12.1 补步 4、5 手算过恒等式与符号相容性 |
+ROW line=2550  sites=2  pipes 7->5  $=6(parity even)
+OLD| | $\gamma$（$\|F[A]\|$） | `:330` 起全程用 $\gamma$ 作尺度 | `let γ := ‖tensorPolynomial A F‖`（`DomainCore.lean:32`）+ `hγ : 0 < γ`（:37）+ `exists_singular_pair`（:40） | 9.2、9.4、18.3 |
+NEW| | $\gamma$（$\lVert F[A]\rVert$） | `:330` 起全程用 $\gamma$ 作尺度 | `let γ := ‖tensorPolynomial A F‖`（`DomainCore.lean:32`）+ `hγ : 0 < γ`（:37）+ `exists_singular_pair`（:40） | 9.2、9.4、18.3 |
+after: bytes=400111 (delta +369) lines=2784 rows_fixed=24 sites_fixed=82 sites_registered=0
+################ D32  (D32-Tingley问题正解.md)
+before: bytes=151624 lines=921
+ROW line=646  sites=2  pipes 8->6  $=4(parity even)
+OLD| | $S_X$ | $\{x:\|x\|=1\}$，继承度量 | 49 | `Model.lean:12` | 全篇舞台 |
+NEW| | $S_X$ | $\{x:\lVert x\rVert=1\}$，继承度量 | 49 | `Model.lean:12` | 全篇舞台 |
+ROW line=647  sites=4  pipes 10->6  $=4(parity even)
+OLD| | $D_q(x,y)$ | $\|f(x)-qf(y)\|-\|x-qy\|$ | eq:defect(149) | `Basic.lean:50` | 跨半径缺陷度量 |
+NEW| | $D_q(x,y)$ | $\lVert f(x)-qf(y)\rVert-\lVert x-qy\rVert$ | eq:defect(149) | `Basic.lean:50` | 跨半径缺陷度量 |
+ROW line=649  sites=2  pipes 8->6  $=8(parity even)
+OLD| | $\|D_q\|\le2\min(q,1-q)$ | Lipschitz 加 $D_0=D_1=0$ | eq:defectbound(159) | `Basic.lean:110` | 挤 $t\in[M/2,1-M/2]$；$M\le1$ |
+NEW| | $\lvert D_q\rvert\le2\min(q,1-q)$ | Lipschitz 加 $D_0=D_1=0$ | eq:defectbound(159) | `Basic.lean:110` | 挤 $t\in[M/2,1-M/2]$；$M\le1$ |
+ROW line=652  sites=4  pipes 10->6  $=6(parity even)
+OLD| | $\|(a_n)\|_{\mathcal U}$ | $\lim_{\mathcal U}\|a_n\|$ | 179-181 | `UltraNormed.lean:175` | 半范数逼商 $Q_X$ |
+NEW| | $\lVert (a_n)\rVert_{\mathcal U}$ | $\lim_{\mathcal U}\lVert a_n\rVert$ | 179-181 | `UltraNormed.lean:175` | 半范数逼商 $Q_X$ |
+ROW line=654  sites=4  pipes 10->6  $=8(parity even)
+OLD| | $x_0,y,t$ | $\|f(x_0)-tf(y)\|-\|x_0-ty\|=M$，$M/2\le t\le1-M/2$ | eq:maximal(167-170), 174 | `DefectAttainment.lean:51` | attained 入口；$t\in(0,1)$ |
+NEW| | $x_0,y,t$ | $\lVert f(x_0)-tf(y)\rVert-\lVert x_0-ty\rVert=M$，$M/2\le t\le1-M/2$ | eq:maximal(167-170), 174 | `DefectAttainment.lean:51` | attained 入口；$t\in(0,1)$ |
+ROW line=660  sites=2  pipes 8->6  $=4(parity even)
+OLD| | eq:equality | $r=u+M$、$\|pv+rg(v)\|=p+r$ | 248-250 | `extremal_radius_identities` | 公共支撑产生点 |
+NEW| | eq:equality | $r=u+M$、$\lVert pv+rg(v)\rVert=p+r$ | 248-250 | `extremal_radius_identities` | 公共支撑产生点 |
+ROW line=662  sites=8  pipes 14->6  $=4(parity even)
+OLD| | eq:contraction | $\|g(v)-g(v')\|\le\frac{up}{rs}\|v-v'\|+\frac{2\|u-u'\|}{r}+\frac{2u\|p-p'\|}{rs}$ | 280-284 | `ReturnMapEstimate.lean:82,170` | $\chi$ 压缩原型 |
+NEW| | eq:contraction | $\lVert g(v)-g(v')\rVert\le\frac{up}{rs}\lVert v-v'\rVert+\frac{2\lvert u-u'\rvert}{r}+\frac{2u\lvert p-p'\rvert}{rs}$ | 280-284 | `ReturnMapEstimate.lean:82,170` | $\chi$ 压缩原型 |
+ROW line=676  sites=4  pipes 10->6  $=4(parity even)
+OLD| | eq:perturb | $\|sw+\eta b\|-\|pv+\eta y\|\le M$（$0<\eta<t$） | 403-405 | `RadialPerturbation.lean:87,110` | 大分支矛盾主不等式 |
+NEW| | eq:perturb | $\lVert sw+\eta b\rVert-\lVert pv+\eta y\rVert\le M$（$0<\eta<t$） | 403-405 | `RadialPerturbation.lean:87,110` | 大分支矛盾主不等式 |
+ROW line=680  sites=4  pipes 10->6  $=10(parity even)
+OLD| | $F,G$ | $\|y+\lambda v\|$、$\|b+\lambda w\|$，$F(0)=G(0)=1$、$F(p/t)=G(s/t)=1/t$ | 431-439 | `hx hfx` 传入 `SmallChord` | secant 单调双函数 |
+NEW| | $F,G$ | $\lVert y+\lambda v\rVert$、$\lVert b+\lambda w\rVert$，$F(0)=G(0)=1$、$F(p/t)=G(s/t)=1/t$ | 431-439 | `hx hfx` 传入 `SmallChord` | secant 单调双函数 |
+ROW line=681  sites=4  pipes 10->6  $=2(parity even)
+OLD| | 终结等式 | $\epsilon F(r/\epsilon)=\|y-z\|=\|b-f(z)\|=\epsilon G(u/\epsilon)$ | 444-449 | `hiso` `ChordContradiction.lean:41-44` | 矛盾收口 |
+NEW| | 终结等式 | $\epsilon F(r/\epsilon)=\lVert y-z\rVert=\lVert b-f(z)\rVert=\epsilon G(u/\epsilon)$ | 444-449 | `hiso` `ChordContradiction.lean:41-44` | 矛盾收口 |
+ROW line=683  sites=4  pipes 10->6  $=6(parity even)
+OLD| | $\delta$（中点缺陷） | $\|F(m)-m'\|\le\|a-c\|/2$，反射翻倍 $2\delta$ | 465-472 | （Mathlib MazurUlam，未重证） | 仿射步 |
+NEW| | $\delta$（中点缺陷） | $\lVert F(m)-m'\rVert\le\lVert a-c\rVert/2$，反射翻倍 $2\delta$ | 465-472 | （Mathlib MazurUlam，未重证） | 仿射步 |
+after: bytes=151813 (delta +189) lines=921 rows_fixed=11 sites_fixed=42 sites_registered=0
+################ D65  (D65-渐近中点一致凸与树空间的无界菱形畸变.md)
+before: bytes=130263 lines=753
+ROW line=341  sites=8  pipes 14->6  $=12(parity even)
+OLD| | $s=\|y\|/(12\|x\|)$ 与 $1/12$ | 折扣常数 12 | paired.tex:13,87-88 | eq:paired 的 $\sqrt{\|x\|^2+\|y\|^2/12}$ | 分母若为 $Cs^2$,优化给折扣 $1/C$;$C\ne12$ 时全篇三处常数同换底,证明结构不变 |
+NEW| | $s=\lVert y\rVert/(12\lVert x\rVert)$ 与 $1/12$ | 折扣常数 12 | paired.tex:13,87-88 | eq:paired 的 $\sqrt{\lVert x\rVert^2+\lVert y\rVert^2/12}$ | 分母若为 $Cs^2$,优化给折扣 $1/C$;$C\ne12$ 时全篇三处常数同换底,证明结构不变 |
+ROW line=342  sites=2  pipes 8->6  $=12(parity even)
+OLD| | $\varepsilon^2/48$ | $48=12\cdot2^2$ | diamonds.tex:21-23 | 层级损失 $\varepsilon=2$ 时 $4/48=1/12$ | $z=(y_i-y_j)/2$ 的除 2 来自凸配对恒等式,改动即失 $\|x\pm z\|\le R$ |
+NEW| | $\varepsilon^2/48$ | $48=12\cdot2^2$ | diamonds.tex:21-23 | 层级损失 $\varepsilon=2$ 时 $4/48=1/12$ | $z=(y_i-y_j)/2$ 的除 2 来自凸配对恒等式,改动即失 $\lVert x\pm z\rVert\le R$ |
+ROW line=348  sites=6  pipes 12->6  $=18(parity even)
+OLD| | $\eta$ 预算 | $0<\eta<1$,$\|x-P_Hx\|<\eta$;lens 侧 $\|Q_Hx\|<\eta$、$\|P_H(y_i-y_j)\|<2\eta$ | paired.tex:93-98;diamonds.tex:28-45 | 中心逼近与透镜取极限两处 $\eta\downarrow0$ | 有限 $\eta$ 不取极限,模数下界带 $-\eta$ 残项,主定理陈述失配;论文未追踪有限 $\eta$ 形式 [推测] |
+NEW| | $\eta$ 预算 | $0<\eta<1$,$\lVert x-P_Hx\rVert<\eta$;lens 侧 $\lVert Q_Hx\rVert<\eta$、$\lVert P_H(y_i-y_j)\rVert<2\eta$ | paired.tex:93-98;diamonds.tex:28-45 | 中心逼近与透镜取极限两处 $\eta\downarrow0$ | 有限 $\eta$ 不取极限,模数下界带 $-\eta$ 残项,主定理陈述失配;论文未追踪有限 $\eta$ 形式 [推测] |
+after: bytes=130335 (delta +72) lines=753 rows_fixed=3 sites_fixed=16 sites_registered=0
+################ D47  (D47-无共轭点但无非正曲率度量的三流形.md)
+before: bytes=126546 lines=751
+ROW line=594  sites=2  pipes 7->5  $=12(parity even)
+OLD| | $C$(Lemma 4.1) | 依赖 $\chi$;Lean 取 $C=18+D$ | $\|P'\|\le C\delta$、domination | 只作传递,动它经 $C_e,C_m$ 回冲 $\delta_0$ |
+NEW| | $C$(Lemma 4.1) | 依赖 $\chi$;Lean 取 $C=18+D$ | $\lVert P'\rVert\le C\delta$、domination | 只作传递,动它经 $C_e,C_m$ 回冲 $\delta_0$ |
+ROW line=595  sites=6  pipes 11->5  $=6(parity even)
+OLD| | $C_0$ | $\|P\|\le C_0,\|P'\|\le C_0\delta,\|P'p\|^2\le C_0\delta(-F'')$ | 第 15 节三条 $S$ 估计 | 同上,纯传递 |
+NEW| | $C_0$ | $\lVert P\rVert\le C_0,\lVert P'\rVert\le C_0\delta,\lVert P'p\rVert^2\le C_0\delta(-F'')$ | 第 15 节三条 $S$ 估计 | 同上,纯传递 |
+ROW line=597  sites=4  pipes 9->5  $=8(parity even)
+OLD| | $C_m$ | $a(0)+\sqrt{2C_0a(0)}+2\sqrt{2C_0a(0)/3}$ | $\|S(p,e)-Lp_1\|\le C_m\delta L\|p_1\|$ | 增大直接吃 $\delta\le1/(2C_m)$ 与赤字分配 |
+NEW| | $C_m$ | $a(0)+\sqrt{2C_0a(0)}+2\sqrt{2C_0a(0)/3}$ | $\lVert S(p,e)-Lp_1\rVert\le C_m\delta L\lVert p_1\rVert$ | 增大直接吃 $\delta\le1/(2C_m)$ 与赤字分配 |
+after: bytes=126600 (delta +54) lines=751 rows_fixed=3 sites_fixed=12 sites_registered=0
+################ D36  (D36-投影体体积的单纯形最大反例.md)
+before: bytes=115172 lines=839
+ROW line=600  sites=2  pipes 8->6  $=0(parity even)
+OLD| | κ_j | \|B₂^j\| | :52-53 | 只在 Lemma 4 逼近段界内出现(:288) | 不参与最终比值；纯分析机器 |
+NEW| | κ_j | \lvert B₂^j\rvert | :52-53 | 只在 Lemma 4 逼近段界内出现(:288) | 不参与最终比值；纯分析机器 |
+ROW line=601  sites=4  pipes 10->6  $=0(parity even)
+OLD| | \|T_d\| | 1/d! | :315 | R 分母 \|T_d\|^{d−1} | 错则 c_d 全错 |
+NEW| | \lvert T_d\rvert | 1/d! | :315 | R 分母 \lvert T_d\rvert^{d−1} | 错则 c_d 全错 |
+ROW line=602  sites=2  pipes 8->6  $=0(parity even)
+OLD| | \|ΠT_d\| | (d+1)/((d−1)!)^d | :316 | R 分子 | d+1 来自立方体加线段的纤维论证(:336-345) |
+NEW| | \lvert ΠT_d\rvert | (d+1)/((d−1)!)^d | :316 | R 分子 | d+1 来自立方体加线段的纤维论证(:336-345) |
+ROW line=603  sites=2  pipes 8->6  $=0(parity even)
+OLD| | c_d | (d+1)d^d/d! | eq:functional(:57) | 逐维 benchmark | 化简链在 :351-352；d=3 给 18 与 Chen et al 吻合(:78-79)，d=2 给 6（图注面积 3 ÷ \|T₂\|=1/2）；渐近 e^d√(d/2π)（我方 Stirling 复算，c₁₀=30 313.05 对 e^10√(10/2π)=27 788 偏差即修正项） |
+NEW| | c_d | (d+1)d^d/d! | eq:functional(:57) | 逐维 benchmark | 化简链在 :351-352；d=3 给 18 与 Chen et al 吻合(:78-79)，d=2 给 6（图注面积 3 ÷ \lvert T₂\rvert=1/2）；渐近 e^d√(d/2π)（我方 Stirling 复算，c₁₀=30 313.05 对 e^10√(10/2π)=27 788 偏差即修正项） |
+after: bytes=115217 (delta +45) lines=839 rows_fixed=4 sites_fixed=10 sites_registered=0
+################ D26  (D26-加倍Hilbert子集无双Lipschitz有限维嵌入.md)
+before: bytes=188412 lines=1270
+ROW line=1090  sites=2  pipes 7->5  $=14(parity even)
+OLD| | $(1+4D)n^{-4}$、$4D^2r/L_x$ | tex:269 | 水平二阶矩的两项合成 | $\|u\|\le D$ 与均值误差的乘积结构；论文用 $D$、Lean 用 $2D$，系数不可逐项对齐（分歧 7），结构（常数次项 + $D$ 二次项，乘 $t$）一致 |
+NEW| | $(1+4D)n^{-4}$、$4D^2r/L_x$ | tex:269 | 水平二阶矩的两项合成 | $\lVert u\rVert\le D$ 与均值误差的乘积结构；论文用 $D$、Lean 用 $2D$，系数不可逐项对齐（分歧 7），结构（常数次项 + $D$ 二次项，乘 $t$）一致 |
+ROW line=1096  sites=2  pipes 7->5  $=18(parity even)
+OLD| | `horizontalCoefficient D = 4+8D(2D+1)` | Lean 侧；`Energy::horizontalCoefficient` | 水平能量 $\le$ 系数 $\times t$ | 由 2（平方三角）+ 2（均值系数）+ $2D$（$\|u\|$ 界）+ $(2D+1)$（均值定位）机械拼出，`unfold; nlinarith` 收尾；$D$ 大时 $16D^2$ 阶 ⇒ $t\ll1/D^2$，论文侧由 $n\to\infty$ 吸收 |
+NEW| | `horizontalCoefficient D = 4+8D(2D+1)` | Lean 侧；`Energy::horizontalCoefficient` | 水平能量 $\le$ 系数 $\times t$ | 由 2（平方三角）+ 2（均值系数）+ $2D$（$\lVert u\rVert$ 界）+ $(2D+1)$（均值定位）机械拼出，`unfold; nlinarith` 收尾；$D$ 大时 $16D^2$ 阶 ⇒ $t\ll1/D^2$，论文侧由 $n\to\infty$ 吸收 |
+ROW line=1116  sites=2  pipes 7->5  $=10(parity even)
+OLD| | $c_p=(\mathbb E\|g\|^p)^{1/p}$ | tex:393（cor:lp） | 归一化 Gauss 级数精确等距 | 有限性来自"高斯全体有限矩"，$p=\infty$ 无对象（$c_\infty=\infty$）；不除 $c_p$ 则下游常数乘 $c_p$ 幂。最优性论文未述，形式化缺席，此条仅论文有 |
+NEW| | $c_p=(\mathbb E\lVert g\rVert^p)^{1/p}$ | tex:393（cor:lp） | 归一化 Gauss 级数精确等距 | 有限性来自"高斯全体有限矩"，$p=\infty$ 无对象（$c_\infty=\infty$）；不除 $c_p$ 则下游常数乘 $c_p$ 幂。最优性论文未述，形式化缺席，此条仅论文有 |
+after: bytes=188439 (delta +27) lines=1270 rows_fixed=3 sites_fixed=6 sites_registered=0
+################ D28  (D28-双曲群无几何CAT0作用.md)
+before: bytes=151904 lines=1526
+ROW line=1166  sites=2  pipes 8->6  $=0(parity even)
+OLD| | E\|Ω\| | N^{3−β−90δ} | sample:eq-master-mean | 主匹配非空 | α 完全消掉：(17+7α)+(12+β−7α)=29+β |
+NEW| | E\lvert Ω\rvert | N^{3−β−90δ} | sample:eq-master-mean | 主匹配非空 | α 完全消掉：(17+7α)+(12+β−7α)=29+β |
+ROW line=1176  sites=2  pipes 8->6  $=0(parity even)
+OLD| | r | √3/2 | 05 hexagon 段 | 余弦和论证输入 | 边长和 6、\|3−s\| 检查唯一确定 |
+NEW| | r | √3/2 | 05 hexagon 段 | 余弦和论证输入 | 边长和 6、\lvert 3−s\rvert 检查唯一确定 |
+ROW line=1184  sites=2  pipes 8->6  $=0(parity even)
+OLD| | N | \|S_n\|（论文）/2(n+1)（Lean） | 02:42-45；TableSelection.lean:60 | 唯一趋参 | 群结构无关（D12） |
+NEW| | N | \lvert S_n\rvert（论文）/2(n+1)（Lean） | 02:42-45；TableSelection.lean:60 | 唯一趋参 | 群结构无关（D12） |
+after: bytes=151931 (delta +27) lines=1526 rows_fixed=3 sites_fixed=6 sites_registered=0
+################ D29  (D29-Borsuk覆盖断言九维反例.md)
+before: bytes=192274 lines=1093
+ROW line=826  sites=2  pipes 9->7  $=2(parity even)
+OLD| | $\|P_x-P_y\|_F^2=2-2\langle u,v\rangle^2$ | 2.1 | 距离↔夹角刻画 | 直径对 ⟺ 正交对 ⟺ 支集不交的桥 | 无 | 距离一旦依赖夹角以外信息，"块内无正交对"翻译失效，(A) 桥断 |
+NEW| | $\lVert P_x-P_y\rVert_F^2=2-2\langle u,v\rangle^2$ | 2.1 | 距离↔夹角刻画 | 直径对 ⟺ 正交对 ⟺ 支集不交的桥 | 无 | 距离一旦依赖夹角以外信息，"块内无正交对"翻译失效，(A) 桥断 |
+ROW line=834  sites=2  pipes 9->7  $=6(parity even)
+OLD| | $\operatorname{tr}\lvert A\rvert=1$、$\|F(A)\|_1=\operatorname{tr}\lvert A\rvert$ | §14/3.2 | 球面归一 | 恒等式使 $F$ 在球面间取值 | 无 | 恒等式一破，奇映射不再住在球面之间，Prop 4.1 的维数界无从调用 |
+NEW| | $\operatorname{tr}\lvert A\rvert=1$、$\lVert F(A)\rVert_1=\operatorname{tr}\lvert A\rvert$ | §14/3.2 | 球面归一 | 恒等式使 $F$ 在球面间取值 | 无 | 恒等式一破，奇映射不再住在球面之间，Prop 4.1 的维数界无从调用 |
+ROW line=847  sites=2  pipes 9->7  $=10(parity even)
+OLD| | $\sqrt2\,a_{ij}$（非对角） | Rmk 2.2 | Frobenius 双计 | $\|A\|_F^2$ 含 $2a_{ij}^2$ ⇒ 系数 $\sqrt2$ | 无 | 系数改 1 则非对角坐标带 $\sqrt2$ 残差，直径计算多因子 |
+NEW| | $\sqrt2\,a_{ij}$（非对角） | Rmk 2.2 | Frobenius 双计 | $\lVert A\rVert_F^2$ 含 $2a_{ij}^2$ ⇒ 系数 $\sqrt2$ | 无 | 系数改 1 则非对角坐标带 $\sqrt2$ 残差，直径计算多因子 |
+after: bytes=192301 (delta +27) lines=1093 rows_fixed=3 sites_fixed=6 sites_registered=0
+################ D41  (D41-敏感度与块敏感度的超二次分离.md)
+before: bytes=124840 lines=831
+ROW line=536  sites=2  pipes 7->5  $=20(parity even)
+OLD| | $t$ | 16 | 被禁构型规模、$\|\mathcal T\|<t$、系数 $tS'_0$、$\max(r,t)\le2\sqrt M$ | $t\le11$ 时 union bound 的 $M$ 指数 $2t-\frac{t(t-1)}2+t\ge0$ 收不拢；$t\ge19$ 时 $M\ge81$ 供不出 $t\le2\sqrt M$ |
+NEW| | $t$ | 16 | 被禁构型规模、$\lvert \mathcal T\rvert<t$、系数 $tS'_0$、$\max(r,t)\le2\sqrt M$ | $t\le11$ 时 union bound 的 $M$ 指数 $2t-\frac{t(t-1)}2+t\ge0$ 收不拢；$t\ge19$ 时 $M\ge81$ 供不出 $t\le2\sqrt M$ |
+ROW line=541  sites=2  pipes 7->5  $=10(parity even)
+OLD| | $\|\mathcal T\|$ | $\le t-1=15$ | 零侧 $tS'_0$ | 见 $t$；无 labelling 时退化为 $kS'_0$，利润归零 |
+NEW| | $\lvert \mathcal T\rvert$ | $\le t-1=15$ | 零侧 $tS'_0$ | 见 $t$；无 labelling 时退化为 $kS'_0$，利润归零 |
+ROW line=542  sites=2  pipes 7->5  $=20(parity even)
+OLD| | $\|\mathcal G\|$ | $\le3$；孤点 $\le1$ | $S'_1+3J'_1$、$3J'_1$、$v$ 继承系数 3 | $\binom m2\le m$ 是硬账；系数变 4 则 $\epsilon$ 预算需 $\le4^{-d}$，$M\ge16^{d+1}$ |
+NEW| | $\lvert \mathcal G\rvert$ | $\le3$；孤点 $\le1$ | $S'_1+3J'_1$、$3J'_1$、$v$ 继承系数 3 | $\binom m2\le m$ 是硬账；系数变 4 则 $\epsilon$ 预算需 $\le4^{-d}$，$M\ge16^{d+1}$ |
+after: bytes=124867 (delta +27) lines=831 rows_fixed=3 sites_fixed=6 sites_registered=0
+################ D68  (D68-相容性熵与Thorp扫描的谱.md)
+before: bytes=371407 lines=1600
+ROW line=1346  sites=2  pipes 8->6  $=8(parity even)
+OLD| | $\epsilon=\delta/(2+\delta)$ | $D(\mu\|\nu_{*})\ge\epsilon D(\mu\|U_{m})-O(\log d)$ | `07-fractional-density.tex:179-187` | 吸收 $\mathbb E_{\zeta}[R_{X}+R_{Y}]$ 的那笔余量 | 系数只剩 $o(1)$ 则坏格与高值无处付账 |
+NEW| | $\epsilon=\delta/(2+\delta)$ | $D(\mu\Vert \nu_{*})\ge\epsilon D(\mu\Vert U_{m})-O(\log d)$ | `07-fractional-density.tex:179-187` | 吸收 $\mathbb E_{\zeta}[R_{X}+R_{Y}]$ 的那笔余量 | 系数只剩 $o(1)$ 则坏格与高值无处付账 |
+ROW line=1347  sites=1  pipes 7->6  $=6(parity even)
+OLD| | $D(P\|R)\ge\mathbb E_{P}W-\log\mathbb E_{R}e^{W}$ | 允许支撑外取 $-\infty$，只要指数期望为正 | `07-fractional-density.tex:188-193` | 三处势的构造 | 去掉允许 $-\infty$ 那句，被堵候选再也压不出负贡献 |
+NEW| | $D(P\Vert R)\ge\mathbb E_{P}W-\log\mathbb E_{R}e^{W}$ | 允许支撑外取 $-\infty$，只要指数期望为正 | `07-fractional-density.tex:188-193` | 三处势的构造 | 去掉允许 $-\infty$ 那句，被堵候选再也压不出负贡献 |
+ROW line=1370  sites=2  pipes 8->6  $=6(parity even)
+OLD| | $\lVert A_{2}A_{1}\rVert_{S^{P}}\le\big\|\lvert A_{2}\rvert^{P/q}\lvert A_{1}^{*}\rvert^{P/q}\big\|_{S^{q}}^{q/P}$ | $P\ge q\ge1$，Araki--Lieb--Thirring 形式 | `01-preliminaries.tex:132-180` | 一切四因子迹不等式 | 虚幂在支撑上的酉性一失，$\operatorname{Re}z=1$ 那侧边界守不住 |
+NEW| | $\lVert A_{2}A_{1}\rVert_{S^{P}}\le\big\lVert \lvert A_{2}\rvert^{P/q}\lvert A_{1}^{*}\rvert^{P/q}\big\rVert_{S^{q}}^{q/P}$ | $P\ge q\ge1$，Araki--Lieb--Thirring 形式 | `01-preliminaries.tex:132-180` | 一切四因子迹不等式 | 虚幂在支撑上的酉性一失，$\operatorname{Re}z=1$ 那侧边界守不住 |
+after: bytes=371428 (delta +21) lines=1600 rows_fixed=3 sites_fixed=5 sites_registered=0
+################ D30  (D30-负pinched三维Kähler流形无有界全纯坐标.md)
+before: bytes=136494 lines=1019
+ROW line=804  sites=4  pipes 10->6  $=10(parity even)
+OLD| | $c_0=\frac{1-\|f\|_\infty}{4}$ | $>0$ | §4 定义 | patch 宽度、$K_*>2C_2/c_0$ | $\|f\|_\infty\to1$ ⇒ $c_0\to0$ ⇒ 正性间隙消失 |
+NEW| | $c_0=\frac{1-\lVert f\rVert_\infty}{4}$ | $>0$ | §4 定义 | patch 宽度、$K_*>2C_2/c_0$ | $\lVert f\rVert_\infty\to1$ ⇒ $c_0\to0$ ⇒ 正性间隙消失 |
+after: bytes=136512 (delta +18) lines=1019 rows_fixed=1 sites_fixed=4 sites_registered=0
+################ D34  (D34-无团图的对数独立数界.md)
+before: bytes=147518 lines=924
+ROW line=570  sites=2  pipes 8->6  $=10(parity even)
+OLD| | $B_C$ | $2\sqrt{A_C+1}$ | `entropy:94`、`coupling:82` | $\mathbb E\|\cdot\|_{\mathrm{TV}}\le B_C\sqrt{\log x/x}$ | 来自 Pinsker $\mathrm{TV}\le\sqrt D$＋$\mu Q=(\mu+\mu P)/2$ 的转移（§9）；Lean `smoothingConstant := 2*Real.sqrt(entropyConstant+1)` |
+NEW| | $B_C$ | $2\sqrt{A_C+1}$ | `entropy:94`、`coupling:82` | $\mathbb E\lVert \cdot\rVert_{\mathrm{TV}}\le B_C\sqrt{\log x/x}$ | 来自 Pinsker $\mathrm{TV}\le\sqrt D$＋$\mu Q=(\mu+\mu P)/2$ 的转移（§9）；Lean `smoothingConstant := 2*Real.sqrt(entropyConstant+1)` |
+ROW line=739  sites=2  pipes 9->7  $=4(parity even)
+OLD| | 16 | 引理 5.1 用 $\|\cdot\|_{\mathrm{TV}}$（`entropy:80-82` 定义） | `FiniteCoupling.lean:25` 另定义 `def dist (p q : I → ℝ) := (∑ i, \|p i - q i\|)/2`，与 `FiniteEntropy.lean:30` 的 `tv` 同式不同名 | 重复定义（两处 TV），形式化内冗余；`sharp_bound_le`（`:336`）补上"$\le2\mathrm{TV}$"宽松形式 |
+NEW| | 16 | 引理 5.1 用 $\lVert \cdot\rVert_{\mathrm{TV}}$（`entropy:80-82` 定义） | `FiniteCoupling.lean:25` 另定义 `def dist (p q : I → ℝ) := (∑ i, \|p i - q i\|)/2`，与 `FiniteEntropy.lean:30` 的 `tv` 同式不同名 | 重复定义（两处 TV），形式化内冗余；`sharp_bound_le`（`:336`）补上"$\le2\mathrm{TV}$"宽松形式 |
+after: bytes=147536 (delta +18) lines=924 rows_fixed=2 sites_fixed=4 sites_registered=0
+################ D24  (D24-Kaplansky拟迹猜想反例.md)
+before: bytes=130730 lines=1018
+ROW line=706  sites=2  pipes 8->6  $=8(parity even)
+OLD| | $\frac15$ | 多项式逼近容差 | Thm 5.1 | 推出 $\|P^*P-I\|<\frac{11}{25}$ | 需要 $<\sqrt{3/2}-1\approx0.225$，$\frac15=0.2$ 是就近取的 |
+NEW| | $\frac15$ | 多项式逼近容差 | Thm 5.1 | 推出 $\lVert P^*P-I\rVert<\frac{11}{25}$ | 需要 $<\sqrt{3/2}-1\approx0.225$，$\frac15=0.2$ 是就近取的 |
+after: bytes=130739 (delta +9) lines=1018 rows_fixed=1 sites_fixed=2 sites_registered=0
+################ D364  (D364-平面Schrödinger端点收敛的H三分之一次幂全程.md)
+before: bytes=71226 lines=673
+ROW line=453  sites=2  pipes 8->6  $=2(parity even)
+OLD| | $C\|f\|_{H^{1/3}}$ 端点界 | 主极大常数 | `09-endpoint.tex:461` | 全文落点 | 三柱松一格即退等号 |
+NEW| | $C\lVert f\rVert_{H^{1/3}}$ 端点界 | 主极大常数 | `09-endpoint.tex:461` | 全文落点 | 三柱松一格即退等号 |
+after: bytes=71235 (delta +9) lines=673 rows_fixed=1 sites_fixed=2 sites_registered=0
+################ D44  (D44-小finitistic维数无穷的代数.md)
+before: bytes=105112 lines=585
+ROW line=450  sites=2  pipes 8->6  $=12(parity even)
+OLD| | $Z_m$ | $\cong(\mathbb Z/2)^m$，$\|Z_m\|=2^m$ | `02:246-248`、`02:331-340` | 特征 $\chi_m$ 与 $p_\chi$ 定义域 | 独立性失败则 $\chi_m$ 不存在 |
+NEW| | $Z_m$ | $\cong(\mathbb Z/2)^m$，$\lvert Z_m\rvert=2^m$ | `02:246-248`、`02:331-340` | 特征 $\chi_m$ 与 $p_\chi$ 定义域 | 独立性失败则 $\chi_m$ 不存在 |
+after: bytes=105121 (delta +9) lines=585 rows_fixed=1 sites_fixed=2 sites_registered=0
+################ D50  (D50-非坐标多项式与三维仿射零纤维.md)
+before: bytes=101104 lines=591
+REGISTERED line=438 sites=1 reason=单枚未配对 \|：$(1+2s^2x)F\big\|_P$ 是限制/求值号，非绝对值/范数；本篇自述只用 \mid（整除）与 \lvert\rvert（绝对值），无 \upharpoonright 凭据 ⇒ 不发明，原样登记
+KEEP| | 证书在 $P$ 的两边 | 我算：左边 $\alpha h+\beta y-1=3\cdot2+(-4)\cdot1-1=1$；右边 $(1+2s^2x)(h-1-p)-4s^4(x^2+y^3-sh)=(-1)(-1)-4\cdot0=1$ | 对照 `eq:certificate` | 恒等式的点检验 | 两边同非零正说明 $P\notin\{F=0\}$：残量恰好是 $(1+2s^2x)F\big\|_P$ |
+after: bytes=101104 (delta +0) lines=591 rows_fixed=0 sites_fixed=0 sites_registered=1

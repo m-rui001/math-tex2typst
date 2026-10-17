@@ -1,0 +1,46 @@
+
+\documentclass{article}
+\usepackage{tikz}
+\pagestyle{empty}
+\makeatletter
+\def\dt@pt#1{#1\typeout{PT \the\pgf@x,\the\pgf@y}}
+\let\dt@move\pgfpathmoveto
+\def\pgfpathmoveto#1{\dt@pt{#1}\typeout{MOVE}\dt@move{#1}}
+\let\dt@curve\pgfpathcurveto
+\def\pgfpathcurveto#1#2#3{\dt@pt{#1}\dt@pt{#2}\dt@pt{#3}\typeout{CURVE}\dt@curve{#1}{#2}{#3}}
+\let\dt@line\pgfpathlineto
+\def\pgfpathlineto#1{\dt@pt{#1}\typeout{LINE}\dt@line{#1}}
+\makeatother
+\begin{document}
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  slot/.style={circle,draw=black!70,line width=.6pt,
+    minimum size=8mm,inner sep=2pt,font=\small},
+  edge/.style={-{Stealth[length=2.2mm,width=1.5mm]},
+    draw=blue!45!black,line width=.8pt},
+  note/.style={font=\small,align=center,text=black!80}
+]
+  \node[slot] (one) at (0,0) {$1$};
+  \node[slot] (two) at (2,0) {$2$};
+  \node[slot] (three) at (4,0) {$3$};
+  \draw[edge] (one) -- (two);
+  \draw[edge] (two) -- (three);
+  \node[note] at (2,1.35) {directed path};
+  \node[note] at (0,-.8) {$d_P(1)=1$};
+  \node[note] at (2,-.8) {$d_P(2)=2$};
+  \node[note] at (4,-.8) {$d_P(3)=1$};
+
+  \node[slot] (four) at (6.5,0) {$4$};
+  \node[slot] (five) at (8.5,0) {$5$};
+  \draw[edge] (four) to[bend left=27] (five);
+  \draw[edge] (five) to[bend left=27] (four);
+  \node[note] at (7.5,1.35) {directed $2$-cycle};
+  \node[note] at (6.5,-.8) {$d_P(4)=2$};
+  \node[note] at (8.5,-.8) {$d_P(5)=2$};
+
+  \node[slot] (six) at (11.5,0) {$6$};
+  \draw[edge,dashed] (six) to[out=135,in=45,looseness=5] (six);
+  \node[note] at (11.5,1.35) {optional diagonal match};
+  \node[note] at (11.5,-.8) {$d_P(6)=0$};
+\end{tikzpicture}
+\end{document}

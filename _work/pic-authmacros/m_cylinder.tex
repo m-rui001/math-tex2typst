@@ -1,0 +1,74 @@
+% Control case for _work/pic-authmacros: the Cylinder figure's author macros, drawn for real and
+% probed for their canvas coordinates. Compiled with pdflatex; PROBE lines land in the log.
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
+\pagestyle{empty}
+\makeatletter
+% \pgfpointxy alone reports the scope's *local* frame -- measured in m_probe_method.tex, where a
+% point (-.35,-.35) inside shift={(2,3)} answers -.35cm to \pgfpointxy and 1.65cm once
+% \pgfpointtransformed wraps it. Only the transformed reading is where TeX inks the page, which is
+% the number CeTz's canvas carries, in cm (1pt = 1/28.45274 cm).
+\def\pp#1#2{\pgf@process{\pgfpointtransformed{\pgfpointxy{#1}{#2}}}%
+  \typeout{PROBE:\space(#1,#2) = \pgf@sys@tonumber{\pgf@x}pt,\pgf@sys@tonumber{\pgf@y}pt}}
+\makeatother
+\newcommand{\FiniteSquare}[3]{
+  \begin{scope}[shift={(#1,#2)}]
+    \draw[finite boundary] (-.35,-.35) rectangle (.35,.35);
+    #3
+    \foreach \p in {(-.35,0),(0,-.35),(.35,0),(0,.35)}
+      \fill[black!45] \p circle (1pt);
+  \end{scope}}
+\newcommand{\FiniteTriangle}[3]{
+  \begin{scope}[shift={(#1,#2)}]
+    \draw[finite boundary] (-.48,-.33)--(.48,-.33)--(0,.51)--cycle;
+    #3
+    \foreach \p in {(0,-.33),(-.24,.09),(.24,.09)}
+      \fill[black!45] \p circle (1pt);
+  \end{scope}}
+\newcommand{\FiniteCap}[3]{
+  \begin{scope}[shift={(#1,#2)}]
+    \draw[finite boundary] (-.48,.22)--(-.48,-.35)--(.48,-.35)--(.48,.22);
+    #3
+    \foreach \p in {(-.30,.22),(.30,.22)}
+      \fill[black!45] \p circle (1pt);
+  \end{scope}}
+
+\begin{document}
+\tikzset{
+  finite boundary/.style={draw=black!30,line width=.4pt},
+  finite arc/.style={draw=black,line width=1.05pt,line cap=round},
+  every node/.style={inner sep=1.5pt},
+  finite label/.style={font=\footnotesize},
+  finite heading/.style={anchor=west,font=\small\bfseries}
+}
+
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+  \FiniteSquare{.70}{-1.08}{}
+  \FiniteSquare{2.50}{-1.08}{
+    \draw[finite arc] (-.35,0) .. controls (-.13,0) and (0,.13) .. (0,.35);}
+  \FiniteTriangle{4.90}{-4.06}{}
+  \FiniteCap{10.98}{-4.06}{}
+  \draw[finite boundary] (1.90,-3.32)--(2.70,-4.12)--(1.90,-4.92)--(1.10,-4.12)--cycle;
+  \foreach \p in {(1.50,-3.72),(2.30,-3.72),(1.50,-4.52),(2.30,-4.52)}
+    \fill[black!45] \p circle (1.2pt);
+\end{tikzpicture}
+
+% the same three scopes with the drawing replaced by probes: one feature different (a \pp
+% instead of a \draw), same transform, so the numbers are TeX's own answer for the macro body
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \begin{scope}[shift={(.70,-1.08)}]
+    \pp{-.35}{-.35} \pp{.35}{.35} \pp{-.35}{0} \pp{0}{-.35} \pp{.35}{0} \pp{0}{.35}
+  \end{scope}
+  \begin{scope}[shift={(2.50,-1.08)}]
+    \pp{-.35}{0} \pp{-.13}{0} \pp{0}{.13} \pp{0}{.35}
+  \end{scope}
+  \begin{scope}[shift={(4.90,-4.06)}]
+    \pp{-.48}{-.33} \pp{.48}{-.33} \pp{0}{.51} \pp{0}{-.33} \pp{-.24}{.09} \pp{.24}{.09}
+  \end{scope}
+  \begin{scope}[shift={(10.98,-4.06)}]
+    \pp{-.48}{.22} \pp{-.48}{-.35} \pp{.48}{-.35} \pp{.48}{.22} \pp{-.30}{.22} \pp{.30}{.22}
+  \end{scope}
+  \pp{1.90}{-3.32} \pp{2.70}{-4.12} \pp{1.90}{-4.92} \pp{1.10}{-4.12}
+\end{tikzpicture}
+\end{document}

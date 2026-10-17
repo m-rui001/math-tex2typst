@@ -1,0 +1,49 @@
+== rule under test: live -- the label's own box
+== CD canvases: built 126 over 56 papers; refused 0 over 0 papers
+== arrow labels by arrow direction: count, and how many a line crosses (dist < need)
+   horizontal  labels  170   crossed    0   (median label width 0.00 cm)
+   vertical    labels  187   crossed   51   (median label width 2.25 cm)
+   diagonal    labels   31   crossed    1   (median label width 3.95 cm)
+   crossed by its OWN arrow's line   : 44
+   crossed by another arrow's line   : 8
+     own  Thomason-Model-Structures-in dist 0.607 need 0.955  $"Street" j_2$
+     own  Thomason-Model-Structures-in dist 0.607 need 0.955  $"Street" j_1$
+     own  Constructible-tame-Hecke-eig dist 1.457 need 1.720  $c_(V \, W)^(upright("seq")) \( Q \)$
+     own  Counterexamples-to-weak-chro dist 1.882 need 2.060  $lambda_(L_(K \( h \)) X) thin L_(K \( h \))
+     own  Infinitely-many-closed-geode dist 0.352 need 0.530  $"res"$
+     own  A-rational-obstruction-to-st dist 0.947 need 1.125  $\[ f \/ phi.alt \]^(*)$
+     own  A-rational-obstruction-to-st dist 1.117 need 1.295  $upright("res") \, thin upright("inf")$
+     own  Simple-F-infinity-overgroups dist 1.032 need 1.210  $"diag" (1, pi (-))$
+   neighbour-crossed, split by whether the diagram holds a bend arrow: 0 bend / 8 plain
+     plain Global-quantum-geometric-Langl dist 1.305 need 2.655 w 5.31  $upright("integrated ") N upright(" case of 
+     plain Tame-Hecke-Eigensheaves-with-S dist 0.928 need 1.975 w 3.95  $c_V \( A_W \( Q \) \) thin B_V \( c_W \( Q 
+     plain Thomason-Model-Structures-in-E dist 0.555 need 1.040 w 2.08  $"Street" j_12$
+     plain Thomason-Model-Structures-in-E dist 0.550 need 0.785 w 1.57  $eta_(S_12)$
+     plain Termination-of-generalized-log dist 1.953 need 2.145 w 4.29  $upright("finite small program")$
+     plain Global-quantum-geometric-Langl dist 1.431 need 1.550 w 3.10  $G upright(" case of ") upright("??")$
+     plain Unrestricted-pro-modularity-at dist 2.056 need 2.145 w 4.29  $- hat(⊗)_(cal(E)^(\( b \))) P^(\( b \))$
+     plain Termination-for-projective-log dist 1.953 need 1.975 w 3.95  $upright("finite small flips")$
+   papers with a crossed label: 24 over 52 labels
+   per-paper worst:
+       9  Thomason-Model-Structures-in-Every-Strict-Higher-Dimensi
+       4  A-rational-obstruction-to-strong-chromatic-splitting-at-
+       4  Infinitely-many-closed-geodesic-images-on-every-Riemanni
+       3  Constructible-tame-Hecke-eigensheaves-in-positive-charac
+       3  Filtered-chromatic-splitting-at-generic-primes-September
+       3  Global-quantum-geometric-Langlands-at-irrational-level-O
+       3  Rationality-of-the-Canonical-Unramified-Arthur-Filtratio
+       2  Anticanonical-nonvanishing-from-smooth-semipositivity-Se
+       2  Counterexamples-to-weak-chromatic-splitting-sphere-kerne
+       2  Log-abundance-for-compact-Kahler-spaces-under-logarithmi
+     dist 1.305 need 2.655 w 5.31  Global-quantum-geometric-Langl  $upright("integrated ") N upright(" case of 
+     dist 0.928 need 1.975 w 3.95  Tame-Hecke-Eigensheaves-with-S  $c_V \( A_W \( Q \) \) thin B_V \( c_W \( Q 
+     dist 0.555 need 1.040 w 2.08  Thomason-Model-Structures-in-E  $"Street" j_12$
+     dist 0.607 need 0.955 w 1.91  Thomason-Model-Structures-in-E  $"Street" j_2$
+     dist 0.607 need 0.955 w 1.91  Thomason-Model-Structures-in-E  $"Street" j_1$
+     dist 1.457 need 1.720 w 3.44  Constructible-tame-Hecke-eigen  $c_(V \, W)^(upright("seq")) \( Q \)$
+     dist 0.550 need 0.785 w 1.57  Thomason-Model-Structures-in-E  $eta_(S_12)$
+     dist 1.953 need 2.145 w 4.29  Termination-of-generalized-log  $upright("finite small program")$
+     dist 1.882 need 2.060 w 4.12  Counterexamples-to-weak-chroma  $lambda_(L_(K \( h \)) X) thin L_(K \( h \))
+     dist 0.352 need 0.530 w 1.06  Infinitely-many-closed-geodesi  $"res"$
+== environments written inside a CD environment, and whether CD_STACK protects them
+       4  gathered       protected  1 papers

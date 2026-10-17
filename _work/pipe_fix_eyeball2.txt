@@ -1,0 +1,30 @@
+D09:382 FIX x2
+  OLD | $Q$ | $=p^{12}$ | unweighted.tex:40 | 归一化尺度 $|\operatorname{MaxCut}(G')/Q-\operatorname{MaxCut}(G)|\le\epsilon'$ | 6 维簇与内积谱范数 $p
+  NEW | $Q$ | $=p^{12}$ | unweighted.tex:40 | 归一化尺度 $\lvert\operatorname{MaxCut}(G')/Q-\operatorname{MaxCut}(G)\rvert\le\epsilon'$ | 6 维
+D21:215 FIX x2
+  OLD | $|F|$ | $m$ / $2m-1$ | 与扫除目标匹配 | `bandPath_card` |
+  NEW | $\lvert F\rvert$ | $m$ / $2m-1$ | 与扫除目标匹配 | `bandPath_card` |
+D25:254 FIX x2
+  OLD | 共形映射方向 | **外**共形映射 $h:\{|\lambda|>1\}\to\mathbb C\setminus\overline\Omega$（`main.tex:163`） | **内**共形映射 $f:\Omega\to\mathbb D$（`m
+  NEW | 共形映射方向 | **外**共形映射 $h:\{\lvert\lambda\rvert>1\}\to\mathbb C\setminus\overline\Omega$（`main.tex:163`） | **内**共形映射 $f:\Omega\to\ma
+D25:592 FIX x2
+  OLD | 几何衰减 $\rho^{k+j}$（双指标） | 第 196-197、220 行 | Cauchy 估计在 $(u,v)$ 双盘半径 $\rho^{-1}$ | 只有单指标衰减（$|s_{kj}|\le C\rho^k$）时 $\sum_j$ 方向不收敛，
+  NEW | 几何衰减 $\rho^{k+j}$（双指标） | 第 196-197、220 行 | Cauchy 估计在 $(u,v)$ 双盘半径 $\rho^{-1}$ | 只有单指标衰减（$\lvert s_{kj}\rvert\le C\rho^k$）时 $\su
+D25:1478 FIX x4
+  OLD | $D_\delta$ **有限** | `main.tex:464` | 补步 2 的 $|D_\delta|$ 可被 $e^{-t_\delta\delta}$ 压住；Hessian 是有限和；$\Phi$ 是实解析指数和 | 无穷网：$|D_\delt
+  NEW | $D_\delta$ **有限** | `main.tex:464` | 补步 2 的 $\lvert D_\delta\rvert$ 可被 $e^{-t_\delta\delta}$ 压住；Hessian 是有限和；$\Phi$ 是实解析指数和 | 无穷
+D25:1480 FIX x2
+  OLD | $t_\delta$ 满足 $|D_\delta|e^{-t_\delta\delta}<1$ | `main.tex:464` | 保证 $K\subset\Omega_\delta$（**严格**包含） | 若只 $\le1$：$K$ 可能触到 $\{
+  NEW | $t_\delta$ 满足 $\lvert D_\delta\rvert e^{-t_\delta\delta}<1$ | `main.tex:464` | 保证 $K\subset\Omega_\delta$（**严格**包含） | 若只 $\le1$：
+D25:1886 FIX x4
+  OLD | $(1,i,j,k)$ 四元组 | `main.tex:514-518`（Toeplitz-Hausdorff 重证）：`$(2\Re(\bar uv),2\Im(\bar uv),|u|^2-|v|^2)$` ranges over the unit s
+  NEW | $(1,i,j,k)$ 四元组 | `main.tex:514-518`（Toeplitz-Hausdorff 重证）：`$(2\Re(\bar uv),2\Im(\bar uv),\lvert u\rvert^2-\lvert v\rvert^2)$` 
+--- SKIP labels ---
+D09:379 SKIP oddspan bare=7 width=6 | $e_{k_0}$ | $2^{\ell+r-2k_0+1}\le\tau_0/4$ | affine_games.tex:377（eq:affine-va
+D103:598 SKIP nomath bare=5 width=3 | `(1/4)*log|Algebra.norm ℚ Δ| ≤ N^4/2*log(N^4) + (Σα0+Σ(α1+α2))*(log N + 1/2*lo
+D103:601 SKIP nomath bare=5 width=3 | `S₁*(...)-log 4*N^4*U ≤ (1/4)log|N(Δ)|`（85-87） | `paper.tex:651-657` 的 (eq:low
+D103:602 SKIP nomath bare=5 width=3 | `Σα0*(log U - C log q - C δ (log U)²/log q - CH H) - C*N^4*U ≤ (1/4)log|N(Δ)|`
+D25:1870 SKIP nomath bare=9 width=7 | $C_\rho,\ \rho\in(r,1)$（几何衰减） | `main.tex:196-197` `|s_{kj}|\le C_\rho\rho^{k+
+D28:1162 SKIP nomath bare=8 width=6 | |F| | 212=32+2·90 | 02；Template.lean:40 | field 总数，一切指数基数 | 精确、decide 可判 |
+D28:1163 SKIP nomath bare=8 width=6 | |R| | 98=7+1+90 | 02；IncidenceTemplate.lean:18 | row 总数 | 精确 |
+D34:533 SKIP oddspan bare=7 width=6 | $A_r$ | $4+8(r-2)+(1+r(r-2))\log2$ | `optimizer:207-209` | $\log(1+kb_r(e^{-8x

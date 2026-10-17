@@ -1,0 +1,2 @@
+total=734 bad=1
+D68-相容性熵与Thorp扫描的谱.md                                    293647  emDash=6

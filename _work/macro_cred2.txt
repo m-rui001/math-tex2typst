@@ -1,0 +1,43 @@
+notes=734
+cmd  undecl_tokens  decl_tokens  notes_declaring  example_notes
+le           u=76599 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+mathcal      u=38155 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+ge           u=37417 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+frac         u=33613 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+mathbb       u=28326 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+log          u=24647 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+operatorname u=24461 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+sum          u=23946 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+in           u=23822 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+delta        u=23819 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+ell          u=23165 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+mathrm       u=22515 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+lambda       u=22488 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+lvert        u=22426 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+rvert        u=22335 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+alpha        u=18804 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+to           u=18172 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+beta         u=16811 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+eta          u=16523 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+pi           u=16125 d=0     declNotes=0    D01-对称 D03-Vl D04-乘性 D05-算术 D06-pi D07-量子
+rho          u=15140 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+sqrt         u=15020 d=0     declNotes=0    D01-对称 D03-Vl D04-乘性 D05-算术 D06-pi D07-量子
+sigma        u=14176 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+tau          u=13688 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D06-pi D07-量子
+rVert        u=13323 d=0     declNotes=0    D01-对称 D03-Vl D04-乘性 D05-算术 D07-量子 D08-Me
+mu           u=13309 d=0     declNotes=0    D01-对称 D02-Ka D04-乘性 D05-算术 D06-pi D07-量子
+lVert        u=13258 d=0     declNotes=0    D01-对称 D03-Vl D04-乘性 D05-算术 D07-量子 D08-Me
+varepsilon   u=12975 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+gamma        u=12201 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+cdot         u=12031 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+theta        u=11944 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D06-pi D07-量子
+infty        u=11215 d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi
+nu           u=10497 d=0     declNotes=0    D01-对称 D03-Vl D04-乘性 D05-算术 D06-pi D07-量子
+epsilon      u=9655  d=0     declNotes=0    D01-对称 D03-Vl D06-pi D08-Me D09-Ma D10-自由
+Delta        u=9444  d=0     declNotes=0    D02-Ka D03-Vl D04-乘性 D06-pi D08-Me D100-准
+kappa        u=9266  d=0     declNotes=0    D02-Ka D03-Vl D04-乘性 D05-算术 D06-pi D07-量子
+int          u=9220  d=0     declNotes=0    D01-对称 D03-Vl D04-乘性 D05-算术 D07-量子 D08-Me
+qquad        u=8731  d=0     declNotes=0    D05-算术 D06-pi D07-量子 D08-Me D09-Ma D10-自由
+xi           u=8335  d=0     declNotes=0    D01-对称 D02-Ka D03-Vl D06-pi D08-Me D09-Ma
+mathbf       u=7059  d=0     declNotes=0    D01-对称 D03-Vl D04-乘性 D07-量子 D08-Me D09-Ma
+TOTAL undecl=1078301 declared-locally=145

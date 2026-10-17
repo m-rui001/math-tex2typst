@@ -1,0 +1,453 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.26)  13 OCT 2026 16:06
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**g12.tex
+(./g12.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
+(d:/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(d:/texlive/2025/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+)
+(d:/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/06/16 v2.17y AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(d:/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(d:/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen149
+))
+(d:/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen150
+)
+(d:/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count283
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count284
+\leftroot@=\count285
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count286
+\DOTSCASE@=\count287
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen151
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count288
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count289
+\dotsspace@=\muskip17
+\c@parentequation=\count290
+\dspbrk@lvl=\count291
+\tag@help=\toks18
+\row@=\count292
+\column@=\count293
+\maxfields@=\count294
+\andhelp@=\toks19
+\eqnshift@=\dimen152
+\alignsep@=\dimen153
+\tagshift@=\dimen154
+\tagwidth@=\dimen155
+\totwidth@=\dimen156
+\lineht@=\dimen157
+\@envbody=\toks20
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2949.
+LaTeX Info: Redefining \] on input line 2950.
+)
+(d:/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(d:/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(d:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count295
+)
+(./g12.aux)
+\openout1 = `g12.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+
+GOT t0 HT=5.16667pt\ DP=0.0pt\ WD=6.20132pt
+GOT t1 HT=8.33331pt\ DP=0.0pt\ WD=6.52771pt
+GOT t2 HT=7.38097pt\ DP=0.0pt\ WD=4.5694pt
+GOT t3 HT=8.33331pt\ DP=0.0pt\ WD=3.26385pt
+GOT t4 HT=8.33331pt\ DP=0.0pt\ WD=6.52771pt
+GOT t5 HT=8.33331pt\ DP=0.0pt\ WD=6.52771pt
+GOT t6 HT=8.33331pt\ DP=0.0pt\ WD=6.20132pt
+GOT t7 HT=8.33331pt\ DP=0.0pt\ WD=3.59024pt
+GOT t8 HT=7.96431pt\ DP=2.33331pt\ WD=3.59024pt
+GOT t9 HT=5.16667pt\ DP=2.33331pt\ WD=6.52771pt
+GOT t10 HT=5.16667pt\ DP=2.33331pt\ WD=6.20132pt
+GOT t11 HT=5.16667pt\ DP=2.33331pt\ WD=5.87494pt
+GOT t12 HT=5.16667pt\ DP=2.33331pt\ WD=6.20132pt
+GOT t13 HT=8.2pt\ DP=0.0pt\ WD=8.48602pt
+GOT t14 HT=8.2pt\ DP=0.0pt\ WD=8.80824pt
+GOT t15 HT=8.2pt\ DP=0.0pt\ WD=7.99437pt
+GOT t16 HT=8.2pt\ DP=0.0pt\ WD=7.66798pt
+GOT t17 HT=9.0pt\ DP=3.0pt\ WD=4.5694pt
+GOT t18 HT=9.0pt\ DP=3.0pt\ WD=4.5694pt
+GOT t19 HT=9.0pt\ DP=3.0pt\ WD=3.26385pt
+GOT t20 HT=9.0pt\ DP=3.0pt\ WD=3.26385pt
+GOT t21 HT=9.0pt\ DP=3.0pt\ WD=5.87494pt
+GOT t22 HT=6.91663pt\ DP=0.91663pt\ WD=9.1388pt
+GOT t23 HT=4.33081pt\ DP=0.0pt\ WD=9.1388pt
+GOT t24 HT=7.73332pt\ DP=0.0pt\ WD=5.87494pt
+GOT t25 HT=7.73332pt\ DP=0.0pt\ WD=5.87494pt
+GOT t26 HT=1.16666pt\ DP=0.0pt\ WD=3.26385pt
+GOT t27 HT=1.16666pt\ DP=2.33331pt\ WD=3.26385pt
+GOT t28 HT=7.96431pt\ DP=0.0pt\ WD=3.26385pt
+GOT t29 HT=5.16667pt\ DP=0.0pt\ WD=9.79156pt
+GOT t30 HT=8.33331pt\ DP=0.0pt\ WD=28.06915pt
+LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+
+(d:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+
+
+(d:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+GOT m0 HT=5.16667pt\ DP=0.0pt\ WD=6.67703pt
+GOT m1 HT=8.2pt\ DP=0.0pt\ WD=10.69505pt
+GOT m2 HT=5.16667pt\ DP=1.79999pt\ WD=10.07098pt
+GOT m3 HT=9.6434pt\ DP=0.0pt\ WD=10.07098pt
+GOT m4 HT=10.97757pt\ DP=3.0753pt\ WD=11.07562pt
+GOT m5 HT=9.66673pt\ DP=3.66673pt\ WD=8.00002pt
+GOT m6 HT=9.00008pt\ DP=3.00008pt\ WD=12.6667pt
+GOT m7 HT=9.88034pt\ DP=4.13809pt\ WD=6.65005pt
+GOT m8 HT=9.60329pt\ DP=2.87668pt\ WD=16.67706pt
+GOT m9 HT=7.56657pt\ DP=0.0pt\ WD=6.68742pt
+GOT m10 HT=8.33331pt\ DP=0.0pt\ WD=6.68742pt
+GOT m11 HT=7.96431pt\ DP=0.0pt\ WD=6.68742pt
+GOT m12 HT=9.0pt\ DP=3.0pt\ WD=18.16801pt
+GOT m13 HT=9.0pt\ DP=3.0pt\ WD=15.50133pt
+GOT m14 HT=8.33331pt\ DP=2.33331pt\ WD=7.07286pt
+GOT m15 HT=8.33331pt\ DP=0.0pt\ WD=4.93053pt
+GOT m16 HT=8.33331pt\ DP=2.33331pt\ WD=6.95407pt
+GOT m17 HT=8.2pt\ DP=0.0pt\ WD=8.48602pt
+GOT m18 HT=8.19998pt\ DP=0.0pt\ WD=9.81664pt
+GOT m19 HT=5.16667pt\ DP=2.33331pt\ WD=10.47916pt
+GOT m20 HT=7.79915pt\ DP=0.0pt\ WD=10.73056pt
+GOT m21 HT=8.33331pt\ DP=0.91663pt\ WD=25.63579pt
+GOT m22 HT=5.16667pt\ DP=1.79999pt\ WD=11.43748pt
+GOT m23 HT=10.20006pt\ DP=4.20007pt\ WD=17.65012pt
+GOT m24 HT=10.52225pt\ DP=4.49773pt\ WD=25.32169pt
+GOT m25 HT=11.65562pt\ DP=4.16673pt\ WD=21.8229pt
+GOT m26 HT=9.51027pt\ DP=3.0pt\ WD=21.68062pt
+GOT m27 HT=9.0pt\ DP=3.0pt\ WD=13.34372pt
+GOT m28 HT=9.0pt\ DP=3.0pt\ WD=12.00003pt
+GOT m29 HT=9.51027pt\ DP=2.9666pt\ WD=15.44511pt
+GOT m30 HT=7.79915pt\ DP=0.0pt\ WD=11.69191pt
+GOT m31 HT=9.82137pt\ DP=0.0pt\ WD=13.30629pt
+GOT m32 HT=9.51027pt\ DP=0.0pt\ WD=11.4271pt
+GOT m33 HT=9.91026pt\ DP=0.0pt\ WD=10.8132pt
+GOT m34 HT=7.79915pt\ DP=0.0pt\ WD=11.4558pt
+! Limit controls must follow a math operator.
+\int ->\DOTSI \intop \ilimits@ 
+                               
+l.72 \measure{m35}{$x^\int$}
+                            
+I'm ignoring this misplaced \limits or \nolimits command.
+
+GOT m35 HT=10.18063pt\ DP=0.0pt\ WD=12.84378pt
+GOT m36 HT=5.16667pt\ DP=1.79999pt\ WD=10.07098pt
+GOT m37 HT=5.16667pt\ DP=1.79999pt\ WD=13.30629pt
+GOT m38 HT=5.16667pt\ DP=1.79999pt\ WD=11.4271pt
+GOT m39 HT=5.16667pt\ DP=1.79999pt\ WD=10.8132pt
+GOT m40 HT=5.16667pt\ DP=3.35555pt\ WD=11.4558pt
+GOT m41 HT=5.16667pt\ DP=3.35555pt\ WD=11.66551pt
+GOT m42 HT=9.51027pt\ DP=2.9666pt\ WD=11.4271pt
+GOT m43 HT=9.82137pt\ DP=4.52216pt\ WD=13.30629pt
+GOT m44 HT=10.98897pt\ DP=3.50008pt\ WD=17.41676pt
+GOT m45 HT=9.27785pt\ DP=3.50008pt\ WD=43.01086pt
+GOT m46 HT=10.83109pt\ DP=4.13809pt\ WD=11.55843pt
+GOT m47 HT=14.6912pt\ DP=7.38899pt\ WD=18.65009pt
+GOT m48 HT=10.5999pt\ DP=0.0pt\ WD=10.69505pt
+GOT m49 HT=7.56657pt\ DP=2.33331pt\ WD=6.15965pt
+GOT m50 HT=8.33331pt\ DP=2.33331pt\ WD=6.15965pt
+GOT m51 HT=7.96431pt\ DP=0.0pt\ WD=6.67703pt
+GOT m52 HT=8.55331pt\ DP=0.0pt\ WD=6.11104pt
+GOT m53 HT=9.51027pt\ DP=0.0pt\ WD=11.43748pt
+GOT m54 HT=10.20006pt\ DP=4.20007pt\ WD=18.24825pt
+GOT m55 HT=10.20006pt\ DP=4.20007pt\ WD=16.15753pt
+GOT m56 HT=13.8001pt\ DP=7.80011pt\ WD=7.16669pt
+GOT m57 HT=10.20006pt\ DP=4.20007pt\ WD=5.50003pt
+GOT m58 HT=10.25pt\ DP=4.24998pt\ WD=14.16798pt
+GOT m59 HT=17.49998pt\ DP=11.49998pt\ WD=6.16798pt
+GOT m60 HT=17.49998pt\ DP=11.49998pt\ WD=23.83473pt
+GOT m61 HT=5.16667pt\ DP=2.33331pt\ WD=17.6901pt
+GOT m62 HT=8.33331pt\ DP=0.0pt\ WD=14.2186pt
+GOT m63 HT=5.16667pt\ DP=0.0pt\ WD=21.86783pt
+GOT m64 HT=8.33331pt\ DP=1.79999pt\ WD=21.97675pt
+GOT m65 HT=6.66669pt\ DP=0.0pt\ WD=8.00002pt
+GOT m66 HT=6.66669pt\ DP=0.0pt\ WD=8.00002pt
+GOT m67 HT=6.46916pt\ DP=0.46916pt\ WD=8.00002pt
+GOT m68 HT=7.0pt\ DP=1.0pt\ WD=9.33336pt
+GOT m69 HT=5.16667pt\ DP=0.0pt\ WD=7.54993pt
+GOT m70 HT=8.33331pt\ DP=2.33331pt\ WD=7.29854pt
+GOT m71 HT=5.16667pt\ DP=2.33331pt\ WD=6.74744pt
+GOT m72 HT=8.33331pt\ DP=2.33331pt\ WD=6.03816pt
+GOT m73 HT=8.33331pt\ DP=2.33331pt\ WD=5.71178pt
+GOT m74 HT=5.16667pt\ DP=2.33331pt\ WD=6.06036pt
+GOT m75 HT=5.16667pt\ DP=0.0pt\ WD=7.09578pt
+GOT m76 HT=5.16667pt\ DP=2.33331pt\ WD=7.36105pt
+GOT m77 HT=8.33331pt\ DP=2.33331pt\ WD=8.06935pt
+GOT m78 HT=5.16667pt\ DP=0.0pt\ WD=7.74713pt
+GOT m79 HT=8.2pt\ DP=0.0pt\ WD=7.3416pt
+GOT m80 HT=8.2pt\ DP=0.0pt\ WD=9.79156pt
+GOT m81 HT=8.2pt\ DP=0.0pt\ WD=8.48602pt
+GOT m82 HT=9.0pt\ DP=0.66666pt\ WD=6.00002pt
+GOT m83 HT=8.33331pt\ DP=0.0pt\ WD=6.85547pt
+GOT m84 HT=5.16666pt\ DP=0.0pt\ WD=12.00003pt
+GOT m85 HT=8.26666pt\ DP=0.0pt\ WD=8.00002pt
+GOT m86 HT=8.23334pt\ DP=2.33331pt\ WD=10.13887pt
+GOT m87 HT=8.33331pt\ DP=0.0pt\ WD=13.20474pt
+GOT m88 HT=5.16667pt\ DP=0.0pt\ WD=15.99289pt
+GOT m89 HT=8.2pt\ DP=0.0pt\ WD=17.13316pt
+GOT m90 HT=8.26666pt\ DP=0.0pt\ WD=6.48335pt
+GOT m91 HT=5.16667pt\ DP=0.0pt\ WD=3.74995pt
+GOT m92 HT=5.16667pt\ DP=2.33331pt\ WD=4.5347pt
+GOT m93 HT=8.33333pt\ DP=0.0pt\ WD=8.66669pt
+GOT m94 HT=8.33333pt\ DP=0.0pt\ WD=7.33334pt
+GOT m95 HT=8.33331pt\ DP=0.0pt\ WD=5.65407pt
+GOT m96 HT=5.16667pt\ DP=0.0pt\ WD=4.7444pt
+GOT m97 HT=5.16667pt\ DP=0.0pt\ WD=5.49857pt
+GOT m98 HT=8.33331pt\ DP=0.0pt\ WD=5.80202pt
+GOT m99 HT=8.33331pt\ DP=0.0pt\ WD=6.92491pt
+GOT m100 HT=5.16667pt\ DP=0.0pt\ WD=6.76382pt
+GOT m101 HT=8.33331pt\ DP=0.0pt\ WD=6.8541pt
+GOT m102 HT=5.16667pt\ DP=2.33331pt\ WD=7.06938pt
+GOT m103 HT=5.16667pt\ DP=0.0pt\ WD=6.56244pt
+GOT m104 HT=5.16667pt\ DP=0.0pt\ WD=7.10896pt
+GOT m105 HT=5.16667pt\ DP=1.16666pt\ WD=5.21521pt
+GOT m106 HT=5.16667pt\ DP=0.0pt\ WD=6.44301pt
+GOT m107 HT=5.16667pt\ DP=0.0pt\ WD=6.76381pt
+GOT m108 HT=8.2pt\ DP=0.0pt\ WD=8.48602pt
+GOT m109 HT=8.2pt\ DP=0.0pt\ WD=8.80824pt
+GOT m110 HT=8.2pt\ DP=0.0pt\ WD=9.1388pt
+GOT m111 HT=8.2pt\ DP=0.0pt\ WD=9.1388pt
+GOT m112 HT=8.2pt\ DP=0.0pt\ WD=8.15547pt
+GOT m113 HT=8.2pt\ DP=0.0pt\ WD=7.83325pt
+GOT m114 HT=8.2pt\ DP=0.0pt\ WD=9.1388pt
+GOT m115 HT=8.2pt\ DP=0.0pt\ WD=8.48602pt
+GOT m116 HT=4.4025pt\ DP=0.0pt\ WD=12.00003pt
+GOT m117 HT=4.4025pt\ DP=0.0pt\ WD=12.00003pt
+GOT m118 HT=4.4025pt\ DP=0.0pt\ WD=12.00003pt
+GOT m119 HT=4.4025pt\ DP=0.0pt\ WD=19.33342pt
+GOT m120 HT=4.4025pt\ DP=0.0pt\ WD=12.00003pt
+GOT m121 HT=4.4025pt\ DP=0.0pt\ WD=12.00003pt
+GOT m122 HT=7.63165pt\ DP=1.63165pt\ WD=9.33336pt
+GOT m123 HT=7.63165pt\ DP=1.63165pt\ WD=9.33336pt
+GOT m124 HT=8.33333pt\ DP=2.33331pt\ WD=9.1388pt
+GOT m125 HT=8.33333pt\ DP=2.33331pt\ WD=9.1388pt
+GOT m126 HT=5.56497pt\ DP=0.0pt\ WD=9.33336pt
+GOT m127 HT=4.4025pt\ DP=0.0pt\ WD=9.33336pt
+GOT m128 HT=5.79745pt\ DP=0.0pt\ WD=9.33336pt
+GOT m129 HT=7.7333pt\ DP=0.5pt\ WD=9.33336pt
+GOT m130 HT=5.16666pt\ DP=0.0pt\ WD=9.33336pt
+GOT m131 HT=6.46916pt\ DP=0.46916pt\ WD=9.33336pt
+GOT m132 HT=6.46916pt\ DP=0.46916pt\ WD=9.33336pt
+GOT m133 HT=7.63165pt\ DP=1.63165pt\ WD=9.33336pt
+GOT m134 HT=7.63165pt\ DP=1.63165pt\ WD=9.33336pt
+GOT m135 HT=9.0pt\ DP=0.46916pt\ WD=8.00002pt
+GOT m136 HT=9.0pt\ DP=3.0pt\ WD=6.00002pt
+GOT m137 HT=9.0pt\ DP=3.0pt\ WD=3.33334pt
+GOT m138 HT=8.33333pt\ DP=0.0pt\ WD=9.33336pt
+GOT m139 HT=9.0pt\ DP=3.0pt\ WD=6.00002pt
+GOT m140 HT=8.33333pt\ DP=2.33333pt\ WD=5.33334pt
+GOT m141 HT=5.58334pt\ DP=0.0pt\ WD=5.87494pt
+GOT m142 HT=5.33334pt\ DP=0.0pt\ WD=6.00002pt
+GOT m143 HT=5.33334pt\ DP=0.0pt\ WD=6.00002pt
+GOT m144 HT=5.33334pt\ DP=0.0pt\ WD=3.33334pt
+GOT m145 HT=7.0pt\ DP=1.0pt\ WD=9.33336pt
+GOT m146 HT=7.0pt\ DP=1.0pt\ WD=9.33336pt
+GOT m147 HT=7.0pt\ DP=1.0pt\ WD=9.33336pt
+GOT m148 HT=7.0pt\ DP=1.0pt\ WD=9.33336pt
+GOT m149 HT=5.58334pt\ DP=0.0pt\ WD=6.00002pt
+GOT m150 HT=5.33334pt\ DP=0.0pt\ WD=6.00002pt
+GOT m151 HT=7.0pt\ DP=1.0pt\ WD=9.33336pt
+GOT m152 HT=7.0pt\ DP=1.0pt\ WD=9.33336pt
+GOT m153 HT=7.0pt\ DP=1.0pt\ WD=9.33336pt
+GOT m154 HT=6.66669pt\ DP=0.0pt\ WD=3.29999pt
+GOT m155 HT=5.33334pt\ DP=0.0pt\ WD=15.99994pt
+GOT m156 HT=1.16666pt\ DP=0.0pt\ WD=13.7915pt
+GOT m157 HT=15.16666pt\ DP=0.0pt\ WD=3.26385pt
+GOT m158 HT=8.33333pt\ DP=0.0pt\ WD=6.66669pt
+GOT m159 HT=8.33333pt\ DP=0.0pt\ WD=6.66669pt
+GOT m160 HT=8.19998pt\ DP=0.0pt\ WD=10.00003pt
+GOT m161 HT=8.99998pt\ DP=3.0pt\ WD=10.00003pt
+GOT m162 HT=8.30688pt\ DP=0.0pt\ WD=8.66669pt
+GOT m163 HT=5.58334pt\ DP=0.0pt\ WD=5.87494pt
+GOT m164 HT=5.58334pt\ DP=0.0pt\ WD=5.87494pt
+GOT m165 HT=4.53458pt\ DP=0.0pt\ WD=12.00003pt
+GOT m166 HT=9.00008pt\ DP=3.00008pt\ WD=11.33336pt
+GOT m167 HT=9.00008pt\ DP=3.00008pt\ WD=11.33336pt
+GOT m168 HT=9.00008pt\ DP=3.00008pt\ WD=10.00003pt
+GOT m169 HT=9.00008pt\ DP=3.00008pt\ WD=10.00003pt
+GOT m170 HT=9.00008pt\ DP=3.00008pt\ WD=10.00003pt
+GOT m171 HT=9.66673pt\ DP=3.66673pt\ WD=8.00002pt
+GOT m172 HT=9.66673pt\ DP=3.66673pt\ WD=14.00006pt
+GOT m173 HT=7.96431pt\ DP=0.0pt\ WD=19.58313pt
+GOT m174 HT=9.00002pt\ DP=0.0pt\ WD=13.37485pt
+GOT m175 HT=9.00002pt\ DP=0.0pt\ WD=13.37485pt
+GOT m176 HT=8.33331pt\ DP=0.0pt\ WD=13.37485pt
+GOT m177 HT=7.96431pt\ DP=0.0pt\ WD=13.37485pt
+GOT m178 HT=7.56657pt\ DP=0.0pt\ WD=13.37485pt
+GOT m179 HT=7.54166pt\ DP=0.0pt\ WD=6.68742pt
+GOT m180 HT=8.33331pt\ DP=0.0pt\ WD=6.68742pt
+GOT m181 HT=8.33331pt\ DP=0.0pt\ WD=6.16798pt
+GOT m182 HT=8.33331pt\ DP=0.0pt\ WD=6.16798pt
+GOT m183 HT=8.33331pt\ DP=0.0pt\ WD=6.16798pt
+GOT m184 HT=8.55331pt\ DP=0.0pt\ WD=12.79846pt
+GOT m185 HT=7.96431pt\ DP=0.0pt\ WD=6.67703pt
+GOT m186 HT=5.16667pt\ DP=2.3999pt\ WD=6.68742pt
+GOT m187 HT=8.33331pt\ DP=2.33331pt\ WD=50.58975pt
+GOT m188 HT=8.33331pt\ DP=0.0pt\ WD=6.52771pt
+GOT m189 HT=5.16667pt\ DP=0.0pt\ WD=5.40005pt
+GOT m190 HT=5.16667pt\ DP=0.0pt\ WD=12.07626pt
+GOT m191 HT=5.16667pt\ DP=0.0pt\ WD=12.07626pt
+GOT m192 HT=5.16667pt\ DP=2.33331pt\ WD=24.2178pt
+GOT m193 HT=8.26666pt\ DP=0.0pt\ WD=8.66669pt
+GOT m194 HT=8.19998pt\ DP=0.0pt\ WD=8.27669pt
+GOT m195 HT=5.33331pt\ DP=0.0pt\ WD=7.3125pt
+! Undefined control sequence.
+<recently read> \bm 
+                    
+l.233 \measure{m196}{$\bm{v}$}
+                              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+GOT m196 HT=5.16667pt\ DP=0.0pt\ WD=6.11104pt
+GOT m197 HT=8.33333pt\ DP=2.33333pt\ WD=8.54994pt
+GOT m198 HT=8.33331pt\ DP=0.0pt\ WD=7.7638pt
+GOT m199 HT=5.16667pt\ DP=0.0pt\ WD=6.175pt
+GOT m200 HT=15.85141pt\ DP=8.23141pt\ WD=8.27493pt
+GOT m201 HT=9.88034pt\ DP=4.13809pt\ WD=6.65005pt
+GOT m202 HT=9.33109pt\ DP=4.13809pt\ WD=11.69864pt
+GOT m203 HT=10.28033pt\ DP=4.97147pt\ WD=17.16225pt
+GOT m204 HT=9.0pt\ DP=3.0pt\ WD=16.83467pt
+GOT m205 HT=9.0pt\ DP=3.0pt\ WD=16.83467pt
+GOT m206 HT=9.0pt\ DP=3.0pt\ WD=18.16801pt
+GOT m207 HT=13.8001pt\ DP=7.80011pt\ WD=7.16669pt
+GOT m208 HT=17.40013pt\ DP=11.40015pt\ WD=8.83337pt
+GOT m209 HT=21.00017pt\ DP=15.00018pt\ WD=9.50003pt
+GOT m210 HT=10.20006pt\ DP=4.20007pt\ WD=17.50136pt
+GOT m211 HT=21.00017pt\ DP=15.00018pt\ WD=28.78458pt
+GOT m212 HT=17.49998pt\ DP=11.49998pt\ WD=23.83473pt
+GOT m213 HT=9.60329pt\ DP=2.87668pt\ WD=17.01039pt
+GOT m214 HT=11.18661pt\ DP=1.29335pt\ WD=21.16377pt
+GOT m215 HT=11.5663pt\ DP=0.0pt\ WD=13.24364pt
+GOT m216 HT=5.16667pt\ DP=4.22668pt\ WD=19.04524pt
+GOT m217 HT=5.16667pt\ DP=3.86668pt\ WD=18.30312pt
+GOT m218 HT=10.3547pt\ DP=0.0pt\ WD=18.30312pt
+GOT m219 HT=8.33331pt\ DP=0.0pt\ WD=24.49701pt
+GOT m220 HT=8.33331pt\ DP=0.0pt\ WD=24.49701pt
+GOT m221 HT=8.2pt\ DP=0.0pt\ WD=37.0067pt
+GOT m222 HT=5.33334pt\ DP=2.33331pt\ WD=21.50328pt
+GOT m223 HT=12.58879pt\ DP=0.0pt\ WD=23.09016pt
+GOT m224 HT=6.97998pt\ DP=0.97998pt\ WD=9.33336pt
+GOT m225 HT=9.0pt\ DP=3.0pt\ WD=24.16803pt
+GOT m226 HT=9.13332pt\ DP=4.89772pt\ WD=13.15413pt
+GOT m227 HT=7.79915pt\ DP=2.9666pt\ WD=11.66551pt
+GOT m228 HT=9.51027pt\ DP=0.0pt\ WD=18.0383pt
+GOT m229 HT=5.16667pt\ DP=2.63336pt\ WD=18.0383pt
+GOT m230 HT=6.32pt\ DP=0.32pt\ WD=9.1388pt
+GOT m231 HT=6.32pt\ DP=0.32pt\ WD=9.1388pt
+GOT m232 HT=7.0pt\ DP=1.0pt\ WD=9.33336pt
+GOT m233 HT=5.58334pt\ DP=0.0pt\ WD=6.00002pt
+GOT m234 HT=5.16667pt\ DP=2.33331pt\ WD=3.26385pt
+GOT m235 HT=5.16667pt\ DP=0.0pt\ WD=3.26385pt
+GOT m236 HT=8.33331pt\ DP=0.0pt\ WD=5.54855pt
+GOT m237 HT=8.33331pt\ DP=0.0pt\ WD=3.26385pt
+GOT m238 HT=8.79916pt\ DP=0.0pt\ WD=2.80556pt
+GOT m239 HT=8.33333pt\ DP=2.33333pt\ WD=5.33336pt
+GOT m240 HT=8.33333pt\ DP=2.33333pt\ WD=7.33334pt
+GOT m241 HT=8.33331pt\ DP=0.0pt\ WD=9.1388pt
+GOT m242 HT=9.0pt\ DP=0.66667pt\ WD=9.79156pt
+GOT m243 HT=8.33331pt\ DP=0.0pt\ WD=19.76085pt
+GOT m244 HT=9.51027pt\ DP=3.0pt\ WD=23.42712pt
+GOT m245 HT=9.51027pt\ DP=0.0pt\ WD=18.0383pt
+(./g12.aux)
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 1719 strings out of 467800
+ 23488 string characters out of 5436061
+ 428301 words of memory out of 5000000
+ 30385 multiletter control sequences out of 15000+600000
+ 636699 words of font info for 76 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 56i,8n,65p,234b,103s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+No pages of output.
+PDF statistics:
+ 0 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

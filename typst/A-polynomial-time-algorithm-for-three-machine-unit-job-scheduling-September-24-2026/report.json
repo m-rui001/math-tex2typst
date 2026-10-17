@@ -1,0 +1,32 @@
+{
+  "paper": "A-polynomial-time-algorithm-for-three-machine-unit-job-scheduling-September-24-2026",
+  "ok": true,
+  "typ_lines": 780,
+  "included_pdf_pages": 0,
+  "formulas": 285,
+  "math_failed": 0,
+  "labels": 91,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 4,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1,
+    "unhandled_div_class:description": 1,
+    "cetz_converted": 4
+  },
+  "samples": {
+    "formulas": "285",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-polynomial-time-algorithm-for-three-machine-unit-job-scheduling-September-24-2026.tex"
+}

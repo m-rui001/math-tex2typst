@@ -1,0 +1,26 @@
+[
+  {
+    "paper": "Smooth-Nonquadratic-Affine-Maximal-Graph-in-Dimension-Ten-October-5-2026",
+    "pages": 7,
+    "formulas": 190,
+    "reported_math_failed": 0,
+    "remaining_latex_literals": 0,
+    "compile_ok": true
+  },
+  {
+    "paper": "Smooth-isometric-immersions-of-closed-surfaces-into-Euclidean-four-space-September-23-2026",
+    "pages": 42,
+    "formulas": 876,
+    "reported_math_failed": 1,
+    "remaining_latex_literals": 1,
+    "compile_ok": true
+  },
+  {
+    "paper": "Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026",
+    "pages": 303,
+    "formulas": 6023,
+    "reported_math_failed": 14,
+    "remaining_latex_literals": 14,
+    "compile_ok": true
+  }
+]

@@ -1,0 +1,16 @@
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D265-ambient\xe5\x90\x8c\xe8\x83\x9a\xe4\xb8\x8e\xe9\x87\x8d\xe6\x95\xb0\xe7\x9a\x84\xe5\x88\x86\xe7\xa6\xbb.md'
+bytes=84221 lines=429 cr=0
+heads=11 first=b'## \xc2\xa70 \xe4\xbb\xbb\xe5\x8a\xa1\xe7\x99\xbb\xe8\xae\xb0\xe4\xb8\x8e\xe7\xb4\xa0\xe6\x9d\x90\xe8\xbe\xb9\xe7\x95\x8c' last=(362)b'## \xc2\xa710 \xe5\x8f\xb0\xe8\xb4\xa6'
+std_hdr_lines=[364, 381, 412] sep_count=1
+tex_files=10 total_bytes=98174
+cite_sites=220 cite_forms_build=2 bare=220
+  sections/local.tex                   19193 B   439 lines cited=0
+  sections/conclusion.tex              17627 B   421 lines cited=0
+  sections/global.tex                  16316 B   407 lines cited=0
+  sections/introduction.tex            14009 B   247 lines cited=0
+  sections/seeds.tex                   13654 B   308 lines cited=0
+  sections/background.tex              10855 B   227 lines cited=0
+  preamble.tex                          2096 B    54 lines cited=0
+  sections/certificate.tex              1872 B    21 lines cited=0
+  figures/proof-route.tex               1511 B    34 lines cited=0
+  paper.tex                             1041 B    28 lines cited=0

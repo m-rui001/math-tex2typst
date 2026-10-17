@@ -1,0 +1,37 @@
+{
+  "paper": "Positive-scalar-curvature-and-uniform-codimension-two-width-September-23-2026",
+  "ok": true,
+  "typ_lines": 2058,
+  "included_pdf_pages": 0,
+  "formulas": 1943,
+  "math_failed": 0,
+  "labels": 265,
+  "equations": 10,
+  "theorems": 10,
+  "figures": 2,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "dangling_ref": 1,
+    "cetz_converted": 2
+  },
+  "samples": {
+    "formulas": "1943",
+    "dangling_ref": "fig:topology-compression",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\newcommandnewcommand",
+    "\\letlet",
+    "\\letlet",
+    "\\letlet"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Positive-scalar-curvature-and-uniform-codimension-two-width-September-23-2026.tex"
+}

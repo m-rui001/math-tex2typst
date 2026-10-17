@@ -1,0 +1,42 @@
+new distinct=36 old distinct=153
+new-only (old=0), sorted by count:
+  history new=39
+  fragment new=39
+  Lipschitz new=11
+  Sbierski new=2
+  Corvino new=2
+  Schoen new=2
+  Four new=1
+  Geroch new=1
+  Carter new=1
+  Penrose new=1
+  Poisson new=1
+  Israel new=1
+  blow new=1
+  nonlinear new=1
+  Chru new=1
+  ciel new=1
+  Delay new=1
+  Carlotto new=1
+  Bogovskii new=1
+  Costabel new=1
+  McIntosh new=1
+shared forms (new/old):
+  history new=39 old=0
+  fragment new=39 old=0
+  Lipschitz new=11 old=0
+  epsilon new=7 old=14
+  Kerr new=6 old=26
+  Read new=2 old=4
+  Bruhat new=2 old=1
+  Sbierski new=2 old=0
+  iota new=2 old=2
+  Dafermos new=2 old=5
+  Corvino new=2 old=0
+  Schoen new=2 old=0
+  mathcal new=2 old=58
+  Four new=1 old=0
+  Choquet new=1 old=1
+  Geroch new=1 old=0
+  Carter new=1 old=0
+  widetilde new=1 old=15

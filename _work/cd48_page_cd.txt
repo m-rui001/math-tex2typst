@@ -1,0 +1,14 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+== shaft-through-letters pairs: 99 on 61 pages of 39 papers, out of 56 checked
+    20.3 pt through  The-height-three-chromatic-overlap-a p6  '−Σ𝑖'
+    17.6 pt through  Constructible-tame-Hecke-eigensheave p27  '𝐽,𝑾'
+    13.2 pt through  The-Hilbert-Smith-conjecture-in-ever p9  '𝐹𝐵'
+    11.2 pt through  Simple-F-infinity-overgroups-of-grou p27  '𝑎𝐸'
+    11.0 pt through  Tame-Hecke-Eigensheaves-with-Several p14  '𝑞'
+    10.3 pt through  Conditional-good-minimal-models-for- p3  'Final use of Assumption\xa01.6'
+     9.1 pt through  Constructible-tame-Hecke-eigensheave p4  'mixed-characteristic'
+     9.1 pt through  A-counterexample-to-Tachikawas-secon p4  'two twists'
+     9.1 pt through  A-counterexample-to-Tachikawas-secon p4  'and finite fiber'
+     9.1 pt through  A-counterexample-to-Tachikawas-secon p4  'trivial extension'
+     8.6 pt through  Infinitely-many-closed-geodesic-imag p11  '≅'
+     8.5 pt through  A-rational-obstruction-to-strong-chr p33  '∼'

@@ -1,0 +1,13 @@
+== shaft-through-letters pairs: 19 on 11 pages of 10 papers, out of 48 checked
+    11.0 pt through  Logarithmic-Kodaira-dimension-and-wh p14  '𝑞= ℎ∘𝑥'
+    11.0 pt through  Anticanonical-nonvanishing-from-smoo p15  '𝜋'
+    11.0 pt through  Tame-Hecke-Eigensheaves-with-Several p14  '𝑞'
+    11.0 pt through  Anticanonical-nonvanishing-from-smoo p9  '𝜋'
+    10.3 pt through  Conditional-good-minimal-models-for- p3  'Final use of Assumption\xa01.6'
+     9.1 pt through  Constructible-tame-Hecke-eigensheave p4  'mixed-characteristic'
+     9.1 pt through  A-counterexample-to-Tachikawas-secon p4  'two twists'
+     9.1 pt through  A-counterexample-to-Tachikawas-secon p4  'and finite fiber'
+     9.1 pt through  A-counterexample-to-Tachikawas-secon p4  'trivial extension'
+     7.7 pt through  Counterexamples-to-weak-chromatic-sp p23  '𝐿'
+     6.7 pt through  Invariant-anticanonical-indices-and- p10  'ℎ'
+     6.7 pt through  Logarithmic-Kodaira-dimension-and-wh p14  'ℎ'

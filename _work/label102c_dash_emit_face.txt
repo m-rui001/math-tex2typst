@@ -1,0 +1,75 @@
+dash face read off the emitter (stroke_args spied during cetz.build over _work/flat)
+a statement counts when its merged options carry a dash spelling and no dash: came out
+
+statements 671 / canvases 225 / papers 144 of 724
+
+key (as the option dict spells it) -> statements
+  densely dashed             412
+  densely dotted             247
+  dash pattern               8
+  dash dot                   4
+
+sample option dicts (what the fix has to read):
+  A-Charged-Reduction-of-the-Spacetime-Penrose-Inequal #0  ['densely dashed']
+      {'densely dashed': True}
+  A-Counterexample-to-Kaplanskys-Direct-Finiteness-Con #0  ['densely dashed']
+      {'densely dashed': True}
+  A-Counterexample-to-the-Infinite-Matroid-Packing-Cov #0  ['densely dotted']
+      {'densely dotted': True}
+  A-Fully-Polynomial-Randomized-Approximation-Scheme-f #0  ['densely dotted']
+      {'densely dotted': True}
+  A-Fully-Polynomial-Randomized-Approximation-Scheme-f #1  ['densely dashed']
+      {'densely dashed': True}
+  A-Fully-Polynomial-Randomized-Approximation-Scheme-f #2  ['densely dashed']
+      {'densely dashed': True}
+  A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Plan #0  ['densely dashed']
+      {'densely dashed': True}
+  A-Negative-Solution-to-the-Finite-Lattice-Representa #0  ['densely dashed']
+      {'densely dashed': True}
+  A-Negative-Solution-to-the-Finite-Lattice-Representa #1  ['densely dashed']
+      {'densely dashed': True}
+  A-Pivotal-Amplitude-for-Voronoi-Percolation-from-Car #2  ['densely dashed']
+      {'densely dashed': True}
+  A-Polynomial-Time-2-Approximation-for-Shortest-Commo #0  ['densely dotted']
+      {'densely dotted': True}
+  A-Polynomial-Time-2-Approximation-for-Shortest-Commo #1  ['densely dotted']
+      {'densely dotted': True}
+
+canvases by paper:
+  10  Self-dual-random-cluster-interfaces-below-one-September-23-2026
+   6  Canonical-conformal-limits-of-subcritical-FK-planar-maps-September-24-
+   6  Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September
+   5  Uniform-marked-polygon-estimates-and-sharp-finite-bridge-moments-Septe
+   3  A-Fully-Polynomial-Randomized-Approximation-Scheme-for-Perfect-Matchin
+   3  A-Polynomial-Time-2-Approximation-for-Shortest-Common-Superstring-Sept
+   3  A-hyperbolic-group-with-no-geometric-CAT0-action-September-25-2026
+   3  A-nine-dimensional-counterexample-to-Borsuks-covering-assertion-Septem
+   3  A-two-dimensional-area-law-from-a-global-spectral-gap-September-24-202
+   3  Cardys-formula-for-critical-Poisson-Voronoi-percolation-September-23-2
+   3  Metric-measure-limits-of-subcritical-FK-and-spanning-tree-planar-maps-
+   3  Sharp-mass-bounds-for-the-two-dimensional-O4-model-September-23-2026
+   3  Variable-dimension-Weisfeiler-Leman-equivalence-on-general-and-subcubi
+   3  Virtual-compact-specialness-of-hyperbolic-one-relator-groups-September
+   2  A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-Septe
+   2  A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite-October-4-202
+   2  A-counterexample-to-the-nearby-Lagrangian-conjecture-September-23-2026
+   2  A-directional-zero-one-law-under-strict-ellipticity-September-23-2026
+   2  Almost-Linear-Time-Maximum-Cardinality-Matching-in-Sparse-General-Grap
+   2  Baumslag-Solitar-free-one-relator-groups-are-hyperbolic-September-25-2
+
+every site carrying an explicit `dash pattern` / a compound name (the value string is what the fix must parse):
+  No-bigeodesics-in-planar-first-passage-percolation-S #0  dash pattern  'on 4pt off 2.5pt'
+  No-bigeodesics-in-planar-first-passage-percolation-S #0  dash pattern  'on 4pt off 2.5pt'
+  No-bigeodesics-in-planar-first-passage-percolation-S #1  dash pattern  'on 4pt off 2pt'
+  Quenched-SLE-Universality-for-Weakly-Disordered-FK-I #1  dash pattern  'on 3pt off 2pt'
+  Quenched-SLE-Universality-for-Weakly-Disordered-FK-I #1  dash pattern  'on 3pt off 2pt'
+  SLE3-universality-for-weak-finite-range-Ising-intera #0  dash dot      True
+  SLE3-universality-for-weak-finite-range-Ising-intera #0  dash dot      True
+  SLE3-universality-for-weak-finite-range-Ising-intera #0  dash dot      True
+  Strict-hot-spots-and-absence-of-interior-critical-po #0  dash pattern  'on 3pt off 2.2pt'
+  Strict-hot-spots-and-absence-of-interior-critical-po #0  dash pattern  'on 3pt off 2.2pt'
+  Symplectic-Ball-Packings-in-Higher-Dimensions-Septem #1  dash dot      True
+  Uniform-Interior-C1alpha-Estimates-for-Infinity-Harm #1  dash pattern  'on 4pt off 2pt on 1pt off 2pt'
+
+statements carrying MORE THAN ONE dash spelling (no measured precedence law):
+  0

@@ -1,0 +1,37 @@
+new distinct=34 old distinct=121  new-only=9
+NEW-ONLY:
+  coeff new=2
+  bigwedge new=2
+  Omega new=2
+  datum new=1
+  limsup new=1
+  length new=1
+  bigoplus new=1
+  identification new=1
+  locality new=1
+SHARED(new/old):
+  conventions new=33 old=3
+  operatorname new=32 old=24
+  mathfrak new=14 old=1
+  mathbb new=13 old=73
+  omega new=10 old=7
+  mathcal new=9 old=40
+  subset new=5 old=5
+  Delta new=4 old=18
+  left new=4 old=1
+  right new=4 old=1
+  otimes new=4 old=6
+  sigma new=4 old=50
+  colon new=3 old=12
+  infty new=3 old=11
+  preamble new=2 old=1
+  mapsto new=2 old=2
+  widehat new=2 old=4
+  pairs new=1 old=1
+  main new=1 old=1
+  downstairs new=1 old=3
+  tower new=1 old=5
+  cones new=1 old=13
+  integral new=1 old=7
+  jump new=1 old=7
+  Mori new=1 old=6

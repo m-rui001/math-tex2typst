@@ -1,0 +1,17 @@
+picture blocks: FRAC occurrences=74   inside matched spans=44   occurrences with no matched span=30
+spans matched=7786   of which carry >=1 occurrence=42   carry >=2=2
+the ones this walker does not see, by delimiter: {'in a multi-line $ $': 9, 'in \\( \\)': 8, 'no math delimiter at all': 13}
+
+occurrences outside a matched `$...$` span, first 12:
+   A-Nonspectrahedral-Hyperbolicity-Cone-Septem  in a multi-line $ $        at (4.65,1.79)\n    {$\displaystyle u_s=\frac{v+sh}{\sqrt{1+s^2\|h\|^2}},\n      \qquad u_{s=0}=v,
+   A-Nonspectrahedral-Hyperbolicity-Cone-Septem  in a multi-line $ $       2}},\n      \qquad u_{s=0}=v,\quad \left.\frac{du_s}{ds}\right|_{s=0}=h.$};\n  \no
+   A-uniform-Hilbert-transform-estimate-for-Lip  in \( \)                  )\n   {\(H_{j-1}\)\\[-1pt]\(\displaystyle\frac{w}{\rho_j\sqrt G}\)};\n \node[above,align=c
+   A-uniform-Hilbert-transform-estimate-for-Lip  in \( \)                  )\n   {phase scale\\[-1pt]\(\displaystyle\frac{w}{Q}\)};\n \node[above,align=c
+   A-uniform-Hilbert-transform-estimate-for-Lip  in \( \)                  5,.2)\n   {\(H_j\)\\[-1pt]\(\displaystyle\frac{w}{\rho_{j+1}\sqrt G}\)};\n \node[above,align=c
+   A-uniform-Hilbert-transform-estimate-for-Lip  in \( \)                  5,.2)\n   {\(l_*\)\\[-1pt]\(\displaystyle\frac{B^2w}{\rho_{j+1}}\)};\n \draw[<->,blue!65!b
+   A-uniform-Hilbert-transform-estimate-for-Lip  in \( \)                  ack] at (5.275,-.68)\n   {\(\displaystyle\frac{QH_j}{w}=G^{1/4}\)};\n \draw[<->,g
+   A-uniform-Hilbert-transform-estimate-for-Lip  in \( \)                  ck] at (8.625,-1.38)\n   {\(\displaystyle\frac{l_*}{H_j}=B^2\sqrt G\)};\n\end{tikz
+   An-exact-Hausdorff-gauge-for-SLE-September-2  in \( \)                  -(12.2,1.1)\n    node[midway,above] {\(n+\frac{1}{2a}\log\frac{100}{8}\)};\n  \
+   An-exact-Hausdorff-gauge-for-SLE-September-2  in \( \)                  node[midway,above] {\(n+\frac{1}{2a}\log\frac{100}{8}\)};\n  \draw[dashed] (12.
+   Bounded-scalar-curvature-and-smooth-extensio  in a multi-line $ $        \epsilon_i=\sqrt{d_i},\qquad\n      a_i=\dfrac{a(t_{j_i})}{\epsilon_i}\longrightarrow0$};\n\end{
+   Existential-universal-real-sentences-in-the-  no math delimiter at all  25,0);\n \foreach \x/\lab in {0/0,0.125/{\frac18},0.333333/{\frac13},0.5/

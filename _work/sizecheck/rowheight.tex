@@ -1,0 +1,24 @@
+\documentclass[10pt]{article}
+\usepackage{tikz}
+\newcommand{\measure}[2]{%
+  \begin{tikzpicture}
+    #2
+    \pgfextracty{\dimen0}{\pgfpointanchor{a}{north}}%
+    \pgfextracty{\dimen1}{\pgfpointanchor{a}{south}}%
+    \pgfextractx{\dimen2}{\pgfpointanchor{a}{east}}%
+    \typeout{RH #1 H=\the\dimen0\the\dimen1\space W=\the\dimen2}%
+  \end{tikzpicture}%
+}
+\begin{document}
+\measure{r1cut}{\node[draw, text width=5.7cm, align=left, inner sep=8pt, font=\fontsize{9}{11}\selectfont] (a) at (0,0) {aaa};}
+\measure{r1brk}{\node[draw, text width=5.7cm, align=left, inner sep=8pt, font=\fontsize{9}{11}\selectfont] (a) at (0,0) {aaa\\};}
+\measure{r2cut}{\node[draw, text width=5.7cm, align=left, inner sep=8pt, font=\fontsize{9}{11}\selectfont] (a) at (0,0) {aaa\\aaa};}
+\measure{r2brk}{\node[draw, text width=5.7cm, align=left, inner sep=8pt, font=\fontsize{9}{11}\selectfont] (a) at (0,0) {aaa\\aaa\\};}
+\measure{r3cut}{\node[draw, text width=5.7cm, align=left, inner sep=8pt, font=\fontsize{9}{11}\selectfont] (a) at (0,0) {aaa\\aaa\\aaa};}
+\measure{r3brk}{\node[draw, text width=5.7cm, align=left, inner sep=8pt, font=\fontsize{9}{11}\selectfont] (a) at (0,0) {aaa\\aaa\\aaa\\};}
+\measure{r4cut}{\node[draw, text width=5.7cm, align=left, inner sep=8pt, font=\fontsize{9}{11}\selectfont] (a) at (0,0) {aaa\\aaa\\aaa\\aaa};}
+\measure{r4brk}{\node[draw, text width=5.7cm, align=left, inner sep=8pt, font=\fontsize{9}{11}\selectfont] (a) at (0,0) {aaa\\aaa\\aaa\\aaa\\};}
+\measure{g2}{\node[draw, text width=5.7cm, align=left, inner sep=8pt, font=\fontsize{9}{11}\selectfont] (a) at (0,0) {aaa\\[3pt]aaa\\};}
+\measure{g6}{\node[draw, text width=5.7cm, align=left, inner sep=8pt, font=\fontsize{9}{11}\selectfont] (a) at (0,0) {aaa\\[3pt]aaa\\aaa\\aaa\\aaa\\aaa};}
+x
+\end{document}

@@ -1,0 +1,77 @@
+=== D476
+note=E:/math/研究笔记\D476-广义对数典范Q对的极小模型与Mori纤维空间.md
+bytes=86779 lines=230 CR=0
+dir=Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026
+heads=16 first=(5, '## §0 接单与登记') last=(213, '## §15 勘误与偏离登记')
+last6=["## §10 有界呈现：把一切摊进有限多个代数族", "## §11 芽轨计算与关联收口", "## §12 关键转折点", "## §13 最终思路与最初设想的差异、缺口与悬置", "## §14 台账", "## §15 勘误与偏离登记"]
+table_headers=[(173, '符号')] separators=[174]
+cite_form full=0 base=148
+inventory:
+  sections/02-global.tex                           43393B   827L refs=52
+  sections/11-traits.tex                           40279B   865L refs=6
+  sections/12-incidence.tex                        34264B   656L refs=2
+  sections/09-tower.tex                            27723B   627L refs=3
+  sections/06-cartier.tex                          27668B   546L refs=10
+  sections/04-product.tex                          26554B   542L refs=4
+  sections/07-rounding.tex                         22159B   483L refs=8
+  sections/10-bounded-presentations.tex            22088B   393L refs=3
+  sections/03-cones.tex                            18889B   350L refs=11
+  sections/05-valuative.tex                        17602B   347L refs=6
+  sections/08-integral-jump.tex                    17481B   418L refs=5
+  sections/01-introduction.tex                     14503B   263L refs=38
+  sections/00-conventions.tex                       6747B   138L refs=0
+  preamble.tex                                      3215B    84L refs=0
+  main.tex                                          1486B    38L refs=0
+  TOTAL 324051B files=15
+=== D530
+note=E:/math/研究笔记\D530-定量近Kerr演化与一般C2未来不可延伸.md
+bytes=115749 lines=519 CR=0
+dir=Quantitative-Near-Kerr-Evolution-and-Generic-C2-Future-Inextendibility-September-23-2026
+heads=35 first=(3, '## §0 派单登记与工作约定') last=(514, '## §34 本批事实性勘误一条')
+last6=["## §29 加深：远端锚定域的半径一致点与比较节的回归能量估计", "## §30 加深：约束附录的 Newton 右逆、四点矩条件与环带原函数", "## §31 加深：三角比较引理的显式形态与幂级数主控", "## §32 台账续（只追加数据行）", "## §33 本批加深自检与申报", "## §34 本批事实性勘误一条"]
+table_headers=[(240, '符号'), (474, '记号')] separators=[241, 475]
+cite_form full=0 base=308
+inventory:
+  sections/04-stationary.tex                       80042B  1630L refs=22
+  sections/05-compact.tex                          74881B  1367L refs=29
+  sections/09-packet.tex                           70024B  1507L refs=68
+  sections/07-interior.tex                         60809B  1331L refs=32
+  appendices/far-energy.tex                        55560B   719L refs=13
+  appendices/far-sources.tex                       51753B   701L refs=18
+  sections/08-comparison.tex                       46400B   960L refs=18
+  sections/06-far.tex                              35148B   702L refs=13
+  sections/03-geometry.tex                         34334B   800L refs=13
+  appendices/constraints.tex                       24106B   580L refs=11
+  sections/01-introduction.tex                     15384B   277L refs=42
+  sections/02-category.tex                         11266B   235L refs=26
+  sections/history-fragment.tex                     6772B   113L refs=0
+  main.tex                                          2804B    80L refs=0
+  glyph-mappings.tex                                1746B    45L refs=0
+  appendices/triangular.tex                         1557B    36L refs=5
+  macros.tex                                         797B    24L refs=0
+  TOTAL 573383B files=17
+=== D71
+note=E:/math/研究笔记\D71-完美匹配多面体的熵与面维数.md
+bytes=151705 lines=610 CR=0
+dir=Entropy-and-Face-Dimension-of-the-Perfect-Matching-Polytope-September-23-2026
+heads=34 first=(10, '## 0 我进场时手里有什么') last=(595, '## 33 勘误补录（本批自查，已落盘文字一律不回改）')
+last6=["## 28 附录 A 第一部：消交叉的全案账、树计数、商空间与残基分档", "## 29 附录 A 第二部：系数 3 与 4 的环境读法与三层保留声明", "## 30 附录 B 的次序依赖与附录 C 的分层账", "## 31 勘误（旧稿缺陷按类别申报，原文一律不动）", "## 32 台账续行（只追加数据行，表头沿用 §18）", "## 33 勘误补录（本批自查，已落盘文字一律不回改）"]
+table_headers=[(376, '符号'), (574, '记号')] separators=[377, 575]
+cite_form full=0 base=268
+inventory:
+  appendices/appendix-a.tex                        25513B   608L refs=9
+  sections/02-polytope.tex                         18334B   419L refs=0
+  sections/01-introduction.tex                     16042B   288L refs=53
+  sections/03-entropy.tex                          12701B   277L refs=35
+  sections/10-examples.tex                         11773B   298L refs=5
+  appendices/appendix-b.tex                        10324B   274L refs=4
+  sections/09-algorithm.tex                         9843B   239L refs=21
+  sections/08-odd-cuts.tex                          9566B   204L refs=51
+  sections/07-optimization.tex                      8155B   255L refs=39
+  sections/04-consequences.tex                      7311B   189L refs=0
+  sections/06-objective.tex                         7086B   196L refs=31
+  appendices/appendix-c.tex                         4841B   108L refs=1
+  sections/05-weighted.tex                          3189B    90L refs=15
+  main.tex                                          2781B    78L refs=4
+  figures/odd-cut-recursion.tex                     2126B    56L refs=0
+  TOTAL 149585B files=15

@@ -1,0 +1,43 @@
+913 pictures in 0.8s (compile gate skipped)
+  388  stmt-refused
+        A-boundary-field-gap-for-the-spin-one-Heisen   \node[site \node[site at (0,\y) {$X_b$}; \node[site] at (1.6,\y) {$X_b$}; \node at (3.2,\y) {$\cdots$}; \node[site] at (4.8,\y) {$X_b$}; 
+        A-boundary-only-obstruction-to-four-dimensio   \draw (V.north east) -- node[above,sloped] {$N_{e,0}$} (P.north west)
+        A-boundary-only-obstruction-to-four-dimensio   \draw (5.8,2.5) ellipse (.55 and .22)
+  232  would-compile
+        A-boundary-only-obstruction-to-four-dimensio   \begin{tikzpicture}[font=\small,>=Stealth, every path/.style={line width=.6pt}] \begin{scope}[shift={(0,0)}] \fill[gray!10] (-1.9,-1.25) rec
+        A-Complete-Local-Domain-Without-a-Small-Cohe   \begin{tikzpicture}[every node/.style={draw,fill=white,inner sep=3pt}, line width=0.5pt] \coordinate (outerone) at (90:2.5); \coordinate (ou
+        A-continuum-temperature-singularity-for-a-ra   \begin{tikzpicture}[scale=1.05,>=Stealth] \draw[->] (-0.4,0) -- (5.4,0) node[right] {$s$}; \draw[->] (0,-0.2) -- (0,3.7) node[above] {$d$}; 
+  214  unsupported:foreach
+        A-Charged-Reduction-of-the-Spacetime-Penrose   \begin{tikzpicture}[x=1cm,y=1cm,font=\small, line cap=round,line join=round, every node/.style={inner sep=2pt}, axis/.style={draw=black!65,l
+        A-closed-Ricci-flow-with-bounded-scalar-curv   \begin{tikzpicture}[x=1cm,y=1cm,>=Latex,font=\small] \fill[blue!9] (0,-.34) rectangle (2,.34); \fill[orange!12] (2,-.34) rectangle (6,.34); 
+        A-Counterexample-to-Kuroshs-Division-Ring-Pr   \begin{tikzpicture}[ x=1cm,y=1cm,>=Stealth, every node/.style={font=\small}, block/.style={rectangle,rounded corners=2pt,draw=black!65,fill=
+   21  unsupported:def
+        A-CH-Obstruction-to-a-Prescribed-Categoricit   \begin{tikzpicture}[x=.52cm,y=.52cm,>=Latex,font=\small] \definecolor{rowshade}{RGB}{182,218,223} \definecolor{columnshade}{RGB}{249,221,167
+        A-finite-time-singularity-of-Calabi-flow-on-   \begin{tikzpicture}[x=.96cm,y=.6cm,font=\small] \definecolor{cutone}{RGB}{40,83,111} \tikzset{oneregion/.style={fill=cutone,draw=cutone}, tr
+        A-Modulus-Proof-of-Cannons-Conjecture-Septem   \begin{tikzpicture}[x=1cm,y=1cm,font=\small, line cap=round,line join=round,>=Stealth] \definecolor{levelblue}{RGB}{54,101,125} \definecolor
+   19  unsupported:to
+        A-counterexample-to-Tachikawas-second-conjec   \begin{tikzpicture}[>=Stealth, box/.style={draw,rounded corners=2pt,align=center,text width=4.8cm, inner sep=6pt,font=\small}, lab/.style={f
+        A-Linear-Clock-for-Random-Walk-on-Tree-Weigh   \begin{tikzpicture}[x=0.85cm,y=0.9cm,>=Stealth, every node/.style={font=\small}] \fill[blue!7] (-0.15,2.1) rectangle (6.15,2.55); \fill[blue
+        A-power-saving-for-intersective-polynomial-d   \begin{tikzpicture}[ x=1cm,y=1cm, font=\small, list/.style={draw=black!65,rounded corners=1pt, minimum width=3.1cm,minimum height=.56cm}, se
+   15  insane-markup
+        A-nine-dimensional-counterexample-to-Borsuks   #cetz.canvas({ import cetz.draw: * rect((0, .35), (3, 1.8)) rect((3.55, .35), (5.55, 1.8)) rect((6.1, .35), (8.1, 1.8)) rect((8.8, .35), (11
+        A-Polynomial-Time-2-Approximation-for-Shorte   #cetz.canvas({ import cetz.draw: * content((3.9, 0), [start $x$]) line((0, 0), (3.9, 0), mark: (end: ">")) content((0, 4.5), [end $e$]) line
+        A-Three-Dimensional-Counterexample-to-Intege   #cetz.canvas({ import cetz.draw: * content((4.55, 0.15), [$s$]) line((0, 0.15), (4.55, 0.15), mark: (end: ">")) content((0.15, 3.05), [$lamb
+   11  unsupported:clip
+        Almost-everywhere-regularity-of-stationary-i   \begin{tikzpicture}[x=1.55cm,y=1.55cm,>=Latex,font=\small] \begin{scope} \clip (-.25,-1.1) rectangle (4.4,1.65); \fill[blue!5] (0,0) circle 
+        Every-complex-K3-surface-is-Oka-September-23   \begin{tikzpicture}[x=0.9cm,y=0.9cm,>=Latex,font=\small] \begin{scope} \clip (0,0) ellipse (4.1 and 1.55); \fill[black!4] (-4.2,-1.6) rectan
+        Existential-universal-real-sentences-in-the-   \begin{tikzpicture}[x=1cm,y=1cm, font=\small] \draw[rounded corners=18pt,fill=black!2] (0,0) rectangle (10,4.2); \node[anchor=north west] at
+    6  unsupported:pgfmathsetmacro
+        Continuous-Phase-Foliations-Create-Analytic-   \begin{tikzpicture}[font=\small,>=stealth,line cap=round] \pgfmathsetmacro{\selectedsupport}{sqrt(4.34*cos(60)^2+1.61*sin(60)^2)} \pgfmathse
+        Critical-strip-crossing-mass-on-the-honeycom   \begin{tikzpicture}[x=1.55cm,y=1.55cm,font=\small,>=Latex] \pgfmathsetmacro{\bandheight}{sqrt(3)/2} \fill[blue!4] (-.8,\bandheight) rectangl
+        QMA-hardness-of-continuum-Coulomb-energy-wit   \begin{tikzpicture}[ x=0.34in,y=0.34in, path edge/.style={draw=black!65,line width=0.55pt}, central edge/.style={draw=blue!65!black,line wid
+    3  unsupported:cos
+        A-Polynomial-Time-2-Approximation-for-Shorte   \begin{tikzpicture}[font=\small,>=latex, block/.style={draw=black!60,rounded corners=2pt,fill=black!3, minimum width=3.05cm,minimum height=1
+        Cap-selected-amplitudes-and-triangle-chords-   \begin{tikzpicture}[x=1cm,y=1cm,>=stealth,font=\small, primal/.style={draw=black!50,line width=.45pt}, dual/.style={draw=blue!65!black,line 
+        The-canonical-massive-continuum-limit-of-the   \begin{tikzpicture}[scale=0.9,>=Latex,every node/.style={font=\small}] \begin{scope}[shift={(-4.8,0)}] \draw[step=.4,gray!35,very thin] (-1.
+    3  empty
+        Finite-cylinder-approximation-of-ruled-sets-   \begin{tikzpicture}[scale=.68] \begin{scope} \foreach \j in {-1,0,1} { \foreach \i in {-2,-1,0,1,2} { \draw[blue!65] (\i-.5,\j-.5) rectangle
+        Finite-Instructions-and-Solenoidal-Shear-Flo   \begin{tikzpicture}[ x=1cm,y=1cm,>=latex, every node/.style={font=\small}, level/.style={gray!45,thin}, first/.style={blue!65!black,thick}, 
+        Self-dual-random-cluster-interfaces-below-on   \begin{tikzpicture}[x=1cm,y=1cm,font=\small,line cap=round,line join=round] \foreach \shift in {0,6.6} { \begin{scope}[xshift=\shift cm] \pa
+    1  unsupported:sin
+        The-critical-dimension-for-one-phase-Bernoul   \begin{tikzpicture}[x=1cm,y=1cm,font=\small] \fill[gray!24] (0,0) rectangle (11.4,.55); \fill[gray!24] (0,.55) rectangle (.7,3.15); \fill[gr

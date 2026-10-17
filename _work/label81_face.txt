@@ -1,0 +1,21 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+canvases built: 924 in 532 papers
+canvases with >=2 content() bodies: 924 in 532 papers
+candidates for render: 924
+rendering 924 canvases (one per page)
+canvases rendered: 924   typst refused: 39
+canvases with a collision: 437 in 297 papers
+foreign-ink pairs: 1331 (>=3pt deep: 479)   ink-on-ink pairs: 197
+  worst 12.5pt  'newvertices' into a 40x68pt box  Cycle-clique-Ramsey-numbers-September-25-202#1 (boxes=2 ink=19, 3 foreign / 0 on-ink)
+  worst 12.5pt  'Centers:' into a 27x27pt box  Finite-cylinder-approximation-of-ruled-sets-#0 (boxes=82 ink=14, 14 foreign / 0 on-ink)
+  worst 12.5pt  'rightprefix' into a 48x51pt box  Renewal-and-changes-of-law-for-critical-hone#2 (boxes=4 ink=12, 2 foreign / 0 on-ink)
+  worst 12.5pt  'leftshift' into a 26x81pt box  The-crossing-number-of-complete-bipartite-gr#1 (boxes=1 ink=9, 2 foreign / 1 on-ink)
+  worst 11.1pt  'retainedarch' into a 67x116pt box  Cylinder-amplitudes-and-logarithmic-bridge-l#3 (boxes=11 ink=16, 12 foreign / 0 on-ink)
+  worst 11.0pt  'w=(1,1)' into a 38x38pt box  A-product-counterexample-to-the-simplex-maxi#0 (boxes=6 ink=6, 3 foreign / 0 on-ink)
+  worst 11.0pt  'm=1−k' into a 179x83pt box  Sharp-binary-information-contraction-on-the-#0 (boxes=1 ink=19, 3 foreign / 0 on-ink)
+  worst 11.0pt  'A=WI' into a 33x33pt box  No-percolation-at-criticality-on-quasi-trans#1 (boxes=13 ink=11, 1 foreign / 0 on-ink)
+  worst 10.3pt  'T=0' into a 100x100pt box  Slope-field-perturbations-of-the-two-cylinde#0 (boxes=5 ink=7, 3 foreign / 0 on-ink)
+  worst 10.3pt  '(Sectionsec:uniqueness)' into a 96x96pt box  The-trace-cone-classifies-Razak-Jacelon-stab#0 (boxes=10 ink=18, 1 foreign / 0 on-ink)
+  worst 10.3pt  'Allseparablyactingfactors' into a 57x118pt box  Universal-strong-Kadison-Kastler-stability-S#0 (boxes=13 ink=26, 6 foreign / 0 on-ink)
+  worst 10.3pt  'Lemmalem:clean' into a 25x41pt box  The-Unique-Games-Theorem-September-23-2026.t#0 (boxes=11 ink=39, 3 foreign / 0 on-ink)
+list written to _work/regen81.txt

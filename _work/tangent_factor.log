@@ -1,0 +1,8 @@
+out: r=0.3900 angle=  90.00 (chord 20.000 cm)
+in: r=0.3900 angle=-180.00 (chord 20.000 cm)
+out: r=0.3900 angle=  30.00 (chord 20.000 cm)
+in: r=0.3900 angle= 135.00 (chord 20.000 cm)
+out: r=0.3900 angle=  90.00 (chord 20.000 cm)
+in: r=0.3900 angle=  90.00 (chord 20.000 cm)
+
+VERDICT 2026-10-09: tools/t2t/cetz.py _tangent_controls uses length/3.0; measured factor is 0.39 -> change to 0.39*length, then update test_a_tangent_option_bends_the_connector_it_sits_on and _work/probe_tangent.py expected strings. Omitted-tangent fallback (in=135 here) and item-to-curve pairing still unmeasured.

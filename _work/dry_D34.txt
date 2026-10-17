@@ -1,0 +1,15 @@
+################ D34  (D34-无团图的对数独立数界.md)
+before: bytes=147518 lines=924
+ROW line=570  sites=2  pipes 8->6  $=10(parity even)
+OLD| | $B_C$ | $2\sqrt{A_C+1}$ | `entropy:94`、`coupling:82` | $\mathbb E\|\cdot\|_{\mathrm{TV}}\le B_C\sqrt{\log x/x}$ | 来自 Pinsker $\mathrm{TV}\le\sqrt D$＋$\mu Q=(\mu+\mu P)/2$ 的转移（§9）；Lean `smoothingConstant := 2*Real.sqrt(entropyConstant+1)` |
+NEW| | $B_C$ | $2\sqrt{A_C+1}$ | `entropy:94`、`coupling:82` | $\mathbb E\lVert \cdot\rVert_{\mathrm{TV}}\le B_C\sqrt{\log x/x}$ | 来自 Pinsker $\mathrm{TV}\le\sqrt D$＋$\mu Q=(\mu+\mu P)/2$ 的转移（§9）；Lean `smoothingConstant := 2*Real.sqrt(entropyConstant+1)` |
+ROW line=739  sites=2  pipes 9->7  $=4(parity even)
+OLD| | 16 | 引理 5.1 用 $\|\cdot\|_{\mathrm{TV}}$（`entropy:80-82` 定义） | `FiniteCoupling.lean:25` 另定义 `def dist (p q : I → ℝ) := (∑ i, \|p i - q i\|)/2`，与 `FiniteEntropy.lean:30` 的 `tv` 同式不同名 | 重复定义（两处 TV），形式化内冗余；`sharp_bound_le`（`:336`）补上"$\le2\mathrm{TV}$"宽松形式 |
+NEW| | 16 | 引理 5.1 用 $\lVert \cdot\rVert_{\mathrm{TV}}$（`entropy:80-82` 定义） | `FiniteCoupling.lean:25` 另定义 `def dist (p q : I → ℝ) := (∑ i, \|p i - q i\|)/2`，与 `FiniteEntropy.lean:30` 的 `tv` 同式不同名 | 重复定义（两处 TV），形式化内冗余；`sharp_bound_le`（`:336`）补上"$\le2\mathrm{TV}$"宽松形式 |
+after: bytes=147536 (delta +18) lines=924 rows_fixed=2 sites_fixed=4 sites_registered=0
+[DRY] nothing written to the note
+D34 file-count \lVert  = 5
+D34 file-count \lvert  = 6
+D34 file-count \mid  = 3
+D34 file-count \upharpoonright = 1
+D34 file-count \Vert  = 0

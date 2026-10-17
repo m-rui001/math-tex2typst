@@ -1,0 +1,30 @@
+{
+  "paper": "A-two-dimensional-area-law-from-a-global-spectral-gap-September-24-2026",
+  "ok": true,
+  "typ_lines": 2690,
+  "included_pdf_pages": 0,
+  "formulas": 2169,
+  "math_failed": 0,
+  "labels": 345,
+  "equations": 16,
+  "theorems": 5,
+  "figures": 4,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 4
+  },
+  "samples": {
+    "formulas": "2169",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-two-dimensional-area-law-from-a-global-spectral-gap-September-24-2026.tex"
+}

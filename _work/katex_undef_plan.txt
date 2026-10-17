@@ -1,0 +1,1670 @@
+========================================================================
+KaTeX 未解析长尾治理计划 (katex long-tail plan)
+========================================================================
+
+[FRESH CENSUS  re-run after D256/D278/D535 edits]
+  spans          = 857603
+  refused        = 511   (was 514 @01:10)
+  filesHit       = 196
+  distinct undef = 57 (cover 159 spans)
+  other classes  = 39 (cover 352 spans)
+  baseline snapshot: refused 3,119 / filesHit 318 (katex_refused ~3,935 家族已闭合)
+
+[CLASS TOTALS over 511 refused sites]
+  ORDER     = 149
+  JUDGMENT  = 223
+  KEEP      = 8
+  WAIVER    = 131
+  说明: ORDER=据文件内证据可导出正确写法（含精确替换串）;
+        JUDGMENT=意图清楚但须作者新写; KEEP=故意引用/broken 形式的勘误或专名缩写;
+        WAIVER=尺子误报（非数学 / KaTeX 实可渲）。
+
+========================================================================
+PART A — 未解析控制序列 (per-macro)
+========================================================================
+
+### \F   count=21   class=ORDER
+    判据: 有限域记号：正文另有 \mathbb F / \Z 拼写，逐字补 \mathbb{F}；替换 \F -> \mathbb{F}
+    精确替换: \F  ->  \mathbb{F}
+    - D145:253
+      行: (d) 失败路线。[推测] 第一条：用随机哈希但不去等差，即 $J$ 取整个 $\F_P$。则边上 $h_X+h_Y=2h_Z$ 不强制相等，存活事件退化为两点约束，计数少一个 $P$ 因子，$D$ 的下界掉到 $\tfrac13H(\alpha)$ 以下。[推测] 第二条：跳过 exact 边际类型而只用软约束（频率接近）。则 $V_N$ 与 $B_N$ 的阶数关系变成大偏差形式，`values
+    - D212:80
+      行: 核的一致有界是第二个调度器：$h:=2^9$ 满足 $h\ge\lvert \ker(Q_{k+1}\to Q_k)\rvert$ 对一切 $k\ge0$（`03-geometry.tex:42-46`）。$k\ge1$ 时核元素形如 $I+2^kA$ 模 $2^{k+1}$，由 $A$ 的九个二元元素决定，所以 $\lvert \ker\rvert=2^9=512$；而 $k=0$ 的核是 $Q
+    - D214:60
+      行: 这副面孔在 $\Z[\theta][X]$ 里成立，因此对任何域的特化都成立。论文用两副面孔的策略在 proof-flow.tex:4-42 里画得很清楚：同一张图，左边分支在 $\mathbb C$ 上用永久投影，右边分支在 $K=\overline{\F}_2$ 上用平面曲线几何。最后两条分支在 $\mathbb C$ 里汇合：几何在特征 2 提供的开集，被拿回到复数上做投影。这个"integ
+    - D214:85
+      行: 第二副面孔开工（adjugate.tex）。设定：$K=\overline{\F}_2$，取两两不同的 $\bar\theta_1,\dots,\bar\theta_k$，对每个 $X\in\operatorname{Mat}_k(K)$ 写 $A=t\bar D+uX$、$M=sI_k+A$、$F_X=\det M$、$C_X=V(F_X)\subset\mathbb P^2_K$（adjuga
+    - D214:139
+      行: lem:characteristic-transfer（transfer.tex:18-121）。输入：$F(\theta,x)\in\Z[\theta][x]$ 对 $x$（$v$ 个变量）齐次次数 $r\ge2$；某个 $\bar\theta\in\overline\F_2^a$ 处仿射梯度零点集维 $\le v-\delta$。构造 $\mathcal Z=\Proj(\Z[\theta][
+    - D214:204
+      行: `[推测]` 动笔前我以为这类论文的主引理会是某种表示不变量（类似 Hessian 或奇点余维）的直接计算；成品却是一个三段式：组合 gadget 造形式（selector）、算术几何控奇异（adjugate-conductor-dimension-transfer）、射影计数换下界（polar）。中段整段运行在 $\overline{\F}_2$，这在我最初的蓝图里根本没有位置。跨特征搬运（tr
+    - D362:115
+      行: 两个标记能落在同一个连通覆盖上，靠的是强近似。几何单调群 $\Gamma\subset\operatorname{Sp}_4(\Z)$ 有限生成（光滑代数曲线基本群有限生成）且由 05 节论证 Zariski 稠密；对连通、单连通、绝对几乎单有理群的有限生成稠密子群，强近似给出 $\Gamma\to\operatorname{Sp}_4(\F_\ell)$ 对充分大 $\ell$ 满（`secti
+    - D362:117
+      行: $$\Gamma\longrightarrow\operatorname{Sp}_4(\F_{\ell_1})\times\operatorname{Sp}_4(\F_{\ell_2})\quad\text{满}$$
+    - D362:451
+      行: （一）定界符与引用后缀笔误共六处，均为纯机械修正、论证文字未动，修正后全文行内定界符与反引号均成对：§6 中 `sections/04-incidences.tex:94-97` 与 `sections/04-incidences.tex:162-180` 两处引用后缀各多出一个定界符且缺一个闭合反引号，已补齐；§6 中 $\Gamma$ 到 $\operatorname{Sp}_4(\F_{\e
+    - D362:495
+      行: | 强近似 | $\Gamma\to\operatorname{Sp}_4(\F_\ell)$ 对充分大 $\ell$ 满 | sections/04-incidences.tex:186-194 | `inc:product-reduction` | 双标记无法落在同一连通覆盖 |
+    - D362:501
+      行: | $[L:\mathbb Q]$ | $\le Cd$, 经 $\operatorname{GL}_4(\F_3)$ 嵌入 | sections/05-heights.tex:116-129 | 上一条的代入 | 有限像的阶界无从谈起 |
+    - D389:91
+      行: 正性的证明是我最满意的一段（`parity.tex:199-236`）。按 $E(p)$ 落在割空间（$\F_2^{E(H)}$ 的子空间，这用到了"割像都是割"的图论事实）的哪个陪集给 $\mathcal I_D$ 分类，跨类元为零；同类内每个非零元是 $\pm 1$，对角元全 $1$。对同类内三指标 $p_1, p_2, p_3$，$\delta_H(S_{12} \triangle S_{2
+    - D58:179
+      行: 槽长与有限域秩（`packing:82-95`）。取 $\alpha_i>2w_i$、$\sum\alpha_i=1$；用奇整数 $L_i$ 逼近 $T\alpha_i$ 使 $w_i<L_i/(2L)$，$L=\sum L_i$（`packing:86-89`）。$L_i$ 取奇数是末段几何检查的伏笔：槽的中点site $c$ 为整数要求槽长奇（`packing:109-110`）。$b=\ra
+    - D58:181
+      行: 随机槽与带向圆心（`packing:97-132`）。$n=(q-1)/2$，$R=\lfloor\sqrt q\rfloor$，把 $U_q$ 切成 $K=\lceil n/R\rceil$ 个长 $R$ 的 chunk。整数轴上放周期模式：每周期对每个类型 $i$ 有一个长 $L_i$ 的连续槽。每个 chunk 独立取模 $L$ 均匀平移，只保留完全落在 chunk 内的槽。保留槽的中点 $
+    - D58:183
+      行: 兼容元组成简单 $r$-均匀超图（`packing:134-143`）。边 = 每类型一个顶点、圆心 $s_1,\dots,s_r$，使 $a_i\cdot y=s_i$ 在 $\F_q^m$ 有解；每组兼容元组只记一条边。秩 $b$ 的求值映射给出每条边恰 $q^{m-b}$ 个生成向量。
+    - D58:187
+      行: 例外圆心（`packing:171-186`）。$E_i$ 收住使某 $a_j+a_l=ca_i$ 或 $a_j-a_l=ca_i$ 且 $|cs|_q\le R$ 的 $s$。$c\ne0$（$c=0$ 会使 $a_j,a_l$ 在 $\F_q$ 上平行，违反成对秩 2）；每个关系乘 $c$ 是双射，排除至多 $2R+1$ 个剩余类；关系数 $\le2\binom{r-1}{2}$；$|E_i|
+    - D58:189
+      行: 一阶二阶矩（`packing:188-246`）。固定 $s\notin E_i$，$y$ 均匀于纤维 $a_i\cdot y=s$。成对秩 2 使每个 $a_j\cdot y$（$j\ne i$）在 $\F_q$ 上均匀。非 interior、$Q_s$ 所在 chunk、0 与折入 $Q_s$ 的坏事件总概率 $\tau_q=(1+4LK+2R)/q=O(q^{-1/2})$（`packing
+    - D58:213
+      行: 候选失败路线（d 段）。路线甲：不用超图，直接给每类型取等距格点圆心。机制性停住点：圆心必须是同一 $\theta_h$ 下所有形 $a_i\cdot\theta_h$ 的值，格点独立性在 $\Z^m$ 的像里不成立，三线关系会让多个圆心精确重合，闭区间当场相交；这正是"允许高阶关系、只要求成对独立"的由来。路线乙：把匹配换成贪心逐块选点。机制性停住点：$2rH$ 区间要全局互斥，贪心在后期类型的
+    - D58:461
+      行: | $q$ | 充分大素数（避开坏子式因子） | packing:91-95 | 整个随机构造 | 含坏因子则 $\F_q$ 秩塌，兼容边结构失效 |
+    - D81:292
+      行: - `[推测]` **尝试用 $\operatorname{char} p$ 反例检测**：在 $\F_p$ 上取 $p \le a$，此时 $a! = 0$，`eq:average` 定义失效。这条路的目的是检测「哪些步骤依赖特征零」，然后**看能否**去掉这些依赖。我怀疑结论是**不能**去掉，因为 Step 1 的二元分裂 $X^r + cY^r$ 需要 $\alpha^r = -c$ 的解
+    - D81:519
+      行: - `[推测]` **在正特征上重做 corollary**：完全可约在 $\operatorname{char} p > 0$ 时失效。这条路的**具体**失败：$a = 6$, $b = 30$ 在 $\F_p$ 上 split 不一定存在；injection 可能仍然**存在**（作为 abstract vector spaces），但**同变** injection 需要更细的 modul
+
+### \d   count=16   class=ORDER
+    判据: 积分微元：正文另有 \mathrm d 拼写；替换 \d -> \mathrm{d}
+    精确替换: \d  ->  \mathrm{d}
+    - D96:519
+      行: $h$ 个方向 $Y_1,\ldots,Y_h$ 在同一个随机 $K$ 维子空间 $L\subset E$（$\dim E=N$，$1\le h<K\le N$）里条件独立同分布 $\sigma_L$，我的第一版是把互相关矩阵 $G_{ij}=\langle Y_i,Y_j\rangle$ 逐条目压住：由 $L$ 在 $E$ 里均匀，$\mathbb E\langle Y_i,Y_j\rangle
+    - D96:530
+      行: $\int_{\operatorname{dist}(y,V)\le\delta}f\,\d\sigma_E\le A_1^d3^{\alpha+j}\Lambda\delta^{\alpha-j}\le Q_0^d\Lambda\delta^{\alpha-j}$，
+    - D96:532
+      行: $\int f(y)\operatorname{dist}(y,V)^{-b}\,\d\sigma_E(y)\le Q_0^d\Lambda\,2^b\sum_{i\ge0}2^{-i(\alpha-j-b)}\le Q_0^d\Lambda\,2^{b+1}\le(4Q_0)^d\Lambda$，
+    - D96:535
+      行: 闭合式：$\mathbb E_L\bigl(\int f\,\d\sigma_L\bigr)^h\le\bigl([4\max\{A_0,9A_1\}]^d\Lambda\bigr)^h$，状态族 $\le W$ 时用 Jensen 与求和得 $\mathbb E_L\max_v\int f_v\,\d\sigma_L\le W^{1/h}[4\max\{A_0,9A_1\}]^d\max_v\L
+    - D96:535
+      行: 闭合式：$\mathbb E_L\bigl(\int f\,\d\sigma_L\bigr)^h\le\bigl([4\max\{A_0,9A_1\}]^d\Lambda\bigr)^h$，状态族 $\le W$ 时用 Jensen 与求和得 $\mathbb E_L\max_v\int f_v\,\d\sigma_L\le W^{1/h}[4\max\{A_0,9A_1\}]^d\max_v\L
+    - D96:584
+      行: $\int h_{i,v}(c+ru)\,\d\sigma_H(u)\le G^{J-i}(8\epsilon/r)^p$。
+    - D96:599
+      行: $B_n(g)=\sup R^a\int g(z+R\omega)\,\d\sigma_H(\omega)$，上确界跑遍 $\dim H=n$、$z\perp H$、$R>0$、$\norm z^2+R^2=1$，$a=\frac d{16}$，$1\le n\le d$；边界值 $B_d(g)=\int g\,\d\sigma_{\R^d}$（04:11--17）。块不等式 $B_n(g_{\r
+    - D96:599
+      行: $B_n(g)=\sup R^a\int g(z+R\omega)\,\d\sigma_H(\omega)$，上确界跑遍 $\dim H=n$、$z\perp H$、$R>0$、$\norm z^2+R^2=1$，$a=\frac d{16}$，$1\le n\le d$；边界值 $B_d(g)=\int g\,\d\sigma_{\R^d}$（04:11--17）。块不等式 $B_n(g_{\r
+    - D96:601
+      行: 我最初的版本没有 $R^a$：直接 $\widetilde B_n(g)=\sup\int g\,\d\sigma_H$。它第一步就废，因为 $R\to0$ 时 $z+RS(H)$ 缩成一点，$\int g$ 可以接近 $1$，终端帽估计只能给 $\frac{c_n}2(\frac{2\epsilon}R)^{n-1}$ 这种在 $R$ 大时才小的东西，与递推里需要的"小半径也要有界"完全反向。加
+    - D96:604
+      行: $\int f\,\d\sigma_{H'}\le2c_N\Lambda,\qquad\int_{\left\lVert U-w\right\rVert\le\eta}f\,\d\sigma_{H'}\le c_N\Lambda\eta^{N-1-a}\ (0<\eta\le1)$，
+    - D96:611
+      行: $\int_0^1t^{(q-a)/2-1}(1-t)^{k/2-1}\,\d t\le2$（$q-a\ge2$ 使首指数非负；$k=1$ 时 $\int_0^1(1-t)^{-1/2}\,\d t=2$），
+    - D96:611
+      行: $\int_0^1t^{(q-a)/2-1}(1-t)^{k/2-1}\,\d t\le2$（$q-a\ge2$ 使首指数非负；$k=1$ 时 $\int_0^1(1-t)^{-1/2}\,\d t=2$），
+    - D96:622
+      行: 不变式（05:35--38）：$\dim H=n\ge n_0+2\ell$ 时 $\int g_v(z+r\xi)\,\d\sigma_H(\xi)\le(R_\ell/r)^a$，$R_\ell=16C_*^{\ell}\epsilon$。终端 $\ell=0$：$\frac{16\epsilon}r\ge1$ 用全测度；否则弦帽半径 $\frac{2\epsilon}r$、极角 $\le\f
+    - D96:624
+      行: 归纳步常数逐档列：纬度给 $\Lambda=(R_\ell/\rho)^a$；帽估 $\int_{\left\lVert y-y_0\right\rVert\le\delta}f_u\,\d\sigma_E\le4^d\Lambda\delta^{N-1-a}$（$\sin\theta\le\theta$、原归一化积分 $\ge2^{-(N-2)}$）；$\S20$ 的管状系数 $3^{\alph
+    - D96:648
+      行: $\int_{\left\lVert z-e\right\rVert\le\tau}f\,\d\sigma_E\le\frac{c_D}2B^{\gamma}\tau^{D-1-\gamma}$，
+    - D96:651
+      行: $\mathbb E\bigl[\max_v\int f_v\,\d\sigma_{N_0}\mid u\bigr]\le2^{d^2/p}144^d\bigl(\tfrac{C^j\eta}r\bigr)^{\gamma}$。
+
+### \lem   count=13   class=JUDGMENT
+    判据: 算子名式自造记号 \lem（引理交叉引用），按记忆规则非融合体；须作者决定是否登记
+    - D139:276
+      行: （b）中间步骤补齐。$\lambda\in L_b$ 的验证只有一行（463--464）：$k-z$ 模 $p_b$ 约化为 $c$，而 $c\in C_b$，故 $\frac{k-z}{p_b}\in C_b/p_b$。$p_bt=k+\{p_bt\}$（465--466）给出 $\tau=\frac{z+\{p_bt\}}{p_b}\in t_z+[0,p_b^{-1})^b=Q_z$。整数位
+    - D139:278
+      行: （c）机械理由。$k=\lfloor p_bt\rfloor$ 与 $x=k\bmod p_b$ 把连续点先落到格胞再落到有限群，两步都是坐标向；$z$ 用标准代表元（444 行的 again using standard representatives）是必需的，否则 $t_z=z/p_b$ 的锚点解释会变。$e^{-\eta_b}$ 、不是 $e^{-O(\eta_b)}$：$\eta_b=b
+    - D139:297
+      行: （b）中间步骤补齐。前置数据先把 $L$、$M$、$D_v$ 定下来。尺寸序列 $b_{i+1}=\lceil b_i^{0.9}\rceil$ 停在 $B$ 之下（17--23），提高 $B$ 得 hierarchy.tex:26--28 的 $b_{i+1}\le\frac12b_i$、$B\le b_r<B^{1/0.9}$、$\sum_{i=1}^r b_i\le2b_1$。逐块套 $\l
+    - D139:307
+      行: 首块 $i=1$：由 $\lem:block-cell$ 取 $\lambda_1$ 使 $t=y_1/h_1-\lambda_1\in t_z+[0,1/p_1)^{b_1}$（200--203），候选 $\ell_1=\lambda_1+\epsilon$，逐点权重 hierarchy.tex:207--209：` \frac{h_i^{b_i}}{p_i}\gamma_{b_i}(h_i(t
+    - D139:313
+      行: （d）失败路线。[推测] 第一条：归纳里只保留每块的一个最佳 $\epsilon$。这条正是 hierarchy.tex:259--260 公开堵住的。定量后果：$a_i$ 变成逐点最大值，并非加权平均，$\max_\epsilon P_{i,t_z}(\epsilon)\le(1-\alpha)^{b^{0.70}}$（blocks.tex:219）使每块乘上一个 $e^{-cb_i^{0.70
+    - D139:335
+      行: （d）失败路线。[推测] 第一条：逐目标 $y$ 各选一个剪切。final.tex:184--185 明写 We next select one / shear that works for every retained pattern 来堵这条路。定量后果：$y$ 的集合是连续的，逐点选择无法定义 $\Gamma$（$\Gamma$ 由一组固定的 $Z_j$ 决定，final.tex:232--
+    - D139:352
+      行: （b）中间步骤补齐。标注环节的先后顺序我按正文抄下来，因为顺序本身就是论证的一部分：$B$ 与全部竖直常数先定（118--119），$s=\log\log n$、$b_1=\lceil s^2\rceil$（119--120），$R^2=\sum b_ih_i^2$、$m=n-D$（122--124），$D=O(s^2+1)$、$R$ 被 $s$ 的固定多项式控制（125）。套 $\lem:sec
+    - D139:352
+      行: （b）中间步骤补齐。标注环节的先后顺序我按正文抄下来，因为顺序本身就是论证的一部分：$B$ 与全部竖直常数先定（118--119），$s=\log\log n$、$b_1=\lceil s^2\rceil$（119--120），$R^2=\sum b_ih_i^2$、$m=n-D$（122--124），$D=O(s^2+1)$、$R$ 被 $s$ 的固定多项式控制（125）。套 $\lem:sec
+    - D139:354
+      行: （c）机械理由。$b_1=\lceil s^2\rceil$ 的取法把三处指数一次对齐：$D=O(s^2+1)$ 让 $4^D=o(n)$（因为 $2s^2\log2=o(e^s)$），$b_1^{0.70}=s^{1.4}$ 让 $e^{-cs^{1.4}}$ 压倒 $\rho$ 的多项式增长（$U_n/m\to0$），$\exp(-cb_1^{0.70})$ 与 blocks.tex:235-
+    - D139:356
+      行: （d）失败路线。[推测] 第一条：不做补齐、直接把 $\delta$ 压到 0。失败点在 $\Gamma$ 固定之后 $\delta$ 只能靠负载总量改进，而 $\rho$ 一旦增大密度结论就退化，永远达不到 $\delta=0$；正文用 $O(1/n)$ 的膨胀换掉无穷小洞，是 Rogers 的 classical completion 思路（final.tex:84--85 明写 the cl
+    - D139:383
+      行: | $R^2$ | $\sum_{i\le r+1}b_ih_i^2\le C(b_1\log(b_1+1)+1)$ | hierarchy.tex:123--125 | $\lem:sections$ 的 $\lVert y\rVert\le R$ | 半径变大要求更大的 $M$，标签数膨胀 |
+    - D139:442
+      行: | $\delta$ | $\le n^{-2n}$ | final.tex:267--269 | $\lem:completion$ 判据 | 松到 $n^{-n}$ 时 $\delta<(1-\delta)n^{-n}$ 贴边 |
+    - D317:92
+      行: 系数 $t$ 只说明单个生成元 $\pi_t(s_i)$ 离 $\lambda(s_i)$ 不远。可我需要的是所有 $g\in G$ 上 $\sup_g\lVert\pi_t(g)-\lambda(g)\rVert$ 都小,这是 $\lem{tree}$ 真正吃力的地方(见 `main.tex:365` 到 `main.tex:366` 的过渡句)。$t$ 若只逐生成元小、在长词上爆炸,那形变在群
+
+### \OOo   count=12   class=ORDER
+    判据: 结构层 \mathcal O 双写误拼（正文另有 \mathcal O_W）；替换 \OOo -> \mathcal{O}
+    精确替换: \OOo  ->  \mathcal{O}
+    - D492:446
+      行: 第三段是满秩。$F\colon W\to W'$ 为对基域扭曲的相对弗罗贝尼乌斯，光滑故有限平坦；$\mathcal E=F_*\OOo_W(B_p)$，$s=\operatorname{rk}\mathcal E=p^n$，$R=s^2$；对 $0\le a\le q$ 记 $U_a=H^0(W,\mathcal O_W(B_p+paS))$，投射公式给出 $W'\times W'$ 上的求值映
+    - D492:459
+      行: 在光滑局部坐标里，代数由参数之差生成、其 $p$ 次幂为零，一次余切即 $\Omega_W^1$；这个坐标计算可以在平展局部或完备化里做。它是典范弗罗贝尼乌斯滤过的对角理想形式，而只用第二个因子的同款计算给出 $F^*\mathcal E$ 的滤过件 $\OOo_W(B_p)\otimes A_j(\Omega_W^1)$。互补乘法给出完美配对
+    - D492:517
+      行: 最后是装回终端情形（`frobenius.tex:570--730`）。取 §11 给的 $q$，再把 $t$ 取得足够小使两条估计都成立、$r>q+1$、$P^n<(2\epsilon)^n$，然后固定 $t$，此后一切选择都在复数域上做完。取光滑射影分辨率 $w\colon W\to X$，令 $D=w^*P$、$S=w^*L$、$H_0=w^*P$；$X$ 终端且 $K_X\sim0$ 给出
+    - D492:517
+      行: 最后是装回终端情形（`frobenius.tex:570--730`）。取 §11 给的 $q$，再把 $t$ 取得足够小使两条估计都成立、$r>q+1$、$P^n<(2\epsilon)^n$，然后固定 $t$，此后一切选择都在复数域上做完。取光滑射影分辨率 $w\colon W\to X$，令 $D=w^*P$、$S=w^*L$、$H_0=w^*P$；$X$ 终端且 $K_X\sim0$ 给出
+    - D492:563
+      行: 理性奇点让 $\operatorname{Pic}^0(X)\xrightarrow{\ \sim\ }\operatorname{Pic}^0(W)$ 是同构，写 $P_W=p^*P_X$，令 $\mathcal A_X=\OOo_X(rD)\otimes P_X$，则 $p^*\mathcal A_X\simeq\OOo_W(rA_W)$。右端某个正次幂整体生成；由 $p_*\OOo_W=\O
+    - D492:563
+      行: 理性奇点让 $\operatorname{Pic}^0(X)\xrightarrow{\ \sim\ }\operatorname{Pic}^0(W)$ 是同构，写 $P_W=p^*P_X$，令 $\mathcal A_X=\OOo_X(rD)\otimes P_X$，则 $p^*\mathcal A_X\simeq\OOo_W(rA_W)$。右端某个正次幂整体生成；由 $p_*\OOo_W=\O
+    - D492:563
+      行: 理性奇点让 $\operatorname{Pic}^0(X)\xrightarrow{\ \sim\ }\operatorname{Pic}^0(W)$ 是同构，写 $P_W=p^*P_X$，令 $\mathcal A_X=\OOo_X(rD)\otimes P_X$，则 $p^*\mathcal A_X\simeq\OOo_W(rA_W)$。右端某个正次幂整体生成；由 $p_*\OOo_W=\O
+    - D492:565
+      行: 这段我在 §3 预告过一次，重写到这儿才发现真正承重的是两处极短的话：「模 $\operatorname{Pic}^0$ 挠」与「失败点上抬」。前者把数值等价换成线丛等价的有限次挣扎，后者把逐点生成性从 $W$ 搬到 $X$。我最初的版本试图直接下降线性系统：$p_*\OOo_W(rA_W)$ 是一个线丛吗？答案一般是否，除非 $X$ 理性奇点且挠类来自下推。所以这个引理的假设里「$X$ 有理性奇
+    - D492:565
+      行: 这段我在 §3 预告过一次，重写到这儿才发现真正承重的是两处极短的话：「模 $\operatorname{Pic}^0$ 挠」与「失败点上抬」。前者把数值等价换成线丛等价的有限次挣扎，后者把逐点生成性从 $W$ 搬到 $X$。我最初的版本试图直接下降线性系统：$p_*\OOo_W(rA_W)$ 是一个线丛吗？答案一般是否，除非 $X$ 理性奇点且挠类来自下推。所以这个引理的假设里「$X$ 有理性奇
+    - D492:577
+      行: 落地的最后一手是基域转移（`positive.tex:425--464`）。设 $k_0\subset K$ 是特征零代数闭域扩张，$X_0$ 在 $k_0$ 上正规射影，$D_0$ 为 $\mathbb Q$-卡尔他；若其在 $X_K$ 上的拉回 $D_K$ 数值等价于 $K$ 上某个半丰 $\mathbb Q$-卡尔他除子，则 $D_0$ 在 $k_0$ 上已有此性质。证明的思路是把我已经用到
+    - D492:579
+      行: 在 $X_0$ 上取一个 $k_0$ 点把线丛刚化，有限型的 $\operatorname{Pic}^0(X_0)$ 于是有泊加莱族；把它张量上固定的 $\OOo_{X_0}(rD_0)$，使所得线丛整体生成的参数集是可构造的。可构造性的做法是把参数概形分层，使零阶直接像局部自由、上同调与基变换成立；在每层上用求值映射，其余核支撑在参数空间里的像是闭的（从 $X_0$ 投影是真射），补集就是该层的
+    - D492:616
+      行: 典范束公式（Ambro 定理 0.2 的推论形式）把基上的数据取出来：存在有效有理边界 $B_{Z_2}$ 使 $(Z_2,B_{Z_2})$ 差正且 $K_{X_2}+B_2\sim_{\mathbb Q}g^*(K_{Z_2}+B_{Z_2})$。基伴随的伪有效我没有用判别式与模除子那套，是照素材给的更省的验证：$X_2$ 上的伪有效伴随有好极小模型，故某个充分可除正倍有非零截面；$g_*\O
+
+### \diff   count=5   class=ORDER
+    判据: \mathrm{diff} 上标（Wh 的光滑标记，正文另有 \mathrm 前缀）；替换 \diff -> \mathrm{diff}
+    精确替换: \diff  ->  \mathrm{diff}
+    - D213:43
+      行: 顺着排除表读：$Q=S^2$ 时定理 1.1 不可能失败，环面情形 DGI 也关门。$Q=S^n$（$n\ge3$）单靠已知拓扑不变量拦不住，但也给不出「所有已知刚性都满足」的可控构造：要造嵌入，我需要一个底空间上同时存在（1）足够大的同伦群来携带非平凡管族，（2）一个额外的球因子来记录竖直梯度方向。$S^9$ 恰好是 Waldhausen 管纤维化和 Rognes 计算交点上最低的非零维数：tu
+    - D213:72
+      行: 命题 5.2 的计数是全文我最想抄进自己工具箱的部分。长正合列片段（第 181 到 185 行）：$\pi_{10}\mathbf T\to\pi_{10}BG\xrightarrow{\partial}\pi_9\mathbf H^s(*)\to\pi_9\mathbf T\xrightarrow{\gamma_*}\pi_9BG$。三股力量夹逼：其一，$\pi_{10}BO$ 的像（$J_9$
+    - D213:152
+      行: 把 §5 到 §11 合起来检验一遍「反例质量」：对这条 $L$，投影的同伦论信息全部及格。Abouzaid 与 Kragh 的简单同伦等价（introduction.tex 第 60 到 65 行）只约束 $\pi\colon L\to Q$ 的同伦类，而 $L\cong Q$ 且生成族实现给出的参数化让投影是同胚级别的標準件。ACGK 的稳定拉格朗日 Gauss 映射零性、AACK 的法挠量 
+    - D213:177
+      行: | $\mathbf H^s(X)\simeq\Omega\operatorname{Wh}^{\diff}(X)$ | 稳定参族定理 | sections/tubes.tex:118 | Waldhausen 纤维化 | §5 与 §8 |
+    - D213:180
+      行: | $\bigl(\pi_{10}\operatorname{Wh}^{\diff}(*)\bigr)_{(2)}\cong\Z/8\oplus(\Z/2)^2$ | 阶 32 | sections/tubes.tex:169 | $\partial$ 不满 | §5 计数 |
+
+### \lc   count=5   class=JUDGMENT
+    判据: log-canonical 简写，目标 \mathrm{lc}? 待定
+    - D243:54
+      行: 候选二：抛物面式超曲面锥，$xy-z^m=0$。这是最诱人的，因为它的导子很好写。但超曲面情形由 Scheja--Storch 封住，而且对数典范判据也封住它（$m$ 大时仍是 $\lc$）。失败原因：余维 1 的关系全都是 Jacobian 关系，我没有任何余地。
+    - D243:69
+      行: 这条路上我还算错过一次量级。我以为沿 $C$ 的极点阶数是自由参数，可以通过选更好的标架把它调成 $-1$ 或 $-2$，从而落入 $\lc$ 类的边界。实际推一下就知道极点阶数被行列式逼死了：在除掉 $C$ 之后 $v_1,v_2$ 是标架，$\sigma(v_1,v_2)=1+O(t)$，而我手里可用的整体 2-形式在分裂坐标下正是 $\sigma=t^{-5}dt\wedge dz$（`bu
+    - D243:364
+      行: 这三串数各自兑现了 §1 里我列的一条封锁：差异数 $-5$ 让我离开对数典范类（曲面上 $\lc$ 要求各例外除子的系数 $\ge-1$，而这里是 $-5$；同时它把 $K_X$ 留成 Cartier 且平凡，所以我的奇点是 Gorenstein 但远离 $\lc$）；$p_g-g-b\ge12$ 让我离开 Bergner--Graf 判据 $p_g-g-b\le2$ 与 Graf 的低亏格判据
+    - D243:364
+      行: 这三串数各自兑现了 §1 里我列的一条封锁：差异数 $-5$ 让我离开对数典范类（曲面上 $\lc$ 要求各例外除子的系数 $\ge-1$，而这里是 $-5$；同时它把 $K_X$ 留成 Cartier 且平凡，所以我的奇点是 Gorenstein 但远离 $\lc$）；$p_g-g-b\ge12$ 让我离开 Bergner--Graf 判据 $p_g-g-b\le2$ 与 Graf 的低亏格判据
+    - D243:564
+      行: | $C$ 的差异数 | $-5$ | build/05-analytic.tex:394 | §3 与 §15 离开对数典范类 | 落回 $\lc$ 则被 Druel 与 Graf--Kov\'acs 排除 |
+
+### \T   count=5   class=ORDER
+    判据: 转置上标：KaTeX 正确写法 \top；替换 \T -> \top
+    精确替换: \T  ->  \top
+    - D71:142
+      行: (b) 完整推导。取引理七的 $p,\theta$，记 $T=T(x)$。对方向 $v$ 定义 tilt 曲线 $\Phi(t)=\log\sum_a e^{(\theta+tv)\cdot a}$，$p_a(t)=e^{(\theta+tv)\cdot a-\Phi(t)}$，$y(t)=\mathbb E_t[a]$。面上指数律给出 $H(y(t))=\Phi(t)-(\theta+tv)\c
+    - D71:142
+      行: (b) 完整推导。取引理七的 $p,\theta$，记 $T=T(x)$。对方向 $v$ 定义 tilt 曲线 $\Phi(t)=\log\sum_a e^{(\theta+tv)\cdot a}$，$p_a(t)=e^{(\theta+tv)\cdot a-\Phi(t)}$，$y(t)=\mathbb E_t[a]$。面上指数律给出 $H(y(t))=\Phi(t)-(\theta+tv)\c
+    - D71:142
+      行: (b) 完整推导。取引理七的 $p,\theta$，记 $T=T(x)$。对方向 $v$ 定义 tilt 曲线 $\Phi(t)=\log\sum_a e^{(\theta+tv)\cdot a}$，$p_a(t)=e^{(\theta+tv)\cdot a-\Phi(t)}$，$y(t)=\mathbb E_t[a]$。面上指数律给出 $H(y(t))=\Phi(t)-(\theta+tv)\c
+    - D71:142
+      行: (b) 完整推导。取引理七的 $p,\theta$，记 $T=T(x)$。对方向 $v$ 定义 tilt 曲线 $\Phi(t)=\log\sum_a e^{(\theta+tv)\cdot a}$，$p_a(t)=e^{(\theta+tv)\cdot a-\Phi(t)}$，$y(t)=\mathbb E_t[a]$。面上指数律给出 $H(y(t))=\Phi(t)-(\theta+tv)\c
+    - D71:142
+      行: (b) 完整推导。取引理七的 $p,\theta$，记 $T=T(x)$。对方向 $v$ 定义 tilt 曲线 $\Phi(t)=\log\sum_a e^{(\theta+tv)\cdot a}$，$p_a(t)=e^{(\theta+tv)\cdot a-\Phi(t)}$，$y(t)=\mathbb E_t[a]$。面上指数律给出 $H(y(t))=\Phi(t)-(\theta+tv)\c
+
+### \root   count=4   class=JUDGMENT
+    判据: \sqrt h / 立方根，需 \sqrt{} 结构，意图清但须新写
+    - D106:1750
+      行: （这里的 $8a_4$ 就是 $2b_0$，公共部分；奇次部分的分母 $(\root h)^3$ 与 $u^{3/2}$ 对应），
+    - D106:1873
+      行: 从 $a_3<0,a_1\ge0,a_5\ge0$ 得 $0<\text{third }a\,h$，分母 $\root h$ 的幂用 `div_pos`+`nlinarith`），
+    - D106:1913
+      行: $8a_4+(-a_1)/(\root T)^3\le\text{curvature }a\,h$，即 $\delta$ 的具体形式取为
+    - D106:1914
+      行: $(-a_1)/(\root T)^3>0$，用 `root h\le\root T` 与 `pow_le_pow_left₀`、`div_le_div` 单调化，
+
+### \Csum   count=4   class=JUDGMENT
+    判据: 自造和算子，展开目标未定
+    - D137:491
+      行: `[推测]` 若让 $c_i$ 的定义随 $n$ 变化（例如用长度 $>1$ 的参数窗以增大可选交点），窗内周期数随 $n$ 增长，(G) 里"上确界不引入格点数因子"的前提失效，$C_1s$ 会被 $n$ 的幂替换，最终 $\Csum$ 里那一项就不再由 $D(C_1s+\varepsilon)$ 控制。
+    - D137:548
+      行: `[推测]` 若 $\psi$ 只要求 $z<\psi(z)$ 而不要 $\psi(z)\le z+G_*$，则 $i\in\psi(S)$ 的指示无法由长度固定的窗口控制，$2G_*p$ 项要换成随 $b-a$ 增长的量，(c) 的线性计数界失效，进而第 17 节 $\Csum$ 里的 $C_0\{2G_*p+2(L_*+1)\delta\}$ 不再正比于 $p$。
+    - D137:549
+      行: (c) 机械理由。$B_*=R+1$：$R$ 是"$|i-j|>R$ 时 $Z_i$ 独立于 $Z_j,U_j^\pm$"的分离半径，加 $1$ 后相邻 $B_*$ 个指标的块之间至少跨过一个独立边界，块构造（第 17 节的 $a_k$）只需要 $B_*\ge R+1$。$G_*=4B_*$：目标位点必须落在"旧片段之外"，同时每个旧片段至多两个邻居，所以像集窗口要同时容纳位移 $L_*+1$ 与
+    - D137:621
+      行: 第三个转折是"标定做分母、势与亏量做分子"的归一化选择。第 3 节里 $\beta$ 是完整周期亏量的期望上确界，第 12 节的 $X_{j,k}$ 全部除以 $\beta$。这个选择让 (G) 与 (L) 两套接口都用 $\beta$ 表达，从而第 16 节的 cap 菜单与 $\beta$ 无关，最终 $\Csum$ 型不等式写成 $(C_1s+\varepsilon)\beta$，收缩因子与
+
+### \du   count=4   class=ORDER
+    判据: \mathrm{d}u 微元；替换 \du -> \mathrm{d}u
+    精确替换: \du  ->  \mathrm{d}u
+    - D761:287
+      行: 且 $j<b_*$ 时第二项等于 $\int_{\mathrm{per}}K_j((\mu_{j+1}*Y_j),(\mu_{j+1}*Y_j))\du$（两个卷积展开后，同时平移把滞后差 $a-b$ 的分布变成偶函数的自卷积 $\rho_j$）。推导只用 $H_j'(u)$ 在一个周期上积分为零，加上 $U_j'=2(\delta_0-\rho_j)$ 里那个 2 把前面的 $\frac12$ 
+    - D761:303
+      行: 其证明依赖 $\partial_iP_j(u)=\sum_a\eta_j(u-t_i-a)g^{a}J_i$ 里"至多一个 $a$ 非零"（$4\delta_j<1$）以及 $\int_{\mathrm{per}}\sum_a\eta_j(u-t_i-a)^{2}\du\le\lVert\eta_j\rVert_\infty\le C/\delta_j$。第二条更微妙：$\partial_iY_j
+    - D761:303
+      行: 其证明依赖 $\partial_iP_j(u)=\sum_a\eta_j(u-t_i-a)g^{a}J_i$ 里"至多一个 $a$ 非零"（$4\delta_j<1$）以及 $\int_{\mathrm{per}}\sum_a\eta_j(u-t_i-a)^{2}\du\le\lVert\eta_j\rVert_\infty\le C/\delta_j$。第二条更微妙：$\partial_iY_j
+    - D761:315
+      行: 光滑级（$j>0$）的处理我认为最见功夫。在 $(0,1)\times\Lambda_j$ 上取测度 $\mathrm d\vartheta_j(u,y)=Y_j(u)_y\du$，$\mathcal H_j=L^2(\vartheta_j)$，定义算子核
+
+### \A   count=3   class=JUDGMENT
+    判据: \mathbb A / \mathcal A 未定
+    - D214:125
+      行: Hilbert 侧 lem:hilbert-count（dimension.tex:246-310）：约化平面曲线 $C$ 上 $\dim\operatorname{Hilb}^N(C)\le N$，任意特征。作者先交代 Baranovsky 复数上的 punctual Quot 用交换幂零算子加循环向量（引 Lemma 2.2），Premet 给任意特征的 punctual 平面界（引 Cor 
+    - D243:454
+      行: 第五步是我认为全篇最"务实"的一步：$H$ 是带基点 etale 邻域的滤余极限，剩余域相同，所以 $g,B$ 的有限多个元素在一个这样的邻域上被表示；换到更后的邻域，那些有限多个恒等式也在那里成立；若这一层写在局部多项式环上，有限表示加清除有限多个分母就能散布到仿射空间中原点的一个邻域；缩小保持标记点并使映射 etale；仿射缩小后恒等式在其坐标环里成立。于是得到仿射 etale 邻域 $\op
+    - D243:466
+      行: 第一处是到底在完成谁的微分模。ambient 邻域在 $\A^e_{\mathfrak mathbb C}$ 上是 etale 的，所以它的微分在标记点附近有基 $dx_1,\dots,dx_e$。把 $\Omega^1_{T/\mathfrak mathbb C}$ 的有限表示完备化，就得到 $P/(g)$ 的连续 Jacobian 表示。对一个有限表示模，平坦基变换与它对偶可换：做法是把对偶写
+
+### \math   count=3   class=KEEP
+    判据: D238:744 该行以“应为 $\mathcal Z_{\mathcal P}$”自我更正，broken 形式属引用
+    - D238:298
+      行: $\lvert\mathcal Z_{\math P}((g_v))\rvert\le\prod_v Z_{\mathcal P}(g_v)^{1/d}$。证明的第一层：乘积律 $\mu_{\mathcal P}$ 在
+    - D238:744
+      行: $\mathcal Z_{\math P}$，应为 $\mathcal Z_{\mathcal P}$；其二，§7 末段
+    - D30:827
+      行: 一处取证数据我必须如实记下并解释：素材头部写"$E:\math\lean\OAI\Geometry\Kahler$ 108 个 `.lean`、约 18,688 行"，而素材 §4.1 表格又写"36 个 `.lean`、约 6000 行，全部 sorry-free"。我实测该目录 `ls *.lean | wc -l` = 119 个文件、`cat *.lean | wc -l` = 18,68
+
+### \rangleG   count=3   class=JUDGMENT
+    判据: D26/D231/D401 span 体内并无裸 \rangleG：系 \inner 宏展开后 \rangle 与后继字母粘连，须作者核对（非机械单枚替换）
+    - D26:376  [in-flight, coordinate unverified]
+        (期望 token 不在该行, 可能已被并发改写)
+      行: 直接展开验证：$\langle\|G-a\|^2\rangle=\langle\|G\|^2\rangle-2\inner a{\langle G\rangle}+\|a\|^2$，再把 $-2\inner a{\langle G\rangle}+\|a\|^2$ 拆成 $-\|a\|^2-2\inner a{\langle G\rangle-a}$，与 tex 形式一致。素材特别注明"论文写 $
+    - D26:376  [in-flight, coordinate unverified]
+        (期望 token 不在该行, 可能已被并发改写)
+      行: 直接展开验证：$\langle\|G-a\|^2\rangle=\langle\|G\|^2\rangle-2\inner a{\langle G\rangle}+\|a\|^2$，再把 $-2\inner a{\langle G\rangle}+\|a\|^2$ 拆成 $-\|a\|^2-2\inner a{\langle G\rangle-a}$，与 tex 形式一致。素材特别注明"论文写 $
+    - D26:376  [in-flight, coordinate unverified]
+        (期望 token 不在该行, 可能已被并发改写)
+      行: 直接展开验证：$\langle\|G-a\|^2\rangle=\langle\|G\|^2\rangle-2\inner a{\langle G\rangle}+\|a\|^2$，再把 $-2\inner a{\langle G\rangle}+\|a\|^2$ 拆成 $-\|a\|^2-2\inner a{\langle G\rangle-a}$，与 tex 形式一致。素材特别注明"论文写 $
+
+### \V   count=3   class=JUDGMENT
+    判据: \mathbb V 未定（正文另有拼写）
+    - D295:117
+      行: periods.tex 是我最"卡"的一节，因为它要在**没有 Kähler 类是 rational** 的前提下调用算术周期紧化。BFMT 的 Theorems 5.2 与 5.5 处理的是"有理极化的纯 Hodge 变分"，本稿在环面因子与 IHS 因子上拿到的极化形式来自固定的 Kähler 类 $\kappa$（periods.tex 的 Lemma periods:lefschetz 用
+    - D295:263
+      行: | $C=J^{1/2}$ | flat real automorphism of $\V_\R$ | sections/periods.tex:55 | 有理极化 $B'$ 的载体 | 若 $J$ 不接近恒等则幂级数平方根不定义 |
+    - D295:264
+      行: | $B'(x,y)=B(Cx,Cy)$ | rational invariant form on $\V_\Z$ | sections/periods.tex:32 | BFMT Thm 5.2 与 Thm 5.5 的输入 | 若 $C$ 不与单值交换则 $B'$ 非不变 |
+
+### \G   count=3   class=JUDGMENT
+    判据: 环面 \mathbb G 未定
+    - D307:191
+      行: 塔给的是剩余域 $k(S)$ 的尺度分层，我要把它换成能计数的东西。稿子里的说法（`build/sections/introduction.tex:197-206`）是：一个有限的射影收缩塔，一次去掉剩余域 $k(S)$ 的一个小尺度；水平差异界在每个相对域上给出除子阶估计；这些域与环面方向一起决定了 $d$ 个宽度 $W_j$：在第 $j$ 个方向上，可以在次数与成本都为 $O(W_j)$ 的范
+    - D385:179
+      行: 引理一（`order-weight.tex:11-24`）：环面 $T$ 作用在光滑既约射影 $X$ 上，$L$ 带 $T$-线性化；$\lambda:\G_m\to T$ 的源分量 $S$（参数趋零时稠密开集趋于 $S$），$\mu$ 为 $L|_S$ 的 $\lambda$-权。若 $0\ne s\in H^0(X,L)$ 是 $\lambda$-权 $w$ 的本征截面，则沿弧 $t\maps
+    - D385:195
+      行: 第二段是权的上界。把度量的对数权沿 $\lambda(\G_m)$ 的圆平均：对 $0\ne u\in L_x$ 置 $q_u(s)=\log\lVert\lambda(e^s)u\rVert$，半正曲率使非消失全纯轨道截面的对数范数超调和，圆不变性于是让 $q_u$ 对 $s$ 凹（`exact-weights.tex:26-30`）。存在光滑 $\theta:X\to\R$ 使 $q_u'(s
+
+### \two   count=3   class=JUDGMENT
+    判据: 上标 tw/even 记号，目标 \mathrm 拼写未定
+    - D77:496
+      行: 长度侧的分次母函数带 $v$: $L(u,v)=\sum_{k\ge1}\frac{\mu(k)}{k}\log\frac{1}{1-vV(u^k)}$, 系数 $\sum_rd_{n,r}u^nv^r$ 里 $v$ 就是生成元枚数即 $B$-count。上界一侧的等号在 cor:dimension-bound (05-image.tex:386) 是逐 $r$ 注入 $\operatorname
+    - D77:552
+      行: 完成性一侧 $\widehat W=\prod_nW_n$ (01:39) 用逐权有限维 (08:207) 与固定权里只出现有限多对正权 (08:209-210); $\operatorname{Lie}_\mathbb Q\langle e_3,e_5,\ldots\rangle\to V$ 逐权给 $\sigma_{2k+1}$ (08:192-196), Hall 基像独立由前导项对账 (0
+    - D77:552
+      行: 完成性一侧 $\widehat W=\prod_nW_n$ (01:39) 用逐权有限维 (08:207) 与固定权里只出现有限多对正权 (08:209-210); $\operatorname{Lie}_\mathbb Q\langle e_3,e_5,\ldots\rangle\to V$ 逐权给 $\sigma_{2k+1}$ (08:192-196), Hall 基像独立由前导项对账 (0
+
+### \closedball   count=2   class=JUDGMENT
+    判据: 两参闭球记号，需 \overline{B}_{r}(c)
+    - D125:478
+      行: - 一致连续的紧集：`LocalDistribution.lean:37--38` 在 $\closedball{\sigma(0)}{D+1}$ 上用 `isCompact_closedBall ... .uniformContinuousOn_of_continuous`，得模数 $\eta$；取 $R:=\min\{\eta,1\}$、$\delta:=\frac{R}{2(D+1)}$（`
+    - D125:564
+      行: | $R=\min\{\eta,1\}$，$\delta=R/(2(D+1))$ | $\eta$ 是 $G$ 在 $\closedball{\sigma(0)}{D+1}$ 上的一致连续模 | `LocalDistribution.lean:37--41` | 中点性质的局部上界假设 $G\le c$ | 去掉 $D+1$ 外扩则 `LocalDistribution.lean:79--89` 
+
+### \asy   count=2   class=ORDER
+    判据: \asymp 融合（正文另有 \asymp 拼写）；替换 \asy -> \asymp
+    精确替换: \asy  ->  \asymp
+    - D131:153
+      行: 第二步切片。取局部定义函数 $\rho$ 使 $B=\{\rho<0\}$。`boundary.tex:80--83` 的 Taylor 展开给出 $\rho(x,v)\le cx+M(x^2+|v|^2)$，$c>0$，理由是 because both real derivatives in the complex tangent direction vanish. 这就是 $C^2$ 假设的全
+    - D537:257
+      行: | $\ell_N\asy\log N$、$\mathbb P(\mathcal G_N^c)=o(N^{-A})$ 对一切 $A$ | 环境放大速率 | criticality.tex:143-171 | 臂界在例外集外的平均 | 键邻域不相交被改则 criticality.tex:100-110 因子化无效 |
+
+### \hsSq   count=2   class=JUDGMENT
+    判据: HS 半范数算子，需 \lVert\cdot\rVert_{\mathrm{HS}}
+    - D25:2417
+      行: **Lean 有 / 论文未强调（素材四条 + 我的结案）：** `markov_kernel_contraction`（两份拷贝，见 18.6(4)）、`kronecker_pow_one`（`PolynomialCalculus.lean:73`）、`tensorPolynomial_mul`（`PolynomialCalculus.lean:98`）、`hsSq_mul_le` 与 `hsS
+    - D25:2417
+      行: **Lean 有 / 论文未强调（素材四条 + 我的结案）：** `markov_kernel_contraction`（两份拷贝，见 18.6(4)）、`kronecker_pow_one`（`PolynomialCalculus.lean:73`）、`tensorPolynomial_mul`（`PolynomialCalculus.lean:98`）、`hsSq_mul_le` 与 `hsS
+
+### \texttcaxe   count=2   class=JUDGMENT
+    判据: \text{exact} 反写残片，意图须作者核
+    - D257:47  [in-flight, coordinate unverified]
+        (期望 token 不在该行, 可能已被并发改写)
+      行: 这一点在命题 `ext:conditional` 的证明里被写死：构造用的是 $\eqref{ext:exact\text{-}kappa}$ 里那个确切乘法，
+    - D257:224  [in-flight, coordinate unverified]
+        (期望 token 不在该行, 可能已被并发改写)
+      行: 同一处还有一句我认为应当抄在笔记扉页的话：这个构造用的是 $\eqref{ext:exact\text{-}kappa}$ 里的确切乘法，
+
+### \sr   count=2   class=JUDGMENT
+    判据: 谱半径算子 \operatorname{sr}，目标未定
+    - D258:175
+      行: 构造从过 $(S,h_0)$ 与主极化 $B$ 的光滑代数局部模图开始，取通用光滑投影族；必要时用 level 结构和 étale 图来同时拿到族与极化线丛，再收缩成仿射图。解析 germ 给出一个形式 germ 态射 $\Spec A\to U_S\times U_B$，$A=\C[[t_1,\ldots,t_{19}]]$。令 $X_A$ 为拉回乘积族，$A_m=A/(t_1,\ldots,t
+    - D258:199
+      行: 写到这里我把全篇的数字列在一起，目的只有一个：确认没有哪个 19、22、512 是我在某一节里顺口用错的。起点是 $d\in\Z_{>0}$，$S$ 的 Picard 数 19，$B=E^g$ 中 $E$ 非 CM 且 $g=512$，$M=P\times Y$，$n=g+2=514$。$P$ 是 $\mathbb P^3$ 里光滑四次，FS 归一化使 $a^2=4\,\pt_P$；$Y$ 是 $
+
+### \q   count=2   class=JUDGMENT
+    判据: 四元数/量词未定
+    - D278:104
+      行: $$z=\frac1{\pi(\alpha/b-h)}>0,\q G_z(s)=Q_1ze^{(1-s)/z},$$
+    - D354:92  [in-flight, coordinate unverified]
+        (期望 token 不在该行, 可能已被并发改写)
+      行: $$
+
+### \o   count=2   class=JUDGMENT
+    判据: 小 o 记号，\lambda_+ 类需分隔空格，须逐处新写
+    - D384:342
+      行: $Z_l^{F(\phi)}(t)=Z_G(t)Z_l^q(t)(1+\o(1))$，$Z_G(t)$ 是与四元数场无关的零绕 Gauss 积分，
+    - D384:344
+      行: 而它给时间倍化的份额是 $2\log Z_G(t)-\log Z_G(2t)=\o(t)$，比质量项低阶
+
+### \ot   count=2   class=ORDER
+    判据: \otimes 融合（正文另有 \otimes_k）；替换 \ot -> \otimes
+    精确替换: \ot  ->  \otimes
+    - D44:376
+      行: (b) 推导。用域 $k$ 上的非增广 bar 消解：度 $-n$ 项 $A\otimes_kA^{\otimes n}\otimes_kN$ 是自由左 $A$-模，插单位的 $k$-线性收缩给出 quasi-iso，张上右 $A$-模 $D$ 得 $\mathcal B$ 模型，$\mathcal B^{-n}=D\otimes_kA^{\otimes_kn}\otimes_kN$，微分是相邻乘
+    - D44:376
+      行: (b) 推导。用域 $k$ 上的非增广 bar 消解：度 $-n$ 项 $A\otimes_kA^{\otimes n}\otimes_kN$ 是自由左 $A$-模，插单位的 $k$-线性收缩给出 quasi-iso，张上右 $A$-模 $D$ 得 $\mathcal B$ 模型，$\mathcal B^{-n}=D\otimes_kA^{\otimes_kn}\otimes_kN$，微分是相邻乘
+
+### \At   count=2   class=JUDGMENT
+    判据: 自造/歧义记号，须作者判定
+    - D51:1022
+      行: | $\lvert I\rvert\ge5$ | 完美复制所需字母数 | lifting.tex:89, 242, 304 | 中心律映射 eq:central-law-map（264）、$C_{\mathcal V,I}=\prod_{\At(\mathcal V)}\operatorname{Alt}(I)$（123-127） | 与 lem:comparison 后"嵌入五字母表"（lift
+    - D51:1100
+      行: (i) $\mathcal U_0$ 的联合条件交错群表：包含 $C_{\mathcal V,I}=\prod_{P\in\At(\mathcal V)}\operatorname{Alt}(I)$ 型表的实现（lifting.tex:123-127），子字母表上的相容性，不相交字母表可交换，以及在常数偶轨道置换下的协变；实现方式是给有限群每个元选一个代表词 $w_g$ 并 imposing $w
+
+### \Ce   count=2   class=JUDGMENT
+    判据: 记号未定
+    - D59:272
+      行: 结构后果三条（`conclusion:27-63`）：其一，普通不变与超不变分离。对每个 $h$，$L^2(X;K_{\ge h})$ 闭、非零、真、$S$-不变，但**不** $V$-不变（常值场 $e_h$ 的像非零坐标在 $h-1$ a.e.，`conclusion:29-32`），故它是普通不变，并非超不变，把两种不变性摆成具体对照。其二，每纤维 $S_x$ 紧（$a_k^\pm\ge c
+    - D59:310
+      行: | $Q_0$ | 投到 $L^2(X)\otimes\Ce_0$ | conclusion.tex:48 | 非标量乘子见证、非 MASA | 若换成别的坐标片投影，$Q_0S\ne SQ_0$ 见证仍在；若换成乘子则不再是 MASA 反例 |
+
+### \dv   count=2   class=ORDER
+    判据: \mathrm{d}v 微元；替换 \dv -> \mathrm{d}v
+    精确替换: \dv  ->  \mathrm{d}v
+    - D761:281
+      行: 规则性引理（`build/sections/05-connection.tex:195--308`）把 §4 定义的四条相容性一条条还回来。我挑三件最脆的。第一，切口无关：把 $F_j(u)=\int_{\R}U_j(v-u)K_j(\mathrm dY_j(u),Y_j(v))\dv$ 看作时间参数上的一形式，由 $Y_j(u+1)=gY_j(u)$ 与变元平移得 $F_j(u+1)=F_j(u
+    - D761:303
+      行: 其证明依赖 $\partial_iP_j(u)=\sum_a\eta_j(u-t_i-a)g^{a}J_i$ 里"至多一个 $a$ 非零"（$4\delta_j<1$）以及 $\int_{\mathrm{per}}\sum_a\eta_j(u-t_i-a)^{2}\du\le\lVert\eta_j\rVert_\infty\le C/\delta_j$。第二条更微妙：$\partial_iY_j
+
+### \Ec   count=1   class=JUDGMENT
+    判据: 期望 E 缩写未定
+    - D08:895
+      行: 3. **平移的两侧一致**：$\widehat F_N=F_N-\alpha\mathbb E c$（$c$ 从自旋配分函数提出，每个交互一个 $c$，$\alpha N$ 个除 $N$）；$\widehat{\mathcal B}_r$：site 移 $-\alpha p\mathbb E c$、edge 移 $+\alpha(p-1)\Ec$（edge 项前已有负号），净 $-\alpha\
+
+### \tabalign   count=1   class=JUDGMENT
+    判据: 残片，须作者改写
+    - D113:1521
+      行: | $L(z)=360athrm{op}eratorname{Id}+(q(z)-1)d\otimes d$ | 法向拉伸 | scalarization.tex:223 | $C=LBL^t/\det L$ 的推导 | 改成切向拉伸则 $\eta_\tabalign+\eta_-=1$ 断 |
+
+### \ldash   count=1   class=JUDGMENT
+    判据: 自造/歧义记号，须作者判定
+    - D124:999
+      行: 则 $\gamma=h-d\alpha-\ldash m\log 2$ 在 $h$ 小（重合剧烈）时为负，第 10 节、11 节全断，
+
+### \lambdah   count=1   class=ORDER
+    判据: \lambda 吞 h（D125:448 已核）；替换 \lambdah -> \lambda h
+    精确替换: \lambdah  ->  \lambda h
+    - D125:448
+      行: 1. $\sigma$ 是**显式函数参数**（`(σ : Curve X)`），配上 `hσ : IsGeodesic σ`。所以"每条"在项层面就是 $\lambda\sigma.\lambdah\sigma.\ldots$，即对任意 $\sigma$ 构造证明；没有"存在一条"、没有"除去一个零测集"、没有对测地线空间的任何可测选择。`Main.lean:36` 的 `variable {X
+
+### \ball   count=1   class=JUDGMENT
+    判据: 两参保开球记号，需 \mathbb{B}_{r}(x)
+    - D125:498
+      行: - 轨道约束：`htrack₀`、`htrack₁`（`LocalMidpoint.lean:69--82`）证明两条腿上的路径几乎必然留在 $\ball{o}{3R/4}$ 内，用的正是三角不等式加 `geodesic_dist_initial_le` 加 `hshort : D < R`。这一步是论文里"$Q$ 是紧集、长度由 $L$ 界住"（`every-geodesic.tex:41--4
+
+### \DeclareMathOperator   count=1   class=KEEP
+    判据: D18:956 台账行逐字引用该 LaTeX 定义命令，故意保留
+    - D18:956
+      行: | $\operatorname{id}$ 的记号 | $\DeclareMathOperator{\operatorname{id}}{id}$ | paper.tex:27 | 全文 $\operatorname{id}({}_BB)\le4$ 与 $\operatorname{id}_\Gamma\Gamma=\infty$ 的排版来源 | 记号本身无害，但抄笔记时容易把 $\id$ 读成恒
+
+### \asypto   count=1   class=ORDER
+    判据: \asymp 吞 to：D198:289 已自更正为 \asymp，替换去掉尾部 to；替换 \asypto -> \asymp
+    精确替换: \asypto  ->  \asymp
+    - D198:165
+      行: 差异二:对数的产地。我预设 $(\log n)^2$ 会来自某种深刻的对数级递归(KKLMS 的多层构造、BK97 的多尺度分摊都是这种气质);最终证明里平方来自一次抽屉原理:支撑图有非孤立点度至多 $\sqrt{2s}$,逆运算给出 $s\le k^2/2$(sections/graph.tex:13-17, 127-140),对数量级截断 $k\asypto\sigma\log m$ 一平方就
+
+### \m   count=1   class=JUDGMENT
+    判据: 极大理想 \mathfrak m / 裸 m 未定
+    - D214:125
+      行: Hilbert 侧 lem:hilbert-count（dimension.tex:246-310）：约化平面曲线 $C$ 上 $\dim\operatorname{Hilb}^N(C)\le N$，任意特征。作者先交代 Baranovsky 复数上的 punctual Quot 用交换幂零算子加循环向量（引 Lemma 2.2），Premet 给任意特征的 punctual 平面界（引 Cor 
+
+### \ltl   count=1   class=KEEP
+    判据: D216:775 取证行逐字引用 broken 形式 $0\ltl=...
+    - D216:775
+      行: $0\ltl=07-observations.tex:940$ 那种形式），我没有从素材里找到进一步的信息，
+
+### \ellr   count=1   class=JUDGMENT
+    判据: R_\ell < r_{\ell+1} 类，融合歧义须核
+    - D282:145
+      行: 对请求长度 $n$，先定工作长度 $L\in[2n,4n)$：下界喂饱 chirp 卷积，上界把阵列规模压在线性；因子要小且两两互素，宽度多项式于 $\log n$，局部编译才只有对数幂代价（all-lengths.tex:4-10）。轴来源是递增奇素数积 $R_\ell=\prod_{j\le\ell}r_j$。引理 lem:prime-lengths 给的估计很朴素："足够用就行，不用素数定理
+
+### \D   count=1   class=JUDGMENT
+    判据: 单位圆盘 \mathbb D 未定
+    - D30:624
+      行: 1. 域与光滑正度量。$M_\phi=\{t<1\}$ 开。$(z,w)\mapsto(z,e^{\phi/2}w)$ 是 $M_\phi\to\mathbb B\times\D$ 光滑实微分同胚（逆 $(z,u)\mapsto(z,e^{-\phi/2}u)$）⇒ 可缩，不需全纯平凡化（`07:32-33`："no holomorphic trivialization is needed for
+
+### \K   count=1   class=JUDGMENT
+    判据: 裸 K 与 \mathbb K 并存，须逐处核对
+    - D302:375
+      行: | $K_0$ 上界 | $\K_0\le\log_{1/\eps}\!\left(\lvert F\rvert\right)+C/\log\lambda$ | 12-multiplier.tex:96-104 | 端点三次方和 | §12 端点段与 §4 的翻译断 |
+
+### \j   count=1   class=JUDGMENT
+    判据: 多余反斜杠 \lambda_+，须带空格改写
+    - D327:939
+      行: `[推测]` 我还读到 `introduction.tex:152-154` 那句"包括从调和平坦端归约到所述更弱渐近的行为"，所以顺序是：先假设端调和平坦跑完整条流，再用逼近把调和平坦假设去掉。`[推测]` 逼近的具体做法是把 $h-\delta=O_2(r^{-\tau})$ 用一族 $h^{(\j)}=U^{(j)}{}^{4/d}\delta+\text{紧支修正}$ 型度规在 $C^2$
+
+### \M   count=1   class=JUDGMENT
+    判据: \mathcal M / 裸 M 未定
+    - D329:30
+      行: 我最先试的是最省事的路线：既然目标是 $\lvert E\rvert$ 减最大割，为什么不把 Goemans-Lanzigiano-Schudy 或者任何带保证的最大割算法直接套上？把这条错误路线算清楚对我后面理解问题结构很关键。设算法保证割至少 $\alpha\MaxCut$，那么它返回的划的未割成本至多 $\lvert E\rvert-\alpha\M_c$，与 $\operatorname{
+
+### \ldim   count=1   class=JUDGMENT
+    判据: 左维数算子，需 \operatorname
+    - D44:453
+      行: | $g\ldim B$ | $\le2$ | `03:78-79`、`03:106` | 分裂用 $\operatorname{Ext}^4=0$；$D$ 维数递推基例 | $=3$ 时 Ext⁴ 不保零；quiver 加长路径时 rectification 多层化 |
+
+### \w   count=1   class=JUDGMENT
+    判据: 记号未定
+    - D45:225
+      行: (d) [推测] 失败路线。其一：把 $C$ 直接取成 Schulz 的量子外代数（四维）。失败机制：$eCe$ 自己的 Ext 代数被 Xia 的正例封死（量子完全交叉上 AR 成立），且它的自延伸是周期的、非零度恒存，无法通过第 8 节的平凡扩张得到"度 2 对 $C$、度 3 对 $T$"的那次搬运：$\operatorname{Ext}_C^2(s,C)$ 是单模这条性质依赖于把 $C$ 
+
+### \stEnd   count=1   class=JUDGMENT
+    判据: 稳定 End 算子，需 \operatorname{stEnd} 登记
+    - D45:388
+      行: (b) 推导补全。$A=T\otimes_k T$、$X=s\otimes s$，$\dim A=400$（第 5 节的 20 张 20），对称形式取两个 $\lambda$ 的张量积。取 $s$ 的两个投射 $T$-消解做张量：逐总度直和有限（每度两复形的分量对有限），得 $X$ 的有限投射 $A$-模消解；Hom 复形是两 Hom 复形的总张量积；逐项把复形拆成 $k$-向量空间的直和（正合列
+
+### \stHom   count=1   class=JUDGMENT
+    判据: 稳定 Hom 算子，需 \operatorname{stHom} 登记
+    - D45:422
+      行: (d) [推测] 失败路线。其一：$A$ 不对称而用一般自内射。失败机制：$DG\simeq G$ 的双模同构是对称的定义，投射-内射的 $Q_i$ 对偶 $\simeq\operatorname{Hom}(N,Q_i)$ 需要 $Q_i\simeq DQ_i$ 作为双模，自内射非对称时只有 Nakayama 扭曲 $\nu$ 版对偶，$DH^a\simeq H^{-a-1}$ 右端会多套一层 $
+
+### \wide   count=1   class=JUDGMENT
+    判据: \hat E / \widehat{} 缺帽子结构，目标未定
+    - D457:58
+      行: 残余注入 (`covers.tex:290-303`)：乘 $\Omega$ 后拉回给出导出范畴里的分裂单射 $\mathcal O_E\to\mathbf R(q_R)_*\omega_R(D_h)$，于是对每个 $i\ge0$ 有单射 $R^ig_*\mathcal O_E\hookrightarrow R^ih_*\omega_R(D_h)$，并把拉回权抬高 $a$。证明分三步。第一步特征标
+
+### \Zd   count=1   class=JUDGMENT
+    判据: 记号未定
+    - D484:262
+      行: 我原本以为推论一节会是全文最吃力的地方，因为它要接住 $\Zd$ 的公开问题地位；实际它是最省的一笔。这个反差让我记住一件事：一篇证明的体积分布与它的重要性分布无关，重心落在 §15-§17 那种"所有前面章节同时兑付"的地方。
+
+### \textrewol   count=1   class=JUDGMENT
+    判据: \text{lower} 反写残片，意图须作者核
+    - D492:133  [in-flight, coordinate unverified]
+        (期望 token 不在该行, 可能已被并发改写)
+      行: 先记录一个我踩到的顺序错误：`reduction.tex:372--375` 明说这节只解决零边界、终端奇点那一格，完整的卡拉比-丘对要等 `completion.tex` 那一次边界扰动。我一开始想在归约阶段就把边界放进喷流论证，结果在 §11 的有界度障碍那里丢了 $A_0=K_Y+D_0+L_0$ 的大性；边界项在喷流一侧带来的收益要在 §12 的多剖线情形才显现，早放只会把归纳假设 $\e
+
+### \ar   count=1   class=JUDGMENT
+    判据: 记号未定
+    - D520:510
+      行: | $\ar^2/d(a)^2\le1/a$ | 末项估计 | 05-wall.tex:75 | 下行比较的符号 | 尾段排除失效 |
+
+### \cr   count=1   class=JUDGMENT
+    判据: 记号未定
+    - D523:142
+      行: $\bar\eta$ 为 $Z$ 几何一般点，且很一般的 $q$-纤维上同样为大。截面对比引理 `06-canonical.tex:452--532` 的证法我照抄进笔记：$K_{\widetilde X}+R^-\sim g^*D+R^+$、$K_{\widetilde X}=\mu^*K_X+E_\mu$，正规与投象给 $H^0(\widetilde X,m(K_{\widetilde X}+
+
+### \alphah   count=1   class=ORDER
+    判据: \alpha 吞 h（D560:149 已核）；替换 \alphah -> \alpha h
+    精确替换: \alphah  ->  \alpha h
+    - D560:149
+      行: 刘维尔引理（groups.tex:70 到 138）：连通正则覆叠 $a:W\to Z$、底紧连通凯勒、覆叠群虚交换，则 $W$ 上每个有界全纯函数常数。证明走正调和函数锥：取指标有限的交换子群 $A$，$Z_A=W/A$ 紧凯勒，拉回落普拉斯 $\Delta=\operatorname{div}\nabla$ 得完备度量；锥 $\mathcal{H}=\{h>0:\Delta h=0,\ h(o
+
+### \setu   count=1   class=JUDGMENT
+    判据: 融合 \setminus/裸 u 未定
+    - D57:169
+      行: 第一条不等式：对所有 $t\notin\{i,j\}$ 抽"一次幂"（$\partial_{u_t}$ 后 $\setu_t=0$），残留二次型在 $u_i,u_j$ 上的展开是 $2c^\sigma_{ji}u_i+2c^\sigma_{ij}u_j$ 的系数……准确说，二次部分为 $z_\sigma u_iu_j$ 加上 $c^\sigma_{ji}u_i^2$（$i$ 单占、$j$ 双占对应
+
+### \+   count=1   class=JUDGMENT
+    判据: \lambda_+ 下标，须补空格 \lambda_+ +
+    - D62:306
+      行: (c) 为什么 $m^2\ge4yz$：$m=x+y+z\ge y+z\ge2\sqrt{yz}$。$\lambda_\pm\ge0$ 由 $\sqrt{m^2-4yz}\le m$（`block:164-165` 声明）给出，而后者要 $yz\ge0$。$F$ 在闭八分体连续靠 $t\ln t\to0$。$F(x,y,z)=H(x,y,z)-g(yz)$ 在单形上的等式我逐项核过：单形上 $\l
+
+### \Zmod   count=1   class=JUDGMENT
+    判据: \Z/m 算子，目标未定
+    - D63:6
+      行: 记号约定跟论文一致。$p$ 恒指那个大素数，$N=p^2$，$\Sigma=\mathbb F_p^\times$，$\Zmod m=\Z/m\Z$。引文行号形如 `02:53` 表示 `02-word-rule.tex` 第 53 行；`paper.tex:79` 指主文件。
+
+### \g   count=1   class=JUDGMENT
+    判据: 度量下标 \lvert v\rvert_g，多余反斜杠
+    - D630:88
+      行: （`03-graph-calculus.tex:61--70`）。我核对它的办法是把 $T^2-\lvert\pi\rvert^2$ 与主导能量条件比对：在极大情形 $\operatorname{tr}_gK=0$ 时 $\pi$ 的迹被 $\mathcal K$ 抽走以后，剩下的组合恰好是 $R_g+\kappa^2-\lvert\mathcal K\rvert^2-2(\div_g\mathc
+
+### \joinrel   count=1   class=JUDGMENT
+    判据: \lhook\joinrel\to 记法，目标未定
+    - D77:496
+      行: 长度侧的分次母函数带 $v$: $L(u,v)=\sum_{k\ge1}\frac{\mu(k)}{k}\log\frac{1}{1-vV(u^k)}$, 系数 $\sum_rd_{n,r}u^nv^r$ 里 $v$ 就是生成元枚数即 $B$-count。上界一侧的等号在 cor:dimension-bound (05-image.tex:386) 是逐 $r$ 注入 $\operatorname
+
+### \eqno   count=1   class=JUDGMENT
+    判据: \eqno 非 KaTeX，需 \tag 或删
+    - D85:662
+      行: 同时选择与去重（`02_weights.tex:176-183`）。占用 bin 有限（基集有限，$r$ 从 1 到 $N$、$h$ 从 $64r$ 到 $\lceil-\log_2w_{\min}\rceil$），故可逐个 bin 用一次 `lem:covering` 并同时选取覆盖结果；并集的代价用次可加性 $\eqno{c_\rho(\bigcup)\le\sum c_\rho}$ 控制，去
+
+========================================================================
+PART B — 其它 KaTeX 拒渲类 (per-class)
+========================================================================
+
+### [KaTeX parse error: Can't use function '$' in math mode ]  count=101  classes=WAIVER:101
+    - [WAIVER] D100:498
+      body: =3-\frac{8x}9+... $ 注意 $(1-x)+(2-\frac{8x}9)=3-\frac{17x}9=D_x
+    - [WAIVER] D104:553
+      body: "）加收尾 "Impose $v=h_R
+    - [WAIVER] D106:1177
+      body: X_{rr}=X_{mm}m_m^2+X_mn... $ 只有 $m_m^3
+    - [WAIVER] D113:843
+      body: (-\partial_1h_1-\partial_3h_3)-(-\partial_1h_2) $…… 原文说改变量为 $-\operatorname{div} h=-q
+    - [WAIVER] D115:24
+      body: \lfloor m/2\rfloor\lfloor(m-1)/2\rfloor\lfloor n/2\rfloor\lfloor(n-1)/2\rfloor 这四个取整看，想知道它们到底是被谁逼出来的。论文没有把这段心理写出来，只给了一个恒等式，                        （即           
+    - [WAIVER] D115:404
+      body: \Phi                                                                     conclusion.tex:48-52     Lemma~\ref{lem:additive} and the annihilation property of $\Ph
+    - [WAIVER] D117:42
+      body: "，左侧三线性形式对 $(A_0,A_1,A_2)\mapsto(tA_0,tA_1,tA_2)
+    - [WAIVER] D123:179
+      body: \left.\mathcal F(A)\right|_{\operatorname{ker} A}\n =-\frac{k}{n(n+k)}I_{\operatorname{ker} A}.`\n\n(b) 补齐。连续性来自                        ，分母 $\mathbb E_{\sigma} g_A
+    - [WAIVER] D124:480
+      body: 样本是否落在 $B
+    - [WAIVER] D134:349
+      body: "；初值由 $W_N(T_0(z))=1
+    - [WAIVER] D134:412
+      body: "，理由 "since $\sigma'>\alpha,\sigma
+    - [WAIVER] D134:462
+      body: "，而                               是关键一句："Each $B_j
+    - [WAIVER] D134:595
+      body: ，递推得 $g_i=g-3i\eta
+    - [WAIVER] D134:604
+      body: " 再取 $J\le K
+    - [WAIVER] D140:215
+      body: "\n\n这里最后一条我按原样记录：表格第 45 行的正文是                                      。\n跨代数的关键等式：\n\n>                         "The last two identities are not $I
+    - [WAIVER] D145:115
+      body: "，若真那样计费则 $\log R_N
+    - [WAIVER] D148:402
+      body: 130         行引用了                          （$1456
+    - [WAIVER] D155:533
+      body: \mathbb E|Z-1|=\int_0^1(1-z)e^{-z}dz+\int_1^\infty(z-1)e^{-z}dz=(2-2/e)+(1/e)= $... 用正文给的对称式更快，$2/e\approx0.736
+    - [WAIVER] D163:189
+      body: -power-free 的定义包含负整数而排除零（01-introduction.tex:4-6），这条约定在 $f
+    - [WAIVER] D18:990
+      body: E$
+    - [WAIVER] D18:990
+      body: -投射消解长度不超过 $8
+    - [WAIVER] D211:227
+      body: \mu(U)=1         build/sections/proof.tex:44-45                                                                                                                 
+    - [WAIVER] D218:705
+      body: "，定界符左右不配对，正确写法应是 $\mathbb E_{\mathbf Q_N}\lvert E\rvert
+    - [WAIVER] D219:49
+      body: )。第二处卡点更本质:有限化之后,残余候选里 $k=p
+    - [WAIVER] D219:182
+      body: 3p^2? $ 不对,重算: $N_0p=p^3-2p^2+p
+    - [WAIVER] D249:44
+      body: e^{-gt}`(第 243 到 245 行)只用到全局隙。但那里的对象是算子期望的范数,配合 Poisson 时钟做空间截断(第 51 到 69 行),全程避开 Schmidt 秩语言。投影子的梦碎与收缩积的重生,是这整条链上我最想记下的转折。\n\n路线二:相关衰减直通熵。指数聚类定理把谱隙与分隔可观测量的连通相关衰减
+    - [WAIVER] D253:56
+      body: \Delta-挠子                             build/paper.tex:757-770                                                                build/paper.tex:772-781            
+    - [WAIVER] D26:769
+      body: 与目标和弦数、失真无关"，外加 $K_B
+    - [WAIVER] D261:143
+      body: (P+B)S^{O(1/a)+o_a(1)} 的总时间、在每条路径上、对固定充分大参数的所有充分大尺寸做到；实现要么返回精确的交换流改动以及必要时完整残量可达集 $R_0
+    - [WAIVER] D275:301
+      body: \le3m_i\sum_{j>k}... $ 作者给出的上界是 $3E_i
+    - [WAIVER] D29:521
+      body: a-h=s-(N_k-N_{k-1})+... $ 即 $k-s=a-h
+    - [WAIVER] D317:125
+      body: ):因为右正则 $\rho
+    - [WAIVER] D339:296
+      body: \lvert \nabla^a \eta_l(v)\rvert $ | $\le C_a (1+\mathrm{dist}(v,0))^{-1-a}
+    - [WAIVER] D339:404
+      body: m(J) = $ const、
+    - [WAIVER] D342:360
+      body: 同一指数"才是归纳能跑起来的原因。第二，左端是后测度 $\mu_{h_s}
+    - [WAIVER] D343:176
+      body: （第 82 到 86 行）加混合特殊化附近唯一性与有理延拓。Glue 配对内部转置劈分把 $m
+    - [WAIVER] D35:899
+      body: B_A(s;N_T) = $ 被阻塞出现数 $\le N_T(s)
+    - [WAIVER] D375:390
+      body: \lVert \partial_b^rK_s\rVert $ | $\le C_{R_0,r}s^{2r}
+    - [WAIVER] D376:173
+      body: \lvert B\rvert $ | 分量在 $D
+    - [WAIVER] D376:197
+      body: p\mid\lvert B\cap P\rvert $ | 经 $A\to R
+    - [WAIVER] D376:207
+      body: \lvert B\rvert $ 公式 | 无 $\Omega
+    - [WAIVER] D38:946
+      body: ；合计仍是 2.52，但落成的第一个结论是                                 （367 行）$11/75 < I
+    - [WAIVER] D38:999
+      body: A> $ 所有 $\log B
+    - [WAIVER] D390:17
+      body: \left\lVert \cdot\right\rVert $、
+    - [WAIVER] D390:17
+      body: ；环境按 common.tex:18--25 编号并共享节内计数器。\n\n取证调用共 15 次：1 次目录结构与字节清点；9 次 Read 全文（main、common、introduction、reduction、blocks、operators、walks、tests、references，build 下无 sour
+    - [WAIVER] D396:37
+      body: 2\dim P< $ 某个 $2q
+    - [WAIVER] D436:268
+      body: \mathbb{CP}^1                                           ,Morse 计数从常数级跳到 $4\lambda(C)
+    - [WAIVER] D450:38
+      body: \int_V\lvert w\rvert^2\le 2\int_V\lvert w-g\rvert^2+2\lvert V\rvert\,\lVert g\rVert_\infty^2            reductions.tex:333-343`)。这笔账放在 §5 细说。\n\n死胡同 (二), 指望单调性公式直
+    - [WAIVER] D47:191
+      body: B_1,B_2"这句要紧:周期在 $\delta
+    - [WAIVER] D47:318
+      body: \dot x^{\mathsf T}Q''\dot x=p^{\mathsf T}P(2QP'QP'Q-QP''Q)Pp=2p^{\mathsf T}P'... $ 逐项合并后恰是完备平方展开:
+    - [WAIVER] D47:593
+      body: P\in[1/9,18]Q? $ 即 $\tfrac19\operatorname{Id}\preceq P\preceq18\operatorname{Id}
+    - [WAIVER] D48:391
+      body: ）。在 $\mathcal K'
+    - [WAIVER] D48:407
+      body: 。）再 $\delta\downarrow0
+    - [WAIVER] D505:145
+      body: \S$10 的通道闭合与 $\S$14 的最小支撑博弈都要吃"
+    - [WAIVER] D505:163
+      body: \S$16 里 $Z=\mathsf M_b(Y)
+    - [WAIVER] D506:133
+      body: Z_n'= $ 方差 $\varepsilon^2/128
+    - [WAIVER] D517:232
+      body: P_- $ 为总负自旋 $1
+    - [WAIVER] D52:347
+      body: 2\lVert u\rvert $ | 05:26-34,54-61 | $2^h,4^h
+    - [WAIVER] D52:356
+      body: q=\lVert Q\rvert $ | 06:243, 02:29-37 | $\operatorname{Lip} F\le1+L_K\max\{1,q\}
+    - [WAIVER] D534:109
+      body: 。无穷位上平行输运认全整一次上同调格，交叉配对仍属 $\tfrac14\mathbb{Z}
+    - [WAIVER] D54:727
+      body: \lVert L^n\rvert $ 先验 | $1\le\lVert L^n\rvert \le625\cdot4^n
+    - [WAIVER] D54:742
+      body: y^k/\lVert F-\xi\rvert $，极点 $+\infty
+    - [WAIVER] D54:747
+      body: k(\operatorname{Im}w)^{k-1}\lVert Q_F(w)\rvert $ |              | 分支上无除法的临界值比较 | 用 $V
+    - [WAIVER] D562:76
+      body: a/a^{3} $ 的平方根结构，即 $\sqrt a
+    - [WAIVER] D58:457
+      body: \lvert \lambda_{a_i}\rvert $，$2\sum w_i<1
+    - [WAIVER] D585:77
+      body: 0<\lvert t\rvert <\lvert a_1\rvert $） | 04-deformations.tex:612 | 非零性检验 | 若 $a_1=0
+    - [WAIVER] D59:200
+      body: =2(0+1+\dots+(m-1))+... $ 让我直接算：窗 $\{-m,\dots,m-1\}
+    - [WAIVER] D59:299
+      body: \lVert S\rvert $ | introduction.tex:46; GlobalOperators.lean:140 | 范数、非零、
+    - [WAIVER] D59:305
+      body: \lVert V_x\rvert $ 无界，
+    - [WAIVER] D60:1154
+      body: \lvert 1-cd\rvert $ 界 | $H_0=0
+    - [WAIVER] D601:212
+      body: \mathcal F=\{每个 $j
+    - [WAIVER] D65:227
+      body: g(0)=N(z)\ge 1- $…注意这里中心 $z
+    - [WAIVER] D65:326
+      body: = $ 父边长度 $=2\ell
+    - [WAIVER] D65:388
+      body: +$1,取 $\sigma_{v_1}=-1
+    - [WAIVER] D65:718
+      body: \S$2.IV],tex 实际是 general-forests.tex:37 的                            。我大概在复述"沿 Ghoussoub--Maurey--Schachermayer 那条线"时把罗马数字记串了。 勘误第七条,
+    - [WAIVER] D72:761
+      body: \lVert y-C(y)\rvert =1-\lVert C(y)\rvert $；moduli:35 的 $2\vert x\vert/t
+    - [WAIVER] D72:787
+      body: 2=\lVert g\rvert +\lVert g^{(k)}\rvert $ | construction:224,230 | construction:185 与 (kw:coefficient-bound) | 球半径若 $>1
+    - [WAIVER] D75:96
+      body: -2\times10^{-5}k\log k+\frac{k^{0.9}\log k}{ } $... 精确地说              给出系数 $2c-\gamma/80=1/50000-1/8000=-21/200000<0
+    - [WAIVER] D75:353
+      body: 1/8-1/32-1/250=(125-25-4)/1000\cdot... $，精确地 $=0.125-0.03125-0.004=0.08975
+    - [WAIVER] D75:443
+      body: |av_i|\le\frac{4MH}{h}\cdot\frac{a h}{k}\cdot\frac{k}{h}... $，论文给 $|av_i|\le4MH/h
+    - [WAIVER] D75:730
+      body: F=\lvert U\rvert +\lvert V\rvert $ | $\log F
+    - [WAIVER] D75:876
+      body: k\ge k_* $ 有 $k^{1/5}+2k^{1/10}+1<2k^{1/2}<k
+    - [WAIVER] D750:533
+      body: ，再逐阶估计。这在物理上就是玻色和的微扰读法。它在我的纸面上死于两条：一是 $n
+    - [WAIVER] D758:261
+      body: = $"，并非"
+    - [WAIVER] D79:56
+      body: x_g = $ 某个 g 的轨道平均, 断言 $x_{hg} = f(x_g)
+    - [WAIVER] D80:2021
+      body: 2^J   04:26                   07:231` 的多项式 $P(L)
+    - [WAIVER] D80:2023
+      body: c>0` 无法保证，witness $u
+    - [WAIVER] D85:658
+      body: 2^{-h}>... $ 严格地：
+    - [WAIVER] D85:684
+      body: \log T+D\cdot... $，实测 $D=1
+    - [WAIVER] D86:47
+      body: \S$2.4)。它们共同把可行空间挤到唯一一条路上: 一切信息都得在分圆整环的局部化里用赋值和残迹来表达, 且符号数组 (
+    - [WAIVER] D92:230
+      body: )。(paper.tex:572-588)。裁剪:"For $T>1
+    - [WAIVER] D92:234
+      body: (\log n)^{1-p}\cdot O((\log n)^{2-p})… $ 即 $(\log n)^{-\,(p-1)}
+    - [WAIVER] D92:284
+      body: J<\sup\lvert Z_e\rvert $ 时 $\cosh s-1\le C_0s^2
+    - [WAIVER] D93:130
+      body: p_hc_2/B   02-geometry.tex:208-210                       :297`)。取 $B
+    - [WAIVER] D93:636
+      body: c                                                                 07-stages.tex                           [断言点]   :88-149                          eq:24   eq:13
+    - [WAIVER] D93:886
+      body: \mathbb E L=\infty   eq:1   02-geometry.tex:116`)的空间半径一阶矩断,§03 的 $\bar L
+    - [WAIVER] D95:754
+      body: \lceil\log b_w\rceil   $b_w\ge e^{q-1}$
+    - [WAIVER] D95:1617
+      body: T+1     07:147                                                 07:157` 的 $T>d/4
+    - [WAIVER] D95:1670
+      body: \epsilon\le1/10   07:130     00:107                         07b:30                              07:152                                               07a:81` 的 $
+    - [WAIVER] D95:1675
+      body: p\ge3/5   07:149                                                                                                                                    07a:12   07b
+    - [WAIVER] D96:585
+      body: \S$20 的态最大给出 $\mathbb E_N\max_{v'}F_{v'}(N)\le w^{1/m}2^{3d}U_0
+
+### [KaTeX parse error: Unexpected end of input in a macro argu]  count=97  classes=ORDER:77, JUDGMENT:13, WAIVER:7
+    - [WAIVER] D139:352
+      body: 4^D\cdot(\text{
+    - [JUDGMENT] D157:826
+      body: \mathbb N\to\Set
+    - [ORDER] D160:223
+      body: A:[0,1]\times\overline\mathbb D\to\Omega
+      精确替换: A:[0,1]\times\overline{\mathbb D}\to\Omega
+    - [ORDER] D160:227
+      body: A_t(\overline\mathbb D)\subset U
+      精确替换: A_t(\overline{\mathbb D})\subset U
+    - [ORDER] D160:229
+      body: T=\{t:A_t(\overline\mathbb D)\subset U\}
+      精确替换: T=\{t:A_t(\overline{\mathbb D})\subset U\}
+    - [ORDER] D160:233
+      body: [0,1]\times\overline\mathbb D
+      精确替换: [0,1]\times\overline{\mathbb D}
+    - [WAIVER] D163:189
+      body: S_{f,k}(X)=\#\{1\le n\le X:f(n)\text{ 是 $k
+    - [ORDER] D163:234
+      body: \overline\mathbb Q
+      精确替换: \overline{\mathbb Q}
+    - [ORDER] D165:677
+      body: \widehat{\operatorname{err}}_Z(h)\le\frac12\widehat\mathbb E_Z\lvert Y-P(X)\rvert
+      精确替换: \widehat{\operatorname{err}}_Z(h)\le\frac12\widehat{\mathbb E}_Z\lvert Y-P(X)\rvert
+    - [ORDER] D165:678
+      body: \frac12\widehat\mathbb E_Z\lvert Y-q(X)\rvert
+      精确替换: \frac12\widehat{\mathbb E}_Z\lvert Y-q(X)\rvert
+    - [ORDER] D171:205
+      body: \overline\mathbb D
+      精确替换: \overline{\mathbb D}
+    - [ORDER] D171:225
+      body: \overline\mathbb D
+      精确替换: \overline{\mathbb D}
+    - [ORDER] D171:243
+      body: \overline\mathbb D
+      精确替换: \overline{\mathbb D}
+    - [ORDER] D196:83
+      body: \widehat\mathbb C\setminus K_i
+      精确替换: \widehat{\mathbb C}\setminus K_i
+    - [ORDER] D228:149
+      body: \partial_\lambda\theta=-\lvert\chi\rvert^2-\overline\operatorname{Ric}(\ell,\ell)
+      精确替换: \partial_\lambda\theta=-\lvert\chi\rvert^2-\overline{\operatorname{Ric}}(\ell,\ell)
+    - [ORDER] D25:381
+      body: \overline\mathbb D\to\overline U
+      精确替换: \overline{\mathbb D}\to\overline U
+    - [ORDER] D25:388
+      body: \overline\mathbb D
+      精确替换: \overline{\mathbb D}
+    - [ORDER] D25:405
+      body: \overline\mathbb D
+      精确替换: \overline{\mathbb D}
+    - [ORDER] D25:405
+      body: \overline\mathbb D
+      精确替换: \overline{\mathbb D}
+    - [ORDER] D25:432
+      body: \overline\mathbb D\to\overline U
+      精确替换: \overline{\mathbb D}\to\overline U
+    - [ORDER] D25:1884
+      body: W(A)\subseteq\overline\mathbb D
+      精确替换: W(A)\subseteq\overline{\mathbb D}
+    - [ORDER] D25:1885
+      body: W(A)\subseteq\overline\mathbb D
+      精确替换: W(A)\subseteq\overline{\mathbb D}
+    - [ORDER] D25:2128
+      body: W(\text{sharpnessMatrix})\subseteq\overline\mathbb D
+      精确替换: W(\text{sharpnessMatrix})\subseteq\overline{\mathbb D}
+    - [ORDER] D25:2760
+      body: \overline\mathbb D
+      精确替换: \overline{\mathbb D}
+    - [ORDER] D25:2760
+      body: N_k=\{w:\operatorname{dist}(w,\overline\mathbb D)<1/k\}
+      精确替换: N_k=\{w:\operatorname{dist}(w,\overline{\mathbb D})<1/k\}
+    - [ORDER] D25:2761
+      body: \operatorname{dist}(w_{k_j},\overline\mathbb D)<1/{k_j}\to0
+      精确替换: \operatorname{dist}(w_{k_j},\overline{\mathbb D})<1/{k_j}\to0
+    - [ORDER] D25:2761
+      body: \overline\mathbb D
+      精确替换: \overline{\mathbb D}
+    - [ORDER] D25:2761
+      body: p\in\overline\mathbb D
+      精确替换: p\in\overline{\mathbb D}
+    - [ORDER] D25:2761
+      body: q\in\overline\mathbb D
+      精确替换: q\in\overline{\mathbb D}
+    - [ORDER] D25:2762
+      body: \tilde g|_{\overline\mathbb D}=g
+      精确替换: \tilde g|_{\overline{\mathbb D}}=g
+    - [ORDER] D25:2765
+      body: \overline\mathbb D
+      精确替换: \overline{\mathbb D}
+    - [ORDER] D25:2765
+      body: \{w:\operatorname{dist}(w,\overline\mathbb D)<\varepsilon\}\subset N_{k_*}
+      精确替换: \{w:\operatorname{dist}(w,\overline{\mathbb D})<\varepsilon\}\subset N_{k_*}
+    - [ORDER] D25:2765
+      body: \overline\mathbb D
+      精确替换: \overline{\mathbb D}
+    - [ORDER] D25:2765
+      body: \overline\mathbb D\subset N_{k_*}
+      精确替换: \overline{\mathbb D}\subset N_{k_*}
+    - [ORDER] D25:2765
+      body: \operatorname{dist}(w,\overline\mathbb D)=\max(0,|w|-1)
+      精确替换: \operatorname{dist}(w,\overline{\mathbb D})=\max(0,|w|-1)
+    - [ORDER] D264:376
+      body: \widehat\mathcal T_{s}
+      精确替换: \widehat{\mathcal T}_{s}
+    - [ORDER] D264:467
+      body: \widehat\mathcal T_{0}
+      精确替换: \widehat{\mathcal T}_{0}
+    - [ORDER] D264:644
+      body: \widehat\mathcal D
+      精确替换: \widehat{\mathcal D}
+    - [ORDER] D264:645
+      body: \Sigma_{i}\subset\widehat\mathcal D
+      精确替换: \Sigma_{i}\subset\widehat{\mathcal D}
+    - [ORDER] D264:650
+      body: I_{i}=(\Gamma_{i}\setminus\text{领圈})\cap\widehat\mathcal D
+      精确替换: I_{i}=(\Gamma_{i}\setminus\text{领圈})\cap\widehat{\mathcal D}
+    - [WAIVER] D30:93
+      body: \neg\exists F\,(\text{
+    - [ORDER] D312:43
+      body: \overline\mathbb D
+      精确替换: \overline{\mathbb D}
+    - [ORDER] D312:67
+      body: \overline\mathbb D
+      精确替换: \overline{\mathbb D}
+    - [ORDER] D312:67
+      body: W^{1,p}\hookrightarrow C^0(\overline\mathbb D)
+      精确替换: W^{1,p}\hookrightarrow C^0(\overline{\mathbb D})
+    - [ORDER] D312:75
+      body: \overline\mathbb D
+      精确替换: \overline{\mathbb D}
+    - [ORDER] D312:75
+      body: \overline\mathbb D
+      精确替换: \overline{\mathbb D}
+    - [ORDER] D312:85
+      body: \overline\mathbb D
+      精确替换: \overline{\mathbb D}
+    - [JUDGMENT] D326:40
+      body: p_q=\frac{\sqrt q}{1+\sqrt q},\qquad \kappa(q)=\frac{4\pi}{\arccos(-\sqrt q/2),
+    - [ORDER] D333:83
+      body: \widehat\mathcal O_{C,o}\simeq Q=R[[u,v]]/(uv-\tau^r)
+      精确替换: \widehat{\mathcal O}_{C,o}\simeq Q=R[[u,v]]/(uv-\tau^r)
+    - [JUDGMENT] D351:78
+      body: RD=\mathrm\operatorname{Id}
+    - [JUDGMENT] D351:78
+      body: B_0P=\mathrm\operatorname{Id}+K
+    - [JUDGMENT] D351:78
+      body: B_0(\mathrm\operatorname{Id}-H_0)=L+KL
+    - [JUDGMENT] D351:78
+      body: RD=PL+H_0=\mathrm\operatorname{Id}
+    - [JUDGMENT] D351:78
+      body: L=(P+H_0)^{-1}(\mathrm\operatorname{Id}-H_0)
+    - [ORDER] D353:45
+      body: \overline\mathbf F_p^{\,q}
+      精确替换: \overline{\mathbf F}_p^{\,q}
+    - [ORDER] D362:143
+      body: \operatorname{End}_{\overline\mathbb Q}(\mathscr A_t)\otimes\mathbb Q\simeq\operatorname{Mat}_2(\mathbb Q)
+      精确替换: \operatorname{End}_{\overline{\mathbb Q}}(\mathscr A_t)\otimes\mathbb Q\simeq\operatorname{Mat}_2(\mathbb Q)
+    - [ORDER] D362:143
+      body: \mathcal O_t=\operatorname{End}_{\overline\mathbb Q}(\mathscr A_t)
+      精确替换: \mathcal O_t=\operatorname{End}_{\overline{\mathbb Q}}(\mathscr A_t)
+    - [ORDER] D362:277
+      body: z=(a,U)\in\mathbb A^N(\overline\mathbb Q)
+      精确替换: z=(a,U)\in\mathbb A^N(\overline{\mathbb Q})
+    - [ORDER] D362:285
+      body: W\subseteq\mathbb A^N_{\overline\mathbb Q}
+      精确替换: W\subseteq\mathbb A^N_{\overline{\mathbb Q}}
+    - [ORDER] D362:379
+      body: \operatorname{End}_{\overline\mathbb Q}(A_s)\otimes\mathbb Q\simeq\operatorname{Mat}_2(\mathbb Q)
+      精确替换: \operatorname{End}_{\overline{\mathbb Q}}(A_s)\otimes\mathbb Q\simeq\operatorname{Mat}_2(\mathbb Q)
+    - [ORDER] D362:379
+      body: \mathcal O_s=\operatorname{End}_{\overline\mathbb Q}(A_s)
+      精确替换: \mathcal O_s=\operatorname{End}_{\overline{\mathbb Q}}(A_s)
+    - [ORDER] D362:395
+      body: \overline\mathbb Q
+      精确替换: \overline{\mathbb Q}
+    - [ORDER] D362:399
+      body: \overline\mathbb Q
+      精确替换: \overline{\mathbb Q}
+    - [ORDER] D362:399
+      body: \overline\mathbb Q
+      精确替换: \overline{\mathbb Q}
+    - [ORDER] D362:405
+      body: \overline\mathbb Q
+      精确替换: \overline{\mathbb Q}
+    - [ORDER] D362:405
+      body: \overline\mathbb Q
+      精确替换: \overline{\mathbb Q}
+    - [ORDER] D362:411
+      body: \Sigma(C)=C(\overline\mathbb Q)\cap\bigcup_{\substack{Z\subset\mathcal A_2\ \text{special}\\ \dim Z\le1}}Z(\overline\mathbb Q)
+      精确替换: \Sigma(C)=C(\overline{\mathbb Q})\cap\bigcup_{\substack{Z\subset\mathcal A_2\ \text{special}\\ \dim Z\le1}}Z(\overline{\mathbb Q})
+    - [ORDER] D362:415
+      body: \overline\mathbb Q
+      精确替换: \overline{\mathbb Q}
+    - [ORDER] D362:415
+      body: \operatorname{End}_{\overline\mathbb Q}(A_s)\otimes\mathbb Q
+      精确替换: \operatorname{End}_{\overline{\mathbb Q}}(A_s)\otimes\mathbb Q
+    - [ORDER] D362:471
+      body: \{s\in C(\overline\mathbb Q):A_s\sim E^2,\ E\ \text{无 CM}\}
+      精确替换: \{s\in C(\overline{\mathbb Q}):A_s\sim E^2,\ E\ \text{无 CM}\}
+    - [ORDER] D362:472
+      body: \operatorname{End}_{\overline\mathbb Q}(A_s)\otimes\mathbb Q
+      精确替换: \operatorname{End}_{\overline{\mathbb Q}}(A_s)\otimes\mathbb Q
+    - [ORDER] D375:139
+      body: \widehat\operatorname{Var}_bX_{n_j,s}
+      精确替换: \widehat{\operatorname{Var}}_bX_{n_j,s}
+    - [WAIVER] D396:115
+      body: Q_s(t,N)=\{y\in C(t,N):\text{至少 $s
+    - [ORDER] D429:17
+      body: j(\overline\mathbb Q)
+      精确替换: j(\overline{\mathbb Q})
+    - [ORDER] D429:69
+      body: j(\overline\mathbb Q)
+      精确替换: j(\overline{\mathbb Q})
+    - [ORDER] D429:103
+      body: \underline\operatorname{RHom}_{R_-}(C_x,D_M)=0
+      精确替换: \underline{\operatorname{RHom}}_{R_-}(C_x,D_M)=0
+    - [ORDER] D429:105
+      body: \underline\operatorname{RHom}_S(R_{-,B},S)\simeq R_{-,B}\otimes_C\det(F)[-n]
+      精确替换: \underline{\operatorname{RHom}}_S(R_{-,B},S)\simeq R_{-,B}\otimes_C\det(F)[-n]
+    - [ORDER] D429:105
+      body: \underline\operatorname{RHom}_S(C,S)\simeq C\otimes\det(F)[-n]
+      精确替换: \underline{\operatorname{RHom}}_S(C,S)\simeq C\otimes\det(F)[-n]
+    - [ORDER] D429:105
+      body: \underline\operatorname{RHom}_{R_{-,B}}(C,R_{-,B})\simeq C
+      精确替换: \underline{\operatorname{RHom}}_{R_{-,B}}(C,R_{-,B})\simeq C
+    - [ORDER] D429:107
+      body: \operatorname{sh}H^\bullet(B^0_{\mathrm{sph}})\xrightarrow\sim\underline\operatorname{End}_Y^\bullet(L_S)=\mathcal O(Y)
+      精确替换: \operatorname{sh}H^\bullet(B^0_{\mathrm{sph}})\xrightarrow\sim\underline{\operatorname{End}}_Y^\bullet(L_S)=\mathcal O(Y)
+    - [JUDGMENT] D446:107
+      body: \eqref
+    - [JUDGMENT] D463:19
+      body: \red
+    - [JUDGMENT] D480:210
+      body: \eqref
+    - [JUDGMENT] D521:176
+      body: \sum_{N_u\text{ prime}}a_x(u)\ge(\frac{\mathfrak}2-C_{\rm bal}\kappa-o(1))\frac{X_A}L\gg\frac{X_A}L
+    - [WAIVER] D57:74
+      body: \sum_{S} f_q(S)\cdot \mathbf 1[\text{
+    - [JUDGMENT] D575:100
+      body: \eqref
+    - [JUDGMENT] D576:175
+      body: k+8(k+1)-\frac{12}{5}(k+1)=\frac{33k+28)/5}
+    - [WAIVER] D582:102
+      body: \mathbb P_P(\text{
+    - [ORDER] D616:87
+      body:  \mathbb E\Bigl(\sum_u a_uH(u)\Bigr)^2=\int_{\widehat\mathbb T\setminus\{0\}}\Bigl|\sum_u a_ue^{ip\cdot u}\Bigr|^2 C(dp), 
+      精确替换:  \mathbb E\Bigl(\sum_u a_uH(u)\Bigr)^2=\int_{\widehat{\mathbb T}\setminus\{0\}}\Bigl|\sum_u a_ue^{ip\cdot u}\Bigr|^2 C(dp), 
+    - [ORDER] D694:97
+      body: \overline\mathbb D
+      精确替换: \overline{\mathbb D}
+    - [ORDER] D706:400
+      body: \widehat\operatorname{vol}_{S,\Delta}(v)=A^n\operatorname{vol}(v)
+      精确替换: \widehat{\operatorname{vol}}_{S,\Delta}(v)=A^n\operatorname{vol}(v)
+    - [ORDER] D750:453
+      body: \widehat\mathbb P_{N,t}(d\omega,d\sigma,A)\propto\mathbb P_{\rm b}(d\omega)\nu_b(A)\chi_{D_0\cup A}(\omega,\sigma)
+      精确替换: \widehat{\mathbb P}_{N,t}(d\omega,d\sigma,A)\propto\mathbb P_{\rm b}(d\omega)\nu_b(A)\chi_{D_0\cup A}(\omega,\sigma)
+    - [ORDER] D750:489
+      body: \widehat\mathbb P_{N,t}(j\in A)\le b_\beta(t)
+      精确替换: \widehat{\mathbb P}_{N,t}(j\in A)\le b_\beta(t)
+    - [ORDER] D750:489
+      body: \widehat\mathbb P_{N,t}(\mathcal A_x^c)\le C_{S,\beta}b_\beta(t)
+      精确替换: \widehat{\mathbb P}_{N,t}(\mathcal A_x^c)\le C_{S,\beta}b_\beta(t)
+    - [WAIVER] D750:533
+      body: r=\sum_{n\ge1}(\text{
+    - [ORDER] D750:635
+      body: \widehat\mathbb P_{N,t}(j\in A)\le b_\beta(t)
+      精确替换: \widehat{\mathbb P}_{N,t}(j\in A)\le b_\beta(t)
+    - [ORDER] D750:636
+      body: \frac1{V_N}\sum_j\widehat\mathbb E_{N,t}d_{D_0\cup A}(j)
+      精确替换: \frac1{V_N}\sum_j\widehat{\mathbb E}_{N,t}d_{D_0\cup A}(j)
+
+### [KaTeX parse error: Expected group as argument to '\H' ]  count=30  classes=JUDGMENT:30
+    - [JUDGMENT] D84:193
+      body: \H^n
+    - [JUDGMENT] D84:209
+      body: \H^n\restrict E
+    - [JUDGMENT] D84:209
+      body: \H^n
+    - [JUDGMENT] D84:209
+      body: \H^n
+    - [JUDGMENT] D84:383
+      body: \sigma=\theta\H^n\restrict L
+    - [JUDGMENT] D84:389
+      body: g=d\sigma/d\H^n
+    - [JUDGMENT] D84:389
+      body: \H^n
+    - [JUDGMENT] D84:391
+      body: \H^n
+    - [JUDGMENT] D84:391
+      body: \H^n\restrict E
+    - [JUDGMENT] D84:403
+      body: \sigma=q\H^n\restrict L_\infty
+    - [JUDGMENT] D84:447
+      body: \H^n
+    - [JUDGMENT] D84:467
+      body: \nu=q\H^n|_L
+    - [JUDGMENT] D84:467
+      body: \H^n|_L
+    - [JUDGMENT] D84:545
+      body: \nu=q\H^n\restrict L_\infty
+    - [JUDGMENT] D84:603
+      body: c\H^n\restrict E\le\mu\le C\H^n\restrict E
+    - [JUDGMENT] D84:603
+      body: \H^n_\eta(F)\le C_nC_{\rm AD}\mu(U)
+    - [JUDGMENT] D84:613
+      body: \H^n
+    - [JUDGMENT] D84:617
+      body: (\log8)\H^n(E)
+    - [JUDGMENT] D84:617
+      body: \H^n
+    - [JUDGMENT] D84:619
+      body: \H^n
+    - [JUDGMENT] D84:619
+      body: \H^n\restrict E
+    - [JUDGMENT] D84:619
+      body: \H^n
+    - [JUDGMENT] D84:633
+      body: \sigma=\mu+\H^n\restrict P
+    - [JUDGMENT] D84:705
+      body: c\H^n\restrict E\le\mu\le C\H^n\restrict E
+    - [JUDGMENT] D84:705
+      body: \H^n_\eta(F)\le C_nC_{\rm AD}\mu(U)
+    - [JUDGMENT] D84:939
+      body: \sigma=\mu+\H^n\restrict P
+    - [JUDGMENT] D84:943
+      body: \H^n
+    - [JUDGMENT] D84:1009
+      body: \H^n
+    - [JUDGMENT] D84:1009
+      body: \H^n
+    - [JUDGMENT] D84:1009
+      body: \H^n
+
+### [KaTeX parse error: Expected 'EOF', got '}' ]  count=26  classes=JUDGMENT:26
+    - [JUDGMENT] D07:239
+      body: \mathbb P_{\mathrm P}}
+    - [JUDGMENT] D07:277
+      body: \mathbb P_{\mathrm P}}
+    - [JUDGMENT] D132:174
+      body: \max\{\lvert a\rvert,\lvert b\rvert}=\tfrac12(\lvert a+b\rvert+\lvert a-b\rvert)
+    - [JUDGMENT] D190:398
+      body: \|\operatorname{diam}_{\mathcal T_s}\{w_{i+r}:0\le r\le L}\|_{L^4}\le C\sqrt L
+    - [JUDGMENT] D245:226
+      body: \norm{\mathbb E_{\mu_{h_0}}x-t_*}\le C
+    - [JUDGMENT] D245:226
+      body: \norm{\operatorname{Cov}(G,x)}^2\le n\operatorname{Var}(G)
+    - [JUDGMENT] D245:331
+      body: \norm{\operatorname{diag}\nabla U}_1\le C
+    - [JUDGMENT] D274:47
+      body: \norm{\operatorname{Ric}-3g}_2\to0
+    - [JUDGMENT] D274:207
+      body: \norm{\operatorname{Ric}-3g}_2\to0
+    - [JUDGMENT] D275:301
+      body: \abs{x^*D_{>i}x}\le\norm x^2=\sum_{j>i}m_j^2\abs{D_{ji}}^2=\sum_{j>i}q_j^2\abs{D_{ij}}^2
+    - [JUDGMENT] D275:301
+      body: \le\frac{}{}q_i\sum_{j>i}q_j^2\abs{D_{ij}}^2=E_i
+    - [JUDGMENT] D275:303
+      body: 3m_i^2D_{ii}\sum_{j>i}m_j\abs{D_{ij}}^2
+    - [JUDGMENT] D275:303
+      body: \sum_j\abs{D_{ij}}^2\le1
+    - [JUDGMENT] D291:131
+      body: c_R'=r^{-3/2}}
+    - [JUDGMENT] D303:139
+      body: }\prod_{i\in\mathcal I}P_i
+    - [JUDGMENT] D324:138
+      body: \delta_{e_{h(s)}}}
+    - [JUDGMENT] D341:438
+      body: \norm{g_{j+1}-g_j}_p
+    - [JUDGMENT] D365:47
+      body: s_n=\frac{n}{2(n+1)}}
+    - [JUDGMENT] D41:454
+      body: s(f\circ g,x)=\sum_{i:\,f(y^{\{i\}})\ne f(y)}s(g,x_i}\le s(f,y)s(g)\le s(f)s(g)
+    - [JUDGMENT] D511:97
+      body: \infty}X_{n,m}(a,A';B)=X_{n-1,m}(A';B)
+    - [JUDGMENT] D533:112
+      body: \mathcal H}
+    - [JUDGMENT] D586:139
+      body: \frac ir^2}2Df_N
+    - [JUDGMENT] D66:250
+      body: d_{i+1}^r}
+    - [JUDGMENT] D757:281
+      body: \text{每个 }X\text{ 上的 }\sigma\text{ 与 }Y\text{ 上的 }\tau\text{（}N\max\sigma\le n^{D_0},\ \operatorname{width}(\tau)\le n^{1/4}\text{）都有两色密度 }}>n^{-c},\qquad\qquad
+    - [JUDGMENT] D769:129
+      body: \operatorname{Sym}^bT_{C^\circ}}
+    - [JUDGMENT] D84:193
+      body: \mu\bigl(B(x,r)\cap g(B_\R^n}(0,r))\bigr)
+
+### [KaTeX parse error: No such environment: psmallmatrix ]  count=12  classes=JUDGMENT:12
+    - [JUDGMENT] D214:74
+      body: \begin{psmallmatrix}-1&1\\1&1\end{psmallmatrix}
+    - [JUDGMENT] D214:271
+      body: H=\begin{psmallmatrix}-1&-1&1\\-1&-1&1\\1&1&1\end{psmallmatrix}
+    - [JUDGMENT] D24:80
+      body: e=\begin{psmallmatrix}1&0\\0&0\end{psmallmatrix}
+    - [JUDGMENT] D24:80
+      body: f=\begin{psmallmatrix}0&0\\0&1\end{psmallmatrix}
+    - [JUDGMENT] D24:80
+      body: t=\begin{psmallmatrix}0&1\\0&0\end{psmallmatrix}
+    - [JUDGMENT] D47:254
+      body: \phi=\begin{psmallmatrix}1&1\\1&2\end{psmallmatrix}
+    - [JUDGMENT] D47:254
+      body: \psi=\begin{psmallmatrix}1&-1\\-1&2\end{psmallmatrix}
+    - [JUDGMENT] D47:254
+      body: \begin{psmallmatrix}1&1\\1&2\end{psmallmatrix}
+    - [JUDGMENT] D47:254
+      body: \begin{psmallmatrix}1&6\\0&1\end{psmallmatrix}
+    - [JUDGMENT] D47:575
+      body: \phi=\begin{psmallmatrix}1&1\\1&2\end{psmallmatrix}
+    - [JUDGMENT] D47:575
+      body: \psi=\begin{psmallmatrix}1&-1\\-1&2\end{psmallmatrix}
+    - [JUDGMENT] D49:116
+      body: \begin{psmallmatrix}0&-1\\mathbf 1&0\end{psmallmatrix}
+
+### [KaTeX parse error: Expected '}', got 'EOF' at end of input]  count=10  classes=JUDGMENT:10
+    - [JUDGMENT] D16:303
+      body: \sup_{h\in
+    - [JUDGMENT] D303:139
+      body: \lambda_{\mathcal I}=\frac1{Z_{\mathcal I}}\mathbf 1_{\{\mathcal I
+    - [JUDGMENT] D335:244
+      body: Z_*e^{-1.2D
+    - [JUDGMENT] D335:304
+      body: Z_*e^{-1.2D
+    - [JUDGMENT] D402:169
+      body: Dx_{ij}(y)D^{-1}=x_{ij(byb^{-1})
+    - [JUDGMENT] D490:139
+      body: Z(t)\le Z(r)+\int_r^t(C_2Z(s)/(s+s_N)+C_{A,\delta}s^{A-1))\,\mathrm ds
+    - [JUDGMENT] D500:326
+      body: B^{-1-c_{*}/2)
+    - [JUDGMENT] D511:97
+      body: \lim_{a\to0
+    - [JUDGMENT] D762:493
+      body: n^{-5/6+15m
+    - [JUDGMENT] D765:385
+      body: \|(H_j-(P_j^{\mathrm{eu}})^{-1})\mathcal L_Q(b)\|_2\le\left(\exp\left(C\sum_i2^{-m_{ji}}\right)-1\right)\|(P_j^{\mathrm{eu})^{-1}\mathcal L_Q(b)\|_2,
+
+### [KaTeX parse error: Extra } ]  count=9  classes=JUDGMENT:9
+    - [JUDGMENT] D255:118
+      body: F_{\red}
+    - [JUDGMENT] D255:122
+      body: F_{\red}
+    - [JUDGMENT] D255:244
+      body: p_*\mathcal O_R=\mathcal O_{p(R),\red}
+    - [JUDGMENT] D255:290
+      body: F_{\red}
+    - [JUDGMENT] D255:354
+      body: p_*\mathcal O_R=\mathcal O_{p(R),\red}
+    - [JUDGMENT] D256:48
+      body: |D|_{\red}
+    - [JUDGMENT] D292:92
+      body: (\operatorname{Supp}\Lambda)_{\red}\cdot A^{q-1}\leq n(-K_Q)\cdot A^{q-1}\leq n((q-1)A^q+2)
+    - [JUDGMENT] D292:227
+      body: (\operatorname{Supp}\Lambda)_{\red}\cdot A^{q-1}
+    - [JUDGMENT] D333:99
+      body: (\mathbb P^1\times_ZS)_{\red}
+
+### [KaTeX parse error: Expected group after '_' ]  count=7  classes=JUDGMENT:7
+    - [JUDGMENT] D137:667
+      body: \mu(z)=x(z)\mu(u+\tfrac{r}{x}e_2)\ge x(z)(m_0+\tfrac a_\sigma? )
+    - [JUDGMENT] D204:254
+      body: \kappa_s\bmod\mathfrm_B=\kappa_0
+    - [JUDGMENT] D260:246
+      body: \mu_{\alpha,c}=(x\mapsto cx)_#\mu_\alpha
+    - [JUDGMENT] D307:112
+      body: U,I_0,J,\mathfrm_x
+    - [JUDGMENT] D619:184
+      body: (p_U)__*
+    - [JUDGMENT] D772:322
+      body: U(v)__1\otimes U(v)_c
+    - [JUDGMENT] D772:1050
+      body: U(v)__1
+
+### [KaTeX parse error: Double subscript ]  count=7  classes=JUDGMENT:7
+    - [JUDGMENT] D155:497
+      body: \lVert f\rVert_1_1\le\lVert f\rVert_1_2
+    - [JUDGMENT] D155:501
+      body: \lVert f\rVert_1_1\le\lVert f\rVert_1_2
+    - [JUDGMENT] D274:43
+      body: \norm E_{g_j}_2\to0
+    - [JUDGMENT] D296:111
+      body: \lim_{\beta\downarrow\beta_{\mathrm c}}\frac{\beta_{\mathrm{eff}}-\beta_{\mathrm{eff}}_c}{\beta-\beta_{\mathrm c}}=+\infty
+    - [JUDGMENT] D486:102
+      body: \det B[1..t_a\mid j_1..j_t_a]
+    - [JUDGMENT] D493:278
+      body: \kappa(F,J_F+M_i^*_F)>0
+    - [JUDGMENT] D570:147
+      body: b_v=s_kv_d_1
+
+### [KaTeX parse error: Can't use function '\(' in math mode ]  count=6  classes=WAIVER:6
+    - [WAIVER] D108:104
+      body: : an incoming traversal starts the chord and an outgoing traversal ends it. ... For distinct spokes, the comparison sign in Equation~\eqref{eq:chord} is \(T_w(e
+    - [WAIVER] D108:130
+      body: : both sides have degree at most \(N-1\) and agree at all \(N\) nodes. Comparing coefficients of \(t^{N-1}\) gives the assertion."\n\n我把"比较系数"这一步做实（tex 略）：
+    - [WAIVER] D36:354
+      body: \(Q+[0,w])/(d-1)!
+    - [WAIVER] D420:79
+      body: \((\sum wF)(\sum wG)\le(\sum w)(\sum wFG)\)
+    - [WAIVER] D569:113
+      body: \(\cdot\)_+
+    - [WAIVER] D62:523
+      body: t'=\(1-\gamma)(1-q)+\gamma(1-\nu)=1-t
+
+### [KaTeX parse error: Double superscript ]  count=6  classes=JUDGMENT:6
+    - [JUDGMENT] D36:553
+      body: \lambda\to A^{1/10}^-
+    - [JUDGMENT] D370:39
+      body: (RM')_\ell/M'_\ell'
+    - [JUDGMENT] D489:129
+      body: \mathbf E_p[X_t^D(u)X_t^D(v);C_u^D\ne C_v^D]=\mathbf E_p[X_t^D(u)s_t^{D\setminus A}^D(v)]
+    - [JUDGMENT] D555:306
+      body: \limsup_{s\to\infty}\lVert s^{-7/8}\sum_{J_s}\sigma-s^{-7/8}\sum_{J'_s'}\sigma\rVert_{L^2}\le C_0h^{3/8}
+    - [JUDGMENT] D555:317
+      body: Q_s=s^{-7/4}\sum_x\sigma_x\sigma'_x'
+    - [JUDGMENT] D94:227
+      body: \psi_0=|+\rangle^n|0\rangle^a|0\rangle^n^n
+
+### [KaTeX parse error: Expected 'EOF', got '\right' ]  count=5  classes=JUDGMENT:5
+    - [JUDGMENT] D139:228
+      body: \frac12 b^{0.56}\right)\le Cb^{-0.12}(\log b)^2=O(b^{-1/20})
+    - [JUDGMENT] D155:403
+      body: M_t(u,y)\ge t\mathbb E[\mathbf1_A(|y|-K\sigma)_+]\ge tc(K)\mathbb E(\sigma\mathbf1_A)\ge tc(K)\mathbb E\sigma-\frac{c(K)}{K}\lVert u\rVert_1\ge c(K)\Big(\frac t
+    - [JUDGMENT] D191:860
+      body: \right\rvert
+    - [JUDGMENT] D302:59
+      body: \mathcal{R}=C_{\mathcal{B}}(\eta+\xi+\log_{1/\eps}\!\left(S_\epsilon\right))+C_{\mathcal{B},\eta,\xi,A}\frac{1+\log(2+\ell)}{\ell}+3\log_{1/\eps}\!\left(\frac\r
+    - [JUDGMENT] D302:154
+      body: \mathcal R=C_{\mathcal B}(\eta+\xi+\log_{1/\eps}\!\left(S_\epsilon\right))+C_{\mathcal B,\eta,\xi,A}\frac{1+\log(2+\ell)}{\ell}+3\log_{1/\eps}\!\left(\frac\righ
+
+### [KaTeX parse error: Expected group after '^' ]  count=5  classes=JUDGMENT:5
+    - [JUDGMENT] D235:383
+      body: |\Gamma(\xi)|\le q(\xi)^^{-\gamma}
+    - [JUDGMENT] D262:502
+      body: \sup_{\lambda>0}\lambda\,\mu\{S^^*f>\lambda\}\le C\lVert f\rVert_\Phi.
+    - [JUDGMENT] D523:178
+      body: q:U\to\mathbf C^^r
+    - [JUDGMENT] D61:983
+      body: |U|\le(6r/c)^^{3/2}
+    - [JUDGMENT] D61:1048
+      body: (6r/c)^^{3/2}
+
+### [KaTeX parse error: Got function '\H' with no arguments as ]  count=3  classes=JUDGMENT:3
+    - [JUDGMENT] D31:304
+      body: \sum vv^\H
+    - [JUDGMENT] D31:1171
+      body: R-R^\H=-(z-\bar z)R^\H R
+    - [JUDGMENT] D31:1171
+      body: M=1+\Phi(R^\H R)\succ0
+
+### [KaTeX parse error: Can't use function '$' in math mode 
+
+(]  count=2  classes=WAIVER:2
+    - [WAIVER] D145:489
+      body: 。\n\n(b) 中间步骤。先补 $\alpha
+    - [WAIVER] D79:104
+      body: J'." (finite-proof.tex:77-79)。\n\n(b) 推导补全: $[0,1]\setminus(I\cup J)
+
+### [KaTeX parse error: Can't use function '\mathbf' in text mo]  count=2  classes=WAIVER:2
+    - [WAIVER] D192:75
+      body: M(N-l)\le \lambda^{-l}M(N),\qquad 0\le l\le N. \tag{02\02_scalar.tex:23-25}
+    - [WAIVER] D192:144
+      body: \Delta^{2}\le C\,M(N-l)\sum_{q:\,R/4\le d(q,x)\le4R}\rho_q^{2}. \tag{02\02_scalar.tex:294-296}
+
+### [KaTeX parse error: Expected & or \\ or \cr or \end at end ]  count=2  classes=JUDGMENT:2
+    - [JUDGMENT] D442:119
+      body: B_j=\begin{pmatrix}0&b_j^\top\\ -b_j&0
+    - [JUDGMENT] D589:118
+      body: \begin{pmatrix}0&O_{S,T}\\ O_{S,T}^{*}&0
+
+### [KaTeX parse error: Expected 'EOF', got '\end' 
+    \̲e̲n̲d]  count=1  classes=KEEP:1
+    - [KEEP] D101:189
+      body: E_{\rm disc}.\n    \end{lemma}                                       (transfer.tex:25--43，末句排版略有删节)\n\n(b) 推导补步。证明有四块，我逐块补中间步骤。第一块（45--52 行）闭性：三角不等式拆成 ||T_z v - v|
+
+### [KaTeX parse error: Expected 'EOF', got '_' ]  count=1  classes=WAIVER:1
+    - [WAIVER] D104:155
+      body: P(a,w)=Q(a,w)\cdot\prod_j(\text{w_j 非典范})^2
+
+### [KaTeX parse error: Got function '\operatorname@' with no a]  count=1  classes=JUDGMENT:1
+    - [JUDGMENT] D108:424
+      body: \dim W^\per=|\mathbb T|-\dim W
+
+### [KaTeX parse error: {equation} can be used only in display ]  count=1  classes=KEEP:1
+    - [KEEP] D134:523
+      body: "。多项式一侧的转移界是                      ：\n\n> "\begin{equation}\n> \label{eq:polynomial-transition}\n>  \left\lVert Hp(C)P\right\rVert\n>  \le e^{-N^w}\sum_k|c_k|N^k\n>  \
+
+### [KaTeX parse error: Expected 'EOF', got '&' ]  count=1  classes=WAIVER:1
+    - [WAIVER] D142:561
+      body: R_{ab}&=R_b\cup B_bR_a(L_bR_a)^*F_b.
+
+### [KaTeX parse error: Expected '\right', got 'EOF' at end of ]  count=1  classes=JUDGMENT:1
+    - [JUDGMENT] D191:860
+      body: \left\lceil
+
+### [KaTeX parse error: Expected 'EOF', got '#' 
+
+#̲# §19 勘误（已落]  count=1  classes=WAIVER:1
+    - [WAIVER] D211:233
+      body: \eqref{eq:split-measure}` 的各项质量比较合法。我把这一处也列进来，是因为这是全篇最容易在正式稿里被读者跳过、却在检验时最先出错的一行。\n\n## §19 勘误（已落盘内容不做改写，错误在此登记）\n\n1. §4 第三段我在引用稿件对"精确像测度关系"的说明时，把文风禁令清单里的一个被禁转折词整词写
+
+### [KaTeX parse error: Expected 'EOF', got '#' 
+
+#̲# §22 关于台账 ]  count=1  classes=WAIVER:1
+    - [WAIVER] D234:464
+      body: " 对照写成两句独立陈述。\n\n上述合计约十四处，分布在 §6、§7、§9、§11、§14、§15、§17、§18、§20 各节里。修正只是文风层面，不影响数学论证，也不影响 §13 台账里每一行的引理名与 tex 位置对应关系。所有 §1 到 §20 里的数值、引理名与位置均如实对应本次 Read 到的 build/s
+
+### [KaTeX parse error: Expected 'EOF', got '#' 
+
+#̲# §24 交付前实测]  count=1  classes=WAIVER:1
+    - [WAIVER] D234:476
+      body: ）两行的第四栏出现竖线越界：前者用了                   的基数竖线，后者用了                的范数竖线；这两处每行实际竖线为 8 根（超过 6 根的规格）。按规格 "禁止改写已落盘内容" 且每次 Edit 锚点必须在当前文件末段的两条同时约束，本会话不能就地替换；下一次修正的正确形式是
+
+### [KaTeX parse error: Expected 'EOF', got '#' 
+
+#̲# 1. 初始动机与第]  count=1  classes=WAIVER:1
+    - [WAIVER] D244:14
+      body: 密度恰好为 1"这一件事上。\n\n## 1. 初始动机与第一个猜想\n\n最初把这个问题拿到手时，我对 Banach 简单 Lebesgue 谱问题的印象还停留在乌拉姆记录的实线版本（01-introduction.tex:38 引 Ulam1960 第 6 节第 76 页）。那个版本问的是实直线上的算子，概率保持形式完全是
+
+### [KaTeX parse error: Expected 'EOF', got '#' 
+
+#̲# 18. 量级与常数]  count=1  classes=WAIVER:1
+    - [WAIVER] D244:167
+      body: 密度恰好为 1"处出现单个定界符、该段行内无与之成对的另一枚，属排版手滑；语义应读作不带定界符的短语"密度恰好为 1"。全文收工时若     总数呈奇数，即由这一枚造成，其余皆成对。语义应读作不带定界符的短语。\n\n## 18. 量级与常数速查，附正确阅读顺序图\n\n这一节把全文所有带量级的常数集中登记，方便日后复用这套机
+
+### [KaTeX parse error: Can't use function '$' in math mode 
+
+$]  count=1  classes=WAIVER:1
+    - [WAIVER] D25:1490
+      body: |s_{kj}|\le C_\rho\rho^{k+j}     prop:coefficients                                                       lem:exterior-collar` 附录里那些 Carathéodory、反射、"第三半径"步骤全部依赖
+
+### [KaTeX parse error: Expected 'EOF', got '#' 
+
+#̲## 6.2 引理 5]  count=1  classes=WAIVER:1
+    - [WAIVER] D28:715
+      body: 2M²η 不趋 0。证据是 "The order is important" 的直接命令句。\n\n### 6.2 引理 5.1（energy:minimizer）：最小点、零重心、方差不等式\n\n(a) 逐字（05:44-62）：\n\n\n\n\n\n\n\n\n\n\n(b) [补] 存在性（05:66-83）：取最小化列 x_j、紧基本域
+
+### [KaTeX parse error: Got function '\textcolor' with no argum]  count=1  classes=JUDGMENT:1
+    - [JUDGMENT] D292:92
+      body: (Q_F,(\operatorname{Supp}\Lambda)_\red)
+
+### [KaTeX parse error: Expected 'EOF', got '#' ]  count=1  classes=JUDGMENT:1
+    - [JUDGMENT] D293:57
+      body: R_*(n,d,j)=\Big\{r\in R(n,d):\#\{u\in\{0,1\}^n:\ #(W_n(r;d)\cap\mathcal O_u)\ge j(2r)^n\}\ge\frac{2^n}{d}\Big\}
+
+### [KaTeX parse error: Expected 'EOF', got '#' 
+
+#̲# 附录 B：小节行号]  count=1  classes=WAIVER:1
+    - [WAIVER] D356:929
+      body: ；\n该行其余四格与六个竖线均无误。请本体侧机械修正。\n- 类别：文风禁令命中自查。全文检索对过渡套语一族命中 1 处，\n位于正文第 141 行（§3 五步拆解之后、以仿射映射小结的那句开头处）；\n命中串在此不重述，交本体侧按禁串清册处理。禁令其余各项\n（长破折号、整行分隔线、装饰加粗、其余四族套语、表中标记符号）检索为
+
+### [KaTeX parse error: {CD} can be used only in display mode.]  count=1  classes=KEEP:1
+    - [KEEP] D376:141
+      body: \begin{CD}
+
+### [KaTeX parse error: Mismatch: \begin{pmatrix} matched by \e]  count=1  classes=JUDGMENT:1
+    - [JUDGMENT] D431:77
+      body: M_\theta=\begin{pmatrix}0&\theta\\Q_\theta\cdot&T_\theta\end{pm}
+
+### [KaTeX parse error: No such environment: tikzcd ]  count=1  classes=KEEP:1
+    - [KEEP] D444:56
+      body: \begin{tikzcd} H_K^j(X,X_-)\arrow[r,"\cong"]\arrow[d,"\mathrm{res}"']\& H_K^j(N,Q)\arrow[d,"\mathrm{res"}]\\ H_K^j(X^\tau,X_-^\tau)\arrow[r,"\cong"]\& H_K^j(N^\
+
+### [KaTeX parse error: Can't use function '\]' in math mode ]  count=1  classes=JUDGMENT:1
+    - [JUDGMENT] D626:139
+      body: A[2]=\{a\in A:a^2=1\]
+
+### [KaTeX parse error: Expected 'EOF', got '#' 
+
+#̲## 7.5 与姊妹条]  count=1  classes=WAIVER:1
+    - [WAIVER] D80:2228
+      body: D_*=1+\lfloor\log_{10/9}(n^3)\rfloor   07:47    48                       iterations d = 2^(exponent length)   Complexity.lean:8     rootControlBound G ≤ iterati
+
+### [KaTeX parse error: Expected 'EOF', got '#' 
+
+#̲# §5 逐条还原:带]  count=1  classes=WAIVER:1
+    - [WAIVER] D93:158
+      body: d\ge3                    01-introduction.tex:206                                  hd : 2 ≤ d       Model.lean:90     Renewal/VelocityWords.lean:75,152     hd : 
+
+========================================================================
+PART C — 逐篇索引 (note -> ORDER/JUDGMENT/KEEP/WAIVER), 按 ORDER 降序
+========================================================================
+note      ORDER  JUDGMENT  KEEP  WAIVER   total
+D362         21         0     0       0   21
+D25          20         2     0       1   23
+D96          16         0     0       1   17
+D492         12         1     0       0   13
+D58           7         0     0       1   8
+D429          7         0     0       0   7
+D312          6         0     0       0   6
+D761          6         0     0       0   6
+D750          5         0     0       2   7
+D213          5         0     0       0   5
+D264          5         0     0       0   5
+D71           5         0     0       0   5
+D214          4         4     0       0   8
+D160          4         0     0       0   4
+D171          3         0     0       0   3
+D44           2         1     0       0   3
+D165          2         0     0       0   2
+D81           2         0     0       0   2
+D125          1         3     0       0   4
+D145          1         0     0       2   3
+D163          1         0     0       2   3
+D333          1         1     0       0   2
+D375          1         0     0       1   2
+D131          1         0     0       0   1
+D196          1         0     0       0   1
+D198          1         0     0       0   1
+D212          1         0     0       0   1
+D228          1         0     0       0   1
+D353          1         0     0       0   1
+D389          1         0     0       0   1
+D537          1         0     0       0   1
+D560          1         0     0       0   1
+D616          1         0     0       0   1
+D694          1         0     0       0   1
+D706          1         0     0       0   1
+D84           0        31     0       0   31
+D139          0        13     0       1   14
+D47           0         6     0       3   9
+D243          0         7     0       0   7
+D134          0         0     1       5   6
+D106          0         4     0       1   5
+D137          0         5     0       0   5
+D255          0         5     0       0   5
+D275          0         4     0       1   5
+D351          0         5     0       0   5
+D59           0         2     0       3   5
+D75           0         0     0       5   5
+D155          0         3     0       1   4
+D26           0         3     0       1   4
+D376          0         0     1       3   4
+D65           0         0     0       4   4
+D77           0         4     0       0   4
+D93           0         0     0       4   4
+D95           0         0     0       4   4
+D108          0         1     0       2   3
+D18           0         0     1       2   3
+D24           0         3     0       0   3
+D245          0         3     0       0   3
+D274          0         3     0       0   3
+D292          0         3     0       0   3
+D295          0         3     0       0   3
+D30           0         1     0       2   3
+D302          0         3     0       0   3
+D31           0         3     0       0   3
+D45           0         3     0       0   3
+D54           0         0     0       3   3
+D80           0         0     0       3   3
+D85           0         1     0       2   3
+D92           0         0     0       3   3
+D07           0         2     0       0   2
+D104          0         0     0       2   2
+D113          0         1     0       1   2
+D115          0         0     0       2   2
+D124          0         1     0       1   2
+D191          0         2     0       0   2
+D192          0         0     0       2   2
+D211          0         0     0       2   2
+D219          0         0     0       2   2
+D234          0         0     0       2   2
+D238          0         0     2       0   2
+D244          0         0     0       2   2
+D257          0         2     0       0   2
+D258          0         2     0       0   2
+D303          0         2     0       0   2
+D307          0         2     0       0   2
+D317          0         1     0       1   2
+D335          0         2     0       0   2
+D339          0         0     0       2   2
+D36           0         1     0       1   2
+D38           0         0     0       2   2
+D384          0         2     0       0   2
+D385          0         2     0       0   2
+D390          0         0     0       2   2
+D396          0         0     0       2   2
+D48           0         0     0       2   2
+D505          0         0     0       2   2
+D51           0         2     0       0   2
+D511          0         2     0       0   2
+D52           0         0     0       2   2
+D523          0         2     0       0   2
+D555          0         2     0       0   2
+D57           0         1     0       1   2
+D61           0         2     0       0   2
+D62           0         1     0       1   2
+D72           0         0     0       2   2
+D772          0         2     0       0   2
+D79           0         0     0       2   2
+D08           0         1     0       0   1
+D100          0         0     0       1   1
+D101          0         0     1       0   1
+D117          0         0     0       1   1
+D123          0         0     0       1   1
+D132          0         1     0       0   1
+D140          0         0     0       1   1
+D142          0         0     0       1   1
+D148          0         0     0       1   1
+D157          0         1     0       0   1
+D16           0         1     0       0   1
+D190          0         1     0       0   1
+D204          0         1     0       0   1
+D216          0         0     1       0   1
+D218          0         0     0       1   1
+D235          0         1     0       0   1
+D249          0         0     0       1   1
+D253          0         0     0       1   1
+D256          0         1     0       0   1
+D260          0         1     0       0   1
+D261          0         0     0       1   1
+D262          0         1     0       0   1
+D278          0         1     0       0   1
+D28           0         0     0       1   1
+D282          0         1     0       0   1
+D29           0         0     0       1   1
+D291          0         1     0       0   1
+D293          0         1     0       0   1
+D296          0         1     0       0   1
+D324          0         1     0       0   1
+D326          0         1     0       0   1
+D327          0         1     0       0   1
+D329          0         1     0       0   1
+D341          0         1     0       0   1
+D342          0         0     0       1   1
+D343          0         0     0       1   1
+D35           0         0     0       1   1
+D354          0         1     0       0   1
+D356          0         0     0       1   1
+D365          0         1     0       0   1
+D370          0         1     0       0   1
+D402          0         1     0       0   1
+D41           0         1     0       0   1
+D420          0         0     0       1   1
+D431          0         1     0       0   1
+D436          0         0     0       1   1
+D442          0         1     0       0   1
+D444          0         0     1       0   1
+D446          0         1     0       0   1
+D450          0         0     0       1   1
+D457          0         1     0       0   1
+D463          0         1     0       0   1
+D480          0         1     0       0   1
+D484          0         1     0       0   1
+D486          0         1     0       0   1
+D489          0         1     0       0   1
+D49           0         1     0       0   1
+D490          0         1     0       0   1
+D493          0         1     0       0   1
+D500          0         1     0       0   1
+D506          0         0     0       1   1
+D517          0         0     0       1   1
+D520          0         1     0       0   1
+D521          0         1     0       0   1
+D533          0         1     0       0   1
+D534          0         0     0       1   1
+D562          0         0     0       1   1
+D569          0         0     0       1   1
+D570          0         1     0       0   1
+D575          0         1     0       0   1
+D576          0         1     0       0   1
+D582          0         0     0       1   1
+D585          0         0     0       1   1
+D586          0         1     0       0   1
+D589          0         1     0       0   1
+D60           0         0     0       1   1
+D601          0         0     0       1   1
+D619          0         1     0       0   1
+D626          0         1     0       0   1
+D63           0         1     0       0   1
+D630          0         1     0       0   1
+D66           0         1     0       0   1
+D757          0         1     0       0   1
+D758          0         0     0       1   1
+D762          0         1     0       0   1
+D765          0         1     0       0   1
+D769          0         1     0       0   1
+D86           0         0     0       1   1
+D94           0         1     0       0   1
+
+========================================================================
+PART D — 摘要 (plan.md style)
+========================================================================
+
+分类分布: ORDER=149  JUDGMENT=223  KEEP=8  WAIVER=131   (合计 511)
+
+主导 ORDER 家族 (可执行子集，逐字替换):
+  <定界宏缺组 \overline\mathbb X 等>                77 处   -> 把该符号命令用花括号成组，如 \overline\mathbb D -> \overline{\mathbb D}
+  \F                                          21 处   -> \mathbb{F}
+  \d                                          16 处   -> \mathrm{d}
+  \OOo                                        12 处   -> \mathcal{O}
+  \diff                                        5 处   -> \mathrm{diff}
+  \T                                           5 处   -> \top
+  \du                                          4 处   -> \mathrm{d}u
+  \asy                                         2 处   -> \asymp
+  \ot                                          2 处   -> \otimes
+  \dv                                          2 处   -> \mathrm{d}v
+  \lambdah                                     1 处   -> \lambda h
+  \asypto                                      1 处   -> \asymp
+
+主导 JUDGMENT 家族:
+  <KaTeX parse error: Expected group >      42 处
+  <KaTeX parse error: Expected 'EOF',>      32 处
+  \lem                                      13 处
+  <KaTeX parse error: Unexpected end >      13 处
+  <KaTeX parse error: No such environ>      12 处
+  <KaTeX parse error: Expected '}', g>      10 处
+  <KaTeX parse error: Extra } >              9 处
+  <KaTeX parse error: Double subscrip>       7 处
+  <KaTeX parse error: Double superscr>       6 处
+  <KaTeX parse error: Got function '\>       5 处
+  \lc                                        5 处
+  \root                                      4 处
+
+KEEP 家族 (逐字引用/专名，不动):
+  \math                                      2 处
+  <KaTeX parse error: Expected 'EOF',>       1 处
+  <KaTeX parse error: {equation} can >       1 处
+  \DeclareMathOperator                       1 处
+  \ltl                                       1 处
+  <KaTeX parse error: {CD} can be use>       1 处
+  <KaTeX parse error: No such environ>       1 处
+
+WAIVER 家族 (尺子误报，本会话不施于全库):
+  <KaTeX parse error: Can't use funct>     112 处
+  <KaTeX parse error: Expected 'EOF',>      11 处
+  <KaTeX parse error: Unexpected end >       7 处
+  \math                                      1 处
+
+尺子候选修复(建议、未落库): $..$..$ 相邻被粘连时应把含裸 $ 的跨度改判 IUNCLOSED 后重切，可消解绝大多数 "$ 在数学模式" 误报；另：围栏内 \`code\` 未闭合反引号会漏空，fenceMask 应支持奇偶配对回退。

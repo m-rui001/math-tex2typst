@@ -1,0 +1,91 @@
+D01 SKIP hdr=0
+D02 SKIP hdr=0
+D03 SKIP hdr=0
+D04 SKIP hdr=0
+D05 SKIP hdr=0
+D06 SKIP hdr=0
+D07 SKIP hdr=0
+D10 SKIP hdr=0
+D103 SKIP stray_hdr=0 badpipe=33
+D104 SKIP stray_hdr=0 badpipe=12
+D105 SKIP stray_hdr=0 badpipe=13
+D106 SKIP stray_hdr=0 badpipe=17
+D109 SKIP stray_hdr=1 badpipe=0
+    run@595 len=1 prev='素材使用面：本文只读了 `build/` 下的 `main.tex`、`preamble.tex`、`refer'
+D125 size=121575->121570 block=48 moved=1 runs=1 content_pure=True blanks_removed=5 dbl=False/True hdr=1
+D131 SKIP own-table [(585, '| --- | --- | --- | --- | --- |')]
+D145 SKIP stray_hdr=1 badpipe=1
+D149 SKIP stray_hdr=1 badpipe=0
+    run@248 len=30 prev='追加说明（接手写手）：开头一句"表共 36 数据行"为初稿落笔时所说，本次续写追加 35 行，本台账现有 71 '
+D197 size=75790->75789 block=73 moved=30 runs=1 content_pure=True blanks_removed=1 dbl=True/True hdr=1
+    run@226 len=10 prev='本体侧收稿注：这十行当时跟着第二份表头落盘，而闸门要求全文只出现一份五列表头，且台账数据行只统计最后一份表头之下'
+D213 size=70608->70607 block=51 moved=10 runs=1 content_pure=True blanks_removed=1 dbl=False/False hdr=1
+    run@239 len=8 prev='台账续表：以下各行接续前表，位置同样出自本会话真实 Read 的 `文件:行`。'
+D221 size=70612->70611 block=50 moved=8 runs=1 content_pure=True blanks_removed=1 dbl=False/False hdr=1
+    run@264 len=24 prev='以下为补录数据行，沿用上面唯一表头，不再重抄，把 §5 与 §8 里几个支撑性条款也登记进来：'
+    run@293 len=6 prev='第二轮补录，同样沿用唯一表头，把 §5 参数化复形与 §6 判据证明的支撑条款补齐：'
+D240 size=70305->70303 block=69 moved=30 runs=2 content_pure=True blanks_removed=2 dbl=True/True hdr=1
+    run@234 len=25 prev='（本体侧收稿注：此处原有一行重复的五列表表头，闸门判据要求全文只出现一份表头，故删去那一行字形；紧随其后的补录数'
+D286 size=70391->70390 block=46 moved=25 runs=1 content_pure=True blanks_removed=1 dbl=False/False hdr=1
+D29 SKIP stray_hdr=1 badpipe=0
+    run@247 len=30 prev='统计说明。本表数据行共 50 行，超过闸门要求的 30 行；表头两行只在此处出现一次，补录时未复写。位置列去重后'
+    run@280 len=17 prev='补录说明（第一批）。上方补录数据实为 30 行（落盘后逐行数得，先前草稿口径 31 行为笔误，已在收工报告申报）'
+D298 size=78424->78422 block=52 moved=47 runs=2 content_pure=True blanks_removed=2 dbl=False/False hdr=1
+    run@515 len=61 prev='规格要求五列表头全文唯一，本稿 §13 已有表头与分隔行，故本节不重复表头，只追加数据行；每条位置都是我本轮真实'
+D342 size=138551->138550 block=53 moved=61 runs=1 content_pure=True blanks_removed=1 dbl=False/False hdr=1
+D345 SKIP stray_hdr=0 badpipe=17
+D364 SKIP stray_hdr=0 badpipe=1
+    run@335 len=20 prev='下面按规格补录更多真实读到的带数值节点，数据行不重复表头，仍属本节。'
+D367 size=70352->70351 block=44 moved=20 runs=1 content_pure=True blanks_removed=1 dbl=False/False hdr=1
+D379 SKIP stray_hdr=0 badpipe=10
+D386 SKIP own-table [(239, '| $8^{h-1}=2^{3h-3}>2^{2h}\\ge\\max(k_1,k_')]
+    run@299 len=10 prev='台账补记（仍属 §17，表头不复现）：先纠正一处点数笔误，上注「表体 $39$ 行」有误，第一块实际数据行 $3'
+D430 size=70563->70562 block=40 moved=10 runs=1 content_pure=True blanks_removed=1 dbl=False/False hdr=1
+    run@926 len=8 prev='台账续写八行，均为正文已读行段的补录：'
+D442 size=71219->71218 block=62 moved=8 runs=1 content_pure=True blanks_removed=1 dbl=False/False hdr=1
+    run@534 len=41 prev='下面只追加数据行：五列表头与分隔行全文已由 §19 承担，按规格不得再抄第二遍，否则表头出现两次会挂结构闸门。'
+D472 size=158192->158191 block=48 moved=41 runs=1 content_pure=True blanks_removed=1 dbl=False/False hdr=1
+D475 SKIP stray_hdr=1 badpipe=0
+    run@229 len=5 prev='台账补记：本节分两段追加，前段加本段共六十八行，位置栏均落在本会话精读区间内；竖线数与无占位要求已按行机械复核。'
+D531 size=71826->71825 block=69 moved=5 runs=1 content_pure=True blanks_removed=1 dbl=False/False hdr=1
+    run@411 len=28 prev='第 13 节那张五列表的表头与其原有数据行位置不动，本接续块只补数据行，仍按同一栏序填写；全部标注为"我的推导"'
+D545 size=129334->129333 block=48 moved=28 runs=1 content_pure=True blanks_removed=1 dbl=True/True hdr=1
+    run@288 len=1 prev='其一，两处已落盘内容在我自己的追加中丢失，共同形态都是把当时文末的一段整段取作锚点、又在替换文本里没把原文写回。'
+D555 size=127996->127995 block=73 moved=1 runs=1 content_pure=True blanks_removed=1 dbl=False/False hdr=1
+    run@673 len=76 prev='下面这张表只登记本轮追加（§18 至 §29）用到的量，位置一律写我本轮真实读到的路径与行段；凡我只读到标题行而'
+D559 size=156178->156177 block=39 moved=76 runs=1 content_pure=True blanks_removed=1 dbl=False/False hdr=1
+D56 SKIP stray_hdr=0 badpipe=39
+    run@412 len=32 prev='台账附记：本节正文另有三处纯英文普通名词残留（上界控制一词的英文原形、正性一词的英文原形、反演一词的英文原形），'
+D564 size=71674->71673 block=46 moved=32 runs=1 content_pure=True blanks_removed=1 dbl=False/False hdr=1
+    run@221 len=29 prev='台账补注其三：以下继续补录同表数据行，沿用 §16 表头、不再抄写，位置栏仍全部取本会话实读行号。'
+    run@255 len=27 prev='台账补注其五（最终勘正与收口）：术语残留族在补注其三第 2 行于计数之后新入尾一处，全文实测二十三处，补注其四所'
+D568 size=71870->71868 block=70 moved=56 runs=2 content_pure=True blanks_removed=2 dbl=False/False hdr=1
+D578 SKIP own-table [(385, 'HEADING ## §31 台账补录'), (443, 'HEADING ## §34 台账补录（续）')]
+    run@362 len=17 prev='这一节只补 §7 至 §14 新用到符号的数据行，沿用前面那份五列表格，不重抄表头。'
+D596 size=71769->71768 block=34 moved=17 runs=1 content_pure=True blanks_removed=1 dbl=False/False hdr=1
+    run@414 len=10 prev='追加台账行如下，与第十五节同表，不重复表头。'
+    run@451 len=8 prev='追加台账行如下。'
+    run@470 len=8 prev='最后留一个待办：本稿没有讨论翻转存在性的技术条件，因为定理本身回避了它。若将来把存在性补上，第零节里"终止性与存'
+    run@491 len=4 prev='关于四维的收尾。本稿反复强调四维是临界维数；把它写成主线，是为了让读者看到定理的边界在哪里，而不只看到结论。若把'
+D604 size=71873->71869 block=37 moved=30 runs=4 content_pure=True blanks_removed=4 dbl=False/False hdr=1
+    run@808 len=1 prev='补表自报：§25 与 §26 的新写内容都是在文末分笔追加，未删除、未回滚、未改写、未重排盘上任何既有文字，写入'
+D623 size=112906->112896 block=187 moved=1 runs=1 content_pure=True blanks_removed=10 dbl=False/True hdr=1
+D627 SKIP own-table [(503, 'HEADING ## §26 台账')]
+    run@502 len=1 prev='证据边界收口如下。素材八个 .tex、113,433 B，我实际读入的是 paper.tex、introduct'
+D639 size=75695->75694 block=53 moved=1 runs=1 content_pure=True blanks_removed=1 dbl=False/False hdr=1
+    run@206 len=28 prev='由于表头与分隔行在 §17 已经写过且全文只许各出现一次，下面的补录行不重抄表头，列序沿用 §17 的五列。'
+D645 size=92765->92764 block=52 moved=28 runs=1 content_pure=True blanks_removed=1 dbl=False/False hdr=1
+    run@576 len=8 prev='以下八行按第 9 节五栏规格续行，每格都回 tex 核过行号；表头不重出，直接落数据行。'
+D69 size=102119->102117 block=43 moved=8 runs=1 content_pure=True blanks_removed=2 dbl=False/False hdr=1
+D709 SKIP own-table [(564, '| $\\eps_P^{-1}$ | $h_P^{-1}$ 上界 | introd'), (581, '| $L_{\\lambda,h}$ | $r_\\lambda\\cdot x+b_'), (592, '| $h^{p_i}$ | 单个坐标，$h^{p_i}$ | affine.te'), (598, '| $\\operatorname{sgn}$ 记号 | 符号函数 | trapp')]
+D711 SKIP own-table [(1535, 'HEADING ## §27 台账补录')]
+D74 SKIP own-table [(689, '第 13 节表尾在 `$2r$` 行止。以下续行来自第 18、19、20 节的逐')]
+D78 SKIP stray_hdr=0 badpipe=44
+D79 SKIP stray_hdr=0 badpipe=9
+D80 SKIP stray_hdr=0 badpipe=18
+D81 SKIP stray_hdr=0 badpipe=19
+D84 SKIP stray_hdr=1 badpipe=51
+D85 SKIP stray_hdr=0 badpipe=34
+D90 SKIP stray_hdr=0 badpipe=34
+D93 SKIP stray_hdr=0 badpipe=43
+D99 SKIP stray_hdr=0 badpipe=8

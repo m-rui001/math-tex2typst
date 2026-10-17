@@ -1,0 +1,32 @@
+{
+  "paper": "Bose-Einstein-condensation-at-positive-temperature-in-the-dilute-hard-sphere-gas-October-5-2026",
+  "ok": true,
+  "typ_lines": 1491,
+  "included_pdf_pages": 0,
+  "formulas": 1197,
+  "math_failed": 0,
+  "labels": 206,
+  "equations": 1,
+  "theorems": 0,
+  "figures": 2,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 2
+  },
+  "samples": {
+    "formulas": "1197",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Bose-Einstein-condensation-at-positive-temperature-in-the-dilute-hard-sphere-gas-October-5-2026.tex"
+}

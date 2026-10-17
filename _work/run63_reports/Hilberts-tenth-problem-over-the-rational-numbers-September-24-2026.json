@@ -1,0 +1,34 @@
+{
+  "paper": "Hilberts-tenth-problem-over-the-rational-numbers-September-24-2026",
+  "ok": true,
+  "typ_lines": 1518,
+  "included_pdf_pages": 0,
+  "formulas": 1467,
+  "math_failed": 0,
+  "labels": 161,
+  "equations": 0,
+  "theorems": 1,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 2,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "1467",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl",
+    "tocbibind"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n    ┌─ \\\\?\\E:\\math\\typst\\Hilberts-tenth-problem-over-the-rational-numbers-September-24-2026\\main.typ:310:24\n    │\n310 │   + #emph[$bb(Q) tack.r.double Phi \\( b \\)$ for every $b in bb(Z)$;]\n    │                         ^^^^^^\n\nwarning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n    ┌─ \\\\?\\E:\\math\\typst\\Hilberts-tenth-problem-over-the-rational-numbers-September-24-2026\\main.typ:311:50\n    │\n311 │   + #emph[if $b in bb(Q)^times$ and $bb(Q) tack.r.double Phi \\( b \\)$, then, for every $q in.not S_1$, the inequality $v_q \\( b \\) < 0$ implies $v_q \\( b \\) in 2 bb(Z)$.]\n    │                                                   ^^^^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 2,
+  "source": "E:\\math\\_work\\flat\\Hilberts-tenth-problem-over-the-rational-numbers-September-24-2026.tex"
+}

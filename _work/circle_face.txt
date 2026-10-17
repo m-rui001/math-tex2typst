@@ -1,0 +1,18 @@
+== shape x branch x declared-measure-keys (nodes)
+circle     dot     inner sep    773
+circle     dot     inner sep,minimum size    170
+circle     range   inner sep,minimum size    145
+circle     box     inner sep     87
+circle     range   minimum size     16
+circle     dot     minimum size      9
+rectangle  range   inner sep,minimum height,minimum width     14
+rectangle  dot     inner sep     10
+rectangle  range   minimum height,minimum width      8
+ellipse    range   inner sep,minimum height,minimum width      6
+rectangle  dot     inner sep,minimum size      3
+rectangle  range   inner sep,minimum size      2
+ellipse    range   minimum height,minimum width      2
+diamond    dot     inner sep      2
+rectangle  box     inner sep      2
+
+circle nodes total: 1200 over 139 pics / 105 papers

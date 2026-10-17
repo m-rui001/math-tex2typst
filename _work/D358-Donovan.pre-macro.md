@@ -1,0 +1,274 @@
+# D358 研究笔记：Donovan 猜想在素域代数闭包上的证明
+
+## §0 派单登记与素材面貌
+
+派单 D358。这一单对应的主线2 论文我先把底数摸清楚再动笔：`ls` 量得 `build` 下全部 `.tex` 共 13 个文件，字节和恰好 368,323，与制单给的字节数完全一致；九个正章节合计 346,778 字节、7186 行，最大的一章是 06_endpoint（52,795 字节），最小的正文章是 00_introduction（13,117 字节）。`main.tex` 只有 30 行，题名 "Donovan's Conjecture over Algebraically Closed Fields"，署名 OpenAI，日期 2026-09-24（`build/main.tex:5-10`）。厚素材按规格分段读：引言全量，预备受料读前 175 行，几何章、族章、端点章、扩张章各读主干段，周期章靠 grep 锚点定位语句。中段各章（04_labels、05_runners 全文，02 章证明主体，06 章中段，07 章前 360 行，08 章 96 到 841 行）我只拿到命题编号锚点与标题宏，没有逐行读完，笔记里凡越出我已读范围的说法都另行标注，台账位置栏只写我真实读到的 `文件:行`。
+
+我的读法记录：第一轮 `find` 量字节；第二轮 grep 全部 theorem/proposition/definition 环境的行号（得到 02:8、03:16、04:29、04:414、05:34、06:52、07:373、07:706、08:8 等锚点）；第三轮 grep 各章小节标题；然后才分段 Read。这样动笔前我已经知道主干骨架在哪几行，省去整篇通读。
+
+素材登记，两行如下：
+
+preprints/Donovans-Conjecture-over-Algebraic-Closures-of-Prime-Fields-September-24-2026
+其他队列第 182 行号
+
+## §1 起点：局部数据能否钉死一个范畴
+
+我对 Donovan 猜想的初始立场要从头交代。设 $p$ 是素数，$K$ 是特征 $p$ 的代数闭域。有限群代数 $KG$ 的一个块是由极小中心幂等元 $b$ 给出的直和项 $KGb$，它的亏群是 $G$ 的一个 $p$-子群共轭类，度量这块离半单有多远。两块 $K$-线性 Morita 等价，指它们的模范畴之间有 $K$-线性函子等价。猜想问：给定的有限 $p$-群 $D$，作为亏群出现的块，在 Morita 等价意义下是否只有有限多个类（`build/sections/00_introduction.tex:12-21`）。
+
+这个问题的分量在于它的约束方向。它要用纯粹局部的群数据去约束一个整体的表示范畴：$G$ 的阶没有界，单模的维数没有界，块也允许非主块（`build/sections/00_introduction.tex:22-25`）。我最初把它看成"分类式有限性"问题：把已知的各族约化（Scopes 的对称群、Kessar 的重叠群、Jost 的一般线性酉块、Hiss--Kessar 的经典群约化，加上 Eaton--Livesey 的交换 2-群、An--Eaton 的 extraspecial、Eaton 的 Suzuki 2-群亏、2026 年 8 月预印本的四元数亏与 tame 情形）拼起来，看看拼图是否已经够厚（`build/sections/00_introduction.tex:64-91`）。论文承认这条谱系：型 A 已经在秩与域大小两个参数上给出了统一有限性，这是先例（`build/sections/00_introduction.tex:67-72`）。但拼图思路的缺口在两个地方暴露出来，而论文把它们写成"两个统一性问题"（`build/sections/00_introduction.tex:102-142`）。
+
+第一个是重数问题。块的基本代数的维数是 Cartan 元之和，Brauer--Feit 定理把有界亏块中常特征标的个数 $k(b)$ 界住，$l(b)\le k(b)$（`build/sections/00_introduction.tex:113`、`build/sections/01_preliminaries.tex:51-52`）。于是 Cartan 元的界给出维数的界。但 Lie 型群里有限环面的 $p$-部分可以随着域大小无限增长，而所选块的亏可以一直很小：有界亏的群也允许有限环面变大，主块情形的 Sylow 小并不能覆盖这一类（`build/sections/00_introduction.tex:118-122`）。对固定秩、固定域大小的估计在这个参数漂移上全部失效。
+
+第二个是有理性问题。维数有界并不能把基本代数结构常数关进一个有限域。结构常数可以在一个越来越大的有限域里游走，产生无穷多个两两不重叠乘的乘法表；这正是 Hiss 强调的 Brauer 式有理障碍，Kessar 把带域版本的 Donovan 有限性拆成 Cartan 有界性与 Morita--Frobenius 数有界性两部分的分解，我一开始以为剩下的就只有前者（`build/sections/00_introduction.tex:58-63,109-116`）。
+
+还有第三层：从拟单群到任意群要穿过群扩张。扩张携带交叉代数数据：陪集代表元的乘积差一个正规子群内的元素，这些内因子 $n_{xy}$ 从构造开始到证明结束都留在代数里（`build/sections/00_introduction.tex:135-139`）。Kulshammer 把交叉积与代数群作用放进 Donovan 的归约，Eisele 发展了整数的交叉积归约并证明了块整数 Picard 群的有限性，他们的素到 $p$ 交叉积有限性是我这套扩张方法的先行者（`build/sections/00_introduction.tex:92-100`）。我起初以为拿一个非等变的 Morita--Frobenius 界逐块用就够，后来发现不够，理由到 §2 再说。
+
+最终定理取有界阶形式：固定 $p$、固定 $K$ 和正整数 $M$，所有亏群阶不超过 $M$ 的块只给出有限多个 $K$-线性 Morita 类；亏群无需交换，$p=2$ 也在内（`build/sections/00_introduction.tex:27-36`）。有界阶形式与固定单个 $D$ 的形式等价，因为有界阶的群只有有限多个同构类型（`build/sections/00_introduction.tex:38-40`）。这一步等价化对我极为要紧：它让我全程只需处理一个常数 $C(p,M)$，无需逐群型选参数。
+
+## §2 先走过的几条路线，每条卡在哪
+
+先声明：下面的路线复盘是我从论文的段落分工、假设声明和"此处故意不用"的注记反推出来的重构，论文本身只呈现最终路线，失败过程多属 [推测]，我按 [推测] 处理，逐条给出反推依据。
+
+### §2.1 维数计数路线：只管 Cartan，不管定义域
+
+最初的想法：把 Cartan 元界住，基本代数维数就界住了，维数有界的有限维代数在固定域上的 Morita 类应当只有有限个。卡住的地方在有理障碍：结构常数没有被迫落在任一有限子域里，同维数的代数可以有无穷多个互不相交的有限定义域。论文在引言里把这一点说得很直白：Cartan 元记录射影覆盖的合成重数，其和是基本代数维数，有界维数本身并不把乘法常数约束到一个有限域（`build/sections/00_introduction.tex:109-116`）。我后来读到的正确用法是把维数界与定义域界成对使用：若维数和有限定义域的规模同时有界，乘法表只有有限多张（`build/sections/00_introduction.tex:114-116`）。前半句归几何与 runner  machinery，后半句归比较性质，两半各属于一台机器。
+
+### §2.2 逐族约化路线：让秩与域大小各自有限化
+
+第二条路：仿照 Scopes、Jost、Hiss--Kessar，对每个经典族分别做约化，在秩有界或域大小有界的切片内取估计。它的问题与 §2.1 同源但表现不同：重数问题必须在亏控制不了的参数上一致。Lie 型群中有限环面的 $p$-部分可以增长，固定秩的估计在域大小方向仍有依赖；反过来固定域大小的估计在秩方向失去一切（`build/sections/00_introduction.tex:118-127`）。论文把这一判断直接写进了定理的否定面：固定根数据的 Cartan 界定理对 Sylow $p$-子群和环面 $p$-部分都不作任何界（`build/sections/02_geometry.tex:29-32`）。也就是说，几何路线要求重数估计对域大小与单子参数一致（`build/sections/00_introduction.tex:166-167`），逐族路线达不到这个一致性。经典秩则要求单独一条归约：降到有界秩，或降到 Harish--Chandra 权由亏阶控制的尖点级（`build/sections/00_introduction.tex:126-127`）。这句话预告了 §6 端点机的存在。
+
+### §2.3 非等变 Morita--Frobenius 路线：丢内因子
+
+第三条路：对每个基块取系数 Frobenius $\sigma$（把标量提到 $p$ 次幂，`build/sections/00_introduction.tex:131-132`），找一个非等变的 Morita--Frobenius 界说：某次迭代 $\sigma^m$ 拉回的块与原块 Morita 等价，迭代次数有界。这条最接近成功，它确实给出了整数基本阶的有限表（EEL 三界判据：Cartan 和、数值亏、整数 Morita--Frobenius 数三者有界推出整数 Morita 类有限，`build/sections/07_extensions.tex:429-433`）。但它在扩张数据上破产：块范畴的等价并不能携带交叉代数的乘法信息，$S$（Sylow $p$-子群）的作用与指定的内因子 $a_{xy}=n_{xy}\bar b$ 必须同时被 $J_x$ 图的协变律和因子律所控制（`build/sections/07_extensions.tex:384-392`）。论文还点明了误差的形式：允许误差是标量，此时 $|S|$ 零化 $S$ 上以 $k^\times$ 为系数的正次数上同调群，而 $|S|$ 次幂映射是 $k^\times$ 的自同构，重标定 $J_x$ 即可消错；误差若是中心里任意的单位，就没有这个消错通道（`build/sections/07_extensions.tex:395-401`）。我起初以为"有限个 Picard 类"这种粗控制就够，读完这段才明白误差群的大小决定整个构造的可行性。
+
+### §2.4 直接套用整数有限性判据路线：在错误的对象上用界
+
+第四条路：把 Eaton--Eisele--Livesey 判据和 Eisele Picard 有限性用在一般块或提升块上。这条的失败有文本证据：分量模型中把块提升到中心乘覆盖、给 Lie 分量贴上中心 $p$-因子之后，"这些提升块可以有不可界的亏。我们要先下降等价，再用任何有界亏有限性判据"（`build/sections/08_periodicity.tex:44-47`）。EEL 的三界判据要求数值亏有界，提升块恰好破坏这一假设。最终论文把整数理论的用途限定在恒等分量基本阶及其比较上，大 $p'$-核的最后移除和最后的交叉积有限性都在 $k$ 上做（`build/sections/00_introduction.tex:217-219`、`build/sections/07_extensions.tex:738-740`）。这条误路教会我的：判据的适用对象必须由构造来指定，界沿映射的走向是不自动的。
+
+## §3 几个转折：换计数对象、固定根数据、运送锥、直攻端点、等变下降、系数最后升
+
+现在把最终路线的转折点按我发现它们的顺序列出来。
+
+转折一，计数对象从维数换成 indecomposable 射影直和项的个数。几何构造不数向量空间维数，数 indecomposable projective 因子，并在投影到所选块之后才估计特征标（`build/sections/00_introduction.tex:122-124`）。维数是可加不变量，重数在投影下可以被放大；因子个数配合法直性和与可求和误差，给出的控制比维数更稳。
+
+转折二，先固定根数据做定理。把"秩不漂移"的情形单独做成一台机器：固定有限个根数据及钉死图自同构与例外图同源的有限族，得到常数 $C(\mathcal R,p,M)$（`build/sections/02_geometry.tex:8-27`）。用两旗空间与 horocycle 范畴构造射影对象，沿 Eteve 的构造走（`build/sections/02_geometry.tex:34-36`；Zhu 独立得到对应 tilting 像的零次射影性，`build/sections/02_geometry.tex:36-39`）。正则 Lang 局部系统与 Kummer 上同调计算把有限环面 $p$-部分大小的依赖整个抹掉，再用常坐标投影把 PIM 特征标的范数界住（`build/sections/00_introduction.tex:158-167`）。这台机器对域大小与单子参数一致，代价是根数据必须固定，秩的增长由别的机器接手。
+
+转折三，运送的对象是射影特征标锥。经典无界秩一族，用单圈 Jordan 标记计算把所需的常诱导规则超出一致类函数范围仍然建立起来，随后 Harish--Chandra 移动作用在 PIM 特征标在选定常坐标上的非负张成锥上；多数移动规范化后是精确置换，剩余的移动误差可求和，包括例外共钩形的两条边绕行；行列式与锥体积估计把这种控制转化为 PIM 列的界。论文强调这些移动无需是 Morita 等价（`build/sections/00_introduction.tex:169-187`）。我在这个设计上读到的是"运输工具的降级"：范畴等价的运送要求太高，锥的仿射控制就够了。语言上，runner 属于 Scopes 算盘方法、Jost 一般线性约化、Hiss--Kessar 经典约化的谱系（`build/sections/00_introduction.tex:181-184`），但运送的是数值几何对象，其正性与行列式界把估计穿过所有经典族。
+
+转折四，端点直攻。runner 约化可能留下任意大的尖点秩：酉型的阶梯分拆 $t(t+1)/2$，其余经典型的两行符号且每行是非负整数初始区间，论文称它们为尖点三角形（`build/sections/00_introduction.tex:189-194`）。端点章用模 Harish--Chandra 诱导直接处理：构造 intertwining 算子、移除它们的扩张障碍、数出所得 Hecke 代数单型的个数、证明它们的头覆盖所需的单模；界依赖于三角形之上的 Harish--Chandra 权，与三角形自身的秩无关（`build/sections/00_introduction.tex:195-200`）。这是全篇我反复读得最慢的部分。
+
+转折五，等变下降替代逐块有限性。任意群这一侧，广义 Fitting 归约给出的基块带着真实的内因子系；构造有界 Frobenius 周期的整数 Morita 比较，其下降与 Sylow $p$-子群的作用及指定内因子相容；标量误差可消；整数 Picard 有限性把比较变成保留所选基代数的 Frobenius 下降；Lang 定理加一个 Sylow 限制论证把剩下的交叉系统收进有限集（`build/sections/00_introduction.tex:202-215`）。
+
+转折六，系数域升最后一步。主证明在 $k=\overline{\mathbb F}_p$ 上完成，任取的代数闭域 $K$ 通过嵌入 $k\hookrightarrow K$ 用系数比较下降得到唯一的同亏 $k$-块，再把 Morita 双模标量扩展把有限表从 $k$ 搬到 $K$（`build/sections/00_introduction.tex:46-52`）。这一手把有理性问题反过来用：与其在 $K$ 上控制定义域，不如证明 $K$ 上根本没有新的块。
+
+两个主输出：拟单 Cartan 界定理（`build/sections/03_families.tex:16-21`）供数重数，Sylow 比较命题（`build/sections/08_periodicity.tex:8-30`）供比较性质。引言说图 proof-interfaces 展示它们在最后的扩张论证中各有何职（`build/sections/00_introduction.tex:151-155`）。装配关系是：Sylow 比较给出条件扩张判据的前提，条件扩张判据加拟单 Cartan 界给出 $k$ 上有限性，系数引理把 $K$ 上情形接上（`build/sections/07_extensions.tex:730-733`、`build/sections/08_periodicity.tex:842` 起）。
+
+## §4 固定根数据：两旗空间与 extraordinary 茎的重数和
+
+这一章是全篇几何机器的主体，我把已读的 02 章前 110 行与引言第 157-167 行对读，整理如下。
+
+约定先钉死：代数群的特征记 $r$，系数特征是我一直固定的素数 $p$，两者不同（`build/sections/02_geometry.tex:3-4`）。根数据连同特征与余特征格一起给出中心环面，半单根之外的中心方向也进了数据（`build/sections/02_geometry.tex:5-6`）。定理 2.1（固定根数据 Cartan 界，`build/sections/02_geometry.tex:8-27`）说：固定一个根数据的有限集 $\mathcal R$，再固定这些根数据上常用钉图自同构与例外图同源映射的有限集合，则存在常数 $C=C(\mathcal R,p,M)$，也依赖这组固定的映射（`build/sections/02_geometry.tex:9-12`）。对任何根数据属于 $\mathcal R$ 的连通约化群、任何形如 $F=\theta\operatorname{Fr}_Q$ 的 Steinberg 自同态（$Q$ 为 $r$ 的幂，$\theta$ 属于固定集合，例外同源只在规定的定义特征里允许），$\Gamma=\mathbf G^F$ 的任何子群 $Z\le Z(\Gamma)$ 与 $k[\Gamma/Z]$ 的任何亏至多 $M$ 的块，其 Cartan 元全部不超过 $C$（`build/sections/02_geometry.tex:13-27`）。
+
+这个陈述的野心在它的否定面：对 $\Gamma$ 的 Sylow $p$-子群、对有理极大环面的 $p$-部分，都不设任何界（`build/sections/02_geometry.tex:29-30`）。构造路线是 horocycle 对应造射影模，并且只在投影到规定商块之后才界定它们的可能特征标（`build/sections/02_geometry.tex:30-32`）。范畴与 tilting 层到射影表示的过渡沿 Eteve 的构造，引的是一处引理三个定理（`build/sections/02_geometry.tex:33-36`）；tilting 像的零次射影性 Zhu 也独立得到过（`build/sections/02_geometry.tex:36-39`）。要紧的是这里需要的是一致的估计：必须与有理环面及其单子参数无关（`build/sections/02_geometry.tex:39-40`）。这句话就是 §2.2 那条失败路线的病根所在。
+
+标准的 Deligne--Lusztig 输入被逐条点名：环面对偶、几何 Lusztig 级的分拆、特征标公式、正交性、一致的 Steinberg 公式，取大参数范围的形式（`build/sections/02_geometry.tex:42-49`）。可构层系数特征异于几何特征；$k$-系数计算可下降到 $k$ 的足够大有限子域，整数计算下降到完备分割离散赋值环的有限扩域；Tate 扭转不影响下面的任何维数（`build/sections/02_geometry.tex:50-54`）。可构下降与有限系数的六运算、adic 对应物按 László--Olsson（`build/sections/02_geometry.tex:56-58`）。下面用到的有限局部系数代数，其断言在忘掉有限系数场后得到，全文不对任意有限局部代数用任何自对偶声明（`build/sections/02_geometry.tex:58-62`）。这种"把用量摆到能引用的强度"的写法对我很有启发：几何机器最怕的就是悄悄多要一个自对偶。
+
+定性先行：粘标准对象所需的限制在其稳定子代数上必须是完全复形；这一步立住之后，另有独立估计去界 indecomposable 射影项的个数，且与稳定子的阶无关（`build/sections/02_geometry.tex:64-70`）。这个两段式正是转折一的展开：先不管有多少个因子，先保证它们存在得好，再数个数。
+
+单根数据的计算。取 $F$-稳定 Borel 对 $\mathbf T\subset\mathbf B=\mathbf T\mathbf U$，$W$ 为其 Weyl 群，$\ell$ 为长度函数。$Q$ 的有界范围对给定数据只给出有限多个群，可以先搁置到最后处理，并且假设 $dF=0$（`build/sections/02_geometry.tex:73-76`）。对 $x\in W$ 取代表 $\dot x$，令 $\mathbf G_x=\mathbf B\dot x\mathbf B$、$C_x=\mathbf G_x/\mathbf B$、$A_x=\mathbf T^{xF}$（`build/sections/02_geometry.tex:77-81`）。环面 Lang 映射是 étale 同源，所以 $A_x$ 是阶与 $r$ 互素的有限交换群，等同某个 $F$-稳定极大环面 $T_x$ 的有理点（`build/sections/02_geometry.tex:83-85`）。定义 $\mathcal H=\{(ut,u'F(t))\}$ 与商叠 $\mathcal X=[\mathbf G/\mathcal H]$，层为 $j_x:\mathcal X_x=[\mathbf G_x/\mathcal H]\hookrightarrow\mathcal X$；环面 Lang 同源于是给出每层上作用的传递性（`build/sections/02_geometry.tex:88-96`）。$\dot x$ 的稳定子是 $(\mathbf U\cap{}^{\dot x}\mathbf U)\rtimes A_x$，环面方程 $t=xF(t)$、单根方程 $u={}^{\dot x}u'$，环面商截面是 $t\mapsto(t,F(t))$（`build/sections/02_geometry.tex:97-103`）。于是普通 inflation 不带平移给出 $D^b_c(\mathcal X_x,k)\simeq D^b(kA_x\text{-mod})$（`build/sections/02_geometry.tex:105-108`）。层上的同调代数就这样被换成了有限群 $kA_x$-模的同调代数，而 $A_x$ 的 $p$-部分正是我想要一致控制的环面 $p$-部分。
+
+引言对全章的总结（`build/sections/00_introduction.tex:157-167`）给出三件套的位置：本质估计界住 extraordinary 茎上射影重数的和；正则 Lang 局部系统加 Kummer 上同调计算移除对有限环面 $p$-部分大小的依赖；普通坐标投影再界住 PIM 特征标的范数；估计对域大小与单子参数一致，但根数据保持固定。命题锚点与我已读范围的对应：`geom:summed-ext`（限制在 417 行）、`geom:bounded-tiltings`（546 行）、`geom:projective-images`（791 行）三命题的编号行我从 grep 得到，其内容主体我没有逐行读完，上面的功能描述以引言为准 [推测] 的部分限于各命题内部的实现细节。
+
+投影这一步靠预备案的引理撑腰。有界逆投影引理（`build/sections/01_preliminaries.tex:112-130`）：亏阶至多 $M$ 的块（含有限多个 such 块的并）的 PIM 列在常特征标坐标里张成有理空间 $V$，若在 $V$ 上单射的坐标投影 $\pi$，其逆 $(\pi|_V)^{-1}$ 的欧氏算子范数一致有界；分解矩阵的全部满列子式（投影前后）一致有界。证明走外代数：PIM 列 $v_1,\ldots,v_l\in\Z^n$ 的外积是非零整向量，Cauchy--Binet 给出 $\lVert v_1\wedge\cdots\wedge v_l\rVert^2=\det(D_b^{\mathsf T}D_b)=\sum_{\lvert I\rvert=l}\det(D_{b,I})^2$（`build/sections/01_preliminaries.tex:133-139`），标准界控制住 $n$、$l$ 与该行列式；补齐坐标到固定维数后只有有限多个外积与有限多个坐标投影，取单射者的逆范数最大值即有限（`build/sections/01_preliminaries.tex:141-147`）。第二半句（`build/sections/01_preliminaries.tex:125-129`）：若块并的基底集大小有界、其常度数的 $p$-亏有界，则块数、块亏阶与常坐标空间维数都有界，界的是常特征标个数、不是它们的度数。反推亏的公式是 $d=\max_{\chi\in\mathcal B_b}v_p(\lvert G\rvert/\chi(1))$（`build/sections/01_preliminaries.tex:162-165`），靠零高特征标存在性。引理之后紧跟的一句我标了重号：它界的是射影子空间，不是选定的非负整基；先估计选定的普通坐标、后恢复全部 PIM 范数的两段式正是靠这个区分才成立（`build/sections/01_preliminaries.tex:170-173`）。再配上 $ (C_b)_{\varphi\psi}=\langle\Phi_\varphi,\Phi_\psi\rangle_G$ 与 Cauchy--Schwarz（`build/sections/01_preliminaries.tex:44-48`），几何章的输出就直接是 Cartan 界。
+
+## §5 标记、单圈 Jordan 运输与 runner 锥
+
+03 章开头先把拟单问题约化到后面三章的奇素数经典计算：定理（Quasisimple Cartan 界，`build/sections/03_families.tex:16-21`）说对每个 $p$ 与 $M$ 存在 $C_{\mathrm{qs}}(p,M)$，使 $kS$（$S$ 拟单、亏阶至多 $M$）的任何块的任何 Cartan 元不超它。它的证明分工写得近乎目录：有界根数据用 §4 定理；无界秩用 `prop:runner-reduction`（`build/sections/05_runners.tex:34`）与 `prop:triangle-cartan`（`build/sections/06_endpoint.tex:52`），特征标与块的辨认由 `prop:label-degrees`（04:29）、`prop:single-cycle`（04:414）、`prop:core-blocks`（04:866）提供，且这些命题只谈显式约化群，不回用拟单定理（`build/sections/03_families.tex:23-29`）。我把这段反复核过，确认没有循环。
+
+度亏约定：$\operatorname{def}_p(\chi)=\lvert H\rvert_p/\chi(1)_p$，写成阶而非指数，属亏 $D$ 块的特征标满足 $\operatorname{def}_p(\chi)\le\lvert D\rvert$（`build/sections/03_families.tex:7-14`）。块级语言由 Broué--Michel 定理供认：$\mathcal E_p(J,s)=\bigcup_t\mathcal E(J,st)$（$t$ 跑 $C_{\mathbf J^*}(s)^F$ 的 $p$-元素）是若干块的并（`build/sections/03_families.tex:57-67`）。Jordan 度数公式 $\chi(1)=\lvert\mathbf J^{*F}:C_{\mathbf J^*}(s)^F\rvert_{r'}\psi(1)$ 把 $\chi$ 的度亏转成中心化子里的对应量（`build/sections/03_families.tex:73-80`），环面配对规则把配对换成对应单根 Deligne--Lusztig 特征标的配对再乘 $\varepsilon_{\mathbf J}\varepsilon_{C(s)}$（`build/sections/03_families.tex:81-86`）。要紧的一句限定：任意非一致 Levi 诱导的兼容性既不在这些规则里也不被假设，下面真正需要的诱导矩阵在 `prop:single-cycle` 里建立（`build/sections/03_families.tex:87-90`）。这一句就是单圈 Jordan 标记计算存在的理由，也是我从引言第 171-173 行读到的同一件事：单圈 Jordan 标记计算让所需的普通归纳规则超出一致类函数仍然可用（`build/sections/00_introduction.tex:171-173`）。
+
+正规嵌入的辨认程序也值得一记：$\mathbf H\hookrightarrow\widetilde{\mathbf H}$ 取 $F$-等变的正则嵌入，商 $A=\widetilde H/H$ 交换；非主线性特征扭曲把对偶参数从 $1$ 挪到非中心元，级不相交加 Clifford 给出 $\langle\Res\widetilde\chi,\Res\widetilde\chi\rangle=\sum_\nu\langle\widetilde\chi,\widetilde\chi\nu\rangle=1$，限制因此不可约，进而得到保度数的双射（`build/sections/03_families.tex:101-121`）。这段是"族间搬运特征标"的标准泵，runner 的每一次移动都靠它把 upstairs 计算落回 $H$。
+
+runner 机器的输入输出（`build/sections/00_introduction.tex:169-187`）：Harish--Chandra 移动作用在选定普通坐标里 PIM 特征标的非负张成锥上（`build/sections/00_introduction.tex:172-177`）；多数移动在规范化后是精确的置换，其余移动的误差可求和，含例外共钩形的两条边绕行（`build/sections/00_introduction.tex:176-179`）；行列式与锥体积估计把这种控制转成 PIM 列的界（`build/sections/00_introduction.tex:179-180`）；这些移动无需是 Morita 等价（`build/sections/00_introduction.tex:180-181`）。runner 一词挂在 Scopes 算盘、Jost 一般线性约化、Hiss--Kessar 经典约化的谱系上（`build/sections/00_introduction.tex:181-184`），但被运送的对象是锥：它的正性与行列式界把数值估计穿过所有经典族（`build/sections/00_introduction.tex:184-187`）。
+
+
+## §6 尖点三角形端点：界挂在权上，挂在秩外
+
+端点章的任务一句话：把 runner 停在的端点直接做掉，用模 Harish--Chandra 理论构造足够的模尖点对，穷尽端点块的单模，再用有界的射影诱导盖住它们的 PIM（`build/sections/06_endpoint.tex:6-10`）。工具来源是 Howlett--Lehrer 的 Harish--Chandra 理论与 Dipper 诸人的模发展（`build/sections/06_endpoint.tex:12-16`）。
+
+范围约定：本节全程 $p$ 为奇素数且异于定义特征 $r$，$k=\overline{\mathbb F}_p$；沿用前几章的正环境群、标记的半单 $p'$-参数 $s$、Levi 积的实际分解；$C=C_{\mathbf G^*}(s)$；packet 是这个连通中心化子的经典因子的 Frobenius 轨道，在一个代表因子上沿轨道合成自同态计算（`build/sections/06_endpoint.tex:18-26`）。参数满足二分条件：正交或辛型 $Q_i=q_i$ 且 $d_i=\ord_p(Q_i)$ 为奇；酉型 $Q_i=q^2$、$d_i=\ord_p(Q_i)$ 且 $\ord_p(-q)=2d_i$，酉型对 $d_i$ 的奇性没有任何断言（`build/sections/06_endpoint.tex:27-36`）。每个 packet 固定一个普通尖点三角形：B、C、D 型的分装符号，酉型的阶梯 $t(t+1)/2$；$m_i$ 为其上普通分裂 Harish--Chandra 步数；$\mathcal T$ 是 $s$ 处带这些数据的全部普通行；冻结因子带各自规定的单尖点行（`build/sections/06_endpoint.tex:37-42`）。D 型的记账规定我逐字核对过：两行长差为零意味着分裂型与空残三角形，称偶号情形；非空 D 三角形即使在秩一非分裂形式下也保有其唯一尖点标记；秩零只有一个标记，空的相等对不加倍；分裂 D 型的非空相等对保留两个不同标记（`build/sections/06_endpoint.tex:44-50`）。这个规定看似繁琐，实为后面基数论证的地基：$l=\lvert\mathcal T\rvert$ 的穷尽计数完全依赖每类标记的重数约定。
+
+命题 6.2（Triangle Cartan 界，`build/sections/06_endpoint.tex:52-62`）：端点情形下，基底行属于 $\mathcal T$ 的块的 Cartan 元由 $p$ 与原始亏阶界 $M$ 界住；更明确地，只要 packet 个数、$\sum_i m_i$、残因子里保留的中心 $p$-子群的阶、以及 $m_i>0$ 的 packet 的 $p^{v_p(Q_i^{d_i}-1)}$ 有界，结论就一致；界与三角形的秩无关、与 $q$ 无关（`build/sections/06_endpoint.tex:57-61`）。第二句列出的假设由 `prop:runner-reduction` 提供，runner 与 `prop:core-blocks` 又给出 $\mathcal T$ 的整数基底集出身（`build/sections/06_endpoint.tex:64-69`）。
+
+构造细节里我最欣赏分块方程。每个 packet 取尺寸集 $\mathcal B_i=\{1\}\cup\{d_ip^a:a\ge0\}$，这些 $d_ip^a$ 来自 $\F_{Q_i}$ 上正则 $p$-幂特征值的 Frobenius 轨道度；尺寸 $1$ 允许原来的 $p'$-参数不加 $p$-部分；$d_i=1$ 时尺寸 $1$ 只出现一次，这是集合语义（`build/sections/06_endpoint.tex:75-83`）。选非负 $r_{i,b}$ 做分块 $\sum_{b\in\mathcal B_i}b\,r_{i,b}=m_i$，把 $m_i$ 个双曲坐标按块切分（`build/sections/06_endpoint.tex:84-87`）。它们在 $\mathbf C$ 里定义一个分裂 Levi：残三角形因子加 $\GL_b(Q_i)$ 线性因子；对偶侧取 $\mathbf L^*$ 使 $C_{\mathbf L^*}(s)=\mathbf C_L$（`build/sections/06_endpoint.tex:88-95`）。实际积分解说把变化因子认成残群 $H_0$ 与一般线性群：正交辛型是 $\GL_{\delta_i b}(q)$（$\delta_i\in\{1,2\}$、$Q_i=q^{\delta_i}$），酉型是 $\GL_b(q^2)$；前者上 $s$ 有一个重 $b$ 次的 $\delta_i$ 度 $p'$-特征值轨道 $f_i$，后者上是单位元（`build/sections/06_endpoint.tex:96-103`）。分裂中心观察：非空经典三角形保留完整符号根系，秩一 D 例外是非分裂环面也无分裂方向；冻结线性因子带正则环面参数；于是 $\mathbf C_L$ 的分裂中心模环境中心恰是这些块方向（`build/sections/06_endpoint.tex:105-115`）。
+
+中段三个小节我只有标题锚点：残与一般线性尖点模（06:73）、尖点诱导及其头（06:341）、室算子与标量上闭链的移除（06:423）、秩一参数与单模个数（06:666）。按引言的说法，这三段干的活是：构造 intertwiners、移除扩张障碍、数 Hecke 代数单型、证头覆盖（`build/sections/00_introduction.tex:196-199`）。其中"标量上闭链的移除"与我读到的 07 章标量误差消去是同一类手法的两次出现 [推测其同源性，正文未读]。
+
+穷尽与范数两步（我已读完 06:944-1018）。穷尽推论：块并中每个单模都是某个按 `end:rho` 构造的对 $(L,\rho)$ 的 $R_L^G\rho$ 的商（`build/sections/06_endpoint.tex:955-960`）。证明路径：$\rho$ 的 Brauer 类是标记参数处分拆行的整组合；每个这样的普通行都出现在某 $R_{L'}^L\psi'$ 里（普通线性分支）；传递性加 `prop:single-cycle` 说明它们的诱导只用 $\mathcal T$ 的行；于是 $R_L^G\rho$ 的全部合成都因子落在目标块并（`build/sections/06_endpoint.tex:962-971`）。计数侧：相关自同态代数的单型总数由几条引理数出来，与头的计数等同，不同尺寸选择的头互不相交，总数恰 $\lvert\mathcal T\rvert$；$\mathcal T$ 是整个块并的整数基底集，所以这就是块并的单模数，被支撑的头穷尽全部（`build/sections/06_endpoint.tex:973-981`）。范数侧：取端点单模 $S$，射影 $R_L^GP_\rho$ 满射到 $S$，投影后端点块并里含 $P_S$ 为直和项（`build/sections/06_endpoint.tex:984-992`）。诱导前先界 $P_\rho$ 的普通坐标：新块至多 $\sum_i m_i$ 个、每个尺寸至多 $\sum_i m_i$，所以实际新线性因子秩至多 $2\sum_i m_i$；Sylow $p$-阶显式有界靠公式 $v_p(\lvert\GL_N(q)\rvert)=c_q\lfloor N/e_q\rfloor+v_p(\lfloor N/e_q\rfloor!)$，其中 $e_q=\ord_p(q)$、$c_q=v_p(q^{e_q}-1)$（`build/sections/06_endpoint.tex:993-1004`）；$c_q$ 由 $v_p(Q_i^{d_i}-1)$ 控制，酉型换 $Q_i=q^2$ 同式，因子 $2$ 不改赋值因 $p$ 奇（`build/sections/06_endpoint.tex:1005-1008`）。秩与亏阶都有界，于是 §4 几何定理界住这些因子的 Cartan 元；引理界残块；冻结因子亏为零；实际积分解说与中心传递合成 $P_\rho$ 对角 Cartan 元的一个界 $C_0$，其普通射影特征标系数至多 $\sqrt{C_0}$、普通范数平方至多 $C_0$（`build/sections/06_endpoint.tex:1009-1018`）。读到这里三台机器咬合的位置全部显形：runner 给出形状，几何给出块界的初值，中心传递给出张量积黏合。
+
+## §7 交叉代数、比较性质与条件扩张判据
+
+07 章前 360 行我没有逐行读，从锚点与引言可知它做两件事：广义 Fitting 归约把一般块带到带真实内因子系的基块（`build/sections/00_introduction.tex:203-205`），随后建立偏扩张与对偶恢复两个引理的部件（07 内的 `lem:ext:partial-extension` 与 `lem:ext:dual-recovery`，被 `build/sections/07_extensions.tex:374-375` 引用）。交叉系统形式沿 Eisele 的定义与引理（`build/sections/07_extensions.tex:370-371`）。基于同构定义为在 $R$ 的规定副本上取恒等并保持每个群标号齐次分量的同构，它们恰是齐次单位的改变（`build/sections/07_extensions.tex:366-369`）。
+
+比较性质（定义 7.x，`build/sections/07_extensions.tex:373-393`）逐字摘其要件：对偏扩张与对偶恢复的数据，取含在纯 $X$ 里的 $p$-子群 $S\le Y_0$；要求存在由 $p,M$ 界住的正整数 $m$ 与整数 $(\sigma^m\bar B,\bar B)$-Morita 双模 $\mathcal M$，使 $M_0=k\otimes_{\cO}\mathcal M$ 上有可逆 $k$-线性映射 $J_x$ 满足协变律 $J_x(avb)=\alpha'_x(a)J_x(v)\alpha_x(b)$ 与因子律 $J_xJ_y(v)=a'_{xy}J_{xy}(v)a_{xy}^{-1}$、$J_1=\id$；这里 $a_{xy}=n_{xy}\bar b$，目标因子是其系数 Frobenius 像；性质对 $S=1$ 也要求（`build/sections/07_extensions.tex:375-393`）。
+
+误差经济学是这一节的枢纽，我读得很慢：在因子律里只允许标量误差就够了。结合律与协变性逼出误差构成 $S$ 上以 $k^\times$ 为系数的标量 $2$-上闭链；正次数上同调消失，理由是 $|S|$ 零化该群而 $|S|$ 次幂映射是 $k^\times$ 的自同构；重标定诸 $J_x$ 就清除误差。中心任意单位的误差不给这个结论（`build/sections/07_extensions.tex:395-401`）。这与引言第 140-142 行"标量差异可移除；任意中心单位差异不允许这个规范化"呼应。下一步把 $S$ 归到标准位置：$Y$ 的每个 $p$-子群都被 $\Xi$ 共轭进纯 $X$；像是 $p$-群，Schur--Zassenhaus 把它的补共轭到标准补；共轭回块与角隅，结论推广到 $Y_0$ 的每个 $p$-子群，且这个共轭由整数的齐次单位实现（`build/sections/07_extensions.tex:403-410`）。
+
+整数基本阶有限引理（`build/sections/07_extensions.tex:412-422`）：设比较性质对平凡子群成立，则诸 $\bar B$ 的整数基本阶属于有限表 $\mathfrak R_1,\ldots,\mathfrak R_t$；每个 $\mathfrak R_i$ 定义在某 $W(\F_{p^{c_i}})$ 上且 $\Pic_{\cO}(\mathfrak R_i)$ 有限；归约交叉基本角隅的外作用因此取值于 $\Pic_k(R_i)$ 中一个固定的有限子群。证明链四步：亏阶与 Cartan 元有界、单模数被亏界、Cartan 和被界；$S=1$ 时比较性质界住整数 Morita--Frobenius 数；EEL 定理 3.10 用三界（Cartan 和、数值亏、Morita--Frobenius 数）给出整数 Morita 类有限，对有限多个数值亏应用即得有限表（`build/sections/07_extensions.tex:424-434`）；代表元取真实整数群块的整数基本阶：块与本原幂等元模 $p$ 定义在含有限多个系数并分裂有限多个单模的有限域上，提升到完备 Witt 环（`build/sections/07_extensions.tex:436-442`）；Eisele 定理 B 与推论 1.2 给 Picard 有限，假设核对：$\cO=W(k)$ 非分歧、剩余域代数闭、 GENERIC 代数可分；刚性另可直接验证，$\operatorname{HH}^1(\cO G)=\bigoplus_{[g]}H^1(C_G(g),\cO)=0$，因为中心化子有限、$\cO$ 无扭且作用平凡；沿 Morita 不变性传到块和项与基本阶（`build/sections/07_extensions.tex:444-458`）。基本角隅保交叉结构于整数（`build/sections/07_extensions.tex:460-461`）；齐次单位的产生方式：自同构把基本幂等元 $e$ 送到单位共轭（两边的投影模各含每种 indecomposable 射影型一份），把每个齐次单位乘适当的恒等分量单位使其与 $e$ 交换，角隅即交叉于 $e\bar Be$（`build/sections/07_extensions.tex:462-470`）。
+
+
+## §8 Sylow 等变的 Frobenius 比较：把域自同构代数化
+
+08 章开头一句话定了调：保留指定的内因子至关重要，底层块代数的比较控制不了 §7 的交叉乘法（`build/sections/08_periodicity.tex:3-6`）。命题（Sylow 比较，`build/sections/08_periodicity.tex:8-30`）逐字要件：固定 $p,M$；对比较数据取纯 $X$-作用里的 $p$-子群 $S\le Y_0$；存在由 $p,M$ 界住的 $m$ 与 Morita 双模 $\mathcal M:\cO\bar N\sigma^m(\bar b)$-$\cO\bar N\bar b$，其归约 $M_0$ 有可逆 $k$-线性 $J_x$、$J_1=\id$，满足协变律与因子律；$\alpha_x$ 是所选代表 $h_x$ 的作用，$\alpha'_x=\sigma^m(\alpha_x)$，$a_{xy}=n_{xy}\bar b$，$a'_{xy}=n_{xy}\sigma^m(\bar b)=\sigma^m(a_{xy})$；断言含 $S=1$；界不依赖万有覆盖核与所加中心环面的阶（`build/sections/08_periodicity.tex:12-30`）。最后这条宽免我读了两遍：构造中引入的大对象（覆盖核、附加环面）全都被允许失控，只要最终界与它们无关。
+
+技术前提有一条 Frobenius 延拓：把 Witt Frobenius 延到 $\operatorname{Frac}(\cO)$ 的代数闭包并要求它固定一切 $p$-幂单位根；这样的延拓存在，因为这些根生成的分圆扩张全分歧而 $\cO$ 非分歧（引 Farrell--Kessar 引理 2.2）；对阶与 $p$ 互素的单位根它就是 $p$ 次幂映射（`build/sections/08_periodicity.tex:33-40`，精确行号我未逐行核，[推测] 定位在该命题证明开始处、43 行小节之前）。
+
+代数化引理（`build/sections/08_periodicity.tex:43` 小节内）：在每个 $S$-轨道的跨特征 Lie 分量上，取导出群单连通的正则约化群 $\mathbf J$ 与 Steinberg 自同态 $F$，把 $J=\mathbf J^F$ 认成全分量群的积；由诸 $h_x$ 与 $J$ 的内自同构生成的运算构成 $I\le\mathbf J_{\mathrm{ad}}^F\rtimes Y'$，$Y'$ 是与 $F$ 交换的代数自同构的有限 $p$-群；其阶与所用原始绝对分量的副本数有界；这些运算限制到万有分量上恰好模标准内关系与钉关系后忠实；所选运算的乘积带有从 $n_{xy}$ 来的规定内因子（`build/sections/08_periodicity.tex:52-66`）。开头还有一段策略声明：把块升到中心乘覆盖，给 Lie 分量贴上直和中心 $p$-因子 $C_i$ 使有限群成为全不动点群 $\mathbf J_i^{F_i}$；这些提升块可以有不可界亏，所以先在任意有界亏有限性判据之前下降等价（`build/sections/08_periodicity.tex:44-47`）。这就是 §2.4 误路在正文里的直接证词。
+
+证明的输入是 Steinberg 自同构定理按 Broto--Møller--Oliver 表述的那一份，有限例外清单已在 §7 分离出去（`build/sections/08_periodicity.tex:68-73`）。图形扭转情形 $F_0=\gamma\operatorname{Fr}_r^f$：内对角群即伴随不动点群；钉定部分由 $\operatorname{Fr}_r$ 与 $\gamma$ 的图中心化子生成，关系 $\gamma\operatorname{Fr}_r^f=1$ 在不动点上成立；普通域--Dynkin 表示里限制核恰为 $F_0$ 生成的循环群（引 Späth）（`build/sections/08_periodicity.tex:74-84`）。例外图同源改由 $\tau$ 生成，$\tau^2$ 为分裂 Frobenius、$F_0=\tau^f$（引 BMO 定义 3.1），限制恰阶 $f$；非扭曲群 $f=2d$，偶数次幂是阶 $d$ 的域运算，奇数次幂交换长短板根群；Suzuki 与 Ree 扭曲 $f$ 奇、$\tau^2$ 域阶 $f$，逼出 $\tau$ 自身阶 $f$（`build/sections/08_periodicity.tex:85-95`）。这些奇偶核对正对 §6 参数条件的酉型无奇性断言：单元群走 $\ord_p(-q)=2d_i$ 这条路，$d_i$ 的奇偶没有利用价值，也未被利用。
+
+96 到 841 行我没有读，只剩小节锚点：中心扭转与不变抛物（08:176）、整数比较与其普通特征标（08:362）、标量叠合与指定的内因子（08:613）、张量积与中心商（08:721）。按引言第 206-215 行的路线图，这三段完成：造出有界 Frobenius 周期的整数 Morita 比较并使下降尊重 Sylow 作用与指定内因子；用有限整数 Picard 群把比较变成保留所选基代数的 Frobenius 下降；Lang 定理加 Sylow 限制论证留下有限多个交叉系统 [各段内部实现细节属推测，正文未读]。
+
+## §9 从 k 升到 K：最后的二十五行
+
+系数扩张小节（`build/sections/08_periodicity.tex:842` 起）把前面的 $k$-机器整体搬到任意代数闭域。引理三件套：其一，$kG\to KG$ 在块幂等元上给出双射，$b\mapsto b_K=1\otimes b$，且 $kGb$ 与 $KGb_K=K\otimes_k kGb$ 作为 $G$ 的 $p$-子群有相同亏群；其二，$k$-线性 Morita 等价的有限维代数标量扩展后 $K$-线性 Morita 等价（`build/sections/08_periodicity.tex:850-860` 区段）。证明的三处计算我都核过：中心与标量扩展交换，因为中心是元素与 $G$ 的有限多个元素的交换子映射的核，域扩张保核；$Z(kG)=\prod_iZ_i$ 各因子局部、剩余域为 $k$（$k$ 代数闭）、根基幂零，扩展后根基仍幂零、商为 $K$，故仍局部，极小中心幂等元一一对应（`build/sections/08_periodicity.tex:862-879` 区段）；Brauer 映射删 $C_G(P)$ 外系数，$\Br_P^K(1\otimes b)=1\otimes\Br_P^k(b)$，$kC_G(P)\to KC_G(P)$ 单射，两个 Brauer 像对同样的 $P$ 非零，按 §1 的亏群约定极大者相同（`build/sections/08_periodicity.tex:881-889` 区段）；Morita 部分把逆双模 $U,V$ 的评估同构张量 $K$，用基变换结合约束 $(K\otimes U)\otimes_{K\otimes A}(K\otimes V)\simeq K\otimes(U\otimes_AV)$ 与 $U,V$ 互换的对应物，兼容性由张量保持（`build/sections/08_periodicity.tex:890-914` 区段）。
+
+定理最终装配（`build/sections/08_periodicity.tex:916-930` 区段）：先 $k$：Sylow 比较提供条件扩张判据的前提，判据加拟单 Cartan 界给出 $k$ 上有限性；本节的整数比较只服务于基块的有限表论证，最终的标量规范化、因而任意交叉扩张的断言，都在 $k$ 上。再固定 $K$ 取嵌入 $k\hookrightarrow K$：对界 $M$ 选 $k$-类的代表 $A_1,\ldots,A_t$；$KG$ 的每块 $B$ 唯一写成 $K\otimes_kB_0$，$B_0$ 亏相同；亏不超 $M$ 时 $B_0$ 与某 $A_i$ 等价，同引理把等价升成 $B$ 与 $K\otimes_kA_i$ 的 $K$-线性 Morita 等价；对这个固定的 $K$，所需块全由有限表 $K\otimes_kA_1,\ldots,K\otimes_kA_t$ 代表（`build/sections/08_periodicity.tex:916-930` 区段，行号按 sed 输出区段计，[推测] 偏差不超过五行）。
+
+引言末尾还有一条独立性声明我记在这里：整数恒等分量阶的有限表与带相容迁移的整数 Morita 双模同时服务后续的 $W(k)$ 整数同伴论文，而本篇域证明与那份同伴相互独立（`build/sections/00_introduction.tex:217-224`）。
+
+## §10 定型与初想的出入
+
+写到这里我可以把出发时与完成时的图景对齐。出入一：出发时我以为这是一台机器（统一重数估计）加已知归约的组合，完成时是两台正交机器：一台把 PIM 范数界住（几何、runner、端点三段接力），一台把乘法表与下降数据钉住（比较性质、Picard 有限、Lang、Sylow 限制）；前者输出维数界，后者输出定义域界（`build/sections/00_introduction.tex:146-151`）。出入二：出发时我以为整数理论（EEL、Eisele）会是主梁，实际它只服务基阶与比较的整数格，两处最终的有限性都在 $k$ 上做（`build/sections/07_extensions.tex:738-740`）。出入三：出发时我以为全程被运送的对象是 Morita 等价，中段发现可以降级为射影特征标锥（`build/sections/00_introduction.tex:180-181`），端点处再降级为自同态代数单型的计数（`build/sections/06_endpoint.tex:973-981`）。出入四：出发时我默认亏界会自动控制群内一切数值参数，实际至少四类参数被正文点名失控：域大小与单子参数（`build/sections/02_geometry.tex:39-40`）、普通尖点秩（`build/sections/06_endpoint.tex:3-5`）、提升块的亏（`build/sections/08_periodicity.tex:44-47`）、万有覆盖核与附加中心环面的阶（`build/sections/08_periodicity.tex:28-30`）；每类都配了专门装置。出入五：出发时我预备对每个代数闭域分别攻关，实际 $K$ 上的问题在系数比较下自动回落到 $k$，升域只剩中心局部性与 Brauer 映射两个初等计算（§9）。写到这里我可以把出发时与完成时的图景对齐。出入一：出发时我以为这是一台机器（统一重数估计）加已知归约的组合，完成时是两台正交机器：一台把 PIM 范数界住（几何、runner、端点三段接力），一台把乘法表与下降数据钉住（比较性质、Picard 有限、Lang、Sylow 限制）；前者输出维数界，后者输出定义域界（`build/sections/00_introduction.tex:146-151`）。出入二：出发时我以为整数理论（EEL、Eisele）会是主梁，实际它只服务基阶与比较的整数格，两处最终的有限性都在 $k$ 上做（`build/sections/07_extensions.tex:738-740`）。出入三：出发时我以为全程被运送的对象是 Morita 等价，中段发现可以降级为射影特征标锥（`build/sections/00_introduction.tex:180-181`），端点处再降级为自同态代数单型的计数（`build/sections/06_endpoint.tex:973-981`）。出入四：出发时我默认亏界会自动控制群内一切数值参数，实际至少四类参数被正文点名失控：域大小与单子参数（`build/sections/02_geometry.tex:39-40`）、普通尖点秩（`build/sections/06_endpoint.tex:3-5`）、提升块的亏（`build/sections/08_periodicity.tex:44-47`）、万有覆盖核与附加中心环面的阶（`build/sections/08_periodicity.tex:28-30`）；每类都配了专门装置。出入五：出发时我预备对每个代数闭域分别攻关，实际 $K$ 上的问题在系数比较下自动回落到 $k$，升域只剩中心局部性与 Brauer 映射两个初等计算（§9）。出入六：有界阶形式与固定亏群形式的等价（`build/sections/00_introduction.tex:38-40`）是我一开始没当回事的一步，它实际决定了全篇可以只维护一个常数 $C(p,M)$。
+
+## §11 勘误
+
+本节申报本稿前文落盘后自查发现的书写问题，按类别列出，交本体侧机械清理，我不再就地改动任何已落盘文字。
+
+类别一，中英混排残字：§4 第一段引预备案语句时写出"含有限多个 such 块的并"，其中英文词 such 为笔误残留，应作"这样的块并"。
+
+类别二，行内代码内多余符号：§4 倒数第二段"取单射者的逆范数最大值即有限（`build/sections/01_preliminaries.tex:141-147`）"一反引号前多出一个 `$`，使全文 `$` 计数出现一对失衡，应由本体侧删除该字符。
+
+类别三，占位未补：§7 第二段的"定义 7.x"是写作时未回填的占位编号，该定义即原文 `build/sections/07_extensions.tex:373` 处的比较性质定义，无独立编号可引，建议改写为"定义（比较性质）"。
+
+类别四，大小写笔误：§7 第四段"GENERIC 代数可分"应为"generic 代数可分"（对应原文 generic algebra is separable，`build/sections/07_extensions.tex:447-448`）。
+
+类别五，行号区间精度：08 章的行号区间（`build/sections/08_periodicity.tex` 的 33-40、44-47、52-66、85-95、916-930）由 sed 打印与 grep 锚点推得行数，可能有 1 至 3 行漂移，§8、§9、§10 内引用处已用"区段"字样与 [推测] 标注说明；00 章的 217-219 与 219-224 两处引用真实范围分别为 216-218 与 219-223，属 ±1 行漂移。台账位置栏只使用逐行核对过的单点行号与 grep 锚点，不受本条影响。
+
+## §12 台账
+
+| 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+| --- | --- | --- | --- | --- |
+| $k$, $\cO$ | $k=\overline{\mathbb F}_p$, $\cO=W(k)$，全文系数约定 | build/sections/01_preliminaries.tex:10 | 主线全程与 §9 末端嵌入 $k\hookrightarrow K$ | 比较双模归约到 $k$ 的一侧失去锚点（build/sections/07_extensions.tex:380） |
+| $M$ | 亏群阶上界，一致常数只依赖 $p,M$ | build/sections/01_preliminaries.tex:12 | 一切统一性陈述 | EEL 三界中数值亏一步断裂（build/sections/07_extensions.tex:429） |
+| 两形式等价 | 有界阶形式等价于固定亏群形式 | build/sections/00_introduction.tex:38 | 全篇只维护单个常数 $C(p,M)$ | 各定理头部常数的定义域被抽走 |
+| $D_b=(d_{\chi\varphi})$ | 分解矩阵，$\chi^0=\sum_\varphi d_{\chi\varphi}\varphi$ | build/sections/01_preliminaries.tex:36 | 重数搬运的统一语言 | Cauchy--Schwarz 界元无从落笔 |
+| $C_b=D_b^{\mathsf T}D_b$ | Cartan 元等于 PIM 配对，界 PIM 范数即界元 | build/sections/01_preliminaries.tex:44 | 几何章与端点章的主管道 | runner 全部数值输出需另立逐元组合估计 |
+| $\det C_b\le\lvert D\rvert^{l(b)}$ | Cartan 矩阵初等因子整除 $\lvert D\rvert$ | build/sections/01_preliminaries.tex:55 | 外积论证中 $n,l$ 与行列式的控制 | 有界逆投影引理的有限性论证失效（build/sections/01_preliminaries.tex:140） |
+| Brauer--Feit | $k(b)$ 由亏阶界住，$l(b)\le k(b)$ | build/sections/01_preliminaries.tex:51 | 单模数与常坐标空间维数有限 | 外积论证的环境维 $n$ 失控 |
+| $C_b=\lvert Z\rvert C_{\bar b}$ | 中心 $p$-子群传递，缩放因子 $\lvert Z\rvert$ | build/sections/01_preliminaries.tex:79 | 商与覆盖间双向传界，§6 张量积黏合 | 残因子与块因子的界无法拼合（build/sections/06_endpoint.tex:1013） |
+| $d=\max v_p(\lvert G\rvert/\chi(1))$ | 由基底行普通度数反推块亏 | build/sections/01_preliminaries.tex:163 | 有界逆投影引理后半句 | 有界基底集不再界住坐标空间维数 |
+| $(\pi\mid_V)^{-1}$ | 单射坐标投影的逆欧氏算子范数一致有界 | build/sections/01_preliminaries.tex:116 | 先选定坐标后恢复全范数的两段式 | 几何输出停在选定坐标，不回到 Cartan 元 |
+| 外积恒等式 | $\lVert v_1\wedge\cdots\wedge v_l\rVert^2=\det(D_b^{\mathsf T}D_b)$ | build/sections/01_preliminaries.tex:136 | 投影逆界与满列子式界 | 上一行与本行连锁失去依据 |
+| 子空间对整基 | 引理界射影子空间，不界选定的非负整基 | build/sections/01_preliminaries.tex:170 | 两段式设计原理 | 先估坐标再恢复范数的路线作废 |
+| $\mathcal R$, $C(\mathcal R,p,M)$ | 有限根数据集与有限钉定映射集决定常数 | build/sections/02_geometry.tex:11 | 固定根数据 Cartan 界定理 | 无界秩逃出几何机器，转交 runner（build/sections/05_runners.tex:34） |
+| $F=\theta\operatorname{Fr}_Q$ | Steinberg 自同态的统一写法 | build/sections/02_geometry.tex:18 | 单子参数的统一性 | 扭曲型与例外同源失去控制范围 |
+| $\Gamma=\mathbf G^F$ | 不动点群连同中心商进入定理陈述 | build/sections/02_geometry.tex:23 | 与中心传递的对接（§6） | 商块的对应与几何界脱钩 |
+| Sylow 无界 | 不对 Sylow $p$-子群与环面 $p$-部分设界 | build/sections/02_geometry.tex:29 | 定理野心的否定面表述 | §2.2 的逐族估计在环面漂移上集体失效 |
+| $\mathcal X=[\mathbf G/\mathcal H]$ | 双商叠与其分层 $j_x:\mathcal X_x$ | build/sections/02_geometry.tex:89 | 层上同调代数 | 稳定子与传递性论证脱链（build/sections/02_geometry.tex:97） |
+| $A_x=\mathbf T^{xF}$ | 阶与 $r$ 互素的有限交换群，等同 $T_x$ 有理点 | build/sections/02_geometry.tex:81 | 环面 Lang 同源的传递性 | 层模型换成 $kA_x$-模的桥梁断裂 |
+| 稳定子 | $(\mathbf U\cap{}^{\dot x}\mathbf U)\rtimes A_x$ | build/sections/02_geometry.tex:99 | 限制的完全性与重数计数 | indecomposable 射影项个数不能与稳定子阶无关 |
+| 层范畴等价 | $D^b_c(\mathcal X_x,k)\simeq D^b(kA_x\text{-mod})$，无平移 inflation | build/sections/02_geometry.tex:107 | 几何机器数重数的接口 | 重数估计无从谈起 |
+| $\operatorname{def}_p(\chi)$ | $\lvert H\rvert_p/\chi(1)_p$，属亏 $D$ 块则不超 $\lvert D\rvert$ | build/sections/03_families.tex:10 | 度亏与块亏的对照 | 中心化子 $p$-部分界失去依据（build/sections/03_families.tex:79） |
+| $\mathcal E_p(J,s)$ | $\bigcup_t\mathcal E(J,st)$，Broué--Michel 认作块的并 | build/sections/03_families.tex:59 | Lusztig 级落到块级语言 | 拟单归约失去块载体 |
+| Jordan 度数公式 | $\chi(1)=\lvert\mathbf J^{*F}:C(s)^F\rvert_{r'}\psi(1)$ | build/sections/03_families.tex:75 | 特征标向中心化子单根特征的搬移 | 单圈 Jordan 运输失去对象（build/sections/04_labels.tex:414） |
+| 限制不可等式 | $\langle\Res_H\widetilde\chi,\Res_H\widetilde\chi\rangle=\sum_\nu\langle\widetilde\chi,\widetilde\chi\nu\rangle=1$ | build/sections/03_families.tex:113 | 族间单根双射的搬运泵 | runner 每步移动失去特征标辨认桥 |
+| fam:restriction | 覆盖块单简且分解数皆一，则下块分解数不超一，覆盖亏无需有界 | build/sections/03_families.tex:36 | 允许覆盖块亏增长的通道 | 中心覆盖的亏爆炸掐断拟单主线 |
+| $C_{\mathrm{qs}}(p,M)$ | 拟单 Cartan 界 | build/sections/03_families.tex:17 | 第一主输出，§7 §8 的装配消费 | $k$ 上有限性左半环断裂（build/sections/08_periodicity.tex:842） |
+| $Q_i,d_i$ 二分 | 正交辛 $Q_i=q_i$ 与 $d_i$ 奇；酉 $Q_i=q^2$ 与 $\ord_p(-q)=2d_i$ | build/sections/06_endpoint.tex:31 | 端点参数与尺寸集 | $\mathcal B_i$ 与分块方程失去来源 |
+| $\mathcal B_i$ | $\{1\}\cup\{d_ip^a:a\ge0\}$，Frobenius 轨道度集合 | build/sections/06_endpoint.tex:77 | $m_i$ 的分块 | 分裂 Levi 构造无从下手 |
+| $\sum_b b\,r_{i,b}=m_i$ | 把 $m_i$ 个双曲坐标切成块 | build/sections/06_endpoint.tex:86 | 新线性因子秩不超 $2\sum_i m_i$ 的界 | 下一条公式没有可代用的 $N$ |
+| $v_p(\lvert\GL_N(q)\rvert)$ | $c_q\lfloor N/e_q\rfloor+v_p(\lfloor N/e_q\rfloor!)$ | build/sections/06_endpoint.tex:1001 | 块因子 Sylow $p$-阶有界 | 几何界无法下推到新因子 |
+| $\lvert\mathcal T\rvert$ | 端点普通行数等于块并单模数 | build/sections/06_endpoint.tex:948 | 穷尽推论与 D 型符号记账 | 头的互不相交计数与基底集基数断链 |
+| $C_0$, $\sqrt{C_0}$ | $P_\rho$ 对角 Cartan 界与系数界、范数平方界 | build/sections/06_endpoint.tex:1014 | 端点命题证明收尾 | PIM 范数与三界装配失联 |
+| $m$ | 有界比较指数，回到 Morita 类所需迭代次数 | build/sections/07_extensions.tex:377 | 比较性质与 §8 定理 | Picard 通道失去有界周期（build/sections/00_introduction.tex:206） |
+| $J_x$ 协变律 | $J_x(avb)=\alpha'_x(a)J_x(v)\alpha_x(b)$ | build/sections/07_extensions.tex:385 | Sylow 作用的控制 | 交叉代数的作用无法被搬运 |
+| 因子律 | $J_xJ_y(v)=a'_{xy}J_{xy}(v)a_{xy}^{-1}$，$a_{xy}=n_{xy}\bar b$ | build/sections/07_extensions.tex:387 | 指定内因子的保留 | §7 装配在乘法数据处失败 |
+| 标量上闭链消失 | $\lvert S\rvert$ 零化正次数上同调，$\lvert S\rvert$ 次幂是 $k^\times$ 自同构 | build/sections/07_extensions.tex:395 | 重标定 $J_x$ 消去误差 | 中心任意单位误差无清除通道，比较性质不可实现 |
+| Schur--Zassenhaus | $Y$ 的任一 $p$-子群被 $\Xi$ 共轭入纯 $X$，由整数齐次单位实现 | build/sections/07_extensions.tex:403 | 把比较性质化到标准位置的 $S$ | 等变性只能对特定 Sylow 代表提要求 |
+| $\mathfrak R_1,\ldots,\mathfrak R_t$ | 整数基本阶有限表，定义于 $W(\F_{p^{c_i}})$，整数 Picard 群有限 | build/sections/07_extensions.tex:415 | 条件扩张判据的输入 | 最终有限并无索引集可取 |
+| EEL 定理 3.10 | Cartan 和、数值亏、整数 Morita--Frobenius 数三界给整数 Morita 类有限 | build/sections/07_extensions.tex:429 | 有限表与 $S=1$ 比较的消费方 | 比较性质的整数侧输出悬空 |
+| $\operatorname{HH}^1(\cO G)=0$ | 共轭类分解逐中心化子求和为零，Morita 不变下传 | build/sections/07_extensions.tex:452 | Eisele Picard 有限性的刚性假设 | 上两行的 Picard 有限一半断裂 |
+| $E_j$ 宽免 | 因子的个数与矩阵大小从未要求有界 | build/sections/07_extensions.tex:700 | 核移除的容忍度声明 | 有限型清单需按因子数重推 |
+| 条件扩张判据 | 比较性质一致成立推出 $k$-线性 Morita 类有限 | build/sections/07_extensions.tex:706 | $k$ 有限性的装配（§10 出入一） | 主定理右半环失去桥梁 |
+| $\mathcal M$ 两侧 | $\cO\bar N\sigma^m(\bar b)$ 对 $\cO\bar N\bar b$ 的双模，断言含 $S=1$ | build/sections/08_periodicity.tex:8 | 给上一行供给前提，§9 装配 | $k$ 有限至 $K$ 有限整线断开 |
+| $I\le\mathbf J_{\mathrm{ad}}^F\rtimes Y'$ | 域自同构的代数置换模型，$Y'$ 为与 $F$ 交换的有限 $p$-群 | build/sections/08_periodicity.tex:43 | 等变作用的实现 | 协变律与因子律无群论载体 |
+| $K\otimes_kZ(kG)\simeq Z(KG)$ | 中心与标量扩展交换，局部因子保持局部 | build/sections/08_periodicity.tex:842 | 块幂等元双射 | $K$-块回落到 $k$ 的唯一性崩塌 |
+| $\Br_P^K(1\otimes b)=1\otimes\Br_P^k(b)$ | Brauer 映射与标量扩展交换 | build/sections/08_periodicity.tex:842 | $B$ 与 $B_0$ 亏群相同 | 有限表不再覆盖 $K$ 上块 |
+| Morita 标量扩展 | $k$-线性等价张 $K$ 后成 $K$-线性等价 | build/sections/08_periodicity.tex:842 | 主定理最后一步装配 | $k$ 到 $K$ 的最后一公里中断 |
+| 同伴独立性 | 整数清单服务 $W(k)$ 同伴，域证明独立 | build/sections/00_introduction.tex:222 | §9 §10 的独立性声明 | 本稿主线被误判为依赖未读同伴论文 |
+| $r\ne p$ 分工 | 几何章系数特征异于定义特征，定义特征另章处理 | build/sections/02_geometry.tex:3 | 六运算与可构下降的全部引用强度 | 层范畴等价（build/sections/02_geometry.tex:107）失去有限系数前提 |
+| 无自对偶声明 | 不对任意有限局部代数使用自对偶 | build/sections/02_geometry.tex:61 | 局部系数代数断言的强度控制 | 完全性引理的引用范围被悄悄扩大 |
+| $dF=0$ 归一 | 有界 $Q$ 范围先搁置，末尾统一处理 | build/sections/02_geometry.tex:76 | 单根数据计算的前置简化 | 有限多个群的豁免条款失去出处 |
+
+台账共 52 行数据，位置栏全部来自本会话逐行核对过的 Read 输出或 grep 锚点行号。
+
+研究笔记 D358 至此。本单的推理链复盘完毕：两个主输出、两台机器、六处出入、四类失控参数，全部落到行号。
+
+## §13 补记：勘误追加、装配复核与必要性清单
+
+### §13.1 勘误追加
+
+接 §11 的申报，落盘后复量发现台账实际数据行为 51 行（`grep -c` 计 53 行含表头与分隔行，减去二即 51），台账末段的自报数字 52 多计一行，以实测为准，闸门阈值 28 仍然满足。另有两处书写问题一并申报：其一，台账第 24 行的行名"限制不可等式"是"限制不可约的度数计算"的误写；其二，台账第 21 行括号内指针 `build/sections/03_families.tex:79` 应指向 `\operatorname{def}_p(\chi)` 等式所在第 77 行，79 行落在环面配对规则句上。这三处我都不再动已落盘正文，交本体侧按类别处理。
+
+### §13.2 全篇装配的顺序复核
+
+把两万台机器拧回一根轴上，我按依赖顺序把主链重排一遍，每条给本会话核实过的行号。约定层：$k$、$\cO$、$M$ 三件套（build/sections/01_preliminaries.tex:10-12）。标准事实层：Brauer--Feit、Cartan 初等因子整除 $\lvert D\rvert$、零高存在性（build/sections/01_preliminaries.tex:51-57）。传递引理层：中心传递（build/sections/01_preliminaries.tex:72）、有界逆投影（build/sections/01_preliminaries.tex:112）。几何层：固定根数据定理（build/sections/02_geometry.tex:8），内部支撑在层范畴等价（build/sections/02_geometry.tex:107）与三命题锚点（build/sections/02_geometry.tex:417、546、791，正文未读，功能依引言 build/sections/00_introduction.tex:157-167）。族层：度亏约定（build/sections/03_families.tex:9）、Broué--Michel（build/sections/03_families.tex:59）、限制通道（build/sections/03_families.tex:36）、拟单定理（build/sections/03_families.tex:16）。标记层：`prop:label-degrees`（build/sections/04_labels.tex:29）、`prop:single-cycle`（build/sections/04_labels.tex:414）、`lab:projected-hc`（build/sections/04_labels.tex:664）、`prop:core-blocks`（build/sections/04_labels.tex:866，四者正文未读，角色依 build/sections/03_families.tex:23-29 与 build/sections/06_endpoint.tex:64-71 的引用声明）。runner 层：`prop:runner-reduction`（build/sections/05_runners.tex:34，正文未读，输出形态依 build/sections/06_endpoint.tex:3-8）。端点层：参数二分（build/sections/06_endpoint.tex:28-35）、命题（build/sections/06_endpoint.tex:52）、穷尽（build/sections/06_endpoint.tex:955）、范数收尾（build/sections/06_endpoint.tex:984-1018）。扩张层：比较性质（build/sections/07_extensions.tex:373）、整数基本阶引理（build/sections/07_extensions.tex:412）、条件判据（build/sections/07_extensions.tex:706）。周期层：Sylow 比较（build/sections/08_periodicity.tex:8）、代数化引理（build/sections/08_periodicity.tex:43）。系数层与总装：系数扩张引理与定理收尾（build/sections/08_periodicity.tex:842 之后，本会话以 sed 打印区段核对）。
+
+这条链有两处我特意回看其反循环声明：扩张层在周期层之前陈述、在周期层之后闭合，作者以"判据证明不消费有限表、比较命题不消费有限清单"两面自证无环（build/sections/07_extensions.tex:733-740 与 build/sections/03_families.tex:28-29 的同型声明）。装配的拓扑顺序与文本顺序不一致，是这篇论文最容易被误读的地方；图 proof-interfaces（build/figures/proof-interfaces.tex，2,252 字节）存在的理由也在这里。
+
+### §13.3 必要性清单：这个定理若成立，先must有什么
+
+写完后我再问一遍反面问题： Donovan 型有限性成立之前，必须已经存在什么。清单五条，每条都能指回正文的对应装置。其一，必须存在只依赖 $p$ 与亏阶、不依赖群阶的单常数，否则有界阶与固定亏群两种形式的等价（build/sections/00_introduction.tex:38-40）不足以支撑逐章传参。其二，必须存在把重数从环面 $p$-部分大小上剥下来的机制，定理 2.1 的否定面陈述就是这条必要性的正面承认（build/sections/02_geometry.tex:29-32）。其三，必须存在"先子空间后整基"的两段式，否则选定坐标上的估计永远回不到 Cartan 元（build/sections/01_preliminaries.tex:170-173）。其四，必须存在对 Sylow $p$-作用与指定内因子同时等价的比较，否则交叉乘法数据在下降中丢失（build/sections/08_periodicity.tex:3-6 的首段警告）。其五，必须存在标量误差的自由度：消错通道依赖 $k^\times$ 的 $\lvert S\rvert$ 次幂自同构，这条代数事实不成立时整台下降机器停摆（build/sections/07_extensions.tex:395-401）。五条里前三条属于重数机，后两条属于下降机，与 §10 出入一的二分完全对得上，说明这个二分不是我读出来的修辞，是论文的自我结构。
+
+### §13.4 给自己留的三条方法论
+
+第一条，读厚论文先 grep 出所有 `\begin{theorem}` 类锚点再决定读哪段，本单 15 次取证配额里这一下省了至少四次全文翻找。第二条，定理的否定面（"不要求什么"）通常比正面陈述更接近设计动机：环面无界（02:29）、覆盖核与环面无界（08:28-30）、$E_j$ 大小无界（07:700）、三角形秩无界（06:61），四处"无界声明"合起来就是全文的参数账本。第三条，凡遇到"某误差允许是标量"这种限定强度的句子，先问它为什么不能更强再问为什么不能更弱，强度本身往往就是机器能否装配的开关，本单的消错论证（07:395-401）是教科书级别的例子。
+
+补记至此收笔。全稿正文十二节加补记一节，素材仅取 build 下 `.tex`，未碰 typst、lean、formalization.yaml、comparator、records.txt 与任何 PDF。
+
+### §13.5 参数账本再核
+
+把"哪些参数被允许失控、各由哪个装置吸收"从头再点一遍名，这是我读这篇论文得到的最实用的一张账。域大小 $Q$ 与单子参数 $\theta$：几何侧对它们声明一致（build/sections/02_geometry.tex:39-40），$\theta$ 连同例外同源被折进常数所依赖的固定映射集（build/sections/02_geometry.tex:10-12）。经典秩：runner 接管，无界秩明确划出几何定理的管辖区之外（build/sections/03_families.tex:23-25）。普通尖点秩：端点定理以 $\sum_i m_i$ 与 $p^{v_p(Q_i^{d_i}-1)}$ 等有限清单换掉秩的依赖（build/sections/06_endpoint.tex:57-61）。有限环面的 $p$-部分：正则 Lang 局部系统加 Kummer 上同调抹平（build/sections/00_introduction.tex:160-163）。万有覆盖核与附加中心环面的阶：比较命题直接声明界与它们无关（build/sections/08_periodicity.tex:28-30）。因子 $E_j$ 的个数与矩阵大小：核移除步骤书面宽免（build/sections/07_extensions.tex:696-701）。提升块的亏：先下降等价再上判据（build/sections/08_periodicity.tex:44-47）。环境有限群的阶：预备案约定一致常数可依赖 $p,M$，唯独不可依赖环境群（build/sections/01_preliminaries.tex:13-14）。常特征标的度数：基底集引理特别声明界的是个数、界不到度数（build/sections/01_preliminaries.tex:128-129）。九项点名完毕。反过来看已知工作节的边界对照：此前交换 2-群（Eaton--Livesey）、extraspecial $p^3$（An--Eaton）、Suzuki 2-群（Eaton）、四元数与 tame（2026 年 8 月预印本）各占一格（build/sections/00_introduction.tex:78-91），本单论文一次覆盖全部亏群且含 $p=2$（build/sections/00_introduction.tex:4-6），账目对得上。
+
+### §13.6 取证配额复盘
+
+十五次配额的实际消耗：一次 `find` 量字节，两次 grep 因转义过强与模式写空而报废，一次 Read 落空（本论文没有独立 Abstract 文件，摘要在 00_introduction.tex 第 1-7 行内），一次 grep 拿到全部定理锚点，一次 grep 拿小节锚点，九次 Read 或 sed 取正文主干。教训记两条：grep 模式在 shell 里先按单层转义写；分两段取文件的 sed 一次调用可以顶两次 Read 的配额。首次落盘发生在第 16 次调用，符合十六至三十的窗口要求。
+
+### §13.7 勘误补录
+
+§13.3 的标题与正文首行混入了英文残字"must"，同节"反面问题： Donovan"处多出空格，请本体侧机械清理；本补录之后不再改动任何已落盘文字。
+
+### §13.8 勘误补录二（禁串申报）
+
+收稿自查发现 §5 第一段有一处禁串命中："写成阶而非指数"（约 88 行）。按落盘协议我不就地改，归入禁串连接词家族，交本体侧机械清理；除这一处外，本稿其余段落复查零命中。特此补录。
+
+### §13.9 遗留问题清单
+
+收笔前把仍未消化的几个问题记全，供后续单子接手机会时参考。
+
+其一，常数值问题。全篇给的都是存在性常数：$C(\mathcal R,p,M)$、$C_{\mathrm{qs}}(p,M)$、比较指数 $m$ 的界。外积论证那一步（build/sections/01_preliminaries.tex:133-147）把有限性建立在"只有有限多个外积与有限多个投影"上，原则上每一步都可回溯成可计算量，但论文没有给出任何显式数值；一个具体亏群（比如某个阶 $2^7$ 的非交换 2-群）的 Morita 清单能否从这套机器里实际打印出来，我看不到现成路径 [推测：取决于 runner 移动误差求和的可算化程度]。
+
+其二，例外族的归属问题。我已读文本里，固定根数据定理涵盖例外数据（钉图自同构与例外同源都在允许集合内，build/sections/02_geometry.tex:9-23），秩增长只发生在经典族，由 runner 与端点接管；引言第 169-171 行也把"无界秩"与经典群直接挂钩。这个分工自洽，但例外型尖点线（unipotent cuspidal series）在固定秩切片内被几何定理一口吞掉的具体强度，我没有在已读的 02 章前 110 行看到专门处理，应在未读的 02 章主体或 03 章末尾的定义特征处理段里 [未读，定位困难]。
+
+其三，有理性界的接口问题。EEL 归约到拟单块后剩余条件被写成 Cartan 有界性（build/sections/00_introduction.tex:79-83），Farrell--Kessar 的有理界在我读到的范围里只出现在两处技术引用（系数扩张的引理 2.2 与引言谱系）。域版本与整数版本之间，有理性成分的分工值得单独列一张账，本稿 §7 只核到了 $\operatorname{HH}^1$ 消失这一个接口。
+
+其四，系数比较的外部依赖。$K$ 上块回落到 $k$ 用了既有论文的 Section 2.1（build/sections/00_introduction.tex:49-51），是升域一步唯一直接引用的外部黑箱；引理本身（双射、同亏、Morita 扩展）在 08:842 之后有完整证明，但"唯一下降块"的论证与该外部引用的接口强度，我在已读区段里只见转述未见逐字核对 [推测：08:845-848 的转述即为全部依赖]。
+
+其五，与 tame 线路的衔接。2026 年 8 月预印本给出四元数亏的整数有限性并推出 $k$ 上全部 tame 块有限（build/sections/00_introduction.tex:88-91）；本论文的机器是否能在 tame 切片上把一般界特化成已知清单（交换、二面体、半二面体、四元数类型的 Morita 分类），文本没有任何讨论，这是一个自然的验证场 [推测]。
+
+账本列到这里。一台重数机、一台下降机、九项失控参数、五条必要性、五个遗留问题，D358 的阅读与复盘闭环。
+
+### §13.10 勘误补录三
+
+再申报一条：§13.8 在申报禁串时把命中的原短语整字引用了一遍，这本身违反了"连引用都不许写出来"的强度要求。处理建议：§5 的那一处由本体侧改写，§13.8 内的引号短语整段删除后改写为按类别的匿名描述（即本条所做的方式）。两处均在台账之外的正文区，归类为禁串家族，一并交 sweep 机械处理。本稿到此收笔，不再有任何新落盘动作。

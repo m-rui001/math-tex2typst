@@ -1,0 +1,57 @@
+你是写手。先完整读 `E:\math\被引笔记\规格.md` 并遵守其中全部条款（取材、记法、结构、体量、落盘、自查都在那里，本派单不复述）。除该文件、本派单文件自身与你本单的素材目录外不得读任何其他文件：**不得读 `研究笔记/`、`preprints/`、`.tools/`、`_work/`（本派单文件自身除外）、`被引笔记/INDEX.md`**。素材只用下面给定的 arXiv 源码 `.tex`；不得读素材目录里的 `.pdf`；不要执行任何 git 命令；不要生成 PDF。
+
+本单要写 3 份 C 稿（按下面给定的顺序，一份写完立刻开下一份）。每份各自满足规格的结构与体量要求。
+
+
+## 一份：C37
+
+- arXiv id：2006.11238
+- 原题名（逐字）：Geometry of polarised varieties
+- 作者（逐字，API 署名）：Caucher Birkar
+- 发表年月：2020-06-19
+- 素材目录：`E:\math\被引素材/2006.11238`
+- 主 tex 清单（实测，路径以盘面为准）：
+  - `被引素材/2006.11238/main.tex`（164494 字节 / 3680 行）
+- 本语料中引用它的稿号与 bib key（你只在 §0 原样登记，不去读这些稿）：D307（bib key `BirkarPolarised`）；D476（bib key `BirkarPolarised`）
+- 成品路径：`E:\math\被引笔记\C37-<中文题名>.md`（中文题名由你按原题拟，不超过 24 字，不得含 `:` 与 `/`）
+- 目标体量：不少于 22,000 字节
+
+## 一份：C38
+
+- arXiv id：2108.10303
+- 原题名（逐字）：Hadwiger's conjecture implies a conjecture of Füredi-Gyárfás-Simonyi
+- 作者（逐字，API 署名）：Stijn Cambie
+- 发表年月：2021-08-23
+- 素材目录：`E:\math\被引素材/2108.10303`
+- 主 tex 清单（实测，路径以盘面为准）：
+  - `被引素材/2108.10303/ReductionConjs.tex`（10092 字节 / 164 行）
+- 本语料中引用它的稿号与 bib key（你只在 §0 原样登记，不去读这些稿）：D207（bib key `cambie2021`）；D210（bib key `cambie2021`）
+- 成品路径：`E:\math\被引笔记\C38-<中文题名>.md`（中文题名由你按原题拟，不超过 24 字，不得含 `:` 与 `/`）
+- 目标体量：不少于 22,000 字节
+
+## 一份：C39
+
+- arXiv id：2110.07346
+- 原题名（逐字）：Fast value iteration: A uniform approach to efficient algorithms for energy games
+- 作者（逐字，API 署名）：Michaël Cadilhac, Antonio Casares, Pierre Ohlmann
+- 发表年月：2021-10-14
+- 素材目录：`E:\math\被引素材/2110.07346`
+- 主 tex 清单（实测，路径以盘面为准）：
+  - `被引素材/2110.07346/main.tex`（16278 字节 / 251 行）
+  - `被引素材/2110.07346/potential_reductions.tex`（16051 字节 / 209 行）
+  - `被引素材/2110.07346/instancesFVI.tex`（14524 字节 / 228 行）
+  - `被引素材/2110.07346/appendix-comparisons.tex`（9415 字节 / 97 行）
+  - `被引素材/2110.07346/experiments.tex`（8771 字节 / 144 行）
+  - `被引素材/2110.07346/preliminaries.tex`（7196 字节 / 101 行）
+  - `被引素材/2110.07346/appendix-correctnessMetaAlg.tex`（6754 字节 / 111 行）
+  - `被引素材/2110.07346/conclusion.tex`（4625 字节 / 58 行）
+- 本语料中引用它的稿号与 bib key（你只在 §0 原样登记，不去读这些稿）：D355（bib key `CadilhacCasaresOhlmann2025`）；D80（bib key `CadilhacCasaresOhlmann2025`）
+- 成品路径：`E:\math\被引笔记\C39-<中文题名>.md`（中文题名由你按原题拟，不超过 24 字，不得含 `:` 与 `/`）
+- 目标体量：不少于 22,000 字节
+
+## 落地节奏（本单各份合起来算）
+
+- 新建每份稿允许一次 `Write` 落「`# 标题` + `## 0 取证边界`」骨架，此后一律 `Edit` 追加，单笔新增正文不超过 10,000 字节；
+- 第一份的首次落盘落在第 4--10 次工具调用之间；每写完一份立刻开始下一份，不要停下来等确认；
+- 每份落盘后 sleep 90 秒再复量一次字节以证未回滚；
+- 收工报告按规格第 5 条对**每一份稿分别**给数，并给出各份成品文件的绝对路径与实测字节。

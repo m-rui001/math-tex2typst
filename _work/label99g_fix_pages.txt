@@ -1,0 +1,39 @@
+== what the emitter ships for each statement
+
+circles 1.19/0.68
+  #cetz.canvas({
+    import cetz.draw: *
+    compound-path({circle((2.2, -4.62), radius: 1.19, fill: rgb("#d1d1d1"), stroke: none); circle((2.2, -4.62), radius: 0.68, fill: rgb("#d1d1d1"), stroke: none); line((2.2, -4.62), (2.2, -4.62))}, fill: rgb("#d1d1d1"), fill-rule: "even-odd", stroke: none)
+  })
+
+rects 3/2.15
+  #cetz.canvas({
+    import cetz.draw: *
+    compound-path({rect((-3, -3), (3, 3), fill: rgb("#e6e6ff"), stroke: none); line((3, 3), (-2.15, -2.15)); rect((-2.15, -2.15), (2.15, 2.15), fill: rgb("#e6e6ff"), stroke: none)}, fill: rgb("#e6e6ff"), fill-rule: "even-odd", stroke: none)
+  })
+
+ellipse 3&2/2.70&1.5133
+  #cetz.canvas({
+    import cetz.draw: *
+    compound-path({circle((0, 0), radius: (3, 2), fill: rgb("#e8ffff"), stroke: none); circle((0, 0), radius: (2.7, 1.513), fill: rgb("#e8ffff"), stroke: none); line((0, 0), (0, 0))}, fill: rgb("#e8ffff"), fill-rule: "even-odd", stroke: none)
+  })
+
+no rule (control emit)
+  #cetz.canvas({
+    import cetz.draw: *
+    circle((2.2, -4.62), radius: 1.19, fill: rgb("#d1d1d1"), stroke: none)
+  })
+
+single subpath
+  #cetz.canvas({
+    import cetz.draw: *
+    circle((2.2, -4.62), radius: 1.19, fill: rgb("#d1d1d1"), stroke: none)
+  })
+
+typst rc=0
+== page samples (hole = centre of the outer drawing's box)
+   circles 1.19/0.68          fills=1 hole=(255, 255, 255) band=(208, 209, 208)
+   rects 3/2.15               fills=1 hole=(255, 255, 255) band=(229, 230, 254)
+   ellipse 3&2/2.70&1.5133    fills=1 hole=(255, 255, 255) band=(231, 255, 254)
+   no rule (control emit)     fills=1 hole=(208, 209, 208) band=(208, 209, 208)
+   single subpath             fills=1 hole=(208, 209, 208) band=(255, 255, 255)

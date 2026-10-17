@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{pgf}
+\newwrite\meas
+\immediate\openout\meas=meas_paren.txt\relax
+\newcommand{\tm}[1]{\pgfmathtruncatemacro\v{#1}\immediate\write\meas{T #1 == \v}\relax}
+\begin{document}
+\tm{(1<2)*3}
+\tm{2*(3==1)}
+\tm{(2==1)<1}
+\tm{(3<2>0)}
+\tm{sqrt(4)<3}
+\tm{1<2==1}
+\tm{1==2<3}
+\tm{floor(8/5)*1}
+\tm{2*floor(-0.6)}
+\tm{1+1<=10+0}
+\tm{10+1<=10}
+\end{document}

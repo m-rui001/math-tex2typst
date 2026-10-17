@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{pgf}
+\usepackage{tikz}
+\newwrite\meas
+\immediate\openout\meas=meas_strip.txt\relax
+\newcount\node\newcount\kind
+\def\taken{none}%
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\foreach \j/\wt in {0/1,1/A,2/A,3/B,4/B,5/U,6/U,7/E,8/F}{
+ \pgfmathsetmacro{\sx}{1.45*mod(\j,5)}
+ \pgfmathsetmacro{\sy}{-2.1*floor(\j/5)}
+ \edef\taken{none}%
+ \ifnum\j=1 \gdef\taken{vert-left}\fi
+ \ifnum\j=2 \gdef\taken{vert-right}\fi
+ \ifnum\j=3 \gdef\taken{diag-up}\fi
+ \ifnum\j=4 \gdef\taken{diag-down}\fi
+ \ifnum\j=5 \gdef\taken{arc-bottom}\fi
+ \ifnum\j=6 \gdef\taken{arc-top}\fi
+ \ifnum\j=7 \gdef\taken{two-vertical}\fi
+ \ifnum\j=8 \gdef\taken{two-arcs}\fi
+ \immediate\write\meas{J \j\space wt=\wt\space xshift=\sx cm\space yshift=\sy cm\space branch=\taken}
+}
+\end{tikzpicture}
+\end{document}

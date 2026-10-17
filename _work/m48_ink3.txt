@@ -1,0 +1,30 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+== the labels build_cd writes for these 27 cases, drawn alone at 11pt
+   bare arrow     '$A$'  text box 0.291 x 0.388   glyph ink 0.262 x 0.279   cd_width 0.720
+   bare arrow     '$B$'  text box 0.295 x 0.388   glyph ink 0.279 x 0.262   cd_width 0.720
+   f              '$A$'  text box 0.291 x 0.388   glyph ink 0.262 x 0.279   cd_width 0.720
+   f              '$B$'  text box 0.295 x 0.388   glyph ink 0.279 x 0.262   cd_width 0.720
+   f              '$f$'  text box 0.190 x 0.388   glyph ink 0.195 x 0.347   cd_width 0.720
+   two letters    '$A$'  text box 0.291 x 0.388   glyph ink 0.262 x 0.279   cd_width 0.720
+   two letters    '$B$'  text box 0.295 x 0.388   glyph ink 0.279 x 0.262   cd_width 0.720
+   two letters    '$a b$'  text box 0.372 x 0.388   glyph ink 0.356 x 0.271   cd_width 1.060
+   ten letters    '$A$'  text box 0.291 x 0.388   glyph ink 0.262 x 0.279   cd_width 0.720
+   ten letters    '$B$'  text box 0.295 x 0.388   glyph ink 0.279 x 0.262   cd_width 0.720
+   ten letters    '$a b c d e f g h i j$'  text box 1.884 x 0.388   glyph ink 1.863 x 0.347   cd_width 3.780
+   phrase         '$A$'  text box 0.291 x 0.388   glyph ink 0.262 x 0.279   cd_width 0.720
+   phrase         '$B$'  text box 0.295 x 0.388   glyph ink 0.279 x 0.262   cd_width 0.720
+   phrase         '$g r o u p a n d r e s i d u e d u a l i t y$'  text box 4.149 x 0.388   glyph ink 4.140 x 0.347   cd_width 7.860
+   greek pi       '$A$'  text box 0.291 x 0.388   glyph ink 0.262 x 0.279   cd_width 0.720
+   greek pi       '$B$'  text box 0.295 x 0.388   glyph ink 0.279 x 0.262   cd_width 0.720
+   greek pi       '$pi$'  text box 0.221 x 0.388   glyph ink 0.203 x 0.169   cd_width 0.890
+   subscript      '$A$'  text box 0.291 x 0.388   glyph ink 0.262 x 0.279   cd_width 0.720
+   subscript      '$B$'  text box 0.295 x 0.388   glyph ink 0.279 x 0.262   cd_width 0.720
+   subscript      '$X_1$'  text box 0.468 x 0.461   glyph ink 0.432 x 0.356   cd_width 1.060
+   fraction       '$A$'  text box 0.291 x 0.388   glyph ink 0.262 x 0.279   cd_width 0.720
+   fraction       '$B$'  text box 0.295 x 0.388   glyph ink 0.279 x 0.262   cd_width 0.720
+   fraction       '$a \/ b$'  text box 0.566 x 0.388   glyph ink 0.542 x 0.381   cd_width 1.400
+   cell A         '$A$'  text box 0.291 x 0.388   glyph ink 0.262 x 0.279   cd_width 0.720
+   cell A         '$B$'  text box 0.295 x 0.388   glyph ink 0.279 x 0.262   cd_width 0.720
+   long cell      '$A$'  text box 0.291 x 0.388   glyph ink 0.262 x 0.279   cd_width 0.720
+   long cell      '$M_n \( R \)$'  text box 1.196 x 0.461   glyph ink 1.135 x 0.381   cd_width 2.080
+== CD_LABEL_H 0.41 cm, cd_width 0.55 + 0.17 * characters; 27 ink rows for 27 labels

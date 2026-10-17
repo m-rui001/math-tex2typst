@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<stdin>", line 5, in <module>
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\re\__init__.py", line 289, in compile
+    return _compile(pattern, flags)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\re\__init__.py", line 350, in _compile
+    p = _compiler.compile(pattern, flags)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\re\_compiler.py", line 748, in compile
+    p = _parser.parse(p, flags)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\re\_parser.py", line 985, in parse
+    raise source.error("unbalanced parenthesis")
+re.PatternError: unbalanced parenthesis at position 71

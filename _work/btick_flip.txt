@@ -1,0 +1,4 @@
+mode=APPLY
+D410 L19 hits=13 bt 41->54 dollar 55->42
+D410 total=13 bytes 90322 -> 90322 lines 588 -> 588
+D410 WRITTEN

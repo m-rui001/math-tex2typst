@@ -1,0 +1,337 @@
+{
+ "d": "D416",
+ "file": "D416-富田自由性猜想.md",
+ "line": 624,
+ "kind": "latin_residue",
+ "verdict": "ORDER",
+ "now_count": 14,
+ "now_count_incl": -1,
+ "quote": "第二条，同一类里还漏了记号层面的两项。其一是限制与纤维的竖杠：规格要求写成 `\\mid`，我在 §17 的三处（$\\rho\\vert_S$、$\\rho^*P\\vert_S$、$P\\vert_x$ 型）与上表倒数第三行、以及 §11 一处 $",
+ "fix": "其二是上表 $r_m$ 那一行，取整记号里混进一个多余的右绝对值符，正确写法只该有向下取整的一对；这两项都属于定界符类别，按规格留在盘上交给本体侧的机械通道，我未做事后就地替换",
+ "target": "§17 §11",
+ "pats": [
+  "本体侧"
+ ],
+ "kinds_all": [
+  "latin_residue"
+ ],
+ "kind_from": "window",
+ "switched": false,
+ "hasstrong": false,
+ "hasdir": true,
+ "hasweak": true,
+ "hawaiv": false,
+ "selfrec": false,
+ "probe": [],
+ "prev": "第一条，上面\"勘误\"节第四类的节号与计数有偏差，以本条为准：中英混排的实际分布是 §5 一处、§7 两处、§9 四处；同节里提到的叠字两处都在 §7（一处在该节中段、一处在其末段），我先前把其中一处误记到了 §9。",
+ "next": "第三条，§8 有一处编号式指代写成了\"(31)--(34) 行\"，与我同一句里给出的区间不一致，属数字笔误，不影响任何陈述。",
+ "metrics": {
+  "crlf": 0,
+  "cr": 0,
+  "bom": 0,
+  "trail_ws": 0,
+  "pipe": 0,
+  "closer_strict": 0,
+  "closer_incl": 0,
+  "ban_strict": 1,
+  "ban_incl": 1,
+  "hdr_extra": 0,
+  "head_glued": 0,
+  "dup_paras": 0
+ }
+}
+{
+ "d": "D467",
+ "file": "D467-高维极大多点Seshadri常数.md",
+ "line": 205,
+ "kind": "latin_residue",
+ "verdict": "STALE",
+ "now_count": 0,
+ "now_count_incl": -1,
+ "quote": "记号端同样清点。素材 preamble 定义的黑板体数集缩写与若干算符缩写，按 §13 其七的申报，已落盘部分待本体侧展开，未落盘部分（含 §19 台账全部行）一律用标准写法：整数集、有理数集、实数集、复数集、射影空间分别写标准黑板体，重数",
+ "fix": "素材 preamble 定义的黑板体数集缩写与若干算符缩写，按 §13 其七的申报，已落盘部分待本体侧展开，未落盘部分（含 §19 台账全部行）一律用标准写法：整数集、有理数集、实数集、复数集、射影空间分别写标准黑板体，重数、消失阶、凸包、体积、阶等算符写标准算符形式，包含关系用标准符号",
+ "target": "§13 §19 §0",
+ "pats": [
+  "本体侧"
+ ],
+ "kinds_all": [
+  "latin_residue"
+ ],
+ "kind_from": "window",
+ "switched": false,
+ "hasstrong": false,
+ "hasdir": true,
+ "hasweak": false,
+ "hawaiv": false,
+ "selfrec": false,
+ "probe": [],
+ "prev": "动笔即定译，全稿未出现下列左端的英文原词（人名与素材文件名除外）。ample 译作丰沛，nef 译作半正，blow-up 译作吹爆，exceptional divisor 译作例外除子，very general 译作极一般，jet 译作喷流，flag 译作旗，complete-intersection flag 译作完全交旗，graded support family 译作分次支撑族，monomial space 译作单项式空间，Laurent 译作劳朗，torus 译作环面，simplex 译作单纯形，intercept 译作截距，primitive vector 译作原始向量，unimod",
+ "next": "## §19 台账",
+ "metrics": {
+  "crlf": 0,
+  "cr": 0,
+  "bom": 0,
+  "trail_ws": 0,
+  "pipe": 0,
+  "closer_strict": 0,
+  "closer_incl": 0,
+  "ban_strict": 0,
+  "ban_incl": 2,
+  "hdr_extra": 0,
+  "head_glued": 0,
+  "dup_paras": 0
+ }
+}
+{
+ "d": "D480",
+ "file": "D480-临界方格FK界面的自然占有测度.md",
+ "line": 270,
+ "kind": "other",
+ "verdict": "WAIVER",
+ "now_count": -1,
+ "now_count_incl": -1,
+ "quote": "一、自定义宏未展开，本单第二条重缺口。素材在序言里自定义了一批单命令记号，本稿沿用其形态而没有展开成标准写法，实测分六类：期望类 44 处、概率与条件概率类 42 处、积分微元类 29 处、示性函数类 9 处、几何记号类约 30 处（分别指",
+ "fix": "一、自定义宏未展开，本单第二条重缺口；素材在序言里自定义了一批单命令记号，本稿沿用其形态而没有展开成标准写法，实测分六类：期望类 44 处、概率与条件概率类 42 处、积分微元类 29 处、示性函数类 9 处、几何记号类约 30 处（分别指距离、迹、单位圆盘、整数格、实数集与复数集这些对象）、以及若干带星号或上标的序列记号",
+ "target": "§13",
+ "pats": [
+  "本体侧"
+ ],
+ "kinds_all": [
+  "other"
+ ],
+ "kind_from": "line",
+ "switched": false,
+ "hasstrong": false,
+ "hasdir": false,
+ "hasweak": false,
+ "hawaiv": false,
+ "selfrec": false,
+ "probe": [],
+ "prev": "表前先把三类补记登记完，规格要求表头只出现一次，故本节的说明段放在表前、自检段放在表后都不重抄表头与任何禁令字形。",
+ "next": "二、台账位置栏的取证强度分级。`sections/` 开头的行号全部来自通读；`A/introduction.tex` 的区间来自通读；其余 `A/` 与 `B/` 开头的行号一律是行号检索命中，我在检索输出里读到了命中行原文，没有读它们的上下文与证明。下表最后一栏对后者注明\"检索\"或\"节选\"，这类行的价值只到\"该断言确实在邻稿该处出现\"为止。",
+ "metrics": {
+  "crlf": 0,
+  "cr": 0,
+  "bom": 0,
+  "trail_ws": 0,
+  "pipe": 0,
+  "closer_strict": 0,
+  "closer_incl": 0,
+  "ban_strict": 5,
+  "ban_incl": 5,
+  "hdr_extra": 0,
+  "head_glued": 0,
+  "dup_paras": 0
+ }
+}
+{
+ "d": "D545",
+ "file": "D545-阿瑟滤过的有理性：从幂零奇性支集到矩量判据.md",
+ "line": 451,
+ "kind": "other",
+ "verdict": "STALE",
+ "now_count": 0,
+ "now_count_incl": -1,
+ "quote": "其五，本批新增缺陷，按类别计数，不做就地改动。甲类，术语拉丁残留共 5 处：第 18 节第三段一处限定形容词、第 18 节第六段一处程度形容词、第 19 节第六段一处名词、第 19 节第七段一处名词、第 20 节第二段一处形容词；均系本批撰",
+ "fix": "〔行尾符类申报：本稿实测 CRLF=0、裸CR=0、BOM=0；均系本批撰写时的疏漏，依规格只按类别登记，交本体侧机械清理通道〕",
+ "target": "第18节 第19节 第20节 第16节",
+ "pats": [
+  "就地改动",
+  "本体侧"
+ ],
+ "kinds_all": [
+  "other"
+ ],
+ "kind_from": "line",
+ "switched": false,
+ "hasstrong": false,
+ "hasdir": true,
+ "hasweak": false,
+ "hawaiv": true,
+ "selfrec": false,
+ "probe": [],
+ "prev": "其四，取证范围。§1 登记的未读区间在本批补读了五段：05 节前 232 行、06 节 110 至 445 行、03 节 175 至 289 行、04 节 130 至 249 行、07 节前 96 行；其余缺口（03 节 483 行后、04 节 399 行后、07 节 304 行后至节末、书目全文）照旧保留，本批正文涉及处一律标 [推测] 并注明缺哪类证据。",
+ "next": "其六，存量缺陷。§14 已登记的五类问题（长横线号、术语英文残留、素材记法残留、误称与错字、首块永久缺口）与 §15 各复核段登记的禁串命中、拉丁写法漏登、自指命中，全部仍在盘上，本批未回补、未覆写、未删除，继续交本体侧机械清理通道处理。",
+ "metrics": {
+  "crlf": 0,
+  "cr": 0,
+  "bom": 0,
+  "trail_ws": 0,
+  "pipe": 0,
+  "closer_strict": 0,
+  "closer_incl": 0,
+  "ban_strict": 1,
+  "ban_incl": 1,
+  "hdr_extra": 0,
+  "head_glued": 2,
+  "dup_paras": 2
+ }
+}
+{
+ "d": "D597",
+ "file": "D597-经由伴随正则性把纯性送过分歧位.md",
+ "line": 335,
+ "kind": "other",
+ "verdict": "STALE",
+ "now_count": 0,
+ "now_count_incl": -1,
+ "quote": "类别十一，行尾符：本稿全文 331 行的行尾都是回车加换行那一对，是本平台写入工具落盘时的行尾选择；规格要求全文换行为单一换行符，这一条不合规。我没有做整档行尾转换，因为那属于被禁止的整档重写；如需归一，请本体侧用机械通道处理。",
+ "fix": "〔行尾符类申报：本稿实测 CRLF=0、裸CR=0、BOM=0；如需归一，请本体侧用机械通道处理〕",
+ "target": "",
+ "pats": [
+  "本体侧"
+ ],
+ "kinds_all": [
+  "other"
+ ],
+ "kind_from": "line",
+ "switched": false,
+ "hasstrong": false,
+ "hasdir": true,
+ "hasweak": false,
+ "hawaiv": false,
+ "selfrec": false,
+ "probe": [],
+ "prev": "类别十，未译英文术语的实测总数（按子串计，含本节登记段自己复述的那几次）：tempered 四十二次、generic 十三次、split 十次、lisse 四次、excursion 四次、centralizer 二次、chamber 三次、puncture 三次、sanity 二次、possibly 二次、Idele 四次；另有专名若干次不算术语残留（人名与群名一律保留原拼写）。这一类在动笔时就该写成中文，事后无法靠机械清理通道解决，故如实申报为缺口；其中 tempered 与 split 全篇统一、没有与中文写法混排，generic 自第 5 节起与\"一般型\"混排，是术语一致性上最重的一处。",
+ "next": "",
+ "metrics": {
+  "crlf": 0,
+  "cr": 0,
+  "bom": 0,
+  "trail_ws": 0,
+  "pipe": 0,
+  "closer_strict": 0,
+  "closer_incl": 0,
+  "ban_strict": 0,
+  "ban_incl": 0,
+  "hdr_extra": 0,
+  "head_glued": 0,
+  "dup_paras": 0
+ }
+}
+{
+ "d": "D742",
+ "file": "D742-结构系数能隙与平面XY模型临界关联指数1-4.md",
+ "line": 298,
+ "kind": "other",
+ "verdict": "STALE",
+ "now_count": 0,
+ "now_count_incl": -1,
+ "quote": "第四类，结构性垃圾 2 行。第 92 行是一枚探针标记（一次编辑尝试失败后我用最短锚点重探时留下的全大写英文串），落在 §4 末段与 §5 标题之间；第 95 行是一句占位说明（声明本节起为追加块），落在 §5 标题与其正文之间。两者都不是",
+ "fix": "两者都不是正文，按规格我不自行搬移或删除，请本体侧按整块清理处理，删这两行不影响任何编号与节序",
+ "target": "§4 §5 行92 行95",
+ "pats": [
+  "本体侧"
+ ],
+ "kinds_all": [
+  "other"
+ ],
+ "kind_from": "line",
+ "switched": false,
+ "hasstrong": false,
+ "hasdir": true,
+ "hasweak": true,
+ "hawaiv": true,
+ "selfrec": false,
+ "probe": [],
+ "prev": "第三类，未译英文词与缩写共 15 处，行号如下：第 27 行 2 处（表\"受优先\"与\" favored 取向\"两类说法，同一句里我一边引用原文说法一边给自己定译名，结果两个都留下了）；第 35 行 1 处（表\"特化\"）；第 60 行 1 处（表\"副本\"）；第 72 行 2 处（表\"黑塞矩阵\"）；第 76 行 3 处（两处表\"支配、控制\"、一处表\"证成\"）；第 84 行 2 处（表\"同伴论文\"）；第 137 行 1 处（§7 标题里表\"空间\"）；第 143 行 1 处（一处拉丁缩写，表\"几乎处处\"）；第 236 行 1 处（表\"确实如此\"的连接词）；第 268 行 1 处（表\"不确定性\"）。这些",
+ "next": "第五类，§7 第 143 行那处集合表达式我把限制符与拉丁缩写排在同一式内，读起来像残缺 LaTeX，其语义应按同段紧随的中文括注理解，即\"$v$ 在钉区域 $p$ 上几乎处处为零\"。这条也留给机器清理，我在后续节里没有再使用该形态。",
+ "metrics": {
+  "crlf": 0,
+  "cr": 0,
+  "bom": 0,
+  "trail_ws": 0,
+  "pipe": 0,
+  "closer_strict": 2,
+  "closer_incl": 2,
+  "ban_strict": 1,
+  "ban_incl": 1,
+  "hdr_extra": 0,
+  "head_glued": 0,
+  "dup_paras": 0
+ }
+}
+{
+ "d": "D759",
+ "file": "D759-连续整数联合Dickman律.md",
+ "line": 940,
+ "kind": "other",
+ "verdict": "ORDER",
+ "now_count": -1,
+ "now_count_incl": -1,
+ "quote": "第六类是段落引导的加粗。§2 与 §3 用了行首加粗标记做段落引导，共六处，属接近装饰性加粗清单的形态，申报由本体侧判定。",
+ "fix": "§2 与 §3 用了行首加粗标记做段落引导，共六处，属接近装饰性加粗清单的形态，申报由本体侧判定",
+ "target": "§2 §3",
+ "pats": [
+  "本体侧"
+ ],
+ "kinds_all": [
+  "other"
+ ],
+ "kind_from": "line",
+ "switched": false,
+ "hasstrong": false,
+ "hasdir": true,
+ "hasweak": false,
+ "hawaiv": false,
+ "selfrec": false,
+ "probe": [],
+ "prev": "第五类是未翻译的英文词残留。共四处普通词（§7 一处动词、§9 两处限定词、§14 一处形容词）与一处英文缩略语（§2 路线三提到的那类素数间隙障碍的三字母缩写）。另有两处德语与芬兰语人名变音我没有转写，按人名处理。",
+ "next": "第七类是节序。我的节序按\"问题到零件再到闭合\"的依赖排（§4 标签、§5 短区间、§6 放大、§7 算术、§8 图、§9 矩、§10 通道、§11 核、§12 采样、§13 矛盾、§14 分布），与素材的装配序（§0 已逐字列出）不同处在于：素材把算术节排在放大节之前，我把放大节写在前，因为 $D_B$ 的归一化疑问是我在 §6 现场提出、到 §7 才结清的；编号连续、物理排布与编号一致，无重号。",
+ "metrics": {
+  "crlf": 0,
+  "cr": 0,
+  "bom": 0,
+  "trail_ws": 0,
+  "pipe": 0,
+  "closer_strict": 0,
+  "closer_incl": 0,
+  "ban_strict": 2,
+  "ban_incl": 2,
+  "hdr_extra": 0,
+  "head_glued": 0,
+  "dup_paras": 0
+ }
+}
+{
+ "d": "D765",
+ "file": "D765-椭圆曲线二次扭的均值解析秩.md",
+ "line": 581,
+ "kind": "other",
+ "verdict": "ORDER",
+ "now_count": -1,
+ "now_count_incl": -1,
+ "quote": "第四类，前向引用指错节号，共两处：§2 末句提到\"膨胀那一步\"时写的节号应为 §10；§1 中段提到 Jensen 逐点界时写的节号应为 §9（该处实测正确，无需处理）与 §13、§14 的两处\"见后文\"未给节号。第一节属指错，本体侧按 §",
+ "fix": "第四类，前向引用指错节号，共两处：§2 末句提到\"膨胀那一步\"时写的节号应为 §10；§1 中段提到 Jensen 逐点界时写的节号应为 §9（该处实测正确，无需处理）与 §13、§14 的两处\"见后文\"未给节号",
+ "target": "§2 §10 §1 §9 §13 §14",
+ "pats": [
+  "本体侧"
+ ],
+ "kinds_all": [
+  "other"
+ ],
+ "kind_from": "line",
+ "switched": false,
+ "hasstrong": false,
+ "hasdir": false,
+ "hasweak": true,
+ "hawaiv": false,
+ "selfrec": false,
+ "probe": [],
+ "prev": "第三类，英文短语未即时中译，共四处：§2 里对 `introduction.tex:16` 的一句原文直引（关于两个符号都计入），未附译文；§16 第二条里一个新形式族的英文原词；§16 第八条里一个基本判别式的英文原词；§16 第八条末尾一个表示\"尚未解决\"的英文形容词。§21 已把这四个词的中文写法统一列出，替换时可照该节取词。",
+ "next": "第五类，结构合规但低于目标带的项：首块 §0 到 §3 实测 12,770 字节，低于派单要求的 15,000 下限，规格第 74 行的自伤清单里这一项属\"块小\"，处理办法是立刻续写追回（本稿已在同一会话内连续追加到 §19），无须回改首块。另：§0 的文件清单表是一张三列辅助表，与文末的五列台账列数不同，对账时按五列表头那一份计数。",
+ "metrics": {
+  "crlf": 0,
+  "cr": 0,
+  "bom": 0,
+  "trail_ws": 0,
+  "pipe": 0,
+  "closer_strict": 0,
+  "closer_incl": 0,
+  "ban_strict": 1,
+  "ban_incl": 1,
+  "hdr_extra": 0,
+  "head_glued": 0,
+  "dup_paras": 0
+ }
+}

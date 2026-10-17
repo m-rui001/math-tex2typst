@@ -1,0 +1,5 @@
+files with residue: 0 ; occurrences: 0
+quoted LaTeX on the page: 1 blocks over 1 papers
+zones: {}
+=== gate:
+built 918, refused 14, compile-failed 0

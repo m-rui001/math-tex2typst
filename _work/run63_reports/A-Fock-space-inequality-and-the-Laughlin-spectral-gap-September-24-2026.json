@@ -1,0 +1,33 @@
+{
+  "paper": "A-Fock-space-inequality-and-the-Laughlin-spectral-gap-September-24-2026",
+  "ok": true,
+  "typ_lines": 729,
+  "included_pdf_pages": 0,
+  "formulas": 484,
+  "math_failed": 0,
+  "labels": 77,
+  "equations": 43,
+  "theorems": 1,
+  "figures": 1,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:minipage": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "484",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "[WARNING] Could not load include file ../verification/rows.txt at E:\\math\\_work\\flat\\_work_tex\\A-Fock-space-inequality-and-the-Laughlin-spectral-gap-September-24-2026.tex line 1137 column 17\n",
+  "packages_unsupported": [
+    "listings"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-Fock-space-inequality-and-the-Laughlin-spectral-gap-September-24-2026.tex"
+}

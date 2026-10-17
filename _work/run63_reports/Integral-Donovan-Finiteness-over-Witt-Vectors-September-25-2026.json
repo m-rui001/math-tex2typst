@@ -1,0 +1,31 @@
+{
+  "paper": "Integral-Donovan-Finiteness-over-Witt-Vectors-September-25-2026",
+  "ok": true,
+  "typ_lines": 511,
+  "included_pdf_pages": 0,
+  "formulas": 403,
+  "math_failed": 0,
+  "labels": 67,
+  "equations": 18,
+  "theorems": 1,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1
+  },
+  "samples": {
+    "formulas": "403"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Integral-Donovan-Finiteness-over-Witt-Vectors-September-25-2026\\main.typ:110:52\n    │\n110 │ $ B upright(\" covers a nilpotent block of \") H_0 lt.tri.eq H quad arrow.r.double quad H_0 lt.eq Z \\( H \\) O_p \\( H \\) . quad \"(2)\" $ <eq:reduced>\n    │                                                     ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Integral-Donovan-Finiteness-over-Witt-Vectors-September-25-2026\\main.typ:122:38\n    │\n122 │   + #emph[There is an extension $N lt.tri.eq macron(N)$ with abelian $p'$-quotient $A_0 = macron(N) \\/ N$. For representatives $h_x$ of $x in X$, normalized by $h_1 = 1$, write $h_x h_y = n_(x \\, y) h_(x y)$ with $n_(x \\, y) in N$. Conjugation extends to automorphisms $alpha_x$ of $macron(N)$ satisfying the actual identities \n    │                                       ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 2,
+  "source": "E:\\math\\_work\\flat\\Integral-Donovan-Finiteness-over-Witt-Vectors-September-25-2026.tex"
+}

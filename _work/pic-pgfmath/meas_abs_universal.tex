@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{tikz}
+\newwrite\meas
+\immediate\openout\meas=meas_abs_universal.txt\relax
+\newdimen\mx
+\newdimen\my
+\def\rd#1#2{\pgfextractx{\mx}{\pgfpointanchor{#1}{center}}%
+            \pgfextracty{\my}{\pgfpointanchor{#1}{center}}%
+            \edef#2{\the\mx,\the\my}}
+\begin{document}
+% The four corners of every staircase cell, in pt, from the picture's own flipped axes
+% (x=.31cm, y=-.31cm). The colour TeX fills with is written beside them, so the canvas corners and
+% the branch they sit in are read from one and the same compile.
+\begin{tikzpicture}[x=.31cm,y=-.31cm,every node/.style={font=\small}]
+ \foreach \row/\width in {1/10,2/9,3/7,4/6,5/5,6/4,7/3,8/2,9/2,10/1}{
+  \foreach \column in {1,...,\width}{
+   \pgfmathtruncatemacro{\staircasecell}{\row+\column<=10}
+   \node[inner sep=0pt] (lo) at (\column-1,\row-1) {};
+   \node[inner sep=0pt] (hi) at (\column,\row) {};
+   \ifnum\staircasecell=1 \def\which{BLUE}\else \def\which{ORANGE}\fi
+   \rd{lo}\pa\rd{hi}\pb
+   \immediate\write\meas{CORNER \row/\column\space \which\space lo=\pa\space hi=\pb}
+  }
+ }
+\end{tikzpicture}
+\end{document}

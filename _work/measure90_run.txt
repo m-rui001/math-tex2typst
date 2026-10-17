@@ -1,0 +1,176 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+=== stroke-state keys fitz reports: ['closePath', 'color', 'dashes', 'even_odd', 'fill', 'fill_opacity', 'layer', 'lineCap', 'lineJoin', 'rect', 'seqno', 'stroke_opacity', 'type', 'width']
+
+=== CAP: ink past the end of a 2cm segment, and the height of the ink at the tip
+pgf    default  state(cap=(0, 0, 0) width=11.955) overshoot=0.160 tip_height=12.000
+pgf    butt     state(cap=(0, 0, 0) width=11.955) overshoot=0.160 tip_height=12.000
+pgf    round    state(cap=(1, 1, 1) width=11.955) overshoot=6.040 tip_height=6.360
+pgf    rect     state(cap=(2, 2, 2) width=11.955) overshoot=6.040 tip_height=12.000
+typst  default  state(cap=(0, 0, 0) width=12.000) overshoot=0.040 tip_height=12.000
+typst  butt     state(cap=(0, 0, 0) width=12.000) overshoot=0.040 tip_height=12.000
+typst  round    state(cap=(1, 1, 1) width=12.000) overshoot=6.040 tip_height=6.360
+typst  square   state(cap=(2, 2, 2) width=12.000) overshoot=6.040 tip_height=12.000
+
+=== ZERO-LENGTH subpath: what does (0,0)--(0,0) ink?
+pgf    default  drawings=1 ink=none
+pgf    butt     drawings=1 ink=none
+pgf    round    drawings=1 ink=11.88 x 11.88 pt
+pgf    rect     drawings=1 ink=none
+typst  default  drawings=0 ink=none
+typst  butt     drawings=0 ink=none
+typst  round    drawings=0 ink=none
+typst  square   drawings=0 ink=none
+
+=== JOIN: ink past the vertex of a corner of angle `a` (miter law = (pen/2)/sin(a/2))
+measured pen: pgf=12.000 typst=12.000 page points
+eng    join        angle     read   far/half 1/sin(a/2)   far pt   code
+pgf    default       150   150.00      1.037      1.035     6.22    0.0
+pgf    default       120   120.00      1.157      1.155     6.94    0.0
+pgf    default        90    90.00      1.397      1.414     8.38    0.0
+pgf    default        60    60.00      1.977      2.000    11.86    0.0
+pgf    default        30    30.00      3.837      3.864    23.02    0.0
+pgf    default        20    20.00      5.697      5.759    34.18    0.0
+pgf    default        15    15.00      7.597      7.660    45.58    0.0
+pgf    default        12    12.00      9.477      9.564    56.86    0.0
+pgf    default        10    10.00      0.097     11.475     0.58    0.0
+pgf    default         8     8.00      0.057     14.337     0.34    0.0
+pgf    miter         150   150.00      1.037      1.035     6.22    0.0
+pgf    miter         120   120.00      1.157      1.155     6.94    0.0
+pgf    miter          90    90.00      1.397      1.414     8.38    0.0
+pgf    miter          60    60.00      1.977      2.000    11.86    0.0
+pgf    miter          30    30.00      3.837      3.864    23.02    0.0
+pgf    miter          20    20.00      5.697      5.759    34.18    0.0
+pgf    miter          15    15.00      7.597      7.660    45.58    0.0
+pgf    miter          12    12.00      9.477      9.564    56.86    0.0
+pgf    miter          10    10.00      0.097     11.475     0.58    0.0
+pgf    miter           8     8.00      0.057     14.337     0.34    0.0
+pgf    round         150   150.00      0.997      1.035     5.98    1.0
+pgf    round         120   120.00      0.997      1.155     5.98    1.0
+pgf    round          90    90.00      0.997      1.414     5.98    1.0
+pgf    round          60    60.00      0.997      2.000     5.98    1.0
+pgf    round          30    30.00      0.997      3.864     5.98    1.0
+pgf    round          20    20.00      0.977      5.759     5.86    1.0
+pgf    round          15    15.00      0.997      7.660     5.98    1.0
+pgf    round          12    12.00      0.997      9.564     5.98    1.0
+pgf    round          10    10.00      0.997     11.475     5.98    1.0
+pgf    round           8     8.00      0.997     14.337     5.98    1.0
+pgf    bevel         150   150.00      0.977      1.035     5.86    2.0
+pgf    bevel         120   120.00      0.877      1.155     5.26    2.0
+pgf    bevel          90    90.00      0.717      1.414     4.30    2.0
+pgf    bevel          60    60.00      0.497      2.000     2.98    2.0
+pgf    bevel          30    30.00      0.257      3.864     1.54    2.0
+pgf    bevel          20    20.00      0.177      5.759     1.06    2.0
+pgf    bevel          15    15.00      0.137      7.660     0.82    2.0
+pgf    bevel          12    12.00      0.097      9.564     0.58    2.0
+pgf    bevel          10    10.00      0.097     11.475     0.58    2.0
+pgf    bevel           8     8.00      0.057     14.337     0.34    2.0
+typst  default       150   150.00      1.031      1.035     6.19    0.0
+typst  default       120   120.00      1.137      1.155     6.82    0.0
+typst  default        90    90.00      1.397      1.414     8.38    0.0
+typst  default        60    60.00      1.977      2.000    11.86    0.0
+typst  default        30    30.00      3.837      3.864    23.02    0.0
+typst  default        20    20.00      0.177      5.759     1.06    0.0
+typst  default        15    15.00      0.137      7.660     0.82    0.0
+typst  default        12    12.00      0.117      9.565     0.70    0.0
+typst  default        10    10.00      0.097     11.475     0.58    0.0
+typst  default         8     8.00      0.057     14.337     0.34    0.0
+typst  miter         150   150.00      1.031      1.035     6.19    0.0
+typst  miter         120   120.00      1.137      1.155     6.82    0.0
+typst  miter          90    90.00      1.397      1.414     8.38    0.0
+typst  miter          60    60.00      1.977      2.000    11.86    0.0
+typst  miter          30    30.00      3.837      3.864    23.02    0.0
+typst  miter          20    20.00      0.177      5.759     1.06    0.0
+typst  miter          15    15.00      0.137      7.660     0.82    0.0
+typst  miter          12    12.00      0.117      9.565     0.70    0.0
+typst  miter          10    10.00      0.097     11.475     0.58    0.0
+typst  miter           8     8.00      0.057     14.337     0.34    0.0
+typst  round         150   150.00      0.991      1.035     5.95    1.0
+typst  round         120   120.00      0.997      1.155     5.98    1.0
+typst  round          90    90.00      0.997      1.414     5.98    1.0
+typst  round          60    60.00      0.997      2.000     5.98    1.0
+typst  round          30    30.00      0.997      3.864     5.98    1.0
+typst  round          20    20.00      0.997      5.759     5.98    1.0
+typst  round          15    15.00      0.997      7.660     5.98    1.0
+typst  round          12    12.00      0.997      9.565     5.98    1.0
+typst  round          10    10.00      0.997     11.475     5.98    1.0
+typst  round           8     8.00      0.997     14.337     5.98    1.0
+typst  bevel         150   150.00      0.951      1.035     5.71    2.0
+typst  bevel         120   120.00      0.857      1.155     5.14    2.0
+typst  bevel          90    90.00      0.697      1.414     4.18    2.0
+typst  bevel          60    60.00      0.497      2.000     2.98    2.0
+typst  bevel          30    30.00      0.257      3.864     1.54    2.0
+typst  bevel          20    20.00      0.177      5.759     1.06    2.0
+typst  bevel          15    15.00      0.137      7.660     0.82    2.0
+typst  bevel          12    12.00      0.117      9.565     0.70    2.0
+typst  bevel          10    10.00      0.097     11.475     0.58    2.0
+typst  bevel           8     8.00      0.057     14.337     0.34    2.0
+
+=== MITER LIMIT: the angle at which each engine stops pointing (mitered reads 1/sin(a/2))
+eng    written on the pen                angle  far/half  miter law
+pgf    (nothing)                      28.0     4.097      4.134
+pgf    (nothing)                      24.0     4.777      4.810
+pgf    (nothing)                      20.0     5.697      5.759
+pgf    (nothing)                      16.0     7.117      7.186
+pgf    (nothing)                      14.0     8.137      8.207
+pgf    (nothing)                      12.0     9.477      9.564
+pgf    (nothing)                      11.4     0.097     10.071
+pgf    (nothing)                      11.0     0.097     10.433
+pgf    (nothing)                      10.5     0.097     10.929
+pgf    (nothing)                      10.0     0.097     11.475
+pgf    (nothing)                       8.0     0.057     14.337
+typst  (nothing)                      32.0     3.597      3.628
+typst  (nothing)                      31.0     3.717      3.742
+typst  (nothing)                      30.0     3.837      3.864
+typst  (nothing)                      29.5     3.897      3.928
+typst  (nothing)                      29.0     3.957      3.994
+typst  (nothing)                      28.5     0.257      4.063
+typst  (nothing)                      28.0     0.237      4.134
+typst  (nothing)                      26.0     0.217      4.445
+typst  (nothing)                      24.0     0.197      4.810
+typst  (nothing)                      20.0     0.177      5.759
+typst  (nothing)                      16.0     0.137      7.186
+typst  (nothing)                      14.0     0.137      8.207
+typst  (nothing)                      12.0     0.117      9.565
+typst  (nothing)                      11.4     0.097     10.070
+typst  (nothing)                      11.0     0.097     10.433
+typst  (nothing)                      10.5     0.097     10.929
+typst  (nothing)                      10.0     0.097     11.475
+typst  (nothing)                       8.0     0.057     14.337
+typst  join: "miter", miter-limit: 10     32.0     3.597      3.628
+typst  join: "miter", miter-limit: 10     31.0     3.717      3.742
+typst  join: "miter", miter-limit: 10     30.0     3.837      3.864
+typst  join: "miter", miter-limit: 10     29.5     3.897      3.928
+typst  join: "miter", miter-limit: 10     29.0     3.957      3.994
+typst  join: "miter", miter-limit: 10     28.5     4.037      4.063
+typst  join: "miter", miter-limit: 10     28.0     4.097      4.134
+typst  join: "miter", miter-limit: 10     26.0     4.397      4.445
+typst  join: "miter", miter-limit: 10     24.0     4.777      4.810
+typst  join: "miter", miter-limit: 10     20.0     5.717      5.759
+typst  join: "miter", miter-limit: 10     16.0     7.157      7.186
+typst  join: "miter", miter-limit: 10     14.0     8.177      8.207
+typst  join: "miter", miter-limit: 10     12.0     9.477      9.565
+typst  join: "miter", miter-limit: 10     11.4     0.097     10.070
+typst  join: "miter", miter-limit: 10     11.0     0.097     10.433
+typst  join: "miter", miter-limit: 10     10.5     0.097     10.929
+typst  join: "miter", miter-limit: 10     10.0     0.097     11.475
+typst  join: "miter", miter-limit: 10      8.0     0.057     14.337
+typst  join: "round", miter-limit: 10     32.0     0.997      3.628
+typst  join: "round", miter-limit: 10     31.0     0.997      3.742
+typst  join: "round", miter-limit: 10     30.0     0.997      3.864
+typst  join: "round", miter-limit: 10     29.5     1.017      3.928
+typst  join: "round", miter-limit: 10     29.0     0.997      3.994
+typst  join: "round", miter-limit: 10     28.5     0.997      4.063
+typst  join: "round", miter-limit: 10     28.0     0.997      4.134
+typst  join: "round", miter-limit: 10     26.0     0.997      4.445
+typst  join: "round", miter-limit: 10     24.0     0.977      4.810
+typst  join: "round", miter-limit: 10     20.0     0.997      5.759
+typst  join: "round", miter-limit: 10     16.0     0.997      7.186
+typst  join: "round", miter-limit: 10     14.0     1.017      8.207
+typst  join: "round", miter-limit: 10     12.0     0.997      9.565
+typst  join: "round", miter-limit: 10     11.4     0.997     10.070
+typst  join: "round", miter-limit: 10     11.0     0.997     10.433
+typst  join: "round", miter-limit: 10     10.5     0.997     10.929
+typst  join: "round", miter-limit: 10     10.0     0.997     11.475
+typst  join: "round", miter-limit: 10      8.0     0.997     14.337
+
+tmp=E:\math\_work\_m90

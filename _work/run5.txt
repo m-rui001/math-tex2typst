@@ -1,0 +1,3 @@
+plan written bytes=110237 lines=1670 cr-free
+totals: {'ORDER': 149, 'JUDGMENT': 223, 'KEEP': 8, 'WAIVER': 131}
+unverified sites: 7

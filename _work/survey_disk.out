@@ -1,0 +1,144 @@
+=== DISKS ===
+C: total=163.4GB free=0.1GB
+D: total=156.2GB free=98.1GB
+E: total=156.2GB free=35.1GB
+
+=== C:\ level-1 dirs (GB) ===
+      0.00  $Recycle.Bin
+      0.00  back
+      0.00  Config.Msi
+      0.00  defaults
+      0.00  Documents and Settings
+      0.01  Drive
+      0.11  hp
+      0.00  inetpub
+      0.00  OneDriveTemp
+      0.00  PerfLogs
+      8.97  Program Files
+      4.93  Program Files (x86)
+      3.61  ProgramData
+      0.00  programInfo
+      0.00  Recovery
+      0.00  System Volume Information
+      0.10  System.Sav
+      0.00  temp
+      0.00  tmp
+     53.87  Users
+     31.14  Windows
+      0.00  XboxGames
+
+=== C:\ level-1 files (GB) ===
+      0.00  $WINRE_BACKUP_PARTITION.MARKER
+      0.00  .GamingRoot
+      0.00  AMTAG.BIN
+      0.00  appverifUI.dll
+      0.00  dptech_sslvpn_bho.log
+      0.00  DumpStack.log
+      0.00  DumpStack.log.tmp
+     12.64  hiberfil.sys
+     32.00  pagefile.sys
+      0.02  swapfile.sys
+      0.00  vfcompat.dll
+
+=== C:\Users\hp level-1 dirs (GB) ===
+      0.00  .agently-cli
+      0.00  .agents
+      0.00  .ai_completion
+      0.22  .android
+      0.02  .any-reader
+      0.01  .atomgitdevenv
+      0.42  .bun
+      1.29  .cache
+      0.00  .claude
+      0.00  .cline
+      0.00  .cline-chinese
+      0.00  .codebuddy
+      0.92  .codex
+      0.00  .config
+      0.00  .copilot
+      0.00  .dbus-keyrings
+      0.00  .deepxde
+      0.00  .dws
+      5.36  .elan
+      0.00  .git
+      0.00  .git-ripper-checkpoints
+      0.00  .huaweicloud
+      0.00  .icube-remote-ssh
+      0.00  .idlerc
+      0.00  .ipynb_checkpoints
+      0.03  .ipython
+      0.00  .jupyter
+      0.00  .keras
+      0.00  .lemminx
+      0.05  .local
+      0.37  .marscode
+      0.00  .matplotlib
+      0.00  .modelscope
+      0.07  .pi
+      0.00  .qmind
+      0.01  .qoder-alpha
+      2.60  .qoder-cn
+      0.00  .sheetagent
+      0.00  .ssh
+      0.00  .texlive2025
+      1.07  .vscode
+      0.00  .vscode-shared
+      0.20  .workbuddy
+      0.48  .zcode
+     36.38  AppData
+      0.00  Application Data
+      0.00  Contacts
+      0.00  Cookies
+      0.01  Desktop
+      4.28  Documents
+      0.00  Downloads
+      0.00  Favorites
+      0.00  figures
+      0.00  Links
+      0.00  Local Settings
+      0.00  My Documents
+      0.00  NetHood
+      0.00  OneDrive
+      0.01  Pictures
+      0.00  PrintHood
+      0.00  Recent
+      0.00  results
+      0.00  sangfor
+      0.01  Saved Games
+      0.00  saved_models
+      0.00  Searches
+      0.00  SendTo
+      0.00  ssbroyden_jax
+      0.00  Templates
+      0.01  Videos
+      0.00  __pycache__
+      0.00  「开始」菜单
+
+=== C:\Users\hp level-1 files (MB) ===
+       0.0  .bash_history
+       0.0  .claude.json
+       0.0  .gitconfig
+       0.0  .lesshst
+       0.0  .npmrc
+       0.0  .profile
+       0.0  .python_history
+       0.0  .zshrc
+       0.0  at.html
+       0.3  gal_history.txt
+       0.0  npm
+      26.5  NTUSER.DAT
+       6.0  ntuser.dat.LOG1
+       5.0  ntuser.dat.LOG2
+       0.1  NTUSER.DAT{2ad838bc-efea-11ee-a54d-000d3a94eaa1}.TM.blf
+       0.5  NTUSER.DAT{2ad838bc-efea-11ee-a54d-000d3a94eaa1}.TMContainer00000000000000000001.regtrans-ms
+       0.5  NTUSER.DAT{2ad838bc-efea-11ee-a54d-000d3a94eaa1}.TMContainer00000000000000000002.regtrans-ms
+       0.0  ntuser.ini
+       0.0  oa.html
+       0.0  os.html
+       0.0  pi-web
+       0.0  std.html
+       0.1  t.html
+       0.0  time_machine.py
+       0.1  Untitled.ipynb
+
+=== DONE ===

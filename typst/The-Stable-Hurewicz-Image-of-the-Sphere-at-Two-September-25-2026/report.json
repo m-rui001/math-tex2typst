@@ -1,0 +1,29 @@
+{
+  "paper": "The-Stable-Hurewicz-Image-of-the-Sphere-at-Two-September-25-2026",
+  "ok": true,
+  "typ_lines": 943,
+  "included_pdf_pages": 0,
+  "formulas": 872,
+  "math_failed": 0,
+  "labels": 91,
+  "equations": 42,
+  "theorems": 3,
+  "figures": 1,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1
+  },
+  "samples": {
+    "formulas": "872"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-Stable-Hurewicz-Image-of-the-Sphere-at-Two-September-25-2026.tex"
+}

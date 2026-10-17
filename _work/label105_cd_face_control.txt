@@ -1,0 +1,30 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+cd canvases on the pages: 124 in 56 papers
+
+over 3.0pt on ink: 7 pairs over 6 canvases in 5 papers (unreadable 0)
+  tikzcd   2 pairs / 2 canvases flagged
+  CD       5 pairs / 4 canvases flagged
+
+=== A-universal-group-of-type-F-infinity-September#0  tikzcd  1 对  最深 5.42pt  size=11
+  product : [(5.42, 'Ŵ')]
+  control : boxes=0 raw=3 ink=9  [(3.84, 'c')]
+
+=== Constructible-tame-Hecke-eigensheaves-in-posit#3  CD  1 对  最深 3.74pt  size=11
+  product : [(3.74, 'ΨA')]
+  control : boxes=0 raw=0 ink=56  [(3.15, 'Q')]
+
+=== Irrational-cubic-fourfolds-with-geometric-K3-c#0  tikzcd  1 对  最深 4.12pt  size=11
+  product : [(4.12, '⇢X')]
+  control : boxes=0 raw=2 ink=31  []
+
+=== Tame-Hecke-Eigensheaves-with-Several-Marked-Po#1  CD  1 对  最深 3.74pt  size=11
+  product : [(3.74, 'ΨA')]
+  control : boxes=0 raw=0 ink=54  [(3.15, 'Q')]
+
+=== Tame-Hecke-Eigensheaves-with-Several-Marked-Po#2  CD  2 对  最深 3.28pt  size=11
+  product : [(3.17, 'V'), (3.28, '(Q))B')]
+  control : boxes=0 raw=0 ink=56  []
+
+=== Unrestricted-pro-modularity-at-the-prime-two-O#0  CD  1 对  最深 3.42pt  size=11
+  product : [(3.42, 'forgetfactors2,...,b')]
+  control : boxes=0 raw=0 ink=32  [(4.8, 'b'), (3.36, 'E'), (3.36, 'E')]

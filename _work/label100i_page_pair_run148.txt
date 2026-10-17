@@ -1,0 +1,80 @@
+#100i: the two labels of every on-ink face row, our page vs the pdflatex control
+dx/dy is box 2 from box 1 on that page; equal offsets with bigger widths = metrics, different offsets = placement
+
+### The-Grothendieck-homotopy-hypothesis-via-ele#4  row 5.61  'Y×Y' vs ',iū)'
+ours     dx   -8.29 dy    3.81  depth  7.19  |  b1 w  28.53 h 11.00 @11.0 𝑌×𝑌.                   |  b2 w  19.26 h 11.00 @11.0 (id𝑌,𝑖𝑢̄)      |  pair at ink (31.3, 51.8)
+ctl       dx  -44.55 dy    8.89  depth  0.00  |  b1 w  28.44 h 11.05 @10.91 Y×Y.                   |  b2 w  19.11 h 10.91 @10.91 (idY,i¯u)      |  pair at ink (58.1, 66.1)
+
+### A-continuum-temperature-singularity-for-a-ra#1  row 5.45  'ρ=g' vs 'w'
+ours     dx    7.93 dy   -5.11  depth  5.89  |  b1 w  25.75 h 11.00 @11.0 𝜌=𝑔2𝑔                  |  b2 w   7.88 h 11.00 @11.0 𝑤−             |  pair at ink (46.7, 48.0)
+ctl       dx   81.30 dy   -7.59  depth  0.00  |  b1 w  25.39 h 10.91 @10.91 ρ=g2                   |  b2 w   7.81 h 10.91 @10.91 w−             |  pair at ink (0.0, 48.1)
+ctl       dx  138.39 dy   -7.59  depth  0.00  |  b1 w  25.39 h 10.91 @10.91 ρ=g2                   |  b2 w   7.81 h 10.91 @10.91 w+             |  pair at ink (0.0, 48.1)
+
+### A-Linear-Clock-for-Random-Walk-on-Tree-Weigh#0  row 5.04  'H' vs 'uncappedban'
+ours     dx   -1.48 dy  -44.50  depth  6.84  |  b1 w   7.48 h  9.00 @9.0 𝐻                      |  b2 w  10.26 h 51.35 @9.0 uncappedban    |  pair at ink (0.0, 2.3)
+ctl       dx   31.00 dy  -10.51  depth  0.00  |  b1 w   8.28 h  9.96 @9.96 H                      |  b2 w   9.96 h 61.18 @9.96 uncappedband   |  pair at ink (0.0, 39.5)
+
+### Relative-independence-of-the-separable-quoti#0  row 4.97  'X=ker(Q−B)' vs 'B|'
+ours     dx   69.20 dy    5.12  depth  5.88  |  b1 w  78.67 h 11.00 @11.0 𝑋=ker(𝑄−𝐵)             |  b2 w  11.68 h 11.00 @11.0 𝐵|𝑋            |  pair at ink (0.0, 49.9)
+ctl       dx  123.17 dy    9.29  depth  0.00  |  b1 w  78.31 h 11.05 @10.91 X=ker(Q−B)             |  b2 w  11.86 h 11.05 @10.91 B|X            |  pair at ink (0.0, 63.5)
+
+### A-Linear-Clock-for-Random-Walk-on-Tree-Weigh#0  row 4.80  'height' vs 'uncappedban'
+ours     dx   -2.74 dy    2.32  depth  7.52  |  b1 w  23.49 h 10.26 @9.0 height                 |  b2 w  10.26 h 51.35 @9.0 uncappedban    |  pair at ink (0.0, 0.0)
+ctl       dx   26.68 dy   39.49  depth  0.00  |  b1 w  26.85 h  9.96 @9.96 height                 |  b2 w   9.96 h 61.18 @9.96 uncappedband   |  pair at ink (4.3, 0.0)
+
+### The-Blockwise-Alperin-Weight-Conjecture-Sept#0  row 4.56  'Smallorbitgivesanextensionwithsmall' vs '=1'
+ours     dx   -3.07 dy   -2.79  depth  6.21  |  b1 w 149.30 h 10.26 @9.0 Smallorbitgivesanexten |  b2 w  14.00 h  9.00 @9.0 when𝑂𝑝(𝐽)=1(7) |  pair at ink (186.7, 84.9)
+ctl       (a label is missing on this page:  b1=0 b2=0)
+
+### An-explicit-counterexample-to-the-Auslander-#0  row 4.32  'FAsmallmatrix)' vs 'finitequotient'
+ours     dx   23.98 dy   -5.15  depth  5.11  |  b1 w  67.06 h  9.00 @9.0 Λ=(smallmatrix𝐴0𝐹𝐴smal |  b2 w  52.34 h 10.26 @9.0 finitequotient |  pair at ink (91.8, 127.6)
+ctl       (a label is missing on this page:  b1=0)
+
+### Irrational-cubic-fourfolds-with-geometric-K3#0  row 4.12  '⇢X' vs 'Morifactorization'
+ours     dx   19.29 dy    1.81  depth  3.87  |  b1 w  23.16 h 11.00 @11.0 𝐏4⇢𝑋                   |  b2 w  63.40 h  8.03 @8.03 Morifactorizat |  pair at ink (185.7, 1.3)
+ctl       (a label is missing on this page:  b1=0)
+
+### Finite-Monoid-Computations-and-a-Uniform-Gen#0  row 3.92  'continuation' vs 'firstmismatch'
+ours     dx   27.75 dy    9.04  depth  3.50  |  b1 w  57.46 h 12.54 @11.0 continuation           |  b2 w  64.55 h 12.54 @11.0 firstmismatch  |  pair at ink (170.1, 57.1)
+ctl       dx   26.82 dy    9.33  depth  1.58  |  b1 w  59.41 h 10.91 @10.91 continuation           |  b2 w  68.33 h 10.91 @10.91 firstmismatch  |  pair at ink (174.4, 60.8)
+
+### Renewal-and-changes-of-law-for-critical-hone#6  row 3.84  'p' vs 'longerend'
+ours     dx  -15.57 dy   -6.41  depth  3.85  |  b1 w   4.53 h  9.00 @9.0 𝑝                      |  b2 w  39.37 h 10.26 @9.0 longerend      |  pair at ink (0.0, 16.4)
+ctl       dx  -21.27 dy   -8.22  depth  1.74  |  b1 w   5.01 h  9.96 @9.96 p                      |  b2 w  45.42 h  9.96 @9.96 longerend      |  pair at ink (0.0, 12.1)
+
+### Finite-tensor-savings-and-exact-Fourier-circ#4  row 3.40  '(x' vs ')'
+ours     dx   -1.64 dy    5.43  depth  3.00  |  b1 w  10.93 h 11.00 @11.0 (𝑥++𝑦+,𝑥+−𝑦+)          |  b2 w   4.64 h 11.00 @11.0 diag(𝐵,−𝐵−𝘛)   |  pair at ink (159.6, 48.1)
+ctl       dx   33.10 dy    0.00  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x−,y−)                |  b2 w   4.03 h 10.36 @10.36 (x−,y−)        |  pair at ink (25.8, 6.2)
+ctl       dx  194.68 dy   -0.00  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x−,y−)                |  b2 w   4.03 h 10.36 @10.36 (x+,y+)        |  pair at ink (25.8, 6.2)
+ctl       dx   58.86 dy   45.78  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x−,y−)                |  b2 w   4.03 h 10.36 @10.36 (x−+y−,x−−y−)  |  pair at ink (25.8, 6.2)
+ctl       dx  220.44 dy   45.78  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x−,y−)                |  b2 w   4.03 h 10.36 @10.36 (x++y+,x+−y+)  |  pair at ink (25.8, 6.2)
+ctl       dx  129.75 dy   55.85  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x−,y−)                |  b2 w   4.03 h 10.36 @10.36 diag(B,−B−T)   |  pair at ink (25.8, 6.2)
+ctl       dx -128.47 dy    0.00  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x+,y+)                |  b2 w   4.03 h 10.36 @10.36 (x−,y−)        |  pair at ink (58.9, 6.2)
+ctl       dx   33.10 dy    0.00  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x+,y+)                |  b2 w   4.03 h 10.36 @10.36 (x+,y+)        |  pair at ink (187.3, 6.2)
+ctl       dx -102.71 dy   45.78  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x+,y+)                |  b2 w   4.03 h 10.36 @10.36 (x−+y−,x−−y−)  |  pair at ink (84.6, 6.2)
+ctl       dx   58.86 dy   45.78  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x+,y+)                |  b2 w   4.03 h 10.36 @10.36 (x++y+,x+−y+)  |  pair at ink (187.3, 6.2)
+ctl       dx  -31.83 dy   55.85  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x+,y+)                |  b2 w   4.03 h 10.36 @10.36 diag(B,−B−T)   |  pair at ink (155.5, 6.2)
+ctl       dx   58.86 dy  -45.78  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x−+y−,x−−y−)          |  b2 w   4.03 h 10.36 @10.36 (x−,y−)        |  pair at ink (0.0, 6.2)
+ctl       dx  220.44 dy  -45.78  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x−+y−,x−−y−)          |  b2 w   4.03 h 10.36 @10.36 (x+,y+)        |  pair at ink (0.0, 6.2)
+ctl       dx   84.63 dy    0.00  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x−+y−,x−−y−)          |  b2 w   4.03 h 10.36 @10.36 (x−+y−,x−−y−)  |  pair at ink (0.0, 52.0)
+ctl       dx  246.20 dy    0.00  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x−+y−,x−−y−)          |  b2 w   4.03 h 10.36 @10.36 (x++y+,x+−y+)  |  pair at ink (0.0, 52.0)
+ctl       dx  155.51 dy   10.07  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x−+y−,x−−y−)          |  b2 w   4.03 h 10.36 @10.36 diag(B,−B−T)   |  pair at ink (0.0, 52.0)
+ctl       dx -102.71 dy  -45.78  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x++y+,x+−y+)          |  b2 w   4.03 h 10.36 @10.36 (x−,y−)        |  pair at ink (58.9, 6.2)
+ctl       dx   58.86 dy  -45.78  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x++y+,x+−y+)          |  b2 w   4.03 h 10.36 @10.36 (x+,y+)        |  pair at ink (161.6, 6.2)
+ctl       dx  -76.95 dy    0.00  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x++y+,x+−y+)          |  b2 w   4.03 h 10.36 @10.36 (x−+y−,x−−y−)  |  pair at ink (84.6, 52.0)
+ctl       dx   84.63 dy    0.00  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x++y+,x+−y+)          |  b2 w   4.03 h 10.36 @10.36 (x++y+,x+−y+)  |  pair at ink (161.6, 52.0)
+ctl       dx   -6.06 dy   10.07  depth  0.00  |  b1 w   9.96 h 10.36 @10.36 (x++y+,x+−y+)          |  b2 w   4.03 h 10.36 @10.36 diag(B,−B−T)   |  pair at ink (155.5, 52.0)
+
+### The-Blockwise-Alperin-Weight-Conjecture-Sept#0  row 3.36  'Valuedliftandmarked-coverdescent' vs 'p'
+ours     dx   49.62 dy   -1.81  depth  3.71  |  b1 w 136.60 h 10.26 @9.0 Valuedliftandmarked-co |  b2 w   3.71 h  6.30 @6.3 Nosuchmarked𝐽- |  pair at ink (199.4, 72.7)
+ctl       (a label is missing on this page:  b1=0 b2=16)
+
+### Cylinder-amplitudes-and-logarithmic-bridge-l#0  row 3.32  'y' vs 'Firstmeansleft;'
+ours     dx  -49.56 dy    5.27  depth  3.73  |  b1 w   4.41 h  9.00 @9.0 𝑦                      |  b2 w  58.53 h 10.26 @9.0 Firstmeansleft |  pair at ink (11.6, 148.6)
+ctl       dx   -0.96 dy   54.27  depth  0.00  |  b1 w   4.54 h  8.97 @8.97 y                      |  b2 w  66.32 h  8.97 @8.97 Firstmeansleft |  pair at ink (30.6, 105.6)
+ctl       dx  -63.32 dy    8.07  depth  0.90  |  b1 w   4.54 h  8.97 @8.97 y                      |  b2 w  66.32 h  8.97 @8.97 Firstmeansleft |  pair at ink (30.6, 151.8)
+
+### Disk-transfer-representations-and-confined-b#1  row 3.10  'block' vs '2'
+ours     dx  169.67 dy   90.01  depth  0.00  |  b1 w  24.29 h 12.54 @11.0 block𝐴                 |  b2 w   5.50 h 11.00 @11.0 2              |  pair at ink (49.5, 14.2)
+ours     dx   14.89 dy   -8.18  depth  2.82  |  b1 w  24.29 h 12.54 @11.0 block𝐴                 |  b2 w   5.50 h 11.00 @11.0 2              |  pair at ink (204.3, 104.2)
+ctl       (a label is missing on this page:  b1=0)

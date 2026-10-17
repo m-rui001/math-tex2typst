@@ -1,0 +1,30 @@
+{
+  "paper": "Algebraic-Kuga-Satake-correspondences-and-Hodge-conjectures-on-a-K3-quadratic-locus-September-30-2026",
+  "ok": true,
+  "typ_lines": 1484,
+  "included_pdf_pages": 0,
+  "formulas": 1655,
+  "math_failed": 0,
+  "labels": 151,
+  "equations": 1,
+  "theorems": 5,
+  "figures": 0,
+  "tables": 1,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "1655"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\renewcommand\\AA"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Algebraic-Kuga-Satake-correspondences-and-Hodge-conjectures-on-a-K3-quadratic-locus-September-30-2026.tex"
+}

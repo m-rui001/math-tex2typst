@@ -1,0 +1,15 @@
+papers: 724   log cetz_converted 1045   page #cetz.canvas( 1055
+papers whose canvas count differs from the log: 8
+ -1  An-Integral-Counterexample-to-Gerstens-Conjecture- log_conv=2 canvas=3 raw=0 image=0 token=[]
+ -1  Global-quantum-geometric-Langlands-at-irrational-l log_conv=1 canvas=2 raw=0 image=0 token=[]
+ -1  Invariant-anticanonical-indices-and-conversion-of- log_conv=1 canvas=2 raw=0 image=0 token=[]
+ -1  Irrational-cubic-fourfolds-with-geometric-K3-categ log_conv=3 canvas=4 raw=0 image=0 token=[]
+ -1  Log-abundance-for-compact-Kahler-spaces-under-loga log_conv=4 canvas=5 raw=0 image=0 token=[]
+ -1  The-two-primary-Birch-Swinnerton-Dyer-formula-in-S log_conv=1 canvas=2 raw=0 image=0 token=[]
+ -2  A-rational-obstruction-to-strong-chromatic-splitti log_conv=8 canvas=10 raw=0 image=0 token=[]
+ -2  The-Restricted-Geometric-Langlands-Equivalence-in- log_conv=0 canvas=2 raw=0 image=0 token=[]
+
+mangled/leftover placeholder tokens on the page:
+
+papers carrying an #unconverted marker: 0
+wrote _work/canvas_ledger.json

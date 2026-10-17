@@ -1,0 +1,26 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usetikzlibrary{positioning}
+\begin{document}
+% Three pictures, one feature apart: where a named in-path node sits when it ends the
+% path with no position key (A), ends it with `midway` (B), and sits between two
+% segments with no key (C). The name's anchor is inked by a filled circle so the PDF
+% carries the number.
+\begin{tikzpicture}
+  \draw[help lines] (-0.5,-0.5) grid (3.5,0.5);
+  \path (0,0) -- (2,0) node (m) {};
+  \fill[red] (m) circle (2pt);
+  \fill (0,0) circle (1pt) (2,0) circle (1pt);
+\end{tikzpicture}
+\begin{tikzpicture}
+  \draw[help lines] (-0.5,-0.5) grid (3.5,0.5);
+  \path (0,0) -- (2,0) node[midway] (m) {};
+  \fill[red] (m) circle (2pt);
+  \fill (0,0) circle (1pt) (2,0) circle (1pt);
+\end{tikzpicture}
+\begin{tikzpicture}
+  \draw[help lines] (-0.5,-0.5) grid (3.5,0.5);
+  \path (0,0) node (m) {} -- (2,0);
+  \fill[red] (m) circle (2pt);
+  \fill (0,0) circle (1pt) (2,0) circle (1pt);
+\end{tikzpicture}
+\end{document}

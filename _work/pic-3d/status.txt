@@ -1,0 +1,69 @@
+# 3D-axis family — picture status
+
+Sandbox `E:\math\_work\pic-3d\t2t` (a copy of live `tools/t2t` at 2026-10-11 10:22, with live
+`prep.py` re-synced after the orchestrator merged another agent's fix at 10:30). `cetz.py` was
+found at md5 `f59d674f4878191a2d2a4b1094988f49`, mtime 2026-10-10 21:19, and is the only file this
+family touches; the patch is `_work/pic-3d/cetz.patch` and is **not** applied to `tools/`.
+
+`compiles()` (the `typst` subprocess gate) is stubbed to True in every run behind this file, because
+the sandbox may not invoke `typst`. `sane()` runs for real, and the geometry is checked against
+pdflatex, so a picture listed as converted still has to pass the batch's compile check like every
+other picture in the corpus. See `measurements.md`.
+
+## Owned papers, `#raw(block: true, lang: "latex")` blocks
+
+| paper | live `typst/*/main.typ` (shipped 2026-10-10 15:4x) | sandbox before | sandbox after |
+| --- | --- | --- | --- |
+| A-sharp-entropy-bound-and-the-simplex-inequality… | 1 raw, 0 canvases | 0 raw | 0 raw, 1 canvas |
+| Critical-bond-and-site-percolation-on-the-cubic-lattice… | 1 raw, 1 canvas | 1 raw | 0 raw, 2 canvases |
+| Strong-diffeomorphic-approximation… p-gt-2 | 1 raw, 4 canvases | 0 raw | 0 raw, 5 canvases |
+| Strong-diffeomorphic-approximation… 1-le-p-le-2 | 0 raw, 2 canvases | 0 raw | 0 raw, 2 canvases |
+
+"sandbox before" = the same papers through the live code as found (unpatched `cetz.py`); "after" =
+through the patched `cetz.py`. The shipped `typst/` outputs are older than the 21:19 `cetz.py`, which
+is why two of the three papers already looked clean in the live code but still show a quoted block on
+disk: the last batch for those papers predates the 3D transform work.
+
+Totals for the four papers: 3 raw blocks on disk → 0; 7 canvases on disk → 10.
+
+## Per picture
+
+A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026
+* `#0` converted — `scale=1.25, x={(1cm,0cm)}, y={(0.45cm,0.35cm)}, z={(0cm,1.5cm)}` prism; the three
+  refused statements were the two `\fill` faces and the `\bfseries` node at `(1,.7,2.55)`; the live
+  `cetz.py` as found already builds this picture (no change from this family).
+
+Critical-bond-and-site-percolation-on-the-cubic-lattice-September-24-2026
+* `#0` converted — refused by the live `cetz.py` as found, on `\coordinate (qf axes)` / `\node (qf
+  label)` …: the name reader cut multi-word names at the first space, so `(qf axes)` in a path and
+  `(qf label.west)` were unknown points. Fixed by the two-hunk patch (`ANCHORED`, the name capture in
+  `_node_at`); the leader line `(qf axes)--(3,2)` and its `.west` anchor are measured in
+  `measurements.md` §4-6.
+* `#1` converted — 2D picture, untouched by this family.
+
+Strong-diffeomorphic-approximation-in-three-dimensions-for-p-gt-2-September-24-2026
+* `#0` converted — 2D, untouched.
+* `#1` converted — `\begin{scope}[shift={(7.1cm,.35cm)}, x={(1.3cm,0cm)}, y={(.42cm,.36cm)},
+  z={(0cm,1.28cm)}]`; `\fill` and `\draw` with three-part points and `\node … at (x,y,z)`. The live
+  `cetz.py` as found already builds this picture; this family only re-measured its basis (worst
+  deviation 0.0003 cm) and pinned it with tests.
+* `#2`, `#3`, `#4` converted — 2D / style pictures, untouched.
+
+Strong-diffeomorphic-approximation-in-three-dimensions-for-1-le-p-le-2-September-24-2026
+* `#0`, `#1` converted — 2D; the paper was already clean on disk and stayed clean.
+
+Not owned, deliberately not touched: `Nonuniqueness-with-local-conservation…` (a 3D-basis paper
+assigned to another writer).
+
+## Test suite
+
+`python test_t2t.py` in the sandbox: 47 passed, 0 failed (the `apptr:c` / `\mbox{}` tabular-stand-in
+failure mentioned in the dispatch is gone — the orchestrator's `prep.py` fix landed and the sandbox
+was re-synced to it).
+With the eight additions from `tests.py` merged in (`test_t2t_with_new.py`): 55 passed, 0 failed.
+
+## Corpus check
+
+Replaying every `\begin{tikzpicture}…\end{tikzpicture}` of all 724 flat papers through `cetz.build()`
+with the live tree vs. the sandbox tree: 908 drawn → 909 drawn, one canvas changed (Critical-bond `#0`,
+None → canvas), no other picture's vertices moved (`corpus_live.txt`, `corpus_sandbox.txt`).

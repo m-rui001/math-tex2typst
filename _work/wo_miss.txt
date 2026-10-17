@@ -1,0 +1,410 @@
+=== geometry (quote line - sec_line) ===
+max_abs_delta = 56
+below = 470
+bucket_<=10 = 356
+bucket_<=120 = 7
+bucket_<=40 = 107
+quote_line_is_header_False = 470
+secline_is_header_False = 1
+secline_is_header_True = 469
+
+=== 47 rows with no verbatim quote hit ===
+---- D12-L461-I03 | D12-Barnette猜想-三次二部平面图Hamilton圈.md | sec_line=461 | fam=macro
+  QLEN=120 QTAIL='说"流消失"是叙述差异，本表说它等价于把容量三元组'
+  best prefix len 20 at lines [465]
+  ON-DISK LINE[:200] = 3. 旧稿 3.3 称 `StateDisk.lean`（483 行）是最大的文件之一：实测最大者是 `Matching.lean` 的 509 行，`StateDisk.lean` 列第二、`ThreeCuts.lean` 的 466 行第三，"之一"这句仍成立，只是排序要补。
+  ON-DISK LINE[-80:] = .lean` 的 509 行，`StateDisk.lean` 列第二、`ThreeCuts.lean` 的 466 行第三，"之一"这句仍成立，只是排序要补。
+  Q[:60]           = 第三，"之一"这句仍成立，只是排序要补。 4. 视角：旧表横向比较论文与 Lean 的形状差（流对 Hall、同伦对位势
+  first divergence around q[24] = '是排序要补。 4. 视角：旧表横向比较论文与 Lean 的形'
+  FIX = 替换为 $\text{Lef→$\text{Left}=(A\times\mathrm{Fin}\ / 移到"$\text{gadg→"$\text{gadget\_hall}$ 的 $2\lvert
+  VNOTE = sig=`ComparatorChallenges/BarnetteHamiltoni` found at [6]
+---- D162-L475-I04 | D162-Kaplansky直接有限性猜想在特征二的反例：从配对恒等式到终止有限搜索的反推笔记.md | sec_line=475 | fam=anchor,count,ordermove,table
+  QLEN=120 QTAIL='8 节台账第 5 行与第 45 行，复测后错位命中'
+  NO PREFIX MATCH AT ALL (tried down to 8 chars)
+---- D166-L820-I02 | D166-二维经典O(n)模型的指数衰减：聚类、旋转与环面尺度反推笔记.md | sec_line=820 | fam=btick,macro,table,typo
+  QLEN=120 QTAIL='节一处双重求和指标的上界误写（把内层写成同一个字母'
+  best prefix len 40 at lines [828]
+  ON-DISK LINE[:200] = 我在写作过程中做了三处最小幅度的行内修补，登记如下，均不涉及段落删除或结论改写。
+  ON-DISK LINE[-80:] = 我在写作过程中做了三处最小幅度的行内修补，登记如下，均不涉及段落删除或结论改写。
+  Q[:80]           = 我在写作过程中做了三处最小幅度的行内修补，登记如下，均不涉及段落删除或结论改写。 其一是两处把跨行书写的数学改为逐行成对闭合的 `$...$`， 原因是定界符奇
+  first divergence around q[40] = '段落删除或结论改写。 其一是两处把跨行书写的数学改为逐行成对'
+  FIX = 改为逐行成对闭合的 `$..→逐行成对闭合的 `$...$`， / 改成与 `annulus.t→与 `annulus.tex` 第 238 行一致的 $s\le r
+  VNOTE = sig=`annulus.tex` found at [9, 11, 102, 153, 211] ; author's line 238 drifted
+---- D181-L848-I02 | D181-完备锥上的斜率配平与没有小Cohen-Macaulay模的三维完备局部整环.md | sec_line=848 | fam=macro
+  QLEN=120 QTAIL=' 障碍会锐到 $K_X^2-2c_2(X)\\le('
+  best prefix len 30 at lines [852]
+  ON-DISK LINE[:200] = 1. 常数 $6$ 是否最优。§13 说清了两处 $\frac14$ 的来源,
+  ON-DISK LINE[-80:] = 1. 常数 $6$ 是否最优。§13 说清了两处 $\frac14$ 的来源,
+  Q[:70]           = 1. 常数 $6$ 是否最优。§13 说清了两处 $\frac14$ 的来源, 但没告诉我"宽度至多一"能否改进到某个 $\delta<1$
+  first divergence around q[40] = 'c14$ 的来源, 但没告诉我"宽度至多一"能否改进到某个 '
+  FIX = 换成 $(\delta/2)→$(\delta/2)^2$ 直接代出来的,
+  VNOTE = sig=`\delta` found at [547, 930]
+---- D191-L839-I03 | D191-把生成量与存储量拆开算-最坏情况子集和的低空间算法.md | sec_line=839 | fam=ordermove,probe
+  QLEN=120 QTAIL='硬要求， 我做了三次 Edit 搬运：把 §0 整'
+  best prefix len 50 at lines [848]
+  ON-DISK LINE[:200] = 二，块位置。第二次追加把 §3、§4、§5 插在 §0 之前；第三次追加把 §6、§7 插在 §1 之前，
+  ON-DISK LINE[-80:] = 二，块位置。第二次追加把 §3、§4、§5 插在 §0 之前；第三次追加把 §6、§7 插在 §1 之前，
+  Q[:90]           = 二，块位置。第二次追加把 §3、§4、§5 插在 §0 之前；第三次追加把 §6、§7 插在 §1 之前， 并使 §1 的标题行在替换中丢失。为满足"§0 在前、`## §` 编号
+  first divergence around q[54] = '插在 §1 之前， 并使 §1 的标题行在替换中丢失。为满足'
+  FIX = 移到探针行之后，把 §1 正→探针行之后，把 §1 正文与 §2 整块上移到 §0 之后，
+  VNOTE = sig=`## §` found at [14, 36, 67, 100, 138]
+---- D191-L839-I04 | D191-把生成量与存储量拆开算-最坏情况子集和的低空间算法.md | sec_line=839 | fam=btick,macro,banstring
+  QLEN=120 QTAIL='序生成"改成"只要有序性断裂"；§3 里一处口语过'
+  best prefix len 40 at lines [855]
+  ON-DISK LINE[:200] = 三，禁词就地改写。为满足文风禁令的零命中，我在四处做了等价改写，被换掉的词形本身不在这里复现：
+  ON-DISK LINE[-80:] = 三，禁词就地改写。为满足文风禁令的零命中，我在四处做了等价改写，被换掉的词形本身不在这里复现：
+  Q[:80]           = 三，禁词就地改写。为满足文风禁令的零命中，我在四处做了等价改写，被换掉的词形本身不在这里复现： §3 里把一个转折连词的旧写法改成"它已经变成'若干级和流的和流
+  first divergence around q[47] = '形本身不在这里复现： §3 里把一个转折连词的旧写法改成"它'
+  FIX = 改为配对形式→配对形式
+  VNOTE = sig=`\right` found at [74, 75, 209, 279, 703]
+---- D194-L420-I13 | D194-同余格表示问题的否定解答：一条被格形状逼出来的群论路线.md | sec_line=420 | fam=other
+  QLEN=119 QTAIL='ckets.tex:383--590`（§13）；'
+  best prefix len 60 at lines [441]
+  ON-DISK LINE[:200] = `framework.tex:163--194` 之前` 改为 `framework.tex:163--194`（§6）；
+  ON-DISK LINE[-80:] = `framework.tex:163--194` 之前` 改为 `framework.tex:163--194`（§6）；
+  Q[:100]           = `framework.tex:163--194` 之前` 改为 `framework.tex:163--194`（§6）； `packets.tex:383--590` 前` 改为 `packets.
+  first divergence around q[63] = '94`（§6）； `packets.tex:383--590'
+  FIX = 改为 `framework.→`framework.tex:163--194` / 改为 `packets.te→`packets.tex:383--590`
+  VNOTE = no verbatim signature
+---- D216-L798-I05 | D216-线性次高斯与维度无关对数Sobolev不等式的反证路线.md | sec_line=798 | fam=macro
+  QLEN=120 QTAIL='ations.tex:940，即 $h_0$ 的定'
+  best prefix len 60 at lines [811]
+  ON-DISK LINE[:200] = 其三：§19 问题一里 `$0\ltl=07-observations.tex:940$` 是我把一个文件行号错误地塞进了数学环境，
+  ON-DISK LINE[-80:] = 其三：§19 问题一里 `$0\ltl=07-observations.tex:940$` 是我把一个文件行号错误地塞进了数学环境，
+  Q[:100]           = 其三：§19 问题一里 `$0\ltl=07-observations.tex:940$` 是我把一个文件行号错误地塞进了数学环境， 应读作 build/sections/07-observation
+  first divergence around q[67] = '地塞进了数学环境， 应读作 build/sections/0'
+  FIX = 应读作 build/sect→build/sections/07-observations.tex:940，即 / 应读作 build/sect→build/sections/07-observations.tex
+  VNOTE = sig=`\ltl` found at [775]
+---- D218-L693-I06 | D218-严格椭圆方向零一律的反向重构笔记.md | sec_line=693 | fam=other
+  QLEN=104 QTAIL=' `03-radius.tex:191-200`。'
+  NO PREFIX MATCH AT ALL (tried down to 8 chars)
+---- D236-L1164-I03 | D236-平面半线的幂次节省.md | sec_line=1164 | fam=macro
+  QLEN=120 QTAIL='{3/4}$ 这道门槛出现在边界求和（`bound'
+  best prefix len 70 at lines [1171]
+  ON-DISK LINE[:200] = 2. §12 末尾写"门槛具体取 $\delta^{3/4}$ 还是 $\delta^{2/3}$，见 §13、§14 与 §31 三处"，
+  ON-DISK LINE[-80:] = 2. §12 末尾写"门槛具体取 $\delta^{3/4}$ 还是 $\delta^{2/3}$，见 §13、§14 与 §31 三处"，
+  Q[:110]           = 2. §12 末尾写"门槛具体取 $\delta^{3/4}$ 还是 $\delta^{2/3}$，见 §13、§14 与 §31 三处"， 其中 §31 应读作 §36：$M\delta^{3/4}$ 这道门槛出现在边
+  first divergence around q[71] = ' §31 三处"， 其中 §31 应读作 §36：$M\\de'
+  FIX = 应读作 §36：$M\del→§36：$M\delta^{3/4}$ 这道门槛出现在边界求和（`boundary / 应读作 §36：$M\del→§36：$M\delta^{3/4}$ 这道门槛出现在边界求和（`b
+  VNOTE = sig=`\delta` found at [333, 345, 360, 362, 364]
+---- D236-L1164-I04 | D236-平面半线的幂次节省.md | sec_line=1164 | fam=other
+  QLEN=89 QTAIL='x:45-52`；§6 讲的是反设序列的三条标度。'
+  best prefix len 40 at lines [1174]
+  ON-DISK LINE[:200] = 3. §2 里写"§6 里那块把一批交换限制到参与点上的操作"，应读作 §37.1，
+  ON-DISK LINE[-80:] = 3. §2 里写"§6 里那块把一批交换限制到参与点上的操作"，应读作 §37.1，
+  Q[:80]           = 3. §2 里写"§6 里那块把一批交换限制到参与点上的操作"，应读作 §37.1， 该限制论证在 `recurrence.tex:45-52`；§6 讲的是反
+  first divergence around q[43] = '读作 §37.1， 该限制论证在 `recurrence.t'
+  FIX = 应读作 §37.1，→§37.1，
+  VNOTE = no verbatim signature
+---- D238-L734-I02 | D238-平方差自由集的固定幂节省.md | sec_line=734 | fam=macro,typo
+  QLEN=120 QTAIL='ath P}$，应为 $\\mathcal Z_{\\'
+  best prefix len 30 at lines [742]
+  ON-DISK LINE[:200] = 写法供阅读者替换：其一，§3"把 $A\subseteq[N]$ 接上去"段内
+  ON-DISK LINE[-80:] = 写法供阅读者替换：其一，§3"把 $A\subseteq[N]$ 接上去"段内
+  Q[:70]           = 其一，§3"把 $A\subseteq[N]$ 接上去"段内 $Y(N,A)=Z_{\mathcal P_N}(G)$ 无误，但 §7 首段
+  first divergence around q[32] = '$ 接上去"段内 $Y(N,A)=Z_{\\mathcal P'
+  FIX = 应为 $\mathcal Z→$\mathcal Z_{\mathcal P}$
+  VNOTE = sig=`\subseteq` found at [27, 78, 139, 219, 348]
+---- D238-L734-I03 | D238-平方差自由集的固定幂节省.md | sec_line=734 | fam=macro,ordermove,probe
+  QLEN=120 QTAIL='lVert\\cdot\\rVert$。两处均不影响论'
+  best prefix len 8 at lines [744]
+  ON-DISK LINE[:200] = $\mathcal Z_{\math P}$，应为 $\mathcal Z_{\mathcal P}$；其二，§7 末段
+  ON-DISK LINE[-80:] = $\mathcal Z_{\math P}$，应为 $\mathcal Z_{\mathcal P}$；其二，§7 末段
+  Q[:48]           = 其二，§7 末段 $\lVert T\rvert_{H_U}\rVert$ 应为 $\lVert
+  first divergence around q[12] = '，§7 末段 $\\lVert T\\rvert_{H_U}\\r'
+  FIX = 应为 $\lVert T\r→$\lVert T\rvert_{H_U}\rVert_{\math
+  VNOTE = sig=`\mathrm` found at [251, 259, 264, 265, 269]
+---- D250-L690-I03 | D250-典型初态出发的低温SK热浴混合上界重建笔记.md | sec_line=690 | fam=other
+  QLEN=90 QTAIL=' §2、§19 的回避段与 §19 的连续性段末。'
+  best prefix len 40 at lines [697]
+  ON-DISK LINE[:200] = 2. 语言混用修正三处。一处平稳性名词、一处"附加"义动词、一处"同样地"义副词原本是英文，
+  ON-DISK LINE[-80:] = 2. 语言混用修正三处。一处平稳性名词、一处"附加"义动词、一处"同样地"义副词原本是英文，
+  Q[:80]           = 2. 语言混用修正三处。一处平稳性名词、一处"附加"义动词、一处"同样地"义副词原本是英文， 已就地在追加段内改为中文，位置分别在 §2、§19 的回避段与 §
+  first divergence around q[47] = '义副词原本是英文， 已就地在追加段内改为中文，位置分别在 §'
+  FIX = 改为中文，位置分别在 §2、→中文，位置分别在 §2、§19 的回避段与 §19 的连续性段末
+  VNOTE = no verbatim signature
+---- D250-L804-I01 | D250-典型初态出发的低温SK热浴混合上界重建笔记.md | sec_line=804 | fam=btick,count,table,probe
+  QLEN=120 QTAIL='十四次的计数没错， 首次落盘的序号应写成会话第 1'
+  best prefix len 50 at lines [806]
+  ON-DISK LINE[:200] = 本节的编号在 §25 之后追加，因此 §25 里"小节从 §0 到 §26"那句应读作"从 §0 到 §27"，
+  ON-DISK LINE[-80:] = 本节的编号在 §25 之后追加，因此 §25 里"小节从 §0 到 §26"那句应读作"从 §0 到 §27"，
+  Q[:90]           = 本节的编号在 §25 之后追加，因此 §25 里"小节从 §0 到 §26"那句应读作"从 §0 到 §27"， 台账仍在 §26，是全文唯一的五列表。另外更正 §25 的一处口径
+  first divergence around q[57] = '0 到 §27"， 台账仍在 §26，是全文唯一的五列表。另'
+  FIX = 应读作"从 §0 到 §27→"从 §0 到 §27"， / 应写成会话第 16 次工具调→会话第 16 次工具调用（不计读规格那一次则为第 15 次），落在规
+  VNOTE = no verbatim signature
+---- D264-L932-I01 | D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md | sec_line=932 | fam=banstring,table,probe
+  QLEN=120 QTAIL='改写为该句的等价陈述； （二）§6 曾有一处两字转'
+  best prefix len 30 at lines [934]
+  ON-DISK LINE[:200] = 动笔合规记录。本文件写作过程中有三处文风与记号违例，均在交付前的同会话
+  ON-DISK LINE[-80:] = 动笔合规记录。本文件写作过程中有三处文风与记号违例，均在交付前的同会话
+  Q[:70]           = 动笔合规记录。本文件写作过程中有三处文风与记号违例，均在交付前的同会话 原位合规化，属记号与措辞修复，未删除、未改写任何论证内容，登记如下：
+  first divergence around q[35] = '，均在交付前的同会话 原位合规化，属记号与措辞修复，未删除、'
+  FIX = 改为配对长竖线记号，与台账条→配对长竖线记号，与台账条款的写法要求一致
+  VNOTE = no verbatim signature
+---- D284-L897-I01 | D284-一个无限有限表示的残余有限二元群.md | sec_line=897 | fam=macro,typo
+  QLEN=120 QTAIL='0}^{b-1}$；同一小节正文另一处写法是对的，'
+  best prefix len 30 at lines [899]
+  ON-DISK LINE[:200] = 已落盘的内容我不改写，按规格在此逐条说明，读者按位置自行修正。
+  ON-DISK LINE[-80:] = 已落盘的内容我不改写，按规格在此逐条说明，读者按位置自行修正。
+  Q[:70]           = 已落盘的内容我不改写，按规格在此逐条说明，读者按位置自行修正。 第一条，§8 末段那个独立式里 $\prod_{s=0}{b-1}$ 的下标
+  first divergence around q[31] = '读者按位置自行修正。 第一条，§8 末段那个独立式里 $\\p'
+  FIX = 正确写法是 $\prod_{→$\prod_{s=0}^{b-1}$ / 应读作"分次部分"，指的是按→"分次部分"，指的是按 $v$ 之前标签数 $a$ 的过滤所得的分级
+  VNOTE = sig=`steinberg.tex` found at [15, 18, 100, 116, 234] ; author's line 16 drifted
+---- D323-L1392-I04 | D323-条件性极小模型：紧Kähler四维流形非消灭的整条反推路线.md | sec_line=1392 | fam=btick,count,typo
+  QLEN=98 QTAIL='，行内公式仍然成对； 这些位置的文字内容未被改动。'
+  best prefix len 40 at lines [1407]
+  ON-DISK LINE[:200] = 四、行内定界符误写若干处。§4 与 §10 中我曾把行内代码的收尾反引号误写成美元符，
+  ON-DISK LINE[-80:] = 四、行内定界符误写若干处。§4 与 §10 中我曾把行内代码的收尾反引号误写成美元符，
+  Q[:80]           = 四、行内定界符误写若干处。§4 与 §10 中我曾把行内代码的收尾反引号误写成美元符， 共二十五次，已全部逐处替换回反引号，替换后美元符总数为偶数，行内公式仍然
+  first divergence around q[44] = '引号误写成美元符， 共二十五次，已全部逐处替换回反引号，替换'
+  FIX = 换回反引号，替换后美元符总数→反引号，替换后美元符总数为偶数，行内公 / 换回反引号，替换后美元符总数→反引号，替换后美元符总数为偶数，行内公式仍然成对
+  VNOTE = no verbatim signature
+---- D356-L837-I01 | D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md | sec_line=837 | fam=cite,anchor,banstring,ordermove,typo
+  QLEN=120 QTAIL='gain--Guth 与 Kim 附录里的稀疏球策'
+  best prefix len 30 at lines [839]
+  ON-DISK LINE[:200] = - 类别：续写覆盖事故。第三次追加时误将 §6 末段整段作为锚点替换掉，
+  ON-DISK LINE[-80:] = - 类别：续写覆盖事故。第三次追加时误将 §6 末段整段作为锚点替换掉，
+  Q[:70]           = - 类别：续写覆盖事故。第三次追加时误将 §6 末段整段作为锚点替换掉， 该段原文在此照抄补录，供本体侧机械清理时归位到 §6 末尾、§7 
+  first divergence around q[37] = '段作为锚点替换掉， 该段原文在此照抄补录，供本体侧机械清理时'
+  FIX = 归位到 §6 末尾、§7 标→§6 末尾、§7 标题之前： / 应为 "本单位于其他队列的行→"本单位于其他队列的行号"，登记串本身"其他队列第 180 行号"逐
+  VNOTE = no verbatim signature; author's line kept
+---- D356-L925-I01 | D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md | sec_line=925 | fam=btick,macro,banstring,english,table,probe,typo
+  QLEN=119 QTAIL='mathcal A_m(c)^3" 外加成对 $；'
+  best prefix len 30 at lines [927]
+  ON-DISK LINE[:200] = - 类别：表格格式笔误。§13 台账第 12 数据行（原子范数下界行）的首格
+  ON-DISK LINE[-80:] = - 类别：表格格式笔误。§13 台账第 12 数据行（原子范数下界行）的首格
+  Q[:70]           = - 类别：表格格式笔误。§13 台账第 12 数据行（原子范数下界行）的首格 末尾误多一个反引号、缺一个闭合美元符，规范形态应为 "rw^2
+  first divergence around q[39] = '范数下界行）的首格 末尾误多一个反引号、缺一个闭合美元符，规'
+  FIX = 应为 "rw^2\sum\l→"rw^2\sum\lvert c\rvert^3\le\mathc
+  VNOTE = sig=`\mathcal` found at [86, 92, 207, 210, 218] ; author's line 141 drifted
+---- D356-L982-I01 | D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md | sec_line=982 | fam=btick,count,banstring,english,ordermove,table,probe
+  QLEN=120 QTAIL='为「同样地」；§0 第二条登记行的引导语改为「本单'
+  best prefix len 40 at lines [984]
+  ON-DISK LINE[:200] = 附录 B 申报的七项工单已全部落地，逐项交回。§13 台账第 12 数据行首格的美元符
+  ON-DISK LINE[-80:] = 附录 B 申报的七项工单已全部落地，逐项交回。§13 台账第 12 数据行首格的美元符
+  Q[:80]           = 附录 B 申报的七项工单已全部落地，逐项交回。§13 台账第 12 数据行首格的美元符 与反引号已成对（全稿 `$` 计数 +1、反引号 −1，该行竖线仍是六个
+  first divergence around q[44] = '数据行首格的美元符 与反引号已成对（全稿 `$` 计数 +1'
+  FIX = 改为「同样地」→「同样地」 / 改为「本单位于其他队列的行号→「本单位于其他队列的行号：」
+  VNOTE = sig=`全稿除首行一级标题之外` found at [963] ; author's line 180 drifted
+---- D359-L651-I02 | D359-把单位代价编辑距离压进l1：指数内常数外的匹配夹逼.md | sec_line=651 | fam=anchor,probe,typo
+  QLEN=106 QTAIL='。该交叉引用指错，正确落点应为 §19，此处更正。'
+  best prefix len 60 at lines [659]
+  ON-DISK LINE[:200] = 第二类，前向引用笔误：§11 末段写"编号不回改，另在 §13 申报"，但 §13 实为"指数预算"一节，未作此申报；探针标题遗留的
+  ON-DISK LINE[-80:] = 第二类，前向引用笔误：§11 末段写"编号不回改，另在 §13 申报"，但 §13 实为"指数预算"一节，未作此申报；探针标题遗留的
+  Q[:100]           = 第二类，前向引用笔误：§11 末段写"编号不回改，另在 §13 申报"，但 §13 实为"指数预算"一节，未作此申报；探针标题遗留的 正式说明其实在本节（§19）。该交叉引用指错，正确落点应为 §19
+  first divergence around q[67] = '报；探针标题遗留的 正式说明其实在本节（§19）。该交叉引用'
+  FIX = 应为 §19，此处更正→§19，此处更正
+  VNOTE = no verbatim signature
+---- D360-L912-I10 | D360-电磁尾迹与Kerr-Newman-Penrose不等式反例构造笔记.md | sec_line=912 | fam=count,banstring
+  QLEN=120 QTAIL='措辞的转述； `第 718 行`还有一个勾形记号，'
+  best prefix len 30 at lines [946]
+  ON-DISK LINE[:200] = 补充申报（自查后追加，仍不就地改）。类别一、二、三各有漏报：
+  ON-DISK LINE[-80:] = 补充申报（自查后追加，仍不就地改）。类别一、二、三各有漏报：
+  Q[:70]           = 补充申报（自查后追加，仍不就地改）。类别一、二、三各有漏报： `第 816 行`的短语"零总电荷，并非零场"里含类别一那个二字式（首字"而"
+  first divergence around q[30] = '一、二、三各有漏报： `第 816 行`的短语"零总电荷，并'
+  FIX = 应读作 574、575、57→574、575、577、586、636、686、718
+  VNOTE = no verbatim signature; author's line kept
+---- D365-L468-I03 | D365-端点逐点收敛：高维薛定谔方程的等号情形.md | sec_line=468 | fam=macro
+  QLEN=120 QTAIL='frac{n}{2(n+1)}$` 出现过一次，语'
+  best prefix len 8 at lines [478]
+  ON-DISK LINE[:200] = 排版类（一处）：
+  ON-DISK LINE[-80:] = 排版类（一处）：
+  Q[:48]           = 排版类（一处）： - §1 第二段里抄写阈值时多打了一个右花括号，形如 `$s_n=\frac{
+  first divergence around q[8] = '排版类（一处）： - §1 第二段里抄写阈值时多打了一个'
+  FIX = 请删除
+  VNOTE = sig=`$s_n=\frac{n}{2(n+1)}}$` found at [47]
+---- D368-L649-I02 | D368-时空Penrose不等式的等号与刚性.md | sec_line=649 | fam=btick,cite,banstring,table
+  QLEN=120 QTAIL='术语 exterior 内多一个空格。 - §9：'
+  best prefix len 20 at lines [654]
+  ON-DISK LINE[:200] = - 标题行：连写的「变分分」应为「变分」。
+  ON-DISK LINE[-80:] = - 标题行：连写的「变分分」应为「变分」。
+  Q[:60]           = - 标题行：连写的「变分分」应为「变分」。 - §2：被框编号的引用处误用了转义反引号对，应为普通行内代码格式。 - §
+  first divergence around q[24] = '应为「变分」。 - §2：被框编号的引用处误用了转义反引号对'
+  FIX = 应为「变分」→「变分」
+  VNOTE = sig=`见 §10 阅读路线` found at [238]
+---- D371-L732-I02 | D371-任意阶本原四次环面包线的等分布.md | sec_line=732 | fam=btick,macro,count
+  QLEN=120 QTAIL='orname{covol}(\\sigma(I))='
+  best prefix len 70 at lines [737]
+  ON-DISK LINE[:200] = 第一类，行内公式定界符未配对。位置在 §3 倒数第二段，"标度取 $c_I=(X\operatorname{N} I)^{-1/4}$" 之后半句：
+  ON-DISK LINE[-80:] = 第一类，行内公式定界符未配对。位置在 §3 倒数第二段，"标度取 $c_I=(X\operatorname{N} I)^{-1/4}$" 之后半句：
+  Q[:110]           = 第一类，行内公式定界符未配对。位置在 §3 倒数第二段，"标度取 $c_I=(X\operatorname{N} I)^{-1/4}$" 之后半句： 该处余卷积恒等式（应为 $\operatorname{covol}(\
+  first divergence around q[75] = '}$" 之后半句： 该处余卷积恒等式（应为 $\\operat'
+  FIX = 改成 `$`→`$` / 应为 $\operatorn→$\operatorname{covol}(\sigma(I))=\
+  VNOTE = sig=`\operatorname` found at [45, 98, 101, 103, 136]
+---- D371-L732-I04 | D371-任意阶本原四次环面包线的等分布.md | sec_line=732 | fam=btick,macro
+  QLEN=112 QTAIL='配对的形式。 修法：补右括号并把收尾改成 `$`。'
+  best prefix len 30 at lines [745]
+  ON-DISK LINE[:200] = 第三类，括号与定界符同时缺失。位置在 §8 末段那句 "$l$ 的互素条件"：
+  ON-DISK LINE[-80:] = 第三类，括号与定界符同时缺失。位置在 §8 末段那句 "$l$ 的互素条件"：
+  Q[:70]           = 第三类，括号与定界符同时缺失。位置在 §8 末段那句 "$l$ 的互素条件"： 左式应为 $\gcd(l,\prod_{p\in S}p)=
+  first divergence around q[40] = '$ 的互素条件"： 左式应为 $\\gcd(l,\\prod_{'
+  FIX = 改成 `$`→`$` / 应为 $\gcd(l,\pr→$\gcd(l,\prod_{p\in S}p)=1$，我写成缺右括
+  VNOTE = sig=`\prod` found at [83, 87, 114, 132, 169]
+---- D371-L826-I04 | D371-任意阶本原四次环面包线的等分布.md | sec_line=826 | fam=ordermove,table
+  QLEN=120 QTAIL='，请把这三段（§6, §7, §8）与那四行 交机'
+  best prefix len 30 at lines [838]
+  ON-DISK LINE[:200] = 其二，§5 的末段被劈成两半，前半在 §5 原位（止于行 277 附近），
+  ON-DISK LINE[-80:] = 其二，§5 的末段被劈成两半，前半在 §5 原位（止于行 277 附近），
+  Q[:70]           = 其二，§5 的末段被劈成两半，前半在 §5 原位（止于行 277 附近）， 后半四行（行 826 至行 829）滞留在全文件末尾、§8 之后
+  first divergence around q[38] = ' 277 附近）， 后半四行（行 826 至行 829）滞留'
+  FIX = 应为 §0 至 §17 递增→§0 至 §17 递增、台账置于 §17 之后或保留 §16 原位由闸门判定 / 应为 §0 至 §17 递增→§0 至 §17 递增、台账置于 §17 之后或保留 §16 原位由
+  VNOTE = no verbatim signature
+---- D371-L826-I06 | D371-任意阶本原四次环面包线的等分布.md | sec_line=826 | fam=btick,macro,count,probe
+  QLEN=120 QTAIL='eratorname{N} I$）。 这使全文反引'
+  best prefix len 20 at lines [850]
+  ON-DISK LINE[:200] = 第三类，定界符与字符级滑误，共三处，位置精确到行。
+  ON-DISK LINE[-80:] = 第三类，定界符与字符级滑误，共三处，位置精确到行。
+  Q[:60]           = 第三类，定界符与字符级滑误，共三处，位置精确到行。 行 139：一处行内公式以反引号收尾（内容应为 $\operator
+  first divergence around q[25] = '三处，位置精确到行。 行 139：一处行内公式以反引号收尾（'
+  FIX = 换成 `$`→`$` / 应为 $\operatorn→$\operatorname{covol}(\sigma(I))=\
+  VNOTE = sig=`\operatorname` found at [45, 98, 101, 103, 136]
+---- D371-L826-I09 | D371-任意阶本原四次环面包线的等分布.md | sec_line=826 | fam=btick,count,banstring,ordermove,table
+  QLEN=120 QTAIL='§15 里为了说明定界符问题而写的字面符号（放在行'
+  best prefix len 30 at lines [872]
+  ON-DISK LINE[:200] = 补记（同属 §17，为让上面的计数可复核而追加，不改动上文任何字句）。
+  ON-DISK LINE[-80:] = 补记（同属 §17，为让上面的计数可复核而追加，不改动上文任何字句）。
+  Q[:70]           = 补记（同属 §17，为让上面的计数可复核而追加，不改动上文任何字句）。 上面那句 "`$` 总数 1967 为奇、反引号总数 603 为奇"
+  first divergence around q[38] = '文任何字句）。 上面那句 "`$` 总数 1967 为奇、反'
+  FIX = 换成行内公式定界符之后，→行内公式定界符之后，
+  VNOTE = no verbatim signature
+---- D371-L826-I10 | D371-任意阶本原四次环面包线的等分布.md | sec_line=826 | fam=btick,count
+  QLEN=120 QTAIL='leep 90` 之后连续两次复量与时间戳检查均为'
+  best prefix len 50 at lines [882]
+  ON-DISK LINE[:200] = 再补一句，只为让上面的自报计数不被我自己的追加动作污染：那句"字节 79,593、`$` 1988、反引号 623"
+  ON-DISK LINE[-80:] = 再补一句，只为让上面的自报计数不被我自己的追加动作污染：那句"字节 79,593、`$` 1988、反引号 623"
+  Q[:90]           = 再补一句，只为让上面的自报计数不被我自己的追加动作污染：那句"字节 79,593、`$` 1988、反引号 623" 是该补记块落盘之前的实测；补记块落盘后全文实测 80,595 
+  first divergence around q[59] = '、反引号 623" 是该补记块落盘之前的实测；补记块落盘后全'
+  FIX = 
+  VNOTE = re-measure bytes: author=80595 now=82945
+---- D373-L724-I05 | D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md | sec_line=724 | fam=other
+  QLEN=84 QTAIL='ws.tex:264-271`（配方论证那三行）。'
+  best prefix len 40 at lines [745]
+  ON-DISK LINE[:200] = （四）格式错误一处：§5 第二段末尾我写了一个多余的 `$ 之前`，位置标注应为
+  ON-DISK LINE[-80:] = （四）格式错误一处：§5 第二段末尾我写了一个多余的 `$ 之前`，位置标注应为
+  Q[:80]           = （四）格式错误一处：§5 第二段末尾我写了一个多余的 `$ 之前`，位置标注应为 `build/sections/rows.tex:264-271`（配方论证那
+  first divergence around q[42] = '`，位置标注应为 `build/sections/rows.'
+  FIX = 应为 `build/sect→`build/sections/rows.tex:264-271` / 应为 `build/sect→`build/sections/rows.tex:264-271`（
+  VNOTE = no verbatim signature
+---- D380-L245-I03 | D380-低Selmer余秩推出精确BSD公式.md | sec_line=245 | fam=btick,macro,cite,banstring,typo
+  QLEN=120 QTAIL='，意图是好素数（good reduction 的素'
+  best prefix len 40 at lines [256]
+  ON-DISK LINE[:200] = 需要本体侧一并机械处理的非禁令问题有五处，都是我自己的笔误或格式不一致，逐条给出定位：
+  ON-DISK LINE[-80:] = 需要本体侧一并机械处理的非禁令问题有五处，都是我自己的笔误或格式不一致，逐条给出定位：
+  Q[:80]           = 需要本体侧一并机械处理的非禁令问题有五处，都是我自己的笔误或格式不一致，逐条给出定位： （甲）第 17 节第三段（本稿第 153 行）在中文里混进了一个英文词，
+  first divergence around q[43] = '一致，逐条给出定位： （甲）第 17 节第三段（本稿第 15'
+  FIX = 应为两个行号各带一对反引号或→两个行号各带一对反引号或用连字符接成一个范围
+  VNOTE = sig=`\nmid` found at [44, 50, 107, 117] ; author's line 153 drifted
+---- D384-L610-I05 | D384-二维O4格点模型的精确质量渐近.md | sec_line=610 | fam=banstring
+  QLEN=120 QTAIL='像"神迹"。 这属于用词歧义，不属于禁串，字面无需'
+  best prefix len 50 at lines [626]
+  ON-DISK LINE[:200] = 第四类，词义歧义类：共 $5$ 处，在第 $345$、$352$、$354$、$460$、$595$ 行。
+  ON-DISK LINE[-80:] = 第四类，词义歧义类：共 $5$ 处，在第 $345$、$352$、$354$、$460$、$595$ 行。
+  Q[:90]           = 第四类，词义歧义类：共 $5$ 处，在第 $345$、$352$、$354$、$460$、$595$ 行。 本意一直是"奇宇称之迹"（odd trace），但所用的二字连写另有常用
+  first divergence around q[54] = '、$595$ 行。 本意一直是"奇宇称之迹"（odd tra'
+  FIX = 改成 "奇宇称迹"，第 $4→"奇宇称迹"，第 $460$、$595$ 两行改成"奇迹比值"
+  VNOTE = no verbatim signature
+---- D398-L726-I09 | D398-有限同余格的刻画与不可判定性.md | sec_line=726 | fam=other
+  QLEN=83 QTAIL='为 177 行，改动已在追加前完成，落盘只有一版。'
+  best prefix len 50 at lines [774]
+  ON-DISK LINE[:200] = 不影响论证归属。第四，§9 里我最初把 $S$ 的硬连记作 `sections/diophantine.tex:178`，
+  ON-DISK LINE[-80:] = 不影响论证归属。第四，§9 里我最初把 $S$ 的硬连记作 `sections/diophantine.tex:178`，
+  Q[:83]           = 第四，§9 里我最初把 $S$ 的硬连记作 `sections/diophantine.tex:178`， 复核后改为 177 行，改动已在追加前完成，落盘只有一版。
+  first divergence around q[54] = 'tex:178`， 复核后改为 177 行，改动已在追加前完'
+  FIX = 记作 `sections/d→`sections/diophantine.tex:178` / 改为 177 行，改动已在追→177 行，改动已在追加前完成，落盘只有一版
+  VNOTE = no verbatim signature
+---- D424-L851-I01 | D424-中性库原原子的外层电子半径.md | sec_line=851 | fam=btick,count,table
+  QLEN=120 QTAIL='后合计 1,066，闸门线 1,200 由 §20'
+  best prefix len 40 at lines [853]
+  ON-DISK LINE[:200] = 1. §18 第 8 条声称"本节新增行内数学 10 对、正文收束后合计 1,086"。
+  ON-DISK LINE[-80:] = 1. §18 第 8 条声称"本节新增行内数学 10 对、正文收束后合计 1,086"。
+  Q[:80]           = 1. §18 第 8 条声称"本节新增行内数学 10 对、正文收束后合计 1,086"。 追加后立刻复测：§18 实际新增美元符 0 个，全文计数维持 1,06
+  first divergence around q[45] = '计 1,086"。 追加后立刻复测：§18 实际新增美元符 '
+  FIX = 应读作"正文收束后合计 1,→"正文收束后合计 1,066，闸门线 1,200 由 §20 台账
+  VNOTE = no verbatim signature
+---- D452-L209-I07 | D452-每个无理旋转的不变投影反例.md | sec_line=209 | fam=anchor
+  QLEN=120 QTAIL=' 142 至 150 行（行号按 §9 落盘时统计'
+  best prefix len 70 at lines [214]
+  ON-DISK LINE[:200] = 其五，整块重复类：追加 §7 时锚点选取失误，§6 中“权重落地”“最后是全篇我最愿意反复翻看的一块”“谱推论两条”三个段落被整体重印了一遍，两份分别位于第 133 至 141 行与第 142 至 150 行（行号按 §9 落盘时统计，后续追加在文件尾部、不影响该区间），第二份系重打、与第一份存在少量转写差异；期望处置为保留第 133 至 141 行一份、整块删除第 142 至 150 行，删除后
+  ON-DISK LINE[-80:] = 133 至 141 行一份、整块删除第 142 至 150 行，删除后 §6 的“复盘”段与 §7 标题直接相接。本体侧有整块删除与核对工具，此处只申报不动手。
+  Q[:110]           = 其五，整块重复类：追加 §7 时锚点选取失误，§6 中“权重落地”“最后是全篇我最愿意反复翻看的一块”“谱推论两条”三个段落被整体重印了一遍，两copy分别位于第 133 至 141 行与第 142 至 150 行（行号
+  first divergence around q[72] = '被整体重印了一遍，两copy分别位于第 133 至 141 '
+  FIX = 置为保留第 133 至 14→保留第 133 至 141 行一份、整块删除第 142 至 150
+  VNOTE = sig=`最后是全篇我最愿意反复翻看的一块` found at [135, 144]
+---- D527-L177-I10 | D527-QAOA在热力学先行极限下达到SK基态能量.md | sec_line=177 | fam=count,english,table,probe
+  QLEN=120 QTAIL='固定任一模"应读作"固定任一极小元"（依据 03-'
+  best prefix len 20 at lines [197]
+  ON-DISK LINE[:200] = 勘误（已落盘文字一字不改，此处集中申报）：
+  ON-DISK LINE[-80:] = 勘误（已落盘文字一字不改，此处集中申报）：
+  Q[:60]           = 勘误（已落盘文字一字不改，此处集中申报）： E1 节 题 与 §7 第三段"和式与单位ary 中心极限"中英混排且多一个
+  first divergence around q[21] = '改，此处集中申报）： E1 节 题 与 §7 第三段"和式与'
+  FIX = 应读作"固定任一极小元"（依→"固定任一极小元"（依据 03-classical-optimiza / 写为"08:"前缀（首次出现→"08:"前缀（首次出现处已给全名），§14 把 07-positi
+  VNOTE = no verbatim signature
+---- D581-L353-I05 | D581-谱标量曲率与一致乌雷松宽度.md | sec_line=353 | fam=macro
+  QLEN=120 QTAIL='变量是 $$2\\langle\\mathrm{d}_'
+  best prefix len 96 at lines [385]
+  ON-DISK LINE[:200] = （四）图比较的切向盈余。在 $h=v_1^2\mathrm{d}q^2+\gamma_q$ 下，把 $v_1$ 换成 $v_1/l$、$t$ 换成 $t-\beta$ 后，最后四个切向项的改变量是
+  ON-DISK LINE[-80:] = _1^2\mathrm{d}q^2+\gamma_q$ 下，把 $v_1$ 换成 $v_1/l$、$t$ 换成 $t-\beta$ 后，最后四个切向项的改变量是
+  Q[:120]           = （四）图比较的切向盈余。在 $h=v_1^2\mathrm{d}q^2+\gamma_q$ 下，把 $v_1$ 换成 $v_1/l$、$t$ 换成 $t-\beta$ 后，最后四个切向项的改变量是 $$2\langle\mathrm{d}_
+  first divergence around q[105] = '变量是 $$2\\langle\\mathrm{d}_'
+  FIX = 换成 $v_1/l$、$t$→$v_1/l$、$t$ 换成 $t-\beta$ 后，最后四个切向项
+  VNOTE = sig=`\langle` found at [65]
+---- D65-L708-I02 | D65-渐近中点一致凸与树空间的无界菱形畸变.md | sec_line=708 | fam=macro,count,table
+  QLEN=120 QTAIL='d{abstract}` 在 14,正文占 7-1'
+  best prefix len 12 at lines [712]
+  ON-DISK LINE[:200] = 21.1 tex 侧九条。
+  ON-DISK LINE[-80:] = 21.1 tex 侧九条。
+  Q[:52]           = 21.1 tex 侧九条。 勘误第一条,abstract 的行界。第 0 节文件清单与第 1 节都写 m
+  first divergence around q[14] = ' tex 侧九条。 勘误第一条,abstract 的行界。第'
+  FIX = 改成 2 段无标签 proo→2 段无标签 proof(diamonds.tex:61 的畸变断言、paired / 应改成 2 段无标签 pro→2 段无标签 proof(diamonds.tex:61 的畸变断言
+  VNOTE = sig=`\cite[Theorems~3 and~5]{Girardi2001}` found at [471]
+---- D65-L708-I05 | D65-渐近中点一致凸与树空间的无界菱形畸变.md | sec_line=708 | fam=macro,count,table
+  QLEN=120 QTAIL='6、eq 12、sec 6;figures 侧另有'
+  best prefix len 20 at lines [733]
+  ON-DISK LINE[:200] = 21.4 机检补记(命令与输出实抄,本轮全部再跑一次)。
+  ON-DISK LINE[-80:] = 21.4 机检补记(命令与输出实抄,本轮全部再跑一次)。
+  Q[:60]           = 21.4 机检补记(命令与输出实抄,本轮全部再跑一次)。 标签清点:`grep -ho "\label{...}" se
+  first divergence around q[29] = '轮全部再跑一次)。 标签清点:`grep -ho "\\lab'
+  FIX = 应为 6;第一次跑逮出一行含→6;第一次跑逮出一行含裸 `|`(`$\|\alpha_i'\|\ge2sm_g$ / 改成 `$\lvert\al→`$\lvert\alpha_i'\rvert\ge2sm_g$`
+  VNOTE = sig=`^abbrev|^structure|^instance|^example` found at [363] ; author's line 1 drifted
+---- D711-L1794-I04 | D711-球形Laughlin能隙一致稳定性的反推.md | sec_line=1794 | fam=btick,count,ordermove,table
+  QLEN=120 QTAIL='另一处是 §27 台账中 $a$ 等于四分之七那一'
+  best prefix len 40 at lines [1811]
+  ON-DISK LINE[:200] = 三、就地动作申报，共两处，且都属于唯一许可的那一类（把误打进行内代码跨度的单个定界字符改回
+  ON-DISK LINE[-80:] = 三、就地动作申报，共两处，且都属于唯一许可的那一类（把误打进行内代码跨度的单个定界字符改回
+  Q[:80]           = 三、就地动作申报，共两处，且都属于唯一许可的那一类（把误打进行内代码跨度的单个定界字符改回 反引号）：一处是 §25 里 `05-flags.tex:251--
+  first divergence around q[45] = '度的单个定界字符改回 反引号）：一处是 §25 里 `05-'
+  FIX = 改回 反引号）：一处是 §2→反引号）：一处是 §25 里 `05- / 改回 反引号）：一处是 §2→反引号）：一处是 §25 里 `05-flags.tex:251--
+  VNOTE = no verbatim signature
+---- D76-L605-I06 | D76-非平凡Markov型迫使超反身.md | sec_line=605 | fam=btick,macro,count
+  QLEN=120 QTAIL='9 行、4115 字节，与旧稿记的字节数吻合；fi'
+  best prefix len 20 at lines [617]
+  ON-DISK LINE[:200] = 五、复核行号时撞出来的口径差，如实登记：
+  ON-DISK LINE[-80:] = 五、复核行号时撞出来的口径差，如实登记：
+  Q[:60]           = 五、复核行号时撞出来的口径差，如实登记： 1. 行数。§0 首段旧稿记 main.tex "实测 1021 行"，本轮 
+  first divergence around q[20] = '的口径差，如实登记： 1. 行数。§0 首段旧稿记 main'
+  FIX = 改成了 $\lvert S\→了 $\lvert S\rvert(2R+1)^r$ 的增长率表述
+  VNOTE = claim 1021 行 (nothing recomputed)
+---- D772-L1028-I03 | D772-CM阿贝尔簇的有理Hodge猜想.md | sec_line=1028 | fam=other
+  QLEN=120 QTAIL='结构段）； §5 三处（两处「丰裕类」误留形容词、'
+  best prefix len 30 at lines [1037]
+  ON-DISK LINE[:200] = 乙类，英文词未即时中文化。§1 一处形容词；§4 五处（一处动词、一处
+  ON-DISK LINE[-80:] = 乙类，英文词未即时中文化。§1 一处形容词；§4 五处（一处动词、一处
+  Q[:70]           = 乙类，英文词未即时中文化。§1 一处形容词；§4 五处（一处动词、一处 「光滑簇」误留名词、一处「直和项」误留名词、一处段首「指标」误留 动
+  first divergence around q[36] = '处（一处动词、一处 「光滑簇」误留名词、一处「直和项」误留名'
+  FIX = 改为「第几节的某某命题」→「第几节的某某命题」
+  VNOTE = sig=`选定嵌入` found at [446]
+---- D772-L1028-I04 | D772-CM阿贝尔簇的有理Hodge猜想.md | sec_line=1028 | fam=btick,typo
+  QLEN=120 QTAIL=' 一处「一簇特殊 CM varieties」量词与'
+  best prefix len 40 at lines [1050]
+  ON-DISK LINE[:200] = 丙类，笔误。§5 一处式内双下划线（$U(v)_1$ 打成 $U(v)__1$，该行
+  ON-DISK LINE[-80:] = 丙类，笔误。§5 一处式内双下划线（$U(v)_1$ 打成 $U(v)__1$，该行
+  Q[:80]           = 丙类，笔误。§5 一处式内双下划线（$U(v)_1$ 打成 $U(v)__1$，该行 定界符仍成对）；§5 一处「把列表看成正方形一列」语义应为「$p$ 行、 
+  first divergence around q[43] = 'v)__1$，该行 定界符仍成对）；§5 一处「把列表看成正'
+  FIX = 应为「$p$ 行、→「$p$ 行、
+  VNOTE = sig=`把列表看成正方形一列` found at [313]
+---- D772-L1126-I03 | D772-CM阿贝尔簇的有理Hodge猜想.md | sec_line=1126 | fam=anchor,table
+  QLEN=120 QTAIL='连续编号不冲突，物理排布也是升序，唯一的违规 点是'
+  NO PREFIX MATCH AT ALL (tried down to 8 chars)
+---- D776-L624-I02 | D776-时空Penrose不等式与围面积.md | sec_line=624 | fam=macro,banstring,table,typo
+  QLEN=119 QTAIL='查句提到禁串类别名，但未抄写字形本身，符合规格要求'
+  NO PREFIX MATCH AT ALL (tried down to 8 chars)

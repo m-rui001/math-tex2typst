@@ -1,0 +1,86 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+tikz-cd standalone border 6pt -- distances in pt
+
+=== class 10pt ===
+--- column sep ---  (cell padding on an ink gap: 8.57)
+  (default)   narrow centre   40.00  gap  32.48  sep  23.91 = 0.843 cm   wide centre  104.50  gap  33.44
+  tiny        narrow centre   22.07  gap  14.55  sep   5.98 = 0.211 cm   wide centre   86.57  gap  15.50
+  scriptsize  narrow centre   34.03  gap  26.52  sep  17.95 = 0.633 cm   wide centre   98.52  gap  27.45
+  small       narrow centre   28.04  gap  20.52  sep  11.95 = 0.422 cm   wide centre   92.54  gap  21.48
+  normal      narrow centre   40.00  gap  32.48  sep  23.91 = 0.843 cm   wide centre  104.50  gap  33.44
+  large       narrow centre   51.96  gap  44.45  sep  35.88 = 1.266 cm   wide centre  116.45  gap  45.39
+  huge        narrow centre   63.92  gap  56.41  sep  47.84 = 1.688 cm   wide centre  128.41  gap  57.34
+  1cm         narrow centre   44.44  gap  36.92  sep  28.35 =   1.0 cm   wide centre  108.94  gap  37.88
+  2em         narrow centre   36.02  gap  28.51  sep  19.94 = 0.703 cm   wide centre  100.51  gap  29.45
+  3.2cm       narrow centre  106.81  gap  99.30  sep  90.73 = 3.201 cm   wide centre  171.30  gap 100.24
+  4em         narrow centre   55.95  gap  48.44  sep  39.87 = 1.407 cm   wide centre  120.44  gap  49.38
+  8em         narrow centre   95.80  gap  88.28  sep  79.71 = 2.812 cm   wide centre  160.29  gap  89.22
+--- row sep ---  (cell padding on an ink gap: 4.14)
+  (default)   narrow centre   32.03  gap  22.07  sep  17.93 = 0.633 cm   wide centre   32.03  gap  22.07
+  tiny        narrow centre   18.59  gap   8.63  sep   4.49 = 0.158 cm   wide centre   18.59  gap   8.63
+  scriptsize  narrow centre   27.54  gap  17.58  sep  13.44 = 0.474 cm   wide centre   27.54  gap  17.58
+  small       narrow centre   23.06  gap  13.10  sep   8.96 = 0.316 cm   wide centre   23.06  gap  13.10
+  normal      narrow centre   32.03  gap  22.07  sep  17.93 = 0.633 cm   wide centre   32.03  gap  22.07
+  large       narrow centre   41.00  gap  31.04  sep   26.9 = 0.949 cm   wide centre   41.00  gap  31.04
+  huge        narrow centre   49.96  gap  40.00  sep  35.86 = 1.265 cm   wide centre   49.96  gap  40.00
+  1cm         narrow centre   42.45  gap  32.49  sep  28.35 =   1.0 cm   wide centre   42.44  gap  32.48
+  2em         narrow centre   34.03  gap  24.07  sep  19.93 = 0.703 cm   wide centre   34.03  gap  24.07
+  3.2cm       narrow centre  104.81  gap  94.85  sep  90.71 =   3.2 cm   wide centre  104.81  gap  94.85
+  4em         narrow centre   53.95  gap  43.99  sep  39.85 = 1.406 cm   wide centre   53.95  gap  43.99
+  8em         narrow centre   93.81  gap  83.85  sep  79.71 = 2.812 cm   wide centre   93.81  gap  83.85
+
+=== class 11pt ===
+--- column sep ---  (cell padding on an ink gap: 9.39)
+  (default)   narrow centre   43.80  gap  35.57  sep  26.18 = 0.924 cm   wide centre  114.42  gap  36.61
+  tiny        narrow centre   24.17  gap  15.94  sep   6.55 = 0.231 cm   wide centre   94.79  gap  16.98
+  scriptsize  narrow centre   37.26  gap  29.03  sep  19.64 = 0.693 cm   wide centre  107.88  gap  30.07
+  small       narrow centre   30.71  gap  22.48  sep  13.09 = 0.462 cm   wide centre  101.33  gap  23.52
+  normal      narrow centre   43.80  gap  35.57  sep  26.18 = 0.924 cm   wide centre  114.42  gap  36.61
+  large       narrow centre   56.89  gap  48.66  sep  39.27 = 1.385 cm   wide centre  127.52  gap  49.71
+  huge        narrow centre   69.98  gap  61.75  sep  52.36 = 1.847 cm   wide centre  140.61  gap  62.80
+  1cm         narrow centre   45.97  gap  37.74  sep  28.35 =   1.0 cm   wide centre  116.59  gap  38.78
+  2em         narrow centre   39.44  gap  31.21  sep  21.82 =  0.77 cm   wide centre  110.06  gap  32.25
+  3.2cm       narrow centre  108.33  gap 100.10  sep  90.71 =   3.2 cm   wide centre  178.95  gap 101.14
+  4em         narrow centre   61.26  gap  53.03  sep  43.64 =  1.54 cm   wide centre  131.88  gap  54.07
+  8em         narrow centre  104.89  gap  96.66  sep  87.27 = 3.079 cm   wide centre  175.52  gap  97.71
+--- row sep ---  (cell padding on an ink gap: 4.52)
+  (default)   narrow centre   35.07  gap  24.16  sep  19.64 = 0.693 cm   wide centre   35.08  gap  24.17
+  tiny        narrow centre   20.35  gap   9.44  sep   4.92 = 0.174 cm   wide centre   20.35  gap   9.44
+  scriptsize  narrow centre   30.16  gap  19.25  sep  14.73 =  0.52 cm   wide centre   30.17  gap  19.26
+  small       narrow centre   25.26  gap  14.35  sep   9.83 = 0.347 cm   wide centre   25.26  gap  14.35
+  normal      narrow centre   35.07  gap  24.16  sep  19.64 = 0.693 cm   wide centre   35.08  gap  24.17
+  large       narrow centre   44.89  gap  33.98  sep  29.46 = 1.039 cm   wide centre   44.89  gap  33.98
+  huge        narrow centre   54.71  gap  43.80  sep  39.28 = 1.386 cm   wide centre   54.71  gap  43.80
+  1cm         narrow centre   43.78  gap  32.87  sep  28.35 =   1.0 cm   wide centre   43.78  gap  32.87
+  2em         narrow centre   37.26  gap  26.35  sep  21.83 =  0.77 cm   wide centre   37.26  gap  26.35
+  3.2cm       narrow centre  106.15  gap  95.24  sep  90.72 =   3.2 cm   wide centre  106.15  gap  95.24
+  4em         narrow centre   59.07  gap  48.16  sep  43.64 =  1.54 cm   wide centre   59.08  gap  48.17
+  8em         narrow centre  102.71  gap  91.80  sep  87.28 = 3.079 cm   wide centre  102.71  gap  91.80
+
+=== class 12pt ===
+--- column sep ---  (cell padding on an ink gap: 10.29)
+  (default)   narrow centre   47.23  gap  38.39  sep   28.1 = 0.991 cm   wide centre  123.06  gap  39.49
+  tiny        narrow centre   26.16  gap  17.32  sep   7.03 = 0.248 cm   wide centre  101.99  gap  18.42
+  scriptsize  narrow centre   40.21  gap  31.38  sep  21.09 = 0.744 cm   wide centre  116.04  gap  32.47
+  small       narrow centre   33.18  gap  24.34  sep  14.05 = 0.496 cm   wide centre  109.02  gap  25.45
+  normal      narrow centre   47.23  gap  38.39  sep   28.1 = 0.991 cm   wide centre  123.06  gap  39.49
+  large       narrow centre   61.27  gap  52.44  sep  42.15 = 1.487 cm   wide centre  137.11  gap  53.54
+  huge        narrow centre   75.32  gap  66.48  sep  56.19 = 1.982 cm   wide centre  151.16  gap  67.59
+  1cm         narrow centre   47.48  gap  38.64  sep  28.35 =   1.0 cm   wide centre  123.32  gap  39.75
+  2em         narrow centre   42.55  gap  33.71  sep  23.42 = 0.826 cm   wide centre  118.39  gap  34.82
+  3.2cm       narrow centre  109.84  gap 101.00  sep  90.71 =   3.2 cm   wide centre  185.68  gap 102.11
+  4em         narrow centre   65.96  gap  57.12  sep  46.83 = 1.652 cm   wide centre  141.79  gap  58.22
+  8em         narrow centre  112.78  gap 103.94  sep  93.65 = 3.304 cm   wide centre  188.62  gap 105.05
+--- row sep ---  (cell padding on an ink gap: 4.96)
+  (default)   narrow centre   37.99  gap  26.03  sep  21.07 = 0.743 cm   wide centre   37.99  gap  26.03
+  tiny        narrow centre   22.19  gap  10.23  sep   5.27 = 0.186 cm   wide centre   22.19  gap  10.23
+  scriptsize  narrow centre   32.72  gap  20.76  sep   15.8 = 0.557 cm   wide centre   32.72  gap  20.76
+  small       narrow centre   27.45  gap  15.49  sep  10.53 = 0.371 cm   wide centre   27.45  gap  15.49
+  normal      narrow centre   37.99  gap  26.03  sep  21.07 = 0.743 cm   wide centre   37.99  gap  26.03
+  large       narrow centre   48.52  gap  36.56  sep   31.6 = 1.115 cm   wide centre   48.53  gap  36.57
+  huge        narrow centre   59.06  gap  47.10  sep  42.14 = 1.487 cm   wide centre   59.06  gap  47.10
+  1cm         narrow centre   45.27  gap  33.31  sep  28.35 =   1.0 cm   wide centre   45.27  gap  33.31
+  2em         narrow centre   40.33  gap  28.37  sep  23.41 = 0.826 cm   wide centre   40.33  gap  28.37
+  3.2cm       narrow centre  107.63  gap  95.67  sep  90.71 =   3.2 cm   wide centre  107.63  gap  95.67
+  4em         narrow centre   63.75  gap  51.79  sep  46.83 = 1.652 cm   wide centre   63.75  gap  51.79
+  8em         narrow centre  110.57  gap  98.61  sep  93.65 = 3.304 cm   wide centre  110.57  gap  98.61

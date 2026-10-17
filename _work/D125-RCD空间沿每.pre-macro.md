@@ -1,0 +1,594 @@
+# D125 RCD 空间沿每条测地线的弱 Hessian 界：漂移与曲率改值的反推笔记
+
+写作基线（本文所有 `文件:行` 引用都相对这两个根目录）：
+
+- 正文素材根：`E:\math\preprints\Weak-Hessian-bounds-along-every-geodesic-in-RCD-spaces-September-24-2026\build\`，即 `main.tex`（747 B）、`preamble.tex`（3,323 B）、`sections/` 下 5 个文件（`introduction.tex` 8,244 / `calculus.tex` 8,166 / `drift.tex` 3,920 / `curvature-change.tex` 8,546 / `every-geodesic.tex` 4,247），另有 `references.bib`（6,062 B）。5 个 section 合计约 $3.3\times10^{4}$ B 正文素材，比一篇常规 preprint 小一个数量级，所以这份笔记把力气放在两件事上：把每个引理的省略步补回来，以及把 Lean 侧的编码形状问清楚。
+- Lean 侧根：`E:\math\lean\`，条目在 `lean\formalization.yaml:1646--1648`。
+
+本笔注叙事对应的论文目录为 preprints/Weak-Hessian-bounds-along-every-geodesic-in-RCD-spaces-September-24-2026，在 .tools/lean_queue.txt 队列第 162 行号（按题名逐字匹配登记，本行只补登记、不改前文）。
+
+## 1. 初始动机与第一次表述尝试
+
+`main.tex:9--13` 把结论压成两行：在全支撑 $\RCD(K,N)$ 空间上，$1<N<\infty$，若 $F$ 有界且整体 Lipschitz、其分布 Hessian 由有界连续函数 $G$ 从上方控制，则对应的二阶导不等式沿**每条**极小测地线成立。我要反推的第一件事，就是"每条"这个词是怎么被逼出来的。
+
+我的起点是光滑情形的那个廉价事实：在完备 Riemann 流形上，$\Hess F\le G\,g$ 意味着对任何单位测地线 $\gamma$，$(F\circ\gamma)''\le G\circ\gamma$。证明只有两行：$\frac{d^2}{dt^2}F(\gamma_t)=\Hess F(\dot\gamma,\dot\gamma)+\langle\nabla F,\nabla_{\dot\gamma}\dot\gamma\rangle$，第二项为零。这段推理在 $C^2$ 世界里不需要任何理由，我当时以为它只是把 $\Hess$ 换成弱 Hessian 就能照搬。
+
+第一次表述尝试（失败的）：把 $F$ 的弱 Hessian 写成测度值对象，然后对给定 $\sigma$ 取"速度方向"。三个地方当场断掉。
+
+- 断点一：$F$ 只有分布 Hessian，`introduction.tex:49` 明确说定义本身只需要 $F$ 的一阶导数，所以 $F\notin D(\Delta)$ 是一般情形，"$\Hess F$"作为 $L^2$ 张量不存在。
+- 断点二：给定测地线 $\sigma$ 的速度场没法整体延成一个 $\nabla g$ 型的梯度向量场；弱 Hessian 的测试方向在 `introduction.tex:38--39` 被硬性限定为 $Y=\nabla g$，$g$ 属于紧支撑测试类。也就是说假设 (4.2) 只覆盖"梯度型方向"，而 $\dot\sigma$ 只在 a.e. 意义下是梯度型。
+- 断点三：最致命。弱不等式是对参考测度 $m$ 测试的，一条指定的测地线在 $m$ 下通常是零测集，甚至可以是分形维数为 $1$ 的像。$m$-a.e. 的结论对 $\sigma$ 一点信息都没有。`introduction.tex:7--9` 就是这个障碍的正式表述。
+
+所以我最初的猜想形状是错的：我以为要证的是"a.e. 测地线升级版"，即对 $m\times m$-几乎每对端点之间的测地线成立，那可以用 $\nabla_{\dot\gamma}\dot\gamma=0$ 的 a.e. 版本（Gigli--Tamanini 的二阶微分公式只在 a.e. 路径上给出速度的可微性，`references.bib:1--15`，JEMS 23 (2021) 1727--1795）直接装配。真正要的是逐条 $\sigma$，这迫使整个证明改换成"用测度集中把 $m$-a.e. 陈述聚焦到一条指定路径上"，而这个聚焦步骤又需要唯一性，唯一性需要非分支。链条是这样长出来的，不是设计出来的。
+
+## 2. 记号账本：preamble.tex 里每条宏的用处与债
+
+反推素材的第二个线索：宏定义了但正文没用，说明有一条被放弃的路线留下残渣。逐条对着 `preamble.tex:59--77` 记账（在我通读的 5 个 section 文件里出现的展开次数）：
+
+- `\RCD`、`\CD`：都用。$\RCD$ 在 `preamble.tex:59` 定义为 $\mathrm{RCD}$，正文按 `introduction.tex:14--16` 取"未约化 $\CD(K,N)$ 加二次 Cheeger 能量"这个非标准口径。
+- `\Test`、`\Lip`、`\Geo`、`\divg`、`\Cap`、`\supp`、`\dd`、`\Ent`、`\Gamma`：全部在用，分别对应测试类、Lipschitz 类、路径空间、散度、容量、微分号、熵。
+- `\Hess`（`preamble.tex:64`）：定义了但正文一律写 $H_F$、$H_g$。我猜是因为 $H$ 已经带参数 $(Y,Y)(h)$，用算子名反而会遮住测试结构。`[推测]`
+- `\CBB`（`preamble.tex:61`）、`\TestV`（`preamble.tex:63`）、`\weakto`（`preamble.tex:74`）、`\eps`（`preamble.tex:75`）、`\R`、`\N`（`preamble.tex:66--67`）：通读 5 个 section 我没记录到任何一次展开。正文写 $\mathbb R$ 的字面形式（`introduction.tex:54--57`），写 $\varepsilon_j$ 的字面形式（`every-geodesic.tex:24`）。
+- `\sk`、`\ck`（`preamble.tex:76--77`）定义为 $\mathfrak s_\kappa$、$\mathfrak s'_\kappa$，也就是模型空间畸变系数与它的导数，正文一次没用到。这两条是最有信息量的残渣：$\mathfrak s_\kappa$ 只出现在把 $\CD$ 写成显式三角/双曲畸变因子的地方，也就是说**有一条"直接用比较系数算熵不等式右端"的路线曾经存在并被删掉了**。
+
+被删路线的重建（我自己的判断，标 `[推测]`）：Lean 侧 `Model.lean:143--158` 恰好把这两个系数写成了机器形式：`sigmaCoeff K N t θ` 分三种情形（$K>0$ 时用 $\sin$ 并要求 $K\theta^2<N\pi^2$，$K=0$ 时退化为 $t$，$K<0$ 时用 $\sinh$），`tauCoeff K N t θ` 是 $(t^{1/N})\cdot(\sigma_{K,N-1})^{(N-1)/N}$。`Model.lean:183--198` 的 `CurvatureDimension` 用的正是 `tauCoeff` 与 `renyiIntegral`，即未约化 $\CD(K,N)$ 的标准动力学写法。两条线索合起来说明：$\mathfrak s_\kappa$ 那对宏属于一个讨论"约化对未约化"（$\CD$ 对 $\CD^*$、$\RCD$ 对 $\RCD^*$）的小节，最后被压成 `introduction.tex:14--15` 的一句声明。理由是清楚的：本文对 $\lambda$ 要发到 $\infty$，$\CD(K-\lambda G,\infty)$ 里维数参数已经是 $\infty$，约化与未约化的差别只在有限 $N$ 上有内容，写进来纯粹是负担。
+
+## 3. 弱 Hessian 评估式：定义本身是我走过弯路的地方
+
+`introduction.tex:37--45` 逐字：
+
+> For \(F\in W^{1,2}_{\rm loc}(M)\), a compactly supported \(g\in\Test(M)\), \(Y=\nabla g\), and \(h\in\Lip_c(M)\), define its weak Hessian evaluation by
+> \begin{equation}
+> \label{eq:weak-hessian}
+> H_F(Y,Y)(h)
+> =-\int_M\divg(hY)\,\langle\nabla F,Y\rangle\dd m
+> -\int_M h\,\langle\nabla F,\nabla_YY\rangle\dd m.
+> \end{equation}
+
+补中间步骤。把 $Y=\nabla g$ 与 $\divg(hY)=\Gamma(h,g)+h\Delta g$（`introduction.tex:46`）代入第一项，得
+$-\int h\Gamma(h,g)\Gamma(g)\,dm$ 型项与 $-\int hg\,\Gamma(g)\Delta g\,dm$ 型项；第二项用 $\nabla_{\nabla g}\nabla g=\nabla(\Gamma(g)/2)$（`introduction.tex:36`，出处 Gigli 2018 Memoirs 251 (1196)，`references.bib:91--105`）化为 $-\int h\,\Gamma\!\big(F,\Gamma(g)/2\big)\,dm$。这正是分布 Hessian 的分极形式：若 $F\in D(\Delta)$，标准定义 $\int\Floor{...}$ 的分部两次交换给出 $H_F(\nabla g,\nabla g)(h)=\int h\,\langle H_F\nabla g,\nabla g\rangle\,dm$，`introduction.tex:48--49` 说的就是这个一致性。
+
+有限性的机械理由（`introduction.tex:46--48`）：第一项里 $\divg(hY)$ 是 $\Gamma(h,g)+h\Delta g$，$h$ 与 $g$ 的梯度局部 $L^2$、$h$ 有紧支撑且有界，$\Delta g\in L^2$（由 `eq:test-class`，`introduction.tex:27--31`），乘上 $\nabla F\in L^2_{\rm loc}$（$F$ 有界 Lipschitz 所以 $\nabla F\in L^\infty$，局部 $L^2$ 由 $m$ 在有界集有限给出）；第二项同理。
+
+我第一次写这个定义时把它写成"$-\int F\,\divg(hY)Y$ 的分部"，也就是把 $F$ 当分布去作用在二阶算子上。这条路的问题是 $\divg(hY)Y$ 不是 Lipschitz 向量场的紧支撑 Lipschitz 场（$Y=\nabla g$ 只是 Sobolev），所以 $F$ 作为分布无法作用。改成先对 $F$ 取 $\nabla F$、只把导数留在测试一边（`eq:weak-hessian` 现在的形状），才让 $F$ 只需要一阶导数。这是本笔记记下的第一个"写法上的转折点"，它发生在纸面之前：定义必须只把二阶导数压在被测试的 $g$ 与 $h$ 上。
+
+`[推测]` 失败路线一：把 $h$ 也允许为无界 Lipschitz 函数。那么 $\divg(hY)$ 里的 $h\Delta g$ 项与 $\Gamma(h,g)$ 都不再可积，$H_F$ 作为线性泛函不连续。
+`[推测]` 失败路线二：允许 $Y$ 为一般 $L^2$ 向量场，并非 $\nabla g$。此时 $\nabla_Y Y$ 在 $\RCD$ 里没有定义（联络只在 $L^2$ 向量场上对梯度型方向有良定义，Gigli 2018 的 $W^{1,2}$ 向量场理论），而且后面 `curvature-change.tex:104--105` 用到 $\divg(w\xi\nabla g)=w[\Gamma(\xi,g)+\xi\Delta_V g]$ 这一恒等式，它只在梯度方向上成立。
+`[推测]` 失败路线三：把假设加强为 $\int F\,\divg\divg(h\,\nabla g\otimes\nabla g)$ 的双散度形式。它确实只用到 $F$，看起来更"分布"，但双散度要求 $h\nabla g\otimes\nabla g$ 有 $W^{1,2}$ 正则性，而这需要对 $\nabla g$ 再求一次导，等价于先有 Hessian，循环。
+
+## 4. 主定理的逐字文本与每个假设、每个常数的机械理由
+
+`introduction.tex:52--72` 逐字：
+
+> \begin{theorem}[Weak Hessian bounds along every geodesic]
+> \label{weight:every-geodesic}
+> Let \((M,d,m)\) be a full-support \(\RCD(K,N)\) space,
+> where \(K\in\mathbb R\) and \(1<N<\infty\). Let
+> \(F\colon M\to\mathbb R\) be bounded and globally Lipschitz,
+> and let \(G\colon M\to\mathbb R\) be bounded and continuous.
+> Suppose that for every compactly supported \(g\in\Test(M)\)
+> and every nonnegative \(h\in\Lip_c(M)\),
+> \[ H_F(\nabla g,\nabla g)(h)\le\int_M hG\Gamma(g)\dd m. \]
+> Then every constant-speed minimizing geodesic \(\sigma\colon[0,1]\to M\), of length \(\ell\), satisfies
+> \[ (F\circ\sigma)''\le\ell^2G\circ\sigma \quad\text{in distributions on }(0,1). \]
+
+逐个拆。
+
+- $1<N<\infty$：下界 $N>1$ 排除 $N=1$ 的退化维数；上界 $N<\infty$ 是硬的，因为结论用到有限维非分支（`every-geodesic.tex:13--14` 引 Deng 定理 1.3）。$N=\infty$ 时 $\tau_{K,N}$ 系数退化，非分支定理失效，唯一性没了，聚焦步骤整个塌掉。
+- $K\in\mathbb R$：$K$ 在证明里只出现在三处：`calculus.tex:39--41` 的 Hessian 上界里的 $\max\{-K,0\}$、`calculus.tex:96--98` 的 Bakry 梯度估计里的 $e^{-Kt}$、`curvature-change.tex:35--37` 与 `every-geodesic.tex:68` 的熵不等式里的 $KC_t^j$。$K$ 可以为负，$K\le0$ 时 $\max\{-K,0\}=-K$。
+- $F$ 有界：改值 $m_\lambda=e^{\lambda F}m$ 要有界等价于 $m$，需要 $e^{\lambda F}$ 上下都被正常数控制，等价于 $F$ 有界。有界性是"改值不改变 $W^{1,2}$、不改变 test plan 的压缩界"的唯一凭据（`drift.tex:33--37`）。
+- $F$ 整体 Lipschitz：$|\nabla F|\in L^\infty$，让 $H_F$ 的两个积分有限；同时让 `drift.tex:44` 的 $\Gamma(\lambda F,u)\in L^2$ 成立，因为 $\|\Gamma(V,z)\|_p\le\|\nabla V\|_\infty\|\nabla z\|_p$（`drift.tex:88`）。局部 Lipschitz 不够，resolvent 压缩需要整体的 $\|\nabla V\|_\infty$。
+- $G$ 有界：$k=K-\lambda G$ 要有 $\inf_M k>-\infty$（`curvature-change.tex:151`），否则常曲率那一步（$\RCD(K_V,\infty)$）连参数都不合法。
+- $G$ 连续：变量曲率 $\CD(k,\infty)$ 对 $k$ 要下半连续加下有界（`curvature-change.tex:179--182` 引 BHS Definition 1.4），连续是它的特例；更重要的是 `every-geodesic.tex:77--83` 要在紧集 $Q$ 上把 $\int G(\gamma_s)\,d\pi_j$ 收到 $G(\tau_s)$，这需要 $G$ 一致连续。
+- 测试类 $\Test(M)$：三个分量 $g\in D(\Delta)$、有有界整体 Lipschitz 代表、$\Delta g\in W^{1,2}$。第三条件保证 $\Gamma(g)\in W^{1,2}$（`calculus.tex:16--18` 用乘积法则），于是 $\Gamma(g)/2$ 的（测度值）Laplacian 有意义，`eq:bochner-hessian` 才写得出。第二条件保证所有 $\Gamma(\cdot,\cdot)$ 配对里有 $L^\infty$ 因子。
+- $h\ge0$、$h\in\Lip_c$：上界不等式只能对正的权重测；$\Lip_c$ ，并非 $C_c^\infty$ 是刻意的，因为 `curvature-change.tex:66` 那一步的乘子 $\xi$ 来自 $\Delta_V$ 值域、机器只给到 Lipschitz，若把假设限制在光滑权重要额外证一次稠密逼近。
+- $\ell^2$ 这个前因子：结论里 $(F\circ\sigma)''\le\ell^2G\circ\sigma$，$\ell$ 是长度。机械理由：$\sigma$ 是 $[0,1]$ 上常速极小测地线，速度模长恒为 $\ell$，$|\dot\sigma|^2=\ell^2$。在 Lean 侧这个因子是 `Model.lean:215` 的 `(dist (σ timeZero) (σ timeOne)) ^ 2`，即用端点距离的平方写，正好等于 $\ell^2$（`Model.lean:31--34` 的 `IsGeodesic` 声明恒等式把常速极小性写死成距离等式，所以端点距离就是长度）。$\ell=0$ 时两边都退化，`every-geodesic.tex:13` 单独处理。
+- $(0,1)$ 内分布意义：端点不参与，因为球集中化时端点球测度的熵 $E_0^j,E_1^j$ 会发散，靠 $\lambda_j$ 吸收（`every-geodesic.tex:33--35`）。开区间让 $a''$ 的构造只在内部做（`every-geodesic.tex:86--88`）。
+
+`[推测]` 失败路线一：去掉"$F$ 有界"，只留 $F$ 有增长（比如 $|F(x)|\le C(1+d(x,o)^2)$）。改值 $e^{\lambda F}m$ 就不再 boundedly equivalent，$W^{1,2}$ 都能变，`drift.tex:33--44` 的第一句立刻崩。Bishop--Gromov 只给 $m(B_r)\le Ce^{Cr^2}$（`calculus.tex:176--178`），恰好说明 $\lambda F$ 的二次增长是另一套（无穷测度、非保守半群）问题。
+`[推测]` 失败路线二：把结论加强为闭区间上的分布不等式。端点处 $(F\circ\sigma)''$ 可能有原子，符号无法由内部集中推出。
+`[推测]` 失败路线三：允许 $G$ 只可测。那么 `weight:green-concavity` 的取极限步骤里 $G(\gamma_s)$ 对 $\pi_j\to\delta_\tau$ 不收敛（需要 a.e. 收敛加一致可积，而 $\pi_j$ 的支撑收缩方式对 $m$-零测集没有控制）。
+
+## 5. Lemma（Cutoffs and approximation）四段式
+
+(a) `calculus.tex:25--58` 逐字（只取四条本身）：
+
+> \begin{lemma}[Cutoffs and approximation]
+> \label{pre:approximation}
+> The following approximations are available.
+> \item For a compact set \(E\) in an open set \(U\), there is \(\chi\in\Test^\infty\) with \(0\le\chi\le1\), equal to one on a neighborhood of \(E\), and compactly supported in \(U\). For a fixed basepoint \(o\in M\), there are also exhausting cutoffs \(\chi_R\in\Test^\infty\), equal to one on \(B_R(o)\), supported in \(B_{R+1}(o)\), whose gradient and Laplacian bounds are independent of \(R\).
+> \item For \(g\in D(\Delta)\), \(\|H_g\|_2^2\le \|\Delta g\|_2^2+\max\{-K,0\}\|\nabla g\|_2^2.\) Compactly supported functions in \(\Test^\infty\) form a core for \(\Delta\).
+> \item On a fixed compact region, a function \(g\in\Test\) can be approximated by compactly supported \(g_j\in\Test^\infty\) with uniformly bounded gradients, with \(g_j\to g,\ \nabla g_j\to\nabla g,\ \Delta g_j\to\Delta g,\ H_{g_j}\to H_g\) strongly in \(L^2\) on that region.
+> \item A compactly supported Lipschitz function \(\xi\) can be approximated by compactly supported test functions \(\xi_j\) with a common compact support and a common Lipschitz bound, uniformly and strongly in \(W^{1,2}\). If \(\xi\ge0\), the approximants may be chosen nonnegative.
+
+(b) 中间步骤。证明里真正被压缩的是 (iii) 的四重收敛。取嵌套截断 $\chi,\zeta$，$\chi=1$ 在目标区域附近、$\zeta=1$ 在 $\supp\chi$ 附近，令 $g_t=\chi P_t(\zeta g)$（`calculus.tex:85--90`）。逐层算：
+
+- $\Delta g_t=\chi\Delta P_t(\zeta g)+P_t(\zeta g)\Delta\chi+2\langle\nabla\chi,\nabla P_t(\zeta g)\rangle$。第一项里 $\Delta P_t=h\mapsto$ 谱演算给 $\Delta P_t(\zeta g)=P_t(\Delta(\zeta g))$，而 $\Delta(\zeta g)=\zeta\Delta g+g\Delta\zeta+2\langle\nabla\zeta,\nabla g\rangle\in L^2$（这里用到 $\Delta\zeta\in L^\infty$ 与 $\nabla\zeta,\nabla g\in L^\infty$ 局部有界、$\zeta$ 紧支撑），于是 $P_t(\Delta(\zeta g))\to\Delta(\zeta g)$ 于 $L^2$，再乘 $\chi$ 得第一项收敛。
+- 交叉项 $2\langle\nabla\chi,\nabla P_t(\zeta g)\rangle$：$\nabla\chi\in L^\infty$ 紧支撑，$\nabla P_t(\zeta g)\to\nabla(\zeta g)$ 于 $L^2_{\rm loc}$，由 Cheeger 能量与谱间隙的标准论证；所以交叉项强收敛。
+- 梯度一致界：`calculus.tex:95--99` 的 $\|\nabla g_t\|_\infty\le\|\chi\|_\infty e^{-Kt}\|\nabla(\zeta g)\|_\infty+\|\nabla\chi\|_\infty\|\zeta g\|_\infty$ 来自 Bakry 梯度估计 $\|\nabla P_t h\|_\infty\le e^{-Kt}\|\nabla h\|_\infty$ 加上乘积法则。$t>0$ 时 $P_t(\zeta g)$ 有界梯度成立是因为 $\zeta g\in W^{1,2}\cap L^\infty$（`calculus.tex:70--73`）。
+- Hessian 强收敛：把 (ii) 的不等式作用在差 $g_t-\chi\zeta g\in D(\Delta)$ 上（`calculus.tex:100--101`），$\|H_{g_t}-H_g\|_2^2\le\|\Delta(g_t-\chi\zeta g)\|_2^2+\max\{-K,0\}\|\nabla(g_t-\chi\zeta g)\|_2^2$，右边两项都趋于 $0$，左端即所求。这一步是整条引理最经济的地方：Hessian 的连续性完全由图范数生成。
+
+(ii) 里 $\|H_g\|_2^2\le\|\Delta g\|_2^2+\max\{-K,0\}\|\nabla g\|_2^2$ 的来源是积分 Bochner：$\Gamma_2(g)\ge(K\Gamma(g)+|H_g|^2)m$ 对 $1$ 乘 $\Gamma(g)$ 再积分？不，正确来源是对 $\RCD$ 的 trace 关系 $\Delta\Gamma(g)=2\langle H_g,H_g\rangle+2\Gamma(g,\Delta g)+2\Gamma_2^{\rm sing}$ 取 $-\int$？我核对过：`calculus.tex:61--64` 直接把这个不等式指回 Gigli--Tamanini 附录 A 的 (A.13)（`references.bib:1--15`），做法是 $\int|H_g|^2dm\le\int(\Delta g)^2dm-K\int\Gamma(g)dm$，即对 Bochner 不等式取迹再分部两次，$-K\int\Gamma$ 移到左边时符号翻转，故 $K>0$ 项被丢弃、留下 $\max\{-K,0\}$。
+
+(i) 的"局部版本"（`calculus.tex:64--68`）是"在 $U$ 里放有限多个小的 good cutoff，对和做光滑截断"。有限性是关键：无限和会破坏 $\Delta\chi$ 的 $L^\infty$ 界。
+
+(iv) 的构造 $\xi_t=\chi P_t\xi$，一致 Lipschitz 界来自同样的 Bakry 估计；一致收敛由小时间热核矩界（`calculus.tex:104--111`）；正性由 $P_t$ 保序。
+
+(c) 常数与假设的机械理由。$[R,R+1]$ 这一宽度：$\chi_R$ 要同时在 $B_R$ 上为 $1$、在 $B_{R+1}^c$ 上为 $0$，宽度必须有下界，否则 $|\nabla\chi_R|$ 至少 $1$ 量级、$\Delta\chi_R$ 爆炸，"与 $R$ 无关的界"这一句话就没了；宽度取定为 $1$ 是任意的、但必须固定，后文 `drift.tex` 与 `curvature-change.tex` 的截断都靠这句一致界。$0\le\chi\le1$：单调截断保证 $\chi^2\le\chi$、$\chi\Gamma(\cdot)\le\Gamma(\cdot)$ 型比较，避免额外常数。$\Test^\infty$ 的指标 $\infty$ 指 $\Delta g\in L^\infty$（`calculus.tex:12--16`），比 $\Test$ 的 $\Delta g\in W^{1,2}$ 强；核心（core）只需要 $\Test^\infty_c$，是因为谱方法只用到 $L^2\cap L^\infty$ 数据（`calculus.tex:74--75`）。
+
+(d) `[推测]` 失败路线：其一，直接用距离函数 $x\mapsto\operatorname{clip}_{[0,1]}(R+1-d(x,o))$ 作截断。它在 $\RCD$ 里属于 $W^{1,2}$、$|\nabla|\le1$，但 $\Delta\chi$ 一般只有 $L^2$（甚至只是测度），既非 $L^\infty$ 也非 $W^{1,2}$，$\chi\notin\Test^\infty$，而 (iii) 需要 $\Delta\chi$ 参与 $\Gamma$ 配对、需要它可被 $L^\infty$ 吸收。其二，用 $P_{t}$ 单层热化 $\chi P_t g$ 而不放内层 $\zeta$：$P_tg$ 的支撑是全体 $M$，乘上 $\chi$ 后 $\Delta(\chi P_tg)$ 里的 $\langle\nabla\chi,\nabla P_tg\rangle$ 收敛到 $\langle\nabla\chi,\nabla g\rangle$ 时会在 $\partial\supp\chi$ 附近引入不受控边界项；$\zeta\equiv1$ 在 $\supp\chi$ 附近正是为了让 $\chi\zeta g=g$ 在目标区域成立，从而 $\partial\supp\chi$ 被推到区域之外。其三，试图让 (iii) 的 Hessian 收敛在全空间成立而放弃"固定紧区域"：全局需要 $\Delta g$ 的尾部控制，$\Delta g\in W^{1,2}\cap L^\infty$ 都没给，$H_g\in L^2$ 只到平方可积，全局强收敛超出可用信息。
+
+## 6. Bochner 测度、$2$-容量与 Lipschitz 乘子可容性
+
+(a) `calculus.tex:137--157` 逐字：
+
+> \Gamma_2(g):= \Delta\bigl(\Gamma(g)/2\bigr) -\Gamma(g,\Delta g)\,m \ge \bigl(K\Gamma(g)+|H_g|^2\bigr)m.
+> \Cap_2(E)= \inf_{U\supset E,\ U\ \mathrm{open}} \inf_{v\in W^{1,2}(M),\ v\ge1\ m\text{-a.e.\ on }U} \int_M\bigl(v^2+|\nabla v|^2\bigr)\dd m.
+
+后面还有一句："Sobolev multipliers are evaluated using their quasi-continuous representatives, which are defined outside a set of zero capacity."（`calculus.tex:153--154`）
+
+(b) 补中间步骤。这条链的目的只有一个：让 `curvature-change.tex:83--89` 的 $\mathcal B_0(g,w\xi)\ge K\int w\xi\Gamma(g)\,dm$ 对**Lipschitz** 乘子 $w\xi$ 成立，而 Savaré 的原始定理只对光滑或测试类乘子陈述。步骤是（`calculus.tex:156--166`）：
+
+1. 用 (iv) 把非负紧支撑 Lipschitz $\eta$ 逼近为非负 $\xi_j\in\Test_c$，公共紧支撑、公共 Lipschitz 界、$W^{1,2}$ 强收敛。
+2. $W^{1,2}$ 强收敛子列在容量零集外逐点收敛（quasi-continuous 代表的那句），于是 $\xi_j\to\eta$ 在 Bochner 测度的支撑外逐点，内部 $\eta$ 有界。
+3. 被积函数 $|\xi_j\Gamma(g)|$、$|\xi_j|$ 有公共界（公共 $L^\infty$ 界乘固定局部有限测度 $\Gamma_2(g)$），由控制收敛 $\int\xi_j\,d\Gamma_2(g)\to\int\eta\,d\Gamma_2(g)$。
+4. 分部项：$\int\Gamma(\xi_j,\cdot)$ 里的 $\nabla\xi_j$ 只对 $\nabla\Gamma(g)\in L^2$ 配对，靠的是 $\Gamma(g)\in W^{1,2}$（`calculus.tex:17--18`）与 $\nabla\xi_j$ 的 $L^2$ 强收敛；这里公共支撑保证了 $L^2$ 差就是 $L^1$ 差。
+5. 逐条极限后不等式保持，因为不等号在实数极限下闭。
+
+$2$-容量在这里的角色是"哪些集合可以忽略"的正式回答：Bochner 余项 $\Gamma_2(g)-(K\Gamma(g)+|H_g|^2)m$ 局部有限且不测 $\Cap_2=0$ 的集合（`calculus.tex:144--146`）。为什么偏偏是 $2$-容量：因为 $W^{1,2}$ 的 quasi-continuous 代表在 $\Cap_2$-q.e. 唯一，而整个论证里出现的所有点值（截断函数、乘子）都是 Sobolev 类的代表，容量指标 $2$ 与能量指标 $2$ 必须一致，换成 $\Cap_p$（$p\ne2$）就会与 Cheeger 能量的二次性不匹配。
+
+(c) `eq:bochner-hessian` 里的第一个 $\Delta$ 是测度值的（`calculus.tex:143`）；这正是 Savaré 自举（self-improvement）的输出：$\BE_2(K,\infty)$ 在测度值意义下升级为 $\Gamma_2$ 测度（`references.bib:31--45`，DCDS 34 (2014) 1641--1661，Lemma 3.2 与 (3.7)--(3.9)）。$|H_g|^2$ 是 Hilbert--Schmidt 范数平方，出处 Gigli 2018 定理 3.3.8（`calculus.tex:133--136`）。
+
+(d) `[推测]` 失败路线：其一，跳过容量、直接宣称"Lipschitz 乘子可用简单逐点理由代入"。断在测度值不等式的意义：测度只对 q.borel 函数作用，若不固定 quasi-continuous 代表，$\eta$ 在一零测度集上的修改可以改变 $\int\eta\,d\Gamma_2^{\rm sing}$（奇异部分不绝对连续于 $m$）。其二，用 $\Cap_2(E)=0$ 的集合上"随便定义"来替代逐点收敛，指望控制收敛在测度值意义下自动成立；控制收敛需要被一个固定测度控制，而这里的余项测度依赖于 $g$，必须先把 $g$ 固定在 $\Test$ 里。其三，把 $\xi_j$ 取为 $P_t\xi$ 而不加公共支撑截断，那么 $\int\xi_j\,d\Gamma_2$ 的极限里丢失无穷远部分（$\Gamma_2$ 只局部有限），得到的是局部不等式，后面 `curvature-change.tex:90--94` 那句"插入紧支撑截断是 harmless"就没有依据。
+
+## 7. 度量与热流事实：proper、Sobolev-to-Lipschitz、Gaussian 增长
+
+(a) `calculus.tex:169--189` 逐字：
+
+> A finite-dimensional full-support \(\RCD\) space is proper and geodesic, has positive finite measure on every nonempty bounded ball, and has the Sobolev-to-Lipschitz property. ... Bishop--Gromov volume control implies Gaussian volume growth: for a fixed basepoint \(o\), there is a constant \(C>0\) such that \(m(B_r(o))\le C\exp(Cr^2)\) for \(r\ge1\). These properties are unchanged under bounded equivalence of the measure, except that a weighted curvature bound still requires proof.
+
+(b) 补齐这三句各自被谁消费：
+
+- proper（紧致性）：`every-geodesic.tex:41--44` 说所有相关测地线落在同一紧集 $Q$、长度由常数 $L$ 界住，用 proper 加 Arzelà--Ascoli 得路径族紧致。proper 的来源是有限维 $\CD(K,N)$：$N<\infty$ 时 Bishop--Gromov 给出有界闭球在测度意义下有界，配合全支撑与局部有限可推 proper；Lean 侧 `Main.lean:45` 正是调用 `properSpace_of_cd hN hrcd.1 hfull hfinite`，输入清单就是 $N>1$、$\CD$ 部分 `hrcd.1`、全支撑、有界集有限。这个调用值得注意：机器里 proper 是**从 $\CD$ 证出来的定理**，并非假设。
+- 球的正有限测度：`every-geodesic.tex:30--31` 说 $E_i^j=-\log m(B_{\varepsilon_j}(\tau(i)))$ 有限，需要 $0<m(B_\varepsilon)<\infty$，两条都用到（正性靠全支撑，有限靠有界集有限）。
+- Sobolev-to-Lipschitz：两处硬用。`drift.tex:95` 用原空间的这条性质把不动点的有界弱梯度升级为 Lipschitz 代表（`weight:multiplier-class` 的结论）；`curvature-change.tex:158--159` 与 `169--171` 用它给加权空间重新提供 (ED.a) 与 Definition 3.16 需要的连续代表。
+- Gaussian 增长 $m(B_r)\le Ce^{Cr^2}$：`curvature-change.tex:165--169` 说"有界等价保持 Gaussian 体积增长， hence (MD.exp)"，于是 AGS 定理 3.14 的最后一条给出保守性（半群保 $1$）。这条链解释为什么必须有界等价：$e^{\lambda F}$ 上下有界 $\Longleftrightarrow$ $F$ 有界。
+
+(c) $r\ge1$ 这个门槛是纯技术性：小半径由 Bishop--Gromov 的下界 $\frac{m(B_r)}{m(B_{r'})}\le(\frac{r}{r'})^N e^{\sqrt{-K/N}(r-r')}$ 型比值控制，指数 $2$ 只在大半径有意义，而 $(\mathrm{MD.exp})$ 只要求存在 $C$ 使 $r\ge1$ 时成立。$C\exp(Cr^2)$ 的 $r^2$ 指数是 $\CD(K,\infty)$（无穷维）情形的标准产物；有限 $N$ 时更粗的界也成立，用 $\infty$ 版本是安全选择。
+
+(d) `[推测]` 失败路线：其一，想在这节把 $\RCD(K,N)$ 的 Bishop--Gromov **下界**（$m(B_r)\ge c e^{c'r^2}$ 型反向增长）也写进来，用于估计 $E_i^j$ 的增长率。放弃理由是能用的只有上界；下界形式依赖非约化或约化选择，而且 $E_i^j$ 只需有限、不需要增长率。这也解释了 `every-geodesic.tex:32--35` 里 $\lambda_j\ge j(1+|E_0^j|+|E_1^j|)$ 的写法：完全回避熵的增长率，用"逐点 domination"绕过。其二，把 proper 当作假设直接引入，那与 `Model.lean` 的口径不一致（机器里它是定理）。其三，用 Euclidean 型 Poincaré/Sobolev 嵌入替代 Gaussian 增长，$\RCD$ 上没有这类全局嵌入。
+
+## 8. Lemma（Bounded drift）与 resolvent 压缩：本文最硬的一小块
+
+(a) `drift.tex:11--31` 逐字：
+
+> \begin{lemma}[Bounded drift]
+> \label{weight:resolvent}
+> Let \((M,d,m)\) be a full-support \(\RCD(K,N)\) space, with \(1<N<\infty\), and let \(V\) be bounded and globally Lipschitz. Set \(m_V=e^V m\), and let \(\Delta_V\) be the generator of the Cheeger energy for \(m_V\), with the nonpositive sign convention. The Sobolev spaces and their weak gradients agree, and
+> \[ D(\Delta_V)=D(\Delta),\qquad \Delta_Vu=\Delta u+\Gamma(V,u). \]
+> The two generator graph norms are equivalent. Moreover,
+> \[ \xi\in D(\Delta_V),\quad \xi,\Delta_V\xi\in L^\infty \quad\Longrightarrow\quad \xi\text{ has a globally Lipschitz representative}. \]
+
+(b) 中间步骤一（保域）。$e^V$ 上下被 $e^{\pm\|V\|_\infty}$ 控制，所以对 test plan $\pi$，$(e_t)_\#\pi\le C\,m$ 与 $(e_t)_\#\pi\le C'\,m_V$ 互相可推（$C'=Ce^{-\|V\|_\infty}$ 一类常数），弱上梯度集合相同，最小元相同，故 $W^{1,2}$ 范数等价、Cheeger 能量二次（加权 Cheeger 二次性来自同一批弱梯度）。乘 $e^{\pm V}$ 保 $W^{1,2}$（链式与乘积法则，$\nabla e^{V}=e^V\nabla V\in L^\infty_{\rm loc}$）。生成元定义里把测试函数 $\eta$ 换成 $e^V\eta$：
+$-\int\langle\nabla u,\nabla(e^V\eta)\rangle dm=-\int e^V\big[\Gamma(u,\eta)+\Gamma(V,u)\eta\big]dm$，而 $-\int (\Delta_Vu)\eta\,dm_V=-\int(\Delta_Vu)\eta e^Vdm$；比较得 $\Delta_Vu=\Delta u+\Gamma(V,u)$（$m_V$-a.e.）。反向用 $e^{-V}\eta$。所有漂移项 $\Gamma(V,u)\in L^2(m_V)$：$\|\Gamma(V,u)\|_{L^2(m_V)}\le e^{\|V\|_\infty}\|\nabla V\|_\infty\|\nabla u\|_{L^2(m)}<\infty$。
+
+中间步骤二（图范数等价）。能量恒等式 $\|\nabla u\|^2_{L^2(m)}=-\int u\Delta u\,dm$ 给 $\|\nabla u\|_2\le\|u\|_2^{1/2}\|\Delta u\|_2^{1/2}\le\frac12(\|u\|_2^2+\|\Delta u\|_2^2)$ 型界；加权同理。配合 $\Delta_Vu=\Delta u+\Gamma(V,u)$ 与 $\|\Gamma(V,u)\|_2\le\|\nabla V\|_\infty\|\nabla u\|_2$，两边图范数互相界住（吸收 $\|\nabla u\|_2$ 项要一点 Young，这就是"$\lambda$ 大"之外的另一处"常数足够大"）。
+
+中间步骤三（resolvent，也是本文里我认为最容易被略读的一段）。定义 $R_ah=\int_0^\infty e^{-at}P_th\,dt=(a-\Delta)^{-1}h$。`drift.tex:62--68` 的三条界：
+
+- $\|R_ah\|_p\le a^{-1}\|h\|_p$（$p=2,\infty$）：Markov 性给 $\|P_th\|_p\le\|h\|_p$，$\int_0^\infty e^{-at}dt=a^{-1}$。指数的 $-1$ 完全来自 $\int e^{-at}$。
+- $\|\nabla R_ah\|_2\le Ca^{-1/2}\|h\|_2$：用 $\|\nabla P_th\|_2\le Ct^{-1/2}\|h\|_2$（谱：$\|\nabla P_th\|_2^2=\int\lambda e^{-2\lambda t}d\mu_h(\lambda)\le\frac1{2et}\|h\|_2^2$），$\int_0^\infty e^{-at}t^{-1/2}dt=\sqrt\pi a^{-1/2}$。
+- $\|\nabla R_ah\|_\infty\le C_Ka^{-1/2}\|h\|_\infty$：这里不能用谱，只能用反向 Poincaré 型梯度估计 $\|\nabla P_th\|_\infty\le C_K(t^{-1/2}+1)e^{C_Kt}\|h\|_\infty$（`drift.tex:69--71`），积分 $\int_0^\infty e^{-(a-C_K)t}(t^{-1/2}+1)dt=(a-C_K)^{-1/2}\cdot\text{const}+(a-C_K)^{-1}$，所以要求 $a>C_K$，主项仍是 $a^{-1/2}$ 型（把 $(a-C_K)^{-1}\le(a-C_K)^{-1/2}$ 吸收进常数）。这解释了正文为什么写"for all sufficiently large $a$"并且把 $C_K$ 单独标出。
+
+有了这三条，映射 $\Phi(z)=R_a(h+\Gamma(V,z))$ 在 Banach 空间 $\mathcal E=\{z\in W^{1,2}:z,|\nabla z|\in L^\infty\}$、范数 $\|z\|_{\mathcal E}=\|z\|_2+\|\nabla z\|_2+\|z\|_\infty+\|\nabla z\|_\infty$ 上是压缩。逐分量算 Lipschitz 常数：设 $\phi=z-\tilde z$，
+$\|\Phi(z)-\Phi(\tilde z)\|_\infty\le a^{-1}\|\nabla V\|_\infty\|\nabla\phi\|_\infty$；
+$\|\nabla(\Phi(z)-\Phi(\tilde z))\|_\infty\le C_Ka^{-1/2}\|\nabla V\|_\infty\|\nabla\phi\|_\infty$；
+$\|\cdot\|_2$ 两项用 $Ca^{-1/2}\|\nabla V\|_\infty\|\nabla\phi\|_2$ 与 $a^{-1}\|\nabla V\|_\infty\|\nabla\phi\|_2$。
+所以压缩条件是 $C_Ka^{-1/2}\|\nabla V\|_\infty<1$ 加上 $Ca^{-1/2}\|\nabla V\|_\infty<1$，即
+$$a>\max\{C_K,\;C_K^2\|\nabla V\|_\infty^2,\;C^2\|\nabla V\|_\infty^2\}.$$
+这就是那个平方：resolvent 只换回半阶导数，而漂移是一阶的，所以 $a$ 必须按 $\|\nabla V\|_\infty^2$ 标度。$\mathcal E$ 的完备性由弱微分算子图闭加 $L^\infty$ 完备（`drift.tex:79--81`）。
+
+不动点 $z\in D(\Delta)$：$z=R_a(\cdot)\in D(\Delta)$（resolvent 的值域在生成元定义域），且 $(a-\Delta)z=h+\Gamma(V,z)$，即 $(a-\Delta_V)z=h$。唯一性在 $D(\Delta_V)$ 内由加权能量恒等式：若 $(a-\Delta_V)u=0$，$a\int u^2dm_V=\int u(-\Delta_Vu)dm_V=\int\Gamma(u)dm_V\ge0$ 给出 $u=0$（$a>0$）。最后取 $\xi$ 如 (weight:multiplier-class)，$h=(a-\Delta_V)\xi$：$\xi\in D(\Delta_V)\subset W^{1,2}(m_V)$ 与 $m_V\sim m$ 给 $\xi\in L^2(m)$，加 $\xi\in L^\infty$ 与 $\Delta_V\xi\in L^\infty\cap L^2$，所以 $h\in L^2\cap L^\infty$，唯一性识别 $\xi$ 与不动点，$\xi\in\mathcal E$ 即 $|\nabla\xi|\in L^\infty$，Sobolev-to-Lipschitz 收尾。
+
+(c) 为什么必须用**原**半群的 resolvent：整节的目的是给加权空间定曲率，若在压缩里用加权半群 $P_t^V$ 的梯度估计，就需要先有加权 $\BE_2$，而加权 $\BE_2$ 是 `curvature-change.tex` 的结论。`drift.tex:71--73` 那句 "These are estimates for the original \(\RCD\) heat semigroup" 就是这个循环的断点标记。$V=\lambda F$ 后文出现，于是 $a$ 的下界随 $\lambda$ 平方增长；这一点在 `every-geodesic.tex:33--35` 让 $\lambda_j\to\infty$ 时不需要额外注意，因为那里已经过了曲率步骤。
+
+(d) `[推测]` 失败路线一：把 (weight:multiplier-class) 说成"加权空间的 Sobolev-to-Lipschitz 性质"。断在顺序：加权空间的 Sobolev-to-Lipschitz 本身依赖于它是 $\RCD$（或至少 energy measure space），而那要到 `curvature-change.tex:148--175` 才建立。用未证的性质证自己是这份素材里最典型的循环陷阱。
+`[推测]` 失败路线二：用 Kato 型相对界直接证 $D(\Delta_V)=D(\Delta)$，把 $\Gamma(V,\cdot)$ 当扰动算子。它给的是形式域的稳定性，不是算子生成元的定义域；$\RCD$ 里 $\Delta$ 的 pre-generator 与生成元区分不干净时，这个论证只给出 $D(\Delta)\subset D(\Delta_V)$ 单向。素材里"两个方向分别用 $e^{V}\eta$、$e^{-V}\eta$"（`drift.tex:40--43`）比 Kato 路线强，因为它在弱定义层面直接双向。
+`[推测]` 失败路线三：不动点改成 Picard 级数 $\sum_n(R_a\Gamma(V,\cdot))^nP_t$ 显式展开，指望绕开 $\mathcal E$ 的完备性。级数在 $\|\cdot\|_{\mathcal E}$ 下的收敛性等价于同一个 $a>\|\nabla V\|_\infty^2$ 条件，没有收益，还额外要求 $L^\infty$ 版一致界，写起来更长。
+
+## 9. Core identity：从加权 Bochner 到 $\mathcal B_V(g,\xi)$ 的下界
+
+(a) `curvature-change.tex:62--112` 的关键四段逐字：
+
+> Fix \(\lambda>0\), and write \(V=\lambda F\), \(w=e^V\), \(k=K-\lambda G\). Take a nonnegative \(\xi\) in \eqref{weight:multiplier-class}.
+> \mathcal B_V(g,\xi) =-\int w\Gamma(\xi,q)\dd m +\int w\bigl[\xi\Delta_Vg+\Gamma(\xi,g)\bigr]\Delta_Vg\dd m.
+> \mathcal B_0(g,w\xi) \ge K\int w\xi\Gamma(g)\dd m.
+> \mathcal B_V(g,\xi)-\mathcal B_0(g,w\xi) &=\int w\xi\Gamma(V,q)\dd m +\int wb\bigl[\Gamma(\xi,g)+\xi\Delta_Vg\bigr]\dd m\nonumber\\ &=-H_V(\nabla g,\nabla g)(w\xi).
+> \mathcal B_V(g,\xi)\ge\int k\xi\Gamma(g)\dd m_V.
+
+其中 $q=\Gamma(g)/2$、$b=\Gamma(V,g)$（`curvature-change.tex:68--69`），$\mathcal B_0(g,\eta)$ 是同一公式取 $V=0$（`curvature-change.tex:77--79`）。
+
+(b) 这个恒等式我核对到每一项都能对上，把展开写全（论文没写）。设 $\eta=w\xi$。
+
+$\mathcal B_0(g,\eta)=-\int\Gamma(\eta,q)dm+\int[\eta\Delta g+\Gamma(\eta,g)]\Delta g\,dm$。
+
+第一项差：$\Gamma(w\xi,q)=w\Gamma(\xi,q)+\xi\Gamma(w,q)=w\Gamma(\xi,q)+\xi w\,b'$，其中 $b'=\Gamma(V,q)$（用 $\Gamma(w,q)=w\Gamma(V,q)$，链式法则）。所以
+$-\int w\Gamma(\xi,q)dm+\int\Gamma(w\xi,q)dm=\int w\xi\Gamma(V,q)dm$，正是 (weight:bochner-difference) 第一行的第一个积分。
+
+第二项差：先 $\Gamma(w\xi,g)=w\Gamma(\xi,g)+\xi w\Gamma(V,g)=w[\Gamma(\xi,g)+\xi b]$，于是
+$[\eta\Delta g+\Gamma(\eta,g)]=w[\xi\Delta g+\xi b+\Gamma(\xi,g)]=w[\xi\Delta_Vg+\Gamma(\xi,g)]$（用 $\Delta_Vg=\Delta g+b$）。
+两式相减：
+$w[\xi\Delta_Vg+\Gamma(\xi,g)]\Delta_Vg-w[\xi\Delta g+\Gamma(\xi,g)+\xi b]\Delta g$
+$=w[\xi\Delta_Vg+\Gamma(\xi,g)]\Delta_Vg-w[\xi\Delta_Vg+\Gamma(\xi,g)](\Delta_Vg-b)$
+$=wb[\xi\Delta_Vg+\Gamma(\xi,g)]$。正是第二项。
+
+合成：$\mathcal B_V(g,\xi)-\mathcal B_0(g,w\xi)=\int w\xi\Gamma(V,q)dm+\int wb[\Gamma(\xi,g)+\xi\Delta_Vg]dm$。
+
+再对上 $-H_V(\nabla g,\nabla g)(w\xi)$：按 `eq:weak-hessian`（$F$ 换成 $V$、$h$ 换成 $w\xi$）
+$H_V(\nabla g,\nabla g)(w\xi)=-\int\divg(w\xi\nabla g)\,\Gamma(V,g)dm-\int w\xi\langle\nabla V,\nabla_{\nabla g}\nabla g\rangle dm$。
+用 $\divg(h\nabla g)=\Gamma(h,g)+h\Delta g$（`introduction.tex:46`）与 $h=w\xi$：
+$\divg(w\xi\nabla g)=\Gamma(w\xi,g)+w\xi\Delta g=w[\Gamma(\xi,g)+\xi b+\xi\Delta g]=w[\Gamma(\xi,g)+\xi\Delta_Vg]$，
+这正是 `curvature-change.tex:104--105` 声明的那条恒等式。第二项用 $\nabla_{\nabla g}\nabla g=\nabla(\Gamma(g)/2)=\nabla q$（`introduction.tex:36`），得 $\langle\nabla V,\nabla q\rangle=\Gamma(V,q)$。两项合起来与上面的差正好相反数。恒等式闭合。
+
+最后一步是把假设用进去。$H_V(\cdot)$ 对第一个变量线性（`eq:weak-hessian` 里 $F$ 只出现在 $\nabla F$），$V=\lambda F$ 给 $H_V=\lambda H_F$，于是由 (weight:hessian-assumption)
+$-H_V(\nabla g,\nabla g)(w\xi)=-\lambda H_F(\nabla g,\nabla g)(w\xi)\ge-\lambda\int w\xi G\Gamma(g)dm=-\int\lambda G\,\xi\Gamma(g)dm_V$。
+与 $\mathcal B_0(g,w\xi)\ge K\int w\xi\Gamma(g)dm=K\int\xi\Gamma(g)dm_V$ 相加，得 $\mathcal B_V(g,\xi)\ge\int(K-\lambda G)\xi\Gamma(g)dm_V=\int k\xi\Gamma(g)dm_V$，即 (weight:core-be)。
+
+这里有个我一开始想错的地方：$\mathcal B_0(g,w\xi)\ge K\int w\xi\Gamma(g)dm$ 这条"原测度 Bochner 不等式"要求乘子 $w\xi$ 可容。$w=e^{\lambda F}$ 有界 Lipschitz（$|\nabla w|=\lambda w|\nabla F|\in L^\infty$），$\xi$ 有界 Lipschitz（`drift.tex:29` 的结论），乘积有界 Lipschitz，但 $w\xi$ 未必紧支撑。论文的处理是在 `curvature-change.tex:90--94` 插一个紧支撑截断 $\chi\in\Test_c$、$\chi=1$ 在 $\supp g$ 附近，并声明"它的导数碰不到任何项的支撑"。展开这句：$\Gamma(\chi w\xi,q)=\chi\Gamma(w\xi,q)+w\xi\Gamma(\chi,q)$，而 $q=\Gamma(g)/2$ 的支撑含于 $\supp g$，在 $\supp g$ 的邻域内 $\chi\equiv1$ 故 $\Gamma(\chi,q)=0$ 于该邻域，于是 $\Gamma(\chi w\xi,q)=\Gamma(w\xi,q)$ 对 $q$ 的支撑可积地相同；同理 $\chi w\xi\Delta g$ 的差项 $\chi w\xi\Delta g=w\xi\Delta g$ 于 $\supp(\Delta g\cdot\Gamma(g))$？这条要更小心：第二项里出现 $\Delta g$ 乘上 $[\ldots]$，其被积函数支撑在 $\supp g$（因为 $\Gamma(g)$ 与 $\Delta g$ 都在 $\supp g$ 外为零：$g$ 紧支撑且 $\nabla g$ 在 $\supp g$ 外为零，所以 $\Gamma(g)=0$ 于 $\supp g$ 外，而第一项含 $\Gamma(\cdot,q)$ 也只看到 $\supp q$）。第二项含 $\Delta_Vg\cdot\Delta_Vg\cdot\xi w$ 但没有 $\Gamma(g)$ 因子，支撑可以超出 $\supp g$；此时插入 $\chi$ 改变的是被一个在 $\supp g$ 邻域内恒为 $1$ 的函数乘，因此只有当 $\chi$ 的支撑足够大时才相同。核对素材：`curvature-change.tex:88--94` 说的是在**乘子**里插截断（即把 $w\xi$ 换成 $\chi w\xi$），而 $\mathcal B_V(g,\xi)$ 里第二项本身没有 $\Gamma(g)$ 支撑限制，但那里用的是 $\Delta_V g$、$\Gamma(\xi,g)$，$\Gamma(\xi,g)$ 的支撑在 $\supp g$ 内，$\xi\Delta_Vg$ 项则不然。所以真正"无害"的理由是：整个 $\mathcal B_0$ 是 Bochner 测度的配对 $\int\chi w\xi\,d\Gamma_2(g)-\int\Gamma(\chi w\xi,\cdot)$ 型，而 $d\Gamma_2(g)$ 与 $\Gamma(g)$ 同支撑（在 $\supp g$ 外 $q$、$\Gamma(g)$ 皆 $0$），于是 $\chi$ 只在"是否覆盖 $\supp g$"上起作用。素材用一句话带过，我把它读成：所有出现在配对里的测度都局部化在 $\supp g$ 的邻域，$\chi$ 在该邻域恒为 $1$，故插入不改变任何一项。这个理由成立需要 $\Gamma(\chi,q)=0$ 于 $\supp q$（已验证）与 $q=0$、$\Gamma(g)=0$ 于 $\supp g$ 外（已验证）。写笔记时我把这条列为"素材里最容易被当作显然的一句"。
+
+(c) 每个量的机械理由。
+
+- $\lambda>0$ 固定：$\lambda$ 是标度参数，把 $F$ 从"函数"变成"权重"。要求正号是因为 (weight:core-be) 右端 $\lambda G$ 前面带负号进入 $k$，若 $\lambda<0$ 则 $F$ 的不等式方向会反。后面 `every-geodesic.tex:33` 让 $\lambda_j\to\infty$，所以这里必须"对每个 $\lambda$"。
+- $w=e^V$：指数改值是让 Boltzmann 熵平移成 $\int F$ 的唯一方式（`introduction.tex:160--164` 的 $\Ent_{m_\lambda}=\Ent_m-\lambda\int F\,d\mu$）。若用线性改值 $w=1+\lambda F$，正性要 $\lambda\|F\|_\infty<1$，$\lambda$ 就不能发敢到无穷，最后一步崩。
+- $\xi\ge0$：所有不等式都是对正乘子陈述的。
+- $\xi$ 取自 (weight:multiplier-class)：需要 $\xi,\Delta_V\xi\in L^\infty$ 加 $\xi\in D(\Delta_V)$，是因为第二项里 $(\Delta_Vg)^2\xi w$ 要 $\xi\in L^\infty$，而后面 graph-form 的 $\Delta_V\xi$ 要 $L^\infty$。
+- $\mathcal B_V$ 的可积性理由在 `curvature-change.tex:80--81`：$q\in W^{1,2}$（乘积法则，`calculus.tex:17--18`）、$\Delta_Vg\in L^2$、$\xi$ 与 $|\nabla\xi|$ 有界。
+- $|H_g|^2$ 在 (weight:core-be) 里消失了：$\mathcal B_V$ 只保留了 Bochner 不等式的"绝对连续部分"的配对形式，丢掉 $|H_g|^2\ge0$ 是有意的松弛，因为最后不需要严格强化曲率。
+
+(d) `[推测]` 失败路线一：直接对 $\mathcal B_V$ 用加权空间的 Bochner 不等式（把 $m_V$ 当成已知 $\RCD$）。循环：加权曲率是 Prop 的结论。
+`[推测]` 失败路线二：把 (weight:bochner-difference) 的右边认作 $\Hess V(\nabla g,\nabla g)$ 并要求 $V\in D(\Delta_V)$。素材刻意用 $H_V(\cdot)$ 的弱定义（只需要 $\nabla V$），正是因为 $\lambda F$ 一般不在 $D(\Delta)$；若坚持用 $L^2$ Hessian，就得给 $F$ 加二阶正则，回到 Han/Ketterer 的假设口径（`introduction.tex:100--110`）。
+`[推测]` 失败路线三：试图在 core identity 阶段就把 $g$ 取为一般 $D(\Delta_V)$ 元素以省去 §10 的闭包。断在 $\mathcal B_0(g,w\xi)$ 需要 $g\in\Test$ 才有 $\Gamma(g)\in W^{1,2}$、才能写测度值 Bochner；$D(\Delta_V)$ 元素没有这个正则。这个失败正好解释了 `curvature-change.tex:7--9` 那句"This order is needed"。
+
+## 10. 闭包：graph-form、图范数连续性与 core
+
+(a) `curvature-change.tex:117--143` 逐字：
+
+> Integration by parts in its first term rewrites the left side as
+> \frac12\int (\Delta_V\xi)\Gamma(g)\dd m_V +\int (\Delta_Vg)\Gamma(\xi,g)\dd m_V +\int\xi(\Delta_Vg)^2\dd m_V.
+> Every term in \eqref{weight:graph-form}, as well as the right side of \eqref{weight:core-be}, is continuous under convergence in the \(\Delta_V\) graph norm.
+> By Lemma~\ref{pre:approximation} and graph-norm equivalence, compact original test functions form a core for \(\Delta_V\).
+> \frac12\int (\Delta_V\xi)\Gamma(g)\dd m_V -\int\xi\Gamma(g,\Delta_Vg)\dd m_V \ge\int k\xi\Gamma(g)\dd m_V.
+
+(b) 中间步骤。第一步的分部：$-\int w\Gamma(\xi,q)dm=-\int\Gamma(\xi,q)dm_V$。用形式域特征化（$\xi\in D(\Delta_V)$ 时 $\int\Gamma(\xi,v)dm_V=-\int v\Delta_V\xi\,dm_V$ 对所有 $v$ 在形式域成立），取 $v=q=\Gamma(g)/2$。合法性：$q\in W^{1,2}(m)$（`calculus.tex:17--18`），$m_V$ 与 $m$ boundedly equivalent 所以 $q\in W^{1,2}(m_V)$。得 $-\int\Gamma(\xi,q)dm_V=\int q\Delta_V\xi\,dm_V=\frac12\int(\Delta_V\xi)\Gamma(g)dm_V$。这就是 (weight:graph-form) 第一项的 $\frac12$ 的全部来历。
+
+连续性的逐条检查（论文只给了方法：`curvature-change.tex:128--131`）：设 $g_n\to g$ 于 $\Delta_V$ 图范数。
+
+- $\|\nabla(g_n-g)\|_{L^2(m_V)}\to0$：加权能量恒等式 $\|\nabla u\|^2_{L^2(m_V)}=-\int u\Delta_Vu\,dm_V$ 给 $\|\nabla u\|_{L^2(m_V)}\le\|u\|_{L^2(m_V)}^{1/2}\|\Delta_Vu\|_{L^2(m_V)}^{1/2}$，再Young。图收敛给两因子都 $\to0$。论文写"graph convergence implies strong $L^2$ convergence of gradients"，指的就是这一步，它把 §8 的能量恒等式与图范数等价都用上了。
+- $\Gamma(g_n)\to\Gamma(g)$ 于 $L^1(m_V)$：$\Gamma(g_n)-\Gamma(g)=\Gamma(g_n,g_n-g)+\Gamma(g_n-g,g)$，用 $|\Gamma(u,v)|\le|\nabla u||\nabla v|$ 与 Cauchy--Schwarz，配合 $\sup_n\|\nabla g_n\|_{L^2(m_V)}<\infty$。于是 $\int(\Delta_V\xi)\Gamma(g_n)dm_V\to\int(\Delta_V\xi)\Gamma(g)dm_V$（$\Delta_V\xi\in L^\infty$）。
+- $\Gamma(\xi,g_n)\to\Gamma(\xi,g)$ 于 $L^2(m_V)$：$|\Gamma(\xi,g_n-g)|\le|\nabla\xi||\nabla(g_n-g)|$，$\nabla\xi\in L^\infty$。与 $\Delta_Vg_n\to\Delta_Vg$ 于 $L^2$ 配对得第二项收敛。
+- 第三项 $\int\xi(\Delta_Vg_n)^2dm_V$：$\xi\in L^\infty$，$L^2$ 收敛给平方 $L^1$ 收敛。
+- 右端 $\int k\xi\Gamma(g_n)dm_V$：$k$ 有界、$\xi\in L^\infty$、$L^1$ 收敛。
+
+core 的论证：`calculus.tex:42--43` 说 $\Test^\infty_c$ 是 $\Delta$ 的核心（(ii) 的第二句），因此 $g\in D(\Delta)=D(\Delta_V)$ 可用 $\Test^\infty_c$ 元素按 $\Delta$ 图范数逼近；§8 的图范数等价把收敛转成 $\Delta_V$ 图范数收敛；逼近元素本身在 $D(\Delta_V)$ 里（同一集合）。这里有个顺序依赖我最初看漏：`calculus.tex:113--117` 特别强调"compact core 只用原热流构造，所以在比较两个生成元定义域时仍然可用"。若核心构造本身依赖加权半群，就会与 §8 互相循环。
+
+最后一条：从 (weight:graph-form) 到 (weight:full-be) 需要 $\Delta_Vg\in W^{1,2}$。分部细节：取 $u=g\in D(\Delta_V)$，$v=\xi\Delta_Vg$。$v\in W^{1,2}(m_V)$：$\xi\in L^\infty$、$\Delta_Vg\in L^2$、$|\nabla v|\le|\Delta_Vg||\nabla\xi|+|\xi||\nabla\Delta_Vg|\in L^2$。于是
+$\int\Gamma(g,\xi\Delta_Vg)dm_V=-\int\xi(\Delta_Vg)^2dm_V$，而 $\Gamma(g,\xi\Delta_Vg)=\xi\Gamma(g,\Delta_Vg)+\Delta_Vg\,\Gamma(g,\xi)$，移项即得 (weight:full-be) 左端第二项与第三项的合并。这个合并是双向的：它说明为什么 (weight:graph-form) 是"更弱但更广"的形式（只在 $D(\Delta_V)$ 全体成立），而 (weight:full-be) 是"更强但更窄"的形式（$\Delta_Vg\in W^{1,2}$ 子类）。AGS 的 $\BE_2$ 定义需要后一种形状。
+
+(c) 常数与指标：$\frac12$ 是 $q=\Gamma(g)/2$ 的直接产物，别把它当成归一化自由量。(weight:full-be) 右端仍是 $k$，没有 $|H_g|^2$ 型余项；这意味着闭包后的加权 Bakry--Émery 条件是 $\BE_2(k,\infty)$ 的"绝对连续版本"，$\dim=\infty$ 是因为丢掉了维数项（Rényi 熵形式在 $N=\infty$ 时就是 $s\log s$，见 `curvature-change.tex:12--19` 的熵定义与 `Model.lean:179--182` 的 `renyiIntegral` 用幂 $1-1/N$，$N\to\infty$ 时为 $s\mapsto s\log s$ 的对数熵，`Model.lean:181` 的写法与此一致）。$k$ 在 (weight:full-be) 里的位置是乘子侧，与 $\xi\Gamma(g)\,dm_V$ 配对，所以"pointwise 换成下界 $K_V$"只需 $\xi\ge0$、$\Gamma(g)\ge0$（`curvature-change.tex:149--151`）。
+
+(d) `[推测]` 失败路线一：跳过 (weight:graph-form)，直接在 $D(\Delta_V)\cap\{\Delta_V\cdot\in W^{1,2}\}$ 上宣称 core。断在不知道这个交集是否稠密：素材给的核心是"原测试类紧支撑元素"，它们的 $\Delta_V$ 正则性被 `weight:domain-warning` 明确否证。
+`[推测]` 失败路线二：用形式域的 Mosco 收敛来传不等式。形式域相同但生成元不同，Mosco 只给形式闭性，给不出 $\Delta_V\xi$ 这一项的点值，也不给 $L^\infty$ 有界乘子的可容性。
+`[推测]` 失败路线三：把连续性论证改成弱收敛（$\Delta_Vg_n\rightharpoonup\Delta_Vg$）。第三项 $\int\xi(\Delta_Vg)^2$ 对弱收敛半连续但不连续，方向又正好是需要的下侧，看似可以省一步；实际不行，因为不等式两端同时有平方型项，半连续只能给一侧，闭合会缺一个非负差项。
+
+## 11. 常曲率收口：AGS 能量测度空间清单的逐条对号
+
+(a) `curvature-change.tex:148--175` 逐字：
+
+> Replace \(k\) by the constant \(K_V=\inf_M k> -\infty\), and set \(\mathcal E_V=2\mathrm{Ch}_V\). The unchanged weak gradients make \(\mathcal E_V\) a strongly local symmetric Dirichlet form with carr\'e du champ \(\Gamma\). In the metric topology \(\tau\), using the completed Borel \(\sigma\)-algebra, completeness, separability, full support and finite bounded-ball measures give condition \textup{(MD)} of \cite{AGS2015}. The original Sobolev-to-Lipschitz property gives \textup{(ED.a)}; boundedly supported Lipschitz functions with slope at most one have weak gradient at most one, giving \textup{(ED.b)}. The converse of \cite[Theorem~3.9]{AGS2015} therefore makes \((M,\tau,m_V,\mathcal E_V)\) an Energy measure space and identifies its intrinsic distance with \(d\). Since \(\mathcal E_V=2\mathrm{Ch}_V\) for this metric, the necessity direction of \cite[Theorem~3.14]{AGS2015} gives upper regularity. Bounded equivalence preserves Gaussian volume growth, hence \textup{(MD.exp)}, so the final assertion of that theorem gives conservativity. Sobolev-to-Lipschitz also supplies continuous representatives for energy functions with \(\Gamma\le1\), as required by \cite[Definition~3.16]{AGS2015}. Thus this is a Riemannian Energy measure space. Applying \cite[Theorem~4.17]{AGS2015} to \eqref{weight:full-be} with the constant \(K_V\) gives \(\RCD(K_V,\infty)\).
+
+(b) 这段是把一个加权空间重新塞进 AGS 公理化机器，我逐条补理由（AGS 框架的外部血统：Ambrosio--Gigli--Savaré，"Bakry--Émery curvature-dimension condition and Riemannian Ricci curvature bounds"，Annals of Probability 43 (2015), no. 1, 339--404，arXiv:1209.5786，见 `references.bib:47--60`；注意任务书里写的"Ambrosio--Gigli--Savarino"里的第三人是 Savaré，我在 bib 里核对过拼写）。
+
+- 强局部对称 Dirichlet 形式与 $\Gamma$：$\mathcal E_V(u,v)=\int\Gamma(u,v)dm_V$，对称、稠密、闭来自 $W^{1,2}(m_V)=W^{1,2}(m)$（§8）；强局部来自 $\Gamma$ 的局部性。这里"unchanged weak gradients"是 §8 第一句的输出。
+- (MD)：度量拓扑 $\tau$ 上，Polish（完备可分，来自假设与 `calculus.tex:170` 的 proper 讨论）、$m_V$ 全支撑（$e^V>0$ 处处成立，所以 $m_V(U)>0\Longleftrightarrow m(U)>0$）、有界集有限（$m_V(B)\le e^{\|V\|_\infty}m(B)<\infty$）。这四条是 AGS 的 (MD)。
+- (ED.a)：Sobolev-to-Lipschitz 是"结构性质"，在 boundedly equivalent 测度下重新成立：若 $|\nabla u|\le1$ 于 $W^{1,2}(m_V)$，同一批 test plan 给 $m$-侧的压缩界（§8），原空间的 Sobolev-to-Lipschitz（`calculus.tex:171--174`）给出 Lipschitz 代表。
+- (ED.b)：下界方向。用局部斜率 $\localSlope$（Lean 侧 `Model.lean:124--126` 就是 limsup 定义，与论文"functions with slope at most one"对得上）：$1$-Lipschitz 函数的弱梯度模 $\le1$，这是 $\RCD$ 的标准事实，加权后由同一批 test plan 继承。
+- Theorem 3.9 逆向 ⟹ 能量测度空间且内蕴距离 $=d$：这条把"改值后距离是否还是 $d$"这一疑问正式解决；否则后面的熵不等式会写出另一个距离的测地线，整个聚焦论证作废。这是全节我最看重的一条：素材只有一句，但它撑住了 `every-geodesic.tex` 里"$\tau$ 仍是同一条测地线"的全部合法性。
+- Theorem 3.14 必要性 ⟹ upper regularity；(MD.exp)（Gaussian 增长，§7）⟹ 保守性（热流保 $1$）。保守性的作用是保证 $P_t^V1=1$，进而 resolvent 与 Markov 界合法（§8 已用原半群，此处是加权空间自身的半群性质）。
+- Definition 3.16 的连续代表 ⟹ Riemannian energy measure space。
+- Theorem 4.17：在 Riemannian energy measure space 上，$\BE_2(K,\infty)$ 等价于 $\RCD(K,\infty)$。用其"充分性"方向把 (weight:full-be) 转成 $\RCD(K_V,\infty)$。
+
+(c) $\mathcal E_V=2\mathrm{Ch}_V$ 这个 $2$：AGS 的 Cheeger 能量约定为 $\mathrm{Ch}=\frac12\int|\nabla u|^2$，于是其 Dirichlet 形式 $\mathcal E=2\mathrm{Ch}$。Lean 侧 `Model.lean:128--136` 的 `cheegerEnergy` 写成 $\frac12\int(\localSlope)^2$ 的松弛（`(2 : ℝ≥0∞)⁻¹` 就是那个 $\frac12$），与 AGS 口径一致，这解释了我读 `Model.lean` 时看到那个 $2$ 的来历。$K_V=\inf k>-\infty$ 用到 $G$ 有界：$\inf(K-\lambda G)\ge K-\lambda\|G\|_\infty$ 有限。
+
+(d) `[推测]` 失败路线一：跳过能量测度空间，直接把 AGS 定理 4.17 当作"任意 boundedly equivalent 测度上的 BE 加 CD 即得 RCD"用。断在定理 4.17 的前提是 Riemannian energy measure space，那需要 (MD)/(ED.a)/(ED.b) 与上正则、保守性这一整套；素材老老实实逐条列出就是证据。
+`[推测]` 失败路线二：在常曲率那步用 $K_V$ 替换 $k$ 之后，顺手把 $N$ 也继承为有限维数以保留 Bishop--Gromov。加权空间的 $\RCD(K_V,\infty)$ 是无穷维的，维数信息在改值中丢失；若想让结论带有限 $N$，需要 $\CD(K,N)$ 的 $\Rényi$ 形式与 $N$ 单调性，那是另一套（`Model.lean:191--198` 的 $\forall N'\ge N$ 单调写法正是为此）。放弃有限 $N$ 保留是本文能走通的原因之一。
+`[推测]` 失败路线三：用 $\RCD^*$（约化）版本以简化畸变系数。约化条件在改值下的稳定性未知，而且 `introduction.tex:14--15` 已声明全文用未约化口径，混用会让 `every-geodesic.tex` 的 Deng 非分支定理前提不匹配（Deng 定理陈述在 $\RCD(K,N)$ 未约化口径下）。
+
+## 12. 变量曲率与定义域反例：Remark（domain warning）到底挡了什么
+
+(a) `curvature-change.tex:177--197` 逐字：
+
+> On this weighted \(\RCD\) space, \eqref{weight:full-be} is its \(\mathrm{BE}_2(k,\infty)\) condition, and the bounded continuous function \(k\) meets its lower semicontinuity and lower-bound assumptions. Hence \(\CD(k,\infty)\) follows \cite[Definition~1.4 and Theorem~1.1]{BHS2021}.
+> \begin{remark}[Why the domain argument is needed]
+> \label{weight:domain-warning}
+> An original test function need not satisfy \(\Delta_Vg\in W^{1,2}\). Even in Euclidean space, a bounded Lipschitz \(V\) agreeing with \(-|x_1|\) near the origin and a smooth compactly supported \(g\) agreeing with \(x_1\) there give \(\Delta_Vg=-\operatorname{sign}(x_1)\) locally.
+
+(b) BHS 血统与用法：Braun--Habermann--Sturm，"Optimal transport, gradient estimates, and pathwise Brownian coupling on spaces with variable Ricci bounds"，J. Math. Pures Appl. 147 (2021) 60--97，arXiv:1906.09186（`references.bib:62--74`）。变量 $\CD(k,\infty)$ 的定义在 `curvature-change.tex:25--43`：对任意两个有限熵概率测度 $\mu_0,\mu_1$ 存在动力学最优计划 $\pi$ 使 (weight:variable-entropy) 成立，右端畸变核是 $\min\{s,t\}-st$ 乘 $k(\gamma_s)|\dot\gamma|^2$。素材在 `curvature-change.tex:40--43` 明说"This formula fixes our Green-kernel and Laplacian normalizations"，也就是说论文把 BHS 的 Definition 1.2 当作归一化约定；这解释了 `every-geodesic.tex:50--51` 直接称 $g(s,t)=\min\{s,t\}-st$ 为"the nonnegative Dirichlet Green kernel on $[0,1]$"。$0\le g\le\frac18$（在 $s=t=\frac12$ 取最大 $\frac14$？核对：$g(t,t)=t-t^2$ 在 $t=\frac12$ 为 $\frac14$；而 $|G|$ 有界、长度有界时 $C_t^j\le L^2/8$ 的 $\frac18$ 来自 $\int_0^1\!\!\int_0^1 g(s,t)\,ds\,dt=\frac16$? 素材 `every-geodesic.tex:74` 写 $0\le C_t^j\le L^2/8$，我用逐点 $g(s,t)\le\min\{s,t\}\le\frac12$ 与 $\int_0^1 g(s,t)ds=\frac{t(1-t)}{2}\le\frac18$ 对上：$C_t^j\le L^2\int_0^1 g(s,t)ds\le L^2/8$。这个 $\frac18$ 是 $\int_0^1(\min\{s,t\}-st)ds=\frac{t(1-t)}2$ 在 $t=\frac12$ 的值 $\frac18$，不是 $\sup g=\frac14$。我在补这一步时确认了素材写的是对的，且它选的是"对 $s$ 积分后取 sup"的路线，因为 $|\dot\gamma|^2\le L^2$ 与 $s$ 无关。
+
+Remark 的 Euclid 反例展开：取 $V(x)=-|x_1|$（在有界修改后满足 $V$ 有界 Lipschitz），$g$ 在原点附近等于 $x_1$、光滑紧支撑。$\R^n$ 上 $\Delta g=0$ 于该邻域，$\Gamma(V,g)=\partial_1V\cdot\partial_1 g=-\operatorname{sign}(x_1)\cdot1$，所以 $\Delta_Vg=-\operatorname{sign}(x_1)$ 局部成立，它在超平面 $\{x_1=0\}$ 上有跳跃，不属于 $W^{1,2}_{\rm loc}$（弱导数含 $\delta_{x_1=0}$）。于是 $g\in\Test$（$\Delta g=0\in W^{1,2}$）但 $\Delta_Vg\notin W^{1,2}$，(weight:full-be) 的分部前提对原测试类失效，必须先在图形式 (weight:graph-form) 上闭包。素材 `curvature-change.tex:114--115` 与 `introduction.tex:124--132` 两处指向这条反例，说明它曾经是"必须先证 §8"的决定性证据：我猜作者的顺序是先撞上这个反例、再补 resolvent 引理。
+
+反例还有一句被忽略的话（`curvature-change.tex:193--196`）："They also explain why no general converse from an unspecified weak Hessian to geodesic convexity is being used; compare \cite[Remark~2.4]{BrenaGigli2024}"。Brena--Gigli（Potential Analysis 62 (2025) 703--737，arXiv:2310.07536，`references.bib:76--89`）的 Remark 2.4 提议"改值加弱 Bochner"这条路线并指出需要的正则性，本文的 §8 是把那个"需要的正则性"用原半群的 resolvent 补上的具体实现。这是 `introduction.tex:113--122` 里承认的最近先行工作。
+
+(c) $k=K-\lambda G$ 的下半连续性：$G$ 连续故 $k$ 连续，连续函数是 lsc 的，且 $k\ge K-\lambda\lVert G\rVert_\infty$ 下有界，满足 BHS Definition 1.4 的两条前提。$\xi$ 类："In particular it holds on the smaller class also requiring $\Gamma(g)\in L^\infty$"（`curvature-change.tex:145--146`），这句是为了对齐 BHS 里 $\BE_2$ 的测试类写法，多一个 $\Gamma(g)\in L^\infty$ 是放松前提（类变小，结论照样可用）。
+
+(d) `[推测]` 失败路线一：主张"$\Test$ 在 $\Delta_V$ 下自动不变"。反例直接否证；更弱的版本"紧支撑光滑 $g$ 自动 $\Delta_Vg\in W^{1,2}$" 也被同一个反例否证（取 $g$ 光滑紧支撑即可）。
+`[推测]` 失败路线二：给 $F$ 加 $W^{1,\infty}\cap W^{2,2}_{\rm loc}$ 型正则来避免整个 §8 与闭包论证。这样 (weight:full-be) 可以直接在 $\Test$ 上验证，代价是假设口径退回 Ketterer/Han 那一类（`introduction.tex:98--111` 明说他们的假设含梯子配对的 Sobolev 正则），本文的卖点就没了。
+`[推测]` 失败路线三：在变量曲率那步用 Sturm 的约化 $\CD^*(k,\infty)$（`references.bib:146--159` 的 Sturm 2018 用的是消失熵技巧，并非变量曲率）。断在约化版本对 $k$ 的空间变化系数没有现成的 $\BE_2$ 等价定理；素材选了 BHS 正是因为它是唯一给出 lsc 变量系数 $\BE_2\Rightarrow\CD$ 的出处。
+
+## 13. 集中化：从 $\CD(K-\lambda_jG,\infty)$ 到 (weight:entropy-rearranged)
+
+(a) `every-geodesic.tex:12--48` 与 `59--83` 逐字（分两段引）：
+
+> The case \(\ell=0\) is immediate. A finite-dimensional \(\RCD\) space is nonbranching \cite[Theorem~1.3]{Deng2020}. Every strict subsegment of \(\sigma\) is therefore the unique minimizing geodesic between its endpoints.
+> \mu_i^j=\frac{m|_{B_{\varepsilon_j}(\tau(i))}}{m(B_{\varepsilon_j}(\tau(i)))},\qquad E_i^j=\Ent_m(\mu_i^j)=-\log m(B_{\varepsilon_j}(\tau(i))),\quad i=0,1.
+> \lambda_j\ge j\bigl(1+|E_0^j|+|E_1^j|\bigr).
+> A_t^j\ge(1-t)A_0^j+tA_1^j-D_t^j +\frac{E_t^j-(1-t)E_0^j-tE_1^j+KC_t^j}{\lambda_j}.
+> F(\tau_t)\ge(1-t)F(\tau_0)+tF(\tau_1)-|\dot\tau|^2\int_0^1g(s,t)G(\tau_s)\dd s.
+
+(b) 唯一性的那段推演（`every-geodesic.tex:15--20`）：反设严格子段 $\tau$（端点 $\tau(0)=\sigma(t_0)$、$\tau(1)=\sigma(t_1)$，$0<t_0<t_1<1$）有另一条极小测地线 $\tilde\tau$ 连接同两端。把 $\sigma$ 的中间那段替换为 $\tilde\tau$，得到一条从 $\sigma(0)$ 到 $\sigma(1)$ 的极小曲线，长度仍是 $\ell$（替换段长度相同），且与 $\sigma$ 在 $[0,t_0]$ 上完全重合、之后立刻分开。这正是分支：从 $\sigma(t_0)$ 出发有两条不同前缀一致的极小测地线。Deng 定理 1.3 说有限维 $\RCD(K,N)$ 非分支（Deng, "Hölder continuity of tangent cones in $\RCD(K,N)$ spaces and applications to non-branching", Geometry & Topology 29 (2025) 1037--1114, arXiv:2009.07956，见 `references.bib:17--29`；bib 里条目名 Deng2020 而卷年是 2025，我按 bib 记录，这个命名差异本身说明引用是从 preprint 版本沉淀下来的）。素材把"替换后仍是极小曲线"写成一句话，中间步骤是：三角不等式给新曲线长度 $\ge d(\sigma(0),\sigma(1))=\ell$，而其长度恰为 $t_0\ell+(t_1-t_0)\ell+(1-t_1)\ell=\ell$，故取等，故极小。
+
+熵重排的推导（论文跳了，我按顺序补）。$\mu_0^j\ll m_{\lambda_j}$：$d\mu_i^j/dm=\rho_i^j$ 在有界集上 $\le1/m(B_{\varepsilon_j})$，且 $dm_{\lambda_j}=wdm$、$w>0$ 处处，所以 $d\mu_i^j/dm_{\lambda_j}=\rho_i^j/w$，熵有限。Prop（`curvature-change.tex:57--59`）给 $\CD(K-\lambda_jG,\infty)$，套用 (weight:variable-entropy)（曲率函数 $k_j=K-\lambda_jG$、参考测度 $m_{\lambda_j}$）：
+$$\Ent_{m_{\lambda_j}}(\mu_t^j)\le(1-t)\Ent_{m_{\lambda_j}}(\mu_0^j)+t\Ent_{m_{\lambda_j}}(\mu_1^j)-\iint g(s,t)(K-\lambda_jG(\gamma_s))|\dot\gamma|^2dsd\pi_j(\gamma).$$
+用平移恒等式 $\Ent_{m_{\lambda_j}}(\mu)=\Ent_m(\mu)-\lambda_j\int Fd\mu$（`introduction.tex:161--164`；核对：$d\mu/dm_{\lambda_j}=e^{-\lambda_jF}d\mu/dm$，$\int\rho\log\rho\,dm_{\lambda_j}=\int\rho\log\rho\,dm-\lambda_j\int Fd\mu$，其中用 $\int\rho\,dm=\int\rho e^{-\lambda_jF}dm_{\lambda_j}=1$），把 $E_t^j-\lambda_jA_t^j$ 代进去，右端畸变项拆成 $-KC_t^j+\lambda_jD_t^j$（$C_t^j,D_t^j$ 的定义在 `every-geodesic.tex:52--58`）。整理：
+$-\lambda_jA_t^j\le-\lambda_j[(1-t)A_0^j+tA_1^j]+(1-t)E_0^j+tE_1^j-E_t^j-KC_t^j+\lambda_jD_t^j$，两边除 $-\lambda_j$（翻转方向）即得 (weight:entropy-rearranged)。素材写"This uses the Green-kernel normalization of BHS Definition 1.2"（`every-geodesic.tex:70--71`），意思就是 $g(s,t)$ 前没有额外的 $1/2$ 或 $N/(N-1)$ 型系数，全部归一化由 BHS 承担。
+
+最后一项的下界估计（`every-geodesic.tex:71--77`）逐条补：
+
+- $E_t^j\ge-\log m(Q)$：$\mu_t^j$ 支撑在 $Q$（所有计划里的路径都在 $Q$ 内），Jensen 给 $\Ent_m(\mu_t^j)\ge-\log m(\supp\mu_t^j)\ge-\log m(Q)$。这里 $m(Q)<\infty$ 由 $Q$ 紧、proper 空间紧集有界、$m$ 在有界集有限（`calculus.tex:170--172`）。
+- $0\le C_t^j\le L^2/8$：$g(s,t)\ge0$（$\min\{s,t\}\ge st$ 在 $[0,1]^2$），$\int_0^1g(s,t)ds=\frac{t(1-t)}2\le\frac18$，$|\dot\gamma|^2\le L^2$（计划内路径长度由 $L$ 统一界住）。
+- 合起来分子 $\ge-\log m(Q)-|E_0^j|-|E_1^j|-|K|L^2/8$。除以 $\lambda_j$，用 $\lambda_j\ge j(1+|E_0^j|+|E_1^j|)$：$\frac{|E_0^j|+|E_1^j|}{\lambda_j}\le\frac1j$，$\frac{\log m(Q)+|K|L^2/8}{\lambda_j}\le\frac{\text{const}}{j}$（注意 $\log m(Q)$ 可正可负，取其绝对值为常数）。下极限 $\ge0$，且在 $t$ 上一致（因为界与 $t$ 无关）。这就是"$\lambda_j$ 增长足够快使端点熵在极限中不贡献误差"（`every-geodesic.tex:9--10`）的全部技术内容。
+
+取极限 $\pi_j\to\delta_\tau$ 的三个收敛（`every-geodesic.tex:76--79`）：
+
+- $A_t^j=\int F(\gamma_t)d\pi_j\to F(\tau_t)$：$e_t$ 在一致拓扑下连续，$F$ 连续，$\pi_j\to\delta_\tau$。
+- $D_t^j\to\ell_\tau^2\int_0^1g(s,t)G(\tau_s)ds$：需要 $\gamma\mapsto\int_0^1g(s,t)G(\gamma_s)|\dot\gamma|^2ds$ 在 $\pi_j$ 上一致可积且逐路径收敛。素材给的理由是"$F,G$ 在 $Q$ 上连续、路径族紧、$\pi_j\to\delta_\tau$"，我补出被隐藏的一条：计划 $\pi_j$-a.e. 的路径是常速极小测地线（CD 定义里的 `∀ᵐ γ ∂π, IsGeodesic γ`，`Model.lean:190` 与 `curvature-change.tex:39--40` 都写死这一点），所以对 $\pi_j$-a.e. $\gamma$，$|\dot\gamma|=d(\gamma_0,\gamma_1)$，这是一致收敛拓扑下的连续泛函；加上 $g(s,t)$ 有界、$G$ 在 $Q$ 上一致连续，得到一致可积与逐点收敛，控制收敛适用（被 $\frac{L^2}8\|G\|_\infty$ 控制）。若路径只是 $AC^2$ ，并非测地线，$|\dot\gamma|$ 对一致收敛不连续，这一步就要额外的下半连续论证。
+- $\pi_j\to\delta_\tau$ 本身：任意子列有 Arzelà--Ascoli 极限（$Q$ 紧、长度界 $L$ 给等度 Lipschitz），极限计划集中在"以 $\tau(0),\tau(1)$ 为端点的极小测地线全体"上（端点耦合的弱极限加最优性的闭性），而该集合按上面是唯一 $\{\tau\}$，故极限为 $\delta_\tau$，全列收敛。素材那句"even though the measures \(m_{\lambda_j}\) vary with \(j\)"（`every-geodesic.tex:47--48`）是我读的时候特别停住的地方：路径空间的弱收敛与参考测度无关，熵不等式里依赖 $m_{\lambda_j}$ 的部分已经全部被搬进 $A_t^j,D_t^j,C_t^j,E_t^j$ 这几个数字，所以集中化不需要加权拓扑的任何一致性。
+
+(c) $\varepsilon_j\downarrow0$、$\lambda_j$ 的选取、$Q$ 与 $L$ 的角色。$\lambda_j$ 下界里那个 $1$（$j(1+|E_0^j|+|E_1^j|)$）是为了在 $E_i^j\to0$ 的退化情形仍保证 $\lambda_j\ge j\to\infty$；$|E_i^j|$ 加绝对值是因为 $E_i^j=-\log m(B_{\varepsilon_j})$ 可正可负（$m$ 是无穷测度，小球的测度可大于 $1$）。Prop 对每个 $\lambda$ 都成立，所以 $\lambda_j$ 可以随 $j$ 任选，这是"先固定 $\lambda$ 再让 $\lambda\to\infty$"的两步式结构给出的自由度。
+
+(d) `[推测]` 失败路线一：不做集中化，试图直接引用"对 $m\times m$-a.e. 端点对成立"的结论再取端点。$\sigma$ 的端点是单点，落在零测集，取不到值。这条正是 `introduction.tex:7--10` 的原始障碍，也是笔记开头第一条错误路线。
+`[推测]` 失败路线二：把 $\mu_i^j$ 取成高斯型 $P_{1/j}\delta_{\tau(i)}$。支撑不紧，$Q$ 与 $L$ 的一致界失去（热核尾巴外逸），Jensen 与 $C_t^j$ 的界都要重做；而且极限计划的端点不再是 Dirac 与 $\tau$ 的唯一性无法直接对接。素材用球测度就是为了让支撑紧且在 $Q$ 内。
+`[推测]` 失败路线三：把 $\lambda_j$ 固定为某个足够大的 $\lambda_*$（比如 $\lambda_*\ge\|G\|_\infty$ 之类），指望误差项 $1/\lambda_*$ 直接被 $\varepsilon_j\to0$ 吸收。断在：误差项里含 $|E_i^j|/\lambda_*$，而 $|E_i^j|\to\infty$（小球测度趋于 $0$，$-\log m(B_\varepsilon)\to+\infty$；这依赖 $m$ 无原子或至少 $m(B_\varepsilon)\to0$，由全支撑加局部有限与 Radon 性给出），固定分母除不动发散分子。$\lambda_j$ 必须与熵同阶增长，这就是 (weight:entropy-rearranged) 那个分式必须整体留在式子里的原因。
+
+## 14. 从 Green 表示到分布二阶导：最后两行里藏着的算子约定
+
+(a) `every-geodesic.tex:85--94` 逐字：
+
+> The argument applies to every strict subsegment of \(\sigma\). On any compact interval inside \((0,1)\), choose a twice continuously differentiable function \(a\) with \(a''(t)=\ell^2G(\sigma_t)\). The Green formula and \eqref{weight:green-concavity}, applied on all subintervals, say exactly that \(F\circ\sigma-a\) lies above each of its chords. It is concave, so its second distributional derivative is nonpositive. This proves \eqref{weight:curve-hessian}. Continuity supplies the values at the ends of any closed subinterval.
+
+(b) 中间步骤：Green 核作为算子求逆。$g(s,t)=\min\{s,t\}-st$ 满足：固定 $s$，$t\mapsto g(s,t)$ 在 $[0,s]$ 与 $[s,1]$ 上线性、斜率分别是 $1-s$ 与 $-s$，所以在 $t=s$ 处导数跳 $-1$；分布意义下 $\partial_t^2g(s,\cdot)=-\delta_s$，且 $g(s,0)=g(s,1)=0$。对连续 $f$，$U(t):=\int_0^1g(s,t)f(s)ds$ 属于 $C^2$？只要 $f$ 连续就有 $U''=-f$（分部两次或用上面核的分布导数），$U(0)=U(1)=0$。
+
+把 (weight:green-concavity) 写成 $F(\tau_t)\ge(1-t)F(\tau_0)+tF(\tau_1)+W(t)$，其中 $W(t):=-\ell_\tau^2\int_0^1g(s,t)G(\tau_s)ds$。由 $W(0)=W(1)=0$，$(F\circ\tau-W)$ 在端点的值等于 $F\circ\tau$ 在端点的值，于是不等式等价于
+$$(F\circ\tau-W)(t)\ge(1-t)(F\circ\tau-W)(0)+t(F\circ\tau-W)(1).$$
+即 $F\circ\tau-W$ 位于自身弦之上；$F$ 与 $\tau$ 都连续，所以 $F\circ\tau-W$ 连续，逐点"位于弦上"对连续函数等价于凹（这是素材"lies above each of its chords. It is concave"的严格内容）。又 $W''=-\ell_\tau^2\cdot(-1)\cdot$? 直接算：$W=-\ell_\tau^2U$，$U''=-G\circ\tau$（取 $f=G\circ\tau$），故 $W''=\ell_\tau^2G\circ\tau$。凹性 $(F\circ\tau-W)''\le0$ 给出
+$(F\circ\tau)''\le\ell_\tau^2G\circ\tau$。
+
+素材里 $a''(t)=\ell^2G(\sigma_t)$ 与此一致：$\tau$ 是 $\sigma$ 的子段常速重参数化，$|\dot\tau|=d(\tau(0),\tau(1))$ 而 $\sigma$ 常速时 $|\dot\sigma|=\ell$；两者是同一线元在同一条线上的取值，所以对整条 $\sigma$ 就是 $a''=\ell^2G\circ\sigma$。$a$ 的存在性：$\sigma$ 连续、$G$ 连续故 $t\mapsto G(\sigma_t)$ 连续，令 $a(t)=\int_{t_*}^t\!\int_{t_*}^r\ell^2G(\sigma_u)dudr$，微积分基本定理给 $a\in C^2$ 与 $a''=\ell^2G\circ\sigma$。这里"$a$ 只需在一个紧区间上存在"解释了为什么可以逐子区间做。
+
+最后一段的拼接：凹性是局部性质（在 $(0,1)$ 的每个紧子区间上 $F\circ\sigma-a$ 凹，则整体在 $(0,1)$ 上凹），于是对任意非负 $\varphi\in C_c^\infty(0,1)$，
+$\int_0^1(F\circ\sigma-a)\varphi''dt\le0$（分布意义 $(F\circ\sigma-a)''\le0$ 的定义，见 `introduction.tex:74--79` 的展开式），移项得
+$\int_0^1F(\sigma_t)\varphi''(t)dt\le\int_0^1a(t)\varphi''(t)dt=\int_0^1a''(t)\varphi(t)dt=\ell^2\int_0^1G(\sigma_t)\varphi(t)dt$，
+中间等号是两次分部（$\varphi$ 的支撑在 $(0,1)$ 内，边界项为零）。这就是 (weight:curve-hessian)。
+
+"Continuity supplies the values at the ends of any closed subinterval"（`every-geodesic.tex:93--94`）我读成的意思：从"每个紧子区间上凹"到"整条上凹"要用弦端点的函数值，而这些值只有在连续性下才与内部极限一致；没有连续性时逐点弦不等式只给"almost concave"，分布二阶导仍是负测度但可能带原子。$F\circ\sigma$ 连续是免费的（$F$ 连续？$F$ 只是 Lipschitz，所以连续 ✓）。
+
+(c) 逐条理由：$\varphi\in C_c^\infty(0,1)$、$\varphi\ge0$ 是分布意义二阶导非正的判别基；Lean 侧 `Model.lean:209--216` 把测试函数限制为 `ContDiff ℝ ⊤ φ`（即 $C^\infty$）、`HasCompactSupport φ`、`tsupport φ ⊆ Set.Ioo 0 1`、`∀ t, 0 ≤ φ t` 四条，与 `introduction.tex:74--79` 逐字对应；积分区间写成 `Set.Icc 0 1` ，并非 $(0,1)$，靠支撑条件把两者抹平（`Model.lean:212--216`）。$\ell^2$ 在机器里是 `(dist (σ timeZero) (σ timeOne)) ^ 2`（`Model.lean:215`），而 `IsGeodesic`（`Model.lean:31--34`）保证常速极小，所以这个平方就是长度的平方，与 `introduction.tex:66--70` 的 $\ell$ 一致。
+
+(d) `[推测]` 失败路线一：想跳过 $a$ 的构造，直接对 $F\circ\sigma$ 陈述"$''\le$ 连续函数"。断在分布不等式两端需要都是分布，$G\circ\sigma$ 连续当然可以是分布，这条其实可行；真正的问题是"弦在上方 ⟹ 凹"需要与 $a$ 比较才能把右端的 $G$ 项转成二阶导，否则逐点弦不等式与 $G$ 的关系只在 Green 表示里可见。
+`[推测]` 失败路线二：用逐点二阶差商极限代替分布陈述（即证 $\limsup_{h\downarrow0}\frac{F(\sigma_{t+h})-2F(\sigma_t)+F(\sigma_{t-h})}{h^2}\le\ell^2G(\sigma_t)$）。断在最后一步：$F$ 只有 Lipschitz，二阶差商极限对每个 $t$ 都不一定存在，且集中化只给到弦形式的积分不等式，没有逐点信息。这也是 `main.tex:12--13` 用 "in distributions" 的原因。
+`[推测]` 失败路线三：把结论写成 $(F\circ\sigma)'\le$ 型一阶不等式（半凸性表述）以避开二阶分布。它与目标等价（$F\circ\sigma-\frac{\ell^2}2t^2\|G\|_\infty$ 凹 ⟺ semiconvex），但 Lean 侧要额外证明等价性，素材选择直接落 `CurveSecondDerivativeBound`。
+
+## 15. 关键转折点，以及最终思路与最初设想的差距
+
+我把整条链倒着重走一遍，记录四个转折点。
+
+转折一（定义形状的转折）：弱 Hessian 必须写成"二阶导数全压在测试函数与权重上"的形式（`eq:weak-hessian`）。我在 §3 里说过，一开始的版本把 $F$ 当分布去作用二阶算子，那条路在 $\divg(hY)$ 不是 Lipschitz 紧支撑场时断掉。这个转折决定了后面所有步骤的可能性：因为假设只含一阶 $\nabla F$，改值 $e^{\lambda F}$ 才有资格进入 Bochner 配对。
+
+转折二（放弃"用加权半群"的转折）：§8 是全篇最反直觉的一块。我最初的直觉是"改值之后一切都是加权的，梯度估计自然用加权半群"。素材在 `drift.tex:71--73` 专门强调用的是原 $\RCD$ 半群的估计，`introduction.tex:127--131` 则给出理由：Lipschitz $V$ 不能保证 $\Gamma(V,u)$ 是 Sobolev，所以加权侧的测试类不闭合。这两句合起来读，我判断作者的路线是这样被迫成形的：先尝试在加权空间里直接验证 $\BE_2$，撞上 $\Gamma(\lambda F,\cdot)$ 的正则性（`weight:domain-warning` 的反例就是这个撞墙的正式记录），然后退回到"用原空间的一阶信息证加权空间的乘子正则性"，即不动点方法。这一步的代价是引入一个 Banach 空间 $\mathcal E$ 与一个"足够大的 $a$"，收益是整条曲率改值链条不再依赖任何未证的加权正则性。
+
+转折三（从"a.e."到"逐条"的转折）：集中化。这里我最初设想的差距最大。我以为非分支只是一个技术性引理，读完 `introduction.tex:138--144` 才确认它是整个第二阶段的发动机：唯一性给"所有路径收敛到 $\tau$"，没有唯一性就只有 $\pi_\infty$ 支撑在某条集合上，弦不等式会带上额外的平均误差，且 $\lambda_j\to\infty$ 消不掉。素材里"This metric fact allows entropy inequalities for concentrating measures to recover the chosen subsegment, including subsegments invisible to an almost-everywhere assertion about paths"（`introduction.tex:142--144`）是我读到的最直白的一句自我定位：作者知道 a.e. 陈述与逐条陈述的鸿沟只能用度量几何（非分支）填。
+
+转折四（$\lambda$ 的双重身份）：$\lambda$ 在 §9 是标度（决定 $k=K-\lambda G$），在 §13 是消误差的参数（$\lambda_j\to\infty$）。我最初以为可以只用一个 $\lambda$ 一次做完；实际上必须"先任意固定、再序列发散"，因为 $E_i^j$ 的发散速度与 $\varepsilon_j$ 绑定、而 $G$ 的空间形状不能被 $\lambda$ 吸收（$G$ 是乘在 $|\dot\gamma|^2$ 上的位置函数，放大 $\lambda$ 只会放大 $D_t^j$）。这两件事平衡的解法就是 $D_t^j$ 留在主项、$K$ 与熵项进分式。
+
+最终思路与最初设想的差距，用一句话概括：我一开始想证"某个二阶导沿路径成立"，最后证的是"某个测度的熵在集中化下趋于该路径的弦偏差"。前者是微分命题，后者是变分命题，中间的桥是 Boltzmann 熵的平移恒等式 $\Ent_{m_\lambda}=\Ent_m-\lambda\int F$。这个恒等式在素材里出现两次（`introduction.tex:161--164` 与 `every-geodesic.tex:62--63`），我认为它是全文真正的枢轴：$F$ 从"被微分的函数"变成"被积分的势"。
+
+## 16. 外部血统：这份素材依赖的每一台机器是从哪篇论文搬来的
+
+`references.bib` 只有 11 条，我把它们按在证明里的用途分层（卷号、页码、arXiv 号都按 bib 记录），并标出素材里对应的引用点。任务书里写的"Ambrosio--Gigli--Savarino"，我在 `references.bib:47--60` 核对过：第三人写作 Savaré（Giuseppe），条目 `AGS2015`，"Bakry--Émery curvature-dimension condition and Riemannian Ricci curvature bounds", Annals of Probability 43 (2015), no. 1, 339--404, doi 10.1214/14-AOP907, arXiv:1209.5786。这条是整个框架的户口。
+
+第一层，非光滑微分几何（提供 $\nabla$、$\Gamma$、$\Hess$、联络）：Gigli，"Nonsmooth differential geometry---an approach tailored for spaces with Ricci curvature bounded from below", Memoirs of the AMS 251 (2018), no. 1196, v+161, arXiv:1407.0809（`references.bib:91--105`）。素材在 `introduction.tex:36` 与 `calculus.tex:19--22` 两处引它，取走的是 $\nabla_{\nabla g}\nabla g=\nabla(\Gamma(g)/2)$ 与 $L^2$ Hessian 的存在性（后者带定理号 3.3.8，`calculus.tex:133--136`）。
+
+第二层，测度值 Bochner 与 $\mathbb D_\infty$：Savaré，"Self-improvement of the Bakry--Émery condition and Wasserstein contraction of the heat flow in $\RCD(K,\infty)$ metric measure spaces", DCDS 34 (2014), no. 4, 1641--1661, arXiv:1304.0643（`references.bib:31--45`）。引用点 `introduction.tex:90--92`、`calculus.tex:129--136`（$\mathbb D_\infty$ 在 (3.4)，$\Gamma_2$ 测度在 Lemma 3.2 与 (3.7)--(3.9)）。素材在 `calculus.tex:129--132` 特别说明：本文的 $\Test(M)$ 含于 Savaré 的 $\mathbb D_\infty$，条件是 $\Delta g\in W^{1,2}$ 而不要求 $\Delta g$ 有界，也就是"本文的类更弱、但正好落在能用的那一档"。
+
+第三层，$\RCD$ 的公理化与 $\BE_2\Leftrightarrow\RCD$：AGS 2015（上面那条）。素材 `curvature-change.tex:154--175` 连续调用它的 (MD)、(ED.a)、(ED.b)、Theorem 3.9、Theorem 3.14、Definition 3.16、Theorem 4.17；`introduction.tex:93--95` 则取"常数 Bakry--Émery 界等价于 Riemannian 曲率维数界"这一结论性表述。我另外核了外部综述以确认这条 lineage 的名称与年代（Ambrosio 的 ICM 2018 大会报告题目即 "Calculus, heat flow and curvature-dimension bounds in metric measure spaces"），素材本身没有引该综述，这里只做交叉印证。
+
+第四层，变量曲率系数：Braun--Habermann--Sturm，"Optimal transport, gradient estimates, and pathwise Brownian coupling on spaces with variable Ricci bounds", J. Math. Pures Appl. 147 (2021) 60--97, arXiv:1906.09186（`references.bib:62--74`）。引用点 `introduction.tex:95--96`（变量曲率等价性）与 `curvature-change.tex:25--27`（Definition 1.2 是变量 $\CD(k,\infty)$ 的定义）、`curvature-change.tex:181--182`（Definition 1.4 与 Theorem 1.1 是 $\BE_2(k,\infty)\Rightarrow\CD(k,\infty)$）。素材 `curvature-change.tex:40--43` 明说 BHS 的定义"fixes our Green-kernel and Laplacian normalizations"，所以本文的 $\min\{s,t\}-st$ 与 $|\dot\gamma|^2$ 的组合、以及没有额外 $1/2$ 因子这件事，全部归 BHS 约定。`introduction.tex:95--96` 也交代了 Braun--Habermann--Sturm 这条线在 2019--2021 的发展。
+
+第五层，好的截断与热正则化：Gigli--Tamanini，"Second order differentiation formula on $\RCD^{*}(K,N)$ spaces", JEMS 23 (2021), no. 5, 1727--1795, arXiv:1802.02463（`references.bib:1--15`）。`calculus.tex:61--64` 取 Appendix A Lemma A.2 与 (A.13)（good cutoff 与积分 Bochner 估计），`calculus.tex:70--73` 取 (A.7)（$P_th\in\Test^\infty$），`calculus.tex:186--189` 汇总 Appendix A。注意 bib 里有一条 note："Numbering follows the 2018 preprint, arXiv:1802.02463v1"，也就是说 A.2/A.7/A.13 这些编号是 preprint 的编号，与 JEMS 正式版可能错位；这是我在核对时记下的一条风险。
+
+第六层，非分支：Deng，"Hölder continuity of tangent cones in $\RCD(K,N)$ spaces and applications to non-branching", Geometry & Topology 29 (2025) 1037--1114, arXiv:2009.07956（`references.bib:17--29`），引用点 `introduction.tex:138--141` 与 `every-geodesic.tex:13--14`（Theorem 1.3）。条目键名是 Deng2020（arXiv 年份），刊出年份 2025，素材里两个年份并存。
+
+第七层，大参数熵与改值技巧：Han，"Characterizations of monotonicity of vector fields on metric measure spaces", CVPDE 57 (2018), art. 113, arXiv:1710.07953v3（`references.bib:120--133`），引用点 `introduction.tex:104--108` 与 `every-geodesic.tex:59--61`（Theorem 3.13, Equation (3.6)：对 $e^{-au}m$ 用熵凸性、除以 $a$、令 $a\to\infty$）；Ketterer，"Obata's rigidity theorem for metric measure spaces", Analysis & Geometry in Metric Spaces 3 (2015) 278--295（`references.bib:135--144`），引用点 `introduction.tex:99--102`（Theorem 7.1 及其证明）；Sturm，"Gradient flows for semiconvex functions on metric measure spaces", PAMS 146 (2018), no. 9, 3985--3994, arXiv:1410.3966v4（`references.bib:146--159`），引用点 `introduction.tex:102--104`（Lemmas 1 and 2 的消失熵论证）。
+
+第八层，最近的先行方法与点到测度的逼近：Brena--Gigli，"Fine representation of Hessian of convex functions and Ricci tensor on RCD spaces", Potential Analysis 62 (2025) 703--737, arXiv:2310.07536（`references.bib:76--89`），引用点 `introduction.tex:113--122` 与 `curvature-change.tex:193--196`（Remarks 2.3、2.4：提议"改值加弱 Bochner"并指出所需正则性）；Kapovitch--Ketterer，"CD meets CAT", Crelle 766 (2020) 1--44, arXiv:1712.02839（`references.bib:107--118`），引用点 `introduction.tex:134--137`（Theorem 4.7：用测度逼近点端点）。
+
+一处血统缺口值得记下来：$\CD(K,N)$ 条件本身的原始出处（Lott--Villani 与 Sturm 在 2006 前后的工作）没有进 `references.bib`，素材只在 `preamble.tex:60` 留了 `\CD` 这个宏、并在 `Model.lean:183--198` 用了动力学最优计划的标准形式。我在笔记里把这读成：作者把 $\CD$ 当作背景知识，只引用它的后继发展。另一处：$\RCD^{*}$（约化）只出现在 Gigli--Tamanini 的标题里（`references.bib:3`），正文没有一处讨论约化对未约化，这与 §2 里 $\mathfrak s_\kappa$ 宏的废弃是同一件事的两个痕迹。
+
+一条我在通读时反复确认的差别：素材全程没有用到"沿指定测地线的速度可微性"这一类结果（Gigli--Tamanini 的二阶微分公式、$\nabla_{\dot\gamma}\dot\gamma$ 的 a.e. 意义）。联络项 $\nabla_{\nabla g}\nabla g$ 只作用在测试函数 $g$ 的梯度上（`introduction.tex:36`、`curvature-change.tex:68`），指定测地线 $\sigma$ 从头到尾只是一个度量对象（极小、常速、由 `IsGeodesic` 那样的距离等式刻画）。这是"逐条测地线"结论能在没有测地线可微性的情况下成立的真正原因，也是我在 §15 里说的"转折三"的数学内容。
+
+## 17. Lean 侧取证（一）：`every_geodesic` 的量词形状
+
+台账条目在 `lean\formalization.yaml:1646--1648`：`comparator_config: ComparatorChallenges/WeakHessian.json`、`declaration: OAI.WeakHessian.every_geodesic`、`file: OAI/Geometry/WeakHessian/Main.lean`。`lean\ComparatorChallenges\WeakHessian.json` 全文只有 14 行，实内容是 `solution_module: OAI.Geometry.WeakHessian.Main`、`theorem_names: ["OAI.WeakHessian.every_geodesic"]`、`definition_names: []`、`permitted_axioms: ["propext","Quot.sound","Classical.choice"]`、`enable_nanoda: false`。三条允许公理与代码里的非构造性定义正好对上：`Model.lean:77--79` 的 `weakGradient` 与 `Model.lean:101--102` 的 `laplacian` 都用 `Classical.choose` 从存在性里挑代表，`Main.lean:34` 与 `Model.lean:9` 都打开了 `Classical.propDecidable` 局部实例。`definition_names` 为空说明比较器只核对定理名，不要求把 `WeakHessianUpperBound` 之类的定义对外暴露。
+
+目录形状：`lean/OAI/Geometry/WeakHessian/` 顶层只有 `Main.lean`（2,636 B）与 `Model.lean`（9,915 B），其余全在 9 个子目录 `Calculus/`、`Curvature/`、`Entropy/`、`Geodesics/`、`HeatFlow/`、`LocalBounds/`、`Measure/`、`Sobolev/`、`Transport/`；`Calculus/` 一个目录里就有 40 个以上文件，名字如 `CompactHopfDualLimit.lean`、`DriftRadialLimit.lean`、`GammaLimits.lean`、`CompactCoreProducer.lean`（我从目录列表里读到的文件名，未打开）。同级的 `lean/OAI/Geometry/` 下另有 `HarmonicGrowth/`、`EinsteinFour.lean` 等属于别篇论文的模块，本次没有读取。
+
+按任务要求的取证顺序，我先读 `Main.lean` 与 `Model.lean` 的 import 与定义，再顺着 import 定点进入子目录，读到的两个关键文件是 `Geodesics/LocalMidpoint.lean`（`Main.lean:52` 那条 `rcd_local_midpoint` 的家）与 `Calculus/LocalDistribution.lean`（`Main.lean:50` 那条 `local_midpoint_implies_curve_bound` 的家）。
+
+`Main.lean:38--44` 逐字：
+
+> theorem every_geodesic [CompleteSpace X] [TopologicalSpace.SeparableSpace X]
+>     (m : Measure X) (K N : ℝ) (hN : 1 < N)
+>     (hfull : FullSupport m) (hfinite : FiniteOnBoundedSets m) (hrcd : RCD m K N)
+>     (F G : X → ℝ) (hFbound : BoundedFunction F) (hFlip : GloballyLipschitz F)
+>     (hGbound : BoundedFunction G) (hGcont : Continuous G)
+>     (hHess : WeakHessianUpperBound m F G)
+>     (σ : Curve X) (hσ : IsGeodesic σ) : CurveSecondDerivativeBound F G σ := by
+
+机器侧"每条测地线"的编码方式，我逐点拆开：
+
+1. $\sigma$ 是**显式函数参数**（`(σ : Curve X)`），配上 `hσ : IsGeodesic σ`。所以"每条"在项层面就是 $\lambda\sigma.\lambdah\sigma.\ldots$，即对任意 $\sigma$ 构造证明；没有"存在一条"、没有"除去一个零测集"、没有对测地线空间的任何可测选择。`Main.lean:36` 的 `variable {X : Type*} [MetricSpace X] [MeasurableSpace X] [BorelSpace X]` 把载体空间做成度量空间加 Borel 结构，与 `introduction.tex:12--13` 的"完备可分度量测度空间、全支撑、有界集有限"对齐，其中完备与可分被写成类型类方括号参数（`[CompleteSpace X] [TopologicalSpace.SeparableSpace X]`），因此它们在 tactic 求解时可以自动查找，这也是 `Main.lean:51--52` 那一句 `exact` 没有把它们全部列出的原因之一。
+2. `Curve X` 是 `abbrev`：`Model.lean:22` 写 `C(Time, X)`，`Time` 是 `Set.Icc (0:ℝ) 1`（`Model.lean:12`）。也就是说机器里的曲线**定义在闭区间上**、以连续映射为对象；区间外求值靠 `clampTime`（`Model.lean:17--18`）与 `evalReal`（`Model.lean:28`）把 $\mathbb R$ 折回 $[0,1]$。这一步解释了结论里为什么可以把积分写成 `Set.Icc 0 1` 而仍然只表达 $(0,1)$ 上的分布不等式（`Model.lean:212--216`，配合 `tsupport φ ⊆ Set.Ioo 0 1`）。
+3. `IsGeodesic`（`Model.lean:30--34`）是一条距离等式：$\forall s\,t\in\Time,\ \dist(\gamma_s,\gamma_t)=\lvert s-t\rvert\cdot\dist(\gamma_0,\gamma_1)$。docstring 明写"including constant curves"，所以 $\ell=0$ 的情形不需要额外分支；对照 `every-geodesic.tex:13` 的"The case \(\ell=0\) is immediate"，机器侧把这句话消化成了定义的自然退化（`LocalDistribution.lean:35` 里 $e:=\varepsilon/(D^2+1)$ 的那个 $+1$ 就是同一件事的另一面：它让 $D=0$ 时不需要除以 $D^2$）。这条距离等式同时编码了三件事：常速、极小、以及端点距离等于长度，所以 `CurveSecondDerivativeBound` 里的 `dist (σ timeZero) (σ timeOne) ^ 2`（`Model.lean:215`）正是论文的 $\ell^2$。
+4. `RCD m K N` 的定义（`Model.lean:200--201`）是 `CurvatureDimension m K N ∧ QuadraticCheegerEnergy m`，与 `introduction.tex:14--16` 的"未约化 $\CD(K,N)$ 加二次 Cheeger 能量"逐字对齐。`CurvatureDimension`（`Model.lean:183--198`）用的是动力学最优计划形式：给两个有限二阶矩、绝对连续的概率测度，存在 $\pi$ 满足 `∀ᵐ γ ∂π, IsGeodesic γ`、端点耦合最优，且对一切 $N'\ge N$ 满足 `tauCoeff` 加 `renyiIntegral` 的不等式（`Model.lean:191--198`）。这条 `∀ᵐ γ ∂π, IsGeodesic γ` 是我在 §13 里"极限里 $|\dot\gamma|$ 连续"那条论断的机器依据：计划里的路径几乎必然是常速极小测地线，因此速度模长就是端点距离。`tauCoeff`/`sigmaCoeff`（`Model.lean:143--158`）是未约化系数，$K>0$ 分支里带 $K\theta^2<N\pi^2$ 的截断条件（`Model.lean:148`），这正是 §2 里我判断"被删掉的小节"所对应的对象。
+5. `WeakHessianUpperBound`（`Model.lean:118--122`）的量子词顺序是：$\forall g$（`IsTestFunction m g → HasCompactSupport g →`）$\forall h$（`GloballyLipschitz h → HasCompactSupport h → (∀ x, 0 ≤ h x) →`）数值不等式。对应 (weight:hessian-assumption) 的"对每个紧支撑 $g\in\Test(M)$ 与每个非负 $h\in\Lip_c(M)$"。`IsTestFunction`（`Model.lean:108--111`）是 `InLaplacianDomain m g ∧ BoundedFunction g ∧ GloballyLipschitz g ∧ Sobolev m (laplacian m g)`，三条分量与 `eq:test-class`（`introduction.tex:27--31`）一一对上（有界整体 Lipschitz 代表、$\Delta g\in W^{1,2}$、$g\in D(\Delta)$）。
+6. 机器里没有向量场。`weakHessian`（`Model.lean:113--116`）全部用标量 `gamma` 与 `laplacian` 写成
+   $$-\int\big(\gamma(h,g)+h\,\Delta g\big)\,\gamma(F,g)\,dm-\int h\,\gamma\!\big(F,\ \gamma(g,g)/2\big)\,dm,$$
+   也就是把 `eq:weak-hessian` 的两项分别用 $\divg(h\nabla g)=\Gamma(h,g)+h\Delta g$ 与 $\nabla_{\nabla g}\nabla g=\nabla(\Gamma(g)/2)$ 代掉之后的纯标量形式。`gamma` 本身由极化恒等式定义（`Model.lean:87--90`：$\gamma(f,g)=\frac{|\nabla(f+g)|^2-|\nabla(f-g)|^2}{4}$，用的是最小弱上梯度 `weakGradient`）。这是我在取证里得到的最重要的结构性结论：论文语言里的 $\Hess$、$\nabla_Y Y$、散度在机器侧全部被折叠成 carrée du champ 的标量配对，所以 Lean 版本对联络公理的要求比论文更弱（它只需要极化后的 $\Gamma$ 与生成元定义 `IsLaplacian`，`Model.lean:92--96`，docstring 还专门写了"without a global $L^2$ assumption on $F$"，对应 `introduction.tex:82--84` 那句"不需要 $F$ 的整体 $L^2$"）。代价是机器要自己证极化的合法性（`QuadraticCheegerEnergy`，`Model.lean:138--141` 的平行四边形恒等式，正是 infinitesimal Hilbertianity）。
+7. 结论 `CurveSecondDerivativeBound`（`Model.lean:209--216`）是分布形式的直接翻译：对所有 `ContDiff ℝ ⊤ φ`（$C^\infty$）、`HasCompactSupport φ`、`tsupport φ ⊆ Ioo 0 1`、`∀ t, 0 ≤ φ t`，
+   `∫ t in Icc 0 1, F (evalReal σ t) * deriv (deriv φ) t ≤ (dist (σ timeZero) (σ timeOne))^2 * ∫ t in Icc 0 1, G (evalReal σ t) * φ t`，与 `introduction.tex:74--79` 的 $\int_0^1F(\sigma_t)\varphi''\le\ell^2\int_0^1G(\sigma_t)\varphi$ 逐项相同，二阶导 $\varphi''$ 在机器里是 `deriv (deriv φ)`。
+8. 假设侧的"分解式"用法：`Main.lean:47--49` 用 `obtain` 把 `BoundedFunction F`、`GloballyLipschitz F`、`BoundedFunction G` 拆成数值界 `CF`、Lipschitz 常数 `L`、`CG`，因为下游 `LocalMidpoint.lean:33--34` 的参数形态是 `{CF CG : ℝ} (hFb : ∀ x,|F x| ≤ CF)` 这类显式界，并非存在性命题。`Main.lean:50` 传 `hL.continuous` 作为 $F$ 的连续性（Lipschitz 蕴含连续，论文 `introduction.tex:56` 也只在"有界整体 Lipschitz"意义上使用 $F$ 的连续性，机器把这一蕴含显式化）。
+9. `Main.lean:45--46` 用 `let :` 把两个**实例**局部造出来：`ProperSpace X` 由 `properSpace_of_cd hN hrcd.1 hfull hfinite` 得到（注意输入是 `hrcd.1`，即只用 $\CD$ 部分，Cheeger 二次性不参与），`SigmaFinite m` 由 `sigmaFinite_of_finiteOnBoundedSets m hfinite (σ timeZero)` 得到，基点取 $\sigma(0)$；后者之所以够用，是因为 `IsGeodesic` 蕴含整条曲线落在 $\sigma(0)$ 的半径 $\ell$ 球内，`LocalMidpoint.lean:23--28` 的 `geodesic_dist_initial_le` 证的就是这条不等式。这与 §7 里"proper 与 $\sigma$-有限都是定理，并非假设"的判断一致，机器版把它做成了可查找实例。
+
+## 18. Lean 侧取证（二）：两引理桥与 import 定点路线
+
+`every_geodesic` 的证明体只有 8 行（`Main.lean:45--52`），骨架是：造实例、拆界、`apply local_midpoint_implies_curve_bound hL.continuous hGcont _ σ hσ`，再 `intro γ hγ R c hR hshort hlocal` 后用 `exact hHess.rcd_local_midpoint hN hrcd hfull hfinite hL hCF hCG hGcont γ hγ hR hshort hlocal`。那个 `_` 就是中点性质参数。于是机器版定理的形状是"中点性质 $\Rightarrow$ 分布不等式"加"弱 Hessian 界 $\Rightarrow$ 中点性质"两块拼合，两块的家分别在下述两个文件。
+
+`Calculus/LocalDistribution.lean:21--25` 逐字给出桥接引理的假设形态：
+
+> lemma local_midpoint_implies_curve_bound {F G : X → ℝ} (hFc : Continuous F) (hGc : Continuous G)
+>     (hmid : ∀ γ : Curve X,IsGeodesic γ → ∀ R c : ℝ,0 < R →
+>       dist (γ timeZero) (γ timeOne) < R →
+>       (∀ z,dist z (γ timeHalf) < R → G z ≤ c) →
+>       (F (γ timeZero)+F (γ timeOne))/2-c/8*dist (γ timeZero) (γ timeOne)^2 ≤ F (γ timeHalf))
+
+中点不等式左端的 $c/8$ 让我停了一下，核对后它与 §14 完全一致：$G\le c$ 时 (weight:green-concavity) 在 $t=\frac12$ 给出
+$F(\tau_{1/2})\ge\frac{F(\tau_0)+F(\tau_1)}2-c\cdot|\dot\tau|^2\int_0^1g(s,\tfrac12)ds$，而 $\int_0^1g(s,\tfrac12)ds=\frac{\frac12(1-\frac12)}{2}=\frac18$，$|\dot\tau|^2=D^2$，两边同形。也就是说 Lean 把论文的"所有 $t$ 的 Green 表示"压成"$t=\frac12$ 一个标量 $\frac18$"，再用逐尺度中点性质把整个分布结论赎回来。赎回过程在 `LocalDistribution.lean:31--102`，中间步骤我按代码顺序记下来（论文里对应 `every-geodesic.tex:85--94` 那五行）：
+
+- 目标被写成二阶差分的局部界：`LocalDistribution.lean:31--33` 构造性给出 $\forall\varepsilon>0,\exists\delta>0$ 使得对 $x\pm h\in(0,1)$，`secondDifference (F ∘ evalReal σ) h x ≤ D^2*G (evalReal σ x)+ε`。
+- $\varepsilon$ 的除法：`LocalDistribution.lean:35` 取 $e=\varepsilon/(D^2+1)$，于是 $D^2e\le\varepsilon$（`LocalDistribution.lean:97--101` 用 `div_le_iff₀` 与 $D^2\le D^2+1$）。$+1$ 保证 $D=0$ 时仍然合法。
+- 一致连续的紧集：`LocalDistribution.lean:37--38` 在 $\closedball{\sigma(0)}{D+1}$ 上用 `isCompact_closedBall ... .uniformContinuousOn_of_continuous`，得模数 $\eta$；取 $R:=\min\{\eta,1\}$、$\delta:=\frac{R}{2(D+1)}$（`LocalDistribution.lean:39--41`）。$D+1$ 的外扩是为了让以 $\sigma(x)$ 为中心、半径 $R\le1$ 的球落进该紧球（`LocalDistribution.lean:77--89` 的三角不等式 `hzB`），而 $2(D+1)$ 的分母是为了 $2hD<R$（`LocalDistribution.lean:65--73`，那里 `hlen` 算出子段端点距离 $=2hD$）。
+- 子段作为曲线：`LocalDistribution.lean:44--47` 用 `restrictCurve u v σ` 把 $[x-h,x+h]$ 段常速重参数化为整条 `Curve X`，并用 `hσ.restrictCurve u v` 保持 `IsGeodesic`。这正是论文里"strict subsegment 的常速重参数化 $\tau$"（`every-geodesic.tex:22--23`）的机器形态，而它不需要 Deng 定理：`IsGeodesic` 的距离等式在限制后自动保持，唯一性被"子段就是 $\sigma$ 自己的 restriction"这件事替代了。
+- 收尾：`LocalDistribution.lean:103--112` 调用 `setIntegral_second_deriv_le_of_local_differences`（来自 `Calculus.ScalarLocalBound`，见该文件 `LocalDistribution.lean:3` 的 import）把逐点二阶差分界转成 $\int F\cdot\varphi''\le D^2\int G\varphi$，并用 `integral_const_mul` 把 $D^2$ 提出。
+
+`Geodesics/LocalMidpoint.lean:30--38` 的签名（逐字）：
+
+> lemma WeakHessianUpperBound.rcd_local_midpoint {K N : ℝ}
+>     (hN : 1 < N) (hrcd : RCD m K N) (hfull : FullSupport m) (hfin : FiniteOnBoundedSets m)
+>     {F G : X → ℝ} (hHess : WeakHessianUpperBound m F G)
+>     {L : ℝ≥0} (hF : LipschitzWith L F) {CF CG : ℝ} (hFb : ∀ x,|F x| ≤ CF)
+>     (hGb : ∀ x,|G x| ≤ CG) (hGc : Continuous G)
+>     (σ : Curve X) (hσ : IsGeodesic σ) {R c : ℝ}
+>     (hR : 0 < R) (hshort : dist (σ timeZero) (σ timeOne) < R)
+>     (hlocal : ∀ x,dist x (σ timeHalf) < R → G x ≤ c)
+
+这条引理是整个模块里最重的一块，它的证明结构告诉我机器版的"曲率改值 + 熵消去"是怎么落地的（按 `LocalMidpoint.lean:39--119` 的调用顺序）：
+
+- 记号：$o:=\sigma(\tfrac12)$、$x_0:=\sigma(0)$、$x_1:=\sigma(1)$、$D:=\dist(x_0,x_1)$，并用 `hσ` 算出 `hd0`、`hd1`：$\dist(o,x_0)=\dist(o,x_1)=D/2$（`LocalMidpoint.lean:39--50`）。这两行就是论文"取严格子段"的机器替身：中点 $o$ 到两端等距。
+- 中点对偶测试：`boundedHopfMap_lipschitz (midpointDualTest x₀ D)`（`LocalMidpoint.lean:51--52`）为两个端点各造一个有界 Hopf--Lax 型 Lipschitz 势，记 Lipschitz 常数 `LD₀`、`LD₁`，$L^2$ 范数记作 `J := 2*(‖midpointDualTest x₀ D‖+‖midpointDualTest x₁ D‖)`。这是 $c/8$ 不等式里"用对偶函数把中点值夹出来"的实现。
+- 小点球测度：`exists_small_ball_law hfull hfin o hrp`（`LocalMidpoint.lean:62--64`）对 $o$、$x_0$、$x_1$ 各造一个半径 $r$ 的小球测度 $\mu,\mu_0,\mu_1$，携带压缩常数 $B$、$C_0$、$C_1$ 与熵信息 $E_0$、$E_1$。这三条对应论文的 $\mu_i^j$（`every-geodesic.tex:25--29`），但把"两个端点测度"换成了"中点测度加两个端点测度"的**两腿**结构：`hrcd.1.exists_plan_leg` 分别造 $\mu\to\mu_0$ 与 $\mu\to\mu_1$ 的 CD 计划腿（`LocalMidpoint.lean:65--68`）。
+- 轨道约束：`htrack₀`、`htrack₁`（`LocalMidpoint.lean:69--82`）证明两条腿上的路径几乎必然留在 $\ball{o}{3R/4}$ 内，用的正是三角不等式加 `geodesic_dist_initial_le` 加 `hshort : D < R`。这一步是论文里"$Q$ 是紧集、长度由 $L$ 界住"（`every-geodesic.tex:41--42`）的局部版本：机器不需要 Arzelà--Ascoli 的全局紧性论证，它用尺度 $R$ 把一切约束在小球里。
+- 尾部与熵控制：`exists_strong_entropy_confinement hN hfull hfin o`（`LocalMidpoint.lean:83`）给出衰减率 $d>0$ 与 $\exp(-d\,\dist(\cdot,o))\in L^2(m)$（`LocalMidpoint.lean:84--87`），由此定义 $Q_0$、$Q_1$ 两个常数。这是 §7 里 Gaussian 体积增长 $m(B_\rho)\le Ce^{C\rho^2}$ 在机器侧的替身：不用体积上界本身，而用一个指数尾的可积性。
+- 主不等式调用：`vanishing_diffusion_local_two_leg`（`LocalMidpoint.lean:89--97`）带一长串显式常数 $Z,E,s,A,B,C,d,f,L,R$，其中 $f:=2F(o)-F(x_0)-F(x_1)$ 正是中点缺陷，$Z$ 里出现 $D^2/4$ 减掉若干误差项（$LD$ 项与 $J$ 项），$E:=(D/2+2r)^2$。两条 `curvatureTailBound_scaling_limit` 与一条 `localizedActionBound_scaling_limit`（`LocalMidpoint.lean:95--97`）是论文里"$k=K-\lambda_jG$ 的曲率项加尾部"的机器形式，参数 $c$、$CG$、$CF$、$s$ 里那个 $s$ 就是标度（论文的 $\lambda_j$）：`eventually_local_scaling_admissible c CG CF hgap`（`LocalMidpoint.lean:56`）与 `localized_small_scaled_eventually`（`LocalDuration.lean` 之外的 `LocalMidpoint.lean:101`）说明 $s\to\infty$ 与 $r\downarrow0$、$\delta\downarrow0$ 是同时被 filter 管理的，而 $a:=s/T$（`LocalMidpoint.lean:112`）表明标度在热流时间 $T$ 上重新归一。
+- 公共定义域的那块：`hHess.rcd_common_local_heat_legs`（`LocalMidpoint.lean:104--112`）是论文 §8 到 §10 的机器对应物，它的输入清单极长（含 $hd$、$he$、$hdecay'$、两条腿的压缩界与轨道界、$hlocal$、以及 `LD₀`、`LD₁$），输出是 `hcomp`（公共热腿复合，`LocalMidpoint.lean:113--119` 里两次 `convert` 加 `ring` 对齐常数）。从名字读，这条引理把"改值后生成元的公共定义域与热流正则化"打包成一个局部版本，正好对应 `curvature-change.tex:117--134` 的"closure in the generator domain"。
+- 常数的最后匹配：`LocalMidpoint.lean:55` 的 `hgap : 0 < R-3*R/4` 与 `LocalMidpoint.lean:58` 的 `0 < R/12` 说明整个局部化里尺度被反复取 $\frac34$、$\frac1{12}$ 这类分数，目的是留出嵌套余量；`hβ : d ≤ d+(R-3*R/4)/(4*T)`（`LocalMidpoint.lean:103`）是衰减率在时间重标下的单调放缩。
+
+import 定点路线（我按 `Main.lean:2--22` 的 22 条与两个桥接文件各自的 3--4 条 import 走，其余 500 多个文件没有打开）。`LocalDistribution.lean:2--3` 引入 `Geodesics.LocalMidpoint` 与 `Calculus.ScalarLocalBound`；`LocalMidpoint.lean:2--4` 引入 `Transport.CDPlanLeg`、`HeatFlow.CommonLocalHeatLegs`、`Geodesics.LocalTwoLegLimit`。据此我可以把机器与论文的对应关系写成一张猜测表（依文件名推断，未读内容，全部标 `[推测]`）：`Transport.CDPlanLeg` 对应 `curvature-change.tex:28--38` 的动力学最优计划；`HeatFlow.CommonLocalHeatLegs` 对应 `drift.tex` 的公共定义域与 `curvature-change.tex` 的闭包；`Geodesics.LocalTwoLegLimit` 对应 `every-geodesic.tex:41--48` 的集中化极限；`LocalBounds.OriginalCoreProducer`（`Main.lean:14`）对应 `calculus.tex:25--59` 的 core 与截断；`Sobolev.QuadraticCheegerEnergyComparable`（`Main.lean:4`）对应 `drift.tex:33--40` 的"加权 Cheeger 能量二次且范数等价"；`Sobolev.LaplacianChain`（`Main.lean:13`）对应 `weight:generator` 的链式律；`HeatFlow.GeneratorEnergyDifferentiation`（`Main.lean:15`）对应 `drift.tex:45--51` 的能量恒等式；`HeatFlow.WeightedHeatSmoothing`（`Main.lean:16`）对应 `weight:multiplier-class`；`Entropy.IntervalEntropyDual`（`Main.lean:20`）对应 `every-geodesic.tex:59--69` 的区间熵对偶；`Transport.WeightedPlanHamiltonJacobi`（`Main.lean:17`）与 `Calculus.CompactEVI`（`Main.lean:10`）对应加权计划的 HJ/EVI 表述；`LocalBounds.SharpPointwise`（`Main.lean:11`）对应 $c/8$ 那类逐点界；`LocalBounds.Young`（`Main.lean:2`）与 `Sobolev.CompContDiff`（`Main.lean:3`）支撑 `LocalDistribution.lean:92--102` 的 Young 与 $C^\infty$ 处理。
+
+机器与论文的两处形状差异，我把它记成可核对的事实。第一处：论文用全局集中化（$\varepsilon_j\to0$、$\lambda_j\to\infty$、Arzelà--Ascoli、Deng 非分支），机器用局部两腿加尺度 $R$，因此机器证明里我找不到 Deng 定理的位置，也不需要"子段唯一性"；`Main.lean` 的 `every_geodesic` 依然对每条测地线成立，因为中点性质 `hmid` 本身就是对任意 $\gamma$ 陈述的（`LocalDistribution.lean:22`）。第二处：论文的结论是分布不等式，机器的中间结论是二阶差分不等式加一个从差分到分布的引理，这条路径与 `main.tex:12--13` 的"in distributions"完全一致，但它说明"逐条"这件事在机器侧是靠"所有尺度 $h$、所有中心 $x$"的中点性质实现的，并非靠测度集中。这两处差异我在 §20 的台账里都各记了一行。
+
+## 19. 被放弃的路线汇总：按"断在哪一层"排一遍
+
+前面每个引理下面都附了 `[推测]` 路线，这里按失效层次归堆，方便我下次直接跳过。
+
+层次一（定义层）：任何形式的"$F$ 作为分布作用二阶算子"都不可用，因为假设只保证 $\nabla F\in L^\infty$（见 §3 的三条路线）。可用的唯一写法是把二阶导全部转到测试函数与权重那边。
+
+层次二（正则性层）：所有"改值以后原来的测试类还在"的论证都失败，失败的见证是 `curvature-change.tex:188--191` 的 Euclid 反例（$V=-|x_1|$ 附近、$g=x_1$ 附近、$\Delta_Vg=-\operatorname{sign}(x_1)$）。由此派生两条禁令：不要用加权半群的梯度估计（那是循环，见 §8(d) 与 §9(d)）；不要指望 $D(\Delta_V)\cap\{\Delta_V\cdot\in W^{1,2}\}$ 自己稠密（见 §10(d)）。
+
+层次三（曲率层）：任何保留有限维数 $N$ 的加权曲率都会失败，因为 $\mathcal E_V=2\mathrm{Ch}_V$ 只给出 $\RCD(K_V,\infty)$（`curvature-change.tex:174--175`），改值会摧毁 Bishop--Gromov 的有限维形式。约化条件 $\CD^*$、$\RCD^*$ 也不可用（见 §11(d) 与 §12(d)）。
+
+层次四（极限层）：固定 $\lambda$ 无法吸收端点熵的发散（见 §13(d) 第三条）；非紧支撑的端点逼近（例如 $P_{1/j}\delta$）会失去 $Q$、$L$ 的一致界（第二条）；把结论降级为 a.e. 陈述会直接撞回原始障碍（第一条）。
+
+层次五（结论层）：逐点二阶差商极限与 semiconvex 改写都比我最初设想的更难或更绕（见 §14(d)），素材选择"弦在上方 ⟹ 凹 ⟹ 分布二阶导非正"这条最短路径；Lean 侧则把"弦在上方"退化成"$t=\frac12$ 的中点不等式加所有尺度"，说明这条路径可以进一步离散化。
+
+层次六（形式化层）：机器侧的额外放弃项是向量场与联络。`Model.lean:87--90` 用极化把 $\Gamma$ 定义成标量、`Model.lean:113--116` 把弱 Hessian 写成纯 $\Gamma$ 配对，因此形式化里没有任何"沿 $\sigma$ 的速度场"概念；`Model.lean:30--34` 把 $\sigma$ 只当作距离等式成立的连续映射。这是形式化对论文语言的实质简化，我把它当作可复用经验：只要结论是分布型的，路径的速度可以完全不出现。
+
+## 20. 独立台账
+
+| 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+| --- | --- | --- | --- | --- |
+| $N$ | $1<N<\infty$ | `introduction.tex:16` | `every-geodesic.tex:13--14` 的有限维非分支与 `Model.lean:200` 的 `RCD` | 取 $N=\infty$ 则子段唯一性失去，`every-geodesic.tex:45--48` 的 $\pi_j\to\delta_\tau$ 不成立 |
+| $K$ | 任意实数，可负 | `introduction.tex:16` | `calculus.tex:39--41` 的 $\max\{-K,0\}$ 与 `every-geodesic.tex:68` 的 $KC_t^j$ | 强行假设 $K\ge0$ 会让 `calculus.tex:39--41` 的 Hessian 界失去一般性，`curvature-change.tex:151` 的 $K_V$ 也可能失去负值情形 |
+| $\Test(M)$ | $g\in D(\Delta)$、有界整体 Lipschitz 代表、$\Delta g\in W^{1,2}$ | `introduction.tex:27--31` | 假设 (weight:hessian-assumption) 与 `Model.lean:108--111` 的 `IsTestFunction` | 去掉 $\Delta g\in W^{1,2}$ 则 `calculus.tex:17--18` 的 $\Gamma(g)\in W^{1,2}$ 失去，`eq:bochner-hessian` 无法测 |
+| $H_F(Y,Y)(h)$ | 两个积分的负和，$Y=\nabla g$ | `introduction.tex:42--44` | `curvature-change.tex:99--103` 的差恒等式 | 把 $Y$ 换成一般 $L^2$ 向量场则 $\nabla_YY$ 无定义，`curvature-change.tex:104--105` 的散度恒等式失效 |
+| $\ell^2$ | 常速测地线速度平方，等于端点距离平方 | `introduction.tex:69` 与 `Model.lean:215` | 结论 `CurveSecondDerivativeBound`（`Model.lean:209--216`） | 写成 $1$ 会在 `every-geodesic.tex:81--82` 与 `LocalDistribution.lean:65--69` 两处同时错尺度 |
+| $\lVert H_g\rVert_2^2\le\lVert\Delta g\rVert_2^2+\max\{-K,0\}\lVert\nabla g\rVert_2^2$ | 积分 Bochner 推论 | `calculus.tex:39--41` | `calculus.tex:100--101` 用于 $g_t-\chi\zeta g$ 得 Hessian 强收敛 | 丢掉 $\max$ 换成 $-K$ 则在 $K>0$ 时右端可能为负，不等式失去内容 |
+| $\chi_R$ | 在 $B_R(o)$ 上为 $1$、支撑在 $B_{R+1}(o)$、梯度与 Laplacian 界与 $R$ 无关 | `calculus.tex:33--35` | `calculus.tex:76--83` 的截断收敛与 `curvature-change.tex:90--94` 的 harmless 截断 | 宽度取 $o(R)$ 会引入 $R$ 依赖常数，闭包时误差不能一致消失 |
+| $e^{-Kt}$ | Bakry 梯度估计的时间因子 | `calculus.tex:96--98` | `calculus.tex:95--99` 的 $\lVert\nabla g_t\rVert_\infty$ 界与 `drift.tex:69--71` 的反向 Poincaré | 换成 $e^{\lvert K\rvert t}$ 则 `drift.tex:66` 的 $C_Ka^{-1/2}$ 要求 $a>\lvert K\rvert$ 才收敛，标度条件改变 |
+| $\Cap_2(E)$ | 双层下确界，$\int(v^2+\lvert\nabla v\rvert^2)\,dm$ | `calculus.tex:148--152` | `calculus.tex:144--146` 的 Bochner 余项不测零容集与 `calculus.tex:153--154` 的 quasi-continuous 代表 | 指标换成 $p\ne2$ 与 Cheeger 能量的二次性不匹配，`calculus.tex:156--166` 的逐点收敛失去依据 |
+| $\Gamma_2(g)$ | 测度值，$\ge(K\Gamma(g)+\lvert H_g\rvert^2)m$ | `calculus.tex:139--143` | `curvature-change.tex:83--89` 的 $\mathcal B_0(g,w\xi)$ | 若只用绝对连续部分，奇异余项信息丢失，(weight:original-bochner) 仍成立但失去可加强处 |
+| $m(B_r(o))$ | $\le Ce^{Cr^2}$，$r\ge1$ | `calculus.tex:176--178` | `curvature-change.tex:165--169` 的 (MD.exp) 与保守性 | 改成 $r^N$ 型多项式增长则 AGS 定理 3.14 的 (MD.exp) 前提不满足 |
+| $D(\Delta_V)=D(\Delta)$ | 集合相等且图范数等价 | `drift.tex:20` 与 `drift.tex:23` | `curvature-change.tex:131--134` 的 core 转移 | 只证单向前则 (weight:graph-form) 无法在所有 $D(\Delta_V)$ 上闭合 |
+| $\Delta_Vu=\Delta u+\Gamma(V,u)$ | 漂移项一阶 | `drift.tex:21` | `curvature-change.tex:96--103` 的展开与 `curvature-change.tex:68--69` 的 $b$ | 符号约定反（正 Laplacian）则 (weight:core-be) 方向整体翻转 |
+| $e^{\pm\lVert V\rVert_\infty}$ | 改值的上下界常数 | `drift.tex:33--36` | test plan 压缩界的互换与 `curvature-change.tex:152--157` 的 (MD) | $V$ 无界时 $(\mathrm{MD})$ 的全支撑与局部有限都可能失效 |
+| $\lVert R_ah\rVert_p\le a^{-1}\lVert h\rVert_p$ | $p=2,\infty$，Markov 性 | `drift.tex:64` | `drift.tex:86--88` 的压缩估计中 $\lVert\cdot\rVert_\infty$ 分量 | 指数从 $-1$ 变 $-\tfrac12$ 时压缩条件对 $\lambda$ 的标度改变 |
+| $\lVert\nabla R_ah\rVert_2\le Ca^{-1/2}\lVert h\rVert_2$ | 半阶增益 | `drift.tex:65` | `drift.tex:86--88` 的 $\lVert\cdot\rVert_{\mathcal E}$ 压缩 | 若写成 $a^{-1}$ 则会误判 $a$ 只需线性于 $\lambda\lVert\nabla F\rVert_\infty$ |
+| $\lVert\nabla R_ah\rVert_\infty\le C_Ka^{-1/2}\lVert h\rVert_\infty$ | 需要 $a>C_K$ | `drift.tex:66` | `drift.tex:90--93` 的不动点属于 $\mathcal E$ | 去掉 $C_K$ 依赖会掩盖 $K<0$ 时 resolvent 半轴条件变严的事实 |
+| $\lVert\nabla P_th\rVert_\infty\le C_K(t^{-1/2}+1)e^{C_Kt}\lVert h\rVert_\infty$ | 反向 Poincaré 型 | `drift.tex:69--71` | `drift.tex:66` 的 $a^{-1/2}$ 常数 | 只有 $t^{-1/2}$ 而没有 $+1$ 时大时间积分发散，resolvent 定义不成立 |
+| $a>\max\{C_K,\ C^2\lVert\nabla V\rVert_\infty^2,\ C_K^2\lVert\nabla V\rVert_\infty^2\}$ | 我按素材推出的压缩门槛 | `drift.tex:84--88` | 唯一性识别 `drift.tex:92--95` | 取 $a$ 只满足线性界则 $\Phi$ 非压缩，Banach 不动点失败，(weight:multiplier-class) 无证 |
+| $\mathcal E$ | 范数为 $\lVert z\rVert_2+\lVert\nabla z\rVert_2+\lVert z\rVert_\infty+\lVert\nabla z\rVert_\infty$ | `drift.tex:76--78` | `drift.tex:79--81` 的完备性与压缩 | 去掉 $\lVert\nabla z\rVert_\infty$ 分量则结论只给局部 Lipschitz，得不到整体代表 |
+| $\Ent_m(\mu)$ | $\int\rho\log\rho\,dm$，$0\log0=0$，负部 $\ge-1/e$ | `curvature-change.tex:12--21` | `every-geodesic.tex:28--29` 的 $E_i^j$ 与 `every-geodesic.tex:62--63` 的平移恒等式 | 支撑无界时负部可积性失去，(weight:entropy-rearranged) 的每一项都可能不确定 |
+| $g(s,t)=\min\{s,t\}-st$ | 非负 Dirichlet Green 核，$\int_0^1g(s,t)\,ds=\tfrac{t(1-t)}{2}$ | `curvature-change.tex:36` 与 `every-geodesic.tex:50` | `every-geodesic.tex:52--58` 的 $C_t^j,D_t^j$ 与 §14 的 $W$ | 换成 $\tfrac12\min\{s,t\}$ 之类会破坏与 BHS Definition 1.2 的归一化一致性，$c/8$ 变 $c/16$ |
+| $k=K-\lambda G$，$K_V=\inf_M k$ | $K_V\ge K-\lambda\lVert G\rVert_\infty>-\infty$ | `curvature-change.tex:64` 与 `curvature-change.tex:151` | (weight:core-be) 与常曲率那步 | $G$ 无界则 $K_V$ 不合法，$\RCD(K_V,\infty)$ 陈述无意义 |
+| $\mathcal B_V(g,\xi)$ | 两项之差加两项之积 | `curvature-change.tex:71--76` | (weight:core-be) 与 (weight:graph-form) 的两种写法 | 把 $w$ 提到积分号外（即 $\mathcal B_V$ 未加权）则 (weight:bochner-difference) 第一行的 $\Gamma(V,q)$ 项消失 |
+| (weight:graph-form) 的 $\tfrac12$ | 来自 $q=\Gamma(g)/2$ | `curvature-change.tex:122` | (weight:full-be) 左端第一项 | 丢掉 $\tfrac12$ 则与 $\BE_2$ 的标准形不对称，AGS 定理 4.17 前提不匹配 |
+| $\Gamma(g)\in L^\infty$ 小类 | 附加限制，类更小 | `curvature-change.tex:145--146` | BHS 的 $\BE_2(k,\infty)$ 测试类口径 | 若声称对更大类成立则要额外稠密论证，素材没有提供 |
+| 反例 $V=-\lvert x_1\rvert$，$g=x_1$ | 局部 $\Delta_Vg=-\operatorname{sign}(x_1)\notin W^{1,2}$ | `curvature-change.tex:188--191` | `curvature-change.tex:114--115` 与 `introduction.tex:124--132` 的必要性论证 | 若删掉此反例，读者无法判断闭包步骤是否多余，§10 变成无的放矢 |
+| $\lambda_j$ | $\ge j(1+\lvert E_0^j\rvert+\lvert E_1^j\rvert)$ | `every-geodesic.tex:33--35` | (weight:entropy-rearranged) 的误差项 | 固定 $\lambda$ 则 $\lvert E_i^j\rvert/\lambda\to\infty$，误差项不再下界为 $0$ |
+| $E_i^j$ | $=-\log m(B_{\varepsilon_j}(\tau(i)))$，可发散 | `every-geodesic.tex:28--29` | $\lambda_j$ 的选取与 Jensen 比较 | 若端点测度不绝对连续于 $m_{\lambda_j}$ 则 Prop 无法应用 |
+| $E_t^j$ | $\ge-\log m(Q)$ | `every-geodesic.tex:72--73` | 误差项下界 | $Q$ 若只 sigma-finite 而 $m(Q)=\infty$ 则该界无信息，需要 proper 与紧性 |
+| $C_t^j$ | $0\le C_t^j\le L^2/8$ | `every-geodesic.tex:74` | 误差项里 $KC_t^j/\lambda_j$ 的一致界 | 路径只 $AC^2$ ，并非常速测地线时 $\lvert\dot\gamma\rvert$ 对一致拓扑不连续，$D_t^j$ 极限需另证 |
+| $D_t^j$ | $\int g(s,t)G(\gamma_s)\lvert\dot\gamma\rvert^2\,ds\,d\pi_j$ | `every-geodesic.tex:56--58` | (weight:green-concavity) 的主项 | 用 $\lVert G\rVert_\infty$ 放缩会退化成常数 $G$ 版本，丢掉空间变化信息 |
+| $a''(t)=\ell^2G(\sigma_t)$ | $a\in C^2$ 由基本定理给出 | `every-geodesic.tex:87--88` | 凹性转化 (weight:curve-hessian) | 若 $G$ 仅可测则 $a$ 只 $W^{2,1}$，弦比较论证需要重做 |
+| $W(t)=-\lvert\dot\tau\rvert^2\int_0^1g(s,t)G(\tau_s)\,ds$ | 满足 $W''=\lvert\dot\tau\rvert^2G\circ\tau$，$W(0)=W(1)=0$ | `every-geodesic.tex:81--82` 的我的补写 | $F\circ\tau-W$ 凹的等价改写 | 符号写成 $+W$ 会给出 $(F\circ\tau)''\le-\ell^2G\circ\tau$，与结论方向矛盾 |
+| $c/8$ 的 $\tfrac18$ | $\int_0^1g(s,\tfrac12)\,ds=\tfrac18$ | `LocalMidpoint.lean:38` | `local_midpoint_implies_curve_bound` 的假设 `hmid` | 若中点形式写 $c/4$ 则 `LocalDistribution.lean:92--95` 的 $D^2e$ 放缩后与论文不一致 |
+| $e=\varepsilon/(D^2+1)$ | 分母的 $+1$ 兼容 $D=0$ | `LocalDistribution.lean:35` | `LocalDistribution.lean:97--101` 的 $D^2e\le\varepsilon$ | 用 $D^2$ 作分母则在常值测地线（论文 `every-geodesic.tex:13` 的情形）处未定义 |
+| $R=\min\{\eta,1\}$，$\delta=R/(2(D+1))$ | $\eta$ 是 $G$ 在 $\closedball{\sigma(0)}{D+1}$ 上的一致连续模 | `LocalDistribution.lean:37--41` | 中点性质的局部上界假设 $G\le c$ | 去掉 $D+1$ 外扩则 `LocalDistribution.lean:79--89` 的球包含关系失去 |
+| $3R/4$ 与 $R/12$ | 嵌套余量尺度 | `LocalMidpoint.lean:55` 与 `LocalMidpoint.lean:58` | `htrack₀`、`htrack₁` 的轨道约束 `LocalMidpoint.lean:69--82` | 取 $R$ 无余量则路径轨道可能触界，局部假设 $G\le c$ 不再覆盖 |
+| $Z$ 中的 $D^2/4$ | 中点曲率主项 | `LocalMidpoint.lean:89--91` | `vanishing_diffusion_local_two_leg` 的结论 | 主项写成 $D^2$ 会把 $c/8$ 的尺度错成 $c/2$ |
+| $\exp(-d\,\operatorname{dist}(\cdot,o))\in L^2(m)$ | 强熵约束给出的指数尾 | `LocalMidpoint.lean:83--87` | $Q_0,Q_1$ 常数与尾部界 `LocalMidpoint.lean:96--97` | 只有 $L^1$ 尾时 `curvatureTailBound_scaling_limit` 的配对不可用 |
+| $\gamma(f,g)$ 的 $4$ | 极化分母 $\frac{\lvert\nabla(f+g)\rvert^2-\lvert\nabla(f-g)\rvert^2}{4}$ | `Model.lean:88--90` | `weakHessian`（`Model.lean:113--116`）与 `IsLaplacian`（`Model.lean:92--96`） | 平行四边形系数写错则二次 Cheeger 假设 `Model.lean:138--141` 不再给出对称双线性 |
+| $\sigma_{K,N}$ 与 $\tau_{K,N}$ | $\tau=t^{1/N}\sigma_{K,N-1}^{(N-1)/N}$，$K>0$ 分支要求 $K\theta^2<N\pi^2$ | `Model.lean:143--158` | `CurvatureDimension`（`Model.lean:183--198`） | 未约化改约化会让 `Model.lean:191--198` 的 $\forall N'\ge N$ 单调形式失效 |
+| `∀ᵐ γ ∂π, IsGeodesic γ` | CD 计划里的路径几乎必然常速极小 | `Model.lean:190` | §13 里 $\lvert\dot\gamma\rvert$ 的连续性与 $D_t^j$ 极限 | 若计划只含 $AC^2$ 路径则 $D_t^j$ 的取极限需要下半连续替代，(weight:green-concavity) 变弱 |
+| `properSpace_of_cd` 的输入 | $hN$、`hrcd.1`、`hfull`、`hfinite` | `Main.lean:45` | `LocalMidpoint.lean:18` 的 `[ProperSpace X]` 实例 | 传入整个 `hrcd` 会多要 Cheeger 二次性，实际 proper 只依赖 $\CD$ 部分 |
+| `Classical.choose` 的两处 | `weakGradient` 与 `laplacian` 的代表选取 | `Model.lean:77--79` 与 `Model.lean:101--102` | 几乎所有定义；`ComparatorChallenges/WeakHessian.json` 的 `permitted_axioms` 含 `Classical.choice` | 若禁用选择公理则要改成 `Unique.choice` 型结构，全部定义需要可构造性证明 |
+| `definition_names` | 空列表 | `lean\ComparatorChallenges\WeakHessian.json:7` | 比较器只核对 `theorem_names` 里的 `OAI.WeakHessian.every_geodesic` | 若把 `WeakHessianUpperBound` 加入则需与比较方定义逐字同构，跨库对齐风险上升 |
+| `enable_nanoda` | `false` | `lean\ComparatorChallenges\WeakHessian.json:13` | 构建与检查流程 | 打开会引入自动证明依赖，与本模块的手工常数对齐风格冲突 |
+
+## 21. 自检记录、前向引用落地清单与遗留风险
+
+文风与格式自检（在本文件上跑工具核对，结果是写这段之前的状态）：规格禁止的那五个短语命中数为 $0$；被禁的长破折号字符命中数为 $0$（我最初在 §12(c) 落了一个，已就地改为逗号与 $\lVert\cdot\rVert$ 写法）；独占一行的三横线分隔符命中数为 $0$；先否定再转折的那个句式命中数为 $0$；装饰性 emoji 与聊天残留为 $0$；标题没有复述任何一节的首句。表格栏名逐字用了第五列规格里的 `位置(文件:行)`，数据行 $47$ 行，规格要求 $\ge28$ 行，满足；表格单元格内不出现裸竖线，绝对值统一 $\lvert\cdot\rvert$、范数统一 $\lVert\cdot\rVert$、整除写 $\mid$（本笔记里整除只在一处用到，即 §14 中 $\frac{t(1-t)}{2}$ 在 $t=\frac12$ 处 $\frac18\mid$ 不成立这类关系不涉及，故我在 §14 与 §20 用文字表述，并非整除记号）。数学全部进 `$...$` 或 `$$...$$`，$\textdollar$ 符号出现 $2873$ 次，超过规格的一千。
+
+一处我自己要如实记下的残留：§5、§8、§10、§13 里若干由我推导的公式沿用了论文 `preamble.tex` 与正文的 `\|\cdot\|` 范数写法（例如 §8 的 $\Phi$ 压缩估计与 §10 的能量恒等式），这是逐字转写素材记号的结果；表格里与正文新增的绝对值、范数已改用 `\lvert\rvert` 与 `\lVert\rVert`。我认为保留转写形式更利于核对，改与不改的取舍留给下一次统一处理。
+
+前向引用落地清单（每条都在后文有实体）：§1 提到的"a.e. 测地线升级版"由 §15 转折三与 §16 第五层给出出处；§2 的 $\mathfrak s_\kappa$ 废弃判断由 §17 第 4 点用 `Model.lean:143--158` 与 `Model.lean:183--198` 落实；§4 里"开区间让端点不参与"由 §13 的 $E_i^j$ 发散与 $\lambda_j$ 选取落实；§7 的 Gaussian 增长由 §11 的 (MD.exp) 落实；§8 的 (weight:multiplier-class) 由 §9 的 $\xi$ 选取落实；§9 的"harmless 截断"疑问在 §9(b) 末尾自行展开并核对；§10 的核心构造由 §5 的 `calculus.tex:113--117` 落实；§12 的反例支撑 §2 与 §19 的层次二；§13 的 $|\dot\gamma|$ 连续性由 §17 第 4 点的 `Model.lean:190` 落实；§14 的 $\frac18$ 由 §20 的两行（$g(s,t)$ 与 $c/8$）落实；§18 末尾预告的两处形状差异都写进了 §20 的台账（`properSpace_of_cd` 行与 `∀ᵐ γ ∂π, IsGeodesic γ` 行）；§19 的每一条层次都指回前面某节的 (d)。
+
+遗留风险四条，留给自己下次处理。
+
+其一，`timeHalf`、`restrictCurve`、`secondDifference`、`affineTime`、`clampTime_of_mem`、`geodesic_dist_initial_le` 之外的其余符号，我在本次取证里没有逐一确定定义文件；按 import 链，`timeHalf` 与 `restrictCurve` 应在 `LocalMidpoint.lean:2--4` 的三条 import 或 `LocalDistribution.lean:3` 的 `Calculus.ScalarLocalBound` 里，这一点仍是推断。
+
+其二，Gigli--Tamanini 的附录编号（Lemma A.2、(A.7)、(A.13)）按 `references.bib:14` 的 note 是 2018 preprint 的编号，与 JEMS 正式版是否一致我没有核对；素材的其他 bib 条目也各有类似 note（`references.bib:44`、`references.bib:88`、`references.bib:117`、`references.bib:132`、`references.bib:158`），说明整份引用列表是按 preprint 版定位的，任何"定理号是否变过"的问题都不能只靠 `introduction.tex:99--111` 的句子解决。
+
+其三，`sigmaFinite_of_finiteOnBoundedSets m hfinite (σ timeZero)`（`Main.lean:46`）只传基点未传 `hfull`，我推断它内部靠"曲线像含于以 $\sigma(0)$ 为心的有界集"来覆盖所需，但没有打开对应文件确认；`FullSupport` 在这条引理里的使用方式仍需核实。
+
+其四，§17 第 6 点说机器版对联络公理的要求更弱，这是我的解读；严格地说，机器版把 $\nabla_{\nabla g}\nabla g=\nabla(\Gamma(g)/2)$ 这条事实以定义形式吸收进 `weakHessian`（`Model.lean:113--116` 的 docstring 直接写了这句话），所以它没有出现在引理假设里，但并没有被证明。这条在论文侧是 Gigli 2018 的定理，在机器侧目前只能算被定义采纳，形式化的完整性上还差一块。
+
+素材使用面：本文只读了 `build/` 下的 `main.tex`、`preamble.tex`、`references.bib` 与 5 个 section 文件，以及 `lean/` 侧的 `formalization.yaml:1640--1657`、`Main.lean`、`Model.lean`、`Geodesics/LocalMidpoint.lean`、`Calculus/LocalDistribution.lean`、`ComparatorChallenges/WeakHessian.json` 与若干目录列表；同父目录的 `HarmonicGrowth/`、`EinsteinFour.lean` 等其他论文的模块没有被读取，`素材/` 与其他 D## 笔记没有被读取或改动，PDF 一个都没有碰。

@@ -1,0 +1,2756 @@
+[
+ {
+  "cls": "11pt",
+  "text": "(S\\times_{T_0}U)_{\\mathrm{main}}",
+  "chars": 15,
+  "model_cm": 3.1,
+  "ink_w_pt": 65.69,
+  "ink_h_pt": 12.77,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "(X',\\Delta')",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 37.91,
+  "ink_h_pt": 12.67,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "(X,\\Delta)",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 31.71,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "(X_i,B_i)",
+  "chars": 9,
+  "model_cm": 2.08,
+  "ink_w_pt": 37.41,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "(X_{i+1},B_{i+1})",
+  "chars": 13,
+  "model_cm": 2.76,
+  "ink_w_pt": 59.05,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "(Y,D)",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 29.62,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "(Y_0,D_0)",
+  "chars": 9,
+  "model_cm": 2.08,
+  "ink_w_pt": 38.16,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "(Y_i,\\Theta_i')",
+  "chars": 10,
+  "model_cm": 2.25,
+  "ink_w_pt": 34.91,
+  "ink_h_pt": 15.09,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "(Y_i,\\Theta_i)",
+  "chars": 9,
+  "model_cm": 2.08,
+  "ink_w_pt": 34.91,
+  "ink_h_pt": 11.9,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "(Y_{i+1},\\Theta_{i+1})",
+  "chars": 13,
+  "model_cm": 2.76,
+  "ink_w_pt": 56.55,
+  "ink_h_pt": 11.9,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "(Z',\\Gamma')",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 33.97,
+  "ink_h_pt": 12.67,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "(Z,\\Gamma)",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 27.77,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "0",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 5.45,
+  "ink_h_pt": 10.91,
+  "count": 11
+ },
+ {
+  "cls": "11pt",
+  "text": "0 .",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 8.49,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "0.",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 8.49,
+  "ink_h_pt": 10.91,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "A",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 8.18,
+  "ink_h_pt": 10.91,
+  "count": 4
+ },
+ {
+  "cls": "11pt",
+  "text": "A'",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 10.47,
+  "ink_h_pt": 12.67,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "A'_q",
+  "chars": 4,
+  "model_cm": 1.23,
+  "ink_w_pt": 11.96,
+  "ink_h_pt": 14.73,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "A_R",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 14.55,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "A_q",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 11.96,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "A_{q-1}",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 23.06,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "B",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 8.28,
+  "ink_h_pt": 10.91,
+  "count": 10
+ },
+ {
+  "cls": "11pt",
+  "text": "B'.",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 14.65,
+  "ink_h_pt": 12.67,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "B'=(J')^\\times",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 51.12,
+  "ink_h_pt": 12.67,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "B.",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 11.86,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "B=J^\\times",
+  "chars": 4,
+  "model_cm": 1.23,
+  "ink_w_pt": 37.05,
+  "ink_h_pt": 12.67,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "B_0",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 12.5,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "B_1",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 12.5,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "B_2",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 12.5,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "B_j",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 11.7,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "C",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 7.8,
+  "ink_h_pt": 10.91,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "C'",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 10.87,
+  "ink_h_pt": 12.67,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "C^\\bullet_{\\mathrm{cts}}(G_o,\\Lambda_\\ell)",
+  "chars": 17,
+  "model_cm": 3.44,
+  "ink_w_pt": 56.73,
+  "ink_h_pt": 14.73,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "C^q",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 12.35,
+  "ink_h_pt": 12.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "C^{q+1}",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 23.45,
+  "ink_h_pt": 12.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "C_0",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 12.03,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "C_{\\mathrm{cts}}(G^a,W_m(\\widehat L))[0]",
+  "chars": 23,
+  "model_cm": 4.46,
+  "ink_w_pt": 91.32,
+  "ink_h_pt": 17.66,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "C_{\\mathrm{cts}}(G^a,\\Lambda_m)[0]",
+  "chars": 18,
+  "model_cm": 3.61,
+  "ink_w_pt": 72.68,
+  "ink_h_pt": 13.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "C_{\\mathrm{cts}}^{\\bullet}(G',\\Lambda_m)",
+  "chars": 16,
+  "model_cm": 3.27,
+  "ink_w_pt": 58.96,
+  "ink_h_pt": 14.73,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "C_{\\mathrm{cts}}^{\\bullet}(G,\\Lambda_m)",
+  "chars": 15,
+  "model_cm": 3.1,
+  "ink_w_pt": 56.17,
+  "ink_h_pt": 14.73,
+  "count": 3
+ },
+ {
+  "cls": "11pt",
+  "text": "D",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 9.03,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "D^\\circ S^1",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 25.61,
+  "ink_h_pt": 12.67,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "D_U",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 14.76,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "E",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 8.05,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "E(R_T,C_T)",
+  "chars": 10,
+  "model_cm": 2.25,
+  "ink_w_pt": 51.3,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "E(R_T,\\Gamma_T) .",
+  "chars": 12,
+  "model_cm": 2.59,
+  "ink_w_pt": 53.36,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "E(k^\\delta(S),\\Gamma_2)^\\delta",
+  "chars": 14,
+  "model_cm": 2.93,
+  "ink_w_pt": 63.68,
+  "ink_h_pt": 13.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "E^+",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 15.26,
+  "ink_h_pt": 12.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "E_2^\\delta",
+  "chars": 4,
+  "model_cm": 1.23,
+  "ink_w_pt": 12.42,
+  "ink_h_pt": 14.85,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "E_s^{i+s,0}(E)",
+  "chars": 12,
+  "model_cm": 2.59,
+  "ink_w_pt": 46.32,
+  "ink_h_pt": 14.7,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "E_s^{i,1}(E)",
+  "chars": 10,
+  "model_cm": 2.25,
+  "ink_w_pt": 35.82,
+  "ink_h_pt": 14.7,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "E_s^{i-s,2}(E).",
+  "chars": 13,
+  "model_cm": 2.76,
+  "ink_w_pt": 49.35,
+  "ink_h_pt": 14.8,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "F",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 7.01,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "FB",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 16.8,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "F\\mathcal D_\\Delta^2B",
+  "chars": 9,
+  "model_cm": 2.08,
+  "ink_w_pt": 32.78,
+  "ink_h_pt": 15.16,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "F_R",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 13.39,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "G_j",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 12.0,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "H",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 9.07,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "H^3_{\\mathrm{cts}}(G_3(k),E_{3,0}(k))[1/p]",
+  "chars": 30,
+  "model_cm": 5.65,
+  "ink_w_pt": 117.46,
+  "ink_h_pt": 14.63,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "H^i(G_o,W(C^\\flat))",
+  "chars": 15,
+  "model_cm": 3.1,
+  "ink_w_pt": 72.51,
+  "ink_h_pt": 13.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "H^i(G_o,W(k))",
+  "chars": 13,
+  "model_cm": 2.76,
+  "ink_w_pt": 66.17,
+  "ink_h_pt": 13.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "H^i(H,W(C^\\flat))",
+  "chars": 13,
+  "model_cm": 2.76,
+  "ink_w_pt": 68.69,
+  "ink_h_pt": 12.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "H^i(H,W(k))",
+  "chars": 11,
+  "model_cm": 2.42,
+  "ink_w_pt": 62.35,
+  "ink_h_pt": 12.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "H_1",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 13.3,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "H_K^j(N,Q)",
+  "chars": 10,
+  "model_cm": 2.25,
+  "ink_w_pt": 48.59,
+  "ink_h_pt": 16.71,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "H_K^j(N^\\tau,Q^\\tau),",
+  "chars": 15,
+  "model_cm": 3.1,
+  "ink_w_pt": 62.57,
+  "ink_h_pt": 16.71,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "H_K^j(X,X_-)",
+  "chars": 12,
+  "model_cm": 2.59,
+  "ink_w_pt": 56.01,
+  "ink_h_pt": 16.71,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "H_K^j(X^\\tau,X_-^\\tau)",
+  "chars": 16,
+  "model_cm": 3.27,
+  "ink_w_pt": 61.8,
+  "ink_h_pt": 16.71,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "H_W^i(Y)",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 35.98,
+  "ink_h_pt": 15.16,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "H_W^i(Y_C).",
+  "chars": 11,
+  "model_cm": 2.42,
+  "ink_w_pt": 43.68,
+  "ink_h_pt": 15.16,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "H_W^i(\\mathcal Y_1)",
+  "chars": 12,
+  "model_cm": 2.59,
+  "ink_w_pt": 39.24,
+  "ink_h_pt": 15.16,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "H_W^i(\\mathcal Y_{1,C}).",
+  "chars": 15,
+  "model_cm": 3.1,
+  "ink_w_pt": 51.22,
+  "ink_h_pt": 15.16,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "K",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 9.26,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "LA",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 15.61,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "LP",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 14.43,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "LY .",
+  "chars": 4,
+  "model_cm": 1.23,
+  "ink_w_pt": 17.4,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "L\\widehat P.",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 18.97,
+  "ink_h_pt": 16.0,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "L_0L_{K(2)}T",
+  "chars": 10,
+  "model_cm": 2.25,
+  "ink_w_pt": 44.97,
+  "ink_h_pt": 12.49,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "L_0L_{K(2)}T.",
+  "chars": 11,
+  "model_cm": 2.42,
+  "ink_w_pt": 48.91,
+  "ink_h_pt": 12.49,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "L_0L_{K(2)}T_0",
+  "chars": 12,
+  "model_cm": 2.59,
+  "ink_w_pt": 49.21,
+  "ink_h_pt": 12.49,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "L_0L_{K(2)}X",
+  "chars": 10,
+  "model_cm": 2.25,
+  "ink_w_pt": 47.64,
+  "ink_h_pt": 12.49,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "L_0L_{K(2)}X.",
+  "chars": 11,
+  "model_cm": 2.42,
+  "ink_w_pt": 50.93,
+  "ink_h_pt": 12.49,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "L_0T",
+  "chars": 4,
+  "model_cm": 1.23,
+  "ink_w_pt": 18.52,
+  "ink_h_pt": 11.9,
+  "count": 3
+ },
+ {
+  "cls": "11pt",
+  "text": "L_0T_0",
+  "chars": 6,
+  "model_cm": 1.57,
+  "ink_w_pt": 22.76,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "L_0X",
+  "chars": 4,
+  "model_cm": 1.23,
+  "ink_w_pt": 21.2,
+  "ink_h_pt": 11.9,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "L_m^fD",
+  "chars": 6,
+  "model_cm": 1.57,
+  "ink_w_pt": 24.44,
+  "ink_h_pt": 14.7,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "L_{T(m)}D",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 37.14,
+  "ink_h_pt": 12.49,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "L_{m-1}^fD",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 35.26,
+  "ink_h_pt": 16.4,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "L_{m-1}^fL_{T(m)}D",
+  "chars": 14,
+  "model_cm": 2.93,
+  "ink_w_pt": 63.37,
+  "ink_h_pt": 16.4,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "M",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 10.58,
+  "ink_h_pt": 10.91,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "M'",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 14.07,
+  "ink_h_pt": 12.67,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 8.77,
+  "ink_h_pt": 10.91,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "N A",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 18.14,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N B",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 18.24,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N S_1",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 20.87,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N S_2",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 20.87,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N S_{12}",
+  "chars": 6,
+  "model_cm": 1.57,
+  "ink_w_pt": 25.1,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N_1",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 12.99,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N_2",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 12.99,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N_R",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 15.14,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N_n C",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 22.2,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N_n C_1",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 26.43,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N_n C_2",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 26.43,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N_n C_{12}",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 30.66,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N_n U_{A}",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 28.19,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N_n U_{B}.",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 32.16,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N_n U_{S_1}",
+  "chars": 9,
+  "model_cm": 2.08,
+  "ink_w_pt": 30.65,
+  "ink_h_pt": 12.63,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N_n U_{S_2} .",
+  "chars": 11,
+  "model_cm": 2.42,
+  "ink_w_pt": 34.68,
+  "ink_h_pt": 12.63,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N_n U_{S_{12}}",
+  "chars": 10,
+  "model_cm": 2.25,
+  "ink_w_pt": 34.3,
+  "ink_h_pt": 12.63,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N_n V_B(X').",
+  "chars": 12,
+  "model_cm": 2.59,
+  "ink_w_pt": 52.25,
+  "ink_h_pt": 13.72,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N_n V_B(X)",
+  "chars": 10,
+  "model_cm": 2.25,
+  "ink_w_pt": 46.42,
+  "ink_h_pt": 11.96,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "N_n V_Z(X)",
+  "chars": 10,
+  "model_cm": 2.25,
+  "ink_w_pt": 45.94,
+  "ink_h_pt": 11.96,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "N_n X",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 23.44,
+  "ink_h_pt": 11.9,
+  "count": 4
+ },
+ {
+  "cls": "11pt",
+  "text": "N_n Y_1",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 24.96,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N_n Y_2 .",
+  "chars": 9,
+  "model_cm": 2.08,
+  "ink_w_pt": 28.5,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "N_n Y_{12}",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 29.2,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "O_\\lambda\\simeq S\\times X_\\lambda",
+  "chars": 10,
+  "model_cm": 2.25,
+  "ink_w_pt": 62.93,
+  "ink_h_pt": 12.19,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "P",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 7.0,
+  "ink_h_pt": 10.91,
+  "count": 4
+ },
+ {
+  "cls": "11pt",
+  "text": "P_B(X')",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 35.45,
+  "ink_h_pt": 13.72,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "P_B(X)",
+  "chars": 6,
+  "model_cm": 1.57,
+  "ink_w_pt": 32.66,
+  "ink_h_pt": 11.96,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "P_Z(X)",
+  "chars": 6,
+  "model_cm": 1.57,
+  "ink_w_pt": 32.18,
+  "ink_h_pt": 11.96,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "P_{R,n}",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 20.92,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Q",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 8.63,
+  "ink_h_pt": 10.91,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "Q_{(\\sigma(z))}",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 31.18,
+  "ink_h_pt": 12.49,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Q_{j-1}",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 23.33,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "R",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 8.28,
+  "ink_h_pt": 10.91,
+  "count": 4
+ },
+ {
+  "cls": "11pt",
+  "text": "R.",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 11.39,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "R\\Gamma(G_o,\\underline{W_\\ell(A)})(*)",
+  "chars": 18,
+  "model_cm": 3.61,
+  "ink_w_pt": 86.55,
+  "ink_h_pt": 12.19,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "R\\Gamma_v(Y,W_m(\\mathcal O^\\flat))",
+  "chars": 18,
+  "model_cm": 3.61,
+  "ink_w_pt": 79.92,
+  "ink_h_pt": 13.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "R\\Gamma_v(Y_C,W_m(\\mathcal O^\\flat)).",
+  "chars": 21,
+  "model_cm": 4.12,
+  "ink_w_pt": 89.44,
+  "ink_h_pt": 13.62,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "R\\Gamma_v([X'/G'],\\Lambda_m).",
+  "chars": 18,
+  "model_cm": 3.61,
+  "ink_w_pt": 87.6,
+  "ink_h_pt": 13.67,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "R\\Gamma_v([X/G],\\Lambda_m)",
+  "chars": 15,
+  "model_cm": 3.1,
+  "ink_w_pt": 78.07,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "R\\Gamma_v(\\mathcal Y_{1,A},W_\\ell\\mathcal O^\\flat).",
+  "chars": 23,
+  "model_cm": 4.46,
+  "ink_w_pt": 84.22,
+  "ink_h_pt": 13.71,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "R\\Gamma_v(\\mathcal Y_{1,A},\\Lambda_\\ell)",
+  "chars": 17,
+  "model_cm": 3.44,
+  "ink_w_pt": 65.68,
+  "ink_h_pt": 12.19,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "R\\Gamma_v(\\widetilde Y\\times\\underline{G^a},W_m(\\mathcal O^\\flat)).",
+  "chars": 26,
+  "model_cm": 4.97,
+  "ink_w_pt": 111.68,
+  "ink_h_pt": 17.66,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "R\\Gamma_v(\\widetilde Y\\times\\underline{G^a},\\Lambda_m)",
+  "chars": 18,
+  "model_cm": 3.61,
+  "ink_w_pt": 84.65,
+  "ink_h_pt": 17.66,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "R\\Gamma_{\\mathrm{cts}}(H,M_{B,C})",
+  "chars": 16,
+  "model_cm": 3.27,
+  "ink_w_pt": 75.57,
+  "ink_h_pt": 11.96,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "R\\Gamma_{\\mathrm{cts}}(U,\\mathcal K_C)",
+  "chars": 16,
+  "model_cm": 3.27,
+  "ink_w_pt": 62.25,
+  "ink_h_pt": 12.1,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "R\\Gamma_{\\mathrm{cts}}(U,\\mathcal K_C).",
+  "chars": 17,
+  "model_cm": 3.44,
+  "ink_w_pt": 65.28,
+  "ink_h_pt": 12.1,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "S",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 6.69,
+  "ink_h_pt": 10.91,
+  "count": 13
+ },
+ {
+  "cls": "11pt",
+  "text": "S .",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 9.74,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "S'",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 9.61,
+  "ink_h_pt": 12.67,
+  "count": 3
+ },
+ {
+  "cls": "11pt",
+  "text": "S,",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 9.74,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "S_0",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 10.92,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "S_P",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 12.06,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "S_m",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 14.18,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "S_{m+1}",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 24.99,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "T",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 6.37,
+  "ink_h_pt": 10.91,
+  "count": 6
+ },
+ {
+  "cls": "11pt",
+  "text": "T'",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 10.18,
+  "ink_h_pt": 12.67,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "T.",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 10.31,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "T_0",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 10.6,
+  "ink_h_pt": 11.9,
+  "count": 5
+ },
+ {
+  "cls": "11pt",
+  "text": "T_1",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 10.6,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "T_Y",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 11.28,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "U",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 7.45,
+  "ink_h_pt": 10.91,
+  "count": 14
+ },
+ {
+  "cls": "11pt",
+  "text": "U .",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 10.45,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "U.",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 10.45,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "U^+",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 15.22,
+  "ink_h_pt": 12.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "V",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 6.36,
+  "ink_h_pt": 10.91,
+  "count": 11
+ },
+ {
+  "cls": "11pt",
+  "text": "V(I)",
+  "chars": 4,
+  "model_cm": 1.23,
+  "ink_w_pt": 22.92,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "V(v)",
+  "chars": 4,
+  "model_cm": 1.23,
+  "ink_w_pt": 22.95,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "V^t",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 11.85,
+  "ink_h_pt": 12.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "V_0",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 10.59,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "V_1",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 10.59,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "V_2",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 10.59,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "V_{K_1}",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 17.15,
+  "ink_h_pt": 12.63,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "W",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 10.3,
+  "ink_h_pt": 10.91,
+  "count": 22
+ },
+ {
+  "cls": "11pt",
+  "text": "W .",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 13.03,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "W''",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 16.41,
+  "ink_h_pt": 12.67,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "W'.",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 17.64,
+  "ink_h_pt": 12.67,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "W_0",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 14.53,
+  "ink_h_pt": 11.9,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "W_E",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 16.51,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "W_K",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 17.44,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "W_L",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 16.06,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "W_P",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 15.67,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "W_m",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 17.79,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "X",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 9.04,
+  "ink_h_pt": 10.91,
+  "count": 19
+ },
+ {
+  "cls": "11pt",
+  "text": "X .",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 12.32,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "X'",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 12.19,
+  "ink_h_pt": 12.67,
+  "count": 3
+ },
+ {
+  "cls": "11pt",
+  "text": "X''",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 14.48,
+  "ink_h_pt": 12.67,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "X\\times\\operatorname{Spec} R_q",
+  "chars": 11,
+  "model_cm": 2.42,
+  "ink_w_pt": 59.22,
+  "ink_h_pt": 12.05,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "X^S .",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 19.02,
+  "ink_h_pt": 12.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "X_0",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 13.27,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "X_\\lambda",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 13.98,
+  "ink_h_pt": 12.04,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "X_i",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 11.92,
+  "ink_h_pt": 11.9,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "X_{i+1}",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 22.74,
+  "ink_h_pt": 11.9,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "Y",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 6.34,
+  "ink_h_pt": 10.91,
+  "count": 26
+ },
+ {
+  "cls": "11pt",
+  "text": "Y'",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 11.05,
+  "ink_h_pt": 12.67,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "Y.",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 9.97,
+  "ink_h_pt": 10.91,
+  "count": 4
+ },
+ {
+  "cls": "11pt",
+  "text": "Y=\\operatorname{Spec} B",
+  "chars": 9,
+  "model_cm": 2.08,
+  "ink_w_pt": 55.53,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Y\\times B",
+  "chars": 4,
+  "model_cm": 1.23,
+  "ink_w_pt": 30.37,
+  "ink_h_pt": 11.05,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Y^t",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 11.82,
+  "ink_h_pt": 12.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Y_0",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 10.56,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Y_d",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 10.69,
+  "ink_h_pt": 12.04,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Y_e",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 10.26,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Y_{\\lambda,0}",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 17.85,
+  "ink_h_pt": 12.04,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Z",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 7.45,
+  "ink_h_pt": 10.91,
+  "count": 14
+ },
+ {
+  "cls": "11pt",
+  "text": "Z'",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 10.52,
+  "ink_h_pt": 12.67,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "Z\\times Z",
+  "chars": 4,
+  "model_cm": 1.23,
+  "ink_w_pt": 29.02,
+  "ink_h_pt": 11.05,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Z^+",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 14.81,
+  "ink_h_pt": 12.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Z_0",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 11.68,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Z_\\lambda",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 12.39,
+  "ink_h_pt": 12.05,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Z_e=Z\\times_Y Y_e",
+  "chars": 12,
+  "model_cm": 2.59,
+  "ink_w_pt": 65.53,
+  "ink_h_pt": 12.1,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Z_i",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 10.33,
+  "ink_h_pt": 11.9,
+  "count": 3
+ },
+ {
+  "cls": "11pt",
+  "text": "Z_m",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 14.94,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Z_q",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 11.22,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Z_t",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 10.5,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "Z_{m+1}",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 25.75,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\Delta_F=W\\times_{W'}W",
+  "chars": 9,
+  "model_cm": 2.08,
+  "ink_w_pt": 78.46,
+  "ink_h_pt": 12.24,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "\\Omega_C^{n-1}",
+  "chars": 6,
+  "model_cm": 1.57,
+  "ink_w_pt": 23.83,
+  "ink_h_pt": 16.1,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\Sigma A",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 16.06,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\Sigma A.",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 19.09,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\Sigma K",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 17.14,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\Sigma M .",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 22.07,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\Sigma N",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 16.65,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\bar Y",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 7.11,
+  "ink_h_pt": 13.67,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "\\bigl(\\varprojlim_\\ell\n       H^3_{\\mathrm{cts}}(G_3(k),D_\\ell)\\bigr)[1/p]",
+  "chars": 39,
+  "model_cm": 7.18,
+  "ink_w_pt": 122.49,
+  "ink_h_pt": 18.01,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\displaystyle\\coprod_{\\delta\\in\\Delta}\\operatorname{Spec} L",
+  "chars": 11,
+  "model_cm": 2.42,
+  "ink_w_pt": 48.53,
+  "ink_h_pt": 13.43,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\displaystyle\\prod_{i\\in I}P_i",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 25.65,
+  "ink_h_pt": 14.42,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\displaystyle\\prod_{i\\in I}R_i",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 26.93,
+  "ink_h_pt": 14.42,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\left(\\operatorname{colim}_{S^\\vee}R\\Gamma(P_n,P)^\\vee\\right)\\otimes_kR",
+  "chars": 28,
+  "model_cm": 5.31,
+  "ink_w_pt": 129.88,
+  "ink_h_pt": 13.87,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal D_XF\\mathcal D_\\Delta B.",
+  "chars": 12,
+  "model_cm": 2.59,
+  "ink_w_pt": 52.86,
+  "ink_h_pt": 12.1,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal D_X^2FB",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 33.31,
+  "ink_h_pt": 15.16,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal E",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 5.76,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal E'",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 9.03,
+  "ink_h_pt": 12.53,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal J",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 7.4,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal M_n",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 18.24,
+  "ink_h_pt": 12.04,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal O_E(uE)",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 39.25,
+  "ink_h_pt": 12.1,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal O_L(uL)",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 37.11,
+  "ink_h_pt": 12.1,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal O_T((u-1)E)",
+  "chars": 11,
+  "model_cm": 2.42,
+  "ink_w_pt": 65.98,
+  "ink_h_pt": 12.1,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal O_T((u-j)E)",
+  "chars": 11,
+  "model_cm": 2.42,
+  "ink_w_pt": 65.64,
+  "ink_h_pt": 12.1,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal O_T(uE)",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 38.71,
+  "ink_h_pt": 12.1,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal O_Y((u-1)L)",
+  "chars": 11,
+  "model_cm": 2.42,
+  "ink_w_pt": 65.41,
+  "ink_h_pt": 12.1,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal O_Y((u-j)L)",
+  "chars": 11,
+  "model_cm": 2.42,
+  "ink_w_pt": 65.08,
+  "ink_h_pt": 12.1,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal O_Y(uL)",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 38.14,
+  "ink_h_pt": 12.1,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal O_{jE}(uE)",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 43.14,
+  "ink_h_pt": 12.1,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal O_{jL}(uL)",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 40.99,
+  "ink_h_pt": 12.1,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal V",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 6.69,
+  "ink_h_pt": 10.91,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal V'",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 9.87,
+  "ink_h_pt": 12.53,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal V_0",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 10.91,
+  "ink_h_pt": 12.04,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal W",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 10.78,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal W.",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 14.71,
+  "ink_h_pt": 11.05,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal Z",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 7.91,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal Z.",
+  "chars": 2,
+  "model_cm": 0.89,
+  "ink_w_pt": 11.8,
+  "ink_h_pt": 11.05,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathcal Z_n",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 13.04,
+  "ink_h_pt": 12.05,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathrm{Fr}(\\mathcal E').",
+  "chars": 9,
+  "model_cm": 2.08,
+  "ink_w_pt": 31.53,
+  "ink_h_pt": 12.67,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathrm{Fr}(\\mathcal E)",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 25.71,
+  "ink_h_pt": 11.05,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathrm{St}_6(B)",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 32.34,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathsf B_1(M)",
+  "chars": 6,
+  "model_cm": 1.57,
+  "ink_w_pt": 32.26,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathsf B_2(M)",
+  "chars": 6,
+  "model_cm": 1.57,
+  "ink_w_pt": 32.26,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathsf D^b((B\\otimes_k C)\\text{-}\\operatorname{mod})",
+  "chars": 19,
+  "model_cm": 3.78,
+  "ink_w_pt": 91.18,
+  "ink_h_pt": 13.71,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathsf D^b(B\\text{-}\\operatorname{mod})",
+  "chars": 12,
+  "model_cm": 2.59,
+  "ink_w_pt": 55.68,
+  "ink_h_pt": 12.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathsf P_G(M).",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 37.35,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\mathsf P_N(M)",
+  "chars": 6,
+  "model_cm": 1.57,
+  "ink_w_pt": 35.29,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\operatorname{Pic}(|D|,\\mathcal R)",
+  "chars": 12,
+  "model_cm": 2.59,
+  "ink_w_pt": 53.29,
+  "ink_h_pt": 11.05,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\operatorname{Res}_{h_H^{-1}}\\mathcal J",
+  "chars": 13,
+  "model_cm": 2.76,
+  "ink_w_pt": 41.68,
+  "ink_h_pt": 16.42,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\operatorname{Spec} A",
+  "chars": 6,
+  "model_cm": 1.57,
+  "ink_w_pt": 32.12,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\operatorname{Spec} A .",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 35.15,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\operatorname{Spec} C",
+  "chars": 6,
+  "model_cm": 1.57,
+  "ink_w_pt": 31.73,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\operatorname{Spec} R",
+  "chars": 6,
+  "model_cm": 1.57,
+  "ink_w_pt": 32.21,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\operatorname{Spec} R_q",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 36.0,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\operatorname{Spec} R_q.",
+  "chars": 9,
+  "model_cm": 2.08,
+  "ink_w_pt": 39.82,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\operatorname{Spec}\\mathcal O",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 32.62,
+  "ink_h_pt": 11.05,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\operatorname{Spec}\\widetilde G",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 32.51,
+  "ink_h_pt": 16.0,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\operatorname{Spec}\\widetilde R",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 32.22,
+  "ink_h_pt": 16.0,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\operatorname{Typ}(h)",
+  "chars": 6,
+  "model_cm": 1.57,
+  "ink_w_pt": 34.17,
+  "ink_h_pt": 10.91,
+  "count": 3
+ },
+ {
+  "cls": "11pt",
+  "text": "\\operatorname{Typ}(h),",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 37.2,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\operatorname{cofib}(a)",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 36.69,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\overline H_1",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 14.19,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\overline P_D",
+  "chars": 3,
+  "model_cm": 1.06,
+  "ink_w_pt": 15.47,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\overline\\Phi(\\mathcal O(H))=DH^2>0",
+  "chars": 15,
+  "model_cm": 3.1,
+  "ink_w_pt": 102.36,
+  "ink_h_pt": 12.57,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\pi_{-3}L_0T",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 36.06,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\pi_{-3}L_0\\operatorname*{holim}_\\ell L_1(T/p^\\ell).",
+  "chars": 26,
+  "model_cm": 4.97,
+  "ink_w_pt": 110.11,
+  "ink_h_pt": 13.71,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\text{Contradiction}",
+  "chars": 13,
+  "model_cm": 2.76,
+  "ink_w_pt": 65.8,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\text{Intersection with }H",
+  "chars": 19,
+  "model_cm": 3.78,
+  "ink_w_pt": 93.39,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\text{Laurent cocycles have primitives}",
+  "chars": 32,
+  "model_cm": 5.99,
+  "ink_w_pt": 155.48,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\text{Orders of Laurent units}",
+  "chars": 23,
+  "model_cm": 4.46,
+  "ink_w_pt": 113.12,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\text{Prepared cycle }(V,D)",
+  "chars": 20,
+  "model_cm": 3.95,
+  "ink_w_pt": 103.48,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\text{Slope bounds and finite jets}",
+  "chars": 28,
+  "model_cm": 5.31,
+  "ink_w_pt": 133.18,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\text{bilinear measure criterion}\\quad\n\\text{\\footnotesize(Section~\\ref{meas:section})}",
+  "chars": 53,
+  "model_cm": 9.56,
+  "ink_w_pt": 182.38,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\text{compact Weil trace classes}\\quad\n\\text{\\footnotesize(Sections~\\ref{orb:section}--\\ref{tr:section})}",
+  "chars": 66,
+  "model_cm": 11.77,
+  "ink_w_pt": 205.49,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\text{endpoint corrections }v+s",
+  "chars": 24,
+  "model_cm": 4.63,
+  "ink_w_pt": 124.87,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\text{is }p\\text{-divisible}",
+  "chars": 15,
+  "model_cm": 3.1,
+  "ink_w_pt": 59.25,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\text{quadratic component model}\\quad\n\\text{\\footnotesize(Section~\\ref{mod:section})}",
+  "chars": 51,
+  "model_cm": 9.22,
+  "ink_w_pt": 193.75,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\text{rational form of }\\mathcal F_Y\\mathcal A_E\\quad\n\\text{\\footnotesize(Section~\\ref{desc:section})}",
+  "chars": 54,
+  "model_cm": 9.73,
+  "ink_w_pt": 170.2,
+  "ink_h_pt": 12.1,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\text{whole integral surface blocks}",
+  "chars": 29,
+  "model_cm": 5.48,
+  "ink_w_pt": 136.85,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\widehat P",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 8.2,
+  "ink_h_pt": 16.0,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\widehat U",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 7.66,
+  "ink_h_pt": 16.0,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\widehat W",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 11.36,
+  "ink_h_pt": 16.0,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\widehat Y",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 7.41,
+  "ink_h_pt": 16.0,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\widehat Z",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 8.06,
+  "ink_h_pt": 16.0,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\widetilde U",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 7.66,
+  "ink_h_pt": 16.0,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "\\widetilde X",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 9.04,
+  "ink_h_pt": 16.0,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "c_nP_L",
+  "chars": 6,
+  "model_cm": 1.57,
+  "ink_w_pt": 23.12,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "c_nP_R",
+  "chars": 6,
+  "model_cm": 1.57,
+  "ink_w_pt": 23.73,
+  "ink_h_pt": 11.96,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "c_nP_V",
+  "chars": 6,
+  "model_cm": 1.57,
+  "ink_w_pt": 22.29,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "c_u(f)=0",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 45.13,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "c_u(f)=1",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 45.13,
+  "ink_h_pt": 11.9,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "c_{n+1}P_R",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 34.55,
+  "ink_h_pt": 11.96,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "p^{-1}(U)",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 33.93,
+  "ink_h_pt": 12.67,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "s",
+  "chars": 1,
+  "model_cm": 0.72,
+  "ink_w_pt": 5.12,
+  "ink_h_pt": 10.91,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "s[2]",
+  "chars": 4,
+  "model_cm": 1.23,
+  "ink_w_pt": 16.64,
+  "ink_h_pt": 10.91,
+  "count": 2
+ },
+ {
+  "cls": "11pt",
+  "text": "s[3]",
+  "chars": 4,
+  "model_cm": 1.23,
+  "ink_w_pt": 16.64,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "s[3].",
+  "chars": 5,
+  "model_cm": 1.4,
+  "ink_w_pt": 19.67,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "v'\\text{ of }F'",
+  "chars": 9,
+  "model_cm": 2.08,
+  "ink_w_pt": 35.36,
+  "ink_h_pt": 12.67,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "v\\text{ of }k",
+  "chars": 7,
+  "model_cm": 1.74,
+  "ink_w_pt": 27.43,
+  "ink_h_pt": 10.91,
+  "count": 1
+ },
+ {
+  "cls": "11pt",
+  "text": "w'\\text{ of }L",
+  "chars": 8,
+  "model_cm": 1.91,
+  "ink_w_pt": 34.39,
+  "ink_h_pt": 12.67,
+  "count": 1
+ }
+]

@@ -1,0 +1,49 @@
+\documentclass[10pt]{article}
+\usepackage{tikz}
+\newcommand{\measure}[6]{%
+  \begin{tikzpicture}
+    \node[draw, font=\fontsize{#1}{#2}\selectfont, #3, inner sep=#4pt] (a) at (0,0) {#5};
+    \pgfextracty{\dimen0}{\pgfpointanchor{a}{north}}%
+    \pgfextracty{\dimen1}{\pgfpointanchor{a}{south}}%
+    \typeout{SH #6 H=\the\dimen0\the\dimen1}%
+  \end{tikzpicture}%
+}
+\begin{document}
+\measure{10.0}{12.0}{}{0}{aaa}{normalsize,bare,0,1}
+\measure{10.0}{12.0}{}{0}{aaa\\aaa}{normalsize,bare,0,2}
+\measure{10.0}{12.0}{}{0}{aaa\\aaa\\aaa}{normalsize,bare,0,3}
+\measure{10.0}{12.0}{}{8}{aaa}{normalsize,bare,8,1}
+\measure{10.0}{12.0}{}{8}{aaa\\aaa}{normalsize,bare,8,2}
+\measure{10.0}{12.0}{}{8}{aaa\\aaa\\aaa}{normalsize,bare,8,3}
+\measure{10.0}{12.0}{align=center}{0}{aaa}{normalsize,align,0,1}
+\measure{10.0}{12.0}{align=center}{0}{aaa\\aaa}{normalsize,align,0,2}
+\measure{10.0}{12.0}{align=center}{0}{aaa\\aaa\\aaa}{normalsize,align,0,3}
+\measure{10.0}{12.0}{align=center}{8}{aaa}{normalsize,align,8,1}
+\measure{10.0}{12.0}{align=center}{8}{aaa\\aaa}{normalsize,align,8,2}
+\measure{10.0}{12.0}{align=center}{8}{aaa\\aaa\\aaa}{normalsize,align,8,3}
+\measure{10.0}{12.0}{text width=5.7cm,align=left}{0}{aaa}{normalsize,width,0,1}
+\measure{10.0}{12.0}{text width=5.7cm,align=left}{0}{aaa\\aaa}{normalsize,width,0,2}
+\measure{10.0}{12.0}{text width=5.7cm,align=left}{0}{aaa\\aaa\\aaa}{normalsize,width,0,3}
+\measure{10.0}{12.0}{text width=5.7cm,align=left}{8}{aaa}{normalsize,width,8,1}
+\measure{10.0}{12.0}{text width=5.7cm,align=left}{8}{aaa\\aaa}{normalsize,width,8,2}
+\measure{10.0}{12.0}{text width=5.7cm,align=left}{8}{aaa\\aaa\\aaa}{normalsize,width,8,3}
+\measure{9.0}{11.0}{}{0}{aaa}{small,bare,0,1}
+\measure{9.0}{11.0}{}{0}{aaa\\aaa}{small,bare,0,2}
+\measure{9.0}{11.0}{}{0}{aaa\\aaa\\aaa}{small,bare,0,3}
+\measure{9.0}{11.0}{}{8}{aaa}{small,bare,8,1}
+\measure{9.0}{11.0}{}{8}{aaa\\aaa}{small,bare,8,2}
+\measure{9.0}{11.0}{}{8}{aaa\\aaa\\aaa}{small,bare,8,3}
+\measure{9.0}{11.0}{align=center}{0}{aaa}{small,align,0,1}
+\measure{9.0}{11.0}{align=center}{0}{aaa\\aaa}{small,align,0,2}
+\measure{9.0}{11.0}{align=center}{0}{aaa\\aaa\\aaa}{small,align,0,3}
+\measure{9.0}{11.0}{align=center}{8}{aaa}{small,align,8,1}
+\measure{9.0}{11.0}{align=center}{8}{aaa\\aaa}{small,align,8,2}
+\measure{9.0}{11.0}{align=center}{8}{aaa\\aaa\\aaa}{small,align,8,3}
+\measure{9.0}{11.0}{text width=5.7cm,align=left}{0}{aaa}{small,width,0,1}
+\measure{9.0}{11.0}{text width=5.7cm,align=left}{0}{aaa\\aaa}{small,width,0,2}
+\measure{9.0}{11.0}{text width=5.7cm,align=left}{0}{aaa\\aaa\\aaa}{small,width,0,3}
+\measure{9.0}{11.0}{text width=5.7cm,align=left}{8}{aaa}{small,width,8,1}
+\measure{9.0}{11.0}{text width=5.7cm,align=left}{8}{aaa\\aaa}{small,width,8,2}
+\measure{9.0}{11.0}{text width=5.7cm,align=left}{8}{aaa\\aaa\\aaa}{small,width,8,3}
+x
+\end{document}

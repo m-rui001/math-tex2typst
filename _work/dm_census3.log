@@ -1,0 +1,17 @@
+mask=corrected digit=plain files=734 spans=864990 katex_refused=302 files_hit=155 unclosed_spans=1
+dollar_family=51 distinct_files=37 inline=51 display=0
+--- other error classes=38
+     47  KaTeX parse error: Can't use function '$' in math mode 
+     30  KaTeX parse error: Expected group as argument to '\H' 
+     27  KaTeX parse error: Expected 'EOF', got '}' 
+     21  KaTeX parse error: Unexpected end of input in a macro argu
+     12  KaTeX parse error: No such environment: psmallmatrix 
+     10  KaTeX parse error: Expected '}', got 'EOF' at end of input
+      9  KaTeX parse error: Extra } 
+      7  KaTeX parse error: Expected group after '_' 
+      7  KaTeX parse error: Double subscript 
+      6  KaTeX parse error: Can't use function '\(' in math mode 
+      6  KaTeX parse error: Double superscript 
+      5  KaTeX parse error: Expected 'EOF', got '\right' 
+      5  KaTeX parse error: Expected group after '^' 
+      3  KaTeX parse error: Got function '\H' with no arguments as 

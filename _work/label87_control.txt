@@ -1,0 +1,58 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+on-ink face canvases: 14
+
+A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Plan#0  rows 2
+   control: pic 0 score 12 tied True  our [0, 2] ctl [0, 0]
+   source: tikzpicture 3  tikzcd 0   best cd match [(0, None)]
+
+A-continuum-temperature-singularity-for-a-radial-pai#1  rows 1
+   control: pic 1 score 14 tied False  our [0, 2] ctl [0, 0]
+   source: tikzpicture 2  tikzcd 0   best cd match [(0, None)]
+
+Constructible-tame-Hecke-eigensheaves-in-positive-ch#3  rows 1
+   control: pic 0 score 2 tied False  our [0, 3] ctl [0, 0]
+   source: tikzpicture 1  tikzcd 0   best cd match [(0, None)]
+
+Disk-transfer-representations-and-confined-bridge-ma#1  rows 1
+   control: pic 1 score 15 tied False  our [0, 1] ctl [0, 0]
+   source: tikzpicture 4  tikzcd 0   best cd match [(0, None)]
+
+Finite-Monoid-Computations-and-a-Uniform-Generalized#0  rows 1
+   control: pic 0 score 13 tied False  our [0, 1] ctl [0, 0]
+   source: tikzpicture 2  tikzcd 0   best cd match [(0, None)]
+
+Finite-algebraic-envelopes-and-the-Boone-Higman-conj#1  rows 3
+   control: pic 1 score 4 tied False  our [0, 4] ctl [0, 0]
+   source: tikzpicture 2  tikzcd 0   best cd match [(0, None)]
+
+Finite-tensor-savings-and-exact-Fourier-circuits-Sep#4  rows 1
+   control: pic 0 score 6 tied False  our [0, 2] ctl [0, 0]
+   source: tikzpicture 5  tikzcd 0   best cd match [(0, None)]
+
+Relative-independence-of-the-separable-quotient-prob#0  rows 1
+   control: pic 0 score 2 tied False  our [0, 1] ctl [0, 0]
+   source: tikzpicture 1  tikzcd 0   best cd match [(0, None)]
+
+Renewal-and-changes-of-law-for-critical-honeycomb-wa#6  rows 1
+   control: pic 6 score 16 tied False  our [0, 1] ctl [0, 0]
+   source: tikzpicture 11  tikzcd 0   best cd match [(0, None)]
+
+Tame-Hecke-Eigensheaves-with-Several-Marked-Points-O#1  rows 1
+   control: pic 1 score 3 tied True  our [0, 5] ctl [0, 0]
+   source: tikzpicture 2  tikzcd 0   best cd match [(0, None)]
+
+Tame-Hecke-Eigensheaves-with-Several-Marked-Points-O#2  rows 2
+   control: pic 1 score 1 tied True  our [0, 2] ctl [0, 0]
+   source: tikzpicture 2  tikzcd 0   best cd match [(0, None)]
+
+The-Blockwise-Alperin-Weight-Conjecture-September-23#0  rows 2
+   control: pic 0 score 57 tied False  our [0, 5] ctl [0, 0]
+   source: tikzpicture 2  tikzcd 0   best cd match [(0, None)]
+
+The-Grothendieck-homotopy-hypothesis-via-elementary-#4  rows 1
+   control: pic 3 score 5 tied False  our [0, 1] ctl [0, 0]
+   source: tikzpicture 5  tikzcd 0   best cd match [(0, None)]
+
+The-maximum-number-of-mutually-unbiased-bases-in-dim#0  rows 1
+   control: pic 0 score 55 tied False  our [0, 1] ctl [0, 0]
+   source: tikzpicture 2  tikzcd 0   best cd match [(0, None)]

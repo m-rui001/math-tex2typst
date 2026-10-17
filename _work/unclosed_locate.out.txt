@@ -1,0 +1,42 @@
+==============================================================
+FILE D222-Calabi流在复射影空间上的有限时间奇点构造.md
+  path=E:\math\研究笔记\D222-Calabi流在复射影空间上的有限时间奇点构造.md
+  invariant lines=592 dollar_total=2504 backtick_total=110 CR_bytes=0
+  KIND=DUNCLOSED  maskedOffset=25283  line=347  col(0-based)=39
+  ORIGINAL line[347]: "$$\\mathcal{T}_1 = e^{-\\mathcal{L}} + K,$$"
+  MASKED   line[347]: "$$\\mathcal{T}_1 = e^{-\\mathcal{L}} + K,$$"
+      L345: 在相似变量 $\tau = -\log\rho = -\frac{1}{2}\log(-t)$（$\rho = e^{-\tau}$），$\zeta = z/\sqrt{\rho}$，$V(z,t) = \rho^{p_0/2} \hat{V}(\zeta,\tau)$ 的替换下，平面线性化方程 $\widehat{\mathcal{P}}V = f$ 变成关于 $\hat{V}$ 的方程，在每单位 $\tau$-时间里的演化算子为
+      L346: 
+   >> L347: $$\mathcal{T}_1 = e^{-\mathcal{L}} + K,$$
+      L348: 
+      L349: 这里 $\mathcal{L}$ 是自伴椭圆算子（与 $(-\Delta_\zeta)^2$ 有关），阻尼来自 $\rho^{p_0/2}$ 因子的衰减，$K$ 是紧算子（来自 $G(\zeta^2) - 1$ 在 $\zeta \to \infty$ 时指数衰减）。
+      L350: 
+  masked window [-40..+80] around opener: "\n$$\\mathcal{T}_1 = e^{-\\mathcal{L}} + K,$$\n\n这里 $\\mathcal{L}$ 是自伴椭圆算子（与 $(-\\Delta_\\zeta)^2$ 有关），阻尼来自 $\\rho^{p_0/2}$ 因子的衰减"
+  total consecutive "$$" pairs found in masked = 32
+==============================================================
+FILE D245-高温SK谱隙论文的思维链反推.md
+  path=E:\math\研究笔记\D245-高温SK谱隙论文的思维链反推.md
+  invariant lines=357 dollar_total=1818 backtick_total=124 CR_bytes=0
+  KIND=IUNCLOSED  maskedOffset=44201  line=356  col(0-based)=403
+  ORIGINAL line[356]: "表末补记（第三则，勘误追注）：上一条补记有两处需要修正登记。第一，其句内误引入了一个两字转折连接词样例（落在\"排版修复\"与\"内容改写\"两个短语之间），按本书写协议该词属禁用语类别，此前已在勘误节以类别名登记过该族违例（另有四字过渡套语一例、长短停顿号若干例），此处再次以类别名补记这一例，不逐字复写。第二，上一条用\"倒数第十五、十四行之外的两行\"来定位被合规化的单元格，这个定位说法不准确；准确说法是直接按符号栏点名：其一为\"$\\lvert\\mathbb E GR_p^{\\mathsf T}U\\rvert\\le C\\norm G_*$ / 弱残差规则 / sections/residuals.tex:889-891$\"所在行，其二为\"$\\lvert S(x)\\rvert\\le\\alpha n$ 对一切构型 $x$ 同时 / 小场集均匀性 / sections/terminal.tex:392-396$\"所在行。两处改动仅把单元格内的裸竖线绝对值记号换成 `\\lvert` 与 `\\rvert`，数值、文件行号与消费关系三栏原文未动，台账数据行总数五十七不变，表头仍为唯一一份。"
+  MASKED   line[356]: "表末补记（第三则，勘误追注）：上一条补记有两处需要修正登记。第一，其句内误引入了一个两字转折连接词样例（落在\"排版修复\"与\"内容改写\"两个短语之间），按本书写协议该词属禁用语类别，此前已在勘误节以类别名登记过该族违例（另有四字过渡套语一例、长短停顿号若干例），此处再次以类别名补记这一例，不逐字复写。第二，上一条用\"倒数第十五、十四行之外的两行\"来定位被合规化的单元格，这个定位说法不准确；准确说法是直接按符号栏点名：其一为\"$\\lvert\\mathbb E GR_p^{\\mathsf T}U\\rvert\\le C\\norm G_*$ / 弱残差规则 / sections/residuals.tex:889-891$\"所在行，其二为\"$\\lvert S(x)\\rvert\\le\\alpha n$ 对一切构型 $x$ 同时 / 小场集均匀性 / sections/terminal.tex:392-396$\"所在行。两处改动仅把单元格内的裸竖线绝对值记号换成          与         ，数值、文件行号与消费关系三栏原文未动，台账数据行总数五十七不变，表头仍为唯一一份。"
+      L354: 
+      L355: 表末补记两条。其一，本台账在最终定数前对两个单元格的绝对值写法做过一次格式合规化（裸竖线改为 `\lvert` `\rvert`），属于表格排版修复，并非内容改写，改动为上面倒数第十五、十四行之外的两行对应单元，登记于此备查。其二，追加本批十二行后台账数据行共五十七行，仍只有一份表头；所有行号均为本会话真实读取位置，未使用占位符。
+   >> L356: 表末补记（第三则，勘误追注）：上一条补记有两处需要修正登记。第一，其句内误引入了一个两字转折连接词样例（落在"排版修复"与"内容改写"两个短语之间），按本书写协议该词属禁用语类别，此前已在勘误节以类别名登记过该族违例（另有四字过渡套语一例、长短停顿号若干例），此处再次以类别名补记这一例，不逐字复写。第二，上一条用"倒数第十五、十四行之外的两行"来定位被合规化的单元格，这个定位说法不准确；准确说法是直接按符号栏点名：其一为"$\lvert\mathbb E GR_p^{\mathsf T}U\rvert\le C\norm G_*$ / 弱残差规则 / sections/residuals.tex:889-891$"所在行，其二为"$\lvert S(x)\rvert\le\alpha n$ 对一切构型 $x$ 同时 / 小场集均匀性 / sections/terminal.tex:392-396$"所在行。两处改动仅把单元格内的裸竖线绝对值记号换成 `\lvert` 与 `\rvert`，数值、文件行号与消费关系三栏原文未动，台账数据行总数五十七不变，表头仍为唯一一份。
+      L357: 
+  masked window [-40..+80] around opener: "/ 小场集均匀性 / sections/terminal.tex:392-396$\"所在行。两处改动仅把单元格内的裸竖线绝对值记号换成          与         ，数值、文件行号与消费关系三栏原文未动，台账数据行总数五十七不变，"
+==============================================================
+FILE D752-球面随机感知机的自由能：任意有界势下变分公式的两类增量证明.md
+  path=E:\math\研究笔记\D752-球面随机感知机的自由能：任意有界势下变分公式的两类增量证明.md
+  invariant lines=262 dollar_total=1558 backtick_total=454 CR_bytes=0
+  KIND=DUNCLOSED  maskedOffset=31406  line=221  col(0-based)=64
+  ORIGINAL line[221]: "$$\\frac1{D_m(t)}-\\frac1{1-t}=\\frac{1-t-D_m(t)}{(1-t)D_m(t)}\\ge0,$$"
+  MASKED   line[221]: "$$\\frac1{D_m(t)}-\\frac1{1-t}=\\frac{1-t-D_m(t)}{(1-t)D_m(t)}\\ge0,$$"
+      L219: 
+      L220: 读论文到中途我习惯先复算几个不依赖未读区间的点，这节能全部锚定在已读窗口上。第一，熵的非负性：由 $0\le m\le1$ 得 $D_m(t)=\int_t^1m\le1-t$，被积函数写成通分形式
+   >> L221: $$\frac1{D_m(t)}-\frac1{1-t}=\frac{1-t-D_m(t)}{(1-t)D_m(t)}\ge0,$$
+      L222: 所以 $S$ 逐项非负，主定理里"非负扩展积分"的说法自洽。顺手复算了常数试验：$m\equiv c\in(0,1)$ 时被积函数是 $\frac{1/c-1}{1-t}$，在 $t=1$ 端发散，于是 $S=+\infty$；$m\equiv1$ 时 $S=0$。这说明有限熵试验必须在尾端以可积方式贴向 $1$，主定理"不要求 $m$ 在 $1$ 附近恒等于 $1$"的自由度其实被 $D_m$ 的可积性悄悄管着，素材没写这句推论，是我自己的算账。第二，初等双侧界的重推：对概率测度 $\sigma_N$ 与 $N$ 固定，$\log\int e^{g}\,d\sigma\ge\int g\,d\sigma$，取 $g=\beta H_N$，再对图案取期望，$\mathbb E[(g^a\cdot x)/\sqrt N]=0$ 且边际为正态，得 $\mathbb Ep_N\ge(M_N/N)\mathbb Ef(G)$；外层耶森 $\log\mathbb Ee^{\beta H_N}\ge\mathbb E\beta H_N$ 反向使用给上界 $(M_N/N)\log\mathbb Ee^{f(G)}$，与 `paper.tex:91-93` 一字不差。第三，常势校验闭环：$\phi\equiv c$ 时 $V_f(m)=\beta c$（终端奖励与控制无关），下确界落在 $m\equiv1$ 使 $S=0$，得 $\mathcal P=\alpha\beta c$，两侧界同时收紧，与我刚登记的常数试验结论互证。
+      L223: 
+      L224: 第四，从对偶公式反推驻定关系：对 $\min\{S(q)-\sum_iw_ih_iq_i\}$ 用熵梯度 $\partial_{q_i}S=\tfrac{w_i}2A_q(q_i)$（`paper.tex:702`），内点极值条件是 $\tfrac{w_i}2A_q(q_i)-w_ih_i=0$，即 $2h_i=A_q(q_i)$，与命题里预先声明的驻定场关系 `paper.tex:681` 完全一致；这说明该"驻定关系"不是外加假设，是对偶的欧拉条件，我在 §7 的 [推测] 因此可以升级为有依据的重构。第五，扰动指数的相容性：$e_N=N^{-\rho}$、$\rho=\tfrac1{16}$ 时，热涨落阶 $N^{\rho}$、失序涨落阶 $N^{1/4+\rho}$、比较基准 $\sqrt Ne_N=N^{1/2-\rho}$（`paper.tex:1010-1030`），两项压制条件化简为 $\rho<\tfrac14$ 与 $1/4+\rho<1/2-\rho$，即 $\rho<\tfrac18$；$\tfrac1{16}$ 留了一倍裕量，且 $s=N^{-1/4}$ 的差商步长选择与之一致。这告诉我 $e_N$ 的指数不是魔法数字，是三条幂次不等式的公共解区间里取的整齐点。第六，$D_q$ 的差分结构：$D_{i-1}-D_i=\zeta_i(q_i-q_{i-1})$ 与 $D_{k-1}=1-q_{k-1}$（`paper.tex:696-698` 稍后核对）拼起来恰是 $D_q(q_{k-1})=1-q_{k-1}$ 的望远镜和，权重 $\zeta_i$ 在求和中充当层级概率，这与级联变换把标记概率记为 $w_i=\zeta_{i+1}-\zeta_i$ 的约定（`paper.tex:628-630`）互洽。六个点全过，我对公式层的信心从"读通"升级为"可复述"。
+  masked window [-40..+80] around opener: "1-t}=\\frac{1-t-D_m(t)}{(1-t)D_m(t)}\\ge0,$$\n所以 $S$ 逐项非负，主定理里\"非负扩展积分\"的说法自洽。顺手复算了常数试验：$m\\equiv c\\in(0,1)$ 时被积函数是 $\\frac{1/c"
+  total consecutive "$$" pairs found in masked = 46

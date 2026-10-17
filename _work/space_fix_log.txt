@@ -1,0 +1,16 @@
+E:/math/研究笔记\D151-中点透镜的树范数尾部控制：联合预算与对消比较的反推笔记.md	314	$ 来自 $\lVert Q_Hz\rvert $  |
+E:/math/研究笔记\D473-负球感知机的微观阻塞.md	403	e C/\lvert \log s\rvert $ 破 
+E:/math/研究笔记\D52-c0的双Lipschitz吸收而无线性拷贝.md	353	余量 $>M^2/\lvert H\rvert $ 时矛
+E:/math/研究笔记\D54-Brennan猜想与sharp逆平方积分均值.md	728	数放大只改 $\lVert L^n\rvert $ 前置
+E:/math/研究笔记\D585-稳定子轨道局部稠密性与厚张量理想链.md	85	=\sup_I\lvert a_I\rvert $ | 
+E:/math/研究笔记\D60-模谱均值的有界恢复.md	1138	 只放大界；换 $\lvert s\rvert $ 型则
+E:/math/研究笔记\D66-中点与树能量导出的菱形畸变.md	324	 >2a_d\ge\lVert Q\rvert $ 支撑
+E:/math/研究笔记\D66-中点与树能量导出的菱形畸变.md	343	1+\delta)\lVert x\rvert $ 窗内
+E:/math/研究笔记\D72-L1的Daugavet子空间的精确渐近模数.md	761	$ 与 $t\lVert C(y)\rvert $ 不对
+E:/math/研究笔记\D72-L1的Daugavet子空间的精确渐近模数.md	767	号右侧不足 $1+\lVert T\rvert $  |
+E:/math/研究笔记\D72-L1的Daugavet子空间的精确渐近模数.md	770	步 $z_i/\lVert z_i\rvert $ 除零
+E:/math/研究笔记\D72-L1的Daugavet子空间的精确渐近模数.md	789	 无意义，$\lVert \psi\rvert $ 界断
+E:/math/研究笔记\D72-L1的Daugavet子空间的精确渐近模数.md	790	lVert \psi-\psi_0\rvert $ 有一
+E:/math/研究笔记\D769-各维度中的常二重点间隙.md	733	$ 与 $d=1/\lvert G\rvert $ 两处
+E:/math/研究笔记\D776-时空Penrose不等式与围面积.md	346	 \mathbb{S}^{n-1}\rvert $ | 
+E:/math/研究笔记\D776-时空Penrose不等式与围面积.md	354	| 若 $E\le\lvert P\rvert $ 则未

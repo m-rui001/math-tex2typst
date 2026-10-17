@@ -1,0 +1,17 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+census canvases 113   paper canvases==pictures: 113   differ: 0   no flat source: 0
+of the covered ones with a control row: word match agrees with index 99, disagrees 13
+   A-counterexample-to-the-coarse-Novikov-conjecture-#1  n=2  word-picked 0 (score 5 tied False)
+   A-finite-entropy-system-without-a-smooth-positive-#1  n=3  word-picked 0 (score 5 tied False)
+   Choiceless-polynomial-time-with-counting-does-not-#1  n=2  word-picked 0 (score 6 tied False)
+   Commuting-Division-Coefficient-Forms-and-the-Artin#1  n=2  word-picked 0 (score 5 tied False)
+   Conditional-permutations-in-a-revealed-switching-e#0  n=2  word-picked 1 (score 5 tied False)
+   Conformal-flow-and-the-Riemannian-Penrose-inequali#1  n=2  word-picked 0 (score 11 tied False)
+   Constructible-tame-Hecke-eigensheaves-in-positive-#3  n=5  word-picked 0 (score 2 tied False)
+   Filtered-chromatic-splitting-at-generic-primes-Sep#1  n=3  word-picked 0 (score 1 tied False)
+   Finite-tensor-savings-and-exact-Fourier-circuits-S#4  n=5  word-picked 0 (score 6 tied False)
+   Strong-diffeomorphic-approximation-in-three-dimens#2  n=5  word-picked 3 (score 8 tied False)
+   Tame-Hecke-Eigensheaves-with-Several-Marked-Points#1  n=4  word-picked 0 (score 3 tied True)
+   Tame-Hecke-Eigensheaves-with-Several-Marked-Points#2  n=4  word-picked 3 (score 1 tied True)
+   The-Grothendieck-homotopy-hypothesis-via-elementar#4  n=5  word-picked 3 (score 5 tied False)
+identity picture environments: [('tikzpicture', 90), ('tikzcd', 20), ('CD', 3)]

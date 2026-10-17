@@ -1,0 +1,31 @@
+\documentclass[10pt]{article}
+\usepackage{tikz}
+\makeatletter
+\AtBeginDocument{{\tiny\typeout{BL tiny = \the\f@baselineskip\space (size \f@size pt)}}
+{\scriptsize\typeout{BL scriptsize = \the\f@baselineskip\space (size \f@size pt)}}
+{\footnotesize\typeout{BL footnotesize = \the\f@baselineskip\space (size \f@size pt)}}
+{\small\typeout{BL small = \the\f@baselineskip\space (size \f@size pt)}}
+{\normalsize\typeout{BL normalsize = \the\f@baselineskip\space (size \f@size pt)}}
+{\large\typeout{BL large = \the\f@baselineskip\space (size \f@size pt)}}}
+\newcommand{\measure}[2]{%
+  \begin{tikzpicture}[font=#1]
+    \node[draw, text width=5.7cm, align=left, inner sep=8pt] (a) at (0,0) {#2};
+    \pgfextracty{\dimen0}{\pgfpointanchor{a}{north}}%
+    \pgfextracty{\dimen1}{\pgfpointanchor{a}{south}}%
+    \typeout{H #1 lines=\number\value{lines} N=\the\dimen0\space S=\the\dimen1\space D=\the\dimexpr\dimen0-\dimen1\relax}%
+  \end{tikzpicture}%
+}
+\newcount\lines \lines=0
+\begin{document}
+\lines=1 \measure{\small}{one}
+\lines=2 \measure{\small}{one\\two}
+\lines=3 \measure{\small}{one\\two\\three}
+\lines=4 \measure{\small}{one\\two\\three\\four}
+\lines=6 \measure{\small}{one\\two\\three\\four\\five\\six}
+\lines=1 \measure{\footnotesize}{one}
+\lines=3 \measure{\footnotesize}{one\\two\\three}
+\lines=2 \measure{\normalsize}{one\\two}
+\lines=3 \measure{\normalsize}{one\\two\\three}
+\lines=2 \measure{\scriptsize}{one\\two}
+x
+\end{document}

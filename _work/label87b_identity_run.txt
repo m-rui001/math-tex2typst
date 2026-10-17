@@ -1,0 +1,103 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+on-ink face at depth >3 pt on control87c_rows.json: 27 rows / 16 canvases / 15 papers
+identity is source order (probe84 refuses a paper whose canvas count differs from its
+picture count), so the only gate here is whether the control page drew the figure:
+  ink     the control page's ink elements vs our canvas page's   >= 50%
+  words   printed as evidence only -- on a maths-only diagram the canvas prints what
+          Typst made of `$\mathcal P Y$` or a `@>{c_V(Q)}>>` CD arrow, so the overlap
+          against the source text is low (4 of 16 face canvases under 50%) while the
+          picture at that index is plainly the same figure
+
+A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Plan#0  rows 2  verified
+   control pic 0 env tikzpicture  score 12   our [0, 2] ctl [0, 0]
+   control: frames 0   strokes 6   ink 23   (ours 15  )   printed words 26, in picture 7 (27%)
+       5.04  'H' x 'uncappedban'
+       4.80  'height' x 'uncappedban'
+
+A-continuum-temperature-singularity-for-a-radial-pai#1  rows 1  verified
+   control pic 1 env tikzpicture  score 14   our [0, 2] ctl [0, 0]
+   control: frames 0   strokes 4   ink 28   (ours 17  )   printed words 11, in picture 10 (91%)
+       5.45  'ρ=g' x 'w'
+
+An-explicit-counterexample-to-the-Auslander-Reiten-c#0  rows 1  verified
+   control pic 0 env tikzpicture  score 23   our [0, 1] ctl [0, 0]
+   control: frames 0   strokes 13  ink 64   (ours 33  )   printed words 45, in picture 28 (62%)
+       4.32  'FAsmallmatrix)' x 'finitequotient'
+
+Constructible-tame-Hecke-eigensheaves-in-positive-ch#3  rows 1  verified
+   control pic 3 env CD           score 1    our [0, 3] ctl [0, 0]
+   control: frames 0   strokes 0   ink 61   (ours 23  )   printed words 8, in picture 3 (38%)
+       3.29  'ΨA' x '(Q)⊗id'
+
+Disk-transfer-representations-and-confined-bridge-ma#1  rows 1  control drew little
+   control pic 1 env tikzpicture  score 15   our [0, 1] ctl [0, 0]
+   control: frames 0   strokes 0   ink 1    (ours 27  )   printed words 17, in picture 15 (88%)
+       3.10  'block' x '2'
+
+Finite-Monoid-Computations-and-a-Uniform-Generalized#0  rows 1  verified
+   control pic 0 env tikzpicture  score 13   our [0, 1] ctl [0, 0]
+   control: frames 0   strokes 5   ink 15   (ours 8   )   printed words 8, in picture 8 (100%)
+       3.92  'continuation' x 'firstmismatch'
+
+Finite-algebraic-envelopes-and-the-Boone-Higman-conj#1  rows 3  verified
+   control pic 1 env tikzpicture  score 4    our [0, 4] ctl [0, 0]
+   control: frames 0   strokes 5   ink 10   (ours 10  )   printed words 3, in picture 3 (100%)
+       5.66  'R' x 'R'
+       4.90  'L' x 'L'
+       3.06  'R' x 'b'
+
+Finite-tensor-savings-and-exact-Fourier-circuits-Sep#4  rows 1  verified
+   control pic 4 env tikzpicture  score 2    our [0, 2] ctl [0, 0]
+   control: frames 0   strokes 2   ink 48   (ours 35  )   printed words 2, in picture 1 (50%)
+       3.40  '(x' x ')'
+
+Global-quantum-geometric-Langlands-at-irrational-lev#0  rows 7  verified
+   control pic 0 env tikzcd       score 5    our [0, 10] ctl [0, 0]
+   control: frames 0   strokes 2   ink 42   (ours 17  )   printed words 10, in picture 6 (60%)
+       4.76  'N' x 'integratedNcaseof(12.1)'
+       3.58  '2' x 'integratedNcaseof(12.1)'
+       3.36  'G' x 'Gcaseof(12.1)'
+       3.29  '(M)' x 'Gcaseof(12.1)'
+       3.29  '(M)' x 'integratedNcaseof(12.1)'
+       3.29  '(M)' x 'integratedNcaseof(12.1)'
+       3.21  'P' x 'Gcaseof(12.1)'
+
+Relative-independence-of-the-separable-quotient-prob#0  rows 1  verified
+   control pic 0 env tikzpicture  score 2    our [0, 1] ctl [0, 0]
+   control: frames 0   strokes 3   ink 24   (ours 8   )   printed words 2, in picture 2 (100%)
+       4.97  'X=ker(Q−B)' x 'B|'
+
+Renewal-and-changes-of-law-for-critical-honeycomb-wa#6  rows 1  verified
+   control pic 6 env tikzpicture  score 16   our [0, 1] ctl [0, 0]
+   control: frames 0   strokes 17  ink 45   (ours 27  )   printed words 22, in picture 18 (82%)
+       3.84  'p' x 'longerend'
+
+Tame-Hecke-Eigensheaves-with-Several-Marked-Points-O#1  rows 1  verified
+   control pic 1 env CD           score 1    our [0, 5] ctl [0, 0]
+   control: frames 0   strokes 0   ink 58   (ours 23  )   printed words 8, in picture 3 (38%)
+       3.29  'ΨA' x '(Q)⊗id'
+
+Tame-Hecke-Eigensheaves-with-Several-Marked-Points-O#2  rows 2  verified
+   control pic 2 env CD           score 0    our [0, 2] ctl [0, 0]
+   control: frames 0   strokes 0   ink 63   (ours 31  )   printed words 2, in picture 1 (50%)
+       5.52  '(Q))' x 'V⊗W'
+       3.52  '(Q))' x 'c'
+
+The-Blockwise-Alperin-Weight-Conjecture-September-23#0  rows 2  verified
+   control pic 0 env tikzpicture  score 57   our [0, 5] ctl [0, 0]
+   control: frames 0   strokes 4   ink 106  (ours 35  )   printed words 79, in picture 62 (78%)
+       4.56  'Smallorbitgivesanextensionwithsmall' x '=1'
+       3.36  'Valuedliftandmarked-coverdescent' x 'p'
+
+The-Grothendieck-homotopy-hypothesis-via-elementary-#4  rows 1  verified
+   control pic 4 env tikzpicture  score 3    our [0, 1] ctl [0, 0]
+   control: frames 0   strokes 2   ink 26   (ours 15  )   printed words 5, in picture 2 (40%)
+       5.61  'Y×Y' x ',iū)'
+
+The-maximum-number-of-mutually-unbiased-bases-in-dim#0  rows 1  verified
+   control pic 0 env tikzpicture  score 55   our [0, 1] ctl [0, 0]
+   control: frames 0   strokes 0   ink 79   (ours 23  )   printed words 80, in picture 59 (74%)
+       3.98  'H' x '√'
+
+tally: [('control drew little', 1), ('verified', 15)]
+verified face: 26 rows / 15 canvases / 14 papers

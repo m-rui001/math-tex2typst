@@ -1,0 +1,33 @@
+{
+  "paper": "Near-square-root-logarithmic-integrality-gaps-for-uniform-sparsest-cut-September-24-2026",
+  "ok": true,
+  "typ_lines": 690,
+  "included_pdf_pages": 0,
+  "formulas": 489,
+  "math_failed": 0,
+  "labels": 99,
+  "equations": 4,
+  "theorems": 9,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "489",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "aliascnt",
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Near-square-root-logarithmic-integrality-gaps-for-uniform-sparsest-cut-September-24-2026.tex"
+}

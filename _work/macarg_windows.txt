@@ -1,0 +1,107 @@
+E:\math\_work\macarg_windows.py:6: SyntaxWarning: invalid escape sequence '\m'
+  2) `\mathrm\\operator` / `\frac{\\mathfrak}` 这种报名字的站：把整条 body 打全。
+=== D139-单格覆盖的n对数n阶界：采样器层级与电:352 kind=INLINE
+    BODY   '4^D\\cdot(\\text{'
+    TAIL   '4^D\\cdot(\\text{'
+    LINE   '}$ 的估计（221--225）依赖 $4^D\\cdot(\\text{$s$ 的固定幂})=\\exp(O(s^2))=o(n)$（226--227）。$\\Gamma$ 是满秩格且 $\\det\\Gamma=D_hD_v$（235--238），故 $\\operatorname{vol}_n(K)/\\det\\Gamma=\\rho$。未覆盖点落在 $\\bigcap_l(U_{a(l)}+\\pi_'
+    DOLLAR '4^D\\cdot(\\text{$s$ 的固定幂})=\\exp(O(s^2))=o(n)$（226--227）。$'
+=== D157-Nagata猜想平面曲线反推笔记：正规:826 kind=INLINE
+    BODY   '\\mathbb N\\to\\Set'
+    TAIL   '\\mathbb N\\to\\Set'
+    LINE   '把 very general 编码成 $\\mathbb N\\to\\Set$ 的一族闭集加"逐 $n$ 不属于"（`Nagata.lean:21` 到 `Nagata.lean:24`），把 proper 编码成不等于全集。tex 里 `introduction.tex:18` 到 `introduction.tex:20` 那句 chosen simultaneously for all '
+    DOLLAR '\\mathbb N\\to\\Set$ 的一族闭集加"逐 $n$ 不属于"（`Nagata.lean:21` 到 `Nagata.lean:24`），把 proper 编码成不等于全集。tex 里 `introduction.tex:18` 到 `introduction.tex:20` 那句 chosen simultaneously for all degrees and multiplicity vectors 在机器里就是这个 $'
+=== D163-四次多项式无平方因子值的数域行列式路线:189 kind=INLINE
+    BODY   'S_{f,k}(X)=\\#\\{1\\le n\\le X:f(n)\\text{ 是 $k'
+    TAIL   '{f,k}(X)=\\#\\{1\\le n\\le X:f(n)\\text{ 是 $k'
+    LINE   ')\\equiv0\\pmod q\\}$，$S_{f,k}(X)=\\#\\{1\\le n\\le X:f(n)\\text{ 是 $k$-power-free}\\}$（01-introduction.tex:7-10）。$k$-power-free 的定义包含负整数而排除零（01-introduction.tex:4-6），这条约定在 $f$ 有整根时会影响计数，正文用"次数至少二因此无被计数的零值"处理掉（02-sieve.tex:34-36）。'
+    DOLLAR 'S_{f,k}(X)=\\#\\{1\\le n\\le X:f(n)\\text{ 是 $k$-power-free}\\}$（01-introduction.tex:7-10）。$'
+=== D233-强瘦树的多项式时间构造.md:368 kind=INLINE
+    BODY   '\\eqref'
+    TAIL   '\\eqref'
+    LINE   '：标量试探 $X=Y=aI$ 直接证 $\\eqref$ 形的第二条不等式，第 83 到 84 行点明其值低于 $42<K$，这一句是后面全部次水平集论证的入口。下侧与可微性靠第 85 到 89 行三件事：次水平集上约束反控逆阵、迹惩罚反控 $X,Y$，紧性给到达，驻点给对偶恒等式，正乘子给取等，$\\operatorname{Tr}(PX^{-1})+\\operatorn'
+    DOLLAR '\\eqref$ 形的第二条不等式，第 83 到 84 行点明其值低于 $42<K$，这一句是后面全部次水平集论证的入口。下侧与可微性靠第 85 到 89 行三件事：次水平集上约束反控逆阵、迹惩罚反控 $'
+=== D30-负pinched三维Kähler流形无有:93 kind=INLINE
+    BODY   '\\neg\\exists F\\,(\\text{'
+    TAIL   '\\neg\\exists F\\,(\\text{'
+    LINE   ',B$ 使双侧 pinching，且 $\\neg\\exists F\\,(\\text{$F$ 有界全纯}\\wedge\\text{Jacobian 处处非零})$，尾句"$M$ 不双全等于任何 $\\mathbb C^3$ 里有界区域"是这一否定的直接推论（最后一跳在 `02:169-171` 的链式法则）。'
+    DOLLAR '\\neg\\exists F\\,(\\text{$F$ 有界全纯}\\wedge\\text{Jacobian 处处非零})$，尾句"$'
+=== D326-方格随机簇临界界面共形极限的构思重建.:40 kind=DISPLAY
+    BODY   'p_q=\\frac{\\sqrt q}{1+\\sqrt q},\\qquad \\kappa(q)=\\frac{4\\pi}{\\arccos(-\\sqrt q/2),'
+    TAIL   'appa(q)=\\frac{4\\pi}{\\arccos(-\\sqrt q/2),'
+    LINE   '$$p_q=\\frac{\\sqrt q}{1+\\sqrt q},\\qquad \\kappa(q)=\\frac{4\\pi}{\\arccos(-\\sqrt q/2),$$'
+    DOLLAR 'p_q=\\frac{\\sqrt q}{1+\\sqrt q},\\qquad \\kappa(q)=\\frac{4\\pi}{\\arccos(-\\sqrt q/2),$$'
+=== D351-把hypersymplectic四流形:78 kind=INLINE
+    BODY   'RD=\\mathrm\\operatorname{Id}'
+    TAIL   'RD=\\mathrm\\operatorname{Id}'
+    LINE   ' $\\mathrm d D=0$ 且 $RD=\\mathrm\\operatorname{Id}$(03-current-energy.tex:130-134)。构造走 $P=R\\mathrm d\\mathrm d^*$: 若 $a$ 自对偶, $\\xi\\wedge\\iota_\\xi a$ 的自对偶投影是 $\\lvert\\xi\\rvert^2a/2$, 于是 $\\sigma_2(P)(x,\\xi)=\\frac12'
+    DOLLAR 'RD=\\mathrm\\operatorname{Id}$(03-current-energy.tex:130-134)。构造走 $P=R\\mathrm d\\mathrm d^*$: 若 $'
+=== D351-把hypersymplectic四流形:78 kind=INLINE
+    BODY   'B_0P=\\mathrm\\operatorname{Id}+K'
+    TAIL   'B_0P=\\mathrm\\operatorname{Id}+K'
+    LINE   ' 特征 -2 的来历是把参数子恒等式 $B_0P=\\mathrm\\operatorname{Id}+K$ 复合成 $B_0(\\mathrm\\operatorname{Id}-H_0)=L+KL$, 椭圆正则性让 $KL$ 光滑, 所以 $L$ 阶 -2(03-current-energy.tex:163-171)。定义 $D=\\mathrm d\\mathrm d^*L+H_0$(03-current-energy.te'
+    DOLLAR 'B_0P=\\mathrm\\operatorname{Id}+K$ 复合成 $B_0(\\mathrm\\operatorname{Id}-H_0)=L+KL$, 椭圆正则性让 $'
+=== D351-把hypersymplectic四流形:78 kind=INLINE
+    BODY   'B_0(\\mathrm\\operatorname{Id}-H_0)=L+KL'
+    TAIL   'B_0(\\mathrm\\operatorname{Id}-H_0)=L+KL'
+    LINE   'torname{Id}+K$ 复合成 $B_0(\\mathrm\\operatorname{Id}-H_0)=L+KL$, 椭圆正则性让 $KL$ 光滑, 所以 $L$ 阶 -2(03-current-energy.tex:163-171)。定义 $D=\\mathrm d\\mathrm d^*L+H_0$(03-current-energy.tex:172-174), 两个像都闭, $RD=PL+H_0=\\mathrm\\operato'
+    DOLLAR 'B_0(\\mathrm\\operatorname{Id}-H_0)=L+KL$, 椭圆正则性让 $KL$ 光滑, 所以 $'
+=== D351-把hypersymplectic四流形:78 kind=INLINE
+    BODY   'RD=PL+H_0=\\mathrm\\operatorname{Id}'
+    TAIL   'RD=PL+H_0=\\mathrm\\operatorname{Id}'
+    LINE   'x:172-174), 两个像都闭, $RD=PL+H_0=\\mathrm\\operatorname{Id}$。对闭 $\\xi$, $T(\\xi)=N(\\xi-DR\\xi)=0$, 于是 setup (A) 里 $T=N+Q$, $Q(\\xi)=-N(DR\\xi)$, 有 $Q,T\\in H^{-3}$, $T$ 闭且 $[*T]=0$(03-current-energy.tex:136-142)。族版本(参数光滑依赖) s'
+    DOLLAR 'RD=PL+H_0=\\mathrm\\operatorname{Id}$。对闭 $\\xi$, $'
+=== D351-把hypersymplectic四流形:78 kind=INLINE
+    BODY   'L=(P+H_0)^{-1}(\\mathrm\\operatorname{Id}-H_0)'
+    TAIL   '+H_0)^{-1}(\\mathrm\\operatorname{Id}-H_0)'
+    LINE   '零、预解式恒等式给核投影的光滑依赖, $L=(P+H_0)^{-1}(\\mathrm\\operatorname{Id}-H_0)$(03-current-energy.tex:189-203)。03 节随后挂了一条谱系注记: 同一投影椭圆算子是 Lejmi 局部相容构造的基础, 整体线性修正在 Draghici--Zhang 里出现; 谐波投影 $H_0$ 记录可能非零的核, 提升同时给出闭性与 prescribed 反不变部分(03-curr'
+    DOLLAR 'L=(P+H_0)^{-1}(\\mathrm\\operatorname{Id}-H_0)$(03-current-energy.tex:189-203)。03 节随后挂了一条谱系注记: 同一投影椭圆算子是 Lejmi 局部相容构造的基础, 整体线性修正在 Draghici--Zhang 里出现; 谐波投影 $H_0$'
+=== D396-复配中的过滤乘积与保边界压缩.md:115 kind=INLINE
+    BODY   'Q_s(t,N)=\\{y\\in C(t,N):\\text{至少 $s'
+    TAIL   'Q_s(t,N)=\\{y\\in C(t,N):\\text{至少 $s'
+    LINE   'times\\ell B}$。核心对象 $Q_s(t,N)=\\{y\\in C(t,N):\\text{至少 $s$ 个槽在 }\\partial[-1,1]^t\\}$ 是有限多面体（指定因子的乘积之有限并），维数至多 $tN$（`04-boundary-compression.tex:105-112`）。归纳第 $j$ 步：旧输出取值在 $Q_s(t,N_{j-1})$，$N_{j-1}=b(B+j-1)$、$s=(j-1)H$；'
+    DOLLAR 'Q_s(t,N)=\\{y\\in C(t,N):\\text{至少 $s$ 个槽在 }\\partial[-1,1]^t\\}$ 是有限多面体（指定因子的乘积之有限并），维数至多 $'
+=== D446-分裂切丛在有理连通流形上的自动可积性.:107 kind=INLINE
+    BODY   '\\eqref'
+    TAIL   '\\eqref'
+    LINE   '$。高阶系数延拓这个被强迫的一阶分解：$\\eqref$ 意义下（我不照抄标签，只写事实）$v^k$ 在右边的系数只涉及 $f_0,\\ldots,f_k$ 及其 $u$-导数，它决定 $(k+1)f_{k+1}$，于是归纳给出唯一解，系数在盘上全纯。我看到 $(k+1)$ 这个因子心里一松：特征零下 $(k+1)$ 可逆，递推没有被除为零的风险。'
+    DOLLAR '\\eqref$ 意义下（我不照抄标签，只写事实）$v^k$ 在右边的系数只涉及 $'
+=== D463-对数Kodaira维数与整条纤维的形变:19 kind=INLINE
+    BODY   '\\red'
+    TAIL   '\\red'
+    LINE   '写成 $\\mathrm{dd}^c$，$\\red$ 写成 $\\mathrm{red}$，$\\mathcal O$ 写成 $\\mathcal O$。素材里出现的 `\\label`、`\\ref`、`\\eqref` 这类标签形态我不抄进正文，引用位置一律写成"文件冒号行号"。伴侣论文的编号在素材里是用短命令给出的，我在本稿只用中文说明"某条既定定理"，不复写那些命令名。'
+    DOLLAR '\\red$ 写成 $\\mathrm{red}$，$'
+=== D480-临界方格FK界面的自然占有测度.md:210 kind=INLINE
+    BODY   '\\eqref'
+    TAIL   '\\eqref'
+    LINE   ' 个点，对 $y<g$ 按二进环求和 $\\eqref$ 式得 $C_K(g^{2-2x}+n^{2x-2})$，对重叠盘界取 $n$ 上极限得 $C_K\\epsilon^{2-x}$，两个指数都正；展开平方即得 $\\limsup_n\\mathbb E\\lvert X_n(f)-X_{n,\\epsilon}(f)\\rvert^2\\le C_K\\lVert f\\rVert_'
+    DOLLAR '\\eqref$ 式得 $C_K(g^{2-2x}+n^{2x-2})$，对重叠盘界取 $'
+=== D521-具有偶数个素因子的素数前驱.md:176 kind=INLINE
+    BODY   '\\sum_{N_u\\text{ prime}}a_x(u)\\ge(\\frac{\\mathfrak}2-C_{\\rm bal}\\kappa-o(1))\\frac{X_A}L\\gg\\frac{X_A}L'
+    TAIL   'al}\\kappa-o(1))\\frac{X_A}L\\gg\\frac{X_A}L'
+    LINE   '结论一步到位：$\\sum_{N_u\\text{ prime}}a_x(u)\\ge(\\frac{\\mathfrak}2-C_{\\rm bal}\\kappa-o(1))\\frac{X_A}L\\gg\\frac{X_A}L$（`07-extraction.tex:645--652`），无平方损失只再削 $o(X_A/L)$（`04-weights.tex:251--259`），于是存在支撑内的 $u$ 使 $2u+1$ 为素数且 $2u$ 无平方因子（`07-extraction.tex:653--656`）。奇偶验收：支撑条件按重数计'
+    DOLLAR '\\sum_{N_u\\text{ prime}}a_x(u)\\ge(\\frac{\\mathfrak}2-C_{\\rm bal}\\kappa-o(1))\\frac{X_A}L\\gg\\frac{X_A}L$（`07-extraction.tex:645--652`），无平方损失只再削 $o(X_A/L)$（`04-weights.tex:251--259`），于是存在支撑内的 $'
+=== D57-两个拟阵公共基的近似计数.md:74 kind=INLINE
+    BODY   '\\sum_{S} f_q(S)\\cdot \\mathbf 1[\\text{'
+    TAIL   '\\sum_{S} f_q(S)\\cdot \\mathbf 1[\\text{'
+    LINE   '方案 A，把 $Z$ 写成 $\\sum_{S} f_q(S)\\cdot \\mathbf 1[\\text{$S$ 是 transversal}]$ 然后用 AOV 的熵缩写路线做 $2^{O(r)}$ 近似、再想办法把指数因子压成多项式。死因机械：$2^{O(r)}$ 与相对误差之间的差距无法用任何"多算几步"弥合，近似比的形状就是算法给的上界，$r$ 是输入的一部分（最大 $n$），指数因子在最坏实例（$M_1=M_2$'
+    DOLLAR '\\sum_{S} f_q(S)\\cdot \\mathbf 1[\\text{$S$ 是 transversal}]$ 然后用 AOV 的熵缩写路线做 $'
+=== D575-十维光滑非二次仿射极大整图.md:100 kind=INLINE
+    BODY   '\\eqref'
+    TAIL   '\\eqref'
+    LINE   ' $\\varepsilon>0$ 与 $\\eqref$ 形式的径向解 $F,P$ 定义在 $0<r<\\varepsilon$ 上，使 $F(\\lvert x\\rvert)$ 与 $P(\\lvert x\\rvert)$ 光滑延到 $\\lvert x\\rvert<\\varepsilon$，且 $F(0)=P(0)=1$、$D_x^2F(0)=I$、$D_x^2P(0)=-('
+    DOLLAR '\\eqref$ 形式的径向解 $F,P$ 定义在 $'
+=== D576-光滑闭曲面到欧氏四维空间的等距浸入.m:175 kind=INLINE
+    BODY   'k+8(k+1)-\\frac{12}{5}(k+1)=\\frac{33k+28)/5}'
+    TAIL   '(k+1)-\\frac{12}{5}(k+1)=\\frac{33k+28)/5}'
+    LINE   '\\tau/t)^{r(k)}$ 给 $2k+8(k+1)-\\frac{12}{5}(k+1)=\\frac{38k+28}{5}$；$\\delta B(s/t)^{r(k)}$ 与首项同给 $\\frac{13k+8}{5}$；$\\delta\\mathcal S_m(\\tau/t)^{r(k)}$ 给 $k+8(k+1)-\\frac{12}{5}(k+1)=\\frac{33k+28)/5}$，最后一处我笔误，正确写法是 $\\frac{33k+28'
+    DOLLAR 'k+8(k+1)-\\frac{12}{5}(k+1)=\\frac{38k+28}{5}$；$\\delta B(s/t)^{r(k)}$ 与首项同给 $'
+=== D582-量子海森堡铁磁体的低温自发磁化.md:102 kind=INLINE
+    BODY   '\\mathbb P_P(\\text{'
+    TAIL   '\\mathbb P_P(\\text{'
+    LINE   '几乎每个曝光与每个 $i\\in T$，$\\mathbb P_P(\\text{$i$ 之后下一钉在 $T$}\\mid\\mathcal H)=\\mathbb P^{\\mathrm{walk}}_{\\mathbf a}(\\tau_T^+<\\tau_E)$，$\\tau_T^+$ 为严格正时刻首次访 $T$、$\\tau_E$ 为首次访 $E$，允许无穷；于是 §5 的首矩 $r$ 恰是这些新鲜返回概率的'
+    DOLLAR '\\mathbb P_P(\\text{$i$ 之后下一钉在 $T$'
+=== D750-三维量子Heisenberg铁磁体磁化:533 kind=INLINE
+    BODY   'r=\\sum_{n\\ge1}(\\text{'
+    TAIL   'r=\\sum_{n\\ge1}(\\text{'
+    LINE   '，最直接的写法是按圈数 $n$ 展开，$r=\\sum_{n\\ge1}(\\text{$n$ 圈的返回贡献})$，再逐阶估计。这在物理上就是玻色和的微扰读法。它在我的纸面上死于两条：一是 $n$ 可以大到 $\\beta/L$ 量级，逐阶误差累加会吃掉 $\\beta^{-5/2}$ 的预算；二是将 Bose 和截断到 $n\\le n_0$ 就直接丢掉要证的第二项系数。素材 `04-profiles.tex'
+    DOLLAR 'r=\\sum_{n\\ge1}(\\text{$n$ 圈的返回贡献})$，再逐阶估计。这在物理上就是玻色和的微扰读法。它在我的纸面上死于两条：一是 $'

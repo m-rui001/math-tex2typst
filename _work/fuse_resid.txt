@@ -1,0 +1,3 @@
+fused_tokens=26 occ=97
+\lem x13 \supp x12 \arctanh x12 \Pic x8 \range x7 \logeps x7 \langleg x4 \Proj x4 \inner x4 \succe x3 \negMulLog x3 \nuW x3 \Real x2 \degavg x2 \gen x2 \lambdah x1 \textdollar x1 \nullity x1 \ltl x1 \Res x1 \ellr x1 \lean x1 \Prim x1 \alphah x1 \setu x1 \gtrimes x1
+with_inflight_notes=\nuW x3 notes=D68

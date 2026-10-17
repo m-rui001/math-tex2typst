@@ -1,0 +1,61 @@
+files=734 spans=856015 katex_refused=514 files_hit=196 unclosed_spans=0
+top  10 commands cover 89 spans, 17.3% of refused
+top  20 commands cover 115 spans, 22.4% of refused
+top  40 commands cover 142 spans, 27.6% of refused
+top  80 commands cover 160 spans, 31.1% of refused
+top 150 commands cover 160 spans, 31.1% of refused
+top 300 commands cover 160 spans, 31.1% of refused
+--- distinct undefined commands=58
+\F              21
+\d              16
+\lem            13
+\OOo            12
+\diff           5
+\lc             5
+\T              5
+\root           4
+\Csum           4
+\du             4
+\A              3
+\math           3
+\rangleG        3
+\V              3
+\G              3
+\two            3
+\closedball     2
+\asy            2
+\hsSq           2
+\texttcaxe      2
+\sr             2
+\q              2
+\o              2
+\ot             2
+\At             2
+\Ce             2
+\dv             2
+\Ec             1
+\tabalign       1
+\ldash          1
+\lambdah        1
+\ball           1
+\DeclareMathOperator1
+\asypto         1
+\m              1
+\ltl            1
+\ellr           1
+\D              1
+\K              1
+\j              1
+--- other error classes=40
+    102  KaTeX parse error: Can't use function '$' in math mode 
+     97  KaTeX parse error: Unexpected end of input in a macro argu
+     30  KaTeX parse error: Expected group as argument to '\H' 
+     26  KaTeX parse error: Expected 'EOF', got '}' 
+     12  KaTeX parse error: No such environment: psmallmatrix 
+     10  KaTeX parse error: Expected '}', got 'EOF' at end of input
+      9  KaTeX parse error: Extra } 
+      7  KaTeX parse error: Expected group after '_' 
+      7  KaTeX parse error: Double subscript 
+      6  KaTeX parse error: Can't use function '\(' in math mode 
+      6  KaTeX parse error: Double superscript 
+      5  KaTeX parse error: Expected 'EOF', got '\right' 

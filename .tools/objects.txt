@@ -1,0 +1,31 @@
+notes=154 lines-with-owner=152 unclaimed=10 shared=2
+
+UNCLAIMED
+L6    A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-
+L82   Integral-and-fractional-expectation-thresholds-are-equivalent-September-23-202
+L85   Memory-and-precision-in-noiseless-Gaussian-regression-September-27-2026
+L98   Posterior-replicas-and-conditional-information-in-Gaussian-regression-Septembe
+L99   Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026
+L110  Routing-densities-and-representation-contraction-for-Thorp-sweeps-September-26
+L121  Subpolynomial-query-complexity-for-well-conditioned-log-concave-sampling-Septe
+L129  The-complete-Crouzeix-theorem-September-23-2026
+L146  The-second-Kahn-Kalai-conjecture-September-24-2026
+L147  The-sharp-factor-of-IID-threshold-for-the-free-Ising-model-on-regular-trees-Se
+
+SHARED
+L7    A-Counterexample-to-Kaplanskys-Direct-Finiten D162,D23
+L9    A-Counterexample-to-Rysers-Covering-Conjectur D127,D19
+
+NOOBJECT
+D01
+D02
+D03
+D04
+D05
+D06
+D07
+D08
+D10
+D113
+D128
+D21

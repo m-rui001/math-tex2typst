@@ -1,0 +1,92 @@
+% Control case for the Gaussian-free-field "pins" figure: the author's \pinsgroup/\pinskzero/
+% \pinsprojection macros drawn for real, plus probes of the points they place -- including the
+% doubly nested scope of panel (d), where a shift inside a shift is the only way to see whether
+% the canvas composes the two.
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,decorations.pathreplacing,patterns}
+\definecolor{linkblue}{RGB}{24,66,112}
+\pagestyle{empty}
+\makeatletter
+\def\pp#1#2{\pgf@process{\pgfpointtransformed{\pgfpointxy{#1}{#2}}}%
+  \typeout{PROBE:\space(#1,#2) = \pgf@sys@tonumber{\pgf@x}pt,\pgf@sys@tonumber{\pgf@y}pt}}
+\makeatother
+\colorlet{pinsplus}{blue!60!black}
+\colorlet{pinsminus}{orange!65!black}
+\tikzset{
+  pins gap/.style={densely dashed,black!45,line width=.45pt},
+  pins move/.style={-{Stealth[length=2mm]},line width=.8pt},
+  pins title/.style={font=\small\bfseries},
+  pins order/.style={font=\footnotesize,align=center},
+  pins axis/.style={-{Stealth[length=1.5mm]},black!50,line width=.4pt}
+}
+\newcommand{\pinsgroup}[4]{
+  \begin{scope}[shift={(#1,#2)}]
+    \draw[draw=#4,fill=#4!8,line width=.65pt]
+      (0,0) ellipse[x radius=.34cm,y radius=.23cm];
+    \fill[#4] (-.23,.03) circle[radius=.018cm];
+    \fill[#4] (.20,.10) circle[radius=.018cm];
+    \fill[#4] (.23,-.09) circle[radius=.018cm];
+    \node[font=\small,inner sep=0pt] at (0,0) {$#3$};
+  \end{scope}
+}
+\newcommand{\pinskzero}{
+  \draw[draw=black!60,fill=black!6,line width=.65pt]
+    (0,0) circle[radius=.23cm];
+  \node[font=\footnotesize,inner sep=0pt] at (0,0) {$K_0$};
+}
+\newcommand{\pinsprojection}[6]{
+  \draw[pins axis] (-2.30,-1.95)--(2.30,-1.95)
+    node[right,black,font=\scriptsize] {$\pi_{#1}$};
+  \draw[#3,line width=2.3pt] (-1.75,-1.95)--(-1.05,-1.95);
+  \draw[black!65,line width=2.3pt] (-.35,-1.95)--(.35,-1.95);
+  \draw[#6,line width=2.3pt] (1.05,-1.95)--(1.75,-1.95);
+  \node[pins order,anchor=north] at (-1.40,-2.03) {$#2$};
+  \node[pins order,anchor=north] at (0,-2.03) {$#4$};
+  \node[pins order,anchor=north] at (1.40,-2.03) {$#5$};
+}
+
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\footnotesize]
+  \begin{scope}
+    \pinskzero
+    \pinsgroup{0}{.95}{T}{pinsplus}
+    \pinsgroup{-1.70}{0}{L}{pinsminus}
+    \pinsprojection{e}{B}{pinsminus}{K_0,L,R}{T}{pinsplus}
+  \end{scope}
+  \begin{scope}[shift={(7.15,0)}]
+    \pinsgroup{.90}{.95}{T}{pinsplus}
+    \pinsgroup{-1.60}{-.05}{L}{pinsminus}
+  \end{scope}
+  \begin{scope}[shift={(7.15,-5.65)}]
+    \pinsgroup{1.30}{1.33}{T}{pinsplus}
+    \begin{scope}[shift={(0,-1.47)}]
+      \draw[pins move,black!70] (0,0)--(0,.56) node[above,black] {$e$};
+      \draw[pins move,black!70] (0,0)--(.65,.375) node[right,black] {$u$};
+    \end{scope}
+    \draw[pins axis] (-2.30,-1.95)--(2.30,-1.95);
+  \end{scope}
+\end{tikzpicture}
+
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \begin{scope}[shift={(0,.95)}]
+    \pp{0}{0} \pp{-.23}{.03} \pp{.20}{.10} \pp{.23}{-.09}
+    \pp{.34}{.23}
+  \end{scope}
+  \begin{scope}[shift={(-1.70,0)}]
+    \pp{0}{0}
+  \end{scope}
+  \pp{-2.30}{-1.95} \pp{2.30}{-1.95} \pp{-1.40}{-2.03} \pp{1.40}{-2.03}
+  \begin{scope}[shift={(7.15,0)}]
+    \begin{scope}[shift={(.90,.95)}]
+      \pp{0}{0}
+    \end{scope}
+  \end{scope}
+  \begin{scope}[shift={(7.15,-5.65)}]
+    \begin{scope}[shift={(0,-1.47)}]
+      \pp{0}{0} \pp{0}{.56} \pp{.65}{.375}
+    \end{scope}
+    \pp{-2.30}{-1.95}
+  \end{scope}
+\end{tikzpicture}
+\end{document}

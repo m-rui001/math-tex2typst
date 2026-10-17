@@ -1,0 +1,33 @@
+=== queue 74: Finite-tensor-savings-and-exact-Fourier-circuits-September-25-2026
+dir exists: E:\math\preprints\Finite-tensor-savings-and-exact-Fourier-circuits-September-25-2026
+tex files=9 total=155780
+     26536 sections/04-packing-prices.tex
+     20932 sections/03-fourier-transfer.tex
+     20835 sections/05-corners.tex
+     20379 sections/08-reflection.tex
+     19271 sections/06-feedback.tex
+     15958 sections/07-pivots.tex
+     14589 sections/01-introduction.tex
+     14458 sections/02-generation.tex
+      2822 main.tex
+bib-ish hits: [377, 379]
+=== queue 77: Global-classical-solutions-of-the-three-dimensional-relativistic-Vlasov-Maxwell-system-September-23-2026
+dir exists: E:\math\preprints\Global-classical-solutions-of-the-three-dimensional-relativistic-Vlasov-Maxwell-system-September-23-2026
+tex files=14 total=157726
+     23096 sections/continuation.tex
+     19444 sections/selection.tex
+     18078 sections/occupation.tex
+     17170 sections/retarded.tex
+     17058 sections/direct.tex
+     16694 sections/direction.tex
+     16629 sections/cancellation.tex
+     12016 sections/introduction.tex
+      6324 sections/setup.tex
+      4051 sections/closure.tex
+      3051 figures/figure-retarded.tex
+      2231 main.tex
+bib-ish hits: [392, 394]
+   Y1642     - comparator_config: ComparatorChallenges/VlasovMaxwell.json
+   Y1643       declaration: OAI.RVM.global_classical_solution
+   Y1644       file: OAI/Analysis/VlasovMaxwell/Main.lean
+   Y1645 

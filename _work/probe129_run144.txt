@@ -1,0 +1,36 @@
+pictures scanned: 932   papers writing a pen width: 428
+carried on the canvas: {'canvas carries a weight above 0.4pt': 693, 'canvas at the 0.4pt default everywhere': 7, 'picture refuses today': 12}
+
+== per picture, the weight asked for above pgf's default (0.4pt):
+   statement/style only: carries it                      666
+   head only: carries it                                  17
+   head asks above default but picture refuses today      10
+   both head and statement/style: carries it               8
+   papers losing at least one: 0
+   by spelling of the demand: {}
+   papers that write a pen AND a picture-head transform (`scale=`, an axis unit, a slant or a rotate): 318 -- a pen is an absolute page length, so a transform must not reprice it
+
+== picture head
+   length+pt                     19   e.g. A-Complete-Local-Domain-Without-a-Small-Cohen-Macaulay-Module-September-23-2026
+   name:thick                     7   e.g. Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026
+
+== statement's own group
+   name:thick                   882   e.g. A-Coulomb-Ground-State-Density-without-Kohn-Sham-Ensemble-Representation-September-25-2026
+   length+pt                    473   e.g. A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in-Spatial-Dimensions-at-Least-Four-October-5-2026
+   name:very thick              316   e.g. A-CH-Obstruction-to-a-Prescribed-Categoricity-Threshold-September-24-2026
+   name:thin                     98   e.g. A-Modulus-Proof-of-Cannons-Conjecture-September-23-2026
+   name:semithick                11   e.g. A-Counterexample-to-Walls-D2-Problem-October-6-2026
+
+== after style merge
+   length+pt                   1452   e.g. A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in-Spatial-Dimensions-at-Least-Four-October-5-2026
+   name:thick                  1299   e.g. A-Coulomb-Ground-State-Density-without-Kohn-Sham-Ensemble-Representation-September-25-2026
+   name:very thick              405   e.g. A-CH-Obstruction-to-a-Prescribed-Categoricity-Threshold-September-24-2026
+   name:semithick               214   e.g. A-Counterexample-to-Walls-D2-Problem-October-6-2026
+   name:thin                    195   e.g. A-Modulus-Proof-of-Cannons-Conjecture-September-23-2026
+
+== /.style definition
+   length+pt                    339   e.g. A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in-Spatial-Dimensions-at-Least-Four-October-5-2026
+   name:thick                    96   e.g. A-classification-of-finite-Euclidean-Ramsey-configurations-September-23-2026
+   name:semithick                35   e.g. A-Counterexample-to-Walls-D2-Problem-October-6-2026
+   name:very thick               32   e.g. A-Pivotal-Amplitude-for-Voronoi-Percolation-from-Cardys-Formula-October-5-2026
+   name:thin                     29   e.g. A-single-lattice-covering-bound-of-order-n-log-n-September-23-2026

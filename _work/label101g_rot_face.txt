@@ -1,0 +1,86 @@
+#101g: the 10 real rotate+anchor nodes on BOTH engines -- pt, ink offsets from the dot
+pgf side  = _work/probe101b_pgf_nodes.run_page (standalone, 10pt, same statement alone)
+our side  = cetz.build + _work/probe81_label_box_face.render (head of #101d, 10pt)
+ruler     = _work/probe101a_rot_variants.ink_offsets (span bbox union; y grows down)
+left/right/top/bottom = ink edge minus the dot centre, both engines relative to the same declared coordinate
+
+NODE 01  tsv 4  A-Linear-Clock-for-Random-Walk-on- pic=0  [anchor=east,rotate=90,red!65!black]  at (-0.93,2.45)
+  src line 751: \node[anchor=east,rotate=90,red!65!black] at (-0.93,2.45) {uncapped band};
+  pgf   rc=0 pdf=m101g_pgf_00.pdf bytes=12895 mtime=2026-10-17 10:08:41
+        box   9.96 x  66.72  left   -5.29 right    4.67 top    3.50 bottom   70.22
+  ours  box  11.40 x  62.11  left   -6.82 right    4.58 top    2.83 bottom   64.94
+        content((-0.93, 2.45), [#text(fill: rgb("#a60000"))[uncapped band]], anchor: "east", angle: 90deg, padding: 0.1cm)
+        delta (ours - pgf): box  +1.44 x  -4.61  left  -1.53 right  -0.09 top  -0.66 bottom  -5.27
+
+NODE 02  tsv 5  A-directional-zero-one-law-under-s pic=0  [rotate=90,anchor=south]  at (-.45,-1.95)
+  src line 1373: \node[rotate=90,anchor=south] at (-.45,-1.95) {progress $-x_1$};
+  pgf   rc=0 pdf=m101g_pgf_01.pdf bytes=36232 mtime=2026-10-17 10:08:42
+        box  10.93 x  56.33  left  -13.37 right   -2.44 top  -27.92 bottom   28.41
+  ours  box  12.77 x  54.76  left  -14.24 right   -1.48 top  -27.10 bottom   27.66
+        content((-0.45, -1.95), [progress $-x_1$], anchor: "south", angle: 90deg, padding: 0.1cm)
+        delta (ours - pgf): box  +1.84 x  -1.56  left  -0.87 right  +0.96 top  +0.81 bottom  -0.75
+
+NODE 03  tsv 6  A-directional-zero-one-law-under-s pic=1  [rotate=90,anchor=south]  at (-1.0,2.3)
+  src line 2108: \node[rotate=90,anchor=south] at (-1.0,2.3) {height $x_1$};
+  pgf   rc=0 pdf=m101g_pgf_02.pdf bytes=28011 mtime=2026-10-17 10:08:43
+        box  10.80 x  39.83  left  -13.24 right   -2.44 top  -19.67 bottom   20.16
+  ours  box  12.77 x  38.30  left  -14.24 right   -1.48 top  -18.87 bottom   19.43
+        content((-1, 2.3), [height $x_1$], anchor: "south", angle: 90deg, padding: 0.1cm)
+        delta (ours - pgf): box  +1.96 x  -1.53  left  -1.00 right  +0.96 top  +0.80 bottom  -0.73
+
+NODE 04  tsv 7  Finite-triangular-approximation-of pic=1  [anchor=east,rotate=90]  at (-1.17,0)
+  src line 653: \node[anchor=east,rotate=90] at (-1.17,0) {$-1\le y\le1$};
+  pgf   rc=0 pdf=m101g_pgf_03.pdf bytes=25715 mtime=2026-10-17 10:08:44
+        box  10.09 x  49.52  left   -5.67 right    4.42 top    3.52 bottom   53.04
+  ours  box  10.00 x  49.63  left   -5.67 right    4.33 top    2.83 bottom   52.47
+        content((-1.17, 0), [$-1 lt.eq y lt.eq 1$], anchor: "east", angle: 90deg, padding: 0.1cm)
+        delta (ours - pgf): box  -0.09 x  +0.11  left  +0.00 right  -0.09 top  -0.68 bottom  -0.57
+
+NODE 05  tsv 8  Generic-C1-Future-Inextendibility- pic=1  [anchor=west,rotate=-63]  at (3.7,1.95)
+  src line 4076: \node[anchor=west,rotate=-63] at (3.7,1.95) {$R_{\mathrm{out}}$};
+  pgf   rc=0 pdf=m101g_pgf_04.pdf bytes=17656 mtime=2026-10-17 10:08:45
+        box  14.11 x  21.88  left   -2.71 right   11.40 top    0.81 bottom   22.69
+  ours  box  12.59 x  21.17  left   -2.35 right   10.24 top   -0.16 bottom   21.01
+        content((3.7, 1.95), [$R_( upright("out") )$], anchor: "west", angle: -63deg, padding: 0.1cm)
+        delta (ours - pgf): box  -1.52 x  -0.71  left  +0.36 right  -1.16 top  -0.97 bottom  -1.68
+
+NODE 06  tsv 9  Mass-and-covering-exponents-for-fi pic=3  [rotate=90,anchor=south]  at (3.03,1.47)
+  src line 1289: \node[rotate=90,anchor=south] at (3.03,1.47) {return bridge};
+  pgf   rc=0 pdf=m101g_pgf_05.pdf bytes=13034 mtime=2026-10-17 10:08:46
+        box   9.96 x  57.66  left  -13.24 right   -3.28 top  -28.84 bottom   28.82
+  ours  box  11.40 x  54.11  left  -14.15 right   -2.75 top  -27.06 bottom   27.06
+        content((3.03, 1.47), [return bridge], anchor: "south", angle: 90deg, padding: 0.1cm)
+        delta (ours - pgf): box  +1.44 x  -3.55  left  -0.91 right  +0.53 top  +1.79 bottom  -1.77
+
+NODE 07  tsv 10  Smooth-Anisotropic-Uniqueness-in-t pic=1  [rotate=90,anchor=south]  at (-0.15,1.68)
+  src line 961: \node[rotate=90,anchor=south] at (-0.15,1.68) {$D_2$ (second variable)};
+  pgf   rc=0 pdf=m101g_pgf_06.pdf bytes=29847 mtime=2026-10-17 10:08:47
+        box  10.80 x  90.02  left  -13.80 right   -2.99 top  -45.01 bottom   45.01
+  ours  box  12.77 x  83.68  left  -14.24 right   -1.48 top  -41.84 bottom   41.84
+        content((-0.15, 1.68), [$D_2$ \(second variable\)], anchor: "south", angle: 90deg, padding: 0.1cm)
+        delta (ours - pgf): box  +1.96 x  -6.34  left  -0.45 right  +1.52 top  +3.17 bottom  -3.16
+
+NODE 08  tsv 11  Smooth-Anisotropic-Uniqueness-in-t pic=2  [rotate=45,anchor=south,inner sep=3pt]  at (2.011,0.861)
+  src line 1982: \node[rotate=45,anchor=south,inner sep=3pt] at (2.011,0.861) {$r_\delta(y)$};
+  pgf   rc=0 pdf=m101g_pgf_07.pdf bytes=25662 mtime=2026-10-17 10:08:48
+        box  22.50 x  22.50  left  -17.25 right    5.25 top  -17.25 bottom    5.25
+  ours  box  22.44 x  22.44  left  -17.30 right    5.14 top  -17.30 bottom    5.14
+        content((2.011, 0.861), [$r_ delta (y)$], anchor: "south", angle: 45deg, padding: 0.1058cm)
+        delta (ours - pgf): box  -0.06 x  -0.06  left  -0.05 right  -0.11 top  -0.05 bottom  -0.11
+
+NODE 09  tsv 12  The-Boltzmann-Grad-limit-for-stabl pic=0  [rotate=90,anchor=south,font=\footnotesize]  at (-2.72,1.5)
+  src line 354: \node[rotate=90,anchor=south,font=\footnotesize] at (-2.72,1.5) {backward time};
+  pgf   rc=0 pdf=m101g_pgf_08.pdf bytes=11336 mtime=2026-10-17 10:08:49
+        box   7.97 x  54.32  left   -9.75 right   -1.78 top  -27.15 bottom   27.17
+  ours  box   9.12 x  48.30  left  -10.09 right   -0.97 top  -24.15 bottom   24.15
+        content((-2.72, 1.5), [#text(size: 8pt)[backward time]], anchor: "south", angle: 90deg, padding: 0.1cm)
+        delta (ours - pgf): box  +1.15 x  -6.02  left  -0.34 right  +0.81 top  +3.00 bottom  -3.02
+
+NODE 10  tsv 13  uniform-bounds-for-planar-polynomi pic=2  [rotate=34,anchor=south]  at (1.05,0.96)
+  src line 5382: \node[rotate=34,anchor=south] at (1.05,0.96) {$a=b_f$};
+  pgf   rc=0 pdf=m101g_pgf_09.pdf bytes=25502 mtime=2026-10-17 10:08:50
+        box  28.18 x  21.03  left  -19.52 right    8.67 top  -16.68 bottom    4.35
+  ours  box  28.88 x  21.10  left  -19.84 right    9.04 top  -17.28 bottom    3.83
+        content((1.05, 0.96), [$a=b_f$], anchor: "south", angle: 34deg, padding: 0.1cm)
+        delta (ours - pgf): box  +0.69 x  +0.08  left  -0.32 right  +0.38 top  -0.60 bottom  -0.52
+

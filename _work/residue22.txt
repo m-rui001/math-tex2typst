@@ -1,0 +1,82 @@
+files with residue: 35 ; occurrences: 344
+zones: {'markup': 44, 'math': 295, 'code': 5}
+    41  \arrow            
+          A-rational-obstruction:$ "(3.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n \\mathscr{D}_C^{\\mathrm{or}}\n    \\arrow[r,bend left=18,\"\\ma
+          An-Integral-Counterexa:$ "\\begin{tikzcd}[column sep=large,row sep=large]\n \\operatorname{Typ}(h)\\arrow[r,\"1\"]\\arrow[d,\"1\"']&\n \\operat
+          Global-quantum-geometr:$ "(13.5)" quad "\n\n \\begin{gathered}\n \\begin{tikzcd}[ampersand replacement=\\&,column sep=large,row sep=large]\n \\
+    35  \@l               
+          Random-coordinate-fram:The degree assertions follow from [22] Theorem nameusecompanion\@l:degree-all-powers. The same companion gives separate 
+          Random-coordinate-fram:For $v in V_rho$, write $v_i = Q_i v$ and $W_i = "span" { rho \( h \) v_i : h in H_i }$. The single-vector orbit lemma [
+          Random-coordinate-fram:Its transform is the projection $P_(sigma \, H \, tau)$ onto all copies of $tau$ in $sigma \|_H$. Thus $accent(f * e_(H 
+    17  \begin            
+          A-rational-obstruction:$ "(3.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n \\mathscr{D}_C^{\\mathrm{or}}\n    \\arrow[r,bend left=18,\"\\ma
+          An-Integral-Counterexa:$ "\\begin{tikzcd}[column sep=large,row sep=large]\n \\operatorname{Typ}(h)\\arrow[r,\"1\"]\\arrow[d,\"1\"']&\n \\operat
+          Cylinder-loop-weights-:$ "\\begin{array}{c|c|c}\n &\\text{sign matrix}&\\text{order matrix at }r=0\\\\\\hline\n\\text{same group}&\n \\begin{pm
+    17  \end              
+          A-rational-obstruction:$ "(3.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n \\mathscr{D}_C^{\\mathrm{or}}\n    \\arrow[r,bend left=18,\"\\ma
+          An-Integral-Counterexa:$ "\\begin{tikzcd}[column sep=large,row sep=large]\n \\operatorname{Typ}(h)\\arrow[r,\"1\"]\\arrow[d,\"1\"']&\n \\operat
+          Cylinder-loop-weights-:$ "\\begin{array}{c|c|c}\n &\\text{sign matrix}&\\text{order matrix at }r=0\\\\\\hline\n\\text{same group}&\n \\begin{pm
+    15  \ref              
+          Planar-Graph-Metrics-E:$ "(\\ref{ord:support}.1)" quad f_a \( H \) = min { \| H - h \( k \) \| \, D } = min_i f_i \( H \) . $ <ord:root-minimum
+          Planar-Graph-Metrics-E:$ "(\\ref{ord:support}.2)" quad f_z \( H \) gt.eq c #h(2em) \( z in \[ p \, q \]_a \) . $ <ord:collision>
+          Planar-Graph-Metrics-E:Indeed, a strict-sublevel path from any column $z$ with $f_z \( H \) < c$ to $a$ avoids $p \, q$, whereas Lemma 5 forbid
+    14  \qquad            
+          A-rational-obstruction:$ "(3.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n \\mathscr{D}_C^{\\mathrm{or}}\n    \\arrow[r,bend left=18,\"\\ma
+          Abundance-in-numerical:$ "(5.14)" quad "\n\n B^1\\longhookrightarrowactual F_*\\Omega,\n \\qquad\n (B^1)^!\\longhookrightarrowactual F_*\\omega
+          An-Integral-Counterexa:$ "\\begin{tikzcd}[column sep=large,row sep=large]\n \\operatorname{Typ}(h)\\arrow[r,\"1\"]\\arrow[d,\"1\"']&\n \\operat
+    14  \vrule            
+          Sharp-integral-filling:$ "\\|C\\mathbin{\\vrule height 1.4ex depth -0.3ex width .07ex\\vrule height .07ex depth 0ex width .7ex} E\\|=\\|C\\|\\m
+          Sharp-integral-filling:The restricted current need not be normal. If $u : Y arrow.r bb(R)$ is Lipschitz and $C in upright(bold(I))_k \( Y \)$, 
+          Sharp-integral-filling:The pushforward and Borel-coefficient properties are part of the basic current calculus of #cite(label("AK2000")). The e
+    10  \ast              
+          B-semiampleness-for-co:$ "(\\(\\ast\\))" quad F^d bb(V)_x tilde.eq H^0 \( Z_x \, omega_(Z_x) \( H_x \) \) . $
+          Commuting-Division-Coe:$ "(\\(\\ast\\))" quad "ch" #h(-1em) (sum_(j = 0)^h q_j \( 1 - \[ cal(O)_(D_0) \( - 1 \) \] \)^j) . $
+          Signed-tensor-densitie:$ "($\\ast$)" quad "Tr"_lambda X Y lt.eq frac("Tr"_(cal(K)) X Y, w_omega f^(lambda \/ omega)) . $
+     7  \relax            
+          A-positive-solution-to:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<11\\baselineskip\\relax\\newpage\\fi
+          A-positive-solution-to:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<6\\baselineskip\\relax\\newpage\\fi
+          Cardys-formula-for-cri:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<6\\baselineskip \\fi
+     7  \operatorname     
+          An-Integral-Counterexa:$ "\\begin{tikzcd}[column sep=large,row sep=large]\n \\operatorname{Typ}(h)\\arrow[r,\"1\"]\\arrow[d,\"1\"']&\n \\operat
+          Exact-Birch-Swinnerton:$ "(11)" quad "\n \\begin{split}\n B_w&=\\text{\\mathrm{unit}}\\cdot(b_w^0)^2D,\\\\\n D&=\\prod_{q\\in S^\\circ}\n P_q(\
+          Uniformization-of-comp:$ "(2.7)" quad "\n\n \\|\\boldone_E\\mathcal{H}_a\\boldone_F\\|_{2\\to2}\n \\le C\\exp\\bigl(-c\\operatorname{dist}(E,F)
+     7  \text             
+          An-Integral-Counterexa:$ "\\begin{tikzcd}[column sep=large,row sep=large]\n \\operatorname{Typ}(h)\\arrow[r,\"1\"]\\arrow[d,\"1\"']&\n \\operat
+          Cylinder-loop-weights-:$ "\\begin{array}{c|c|c}\n &\\text{sign matrix}&\\text{order matrix at }r=0\\\\\\hline\n\\text{same group}&\n \\begin{pm
+          Exact-Birch-Swinnerton:$ "(11)" quad "\n \\begin{split}\n B_w&=\\text{\\mathrm{unit}}\\cdot(b_w^0)^2D,\\\\\n D&=\\prod_{q\\in S^\\circ}\n P_q(\
+     7  \mathbin          
+          Sharp-integral-filling:$ "\\|C\\mathbin{\\vrule height 1.4ex depth -0.3ex width .07ex\\vrule height .07ex depth 0ex width .7ex} E\\|=\\|C\\|\\m
+          Sharp-integral-filling:The restricted current need not be normal. If $u : Y arrow.r bb(R)$ is Lipschitz and $C in upright(bold(I))_k \( Y \)$, 
+          Sharp-integral-filling:The pushforward and Borel-coefficient properties are part of the basic current calculus of #cite(label("AK2000")). The e
+     6  \ifdim            
+          A-positive-solution-to:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<11\\baselineskip\\relax\\newpage\\fi
+          A-positive-solution-to:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<6\\baselineskip\\relax\\newpage\\fi
+          Bounded-klt-complement:= by - \\ifdim\\dimen0\<7\\baselineskip
+     6  \baselineskip     
+          A-positive-solution-to:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<11\\baselineskip\\relax\\newpage\\fi
+          A-positive-solution-to:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<6\\baselineskip\\relax\\newpage\\fi
+          Bounded-klt-complement:= by - \\ifdim\\dimen0\<7\\baselineskip
+     6  \fi               
+          A-positive-solution-to:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<11\\baselineskip\\relax\\newpage\\fi
+          A-positive-solution-to:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<6\\baselineskip\\relax\\newpage\\fi
+          Bounded-klt-complement:\\fi
+     6  \mathrm           
+          A-rational-obstruction:$ "(3.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n \\mathscr{D}_C^{\\mathrm{or}}\n    \\arrow[r,bend left=18,\"\\ma
+          Blochs-Conjecture-for-:$ "h^1/h^0(T_{\\mathrm{prod}}^\\mathrm{vir})\n       \\longhookrightarrowactual\n h^1/h^0(T_{U_b}^\\mathrm{vir})" $
+          Exact-Birch-Swinnerton:$ "(11)" quad "\n \\begin{split}\n B_w&=\\text{\\mathrm{unit}}\\cdot(b_w^0)^2D,\\\\\n D&=\\prod_{q\\in S^\\circ}\n P_q(\
+     6  \rho              
+          Invariant-anticanonica:$ "\\begin{tikzcd}[column sep=large]\nV\\arrow[r,\"\\rho\"]\\arrow[dr,bend right=15,\"f\"']&\nU\\arrow[r,\"b\"]\\arrow[d
+          The-Bogomolov-Pop-reco:$ "(14)" quad "\n\n\\begin{tikzcd}[column sep=large]\n W_L \\arrow[r,\"\\varphi\"] \\arrow[d,two heads,\"\\rho_P\"']\n  
+          Uniformization-of-comp:$ "(5.26)" quad "\n |\\Delta_{h_t}k_1|\\le C e^\\rho\\delta_1^{-3}\n                         \\boldone_{\\{\\chi_1=1\\}}
+     5  \dimexpr          
+          A-positive-solution-to:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<11\\baselineskip\\relax\\newpage\\fi
+          A-positive-solution-to:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<6\\baselineskip\\relax\\newpage\\fi
+          Cardys-formula-for-cri:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<6\\baselineskip \\fi
+     5  \pagegoal         
+          A-positive-solution-to:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<11\\baselineskip\\relax\\newpage\\fi
+          A-positive-solution-to:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<6\\baselineskip\\relax\\newpage\\fi
+          Cardys-formula-for-cri:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<6\\baselineskip \\fi
+     5  \pagetotal        
+          A-positive-solution-to:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<11\\baselineskip\\relax\\newpage\\fi
+          A-positive-solution-to:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<6\\baselineskip\\relax\\newpage\\fi
+          Cardys-formula-for-cri:\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax\<6\\baselineskip \\fi

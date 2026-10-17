@@ -1,0 +1,30 @@
+{
+  "paper": "Virtual-compact-specialness-of-hyperbolic-one-relator-groups-September-25-2026",
+  "ok": true,
+  "typ_lines": 3093,
+  "included_pdf_pages": 0,
+  "formulas": 1763,
+  "math_failed": 0,
+  "labels": 301,
+  "equations": 0,
+  "theorems": 1,
+  "figures": 5,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 5
+  },
+  "samples": {
+    "formulas": "1763",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n   ┌─ \\\\?\\E:\\math\\typst\\Virtual-compact-specialness-of-hyperbolic-one-relator-groups-September-25-2026\\main.typ:99:242\n   │\n99 │ We use residual finiteness, virtual RFRS, quasiconvex subgroup separability and virtual retractions for hyperbolic VCS groups [1,28,29,66]. The malnormal special quotient theorem supplies designated finite-index normal subgroups $dot(P)_i lt.tri.eq P_i$ for a finite almost malnormal quasiconvex peripheral family. Normal finite-index kernels $N_i lt.tri.eq P_i$ contained in $dot(P)_i$ give hyperbolic VCS quotients [3] Theorem 2.7 and Corollary 2.8. We retain this containment condition at every use; it is not replaced by finite avoidance. Additional finite avoidance conditions can be imposed by further intersections. Exact peripheral embeddings follow from the relative Dehn filling theorem [55] Theorem 1.1.\n   │                                                                                                                                                                                                                                                   ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n   ┌─ \\\\?\\E:\\math\\typst\\Virtual-compact-specialness-of-hyperbolic-one-relator-groups-September-25-2026\\main.typ:99:351\n   │\n99 │ We use residual finiteness, virtual RFRS, quasiconvex subgroup separability and virtual retractions for hyperbolic VCS groups [1,28,29,66]. The malnormal special quotient theorem supplies designated finite-index normal subgroups $dot(P)_i lt.tri.eq P_i$ for a finite almost malnormal quasiconvex peripheral family. Normal finite-index kernels $N_i lt.tri.eq P_i$ contained in $dot(P)_i$ give hyperbolic VCS quotients [3] Theorem 2.7 and Corollary 2.8. We retain this containment condition at every use; it is not replaced by finite avoidance. Additional finite avoidance conditions can be imposed by further intersections. Exact peripheral embeddings follow from the relative Dehn filling theorem [55] Theorem 1.1.\n   │                                                                                                                                                                                                                                                                                                                                                                ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Virtual-compact-specialness-of-hyperbolic-one-relator-groups-September-25-2026\\main.typ:167:553\n    │\n167 │ By malnormal quasiconvex peripheralization, the pair $\\( G_(*) \\, { D_j } \\)$ is relatively hyperbolic [11,53]. Suppose a sufficiently deep good filling as in Theorem 5(iii) has been chosen, written $q : G_(*) arrow.r Q$. Choose this first filling to preserve every nonidentity element of the total prescribed original finite list. Its peripheral images $P_j = q \\( D_j \\)$ form an almost malnormal quasiconvex family in the hyperbolic VCS group $Q$. The malnormal special quotient theorem supplies designated finite-index normal subgroups $dot(P)_j lt.tri.eq P_j$ [3] Theorem 2.7 and Corollary 2.8.\n    │                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Virtual-compact-specialness-of-hyperbolic-one-relator-groups-September-25-2026\\main.typ:169:78\n    │\n169 │ Each $P_j$ is residually finite. Choose fi",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 16,
+  "source": "E:\\math\\_work\\flat\\Virtual-compact-specialness-of-hyperbolic-one-relator-groups-September-25-2026.tex"
+}

@@ -1,0 +1,212 @@
+[
+ {
+  "tok": "\\lem",
+  "undef": 13,
+  "prefix": "\\le",
+  "tail": "m"
+ },
+ {
+  "tok": "\\inX",
+  "undef": 9,
+  "prefix": "\\in",
+  "tail": "X"
+ },
+ {
+  "tok": "\\betam",
+  "undef": 5,
+  "prefix": "\\beta",
+  "tail": "m"
+ },
+ {
+  "tok": "\\langleg",
+  "undef": 4,
+  "prefix": "\\langle",
+  "tail": "g"
+ },
+ {
+  "tok": "\\langlev",
+  "undef": 3,
+  "prefix": "\\langle",
+  "tail": "v"
+ },
+ {
+  "tok": "\\rangleG",
+  "undef": 3,
+  "prefix": "\\rangle",
+  "tail": "G"
+ },
+ {
+  "tok": "\\toM",
+  "undef": 3,
+  "prefix": "\\to",
+  "tail": "M"
+ },
+ {
+  "tok": "\\langlex",
+  "undef": 3,
+  "prefix": "\\langle",
+  "tail": "x"
+ },
+ {
+  "tok": "\\texttcaxe",
+  "undef": 2,
+  "prefix": "\\text",
+  "tail": "tcaxe"
+ },
+ {
+  "tok": "\\toX",
+  "undef": 2,
+  "prefix": "\\to",
+  "tail": "X"
+ },
+ {
+  "tok": "\\langleV",
+  "undef": 2,
+  "prefix": "\\langle",
+  "tail": "V"
+ },
+ {
+  "tok": "\\lambdaG",
+  "undef": 2,
+  "prefix": "\\lambda",
+  "tail": "G"
+ },
+ {
+  "tok": "\\lambdah",
+  "undef": 1,
+  "prefix": "\\lambda",
+  "tail": "h"
+ },
+ {
+  "tok": "\\ltl",
+  "undef": 1,
+  "prefix": "\\lt",
+  "tail": "l"
+ },
+ {
+  "tok": "\\sqrth",
+  "undef": 1,
+  "prefix": "\\sqrt",
+  "tail": "h"
+ },
+ {
+  "tok": "\\ranglem",
+  "undef": 1,
+  "prefix": "\\rangle",
+  "tail": "m"
+ },
+ {
+  "tok": "\\ellr",
+  "undef": 1,
+  "prefix": "\\ell",
+  "tail": "r"
+ },
+ {
+  "tok": "\\leqc",
+  "undef": 1,
+  "prefix": "\\leq",
+  "tail": "c"
+ },
+ {
+  "tok": "\\deltaR",
+  "undef": 1,
+  "prefix": "\\delta",
+  "tail": "R"
+ },
+ {
+  "tok": "\\lceilD",
+  "undef": 1,
+  "prefix": "\\lceil",
+  "tail": "D"
+ },
+ {
+  "tok": "\\langleB",
+  "undef": 1,
+  "prefix": "\\langle",
+  "tail": "B"
+ },
+ {
+  "tok": "\\ella",
+  "undef": 1,
+  "prefix": "\\ell",
+  "tail": "a"
+ },
+ {
+  "tok": "\\textrewol",
+  "undef": 1,
+  "prefix": "\\text",
+  "tail": "rewol"
+ },
+ {
+  "tok": "\\hookrightarrowX",
+  "undef": 1,
+  "prefix": "\\hookrightarrow",
+  "tail": "X"
+ },
+ {
+  "tok": "\\langleA",
+  "undef": 1,
+  "prefix": "\\langle",
+  "tail": "A"
+ },
+ {
+  "tok": "\\langleH",
+  "undef": 1,
+  "prefix": "\\langle",
+  "tail": "H"
+ },
+ {
+  "tok": "\\deltaM",
+  "undef": 1,
+  "prefix": "\\delta",
+  "tail": "M"
+ },
+ {
+  "tok": "\\operatornameSm",
+  "undef": 1,
+  "prefix": "\\operatorname",
+  "tail": "Sm"
+ },
+ {
+  "tok": "\\alphah",
+  "undef": 1,
+  "prefix": "\\alpha",
+  "tail": "h"
+ },
+ {
+  "tok": "\\setu",
+  "undef": 1,
+  "prefix": "\\set",
+  "tail": "u"
+ },
+ {
+  "tok": "\\mapstoK",
+  "undef": 1,
+  "prefix": "\\mapsto",
+  "tail": "K"
+ },
+ {
+  "tok": "\\langley",
+  "undef": 1,
+  "prefix": "\\langle",
+  "tail": "y"
+ },
+ {
+  "tok": "\\langleF",
+  "undef": 1,
+  "prefix": "\\langle",
+  "tail": "F"
+ },
+ {
+  "tok": "\\langleu",
+  "undef": 1,
+  "prefix": "\\langle",
+  "tail": "u"
+ },
+ {
+  "tok": "\\langlef",
+  "undef": 1,
+  "prefix": "\\langle",
+  "tail": "f"
+ }
+]

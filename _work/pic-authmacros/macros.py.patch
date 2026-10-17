@@ -1,0 +1,40 @@
+--- a/t2t/macros.py
++++ b/t2t/macros.py
+@@ -120,10 +120,24 @@
+                 changed = True
+ 
+ 
+-UNSAFE = ("\\if", "\\csname", "\\expandafter", "\\else", "\\fi", "\\@if",
+-          "\\edef", "\\let", "\\futurelet", "\\noexpand", "\\romannumeral",
+-          "\\begingroup", "\\BeginAccSupp", "\\EndAccSupp", "\\pdfliteral",
+-          "\\ActualText", "\\special", "\\protect")
++UNSAFE = ("csname", "expandafter", "else", "fi", "edef", "let", "futurelet",
++          "noexpand", "romannumeral", "begingroup", "BeginAccSupp", "EndAccSupp",
++          "pdfliteral", "ActualText", "special", "protect")
++
++# TeX ends a control word at the first non-letter, and the safety test has to read a name the
++# same way: as a substring `\fi` stands inside `\fill`, so every \newcommand that fills a path --
++# which is how a TikZ picture is drawn -- was refused as a conditional. `\if` is a family
++# (\ifx, \ifdim, \@ifnextchar) rather than one word, so it still marks its whole prefix.
++CONTROL_WORD = re.compile(r"\\([@A-Za-z]+)")
++
++
++def _unsafe(body):
++    """Whether a macro body holds a conditional or a piece of PDF plumbing."""
++    for m in CONTROL_WORD.finditer(body):
++        bare = m.group(1).lstrip("@")
++        if bare in UNSAFE or bare.startswith("if"):
++            return True
++    return False
+ 
+ 
+ def _parse_one(text, after, cmd):
+@@ -204,7 +218,7 @@
+         kind = "operator"
+     else:
+         kind = "env" if cmd == "\\newenvironment" else "macro"
+-    if any(u in body for u in UNSAFE):
++    if _unsafe(body):
+         raise ValueError("conditional body")
+     if nargs == 0:
+         nargs = max_iter(body)

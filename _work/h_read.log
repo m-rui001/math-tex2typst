@@ -1,0 +1,37 @@
+==== D31-非谱形双曲锥.md  sites=3
+    304 PROSE  INLINE    \sum vv^\H
+   1171 TABLE  INLINE    R-R^\H=-(z-\bar z)R^\H R
+   1171 TABLE  INLINE    M=1+\Phi(R^\H R)\succ0
+  following-chars: '<EOL>' x1, '=-(' x1, ' R' x1, ' R)' x1
+==== D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md  sites=30
+    193 PROSE  INLINE    \H^n
+    209 PROSE  INLINE    \H^n\restrict E
+    209 PROSE  INLINE    \H^n
+    209 PROSE  INLINE    \H^n
+    383 PROSE  INLINE    \sigma=\theta\H^n\restrict L
+    389 PROSE  INLINE    g=d\sigma/d\H^n
+    389 PROSE  INLINE    \H^n
+    391 PROSE  INLINE    \H^n
+    391 PROSE  INLINE    \H^n\restrict E
+    403 PROSE  INLINE    \sigma=q\H^n\restrict L_\infty
+    447 PROSE  INLINE    \H^n
+    467 QUOTE  INLINE    \nu=q\H^n|_L
+    467 QUOTE  INLINE    \H^n|_L
+    545 PROSE  INLINE    \nu=q\H^n\restrict L_\infty
+    603 PROSE  INLINE    c\H^n\restrict E\le\mu\le C\H^n\restrict E
+    603 PROSE  INLINE    \H^n_\eta(F)\le C_nC_{\rm AD}\mu(U)
+    613 QUOTE  INLINE    \H^n
+    617 PROSE  INLINE    (\log8)\H^n(E)
+    617 PROSE  INLINE    \H^n
+    619 PROSE  INLINE    \H^n
+    619 PROSE  INLINE    \H^n\restrict E
+    619 PROSE  INLINE    \H^n
+    633 PROSE  INLINE    \sigma=\mu+\H^n\restrict P
+    705 TABLE  INLINE    c\H^n\restrict E\le\mu\le C\H^n\restrict E
+    705 TABLE  INLINE    \H^n_\eta(F)\le C_nC_{\rm AD}\mu(U)
+    939 PROSE  INLINE    \sigma=\mu+\H^n\restrict P
+    943 PROSE  INLINE    \H^n
+   1009 PROSE  INLINE    \H^n
+   1009 PROSE  INLINE    \H^n
+   1009 PROSE  INLINE    \H^n
+  following-chars: '^n' x15, '^n\\' x12, '^n|' x2, '^n_' x2, '^n(' x1

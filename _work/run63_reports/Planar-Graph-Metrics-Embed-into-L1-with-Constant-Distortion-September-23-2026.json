@@ -1,0 +1,30 @@
+{
+  "paper": "Planar-Graph-Metrics-Embed-into-L1-with-Constant-Distortion-September-23-2026",
+  "ok": true,
+  "typ_lines": 1229,
+  "included_pdf_pages": 0,
+  "formulas": 783,
+  "math_failed": 0,
+  "labels": 139,
+  "equations": 39,
+  "theorems": 1,
+  "figures": 3,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 3
+  },
+  "samples": {
+    "formulas": "783",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Planar-Graph-Metrics-Embed-into-L1-with-Constant-Distortion-September-23-2026.tex"
+}

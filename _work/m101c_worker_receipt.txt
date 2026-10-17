@@ -1,0 +1,83 @@
+========================================================================
+m101c — §7 `every edge` 前提检查
+step1: 在 _work/flat/*.tex（顶层）找 every edge 定义（拼写候选已列）
+========================================================================
+  [1] A-Counterexample-to-Walls-D2-Problem-October-6-2026:374
+       原文: every edge/.style={draw,->,semithick},
+  [2] Milnes-rationality-conjecture-for-abelian-varieties-September-23-2026:339
+       原文: every edge/.style={draw,->,thick},
+  [3] Ordinary-two-point-correlations-of-multiplicative-functions-September-24-2026:4235
+       原文: every edge/.style={font=\small}]
+  [4] Quasipolynomial-Bounds-for-Arithmetic-Progressions-September-23-2026:742
+       原文: every edge/.style={draw,->},node distance=1.05cm and 1.1cm]
+
+step1 小计：找到 4 处 every edge 定义（预期 4 处 / 4 篇）
+
+========================================================================
+step2/3/4：逐处——edge 算子是否走到 + 控制页墨 + typst thickness 字符串计数
+========================================================================
+
+-- 案 1: A-Counterexample-to-Walls-D2-Problem-October-6-2026 (定义行 374)
+   定义原文: every edge/.style={draw,->,semithick},
+   带笔? semithick
+   step2: 该 tikzpicture 行 371-390；edge 词总数=4（含定义 1）=> 真·edge 算子=3
+       源语句 381: \path (F) edge node[above,sloped] {$f_{i+1}$} (next);
+       源语句 384: \path (cover) edge node[right] {$p_i$} (base);
+       源语句 387: \path (F) edge node[below,sloped] {$f_i$} (base);
+   step3: 控制页字号=11pt；笔画条数=5；非默认线宽(>0.40pt)条数=5
+       控制页 fitz 量到的描边线宽(pt)集合=[0.5978]
+       控制页 pdf: mtime=1792201249.003134, bytes=83769
+   step4: typst main.typ 只读文本；thickness: 共 4 处，分布=0.6pt×4
+
+-- 案 2: Milnes-rationality-conjecture-for-abelian-varieties-September-23-2026 (定义行 339)
+   定义原文: every edge/.style={draw,->,thick},
+   带笔? thick
+   step2: 该 tikzpicture 行 334-361；edge 词总数=7（含定义 1）=> 真·edge 算子=6
+       源语句 346: \path (A) edge node[left,note] {reduction} (A0);
+       源语句 347: \path (C) edge node[right,note] {reduction} (C0);
+       源语句 348: \path (A0) edge node[above] {$a_{\mathrm{CM}}$} (C0);
+       源语句 355: \path (Z) edge node[left,note] {reduction} (Z0);
+       源语句 356: \path (B) edge node[right,note] {reduction} (B0);
+       源语句 357: \path (Z0) edge node[above] {$a_{\mathrm{fl}}$} (B0);
+   step3: 控制页字号=11pt；笔画条数=9；非默认线宽(>0.40pt)条数=6
+       控制页 fitz 量到的描边线宽(pt)集合=[0.398, 0.797]
+       控制页 pdf: mtime=1792201250.3964388, bytes=152420
+   step4: typst main.typ 只读文本；thickness: 共 14 处，分布=0.4pt×8, 0.8pt×6
+
+-- 案 3: Ordinary-two-point-correlations-of-multiplicative-functions-September-24-2026 (定义行 4235)
+   定义原文: every edge/.style={font=\small}]
+   带笔? 无（只带 draw/->/font 等，无线宽）
+   step2: 该 tikzpicture 行 4233-4246；edge 词总数=1（含定义 1）=> 真·edge 算子=0
+       源语句:（无裸 edge 算子）
+   step3: 控制页字号=11pt；笔画条数=10；非默认线宽(>0.40pt)条数=10
+       控制页 fitz 量到的描边线宽(pt)集合=[0.797]
+       控制页 pdf: mtime=1792201251.86966, bytes=30194
+   step4: typst main.typ 只读文本；thickness: 共 19 处，分布=0.4pt×5, 0.8pt×10, 1.2pt×4
+
+-- 案 4: Quasipolynomial-Bounds-for-Arithmetic-Progressions-September-23-2026 (定义行 742)
+   定义原文: every edge/.style={draw,->},node distance=1.05cm and 1.1cm]
+   带笔? 无（只带 draw/->/font 等，无线宽）
+   step2: 该 tikzpicture 行 738-753；edge 词总数=6（含定义 1）=> 真·edge 算子=5
+       源语句 748: \path (warm) edge (loss)
+       源语句 749: (warm) edge (cold)
+       源语句 750: (own) edge (cold)
+       源语句 751: (loss) edge (cold)
+       源语句 752: (cold) edge (next);
+   step3: 控制页字号=11pt；笔画条数=10；非默认线宽(>0.40pt)条数=0
+       控制页 fitz 量到的描边线宽(pt)集合=[0.3985]
+       控制页 pdf: mtime=1792201253.052784, bytes=47656
+   step4: typst main.typ 只读文本；thickness: 共 25 处，分布=0.4pt×17, 0.8pt×8
+
+========================================================================
+step5：回执结论（三档之一）
+========================================================================
+带笔的案（semithick/thick）：2 处
+  · A-Counterexample-to-Walls-D2-Problem-October-6-2026  笔=semithick  edge算子=3  控制页笔画=5 非默认线宽=5  控制页线宽集=[0.5978]  typst-thickness={'0.6': 4}
+    -> pgf 笔=semithick(≈0.6pt)；typst 画布 thickness 取值=0.6
+  · Milnes-rationality-conjecture-for-abelian-varieties-September-23-2026  笔=thick  edge算子=6  控制页笔画=9 非默认线宽=6  控制页线宽集=[0.398, 0.797]  typst-thickness={'0.4': 8, '0.8': 6}
+    -> pgf 笔=thick(≈0.8pt)；typst 画布 thickness 取值=0.4, 0.8
+
+结论：带笔的 2 处——页上均有墨（控制页/fitz 或源确认），且我们的笔（typst）与之完全一致
+   A-Counterexample-to-Walls-D2-Problem-October-6-2026  笔=semithick  pgf≈0.6pt  typst=['0.6']  (控制页有墨且 typst 一致)
+   Milnes-rationality-conjecture-for-abelian-varieties-September-23-2026  笔=thick  pgf≈0.8pt  typst=['0.4', '0.8']  (控制页有墨且 typst 一致)
+   => §7 那一行「带笔 2 处」不构成 pgf↔typst 偏差，不当作缺陷立案：零行动（照实报负结果，clause 7）。

@@ -1,0 +1,5 @@
+note=D769-各维度中的常二重点间隙.md
+bytes=122743 lines=783
+total-tex-mentions=220
+BARE=220
+sample: 02-cone-reduction.tex=55, 04-jet-interiority.tex=36, 01-introduction.tex=30, 06-filtrations.tex=30, 03-small-stabilizers.tex=24, 07-bootstrap.tex=24, 05-adjoint-semigroup.tex=14, 08-conclusion.tex=7

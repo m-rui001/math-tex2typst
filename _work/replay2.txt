@@ -1,0 +1,25 @@
+distinct residue formulas: 1049
+sample converted: '$\\( * \\)$'
+still refused: 503 ; converted on replay: 546
+   181  env:equation           \begin{equation} \beta_B=\delta_i b_\ell \qquad\text{when $B$ is a square in r
+    57  env:tikzcd             \begin{tikzcd} (X',\Delta') \arrow[r,"u"] \arrow[d,"f'"'] & (X,\Delta) \arrow[
+    27  env:array              \begin{array}{c@{\qquad}ccc} \toprule &a&z_i&b\\ \midrule \text{original degre
+    19  \rm                    (({\rm tr}\,p)^2/8-{ \rm tr}(p^2)/4)\ell_\mu\ell_\nu
+    16  \mathcal               (\mathcal A_j)^{\beta_j}=\mathcal N, \qquad (\mathcal A_j)^\sigma \ \text{has 
+    14  env:align              \begin{align} A_{\rm d}(mL^s)&=D_0B_s+X_s,\label{cal:block1}\\ Z_{2,\rm d}(mL^
+    10  env:align*             \begin{align*} \lVert w+v_{kj}\rVert &\ge2-2\mathbb E\min(\lvert\rvert w,\lver
+    10  \eqref                 \eqref{eq:add-available-congruences}
+     8  env:CD                 \begin{CD} L_{\mathcal E^{(b)}} @>{-\widehat\otimes_{\mathcal E^{(b)}}P^{(b)}}
+     8  \mathbb                \mathbb E\left[\left|\left\langle (I-\Pi_k)u_\alpha,(I-\Pi_k)u'_\gamma\right\r
+     8  \operatorname          \operatorname{Tr}_{\rm donor}\left[ (\lvert \theta\rangle\langle \theta\rvert)
+     7  \left                  Cr^{-1}\left(\mathchoice{{\setbox0=\hbox{$\displaystyle\int$}\vcenter{\hbox{$\
+     7  \mathop                G=\mathop{\mathchoice{\mkern2mu\int\mkern-15mu-\mkern7mu}{\mkern2mu\int\mkern-
+     7  \sum                   \sum_\ell d_\ell\geq \operatorname{rank}\left(g\bigm|_{\bigoplus_\ell\operator
+     6  \ref                   (\ref*{geo:secants)
+     5  \le                    0\le\pi(x)\le\left\lVert{x}\right\rVertq
+     5  \langle                JPJ-j\langle \phi'(h^1)s\rangleI
+     5  \nu                    S^{N_i}X^i_\nu/S^{N_i+1}X^i_\nu \quad\text{is countable-dimensional for all su
+     5  \sup                   [v]_{A_a} =\sup_J\left(\mathop{\mathchoice{\mkern2mu\int\mkern-15mu-\mkern7mu}
+     4  \frac                  H_D(a)-H_D(0)=\frac1\mathrm i\partial_tK_D(a;0),\qquad \partial_a^\alpha H_D(a
+     4  \text                  S_v=\{\text{labels of the two edges of $\mathcal C$ incident to $v$}\}.
+     4  env:gathered           \begin{gathered} Z_F\xrightarrow{\ U_{\Delta_{F,0}}\ }Z_{F,\mathrm{ntw}} \xrig

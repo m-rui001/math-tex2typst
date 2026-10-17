@@ -1,0 +1,28 @@
+{
+  "paper": "Linear-Variance-of-the-Random-3-SAT-Hitting-Time-October-5-2026",
+  "ok": true,
+  "typ_lines": 329,
+  "included_pdf_pages": 0,
+  "formulas": 244,
+  "math_failed": 0,
+  "labels": 40,
+  "equations": 2,
+  "theorems": 2,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "244"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`\n   ┌─ \\\\?\\E:\\math\\typst\\Linear-Variance-of-the-Random-3-SAT-Hitting-Time-October-5-2026\\main.typ:63:34\n   │\n63 │ $ S \\[ C \\] = { z in S : z tack.r.double C } . $\n   │                                   ^^^^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 1,
+  "source": "E:\\math\\_work\\flat\\Linear-Variance-of-the-Random-3-SAT-Hitting-Time-October-5-2026.tex"
+}

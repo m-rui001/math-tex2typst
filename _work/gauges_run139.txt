@@ -1,0 +1,62 @@
+=== RUN 139 (post #86, canvas TeX space tokens) 10-14 21:25
+--- probe_gate_all.py
+FAIL A-marked-tensor-obstruction-to-four-dime
+     error: expected expression
+     canvas:   content((3.1, 1.1), [#box(width: 1.45cm, height: 0.8cm, inset: 0.3333em, radius: 4pt, stroke: (thickness: 0.4pt), [#set text(hyphenate: false); #ali
+FAIL A-polynomial-time-algorithm-for-three-ma
+     error: expected function, found content
+     canvas:   content((-0.15, 3.13), [#text(size: 9pt)[Parent $W$]], anchor: "west")
+FAIL A-proof-of-Seymours-second-neighborhood-
+     error: expected function, found content
+     canvas:   content((2.717, -0.2828), (3.283, 0.2828), [#set text(hyphenate: false); #align(center + horizon)[#text(size: 9pt)[$c$]]], frame: "circle", fill: rg
+FAIL An-exponential-state-lower-bound-for-two
+     error: expected function, found content
+     canvas:   content((1.8, 0), [#text(size: 9pt)[$z$]])
+FAIL Disk-transfer-representations-and-confin
+     error: expected function, found content
+     canvas:   content((-3.35, 0.15), [#text(size: 9pt)[$caron(R) (u)$]])
+FAIL Exact-Uniform-Sampling-of-Contingency-Ta
+     error: expected function, found content
+     canvas:   rect((0, 0), (4.8, -2.24), stroke: (thickness: 0.4pt))
+FAIL The-Deligne-Drinfeld-conjecture-Septembe
+     error: expected comma
+     canvas:   content((-2.1, 1.2), [#box(inset: 0.1058cm, stroke: none, fill: rgb("#ffffff"), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bound
+FAIL the-additive-indecomposability-of-the-pr
+     error: expected expression
+     canvas:   content((-3, -1.35), [$d;#h(0.3333em)(p_*,A)$])
+built 918, refused 14, compile-failed 8
+--- residue.py
+files with residue: 0 ; occurrences: 0
+quoted LaTeX on the page: 8 blocks over 8 papers
+zones: {}
+--- summarize_typst.py
+  "compiled": 724,
+  "unique_formulas_within_documents": 761830,
+  "native_formulas_reported": 761721,
+  "latex_formula_fallbacks": 109,
+  "latex_literals_remaining": 0,
+  "documents_with_formula_fallbacks": 51,
+  "documents_with_unhandled_figure_content": 0,
+  "documents_with_unresolved_references": 0,
+  "failed_documents": []
+}
+--- probe_canvas_population.py
+papers 724 / source pictures 932 / canvases on the page 1048
+pictures with no canvas: 8 ; quoted latex blocks: 8 over 8 papers
+  A-marked-tensor-obstruction-to-four-dimensional-disk-embeddi pics=3 canvas=2 quoted=1
+  A-polynomial-time-algorithm-for-three-machine-unit-job-sched pics=4 canvas=3 quoted=1
+  A-proof-of-Seymours-second-neighborhood-conjecture-September pics=1 canvas=0 quoted=1
+  Disk-transfer-representations-and-confined-bridge-mass-Septe pics=4 canvas=3 quoted=1
+  Elliptic-capacity-propagation-and-Fourier-restriction-to-the pics=3 canvas=2 quoted=1
+  Exact-Uniform-Sampling-of-Contingency-Tables-with-Arbitrary- pics=1 canvas=0 quoted=1
+  The-Deligne-Drinfeld-conjecture-September-23-2026            pics=2 canvas=1 quoted=1
+  the-additive-indecomposability-of-the-primes-September-24-20 pics=2 canvas=1 quoted=1
+--- probe_canvas_all_origin.py
+papers=724 canvases_total= degenerate=0
+--- probe83_product_count.py
+population = 724 .typ over 724 papers
+#h(-1em)                 0 occurrences     0 papers
+#h(-0.16667em)        3427 occurrences   425 papers
+#h(0em)                209 occurrences    72 papers
+thin                 38597 occurrences   716 papers
+med                  26032 occurrences   719 papers

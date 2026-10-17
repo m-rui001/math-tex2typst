@@ -1,0 +1,80 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usetikzlibrary{fit}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{mathrsfs}
+\newcommand{\DoNotLoadEpstopdf}{}
+\newcommand{\Gd}{\check G}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cN}{\mathcal N}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\Dlc}{D_{\mathrm{lcc}}}
+\newcommand{\et}{\mathrm{et}}
+\DeclareMathOperator{\Bun}{Bun}
+\DeclareMathOperator{\Hecke}{Hecke}
+\DeclareMathOperator{\SS}{SS}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Rep}{Rep}
+\DeclareMathOperator{\Perf}{Perf}
+\DeclareMathOperator{\Loc}{Loc}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\IC}{IC}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\QCoh}{QCoh}
+\DeclareMathOperator{\IndCoh}{IndCoh}
+\DeclareMathOperator{\Nilp}{Nilp}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Perv}{Perv}
+\DeclareMathOperator{\supp}{supp}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,font=\small]
+ \draw[thick] (-2.5,0) ellipse (1.0 and 1.6);
+ \draw[thick] (2.5,0) ellipse (1.0 and 1.6);
+ \node at (-2.65,0) {$X_1$};
+ \node at (2.65,0) {$X_2$};
+ \foreach \yy/\ii in {1/1,-1/s} {
+   \fill (-1.72,\yy) circle (1.6pt);
+   \fill (1.72,\yy) circle (1.6pt);
+   \draw[dashed] (-1.72,\yy)--(1.72,\yy);
+   \node[above] at (-1.32,\yy) {$x_{1\ii}$};
+   \node[above] at (1.32,\yy) {$x_{2\ii}$};
+   \node[fill=white,inner sep=2pt] at (0,\yy) {$B\mu_m$};
+ }
+ \node at (0,0) {$\vdots$};
+ \node[align=center] at (-2.5,-2.1)
+      {positive branch $u$\\enhanced $B$-flags};
+ \node[align=center] at (2.5,-2.1)
+      {negative branch $v$\\enhanced $B^-$-flags};
+ \draw[->,thick] (1.5,2.05) to[bend right=12]
+       node[above,align=center] {$f$ reverses orientation\\at every boundary}
+       (-1.5,2.05);
+ \node[align=center] at (0,-3.12)
+      {$\zeta:(u,v)\mapsto(\zeta u,\zeta^{-1}v)$\qquad
+       $\rho_2(c_{2i})=\rho_1(c_{1i})^{-1}$\\[3pt]
+       $\displaystyle (\cB_m)_0\simeq
+         [(\cA_1^+\times\cA_2^+)/T^s]$};
+\end{tikzpicture}
+\end{document}

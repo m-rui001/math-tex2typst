@@ -1,0 +1,4 @@
+header@620 next2=[| --- | --- | --- | ] [| $\gamma\tau(b-c)$ ]
+header@776 next2=[| --- | --- | --- | ] [| $x=d-1-h$ | 满足 $x+]
+sep lines at: [621, 777]
+total pipe-start lines: 85

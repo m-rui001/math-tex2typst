@@ -1,0 +1,16 @@
+== source spellings carrying a page-share macro: 23 over 9 papers
+   read by `cetz._length` on the RAW value : 0
+   refused by `_length` on the RAW value   : 23
+       3  text width = .84\textwidth
+       3  text width = .83\linewidth
+       3  text width = .27\linewidth
+       1  text width = 0.265\linewidth
+       1  text width = .39\textwidth
+       1  text width = .37\textwidth
+       1  text width = .53\textwidth}
+       1  text width = .265\textwidth
+== after the batch's own `expand_linewidth` + `line_cm` fold
+   page-share sites in the lifted pictures : 38 over 15 canvases / 11 papers
+   sites that still carry a macro after it: 0
+== framed nodes emitted on the batch basis: 1947, of which a measure is named: 1355
+   BUG (measure named, no `width:` emitted): 0

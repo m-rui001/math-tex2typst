@@ -1,0 +1,30 @@
+{
+  "paper": "Abundance-after-nonvanishing-for-compact-Kahler-fourfolds-September-27-2026",
+  "ok": true,
+  "typ_lines": 1805,
+  "included_pdf_pages": 0,
+  "formulas": 1796,
+  "math_failed": 0,
+  "labels": 235,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "1796"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Abundance-after-nonvanishing-for-compact-Kahler-fourfolds-September-27-2026.tex"
+}

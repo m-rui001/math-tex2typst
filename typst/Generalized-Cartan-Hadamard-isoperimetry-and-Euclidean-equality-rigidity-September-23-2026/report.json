@@ -1,0 +1,48 @@
+{
+  "paper": "Generalized-Cartan-Hadamard-isoperimetry-and-Euclidean-equality-rigidity-September-23-2026",
+  "ok": true,
+  "typ_lines": 1223,
+  "included_pdf_pages": 0,
+  "formulas": 960,
+  "math_failed": 0,
+  "labels": 158,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 2,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 2
+  },
+  "samples": {
+    "formulas": "960",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl",
+    "bookmark"
+  ],
+  "macros_skipped": [
+    "\\defdef",
+    "\\letlet",
+    "\\letlet",
+    "\\letlet",
+    "\\letlet",
+    "\\letlet",
+    "\\letlet",
+    "\\newcommandnewcommand",
+    "\\let\\expandafter",
+    "\\let\\expandafter",
+    "\\let\\expandafter",
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Generalized-Cartan-Hadamard-isoperimetry-and-Euclidean-equality-rigidity-September-23-2026.tex"
+}

@@ -1,0 +1,50 @@
+你是写手。先完整读 `E:\math\被引笔记\规格.md` 并遵守其中全部条款（取材、记法、结构、体量、落盘、自查都在那里，本派单不复述）。除该文件、本派单文件自身与你本单的素材目录外不得读任何其他文件：**不得读 `研究笔记/`、`preprints/`、`.tools/`、`_work/`（本派单文件自身除外）、`被引笔记/INDEX.md`**。素材只用下面给定的 arXiv 源码 `.tex`；不得读素材目录里的 `.pdf`；不要执行任何 git 命令；不要生成 PDF。
+
+本单要写 3 份 C 稿（按下面给定的顺序，一份写完立刻开下一份）。每份各自满足规格的结构与体量要求。
+
+
+## 一份：C34
+
+- arXiv id：1810.12733
+- 原题名（逐字）：A new proof of Kiselman's minimum principle for plurisubharmonic functions
+- 作者（逐字，API 署名）：Fusheng Deng, Zhiwei Wang, Liyou Zhang, Xiangyu Zhou
+- 发表年月：2018-10-30
+- 素材目录：`E:\math\被引素材/1810.12733`
+- 主 tex 清单（实测，路径以盘面为准）：
+  - `被引素材/1810.12733/main.tex`（15043 字节 / 316 行）
+- 本语料中引用它的稿号与 bib key（你只在 §0 原样登记，不去读这些稿）：D305（bib key `DWZZ2018`）；D471（bib key `DengWangZhangZhou2018`）
+- 成品路径：`E:\math\被引笔记\C34-<中文题名>.md`（中文题名由你按原题拟，不超过 24 字，不得含 `:` 与 `/`）
+- 目标体量：不少于 22,000 字节
+
+## 一份：C35
+
+- arXiv id：1907.01114
+- 原题名（逐字）：A Minimizing Valuation is Quasi-monomial
+- 作者（逐字，API 署名）：Chenyang Xu
+- 发表年月：2019-07-02
+- 素材目录：`E:\math\被引素材/1907.01114`
+- 主 tex 清单（实测，路径以盘面为准）：
+  - `被引素材/1907.01114/quasimonomial-20191115.tex`（79182 字节 / 985 行）
+- 本语料中引用它的稿号与 bib key（你只在 §0 原样登记，不去读这些稿）：D307（bib key `XuQuasimonomial`）；D476（bib key `XuQuasiMonomial`）
+- 成品路径：`E:\math\被引笔记\C35-<中文题名>.md`（中文题名由你按原题拟，不超过 24 字，不得含 `:` 与 `/`）
+- 目标体量：不少于 22,000 字节
+
+## 一份：C36
+
+- arXiv id：2005.08303
+- 原题名（逐字）：Uniqueness of the minimizer of the normalized volume function
+- 作者（逐字，API 署名）：Chenyang Xu, Ziquan Zhuang
+- 发表年月：2020-05-17
+- 素材目录：`E:\math\被引素材/2005.08303`
+- 主 tex 清单（实测，路径以盘面为准）：
+  - `被引素材/2005.08303/uniqueness.tex`（71923 字节 / 1056 行）
+- 本语料中引用它的稿号与 bib key（你只在 §0 原样登记，不去读这些稿）：D307（bib key `XuZhuangUniqueness`）；D476（bib key `MinimizerUniqueness`）
+- 成品路径：`E:\math\被引笔记\C36-<中文题名>.md`（中文题名由你按原题拟，不超过 24 字，不得含 `:` 与 `/`）
+- 目标体量：不少于 22,000 字节
+
+## 落地节奏（本单各份合起来算）
+
+- 新建每份稿允许一次 `Write` 落「`# 标题` + `## 0 取证边界`」骨架，此后一律 `Edit` 追加，单笔新增正文不超过 10,000 字节；
+- 第一份的首次落盘落在第 4--10 次工具调用之间；每写完一份立刻开始下一份，不要停下来等确认；
+- 每份落盘后 sleep 90 秒再复量一次字节以证未回滚；
+- 收工报告按规格第 5 条对**每一份稿分别**给数，并给出各份成品文件的绝对路径与实测字节。

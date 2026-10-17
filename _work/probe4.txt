@@ -1,0 +1,104 @@
+D63 fence lines:
+  12 ```tex
+  14 ```
+  18 ```tex
+  26 ```
+  60 ```tex
+  62 ```
+  78 ```tex
+  80 ```
+  99 ```tex
+  109 ```
+  119 ```tex
+  124 ```
+  130 ```tex
+  132 ```
+  147 ```tex
+  149 ```
+  169 ```tex
+  173 ```
+  177 ```tex
+  180 ```
+  188 ```tex
+  198 ```
+  208 ```tex
+  215 ```
+  223 ```tex
+  229 ```
+  237 ```tex
+  244 ```
+  254 ```tex
+  263 ```
+  277 ```tex
+  280 ```
+  298 ```tex
+  316 ```
+  330 ```tex
+  339 ```
+  349 ```tex
+  356 ```
+  366 ```tex
+  375 ```
+  379 ```tex
+  396 ```tex
+  407 ```
+
+notes with {#anchor} headings=1 ; notes with '## §' headings=497
+anchor notes sample=["D370"]
+  D370 anchors=["local-question", "residue-count", "shell-moment", "wrong-turns"]
+
+non-fence occurrences=2096 ; self-anchor(catA candidates)=6 notes={"D370": 6}
+  D370:65 [body] arg=local-question | 于是我把第一层的目标改写成一个更弱、但恰好够用的形式：只要上界，不要渐近；而且上界允许带 $\kappa_K=\operatorname*{Res}_{s=1}\zeta_K(s)$ 这个因子。理由在 `paper.tex:181`--`184`：把 Dede
+  D370:65 [body] arg=shell-moment | 于是我把第一层的目标改写成一个更弱、但恰好够用的形式：只要上界，不要渐近；而且上界允许带 $\kappa_K=\operatorname*{Res}_{s=1}\zeta_K(s)$ 这个因子。理由在 `paper.tex:181`--`184`：把 Dede
+  D370:65 [body] arg=residue-count | 于是我把第一层的目标改写成一个更弱、但恰好够用的形式：只要上界，不要渐近；而且上界允许带 $\kappa_K=\operatorname*{Res}_{s=1}\zeta_K(s)$ 这个因子。理由在 `paper.tex:181`--`184`：把 Dede
+  D370:161 [body] arg=wrong-turns | 我最在意的是"$\kappa_K$ 留在右边"这件事的代数后果：展开恒等式前面的系数是 $1/(\sqrt D\,\kappa_K)$，与这里的 $\kappa_K y/q$ 相除，$\kappa_K$ 正好消掉，剩下 $y/(q\sqrt D)=y/Q$。`
+  D370:227 [body] arg=wrong-turns | 我读这段时最意外的反道是最后那句声明：论证对每个固定 $x$、固定 $r$ 用同一常数，没有把缩小半径与包极限交换（`geometry.tex:146`--`149`）。这个声明的价值在 $\S$\ref{wrong-turns} 第九条里我已经认过账。另一个
+  D370:303 [body] arg=local-question | 把 $\S$\ref{local-question} 这个标题留着，是为了把第四点的准确问法写下来，免得以后自己又退回粗版本。问题应当这样问：对所有满足 $L_\ell\subset R_\ell$ 且 $R_\ell L_\ell=R_\ell$ 的局部全模
+
+non-fence lines starting with '>' (blockquote)=860 notes=38
+non-fence body non-blockquote with declaration words=113
+  D101:88 (b) 推导补步。结论拆成两支。下界支：反设 chi(R^2) <= 5，由定义（introduction.tex:4--6 的 least such k）单调性给出一个 proper 5-coloring；thm:transfer 的 (=>)（transf
+  D101:88 (b) 推导补步。结论拆成两支。下界支：反设 chi(R^2) <= 5，由定义（introduction.tex:4--6 的 least such k）单调性给出一个 proper 5-coloring；thm:transfer 的 (=>)（transf
+  D105:204 这一片标签很特别：\label{sec:repair} 与 \label{sec:metric} 同挂在 repair.tex:2-3 一节开头（"The finite negative-type semimetric"），而正文文件 metric.tex 是
+  D105:204 这一片标签很特别：\label{sec:repair} 与 \label{sec:metric} 同挂在 repair.tex:2-3 一节开头（"The finite negative-type semimetric"），而正文文件 metric.tex 是
+  D110:633 第三步，小性。同片 91-93 行逐字："The smallness condition in Proposition~\ref{prop:hierarchy-bags} holds eventually because \(s^\epsilon\le q^{
+  D114:1671 减项 `\le2\beta_iL_i/(1-\beta_i)` 的套用细节：`F_0=f(S)`、`F_1=f(S+a_il)`，把任一定义外的值临时指派为零双线性型（原文 `163-165` 明说"solely for applying Lemma~\ref
+  D117:227 候选失败路线 [推测]：把初始能量改成"末能量 $\le C\mathcal S(A)$"从而省掉丢弃非负项那一步。失败在 `jumps.tex:352` 逐字 "Here the terminal energy was discarded by nonneg
+  D117:231 第 0 节我把 maximal 的困难押在"算子族的极大化"上，读完 `maximal.tex` 才发现这一节的第一个句子就把接口交给了 jumps：`maximal.tex:3-4` 逐字 "The estimate of Section~\ref{sec{
+  D117:500 相位旋转段收尾在 `trace.tex:195-200`：逐字 "Applying \eqref{eq:trace-Q} and \eqref{eq:trace-cubic} to the modified / matrices, with $Q$ compu
+  D117:500 相位旋转段收尾在 `trace.tex:195-200`：逐字 "Applying \eqref{eq:trace-Q} and \eqref{eq:trace-cubic} to the modified / matrices, with $Q$ compu
+  D117:500 相位旋转段收尾在 `trace.tex:195-200`：逐字 "Applying \eqref{eq:trace-Q} and \eqref{eq:trace-cubic} to the modified / matrices, with $Q$ compu
+  D129:65 (a) tex 逐字，\eqref{eq:ext-domination}（`extremal.tex:86-89`）：
+  D129:422 结构上，正文用 `## 数字 标题` 记法，节号从 $0$ 连续到本节的 $19$ 共二十节，无缺号、无重复号；每个被逐条拆解的引理走 (a) tex 逐字引用加文件行号、(b) 中间步骤补齐、(c) 假设/常数/指数的机械理由、(d) 两到三条标注为推测的失
+  D131:328 `01:99--102` 有一段我认为最容易被读者误读的话，逐字：The two conclusions of Lemma~\ref{canon:fibers} have distinct roles. Rational chains will supply 
+  D132:126 Lemma~\ref{geo:chord-separation}（geometry.tex:156--166）。(a) 原文：`Let $uv$ be an edge of a noncrossing circular graph.  Any graph pa
+  D132:128 Lemma~\ref{geo:gap}（geometry.tex:168--182）。(a) 原文：`Every graph path avoiding $S$ lies in one of the open circular gaps between con
+  D132:130 Lemma~\ref{geo:skipping}（geometry.tex:184--200）。(a) 原文：`Either the walk visits $i$, or one of its edges has endpoints strictly on 
+  D132:132 Lemma~\ref{geo:outerplanar}（geometry.tex:202--217）。(a) 原文：`Every active graph $G_I$ is outerplanar and has no $K_{2,3}$ minor.`（ge
+  D132:134 Lemma~\ref{geo:sublevel}（geometry.tex:219--235）是 packing 的连通性来源。(a) 原文：`Put $q_i=d_I(o,(i,H))$, taking $q_i=+\infty$ outside that 
+  D132:148 (b) 补步。第一，$t<30a$ 分支里"$31a$"的来历：entrance midpoint 满足 $b_i\le t+a<31a$，而 $d_J(o,\text{midpoint})=b_i$，故每个 entrance midpoint 到 $o$ 距
+  D132:164 Lemma~\ref{geo:padding}（geometry.tex:364--418）。(a) 原文：条件式 `\dist(b_i,T)>\rho+2a,`（geometry.tex:368，式 geo:padding-condition），结论 `th
+  D132:166 Lemma~\ref{geo:portal-levels}（geometry.tex:425--452）。(a) 原文：`Fix a step $\delta>1000a$.`（geometry.tex:426）；`is within $\delta+220a
+  D132:170 Lemma~\ref{sets:vertical}（sets.tex:56--91）承担"上界与列数无关"这件事。(a) 原文：
+  D132:176 Lemma~\ref{sets:component-refinement}（sets.tex:155--192）是我原本完全没预料到的装置。(a) 原文：
+  D132:247 Lemma~\ref{int:common-formula}（interpolation.tex:244--274）与 Lemma~\ref{int:depth}（interpolation.tex:276--322）是"名单有限"的两条腿。(a) 原文：`F
+  D132:247 Lemma~\ref{int:common-formula}（interpolation.tex:244--274）与 Lemma~\ref{int:depth}（interpolation.tex:276--322）是"名单有限"的两条腿。(a) 原文：`F
+  D132:253 Lemma~\ref{int:near-tie}（interpolation.tex:331--358）与 Corollary~\ref{int:comparisons}（interpolation.tex:378--440）。(a) 原文：` \Pr\big
+  D132:253 Lemma~\ref{int:near-tie}（interpolation.tex:331--358）与 Corollary~\ref{int:comparisons}（interpolation.tex:378--440）。(a) 原文：` \Pr\big
+  D132:253 Lemma~\ref{int:near-tie}（interpolation.tex:331--358）与 Corollary~\ref{int:comparisons}（interpolation.tex:378--440）。(a) 原文：` \Pr\big
+  D137:67 可容许道路。`strict/foundations.tex:112--143` 的 Definition~\ref{def:fb-road} 我逐条抄要点：oriented 双侧格行走 + 边出现上的连续非降名义参数，两端趋于 $\mp\infty$，紧参数区
+  D137:674 (a) 原文。三个旅行引理的第一个是 `differentiability/crossings.tex:18--26` 的 Lemma~\ref{df:cr:local-travel}：
+  D145:267 (a) 逐字。`ap.tex:4--5`："An attainable value contains information about nearby source laws, not merely about a single tensor restrict
+  D145:337 (a) 逐字。`certificate-w.tex:177--179`："A record fixes a finite tree of completion, parity, binary-separation, and side-permutation o
+  D145:337 (a) 逐字。`certificate-w.tex:177--179`："A record fixes a finite tree of completion, parity, binary-separation, and side-permutation o
+  D145:427 (a) 原文。`02-tensor-preliminaries.tex:46--58`："For \(a_i\ge0\), \begin{equation}\label{eq:rank-exponent} W(a_1,a_2,a_3)= \lim_{s\to\
+  D145:427 (a) 原文。`02-tensor-preliminaries.tex:46--58`："For \(a_i\ge0\), \begin{equation}\label{eq:rank-exponent} W(a_1,a_2,a_3)= \lim_{s\to\
+  D145:443 (a) 原文。`04-label-trees.tex:11--18`："A \emph{readable label tree} for the support of a tensor is a finite rooted partition tree of 
+  D145:443 (a) 原文。`04-label-trees.tex:11--18`："A \emph{readable label tree} for the support of a tensor is a finite rooted partition tree of 
+  D146:403 取整方向与误差：$\widetilde w\le w$ 且 $w-\widetilde w<\delta$，故 $A_j-\widetilde A_j\in[0,M_0\delta)=[0,\theta)$，写成 $\le\theta$ 是安全的。取整必须单向
+  D146:475 证明的中间步骤我按原文 `03-compression.tex:307--326` 展开并补算：分解 $\lambda=\lambda^+-\lambda^-$，$\lambda_y^+=\max\{\lambda_y,0\}$、$\lambda_y^-=\m
+
+mean CJK ratio: fenced lines=0.0000 non-fenced body lines=0.1181
+fenced occurrences on lines with CJK ratio>0.25 = 0
+
+blockquote occurrence CJK ratio>0.25 = 0

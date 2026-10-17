@@ -1,0 +1,37 @@
+
+===== D110:125
+这一步的**机械理由清单**（我自己的版本）：\(\frac{1+\rho}{q}\) 出现在分母、\(c\) 出现在分子，所以树的棵数是 \(cq/(1+\rho)\)；\(\rho\) 是自由参数，可以取 \(u\)，代价线性、收益是把 \(z_e\) 的范数从"恰好 \(1/q\)"放宽到 \((1+u)/q\)，让变分论证只需要梯度小，并非梯度零。取 \(\rho=u\) 这一点在 `sections/sparsification.tex:223` 明写：「Apply Lemma~\ref{lem:auxiliary-representation} to \(B\) with \(\rho=u\)」。
+   col=247 arg='lem:auxiliary-representation' cat=C pat=inline-quote-verbatim cjk=81 inquote=True
+   context +-60: =u\) 这一点在 `sections/sparsification.tex:223` 明写：「Apply Lemma~\ref{lem:auxiliary-representation} to \(B\) with \(\rho=u\)」
+
+===== D101:88
+(b) 推导补步。结论拆成两支。下界支：反设 chi(R^2) <= 5，由定义（introduction.tex:4--6 的 least such k）单调性给出一个 proper 5-coloring；thm:transfer 的 (=>)（transfer.tex 的 prop:palettes-forward）把它变成弱可测五色；thm:weak-five 说弱可测五色不存在，三句连成 contradiction。deduction 原文在 119--121 行："A proper five-coloring would give a weak measurable five-coloring by Theorem~\ref{thm:transfer}, contrary to Theorem~\ref{thm:weak-five}." 上界支是 123--135 行的显式构造，见 4.4 小节。注意主定理的否定式对象是"proper five-coloring"这一整类函数，并非某个可测子类；Lean 侧对应 Five.lean:124 的 ¬ ∃ c : ℂ → Fin 5。
+   col=317 arg='thm:transfer' cat=C pat=inline-quote-verbatim cjk=97 inquote=True
+   context +-60: oring would give a weak measurable five-coloring by Theorem~\ref{thm:transfer}, contrary to Theorem~\ref{thm:weak-five}.
+   col=357 arg='thm:weak-five' cat=C pat=inline-quote-verbatim cjk=97 inquote=True
+   context +-60: coloring by Theorem~\ref{thm:transfer}, contrary to Theorem~\ref{thm:weak-five}." 上界支是 123--135 行的显式构造，见 4.4 小节。注意主定理的否定
+
+===== D102:631
+(b) 定参链：C_0（锚定）-> T=200C_0 -> c=c(T)（严格性）-> v 同时满足三条件（1/12 给标尺 10P 收尾、c/1000 给除 (1-delta)、v^2 条件给 K^2 回预算）-> N_* 让两小量指数衰减到位 -> L 抬到 >= N_*。54 行" The algorithm does not need to test Equation~\eqref{sur:sensitivity}"呼应 assembly 的双盲结构。
+   col=190 arg='sur:sensitivity' cat=C pat=inline-quote-verbatim cjk=48 inquote=True
+   context +-60: 到 >= N_*。54 行" The algorithm does not need to test Equation~\eqref{sur:sensitivity}"呼应 assembly 的双盲结构。
+
+===== D114:1671
+减项 `\le2\beta_iL_i/(1-\beta_i)` 的套用细节：`F_0=f(S)`、`F_1=f(S+a_il)`，把任一定义外的值临时指派为零双线性型（原文 `163-165` 明说"solely for applying Lemma~\ref{lem:posterior}"，因为零形式在 `H_{D_i}(O)` 限制上可能与真形式相同，临时赋值不影响最终事件，只用于凑出"两个形式在 `H_{D_i}(O)` 上限制相等但不相等"这一事件）。`\lem:posterior` 的双线性推论要求：`F_0,F_1` 是 `\mathcal D` 的函数、`\mathcal D` 不含投影元数据与标记、`H_{D_i}(E)=\sum_CH_C(E)^2`、调用族含额外行 `l`；坏事件被"至多两个自适应选出的孩子有一个被标"包含，取 `m=2` 得 `2q_i`，`q_i=\beta_iL_i/(1-\beta_i)`，与第 15 节 (b) 的推导接上。
+   col=126 arg='lem:posterior' cat=C pat=inline-quote-verbatim cjk=142 inquote=True
+   context +-60: 任一定义外的值临时指派为零双线性型（原文 `163-165` 明说"solely for applying Lemma~\ref{lem:posterior}"，因为零形式在 `H_{D_i}(O)` 限制上可能与真形式相同，临时赋值不影响
+
+===== D115:717
+偶数分支的算术：$n=2r$ 时 $d_n=r(r-1)$、$d_{n-1}=d_{2r-1}=(r-1)^2$，检查 $n\,d_{n-1}=(n-2)d_n$ 即 $2r(r-1)^2=(2r-2)r(r-1)=2r(r-1)^2$，恒等，所以"the last identity follows directly from \eqref{eq:dr}"这句是可验的。重数 $n-2$ 的理由：一个交点由两条边确定，它们在 $b$ 类各有不同端点（不同 $p$，否则相邻），删掉 $n$ 个 $b$ 类顶点之一时该交点保留当且仅当删的不是这两个端点之一，故保留 $n-2$ 次。$n>2$ 的限制来自要除以 $n-2$，$n=2$ 已由零因子处理。
+   col=165 arg='eq:dr' cat=C pat=inline-quote-verbatim cjk=100 inquote=True
+   context +-60: 1)=2r(r-1)^2$，恒等，所以"the last identity follows directly from \eqref{eq:dr}"这句是可验的。重数 $n-2$ 的理由：一个交点由两条边确定，它们在 $b$ 类各有不同端点
+
+===== D134:308
+（c）假设与指数的机械理由。$0\le s$：$s=0$ 给出 $\exp(-N^0)=e^{-1}$ 这样的固定正常数界，`bootstrap.tex:112-113` 特意确认这一步不崩："This remains true for \(s=0\), when the comparison quantity is a fixed positive constant."。$s<t$：整个尺度链 `bootstrap.tex:137` 的 $t_{i+1}-t_i=g_{i+1}>0$ 依赖间隙为正。$M,D$ 允许不同：`localization.tex:93-94` 逐字给理由，"The counts \(M,D\) are allowed to be different because the proof will exchange their roles when applying \eqref{eq:inverse}."，实际交换在 `bootstrap.tex:93-95` 的 `&=\norm{[D\ge N^b]\,U^\dagger[M=0]U[D=0]}`。$N$ 的下界只依赖 $d,s,t$：这条一致性是 `parity.tex:46-47` 能对全部 $2^n$ 个 $h\in\{0,1\}^n$ 用同一阈值的依据："Its uniformity in the count makes the same lower bound on \(N\) valid for all \(h\)."。$t>1$ 的平凡界在 `localization.tex:90-91`："If \(t>1\), it is immediate for \(N>1\), since \([M\ge N^t]=0\)."，依据是 `localization.tex:23-24` 的 "The summands commute, and the spectrum of \(M\) is contained in \(\{0,\ldots,|S|\}\)." 与 $|S|\le N<N^t$；Lean 侧就是 `ProductProjection.lean:231` 的 `lemma Count.high_eq_zero {N : ℕ} (M : Count N) {r : ℝ} (hr : (N : ℝ) < r) : M.high r = 0` 加上 `Localization.lean:32-38` 的 `uniform_large`。归纳结构在 `localization.tex:91-92`："We prove the theorem by induction on \(d\), assuming all fixed exponent pairs at the preceding depth."
+   col=401 arg='eq:inverse' cat=C pat=inline-quote-verbatim cjk=104 inquote=True
+   context +-60: t because the proof will exchange their roles when applying \eqref{eq:inverse}."，实际交换在 `bootstrap.tex:93-95` 的 `&=\norm{
+
+===== D120:585
+$U$ 列的其余九行怎么来的：`scalars.tex:235-238` 说了"from monotonicity and the certified quantile bounds in Appendix~\ref{cert:arithmetic}"。机制是：在 $[a,b]$ 上 $P\ge P_0(a)$，$q=\Phi^{-1}(P)\ge\Phi^{-1}(P_0(a))=:q_a$，$G$ 对 $q$ 单调（第 6 节 (b) 里 $G=1-V$、$V$ 单调那一段），故 $G(q)\le G(q_a)$，再对 $G(q_a)$ 用第 18 节的有理夹逼算出一个短十进制 $U$ 并确认 $U\ge G(q_a)$。$q_a$ 本身是超越数，Lean 侧对应 `Quantile.lean` 与 `QuantileCalculus.lean` 两个文件（第 19 节考古清单里有）。
+   col=104 arg='cert:arithmetic' cat=C pat=inline-quote-verbatim cjk=72 inquote=True
+   context +-60:  monotonicity and the certified quantile bounds in Appendix~\ref{cert:arithmetic}"。机制是：在 $[a,b]$ 上 $P\ge P_0(a)$，$q=\Phi

@@ -1,0 +1,31 @@
+{
+  "paper": "a-torsion-free-hyperbolic-group-that-is-not-residually-finite-September-23-2026",
+  "ok": true,
+  "typ_lines": 554,
+  "included_pdf_pages": 0,
+  "formulas": 366,
+  "math_failed": 0,
+  "labels": 56,
+  "equations": 6,
+  "theorems": 3,
+  "figures": 3,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1,
+    "cetz_converted": 3
+  },
+  "samples": {
+    "formulas": "366",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\a-torsion-free-hyperbolic-group-that-is-not-residually-finite-September-23-2026.tex"
+}

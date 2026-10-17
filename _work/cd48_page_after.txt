@@ -1,0 +1,14 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+== shaft-through-letters pairs: 684 on 277 pages of 216 papers, out of 724 checked
+   114.8 pt through  Finite-Circle-Obstructions-Binary-Co p5  'unmatched gap, length at least '
+   109.4 pt through  The-geometric-case-of-the-Erdos-simi p5  'increasing indices in preorder'
+    99.6 pt through  Integral-points-on-character-varieti p12  'common gallery parameter'
+    83.3 pt through  Nonhomeomorphic-closed-aspherical-fo p40  'unused upper tip loop '
+    83.3 pt through  Nonhomeomorphic-closed-aspherical-fo p40  'unused upper tip loop '
+    71.8 pt through  Stretched-exponential-barriers-for-t p49  'Original level order'
+    67.6 pt through  Fixed-Points-of-Nonexpansive-Maps-in p14  'order of switching'
+    66.5 pt through  Cap-selected-amplitudes-and-triangle p3  'circumference '
+    65.6 pt through  Mass-and-covering-exponents-for-fixe p49  'two sibling leaves'
+    64.1 pt through  A-directional-zero-one-law-for-finit p22  'chronological order'
+    64.1 pt through  A-directional-zero-one-law-for-finit p22  'chronological order'
+    61.7 pt through  Virtual-compact-specialness-of-hyper p118  'same internal apex'

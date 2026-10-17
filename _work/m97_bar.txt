@@ -1,0 +1,47 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+== frac-then-letters   TeX $\frac{1}{2} m(\mu)$
+   CONTROL   bars: ['width 3.97pt under 1']
+   bare             bars: ['width 3.98pt under 1']
+   frac             bars: ['width 3.98pt under 1']
+
+== frac-then-relation   TeX $\frac{1}{2} \leq E_0$
+   CONTROL   bars: ['width 3.97pt under 1']
+   bare             bars: ['width 3.98pt under 1']
+   frac             bars: ['width 3.98pt under 1']
+
+== num-then-frac-then-tail   TeX $a + \frac{1}{2} = b$
+   CONTROL   bars: ['width 3.97pt under 1']
+   bare             bars: ['width 3.98pt under 1']
+   frac             bars: ['width 3.98pt under 1']
+
+== real-corpus-line   TeX $\frac{1}{8} m(\mu) \leq \mathbb{E}\,\|p-\mathsf{u}\| \leq \frac{1}{2}\sqrt{m(\mu)}.$
+   CONTROL   bars: ['width 3.97pt under 1', 'width 3.97pt under 1', 'width 22.50pt under 2']
+   bare             bars: ['width 3.98pt under 1', 'width 3.98pt under 1', 'width 22.59pt under 2']
+   frac             bars: ['width 3.98pt under 1', 'width 3.98pt under 1', 'width 22.59pt under 2']
+
+== real-log-tail   TeX $\limsup_n \frac{1}{n} \log X$
+   CONTROL   bars: ['width 4.93pt under 1']
+   bare             bars: ['width 4.94pt under 1']
+   frac             bars: ['width 4.94pt under 1']
+
+== unspaced-slash   TeX $R^{2}/d_{ij}^{2}$
+   CONTROL   bars: []
+   bare-nospace     bars: ['width 10.17pt under 4']
+   frac             bars: ['width 10.17pt under 4']
+
+== unspaced-then-letters   TeX $x/y z$
+   CONTROL   bars: []
+   bare-nospace     bars: ['width 4.54pt under 1']
+   bare-spaced      bars: ['width 4.54pt under 1']
+   frac             bars: ['width 4.54pt under 1']
+
+== unspaced-then-sum   TeX $a/b+c$
+   CONTROL   bars: []
+   bare-nospace     bars: ['width 4.34pt under 1']
+   frac             bars: ['width 4.34pt under 1']
+
+== unspaced-then-paren   TeX $1/2(m)$
+   CONTROL   bars: []
+   bare-nospace     bars: ['width 3.98pt under 1']
+   frac             bars: ['width 3.98pt under 1']

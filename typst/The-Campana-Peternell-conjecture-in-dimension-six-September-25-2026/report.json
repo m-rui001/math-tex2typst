@@ -1,0 +1,32 @@
+{
+  "paper": "The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026",
+  "ok": true,
+  "typ_lines": 777,
+  "included_pdf_pages": 0,
+  "formulas": 555,
+  "math_failed": 2,
+  "labels": 69,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 0,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 2
+  },
+  "samples": {
+    "formulas": "555",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "[WARNING] Could not load include file ../verification/verify.py at E:\\math\\_work\\flat\\_work_tex\\The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026.tex line 1656 column 17\n",
+  "packages_unsupported": [
+    "listings"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026.tex"
+}

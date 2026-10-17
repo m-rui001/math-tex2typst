@@ -1,0 +1,32 @@
+#101d: our emitter and our page for the rotated-anchor forms -- pt
+
+rotate=90                                  ink box  11.40 x  62.11  left   -5.65 right    5.75 top  -32.23 bottom   29.88
+                                             content((0, 0), [#page_rotate(-90deg)[uncapped band]])
+anchor=center,rotate=90                    ink box  11.40 x  62.11  left   -5.65 right    5.75 top  -32.23 bottom   29.88
+                                             content((0, 0), [#page_rotate(-90deg)[uncapped band]])
+anchor=east,rotate=90                      ink box  11.40 x  62.11  left   -5.65 right    5.75 top    2.05 bottom   64.16
+                                             content((-7.406e-17, -1.209), [#page_rotate(-90deg)[uncapped band]])
+anchor=west,rotate=90                      ink box  11.40 x  62.11  left   -5.65 right    5.75 top  -66.50 bottom   -4.39
+                                             content((7.406e-17, 1.209), [#page_rotate(-90deg)[uncapped band]])
+anchor=north,rotate=90                     ink box  11.40 x  62.11  left    2.32 right   13.72 top  -32.23 bottom   29.88
+                                             content((0.2813, -1.722e-17), [#page_rotate(-90deg)[uncapped band]])
+anchor=south,rotate=90                     ink box  11.40 x  62.11  left  -13.62 right   -2.22 top  -32.23 bottom   29.88
+                                             content((-0.2813, 1.722e-17), [#page_rotate(-90deg)[uncapped band]])
+anchor=south,rotate=-90                    ink box  11.40 x  62.11  left    2.22 right   13.62 top  -32.22 bottom   29.89
+                                             content((0.2813, 1.722e-17), [#page_rotate(90deg)[uncapped band]])
+anchor=east,rotate=-90                     ink box  11.40 x  62.11  left   -5.75 right    5.65 top  -66.50 bottom   -4.39
+                                             content((-7.406e-17, 1.209), [#page_rotate(90deg)[uncapped band]])
+anchor=south,rotate=90,inner sep=3pt       ink box  11.40 x  62.11  left  -13.09 right   -1.69 top  -32.23 bottom   29.88
+                                             content((-0.2625, 1.607e-17), [#page_rotate(-90deg)[uncapped band]])
+anchor=south,rotate=90,font=\footnotesize  ink box   9.12 x  49.69  left  -11.60 right   -2.48 top  -25.78 bottom   23.91
+                                             content((-0.2499, 1.53e-17), [#page_rotate(-90deg)[#text(size: 8pt)[uncapped band]]])
+anchor=south,rotate=45                     ink box  51.98 x  51.98  left  -31.59 right   20.39 top  -32.76 bottom   19.22
+                                             content((-0.1989, 0.1989), [#page_rotate(-45deg)[uncapped band]])
+anchor=south,rotate=34                     ink box  57.87 x  44.18  left  -33.36 right   24.50 top  -29.83 bottom   14.35
+                                             content((-0.1573, 0.2332), [#page_rotate(-34deg)[uncapped band]])
+anchor=west,rotate=-63                     ink box  38.35 x  60.52  left   -3.66 right   34.70 top   -0.85 bottom   59.67
+                                             content((0.5491, -1.078), [#page_rotate(63deg)[uncapped band]])
+anchor=south                               ink box  62.11 x  11.40  left  -31.05 right   31.06 top  -11.28 bottom    0.12
+                                             content((0, 0), [uncapped band], anchor: "south")
+anchor=east                                ink box  62.11 x  11.40  left  -62.11 right    0.00 top   -6.82 bottom    4.58
+                                             content((0, 0), [uncapped band], anchor: "east")

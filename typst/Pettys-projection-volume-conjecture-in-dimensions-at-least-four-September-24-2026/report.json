@@ -1,0 +1,30 @@
+{
+  "paper": "Pettys-projection-volume-conjecture-in-dimensions-at-least-four-September-24-2026",
+  "ok": true,
+  "typ_lines": 922,
+  "included_pdf_pages": 0,
+  "formulas": 751,
+  "math_failed": 0,
+  "labels": 106,
+  "equations": 65,
+  "theorems": 3,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "751"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\renewcommand\\ttdefault"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Pettys-projection-volume-conjecture-in-dimensions-at-least-four-September-24-2026.tex"
+}

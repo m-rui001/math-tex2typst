@@ -1,0 +1,88 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+=== A. pictures that write a pen shape and carry a pen of 3pt or more
+   Canonical-conformal-limits-of-subcritical-FK-planar-maps-September-24-2026 pen=24.0pt emitted=True keys_on_page=True
+   Metric-measure-limits-of-subcritical-FK-and-spanning-tree-planar-maps-September-24-2026 pen=20.0pt emitted=True keys_on_page=True
+   The-critical-Liouville-quantum-sphere-and-geometric-limits-of-FK-maps-at-q-equals-4-September-24-2026 pen=19.0pt emitted=True keys_on_page=True
+   An-explicit-exact-Hausdorff-gauge-for-SLE-September-26-2026    pen=12.0pt emitted=True keys_on_page=True
+   From-critical-crossings-to-quenched-near-critical-universality-in-Voronoi-percolation-October-5-2026 pen=12.0pt emitted=True keys_on_page=True
+   Radial-transfer-estimates-and-polygon-length-laws-for-honeycomb-walks-September-26-2026 pen=12.0pt emitted=True keys_on_page=True
+   SLE3-universality-for-weak-finite-range-Ising-interactions-September-23-2026 pen=5.0pt emitted=True keys_on_page=True
+   An-explicit-exact-Hausdorff-gauge-for-SLE-September-26-2026    pen=4.0pt emitted=True keys_on_page=True
+   Quenched-SLE3-limits-for-general-weak-random-bond-Ising-models-October-5-2026 pen=4.0pt emitted=True keys_on_page=True
+   total=9
+=== B. the free ends of a heavy leg: overshoot past each end, as a fraction of that page's pen
+   Canonical-conformal-limits-of-subcritical-FK-planar-maps-Septe
+      pgf control  no single heavy leg found
+      product      no single heavy leg found
+   Metric-measure-limits-of-subcritical-FK-and-spanning-tree-plan
+      pgf control  pen=4.981pt lineCap=(0, 0, 0) overshoot/pen = None / None  (ink in line beyond a cap -- neighbour, not cap)
+      pgf control  pen=3.985pt lineCap=(0, 0, 0) overshoot/pen = 0.0 / 0.0
+      product      pen=14.000pt lineCap=(1, 1, 1) overshoot/pen = 2.493 / 2.493  (ink in line beyond a cap -- neighbour, not cap)
+      product      pen=14.000pt lineCap=(1, 1, 1) overshoot/pen = 0.707 / 0.707
+         crop -> cap143_Metric-m_start.png
+         crop -> cap143_Metric-m_end.png
+   The-critical-Liouville-quantum-sphere-and-geometric-limits-of-
+      pgf control  pen=3.188pt lineCap=(1, 1, 1) overshoot/pen = 0.471 / 0.471
+      product      pen=3.200pt lineCap=(1, 1, 1) overshoot/pen = 0.469 / 0.469
+         crop -> cap143_The-crit_start.png
+         crop -> cap143_The-crit_end.png
+   An-explicit-exact-Hausdorff-gauge-for-SLE-September-26-2026
+      pgf control  no single heavy leg found
+      product      pen=3.000pt lineCap=(1, 1, 1) overshoot/pen = 0.433 / 0.433
+         crop -> cap143_An-expli_start.png
+         crop -> cap143_An-expli_end.png
+=== E. a joint in the disagreement band: tip as a multiple of half the pen (product vs pgf)
+   Integral-points-on-character-varieties-of-curves-September-25-
+      product   no band joint readable
+      control   no band joint readable
+   Directional-transience-implies-ballisticity-September-23-2026
+      product   angle=12.31 pen=1.3pt tip/half=11.056 (1/sin(a/2)=9.328) lineJoin=0.0  (window edge -- neighbour, not joint)
+      control   angle=12.16 pen=1.295pt tip/half=11.07 (1/sin(a/2)=9.439) lineJoin=0.0  (window edge -- neighbour, not joint)
+   Bochner-Riesz-Multipliers-in-Three-Dimensions-September-24-202
+      product   no band joint readable
+      control   no band joint readable
+   Critical-strip-crossing-mass-on-the-honeycomb-lattice-Septembe
+      product   angle=26.57 pen=1.2pt tip/half=3.979 (1/sin(a/2)=4.353) lineJoin=0.0
+      control   no band joint readable
+=== C. the SAME real figure with one stroke key stripped: the pages' pixel disagreement
+   limit: Directional-transience-implies-ballisticity-September-23  (canvas is 3403 chars, stripped is 3216, 11 occurrence(s) taken out)
+      as emitted         ink=33661   vs key stripped       ink=33591   disagreement: only-A=70 only-B=0  box=(91.92, 77.52, 158.4, 107.76) pt
+   cap: An-explicit-exact-Hausdorff-gauge-for-SLE-September-26-2  (canvas is 7810 chars, stripped is 7404, 29 occurrence(s) taken out)
+      as emitted         ink=275911   vs key stripped       ink=274250   disagreement: only-A=1661 only-B=0  box=(12.72, 95.52, 337.44, 276.72) pt
+=== D. miter-only canvases with a literal corner in the disagreement band [11.5, 29)
+   Maximal-multipoint-Seshadri-constants-in-positive-characteristic-October-5-2026 corner=11.98deg pen=0.8pt
+   Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September-26-2026 corner=12.29deg pen=0.8pt
+   Directional-transience-implies-ballisticity-September-23-2026  corner=13.71deg pen=1.6pt
+   Exponential-PSD-rank-of-positively-shifted-matching-matrices-October-5-2026 corner=15.38deg pen=1.2pt
+   Integral-points-on-character-varieties-of-curves-September-25-2026 corner=16.89deg pen=0.8pt
+   Cylinder-amplitudes-and-logarithmic-bridge-length-windows-on-the-honeycomb-lattice-September-26-2026 corner=17.1deg pen=1.2pt
+   The-Kakeya-maximal-conjecture-in-three-dimensions-September-23-2026 corner=18.0deg pen=0.4pt
+   Bochner-Riesz-Multipliers-in-Three-Dimensions-September-24-2026 corner=18.43deg pen=0.95pt
+   Cap-selected-amplitudes-and-triangle-chords-for-honeycomb-walks-September-26-2026 corner=19.11deg pen=1.1pt
+   Metric-measure-limits-of-subcritical-FK-and-spanning-tree-planar-maps-September-24-2026 corner=19.38deg pen=1.2pt
+   Renewal-and-changes-of-law-for-critical-honeycomb-walks-September-26-2026 corner=21.96deg pen=0.8pt
+   A-doubling-Hilbert-subset-with-no-finite-dimensional-bi-Lipschitz-embedding-September-25-2026 corner=23.63deg pen=0.8pt
+   Bochner-Riesz-Multipliers-in-Three-Dimensions-September-24-2026 corner=25.0deg pen=0.7pt
+   Nonuniqueness-with-local-conservation-for-the-hard-sphere-Boltzmann-equation-October-5-2026 corner=25.02deg pen=1.1pt
+   Critical-strip-crossing-mass-on-the-honeycomb-lattice-September-26-2026 corner=26.57deg pen=1.2pt
+   Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026 corner=28.07deg pen=0.8pt
+   total=16
+=== F. #91: the pen's weight, one picture per page on BOTH engines, then stripped from one page
+   Canonical-conformal-limits-of-subcritical-FK-planar-maps-Septe  canvas pen=24.0pt
+      product    widths=[]
+      pgf        widths=None
+      heaviest product/pgf=None
+   Metric-measure-limits-of-subcritical-FK-and-spanning-tree-plan  canvas pen=20.0pt
+      product    widths=[20.0, 14.0, 5.0, 4.0, 0.4]
+      pgf        widths=[19.926, 13.948, 4.981, 3.985, 0.697, 0.398]
+      heaviest product/pgf=1.0037
+   Mean-payoff-parity-games-in-quasipolynomial-time-October-5-202  canvas pen=0.6pt
+      product    widths=[0.6]
+      pgf        widths=[0.598]
+      heaviest product/pgf=1.0033
+   pen12: An-explicit-exact-Hausdorff-gauge-for-SLE-September-26-2  (canvas is 7810 chars, stripped is 7791, 1 occurrence(s) taken out)
+      as emitted         ink=275911   vs key stripped       ink=171706   disagreement: only-A=104205 only-B=0  box=(17.52, 25.92, 196.56, 195.12) pt
+   pen-name: Canonical-conformal-limits-of-subcritical-FK-planar-maps  (canvas is 2475 chars, stripped is 2437, 2 occurrence(s) taken out)
+      as emitted         ink=165575   vs key stripped       ink=142345   disagreement: only-A=23230 only-B=0  box=(31.2, 27.6, 111.6, 125.04) pt
+   every-path: Mean-payoff-parity-games-in-quasipolynomial-time-October  (canvas is 2000 chars, stripped is 1874, 7 occurrence(s) taken out)
+      as emitted         ink=24552   vs key stripped       ink=29705   disagreement: only-A=0 only-B=5153  box=(0.0, 14.4, 327.6, 45.36) pt

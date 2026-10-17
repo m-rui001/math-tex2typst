@@ -1,0 +1,1 @@
+研究笔记落盘后会被回滚到 bulk-write 时的内容与 mtime，通知复量必须做两次；研究笔记/ 不在 git 里，别指望 git 恢复。追加中文只用引号 heredoc，双引号 -c 里禁反引号（bash 会当命令替换执行）；bash 连 heredoc 都要吃一层反斜杠，所以探针报「零命中」先怀疑自己的串、探针只用 Write 落文件。行级编辑工具（Edit 一类）在文件已经掺过 CR 时会把整篇重写成 CRLF（副本对照实测 crlf 283→568＝行数，内容逐字不变；全 LF 文件不受影响），故落盘禁 CR 的稿子动笔前先量 CR，非零先用 `_work/crlf_fix.py --apply [path-or-glob]` 归位再改。

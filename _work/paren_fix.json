@@ -1,0 +1,74 @@
+[
+ {
+  "cid": "D36",
+  "line": 354,
+  "old": "\\(Q+[0,w])/(d-1)!",
+  "new": "(Q+[0,w])/(d-1)!",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "body",
+  "cred": "03-zonotope (eq:zonotope)：平移量并入后体积因子 $(Q+[0,w])/(d-1)!$，式内落单的 \\( 是抄 LaTeX 带的"
+ },
+ {
+  "cid": "D62",
+  "line": 523,
+  "old": "t'=\\(1-\\gamma)(1-q)+\\gamma(1-\\nu)=1-t",
+  "new": "t'=(1-\\gamma)(1-q)+\\gamma(1-\\nu)=1-t",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "body",
+  "cred": "special:40-49 与 eq:channel：核的就是 t\\'=(1-\\gamma)(1-q)+\\gamma(1-\\nu)"
+ },
+ {
+  "cid": "D420",
+  "line": 79,
+  "old": "\\((\\sum wF)(\\sum wG)\\le(\\sum w)(\\sum wFG)\\)",
+  "new": "(\\sum wF)(\\sum wG)\\le(\\sum w)(\\sum wFG)",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "body",
+  "cred": "02-discrete.tex:208--232 的蕴涵式 $(\\sum f)(\\sum g)\\le(\\sum u)(\\sum v)$ 同形，闭式外不再套 \\("
+ },
+ {
+  "cid": "D569",
+  "line": 113,
+  "old": "\\(\\cdot\\)_+",
+  "new": "\\cdot_+",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "body",
+  "cred": "07-simultaneous.tex:20-45 的正部记号 x_+=\\max(x,0)，这里只要 $\\cdot_+$"
+ },
+ {
+  "cid": "D108",
+  "line": 104,
+  "old": "spoke \\(e\\) is \\(\\sigma_{we}z_e$: an incoming",
+  "new": "spoke \\(e\\) is \\(\\sigma_{we}z_e\\): an incoming",
+  "expect": 1,
+  "dollars": -1,
+  "ticks": 0,
+  "parity": true,
+  "level": "delim",
+  "cred": "build/main.tex:317-327 逐字 \\(\\sigma_{we}z_e\\)，闭符被误打成 $"
+ },
+ {
+  "cid": "D108",
+  "line": 130,
+  "old": "holds for \\(\\deg A\\le N-1$: both sides",
+  "new": "holds for \\(\\deg A\\le N-1\\): both sides",
+  "expect": 1,
+  "dollars": -1,
+  "ticks": 0,
+  "parity": true,
+  "level": "delim",
+  "cred": "build/main.tex:372-378 逐字 \\(\\deg A\\le N-1\\)，闭符被误打成 $"
+ }
+]

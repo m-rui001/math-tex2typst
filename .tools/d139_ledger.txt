@@ -1,0 +1,36 @@
+HDR idx=[371]
+R-2 pipes=6 :: | 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+R-1 pipes=6 :: | --- | --- | --- | --- | --- |
+R0 pipes=6 :: | $\theta_L(K)$ | 密度 $\vol_n(K)/\det\Lambda$ 的下确界 | overview.tex:4--8 | 主定理陈述的左端 | 定义改动使 final.tex:238 的 $\vol_n(K)/\det\Gamma=\rho$ 无法对照 |
+R1 pipes=6 :: | $C$ | 绝对常数，实例化为 $eC_*$ | final.tex:281 | overview.tex:17--23 的定理 | 去掉 $e$ 后 $(1+1/n)^n$ 的膨胀无出口 |
+R2 pipes=6 :: | $n\ge2$ | 陈述的维度起点 | overview.tex:18 | 有限维吸收 final.tex:302 | 阈值抬高会漏掉 $n=2$ 的一族体 |
+R3 pipes=6 :: | $s$ | $\log\log n$ | final.tex:119 | $b_1$、$D$、$R$ 的全部尺度 | $s$ 变小使 final.tex:164 的 $s-c's^{1.4}$ 变号 |
+R4 pipes=6 :: | $b_1$ | $\lceil s^2\rceil$ | hierarchy.tex:338 | $\exp(-cb_1^{0.70})$ 与 $D\le C(b_1+1)$ | 取 $s$ 令原子帽退化为 $(\log n)^{-c}$ |
+R5 pipes=6 :: | $D$ | $O(s^2+1)$，$D=\sum_{i\le r+1}b_i$ | hierarchy.tex:99 | $2^D$、$4^D$、$O(D\log m)$ | $D$ 到 $\log n$ 量级时 final.tex:224 的 $o(n\log n)$ 失败 |
+R6 pipes=6 :: | $m$ | $n-D$ | preliminaries.tex:38 | $\sqrt m$ 阈值与 $\eta_m$ | $m$ 与 $n$ 不同阶时 final.tex:164 的除法失效 |
+R7 pipes=8 :: | $R^2$ | $\sum_{i\le r+1}b_ih_i^2\le C(b_1\log(b_1+1)+1)$ | hierarchy.tex:123--125 | $\lem:sections$ 的 $\|y\|\le R$ | 半径变大要求更大的 $M$，标签数膨胀 |
+R8 pipes=6 :: | $h_b$ | $\sqrt{\frac94\log b}$ | blocks.tex:28 | $e^{-h_b^2/2}=b^{-9/8}$ | 系数 $\frac94$ 变小令 $a_b^b$ 失去 $1-O(b^{-1/8})$ |
+R9 pipes=6 :: | $a_b$ | $\Prob(\lvert X\rvert\le h_b)$ | blocks.tex:101 | $\mu_b$ 的上下界与总质量 | $a_b$ 的尾界变松使 blocks.tex:123 的 $b^{-1/8}$ 变正幂 |
+R10 pipes=6 :: | $f_b$ | $h_b\gamma_1(h_bt)+h_b\gamma_1(h_b(t-1))$ | blocks.tex:29 | $F_b$、$P_{b,t}$、折叠恒等式 | 去掉第二项即失去整点校正的重数 |
+R11 pipes=6 :: | $F_b$ | $\prod_{j=1}^b f_b(t_j)$ | blocks.tex:30 | 合格集与权重 $v_b$ | 非乘积形式使方差界 blocks.tex:160 失效 |
+R12 pipes=6 :: | $\mu_b$ | $\log h_b+O(1)$ | blocks.tex:76 | 素数区间 $b\mu_b$ | $\mu_b$ 有界时 $\log p_b$ 不随 $b$ 增长 |
+R13 pipes=6 :: | 素数区间 | $b\mu_b-4b^{0.56}\le\log p_b\le b\mu_b-3b^{0.56}$ | blocks.tex:57 | $d$、碰撞概率、$\eta_b$ | 两侧收窄令 $O(\log T)$ 误差无处安放 |
+R14 pipes=6 :: | $T$ | $b\mu_b-3b^{0.56}>0$ | blocks.tex:129 | $l=\lfloor e^T/2\rfloor$ 的素因子论证 | $T$ 非正时二项式系数法整体失效 |
+R15 pipes=6 :: | $p_b$ | $l/\log(2l)<p_b\le2l$ | blocks.tex:145 | $G_b=\F_{p_b}^b$ 与 $L_b$ | 换合成模后一维子线计数 blocks.tex:377 不成立 |
+R16 pipes=6 :: | $\eta_b$ | $bh_b^2/p_b$，比任何负幂快 | blocks.tex:77 | 舍入双侧与 $a_1=e^{-\delta_1}$ | 若只多项式小，$\delta_i$ 无法被 $b_i^{-1/100}$ 吸收 |
+R17 pipes=6 :: | 容差 | $b^{0.56}$，半容差 $\frac12b^{0.56}$ | blocks.tex:65 与 blocks.tex:163 | 合格集与 $e^{5b^{0.56}}$ 帽子 | 收到 $b^{1/2}$ 时 Chebyshev 给出 $O(1)$ 概率 |
+--- eqref-empty / bars ---
+164: 标签不等式是 preliminaries.tex:45--49 的 `\eqref{eq:section-labels}`，三行原文为 ` J_a\subset K_y,`（45）、` c\,\vol_n(K)\gamma_D(y)`（47）、` \le C\,\vol_n(K)\gamma_D(y).`（49）。上游输入是 EK 的逐点边缘，preliminaries.tex:21--23：`\
+166: （b）中间步骤补齐。我按证明顺序把缺的环节写全。第一，仿一化：均匀测度变成 isotropic，协方差正定由体内点非空保证（preliminaries.tex:55--57），密度是 log-concave（57--58）。第二，$S=2DR+2$（58），在 $D,R$ 的显示范围内对大 $n$ 有 ` D\le n^\alpha,\qquad S<n^\beta,`（61）与 ` \qquad
+168: （c）假设与常数的机械理由。$M$ 出现在 $D,R\le M(1+\log\log n)^M$，阈值只依赖 $M$（35--36、128），因为后续用的是 $D=O(s^2+1)$（final.tex:125），把 $M$ 定大即可覆盖，$M$ 的作用是把这个 $O$ 变成显式的、与身体无关的条件。$m=n-D$（38）是水平维数，必须与 $n$ 同阶，$\frac{D}{n}\to0$ 才能让
+170: （d）失败路线。[推测] 第一条：跳过上半连续那一步，直接把 a.e. 的下界当逐点用。失败位置很明确，标签 $J_a$ 要在每个 $\|y\|\le R$ 上存在，a.e. 版本会在一个零测高度集上什么也不给，而 final.tex:142--145 的 "For any vertical target $y$" 是对每个 $y$ 取模式的，零测集上的漏洞会摧毁一致覆盖。[推测] 第二条：把塞原
+276: （c）机械理由。$k=\lfloor p_bt\rfloor$ 与 $x=k\bmod p_b$ 把连续点先落到格胞再落到有限群，两步都是坐标向；$z$ 用标准代表元（444 行的 again using standard representatives）是必需的，否则 $t_z=z/p_b$ 的锚点解释会变。$e^{-\eta_b}$ 而不是 $e^{-O(\eta_b)}$：$\eta_b=b
+278: （d）失败路线。[推测] 第一条：把 $L_b$ 取成 $\Z^b$ 而不用 $C_b/p_b$ 扩格。那样锚点 $z$ 与整数格之间没有对应，$\lambda=\frac{k-z}{p_b}$ 不属于 $\Z^b$，$\tau\in Q_z$ 的格胞定位失败，$\eqref{eq:block-cell-identity}$ 第三条 $g_b(x)=\frac{F_b(t_z)}{p_b}$ 写不
+289: > ` \|(y-M\ell)_i\|_\infty&\le h_i`
+307: 可和性：hierarchy.tex:263--268 设 $a=1/100$，用 $b_j\ge2^{r-j}b_r$ 的形状得 `\sum_{j=1}^r b_j^{-a}` $\le b_r^{-a}\sum_k2^{-ak}\le\frac{B^{-a}}{1-2^{-a}}$；取 $B$ 使 $C_0B^{-a}\le\frac12$，用 $\log(1-u)\ge-2u$（$0\le u
+309: （c）机械理由。$D\le C(b_1+1)$ 来自 $\sum_{i\le r}b_i\le2b_1$ 加上 $T$ 的绝对界（$T\le b_r\lceil\log_2p_r\rceil$，$b_r<B^{1/0.9}$、$\log p_r=O(b_r\log b_r)$，全部由 $B$ 控制），$+1$ 是给 $b_1$ 小时的终端项留位。$R^2=\sum b_ih_i^2=\frac94
+311: （d）失败路线。[推测] 第一条：归纳里只保留每块的一个最佳 $\epsilon$。这条正是 hierarchy.tex:259--260 公开堵住的。定量后果：$a_i$ 变成逐点最大值而非加权平均，$\max_\epsilon P_{i,t_z}(\epsilon)\le(1-\alpha)^{b^{0.70}}$（blocks.tex:219）使每块乘上一个 $e^{-cb_i^{0.70}
+350: （b）中间步骤补齐。标注环节的先后顺序我按正文抄下来，因为顺序本身就是论证的一部分：$B$ 与全部竖直常数先定（118--119），$s=\log\log n$、$b_1=\lceil s^2\rceil$（119--120），$R^2=\sum b_ih_i^2$、$m=n-D$（122--124），$D=O(s^2+1)$、$R$ 被 $s$ 的固定多项式控制（125）。套 $\lem:sec
+381: | $R^2$ | $\sum_{i\le r+1}b_ih_i^2\le C(b_1\log(b_1+1)+1)$ | hierarchy.tex:123--125 | $\lem:sections$ 的 $\|y\|\le R$ | 半径变大要求更大的 $M$，标签数膨胀 |
+489: - 台账表：表头两行各命中 1 次且逐字符合规格，数据行 77 行，表区为第 372 行至第 450 行；其中 76 行恰为 6 个竖线，第 381 行（$R^2$ 那一行）第三栏的范数写法带一对额外竖线，该行读到 8 个竖线，清理时把那一栏的两个 `\|` 换成 `\lVert` 与 `\rVert` 成对写法即可，列数与其余四栏文字不动；无空栏，无占位破折号。
+491: - 一处引用缺陷：第 15 节（b）段末尾的 `$\eqref{}$` 是空引用，应补成 `$\eqref{eq:shear-bound}$` 或直接写成"补齐判据"，位置在该段倒数第二句；这一处属于我自己书写失误，与禁串无关。

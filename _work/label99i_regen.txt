@@ -1,0 +1,81 @@
+A-Linear-Clock-for-Random-Walk-on-Tree-Weigh ok=True compile_ok=True lines=1454->1450 changed=8 compound=0->2
+   -  circle((0, 0), radius: 1.522, fill: rgb("#f2f2f2"), stroke: none)
+   -  circle((0, 0), radius: 0.5775, fill: rgb("#f2f2f2"), stroke: none)
+   -  line((0, 0), (0, 0), fill: rgb("#f2f2f2"), stroke: none)
+   +  compound-path({circle((0, 0), radius: 1.522, fill: rgb("#f2f2f2"), stroke: none); circle((0, 0), radius: 0.5775, fill: rgb("#f2f2f2"), stroke: none); line((0, 0), (0, 
+   -  circle((5.25, 0), radius: 1.522, fill: rgb("#f2f2f2"), stroke: none)
+   -  circle((5.25, 0), radius: 0.5775, fill: rgb("#f2f2f2"), stroke: none)
+   -  line((5.25, 0), (5.25, 0), fill: rgb("#f2f2f2"), stroke: none)
+   +  compound-path({circle((5.25, 0), radius: 1.522, fill: rgb("#f2f2f2"), stroke: none); circle((5.25, 0), radius: 0.5775, fill: rgb("#f2f2f2"), stroke: none); line((5.25,
+A-Torsion-Free-Group-Algebra-That-Is-Not-Dir ok=True compile_ok=True lines=909->907 changed=4 compound=0->1
+   -  circle((2.2, -4.62), radius: 1.19, fill: rgb("#d1d1d1"), stroke: none)
+   -  circle((2.2, -4.62), radius: 0.68, fill: rgb("#d1d1d1"), stroke: none)
+   -  line((2.2, -4.62), (2.2, -4.62), fill: rgb("#d1d1d1"), stroke: none)
+   +  compound-path({circle((2.2, -4.62), radius: 1.19, fill: rgb("#d1d1d1"), stroke: none); circle((2.2, -4.62), radius: 0.68, fill: rgb("#d1d1d1"), stroke: none); line((2.
+A-Torsion-Free-Group-Algebra-with-Zero-Divis ok=True compile_ok=True lines=677->675 changed=4 compound=0->1
+   -  circle((0, 0), radius: 0.9379, fill: rgb("#e9e9e9"), stroke: none)
+   -  circle((0, 0), radius: 0.4316, fill: rgb("#e9e9e9"), stroke: none)
+   -  line((0, 0), (0, 0), fill: rgb("#e9e9e9"), stroke: none)
+   +  compound-path({circle((0, 0), radius: 0.9379, fill: rgb("#e9e9e9"), stroke: none); circle((0, 0), radius: 0.4316, fill: rgb("#e9e9e9"), stroke: none); line((0, 0), (0,
+BKT-universality-for-height-and-planar-spin- ok=True compile_ok=True lines=3717->3715 changed=4 compound=0->1
+   -  rect((-2.1, -2.1), (2.1, 2.1), fill: rgb("#e6e6ff"), stroke: none)
+   -  line((2.1, 2.1), (-1.505, -1.505), fill: rgb("#e6e6ff"), stroke: none)
+   -  rect((-1.505, -1.505), (1.505, 1.505), fill: rgb("#e6e6ff"), stroke: none)
+   +  compound-path({rect((-2.1, -2.1), (2.1, 2.1), fill: rgb("#e6e6ff"), stroke: none); line((2.1, 2.1), (-1.505, -1.505)); rect((-1.505, -1.505), (1.505, 1.505), fill: rgb
+Essential-Singularity-of-the-Correlation-Len ok=True compile_ok=True lines=1471->1467 changed=8 compound=0->2
+   -  circle((8.6, 2.3), radius: 1.68, fill: rgb("#e0e0ff"), stroke: none)
+   -  circle((8.6, 2.3), radius: 1.4, fill: rgb("#e0e0ff"), stroke: none)
+   -  line((8.6, 2.3), (8.6, 2.3), fill: rgb("#e0e0ff"), stroke: none)
+   -  circle((8.6, 2.3), radius: 0.42, fill: rgb("#e0e0ff"), stroke: none)
+   -  circle((8.6, 2.3), radius: 0.35, fill: rgb("#e0e0ff"), stroke: none)
+   -  line((8.6, 2.3), (8.6, 2.3), fill: rgb("#e0e0ff"), stroke: none)
+   +  compound-path({circle((8.6, 2.3), radius: 1.68, fill: rgb("#e0e0ff"), stroke: none); circle((8.6, 2.3), radius: 1.4, fill: rgb("#e0e0ff"), stroke: none); line((8.6, 2.
+   +  compound-path({circle((8.6, 2.3), radius: 0.42, fill: rgb("#e0e0ff"), stroke: none); circle((8.6, 2.3), radius: 0.35, fill: rgb("#e0e0ff"), stroke: none); line((8.6, 2
+Exponential-decay-in-two-dimensional-classic ok=True compile_ok=True lines=654->652 changed=4 compound=0->1
+   -  rect((-1.691, -1.691), (1.691, 1.691), fill: rgb("#ececec"), stroke: none)
+   -  line((1.691, 1.691), (-1.159, -1.159), fill: rgb("#ececec"), stroke: none)
+   -  rect((-1.159, -1.159), (1.159, 1.159), fill: rgb("#ececec"), stroke: none)
+   +  compound-path({rect((-1.691, -1.691), (1.691, 1.691), fill: rgb("#ececec"), stroke: none); line((1.691, 1.691), (-1.159, -1.159)); rect((-1.159, -1.159), (1.159, 1.159
+Pure-Point-Spectrum-for-the-Two-Dimensional- ok=True compile_ok=True lines=2563->2559 changed=8 compound=0->2
+   -  rect((-3.25, -3.25), (3.25, 3.25), fill: rgb("#e0e0e0"), stroke: none)
+   -  line((3.25, 3.25), (-2.6, -2.6), fill: rgb("#e0e0e0"), stroke: none)
+   -  rect((-2.6, -2.6), (2.6, 2.6), fill: rgb("#e0e0e0"), stroke: none)
+   -  rect((-1.94, -1.94), (1.94, 1.94), fill: rgb("#dbdbff"), stroke: none)
+   -  line((1.94, 1.94), (-1.45, -1.45), fill: rgb("#dbdbff"), stroke: none)
+   -  rect((-1.45, -1.45), (1.45, 1.45), fill: rgb("#dbdbff"), stroke: none)
+   +  compound-path({rect((-3.25, -3.25), (3.25, 3.25), fill: rgb("#e0e0e0"), stroke: none); line((3.25, 3.25), (-2.6, -2.6)); rect((-2.6, -2.6), (2.6, 2.6), fill: rgb("#e0e
+   +  compound-path({rect((-1.94, -1.94), (1.94, 1.94), fill: rgb("#dbdbff"), stroke: none); line((1.94, 1.94), (-1.45, -1.45)); rect((-1.45, -1.45), (1.45, 1.45), fill: rgb
+Quantitative-Superexponential-Bounds-for-van ok=True compile_ok=True lines=769->767 changed=4 compound=0->1
+   -  circle((0, 0), radius: 1.485, fill: rgb("#e8e8ff"), stroke: none)
+   -  circle((0, 0), radius: 1.05, fill: rgb("#e8e8ff"), stroke: none)
+   -  line((0, 0), (0, 0), fill: rgb("#e8e8ff"), stroke: none)
+   +  compound-path({circle((0, 0), radius: 1.485, fill: rgb("#e8e8ff"), stroke: none); circle((0, 0), radius: 1.05, fill: rgb("#e8e8ff"), stroke: none); line((0, 0), (0, 0)
+Rigidity-of-Smooth-Billiards-with-a-Continuo ok=True compile_ok=True lines=4057->4055 changed=4 compound=0->1
+   -  circle((0, 0), radius: (2.55, 1.7), fill: rgb("#ebeff2"), stroke: none)
+   -  circle((0, 0), radius: (2.295, 1.286), fill: rgb("#ebeff2"), stroke: none)
+   -  line((0, 0), (0, 0), fill: rgb("#ebeff2"), stroke: none)
+   +  compound-path({circle((0, 0), radius: (2.55, 1.7), fill: rgb("#ebeff2"), stroke: none); circle((0, 0), radius: (2.295, 1.286), fill: rgb("#ebeff2"), stroke: none); lin
+The-Gaussian-free-field-limit-of-integer-Lip ok=True compile_ok=True lines=1576->1570 changed=12 compound=0->3
+   -  rect((-2.94, -2.94), (2.94, 2.94), fill: rgb("#f0f0f0"), stroke: none)
+   -  line((2.94, 2.94), (-2.1, -2.1), fill: rgb("#f0f0f0"), stroke: none)
+   -  rect((-2.1, -2.1), (2.1, 2.1), fill: rgb("#f0f0f0"), stroke: none)
+   -  rect((-0.42, -0.42), (0.42, 0.42), fill: rgb("#e1e1e1"), stroke: none)
+   -  line((0.42, 0.42), (-0.21, -0.21), fill: rgb("#e1e1e1"), stroke: none)
+   -  rect((-0.21, -0.21), (0.21, 0.21), fill: rgb("#e1e1e1"), stroke: none)
+   +  compound-path({rect((-2.94, -2.94), (2.94, 2.94), fill: rgb("#f0f0f0"), stroke: none); line((2.94, 2.94), (-2.1, -2.1)); rect((-2.1, -2.1), (2.1, 2.1), fill: rgb("#f0f
+   +  compound-path({rect((-0.42, -0.42), (0.42, 0.42), fill: rgb("#e1e1e1"), stroke: none); line((0.42, 0.42), (-0.21, -0.21)); rect((-0.21, -0.21), (0.21, 0.21), fill: rgb
+   -  rect((-0.42, -0.42), (0.42, 0.42), fill: rgb("#e1e1e1"), stroke: none)
+   -  line((0.42, 0.42), (-0.21, -0.21), fill: rgb("#e1e1e1"), stroke: none)
+   -  rect((-0.21, -0.21), (0.21, 0.21), fill: rgb("#e1e1e1"), stroke: none)
+   +  compound-path({rect((-0.42, -0.42), (0.42, 0.42), fill: rgb("#e1e1e1"), stroke: none); line((0.42, 0.42), (-0.21, -0.21)); rect((-0.21, -0.21), (0.21, 0.21), fill: rgb
+The-critical-Liouville-quantum-sphere-and-ge ok=True compile_ok=True lines=3384->3382 changed=4 compound=0->1
+   -  circle((0, 0), radius: 3.854, fill: rgb("#f1cfc5"), stroke: none)
+   -  circle((0, 0), radius: 3.731, fill: rgb("#f1cfc5"), stroke: none)
+   -  line((0, 0), (0, 0), fill: rgb("#f1cfc5"), stroke: none)
+   +  compound-path({circle((0, 0), radius: 3.854, fill: rgb("#f1cfc5"), stroke: none); circle((0, 0), radius: 3.731, fill: rgb("#f1cfc5"), stroke: none); line((0, 0), (0, 0
+The-critical-logarithmic-correction-for-the- ok=True compile_ok=True lines=2106->2104 changed=4 compound=0->1
+   -  rect((-1.56, -1.56), (1.56, 1.56), fill: rgb("#dfdfdf"), stroke: none)
+   -  line((1.56, 1.56), (-1.34, -1.34), fill: rgb("#dfdfdf"), stroke: none)
+   -  rect((-1.34, -1.34), (1.34, 1.34), fill: rgb("#dfdfdf"), stroke: none)
+   +  compound-path({rect((-1.56, -1.56), (1.56, 1.56), fill: rgb("#dfdfdf"), stroke: none); line((1.56, 1.56), (-1.34, -1.34)); rect((-1.34, -1.34), (1.34, 1.34), fill: rgb
+DONE 12 compiled=12  compound-path lines in products 0 -> 17

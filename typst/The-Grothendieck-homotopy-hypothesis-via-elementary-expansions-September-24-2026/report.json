@@ -1,0 +1,31 @@
+{
+  "paper": "The-Grothendieck-homotopy-hypothesis-via-elementary-expansions-September-24-2026",
+  "ok": true,
+  "typ_lines": 721,
+  "included_pdf_pages": 0,
+  "formulas": 492,
+  "math_failed": 3,
+  "labels": 64,
+  "equations": 1,
+  "theorems": 2,
+  "figures": 2,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1,
+    "cetz_converted": 5
+  },
+  "samples": {
+    "formulas": "492",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-Grothendieck-homotopy-hypothesis-via-elementary-expansions-September-24-2026.tex"
+}

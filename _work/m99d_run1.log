@@ -1,0 +1,20 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+hole = centre of the outer box, band = half-way between the two radii along +x, paper =
+the page corner. A punched hole reads at the paper colour (255,255,255 on white); a
+painted hole reads at the fill. Expected: control punched, today painted, compound punched.
+
+== control pgf
+   circles 1.19/0.68          fills=1 box=67.5x67.5pt hole=(255, 255, 255) band=(209, 209, 209) paper=(255, 255, 255)
+   rects 3/2.15               fills=1 box=170.1x170.1pt hole=(255, 255, 255) band=(229, 229, 255) paper=(255, 255, 255)
+   ellipse 3&2/2.70&1.5133    fills=1 box=170.1x113.4pt hole=(255, 255, 255) band=(228, 244, 253) paper=(255, 255, 255)
+
+== today  two filled paths
+   circles 1.19/0.68          fills=2 box=67.5x67.5pt hole=(208, 209, 208) band=(208, 209, 208) paper=(255, 255, 255)
+   rects 3/2.15               fills=2 box=170.1x170.1pt hole=(222, 231, 244) band=(222, 231, 244) paper=(255, 255, 255)
+   ellipse 3&2/2.70&1.5133    fills=2 box=170.1x113.4pt hole=(212, 236, 242) band=(212, 236, 242) paper=(255, 255, 255)
+
+== compound-path even-odd
+   circles 1.19/0.68          fills=1 box=67.5x67.5pt hole=(255, 255, 255) band=(208, 209, 208) paper=(255, 255, 255)
+   rects 3/2.15               fills=1 box=170.1x170.1pt hole=(255, 255, 255) band=(222, 231, 244) paper=(255, 255, 255)
+   ellipse 3&2/2.70&1.5133    fills=1 box=170.1x113.4pt hole=(255, 255, 255) band=(212, 236, 242) paper=(255, 255, 255)
+

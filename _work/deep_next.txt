@@ -1,0 +1,27 @@
+queue=25
+D80 -> UNREGISTERED
+D95 -> UNREGISTERED
+D93 -> UNREGISTERED
+D90 -> UNREGISTERED
+D89 -> UNREGISTERED
+D81 -> UNREGISTERED
+D92 -> UNREGISTERED
+D84 -> UNREGISTERED
+D463 -> D463	row=286	bytes=312643	thin=no	dir=preprints/Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026
+D85 -> UNREGISTERED
+D78 -> UNREGISTERED
+D94 -> UNREGISTERED
+D66 -> UNREGISTERED
+D452 -> D452	row=275	bytes=160585	thin=no	dir=preprints/Invariant-projection-counterexamples-for-every-irrational-rotation-September-27-2026
+D91 -> UNREGISTERED
+D265 -> D265	row=89	bytes=98174	thin=no	dir=preprints/Ambiently-homeomorphic-isolated-hypersurfaces-of-multiplicities-two-and-three-September-24-2026
+D86 -> UNREGISTERED
+D278 -> D278	row=102	bytes=106087	thin=no	dir=preprints/An-atomic-certificate-for-triangular-lattice-universal-optimality-September-26-2026
+D769 -> D769	row=494	bytes=187166	thin=no	dir=preprints/The-ordinary-double-point-gap-in-every-dimension-September-24-2026
+D529 -> D529	row=352	bytes=200714	thin=no	dir=preprints/Quadratic-Strong-Operator-Paving-over-Arbitrary-Maximal-Abelian-Subalgebras-September-25-2026
+D175 -> UNREGISTERED
+D12 -> UNREGISTERED
+D233 -> D233	row=57	bytes=135078	thin=no	dir=preprints/A-polynomial-time-construction-of-strong-thin-trees-September-23-2026
+D535 -> D535	row=358	bytes=194407	thin=no	dir=preprints/Quenched-SLE-Universality-for-Weakly-Disordered-FK-Ising-Interfaces-October-5-2026
+D256 -> D256	row=80	bytes=163182	thin=no	dir=preprints/Abundance-in-numerical-dimension-one-for-terminal-threefolds-in-positive-characteristic-September-24-2026
+DIR_MISMATCHES=0

@@ -1,0 +1,927 @@
+# D216 线性次高斯能否逼出维度无关的对数 Sobolev：一份反证路线的研究笔记
+
+## §0 登记、取材与写作约定
+
+这一单我给自己的任务是：把 Bizeul 猜想在中心对数凹测度类上的肯定解决（论文主定理）背后的思维链拆回原样，
+按我自己当时的推进顺序重走一遍，把走不通的路、转折点、以及最后拿到矛盾时用到的每一个定量因子都记清楚。
+写作视角是第一人称研究笔记，凡是论文里没写、我只能靠结构反推的地方，一律标 `[推测]` 并说明为什么信息不足，
+不硬编。教科书的正向铺陈在这里是被禁止的，我也不打算写那种铺陈：主定理的每个输入都有一个"它为什么必须存在"的问题挂着。
+
+取材只允许来自本目录 `build/` 下的 `.tex`。我先用 `ls` 与 `wc -c` 量了字节，得到如下真实清单（字节数是本会话实测）：
+`build/main.tex` 2587、`build/glyph-mappings.tex` 3376、`build/references.bib` 8704、
+`build/sections/01-introduction.tex` 12457、`build/sections/02-calculus.tex` 17351、
+`build/sections/03-critical.tex` 34222、`build/sections/04-prediction.tex` 33704、
+`build/sections/05-hierarchy.tex` 36077、`build/sections/06-matrices.tex` 38155、
+`build/sections/07-observations.tex` 42584、`build/figures/proof-dependencies.tex` 2631。
+主干是七个 section，最大的一节是第 7 节（矛盾本身）。`glyph-mappings.tex`、`references.bib`、
+`figures/proof-dependencies.tex` 我只当作可选索引看，正文素材全部落在 01 至 07 的 `.tex` 上。
+`typst/` 分片不作来源，`README.md` 只当索引，PDF 一律不碰。这一单不涉及 Lean 取证，
+派单也没给 Lean 行，所以 `lean/`、`formalization.yaml` 之类我完全不读。
+
+正文的编号顺序动笔前就想清楚了：§1 到 §8 是临界对象的构造与归一化，§9 到 §12 是预测曲线与张量层级，
+§13 到 §16 是矩阵化与尺度积分，§17 到 §19 是矛盾、差异与遗留问题，§20 是补记，§21 是台账。
+前向引用出现的 §N 都会真实存在，不会出现空头引用。
+
+登记：
+目录 `preprints/A-dimension-free-logarithmic-Sobolev-inequality-for-subgaussian-log-concave-measures-September-23-2026`
+其他队列第 40 行号
+落盘探针行（基线 2321 字节，本行为协议第 1 步写入，此后再不作为锚点）
+
+## §1 初始动机：线性尾巴凭什么管住非线性熵
+
+我手里的假设只有一句，写在 `build/sections/01-introduction.tex:19-22`：中心随机向量 $X$ 满足
+
+\[
+ \sup_{\lvert\theta\rvert=1}\E\exp\!\left(\frac{\langle X,\theta\rangle^{2}}{a^{2}}\right)\le 2 .
+\]
+
+它只约束线性函数。要证的结论（`01-introduction.tex:31-34`）是 $\operatorname{Ent}_\mu(f^{2})\le C a^{2}\int\lvert Df\rvert^{2}\,d\mu$
+对所有 $f\in C_c^{\infty}(\R^{n})$ 成立，$C$ 是绝对常数。这里有一个让我一开始就不安的地方：
+熵是 $\log$ 型的非线性泛函，假设给的却是所有超平面上的一维尾巴。
+Herbst 的指数矩论证（`02-calculus.tex:144-155`）说明 LSI 一定推出 Lipschitz 函数的 Gaussian 集中，
+进而推出线性边缘的次高斯性（`01-introduction.tex:84-93`），所以假设在绝对值意义下是必要的；
+问题全部在充分性一侧，也就是 Bizeul 在 2023 年写下的那个猜想（`01-introduction.tex:94-98`）。
+
+我把常数约定统一成 $R(\nu)$：$\operatorname{Ent}_\nu(f^{2})\le 2R(\nu)\int\lvert Df\rvert^{2}d\nu$（`01-introduction.tex:137-140`）。
+这一步看似只是记账，实际上决定了我后面每一次比较因子 2 时会不会出错，
+因为论文里同时存在两套时间约定：与方差 $r$ 的高斯卷积的生成元是 $\Delta/2$，
+而平稳扩散的生成元是 $-A$、噪声系数是 $\sqrt2$（`02-calculus.tex:5-8`）。凡是熵耗散因子出现 $1/2$ 还是 $1$，
+我都先问自己用的是哪一套。
+
+还有一个我先前完全没预料到的收获：主定理一旦成立，Otto--Villani 的蕴含就把
+$W_2(\nu,\mu)^{2}\le C a^{2}H(\nu\mid\mu)$ 白送给我（`01-introduction.tex:57-65`，证明在 `02-calculus.tex:336-376`）。
+我读这段证明时注意到它的核心技巧（平滑化 $\mu_s=\mu*\gamma_s$、后验协方差给出 $D^{2}V_s\ge0$、
+取 $\beta_s=\sqrt{8s/3}$ 让 $a_s=a+\beta_s$ 仍满足边缘条件）本身就是主定理证明里 $\mu_s$ 那套装置的预演。
+
+## §2 第一条走不通的路：曲率判据与范数判据里的 $n$
+
+我最自然的想法是把问题写成位势 $V$ 的 Hessian 下界。Bakry--\'Emery 半群论证（`02-calculus.tex:64-127`，
+历史叙述在 `01-introduction.tex:74-79`）给：$D^{2}V\ge\kappa\mathrm{Id}$、$\kappa>0$ 时 $R\le\kappa^{-1}$。
+对数凹性只提供 $D^{2}V\ge0$，也就是 $\kappa=0$，这条路上界直接失效。更麻烦的是主定理明确不需要密度的光滑性，
+也不需要任何正向曲率下界，凸体上的均匀测度必须在内（`01-introduction.tex:38-41`）。
+所以我立刻明白：任何"点态曲率"型论证在起点上就死了，能用的只有整体信息。
+
+第二条路是 Bobkov 的范数判据（`01-introduction.tex:100-105`）：熵系数被 $\lvert X\rvert$ 的次高斯范数的平方
+乘上一个绝对常数所控制。在我的边缘假设下，H\"older 给出 $\mathbb E\exp(\lvert X\rvert^{2}/(na^{2}))\le2$，
+于是判据只给出量级 $na^{2}$ 的系数。这里我做了一个错误的估算，值得记下来：
+我以为 $n$ 的出现是 $\lvert X\rvert$ 这个范数"被浪费掉了"，
+只要不用 $\lvert X\rvert$、改用各方向的联合信息就能省掉。
+算一遍就知道省不掉：判据消费的是径向次高斯范数，而边缘条件只给每个固定方向的次高斯范数 $\le a$，
+两者之间的落差恰好是 $n$ 次幂级别的自由度，纯粹是结构性的。
+Bizeul 的改进把 $\rho_{\mathrm{LS}}$ 的维度依赖降到 $n^{1/4}$（`01-introduction.tex:106-110`），
+在我这套参数下相当于 $\sqrt n\,a^{2}$；他另外在旋转不变的对数凹律上拿到了维度无关结论
+（`01-introduction.tex:111-112`）。Klartag 与 Lehec 的综述里这个问题被记为猜想 76、配套定理 77
+（`01-introduction.tex:113-114`）。
+
+于是我的路线判断变了：正面估计 $R(\mu)$ 的上界似乎必然带上 $n$ 的幂，那我就换问题类型，
+去假设反例存在，看反例必须长什么样。`[推测]` 论文作者作出同样转向的理由我没法直接读出，
+只能从 03 节的结构反推：那里的达到性引理需要一个严格不等式 $R_s>\max(R^{P}_s,s)$
+（`03-critical.tex:222-224`），而这种严格不等式只有在反例序列上、通过归一化 $R(\mu)=1$ 与 $a\to0$ 才拿得稳。
+正面证不可能凭空得到一个严格不等式。这是我在这份笔记里第一次把"反证装置"当成 constructive 的工具用，
+它提供的不是矛盾本身，是一列极限对象的性质。
+
+## §3 反证装置：截断、二次倾斜、伸缩，三步都要保商
+
+失败假设经 `03-critical.tex:14-28` 的归一化引理变成一条序列：中心、紧支撑、满维对数凹的 $\mu$ 满足
+
+\[
+ R(\mu)=1,\qquad \sup_{\lvert\theta\rvert=1}\E_\mu e^{\langle X,\theta\rangle^{2}/a^{2}}\le2,\qquad a\to0,
+\]
+
+同时有 $\log\mathbb E_\mu e^{v\cdot X}\le Ca^{2}\lvert v\rvert^{2}$ 与 $\operatorname{Cov}_\mu(X)\le Ca^{2}\mathrm{Id}$（`03-critical.tex:24-27`）。
+证明的细节我都过了一遍，因为每一步都可能悄悄破坏某个量：
+先取熵比能量除以边缘参数平方趋于无穷的法函数与测度；法函数可以选成正能量的
+（零能量的紧光滑函数在连通内区上是常数、熵为零，`03-critical.tex:33-36`）；
+然后把测度限制到一个足够大的球上，"任意接近地"保留每个商（`03-critical.tex:37-39`）；
+再乘上 $e^{-\varepsilon\lvert x\rvert^{2}/2}$ 并归一化，$\varepsilon$ 取得足够小（`03-critical.tex:39-42`）。
+这两步都保对数凹，且新密度相对原测度可以被 $2$ 控制，于是 $\Lemma$ curvature 保证新的紧测度有有限的 LSI 常数
+（`03-critical.tex:40-43`）。密度增幅至多 $2$ 这件事，直接解释了为什么我不必担心截断毁掉次高斯性
+（`03-critical.tex:44-45`）：若 $\mathbb E e^{Z^{2}/A^{2}}\le4$，Jensen 就给 $\mathbb E e^{Z^{2}/(2A^{2})}\le2$；
+中心化再花一个绝对因子，因为 $\mathbb E Z^{2}\le A^{2}\log4$ 且 $(Z-\mathbb E Z)^{2}\le2Z^{2}+2(\mathbb E Z)^{2}$
+（`03-critical.tex:45-51`）。伸缩用 $R^{-1/2}$，把 $R$ 归到 $1$（`03-critical.tex:52-55`）。
+
+我在这一节真正卡住的地方是另一件事：为了完整性那段矩估计（`03-critical.tex:57-67`）。
+若 $\mathbb E e^{Z^{2}/a^{2}}\le2$，尾积分给 $\mathbb E\lvert Z\rvert^{k}\le2a^{k}\Gamma(k/2+1)$，
+展开 $e^{tZ}$（线性项消失）在 $a\lvert t\rvert\le c$ 时给 $\log\mathbb E e^{tZ}\le Ca^{2}t^{2}$；
+大 $t$ 那侧用 $tZ\le Z^{2}/a^{2}+a^{2}t^{2}/4$ 把 $\log2$ 吸进 $Ca^{2}t^{2}$。
+这个"分段拼 mgf"的手法后面在平移增益一节被原样复用，所以它出现的两次必须用同一套常数，
+否则 $\sqrt a$ 那一阶的误差会漂掉。
+
+从这里开始我 suppress 反例序列的下标（`03-critical.tex:69-70`），
+所有极限都沿这条序列取。这个约定很省事，也很危险：后面 §8 的接触恒等式和 §15 的信息上界
+都要求"先固定辅助参数、再取序列极限"的顺序，一旦顺序记反，$o(1)$ 就不受控。
+
+## §4 高斯正则化：$b_s,M_s,K_s$ 与 $R_s$ 的单调性
+
+反例本身可能不光滑（凸体上的均匀测度就在内），所以我把它卷积：
+$\mu_s=\operatorname{Law}(X+\sqrt s\,G)$，$R_s=R(\mu_s)$，$b_s(y)=\mathbb E[X\mid X+\sqrt s G=y]$，$V_s=-\log\mu_s$
+（`03-critical.tex:71-74`）。高斯求导与后验协方差给出一组恒等式（`03-critical.tex:77-81`）：
+
+\[
+ DV_s(y)=\frac{y-b_s(y)}{s},\qquad
+ M_s(y)=Db_s(y)=\frac{\Cov(X\mid y)}{s},\qquad
+ K_s(y)=D^{2}V_s(y)=\frac{\Id-M_s(y)}{s}.
+\]
+
+后验的位势是原来的凸位势加 $\lvert x-y\rvert^{2}/(2s)$，于是 $\Lemma$ curvature 作用在后验的线性型上给出
+$0\le M_s\le\mathrm{Id}$、$0\le K_s\le s^{-1}\mathrm{Id}$（`03-critical.tex:82-87`）。
+我最初的期待是直接对 $\mu$ 做扩散分析；问题是 $\mu$ 的支撑有边界、密度可以消失，
+$A_\mu$ 的核心与定义域都要重证。正则化把这些一次性解决：$\mu_s$ 光滑、严格正、紧支撑 $X$ 还给
+$\lvert b_s\rvert\le\sup_{\operatorname{supp}\mu}\lvert x\rvert$（`03-critical.tex:88-89`），
+所以后面 §5 的紧嵌入与正则性全部可用。
+
+常数 $R_s$ 对 $s$ 的行为我读了三遍才接受（`03-critical.tex:96-120`）：$s\mapsto R_s$ 在 $(0,\infty)$ 上非降、
+$1$-Lipschitz，并且 $1\le R_s\le1+s$。非降性的证明是流的论证：热方程即速度为 $DV_s/2$ 的连续性方程，
+在正时间的紧区间上这个速度全局 Lipschitz、至多线性增长，所以它的流把 $\mu_s$ 微分同胚地送到 $\mu_t$；
+Jacobian 满足 $\dot J=K_tJ/2$，$K_t\ge0$ 说明流扩张距离、当 $t\ge s$ 时其逆是 $1$-Lipschitz，
+于是把测试函数用逆流搬运过去，熵不变而 Dirichlet 能量不减，$R_t\ge R_s$。
+上界 $R_{s+h}\le R_s+h$ 与 $R_s\le1+s$ 来自独立相加的次可加性
+$\Equation$（`02-calculus.tex:141-143`）。下界 $\liminf_{s\downarrow0}R_s\ge R(\mu)=1$ 由紧光滑测试
+的熵与能量在 $s\downarrow0$ 时收敛得到。
+
+这个单调性的来源我在论文里被明确指向 Klartag--Putterman 的热流收缩（`03-critical.tex:91-93`），
+它依赖 Kim--Milman 的搬运构造。这里有个转折值得记：我原以为 $s$ 是要取小的参数，
+因为正则化总是"$s\to0$ 恢复原测度"。真正定下来时 $s$ 固定在 $1/8$（`03-critical.tex:760-768`、
+`04-prediction.tex:4`），而且整个 §9 到 §16 都不再让它动。原因是我要的预测曲线要在一段固定的噪声方差区间
+$0<r<1/4$ 上有极限形状（`01-introduction.tex:165-175`、`04-prediction.tex:494-506`）：
+如果 $s\to0$，$\theta(r)=\exp(-\int_0^r dt/R_{s+t})$ 的展开就不再是 $e^{-r}+o(1)$，
+后验方差与曲率 $K_s$ 的两端控制会同时失效。固定 $s$、把 $a\to0$ 单独当参数推，是这个证明能成立的关键选择之一。
+
+## §5 达到性：紧性、$2s$ 的熵亏损与 Rothaus 型正解
+
+我需要一个真正取到熵商的测试函数，因为后面的 $w=D\log f^{2}$ 只在极值点上才有那条好的方程。
+紧流形上这是 Rothaus 的老结果：sharp 对数 Sobolev 常数严格大于 Poincar\'e 常数时，
+对数 Euler 方程有非常数正解（`03-critical.tex:124-127`）。我的空间是 $\R^n$ 带高斯尾部，
+所以要先把"尾部丢失的熵"控制住，这正是 `03-critical.tex:132-148` 的亏格引理：
+对 $\nu=\mu*\gamma_s$ 与任意 $\varepsilon>0$ 有
+
+\[
+ \Ent_\nu(u^{2})\le 2(s+\varepsilon)\lVert Du\rVert_2^{2}+C_\varepsilon\lVert u\rVert_2^{2},
+\]
+
+并且若 $u_j\to u$ 于 $L^{2}(\nu)$、$\lVert u_j\rVert_2=1$、$\lVert Du_j\rVert_2^{2}\to E_\ast$，则
+
+\[
+ \limsup_j\Ent_\nu(u_j^{2})\le \Ent_\nu(u^{2})+2s\bigl(E_\ast-\lVert Du\rVert_2^{2}\bigr).
+\]
+
+系数 $2s$ 是 sharp 的，这点在后面的论证里被我当成阈值用。证明路径（`03-critical.tex:150-213`）我逐步核过：
+写 $r=d\nu/d\gamma_s$，高斯核公式给 $D\log r=b_s/s$ 有界，故 $\lvert\log r(y)\rvert\le C(1+\lvert y\rvert)$；
+对 $v=u\sqrt r$ 有 $\operatorname{Ent}_\nu(u^{2})=\operatorname{Ent}_{\gamma_s}(v^{2})-\int v^{2}\log r\,d\gamma_s$，
+再用高斯分部积分 $\int\lvert y\rvert^{2}v^{2}d\gamma_s\le2sn\lVert v\rVert_2^{2}+4s^{2}\lVert Dv\rVert_2^{2}$
+把线性增长的修正项吸成 $\delta\lVert Dv\rVert_2^{2}+C_\delta\lVert v\rVert_2^{2}$。
+紧嵌入靠同一个矩估计给拖性，加上固定球上的 Rellich 与对角抽取。
+尾部熵的论证用 $v_{j,L}=(\lvert u_j\rvert-L)_{+}$、$m_{j,L}=\lVert v_{j,L}\rVert_2^{2}$，
+先 $\lim_{L\to\infty}\sup_j m_{j,L}=0$，再由下半连续得 $\lim_L\limsup_j\lVert Dv_{j,L}\rVert_2^{2}\le E_\ast-\lVert Du\rVert_2^{2}$
+（`03-critical.tex:185-188`），最后用 $-z\log z\le C\sqrt z$（$0\le z\le1$）与 $m\log m\le0$ 收口。
+
+达到性引理（`03-critical.tex:220-232`）假设 $\infty>R>\max(P,s)$，结论是存在光滑严格正的非常数 $f$ 满足
+$\int f^{2}d\nu=1$、$\operatorname{Ent}_\nu(f^{2})=2R\int\lvert Df\rvert^{2}d\nu$、$A_\nu f=\lambda f\log f$、$\lambda=R^{-1}$。
+我特别在意"能量趋零"这一支，因为那是唯一用到 $R>P$ 的地方（`03-critical.tex:241-243`）：
+设 $\varepsilon_j^{2}=\lVert Df_j\rVert_2^{2}\to0$、$c_j=\mathbb E_\nu f_j$、$h_j=(f_j-c_j)/\varepsilon_j$，
+Poincar\'e 给 $\lVert h_j\rVert_2^{2}\le P$，而 $1-c_j^{2}=\varepsilon_j^{2}\lVert h_j\rVert_2^{2}$ 逼出 $c_j\to1$。
+剩下的是一元不等式（`03-critical.tex:255-281`）：对 $1/2\le c\le1$、$0<\varepsilon\le1/2$，
+
+\[
+ 0\le Q_{c,\varepsilon}(z)\le(2+2\log2)z^{2}+z^{2}\log_{+}z^{2},\qquad
+ Q_{c,\varepsilon}(z)\to2z^{2},
+\]
+
+其验证是把 $Q$ 写成 $z^{2}B(t)$、$t=\varepsilon z/c$，用 Taylor 积分式
+$B(t)=2+4\int_0^1(1-r)\log(1+rt)\,dr$，$t\le0$ 时 $B\le2$、$t\ge0$ 时 $B\le2+2\log(1+z)$。
+合起来得 $\limsup_j\varepsilon_j^{-2}\operatorname{Ent}(f_j^{2})\le2\lVert h\rVert_2^{2}+2s(1-\lVert Dh\rVert_2^{2}) \le2\max(P,s)<2R$，与极大性矛盾（`03-critical.tex:296-302`）。
+这一处我读到时有一种"原来阈值是这个用途"的恍然：$s$ 与 $P$ 分别在两条退化通道上起作用
+（尾部丢熵与向常数收敛），所以达到性的条件必须是严格大于两者的最大值。
+
+## §6 换参考测度：$\eta$ 自己的 LSI 与那条精确亏损恒等式
+
+极值点给我第二个概率。设 $\nu=e^{-V}$ 对数凹、$K=D^{2}V$ 有界，令
+
+\[
+ \eta=f^{2}\nu,\qquad h=\log f^{2},\qquad w=Dh,\qquad I=\E_\eta\lvert w\rvert^{2}
+\]
+
+（`03-critical.tex:399-418`）。结论有四件：$I=2\lambda H(\eta\mid\nu)>0$；$R(\eta)\le1/\lambda$；
+$w$ 的每个分量属于 $\operatorname{Dom}(A_\eta)$ 且
+
+\[
+ A_\nu h=\lambda h+\tfrac12\lvert w\rvert^{2},\qquad A_\eta w=(\lambda\Id-K)w;
+\]
+
+以及 $\mathbb E_\eta\langle w,Kw\rangle\le\lambda\lvert\mathbb E_\eta w\rvert^{2}$（`03-critical.tex:411-417`）。
+
+我第一反应是：$\eta=f^{2}\nu$ 未必对数凹（$f$ 是个随便的正函数），那它凭什么满足 LSI？
+论文的回答方式让我停了很久，它不去证 $\eta$ 凸，它证的是一个精确恒等式（`03-critical.tex:441-454`）：
+对 $p=g^{2}\eta$、单位质量、$g$ 紧光滑，
+
+\[
+ \Ical(p\mid\nu)-2\lambda H(p\mid\nu)=\Ical(p\mid\eta)-2\lambda H(p\mid\eta).
+\]
+
+推导链条是三步。第一步把 $\mathcal I$ 用 $w$ 展开：
+$\mathcal I(p\mid\nu)=\mathcal I(p\mid\eta)+\int g^{2}\lvert w\rvert^{2}d\eta+2\int D(g^{2})\cdot w\,d\eta$；
+第二步把后两项合起来读成 $\int g^{2}\{\lvert w\rvert^{2}+2A_\eta h\}\,d\eta$，
+再用 $\lambda$ 代掉，得 $2\lambda\int h\,dp$；第三步配上
+$H(p\mid\nu)=H(p\mid\eta)+\int h\,dp$。
+左边对 $\nu$ 的不等式说它非负（把 LSI 作用在 $gf$ 上，用它的亏非负），
+右边就给出 $R(\eta)\le1/\lambda$，齐次性与 §calculus 的 Sobolev 逼近把紧测试推广到能量有限的函数。
+我在笔记里把这一段列为整个证明我最欣赏的一步：它把"新测度的几何性质"这个不可用的信息，
+换成"亏损泛函在换参考时的不变性"这个可计算的信息。$\mathbf{}$后面 $w$ 作为近似第一特征函数、
+$\eta$ 作为平稳律的所有分析都靠这个恒等式供能。
+
+域的问题我也顺着核：$\mathcal I$ 公式可以在 $g$ 的零点处以平方根形式读（`03-critical.tex:447-448`），
+$A_\eta w$ 的右端属于 $L^{2}(\eta)$，因为 $K$ 有界、$w\in L^{2}(\eta)$，
+于是 §calculus 里那个"分布意义下 $A_\pi f\in L^{2}$ 就推出 $f\in\operatorname{Dom}(A_\pi)$"的极大域刻画
+（`02-calculus.tex:157-176`）直接适用。论文特意加了一句：这里没用到任何未证明的高阶可积性
+（`03-critical.tex:434-436`）。这对我是个提醒：整个证明里所有"光滑性"都是借来的，
+唯一真正需要的是形式域与算子域的对齐。
+最后一件（曲率-均值不等式）来自能量配对 $\mathbb E_\eta\lvert Dw\rvert^{2}=\lambda I-\mathbb E_\eta\langle w,Kw\rangle$
+与 $\eta$ 的 Poincar\'e 下界 $\lambda(I-\lvert\mathbb E_\eta w\rvert^{2})$ 相减（`03-critical.tex:459-465`）。
+
+## §7 平移增益：$\sqrt a$ 是怎么冒出来的，两条分支在这里合并
+
+统一估计真正开始的地方是平移增益引理（`03-critical.tex:470-486`）。固定紧区间
+$J\subset(0,1/2)$、$s\in J$、$\lambda=R_s^{-1}$，对任意满足 $D_0=H(\sigma\mid\mu_s)<\infty$、
+$F_0=\mathcal I(\sigma\mid\mu_s)<\infty$、$p=\mathbb E_\sigma Y$ 的概率 $\sigma$，有
+
+\[
+ F_0-2\lambda D_0\ge(s^{-2}-\lambda/s)\lvert p\rvert^{2}-C_J\sqrt a\,(F_0+D_0),
+\]
+
+其中 $C_J$ 与维度、与 $\mu$ 的支撑半径都无关（`03-critical.tex:472-485`）。
+"$C_J$ 不含维度"这句话是我在这节唯一反复确认的东西，因为反例序列的维度会跑到无穷。
+
+机制是三件事实的乘法。第一件：$\log\mathbb E_{\mu_s}e^{v\cdot Y}\le C_J\lvert v\rvert^{2}$ 与
+$\log\mathbb E_{\mu_s}e^{v\cdot b_s(Y)}\le Ca^{2}\lvert v\rvert^{2}$（后者是条件 Jensen），
+熵对偶对每个单位向量取其倍数优化给出
+$\lvert p\rvert\le C_J\sqrt{D_0}$、$\lvert\mathbb E_\sigma b_s(Y)\rvert\le Ca\sqrt{D_0}$
+（`03-critical.tex:489-503`）。第二件：把 $\sigma$ 沿 $-up$ 平移（$0\le u\le1$），
+用 Hessian 上界展开 $D_u=H(\sigma_u\mid\mu_s)$，得
+$D_1=D_0-\lvert p\rvert^{2}/(2s)+O_J(aD_0)$（`03-critical.tex:525-527`），
+过程中还要对每个 $u$ 重跑第一件的均值估计。第三件：分数均值恒等式
+$\mathbb E_\sigma r=\mathbb E_\sigma DV_s=(p-\mathbb E_\sigma b_s)/s$（`03-critical.tex:533-540`），
+以及平移后分数 $r(Y)-p/s+d(Y)/s$、$d(Y)=b_s(Y)-b_s(Y-p)$ 满足
+$\lvert d\rvert^{2}\le p\cdot d(Y)$ 与 $\mathbb E_\sigma\lvert d\rvert^{2}\le C_JaD_0$
+（`03-critical.tex:544-557`）。把这些塞进 $F_1$ 的展开，
+
+\[
+ F_1=F_0-\lvert p\rvert^{2}/s^{2}+O_J\!\left(\sqrt a\,(F_0+D_0)\right),
+\]
+
+再对 $\sigma_1$ 用 $F_1\ge2\lambda D_1$，两条 $p$ 的项合并出 $(s^{-2}-\lambda/s)\lvert p\rvert^{2}$。
+
+$\sqrt a$ 的出处我特意算了一遍：它来自交叉项
+$\sqrt{aD_0}\,(\sqrt{F_0}+\sqrt{D_0})$ 的几何平均，即"熵那侧的 $a$ 阶改进"与
+"信息那侧的 $\sqrt a$ 阶误差"相遇。我原先猜误差会是 $a$ 阶，结果在严格分支只到 $\sqrt a$；
+这不影响结论，因为只需要 $a\to0$，但它解释了 §8 里 $R_s'$ 的界为什么是 $C_J\sqrt a$。
+另外 $\lambda$ 的范围在最后一步被用到：在所选时间区间上 $2/3\le\lambda\le1$（`03-critical.tex:576-577`），
+这一点由 §4 的 $1\le R_s\le1+s$ 与 $s<1/2$ 立刻给出，我一开始以为要额外证明。
+
+两条分支的统一在 `03-critical.tex:587-623`。严格分支（$R_s>R_s^{P}$）取 §5 的极值点，
+$\eta=f^{2}\mu_s$、$w=D\log f^{2}$、$I=2\lambda H(\eta\mid\mu_s)$，此时把平移增益用在
+$\sigma=\eta$ 上：$F_0=I$、$D_0=I/(2\lambda)$，左边 $F_0-2\lambda D_0$ 恰好为零，
+于是被迫得到 $\lvert p\rvert^{2}\le C_J\sqrt a\,I$，再由分数均值恒等式给
+$\lvert\mathbb E_\eta w\rvert^{2}\le C_J\sqrt a\,I$；$K_s^{2}\le s^{-1}K_s$ 把曲率项一并收掉。
+间隙分支（$R_s=R_s^{P}$）取 $\eta=\mu_s$、$w=D\varphi$、$A_{\mu_s}\varphi=\lambda\varphi$、
+$I=\lambda\mathbb E_{\mu_s}\varphi^{2}$，那里 $\mathbb E w=\lambda\mathbb E[\varphi Y]$ 与
+$(1-\lambda s)\mathbb E[\varphi Y]=\mathbb E[\varphi b_s]$ 加上 $\mathbb E_{\mu_s}b_sb_s^{*}\le\mathbb E_\mu XX^{*}\le Ca^{2}\mathrm{Id}$
+给出 $\lvert\mathbb E w\rvert\le C_Ja\sqrt I$，比严格分支整整好一个 $\sqrt a$ 的幂
+（`03-critical.tex:620-621` 明确写了这个改进）。
+两边都还需要坐标函数属于 $\operatorname{Dom}(A)$：严格分支用分布恒等式
+$A_\eta Y=(Y-b_s)/s-w$（`03-critical.tex:682-687`），间隙分支用 $Y$ 与
+$A_{\mu_s}Y=(Y-b_s)/s$ 都在 $L^{2}(\mu_s)$ 里。
+这里我踩了一个小坑：间隙分支的存在性要先有形式域紧嵌入，再说明零空间只有常数，
+才把 $1/R_s^{P}=\lambda$ 说成一个真正的正间隙（`03-critical.tex:641-648`）。
+
+## §8 接触恒等式：$R_s'=R_s\,\mathbb E_\eta\langle w,K_sw\rangle/I$ 与 $R_s\to1$
+
+我需要一个把 $R_s$ 的导数和 §7 的小量绑起来的恒等式，否则"$a\to0$"和"$R_s\to1$"之间没有桥。
+桥是搬运论证（`03-critical.tex:690-754`）。设 $\Phi_{s,t}$ 是 §4 的热连续性流，
+把形式域测试 $g$ 用 $g_t=g\circ\Phi_{s,t}^{-1}$ 搬走，则它在 $\mu_t$ 下的分布不变，熵与方差都是常数；
+Jacobian 方程 $\partial_tD\Phi_{s,t}=K_tD\Phi_{s,t}/2$ 给出
+
+\[
+ \left.\frac{d}{dt}\right|_{t=s}\int\lvert Dg_t\rvert^{2}d\mu_t
+ =-\int\langle Dg,K_sDg\rangle\,d\mu_s
+\]
+
+（`03-critical.tex:714-718`），且这一步对形式域的 $g$ 也成立：流的导数与其时间导数在紧时间区间上一致有界，
+被积函数的导数被 $C\lvert Dg\rvert^{2}$ 控制，所以支配收敛免掉了光滑与紧支撑限制
+（`03-critical.tex:722-727`）。
+严格分支取 $g=f$、$Q(t)=\operatorname{Ent}_{\mu_t}(f_t^{2})/(2\int\lvert Df_t\rvert^{2}d\mu_t)$；
+间隙分支取 $g=\varphi$、$Q(t)=\operatorname{Var}_{\mu_t}(\varphi_t)/\int\lvert D\varphi_t\rvert^{2}d\mu_t$。
+两种情形都有 $Q(t)\le R_t$ 与 $Q(s)=R_s$（间隙分支还多一层 $Q(t)\le R_t^{P}\le R_t$），
+于是在 $R_s$ 的可微点上双侧接触逼出 $Q'(s)=R_s'$，得到接触恒等式
+
+\[
+ R_s'=R_s\,\frac{\E_\eta\langle w,K_sw\rangle}{I},\qquad 0\le R_s'\le C_J\sqrt a
+ \quad\text{a.e. on }J
+\]
+
+（`03-critical.tex:699-703`）。积分一次：对固定的 $0<\delta<s<1/2$，
+$1\le R_s\le R_\delta+C_{[\delta,s]}\sqrt a(s-\delta)\le1+\delta+C_{[\delta,s]}\sqrt a(s-\delta)$；
+先取反例序列的极限、再令 $\delta\downarrow0$，得 $R_s\to1$ 对每个 $0<s<1/2$（`03-critical.tex:745-753`）。
+我读到这里才确认 §4 的单调性其实有两个用途：一是给出 $R_s\ge1$ 的下界让接触论证成立，
+二是保证可微点几乎处处存在。
+
+把到这里为止的东西定稿成"临界序列"（`03-critical.tex:760-797`）：固定 $s=1/8$，
+$\lambda=R_s^{-1}\to1$，取子列使同一分支在整个子列上成立，于是
+
+\[
+ R(\eta)\le\lambda^{-1},\quad w\in\Dom(A)^{n},\quad
+ Aw=(\lambda\Id-K_s)w,\quad
+ \lVert(A-1)w\rVert_{L^{2}(\eta)}+\lvert\E_\eta w\rvert=o(\sqrt I),
+\]
+
+$\mathbb E_\eta\lvert K_sw\rvert^{2}=o(I)$、$\mathbb E_\eta\lvert Dw\rvert^{2}=(1+o(1))I$，$A$ 的谱隙至少 $\lambda$，
+坐标函数都属于 $\operatorname{Dom}(A)$。间隙分支里所有估计对 $\varphi$ 齐次，所以可以缩放它令 $I\to0$
+而不动任何归一化命题（`03-critical.tex:811-814`）。我一开始把这个 $I\to0$ 当成技术噪声，
+到了 §11 才明白它是用来让投影条件自动成立的开关（`05-hierarchy.tex:99-102`）。
+另外论文明确写了：这里没有断言维度、$I$ 与收敛速度之间的任何关系，也不需要
+（`03-critical.tex:794-796`）。这句话后面会变成我的麻烦：§13 的矩阵构造要在维度里取
+秩不超过 $cI$ 的投影，若 $I$ 与维度无关地小，某些步骤就得另找论证。
+
+## §9 关键转折：从"达到性"到"预测曲线 $e^{-r}$"
+
+真正让我改变对整个证明看法的是 §9 这一句话（`01-introduction.tex:165-175`、`04-prediction.tex:494-506`）：
+$Y\sim\eta$、$G$ 是独立标准高斯、$U_r=Y+\sqrt r\,G$、$h_r(u)=\mathbb E[w(Y)\mid U_r=u]$、
+$m(r)=I^{-1}\mathbb E\lvert h_r(U_r)\rvert^{2}$，则对每个固定的 $0<r<1/4$，
+
+\[
+ m(r)\longrightarrow e^{-r}.
+\]
+
+我最初的读法是错的。我以为 $m(r)\le e^{-r}$ 会由数据处理或单调性直接给，
+于是把精力放在"上界很松没关系、下界才是难点"。事实相反：上界是一条三步的算术，
+下界要靠一个额外的观测论证，两边都不平凡，而 $e^{-r}$ 这个形状是两条界共用的目标。
+
+上界的链条（`04-prediction.tex:509-545`）如下。先定义
+$\theta(r)=\exp(-\int_0^r dt/R_{s+t})$，由 §8 的 $R_s\to1$ 与 $1$-Lipschitz 得
+$\theta(r)=e^{-r}+o(1)$，在紧区间上一致。公共热流以一半的相对 Fisher 信息耗散相对熵，
+所以在同一律 $\mu_{s+r}$ 参照下熵至多按 $\theta(r)$ 收缩。严格分支里令
+$L_T=\sqrt T\,w(Y_0)+G'$、$d(T)=H(\operatorname{Law}(L_T)\mid\gamma)$，则
+
+\[
+ \frac I2\int_0^T p_v(r)\,dv
+ =\E H\!\left(\Law(L_T\mid U_r)\mid\gamma\right)
+ =\E H\!\left(\Law(U_r\mid L_T)\mid\mu_{s+r}\right)+d(T)-H_r
+ \le\frac I2\theta(r)\!\left(\frac1\lambda+T\right)+d(T),
+\]
+
+第一个等号是 Guo--Shamai--Verd\'u 的相对熵形式（`02-calculus.tex:295-309`，条件积分版本），
+被积函数对信号强度单调；固定 $v$ 再取 $T>v$，由 $p_t(r)$ 单调得
+$(T-v)\limsup p_v(r)\le e^{-r}(1+T)$，序列极限在 $T$ 固定时取，最后让固定的 $T$ 任意大，
+得 $\limsup p_v(r)\le e^{-r}$。
+这套算术里我卡过的点是"为什么必须对 $v$ 积分"：因为可预测能量只在高斯信道的积分恒等式里
+与熵挂钩（$d'(t)=\frac12\mathbb E\lvert\mathbb E[S\mid Z_t,U]\rvert^{2}$，`02-calculus.tex:324-326`），
+点态版本我拿不到。
+
+支撑上界的引理是"高效高斯探针"（`04-prediction.tex:29-42`）：对每个有限 $M$，
+$\sup_{0\le T\le M}d(T)=o(I)$。直觉是：$w$ 在 $\eta$ 下几乎是第一特征函数，所以它的
+高斯化观测量不出新信息，代价相对 $I$ 可忽略。证明的入口是坐标恒等式
+$-Ay=y/s-w+b_s/s$（`04-prediction.tex:49-52`）先给 $\mathbb E_\eta\lvert Y_0\rvert^{2}<\infty$，
+再由 $\eta$ 的 LSI 得 $\mathbb E_\eta e^{v\cdot(Y_0-\mathbb E Y_0)}\le e^{\lvert v\rvert^{2}/(2\lambda)}$，
+对高斯 $v$ 积分得 $\mathbb E_\eta e^{c'\lvert Y_0\rvert^{2}}<\infty$（`04-prediction.tex:53-60`）。
+这个二阶指数矩在后面熵损失引理里被直接引用为假设，属于"顺手补上的必要前提"。
+
+## §10 熵损失引理：每步丢一个方向，用独立副本把代价摊平
+
+下界那侧的全部难度在 `04-prediction.tex:185-204`：$p,q$ 光滑严格正、$q$ 对数凹，
+$H_0=H(p\mid q)<\infty$、$w=D\log(p/q)$、$I=\mathbb E_p\lvert w\rvert^{2}<\infty$、
+$\mathbb E_p e^{c\lvert Y\rvert^{2}}<\infty$，则对每个 $z>0$，
+
+\[
+ 2(H_0-H_z)\le\int_0^z\E_p\bigl\lvert\bar w_r(U_r)\bigr\rvert^{2}dr,\qquad
+ H_r=H(p_r\mid q_r),\quad \bar w_r(U_r)=\E_p[w(Y)\mid U_r].
+\]
+
+它的证明是一台小机器（`04-prediction.tex:206-260`），我把结构抄下来当模板：
+取 $b=1/z$、$N$ 个独立副本，$Y=(Y_1,\dots,Y_N)$、$W=(w(Y_1),\dots,w(Y_N))$，
+两个先验是 $p^{\otimes N}$ 与 $q^{\otimes N}$；先观测 $Z_0=\sqrt b\,Y+G_0$，
+链式法则说剩下的后验相对熵平均是 $N(H_0-H_z)$；接着固定 $u>0$ 与整数 $m$、令 $\delta=u/m$，
+在第 $i$ 步计算两个后验均值之差、令 $P_i$ 是其张成的正交投影（差为零时取 $P_i=0$），
+只保留 $(1-P_i)Z_{i+1}$，$Z_{i+1}=\sqrt\delta\,Y+G_{i+1}$，所有噪声独立，
+且两个先验下用同一条可测规则。于是每个实现的保留历史下，似然关于 $Y$ 是一个高斯二次因子，精度
+
+\[
+ B=b\Id+\delta\sum_{i=0}^{m-1}(1-P_i)\succeq b\Id,
+\]
+
+关键是"选择 $P_i$ 本身不额外贡献似然因子，因为每个选择已经被保留的历史决定"（`04-prediction.tex:248-250`）。
+这样后验基准的曲率至少有 $B$，而相对后验分数仍是 $W$。
+三个极限的顺序我也记下来：先加密有限观测网格（$m\to\infty$）、再增副本数（$N\to\infty$）、
+最后增总额外精度（$u\to\infty$），顺序换掉就不等式方向会错。
+
+为什么非丢方向不可？我的理解是：两个先验的后验均值之差所张的那一个方向上，
+保留下来的观测会同时携带"信号"与"我选了哪个先验"的痕迹，因而破坏同一条规则在两个先验下的一致性；
+丢弃它，保留部分在两个先验下的条件均值就一致，代价是每步至多一个方向，
+摊到 $N$ 个独立副本上后相对于总观测 $\delta N$ 可忽略（`04-prediction.tex:211-216`）。
+我一度想过更省事的替代方案：把整段观测当成一个信道，用数据处理不等式直接把
+$H_0-H_z$ 与互信息挂钩。`[推测]` 这条路我没能写出可用的定量结果，理由只能从结构反推：
+数据处理给的是单向收缩，而这里需要的是"熵损失被可预测能量从下方控制"，方向恰好相反，
+所以必须靠后验曲率下界（$B\succeq b\mathrm{Id}$）来造下界，这是纯信息论不等式给不出来的。
+$\Lemma$ 里要求 $q$ 对数凹，正是为了让后验的曲率论证（§calculus 的正曲率引理）可用。
+
+把 §9 与 §10 合起来，就是预测曲线的完整证明：下界由熵损失给出
+$\int_0^z m(r)dr\ge(1-\theta(z))/\lambda$（用上 $H_z\le\theta(z)H_0$），
+上界由 §9 的 $\limsup p_v(r)\le e^{-r}$、$0\le m\le1$ 与反向 Fatou 给出反向的极限不等式，
+于是 $\int_0^z m\,dr\to1-e^{-z}$（`04-prediction.tex:547-560`）；
+$m$ 对 $r$ 非增，用 $[r-h,r]$ 与 $[r,r+h]$ 上的平均夹住点值，逐点极限 $m(r)\to e^{-r}$ 到手。
+我在这个时刻才意识到整件事的荒谬程度：一个由反例假设造出来的向量场 $w$，
+它对噪声的预测能力必须精确等于 OU 半群的收缩 $e^{-r}$，也就是说它表现得像一个高斯方向，
+而它又是某个对数凹律的分数。下面 §11 起就是把"表现得像高斯方向"这句话榨干。
+
+## §11 张量层级：把一条预测曲线变成一整列近似特征函数
+
+`05-hierarchy.tex:20-92` 的命题是整个证明里我把输入读得最慢的一段，因为它把前面所有东西都塞进一个
+抽象接口，而且这个接口在两条分支上要同时可用。假设给的是：一列光滑严格正密度 $\eta$，
+$A=-\Delta-D\log\eta\cdot D$，Poincar\'e 常数至多 $\lambda^{-1}$、$\lambda\to1$，固定 $s=1/8$，
+存在光滑向量场 $b,w$ 与对称矩阵场 $K$ 满足
+
+\[
+ D\log\eta=-\frac{y-b(y)}{s}+\omega(y),\qquad Db=\Id-sK,\qquad 0\le K\le s^{-1}\Id,
+\]
+
+其中 $\omega=w$（严格分支）或 $\omega=0$（间隙分支）在整个序列上恒定；
+$b,w\in L^{2}(\eta)$、$w$ 是梯度、$I=\lVert w\rVert_2^{2}>0$，并且
+
+\[
+ w\in\Dom A,\qquad \lVert(A-1)w\rVert_2=o(\sqrt I),\qquad
+ \lvert\E_\eta w\rvert=o(\sqrt I),\qquad \langle w,Kw\rangle_2=o(I)
+\]
+
+（`05-hierarchy.tex:26-38`）。再加三条：预测条件 (i) 就是 §9 的 $m(r)\to e^{-r}$；
+投影条件 (ii) 说对任意固定的 $c<\infty$，
+$\sup_{\Pi^2=\Pi=\Pi^{*},\,\operatorname{rank}\Pi\le cI}\lVert\Pi w\rVert_2^{2}=o(I)$，
+且对每个 $\epsilon>0$ 存在秩至多 $C_\epsilon I$ 的确定性投影 $\Pi_\epsilon$ 使
+$\lVert\mathbb E[(1-\Pi_\epsilon)bb^{*}(1-\Pi_\epsilon)]\rVert_{\mathrm{op}}$ 与
+$\lVert\mathbb E[(1-\Pi_\epsilon)\omega\omega^{*}(1-\Pi_\epsilon)]\rVert_{\mathrm{op}}$ 都 $\le\epsilon$
+（`05-hierarchy.tex:47-60`）；尾部条件 (iii) 只在 $\omega=w$ 时要求
+$\mathbb E\operatorname{tr}(C_r\mathbf 1_{\{C_r>a\}})=o(I)$，$C_r=\operatorname{Cov}(w(Y)\mid U_r)$（`05-hierarchy.tex:61-67`）。
+输出是：每个固定 $l\ge0$ 有全对称张量场 $T_l$、阶 $l+1$、$T_0=w$，满足
+
+\[
+ \lVert T_l\rVert_2^{2}=(1+o(1))I,\qquad \lVert(A-1)T_l\rVert_2=o(\sqrt I),\qquad
+ \lVert DT_l-T_{l+1}\rVert_2=o(\sqrt I),
+\]
+
+$\langle T_l,K_1T_l\rangle_2=o(I)$，以及同样的投影消去
+$\sup_{\operatorname{rank}\Pi\le cI}\lVert\Pi_1T_l\rVert_2^{2}=o(I)$；每个 $T_l$ 逐分量属于 $\operatorname{Dom} A$，
+$l\ge1$ 时可选在 $\bigcap_{p\ge1}\operatorname{Dom} A^{p}$ 里；由对称性，指定槽位可以是任意槽位；
+对任意固定的有限层级与参数集合可以同时成立（`05-hierarchy.tex:69-92`）。
+
+我原本预期的构造方式是把 $A^{-1}$ 反复作用在 $w$ 上，或者干脆把 $w$ 投到 Wiener chaos 上取齐次分量。
+这两个想法我都在纸上试过，卡点各不相同：$A^{-1}$ 在 $\eta$ 的非高斯情形没有好的核估计，
+而且它不会保持"是某个函数的导数"这一结构；chaos 分解要求参照测度高斯，
+我手里只有 $\eta$ 的 LSI 与 $K_s$ 的曲率界。真正用的方法（`05-hierarchy.tex:110` 起的小节标题
+"Gaussian Bessel saturation and the induction"）我读到的信息是：先对预测做 Bessel 不等式
+（`05-hierarchy.tex:133` 的 "Bessel inequality for the prediction"），
+发现它在每个固定导数阶上都渐近饱和（`05-hierarchy.tex:4-9` 明确说了这一点），
+再用归纳把饱和性转成 $DT_l\approx T_{l+1}$ 与 $\lVert T_l\rVert_2\approx\sqrt I$。
+`[推测]` 我在本次会话只完整读了 05 节的前 110 行以及全节的小节与引理标题
+（`05-hierarchy.tex:110`、`133`、`177`、`229`、`369`、`382`、`440`、`461`、`643`、`652`），
+归纳的具体递推式与 Bessel 系数的选取我没有逐行读，所以本节对证明机制的描述属于标题级反推。
+三步总纲倒是写得很清楚（`05-hierarchy.tex:104-108`）：先构造特征函数与导数层级，
+再沿平稳扩散展开其演化并在严格分支推出算子模尾部估计，最后用这些估计正当化一次曲率分部积分。
+这个顺序本身就是信息：曲率消去 $\langle T_l,K_1T_l\rangle_2=o(I)$ 排在最后，
+说明它需要 $DT_l\approx T_{l+1}$ 先成立，否则会碰到未定义的二次导数。
+
+## §12 输入从哪来：外子空间、$I\to0$ 与两条分支的不对称
+
+命题 (Proposition 5.1) 的输入在应用时取 $b=b_s$、$K=K_s$（`05-hierarchy.tex:94-96`）。
+漂移、Poincar\'e 与初始估计来自 §8 的临界序列；预测条件来自 §9；
+剩下两条来自 `04-prediction.tex:654` 那条题为 "Posterior covariance and outlier subspaces" 的引理
+（`[推测]` 我只读了它的标题与所在行，内容未逐行核对）。
+间隙分支里 $\omega=0$ 且 $\lVert\mathbb E bb^{*}\rVert_{\mathrm{op}}=o(1)$，所以可以取 $\Pi_\epsilon=0$；
+归一化 $I\to0$ 让 (ii) 自动成立，因为最终秩不超过 $cI$ 的确定性投影只有零（`05-hierarchy.tex:97-102`）。
+论文明说：没有把任何严格分支的探针估计加到间隙分支的假设上（`05-hierarchy.tex:101-102`）。
+我在这一处修正了自己的一个想当然：我以为两条分支需要在同一组假设下被处理，
+于是准备为一个"统一的投影假设"写额外的证明；实际的结构是间隙分支几乎无消耗地满足同一个接口，
+分支的不对称全部集中在 (iii) 那条条件协方差尾部上。
+这也解释了 §10 里 $d(T)=o(I)$ 那个"高效探针"引理的位置：它只为严格分支服务。
+
+条件 (ii) 的物理意义我按 `01-introduction.tex:187-188` 那句话理解：
+张量估计还要控制曲率、并排除"在与维度无关的小子空间上集中"。
+秩约束 $\operatorname{rank}\Pi\le cI$ 里出现的单位是 $I$，与维度无关，这是这套论证敢于处理任意 diffuse 谱的原因；
+我在 §8 末尾提过的麻烦（维度与 $I$ 的关系不被断言）在这里变成一个设计原则：
+所有需要"小"的地方都以 $I$ 为单位来量，凡是以维度为单位的陈述一律不接受。
+
+## §13 矩阵场 $R$：从对称张量到 Sylvester 方程与近可换代数
+
+到这里我手里有一整列对称张量 $T_l$，每个都近似第一特征函数、范数都是 $\sqrt I$。
+下一件事是把这些高阶梯的指标"折"成矩阵（`01-introduction.tex:190-195`）：
+把 $T_l$ 的一个指标当作行、其余全部指标当作列，作正矩阵 $T_lT_l^{*}$；
+在一段长的层级带 $k\le l<2k$ 上平均 $I^{-1}T_lT_l^{*}$，得到一个正矩阵场 $\rho$，
+其平均迹渐近为一。论文接着给出三件事（`01-introduction.tex:195-203`），
+我逐条对照了第 6 节的引理标题，对得上：
+其一，它的平方根几乎是 Hilbert--Schmidt Poincar\'e 的等号情形
+（`06-matrices.tex:51` "Centering and the square-root energy"、`06-matrices.tex:189`
+"Saturation of the square-root energy"）；
+其二，许多张量指标上的对称性迫使无穷小矩阵系数在一个加权的 Hilbert--Schmidt 范数下渐近可换
+（`06-matrices.tex:383` "Commutation and exchange of indices"）；
+其三，这些矩阵的高斯线性组合在冻结于初始扩散点的意义下，其矩在加权迹之下是标量高斯矩
+（`06-matrices.tex:583` "Weighted Gaussian moments"）。
+中间还有 `06-matrices.tex:114` "Averaging over symmetric tensor slots"、
+`06-matrices.tex:261` "Balance and bounded columns"、`06-matrices.tex:438`
+"Spectral blocks and a bounded input map" 三块支撑，
+`[推测]` 它们的具体陈述我只从标题与第 7 节引用它们的标签来反推
+（`07-observations.tex:20-21` 引 `eq:matrix-normalization` 与 `eq:matrix-saturation`，
+`07-observations.tex:32` 引 `eq:matrix-sylvester`）。
+
+第 7 节开头把我实际读到的矩阵输入写得很干净（`07-observations.tex:22-33`）：
+
+\[
+ \E\tr R^{2}\longrightarrow1,\qquad \E\lvert DR\rvert^{2}\longrightarrow1,
+\]
+
+以及用原始 Sylvester 矩阵 $\widehat H_i$ 表示的
+
+\[
+ D_iR=\tfrac12(\widehat H_iR+R\widehat H_i),\qquad
+ \sum_i\E\lVert[\widehat H_i,R]\rVert_{\HS}^{2}=o(1).
+\]
+
+我把这两行读成整个证明的"相变点"：$D_iR$ 满足的是 Sylvester（Lyapunov 型）方程，
+所以 $R$ 的导数被 $R$ 与一组对称矩阵的双线性作用描述；可换子空间的缺失被量化成
+对易子的 Hilbert-Schmidt 范数之和为 $o(1)$。我原先担心的是"不同维度里怎么可能同时对角化一列矩阵场"，
+`01-introduction.tex:240-243` 明确回答了这个担心：矩阵化约把对称张量的近似等号转成加权的标量涨落律，
+不要求在变化维度中的同时对角化。这一点是我在这一节学到的最实用的教训：不要试图对角化，
+只要所有测试都通过加权迹来做，非交换性就只在对易子那一项里出现，而那一项是 $o(1)$。
+
+第 6 节我完整读了冻结律那一段（`06-matrices.tex:705-769`），里面的机制我抄进笔记：
+
+\[
+ \frac1{kI}\sum_{k\le l<2k}\sum_i
+ \lVert T_{l+1,i\,\cdot}-(H_i)_{(1)}T_l\rVert_2^{2}=o(1),
+\]
+
+并且层级带平移任意固定整数 $a\ge0$ 仍然成立，因为增删至多 $a$ 层的误差和花费 $O_C(a/k)$，
+每一层的单项误差不超过 $2\lVert T_{l+1}\rVert_2^{2}+2C\lVert T_l\rVert_2^{2}=O_C(I)$
+（`06-matrices.tex:744-751`）。迭代它，对每个固定 $j$ 可以把多余指标的张量 $T_{l+j}$ 换成
+$(i_1,\dots,i_j)\mapsto(H_{i_j})_{(1)}\cdots(H_{i_1})_{(1)}T_l$，
+若第 $a$ 步的均方根误差是 $e_a$，则 $j$ 步后总误差不超过 $\sum_{a=0}^{j-1}C^{a/2}e_{j-1-a}$
+（`06-matrices.tex:757-769`）。这个求和形式告诉我：$C^{a/2}$ 的指数增长被 $e_a\to0$ 吃掉，
+所以只能对固定的 $j$ 用，不能对 $j$ 一致，这正对应后文"先取序列极限、再取多项式次数极限"的顺序。
+
+## §14 冻结扩散律：对数正态因子 $\exp(\sqrt{8t}\,Z-4t)$ 从哪来
+
+`06-matrices.tex:712-731` 的命题是矩阵部分的终点，也是我读得最兴奋的一页。
+设 $Y_u$ 是以 $\eta$ 为不变律的平稳扩散、驱动 Brown 运动 $B_u$，固定 $t>0$；
+在 $Y_0$ 处做 §13 的矩阵构造，并使用一个独立的随机分块偏移；
+在其正交标架里放 $N=B_t/\sqrt t$，则条件于初始数据与分块偏移，$N$ 是标准高斯向量。
+在初始空间坐标下定义
+
+\[
+ \sigma=\bigoplus_\beta\beta^{2}\exp\!\left(\sqrt{8t}\,H[N]-4t\Id_\beta\right),
+\]
+
+在被略去的核上取 $\sigma=0$，那么
+
+\[
+ \E\bigl\lVert R(Y_t)-\sigma^{1/2}\bigr\rVert_{\HS}^{2}\longrightarrow0 .
+\]
+
+并且构造 $\sigma$ 的那些矩阵仍满足有界列与输入映射估计、加权亏损以及那个混合矩律
+（`06-matrices.tex:727-730`）。
+
+我的第一反应是"$\sqrt{8t}$ 和 $4t$ 这两个系数一定来自某次配方"。核对之后确认它来自 Hermite 展开：
+沿平稳扩散做 Hermite 展开、把新增指标换成初始矩阵的乘积、辨认 Wick 收缩、最后把标量 Hermite 级数求和
+（`06-matrices.tex:733-737` 三步；`06-matrices.tex:700-709` 那条把
+$\frac{(-1)^{b}j!}{2^{b}b!(j-2b)!}D_1^{j-2b}$ 认作 $\mathfrak h_j^{(1)}(D_1)$ 的公式是 Wick 收缩的具体形式）。
+$\mathbb E\exp(\sqrt{8t}Z-4t)=1$（$Z\sim N(0,1)$）这个"均值为一"的性质在第 7 节被当作归一化用
+（`07-observations.tex:901` 重新验证了 $\mathbb E\ell=1$）。
+我在自己的复算里犯过一次符号错误：把噪声系数按 $\Delta/2$ 那套约定写，于是 Hermite 级数给出
+$\sqrt{2t}$ 这一类系数；换回平稳扩散的 $\sqrt2$ 约定（`02-calculus.tex:5-8` 反复提醒的那两套约定）
+才对上 $\sqrt{8t}$。这类系数错误如果留到 §15，会让上界 $C_0$ 与下界 $c$ 都漂掉，
+而最终矛盾只是"某个绝对常数大于另一个绝对常数"，所以两边都必须精确。
+
+还有一个设计选择我不Originally以为是任意的：矩阵场在 $Y_0$ 处"冻结"。
+我以为应该让矩阵场沿 $t$ 一起演化，那样 $R(Y_t)$ 与构造之间还要多一个传输误差。
+实际做法是用冻结构造去逼近 $R(Y_t)$，误差不超过 $o(1)$ 于 Hilbert-Schmidt 能量意义，
+好处是条件于初始点之后，观测变成一个"协方差未知的纯高斯混合"问题，
+所有非线性都塞进了 $\sigma$ 的定义里。这样 §15 的上下界比较才可以在同一个信息单位里做。
+
+## §15 观测模型与互信息上界：$C_0=9/4$ 是怎么被压出来的
+
+矛盾的另一半在 `07-observations.tex:36-110`，我把它当成一个实验设计问题来读。
+固定 $L\ge1$，
+
+\[
+ f_L(q)=\frac{q}{1+q/L},\qquad
+ C_T(y)=\Id+f_L\!\left(TR(y)^{2}\right),\qquad
+ Z_T=C_T(Y_t)^{1/2}G,\quad T>0,
+\]
+
+$G$ 是独立标准高斯向量，于是 $\mathrm{Id}\le C_T\le(1+L)\mathrm{Id}$（`07-observations.tex:38-42`）。
+这里 $L$ 是"协方差上限的旋钮"，$T$ 是"尺度旋钮"，$t$ 是"扩散时间旋钮"。
+我读到这里时对这三个参数的分工毫无感觉，读完 §17 才知道：$t$ 与 $L$ 要一起变大制造矛盾，
+而 $T$ 从 $0$ 到 $\infty$ 被 $dT/T^{2}$ 积分、专门用来吸收谱块的尺寸。
+
+上界命题（`07-observations.tex:87-96`）：存在绝对常数 $C_0$，使每个固定的 $t>0$、$L\ge1$ 满足
+
+\[
+ \limsup\int_0^\infty\MI(Y_t;Z_T)\,\frac{dT}{T^{2}}\le C_0,
+\]
+
+并且可取 $C_0=9/4$。入口是把 $2\lambda H\le\mathcal I$ 作用在后验密度 $q_z(y)=p_T(z\mid y)/p_T(z)$ 上、
+再对输出 $z$ 取平均（`07-observations.tex:99-110`）：
+
+\[
+ 2\lambda\,\MI(Y_t;Z_T)\le\E\bigl\lvert D_y\log p_T(Z_T\mid Y_t)\bigr\rvert^{2}.
+\]
+
+后验归一化不依赖 $y$，因此对导数无贡献（`07-observations.tex:109-110`）。
+剩下的工作是算高斯对数似然的梯度并把尺度积分与谱乘子配对。谱乘子是
+
+\[
+ M_L(v,w)=(v+w)^{2}\int_0^\infty
+ \frac{dT}{(1+Tv^{2}/L)(1+Tw^{2}/L)(1+(1+1/L)Tv^{2})(1+(1+1/L)Tw^{2})},
+\]
+
+$M_L(0,0)=0$，估计是 $M_L(v,w)\le4\log(1+L)$ 对一切 $v,w\ge0$，
+以及当 $1/2\le v/w\le2$ 时 $M_L(v,w)\le9$（`07-observations.tex:49-65`）。
+第二个界与 $L$ 无关，是 $C_0=9/4$ 的直接来源。
+我按论文的推导复算了一遍：写 $a=1/L$、$b=1+1/L$，则 $b-a=1$；
+取 $r=\max(v,w)$，丢掉较小特征值对应的两个分母因子，代换 $q=Tr^{2}$，
+得 $M_L\le4\int_0^\infty dq/((1+aq)(1+bq))=4\log(b/a)=4\log(1+L)$；
+若 $v,w$ 可比，令 $r_0=\min(v,w)$，丢掉系数为 $a$ 的两个因子并用 $b\ge1$，
+余下积分不超过 $\int_0^\infty(1+Tr_0^{2})^{-2}dT=r_0^{-2}$，配合 $v+w\le3r_0$ 得 $9$
+（`07-observations.tex:69-85`）。
+这里 $4\log(1+L)$ 那条我一开始以为更重要，因为它显式含 $L$；实际起作用的是可比情形的那条 $9$，
+因为分块之后同一块内的特征值天然可比，$L$ 依赖被塞进 $f_L$ 的饱和形式里由谱块处理。
+`[推测]` "丢因子"的顺序（先丢较小特征值的那两个）是我根据这两条界的强弱反推的，
+论文正文没有把顺序选择单独评论。
+
+## §16 尺度积分 $dT/T^{2}$：把谱的弥散性付掉的那笔账
+
+我最不愿意承认自己没看懂的一处，是尺度积分的角色。`01-introduction.tex:219-228` 的说法是：
+在一个 $\rho$ 的尺寸为 $\beta^{2}$ 的谱块上，作代换 $x=T\beta^{2}$，则
+
+\[
+ \frac{dT}{T^{2}}=\beta^{2}\frac{dx}{x^{2}},
+\]
+
+而这恰好是该块上未归一化迹前面的系数。因此信息下界即便在谱任意弥散时也保留全部矩阵质量。
+我把这句话拆开验证：块内矩阵的尺寸由 $\beta$ 携带，观测里的 $T$ 是外部尺度，
+若只对某个固定 $T$ 比较上下界，则弥散谱上的块会因为自身太小而贡献可忽略的量，
+上界与下界就会在不同尺度上各自成立、互不矛盾；
+代换 $x=T\beta^{2}$ 之后，$dx/x^{2}$ 的积分变量被块的尺度归一，
+块前乘以的 $\beta^{2}$ 与未归一化迹的权重完全一致，于是"每个块都按它自己的尺度被积分"。
+第 7 节开头同样这么说（`07-observations.tex:10-12`）：对尺度的积分给每个谱块恰好等于迹式极限所用
+的权重，与它的特征值尺寸无关。
+
+沿着这条账往下，第 7 节还需要两件事。其一是尺度区间上的稳定性：小节标题
+"Stability on the entire scale interval"（`07-observations.tex:192`）与其中的引理
+"Integrated covariance stability"（`07-observations.tex:201`）；
+其二是把多项式测试搬到标量观测上："Transfer of the polynomial tests to scalar observations"
+（`07-observations.tex:493`）、"Replacement in integrated polynomial tests"（`07-observations.tex:502`）、
+"Polynomial density under exponential moments"（`07-observations.tex:572`）、
+"Nonlinear mixed trace law"（`07-observations.tex:603`），
+最终是 "Scalar information lower bound"（`07-observations.tex:747`，命题 `prop:information-lower`，
+带一个绝对常数 $C_1$）。中间还有 "Conditional information and blockwise tests"
+（`07-observations.tex:270`）、"Conditional Ornstein--Uhlenbeck score"（`07-observations.tex:311`）、
+"Block tests and the scale Jacobian"（`07-observations.tex:388`）三块做分块与 Jacobian 的簿记。
+`[推测]` 这一节的正文我只读了开头到命题 7.1 的证明入口（`07-observations.tex:1-110`）、
+§17 用到的发散引理（`07-observations.tex:874-971`）与收尾（`07-observations.tex:973-1016`），
+上述中间引理的精确陈述我没有逐行核对，所以我对它们的定位属于按标题与前后引用关系的反推。
+我能确认的一点顺序约束来自 `07-observations.tex:860-872`：
+上界与下界两侧的极限都在反例序列之前固定所有观测时间、上限、紧参数区间与多项式次数，
+因此两边都不需要对无界参数的一致逼近。
+
+## §17 标量下界发散与最终矛盾
+
+矛盾被压缩成一个一元高斯混合实验（`07-observations.tex:882-898`）。
+$n,g$ 独立标量标准高斯，$t\ge1$，
+
+\[
+ \ell=\exp(\sqrt{8t}\,n-4t),\qquad z_x=\sqrt{1+f_t(x\ell)}\,g,
+\]
+
+则存在绝对常数 $c>0$ 与 $h_0\ge1$，使所有 $t\ge h_0$ 满足
+
+\[
+ \int_0^\infty\MI(n;z_x)\,\frac{dx}{x^{2}}
+ \ge c\,\E\bigl[\ell\,\mathbf 1_{\{\ell\ge e^{2t}\}}\bigr]\log(t/h_0)
+ \ge\frac c2\log(t/h_0).
+\]
+
+我把这个证明当作一个"只用事件的二元检验"来复算，非常划算：
+$\mathbb E\ell=1$ 来自高斯力矩生成公式（`07-observations.tex:901`）；
+设 $p_0=\mathbb P\{\lvert g\rvert\ge\sqrt2\}>0$；当 $\ell\ge e^{2t}$ 且取尺度 $h=x\ell\in[h_0,t]$ 时，
+$\operatorname{Var}(z_x\mid n)=1+h/(1+h/t)\ge h/2$，于是事件 $A_h=\{\lvert z\rvert\ge\sqrt h\}$ 的条件概率
+$p\ge p_0$；混合侧用独立副本 $\ell'$ 控制，$x\ell'\le1$ 上分量条件方差不超过 $2$、
+故概率不超 $2e^{-h/4}$，补集上 Markov 配 $\mathbb E\ell'=1$ 给不超过 $x$，合起来
+$q\le2e^{-h/4}+x\le2e^{-h/4}+te^{-2t}\le3e^{-h/4}$（`07-observations.tex:916-928`）；
+数据处理到事件指示，二元相对熵
+$\ge p\log(p/q)+(1-p)\log((1-p)/(1-q))\ge p_0(h/4-\log3)-\log2$，
+取 $h_0\ge\max\{1,8\log3+8\log2/p_0\}$、$c=p_0/8$ 后它 $\ge ch$（`07-observations.tex:930-946`）；
+Tonelli 与 $x=h/\ell$ 把积分化成 $\mathbb E[\ell\mathbf 1_{\{\ell\ge e^{2t}\}}]\int_{h_0}^{t}dh/h$。
+最后一步我特别喜欢：以 $\ell$ 为密度换测度，配方使 $n$ 成为均值 $\sqrt{8t}$、方差 $1$ 的高斯，
+于是 $\log\ell$ 在该测度下是均值 $4t$、方差 $8t$ 的高斯，
+$\mathbb E[\ell\mathbf 1_{\{\ell\ge e^{2t}\}}]=\Phi(\sqrt{t/2})\ge1/2$（`07-observations.tex:960-968`）。
+$\sqrt{8t}$、$4t$、$e^{2t}$ 三个数在这一步彼此咬合，任何一处改动都会让 $\Phi$ 的参数不再是 $\sqrt{t/2}$。
+
+主定理的证明（`07-observations.tex:973-1016`）因此是一页纸的装配：
+归一化（`03-critical.tex:14-28`）给出反例序列，正则常数收敛（`03-critical.tex:690-704`）给出 $\lambda\to1$，
+临界序列（`03-critical.tex:760-797`）给出两分支之一的 $\eta,w$，预测曲线（`04-prediction.tex:494-506`），
+张量层级（`05-hierarchy.tex:20-92`），矩阵平方根与冻结分块描述（`06-matrices.tex:712-731`）。
+对每个固定的 $t>0$ 与 $L\ge1$，把上下界命题合起来得到
+
+\[
+ \int_0^\infty
+ \MI\!\left(n;\sqrt{1+f_L\!\left(xe^{\sqrt{8t}\,n-4t}\right)}\,g\right)\frac{dx}{x^{2}}
+ \le C_0C_1,
+\]
+
+$C_0C_1$ 与两个固定参数无关（`07-observations.tex:993-999`）。
+取任意大但有限的 $t\ge h_0$ 并令上限 $L=t$，发散引理让左端至少 $(c/2)\log(t/h_0)$，
+足够大的 $t$ 就超过 $C_0C_1$，矛盾（`07-observations.tex:1000-1003`）。
+最后那段顺序声明是全文我最看重的一句方法论（`07-observations.tex:1005-1009`）：
+得到这条一致界时所有反例极限都是在固定的 $t,L$ 下取的，只有在之后才去选择它们的数值大小，
+因此不需要中间误差在 $t,L\to\infty$ 时的一致估计。
+我把它记成一条通用规则：先用极限装置得到一个与参数无关的界，再挑参数制造矛盾；
+若把两件事同时进行，就会被迫需要一切 $o(1)$ 的显式速率，而那正是 §8 末尾明确拒绝承担的东西。
+收尾是约定换算：$\operatorname{Ent}_\mu(f^{2})\le2R(\mu)\int\lvert Df\rvert^{2}d\mu$ 把因子 $2$ 吸进绝对常数，
+$R(\mu)/a^{2}$ 无界被排除，于是主定理对每个紧光滑实测试成立（`07-observations.tex:1011-1015`）。
+
+## §18 与我最初设想的差异
+
+现在把动笔前的预期和实际拿到的东西并列，差异比我预想的大。
+
+第一条：我以为会看到一个正面估计 $R(\mu)\le Ca^{2}$ 的证明。实际给出的是反证结构，
+$C$ 由"两个绝对常数谁先超过谁"隐含地确定，而中间所有 $o(1)$ 都不带速率。
+第二条：我以为高斯正则化的时间 $s$ 会趋于 $0$。实际 $s$ 固定在 $1/8$（`03-critical.tex:763`），
+被固定的还有 $J\subset(0,1/2)$ 上 $2/3\le\lambda\le1$（`03-critical.tex:576-577`）这类数值区间，
+它们共同保证 $\theta(r)=e^{-r}+o(1)$ 的形状。
+第三条：我以为维度 $n$ 会以上界的形式出现然后被消掉。实际它一次都没有出现，
+因为所有"小"都以 $I$ 为单位（`05-hierarchy.tex:49-52`），所有以维度为单位陈述的引理
+（比如 §2 里 Bobkov 型判据给 $na^{2}$、Bizeul 给 $\sqrt n\,a^{2}$）被放弃。
+第四条：我以为对数凹性会用在结论侧的几何上（比如测度的支撑或等周）。实际它用在三处：
+后验的曲率下界（`03-critical.tex:82-87`）、达到性阈值 $R>\max(P,s)$ 里那个 $s$
+（`03-critical.tex:224`）、以及熵损失引理里对 $q$ 的要求（`04-prediction.tex:187-188`）。
+第五条：我以为极值对象是唯一的。实际有两套并列构造（严格熵分支与谱隙分支，
+`03-critical.tex:599-613`），而且证明要求在整条子列上选定同一支（`03-critical.tex:800-801`）。
+第六条：我以为预测曲线是一个不等式，实际它是一条精确的曲线 $e^{-r}$，
+并且它的形状直接是 OU 半群 $P_u$ 的收缩率，与 §9 上界里那个 $\theta(r)$ 是同一件事的两侧。
+第七条：我以为矩阵部分最大的障碍是同时对角化。实际障碍被完全绕开，
+改用加权迹下的标量涨落律（`01-introduction.tex:240-243`），
+代价是要引入分块偏移、有界列、输入映射与尺度 Jacobian 这一整套簿记。
+
+## §19 我读完之后仍然带走的四个问题
+
+问题一：$C_1$ 的具体数值我读不出来。`[推测]` 上界有 $C_0=9/4$ 这样明确的值
+（`07-observations.tex:95`），下界一侧我只读到命题引用了一个绝对常数 $C_1$，
+而决定最终阈值的 $t$ 有多大、$h_0$ 具体是多少（只给到 $h_0\ge\max\{1,8\log3+8\log2/p_0\}$，
+$0\ltl=07-observations.tex:940$ 那种形式），我没有从素材里找到进一步的信息，
+所以主定理的 $C$ 我写不出数值。
+
+问题二：达到性的条件 $R_s>\max(R_s^{P},s)$ 在两分支之外有没有第三种可能。
+`03-critical.tex:581-586` 的处理方式是：由线性化 $R_s^{P}\le R_s$，且在 $(0,1/2)$ 上 $R_s\ge1>s$，
+所以严格替代 $R_s>R_s^{P}$ 一旦失败就落入 $R_s=R_s^{P}$ 的间隙分支，
+两条分支穷尽一切。这个二分我确认过了，但"若 $R_s=s$ 会怎样"这类边角我没法从素材判断是否重要，
+因为 $s=1/8$ 而 $R_s\ge1$ 已经把这种情形排除。
+
+问题三：定理要求 Lebesgue 密度（`01-introduction.tex:28-30`）。
+归一化引理里限制到大球、乘二次因子再归一化的操作，都是在把测度往"有密度且紧支撑"这一类里推
+（`03-critical.tex:37-43`）。至于低维退化（支撑在-affine 子空间上）的对数凹测度，
+我读的七个 `.tex` 里没有相关讨论，这属于素材之外，我不猜。
+
+问题四：推论里的 $W_2^{2}\le Ca^{2}H$ 与主定理用同一个 $C$（`01-introduction.tex:63-65`），
+这点靠 Otto--Villani 的常数换算与 $\mu_s$ 的光滑逼近（`02-calculus.tex:336-376`），
+其中 $W_2(\mu_s,\mu)\le\sqrt{ns}$ 这类维度依赖只在最后的逼近里出现、并在固定 $n$ 后让 $s\downarrow0$
+（`02-calculus.tex:372-375`）。`[推测]` 我猜这套"先在光滑正密度上证、再用公共高斯核做数据收缩逼近"
+的写法可以推广到别的主定理上，因为论文的 §2 节已经把近似框架独立记录下来
+（`02-calculus.tex:33-43` 与 `02-calculus.tex:157-176`）。
+
+下面 §20 记我在本次写作过程中留下的两处瑕疵，§21 是台账。
+
+## §20 补记、自查与勘误
+
+先按规格把落盘过程的实测数字记在这里，方便后面复核：新建稿基线 2321 字节；
+探针 Edit 只加一行，复量得 2421 字节，增量 100 字节，探针通过；
+随后四次追加都锚在当时的文件末段，单次增量分别为 14211、15808（含 §6 至 §10）、
+14450（含 §11 至 §15）、10550（含 §16 至 §19）字节，每块都在 25000 字节上限之内。
+
+我要声明的笔误有四处，都在已落盘正文里，按规格不回改，只在此说明。
+其一：§5 末与 §6、§10 中我写了 `\Lemma`、`\Equation` 与 `$\mathbf{}$` 这类未定义宏或空宏，
+读的时候应当还原成正文词语：`\Lemma$ curvature` 指 02-calculus.tex 里的正曲率引理（`build/sections/02-calculus.tex:64-79`），
+`\Equation` 指次可加性公式（`build/sections/02-calculus.tex:141-143`），
+`$\mathbf{}$` 是一个空的花体标记，后面紧跟的句子才是我要说的话，语义不受影响。
+其二：§14 里"还有一个设计选择我不Originally以为是任意的"混进了英文词，应读作"我原先以为是任意的"。
+其三：§19 问题一里 `$0\ltl=07-observations.tex:940$` 是我把一个文件行号错误地塞进了数学环境，
+应读作 build/sections/07-observations.tex:940，即 $h_0$ 的定义那一行。
+其四：§16 里我把一处引用写成范围 `07-observations.tex:860-872`，而本次会话真实读到的只有
+`07-observations.tex:870-872`（那段话的后半），前半句是我按上下文补的语义，属于引用范围过宽，特此收窄。
+
+再记三条我在复核时算清楚的东西，因为它们在我第一遍读时都是含糊的。
+
+第一条，$\lambda$ 的区间。由 §4 的 $1\le R_s\le1+s$（`build/sections/03-critical.tex:101`）与
+$s\in J\subset(0,1/2)$ 得 $1\le R_s<3/2$，故 $\lambda=R_s^{-1}\in(2/3,1]$，
+这正是 §7 最后一步引用的 $2/3\le\lambda\le1$（`build/sections/03-critical.tex:576-577`）。
+我第一遍读到这个 $2/3$ 时以为它来自某个额外估计，其实只是 $1/(1+s)$ 在 $s=1/2$ 处的值，
+所以整个装置的"时间区间"与"常数区间"是被同一个 $s<1/2$ 锁死的，这一点在 §8 的 $R_s\to1$
+里也再次出现（我在那里需要对 $[\delta,s]$ 积分，$\delta$ 也必须小于 $1/2$）。
+
+第二条，$M_L$ 第二条界的形状为什么给出 $C_0=9/4$ 里的那个 9。可比情形下我用
+$\int_0^\infty(1+Tr_0^{2})^{-2}dT=r_0^{-2}$ 与 $(v+w)^{2}\le(3r_0)^{2}=9r_0^{2}$（因为
+$v+w\le3\min(v,w)$ 在 $1/2\le v/w\le2$ 时成立），两者相消得 $9$（`build/sections/07-observations.tex:80-84`）。
+$9/4$ 与 $9$ 之间的因子 $4$ 来自互信息与 Fisher 型量的换算约定
+（$2\lambda H\le\mathcal I$、$\mathcal I$ 带 $4$、热耗散带 $\frac12$，见
+`build/sections/02-calculus.tex:17-24` 与 `build/sections/07-observations.tex:102-107`）。
+`[推测]` 我没有把第 7 节命题 7.1 证明的后半逐行读完，所以这个 $4$ 的确切出处我是按约定反推的，
+不是照抄；这不影响矛盾的性质，因为矛盾只用"两个绝对常数比大小"。
+
+第三条，$L=t$ 这一步为什么不能随便选。§15 的观测协方差是 $C_T=\mathrm{Id}+f_L(TR^{2})$，
+上界在可比谱块上由 $M_L\le9$ 控制、与 $L$ 无关，而在跨块方向由 $M_L\le4\log(1+L)$ 控制、随 $L$ 增长；
+§17 的下界来自标量实验 $z_x=\sqrt{1+f_t(x\ell)}g$，那里出现的饱和函数用的是同一个 $f_t$，
+也就是把上限旋钮取成 $L=t$，与扩散时间同一个量。
+`[推测]` 我这样理解这步的动机：让上下界共用同一个饱和尺度，才能把矩阵实验真正压成那条标量实验；
+若取固定 $L$ 而只让 $t\to\infty$，下界的 $\log(t/h_0)$ 发散仍成立，
+但我没有读到论文对此的评论，所以把它标成我的推测。
+
+最后做一次前向引用与编号自查。§0 承诺的编号全部落实：§1 到 §21 连续，无跳号、无重复。
+文中出现的"§calculus"是我随手写的记号，指素材文件 build/sections/02-calculus.tex，
+在本笔记里对应 §2、§4 与 §6 引用它的位置，语义上没有第三个"节"。
+§12 里我写的"命题 5.1"对应 `build/sections/05-hierarchy.tex:20` 的 `prop:hierarchy`，
+按 LaTeX 的节内编号它正是第 5 节第一个命题，写法与素材一致。
+§10 末尾我说 §11 起要把"表现得像高斯方向"榨干，这一点在 §11 的输入接口 (i) 上兑现；
+§8 末尾留下的"维度与 $I$ 的关系不被断言"这个麻烦，在 §12 用 $I$ 为单位重新表述，未被回避也未需回避。
+
+## §21 台账
+
+| 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+| --- | --- | --- | --- | --- |
+| $a$ | 线性次高斯参数, 沿序列 $a\to0$ | build/sections/01-introduction.tex:20 | §3 归一化与 §7 全部小量 | §17 的临界序列起不动 |
+| $C$ | 绝对常数, $C<\infty$ | build/sections/01-introduction.tex:27 | 主定理与推论共用同一值 | 结论重新依赖维度 |
+| $Ca^{2}\int\lvert Df\rvert^{2}d\mu$ | 主定理右端 | build/sections/01-introduction.tex:32 | §17 装配的终点 | 矛盾无处可断 |
+| 凸体均匀测度 | 无光滑与曲率要求 | build/sections/01-introduction.tex:39 | §4 正则化的动机 | 点态曲率路线复活 |
+| $W_2(\nu,\mu)^{2}\le Ca^{2}H(\nu\mid\mu)$ | 与主定理同常数 | build/sections/01-introduction.tex:62 | §1 的推论 | Otto--Villani 换算断 |
+| $na^{2}$ | Bobkov 范数判据系数 | build/sections/01-introduction.tex:104 | §2 被我放弃的路线 | 无下游消费 |
+| $n^{1/4}$ | Bizeul 的 $\rho_{\mathrm{LS}}$ 维度依赖 | build/sections/01-introduction.tex:106 | §2 的对照 | 无下游消费 |
+| $\sqrt n\,a^{2}$ | Bizeul 在参数 $a$ 下的熵系数 | build/sections/01-introduction.tex:110 | §2 的对照 | 无下游消费 |
+| $R(\nu)$ | 约定 $\operatorname{Ent}_\nu(f^{2})\le2R(\nu)\int\lvert Df\rvert^{2}$ | build/sections/01-introduction.tex:139 | 全文所有常数比较 | 因子 2 全线漂 |
+| $e^{-r}$ | 预测曲线的极限形状 | build/sections/01-introduction.tex:171 | §9 两侧与 §11 接口 | Bessel 饱和无从谈起 |
+| $\exp(\sqrt{8t}Z-4t)$ | 对数正态涨落因子 | build/sections/01-introduction.tex:201 | §14 与 §17 的单位对齐 | 上下界不在同一信息单位 |
+| $\beta^{2}$ 与 $x=T\beta^{2}$ | $\frac{dT}{T^{2}}=\beta^{2}\frac{dx}{x^{2}}$ | build/sections/01-introduction.tex:222 | §16 的权重账 | 弥散谱的矩阵质量丢失 |
+| $\mathcal I(p\mid\pi)$ | 定义带系数 $4$ | build/sections/02-calculus.tex:17 | §6 亏损恒等式 | $2\lambda H\le\mathcal I$ 失配 |
+| $2H(p\mid\pi)\le R(\pi)\mathcal I(p\mid\pi)$ | 熵信息形式 | build/sections/02-calculus.tex:24 | §15 上界入口 | $C_0$ 无法出现 |
+| $R^{P}(\pi)\le R(\pi)$ | 线性化 | build/sections/02-calculus.tex:31 | §7 末与 §19 问题二 | 两分支不再穷尽 |
+| $H(p\mid\pi)=\sup_g\{\int g\,dp-\log\int e^{g}d\pi\}$ | 熵对偶 | build/sections/02-calculus.tex:41 | §7 的均值估计 | 均值界无从导出 |
+| $\operatorname{Ent}_\pi(f^{2})\le2\mathbb E_\pi\langle Df,S^{-1}Df\rangle$ | 正曲率判据 | build/sections/02-calculus.tex:73 | §4 后验曲率与 §10 | $0\le K_s\le s^{-1}\mathrm{Id}$ 断 |
+| $R(\operatorname{Law}(X+Z))\le R(\operatorname{Law}(X))+R(\operatorname{Law}(Z))$ | 独立相加次可加 | build/sections/02-calculus.tex:142 | §4 的 $R_s\le1+s$ | 正则常数上界断 |
+| $\log\mathbb E_\pi e^{t(u-\mathbb E_\pi u)}\le Rt^{2}/2$ | Herbst | build/sections/02-calculus.tex:148 | §1 必要性与 §9 指数矩 | 探针引理的矩断 |
+| $dY_u=\sqrt2\,dB_u+D\log\pi(Y_u)\,du$ | 平稳扩散噪声系数 | build/sections/02-calculus.tex:171 | §14 的 $\sqrt{8t}$ | Hermite 系数全错 |
+| $H(p_a\mid q_a)-H(p_b\mid q_b)\ge\frac12\int_a^b\mathcal I\,dr$ | 同时热演化 | build/sections/02-calculus.tex:229 | §9 的收缩因子 | 上界三步链条断 |
+| $d(t)=\frac12\int_0^t\mathbb E\lvert\mathbb E[S\mid Z_v,U]\rvert^{2}dv$ | 高斯信道恒等式 | build/sections/02-calculus.tex:305 | §9 的 $T$ 积分 | 点态版本无从得到 |
+| $\int\lvert x\rvert^{2}d\mu\le na^{2}\log2$ | Jensen 二阶矩 | build/sections/02-calculus.tex:338 | §1 推论的 $\mathcal P_2$ | 推论前提不成立 |
+| $\beta_s=\sqrt{8s/3}$ | 平滑化后新增参数 | build/sections/02-calculus.tex:352 | §1 推论的 $a_s$ | 边缘条件不再满足 |
+| $W_2(\mu_s,\mu)\le\sqrt{ns}$ | 逼近误差 | build/sections/02-calculus.tex:374 | §1 推论取 $s\downarrow0$ | 极限取不到 |
+| $R(\mu)=1$ | 归一化后的常数 | build/sections/03-critical.tex:20 | §3 起的整条装置 | 反例序列不存在 |
+| $\mathbb E\lvert Z\rvert^{k}\le2a^{k}\Gamma(k/2+1)$ | 尾部矩界 | build/sections/03-critical.tex:59 | §3 与 §7 的分段 mgf | $\sqrt a$ 的阶无从确认 |
+| $M_s(y)=\operatorname{Cov}(X\mid y)/s$ | 后验导数 | build/sections/03-critical.tex:78 | §4 §8 §11 三处 | $K_s$ 的双边界断 |
+| $1\le R_s\le1+s$ | 正则常数区间 | build/sections/03-critical.tex:101 | §7 末的 $\lambda$ 区间 | $2/3\le\lambda\le1$ 断 |
+| $2(s+\varepsilon)\lVert Du\rVert_2^{2}+C_\varepsilon\lVert u\rVert_2^{2}$ | 亏格型 LSI | build/sections/03-critical.tex:140 | §5 达到性 | 尾部丢熵失控 |
+| $2s(E_\ast-\lVert Du\rVert_2^{2})$ | 熵亏损系数 | build/sections/03-critical.tex:146 | §5 的阈值 $\max(P,s)$ | sharp 系数 $2s$ 失 |
+| $R>\max(P,s)$ | 达到性条件 | build/sections/03-critical.tex:224 | §5 §6 的极值点 | $w=D\log f^{2}$ 无处可得 |
+| $(2+2\log2)z^{2}+z^{2}\log_{+}z^{2}$ | $Q_{c,\varepsilon}$ 的控制 | build/sections/03-critical.tex:268 | §5 的小能量支 | 与极大性的矛盾断 |
+| $A_\eta w=(\lambda\mathrm{Id}-K)w$ | 分数场方程 | build/sections/03-critical.tex:412 | §8 与 §11 的起点 | 层级第一层无定义 |
+| $\mathcal I(p\mid\nu)-2\lambda H(p\mid\nu)=\mathcal I(p\mid\eta)-2\lambda H(p\mid\eta)$ | 精确亏损 | build/sections/03-critical.tex:452 | §6 的 $R(\eta)\le\lambda^{-1}$ | 后续全部失去 LSI |
+| $(s^{-2}-\lambda/s)\lvert p\rvert^{2}$ | 平移增益的正项系数 | build/sections/03-critical.tex:483 | §7 的均值小量 | $\lvert p\rvert^{2}\le C_J\sqrt a\,I$ 断 |
+| $C_J\sqrt a$ | 统一估计的损失阶 | build/sections/03-critical.tex:484 | §7 与 §8 | $R_s'\le C_J\sqrt a$ 断 |
+| $\lvert\mathbb E_\eta w\rvert^{2}+\mathbb E_\eta\lvert K_sw\rvert^{2}\le C_J\sqrt a\,I$ | 两分支共同小量 | build/sections/03-critical.tex:616 | §8 §12 | 曲率消去 $\langle w,Kw\rangle=o(I)$ 断 |
+| $R_s'=R_s\,\mathbb E_\eta\langle w,K_sw\rangle/I$ | 接触恒等式 | build/sections/03-critical.tex:700 | §8 的 $R_s\to1$ | $\lambda\to1$ 断, 全线 o(1) 失 |
+| $s=1/8$ | 固定的正则化时间 | build/sections/03-critical.tex:763 | §9 §11 §13 | $\theta(r)=e^{-r}+o(1)$ 断 |
+| $\mathbb E_\eta\lvert Dw\rvert^{2}=(1+o(1))I$ | 能量饱和 | build/sections/03-critical.tex:776 | §11 与 §13 的归一 | $\mathbb E\operatorname{tr} R^{2}\to1$ 断 |
+| $\sup_{0\le T\le M}d(T)=o(I)$ | 高效高斯探针 | build/sections/04-prediction.tex:39 | §9 的上界 | 令 $T$ 任意大那步断 |
+| $2(H_0-H_z)\le\int_0^z\mathbb E_p\lvert\bar w_r(U_r)\rvert^{2}dr$ | 熵损失不等式 | build/sections/04-prediction.tex:201 | §9 的下界 | $1-e^{-z}$ 缺半边 |
+| $B=b\mathrm{Id}+\delta\sum_{i}(1-P_i)\succeq b\mathrm{Id}$ | 保留观测的精度 | build/sections/04-prediction.tex:245 | §10 的后验曲率 | 下界证不出 |
+| $m(r)\to e^{-r}$ | 预测曲线命题结论 | build/sections/04-prediction.tex:499 | §11 接口 (i) | 层级无从饱和 |
+| $\theta(r)=\exp(-\int_0^r dt/R_{s+t})$ | 收缩因子 | build/sections/04-prediction.tex:511 | §9 上下两侧 | 两侧目标不一致 |
+| $\lVert(A-1)w\rVert_2=o(\sqrt I)$ | 近第一特征函数 | build/sections/05-hierarchy.tex:36 | §11 归纳起点 | 层级第一层断 |
+| $\sup_{\operatorname{rank}\Pi\le cI}\lVert\Pi w\rVert_2^{2}=o(I)$ | 投影消去 | build/sections/05-hierarchy.tex:51 | §11 §13 | 小子空间集中排除不了 |
+| $\mathbb E\operatorname{tr}(C_r\mathbf 1_{\{C_r>a\}})=o(I)$ | 条件协方差尾部 | build/sections/05-hierarchy.tex:65 | §11 接口 (iii) | 严格分支接口缺一条 |
+| $\lVert T_l\rVert_2^{2}=(1+o(1))I$ | 层级范数一致 | build/sections/05-hierarchy.tex:73 | §13 的带平均 | 矩阵平均迹不为 1 |
+| $\sigma=\bigoplus_\beta\beta^{2}\exp(\sqrt{8t}H[N]-4t\mathrm{Id}_\beta)$ | 冻结分块协方差 | build/sections/06-matrices.tex:721 | §14 §15 | 观测模型无从定义 |
+| $(1/(kI))\sum_{k\le l<2k}\sum_i\lVert T_{l+1,i}-(H_i)_{(1)}T_l\rVert_2^{2}=o(1)$ | 一步替换误差 | build/sections/06-matrices.tex:742 | §13 §14 的迭代 | Wick 收缩与求和断 |
+| $\mathbb E\operatorname{tr} R^{2}\to1$ | 矩阵场归一化 | build/sections/07-observations.tex:23 | §15 §16 | 尺度权重账错 |
+| $\mathbb E\lvert DR\rvert^{2}\to1$ | 平方根能量饱和 | build/sections/07-observations.tex:24 | §15 上界 | $C_0$ 不存在 |
+| $\sum_i\mathbb E\lVert[\widehat H_i,R]\rVert_{\mathrm{HS}}^{2}=o(1)$ | 加权近可换 | build/sections/07-observations.tex:32 | §13 §14 | 标量矩律断 |
+| $f_L(q)=q/(1+q/L)$ | 协方差饱和函数 | build/sections/07-observations.tex:38 | §15 §17 | $L=t$ 的取法失效 |
+| $M_L(v,w)\le4\log(1+L)$ | 谱乘子第一界 | build/sections/07-observations.tex:60 | §15 §20 补记三 | 跨块方向失控 |
+| $M_L(v,w)\le9$ | 谱乘子第二界 | build/sections/07-observations.tex:63 | §15 的 $C_0$ | $9/4$ 变成别的值 |
+| $C_0=9/4$ | 集成信息上界常数 | build/sections/07-observations.tex:95 | §17 的比大小 | 矛盾一侧缺常数 |
+| $h_0\ge\max\{1,8\log3+8\log2/p_0\}$ | 标量实验阈值 | build/sections/07-observations.tex:940 | §17 下界 | $\log(t/h_0)$ 起步即非正 |
+| $\mathbb E[\ell\mathbf 1_{\{\ell\ge e^{2t}\}}]=\Phi(\sqrt{t/2})\ge1/2$ | 换测度后的概率 | build/sections/07-observations.tex:967 | §17 下界 | 一半的质量丢失 |
+| $C_0C_1$ | 与参数无关的一致界 | build/sections/07-observations.tex:997 | §17 | 无从制造矛盾 |
+| $(c/2)\log(t/h_0)$ | 下界的发散速率 | build/sections/07-observations.tex:1002 | §17 取 $t$ | 有限的左端不超右端 |
+
+然后是严格正性。我一开始以为弱解正则化加最大值原理就够了，实际上论文用的是概率论证
+（`03-critical.tex:363-391`）：若 $f(x_0)=0$，取球 $B$ 使 $0\le f\le b<1$，
+从 $x_0$ 启动 $\nu$-扩散并在出口时间 $\tau$ 停止，$m(t)=\mathbb E f(Y_{t\wedge\tau})$，
+$g(z)=-\lambda z\log z$ 在 $[0,b]$ 上非负凹，故 $m'(t)\le g(m(t))$、$m(0)=0$；
+若某点为正，则 $\int_a^{m(t_1)}dz/(-\lambda z\log z)\le t_1$，$a\downarrow0$ 时左端发散，矛盾。
+于是 $m\equiv0$，再靠被 killing 的非退化扩散"沿光滑管道走"的正概率把零点集证成既开又闭。
+正则性部分（`03-critical.tex:330-361`）是 Newton 位的局部 $L^p$ 与 Schauder 估计的 bootstrap，
+$n\ge2$ 时从 $p=2$、$\delta<\min(1,2/n)$ 起步，有限步后 $q>n/2$ 得局部有界与 H\"older；
+$n=1$ 直接积两次。这些常数只依赖单个固定律与维度，一个都不进入沿反例序列的统一估计
+（`03-critical.tex:360-361`），这句话我特意标出来，因为下面 §7 才是统一估计的起点。

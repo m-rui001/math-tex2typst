@@ -1,0 +1,12 @@
+exact_dir=True siblings=1 ["Uniform-quasipolynomial-time-trace-reconstruction-October-5-2026"]
+inflight=['D04', 'D235']
+D718_in_dispatched=True
+note_files=['D718-均匀拟多项式时间迹重建的反推笔记.md']
+build/manuscript/separation.tex              20903B   549L
+build/manuscript/decoding.tex                19062B   422L
+build/manuscript/multiscale.tex              17278B   400L
+build/manuscript/contour.tex                 15458B   337L
+build/manuscript/main.tex                     8829B   185L
+build/manuscript/setup.tex                    7134B   164L
+build/references/references.tex               5606B   132L
+build/manuscript/history.tex                  3846B    65L

@@ -1,0 +1,32 @@
+{
+  "paper": "Exponential-PSD-rank-of-positively-shifted-matching-matrices-October-5-2026",
+  "ok": true,
+  "typ_lines": 692,
+  "included_pdf_pages": 0,
+  "formulas": 620,
+  "math_failed": 0,
+  "labels": 95,
+  "equations": 8,
+  "theorems": 4,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "620",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Exponential-PSD-rank-of-positively-shifted-matching-matrices-October-5-2026.tex"
+}

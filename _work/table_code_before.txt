@@ -1,0 +1,4 @@
+pre-batch baseline for #65 (run121 products):
+  table( at column 0 : 137 lines / 83 papers
+  [table( in a figure content block: 20 lines
+  residue on products: 1 file / 1 occurrence (the `c\@c` line of A-spectral-gap fig.1)

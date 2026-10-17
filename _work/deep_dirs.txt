@@ -1,0 +1,11 @@
+== D535
+   preprints/Quenched-SLE-Universality-for-Weakly-Disordered-FK-Ising-Interfaces-October-5-2026
+   ISDIR=Quenched-SLE-Universality-for-Weakly-Disordered-FK-Ising-Int exists=True
+== D256
+   本笔记是主线 2（非 Lean 队列）第 D256 单，反推对象是 2026 年 9 月 24 日挂出的正特征丰盈性论文，研究对象为特征 $p>3$ 代数闭域上终端奇点三维fold的 $K_X$ 在数值维数 $\nu(K_X)=1$ 情形的半AMPLE性。派单行给出的参数是 row=80、bytes=163182、thin=no、dir 见本节末尾逐字登记；这属于厚素材档：`build/sections/` 下六个章节文件里 preparation.tex 一份就有 41901 字节，动笔前按规格先用 wc 量出每个 .tex 的大小，再对主干章节做 offset 分段读取，没有整篇顺读，也没
+   `preprints/Abundance-in-numerical-dimension-one-for-terminal-threefolds-in-positive-characteristic-September-24-2026`
+   ISDIR=Abundance-in-numerical-dimension-one-for-terminal-threefolds exists=True
+== D278
+   这单编号 D278，派单参数取自排程表：row=102、bytes=106087、thin=no，dir 指向 2026 年 9 月 26 日这份三角晶格通用最优性原子证书预印本。取材目录唯一，正文里所有素材只允许来自该目录 build 下的那个 106087 字节的 `main.tex`（全文 2473 行，本会话分九段精读主干），typst 分片与 README 都不作正文依据。整篇论文没有配 Lean 形式化材料，派单也没给 Lean 行，所以这份笔记只做一件事：把论文里已经写下的证明，还原成一个人逐步想到它的过程，包括中间想错的地方。
+   preprints/An-atomic-certificate-for-triangular-lattice-universal-optimality-September-26-2026
+   ISDIR=An-atomic-certificate-for-triangular-lattice-universal-optim exists=True

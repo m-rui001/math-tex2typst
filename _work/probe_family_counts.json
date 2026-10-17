@@ -1,0 +1,41 @@
+{
+ "D26": {
+  "math_bare|code|False": 9,
+  "mathcal_bare|text|True": 4,
+  "mathcal_bare|fenced|False": 2,
+  "mathbbP|text|True": 34,
+  "mathbbP|fenced|False": 12,
+  "inner|fenced|False": 1,
+  "inner|text|True": 3
+ },
+ "D30": {
+  "math_bare|code|False": 2,
+  "mathbbP|text|True": 20,
+  "mathcal_bare|text|True": 56,
+  "mathcal_bare|fenced|False": 7,
+  "mathbbP|fenced|False": 3,
+  "math_bare|text|True": 1
+ },
+ "D77": {
+  "math_bare|code|False": 1,
+  "mathcal_bare|text|False": 10,
+  "mathbbP|text|True": 50,
+  "mathcal_bare|text|True": 12,
+  "two|text|True": 3
+ },
+ "D106": {
+  "two|code|False": 1,
+  "math_bare|code|False": 4,
+  "mathcal_bare|text|True": 188,
+  "mathcal_bare|fenced|False": 23,
+  "mathbbP|text|True": 4,
+  "mathbbP|fenced|False": 7,
+  "root|text|True": 4,
+  "root|code|False": 1
+ },
+ "D238": {
+  "mathcal_bare|text|True": 78,
+  "mathbbP|text|True": 34,
+  "math_bare|text|True": 2
+ }
+}

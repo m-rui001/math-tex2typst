@@ -1,0 +1,32 @@
+{
+  "paper": "The-Margulis-Platonov-conjecture-over-number-fields-September-23-2026",
+  "ok": true,
+  "typ_lines": 2087,
+  "included_pdf_pages": 0,
+  "formulas": 1847,
+  "math_failed": 0,
+  "labels": 199,
+  "equations": 5,
+  "theorems": 4,
+  "figures": 1,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "1847",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "flafter"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n   ┌─ \\\\?\\E:\\math\\typst\\The-Margulis-Platonov-conjecture-over-number-fields-September-23-2026\\main.typ:35:117\n   │\n35 │   #emph[Let $k$ be a number field and $G$ an absolutely almost simple simply connected algebraic $k$-group. If $N lt.tri G \\( k \\)$ is not contained in $Z \\( G \\( k \\) \\)$, then there is an open normal subgroup $W lt.tri H_A$ such that \n   │                                                                                                                      ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n   ┌─ \\\\?\\E:\\math\\typst\\The-Margulis-Platonov-conjecture-over-number-fields-September-23-2026\\main.typ:35:217\n   │\n35 │   #emph[Let $k$ be a number field and $G$ an absolutely almost simple simply connected algebraic $k$-group. If $N lt.tri G \\( k \\)$ is not contained in $Z \\( G \\( k \\) \\)$, then there is an open normal subgroup $W lt.tri H_A$ such that \n   │                                                                                                                                                                                                                          ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\The-Margulis-Platonov-conjecture-over-number-fields-September-23-2026\\main.typ:150:12\n    │\n150 │   Let $N lt.tri G \\( k \\)$ be noncentral, and choose a noncentral $n in N$. Take a finite set $T$ containing the archimedean places, $A$, the denominator places of $n$, and auxiliary split finite places whose total local rank is at least two. For fixed integral compact opens outside $T$, set\n    │             ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\The-Margulis-Platonov-conjecture-over-number-fields-September-23-2026\\main.typ:735:125\n    │\n735 │   Write $H_i$ for the projection of $H$ at $i$, and $P_i$ for the image of $K_(eq.not i)$ there. We have proved that $P_i lt.tri H_i$ and that $P_i$ is projectively Zariski dense.\n    │                                                                                                                              ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\The-Margulis-Platonov-conjecture-over-number-fields-September-23-2026\\main.typ:2032:74\n     │\n2032 │   $ R = delta^(- 1) \\( P_0 \\) \\, #h(2em) P_0 = overline(delta \\( R \\)) lt.tri product_(v in A) G \\( k_v \\) \\, #h(2em) P_0 med upright(\"open\") . $\n     │                                                                           ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\The-Margulis-Platonov-conjecture-over-number-fields-September-23-2026\\main.typ:2034:16\n     │\n2034 │   Let now $N lt.tri G \\( k \\)$ be any abstract normal subgroup not contained in the center. Proposition 5 gives $\\[ G \\( k \\) : N \\] < oo$. Choose $e$ to be the exponent of the finite group $G \\( k \\) \\/ N$, so that $R subset N$. Density of the diagonal, and openness of $P_0$, identify\n     │                 ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 6,
+  "source": "E:\\math\\_work\\flat\\The-Margulis-Platonov-conjecture-over-number-fields-September-23-2026.tex"
+}

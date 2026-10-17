@@ -1,0 +1,98 @@
+refused=221 buckets=47
+
+### env:array  (18)
+   src:  \begin{array}{ccc} \Sigma^d(T\wedge Y)&\xrightarrow{\ f\wedge1_Y\ }&Y\wedge Y\\[2pt] \mathllap{\Sig
+   cln:  \begin{array}{ccc} \Sigma^d(T\wedge Y)&\xrightarrow{\ f\wedge1_Y\ }&Y\wedge Y\\ \mathllap{\Sigma^d(
+   err: p{\Sigma^d(\varepsilon_T\wedge1_ ^ unexpected control sequence \mathllap expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+   src:  \begin{array}{cp{0.80\linewidth}} i & \(A_i(t,q)\)\\ \hline 0 & \(q-t\in W_1\), or \(\mathcal{A}(t)
+   cln:  \begin{array}{cp{0.80\linewidth}} i & \(A_i(t,q)\)\\ \hline 0 & \(q-t\in W_1\), or \(\mathcal{A}(t)
+   err: st \(w_E\). \end{array}, rendering as TeX: \begin{array}{cp{0.80\linewidth}} ^ unexpected "{" expecting letter, "|", "@", "!", "*", white space or "}"
+
+### \eqref  (10)
+   src: \eqref{eq:add-available-congruences}
+   cln: \eqref{eq:add-available-congruences}
+   err: eqref{eq:add-available-congruences} ^ unexpected control sequence \eqref expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+   src: \eqref{eq:add-composite-congruence-count}
+   cln: \eqref{eq:add-composite-congruence-count}
+   err: f{eq:add-composite-congruence-count ^ unexpected control sequence \eqref expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+
+### env:aligned  (8)
+   src:  \begin{aligned} P&\le C_P\ell Q+D_P, &&\text{by Proposition~\ref{prop:embedded-cost}},\\ V&\le C_A\
+   cln:  \begin{aligned} P&\le C_P\ell Q+D_P, &&\text{by Proposition~}\ref{prop:embedded-cost},\\ V&\le C_A\
+   err: hor-travel}. \end{aligned}, rendering as TeX: xt{by Proposition~}\ref{prop:embedded-co ^ unexpected "\\" expecting "&", "\\\\", white space or "\\end"
+   src: \begin{aligned} &I+D_E^{1/2}R'_{\mathrm{hi}}D_E^{1/2}-\theta X_E\mathstrut\\ &\quad=I-r^{-1}D_E+r^{-
+   cln: \begin{aligned} &I+D_E^{1/2}R'_{\mathrm{hi}}D_E^{1/2}-\theta X_E\mathstrut\\ &\quad=I-r^{-1}D_E+r^{-
+   err: \\ &\quad\succeq c'I, \end{aligned}, rendering as TeX: _E^{1/2}-\theta X_E\mathstrut\\ ^ unexpected "\\" expecting "&", "\\\\", white space or "\\end"
+
+### \text  (6)
+   src:  F_U=\{z:\text{the rule in \eqref{l:lt:score} selects }U\}\subseteq U. 
+   cln:  F_U=\{z:\text{the rule in }\eqref{l:lt:score}\text{ selects }U\}\subseteq U. 
+   err: ule in }\eqref{l:lt:score}\text{ se ^ unexpected control sequence \eqref expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+   src:  F_pK=\{\text{finite sums of terms \eqref{eq:polar-normal-form} of excess at most }p\},\qquad F_pK=0
+   cln:  F_pK=\{\text{finite sums of terms }\eqref{eq:polar-normal-form}\text{ of excess at most }p\},\qquad
+   err:  terms }\eqref{eq:polar-normal-form ^ unexpected control sequence \eqref expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+
+### \ref  (6)
+   src: (\ref*{geo:secants)
+   cln: (\ref*{geo:secants)
+   err: Error at "C:\Users\hp\AppData\Local\Temp\tmpr2tkx8dn.tex" (line 6, column 2): unexpected end of input ^
+   src: (\ref*{geo:terminal)
+   cln: (\ref*{geo:terminal)
+   err: Error at "C:\Users\hp\AppData\Local\Temp\tmpn3sa_w7n.tex" (line 6, column 2): unexpected end of input ^
+
+### \left  (5)
+   src:  \left(\mathchoice{{\setbox0=\text{\int}\vcenter{\text{-}}\kern-.5\wd0}}{{\setbox0=\text{\int}\vcent
+   cln:  \left({\setbox0=\int\text{-}}\!\int_{B_r(x)}|Dv-Dw|^2\right)^{1/2} \le Cr^\alpha\left( 1+\left({\se
+   err: {\setbox0=\int\text{-}}\!\int_{B_r ^ unexpected control sequence \setbox expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+   src:  \left(\mathchoice{{\setbox0=\text{\int}\vcenter{\text{-}}\kern-.5\wd0}}{{\setbox0=\text{\int}\vcent
+   cln:  \left({\setbox0=\int\text{-}}\!\int_{B_r(x)}|Dw-p|^2\right)^{1/2} \le C\left({\setbox0=\int\text{-}
+   err: {\setbox0=\int\text{-}}\!\int_{B_r ^ unexpected control sequence \setbox expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+
+### env:gathered  (4)
+   src:  \begin{gathered} \begin{tikzcd}[ampersand replacement=\&,column sep=large,row sep=large] \mathcal{C
+   cln:  \begin{gathered} \begin{tikzcd}[ampersand replacement=\&,column sep=large,row sep=large] \mathcal{C
+   err:  "eqnarray", "equation", "flalign", "flaligned", "gather", "gathered", "matrix", "multline", "multlined", "pmatrix", "smallmatrix", "split", "vmatrix"
+   src:  \begin{gathered} \text{Every set }S\subset X\text{ with }\operatorname{diam}_d(S)\leq2\delta \text{
+   cln:  \begin{gathered} \text{Every set }S\subset X\text{ with }\operatorname{diam}_d(S)\leq2\delta \text{
+   err: t{and }\eqref{global:lipschitz}\tex ^ unexpected control sequence \eqref expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+
+### \mathbb  (4)
+   src:  \mathbb{E}_{\mathbf{a}}\mathcal{V}(J,\mathbf{a}) \geq\sum_{S,\omega} \mathbf{1}_{\{\text{conditions
+   cln:  \mathbb{E}_{\mathbf{a}}\mathcal{V}(J,\mathbf{a}) \geq\sum_{S,\omega} \mathbf{1}_{\{\text{conditions
+   err: ditions }\eqref{res:survival}\text{ ^ unexpected control sequence \eqref expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+   src:  \mathbb{P}\{\text{\eqref{eq:dyn-small-target-windows} holds for some }k \text{ and some subset of s
+   cln:  \mathbb{P}\{\eqref{eq:dyn-small-target-windows}\text{ holds for some }k \text{ and some subset of s
+   err: bb{P}\{\eqref{eq:dyn-small-target-w ^ unexpected control sequence \eqref expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+
+### \mathcal  (3)
+   src:  \mathcal{A}=\sum_{\substack{u\text{ in the integer port boxes}\\ \text{satisfying }\eqref{eq:hard-p
+   cln:  \mathcal{A}=\sum_{\substack{u\text{ in the integer port boxes}\\ \text{satisfying }\eqref{eq:hard-p
+   err: sfying }\eqref{eq:hard-port-conditi ^ unexpected control sequence \eqref expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+   src: \mathcal{I}_\mathrm{hard} =\sum_{\substack{u\text{ in the integer port boxes}\\ \text{satisfying }\e
+   cln: \mathcal{I}_\mathrm{hard} =\sum_{\substack{u\text{ in the integer port boxes}\\ \text{satisfying }\e
+   err: sfying }\eqref{eq:hard-port-conditi ^ unexpected control sequence \eqref expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+
+### \operatorname  (3)
+   src:  \operatorname{vol}(\overline{A})\ge M^{-n} \qquad\text{\citep[Corollary~1.4]{Birkar2023}}. 
+   cln:  \operatorname{vol}(\overline{A})\ge M^{-n} \qquad\citep\text{[Corollary~1.4]{Birkar2023}}. 
+   err: ad\citep\text{[Corollary~1.4]{Birka ^ unexpected control sequence \citep expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+   src: \operatorname{avg}_y\left\lvert{c_y}\right\rvert\le C, \qquad \operatorname{avg}_y\left[\text{right-
+   cln: \operatorname{avg}_y\left\lvert{c_y}\right\rvert\le C, \qquad \operatorname{avg}_y\left[\text{right-
+   err: ide of }\eqref{eq:affine-error}\rig ^ unexpected control sequence \eqref expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+
+### \nu  (3)
+   src:  u_\nu-f_\nu(a)=0\quad(1\leq\nu\leq b), \qquad u_\nu'-f_\nu'(aR)=0\quad\text{in type \eqref{loc:pair
+   cln:  u_\nu-f_\nu(a)=0\quad(1\leq\nu\leq b), \qquad u_\nu'-f_\nu'(aR)=0\quad\text{in type }\eqref{loc:pai
+   err: X: ext{in type }\eqref{loc:paired}. ^ unexpected control sequence \eqref expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+   src: Z_f=\nu_f(\text{\Cref{eq:channel-allowed}})
+   cln: Z_f=\nu_f(\Cref{eq:channel-allowed})
+   err: Z_f=\nu_f(\Cref{eq:channel-allowed}) ^ unexpected control sequence \Cref expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+
+### env:split  (3)
+   src:  \begin{split} &\eta=\frac{1}{10000k},\qquad c_m=c_m(k,\eta/4)\quad\text{from Proposition~\ref{prop:
+   cln:  \begin{split} &\eta=\frac{1}{10000k},\qquad c_m=c_m(k,\eta/4)\quad\text{from Proposition~}\ref{prop
+   err: gamma\tau}{4}. \end{split}, rendering as TeX: {from Proposition~}\ref{prop:prime-minor ^ unexpected "\\" expecting "&", "\\\\", white space or "\\end"
+   src:  \begin{split} B_w&=\text\mathrm{unit}\cdot(b_w^0)^2D,\\ D&=\prod_{q\in S^\circ} P_q(\chi(\operatorn
+   cln:  \begin{split} B_w&=\text\mathrm{unit}\cdot(b_w^0)^2D,\\ D&=\prod_{q\in S^\circ} P_q(\chi(\operatorn
+   err: }_{v_q})^{-1}), \end{split}, rendering as TeX: B_w&=\text\mathrm{unit}\cdot(b_w^0)^2D, ^ unexpected "\\" expecting "&", "\\\\", white space or "\\end"
+

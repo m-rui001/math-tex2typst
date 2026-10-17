@@ -1,0 +1,150 @@
+== D177
+seg=418 hdr=0 sep=1 rows=58 hist={6: 57}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D195
+seg=662 hdr=0 sep=1 rows=45 hist={6: 45}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D198
+seg=343 hdr=0 sep=1 rows=41 hist={6: 38}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D202
+seg=335 hdr=0 sep=1 rows=40 hist={6: 40}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D205
+seg=567 hdr=0 sep=1 rows=62 hist={2: 1, 4: 1, 6: 52}
+badpipe=[(207, 2, '|r(x,t)^2-r(x,t_i)^2|\\le r_i^2/16\\quad (t_i-b/Q_i\\le t\\le t_i)'), (319, 4, '|r z_r|\\le C q^{-1/2},\\qquad r^2|u_{rr}|\\le C q^{1/2}\\quad (0<r\\le \\tf')]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D214
+seg=300 hdr=0 sep=1 rows=37 hist={6: 37}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D224
+seg=760 hdr=0 sep=1 rows=74 hist={6: 72}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D227
+seg=550 hdr=0 sep=1 rows=58 hist={6: 47}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D234
+seg=491 hdr=0 sep=1 rows=50 hist={6: 49}
+badpipe=[]
+dollar_odd=2 [(464, '（三）"某类否定加某类转折" 直接连成一个字符串的位置：行 406。修正方向：把 "≤ 与 <$" 对照写成两句独立陈述。'), (486, '## §25 追加：§21 里一处未闭合的 \\$ 申报')]
+vsplit=0 []
+std_hdr_corpus=0
+== D242
+seg=328 hdr=0 sep=1 rows=53 hist={6: 52}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D256
+seg=190 hdr=0 sep=1 rows=47 hist={6: 46}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D264
+seg=1013 hdr=0 sep=1 rows=43 hist={6: 43}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D266
+seg=744 hdr=0 sep=2 rows=101 hist={6: 97}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D274
+seg=335 hdr=0 sep=1 rows=65 hist={6: 65}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D295
+seg=328 hdr=0 sep=1 rows=41 hist={6: 41}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D298
+seg=401 hdr=0 sep=1 rows=143 hist={6: 143}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D314
+seg=761 hdr=0 sep=1 rows=63 hist={6: 62}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D330
+seg=352 hdr=0 sep=1 rows=50 hist={6: 50}
+badpipe=[]
+dollar_odd=2 [(285, '自检说明，只按类别名申报：两字转折连接词类在 §16 有一处命中（见勘误第 1 条），其余已落盘文本经逐类扫描为零：四字过渡套语类、长停顿号'), (344, '补记二：上一条补记实际写入示例字符四个、自相成双，没能中和 §18 自检段里的那个落单引用，全文计数当时仍为单数，其"补成双数"的说法也就说')]
+vsplit=0 []
+std_hdr_corpus=0
+== D339
+seg=409 hdr=0 sep=1 rows=50 hist={4: 1, 2: 1, 6: 46}
+badpipe=[(38, 4, '|F|_{u,X,\\psi} = \\sum_{r\\ge 0}\\frac{h_0^r}{r!} \\sup_{\\lVert f_i\\rVert_'), (188, 2, '|\\mathcal J_Q| \\le C_L D^2 \\lVert I_{h,Q}\\rVert.')]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D382
+seg=497 hdr=0 sep=1 rows=51 hist={6: 51}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D389
+seg=367 hdr=0 sep=1 rows=44 hist={6: 42}
+badpipe=[]
+dollar_odd=1 [(64, '还有一个细节值得单独记下：附录式平滑定理（§10）处理的是匹配在多面体坐标 $x_e$ 上的平均，那边完全没有 $\\rho 的踪影；$\\rh')]
+vsplit=0 []
+std_hdr_corpus=0
+== D431
+seg=227 hdr=0 sep=1 rows=39 hist={6: 39}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D436
+seg=363 hdr=0 sep=1 rows=40 hist={6: 40}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D437
+seg=363 hdr=0 sep=1 rows=179 hist={6: 179}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+== D457
+seg=284 hdr=0 sep=1 rows=69 hist={6: 69}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0

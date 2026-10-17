@@ -1,0 +1,18 @@
+################ D28  (D28-双曲群无几何CAT0作用.md)
+before: bytes=151904 lines=1526
+ROW line=1166  sites=2  pipes 8->6  $=0(parity even)
+OLD| | E\|Ω\| | N^{3−β−90δ} | sample:eq-master-mean | 主匹配非空 | α 完全消掉：(17+7α)+(12+β−7α)=29+β |
+NEW| | E\lvert Ω\rvert | N^{3−β−90δ} | sample:eq-master-mean | 主匹配非空 | α 完全消掉：(17+7α)+(12+β−7α)=29+β |
+ROW line=1176  sites=2  pipes 8->6  $=0(parity even)
+OLD| | r | √3/2 | 05 hexagon 段 | 余弦和论证输入 | 边长和 6、\|3−s\| 检查唯一确定 |
+NEW| | r | √3/2 | 05 hexagon 段 | 余弦和论证输入 | 边长和 6、\lvert 3−s\rvert 检查唯一确定 |
+ROW line=1184  sites=2  pipes 8->6  $=0(parity even)
+OLD| | N | \|S_n\|（论文）/2(n+1)（Lean） | 02:42-45；TableSelection.lean:60 | 唯一趋参 | 群结构无关（D12） |
+NEW| | N | \lvert S_n\rvert（论文）/2(n+1)（Lean） | 02:42-45；TableSelection.lean:60 | 唯一趋参 | 群结构无关（D12） |
+after: bytes=151931 (delta +27) lines=1526 rows_fixed=3 sites_fixed=6 sites_registered=0
+[DRY] nothing written to the note
+D28 file-count \lVert  = 39
+D28 file-count \lvert  = 22
+D28 file-count \mid  = 1
+D28 file-count \upharpoonright = 0
+D28 file-count \Vert  = 0

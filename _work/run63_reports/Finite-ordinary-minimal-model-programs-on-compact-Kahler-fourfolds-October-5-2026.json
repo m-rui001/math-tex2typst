@@ -1,0 +1,32 @@
+{
+  "paper": "Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026",
+  "ok": true,
+  "typ_lines": 1977,
+  "included_pdf_pages": 0,
+  "formulas": 1716,
+  "math_failed": 0,
+  "labels": 217,
+  "equations": 2,
+  "theorems": 1,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_refused": 1
+  },
+  "samples": {
+    "formulas": "1716",
+    "cetz_refused": "\\begin{tikzpicture}[ box/.style={draw=linkblue!65,rounded corners=2pt,align=center, fill=linkblue!3,text width=5.4cm,i"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "flafter"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026.tex"
+}

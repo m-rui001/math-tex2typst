@@ -1,0 +1,1468 @@
+D01-对称Mahler猜想与等号分类.md                             size= 107265 secs=24 contig=True rows=32
+    math=2334  CLEAN
+D02-Kaplansky直接有限性反例-特征2.md                        size= 114954 secs=28 contig=True rows=42
+    math=2356  CLEAN
+D03-VlasovMaxwell整体经典解.md                          size= 117877 secs=24 contig=True rows=51
+    math=2384  CLEAN
+D04-乘性函数二点关联.md                                    size= 224971 secs=54 contig=True rows=53
+    math=5992  CLEAN
+D05-算术级数拟多项式界.md                                   size= 109899 secs=27 contig=True rows=63
+    math=1436  CLEAN
+D06-pi无理指数为2.md                                    size= 107575 secs=39 contig=True rows=32
+    math=2680  CLEAN
+D07-量子Heisenberg铁磁体自发磁化.md                         size= 132568 secs=26 contig=True rows=58
+    math=2070  CLEAN
+D08-Mezard-Parisi公式.md                             size= 195044 secs=24 contig=True rows=36
+    math=4280  CLEAN
+D09-MaxCut最优NP难度.md                                size= 102126 secs=15 contig=True rows=49
+    math=2151  CLEAN
+D10-自由群因子同构.md                                     size= 188920 secs=27 contig=True rows=53
+    math=2476  CLEAN
+D100-准Riemann假设：Re-s大于八分之七的无零点半平面与Dirichlet-L函数显式公 size= 206636 secs=26 contig=True rows=40
+    math=5646  CLEAN
+D101-欧氏平面不可五色：刚性-谱-调色板三段论证的反推笔记.md                 size= 348631 secs=17 contig=True rows=84
+    math=1175  CLEAN
+D102-度量k-median的单指数恢复与有界价格严格性：精确预算算法的反推笔记.md       size= 186512 secs=23 contig=True rows=36
+    math=2272  CLEAN
+D103-Landau-Siegel零点的均匀排除：加权环面jet与绝对零点间隙的反推笔记.md   size= 134804 secs=14 contig=True rows=41
+    math=3428  CLEAN
+D104-单折Diophantine表示：幂关系与椭圆曲线互定义性的反推笔记.md          size= 124591 secs=20 contig=True rows=32
+    math=3244  CLEAN
+D105-一致最稀疏割的近根号对数整数性间隙：kernel与contraction路线的反推笔记.m size= 133229 secs=21 contig=True rows=35
+    math=1190  CLEAN
+D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记 size= 215519 secs=18 contig=True rows=67
+    math=6504  CLEAN
+D107-唯一博弈定理：从约束图与可判定性到定理11机器化的反推笔记.md              size= 254795 secs=34 contig=True rows=48
+    math=6882  CLEAN
+D108-完全图交叉数：圆上摆放、相邻手术与逐点验收的反推笔记.md                 size= 140530 secs=16 contig=True rows=50
+    math=2670  CLEAN
+D109-Falconer距离猜想全维版：角增益与递归装配的反推笔记.md              size= 158796 secs=62 contig=True rows=29
+    math=3352  CLEAN
+D11-退化反例-三次不动点打破Arnold界.md                         size=  71946 secs=15 contig=True rows=45
+    math=1932  CLEAN
+D110-强薄树猜想：层级指派构造与对偶树的反推笔记.md                      size= 155673 secs=20 contig=True rows=53
+    math=2057  CLEAN
+D111-复群环的Bass迹猜想：滤链手术与右射影消没的反推笔记.md                size= 121417 secs=27 contig=True rows=34
+    math=3033  CLEAN
+D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md         size= 143066 secs=22 contig=True rows=51
+    math=4018  CLEAN
+D113-三维有界可测标量电导率的非唯一性：分块与标量化的反推笔记.md               size= 164242 secs=25 contig=True rows=77
+    math=4204  CLEAN
+D114-二对一博弈的完美完全性：采样与双侧解码归约的反推笔记.md                 size= 241090 secs=34 contig=True rows=61
+    math=1631  CLEAN
+D115-完全二分图交叉数：Zarankiewicz式与交点归一化的反推笔记.md          size= 117450 secs=17 contig=True rows=43
+    math=2779  CLEAN
+D116-有限因子的生成子问题：相对生成与扰动独立性的反推笔记.md                 size= 160863 secs=20 contig=True rows=47
+    math=4679  CLEAN
+D117-最大三角Hilbert变换对称点估计：跳跃控制与热流两侧的反推笔记.md          size=  96172 secs=17 contig=True rows=34
+    math=2456  CLEAN
+D118-逼近性质下的cotype对cotype猜想：Walsh基与系数空间路线的反推笔记.md   size=  98111 secs=18 contig=True rows=39
+    math=2851  CLEAN
+D119-顶点覆盖的因子二硬度门槛：列表编码与限制约束的反推笔记.md                size= 173293 secs=16 contig=True rows=41
+    math=4451  CLEAN
+D12-Barnette猜想-三次二部平面图Hamilton圈.md                 size=  83967 secs=12 contig=True rows=87
+    math=1769  CLEAN
+D120-高斯螺旋桨界在每一维：几何归约与证书分层的反推笔记.md                  size= 105472 secs=22 contig=True rows=37
+    math=3174  CLEAN
+D121-分拆原理不蕴含选择公理：对称模型的支撑下降与可定义性刻画反推笔记.md           size=  72212 secs=18 contig=True rows=30
+    math=1936  CLEAN
+D122-迹投影方法与一致性质Gamma：从有限分拆到非单侧吸收的反推笔记.md           size= 128390 secs=26 contig=True rows=47
+    math=4051  CLEAN
+D123-Petty射影体积猜想四维以上：球面核心与范数刚性的反推笔记.md             size=  88106 secs=17 contig=True rows=58
+    math=2615  CLEAN
+D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md                 size=  97115 secs=18 contig=True rows=50
+    math=3223  CLEAN
+D125-RCD空间沿每条测地线的弱Hessian界：漂移与曲率改值的反推笔记.md         size= 123042 secs=21 contig=True rows=47
+    math=3024  CLEAN
+D126-Saxl猜想的循环polytabloid证明：带宽矩阵与列收缩的反推笔记.md       size=  78307 secs=17 contig=True rows=40
+    math=2415  CLEAN
+D127-Ryser覆盖猜想的反例：构造、选取与线覆盖计数的反推笔记.md              size=  99020 secs=17 contig=True rows=41
+    math=3774  CLEAN
+D128-平面曲线的Nagata猜想：约化、椭圆线与极限的重数不等式反推笔记.md          size=  78525 secs=22 contig=True rows=47
+    math=2875  CLEAN
+D129-弱钉住平面距离定理：层级、方差与无界矛盾的反推笔记.md                  size=  71873 secs=22 contig=True rows=35
+    math=1784  CLEAN
+D13-有界树宽图的L1嵌入.md                                  size=  89477 secs=13 contig=True rows=112
+    math=2520  CLEAN
+D130-弱MTW下的一致双Holder传输：jet展开与谱尺度估计的反推笔记.md         size=  99919 secs=22 contig=True rows=46
+    math=2652  CLEAN
+D131-紧Kahler流形万有覆叠分裂：可去奇点与度量全局化的反推笔记.md            size= 147079 secs=25 contig=True rows=40
+    math=3526  CLEAN
+D132-平面图度量嵌入L1的常数失真：几何生成插值与装配的反推笔记.md              size= 121373 secs=20 contig=True rows=44
+    math=3261  CLEAN
+D133-有序二元矩阵让多项式removal失效：钉住构造与计数下界的反推笔记.md         size= 145090 secs=27 contig=True rows=63
+    math=4090  CLEAN
+D134-乘积投影定位给出QAC零度parity下界：bootstrap与深度收缩的反推笔记.md  size= 116483 secs=21 contig=True rows=47
+    math=2564  CLEAN
+D135-球面投影矩与正帽控制给出Riesz估计：图模型与停止核的反推笔记.md           size=  86319 secs=19 contig=True rows=45
+    math=2522  CLEAN
+D136-交错抽取在每个域上都给出精确矩阵乘：联合抽取与叶体积的反推笔记.md            size= 114836 secs=20 contig=True rows=73
+    math=3338  CLEAN
+D137-平面指数第一通过limshape的严格凸与可微：链路逼近与改进界的反推笔记.md      size= 247915 secs=33 contig=True rows=51
+    math=7618  CLEAN
+D138-对称Mahler猜想的等号情形：零亏量、单纯形与中位分割的反推笔记.md          size= 103851 secs=19 contig=True rows=47
+    math=2880  CLEAN
+D139-单格覆盖的n对数n阶界：采样器层级与电路和的反推笔记.md                 size= 114454 secs=18 contig=True rows=77
+    math=3413  CLEAN
+D14-CH阻碍-范畴性阈值不能被规定.md                             size=  95735 secs=13 contig=True rows=29
+    math=1696  CLEAN
+D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md                 size=  96120 secs=21 contig=True rows=56
+    math=2846  CLEAN
+D141-弱MTW下的全局支撑与凸单射域：首刀支撑与度展开的反推笔记.md              size=  99555 secs=27 contig=True rows=37
+    math=2642  CLEAN
+D142-2NFA补全的指数状态下界：从序反转眼像到嵌套缺失预算的反推笔记.md           size= 122816 secs=14 contig=True rows=43
+    math=3302  CLEAN
+D143-关系代数与树周游：单向活性指数下界的反推笔记.md                     size= 123884 secs=21 contig=True rows=41
+    math=3303  CLEAN
+D144-三图等子的摊平记账：二次曲面上ample而无Griffiths正度量丛的反推笔记.md   size= 116545 secs=14 contig=True rows=44
+    math=2790  CLEAN
+D145-复杂矩阵乘法低于2.258与矩形界：证书层级与标签补全的反推笔记.md           size= 284461 secs=51 contig=True rows=58
+    math=8442  CLEAN
+D146-度量熵对偶猜想的反例：覆盖数与熵积分的双边分离的反推笔记.md               size= 120844 secs=19 contig=True rows=46
+    math=3826  CLEAN
+D147-自反Banach空间中非扩张映射的不动点：锚点集与候选树的反推笔记.md          size= 108271 secs=18 contig=True rows=33
+    math=3125  CLEAN
+D148-三维相对论VlasovMaxwell整体经典解的符号增量bootstrap与延迟锥消去.m size=  70074 secs=18 contig=True rows=32
+    math=2440  CLEAN
+D149-有限张量节省与精确Fourier电路：价格反证路线的亲历笔记.md             size= 101515 secs=26 contig=True rows=58
+    math=2590  CLEAN
+D15-有限欧氏Ramsey配置分类.md                              size=  99979 secs=22 contig=True rows=35
+    math=3256  CLEAN
+D150-槽的位置与完全连续接口：Lipschitz等价而非线性同构的可分反例反推笔记.md     size= 136125 secs=19 contig=True rows=56
+    math=3570  CLEAN
+D151-中点透镜的树范数尾部控制：联合预算与对消比较的反推笔记.md                size= 167149 secs=55 contig=True rows=30
+    math=4630  CLEAN
+D152-调和高度与阿廷派一型猜想.md                               size=  71645 secs=17 contig=True rows=34
+    math=1868  CLEAN
+D153-从有界树势与路径代价推出中点凸性：配对内向测试反推笔记.md                size= 182760 secs=20 contig=True rows=53
+    math=5420  CLEAN
+D154-三色图上大独立集的难度构造与分布式对齐.md                        size= 116385 secs=17 contig=True rows=50
+    math=2804  CLEAN
+D155-实L1独立乘积的averaged中点模与AUC重范化障碍.md               size= 117262 secs=16 contig=True rows=42
+    math=2610  CLEAN
+D156-两个递归势导出的中点凸性.md                               size=  70294 secs=26 contig=True rows=29
+    math=2336  CLEAN
+D157-Nagata猜想平面曲线反推笔记：正规束多项式与指数集行插值.md             size= 118551 secs=21 contig=True rows=59
+    math=3546  CLEAN
+D158-非交换有理公式的多项式打击表.md                             size=  72230 secs=14 contig=True rows=30
+    math=2255  CLEAN
+D159-离散立方体上二元信息的精确收缩.md                            size=  79853 secs=16 contig=True rows=48
+    math=2334  CLEAN
+D16-径向对势的连续温度奇点.md                                 size=  92214 secs=15 contig=True rows=34
+    math=3036  CLEAN
+D160-半代数有界域的紧商对称化：从Kollár-Pardon问题二十五到Vey模型的反推笔记.m size= 129294 secs=24 contig=True rows=46
+    math=3230  CLEAN
+D161-阈值平行重复的条件化预算反推.md                             size=  81447 secs=15 contig=True rows=62
+    math=1662  CLEAN
+D162-Kaplansky直接有限性猜想在特征二的反例：从配对恒等式到终止有限搜索的反推笔记.md size= 106873 secs=19 contig=True rows=50
+    math=2868  CLEAN
+D163-四次多项式无平方因子值的数域行列式路线与自适应辅助素数.md                size= 123581 secs=16 contig=True rows=55
+    math=3242  CLEAN
+D164-高斯素数有界步长行走的有限周期筛障碍.md                         size= 123196 secs=18 contig=True rows=56
+    math=2852  CLEAN
+D165-宇称翻转与加权分级-多项式阈值函数平均敏感度线性阶的反推笔记.md             size=  82337 secs=17 contig=True rows=48
+    math=1772  CLEAN
+D166-二维经典O(n)模型的指数衰减：聚类、旋转与环面尺度反推笔记.md             size=  76298 secs=19 contig=True rows=43
+    math=1538  CLEAN
+D167-径向连续相变与代数衰减尾：有限分割与支撑几何反推笔记.md                 size=  76909 secs=21 contig=True rows=48
+    math=1908  CLEAN
+D168-整值与分数期望阈值的常数等价-Talagrand猜想研究笔记.md             size=  70507 secs=18 contig=True rows=38
+    math=2268  CLEAN
+D169-无噪高斯回归中记忆与精度的真实账本.md                          size=  87230 secs=14 contig=True rows=44
+    math=1824  CLEAN
+D17-整数次调和维数比较的反例.md                                size=  95918 secs=14 contig=True rows=43
+    math=2867  CLEAN
+D170-后副本与等标签测度下的记忆约束样本下界.md                        size= 126269 secs=22 contig=True rows=51
+    math=3128  CLEAN
+D171-完全Crouzeix定理的思考链-最优度量与公共边界密度.md               size=  71169 secs=23 contig=True rows=39
+    math=1962  CLEAN
+D172-第二个Kahn-Kalai猜想的常数账与树约化复算.md                  size=  95011 secs=17 contig=True rows=42
+    math=3062  CLEAN
+D173-路由密度与表示压缩-Thorp扫掠.md                          size= 123110 secs=19 contig=True rows=70
+    math=2700  CLEAN
+D174-光滑度量下Yau节点集上界的三维与四维反例.md                      size= 175927 secs=32 contig=True rows=55
+    math=4931  CLEAN
+D175-良条件对数凹采样的次多项式查询复杂度与维度指数零.md                   size=  92955 secs=12 contig=True rows=55
+    math=2182  CLEAN
+D176-正则树上自由Ising模型IID阈值的锐利因子.md                    size= 104073 secs=21 contig=True rows=46
+    math=2550  CLEAN
+D177-把时钟停在50的零熵映射.md                               size=  86802 secs=13 contig=True rows=55
+    math=2830  CLEAN
+D178-四态Potts树上重构的容量判据反推笔记.md                       size=  73299 secs=21 contig=True rows=40
+    math=1840  CLEAN
+D179-先把电荷折成能量亏损-带电时空Penrose约化的反推笔记.md              size=  91890 secs=19 contig=True rows=67
+    math=2221  CLEAN
+D18-Tachikawa第二猜想反例.md                             size= 139557 secs=17 contig=True rows=121
+    math=3866  CLEAN
+D180-余维一上界：把奇异集维数钉在m-1上的反推手记.md                    size= 120539 secs=39 contig=True rows=99
+    math=3374  CLEAN
+D181-完备锥上的斜率配平与没有小Cohen-Macaulay模的三维完备局部整环.md      size=  72041 secs=24 contig=True rows=47
+    math=1968  CLEAN
+D182-从一份非零对应恢复完整Kuga--Satake映射-条件归约手记.md           size=  71792 secs=14 contig=True rows=45
+    math=1374  CLEAN
+D183-一条平面尾迹顶穿Kohn-Sham系综表示.md                      size=  77701 secs=22 contig=True rows=49
+    math=2028  CLEAN
+D184-十一块箭头与hub测试-Kurosh除环问题反例.md                   size= 111381 secs=26 contig=True rows=69
+    math=2838  CLEAN
+D185-Wall-D2问题反例-循环塔与四行扭曲边界矩阵.md                   size=  74773 secs=28 contig=True rows=74
+    math=1864  CLEAN
+D186-固定粒子停机测试的构造路径.md                              size=  74136 secs=24 contig=True rows=47
+    math=1998  CLEAN
+D187-给一般图的完美匹配计数装一台采样机.md                          size=  98605 secs=34 contig=True rows=43
+    math=2052  CLEAN
+D188-五次型Gepner稳定条件构造手记.md                          size=  94633 secs=19 contig=True rows=50
+    math=2628  CLEAN
+D189-固定子句长度下随机SAT阈值的极限存在性.md                       size= 111584 secs=45 contig=True rows=32
+    math=3696  CLEAN
+D19-Ryser覆盖猜想反例-三次曲线弯出的刚度.md                       size=  73289 secs=23 contig=True rows=48
+    math=2510  CLEAN
+D190-树加权平面地图随机游走的线性时钟研究笔记.md                       size= 101333 secs=22 contig=True rows=68
+    math=2036  CLEAN
+D191-把生成量与存储量拆开算-最坏情况子集和的低空间算法.md                  size=  79074 secs=19 contig=True rows=46
+    math=2072  CLEAN
+D192-模数无界与Cannon猜想反推笔记.md                          size=  86069 secs=19 contig=True rows=46
+    math=2504  CLEAN
+D193-四次分离指数最优性思维全记录.md                             size=  70907 secs=20 contig=True rows=45
+    math=1446  CLEAN
+D194-同余格表示问题的否定解答：一条被格形状逼出来的群论路线.md                size= 108450 secs=26 contig=True rows=40
+    math=2766  CLEAN
+D195-一个PD4群没有闭非正曲流形模型.md                           size=  85288 secs=24 contig=True rows=43
+    math=1884  CLEAN
+D196-从Cardy公式提取Voronoi逾渗色关键点振幅.md                  size=  70617 secs=18 contig=True rows=39
+    math=1350  CLEAN
+D197-素数自变量多项式差的幂节省.md                              size=  75801 secs=18 contig=True rows=101
+    math=2368  CLEAN
+D198-单调图性质尖锐阈值猜想的显式宽度界.md                          size=  70694 secs=24 contig=True rows=36
+    math=1774  CLEAN
+D199-让特征线跑起来三维整次数调和维数比较反例的思维链重建.md                 size=  70408 secs=23 contig=True rows=43
+    math=1736  CLEAN
+D20-群环行列式猜想的反例.md                                  size=  82137 secs=16 contig=True rows=46
+    math=2888  CLEAN
+D200-无挠群上约化Baum-Connes装配单射性的整核类.md                 size=  84550 secs=16 contig=True rows=53
+    math=1728  CLEAN
+D201-无挠反例与分离谱带构造.md                                size=  70658 secs=17 contig=True rows=38
+    math=1755  CLEAN
+D202-无扭群环失去直有限性的构造复盘.md                            size=  76938 secs=15 contig=True rows=38
+    math=2164  CLEAN
+D203-奇数开链同场能隙的转移矩阵反推.md                            size=  70189 secs=23 contig=True rows=93
+    math=2056  CLEAN
+D204-四维盘嵌入猜想的边界障碍：从自由群问题到Frobenius-Koszul障碍.md     size= 137957 secs=13 contig=True rows=43
+    math=3766  CLEAN
+D205-闭Ricci流有界标量曲率与有限时间全曲率爆炸.md                    size=  80203 secs=27 contig=True rows=50
+    math=2542  CLEAN
+D206-把半权除子的orbifold基本群装进一个八维特殊流形.md                size=  88612 secs=19 contig=True rows=68
+    math=2194  CLEAN
+D207-Hadwiger猜想反例的二进制构造与四洞强制.md                    size= 117789 secs=26 contig=True rows=55
+    math=2628  CLEAN
+D208-Naimark问题ZFC反例复盘：可数决定替代状态猜测.md                size=  70101 secs=13 contig=True rows=35
+    math=1366  CLEAN
+D209-Sidorenko猜想反例构造过程研究笔记.md                      size=  78145 secs=24 contig=True rows=52
+    math=1812  CLEAN
+D21-Saxl猜想-循环多表证明.md                               size=  97676 secs=17 contig=True rows=40
+    math=2763  CLEAN
+D210-色数如何冲破谱不变量的上界.md                              size=  71408 secs=18 contig=True rows=39
+    math=1260  CLEAN
+D211-三边际Coulomb代价的Monge拟设反例.md                     size=  72708 secs=21 contig=True rows=62
+    math=1649  CLEAN
+D212-粗Novikov猜想反例的逆向工作笔记-绕行数持久性与常向量平均传递.md         size=  94862 secs=21 contig=True rows=50
+    math=2026  CLEAN
+D213-邻近拉格朗日猜想的稳定管类反例.md                            size=  70972 secs=15 contig=True rows=59
+    math=1760  CLEAN
+D214-边界行列式复杂度三次下界之路.md                             size=  73187 secs=19 contig=True rows=35
+    math=1972  CLEAN
+D215-稀薄Bose气体的密度均匀凝聚下限.md                          size=  71778 secs=18 contig=True rows=126
+    math=1994  CLEAN
+D216-线性次高斯与维度无关对数Sobolev不等式的反证路线.md                size=  72663 secs=22 contig=True rows=63
+    math=1675  CLEAN
+D217-方向零一律的有限程依赖证明路线复盘.md                          size=  70343 secs=13 contig=True rows=43
+    math=1760  CLEAN
+D218-严格椭圆方向零一律的反向重构笔记.md                           size=  73783 secs=18 contig=True rows=47
+    math=1690  CLEAN
+D219-素数1009上有限Smith-Toda复形V4的构造追记.md               size=  72608 secs=18 contig=True rows=37
+    math=2484  CLEAN
+D22-无穷拟阵Packing-Covering猜想反例.md                    size=  84285 secs=23 contig=True rows=40
+    math=2256  CLEAN
+D220-有限熵下微观态与非物质态自由熵分离的反例.md                       size=  73319 secs=16 contig=True rows=41
+    math=2176  CLEAN
+D221-零熵系统没有光滑正体积模型：切换定律与辛图检验的碰撞.md                 size=  70667 secs=14 contig=True rows=56
+    math=1832  CLEAN
+D222-Calabi流在复射影空间上的有限时间奇点构造.md                    size=  73147 secs=34 contig=True rows=34
+    math=2504  CLEAN
+D223-二维分类空间为何不存在.md                                size= 112473 secs=21 contig=True rows=44
+    math=2550  CLEAN
+D224-一个无固定价格群的反例日记.md                              size=  70111 secs=21 contig=True rows=70
+    math=2458  CLEAN
+D225-高标记数下的Pixton完备性Chow反例.md                      size= 155673 secs=36 contig=True rows=44
+    math=2994  CLEAN
+D226-最迟锚点归纳与谱紧掩模下的最坏情形痕迹重构样本上界.md                  size=  73043 secs=21 contig=True rows=46
+    math=2398  CLEAN
+D227-Hadwiger数线性表染色界-研究反推.md                       size= 101833 secs=62 contig=True rows=45
+    math=3276  CLEAN
+D228-局部Penrose不等式与共形微扰的四次障碍.md                     size=  74465 secs=26 contig=True rows=56
+    math=1790  CLEAN
+D229-从一个记号张量障碍倒推四维圆盘嵌入的否证.md                       size=  72540 secs=22 contig=True rows=56
+    math=1270  CLEAN
+D23-Kaplansky奇特征直接有限性反例.md                         size= 108671 secs=21 contig=True rows=31
+    math=4128  CLEAN
+D230-非退化反例击穿Morse数Arnold上界.md                      size=  71486 secs=15 contig=True rows=63
+    math=1605  CLEAN
+D231-有理二元挠椭圆曲线的逐点2-反定理推导笔记.md                      size=  71436 secs=17 contig=True rows=36
+    math=1236  CLEAN
+D232-三机单位作业调度的全局描述长度路线.md                          size=  97971 secs=22 contig=True rows=74
+    math=2192  CLEAN
+D233-强瘦树的多项式时间构造.md                                size= 192541 secs=26 contig=True rows=44
+    math=5274  CLEAN
+D234-Heilbronn三角形下界的幂改进.md                         size=  77086 secs=26 contig=True rows=47
+    math=2845  CLEAN
+D235-幂节省指数只依赖次数的intersective多项式差集.md               size= 154026 secs=33 contig=True rows=66
+    math=4931  CLEAN
+D236-平面半线的幂次节省.md                                  size= 101838 secs=41 contig=True rows=43
+    math=2832  CLEAN
+D237-平面单位距离的power saving：一个上指数被撬动的思维链.md           size=  74504 secs=22 contig=True rows=40
+    math=1840  CLEAN
+D238-平方差自由集的固定幂节省.md                               size=  70729 secs=19 contig=True rows=49
+    math=2152  CLEAN
+D239-基本群很大的射影四维与非Stein万有覆叠.md                      size=  93471 secs=27 contig=True rows=45
+    math=2726  CLEAN
+D24-Kaplansky拟迹猜想反例.md                             size= 130739 secs=17 contig=True rows=106
+    math=3415  CLEAN
+D240-高度三强色谱分裂的有理障碍.md                              size=  71240 secs=17 contig=True rows=97
+    math=1666  CLEAN
+D241-平面圆堆积的尖锐傅里叶证书反推笔记.md                          size=  70496 secs=15 contig=True rows=66
+    math=1578  CLEAN
+D242-熵界协方差对数与单纯形不等式.md                             size=  71503 secs=24 contig=True rows=50
+    math=1980  CLEAN
+D243-切层自由的奇点反例逆向复盘.md                              size= 118621 secs=25 contig=True rows=47
+    math=3752  CLEAN
+D244-用颜色包与素数筛在三环面上造出简单Lebesgue谱.md                 size=  76496 secs=20 contig=False rows=52
+    math=1802  CLEAN
+D245-高温SK谱隙论文的思维链反推.md                             size=  73320 secs=17 contig=True rows=57
+    math=1816  CLEAN
+D246-四变量稳定坐标反例的逆向工程笔记.md                           size=  70930 secs=21 contig=True rows=58
+    math=2116  CLEAN
+D247-四行永久式的严格指数与Thorp洗牌置换矩.md                      size=  75982 secs=27 contig=True rows=48
+    math=1834  CLEAN
+D248-曲面反例如何杀死Shafarevich全纯凸性.md                    size=  73448 secs=22 contig=True rows=42
+    math=2140  CLEAN
+D249-从全局谱隙到二维纠缠面积律.md                              size=  71160 secs=17 contig=True rows=45
+    math=1400  CLEAN
+D25-Crouzeix完整不等式直接证明.md                           size= 400111 secs=24 contig=True rows=36
+    math=8454  CLEAN
+D250-典型初态出发的低温SK热浴混合上界重建笔记.md                      size=  71800 secs=28 contig=True rows=72
+    math=1874  CLEAN
+D251-沿Lipschitz方向Hilbert变换的一致L2界.md                size= 105651 secs=36 contig=True rows=52
+    math=2824  CLEAN
+D252-超图性质的一致影响量上界与阈值宽度猜想.md                        size=  70671 secs=18 contig=True rows=98
+    math=1568  CLEAN
+D253-阿贝尔覆盖Gale对应与Hodge猜想自幂-工作笔记.md                 size=  71108 secs=20 contig=True rows=77
+    math=1269  CLEAN
+D254-弱无序Anderson模型的绝对连续谱.md                        size= 155209 secs=28 contig=True rows=48
+    math=3516  CLEAN
+D255-非消失之后的abundance与紧致Kähler四维形的地板生成.md           size=  73965 secs=18 contig=True rows=44
+    math=1290  CLEAN
+D256-正特征三维fold数值维一丰盈性的反推笔记.md                      size=  96555 secs=17 contig=True rows=44
+    math=2378  CLEAN
+D257-一张Kuga-Satake张量换回全部次数.md                      size= 108437 secs=15 contig=True rows=51
+    math=3064  CLEAN
+D258-Kuga-Satake对应的代数化构造路径笔记.md                    size=  72359 secs=22 contig=True rows=45
+    math=1902  CLEAN
+D259-分裂Weil型八维簇上Weil类的代数性.md                       size=  80795 secs=30 contig=True rows=51
+    math=1500  CLEAN
+D26-加倍Hilbert子集无双Lipschitz有限维嵌入.md                 size= 188439 secs=17 contig=True rows=34
+    math=4817  CLEAN
+D260-正交不变Ising自旋玻璃的全温度压强.md                        size=  70678 secs=16 contig=True rows=103
+    math=1846  CLEAN
+D261-稀疏一般图最大基数匹配的几乎线性时间.md                         size= 110259 secs=27 contig=True rows=64
+    math=1971  CLEAN
+D262-非Lean队列-LlogL逐点Fourier收敛的思维链重建.md             size=  92582 secs=31 contig=True rows=59
+    math=2156  CLEAN
+D263-带号超量与高度湮灭的逆向思维链.md                            size=  76100 secs=25 contig=True rows=145
+    math=1708  CLEAN
+D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md                 size=  76488 secs=28 contig=True rows=41
+    math=2126  CLEAN
+D265-ambient同胚与重数的分离.md                            size= 107055 secs=14 contig=True rows=62
+    math=2954  CLEAN
+D266-几乎线性编辑距离近似方案的反推.md                            size= 125273 secs=33 contig=True rows=58
+    math=3735  CLEAN
+D267-非谱双曲性锥的精确半正定提升反推笔记.md                         size=  71057 secs=15 contig=True rows=98
+    math=1584  CLEAN
+D268-单元格有界列联表FPRAS的反向推导笔记.md                       size= 152332 secs=24 contig=True rows=59
+    math=3929  CLEAN
+D269-二值容量公共整多面体基FPRAS研究笔记.md                       size=  70752 secs=14 contig=True rows=60
+    math=1530  CLEAN
+D27-Fock空间不等式与Laughlin谱隙.md                        size= 118739 secs=26 contig=True rows=38
+    math=3460  CLEAN
+D270-Gersten猜想整系数反例的构造逻辑.md                        size=  77490 secs=17 contig=True rows=37
+    math=1788  CLEAN
+D271-整三次Gersten核类：一条五次分歧曲线的复盘.md                   size=  86702 secs=28 contig=True rows=53
+    math=2184  CLEAN
+D272-无理迹数投影的铸造路线.md                                size= 103530 secs=33 contig=True rows=66
+    math=2380  CLEAN
+D273-二维O3自旋场的孤立粒子极点.md                             size=  71212 secs=17 contig=True rows=43
+    math=1414  CLEAN
+D274-非负曲率四维流形的L2-Einstein间隙.md                     size=  73311 secs=17 contig=True rows=63
+    math=1498  CLEAN
+D275-用矩阵能量的曲率拿下dyadic三角Hilbert型的L3界.md             size= 103193 secs=35 contig=True rows=60
+    math=2433  CLEAN
+D276-三线性Hilbert变换的L3界复盘笔记.md                       size=  70250 secs=14 contig=True rows=54
+    math=1026  CLEAN
+D277-欧拉函数值个数的渐近公式.md                               size=  72388 secs=16 contig=True rows=35
+    math=2139  CLEAN
+D278-三角晶格通用最优性的原子证书：从模36节点到659行极小值的反推笔记.md         size= 137402 secs=27 contig=True rows=40
+    math=3362  CLEAN
+D279-用矩量定出SLE的精确Hausdorff规范函数.md                   size=  83521 secs=22 contig=True rows=70
+    math=1740  CLEAN
+D28-双曲群无几何CAT0作用.md                                size= 151931 secs=23 contig=True rows=42
+    math=1873  CLEAN
+D280-SLE精确豪斯多夫规范函数的双重对数修正.md                       size= 109891 secs=25 contig=True rows=53
+    math=2604  CLEAN
+D281-核范数超幂嵌入的显式障碍-dyadic群配置与前驱有限链.md               size=  94497 secs=20 contig=True rows=61
+    math=2350  CLEAN
+D282-精确离散傅里叶变换的显式降幂.md                             size=  72934 secs=18 contig=True rows=43
+    math=1866  CLEAN
+D283-无限有限表示周期群构造手记.md                              size=  71889 secs=22 contig=True rows=87
+    math=1358  CLEAN
+D284-一个无限有限表示的残余有限二元群.md                           size=  81944 secs=18 contig=True rows=58
+    math=2348  CLEAN
+D285-负标量曲率积分界与实单体积.md                              size=  71459 secs=16 contig=True rows=43
+    math=1602  CLEAN
+D286-自由群因子的同构一个小余圈吞掉额外生成元.md                       size=  71738 secs=13 contig=True rows=69
+    math=1546  CLEAN
+D287-三次高斯和的一阶矩与精确截断.md                             size=  70454 secs=15 contig=True rows=103
+    math=1885  CLEAN
+D288-环形变分攻克对称点三角希尔伯特变换.md                          size=  72084 secs=16 contig=True rows=112
+    math=1574  CLEAN
+D289-反典范非零截面从光滑半正性出发.md                            size=  88019 secs=19 contig=True rows=48
+    math=2538  CLEAN
+D29-Borsuk覆盖断言九维反例.md                              size= 192301 secs=35 contig=True rows=57
+    math=4560  CLEAN
+D290-任意MASA上的逼近铺砌：从混合多项式到无期望三段装配.md                size=  98051 secs=30 contig=True rows=61
+    math=2288  CLEAN
+D291-面积可控的端替换与CKS类中的Bondi-Penrose不等式.md            size=  70448 secs=18 contig=True rows=86
+    math=1864  CLEAN
+D292-对数Calabi-Yau边界成分Stein度一致上界的反推笔记.md            size=  71470 secs=18 contig=True rows=48
+    math=1594  CLEAN
+D293-伯努利卷积的算术分类与非Pisot奇异性.md                       size=  75566 secs=18 contig=True rows=36
+    math=2584  CLEAN
+D294-局部域格扭致有限对应的算术穷尽性.md                           size=  99949 secs=24 contig=True rows=62
+    math=1976  CLEAN
+D295-紧对数光滑Kähler纤维化的B半振幅.md                        size=  72612 secs=22 contig=True rows=39
+    math=1296  CLEAN
+D296-粗糙化阈端的高度普适性与低温平面自旋场极限.md                      size= 164245 secs=36 contig=True rows=90
+    math=4100  CLEAN
+D297-素数阶Ryser猜想的平衡反例-分裂线与铅笔预算.md                   size= 104311 secs=37 contig=True rows=45
+    math=3310  CLEAN
+D298-Gersten猜想在无Baumslag-Solitar子群的单关系群上的证明路径.md   size= 106560 secs=21 contig=True rows=141
+    math=1768  CLEAN
+D299-取值空间里的重整化-非塌缩RCD空间正则点双Lipschitz坐标工作笔记.md      size= 102115 secs=29 contig=True rows=53
+    math=2780  CLEAN
+D30-负pinched三维Kähler流形无有界全纯坐标.md                   size= 136512 secs=17 contig=True rows=42
+    math=4379  CLEAN
+D300-带基点行列式纤维上的虚拟局部化与Bloch猜想.md                    size=  78019 secs=19 contig=True rows=56
+    math=1863  CLEAN
+D301-Bloch律在有限距离Heisenberg铁磁体下的逐段破译手记.md           size=  71304 secs=16 contig=True rows=47
+    math=1578  CLEAN
+D302-三维Bochner--Riesz猜想的熵与packet证明思路重建.md          size= 100517 secs=16 contig=True rows=61
+    math=2586  CLEAN
+D303-硬球气体正温度玻色爱因斯坦凝聚.md                            size=  70826 secs=29 contig=True rows=69
+    math=1492  CLEAN
+D304-边界图变形与时空Penrose不等式的三条路线.md                    size=  71851 secs=19 contig=True rows=39
+    math=1200  CLEAN
+D305-有界反典范度量与环商不变截面.md                             size=  73210 secs=26 contig=True rows=70
+    math=1882  CLEAN
+D306-逐维有界度上边缘扩张子的构造反推笔记.md                         size=  71792 secs=18 contig=True rows=114
+    math=1714  CLEAN
+D307-法诺收缩上有界klt补标的阈值反推.md                          size=  92054 secs=24 contig=True rows=54
+    math=1874  CLEAN
+D308-标量有界下的四维Ricci流光滑延拓.md                         size=  75172 secs=21 contig=True rows=56
+    math=1604  CLEAN
+D309-弱可逆质量作用系统有界性与持久性的构造链复盘.md                     size=  70452 secs=39 contig=True rows=105
+    math=1692  CLEAN
+D31-非谱形双曲锥.md                                      size= 174857 secs=19 contig=True rows=39
+    math=4654  CLEAN
+D310-布朗连续随机树极限与四条以上有限FK图.md                        size=  82491 secs=15 contig=True rows=73
+    math=2118  CLEAN
+D311-临界Ising缓冲比较与停止带分辨.md                          size= 104002 secs=21 contig=True rows=57
+    math=1562  CLEAN
+D312-紧致双曲Kähler流形的典范放大性.md                         size=  71420 secs=19 contig=True rows=53
+    math=1568  CLEAN
+D313-次临界FK平面图的典范共形极限.md                            size=  81423 secs=16 contig=True rows=52
+    math=1196  CLEAN
+D314-三角形弦的平均长度与真空盖选中的振幅.md                         size=  93757 secs=28 contig=True rows=60
+    math=2144  CLEAN
+D315-打开回路恒等式：临界Poisson--Voronoi渗流的Cardy公式.md       size=  72983 secs=16 contig=True rows=56
+    math=1224  CLEAN
+D316-Catalan常数无理性的行列式判据反推.md                       size=  76454 secs=22 contig=True rows=181
+    math=2332  CLEAN
+D317-任意接近却寻不到共轭酉的分离Cstar代数.md                      size=  70547 secs=47 contig=True rows=51
+    math=1956  CLEAN
+D318-上同调传递与等变反典范截片.md                              size= 123315 secs=25 contig=True rows=77
+    math=3842  CLEAN
+D319-区间序找回KL多项式.md                                 size=  71297 secs=23 contig=True rows=83
+    math=1806  CLEAN
+D32-Tingley问题正解.md                                 size= 151813 secs=19 contig=True rows=44
+    math=4560  CLEAN
+D320-交换的除代数系数线性型与Artinian-Eisenbud-Green-Harris猜想. size=  74455 secs=15 contig=True rows=55
+    math=2346  CLEAN
+D321-快速消失外力下一条粒子如何判定停机.md                          size=  91245 secs=25 contig=True rows=50
+    math=1840  CLEAN
+D322-随机3-SAT阈值的可计算性.md                             size=  71434 secs=22 contig=True rows=49
+    math=1912  CLEAN
+D323-条件性极小模型：紧Kähler四维流形非消灭的整条反推路线.md              size= 116042 secs=17 contig=True rows=58
+    math=1816  CLEAN
+D324-观测路径之后的条件信息收缩.md                              size=  92387 secs=22 contig=True rows=57
+    math=2124  CLEAN
+D325-条件置换与揭示切换环境中的全牌混合.md                          size=  71087 secs=22 contig=True rows=35
+    math=2540  CLEAN
+D326-方格随机簇临界界面共形极限的构思重建.md                         size=  80774 secs=25 contig=True rows=52
+    math=1152  CLEAN
+D327-共形流与带极小前界的黎曼彭罗斯不等式全维重构笔记.md                   size= 125718 secs=37 contig=True rows=64
+    math=3146  CLEAN
+D328-弱耦合体相Ising关联的共形普适性.md                         size=  70853 secs=18 contig=True rows=118
+    math=1308  CLEAN
+D329-MinUnCut常数因子难度的还原之路.md                        size=  71214 secs=19 contig=True rows=53
+    math=1676  CLEAN
+D33-每张图的线性圈与边分解.md                                 size= 212805 secs=21 contig=True rows=59
+    math=6390  CLEAN
+D330-有向反馈点集常数因子难近度的重构笔记.md                         size=  73653 secs=20 contig=True rows=48
+    math=1874  CLEAN
+D331-均匀最稀疏割常数因子难度的逆向重建.md                          size= 102568 secs=19 contig=True rows=51
+    math=2314  CLEAN
+D332-可构造tame-Hecke特征层的正特征构造反推笔记.md                 size= 158594 secs=22 contig=True rows=39
+    math=3326  CLEAN
+D333-接触Fano流形与LeBrun-Salamon猜想的证明思路.md             size=  91942 secs=16 contig=True rows=38
+    math=2836  CLEAN
+D334-连续相位叶层如何逼出解析焦散领.md                            size=  71198 secs=27 contig=True rows=35
+    math=1726  CLEAN
+D335-连续库仑谱下确界在二进制核电荷编码下的QMA难.md                    size=  89813 secs=17 contig=True rows=51
+    math=2202  CLEAN
+D336-团禁止图对应着色的对数增益复盘.md                            size=  77427 secs=28 contig=True rows=88
+    math=2146  CLEAN
+D337-高度二上Hahn--Wilson猜想的fp型反例.md                   size=  77347 secs=20 contig=True rows=177
+    math=1854  CLEAN
+D338-弱色散分裂的球完备化反例、命名beta幂核与下降指数障碍.md               size=  74396 secs=15 contig=True rows=72
+    math=2274  CLEAN
+D339-平面XY模型临界中心磁化的对数修正与振幅确定.md                     size=  72908 secs=25 contig=True rows=44
+    math=2221  CLEAN
+D34-无团图的对数独立数界.md                                  size= 147536 secs=20 contig=True rows=76
+    math=4528  CLEAN
+D340-临界蜂窝弦的定端点长度律与三种端点机制的反推笔记.md                   size= 139509 secs=32 contig=True rows=62
+    math=3676  CLEAN
+D341-三维波动方程临界局部平滑的熵论证.md                           size=  77638 secs=19 contig=True rows=76
+    math=2164  CLEAN
+D342-临界SK模型单点热浴混合的多项式指数.md                         size= 139121 secs=27 contig=True rows=112
+    math=2975  CLEAN
+D343-蜂窝格临界带穿越质量幂律-1-4的求取全程复盘.md                    size=  82549 secs=19 contig=True rows=74
+    math=2252  CLEAN
+D344-从Cuntz比较到江苏吸收：条件C与中心缺陷填充的思维链还原.md             size=  70968 secs=14 contig=True rows=61
+    math=1190  CLEAN
+D345-高温SK全区cutoff：从谱边到对数时标的反推笔记.md                 size=  71143 secs=16 contig=True rows=68
+    math=1262  CLEAN
+D346-圈团Ramsey数猜想的闭合之路.md                           size=  70097 secs=23 contig=True rows=43
+    math=2528  CLEAN
+D347-循环长度与色固定点损失.md                                size=  88779 secs=18 contig=True rows=56
+    math=2938  CLEAN
+D348-六角晶格桥长对数窗口的反推之路.md                            size=  70156 secs=34 contig=True rows=36
+    math=1816  CLEAN
+D349-柱面圈权重与平面嵌套指数.md                               size=  86312 secs=23 contig=True rows=50
+    math=2064  CLEAN
+D35-最短公共超串的多项式时间二近似.md                             size= 130543 secs=21 contig=True rows=52
+    math=3658  CLEAN
+D350-八维De Giorgi猜想的正面解决：反推一条从单调性到平面heteroclinic的证明 size=  74756 secs=24 contig=True rows=55
+    math=1950  CLEAN
+D351-把hypersymplectic四流形变形成hyperkahler三元组.md       size= 127522 secs=26 contig=True rows=53
+    math=3330  CLEAN
+D352-由单个边界片确定度量与幺正联络.md                            size=  77882 secs=24 contig=True rows=65
+    math=2610  CLEAN
+D353-素数域上多项式确定性因子分解的研究笔记.md                        size=  71047 secs=18 contig=True rows=43
+    math=2188  CLEAN
+D354-固定次数下确定性非二部Ramanujan图的构造.md                   size=  82589 secs=22 contig=True rows=52
+    math=1890  CLEAN
+D355-平均收益博弈确定性拟多项式算法的质量再加权递归.md                    size=  90622 secs=27 contig=True rows=55
+    math=2086  CLEAN
+D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md                    size=  77716 secs=19 contig=True rows=40
+    math=1813  CLEAN
+D357-盘转移表示与受限桥质量.md                                size=  70554 secs=26 contig=True rows=52
+    math=1870  CLEAN
+D358-Donovan猜想在素域代数闭包上的证明.md                       size=  71316 secs=14 contig=True rows=51
+    math=1036  CLEAN
+D359-把单位代价编辑距离压进l1：指数内常数外的匹配夹逼.md                  size=  70823 secs=22 contig=True rows=46
+    math=2050  CLEAN
+D36-投影体体积的单纯形最大反例.md                               size= 115217 secs=17 contig=True rows=47
+    math=1785  CLEAN
+D360-电磁尾迹与Kerr-Newman-Penrose不等式反例构造笔记.md          size=  75988 secs=20 contig=True rows=53
+    math=1971  CLEAN
+D361-初等正性与终止置换见证.md                                size= 106811 secs=22 contig=True rows=76
+    math=2497  CLEAN
+D362-椭圆平方点有限性与A_2曲线Zilber-Pink.md                  size= 113550 secs=21 contig=True rows=83
+    math=2610  CLEAN
+D363-椭圆容量传播与球面Fourier限制猜想的完整开范围.md                 size=  70311 secs=18 contig=True rows=88
+    math=1512  CLEAN
+D364-平面Schrödinger端点收敛的H三分之一次幂全程.md                size=  71235 secs=23 contig=True rows=41
+    math=1368  CLEAN
+D365-端点逐点收敛：高维薛定谔方程的等号情形.md                        size= 110426 secs=23 contig=True rows=98
+    math=2752  CLEAN
+D366-局部维度十的零密钥纠缠态：一条反向推演的记录.md                     size=  78229 secs=17 contig=True rows=63
+    math=1542  CLEAN
+D367-负曲率熵等式与局部对称性.md                               size=  70423 secs=25 contig=True rows=62
+    math=1166  CLEAN
+D368-时空Penrose不等式的等号与刚性.md                         size= 147121 secs=31 contig=True rows=70
+    math=3070  CLEAN
+D369-矩阵Lieb-Thirring等号情形研究笔记.md                    size=  72548 secs=21 contig=True rows=55
+    math=1559  CLEAN
+D37-Seymour第二邻域猜想证明.md                             size= 242584 secs=30 contig=True rows=76
+    math=5003  CLEAN
+D370-素数次数环面包在任意局部型下的等分布.md                         size=  77409 secs=15 contig=True rows=52
+    math=1777  CLEAN
+D371-任意阶本原四次环面包线的等分布.md                            size=  82945 secs=18 contig=True rows=65
+    math=1993  CLEAN
+D372-原始六次环面包的一等分布.md                               size=  70880 secs=16 contig=True rows=38
+    math=2016  CLEAN
+D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md            size=  82793 secs=16 contig=True rows=48
+    math=2060  CLEAN
+D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md              size=  73079 secs=15 contig=True rows=46
+    math=1416  CLEAN
+D375-平面XY模型关联长度的本质奇点.md                            size=  75018 secs=20 contig=True rows=50
+    math=1822  CLEAN
+D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md                  size=  70386 secs=14 contig=True rows=64
+    math=1396  CLEAN
+D377-抽象初等类的最终范畴性谱.md                               size= 196058 secs=25 contig=True rows=60
+    math=3882  CLEAN
+D378-每张复K3曲面都是Oka.md                               size=  70526 secs=20 contig=True rows=43
+    math=1540  CLEAN
+D379-每个四维Kakeya集有满Hausdorff维数.md                   size=  78315 secs=32 contig=True rows=46
+    math=1274  CLEAN
+D38-Jacobsthal函数二次界.md                             size= 228918 secs=18 contig=True rows=57
+    math=8317  CLEAN
+D380-低Selmer余秩推出精确BSD公式.md                         size=  72878 secs=26 contig=True rows=79
+    math=1294  CLEAN
+D381-对数空间类的精确去随机化.md                               size=  72762 secs=22 contig=True rows=60
+    math=1680  CLEAN
+D382-六阶复Hadamard矩阵的精确Fourier证书.md                  size=  75822 secs=26 contig=True rows=49
+    math=2356  CLEAN
+D383-任意边缘下列联表的精确均匀采样.md                            size=  71413 secs=16 contig=True rows=43
+    math=1988  CLEAN
+D384-二维O4格点模型的精确质量渐近.md                            size=  76988 secs=19 contig=True rows=165
+    math=1772  CLEAN
+D385-精确阶与不变反典范线性系.md                               size=  83069 secs=23 contig=True rows=43
+    math=2520  CLEAN
+D386-固定门集上的精确量子因子化.md                              size=  70636 secs=17 contig=True rows=61
+    math=1793  CLEAN
+D387-存在一元实语句在计数层级中的定位.md                           size=  71219 secs=33 contig=True rows=147
+    math=1838  CLEAN
+D388-期望可哑子代数保持核心换位子.md                             size=  83192 secs=14 contig=True rows=92
+    math=2114  CLEAN
+D389-正位移匹配矩阵的指数PSD秩.md                             size=  71536 secs=15 contig=True rows=40
+    math=1905  CLEAN
+D39-光滑度量无局部等距浸入三维空间.md                             size= 137880 secs=14 contig=True rows=53
+    math=3727  CLEAN
+D390-一致离散空间上Lipschitz自由空间的逼近失效.md                  size=  70833 secs=19 contig=True rows=69
+    math=1946  CLEAN
+D391-色重叠在素数三处有限装配失效.md                             size=  71460 secs=19 contig=True rows=40
+    math=2106  CLEAN
+D392-极大粗装配的有理单射性失效.md                              size=  71231 secs=15 contig=True rows=36
+    math=2185  CLEAN
+D393-正特征有限对称张量范畴的纤维函子.md                           size=  95933 secs=22 contig=True rows=36
+    math=2590  CLEAN
+D394-一般素数处的过滤色分裂.md                                size=  86924 secs=25 contig=True rows=67
+    math=1733  CLEAN
+D396-复配中的过滤乘积与保边界压缩.md                             size=  72614 secs=17 contig=True rows=66
+    math=1818  CLEAN
+D397-编辑距离的有限圆障碍二进制码与直方图嵌入.md                       size=  79705 secs=17 contig=True rows=60
+    math=1950  CLEAN
+D398-有限同余格的刻画与不可判定性.md                             size=  84891 secs=17 contig=True rows=89
+    math=1558  CLEAN
+D399-有限指令与螺形剪切流.md                                 size=  85283 secs=18 contig=True rows=58
+    math=1858  CLEAN
+D40-单叶函数严格逆一次幂界.md                                 size= 112667 secs=16 contig=True rows=37
+    math=3541  CLEAN
+D400-有限半群计算与一致广义星高度界.md                            size= 130656 secs=16 contig=True rows=80
+    math=3440  CLEAN
+D401-变素数处的有限Smith-Toda复形.md                        size=  96091 secs=23 contig=True rows=51
+    math=2266  CLEAN
+D402-有限代数包与Boone-Higman猜想.md                       size=  84608 secs=18 contig=True rows=50
+    math=2096  CLEAN
+D403-半面积界以下的有限角柱面覆盖.md                             size=  75235 secs=16 contig=True rows=68
+    math=1810  CLEAN
+D404-受控集的有限柱面逼近.md                                 size=  83181 secs=21 contig=True rows=42
+    math=1938  CLEAN
+D405-Kn局部球面的有限生成.md                                size=  83937 secs=22 contig=True rows=42
+    math=2185  CLEAN
+D406-紧Kahler四流形上有限极小模型程序.md                        size=  70553 secs=17 contig=True rows=50
+    math=1478  CLEAN
+D407-紧Kahler四流形上有限极小模型程序九月稿.md                     size= 103214 secs=14 contig=True rows=38
+    math=2694  CLEAN
+D408-径向扫掠的有限三角逼近.md                                size=  95447 secs=38 contig=True rows=52
+    math=3406  CLEAN
+D409-随机正则图上弱Anderson无序的固定能量普适性.md                  size=  84289 secs=16 contig=True rows=58
+    math=2239  CLEAN
+D41-敏感度与块敏感度的超二次分离.md                              size= 124867 secs=30 contig=True rows=39
+    math=4053  CLEAN
+D410-素数2处的Fontaine-Mazur模性.md                      size=  90322 secs=18 contig=True rows=51
+    math=2524  CLEAN
+D411-六次对称幂的Foulkes猜想.md                            size=  74538 secs=19 contig=True rows=76
+    math=2594  CLEAN
+D412-极小度量与移动jet的四重非消失.md                           size= 106631 secs=19 contig=True rows=48
+    math=2873  CLEAN
+D413-温和Hecke特征层的Frobenius结构.md                     size=  89154 secs=16 contig=True rows=44
+    math=2122  CLEAN
+D414-Voronoi渗流的淬火近临界普适性.md                         size=  93732 secs=18 contig=True rows=51
+    math=1120  CLEAN
+D415-部分置换信息与傅里叶界.md                                size=  75337 secs=18 contig=True rows=52
+    math=1816  CLEAN
+D416-富田自由性猜想.md                                    size=  80736 secs=23 contig=True rows=49
+    math=2020  CLEAN
+D417-零温Sherrington-Kirkpatrick序参量的满支撑.md           size=  71149 secs=24 contig=True rows=68
+    math=1661  CLEAN
+D418-临界SK自相关的函数普适性.md                              size=  89968 secs=18 contig=True rows=51
+    math=1770  CLEAN
+D419-固定度随机正则图的GOE体普适性.md                           size=  70393 secs=18 contig=True rows=83
+    math=1402  CLEAN
+D42-无挠群代数含零因子.md                                   size= 197154 secs=20 contig=True rows=74
+    math=5923  CLEAN
+D420-加权整数Lipschitz高度的高斯自由场极限.md                    size= 112336 secs=20 contig=True rows=41
+    math=1468  CLEAN
+D421-广义Cartan-Hadamard等周不等式与欧氏等号刚性.md              size=  82271 secs=25 contig=True rows=57
+    math=1862  CLEAN
+D422-广义星高度至多四.md                                   size=  80704 secs=19 contig=True rows=54
+    math=1758  CLEAN
+D423-广义星高度至多三.md                                   size=  98867 secs=28 contig=True rows=54
+    math=2712  CLEAN
+D424-中性库原原子的外层电子半径.md                              size=  70035 secs=21 contig=True rows=115
+    math=1474  CLEAN
+D425-旋转亚极端Kerr时空附近的C1未来不可延展性.md                    size=  87643 secs=23 contig=True rows=60
+    math=2102  CLEAN
+D426-固定Kerr时空附近带平方可积联络的一般性未来不可延拓性.md               size= 113643 secs=19 contig=True rows=46
+    math=2752  CLEAN
+D427-几何程序构造无散强迫.md                                 size=  71468 secs=22 contig=True rows=37
+    math=2000  CLEAN
+D428-Gigli用分布曲率刻画Alexandrov空间.md                   size=  73031 secs=21 contig=True rows=75
+    math=1202  CLEAN
+D429-尖点远足参数的整体Arthur提升.md                          size= 130954 secs=17 contig=True rows=51
+    math=3814  CLEAN
+D43-无挠双曲群非残余有限.md                                  size= 107452 secs=22 contig=True rows=33
+    math=3152  CLEAN
+D430-VII类极小曲面上的全局球壳.md                             size=  70562 secs=18 contig=True rows=48
+    math=1720  CLEAN
+D431-光滑各向同性弹性逆问题的全局唯一性.md                          size=  70166 secs=17 contig=True rows=37
+    math=1436  CLEAN
+D432-无理水平的全局量子几何Langlands对应.md                     size=  70080 secs=19 contig=True rows=44
+    math=1370  CLEAN
+D433-Goldfeld解析密度猜想与椭圆曲线的2-converse.md             size=  70740 secs=17 contig=True rows=42
+    math=1034  CLEAN
+D434-积分期望阈值处的图分解.md                                size=  89005 secs=33 contig=True rows=46
+    math=2786  CLEAN
+D435-稀薄硬球玻色气体的基态凝聚.md                              size=  89450 secs=28 contig=True rows=47
+    math=2608  CLEAN
+D436-稳定Morse数以下的哈密顿不动点.md                          size=  72430 secs=19 contig=True rows=38
+    math=2330  CLEAN
+D437-二十二维中低于稳定莫尔斯数的哈密顿不动点.md                       size=  80902 secs=16 contig=True rows=177
+    math=2296  CLEAN
+D438-硬球涨落极限在正则Boltzmann生存期上的达成.md                  size= 100405 secs=21 contig=True rows=49
+    math=1961  CLEAN
+D439-Hellinger收缩与任意布尔输出偏置的证明路线复盘.md                size= 100002 secs=26 contig=True rows=57
+    math=4180  CLEAN
+D44-小finitistic维数无穷的代数.md                          size= 105121 secs=19 contig=True rows=58
+    math=3344  CLEAN
+D440-有理数上的希尔伯特第十问题与有限理性测试.md                       size=  93211 secs=20 contig=True rows=44
+    math=2430  CLEAN
+D441-齐次深度五迭代矩阵乘法的下界.md                             size= 108078 secs=29 contig=True rows=58
+    math=3352  CLEAN
+D442-双曲性锥没有半正定提升.md                                size=  71680 secs=14 contig=True rows=68
+    math=2302  CLEAN
+D443-非压缩盒输运与有限计算.md                                size=  70952 secs=19 contig=True rows=97
+    math=1454  CLEAN
+D444-每条黎曼球面上都有无穷多条闭测地线像.md                         size=  72986 secs=15 contig=True rows=100
+    math=1898  CLEAN
+D445-把整数乘法压到nlogn之下：有限网络、多层结构、合成变换与装配的反推笔记.md      size=  87098 secs=17 contig=True rows=41
+    math=2386  CLEAN
+D446-分裂切丛在有理连通流形上的自动可积性.md                         size=  71457 secs=29 contig=True rows=34
+    math=1970  CLEAN
+D447-可积度量与受控边界.md                                  size= 119398 secs=33 contig=True rows=59
+    math=3100  CLEAN
+D448-整系数Donovan有限性在Witt向量上.md                      size=  86180 secs=21 contig=True rows=51
+    math=2334  CLEAN
+D449-曲线特征簇上的整点.md                                  size=  89710 secs=14 contig=True rows=40
+    math=2194  CLEAN
+D45-Auslander-Reiten猜想显式反例.md                      size= 135357 secs=20 contig=True rows=59
+    math=4890  CLEAN
+D450-平面Mumford-Shah极小元的内部正则性.md                    size=  70599 secs=16 contig=True rows=42
+    math=1797  CLEAN
+D451-不变反典范指标与固定伪有效误差的删除.md                         size=  86257 secs=25 contig=True rows=40
+    math=2100  CLEAN
+D452-每个无理旋转的不变投影反例.md                              size= 153088 secs=28 contig=True rows=36
+    math=4265  CLEAN
+D453-无理解的三次四次形与几何K3范畴.md                           size= 170442 secs=39 contig=True rows=43
+    math=3902  CLEAN
+D454-卡迪森相似定理经一致导子估计的统一证明.md                        size=  89755 secs=20 contig=True rows=51
+    math=2876  CLEAN
+D455-Koebe圆盘域猜想的兼容坐标与路径律融合.md                      size=  80689 secs=17 contig=True rows=41
+    math=1629  CLEAN
+D456-Lech重数猜想的平坦局部映射下不可下降性.md                      size=  72049 secs=34 contig=True rows=100
+    math=1647  CLEAN
+D457-从伴随除子的约化支撑提升截面.md                             size=  70572 secs=19 contig=True rows=67
+    math=1930  CLEAN
+D458-随机3-SAT击中时间的线性方差.md                           size=  76691 secs=26 contig=True rows=54
+    math=2515  CLEAN
+D459-精确高斯观测下的定位代价与信息增长.md                          size=  70558 secs=20 contig=True rows=41
+    math=1584  CLEAN
+D46-复仿射空间消去律失效.md                                  size= 113683 secs=17 contig=True rows=40
+    math=3907  CLEAN
+D460-紧Kähler空间在对数Iitaka亚可加性假设下的对数丰度.md             size= 111382 secs=17 contig=True rows=52
+    math=2183  CLEAN
+D461-特征零对数丰度：带号边界、形式提升与Frobenius比对.md              size= 221878 secs=30 contig=True rows=51
+    math=5788  CLEAN
+D462-正特征三维流形数值维数1情形的对数丰度.md                        size=  73282 secs=21 contig=True rows=38
+    math=1778  CLEAN
+D463-对数Kodaira维数与整条纤维的形变.md                        size= 220335 secs=16 contig=True rows=40
+    math=6236  CLEAN
+D464-弱无序平面Ising模型的对数相对涨落.md                        size=  70448 secs=28 contig=True rows=39
+    math=1288  CLEAN
+D465-带标记多边形关联与单弧界.md                               size= 146036 secs=17 contig=True rows=50
+    math=3534  CLEAN
+D466-固定长度六角蜂窝行走的质量与覆叠指数.md                         size=  91242 secs=18 contig=True rows=58
+    math=2292  CLEAN
+D467-高维极大多点Seshadri常数.md                           size=  72079 secs=20 contig=True rows=77
+    math=1476  CLEAN
+D468-正特征域上极大多点塞沙德里常数.md                            size=  71007 secs=28 contig=True rows=45
+    math=1734  CLEAN
+D469-平均报酬奇偶博弈的拟多项式时间算法.md                          size=  71392 secs=18 contig=True rows=70
+    math=1592  CLEAN
+D47-无共轭点但无非正曲率度量的三流形.md                            size= 126600 secs=22 contig=True rows=123
+    math=3667  CLEAN
+D470-l1的度量马尔可夫余型2.md                               size=  71113 secs=19 contig=True rows=45
+    math=1540  CLEAN
+D471-度量下降与保秩收缩.md                                  size=  97762 secs=41 contig=True rows=41
+    math=1976  CLEAN
+D472-次临界FK与生成树平面图的度量测度极限.md                        size= 158212 secs=30 contig=True rows=87
+    math=2772  CLEAN
+D473-负球感知机的微观阻塞.md                                 size=  82415 secs=19 contig=True rows=69
+    math=2260  CLEAN
+D474-阿贝尔簇上Milne有理性猜想的证明笔记.md                       size= 106057 secs=13 contig=True rows=43
+    math=2580  CLEAN
+D475-半正伴随除子的极小度量与内部单射性.md                          size=  71674 secs=16 contig=True rows=42
+    math=1710  CLEAN
+D476-广义对数典范Q对的极小模型与Mori纤维空间.md                     size= 111334 secs=23 contig=True rows=37
+    math=2402  CLEAN
+D477-数值维数为1的极小模型.md                                size=  70912 secs=27 contig=True rows=88
+    math=1928  CLEAN
+D478-虚二次域上椭圆曲线的模性.md                               size=  71885 secs=13 contig=True rows=39
+    math=1998  CLEAN
+D479-正整数中有限和与有限积的单色性：预测与对齐两原理的反推笔记.md              size= 121491 secs=14 contig=True rows=39
+    math=3038  CLEAN
+D48-矩阵乘法九四分之次.md                                   size=  99188 secs=16 contig=True rows=45
+    math=3423  CLEAN
+D480-临界方格FK界面的自然占有测度.md                            size= 139359 secs=15 contig=True rows=66
+    math=2664  CLEAN
+D481-冯诺依曼代数无小空间嵌入的近包含构造.md                         size=  70191 secs=13 contig=True rows=46
+    math=1508  CLEAN
+D482-Littlewood多项式的近似极小极大值与正的极小值.md                size=  70371 secs=15 contig=True rows=60
+    math=1886  CLEAN
+D483-平面第一通过渗流中双测地线的不存在性.md                         size=  71228 secs=19 contig=True rows=67
+    math=1450  CLEAN
+D484-准传递图在临界点不发生渗流.md                              size=  88553 secs=23 contig=True rows=64
+    math=2026  CLEAN
+D485-四次元闭非球面流形的同伦存在性表述失效.md                        size=  83944 secs=22 contig=True rows=49
+    math=2058  CLEAN
+D486-任意群上非奇异方程组与Howie猜想的谱相位证明.md                   size=  71057 secs=20 contig=True rows=36
+    math=1652  CLEAN
+D487-三维有界可测标量电导率逆问题的非唯一性.md                        size=  94167 secs=23 contig=True rows=48
+    math=1982  CLEAN
+D488-周期硬球玻尔兹曼方程解的非唯一性.md                           size=  91726 secs=16 contig=True rows=60
+    math=2288  CLEAN
+D489-非可均准传递图上渗流的非唯一性.md                            size=  72478 secs=15 contig=True rows=55
+    math=2068  CLEAN
+D49-中心圆盘极大算子的端点梯度界.md                              size= 192676 secs=37 contig=True rows=67
+    math=5456  CLEAN
+D490-带局部守恒量的硬球玻尔兹曼方程非唯一性.md                        size= 101914 secs=18 contig=True rows=48
+    math=2864  CLEAN
+D491-无初等理想子商时的核维度与江苏稳定性.md                         size=  86023 secs=21 contig=True rows=41
+    math=2378  CLEAN
+D492-半正伴随除子的数值半丰性.md                               size= 122115 secs=26 contig=True rows=40
+    math=3072  CLEAN
+D493-紧凯勒流形上半正伴随类的数值半丰足性.md                         size=  71623 secs=23 contig=True rows=42
+    math=2180  CLEAN
+D494-非交换公式的单个有理矩阵命中点.md                            size=  81588 secs=21 contig=True rows=43
+    math=2164  CLEAN
+D495-单子样本足以对抗全能对手的拟阵先知不等式.md                       size=  85742 secs=38 contig=True rows=47
+    math=2040  CLEAN
+D496-单侧负截面曲率与全纯刘维尔性质.md                            size=  79167 secs=18 contig=True rows=55
+    math=2236  CLEAN
+D497-可解闭伽罗瓦群开同态的刚性.md                              size=  89358 secs=22 contig=True rows=49
+    math=2852  CLEAN
+D498-Thorp洗牌整副排列律的最优阶混合.md                         size=  76588 secs=28 contig=True rows=57
+    math=1982  CLEAN
+D499-轨道形底与对数Iitaka次可加性.md                          size= 136207 secs=37 contig=True rows=42
+    math=3134  CLEAN
+D50-非坐标多项式与三维仿射零纤维.md                              size= 101104 secs=14 contig=True rows=48
+    math=3276  CLEAN
+D500-普通两点乘性函数相关的每一步截断证明.md                         size= 101646 secs=31 contig=True rows=58
+    math=2490  CLEAN
+D501-复合秩固定行列式P=W全上同调比较.md                          size=  71425 secs=19 contig=True rows=43
+    math=1842  CLEAN
+D502-阿廷群抛物子群交的调和高度证明.md                            size= 102191 secs=17 contig=True rows=58
+    math=2835  CLEAN
+D503-奇偶提升与有界袋见证.md                                 size= 116581 secs=40 contig=True rows=73
+    math=3790  CLEAN
+D504-退化里奇平直树的路径选择与椭圆不等式.md                         size= 120024 secs=18 contig=True rows=78
+    math=2052  CLEAN
+D505-混合变换的逐点多重遍历平均.md                              size= 101968 secs=26 contig=True rows=60
+    math=2452  CLEAN
+D506-选择长度下的四重平均逐点收敛.md                             size=  98608 secs=14 contig=True rows=59
+    math=2278  CLEAN
+D507-混合变换三重遍历平均的逐点收敛.md                            size=  78415 secs=14 contig=True rows=67
+    math=1732  CLEAN
+D508-逐度序列开关链的多项式混合.md                              size=  86217 secs=18 contig=True rows=68
+    math=2468  CLEAN
+D509-平方格点有隙基态的多项式PEPS逼近.md                         size=  84508 secs=17 contig=True rows=122
+    math=1864  CLEAN
+D51-无限有限表示单可均群.md                                  size= 229553 secs=19 contig=True rows=160
+    math=6787  CLEAN
+D510-布尔神谕下的多项式时间酉合成.md                             size=  71728 secs=16 contig=True rows=96
+    math=1980  CLEAN
+D511-多项式真空表示与蜂窝桥的43平均长指数.md                        size=  83738 secs=16 contig=True rows=39
+    math=2286  CLEAN
+D512-标准映射大参数正度量熵的多尺度反证手记.md                        size= 110108 secs=26 contig=True rows=68
+    math=2640  CLEAN
+D513-逃逸方向的自我囚禁：相对SU(2)BFSS哈密顿量正谱重建笔记.md            size=  72935 secs=22 contig=True rows=42
+    math=2560  CLEAN
+D514-大素数间隙的正下密度.md                                 size=  74231 secs=48 contig=True rows=38
+    math=2594  CLEAN
+D515-正标量曲率与余维二一致宽度.md                              size=  72854 secs=17 contig=True rows=132
+    math=1910  CLEAN
+D516-正数量曲率迫使有理非本质性的证明链条重建.md                       size=  87832 secs=14 contig=True rows=49
+    math=2414  CLEAN
+D517-正曲率Einstein四维流形分类的两块耦合证明之路.md                 size=  91242 secs=26 contig=True rows=36
+    math=2770  CLEAN
+D518-Serre交汇重数正性猜想的证明笔记.md                         size=  72881 secs=18 contig=True rows=49
+    math=1894  CLEAN
+D519-前缀指令的信息保留与不可压缩流实现.md                          size=  89774 secs=20 contig=True rows=52
+    math=2142  CLEAN
+D52-c0的双Lipschitz吸收而无线性拷贝.md                       size= 139403 secs=35 contig=True rows=42
+    math=4744  CLEAN
+D520-平凡典范丛三维簇上的标定大体积中心荷.md                         size=  90780 secs=24 contig=True rows=61
+    math=2404  CLEAN
+D521-具有偶数个素因子的素数前驱.md                              size= 103791 secs=17 contig=True rows=73
+    math=2752  CLEAN
+D522-每个容许整数底数的原根.md                                size=  72414 secs=19 contig=True rows=104
+    math=2162  CLEAN
+D523-射影霍奇线与寻常稻冈次可加性.md                             size=  73889 secs=19 contig=True rows=46
+    math=2140  CLEAN
+D524-拉格朗日纤维化的底必为射影空间.md                            size=  71710 secs=22 contig=True rows=38
+    math=1368  CLEAN
+D525-二维Anderson模型在任意正无序度下的纯点谱.md                   size=  73148 secs=25 contig=True rows=46
+    math=1348  CLEAN
+D526-三球面中结的纯装饰性手术.md                               size=  79207 secs=17 contig=True rows=49
+    math=1460  CLEAN
+D527-QAOA在热力学先行极限下达到SK基态能量.md                      size=  88402 secs=24 contig=True rows=40
+    math=1174  CLEAN
+D528-单位核电荷连续库仑能量问题的QMA难性.md                        size=  94548 secs=15 contig=True rows=55
+    math=2234  CLEAN
+D529-任意极大交换子代数上的二次强算子铺设.md                         size= 117914 secs=18 contig=True rows=42
+    math=3106  CLEAN
+D53-Artin群无几何CAT0作用.md                             size= 119510 secs=17 contig=True rows=55
+    math=1140  CLEAN
+D530-定量近Kerr演化与一般C2未来不可延伸.md                       size= 146396 secs=44 contig=True rows=38
+    math=2346  CLEAN
+D531-稀释硬球玻色气体耗竭动量分布的证明之路.md                        size= 131913 secs=30 contig=True rows=72
+    math=2764  CLEAN
+D532-固定有界斥势的博戈留波夫耗竭.md                             size=  85583 secs=15 contig=True rows=45
+    math=2154  CLEAN
+D533-三角胞腔的精度账本.md                                  size= 127609 secs=23 contig=True rows=70
+    math=2622  CLEAN
+D534-Siegel三维簇曲线中的四元数除法点.md                        size= 111412 secs=13 contig=True rows=39
+    math=2848  CLEAN
+D535-弱无序FK-Ising界面的淬火SLE普适性.md                     size= 147061 secs=26 contig=True rows=45
+    math=2184  CLEAN
+D536-弱随机键Ising模型的淬火SLE3普适性与对数衰乱轨道.md               size=  76226 secs=20 contig=True rows=44
+    math=1130  CLEAN
+D537-一般弱随机键Ising模型的淬火SLE3极限研究笔记.md                 size=  82512 secs=17 contig=True rows=41
+    math=1398  CLEAN
+D538-蜂窝多边形长度律的径向转移证明路线.md                          size= 151018 secs=23 contig=True rows=52
+    math=3840  CLEAN
+D539-比较半径恰为平均维数之半.md                               size=  99279 secs=18 contig=True rows=50
+    math=2338  CLEAN
+D54-Brennan猜想与sharp逆平方积分均值.md                      size= 108644 secs=23 contig=True rows=42
+    math=3756  CLEAN
+D540-尖点函数的阿瑟型幂零轨道分解与无分歧温和性.md                      size=  89389 secs=18 contig=True rows=46
+    math=1840  CLEAN
+D541-临界福尔廷卡斯泰尔恩伊辛图上的随机游走收敛到刘维尔布朗运动.md              size=  73949 secs=24 contig=True rows=35
+    math=1212  CLEAN
+D542-随机坐标标架与部分置换律：反推Thorp洗牌线性混合时间的思维链.md           size=  73028 secs=19 contig=True rows=41
+    math=1124  CLEAN
+D543-随机子空间测试与迹平滑：托普洗牌坐标扫描混合上界研究笔记.md               size=  72919 secs=19 contig=True rows=38
+    math=1322  CLEAN
+D544-标架系数空间里活下来的满旗系数.md                            size=  82297 secs=16 contig=True rows=53
+    math=1972  CLEAN
+D545-阿瑟滤过的有理性：从幂零奇性支集到矩量判据.md                      size= 129378 secs=24 contig=True rows=74
+    math=2202  CLEAN
+D546-按特征约化的米诺尔K理论重构笔记.md                           size=  95148 secs=18 contig=True rows=46
+    math=2908  CLEAN
+D547-模ell-Milnor积重构函数域.md                          size=  74222 secs=17 contig=True rows=42
+    math=1802  CLEAN
+D548-对数卡拉比-丘纤维化的相对分母与有效线性系统.md                     size=  93491 secs=24 contig=True rows=44
+    math=2238  CLEAN
+D549-把可分商问题推到连续统的两端.md                             size=  96699 secs=21 contig=True rows=37
+    math=2282  CLEAN
+D550-可移除边界与圆域刚性的重建.md                              size=  74667 secs=21 contig=True rows=32
+    math=1806  CLEAN
+D551-临界蜂窝自避游走的更新结构与换律三径.md                         size=  76746 secs=19 contig=True rows=57
+    math=1408  CLEAN
+D552-连续焦散围领逼出椭圆.md                                 size=  94907 secs=20 contig=True rows=59
+    math=2038  CLEAN
+D553-罗赫林单变换多重混合问题的正向解答反推.md                        size=  72810 secs=18 contig=True rows=34
+    math=1458  CLEAN
+D554-行列对称删除格恢复与坐标扫描的有界阶收缩.md                       size=  75874 secs=14 contig=True rows=40
+    math=1406  CLEAN
+D555-弱有限程扰动如何保住弦型三型界面.md                           size= 128010 secs=22 contig=True rows=72
+    math=2260  CLEAN
+D556-标量势与慢时钟：受迫流体中的停机探测.md                         size=  74405 secs=22 contig=True rows=34
+    math=1212  CLEAN
+D557-四维标度不变理论的零割模化与共形改进重建.md                       size=  76346 secs=19 contig=True rows=69
+    math=1402  CLEAN
+D558-用好的典范模型把数值条件变成典范截面.md                         size=  76194 secs=31 contig=True rows=40
+    math=1874  CLEAN
+D559-次一自对偶随机集群界面的共形极限.md                           size= 156226 secs=32 contig=True rows=113
+    math=2418  CLEAN
+D56-depth-three布尔电路的平方根指数下界.md                     size= 142818 secs=17 contig=True rows=37
+    math=4300  CLEAN
+D560-正规射影簇的半代数万有覆叠分类.md                            size= 139285 secs=22 contig=True rows=40
+    math=3634  CLEAN
+D561-固定非对角拉姆齐数的精确对数指数.md                           size=  78504 secs=15 contig=True rows=35
+    math=2146  CLEAN
+D562-Brenier映射的三分之一阶锐利稳定性.md                       size=  71980 secs=17 contig=True rows=45
+    math=1750  CLEAN
+D563-CAT(0)空间尖锐积分填充的极值路线.md                        size=  73805 secs=25 contig=True rows=47
+    math=1796  CLEAN
+D564-二维O4模型的锐利质量界.md                               size=  71710 secs=22 contig=True rows=76
+    math=1320  CLEAN
+D565-光滑曲面上零点集长度的尖锐上界.md                            size=  75312 secs=18 contig=True rows=40
+    math=1686  CLEAN
+D566-矩阵势Lieb--Thirring不等式的最优常数.md                  size=  85446 secs=28 contig=True rows=41
+    math=1952  CLEAN
+D567-稳定Morse数之下循环整系数Floer界的尖锐性.md                  size=  71954 secs=18 contig=True rows=116
+    math=2532  CLEAN
+D568-蜂窝格点带符号圆柱传播与标记多边形幂律.md                        size=  71868 secs=17 contig=True rows=124
+    math=1556  CLEAN
+D569-索普洗牌坐标扫掠的带号张量密度与图预算.md                        size=  73449 secs=33 contig=True rows=45
+    math=1459  CLEAN
+D57-两个拟阵公共基的近似计数.md                                size= 104561 secs=17 contig=True rows=49
+    math=2996  CLEAN
+D570-可解字问题群嵌入F无穷型单上群的构造研究笔记.md                     size=  72968 secs=18 contig=True rows=43
+    math=2280  CLEAN
+D571-单带计算的五分之二幂空间模拟.md                             size=  74125 secs=22 contig=True rows=39
+    math=1560  CLEAN
+D572-固定素数基组同时原根的条件性下界.md                           size=  93918 secs=29 contig=True rows=42
+    math=2812  CLEAN
+D573-双圆柱覆盖的斜率场扰动与半面积下界反例.md                        size=  73298 secs=21 contig=True rows=63
+    math=2144  CLEAN
+D574-一块边界补丁上的光滑各向异性Calderon唯一性.md                  size=  73774 secs=24 contig=True rows=39
+    math=1836  CLEAN
+D575-十维光滑非二次仿射极大整图.md                              size=  73592 secs=24 contig=True rows=37
+    math=2412  CLEAN
+D576-光滑闭曲面到欧氏四维空间的等距浸入.md                          size=  70781 secs=25 contig=True rows=36
+    math=1838  CLEAN
+D577-蛇形六格骨牌二十一步制胜的证明卡片工程.md                        size=  73034 secs=21 contig=True rows=46
+    math=2306  CLEAN
+D578-包络面积与刚性视角下的时空彭罗斯不等式.md                        size= 161001 secs=46 contig=True rows=58
+    math=4220  CLEAN
+D579-临界FK-Ising平面图的谱收敛.md                          size= 100755 secs=21 contig=True rows=40
+    math=1084  CLEAN
+D58-实Littlewood多项式极大值的渐近最小.md                      size=  86108 secs=18 contig=True rows=34
+    math=2662  CLEAN
+D580-谱标量曲率与三维Urysohn宽度.md                          size=  71584 secs=17 contig=True rows=35
+    math=2032  CLEAN
+D581-谱标量曲率与一致乌雷松宽度.md                              size=  70874 secs=19 contig=True rows=36
+    math=2446  CLEAN
+D582-量子海森堡铁磁体的低温自发磁化.md                            size=  72467 secs=16 contig=True rows=42
+    math=1720  CLEAN
+D583-方格图随机簇界面与嵌套环圈的共形极限.md                         size=  76585 secs=27 contig=True rows=39
+    math=1114  CLEAN
+D584-任意度量上随机k服务器竞争的平方对数阶.md                        size=  72431 secs=20 contig=True rows=41
+    math=1948  CLEAN
+D585-稳定子轨道局部稠密性与厚张量理想链.md                          size= 102996 secs=15 contig=True rows=49
+    math=3798  CLEAN
+D586-环面上发散薛定谔方程超临界稳定自相似爆破的反推笔记.md                  size= 112904 secs=40 contig=True rows=36
+    math=4410  CLEAN
+D587-典型SK初态的拉伸指数混合势垒.md                            size= 199527 secs=25 contig=True rows=48
+    math=4744  CLEAN
+D588-光滑单连通平面区域上的严格热点与内部临界点消失.md                    size=  70276 secs=20 contig=True rows=31
+    math=1478  CLEAN
+D589-强Ulam稳定性与可均性的刻画.md                            size=  87856 secs=14 contig=True rows=38
+    math=2214  CLEAN
+D59-向后交织算子与传递交换子.md                                size=  85121 secs=16 contig=True rows=35
+    math=2905  CLEAN
+D590-三维低指数强微分同胚逼近的能量账本.md                          size= 155052 secs=18 contig=True rows=43
+    math=3036  CLEAN
+D591-三维强微分同胚逼近p大于2研究笔记.md                          size=  71465 secs=16 contig=True rows=67
+    math=1130  CLEAN
+D592-强有理酉顶点算子代数与共形网.md                             size=  81631 secs=16 contig=True rows=43
+    math=1452  CLEAN
+D593-子集和的零点四九n指数算法.md                              size=  72949 secs=18 contig=True rows=38
+    math=1668  CLEAN
+D594-高维辛球填充的六维例外.md                                size= 154884 secs=29 contig=True rows=75
+    math=3646  CLEAN
+D595-多点标记的温和特征层构造手记.md                             size= 110336 secs=18 contig=True rows=54
+    math=2392  CLEAN
+D596-嵌入曲面平均曲率流首奇时刻切流唯一性.md                         size=  71769 secs=18 contig=True rows=49
+    math=1540  CLEAN
+D597-经由伴随正则性把纯性送过分歧位.md                            size=  77767 secs=16 contig=True rows=40
+    math=1784  CLEAN
+D598-一致界与平面多项式极限环的反推笔记.md                          size= 129919 secs=50 contig=True rows=39
+    math=2202  CLEAN
+D599-素数加性不可分解性的反推笔记.md                             size=  70317 secs=31 contig=True rows=37
+    math=1078  CLEAN
+D60-模谱均值的有界恢复.md                                   size= 115037 secs=25 contig=True rows=30
+    math=3388  CLEAN
+D600-拟等距识别几乎多循环群的反推笔记.md                           size=  70644 secs=29 contig=True rows=40
+    math=1818  CLEAN
+D601-迹重构定量下界的反推笔记.md                               size=  72622 secs=29 contig=True rows=33
+    math=1991  CLEAN
+D602-偶数自旋群的张量饱和-反推笔记.md                            size=  82804 secs=25 contig=True rows=35
+    math=1448  CLEAN
+D603-对数典范四维簇终止性的分支估计与加权困难.md                       size=  72238 secs=20 contig=True rows=34
+    math=1018  CLEAN
+D604-紧致凯勒四折广义典范翻转终止性的反推笔记.md                       size=  72069 secs=20 contig=True rows=65
+    math=1222  CLEAN
+D605-紧凯勒四维上广义对数典范翻转终止：难度分支界与全局位的反推笔记.md            size= 120713 secs=30 contig=True rows=35
+    math=2302  CLEAN
+D606-阿贝尔Zilber-Pink猜想的反例分层证明.md                    size=  71212 secs=29 contig=True rows=84
+    math=1142  CLEAN
+D607-度量k中位近似阈值：有向比较不等式与势函数路线的反推笔记.md               size=  77275 secs=21 contig=True rows=40
+    math=1426  CLEAN
+D608-阿廷词典序加幂贝蒂定理的反推笔记.md                           size=  70896 secs=21 contig=True rows=36
+    math=1516  CLEAN
+D609-分块阿尔珀林权猜想：块代数归约与曲线覆盖轨道计数的反推笔记.md              size=  70206 secs=29 contig=True rows=60
+    math=1520  CLEAN
+D61-choiceless带计数P时间不含P时间.md                       size= 168767 secs=29 contig=True rows=34
+    math=4788  CLEAN
+D610-函数域重构定理的思维链反推.md                              size=  71576 secs=23 contig=True rows=35
+    math=1284  CLEAN
+D611-稳定径向势在正则动能区间上的玻尔兹曼-格拉德极限.md                   size=  70743 secs=22 contig=True rows=42
+    math=1380  CLEAN
+D612-六维的坎帕纳-彼得内尔猜想.md                              size=  70986 secs=25 contig=True rows=30
+    math=1812  CLEAN
+D613-临界自旋场的平面XY模型.md                               size=  70929 secs=29 contig=True rows=83
+    math=1272  CLEAN
+D614-2进赫克代数在奇水平处的维数：上下界夹逼复盘.md                     size=  70708 secs=21 contig=True rows=44
+    math=1108  CLEAN
+D615-A2中曲线的E乘CM分量齐尔伯-平克定理与轨道下界.md                  size=  70746 secs=26 contig=True rows=31
+    math=1480  CLEAN
+D616-整数Lipschitz高度在双弧边界数据下的高斯自由场极限.md              size=  85615 secs=18 contig=True rows=49
+    math=1494  CLEAN
+D617-方差乘子为-1-over-arcsin-c-over-2-的平衡六顶点模型的高斯自由场极限 size= 146255 secs=21 contig=True rows=67
+    math=3242  CLEAN
+D618-广义向井猜想-从量子对应反推独立曲线度.md                        size=  71975 secs=47 contig=True rows=30
+    math=1518  CLEAN
+D619-各有限维下的希尔伯特-史密斯猜想.md                           size= 109915 secs=20 contig=True rows=52
+    math=3384  CLEAN
+D62-广义振幅衰减信道的经典容量与熵不等式.md                          size=  90320 secs=27 contig=True rows=28
+    math=2427  CLEAN
+D620-三次平坦三环面等周猜想的嵌套截面证明.md                         size=  70528 secs=17 contig=True rows=44
+    math=1792  CLEAN
+D621-三维的卡克亚极大猜想.md                                 size= 107561 secs=26 contig=True rows=81
+    math=2542  CLEAN
+D622-轴对称电真空外部克尔-纽曼-彭罗斯不等式.md                       size=  79149 secs=21 contig=True rows=41
+    math=1854  CLEAN
+D623-素数三处的凯尔韦尔不变量问题.md                             size= 114915 secs=27 contig=True rows=95
+    math=3572  CLEAN
+D624-群上的Kervaire定理：谱相位、模二度与平面带图的反推笔记.md            size=  70935 secs=20 contig=True rows=36
+    math=1696  CLEAN
+D625-一般凸体的马勒猜想.md                                  size= 116273 secs=18 contig=True rows=95
+    math=3520  CLEAN
+D626-全局函数域上的Margulis-Platonov猜想.md                 size=  89327 secs=16 contig=True rows=47
+    math=2528  CLEAN
+D627-数域上的Margulis-Platonov猜想.md                    size= 114948 secs=28 contig=True rows=35
+    math=3446  CLEAN
+D628-稀释自旋玻璃的空腔层级变分公式.md                            size= 105955 secs=19 contig=True rows=60
+    math=2262  CLEAN
+D629-编码路径与两尺度组合实现拟线性归约.md                          size=  77168 secs=17 contig=True rows=54
+    math=1524  CLEAN
+D63-三维平铺单胞无完全周期平铺.md                               size= 119958 secs=26 contig=True rows=31
+    math=3871  CLEAN
+D630-极大渐近双曲初始数据的庞罗斯不等式.md                          size=  73808 secs=19 contig=True rows=46
+    math=1574  CLEAN
+D631-素数前驱的泊松狄利克雷定律.md                              size=  97249 secs=22 contig=True rows=65
+    math=1844  CLEAN
+D632-准黎曼猜想的立方高斯和下降证明.md                            size=  75288 secs=19 contig=True rows=39
+    math=1798  CLEAN
+D633-铁磁四态波茨模型的重构阈值.md                              size=  86596 secs=23 contig=True rows=54
+    math=1878  CLEAN
+D634-正特征受限几何朗兰兹等价.md                               size=  72857 secs=21 contig=True rows=40
+    math=1116  CLEAN
+D635-椭圆曲线在每个素数处的塞尔默逆定理.md                          size=  79492 secs=21 contig=True rows=49
+    math=1606  CLEAN
+D636-r(5,t)的尖锐对数指数.md                              size=  72614 secs=23 contig=True rows=40
+    math=1972  CLEAN
+D637-随机三角形删除过程的尖锐终局余量.md                           size=  71794 secs=20 contig=True rows=38
+    math=1910  CLEAN
+D638-四维辛格猜想的有限能量函数路线.md                            size= 115367 secs=21 contig=True rows=58
+    math=2962  CLEAN
+D639-所罗门与约的最小体积定理.md                               size=  75694 secs=19 contig=True rows=52
+    math=1710  CLEAN
+D64-装箱问题的加性难度与无界配置间隙.md                            size= 111999 secs=25 contig=True rows=35
+    math=3262  CLEAN
+D640-最后的非零悬挂与稳定球形类.md                              size=  71614 secs=22 contig=True rows=42
+    math=1704  CLEAN
+D641-把边界零类拧成半维纤维化：强超凯勒SYZ猜想的证明路线笔记.md              size=  71592 secs=19 contig=True rows=54
+    math=1416  CLEAN
+D642-特殊紧凯勒流形的阿贝尔性猜想.md                             size=  73393 secs=23 contig=True rows=37
+    math=1320  CLEAN
+D643-仿射伯恩斯坦定理三到九维研究笔记.md                           size=  75654 secs=20 contig=True rows=43
+    math=1794  CLEAN
+D644-算术对应范畴与格因子稳定恢复研究笔记.md                         size=  74157 secs=13 contig=True rows=45
+    math=2086  CLEAN
+D645-二维O3模型正则大质量连续极限的构造.md                         size=  92848 secs=27 contig=True rows=78
+    math=2040  CLEAN
+D646-判定k-WL能否识别给定图的EXPTIME完全性.md                   size=  72023 secs=24 contig=True rows=45
+    math=1446  CLEAN
+D65-渐近中点一致凸与树空间的无界菱形畸变.md                          size= 130335 secs=22 contig=True rows=40
+    math=3308  CLEAN
+D66-中点与树能量导出的菱形畸变.md                               size= 191135 secs=36 contig=True rows=37
+    math=4963  CLEAN
+D67-条件坐标扫描与解析迁移.md                                 size= 134830 secs=25 contig=True rows=31
+    math=4211  CLEAN
+D68-相容性熵与Thorp扫描的谱.md                              size= 371428 secs=53 contig=True rows=37
+    math=12821  CLEAN
+D687-带电荷的时空彭罗斯不等式与原始数据刚性.md                        size=  71647 secs=20 contig=True rows=80
+    math=1478  CLEAN
+D688-三维量子Heisenberg铁磁体的球面磁化律.md                    size=  85439 secs=13 contig=True rows=59
+    math=2584  CLEAN
+D689-双正交不变无序下的球面感知机.md                             size=  71688 secs=25 contig=True rows=38
+    math=1868  CLEAN
+D69-立方格上的临界键与位渗流.md                                size= 102117 secs=18 contig=True rows=49
+    math=3030  CLEAN
+D690-迹锥分类Razak-Jacelon稳定化.md                       size=  70489 secs=15 contig=True rows=40
+    math=1344  CLEAN
+D691-二进主部BSD公式在Selmer余秩至多一.md                      size= 185754 secs=36 contig=True rows=35
+    math=4201  CLEAN
+D692-SU(N)BFSS模型的唯一阈值束缚态.md                        size=  74021 secs=19 contig=True rows=36
+    math=1208  CLEAN
+D693-弱非齐次Duffin-Schaeffer猜想的反推笔记.md                size=  71714 secs=13 contig=True rows=70
+    math=1230  CLEAN
+D694-热FK-Ising界面与有质量SLE.md                         size=  73808 secs=25 contig=True rows=46
+    math=1224  CLEAN
+D695-每个严格高维中的Thomason模型结构.md                       size=  73678 secs=27 contig=True rows=40
+    math=2026  CLEAN
+D696-拓扑平凡性与mu常值曲面奇点族.md                            size=  70377 secs=25 contig=True rows=38
+    math=1348  CLEAN
+D697-平移覆盖密度可达nlogn阶.md                             size=  74211 secs=16 contig=True rows=36
+    math=1474  CLEAN
+D698-二进制编辑距离的树构造与l1畸变下界.md                         size=  70986 secs=19 contig=True rows=41
+    math=1724  CLEAN
+D699-平面库仑重整能量的三角形极小性.md                            size=  71547 secs=22 contig=True rows=34
+    math=1606  CLEAN
+D70-SherringtonKirkpatrick模型的临界慢化.md               size= 104057 secs=13 contig=True rows=39
+    math=3408  CLEAN
+D700-三条互异整数斜率的三重遍历平均.md                            size=  70526 secs=22 contig=True rows=37
+    math=1586  CLEAN
+D701-随机均值收益博弈的确定性拟多项式时间.md                         size= 111013 secs=34 contig=True rows=48
+    math=2476  CLEAN
+D702-特殊拟射影簇的两步单值化与一个非特殊纤维.md                       size=  75834 secs=23 contig=True rows=44
+    math=1932  CLEAN
+D703-超平坦实Littlewood多项式.md                          size=  73136 secs=29 contig=True rows=35
+    math=1570  CLEAN
+D704-平方根次数界无界违反：保方差观测的放大反推笔记.md                    size=  71275 secs=24 contig=True rows=48
+    math=2010  CLEAN
+D705-无条件下Weisfeiler-Leman等价判定问题的时间下界.md            size=  72016 secs=28 contig=True rows=48
+    math=1576  CLEAN
+D706-法诺型收缩的一致卡蒂埃截面：从阈值比值到特征钉住障碍.md                 size=  70835 secs=19 contig=True rows=40
+    math=1436  CLEAN
+D707-无限调和函数的一致内部C1alpha估计.md                       size=  74389 secs=23 contig=True rows=41
+    math=1962  CLEAN
+D708-正特征下一致非交换矩阵击中点.md                             size=  72806 secs=21 contig=True rows=46
+    math=1774  CLEAN
+D709-弱可逆质量作用系统中的类一致永久性：仿射极小、割通量与尺度迭代.md            size=  70154 secs=26 contig=True rows=78
+    math=1634  CLEAN
+D71-完美匹配多面体的熵与面维数.md                               size= 182883 secs=42 contig=True rows=37
+    math=5144  CLEAN
+D710-一致多重典范饭高纤维化.md                                size=  72266 secs=19 contig=True rows=40
+    math=1736  CLEAN
+D711-球形Laughlin能隙一致稳定性的反推.md                       size= 149701 secs=37 contig=True rows=42
+    math=3243  CLEAN
+D712-把平方对数k服务器界变成可统一执行的算法.md                       size=  73561 secs=26 contig=True rows=40
+    math=1394  CLEAN
+D713-四维对数Iitaka纤维化的统一有效度.md                        size= 152816 secs=35 contig=True rows=45
+    math=3540  CLEAN
+D714-均匀超额电荷与中性原子外半径.md                             size=  71022 secs=21 contig=True rows=54
+    math=1620  CLEAN
+D715-半对数典范对数Calabi-Yau对的均匀指数.md                    size=  72006 secs=24 contig=True rows=44
+    math=1690  CLEAN
+D716-一致对数饭高纤维化与有界模空间分母.md                          size= 129754 secs=44 contig=True rows=37
+    math=2722  CLEAN
+D717-临界蜂窝多边形的一致标记估计与尖锐有限桥矩.md                      size=  78446 secs=20 contig=True rows=52
+    math=1452  CLEAN
+D718-均匀拟多项式时间迹重建的反推笔记.md                           size= 122997 secs=24 contig=True rows=40
+    math=3888  CLEAN
+D719-三角格均匀实Lipschitz高度场的GFF与SLE4极限.md              size=  71702 secs=23 contig=True rows=40
+    math=1322  CLEAN
+D72-L1的Daugavet子空间的精确渐近模数.md                       size= 111320 secs=20 contig=True rows=39
+    math=4246  CLEAN
+D720-完备正双截曲率Kähler流形的单值化.md                        size=  70991 secs=20 contig=True rows=40
+    math=1566  CLEAN
+D721-最终静止的力如何继续计算.md                               size=  71117 secs=23 contig=True rows=41
+    math=1280  CLEAN
+D722-对称群张量平方覆盖定理的反推思维链.md                          size=  71009 secs=20 contig=True rows=36
+    math=1561  CLEAN
+D723-三角格普适最优性与高斯傅里叶插值.md                           size=  72759 secs=26 contig=True rows=40
+    math=1494  CLEAN
+D724-强Kadison-Kastler稳定性的反推思维链.md                  size=  75333 secs=17 contig=True rows=43
+    math=1758  CLEAN
+D725-临界淬火自关联的普适性.md                                size=  73507 secs=22 contig=True rows=76
+    math=1572  CLEAN
+D726-无限制前模性-素数二处的全Hecke代数.md                       size=  74790 secs=24 contig=True rows=39
+    math=1662  CLEAN
+D727-高阶有界Hochschild上同调消没的随机游走反推.md                 size=  70618 secs=19 contig=True rows=61
+    math=1740  CLEAN
+D728-变维Weisfeiler-Leman等价性的指数时间完全性.md              size=  70838 secs=25 contig=True rows=62
+    math=1466  CLEAN
+D729-随机k-SAT命中时间的方差.md                             size=  70594 secs=23 contig=True rows=63
+    math=1782  CLEAN
+D73-完整Coulomb原子的广义电离能.md                           size= 131346 secs=19 contig=True rows=43
+    math=4246  CLEAN
+D730-速度场检测受迫Navier-Stokes流中计算的构造.md                size=  70931 secs=27 contig=True rows=40
+    math=1198  CLEAN
+D731-射影完全交的Virasoro约束反推笔记.md                       size=  97613 secs=29 contig=True rows=40
+    math=1624  CLEAN
+D732-射影丛上Virasoro约束的传递.md                          size=  71273 secs=23 contig=True rows=40
+    math=1500  CLEAN
+D733-双曲单关系群的虚拟紧特殊性.md                              size=  97531 secs=36 contig=True rows=42
+    math=1498  CLEAN
+D734-弱规范化推出强规范化-纯类型系统反推笔记.md                       size=  95850 secs=26 contig=True rows=42
+    math=1454  CLEAN
+D735-无理角三角形台球弱混合的证法链反推.md                          size=  71691 secs=26 contig=True rows=34
+    math=1564  CLEAN
+D736-弱纯无限性与O无穷吸收.md                                size= 134682 secs=26 contig=True rows=43
+    math=3728  CLEAN
+D737-加权膨胀图与平滑移位素数的反推思维链.md                         size=  70687 secs=26 contig=True rows=52
+    math=1020  CLEAN
+D738-从Weil平面到阿贝尔自幂上的全部Hodge类.md                    size= 104546 secs=29 contig=True rows=37
+    math=1212  CLEAN
+D739-见证对称选择严格强于带计数的无选择多项式时间.md                     size=  71500 secs=21 contig=True rows=39
+    math=1316  CLEAN
+D74-任意极化曲面上的极大Seshadri常数.md                        size= 114730 secs=22 contig=True rows=50
+    math=4212  CLEAN
+D740-零曲率平面刚性与爱因斯坦四维流形.md                           size=  70881 secs=19 contig=True rows=47
+    math=1834  CLEAN
+D741-临界Liouville量子球面的面积标记与q等于4随机平面图几何极限.md         size= 139121 secs=34 contig=True rows=70
+    math=2256  CLEAN
+D742-结构系数能隙与平面XY模型临界关联指数1-4.md                     size=  80569 secs=21 contig=True rows=48
+    math=1400  CLEAN
+D743-单相伯努利极小元临界维数七研究笔记.md                          size=  71859 secs=17 contig=True rows=40
+    math=1900  CLEAN
+D744-平面XY模型临界对数修正与振幅提取笔记.md                        size=  72553 secs=21 contig=True rows=38
+    math=1189  CLEAN
+D745-半平面双二聚体环的曲线标度极限.md                            size=  89323 secs=24 contig=True rows=50
+    math=1176  CLEAN
+D746-二进序列的仿射避集：分层路由与尺度并集界.md                       size=  91096 secs=21 contig=True rows=49
+    math=2266  CLEAN
+D747-熵光子数不等式的两输入有限能量证明.md                          size=  75516 secs=25 contig=True rows=42
+    math=1440  CLEAN
+D748-任意箭图的等变上同调Hikita猜想.md                         size=  73891 secs=21 contig=True rows=53
+    math=1272  CLEAN
+D749-三态对称信道重构阈值的精确确定.md                            size=  72267 secs=31 contig=True rows=46
+    math=1412  CLEAN
+D75-vanDerWaerden数的定量超指数下界.md                      size= 189446 secs=23 contig=True rows=58
+    math=6956  CLEAN
+D750-三维量子Heisenberg铁磁体磁化的第一格点修正.md                 size=  85690 secs=24 contig=True rows=60
+    math=2048  CLEAN
+D751-Ising随机感知器压强的变分刻画与上下界构造.md                    size= 101574 secs=24 contig=True rows=62
+    math=2324  CLEAN
+D752-球面随机感知机的自由能：任意有界势下变分公式的两类增量证明.md              size=  72623 secs=23 contig=True rows=40
+    math=1558  CLEAN
+D753-自由一致生成森林的无根因子编码与响应恒等式.md                      size=  79226 secs=17 contig=True rows=54
+    math=1280  CLEAN
+D754-几何级数相似度猜想的有限路由证明反推笔记.md                       size= 105116 secs=21 contig=True rows=44
+    math=2566  CLEAN
+D755-高度三色谱重叠的显式滤过及其黏附识别.md                         size=  75479 secs=21 contig=True rows=44
+    math=1754  CLEAN
+D756-高维埃尔德什不同距离猜想的常数因子证明.md                        size= 110736 secs=24 contig=True rows=41
+    math=2638  CLEAN
+D757-超立方Ramsey数的线性阶.md                             size= 122380 secs=25 contig=True rows=46
+    math=2768  CLEAN
+D758-圆周率的无理性指数等于2.md                               size=  96821 secs=22 contig=True rows=45
+    math=2908  CLEAN
+D759-连续整数联合Dickman律.md                             size= 100757 secs=18 contig=True rows=64
+    math=2785  CLEAN
+D76-非平凡Markov型迫使超反身.md                             size= 126141 secs=20 contig=True rows=88
+    math=3319  CLEAN
+D760-临界Ashkin-Teller电流的联合标度极限.md                   size= 115929 secs=17 contig=True rows=49
+    math=2160  CLEAN
+D761-离散群的l1-Bass猜想.md                              size=  85707 secs=14 contig=True rows=54
+    math=2198  CLEAN
+D762-低温Sherrington-Kirkpatrick涨落尺度.md              size=  88422 secs=21 contig=True rows=71
+    math=2134  CLEAN
+D763-低温Sherrington-Kirkpatrick自由能极限律.md            size=  89079 secs=16 contig=True rows=69
+    math=2044  CLEAN
+D764-六维空间中两两无偏基的最大个数.md                            size=  70855 secs=22 contig=True rows=55
+    math=1962  CLEAN
+D765-椭圆曲线二次扭的均值解析秩.md                              size= 120833 secs=25 contig=True rows=62
+    math=3730  CLEAN
+D766-度量布拉施克定理.md                                   size= 109155 secs=17 contig=True rows=40
+    math=3198  CLEAN
+D767-非极大反德西特彭罗斯不等式与原始数据刚性.md                       size=  89806 secs=19 contig=True rows=43
+    math=1590  CLEAN
+D768-归一化体积间隙在四维.md                                 size=  80914 secs=23 contig=True rows=46
+    math=2648  CLEAN
+D769-各维度中的常二重点间隙.md                                size= 163869 secs=19 contig=True rows=52
+    math=5458  CLEAN
+D77-特征二下的五边形退化与Deligne--Drinfeld猜想证明反推.md          size= 188527 secs=28 contig=True rows=35
+    math=2535  CLEAN
+D770-p-adic截面猜想.md                                 size=  84621 secs=23 contig=True rows=42
+    math=2450  CLEAN
+D771-周期自旋1链的Haldane间隙.md                           size=  86857 secs=18 contig=True rows=50
+    math=2604  CLEAN
+D772-CM阿贝尔簇的有理Hodge猜想.md                           size=  89911 secs=18 contig=True rows=48
+    math=2036  CLEAN
+D773-反向对数小平不等式与可加性.md                              size= 178815 secs=31 contig=True rows=43
+    math=4462  CLEAN
+D774-对称伯努利矩阵奇点概率的尖锐指数速率.md                         size=  83328 secs=19 contig=True rows=52
+    math=2133  CLEAN
+D775-有偏对称符号矩阵奇点的尖锐速率.md                            size= 113376 secs=19 contig=True rows=64
+    math=3950  CLEAN
+D776-时空Penrose不等式与围面积.md                           size=  70894 secs=39 contig=True rows=32
+    math=2138  CLEAN
+D78-对数Brunn-Minkowski猜想的矩坐标与张量平方路线.md              size= 120552 secs=10 contig=True rows=35
+    math=3057  CLEAN
+D79-均称性反用与位移障碍-F群非均称性证明笔记.md                       size=  82492 secs=13 contig=True rows=28
+    math=1793  CLEAN
+D80-均值对策博弈随机化准多项式求解的支撑预算递归.md                      size= 252238 secs=17 contig=True rows=67
+    math=7676  CLEAN
+D81-Foulkes-Howe规范映射的二次稳定门槛.md                     size= 125139 secs= 9 contig=True rows=36
+    math=3158  CLEAN
+D82-分离电流与密度分裂-四维tamed推compatible笔记.md              size= 158098 secs=17 contig=True rows=34
+    math=1614  CLEAN
+D83-次临界Hénon-Lane-Emden猜想的区间压力证明.md                size= 115710 secs=16 contig=True rows=47
+    math=1081  CLEAN
+D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md            size= 257366 secs=16 contig=True rows=65
+    math=6602  CLEAN
+D85-三十二行签名阵列与标签耦合：Talagrand离散凸性猜想的反推笔记.md          size= 147750 secs=10 contig=True rows=39
+    math=3591  CLEAN
+D86-循环Hadamard猜想的机器与笔头-特征交替积与二进制残迹.md              size=  83404 secs=11 contig=True rows=35
+    math=2430  CLEAN
+D87-图灵度刚性猜想与四值复原.md                                size= 143984 secs=17 contig=True rows=72
+    math=1026  CLEAN
+D88-截断、树与部分圆柱：同伦假设组合路线的亲历笔记.md                     size= 145450 secs=15 contig=True rows=38
+    math=1094  CLEAN
+D89-酉化蕴含均称-Dixmier离散群问题的机器化拆解.md                   size= 146742 secs= 9 contig=True rows=33
+    math=2210  CLEAN
+D90-固定指数的生产链-Yau节点上界幂律反例取证笔记.md                    size= 180136 secs= 9 contig=True rows=30
+    math=4589  CLEAN
+D91-短埃及分数最小项数的双重对数阶.md                             size= 201622 secs=11 contig=True rows=50
+    math=6354  CLEAN
+D92-Lp次多项式降维-重尾矩台账与截断ramp.md                       size=  84688 secs= 9 contig=True rows=31
+    math=2733  CLEAN
+D93-方向瞬态蕴含弹道性反推笔记.md                               size= 271165 secs=14 contig=True rows=49
+    math=6469  CLEAN
+D94-正则轨迹剪枝与量子奇偶下界.md                               size= 145320 secs=16 contig=True rows=41
+    math=3760  CLEAN
+D95-用独立行替换高斯行的Cd代价.md                              size= 297714 secs=16 contig=True rows=52
+    math=9460  CLEAN
+D96-残差球上的记忆与样本下界：无噪高斯回归中 streaming learner 的反推笔记.m size= 126153 secs=27 contig=True rows=49
+    math=1535  CLEAN
+D97-容量小于4的辛球嵌入极化积：对称Mahler猜想的Gromov宽度路线反推笔记.md     size= 172957 secs=17 contig=True rows=49
+    math=5455  CLEAN
+D98-Kirchberg-Rodam字符判据：central-sequence代数无字符等价于吸收 size= 140152 secs=16 contig=True rows=39
+    math=2709  CLEAN
+D99-欧氏Steinitz-Bergstrom定理：符号前缀范数根号d界与S2d等于Theta根号 size= 177513 secs=23 contig=True rows=75
+    math=1484  CLEAN

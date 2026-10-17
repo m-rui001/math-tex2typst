@@ -1,0 +1,10 @@
+A-counterexample-to-Kaplanskys-quasitrace-co  group='draw=blue!50!black,dashed,rounded corners=3pt,\n          inner xsep=4mm,inner ysep=8mm,fit=(e0)(er)'
+    fit='(e0)(er)'  ->  keys ['dashed', 'draw', 'fit', 'inner xsep', 'inner ysep', 'rounded corners']
+Finite-Congruence-Lattices-Characterization-  group='panel,fit=(t1)(k11)(k12)(k1q)'
+    fit='(t1)(k11)(k12)(k1q)'  ->  keys ['fit', 'panel']
+Finite-Congruence-Lattices-Characterization-  group='panel,fit=(t2)(k21)(k22)(k2q)'
+    fit='(t2)(k21)(k22)(k2q)'  ->  keys ['fit', 'panel']
+Perfect-completeness-for-2-to-1-games-Septem  group='fit=(left)(right),inner sep=0pt'
+    fit='(left)(right)'  ->  keys ['fit', 'inner sep']
+The-Blockwise-Alperin-Weight-Conjecture-Sept  group='fit=(genus)(lift),inner sep=0pt,outer sep=0pt'
+    fit='(genus)(lift)'  ->  keys ['fit', 'inner sep', 'outer sep']

@@ -1,0 +1,32 @@
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+Choice & Requirement and subsequent use \\
+\midrule
+$D_0,t,L_0$ & Universal thinness and root-path constants from
+Proposition~\ref{prop:cone-geometry} and \eqref{eq:root-constants}.\\
+$\lambda$ & $0<\lambda<1/24$ and
+$12(L_0+1)\lambda\le1/16$, so every overlap ball has radius at most
+one sixteenth of the girth.\\
+$d,\rho,\kappa$ & One fixed-degree expander family; take
+$\kappa=\rho/2$. Set $\eta=1/100$ and
+$c=(\eta/2)\min\{\kappa,1\}$.\\
+$(\Theta_i)$ & Pass to a subsequence with
+$\sigma_i>\max\{16,20/c\}$, small tree balls, strictly increasing
+$\lfloor\lambda\sigma_i\rfloor$, and diverging gaps between
+$k_i=\lfloor n_i/2\rfloor$.\\
+$S$ & A single finite alphabet supplied by the labelling theorem for
+this sequence and this value of $\lambda$.\\
+$p,C_i$ & Choose a prime $p>2$ encoding all $d$-element sets of outgoing labels;
+then choose the $k_i$-dimensional codes in Lemma~\ref{lem:codes}.\\
+$\varepsilon$ & The uniform gap is
+$\min\{\rho,c^2/(8d)\}$, as proved in
+Lemma~\ref{lem:spectral-gap}.\\
+\bottomrule
+\end{tabular}
+\caption{Parameter choices for $\Gsur$. Each row uses only earlier
+choices; the last row records the resulting spectral estimate.}
+\label{tab:parameters}
+\end{table}

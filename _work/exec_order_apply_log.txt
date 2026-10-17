@@ -1,0 +1,729 @@
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D25  D25-Crouzeix完整不等式直接证明.md  size=399702 lines=2784 CR=0
+   hit D25:381 \overline\mathbb D\to\overline U occ@171 ctx=...an 域定理（Ahlfors Chapter 6 §1.2）把 $g$ 扩成 $\overline\mathbb D\to\overline U$ 的同胚。这一步只给**连续**边界延拓。我在这里给自己提了个醒：连续延拓与解...
+   hit D25:388 \overline\mathbb D occ@42 ctx=... 用边界延拓的**连续性**收缩源邻域，使 $g$ 把（源邻域 $\cap$ $\overline\mathbb D$）送进目标图；...
+   hit D25:405 \overline\mathbb D occ@89 ctx=...：若在闭盘的任意小邻域内都不单叶，则存在相异点对任意接近该紧集，取子列收敛到 $\overline\mathbb D$ 内的公共极限；由 $\overline\mathbb D$ 上的连续性与单叶...
+   hit D25:405 \overline\mathbb D occ@119 ctx=...集，取子列收敛到 $\overline\mathbb D$ 内的公共极限；由 $\overline\mathbb D$ 上的连续性与单叶性，两点极限必须相同；而每个边界点有局部反演邻域（步骤 3 ...
+   hit D25:432 \overline\mathbb D\to\overline U occ@76 ctx=...（Carathéodory） | 边界自交则 $U$ 不是 Jordan 域，$\overline\mathbb D\to\overline U$ 同胚失败；非凸则射线可能多次交边界，星形性与 $z_*$ 的内点身份都失效 ...
+   hit D25:1884 W(A)\subseteq\overline\mathbb D occ@179 ctx=...q_nonneg (‖u 0‖ - ‖u 1‖)]`（`:50`） | 证明 $W(A)\subseteq\overline\mathbb D$ | 论文的 $1/\sqrt2$ 是取等点；Lean 用 AM-GM 形式，...
+   hit D25:1885 W(A)\subseteq\overline\mathbb D occ@164 ctx=... 唯一反例 | 那个 **2**（，并非 1）就是让 $\|A\|=2$ 且 $W(A)\subseteq\overline\mathbb D$ 同时成立的选择：一般地 $\begin{pmatrix}0&t\\0&0\e...
+   hit D25:2128 W(\text{sharpnessMatrix})\subseteq\overline\mathbb D occ@46 ctx=...m_le_one_of_mem_sharpnessRange`（`:36`）：$W(\text{sharpnessMatrix})\subseteq\overline\mathbb D$。计算 `inner ℂ u (A u) = 2 * star (u 0) *...
+   hit D25:2760 N_k=\{w:\operatorname{dist}(w,\overline\mathbb D)<1/k\} occ@95 ctx=...拓 $\tilde g$ 在其上单叶。否定：对每个 $k\ge1$，邻域序列 $N_k=\{w:\operatorname{dist}(w,\overline\mathbb D)<1/k\}$ 中都有相异点对 $w_k\ne w_k'$ 满足 $\tilde g(w_k...
+   hit D25:2760 \overline\mathbb D occ@28 ctx=...1. **否定式的精确形态。** 要证的命题是：存在 $\overline\mathbb D$ 的一个邻域，开拓 $\tilde g$ 在其上单叶。否定：对每个 $k\ge...
+   hit D25:2761 \operatorname{dist}(w_{k_j},\overline\mathbb D)<1/{k_j}\to0 occ@146 ctx=...{k_j}\to p$；再对同指标子列取 $w_{k_j}'\to q$。由 $\operatorname{dist}(w_{k_j},\overline\mathbb D)<1/{k_j}\to0$ 与 $\overline\mathbb D$ 闭，$p\in\overlin...
+   hit D25:2761 p\in\overline\mathbb D occ@235 ctx=...<1/{k_j}\to0$ 与 $\overline\mathbb D$ 闭，$p\in\overline\mathbb D$；同理 $q\in\overline\mathbb D$。...
+   hit D25:2761 q\in\overline\mathbb D occ@265 ctx=...hbb D$ 闭，$p\in\overline{\mathbb D}$；同理 $q\in\overline\mathbb D$。...
+   hit D25:2761 \overline\mathbb D occ@212 ctx=...},\overline{\mathbb D})<1/{k_j}\to0$ 与 $\overline\mathbb D$ 闭，$p\in\overline{\mathbb D}$；同理 $q\in\...
+   hit D25:2762 \tilde g|_{\overline\mathbb D}=g occ@117 ctx=...=\lim\tilde g(w_{k_j}')=\tilde g(q)$；而 $\tilde g|_{\overline\mathbb D}=g$，Carathéodory 同胚（:567）给 $g$ 在闭盘上单叶，故 $p...
+   hit D25:2765 \{w:\operatorname{dist}(w,\overline\mathbb D)<\varepsilon\}\subset N_{k_*} occ@88 ctx=..._{k_*}$ 是它开邻域，于是存在一致 $\varepsilon>0$ 使 $\{w:\operatorname{dist}(w,\overline\mathbb D)<\varepsilon\}\subset N_{k_*}$（标准证明：否则对每个 $m$ 取距 $\overline\mathbb D$...
+   hit D25:2765 \operatorname{dist}(w,\overline\mathbb D)=\max(0,|w|-1) occ@300 ctx=...\subset N_{k_*}$，与 $N_{k_*}$ 开矛盾）。闭盘情形 $\operatorname{dist}(w,\overline\mathbb D)=\max(0,|w|-1)$，取 $R_0=1+\varepsilon$ 即 :606 那句 "conta...
+   hit D25:2765 \overline\mathbb D\subset N_{k_*} occ@242 ctx=...D$ 小于 $1/m$ 而不在 $N_{k_*}$ 里的点，紧性给出聚点落在 $\overline\mathbb D\subset N_{k_*}$，与 $N_{k_*}$ 开矛盾）。闭盘情形 $\operatorname{d...
+   hit D25:2765 \overline\mathbb D occ@24 ctx=...6. **紧致性升级成 $R_0>1$。** $\overline\mathbb D$ 紧，$N_{k_*}$ 是它开邻域，于是存在一致 $\varepsilon>...
+   hit D25:2765 \overline\mathbb D occ@185 ctx=...on\}\subset N_{k_*}$（标准证明：否则对每个 $m$ 取距 $\overline\mathbb D$ 小于 $1/m$ 而不在 $N_{k_*}$ 里的点，紧性给出聚点落在 $\...
+   edited_lines=11 groups=18 bytes 399702 -> 399742 (delta +40) parity_ok=True
+   WRITTEN md5 100b3ee75f2a -> 0c13b95cb26b
+
+EXECUTED groups by family:
+  DELIM-GROUP      18
+EXECUTED groups by note:
+  D25      18
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D25      DELIM-GROUP    declared=20  replaced=20  OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=18 covering declared sites=20 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D44  D44-小finitistic维数无穷的代数.md  size=105076 lines=585 CR=0
+   hit D44:376 \ot occ@558 ctx=...长 $i_0,\ldots,i_r$，对应张量块（eq:bar-block）$D\ot D^{i_0}\ot X\ot D^{i_1}\ot\cdots\ot X\o...
+   hit D44:376 \ot occ@569 ctx=...ts,i_r$，对应张量块（eq:bar-block）$D\ot D^{i_0}\ot X\ot D^{i_1}\ot\cdots\ot X\ot D^{i_r}\o...
+   hit D44:376 \ot occ@574 ctx=...r$，对应张量块（eq:bar-block）$D\ot D^{i_0}\ot X\ot D^{i_1}\ot\cdots\ot X\ot D^{i_r}\ot N$，...
+   hit D44:376 \ot occ@585 ctx=...:bar-block）$D\ot D^{i_0}\ot X\ot D^{i_1}\ot\cdots\ot X\ot D^{i_r}\ot N$，度 $-r-\sum ...
+   hit D44:376 \ot occ@594 ctx=...k）$D\ot D^{i_0}\ot X\ot D^{i_1}\ot\cdots\ot X\ot D^{i_r}\ot N$，度 $-r-\sum i_j$。符号校准...
+   hit D44:376 \ot occ@599 ctx=...ot D^{i_0}\ot X\ot D^{i_1}\ot\cdots\ot X\ot D^{i_r}\ot N$，度 $-r-\sum i_j$。符号校准：bar ...
+   hit D44:376 \ot occ@610 ctx=...ot X\ot D^{i_1}\ot\cdots\ot X\ot D^{i_r}\ot N$，度 $-r-\sum i_j$。符号校准：bar 微分里第 $j$ 段内...
+   hit D44:376 \ot occ@1091 ctx=...张量。对有限上 complexes $Z$ 用左模范畴的 bar 消解：项 $D\ot D^{\otimes i}\ot Z^q$ 在度 $q-i$，系数在域上故自由...
+   hit D44:376 \ot occ@1108 ctx=... $Z$ 用左模范畴的 bar 消解：项 $D\ot D^{\otimes i}\ot Z^q$ 在度 $q-i$，系数在域上故自由，增广 quasi-iso，$Z$...
+   edited_lines=1 groups=1 bytes 105076 -> 105112 (delta +36) parity_ok=True
+   WRITTEN md5 df3e5a6ed941 -> d75eaae10bbb
+
+EXECUTED groups by family:
+  \ot              1
+EXECUTED groups by note:
+  D44      1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D44      \ot            declared=2   replaced=9   DIFF
+mismatched groups (occurrences != declared sites) = 1
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=2 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D58  D58-实Littlewood多项式极大值的渐近最小.md  size=86052 lines=510 CR=0
+   hit D58:179 \F occ@412 ctx=...模 $q$ 非零当且仅当 $q$ 不整除该子式，成对秩同理；三行以上相关性在 $\F_q$ 上可能与 $\Q$ 上不同，但证明从不依赖"秩恰好是 $b$"以外的高阶...
+   hit D58:181 \F occ@220 ctx=...在 chunk 内的槽。保留槽的中点 $c$ 赋带向圆心 $s=\pm c\in\F_q$（各半概率独立）。每类型顶点数 $n/L+O(K)=q/(2L)+O(q/...
+   hit D58:183 \F occ@89 ctx=...心 $s_1,\dots,s_r$，使 $a_i\cdot y=s_i$ 在 $\F_q^m$ 有解；每组兼容元组只记一条边。秩 $b$ 的求值映射给出每条边恰 $...
+   hit D58:187 \F occ@119 ctx=... R$ 的 $s$。$c\ne0$（$c=0$ 会使 $a_j,a_l$ 在 $\F_q$ 上平行，违反成对秩 2）；每个关系乘 $c$ 是双射，排除至多 $2R+...
+   hit D58:189 \F occ@102 ctx=...y=s$。成对秩 2 使每个 $a_j\cdot y$（$j\ne i$）在 $\F_q$ 上均匀。非 interior、$Q_s$ 所在 chunk、0 与折入 ...
+   hit D58:213 \F occ@588 ctx=...机 $\theta$ 无法排除代数重合；必须像论文那样把"落在槽内"离散化到 $\F_q$，用秩控制例外集。...
+   hit D58:461 \F occ@57 ctx=...子式因子） | packing:91-95 | 整个随机构造 | 含坏因子则 $\F_q$ 秩塌，兼容边结构失效 |...
+   edited_lines=7 groups=7 bytes 86052 -> 86108 (delta +56) parity_ok=True
+   WRITTEN md5 4ec46ba4a874 -> 6d3fca4e6def
+
+EXECUTED groups by family:
+  \F               7
+EXECUTED groups by note:
+  D58      7
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D58      \F             declared=7   replaced=7   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=7 covering declared sites=7 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D71  D71-完美匹配多面体的熵与面维数.md  size=182869 lines=746 CR=0
+   hit D71:142 \T occ@238 ctx=...\cdot y(t)$。协方差 $K=\sum_a p_a(a-x)(a-x)^\T$。逐步：$p_a'(0)=p_a\,v\cdot(a-x)$，$\Phi'(t...
+   hit D71:142 \T occ@341 ctx=...0)=\sum_a p_a v\cdot(a-x)\cdot a=Kv$。$w^\T Kw=\sum_a p_a(w\cdot(a-x))^2\ge0$，$p$ 全...
+   hit D71:142 \T occ@794 ctx=... y'(0)=(g+\theta)\cdot Kv$，$r''(0)=(Kv)^\T D(Kv)+v^\T Kv+(g+\theta)\cdot y''(0)$。局...
+   hit D71:142 \T occ@805 ctx=...theta)\cdot Kv$，$r''(0)=(Kv)^\T D(Kv)+v^\T Kv+(g+\theta)\cdot y''(0)$。局部极大给一阶零、二阶非...
+   hit D71:142 \T occ@997 ctx=...消掉"的确切机制：不需要算 $y''(0)$ 本身）。于是 $0\ge(Kv)^\T D(Kv)+v^\T Kv$。取 $K$ 的正特征值 $\lambda_1.....
+   hit D71:142 \T occ@1008 ctx=...要算 $y''(0)$ 本身）。于是 $0\ge(Kv)^\T D(Kv)+v^\T Kv$。取 $K$ 的正特征值 $\lambda_1..\lambda_d$ ...
+   hit D71:142 \T occ@1119 ctx=...ambda_i$、求和：$0\ge d+\sum_i\lambda_i u_i^\T D u_i=d+\operatorname{tr}(KD)$（$D,K$ 不必...
+   edited_lines=1 groups=1 bytes 182869 -> 182883 (delta +14) parity_ok=True
+   WRITTEN md5 159d29cd038b -> 01aab3b1fee6
+
+EXECUTED groups by family:
+  \T               1
+EXECUTED groups by note:
+  D71      1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D71      \T             declared=5   replaced=7   DIFF
+mismatched groups (occurrences != declared sites) = 1
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=5 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D81  D81-Foulkes-Howe规范映射的二次稳定门槛.md  size=125123 lines=910 CR=0
+   hit D81:292 \F occ@49 ctx=...**尝试用 $\operatorname{char} p$ 反例检测**：在 $\F_p$ 上取 $p \le a$，此时 $a! = 0$，`eq:average...
+   hit D81:519 \F occ@103 ctx=...$ 时失效。这条路的**具体**失败：$a = 6$, $b = 30$ 在 $\F_p$ 上 split 不一定存在；injection 可能仍然**存在**（作...
+   edited_lines=2 groups=2 bytes 125123 -> 125139 (delta +16) parity_ok=True
+   WRITTEN md5 6f22e42cb1f6 -> c53fdea2f6b8
+
+EXECUTED groups by family:
+  \F               2
+EXECUTED groups by note:
+  D81      2
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D81      \F             declared=2   replaced=2   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=2 covering declared sites=2 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D96  D96-残差球上的记忆与样本下界：无噪高斯回归中 streaming learner 的反推笔记.md  size=126017 lines=661 CR=0
+   hit D96:519 \d occ@338 ctx=...rod_{i=1}^{h}f(Y_i)\approx\bigl(\int f\,\d\sigma_L\bigr)^h$ 可以按独立情形直接乘。账算到 $\mathb...
+   hit D96:530 \d occ@44 ctx=...t_{\operatorname{dist}(y,V)\le\delta}f\,\d\sigma_E\le A_1^d3^{\alpha+j}\Lambda\del...
+   hit D96:532 \d occ@41 ctx=...\int f(y)\operatorname{dist}(y,V)^{-b}\,\d\sigma_E(y)\le Q_0^d\Lambda\,2^b\sum_{i\...
+   hit D96:535 \d occ@30 ctx=...闭合式：$\mathbb E_L\bigl(\int f\,\d\sigma_L\bigr)^h\le\bigl([4\max\{A_0,9A_...
+   hit D96:535 \d occ@150 ctx=...Jensen 与求和得 $\mathbb E_L\max_v\int f_v\,\d\sigma_L\le W^{1/h}[4\max\{A_0,9A_1\}]^d...
+   hit D96:584 \d occ@21 ctx=...$\int h_{i,v}(c+ru)\,\d\sigma_H(u)\le G^{J-i}(8\epsilon/r)^p$。...
+   hit D96:599 \d occ@35 ctx=...$B_n(g)=\sup R^a\int g(z+R\omega)\,\d\sigma_H(\omega)$，上确界跑遍 $\dim H=n$、$z\pe...
+   hit D96:599 \d occ@157 ctx=...{16}$，$1\le n\le d$；边界值 $B_d(g)=\int g\,\d\sigma_{\R^d}$（04:11--17）。块不等式 $B_n(g_{\...
+   hit D96:601 \d occ@49 ctx=...$R^a$：直接 $\widetilde B_n(g)=\sup\int g\,\d\sigma_H$。它第一步就废，因为 $R\to0$ 时 $z+RS(H)$ ...
+   hit D96:604 \d occ@9 ctx=...$\int f\,\d\sigma_{H'}\le2c_N\Lambda,\qquad\int_{\l...
+   hit D96:604 \d occ@87 ctx=..._{\left\lVert U-w\right\rVert\le\eta}f\,\d\sigma_{H'}\le c_N\Lambda\eta^{N-1-a}\ (...
+   hit D96:611 \d occ@37 ctx=...$\int_0^1t^{(q-a)/2-1}(1-t)^{k/2-1}\,\d t\le2$（$q-a\ge2$ 使首指数非负；$k=1$ 时 $\int_0...
+   hit D96:611 \d occ@95 ctx=...$ 使首指数非负；$k=1$ 时 $\int_0^1(1-t)^{-1/2}\,\d t=2$），...
+   hit D96:622 \d occ@60 ctx=... H=n\ge n_0+2\ell$ 时 $\int g_v(z+r\xi)\,\d\sigma_H(\xi)\le(R_\ell/r)^a$，$R_\ell=16...
+   hit D96:624 \d occ@93 ctx=...t\lVert y-y_0\right\rVert\le\delta}f_u\,\d\sigma_E\le4^d\Lambda\delta^{N-1-a}$（$\s...
+   hit D96:648 \d occ@45 ctx=..._{\left\lVert z-e\right\rVert\le\tau}f\,\d\sigma_E\le\frac{c_D}2B^{\gamma}\tau^{D-...
+   hit D96:651 \d occ@32 ctx=...$\mathbb E\bigl[\max_v\int f_v\,\d\sigma_{N_0}\mid u\bigr]\le2^{d^2/p}144^...
+   edited_lines=13 groups=13 bytes 126017 -> 126153 (delta +136) parity_ok=True
+   WRITTEN md5 9409cb0350fe -> 75293167776a
+
+EXECUTED groups by family:
+  \d               13
+EXECUTED groups by note:
+  D96      13
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D96      \d             declared=16  replaced=17  DIFF
+mismatched groups (occurrences != declared sites) = 1
+SKIPPED sites/groups = 0
+TOTAL executed groups=13 covering declared sites=16 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D125  D125-RCD空间沿每条测地线的弱Hessian界：漂移与曲率改值的反推笔记.md  size=123041 lines=595 CR=0
+   hit D125:448 \lambdah occ@92 ctx=...Geodesic σ`。所以"每条"在项层面就是 $\lambda\sigma.\lambdah\sigma.\ldots$，即对任意 $\sigma$ 构造证明；没有"存在一...
+   edited_lines=1 groups=1 bytes 123041 -> 123042 (delta +1) parity_ok=True
+   WRITTEN md5 fa435ad38d17 -> 5c86f54854e9
+
+EXECUTED groups by family:
+  \lambdah         1
+EXECUTED groups by note:
+  D125     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D125     \lambdah       declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D131  D131-紧Kahler流形万有覆叠分裂：可去奇点与度量全局化的反推笔记.md  size=147077 lines=614 CR=0
+   hit D131:153 \asy occ@371 ctx=... $\le c x$、二次项 $\le M|v|^2$、二者平衡在 $|v|^2\asy|x|$」。$k>0$ 取足够小是把 $M$ 那一侧压下去，使得 $c\cdot...
+   edited_lines=1 groups=1 bytes 147077 -> 147079 (delta +2) parity_ok=True
+   WRITTEN md5 1dc4f6147eb2 -> be61ec7c6a6c
+
+EXECUTED groups by family:
+  \asy             1
+EXECUTED groups by note:
+  D131     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D131     \asy           declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D145  D145-复杂矩阵乘法低于2.258与矩形界：证书层级与标签补全的反推笔记.md  size=284453 lines=791 CR=0
+   hit D145:253 \F occ@40 ctx=...(d) 失败路线。[推测] 第一条：用随机哈希但不去等差，即 $J$ 取整个 $\F_P$。则边上 $h_X+h_Y=2h_Z$ 不强制相等，存活事件退化为两点约束...
+   edited_lines=1 groups=1 bytes 284453 -> 284461 (delta +8) parity_ok=True
+   WRITTEN md5 1787921befa1 -> 3e7e63eccf2b
+
+EXECUTED groups by family:
+  \F               1
+EXECUTED groups by note:
+  D145     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D145     \F             declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D160  D160-半代数有界域的紧商对称化：从Kollár-Pardon问题二十五到Vey模型的反推笔记.md  size=129286 lines=880 CR=0
+   hit D160:223 A:[0,1]\times\overline\mathbb D\to\Omega occ@68 ctx=...械核心，它的陈述我要抄准：$\Omega$ 是光滑 ambient 坐标邻域，$A:[0,1]\times\overline\mathbb D\to\Omega$ 连续、每个 $A_t$ 在 $\mathbb D$ 上全纯，若...
+   hit D160:227 A_t(\overline\mathbb D)\subset U occ@12 ctx=...则对每个 $t$ 有 $A_t(\overline\mathbb D)\subset U$。第 210--212 行特意补一句：这也适用于闭 $C^1$ 解析盘的连续形...
+   hit D160:229 T=\{t:A_t(\overline\mathbb D)\subset U\} occ@43 ctx=...第 215--231 行）用的是 $d_U$ 的真性，我把它拆成三步。第一步，$T=\{t:A_t(\overline\mathbb D)\subset U\}$ 相对开，靠闭圆盘紧。第二步，取 $t_j\in T$ 趋于 $t_*$，边界...
+   hit D160:233 [0,1]\times\overline\mathbb D occ@115 ctx=...是"$A_{t_j}(\zeta)$ 有 ambient 极限"：$A$ 在 $[0,1]\times\overline\mathbb D$ 上连续，所以对固定 $\zeta$ 确有 $A_{t_j}(\zeta)\t...
+   edited_lines=4 groups=4 bytes 129286 -> 129294 (delta +8) parity_ok=True
+   WRITTEN md5 f2d933fa7876 -> 284ca4b5d71c
+
+EXECUTED groups by family:
+  DELIM-GROUP      4
+EXECUTED groups by note:
+  D160     4
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D160     DELIM-GROUP    declared=4   replaced=4   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=4 covering declared sites=4 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D163  D163-四次多项式无平方因子值的数域行列式路线与自适应辅助素数.md  size=123579 lines=550 CR=0
+   hit D163:234 \overline\mathbb Q occ@204 ctx=...定域恰为 $\mathbb Q$"需要说明：非有理代数数有共轭；超越数可放进 $\overline\mathbb Q$ 的超越基中并做平移，这些映射扩张为 $\mathbb C$ 的自同构（同文件...
+   edited_lines=1 groups=1 bytes 123579 -> 123581 (delta +2) parity_ok=True
+   WRITTEN md5 4073d0af7b25 -> aad5d83d5a62
+
+EXECUTED groups by family:
+  DELIM-GROUP      1
+EXECUTED groups by note:
+  D163     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D163     DELIM-GROUP    declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D165  D165-宇称翻转与加权分级-多项式阈值函数平均敏感度线性阶的反推笔记.md  size=82333 lines=970 CR=0
+   hit D165:677 \widehat{\operatorname{err}}_Z(h)\le\frac12\widehat\mathbb E_Z\lvert Y-P(X)\rvert occ@1 ctx=...$\widehat{\operatorname{err}}_Z(h)\le\frac12\widehat\mathbb E_Z\lvert Y-P(X)\rvert$，...
+   hit D165:678 \frac12\widehat\mathbb E_Z\lvert Y-q(X)\rvert occ@6 ctx=...它接着被 $\frac12\widehat\mathbb E_Z\lvert Y-q(X)\rvert$ 界住（第 148 到 154 行）。...
+   edited_lines=2 groups=2 bytes 82333 -> 82337 (delta +4) parity_ok=True
+   WRITTEN md5 193cce2dc218 -> 357adb673597
+
+EXECUTED groups by family:
+  DELIM-GROUP      2
+EXECUTED groups by note:
+  D165     2
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D165     DELIM-GROUP    declared=2   replaced=2   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=2 covering declared sites=2 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D171  D171-完全Crouzeix定理的思考链-最优度量与公共边界密度.md  size=71163 lines=268 CR=0
+   hit D171:205 \overline\mathbb D occ@250 ctx=...ne U$ 上单叶；再排除邻域里趋近的同像对，得闭包邻域上单叶，其逆全纯延到 $\overline\mathbb D$ 邻域（`main.tex:1436-1458`）。外坐标用反演 $\iota...
+   hit D171:225 \overline\mathbb D occ@479 ctx=...上任何表观极点若为真极点会在内径向趋近处发散，矛盾故可去，消完后有限个极点离 $\overline\mathbb D$ 有距，给一个公共邻域使 $F_\mathbb D$ 全纯，连续性把压缩带到圆...
+   hit D171:243 \overline\mathbb D occ@281 ctx=..."$f$ 与 $f^{-1}$ 单叶延过 $\overline\Omega$、$\overline\mathbb D$"立刻落空。其二，外坐标 $G$ 要单叶延到 $\{|t|>r\}\cup\{...
+   edited_lines=3 groups=3 bytes 71163 -> 71169 (delta +6) parity_ok=True
+   WRITTEN md5 c709d0b74fc3 -> b01939b05464
+
+EXECUTED groups by family:
+  DELIM-GROUP      3
+EXECUTED groups by note:
+  D171     3
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D171     DELIM-GROUP    declared=3   replaced=3   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=3 covering declared sites=3 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D196  D196-从Cardy公式提取Voronoi逾渗色关键点振幅.md  size=70615 lines=209 CR=0
+   hit D196:83 \widehat\mathbb C\setminus K_i occ@247 ctx=...4-shape.tex:12-24）。两端分别归一化：外部的 $w_i$ 把 $\widehat\mathbb C\setminus K_i$ 映到单位圆外、无穷端 $w_i(z)=z/l_i+O(1)$，$l_i$ 恰...
+   edited_lines=1 groups=1 bytes 70615 -> 70617 (delta +2) parity_ok=True
+   WRITTEN md5 b369f7257a74 -> aa95716cbc1c
+
+EXECUTED groups by family:
+  DELIM-GROUP      1
+EXECUTED groups by note:
+  D196     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D196     DELIM-GROUP    declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D198  D198-单调图性质尖锐阈值猜想的显式宽度界.md  size=70695 lines=343 CR=0
+   hit D198:165 \asypto occ@175 ctx=...ions/graph.tex:13-17, 127-140),对数量级截断 $k\asypto\sigma\log m$ 一平方就是 $(\log n)^2$。深刻性被搬家了...
+   edited_lines=1 groups=1 bytes 70695 -> 70694 (delta -1) parity_ok=True
+   WRITTEN md5 030a1a1a5b26 -> 3a8fb5a73488
+
+EXECUTED groups by family:
+  \asypto          1
+EXECUTED groups by note:
+  D198     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D198     \asypto        declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D212  D212-粗Novikov猜想反例的逆向工作笔记-绕行数持久性与常向量平均传递.md  size=94854 lines=426 CR=0
+   hit D212:80 \F occ@245 ctx=...身，$\lvert Q_1\rvert=\operatorname{SL}_3(\F_2)$ 的阶 $168$，仍在 $512$ 之下。这就是 `eq:kernel...
+   edited_lines=1 groups=1 bytes 94854 -> 94862 (delta +8) parity_ok=True
+   WRITTEN md5 dd8e20999554 -> 2a7eaec3f1a6
+
+EXECUTED groups by family:
+  \F               1
+EXECUTED groups by note:
+  D212     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D212     \F             declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D213  D213-邻近拉格朗日猜想的稳定管类反例.md  size=70932 lines=240 CR=0
+   hit D213:43 \diff occ@332 ctx=...g(\Z/2)^3$、$(\pi_{10}\operatorname{Wh}^{\diff}(*))_{(2)}\cong\Z/8\oplus(\Z/2)^2$ 三个表值...
+   hit D213:72 \diff occ@385 ctx=...athbf H^s(*)=\pi_{10}\operatorname{Wh}^{\diff}(*)$ 的 2-主部 $\Z/8\oplus(\Z/2)^2$，阶 32，远...
+   hit D213:152 \diff occ@698 ctx=...维化、Rognes 的 $\pi_{10}\operatorname{Wh}^{\diff}(*)$ 计算、WJR 参族 h-余 bordism 稳定范围、AIS 光滑管...
+   hit D213:177 \diff occ@48 ctx=...bf H^s(X)\simeq\Omega\operatorname{Wh}^{\diff}(X)$ | 稳定参族定理 | sections/tubes.tex:118 ...
+   hit D213:180 \diff occ@36 ctx=...| $\bigl(\pi_{10}\operatorname{Wh}^{\diff}(*)\bigr)_{(2)}\cong\Z/8\oplus(\Z/2)^2$...
+   edited_lines=5 groups=5 bytes 70932 -> 70972 (delta +40) parity_ok=True
+   WRITTEN md5 5456e5f580ba -> 94dd88fb2668
+
+EXECUTED groups by family:
+  \diff            5
+EXECUTED groups by note:
+  D213     5
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D213     \diff          declared=5   replaced=5   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=5 covering declared sites=5 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D214  D214-边界行列式复杂度三次下界之路.md  size=73153 lines=300 CR=0
+   hit D214:60 \F occ@127 ctx=...在 $\mathbb C$ 上用永久投影，右边分支在 $K=\overline{\F}_2$ 上用平面曲线几何。最后两条分支在 $\mathbb C$ 里汇合：几何...
+   hit D214:85 \F occ@38 ctx=...第二副面孔开工（adjugate.tex）。设定：$K=\overline{\F}_2$，取两两不同的 $\bar\theta_1,\dots,\bar\the...
+   hit D214:139 \F occ@135 ctx=...）齐次次数 $r\ge2$；某个 $\bar\theta\in\overline\F_2^a$ 处仿射梯度零点集维 $\le v-\delta$。构造 $\math...
+   hit D214:204 \F occ@169 ctx=...sfer）、射影计数换下界（polar）。中段整段运行在 $\overline{\F}_2$，这在我最初的蓝图里根本没有位置。跨特征搬运（transfer.tex）...
+   edited_lines=4 groups=4 bytes 73153 -> 73185 (delta +32) parity_ok=True
+   WRITTEN md5 068444914b02 -> 3277645acdb4
+
+EXECUTED groups by family:
+  \F               4
+EXECUTED groups by note:
+  D214     4
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D214     \F             declared=4   replaced=4   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=4 covering declared sites=4 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D228  D228-局部Penrose不等式与共形微扰的四次障碍.md  size=74463 lines=379 CR=0
+   hit D228:149 \partial_\lambda\theta=-\lvert\chi\rvert^2-\overline\operatorname{Ric}(\ell,\ell) occ@488 ctx=...l_\lambda\chi=-\chi^2-\mathcal R_\ell$、$\partial_\lambda\theta=-\lvert\chi\rvert^2-\overline\operatorname{Ric}(\ell,\ell)$，并说明它们直接从 Jacobi 方程来（角 Jacobi 场保持在 $\el...
+   edited_lines=1 groups=1 bytes 74463 -> 74465 (delta +2) parity_ok=True
+   WRITTEN md5 10a514fc6afe -> 48200ea1fabd
+
+EXECUTED groups by family:
+  DELIM-GROUP      1
+EXECUTED groups by note:
+  D228     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D228     DELIM-GROUP    declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D264  D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md  size=76478 lines=1013 CR=0
+   hit D264:376 \widehat\mathcal T_{s} occ@1 ctx=...$\widehat\mathcal T_{s}$：基球、$\lvert h\rvert\le\varepsilon$、$(y,...
+   hit D264:467 \widehat\mathcal T_{0} occ@7 ctx=...保持。于是 $\widehat\mathcal T_{0}$ 与内块可缩，MV 让 $\widehat J_{0}\to\widehat ...
+   hit D264:644 \widehat\mathcal D occ@1 ctx=...$\widehat\mathcal D$（可缩）。$l_{i}$ 在 $G_{c_{i}}$ 里边界为零，取面链...
+   hit D264:645 \Sigma_{i}\subset\widehat\mathcal D occ@1 ctx=...$\Sigma_{i}\subset\widehat\mathcal D$、$\partial\Sigma_{i}=l_{i}$ 与...
+   hit D264:650 I_{i}=(\Gamma_{i}\setminus\text{领圈})\cap\widehat\mathcal D occ@5 ctx=...内部使 $I_{i}=(\Gamma_{i}\setminus\text{领圈})\cap\widehat\mathcal D$ 横截，维数计数...
+   edited_lines=5 groups=5 bytes 76478 -> 76488 (delta +10) parity_ok=True
+   WRITTEN md5 a16cb526f576 -> 9d5896e07704
+
+EXECUTED groups by family:
+  DELIM-GROUP      5
+EXECUTED groups by note:
+  D264     5
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D264     DELIM-GROUP    declared=5   replaced=5   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=5 covering declared sites=5 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D312  D312-紧致双曲Kähler流形的典范放大性.md  size=71408 lines=324 CR=0
+   hit D312:43 \overline\mathbb D occ@66 ctx=...fness.tex:85-88 特意说明，$b$ 连续时可把测试圆盘要求为在 $\overline\mathbb D$ 邻域全纯，用 $G(rz)$ 逼近补足。这个技术选择背后是我在 §5 会撞上...
+   hit D312:67 W^{1,p}\hookrightarrow C^0(\overline\mathbb D) occ@931 ctx=...0）。对 $j$ 可求和当且仅当 $p<4$。$p>2$ 的下限则是另一条腿：$W^{1,p}\hookrightarrow C^0(\overline\mathbb D)$ 且是 Banach 代数（preliminaries.tex:76-84），...
+   hit D312:67 \overline\mathbb D occ@599 ctx=...rt{1-r}$ 给一致径向 Cauchy 性，边界映射连续，$f$ 延拓到 $\overline\mathbb D$ 上连续（extremal-discs.tex:297-309）。Sobole...
+   hit D312:75 \overline\mathbb D occ@102 ctx=...到边界连续且 $W^{1,p}$ 的全纯标架。$f^*T^{1,0}X$ 在 $\overline\mathbb D$ 上拓扑平凡，先用光滑单位分解拼出贴近的 $W^{1,p}$ 标架 $v$，D...
+   hit D312:75 \overline\mathbb D occ@580 ctx=... 弱全纯 hence 全纯，在圆盘上用 Oka-Grauert 平凡化，回到 $\overline\mathbb D$ 上得到 $W^{1,p}$ 边界正则的全纯标架 $e=vU$。这里我注意到一...
+   hit D312:85 \overline\mathbb D occ@33 ctx=...证明分四段，我把每段的目的重新对号。第一段建纤维坐标：有限覆盖 $\overline\mathbb D$ 的源片与目标卡，$C_i(z,y)=A_i(z)^{-1}(\phi_i(y...
+   edited_lines=4 groups=5 bytes 71408 -> 71420 (delta +12) parity_ok=True
+   WRITTEN md5 3d05f24ebf0b -> 1ae7ab9a8066
+
+EXECUTED groups by family:
+  DELIM-GROUP      5
+EXECUTED groups by note:
+  D312     5
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D312     DELIM-GROUP    declared=6   replaced=6   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=5 covering declared sites=6 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D333  D333-接触Fano流形与LeBrun-Salamon猜想的证明思路.md  size=91940 lines=209 CR=0
+   hit D333:83 \widehat\mathcal O_{C,o}\simeq Q=R[[u,v]]/(uv-\tau^r) occ@357 ctx=...k$ 代数闭特征零，均匀化子 $\tau$，特殊分量与节点均已分裂；局部形如 $\widehat\mathcal O_{C,o}\simeq Q=R[[u,v]]/(uv-\tau^r)$，$r\geq1$，$A=(v,\tau)$、$J=(u,\tau)$；节点局...
+   edited_lines=1 groups=1 bytes 91940 -> 91942 (delta +2) parity_ok=True
+   WRITTEN md5 2e311ec7f2a9 -> 55a3f08574ca
+
+EXECUTED groups by family:
+  DELIM-GROUP      1
+EXECUTED groups by note:
+  D333     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D333     DELIM-GROUP    declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D353  D353-素数域上多项式确定性因子分解的研究笔记.md  size=71045 lines=330 CR=0
+   hit D353:45 \overline\mathbf F_p^{\,q} occ@139 ctx=...l$ 次单位根集合，$\Gamma_\ell$ 正则作用，$U_q$ 对应商 $\overline\mathbf F_p^{\,q}$，即按 $H_q$-轨道分成的 $q$ 个点的函数代数；Frobenius 在...
+   edited_lines=1 groups=1 bytes 71045 -> 71047 (delta +2) parity_ok=True
+   WRITTEN md5 102c36652cb0 -> 5e2381291980
+
+EXECUTED groups by family:
+  DELIM-GROUP      1
+EXECUTED groups by note:
+  D353     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D353     DELIM-GROUP    declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D362  D362-椭圆平方点有限性与A_2曲线Zilber-Pink.md  size=113460 lines=557 CR=0
+   hit D362:115 \F occ@170 ctx=...密子群，强近似给出 $\Gamma\to\operatorname{Sp}_4(\F_\ell)$ 对充分大 $\ell$ 满（`sections/04-incid...
+   hit D362:117 \F occ@43 ctx=...Gamma\longrightarrow\operatorname{Sp}_4(\F_{\ell_1})\times\operatorname{Sp}_4(\F_{...
+   hit D362:117 \F occ@81 ctx=...4(\F_{\ell_1})\times\operatorname{Sp}_4(\F_{\ell_2})\quad\text{满}$$...
+   hit D362:143 \operatorname{End}_{\overline\mathbb Q}(\mathscr A_t)\otimes\mathbb Q\simeq\operatorname{Mat}_2(\mathbb Q) occ@78 ctx=...ons/05-heights.tex:62-87`）。设 $t$ 的目标满足 $\operatorname{End}_{\overline\mathbb Q}(\mathscr A_t)\otimes\mathbb Q\simeq\operatorname{Mat}_2(\mathbb Q)$，$\mathcal O_t=\operatorname{End}_{\ove...
+   hit D362:143 \mathcal O_t=\operatorname{End}_{\overline\mathbb Q}(\mathscr A_t) occ@189 ctx=...\simeq\operatorname{Mat}_2(\mathbb Q)$，$\mathcal O_t=\operatorname{End}_{\overline\mathbb Q}(\mathscr A_t)$，主 Rosati 对合下 $Q_t(f)=\operatorname{Tr}...
+   hit D362:277 z=(a,U)\in\mathbb A^N(\overline\mathbb Q) occ@239 ctx=...偶与逆矩阵）；存在只依赖这些固定数据的 $C$。给定 $d,h\ge2$ 与 $z=(a,U)\in\mathbb A^N(\overline\mathbb Q)$、$a\ne0$，若一个加权位子集 $V$ 与 $1\le s\le s_0$...
+   hit D362:285 W\subseteq\mathbb A^N_{\overline\mathbb Q} occ@33 ctx=...(iv) 对任何含 $z$ 且 $a$ 在其上非常数的不可约闭 $W\subseteq\mathbb A^N_{\overline\mathbb Q}$，$W$ 的有限正规化中盖住 $W\cap\{a=0\}$ 某分量的每个素除子...
+   hit D362:379 \operatorname{End}_{\overline\mathbb Q}(A_s)\otimes\mathbb Q\simeq\operatorname{Mat}_2(\mathbb Q) occ@83 ctx=....tex:16-24`，式 `fin:disc-definition`）：对 $\operatorname{End}_{\overline\mathbb Q}(A_s)\otimes\mathbb Q\simeq\operatorname{Mat}_2(\mathbb Q)$ 的代数点 $s$，写 $\mathcal O_s=\operatorname...
+   hit D362:379 \mathcal O_s=\operatorname{End}_{\overline\mathbb Q}(A_s) occ@196 ctx=...atorname{Mat}_2(\mathbb Q)$ 的代数点 $s$，写 $\mathcal O_s=\operatorname{End}_{\overline\mathbb Q}(A_s)$、$D_s=\mathcal O_s\otimes\mathbb Q$，...
+   hit D362:395 \overline\mathbb Q occ@245 ctx=...s.tex:112-119`，命题 `fin:squares`）：$s$ 在 $\overline\mathbb Q$ 上同源于无 CM 的 $E^2$，当且仅当它在某条 $E^2$-特殊曲线上 ...
+   hit D362:399 \overline\mathbb Q occ@251 ctx=...m 4.1）化为复同构；对代数点，所有这些同态与 abelian 子簇下降到 $\overline\mathbb Q$：它们定义在 $\overline\mathbb Q$ 的有限生成扩张上、该域...
+   hit D362:399 \overline\mathbb Q occ@278 ctx=...elian 子簇下降到 $\overline\mathbb Q$：它们定义在 $\overline\mathbb Q$ 的有限生成扩张上、该域正则，用 Milne, Corollary 20.4（...
+   hit D362:405 \overline\mathbb Q occ@169 ctx=...08-finiteness.tex:245-250` 起：每条特殊曲线定义在 $\overline\mathbb Q$ 上，闭的 Hodge-generic 曲线 $C$ 不含于其中，故与其交是 ...
+   hit D362:405 \overline\mathbb Q occ@228 ctx=... 上，闭的 Hodge-generic 曲线 $C$ 不含于其中，故与其交是 $\overline\mathbb Q$ 上的零维代数集，于是 $C(\mathbb C)\cap\Sigma^{\m...
+   hit D362:411 \Sigma(C)=C(\overline\mathbb Q)\cap\bigcup_{\substack{Z\subset\mathcal A_2\ \text{special}\\ \dim Z\le1}}Z(\overline\mathbb Q) occ@2 ctx=...$$\Sigma(C)=C(\overline\mathbb Q)\cap\bigcup_{\substack{Z\subset\mathcal A_2\ \text{special}\\ \dim Z\le1}}Z(\overline\mathbb Q)$$...
+   hit D362:415 \operatorname{End}_{\overline\mathbb Q}(A_s)\otimes\mathbb Q occ@121 ctx=...E_2$ 且至少一个椭圆因子有 CM，包含双 CM 情形；$(B)$：全代数 $\operatorname{End}_{\overline\mathbb Q}(A_s)\otimes\mathbb Q$ 是 $\mathbb Q$ 上的不定四元数除数代数，不定指它在 $\R$ 上...
+   hit D362:415 \overline\mathbb Q occ@45 ctx=...分工值得列成一张表，因为这是"谁能替换谁"的答案。$(A)$：$A_s$ 在 $\overline\mathbb Q$ 上同源于 $E_1\times E_2$ 且至少一个椭圆因子有 CM，包含双...
+   hit D362:451 \F occ@194 ctx=...补齐；§6 中 $\Gamma$ 到 $\operatorname{Sp}_4(\F_{\ell_1})\times\operatorname{Sp}_4(\F_{...
+   hit D362:451 \F occ@232 ctx=...4(\F_{\ell_1})\times\operatorname{Sp}_4(\F_{\ell_2})$ 那条独立公式的收尾由单个定界符补成成对；§15 中 `s...
+   hit D362:471 \{s\in C(\overline\mathbb Q):A_s\sim E^2,\ E\ \text{无 CM}\} occ@23 ctx=...| $\Sigma_{E^2}(C)$ | $\{s\in C(\overline\mathbb Q):A_s\sim E^2,\ E\ \text{无 CM}\}$ | sections/01-introduction.tex:15-19 |...
+   hit D362:472 \operatorname{End}_{\overline\mathbb Q}(A_s)\otimes\mathbb Q occ@3 ctx=...| $\operatorname{End}_{\overline\mathbb Q}(A_s)\otimes\mathbb Q$ | $\simeq M_2(\mathbb Q)$, 与平方轨迹等价 | s...
+   hit D362:495 \F occ@38 ctx=...| 强近似 | $\Gamma\to\operatorname{Sp}_4(\F_\ell)$ 对充分大 $\ell$ 满 | sections/04-inci...
+   hit D362:501 \F occ@53 ctx=... Q]$ | $\le Cd$, 经 $\operatorname{GL}_4(\F_3)$ 嵌入 | sections/05-heights.tex:116-12...
+   edited_lines=16 groups=19 bytes 113460 -> 113550 (delta +90) parity_ok=True
+   WRITTEN md5 851960c90c98 -> 30d401583294
+
+EXECUTED groups by family:
+  DELIM-GROUP      14
+  \F               5
+EXECUTED groups by note:
+  D362     19
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D362     \F             declared=5   replaced=7   DIFF
+  D362     DELIM-GROUP    declared=16  replaced=16  OK
+mismatched groups (occurrences != declared sites) = 1
+SKIPPED sites/groups = 0
+TOTAL executed groups=19 covering declared sites=21 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D375  D375-平面XY模型关联长度的本质奇点.md  size=75016 lines=428 CR=0
+   hit D375:139 \widehat\operatorname{Var}_bX_{n_j,s} occ@60 ctx=...巧"：归一化诊断向量 $\mathscr O_{j,s}(b)$ 用截断方差 $\widehat\operatorname{Var}_bX_{n_j,s}$ 减去高斯参考 $\|f_{n_j,s}\|_2^2$ 再除以 $\beta_...
+   edited_lines=1 groups=1 bytes 75016 -> 75018 (delta +2) parity_ok=True
+   WRITTEN md5 a018ef50e95e -> fadbc867122a
+
+EXECUTED groups by family:
+  DELIM-GROUP      1
+EXECUTED groups by note:
+  D375     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D375     DELIM-GROUP    declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D389  D389-正位移匹配矩阵的指数PSD秩.md  size=71528 lines=367 CR=0
+   hit D389:91 \F occ@52 ctx=...段（`parity.tex:199-236`）。按 $E(p)$ 落在割空间（$\F_2^{E(H)}$ 的子空间，这用到了"割像都是割"的图论事实）的哪个陪集给 ...
+   edited_lines=1 groups=1 bytes 71528 -> 71536 (delta +8) parity_ok=True
+   WRITTEN md5 949fef9f8124 -> 156e93649d77
+
+EXECUTED groups by family:
+  \F               1
+EXECUTED groups by note:
+  D389     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D389     \F             declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D429  D429-尖点远足参数的整体Arthur提升.md  size=130940 lines=272 CR=0
+   hit D429:17 j(\overline\mathbb Q) occ@1002 ctx=...au_\nu(\operatorname{Frob}_x))$ 的特征值都是 $j(\overline\mathbb Q)$ 里的数、在一切嵌入下绝对值为 $1$；其三，一次固定的 $L(k)$-共轭后...
+   hit D429:69 j(\overline\mathbb Q) occ@1804 ctx=...\nu(\operatorname{Frob}_y)$ 特征值也代数。取扩展 $j(\overline\mathbb Q)$ 上选定嵌入的复实现，在含 $\tau_\nu(\operatorname{F...
+   hit D429:103 \underline\operatorname{RHom}_{R_-}(C_x,D_M)=0 occ@1747 ctx=...to M$ 过一切此类检验，记锥 $D_M$，表示检验检测理内部 Hom 得 $\underline\operatorname{RHom}_{R_-}(C_x,D_M)=0$，Koszul 自对偶（差一个可逆表示与位移）给 $C_x\otimes^{\...
+   hit D429:105 \underline\operatorname{RHom}_S(R_{-,B},S)\simeq R_{-,B}\otimes_C\det(F)[-n] occ@1276 ctx=...[1])$ 是向量方程 Koszul 复形，外积配对给 Koszul 自对偶 $\underline\operatorname{RHom}_S(R_{-,B},S)\simeq R_{-,B}\otimes_C\det(F)[-n]$（不需正则性），坐标列正则给 $\underline\operatorname...
+   hit D429:105 \underline\operatorname{RHom}_S(C,S)\simeq C\otimes\det(F)[-n] occ@1371 ctx=...,B}\otimes_C\det(F)[-n]$（不需正则性），坐标列正则给 $\underline\operatorname{RHom}_S(C,S)\simeq C\otimes\det(F)[-n]$，导出余伴随两步夹逼、消去相同可逆因子得 $\underline\operat...
+   hit D429:105 \underline\operatorname{RHom}_{R_{-,B}}(C,R_{-,B})\simeq C occ@1458 ctx=...otimes\det(F)[-n]$，导出余伴随两步夹逼、消去相同可逆因子得 $\underline\operatorname{RHom}_{R_{-,B}}(C,R_{-,B})\simeq C$（manuscript.tex:3501-3530）；配对与伴随内蕴于向量丛故...
+   hit D429:107 \operatorname{sh}H^\bullet(B^0_{\mathrm{sph}})\xrightarrow\sim\underline\operatorname{End}_Y^\bullet(L_S)=\mathcal O(Y) occ@1487 ctx=...Y$ 与 $H$-等变的 $\mathcal O(U_H)$ 上方程代数同构 $\operatorname{sh}H^\bullet(B^0_{\mathrm{sph}})\xrightarrow\sim\underline\operatorname{End}_Y^\bullet(L_S)=\mathcal O(Y)$，由球转移、对偶、$G_0$ 诱导，保持命题 trace-model 的表示值...
+   edited_lines=5 groups=7 bytes 130940 -> 130954 (delta +14) parity_ok=True
+   WRITTEN md5 2e89a8826a17 -> 50dff9202b95
+
+EXECUTED groups by family:
+  DELIM-GROUP      7
+EXECUTED groups by note:
+  D429     7
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D429     DELIM-GROUP    declared=7   replaced=7   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=7 covering declared sites=7 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D492  D492-半正伴随除子的数值半丰性.md  size=122003 lines=761 CR=0
+   hit D492:446 \OOo occ@64 ctx=... 为对基域扭曲的相对弗罗贝尼乌斯，光滑故有限平坦；$\mathcal E=F_*\OOo_W(B_p)$，$s=\operatorname{rk}\mathcal E=...
+   hit D492:459 \OOo occ@127 ctx=...式，而只用第二个因子的同款计算给出 $F^*\mathcal E$ 的滤过件 $\OOo_W(B_p)\otimes A_j(\Omega_W^1)$。互补乘法给出完美...
+   hit D492:517 \OOo occ@633 ctx=...R-aG$ 丰，$k_0$ 充分大且可除时 $H^1(\widetilde Z,\OOo(k_0b^*R-k_0aG))=0$，而加厚例外除子上的截面正同于 $z_*$...
+   hit D492:517 \OOo occ@899 ctx=...+E$，它大；对充分可除的 $m$，由 $X$ 正规与 $E$ 例外得 $w_*\OOo_W(mE)=\OOo_X$，故 $mD^+$ 的每个截面都来自 $2mP$ 的...
+   hit D492:517 \OOo occ@910 ctx=...除的 $m$，由 $X$ 正规与 $E$ 例外得 $w_*\OOo_W(mE)=\OOo_X$，故 $mD^+$ 的每个截面都来自 $2mP$ 的截面乘以固定除子 $m...
+   hit D492:563 \OOo occ@112 ctx=...(W)$ 是同构，写 $P_W=p^*P_X$，令 $\mathcal A_X=\OOo_X(rD)\otimes P_X$，则 $p^*\mathcal A_X\si...
+   hit D492:563 \OOo occ@159 ctx=...rD)\otimes P_X$，则 $p^*\mathcal A_X\simeq\OOo_W(rA_W)$。右端某个正次幂整体生成；由 $p_*\OOo_W=\OOo_...
+   hit D492:563 \OOo occ@191 ctx=..._X\simeq\OOo_W(rA_W)$。右端某个正次幂整体生成；由 $p_*\OOo_W=\OOo_X$ 与投射公式，它的截面与 $\mathcal A_X$ 同次...
+   hit D492:563 \OOo occ@198 ctx=...q\OOo_W(rA_W)$。右端某个正次幂整体生成；由 $p_*\OOo_W=\OOo_X$ 与投射公式，它的截面与 $\mathcal A_X$ 同次幂的截面一致；...
+   hit D492:565 \OOo occ@134 ctx=...把逐点生成性从 $W$ 搬到 $X$。我最初的版本试图直接下降线性系统：$p_*\OOo_W(rA_W)$ 是一个线丛吗？答案一般是否，除非 $X$ 理性奇点且挠类来自...
+   hit D492:565 \OOo occ@245 ctx=...的承重（既给 $\operatorname{Pic}^0$ 同构又给出 $p_*\OOo_W=\OOo_X$），而差正给出理性奇点，这就是全篇唯一一处把奇点条件当成「理...
+   hit D492:565 \OOo occ@252 ctx=...$\operatorname{Pic}^0$ 同构又给出 $p_*\OOo_W=\OOo_X$），而差正给出理性奇点，这就是全篇唯一一处把奇点条件当成「理性」来用的地方...
+   hit D492:577 \OOo occ@402 ctx=... 与 $P_K\in\operatorname{Pic}^0(X_K)$ 使 $\OOo_{X_K}(rD_K)\otimes P_K$ 整体生成。...
+   hit D492:579 \OOo occ@77 ctx=...atorname{Pic}^0(X_0)$ 于是有泊加莱族；把它张量上固定的 $\OOo_{X_0}(rD_0)$，使所得线丛整体生成的参数集是可构造的。可构造性的做法...
+   hit D492:616 \OOo occ@198 ctx=...：$X_2$ 上的伪有效伴随有好极小模型，故某个充分可除正倍有非零截面；$g_*\OOo_{X_2}=\OOo_{Z_2}$，投射公式与上式把这个截面空间等同于 $Z_...
+   hit D492:616 \OOo occ@209 ctx=...效伴随有好极小模型，故某个充分可除正倍有非零截面；$g_*\OOo_{X_2}=\OOo_{Z_2}$，投射公式与上式把这个截面空间等同于 $Z_2$ 上的对应空间，于...
+   edited_lines=8 groups=8 bytes 122003 -> 122115 (delta +112) parity_ok=True
+   WRITTEN md5 12c8f1ad4e16 -> 02b3badd073d
+
+EXECUTED groups by family:
+  \OOo             8
+EXECUTED groups by note:
+  D492     8
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D492     \OOo           declared=12  replaced=16  DIFF
+mismatched groups (occurrences != declared sites) = 1
+SKIPPED sites/groups = 0
+TOTAL executed groups=8 covering declared sites=12 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D537  D537-一般弱随机键Ising模型的淬火SLE3极限研究笔记.md  size=82510 lines=278 CR=0
+   hit D537:257 \asy occ@9 ctx=...| $\ell_N\asy\log N$、$\mathbb P(\mathcal G_N^c)=o(N^{...
+   edited_lines=1 groups=1 bytes 82510 -> 82512 (delta +2) parity_ok=True
+   WRITTEN md5 7f4bd185b8f1 -> bfef259cd59b
+
+EXECUTED groups by family:
+  \asy             1
+EXECUTED groups by note:
+  D537     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D537     \asy           declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D560  D560-正规射影簇的半代数万有覆叠分类.md  size=139284 lines=359 CR=0
+   hit D560:149 \alphah occ@594 ctx=...irc\beta$ 用之并用交换性。射线极小逼 $h\circ\alpha=c_\alphah$，$\eta=\mathrm{d}\log h$ 为 $A$ 不变、下降到 $...
+   edited_lines=1 groups=1 bytes 139284 -> 139285 (delta +1) parity_ok=True
+   WRITTEN md5 cfc55bc42f8b -> 2113507a22cb
+
+EXECUTED groups by family:
+  \alphah          1
+EXECUTED groups by note:
+  D560     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D560     \alphah        declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D616  D616-整数Lipschitz高度在双弧边界数据下的高斯自由场极限.md  size=85613 lines=409 CR=0
+   hit D616:87 \mathbb E\Bigl(\sum_u a_uH(u)\Bigr)^2=\int_{\widehat\mathbb T\setminus\{0\}}\Bigl|\sum_u a_ue^{ip\cdot u}\Bigr|^2 C(dp), occ@3 ctx=...$$ \mathbb E\Bigl(\sum_u a_uH(u)\Bigr)^2=\int_{\widehat\mathbb T\setminus\{0\}}\Bigl|\sum_u a_ue^{ip\cdot u}\Bigr|^2 C(dp), $$...
+   edited_lines=1 groups=1 bytes 85613 -> 85615 (delta +2) parity_ok=True
+   WRITTEN md5 e134bbddd685 -> ad02b09ed705
+
+EXECUTED groups by family:
+  DELIM-GROUP      1
+EXECUTED groups by note:
+  D616     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D616     DELIM-GROUP    declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D694  D694-热FK-Ising界面与有质量SLE.md  size=73806 lines=548 CR=0
+   hit D694:97 \overline\mathbb D occ@29 ctx=...曲线比较的空间也要先钉死。我把所有曲线律放进同一个空间：$\overline\mathbb D$ 上模掉保向重参数化的连续定向曲线，配一致曲线度量...
+   edited_lines=1 groups=1 bytes 73806 -> 73808 (delta +2) parity_ok=True
+   WRITTEN md5 475d581b0641 -> 437f5d1feaac
+
+EXECUTED groups by family:
+  DELIM-GROUP      1
+EXECUTED groups by note:
+  D694     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D694     DELIM-GROUP    declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D706  D706-法诺型收缩的一致卡蒂埃截面：从阈值比值到特征钉住障碍.md  size=70833 lines=460 CR=0
+   hit D706:400 \widehat\operatorname{vol}_{S,\Delta}(v)=A^n\operatorname{vol}(v) occ@3 ctx=...| $\widehat\operatorname{vol}_{S,\Delta}(v)=A^n\operatorname{vol}(v)$ | 规范化体积 | E-lc-slices.tex:38 | 极小化子理论 ...
+   edited_lines=1 groups=1 bytes 70833 -> 70835 (delta +2) parity_ok=True
+   WRITTEN md5 e2fca9f4e488 -> 941bd74f2a0d
+
+EXECUTED groups by family:
+  DELIM-GROUP      1
+EXECUTED groups by note:
+  D706     1
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D706     DELIM-GROUP    declared=1   replaced=1   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=1 covering declared sites=1 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D750  D750-三维量子Heisenberg铁磁体磁化的第一格点修正.md  size=85680 lines=669 CR=0
+   hit D750:453 \widehat\mathbb P_{N,t}(d\omega,d\sigma,A)\propto\mathbb P_{\rm b}(d\omega)\nu_b(A)\chi_{D_0\cup A}(\omega,\sigma) occ@11 ctx=...于是带场律是联合律 $\widehat\mathbb P_{N,t}(d\omega,d\sigma,A)\propto\mathbb P_{\rm b}(d\omega)\nu_b(A)\chi_{D_0\cup A}(\omega,\sigma)$ 在图像与颜色上的边缘，归一化里可抽出的公共因子是 $e^{\beta q_{...
+   hit D750:489 \widehat\mathbb P_{N,t}(\mathcal A_x^c)\le C_{S,\beta}b_\beta(t) occ@166 ctx=...b P_{N,t}(j\in A)\le b_\beta(t)$ 与并集界得 $\widehat\mathbb P_{N,t}(\mathcal A_x^c)\le C_{S,\beta}b_\beta(t)$，$C_{S,\beta}$ 与 $N$ 无关。第三步，在 $\mathcal...
+   hit D750:489 \widehat\mathbb P_{N,t}(j\in A)\le b_\beta(t) occ@112 ctx=...对这样的 $x$ 令 $\mathcal A_x$ 表示球上方无选中钉点，用 $\widehat\mathbb P_{N,t}(j\in A)\le b_\beta(t)$ 与并集界得 $\widehat{\mathbb P}_{N,t}(\math...
+   hit D750:635 \widehat\mathbb P_{N,t}(j\in A)\le b_\beta(t) occ@3 ctx=...| $\widehat\mathbb P_{N,t}(j\in A)\le b_\beta(t)$ | 后验钉集唯一所需性质 | `08-pressure.tex:171-18...
+   hit D750:636 \frac1{V_N}\sum_j\widehat\mathbb E_{N,t}d_{D_0\cup A}(j) occ@24 ctx=...| $S-(p_N^+)'(t)$ | 等于 $\frac1{V_N}\sum_j\widehat\mathbb E_{N,t}d_{D_0\cup A}(j)$ | `08-pressure.tex:189-194` | §17 第一步 ...
+   edited_lines=4 groups=5 bytes 85680 -> 85690 (delta +10) parity_ok=True
+   WRITTEN md5 d6b1eca59ad5 -> 821f7d2ace61
+
+EXECUTED groups by family:
+  DELIM-GROUP      5
+EXECUTED groups by note:
+  D750     5
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D750     DELIM-GROUP    declared=5   replaced=5   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=5 covering declared sites=5 of 149
+
+MODE = APPLY
+groups=131 sites=149 notes=35
+== D761  D761-离散群的l1-Bass猜想.md  size=85659 lines=564 CR=0
+   hit D761:281 \dv occ@140 ctx=..._{\R}U_j(v-u)K_j(\mathrm dY_j(u),Y_j(v))\dv$ 看作时间参数上的一形式，由 $Y_j(u+1)=gY_j(u)$ 与变元平移...
+   hit D761:287 \du occ@73 ctx=...er}}K_j((\mu_{j+1}*Y_j),(\mu_{j+1}*Y_j))\du$（两个卷积展开后，同时平移把滞后差 $a-b$ 的分布变成偶函数的自卷积 $\...
+   hit D761:303 \du occ@132 ctx=..._{\mathrm{per}}\sum_a\eta_j(u-t_i-a)^{2}\du\le\lVert\eta_j\rVert_\infty\le C/\delta...
+   hit D761:303 \du occ@321 ctx=...er}}\sum_\omega\lvert\partial_iY_j\rvert\du\le Ca_jl_i$，平方因子配对至多 $\le8\delta_j$，所以积...
+   hit D761:303 \dv occ@473 ctx=...-612`）。全符号级另有轨道质量 $\int_{\R}Y_{b_*}(v)_y\dv\le1$（情形 (i) 下 $g^{-a}y$ 互异），因此系数界与匹配周期的...
+   hit D761:315 \du occ@86 ctx=...上取测度 $\mathrm d\vartheta_j(u,y)=Y_j(u)_y\du$，$\mathcal H_j=L^2(\vartheta_j)$，定义算子核...
+   edited_lines=4 groups=5 bytes 85659 -> 85707 (delta +48) parity_ok=True
+   WRITTEN md5 9d77e39f9337 -> 38247c826a0e
+
+EXECUTED groups by family:
+  \du              3
+  \dv              2
+EXECUTED groups by note:
+  D761     5
+site->occurrence rollup (declared sites vs occurrences replaced):
+  D761     \dv            declared=2   replaced=2   OK
+  D761     \du            declared=4   replaced=4   OK
+mismatched groups (occurrences != declared sites) = 0
+SKIPPED sites/groups = 0
+TOTAL executed groups=5 covering declared sites=6 of 149
+

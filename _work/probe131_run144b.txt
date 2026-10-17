@@ -1,0 +1,19 @@
+pre-round copy: E:\math\_work\m131_gd1sqeeu\t2legacy
+run144 copy:    E:\math\_work\m131_xg6z652m\t2mid
+== legacy (whole round, against run143): pictures answered for=918 unchanged=358 changed=560 started=0 stopped=0
+   heavier or lighter rule=560 over 356 papers
+   coordinates moved (a border by half the pen)=0 over 0 papers
+   starts drawing=0 over 0 papers, stops drawing=0 over 0 papers
+== mid (only `every path` still missing, against run144): pictures answered for=918 unchanged=906 changed=12 started=0 stopped=0
+   heavier or lighter rule=12 over 8 papers
+   coordinates moved (a border by half the pen)=0 over 0 papers
+   starts drawing=0 over 0 papers, stops drawing=0 over 0 papers
+papers to rebuild for the whole round=356, for this hunk alone=8
+   A-boundary-only-obstruction-to-four-dimensional-disk-embedding-September-24-2026
+   A-linear-list-coloring-bound-in-terms-of-the-Hadwiger-number-September-23-2026
+   A-nine-dimensional-counterexample-to-Borsuks-covering-assertion-September-23-2026
+   A-power-saving-for-intersective-polynomial-differences-with-an-exponent-depending-only-on-the-degree-October-5-2026
+   Exact-Uniform-Sampling-of-Contingency-Tables-with-Arbitrary-Margins-September-24-2026
+   Mean-payoff-parity-games-in-quasipolynomial-time-October-5-2026
+   Nonuniqueness-for-the-periodic-hard-sphere-Boltzmann-equation-September-23-2026
+   One-Rational-Matrix-Hitting-Point-for-Noncommutative-Formulas-September-24-2026

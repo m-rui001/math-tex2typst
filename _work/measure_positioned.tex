@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\begin{document}
+\tikzset{every node/.style={draw,inner sep=1pt}}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \node (A) at (0,0) {A};
+  \node[below left=1cm and 2cm of A] (B) {B};
+  \node[below left=2cm and 1cm of A] (C) {C};
+  \node[above right=1cm and 2cm of A] (D) {D};
+  \node[below=1cm of A] (E) {E};
+  \node[left=1cm of A] (F) {F};
+  \node[below left=1cm and 2cm of A.south east] (G) {G};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,79 @@
+D10    exp=1     noargs=0    leftarg=0   bytes 188903->188920  \norm x1  noDef=
+D101   exp=20    noargs=0    leftarg=0   bytes 348501->348618  \abs x17 \norm x3  noDef=
+D107   exp=2     noargs=0    leftarg=0   bytes 254781->254795  \abs x2  noDef=
+D113   exp=13    noargs=4    leftarg=0   bytes 164106->164186  \norm x7 \abs x3 \ip x3  noDef=#1,arrowcapexamples,arrowexamples,chordfigure,fixedfigure,lu
+D116   exp=12    noargs=0    leftarg=0   bytes 160791->160863  \norm x12  noDef=
+D119   exp=8     noargs=1    leftarg=0   bytes 173112->173272  \norm x8  noDef=
+D122   exp=9     noargs=0    leftarg=0   bytes 128064->128226  \normtwo x8 \normone x1  noDef=\norm
+D129   exp=16    noargs=0    leftarg=0   bytes 71553->71873  \avg x16  noDef=
+D131   exp=12    noargs=0    leftarg=0   bytes 146876->147068  \norm x12  noDef=
+D134   exp=124   noargs=12   leftarg=0   bytes 114769->116198  \norm x47 \ket x42 \bra x23 \proj x12  noDef=
+D135   exp=4     noargs=2    leftarg=0   bytes 86271->86319  \inner x2 \abs x2  noDef=
+D143   exp=46    noargs=0    leftarg=0   bytes 123580->123884  \D x20 \R x15 \Id x11  noDef=
+D155   exp=94    noargs=0    leftarg=0   bytes 116510->117262  \norm x94  noDef=
+D165   exp=4     noargs=1    leftarg=0   bytes 82285->82321  \ip x4  noDef=
+D167   exp=6     noargs=14   leftarg=0   bytes 76645->76746  \ip x4 \clB x1 \abs x1  noDef=
+D169   exp=17    noargs=1    leftarg=0   bytes 86994->87219  \norm x9 \ip x8  noDef=
+D188   exp=8     noargs=0    leftarg=0   bytes 94500->94628  \norm x8  noDef=
+D207   exp=1     noargs=0    leftarg=0   bytes 71588->71594  \norm x1  noDef=
+D212   exp=22    noargs=3    leftarg=0   bytes 94676->94830  \abs x22  noDef=
+D237   exp=12    noargs=0    leftarg=0   bytes 74426->74504  \norm x10 \ip x2  noDef=
+D245   exp=45    noargs=12   leftarg=0   bytes 72885->73183  \norm x38 \av x7  noDef=
+D25    exp=168   noargs=20   leftarg=0   bytes 397746->399426  \HS x168  noDef=
+D255   exp=0     noargs=6    leftarg=0   bytes 73851->73851    noDef=
+D26    exp=1     noargs=1    leftarg=0   bytes 188395->188411  \norm x1  noDef=
+D266   exp=3     noargs=0    leftarg=0   bytes 77195->77189  \pos x3  noDef=
+D27    exp=1     noargs=3    leftarg=0   bytes 118680->118686  \norm x1  noDef=
+D273   exp=12    noargs=0    leftarg=0   bytes 71140->71212  \inner x12  noDef=
+D274   exp=14    noargs=13   leftarg=0   bytes 72820->73058  \norm x14  noDef=
+D275   exp=130   noargs=16   leftarg=0   bytes 102132->103003  \abs x91 \norm x39  noDef=
+D28    exp=7     noargs=0    leftarg=0   bytes 151815->151878  \ip x7  noDef=
+D286   exp=60    noargs=0    leftarg=0   bytes 70715->71735  \norm x42 \normtwo x9 \abs x9  noDef=
+D291   exp=1     noargs=1    leftarg=0   bytes 70371->70409  \avg x1  noDef=
+D292   exp=28    noargs=5    leftarg=0   bytes 71611->71471  \cdeg x28  noDef=
+D301   exp=5     noargs=2    leftarg=0   bytes 71267->71292  \ind x5  noDef=\norm
+D302   exp=23    noargs=10   leftarg=0   bytes 99823->100260  \logeps x23  noDef=\abs,\norm,\set
+D31    exp=21    noargs=18   leftarg=0   bytes 174329->174665  \norm x21  noDef=
+D32    exp=5     noargs=0    leftarg=0   bytes 151529->151609  \norm x5  noDef=chordfigure
+D329   exp=0     noargs=3    leftarg=0   bytes 71198->71198    noDef=
+D33    exp=3     noargs=1    leftarg=0   bytes 212708->212762  \abs x2 \ceil x1  noDef=
+D330   exp=10    noargs=0    leftarg=0   bytes 73609->73679  \ind x10  noDef=
+D339   exp=28    noargs=0    leftarg=0   bytes 72770->72910  \norm x28  noDef=
+D341   exp=48    noargs=8    leftarg=0   bytes 77325->77638  \norm x39 \ip x8 \abs x1  noDef=
+D35    exp=2     noargs=19   leftarg=0   bytes 130137->130151  \len x2  noDef=
+D366   exp=5     noargs=9    leftarg=0   bytes 78046->78091  \Mat x5  noDef=
+D37    exp=58    noargs=19   leftarg=0   bytes 241504->241910  \abs x58  noDef=
+D374   exp=2     noargs=0    leftarg=0   bytes 73036->73071  \norm x1 \ip x1  noDef=
+D383   exp=2     noargs=0    leftarg=0   bytes 71401->71411  \norm x2  noDef=
+D387   exp=19    noargs=0    leftarg=0   bytes 71162->71219  \Flevel x19  noDef=
+D39    exp=11    noargs=7    leftarg=0   bytes 137551->137735  \abs x8 \norm x3  noDef=
+D390   exp=9     noargs=0    leftarg=0   bytes 70677->70833  \Lipnorm x7 \norm x1 \abs x1  noDef=
+D403   exp=0     noargs=1    leftarg=0   bytes 75235->75235    noDef=
+D421   exp=0     noargs=3    leftarg=0   bytes 82271->82271    noDef=
+D45    exp=2     noargs=10   leftarg=0   bytes 135080->135100  \stHom x2  noDef=
+D46    exp=2     noargs=9    leftarg=0   bytes 113688->113684  \poly x2  noDef=
+D495   exp=8     noargs=0    leftarg=0   bytes 85662->85742  \ind x8  noDef=
+D497   exp=23    noargs=5    leftarg=0   bytes 89323->89323  \X x23  noDef=
+D503   exp=11    noargs=0    leftarg=0   bytes 116471->116581  \ind x11  noDef=
+D506   exp=7     noargs=1    leftarg=0   bytes 98525->98581  \ip x7  noDef=
+D57    exp=1     noargs=0    leftarg=0   bytes 104555->104561  \inner x1  noDef=
+D578   exp=2     noargs=0    leftarg=0   bytes 160990->161001  \abs x1 \norm x1  noDef=
+D58    exp=1     noargs=0    leftarg=0   bytes 86035->86052  \norm x1  noDef=
+D587   exp=4     noargs=0    leftarg=0   bytes 199503->199527  \norm x4  noDef=
+D59    exp=22    noargs=7    leftarg=0   bytes 85111->85111  \Ktail x22  noDef=
+D615   exp=1     noargs=1    leftarg=0   bytes 70713->70729  \ceil x1  noDef=
+D619   exp=46    noargs=0    leftarg=0   bytes 109685->109915  \const x46  noDef=
+D62    exp=26    noargs=2    leftarg=0   bytes 89943->90192  \ket x9 \bra x9 \proj x8  noDef=
+D63    exp=8     noargs=16   leftarg=0   bytes 75613->75597  \Zmod x8  noDef=\abs,\norm
+D688   exp=2     noargs=2    leftarg=0   bytes 85349->85365  \ip x2  noDef=
+D72    exp=1     noargs=1    leftarg=0   bytes 111307->111312  \norm x1  noDef=
+D724   exp=5     noargs=0    leftarg=0   bytes 75288->75333  \ip x5  noDef=
+D79    exp=104   noargs=0    leftarg=0   bytes 81802->82492  \norm x82 \ip x22  noDef=
+D81    exp=46    noargs=0    leftarg=0   bytes 125169->125123  \D x46  noDef=
+D82    exp=13    noargs=0    leftarg=0   bytes 157838->158098  \ip x13  noDef=
+D87    exp=3     noargs=1    leftarg=0   bytes 143995->143986  \degT x3  noDef=
+D89    exp=7     noargs=0    leftarg=0   bytes 146624->146736  \norm x7  noDef=
+D94    exp=15    noargs=0    leftarg=0   bytes 98657->98792  \ip x15  noDef=\abs,\norm
+D96    exp=19    noargs=11   leftarg=0   bytes 125710->125953  \ip x10 \norm x9  noDef=
+D97    exp=14    noargs=5    leftarg=0   bytes 172656->172782  \ip x14  noDef=
+APPLY=True notes=78 expanded=1545 noargs=286 leftarg=0 bytes=+13289

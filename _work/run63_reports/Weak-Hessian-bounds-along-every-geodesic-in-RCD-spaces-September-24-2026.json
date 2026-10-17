@@ -1,0 +1,31 @@
+{
+  "paper": "Weak-Hessian-bounds-along-every-geodesic-in-RCD-spaces-September-24-2026",
+  "ok": true,
+  "typ_lines": 251,
+  "included_pdf_pages": 0,
+  "formulas": 210,
+  "math_failed": 0,
+  "labels": 33,
+  "equations": 2,
+  "theorems": 0,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "210"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\renewcommand\\Cap",
+    "\\renewcommand\\bibsection"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Weak-Hessian-bounds-along-every-geodesic-in-RCD-spaces-September-24-2026.tex"
+}

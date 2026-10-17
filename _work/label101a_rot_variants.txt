@@ -1,0 +1,20 @@
+#101a: turned-anchor box and offsets vs inner sep / font size -- pt
+
+south rot90 sep 0pt      fill box   8.86 x  66.70  left   -9.06 right   -0.20 top  -33.35 bottom   33.35
+south rot90 sep 3pt      fill box  14.83 x  72.67  left  -15.03 right   -0.20 top  -36.34 bottom   36.34
+south rot90 sep 6pt      fill box  20.81 x  78.65  left  -21.01 right   -0.20 top  -39.33 bottom   39.33
+south rot90 sep order    fill box   8.86 x  66.70  left   -9.06 right   -0.20 top  -33.35 bottom   33.35
+south rot90 DEFAULT sep  fill box  15.50 x  73.34  left  -15.70 right   -0.20 top  -36.67 bottom   36.67
+east rot90 DEFAULT sep   fill box  15.50 x  73.34  left   -7.75 right    7.75 top    0.20 bottom   73.54
+south rot90 DEFAULT sep INK ink box   9.96 x  66.72  left  -13.24 right   -3.28 top  -33.37 bottom   33.35
+south rot90 footnotesize ink box   7.97 x  56.67  left   -7.98 right   -0.01 top  -28.32 bottom   28.35
+south rot90 scriptsize   ink box   6.97 x  53.13  left   -7.01 right   -0.03 top  -26.57 bottom   26.56
+east rot90 sep 0pt       fill box   8.86 x  66.70  left   -4.43 right    4.43 top    0.20 bottom   66.89
+east rot90 sep 3pt       fill box  14.83 x  72.67  left   -7.42 right    7.42 top    0.20 bottom   72.87
+east rot90 sep 6pt       fill box  20.81 x  78.65  left  -10.41 right   10.41 top    0.20 bottom   78.85
+south rot0 sep 0pt       fill box  66.70 x   8.86  left  -33.35 right   33.35 top   -9.06 bottom   -0.20
+south rot0 sep 3pt       fill box  72.67 x  14.83  left  -36.34 right   36.34 top  -15.03 bottom   -0.20
+south rot0 sep 6pt       fill box  78.65 x  20.81  left  -39.33 right   39.33 top  -21.01 bottom   -0.20
+south rot0 footnotesize  ink box  56.67 x   7.97  left  -28.34 right   28.32 top   -7.98 bottom   -0.01
+south rot90 normal INK   ink box   9.96 x  66.72  left   -9.92 right    0.04 top  -33.37 bottom   33.35
+south rot0 normal INK    ink box  66.72 x   9.96  left  -33.35 right   33.37 top   -9.92 bottom    0.04

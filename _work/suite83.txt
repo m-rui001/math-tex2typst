@@ -1,0 +1,16 @@
+...............F...................
+======================================================================
+FAIL: test_a_path_can_take_its_arrow_from_an_invoked_style (__main__.ConversionTests.test_a_path_can_take_its_arrow_from_an_invoked_style)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\math\tools\test_t2t.py", line 587, in test_a_path_can_take_its_arrow_from_an_invoked_style
+    self.assertIn('line((0, 0), (2, 0), mark: (end: ">"), '
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  'stroke: (paint: rgb("#000099"), thickness: 0.8pt))', lines)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'line((0, 0), (2, 0), mark: (end: ">"), stroke: (paint: rgb("#000099"), thickness: 0.8pt))' not found in ['line((0, 0), (2, 0), stroke: (paint: rgb("#6666ff"), thickness: 0.8pt), mark: (end: ">"))']
+
+----------------------------------------------------------------------
+Ran 35 tests in 2.950s
+
+FAILED (failures=1)

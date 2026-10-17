@@ -1,0 +1,55 @@
+pictures 1040  converted 959  refused 81
+
+-- refusal stages --
+  12  unsupported:clip
+  10  scoped
+   9  transform
+   4  foreach
+   2  pgfmath
+   1  statement:\draw[flow] (correction.south) |- (outputbend) -| (output.no
+   1  statement:\path (F) edge node[above,sloped] {$f_{i+1}$} (next)
+   1  statement:\tikzset{oneregion/.style={fill=cutone,draw=cutone}, transit
+   1  statement:\node[below=3pt] at (\row0) {$u$}
+   1  statement:\draw[selected] (c0) .. controls +(1,1) and +(-1,1) .. (c5) 
+   1  statement:\fill[black!4] (a0)--(a1)--(a2)--(a3)--cycle
+   1  statement:\draw[black!23] ($(sw)!.25!(nw)$)--($(se)!.25!(ne)$)
+   1  statement:\draw[->] (c.north) .. controls +(0,1.15) and +(0,1.15) .. n
+   1  statement:\draw[very thick,domain=0:360,samples=100,variable=\u] plot 
+   1  statement:\path (comparison.south west) -- (reciprocity.south east) co
+   1  statement:\draw[thick,domain=-90:270,samples=81,smooth,variable=\a] pl
+   1  ifnum
+   1  statement:\node[box,below=14mm of middle, text width=8cm] (cutoff) {Un
+   1  statement:\FiniteSquare{.70}{-1.08}{} \node[finite label,left] at (.35
+   1  statement:\node[box,below left=12mm and -12mm of table] (norm) {Norm e
+   1  statement:\node[amap box] (phase) at (-.235\textwidth,0) {Positively c
+   1  statement:\draw[blue!65!black,very thick,domain=.26:2.88,samples=100] 
+   1  statement:\tikzset{bit/.style={circle,draw,minimum size=5pt,inner sep=
+   1  statement:\node[box,below=9mm of common.south west,anchor=north west] 
+   1  statement:\pinskzero \pinsgroup{0}{.95}{T}{pinsplus} \pinsgroup{0}{-.9
+   1  statement:\draw[edge] (av1)--(aw1) (av2)--(aw2)
+   1  statement:\node[box,text width=5.1cm,below left=8mm and -5.1cm of targ
+   1  statement:\draw[blue!65!black,very thick,domain=-3.2:3.2,samples=80] p
+   1  statement:\draw[blue!65!black,very thick] plot[smooth] coordinates {(-
+   1  statement:\node[anchor=east] at ($(Xzero)+(-.76,.06)$) {$x_0$}
+   1  statement:\path (A) edge node[left,note] {reduction} (A0)
+   1  statement:\path (prediction.south) -- (alignment.south) node[midway,be
+   1  statement:\node[align=center,text width=14cm,below=5mm of cards.south]
+   1  statement:\geometryrow{0}{\textbf{Main: initial}\\before the exchange}
+   1  statement:\draw[equality] (d1.south) to[out=-65,in=110] node[left,pos=
+   1  statement:\draw[thick,domain=-1.3:1.3,samples=40,variable=\y] plot ({1
+   1  statement:\draw[very thick,blue!65!black] (p)--(pp)
+   1  statement:\colorlet{crossink}{blue!45!black} \fill[crossink!12] (0,0.7
+   1  statement:\colorlet{sphereink}{blue!45!black} \node at (1.70,2.40) {On
+   1  statement:\draw[thick,blue!60!black,domain=0:360,samples=81] plot ({3.
+   1  statement:\draw[thick,domain=1:4,samples=80] plot (\x,{(\x+1/\x)/2})
+   1  statement:\node[merge,below=8mm of density.south,xshift=3.35cm] (prime
+   1  statement:\node[transfer box,text width=6.55cm,anchor=north] (left) at
+   1  statement:\node[stage,text width=5.5cm,anchor=north] (genus) at ($(bra
+   1  unsupported:def
+   1  statement:\draw[thick,blue!50!black,domain=0:1,samples=61] plot (\x,{1
+   1  statement:\draw[very thick,teal!70!black] plot[smooth] coordinates {(0
+   1  statement:\node[draw,circle,inner sep=2pt,label=left:$v$] at ($(u2)!.5
+   1  statement:\node[proofbox,below=9mm of cone.south,xshift=-31mm] (small)
+
+-- samples --
+wrote _work/refusal_stages.txt

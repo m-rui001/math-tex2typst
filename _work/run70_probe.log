@@ -1,0 +1,18 @@
+== rotate spelling 13:11 ==
+as shipped   prints call as words: True   bbox 128.9 x 12.54  text='rotate(-90deg)[VerticalLabel]'
+hash call    COMPILE FAILED: error: assertion failed: Rotate takes a single z-angle or angles (x, y, z or yaw, pitch, roll) as named arguments, got: arguments(-90deg, [VerticalLabel])    й░йд @preview/cetz:0.5.0/src/draw/transforma
+plain text   prints call as words: False  bbox 58.59 x 12.54  text='VerticalLabel'
+== box mechanism 13:11 ==
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+compiles: yes
+stroked/filled paths (4+ pt): 4
+  s    74.86 x 15.11  w=None col=(0.0, 0.0, 0.0)
+  f    86.39 x 15.11  w=None col=None
+  s    86.39 x 15.11  w=None col=(0.12152285128831863, 0.30592814087867737, 0.4744487702846527)
+  s    83.02 x 15.11  w=None col=(0.0, 0.0, 0.0)
+text blocks: 2
+  NO FRAME: A framed node Tinted and round     bbox=186.1 x 12.54
+  framed:  Two lines of text                  pad=-1.231pt
+VERDICT: 1/2 nodes get a hugging frame
+centering check: guides Rect(142.314208984375, 135.1868896484375, 187.66854858398438, 135.1868896484375)/Rect(164.9913787841797, 112.50973510742188, 164.9913787841797, 157.86407470703125) box None
+== done ==

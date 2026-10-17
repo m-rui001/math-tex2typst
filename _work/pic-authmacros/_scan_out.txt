@@ -1,0 +1,4 @@
+files: 724
+pictures with >=1 body-scoped definition before them (counted per picture): 4
+\tikzset outside a picture: 1  (pure /.style: 1, other: 0)
+\colorlet/\definecolor outside a picture: 32

@@ -1,0 +1,45 @@
+papers read: 724
+
+call (函数调用原样印出): 13 处 / 4 篇
+   A-nondegenerate-counterexample-to-the-Morse- p1 | The Morse-number form of the Arnold conjecture asks whether #Fix0(𝜙1
+   A-nondegenerate-counterexample-to-the-Morse- p1 | #Fix0(𝜙1
+   A-nondegenerate-counterexample-to-the-Morse- p15 | #Fix0(𝜙1
+
+dollar (数学定界符 $ 上页): 56 处 / 2 篇
+   The-exact-reconstruction-threshold-for-the-t p46 | for j in $(seq -1 26); do ./grid '$j'; done
+   The-exact-reconstruction-threshold-for-the-t p49 | for j in 0 1 2; do ./interval '$j'; done
+   The-exact-reconstruction-threshold-for-the-t p49 | for j in -1 $(seq 0 26); do ./grid '$j'; done
+
+angle (标签 <name> 上页): 0 处 / 0 篇
+
+bs2 (双反斜杠 \\ 上页): 1 处 / 1 篇
+   standalone-mezard-parisi-formula p2 | \Phi_r=\inf_{\substack{\zeta\in\mathcal M_{r+1}\\0<m_1<\cdots<m_r<1}}\mathcal B_r(\zeta,m).
+
+bscmd (反斜杠控制词上页): 79 处 / 3 篇
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \foreach \x/\name in {0/U,4.2/V,8.4/X_v} {
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \begin{scope}[shift={(\x,0)}]
+
+bsbrk (字面 \[ \] \( \)): 21 处 / 12 篇
+   Cardys-formula-for-critical-Poisson-Voronoi- p25 | 𝑗̂𝑒= 𝑋𝑃( 𝟏ℬ︀𝑒\(𝐵𝑠∪𝐵𝑡) ),
+   Critical-bond-and-site-percolation-on-the-cu p5 | 𝐷𝑈= 𝟏{𝑠∉𝑊𝑈}{𝐹(𝐶𝐺\𝑊𝑈(𝑠)) −𝐹(𝐶𝐺\(𝑊𝑈∪𝑈)(𝑠))},
+   Critical-bond-and-site-percolation-on-the-cu p5 | 𝐶𝐺\(𝑊𝑈∪𝑈)(𝑠) = 𝐶𝐺\𝑈(𝑠).
+
+brace (花括号包着的调用参数): 19 处 / 18 篇
+   A-classification-of-finite-Euclidean-Ramsey- p24 | det 𝑀 allows us to cancel the tensor evaluation error 𝐷𝑏 through the selected columns: the adjugate
+   A-power-saving-for-intersective-polynomial-d p13 | product using any subset of the four corners again comes from a graph of the stated kind: an unordered
+   Choiceless-polynomial-time-with-counting-doe p2 | Any input order may be used to list the rows and columns: changing it does not change consistency. ◻
+
+void (引用取不到值): 0 处 / 0 篇
+
+tilde (硬空格 ~ 上页): 415 处 / 224 篇
+   A-C1-Counterexample-to-the-Entropy-Conjectur p16 | https://pi.math.cornell.edu/~hatcher/AT/AT.pdf
+   A-Complete-Local-Domain-Without-a-Small-Cohe p16 | [18] F. Hirzebruch, “Arrangements of lines and algebraic surfaces,” in Arithmetic and Geometry, Vol.~II,
+   A-Conditional-Reduction-for-Algebraic-Kuga-S p25 | Chapter II, Theorems 5.3 and 8.8; Chapter VI, §9.2. https://people.math.harvard.edu/~demarco/
+
+hash (裸井号 # 上页): 2125 处 / 331 篇
+   A-C1-Counterexample-to-the-Entropy-Conjectur p12 | #{0 ≤𝑖< 𝑟: 𝐹𝑚𝑖𝑥∉𝑉} ≤𝜏𝑟+ 𝐽
+   A-C1-Counterexample-to-the-Entropy-Conjectur p12 | #{0 ≤𝑖< 𝑘𝑥: 𝐹𝑚𝑖𝑥∉𝑉} < 𝜏𝑘𝑥.
+   A-Codimension-One-Bound-for-the-Singular-Set p3 | then 𝑉𝑟= (𝜂𝑟)#𝑉 is the varifold pushforward, whose weight is 𝑟−𝑚(𝜂𝑟)#𝜇. Translated blow-ups will
+
+rawtex (井号转义写法 #\;): 0 处 / 0 篇

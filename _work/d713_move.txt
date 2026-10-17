@@ -1,0 +1,71 @@
+=== 884 (len=766)
+覆盖成员的小平维数在 scalar.tex:283 到 scalar.tex:326。断言是：设 $X$ 与一带非零多典范截面的光滑射影簇双有理，则一覆盖由整子簇族构成的族的几何generic成员的光滑射影消解有非负小平维数；若 $X$ 为一般型，该消解也为一般型。证明里我读到两处容易滑过去的处理。其一是把关联降到刚好一般有限：若关联维数大于 $\dim X$，就在参数空间在射影闭包里与一般超平面相交，数目等于超出量；在 $X$ 的一般点之上关联的纤维嵌入参数空间，故一般这样的截面与其最高维部分相交并使求值一般有限，而维数论证让切割后关联中占优 $X$ 的那支占优参数切片的某一支，scalar.tex:292 到 scalar.tex:302。其二是防止测试到特殊子族：选取切割超平面时让系数在原定义域上独立generic，则所选参数切片的generic点在原参数空间上对原域仍generic，因为每一枚真闭子集在同样的一般切割后维数变小；于是被检验的是原来的几何generic成员，scalar.tex:304 到 scalar.tex:309。其三是伴随：把切割后关联与其到 $X$ 的求值消解并紧化，得到光滑射影簇之间一般有限的态射并满足 $K_I=q^{*}K_X+R$，$R\ge0$，scalar.tex:311 到 scalar.tex:316；限制到参数映射的光滑几何generic纤维，它与对应成员双有理，伴随把 $K_I$ 的限制认成其典范除子；$X$ 的非零多典范截面因占优而拉回不恒为零，故维数非负；若 $K_X$ 大，把某倍数的有理分解限制成丰沛类加有效除子，求值在其像上一般有限故丰沛拉回在generic参数纤维上大，于是典范类大，scalar.tex:322 到 scalar.tex:325。
+=== 885 (len=0)
+
+=== 886 (len=81)
+这一条把它的定位讲清了：跟踪引理造出一枚维数至三的移动成员，其极化体积小而典范次数被该体积界住，本条把更低维的论证单独拎出来，让饭高纤维在小平维数为零处再聚一次。
+=== 887 (len=0)
+
+=== 888 (len=24)
+## §32 本轮补读坐实了什么，又新增哪些缺陷
+=== 889 (len=0)
+
+=== 908 (len=226)
+最后交代本轮的读取边界。frobenius.tex 与 conclusion.tex 已整篇读完；chains.tex 读到第 339 行，其后叶次数界的归纳传递未读；scalar.tex 读到第 354 行，其后的覆盖引理应用与标量估计收尾未读；transports.tex 第 130 行以后仍按旧登记留在未读区间；index-reductions.tex 第 650 行以后同旧登记。凡越出这些边界的判断，本轮各节一律标 [推测] 或明写为未读。
+=== 909 (len=2)
+\[
+=== 910 (len=67)
+L_i^{d}\longrightarrow0,\qquad K_{W_i}\cdot L_i^{d-1}\le C'L_i^{d},
+=== 911 (len=2)
+\]
+=== 912 (len=100)
+见 scalar.tex:341 到 scalar.tex:344；则取子列并把饭高纤维化消解之后，其光滑几何generic纤维 $U_i$ 有固定的正维数、满足 $\kappa(U_i)=0$，并且
+=== 913 (len=2)
+\[
+=== 914 (len=55)
+\operatorname{vol}(K_{U_i}+L_i|_{U_i})\longrightarrow0,
+=== 915 (len=2)
+\]
+=== 916 (len=223)
+其中 $L_i$ 指它到消解模型上的拉回，限制到 $U_i$ 仍大半正半丰沛；当 $\kappa(W_i)=0$ 时 $U_i$ 就是 $W_i$ 本身，scalar.tex:351 到 scalar.tex:353。素材在 scalar.tex:330 到 scalar.tex:334 交代了它的定位：跟踪引理造出一枚维数至三的移动成员，其极化体积小而典范次数被该体积界住，这一条把更低维的论证单独拎出来，让饭高纤维在小平维数为零处再聚一次。
+=== 917 (len=0)
+
+=== 918 (len=20)
+## §33 锚点错位与本轮残留追加登记
+=== 919 (len=0)
+
+
+=== english forms in new region (545+)
+generic=51
+prime=0
+generic点=8
+准素=1
+上域=1
+反演=3
+
+=== latin words freq (new region)
+frobenius 320
+mathcal 59
+generic 51
+conclusion 49
+scalar 49
+chains 43
+frac 37
+qquad 34
+cdot 27
+beta 24
+operatorname 22
+delta 21
+otimes 17
+Delta 16
+mathbb 15
+gamma 13
+mathrm 13
+left 12
+right 12
+Omega 10
+widetilde 10
+text 10
+varepsilon 9
+theta 8
+mathfrak 6

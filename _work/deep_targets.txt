@@ -1,0 +1,12 @@
+D535 file=D535-弱无序FK-Ising界面的淬火SLE普适性.md
+   bytes=71674 secs=12 rows=45 math=1070 spec=7 problems=[]
+   first-preprints@1246: bb E、绝对值用 \lvert\,\rvert、范数用 \lVert\,\rVert)。 /  / 登记(双登记,逐字): /  / preprints/Quenched-SLE-Universality-for-Weakly-Disordered-FK-Ising-Interfaces-October-5-20
+   head: # D535 弱无序 FK-Ising 界面的淬火 SLE 普适性:把动检验焊回固定多边形 /  / ## 0 登记、取材与本稿立场 /  / 本稿对应派单编号 D535,主线2 其他队列。我现在的身份是"正在做这项研究的人",下面这份笔记要反推论文背后真实的思维链:初始动机与猜想、我走过的错路与它卡壳的确切位置、关键转折、最终路线与最初设想的落差。凡素材没有明说、只能靠上下文推断的判断,一律标 [推测] 并交代为什么信息不足;绝不编造不存在的情节。同族的另外两篇姊妹稿(D536、D537)由别人并行在写,本稿只依
+D256 file=D256-正特征三维fold数值维一丰盈性的反推笔记.md
+   bytes=71528 secs=12 rows=44 math=1688 spec=39 problems=[]
+   first-preprints@999: 行号都会以 `文件:行` 的形式进文末台账，凡只凭印象的判断一律标 [推测] 并说明缺口。 /  / 本稿取材目录逐字登记： / `preprints/Abundance-in-numerical-dimension-one-for-terminal-threefolds-in-positive-charact
+   head: # D256 正特征三维fold数值维一丰盈性：从制备圈到 Cartier 下降的反推笔记 /  / ## §0 任务登记与取材范围 /  / 本笔记是主线 2（非 Lean 队列）第 D256 单，反推对象是 2026 年 9 月 24 日挂出的正特征丰盈性论文，研究对象为特征 $p>3$ 代数闭域上终端奇点三维fold的 $K_X$ 在数值维数 $\nu(K_X)=1$ 情形的半AMPLE性。派单行给出的参数是 row=80、bytes=163182、thin=no、dir 见本节末尾逐字登记；这属于厚素材档：
+D278 file=D278-三角晶格通用最优性的原子证书：从模36节点到659行极小值的反推笔记.md
+   bytes=73000 secs=11 rows=40 math=1940 spec=6 problems=[]
+   first-preprints@751: 是全篇唯一的一张五列表，收台账数据行。前向引用只指向这些真实存在的编号。 /  / 按双登记要求，以下两行逐字挂在本节末尾。 /  / preprints/An-atomic-certificate-for-triangular-lattice-universal-optimality-September-26-2
+   head: # D278 三角晶格通用最优性的原子证书：从模36节点到659行极小值的反推笔记 /  / ## §0 任务登记、取材范围与写法前提 /  / 这单编号 D278，派单参数取自排程表：row=102、bytes=106087、thin=no，dir 指向 2026 年 9 月 26 日这份三角晶格通用最优性原子证书预印本。取材目录唯一，正文里所有素材只允许来自该目录 build 下的那个 106087 字节的 `main.tex`（全文 2473 行，本会话分九段精读主干），typst 分片与 README 都不

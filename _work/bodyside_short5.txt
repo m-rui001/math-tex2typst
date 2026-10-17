@@ -1,0 +1,147 @@
+###### D002 D02-Kaplansky直接有限性反例-特征2.md pairs=1
+ DECL L186 cited=[30, 78, 100, 109, 124, 126, 204, 245, 250, 269, 305, 312, 317] verbatim_in_decl_block=[]
+  Q(11): 至多 $\ell+1$
+  SITE L272(cited 269) r=0.900 cnt=11 off=20 dlen=9 qlen=11 :  $\ell+1$
+  SITE L253(cited 250) r=0.818 cnt=4 off=1 dlen=11 qlen=11 :  $D=\ell+1$
+  SITE L247(cited 245) r=0.778 cnt=10 off=56 dlen=7 qlen=11 :  $\ell$
+  SITE L247(cited 250) r=0.778 cnt=10 off=56 dlen=7 qlen=11 :  $\ell$
+###### D009 D09-MaxCut最优NP难度.md pairs=1
+ DECL L388 cited=[0] verbatim_in_decl_block=[]
+  Q(11): Max-Cut 是特例
+  SITE L1(cited 0) r=0.842 cnt=11 off=8 dlen=8 qlen=11 : Max-Cut 
+###### D103 D103-Landau-Siegel零点的均匀排除：加权环面jet与绝对零点间隙的反推笔记.md pairs=3
+ DECL L687 cited=[3, 11] verbatim_in_decl_block=[]
+  Q(12): 排除 Siegel 零点
+  SITE L1(cited 3) r=0.857 cnt=7 off=17 dlen=9 qlen=12 : Siegel 零点
+ DECL L739 cited=[3, 6] verbatim_in_decl_block=[]
+  Q(14): 是否存在 Siegel 零点
+  SITE L1(cited 3) r=0.783 cnt=7 off=17 dlen=9 qlen=14 : Siegel 零点
+  SITE L1(cited 6) r=0.783 cnt=7 off=17 dlen=9 qlen=14 : Siegel 零点
+ DECL L797 cited=[112, 113] verbatim_in_decl_block=[]
+  Q(45): ^| 记号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+  SITE L114(cited 112) r=0.953 cnt=2 off=3 dlen=41 qlen=45 : 号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+  SITE L114(cited 113) r=0.953 cnt=2 off=3 dlen=41 qlen=45 : 号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+###### D146 D146-度量熵对偶猜想的反例：覆盖数与熵积分的双边分离的反推笔记.md pairs=1
+ DECL L903 cited=[548] verbatim_in_decl_block=[]
+  Q(21): 该商在 $\mathbb F_p$ 中非零
+  SITE L544(cited 548) r=0.811 cnt=2 off=1 dlen=16 qlen=21 :  $\mathbb F_p$. 
+###### D160 D160-半代数有界域的紧商对称化：从Kollár-Pardon问题二十五到Vey模型的反推笔记.md pairs=1
+ DECL L546 cited=[9, 85] verbatim_in_decl_block=[]
+  Q(14): 属于 $t^{-1}A_s$
+  SITE L90(cited 85) r=0.923 cnt=3 off=35 dlen=12 qlen=14 :  $t^{-1}A_s$
+###### D193 D193-四次分离指数最优性思维全记录.md pairs=1
+ DECL L52 cited=[157] verbatim_in_decl_block=[]
+  Q(12): 输入不带 promise
+  SITE L160(cited 157) r=0.800 cnt=17 off=89 dlen=8 qlen=12 :  promise
+###### D200 D200-无挠群上约化Baum-Connes装配单射性的整核类.md pairs=1
+ DECL L447 cited=[133] verbatim_in_decl_block=[]
+  Q(12): 我为什么需要两个结论并列
+  SITE L133(cited 133) r=0.917 cnt=1 off=9 dlen=12 qlen=12 : 我为什么需要两个结论，并
+###### D206 D206-把半权除子的orbifold基本群装进一个八维特殊流形.md pairs=1
+ DECL L281 cited=[3] verbatim_in_decl_block=[]
+  Q(17): 把 orbifold 变成一个覆盖
+  SITE L1(cited 3) r=0.786 cnt=3 off=18 dlen=11 qlen=17 : 把 orbifold 
+###### D021 D21-Saxl猜想-循环多表证明.md pairs=1
+ DECL L233 cited=[1] verbatim_in_decl_block=[]
+  Q(11): 实际证明的是更强的定理
+  SITE L5(cited 1) r=0.917 cnt=1 off=2 dlen=13 qlen=11 : 实际证明的是更强的循环定理
+###### D222 D222-Calabi流在复射影空间上的有限时间奇点构造.md pairs=1
+ DECL L577 cited=[36] verbatim_in_decl_block=[]
+  Q(17): 但非线性项 $b^2$ 的演化……
+  SITE L36(cited 36) r=0.903 cnt=2 off=74 dlen=14 qlen=17 : 非线性项 $b^2$ 的演化
+###### D234 D234-Heilbronn三角形下界的幂改进.md pairs=1
+ DECL L178 cited=[128] verbatim_in_decl_block=[]
+  Q(15): primitive 零向量分组
+  SITE L127(cited 128) r=0.968 cnt=1 off=13 dlen=16 qlen=15 : primitive 零向量的分组
+###### D248 D248-曲面反例如何杀死Shafarevich全纯凸性.md pairs=1
+ DECL L822 cited=[143] verbatim_in_decl_block=[]
+  Q(16): 本身（第 143 到 145 行
+  SITE L148(cited 143) r=0.741 cnt=1 off=15 dlen=11 qlen=16 : （第 135 到 14
+###### D254 D254-弱无序Anderson模型的绝对连续谱.md pairs=1
+ DECL L205 cited=[55, 427, 458, 518] verbatim_in_decl_block=[]
+  Q(13): $\lambda$ 足够小
+  SITE L60(cited 55) r=0.818 cnt=18 off=3 dlen=9 qlen=13 : $\lambda$
+###### D027 D27-Fock空间不等式与Laughlin谱隙.md pairs=1
+ DECL L573 cited=[495, 497, 522] verbatim_in_decl_block=[]
+  Q(12): 用在哪 / 动了会坏在哪
+  SITE L495(cited 495) r=0.737 cnt=2 off=16 dlen=7 qlen=12 :  动了会坏在哪
+  SITE L495(cited 497) r=0.737 cnt=2 off=16 dlen=7 qlen=12 :  动了会坏在哪
+###### D275 D275-用矩阵能量的曲率拿下dyadic三角Hilbert型的L3界.md pairs=1
+ DECL L643 cited=[7, 69, 93, 340, 631, 639] verbatim_in_decl_block=[631, 655]
+  Q(14): 四字过渡套语（改写连接词类）
+  SITE L631(cited 631) r=0.966 cnt=2 off=39 dlen=15 qlen=14 : "四字过渡套语（改写连接词类）
+###### D281 D281-核范数超幂嵌入的显式障碍-dyadic群配置与前驱有限链.md pairs=1
+ DECL L310 cited=[56, 234, 236, 239, 243, 246, 251, 253, 257, 258] verbatim_in_decl_block=[]
+  Q(12): 归纳回 $\Gamma$
+  SITE L57(cited 56) r=0.857 cnt=21 off=18 dlen=9 qlen=12 :  $\Gamma$
+###### D286 D286-自由群因子的同构一个小余圈吞掉额外生成元.md pairs=1
+ DECL L269 cited=[228, 231] verbatim_in_decl_block=[]
+  Q(20): 对过去负责的 $\varepsilon$
+  SITE L234(cited 231) r=0.824 cnt=7 off=149 dlen=14 qlen=20 :  $\varepsilon$
+###### D298 D298-Gersten猜想在无Baumslag-Solitar子群的单关系群上的证明路径.md pairs=1
+ DECL L87 cited=[52, 136, 155, 190, 218, 258, 281, 544] verbatim_in_decl_block=[]
+  Q(13): 无周期 support 线
+  SITE L263(cited 258) r=0.870 cnt=11 off=5 dlen=10 qlen=13 :  support 线
+  SITE L155(cited 155) r=0.818 cnt=17 off=49 dlen=9 qlen=13 :  support 
+###### D310 D310-布朗连续随机树极限与四条以上有限FK图.md pairs=1
+ DECL L341 cited=[235] verbatim_in_decl_block=[]
+  Q(16): 式 tree:spine-law
+  SITE L235(cited 235) r=0.933 cnt=3 off=43 dlen=14 qlen=16 : tree:spine-law
+###### D330 D330-有向反馈点集常数因子难近度的重构笔记.md pairs=1
+ DECL L131 cited=[91, 102] verbatim_in_decl_block=[]
+  Q(12): 值至多 $\theta$
+  SITE L107(cited 102) r=0.857 cnt=14 off=54 dlen=9 qlen=12 :  $\theta$
+###### D356 D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md pairs=2
+ DECL L968 cited=[881, 956, 961] verbatim_in_decl_block=[955]
+  Q(14): 勘误（续）起于第 956 行
+  SITE L955(cited 956) r=0.966 cnt=1 off=13 dlen=15 qlen=14 : ，勘误（续）起于第 956 行
+ DECL L968 cited=[881, 956, 961] verbatim_in_decl_block=[955]
+  Q(13): 附录在第 881 行前后起
+  SITE L955(cited 956) r=0.963 cnt=1 off=0 dlen=14 qlen=13 : 附录在第 881 行前后起，
+###### D361 D361-初等正性与终止置换见证.md pairs=1
+ DECL L649 cited=[643] verbatim_in_decl_block=[643]
+  Q(11): 其余禁令项自查为零命中
+  SITE L643(cited 643) r=0.957 cnt=1 off=0 dlen=12 qlen=11 : 其余禁令项自查为零命中：
+###### D363 D363-椭圆容量传播与球面Fourier限制猜想的完整开范围.md pairs=1
+ DECL L524 cited=[243] verbatim_in_decl_block=[]
+  Q(10): Fourier 反演
+  SITE L244(cited 243) r=0.889 cnt=8 off=0 dlen=8 qlen=10 : Fourier 
+  SITE L247(cited 243) r=0.889 cnt=8 off=2 dlen=8 qlen=10 : Fourier 
+###### D364 D364-平面Schrödinger端点收敛的H三分之一次幂全程.md pairs=1
+ DECL L544 cited=[11] verbatim_in_decl_block=[]
+  Q(16): …不是一条被磨平了的证明线，是…
+  SITE L11(cited 11) r=0.933 cnt=2 off=5 dlen=14 qlen=16 : 不是一条被磨平了的证明线，是
+###### D366 D366-局部维度十的零密钥纠缠态：一条反向推演的记录.md pairs=1
+ DECL L31 cited=[2, 3, 186, 305, 340, 362] verbatim_in_decl_block=[]
+  Q(12): 归一态之间迹距离不超过二
+  SITE L187(cited 186) r=0.800 cnt=1 off=105 dlen=13 qlen=12 : 归一化态迹范数距离不超过二
+###### D382 D382-六阶复Hadamard矩阵的精确Fourier证书.md pairs=2
+ DECL L132 cited=[15, 159] verbatim_in_decl_block=[]
+  Q(13): 分类 S-Hadamard
+  SITE L19(cited 15) r=0.818 cnt=6 off=59 dlen=9 qlen=13 : -Hadamard
+ DECL L283 cited=[62] verbatim_in_decl_block=[]
+  Q(16): 三因子 $\mathcal M$
+  SITE L64(cited 62) r=0.733 cnt=2 off=74 dlen=14 qlen=16 :  $A_{\mathcal 
+###### D040 D40-单叶函数严格逆一次幂界.md pairs=1
+ DECL L532 cited=[114] verbatim_in_decl_block=[]
+  Q(14): 动它只影响 $C_0$ 数值
+  SITE L116(cited 114) r=0.889 cnt=1 off=162 dlen=13 qlen=14 : 只影响 $C_0$ 的数值
+###### D049 D49-中心圆盘极大算子的端点梯度界.md pairs=2
+ DECL L528 cited=[425] verbatim_in_decl_block=[]
+  Q(10): 用在哪、动了会坏在哪
+  SITE L427(cited 425) r=0.750 cnt=3 off=17 dlen=6 qlen=10 : 动了会坏在哪
+ DECL L610 cited=[18, 91, 97, 149, 513] verbatim_in_decl_block=[]
+  Q(17): 没在 build 里定位到的字面行
+  SITE L513(cited 513) r=0.867 cnt=2 off=151 dlen=13 qlen=17 : 没在 build 里定位到
+###### D097 D97-容量小于4的辛球嵌入极化积：对称Mahler猜想的Gromov宽度路线反推笔记.md pairs=1
+ DECL L1619 cited=[1562] verbatim_in_decl_block=[]
+  Q(18): 体积守恒退出对称 Mahler 猜想
+  SITE L1563(cited 1562) r=0.800 cnt=3 off=104 dlen=12 qlen=18 : 对称 Mahler 猜想
+###### D098 D98-Kirchberg-Rodam字符判据：central-sequence代数无字符等价于吸收Jiang-Su代数的反推笔记.md pairs=2
+ DECL L141 cited=[50] verbatim_in_decl_block=[]
+  Q(20): 无 character 的 F_ω(A)
+  SITE L55(cited 50) r=0.750 cnt=40 off=164 dlen=12 qlen=20 : 无 character 
+ DECL L453 cited=[0, 41, 50, 79, 163, 186, 2070, 2085] verbatim_in_decl_block=[]
+  Q(18): I(2,3) 无 character
+  SITE L55(cited 50) r=0.800 cnt=18 off=163 dlen=12 qlen=18 :  无 character
+  SITE L39(cited 41) r=0.759 cnt=65 off=59 dlen=11 qlen=18 : 无 character

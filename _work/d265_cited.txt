@@ -1,0 +1,6 @@
+local.tex                                      54
+seeds.tex                                      49
+global.tex                                     46
+conclusion.tex                                 39
+introduction.tex                               26
+certificate.tex                                6

@@ -1,0 +1,4 @@
+note	citation	verdict-code	correct-string-or-NONE	evidence(file:line — verbatim 40-char fragment)
+D101	transitions.tex:274--663	WRONG-LINE	transitions.tex:274--641	build/sections/transitions.tex:641 — cycles proves Theorem~\ref{thm:cyclic-local-finiteness}.  (file content lines = 641; 274 is the \subsection{The cyclic-center locus} heading that opens the theorem block)
+D420	05-pins.tex:880--959	WRONG-LINE	05-pins.tex:880--936	build/sections/05-pins.tex:936 (file content lines = 936; note's own register pairs 05-pins.tex:1--879 with 880--959, i.e. to end of file)
+D759	moments.tex:630--700	WRONG-LINE	moments.tex:630--698	build/sections/moments.tex:698 (file content lines = 698; note's own register pairs moments.tex:176--629 with 630--700)

@@ -1,0 +1,7 @@
+bytes 107417 -> 107575 delta=158
+expand [('CC', 1), ('QQ', 3), ('ZZ', 2), ('ii', 11), ('lcm', 4)]
+dollar 2680 -> 2680
+backtick 32 -> 32
+CR 0
+lines_with_hit=21 skipped=0
+residual_after=False

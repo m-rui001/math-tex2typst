@@ -1,0 +1,14 @@
+papers 724   maths strings with a frac( call: 69 over 35 papers (74 calls)
+of those, a neighbour right after the call: 14 strings over 13 papers
+   A-Nonspectrahedral-Hyperbolicity-Cone-Septem  $ u_s= frac(v+"sh", sqrt(1+s^2\|h\|^2) ) , u_(s=0)=v, frac("du"_s, "ds") |_(s=0)
+   A-classification-of-finite-Euclidean-Ramsey-  $1, frac(1, 2) , dots.h , frac(1, n)$
+   A-uniform-Hilbert-transform-estimate-for-Lip  $ frac("QH"_j, w) =G^(1/4)$
+   A-uniform-Hilbert-transform-estimate-for-Lip  $ frac(l_*, H_j) =B^2 sqrt(G)$
+   An-exact-Hausdorff-gauge-for-SLE-September-2  $n+ frac(1, 2a) log frac(100, 8)$
+   Bochner-Riesz-Multipliers-in-Three-Dimension  $m=2, L=3, b(u)= frac(3, 2) (1-u)$
+   Endpoint-pointwise-convergence-for-the-Schro  $f_i(s)= frac(k, 2) (s_H-s)_+$
+   Generic-C1-Future-Inextendibility-Near-Rotat  $ frac(1, 2) cal(H)_T''(0) = plus.minus a_p^2R^(g')(E_1,E_2)(p_T), cal(L)_T(h) l
+   Mass-and-covering-exponents-for-fixed-length  $p'-p= frac(1, 2) e_ tau +n_1e_1+n_2e_2+ frac(1, 2) e_( tau ')$
+   Spacetime-Penrose-inequalities-enclosing-are  $m= frac(1, 2) (r+Q^2/r)$
+   Staggered-extraction-for-exact-matrix-multip  $ frac(L_A+L_B+L_C, 6) = frac(C_*, 6) (1,1,1)$
+   The-crossing-number-of-complete-graphs-Septe  $frac(1, 2) (-1+1)=0$

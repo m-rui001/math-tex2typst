@@ -1,0 +1,31 @@
+==== D101
+189|    for the representation of $E_{\rm disc}.
+==== D113
+31|There exist real scalar functions $\gamma_0,\gamma_1\in
+32|L^\infty(B(0,3);\R)$ and constants $0<c<C<\infty$ such that
+==== D123
+179|核块计算逐字（`sections/05_position.tex:356-359`）：`$\left.\mathcal F(A)\right|_{\operatorname{ker} A}
+197|等号吸收链的核心逐字（`sections/06_conclusion.tex:77-80`）：`$s_i^2c\norm{Qf_i}_2^2
+198| \le a_i^2-s_i^2t_i^2\le a_i^2-1.$`
+218|Holmes--Thompson 逐字（`sections/07_consequences.tex:216-221`）：`$\mathcal A_B(\partial C)^n
+219| \ge n^n\kappa_n\,\mathcal V_B(C)^{n-1}.$` 与 `Equality holds if and only if $B$ is an ellipsoid and $C=x+tB$.`
+==== D34
+614|$ grep -n "logarithmic independence" /e/math/lean/formalization.yaml
+642|$ ls -1 *.lean | wc -l        → 31
+643|$ wc -l *.lean | tail -1      → 5539 total
+644|$ grep -rc "sorry" *.lean     → 全为 0
+645|$ grep -rnE "\baxiom\b|\badmit\b" *.lean | wc -l  → 0
+646|$ grep -rlE "import OAI\.Combinatorics\.CliqueFree" *.lean | wc -l  → 30
+647|$ grep -ohE "^ *(private |noncomputative )*(@\[.*\] *)?(theorem|lemma)" *.lean | wc -l  → 312
+==== D407
+303|十，文体违规的追加申报：§6、§7、§8、§9、§10 共十一段落里使用了成对的中文长停顿号作插入语分隔，全文实测该字符二十四次、合计十二对；按本单文风禁令它应零命中，正确写法本应改用括号、冒号或"，即"式衔接。因铁律一禁止对已落盘内容做任何删改，此处仅作类别指认、不复现原字符，亦不声称已消除；这十二对是已落盘的既成事实，交付报告中同样申报。另外两处说明：其一，§1 与 §11 各有一对形如"上星双星"的记号，属反射层平方的标准数学记号（素材 01-int
+305|十一，本条订正第十条里两处自查计数，并给出全稿最终的宏名复量口径。其一，那根长停顿号字符的实测数：全稿共四十六个该字符、成对使用二十三次、分布于十一个正文叙述段落（自 §6 起至 §10 止）；第十条写的二十四次、十二对是误数，以本条为准。每个该字符都在同一位置成对出现，功能相当于插入语边界，可移植改写为括号或逗号衔接；因铁律一不能回改，既成事实保留，计数在本条定案。其二，素材前言缩写宏的泄漏范围：复量结果，那个双字母 Bott--Chern 缩写宏以宏名
+307|十二，补一条小订正：第十条说数学区内反射层双星记号在 §1 与 §11 各有一对，复量后实为三个段落，§1、§5、§11 各一，均为 $ 号内的反射层标准记号，非装饰性标记，无新增违规，只是出处清点漏了一节；交付报告按三处口径申报。
+309|十三，收稿前的最后数码申报：全稿数学定界符（dollar 号 $ 的本形）总数为偶数，且除指称该字符本身的散文标点用法四处（即第十条、第十一条、第十二条与本条，各一）之外，其余定界符一律成对出现在同一段落内并同段闭合；圆括号反斜杠式的另一形定界符全稿未用，因此配对检验对本报而言化简为 dollar 号原始计数的奇偶性判断，本条写完即为偶。另申报：追加本条之后若再复量长停顿号，仍为四十六个字符、二十三次成对、十一个段落，宏名泄漏仍为十七处，反射层双星仍为三个
+==== D62
+367|$T=\bigl(\begin{smallmatrix}U_0&K\\K&U_1\end{smallmatrix}\bigr)
+368|\otimes XX^*$, whose entropy is $g(u)+\ent(XX^*)$.
+399|$\mathcal N:\mathcal B(\mathcal H_{\mathrm{in}})\to
+400|\mathcal B(\mathcal H_{\mathrm{out}})$ be completely positive and
+478|$\mathcal N:\mathcal B(\mathcal H_{\mathrm{in}})\to
+479|\mathcal B(\mathcal H_{\mathrm{out}})$ be completely positive and

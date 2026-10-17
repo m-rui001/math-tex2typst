@@ -1,0 +1,27 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+self-test on the canvas probe95 called worse:
+  pictures in the flat source: 7 (the product carries 7 canvases)
+  product bodies : $R Gamma_(upright("cts")) \( H \, M_(B \, C) \)$ | $R Gamma_(upright("cts")) \( U \, cal(K)_C \)$ | $R Gamma_(upright("cts")) \( U \, cal(K)_C \) .$ | $Phi - 1$ | $tilde.eq$
+  rebuilt bodies: $R Gamma_(upright("cts")) \( H \, M_(B \, C) \)$ | $R Gamma_(upright("cts")) \( U \, cal(K)_C \)$ | $R Gamma_(upright("cts")) \( U \, cal(K)_C \) .$ | $Phi - 1$ | $tilde.eq$
+  bodies identical: True
+  product anchors: (0, 0) (4.255, 0) (0, -1.7) (4.255, -1.7) (2.128, 0.282) (-0.352, -0.85) (4.607, -0.85) (2.085, -1.418)
+  rebuilt anchors: (0, 0) (4.103, 0) (0, -1.239) (4.103, -1.239) (2.052, 0.2266) (-0.2741, -0.6193) (4.377, -0.6193) (2.019, -1.012)
+
+cd canvases on the pages: 124
+  rebuilt to the same maths: 118   differing: 6
+    Abundance-in-numerical-dimension-one-for-terminal-#0 bodies differ: 13 vs 13 drawn, first at 10
+      page    $upright("Sections 3–5")$
+      rebuild $upright("Sections ") upright("??") upright("–") upright("??")$
+    Counterexamples-to-weak-chromatic-splitting-sphere#1 bodies differ: 8 vs 8 drawn, first at 0
+      page    $S$
+      rebuild $X$
+    Global-quantum-geometric-Langlands-at-irrational-l#0 bodies differ: 9 vs 9 drawn, first at 4
+      page    $upright("integrated ") N upright(" case of (12.1)")$
+      rebuild $upright("integrated ") N upright(" case of ") upright("??")$
+    Irrational-cubic-fourfolds-with-geometric-K3-categ#0 bodies differ: 9 vs 9 drawn, first at 7
+      page    $upright("Proposition 3.10")$
+      rebuild $upright("Proposition ") upright("??")$
+    Log-abundance-for-compact-Kahler-spaces-under-loga#4 bodies differ: 12 vs 5 drawn, first at -1
+    Rationality-of-the-Canonical-Unramified-Arthur-Fil#0 bodies differ: 7 vs 7 drawn, first at 0
+      page    $"quadratic" "component" "model" ("Section"~ 3 )$
+      rebuild $"quadratic" "component" "model" ("Section"~ "mod":"section" )$

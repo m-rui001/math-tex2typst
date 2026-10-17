@@ -1,0 +1,66 @@
+#104 pgf's `fit=` box, in cm at x=y=1cm (a=(0,0) and b=(3.2,2.4) are 2cm-wide
+     `text width` nodes, p=(-1,-1) and q=(4,3) are bare `\coordinate`s):
+
+== sep0     [x=1cm,y=1cm,font=\small]  \node[fit=(a)(b),inner sep=0pt,outer sep=0pt] (f) {};
+   a    x [-1.1242, +1.1242]  y [-0.4273, +0.4273]  size 2.2483 x 0.8546  centre (+0.0000, +0.0000)
+   b    x [+2.0758, +4.3242]  y [+2.1660, +2.6340]  size 2.2483 x 0.4680  centre (+3.2000, +2.4000)
+   f    x [-1.1242, +4.3242]  y [-0.4273, +2.6340]  size 5.4483 x 3.0613  centre (+1.6000, +1.1033)
+
+== sepdef   [x=1cm,y=1cm,font=\small]  \node[fit=(a)(b)] (f) {};
+   a    x [-1.1242, +1.1242]  y [-0.4273, +0.4273]  size 2.2483 x 0.8546  centre (+0.0000, +0.0000)
+   b    x [+2.0758, +4.3242]  y [+2.1660, +2.6340]  size 2.2483 x 0.4680  centre (+3.2000, +2.4000)
+   f    x [-1.2483, +4.4483]  y [-0.5515, +2.7582]  size 5.6967 x 3.3096  centre (+1.6000, +1.1033)
+
+== out0     [x=1cm,y=1cm,font=\small]  \node[fit=(a)(b),outer sep=0pt] (f) {};
+   a    x [-1.1242, +1.1242]  y [-0.4273, +0.4273]  size 2.2483 x 0.8546  centre (+0.0000, +0.0000)
+   b    x [+2.0758, +4.3242]  y [+2.1660, +2.6340]  size 2.2483 x 0.4680  centre (+3.2000, +2.4000)
+   f    x [-1.2413, +4.4413]  y [-0.5444, +2.7511]  size 5.6826 x 3.2956  centre (+1.6000, +1.1033)
+
+== sep5     [x=1cm,y=1cm,font=\small]  \node[fit=(a)(b),inner sep=5pt] (f) {};
+   a    x [-1.1242, +1.1242]  y [-0.4273, +0.4273]  size 2.2483 x 0.8546  centre (+0.0000, +0.0000)
+   b    x [+2.0758, +4.3242]  y [+2.1660, +2.6340]  size 2.2483 x 0.4680  centre (+3.2000, +2.4000)
+   f    x [-1.3069, +4.5069]  y [-0.6101, +2.8168]  size 5.8139 x 3.4268  centre (+1.6000, +1.1033)
+
+== xsep     [x=1cm,y=1cm,font=\small]  \node[fit=(a)(b),inner xsep=4mm,inner ysep=8mm,outer sep=0pt] (f) {};
+   a    x [-1.1242, +1.1242]  y [-0.4273, +0.4273]  size 2.2483 x 0.8546  centre (+0.0000, +0.0000)
+   b    x [+2.0758, +4.3242]  y [+2.1660, +2.6340]  size 2.2483 x 0.4680  centre (+3.2000, +2.4000)
+   f    x [-1.5242, +4.7242]  y [-1.2273, +3.4340]  size 6.2483 x 4.6613  centre (+1.6000, +1.1033)
+
+== one      [x=1cm,y=1cm,font=\small]  \node[fit=(a),inner sep=0pt] (f) {};
+   a    x [-1.1242, +1.1242]  y [-0.4273, +0.4273]  size 2.2483 x 0.8546  centre (+0.0000, +0.0000)
+   f    x [-1.1312, +1.1312]  y [-0.4343, +0.4343]  size 2.2624 x 0.8687  centre (+0.0000, +0.0000)
+
+== points   [x=1cm,y=1cm,font=\small]  \node[fit=(p)(q),inner sep=0pt] (f) {};
+   p    x [-1.0000, -1.0000]  y [-1.0000, -1.0000]  size 0.0000 x 0.0000  centre (-1.0000, -1.0000)
+   q    x [+4.0000, +4.0000]  y [+3.0000, +3.0000]  size 0.0000 x 0.0000  centre (+4.0000, +3.0000)
+   f    x [-1.0070, +4.0070]  y [-1.0070, +3.0070]  size 5.0141 x 4.0141  centre (+1.5000, +1.0000)
+
+== atxy     [x=1cm,y=1cm,font=\small]  \node[fit=(a)(b),inner sep=0pt] (f) at (0,5) {};
+   a    x [-1.1242, +1.1242]  y [-0.4273, +0.4273]  size 2.2483 x 0.8546  centre (+0.0000, +0.0000)
+   b    x [+2.0758, +4.3242]  y [+2.1660, +2.6340]  size 2.2483 x 0.4680  centre (+3.2000, +2.4000)
+   f    x [-2.7312, +2.7312]  y [+3.4623, +6.5377]  size 5.4624 x 3.0754  centre (+0.0000, +5.0000)
+
+== below    [x=1cm,y=1cm,font=\small]  \node[fit=(a)(b),inner sep=0pt,outer sep=0pt] (f) {};\node[below=10mm of f,text width=2cm,align=center] (g) {below the fit};
+   f    x [-1.1242, +4.3242]  y [-0.4273, +2.6340]  size 5.4483 x 3.0613  centre (+1.6000, +1.1033)
+   g    x [+0.4758, +2.7242]  y [-1.8953, -1.4273]  size 2.2483 x 0.4680  centre (+1.6000, -1.6613)
+
+== e        [x=1cm,y=1cm,font=\small]  \node (e) {};
+   e    x [-0.1242, +0.1242]  y [-0.1242, +0.1242]  size 0.2483 x 0.2483  centre (+0.0000, +0.0000)
+
+== e0       [x=1cm,y=1cm,font=\small]  \node[inner sep=0pt] (e0) {};
+   e0   x [-0.0246, +0.0246]  y [-0.0246, +0.0246]  size 0.0492 x 0.0492  centre (+0.0000, +0.0000)
+
+== e0out    [x=1cm,y=1cm,font=\small]  \node[inner sep=0pt,outer sep=0pt] (e0o) {};
+   e0o  x [-0.0176, +0.0176]  y [-0.0176, +0.0176]  size 0.0351 x 0.0351  centre (+0.0000, +0.0000)
+
+== enofont  [x=1cm,y=1cm]  \node (en) {};
+   en   x [-0.1242, +0.1242]  y [-0.1242, +0.1242]  size 0.2483 x 0.2483  centre (+0.0000, +0.0000)
+
+== eplain0  [x=1cm,y=1cm]  \node[inner sep=0pt,outer sep=0pt] (ep0) {};
+   ep0  x [-0.0176, +0.0176]  y [-0.0176, +0.0176]  size 0.0351 x 0.0351  centre (+0.0000, +0.0000)
+
+== etext    [x=1cm,y=1cm,font=\small]  \node (w) {X}; \node[inner sep=0pt] (w0) {X}; \node (big) {\Large X}; 
+   w    x [-0.2461, +0.2461]  y [-0.2322, +0.2322]  size 0.4921 x 0.4645  centre (+0.0000, +0.0000)
+   w0   x [-0.1289, +0.1289]  y [-0.1151, +0.1151]  size 0.2578 x 0.2302  centre (+0.0000, +0.0000)
+   big  x [-0.3099, +0.3099]  y [-0.2971, +0.2971]  size 0.6198 x 0.5942  centre (+0.0000, +0.0000)
+

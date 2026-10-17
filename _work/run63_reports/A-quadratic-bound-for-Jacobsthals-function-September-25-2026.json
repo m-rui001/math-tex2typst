@@ -1,0 +1,29 @@
+{
+  "paper": "A-quadratic-bound-for-Jacobsthals-function-September-25-2026",
+  "ok": true,
+  "typ_lines": 2127,
+  "included_pdf_pages": 0,
+  "formulas": 1946,
+  "math_failed": 0,
+  "labels": 320,
+  "equations": 5,
+  "theorems": 4,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:picture": 1
+  },
+  "samples": {
+    "formulas": "1946"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-quadratic-bound-for-Jacobsthals-function-September-25-2026.tex"
+}

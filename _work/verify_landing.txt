@@ -1,0 +1,4 @@
+sites verified = 149  notes = 35
+failures (rolled back or half-applied) = 0
+notes whose size changed after my write (writer churn / rollback) = 0
+all CR counts = 0

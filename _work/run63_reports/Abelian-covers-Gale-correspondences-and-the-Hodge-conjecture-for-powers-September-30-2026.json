@@ -1,0 +1,28 @@
+{
+  "paper": "Abelian-covers-Gale-correspondences-and-the-Hodge-conjecture-for-powers-September-30-2026",
+  "ok": true,
+  "typ_lines": 1019,
+  "included_pdf_pages": 0,
+  "formulas": 1025,
+  "math_failed": 0,
+  "labels": 94,
+  "equations": 0,
+  "theorems": 1,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "1025"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Abelian-covers-Gale-correspondences-and-the-Hodge-conjecture-for-powers-September-30-2026.tex"
+}

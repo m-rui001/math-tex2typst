@@ -1,0 +1,37 @@
+{
+  "paper": "A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in-Spatial-Dimensions-at-Least-Four-October-5-2026",
+  "ok": true,
+  "typ_lines": 2806,
+  "included_pdf_pages": 0,
+  "formulas": 2362,
+  "math_failed": 0,
+  "labels": 478,
+  "equations": 20,
+  "theorems": 2,
+  "figures": 2,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 2
+  },
+  "samples": {
+    "formulas": "2362",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark",
+    "accsupp"
+  ],
+  "macros_skipped": [
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in-Spatial-Dimensions-at-Least-Four-October-5-2026.tex"
+}

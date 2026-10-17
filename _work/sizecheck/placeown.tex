@@ -1,0 +1,19 @@
+\documentclass[10pt]{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (6,0);
+  \node (n) at (0,-3) {N};
+  \node (p) [below=1cm of $(A)!0.5!(B)$] {N};
+  \node (q) [below left=1cm and 2cm of n] {N};
+  \foreach \nm in {p,q,n} {
+    \pgfextracty{\dimen0}{\pgfpointanchor{\nm}{center}}
+    \pgfextracty{\dimen1}{\pgfpointanchor{\nm}{north}}
+    \pgfextracty{\dimen2}{\pgfpointanchor{\nm}{south}}
+    \typeout{P \nm\space C=\the\dimen0\space T=\the\dimen1\space B=\the\dimen2}
+  }
+  \pgfextractx{\dimen0}{\pgfpointanchor{q}{center}}
+  \typeout{P qx=\the\dimen0}
+\end{tikzpicture}
+\end{document}

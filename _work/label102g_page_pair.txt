@@ -1,0 +1,11 @@
+a dash on the page -- one canvas rendered three ways (fix / old law / no dash at all)
+ink = dark pixels of the whole page at 300 dpi, read by probe81.confirmed
+the gauge counts DARK pixels only, so a dash on a rgb("#b8b8b8") rule moves no ink
+
+densely dashed           A-Linear-Clock-for-Random-Walk-on-Tree#0  dash tokens 0->1 (adds 1)  ink fix=12723 old=12973 bare=12973  this round=-250  family=-250
+densely dotted           A-Counterexample-to-the-Infinite-Matro#0  dash tokens 0->2 (adds 2)  ink fix=14104 old=14188 bare=14188  this round=-84  family=-84
+dash pattern= one pair   No-bigeodesics-in-planar-first-passage#0  dash tokens 1->3 (adds 2)  ink fix=133234 old=134297 bare=134304  this round=-1063  family=-1070
+dash pattern= two pairs  Uniform-Interior-C1alpha-Estimates-for#1  dash tokens 2->4 (adds 2)  ink fix=12731 old=13494 bare=13494  this round=-763  family=-763
+dash dot                 SLE3-universality-for-weak-finite-rang#0  dash tokens 3->8 (adds 5)  ink fix=58485 old=60691 bare=61247  this round=-2206  family=-2762
+dash across many paths   A-Negative-Solution-to-the-Finite-Latt#1  dash tokens 0->5 (adds 5)  ink fix=11531 old=11747 bare=11747  this round=-216  family=-216
+dash on light paint      A-Fully-Polynomial-Randomized-Approxim#1  dash tokens 0->10 (adds 10)  ink fix=17218 old=17218 bare=17218  this round=+0  family=+0

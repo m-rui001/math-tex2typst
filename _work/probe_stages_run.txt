@@ -1,0 +1,38 @@
+pictures 1058  converted 1041  refused 17
+
+-- refusal stages --
+   2  pgfmath
+   2  scoped
+   1  statement:\fill[gray!8] (-1.4,-1,1)--(1.4,-1,1)--(1.4,1.3,1) --(-1.4,1
+   1  statement:\fill[black!3] (1,-1,-1)--(1,1,-1)--(1,1,1)--(1,-1,1)--cycle
+   1  ifnum
+   1  statement:\FiniteSquare{.70}{-1.08}{} \node[finite label,left] at (.35
+   1  statement:\draw[capacityellipse] (0,0) ellipse (1.00 and .37)
+   1  statement:\pinskzero \pinsgroup{0}{.95}{T}{pinsplus} \pinsgroup{0}{-.9
+   1  statement:\draw[blue!65!black,very thick] plot[smooth] coordinates {(-
+   1  statement:\draw[blue!55!black,line width=1.1pt,domain=-2.2:2.2,samples
+   1  statement:\geometryrow{0}{\textbf{Main: initial}\\before the exchange}
+   1  statement:\node[font=\bfseries] at (1,.7,2.55) {Input face prism}
+   1  statement:\draw[very thick,teal!70!black] plot[smooth] coordinates {(0
+   1  statement:\node[anchor=west,align=left,text width=5.2cm] at (5.45,3.15
+   1  statement:\draw[edge,dashed] (six) to[out=135,in=45,looseness=5] (six)
+
+-- refused papers --
+A-sharp-entropy-bound-and-the-simplex-inequality-for  [(0, 'statement:\\fill[gray!8] (-1.4,-1,1)--(1.4,-1,1)--(1.4,1.3,1) --(-1.4,1')]
+Critical-bond-and-site-percolation-on-the-cubic-latt  [(0, 'statement:\\fill[black!3] (1,-1,-1)--(1,1,-1)--(1,1,1)--(1,-1,1)--cycle')]
+Critical-strip-crossing-mass-on-the-honeycomb-lattic  [(1, 'ifnum')]
+Cylinder-amplitudes-and-logarithmic-bridge-length-wi  [(0, 'statement:\\FiniteSquare{.70}{-1.08}{} \\node[finite label,left] at (.35')]
+Elliptic-capacity-propagation-and-Fourier-restrictio  [(0, 'statement:\\draw[capacityellipse] (0,0) ellipse (1.00 and .37)')]
+Finite-cylinder-approximation-of-ruled-sets-Septembe  [(0, 'pgfmath')]
+Gaussian-free-field-limits-of-weighted-integer-Lipsc  [(1, 'statement:\\pinskzero \\pinsgroup{0}{.95}{T}{pinsplus} \\pinsgroup{0}{-.9')]
+Mass-and-covering-exponents-for-fixed-length-honeyco  [(9, 'statement:\\draw[blue!65!black,very thick] plot[smooth] coordinates {(-')]
+No-percolation-at-criticality-on-quasi-transitive-gr  [(1, 'scoped')]
+Nonuniqueness-with-local-conservation-for-the-hard-s  [(0, 'statement:\\draw[blue!55!black,line width=1.1pt,domain=-2.2:2.2,samples')]
+Polynomial-PEPS-approximation-of-gapped-square-grid-  [(0, 'statement:\\geometryrow{0}{\\textbf{Main: initial}\\\\before the exchange}')]
+Strong-diffeomorphic-approximation-in-three-dimensio  [(1, 'statement:\\node[font=\\bfseries] at (1,.7,2.55) {Input face prism}')]
+The-Deligne-Drinfeld-conjecture-September-23-2026  [(1, 'scoped')]
+The-joint-scaling-limit-of-critical-Ashkin-Teller-cu  [(1, 'statement:\\draw[very thick,teal!70!black] plot[smooth] coordinates {(0')]
+Thompsons-group-F-is-nonamenable-September-23-2026  [(0, 'statement:\\node[anchor=west,align=left,text width=5.2cm] at (5.45,3.15')]
+Translative-covering-densities-of-order-n-log-n-Sept  [(1, 'statement:\\draw[edge,dashed] (six) to[out=135,in=45,looseness=5] (six)')]
+Universal-Tensor-Squares-for-Symmetric-Groups-Septem  [(0, 'pgfmath')]
+wrote _work/refusal_stages.txt and _work/refusal_stages.json

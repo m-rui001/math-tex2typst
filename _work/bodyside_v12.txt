@@ -1,0 +1,797 @@
+-- D06-pi无理指数为2.md noREL Q(LEN13)=preprints/目录名
+-- D06-pi无理指数为2.md noREL Q(LEN11)=其他队列第 NN 行号
+## D06-pi无理指数为2.md zoneL466-473,651-670,671-681,682-685 Q(LEN7)=……型下界，而
+   REL L482 sec=§26 filecnt=1 ratio=0.727 d=下界，而
+       raw: $\mu=2$ 与有界部分商的逻辑关系：$\mu(\pi)=2$ 等价于「对每个 $\varepsilon>0$ 有 $\lvert\pi-p/q\rvert\ge q^{-2-\varepsilon}$ 对所有充分大 $q$」；有界部分商等价于「存在 $c>0$ 使 $\lvert\pi-p/q\rvert\ge c\,q^{-2}$ 对所有 $p,q$」。后者严格强于前者（main.tex:7
+   REL L544 sec=§30 filecnt=1 ratio=0.727 d=型下界，
+       raw: [推测] 符号障碍之所以出现，是因为「有界部分商」等价于连分式收敛子的「从正侧与负侧均受控」，而连分式的结构本身使 $p_{n+1}-\pi q_{n+1}$ 的符号在 $n$ 的奇偶性间交替；减去 $1/q_n$ 后 $C$ 可能永久留在负侧，而 Carella 的论证需要在某步得到 $\sin C>0$ 的正估计。$\mu=2$ 的定理 1.1 侧没有这个问题：其不等到 $c/q^2$ 型下界
+
+## D06-pi无理指数为2.md zoneL466-473,651-670,671-681,682-685 Q(LEN8)=……是形式级数而
+   REL L550 sec=§31 filecnt=1 ratio=0.769 d=是形式级数
+       raw: **对数约定**（main.tex:245--246）：全文自然对数，$\log(1+t)$ 指零点处的幂级数 $\sum_{k\ge 1}(-1)^{k-1}t^k/k$，收敛半径 1。插值替换中的 $\log$ 是形式级数，并非解析函数，代数框架内不需要收敛性讨论；这一约定保证 $Y=1+t$ 替换在 $\mathbb Z[[t]]$ 中合法。
+
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN15)=每个常数都许追溯到一个显式选取
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN8)=编号与共享计数器
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN15)=素材到底把哪几件事当成同级事实
+## D07-量子Heisenberg铁磁体自发磁化.md zoneL384-482 Q(LEN55)=每个维数 $d\ge3$ 与每个自旋 $S\in\{\tfrac12,1,\tfrac32,\ldots\}$
+   REL L95 sec=§11 filecnt=1 ratio=0.943 d=数 $d\ge 3$ 与每个 $S\in\{\tfrac12,1,\tfrac32,\ldots\}$
+       raw: 把结论当作一件工件来量。`00-introduction.tex:64--73` 给的陈述是：对每个整数 $d\ge 3$ 与每个 $S\in\{\tfrac12,1,\tfrac32,\ldots\}$，存在有限 $\beta_{0}(d,S)>0$，使对每个有限的 $\beta\ge\beta_{0}(d,S)$，由哈密顿量生成的动力学有一个平移不变 $\beta$-KMS 态 $\omega
+   REL L95 sec=§11 filecnt=1 ratio=0.935 d=数 $d\ge 3$ 与每个 $S\in\{\tfrac12,1,\tfrac32,\ldots\}$，
+       raw: 把结论当作一件工件来量。`00-introduction.tex:64--73` 给的陈述是：对每个整数 $d\ge 3$ 与每个 $S\in\{\tfrac12,1,\tfrac32,\ldots\}$，存在有限 $\beta_{0}(d,S)>0$，使对每个有限的 $\beta\ge\beta_{0}(d,S)$，由哈密顿量生成的动力学有一个平移不变 $\beta$-KMS 态 $\omega
+   REL L95 sec=§11 filecnt=1 ratio=0.933 d=数 $d\ge 3$ 与每个 $S\in\{\tfrac12,1,\tfrac32,\ldots\}
+       raw: 把结论当作一件工件来量。`00-introduction.tex:64--73` 给的陈述是：对每个整数 $d\ge 3$ 与每个 $S\in\{\tfrac12,1,\tfrac32,\ldots\}$，存在有限 $\beta_{0}(d,S)>0$，使对每个有限的 $\beta\ge\beta_{0}(d,S)$，由哈密顿量生成的动力学有一个平移不变 $\beta$-KMS 态 $\omega
+   REL L95 sec=§11 filecnt=1 ratio=0.933 d= $d\ge 3$ 与每个 $S\in\{\tfrac12,1,\tfrac32,\ldots\}$
+       raw: 把结论当作一件工件来量。`00-introduction.tex:64--73` 给的陈述是：对每个整数 $d\ge 3$ 与每个 $S\in\{\tfrac12,1,\tfrac32,\ldots\}$，存在有限 $\beta_{0}(d,S)>0$，使对每个有限的 $\beta\ge\beta_{0}(d,S)$，由哈密顿量生成的动力学有一个平移不变 $\beta$-KMS 态 $\omega
+   REL L95 sec=§11 filecnt=1 ratio=0.926 d=数 $d\ge 3$ 与每个 $S\in\{\tfrac12,1,\tfrac32,\ldots\}$，存
+       raw: 把结论当作一件工件来量。`00-introduction.tex:64--73` 给的陈述是：对每个整数 $d\ge 3$ 与每个 $S\in\{\tfrac12,1,\tfrac32,\ldots\}$，存在有限 $\beta_{0}(d,S)>0$，使对每个有限的 $\beta\ge\beta_{0}(d,S)$，由哈密顿量生成的动力学有一个平移不变 $\beta$-KMS 态 $\omega
+   REL L95 sec=§11 filecnt=1 ratio=0.925 d= $d\ge 3$ 与每个 $S\in\{\tfrac12,1,\tfrac32,\ldots\}$，
+       raw: 把结论当作一件工件来量。`00-introduction.tex:64--73` 给的陈述是：对每个整数 $d\ge 3$ 与每个 $S\in\{\tfrac12,1,\tfrac32,\ldots\}$，存在有限 $\beta_{0}(d,S)>0$，使对每个有限的 $\beta\ge\beta_{0}(d,S)$，由哈密顿量生成的动力学有一个平移不变 $\beta$-KMS 态 $\omega
+
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN9)=每个充分低的正温度
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN5)=问题被解决
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN15)=一个被填掉的口袋与一次外圈绕行
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN9)=内层填实、外层取满
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN11)=加厚以后取最大的那层壳
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN13)=把逐边流量重挂到存活路径上
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN5)=两点一空隙
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN18)=分量间距离至少 $9$ 保证两两不交
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN4)=出正入负
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN24)=[推测] 若用平面式分离论证则三维以上无可用曲面
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN8)=环把口袋完全包住
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN17)=两条路线绕同一个方格走到底边同一点
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN20)=首次正的 $\mathrm J$ 命中核
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN21)=对 $G_{\mathrm J}$ 取条件
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN6)=保留一步均值
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN8)=保留下一钉点均值
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN4)=两核相等
+## D07-量子Heisenberg铁磁体自发磁化.md zoneL384-482 Q(LEN5)=分母的正性
+   REL L105 sec=§12 filecnt=1 ratio=0.750 d=的正性
+       raw: 维数限制有严格根据，`00-introduction.tex:91--93` 用 Mermin--Wagner 排除一、二维有限温度铁磁（有限程各向同性）；`00-introduction.tex:95--97` 是 Fröhlich--Simon--Spencer 用红外界对经典连续自旋的低温有序；`00-introduction.tex:98--100` 是 Dyson--Lieb--Simo
+   REL L371 sec=§24 filecnt=1 ratio=0.750 d=分母的
+       raw: | $g_{n}\uparrow g_{\mathrm P}(\mathbf a)>0$ | 分母的单调与正性 | 03-exposure.tex:470 | 有限切比值的除法 | 较早下标不必正，只需尾部正 |
+
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN11)=绕到右下框的两条路一致
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN8)=为什么只比一阶矩
+## D07-量子Heisenberg铁磁体自发磁化.md zoneL384-482 Q(LEN26)=核的每次应用重采样相应区间的转移、不重复同一采样置换
+   REL L47 sec=§3 filecnt=1 ratio=0.889 d=的每次应用**重采样**相应区间转移、不重复同一采样置换
+       raw: 条件概率为正 ⇒ I−K_{QQ} 可逆；最后 det(I−tWA)=1−t·Tr(WA)+O(t²) 的**线性系数**给出 Tr(W·𝔼[Σ|G_J])=Tr(WH) 对一切 W，"提取线性系数"第二次出场（§2.5 拼接置换、这里提取均值）。**为何需要任意 W**：返回测试允许线从 i∈T 到另一个 T 点，返回数是 ΣΣΣ ，并非迹、对角矩不够。[推测] Markov 解释里 K 的每次
+   REL L47 sec=§3 filecnt=1 ratio=0.873 d=的每次应用**重采样**相应区间转移、不重复同一采样置换，
+       raw: 条件概率为正 ⇒ I−K_{QQ} 可逆；最后 det(I−tWA)=1−t·Tr(WA)+O(t²) 的**线性系数**给出 Tr(W·𝔼[Σ|G_J])=Tr(WH) 对一切 W，"提取线性系数"第二次出场（§2.5 拼接置换、这里提取均值）。**为何需要任意 W**：返回测试允许线从 i∈T 到另一个 T 点，返回数是 ΣΣΣ ，并非迹、对角矩不够。[推测] Markov 解释里 K 的每次
+   REL L47 sec=§3 filecnt=1 ratio=0.868 d=的每次应用**重采样**相应区间转移、不重复同一采样置
+       raw: 条件概率为正 ⇒ I−K_{QQ} 可逆；最后 det(I−tWA)=1−t·Tr(WA)+O(t²) 的**线性系数**给出 Tr(W·𝔼[Σ|G_J])=Tr(WH) 对一切 W，"提取线性系数"第二次出场（§2.5 拼接置换、这里提取均值）。**为何需要任意 W**：返回测试允许线从 i∈T 到另一个 T 点，返回数是 ΣΣΣ ，并非迹、对角矩不够。[推测] Markov 解释里 K 的每次
+   REL L47 sec=§3 filecnt=1 ratio=0.868 d=每次应用**重采样**相应区间转移、不重复同一采样置换
+       raw: 条件概率为正 ⇒ I−K_{QQ} 可逆；最后 det(I−tWA)=1−t·Tr(WA)+O(t²) 的**线性系数**给出 Tr(W·𝔼[Σ|G_J])=Tr(WH) 对一切 W，"提取线性系数"第二次出场（§2.5 拼接置换、这里提取均值）。**为何需要任意 W**：返回测试允许线从 i∈T 到另一个 T 点，返回数是 ΣΣΣ ，并非迹、对角矩不够。[推测] Markov 解释里 K 的每次
+   REL L47 sec=§3 filecnt=1 ratio=0.857 d=的每次应用**重采样**相应区间转移、不重复同一采样置换，这
+       raw: 条件概率为正 ⇒ I−K_{QQ} 可逆；最后 det(I−tWA)=1−t·Tr(WA)+O(t²) 的**线性系数**给出 Tr(W·𝔼[Σ|G_J])=Tr(WH) 对一切 W，"提取线性系数"第二次出场（§2.5 拼接置换、这里提取均值）。**为何需要任意 W**：返回测试允许线从 i∈T 到另一个 T 点，返回数是 ΣΣΣ ，并非迹、对角矩不够。[推测] Markov 解释里 K 的每次
+   REL L47 sec=§3 filecnt=1 ratio=0.852 d=每次应用**重采样**相应区间转移、不重复同一采样置换，
+       raw: 条件概率为正 ⇒ I−K_{QQ} 可逆；最后 det(I−tWA)=1−t·Tr(WA)+O(t²) 的**线性系数**给出 Tr(W·𝔼[Σ|G_J])=Tr(WH) 对一切 W，"提取线性系数"第二次出场（§2.5 拼接置换、这里提取均值）。**为何需要任意 W**：返回测试允许线从 i∈T 到另一个 T 点，返回数是 ΣΣΣ ，并非迹、对角矩不够。[推测] Markov 解释里 K 的每次
+
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN6)=只有均值相等
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN12)=置换被拼接成下一钉点映射
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN21)=为什么必须整批收 $\ell^2$ 个槽对
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN9)=端点置换与裹缝之后
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN5)=取后不取前
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN17)=一个钉点固定与它相交的每条环的颜色
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN11)=认出总磁化的整条谱分布
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN15)=只有避开钉点的环保留那个因子二
+## D07-量子Heisenberg铁磁体自发磁化.md zoneL384-482 Q(LEN40)=稠密边界引理结尾只主张支配常数依赖固定体积，把体积一致化全部推给末节的表面阶代价
+   REL L125 sec=§14 filecnt=1 ratio=0.952 d=稠密边界引理结尾特意只主张"支配常数依赖固定体积"，把体积一致化全部推给末节的表面阶代价
+       raw: 常数的许可依赖写在 `00-introduction.tex:291--293`：可依赖 $d$、$S$ 与显式固定的几何参数，不可依赖体积、pin 集、时间周期。这条纪律划出哪些引理真的承担体积一致性。[推测] 我在 §1 的稠密边界引理结尾特意只主张"支配常数依赖固定体积"，把体积一致化全部推给末节的表面阶代价 $C_{\beta,d,S}|\partial\Lambda_{N}|$，之所以能
+   REL L125 sec=§14 filecnt=1 ratio=0.941 d=的稠密边界引理结尾特意只主张"支配常数依赖固定体积"，把体积一致化全部推给末节的表面阶代价
+       raw: 常数的许可依赖写在 `00-introduction.tex:291--293`：可依赖 $d$、$S$ 与显式固定的几何参数，不可依赖体积、pin 集、时间周期。这条纪律划出哪些引理真的承担体积一致性。[推测] 我在 §1 的稠密边界引理结尾特意只主张"支配常数依赖固定体积"，把体积一致化全部推给末节的表面阶代价 $C_{\beta,d,S}|\partial\Lambda_{N}|$，之所以能
+   REL L125 sec=§14 filecnt=1 ratio=0.941 d=稠密边界引理结尾特意只主张"支配常数依赖固定体积"，把体积一致化全部推给末节的表面阶代价 
+       raw: 常数的许可依赖写在 `00-introduction.tex:291--293`：可依赖 $d$、$S$ 与显式固定的几何参数，不可依赖体积、pin 集、时间周期。这条纪律划出哪些引理真的承担体积一致性。[推测] 我在 §1 的稠密边界引理结尾特意只主张"支配常数依赖固定体积"，把体积一致化全部推给末节的表面阶代价 $C_{\beta,d,S}|\partial\Lambda_{N}|$，之所以能
+   REL L125 sec=§14 filecnt=1 ratio=0.940 d=稠密边界引理结尾特意只主张"支配常数依赖固定体积"，把体积一致化全部推给末节的表面阶代
+       raw: 常数的许可依赖写在 `00-introduction.tex:291--293`：可依赖 $d$、$S$ 与显式固定的几何参数，不可依赖体积、pin 集、时间周期。这条纪律划出哪些引理真的承担体积一致性。[推测] 我在 §1 的稠密边界引理结尾特意只主张"支配常数依赖固定体积"，把体积一致化全部推给末节的表面阶代价 $C_{\beta,d,S}|\partial\Lambda_{N}|$，之所以能
+   REL L125 sec=§14 filecnt=1 ratio=0.940 d=密边界引理结尾特意只主张"支配常数依赖固定体积"，把体积一致化全部推给末节的表面阶代价
+       raw: 常数的许可依赖写在 `00-introduction.tex:291--293`：可依赖 $d$、$S$ 与显式固定的几何参数，不可依赖体积、pin 集、时间周期。这条纪律划出哪些引理真的承担体积一致性。[推测] 我在 §1 的稠密边界引理结尾特意只主张"支配常数依赖固定体积"，把体积一致化全部推给末节的表面阶代价 $C_{\beta,d,S}|\partial\Lambda_{N}|$，之所以能
+   REL L125 sec=§14 filecnt=1 ratio=0.930 d= 的稠密边界引理结尾特意只主张"支配常数依赖固定体积"，把体积一致化全部推给末节的表面阶代价
+       raw: 常数的许可依赖写在 `00-introduction.tex:291--293`：可依赖 $d$、$S$ 与显式固定的几何参数，不可依赖体积、pin 集、时间周期。这条纪律划出哪些引理真的承担体积一致性。[推测] 我在 §1 的稠密边界引理结尾特意只主张"支配常数依赖固定体积"，把体积一致化全部推给末节的表面阶代价 $C_{\beta,d,S}|\partial\Lambda_{N}|$，之所以能
+
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN15)=只要求命中互异、容许边标签重复
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN10)=重采样对单次采样置换
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN5)=整条谱分布
+## D07-量子Heisenberg铁磁体自发磁化.md zoneL384-482 Q(LEN7)=这里没有一致界
+   REL L147 sec=§16 filecnt=1 ratio=0.727 d=里没有一
+       raw: 定义要精确：时刻 $t$ 一点被**阻挡**指它的 $\ell$ 个槽里没有一个是洞，记阻挡集为 $\mathcal O_{t}$（`04-sparse-geometry.tex:66--68`）。环境按 $\mathbb Z^{d}$ 延拓：$\Lambda$ 外所有槽都可用，边界点的槽也全部可用，理由是 $D_{0}\subseteq P$（`04-sparse-geometry.tex:68
+
+## D07-量子Heisenberg铁磁体自发磁化.md zoneL384-482 Q(LEN5)=只比一阶矩
+   REL L15 sec=§0 filecnt=9 ratio=0.750 d=一阶矩
+       raw: 这两个死坑决定了最终架构的分工：**正事件交给稳定多项式负相关（§2），一阶矩交给外幂恒等式（§3），两个代数工具各管一头，绝无混用**；平均自洽被逐事件的指数小界（同时 pin 测试）彻底绕开。
+   REL L37 sec=§3 filecnt=9 ratio=0.750 d=一阶矩
+       raw: ## 3. 暴露路径与单粒子返回恒等式（§3）：一阶矩由外幂管
+   REL L43 sec=§3 filecnt=9 ratio=0.750 d=一阶矩
+       raw: **条件下次 pin 一阶矩（Proposition 3.5），外幂恒等式 det(I−B)=Σ(−1)^k tr∧^k B 的完整链条**：取 D=diag(W,I_Q)，𝔼det(I−DΠ)=Σ(−1)^kTr(∧^kD·𝔼∧^kΠ)=det(I−DK)（期望移入）；逐图分块消去：完全落在 Q 内的环，指示向量 v 满足 DΠv=v（对**任意 W**）⇒ 行列式为零；在 G_J 上 Π_QQ
+   REL L47 sec=§3 filecnt=9 ratio=0.750 d=一阶矩
+       raw: 条件概率为正 ⇒ I−K_{QQ} 可逆；最后 det(I−tWA)=1−t·Tr(WA)+O(t²) 的**线性系数**给出 Tr(W·𝔼[Σ|G_J])=Tr(WH) 对一切 W，"提取线性系数"第二次出场（§2.5 拼接置换、这里提取均值）。**为何需要任意 W**：返回测试允许线从 i∈T 到另一个 T 点，返回数是 ΣΣΣ ，并非迹、对角矩不够。[推测] Markov 解释里 K 的每次
+   REL L83 sec=§8 filecnt=9 ratio=0.750 d=一阶矩
+       raw: 中点亲和/BPP/octopus（弃）→ 二元树见证 (4.3)；Tóth 重建 → 对称槽环 (1.1–1.2)；**平均连通性自洽失败** → 逐事件 pin 测试 (2.2)；**符号 minors 失败** → 稳定多项式 (2.6) 管正事件、外幂 (3.3) 管一阶矩；无权重 interchange 失败 → 权重 2 的 pin 律+阶乘控制 (1.4)；trap walls → h
+   REL L91 sec=§10 filecnt=9 ratio=0.750 d=一阶矩
+       raw: 这个证明是"两个死坑决定了整个架构"的范例。第一个死坑（平均量自洽对任意相分数有解）杀掉了所有基于平均连通性的方案，逼我转向**逐事件的指数小界**，同时 pin 测试的 (2r)^m，其中 2^m 是测度比较的代价、r^m 是负相关的收益，两者分离后才看清参数 $p$ 的降序归纳怎么闭合。第二个死坑（符号 minors 不控制正事件）本可能杀掉全部代数路线，但它实际上只是划了一条分工线：**负相
+
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN10)=这一句的理由素材没写
+-- D07-量子Heisenberg铁磁体自发磁化.md noREL Q(LEN8)=证明集中在引理上
+-- D08-Mezard-Parisi公式.md noREL Q(LEN18)=行内代码的闭合反引号误写成美元定界符
+## D08-Mezard-Parisi公式.md zoneL1126-1135 Q(LEN5)=论文没讨论
+   REL L1058 sec=§15 filecnt=1 ratio=0.889 d=论没讨论
+       raw: **障碍句与骨架段。** 障碍段（`sections/introduction.tex:65-73`）：每个副本-自旋模式的概率依赖所有这些自旋的每一子集的乘积，其空间平均即多重叠，两两重叠定不出全部模式（`sections/introduction.tex:66-70`）；任务句要求在重画消息根之前控制所有有限多重叠（`sections/introduction.tex:71-73`）。我把这句
+   REL L193 sec=§1 filecnt=3 ratio=0.750 d=论文没
+       raw: 空腔场递归。论文没有把这个递归单独立名，它藏在 $q_x$ 与 $\frac12\sum_\varepsilon$ 的形式里，我把它推出来核对：一个位点在给定入现场 $\{x_\ell^j\}$ 与新自旋 $\varepsilon$ 下的对数权重是 $A_\varepsilon=h\varepsilon+\sum_jU_{\theta_j}(x_1^j,\ldots,x_{p-1}^j;\vare
+   REL L408 sec=§2 filecnt=3 ratio=0.750 d=论文没
+       raw: （b）中间步骤。新分支顶点"恰在下一条路径于 unary 顶点分叉时产生"，该选择概率按 `tree:Q-rule` 是 $(1\cdot m_{d+1}-m_d)/n=\delta/n$；某一深度上至多 $n$ 个顶点，所以对深度集 $B$，下一步在 $B$ 中造分支顶点的概率 $\le|B|\delta$（`trees:487-492`）。前 $k-1$ 步的禁区由"边界深度 $\le2\et
+   REL L1058 sec=§15 filecnt=1 ratio=0.750 d=没讨论
+       raw: **障碍句与骨架段。** 障碍段（`sections/introduction.tex:65-73`）：每个副本-自旋模式的概率依赖所有这些自旋的每一子集的乘积，其空间平均即多重叠，两两重叠定不出全部模式（`sections/introduction.tex:66-70`）；任务句要求在重画消息根之前控制所有有限多重叠（`sections/introduction.tex:71-73`）。我把这句
+   REL L1058 sec=§15 filecnt=1 ratio=0.750 d=论没讨
+       raw: **障碍句与骨架段。** 障碍段（`sections/introduction.tex:65-73`）：每个副本-自旋模式的概率依赖所有这些自旋的每一子集的乘积，其空间平均即多重叠，两两重叠定不出全部模式（`sections/introduction.tex:66-70`）；任务句要求在重画消息根之前控制所有有限多重叠（`sections/introduction.tex:71-73`）。我把这句
+   REL L1080 sec=§17 filecnt=3 ratio=0.750 d=论文没
+       raw: **两条展开规则与 $Q_k$。** 叶子若在树密度里的因子 $A^a$ 被分母 $A^a$ 消去则称受保护（`sections/trees.tex:180-183`）；对 $\log W_{\mathcal T}(A)$ 求导拆成叶项 $\sum_a D_j^a/A^a$ 加内部项 $\sum_\beta\gamma_\beta\,\partial_{t_j}\log Y_\beta$（第 18
+
+-- D08-Mezard-Parisi公式.md noREL Q(LEN9)=有界加置换不变就够
+-- D10-自由群因子同构.md noREL Q(LEN5)=其他队列第
+-- D10-自由群因子同构.md noREL Q(LEN8)=已落盘内容不回改
+-- D111-复群环的Bass迹猜想：滤链手术与右射影消没的反推笔记.md noREL Q(LEN9)=水平取值为一般位置
+-- D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md noREL Q(LEN26)=第 984 行之后减 1，第 1206 行之后减 2
+-- D197-素数自变量多项式差的幂节省.md noREL Q(LEN26)=符号、数值或增长率、位置、被谁消费、若改动断在哪一步
+-- D197-素数自变量多项式差的幂节省.md noREL Q(LEN9)=表共 36 数据行
+-- D197-素数自变量多项式差的幂节省.md noREL Q(LEN8)=谁消费、断了在哪
+-- D197-素数自变量多项式差的幂节省.md noREL Q(LEN10)=追加说明（接手写手）
+-- D197-素数自变量多项式差的幂节省.md noREL Q(LEN9)=表共 66 数据行
+-- D197-素数自变量多项式差的幂节省.md noREL Q(LEN7)=上表 66 行
+-- D197-素数自变量多项式差的幂节省.md noREL Q(LEN10)=现有 71 个数据行
+-- D197-素数自变量多项式差的幂节省.md noREL Q(LEN5)=禁串零命中
+## D213-邻近拉格朗日猜想的稳定管类反例.md zoneL166-240 Q(LEN6)=反例去哪维找
+   REL L41 sec=§3 filecnt=1 ratio=0.800 d=去哪维找
+       raw: `[推测]` 这一段整体是重构的复现思路，文本证据只有两处：其一，introduction.tex 第 49 到 54 行专门提了 Hind 的 $T^*S^2$ 球定理与 DGI 环面定理，并说「三者加上闭曲面分类给出 $S^2$ 上的闭恰情形」；其二，全篇的核类住在 $\pi_9\mathbf T$。低维正结果清单等于一份「反例该去哪维找」的排除表。
+
+## D213-邻近拉格朗日猜想的稳定管类反例.md zoneL166-240 Q(LEN6)=通过所有检查
+   REL L164 sec=§13 filecnt=1 ratio=0.800 d=通过所有
+       raw: 最后收个尾：把这篇笔记与 §1 的初始动机对照，最终路线与第一感的偏差其实只有一处、但很本质。我最初（§1 的三段式）以为难点均匀分布在「构造」与「输运」两端；读完承认构造端（§9 的耦合设计）是行活密度高但思路straightforward的一章，真正的重量全部压在「单临界点排除」（§6 到 §8）这架三层流水线上，而它存在的理由来自一个起初我没意识到的不对称：零截面端的信息（每纤维一个非退化临
+
+## D213-邻近拉格朗日猜想的稳定管类反例.md zoneL166-240 Q(LEN7)=看不见 $a$
+   REL L54 sec=§4 filecnt=6 ratio=0.727 d= $a$
+       raw: 约束一（携带性）：需要一个紧空间族 $b\in B$ 的二次齐次无穷远数据，其稳定管类非零。这由 $\pi_9\mathbf T$ 里的核类 $a$ 提供，$B=S^9$。管类在哈密顿小步输运下按固定方式变化：每一步加一对分裂变量，即直和上一个符号 $(d,d)$ 的二次型，稳定化之后类保持不变。这正是 transport.tex 第 7 到 15 行自述的「经典 Chaperon 式策略」：小步
+   REL L58 sec=§4 filecnt=6 ratio=0.727 d= $a$
+       raw: 约束三（可实现性）：核类 $a$ 必须能被一个真实的光滑 Morse 族实现，且其生成映射是嵌入。这是 embedding.tex 的任务，逼出 $Q=S^9\times S^{N-1}$ 的双因子结构。
+   REL L72 sec=§5 filecnt=6 ratio=0.727 d= $a$
+       raw: 命题 5.2 的计数是全文我最想抄进自己工具箱的部分。长正合列片段（第 181 到 185 行）：$\pi_{10}\mathbf T\to\pi_{10}BG\xrightarrow{\partial}\pi_9\mathbf H^s(*)\to\pi_9\mathbf T\xrightarrow{\gamma_*}\pi_9BG$。三股力量夹逼：其一，$\pi_{10}BO$ 的像（$J_9$
+   REL L122 sec=§9 filecnt=6 ratio=0.727 d= $a$
+       raw: 我合卷复盘这个猜测是怎么长出来的。耦合项 $\langle v,w\rangle$ 对 $w$ 线性、系数 $-R(b)v$，于是竖直临界方程 $\nabla_wF=0$ 在内区恰是 $\nabla g_b(w)=R(b)v$：球因子 $v$ 被设计成「竖直梯度的方向记录仪」，这正是文件开头第 3 到 6 行预告的机制。$\beta$ 的作用是把这根耦合在 $\lVert w\rVert\ge2T
+   REL L148 sec=§11 filecnt=6 ratio=0.727 d= $a$
+       raw: 主定理收尾（第 471 到 544 行）把量词顺序写得近乎偏执，我原样记账：分割 $0=t_0<\cdots<t_s=1$ 由混合坐标条件与空间缓冲条件固定，这两个条件只依赖 Hamiltonian 与其支撑；每步新产生的常数（对数截止、平滑参数、外半径）只影响该步之后的截止选取，对步长不施加任何新要求，于是有限步全部走得通、半径每步可重新任命。终点族 $F^{(s)}:U\times\R^{2p
+   REL L152 sec=§12 filecnt=6 ratio=0.727 d= $a$
+       raw: 把 §5 到 §11 合起来检验一遍「反例质量」：对这条 $L$，投影的同伦论信息全部及格。Abouzaid 与 Kragh 的简单同伦等价（introduction.tex 第 60 到 65 行）只约束 $\pi\colon L\to Q$ 的同伦类，而 $L\cong Q$ 且生成族实现给出的参数化让投影是同胚级别的標準件。ACGK 的稳定拉格朗日 Gauss 映射零性、AACK 的法挠量 
+
+-- D213-邻近拉格朗日猜想的稳定管类反例.md noREL Q(LEN7)=左竖线配左竖线
+-- D213-邻近拉格朗日猜想的稳定管类反例.md noREL Q(LEN10)=在紧穷举集上逐次扰动
+-- D213-邻近拉格朗日猜想的稳定管类反例.md noREL Q(LEN4)=巧妙之处
+## D213-邻近拉格朗日猜想的稳定管类反例.md zoneL166-240 Q(LEN6)=2-主部血统
+   REL L72 sec=§5 filecnt=2 ratio=0.800 d=2-主部
+       raw: 命题 5.2 的计数是全文我最想抄进自己工具箱的部分。长正合列片段（第 181 到 185 行）：$\pi_{10}\mathbf T\to\pi_{10}BG\xrightarrow{\partial}\pi_9\mathbf H^s(*)\to\pi_9\mathbf T\xrightarrow{\gamma_*}\pi_9BG$。三股力量夹逼：其一，$\pi_{10}BO$ 的像（$J_9$
+   REL L152 sec=§12 filecnt=2 ratio=0.800 d=2-主部
+       raw: 把 §5 到 §11 合起来检验一遍「反例质量」：对这条 $L$，投影的同伦论信息全部及格。Abouzaid 与 Kragh 的简单同伦等价（introduction.tex 第 60 到 65 行）只约束 $\pi\colon L\to Q$ 的同伦类，而 $L\cong Q$ 且生成族实现给出的参数化让投影是同胚级别的標準件。ACGK 的稳定拉格朗日 Gauss 映射零性、AACK 的法挠量 
+
+-- D213-邻近拉格朗日猜想的稳定管类反例.md noREL Q(LEN8)=微分同胚onto
+## D213-邻近拉格朗日猜想的稳定管类反例.md zoneL166-240 Q(LEN11)=对照表放在 §1 末尾
+   REL L7 sec=§0 filecnt=1 ratio=0.778 d=在 §1 末尾
+       raw: 取材范围限定在该目录 build 下的 tex 文件：main.tex、preamble.tex、sections 下的六个章节文件和 figures 下的两个 tikz 分片。所有公式、常数和引用编号都能在正文里找到出处，找不到的我会标 `[推测]` 并解释缺口在哪。文中标号 §N 与论文章节号的对应关系，我在 §1 末尾列了一张对照，后文引用一律走这张表。
+   REL L7 sec=§0 filecnt=1 ratio=0.737 d=在 §1 末尾列
+       raw: 取材范围限定在该目录 build 下的 tex 文件：main.tex、preamble.tex、sections 下的六个章节文件和 figures 下的两个 tikz 分片。所有公式、常数和引用编号都能在正文里找到出处，找不到的我会标 `[推测]` 并解释缺口在哪。文中标号 §N 与论文章节号的对应关系，我在 §1 末尾列了一张对照，后文引用一律走这张表。
+
+-- D213-邻近拉格朗日猜想的稳定管类反例.md noREL Q(LEN47)=$F|_{\operatorname{Crit}(F)}=-g_b(w)$，Euler 原函数
+-- D213-邻近拉格朗日猜想的稳定管类反例.md noREL Q(LEN45)=$F$ 限制到 $\operatorname{Crit}(F)$ 等于 $-g_b(w)$
+## D213-邻近拉格朗日猜想的稳定管类反例.md zoneL166-240 Q(LEN8)=邻近平凡拉格朗日
+   REL L1 sec=§pre filecnt=3 ratio=0.857 d=邻近拉格朗日
+       raw: # D213 邻近拉格朗日猜想的稳定管类反例：一份第一人称研究笔记
+   REL L5 sec=§0 filecnt=3 ratio=0.857 d=邻近拉格朗日
+       raw: 这篇笔记对应队列里那份 2026 年 9 月 23 日挂出的预印本，题目直译是「邻近拉格朗日猜想的一个反例」。我的工作方式照旧：把自己放进作者的脑子，从论文的定理陈述、引理排布和证明里那些刻意留下的缝隙，反推真实的探索顺序。论文本身是 smoothed 的成品，它把六条线索拧成一条直线：稳定管空间的核类、单一临界点族的排除、嵌入实现、哈密顿输运、最后的矛盾。我复原的是拧之前散开的线头。
+   REL L17 sec=§1 filecnt=3 ratio=0.857 d=邻近拉格朗日
+       raw: 邻近拉格朗日猜想的现代表述写在 introduction.tex 第 9 到 11 行：对闭连通光滑流形 $Q$，$T^*Q$ 里每条闭恰光滑嵌入拉格朗日子流形是否都哈密顿等距到零截面。条件里有三个独立的方向可以松：嵌入还是浸入，恰还是单调，$Q$ 加不加拓扑假设。既往的正结果基本在往「加更多假设」的方向收，Abouzaid、Kragh、Fukaya-Seidel-Smith、Nadler 一条线
+   REL L1 sec=§pre filecnt=3 ratio=0.769 d=近拉格朗日
+       raw: # D213 邻近拉格朗日猜想的稳定管类反例：一份第一人称研究笔记
+   REL L1 sec=§pre filecnt=3 ratio=0.769 d=邻近拉格朗
+       raw: # D213 邻近拉格朗日猜想的稳定管类反例：一份第一人称研究笔记
+   REL L5 sec=§0 filecnt=3 ratio=0.769 d=近拉格朗日
+       raw: 这篇笔记对应队列里那份 2026 年 9 月 23 日挂出的预印本，题目直译是「邻近拉格朗日猜想的一个反例」。我的工作方式照旧：把自己放进作者的脑子，从论文的定理陈述、引理排布和证明里那些刻意留下的缝隙，反推真实的探索顺序。论文本身是 smoothed 的成品，它把六条线索拧成一条直线：稳定管空间的核类、单一临界点族的排除、嵌入实现、哈密顿输运、最后的矛盾。我复原的是拧之前散开的线头。
+
+-- D225-高标记数下的Pixton完备性Chow反例.md noREL Q(LEN11)=真正给我校准的另有其句
+## D225-高标记数下的Pixton完备性Chow反例.md zoneL392-399,455-482 Q(LEN16)=而另外，成员资格的判决留在形式层
+   REL L372 sec=§29 filecnt=1 ratio=0.720 d=成员资格留在形式层
+       raw: 于是两段式的判决结构更清楚了：$\mathcal{P}_{g,n}$ 之外的断言只在 $S_{g,n}$ 内部有意义，靠 §4 到 §7 的外代数检测器读值；消失的断言跨到几何侧，靠 §9 到 §13 的忠实 Chow 模型与 §14 到 §15 的紧化搬运。上同调版结论是后一半的推论，前一半对它毫不依赖。`01-introduction.tex:126-128` 这句非成员资格留在形式层，我读作
+
+-- D225-高标记数下的Pixton完备性Chow反例.md noREL Q(LEN4)=第几弯路
+## D225-高标记数下的Pixton完备性Chow反例.md zoneL392-399,455-482 Q(LEN5)=第几条错路
+   REL L7 sec=§0 filecnt=1 ratio=0.750 d=几条路
+       raw: 抽象页（`main.tex` 第 61--67 行）把结论压成一句话：在 genus $10^{60}$、标记数 $3\binom{10^{60}}{3}$ 的稳定对上，构造出一个落在原始 Pixton 关系张成之外、而像在有理 Chow 环与有理上同调里都为零的形式 tautological 类，由此否定 Pixton 完备性猜想的 Chow 形式与有理上同调形式。这份笔记以第一人称反推这篇论文
+   REL L39 sec=§3 filecnt=6 ratio=0.750 d=条错路
+       raw: ## §3 第一条错路：在低亏格与固定标记数里翻找
+   REL L87 sec=§8 filecnt=6 ratio=0.750 d=条错路
+       raw: ## §8 第二条错路：想用配对图和上同调把消失糊过去
+   REL L89 sec=§8 filecnt=6 ratio=0.750 d=条错路
+       raw: [推测] 从形式分支转去攻消失时，我先把最容易的武器拿了起来：对应代数的配对图微积分。曲线对象 $\mathbb Q 1\oplus H_C\oplus \mathbb Q e$ 的双曲-辛分解在数值上完全由配对决定，任何只用"配对收缩"的论证给 $\varphi$ 的奇系数乘积提供了一个看似自然的舞台：把每个投影小对角线换成 Frobenius 代数里的三次结构常数，乘开，用 Wick 式收缩归
+   REL L91 sec=§8 filecnt=6 ratio=0.750 d=条错路
+       raw: 三条死路合并成一条方法论：需要一个"忠实"的系数模型，它把曲线幂之间一切真实的 Chow 对应都无损地装进去，包括同调实现看不见的部分；再在这个模型之外找一个只有真实几何才给的额外恒等式。忠实的部分由 `04-tensors.tex` 完成，额外恒等式由 `05-quot.tex` 的曲面 Quot 提供。[推测] 回过头看，第二条错路的遗产是把证明的目标从"计算一个交数"改写成了"证明一条族上的
+   REL L278 sec=§20 filecnt=6 ratio=0.750 d=条错路
+       raw: [推测] 我最初想把两套代数合成一套，理由是"读值的代数与消失的代数同一化，判决链最短"，素材里没记载这个中间版本，所以这条错路是我按结论的形状反推的；它反推得出来，因为论文在两处都特意把 $R$ 与 $\mathfrak{B}$ 分开写，而分开通常意味着合过的尝试在先。合成路线在检测器构造里当场断掉。`01-introduction.tex:174-188` 的规则是丢掉有理尾轨迹之外的图、用 
+
+-- D225-高标记数下的Pixton完备性Chow反例.md noREL Q(LEN6)=系数挠层构造
+-- D225-高标记数下的Pixton完备性Chow反例.md noREL Q(LEN17)=而把它记作成像，不记作某个同构副本
+-- D286-自由群因子的同构一个小余圈吞掉额外生成元.md noREL Q(LEN13)=上游数值被哪个正式命题吃掉
+-- D286-自由群因子的同构一个小余圈吞掉额外生成元.md noREL Q(LEN20)=该数值若被替换，构造链上第一个失效的环节
+-- D296-粗糙化阈端的高度普适性与低温平面自旋场极限.md noREL Q(LEN23)=先否定一个做法、再用两字转折连接词引出替代做法
+-- D296-粗糙化阈端的高度普适性与低温平面自旋场极限.md noREL Q(LEN26)=那里该写成，放弃去证它，改成像这里一样换成另一套做法
+## D296-粗糙化阈端的高度普适性与低温平面自旋场极限.md zoneL550-563,564-575 Q(LEN5)=该项零命中
+   REL L213 sec=§18 filecnt=3 ratio=0.750 d=零命中
+       raw: 按类别逐项自检，不复述任何禁串原文。一、转折连接类：正文命中两处、勘误节因逐字引述再各叠加一处，共四个命中点，均已在 §17 登记行号，处置为保留加申报，无其他改写手段。二、四字过渡套语类：以类别名自查，全文零命中，行文用的是"我注意到""我读到时""我合上这节时的结论"这类具体动作短语，每个都挂着出处行号，不承担空洞过渡职能。三、长停顿号类：全文零命中，人名一律双连字符拼写，数值区间一律半角连字
+   REL L546 sec=§33 filecnt=3 ratio=0.750 d=零命中
+       raw: 四项闸门的自测结果：全文字节 151,620，定界符总数 4,080（本批增量 2,568），五列台账数据行 90，转折连接类、过渡套语类、长停顿号类经逐类检索均为零命中；台账每行竖线数与定界符逐行奇偶在收工时按逐行脚本复核，结果只写进交付报告，不在本节抄录任何被检出的字形。
+
+-- D296-粗糙化阈端的高度普适性与低温平面自旋场极限.md noREL Q(LEN7)=只申报、不回改
+## D339-平面XY模型临界中心磁化的对数修正与振幅确定.md zoneL370-385 Q(LEN30)=$1/(2j\log L)$ 里 $2\log L$ 的来源
+   REL L248 sec=§15 filecnt=1 ratio=0.931 d=$1/(2j\log L)$ 里的 $2\log L$ 
+       raw: 差异 1：把对数因子当作"$u$--流的一个二次项积累"。最初我以为：$t_j$ 从"某个初值 $t_0$"沿 $t_{j+1} - t_j \approx -H t_j^2$ 型方程走，直接积分得 $1/j$；论文里 $u$--流确实是二次的（$\tilde u_{j+1} - u_j = -H_j Z_j^2 + \dots$），但主导系数 $1/(2j\log L)$ 里的 $2\log L
+   REL L248 sec=§15 filecnt=1 ratio=0.915 d= $1/(2j\log L)$ 里的 $2\log L$ 
+       raw: 差异 1：把对数因子当作"$u$--流的一个二次项积累"。最初我以为：$t_j$ 从"某个初值 $t_0$"沿 $t_{j+1} - t_j \approx -H t_j^2$ 型方程走，直接积分得 $1/j$；论文里 $u$--流确实是二次的（$\tilde u_{j+1} - u_j = -H_j Z_j^2 + \dots$），但主导系数 $1/(2j\log L)$ 里的 $2\log L
+   REL L248 sec=§15 filecnt=1 ratio=0.912 d=$1/(2j\log L)$ 里的 $2\log L$
+       raw: 差异 1：把对数因子当作"$u$--流的一个二次项积累"。最初我以为：$t_j$ 从"某个初值 $t_0$"沿 $t_{j+1} - t_j \approx -H t_j^2$ 型方程走，直接积分得 $1/j$；论文里 $u$--流确实是二次的（$\tilde u_{j+1} - u_j = -H_j Z_j^2 + \dots$），但主导系数 $1/(2j\log L)$ 里的 $2\log L
+   REL L248 sec=§15 filecnt=1 ratio=0.912 d=1/(2j\log L)$ 里的 $2\log L$ 
+       raw: 差异 1：把对数因子当作"$u$--流的一个二次项积累"。最初我以为：$t_j$ 从"某个初值 $t_0$"沿 $t_{j+1} - t_j \approx -H t_j^2$ 型方程走，直接积分得 $1/j$；论文里 $u$--流确实是二次的（$\tilde u_{j+1} - u_j = -H_j Z_j^2 + \dots$），但主导系数 $1/(2j\log L)$ 里的 $2\log L
+   REL L248 sec=§15 filecnt=1 ratio=0.900 d=数 $1/(2j\log L)$ 里的 $2\log L$ 
+       raw: 差异 1：把对数因子当作"$u$--流的一个二次项积累"。最初我以为：$t_j$ 从"某个初值 $t_0$"沿 $t_{j+1} - t_j \approx -H t_j^2$ 型方程走，直接积分得 $1/j$；论文里 $u$--流确实是二次的（$\tilde u_{j+1} - u_j = -H_j Z_j^2 + \dots$），但主导系数 $1/(2j\log L)$ 里的 $2\log L
+   REL L248 sec=§15 filecnt=1 ratio=0.900 d=$1/(2 j \log L)$ 里的 $2\log L$ 
+       raw: 差异 1：把对数因子当作"$u$--流的一个二次项积累"。最初我以为：$t_j$ 从"某个初值 $t_0$"沿 $t_{j+1} - t_j \approx -H t_j^2$ 型方程走，直接积分得 $1/j$；论文里 $u$--流确实是二次的（$\tilde u_{j+1} - u_j = -H_j Z_j^2 + \dots$），但主导系数 $1/(2j\log L)$ 里的 $2\log L
+
+-- D339-平面XY模型临界中心磁化的对数修正与振幅确定.md noREL Q(LEN4)=讲白一点
+-- D339-平面XY模型临界中心磁化的对数修正与振幅确定.md noREL Q(LEN16)=区间用 `-`、人名用 `--`
+-- D339-平面XY模型临界中心磁化的对数修正与振幅确定.md noREL Q(LEN12)=单元格内不出现裸 `|`
+-- D339-平面XY模型临界中心磁化的对数修正与振幅确定.md noREL Q(LEN8)=每行 6 个竖线
+-- D339-平面XY模型临界中心磁化的对数修正与振幅确定.md noREL Q(LEN7)=装饰性加粗列表
+-- D339-平面XY模型临界中心磁化的对数修正与振幅确定.md noREL Q(LEN4)=术语命名
+-- D342-临界SK模型单点热浴混合的多项式指数.md noREL Q(LEN7)=独占行的裸公式
+-- D342-临界SK模型单点热浴混合的多项式指数.md noREL Q(LEN5)=帽状谱截断
+-- D342-临界SK模型单点热浴混合的多项式指数.md noREL Q(LEN7)=某量是甲型乙型
+-- D342-临界SK模型单点热浴混合的多项式指数.md noREL Q(LEN18)=行内代码跨度的闭合反引号误打成定界符
+-- D342-临界SK模型单点热浴混合的多项式指数.md noREL Q(LEN9)=引号后孤立开定界符
+## D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md zoneL837-850,925-946,947-981,982-1007 Q(LEN4)=本单位置
+   REL L28 sec=§0 filecnt=1 ratio=0.857 d=本单位
+       raw: 本单位于其他队列的行号：其他队列第 180 行号
+
+## D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md zoneL837-850,925-946,947-981,982-1007 Q(LEN8)=并非随手写的松界
+   REL L873 sec=§? filecnt=1 ratio=0.857 d=随手写的松界
+       raw: 这说明 `05-global.tex:263-266` 的那个大分数不是随手写的松界，是把 $J\le34/\tau$ 与 $\gamma_0=12.5\theta$ 的乘积算满后的精确值，
+   REL L873 sec=§? filecnt=1 ratio=0.769 d=手写的松界
+       raw: 这说明 `05-global.tex:263-266` 的那个大分数不是随手写的松界，是把 $J\le34/\tau$ 与 $\gamma_0=12.5\theta$ 的乘积算满后的精确值，
+   REL L873 sec=§? filecnt=1 ratio=0.769 d=随手写的松
+       raw: 这说明 `05-global.tex:263-266` 的那个大分数不是随手写的松界，是把 $J\le34/\tau$ 与 $\gamma_0=12.5\theta$ 的乘积算满后的精确值，
+
+-- D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md noREL Q(LEN10)=其余各项检索为零命中
+-- D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md noREL Q(LEN11)=共 15 个二级节标题
+-- D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md noREL Q(LEN14)=勘误（续）起于第 956 行
+-- D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md noREL Q(LEN13)=附录在第 881 行前后起
+-- D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md noREL Q(LEN8)=97 行一级之外
+-- D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md noREL Q(LEN9)=除首行一级标题之外
+-- D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md noREL Q(LEN6)=表述晦涩申报
+-- D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md noREL Q(LEN11)=全稿 97 行一级之外
+-- D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md noREL Q(LEN11)=全稿除首行一级标题之外
+-- D357-盘转移表示与受限桥质量.md noREL Q(LEN13)=作单项式和的 ansatz
+## D357-盘转移表示与受限桥质量.md zoneL346-360 Q(LEN11)=见 §13 与 §16
+   REL L297 sec=§23 filecnt=1 ratio=0.870 d= §13 上界与 §16
+       raw: | $T(v,D)\asymp\sum_{f}Z(D;f)$ | 嵌套访问比较 | build/sections/visits.tex:44 | §13 上界与 §16 上界 | 桥一阶矩上侧断 |
+   REL L297 sec=§23 filecnt=1 ratio=0.833 d= §13 上界与 §16 
+       raw: | $T(v,D)\asymp\sum_{f}Z(D;f)$ | 嵌套访问比较 | build/sections/visits.tex:44 | §13 上界与 §16 上界 | 桥一阶矩上侧断 |
+   REL L297 sec=§23 filecnt=1 ratio=0.818 d= §13 上界与 §1
+       raw: | $T(v,D)\asymp\sum_{f}Z(D;f)$ | 嵌套访问比较 | build/sections/visits.tex:44 | §13 上界与 §16 上界 | 桥一阶矩上侧断 |
+   REL L297 sec=§23 filecnt=1 ratio=0.818 d=§13 上界与 §16
+       raw: | $T(v,D)\asymp\sum_{f}Z(D;f)$ | 嵌套访问比较 | build/sections/visits.tex:44 | §13 上界与 §16 上界 | 桥一阶矩上侧断 |
+   REL L297 sec=§23 filecnt=1 ratio=0.800 d= §13 上界与 §16 上
+       raw: | $T(v,D)\asymp\sum_{f}Z(D;f)$ | 嵌套访问比较 | build/sections/visits.tex:44 | §13 上界与 §16 上界 | 桥一阶矩上侧断 |
+   REL L297 sec=§23 filecnt=1 ratio=0.783 d=§13 上界与 §16 
+       raw: | $T(v,D)\asymp\sum_{f}Z(D;f)$ | 嵌套访问比较 | build/sections/visits.tex:44 | §13 上界与 §16 上界 | 桥一阶矩上侧断 |
+
+## D358-Donovan猜想在素域代数闭包上的证明.md zoneL144-157,220-223,248-251,252-255,272-275 Q(LEN5)=这样的块并
+   REL L107 sec=§6 filecnt=2 ratio=0.750 d=这样的
+       raw: 穷尽与范数两步（我已读完 06:944-1018）。穷尽推论：块并中每个单模都是某个按 `end:rho` 构造的对 $(L,\rho)$ 的 $R_L^G\rho$ 的商（`build/sections/06_endpoint.tex:955-960`）。证明路径：$\rho$ 的 Brauer 类是标记参数处分拆行的整组合；每个这样的普通行都出现在某 $R_{L'}^L\psi'$ 里（普通线
+   REL L124 sec=§8 filecnt=2 ratio=0.750 d=这样的
+       raw: 技术前提有一条 Frobenius 延拓：把 Witt Frobenius 延到 $\operatorname{Frac}(\mathcal O)$ 的代数闭包并要求它固定一切 $p$-幂单位根；这样的延拓存在，因为这些根生成的分圆扩张全分歧而 $\mathcal O$ 非分歧（引 Farrell--Kessar 引理 2.2）；对阶与 $p$ 互素的单位根它就是 $p$ 次幂映射（`build/
+
+## D358-Donovan猜想在素域代数闭包上的证明.md zoneL144-157,220-223,248-251,252-255,272-275 Q(LEN8)=定义（比较性质）
+   REL L142 sec=§10 filecnt=2 ratio=0.769 d=（比较性质
+       raw: 写到这里我可以把出发时与完成时的图景对齐。出入一：出发时我以为这是一台机器（统一重数估计）加已知归约的组合，完成时是两台正交机器：一台把 PIM 范数界住（几何、runner、端点三段接力），一台把乘法表与下降数据钉住（比较性质、Picard 有限、Lang、Sylow 限制）；前者输出维数界，后者输出定义域界（`build/sections/00_introduction.tex:146-151
+
+-- D358-Donovan猜想在素域代数闭包上的证明.md noREL Q(LEN12)=generic 代数可分
+-- D358-Donovan猜想在素域代数闭包上的证明.md noREL Q(LEN10)=限制不可约的度数计算
+-- D358-Donovan猜想在素域代数闭包上的证明.md noREL Q(LEN9)=连引用都不许写出来
+-- D359-把单位代价编辑距离压进l1：指数内常数外的匹配夹逼.md noREL Q(LEN32)=成稿把 Fourier/cut 论证打包成一条可反复套用的不等式
+-- D359-把单位代价编辑距离压进l1：指数内常数外的匹配夹逼.md noREL Q(LEN8)=连引用都不写出来
+-- D359-把单位代价编辑距离压进l1：指数内常数外的匹配夹逼.md noREL Q(LEN25)=$\delta$ 至多除动少于 $b/2$ 个素数
+## D359-把单位代价编辑距离压进l1：指数内常数外的匹配夹逼.md zoneL651-668,669-722 Q(LEN37)=使 $\sum_j\omega_j=\frac12$ 且第 1 分量占大头
+   REL L443 sec=§11 filecnt=1 ratio=0.972 d=使 $\sum\omega_j=\frac12$ 且第 1 分量占大头
+       raw: 还有几处成稿留白，我如实标注。第一，$c_1=b$、$c_j=1$ 这个不对称权重的动机，稿里只当作使 $\sum\omega_j=\frac12$ 且第 1 分量占大头
+   REL L443 sec=§11 filecnt=1 ratio=0.959 d=作使 $\sum\omega_j=\frac12$ 且第 1 分量占大头
+       raw: 还有几处成稿留白，我如实标注。第一，$c_1=b$、$c_j=1$ 这个不对称权重的动机，稿里只当作使 $\sum\omega_j=\frac12$ 且第 1 分量占大头
+   REL L443 sec=§11 filecnt=1 ratio=0.958 d=使 $\sum\omega_j=\frac12$ 且第 1 分量占大
+       raw: 还有几处成稿留白，我如实标注。第一，$c_1=b$、$c_j=1$ 这个不对称权重的动机，稿里只当作使 $\sum\omega_j=\frac12$ 且第 1 分量占大头
+   REL L443 sec=§11 filecnt=1 ratio=0.958 d= $\sum\omega_j=\frac12$ 且第 1 分量占大头
+       raw: 还有几处成稿留白，我如实标注。第一，$c_1=b$、$c_j=1$ 这个不对称权重的动机，稿里只当作使 $\sum\omega_j=\frac12$ 且第 1 分量占大头
+   REL L443 sec=§11 filecnt=1 ratio=0.946 d=当作使 $\sum\omega_j=\frac12$ 且第 1 分量占大头
+       raw: 还有几处成稿留白，我如实标注。第一，$c_1=b$、$c_j=1$ 这个不对称权重的动机，稿里只当作使 $\sum\omega_j=\frac12$ 且第 1 分量占大头
+   REL L443 sec=§11 filecnt=1 ratio=0.944 d=作使 $\sum\omega_j=\frac12$ 且第 1 分量占大
+       raw: 还有几处成稿留白，我如实标注。第一，$c_1=b$、$c_j=1$ 这个不对称权重的动机，稿里只当作使 $\sum\omega_j=\frac12$ 且第 1 分量占大头
+
+-- D359-把单位代价编辑距离压进l1：指数内常数外的匹配夹逼.md noREL Q(LEN33)=符号、数值或增长率、真实 `文件:行`、被谁消费、若改动断在哪一步
+## D359-把单位代价编辑距离压进l1：指数内常数外的匹配夹逼.md zoneL651-668,669-722 Q(LEN16)=$\delta$ 除不动太多素数
+   REL L119 sec=§3 filecnt=10 ratio=0.720 d=$\delta$ 
+       raw: $\theta$ 到最近整数的距离 $\delta$ 满足 $\frac12\ge\delta\ge\frac1q\ge(2P)^{-r}\ge(2P)^{-h}$。
+   REL L218 sec=§5 filecnt=10 ratio=0.720 d=$\delta$ 
+       raw: $\ge P^{b/2}$，于是能整除 $\delta$ 的池素数不到 $b/2$ 个，在 $2,\dots,b$ 里至少剩 $b-1-\frac b2\ge\frac b3$ 个非零位移。
+   REL L453 sec=§12 filecnt=10 ratio=0.720 d=$\delta$ 
+       raw: 我的理解是：整份下界把"一个行移位 $\delta$ 至多能抹掉多少个素数周期差"这条组合事实，同时用在了两个地方，一边喂几何、
+   REL L458 sec=§12 filecnt=10 ratio=0.720 d=$\delta$ 
+       raw: 而"池里任取 $b/2$ 个互异素数之积 $\ge P^{b/2}$"，故能整除 $\delta$ 的池素数不足 $b/2$ 个，于是 $2,\dots,b$ 里剩 $\ge b/3$ 个非零。
+   REL L459 sec=§12 filecnt=10 ratio=0.720 d=$\delta$ 
+       raw: 把"distinguished 分量在 $b$ 个 slot 各复制一份"叠上去，源 payload 与 target payload 一旦想通过行移位 $\delta$ 对齐第 1 分量，
+   REL L460 sec=§12 filecnt=10 ratio=0.720 d=$\delta$ 
+       raw: 就必须同时把 $\delta$ 塞进每个复制 slot 的素数周期里，而 $\delta$ 又小、除得动那么多素数是不可能的。复制的用途就在这：
+
+-- D360-电磁尾迹与Kerr-Newman-Penrose不等式反例构造笔记.md noREL Q(LEN4)=见 §N
+-- D361-初等正性与终止置换见证.md noREL Q(LEN4)=过渡套语
+-- D361-初等正性与终止置换见证.md noREL Q(LEN8)=第 90 行附近
+-- D361-初等正性与终止置换见证.md noREL Q(LEN11)=其余禁令项自查为零命中
+-- D362-椭圆平方点有限性与A_2曲线Zilber-Pink.md noREL Q(LEN8)=由 03 节论证
+-- D362-椭圆平方点有限性与A_2曲线Zilber-Pink.md noREL Q(LEN15)=全文没有写出任何被禁字符串本身
+-- D362-椭圆平方点有限性与A_2曲线Zilber-Pink.md noREL Q(LEN17)=单次追加不超过 25,000 字节
+-- D363-椭圆容量传播与球面Fourier限制猜想的完整开范围.md noREL Q(LEN6)=此处、X别处
+## D363-椭圆容量传播与球面Fourier限制猜想的完整开范围.md zoneL517-527 Q(LEN10)=Fourier 反演
+   REL L1 sec=§pre filecnt=7 ratio=0.889 d=Fourier 
+       raw: # 椭圆容量传播与球面 Fourier 限制猜想的完整开范围
+   REL L10 sec=§0 filecnt=7 ratio=0.889 d=Fourier 
+       raw: 这本笔记是我在证明有界数据球面限制猜想期间留下的思考记录。核心结论是：三维球面的 Fourier 延拓算子
+   REL L244 sec=§8 filecnt=7 ratio=0.889 d=Fourier 
+       raw: Fourier 系数，Parseval 给出平方和、Fourley 反演给出 $\mathsf S\mathsf P=\mathrm{id}\cdot\sum_\nu(\chi_\theta^\nu)^2=f$。
+   REL L247 sec=§8 filecnt=7 ratio=0.889 d=Fourier 
+       raw: 逆 Fourier 级数因子"这点写死（`00-introduction.tex:233` 到 `00-introduction.tex:234`）才对齐。
+   REL L330 sec=§10 filecnt=7 ratio=0.889 d=Fourier 
+       raw: 拿到稀疏三次估计后，把大值集用稀疏族球覆盖、Fourier 复制、逐层积分，就得到每个 $p>3$ 的整体估计；这一步对
+   REL L384 sec=§12 filecnt=7 ratio=0.889 d=Fourier 
+       raw: 全局段，用稀疏球覆盖 + Fourier 复制去补采样格与真实延拓之间的截断误差。这个分工让我一度以为 §8 少了"物理"，
+
+## D363-椭圆容量传播与球面Fourier限制猜想的完整开范围.md zoneL517-527 Q(LEN9)=§9 消去时间亏空
+   REL L143 sec=§4 filecnt=1 ratio=0.900 d=§9 消去时间支撑亏空
+       raw: 这里我学到一件事：把时间格概率并进盒子质量，后面 §9 消去时间支撑亏空时才能对得上账。
+   REL L143 sec=§4 filecnt=1 ratio=0.875 d=§9 消去时间
+       raw: 这里我学到一件事：把时间格概率并进盒子质量，后面 §9 消去时间支撑亏空时才能对得上账。
+   REL L143 sec=§4 filecnt=1 ratio=0.857 d= §9 消去时间支撑亏空
+       raw: 这里我学到一件事：把时间格概率并进盒子质量，后面 §9 消去时间支撑亏空时才能对得上账。
+   REL L143 sec=§4 filecnt=1 ratio=0.857 d=§9 消去时间支撑亏空时
+       raw: 这里我学到一件事：把时间格概率并进盒子质量，后面 §9 消去时间支撑亏空时才能对得上账。
+   REL L143 sec=§4 filecnt=1 ratio=0.842 d=§9 消去时间支撑亏
+       raw: 这里我学到一件事：把时间格概率并进盒子质量，后面 §9 消去时间支撑亏空时才能对得上账。
+   REL L143 sec=§4 filecnt=1 ratio=0.842 d=9 消去时间支撑亏空
+       raw: 这里我学到一件事：把时间格概率并进盒子质量，后面 §9 消去时间支撑亏空时才能对得上账。
+
+## D363-椭圆容量传播与球面Fourier限制猜想的完整开范围.md zoneL517-527 Q(LEN22)=§7 落实 joint-coordinate
+   REL L202 sec=§6 filecnt=1 ratio=0.917 d=§7 各情形落实的 joint-coordinate
+       raw: 由 §7 各情形落实的 joint-coordinate 版本。
+   REL L202 sec=§6 filecnt=1 ratio=0.905 d=落实的 joint-coordinate
+       raw: 由 §7 各情形落实的 joint-coordinate 版本。
+   REL L202 sec=§6 filecnt=1 ratio=0.898 d= §7 各情形落实的 joint-coordinate
+       raw: 由 §7 各情形落实的 joint-coordinate 版本。
+   REL L202 sec=§6 filecnt=1 ratio=0.898 d=§7 各情形落实的 joint-coordinate 
+       raw: 由 §7 各情形落实的 joint-coordinate 版本。
+   REL L202 sec=§6 filecnt=1 ratio=0.894 d=7 各情形落实的 joint-coordinate
+       raw: 由 §7 各情形落实的 joint-coordinate 版本。
+   REL L202 sec=§6 filecnt=1 ratio=0.894 d=§7 各情形落实的 joint-coordinat
+       raw: 由 §7 各情形落实的 joint-coordinate 版本。
+
+## D363-椭圆容量传播与球面Fourier限制猜想的完整开范围.md zoneL517-527 Q(LEN4)=见 §N
+   REL L32 sec=§1 filecnt=2 ratio=0.857 d=见 §
+       raw: 一个纯组合几何问题：管子的重叠控制住了，$L^p$ 范数就控制住了。这个直觉后来被我自己的推导反复证伪，见 §2。
+   REL L105 sec=§3 filecnt=2 ratio=0.857 d=见 §
+       raw: `geo:main` 说，只要时间误差够小，每个严格小于 $1+2s-10\kappa$ 的指数都可用。我要做的就是证明它，见 §4 到 §7。
+
+-- D364-平面Schrödinger端点收敛的H三分之一次幂全程.md noREL Q(LEN9)=不得删除已落盘内容
+-- D364-平面Schrödinger端点收敛的H三分之一次幂全程.md noREL Q(LEN16)=不是…，是 / ，是 / ，并非
+-- D364-平面Schrödinger端点收敛的H三分之一次幂全程.md noREL Q(LEN4)=复述磨平
+## D364-平面Schrödinger端点收敛的H三分之一次幂全程.md zoneL457-466,537-555,629-673 Q(LEN16)=…不是一条被磨平了的证明线，是…
+   REL L11 sec=§0 filecnt=1 ratio=0.933 d=不是一条被磨平了的证明线，是
+       raw: 我要复述的不是一条被磨平了的证明线，是我当时如果真在做这个题，脑子里会怎么绕。凡是我从论文里读不出依据的判断，
+   REL L11 sec=§0 filecnt=1 ratio=0.897 d=不是一条被磨平了的证明线，
+       raw: 我要复述的不是一条被磨平了的证明线，是我当时如果真在做这个题，脑子里会怎么绕。凡是我从论文里读不出依据的判断，
+   REL L11 sec=§0 filecnt=1 ratio=0.897 d=是一条被磨平了的证明线，是
+       raw: 我要复述的不是一条被磨平了的证明线，是我当时如果真在做这个题，脑子里会怎么绕。凡是我从论文里读不出依据的判断，
+   REL L11 sec=§0 filecnt=1 ratio=0.857 d=不是一条被磨平了的证明线
+       raw: 我要复述的不是一条被磨平了的证明线，是我当时如果真在做这个题，脑子里会怎么绕。凡是我从论文里读不出依据的判断，
+   REL L11 sec=§0 filecnt=1 ratio=0.857 d=是一条被磨平了的证明线，
+       raw: 我要复述的不是一条被磨平了的证明线，是我当时如果真在做这个题，脑子里会怎么绕。凡是我从论文里读不出依据的判断，
+   REL L11 sec=§0 filecnt=1 ratio=0.857 d=一条被磨平了的证明线，是
+       raw: 我要复述的不是一条被磨平了的证明线，是我当时如果真在做这个题，脑子里会怎么绕。凡是我从论文里读不出依据的判断，
+
+## D364-平面Schrödinger端点收敛的H三分之一次幂全程.md zoneL457-466,537-555,629-673 Q(LEN13)=卡在措辞上，并非卡在构造上
+   REL L31 sec=§1 filecnt=1 ratio=0.917 d=措辞上，并非卡在构造上
+       raw: 问题卡在"严格不等号"这个措辞上，并非卡在构造上。这个猜想本身没有证明任何东西，它只是给我一个方向感，
+   REL L31 sec=§1 filecnt=1 ratio=0.880 d=措辞上，并非卡在构造上。
+       raw: 问题卡在"严格不等号"这个措辞上，并非卡在构造上。这个猜想本身没有证明任何东西，它只是给我一个方向感，
+   REL L31 sec=§1 filecnt=1 ratio=0.870 d=措辞上，并非卡在构造
+       raw: 问题卡在"严格不等号"这个措辞上，并非卡在构造上。这个猜想本身没有证明任何东西，它只是给我一个方向感，
+   REL L31 sec=§1 filecnt=1 ratio=0.870 d=辞上，并非卡在构造上
+       raw: 问题卡在"严格不等号"这个措辞上，并非卡在构造上。这个猜想本身没有证明任何东西，它只是给我一个方向感，
+   REL L31 sec=§1 filecnt=1 ratio=0.846 d=措辞上，并非卡在构造上。这
+       raw: 问题卡在"严格不等号"这个措辞上，并非卡在构造上。这个猜想本身没有证明任何东西，它只是给我一个方向感，
+   REL L31 sec=§1 filecnt=1 ratio=0.833 d=辞上，并非卡在构造上。
+       raw: 问题卡在"严格不等号"这个措辞上，并非卡在构造上。这个猜想本身没有证明任何东西，它只是给我一个方向感，
+
+## D364-平面Schrödinger端点收敛的H三分之一次幂全程.md zoneL457-466,537-555,629-673 Q(LEN13)=，是被少数几块板困住的管…
+   REL L226 sec=§7 filecnt=1 ratio=0.960 d=，是被少数几块板困住的管
+       raw: ，是被少数几块板困住的管，于是可以再做一次尺度约化。
+   REL L226 sec=§7 filecnt=1 ratio=0.917 d=是被少数几块板困住的管
+       raw: ，是被少数几块板困住的管，于是可以再做一次尺度约化。
+   REL L226 sec=§7 filecnt=1 ratio=0.917 d=，是被少数几块板困住的
+       raw: ，是被少数几块板困住的管，于是可以再做一次尺度约化。
+   REL L226 sec=§7 filecnt=1 ratio=0.870 d=是被少数几块板困住的
+       raw: ，是被少数几块板困住的管，于是可以再做一次尺度约化。
+   REL L226 sec=§7 filecnt=1 ratio=0.870 d=被少数几块板困住的管
+       raw: ，是被少数几块板困住的管，于是可以再做一次尺度约化。
+   REL L226 sec=§7 filecnt=1 ratio=0.870 d=，是被少数几块板困住
+       raw: ，是被少数几块板困住的管，于是可以再做一次尺度约化。
+
+-- D364-平面Schrödinger端点收敛的H三分之一次幂全程.md noREL Q(LEN15)=本稿未使用规格所列任何过渡套语
+-- D364-平面Schrödinger端点收敛的H三分之一次幂全程.md noREL Q(LEN31)=值得注意 / 需要指出 / 也就是说 / 总的来看 / 大体上
+-- D364-平面Schrödinger端点收敛的H三分之一次幂全程.md noREL Q(LEN13)=见 §N / §N 的某式
+-- D364-平面Schrödinger端点收敛的H三分之一次幂全程.md noREL Q(LEN7)=未使用任何套语
+-- D364-平面Schrödinger端点收敛的H三分之一次幂全程.md noREL Q(LEN4)=见 §N
+-- D364-平面Schrödinger端点收敛的H三分之一次幂全程.md noREL Q(LEN6)=§N 的某式
+-- D365-端点逐点收敛：高维薛定谔方程的等号情形.md noREL Q(LEN6)=原因并不在此
+-- D366-局部维度十的零密钥纠缠态：一条反向推演的记录.md noREL Q(LEN11)=证书只固定二十维子空间
+## D367-负曲率熵等式与局部对称性.md zoneL254-259,276-281,282-371 Q(LEN11)=真正让我夜不能寐的对象
+   REL L226 sec=§18 filecnt=1 ratio=0.900 d=真正让我夜不能寐的
+       raw: 支路二的排除（§10）里，真正让我夜不能寐的不是散度式，是"形式仿射指数怎么就变成一条真实完备射线"。real:proper-exponential（06 第 256 到 264 行）说 $\mathrm{Exp}^s_a:P^s_a\to W^s(a)$ 对每个初始向量都有定义且 proper；real:actualization（06 第 634 到 645 行）把形式映射实现成真实 $F$，
+   REL L226 sec=§18 filecnt=1 ratio=0.857 d=，真正让我夜不能寐的
+       raw: 支路二的排除（§10）里，真正让我夜不能寐的不是散度式，是"形式仿射指数怎么就变成一条真实完备射线"。real:proper-exponential（06 第 256 到 264 行）说 $\mathrm{Exp}^s_a:P^s_a\to W^s(a)$ 对每个初始向量都有定义且 proper；real:actualization（06 第 634 到 645 行）把形式映射实现成真实 $F$，
+   REL L226 sec=§18 filecnt=1 ratio=0.842 d=真正让我夜不能寐
+       raw: 支路二的排除（§10）里，真正让我夜不能寐的不是散度式，是"形式仿射指数怎么就变成一条真实完备射线"。real:proper-exponential（06 第 256 到 264 行）说 $\mathrm{Exp}^s_a:P^s_a\to W^s(a)$ 对每个初始向量都有定义且 proper；real:actualization（06 第 634 到 645 行）把形式映射实现成真实 $F$，
+   REL L226 sec=§18 filecnt=1 ratio=0.842 d=正让我夜不能寐的
+       raw: 支路二的排除（§10）里，真正让我夜不能寐的不是散度式，是"形式仿射指数怎么就变成一条真实完备射线"。real:proper-exponential（06 第 256 到 264 行）说 $\mathrm{Exp}^s_a:P^s_a\to W^s(a)$ 对每个初始向量都有定义且 proper；real:actualization（06 第 634 到 645 行）把形式映射实现成真实 $F$，
+   REL L226 sec=§18 filecnt=1 ratio=0.818 d=里，真正让我夜不能寐的
+       raw: 支路二的排除（§10）里，真正让我夜不能寐的不是散度式，是"形式仿射指数怎么就变成一条真实完备射线"。real:proper-exponential（06 第 256 到 264 行）说 $\mathrm{Exp}^s_a:P^s_a\to W^s(a)$ 对每个初始向量都有定义且 proper；real:actualization（06 第 634 到 645 行）把形式映射实现成真实 $F$，
+   REL L226 sec=§18 filecnt=1 ratio=0.800 d=，真正让我夜不能寐
+       raw: 支路二的排除（§10）里，真正让我夜不能寐的不是散度式，是"形式仿射指数怎么就变成一条真实完备射线"。real:proper-exponential（06 第 256 到 264 行）说 $\mathrm{Exp}^s_a:P^s_a\to W^s(a)$ 对每个初始向量都有定义且 proper；real:actualization（06 第 634 到 645 行）把形式映射实现成真实 $F$，
+
+-- D367-负曲率熵等式与局部对称性.md noREL Q(LEN35)=有正文依据但仍未逐字核对 alg:axis-coherence 的陈述
+-- D367-负曲率熵等式与局部对称性.md noREL Q(LEN8)=若改动断在哪一步
+-- D367-负曲率熵等式与局部对称性.md noREL Q(LEN7)=台账为文末一节
+## D367-负曲率熵等式与局部对称性.md zoneL254-259,276-281,282-371 Q(LEN8)=socle 非零
+   REL L110 sec=§9 filecnt=1 ratio=0.857 d=socle 
+       raw: alg:signs（05 第 468 到 482 行）处理符号。当 $B\ne0$，取 socle $P'=\mathrm{soc}_{\mathfrak l}(B^*)\subset P$（05 第 471 行），它是所有不可约子模之和、非零；它的两个 $H$ 符号部分是完整 $\mathfrak u$-isotypic 分量之和，特别地在转移的 $\mathfrak u$ 作用下不变。若 $\
+   REL L110 sec=§9 filecnt=1 ratio=0.769 d=ocle 
+       raw: alg:signs（05 第 468 到 482 行）处理符号。当 $B\ne0$，取 socle $P'=\mathrm{soc}_{\mathfrak l}(B^*)\subset P$（05 第 471 行），它是所有不可约子模之和、非零；它的两个 $H$ 符号部分是完整 $\mathfrak u$-isotypic 分量之和，特别地在转移的 $\mathfrak u$ 作用下不变。若 $\
+   REL L110 sec=§9 filecnt=1 ratio=0.769 d=socle
+       raw: alg:signs（05 第 468 到 482 行）处理符号。当 $B\ne0$，取 socle $P'=\mathrm{soc}_{\mathfrak l}(B^*)\subset P$（05 第 471 行），它是所有不可约子模之和、非零；它的两个 $H$ 符号部分是完整 $\mathfrak u$-isotypic 分量之和，特别地在转移的 $\mathfrak u$ 作用下不变。若 $\
+
+-- D367-负曲率熵等式与局部对称性.md noREL Q(LEN15)=若 socle 零则支路二自灭
+-- D367-负曲率熵等式与局部对称性.md noREL Q(LEN16)=申报时不逐字复写、不引用禁串字样
+-- D367-负曲率熵等式与局部对称性.md noREL Q(LEN6)=改动成本清单
+-- D367-负曲率熵等式与局部对称性.md noREL Q(LEN18)=形式场与真实 plaque 精确相切
+-- D367-负曲率熵等式与局部对称性.md noREL Q(LEN8)=这些数有内在意义
+## D367-负曲率熵等式与局部对称性.md zoneL254-259,276-281,282-371 Q(LEN5)=断在哪一步
+   REL L262 sec=§22 filecnt=1 ratio=0.889 d=在哪一步
+       raw: 动笔最后，我把整台机器重画成一张单向依赖图，目的是逼自己回答一个问题：若把某个环节改掉或删掉，论证会在哪一步断裂？这张图也正是文末台账第五列的依据，我先在这里用散文把它讲顺，免得台账只剩干巴巴的符号。
+   REL L262 sec=§22 filecnt=1 ratio=0.750 d=哪一步
+       raw: 动笔最后，我把整台机器重画成一张单向依赖图，目的是逼自己回答一个问题：若把某个环节改掉或删掉，论证会在哪一步断裂？这张图也正是文末台账第五列的依据，我先在这里用散文把它讲顺，免得台账只剩干巴巴的符号。
+   REL L262 sec=§22 filecnt=1 ratio=0.750 d=在哪一
+       raw: 动笔最后，我把整台机器重画成一张单向依赖图，目的是逼自己回答一个问题：若把某个环节改掉或删掉，论证会在哪一步断裂？这张图也正是文末台账第五列的依据，我先在这里用散文把它讲顺，免得台账只剩干巴巴的符号。
+
+-- D367-负曲率熵等式与局部对称性.md noREL Q(LEN22)=断了会多出多少个 $\varepsilon$
+-- D368-时空Penrose不等式的等号与刚性.md noREL Q(LEN7)=附近弱俘获数据
+-- D368-时空Penrose不等式的等号与刚性.md noREL Q(LEN11)=三套假设表没有各自漂移
+-- D368-时空Penrose不等式的等号与刚性.md noREL Q(LEN4)=通读姿态
+-- D368-时空Penrose不等式的等号与刚性.md noREL Q(LEN4)=如实反映
+-- D368-时空Penrose不等式的等号与刚性.md noREL Q(LEN4)=五十九行
+-- D368-时空Penrose不等式的等号与刚性.md noREL Q(LEN10)=本批共追加 58 行
+-- D370-素数次数环面包在任意局部型下的等分布.md noREL Q(LEN7)=锚点取错了位置
+-- D370-素数次数环面包在任意局部型下的等分布.md noREL Q(LEN5)=其余零命中
+-- D370-素数次数环面包在任意局部型下的等分布.md noREL Q(LEN7)=台账共三十九行
+-- D370-素数次数环面包在任意局部型下的等分布.md noREL Q(LEN22)=恰好 6 个竖线、≥30 数据行、禁空单元格
+-- D370-素数次数环面包在任意局部型下的等分布.md noREL Q(LEN6)=仅作机制校验
+-- D370-素数次数环面包在任意局部型下的等分布.md noREL Q(LEN5)=第 N 件
+-- D371-任意阶本原四次环面包线的等分布.md noREL Q(LEN27)=`$` 总数 1967 为奇、反引号总数 603 为奇
+-- D371-任意阶本原四次环面包线的等分布.md noREL Q(LEN26)=字节 79,593、`$` 1988、反引号 623
+## D372-原始六次环面包的一等分布.md zoneL224-239 Q(LEN10)=§6 与 §9 两处
+   REL L174 sec=§13 filecnt=1 ratio=0.889 d=§6 与 §9 
+       raw: 勘误登记（正文保留原文，不做任何回改）。属"数学表述笔误"一类一处：§11 第二段"取凸组合 $\lambda_i\in[1/3,2,3]$ 的解使零均值"，区间应为 $[1/3,2/3]$，同句后半句"系数可限制在 $[1/3,2/3]$"已是正确写法；该笔误不影响论证。属"中英混排"一类两处：§10 的 "retraction $\pi$ onto $VA$"、§6 与 §9 的 "conti
+   REL L174 sec=§13 filecnt=1 ratio=0.842 d=、§6 与 §9 
+       raw: 勘误登记（正文保留原文，不做任何回改）。属"数学表述笔误"一类一处：§11 第二段"取凸组合 $\lambda_i\in[1/3,2,3]$ 的解使零均值"，区间应为 $[1/3,2/3]$，同句后半句"系数可限制在 $[1/3,2/3]$"已是正确写法；该笔误不影响论证。属"中英混排"一类两处：§10 的 "retraction $\pi$ onto $VA$"、§6 与 §9 的 "conti
+   REL L174 sec=§13 filecnt=1 ratio=0.824 d=§6 与 §9
+       raw: 勘误登记（正文保留原文，不做任何回改）。属"数学表述笔误"一类一处：§11 第二段"取凸组合 $\lambda_i\in[1/3,2,3]$ 的解使零均值"，区间应为 $[1/3,2/3]$，同句后半句"系数可限制在 $[1/3,2/3]$"已是正确写法；该笔误不影响论证。属"中英混排"一类两处：§10 的 "retraction $\pi$ onto $VA$"、§6 与 §9 的 "conti
+   REL L174 sec=§13 filecnt=1 ratio=0.824 d=6 与 §9 
+       raw: 勘误登记（正文保留原文，不做任何回改）。属"数学表述笔误"一类一处：§11 第二段"取凸组合 $\lambda_i\in[1/3,2,3]$ 的解使零均值"，区间应为 $[1/3,2/3]$，同句后半句"系数可限制在 $[1/3,2/3]$"已是正确写法；该笔误不影响论证。属"中英混排"一类两处：§10 的 "retraction $\pi$ onto $VA$"、§6 与 §9 的 "conti
+   REL L174 sec=§13 filecnt=1 ratio=0.800 d="、§6 与 §9 
+       raw: 勘误登记（正文保留原文，不做任何回改）。属"数学表述笔误"一类一处：§11 第二段"取凸组合 $\lambda_i\in[1/3,2,3]$ 的解使零均值"，区间应为 $[1/3,2/3]$，同句后半句"系数可限制在 $[1/3,2/3]$"已是正确写法；该笔误不影响论证。属"中英混排"一类两处：§10 的 "retraction $\pi$ onto $VA$"、§6 与 §9 的 "conti
+   REL L174 sec=§13 filecnt=1 ratio=0.778 d=、§6 与 §9
+       raw: 勘误登记（正文保留原文，不做任何回改）。属"数学表述笔误"一类一处：§11 第二段"取凸组合 $\lambda_i\in[1/3,2,3]$ 的解使零均值"，区间应为 $[1/3,2/3]$，同句后半句"系数可限制在 $[1/3,2/3]$"已是正确写法；该笔误不影响论证。属"中英混排"一类两处：§10 的 "retraction $\pi$ onto $VA$"、§6 与 §9 的 "conti
+
+-- D372-原始六次环面包的一等分布.md noREL Q(LEN9)=必有两个对角元不等
+-- D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md noREL Q(LEN9)=没有装饰性加粗命中
+-- D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md noREL Q(LEN28)=于是去问经验协方差数组是不是某个正算子的 Gram 数组
+-- D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md noREL Q(LEN9)=禁止改写已落盘内容
+## D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md zoneL264-278 Q(LEN18)=这个顺序本身就是论文最深的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.971 d=这个顺序本身是论文最深的设计声明。
+       raw: 写作层面的自白收个尾：这份笔记我原本打算写成"证明检查报告"，动笔到 §8 之后改成了"思维链重建"，因为 38KB 的素材给不出逐行核对的余裕，却足够支撑一个更诚实的问题：一个人（或一个写作过程）要在什么顺序上想，才会把角度假设留到倒数第二段才用。这个顺序本身是论文最深的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.944 d=。这个顺序本身是论文最深的设计声明。
+       raw: 写作层面的自白收个尾：这份笔记我原本打算写成"证明检查报告"，动笔到 §8 之后改成了"思维链重建"，因为 38KB 的素材给不出逐行核对的余裕，却足够支撑一个更诚实的问题：一个人（或一个写作过程）要在什么顺序上想，才会把角度假设留到倒数第二段才用。这个顺序本身是论文最深的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.941 d=这个顺序本身是论文最深的设计声明
+       raw: 写作层面的自白收个尾：这份笔记我原本打算写成"证明检查报告"，动笔到 §8 之后改成了"思维链重建"，因为 38KB 的素材给不出逐行核对的余裕，却足够支撑一个更诚实的问题：一个人（或一个写作过程）要在什么顺序上想，才会把角度假设留到倒数第二段才用。这个顺序本身是论文最深的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.941 d=个顺序本身是论文最深的设计声明。
+       raw: 写作层面的自白收个尾：这份笔记我原本打算写成"证明检查报告"，动笔到 §8 之后改成了"思维链重建"，因为 38KB 的素材给不出逐行核对的余裕，却足够支撑一个更诚实的问题：一个人（或一个写作过程）要在什么顺序上想，才会把角度假设留到倒数第二段才用。这个顺序本身是论文最深的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.919 d=用。这个顺序本身是论文最深的设计声明。
+       raw: 写作层面的自白收个尾：这份笔记我原本打算写成"证明检查报告"，动笔到 §8 之后改成了"思维链重建"，因为 38KB 的素材给不出逐行核对的余裕，却足够支撑一个更诚实的问题：一个人（或一个写作过程）要在什么顺序上想，才会把角度假设留到倒数第二段才用。这个顺序本身是论文最深的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.914 d=。这个顺序本身是论文最深的设计声明
+       raw: 写作层面的自白收个尾：这份笔记我原本打算写成"证明检查报告"，动笔到 §8 之后改成了"思维链重建"，因为 38KB 的素材给不出逐行核对的余裕，却足够支撑一个更诚实的问题：一个人（或一个写作过程）要在什么顺序上想，才会把角度假设留到倒数第二段才用。这个顺序本身是论文最深的设计声明。
+
+## D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md zoneL264-278 Q(LEN15)=这本身是论文最深的的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.929 d=本身是论文最深的设计声明。
+       raw: 写作层面的自白收个尾：这份笔记我原本打算写成"证明检查报告"，动笔到 §8 之后改成了"思维链重建"，因为 38KB 的素材给不出逐行核对的余裕，却足够支撑一个更诚实的问题：一个人（或一个写作过程）要在什么顺序上想，才会把角度假设留到倒数第二段才用。这个顺序本身是论文最深的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.889 d=本身是论文最深的设计声明
+       raw: 写作层面的自白收个尾：这份笔记我原本打算写成"证明检查报告"，动笔到 §8 之后改成了"思维链重建"，因为 38KB 的素材给不出逐行核对的余裕，却足够支撑一个更诚实的问题：一个人（或一个写作过程）要在什么顺序上想，才会把角度假设留到倒数第二段才用。这个顺序本身是论文最深的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.889 d=身是论文最深的设计声明。
+       raw: 写作层面的自白收个尾：这份笔记我原本打算写成"证明检查报告"，动笔到 §8 之后改成了"思维链重建"，因为 38KB 的素材给不出逐行核对的余裕，却足够支撑一个更诚实的问题：一个人（或一个写作过程）要在什么顺序上想，才会把角度假设留到倒数第二段才用。这个顺序本身是论文最深的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.875 d=这个顺序本身是论文最深的设计声明。
+       raw: 写作层面的自白收个尾：这份笔记我原本打算写成"证明检查报告"，动笔到 §8 之后改成了"思维链重建"，因为 38KB 的素材给不出逐行核对的余裕，却足够支撑一个更诚实的问题：一个人（或一个写作过程）要在什么顺序上想，才会把角度假设留到倒数第二段才用。这个顺序本身是论文最深的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.848 d=。这个顺序本身是论文最深的设计声明。
+       raw: 写作层面的自白收个尾：这份笔记我原本打算写成"证明检查报告"，动笔到 §8 之后改成了"思维链重建"，因为 38KB 的素材给不出逐行核对的余裕，却足够支撑一个更诚实的问题：一个人（或一个写作过程）要在什么顺序上想，才会把角度假设留到倒数第二段才用。这个顺序本身是论文最深的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.846 d=是论文最深的设计声明。
+       raw: 写作层面的自白收个尾：这份笔记我原本打算写成"证明检查报告"，动笔到 §8 之后改成了"思维链重建"，因为 38KB 的素材给不出逐行核对的余裕，却足够支撑一个更诚实的问题：一个人（或一个写作过程）要在什么顺序上想，才会把角度假设留到倒数第二段才用。这个顺序本身是论文最深的设计声明。
+
+## D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md zoneL264-278 Q(LEN11)=等于零强制 $B=0$
+   REL L153 sec=§8 filecnt=1 ratio=0.957 d=等于零都强制 $B=0$
+       raw: 收口（main.tex:668-676）：$Xf=0$ 在第 $m-1$ 模说 $\partial f_{m-2}=-\bar\partial f_m$；配上 $(Yf)_{m-1}$ 的表示得 $P_{m-1}Yf=-2iB$，故 $0=\langle B,-2iB\rangle$ 逼 $\|B\|_2=0$、即 $\bar\partial f_m=0$；$m$ 任意，递推再给 $\partia
+   REL L153 sec=§8 filecnt=1 ratio=0.917 d=式等于零都强制 $B=0$
+       raw: 收口（main.tex:668-676）：$Xf=0$ 在第 $m-1$ 模说 $\partial f_{m-2}=-\bar\partial f_m$；配上 $(Yf)_{m-1}$ 的表示得 $P_{m-1}Yf=-2iB$，故 $0=\langle B,-2iB\rangle$ 逼 $\|B\|_2=0$、即 $\bar\partial f_m=0$；$m$ 任意，递推再给 $\partia
+   REL L153 sec=§8 filecnt=1 ratio=0.917 d=等于零都强制 $B=0$，
+       raw: 收口（main.tex:668-676）：$Xf=0$ 在第 $m-1$ 模说 $\partial f_{m-2}=-\bar\partial f_m$；配上 $(Yf)_{m-1}$ 的表示得 $P_{m-1}Yf=-2iB$，故 $0=\langle B,-2iB\rangle$ 逼 $\|B\|_2=0$、即 $\bar\partial f_m=0$；$m$ 任意，递推再给 $\partia
+   REL L153 sec=§8 filecnt=1 ratio=0.909 d=等于零都强制 $B=0
+       raw: 收口（main.tex:668-676）：$Xf=0$ 在第 $m-1$ 模说 $\partial f_{m-2}=-\bar\partial f_m$；配上 $(Yf)_{m-1}$ 的表示得 $P_{m-1}Yf=-2iB$，故 $0=\langle B,-2iB\rangle$ 逼 $\|B\|_2=0$、即 $\bar\partial f_m=0$；$m$ 任意，递推再给 $\partia
+   REL L153 sec=§8 filecnt=1 ratio=0.909 d=于零都强制 $B=0$
+       raw: 收口（main.tex:668-676）：$Xf=0$ 在第 $m-1$ 模说 $\partial f_{m-2}=-\bar\partial f_m$；配上 $(Yf)_{m-1}$ 的表示得 $P_{m-1}Yf=-2iB$，故 $0=\langle B,-2iB\rangle$ 逼 $\|B\|_2=0$、即 $\bar\partial f_m=0$；$m$ 任意，递推再给 $\partia
+   REL L153 sec=§8 filecnt=1 ratio=0.880 d=等式等于零都强制 $B=0$
+       raw: 收口（main.tex:668-676）：$Xf=0$ 在第 $m-1$ 模说 $\partial f_{m-2}=-\bar\partial f_m$；配上 $(Yf)_{m-1}$ 的表示得 $P_{m-1}Yf=-2iB$，故 $0=\langle B,-2iB\rangle$ 逼 $\|B\|_2=0$、即 $\bar\partial f_m=0$；$m$ 任意，递推再给 $\partia
+
+-- D375-平面XY模型关联长度的本质奇点.md noREL Q(LEN10)=其余 45 个数据行
+-- D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md noREL Q(LEN6)=不只…X…Y
+-- D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md noREL Q(LEN12)=某范围 ，并非 另一范围
+## D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md zoneL234-256 Q(LEN9)=其一般纤维上这对应
+   REL L115 sec=§6 filecnt=1 ratio=0.941 d=一般纤维上这对应
+       raw: 第三段(02-cycles.tex 第 179 到 194 行)处理"把 $Z_1/Z_0$ 变成 $Z/X$ 的 Galois 覆盖后,圆还在吗"。程序:$Z_0/X$ 的 Deck 变换扩张到其稳定模型(第 180 行,依据我认为是稳定模型函子性与解析自同构的延拓唯一性,素材未展开,标 `[推测]`);在该模型上取所有共轭循环覆盖之积;有限常数扩张后取一般纤维的一几何连通分支及其在正规积模型中
+   REL L115 sec=§6 filecnt=1 ratio=0.889 d=一般纤维上这对应 
+       raw: 第三段(02-cycles.tex 第 179 到 194 行)处理"把 $Z_1/Z_0$ 变成 $Z/X$ 的 Galois 覆盖后,圆还在吗"。程序:$Z_0/X$ 的 Deck 变换扩张到其稳定模型(第 180 行,依据我认为是稳定模型函子性与解析自同构的延拓唯一性,素材未展开,标 `[推测]`);在该模型上取所有共轭循环覆盖之积;有限常数扩张后取一般纤维的一几何连通分支及其在正规积模型中
+   REL L115 sec=§6 filecnt=1 ratio=0.875 d=一般纤维上这对
+       raw: 第三段(02-cycles.tex 第 179 到 194 行)处理"把 $Z_1/Z_0$ 变成 $Z/X$ 的 Galois 覆盖后,圆还在吗"。程序:$Z_0/X$ 的 Deck 变换扩张到其稳定模型(第 180 行,依据我认为是稳定模型函子性与解析自同构的延拓唯一性,素材未展开,标 `[推测]`);在该模型上取所有共轭循环覆盖之积;有限常数扩张后取一般纤维的一几何连通分支及其在正规积模型中
+   REL L115 sec=§6 filecnt=1 ratio=0.875 d=般纤维上这对应
+       raw: 第三段(02-cycles.tex 第 179 到 194 行)处理"把 $Z_1/Z_0$ 变成 $Z/X$ 的 Galois 覆盖后,圆还在吗"。程序:$Z_0/X$ 的 Deck 变换扩张到其稳定模型(第 180 行,依据我认为是稳定模型函子性与解析自同构的延拓唯一性,素材未展开,标 `[推测]`);在该模型上取所有共轭循环覆盖之积;有限常数扩张后取一般纤维的一几何连通分支及其在正规积模型中
+   REL L115 sec=§6 filecnt=1 ratio=0.842 d=一般纤维上这对应 $
+       raw: 第三段(02-cycles.tex 第 179 到 194 行)处理"把 $Z_1/Z_0$ 变成 $Z/X$ 的 Galois 覆盖后,圆还在吗"。程序:$Z_0/X$ 的 Deck 变换扩张到其稳定模型(第 180 行,依据我认为是稳定模型函子性与解析自同构的延拓唯一性,素材未展开,标 `[推测]`);在该模型上取所有共轭循环覆盖之积;有限常数扩张后取一般纤维的一几何连通分支及其在正规积模型中
+   REL L115 sec=§6 filecnt=1 ratio=0.824 d=般纤维上这对应 
+       raw: 第三段(02-cycles.tex 第 179 到 194 行)处理"把 $Z_1/Z_0$ 变成 $Z/X$ 的 Galois 覆盖后,圆还在吗"。程序:$Z_0/X$ 的 Deck 变换扩张到其稳定模型(第 180 行,依据我认为是稳定模型函子性与解析自同构的延拓唯一性,素材未展开,标 `[推测]`);在该模型上取所有共轭循环覆盖之积;有限常数扩张后取一般纤维的一几何连通分支及其在正规积模型中
+
+## D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md zoneL234-256 Q(LEN11)=该论文的定理 2.17
+   REL L71 sec=§3 filecnt=1 ratio=0.778 d=定理 2.17
+       raw: 02-cycles.tex 第 17 到 29 行把 RNS 输入 sharpen 成一个可直接使用的推论,值得逐句对照,因为论文在这里的措辞密度是全文最高的。它断言:对双曲曲线在任何有限扩张上的任何真平坦正规模型 $\mathcal X$、其特殊纤维的任何闭点 $x$,经过有限常数扩张后,存在连通有限étale Galois 覆盖 $C\to X$、稳定模型 $\mathcal C$、以及扩张覆
+   REL L71 sec=§3 filecnt=1 ratio=0.737 d=定理 2.17)
+       raw: 02-cycles.tex 第 17 到 29 行把 RNS 输入 sharpen 成一个可直接使用的推论,值得逐句对照,因为论文在这里的措辞密度是全文最高的。它断言:对双曲曲线在任何有限扩张上的任何真平坦正规模型 $\mathcal X$、其特殊纤维的任何闭点 $x$,经过有限常数扩张后,存在连通有限étale Galois 覆盖 $C\to X$、稳定模型 $\mathcal C$、以及扩张覆
+
+-- D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md noREL Q(LEN12)=勘误必产生于全稿完成之后
+-- D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md noREL Q(LEN13)=申报文字里不许逐字复写禁串
+-- D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md noREL Q(LEN6)=不回改已落盘
+-- D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md noREL Q(LEN9)=限制性质经下降保持
+-- D379-每个四维Kakeya集有满Hausdorff维数.md noREL Q(LEN10)=正在做这项研究的本人
+-- D379-每个四维Kakeya集有满Hausdorff维数.md noREL Q(LEN4)=补充勘误
+-- D379-每个四维Kakeya集有满Hausdorff维数.md noREL Q(LEN35)=list 界就是 $N^{o(1)}$（该词）$N_0^{o(1)}$
+-- D379-每个四维Kakeya集有满Hausdorff维数.md noREL Q(LEN25)=（BSG 经典版本），（该词）其 graph 形式
+-- D379-每个四维Kakeya集有满Hausdorff维数.md noREL Q(LEN5)=申报性引用
+-- D379-每个四维Kakeya集有满Hausdorff维数.md noREL Q(LEN4)=正文误用
+-- D380-低Selmer余秩推出精确BSD公式.md noREL Q(LEN18)=但、却、同时、反过来、这里要分两件事
+## D380-低Selmer余秩推出精确BSD公式.md zoneL245-264,265-362 Q(LEN4)=见 §N
+   REL L32 sec=§2 filecnt=3 ratio=0.857 d=见 §
+       raw: 这个判断错在量级。上面每一条定理的结论都带着一串假设，而这些假设在我的目标情形里正是不可验证的：$p=3$ 的残表示可能可约，超奇异情形不在它们的范围内，非半稳定处的局部条件对不上。更致命的是，这三条给出的是理想整除（pseudo-division）或带有限指数歧义的比较，它们从来没有声称给出 $v_p(\#\operatorname{Sha})$ 的精确值。我在笔记里记下这一点，是因为后来我发现
+   REL L52 sec=§5 filecnt=3 ratio=0.857 d=见 §
+       raw: 错在 $R$ 不是 DVR，甚至不是多维多项式环那种"因子只有素数与不可约多项式"的简单情形里的第一类：$U_w$ 可以有别的高度一素因子，它们在中心 specialization $t=0$ 处的取值会贡献正的 $v_p$。`01-introduction.tex:212`--`213` 我把这句话说出来了："This does not yet exclude its other irreduc
+   REL L133 sec=§15 filecnt=3 ratio=0.857 d=见 §
+       raw: 我能负责任重建的只有逻辑位置：上一节给我一串常数项趋于零的 theta 截面，本节需要非常数系数 valuation 有界（`07-theta.tex:10`--`11` 的接口承诺），再把它转成一个非零 Selmer 类，最后证明该类原始；积特征论证提供每个内部测试处的 content 界（`01-introduction.tex:222`--`223`）；theta 推论这一条被第 9 节以 
+
+-- D380-低Selmer余秩推出精确BSD公式.md noREL Q(LEN4)=被谁消费
+## D380-低Selmer余秩推出精确BSD公式.md zoneL245-264,265-362 Q(LEN7)=平方为一且为正
+   REL L159 sec=§18 filecnt=1 ratio=0.727 d=平方为一
+       raw: 单侧不等式对非 CM 成立，CM 秩零要有独立输入。引理 center:cm-zero（`10-center.tex:173`--`177`）说：$E/\mathbb Q$ 有 CM 且 $L(E,1)\ne0$ 时，按第 1 节归一化的精确 BSD 成立。证明（179--229 行）我按Burungale--Flach 的假设逐条验证：他们 Theorem 1.1 与 Corollary 1 给
+
+-- D380-低Selmer余秩推出精确BSD公式.md noREL Q(LEN8)=转折对举族零命中
+-- D380-低Selmer余秩推出精确BSD公式.md noREL Q(LEN5)=幂，并非一
+-- D380-低Selmer余秩推出精确BSD公式.md noREL Q(LEN9)=申报时不复写禁令串
+-- D381-对数空间类的精确去随机化.md noREL Q(LEN5)=申报不复写
+## D381-对数空间类的精确去随机化.md zoneL718-748,749-837 Q(LEN7)=第 $N$ 行
+   REL L472 sec=§14 filecnt=1 ratio=0.833 d= $N$ 
+       raw: 这个 $N$ 就是从"积分界"走到"指定起点"的价钱；$\log N=O(B)$，
+   REL L82 sec=§3 filecnt=2 ratio=0.727 d= N$ 
+       raw: $\mathsf{prBPL}=\mathsf{PromiseL}$，而 promise 版本的正确性要求判定器在 $Y\cup N$ 之外也停机
+   REL L463 sec=§14 filecnt=2 ratio=0.727 d=$N$ 
+       raw: ## §14 从中位数到确定判决：$N$ 是点名起点的价钱
+   REL L472 sec=§14 filecnt=1 ratio=0.727 d= $N$
+       raw: 这个 $N$ 就是从"积分界"走到"指定起点"的价钱；$\log N=O(B)$，
+   REL L472 sec=§14 filecnt=2 ratio=0.727 d=$N$ 
+       raw: 这个 $N$ 就是从"积分界"走到"指定起点"的价钱；$\log N=O(B)$，
+   REL L493 sec=§14 filecnt=2 ratio=0.727 d= N$ 
+       raw: 判定器在 $Y\cup N$ 之外照样停机，因为近似查询是全函数。这一条我当成正面检验用：
+
+-- D382-六阶复Hadamard矩阵的精确Fourier证书.md noREL Q(LEN9)=而、因、反、从、进
+-- D382-六阶复Hadamard矩阵的精确Fourier证书.md noREL Q(LEN7)=标记 + 说明
+-- D383-任意边缘下列联表的精确均匀采样.md noREL Q(LEN6)=不是……，是
+-- D383-任意边缘下列联表的精确均匀采样.md noREL Q(LEN6)=值得留意的是
+## D383-任意边缘下列联表的精确均匀采样.md zoneL215-220,221-278 Q(LEN5)=要说明的是
+   REL L35 sec=§2 filecnt=1 ratio=0.750 d=要的是
+       raw: 我随后想过第三条腿：直接在整表状态空间 $\Omega(r,c)$ 上跑一条以 $2\times2$ 换边为步的链，赌混合时间只靠多面体几何而不靠 $N$。这条路的死法和 DKM97 需要大边缘、AGW2021 需要 $5\Delta^4<N$ 是同一个症状的两侧：边缘一大一小交错时（比如一行边缘为 $2^{100}$、另一行为 $3$），小边缘行相邻的格全是瓶颈，换边步在这些格上的通过率被小边缘
+
+-- D383-任意边缘下列联表的精确均匀采样.md noREL Q(LEN4)=也就是说
+-- D383-任意边缘下列联表的精确均匀采样.md noREL Q(LEN4)=总的来看
+-- D383-任意边缘下列联表的精确均匀采样.md noREL Q(LEN4)=四十四行
+-- D383-任意边缘下列联表的精确均匀采样.md noREL Q(LEN15)=单笔字节超限一次……不拆分回改
+-- D383-任意边缘下列联表的精确均匀采样.md noREL Q(LEN7)=申报只用类别名
+-- D383-任意边缘下列联表的精确均匀采样.md noREL Q(LEN31)=我最初坚持的最坏时间多项式在精确版里被主动放弃、只保留给近似版
+-- D383-任意边缘下列联表的精确均匀采样.md noREL Q(LEN8)=唯一一次收工追加
+-- D383-任意边缘下列联表的精确均匀采样.md noREL Q(LEN16)=第三笔约 26,662 字节超限
+-- D384-二维O4格点模型的精确质量渐近.md noREL Q(LEN11)=前一动作加三字否定连词
+-- D384-二维O4格点模型的精确质量渐近.md noREL Q(LEN12)=我为何放弃另一条技术路线
+-- D384-二维O4格点模型的精确质量渐近.md noREL Q(LEN11)=二字否定连词加指示代词
+-- D384-二维O4格点模型的精确质量渐近.md noREL Q(LEN12)=两件事分别由 §N 承担
+## D384-二维O4格点模型的精确质量渐近.md zoneL3-25,610-640 Q(LEN5)=奇宇称之迹
+   REL L138 sec=§4 filecnt=5 ratio=0.750 d=奇宇称
+       raw: 在 $E(w)=-a^{-1}\log\|U(w)|_{\Omega^\perp}\|$ 下，最大非真空本征值出现在奇宇称这一事实
+   REL L271 sec=§8 filecnt=5 ratio=0.750 d=奇宇称
+       raw: 奇宇称的额外代价应当恰好是 $m_*$，减出来确实如此，这让我相信 §6 那个花括号没抄错符号。
+   REL L452 sec=§13 filecnt=5 ratio=0.750 d=奇宇称
+       raw: 最大非真空本征值在奇宇称取到，$s(u,w)=\operatorname{Tr} U(w)^{u/a}-1$；
+   REL L506 sec=§14 filecnt=5 ratio=0.750 d=奇宇称
+       raw: 另一个符号自检：把 $\ell=1$ 与 $\ell=0$ 的求和恒等式相减，奇宇称代价恰为 $m_*$，
+   REL L678 sec=§18 filecnt=5 ratio=0.750 d=奇宇称
+       raw: | $\sum_r p(u_r)+\ell f(0)=\frac W\pi\int\epsilon_{\rm in}-\ell m_*+\ [\cdots]$ | 恒等式 | `build/sections/04-bethe-transfer.tex:374` | §8 符号自检 | 奇宇称代价读不出 |
+
+## D384-二维O4格点模型的精确质量渐近.md zoneL3-25,610-640 Q(LEN4)=奇宇称迹
+   REL L138 sec=§4 filecnt=5 ratio=0.857 d=奇宇称
+       raw: 在 $E(w)=-a^{-1}\log\|U(w)|_{\Omega^\perp}\|$ 下，最大非真空本征值出现在奇宇称这一事实
+   REL L271 sec=§8 filecnt=5 ratio=0.857 d=奇宇称
+       raw: 奇宇称的额外代价应当恰好是 $m_*$，减出来确实如此，这让我相信 §6 那个花括号没抄错符号。
+   REL L452 sec=§13 filecnt=5 ratio=0.857 d=奇宇称
+       raw: 最大非真空本征值在奇宇称取到，$s(u,w)=\operatorname{Tr} U(w)^{u/a}-1$；
+   REL L506 sec=§14 filecnt=5 ratio=0.857 d=奇宇称
+       raw: 另一个符号自检：把 $\ell=1$ 与 $\ell=0$ 的求和恒等式相减，奇宇称代价恰为 $m_*$，
+   REL L678 sec=§18 filecnt=5 ratio=0.857 d=奇宇称
+       raw: | $\sum_r p(u_r)+\ell f(0)=\frac W\pi\int\epsilon_{\rm in}-\ell m_*+\ [\cdots]$ | 恒等式 | `build/sections/04-bethe-transfer.tex:374` | §8 符号自检 | 奇宇称代价读不出 |
+
+-- D384-二维O4格点模型的精确质量渐近.md noREL Q(LEN4)=奇迹比值
+-- D385-精确阶与不变反典范线性系.md noREL Q(LEN8)=不再……，是……
+-- D385-精确阶与不变反典范线性系.md noREL Q(LEN8)=有界极大度量引理
+-- D385-精确阶与不变反典范线性系.md noREL Q(LEN9)=已落盘内容不得删除
+## D386-固定门集上的精确量子因子化.md zoneL177-192,193-271 Q(LEN7)=与实际产物之间
+   REL L61 sec=§3 filecnt=1 ratio=0.727 d=实际产物
+       raw: 这个转点与我最初设想的差别要写清楚：我原以为要"造一个近似酉门再谈误差"，实际产物是一个带成功检验的未归一化矩阵，检验本身是概率的一部分。03-order-transform.tex 第 51 到 54 行明说这里的辅助态不是移位本征态，重叠给出 $g$，因此下一节的引理把"检验成功"写进矩阵的概率，并非施加理想 Fourier 变换的指令。这段是我整篇里读到的最接近"作者自我批注我当初想法"的话
+
+-- D386-固定门集上的精确量子因子化.md noREL Q(LEN4)=聊天残留
+-- D386-固定门集上的精确量子因子化.md noREL Q(LEN14)=探针行 D386 probe
+-- D386-固定门集上的精确量子因子化.md noREL Q(LEN5)=层不超半数
+-- D386-固定门集上的精确量子因子化.md noREL Q(LEN7)=总数据行五十四
+-- D386-固定门集上的精确量子因子化.md noREL Q(LEN14)=成对台账竖线归本体侧机械清理
+-- D386-固定门集上的精确量子因子化.md noREL Q(LEN10)=精确算法应当常数体面
+-- D386-固定门集上的精确量子因子化.md noREL Q(LEN6)=曾被外部打回
+-- D386-固定门集上的精确量子因子化.md noREL Q(LEN11)=定理若成立必须先有什么
+## D386-固定门集上的精确量子因子化.md zoneL177-192,193-271 Q(LEN11)=dyadic 环内自足
+   REL L39 sec=§2 filecnt=1 ratio=0.842 d=dyadic 环
+       raw: 第二条错路更接近 Mosca--Zalka：先造一个广义模型的精确 Fourier 变换（用计算角度得到的旋转），再谈因子化。我在 01-introduction.tex 第 28 到 33 行读到他们自己就报告了 Mosca 的一个广义模型精确因子化算法，这几乎点破我想要的结论。卡点在于模型授权：允许"计算中得到的实数作门参数"等价于允许任意精度的有理逼近免费进入电路，而我的门集里只有 $H$、
+   REL L39 sec=§2 filecnt=1 ratio=0.800 d= dyadic 环
+       raw: 第二条错路更接近 Mosca--Zalka：先造一个广义模型的精确 Fourier 变换（用计算角度得到的旋转），再谈因子化。我在 01-introduction.tex 第 28 到 33 行读到他们自己就报告了 Mosca 的一个广义模型精确因子化算法，这几乎点破我想要的结论。卡点在于模型授权：允许"计算中得到的实数作门参数"等价于允许任意精度的有理逼近免费进入电路，而我的门集里只有 $H$、
+   REL L12 sec=§0 filecnt=20 ratio=0.778 d=dyadic 
+       raw: - sections/02-model.tex（39 行，门集、dyadic 采样、记录引理）
+   REL L14 sec=§0 filecnt=20 ratio=0.778 d=dyadic 
+       raw: - sections/04-dyadic-order.tex（249 行，dyadic 优控与三模式）
+   REL L31 sec=§1 filecnt=20 ratio=0.778 d=dyadic 
+       raw: 于是动机定型为三层目标：其一，把秩序采样里所有非 dyadic 概率全部换掉；其二，让"真秩序"这一事件的概率变成一个可显式算术计算的 dyadic 有理数；其三，在拿到一个概率一但数值未知的制备之后，用两道机械的等质量化把它压成精确的 $1/4$，最后一步交给振幅放大的一对反射。第三层的 $1/4$ 是后来才定下的锚点，最早我只是觉得"某个已知的 dyadic 概率"够用，具体数值要到反射公式算
+   REL L35 sec=§2 filecnt=20 ratio=0.778 d=dyadic 
+       raw: 第一条路照抄 Shor 加高精度 QFT。设 $Q=2^q$，把 $q$ 取到 $\operatorname{poly}(n)$ 阶，阶的近似分量落在 $k/Q$ 附近，经典后处理用连分数收敛。这条路我推演过两件事就停了。第一件：量子侧得到的分布是 $\Pr(k)\approx\varphi(r)^2/(Q r\cdot(\text{distance}^2))$ 那一族峰，峰的质量对 $r$ 的依
+
+-- D386-固定门集上的精确量子因子化.md noREL Q(LEN10)=事后才看见的先决条件
+-- D386-固定门集上的精确量子因子化.md noREL Q(LEN9)=终检报告与真实计数
+-- D386-固定门集上的精确量子因子化.md noREL Q(LEN25)=正文素材只允许来自该论文 build 下 .tex
+## D387-存在一元实语句在计数层级中的定位.md zoneL265-274,367-378 Q(LEN13)=怎么判一条纤维有没有实零点
+   REL L23 sec=§1 filecnt=1 ratio=0.720 d=条纤维去判它有没有实零点
+       raw: 于是第一个念头：把 $\Phi(x,y)$ 的真假变成一个非负多项式 $F(x,z)$ 的实零点问题。这一步后来确实做成了，写进引理里，$z$ 吞掉了 $y$ 和一批辅助线变量，$F\ge 0$，$\deg F\le 4$，且对每个固定 $x$ 有 $\exists y\,\neg\Phi(x,y)\iff\exists z\,F(x,z)=0$。见 `sections/06-two-blocks
+
+## D387-存在一元实语句在计数层级中的定位.md zoneL265-274,367-378 Q(LEN15)=怎么枚举出好参数的有限坐标描述
+   REL L27 sec=§2 filecnt=2 ratio=0.750 d=出好参数的有限描述
+       raw: ## §2 第一条崩掉的路：测纤维给不出好参数的有限描述
+   REL L289 sec=§24 filecnt=2 ratio=0.750 d=出好参数的有限描述
+       raw: §21 的三条放弃路线，其叙事顺序是我重建的。文本只呈现成功那条，但它确实以对比口吻点出了失败面：逐纤维测试给不出好参数的有限描述、精确中国剩余要指数位、整条 Thom 串太长、矩阵指数大，见 `sections/01-introduction.tex:106` 与 `sections/02-counting.tex:326`。这些锚点是真的，我把它们排成时间线属于 [推测]。
+   REL L289 sec=§24 filecnt=1 ratio=0.720 d=出好参数的有限描述、
+       raw: §21 的三条放弃路线，其叙事顺序是我重建的。文本只呈现成功那条，但它确实以对比口吻点出了失败面：逐纤维测试给不出好参数的有限描述、精确中国剩余要指数位、整条 Thom 串太长、矩阵指数大，见 `sections/01-introduction.tex:106` 与 `sections/02-counting.tex:326`。这些锚点是真的，我把它们排成时间线属于 [推测]。
+
+-- D387-存在一元实语句在计数层级中的定位.md noREL Q(LEN8)=好参数需要被点名
+-- D387-存在一元实语句在计数层级中的定位.md noREL Q(LEN4)=聊天残留
+## D41-敏感度与块敏感度的超二次分离.md zoneL779-831 Q(LEN12)=从第 27 节起回到带内
+   REL L767 sec=§28 filecnt=1 ratio=0.737 d=第 27 节起
+       raw: 体量过带或欠带的申报：第 19 节 3,450 B、第 20 节 2,608 B、第 21 节 3,232 B、第 22 节 2,851 B、第 23 节 2,638 B、第 24 节 3,435 B、第 25 节 3,794 B、第 26 节 3,870 B，八节全部落在 4,000 B 下带之外，欠幅从 120 B 到 1,360 B 不等。成因写在明处：我按段落估长度时把中文字符按两字节半折
+
+-- D49-中心圆盘极大算子的端点梯度界.md noREL Q(LEN10)=端点问题获得正面解决
+-- D49-中心圆盘极大算子的端点梯度界.md noREL Q(LEN8)=终端密度无处交代
+## D49-中心圆盘极大算子的端点梯度界.md zoneL714-733,774-781 Q(LEN9)=下半连续性给测度界
+   REL L704 sec=§33 filecnt=1 ratio=0.947 d=下半连续性给出测度界
+       raw: 引理体在第 224-240 行：设 $u_j\in W^{1,1}_{\mathrm{loc}}$ 局部依 $L^1$ 收敛到 $u$，且 $\sup_j\int_{\mathbb{R}^2}\lvert\nabla u_j\rvert\le M<\infty$；则 $u$ 的分布梯度是有限向量 Radon 测度 $H$，满足 $\lvert H\rvert(\mathbb{R}^2)\le M$
+   REL L704 sec=§33 filecnt=1 ratio=0.900 d="下半连续性给出测度界
+       raw: 引理体在第 224-240 行：设 $u_j\in W^{1,1}_{\mathrm{loc}}$ 局部依 $L^1$ 收敛到 $u$，且 $\sup_j\int_{\mathbb{R}^2}\lvert\nabla u_j\rvert\le M<\infty$；则 $u$ 的分布梯度是有限向量 Radon 测度 $H$，满足 $\lvert H\rvert(\mathbb{R}^2)\le M$
+   REL L704 sec=§33 filecnt=1 ratio=0.900 d=下半连续性给出测度界"
+       raw: 引理体在第 224-240 行：设 $u_j\in W^{1,1}_{\mathrm{loc}}$ 局部依 $L^1$ 收敛到 $u$，且 $\sup_j\int_{\mathbb{R}^2}\lvert\nabla u_j\rvert\le M<\infty$；则 $u$ 的分布梯度是有限向量 Radon 测度 $H$，满足 $\lvert H\rvert(\mathbb{R}^2)\le M$
+   REL L704 sec=§33 filecnt=1 ratio=0.889 d=下半连续性给出测度
+       raw: 引理体在第 224-240 行：设 $u_j\in W^{1,1}_{\mathrm{loc}}$ 局部依 $L^1$ 收敛到 $u$，且 $\sup_j\int_{\mathbb{R}^2}\lvert\nabla u_j\rvert\le M<\infty$；则 $u$ 的分布梯度是有限向量 Radon 测度 $H$，满足 $\lvert H\rvert(\mathbb{R}^2)\le M$
+   REL L704 sec=§33 filecnt=1 ratio=0.889 d=半连续性给出测度界
+       raw: 引理体在第 224-240 行：设 $u_j\in W^{1,1}_{\mathrm{loc}}$ 局部依 $L^1$ 收敛到 $u$，且 $\sup_j\int_{\mathbb{R}^2}\lvert\nabla u_j\rvert\le M<\infty$；则 $u$ 的分布梯度是有限向量 Radon 测度 $H$，满足 $\lvert H\rvert(\mathbb{R}^2)\le M$
+   REL L704 sec=§33 filecnt=1 ratio=0.857 d=成"下半连续性给出测度界
+       raw: 引理体在第 224-240 行：设 $u_j\in W^{1,1}_{\mathrm{loc}}$ 局部依 $L^1$ 收敛到 $u$，且 $\sup_j\int_{\mathbb{R}^2}\lvert\nabla u_j\rvert\le M<\infty$；则 $u$ 的分布梯度是有限向量 Radon 测度 $H$，满足 $\lvert H\rvert(\mathbb{R}^2)\le M$
+
+-- D52-c0的双Lipschitz吸收而无线性拷贝.md noREL Q(LEN25)=$C^{-2}$ 与 $\exp(-C)$ 的对照
+## D52-c0的双Lipschitz吸收而无线性拷贝.md zoneL571-592,593-600,601-606,607-613 Q(LEN19)=θ^J 的 log-Lipschitz
+   REL L549 sec=§29 filecnt=1 ratio=0.878 d=^J$ 的 $\log$-Lipschitz
+       raw: | $\theta^J$ 的 $\log$-Lipschitz | $\pi/H$-Lip 于 $\log r$ | `03-weights.tex:176-179` | W2 前半 $(\eta/2)\delta$、案 B 的 $a_i$ | 若路径速度按 $\ell_2$ ，并非 $\ell_1$ 则 $\leq\pi/(2\sqrt 2 H)$，界紧一档 [推测：论文选 $\ell_1$ 与
+   REL L549 sec=§29 filecnt=1 ratio=0.857 d=^J$ 的 $\log$-Lipschitz 
+       raw: | $\theta^J$ 的 $\log$-Lipschitz | $\pi/H$-Lip 于 $\log r$ | `03-weights.tex:176-179` | W2 前半 $(\eta/2)\delta$、案 B 的 $a_i$ | 若路径速度按 $\ell_2$ ，并非 $\ell_1$ 则 $\leq\pi/(2\sqrt 2 H)$，界紧一档 [推测：论文选 $\ell_1$ 与
+   REL L549 sec=§29 filecnt=1 ratio=0.850 d=^J$ 的 $\log$-Lipschit
+       raw: | $\theta^J$ 的 $\log$-Lipschitz | $\pi/H$-Lip 于 $\log r$ | `03-weights.tex:176-179` | W2 前半 $(\eta/2)\delta$、案 B 的 $a_i$ | 若路径速度按 $\ell_2$ ，并非 $\ell_1$ 则 $\leq\pi/(2\sqrt 2 H)$，界紧一档 [推测：论文选 $\ell_1$ 与
+   REL L549 sec=§29 filecnt=1 ratio=0.850 d=J$ 的 $\log$-Lipschitz
+       raw: | $\theta^J$ 的 $\log$-Lipschitz | $\pi/H$-Lip 于 $\log r$ | `03-weights.tex:176-179` | W2 前半 $(\eta/2)\delta$、案 B 的 $a_i$ | 若路径速度按 $\ell_2$ ，并非 $\ell_1$ 则 $\leq\pi/(2\sqrt 2 H)$，界紧一档 [推测：论文选 $\ell_1$ 与
+   REL L549 sec=§29 filecnt=1 ratio=0.842 d= 的 $\log$-Lipschitz
+       raw: | $\theta^J$ 的 $\log$-Lipschitz | $\pi/H$-Lip 于 $\log r$ | `03-weights.tex:176-179` | W2 前半 $(\eta/2)\delta$、案 B 的 $a_i$ | 若路径速度按 $\ell_2$ ，并非 $\ell_1$ 则 $\leq\pi/(2\sqrt 2 H)$，界紧一档 [推测：论文选 $\ell_1$ 与
+   REL L337 sec=§19 filecnt=1 ratio=0.837 d=^J$ 的 $\log r$-Lipschitz
+       raw: | $H$ | 满足 $\pi/H\le\eta/2$ | 03:146 | $\theta^J$ 的 $\log r$-Lipschitz（W2 前半） | 变小则第一半预算 $\eta/2$ 溢出 |
+
+-- D52-c0的双Lipschitz吸收而无线性拷贝.md noREL Q(LEN6)=值得留意的是
+## D52-c0的双Lipschitz吸收而无线性拷贝.md zoneL571-592,593-600,601-606,607-613 Q(LEN5)=要说明的是
+   REL L27 sec=§0 filecnt=1 ratio=0.750 d=说的是
+       raw: intro `01:11-13` 有一句我读第一遍就画了线的：embedding 与 equivalence 的区分是本文的中心。$F$ 是**整个空间之间**的满射，而线性障碍说的是**子空间**。我进场时的第一个问题就是这两件事怎么能同时成立：把 $F$ 限制在 $\{0\}\oplus c_0$ 上（`01:62-63`），得到 $c_0$ 双 Lipschitz 嵌入 $Z$ 的像；可 $
+   REL L80 sec=§2 filecnt=2 ratio=0.750 d=要的是
+       raw: (c) 机械理由。为什么 $\|Q\|$ 以 $q$ 出现两次：$Q$ 在正反向都只通过 $Qb$ 接触 $K$，没有任何一步需要 $Q$ 满。"No surjectivity"那句（`02:38`）配合 `02:74-77` 尾注：反演公式先用 $g^{-1}$ 造出 $u$，再让 $b=d-K(t,u)$ 自动满足 $Qb=u$，"给定目标找原像"的问题被恒等式预先消化了。这就是我认出 GK0
+   REL L247 sec=§10 filecnt=2 ratio=0.750 d=要的是
+       raw: (d) 失败路线：我想用一致收敛（sup-范拓扑）替代逐点：$G_{q,\theta}$ 修改列的 sup 差 $\le\theta\operatorname{Lip}(F_i)\le\theta4^hL_0$，对固定 $h$ 类是**有**一致界的！那为什么不直接 sup 范收？我推演的答案：检测账需要的是 $|\langle\cdot,m_i\rangle|$ 收敛，sup 界只对**同列**
+
+-- D52-c0的双Lipschitz吸收而无线性拷贝.md noREL Q(LEN4)=总的来看
+-- D52-c0的双Lipschitz吸收而无线性拷贝.md noREL Q(LEN10)=每行恰好 6 枚竖线
+-- D52-c0的双Lipschitz吸收而无线性拷贝.md noREL Q(LEN43)=自检段、交付前的清单里都不许逐字抄写表头或任何禁串字形，只用第几节加句子的中性特征指代
+-- D52-c0的双Lipschitz吸收而无线性拷贝.md noREL Q(LEN6)=两个连读短语
+-- D52-c0的双Lipschitz吸收而无线性拷贝.md noREL Q(LEN9)=另有五个套语零命中
+-- D52-c0的双Lipschitz吸收而无线性拷贝.md noREL Q(LEN10)=已落盘内容一字不回改
+-- D52-c0的双Lipschitz吸收而无线性拷贝.md noREL Q(LEN18)=就地改字属于申报的越界动作、收益为零
+-- D67-条件坐标扫描与解析迁移.md noREL Q(LEN9)=用第 N 节的估计
+-- D68-相容性熵与Thorp扫描的谱.md noREL Q(LEN4)=强制满足
+-- D68-相容性熵与Thorp扫描的谱.md noREL Q(LEN7)=把某点翻进翻出
+-- D68-相容性熵与Thorp扫描的谱.md noREL Q(LEN6)=取证不超十次
+-- D68-相容性熵与Thorp扫描的谱.md noREL Q(LEN19)=提出 $R^{t}$ 不改变谱只改读法
+-- D68-相容性熵与Thorp扫描的谱.md noREL Q(LEN6)=读一块写一块
+-- D68-相容性熵与Thorp扫描的谱.md noREL Q(LEN4)=装饰符号
+## D71-完美匹配多面体的熵与面维数.md zoneL595-608,718-734,735-746 Q(LEN7)=经两次扩张产物
+   REL L530 sec=§27 filecnt=1 ratio=0.923 d=两次扩张产物
+       raw: 八顶点障碍（246-297 行）比我 §1 版本多出枚举与割账的全程。匹配枚举不靠软件（268-274 行）：匹配用 $01$、$03$、$05$ 之一；用 $01$ 则余下两个奇三角形仅由 $27$ 相接、强制 $M_1$；用 $03$ 则顶点 $1$ 由 $14$ 或 $16$ 收尾，分别强制 $N_1$ 或 $M_2$；用 $05$ 则同两支强制 $M_3$ 或 $N_2$。五个匹配全部列出
+   REL L530 sec=§27 filecnt=1 ratio=0.833 d=两次扩张产
+       raw: 八顶点障碍（246-297 行）比我 §1 版本多出枚举与割账的全程。匹配枚举不靠软件（268-274 行）：匹配用 $01$、$03$、$05$ 之一；用 $01$ 则余下两个奇三角形仅由 $27$ 相接、强制 $M_1$；用 $03$ 则顶点 $1$ 由 $14$ 或 $16$ 收尾，分别强制 $N_1$ 或 $M_2$；用 $05$ 则同两支强制 $M_3$ 或 $N_2$。五个匹配全部列出
+   REL L530 sec=§27 filecnt=1 ratio=0.833 d=次扩张产物
+       raw: 八顶点障碍（246-297 行）比我 §1 版本多出枚举与割账的全程。匹配枚举不靠软件（268-274 行）：匹配用 $01$、$03$、$05$ 之一；用 $01$ 则余下两个奇三角形仅由 $27$ 相接、强制 $M_1$；用 $03$ 则顶点 $1$ 由 $14$ 或 $16$ 收尾，分别强制 $N_1$ 或 $M_2$；用 $05$ 则同两支强制 $M_3$ 或 $N_2$。五个匹配全部列出
+   REL L530 sec=§27 filecnt=1 ratio=0.727 d=两次扩张
+       raw: 八顶点障碍（246-297 行）比我 §1 版本多出枚举与割账的全程。匹配枚举不靠软件（268-274 行）：匹配用 $01$、$03$、$05$ 之一；用 $01$ 则余下两个奇三角形仅由 $27$ 相接、强制 $M_1$；用 $03$ 则顶点 $1$ 由 $14$ 或 $16$ 收尾，分别强制 $N_1$ 或 $M_2$；用 $05$ 则同两支强制 $M_3$ 或 $N_2$。五个匹配全部列出
+   REL L530 sec=§27 filecnt=1 ratio=0.727 d=扩张产物
+       raw: 八顶点障碍（246-297 行）比我 §1 版本多出枚举与割账的全程。匹配枚举不靠软件（268-274 行）：匹配用 $01$、$03$、$05$ 之一；用 $01$ 则余下两个奇三角形仅由 $27$ 相接、强制 $M_1$；用 $03$ 则顶点 $1$ 由 $14$ 或 $16$ 收尾，分别强制 $N_1$ 或 $M_2$；用 $05$ 则同两支强制 $M_3$ 或 $N_2$。五个匹配全部列出
+   REL L530 sec=§27 filecnt=1 ratio=0.727 d=次扩张产
+       raw: 八顶点障碍（246-297 行）比我 §1 版本多出枚举与割账的全程。匹配枚举不靠软件（268-274 行）：匹配用 $01$、$03$、$05$ 之一；用 $01$ 则余下两个奇三角形仅由 $27$ 相接、强制 $M_1$；用 $03$ 则顶点 $1$ 由 $14$ 或 $16$ 收尾，分别强制 $N_1$ 或 $M_2$；用 $05$ 则同两支强制 $M_3$ 或 $N_2$。五个匹配全部列出
+
+-- D71-完美匹配多面体的熵与面维数.md noREL Q(LEN16)=标题形式跟随本篇现有节、不带前缀
+-- D71-完美匹配多面体的熵与面维数.md noREL Q(LEN13)=请本体侧按整块工具处理空枚
+-- D71-完美匹配多面体的熵与面维数.md noREL Q(LEN9)=磁盘第 623 行
+-- D71-完美匹配多面体的熵与面维数.md noREL Q(LEN5)=第 N 行
+-- D71-完美匹配多面体的熵与面维数.md noREL Q(LEN10)=本篇旧段有没有同一形
+-- D71-完美匹配多面体的熵与面维数.md noREL Q(LEN16)=边连通度定义无从 applied
+-- D71-完美匹配多面体的熵与面维数.md noREL Q(LEN8)=匹配穿过割的计数
+-- D71-完美匹配多面体的熵与面维数.md noREL Q(LEN8)=形义不明就不发明
+## D91-短埃及分数最小项数的双重对数阶.md zoneL1486-1502 Q(LEN7)=正文给出的口径
+   REL L5 sec=§pre filecnt=1 ratio=0.727 d=正文口径
+       raw: 本笔记是反推式研究笔记：我先假定自己就是做出这批引理的人，再把从论文与机器证明里能钉住的证据串成一条可复述的推导路径；凡属我自己补的猜测，一律用 `[推测]` 标出，与论文正文口径物理分开。
+
+-- D91-短埃及分数最小项数的双重对数阶.md noREL Q(LEN30)=第 1380 行 / 第 1382 行 / 第 1384 行

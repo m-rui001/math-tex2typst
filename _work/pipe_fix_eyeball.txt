@@ -1,0 +1,55 @@
+D09:382 FIX x2
+  OLD | $Q$ | $=p^{12}$ | unweighted.tex:40 | 归一化尺度 $|\operatorname{MaxCut}(G')/Q-\operatorname{MaxCut}(G)|\le\epsilon'$ | 6 维簇与内积谱范数 $p
+  NEW | $Q$ | $=p^{12}$ | unweighted.tex:40 | 归一化尺度 $\rvert\operatorname{MaxCut}(G')/Q-\operatorname{MaxCut}(G)\lvert\le\epsilon'$ | 6 维
+D18:730 FIX x2
+  OLD | $|\tau|$ | 3 | 支撑 $\{3m\}\cup\{-3m-1\}$；权重 $H^{-m},H^{m+2}$；$W$ 点 $\{-3,0\}$ | 支撑接缝平移，(b:profile) 的标量落点与 $\Delta$ 可逆度数全变 |
+  NEW | $\lvert\tau\rvert$ | 3 | 支撑 $\{3m\}\cup\{-3m-1\}$；权重 $H^{-m},H^{m+2}$；$W$ 点 $\{-3,0\}$ | 支撑接缝平移，(b:profile) 的标量落点与 $\Delta$ 可逆度数
+D21:215 FIX x2
+  OLD | $|F|$ | $m$ / $2m-1$ | 与扫除目标匹配 | `bandPath_card` |
+  NEW | $\lvertF\rvert$ | $m$ / $2m-1$ | 与扫除目标匹配 | `bandPath_card` |
+D25:254 FIX x2
+  OLD | 共形映射方向 | **外**共形映射 $h:\{|\lambda|>1\}\to\mathbb C\setminus\overline\Omega$（`main.tex:163`） | **内**共形映射 $f:\Omega\to\mathbb D$（`m
+  NEW | 共形映射方向 | **外**共形映射 $h:\{\rvert\lambda\lvert>1\}\to\mathbb C\setminus\overline\Omega$（`main.tex:163`） | **内**共形映射 $f:\Omega\to\ma
+D25:302 FIX x2
+  OLD | $\mathbb C,\mathbb T,\mathbb D$ | `main.tex:10-12` 宏 | `\newcommand{\C}{\mathbb C}` 等；$\mathbb T=\{\lambda:|\lambda|=1\}$ 在 `mai
+  NEW | $\mathbb C,\mathbb T,\mathbb D$ | `main.tex:10-12` 宏 | `\newcommand{\C}{\mathbb C}` 等；$\mathbb T=\{\lambda:\lvert\lambda\rvert=1
+D25:592 FIX x2
+  OLD | 几何衰减 $\rho^{k+j}$（双指标） | 第 196-197、220 行 | Cauchy 估计在 $(u,v)$ 双盘半径 $\rho^{-1}$ | 只有单指标衰减（$|s_{kj}|\le C\rho^k$）时 $\sum_j$ 方向不收敛，
+  NEW | 几何衰减 $\rho^{k+j}$（双指标） | 第 196-197、220 行 | Cauchy 估计在 $(u,v)$ 双盘半径 $\rho^{-1}$ | 只有单指标衰减（$\rverts_{kj}\lvert\le C\rho^k$）时 $\sum
+D25:1349 FIX x2
+  OLD | $J=\operatorname{diag}(I_m,-I_m)$ | `main.tex:440` | 产生 $-2\lvert M+L^*\rvert_2^2$ | 用 $J=\operatorname{diag}(I_m,\mu I_m)$（$|\m
+  NEW | $J=\operatorname{diag}(I_m,-I_m)$ | `main.tex:440` | 产生 $-2\lvert M+L^*\rvert_2^2$ | 用 $J=\operatorname{diag}(I_m,\mu I_m)$（$\rv
+D25:1478 FIX x4
+  OLD | $D_\delta$ **有限** | `main.tex:464` | 补步 2 的 $|D_\delta|$ 可被 $e^{-t_\delta\delta}$ 压住；Hessian 是有限和；$\Phi$ 是实解析指数和 | 无穷网：$|D_\delt
+  NEW | $D_\delta$ **有限** | `main.tex:464` | 补步 2 的 $\lvertD_\delta\rvert$ 可被 $e^{-t_\delta\delta}$ 压住；Hessian 是有限和；$\Phi$ 是实解析指数和 | 无穷网
+D25:1480 FIX x2
+  OLD | $t_\delta$ 满足 $|D_\delta|e^{-t_\delta\delta}<1$ | `main.tex:464` | 保证 $K\subset\Omega_\delta$（**严格**包含） | 若只 $\le1$：$K$ 可能触到 $\{
+  NEW | $t_\delta$ 满足 $\lvertD_\delta\rverte^{-t_\delta\delta}<1$ | `main.tex:464` | 保证 $K\subset\Omega_\delta$（**严格**包含） | 若只 $\le1$：$K
+D25:1482 FIX x2
+  OLD | $\delta$ 的双重身份 | `main.tex:464,466,473` | 既是网的分辨率（$|\mu-\nu|\le\delta$），又是支撑松弛量（$\Re(\bar\nu z)\le s_K(\nu)+\delta$、指数里的 $-\delt
+  NEW | $\delta$ 的双重身份 | `main.tex:464,466,473` | 既是网的分辨率（$\lvert\mu-\nu\rvert\le\delta$），又是支撑松弛量（$\Re(\bar\nu z)\le s_K(\nu)+\delta$、指数
+D25:1869 FIX x2
+  OLD | $0<r<1$ | `main.tex:183`（$h$ 在 $|\lambda|>r$ 单叶亚纯） | `hR : 1 < R` + `hg : AnalyticOnNhd ℂ g (ball 0 R)`（`DomainBound.lean:64-65`
+  NEW | $0<r<1$ | `main.tex:183`（$h$ 在 $\lvert\lambda\rvert>r$ 单叶亚纯） | `hR : 1 < R` + `hg : AnalyticOnNhd ℂ g (ball 0 R)`（`DomainBound.l
+D25:1885 FIX x2
+  OLD | $A=\begin{pmatrix}0&2\\0&0\end{pmatrix}$ | `main.tex:528` | `def sharpnessMatrix := !![0, 2; 0, 0]`（`Sharpness.lean:32`） | 唯一反例 
+  NEW | $A=\begin{pmatrix}0&2\\0&0\end{pmatrix}$ | `main.tex:528` | `def sharpnessMatrix := !![0, 2; 0, 0]`（`Sharpness.lean:32`） | 唯一反例 
+D25:1886 FIX x4
+  OLD | $(1,i,j,k)$ 四元组 | `main.tex:514-518`（Toeplitz-Hausdorff 重证）：`$(2\Re(\bar uv),2\Im(\bar uv),|u|^2-|v|^2)$` ranges over the unit s
+  NEW | $(1,i,j,k)$ 四元组 | `main.tex:514-518`（Toeplitz-Hausdorff 重证）：`$(2\Re(\bar uv),2\Im(\bar uv),\lvertu\rvert^2-\lvertv\rvert^2)$` ra
+D25:1887 FIX x2
+  OLD | $R_i/3$、$2R_i/3$（领子覆盖） | `main.tex:591` `the third-radius disks $V_i=B(\zeta_i,R_i/3)$ that cover the circle`、`:594` `$|\zeta_i-
+  NEW | $R_i/3$、$2R_i/3$（领子覆盖） | `main.tex:591` `the third-radius disks $V_i=B(\zeta_i,R_i/3)$ that cover the circle`、`:594` `$\lvert\ze
+--- REGISTERED ---
+D09:379 SKIP odd=1 bare=7 width=6 | $e_{k_0}$ | $2^{\ell+r-2k_0+1}\le\tau_0/4$ | affine_games.tex:377（eq:affine-va
+D103:598 SKIP odd=0 bare=5 width=3 | `(1/4)*log|Algebra.norm ℚ Δ| ≤ N^4/2*log(N^4) + (Σα0+Σ(α1+α2))*(log N + 1/2*lo
+D103:601 SKIP odd=0 bare=5 width=3 | `S₁*(...)-log 4*N^4*U ≤ (1/4)log|N(Δ)|`（85-87） | `paper.tex:651-657` 的 (eq:low
+D103:602 SKIP odd=0 bare=5 width=3 | `Σα0*(log U - C log q - C δ (log U)²/log q - CH H) - C*N^4*U ≤ (1/4)log|N(Δ)|`
+D25:1870 SKIP odd=0 bare=9 width=7 | $C_\rho,\ \rho\in(r,1)$（几何衰减） | `main.tex:196-197` `|s_{kj}|\le C_\rho\rho^{k+
+D28:1162 SKIP odd=0 bare=8 width=6 | |F| | 212=32+2·90 | 02；Template.lean:40 | field 总数，一切指数基数 | 精确、decide 可判 |
+D28:1163 SKIP odd=0 bare=8 width=6 | |R| | 98=7+1+90 | 02；IncidenceTemplate.lean:18 | row 总数 | 精确 |
+D34:533 SKIP odd=1 bare=7 width=6 | $A_r$ | $4+8(r-2)+(1+r(r-2))\log2$ | `optimizer:207-209` | $\log(1+kb_r(e^{-8x
+D34:654 SKIP odd=0 bare=9 width=5 | `Model.lean` | 13 | 0 | `averageDegree G = 2·|E|/|V|`（`Model.lean:7-9`），对应 `in
+D34:658 SKIP odd=0 bare=7 width=5 | `FiniteEntropy.lean` | 365 | 24 | `divergence`、`tv := (∑|p−q|)/2`（`:30`）、Pinsk
+D34:660 SKIP odd=0 bare=7 width=5 | `FiniteCoupling.lean` | 386 | 17 | 本地 `def dist := (∑|p−q|)/2`（`:25`）、`exists_
+D34:739 SKIP odd=0 bare=7 width=5 | 16 | 引理 5.1 用 $\|\cdot\|_{\mathrm{TV}}$（`entropy:80-82` 定义） | `FiniteCoupling.

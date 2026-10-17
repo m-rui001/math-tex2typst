@@ -1,0 +1,10 @@
+hand lines (1-based): [1130]
+  L1130 zone=[(1126, 1135)] inf=False
+    declL1128 Q(LEN18)=行内代码的闭合反引号误写成美元定界符  outside=[]  cjk=True
+    declL1130 Q(LEN2)=逐点  outside=[7, 69, 73, 142, 185, 203, 250, 410, 428, 461, 465, 565, 731, 893, 894, 901, 916, 932, 966, 1018, 1044]  cjk=True
+    declL1130 Q(LEN5)=论文没讨论  outside=[]  cjk=True
+    declL1132 Q(LEN6)=文件冒号行号  outside=[1138]  cjk=True
+    declL1134 Q(LEN9)=有界加置换不变就够  outside=[]  cjk=True
+  TARGET q=论文没讨论 d=论没讨论 rep=0 indel=1 ratio=0.889
+  d lines=[1058]
+  prefilter score=4 need=3.10

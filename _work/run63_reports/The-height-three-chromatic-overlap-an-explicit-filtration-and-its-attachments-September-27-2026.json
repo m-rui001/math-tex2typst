@@ -1,0 +1,35 @@
+{
+  "paper": "The-height-three-chromatic-overlap-an-explicit-filtration-and-its-attachments-September-27-2026",
+  "ok": true,
+  "typ_lines": 2665,
+  "included_pdf_pages": 0,
+  "formulas": 2529,
+  "math_failed": 7,
+  "labels": 250,
+  "equations": 1,
+  "theorems": 3,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 7
+  },
+  "samples": {
+    "formulas": "2529",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [
+    "\\let\\hthreeOriginalThebibliography",
+    "\\renewcommand\\thebibliography"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\The-height-three-chromatic-overlap-an-explicit-filtration-and-its-attachments-September-27-2026\\main.typ:2164:51\n     │\n2164 │   The rational Hochschild–Serre sequence for $U lt.tri K$ collapses to finite quotient invariants: positive cohomology of the finite group $K \\/ U$ vanishes by averaging in $bb(Q)_p$. Here $\"Lie\" \\( K \\)$ is the Lie algebra of a $\"GL\"_n$-form, with $n = 2$ or $3$. The exterior calculation and triviality of its adjoint action are given by #cite(label(\"BSSW\")) Lemma 3.8.2. They give generators in degrees $1 \\, 3 \\, dots.h \\, 2 n - 1$, without choosing explicit cocycles for all of them. Thus the finite quotient fixes the cohomology, and in particular the low-degree dimensions are $1 \\, 0 \\, 1$ in degrees $1 \\, 2 \\, 3$.\n     │                                                    ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 1,
+  "source": "E:\\math\\_work\\flat\\The-height-three-chromatic-overlap-an-explicit-filtration-and-its-attachments-September-27-2026.tex"
+}

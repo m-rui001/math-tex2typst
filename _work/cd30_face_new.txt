@@ -1,0 +1,48 @@
+== rule under test: live -- the label's own box
+== CD canvases: built 126 over 56 papers; refused 0 over 0 papers
+== arrow labels by arrow direction: count, and how many a line crosses (dist < need)
+   horizontal  labels  157   crossed    0   (median label width 0.00 cm)
+   vertical    labels  190   crossed   18   (median label width 3.10 cm)
+   diagonal    labels   47   crossed   14   (median label width 0.89 cm)
+   crossed by its OWN arrow's line   : 3
+   crossed by another arrow's line   : 29
+     own  Thomason-Model-Structures-in dist 0.805 need 0.955  $"Street" j_1$
+     own  Thomason-Model-Structures-in dist 0.805 need 0.955  $"Street" j_2$
+     own  Constructible-tame-Hecke-eig dist 1.655 need 1.720  $c_(V \, W)^(upright("seq")) \( Q \)$
+   neighbour-crossed, split by whether the diagram holds a bend arrow: 16 bend / 13 plain
+     bend An-algebra-of-infinite-little- dist 0.450 need 0.961 w 1.91  $T "otL"_(B ⊗_k C)-$
+     bend Logarithmic-Kodaira-dimension- dist 0.043 need 0.360 w 0.72  $q = h compose x$
+     bend Anticanonical-nonvanishing-fro dist 0.000 need 0.275 w 0.55  $pi$
+     bend Anticanonical-nonvanishing-fro dist 0.000 need 0.275 w 0.55  $pi$
+     bend An-algebra-of-infinite-little- dist 0.450 need 0.719 w 1.40  $O "otL"_B-$
+     bend Invariant-anticanonical-indice dist 0.097 need 0.325 w 0.55  $h$
+     bend Anticanonical-nonvanishing-fro dist 0.081 need 0.307 w 0.89  $macron(pi)$
+     bend Anticanonical-nonvanishing-fro dist 0.081 need 0.307 w 0.89  $macron(pi)$
+     bend The-reverse-logarithmic-Kodair dist 0.033 need 0.221 w 0.55  $h$
+     bend Logarithmic-Kodaira-dimension- dist 0.075 need 0.254 w 0.55  $h$
+     bend Anticanonical-nonvanishing-fro dist 0.081 need 0.253 w 0.55  $r$
+     bend Anticanonical-nonvanishing-fro dist 0.081 need 0.253 w 0.55  $r$
+   papers with a crossed label: 14 over 32 labels
+   per-paper worst:
+       6  Anticanonical-nonvanishing-from-smooth-semipositivity-Se
+       6  Thomason-Model-Structures-in-Every-Strict-Higher-Dimensi
+       5  Global-quantum-geometric-Langlands-at-irrational-level-O
+       3  Logarithmic-Kodaira-dimension-and-whole-fiber-variation-
+       2  A-rational-obstruction-to-strong-chromatic-splitting-at-
+       2  An-algebra-of-infinite-little-finitistic-dimension-Septe
+       1  Constructible-tame-Hecke-eigensheaves-in-positive-charac
+       1  Counterexamples-to-weak-chromatic-splitting-sphere-kerne
+       1  Termination-for-projective-log-canonical-fourfolds-with-
+       1  Termination-of-generalized-log-canonical-flips-on-compac
+     dist 0.350 need 2.145 w 4.29  Global-quantum-geometric-Langl  $upright("insertion comparison")$
+     dist 1.553 need 2.655 w 5.31  Global-quantum-geometric-Langl  $upright("integrated ") N upright(" case of 
+     dist 0.605 need 1.635 w 3.27  Global-quantum-geometric-Langl  $upright("period of ") upright("??")$
+     dist 1.120 need 2.060 w 4.12  Counterexamples-to-weak-chroma  $lambda_(L_(K \( h \)) X) thin L_(K \( h \))
+     dist 0.450 need 0.961 w 1.91  An-algebra-of-infinite-little-  $T "otL"_(B ⊗_k C)-$
+     dist 0.564 need 1.040 w 2.08  Thomason-Model-Structures-in-E  $"Street" j_12$
+     dist 0.043 need 0.360 w 0.72  Logarithmic-Kodaira-dimension-  $q = h compose x$
+     dist 1.830 need 2.145 w 4.29  Termination-of-generalized-log  $upright("finite small program")$
+     dist 1.258 need 1.550 w 3.10  Global-quantum-geometric-Langl  $G upright(" case of ") upright("??")$
+     dist 0.000 need 0.275 w 0.55  Anticanonical-nonvanishing-fro  $pi$
+== environments written inside a CD environment, and whether CD_STACK protects them
+       4  gathered       protected  1 papers

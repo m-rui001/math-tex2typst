@@ -1,0 +1,33 @@
+{
+  "paper": "An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026",
+  "ok": true,
+  "typ_lines": 573,
+  "included_pdf_pages": 0,
+  "formulas": 472,
+  "math_failed": 0,
+  "labels": 66,
+  "equations": 1,
+  "theorems": 3,
+  "figures": 3,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 3
+  },
+  "samples": {
+    "formulas": "472",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "flafter",
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026\\main.typ:271:44\n    │\n271 │ For idempotents in a semigroup, write $d lt.tri.eq e$ if $d e = e d = d$, and say that $d$ is #emph[nested under] $e$. This is a partial order: reflexivity and antisymmetry are immediate, and if $d lt.tri.eq e lt.tri.eq f$, then $d f = \\( d e \\) f = d \\( e f \\) = d e = d$ and $f d = f \\( e d \\) = \\( f e \\) d = e d = d$. Nesting is distinct from the edge-inclusion order $subset.eq.sq$.\n    │                                             ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026\\main.typ:271:201\n    │\n271 │ For idempotents in a semigroup, write $d lt.tri.eq e$ if $d e = e d = d$, and say that $d$ is #emph[nested under] $e$. This is a partial order: reflexivity and antisymmetry are immediate, and if $d lt.tri.eq e lt.tri.eq f$, then $d f = \\( d e \\) f = d \\( e f \\) = d e = d$ and $f d = f \\( e d \\) = \\( f e \\) d = e d = d$. Nesting is distinct from the edge-inclusion order $subset.eq.sq$.\n    │                                                                                                                                                                                                          ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026\\main.typ:271:213\n    │\n271 │ For idempotents in a semigroup, write $d lt.tri.eq e$ if $d e = e d = d$, and say that $d$ is #emph[nested under] $e$. This is a partial order: reflexivity and antisymmetry are immediate, and if $d lt.tri.eq e lt.tri.eq f$, then $d f = \\( d e \\) f = d \\( e f \\) = d e = d$ and $f d = f \\( e d \\) = \\( f e \\) d = e d = d$. Nesting is distinct from the edge-inclusion order $subset.eq.sq$.\n    │                                                                                                                                                                                                                      ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026\\main.typ:276:88\n    │\n276 │   (Absorption under nesting).  #emph[Let $d \\, e in cal(T)_m$ be idempotents with $d lt.tri.eq e$. For either sign $sigma$, \n    │                                                                                         ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026\\main.typ:307:96\n    │\n307 │   (Containment of recurrent classes).  #emph[Let $d \\, e in cal(T)_m$ be idempotents with $d lt.tri.eq e$. Every class in $cal(C)_d$ contains either]\n    │                                                                                                 ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026\\main.typ:332:103\n    │\n332 │   (Chain bound).  #emph[Let $b_0 \\, b_1 \\, dots.h \\, b_k in cal(T)_m$ be idempotents such that $b_j lt.tri.eq b_(j - 1)$ for $1 lt.eq j lt.eq k$. Suppose a single set $J_0 subset.eq cal(C)_(b_0)$ satisfies \n    │                                                                                                        ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026\\main.typ:375:294\n    │\n375 │   (Minimal idempotent corners).  #emph[Let $A$ be a finite semigroup, let $M$ be a monoid, and le",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 12,
+  "source": "E:\\math\\_work\\flat\\An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026.tex"
+}

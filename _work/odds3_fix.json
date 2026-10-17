@@ -1,0 +1,38 @@
+[
+ {
+  "cid": "D104",
+  "line": 155,
+  "old": "(\\text{w_j 非典范})^2",
+  "new": "(w_j\\ \\text{非典范})^2",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "body",
+  "cred": "本行是 [推测] 无素材式；house 形＝CJK 进 \\text{}（2977 处／534 篇）、变量留数学；\\text{…$…$} 全库 0 处且量具不剥 \\text{}"
+ },
+ {
+  "cid": "D108",
+  "line": 424,
+  "old": "\\dim W^\\per=|",
+  "new": "\\dim W^\\perp=|",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "body",
+  "cred": "main.tex:679 逐字 \\(dim W\\^\\perp=|\\{TT|-\\dim W\\)；同一行两处 W^\\perp；宏表 \\per=\\operatorname{per} ⇒ 报错名是红鲱鱼"
+ },
+ {
+  "cid": "D142",
+  "line": 561,
+  "old": "\"$R_{ab}&=R_b\\cup B_bR_a(L_bR_a)^*F_b.$\"",
+  "new": "\"`R_{ab}&=R_b\\cup B_bR_a(L_bR_a)^*F_b.`\"",
+  "expect": 1,
+  "dollars": -2,
+  "ticks": 2,
+  "parity": true,
+  "level": "delim",
+  "cred": "diagrams.tex:91 的 aligned 行，\\& 是对齐位；本篇 535-543 行已把整段放围栏代码块＝先例"
+ }
+]

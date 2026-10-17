@@ -1,0 +1,18 @@
+
+\documentclass{article}
+\usepackage{pgf}
+\newwrite\meas
+\immediate\openout\meas=meas_trunc.txt\relax
+\newcommand{\tm}[1]{\pgfmathtruncatemacro\v{#1}\immediate\write\meas{T #1 == \v}\relax}
+\begin{document}
+\tm{0.7*10}
+\tm{1.1*3}
+\tm{0.1+0.2}
+\tm{2.699999}
+\tm{1/3<1}
+\tm{3*(2==1)}
+\tm{floor(0.7*10)}
+\tm{2/3}
+\tm{-1/3}
+\tm{floor(-1/3*2)}
+\end{document}

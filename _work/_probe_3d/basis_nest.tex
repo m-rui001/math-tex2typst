@@ -1,0 +1,17 @@
+\documentclass[tikz]{standalone}
+\begin{document}
+\begin{tikzpicture}[x={(1.10cm,-0.55cm)},y={(-1.10cm,-0.55cm)},z={(0cm,1.18cm)}]
+
+  \fill[black] (0,0,0) circle (2pt);
+  \fill[red] (1,0,0) circle (2pt);
+  \fill[green] (0,1,0) circle (2pt);
+  \fill[blue] (0,0,1) circle (2pt);
+  \fill[magenta] (1,1,0) circle (2pt);
+  \begin{scope}[x=1cm,y=1cm]
+    \fill[olive] (0,0) circle (3pt);
+    \fill[orange] (1,0) circle (3pt);
+    \fill[violet] (0,1) circle (3pt);
+  \end{scope}
+
+\end{tikzpicture}
+\end{document}

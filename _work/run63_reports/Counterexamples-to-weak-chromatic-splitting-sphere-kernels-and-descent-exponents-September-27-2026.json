@@ -1,0 +1,33 @@
+{
+  "paper": "Counterexamples-to-weak-chromatic-splitting-sphere-kernels-and-descent-exponents-September-27-2026",
+  "ok": true,
+  "typ_lines": 793,
+  "included_pdf_pages": 0,
+  "formulas": 722,
+  "math_failed": 2,
+  "labels": 79,
+  "equations": 22,
+  "theorems": 0,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 2
+  },
+  "samples": {
+    "formulas": "722",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "amscd",
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Counterexamples-to-weak-chromatic-splitting-sphere-kernels-and-descent-exponents-September-27-2026.tex"
+}

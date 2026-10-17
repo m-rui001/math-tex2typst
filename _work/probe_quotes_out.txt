@@ -1,0 +1,58 @@
+== D543 L268 bytes=72931 lines=270
+  SPAN(2x file, 1 lines) 未译形态词
+    at lines [268]
+  SPAN(2x file, 1 lines) 未译形态词
+    at lines [268]
+  SPAN(1x file, 1 lines) 所加外文词再加不等式
+    at lines [268]
+  SPAN(1x file, 1 lines) 所示不等式
+    at lines [268]
+  SPAN(2x file, 2 lines) 十七个小节
+    at lines [266, 268]
+== D543 L250 bytes=72931 lines=270
+== D570 L255 bytes=72965 lines=256
+  SPAN(2x file, 2 lines) 我不再亲手造单群
+    at lines [63, 255]
+  SPAN(2x file, 2 lines) 外 automorphism 群
+    at lines [55, 255]
+  SPAN(2x file, 2 lines) 空 $c_*$ 与包含交叠同-cover
+    at lines [137, 255]
+  SPAN(1x file, 1 lines) 同样覆盖
+    at lines [255]
+  SPAN(2x file, 2 lines) 写错?
+    at lines [89, 255]
+== D486 L253 bytes=71067 lines=292
+  SPAN(1x file, 1 lines) 关系式 $JSJ=S^{-1}$ 见 planar.tex:184 至 planar.tex:186
+    at lines [253]
+  SPAN(1x file, 1 lines) 命题回指见 kernel.tex:140 至 kernel.tex:141
+    at lines [253]
+== D457 L203 bytes=70572 lines=284
+  SPAN(22x file, 16 lines) 而
+    at lines [14, 22, 40, 56, 58, 75, 89, 99, 101, 123, 143, 145]
+  SPAN(54x file, 36 lines) 非
+    at lines [14, 28, 42, 56, 58, 65, 75, 81, 83, 85, 89, 123]
+  SPAN(1x file, 1 lines) 使典范层从 F 下标 0 起步，不从 F 下标负 d 起步
+    at lines [203]
+  SPAN(2x file, 2 lines) 进而
+    at lines [203, 211]
+  SPAN(152x file, 61 lines) 是
+    at lines [5, 14, 16, 20, 22, 28, 34, 36, 40, 42, 46, 50]
+  SPAN(1x file, 1 lines) 用假设其二得半正、因此是有理线性平凡的
+    at lines [203]
+  SPAN(2x file, 2 lines) 因而
+    at lines [203, 211]
+  SPAN(2x file, 2 lines) 遂为
+    at lines [203, 211]
+== D642 L209 bytes=73393 lines=282
+  SPAN(2x file, 2 lines) §16 台账
+    at lines [88, 209]
+  SPAN(3x file, 3 lines) 若改动断在哪一步
+    at lines [88, 209, 217]
+  SPAN(2x file, 2 lines) 奇轨迹的清理放在预备节，我在 §8 再回到它
+    at lines [36, 209]
+  SPAN(44x file, 29 lines) 紧
+    at lines [1, 13, 20, 22, 30, 42, 44, 48, 50, 58, 64, 68]
+== D435 L374 bytes=89450 lines=380
+== D521 L318 bytes=103791 lines=319
+  SPAN(2x file, 2 lines) 长停顿号仍在 §8 第六段
+    at lines [316, 318]

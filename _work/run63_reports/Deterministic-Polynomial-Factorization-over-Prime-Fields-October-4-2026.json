@@ -1,0 +1,33 @@
+{
+  "paper": "Deterministic-Polynomial-Factorization-over-Prime-Fields-October-4-2026",
+  "ok": true,
+  "typ_lines": 1305,
+  "included_pdf_pages": 0,
+  "formulas": 1101,
+  "math_failed": 0,
+  "labels": 150,
+  "equations": 2,
+  "theorems": 3,
+  "figures": 3,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 3,
+    "cetz_refused": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "1101",
+    "cetz_refused": "\\begin{tikzpicture}[font=\\small,>=Latex, box/.style={draw,rounded corners=2pt,align=center,text width=5.2cm, minimum h",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Deterministic-Polynomial-Factorization-over-Prime-Fields-October-4-2026.tex"
+}

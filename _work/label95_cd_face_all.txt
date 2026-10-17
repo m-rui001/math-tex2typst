@@ -1,0 +1,20 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+cd canvases on the pages: 124 in 56 papers
+
+better 1 / same 118 / worse 5 / unreadable 0
+  WORSE A-universal-group-of-type-F-infinity-Septembe#0 tikzcd: 0 -> 1  5.42 'Ŵ'
+      A-universal-group-of-type-F-infinity-Septembe#0 tikzcd  product 0 -> rebuilt 1
+  WORSE Abundance-in-numerical-dimension-one-for-term#0 tikzcd: 0 -> 2  3.60 'Preparedcycle('  3.60 'Preparedcycle('
+      Abundance-in-numerical-dimension-one-for-term#0 tikzcd  product 0 -> rebuilt 2
+      Constructible-tame-Hecke-eigensheaves-in-posi#3 CD      product 1 -> rebuilt 1
+      Global-quantum-geometric-Langlands-at-irratio#0 tikzcd  product 7 -> rebuilt 0
+  WORSE Irrational-cubic-fourfolds-with-geometric-K3-#0 tikzcd: 0 -> 1  4.12 '⇢X'
+      Irrational-cubic-fourfolds-with-geometric-K3-#0 tikzcd  product 0 -> rebuilt 1
+      Tame-Hecke-Eigensheaves-with-Several-Marked-P#1 CD      product 1 -> rebuilt 1
+      Tame-Hecke-Eigensheaves-with-Several-Marked-P#2 CD      product 2 -> rebuilt 2
+  WORSE The-height-three-chromatic-overlap-an-explici#1 tikzcd: 0 -> 2  3.84 'RΓ'  4.26 ')'
+      The-height-three-chromatic-overlap-an-explici#1 tikzcd  product 0 -> rebuilt 2
+  WORSE Unrestricted-pro-modularity-at-the-prime-two-#0 CD: 0 -> 1  3.42 'forgetfactors2'
+      Unrestricted-pro-modularity-at-the-prime-two-#0 CD      product 0 -> rebuilt 1
+
+totals: product 11 pairs -> rebuilt 11 pairs over 3.0pt

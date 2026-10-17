@@ -1,0 +1,42 @@
+{
+  "paper": "Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026",
+  "ok": true,
+  "typ_lines": 3437,
+  "included_pdf_pages": 0,
+  "formulas": 2873,
+  "math_failed": 0,
+  "labels": 400,
+  "equations": 18,
+  "theorems": 192,
+  "figures": 4,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:minipagew770": 1,
+    "cetz_converted": 4
+  },
+  "samples": {
+    "formulas": "2873",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "aliascnt",
+    "xurl"
+  ],
+  "macros_skipped": [
+    "\\providecommand\\lemmaautorefname",
+    "\\providecommand\\propositionautorefname",
+    "\\providecommand\\corollaryautorefname",
+    "\\providecommand\\definitionautorefname",
+    "\\providecommand\\conventionautorefname",
+    "\\providecommand\\exampleautorefname",
+    "\\providecommand\\remarkautorefname"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026.tex"
+}

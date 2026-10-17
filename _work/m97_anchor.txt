@@ -1,0 +1,19 @@
+`\frac`-family inside source tikzpictures, looked up in the product canvas: 74 sites over 35 papers
+   demoted    sites=7      papers=3
+   frac-call  sites=56     papers=29
+   absent     sites=11     papers=6
+
+demoted by spelling:
+   braced     sites=3      papers=2
+   nobrace    sites=4      papers=1
+
+samples:
+   Endpoint-pointwise-convergence-for-the-Sch \dfrac  braced   k/2        k"/"2
+   Mass-and-covering-exponents-for-fixed-leng \tfrac  nobrace  1/2        1"/"2
+   Mass-and-covering-exponents-for-fixed-leng \tfrac  nobrace  1/2        1"/"2
+   Mass-and-covering-exponents-for-fixed-leng \tfrac  nobrace  1/2        1"/"2
+   Mass-and-covering-exponents-for-fixed-leng \tfrac  nobrace  1/2        1"/"2
+   Staggered-extraction-for-exact-matrix-mult \frac   braced   C_*/6      C_*"/"6
+   Staggered-extraction-for-exact-matrix-mult \frac   braced   C_*/6      C_*"/"6
+
+wrote E:\math\_work\m97_anchor.tsv

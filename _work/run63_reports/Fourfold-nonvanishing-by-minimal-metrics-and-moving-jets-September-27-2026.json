@@ -1,0 +1,30 @@
+{
+  "paper": "Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026",
+  "ok": true,
+  "typ_lines": 912,
+  "included_pdf_pages": 0,
+  "formulas": 680,
+  "math_failed": 0,
+  "labels": 117,
+  "equations": 1,
+  "theorems": 1,
+  "figures": 0,
+  "tables": 1,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "680"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "amscd"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026.tex"
+}

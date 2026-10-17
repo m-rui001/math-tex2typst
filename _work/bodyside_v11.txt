@@ -1,0 +1,19 @@
+-- D08-Mezard-Parisi公式.md  (no relative) Q=行内代码的闭合反引号误写成美元定界符
+-- D08-Mezard-Parisi公式.md  (no relative) Q=论文没讨论
+-- D08-Mezard-Parisi公式.md  (no relative) Q=有界加置换不变就够
+-- D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md  (no relative) Q=禁止改写已落盘内容
+-- D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md  (no relative) Q=这个顺序本身就是论文最深的设计声明。
+-- D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md  (no relative) Q=这本身是论文最深的的设计声明。
+## D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md restatement Q(LEN11)=等于零强制 $B=0$
+   REL L153 sec=§8 cnt=1 ratio=0.957 d=等于零都强制 $B=0$
+       raw: 收口（main.tex:668-676）：$Xf=0$ 在第 $m-1$ 模说 $\partial f_{m-2}=-\bar\partial f_m$；配上 $(Yf)_{m-1}$ 的表示得 $P_{m-1}Yf=-2iB$，故 $0=\langle B,-2iB\rangle$ 逼 $\|B\|_2=0$、即 $\bar\partial f_m=0$；$m$ 任意，递推再给 $\partia
+   REL L153 sec=§8 cnt=1 ratio=0.917 d=式等于零都强制 $B=0$
+       raw: 收口（main.tex:668-676）：$Xf=0$ 在第 $m-1$ 模说 $\partial f_{m-2}=-\bar\partial f_m$；配上 $(Yf)_{m-1}$ 的表示得 $P_{m-1}Yf=-2iB$，故 $0=\langle B,-2iB\rangle$ 逼 $\|B\|_2=0$、即 $\bar\partial f_m=0$；$m$ 任意，递推再给 $\partia
+   REL L153 sec=§8 cnt=1 ratio=0.909 d=于零都强制 $B=0$
+       raw: 收口（main.tex:668-676）：$Xf=0$ 在第 $m-1$ 模说 $\partial f_{m-2}=-\bar\partial f_m$；配上 $(Yf)_{m-1}$ 的表示得 $P_{m-1}Yf=-2iB$，故 $0=\langle B,-2iB\rangle$ 逼 $\|B\|_2=0$、即 $\bar\partial f_m=0$；$m$ 任意，递推再给 $\partia
+   REL L153 sec=§8 cnt=1 ratio=0.880 d=等式等于零都强制 $B=0$
+       raw: 收口（main.tex:668-676）：$Xf=0$ 在第 $m-1$ 模说 $\partial f_{m-2}=-\bar\partial f_m$；配上 $(Yf)_{m-1}$ 的表示得 $P_{m-1}Yf=-2iB$，故 $0=\langle B,-2iB\rangle$ 逼 $\|B\|_2=0$、即 $\bar\partial f_m=0$；$m$ 任意，递推再给 $\partia
+   REL L153 sec=§8 cnt=1 ratio=0.846 d=等式等于零都强制 $B=0$，
+       raw: 收口（main.tex:668-676）：$Xf=0$ 在第 $m-1$ 模说 $\partial f_{m-2}=-\bar\partial f_m$；配上 $(Yf)_{m-1}$ 的表示得 $P_{m-1}Yf=-2iB$，故 $0=\langle B,-2iB\rangle$ 逼 $\|B\|_2=0$、即 $\bar\partial f_m=0$；$m$ 任意，递推再给 $\partia
+   REL L153 sec=§8 cnt=1 ratio=0.846 d=，等式等于零都强制 $B=0$
+       raw: 收口（main.tex:668-676）：$Xf=0$ 在第 $m-1$ 模说 $\partial f_{m-2}=-\bar\partial f_m$；配上 $(Yf)_{m-1}$ 的表示得 $P_{m-1}Yf=-2iB$，故 $0=\langle B,-2iB\rangle$ 逼 $\|B\|_2=0$、即 $\bar\partial f_m=0$；$m$ 任意，递推再给 $\partia

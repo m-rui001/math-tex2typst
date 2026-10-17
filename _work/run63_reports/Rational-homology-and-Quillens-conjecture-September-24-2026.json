@@ -1,0 +1,30 @@
+{
+  "paper": "Rational-homology-and-Quillens-conjecture-September-24-2026",
+  "ok": true,
+  "typ_lines": 1647,
+  "included_pdf_pages": 0,
+  "formulas": 1536,
+  "math_failed": 0,
+  "labels": 187,
+  "equations": 94,
+  "theorems": 0,
+  "figures": 2,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 2
+  },
+  "samples": {
+    "formulas": "1536",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Rational-homology-and-Quillens-conjecture-September-24-2026\\main.typ:193:215\n    │\n193 │   List the distinct $G$-conjugates of $L$ as $L = L_1 \\, L_2 \\, dots.h \\, L_t$. The component theorem gives an internal direct product $N = L_1 dots.h.c L_t$, and conjugation by $G$ permutes its factors. Thus $N lt.tri.eq G$.\n    │                                                                                                                                                                                                                        ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Rational-homology-and-Quillens-conjecture-September-24-2026\\main.typ:196:14\n    │\n196 │   Since $Q lt.tri.eq C$, the inclusion $Q lt.eq D$ implies $Q lt.tri.eq D$. Hence $Q lt.eq O_p \\( D \\)$. Finally, $D lt.tri.eq G$ and $O_p \\( D \\)$ is characteristic in $D$, so $O_p \\( D \\) lt.eq O_p \\( G \\) = 1$. ◻\n    │               ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Rational-homology-and-Quillens-conjecture-September-24-2026\\main.typ:196:65\n    │\n196 │   Since $Q lt.tri.eq C$, the inclusion $Q lt.eq D$ implies $Q lt.tri.eq D$. Hence $Q lt.eq O_p \\( D \\)$. Finally, $D lt.tri.eq G$ and $O_p \\( D \\)$ is characteristic in $D$, so $O_p \\( D \\) lt.eq O_p \\( G \\) = 1$. ◻\n    │                                                                  ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Rational-homology-and-Quillens-conjecture-September-24-2026\\main.typ:196:120\n    │\n196 │   Since $Q lt.tri.eq C$, the inclusion $Q lt.eq D$ implies $Q lt.tri.eq D$. Hence $Q lt.eq O_p \\( D \\)$. Finally, $D lt.tri.eq G$ and $O_p \\( D \\)$ is characteristic in $D$, so $O_p \\( D \\) lt.eq O_p \\( G \\) = 1$. ◻\n    │                                                                                                                         ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\Rational-homology-and-Quillens-conjecture-September-24-2026\\main.typ:1506:18\n     │\n1506 │   #emph[Let $J lt.tri.eq H lt.eq G$ be finite groups, and suppose that $H \\/ J$ is a $p$-group. If $O_p \\( C_G \\( H \\) \\) = 1$, then $O_p \\( C_G \\( J \\) \\) = 1$.]\n     │                   ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\Rational-homology-and-Quillens-conjecture-September-24-2026\\main.typ:1593:323\n     │\n1593 │   More generally, let $H_1$ be any faithful elementary $2$-extension with $O_2 \\( C_G \\( H_1 \\) \\) = 1$. If its outer image $B$ met $T$ nontrivially, take the intermediate subgroup $J$ above an order-two subgroup of $B ∩ T$. The elementary complement defining $H_1$ supplies an order-two complement for $J$. Moreover $J lt.tri.eq H_1$ and $H_1 \\/ J$ is a $2$-group, so Lemma 33 gives $O_2 \\( C_G \\( J \\) \\) = 1$. This contradicts the preceding paragraph. Thus every such extension has\n     │                                                                                                                                                                                                                                                                                                                                    ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 6,
+  "source": "E:\\math\\_work\\flat\\Rational-homology-and-Quillens-conjecture-September-24-2026.tex"
+}

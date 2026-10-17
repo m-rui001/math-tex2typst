@@ -1,0 +1,34 @@
+=== D114 (2828 lines) ===
+D114:50: (b) 补中间步骤。这几行里最容易被略读过去的是"occurrences"这个复数：值是按出现次数算的份额，并非按边集算的份额，于是"显式非空的多重集"是陈述的一部分，而不是省事的实现细节。`00-introduction.tex:9-11` 的第二句又允许平行出现带不同投影映射，这条自由度和 exact-two 是互相供能的：最后一步把有理权重量化成整数份数时，同一 `(u,v)` 端点必须能带若干份各自精确二的表（`07-parameters-output.tex` 的取整段，本文第 27 节展开）。反过来，如
+D114:1054: (c) 机械理由。`B` 的定义式 `eq:upper-B` 里生成元是 `\{1\}\cup\{s_{C,t}s_{C,u}\}`：`1` 保证后面 `eq:upper-valid` 的归一化 `z(1)=1` 有落点，积保证秩一测试的 `\ell_i^2` 个条目全在 `B` 上被 `b_y` 定价。取"所有"层 `i` 后代而不是路径上那个，是为了让记录 `P` 不必携带被选中后代的标签（`04-upper-decoding.tex:54-58` 明确 `P` 不含该标签、不含投影掩码、不含 `O` 中的问题
+D114:1056: (d) 候选失败路线 [推测]。一，直接在 `\Prob_i` 上做后续所有分析、不转未限制律：那 `lem:many-fibers`（第 7 节）要求的"`A` 均匀、`M` 均匀且独立于 `P`"不成立，第 18 节的 `g=\eta^2 2^{-r\ell}/4` 无从谈起；`156-157` 那句"own buckets, pending ancestor calls, descendant matrices are separate independent families"正是把这一独立性搬回来的凭据。
+D114:1177: ## 19 隐藏桶律与 `lem:heavy-list`：用小偏置律做 Fourier，而不是用接近均匀
+D114:2631: (c) 机械理由。为什么是 `Nonempty (BinaryGapReduction δ)` 而不是给出一个具体对象：`BinaryGapReduction` 含 `TM2ComputableInPolyTime` 与 `MachineFiniteAlphabet` 两类证明性字段，且 `value` 的定义用了 `noncomputable def`（`Finset.sup` 与实数除法），所以整段被包在 `noncomputable section`（`Theorem11.lean:11`）；`permitt
+=== D127 (641 lines) ===
+D127:43: - 图论侧的推论血统：单色树覆盖形式的 Gyárfás 猜想按 `paper.tex:162--166` 的说法，取的是 Erdős-Gyárfás-Pyber 1991 第 3 节定理 2 之后的那个覆盖版本（文献里编号为 Conjecture 1 的是 Milićević 文本），而不是顶点两两不交的划分版本；本篇的推论同时打掉 Milićević 的有直径版（Conjecture 6）与 DeBiasio-Kamel-McCourt-Sheats 的 $\alpha=1$ 情形（`paper.tex:201-
+D127:69: 原来解法是"改标号"而不是"增顶点类型"。我把它翻成一句可执行的机制：对嵌入到 $\F_q^2$ 的某个小组合 $Y_i$ 里的点 $y$，它在方向 $d$ 上的那条环境线 $\ell_d(y)$ **从边的标号里被抹掉**，代之以一个小平面里的线标号 $L_{t_i(d)}(f(w))$。这正是 `construction.tex:517--523` 的分段定义：
+D127:159: 为什么这里要一次给出 $|uY-vY|$ 而不仅是 $|uY|$：第 7 节的 `inc-scalar-coverings` 要用 $|2H-B|=|2B-3B|\le K^5|B|$（`incidence.tex:294--297`），即 $u=2,v=3$，指数 $u+v=5$ 就是那个 $K^5$ 的全部来历，它随后成为归纳里每一步多花 $5$ 的来源（$C_{m+1}=3C_m+5$）。为什么第 2 条的结论是"$M$ 个 $Y-Y$ 的平移"而不是"$M$ 个 $Y$ 的平移"：因为归纳过程中集合要对称地
+=== D131 (612 lines) ===
+D131:51: 这里的 "compatibility" 三个字是我后来才意识到分量有多重。我一开始以为只要证明 $\widetilde X$ 双全纯同构于某个 $Y_1\times Y_2$ 就完事了，可是 $Y_1\times Y_2$ 的乘积结构可能和指定的 $E_1,E_2$ 的嵌入方式对不上；`intro.tex:113` 把这条要求写成 $\dd\Phi(\pi^*E_i)=\pr_i^*T_{Y_i}$，用的是等号而不是包含号。
+D131:73: 第二个毛病更隐蔽，出在 $\pi^*$ 上。`intro.tex:114` 的 where 子句写着 $\dd\pi$ identifies $T_{\widetilde X}$ with $\pi^*T_X$，我一开始把 $\pi^*E_i$ 当成 $T_{\widetilde X}$ 的子丛来写，然后困惑于 $\dd\Phi$ 的定义域；实际上 $\dd\pi$ 是同构而不是嵌入，$\pi^*E_i$ 与 $T_{\widetilde X}$ 的识别必须经过它。这个记号麻烦在 Lean 里也留了痕迹：`Main
+D131:163: - 环包含在 $D_{x_j}$ 里：需要 $2\lambda\le r(x_j)=k\sqrt{\delta_j}$，即 $2\delta_j^{3/4}\le k\delta_j^{1/2}$，也就是 $\delta_j^{1/4}\le k/2$，对大 $j$ 成立。上限指数取 $5/8$ 而不是 $3/4$ 是为了与这个条件兼容：$\delta_j^{5/8}\ll\delta_j^{1/2}$（当 $\delta_j\to0$ 且 $5/8>1/2$ 时 $\delta_j^{5/8}<\delta_j^
+D131:198: `lem:box-unique`（`boxes.tex:75--91`）是网格论证的骨架：Two continuous boxes on $[0,1]^2$ with the same bottom and left edges are equal. 证明取积型图卡有限覆盖的 Lebesgue 数 $\lambda>0$，一致连续给出网格使每个闭瓦片的任一发射直径 $<\lambda/3$；若两射在瓦片左下角一致，则两像并的直径 $<2\lambda/3$，两者同落一个积型图卡，在该图卡里每个盒子由其下边的第一坐标
+D131:210: (d) 失败路线。`[推测]` 第一条：对参数 $(p,q)$ 直接用 Hartogs 型「逐点延拓 + 一致界」得全纯性，即把 $F$ 写成 $R_{p,q}$ 的逐点族再用 Osgood 型定理。失败原因是 $R_{p,q}$ 的定义本身依赖图卡选取，族没有先验的联合连续性，而 `boxes.tex:122--154` 的整个重建就是在造这个联合连续性。`[推测]` 第二条：跳过 `lem:box-unique`，改用解析集维数论证说明两个盒子在稠密集上一致。问题是连续盒子只在局部分离，一致性集合不是解析集，维
+D131:222: (c) 机械理由。为什么按 $|i-j|$ 递增而不是按指标和：对角线是 $i=j$，$|i-j|$ 恰好度量「到对角的带」，每带内瓦片的下右（或上左）两边已经由更靠对角的那一带或本带的对角瓦片给出；按指标和递增会先从角落开始，那里两边未知。`boxes.tex:186--189`（附录 `$04$`）用的是另一种顺序（按两个指标之和递增，从下边与左边出发），因为那里的输入边是下与左两条轴；两者必须区分，我在草稿里混过一次，结果是 $i<j$ 那一侧全部反向。原点任意性（`global.tex:70--71`：si
+D131:256: 一个我在写作时反复确认的口径差异：主定理的证明里，Hartogs 与边界延拓（第 `$4$`、`$6$` 节）只服务于 `prop:disk-axes`，`prop:disk-axes` 只服务于 `prop:polydisk-axes`，`prop:polydisk-axes` 只服务于 `prop:rectangles`；也就是说所有解析估计的最终产品是「传输后的边仍有整多圆盘全纯代表」这一条定性性质，而不是任何定量界。定量界（面积、速度、尺度）在进入网格之前就退役了。这一点决定了附录 `$04$` 的替代路线
+=== D141 (837 lines) ===
+D141:64: (b) 中间步骤：定义 (1) 里 $a>1$ 存在，等价于"这条测地线过了时间 1 还是极小的"。把它和 $\mathcal C=\{(x,w):w\in G_x\}$（`preliminaries.tex:8-14`）对照，$G_x$ 只要求 $a=1$ 时极小，$I(x)$ 要求存在某个 $a>1$。这个"$a$ 存在"的写法比"$\exp_x$ 在 $v$ 处单射"的写法好用：它是关于一条线的性质，天然是径向的，可以直接对 $a$ 取极限得到 $G_x\supset I(x)$（`preliminaries
+D141:128: 2. `[推测]` 用 Riccati/形状算子沿射线的比较来替代指标形式：会得到微分不等式而不是精确等式，`geo:radial-derivative`（`geometry.tex:147`）那种 $\frac{d}{dr}H_r=-S^{-1}S^{-T}$ 的精确符号就只能给方向，拿不到 `lem:radial-comparison` 的严格号。
+D141:297: (c) 机械理由：$m\geq1$ 而不是 $m\geq2$，是为了单点情形与 Carathéodory 表示（`geo:prelim` 给至多 $n+1$ 个仿射独立元）中的退化情形一致；归纳里要求 $(1-\theta_k)\neq0$，即 $\theta_k<1$，正因如此必须先把零权丢弃、使剩下 $k$ 个权严格为正，$\theta_k=1$ 就回到 $k=1$。$K\subset G_x$ 只用于给命题提供"$[w',a_k]\subset G_x$"，不需要 $G_x$ 整体凸；这是本篇不自举的关键一处
+D141:406: (c) 机械理由：$C_g$ 是"几何常数"，只依赖 $(M,g)$，它的存在性完全建立在 $s=\frac12$ 后 $\{\frac12 p:p\in G_x\}$ 是 $I(x)$ 的紧子集上；换任何 $s_0\in(0,1)$ 都行，取 $\frac12$ 是让对称变量与固定变量两次的常数相同。$D=\diam M$ 给 $|p|\leq D$（`preliminaries.tex:16-17`），于是 Lipschitz 常数 $D$。$n+1$ 是 Carathéodory 数，出现在 ## 16 的"
+D141:442: (c) 机械理由：$\kappa_g>0$ 的下界来自 $\lVert S_p(r)\rVert$ 的一致上界，而上界来自紧集 $\{|p|\leq D,\,0\leq r\leq1\}$ 上 Jacobi 方程系数的 $C^0$ 界（曲率有界）；"$0\leq r\leq1$" 而不是 "$0\leq r\leq s$"，因为本篇所有径向都在单位时长参数化里。$H_t-H_s\geq\kappa_g(s-t)\Id$ 的线性率是 $-S^{-1}S^{-T}\leq-\kappa_g\Id$ 的直接积分；与 `l
+D141:445: 1. `[推测]` 用 Riccati 方程 $D_rS\cdot S^{-1}$ 的对数导数代替 $S^{-1}S^{-T}$：会引入 trace 与比较定理，得到的是 Jensen 型不等式而不是矩阵不等式，`geo:slack` 需要矩阵级的 $\geq\kappa_g\Id$。
+D141:702: (c) 机械理由：$\frac{C_g}{t}$ 与 $\frac{C_g}{1-t}$ 的分裂来自 $c_t=\frac ct$ 与 $c_{1-t}=\frac{c}{1-t}$ 的 Hessian 各自除以时长，$t\to0$ 或 $t\to1$ 时任一分母趋零，这正是"$0<t<1$"与"在 $(0,1)$ 的紧子区间上一致"两句陈述的定量来源。$s=\frac{1+t}2$ 让 $s-t=\frac{1-t}2>0$，同时 $s<1$ 保证 $sp\in I(x)$；换成任意 $s\in(t,1)$ 结论
+=== D139 (512 lines) ===
+D139:170: （d）失败路线。[推测] 第一条：跳过上半连续那一步，直接把 a.e. 的下界当逐点用。失败位置很明确，标签 $J_a$ 要在每个 $\|y\|\le R$ 上存在，a.e. 版本会在一个零测高度集上什么也不给，而 final.tex:142--145 的 "For any vertical target $y$" 是对每个 $y$ 取模式的，零测集上的漏洞会摧毁一致覆盖。[推测] 第二条：把塞原点这一步改成"截面非空即取一点 $x_y$"，不做仿射剪切。那样 $K_y$ 随 $y$ 平移得无法控制，$(1-m^{
+D139:276: （c）机械理由。$k=\lfloor p_bt\rfloor$ 与 $x=k\bmod p_b$ 把连续点先落到格胞再落到有限群，两步都是坐标向；$z$ 用标准代表元（444 行的 again using standard representatives）是必需的，否则 $t_z=z/p_b$ 的锚点解释会变。$e^{-\eta_b}$ 而不是 $e^{-O(\eta_b)}$：$\eta_b=bh_b^2/p_b$ 比任何固定负幂衰减得快，层级里 hierarchy.tex:209 记作 $\delta_i=\f
+D139:331: （c）机械理由。$L_*>\max(1,Q)$（30）的 $\max(1,\cdot)$ 是给 $Q<1$ 的边界留位，实际用的取值在 final.tex:220 是 `Take $L_*=2(Q+1).`，于是 union bound 的 $Q/L_*<\frac12$ 严格小于 1，Markov 的 $1/L_*$ 与 $Q$ 相乘有余量。$|P|-1$ 而不是 $|P|$：$q=0$ 时 $|P|=1$，右端是 $\eta_{a}$，与假设一致；若写成 $|P|$ 会把基例抬高一个 $\eta$ 因子。"两片
+=== D140 (1348 lines) ===
+D140:895: 转折三：用两副图 $\mathcal P_2,\mathcal P_3$ 而不是一个可任意大的图。
+D140:1117: 而不是"某分类空间有有限骨架"。
+D140:1228: 而 $h_{2,I}=h_{3,I}$ 这种等式必须写成 `common` 字段而不是类型级事实。

@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{tikz}
+\newwrite\meas
+\immediate\openout\meas=meas_abs_strip.txt\relax
+\newdimen\mx
+\newdimen\my
+% \rd{name}\macro: the anchor of a named node, in pt, read straight out of pgf. This is the point
+% TeX draws at; the converter's canvas has to agree with it after the cm/pt conversion.
+\def\rd#1#2{\pgfextractx{\mx}{\pgfpointanchor{#1}{center}}%
+            \pgfextracty{\my}{\pgfpointanchor{#1}{center}}%
+            \edef#2{\the\mx,\the\my}}
+\begin{document}
+% Absolute positions the strip's nine cells land on. The strand node (t) is seeded off-canvas so
+% cell 0 -- whose eight \ifnum tests all fail -- still resolves a name; TeX leaves it at -99pt
+% there, which is the converter's "this cell draws no strand".
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\foreach \j/\wt in {0/1,1/A,2/A,3/B,4/B,5/U,6/U,7/E,8/F}{
+ \begin{scope}[xshift={1.45*mod(\j,5)*1cm},yshift={-2.1*floor(\j/5)*1cm}]
+  \node[inner sep=0pt] (bl) at (-.45,0) {};
+  \node[inner sep=0pt] (tr) at (.45,1) {};
+  \node[inner sep=0pt] (lab) at (0,-.35) {};
+  \node[inner sep=0pt] (s) at (-.25,0) {};
+  \node[inner sep=0pt] (t) at (-99cm,-99cm) {};
+  \ifnum\j=1 \node[inner sep=0pt] (t) at (-.25,1) {}; \fi
+  \ifnum\j=2 \node[inner sep=0pt] (t) at (.25,1) {}; \fi
+  \ifnum\j=3 \node[inner sep=0pt] (t) at (.25,1) {}; \fi
+  \ifnum\j=4 \node[inner sep=0pt] (t) at (-.25,1) {}; \fi
+  \ifnum\j=5 \node[inner sep=0pt] (t) at (.25,.5) {}; \fi
+  \ifnum\j=6 \node[inner sep=0pt] (t) at (.25,1) {}; \fi
+  \ifnum\j=7 \node[inner sep=0pt] (t) at (.25,1) {}; \fi
+  \ifnum\j=8 \node[inner sep=0pt] (t) at (.25,.5) {}; \fi
+ \end{scope}
+ \rd{bl}\pa\rd{tr}\pb\rd{lab}\pc\rd{s}\pd\rd{t}\pe
+ \immediate\write\meas{ABS \j\space wt=\wt\space box=(\pa)--(\pb)\space label=(\pc)\space strand=(\pd)--(\pe)}
+}
+\end{tikzpicture}
+\end{document}

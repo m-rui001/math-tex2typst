@@ -1,0 +1,14 @@
+pictures a macro rewrite touches: 118 -- refused either way 8, same shape or maths-only 71, redraw 39, refuse flips 0
+
+A-Complete-Local-Domain-Without-a-Small-Cohe
+  -- #cetz.canvas({   import cetz.draw: *   content((0, 0), [$X$])   content((3.2, 0), [$W$])   content((6.4, 0), [$"Spec" R$])   content((0, 3.2), [$D$]) 
+A-counterexample-to-Tachikawas-second-conjec
+  -- #cetz.canvas({   import cetz.draw: *   content((0, 0), [$s \[ 2 \]$])   content((3.2, 0), [$"Res"_(h_H^(- 1)) cal(J)$])   content((6.4, 0), [$s$])   c
+A-high-arity-counterexample-to-Pixton-comple
+  -- #cetz.canvas({   import cetz.draw: *   content((0, 0), [Corrected three-slot factors#linebreak()and their alternation \(Y\)#linebreak()Definition~def:
+A-rational-obstruction-to-strong-chromatic-s
+  -- #cetz.canvas({   import cetz.draw: *   content((0, 0), [$C_(upright("cts"))^bullet \( G \, Lambda_m \)$])   content((4.34, 0), [$R Gamma_v \( \[ X \/ 
+A-rational-obstruction-to-strong-chromatic-s
+  -- #cetz.canvas({   import cetz.draw: *   content((0, 0), [$C_(upright("cts")) \( G^a \, Lambda_m \) \[ 0 \]$])   content((5.615, 0), [$R Gamma_v \( tild
+A-rational-obstruction-to-strong-chromatic-s
+  -- #cetz.canvas({   import cetz.draw: *   content((0, 0), [$C_(upright("cts"))^bullet \( G \, Lambda_m \)$])   content((4.51, 0), [$R Gamma_v \( Y \, W_m

@@ -1,0 +1,15 @@
+canvases built: before 918, after 918 (refused both ways: 14)
+canvases changed: 60 over 46 papers, lost: 0
+    4  Nonuniqueness-of-percolation-on-nonamenable-quasi-transitive
+    3  Planar-Graph-Metrics-Embed-into-L1-with-Constant-Distortion-
+    3  A-nine-dimensional-counterexample-to-Borsuks-covering-assert
+    2  The-Sharp-Terminal-Leave-in-Random-Triangle-Removal-Septembe
+    2  The-Grothendieck-homotopy-hypothesis-via-elementary-expansio
+    2  The-Euclidean-plane-is-not-five-colorable-September-23-2026
+    2  Cycle-clique-Ramsey-numbers-September-25-2026
+    2  Counterexamples-to-the-duality-conjecture-for-metric-entropy
+    2  Almost-Linear-Time-Maximum-Cardinality-Matching-in-Sparse-Ge
+    2  A-Fully-Polynomial-Randomized-Approximation-Scheme-for-Perfe
+    1  Variable-dimension-Weisfeiler-Leman-equivalence-on-general-a
+    1  The-spherical-magnetization-law-for-the-three-dimensional-qu
+wrote _work/regen_labels.txt

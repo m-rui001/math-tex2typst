@@ -1,0 +1,50 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+arrow tips printed inside a word: 53948 over 712 papers (26963 distinct words)
+  1177  −1              
+          A-Charged-Reduction-of-the-Spaceti p25  offset-in-word=(10.0,14.1)pt
+          A-Charged-Reduction-of-the-Spaceti p26  offset-in-word=(13.0,14.0)pt
+          A-Charged-Reduction-of-the-Spaceti p49  offset-in-word=(10.5,14.4)pt
+   643  ≤1              
+          A-C1-Counterexample-to-the-Entropy p6  offset-in-word=(13.5,14.0)pt
+          A-Capacity-Criterion-for-Four-Stat p3  offset-in-word=(12.8,14.1)pt
+          A-Capacity-Criterion-for-Four-Stat p3  offset-in-word=(12.9,14.0)pt
+   434  ≥1              
+          A-Charged-Reduction-of-the-Spaceti p5  offset-in-word=(12.9,13.7)pt
+          A-Charged-Reduction-of-the-Spaceti p26  offset-in-word=(12.8,8.8)pt
+          A-Charged-Reduction-of-the-Spaceti p42  offset-in-word=(13.3,13.6)pt
+   410  2,              
+          A-Conditional-Reduction-for-Algebr p10  offset-in-word=(5.1,6.1)pt
+          A-Coulomb-Ground-State-Density-wit p33  offset-in-word=(5.7,1.4)pt
+          A-Coulomb-Ground-State-Density-wit p41  offset-in-word=(6.1,6.7)pt
+   404  2.              
+          A-C1-Counterexample-to-the-Entropy p8  offset-in-word=(6.4,6.3)pt
+          A-C1-Counterexample-to-the-Entropy p10  offset-in-word=(5.6,7.0)pt
+          A-Codimension-One-Bound-for-the-Si p34  offset-in-word=(6.4,7.0)pt
+   130  4.              
+          A-Counterexample-to-Kaplanskys-Dir p7  offset-in-word=(5.9,7.0)pt
+          A-Fully-Polynomial-Randomized-Appr p37  offset-in-word=(5.8,6.7)pt
+          A-Pivotal-Amplitude-for-Voronoi-Pe p15  offset-in-word=(6.3,6.3)pt
+   126  4,              
+          A-Codimension-One-Bound-for-the-Si p8  offset-in-word=(5.9,6.2)pt
+          A-Counterexample-to-Kaplanskys-Dir p7  offset-in-word=(5.7,7.0)pt
+          A-Fully-Polynomial-Randomized-Appr p36  offset-in-word=(6.4,6.8)pt
+   118  (1              
+          A-Charged-Reduction-of-the-Spaceti p94  offset-in-word=(9.8,14.6)pt
+          A-Conditional-Reduction-for-Algebr p10  offset-in-word=(5.7,8.1)pt
+          A-Coulomb-Ground-State-Density-wit p30  offset-in-word=(11.7,13.7)pt
+   118  −3              
+          A-Complete-Local-Domain-Without-a- p9  offset-in-word=(12.8,8.4)pt
+          A-Limiting-Satisfiability-Threshol p18  offset-in-word=(12.1,14.1)pt
+          A-Low-Space-Algorithm-for-Worst-Ca p6  offset-in-word=(12.4,8.1)pt
+   110  ≤𝐶              
+          A-Direct-Proof-of-Optimal-Max-Cut- p16  offset-in-word=(13.5,13.9)pt
+          A-Negative-Solution-to-the-Finite- p38  offset-in-word=(13.1,13.8)pt
+          A-density-uniform-condensate-bound p19  offset-in-word=(13.6,14.1)pt
+   103  𝑁∑              
+          A-Linear-Clock-for-Random-Walk-on- p49  offset-in-word=(10.7,6.4)pt
+          A-Power-Saving-for-Polynomial-Diff p35  offset-in-word=(10.4,6.3)pt
+          A-Torsion-Free-Counterexample-to-t p5  offset-in-word=(10.7,6.7)pt
+   100  𝑛∑              
+          A-Counterexample-to-Kaplanskys-Dir p21  offset-in-word=(7.1,6.1)pt
+          A-Counterexample-to-Kaplanskys-Dir p21  offset-in-word=(6.6,6.1)pt
+          A-Counterexample-to-the-Group-Ring p1  offset-in-word=(7.5,6.2)pt

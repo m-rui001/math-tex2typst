@@ -1,0 +1,32 @@
+{
+  "paper": "The-Solomon-Yau-least-volume-theorem-September-23-2026",
+  "ok": true,
+  "typ_lines": 992,
+  "included_pdf_pages": 0,
+  "formulas": 830,
+  "math_failed": 0,
+  "labels": 121,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "830",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\renewcommand\\maketitle"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-Solomon-Yau-least-volume-theorem-September-23-2026.tex"
+}

@@ -1,0 +1,584 @@
+# D44 小有限维数无穷的代数：我把反例拆成"灭绝时长"三台机器
+
+对象论文：`An algebra of infinite little finitistic dimension`（2026-09-23，OpenAI）。
+TeX 源码：`E:\math\preprints\An-algebra-of-infinite-little-finitistic-dimension-September-23-2026\build\`（`paper.tex` + `sections/01-introduction.tex` … `sections/06-square-zero-and-conclusion.tex`，分片共 6 个，加 `preamble.tex` 与 `references.bib`；正文一律取自 tex，PDF 加密不可用）。
+Lean 两套入口：`E:\math\lean\formalization.yaml:1286-1288` 指向 `OAI/Algebra/Finitistic/Main.lean`，认证声明 `OAI.LittleFinitistic.Main.exists_counterexample`；`formalization.yaml:1162-1164` 指向 `OAI/Algebra/FinitisticAsymmetry/Main.lean`，认证声明 `OAI.LittleFinitistic.extreme_left_right_asymmetry`。第 17 节给全部实测数字。
+引文行号记法：`02:175` 是 `02-selection-process.tex` 第 175 行，其余类推。
+编号条目盘点（我逐个数过）：定理 2、命题 4、引理 7、推论 3，共 16 条，另有 2 条 remark 与 25 个编号公式。
+
+## 0 我进场时手里有什么
+
+问题本身的定义很短（`01:4-11`）：
+
+```tex
+For a finite-dimensional algebra \(A\) over a field \(k\), its
+\emph{little finitistic dimension} is
+\[
+\findim A
+=\sup\{\pd_A N:
+       N\text{ is a finitely generated left }A\text{-module},
+       \ \pd_A N<\infty\}.
+\]
+```
+
+被要求证伪的猜想是说这个数对每个有限维代数都有限。论文的主定理（`01:24-32`）：
+
+```tex
+\begin{theorem}\label{thm:main}
+There is a finite-dimensional unital complex algebra \(A\) such that,
+for every integer \(m\ge1\), there is a finite-dimensional left
+\(A\)-module \(N_m\) with
+\[
+2m-2\le\pd_A N_m<\infty.
+\]
+In particular, \(\findim A=\infty\).
+\end{theorem}
+```
+
+量化顺序我先对齐一遍，因为它在后面每一节都要被反复引用：
+
+$$\exists A\,\forall m\ge1\,\exists N_m:\ \text{$N_m$ 有限生成}\wedge\ 2m-2\le \pd_A N_m<\infty .$$
+
+我读出三条容易被忽略的东西。第一，$A$ 在所有 $m$ 之前固定（`01:34` 那句 "The algebra in \Cref{thm:main} is fixed before $m$ varies" 是全文最硬的约束）；我可以给不同的 $m$ 造不同代数，那只能证出"一族有界常数无公共上界"，证不出任何一个代数的 $\findim=\infty$。第二，每个 $N_m$ 的投射维数同时被要求"至少 $2m-2$"和"有限"，也就是消解必须终止，只是可以任意晚终止。第三，结论里 $\findim A=\infty$ 立刻带走 big finitistic dimension（同一定义去掉有限生成限制，小 ≤ 大），也否掉 Artin 代数上的通用有限性断言，因为复有限维代数是 Artin 代数（`01:35-39`）。
+
+进场时我的立场是猜想一侧的。我带着的外部常识（以下这段是检索与记忆，按题主要求与论文内容分开表述）：finitistic dimension 问题由 Bass 1960 传播，Auslander–Reiten 型蕴含链里"findim 有限"排在不少其它猜想上游；已知正面类有单链代数的 GKK 型界、根平方零的 Green–Huisgen-Zimmermann 界、Igusa–Todorov 的 syzygy 不变量给出表示维数 ≤3 的界；Huisgen-Zimmermann 1992 分离过小与大（都是有限值）；Rickard 2019 给出内射生成蕴含 big finitistic 有限。近年的界型工作走 delooping level 路线，例如 [The depth, the delooping level and the finitistic dimension](https://arxiv.org/abs/2004.04828) 与 [Derived delooping levels and finitistic dimension](https://arxiv.org/abs/2311.00661)；综述线索见 [关于有限维数猜想的一些新进展](https://ccj.pku.edu.cn/article/info?aid=278169338) 与 [标准析层代数和finitistic维数猜想](https://xueshu.baidu.com/usercenter/paper/show?paperid=acea6a7055d1a39304b03029f475e927)；我在 2026 年的检索里没有独立撞见这篇论文的公开版本，[首都师范大学惠昌常教授在线为我院师生作学术报告](https://sxxy.nwnu.edu.cn/2020/0914/c1136a148280/page.htm) 一类活动页只反映社区长期关注度。这些外部状态给我定下的任务形状是：反例代数必须同时躲开所有已知正面类，它必须非单链、根立方不为零、表示维数大于 3、内射侧生成失败。论文 intro（`01:51-85`）自己列的已知状态与我记忆一致，我核对过它引用的 Huisgen-Zimmermann、GKK、Green–Huisgen-Zimmermann、Igusa–Todorov、Rickard 各条口径；Cummings 2024 那条左右等价定理我未能从检索独立复核，按论文转述处理并标 [存疑]。
+
+我进场后的第一个猜想（是我自己的，不是论文的）：反例大概长成一个带循环 quiver 加"渐增关系"的小代数，比如给每个 $m$ 在消解里塞一段越来越长的非分裂链。这个猜想撑不过半天，失败过程就是下面两节。
+
+本笔注叙事对应的论文目录为 preprints/An-algebra-of-infinite-little-finitistic-dimension-September-23-2026，在 .tools/lean_queue.txt 队列第 41 行号（按题名逐字匹配登记，本行只补登记、不改前文）。
+
+补登（修补批只追加这一行，周围文字照旧）：对象论文目录 preprints/An-algebra-of-infinite-little-finitistic-dimension-September-23-2026，lean 队列第 41 行号；文末台账补表的位置栏全部取自该目录 build/ 下 tex 的真实行号。
+
+## 1 死路一与死路二：单代数直构，和"有限"与"大"的内置冲突
+
+死路一：拿现成小代数族逐个体检。我把候选列成清单然后机械排除：
+
+- 自内射（Frobenius）代数：每个模 pd ∈ {0, ∞}，sup 只看到 0。机制是平凡投射模足够多，任何有限 pd 模都投射。
+- 单链 / monomial 代数：GKK 定理直接给有限界，我在里面找无限是找不到的。
+- 根平方零代数：Green–Huisgen-Zimmermann 给界（`01:63-64` 转述）。
+- 有限全局维数代数（含遗传、 quasi-hereditary）：$\findim A\le\gldim A$，直接出局。
+- 表示维数 ≤3：Igusa–Todorov 给界。
+
+这张清单逼出的结论是：任何候选都落在"有界"或"所有非投射模维数无穷"两个筐里。我随后想通这一步的关键原因，它是本问题真正的难点所在：pd 有限要求消解终止，pd ≥ 2m-2 要求消解在 A 里走得很慢；在一个固定代数里，让"慢"没有上限而"终止"仍然发生，等价于要有一族模，它们的消解行为由某个可以任意调长的参数控制，而该参数不能出现在代数的定义数据里。消解长度在固定代数上通常要么被同调维数钉死，要么发散；中间地带恰恰是所有已知正面定理的领地。这就是"有限"与"大"的内置冲突。
+
+死路二：先给每个 m 造代数 A_m，再想办法打包。最省事的打包是取积 $\prod_m A_m$ 或直和加单位，但积在有限维范畴里直接非法（无限积无限维），而直和式的"块无交互"让每个 $N_m$ 的 pd 由自己块决定，sup 却是对单个代数的模取，块间不连通时有限生成模只住在有限个块上，于是 sup 被某个块封顶。这条路的停点是量词：我需要的是**同一个**代数的**同一族**消解行为。我后来在论文里认出对应的处理是 `06:272-289` 那张 quantifier-order 表（"Fixed once" 对 "Varying with m"），作者把这条铁律显式登记成了表格，和我在这里撞的墙是同一堵。
+
+## 2 转折：把"长而终止的消解"外包给一台灭绝时长机器
+
+突破口在把问题拆成三个互相独立的子任务，这个拆分是我读到 intro `01:114-210` 三段机制综述之后才倒推出的顺序（我最初的直觉拆分是按代数结构分小步改，每一步都同时碰消解和上界，结果每一步都退回死路一）。三个子任务：
+
+任务甲：找一个可计算的动力系统，其轨道长度可以任意长而必然终止。载体是 `02:7-10` 的函子：
+
+```tex
+\begin{equation}
+  H(Y)={}_{\alpha}(eY).
+  \label{eq:selection-functor}
+\end{equation}
+```
+
+$e$ 是中心幂等、$\alpha$ 是自同构，$eY$ 取角、下标表示沿 $\alpha$ 限制标量。迭代 $j$ 次得到 $e_0e_1\cdots e_{j-1}Y$（$e_q=\alpha^q(e)$），我要一族模 $Y_m$ 在前 $m-1$ 次迭代非零、第 $m$ 次灭绝（`02:25-28` 的 eq:extinction）。一个代数里要有无穷多个不同的中心幂等 $e_q$ 才能玩出无界时长，而它们必须来自**有限**的定义数据（否则 $R$ 不是 finitely presented，任务乙会崩）。这两条合起来把 $R=\mathbb CG$ 逼向一个带"可平移的中心对合族"的有限展示群：中心对合 $z_N$（$N\in\mathbb Z$）彼此不同但由有限的生成元与关系模式生成，$\alpha$ 由群自同构线性延长。展示群要求 $z_N$ 在某个有限商里同时可见且相互独立，这就是 $z_N$ 必须落入有限商的中心 $(\mathbb Z/2)^m$ 的原因。
+我先试过的两个失败载体，机制各不同：其一，交换群的群代数。$R=\mathbb C[\mathbb Z]=\mathbb C[t,t^{-1}]$ 是整环，非平凡中心幂等为零个，$e$ 无处可选；$\mathbb C[\mathbb Z^n]$ 同理。中心幂等要求群有非平凡的有限共轭类结构（至少一个中心 2 元），这一步把我从交换群赶走向非交换。其二，自由群的群代数。$\mathbb C[F_n]$ 仍是整域且单位群几乎全交换，有限商里中心子群太薄，无法让 $(\mathbb Z/2)^m$ 对每个 $m$ 出现；自由群可 residually-finite 但中心子群在商中的像撑不起独立的二值特征。真正的出路要既非交换（有中心对合）又"够交换"（中心族能被矩阵商同时区分），Abels 型矩阵群（`02:37-42` 引 Rego 2022）恰好是这种平衡点，论文承认动机来源并声明所有性质直接自证。
+
+任务乙：把这台无限维（群代数 $R$ 是无限维的！）的动力系统"翻译"成一个有限维代数 $B$ 上的固定导出张量函子。这是 `03` 与 `04` 两节的全部，核心输出是定理 4.1 的 $P\otimes_B^{\mathbf L}M(Y)\simeq M(H(Y))\oplus M(H(Y))[3]$。
+
+任务丙：把一个"复形张量函子的迭代"变成"普通模的投射维数上界"。载体是 square-zero 扩张 $A=D\ltimes X$ 与 bar 分解 $D\otimes_A^{\mathbf L}N\simeq\bigoplus_{r\ge0}(F^rN)[r]$，$F=X\otimes_D^{\mathbf L}-$。$X$ 的幂零性保证平方零，bar 复形的次数恰好统计 $X$ 出现次数，于是"F 的迭代在第 $r$ 层是否活着"翻译成"任何长度 <$r$ 的投射消解不存在"。
+
+我最终思路与最初设想的差异到此已经成形：我原本要造的是一个"代数"，最后造的是一台"代数 × 动力系统的复合机"，反例的无限性全部住在模的消解里，代数的定义数据（`06:278-280` 列出的那一整行 Fixed once）是有限的而且与 $m$ 无关。下面进入逐条引理的取证。
+
+## 3 引理 lem:group-finite-presentation：无限个 $S(r)$ 折回 15 个生成元
+
+(a) 陈述原文（`02:81-84`）：
+
+```tex
+\begin{lemma}
+\label{lem:group-finite-presentation}
+The group $G$ is finitely presented.
+\end{lemma}
+```
+
+它的前置数据是 `02:46-79`：交换生成元 $T_\ell$（$\ell\in I=\{1,2,3\}$），带指标族的 $U_i(r),V_i(r),W_{ij}(r)$（$i\ne j\in I$，$r\in\mathbb Z$），权重（`02:53-58`）
+
+```tex
+  \lambda_{U_i}=-\varepsilon_i,\qquad
+  \lambda_{V_i}=\varepsilon_i,\qquad
+  \lambda_{W_{ij}}=\varepsilon_i-\varepsilon_j,
+```
+
+共轭规则（`02:61-64`）$T_\ell S(r)T_\ell^{-1}=S(r+\lambda_{S,\ell})$，外加四条关系模式（平方、两类交换、$W$ 的交换、两条换位子转移 `02:74-78`）。
+
+(b) 推导。证明的策略是把"$r$ 跑遍 $\mathbb Z$"的无限生成元族折回参数 0 的截面。先保留 15 个生成元 $T_\ell,u_i,v_i,w_{ij}$（`02:90-94`），再加有限的中心化关系：$u_i,v_i$ 与 $T_h$（$h\ne i$）交换，$w_{ij}$ 与 $T_iT_j$ 及 $T_h$（$h\notin\{i,j\}$）交换。这些关系的身份是各权重核格的一组基（`02:100-108`）：$\ker\lambda_{U_i}=\ker\lambda_{V_i}=\bigoplus_{h\ne i}\mathbb Z\varepsilon_h$，$\ker\lambda_{W_{ij}}=\mathbb Z(\varepsilon_i+\varepsilon_j)\oplus\mathbb Z\varepsilon_h$。核对：$\lambda_{U_i}(n)=-n_i$，核恰为 $n_i=0$ 的平面；$\lambda_{W_{ij}}(n)=n_i-n_j$，核由 $(1,1,0)_{ij}$ 与第三个方向生成。$T$ 族交换意味着核格中任意 $n$ 也中心化一切 $T$ 共轭，于是可以定义 $U_i(r)=T_i^{-r}u_iT_i^r$、$V_i(r)=T_i^r v_iT_i^{-r}$、$W_{ij}(r)=T_i^r w_{ij}T_i^{-r}$（`02:112-118`），并且一般公式 $S(r)=T^nS(0)T^{-n}$ 对任何满足 $\lambda_S(n)=r$ 的 $n$ 成立：换一条 $n$ 的路径只差一个核格元，核关系保证不变（`02:120-122`）。回代共轭规则：取 $n=\varepsilon_\ell$ 得 `02:61` 型关系逐条落位。剩下的是无限关系模式：每对同时出现的输入类型，其两个权重构成满射 $\mathbb Z^3\to\mathbb Z^2$，`02:129-148` 的表格给出任意 $(r,s)$ 的一个整数原像 $n$（未写坐标为 0），把零参数版本的交换关系对 $T^n$ 共轭就生成该模式的全部实例。两条换位子关系需要输出参数也对：输出权重等于输入权重之和（`02:152-157`）$-\varepsilon_i+(\varepsilon_i-\varepsilon_j)=-\varepsilon_j$ 与 $(\varepsilon_i-\varepsilon_j)+\varepsilon_j=\varepsilon_i$，所以共轭后右边自动变成 $U_j(r+s)$、$V_i(s+r)$，与 `02:75` 逐字一致。最后验证等价是双向的：折回的展示能推出原展示的全部关系（上面已做），原展示当然满足折回展示的生成元定义（`02:163-166`），故两展示等价，$G$ finitely presented。
+
+(c) 每个常数为何是这个值。指标集 $|I|=3$：权重活在 $\mathbb Z^3$，$W_{ij}$ 需要两个不同指标还要留第三个指标做中心化测试（这个需求在下一引理里兑现）；$|I|=2$ 时后面 $z_N$ 的独立性论证要借"外部指标"就借不到。15 个生成元 = 3 个 $T$ + 3 个 $u$ + 3 个 $v$ + 6 个 $w$，正好是参数 0 截面的全体。$U$ 的权重取 $-\varepsilon_i$、$V$ 取 $+\varepsilon_i$ 是配平出来的：这样 $T_i$ 共轭分别把 $U_i(r)$ 送到 $r-1$ 与 $r+1$ 方向，为 `02:220-223` 的"$T_\ell$ 共轭保持 $a+b$"铺路；若两者同号，$z_N$ 的 $a+b$ 不变量就换成 $a-b$，照样可用，但下一步矩阵实现的行列表位置要重排，论文选 $-\varepsilon_i/+\varepsilon_i$ 与它把 $U$ 放 $0\to i$、$V$ 放 $i\to 4$ 直接对应。表格每行给出原像坐标（如 $U_i,W_{ij}$ 行 $n_i=-r,\ n_j=-r-s$），这些数是我验证满射性时可以逐条回代核对的，无自由度。
+
+(d) 我试过的候选失败路线。[推测] 其一，只保留零参数关系而不加核中心化关系：这时 $S(r)=T^nS(0)T^{-n}$ 的定义与 $n$ 的选取有关（核方向不再平凡作用），展示与参数化之间失去一致性，第一句话就断。[推测] 其二，把 $|I|$ 降到 2：权重落在 $\mathbb Z^2$，$W_{ij}$ 只剩一对，$(r,s)$ 二元原像表仍有，但下一引理"用另一个内部指标比较同一 $N$ 的两种分裂"以及中心性测试"对 $W_{hj}$ 用 $\{h,j\}$ 之外的指标"两处都失灵；我认为 $|I|=3$ 的根因就在中心性测试需要第三指标，具体哪个引理先断可能因实现顺序而异。[推测] 其三，让 $\lambda$ 取不可约的其它向量组：表格各行依赖权重对的加法结构（输出权重 = 输入权重和），换权重等于换关系模式，可能破坏 `02:152-157` 的和式，换位子转移的输出参数错位。
+
+## 4 引理 lem:central-shift：换位子转移与可平移的中心对合族
+
+(a) 陈述原文（`02:175-186`）：
+
+```tex
+\begin{lemma}
+\label{lem:central-shift}
+For each $N\in\Z$, the expression
+\begin{equation}
+  z_N=[U_i(a),V_i(b)],\qquad a+b=N,
+  \label{eq:central-involutions}
+\end{equation}
+is independent of $i,a,b$.  Each $z_N$ is central and satisfies
+$z_N^2=1$.  There is an automorphism $\alpha_G$ of $G$ fixing all
+$T_\ell,V_i(r),W_{ij}(r)$ and sending $U_i(r)$ to $U_i(r+1)$;
+it satisfies $\alpha_G(z_N)=z_{N+1}$.
+\end{lemma}
+```
+
+(b) 推导。核心一步是对 $xyv$ 的双重整理。取 $x=U_i(r)$、$y=W_{ij}(q)$、$v=V_j(s)$，由关系 `02:75` 得 $u=[x,y]=U_j(r+q)$ 与 $w=[y,v]=V_i(q+s)$（注意 $xw$ 里的 $w$ 是 $V_i$，而 $[x,v]$：$x=U_i(r)$ 与 $v=V_j(s)$，$i\ne j$ 时由关系 2 交换，$[x,v]=1$；同理 $[w,u]$：$w=V_i(q+s)$、$u=U_j(r+q)$，$i\ne j$ 交换；$[w,v]$：$V_i$ 与 $V_j$ 交换）。定义关系给出 $xy=uyx$ 与 $yv=wvy$。第一条路：$xyv=(xy)v=(uyx)v=uwvyx$（$xv=v$ 处需交换性）。第二条路：$xyv=x(yv)=xwvy=(xwx^{-1})xvy=(xwx^{-1})vuyx$（用到 $xw=(xwx^{-1})x$ 与 `yv=wvy` 整理）。两路相等，消去 $yx$ 得 $uwv=cwvu$，其中 $c=[x,w]$。$c$ 与 $u,v$ 交换（$w$ 与 $u,v$ 的交换性给出），于是 $c=uwvu^{-1}v^{-1}w^{-1}=uvu^{-1}v^{-1}=[u,v]$，即得转移公式（`02:205-208`）
+
+```tex
+ [U_i(r),V_i(q+s)]=[U_j(r+q),V_j(s)].
+```
+
+两边都是 $[U_\cdot(\cdot),V_\cdot(\cdot)]$ 且参数和同为 $r+q+s$，所以同一 $N$ 的、内部指标不同的两种分裂相等；同一内部指标的两种分裂可借第三个指标中转（先转到 $j$ 再转回来），独立性证毕。中心性：对 $U_h(r)$ 或 $V_h(r)$，把 $z_N$ 用 $i\ne h$ 的指标表达，两个因子都与被测试元交换；对 $W_{hj}(r)$ 用 $i\notin\{h,j\}$ 的指标（这里就是 $|I|=3$ 的兑现点：$I$ 去掉 $\{h,j\}$ 还剩至少一个）同理。对 $T_\ell$：共轭把分裂 $(a,b)$ 送到 $(a-\delta_{\ell i},b+\delta_{\ell i})$，和不变，由独立性不变。群由 $T,U,V,W$ 生成，中心性完成。平方：$U_i(a)^2=1$，中心元满足 $1=[U_i(a)^2,V_i(b)]=[U_i(a),V_i(b)]^2=z_N^2$（恒等式 $[x^2,y]=[x,y]^x[x,y]$ 且 $[x,y]$ 中心）。自同构：所有 $U$ 参数平移 $+1$，逐条检查关系模式不变（平方不变；交换不变；`02:231-234` 显式验证 $[U_i(r+1),W_{ij}(s)]=U_j(r+s+1)$ 仍是定义实例；第二条换位子不含 $U$，不动）。$T,V,W$ 固定给出一个自同态 $\alpha_G$；参数平移 $-1$ 同法给出双向逆，故为自同构。$\alpha_G(z_N)=[U_i(a+1),V_i(b)]$，参数和 $N+1$，即 $\alpha_G(z_N)=z_{N+1}$。
+
+(c) 常数与假设：$z_N$ 的定义要求 $a+b=N$ ，并非其它线性组合，因为 $T_i$ 共轭的作用在 $U$ 上是 $r\mapsto r-\delta$、在 $V$ 上是 $r\mapsto r+\delta$（权重反号的结果），和是唯一的共轭不变量。$z_N^2=1$ 的来源是 $U$ 是 2 元（关系 1 只给 $U$ 平方关系，不给 $V$；平方关系模式在折回展示里靠每个权重满射 $\mathbb Z$ 传播，`02:159-160`）。$\alpha_G$ 只动 $U$ 不动 $V,W,T$：动两种会破坏 $a+b$ 不变量对应的关系检查（$[U_i(r),W_{ij}(s)]$ 里同时平移 $U$ 与 $W$ 就把 $r+s$ 挪了 2）。对 $e$ 的选取 $e=(1+z_0)/2$ 则属于下一节的 1/2 需求。
+
+(d) 失败候选。[推测] 其一，用 $[U_i(a),U_i(b)]$ 之类同类型换位子定义中心元：$U_i$ 之间不交换（没有给 $i=j$ 的交换关系，但也没有任何关系钉住它），没有可证的独立参数和，转移公式的来源正是 $U\to W\to V$ 的两段乘积结构。[推测] 其二，让 $\alpha_G$ 平移 $-1$ 于 $U$ 而同时平移 $+1$ 于 $V$：$z_N$ 的和会变 $N$ 不变，$\alpha(z_N)=z_N$，平移失效，整条"用 $\alpha$ 移动中心幂等"的主线死掉；论文 `02:236-238` 特意说平移 $-1$ 是它的逆，暗示单向平移 $+1$ 是唯一被保留的动法。[推测] 其三，若 $I$ 只有 2 个指标，`02:216-220` 的中心性论证对 $W_{hj}$ 无指标可用，中心族退化。
+
+## 5 引理 lem:finite-central-quotients：5×5 矩阵商把 $(\mathbb Z/2)^m$ 显影
+
+(a) 陈述原文（`02:244-249`）：
+
+```tex
+\begin{lemma}
+\label{lem:finite-central-quotients}
+For every $m\geq1$, there is a finite quotient $F_m$ of $G$ in which
+the images of $z_0,\ldots,z_{m-1}$ generate a central subgroup
+isomorphic to $(\Z/2\Z)^m$.
+\end{lemma}
+```
+
+(b) 推导。取 $S_m=\mathbb F_2[t]/(t^m-1)$：有限环，$t$ 可逆因为 $t\cdot t^{m-1}=t^m=1$，故负幂 $t^r$（$r\in\mathbb Z$）有定义，这一步是整个实现能容纳 $\mathbb Z$-参数族的咽喉。矩阵指标取 $0,1,2,3,4$。定义像（`02:256-263`）：
+
+```tex
+ U_i(r)&\longmapsto I_5+t^rE_{0i},&
+ V_i(r)&\longmapsto I_5+t^rE_{i4},&
+ W_{ij}(r)&\longmapsto I_5+t^rE_{ij}.
+```
+
+$T_\ell$ 映为对角阵、第 $\ell$ 位 $t$ 其余 $1$。每个 $I_5+cE_{ab}$ 是自身的逆：$(cE_{ab})^2=c^2\delta_{ba}E_{aa}=0$（$a\ne b$），特征 2 下 $(I+N)(I+N)=I+N^2=I$。核对关系：对角共轭在 $E_{ab}$ 上乘第 $a$ 行第 $b$ 列对角元之比，$U_i$ 位置 $(0,i)$：$T_i$ 处比 $1/t$，其余 $T_h$ 比 1，匹配 $\lambda_{U_i}=-\varepsilon_i$；$V_i$ 位置 $(i,4)$：$T_i$ 比 $t$，匹配 $+\varepsilon_i$；$W_{ij}$ 位置 $(i,j)$：$T_i$ 比 $t$、$T_j$ 比 $t^{-1}$，匹配 $\varepsilon_i-\varepsilon_j$。乘积 $E_{ab}E_{cd}=\delta_{bc}E_{ad}$ 给出所有必需交换对的零乘积（`02:273-276` 逐对列出），平方关系同上。两条换位子：$[I+t^rE_{0i},I+t^sE_{ij}]=I+t^{r+s}E_{0j}$（只有 $E_{0i}E_{ij}=E_{0j}$ 一项存活，三阶以上积为零），$[I+t^sE_{ij},I+t^rE_{j4}]=I+t^{s+r}E_{i4}$。于是映射给出 $G\to\operatorname{GL}_5(S_m)$ 的同态，$F_m$ 取其像。计算 $z_N$ 的像：$z_N=[U_i(a),V_i(b)]$ 对应 $[I+t^aE_{0i},I+t^bE_{i4}]=I+t^{a+b}E_{04}=I_5+t^NE_{04}$。$E_{04}$ 与所有出现过的 off-diagonal 单元双方向乘积为零（$0$ 不是任何列标、$4$ 不是任何行标，`02:292-293`），对角矩阵在 $0,4$ 两位置都是 $1$，故这些像在 $F_m$ 中中心。独立性：对 $c_0,\ldots,c_{m-1}\in\{0,1\}$，$\prod_q (I+t^qE_{04})^{c_q}=I+(\sum_q c_qt^q)E_{04}$（$E_{04}$ 之间相互乘积全零，所以乘积里指数直接相加），$1,t,\ldots,t^{m-1}$ 是 $S_m$ 的 $\mathbb F_2$-基（定义多项式首项 $m$ 次，余类次数 $<m$ 唯一代表），于是该积为单位阵当且仅当所有 $c_q=0$。每个生成元阶 2、彼此独立，中心子群 $\cong(\mathbb Z/2\mathbb Z)^m$。$m$ 偶数时 $t^m-1=(t^{m/2}-1)^2$ 在 $\mathbb F_2$ 上可约、$S_m$ 非既约，论文 `02:303-304` 专门声明论证不依赖既约性，因为只用到基表示。
+
+(c) 数值核对：尺寸 5 是最小的：行 0 与列 4 做 $U,V$ 的公共"接口"，中间 3 行承载 $I=\{1,2,3\}$；4×4 装不下 $0,1,2,3,4$ 五个功能位（$W_{ij}$ 还要中间指标对）。$S_m$ 选 $\mathbb F_2[t]/(t^m-1)$ 是双重刚需：特征 2 让 unipotent $I+E$ 成为对合（对应 $z_N^2=1$ 的实现端），$t^m=1$ 让商有限且 $t^0,\ldots,t^{m-1}$ 模无关。$z_N\mapsto I+t^NE_{04}$：$E_{04}$ 是路径 $0\xrightarrow{E_{0i}}i\xrightarrow{E_{i4}}4$ 的复合，正是换位子 $[U_i,V_i]$ 的矩阵影子；且 $E_{04}$ 与所有生成元的单乘积都为零，中心性在矩阵层面是显然的，这是"抽象中心元在商里落到最角落"的设计。
+(d) 失败候选。[推测] 其一，把系数环换成 $\mathbb Z/4$ 或 $\mathbb F_2[t]/(t^m)$：$t$ 不再可逆（后者 $t$ 幂零），负参数没有定义，$\mathbb Z$-指标族在商里只剩 $\mathbb N$ 侧。[推测] 其二，特征 $\ne2$：$I+cE$ 平方为 $I+2cE\ne I$，$U_i(r)^2=1$ 关系直接不满足，实现连同态都不是；这解释了 `01:41-47` 里姊妹论文专挑特征 2 的 $\Gamma_K$ 而本篇坚持复代数的分工。[推测] 其三，让 $U,V$ 用同一位置（比如都在 $(0,i)$）：换位子不再落在 $E_{04}$，是重复单元，独立性算不住。
+
+## 6 命题 prop:selection：有限展示代数上的无界灭绝时长
+
+(a) 陈述原文（`02:19-31`）：
+
+```tex
+\begin{proposition}
+\label{prop:selection}
+There exist a finitely presented unital complex algebra $R$, a central
+idempotent $e\in R$, and an automorphism $\alpha$ of $R$ such that, for
+every integer $m\geq 1$, a finite-dimensional left $R$-module $Y_m$
+satisfies
+\begin{equation}
+  H^{\circ j}(Y_m)\neq 0\quad(0\leq j<m),
+  \qquad H^{\circ m}(Y_m)=0.
+  \label{eq:extinction}
+\end{equation}
+The algebra, idempotent, and automorphism are independent of $m$.
+\end{proposition}
+```
+
+(b) 推导。取 $R=\mathbb CG$。群到群代数的展示转换：每个群生成元添加形式逆与两条逆方程，每个群关系变成代数关系；`02:314-318` 说这保持有限展示，因为引理 2.1 给出 15 生成元、有限关系。$\alpha_G$ 线性延长为代数自同构 $\alpha$。$e=(1+z_0)/2$：$z_0$ 中心且 $z_0^2=1$，所以 $e^2=(1+2z_0+z_0^2)/4=(4+4z_0)/4=e$，中心幂等；$e_q:=\alpha^q(e)=(1+z_q)/2$ 是同一代数里一列两两交换的中心幂等。测试模：在有限商 $F_m$ 上，$Z_m=\langle\bar z_0,\ldots,\bar z_{m-1}\rangle\cong(\mathbb Z/2)^m$，定义特征 $\chi_m(\bar z_q)=1$（$q<m-1$）、$-1$（$q=m-1$）；中心幂等 $p_{\chi_m}=\frac{1}{|Z_m|}\sum_{z\in Z_m}\chi_m(z)^{-1}z$ 非零（单位元系数 $1/|Z_m|\ne0$），$zp_{\chi}=\chi(z)p_{\chi}$，取 $Y_m=\mathbb C[F_m]p_{\chi_m}$（复正则表示里的左理想），$Z_m$ 中心使整个 $Y_m$ 每向量带同一特征，沿商映射成为 $R$-模。迭代公式（`02:355-362`）：$H^{\circ j}(Y)\cong{}_{\alpha^j}(e_0e_1\cdots e_{j-1}Y)$，归纳：$H$ 里"先取 $e$ 角再用 $\alpha$ 限制"复合 $j$ 次，每过一层，选边算子被 $\alpha$ 推一格（第 $q$ 层的 $e$ 在原模上看是 $\alpha^q(e)=e_q$），标量总限制是 $\alpha^j$；中心性保证 $e_0\cdots e_{j-1}Y$ 在拉回前已是 $R$-子模。在 $Y_m$ 上：$z_q$（$q<m-1$）作用为 $+1$，$e_q$ 作用为恒等；$z_{m-1}$ 作用为 $-1$，$e_{m-1}=(1+(-1))/2=0$ 作用为零。于是 $H^{\circ j}(Y_m)\cong{}_{\alpha^j}(Y_m)$（$j\le m-1$，乘积全恒等）非零，$H^{\circ m}(Y_m)=0$（乘积含 $e_{m-1}=0$），$m=1$ 时空积与 $e_0=0$ 同样成立（`02:370-372` 点名这个边界）。量化次序：$R,e,\alpha$ 的构造全程未用 $m$；$m$ 只进入 $F_m,\chi_m,Y_m$ 的选择，`02:373-376` 特意说明 $\alpha$ 不需要保持商映射核（每次拉回是同一向量空间配上预复合自同构的作用），这是"复代数上特征 0 的平移"与"商在特征 2 环上"能共存的机制理由。
+
+(c) 常数：$e$ 里的 $1/2$ 要求特征非 2，与 `02:252` 的 $\mathbb F_2$ 商不矛盾：矩阵商只用来给 $Z_m$ 提供独立对合，模的系数域是 $\mathbb C$，$1/|\mathbb Z_m|$ 可逆。$\chi_m$ 的 $-1$ 放在 $q=m-1$：$+1$ 让 $e_q$ 作用成恒等（$(1+1)/2=1$），$-1$ 让 $e_q$ 作用成零（$(1-1)/2=0$），把唯一的零放在最后一位恰好实现"活 $m-1$ 步、第 $m$ 步死"；放在别处就得到另一个灭绝时刻，机制相同。$p_\chi$ 用平均算子，并非任意特征投影，是为了 $Y_m$ 直接取 $\mathbb C[F_m]$ 的极小双边/左理想而有限维。$|Z_m|=2^m$ 只影响 $p_\chi$ 归一。
+(d) 失败候选。[推测] 其一，不设 $\alpha$ 而只用一列本来就不同的幂等（比如 $R=\prod_q\mathbb C$ 的某个有限展示子代数）：无限直积不是有限展示（关系无限），而有限展示换不换得出一列独立中心幂等我没找到正面办法，$R$ 有限展示是任务乙编码 $B$ 有限维的前提，断了这一条整台机器不成立。[推测] 其二，$\chi_m$ 全取 $-1$：$Y_m$ 在第 1 步就灭绝，时长为 0，无界性消失。[推测] 其三，用 $e=(1-z_0)/2$ 而 $\chi_m$ 反号：等价重写，但若同时把平移方向反过来会与 `02:183-185` 的 $\alpha_G(z_N)=z_{N+1}$ 记号打架；这提示整个符号体系是互相锁死的，改一处要在两处补记号。
+
+## 7 编码代数 B 与引理 lem:directed-bound：三顶点二次 quiver 把关系压进两条路
+
+任务乙开工前我卡过一次概念问题：$R=\mathbb CG$ 无限维，它的模范畴没法直接搬进"有限维代数上张量函子"的语言。论文用的办法是 NRS 2004 的齐次化 quiver 构造的三顶点版（`03:15-17`）。取 $R=k\langle x_1,\ldots,x_d\rangle/(p_1,\ldots,p_t)$ 且每个 $p_j$ 次数 ≤2：任意有限展示都能这样化，机制是引入辅助生成元记录有限多个单项式的逐次部分积，加上它们的二元乘积定义式（`03:27-33`）。quiver 顶点 $0,1,2$，箭头 $\mathcal A_{01}=\{s,a_1,\ldots,a_d\}$、$\mathcal A_{12}=\{s',a'_1,\ldots,a'_d\}$，关系（`03:43-46`）
+
+```tex
+\begin{equation}\label{eq:quadratic-encoding}
+  a'_h s=s'a_h\quad(1\le h\le d),
+  \qquad \widetilde p_j=0\quad(1\le j\le t),
+\end{equation}
+```
+
+齐次化规则 $x_hx_l\mapsto a'_ha_l$、$x_h\mapsto s'a_h$、$1\mapsto s's$（`03:48-52`）。$B$ = 路径模关系代数；$\mathcal R$ 取关系张成在长 2 路径自由空间里的一组固定基。没有长 3 路径，所以 $B$ 有限维：长 2 路径空间由 $\mathcal A_{12}\times\mathcal A_{01}$ 张成、再商掉 $\operatorname{span}\mathcal R$，加上三顶点与两段箭头，总共是有限维向量空间，乘法到长 3 全部为零。模 $M(Y)$（`03:109-113`）：每个顶点放 $Y$，$s,s'$ 恒等，$a_h,a'_h$ 都作用 $x_h$；$B$ 的关系在 $M(Y)$ 上求值就是 $R$ 的定义关系（$a'_ha_l\mapsto x_hx_l$ 等），故作用良定。
+
+(a) 陈述（`03:69-79`）：
+
+```tex
+\begin{lemma}[Directed dimension bound]\label{lem:directed-bound}
+Let $\Lambda$ be a finite-dimensional $k$-algebra with complete
+orthogonal idempotents $\varepsilon_0,\ldots,\varepsilon_{n-1}$ such that
+\[
+  1=\sum_{i=0}^{n-1}\varepsilon_i,\qquad
+  \varepsilon_i\Lambda\varepsilon_i=k\varepsilon_i,\qquad
+  \varepsilon_j\Lambda\varepsilon_i=0\quad(j<i).
+\]
+Then $\Lambda$ has global dimension at most $n-1$ on both sides.
+In particular, the algebra $B$ above has global dimension at most two
+on both sides.
+\end{lemma}
+```
+
+(b) 推导。定义 $M$ "支撑在 ≥p"指 $\varepsilon_jM=0$（$j<p$）。投射满射 $\bigoplus_{i=p}^{n-1}\Lambda\varepsilon_i\otimes_k\varepsilon_iM\to M$，$c\otimes v\mapsto cv$：每个直加项是 $\Lambda\varepsilon_i$ 的 $\dim\varepsilon_iM$ 份复制故投射（$M$ 不必有限生成也成立）；核的 $<p$ 分量显然为零，$p$ 分量上只有 $i=p$ 项有贡献、且 $\varepsilon_p\Lambda\varepsilon_p=k\varepsilon_p$ 使其在 $p$ 处就是同构 $\varepsilon_pM\to\varepsilon_pM$，故核支撑在 ≥p+1。迭代 $n-1$ 次后最后一个核只支撑在末顶点，而 $\Lambda\varepsilon_{n-1}=k\varepsilon_{n-1}$ 使这类模投射（左乘是同构），消解长 ≤n-1。对 $\Lambda^{\mathrm{op}}$ 用反向序得右界。$B$ 的顶点幂等满足假设：$\mathbf e_iB\mathbf e_i=k\mathbf e_i$（无圈，无长 2 回环），$j<i$ 时 $\mathbf e_jB\mathbf e_i=0$（箭头只向大号走），$n=3$ 给 $\gldim B\le2$。
+(c) 为什么这个界后面被消费两次：其一在 `04:270-277`，Ext 上同调维数 4 > 2 保证截断三角分裂；其二在 `05:95-113` 给 $B\otimes_k C$ 与 $D$ 递推同类型界。$n-1=2$ 同时决定 odd-double 需要间隔 >2 的奇数位移（见下节）：这个"2"是全链条里被引用最多的数。
+(d) 失败候选。[推测] 其一，若允许长 3 路径（比如四顶点或加一条 0→2 直接箭头），$\gldim$ 界仍按 $n-1$ 走，但 rectification 的"关系重叠需要更高相容性"就会激活，三列复形不够用；论文明说这是选三顶点的原因。[推测] 其二，若 $\varepsilon_i\Lambda\varepsilon_i$ 取更大（带 loop），首步的"末顶点模投射"失效，归纳终点断裂。
+
+## 8 引理 lem:odd-double：为什么选边要付出一个 [3]
+
+设想的捷径我先试过：$\theta(e)\in\End_Q(L)$ 是幂等，直接在 $Q$ 里把它当直和分解 $L\cong\operatorname{Im}e\oplus\operatorname{Im}(1-e)$，得到对象 $U$ 使 $\operatorname{ev}_Y(U)=eY$。这步在 $Q$ 内不合法：$Q$ 未必Karoubi 完备，且我需要的最终形态 $eY\oplus eY[3]$ 根本不在 $Q$ 的像里，除非把幂等补进去。论文的处理是先承认要在 $\Kar(Q)$ 里工作，再证"奇数双重"确实落回 $Q$ 本体。
+
+(a) 陈述（`03:190-196`）：
+
+```tex
+\begin{lemma}[Odd double]\label{lem:odd-double}
+Let $\mathcal T$ be a triangulated category, let $L\in\mathcal T$,
+and let $\epsilon\in\End_{\mathcal T}(L)$ be idempotent.
+Put $U=(L,\epsilon)\in\Kar(\mathcal T)$.
+Both $U\oplus U[1]$ and $U\oplus U[3]$ are isomorphic in
+$\Kar(\mathcal T)$ to objects of $\mathcal T$.
+\end{lemma}
+```
+
+(b) 推导分两段。第一段是一般化的"分裂锥计算"：给定 $\mathcal T$ 中三角 $A\xrightarrow{f}B\xrightarrow{g}T\xrightarrow{h}A[1]$，若在 Karoubi 完备化里 $A=I\oplus A_0$、$B=I\oplus B_0$ 把 $f$ 写成 $I$ 上恒等、其余为零，则对每个 $Z\in\Kar(\mathcal T)$ 长正合列仍成立（$Z$ 是 $\mathcal T$ 对象的收缩，其 Hom 列是原正合列的直和加项，正合性在直和加项上保持）。$gf=0$、$f[1]h=0$ 迫使 $g$ 只从 $B_0$ 来、$h$ 只到 $A_0[1]$ 去：$g=g_0\pr_{B_0}$、$h=\in_{A_0[1]}h_0$。于是有短正合列 $0\to\Hom(Z,B_0)\xrightarrow{(g_0)_*}\Hom(Z,T)\xrightarrow{(h_0)_*}\Hom(Z,A_0[1])\to0$：左端正合来自"进 $B_0$ 被 $g_0$ 零化的映射经 $f$ 提升回 $B$ 再投影仍零"；右端正合来自"进 $A_0[1]$ 的任何映射被 $f[1]$ 零化、由三角公理沿 $h$ 提升"。取 $Z=A_0[1]$，恒等元提升出截面 $\sigma$，$(g_0,\sigma):B_0\oplus A_0[1]\to T$ 对每个 $Z$ 导出 Hom 双射，Yoneda 给出同构。第二段两次应用：对三角 $(1-\epsilon):L\to L\to S\to L[1]$，在完备化里 $L=U\oplus U'$（$U'=(L,1-\epsilon)$），$1-\epsilon$ 在 $U'$ 上恒等、在 $U$ 上零，即 $I=U'$、$A_0=B_0=U$，于是 $S\cong U\oplus U[1]$ 是 $\mathcal T$ 的对象。再看 $S[1]\cong U[1]\oplus U[2]\xrightarrow{(0\ 0;\ \id\ 0)}U\oplus U[1]\cong S$：由 $\mathcal T\hookrightarrow\Kar(\mathcal T)$ 的满函子性这是 $\mathcal T$ 中态射；它的锥用同一计算，公共恒等加项 $I=U[1]$、源补 $A_0=U[2]$、靶补 $B_0=U$，锥 $\cong B_0\oplus A_0[1]=U\oplus U[3]$，又落回 $\mathcal T$。
+(c) 位移为什么是 3：第一次双重把补 $U$ 送到 $U[1]$（锥的 $A_0[1]$ 项），第二次把补 $U[2]$ 送成 $U[3]$；每多一轮加 2，所以可达位移恰是全体奇数，3 是其中大于 $\gldim B=2$ 的最小值（`04:270-277` 需要 Ext 间隔 4 > 2，即上同调支撑 0 与 −3）。矩阵 $(0\ 0;\id\ 0)$ 选"下左块恒等、其余零"是唯一的：若恒等放在上右块（$U[2]\to U$）方向不可行（度数不匹配），若放对角则不是零态射的锥。$U\oplus U[1]$ 与 $U\oplus U[3]$ 的"$U$ 出现两次"就是"odd double"名字来源：一对象加它的奇移。
+(d) 失败候选。[推测] 其一，想要 $U\oplus U[2]$（偶移，间隔也 >2？间隔 2 时连接态射落在 Ext³，gldim 2 下同样消亡，看似更省）：偶移的双重不落在 $\mathcal T$：本引理证明给出的可达集合只有奇数族，这是构造的内禀限制，[推测] 其机制原因是 $1-\epsilon$ 锥的互补两块的度差是 1，每轮只能再积 2。其二，直接在导出范畴层面写 $eY\oplus(eY)[3]$ 再反推对象：没有 $Q$ 内的实现路径，denominator 全部悬空。
+
+应用（`03:252-285`）：在 $Q$ 中取 $\epsilon=\theta(e)$，固定 $V_0\in Q$ 与同构 $V_0\cong U\oplus U[3]$。中心性给 $U$ 上 $R$-作用 $r\mapsto\theta(e\alpha(r)e)$（单位元是 $\theta(e)=\id_U$，乘积相容因为 $e$ 与一切 $\alpha(r)$ 交换），$U[3]$ 用同一作用，搬到 $V_0$。于是 $V_0$ 在每个顶点上是同一个对象、$s,s'$ 恒等、$a_h,a'_h$ 由 $\alpha(x_h)$ 作用，构成 $Q$ 中的 $B$-diagram。评估端：$\D^b(k)$ 幂等完备（每个复形同构于其零微分上同调，逐次数分裂），评估函子可加地扩到 $\Kar(Q)$，把 $U$ 送成 $eY$、把 $r$ 的作用送成 $\alpha(r)|_{eY}$，得 `03:280-284`：每个顶点 $eY\oplus(eY)[3]$。
+
+## 9 引理 lem:diagram-lift 与 prop:lifted-diagram：先清分母，再选测试模
+
+Verdier 局部化的语法我先梳理成自己能用的一条：$\Sigma=\{u:\Cone(u)\in\mathcal S\}$，八面体公理保证复合封闭、恒等在列；右分母可通分：给 $u:Y'\to Y\in\Sigma$ 与 $f:X\to Y$，补两个三角得 $v\in\Sigma$ 与 $g:X'\to Y'$ 使 $fv=ug$（Ore 方块，`03:302-311`）；零化消去律：$u\in\Sigma$、$ug=0$ 则 $g$ 经 $T[-1]\to Y$（$T\in\mathcal S$）分解，补 $b$ 的三角得分母 $v$ 使 $gv=0$（`03:313-318`）。于是态射都写成屋顶 $X\xleftarrow{u}X'\xrightarrow{f}Y$，$q(g)=0$ 蕴含存在分母杀之（eq:zero-fraction，`03:328-331`）。有限多个态射可以并进一个到有限直和的态射，共享一个分母，这是全节"清分母"操作的许可证明。
+
+(a) 陈述（`03:337-340`）：
+
+```tex
+\begin{lemma}[Finite diagram lifting]\label{lem:diagram-lift}
+Every $B$-diagram in $Q$ is isomorphic to the image under $q$ of a
+$B$-diagram in $K$.
+\end{lemma}
+```
+
+(b) 推导（三步，注意次序就是量词的次序）。第一步，对象提升到 $K$ 里 $C_i$，有 $\psi_i:q(C_i)\xrightarrow\sim W_i$。第二步，收集 $1\to2$ 的箭头族 $(\psi_2^{-1}t_b\psi_1)_b:q(C_1)\to\bigoplus_b q(C_2)$，一个屋顶给出分母 $u_1:D_1\to C_1$ 与分子 $f_b:D_1\to C_2$；令 $D_2=C_2$、$\phi_1=\psi_1q(u_1)$、$\phi_2=\psi_2$，则 $\phi_2q(f_b)=t_b\phi_1$。第三步同法处理 $0\to1$ 族 $(\phi_1^{-1}t_a\psi_0)_a$，得分母 $u_0:D_0\to C_0$ 与 $f_a:D_0\to D_1$、$\phi_0=\psi_0q(u_0)$；此时所有箭头方块交换（eq:lift-arrow-squares）。关系端：$g_\rho=\sum\rho_{ba}f_bf_a:D_0\to D_2$，由 $t$ 的关系与方块交换得 $\phi_2q(g_\rho)=0$，$\phi_2$ 是同构故 $q(g_\rho)=0$；对族 $(g_\rho)_\rho$ 用一次公共分母 $v:D_0'\to D_0$ 使 $g_\rho v=0$ 于 $K$，替换 $D_0\leftarrow D_0'$、$f_a\leftarrow f_av$、$\phi_0\leftarrow\phi_0q(v)$。收尾一句极关键（`03:388-391`）：没有进入顶点 0 的箭头、没有更长的路径，所以没有下一轮需要再通分的东西；三顶点二次编码在这里第二次兑现。
+prop:lifted-diagram（`03:401-424`）是其机械推论：$K$ 的物件是复形，取有界右投射代表 $D_i$、链映射代表 $f_a$；关系在 $K$ 中为零即零同伦，为每个 $\rho$ 固定一个右 $B$-线性度 $-1$ 同伦 $h_\rho$，得 eq:relation-homotopies：
+
+```tex
+  d_{D_2}h_\rho+h_\rho d_{D_0}
+      =\sum_{b,a}\rho_{ba}f_bf_a.
+```
+
+全部选择只用 $R,e,\alpha$ 与 $V_0$ 的实现数据，在任何测试模 $Y$ 之前完成；$\phi_i$ 在商 $Q$ 上是固定态射，而每个 $\operatorname{ev}_Y$ 都穿过同一个 $Q$，故同一套链数据在所有 $Y$ 上同时给出 $eY\oplus eY[3]$ 的评估图。
+(c) 为什么 $h_\rho$ 度数是 $-1$：关系 $g_\rho$ 是 0 度链映射，零同伦的标准书写 $d h+h d=g_\rho$ 要求 $h$ 降一度（上同调分次约定 `01:218-223`）。为什么 $D_i$ 要"有界 + 有限生成右投射"：下节 $P\otimes_B^{\mathbf L}M(Y)$ 用普通张量算导出张量，全靠右投射项。为什么"先清分母"不可倒序：若先取 $Y$ 再逐模构造分母，分母会随 $Y$ 变，$D_i,f_a$ 就不再是固定对象，定理 4.1 的"single complex P"无法成立；`01:160-163` 那句 "before choosing any test module" 就是我在这里撞墙后论文给出的解法。
+(d) 失败候选。[推测] 其一，若 $B$ 有四顶点/长 3 路径，"最后一轮"不存在，需要对 $g_\rho$ 的复合再清分母，可能永远清不完（同伦相容性无限层，正是 A∞ 地形）。[推测] 其二，若把关系处理成"在 $K$ 中逐项为零"而不用公共分母：每个 $\rho$ 一个分母则 $D_0$ 要被多次拉回替换，前面的箭头方块在替换后不再交换；公共分母技巧保住不动点。[推测] 其三，评估函子若只定义在 $K$ ，并非 $\Kar(Q)$ 的扩张，$V_0$ 的 $U\oplus U[3]$ 身份无处安放，这要求 $\D^b(k)$ 幂等完备这一免费事实，路线本身没得选，我只是确认它廉价。
+
+## 10 引理 lem:rectification：三列复形把同伦焊成真正的双模复形
+
+(a) 陈述（`04:36-59`，关键部分）：给定 $D_0,D_1,D_2$ 有界右投射复形、链映射 $f_a$、满足 $d_{D_2}h_\rho+h_\rho d_{D_0}=f_\rho:=\sum\rho_{ba}f_bf_a$ 的度 $-1$ 右线性 $h_\rho$，则存在有界双模复形 $P$（右 $B$ 投射项）与同伦等价 $\iota_i:D_i\to\mathbf e_iP$，使每条箭头的两个作用 $a\iota_i$ 与 $\iota_jf_a$ 链同伦。
+
+(b) 推导。三列（`04:66-70`）：$L_0'=\bigoplus_i B\mathbf e_i\otimes_k D_i$，$L_1'=\bigoplus_{a:i\to j}B\mathbf e_j\otimes_k D_i$，$L_2'=\bigoplus_\rho B\mathbf e_2\otimes_k D_0$；左乘在第一个张量因子、右乘在第二个。$p:L_1'\to L_0'$ 在 $(a:i\to j)$ 加项上 $p(c\otimes v)=(ca\otimes v)_i-(c\otimes f_a(v))_j$；$q:L_2'\to L_1'$ 在 $\rho$ 加项上 $q(c\otimes v)=\sum\rho_{ba}((cb\otimes v)_a+(c\otimes f_a(v))_b)$；$h:L_2'\to L_0'$ 度 $-1$，$h(c\otimes v)=(c\otimes h_\rho(v))_2$。展开 $pq$（`04:95-105`）：两项 $(cb\otimes f_a v)_1$ 相消，剩 $(cba\otimes v)_0-(c\otimes f_bf_a(v))_2$ 求和；第一和式因 $\sum\rho_{ba}ba=0$ 于 $B$ 中而消失，得 $pq(c\otimes v)=-(c\otimes f_\rho(v))_2$。置 $P=L_0'\oplus L_1'[1]\oplus L_2'[2]$，$d_P=\begin{pmatrix}d_0&p&h\\0&-d_1&q\\0&0&d_2\end{pmatrix}$（对角符号来自移位约定 $d_{K[s]}=(-1)^sd$；$p,q,h$ 在分次矩阵里都是总度 1）。$d_P^2$ 检验：$(0,1)$ 块 $d_0p-pd_1=0$ 与 $(1,2)$ 块 $-d_1q+qd_2=0$ 来自 $p,q$ 与内微分交换（$f_a$ 是链映射、路径乘法与 $D$ 无关）；$(0,2)$ 块 $d_0h+pq+hd_2$：$pq$ 是"乘 $f_\rho$ 再取负"，而 $d_0h+hd_2$ 按 $h_\rho$ 恒等式给出 $+f_\rho$ 项，两者相消；对角块 $d_i^2=0$ 自动。右投射与有限维：$B\mathbf e_j\otimes_k D_i^n$ 作右 $B$-模是 $D_i^n$ 的有限份复制，故投射、有限维；列与复形都有界，$P$ 有界。
+同伦等价端：$\iota_i(v)=(\mathbf e_i\otimes v)_i$ 是链映射、分次右模层面分裂单射，证其商正合。给 $\mathbf e_iP$ 按"源指标"降过滤 $F^r=\sum_{\text{源}\ge r}$；内微分与路径乘法保源指标、$f_a$ 项升源指标、$h$ 从 0 升到 2，故 $F^r$ 是子复形，$F^0=\mathbf e_iP$、$F^3=0$。商 $\mathbf e_iP/\iota_i(D_i)$ 继承过滤，逐层看关联分块：源 $=i$ 的只有 $\iota_i(D_i)$ 本身（$i$ 到 $i$ 只有平凡路），在商中消失；源 $>i$ 为零；相邻 $j<i$ 时源 $j$ 层是 $D_j$ 张以下正合列的带符号总复形：
+
+```tex
+ 0\longrightarrow k^{\{a:j\to i\}} \xrightarrow{\ a\mapsto a\ } \mathbf e_iB\mathbf e_j \longrightarrow 0,
+```
+
+无长 1 关系故中间映射是同构；剩余 $(j,i)=(0,2)$ 层是 $D_0$ 张三项复形 $0\to k^{\mathcal R}\to k^{\{(b,a)\}}\to\mathbf e_2B\mathbf e_0\to0$（度 $-2,-1,0$），第一映射把 $\rho$ 送到 $\sum\rho_{ba}(b,a)$ 系单射（$\mathcal R$ 是基），像=第二映射核的理由（`04:192-198`）：所有定义关系长 2、没有进入 0 或离开 2 的正长路径，所以关系理想在该路径空间里恰好张成自身线性 span；第二映射满因为长 2 路径张满 $\mathbf e_2B\mathbf e_0$。向量空间的正合列分裂，张有界复形得零总复形；关联分块全部正合，过滤归纳得商正合，$\iota_i$ 是 quasi-isomorphism。有界零正合右投射复形的锥可缩：从最高非零度开始往回拆满射到投射项；故 $\iota_i$ 是同伦等价。箭头同伦：$H_a(v)=(\mathbf e_j\otimes v)_a\in\mathbf e_jL_1'[1]$ 度 $-1$，$d_PH_a+H_ad_{D_i}=a\iota_i-\iota_jf_a$（`04:210-223`，内微分部分由移位符号自动相消，剩下 $p$ 的两块恰是这两个映射之差）。
+(c) 每项的必然性：$L_2'$ 只一列就够，因为关系全是 $0\to2$ 型且互不复合（remark `04:226-233`）：一般情形（Keller 的语境，`04:28-34`）零同伦之间还有"同伦的同伦"相容障碍，这里 $d_P^2$ 的非平凡检验只剩一个 $h$ 参与的方块，没有第二层要焊。$p$ 的负号与 $q$ 的加号分配不是随便的：$pq=-f_\rho$ 与 $dh+hd=f_\rho$ 相消要求 $pq$ 恰好带负，而 $pq$ 的负号来源是 $p$ 定义中第二项 $(c\otimes f_av)_j$ 前的负号与 $q$ 的两项结构；若整族符号翻转，则要把 $h$ 换成 $-h$，$q$ 换成 $-q$，仍自洽，所以真正锁死的是相对符号。移位 $[1],[2]$ 的选择：$p,q$ 要成为度 +1 成分，$L_1'$ 必须前移 1、$L_2'$ 前移 2，这正是映射锥塔的标准分次。
+(d) 失败候选。[推测] 其一，两列版（丢掉 $L_2'$ 只保留箭头列）：$d^2$ 的 $(0,2)$ 块剩 $pq$ 非零，复形条件直接违背，除非 $f_\rho=0$ 于链层，而那正是我们求之不得的（同伦才为零，链上非零）。[推测] 其二，四列（引入 $L_3'$ 吸收 $h$ 的相容性）：没有东西要吸收，多出的列会把 $\mathbf e_iP$ 的支撑拉长，后面 $\gldim$ 分裂论证的间隔数字全部重排。[推测] 其三，$D_i$ 若不带右投射性，`04:204-208` 的"零正合投射复形可缩"失效，$\iota_i$ 只剩 quasi-iso，张量后不再保同伦等价，整条"普通张量算导出张量"的通道断。
+
+## 11 定理 thm:realization 与其推论：一次张量 = 一次选边加一个 [3] 幽灵
+
+(a) 陈述（`04:8-24`）：
+
+```tex
+\begin{theorem}\label{thm:realization}
+Let \(k\) be a field, let \(R\) be a finitely presented \(k\)-algebra,
+let \(e\in R\) be a central idempotent, and let
+\(\alpha:R\to R\) be a unital endomorphism.
+Use the finite-dimensional algebra \(B\) and the modules \(M(Y)\)
+constructed in the preceding section, and put
+\(H(Y)={}_{\alpha}(eY)\).
+There is a single bounded complex \(P\) of finite-dimensional
+\(B\)-bimodules, termwise projective on the right, such that for
+every finite-dimensional left \(R\)-module \(Y\) one has
+\begin{equation}\label{eq:realization}
+ P\otL_B M(Y)
+ \simeq M(H(Y))\oplus M(H(Y))[3]
+ \qquad\text{in }\D^b(B\text{-}\modu).
+\end{equation}
+All choices defining \(P\) are made independently of \(Y\).
+\end{theorem}
+```
+
+(b) 推导。取 prop:lifted-diagram 的固定数据代入 lem:rectification 得 $P$。$P$ 与 $D_i$ 都是右投射有界复形，$\otimes_B$ 普通张量即算导出张量；张量保持同伦等价 $\iota_i$ 与箭头同伦 $H_a$（同一组链同伦张上 $\id_{M(Y)}$ 仍是链同伦），故 $T_Y:=P\otimes_B^{\mathbf L}M(Y)$ 的顶点图与 $\operatorname{ev}_Y$ 图同构，即每顶点 $eY\oplus eY[3]$、$s,s'$ 恒等、$a_h,a'_h$ 双份 $\alpha(x_h)$。取上同调（函子性给箭头诱导映射）：$H^n(T_Y)$ 在 $n=0,-3$ 处各是一份 $M(H(Y))$（顶点空间都是 $eY$，作用 $\alpha(x_h)$ 正是 $H(Y)={}_\alpha(eY)$ 的定义），其余为零。截断三角 $A_{-3}[3]\to T_Y\to A_0\xrightarrow{\delta}A_{-3}[4]$，$\delta\in\Ext_B^4(A_0,A_{-3})=0$，因为 $\gldim B\le2$（lem:directed-bound）；三角分裂，$T_Y\simeq A_0\oplus A_{-3}[3]$ 即 eq:realization。全部对象在选择 $Y$ 前已固定。
+推论（`04:284-293`，无编号标号但计入编号条目）：$\Phi^j(M(Y))\simeq\bigoplus_{q=0}^j(M(H^{\circ j}(Y))[3q])^{^{\oplus\binom{j}{q}}}$。归纳：$j=0$ 平凡；对 $j+1$ 把 $\Phi$ 施加到每个直加项，用 eq:realization（把 $H^{\circ j}(Y)$ 当输入 $Y$）将每项 $X$ 换成 $X\oplus X[3]$，同一位移 $3q$ 的两条来路（从 $q-1$ 走"加幽灵"边、从 $q$ 走"留底"边）合并计数 $\binom{j}{q-1}+\binom{j}{q}=\binom{j+1}{q}$，Pascal 恒等式兑现二项系数；$H^{\circ j}(Y)$ 有限维保证每项合法。论文明说分裂只需逐对象存在、不要求自然选择（`04:300-303` 与约定 `01:228-230`），这解除了"给整个范畴一致地选分裂"这一不必要负担。
+(c) 数值与假设：$[3]$ 由 odd-double 与 gldim 2 共同锁死（间隔 3 使上同调落在 0 与 $-3$，连接态射要 Ext 度 4；4 > 2 而若间隔 2 则 Ext³ > 2 也够？这里我的机械核对：间隔 $s$ 给 Ext$^{s+1}$ 消亡当 $s+1>2$ 即 $s\ge2$；odd-double 可达奇数 $1,3,5$，$s=3$ 是奇数中满足 $s\ge2$ 的最小者。间隔 1 时 Ext² 未必零，分裂不保证）。$k$ 任域、$\alpha$ 只要幺半同态（命题 2.4 里才要自同构）：定理陈述刻意弱化输入，方便 `01:199-204` 说读者可以只拿 prop:selection 当黑盒从 §3 读起。右投射逐项是张量计算合法的根基。
+(d) 失败候选。[推测] 其一，若坚持 $P$ 是普通双模，并非复形：顶点图在 $K$ 里带着同伦 $h_\rho$，链层关系不严格成立，普通双模无法携带"关系到零需要同伦"的信息；这就是任务丙还要再来一次 square-zero 的原因（$P$ 的微分最终要由 $C$ 链吸收）。[推测] 其二，若 gldim $B$ 恰为 3：Ext⁴ 可能非零，截断三角不分裂，$P\otimes^{\mathbf L}M(Y)$ 只剩谱序列信息，推论的二项公式被微分打散。[推测] 其三，若 $\mathcal R$ 取的不是基，是冗余生成集：`04:192-194` 的单射性失效，关联分块出现同调，$\iota_i$ 不再 quasi-iso。
+
+## 12 命题 prop:ordinary-simulation：把复形张量降格成普通双模的二次迭代
+
+到这里我手里有 $P$，但投射维数是**普通模**的概念，$P\otimes_B^{\mathbf L}-$ 是导出函子；任务丙要一座桥。我最初设想（进场第一天的想法）是直接在 $B$ 上找一个普通双模 $Y$ 令 $Y\otimes_B^{\mathbf L}Y\simeq P\otimes_B^{\mathbf L}-$，推了半天卡在两点：$P$ 的项散落在一个区间的多个度数上且带非零微分，一个普通双模没有地方安放"微分"；而 $B\operatorname{mod}$ 里普通双模的导出张量幂的修正只能靠投射消解，消解又要求新的相容性。论文的解法比我预想的迂回一层：不硬压成一个函子，是造一个更大的代数 $D$ 和**两个**互相搬运的双模块，让"两步"各走一条轨道。
+
+数据（`05:9-57`）。取区间 $a_*\le0\le b_*$ 覆盖 $P$ 的支撑，$l=b_*-a_*$。$C$ = 线性 quiver $0\xrightarrow{c_1}1\to\cdots\xrightarrow{c_l}l$ 模长 2 路径（根平方零）。$W$ = 末顶点 $l$ 的单纯**右** $C$-模，有投射消解（`05:21-28`）$0\to\varepsilon_0C\xrightarrow{c_1\cdot}\varepsilon_1C\to\cdots\xrightarrow{c_l\cdot}\varepsilon_lC\to W\to0$。逐段核对：$\varepsilon_iC$ 基为 $\{\varepsilon_i,c_i\}$（长 ≤1 的以 $i$ 为尾的路），其根是右单纯在 $i-1$（乘 $c_i$ 的像），左乘 $c_i$ 把 $\varepsilon_{i-1}\mapsto c_i$、$i>1$ 时把 $c_{i-1}\mapsto 0$（长 2 为零），故每段单射、逐处正合，$l=0$ 时退化成 $\varepsilon_0C\to W$ 同构。$(B\otimes_k C,B)$-双模 $O$：$\varepsilon_iO=P^{a_*+i}$，$c_i|_{\varepsilon_{i-1}O}=d_P^{a_*+i-1}$；$d_P^2=0$ 恰好是 $C$ 在根平方零商下的表示条件，双模线性保证 $C$ 作用与两侧 $B$ 作用交换。$D=B\times(B\otimes_k C)$，$T=B\otimes_k W$，$X=O\oplus T$，$O$ 左作用走第二因子、右作用走第一因子，$T$ 反之。两块的方向性（`05:59-61` 与图 fig:simulation）意味着：从第一因子的 $Z$ 出发张一次 $X$ 被 $O$ 搬到第二因子，再张一次被 $T$ 搬回来，中间 $C$ 的作用由消解 $0\to\varepsilon_0C\to\cdots$ 完成"把链复形摊平成普通模"的工序，$d_P$ 沿途充当微分。
+
+(a) 陈述（`05:77-92`）：
+
+```tex
+\begin{proposition}
+\label{prop:ordinary-simulation}
+The algebra \(D\) has finite global dimension on both sides.
+Let \(F=X\otL_D-\).  For every complex \(Z\) of left
+\(B\)-modules, regarded as a complex on the first factor of
+\(D\), there is an isomorphism
+\begin{equation}
+\label{eq:compression}
+F^2(Z)\simeq P[b_*]\otL_B Z,
+\qquad
+T\otL_{B\otimes_k C}O\simeq P[b_*].
+\end{equation}
+\end{proposition}
+```
+
+(b) 推导。先算维数：$B\otimes_k C$ 的顶点 $(i,j)$（$0\le i\le2$，$0\le j\le l$）共 $3(l+1)$ 个，对角角 $k$，非零分量沿两个定向的乘序移动；取该积序的任一线性扩张就满足 lem:directed-bound 假设（线性扩张把"严格更小"的顶点对排到前面即可保证下三角为零），得 $\gldim(B\otimes_k C)\le3(l+1)-1=3l+2$，两侧同；$B$ 界 2；积代数按因子分解模，$\gldim D,\gldim D^{\mathrm{op}}\le3l+2$（`05:102-113`）。再算 $F^2$：$Q_T$ = 链消解张 $B$ 的正则双模（末项置 0 度），给出 $T$ 的有界右 $(B\otimes_k C)$-投射消解且保留左 $B$-作用；$O$ 作右 $B$-模是 $P$ 各有限直和故投射；$Q_X=O\oplus Q_T$ 是 $X$ 的有界右 $D$-投射消解保留左 $D$-作用。第一因子上 $F^2(Z)\simeq Q_T\otimes_{B\otimes_k C}(O\otimes_BZ)\cong(Q_T\otimes_{B\otimes_k C}O)\otimes_BZ$。度 $n$（$-l\le n\le0$）：$(B\otimes\varepsilon_{l+n}C)\otimes_{B\otimes_k C}O\cong\varepsilon_{l+n}O=P^{a_*+l+n}=P^{b_*+n}$，诱导微分 $d_P$。与 $P[b_*]$ 的标准微分 $(-1)^{b_*}d_P$ 比较：度 $n$ 上乘 $(-1)^{b_*n}$ 给出链同构（相邻度符号交替吸收全局 $(-1)^{b_*}$），且与两侧 $B$-作用交换。该复形右投射逐度，普通张量即算导出张量，两式同证。
+(c) 数值：$l$ 由 $P$ 的支撑宽度定死，不能缩短（少一度会切掉 $P$ 的某个非零度）；$b_*$ 的进入点是把"最后一项 $\varepsilon_lC$"对齐到 0 度（`05:116-117`  placing its last projective term in degree zero），于是 $F^2$ 的位移常数就是 $b_*$，后面 eq:even-iterates 里 $jb_*$ 全部由它供货。$3l+2$ 这个数只被 cor:pd-detection 的 Tor 界 $g$ 消费，出现在哪条消解上无关紧要，只要有限；这就是为什么 $C$ 选根平方零链而不选更花哨的代数：正合性一行可验。
+(d) 失败候选。[推测] 其一，把 $O,T$ 塞进一个因子（$D=B$，令 $X$ 为 $B$-双模直接编码复形）：$C$ 的角色丢失后没有右投射消解来"走出 $P$ 的微分"，$T\otimes^{\mathbf L}O$ 在 $B$ 上无从谈起，$W$ 根本不是 $B$-模。[推测] 其二，链 quiver 取环（$l+1$ 个顶点带一条回头箭）：根不再幂零，$W$ 的有界投射消解不存在，$\gldim C=\infty$，$D$ 的有限全局维数前提崩，$g$ 无法取。[推测] 其三，一次张量 $F^1$ 直接当 $H$ 用：$F(Z)$ 住在第二因子，没有 $B$-模语义，投射维数与 $M(H(Y))$ 都对不上号；"二"是搬运周期，不是可优化的冗余。
+
+## 13 命题 prop:bar-splitting：bar 复形按 X 的出场次数分箱
+
+(a) 陈述（`06:19-38`）：
+
+```tex
+\begin{proposition}
+\label{prop:bar-splitting}
+Let \(D\) be a finite-dimensional \(k\)-algebra, let \(X\) be
+a finite-dimensional \(D\)-bimodule, and let
+\(A=D\ltimes X\) be the algebra with multiplication
+\[
+(d,x)(d',x')=(dd',dx'+xd').
+\]
+... In the derived category of left \(D\)-modules there is an
+isomorphism
+\begin{equation}
+\label{eq:bar-splitting}
+D\otL_A N
+\simeq
+\bigoplus_{r\ge0}(F^rN)[r].
+\end{equation}
+\end{proposition}
+```
+
+$A$ 的乘法里 $X^2=0$ 藏在第二分量 $dx'+xd'$：两个 $X$ 分量相乘无处落地故恒为零，$X$ 是平方零双边理想。（这个 square-zero 扩张我一开始按半直积 $D\ltimes X$ 的字面记号以为是带作用的交叉积，核对乘法式才确认它就是 trivial extension/零化扩张，名字里那个 $\ltimes$ 只记 $D$ 在两侧的双侧作用。）
+
+(b) 推导。用域 $k$ 上的非增广 bar 消解：度 $-n$ 项 $A\otimes_kA^{\otimes n}\otimes_kN$ 是自由左 $A$-模，插单位的 $k$-线性收缩给出 quasi-iso，张上右 $A$-模 $D$ 得 $\mathcal B$ 模型，$\mathcal B^{-n}=D\otimes_kA^{\otimes_kn}\otimes_kN$，微分是相邻乘积与两端作用的交错和。把每个内部 $A$ 展开成 $D\oplus X$：任一 face 保持"$X$ 出现次数"。机制逐条：含恰一个 $X$ 的乘积仍在 $X$（$D$ 作用封闭）；含两个 $X$ 的乘积为零（平方零）；$X$ 对 $D$ 的右端作用与对 $N$ 的左端作用都为零（$D$ 经投影 $A\to D$，$N$ 沿同一投影通胀，$(d,x)$ 在 $N$ 上就是 $d$）。于是有**复形的实际直和分解** $\mathcal B=\bigoplus_{r\ge0}\mathcal B_r$，$\mathcal B_r$ = 恰 $r$ 个 $X$ 词条。固定 $r$，$X$ 词条把 $D$-词条切成 $r+1$ 段，长 $i_0,\ldots,i_r$，对应张量块（eq:bar-block）$D\ot D^{i_0}\ot X\ot D^{i_1}\ot\cdots\ot X\ot D^{i_r}\ot N$，度 $-r-\sum i_j$。符号校准：bar 微分里第 $j$ 段内的 face 交错符号偏移为 $j+\sum_{h<j}i_h$，而通常 multibar 全微分从左到右偏移是 $\sum_{h<j}i_h$；总平移 $r$ 再贡献 $(-1)^r$。给分量乘重标定因子 $(-1)^{\sum_{j}(r-j)i_j}$：某 face 把 $i_j$ 减一时因子变 $(-1)^{r-j}$，恰为两微分之差的逐段乘积（各段合起来补完），链同构成立。边界情形：$r\ge1$、$i_j=0$ 时段内没有非零 face（预期 face 要么乘两个 $X$ 要么施加端点 $X$-作用，两者恒零），与 multibar 的退化约定一致；$r=0$ 时就是普通双侧 bar 复形 $D\otimes_D^{\mathbf L}N$，$i_0=0$ 处微分缺失、$D\otimes_kN\to N$ 是单独的增广。第二重论证：multibar 无平设地算**真**导出张量。对有限上 complexes $Z$ 用左模范畴的 bar 消解：项 $D\ot D^{\otimes i}\ot Z^q$ 在度 $q-i$，系数在域上故自由，增广 quasi-iso，$Z$ 有界上保证逐总度只有有限多 $i$。从右往左：$N$ 这样消解后张 $X$，所得左 $D$-复形再这样消解再张下一份 $X$，固定 $r$ 次后加前导 $D$ 做最后一次 bar，得到恰是 eq:bar-block（平移前），所有外侧 $D$-作用保留，即 $F^rN$。收尾的总量有限性：度 $-n$ 只有 $0\le r\le n$、每 $r$ 满足 $r+\sum i_j=n$ 的元组有限；逐度直和有限意味着没有任何完成化/乘积混进来，直和在模范畴正合，逐分量 quasi-iso 拼出 eq:bar-splitting。全程不要求 $D$ 连通，积代数 $D=B\times(B\otimes_kC)$ 合法。
+(c) 每个符号的位置：$[r]$ 的平移次数 $r$ 与 $X$ 出场次数同步，是"消解长度 = bar 次数"的直观精确化；重标定指数 $\sum_j(r-j)i_j$ 我逐段验证过（见 (b)），它不对称（$r-j$ ，并非 $j$）因为 multibar 的微分从左编号而 bar 的交错从右段起算；$F^0N=N$ 与 $r=0$ 分量对应。这里 $X$ 不假设平坦是命题的卖点：一般 square-zero 扩张的 $X$ 在 $D$ 上几乎必然不平坦（我们的 $O$ 作为右 $B$-模投射但作为 $(B\otimes_kC)$-模有长度 $l$ 的消解），若偷换为普通张量幂，$\mathcal B_r$ 会混入更高 Tor，箱子的底就漏了。
+(d) 失败候选。[推测] 其一，直接引用 Minamoto–Yamaura 的分次分解（`06:11-17` 承认可以导出）：可以省一整节，但他们的陈述在分次代数范畴，忘记分次与取反代数的两次搬运要自己做，且 `06:141-147` 的逐度有限性正是分次转普通时必须核实的账，论文选择自证是稳的。[推测] 其二，用完备 bar（乘积版总化）：度 $-n$ 仍有限所以其实等价，但增广收缩论证在乘积侧要额外的拓扑完备性假设，白付成本。[推测] 其三，若 $D$ 不取域上的代数（例如 $\mathbb Z$-阶），"自由左 $A$-模"的 bar 项与 $k$-线性收缩同时失效，两处都依赖域。
+
+## 14 推论 cor:pd-detection 与主定理装配：有限性与下界的两次扳机
+
+(a) 陈述（`06:157-167`）：
+
+```tex
+\begin{corollary}
+\label{cor:pd-detection}
+In the setting of \Cref{prop:bar-splitting}, suppose that
+\(D\) has finite global dimension on both sides and that
+\(N\) is finite-dimensional.
+\begin{enumerate}
+\item If \(F^tN\simeq0\) for some \(t\ge1\), then
+      \(\pd_A N<\infty\).
+\item If \(F^rN\not\simeq0\), then \(\pd_A N\ge r\),
+      with infinite projective dimension allowed.
+\end{enumerate}
+\end{corollary}
+```
+
+(b) 推导。预演论断：设 $g$ 为 $D$ 的右全局维数，则有限维左 $D$-模 $V$ 的 $\Tor_i^D(X,V)$ 有限维且 $i>g$ 时消失（拿长 $\le g$ 的右投射消解去算），归纳过截断三角得 $H^q(F^rN)=0$ 除非 $-rg\le q\le0$；所有迭代落在 $\D^{\le0}(D)$，后面"求和逐度有限"的每一箱都在半有界范围内。第一断言：$F^tN\simeq0$ 传导 $r\ge t$ 全零（$F^r=F^{r-t}F^t$），于是 $Z=D\otimes_A^{\mathbf L}N$ 由 eq:bar-splitting 只有有限多个非零箱且每箱上同调有界，$Z$ 上同调有界。$X$ 幂零故含于 $\rad A$，$\rad A=(\rad D)\oplus X$，$S=A/\rad A\cong D/\rad D$；结合律给 $S\otimes_A^{\mathbf L}N\simeq S\otimes_D^{\mathbf L}(D\otimes_A^{\mathbf L}N)=S\otimes_D^{\mathbf L}Z$；右 $D$-模 $S$ 有长 $\le g$ 的投射消解（有限全局维数），故 $S\otimes_D^{\mathbf L}Z$ 上同调仍有限。取投射盖迭代出的极小投射消解：项有限生成、微分像落在靶的根里，张 $S$ 后所有微分归零；而 Nakayama 保证非零有限生成投射 $Q$ 有 $S\otimes_AQ=Q/(\rad A)Q\ne0$。于是 $S\otimes_A^{\mathbf L}N$ 的上同调在度 $-n$ 处恰是极小消解第 $n$ 项模掉根后的自身：它整体有限非零 ⇒ 极小消解只有有限多非零项 ⇒ $\pd_AN<\infty$。第二断言：取 $q$ 使 $H^q(F^rN)\ne0$，eq:bar-splitting 的直和项给 $H^{q-r}(D\otimes_A^{\mathbf L}N)\ne0$ 且 $q-r\le-r$；若存在长 $<r$ 的投射消解，用它在 $D\otimes_A-$ 上算导出张量，复形集中在度 $>-(r)$，该度上同调必零，矛盾。
+主定理装配（`06:253-341`）。$k=\mathbb C$；先固定 $R,e,\alpha,H$（prop:selection），过 thm:realization 得 $B,P$；定区间 $[a_*,b_*]$；造 $C,W,O,D,X$；钉死 $A=D\ltimes X$。$Y$ 有限维左 $R$-模时把 $M(Y)$ 视为 $D$ 第一因子上的模，则 eq:compression 与 eq:realization 合成 $F^2M(Y)\simeq M(H(Y))[b_*]\oplus M(H(Y))[b_*+3]$；归纳得偶数迭代公式（eq:even-iterates，`06:301-308`）
+
+```tex
+F^{2j}M(Y)
+ \simeq
+ \bigoplus_{q=0}^{j}
+ M(H^{\circ j}(Y))[jb_*+3q]^{\oplus\binom{j}{q}}
+ \qquad(j\ge0).
+```
+
+$Y_m$ 灭绝于 $m$：$H^{\circ m}(Y_m)=0$、$H^{\circ(m-1)}(Y_m)\ne0$，代入 $j=m$ 与 $j=m-1$ 得 $F^{2m}N_m\simeq0$、$F^{2m-2}N_m\not\simeq0$（后者是若干非零模的移位直和，整体非零；`06:324-328` 强调下界取迭代指标 $r=2m-2$，不另估移位）。$D$ 两侧有限全局维数由 prop:ordinary-simulation，cor:pd-detection 两扳机给出 $2m-2\le\pd_AN_m<\infty$，对一切 $m$ 成立即 $\findim A=\infty$。`06:272-289` 的 Fixed once / Varying with $m$ 表就是量词账本。remark（`06:230-249`）登记 Minamoto–Yamaura 公式 $\pd_AN=\sup_r\{\pd_D(F^rN)+r\}$ 能给更强结论，但论文用自证的 bar+极小消解路线，这条外部公式不进依赖链。
+(c) 常数：一次 $H$ 消耗两步 $F$（搬运周期），故 $m$ 次灭绝对应 $2m$ 与 $2m-2$；$+3q$ 与 $jb_*$ 在"零/非零"判定里完全惰性（移位保零性），在维数下界里也惰性（下界只看 $r$ 不看度数，`06:326-328`）；$N_m$ 通胀自 $D$-模范畴、有限生成性由 $M(Y_m)$ 有限维自动。$g$ 的具体值 $3l+2$ 只通过"$-rg\le q\le0$"进入有界性论证，任何有限值都可替换，这是全链条里少见的松弛常数。
+(d) 失败候选。[推测] 其一，用奇数迭代 $F^{2j+1}$ 去接灭绝：奇数步落在第二因子，没有 $M(\cdot)$ 语义，归纳公式断轨；偶数周期是任务丙的地基。[推测] 其二，若 $S\otimes_AQ\ne0$ 这步改用"投射模自由秩"论证：$A$ 非局部时秩不不变，Nakayama 是此处唯一干净的路。[推测] 其三，若想让 $\pd_AN_m$ 精确等于 $2m-2$：需要 $\pd_D(F^{r}N_m)$ 的逐层信息（Minamoto–Yamaura 式公式），论文只要 $\ge$，刻意不付这笔账；主定理陈述 $2m-2$ 因此带松弛（$b_*,g$ 都不进结果，只进证明）。
+
+## 15 推论 cor:left-right-asymmetry：借 Cummings 的三角代数把无限推到一侧、零钉在另一侧
+
+(a) 陈述（`01:91-105`）：
+
+```tex
+\begin{corollary}[Extreme left--right asymmetry]
+\label{cor:left-right-asymmetry}
+There is a finite-dimensional unital complex algebra \(\Lambda\) such that
+\[
+\findim \Lambda=\Findim \Lambda=\infty,
+\qquad
+\findim(\Lambda^{\mathrm{op}})=\Findim(\Lambda^{\mathrm{op}})=0.
+\]
+... Injective left \(\Lambda\)-modules do not generate the
+unbounded derived category of all left \(\Lambda\)-modules, whereas
+injective right \(\Lambda\)-modules generate the unbounded derived
+category of all right \(\Lambda\)-modules.
+\end{corollary}
+```
+
+(b) 推导（`06:346-389`）。取 $C$ 为与 $A^{\mathrm{op}}$ Morita 等价的基本代数：$A$ 上左模的无限小/大 finitistic 与内射不生成，经等价搬成 $C$ 上**右**模的对应陈述（等价保投射维数、有限生成、导出范畴的 coproduct 与内射对象）。取代表单纯右模 $S_C(e_i)=e_iC/e_i\rad C$ 的本原幂等 $e_1,\ldots,e_n$；按 Cummings Construction 2.1 置 $E=\prod_i\mathbb C[\varepsilon_i]/(\varepsilon_i^2)$、$U=\bigoplus_iS_C(e_i)$、$T=\begin{pmatrix}C&0\\{}_EU_C&E\end{pmatrix}$；左 $E$ 作用经 $E/\rad E\cong\mathbb C^n$ 逐因子落在对应单纯上。引 Cummings 的界（论文按右模口径转述）：$\findim_rC\le\findim_rT$、$\Findim_rC\le\Findim_rT$，故 $T$ 两侧右维数无限；而 $\findim_r(T^{\mathrm{op}})=\Findim_r(T^{\mathrm{op}})=0$；内射生成方向：$T$ 右内射生成蕴含 $C$ 右内射生成（逆否：$C$ 不生成则 $T$ 不生成），$T^{\mathrm{op}}$ 右内射生成成立。取 $\Lambda=T^{\mathrm{op}}$ 翻回左模口径得全部四式加两侧生成性。$E$ 用对合平方零的双数积，并非直接 $\mathbb C^n$，是因为 Cummings 的机制要用 $\rad E$ 幂零把下三角块的同调行为钉住（这是我对该构造的记忆性理解，论文只引用不重证）；$\Lambda$ 是辅助代数，对原 $A$ 的右侧维数不置一词（`01:107-110` 特意划界）。Rickard 一侧（`01:77-85`）独立于 Cummings：注入生成 ⇒ big finitistic 有限，$A$ 的 big 无限（左，按他的右模口径对 $A^{\mathrm{op}}$ 应用），故 $A$ 的左内射不生成。
+(c) 数值：$n$ = $C$ 的单纯个数；$E$ 里 $\varepsilon_i^2=0$ 与 $\mathbb C^n$ 的商共同决定 $U$ 的双侧作用因式分解；"0"在右的实现机制是 $T^{\mathrm{op}}$ 的投射模都带内射性质那一类三角代数现象（Cummings Prop 3.2-3.3 的内容，此处我按引用处理）。
+(d) 失败候选。[推测] 其一，直接拿 $A$ 本体的右侧当 0 侧：$A=D\ltimes X$ 的右侧行为论文完全没查，$X$ 双侧对称的结构里没有任何机制保证右有限；必须外置一个三角代数。[推测] 其二，$U$ 取全部单纯之外再加非单纯模：$E$ 对 $U$ 的作用不再半简单，Cummings 的 Prop 适用前提断裂。[推测] 其三，跳过 Morita 化直接对 $A^{\mathrm{op}}$ 用 Construction 2.1：形式上也可，但基本化后 $e_i$ 与单纯一一对应，$\mathbb C^n$ 逐因子作用的写法才成立；这步是便利，并非必需。
+
+## 16 常数台账
+
+全文数值我逐个数过去，集中登记如下。表后给依赖链。
+
+| 符号 | 数值或阈值 | 出现位置 | 被谁消费 | 若改动断在哪一步 |
+| --- | --- | --- | --- | --- |
+| $k$ | $\mathbb C$（特征 0） | `06:254`、`01:25` | $e=(1+z_0)/2$ 的 $1/2$；$p_\chi$ 的 $1/|Z_m|$ | 特征 2 下 $e$ 不存在，§2 全线塌（姊妹例走特征 2 是另一条机器） |
+| $|I|$ | 3 | `02:47` | $z_N$ 中心性测试借第三指标；$W_{ij}$ 非空 | $=2$ 时 `02:216-220` 无外部指标可用 |
+| 生成元 | 15（$T,u,v,w$） | `02:90-94` | 有限展示引理 | 少任一截面，参数族 $S(r)$ 无处定义 |
+| $\lambda$ | $-\varepsilon_i,\ +\varepsilon_i,\ \varepsilon_i-\varepsilon_j$ | `02:53-58` | 共轭规则、表格原像、$a+b$ 不变量 | $U,V$ 同号则 $T_i$ 共轭不变量变 $a-b$，矩阵实现行列位对调 |
+| $S_m$ | $\mathbb F_2[t]/(t^m-1)$ | `02:252` | 有限商 $F_m\le\operatorname{GL}_5(S_m)$ | 换 $\mathbb F_2[t]/(t^m)$ 则 $t$ 不可逆，负参数失踪 |
+| 矩阵尺寸 | $5\times5$，指标 $0..4$ | `02:254-263` | $U:0\to i$、$V:i\to4$、$W:i\to j$、$z_N:I+t^NE_{04}$ | 4×4 容不下接口位加三个内部指标 |
+| $Z_m$ | $\cong(\mathbb Z/2)^m$，$\|Z_m\|=2^m$ | `02:246-248`、`02:331-340` | 特征 $\chi_m$ 与 $p_\chi$ 定义域 | 独立性失败则 $\chi_m$ 不存在 |
+| $\chi_m$ | $+1$（$q<m-1$），$-1$（$q=m-1$） | `02:335-339` | 灭绝时刻 $m$ 的设定旋钮 | $-1$ 前移则时长缩短，后移则越界 |
+| $e,e_q$ | $(1+z_q)/2$ | `02:320-327` | $H^{\circ j}$ 乘积公式 eq:selection-iterates | 换 $(1-z)/2$ 要与 $\chi_m$ 同时翻号 |
+| $g\ldim B$ | $\le2$ | `03:78-79`、`03:106` | 分裂用 $\Ext^4=0$；$D$ 维数递推基例 | $=3$ 时 Ext⁴ 不保零；quiver 加长路径时 rectification 多层化 |
+| $[3]$ | odd-double 位移 | `03:194-195` | $M(H(Y))[3]$、$+3q$ 幽灵 | 可达位移只有奇数；3 是首个使 Ext 间隔 >2 的奇数 |
+| $a_*,b_*,l$ | 支撑区间与 $l=b_*-a_*$ | `05:9-11` | 链代数 $C$ 长度、$P[b_*]$、$jb_*$ | 区间缩小切掉 $P$ 的度；$b_*$ 只进证明不进结论 |
+| $3l+2$ | $\gldim D,\gldim D^{\mathrm{op}}$ 界 | `05:102-113` | cor:pd-detection 的 Tor 界 $g$ | 任何有限界均可，此为可松弛常数 |
+| $(-1)^{b_*n}$ | 度依赖符号 | `05:141-144` | $Q_T\otimes O$ 与 $P[b_*]$ 的链同构 | 错位则微分差全局 $-1$ |
+| $(-1)^{\sum(r-j)i_j}$ | bar 重标定指数 | `06:100-102` | 箱 $\mathcal B_r$ 与 multibar 的链同构 | 面变号 $\pm(-1)^{r-j}$ 对不上，分解带符号破缺 |
+| $-rg\le q\le0$ | $F^rN$ 上同调带 | `06:180` | "每箱有界、逐度有限"合法性 | 无上界则 $S\otimes_D^{\mathbf L}Z$ 有界性论证失效 |
+| $0\le r\le n$ | 度 $-n$ 内箱数 | `06:141-144` | 免完成化、直和正合 | 无限直和仍正合，但同调交换需逐度有限 |
+| $2m,\ 2m-2$ | 灭绝与生存迭代指标 | `06:321-323` | 主定理双扳机输入 | 搬运周期为 2，$H$ 时长 $m$ 折成 $2m$ |
+| $2m-2\le\pd_AN_m<\infty$ | 主结论 | `01:29` | $\findim A=\infty$ | 左松弛右精确，见 §14(d) |
+
+依赖链一条主干：$\mathbb C$ 的特征非 2 让 $e$ 存在；权重反号让 $a+b$ 成为共轭不变量，$|I|=3$ 让 $z_N$ 中心且可由 $\alpha$ 平移；$S_m$ 的 $t$ 可逆加特征 2 让 $z_N$ 落入独立对合，给出灭绝时长 $m$ 的旋钮；$R$ 有限展示（15 生成元加有限关系）让三顶点二次编码 $B$ 存在，$B$ 无长 3 路径把 $\gldim$ 钉在 2、把关系压成"全从 0 到 2"；间隔 2 决定 odd-double 必须取最小可行奇位移 3；三列 rectification 因"无关系重叠"止步于 $L_2'$；$P$ 的支撑宽度定 $l$，$l$ 定 $D$ 的维数界 $g$，$g$ 只被有界性消费；搬运周期 2 把时长 $m$ 折成指标 $2m$ 与 $2m-2$；bar 分解把生存箱转译成同调非零，Nakayama 把同调有界转译成消解有限。链条上真正不可替代的硬常数只有四个：3（顶点数与位移共用数字但独立成因）、2（gldim 界）、$m$ 的符号位 $\chi_m$、以及特征非 2；其余全是可以平移重标的松弛量。
+
+## 17 Lean 取证：两套模块的实测数字、相互关系与错口清单
+
+先交代口径。这台机器装有 elan 的 lean/lake（`lean-toolchain` 指向 leanprover/lean4:v4.34.1），但 `E:\math\lean` 下没有 `.lake`，Mathlib 未拉取，编译两套模块再跑 `#print axioms` 不可行；所以下列六项指标（文件数、行数、顶层声明数、公理面、sorry 分布、tactic 频次）全部是 `wc`/`grep`/`awk` 的实跑静态扫描值，公理面按"静态证据加 comparator 白名单"给出，这个口径的边界我在公理小节单独声明。
+
+总览表，左列主反例、右列不对称件：
+
+| 指标 | `OAI/Algebra/Finitistic` | `OAI/Algebra/FinitisticAsymmetry` |
+|---|---|---|
+| `.lean` 文件数 | 546 | 42 |
+| 总行数 | 45,195 | 4,996 |
+| 顶层声明总数 | 3,863 | 399 |
+| sorry | 0 | 0 |
+| admit / `axiom` 声明 / native_decide / maxHeartbeats | 各 0 | 各 0 |
+| 直接 `Classical.choice` | 10 处 | 0 处 |
+| `Classical.decEq` | 31 行 | 0 行 |
+| `classical` 战术（词式） | 55 | 28 |
+| docstring（`/--`） | 1,703 | 0 |
+| Mathlib 导入 | 精确导入合计 332 行 | 42/42 个文件各一行裸 `import Mathlib` |
+
+顶层声明按关键词拆分：主库 theorem 1,430、def 1,413、instance 427、abbrev 378、lemma 180、structure 25、inductive 7、class 1、example 2；不对称库 lemma 202、def 123、instance 48、abbrev 23、theorem 2、structure 1。不对称库的两个 theorem 里一个是被认证声明 `extreme_left_right_asymmetry`（Main.lean:48），另一个是私有辅助（Rickard/ResolutionFamily.lean:11）；主库入口 `Main.lean` 全文 56 行含 6 条 theorem（algebra_finite、test_finite、projective_dimension_bounds、infinite_littleFinitisticDimension、counterexample、exists_counterexample）。
+
+行数按子目录拆。主库：Bar 93 文件/9,827 行、Ordinary 129/9,145、Localization 79/6,106、Rectification 64/5,444、Bimodule 51/3,956、Selected 46/2,838、Selection 13/2,358、Dimension 29/2,039、Encoding 20/1,945、Iteration 12/810、Tensor 8/619、根上 Basic+Main 2/108。子目录与论文章节的映射我核对过：Selection 对 §2，Encoding 对 §3.1，Localization 对 §3 的分母与 odd-double，Rectification 对 §4 的三列复形，Ordinary 对 §5，Bar 对 §6.1，Dimension 对 §6.2，Iteration 对二项迭代，Selected 对装配层。单文件榜首：Selection/FinitePresentation.lean 600 行（折回表的机器版）、Selection/GroupSelection.lean 354、Encoding/QuadraticPresentation.lean 337、Localization/OddDouble.lean 335、Selection/MatrixModel.lean 307、Encoding/DirectedBound.lean 272。不对称库：Derived 11/1,460、Triangular 6/1,050、Rickard 7/773、Nakayama 3/540、Transport 6/463、Augmentation 2/273、Kasch 3/247、根 4/190；榜首 Nakayama/Modules.lean 325、Triangular/InjectiveCorners.lean 248、Triangular/InjectiveResolution.lean 238、Rickard/ReducedProducts.lean 211。
+
+sorry 分布：解法侧两目录 0 处，`admit` 仅以英文单词出现在两条 docstring 句子里；全仓与本题相关的 sorry 恰为 2 处，都在题面 `ComparatorChallenges/LittleFinitistic.lean:29` 与 `FinitisticAsymmetry.lean:35`。两份 comparator JSON 的 permitted_axioms 均为 propext、Quot.sound、Classical.choice，`enable_nanoda: false`，`definition_names: []`；两份题面各自带自己的 `littleFinitisticDimension` 定义（iSup 跑 `(M)(_ : Module.Finite)(_ : pd<⊤)` 三层下标；`FinitisticAsymmetry.lean:13` 还先 `attribute [-instance] CompletePartialOrder.toSupSet` 再自带 iSup 良构），题面与解法的定义分离干净。
+
+tactic 频次（整词扫描，docstring 里的英文词可能混入少量噪声，两套同口径）：主库前十二项 exact 1,675、simp 1,665、rw 1,372、have 1,327、apply 1,283、change 1,030、intro 840、ext 803、let 516、congrArg 510、omega 439、induction 327，随后 simpa 303、show 264、obtain 217、subst 177、refine 152、funext 148、cases 148、congr 79、constructor 64、classical 55、ring 35、abel 35、calc 32、decide 21、positive 13、norm_num 8、suffices 7、convert 7、use 4、rwa 3、field_simp 1。不对称库前十五项 exact 269、apply 244、let 206、have 206、rw 200、simp 191、intro 183、change 181、ext 161、obtain 72、refine 58、omega 44、simpa 39、classical 28、show 27。两个读数：change 加 show 在主库共 1,294 处，与我在 D18 记录过的 Tachikawa 库同型，是复形索引依赖类型手术的代价（论文一句"平移约定"机器一片 change 海）；不对称库的 ext+congrArg+funext 密度明显高于主库，匹配它满仓库搬运范畴等价（restrictScalarsEquivalenceOfRingEquiv 三连）的文风。
+
+两套的相互关系是分层：`FinitisticAsymmetry/Main.lean:3` 第一行 `import OAI.Algebra.Finitistic.Main`，`Asymmetry.lean:18` 的 `all_clauses` 最后一个入参就是 `Main.infinite_littleFinitisticDimension`。所以不对称件是搭在主反例上的二层楼，认证它时整套 45,195 行都在依赖闭包里；联合足迹 588 文件、50,191 行。主库内部 import 行（`^import OAI.Algebra.Finitistic`）共 880，依赖方向基本沿章节推进：Selected 消费所有底层，Bar 与 Ordinary 互喂。
+
+公理面的静态证据：两目录零 `axiom` 声明；直接 `Classical.choice` 10 处，全部是"从已证非空选一次"的点位（Dimension/PDMinimalData.lean:54 投射盖、Iteration/ObjectwiseSplitting.lean:21,32,41 逐对象分裂、Localization/DerivedTruncationCohomology.lean:83 与 TwoDegreeSplitting.lean:50 截断分裂、Selected/SelectedChainDiagram.lean:24 与 SelectedFixedDiagram.lean:51 固定提升图、Selected/SelectedWindow.lean:26 支撑窗口、Selection/SelectionEncoding.lean:48）；`Classical.decEq` 31 行集中在 Bar 的计数与指标决定；propext 与 Quot.sound 无直接引用但 Mathlib 内部大量依赖，恰落在许可集内。内核校验的精确公理集要编译才可读出，这是本节口径的硬边界，我给的是静态一致性结论：可见证据没有超出白名单的公理来源。[推测] 这 10 处 choice 之所以不冒险，是因为论文约定 `01:228-230` 已把分裂的 naturality 豁免，机器只需存在性。
+
+入口与论文陈述的逐字对照：主定理（`01:24-32`）在 `Main.lean:44-51` 写成 $\exists(A:\mathsf{Type})(\mathsf{Ring})(\mathsf{Algebra}\ \mathbb C)$，五合取 FiniteDimensional、little=⊤、以及 $\forall m>0$ 的见证三元组（Module.Finite、WithBot ℕ∞ 的 $2m-2\le\mathsf{pd}$、$\mathsf{pd}<\top$）；双扳机在 `Main.lean:17-23` 把 `SelectedOrdinaryOrbit.extinction m`（:68-79）一次供应、下半走 `SelectedPDConclusion.lower_bound_of_survival` 传参 $2m-2$、上半走 `finite_pd_of_extinction` 传参 $2m$；$\sup$ 无界由 `Basic.lean:37-46` 的 `littleFinitisticDimension_eq_top_of_two_mul_bounds` 收口（$n\le 2(n+1)-2$ 由 omega 补）；灭绝/生存的机器判据是 `IsZero ↔ Subsingleton (selectionIterate Y j)`（SelectedOrdinaryOrbit.lean:66-68），生存用 Nontrivial 反证。不对称定理（`01:91-105`）的机器形态是七合取（四维数加两条 InjectivesGenerate），入口 `SelectedBasic` 段（Main.lean:16-40）把 $B$ 三顶点增广与链代数增广拼成 `diagonalAugmentation : D →ₐ[ℂ] (Vertices → ℂ)`，经 squareZeroAugmentation 过 $X$、oppositeAugmentation 翻到 $A^{\mathrm{op}}$，$\Lambda:=(\mathsf{CummingsConstruction.T}\ \chi)^{\mathrm{op}}$；little=⊤ 用 opOp 的标量限制等价加 `TriangularConstruction.right_little_lower_bound`，big=⊤ 用 `Transport/FiniteModules.lean:42` 的 little≤big，右侧四维零用 `ZeroDimensions.dimensions_zero_of_splitBasic_rightSocle`（其内部把"任何有限维 pd<∞ 模投射"交给 `Kasch.projective_of_finiteDimension`），不生成用 `Rickard.not_injectivesGenerate_of_little_eq_top`，生成用 `CummingsConstruction.injectivesGenerate`；`InjectivesGenerate`（Model.lean:17-25）逐字是"对一切同构封闭、三角封闭、任意 coproduct 封闭且含全部 0 度内射单对象性质的性质 P，一切对象满足 P"。
+
+错口清单，先列未形式化的论文内容：`01:49-75` 的背景层与正面类定理（GKK、GHZ、Igusa–Todorov、Huisgen–Zimmermann、Cummings 的左下右上等价 Theorem A）没有任何对应声明；`06:230-249` 的 Minamoto–Yamaura 三条引用（PD 公式、分次-非分次一致、perfectness 判据）不进机器；`03:186-188` 的 Balmer–Schlichting 一般定理不证（odd-double 按论文自己的锥计算独立形式化，OddDouble.lean 335 行）；$A$ 自身 big finitistic 无限与内射不生成的语句也不在主 comparator 里（主定理只取 little=⊤，big 的传递 `littleFinitisticDimension_le_big` 只服务于不对称件里的 $\Lambda$）。
+
+换路线处，我数出七处，按可疑度排序。其一，$B$ 的实现：论文是 quiver 模关系的路径商，Lean 是六槽显式向量空间 `ThreeVertexAlgebra μ := k × k × k × V × W × U`（encoding 首文件 :16）加结构常数乘法，关系由双线性 $\mu:W\to(V\to U)$ 直接吞掉，路径语言全程不出现。其二，不对称件的基础代数：论文先把 $A^{\mathrm{op}}$ Morita 化成基本代数 $C$、取单纯右模直和 $U$ 与双数积 $E$；Lean 不换基本形，直接把 $\chi=$ 增广喂进三角构造，$U$ 的角色由满足 `hmul : a i * r = χ r i • a i` 的右侧 socle 元素组 `a : ι → R` 承担（ZeroDimensions.lean:25-32），$E$ 用 $(\iota\to\mathbb C)\cong\mathbb C^n$ 的半单商实现；[推测] 这一处最像"按证明需求反推出来的实现"，与论文行文方向相反。其三，$E/\rad E\cong\mathbb C^n$ 与 $U$ 的逐因子作用：Cummings 文献件在 Lean 里全部就地重证（Triangular 1,050 行、Rickard 773 行、Nakayama 540 行、Transport 463 行），外部引用为零。其四，群与有限商：论文写无限生成元展示再用折回表压缩，Lean 直接 `AuxiliaryGroup := PresentedGroup relators`（GroupSelection.lean:199）用 Mathlib 呈现群起家，折回表的十九条有限关系是 `relator`/`finiteRelators`（FinitePresentation.lean:366-369）的定义体，有限展示性由 `isFinitelyPresented`（:589）兑现；有限商是 `AdjoinRoot`（即 $\mathbb F_2[t]/(t^m-1)$）上 5×5 transvection 群 `Model`，`toModel`/`fromModel` 双向同态加 `fromModel_toModel`（FinitePresentation.lean:410,512,545）把论文的"验证关系得同态"拆成三件。其五，$z_N$ 与 $\alpha$：论文的 `[U_i(a),V_i(b)]` 独立性和中心性在 Lean 里先对任意携带 18 条关系字段的 `SelectionGroupData`（GroupSelection.lean:66-84）抽象证明 `commutator_transfer`（:31）与 `splitting_independent`（:111），再定 `centralZ N := ⁅D.U 0 0, D.V 0 N⁆`（:113 截面）、`shiftHom k`（:307）当 $\alpha_G$；抽象层先于实例层，与论文顺序相反。其六，特征投影模：论文 $Y_m=\mathbb C[F_m]p_{\chi_m}$，Lean `TestModule m := CharacterModule.eigenspace (quotientCentralEmbedding m) (selectionCharacter m) ...`（TestModules.lean:11-13）取中心元族的特征空间，`testModule_idempotent_action`（:59）逐字对应"前 $m-1$ 个 $e_q$ 恒等、第 $m$ 个归零"。其七，`ev_Y` 与 $M(Y)$：论文的"每顶点放 $Y$、$s$ 恒等、箭头作用 $x_h$"在 Lean 是 `MatrixModel`/`CharacterModule` 与 Ordinary 层的分块构造（Ordinary 目录 12,900 行的主要负载），评估经过 `SelectedDiagramEvaluation` 系列桥接；这条不算概念换向，算篇幅膨胀最狠的忠实实现。
+
+忠实实现处我也点名五件：odd-double 的过滤锥计算（OddDouble.lean）、三列 rectification 的 `Verified` 证书结构（Rectification/RectificationLemma.lean:8,34）、清分母三连（Localization/DiagramLifting.lean:12 的 docstring 逐字是 "Finitely many localized arrows admit one common source denominator"）、$A=\text{TrivSqZeroExt}\ D\ X$（Selected/SelectedOrdinaryAlgebra.lean:49）、$F^2$ 压缩与偶迭代（Selected/SelectedOrdinaryOrbit.lean 的 evenIteration 与 barPower）。另有一处版本学痕迹：Selection 目录两个文件的头部注释直接写 "Section 2 of v5s9.15" 与 "Exact prerequisites for Section 2 of v5s9.15"（GroupSelection.lean:8、FiniteQuotient.lean:10-15），形式化对着的手稿内部版本号 v5s9.15 是 build/ 里 tex 文本之外新增的事实。
+
+最后一条形态学观察留给我自己的解读：主库 1,703 个 docstring、精确导入、880 条内部 import、逐节挂论文编号；不对称库 0 个 docstring、42 个文件清一色裸 `import Mathlib`、206 次 `let`。[推测] 两套的开发阶段与协作方式不同，主库是长期主体、不对称件是后挂的薄层；这与 formalization.yaml 里两者相距 124 行的登记位置（1162 与 1286）并行不悖。认证范围始终清晰：被担保的只有两条 comparator 命题，论文的 16 个编号条目里作为独立声明进入认证的只有 2 个（定理 1 与推论 1.2 的 Lean 对应），其余 14 条以"证明体内部引理"的身份被覆盖，背景层与外部引用层不进机器。
+
+## 台账补表
+
+| 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+| --- | --- | --- | --- | --- |
+| $[x,y]=xyx^{-1}y^{-1}$，$I=\{1,2,3\}$ | 换位子约定；指标集基数 $3$ | build/sections/02-selection-process.tex:46 | 同文件 179 行的 $z_N$、75 行的转移关系、216-219 行的中心性测试 | 换位子取反向约定则 206 行的转移式两边共轭互换，219 行借外部指标的路径同时失配 |
+| $\lambda_{U_i}=-\varepsilon_i$，$\lambda_{V_i}=+\varepsilon_i$，$\lambda_{W_{ij}}=\varepsilon_i-\varepsilon_j$ | 三条权重，落在 $\mathbb Z^3$ 的短向量上 | build/sections/02-selection-process.tex:54-56 | 62 行的共轭规则、102-107 行的核格、139-145 行的原像表 | $U,V$ 同号则 179 行的不变量由 $a+b$ 改为 $a-b$，238-239 行的平移结论要重标 |
+| $T_\ell S(r)T_\ell^{-1}=S(r+\lambda_{S,\ell})$ | 每次共轭把参数平移 $1$ | build/sections/02-selection-process.tex:62 | 120-122 行的 $S(r)=T^nS(0)T^{-n}$、149-150 行的逐对共轭覆盖 | 缺此规则则折回展示与原展示不等价，163-166 行的双向验证断 |
+| $U_i(r)^2=1$ | 全部 $U$ 型生成元阶 $2$ | build/sections/02-selection-process.tex:68 | 226 行的 $z_N^2=1$、266-267 行的自逆矩阵像 | 阶改 $4$ 则 248 行的 $(\mathbb Z/2\mathbb Z)^m$ 无来源，333 行的 $\chi_m$ 取值域跟着塌 |
+| $[U_i(r),W_{ij}(s)]=U_j(r+s)$，$[W_{ij}(s),V_j(r)]=V_i(s+r)$ | 输出参数为输入参数之和 | build/sections/02-selection-process.tex:75-76 | 151-157 行的权重求和核对、158-159 行的 $r+s$ 落位 | 权重和式不闭合则 154-156 行两式对不上，转移关系在折回展示里失踪 |
+| $T_\ell,u_i,v_i,w_{ij}$ | 保留的截面生成元 $15=3+3+3+6$ | build/sections/02-selection-process.tex:90-93 | 81-84 行的有限展示引理、112-118 行的参数族定义 | 少任一类零参数截面则 114-116 行的 $S(r)$ 无处定义，$G$ 的有限展示性断 |
+| $\ker\lambda_{U_i}=\ker\lambda_{V_i}=\bigoplus_{h\ne i}\mathbb Z\varepsilon_h$，$\ker\lambda_{W_{ij}}=\mathbb Z(\varepsilon_i+\varepsilon_j)\oplus\mathbb Z\varepsilon_h$ | 两个秩 $2$ 核格，基元在 96-99 行写成中心化关系 | build/sections/02-selection-process.tex:102-107 | 120-122 行的与 $n$ 选取无关性 | 核格元不中心化则 121 行的换路径不变断，参数化失去良定义 |
+| $U_i(r)=T_i^{-r}u_iT_i^{r}$，$V_i(r)=T_i^{r}v_iT_i^{-r}$，$W_{ij}(r)=T_i^{r}w_{ij}T_i^{-r}$ | 两种反向共轭加一种同向共轭 | build/sections/02-selection-process.tex:114-116 | 62 行共轭规则的逐条兑现、232-235 行的 $\alpha_G$ 关系保持 | $U$ 与 $V$ 的共轭方向对调则 54-56 行的符号约定同时反转，258-260 行的矩阵像要换 $t^{\pm r}$ |
+| $n_i=r,\ n_j=0,\ n_h=-s$ | $W_{ij}$ 与 $U_h$ 那一行的整数原像 | build/sections/02-selection-process.tex:139-140 | 149-150 行的每对输入类型都被覆盖 | 原像坐标错则 139-140 行那格交换关系的全部实例未被生成，折回展示弱于原展示 |
+| $-\varepsilon_i+(\varepsilon_i-\varepsilon_j)=-\varepsilon_j$ | 权重相加的核对式 | build/sections/02-selection-process.tex:154-155 | 158-159 行的输出参数 $r+s$、75 行的转移关系 | 和式不成立则 151-152 行的输出权重即输入权重之和断 |
+| $z_N=[U_i(a),V_i(b)]$（$a+b=N$） | 由单个整数 $N$ 标定的中心对合族 | build/sections/02-selection-process.tex:179 | 182 行的独立性、184-185 行的 $\alpha_G$、321 与 326 行的 $e,e_q$ | 独立性断则 333-334 行的 $\chi_m$ 无定义域，灭绝时长旋钮失踪 |
+| $\alpha_G(z_N)=z_{N+1}$ | 平移步长 $1$，$\alpha_G$ 固定 $T_\ell,V_i(r),W_{ij}(r)$ | build/sections/02-selection-process.tex:185 | 324-328 行的 $e_q=\alpha^q(e)$、370 行的 $e_0,\ldots,e_{m-2}$ | 步长改 $2$ 则 337-338 行的符号位按 $2q$ 重排，337 行的末位为 $-1$ 落到别处 |
+| $z_N^2=1$ | 每个 $z_N$ 是对合 | build/sections/02-selection-process.tex:226 | 248 行的 $(\mathbb Z/2\mathbb Z)^m$、291 行的 $I_5+t^NE_{04}$ | 该式由 68 行的平方关系与 224 行的中心性合成，任一条失踪则阶结论断 |
+| $(\mathbb Z/2\mathbb Z)^m$ | 阶 $\lvert Z_m\rvert=2^m$，随 $m$ 指数增长 | build/sections/02-selection-process.tex:248 | 332-333 行的 $Z_m$ 与 $\chi_m$ 定义域 | 独立性失败则 296-302 行的乘积在非零 $c_q$ 下回到单位元，灭绝时刻旋钮失踪 |
+| $S_m=\mathbb F_2[t]/(t^m-1)$ | $\dim_{\mathbb F_2}S_m=m$，$\lvert S_m\rvert=2^m$ | build/sections/02-selection-process.tex:252 | 253 行的 $t^{-1}=t^{m-1}$、288 行的 $\operatorname{GL}_5(S_m)$ | 换成 $\mathbb F_2[t]/(t^m)$ 则 253 行的负参数失踪，114-116 行的双向共轭无法全部落地 |
+| 矩阵指标 $0,1,2,3,4$ | 尺寸 $5$，三个内部指标加接口位 $0$ 与 $4$ | build/sections/02-selection-process.tex:254 | 258-260 行的 $E_{0i},E_{i4},E_{ij}$ | 降到 $4\times4$ 则 274-275 行要求共存的 $E_{0i}$ 与 $E_{j4}$ 两类位置放不下 |
+| $U_i(r)\mapsto I_5+t^rE_{0i}$ | transvection 型像，三式同型 | build/sections/02-selection-process.tex:258-260 | 269-271 行的对角共轭核对、283-284 行的换位子像 | 把 $U$ 的像改放 $i\to4$ 则 54-56 行的权重符号与矩阵行列位置错配 |
+| 特征 $2$ | 系数环 $\mathbb F_2$，每个 $I_5+t^rE_{ab}$ 以自身为逆 | build/sections/02-selection-process.tex:266-267 | 276-277 行的平方关系核对 | 换奇特征则 265 行的自逆断，68 行的平方关系在这个商里不成立 |
+| $\operatorname{GL}_5(S_m)$ | $\lvert F_m\rvert\le\lvert\operatorname{GL}_5(S_m)\rvert\le 2^{25m}$，后一个数是本文的粗估 | build/sections/02-selection-process.tex:288 | 289 行定义像 $F_m$、346 行的 $\mathbb C[F_m]$ | 像群不有限则 346 行的 $Y_m$ 无限维，与 23 行要求的有限维直接冲突 |
+| $z_N\mapsto I_5+t^NE_{04}$ | 像只占 $0\to4$ 一格 | build/sections/02-selection-process.tex:291 | 292-294 行的中心性核对、297-298 行的乘积展开 | $E_{04}$ 与某个生成像的乘积非零则 293 行的两方向皆零断，$Z_m$ 不再中心 |
+| $\prod_{q=0}^{m-1}(I_5+t^qE_{04})^{c_q}=I_5+\bigl(\sum_{q=0}^{m-1}c_qt^q\bigr)E_{04}$ | 交叉项全灭 | build/sections/02-selection-process.tex:297-298 | 300-302 行的基判、304 行的独立性结论 | 出现非零交叉项则 302 行的仅全零时为单位元失守 |
+| $1,t,\ldots,t^{m-1}$ | $\mathbb F_2$-基，$m$ 个元素 | build/sections/02-selection-process.tex:300-301 | 302-303 行的线性无关判据 | 定义多项式非首一则基不满 $m$ 个，303-304 行的独立性与阶结论同时断 |
+| $e=(1+z_0)/2$ | 中心幂等，带系数 $1/2$ | build/sections/02-selection-process.tex:321 | 323 行的中心幂等性、326 行的 $e_q$、8 行的 $H$ | 底域特征为 $2$ 则 $1/2$ 无意义，6-10 行的函子与 35 行的取法同时塌 |
+| $\chi_m(\overline z_q)=1$（$0\le q<m-1$），$-1$（$q=m-1$） | 单个符号位落在末位，指定时长 $m$ | build/sections/02-selection-process.tex:337-338 | 343-344 行的 $p_{\chi_m}$、370-371 行的 $e_{m-1}$ 归零 | 符号位前移则 26-27 行的灭绝时刻同步前移，主定理下界 $2m-2$ 的口径跟着改 |
+| $p_{\chi_m}=\frac{1}{\lvert Z_m\rvert}\sum_{z\in Z_m}\chi_m(z)^{-1}z$ | 单位元系数 $\lvert Z_m\rvert^{-1}=2^{-m}$ | build/sections/02-selection-process.tex:343-344 | 346 行的 $Y_m$、348-349 行的非零性 | 分母不可逆则该特征幂等失踪，06 节 254 行固定 $k=\mathbb C$ 正是为此 |
+| $\mathcal A_{01}=\{s,a_1,\ldots,a_d\}$ | 每向箭头数 $d+1$，两向合计 $2d+2$ | build/sections/03-localization-and-lifting.tex:36-37 | 44 行的 $a'_hs=s'a_h$、347-349 与 361-363 行的按箭头求和 | $d$ 与 25 行的展示生成元数不匹配则 146-148 行的 $\theta$ 失去生成性 |
+| $x_hx_l\mapsto a'_ha_l$，$x_h\mapsto s'a_h$，$1\mapsto s's$ | 齐次化把三项统一到次数 $2$ | build/sections/03-localization-and-lifting.tex:49-51 | 43-45 行的关系式、139-144 行的 $(s's)^{-1}$ 计算 | 常数项不抬次数则 51 行的 $s's$ 替换无对应关系，144-145 行的单位元像失踪 |
+| 长度 $3$ 路径数为 $0$ | $B$ 有限维的直接理由 | build/sections/03-localization-and-lifting.tex:64 | 04 节 226-233 行的 remark（更高相干无需验证） | 出现长 $3$ 路径则 04 节 181-198 行的 $(0,2)$ 段正合性断，需加第四列 |
+| $\gldim\Lambda\le n-1$ | 由顶点数 $n$ 给出的双侧界 | build/sections/03-localization-and-lifting.tex:77 | 106 行对 $B$ 取 $n=3$、04 节 276 行、05 节 100 行的套用 | 界升到 $3$ 则 04 节 271-274 行的 $\Ext_B^4$ 不再为零，277-279 行的分裂断 |
+| $K=\mathsf K^b(\proj\text{-}B)$，$E_i=\mathbf e_iB$ | 右模有界投射复形的同伦范畴与三个直和项 | build/sections/03-localization-and-lifting.tex:118 | 121-122 行的 $\mathbf e_jB\mathbf e_i$、128 行的 $\mathcal S$ 生成元 | 左右模口径互换则 124 行的左乘箭头映射方向反，146-148 行的 $\theta$ 不再是代数同态 |
+| $\mathcal S$ 由 $\Cone(s),\Cone(s')$ 生成 | 厚子范畴，两条指定箭头 | build/sections/03-localization-and-lifting.tex:128 | 130 行的 $Q=K/\mathcal S$、295 行的分母集 $\Sigma$ | 分母集缩小则 328-331 行的 $q(g)=0$ 判据失踪，378-380 行的统一定母步骤无依据 |
+| $U\oplus U[1]$ 与 $U\oplus U[3]$ | odd-double 给的两个可达位移 | build/sections/03-localization-and-lifting.tex:194-195 | 254 行的 $V$、281 行的评估、04 节 20 行的实现式 | 位移取偶数则 04 节 271-274 行的 $\Ext$ 间隔超不出 $\gldim B$，分裂断 |
+| $V=U\oplus U[3]$ | 目标对象，评估给出 $eY$ 加一份移 $3$ | build/sections/03-localization-and-lifting.tex:254 | 256-257 行固定的 $V_0\cong V$、281 行的 $eY\oplus(eY)[3]$ | 该同构随 $Y$ 变则 441-443 行的对所有 $Y$ 同一选择失效，实现式不再一致 |
+| $eY\oplus(eY)[3]$ | 三个顶点上的评估值 | build/sections/03-localization-and-lifting.tex:281 | 04 节 249 行与 255-259 行的上同调定位 | 少一份位移则 04 节 291 行的二项重数退化为 $1$，灭绝时长折不成 $2m$ |
+| $P=L'_0\oplus L'_1[1]\oplus L'_2[2]$ | 三列 rectification | build/sections/04-tensor-realization.tex:109 | 113-118 行的三角微分、133-137 行的右投射性 | 列数减一则 84-87 行的 $q$ 无落点，关系进不了微分 |
+| $P^n=(L'_0)^n\oplus(L'_1)^{n+1}\oplus(L'_2)^{n+2}$ | 使 $p,q,h$ 各带总次数 $1$ | build/sections/04-tensor-realization.tex:120-121 | 122 行的对角符号说明、127 行的 $d_0h+pq+hd_2=0$ | 总次数不为 $1$ 则 113-118 行的矩阵配不成微分，$d_P^2\ne0$ |
+| $\bigl(M(H^{\circ j}(Y))[3q]\bigr)^{\oplus\binom{j}{q}}$ | 第 $j$ 层项数 $\sum_{q}\binom{j}{q}=2^j$ | build/sections/04-tensor-realization.tex:291 | 06 节 301-307 行的偶迭代、321-322 行的双扳机 | Pascal 递推失配则 300-301 行的归纳步断，二项重数失踪 |
+| $l=b_*-a_*$ | 支撑宽度，非负整数 | build/sections/05-ordinary-simulation.tex:9-11 | 14-16 行链代数的箭头数、103 行的 $3(l+1)-1$、132 行的度区间 | 区间缩小则 39-41 行的 $\varepsilon_iO=P^{a_*+i}$ 越出 $P$ 的支撑 |
+| $F^2(Z)\simeq P[b_*]\otimes_B^{\mathbf L}Z$ | 两步压缩，搬运周期 $2$ | build/sections/05-ordinary-simulation.tex:85 | 06 节 296-297 行的 $F^2M(Y)$、321-322 行与 328 行的指标 $2m-2$ | 周期改 $3$ 则时长折成 $3m$，01 节 29 行的下界系数由 $2$ 变 $3$ |
+| $\gldim(B\otimes_kC)\le3(l+1)-1$ | 随 $l$ 线性增长，斜率 $3$ | build/sections/05-ordinary-simulation.tex:103-106 | 112 行的 $3l+2$、06 节 173-177 行的 $g$ | 积的偏序无线性扩展则 99-100 行用不上 03 节 77 行引理 |
+| $\gldim D,\ \gldim D^{\mathrm{op}}\le3l+2$ | 乘积代数的双侧有限全局维数 | build/sections/05-ordinary-simulation.tex:112 | 06 节 160 行的前提、330 行对该前提的引用 | 界失踪则 06 节 180 行的 $-rg\le q\le0$ 无上界，有界性论证失效 |
+| $-l\le n\le0$ | $Q_T\otimes_{B\otimes_kC}O$ 的非零度区间，共 $l+1$ 层 | build/sections/05-ordinary-simulation.tex:132 | 135-138 行的 $P^{a_*+l+n}=P^{b_*+n}$ | 区间外仍有非零项则 138 行的度识别多义，链同构无从写出 |
+| $(-1)^{b_*n}$ | 度 $n$ 上的链同构标量 | build/sections/05-ordinary-simulation.tex:143 | 141-142 行与标准微分 $(-1)^{b_*}d_P$ 的比对、144 行的双侧作用保持 | 指数的线性项取错则微分差全局 $-1$，85 行的同构带符号破缺 |
+| $(d,x)(d',x')=(dd',dx'+xd')$ | square-zero 扩张的乘律 | build/sections/06-square-zero-and-conclusion.tex:25 | 59-63 行的面保持计数、188-192 行的 $\rad A$ 分解、267 行的 $A=D\ltimes X$ | $X^2$ 非零则 61-62 行的两 $X$ 之积为零断，按 $r$ 分层不再存在 |
+| $D\otimes_A^{\mathbf L}N\simeq\bigoplus_{r\ge0}(F^rN)[r]$ | 移位 $r$ 与 $X$ 出现次数同步 | build/sections/06-square-zero-and-conclusion.tex:33-35 | 163-167 行的两条维数判据、222 行的 $H^{q-r}\ne0$ | 分解断则生存与非生存两套结论脱钩，主定理的两个扳机失去公共来源 |
+| $\mathcal B^{-n}=D\otimes_kA^{\otimes_kn}\otimes_kN$ | $\dim_k$ 按 $(\dim_kA)^n$ 几何增长 | build/sections/06-square-zero-and-conclusion.tex:51 | 44-49 行的 bar 模型、141-144 行的逐度有限 | 逐度无限则 145-149 行的直和正合论证要改成乘积，同调不再与该分解交换 |
+| 次数 $-r-\sum_{j=0}^{r}i_j$ | 箱 $\mathcal B_r$ 内 $D$-块长度的总账 | build/sections/06-square-zero-and-conclusion.tex:79 | 99-102 行的重标定、143-144 行的元组计数 | 次数统计错位则 103-105 行的面变号 $(-1)^{r-j}$ 对不上 |
+| $(-1)^{\sum_{j=0}^{r}(r-j)i_j}$ | 链同构的符号因子 | build/sections/06-square-zero-and-conclusion.tex:101 | 103-106 行的面变号核对、107-109 行的零面情形 | 指数选错则 105-106 行的恰好弥合两个微分之差断，$\mathcal B_r$ 与 multibar 失联 |
+| $0\le r\le n$（度 $-n$） | 非零箱数 $n+1$ | build/sections/06-square-zero-and-conclusion.tex:142 | 145-147 行的免完成化 | 容许无限 $r$ 则需转乘积，148-149 行的分量式拟同构不成立 |
+| $H^q(F^rN)=0$（$-rg\le q\le0$） | 带宽随 $r$ 线性增长，斜率 $g$ | build/sections/06-square-zero-and-conclusion.tex:180 | 182 行的 $\mathsf D^{\le0}(D)$ 归属、187 行的有界上同调 | 无上界则 196-201 行的 $S\otimes_D^{\mathbf L}Z$ 有界性断，213-216 行的 Nakayama 收口失效 |
+| $\pd_AN=\sup_{r\ge0}\{\pd_D(F^rN)+r\}$ | Minamoto-Yamaura 加强式，正文只作对照 | build/sections/06-square-zero-and-conclusion.tex:238 | 247-249 行声明由 bar 与最小分解直接给出 | 直接引它则 163-167 行的两判据可合并，但需分次结构与反面口径的核对 |
+| $F^{2m}N_m\simeq0,\ F^{2m-2}N_m\not\simeq0$ | 双扳机，指标差 $2$ | build/sections/06-square-zero-and-conclusion.tex:321-322 | 328 行取 $r=2m-2$、333 行的主不等式 | 下界改用 $2m$ 则 165 行判据给出 $\ge2m$，与 01 节 29 行的 $2m-2$ 口径不符 |
+| $2m-2\le\pd_AN_m<\infty$ | 下界随 $m$ 线性增长，斜率 $2$；右端要求有限 | build/sections/06-square-zero-and-conclusion.tex:333 | 336-340 行的 $\findim A=\infty$ | 右半的有限失踪则 sup 平凡地取 $\infty$，反例退化成一个无限维数模 |
+| $E/\rad E\cong\mathbb C^n$ | 半单商，$n$ 个因子逐点作用 | build/sections/06-square-zero-and-conclusion.tex:367 | 366-367 行的 $U$ 作用、361 行的 $E$ 取法 | 直接取 $\mathbb C^n$ 则 361 行的 $\varepsilon_i^2=0$ 幂零机制失踪，Cummings 命题前提断 |
+| $\findim_r(T^{\mathrm{op}})=\Findim_r(T^{\mathrm{op}})=0$ | 不对称件里取零的那一侧 | build/sections/06-square-zero-and-conclusion.tex:377 | 386-388 行取 $\Lambda=T^{\mathrm{op}}$、01 节 97 行的零式 | 引用断则 01 节 97 行的右侧零式无来源，不对称结论只剩一半 |
+| $\findim$ | 宏展开为 $\operatorname{fin.dim}$ | build/preamble.tex:56 | 01 节 7-11 行的 sup 定义、06 节 338 行 | 记号改动则 01 节 19 行的小不大于大的陈述与两张表的表头全部要重标 |
+| $K[s]^n=K^{n+s}$，$d_{K[s]}^n=(-1)^sd_K^{n+s}$ | 上同调分级与移位符号约定 | build/sections/01-introduction.tex:221-222 | 04 节 122 行的对角符号与移位约定一致、05 节 141-143 行的 $P[b_*]$ | 约定反向则 04 节 113-118 行的矩阵微分要全面改号，127 行的等式失配 |
+| 定理按节内编号，公式按节重置 | 计数器口径，对应本文盘点的 16 个编号条目 | build/preamble.tex:20-21 | 各节标签 thm:main、lem:odd-double 等的显示号 | 关掉 numberwithin 则 01 节 24 行与 06 节 253 行的编号在正文里漂移 |
+
+### 补表与旧稿的记账口径差别
+
+上面这张表与第 16 节那张表的记法有两处系统性差别，读旧稿时按旧口径，读补表时按新口径。
+
+第一处是位置栏。第 16 节用缩写记法 `02:175` 表示 `02-selection-process.tex` 第 175 行，一格内常并置两三个位置，用顿号分隔；补表的位置栏一格只给一个锚点，写成从 build 目录起算的完整文件名加行号或行号区间，例如 `build/sections/05-ordinary-simulation.tex:103-106`，为的是每行都能被单独复核，不依赖第 6 行开头声明的缩写对照。缩写记法与完整记法指向同一批文件，两套行号可直接对读，`02:` 前缀与 `sections/02-selection-process.tex` 一一对应。
+
+第二处是数值栏。第 16 节按"常数与阈值"记账，只登记正文里以具体数值形态出现的量，$|I|=3$、生成元 $15$、$\gldim D\le3l+2$ 都属此类；补表把同一批量按"数值加增长率"重记，凡是随参数变化的量都补出增长形态，$\lvert Z_m\rvert=2^m$ 与 $\dim_{\mathbb F_2}S_m=m$ 是指数对线性的分界，$\sum_q\binom jq=2^j$ 是层内项数的指数增长，$\pd_AN_m$ 的下界 $2m-2$ 与 $\gldim$ 界 $3(l+1)-1$、带宽 $rg$ 是三条线性增长，斜率分别 $2$、$3$、$g$。补表还登记了一批第 16 节没有行的对象：约定式的记号（$[x,y]$ 的展开顺序、$K[s]^n=K^{n+s}$ 的移位符号）、核格与表格原像这类中间数据、以及只出现在分母里的系数 $\lvert Z_m\rvert^{-1}=2^{-m}$。粗估与正文给定值在栏内明确区分，例如 $2^{25m}$ 一格写着本文的粗估，$\mathcal O$ 与 $\mathcal B_r$ 的逐度维数只给增长形态。
+
+第 17 节的表格记的是 Lean 侧指标（文件数、行数、顶层声明数、sorry 分布、tactic 频次），属另一本账，补表不覆盖也不修改这些数字；两套模块的入口行号仍以第 17 节与文首的登记为准。
+
+第 16 节那张表的正文与表头照抄保留，一字未改，第 1 至 15 节的叙述、第 17 节的全部实测数字也照原样留在前面。本次修补只在文末追加，未删除、未回滚、未改写、未重排任何已落盘内容，小节编号未对调。两表若出现口径冲突，位置与行号以补表为准，叙述与判断以旧稿为准。行号取自 build 下六个分片加 `preamble.tex`；`paper.tex` 只有 21 行 `\documentclass` 与 `\input` 调度，属索引件，不入账。
+
+补记两条，供读补表时对齐口径。其一，说明段里出现的 $|I|=3$ 是在转述第 16 节表格单元格的写法，补表自身的单元格一律用 $\lvert\cdot\rvert$ 写绝对值与阶、用 $\lVert\cdot\rVert$ 写范数，五栏里不含裸竖线，每行竖线数固定为 $6$。其二，$\mathcal B^{-n}$ 那一行的 $(\dim_kA)^n$ 是对 06 节 51 行度 $-n$ 项的直接计数得到的增长形态，补表里没有任何渐近记号，读作逐度维数按底数 $\dim_kA$ 的几何级数增长即可。
+
+

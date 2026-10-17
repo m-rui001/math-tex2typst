@@ -1,0 +1,34 @@
+{
+  "paper": "Irrational-cubic-fourfolds-with-geometric-K3-categories-September-24-2026",
+  "ok": true,
+  "typ_lines": 1357,
+  "included_pdf_pages": 0,
+  "formulas": 1023,
+  "math_failed": 3,
+  "labels": 147,
+  "equations": 4,
+  "theorems": 2,
+  "figures": 1,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 3,
+    "cetz_split": 1
+  },
+  "samples": {
+    "formulas": "1023",
+    "cetz_converted": "1",
+    "cetz_split": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Irrational-cubic-fourfolds-with-geometric-K3-categories-September-24-2026.tex"
+}

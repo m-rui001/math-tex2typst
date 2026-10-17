@@ -1,0 +1,31 @@
+{
+  "paper": "L1-Embeddings-of-Graphs-of-Bounded-Treewidth-September-23-2026",
+  "ok": true,
+  "typ_lines": 818,
+  "included_pdf_pages": 0,
+  "formulas": 558,
+  "math_failed": 0,
+  "labels": 78,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 2,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "558",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\L1-Embeddings-of-Graphs-of-Bounded-Treewidth-September-23-2026.tex"
+}

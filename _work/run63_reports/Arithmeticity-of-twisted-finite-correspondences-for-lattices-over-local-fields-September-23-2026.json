@@ -1,0 +1,32 @@
+{
+  "paper": "Arithmeticity-of-twisted-finite-correspondences-for-lattices-over-local-fields-September-23-2026",
+  "ok": true,
+  "typ_lines": 3766,
+  "included_pdf_pages": 0,
+  "formulas": 3468,
+  "math_failed": 0,
+  "labels": 404,
+  "equations": 2,
+  "theorems": 7,
+  "figures": 1,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "3468",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "flafter"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\Arithmeticity-of-twisted-finite-correspondences-for-lattices-over-local-fields-September-23-2026\\main.typ:1186:70\n     │\n1186 │ Choose a decreasing sequence of compact open normal subgroups $U_n lt.tri U$ with intersection ${ 1 }$, and set\n     │                                                                       ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 1,
+  "source": "E:\\math\\_work\\flat\\Arithmeticity-of-twisted-finite-correspondences-for-lattices-over-local-fields-September-23-2026.tex"
+}

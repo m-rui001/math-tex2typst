@@ -1,0 +1,12 @@
+=== D139 (512 lines) ===
+D139 L107 [值得] `second group of random shifts upgrades this to a lower bound at \emph{every}` / `base point.`（sampler.tex:10--11）。单段做法失败的具体机制值得记下来：只用前 $k$ 个位移时，坏点集 $\mathcal G^c$ 非空，而层级里基底 $x$ 会被别的列决定（sampler.tex:193--196 的 offset 论证），所以撞上坏点的概率无法忽略。两段的分工是：第一段把坏点比例压到 $e^{-c_*s}$（sampler.tex:86），第二段用 $N_{j+1}(x)=N_j(x)+N_j(x-w)$ 的递推（sampler.tex:100）把比例型结论升级成一致型结论。[推测] 第一稿里 $k$ 与 $j_*$ 不分段、$s$ 全部用于二阶矩，失败概率形状像 $|H|e
+D139 L362 [值得] `Model.lean`（533 B）把 tex 的定义层落地：`abbrev Space (n : ℕ) := Fin n → ℝ`（12 行）、`IsConvexBody K` 定义为 `IsCompact K ∧ Convex ℝ K ∧ (interior K).Nonempty`（14--15 行）、`LatticeCovers K L` 定义为 `K + (L : Set (Space n)) = Set.univ`（17--18 行）。对照 overview.tex:9--10 的 "Here a convex body is compact with nonempty interior" 与 main.tex:57--65 的记号层，这是一处少见的、tex 与 Lean 几乎同构的地方；值得注意的是 Lean 把"紧 + 凸 + 内部非空"三分合取直接当作体的定义，而 te
+D139 L468 [表头：] - 表头：`| 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |` 命中 1 次，`| --- | --- | --- | --- | --- |` 命中 1 次，均逐字符合规格。
+D139 L472 [而是] - 禁串实测：规格禁止的那五个短语共 2 处，第 23 行一处、第 362 行一处；被禁的对举句式共 4 处，第 113 行一处含"一，而是一族"结构，第 170、276、331 行各一处三字结构；那个长破折号字符共 30 处，全部位于第 9 至第 133 行的引证行尾，第四批（第 134 行之后）落盘起未再出现；整行 `---` 为 0；`###` 小节 1 个，无装饰性加粗列表项，无 emoji，无戏剧化单句收尾。
+D139 L489 [台账表：] - 台账表：表头两行各命中 1 次且逐字符合规格，数据行 77 行，表区为第 372 行至第 450 行；其中 76 行恰为 6 个竖线，第 381 行（$R^2$ 那一行）第三栏的范数写法带一对额外竖线，该行读到 8 个竖线，清理时把那一栏的两个 `\|` 换成 `\lVert` 与 `\rVert` 成对写法即可，列数与其余四栏文字不动；无空栏，无占位破折号。
+D139 L491 [一处引用缺陷] - 一处引用缺陷：第 15 节（b）段末尾的 `$\eqref{}$` 是空引用，应补成 `$\eqref{eq:shear-bound}$` 或直接写成"补齐判据"，位置在该段倒数第二句；这一处属于我自己书写失误，与禁串无关。
+=== D140 (1348 lines) ===
+D140 L974 [而是] 满射覆盖映射。这里没有"可缩"直接写在 $X$ 上，而是把可缩性转移到全空间 $E$，
+=== D142 (994 lines) ===
+D142 L24 [值得] `\input` 顺序（paper.tex:37-41）是 introduction, diagrams, nesting, amplification, automata。值得注意的排版事实：automata 这片区排在最后，而它在 diagrams 里被预告"我们先把约欠下的义务解释清楚"（diagrams.tex:126-133），diagrams.tex:230-232 也写着"Section auto:section 构造 $h+2$ 态源机器并完成数值装配"。这个"先代数后机器"的切片顺序本身就是反推线索，第 12 节细说。
+D142 L830 [值得] (c) 逐项理由：$d\trianglelefteq e$（双侧乘吸收 $de=ed=d$）给出的偏序与 $\sqsubseteq$ 无关（nesting.tex:9 特意声明 "Nesting is distinct from the edge-inclusion order"）：链上 $b_\ell$ 由放大构造给出，天然是幂次三明治，属嵌套序；而 $\sqsubseteq$ 只在 (diag:detect) 那一头用。$P_eP_d\subseteq P_d$ 方向性：$e$ 的递归环接 $d$ 的递归环仍落在 $d$ 里，$d$ 更细所以吸收更多，这与 $K_e\subseteq K_d$ 同向。传递性证明 $(de)f=d(ef)$ 一行是幺半群结合律的白送，但"偏序"三个字让 9.3 的链 $\{b_j\}$ 可数、可归纳，值得那两行。

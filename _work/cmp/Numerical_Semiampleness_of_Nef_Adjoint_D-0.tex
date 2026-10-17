@@ -1,0 +1,26 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\def\UrlBreaks{\do\/\do-\do.}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\PP}{\mathbb P}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\mult}{mult}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Bir}{Bir}
+\DeclareMathOperator{\codim}{codim}
+\begin{document}
+\begin{tikzcd}
+ \Delta_F=W\times_{W'}W \arrow[r,"\mathrm{pr}_2"] \arrow[d,"\mathrm{pr}_1"'] & W \arrow[d,"F"]\\
+ W \arrow[r,"F"'] & W'.
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,46 @@
+SINGLE D01 The-symmetric-Mahler-conjecture-and-its-equality-cases-Septe x1
+NONE D02 D02-Kaplansky直接有限性反例-特征2
+NONE D03 D03-VlasovMaxwell整体经典解.m
+NONE D04 D04-乘性函数二点关联.md
+NONE D05 D05-算术级数拟多项式界.md
+NONE D06 D06-pi无理指数为2.md
+NONE D07 D07-量子Heisenberg铁磁体自发磁化.
+NONE D08 D08-Mezard-Parisi公式.md
+SINGLE D09 A-Direct-Proof-of-Optimal-Max-Cut-Hardness-September-23-2026 x3
+SINGLE D10 An-isomorphism-of-the-free-group-factors-September-23-2026 x1
+SINGLE D12 Paired-states-and-Hamiltonian-cycles-in-cubic-bipartite-plan x1
+NONE D128 D128-平面曲线的Nagata猜想：约化、椭圆
+SINGLE D13 L1-Embeddings-of-Graphs-of-Bounded-Treewidth-September-23-20 x3
+SINGLE D143 An-exponential-two-way-deterministic-state-lower-bound-for-o x1
+NONE D15 D15-有限欧氏Ramsey配置分类.md
+SINGLE D177 A-C1-Counterexample-to-the-Entropy-Conjecture-September-25-2 x1
+SINGLE D185 A-Counterexample-to-Walls-D2-Problem-October-6-2026 x1
+SINGLE D188 A-Gepner-stability-condition-on-every-smooth-quintic-threefo x1
+SINGLE D19 A-Counterexample-to-Rysers-Covering-Conjecture-September-23- x3
+SINGLE D190 A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Maps- x2
+NONE D21 D21-Saxl猜想-循环多表证明.md
+SINGLE D216 A-dimension-free-logarithmic-Sobolev-inequality-for-subgauss x1
+SINGLE D219 A-finite-Smith-Toda-complex-V4-at-the-prime-1009-September-2 x1
+SINGLE D252 A-uniform-influence-bound-for-hypergraph-properties-October- x1
+SINGLE D261 Almost-Linear-Time-Maximum-Cardinality-Matching-in-Sparse-Ge x1
+SINGLE D327 Conformal-flow-and-the-Riemannian-Penrose-inequality-with-mi x1
+SINGLE D354 Deterministic-nonbipartite-Ramanujan-graphs-in-every-fixed-d x1
+SINGLE D356 Diagonal-Fourier-extension-for-positively-curved-surfaces-in x1
+SINGLE D397 Finite-Circle-Obstructions-Binary-Codes-and-Histogram-Embedd x1
+SINGLE D400 Finite-Monoid-Computations-and-a-Uniform-Generalized-Star-He x1
+SINGLE D401 Finite-Smith-Toda-Complexes-at-Varying-Primes-September-23-2 x1
+SINGLE D418 Functional-universality-of-critical-SK-autocorrelations-Octo x1
+SINGLE D420 Gaussian-free-field-limits-of-weighted-integer-Lipschitz-hei x1
+SINGLE D426 Generic-Future-Inextendibility-with-Square-Integrable-Connec x1
+SINGLE D442 Hyperbolicity-Cones-Without-Semidefinite-Lifts-October-5-202 x1
+SINGLE D590 Strong-diffeomorphic-approximation-in-three-dimensions-for-1 x2
+SINGLE D631 The-Poisson-Dirichlet-Law-for-Prime-Predecessors-September-2 x1
+SINGLE D698 Tree-Constructions-for-the-l1-Distortion-of-Binary-Edit-Dist x2
+SINGLE D704 Unbounded-Violations-of-the-Square-Root-Degree-Bound-Septemb x1
+SINGLE D711 Uniform-Stability-of-the-Spherical-Laughlin-Gap-October-5-20 x1
+SINGLE D715 Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs- x1
+SINGLE D765 The-mean-analytic-rank-of-quadratic-twists-of-elliptic-curve x1
+SINGLE D80 Randomized-quasipolynomial-time-mean-payoff-games-September- x3
+SINGLE D84 Riesz-transforms-and-uniform-rectifiability-in-higher-codime x2
+SINGLE D87 Rigidity-of-the-Turing-degrees-September-24-2026 x3
+MULTI D90 Power-law-violations-of-Yaus-nodal-upper x1 | Smooth-counterexamples-to-Yaus-nodal-upp x1

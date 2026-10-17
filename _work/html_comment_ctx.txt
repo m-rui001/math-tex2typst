@@ -1,0 +1,304 @@
+=== D177 L417 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=418
+      414|它在第一个分量上就崩：$z'=z^2+20\sum_\ell\bar\beta_\ell(t)S(v_\ell)$，只要有一个读取时刻的寄存器非零，$\pi\circ f\ne g\circ\pi$ 就是字面不等式，而读取时刻非零正是逃逸所必需的。我试过把加法项挪成乘法项（$z'=z^2\cdot(1+\dots)$），乘法扰动确实保住了半共轭的形，但把 $z=0$ 和 $z=\infty$ 附近的行为搅乱了，逃逸轨道和不动轨道的分界不再清晰，而整个熵论证依赖这两个集合的显式不变性（`orbits.tex` 第 10-20 行）。
+      415|
+      416|真正的转折是我把要求从"动力学半共轭"降为"同调层面的交换式"。加法扰动在 $H_2$ 里看不见，因为把 $z^2+sC(t,v)$ 从 $s=0$ 滑到 $s=1$ 是同伦，而 $|sC|\le60q$ 保证同伦在 $w=1/z$ 图里分母不为零（`homology.tex` 第 18-31 行）。稿子在 `main.tex` 第 152-154 行专门写了这句提醒："这是同调层面的交织，并非动力学半共轭。" 我早期所有失败都跟没读进去这句话有关：我在要求的层级上多要了一层，于是把一个本来只要代数性质的小事做成了动力学性质。
+>>>   417|<!-- D177 落盘探针行：基线 16233 字节，写入通路自检 -->
+      418|
+
+=== D195 L83 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=662
+       80|任何以 $G$ 为群的非正曲流形的定向特征标都等于它对偶模上的右作用，那作用已被证为平凡。我把这条
+       81|贪心的绝对化收回来，改成先在一个四维的带边界相对问题里做出障碍，再借反射把相对障碍转成闭流形问题
+       82|（paper.tex:147-157）。这个收窄就是第一个真正的转折点。
+>>>    83|<!-- 落盘探针行 -->
+       84|
+       85|## §3 第一个真正的构造：把障碍塞进带标记的 chamber
+       86|
+
+=== D198 L336 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=343
+      333|| $C\log(1/(2\varepsilon))/\log n$ | FK96 对照上界 | build/sections/introduction.tex:31-32 | 猜想的动机坐标 | 改动则历史叙事失准 |
+      334|| $(\log n)^{-2+\eta}$ 与 $(\log\log n)^2$ | BK97 与 KKLMS 双基准 | build/sections/introduction.tex:49, build/sections/introduction.tex:84 | 逼近叙事与删亏损卖点 (build/sections/introduction.tex:90-91) | 改动则 §2、§3 的路线故事失去锚点 |
+      335|
+>>>   336|<!--MORE-->
+      337|
+      338|勘误(续记,登记于台账之后):为把文风禁令的两种转折连接串压到零命中,我对已落盘文字做了五次最小机械替换,语义全部保持:§10 一处改为"并不出自群论",§11 一处改为"改为随机制造",§11 另一处两句分别改为"并非依靠新分析,凭的是…"与"删除一个环节,并非改进一个环节",§20 攻击六一处改为"给出 $32768/t^2$,并非 $73728/t^2$";另在 §20 同句末补写了一句"这份简洁并非免费的"。替换未删除、未移动任何既有论断,只调整连接词形态;这五次属规格允许的禁词机械清理,特此逐处申报,供收工报告核对。
+      339|
+
+=== D202 L81 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=335
+       78|
+       79|（本稿续于 §4，先补落盘探针。）
+       80|
+>>>    81|<!-- D202-probe -->
+       82|
+       83|## 4 随机匹配、围长条件化与那手“只证上界不证下界”的切换
+       84|
+
+=== D205 L85 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=567
+       82|
+       83|尺度之间的换算在 `02-construction.tex:22-23`：$\nu/d=\sigma-1/2$，$\sqrt{\delta}\delta^{\nu/d}=\theta$。$\gamma$ 与 $r$ 之间的换算就是 $\gamma=r/\sqrt{\delta}$；在 cap 区间 $r\le Y_1\theta$ 上，$\gamma\le Y_1 \delta^{\nu/d}$，也就是 profile 区间的下 cutoff。$\gamma$ 与 $\theta$ 之间靠这两个 identity 换。
+       84|
+>>>    85|<!-- 探针：D205 落盘校验行 2026-09-24 队列 29 -->
+       86|
+       87|## §7 profile bounds 与 inner barriers 精读
+       88|
+
+=== D214 L80 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=300
+       77|
+       78|尺寸账：主图 $k$、两门 $2(2k-q)$、内块 $3(2k)$，行、列各自等于 $11k-2q$（selector.tex:217-221）。$m$ 更大时垫单位块，唯一匹配权 1，恒等保持（selector.tex:225-227）。齐次化 $B(X,z)$ 给出 $\operatorname{per}_m B=a_0z^{m-r}G_D$，证明用 $z\ne0$ 上的齐次性再靠多项式恒等过 $z=0$（selector.tex:229-242）。这一步在后面极式计数里被反复使用（polar.tex:253-257 的 $A^{\hom}$），齐次化身份现在攒下来是对的。
+       79|
+>>>    80|<!-- CONTINUE-CHECKPOINT-1 -->
+       81|D214 落盘探针行：基线 15860 字节，此行用于验证 Edit 已真实写入磁盘。
+       82|
+       83|## §6 特征 2 侧：曲线、伴随理想与长度下界
+
+=== D214 L133 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=300
+      130|
+      131|即命题 prop:gradient-codimension（dimension.tex:10-28）。`[推测]` 把"图像维数用亏格缺陷、纤维维数用 Hilbert 长度"这面镜子举起来看：两条各贡献约 $k^2/2$，被减掉的 $T\approx k^2/18$ 是净亏。要让净亏变成正余维（下一步 transfer 要求 $\Delta=T-k>0$），$T$ 必须赢过 $k$，这就是 $q\approx k/3$ 与 $k\ge128$ 之间全部的不等式张力：$T\ge k^2/32$、$\Delta\ge k^2/64$（transfer.tex:240-249）。
+      132|
+>>>   133|<!-- CONTINUE-CHECKPOINT-2 -->
+      134|
+      135|## §9 跨特征搬运与平滑截面
+      136|
+
+=== D214 L248 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=300
+      245|| $\operatorname{dc}(\operatorname{per}_m)\ge m^3/(5\,529\,600e)$ | 精确推论 | sections/consequences.tex:51 | §11 | §10 全部 |
+      246|| $G_r\in\mathcal C_n$（首项） | 平滑初始形式 | sections/consequences.tex:129-130 | cor:smooth-initial-form | §11 末段位似列收敛 |
+      247|
+>>>   248|<!-- CONTINUE-CHECKPOINT-3 -->
+      249|
+      250|## §16 勘误与风格自检登记
+      251|
+
+=== D214 L285 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=300
+      282|
+      283|这份清单也是给我未来自己的：若要沿着本文抬指数（§14 末段登记的开放方向），上述六点里只有第五点提供了结构外推的可能，其余都是内部加固。三次方界的全部力量来自 $T\approx k^2/18$ 对 $k$ 的压倒，而 $T$ 是 $\binom{q+2}{2}$，次数抽取的二次容量由 $s,t$ 两个辅助变量的二元形式空间决定；想要四次方，据我现有理解需要第三个可独立抽取的辅助方向进入系数空间，让长度量升到 $k^3$ 级，同时保持 $\delta$-缺陷到维数的换算系数不恶化。`[推测]` 这是否可行我判断不了，笔记到此为止，先把手里的三次钉死。
+      284|
+>>>   285|<!-- EOF-D214-BODY -->
+      286|
+      287|## §18 收尾登记：本笔记自己的使用手册
+      288|
+
+=== D214 L299 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=300
+      296|
+      297|四、笔记结构自查记录：小节 §0 到 §18 连续编号、动笔后排期未改；取证调用共 15 次（第 16 次调用为首次落盘 Write），未越 15 次上限之外取材；每次追加均以当时的文件末段为锚，探针行、三个 checkpoint 注释行、EOF 注释行各自保持原位，正文未被切断。规格落盘协议要求的 sleep 90 双量在文末执行，数字见交付报告。
+      298|
+>>>   299|<!-- CONTINUE-CHECKPOINT-4 -->
+      300|
+
+=== D217 L16 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=208
+       13|preprints/A-directional-zero-one-law-for-finite-range-dependent-random-environments-October-5-2026
+       14|其他队列第 41 行号
+       15|
+>>>    16|<!-- 锚点行：本行是本稿末段协议记录起点，后续追加一律锚在文件当前最后一段之后，本行与其下探针行永久保留原位原文 -->
+       17|探针行：基线 1961 字节（wc -c 实测），本行为落盘协议第 0 步唯一新增行，Edit 后将复量字节。
+       18|
+       19|## §1 最初的赌注，以及三条走不通的路
+
+=== D224 L21 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=760
+       18|走过哪些弯路、哪一步把方向扳过来、最终成品跟最初设想差在哪里。原文
+       19|没写清楚的推断我标 `[推测]`，并说明为什么信息不足，绝不把猜想当成事实。
+       20|
+>>>    21|<!-- D224 落盘探针，验证 Edit 是否真的写入磁盘 -->
+       22|登记目录：preprints/A-group-without-fixed-price-October-5-2026
+       23|登记队列：其他队列第 48 行号
+       24|
+
+=== D227 L69 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=550
+       66|
+       67|顶点存活概率 $\Pr(v\in W)\le(2y)^{-B/4}=:p$（`03-small-graphs.tex:126-131`）。由 $B$ 的选择得 $2kp\le r/1000$ 且 $q^2p\le10^{-4}$（`03-small-graphs.tex:134-136`）。这两条小性是后面所有概率事件同时成立的基础。
+       68|
+>>>    69|<!-- D227 probe line -->
+       70|
+       71|## §7 反证假设下先钉一个高连通区域
+       72|
+
+=== D234 L256 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=491
+      253|| alt:scaled-area | $n_r^2\Delta(P_r)\ge r^2/64$ | 08-alteration.tex:77 | alt:prime-area 的起点 | 若 $n_r$ 与 $a_r$ 关系变则比例失 |
+      254|| $Z$ | 违规对与违规三元组计数 | 08-alteration.tex:22 | alt:expected-events、删除步 | 若定义扩至共线三元组则需重估 |
+      255|| app:prime-interval | Bertrand 形式：$n$ 大时 $\exists p\in(n,2n]$ | 03-norm-digits.tex:118-120 (03 引用) | norm:base、aux:parameters、插值 $m<r\le 2m$ | 若 Bertrand 失效则 $B,q$ 选不出、插值不成立 |
+>>>   256|<!-- probe-D234-OK -->
+      257|
+      258|## §14 延伸讨论一：如果我重新走这条线
+      259|
+
+=== D242 L327 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=328
+      324|
+      325|我把这三点咬合记下来，是想给未来的自己留一句话：等号分类的难点从来不在"逼出 $Y=0$"这一手，而在"逼出 $Y=0$ 之后，$X_r$ 必须交换"这一步，而交换性又是纯代数的、只吃 $q$ 原点两阶。这种"解析部分把问题压到极小代数核"的结构，是我在本篇学到的最漂亮的一击。全文到此收束。
+      326|
+>>>   327|<!-- probe D242 -->
+      328|
+
+=== D256 L189 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=190
+      186|| $\overline\Phi(\mathcal O_V(H)\mid_{\mathcal R})=DH^2>0$ | 正整数 | sections/cartier.tex:547 | 矛盾末行 | 归零则两结论兼容，定理整个失效 |
+      187|| $H^0(X,\mathcal O_X(mK_X))\otimes_{k_0}k$ | 截面空间基变换等式 | sections/cartier.tex:586-588 | §7 回传原域 | 等式失则截面数拉不回 $k_0$ |
+      188|| $\kappa(X,K_X)=1$ | 结论的 Kodaira 维数 | sections/introduction.tex:19-20 | §7 收尾与摘要 | 若 $\nu$ 假设松动则该等式无来源 |
+>>>   189|<!-- D256 落盘探针 P1：字节增量校验行 -->
+      190|
+
+=== D264 L205 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=1013
+      202|顺便产出了后面要的整数值事实，即 im 落在 $\mathbb Q(\gamma_{1}-\gamma_{2})$ 里，这个
+      203|一维像将来与 Bockstein 的 mod 4 像相互作用。从组织方式上看，这一几何证明
+      204|是"一次投入两处产出"：单值性与有理像。
+>>>   205|<!-- probe D264 single line -->
+      206|
+      207|<!-- D264 落盘探针单行 -->
+      208|
+
+=== D264 L207 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=1013
+      204|是"一次投入两处产出"：单值性与有理像。
+      205|<!-- probe D264 single line -->
+      206|
+>>>   207|<!-- D264 落盘探针单行 -->
+      208|
+      209|## §7 同调映射必须单独保留：伴随、传递与有理投影
+      210|
+
+=== D266 L81 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=744
+       78|
+       79|我原本还打算再加第四段，"用中值放大把 $\mathbb E[(d_S - c)_+] \le c / \ell$ 变成 $\Pr[d_S > (1+\varepsilon) c] \le 1/10$"。这一段的机制在 §14 会说，它跟前三段是同一层级：前三段决定"一次精修能压多少因子"，第四段决定"多次独立精修取中值能不能收敛到 $1+\varepsilon$"。中值放大需要 $H^2$ 份独立副本，代价 $\le (1+|I|) 2^{o(H)}$ 每次；union 域 $e^{10 H}$ 覆盖下 $e^{-H^2}$ 级别的失败概率，加上初始表 $0.01$，总失败 $\le 1/1
+       80|
+>>>    81|<!-- 探针行将追加到此处 -->
+       82|探针行 probe-line D266 已完成基线复量。
+       83|
+       84|## §5 参数与尺度分离：$H$ 与 $\ell$ 的分层设计
+
+=== D274 L333 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=335
+      330|收束全稿前的最后一句感想：这篇论文给我留下的核心印象是"便宜公理的复利"，$\chi\ge2$、$R\ge0$、$-\int Rw^2\le0$ 这类一行纸的观察被反复存进账户，到最后一次性兑付出拓扑刚性；而作者愿意把最难的分类整块外购，换来管道每一节都可独立检验。薄素材档写到此处，我能诚实重建的思维链就到这里，其余的都已在 §13 的十七条目里登记了证据缺口。
+      331|
+      332|本稿到此结束，其后仅存的物理行是落盘探针的注释行。
+>>>   333|<!-- probe-D274 -->
+      334|<!-- 探针行：基线 13911 字节，Edit 单行追加后复量 -->
+      335|
+
+=== D274 L334 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=335
+      331|
+      332|本稿到此结束，其后仅存的物理行是落盘探针的注释行。
+      333|<!-- probe-D274 -->
+>>>   334|<!-- 探针行：基线 13911 字节，Edit 单行追加后复量 -->
+      335|
+
+=== D295 L55 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=328
+       52|
+       53|规范化覆盖的另一处细节是"清除极点"的自由度。hodge.tex 里给的构造是：找一个有效整除子 $J$ 使得 $s$ 作为 $\omega_{W/S}(J)^{\otimes m}$ 的全纯截面没有极点，然后对这个全纯截面取根、再规范化。论文强调"the resulting cover with its meromorphic root is independent of the pole clearing"，这一点在射影情形可以靠 $J$ 的存在性用 Pic 群的离散性说明；解析情形 $J$ 的选择是局部问题，独立性靠"局部规范根覆盖只由 $a$ 与 $\delta_\nu$ 决定"这一事
+       54|
+>>>    55|<!--probe-D295-->
+       56|
+       57|## §5 阈值阶公式 ord_Hodge(τ)=t_P-1：把两种定义接起来
+       58|
+
+=== D298 L67 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=401
+       64|
+       65|我还在意两件事。第一，$P=1$ 时 $G=H*\mathbb Z$ 直接双曲（annuli.tex 第 48--49 行），所以全文默认 $P\ne 1$，自由基固定，字长记 $\lvert\cdot\rvert_H$ 与 $\lvert\cdot\rvert_P$（第 46--48 行）。第二，假设里所有的相交限制都不对 $H$ 的挠作要求之外的让步：preliminaries.tex 第 98--101 行给出 $F_2\times C_2$ 的反例，说明“无限阶元素”在双陪集有限性引理（第 70--77 行）里的限定词不可省；而本文顶点群取无挠，正是让这两套工具能咬合的接口。[推测] 
+       66|
+>>>    67|<!-- D298 落盘探针 -->
+       68|
+       69|## §6 非张角环带兑换成一条平稳电流轨迹
+       70|
+
+=== D30 L6 occ=1 close_on_line=1 backticks=4 whole_line=False file_lines=1019
+        3|对象论文：`A negatively pinched Kähler threefold without bounded holomorphic coordinates`（2026-09-25，OpenAI 预印本）。
+        4|TeX 源码：`E:\math\preprints\A-negatively-pinched-Kahler-threefold-without-bounded-holomorphic-coordinates-September-25-2026\build\`（`main.tex` + `sections\01-introduction` 到 `09-pinching`）。引文行号形如 `03:129` 表示 `03-peaks.tex` 第 129 行。
+        5|Lean：`E:\math\lean\OAI\Geometry\Kahler\`。被认证的顶层定理是 `OAI.PinchedHartogs.main_theorem`，比对配置 `ComparatorChallenges\PinchedKahler.json`，许可公理三件套 `propext`、`Quot.sound`、`Classical.choice`，`enable_nanoda: false`。
+>>>     6|素材：`研究笔记\素材\Kähler负pinched三维fold-素材.md`（131,178 字节，末尾 `<!-- 完 -->`）。
+        7|
+        8|记号约定与论文一致。$\mathbb B=\{z\in\mathbb C^2:|z|<1\}$ 是基球，$S=\{|\xi|=1\}$ 是其边界球面，$\sigma$ 是归一到总质量 $1$ 的表面测度。$\psi(z)=-\log(1-|z|^2)$ 是基位势，$I=(\psi_{i\bar j})$ 是它的复 Hessian（同时视为对第一变量线性的 Hermitian 形式）。$h=\partial\bar\partial\phi$。全篇实度量约定 $g=2\operatorname{Re}\widehat g$，"sectional curvature"一律指底层实 Riemannia
+        9|
+
+=== D314 L151 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=761
+      148|
+      149|我不再往这里加任何具体公式。信息不足的原因就是我没有读这两个文件，而这一段的构造（分母多项式的次数、极点的坐标描述）没有在我读过的任何页面上重复出现过。凭标题编一个留数表达式，会污染后面的台账。
+      150|
+>>>   151|<!-- D314 probe line: 落盘探针，仅用于验证写入生效 -->
+      152|
+      153|## §9 公共 twist 处的全纯性：碰撞根与导数项
+      154|
+
+=== D330 L61 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=352
+       58|
+       59|确定性也是从这一步开始锁死的：所有"抽样"都展开成显式顶点，把概率乘进费用（construction.tex 第 75 到 79 行；introduction.tex 第 196 到 199 行）。归约全程没有硬币。
+       60|
+>>>    61|<!-- D330 落盘探针行 -->
+       62|
+       63|## §6 秩图：把序比较做成删不起的刻度
+       64|
+
+=== D339 L56 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=409
+       53|
+       54|我一开始为什么会被这三处硬伤放过？因为我把"边际坐标"和"磁化坐标"混在一起看。B 篇的 Lemma 10.6 是关于 $u, Z, B_e, B_o$ 四元组的解析映射；$Z$ 是余弦活动 $c_B^\alpha(\psi) = u^{-2}\sum_v \cos(\alpha\psi(v))$ 的系数，代表"电荷"；$u$ 是梯度活动 $e_B^0(\psi) = \frac12 \sum_v \sum_e |\nabla_e \psi(v)|^2$ 系数（去掉常数），代表"劲度倒数偏离"。低温下 $Z$ 是主导收缩量，$u$ 是高斯曲线的坐标；临界下二者互锁，$x_*$ 固定点的存在意味
+       55|
+>>>    56|<!-- D339 落盘探针行 -->
+       57|
+       58|## §4 错误路线二：直接对离散高斯大场法则设界
+       59|
+
+=== D374 L65 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=278
+       62|
+       63|还有一个细节让我确信作者对循环性高度警惕：main.tex:234-236 声明所有 $L^2$ 等式按时间逐个使用、时间积分下靠 Fubini，不要求存在对一切时刻同时逐点不变的代表元；main.tex:463-466 特别注明有界系数引理的假设是局部分布方程，区别于对整体可测流的不变性，就是为了下一步能把该引理用在弱极限 $g^{(s)}$ 上而无须先建立新的整体不变性陈述。这两处是防循环的阀门，我读到时有种作者替未来的读者（也就是试图找漏洞的我）提前上锁的感觉。
+       64|
+>>>    65|<!-- D374 write-probe -->
+       66|
+       67|## §5 构造选择：为什么是定向平坦双层
+       68|
+
+=== D374 L274 occ=1 close_on_line=1 backticks=2 whole_line=False file_lines=278
+      271|
+      272|四、记号约定：§5 至 §8 中出现的 `\eps` 为 `\varepsilon` 的速记，沿用素材宏定义（main.tex:28）；台账节一律写全 `\varepsilon`。此条防误读，不属错误。
+      273|
+>>>   274|五、协议残留：L65 的 `<!-- D374 write-probe -->` 一行是落盘探针协议线，按协议保留、不删除。
+      275|
+      276|六、素材疑点转引备查：main.tex:672 在 main.tex:265-266 声明的"对第一变元线性"内积约定下，$\langle B,-2iB\rangle$ 应为 $-2i\lVert B\rVert_2^2$，原文写作 $2i\lVert B\rVert_2^2$；两种符号下"等于零强制 $B=0$"均成立，结论不受影响。详见正文 §8 末段与 §12，此处仅登记出处，属素材侧事项。
+      277|
+
+=== D382 L40 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=497
+       37|
+       38|第三条错路：用列 Gram 逐点展开。这一步我一开始觉得最自然：$g_H(\alpha)$ 就是六列的乘积，取"三正三负"的和；把六列 $\{h_0,\ldots,h_5\}$ 之间所有 Gram 关系 $\langle h_i,h_j\rangle=0$ 展开，看看能不能直接凑出 $g_H(\alpha)$。凑到一半就发现：$g_H(\alpha)$ 里出现的每一项都是"六个不同列的下标乘上 $+1/-1$ 的六次幂"，六列全用上了，Gram 关系只能约束两列的内积；要把六列全约束住，需要三阶、四阶、五阶、六阶的关联函数，这些都不是正交关系给的。到这里我就明白"单矩阵的列 Gram 到 or
+       39|
+>>>    40|<!-- probe-line-D382 -->
+       41|
+       42|## §3 注入式矩：把列采样与置换对称化
+       43|
+
+=== D389 L49 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=367
+       46|
+       47|三条死路的共同病灶：都试图给因子找"解释"。转折点是接受因子不可解释，只把 $\operatorname{tr}(FG)$ 当唯一信道，先对行因子做局部平均，把它逼进"平方和"的邻域，再拿 §4 的分离泛函去碰。下面按这个新路线一节一节记。
+       48|
+>>>    49|<!-- D389 落盘探针行：建稿后在此追加一行，用于复量字节。 -->
+       50|探针：D389 建稿字节基线 17,617，本行为探针追加行。
+       51|
+       52|## §3 位移 $\rho$ 到底在证明里花掉在哪
+
+=== D431 L226 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=227
+      223|
+      224|末了再核一遍三件事：主定理（`sections/introduction.tex:31-44`）的条件 $\mu>0$ 与 $3\lambda+2\mu>0$ 在链条里各有明确去处，前者供 $\sqrt{m}$ 规范化与 $P^\theta=2mD+(Dm)$ 的首系数非退（`sections/transport-matching.tex:11-15` 与 `sections/physical-amplitudes.tex:52`），后者经 $\lambda+\mu>\mu/3>0$ 供 Tan-Liu 接入（`sections/boundary-reduction.tex:16-17`）；$
+      225|
+>>>   226|<!-- D431 协议探针行：仅用于 Edit 落盘活性验证，不属于正文内容 -->
+      227|
+
+=== D436 L362 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=363
+      359|复核注(六)。$\#\mathrm{Fix}_0=\#\mathrm{Fix}$ 的完整链条:$M=X\times Y$ 两个因子都单连通($X$ 见 `geometry.tex:336` 到 `geometry.tex:339` 的吹爆保单连通,$Y$ 见 `involution.tex:212` 到 `involution.tex:214`),故 $\pi_1(M)=0$,任何不动点回路自动可缩(`involution.tex:79` 到 `involution.tex:81` 的一般断言加 `involution.tex:269` 到 `involution.tex:271` 的乘积实例
+      360|
+      361|复核注(七)。最小 Chern 数一步的几何底细:$Y$ 中例外曲线 $E_j\cong\mathbb{CP}^1$ 的切丛度为 $2$,法线丛是 $\mathcal{O}(-1)$、度为 $-1$(`involution.tex:232` 到 `involution.tex:237` 的局部吹爆模型直接给出例外曲线的自交为 $-1$),把 $E_j$ 以 $X$ 坐标固定嵌入 $M$ 后,全空间沿它的 $c_1$ 限制就是 $2+(-1)=1$,故 $\langle c_1(TM),\pi_2(M)\rangle$ 含 $1$、正生成元 $\nu=1$(`assembly.tex:28` 的
+>>>   362|<!-- D436 probe: final-append writability check -->
+      363|
+
+=== D437 L362 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=363
+      359|
+      360|勘误续记第二则。§14 的自检句把两条逐字串的落点写成文件第 5、6 行，实测在文件第 15 行与第 16 行。第一条是目录名那条，字符偏移从一千一百三十一起到一千二百三十四；第二条是队列行号那条，字符偏移从一千二百三十五到一千二百四十七，两句都在正文前五千字符之内，规格本身满足，这里申报的只是 §14 那句里的行号笔误，本体侧一次替换即可。台账之后的这两段勘误话仍是第十五节的内文，未另起新节，第十五节仍是文末一节。
+      361|
+>>>   362|<!-- 落盘探针 D437-end，此行仅用于收工复量，非正文内容 -->
+      363|
+
+=== D45 L1 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=819
+>>>     1|<!-- 恢复副本：由 transcript agent-ageneral-purpose-43f5727da3aa401d.jsonl 重放 Write/Edit 序列重建（2026-10-08 18:05）。原稿被重复派遣的 agent 用 Write 覆盖丢失。 -->
+        2|# D45 Auslander–Reiten 猜想的显式反例：我把两个扭转的差做成删 Ext 的刀
+        3|
+        4|对象论文：`An explicit counterexample to the Auslander--Reiten conjecture`（OpenAI，2026-09-23）。
+
+=== D457 L59 occ=1 close_on_line=1 backticks=0 whole_line=True file_lines=284
+       56|极点引理 (`covers.tex:245-253`)：$\sigma\in H^0(Y,\omega_Y(R+D_h))$，$\Omega=\operatorname{res}_R(\sigma)\in H^0(R,\omega_R(D_h))$，两者同权 $a$、同特征标 $\chi$。证明逐赋值算阶：$\operatorname{ord}_F(\sigma)+1=eA_{Z,\Delta_Z}(v)$ (`covers.tex:256-264`)，lc 让右边非负，阶是整数，所以极点至多单极，且极点只出现在 $E+H_Z$ 之上。$D_h$ 的定义在这里显出必要性：$E\cap H_Z$
+       57|
+       58|残余注入 (`covers.tex:290-303`)：乘 $\Omega$ 后拉回给出导出范畴里的分裂单射 $\mathcal O_E\to\mathbf R(q_R)_*\omega_R(D_h)$，于是对每个 $i\ge0$ 有单射 $R^ig_*\mathcal O_E\hookrightarrow R^ih_*\omega_R(D_h)$，并把拉回权抬高 $a$。证明分三步。第一步特征标层恒等式 $(\rho_*\omega_Y(D_h))_\chi=\sigma\cdot\mathcal O_Z(-E)$ (`covers.tex:306-329`)：$\chi$-形式除以 $\s
+>>>    59|<!-- D457 落盘探针占位行 -->
+       60|
+       61|## §7 边界图上的过滤模与最低层
+       62|
+

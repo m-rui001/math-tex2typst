@@ -1,0 +1,124 @@
+notes=734 flagged=123
+D02-Kaplansky直接有限性反例-特征2.md | hdr=2 | led=1 hdr=2 sep=2
+D03-VlasovMaxwell整体经典解.md | hdr=2 | led=1 hdr=2 sep=2
+D04-乘性函数二点关联.md | hdr=2 | led=1 hdr=2 sep=2
+D05-算术级数拟多项式界.md | hdr=2 | led=1 hdr=2 sep=2
+D06-pi无理指数为2.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D07-量子Heisenberg铁磁体自发磁化.md | hdr=2 | led=1 hdr=2 sep=2
+D08-Mezard-Parisi公式.md | hdr=2 | led=1 hdr=2 sep=2
+D09-MaxCut最优NP难度.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D103-Landau-Siegel零点的均匀排除：加权环面jet与绝对零点间隙的反推笔记.md | sep=3 | led=1 hdr=1 sep=3
+D104-单折Diophantine表示：幂关系与椭圆曲线互定义性的反推笔记.md | ledsec=2 | led=2 hdr=1 sep=2
+D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.m | sep=4 | led=1 hdr=1 sep=4
+D107-唯一博弈定理：从约束图与可判定性到定理11机器化的反推笔记.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D109-Falconer距离猜想全维版：角增益与递归装配的反推笔记.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D111-复群环的Bass迹猜想：滤链手术与右射影消没的反推笔记.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D145-复杂矩阵乘法低于2.258与矩形界：证书层级与标签补全的反推笔记.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D149-有限张量节省与精确Fourier电路：价格反证路线的亲历笔记.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D151-中点透镜的树范数尾部控制：联合预算与对消比较的反推笔记.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D155-实L1独立乘积的averaged中点模与AUC重范化障碍.md | ledsec=3 | led=3 hdr=1 sep=1
+D18-Tachikawa第二猜想反例.md | hdr=2 | led=1 hdr=2 sep=1
+D183-一条平面尾迹顶穿Kohn-Sham系综表示.md | ledsec=2 | led=2 hdr=1 sep=1
+D189-固定子句长度下随机SAT阈值的极限存在性.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D207-Hadwiger猜想反例的二进制构造与四洞强制.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D217-方向零一律的有限程依赖证明路线复盘.md | ledsec=3 | led=3 hdr=1 sep=1
+D234-Heilbronn三角形下界的幂改进.md | ledsec=4 | led=4 hdr=1 sep=1
+D235-幂节省指数只依赖次数的intersective多项式差集.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D24-Kaplansky拟迹猜想反例.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D246-四变量稳定坐标反例的逆向工程笔记.md | ledsec=2 | led=2 hdr=1 sep=1
+D25-Crouzeix完整不等式直接证明.md | ledsec=3 hdr=4 | led=3 hdr=4 sep=2
+D254-弱无序Anderson模型的绝对连续谱.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D26-加倍Hilbert子集无双Lipschitz有限维嵌入.md | ledsec=2 | led=2 hdr=1 sep=1
+D266-几乎线性编辑距离近似方案的反推.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D268-单元格有界列联表FPRAS的反向推导笔记.md | ledsec=2 | led=2 hdr=1 sep=1
+D27-Fock空间不等式与Laughlin谱隙.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=1
+D28-双曲群无几何CAT0作用.md | hdr=2 | led=1 hdr=2 sep=2
+D280-SLE精确豪斯多夫规范函数的双重对数修正.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D29-Borsuk覆盖断言九维反例.md | ledsec=3 hdr=4 sep=4 | led=3 hdr=4 sep=4
+D292-对数Calabi-Yau边界成分Stein度一致上界的反推笔记.md | ledsec=2 | led=2 hdr=1 sep=1
+D30-负pinched三维Kähler流形无有界全纯坐标.md | ledsec=2 | led=2 hdr=1 sep=1
+D31-非谱形双曲锥.md | ledsec=2 hdr=3 | led=2 hdr=3 sep=1
+D317-任意接近却寻不到共轭酉的分离Cstar代数.md | ledsec=2 | led=2 hdr=1 sep=1
+D32-Tingley问题正解.md | ledsec=2 | led=2 hdr=1 sep=1
+D33-每张图的线性圈与边分解.md | ledsec=2 hdr=3 | led=2 hdr=3 sep=1
+D34-无团图的对数独立数界.md | hdr=3 sep=4 | led=1 hdr=3 sep=4
+D342-临界SK模型单点热浴混合的多项式指数.md | ledsec=2 | led=2 hdr=1 sep=1
+D346-圈团Ramsey数猜想的闭合之路.md | ledsec=2 | led=2 hdr=1 sep=1
+D35-最短公共超串的多项式时间二近似.md | ledsec=2 hdr=2 sep=3 | led=2 hdr=2 sep=3
+D36-投影体体积的单纯形最大反例.md | hdr=2 | led=1 hdr=2 sep=2
+D364-平面Schrödinger端点收敛的H三分之一次幂全程.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D368-时空Penrose不等式的等号与刚性.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D37-Seymour第二邻域猜想证明.md | ledsec=3 hdr=3 sep=3 | led=3 hdr=3 sep=3
+D370-素数次数环面包在任意局部型下的等分布.md | ledsec=2 | led=2 hdr=1 sep=1
+D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md | ledsec=2 | led=2 hdr=1 sep=1
+D377-抽象初等类的最终范畴性谱.md | hdr=2 | led=1 hdr=2 sep=2
+D38-Jacobsthal函数二次界.md | hdr=10 | led=1 hdr=10 sep=1
+D39-光滑度量无局部等距浸入三维空间.md | ledsec=2 hdr=5 sep=5 | led=2 hdr=5 sep=5
+D40-单叶函数严格逆一次幂界.md | ledsec=2 | led=2 hdr=1 sep=1
+D41-敏感度与块敏感度的超二次分离.md | ledsec=3 hdr=3 | led=3 hdr=3 sep=2
+D410-素数2处的Fontaine-Mazur模性.md | ledsec=2 | led=2 hdr=1 sep=1
+D42-无挠群代数含零因子.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=1
+D43-无挠双曲群非残余有限.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=1
+D431-光滑各向同性弹性逆问题的全局唯一性.md | ledsec=2 | led=2 hdr=1 sep=1
+D44-小finitistic维数无穷的代数.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D45-Auslander-Reiten猜想显式反例.md | ledsec=2 | led=2 hdr=1 sep=1
+D46-复仿射空间消去律失效.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=1
+D461-特征零对数丰度：带号边界、形式提升与Frobenius比对.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D47-无共轭点但无非正曲率度量的三流形.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=1
+D472-次临界FK与生成树平面图的度量测度极限.md | ledsec=2 | led=2 hdr=1 sep=1
+D475-半正伴随除子的极小度量与内部单射性.md | hdr=2 | led=1 hdr=2 sep=2
+D48-矩阵乘法九四分之次.md | ledsec=2 hdr=5 | led=2 hdr=5 sep=1
+D49-中心圆盘极大算子的端点梯度界.md | ledsec=4 hdr=3 | led=4 hdr=3 sep=2
+D50-非坐标多项式与三维仿射零纤维.md | ledsec=2 | led=2 hdr=1 sep=1
+D503-奇偶提升与有界袋见证.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D51-无限有限表示单可均群.md | ledsec=2 hdr=7 sep=7 | led=2 hdr=7 sep=7
+D514-大素数间隙的正下密度.md | ledsec=2 | led=2 hdr=1 sep=1
+D52-c0的双Lipschitz吸收而无线性拷贝.md | ledsec=3 hdr=2 | led=3 hdr=2 sep=2
+D53-Artin群无几何CAT0作用.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D530-定量近Kerr演化与一般C2未来不可延伸.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D531-稀释硬球玻色气体耗竭动量分布的证明之路.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D533-三角胞腔的精度账本.md | hdr=2 | led=1 hdr=2 sep=2
+D534-Siegel三维簇曲线中的四元数除法点.md | ledsec=2 | led=2 hdr=1 sep=1
+D538-蜂窝多边形长度律的径向转移证明路线.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D545-阿瑟滤过的有理性：从幂零奇性支集到矩量判据.md | ledsec=2 | led=2 hdr=1 sep=1
+D548-对数卡拉比-丘纤维化的相对分母与有效线性系统.md | ledsec=2 | led=2 hdr=1 sep=1
+D559-次一自对偶随机集群界面的共形极限.md | ledsec=2 | led=2 hdr=1 sep=1
+D560-正规射影簇的半代数万有覆叠分类.md | ledsec=2 | led=2 hdr=1 sep=2
+D564-二维O4模型的锐利质量界.md | ledsec=2 | led=2 hdr=1 sep=1
+D57-两个拟阵公共基的近似计数.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D578-包络面积与刚性视角下的时空彭罗斯不等式.md | ledsec=4 hdr=4 sep=4 | led=4 hdr=4 sep=4
+D605-紧凯勒四维上广义对数典范翻转终止：难度分支界与全局位的反推笔记.md | hdr=2 | led=1 hdr=2 sep=2
+D61-choiceless带计数P时间不含P时间.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D622-轴对称电真空外部克尔-纽曼-彭罗斯不等式.md | ledsec=2 | led=2 hdr=1 sep=1
+D623-素数三处的凯尔韦尔不变量问题.md | ledsec=3 | led=3 hdr=1 sep=1
+D625-一般凸体的马勒猜想.md | ledsec=2 | led=2 hdr=1 sep=1
+D627-数域上的Margulis-Platonov猜想.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D629-编码路径与两尺度组合实现拟线性归约.md | ledsec=2 | led=2 hdr=1 sep=1
+D63-三维平铺单胞无完全周期平铺.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D634-正特征受限几何朗兰兹等价.md | ledsec=2 | led=2 hdr=1 sep=1
+D64-装箱问题的加性难度与无界配置间隙.md | ledsec=2 | led=2 hdr=1 sep=1
+D640-最后的非零悬挂与稳定球形类.md | ledsec=2 | led=2 hdr=1 sep=1
+D644-算术对应范畴与格因子稳定恢复研究笔记.md | ledsec=3 | led=3 hdr=1 sep=1
+D65-渐近中点一致凸与树空间的无界菱形畸变.md | ledsec=2 | led=2 hdr=1 sep=1
+D67-条件坐标扫描与解析迁移.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D68-相容性熵与Thorp扫描的谱.md | ledsec=4 hdr=4 sep=4 | led=4 hdr=4 sep=4
+D69-立方格上的临界键与位渗流.md | ledsec=3 | led=3 hdr=1 sep=1
+D691-二进主部BSD公式在Selmer余秩至多一.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D701-随机均值收益博弈的确定性拟多项式时间.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D71-完美匹配多面体的熵与面维数.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D711-球形Laughlin能隙一致稳定性的反推.md | ledsec=3 hdr=3 sep=3 | led=3 hdr=3 sep=3
+D716-一致对数饭高纤维化与有界模空间分母.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D736-弱纯无限性与O无穷吸收.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D74-任意极化曲面上的极大Seshadri常数.md | ledsec=2 | led=2 hdr=1 sep=1
+D741-临界Liouville量子球面的面积标记与q等于4随机平面图几何极限.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D75-vanDerWaerden数的定量超指数下界.md | ledsec=2 | led=2 hdr=1 sep=1
+D76-非平凡Markov型迫使超反身.md | ledsec=3 hdr=3 | led=3 hdr=3 sep=2
+D768-归一化体积间隙在四维.md | ledsec=2 | led=2 hdr=1 sep=1
+D80-均值对策博弈随机化准多项式求解的支撑预算递归.md | ledsec=2 | led=2 hdr=1 sep=2
+D82-分离电流与密度分裂-四维tamed推compatible笔记.md | ledsec=3 hdr=2 | led=3 hdr=2 sep=2
+D83-次临界Hénon-Lane-Emden猜想的区间压力证明.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md | hdr=2 | led=1 hdr=2 sep=2
+D87-图灵度刚性猜想与四值复原.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D88-截断、树与部分圆柱：同伦假设组合路线的亲历笔记.md | ledsec=2 hdr=2 | led=2 hdr=2 sep=2
+D91-短埃及分数最小项数的双重对数阶.md | ledsec=2 | led=2 hdr=1 sep=2
+D96-残差球上的记忆与样本下界：无噪高斯回归中 streaming learner 的反推笔记.md | ledsec=2 | led=2 hdr=1 sep=1

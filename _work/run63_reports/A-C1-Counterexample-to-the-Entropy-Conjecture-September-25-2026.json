@@ -1,0 +1,30 @@
+{
+  "paper": "A-C1-Counterexample-to-the-Entropy-Conjecture-September-25-2026",
+  "ok": true,
+  "typ_lines": 437,
+  "included_pdf_pages": 0,
+  "formulas": 450,
+  "math_failed": 0,
+  "labels": 56,
+  "equations": 31,
+  "theorems": 1,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_refused": 1
+  },
+  "samples": {
+    "formulas": "450",
+    "cetz_refused": "\\begin{tikzpicture}[ phase/.style={draw=black!65,rounded corners=2pt,align=center, minimum height=1.25cm,text widt"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-C1-Counterexample-to-the-Entropy-Conjecture-September-25-2026.tex"
+}

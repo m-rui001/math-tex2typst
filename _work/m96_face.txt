@@ -1,0 +1,21 @@
+bare `/` in body maths: 19318 sites over 673 papers
+   relation      sites=11112   papers=647  spaced=11111  source-frac matched yes=1796 no=9315 no-source=1
+   symbol        sites=5004    papers=581  spaced=5003   source-frac matched yes=863 no=4141 no-source=0
+   word          sites=3010    papers=500  spaced=3010   source-frac matched yes=330 no=2680 no-source=0
+   last-in-span  sites=192     papers=122  spaced=192    source-frac matched yes=20 no=172 no-source=0
+
+runaway (denominator continues past the atom): 19126 sites over 673 papers
+   A-C1-Counterexample-to-the-Entropy-Conject word      $ h_(upright("top")) \( f \) = lim_(epsilon arrow.b 0) limsup_(n arrow.r oo) 1 / n log s_f \( n \, epsilon \) . $
+   A-C1-Counterexample-to-the-Entropy-Conject word      $ F_(ell \, m) \( t \, z \) = L^(1 - m) / 10 alpha \( t \) beta_ell \( T_m \( t \, z \) \) Phi_(2^(m + 1)) \( z \) . $
+   A-C1-Counterexample-to-the-Entropy-Conject relation  $ \| U_ell \( t \, z \) \| lt.eq 1 / 10 sum_(m = 1)^oo L^(1 - m) = frac(L, 10 \( L - 1 \)) . $
+   A-C1-Counterexample-to-the-Entropy-Conject symbol    $ \| z_i \| > 1 / 2 . $
+   A-C1-Counterexample-to-the-Entropy-Conject symbol    $ \| w_u \| lt.eq frac(\| I \|, 10) L^(u - j) lt.eq 1 / 2 . $
+   A-C1-Counterexample-to-the-Entropy-Conject relation  $ limsup_(n arrow.r oo) 1 / n log s_X \( n \, epsilon \) lt.eq frac(log 2 + log P \( m \) + tau log Q \( m \), m) . $
+   A-C1-Counterexample-to-the-Entropy-Conject relation  $ limsup_(m arrow.r oo) 1 / m log P \( m \) = 0 \, $
+   A-Capacity-Criterion-for-Four-State-Potts- relation  $ a_n \( T \, lambda \) = bb(E) thin "TV" #scale(x: 120%, y: 120%)[\(] bb(P) \( sigma_rho in dot.op divides sigma_(L_n) \) \, sans(u) #scale(x: 120%, 
+   A-Capacity-Criterion-for-Four-State-Potts- relation  $ A \( p \) = 4 \| p - sans(u) \|^2 \, #h(2em) 0 lt.eq A \( p \) lt.eq 3 \, #h(2em) 1 / 8 A \( p \) lt.eq "TV" \( p \, sans(u) \) lt.eq 1 / 2 sqrt(A \
+   A-Capacity-Criterion-for-Four-State-Potts- word      $ A \( p \) = 4 \| p - sans(u) \|^2 \, #h(2em) 0 lt.eq A \( p \) lt.eq 3 \, #h(2em) 1 / 8 A \( p \) lt.eq "TV" \( p \, sans(u) \) lt.eq 1 / 2 sqrt(A \
+   A-Capacity-Criterion-for-Four-State-Potts- relation  $ 1 / 8 m \( mu \) lt.eq bb(E) thin "TV" \( p \, sans(u) \) lt.eq 1 / 2 sqrt(m \( mu \)) . $
+   A-Capacity-Criterion-for-Four-State-Potts- word      $ 1 / 8 m \( mu \) lt.eq bb(E) thin "TV" \( p \, sans(u) \) lt.eq 1 / 2 sqrt(m \( mu \)) . $
+
+wrote E:\math\_work\m96_face.tsv

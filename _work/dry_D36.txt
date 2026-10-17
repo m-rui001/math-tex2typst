@@ -1,0 +1,21 @@
+################ D36  (D36-投影体体积的单纯形最大反例.md)
+before: bytes=115172 lines=839
+ROW line=600  sites=2  pipes 8->6  $=0(parity even)
+OLD| | κ_j | \|B₂^j\| | :52-53 | 只在 Lemma 4 逼近段界内出现(:288) | 不参与最终比值；纯分析机器 |
+NEW| | κ_j | \lvert B₂^j\rvert | :52-53 | 只在 Lemma 4 逼近段界内出现(:288) | 不参与最终比值；纯分析机器 |
+ROW line=601  sites=4  pipes 10->6  $=0(parity even)
+OLD| | \|T_d\| | 1/d! | :315 | R 分母 \|T_d\|^{d−1} | 错则 c_d 全错 |
+NEW| | \lvert T_d\rvert | 1/d! | :315 | R 分母 \lvert T_d\rvert^{d−1} | 错则 c_d 全错 |
+ROW line=602  sites=2  pipes 8->6  $=0(parity even)
+OLD| | \|ΠT_d\| | (d+1)/((d−1)!)^d | :316 | R 分子 | d+1 来自立方体加线段的纤维论证(:336-345) |
+NEW| | \lvert ΠT_d\rvert | (d+1)/((d−1)!)^d | :316 | R 分子 | d+1 来自立方体加线段的纤维论证(:336-345) |
+ROW line=603  sites=2  pipes 8->6  $=0(parity even)
+OLD| | c_d | (d+1)d^d/d! | eq:functional(:57) | 逐维 benchmark | 化简链在 :351-352；d=3 给 18 与 Chen et al 吻合(:78-79)，d=2 给 6（图注面积 3 ÷ \|T₂\|=1/2）；渐近 e^d√(d/2π)（我方 Stirling 复算，c₁₀=30 313.05 对 e^10√(10/2π)=27 788 偏差即修正项） |
+NEW| | c_d | (d+1)d^d/d! | eq:functional(:57) | 逐维 benchmark | 化简链在 :351-352；d=3 给 18 与 Chen et al 吻合(:78-79)，d=2 给 6（图注面积 3 ÷ \lvert T₂\rvert=1/2）；渐近 e^d√(d/2π)（我方 Stirling 复算，c₁₀=30 313.05 对 e^10√(10/2π)=27 788 偏差即修正项） |
+after: bytes=115217 (delta +45) lines=839 rows_fixed=4 sites_fixed=10 sites_registered=0
+[DRY] nothing written to the note
+D36 file-count \lVert  = 4
+D36 file-count \lvert  = 26
+D36 file-count \mid  = 1
+D36 file-count \upharpoonright = 0
+D36 file-count \Vert  = 0

@@ -1,0 +1,38 @@
+== A  escapes inside $...$ on the product page (723 papers carry at least one)
+   canvas   \/     spans=12    occurrences=12     papers=4
+   canvas   \(     spans=168   occurrences=202    papers=27
+   canvas   \)     spans=168   occurrences=202    papers=27
+   canvas   \[     spans=18    occurrences=18     papers=4
+   canvas   \]     spans=18    occurrences=18     papers=4
+   canvas   \|     spans=16    occurrences=41     papers=14
+   canvas   /      spans=267   occurrences=286    papers=125
+   body     \/     spans=103725 occurrences=124769 papers=719
+   body     \(     spans=298233 occurrences=492080 papers=723
+   body     \)     spans=299043 occurrences=493154 papers=723
+   body     \[     spans=29500 occurrences=34899  papers=715
+   body     \]     spans=28563 occurrences=33829  papers=714
+   body     \|     spans=50462 occurrences=125096 papers=712
+   body     /      spans=14372 occurrences=19320  papers=673
+
+== B  the same control symbols in the flat sources
+   \/     sites=5      papers=5
+   \(     sites=290253 papers=436
+   \)     sites=290133 papers=426
+   \[     sites=86528  papers=722
+   \]     sites=85704  papers=722
+   \|     sites=43291  papers=498
+   /      sites=174821 papers=723
+
+== C  attribution: is the product's `\/` the author's division slash or his italic correction?
+   Determination-of-a-metric-and-a-unitary-conn source `\/`=1  product `\/` canvas=0 body=112  product bare `/`=29
+        site: ]{natbib} \usepackage{url} \def\UrlBreaks{\do\/\do-\do.\do_} \Urlmuskip=0mu plus 1mu \usepac
+   Failure-of-rational-injectivity-for-maximal- source `\/`=1  product `\/` canvas=0 body=22  product bare `/`=1
+        site: {flafter} \usepackage{url} \def\UrlBreaks{\do\/\do-\do.\do_} \Urlmuskip=0mu plus 1mu \usepac
+   Generic-Future-Inextendibility-with-Square-I source `\/`=1  product `\/` canvas=0 body=130  product bare `/`=36
+        site: r=blue!45!black]{hyperref} \def\UrlBreaks{\do\/\do-\do.} \newcommand{\articleid}[1]{\begingr
+   Numerical-Semiampleness-of-Nef-Adjoint-Divis source `\/`=1  product `\/` canvas=0 body=54  product bare `/`=9
+        site: r=blue!50!black]{hyperref} \def\UrlBreaks{\do\/\do-\do.} \numberwithin{equation}{section} \n
+   Universal-optimality-of-the-triangular-latti source `\/`=1  product `\/` canvas=0 body=358  product bare `/`=87
+        site: r=blue!45!black]{hyperref} \def\UrlBreaks{\do\/\do\-} \hypersetup{pdftitle={Universal optima
+
+   products: escaped `\/` 124781 over 719 papers (canvas 12/4, body 124769/719) ; bare `/` in maths 19606 over 675 papers

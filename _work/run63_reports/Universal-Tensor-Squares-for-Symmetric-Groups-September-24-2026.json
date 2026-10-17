@@ -1,0 +1,34 @@
+{
+  "paper": "Universal-Tensor-Squares-for-Symmetric-Groups-September-24-2026",
+  "ok": true,
+  "typ_lines": 1018,
+  "included_pdf_pages": 0,
+  "formulas": 802,
+  "math_failed": 0,
+  "labels": 109,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 2,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "cetz_refused": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "802",
+    "cetz_refused": "\\begin{tikzpicture}[x=.31cm,y=-.31cm,every node/.style={font=\\small}] \\foreach \\row/\\width in {1/10,2/9,3/7,4/6,5/5,6/4",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "[WARNING] Could not load include file ../verification/code/capacity_checks.py at E:\\math\\_work\\flat\\_work_tex\\Universal-Tensor-Squares-for-Symmetric-Groups-September-24-2026.tex line 2640 column 17\n[W",
+  "packages_unsupported": [
+    "listings"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `gt.tri` is deprecated, use `gt.closed` instead\n   ┌─ \\\\?\\E:\\math\\typst\\Universal-Tensor-Squares-for-Symmetric-Groups-September-24-2026\\main.typ:82:184\n   │\n82 │ All representations are finite-dimensional over $bb(C)$. A partition is padded with zeros when needed; $lambda^t$ denotes its conjugate. For partitions of the same integer, $lambda gt.tri.eq mu$ means $sum_(i lt.eq k) lambda_i gt.eq sum_(i lt.eq k) mu_i$ for every $k$. Conjugation reverses dominance. Every symmetric-group representation is semisimple, every Specht module is self-dual, and $S^lambda ⊗ \"sgn\" tilde.equiv S^(lambda^t)$. We use the standard Specht construction, Young’s rule, branching, Schur–Weyl duality, and the Littlewood–Richardson and Pieri rules [10,6,15]. Their precise consequences needed below are recorded here.\n   │                                                                                                                                                                                         ^^^\n\nwarning: `gt.tri` is deprecated, use `gt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Universal-Tensor-Squares-for-Symmetric-Groups-September-24-2026\\main.typ:794:422\n    │\n794 │ Next construct a collection $cal(C)$ for the components other than the big pair. Write $u = c + 3 + s$, and let $cal(G)$ consist of the partitions of $u$ with at most three rows obtained from a partition of $c$ with even row lengths by successively adding horizontal strips of sizes $3$ and $s$. Proposition 22 supplies all of $cal(G)$ on the blocks of lengths at most three. For partitions of equal size, write $alpha gt.tri.eq beta$ for dominance of row lengths. Retain a partition $a$ of $u$ with at most three rows if\n    │                                                                                                                                                                                                                                                                                                                                                                                                                                       ^^^\n\nwarning: `gt.tri` is deprecated, use `gt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Universal-Tensor-Squares-for-Symmetric-Groups-September-24-2026\\main.typ:796:11\n    │\n796 │ $ alpha gt.tri.eq a quad arrow.r.double quad alpha in cal(G) quad upright(\"for every \") alpha tack.r u upright(\" with at most three rows\") . quad \"(6.8)\" $ <eq:capacity-low-mask>\n    │            ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 3,
+  "source": "E:\\math\\_work\\flat\\Universal-Tensor-Squares-for-Symmetric-Groups-September-24-2026.tex"
+}

@@ -1,0 +1,36 @@
+==== D26  mtime=2026-10-14 21:05:27 (73883 s ago)  size=188412 bytes  lines=1270
+   plain count \inner                   4
+   plain count rangleG                  0
+   -- current text of the censused lines --
+   L372  |        -2\inner{a}{\langle G\rangle-a}.
+   L376  | 直接展开验证：$\langle\|G-a\|^2\rangle=\langle\|G\|^2\rangle-2\inner a{\langle G\rangle}+\|a\|^2$，再把 $-2\inner a{\langle G\rangle}+\|a\|^2$ 拆成 $-\|a\|^2-2\inner a{\langle G\rangle-a}$，与 tex 形式一致。素材特别注明"论文写 $\langle\|G\|^2\rangle-\norm a^2-\ldots$，即 $-\norm a^2$ 项来自展开常数项"，我按上面两步核对通过。它的意义是把"$L^2$ 偏差"分解成三样可分别
+
+==== D30  mtime=2026-10-15 12:22:10 (18881 s ago)  size=136494 bytes  lines=1019
+   plain count \math P                  0
+   plain count E:\math                  3
+   -- current text of the censused lines --
+   L827  | 一处取证数据我必须如实记下并解释：素材头部写"$E:\math\lean\OAI\Geometry\Kahler$ 108 个 `.lean`、约 18,688 行"，而素材 §4.1 表格又写"36 个 `.lean`、约 6000 行，全部 sorry-free"。我实测该目录 `ls *.lean | wc -l` = 119 个文件、`cat *.lean | wc -l` = 18,688 行。`[推测]` 差异来源：36/6000 那一栏统计的是"直接对应论文构件的核心模块子集"（`Main`、`Definitions`、`Obstruction`、各 `Base*` 核心、`Ha
+
+==== D77  mtime=2026-10-14 08:59:43 (117428 s ago)  size=188527 bytes  lines=558
+   plain count \two                     3
+   -- current text of the censused lines --
+   L496  | 长度侧的分次母函数带 $v$: $L(u,v)=\sum_{k\ge1}\frac{\mu(k)}{k}\log\frac{1}{1-vV(u^k)}$, 系数 $\sum_rd_{n,r}u^nv^r$ 里 $v$ 就是生成元枚数即 $B$-count。上界一侧的等号在 cor:dimension-bound (05-image.tex:386) 是逐 $r$ 注入 $\operatorname{gr}_F^r\overline L_n\lhook\joinrel\to\mathfrak f_{\mathrm{odd},n,r}$ (05:390-392), 权 $n$ 上求和吃 $\sum
+   L552  | 完成性一侧 $\widehat W=\prod_nW_n$ (01:39) 用逐权有限维 (08:207) 与固定权里只出现有限多对正权 (08:209-210); $\operatorname{Lie}_\mathbb Q\langle e_3,e_5,\ldots\rangle\to V$ 逐权给 $\sigma_{2k+1}$ (08:192-196), Hall 基像独立由前导项对账 (08:198-200), 于是同构在权分次拓扑下连续, 与它的逆互成连续映射 (08:211-212)。权 $1,2$ 的入口: $\dim_\mathbb Q W_1=\dim_\mathbb Q W
+
+==== D106  mtime=2026-10-15 17:34:10 (161 s ago)  size=215519 bytes  lines=3121
+   plain count \root                    1
+   plain count \mathtt{root}            8
+   -- current text of the censused lines --
+   L1750 | （这里的 $8a_4$ 就是 $2b_0$，公共部分；奇次部分的分母 $(\mathtt{root}\ h)^3$ 与 $u^{3/2}$ 对应），
+   L1873 | 从 $a_3<0,a_1\ge0,a_5\ge0$ 得 $0<\text{third }a\,h$，分母 $\mathtt{root}\ h$ 的幂用 `div_pos`+`nlinarith`），
+   L1913 | $8a_4+(-a_1)/(\mathtt{root}\ T)^3\le\text{curvature }a\,h$，即 $\delta$ 的具体形式取为
+   L1914 | $(-a_1)/(\mathtt{root}\ T)^3>0$，用 `root h\le\root T` 与 `pow_le_pow_left₀`、`div_le_div` 单调化，
+
+==== D238  mtime=2026-10-15 17:34:09 (162 s ago)  size=70729 bytes  lines=884
+   plain count \math P                  1
+   plain count \mathcal Z_{\math P}     1
+   plain count \mathcal Z_{\mathcal P}  3
+   -- current text of the censused lines --
+   L298  | $\lvert\mathcal Z_{\mathcal P}((g_v))\rvert\le\prod_v Z_{\mathcal P}(g_v)^{1/d}$。证明的第一层：乘积律 $\mu_{\mathcal P}$ 在
+   L744  | $\mathcal Z_{\math P}$，应为 $\mathcal Z_{\mathcal P}$；其二，§7 末段
+

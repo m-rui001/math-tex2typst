@@ -1,0 +1,25 @@
+D80 bytes=220411 lines=2237 secs=8 shape=bare-number rows=67 math=7010 spec=121 problems=[] dir_ok=True dir=Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026
+D95 bytes=218577 lines=1720 secs=8 shape=with-section-sign rows=52 math=7028 spec=111 problems=[] dir_ok=True dir=Replacing-Gaussian-observations-in-memory-constrained-inference-Septem
+D93 bytes=235185 lines=1154 secs=9 shape=with-section-sign rows=49 math=5805 spec=46 problems=[] dir_ok=True dir=Directional-transience-implies-ballisticity-September-23-2026
+D90 bytes=180136 lines=1210 secs=9 shape=with-section-sign rows=30 math=4589 spec=82 problems=[] dir_ok=True dir=Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026
+D89 bytes=146742 lines=1892 secs=9 shape=with-section-sign rows=33 math=2210 spec=56 problems=[] dir_ok=True dir=Unitarizability-Implies-Amenability-for-Countable-Groups-September-23-
+D81 bytes=125123 lines=910 secs=9 shape=with-section-sign rows=36 math=3158 spec=35 problems=[] dir_ok=True dir=Quadratic-Stabilization-of-the-Canonical-Foulkes-Howe-Map-September-25
+D92 bytes=84688 lines=372 secs=9 shape=with-section-sign rows=31 math=2733 spec=65 problems=[] dir_ok=True dir=Subpolynomial-dimension-reduction-in-Lp-September-23-2026
+D84 bytes=218231 lines=1029 secs=10 shape=with-section-sign rows=65 math=5480 spec=109 problems=[] dir_ok=True dir=Riesz-transforms-and-uniform-rectifiability-in-higher-codimension-Sept
+D463 bytes=175435 lines=879 secs=10 shape=with-section-sign rows=40 math=5170 spec=0 problems=[] dir_ok=True dir=Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2
+D85 bytes=147750 lines=1172 secs=10 shape=with-section-sign rows=39 math=3591 spec=32 problems=[] dir_ok=True dir=Talagrands-discrete-convexity-conjecture-September-23-2026
+D78 bytes=120552 lines=818 secs=10 shape=with-section-sign rows=35 math=3057 spec=35 problems=[] dir_ok=True dir=The-logarithmic-Brunn-Minkowski-conjecture-September-23-2026
+D94 bytes=99062 lines=334 secs=10 shape=with-section-sign rows=41 math=2498 spec=49 problems=[] dir_ok=True dir=Regular-trajectories-pruning-and-quantum-parity-September-24-2026
+D66 bytes=80304 lines=390 secs=10 shape=bare-number rows=37 math=2438 spec=13 problems=[] dir_ok=True dir=Diamond-distortion-from-midpoint-and-tree-energies-September-27-2026
+D452 bytes=79233 lines=230 secs=10 shape=with-section-sign rows=36 math=2482 spec=1 problems=[] dir_ok=True dir=Invariant-projection-counterexamples-for-every-irrational-rotation-Sep
+D91 bytes=201622 lines=1502 secs=11 shape=with-section-sign rows=50 math=6354 spec=81 problems=[] dir_ok=True dir=Short-Egyptian-fractions-September-25-2026
+D265 bytes=84221 lines=429 secs=11 shape=with-section-sign rows=62 math=2534 spec=6 problems=[] dir_ok=True dir=Ambiently-homeomorphic-isolated-hypersurfaces-of-multiplicities-two-an
+D86 bytes=83404 lines=254 secs=11 shape=with-section-sign rows=35 math=2430 spec=14 problems=[] dir_ok=True dir=The-circulant-Hadamard-conjecture-September-23-2026
+D278 bytes=73000 lines=265 secs=11 shape=with-section-sign rows=40 math=1940 spec=6 problems=[] dir_ok=True dir=An-atomic-certificate-for-triangular-lattice-universal-optimality-Sept
+D769 bytes=122743 lines=784 secs=12 shape=with-section-sign rows=52 math=4414 spec=2 problems=[] dir_ok=True dir=The-ordinary-double-point-gap-in-every-dimension-September-24-2026
+D529 bytes=93079 lines=334 secs=12 shape=bare-number rows=42 math=2526 spec=5 problems=[] dir_ok=True dir=Quadratic-Strong-Operator-Paving-over-Arbitrary-Maximal-Abelian-Subalg
+D175 bytes=92955 lines=250 secs=12 shape=bare-number rows=55 math=2182 spec=10 problems=[] dir_ok=True dir=Subpolynomial-query-complexity-for-well-conditioned-log-concave-sampli
+D12 bytes=83967 lines=577 secs=12 shape=bare-number rows=87 math=1769 spec=15 problems=[] dir_ok=True dir=Paired-states-and-Hamiltonian-cycles-in-cubic-bipartite-planar-graphs-
+D233 bytes=78335 lines=258 secs=12 shape=with-section-sign rows=44 math=2220 spec=11 problems=[] dir_ok=True dir=A-polynomial-time-construction-of-strong-thin-trees-September-23-2026
+D535 bytes=83213 lines=232 secs=14 shape=bare-number rows=45 math=1320 spec=13 problems=[] dir_ok=True dir=Quenched-SLE-Universality-for-Weakly-Disordered-FK-Ising-Interfaces-Oc
+D256 bytes=96584 lines=286 secs=17 shape=with-section-sign rows=44 math=2378 spec=63 problems=['emDash=36', 'ershi=1', 'contrast=1'] dir_ok=True dir=Abundance-in-numerical-dimension-one-for-terminal-threefolds-in-positi

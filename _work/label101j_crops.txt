@@ -1,0 +1,55 @@
+#101j: the rotated labels as pictures -- 300 dpi crops, pgf beside ours
+
+NODE 01  tsv 4  A-Linear-Clock-for-Random-Walk-on-  [anchor=east,rotate=90,red!65!black] at (-0.93,2.45)
+  pgf   91x347 px  ink 21.96 x 83.41 pt
+  ours  97x325 px  ink 23.40 x 78.14 pt
+        content((-0.93, 2.45), [#text(fill: rgb("#a60000"))[uncapped band]], anchor: "east", angle: 90deg, padding: 0.1cm)
+
+NODE 02  tsv 5  A-directional-zero-one-law-under-s  [rotate=90,anchor=south] at (-.45,-1.95)
+  pgf   110x284 px  ink 26.57 x 68.33 pt
+  ours  114x278 px  ink 27.44 x 66.76 pt
+        content((-0.45, -1.95), [progress $-x_1$], anchor: "south", angle: 90deg, padding: 0.1cm)
+
+NODE 03  tsv 6  A-directional-zero-one-law-under-s  [rotate=90,anchor=south] at (-1.0,2.3)
+  pgf   110x215 px  ink 26.44 x 51.83 pt
+  ours  114x209 px  ink 27.44 x 50.30 pt
+        content((-1, 2.3), [height $x_1$], anchor: "south", angle: 90deg, padding: 0.1cm)
+
+NODE 04  tsv 7  Finite-triangular-approximation-of  [anchor=east,rotate=90] at (-1.17,0)
+  pgf   92x275 px  ink 22.09 x 66.24 pt
+  ours  91x273 px  ink 22.00 x 65.67 pt
+        content((-1.17, 0), [$-1 lt.eq y lt.eq 1$], anchor: "east", angle: 90deg, padding: 0.1cm)
+
+NODE 05  tsv 8  Generic-C1-Future-Inextendibility-  [anchor=west,rotate=-63] at (3.7,1.95)
+  pgf   108x149 px  ink 26.11 x 35.88 pt
+  ours  102x142 px  ink 24.59 x 34.21 pt
+        content((3.7, 1.95), [$R_( upright("out") )$], anchor: "west", angle: -63deg, padding: 0.1cm)
+
+NODE 06  tsv 9  Mass-and-covering-exponents-for-fi  [rotate=90,anchor=south] at (3.03,1.47)
+  pgf   110x290 px  ink 26.44 x 69.66 pt
+  ours  113x275 px  ink 27.35 x 66.11 pt
+        content((3.03, 1.47), [return bridge], anchor: "south", angle: 90deg, padding: 0.1cm)
+
+NODE 07  tsv 10  Smooth-Anisotropic-Uniqueness-in-t  [rotate=90,anchor=south] at (-0.15,1.68)
+  pgf   112x425 px  ink 26.99 x 102.02 pt
+  ours  114x398 px  ink 27.44 x 95.68 pt
+        content((-0.15, 1.68), [$D_2$ \(second variable\)], anchor: "south", angle: 90deg, padding: 0.1cm)
+
+NODE 08  tsv 11  Smooth-Anisotropic-Uniqueness-in-t  [rotate=45,anchor=south,inner sep=3pt] at (2.011,0.861)
+  pgf   143x143 px  ink 34.50 x 34.50 pt
+  ours  143x143 px  ink 34.44 x 34.44 pt
+        content((2.011, 0.861), [$r_ delta (y)$], anchor: "south", angle: 45deg, padding: 0.1058cm)
+
+NODE 09  tsv 12  The-Boltzmann-Grad-limit-for-stabl  [rotate=90,anchor=south,font=\footnotesize] at (-2.72,1.5)
+  pgf   95x276 px  ink 22.94 x 66.32 pt
+  ours  97x251 px  ink 23.29 x 60.30 pt
+        content((-2.72, 1.5), [#text(size: 8pt)[backward time]], anchor: "south", angle: 90deg, padding: 0.1cm)
+
+NODE 10  tsv 13  uniform-bounds-for-planar-polynomi  [rotate=34,anchor=south] at (1.05,0.96)
+  pgf   167x137 px  ink 40.18 x 33.03 pt
+  ours  170x137 px  ink 40.88 x 33.10 pt
+        content((1.05, 0.96), [$a=b_f$], anchor: "south", angle: 34deg, padding: 0.1cm)
+
+FILED CANVAS  A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Plan#0
+  ours  867x372 px  ink 208.16 x 89.38 pt
+  ctl   910x462 px  ink 218.52 x 111.06 pt

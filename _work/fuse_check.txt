@@ -1,0 +1,13 @@
+D389:110 \bigrvert :: $\mathbb E_m \bigl\lvert (T_y B)(m) - \mathbb E_a B(a) \bigrvert^2 \le \theta_d(k)\, \mathbb E_a \bigl\lvert B(a) - \mathbb E_a B(a) \
+D389:110 \bigrvert :: t^2 \le \theta_d(k)\, \mathbb E_a \bigl\lvert B(a) - \mathbb E_a B(a) \bigrvert^2.$
+D479:358 \bigrvert :: | $\bigl\lvert\text{模型积分}-\text{加权计数}\bigrvert$ | 小于 $\eta$ | sections/02_framework.tex:194-200 | §6.3 两次伸缩的最后一步 | 误
+D511:139 \bigrvert :: 密顿路贡献一个定向（localization.tex:54--70）；由此 $\bigl\lvert[\eta^{k}]\log F_{n}\bigrvert\ge\frac1k\sum_{P_{1},\dots,P_{k}}\prod w(P_{i})\prod I(P_{i},P_{i+1})
+D566:84 \bigrvert :: >\lvert a\rvert$，偶性给出 $\bigl\lvert\int_{-r}^{r}(F_{z}(s-a)-F_{z}(s))ds\bigrvert\leq\lvert a\rvert^{2}\sup_{r-\lvert a\rvert\leq u\leq r+\lvert a\rver
+D328:72 \bigrvert :: 期望。电荷消去引理（rad:identity）断言：对每个偶表，$\mathbb E_0\bigl\lvert\sum_i\mu_i z_i\bigrvert^2=4\bigl(W_2(X)/W_0(X)\bigr)^2$，空表两侧皆零。
+D328:76 \Bigrvert :: $$\sum_{\sum\mu_i=0}\lvert D_+D_-\rvert^2\Bigl\lvert\sum_i\mu_i z_i\Bigrvert^2=2V_2(I).$$
+D328:198 \bigrvert :: 电荷恒等式（radial.tex:166--167）$\mathbb E_0\bigl\lvert\sum_i\mu_iz_i\bigrvert^2=4(W_2/W_0)^2$ 是我唯一用来把维数二整块抹掉的东西，它把 $t^2$ 抬成 $t^3$。我在 §5 已经复述过它的外代数证
+D328:226 \bigrvert :: 定流形不存在，§8 的 $\beta_c$ 无从谈起。电荷恒等式 $\mathbb E_0\bigl\lvert\sum_i\mu_iz_i\bigrvert^2=4(W_2/W_0)^2$ 是把 $t^2$ 抬到 $t^3$ 的唯一代数来源，它若被削弱，谱隙增益消失，同样导致尺度流不转。$\lV
+D245:216 \ranglem :: ；源 $w^a$ 是局部光滑系数乘种子或乘早先辅助场；新辅助场 $y^a=Jw^a-j\sum_l\langle \partial_lw^a\ranglem^{l-1}-j\sum_{b<a}\langle \partial_{y^b}w^a\ranglew^b$（eq:small-field）
+D245:216 \ranglew :: angle \partial_lw^a\ranglem^{l-1}-j\sum_{b<a}\langle \partial_{y^b}w^a\ranglew^b$（eq:small-field）。每条校正都在"预测对角"层面消灭对应收缩项，迹抵消的完整代数在 lem:small-derivati
+D244:177 \sqrtg :: tex:344）；合成每块损失 $300\delta^2$（04-blocks.tex:340-343）；密度到平方根积分的转换不等式 $(\sqrtg-\sqrth)^2\le|g-h|$ 加 Cauchy-Schwarz（04-blocks.tex:356-362）。估计量：均方 $\l
+D244:177 \sqrth :: ）；合成每块损失 $300\delta^2$（04-blocks.tex:340-343）；密度到平方根积分的转换不等式 $(\sqrtg-\sqrth)^2\le|g-h|$ 加 Cauchy-Schwarz（04-blocks.tex:356-362）。估计量：均方 $\le2/\del

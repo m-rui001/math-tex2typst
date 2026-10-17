@@ -1,0 +1,37 @@
+{
+  "paper": "Abundance-in-numerical-dimension-one-for-terminal-threefolds-in-positive-characteristic-September-24-2026",
+  "ok": true,
+  "typ_lines": 1314,
+  "included_pdf_pages": 0,
+  "formulas": 1135,
+  "math_failed": 2,
+  "labels": 142,
+  "equations": 15,
+  "theorems": 8,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 3,
+    "unhandled_div_class:samepage": 1
+  },
+  "samples": {
+    "formulas": "1135",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark",
+    "accsupp"
+  ],
+  "macros_skipped": [
+    "\\newcommandnewcommand",
+    "\\renewcommand\\hookrightarrow"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Abundance-in-numerical-dimension-one-for-terminal-threefolds-in-positive-characteristic-September-24-2026.tex"
+}

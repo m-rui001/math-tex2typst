@@ -1,0 +1,28 @@
+{
+  "paper": "Linear-Variance-of-the-Random-3-SAT-Hitting-Time-October-5-2026",
+  "ok": true,
+  "typ_lines": 348,
+  "included_pdf_pages": 0,
+  "formulas": 244,
+  "math_failed": 0,
+  "labels": 40,
+  "equations": 3,
+  "theorems": 2,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "244"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Linear-Variance-of-the-Random-3-SAT-Hitting-Time-October-5-2026.tex"
+}

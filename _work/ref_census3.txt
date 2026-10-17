@@ -1,0 +1,67 @@
+notes=164 prose_hits_total=4395 by_location={"body": 4347, "head": 18, "table": 30}
+
+LEAD(top15)=[["Lemma", 363], ["Theorem", 199], ["Proposition", 159], ["Equation", 122], ["Section", 74], ["and", 38], ["Corollary", 36], ["satisfying", 15], ["Definition", 14], ["proves", 13], ["from", 9], ["satisfy", 9], ["Appendix", 9], ["Sections", 8], ["Table", 6]]
+
+TOP NOTES:
+D114-二对一博弈的完美完全性：采样与双侧解码归约的反推笔记.md                                      203
+D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md                              122
+D146-度量熵对偶猜想的反例：覆盖数与熵积分的双边分离的反推笔记.md                                    103
+D93-方向瞬态蕴含弹道性反推笔记.md                                                     97
+D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md                                       96
+D90-固定指数的生产链-Yau节点上界幂律反例取证笔记.md                                          86
+D300-带基点行列式纤维上的虚拟局部化与Bloch猜想.md                                          82
+D80-均值对策博弈随机化准多项式求解的支撑预算递归.md                                            82
+D101-欧氏平面不可五色：刚性-谱-调色板三段论证的反推笔记.md                                       81
+D364-平面Schrödinger端点收敛的H三分之一次幂全程.md                                      79
+D97-容量小于4的辛球嵌入极化积：对称Mahler猜想的Gromov宽度路线反推笔记.md                           77
+D142-2NFA补全的指数状态下界：从序反转眼像到嵌套缺失预算的反推笔记.md                                 71
+D107-唯一博弈定理：从约束图与可判定性到定理11机器化的反推笔记.md                                    70
+D137-平面指数第一通过limshape的严格凸与可微：链路逼近与改进界的反推笔记.md                            69
+D75-vanDerWaerden数的定量超指数下界.md                                            63
+D60-模谱均值的有界恢复.md                                                         62
+D25-Crouzeix完整不等式直接证明.md                                                 60
+D51-无限有限表示单可均群.md                                                        59
+D151-中点透镜的树范数尾部控制：联合预算与对消比较的反推笔记.md                                      58
+D163-四次多项式无平方因子值的数域行列式路线与自适应辅助素数.md                                      57
+D64-装箱问题的加性难度与无界配置间隙.md                                                  56
+D242-熵界协方差对数与单纯形不等式.md                                                   53
+D37-Seymour第二邻域猜想证明.md                                                   53
+D132-平面图度量嵌入L1的常数失真：几何生成插值与装配的反推笔记.md                                    50
+D31-非谱形双曲锥.md                                                            50
+D116-有限因子的生成子问题：相对生成与扰动独立性的反推笔记.md                                       48
+D26-加倍Hilbert子集无双Lipschitz有限维嵌入.md                                       47
+D54-Brennan猜想与sharp逆平方积分均值.md                                            47
+D108-完全图交叉数：圆上摆放、相邻手术与逐点验收的反推笔记.md                                       46
+D122-迹投影方法与一致性质Gamma：从有限分拆到非单侧吸收的反推笔记.md                                 46
+D82-分离电流与密度分裂-四维tamed推compatible笔记.md                                    45
+D47-无共轭点但无非正曲率度量的三流形.md                                                  44
+D18-Tachikawa第二猜想反例.md                                                   43
+D56-depth-three布尔电路的平方根指数下界.md                                           41
+D138-对称Mahler猜想的等号情形：零亏量、单纯形与中位分割的反推笔记.md                                38
+D30-负pinched三维Kähler流形无有界全纯坐标.md                                         38
+D35-最短公共超串的多项式时间二近似.md                                                   38
+D68-相容性熵与Thorp扫描的谱.md                                                    38
+D141-弱MTW下的全局支撑与凸单射域：首刀支撑与度展开的反推笔记.md                                    37
+D45-Auslander-Reiten猜想显式反例.md                                            37
+
+SAMPLES:
+D08:35| \begin{theorem}\label{main:theorem}
+D08:36| Under \eqref{model:integrability}--\eqref{model:positivity}, the thermodynamic
+D08:38| \begin{equation}\label{main:formula}
+D08:117| \label{model:edge}\\
+D08:122| \label{model:site-message}
+D08:138| U_{\theta_j}(x_1^j,\ldots,x_{p-1}^j;\eps)\right),\label{model:vs}\\
+D08:139| V_{\rm e}&=C_\theta(x_1,\ldots,x_p).\label{model:ve}
+D08:216| \begin{lemma}[Insertion calculus]\label{tree:insertion}
+D08:221| \eqref{tree:Y-recursion} uses the kernels before insertion.  The new
+D08:222| kernels are \eqref{tree:updated-kernel}.
+D08:230| \begin{equation}\label{tree:density}
+D08:260| \begin{equation}\label{tree:telescoping}
+D08:268| \begin{equation}\label{tree:Q-rule}
+D08:282| \begin{equation}\label{tree:log-series}
+D08:323| \begin{lemma}[Canceled-anchor expansion]\label{tree:extension-expansion}
+D08:328| \begin{equation}\label{tree:mixed-expansion}
+D08:353| \begin{lemma}[Reference-path totals]\label{tree:reference-total}
+D08:359| \begin{equation}\label{tree:one-reference-total}
+D08:365| \begin{equation}\label{tree:K}
+D08:475| \begin{equation}\label{cavity:grid}

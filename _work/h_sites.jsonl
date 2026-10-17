@@ -1,0 +1,33 @@
+{"file":"D31-非谱形双曲锥.md","line":304,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Got function '\\H' with no arguments as su","hUses":1,"body":"\\sum vv^\\H"}
+{"file":"D31-非谱形双曲锥.md","line":1171,"ctx":"TABLE","kind":"INLINE","msg":"KaTeX parse error: Got function '\\H' with no arguments as su","hUses":2,"body":"R-R^\\H=-(z-\\bar z)R^\\H R"}
+{"file":"D31-非谱形双曲锥.md","line":1171,"ctx":"TABLE","kind":"INLINE","msg":"KaTeX parse error: Got function '\\H' with no arguments as su","hUses":1,"body":"M=1+\\Phi(R^\\H R)\\succ0"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":193,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":209,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n\\restrict E"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":209,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":209,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":383,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\sigma=\\theta\\H^n\\restrict L"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":389,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"g=d\\sigma/d\\H^n"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":389,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":391,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":391,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n\\restrict E"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":403,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\sigma=q\\H^n\\restrict L_\\infty"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":447,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":467,"ctx":"QUOTE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\nu=q\\H^n|_L"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":467,"ctx":"QUOTE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n|_L"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":545,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\nu=q\\H^n\\restrict L_\\infty"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":603,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":2,"body":"c\\H^n\\restrict E\\le\\mu\\le C\\H^n\\restrict E"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":603,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n_\\eta(F)\\le C_nC_{\\rm AD}\\mu(U)"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":613,"ctx":"QUOTE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":617,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"(\\log8)\\H^n(E)"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":617,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":619,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":619,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n\\restrict E"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":619,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":633,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\sigma=\\mu+\\H^n\\restrict P"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":705,"ctx":"TABLE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":2,"body":"c\\H^n\\restrict E\\le\\mu\\le C\\H^n\\restrict E"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":705,"ctx":"TABLE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n_\\eta(F)\\le C_nC_{\\rm AD}\\mu(U)"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":939,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\sigma=\\mu+\\H^n\\restrict P"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":943,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":1009,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":1009,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n"}
+{"file":"D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md","line":1009,"ctx":"PROSE","kind":"INLINE","msg":"KaTeX parse error: Expected group as argument to '\\H' ","hUses":1,"body":"\\H^n"}

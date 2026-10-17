@@ -1,0 +1,240 @@
+affected papers = 242  (in-maths \; 217, \enspace 3, \hspace{} 310)
+  CHANGED A-Capacity-Criterion-for-Four-State-Potts-Reconstruction-on-Trees-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED A-Codimension-One-Bound-for-the-Singular-Set-of-a-Stationary-Integral-Varifold-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED A-Coulomb-Ground-State-Density-without-Kohn-Sham-Ensemble-Representation-September-25-2026 1 lines  {'semi': 1}
+  CHANGED A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026 1 lines  {'semi': 1}
+  CHANGED A-Nearly-Quartic-Separation-Between-Randomized-and-Quantum-Query-Complexity-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED A-Power-Saving-for-Polynomial-Differences-at-Prime-Arguments-October-5-2026 3 lines  {'semi': 1, 'hspace': 2}
+  CHANGED A-boundary-field-gap-for-the-spin-one-Heisenberg-chain-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED A-counterexample-to-Hadwigers-conjecture-September-23-2026 3 lines  {'hspace': 3}
+  CHANGED A-counterexample-to-Kaplanskys-quasitrace-conjecture-September-23-2026 3 lines  {'semi': 2, 'hspace': 1}
+  CHANGED A-counterexample-to-the-Colin-de-Verdiere-chromatic-conjecture-September-23-2026 3 lines  {'hspace': 3}
+  CHANGED A-density-uniform-condensate-bound-for-dilute-Bose-gases-September-27-2026 3 lines  {'hspace': 4}
+  CHANGED A-dimension-free-logarithmic-Sobolev-inequality-for-subgaussian-log-concave-measures-September-23-2026 2 lines  {'hspace': 2}
+  CHANGED A-directional-zero-one-law-for-finite-range-dependent-random-environments-October-5-2026 4 lines  {'hspace': 4}
+  CHANGED A-directional-zero-one-law-under-strict-ellipticity-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED A-linear-cycle-and-edge-decomposition-of-every-graph-September-24-2026 1 lines  {'semi': 4}
+  CHANGED A-marked-tensor-obstruction-to-four-dimensional-disk-embedding-September-24-2026 1 lines  {'semi': 2}
+  CHANGED A-negatively-pinched-Kahler-threefold-without-bounded-holomorphic-coordinates-September-25-2026 2 lines  {'hspace': 2}
+  CHANGED A-nine-dimensional-counterexample-to-Borsuks-covering-assertion-September-23-2026 2 lines  {'semi': 3}
+  CHANGED A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED A-power-saving-for-square-difference-free-sets-September-24-2026 2 lines  {'hspace': 2}
+  CHANGED A-quadratic-bound-for-Jacobsthals-function-September-25-2026 1 lines  {'hspace': 1}
+  CHANGED A-radial-continuum-phase-transition-with-algebraic-decay-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED A-sharp-Fourier-certificate-for-planar-circle-packing-September-23-2026 2 lines  {'semi': 1, 'hspace': 1}
+  CHANGED A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026 3 lines  {'hspace': 3}
+  CHANGED A-smooth-three-torus-diffeomorphism-with-simple-Lebesgue-spectrum-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED A-spectral-gap-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026 3 lines  {'hspace': 3}
+  CHANGED A-uniform-Hilbert-transform-estimate-for-Lipschitz-directions-September-25-2026 2 lines  {'hspace': 2}
+  CHANGED Abelian-covers-Gale-correspondences-and-the-Hodge-conjecture-for-powers-September-30-2026 5 lines  {'semi': 10}
+  CHANGED All-temperature-pressure-for-orthogonally-invariant-Ising-spin-glasses-September-25-2026 1 lines  {'hspace': 1}
+  CHANGED Almost-everywhere-Fourier-convergence-in-L-log-L-September-23-2026 5 lines  {'semi': 1, 'hspace': 5}
+  CHANGED Ambiently-homeomorphic-isolated-hypersurface-germs-in-C4-with-multiplicities-four-and-five-September-27-2026 1 lines  {'semi': 2}
+  CHANGED An-Almost-Linear-Approximation-Scheme-for-Edit-Distance-September-24-2026 1 lines  {'semi': 1}
+  CHANGED An-Artin-group-with-no-geometric-CAT-0-action-September-23-2026 3 lines  {'semi': 18}
+  CHANGED An-Endpoint-Gradient-Bound-for-the-Centered-Disk-Maximal-Operator-September-26-2026 1 lines  {'hspace': 1}
+  CHANGED An-FPRAS-for-Cell-Bounded-Contingency-Tables-September-24-2026 2 lines  {'semi': 1, 'hspace': 1}
+  CHANGED An-Isolated-Particle-Pole-for-the-Two-Dimensional-O3-Spin-Field-October-4-2026 1 lines  {'semi': 1}
+  CHANGED An-L3-bound-for-the-trilinear-Hilbert-transform-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED An-algebra-of-infinite-little-finitistic-dimension-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED An-asymptotic-formula-for-the-number-of-totients-September-25-2026 1 lines  {'hspace': 1}
+  CHANGED An-atomic-certificate-for-triangular-lattice-universal-optimality-September-26-2026 1 lines  {'hspace': 1}
+  CHANGED An-exact-Hausdorff-gauge-for-SLE-September-25-2026         1 lines  {'hspace': 1}
+  CHANGED An-explicit-counterexample-to-the-Auslander-Reiten-conjecture-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026 2 lines  {'semi': 4}
+  CHANGED An-integral-scalar-curvature-bound-for-real-simplicial-volume-October-5-2026 2 lines  {'hspace': 2}
+  CHANGED An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026 2 lines  {'hspace': 2}
+  CHANGED Annular-variation-of-the-triangular-Hilbert-transform-at-the-symmetric-point-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED Arithmeticity-of-twisted-finite-correspondences-for-lattices-over-local-fields-September-23-2026 2 lines  {'hspace': 2}
+  CHANGED Asymptotically-minimal-maxima-of-real-Littlewood-polynomials-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED BKT-universality-for-height-and-planar-spin-fields-September-24-2026 4 lines  {'hspace': 3}
+  CHANGED Bi-Lipschitz-Coordinates-at-Regular-Points-of-Noncollapsed-RCD-Spaces-September-25-2026 2 lines  {'hspace': 2}
+  CHANGED Blochs-Conjecture-for-Surfaces-with-pg-equals-q-equals-0-September-24-2026 3 lines  {'semi': 2, 'hspace': 2}
+  CHANGED Bochner-Riesz-Multipliers-in-Three-Dimensions-September-24-2026 2 lines  {'hspace': 1}
+  CHANGED Boundary-graph-deformations-for-the-spacetime-Penrose-inequality-September-27-2026 3 lines  {'hspace': 3}
+  CHANGED Bounded-klt-complements-for-Fano-contractions-September-25-2026 1 lines  {'semi': 1}
+  CHANGED Bounded-scalar-curvature-and-smooth-extension-of-four-dimensional-Ricci-flow-September-24-2026 1 lines  {'semi': 1}
+  CHANGED Buffered-comparison-and-stopping-band-resolution-in-critical-Ising-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Canonical-conformal-limits-of-subcritical-FK-planar-maps-September-24-2026 2 lines  {'hspace': 1}
+  CHANGED Choiceless-polynomial-time-with-counting-does-not-capture-polynomial-time-September-23-2026 2 lines  {'semi': 2}
+  CHANGED Classical-capacity-and-entropy-inequalities-for-generalized-amplitude-damping-September-24-2026 2 lines  {'hspace': 2}
+  CHANGED Compatibility-entropy-and-the-spectrum-of-a-Thorp-sweep-September-26-2026 1 lines  {'hspace': 1}
+  CHANGED Complex-Matrix-Multiplication-Below-2.258-and-Rectangular-Bounds-September-24-2026 6 lines  {'semi': 7}
+  CHANGED Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED Constant-factor-hardness-of-directed-feedback-vertex-set-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Constant-factor-hardness-of-uniform-sparsest-cut-September-24-2026 3 lines  {'semi': 2}
+  CHANGED Contact-Fano-manifolds-and-the-LeBrun-Salamon-conjecture-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Continuous-Phase-Foliations-Create-Analytic-Caustic-Collars-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED Continuum-Coulomb-hardness-with-binary-nuclear-charges-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED Critical-local-smoothing-for-the-three-dimensional-wave-equation-September-24-2026 4 lines  {'semi': 3, 'hspace': 2}
+  CHANGED Critical-mixing-in-the-Sherrington-Kirkpatrick-model-September-25-2026 3 lines  {'semi': 1, 'hspace': 2}
+  CHANGED Critical-slowing-down-in-the-Sherrington-Kirkpatrick-model-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED Cutoff-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026 2 lines  {'hspace': 3}
+  CHANGED De-Giorgis-conjecture-in-dimension-eight-September-26-2026 3 lines  {'hspace': 3}
+  CHANGED Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-September-23-2026 3 lines  {'hspace': 3}
+  CHANGED Determination-of-a-metric-and-a-unitary-connection-from-one-boundary-patch-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED Elliptic-capacity-propagation-and-Fourier-restriction-to-the-sphere-September-24-2026 6 lines  {'hspace': 6}
+  CHANGED Endpoint-convergence-for-the-planar-Schrodinger-equation-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026 1 lines  {'semi': 2}
+  CHANGED Equidistribution-of-Primitive-Quartic-Torus-Packets-for-Arbitrary-Orders-October-5-2026 1 lines  {'semi': 1}
+  CHANGED Equidistribution-of-Primitive-Sextic-Torus-Packets-October-5-2026 2 lines  {'hspace': 2}
+  CHANGED Essential-Singularity-of-the-Correlation-Length-in-the-Planar-XY-Model-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED Eventual-Categoricity-for-Abstract-Elementary-Classes-September-24-2026 2 lines  {'semi': 1, 'hspace': 1}
+  CHANGED Every-four-dimensional-Kakeya-set-has-full-Hausdorff-dimension-September-24-2026 3 lines  {'hspace': 3}
+  CHANGED Exact-Birch-Swinnerton-Dyer-Formula-from-Low-Selmer-Corank-October-3-2026 1 lines  {'hspace': 1}
+  CHANGED Exact-Fourier-certificates-for-complex-Hadamard-matrices-of-order-six-September-24-2026 1 lines  {'semi': 1}
+  CHANGED Exact-Uniform-Sampling-of-Contingency-Tables-with-Arbitrary-Margins-September-24-2026 2 lines  {'hspace': 2}
+  CHANGED Exact-mass-asymptotics-for-the-two-dimensional-O4-lattice-model-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED Exact-quantum-factoring-over-a-fixed-finite-gate-set-September-25-2026 1 lines  {'semi': 1}
+  CHANGED Existential-universal-real-sentences-in-the-counting-hierarchy-October-4-2026 4 lines  {'semi': 5}
+  CHANGED Fiber-functors-for-finite-symmetric-tensor-categories-in-positive-characteristic-September-24-2026 1 lines  {'semi': 2}
+  CHANGED Filtered-chromatic-splitting-at-generic-primes-September-25-2026 5 lines  {'semi': 10}
+  CHANGED Filtered-products-and-boundary-preserving-compression-in-complex-cobordism-September-25-2026 1 lines  {'semi': 1}
+  CHANGED Finite-Monoid-Computations-and-a-Uniform-Generalized-Star-Height-Bound-September-25-2026 1 lines  {'hspace': 1}
+  CHANGED Finite-Smith-Toda-Complexes-at-Varying-Primes-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Fixed-energy-universality-for-weak-Anderson-disorder-on-random-regular-graphs-October-5-2026 2 lines  {'hspace': 2}
+  CHANGED Fontaine-Mazur-modularity-at-the-prime-2-September-23-2026 1 lines  {'semi': 2}
+  CHANGED From-partial-permutation-information-to-Fourier-bounds-September-26-2026 1 lines  {'hspace': 1}
+  CHANGED Fujitas-freeness-conjecture-September-23-2026              1 lines  {'hspace': 1}
+  CHANGED GOE-bulk-universality-for-fixed-degree-random-regular-graphs-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Generalized-Cartan-Hadamard-isoperimetry-and-Euclidean-equality-rigidity-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Generalized-Star-Height-at-Most-Four-September-25-2026     1 lines  {'hspace': 1}
+  CHANGED Generalized-Star-Height-at-Most-Three-September-25-2026    1 lines  {'hspace': 1}
+  CHANGED Generic-C1-Future-Inextendibility-Near-Rotating-Subextremal-Kerr-Spacetimes-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Generic-Future-Inextendibility-with-Square-Integrable-Connection-Near-a-Fixed-Kerr-Spacetime-September-23-2026 1 lines  {'semi': 1}
+  CHANGED Global-classical-solutions-of-the-three-dimensional-relativistic-Vlasov-Maxwell-system-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Global-quantum-geometric-Langlands-at-irrational-level-October-4-2026 1 lines  {'hspace': 1}
+  CHANGED Goldfelds-analytic-density-conjecture-and-the-2-converse-for-elliptic-curves-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Harmonic-heights-and-the-Artin-K-pi-1-conjecture-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Hellinger-contraction-with-arbitrary-Boolean-output-bias-September-24-2026 7 lines  {'semi': 5, 'hspace': 2}
+  CHANGED Homogeneous-depth-five-lower-bounds-for-iterated-matrix-multiplication-September-25-2026 1 lines  {'hspace': 1}
+  CHANGED Hyperbolicity-Cones-Without-Semidefinite-Lifts-October-5-2026 2 lines  {'hspace': 2}
+  CHANGED Kadisons-similarity-theorem-through-uniform-derivation-estimates-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Koebes-Circle-Domain-Conjecture-September-23-2026          4 lines  {'hspace': 4}
+  CHANGED Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026 1 lines  {'hspace': 1}
+  CHANGED Metric-Markov-Cotype-Two-of-l1-October-5-2026              1 lines  {'hspace': 1}
+  CHANGED Metric-measure-limits-of-subcritical-FK-and-spanning-tree-planar-maps-September-24-2026 1 lines  {'semi': 1}
+  CHANGED Monochromatic-finite-sums-and-products-in-the-positive-integers-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Nagatas-Conjecture-for-Plane-Curves-September-23-2026      1 lines  {'semi': 1}
+  CHANGED Nearly-minimal-maxima-and-positive-minima-of-Littlewood-polynomials-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED Nonuniqueness-for-the-periodic-hard-sphere-Boltzmann-equation-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Nonuniqueness-with-local-conservation-for-the-hard-sphere-Boltzmann-equation-October-5-2026 2 lines  {'hspace': 1}
+  CHANGED One-Sample-Suffices-for-Matroid-Prophet-Inequalities-against-an-Almighty-Adversary-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED One-sided-negative-sectional-curvature-and-the-holomorphic-Liouville-property-September-25-2026 1 lines  {'hspace': 1}
+  CHANGED Ordinary-two-point-correlations-of-multiplicative-functions-September-24-2026 3 lines  {'hspace': 3}
+  CHANGED P-equals-W-in-composite-rank-for-fixed-determinant-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED Pointwise-Multiple-Ergodic-Averages-for-Mixing-Transformations-October-4-2026 1 lines  {'hspace': 1}
+  CHANGED Polynomial-PEPS-approximation-of-gapped-square-grid-ground-states-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED Positive-Metric-Entropy-for-the-Standard-Map-at-Large-Parameters-September-23-2026 1 lines  {'semi': 1}
+  CHANGED Positive-scalar-curvature-and-uniform-codimension-two-width-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Positive-scalar-curvature-forces-rational-inessentiality-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Positively-curved-Einstein-four-manifolds-September-23-2026 2 lines  {'hspace': 2}
+  CHANGED Posterior-replicas-and-conditional-information-in-Gaussian-regression-September-27-2026 2 lines  {'semi': 1, 'hspace': 1}
+  CHANGED Prescribed-large-volume-charges-on-threefolds-with-trivial-canonical-bundle-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED Prime-Predecessors-with-an-Even-Number-of-Prime-Factors-September-17-2026 1 lines  {'hspace': 1}
+  CHANGED Primitive-roots-for-every-admissible-integer-base-October-4-2026 3 lines  {'hspace': 3}
+  CHANGED Projective-Space-Bases-of-Lagrangian-Fibrations-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED QMA-hardness-of-continuum-Coulomb-energy-with-unit-nuclear-charges-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED Quantitative-Near-Kerr-Evolution-and-Generic-C2-Future-Inextendibility-September-23-2026 3 lines  {'hspace': 3}
+  CHANGED Quantum-Depletion-and-Momentum-Distribution-in-the-Dilute-Hard-Sphere-Bose-Gas-October-5-2026 3 lines  {'hspace': 3}
+  CHANGED Quantum-Depletion-for-Fixed-Bounded-Repulsive-Potentials-October-5-2026 3 lines  {'hspace': 3}
+  CHANGED Quasipolynomial-Bounds-for-Arithmetic-Progressions-September-23-2026 2 lines  {'semi': 2, 'enspace': 3}
+  CHANGED Random-Walks-on-Critical-FK-Ising-Maps-and-Liouville-Brownian-Motion-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED Random-coordinate-frames-and-partial-permutation-laws-September-26-2026 1 lines  {'hspace': 1}
+  CHANGED Rationality-of-the-Canonical-Unramified-Arthur-Filtration-September-24-2026 1 lines  {'semi': 2}
+  CHANGED Renewal-and-changes-of-law-for-critical-honeycomb-walks-September-26-2026 2 lines  {'hspace': 2}
+  CHANGED Replacing-Gaussian-observations-in-memory-constrained-inference-September-27-2026 1 lines  {'hspace': 1}
+  CHANGED Riesz-transforms-and-uniform-rectifiability-in-higher-codimension-September-24-2026 4 lines  {'hspace': 4}
+  CHANGED Rigidity-of-Smooth-Billiards-with-a-Continuous-Caustic-Collar-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED Rokhlins-multiple-mixing-problem-for-one-transformation-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Routing-densities-and-representation-contraction-for-Thorp-sweeps-September-26-2026 1 lines  {'hspace': 1}
+  CHANGED SLE3-universality-for-weak-finite-range-Ising-interactions-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Scale-and-conformal-symmetry-in-four-dimensional-operational-quantum-field-theory-September-26-2026 1 lines  {'semi': 1}
+  CHANGED Sharp-One-Third-Stability-of-Brenier-Maps-September-25-2026 1 lines  {'hspace': 1}
+  CHANGED Sharp-nodal-length-on-smooth-surfaces-September-23-2026    1 lines  {'hspace': 1}
+  CHANGED Sharp-one-dimensional-Lieb-Thirring-inequalities-for-matrix-potentials-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED Short-Egyptian-fractions-September-25-2026                 2 lines  {'hspace': 2}
+  CHANGED Signed-tensor-densities-and-diagram-budgets-for-coordinate-sweeps-September-26-2026 2 lines  {'hspace': 2}
+  CHANGED Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026 2 lines  {'semi': 9}
+  CHANGED Smooth-isometric-immersions-of-closed-surfaces-into-Euclidean-four-space-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED Spectral-scalar-curvature-and-uniform-Urysohn-width-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026 2 lines  {'hspace': 1}
+  CHANGED Squared-logarithmic-randomized-k-server-on-arbitrary-metrics-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED Stable-Self-Similar-Blowup-for-a-Supercritical-Defocusing-Schrodinger-Equation-on-the-Torus-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED Stretched-exponential-barriers-for-typical-SK-initial-states-September-24-2026 2 lines  {'hspace': 2}
+  CHANGED Strong-Ulam-Stability-Characterizes-Amenability-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED Strong-diffeomorphic-approximation-in-three-dimensions-for-1-le-p-le-2-September-24-2026 1 lines  {'semi': 1}
+  CHANGED Strong-diffeomorphic-approximation-in-three-dimensions-for-p-gt-2-September-24-2026 1 lines  {'semi': 1}
+  CHANGED Subpolynomial-query-complexity-for-well-conditioned-log-concave-sampling-September-26-2026 2 lines  {'semi': 1, 'hspace': 1}
+  CHANGED Termination-for-projective-log-canonical-fourfolds-with-rational-boundary-September-24-2026 1 lines  {'semi': 2}
+  CHANGED The-Approximation-Threshold-for-Metric-k-Median-September-24-2026 5 lines  {'hspace': 5}
+  CHANGED The-Artinian-Lex-Plus-Powers-Betti-Theorem-September-23-2026 1 lines  {'semi': 2}
+  CHANGED The-Boltzmann-Grad-limit-for-stable-radial-potentials-on-regular-kinetic-intervals-September-23-2026 6 lines  {'semi': 5, 'hspace': 2}
+  CHANGED The-Deligne-Drinfeld-conjecture-September-23-2026          1 lines  {'semi': 8, 'hspace': 1}
+  CHANGED The-Euclidean-Steinitz-Bergstrom-theorem-September-24-2026 1 lines  {'semi': 1}
+  CHANGED The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026 2 lines  {'hspace': 2}
+  CHANGED The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-September-25-2026 1 lines  {'hspace': 1}
+  CHANGED The-Gaussian-free-field-limit-of-the-balanced-six-vertex-model-with-variance-multiplier-1-over-arcsin-c-over-2-September-23-2026 2 lines  {'hspace': 2}
+  CHANGED The-Isoperimetric-Conjecture-for-the-Cubic-Flat-Three-Torus-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED The-Kakeya-maximal-conjecture-in-three-dimensions-September-23-2026 4 lines  {'hspace': 4}
+  CHANGED The-Kerr-Newman-Penrose-Inequality-for-Axisymmetric-Electrovacuum-Exteriors-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED The-Kervaire-Invariant-Problem-at-the-Prime-Three-September-24-2026 2 lines  {'semi': 2}
+  CHANGED The-Mahler-Conjecture-for-General-Convex-Bodies-September-22-2026 3 lines  {'hspace': 3}
+  CHANGED The-Margulis-Platonov-conjecture-over-global-function-fields-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED The-Mezard-Parisi-formula-for-diluted-spin-glasses-September-23-2026 3 lines  {'semi': 4}
+  CHANGED The-PCP-for-PPAD-conjecture-a-quasilinear-reduction-September-25-2026 4 lines  {'semi': 10}
+  CHANGED The-Poisson-Dirichlet-Law-for-Prime-Predecessors-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED The-Quasi-Riemann-Hypothesis-September-30-2026             7 lines  {'hspace': 8}
+  CHANGED The-Sharp-Terminal-Leave-in-Random-Triangle-Removal-September-25-2026 1 lines  {'hspace': 1}
+  CHANGED The-Singer-conjecture-in-dimension-four-September-25-2026  2 lines  {'hspace': 1}
+  CHANGED The-Solomon-Yau-least-volume-theorem-September-23-2026     1 lines  {'semi': 1}
+  CHANGED The-Subcritical-Henon-Lane-Emden-Conjecture-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED The-Unique-Games-Theorem-September-23-2026                 2 lines  {'semi': 8, 'hspace': 1}
+  CHANGED The-canonical-massive-continuum-limit-of-the-two-dimensional-O3-model-October-4-2026 2 lines  {'hspace': 2}
+  CHANGED The-critical-Liouville-quantum-sphere-and-geometric-limits-of-FK-maps-at-q-equals-4-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED The-critical-correlation-exponent-of-the-planar-XY-model-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED The-critical-dimension-for-one-phase-Bernoulli-minimizers-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED The-critical-logarithmic-correction-for-the-planar-XY-model-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED The-crossing-number-of-complete-graphs-September-23-2026   1 lines  {'semi': 2}
+  CHANGED The-exact-reconstruction-threshold-for-the-three-state-symmetric-channel-September-25-2026 2 lines  {'hspace': 2}
+  CHANGED The-free-energy-of-the-spherical-random-perceptron-September-24-2026-alternate-1 1 lines  {'semi': 1}
+  CHANGED The-free-energy-of-the-spherical-random-perceptron-September-24-2026 1 lines  {'semi': 1}
+  CHANGED The-higher-dimensional-Erdos-distinct-distances-conjecture-September-23-2026 1 lines  {'semi': 2}
+  CHANGED The-hypercube-Ramsey-number-has-linear-order-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED The-irrationality-exponent-of-pi-is-2-September-24-2026    1 lines  {'hspace': 1}
+  CHANGED The-joint-Dickman-law-for-consecutive-integers-September-24-2026 7 lines  {'hspace': 7}
+  CHANGED The-l1-Bass-Conjecture-for-Discrete-Groups-October-5-2026  1 lines  {'hspace': 1}
+  CHANGED The-low-temperature-Sherrington-Kirkpatrick-fluctuation-scale-September-24-2026-alternate-1 1 lines  {'hspace': 1}
+  CHANGED The-low-temperature-Sherrington-Kirkpatrick-fluctuation-scale-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED The-maximal-triangular-Hilbert-transform-at-the-symmetric-point-September-24-2026 9 lines  {'semi': 3, 'hspace': 1}
+  CHANGED The-maximum-number-of-mutually-unbiased-bases-in-dimension-six-September-24-2026 3 lines  {'semi': 2, 'hspace': 1}
+  CHANGED The-mean-analytic-rank-of-quadratic-twists-of-elliptic-curves-September-23-2026 2 lines  {'hspace': 2}
+  CHANGED The-nonmaximal-anti-de-Sitter-Penrose-Inequality-and-original-data-rigidity-October-5-2026 2 lines  {'hspace': 2}
+  CHANGED The-second-Kahn-Kalai-conjecture-September-24-2026         3 lines  {'semi': 3}
+  CHANGED The-spherical-magnetization-law-for-the-three-dimensional-quantum-Heisenberg-ferromagnet-October-5-2026 1 lines  {'semi': 1}
+  CHANGED The-spherical-perceptron-with-bi-orthogonally-invariant-disorder-September-24-2026-alternate-1 1 lines  {'hspace': 1}
+  CHANGED The-spherical-perceptron-with-bi-orthogonally-invariant-disorder-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED The-unique-threshold-bound-state-of-the-SU-N-BFSS-model-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED The-weak-pinned-planar-distance-theorem-September-23-2026  2 lines  {'hspace': 2}
+  CHANGED Thermal-FK-Ising-interfaces-and-massive-SLE-October-5-2026 2 lines  {'hspace': 2}
+  CHANGED Tracial-projection-methods-and-uniform-property-Gamma-September-23-2026 1 lines  {'hspace': 1}
+  CHANGED Translative-covering-densities-of-order-n-log-n-September-23-2026 2 lines  {'hspace': 2}
+  CHANGED Triangular-minimality-for-planar-Coulomb-renormalized-energy-September-23-2026 2 lines  {'hspace': 2}
+  CHANGED Unconditional-time-lower-bounds-for-Weisfeiler-Leman-equivalence-September-25-2026 1 lines  {'semi': 4}
+  CHANGED Uniform-Cartier-sections-for-Fano-type-contractions-September-25-2026 1 lines  {'hspace': 1}
+  CHANGED Uniform-Interior-C1alpha-Estimates-for-Infinity-Harmonic-Functions-October-4-2026 2 lines  {'hspace': 1}
+  CHANGED Uniform-excess-charge-for-Coulomb-molecules-and-the-outer-radius-of-neutral-atoms-September-24-2026 2 lines  {'hspace': 3}
+  CHANGED Uniform-marked-polygon-estimates-and-sharp-finite-bridge-moments-September-26-2026 6 lines  {'semi': 4, 'hspace': 2}
+  CHANGED Universal-Tensor-Squares-for-Symmetric-Groups-September-24-2026 1 lines  {'semi': 1}
+  CHANGED Universality-of-critical-quench-autocorrelations-in-the-Sherrington-Kirkpatrick-model-October-5-2026 1 lines  {'hspace': 1}
+  CHANGED Weak-and-strong-normalization-in-pure-type-systems-September-25-2026 7 lines  {'semi': 7, 'hspace': 1}
+  CHANGED Weighted-Dilation-Graphs-Smooth-Shifted-Primes-and-Totient-Fibers-September-24-2026 6 lines  {'hspace': 6}
+  CHANGED Witnessed-symmetric-choice-is-strictly-stronger-than-choiceless-polynomial-time-with-counting-September-24-2026 11 lines  {'semi': 10, 'hspace': 2}
+  CHANGED Zero-Plane-Rigidity-for-Einstein-Four-Manifolds-October-4-2026 2 lines  {'hspace': 2}
+  CHANGED ample-rank-two-bundles-on-the-quadric-surface-without-griffiths-positive-metrics-September-24-2026 3 lines  {'semi': 3}
+  CHANGED quasi-isometric-recognition-of-virtually-polycyclic-groups-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED the-additive-indecomposability-of-the-primes-September-24-2026 1 lines  {'hspace': 1}
+  CHANGED two-limit-cycles-for-quintic-lienard-systems-September-24-2026 2 lines  {'semi': 1, 'hspace': 1}
+changed papers = 238 / 242, changed lines = 445

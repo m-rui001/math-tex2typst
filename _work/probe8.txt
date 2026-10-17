@@ -1,0 +1,93 @@
+cjk==0 occurrences=130 notes={"D100": 3, "D101": 78, "D112": 2, "D124": 1, "D156": 1, "D185": 1, "D259": 2, "D28": 5, "D360": 1, "D53": 36}
+(indented, prev-is-fence, prev-blank, prev-blockquote)={"[false, true, false, false]": 1, "[false, false, false, false]": 30, "[true, false, true, false]": 16, "[true, false, false, false]": 62, "[false, false, true, false]": 21}
+
+@@ D100:539 ctx
+   536| \mathfrak H_{\eta,1,Z}(s,1,1/6)
+   537| =H_\eta(s)Z^{\ell/6}A_T(Z)\{1+\mathcal R_{\eta,Z}(s)\},
+   538|```
+   539|which is Equation~\eqref{eq:principal-correction-residue} with
+   540|\(A_\eta=A_T\) and \(\mu=\kappa_P\).
+   541|
+
+@@ D100:553 ctx
+   550| &+Z^{C(\beta_*)+e-\kappa_P+\epsilon},
+   551|```
+   552|where the two geometric margins are
+   553|\begin{equation}\label{old-eq:5.14}
+   554| m_w:=\frac{l_y}{20}=\frac{23}{960},\qquad
+   555| m_z:=\frac h{600}=\frac{13}{9600}.
+
+@@ D100:804 ctx
+   801|```
+   802|
+   803|as a common remaining high saving before retained height factors.
+   804|For the low estimate, apply Equation~\eqref{eq:part-II-normalized-low}
+   805|with the pretarget loss \(\Delta/2\), and set \(\omega=\Delta/2\).
+   806|
+
+@@ D101:80 ctx
+   77|
+   78|(a) 逐字引用：
+   79|
+   80|    \begin{theorem}\label{thm:main}
+   81|    The Euclidean plane has no proper five-coloring, even when arbitrary
+   82|    color classes are allowed. Consequently,
+
+@@ D101:116 ctx
+   113|
+   114|(a) 逐字引用：
+   115|
+   116|    \begin{theorem}[Transfer of colorability]\label{thm:transfer}
+   117|    For every positive integer $k$, in ZFC,
+   118|    \begin{equation}\label{eq:source-1}
+
+@@ D101:118 ctx
+   115|
+   116|    \begin{theorem}[Transfer of colorability]\label{thm:transfer}
+   117|    For every positive integer $k$, in ZFC,
+   118|    \begin{equation}\label{eq:source-1}
+   119|      \begin{gathered}
+   120|        \text{a proper $k$-coloring of $\R^2$ exists}
+
+@@ D101:180 ctx
+   177|(a) 逐字引用：
+   178|
+   179|    \begin{lemma}[Continuous vectors and positivity]
+   180|    \label{lem:palettes-continuous-factor}
+   181|    Let a standard probability space carry a measure-preserving action of
+   182|    the additive group $E$, with Koopman operators $T_z$.  The subspace
+
+@@ D101:324 ctx
+   321|(a) 逐字引用：
+   322|
+   323|    If $\nu$ is wild, then
+   324|    \begin{equation}\label{eq:source-2}
+   325|     I\bigl(\phi(t)f_\nu(at)\bigr)=0
+   326|     \qquad\bigl(a\in E\setminus\{0\},\ \phi\in C_c(\R)\bigr).
+
+quote char usage over 120 notes={"\"": 37935, "“": 17, "”": 17, "「": 256, "」": 256, "‘": 0}
+
+D106 headings=80 with 'Word~name:tag' macro=21 with ref/label cmd=0 head-lines-with-refcmd=0
+   M ## 2 主定理四段式：Theorem~thm:main
+   M ### 4.1 Lemma~lem:arc-data（全局弧坐标，arcs.tex:24-124）
+   M ### 4.3 Lemma~lem:variation（固定 $h,r$ 的 profile 变分，arcs.tex:187-238）
+   M ### 4.4 抛物变分常数与 Lemma~lem:arc-scaling（arcs.tex:240-340）
+   M ### 4.5 Lemma~lem:axis-extension（延到非光滑边界高度，arcs.tex:371-483）
+   M ### 4.6 Proposition~prop:cycle-matching（半弧匹配与孤立周期轨，arcs.tex:485-629）
+   M ### 5.1 Lemma~fit:references（参考特征三元组，fitting.tex:63-162）
+   M ### 5.2 Lemma~lem:curvature-comparison（曲率比较，fitting.tex:177-262）
+   M ### 5.3 中点拟合与 Lemma~fit:conditional-derivative（fitting.tex:264-385）
+   M ### 5.4 Lemma~fit:properness（条件拟合的满射端，fitting.tex:387-462）
+   M ### 5.5 Lemma~fit:positive-derivatives 与宽恒等式（fitting.tex:464-535）
+   M ### 5.6 Theorem~thm:quadratic-fit（全局二次拟合，fitting.tex:537-575）
+   M ### 5.7 Lemma~lem:fit-transport（拟合参数的运输律，fitting.tex:577-653）
+   M ### 6.5 Lemma~model:Riccati（Riccati 线性化、公共端点标记与积分估计，model.tex:382-561）
+   M ### 6.6 Lemma~model:zero-sign：三个端点构型（model.tex:563-858）
+   M ### 6.7 Theorem~thm:model-inequality 的闭合（model.tex:860-913）
+   M ### 7.1 Lemma~lem:fit-small-width（小宽拟合，transport.tex:15-120）
+   M ### 7.2 Proposition~prop:third-derivative（三阶导定号，transport.tex:122-292）
+   M ### 7.3 Proposition~prop:intercept（拟合斜率截距，transport.tex:294-364）
+   M ### 7.4 Lemma~lem:fitted-curvature-range（拟合曲率的范围，transport.tex:366-399）
+   M ### 8.2 Lemma~lem:isolated-zero-count（计数引理，application.tex:78-104）
+
+D137 headings=33 with 'Word~name:tag' macro=0 with ref/label cmd=12 head-lines-with-refcmd=12

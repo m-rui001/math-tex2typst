@@ -1,0 +1,16 @@
+== run73 22:36 ==
+rows: 724
+  cetz_converted             993 over 555 papers
+  cetz_refused                36 over  32 papers
+  cetz_split                   9 over   7 papers
+  figure_content_unhandled     0 over   0 papers
+  empty figures               13 over   9 papers
+  quoted pictures             36  (refused pictures shown as source)
+
+most refused in one paper:
+files with residue: 0 ; occurrences: 0
+quoted LaTeX on the page: 36 blocks over 32 papers
+zones: {}
+_work/shot_A-Fully-Polynomial-Rando_p18.png  page 18  caption 'The two patterns on a long odd arc, illustrated for  J =  ( v_0  , dot'
+_work/shot_Arithmetic-classificatio_p21.png  page 21  caption 'Admissible digits, read from high exponents to low exponents. There ar'
+== done ==

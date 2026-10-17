@@ -1,0 +1,6 @@
+flips [(261, 17, 16), (332, 9, 8)]
+ni [(85, 1), (87, 1)] ni_total 2 NI remaining lines [348]
+ii replaced, \ii remaining lines [350]
+bytes 77455 -> 77454
+lines 444 -> 444
+dollar 1779 -> 1777  btick 1098 -> 1100

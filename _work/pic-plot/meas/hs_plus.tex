@@ -1,0 +1,9 @@
+\documentclass[tikz,border=0pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm,x=1cm,y=1cm,>=Latex,font=\small]
+\draw[green!60!black,line width=0.4pt] (0,0)--(10,0)(0,0)--(0,10);
+\draw[blue!55!black,line width=1.1pt,domain=-2.2:2.2,samples=70]plot ({10.3+\x},{2.55+.23*tanh(1.35*\x)});
+\end{tikzpicture}
+\end{document}

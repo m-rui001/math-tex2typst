@@ -1,0 +1,42 @@
+
+== hash  A-nondegenerate-counterexample-to-the-Morse-number-A  needles=['phi_H', 'chi (M)']
+   (no line carries any needle)
+
+== hash  A-two-dimensional-area-law-from-a-global-spectral-ga  needles=['A_h']
+   (no line carries any needle)
+
+== hash  Edit-Distance-in-l1-Matching-Bounds-up-to-Constants-  needles=['#']
+   Edit-Distance-in-l1-Matching-B   p7   1)𝑚. Append a marker #𝐵, where # is absent from all payloads.
+   Edit-Distance-in-l1-Matching-B   p7   More formally, the new alphabet is the disjoint union of {#} and one set {𝑟} × 𝒜︀𝑠−1,𝑝𝑗 for each
+   Edit-Distance-in-l1-Matching-B   p7   #. The full length and alphabet bounds are
+   Edit-Distance-in-l1-Matching-B   p8   Lemma 3.2. (Marked payloads). Let 𝑇, 𝑝, 𝑞≥1 be integers, let Γ be an alphabet, and let # ∉Γ. For
+   Edit-Distance-in-l1-Matching-B   p8   𝑋= 𝑈1#𝑞⋯𝑈𝑇#𝑞,
+   Edit-Distance-in-l1-Matching-B   p8   𝑌= 𝑉1#𝑞⋯𝑉𝑇#𝑞,
+   Edit-Distance-in-l1-Matching-B   p8   would have its source partner between their source partners, inside this source payload, where # doe
+   Edit-Distance-in-l1-Matching-B   p8   source payload (no #)
+   Edit-Distance-in-l1-Matching-B   p8   #𝑞
+   Edit-Distance-in-l1-Matching-B   p8   no source #
+
+== hash  Localization-costs-and-information-growth-for-Grigor  needles=['# net', '2^j']
+   Localization-costs-and-informa   p77  # net ≤(1 + 4 ⋅2𝑗)
+
+== hash  Sharp-integral-fillings-in-CAT(0)-spaces-September-2  needles=['arrow.r.bar', 'F_#']
+   (no line carries any needle)
+
+== fused  Eventual-Categoricity-for-Abstract-Elementary-Classe  needles=['W_s', 'q_s', 'partial W']
+   (no line carries any needle)
+
+== fused  Exact-Derandomization-of-Logarithmic-Space-Lossy-sam  needles=['1^n']
+   (no line carries any needle)
+
+== fused  Localization-costs-and-information-growth-for-Grigor  needles=['# net', '2^j']
+   Localization-costs-and-informa   p77  # net ≤(1 + 4 ⋅2𝑗)
+
+== fused  Smooth-Anisotropic-Uniqueness-in-the-Calderon-proble  needles=['T_y', 'yx']
+   Smooth-Anisotropic-Uniqueness-   p26  yx = 𝑦𝑖.
+
+== fused  The-complexity-of-identifying-a-graph-by-Weisfeiler-  needles=['l1', 'l 1']
+   (no line carries any needle)
+
+== fused  The-hypercube-Ramsey-number-has-linear-order  needles=['n2', 'N lt']
+   (no line carries any needle)

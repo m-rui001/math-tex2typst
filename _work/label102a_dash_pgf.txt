@@ -1,0 +1,41 @@
+pgf dash names read back off the pdflatex page (8cm horizontal rule)
+pen column: thin = 0.4pt, ultra thick = 1.6pt.  dashes = the PDF array, runs = ink segment lengths
+
+== pen thin ==
+style                  pgf key                    pdf dashes             ink runs (pt) x count
+solid                  (none)                     [] 0                   [226.775] x 1
+dashed                 dashed                     [ 2.98883 2.98883 ] 0  [226.775] x 1
+densely dashed         densely dashed             [ 2.98883 1.99255 ] 0  [226.775] x 1
+loosely dashed         loosely dashed             [ 2.98883 5.97766 ] 0  [226.775] x 1
+dotted                 dotted                     [ .3985 1.99255 ] 0    [226.775] x 1
+densely dotted         densely dotted             [ .3985 .99628 ] 0     [226.775] x 1
+loosely dotted         loosely dotted             [ .3985 3.9851 ] 0     [226.775] x 1
+dashdotted             dashdotted                 [ 2.98883 1.99255 .3985 1.99255 ] 0 [226.775] x 1
+dash dot               dash dot                   [ 2.98883 1.99255 .3985 1.99255 ] 0 [226.775] x 1
+densely dashdotted     densely dashdotted         [ 2.98883 .99628 .3985 .99628 ] 0 [226.775] x 1
+dashdotdotted          dashdotdotted              [ 2.98883 1.99255 .3985 1.99255 .3985 1.99255 ] 0 [226.775] x 1
+dash dot dot           dash dot dot               [ 2.98883 1.99255 .3985 1.99255 .3985 1.99255 ] 0 [226.775] x 1
+explicit 2/3           dash pattern=on 2pt off 3pt [ 1.99255 2.98883 ] 0  [226.775] x 1
+explicit 4/2/1/2       dash pattern=on 4pt off 2pt on 1pt off 2pt [ 3.9851 1.99255 .99628 1.99255 ] 0 [226.775] x 1
+explicit mm            dash pattern=on 1mm off 1mm [ 2.83466 2.83466 ] 0  [226.775] x 1
+penscaled              dash pattern=on 3\pgflinewidth off 2\pgflinewidth [ 1.19551 .797 ] 0     [226.775] x 1
+
+== pen ultra thick ==
+style                  pgf key                    pdf dashes             ink runs (pt) x count
+solid                  (none)                     [] 0                   [226.775] x 1
+dashed                 dashed                     [ 2.98883 2.98883 ] 0  [226.775] x 1
+densely dashed         densely dashed             [ 2.98883 1.99255 ] 0  [226.775] x 1
+loosely dashed         loosely dashed             [ 2.98883 5.97766 ] 0  [226.775] x 1
+dotted                 dotted                     [ 1.59404 1.99255 ] 0  [226.775] x 1
+densely dotted         densely dotted             [ 1.59404 .99628 ] 0   [226.775] x 1
+loosely dotted         loosely dotted             [ 1.59404 3.9851 ] 0   [226.775] x 1
+dashdotted             dashdotted                 [ 2.98883 1.99255 1.59404 1.99255 ] 0 [226.775] x 1
+dash dot               dash dot                   [ 2.98883 1.99255 1.59404 1.99255 ] 0 [226.775] x 1
+densely dashdotted     densely dashdotted         [ 2.98883 .99628 1.59404 .99628 ] 0 [226.775] x 1
+dashdotdotted          dashdotdotted              [ 2.98883 1.99255 1.59404 1.99255 1.59404 1.99255 ] 0 [226.775] x 1
+dash dot dot           dash dot dot               [ 2.98883 1.99255 1.59404 1.99255 1.59404 1.99255 ] 0 [226.775] x 1
+explicit 2/3           dash pattern=on 2pt off 3pt [ 1.99255 2.98883 ] 0  [226.775] x 1
+explicit 4/2/1/2       dash pattern=on 4pt off 2pt on 1pt off 2pt [ 3.9851 1.99255 .99628 1.99255 ] 0 [226.775] x 1
+explicit mm            dash pattern=on 1mm off 1mm [ 2.83466 2.83466 ] 0  [226.775] x 1
+penscaled              dash pattern=on 3\pgflinewidth off 2\pgflinewidth [ 4.78214 3.1881 ] 0   [226.775] x 1
+

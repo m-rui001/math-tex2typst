@@ -1,0 +1,36 @@
+note	citation	verdict-code	correct-string-or-NONE	evidence(file:line — verbatim fragment)
+D548	intro.tex:98-103	ABBREVIATED	introduction.tex:98-103	sections/introduction.tex:103 — Cartier multiple may depend on the fibration.  We use this descent and
+D548	intro.tex:98-100	ABBREVIATED	introduction.tex:98-100	sections/introduction.tex:98 — Ambro establishes rational b-Cartier descent and positivity in the
+D548	intro.tex:13-15	ABBREVIATED	introduction.tex:13-15	sections/introduction.tex:14 — applications, one needs a Cartier multiple controlled by the dimension
+D548	intro.tex:75-81	ABBREVIATED	introduction.tex:75-81	sections/introduction.tex:78 — bound uses the middle Betti number of a smooth model of a cyclic cover of
+D548	intro.tex:82-86	ABBREVIATED	introduction.tex:82-86	sections/introduction.tex:82 — setting, Todorov and Xu obtain a bound for the moduli denominator in terms
+D548	intro.tex:88-91	ABBREVIATED	introduction.tex:88-91	sections/introduction.tex:90 — examples rule out every polynomial bound for such an integer as the index
+D548	intro.tex:43-62	ABBREVIATED	introduction.tex:43-62	sections/introduction.tex:43 — \begin{theorem}[Uniform relative denominators]\label{thm:relative-denominators}
+D548	intro.tex:64-66	ABBREVIATED	introduction.tex:64-66	sections/introduction.tex:65 — equality of actual rational divisors, for compatible choices of canonical
+D548	intro.tex:67-71	ABBREVIATED	introduction.tex:67-71	sections/introduction.tex:68 — integers have distinct roles: $p_0$ gives the principal correction and,
+D548	intro.tex:35-41	ABBREVIATED	introduction.tex:35-41	sections/introduction.tex:41 — models may have negative coefficients.
+D548	intro.tex:17-22	ABBREVIATED	introduction.tex:17-22	sections/introduction.tex:19 — arbitrarily large denominators.  We prove that, when $\dim X\leq4$ and the
+D548	intro.tex:53	ABBREVIATED	introduction.tex:53	sections/introduction.tex:53 — exist $\psi\in\C(X)^*$ and $D_Z\sim_\Q D$ such that
+D548	intro.tex:88-91	ABBREVIATED	introduction.tex:88-91	sections/introduction.tex:90 — examples rule out every polynomial bound for such an integer as the index
+D548	intro.tex:20-22	ABBREVIATED	introduction.tex:20-22	sections/introduction.tex:22 — an exact pullback presentation whose moduli part has a uniform Cartier denominator.
+D548	intro.tex:92-95	ABBREVIATED	introduction.tex:92-95	sections/introduction.tex:93 — reduction produces reduced special fibres of dimension at most three.
+D548	intro.tex:152-156	ABBREVIATED	introduction.tex:152-156	sections/introduction.tex:155 — adjunction, but it yields one scalar on each normalized component of the
+D548	intro.tex:7-13	WRONG-FILE	residue.tex:6-8	sections/residue.tex:7 — pluricanonical generator with character $\zeta^{-a}$ for
+D548	intro.tex:192-194	ABBREVIATED	introduction.tex:192-194	sections/introduction.tex:193 — nonvanishing degree and a Betti number of a cyclic fibre cover.
+D106	fiting.tex:552	ABBREVIATED	fitting.tex:552	sections/fitting.tex:552 — At every model arc, \(P,Q,R,S,G>0\).
+D117	heat.tex:355	WRONG-FILE	jumps.tex:353-355	sections/jumps.tex:353 — right-hand mask has entries bounded by those of the original array,
+D122	main.tex:123-135	WRONG-FILE	01_introduction.tex:123-135	sections/01_introduction.tex:126 — the designated extension of a unique trace in $T(A)$. Thus restriction
+D134	localization.tex:141	WRONG-FILE	introduction.tex:141	sections/introduction.tex:141 — the uncounted register can carry an arbitrary, internally entangled state.
+D219	obstruction.tex:751	ABBREVIATED	05-final-obstruction.tex:751-769	sections/05-final-obstruction.tex:759 — To verify this without an associativity assumption, for any
+D219	preliminaries.tex:104	ABBREVIATED	02a-cobar-preliminaries.tex:104-111	sections/02a-cobar-preliminaries.tex:106 — x=h_{1,0},\quad a=h_{2,0},\quad c=h_{3,0},\qquad
+D228	00-introduction.tex:116-120	WRONG-LINE	00-introduction.tex:114-116	sections/00-introduction.tex:114 — The proof does not use a general spacetime Penrose inequality,
+D231	intro.tex:39-43	ABBREVIATED	introduction.tex:39-43	sections/introduction.tex:43 — within this paper; the broader converse is not an input to the proof.
+D234	09-prime-interval.tex:118	WRONG-FILE	03-norm-digits.tex:118-120	sections/03-norm-digits.tex:119 — For every sufficiently large integer $n$, there is a prime $p$ with
+D422	05-episodes.tex:411-413	WRONG-FILE	06-splits.tex:411-413	sections/06-splits.tex:412 — Stage $1$ does not use that guard and needs no
+D430	surfaces.tex:408-415	WRONG-FILE	weighted.tex:408-411	sections/weighted.tex:409 — $\dbar h=\dbar v$ for a function on $X$, then $h-v$ would be a
+D439	preliminaries.tex:53	WRONG-FILE	large-bias.tex:53	sections/large-bias.tex:53 — \E_i[vD_iw]=\frac{(v_+-v_-)(w_+-w_-)}4.  (half-definition: sections/preliminaries.tex:20 — Thus \(D_i u(x)=(u(x)-u(x^{(i)}))/2\))
+D455	05-streams.tex:569-599	WRONG-FILE	06-streams.tex:569-599	sections/06-streams.tex:571 — by $(f_0,W_1,W_2)$.  Let $c_L$ be a constant large enough for the
+D557	07-short-products.tex:1120-1250	WRONG-LINE	07-short-products.tex:1179-1211	sections/07-short-products.tex:1179 — \begin{theorem}[Return of the scalar wave]
+D757	01-regime-guide.tex:184-186	WRONG-FILE	01-introduction.tex:184-186	sections/01-introduction.tex:185 — reductions. In particular, the cluster exclusion is used both before the
+D759	moments.tex:701	WRONG-LINE	moments.tex:630-698	sections/moments.tex:630 — \subsection{Squaring the kernel and averaging the rows}
+D85	03_density.tex:172-173	WRONG-FILE	00_intro.tex:172-173	build/source/sections/00_intro.tex:172 — a union bound. This exact coupling is what permits arbitrary families

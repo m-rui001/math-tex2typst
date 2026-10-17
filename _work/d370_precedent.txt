@@ -1,0 +1,11 @@
+D370 file_lines=444 markers_left=0
+   86|''
+   87|'包模型本身（`packets.tex:91`--`142`）是这一层的另一块地基。$(N,t)\\mapsto(Q\\N I)^{-1/n}\\sigma(N)t$ 在按 $\\epsilon\\cdot(N,t)=(\\epsilon N,\\sigm'
+   88|''
+   89|'还有一个我差点放过去的数量：局部选择数 $T=\\lvert\\mathcal N(I)\\rvert$。`packets.tex:60`--`63` 说 $\\mathcal N(I)$ 有限、其中每个成员 $[I:N]=q$、$T$ 与 $I$'
+   90|''
+   91|''
+   92|''
+   93|'## §4 局部权重的两个引理：一个精确恒等式与一个小正矩 {#shell-moment}'
+   94|''
+   95|'计数层里我最先做成的是壳层恒等式，因为它几乎是纯测度论的记账。设定在 `local.tex:9`--`23`：$\\mathbf k$ 跑遍 $S$ 上的非负估值向量组，$d_\\ell(\\mathbf k_\\ell)=\\ell^{\\sum_{'

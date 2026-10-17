@@ -1,0 +1,6 @@
+regenerating 46 papers
+10/46 compiled=10 elapsed=9s
+20/46 compiled=20 elapsed=22s
+30/46 compiled=30 elapsed=29s
+40/46 compiled=40 elapsed=31s
+DONE 46 compiled=46

@@ -1,0 +1,39 @@
+bodies carrying bounds/bounds        : 1072
+bodies carrying cap-height/baseline  : 612
+bodies carrying some other edge pair : 0
+STALE (text edges over a body with a '$'): 30 over 6 papers
+  Diagonal-Fourier-extension-for-positively-cu:84  #text(size: 9pt)[$L^3$ Kakeya maximal theorem#linebreak()Loss $rho^(-s)$ for each $s>0$]
+  Diagonal-Fourier-extension-for-positively-cu:88  #text(size: 9pt)[Joint estimate on sparse balls#linebreak()Compactly supported $L^3$ data]
+  Diagonal-Fourier-extension-for-positively-cu:89  #text(size: 9pt)[Level-set cover and loss removal#linebreak()Graph $L^3 arrow.r L^p$, $p>3$]
+  Diagonal-Fourier-extension-for-positively-cu:90  #text(size: 9pt)[Finite charts and surface measure#linebreak()Surface $L^p arrow.r L^p$, $p>3$]
+  Finite-angular-cylinder-covers-below-the-hal:192  #text(size: 7pt)[$t= frac(1, 2)$]
+  Finite-angular-cylinder-covers-below-the-hal:210  #text(size: 7pt)[$epsilon X(1-q^2)/4$]
+  Finite-generation-for-the-Kn-local-sphere-Se:1073  Expanding supports#linebreak() $K_a subset K_(a+1)$
+  Finite-generation-for-the-Kn-local-sphere-Se:1078  $"colim"_a A_a tilde.eq R[-(m+2)]$#linebreak() Lattice degree $m$ survives.
+  Finite-generation-for-the-Kn-local-sphere-Se:1080  Shrinking neighborhoods#linebreak() $cal(U)_(j+1) subset cal(U)_j$
+  Finite-generation-for-the-Kn-local-sphere-Se:1085  $"colim"_j cal(G)_j tilde.eq "LC" (P, cal(B) )$#linebreak() Normal degree $0$ survives; slope values replicate
+  Finite-generation-for-the-Kn-local-sphere-Se:1087  Shrinking supports#linebreak() $T_(j+1) subset T_j$
+  Finite-generation-for-the-Kn-local-sphere-Se:1092  $bold(R) "varprojlim"_j E_j tilde.eq bold(R) Gamma_Z(X, "mathscr" E)$#linebreak() $H^0=H^1=0$: the low-degree 
+  Harmonic-heights-and-the-Artin-K-pi-1-conjec:87  #text(size: 8pt)[Full Salvetti comparison#linebreak()$tilde(X) (W,S) tilde.eq | cal(D) |$#linebreak()Lemma~2.4
+  Harmonic-heights-and-the-Artin-K-pi-1-conjec:90  #text(size: 8pt)[$| cal(D) |$ is contractible#linebreak()Filtration and rank-one connectedness#linebreak()Theo
+  Harmonic-heights-and-the-Artin-K-pi-1-conjec:91  #text(size: 8pt)[$X(W,S)$ is a $K(A,1)$#linebreak()Theorem~1.1]
+  Harmonic-heights-and-the-Artin-K-pi-1-conjec:1013  #text(size: 8pt)[$H_0(r+1,q) plus.o H_0(r,q+1)$#linebreak()absent at maximal $(r,q)$]
+  Harmonic-heights-and-the-Artin-K-pi-1-conjec:1014  #text(size: 8pt)[$H_0(r,q)$#linebreak()$t=r+q$]
+  Harmonic-heights-and-the-Artin-K-pi-1-conjec:1015  #text(size: 8pt)[$H_1(r,q)$#linebreak()$t=r+q+1$#linebreak()permanent]
+  Harmonic-heights-and-the-Artin-K-pi-1-conjec:1016  #text(size: 8pt)[$H_2(r,q)=0$#linebreak()$t=r+q+2>q$]
+  Harmonic-heights-and-the-Artin-K-pi-1-conjec:1018  #text(size: 8pt)[possible incoming $d_2$]
+  Harmonic-heights-and-the-Artin-K-pi-1-conjec:1291  #text(size: 8pt)[$H_0(M,Y^d)$, $M subset.eq Y^q$#linebreak()$t=d-q<0$]
+  Harmonic-heights-and-the-Artin-K-pi-1-conjec:1292  #text(size: 8pt)[$H_1(M,Y^d)=0$#linebreak()permanent middle classes]
+  Harmonic-heights-and-the-Artin-K-pi-1-conjec:1293  #text(size: 8pt)[$(q,d-1)$: target block#linebreak()$H_2(M,Y^(d-1))$#linebreak()$t=d-q+1$]
+  Harmonic-heights-and-the-Artin-K-pi-1-conjec:1294  #text(size: 8pt)[$(q+1,d)$: source-side term#linebreak()$f d_E^((2))=0$ by the cap on $I$]
+  Harmonic-heights-and-the-Artin-K-pi-1-conjec:1296  #text(size: 8pt)[$d_2$ is injective]
+  ... 5 more
+
+papers: Diagonal-Fourier-extension-for-positivel, Finite-angular-cylinder-covers-below-the, Finite-generation-for-the-Kn-local-spher, Harmonic-heights-and-the-Artin-K-pi-1-co, Radius-of-comparison-equals-half-the-mea, Thompsons-group-F-is-nonamenable-Septemb
+run132 regen list: 253 papers; stale papers NOT on it: 6
+  missed: Diagonal-Fourier-extension-for-positively-curved-surfaces-in-three-dimensions-September-24-2026
+  missed: Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026
+  missed: Finite-generation-for-the-Kn-local-sphere-September-24-2026
+  missed: Harmonic-heights-and-the-Artin-K-pi-1-conjecture-September-23-2026
+  missed: Radius-of-comparison-equals-half-the-mean-dimension-September-25-2026
+  missed: Thompsons-group-F-is-nonamenable-September-23-2026

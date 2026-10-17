@@ -1,0 +1,1 @@
+派单侧口径：Agent 的 mode 只认六枚值（写手单用 auto，bypassPermissions 在校验阶段整批挡回）；inflight.txt 要在拿到 launch 回执之后才写；bib 号跳过、欠账最深的篇允许二次入队；旧批次稿没有 wave 行，prompt 里要锁住 §0

@@ -1,0 +1,50 @@
+[
+ {
+  "cid": "D442",
+  "line": 119,
+  "old": "\\begin{pmatrix}0&b_j^\\top\\\\ -b_j&0",
+  "new": "\\begin{pmatrix}0&b_j^\\top\\\\ -b_j&0\\end{pmatrix}",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "body",
+  "cred": "02-cone.tex:32 逐字 \\end{pmatrix}；本篇 109/110 行同环境完整"
+ },
+ {
+  "cid": "D431",
+  "line": 77,
+  "old": "\\begin{pmatrix}0&\\theta\\\\Q_\\theta\\cdot&T_\\theta\\end{pm}",
+  "new": "\\begin{pmatrix}0&\\theta\\\\Q_\\theta\\cdot&T_\\theta\\end{pmatrix}",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "body",
+  "cred": "transport-matching.tex:22-26 eq:transport-matrix；坏形是 \\end{pm} 带闭括号，atrix 补在 } 之前"
+ },
+ {
+  "cid": "D589",
+  "line": 118,
+  "old": "有分块形 $\\begin{pmatrix}0&O_{S,T}\\\\ O_{S,T}^{*}&0$ 型`",
+  "new": "有分块形 `$\\begin{pmatrix}0&O_{S,T}\\\\ O_{S,T}^{*}&0$ 型`",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 1,
+  "parity": true,
+  "level": "delim",
+  "cred": "留档引文：型 后那枚是孤闭符（该行反引号 17＝奇数），补开符成 code 跨度；strong-ulam-stability.tex:480-483 完整形在后半句"
+ },
+ {
+  "cid": "D101",
+  "line": 189,
+  "old": "of $E_{\\rm disc}.",
+  "new": "of $E_{\\rm disc}$.",
+  "expect": 1,
+  "dollars": 1,
+  "ticks": 0,
+  "parity": true,
+  "level": "delim",
+  "cred": "transfer.tex:35 逐字 \\(E_\\{rm disc}\\)；引用块内重写为 $ 时漏了闭符"
+ }
+]

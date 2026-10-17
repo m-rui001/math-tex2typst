@@ -1,0 +1,30 @@
+{
+  "paper": "Exact-asymptotic-moduli-in-a-Daugavet-subspace-of-L1-September-27-2026",
+  "ok": true,
+  "typ_lines": 324,
+  "included_pdf_pages": 0,
+  "formulas": 361,
+  "math_failed": 0,
+  "labels": 31,
+  "equations": 10,
+  "theorems": 3,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "dangling_ref": 1
+  },
+  "samples": {
+    "formulas": "361",
+    "dangling_ref": "fig:moduli"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Exact-asymptotic-moduli-in-a-Daugavet-subspace-of-L1-September-27-2026.tex"
+}

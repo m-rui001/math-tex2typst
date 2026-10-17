@@ -1,0 +1,43 @@
+notes with changed refused count = 37
+  D362    plan_total=21   post=0    delta=-21  touched
+  D25     plan_total=23   post=3    delta=-20  touched
+  D96     plan_total=17   post=1    delta=-16  touched
+  D492    plan_total=13   post=1    delta=-12  touched
+  D429    plan_total=7    post=0    delta=-7  touched
+  D58     plan_total=8    post=1    delta=-7  touched
+  D761    plan_total=6    post=0    delta=-6  touched
+  D312    plan_total=6    post=0    delta=-6  touched
+  D264    plan_total=5    post=0    delta=-5  touched
+  D71     plan_total=5    post=0    delta=-5  touched
+  D213    plan_total=5    post=0    delta=-5  touched
+  D750    plan_total=7    post=2    delta=-5  touched
+  D160    plan_total=4    post=0    delta=-4  touched
+  D171    plan_total=3    post=0    delta=-3  touched
+  D214    plan_total=8    post=5    delta=-3  touched
+  D165    plan_total=2    post=0    delta=-2  touched
+  D81     plan_total=2    post=0    delta=-2  touched
+  D44     plan_total=3    post=1    delta=-2  touched
+  D375    plan_total=2    post=1    delta=-1  touched
+  D560    plan_total=1    post=0    delta=-1  touched
+  D616    plan_total=1    post=0    delta=-1  touched
+  D353    plan_total=1    post=0    delta=-1  touched
+  D145    plan_total=3    post=2    delta=-1  touched
+  D228    plan_total=1    post=0    delta=-1  touched
+  D706    plan_total=1    post=0    delta=-1  touched
+  D229    plan_total=0    post=1    delta=+1  other
+  D196    plan_total=1    post=0    delta=-1  touched
+  D125    plan_total=4    post=3    delta=-1  touched
+  D131    plan_total=1    post=0    delta=-1  touched
+  D198    plan_total=1    post=0    delta=-1  touched
+  D163    plan_total=3    post=2    delta=-1  touched
+  D389    plan_total=1    post=0    delta=-1  touched
+  D694    plan_total=1    post=0    delta=-1  touched
+  D212    plan_total=1    post=0    delta=-1  touched
+  D537    plan_total=1    post=0    delta=-1  touched
+  D94     plan_total=1    post=2    delta=+1  other
+  D333    plan_total=2    post=1    delta=-1  touched
+sum of plan totals=511  sum post=365
+--- post refused in writer-excluded notes ---
+  D80 plan=(0, 0, 0, 3, 3) post=3
+  D94 plan=(0, 1, 0, 0, 1) post=2
+  D66 plan=(0, 1, 0, 0, 1) post=1

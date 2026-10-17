@@ -1,0 +1,12 @@
+################ D30  (D30-负pinched三维Kähler流形无有界全纯坐标.md)
+before: bytes=136494 lines=1019
+ROW line=804  sites=4  pipes 10->6  $=10(parity even)
+OLD| | $c_0=\frac{1-\|f\|_\infty}{4}$ | $>0$ | §4 定义 | patch 宽度、$K_*>2C_2/c_0$ | $\|f\|_\infty\to1$ ⇒ $c_0\to0$ ⇒ 正性间隙消失 |
+NEW| | $c_0=\frac{1-\lVert f\rVert_\infty}{4}$ | $>0$ | §4 定义 | patch 宽度、$K_*>2C_2/c_0$ | $\lVert f\rVert_\infty\to1$ ⇒ $c_0\to0$ ⇒ 正性间隙消失 |
+after: bytes=136512 (delta +18) lines=1019 rows_fixed=1 sites_fixed=4 sites_registered=0
+[DRY] nothing written to the note
+D30 file-count \lVert  = 6
+D30 file-count \lvert  = 24
+D30 file-count \mid  = 0
+D30 file-count \upharpoonright = 0
+D30 file-count \Vert  = 0

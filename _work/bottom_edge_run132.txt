@@ -1,0 +1,121 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+sub    pgf        h= 17.34  south_y1=-0.20  escape=+0.00  ink[-15.18  -2.00]
+  as emitted     h= 19.39  south_y1=-0.00  escape=+0.00  ink[-16.81  -2.25]
+  bot=descender  SPELLING GONE (product no longer emits it)
+  bot=bounds     SPELLING GONE (product no longer emits it)
+  top=ascender   SPELLING GONE (product no longer emits it)
+  top=bounds     SPELLING GONE (product no longer emits it)
+  both=asc-desc  SPELLING GONE (product no longer emits it)
+  both=bounds    SPELLING GONE (product no longer emits it)
+  asc-top+bounds h= 19.07  south_y1=-0.00  escape=+0.00  ink[-16.81  -2.25]
+  asc-top+desc   h= 18.33  south_y1=-0.00  escape=+0.00  ink[-16.08  -1.51]
+deep   pgf        h= 13.78  south_y1=-0.20  escape=+0.18  ink[-14.16  -3.35]
+  as emitted     h= 16.40  south_y1=-0.00  escape=+0.34  ink[-16.74  -3.66]
+  bot=descender  SPELLING GONE (product no longer emits it)
+  bot=bounds     SPELLING GONE (product no longer emits it)
+  top=ascender   SPELLING GONE (product no longer emits it)
+  top=bounds     SPELLING GONE (product no longer emits it)
+  both=asc-desc  SPELLING GONE (product no longer emits it)
+  both=bounds    SPELLING GONE (product no longer emits it)
+  asc-top+bounds h= 20.40  south_y1=-0.00  escape=+0.00  ink[-16.74  -3.66]
+  asc-top+desc   h= 18.33  south_y1=-0.00  escape=+0.00  ink[-14.67  -1.59]
+frac   pgf        h= 17.00  south_y1=+9.25  escape=+0.00  ink[ -6.88  +7.45]
+  as emitted     h= 18.93  south_y1=+10.29  escape=+0.00  ink[ -7.79  +8.04]
+  bot=descender  SPELLING GONE (product no longer emits it)
+  bot=bounds     SPELLING GONE (product no longer emits it)
+  top=ascender   SPELLING GONE (product no longer emits it)
+  top=bounds     SPELLING GONE (product no longer emits it)
+  both=asc-desc  SPELLING GONE (product no longer emits it)
+  both=bounds    SPELLING GONE (product no longer emits it)
+  asc-top+bounds h= 20.07  south_y1=+10.29  escape=+0.00  ink[ -7.79  +8.04]
+  asc-top+desc   h= 18.33  south_y1=+8.55  escape=+0.00  ink[ -7.79  +8.04]
+both   pgf        h= 18.98  south_y1=-0.20  escape=+0.00  ink[-16.08  -2.77]
+  as emitted     h= 20.23  south_y1=+0.00  escape=+0.00  ink[-17.01  -2.25]
+  bot=descender  SPELLING GONE (product no longer emits it)
+  bot=bounds     SPELLING GONE (product no longer emits it)
+  top=ascender   SPELLING GONE (product no longer emits it)
+  top=bounds     SPELLING GONE (product no longer emits it)
+  both=asc-desc  SPELLING GONE (product no longer emits it)
+  both=bounds    SPELLING GONE (product no longer emits it)
+  asc-top+bounds h= 18.99  south_y1=-0.00  escape=+0.00  ink[-17.01  -2.25]
+  asc-top+desc   h= 18.33  south_y1=-0.00  escape=+0.00  ink[-16.35  -1.59]
+plain  pgf        h= 13.89  south_y1=-0.20  escape=+0.00  ink[-12.14  -2.17]
+  as emitted     h= 15.57  south_y1=-0.00  escape=+0.00  ink[-13.45  -2.45]
+  bot=descender  SPELLING GONE (product no longer emits it)
+  bot=bounds     SPELLING GONE (product no longer emits it)
+  top=ascender   SPELLING GONE (product no longer emits it)
+  top=bounds     SPELLING GONE (product no longer emits it)
+  both=asc-desc  SPELLING GONE (product no longer emits it)
+  both=bounds    SPELLING GONE (product no longer emits it)
+  asc-top+bounds h= 17.11  south_y1=-0.00  escape=+0.00  ink[-13.45  -2.45]
+  asc-top+desc   h= 18.33  south_y1=-0.00  escape=+0.00  ink[-14.67  -3.67]
+paren  pgf        h= 16.60  south_y1=-0.20  escape=+0.00  ink[-13.80  -2.99]
+  as emitted     h= 18.35  south_y1=-0.00  escape=+0.00  ink[-15.33  -2.25]
+  bot=descender  SPELLING GONE (product no longer emits it)
+  bot=bounds     SPELLING GONE (product no longer emits it)
+  top=ascender   SPELLING GONE (product no longer emits it)
+  top=bounds     SPELLING GONE (product no longer emits it)
+  both=asc-desc  SPELLING GONE (product no longer emits it)
+  both=bounds    SPELLING GONE (product no longer emits it)
+  asc-top+bounds h= 18.99  south_y1=-0.00  escape=+0.00  ink[-15.33  -2.25]
+  asc-top+desc   h= 18.33  south_y1=-0.00  escape=+0.00  ink[-14.67  -1.59]
+sum    pgf        h= 17.64  south_y1=-0.20  escape=+0.00  ink[-16.97  -1.34]
+  as emitted     h= 21.26  south_y1=-0.00  escape=+0.00  ink[-20.40  -1.61]
+  bot=descender  SPELLING GONE (product no longer emits it)
+  bot=bounds     SPELLING GONE (product no longer emits it)
+  top=ascender   SPELLING GONE (product no longer emits it)
+  top=bounds     SPELLING GONE (product no longer emits it)
+  both=asc-desc  SPELLING GONE (product no longer emits it)
+  both=bounds    SPELLING GONE (product no longer emits it)
+  asc-top+bounds h= 21.23  south_y1=-0.00  escape=+0.00  ink[-20.40  -1.61]
+  asc-top+desc   h= 18.33  south_y1=-0.00  escape=+1.28  ink[-17.51  +1.28]
+mix    pgf        h= 17.34  south_y1=-0.20  escape=+0.00  ink[-15.18  -1.34]
+  as emitted     h= 19.39  south_y1=-0.00  escape=+0.00  ink[-16.81  -2.25]
+  bot=descender  SPELLING GONE (product no longer emits it)
+  bot=bounds     SPELLING GONE (product no longer emits it)
+  top=ascender   SPELLING GONE (product no longer emits it)
+  top=bounds     SPELLING GONE (product no longer emits it)
+  both=asc-desc  SPELLING GONE (product no longer emits it)
+  both=bounds    SPELLING GONE (product no longer emits it)
+  asc-top+bounds h= 20.04  south_y1=-0.00  escape=+0.00  ink[-16.81  -2.25]
+  asc-top+desc   h= 19.87  south_y1=-0.00  escape=+0.00  ink[-16.65  -2.08]
+rows   pgf        h= 14.94  south_y1=-0.20  escape=+0.00  ink[-12.80  -2.00]
+  as emitted     h= 35.31  south_y1=+0.00  escape=+0.00  ink[-32.63  -2.17]
+  bot=descender  SPELLING GONE (product no longer emits it)
+  bot=bounds     SPELLING GONE (product no longer emits it)
+  top=ascender   SPELLING GONE (product no longer emits it)
+  top=bounds     SPELLING GONE (product no longer emits it)
+  both=asc-desc  SPELLING GONE (product no longer emits it)
+  both=bounds    SPELLING GONE (product no longer emits it)
+  asc-top+bounds h= 38.62  south_y1=-0.00  escape=+0.00  ink[-33.98  -2.17]
+  asc-top+desc   h= 38.02  south_y1=-0.00  escape=+0.00  ink[-33.39  -1.59]
+text   pgf        h= 15.50  south_y1=-0.20  escape=+0.00  ink[-13.24  -3.28]
+  as emitted     h= 14.57  south_y1=-0.00  escape=+0.00  ink[-13.50  -0.96]
+  bot=descender  h= 17.28  south_y1=-0.00  escape=+0.00  ink[-16.21  -3.67]
+  bot=bounds     h= 17.19  south_y1=+0.00  escape=+0.00  ink[-16.12  -3.58]
+  top=ascender   h= 17.17  south_y1=-0.00  escape=+0.00  ink[-13.50  -0.96]
+  top=bounds     h= 15.01  south_y1=-0.00  escape=+0.00  ink[-13.50  -0.96]
+  both=asc-desc  h= 19.87  south_y1=-0.00  escape=+0.00  ink[-16.21  -3.67]
+  both=bounds    h= 17.63  south_y1=+0.00  escape=+0.00  ink[-16.12  -3.58]
+  asc-top+bounds SPELLING GONE (product no longer emits it)
+  asc-top+desc   SPELLING GONE (product no longer emits it)
+
+--- anchor law (which point the box hangs on) ---
+  $x_i^2$     anchor=south     emitted  h= 19.39  y0=-19.39 y1= -0.00  escape=+0.00
+  draw, anchor=south       bounds SPELLING GONE
+  $x_i^2$     anchor=north     emitted  h= 19.39  y0= +0.00 y1=+19.39  escape=+0.00
+  draw, anchor=north       bounds SPELLING GONE
+  $x_i^2$     draw             emitted  h= 19.39  y0= -9.69 y1= +9.69  escape=+0.00
+  draw                     bounds SPELLING GONE
+  $\frac{a}{b anchor=south     emitted  h= 18.93  y0= -8.65 y1=+10.29  escape=+0.00
+  draw, anchor=south       bounds SPELLING GONE
+  $\frac{a}{b anchor=north     emitted  h= 18.93  y0= -8.65 y1=+10.29  escape=+0.00
+  draw, anchor=north       bounds SPELLING GONE
+  $\frac{a}{b draw             emitted  h= 18.93  y0= -8.65 y1=+10.29  escape=+0.00
+  draw                     bounds SPELLING GONE
+  Abg         anchor=south     emitted  h= 14.57  y0=-14.57 y1= -0.00  escape=+0.00
+  Abg         anchor=south     bounds   h= 17.63  y0=-17.63 y1= +0.00  escape=+0.00
+  Abg         anchor=north     emitted  h= 14.57  y0= +0.00 y1=+14.57  escape=+0.00
+  Abg         anchor=north     bounds   h= 17.63  y0= +0.00 y1=+17.63  escape=+0.00
+  Abg         draw             emitted  h= 14.57  y0= -7.29 y1= +7.29  escape=+0.00
+  Abg         draw             bounds   h= 17.63  y0= -8.81 y1= +8.81  escape=+0.00

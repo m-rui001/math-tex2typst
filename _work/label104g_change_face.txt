@@ -1,0 +1,14 @@
+#104g change face: every flat picture built twice -- as written, and with the
+     author's own `fit=(...)` option stripped (the old law read no box).
+pictures built: 1058 over 724 papers
+pictures the emitter refuses for reasons of its own: 140 (not this round's)
+canvases that write fit=: 4 over 4 papers
+canvases whose emission differs: 4 over 4 papers
+emitted lines moved in total: 26
+canvases that write the key and change nothing: 0
+canvases the new law newly refuses: 0
+
+  CHANGED    A-counterexample-to-Kaplanskys-quasitrace-conjecture-September-23-2026#0  lines=2  (old law refused the whole canvas: False)
+  CHANGED    Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026#2  lines=8  (old law refused the whole canvas: False)
+  CHANGED    Perfect-completeness-for-2-to-1-games-September-23-2026#0  lines=2  (old law refused the whole canvas: False)
+  CHANGED    The-Blockwise-Alperin-Weight-Conjecture-September-23-2026#0  lines=14  (old law refused the whole canvas: False)

@@ -1,0 +1,44 @@
+== emitter face: papers with a nested `even odd rule` fill
+
+A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Maps-October-5-2026  statements=2 shipped=2
+    compound-path({circle((0, 0), radius: 1.522, fill: rgb("#f2f2f2"), stroke: none); circle((0, 0), radius: 0.5775, fill: rgb("#f2f2f2"), stroke: none); line((0, 0), (0, 0))}, fill: rgb("#f2f2f2"), fill-rule: "even-odd", stroke: none)
+    compound-path({circle((5.25, 0), radius: 1.522, fill: rgb("#f2f2f2"), stroke: none); circle((5.25, 0), radius: 0.5775, fill: rgb("#f2f2f2"), stroke: none); line((5.25, 0), (5.25, 0))}, fill: rgb("#f2f2f2"), fill-rule: "even-odd", stroke: none)
+
+A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite-October-4-2026  statements=1 shipped=1
+    compound-path({circle((2.2, -4.62), radius: 1.19, fill: rgb("#d1d1d1"), stroke: none); circle((2.2, -4.62), radius: 0.68, fill: rgb("#d1d1d1"), stroke: none); line((2.2, -4.62), (2.2, -4.62))}, fill: rgb("#d1d1d1"), fill-rule: "even-odd", stroke: none)
+
+A-Torsion-Free-Group-Algebra-with-Zero-Divisors-September-23-2026  statements=1 shipped=1
+    compound-path({circle((0, 0), radius: 0.9379, fill: rgb("#e9e9e9"), stroke: none); circle((0, 0), radius: 0.4316, fill: rgb("#e9e9e9"), stroke: none); line((0, 0), (0, 0))}, fill: rgb("#e9e9e9"), fill-rule: "even-odd", stroke: none)
+
+BKT-universality-for-height-and-planar-spin-fields-September-24-2026  statements=1 shipped=1
+    compound-path({rect((-2.1, -2.1), (2.1, 2.1), fill: rgb("#e6e6ff"), stroke: none); line((2.1, 2.1), (-1.505, -1.505)); rect((-1.505, -1.505), (1.505, 1.505), fill: rgb("#e6e6ff"), stroke: none)}, fill: rgb("#e6e6ff"), fill-rule: "even-odd", stroke: none)
+
+Essential-Singularity-of-the-Correlation-Length-in-the-Planar-XY-Model-October-5-2026  statements=2 shipped=2
+    compound-path({circle((8.6, 2.3), radius: 1.68, fill: rgb("#e0e0ff"), stroke: none); circle((8.6, 2.3), radius: 1.4, fill: rgb("#e0e0ff"), stroke: none); line((8.6, 2.3), (8.6, 2.3))}, fill: rgb("#e0e0ff"), fill-rule: "even-odd", stroke: none)
+    compound-path({circle((8.6, 2.3), radius: 0.42, fill: rgb("#e0e0ff"), stroke: none); circle((8.6, 2.3), radius: 0.35, fill: rgb("#e0e0ff"), stroke: none); line((8.6, 2.3), (8.6, 2.3))}, fill: rgb("#e0e0ff"), fill-rule: "even-odd", stroke: none)
+
+Exponential-decay-in-two-dimensional-classical-On-models-September-23-2026  statements=1 shipped=1
+    compound-path({rect((-1.691, -1.691), (1.691, 1.691), fill: rgb("#ececec"), stroke: none); line((1.691, 1.691), (-1.159, -1.159)); rect((-1.159, -1.159), (1.159, 1.159), fill: rgb("#ececec"), stroke: none)}, fill: rgb("#ececec"), fill-rule: "even-odd", stroke: none)
+
+Pure-Point-Spectrum-for-the-Two-Dimensional-Anderson-Model-at-Every-Positive-Disorder-September-23-2026  statements=2 shipped=2
+    compound-path({rect((-3.25, -3.25), (3.25, 3.25), fill: rgb("#e0e0e0"), stroke: none); line((3.25, 3.25), (-2.6, -2.6)); rect((-2.6, -2.6), (2.6, 2.6), fill: rgb("#e0e0e0"), stroke: none)}, fill: rgb("#e0e0e0"), fill-rule: "even-odd", stroke: none)
+    compound-path({rect((-1.94, -1.94), (1.94, 1.94), fill: rgb("#dbdbff"), stroke: none); line((1.94, 1.94), (-1.45, -1.45)); rect((-1.45, -1.45), (1.45, 1.45), fill: rgb("#dbdbff"), stroke: none)}, fill: rgb("#dbdbff"), fill-rule: "even-odd", stroke: none)
+
+Quantitative-Superexponential-Bounds-for-van-der-Waerden-Numbers-September-23-2026  statements=1 shipped=1
+    compound-path({circle((0, 0), radius: 1.485, fill: rgb("#e8e8ff"), stroke: none); circle((0, 0), radius: 1.05, fill: rgb("#e8e8ff"), stroke: none); line((0, 0), (0, 0))}, fill: rgb("#e8e8ff"), fill-rule: "even-odd", stroke: none)
+
+Rigidity-of-Smooth-Billiards-with-a-Continuous-Caustic-Collar-September-24-2026  statements=1 shipped=1
+    compound-path({circle((0, 0), radius: (2.55, 1.7), fill: rgb("#ebeff2"), stroke: none); circle((0, 0), radius: (2.295, 1.286), fill: rgb("#ebeff2"), stroke: none); line((0, 0), (0, 0))}, fill: rgb("#ebeff2"), fill-rule: "even-odd", stroke: none)
+
+The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-September-25-2026  statements=3 shipped=3
+    compound-path({rect((-2.94, -2.94), (2.94, 2.94), fill: rgb("#f0f0f0"), stroke: none); line((2.94, 2.94), (-2.1, -2.1)); rect((-2.1, -2.1), (2.1, 2.1), fill: rgb("#f0f0f0"), stroke: none)}, fill: rgb("#f0f0f0"), fill-rule: "even-odd", stroke: none)
+    compound-path({rect((-0.42, -0.42), (0.42, 0.42), fill: rgb("#e1e1e1"), stroke: none); line((0.42, 0.42), (-0.21, -0.21)); rect((-0.21, -0.21), (0.21, 0.21), fill: rgb("#e1e1e1"), stroke: none)}, fill: rgb("#e1e1e1"), fill-rule: "even-odd", stroke: none)
+    compound-path({rect((-0.42, -0.42), (0.42, 0.42), fill: rgb("#e1e1e1"), stroke: none); line((0.42, 0.42), (-0.21, -0.21)); rect((-0.21, -0.21), (0.21, 0.21), fill: rgb("#e1e1e1"), stroke: none)}, fill: rgb("#e1e1e1"), fill-rule: "even-odd", stroke: none)
+
+The-critical-Liouville-quantum-sphere-and-geometric-limits-of-FK-maps-at-q-equals-4-September-24-2026  statements=1 shipped=1
+    compound-path({circle((0, 0), radius: 3.854, fill: rgb("#f1cfc5"), stroke: none); circle((0, 0), radius: 3.731, fill: rgb("#f1cfc5"), stroke: none); line((0, 0), (0, 0))}, fill: rgb("#f1cfc5"), fill-rule: "even-odd", stroke: none)
+
+The-critical-logarithmic-correction-for-the-planar-XY-model-October-5-2026  statements=1 shipped=1
+    compound-path({rect((-1.56, -1.56), (1.56, 1.56), fill: rgb("#dfdfdf"), stroke: none); line((1.56, 1.56), (-1.34, -1.34)); rect((-1.34, -1.34), (1.34, 1.34), fill: rgb("#dfdfdf"), stroke: none)}, fill: rgb("#dfdfdf"), fill-rule: "even-odd", stroke: none)
+
+TOTAL statements=17 over 12 papers, shipped compound-path lines=17

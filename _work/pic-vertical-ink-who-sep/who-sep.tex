@@ -1,0 +1,42 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\newdimen\measHT
+\newdimen\measDP
+\makeatletter
+\newcommand\report[4]{%
+  \setbox0\hbox{#4}%
+  \measHT=\ht0 \measDP=\dp0 %
+  \pgfextracty{\dimen6}{\pgfpointdiff{\pgfpointanchor{#1}{center}}{\pgfpointanchor{#1}{north}}}%
+  \pgfextracty{\dimen8}{\pgfpointdiff{\pgfpointanchor{#1}{south}}{\pgfpointanchor{#1}{center}}}%
+  \pgfextracty{\dimen10}{\pgfpointdiff{\pgfpointanchor{#2}{center}}{\pgfpointanchor{#2}{north}}}%
+  \pgfextracty{\dimen12}{\pgfpointdiff{\pgfpointanchor{#2}{south}}{\pgfpointanchor{#2}{center}}}%
+  \typeout{GOT #3 INKHT=\the\measHT INKDP=\the\measDP ZN=\the\dimen10 ZS=\the\dimen12 N=\the\dimen6 S=\the\dimen8}}
+\makeatletter
+\begin{document}
+\begin{tikzpicture}
+  \node[font=\small] (a0) at (0,0) {P};
+  \node[font=\small,inner sep=0pt] (z0) at (5,0) {P};
+  \report{a0}{z0}{0}{{\small P}}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node[font=\normalsize] (a1) at (0,0) {P};
+  \node[font=\normalsize,inner sep=0pt] (z1) at (5,0) {P};
+  \report{a1}{z1}{1}{{P}}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node[font=\large] (a2) at (0,0) {P};
+  \node[font=\large,inner sep=0pt] (z2) at (5,0) {P};
+  \report{a2}{z2}{2}{{\large P}}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node[font=\fontsize{20}{24}\selectfont] (a3) at (0,0) {P};
+  \node[font=\fontsize{20}{24}\selectfont,inner sep=0pt] (z3) at (5,0) {P};
+  \report{a3}{z3}{3}{{\fontsize{20}{24}\selectfont P}}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node[font=\tiny] (a4) at (0,0) {P};
+  \node[font=\tiny,inner sep=0pt] (z4) at (5,0) {P};
+  \report{a4}{z4}{4}{{\tiny P}}
+\end{tikzpicture}
+\end{document}

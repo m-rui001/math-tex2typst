@@ -1,0 +1,84 @@
+==== D238 headings ====
+  L1   | # D238 研究笔记：平方差自由集的固定幂节省
+  L10  | ## §0 登记与来源清点
+  L31  | ## §1 出发点：这个问题为什么盯人
+  L76  | ## §2 旧路线为什么停在天花板：我的第一次误判
+  L121 | ## §3 控制量的设计：一个由概率律定义的半范
+  L181 | ## §4 指标集 $V$：24、80、161 从哪来
+  L209 | ## §5 标记分量：负部怎么补
+  L272 | ## §6 graph 一节：一切算量的地基
+  L293 | ## §7 带符号棋盘：折叠、冒泡排序与取极大赋值
+  L337 | ## §8 条件混合与 conductor 衰减：负频率分量的压制
+  L389 | ## §9 提升矩引理：$N^{o(1)}$ 从哪里榨出来
+  L442 | ## §10 平方核：从有限域平方回到真平方数
+  L517 | ## §11 尺度转移：$D^2$-步等差数列上的精确比较
+  L570 | ## §12 好剩余与有序区间收缩：组合端最终一击
+  L614 | ## §13 归纳闭合：例外测度的容斥与加权递推
+  L659 | ## §14 参数角色表：谁先谁后，改动会断在哪
+  L685 | ## §15 与最初设想的差距，以及没解决的形状
+  L734 | ## §16 勘误与操作记录
+  L750 | ## 附录 A：逐式核验记录（自查算术，全部在本稿落盘后手工重算）
+  L816 | ## 台账（全文唯一五列表，文末收束）
+
+==== context L735-760 ====
+  L735 | 
+  L736 | 按落盘协议要求登记本稿操作异常，共两条。第一条：正文 §2 初稿落盘后
+  L737 | 发现磁盘版本在第 108 行附近多出禁用短语（四字的过渡套话，本文此处不复现
+  L738 | 其原文，疑似外部写回
+  L739 | 机制掺入），已用一次定点 Edit 删除该短语本身、保留其前后全部文字，
+  L740 | 属于对已落盘内容的最小必要修改，除此之外全文零改写、零删除、零重排。
+  L741 | 第二条：复查发现两处 LaTeX 记号笔误，为免动已落盘正文，在此声明正确
+  L742 | 写法供阅读者替换：其一，§3"把 $A\subseteq[N]$ 接上去"段内
+  L743 | $Y(N,A)=Z_{\mathcal P_N}(G)$ 无误，但 §7 首段引用的算子式中误写
+  L744 | $\mathcal Z_{\math P}$，应为 $\mathcal Z_{\mathcal P}$；其二，§7 末段
+  L745 | $\lVert T\rvert_{H_U}\rVert$ 应为
+  L746 | $\lVert T\rvert_{H_U}\rVert_{\mathrm{op}}$ 且开闭记号应配对
+  L747 | $\lVert\cdot\rVert$。两处均不影响论证。探针行保留在 §0 登记块内，
+  L748 | 其后正文未再引用它。编号顺序 §0 至 §16 动笔前已定，中途未调序。
+  L749 | 
+  L750 | ## 附录 A：逐式核验记录（自查算术，全部在本稿落盘后手工重算）
+  L751 | 
+  L752 | 我把论文里所有能独立复算的数值与指数关系逐个在纸上重跑一遍，记录如下。
+  L753 | 这些核验不构成新论证，作用是确认我没有误读，并给台账里"若改动断在哪
+  L754 | 一步"提供依据。
+  L755 | 
+  L756 | 一、混合指数塔。$\tau=\beta\gamma/(1000(d+1))$，$\sigma_0=\gamma\tau/4$
+  L757 | （transfer.tex:46-47）。contraction.tex:302 的口号 $23\tau=5888\sigma_0$
+  L758 | 核验：$23\tau/( \gamma\tau/4)=92/\gamma=92\times64=5888$，与 $\beta,d$
+  L759 | 无关，纯定义恒等式，通过。$\gamma\tau=4\sigma_0$ 同为定义复读。
+  L760 | $\beta/6-(3d+2)\tau$：$(3d+2)\tau=\beta\gamma(3d+2)/(1000(d+1))$，而
+  L761 | $(3d+2)/(d+1)<3$、$\gamma=1/64$，故 $(3d+2)\tau<3\beta/64000$，
+
+==== context L290-302 ====
+  L290 | $1/64$ 来自 $p^{-1/8}$ 的平方根 $p^{-1/32}$ 再留一倍裕量
+  L291 | （tuples.tex:671-673, 799-809），每一处都预留了吸收 $N^{o(1)}$ 的空间。
+  L292 | 
+  L293 | ## §7 带符号棋盘：折叠、冒泡排序与取极大赋值
+  L294 | 
+  L295 | functional.tex:41-170 是全文我最想逐行讲清楚的证明。核心命题（signed
+  L296 | Hölder，functional.tex:43-55）：对任意有限素数集与实函数
+  L297 | $g,g_v$，$Z_{\mathcal P}(g)\ge0$ 且
+  L298 | $\lvert\mathcal Z_{\math P}((g_v))\rvert\le\prod_v Z_{\mathcal P}(g_v)^{1/d}$。证明的第一层：乘积律 $\mu_{\mathcal P}$ 在
+  L299 | 任一切割的矩阵是各 $\mu_p$ 矩阵的垂积，仍对称半正定；折叠映射
+  L300 | $\phi_\pm$ 把 $V_-$ 折回 $V_+$，半正定双线性形式对
+  L301 | $F(x)=\prod_{V_+}a(v)(x_v)$、$G(x)=\prod_{V_+}a(\theta v)(x_v)$ 给出
+  L302 | Cauchy-Schwarz：$\lvert\Lambda(a)\rvert^2\le \Lambda(a\circ\phi_+)\Lambda(a\circ\phi_-)$，两个折叠值非负
+
+==== D238 lines with \mathcal Z ====
+  L298 | $\lvert\mathcal Z_{\math P}((g_v))\rvert\le\prod_v Z_{\mathcal P}(g_v)^{1/d}$。证明的第一层：乘积律 $\mu_{\mathcal P}$ 在
+  L315 | 极大赋值 $M=\max_a\lvert\mathcal Z_{\mathcal P}((f_{a(v)}))\rvert$，
+  L744 | $\mathcal Z_{\math P}$，应为 $\mathcal Z_{\mathcal P}$；其二，§7 末段
+  L844 | | 带符号 Hölder | $\lvert\mathcal Z((g_v))\rvert\le\prod_v Z(g_v)^{1/d}$ | build/sections/functional.tex:43-54 | 三角不等式、混合尺度比较、收缩 mixed 版 | 抽掉它，截断产生的带符号乘积无任何可用估计 |
+
+==== D30 material file check ====
+material files matched: ['E:/math/研究笔记/素材\\Kähler负pinched三维fold-素材.md', 'E:/math/研究笔记/素材\\Kähler负pinched三维fold-素材.md']
+--- Kähler负pinched三维fold-素材.md (103687 chars)
+   E:\\math\\lean\\OAI\\Geometry\\Kahler    2
+   108 个                                    1
+   18,?688                                  1
+   ctx: d\main.tex` 与 `build\sections\*.tex` 的 TeX 源码；公式一律 TeX 原文照抄， / > 保留希腊字母与上下标。论文自带 PDF 有口令、不可读，故不引用 PDF。 / > Lean 形式化位于 `E:\math\lean\OAI\Geometry\Kahler\`（108 个 `.lean` 文件， / > 约 18,688 行），比对配置在 `E:\math\lean\ComparatorChallenges\PinchedKahler.json`。 / > `E:\math\reasoning_trace
+--- Kähler负pinched三维fold-素材.md (103687 chars)
+   E:\\math\\lean\\OAI\\Geometry\\Kahler    2
+   108 个                                    1
+   18,?688                                  1
+   ctx: d\main.tex` 与 `build\sections\*.tex` 的 TeX 源码；公式一律 TeX 原文照抄， / > 保留希腊字母与上下标。论文自带 PDF 有口令、不可读，故不引用 PDF。 / > Lean 形式化位于 `E:\math\lean\OAI\Geometry\Kahler\`（108 个 `.lean` 文件， / > 约 18,688 行），比对配置在 `E:\math\lean\ComparatorChallenges\PinchedKahler.json`。 / > `E:\math\reasoning_trace

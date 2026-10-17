@@ -1,0 +1,17 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\begin{document}
+\begin{tikzcd}[column sep=large,row sep=large]
+ (Y_i,\Theta_i) \arrow[r,"\Theta_i\searrow\Theta_i'"]
+ \arrow[d,"p_i"']
+ & (Y_i,\Theta_i') \arrow[r,dashed,"\text{finite small flips}"{yshift=3pt}]
+ & (Y_{i+1},\Theta_{i+1}) \arrow[d,"p_{i+1}"]\\
+ (X_i,B_i) \arrow[r,"f_i"']
+ & Z_i
+ & (X_{i+1},B_{i+1}) \arrow[l,"f_i^+"]
+\end{tikzcd}
+\end{document}

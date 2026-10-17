@@ -1,0 +1,21 @@
+#82 collision census, re-read on the run138 products with the "a frame must hold text" rule
+folded into _work/probe81_label_box_face.py (records in _work/label81_pairs.json).
+
+canvases flagged            152   (run137, rule off: 157)
+papers                      124   (run137, rule off: 126)
+foreign-ink pairs            50   (run137: 71)  over 29 canvases
+ink-on-ink pairs            269   (run137: 272) over 128 canvases
+boxes on the flagged pages   83
+
+Two changes are in these numbers and they separate cleanly:
+* ink-on-ink does not read boxes at all (`hits()` builds `both` from ink only), so its -3 is the #83
+  `\!` fix: the products carry exactly 3 spacing tokens inside canvases, all in
+  `Filtered-chromatic-splitting-at-generic-primes-September-25-2026` canvas 2.
+* foreign-ink -21 is the gauge rule: a stroked rectangle with no span centred in it is artwork
+  (grid cells), not a node frame. probe82c measured the same rule alone on run137: 157 -> 153
+  canvases, foreign 71 -> 53, ink-on-ink unchanged, control still foreign-ink=1 / ink-on-ink=2.
+
+The worst foreign pairs are all "one printed run of two touching words" -- `attachments`,
+`tentranslations`, `originaledge`, `cleanboundary`, `thencolumn`, `NormalizedAirylimit:` -- i.e. the
+residual face is word-against-word, not label-against-frame. Each still needs the standalone +
+pdflatex control before any emitter change.

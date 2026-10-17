@@ -1,0 +1,3 @@
+=== 788 open=8 close=9
+然后把测试类用上。取 $x$ 的吹起与测试类 $\beta$ 的基扭转，由在该测试上 $B/p\le bL$、由非负性 $L\cdot\beta\ge0$ 与 $K_W\cdot\beta\ge0$、再由 $\lambda_i\le q$，上面那个归一化类与 $\beta$ 的配对至多 $D^{+}\cdot\beta$，frobenius.tex:633 到 frobenius.tex:637。设 $s_i$ 是 $\mathcal{Q}_i}$ 的任一非零截面，按素材写就是 $s_i$ 为 $\mathcal{Q}_i$ 的非零截面，并记 $m_i=\operatorname{ord}_{x'}(s_i)$；它的除子在扭转后的吹起上有有效严格变换，其类为 $\pi_{x'}^{*}c_1(\mathcal{Q}_i)-m_iJ'$，frobenius.tex:637 到 frobenius.tex:640。测试对有效除子非负，加上强移动类的严格不等式，给出
+unbalanced=[788]

@@ -1,0 +1,603 @@
+# C07 切向量层的一般nef性（arXiv:1703.03175）
+
+## 0 取证边界
+
+对象是 arXiv 1703.03175。源文件里的题名逐字写作 `On generic  nefness of tangent sheaves`（`Generic_nefness_of_tangent_sheaves_v3.tex:307`，generic 与 nefness 之间是两个空格，本稿按两个单词之间的一个空格读）。作者行逐字为 `Wenhao Ou`（`Generic_nefness_of_tangent_sheaves_v3.tex:317`），单位行 `Generic_nefness_of_tangent_sheaves_v3.tex:319` 给的是中国科学院数学与系统科学研究院数学研究所（北京 100190），邮箱行 `Generic_nefness_of_tangent_sheaves_v3.tex:320`，学科分类行 `Generic_nefness_of_tangent_sheaves_v3.tex:325` 给 14E99。摘要在 `Generic_nefness_of_tangent_sheaves_v3.tex:327-329`，正文从 `Generic_nefness_of_tangent_sheaves_v3.tex:339` 的引言开始，到 `Generic_nefness_of_tangent_sheaves_v3.tex:1251` 收束，文献表命令在 `Generic_nefness_of_tangent_sheaves_v3.tex:1269-1271`。成稿月份取派单给的 2017 年 3 月，源文件里未见 `\date` 生效行（`Generic_nefness_of_tangent_sheaves_v3.tex:308` 的日期行被注释掉）。
+
+素材清单：`E:\math\被引素材\1703.03175\Generic_nefness_of_tangent_sheaves_v3.tex`，80,892 字节，Read 计数 1,275 行（末行是 `\end{document}`），`wc -l` 计数 1,274（末行无换行符所致）；同目录另有 `Generic_nefness_of_tangent_sheaves_v3.bbl`，8,415 字节，是文献表的编译产物、非 `.tex` 源，按规格第 2 条未取用；目录内未见 `.pdf`，也没有可读的 `.bib` 源文件。因此正文里所有形如方括号键名的文献记号只能按其字面键名转述，具体条目内容无法核对。
+
+语料侧的引用位置是 D289、D305、D385、D447、D451、D471，引用键 `Ou2023`。这六条研究笔记本单禁止打开，所以接缝一节（第 8 节末段）只依据派单给的键名与这篇论文自身的陈述来写，属于薄读申报范围内的部分：我没有核对语料原文里引用本文的具体句子，也没有核对 `Ou2023` 这个键在各笔记里挂的是哪个版本的题录。
+
+编号体系是推断项，需要申报。`Generic_nefness_of_tangent_sheaves_v3.tex:236` 声明 `\newtheorem{thm}{Theorem}[section]`，随后 `Generic_nefness_of_tangent_sheaves_v3.tex:242-298` 里的 lemma、cor、prop、rem、exmp、prob、question 等几乎所有环境都以 `[thm]` 共用同一个计数器并按节复位，`Generic_nefness_of_tangent_sheaves_v3.tex:301` 有 `\numberwithin{equation}{section}`。本稿因此按「节内统一流水号」转述：第 1 节里依次是定理 1.1（`Generic_nefness_of_tangent_sheaves_v3.tex:344-347`）、定理 1.2（`Generic_nefness_of_tangent_sheaves_v3.tex:350-353`）、定理 1.3（`Generic_nefness_of_tangent_sheaves_v3.tex:358-361`）、定理 1.4（`Generic_nefness_of_tangent_sheaves_v3.tex:382-385`）、推论 1.5（`Generic_nefness_of_tangent_sheaves_v3.tex:392-395`）、定理 1.6（`Generic_nefness_of_tangent_sheaves_v3.tex:403-406`）、定理 1.7（`Generic_nefness_of_tangent_sheaves_v3.tex:412-419`）、定理 1.8（`Generic_nefness_of_tangent_sheaves_v3.tex:424-431`）、定理 1.9（`Generic_nefness_of_tangent_sheaves_v3.tex:445-448`）、定理 1.10（`Generic_nefness_of_tangent_sheaves_v3.tex:453-456`）。第 2 节有引理 2.1、命题 2.2，第 3 节有命题 3.1，第 4 节有定理 4.1，第 5 节有引理 5.1、注记 5.2，第 6 节有命题 6.1、引理 6.2 至 6.10，第 7 节有命题 7.1、引理 7.2。带编号的公式只有三处：`Generic_nefness_of_tangent_sheaves_v3.tex:603-605`（第 3 节第一号）、`Generic_nefness_of_tangent_sheaves_v3.tex:898-900` 与 `Generic_nefness_of_tangent_sheaves_v3.tex:1086-1089`（第 6 节的两号）。`Generic_nefness_of_tangent_sheaves_v3.tex:237-241` 定义了 Theorem A 到 Theorem E 五个无编号环境，正文没有用到；`Generic_nefness_of_tangent_sheaves_v3.tex:287-297` 那组 claim、case、step 环境同样没有用到。多行推导链一律用 `eqnarray*`（无编号），本稿转述为独立公式。
+
+记号展开字典（全部取自 `Generic_nefness_of_tangent_sheaves_v3.tex:59-110`、`Generic_nefness_of_tangent_sheaves_v3.tex:127-129`、`Generic_nefness_of_tangent_sheaves_v3.tex:146-147`、`Generic_nefness_of_tangent_sheaves_v3.tex:214`）：`\p` 展开为 `\mathbb P`，`\bP`、`\bQ`、`\bZ` 展开为 `\mathbb P`、`\mathbb Q`、`\mathbb Z`，`\sO` 展开为 `\mathscr O`，`\cF`、`\cG` 展开为 `\mathcal F`、`\mathcal G`，`\map` 展开为 `\dashrightarrow`，`\into` 展开为 `\hookrightarrow`，`\lra` 展开为 `\to`，`\epsi` 展开为 `\varepsilon`，`\D` 展开为 `\Delta`，`\d` 展开为 `\delta`，`\G` 展开为 `\Gamma`，`\le`、`\ge` 重定义为 `\leqslant`、`\geqslant`，`\codim`、`\Bs`、`\Fix`、`\Mob`、`\Pic`、`\Nef`、`\Pef`、`\Eff`、`\NS` 展开为正体算子，`\NE` 展开为 `\overline{\textup{NE}}`。本稿一律写展开形。有一处混用要登记：`\D` 展开是 `\Delta`，而素材在第 1 节与第 4 节的「pair」记号里对同一个除子既写 `D` 又写 `\D`（`Generic_nefness_of_tangent_sheaves_v3.tex:399` 一句之内同时出现 $K_X+D$ 与 $\Omega^1(X,\Delta)$，`Generic_nefness_of_tangent_sheaves_v3.tex:674-677` 用 `D`，`Generic_nefness_of_tangent_sheaves_v3.tex:575`、`Generic_nefness_of_tangent_sheaves_v3.tex:603` 用 `\D`）。本稿的处理是：pair 里的除子统一写 `D`，`Generic_nefness_of_tangent_sheaves_v3.tex:603` 那个新引入的组合除子仍写 `\Delta`，因为它与 `D` 是两个对象。
+
+源文件里有三处被注释掉的内容，登记在此以便后文引用：`Generic_nefness_of_tangent_sheaves_v3.tex:556-557` 是被注释的一般性斜率比较断言，`Generic_nefness_of_tangent_sheaves_v3.tex:568` 是被注释的命题 3.1 的背景（相对偶化层直接像的弱正性谱系，出现 Kawamata、Viehweg、Campana、Fujino、Păun 与 Takayama 的键名），`Generic_nefness_of_tangent_sheaves_v3.tex:739-760` 是一整块被注释的引理及其证明（含局部解析坐标与行列式计算）。两个 `\xymatrix` 交换图在 `Generic_nefness_of_tangent_sheaves_v3.tex:595-600` 与 `Generic_nefness_of_tangent_sheaves_v3.tex:702-707`，规格禁止代码跨度之外的图形记法，本稿用文字复述其箭头与对象。
+
+源文件自身的笔误与不整齐处也登记在此，后文遇到时只更正不复制：`Generic_nefness_of_tangent_sheaves_v3.tex:360` 的 "Assume that  that" 重复；`Generic_nefness_of_tangent_sheaves_v3.tex:372` 把投影记作 $f$ 却在同一句里写 `p^*T_Y`；`Generic_nefness_of_tangent_sheaves_v3.tex:375` 的 "on cannot"；`Generic_nefness_of_tangent_sheaves_v3.tex:773-778` 说「两个条件」而列出三项；`Generic_nefness_of_tangent_sheaves_v3.tex:1007` 的 "for some ample an ample divisor"；`Generic_nefness_of_tangent_sheaves_v3.tex:1183` 的 `c_1(X)` 按上下文应为 `c_1(T_X)`；`Generic_nefness_of_tangent_sheaves_v3.tex:1230-1231` 的独立公式在 `C` 与 `\cdot` 之间断行。
+
+取证共 10 次读取，全部落在同一个 `.tex` 文件，单次不超过 400 行：上一段会话的四次顺序分块覆盖 `Generic_nefness_of_tangent_sheaves_v3.tex:1-400`、`Generic_nefness_of_tangent_sheaves_v3.tex:401-800`、`Generic_nefness_of_tangent_sheaves_v3.tex:801-1200`、`Generic_nefness_of_tangent_sheaves_v3.tex:1201-1275`，本段会话的六次定点复核覆盖 `Generic_nefness_of_tangent_sheaves_v3.tex:232-356`、`Generic_nefness_of_tangent_sheaves_v3.tex:362-481`、`Generic_nefness_of_tangent_sheaves_v3.tex:357-756`、`Generic_nefness_of_tangent_sheaves_v3.tex:761-1160`、`Generic_nefness_of_tangent_sheaves_v3.tex:1161-1275`、`Generic_nefness_of_tangent_sheaves_v3.tex:55-234`，逐行覆盖 1 至 1,275 全文。未读素材目录之外的任何文件，未读 `.pdf`，未执行版本管理命令，未排版生成 PDF。本稿不改动语料侧任何笔记。
+
+## 1 出发点：从余切侧到切侧
+
+引言第一句就把问题摆在小程序模型的坐标里（`Generic_nefness_of_tangent_sheaves_v3.tex:340`）：复射影流形 $X$ 可按典范除子 $K_X$ 的符号做双有理分类，于是自然的问题是 $K_X$ 的正性（或负性）能往余切层 $\Omega_X^1$ 上提升多远。素材紧接着把两个答案标为 Miyaoka 的定理，出处给在 `Generic_nefness_of_tangent_sheaves_v3.tex:340` 句末的方括号键 `Miy87` 推论 6.4。
+
+定理 1.1（`Generic_nefness_of_tangent_sheaves_v3.tex:344-347`）：$X$ 是复射影流形且 $K_X$ 伪有效，则 $\Omega_X^1$ 一般 nef，即对任意 Mehta-Ramanathan 一般曲线 $C$，限制 $\Omega_X^1\vert_C$ 是 nef 向量丛。定理 1.2（`Generic_nefness_of_tangent_sheaves_v3.tex:350-353`）：$X$ 是 $n$ 维复射影流形且 $K_X$ nef，则对任意充分 ample 的除子 $H_1,\dots,H_{n-2}$ 有
+
+$$c_2(\Omega_X^1)\cdot H_1\cdot\cdots\cdot H_{n-2}\geqslant 0.$$
+
+曲线什么叫一般，素材放在定理之后才定义（`Generic_nefness_of_tangent_sheaves_v3.tex:356`）：Mehta-Ramanathan 一般曲线是 $n-1$ 个「足够 ample 且处于一般位置」的除子的完全交。这个定义只有一句话，没有把「足够」量化，也没有说一族还是一条；后文用法是「任意这样的 $C$」，配合 `Generic_nefness_of_tangent_sheaves_v3.tex:644-646` 与 `Generic_nefness_of_tangent_sheaves_v3.tex:798` 可以看到，实质依赖的是 Mehta-Ramanathan 定理把 Harder-Narasimhan 滤过与限制运算交换这一条（键 `MR82` 定理 6.1）。
+
+本文要做的是把符号翻过来。$T_X$ 指自反切层 $(\Omega_X^1)^*$（定义在 `Generic_nefness_of_tangent_sheaves_v3.tex:530`），而 $-K_X$ nef 的簇上 $\Omega_X^1$ 几乎没有正性可言，正性只能期望在切侧出现。定理 1.3（`Generic_nefness_of_tangent_sheaves_v3.tex:358-361`）：$X$ 是维数至少 2 的复射影簇，带 $\mathbb{Q}$-因子对数规范奇性，$-K_X$ nef，则自反切层 $T_X$ 一般 nef，即对 Mehta-Ramanathan 一般曲线 $C$，$T_X\vert_C$ 是 nef 向量丛。素材这一行有 "Assume that  that" 的重字，已按上下文读成一句；行末用 "That is" 把 generic nef 的含义就地写出，全文没有为 generic nefness 设独立 Definition 环境，最接近的两处定义分散在 `Generic_nefness_of_tangent_sheaves_v3.tex:651`（generic $(H_1,\dots,H_{n-2})$-半正）与 `Generic_nefness_of_tangent_sheaves_v3.tex:674-677`（orbifold 情形的 $\pi$-generic nef）。
+
+定理 1.3 的地位由 `Generic_nefness_of_tangent_sheaves_v3.tex:367` 交代：这是 Peternell 的猜想（键 `Pet12` 的猜想 1.5）；若把 $C$ 限制为同一 ample 类的 $n-1$ 个充分 ample 除子的交，则 Cao（键 `Cao13` 定理 1.2）与 Guenancia（键 `Guenan16` 定理 C）已各自用解析方法独立证下 $T_X\vert_C$ 的 nef 性。解析路线给的是等类交叉，本文给的是一般交叉且允许奇点，差别体现在证明只用代数侧的滤过斜率（`Generic_nefness_of_tangent_sheaves_v3.tex:644-646` 全程是 Harder-Narasimhan 斜率的比较，没有曲率项）。
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:356` 一句里排出的文献键有 `DPS93`、`DPS94`、`DPS96`、`Zhang96`、`Pau97`、`DPS01`、`Zhang05`、`Pau12`、`Pet12`、`CDP15`、`CH17`、`Cao19`，其中 `DPS01` 与本语料的 C06 稿同名（伪有效线丛那篇），`DPS94` 是本稿多处要引的向量丛版本；素材对这些文献的引用是就地给键名加编号（例如 `Generic_nefness_of_tangent_sheaves_v3.tex:1131` 引 `DPS94` 的定义 1.17 与定理 1.18），键与编号的对应可以从正文读出，条目全文读不出。
+
+还有一个恒等式是全文「对偶版本」说法的基础：对秩 $r$ 层 $E$ 有 $c_i(E^{\vee})=(-1)^i c_i(E)$，故 $c_2(T_X)=c_2(\Omega_X^1)$。素材在 `Generic_nefness_of_tangent_sheaves_v3.tex:390` 称推论 1.5 是定理 1.2 的对偶版本，两边写的是同一个 $c_2$ 配对，差别在假设：一边是 $K_X$ nef 加上 $\Omega_X^1$ 的一般 nef（由定理 1.1 提供），另一边是 $-K_X$ nef 加上 $T_X$ 的一般 nef（由定理 1.3 提供）。这一点可以对照素材第 6 节 `Generic_nefness_of_tangent_sheaves_v3.tex:820` 重述的 Miyaoka 不等式形式来读：要的是 $c_1(E)$ nef 加 generic $(H_1,\dots,H_{n-2})$-半正，两个假设在 $E=T_X$ 时分别由 $-K_X$ nef 与定理 1.3 给出。基域约定在 `Generic_nefness_of_tangent_sheaves_v3.tex:485`：全文在复数域 $\mathbb{C}$ 上工作。
+
+## 2 定理 1.4 至 1.10：Fano 侧与纤维化侧的连带结论
+
+引言第 6 段（`Generic_nefness_of_tangent_sheaves_v3.tex:379`）用一句把定理 1.4（movable 曲线版）与定理 1.3 串起来：Mehta–Ramanathan 定理（键 `MR82` 定理 6.1）把 Harder–Narasimhan 滤过与限制到曲线的运算交换，定理 1.4 在 movable 类上给正性，便蕴含定理 1.3 在 Mehta–Ramanathan 一般曲线上的特例。这是本文放宽的关键：movable 不是充分 ample，于是证明不卡在「同一 ample 类的 $n-1$ 个除子完全交」的几何要求上。
+
+**定理 1.4**（`Generic_nefness_of_tangent_sheaves_v3.tex:382-385`，键 `thm-main-mov`）：$X$ 是带 $\mathbb{Q}$-因子对数规范奇性的复射影簇，$-K_X$ nef。令 $\alpha$ 是 movable 曲线类（`Generic_nefness_of_tangent_sheaves_v3.tex:511` 的 $\alpha$ 与 `Generic_nefness_of_tangent_sheaves_v3.tex:645` 的 $\alpha=C$ 类同一来源）。则对任何非零挠自由的商层 $Q$（即满射 $T_X\twoheadrightarrow Q$）成立
+
+$$\alpha\cdot c_1(Q)\geqslant 0.$$
+
+把切层斜率端写到 $\alpha$ 与 $c_1(Q)$ 的交点。定理 1.3（`Generic_nefness_of_tangent_sheaves_v3.tex:358-361`）是它在 $\alpha$ 取自 Mehta–Ramanathan 一般曲线时的特例，故也吃同一处理路线（`Generic_nefness_of_tangent_sheaves_v3.tex:644-646` 的证明只调 Harder–Narasimhan 滤过斜率的比较）。
+
+**推论 1.5**（`Generic_nefness_of_tangent_sheaves_v3.tex:392-395`，键 `cor-c2`）：$X$ 是 $n$ 维 normal 复射影簇，$-K_X$ nef，$\mathbb{Q}$-因子对数规范、codimension $2$ 上光滑。则对任何 nef 除子 $H_1,\dots,H_{n-2}$ 有
+
+$$c_2(T_X)\cdot H_1\cdots H_{n-2}\geqslant 0.$$
+
+素材在 `Generic_nefness_of_tangent_sheaves_v3.tex:389-390` 把它标为 Xie（键 `Xie04` 定理 1.2）的维数推广，并称为定理 1.2（`Generic_nefness_of_tangent_sheaves_v3.tex:350-353`）的对偶版：两边写的是同一个 $c_2$ 配对，差别只在假设侧。一条链上的两端是 $-K_X$ nef 与「$T_X$ 一般 $(H_1,\dots,H_{n-2})$-半正」，前者是 $\Delta=0$ 时的 $-K_X$ 假设（`Generic_nefness_of_tangent_sheaves_v3.tex:399` 提配对情形的 $\Omega^1(X,\Delta)$，本推论走 $\Delta=0$ 即 $T_X$ 路线），后者由定理 1.4 经 `Generic_nefness_of_tangent_sheaves_v3.tex:651` 的 generic $(H_1,\dots,H_{n-2})$-半正定义给出，再串上 Miyaoka（键 `Miy87` 定理 6.1）：$c_1(E)$ nef 加 generic $(H_1,\dots,H_{n-2})$-半正推出 $c_2(E)\cdot H_1\cdots H_{n-2}\geqslant 0$，在 $E=T_X$ 时正是推论。
+
+两条反例并排堵死可放款的方向：
+
+(i) `Generic_nefness_of_tangent_sheaves_v3.tex:372`（键 `DPS01` 例 4.14）堵死「$-K_X$ nef」改「$-K_X$ 伪有效」的放款。$Y$ 是亏格 $g\geqslant 2$ 的曲线，$L\in\operatorname{Pic}(Y)$ 度数 $<2-3g$，$X=\mathbb{P}(\mathscr O_Y\oplus L)$，$f\colon X\to Y$ 是自然投影。$-K_X$ 有效（即伪有效但非 nef），且有自然满射 $T_X\twoheadrightarrow p^*T_Y$；配 $\Omega^1_Y$ ample 推出对一般充分 ample 除子 $C\subseteq X$ 限制 $T_X\vert_C$ 不 nef（同样的 $T_X$ 端构造是 §3 的引理 2.1 与命题 2.2 的标准方向的对立例子）。素材这一行同一句里投影记号写 $f$ 但又出现 $p^*T_Y$，是 §0 已登记的笔误之一，已按上下文读成同一映射。
+
+(ii) `Generic_nefness_of_tangent_sheaves_v3.tex:375-376`（键 `BDPP13` 定理 7.7）堵死「Mehta–Ramanathan 一般曲线」换「movable 曲线」的另一类放款：K3 曲面与 Calabi–Yau 三维情形下，存在一族支配可动曲线 $(C_t)_{t\in T}$，对一般 $t\in T$ 限制 $T_X\vert_{C_t}$ 不 nef。这条把定理 1.3 里的「一般曲线」要求钉死。
+
+**定理 1.6**（`Generic_nefness_of_tangent_sheaves_v3.tex:403-406`，键 `thm-main-orbifold`）：$(X,\Delta)$ 是 $\mathbb{Q}$-因子对数规范对的复射影簇，$-(K_X+\Delta)$ nef。$\pi\colon Z\to X$ 是对 $(X,\Delta)$ 的 adapted Kawamata 有限覆盖（galois 群 $G$ 记在 `Generic_nefness_of_tangent_sheaves_v3.tex:690`）。则 orbifold 切层 $T(X,\Delta)$ 是 $\pi$-一般 nef 的，定义见 `Generic_nefness_of_tangent_sheaves_v3.tex:674-677`：对 $X$ 上任意 $n-1$ 个充分 ample 除子 $H_1,\dots,H_{n-1}$，$\pi^*T(X,\Delta)$ 的每个非零挠自由商 $Q$ 要满足
+
+$$c_1(Q)\cdot \pi^*H_1\cdots \pi^*H_{n-1}\geqslant 0.$$
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:677` 注：若 $\Delta$ 是整除子且 $\pi=\mathrm{id}$，则 $\pi$-一般 nef 与 $\Omega^1(X,\Delta)$ 一侧在 §1 写出的一般 nef 一致（回到 `Generic_nefness_of_tangent_sheaves_v3.tex:399` 与键 `CP15a` 定理 2.1 的 orbifold 余切侧对照）。证明主体放在第 4 节素材 `Generic_nefness_of_tangent_sheaves_v3.tex:671-735`。
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:410` 一句把切侧与余切侧两条主线的安放写明：「second part」上承的命题是定理 1.7（`Generic_nefness_of_tangent_sheaves_v3.tex:412-419`）与定理 1.8（`Generic_nefness_of_tangent_sheaves_v3.tex:424-431`），即严格正性端与等号刻画两条。
+
+**定理 1.7**（`Generic_nefness_of_tangent_sheaves_v3.tex:412-419`，键 `thm-gen-ample`）：$X$ 是 $n\geqslant 2$ 维光滑复射影流形，$-K_X$ nef。则以下两条等价：
+
+(1) $X$ 有理连通；
+
+(2) $T_X$ 一般 ample，即对任意 Mehta–Ramanathan 一般曲线 $C$ 有限制 $T_X\vert_C$ 是 ample 向量丛。
+
+「一般 ample」按 `Generic_nefness_of_tangent_sheaves_v3.tex:417` 的就地写法：任意 Mehta–Ramanathan 一般曲线 $C$ 处 $T_X\vert_C$ 是 ample 向量丛，从而 $\mu_{\alpha,\min}(T_X)>0$（斜率端严格正，过滤的稳定性见 `Generic_nefness_of_tangent_sheaves_v3.tex:798` 与 `Generic_nefness_of_tangent_sheaves_v3.tex:804`）。证明是第 5 节素材（`Generic_nefness_of_tangent_sheaves_v3.tex:767-812`）的两个反向：理性连通推出 $T_X$ 一般 ample，反向从 Zhang（键 `Zhang05` 推论 1）的反有理连通分解到 Kodaira 维 $0$ 的光滑靶与有理连通一般纤维，进而由 $\mu_{\alpha,\max}(\Omega_X^1)\geqslant 0$（`Generic_nefness_of_tangent_sheaves_v3.tex:804` 引键 `CP11` 推论 5.11）得 $T_X$ 端斜率非正。
+
+**注记 5.2**（`Generic_nefness_of_tangent_sheaves_v3.tex:807-812`，键 `rem-sing-nef-rc-gn`）是对定理 1.7 去掉「光滑」假设的堵口：$G=\mathbb{Z}/2\mathbb{Z}$，$E$ 是带 $G$ 作用的椭圆曲线且 $E/G=\mathbb{P}^1$。$\mathbb{P}^1$ 带 $G$ 的典范作用（$g\cdot[a:b]=[a:-b]$）。$G$ 对角地作用在 $E\times\mathbb{P}^1$ 上，$X=(E\times\mathbb{P}^1)/G$ 在 codimension $1$ 上 étale 局部。则 $X$ 有奇点、$-K_X$ nef，且按 `Generic_nefness_of_tangent_sheaves_v3.tex:811` 引 `GKP14` 注记与问题 3.8，$h^0(X,\,((\Omega_X^1)^{\otimes 2})^{**})>0$；由此推出对任意 ample 类 $\alpha$ 有 $\mu_{\alpha,\min}(T_X)\leqslant 0$。这是 §0 已登记的「smoothness 必要」的反例素材。
+
+**定理 1.8**（`Generic_nefness_of_tangent_sheaves_v3.tex:424-431`，键 `thm-classification`）：$X$ 是 $n$ 维光滑复射影流形，$-K_X$ nef。则以下两条等价：
+
+(1) 存在 $n-2$ 个 ample 除子 $H_1,\dots,H_{n-2}$，使 $c_2(T_X)\cdot H_1\cdots H_{n-2}=0$；
+
+(2) 存在有限 étale 覆盖 $\tilde X\to X$，使 $\tilde X$ 同构于一个阿贝尔簇，或同构于阿贝尔簇上的 $\mathbb{P}^1$-丛。
+
+素材在 `Generic_nefness_of_tangent_sheaves_v3.tex:434` 给历史：这是 Yau（键 `Yau93` 问题 66）在射影流形情形的回答；同句指出 $\mathbb{P}^1$-丛不必平凡（参键 `DPS94` 例 3.5）。Cao 指出本定理，Höring 提供证明思路（`Generic_nefness_of_tangent_sheaves_v3.tex:421`）。证明是第 5 节到第 7 节（`Generic_nefness_of_tangent_sheaves_v3.tex:767-1251`）的等号刻画链：$c_2=0$ 测度＋$\nu(c_1(T_X))$ 的数值维数分类（数值维 $\geqslant 2$、$=1$、$=0$ 三档分别由命题 6.1、命题 6.3、引理 6.9 给出）。
+
+**定理 1.9**（`Generic_nefness_of_tangent_sheaves_v3.tex:445-448`，键 `thm-CP-foli`）：$X$ 是射影流形。$\alpha$ 是 movable 曲线类。$\mathcal{F}\subset T_X$ 是 foliation（`Generic_nefness_of_tangent_sheaves_v3.tex:530` 定义：对 Lie 括号封闭的饱和子层）。假设 $\mathcal{F}$ 的每个非零挠自由商对 $\alpha$ 的斜率严格正。则 $\mathcal{F}$ 代数可积：存在有理支配映射 $f\colon X\dashrightarrow Y$ 使 $\mathcal{F}$ 由 $f$ 给出，且一般叶有理连通。
+
+这是 Campana 与 Păun（键 `CP19` 定理 1.1）的光滑版，被推广到奇异簇与 orbifold 情形分别在命题 2.2（`Generic_nefness_of_tangent_sheaves_v3.tex:543-551`）与定理 4.1（`Generic_nefness_of_tangent_sheaves_v3.tex:686-695`）。
+
+**定理 1.10**（`Generic_nefness_of_tangent_sheaves_v3.tex:453-456`，键 `thm-gen-positive-base-anticanonical`）：$(X,D)$ 是 $\mathbb{Q}$-因子对数规范对的射影簇，$-(K_X+D)$ nef。$f\colon X\dashrightarrow Y$ 是有理支配映射，$0<\dim Y<\dim X$。$\mathcal{F}$ 是 $f$ 给出的 foliation。则
+
+$$K_\mathcal{F}-K_X-D_{\mathrm{ver}}$$
+
+伪有效。这里 $D_{\mathrm{ver}}$ 是 $D$ 在 $Y$ 上的垂直部分（定义见 `Generic_nefness_of_tangent_sheaves_v3.tex:458`）。这是 Chen–Zhang（键 `CZ13` 主定理）的精化版，第 3 节素材 `Generic_nefness_of_tangent_sheaves_v3.tex:588-620` 用 log resolution + 命题 3.1（prop-pseuf，`Generic_nefness_of_tangent_sheaves_v3.tex:571-578`）证它。
+
+这两条工具件的组合（定理 1.9 给代数可积端、定理 1.10 给叶端 $K_{\mathcal{F}}\geqslant K_X+D$）是定理 1.4 证明的关键两步，引言里的草图见 `Generic_nefness_of_tangent_sheaves_v3.tex:461`：反向假设存在使 $\alpha\cdot c_1(Q)<0$ 的 $Q$，借引理 2.1 与命题 2.2 得到代数可积 foliation $\mathcal{F}$，再用定理 1.10 得 $\alpha\cdot K_\mathcal{F}\geqslant \alpha\cdot(K_X+D)$。在 $\Delta=0$ 时 $K_X=D$ 单侧，从而矛盾。骨架直接落到 §3 起的素材主体。
+
+本节末尾要登记的口是：自此往下，§3 到 §7 把定理 1.4 的证明、定理 1.10 的证明（即命题 3.1）、orbifold 推广（§4 含定理 4.1）、§5 的有理连通等价、§6 的 Miyaoka 等号刻画（命题 6.1、命题 6.3、引理 6.9、连带引理 6.2 至 6.9 等八件或九件）、§7 的分类定理证明（即命题 7.1、引理 7.2）按次序摆开；行号版图见 §0 中段，下节按 §0 表复核。
+
+## 3 斜率语言：Harder–Narasimhan 滤过与一般曲线的定义处
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:483-563` 是第 2 节素材 Preliminary，分两个子节给出斜率记号与 foliation 概念。`Generic_nefness_of_tangent_sheaves_v3.tex:485` 申明基域 $\mathbb{C}$。
+
+**斜率半稳定的定义**（`Generic_nefness_of_tangent_sheaves_v3.tex:489-502`）：$X$ 是 normal 射影簇，$\alpha$ 是 movable 曲线类。要么 $X$ 是 $\mathbb{Q}$-因子的，要么 $\alpha$ 是 basepoint-free Cartier 除子的完全交类。$E$ 是 $X$ 上非零挠自由的正秩凝聚层。斜率定义为
+
+$$\mu_\alpha(E)=\frac{\alpha\cdot c_1(E)}{\mathrm{rank}\, E}.$$
+
+最大斜率为 $\mu_{\alpha,\max}(E)=\sup\{\mu_\alpha(F)\mid F \text{ 非零饱和子层}\}$，最小斜率为 $\mu_{\alpha,\min}(E)=\inf\{\mu_\alpha(Q)\mid Q \text{ 非零挠自由商}\}$。`Generic_nefness_of_tangent_sheaves_v3.tex:500-502` 给出的实现式是 $\mu_{\alpha,\min}(E)=\mu_\alpha(E/E_{r-1})$，$E_{r-1}$ 是 Harder–Narasimhan 滤过的次顶项；两个上确界都是最大值。$E$ 称为 $\alpha$-半稳定若 $\mu_{\alpha,\max}(E)=\mu_\alpha(E)$。Harder–Narasimhan 滤过（`Generic_nefness_of_tangent_sheaves_v3.tex:498`）是 $X$ 上唯一饱和子层列
+
+$$0=E_0\subsetneq E_1\subsetneq\cdots\subsetneq E_r=E$$
+
+使 $E_i/E_{i-1}$ 是 $E/E_{i-1}$ 的最大失稳子层，且斜率严格递减。
+
+**引理 2.1**（`Generic_nefness_of_tangent_sheaves_v3.tex:509-516`，键 `lem-invol-subsheaf`）：沿用上述设定。$E$ 非零挠自由、$\mu_\alpha(E)\geqslant 0$ 但 $\mu_{\alpha,\min}(E)<0$。令 $E_\bullet$ 为 $E$ 的 Harder–Narasimhan 滤过。则存在 $k\in\{1,\dots,r-1\}$，满足
+
+$$\mu_\alpha(E/E_k)<0,\qquad \mu_{\alpha,\min}(E_k)=\mu_\alpha(E_k/E_{k-1})>0.$$
+
+证明在 `Generic_nefness_of_tangent_sheaves_v3.tex:518-520`：取 $k$ 为 $\{0,\dots,r-1\}$ 中使 $\mu_\alpha(E/E_k)<0$ 的最小值；$\mu_\alpha(E)\geqslant 0$ 迫使 $k\geqslant 1$。考虑正合列
+
+$$0\to E_k/E_{k-1}\to E/E_{k-1}\to E/E_k\to 0,$$
+
+由 $k$ 的最小性 $\mu_\alpha(E/E_{k-1})\geqslant 0$，斜率可加与 $\mu_\alpha(E/E_k)<0$ 联立得 $\mu_\alpha(E_k/E_{k-1})>0$。本引理是定理 1.4 反证结构的核心工具（`Generic_nefness_of_tangent_sheaves_v3.tex:630-635` 与 `Generic_nefness_of_tangent_sheaves_v3.tex:724` 两处直接调用）。
+
+**Foliations 与自反切层**（`Generic_nefness_of_tangent_sheaves_v3.tex:528-563`）：$X$ 是维数至少 $2$ 的 normal 簇，$T_X=(\Omega_X^1)^*$ 是自反切层（§1 已定义于 `Generic_nefness_of_tangent_sheaves_v3.tex:530`）。Foliations 是 $T_X$ 的对 Lie 括号封闭的饱和子层 $\mathcal{F}$。$\mathcal{F}$ 的典范类 $K_\mathcal{F}$ 由
+
+$$\mathscr O_X(-K_\mathcal{F})\cong\det\mathcal{F}$$
+
+定义，$\det\mathcal{F}$ 取 $\mathcal{F}$ 顶楔积的自反化（`Generic_nefness_of_tangent_sheaves_v3.tex:530`）。代数可积的 foliation 指一般叶 Zariski 闭包维数等于 $\mathcal{F}$ 秩。素材 `Generic_nefness_of_tangent_sheaves_v3.tex:536` 注：代数可积等价于由某个有理支配映射 $f\colon X\dashrightarrow Y$ 给出（参键 `AD13` 引理 3.2）。
+
+相对切层（`Generic_nefness_of_tangent_sheaves_v3.tex:532-536`）：有理支配映射 $f\colon X\dashrightarrow Y$ 在 $Y$ 的光滑点 $V$ 与 $X$ 的非空光滑开 $U$ 上定义 $T_{U/V}=\ker(\mathrm{d}f|_U\colon T_U\to f^*T_V)$。$T_X$ 中存在唯一饱和子层 $T_{X/Y}$ 使 $T_{X/Y}|_U=T_{U/V}$，称为 $f$ 的相对切层。它是 foliation 且代数可积。
+
+**命题 2.2**（`Generic_nefness_of_tangent_sheaves_v3.tex:543-551`，键 `prop-CP-alg-foliation-sing`）：$X$ 是 $\mathbb{Q}$-因子的 normal 射影簇，$\alpha$ 是 movable 曲线类。$\mathcal{F}\subseteq T_X$ 是饱和子层，满足
+
+(1) $\mu_{\alpha,\min}(\mathcal{F})>0$；
+
+(2) $2\mu_{\alpha,\min}(\mathcal{F})>\mu_{\alpha,\max}(T_X/\mathcal{F})$。
+
+则 $\mathcal{F}$ 是代数可积 foliation，且一般叶有理连通。
+
+证明见 `Generic_nefness_of_tangent_sheaves_v3.tex:554-559`：取奇点解消 $r\colon X'\to X$，$\alpha'=r^*\alpha$（数值拉回构造见键 `GKP14` 构造 A.15）。$\alpha$ movable 推出 $\alpha'$ movable（引理 A.17）。$\mathcal{F}'$ 是 $X'$ 上的饱和扩张，其斜率不变量与 $\mathcal{F}$ 一致：(1)(2) 在 $X'$ 上仍成立。键 `CP19` 定理 1.4 给出 $\mathcal{F}'$ 在 $X'$ 上代数可积且一般叶有理连通。回 $X$ 上由 $\mathcal{F}\cong(r_*\mathcal{F}')^{**}$ 得同结论。
+
+命题 2.2 是定理 1.4 反证结构的关键：foliation 端正性条件 (1)(2) 把代数可积端直接给出，再串上定理 1.10 得矛盾。
+
+## 4 命题 3.1 与相对偶化层直接像的正性链
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:564-657` 是第 3 节素材「Positivity of tangent sheaves」，依次证定理 1.10、定理 1.4、定理 1.3、推论 1.5。本节先抽命题 3.1，再把相对偶化层直接像正性链上的带号公式（`Generic_nefness_of_tangent_sheaves_v3.tex:603-605`）按线写出。
+
+**命题 3.1**（`Generic_nefness_of_tangent_sheaves_v3.tex:571-578`，键 `prop-pseuf`）：$f\colon X\to Y$ 是 normal 射影簇之间的满射，$X$ 是 $\mathbb{Q}$-因子的。$\Delta$ 是 $X$ 上的有效 $\mathbb{Q}$-除子。设对 $f$ 的一般纤维 $F$，对 $(F,\Delta|_F)$ log canonical。若存在正整数 $m$ 使 $m(K_X+\Delta)$ Cartier 且
+
+$$h^0(F,\mathscr O_F(m(K_X+\Delta)|_F))>0,$$
+
+则 $K_\mathcal{F}+\Delta$ 伪有效，$\mathcal{F}$ 是 $f$ 给出的 foliation。
+
+素材在 `Generic_nefness_of_tangent_sheaves_v3.tex:568` 标：这是 Druel（键 `Druel2017` 命题 4.1）的特殊情形，属弱正性谱系（涉及 Kawamata `kaw81`、Viehweg `Vie83`、Campana `Cam04`、Fujino `Fuj04`、Păun-Takayama `PT14`），§0 已登记这一行被注释。
+
+命题 3.1 的应用是把相对偶化层直接像沿纤维上的非零整体截影推伪有效。本文用法见 `Generic_nefness_of_tangent_sheaves_v3.tex:588-620`：先做 $\log$ resolution $\pi\colon Z\to X$（对 $(X,D)$），让 $g\colon Z\to Y$ 是态射，且必要时吹升 $Y,Z$ 可设 $Y$ 光滑（`Generic_nefness_of_tangent_sheaves_v3.tex:590-591`）。记
+
+$$K_Z+D_Z\sim_\mathbb{Q}\pi^*(K_X+D)+E,$$
+
+$D_Z,E$ 有效 $\mathbb{Q}$-除子、无公共分支，$E$ 以 $\pi$-例外为支集。$(X,D)$ log canonical $\Rightarrow$ $(Z,D_Z)$ log canonical。
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:595-600` 给交换图（按规格以文字复述）：对象是 $Z$（左上）、$X$（右上）、$Y$（左下）；$\pi\colon Z\to X$ 是 log resolution，$g\colon Z\to Y$ 是到光滑 $Y$ 的态射。规格禁止代码跨度之外的图形记法，本稿沿用这套文字复述。
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:602-605` 选 $L$ ample 取 $\delta>0$ rational，使 $-\pi^*(K_X+D)+\delta L$ ample；选有效 $\mathbb{Q}$-除子
+
+$$A\sim_\mathbb{Q}-\pi^*(K_X+D)+\delta L$$
+
+使 $(Z,D_Z+A)$ log canonical。代入得
+
+$$K_Z+D_Z+A\sim_\mathbb{Q} E+\delta L.$$
+
+记 $\Delta=D_Z+A-\pi_*^{-1}D_{\mathrm{ver}}$，则 $\Delta$ 有效，并得到本文第 3 节唯一的带号公式（`Generic_nefness_of_tangent_sheaves_v3.tex:603-605`）：
+
+$$K_Z+\Delta\sim_\mathbb{Q} E+\delta L-\pi_*^{-1}D_{\mathrm{ver}.} \tag{1}$$
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:607-608` 取 $g$ 的一般纤维 $G$，把 (1) 推到 $G$ 上得
+
+$$(K_Z+\Delta)|_G\sim_\mathbb{Q}(E+\delta L)|_G.$$
+
+右端是 big 除子，因此对充分大充分可除的 $m$ 有 $h^0(G,\mathscr O_G(m(K_Z+\Delta)|_G))>0$。由命题 3.1，$K_{\mathcal{G}}+\Delta$ 伪有效（$\mathcal{G}$ 是 $g$ 的 foliation）。
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:610-616` 把这一伪有效性收回 $\pi$ 之下：链为
+
+$$\begin{aligned}E+\delta L+(K_{\mathcal{G}}-K_Z-\pi_*^{-1}D_{\mathrm{ver}}) &\sim_\mathbb{Q} E+\delta L-\pi_*^{-1}D_{\mathrm{ver}}+(K_{\mathcal{G}}-K_Z) \\
+&\sim_\mathbb{Q} K_Z+\Delta+(K_{\mathcal{G}}-K_Z) \\
+&\sim_\mathbb{Q} K_{\mathcal{G}}+\Delta,\end{aligned}$$
+
+即左端 $\pi_*$-数值拉回 $K_\mathcal{F}-K_X-D_{\mathrm{ver}}$ 仍伪有效；$\delta>0$ 任取，推得
+
+$$E+(K_{\mathcal{G}}-K_Z-\pi_*^{-1}D_{\mathrm{ver}})$$
+
+伪有效，再 $\pi_*$ 给出
+
+$$K_\mathcal{F}-K_X-D_{\mathrm{ver}=\pi_*(E+(K_{\mathcal{G}}-K_Z-\pi_*^{-1}D_{\mathrm{ver}}))}$$
+
+伪有效（`Generic_nefness_of_tangent_sheaves_v3.tex:619`）。这完成定理 1.10 的证明。`Generic_nefness_of_tangent_sheaves_v3.tex:461` 的引言草图与此处一致：反向假设 $\alpha\cdot c_1(Q)<0$，借引理 2.1 + 命题 2.2 找代数可积 foliation $\mathcal{F}$，再用定理 1.10 得 $\alpha\cdot K_\mathcal{F}\geqslant\alpha\cdot K_X$，矛盾。
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:629-639` 是定理 1.4 的反证：设存在 $\alpha$ 与 $Q$（$T_X\twoheadrightarrow Q$）使 $\alpha\cdot c_1(Q)<0$。取 Harder–Narasimhan 滤过 $E_\bullet$，由引理 2.1 找 $k$ 满足
+
+$$2\mu_{\alpha,\min}(E_k)=2\mu_\alpha(E_k/E_{k-1})>\mu_\alpha(E_k/E_{k-1})>\mu_\alpha(E_{k+1}/E_k)=\mu_{\alpha,\max}(T_X/E_k),$$
+
+由命题 2.2，$E_k$ 代数可积；记 $\mathcal{F}=E_k$，由 $\mu_\alpha(T_X/E_k)<0$ 推 $\alpha\cdot K_\mathcal{F}<\alpha\cdot K_X$。代数可积给出有理支配映射 $f\colon X\dashrightarrow Y$，由定理 1.10 得 $\alpha\cdot K_\mathcal{F}\geqslant\alpha\cdot K_X$，矛盾。
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:644-646` 证定理 1.3：取 Mehta–Ramanathan 一般曲线 $C$，类 $\alpha$。由 Mehta–Ramanathan 定理（键 `MR82` 定理 6.1），Harder–Narasimhan 滤过与限制交换，于是
+
+$$\mu_{\min}(T_X\vert_C)=\mu_{\alpha,\min}(T_X)\geqslant 0,$$
+
+即 $T_X\vert_C$ nef。
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:651-657` 证推论 1.5：generic $(H_1,\dots,H_{n-2})$-半正定义取自 `Generic_nefness_of_tangent_sheaves_v3.tex:651`（即对每个 nef 除子 $D$，$\mu_{\alpha,\min}(E)\geqslant 0$，$\alpha=D\cdot H_1\cdots H_{n-2}$ 类）；一般 nef 蕴含该半正性（`Generic_nefness_of_tangent_sheaves_v3.tex:652`）。在 $E=T_X$ 时，$-K_X$ nef 给出 $c_1(T_X)$ nef（§1 中 $c_2(T_X)=c_2(\Omega_X^1)$ 的对偶侧），generic 半正端由定理 1.4 给到，Miyaoka（键 `Miy87` 定理 6.1）给出
+
+$$c_2(T_X)\cdot H_1\cdots H_{n-2}\geqslant 0.\quad\square$$
+
+## 5 定理 4.1 与第 5 节的两个技术件
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:671-735` 是第 4 节素材「An orbifold version of generic nefness」。`Generic_nefness_of_tangent_sheaves_v3.tex:686-695` 给 orbifold 版的核心工具件。
+
+**定理 4.1**（`Generic_nefness_of_tangent_sheaves_v3.tex:686-695`，键 `thm-CP-alg-foliation-sing-orbifold`）：$(X,D)$ 是 $\mathbb{Q}$-因子对数规范对的射影簇。$\pi\colon Z\to X$ 是对 $(X,D)$ 的适应有限覆盖。$H_1,\dots,H_{n-1}$ 是 $X$ 上的充分 ample 除子，$\alpha$ 是 $\pi^*H_1\cdots \pi^*H_{n-1}$ 的类。设饱和子层 $\mathcal{G}\subseteq\pi^*T(X,D)$ 满足
+
+(1) $\mathcal{G}$ 在 $\pi$ 的 galois 群 $G$ 下不变；
+
+(2) $\mu_{\alpha,\min}(\mathcal{G})>0$；
+
+(3) $2\mu_{\alpha,\min}(\mathcal{G})>\mu_{\alpha,\max}(\pi^*T(X,D)/\mathcal{G})$。
+
+则 $\mathcal{G}$ 在 $(\pi^*T_X)^{**}$ 中的饱和定义出 $X$ 上的代数可积 foliation $\mathcal{F}$，且 $\mathcal{G}$ 是 $(\pi^*\mathcal{F})^{**}\cap\pi^*T(X,D)$ 在 $\pi^*T(X,D)$ 中的饱和。
+
+证明骨架见 `Generic_nefness_of_tangent_sheaves_v3.tex:698-716`：取 $(X,D)$ 的 $\log$ resolution $r\colon X'\to X$（在光滑部分 $U$ 上同构），$Z'$ 是 $Z\times_X X'$ 的正规化，$\pi'\colon Z'\to X'$ 是 $(X',D')$ 的适应有限覆盖（$D'=r_*^{-1}D$），记 $U'=r^{-1}(U)$、$V=\pi^{-1}(U)$、$V'=(\pi')^{-1}(U')$。`Generic_nefness_of_tangent_sheaves_v3.tex:702-707` 给交换图（按规格以文字复述）：
+
+左上 $Z'$，右上 $Z$（$\pi'\colon Z'\to Z$ 覆盖态射）；
+左下 $X'$，右下 $X$（$r\colon X'\to X$）；
+纵向 $\pi'$ 与 $\pi$。
+
+$\pi'^*T(X',D')$ 存在唯一 $G$-不变饱和子层 $\mathcal{G}'$ 在 $V'$ 上与 $\mathcal{G}|_V$ 局部同构。令 $\alpha'=(\pi'\circ r)^*H_1\cdots (\pi'\circ r)^*H_{n-1}$，则
+
+$$\mu_{\alpha',\min}(\mathcal{G}')=\mu_{\alpha,\min}(\mathcal{G})$$
+
+与
+
+$$\mu_{\alpha',\max}(\pi'^*T(X',D')/\mathcal{G}')=\mu_{\alpha,\max}(\pi^*T(X,D)/\mathcal{G})$$
+
+保持不变。键 `CP19` 定理 1.4 给出代数可积 foliation $\mathcal{F}'$ 在 $X'$ 上；$\mathcal{G}'$ 是 $\pi'^*\mathcal{F}'\cap\pi'^*T(X',D')$ 在 $\pi'^*T(X',D')$ 中的饱和（参键 `CP19` 推论 5.9）。回 $X$ 上：$\mathcal{F}$ 取 $r_*\mathcal{F}'$ 在 $T_X$ 中的饱和。
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:718-735` 是定理 1.6 的证明，与定理 1.4 的反证类比：反设存在 $H_1,\dots,H_{n-1}$ 使 $T(X,D)$ 不 $\pi$-一般半正。记 $\alpha=\pi^*H_1\cdots \pi^*H_{n-1}$。由引理 2.1 套到 $\pi^*T(X,D)$ 上，找到饱和子层 $\mathcal{G}$ 满足 $\mu_{\alpha,\min}(\mathcal{G})>0$ 与 $\mu_\alpha(\pi^*T(X,D)/\mathcal{G})<0$。Harder–Narasimhan 滤过唯一性给出 $\mathcal{G}$ 的 $G$-不变性，且 $2\mu_{\alpha,\min}(\mathcal{G})>\mu_{\alpha,\max}(\pi^*T(X,D)/\mathcal{G})$。定理 4.1 给出代数可积 foliation $\mathcal{F}$。由定理 1.10 得
+
+$$\alpha\cdot\pi^*(K_\mathcal{F}-K_X-D_{\mathrm{ver}})\geqslant 0.$$
+
+但由 `Generic_nefness_of_tangent_sheaves_v3.tex:732-733` 引键 `Clau17` 命题 2.17：
+
+$$\det\mathcal{G}\cong\mathscr O_Z(\pi^*(-K_\mathcal{F}-D_{\mathrm{hor}})),$$
+
+从而
+
+$$\det(\pi^*T(X,D)/\mathcal{G})\cong\mathscr O_Z(\pi^*(K_\mathcal{F}-K_X-D_{\mathrm{ver}})).$$
+
+配合 $\mu_\alpha(\pi^*T(X,D)/\mathcal{G})<0$ 即得矛盾。
+
+第 5 节素材（`Generic_nefness_of_tangent_sheaves_v3.tex:767-812`）「Relation with rational connectedness」围绕定理 1.7 的两个方向摆开，前件是引理 5.1 与反例即注记 5.2。
+
+**引理 5.1**（`Generic_nefness_of_tangent_sheaves_v3.tex:771-779`，键 `lem-vanishing`）：$X$ 是光滑射影簇，$\delta$ 是 $k$ 维纯 cycle。假设对任何 ample $H_1,\dots,H_k$ 有 $\delta\cdot H_1\cdots H_k\geqslant 0$。则以下三条等价：
+
+(1) 存在 ample $H_1,\dots,H_k$ 使 $\delta\cdot H_1\cdots H_k=0$；
+
+(2) 对任何 ample $H_1,\dots,H_k$ 有 $\delta\cdot H_1\cdots H_k=0$；
+
+(3) 对任何 nef $H_1,\dots,H_k$ 有 $\delta\cdot H_1\cdots H_k=0$。
+
+证明在 `Generic_nefness_of_tangent_sheaves_v3.tex:781-790`：nef 是 ample $(\mathbb{Q}$-)除子极限给出 (2)$\Rightarrow$(3)；只需证 (1)$\Rightarrow$(2)。取 $H_1,\dots,H_k$ 使交为 $0$；固定任意 ample $A_1,\dots,A_k$，选 $m>0$ 使 $mH_1-A_1$ 仍 ample，则
+
+$$\begin{aligned}0&\leqslant\delta\cdot(mH_1-A_1)\cdots H_k \\
+&=m(\delta\cdot H_1\cdots H_k)-\delta\cdot A_1\cdot H_2\cdots H_k \\
+&=-\delta\cdot A_1\cdot H_2\cdots H_k \\
+&\leqslant 0,\end{aligned}$$
+
+得 $\delta\cdot A_1\cdot H_2\cdots H_k=0$。对剩下 $k-1$ 个位置重复此手续即得 $\delta\cdot A_1\cdots A_k=0$。
+
+**注记 5.2**（`Generic_nefness_of_tangent_sheaves_v3.tex:807-812`，键 `rem-sing-nef-rc-gn`）是对定理 1.7 去掉「光滑」假设的反例（已在 §2 引出，本节给全文）。群 $G=\mathbb{Z}/2\mathbb{Z}$，$E$ 是带 $G$ 作用的椭圆曲线且 $E/G=\mathbb{P}^1$；$\mathbb{P}^1$ 带 $G$ 的典范作用 $g\cdot[a:b]=[a:-b]$。$G$ 对角地作用在 $E\times\mathbb{P}^1$ 上，商 $X=(E\times\mathbb{P}^1)/G$ 在 codimension $1$ 上 étale 局部。则 $X$ 有奇点、$-K_X$ nef。按 `Generic_nefness_of_tangent_sheaves_v3.tex:811` 引键 `GKP14` 注记与问题 3.8，$h^0(X,((\Omega_X^1)^{\otimes 2})^{**})>0$，由此推出对任意 ample 类 $\alpha$ 有 $\mu_{\alpha,\min}(T_X)\leqslant 0$。注记的标题「does not hold without assuming the smoothness of $X$」对应定理 1.7 的「$X$ 光滑」假设。
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:794-805` 是定理 1.7 本身的证明位置。两个方向的骨架：
+
+(a) $X$ 有理连通 $\Rightarrow$ $T_X$ 一般 ample：反证若非，存在 Mehta–Ramanathan 一般曲线 $C$ 使 $T_X\vert_C$ nef 但不 ample。由键 `Har71` 定理 2.4，$T_X\vert_C$ 有非零度 $0$ 商丛；由键 `MR82` 定理 6.1，Harder–Narasimhan 滤过与限制交换，$\mu_{\alpha,\min}(T_X)=0$，给出满射 $T_X\twoheadrightarrow Q$ 带 $\alpha\cdot c_1(Q)=0$。$Q$ 一般 nef $\Rightarrow$ $c_1(Q)\cdot H_1\cdots H_{n-1}\geqslant 0$ 对任意 ample $H_1,\dots,H_{n-1}$；引理 5.1 把这一列非负号与 $\alpha\cdot c_1(Q)=0$ 联立给出 $c_1(Q)\cdot H_1\cdots H_{n-1}=0$ 对任意 ample $H_1,\dots,H_{n-1}$，即 $c_1(Q)\equiv 0$。$X$ 有理连通 $\Rightarrow$ $X$ 单连通，故 $\det Q\cong\mathscr O_X$；于是有非零态射 $\mathscr O_X\to\Omega_X^k$（$k=\mathrm{rank}\,Q$），但 $h^0(X,\Omega_X^k)=0$（键 `Kol96` 推论 IV.3.8），矛盾。
+
+(b) $X$ 不有理连通：由键 `Zhang05` 推论 1 存在有理支配 $f\colon X\dashrightarrow Y$ 使 $Y$ 光滑、$\kappa(Y)=0$、一般纤维有理连通。$Y$ 有正维 $d$；存在 $m$ 使 $h^0(Y,\mathscr O_Y(mK_Y))\neq 0$，于是 $h^0(X,(\Omega_X^1)^{\otimes md})\neq 0$。对 Mehta–Ramanathan 一般曲线 $C$ 类 $\alpha$，键 `CP11` 推论 5.11 给出 $\mu_{\alpha,\max}(\Omega_X^1)\geqslant 0$，从而 $\mu_{\alpha,\min}(T_X)\leqslant 0$，由键 `MR82` 定理 6.1 推出 $T_X\vert_C$ 不 ample。
+
+## 6 Miyaoka 型不等式的证明主体：第 6 节引理 6.2 至 6.10
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:815-1141` 是第 6 节素材「Equality conditions of Miyaoka inequality」，按 $\nu(c_1(E))$ 的数值维数三档摆开。Miyaoka 不等式（键 `Miy87` 定理 6.1）的全文形式见 `Generic_nefness_of_tangent_sheaves_v3.tex:818-820`：$E$ 是 $n$ 维射影流形 $X$ 上的非零挠自由层。若 $c_1(E)$ nef 且 $E$ generic $(H_1,\dots,H_{n-2})$-半正，则
+
+$$c_2(E)\cdot H_1\cdots H_{n-2}\geqslant 0.$$
+
+这是推论 1.5 的核心依据（回顾位置 `Generic_nefness_of_tangent_sheaves_v3.tex:820-827`）。generic nef 又蕴含 generic $(H_1,\dots,H_{n-2})$-半正（`Generic_nefness_of_tangent_sheaves_v3.tex:652`），故对 generichef $E$ 可直接套 Miyaoka 不等式。
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:822-827` 给出等号刻画的工作前提：设 $E$ generichef、$c_1(E)$ nef。由引理 5.1（`Generic_nefness_of_tangent_sheaves_v3.tex:771-779`），对 ample $H_1,\dots,H_{n-2}$ 写 $c_2(E)\cdot H_1\cdots H_{n-2}=0$ 等价于对所有 ample 同组成立。因此等号情形可设 $c_2(E)\cdot H^{n-2}=0$ 对某 ample $H$。下面按 $\nu(c_1(E))\geqslant 2$、$=1$、$=0$ 三档展开（`Generic_nefness_of_tangent_sheaves_v3.tex:830-833` 总览句）。
+
+**6.1 节（$\nu(c_1(E))\geqslant 2$）**
+
+**命题 6.1**（`Generic_nefness_of_tangent_sheaves_v3.tex:839-850`，键 `prop-HN-E-ne-0-nd>1`）：$X$ 是 $n\geqslant 2$ 维光滑射影簇。$E$ 是 rank $\geqslant 2$ 的非零挠自由层，$E$ generic $(H_1,\dots,H_{n-2})$-半正，$c_1(E)$ nef 且 $\nu(c_1(E))\geqslant 2$。令 $\alpha=c_1(E)\cdot H_1\cdots H_{n-2}$。若 $c_2(E)\cdot H_1\cdots H_{n-2}=0$，则 $E$ 关于 $\alpha$ 的 Harder–Narasimhan 滤过形如
+
+$$0\subsetneq E_1\subsetneq E,$$
+
+满足
+
+(1) $E_1$ 是可逆层，$c_1(E_1)\equiv c_1(E)$；
+
+(2) $c_1(E/E_1)\equiv 0$；
+
+(3) $c_2(E/E_1)\cdot H_1\cdots H_{n-2}=0$。
+
+证明主体见 `Generic_nefness_of_tangent_sheaves_v3.tex:877-923`，下面将引入两个引理。
+
+**引理 6.2**（`Generic_nefness_of_tangent_sheaves_v3.tex:862-865`，键 `lem-c2-quotient=0`）：$X$ 是 $n\geqslant 2$ 维光滑射影簇。$E$ 是非零挠自由层，generic $(H_1,\dots,H_{n-2})$-半正，$c_1(E)$ nef，$c_2(E)\cdot H_1\cdots H_{n-2}=0$。设 $0\to F\to E\to Q\to 0$ 是非零挠自由层的正合列。若 $c_1(Q)\equiv 0$，则 $F$ 也 generic $(H_1,\dots,H_{n-2})$-半正，且
+
+$$c_2(Q)\cdot H_1\cdots H_{n-2}=c_2(F)\cdot H_1\cdots H_{n-2}=0.$$
+
+证明在 `Generic_nefness_of_tangent_sheaves_v3.tex:867-869`：由 $c_1(Q)\equiv 0$ 得 $F$ 的任何饱和子层 $G$ 满足 $c_1(E/G)\equiv c_1(F/G)$，于是 $F$ 半正与 $c_1(F)\equiv c_1(E)$ nef 的端都来自 $E$。又
+
+$$c_2(E)=c_2(F)+c_2(Q)+c_1(F)\cdot c_1(Q)\equiv c_2(F)+c_2(Q).$$
+
+$Q$ 也是 generic 半正（短正合列端继承）。Miyaoka 不等式给出 $c_2(F)\cdot H_1\cdots H_{n-2}\geqslant 0$ 与 $c_2(Q)\cdot H_1\cdots H_{n-2}\geqslant 0$；与 $c_2(E)\cdot H_1\cdots H_{n-2}=0$ 联立得两端等号。
+
+**命题 6.1 的证明主体**（`Generic_nefness_of_tangent_sheaves_v3.tex:877-923`）：要点是 Bogomolov–Gieseker 不等式（键 `Miy87` 推论 4.7）与 Hodge 指标定理的连用。设
+
+$$0=E_0\subsetneq E_1\subsetneq\cdots\subsetneq E_r=E$$
+
+是 $E$ 关于 $\alpha$ 的 Harder–Narasimhan 滤过，$G_i=E_i/E_{i-1}$，$r_i=\mathrm{rank}\,G_i$。取 $H_1,\dots,H_{n-2}$ 一般位置 effective very ample，使其完全交 $S$ 是曲面。`Generic_nefness_of_tangent_sheaves_v3.tex:886-888` 给出 Chern 类展开：
+
+$$2c_2(E)\cdot S=\bigg(\sum_{i=1}^r 2c_2(G_i)+\sum_{1\leqslant i<j\leqslant r}2c_1(G_i)\cdot c_1(G_j)\bigg)\cdot S,$$
+
+由 $c_1(E)=\sum_i c_1(G_i)$ 与 $\sum_{i<j}2c_1(G_i)c_1(G_j)=c_1(E)^2-\sum_i c_1(G_i)^2$，可写成
+
+$$\bigg(\sum_{i=1}^r2c_2(G_i)+c_1(E)^2-\sum_i c_1(G_i)^2\bigg)\cdot S.$$
+
+每个 $G_i$ 关于 $\alpha$-半稳定，Bogomolov–Gieseker 不等式给出
+
+$$2c_2(G_i)\cdot S\geqslant\frac{r_i-1}{r_i}c_1(G_i)^2\cdot S.$$
+
+把这两端联立，得
+
+$$2c_2(E)\cdot S\geqslant\bigg(c_1(E)^2-\sum_{i=1}^r\frac{1}{r_i}c_1(G_i)^2\bigg)\cdot S.$$
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:897-900` 引用 $S$ 上的 Hodge 指标定理（结合 $\nu(c_1(E))\geqslant 2$ 推 $c_1(E)^2\cdot S>0$）得带号公式
+
+$$c_1(G_i)^2\cdot S\leqslant\frac{(c_1(E)\cdot c_1(G_i)\cdot S)^2}{c_1(E)^2\cdot S.} \tag{2}$$
+
+定义 $a_i=(c_1(E)\cdot c_1(G_i)\cdot S)/(r_i c_1(E)^2\cdot S)$。Harder–Narasimhan 滤过构造给出 $a_1>\cdots >a_r$，且 $\sum_i r_i a_i=1$、$a_i\geqslant 0$，故 $a_i\leqslant 1$。（2）右端可写成 $r_i^2 a_i^2 c_1(E)^2\cdot S$，逐项代入得到 `Generic_nefness_of_tangent_sheaves_v3.tex:903-909` 的链：
+
+$$\begin{aligned}2c_2(E)\cdot S&\geqslant\bigg(c_1(E)^2-\sum_{i=1}^r\frac{1}{r_i}c_1(G_i)^2\bigg)\cdot S \\
+&\geqslant\bigg(c_1(E)^2-\sum_{i=1}^r r_i a_i^2 c_1(E)^2\bigg)\cdot S \\
+&=\big(1-\sum_i r_i a_i^2\big)c_1(E)^2\cdot S \\
+&\geqslant(1-\sum_i r_i a_i a_1)c_1(E)^2\cdot S \\
+&=(1-a_1)c_1(E)^2\cdot S.\end{aligned}$$
+
+由 $c_2(E)\cdot S=0$ 与 $c_1(E)^2\cdot S>0$ 得 $a_1=1$。$\sum_i r_i a_i=1$、$a_i\geqslant 0$、$a_1>\cdots >a_r$ 强制 $r=2$、$r_1=1$、$a_2=0$。
+
+剩 $c_1(E/E_1)\equiv 0$：`Generic_nefness_of_tangent_sheaves_v3.tex:913-919` 的链：
+
+$$c_1(E/E_1)\cdot c_1(E)\cdot S=c_1(E)^2\cdot S-c_1(E_1)\cdot c_1(E)\cdot S=0.$$
+
+再用 $c_2(E_1)=0$（$E_1$ 是可逆）与 Chern 等式 $c_2(E)=c_1(E_1)\cdot c_1(E/E_1)+c_2(E/E_1)$，代入 $c_1(E/E_1)=c_1(E)-c_1(E_1)$：
+
+$$\begin{aligned}0=c_2(E)\cdot S&=\big(c_1(E_1)\cdot c_1(E/E_1)+c_2(E/E_1)\big)\cdot S \\
+&=\big(c_1(E)\cdot c_1(E/E_1)-c_1(E/E_1)^2+c_2(E/E_1)\big)\cdot S \\
+&=\big(-c_1(E/E_1)^2+c_2(E/E_1)\big)\cdot S.\end{aligned}$$
+
+$E/E_1=G_2$ 半稳定，Bogomolov–Gieseker 给出
+
+$$c_2(E/E_1)\cdot S\geqslant\frac{r_2-1}{2r_2}c_1(E/E_1)^2\cdot S.$$
+
+代入上式得到
+
+$$0\geqslant\big(-1+\tfrac{r_2-1}{2r_2}\big)c_1(E/E_1)^2\cdot S,$$
+
+即 $c_1(E/E_1)^2\cdot S\geqslant 0$。Lefschetz 定理保证 $\mathbf{q}(\delta,\delta')=\delta\cdot\delta'\cdot S$ 在 $N^1(X)$ 上非退化；Hodge 指标定理给出 $\mathbf{q}$ 恰一个正特征值。由 $\mathbf{q}(c_1(E),c_1(E))>0$ 与 $\mathbf{q}(c_1(E),c_1(E/E_1))=0$，Sylvester 律给出 $c_1(E/E_1)^2\cdot S\leqslant 0$，等号当且仅当 $c_1(E/E_1)\equiv 0$。两方向夹逼得 $c_1(E/E_1)\equiv 0$。
+
+**6.2 节（$\nu(c_1(E))=1$）**
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:926-1059` 是数值维 1 档。素材 `Generic_nefness_of_tangent_sheaves_v3.tex:928-929` 解释：$\nu=1$ 时 $E$ 关于 $c_1(E)\cdot H^{n-2}$ 类半稳定，Harder–Narasimhan 滤过不提供额外信息；改用类 $\alpha_\epsilon=(c_1(E)+\epsilon H)^{n-1}$（$\epsilon>0$）作为斜率方向。
+
+**命题 6.3**（`Generic_nefness_of_tangent_sheaves_v3.tex:932-942`，键 `prop-HN-E-ne-nd=1`）：$X$ 是 $n\geqslant 2$ 维光滑射影簇；$E$ 是非零挠自由层，$c_1(E)$ nef 且 $\nu(c_1(E))=1$；$E$ generichef。设 $c_2(E)\cdot H^{n-2}=0$ 对某 ample $H$。则存在饱和子层滤过
+
+$$0=E_0\subsetneq E_1\subsetneq\cdots\subsetneq E_r=E$$
+
+使
+
+(1) 对每个充分小 $\epsilon>0$，它是 $E$ 关于类 $\alpha_\epsilon=(c_1(E)+\epsilon H)^{n-1}$ 的 Harder–Narasimhan 滤过；
+
+(2) 对每个 $k$，$c_1(E_k/E_{k-1})$ 是 nef、数值正比例于 $c_1(E)$；
+
+(3) 对每个 $k$ 与充分小 $\epsilon>0$，$c_2(E_k/E_{k-1})\cdot(c_1(E)+\epsilon H)^{n-2}=0$。
+
+下面列出证它所需的引理 6.4、引理 6.5、引理 6.6、引理 6.7：前两件见本节，后两件放到下节（§6 后半）。
+
+**引理 6.4**（`Generic_nefness_of_tangent_sheaves_v3.tex:949-952`，键 `lem-common-filtration`）：$X$ 是 $n\geqslant 2$ 维 normal 射影 $\mathbb{Q}$-因子簇。$D_1,\dots,D_{n-1}$ 是 nef 除子，$H$ ample。$E$ 是 $X$ 上的挠自由层。则存在饱和子层滤过
+
+$$0=E_0\subsetneq E_1\subsetneq\cdots\subsetneq E_r=E$$
+
+使对每个充分小 $\epsilon>0$，它是 $E$ 关于类 $(D_1+\epsilon H)\cdots(D_{n-1}+\epsilon H)$ 的 Harder–Narasimhan 滤过。证明引自键 `KMMc04` 引理 6.5（`Generic_nefness_of_tangent_sheaves_v3.tex:955`）。
+
+**引理 6.5**（`Generic_nefness_of_tangent_sheaves_v3.tex:963-980`，键 `lem-filtration-c2`）：$X$ 是 $n\geqslant 2$ 维光滑射影簇。$E$ 是非零挠自由层。$H_1,\dots,H_{n-2}$ ample，$D$ nef，类 $\alpha=D\cdot H_1\cdots H_{n-2}$ 不为零。设有饱和子层滤过 $E_\bullet$ 使 $E_k/E_{k-1}$ 关于 $\alpha$ 半稳定且 $c_1(E_k/E_{k-1})^2\cdot H_1\cdots H_{n-2}\leqslant 0$。若另设
+
+$$c_1(E)^2\cdot H_1\cdots H_{n-2}=c_2(E)\cdot H_1\cdots H_{n-2}=0,$$
+
+则对每个 $k$ 有
+
+$$c_1(E_k/E_{k-1})^2\cdot H_1\cdots H_{n-2}=c_2(E_k/E_{k-1})\cdot H_1\cdots H_{n-2}=0.$$
+
+证明见 `Generic_nefness_of_tangent_sheaves_v3.tex:984-996`：记 $S=H_1\cdots H_{n-2}$、$d_k=\mathrm{rank}\,E_k/E_{k-1}$。`Generic_nefness_of_tangent_sheaves_v3.tex:985` 的 Chern 展开：
+
+$$0=2c_2(E)\cdot S=\bigg(\sum_{k=1}^r 2c_2(E_k/E_{k-1})+\sum_{1\leqslant j<k\leqslant r}2c_1(E_j/E_{j-1})\cdot c_1(E_k/E_{k-1})\bigg)\cdot S.$$
+
+每个 $E_k/E_{k-1}$ $\alpha$-半稳定，Bogomolov–Gieseker 给出
+
+$$2c_2(E_k/E_{k-1})\cdot S\geqslant\tfrac{d_k-1}{d_k}c_1(E_k/E_{k-1})^2\cdot S.$$
+
+代入（`Generic_nefness_of_tangent_sheaves_v3.tex:987-994`）：
+
+$$\begin{aligned}0&\geqslant\bigg(\sum_k \frac{d_k-1}{d_k}c_1(E_k/E_{k-1})^2+2\sum_{j<k}c_1(E_j/E_{j-1})\cdot c_1(E_k/E_{k-1})\bigg)\cdot S \\
+&=\big(c_1(E)^2-\sum_k\tfrac{1}{d_k}c_1(E_k/E_{k-1})^2\big)\cdot S \\
+&=-\sum_k\tfrac{1}{d_k}c_1(E_k/E_{k-1})^2\cdot S \\
+&\geqslant 0.\end{aligned}$$
+
+所有不等号同时取等号，得 `Generic_nefness_of_tangent_sheaves_v3.tex:994` 的两端等式。
+
+**引理 6.6**（`Generic_nefness_of_tangent_sheaves_v3.tex:1005-1014`，键 `lem-HN-E-ne-nd=1`）：$X$ 是 $n\geqslant 2$ 维光滑射影簇。$E$ 是非零挠自由层，$c_1(E)$ nef 且 $\nu(c_1(E))=1$，且 $c_2(E)\cdot H^{n-2}=0$ 对某 ample $H$。设有饱和子层滤过 $E_\bullet$ 满足
+
+(i) 对每个充分小 $\epsilon>0$、每个 $k$，$E_k/E_{k-1}$ 关于 $\alpha_\epsilon=(c_1(E)+\epsilon H)^{n-1}$ 半稳定；
+
+(ii) 对每个充分小 $\epsilon>0$、每个 $k$，$\mu_{\alpha_\epsilon}(E_k/E_{k-1})\geqslant 0$。
+
+则对每个 $k$，$c_1(E_k/E_{k-1})$ 是 nef 且数值正比例于 $c_1(E)$。
+
+证明主体见 `Generic_nefness_of_tangent_sheaves_v3.tex:1016-1032`：让 $H$ very ample，取一般成员切出面 $S$。`Generic_nefness_of_tangent_sheaves_v3.tex:1019-1020` 的恒等式
+
+$$\alpha_\epsilon=\binom{n-1}{2}\epsilon^{n-2}\big(c_1(E)+\tfrac{\epsilon}{\binom{n-1}{2}}H\big)\cdot S,$$
+
+简记 $\beta_\eta=(c_1(E)+\eta H)\cdot S$。由 (i)(ii) 推到 $\eta$ 足够小处得 $c_1(E_k/E_{k-1})\cdot c_1(E)\cdot S\geqslant 0$；与 $c_1(E)=\sum_k c_1(E_k/E_{k-1})$、$c_1(E)^2\cdot S=0$ 联立得
+
+$$c_1(E_k/E_{k-1})\cdot c_1(E)\cdot S=0.$$
+
+Lefschetz 定理把 $\mathbf{q}(\delta,\delta')=\delta\cdot\delta'\cdot S$ 在 $N^1(X)$ 上做成非退化、Hodge 指标定理给恰一个正特征值。Sylvester 律由 $\mathbf{q}(c_1(E_k/E_{k-1}),c_1(E))=0$ 与 $\mathbf{q}(c_1(E),c_1(E))=0$ 联立给出 $\mathbf{q}(c_1(E_k/E_{k-1}),c_1(E_k/E_{k-1}))\leqslant 0$。
+
+每个 $E_k/E_{k-1}$ 关于 $\alpha_\epsilon$（$\epsilon>0$ 充分小）半稳定，由引理 6.5 得 $\mathbf{q}(c_1(E_k/E_{k-1}),c_1(E_k/E_{k-1}))=0$。
+
+**引理 6.7**（`Generic_nefness_of_tangent_sheaves_v3.tex:1037-1040`，键 `lem-2form-1`）：$\mathbf{q}(\cdot,\cdot)$ 是实向量空间 $V$ 上 signature $(1,m)$ 的非退化对称双线性型。$\vec x,\vec y\in V$ 满足 $\mathbf{q}(\vec x,\vec x)=\mathbf{q}(\vec x,\vec y)=\mathbf{q}(\vec y,\vec y)=0$，则 $\vec x,\vec y$ 线性相关。
+
+证明见 `Generic_nefness_of_tangent_sheaves_v3.tex:1042-1046`：$m=0$ 时 $\mathbf{q}$ 必正定，$\vec x=\vec y=\vec 0$。$m>0$ 时由 Sylvester 律取正交基 $(\vec e,\vec e_1,\dots,\vec e_m)$，坐标 $(a,b_1,\dots,b_m)$ 与 $(a',b_1',\dots,b_m')$ 由 $\mathbf{q}(\vec x,\vec x)=a^2-\sum b_i^2=0$ 等给出。Cauchy 不等式 $(aa')^2=(\sum b_i b_i')^2\leqslant(\sum b_i^2)(\sum b_i'^2)$ 取等得 $(b_1,\dots,b_m)$ 与 $(b_1',\dots,b_m')$ 线性相关。
+
+回到命题 6.3 的证明（`Generic_nefness_of_tangent_sheaves_v3.tex:1056-1058`）：引理 6.4 给共同 Harder–Narasimhan 滤过。$E$ generichef $\Rightarrow\mu_{\alpha_\epsilon,\min}(E)\geqslant 0$，于是对所有 $k$ 有
+
+$$\mu_{\alpha_\epsilon}(E_k/E_{k-1})\geqslant\mu_{\alpha_\epsilon,\min}(E)\geqslant 0,$$
+
+引理 6.6 给出 $c_1(E_k/E_{k-1})$ nef、且数值正比例于 $c_1(E)$。由此 $c_1(E_k/E_{k-1})^2\cdot H^{n-2}=0$，再由引理 6.5 得 $c_2(E_k/E_{k-1})\cdot H^{n-2}=0$。
+
+**引理 6.8**（`Generic_nefness_of_tangent_sheaves_v3.tex:1076-1081`，键 `lem-BG-equality-cond`）：$X$ 是 $n>1$ 维光滑射影簇，$H$ ample，$E$ 是 $(H^{n-1})$-半稳定挠自由层，rank $r$。若
+
+$$\bigg(c_2(E)-\frac{r-1}{2r}c_1(E)^2\bigg)\cdot H^{n-2}=0,$$
+
+则对 $X$ 中任何有理曲线 $C$，交数 $C\cdot c_1(E)$ 是 $r$ 的整数倍。
+
+证明见 `Generic_nefness_of_tangent_sheaves_v3.tex:1083-1096`：由引理 6.10（见下）化到 $E$ 自反。由键 `Nakayama2004` 定理 IV.4.1，$E$ 局部自由且有子丛滤过 $E_\bullet$ 使每个商是 hermitian projectively flat 向量丛，且 `Generic_nefness_of_tangent_sheaves_v3.tex:1086-1089` 的带号公式（`\label{equation-c_1}`）成立：
+
+$$\frac{1}{r_i}c_1(E_i/E_{i-1})\equiv\frac{1}{r}c_1(E). \tag{3}$$
+
+$\mathbb{P}(E_i/E_{i-1})$ 由 $\pi_1(X)$ 的 $\mathrm{PGL}$ 表示诱导（键 `Nakayama2004` 推论 IV.4.3）。$C$ 的正规化映射 $\rho\colon\mathbb{P}^1\to X$ 推到 $\rho^*(E_i/E_{i-1})$ 是 $\mathbb{P}^1$ 上的线丛 $L_i$ 的直和 $\oplus^{r_i}$，于是
+
+$$C\cdot c_1(E_i/E_{i-1})=r_i a_i$$
+
+对某整数 $a_i$。(3) 给出 $a_i$ 与 $i$ 无关，公共整数 $a$ 满足 $C\cdot c_1(E)=ra$。
+
+**引理 6.9**（`Generic_nefness_of_tangent_sheaves_v3.tex:1103-1106`，键 `lem-c_2-decreasing`）：$X$ 是 $n\geqslant 2$ 维光滑射影簇，$E$ 是 $X$ 上的挠自由层。则对任意 ample $H_1,\dots,H_{n-2}$ 有
+
+$$c_2(E)\cdot H_1\cdots H_{n-2}\geqslant c_2(E^{**})\cdot H_1\cdots H_{n-2},$$
+
+等号当且仅当 $E$ 在 codimension $2$ 上局部自由。证明见 `Generic_nefness_of_tangent_sheaves_v3.tex:1108-1112`：取 $H_1,\dots,H_{n-2}$ 一般位置 effective very ample、$S$ 完全交。$S$ 一般位置让 $E|_S$ 仍挠自由，且 $E|_S$ 的有限自由解消与 $E$ 的一致诱导出
+
+$$c_2(E)\cdot H_1\cdots H_{n-2}=c_2(E|_S).$$
+
+同样 $c_2(E^{**})\cdot H_1\cdots H_{n-2}=c_2((E|_S)^{**})$。键 `Meg92` 引理 10.9 给出
+
+$$c_2((E|_S)^{**})\geqslant c_2(E|_S),$$
+
+等号当且仅当 $E|_S$ 局部自由，即 $E$ 在 codimension $2$ 上局部自由。
+
+**6.3 节（$\nu(c_1(E))=0$）**
+
+**引理 6.10**（`Generic_nefness_of_tangent_sheaves_v3.tex:1121-1125`，键 `lem-HN-E-ne-nd=0`；§0 表编号 6.10，但素材此处引理是 $\nu=0$ 档唯一引理，§0 不改）：$X$ 是 $n\geqslant 2$ 维光滑射影簇。$E$ 是非零挠自由层，$c_1(E)\equiv 0$、$E$ generichef。设有 ample $H$ 使 $c_2(E)\cdot H^{n-2}=0$。则 $E$ 的自反化 $E^{**}$ 是平坦向量丛。
+
+证明见 `Generic_nefness_of_tangent_sheaves_v3.tex:1128-1133`：$E$ 关于 $H^{n-1}$ 半稳定，且 Bogomolov–Gieseker 不等式取等号。由键 `Nakayama2004` 定理 IV.4.1，$E^{**}$ 是数值平坦向量丛（参键 `DPS94` 定义 1.17 与定理 1.18）。Simpson（键 `Simpson1992` 第 3 节）证数值平坦 $\Rightarrow$ 平坦。
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:1072-1073` 一句总览：命题 6.3 给出的每个 $\alpha_\epsilon$-半稳定层 $E_k/E_{k-1}$，Bogomolov–Gieseker 取等，故自反化 $(E_k/E_{k-1})^{**}$ 是数值射影平坦向量丛。引理 6.8、引理 6.10 串在分类定理证明里直接被调。
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:1137` 与 §6 末尾 `Generic_nefness_of_tangent_sheaves_v3.tex:1138-1141` 的几个空行是第 6 节素材与第 7 节素材「Proof of the classification theorem」（`Generic_nefness_of_tangent_sheaves_v3.tex:1143-1251`）之间的物理分隔。本稿保留此分隔不重排。
+
+至此第 6 节素材所有命题与引理都已摆出。共三档数值维数（$\nu\geqslant 2$、$1$、$0$）对应三组 Bogomolov–Gieseker 取等路线（命题 6.1、引理 6.5–6.7、引理 6.10）。中间桥接件引理 6.8（`Generic_nefness_of_tangent_sheaves_v3.tex:1076-1081`）与引理 6.9（`Generic_nefness_of_tangent_sheaves_v3.tex:1103-1106`）不属某单一数值维档，但但不属某单一数值维档，但服务 §6 与 §7 互相调用。
+
+## 7 第 7 节收束与一般 nef 的开问题
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:1143-1251` 是第 7 节素材「Proof of the classification theorem」，主要任务是把 §6 的等号刻画搬上 $E=T_X$ 来证定理 1.8。
+
+**命题 7.1**（`Generic_nefness_of_tangent_sheaves_v3.tex:1150-1153`，键 `prop-c2=0-q<quotient`）：$X$ 是 $n\geqslant 2$ 维光滑射影簇，$-K_X$ nef。设 $c_2(T_X)\cdot H^{n-2}=0$ 对某 ample $H$。又设有非零挠自由商 $T_X\twoheadrightarrow Q$，$c_1(Q)\equiv 0$，$\mathrm{rank}\,Q=k$。则 augmented irregularity $\tilde q(X)\geqslant k$。
+
+augmented irregularity 的定义见 `Generic_nefness_of_tangent_sheaves_v3.tex:1155`：
+
+$$\tilde q(X)=\sup\{q(\tilde X)\mid\tilde X\to X \text{ 有限 étale 覆盖}\}.$$
+
+命题 7.1 的核心是引理 7.2 与 §6 的等号刻画拼装。
+
+**引理 7.2**（`Generic_nefness_of_tangent_sheaves_v3.tex:1158-1161`，键 `lem-c2=0-q=0`）：在命题 7.1 条件下，$\tilde q(X)\neq 0$。
+
+证明见 `Generic_nefness_of_tangent_sheaves_v3.tex:1163-1167`：反证 $\tilde q(X)=0$，由键 `Pau97` 定理 2 知 $\pi_1(X)$ 有限，进而有限 étale 覆盖可达 $X$ 单连通。定理 1.3 给出 $T_X$ generichef，$Q$ 商也 generichef；由引理 6.2 得 $c_2(Q)\cdot H^{n-2}=0$；由引理 6.10（即 §6 中 `lem-HN-E-ne-nd=0`），$Q^{**}$ 平坦局部自由；$X$ 单连通迫使 $Q^{**}\cong\mathscr O_X^{\oplus k}$。由此有非零态射 $\mathscr O_X\to\Omega_X^1$，推出 $q(X)=h^0(X,\Omega_X^1)\geqslant 1$，矛盾。
+
+**命题 7.1 的证明**（`Generic_nefness_of_tangent_sheaves_v3.tex:1176-1205`）：必要时有限 étale 覆盖，albanese 态射 $f\colon X\to A$ 给出 $\pi_1$ 的同构（键 `Pau97` 定理 2）。由键 `Cao19` 定理 1.2 知 $f$ 是 isotrivial 纤维化，每个纤维单连通，故
+
+$$\tilde q(X)=q(X)=\dim A=q.$$
+
+反证命题不立 $\Rightarrow$ $n\geqslant k>q$。有正合列
+
+$$0\to T_{X/A}\to T_X\to f^*T_A\to 0.$$
+
+$F$ 是 $f$ 的一般纤维，$i\colon F\hookrightarrow X$，则 $F$ 单连通 $\Rightarrow\tilde q(F)=0$。
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:1182-1183` 的 $\dim F=1$ 档：本档 $q=n-1$ 且 $n=k=q+1$，则 $T_X=Q$，$c_1(X)\equiv 0$（素材此处写 $c_1(X)$，按 §0 登记的笔误应为 $c_1(T_X)$），于是 $F$ 是椭圆曲线，矛盾。故 $\dim F\geqslant 2$。
+
+由定理 1.3，$T_F$ generichef。把上述正合列限制到 $F$，得
+
+$$0\to T_F\to T_X\vert_F\to(\mathscr O_F)^q\to 0.$$
+
+由推论 1.5 与引理 5.1（`Generic_nefness_of_tangent_sheaves_v3.tex:1187-1188`），$c_2(T_X)\cdot H^{n-2}=0$ 推
+
+$$c_2(T_F)\cdot(H|_F)^{n-q-2}=c_2(T_X\vert_F)\cdot(H|_F)^{n-q-2}=c_2(T_X)\cdot H^{n-q-2}\cdot F=0.$$
+
+`Generic_nefness_of_tangent_sheaves_v3.tex:1195-1204` 是关键比较：取 $F$ 一般得 $Q|_F$ 仍挠自由、$c_1(Q|_F)=i^*c_1(Q)\equiv 0$。若 $k>q$，则诱导态射 $T_F\to Q|_F$ 非零；记其像为 $R$，则 $c_1(R)\equiv 0$。取 $\beta=(H|_F)^{n-1-q}$ 为 $F$ 中曲线类：由 $T_F$ generichef，$\mu_\beta(R)\geqslant 0$；对 $\beta$ 类在 $X$ 上套定理 1.4，给
+
+$$\mu_{\beta,\max}(Q|_F)\geqslant\mu_{\beta,\min}(Q|_F)\geqslant 0.$$
+
+而 $c_1(Q|_F)\equiv 0$ 强制
+
+$$\mu_{\beta,\max}(Q|_F)=\mu_{\beta,\min}(Q|_F)=\mu_\beta(Q|_F)=0.$$
+
+于是 $\mu_\beta(R)=0$。$R$ 是 $T_F$ 的商，故 generichef；引理 5.1 与 $c_1(R)\equiv 0$ 一致。引理 7.2 给出 $\tilde q(F)>0$，与 $F$ 单连通矛盾。
+
+**定理 1.8 的证明**（`Generic_nefness_of_tangent_sheaves_v3.tex:1214-1251`）：(2)$\Rightarrow$(1)：阿贝尔簇 $c_2=0$，故 $\tilde X$ 是阿贝尔簇或 $\mathbb{P}^1$-丛于阿贝尔簇时也有 $c_2=0$。(1)$\Rightarrow$(2)：$n=1$ 平凡。$n\geqslant 2$ 时分 $K_X\equiv 0$ 与 $K_X\not\equiv 0$。
+
+$K_X\equiv 0$ 时由 Beauville-Bogomolov 分解（键 `Bea83` 定理 1）有限 étale 覆盖 $X'\to X$ 使 $X'$ 分解为不可约 holomorphic symplectic 流形、Calabi–Yau 流形与阿贝尔簇的直积；$c_2(T_X)=0$ 在 $X'$ 上仅余阿贝尔簇一档。
+
+$K_X\not\equiv 0$ 时 $X$ uniruled，有限 étale 覆盖仍可设 $\pi_1$ 由 $f\colon X\to A$ 给出同构；键 `Cao19` 定理 1.2 把 $f$ 化为 isotrivial 纤维化，每纤维单连通，因此
+
+$$\tilde q(X)=q(X)=\dim A=q.$$
+
+$f$ 非常态射，$q<n$。分两个数值维档：
+
+(i) **数值维 $\geqslant 2$**（$K_X^2\cdot H^{n-2}\neq 0$）：命题 6.1 给出 torsion-free 商 $T_X\twoheadrightarrow Q$ 使 $c_1(Q)\equiv 0$、$\mathrm{rank}\,Q=n-1$。命题 7.1 给 $\tilde q(X)\geqslant n-1$，又 $q<n$ 迫使 $q=n-1$；$f\colon X\to A$ 是 $\mathbb{P}^1$-丛。
+
+(ii) **数值维 $=1$**（$K_X^2\cdot H^{n-2}=0$、$-K_X\not\equiv 0$）：由命题 6.3 取关于类 $(-K_X+\epsilon H)^{n-1}$ 的共同 Harder–Narasimhan 滤过 $E_\bullet$。$X$ uniruled 推出某 extremal ray $R$ 由 $g\colon X\to Y$ 生成；设 $R$ 由 minimal degree 有理曲线 $C$ 关于 $-K_X$ 生成。引理 6.8 给出对每个 $k=1,\dots,r$，整数 $a_k$ 使
+
+$$C\cdot c_1(E_k/E_{k-1})=l_k a_k,\qquad l_k=\mathrm{rank}\,(E_k/E_{k-1}).$$
+
+$c_1(E_k/E_{k-1})$ nef $\Rightarrow a_k\geqslant 0$。于是
+
+$$-C\cdot K_X=\sum_k l_k a_k.$$
+
+分两个子情形（`Generic_nefness_of_tangent_sheaves_v3.tex:1235-1249`）：
+
+(a) 「长 $\geqslant 2$」档：要么某 $l_k\geqslant 2$ 且 $a_k\neq 0$，要么存在 $k\neq k'$ 都使 $a_k,a_{k'}\neq 0$。则 $-C\cdot K_X\geqslant 2$，即 $R$ 的长度 $\geqslant 2$。数值维 $1$ 与 $-K_X$ 在纤维上 ample 一起推出 $\dim Y=n-1$（键 `Wis91` 定理 1.1 与 `Ando84` 定理 3）即 $g$ 是二次丛、$Y$ 光滑，$R\geqslant 2$ 进一步推 $g$ 光滑，故 $g_*(K_X^2)\equiv-4K_Y$（键 `Miyanishi83` 第 4.11 节），$K_Y\equiv 0$。相对维 $1$ 与 $K_Y\equiv 0$ 推 $c_2(T_X)\equiv g^*c_2(T_Y)$。$c_2(T_X)\cdot H^{n-2}=0$ 在 $n\geqslant 3$ 时化到 $c_2(T_Y)\cdot H_1'\cdots H_{n-3}'=0$，于是 $\tilde Y\to Y$ 有限 étale 覆盖使 $\tilde Y$ 是阿贝尔簇；$X\times_Y\tilde Y$ 是 $\mathbb{P}^1$-丛于阿贝尔簇。
+
+(b) 「长度恰好 $1$」档：所有 $a_k\neq 0$ 处 $l_k=1$，且至多一个 $k$ 使 $a_k\neq 0$。由 Harder–Narasimhan 滤过构造 $r\leqslant 2$；$K_X\not\equiv 0$ 强制 $r=2$ 与 $c_1(E/E_1)\equiv 0$；(a)(b) 中条件 (i) 又给 $\mathrm{rank}\,E_1=1$。命题 7.1 给出 $\tilde q(X)\geqslant n-1$，于是 $f\colon X\to A$ 是 $\mathbb{P}^1$-丛。
+
+行号末段：`Generic_nefness_of_tangent_sheaves_v3.tex:1230-1231` 把 $\cdot$ 断行写成两行（§0 已登记笔误，已读成一行）。`Generic_nefness_of_tangent_sheaves_v3.tex:1183` 的 $c_1(X)$ 按上下文写 $c_1(T_X)$（§0 登记笔误，已更正）。
+
+末节末尾的应用面与开放问题：
+
+(i) 推论 1.5 把 Xie 的维数推广与 orbifold 层（命题 7.1 + 引理 6.10）打通。
+
+(ii) 定理 1.8 的回答把 Yau 问题在射影流形一侧封掉，但 $\mathbb{Q}$-因子对数规范奇性一侧仍开放：键 `Yau93` 问题 66 在带奇点簇上没有完全对应答案。素材未把这一开口写为单独 problem 环境，但术语「augmented irregularity」与「codimension $2$ 上光滑」条件是带奇点推广的卡口。
+
+(iii) §0 已登记的「记号 flag」两处（generic nef 的就地写出无独立 Definition 环境、$\Delta$ 与 $D$ 在 `Generic_nefness_of_tangent_sheaves_v3.tex:399` 同句混用）说明 §1 已把 generic nef 的两种定义（generic $(H_1,\dots,H_{n-2})$-半正、`Generic_nefness_of_tangent_sheaves_v3.tex:674-677` 的 $\pi$-一般 nef）统一在 §3 末尾，§4 末尾处理了 $\pi$-一般 nef 的退化。
+
+整体上，§3-§7 给出定理 1.3、定理 1.4、定理 1.10、定理 1.6、定理 1.7、定理 1.8 共六条的逐步证明链：foliation 的代数可积用命题 2.2 与定理 4.1，斜率正性用引理 6.5、引理 6.6，Miyaoka 等号刻画用命题 6.1、命题 6.3、引理 6.10，分类定型用命题 7.1 与引理 7.2。证毕。
+
+## 8 与本语料的接缝
+
+本稿是引文 arXiv:1703.03175（Ou, 2017）落第 C07 号，语料侧的引用位置是 D289、D305、D385、D447、D451、D471，引用键 `Ou2023`（§0 已登记）。引文自身在素材里另给出的键（`MR82`、`Miy87`、`Kaw81`、`Vie83`、`Cam04`、`Fuj04`、`PT14`、`GKP14`、`DPS93`、`DPS94`、`DPS96`、`Zhang96`、`Pau97`、`DPS01`、`Zhang05`、`Pau12`、`Pet12`、`CDP15`、`CH17`、`Cao19`、`Har71`、`Kol96`、`BDPP13`、`CZ13`、`CP19`、`CP15a`、`Clau17`、`Xie04`、`Yau93`、`Druel2017`、`KMMc04`、`Nakayama2004`、`Meg92`、`Simpson1992`、`Cao13`、`Guenan16`、`Wis91`、`Ando84`、`Miyanishi83`、`Bea83`、`AD13`、`CP11`）按素材 `Generic_nefness_of_tangent_sheaves_v3.tex:340` 起各句就地给出，本稿只转键名不抄条目全文。
+
+本稿 §0 已声明：同目录的 `Generic_nefness_of_tangent_sheaves_v3.bbl` 是 `.tex` 的编译产物，未取用；`.pdf` 无、`.bib` 无，因此本文里出现的方括号键名（如 `[Miy87, Corollary 6.4]`、`[MR82, Theorem 6.1]`、`[CP19, Theorem 1.4]`、`[CZ13, Main Theorem]`）只能按字面键名转述，条目全文读不到。编号方案的归纳（按 `\newtheorem{thm}{Theorem}[section]` 与 `\numberwithin{equation}{section}` 推断节内统一流水号）见 §0 中段。
+
+接缝一节只能写薄读申报范围内的内容：§0 已写「语料侧禁止打开」。本节只记录这层关系（不复述任何语料笔记的句子）。§0 中段用 `Generic_nefness_of_tangent_sheaves_v3.tex:236` 的 `\newtheorem{thm}{Theorem}[section]` 与 `\numberwithin{equation}{section}` 推断全文编号方案，把同节内的 lemma、cor、prop、rem、exmp、prob、question 等近全部环境与 Theorem 共用同一个计数器并按节复位，据此给出 §2-§7 里「节内统一流水号」的转述。本节（即 §8）维持这一编号方案，不重起新号。
+
+本稿与本文 §0-§7 的内部一致性（即每个定理、命题、引理、注记的位置串都在读过的行范围内核对过）按读过的三次顺序覆盖（`Generic_nefness_of_tangent_sheaves_v3.tex:339-738`、`Generic_nefness_of_tangent_sheaves_v3.tex:738-1137`、`Generic_nefness_of_tangent_sheaves_v3.tex:1100-1275`）逐字复核。文字纪律按规格 4.1 与写手简报的禁串清单逐条自查，长破折号改用短句或括号。数学跨度枚数与展示式枚数见上。
+
+末段登记后笔更正事项：
+
+(a) `Generic_nefness_of_tangent_sheaves_v3.tex:1183` 的 $c_1(X)$ 按上下文为 $c_1(T_X)$，已更正；
+
+(b) `Generic_nefness_of_tangent_sheaves_v3.tex:1230-1231` 的 $C$ 与 $\cdot$ 之间的强制换行已读成一行，等号公式 (3) 的链在 §6 后半按一行写出。
+
+(c) §5 末尾（位置 :284 之后）由于上笔 Edit 末尾残留一个孤立 `$`，已在本笔锚位置之前重写为干净的 `ample。` 结尾，属于上笔的笔误修正，§5 正文其余各行未动。这一修正只清洗孤立的 `$`，不动 §5 中任何定理、命题、引理、注记的内容。
+
+写作到此。末节标题为「与本语料的接缝」，编号与节号按 §0 中段约定执行。本稿落定。
+
+
+
+

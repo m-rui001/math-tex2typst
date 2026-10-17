@@ -1,0 +1,2 @@
+A-projective-fourfold-with-large-fundamental-group-a run refused 1, builder refused 0 -> gate victim
+    GATE FAILS: #cetz.canvas({ import cetz.draw: * line((3.6, 0.65), (7.8, 0.65), (8.7, 3.25), (4.5, 3.25), close: true, fill: rgb("#f7f7f7")) line((3.825, 1.3), (8.025, 1.3), stroke: (paint: rgb("#c4c4c4"))) line((4.65, 0.65), (5.55, 3.25), stroke: (paint: rgb("#c4c4c4"))) l

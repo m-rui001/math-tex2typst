@@ -1,0 +1,46 @@
+=== A. canvases with a multi-point stroke call (the only place Typst miters)
+   canvases built=918, carrying a >=3-point stroke call=317
+   interior vertices on such calls=7668, of which in the band [11.5, 29)=91
+      Strongly-rational-unitary-vertex-operator-algebras-and-conformal-nets-September-25-2026 band joint=11.75deg
+      Directional-transience-implies-ballisticity-September-23-2026  band joint=12.31deg
+      Generic-C1-Future-Inextendibility-Near-Rotating-Subextremal-Kerr-Spacetimes-September-23-2026 band joint=12.33deg
+      A-Smooth-Metric-with-No-Local-Isometric-Immersion-into-Three-Space-September-24-2026 band joint=12.45deg
+      Generalized-Cartan-Hadamard-isoperimetry-and-Euclidean-equality-rigidity-September-23-2026 band joint=12.56deg
+      Strong-diffeomorphic-approximation-in-three-dimensions-for-p-gt-2-September-24-2026 band joint=13.44deg
+      Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September-26-2026 band joint=13.86deg
+      An-explicit-exact-Hausdorff-gauge-for-SLE-September-26-2026    band joint=14.04deg
+      Exponential-PSD-rank-of-positively-shifted-matching-matrices-October-5-2026 band joint=15.38deg
+      a-torsion-free-hyperbolic-group-that-is-not-residually-finite-September-23-2026 band joint=15.41deg
+      The-Isoperimetric-Conjecture-for-the-Cubic-Flat-Three-Torus-September-24-2026 band joint=15.98deg
+      Koebes-Circle-Domain-Conjecture-September-23-2026              band joint=16.24deg
+      A-Pivotal-Amplitude-for-Voronoi-Percolation-from-Cardys-Formula-October-5-2026 band joint=16.26deg
+      Removable-Boundaries-and-Rigidity-of-Circle-Domains-September-23-2026 band joint=16.65deg
+      The-Bass-trace-conjecture-for-complex-group-rings-September-24-2026 band joint=16.7deg
+      Integral-points-on-character-varieties-of-curves-September-25-2026 band joint=16.89deg
+      Quenched-SLE-Universality-for-Weakly-Disordered-FK-Ising-Interfaces-October-5-2026 band joint=17.21deg
+      The-Kakeya-maximal-conjecture-in-three-dimensions-September-23-2026 band joint=18.01deg
+      Full-support-of-the-zero-temperature-Sherrington-Kirkpatrick-order-parameter-September-27-2026 band joint=19.07deg
+      Cap-selected-amplitudes-and-triangle-chords-for-honeycomb-walks-September-26-2026 band joint=19.11deg
+      The-critical-logarithmic-correction-for-the-planar-XY-model-October-5-2026 band joint=19.44deg
+      A-Modulus-Proof-of-Cannons-Conjecture-September-23-2026        band joint=19.65deg
+      Renewal-and-changes-of-law-for-critical-honeycomb-walks-September-26-2026 band joint=21.25deg
+      One-sided-negative-sectional-curvature-and-the-holomorphic-Liouville-property-September-25-2026 band joint=21.87deg
+   papers with at least one band joint on the page=32
+=== B. the band corners of the picture probe126 section C picked, in emitted coordinates
+   canvas: two-point line() calls=11, miter-limit occurrences=11
+      a 10-point call carries joints at [27.86] deg (all its angles: [4.3, 27.9, 31.2, 35.5, 54.4, 60.7, 76.5, 158.8])
+      a 10-point call carries joints at [12.31] deg (all its angles: [2.7, 4.1, 4.5, 8.1, 8.4, 8.4, 9.9, 12.3])
+
+=== C. that picture as emitted (first 60 chars of each stroke call)
+   line((-4.45, 0.0415), (7.25, 0.0415), stroke: (paint: rgb("#595959"), thickness: 0.4pt, 
+   line((-4.45, 0.0415), (-4.45, 5.561), stroke: (paint: rgb("#595959"), thickness: 0.4pt, 
+   line((0, 0.1245), (0, 4.025), stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-li
+   line((-4.3, 3.32), (6.9, 3.32), stroke: (paint: rgb("#8c8c8c"), thickness: 0.4pt, miter-
+   line((-3.9, 0.9545), (-3.5, 1.204), (-3.8, 1.328), (-2.9, 1.536), (-3.15, 1.618), (-2.1,
+   line((0.15, 1.743), (1.2, 1.162), stroke: (paint: rgb("#737373"), thickness: 0.4pt, mite
+   line((0, 1.826), (0.85, 2.864), stroke: (paint: rgb("#cc6600"), thickness: 1.6pt, miter-
+   line((0.85, 2.864), (6.8, 2.864), stroke: (paint: rgb("#bf6000"), thickness: 0.4pt, mite
+   line((0.85, 2.864), (1.35, 3.196), (1.05, 3.029), (2.15, 3.361), (1.8, 3.196), (2.9, 3.6
+   line((-4.3, 4.274), (7, 4.274), stroke: (paint: rgb("#003a00"), thickness: 0.4pt, miter-
+   line((4.15, 4.274), (4.65, 4.648), (3.5, 4.814), (2.25, 4.482), (1.15, 5.021), (-0.65, 4
+P127 EXIT=0

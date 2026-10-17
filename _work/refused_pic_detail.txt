@@ -1,0 +1,881 @@
+### A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026#0
+stage:     statement:\fill[gray!8] (-1.4,-1,1)--(1.4,-1,1)--(1.4,1.3,1) --(-1.4,1
+expanded:  statement:\fill[gray!8] (-1.4,-1,1)--(1.4,-1,1)--(1.4,1.3,1) --(-1.4,1
+marks:     3D-basis,node,circle
+len: 1282
+\begin{tikzpicture}[scale=1.25,
+    x={(1cm,0cm)},y={(0.45cm,0.35cm)},z={(0cm,1.5cm)},
+    line cap=round,line join=round,font=\small]
+  \coordinate (O) at (0,0,0);
+  \coordinate (P0) at (-1,-0.65,1);
+  \coordinate (P1) at (1,-0.65,1);
+  \coordinate (P2) at (0,1,1);
+  \coordinate (W0) at (-1.4,-0.91,1.4);
+  \fill[gray!8] (-1.4,-1,1)--(1.4,-1,1)--(1.4,1.3,1)
+    --(-1.4,1.3,1)--cycle;
+  \draw[gray!55] (-1.4,-1,1)--(1.4,-1,1)--(1.4,1.3,1)
+    --(-1.4,1.3,1)--cycle;
+  \node[anchor=west] at (1.4,1.3,1) {$t=1$};
+  \draw[gray!70] (O)--(P2);
+  \fill[blue!12] (P0)--(P1)--(P2)--cycle;
+  \draw[blue!65!black,thick] (P0)--(P1)--(P2)--cycle;
+  \draw[thick] (O)--(P0) (O)--(P1);
+  \draw[thick,dashed,->] (P0)--(-1.65,-1.0725,1.65);
+  \draw[thick,dashed,->] (P1)--(1.5,-0.975,1.5);
+  \draw[thick,dashed,->] (P2)--(0,1.5,1.5);
+  \fill (W0) circle[radius=1.3pt]
+    node[above right] {$w_0$} node[left] {$t=a_0>1$};
+  \fill (O) circle[radius=1.3pt] node[below] {$0$};
+  \fill (P0) circle[radius=1.3pt] node[left] {$p_0$};
+  \fill (P1) circle[radius=1.3pt] node[right] {$p_1$};
+  \fill (P2) circle[radius=1.3pt] node[above left] {$p_2$};
+  \node at (0,0,1) {$K\times\{1\}$};
+  \node[align=left,anchor=west] at (2.3,-1,0.65)
+    {$p_i=w_i/a_i$\\$a_i=\text{height of }w_i>0$};
+\end{tikzpicture}
+
+### Critical-bond-and-site-percolation-on-the-cubic-lattice-September-24-2026#0
+stage:     statement:\fill[black!3] (1,-1,-1)--(1,1,-1)--(1,1,1)--(1,-1,1)--cycle
+expanded:  statement:\fill[black!3] (1,-1,-1)--(1,1,-1)--(1,1,1)--(1,-1,1)--cycle
+marks:     scope,3D-basis,node
+len: 1561
+\begin{tikzpicture}[
+  x={(1.10cm,-0.55cm)},
+  y={(-1.10cm,-0.55cm)},
+  z={(0cm,1.18cm)},
+  font=\small,
+  line join=round,
+  line cap=round,
+  >=stealth,
+  qf edge/.style={black,line width=0.65pt},
+  qf division/.style={black!55,line width=0.45pt}
+]
+  \fill[black!3] (1,-1,-1)--(1,1,-1)--(1,1,1)--(1,-1,1)--cycle;
+  \fill[black!6] (-1,1,-1)--(1,1,-1)--(1,1,1)--(-1,1,1)--cycle;
+  \fill[black!1] (-1,-1,1)--(1,-1,1)--(1,1,1)--(-1,1,1)--cycle;
+
+  \fill[black!24] (1,0,0)--(1,1,0)--(1,1,1)--(1,0,1)--cycle;
+
+  \draw[qf division] (1,0,-1)--(1,0,1);
+  \draw[qf division] (1,-1,0)--(1,1,0);
+  \draw[qf division] (0,1,-1)--(0,1,1);
+  \draw[qf division] (-1,1,0)--(1,1,0);
+  \draw[qf division] (0,-1,1)--(0,1,1);
+  \draw[qf division] (-1,0,1)--(1,0,1);
+
+  \draw[qf edge]
+    (1,-1,-1)--(1,1,-1)--(-1,1,-1)--(-1,1,1)
+    --(-1,-1,1)--(1,-1,1)--cycle;
+  \draw[qf edge] (1,1,1)--(1,1,-1);
+  \draw[qf edge] (1,1,1)--(-1,1,1);
+  \draw[qf edge] (1,1,1)--(1,-1,1);
+
+  \coordinate (qf representative) at (1,0.48,0.56);
+  \begin{scope}[x=1cm,y=1cm]
+    \node[anchor=west] (qf label) at (2.70,0.00) {$F_{1,+}^{+,+}$};
+    \draw[->,line width=0.45pt]
+      (qf label.west)--(2.38,0.00)--(qf representative);
+
+    \coordinate (qf axes) at (-2.95,-1.63);
+    \draw[->,line width=0.45pt]
+      (qf axes)--(-2.40,-1.905) node[right,inner sep=1pt] {$x_1$};
+    \draw[->,line width=0.45pt]
+      (qf axes)--(-3.50,-1.905) node[left,inner sep=1pt] {$x_2$};
+    \draw[->,line width=0.45pt]
+      (qf axes)--(-2.95,-0.99) node[above,inner sep=1pt] {$x_3$};
+  \end{scope}
+\end{tikzpicture}
+
+### Critical-strip-crossing-mass-on-the-honeycomb-lattice-September-26-2026#1
+stage:     ifnum
+expanded:  ifnum
+marks:     foreach,ifnum,scope,node,circle,bezier
+len: 1079
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\foreach \j/\wt in {0/1,1/A,2/A,3/B,4/B,5/U,6/U,7/E,8/F}{
+ \begin{scope}[xshift={1.45*mod(\j,5)*1cm},yshift={-2.1*floor(\j/5)*1cm}]
+ \draw[black!30] (-.45,0) rectangle (.45,1);
+ \foreach \x in {-.25,.25}{\fill[black!25] (\x,0) circle (1.5pt);\fill[black!25] (\x,1) circle (1.5pt);}
+ \ifnum\j=1 \draw[very thick] (-.25,0)--(-.25,1);\fi
+ \ifnum\j=2 \draw[very thick] (.25,0)--(.25,1);\fi
+ \ifnum\j=3 \draw[very thick] (-.25,0)--(.25,1);\fi
+ \ifnum\j=4 \draw[very thick] (.25,0)--(-.25,1);\fi
+ \ifnum\j=5 \draw[very thick] (-.25,0) .. controls (-.25,.45) and (.25,.45) .. (.25,0);\fi
+ \ifnum\j=6 \draw[very thick] (-.25,1) .. controls (-.25,.55) and (.25,.55) .. (.25,1);\fi
+ \ifnum\j=7 \draw[very thick] (-.25,0)--(-.25,1) (.25,0)--(.25,1);\fi
+ \ifnum\j=8 \draw[very thick] (-.25,0) .. controls (-.25,.45) and (.25,.45) .. (.25,0);\draw[very thick] (-.25,1) .. controls (-.25,.55) and (.25,.55) .. (.25,1);\fi
+ \node at (0,-.35) {$\wt$};
+ \end{scope}
+}
+\node[align=center] at (6.7,-1.5) {inputs below,\\outputs above};
+\end{tikzpicture}
+
+### Cylinder-amplitudes-and-logarithmic-bridge-length-windows-on-the-honeycomb-lattice-September-26-2026#0
+stage:     statement:\FiniteSquare{.70}{-1.08}{} \node[finite label,left] at (.35
+expanded:  statement:\FiniteSquare{.70}{-1.08}{} \node[finite label,left] at (.35
+marks:     foreach,node,circle,bezier
+len: 4525
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  font=\small,
+  finite boundary/.style={draw=black!30,line width=.4pt},
+  finite arc/.style={draw=black,line width=1.05pt,line cap=round},
+  every node/.style={inner sep=1.5pt},
+  finite label/.style={font=\footnotesize},
+  finite heading/.style={anchor=west,font=\small\bfseries}
+]
+  \node[finite heading] at (0,0) {(a) Square-cell states};
+  \node[anchor=east,font=\footnotesize] at (13.4,0)
+    {Separate drawings are alternative states.};
+
+  \FiniteSquare{.70}{-1.08}{}
+  \node[finite label,left]  at (.35,-1.08) {$L$};
+  \node[finite label,below] at (.70,-1.43) {$B$};
+  \node[finite label,right] at (1.05,-1.08) {$R$};
+  \node[finite label,above] at (.70,-.73) {$T$};
+  \node[finite label] at (.70,-1.96) {vacant ($1$)};
+
+  \node at (3.05,-.43) {$u$};
+  \FiniteSquare{2.50}{-1.08}{
+    \draw[finite arc] (-.35,0) .. controls (-.13,0) and (0,.13) .. (0,.35);}
+  \FiniteSquare{3.60}{-1.08}{
+    \draw[finite arc] (0,-.35) .. controls (0,-.13) and (.13,0) .. (.35,0);}
+  \node[finite label] at (3.05,-1.70) {$LT\quad\text{or}\quad BR$};
+
+  \node at (5.65,-.43) {$U$};
+  \FiniteSquare{5.10}{-1.08}{
+    \draw[finite arc] (-.35,0) .. controls (-.13,0) and (0,-.13) .. (0,-.35);}
+  \FiniteSquare{6.20}{-1.08}{
+    \draw[finite arc] (0,.35) .. controls (0,.13) and (.13,0) .. (.35,0);}
+  \node[finite label] at (5.65,-1.70) {$LB\quad\text{or}\quad TR$};
+
+  \node at (8.25,-.43) {$v$};
+  \FiniteSquare{7.70}{-1.08}{\draw[finite arc] (-.35,0)--(.35,0);}
+  \FiniteSquare{8.80}{-1.08}{\draw[finite arc] (0,-.35)--(0,.35);}
+  \node[finite label] at (8.25,-1.70) {$LR\quad\text{or}\quad BT$};
+
+  \node at (10.65,-.43) {$w$};
+  \FiniteSquare{10.65}{-1.08}{
+    \draw[finite arc] (-.35,0) .. controls (-.13,0) and (0,.13) .. (0,.35);
+    \draw[finite arc] (0,-.35) .. controls (0,-.13) and (.13,0) .. (.35,0);}
+  \node[finite label] at (10.65,-1.70) {$LT,BR$};
+
+  \node at (12.55,-.43) {$W$};
+  \FiniteSquare{12.55}{-1.08}{
+    \draw[finite arc] (-.35,0) .. controls (-.13,0) and (0,-.13) .. (0,-.35);
+    \draw[finite arc] (0,.35) .. controls (0,.13) and (.13,0) .. (.35,0);}
+  \node[finite label] at (12.55,-1.70) {$LB,TR$};
+
+  \draw[black!20] (0,-2.25)--(13.4,-2.25);
+  \node[finite heading] at (0,-2.62) {(b) The swap $B(s)$};
+  \node[finite heading] at (4.30,-2.62) {(c) Triangle $P$};
+  \node[finite heading] at (10.35,-2.62) {(d) Cap $C$};
+
+  \draw[finite boundary] (1.90,-3.32)--(2.70,-4.12)--(1.90,-4.92)--(1.10,-4.12)--cycle;
+  \node at (1.90,-4.12) {$B(y/x)$};
+  \foreach \p in {(1.50,-3.72),(2.30,-3.72),(1.50,-4.52),(2.30,-4.52)}
+    \fill[black!45] \p circle (1.2pt);
+  \node[finite label,align=center] at (.85,-3.35) {$T$: new first\\$y$};
+  \node[finite label,align=center] at (3.05,-3.35) {$R$: new second\\$x$};
+  \node[finite label,align=center] at (.85,-4.98) {$L$: old first\\$x$};
+  \node[finite label,align=center] at (3.05,-4.98) {$B$: old second\\$y$};
+  \draw[black!40,line width=.35pt] (1.40,-3.66)--(1.10,-3.50);
+  \draw[black!40,line width=.35pt] (2.40,-3.66)--(2.73,-3.50);
+  \draw[black!40,line width=.35pt] (1.40,-4.58)--(1.10,-4.79);
+  \draw[black!40,line width=.35pt] (2.40,-4.58)--(2.73,-4.79);
+  \node[finite label,align=center] at (1.90,-5.66)
+    {First means left;\\$s=\text{old right}/\text{old left}$.};
+
+  \draw[black!20] (4.05,-2.88)--(4.05,-5.96);
+  \node[finite label] at (7.13,-3.09) {$m\longmapsto(qm,m/q)$};
+  \FiniteTriangle{4.90}{-4.06}{}
+  \FiniteTriangle{6.40}{-4.06}{
+    \draw[finite arc] (0,-.33) .. controls (0,-.14) and (-.09,-.07) .. (-.24,.09);}
+  \FiniteTriangle{7.90}{-4.06}{
+    \draw[finite arc] (0,-.33) .. controls (0,-.14) and (.09,-.07) .. (.24,.09);}
+  \FiniteTriangle{9.40}{-4.06}{
+    \draw[finite arc] (-.24,.09) .. controls (-.13,-.08) and (.13,-.08) .. (.24,.09);}
+  \node[finite label] at (4.90,-4.73) {$1$};
+  \node[finite label] at (6.40,-4.73) {$X$};
+  \node[finite label] at (7.90,-4.73) {$X$};
+  \node[finite label] at (9.40,-4.73) {$X$};
+  \node[finite label,align=center] at (7.13,-5.45)
+    {Bottom port: $m$.\\Left and right ports: $qm,m/q$.};
+
+  \draw[black!20] (10.08,-2.88)--(10.08,-5.96);
+  \node[finite label] at (11.78,-3.09) {$\varnothing\longmapsto(q^3l,l)$};
+  \FiniteCap{10.98}{-4.06}{}
+  \FiniteCap{12.58}{-4.06}{
+    \draw[finite arc] (-.30,.22) .. controls (-.30,-.29) and (.30,-.29) .. (.30,.22);}
+  \node[finite label] at (10.98,-4.73) {$1$};
+  \node[finite label] at (12.58,-4.73) {$1$};
+  \node[finite label,align=center] at (11.78,-5.45)
+    {No input ports.\\Ordered outputs.};
+\end{tikzpicture}
+
+### Elliptic-capacity-propagation-and-Fourier-restriction-to-the-sphere-September-24-2026#0
+stage:     statement:\draw[capacityellipse] (0,0) ellipse (1.00 and .37)
+expanded:  statement:\draw[capacityellipse] (0,0) ellipse (1.00 and .37)
+marks:     foreach,scope,ellipse,node,decorations
+len: 1168
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,
+  axes/.style={gray!65,thin},
+  capacityellipse/.style={draw=linkblue,fill=linkblue!8,thick}]
+  \foreach \x/\name in {0/U,4.2/V,8.4/X_v} {
+    \begin{scope}[shift={(\x,0)}]
+      \draw[axes,->] (-1.25,0)--(1.35,0);
+      \draw[axes,->] (0,-.85)--(0,1.15);
+      \node at (0,-1.15) {\(\name\)-plane};
+    \end{scope}
+  }
+  \begin{scope}[shift={(.12,.20)},rotate=25]
+    \draw[capacityellipse] (0,0) ellipse (1.00 and .37);
+    \draw[linkblue,dashed] (-1,0)--(1,0);
+  \end{scope}
+  \begin{scope}[shift={(4.05,.26)},rotate=25]
+    \draw[capacityellipse] (0,0) ellipse (1.00 and .37);
+    \draw[linkblue,dashed] (-1,0)--(1,0);
+  \end{scope}
+  \begin{scope}[shift={(8.57,.21)},rotate=25]
+    \draw[capacityellipse] (0,0) ellipse (.50 and .185);
+    \draw[linkblue,dashed] (-.5,0)--(.5,0);
+  \end{scope}
+  \node at (.05,1.4) {\(E+u_0\)};
+  \node at (4.15,1.4) {\(E+v_0\)};
+  \node at (8.45,1.4) {\(M^{-1}E+x_0\)};
+  \draw[decorate,decoration={brace,mirror,amplitude=4pt}]
+    (-1.1,-1.53)--(5.3,-1.53);
+  \node at (2.1,-1.98) {initial test};
+  \draw[->,thick] (5.8,.3)--(6.8,.3)
+    node[midway,above] {\(V+vU\)};
+\end{tikzpicture}
+
+### Finite-cylinder-approximation-of-ruled-sets-September-27-2026#0
+stage:     pgfmath
+expanded:  pgfmath
+marks:     foreach,pgfmath,scope,3D-basis,node,circle,clip,text-width
+len: 888
+\begin{tikzpicture}[scale=0.95]
+ \begin{scope}
+  \clip (-2,-2) rectangle (2,2);
+  \foreach \i in {-4,...,4} {\foreach \j in {-4,...,4} {
+   \pgfmathsetmacro{\cx}{\i+.35*\j}
+   \pgfmathsetmacro{\cy}{\j+.35*\i}
+   \draw[blue!45,line width=.4pt]
+     ({\cx-.5},{\cy-.5}) rectangle ({\cx+.5},{\cy+.5});
+   \fill[blue!75!black] (\cx,\cy) circle (.03);
+  }}
+  \fill[blue!20,opacity=.45] (-.5,-.5) rectangle (.5,.5);
+  \draw[blue!85!black,line width=1.1pt] (-.5,-.5) rectangle (.5,.5);
+  \fill[blue!85!black] (0,0) circle (.035);
+ \end{scope}
+ \draw (-2,-2) rectangle (2,2);
+ \node[align=left,anchor=west,text width=7cm] at (2.5,.8)
+   {Centers: $(i+aj,ai+j)$, $(i,j)\in\Z^2$.\\[4pt]
+    Squares: side length $1$, with fixed horizontal and vertical sides.};
+ \node[align=left,anchor=west,text width=7cm] at (2.5,-.8)
+   {Here $a=0.35$. The squares overlap, but leave no gaps.};
+\end{tikzpicture}
+
+### Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25-2026#1
+stage:     statement:\pinskzero \pinsgroup{0}{.95}{T}{pinsplus} \pinsgroup{0}{-.9
+expanded:  statement:\pinskzero \pinsgroup{0}{.95}{T}{pinsplus} \pinsgroup{0}{-.9
+marks:     scope,node,text-width
+len: 3859
+\begin{tikzpicture}[x=1cm,y=1cm,font=\footnotesize]
+  \begin{scope}
+    \node[pins title] at (0,2.15) {(a) Initial placement};
+    \draw[pins gap] (-2.30,.46)--(2.30,.46)
+      node[right,black] {$\ell_+$};
+    \draw[pins gap] (-2.30,-.46)--(2.30,-.46)
+      node[right,black] {$\ell_-$};
+    \pinskzero
+    \pinsgroup{0}{.95}{T}{pinsplus}
+    \pinsgroup{0}{-.95}{B}{pinsminus}
+    \pinsgroup{-1.70}{0}{L}{pinsminus}
+    \pinsgroup{1.70}{0}{R}{pinsplus}
+    \draw[pins move,pinsplus] (0,1.23)--(0,1.72)
+      node[midway,right=3pt] {$(1)\ a_+e$};
+    \draw[pins move,pinsminus] (0,-1.23)--(0,-1.72)
+      node[midway,right=3pt] {$(2)\ {-a_-e}$};
+    \pinsprojection{e}{B}{pinsminus}{K_0,L,R}{T}{pinsplus}
+    \node[pins order,text width=6.1cm] at (0,-2.80)
+      {$L<_uK_0<_uR$;\\the two horizontal gaps are strict.};
+  \end{scope}
+
+  \begin{scope}[shift={(7.15,0)}]
+    \node[pins title] at (0,2.15) {(b) After moves 1--2};
+    \draw[pins gap] (1.414,-1.45)--(-.260,1.45);
+    \draw[pins gap] (.260,-1.45)--(-1.414,1.45);
+    \pinskzero
+    \pinsgroup{.90}{.95}{T}{pinsplus}
+    \pinsgroup{1.60}{.05}{R}{pinsplus}
+    \pinsgroup{-.90}{-.95}{B}{pinsminus}
+    \pinsgroup{-1.60}{-.05}{L}{pinsminus}
+    \node[text=pinsplus] at (1.60,1.45) {$Q_+=T\cup R$};
+    \node[text=pinsminus] at (-1.60,-1.45) {$Q_-=B\cup L$};
+    \draw[pins move,pinsplus] (2.00,.27)--(2.69,.67)
+      node[midway,above=4pt] {$(3)\ bu$};
+    \draw[pins move,pinsminus] (-2.00,-.27)--(-2.69,-.67)
+      node[midway,below=4pt] {$(4)\ {-cu}$};
+    \pinsprojection{u}{Q_-}{pinsminus}{K_0}{Q_+}{pinsplus}
+    \node[pins order,text width=6.1cm] at (0,-2.80)
+      {Move each entire family outwards\\across its $u$-gap.};
+  \end{scope}
+
+  \begin{scope}[shift={(0,-5.65)}]
+    \node[pins title] at (0,2.15) {(c) After moves 3--4};
+    \draw[pins gap] (-1.299,-1.45)--(.375,1.45);
+    \draw[pins gap] (-.375,-1.45)--(1.299,1.45);
+    \pinskzero
+    \pinsgroup{1.80}{1.18}{T}{pinsplus}
+    \pinsgroup{2.28}{.55}{R}{pinsplus}
+    \pinsgroup{-1.80}{-1.18}{B}{pinsminus}
+    \pinsgroup{-2.28}{-.55}{L}{pinsminus}
+    \node[text=pinsplus] at (1.95,1.63) {$Q_+$};
+    \node[text=pinsminus] at (-1.85,-1.63) {$Q_-$};
+    \draw[pins move,pinsminus] (-2.38,-.17)--(-2.99,.18)
+      node[midway,above=5pt] {$(5)\ du'$};
+    \pinsprojection{u'}{Q_+}{pinsplus}{K_0}{Q_-}{pinsminus}
+    \node[pins order,text width=6.1cm] at (0,-2.80)
+      {$K_0<_eQ_+$;\\now $Q_-$ is the extreme high $u'$-side.};
+  \end{scope}
+
+  \begin{scope}[shift={(7.15,-5.65)}]
+    \node[pins title] at (0,2.15) {(d) After move 5};
+    \draw[pins gap] (-2.70,.40)--(2.70,.40)
+      node[right,black] {$\vartheta$};
+    \pinskzero
+    \pinsgroup{1.30}{1.33}{T}{pinsplus}
+    \pinsgroup{2.10}{.80}{R}{pinsplus}
+    \pinsgroup{-1.30}{.80}{B}{pinsminus}
+    \pinsgroup{-2.10}{1.33}{L}{pinsminus}
+    \node[text=pinsplus] at (1.80,1.77) {$Q_+$};
+    \node[text=pinsminus] at (-1.80,1.77) {$Q_-$};
+    \node[anchor=north] at (0,-.29) {$X_\delta$ stays fixed in $K_0$};
+    \begin{scope}[shift={(0,-1.47)}]
+      \draw[pins move,black!70] (0,0)--(0,.56)
+        node[above,black] {$e$};
+      \draw[pins move,black!70] (0,0)--(.65,.375)
+        node[right,black] {$u$};
+      \draw[pins move,black!70] (0,0)--(-.65,.375)
+        node[left,black] {$u'$};
+    \end{scope}
+    \draw[pins axis] (-2.30,-1.95)--(2.30,-1.95)
+      node[right,black,font=\scriptsize] {$\pi_e$};
+    \draw[black!65,line width=2.3pt] (-1.75,-1.95)--(-1.05,-1.95);
+    \draw[pinsplus,line width=2.3pt] (.55,-1.92)--(1.75,-1.92);
+    \draw[pinsminus,line width=2.3pt] (.55,-1.98)--(1.75,-1.98);
+    \node[pins order,anchor=north] at (-1.40,-2.03) {$K_0$};
+    \node[pins order,anchor=north] at (1.15,-2.03) {$Q_+\cup Q_-$};
+    \node[pins order,text width=6.1cm] at (0,-2.80)
+      {A horizontal reflection row\\separates the insertion.};
+  \end{scope}
+\end{tikzpicture}
+
+### Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September-26-2026#9
+stage:     statement:\draw[blue!65!black,very thick] plot[smooth] coordinates {(-
+expanded:  statement:\draw[blue!65!black,very thick] plot[smooth] coordinates {(-
+marks:     scope,plot,node,circle
+len: 916
+\begin{tikzpicture}[scale=.8,font=\small,>=Latex]
+\draw[gray!70,dashed] (0,0) circle (1.6);
+\draw[blue!65!black,very thick] plot[smooth] coordinates {(-1.1,-.7) (-.7,-.5) (-.9,0) (-.3,.3) (0,0) (.5,.3) (.2,.8) (.8,.9) (1.1,.5)};
+\fill (0,0) circle (2pt) node[below] {$z$};
+\draw[->] (0,0)--(1.45,-.65) node[midway,below] {$s$};
+\node[align=center] at (0,-2.35) {A time block of $q$ edges\\fits in one spatial ball};
+\begin{scope}[xshift=6cm]
+\draw[gray!70,dashed] (0,0) circle (1.3);
+\draw[gray!70,dashed] (.8,.35) circle (2.6);
+\fill (.8,.35) circle (2pt) node[right,xshift=12pt] {$z\in V$};
+\draw[blue!65!black,very thick] plot[smooth] coordinates {(-1.1,-1.5) (-.5,-.8) (-.6,0) (.1,.1) (.8,.35) (.6,.9) (1.1,1.4)};
+\node at (.4,-.65) {$B(x,s)$};
+\node at (2.25,1.55) {$B(z,2s)$};
+\node[align=center] at (.7,-3) {A covering ball that meets $V$\\can be recentered at a visited vertex};
+\end{scope}
+\end{tikzpicture}
+
+### No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026#1
+stage:     scoped
+expanded:  scoped
+marks:     foreach,scope,node,circle,text-width
+len: 1397
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth]
+ \begin{scope}[shift={(-3.1,0)}]
+  \draw[fill=blue!3,draw=blue!50!black] (0,0) circle (1.65);
+  \foreach \ang in {0,45,...,315}{
+   \draw[black!18] (0,0)--(\ang:1.65);
+   \fill[blue!65!black] (\ang:1.65) circle(.035);
+   \begin{scope}[shift={(\ang:1.65)},rotate={\ang/2+90}]
+    \draw[blue!70!black,line width=1.1pt] (-.19,0)--(.19,0);
+   \end{scope}
+  }
+  \node[fill=white,inner sep=3pt,align=center] at (0,0)
+     {$s=0$\\$A=WI$};
+  \draw[->,black!60] (15:2) arc[start angle=15,end angle=65,radius=2];
+  \node[above] at (0,2.08) {$s=1$};
+  \node[below=6pt,align=center,text width=4.9cm] at (0,-1.8)
+    {Boundary center lines follow the minor axes.};
+ \end{scope}
+ \begin{scope}[shift={(2.65,-.05)}]
+  \draw[->,black!45] (-.25,0)--(2.35,0) node[right] {$t$};
+  \draw[->,black!45] (0,-1.65)--(0,1.7) node[above] {$z$};
+  \draw[->,blue!65!black,line width=1pt] (0,0)--(1.65,1.3);
+  \draw[->,blue!65!black,line width=1pt] (0,0)--(1.65,-1.3);
+  \draw[fill=blue!8,draw=blue!55!black] (1.5,1.15) rectangle (1.8,1.45);
+  \draw[fill=blue!8,draw=blue!55!black] (1.5,-1.45) rectangle (1.8,-1.15);
+  \fill (0,0) circle(.035);
+  \node[right=5pt] at (1.8,1.3) {$(1,1)$};
+  \node[right=5pt] at (1.8,-1.3) {$(1,-1)$};
+  \node[below=6pt,align=center,text width=4.6cm] at (1,-1.75)
+    {A linear map normalizes two separated directions.};
+ \end{scope}
+\end{tikzpicture}
+
+### Nonuniqueness-with-local-conservation-for-the-hard-sphere-Boltzmann-equation-October-5-2026#0
+stage:     statement:\draw[blue!55!black,line width=1.1pt,domain=-2.2:2.2,samples
+expanded:  statement:\draw[blue!55!black,line width=1.1pt,domain=-2.2:2.2,samples
+marks:     foreach,scope,3D-basis,node,circle,path,clip
+len: 4386
+\begin{tikzpicture}[x=1cm,y=1cm,>=Latex,font=\small,
+  jetplus/.style={fill=blue!55!black,draw=none},
+  jetminus/.style={fill=orange!75!black,draw=none},
+  guide/.style={draw=black!40,line width=.35pt}]
+  \path[use as bounding box] (0,0) rectangle (13.7,9.45);
+
+  \node[anchor=west,font=\small\bfseries] at (0.15,9.15)
+    {(a) Transverse annuli and stripes};
+  \begin{scope}[shift={(3.1,6.65)}]
+    \foreach \inner/\outer/\period in
+      {1.025/1.475/.36,.678/0.989/.16,.449/0.661/.0711}{
+      \begin{scope}[even odd rule]
+        \clip (0,0) circle[radius=\outer]
+          (0,0) circle[radius=\inner];
+        \foreach \k in {-23,...,23}{
+          \path[jetplus] ({\k*\period},-1.6)
+            rectangle ({(\k+.25)*\period},1.6);
+          \path[jetminus] ({(\k+.5)*\period},-1.6)
+            rectangle ({(\k+.75)*\period},1.6);
+        }
+      \end{scope}
+    }
+    \foreach \radius in {1.5,1,.6667,.4444}
+      \draw[guide] (0,0) circle[radius=\radius];
+    \draw[->,black!65] (-1.85,0) -- (1.98,0) node[right] {$y_1$};
+    \draw[->,black!65] (0,-1.8) -- (0,1.82) node[above] {$y_2$};
+    \fill (0,0) circle[radius=.025];
+    \node[anchor=east,fill=white,inner sep=1pt] at (-.06,-.15) {$0$};
+    \draw[->,thin] (1.58,1.36) -- (1.13,.985);
+    \node[anchor=west] at (1.53,1.48) {$e^\eta s_j$};
+    \draw[->,thin] (1.78,.78) -- (.84,.54);
+    \node[anchor=west] at (1.79,.83) {$s_j$};
+  \end{scope}
+  \node[align=center] at (3.1,4.63)
+    {Geometric annuli; stripe period $p_j=s_j^2$.};
+
+  \node[anchor=west,font=\small\bfseries] at (.15,3.76)
+    {(b) A stripe period, magnified};
+  \node[anchor=west] at (.25,3.28) {$y_1/p_j\pmod 1$};
+  \path[jetplus] (.65,2.35) rectangle (1.9,2.92);
+  \path[jetminus] (3.15,2.35) rectangle (4.4,2.92);
+  \draw[black!60] (.65,2.35) rectangle (5.65,2.92);
+  \foreach \xx in {1.9,3.15,4.4}
+    \draw[black!45] (\xx,2.35)--(\xx,2.92);
+  \node[text=white] at (1.275,2.635) {$+$};
+  \node[text=white] at (3.775,2.635) {$-$};
+  \node at (2.525,2.635) {empty};
+  \node at (5.025,2.635) {empty};
+  \foreach \xx/\lab in {.65/0,1.9/{\tfrac14},3.15/{\tfrac12},4.4/{\tfrac34},5.65/1}
+    \node[below] at (\xx,2.30) {$\lab$};
+  \node[align=center] at (3.15,1.12)
+    {Each sign occupies one quarter\\
+     of every stripe period.};
+
+  \node[anchor=west,font=\small\bfseries] at (7.05,9.15)
+    {(c) Jets inside the bath hole};
+  \path[fill=black!9] (7.1,5.05) rectangle (13.55,8.15);
+  \path[fill=white,draw=black!55]
+    (8.8,5.90) -- (11.8,5.90)
+    arc[start angle=-90,end angle=90,radius=.70]
+    -- (8.8,7.30)
+    arc[start angle=90,end angle=270,radius=.70] -- cycle;
+  \draw[->,black!50,dashed] (7.4,6.60) -- (13.25,6.60)
+    node[above] {$z$};
+  \draw[black!45,line width=1pt] (8.8,6.60)--(11.8,6.60);
+  \foreach \xx/\lab in {8.8/{-\tfrac13},10.3/0,11.8/{\tfrac13}}
+    {\draw[black!60] (\xx,6.51)--(\xx,6.69);
+     \node[below,fill=white,inner sep=1pt] at (\xx,6.49) {$\lab$};}
+  \path[jetplus] (9.7375,6.85) rectangle (10.8625,6.94);
+  \path[jetminus] (9.7375,6.98) rectangle (10.8625,7.07);
+  \draw[<->,thin] (9.7375,7.20)--(10.8625,7.20)
+    node[midway,above,inner sep=1pt] {$|z|<a$};
+  \draw[->,thin] (12.65,7.58)--(12.31,7.02);
+  \node[anchor=east] at (13.40,7.81) {$D_{\rm hole}$};
+  \node[anchor=west,align=left] at (7.3,5.45)
+    {Initial bath on $D_{\rm hole}^{\,c}$};
+  \node[align=center] at (10.3,4.63)
+    {Schematic axial view; $a=1/8$.};
+
+  \node[anchor=west,font=\small\bfseries] at (7.05,3.76)
+    {(d) Axial velocity centers};
+  \draw[->,black!55] (7.7,1.87)--(13.30,1.87) node[right] {$z$};
+  \draw[->,black!55] (10.3,.30)--(10.3,3.23) node[above] {$v_3$};
+  \draw[dotted,black!45] (7.9,2.55)--(12.7,2.55);
+  \draw[dotted,black!45] (7.9,1.19)--(12.7,1.19);
+  \node[anchor=east,fill=white,inner sep=1pt] at (10.22,2.55) {$1$};
+  \node[anchor=east,fill=white,inner sep=1pt] at (10.22,1.19) {$-1$};
+  \draw[blue!55!black,line width=1.1pt,domain=-2.2:2.2,samples=70]
+    plot ({10.3+\x},{2.55+.23*tanh(1.35*\x)});
+  \draw[orange!75!black,line width=1.1pt,domain=-2.2:2.2,samples=70]
+    plot ({10.3+\x},{1.19+.23*tanh(1.35*\x)});
+  \node[anchor=west,text=blue!55!black,fill=white,inner sep=1pt]
+    at (12.55,2.78) {$a_s^+$};
+  \node[anchor=west,text=orange!75!black,fill=white,inner sep=1pt]
+    at (12.55,1.40) {$a_s^-$};
+  \node[align=center] at (10.3,.04)
+    {$a_s^\sigma(z)=\sigma+\alpha\tanh(\gamma z/s)$};
+\end{tikzpicture}
+
+### Polynomial-PEPS-approximation-of-gapped-square-grid-ground-states-September-24-2026#0
+stage:     statement:\geometryrow{0}{\textbf{Main: initial}\\before the exchange}
+expanded:  statement:\geometryrow{0}{\textbf{Main: initial}\\before the exchange}
+marks:     foreach,node
+len: 2378
+\begin{tikzpicture}[
+  x=.86cm,y=1cm,
+  bandA/.style={fill=orange!35,draw=black!35,line width=.3pt},
+  bandB/.style={fill=cyan!28,draw=black!35,line width=.3pt},
+  bandC/.style={fill=black!12,draw=black!35,line width=.3pt},
+  lens/.style={draw=red!65!black,dashed,line width=.8pt}
+]
+  \foreach \geometrytick in {-8,-7,...,2} {
+    \draw[black!10,line width=.3pt]
+      (\geometrytick,.48) -- (\geometrytick,-5.17);
+    \draw[black!60,line width=.35pt]
+      (\geometrytick,.55) -- (\geometrytick,.65);
+    \node[above,font=\scriptsize] at (\geometrytick,.67)
+      {$\geometrytick$};
+  }
+  \draw[->,black!70] (-8.13,.60) -- (2.25,.60)
+    node[right,font=\small] {$x$};
+  \node[font=\scriptsize] at (-4,1.32) {exterior: $d<0$};
+  \node[font=\scriptsize] at (1,1.32) {interior: $d>0$};
+
+  \geometryrow{0}{\textbf{Main: initial}\\before the exchange}
+  \geometryband{0}{-8}{0}{C}
+  \geometryband{0}{0}{1}{A}
+  \geometryband{0}{1}{2}{B}
+
+  \geometryrow{-.82}{\textbf{Auxiliary}\\three nested births}
+  \geometrybandat{-.82}{-8}{-6}{C}{-7.22}
+  \geometryband{-.82}{-6}{-5}{B}
+  \geometryband{-.82}{-5}{-4}{A}
+  \geometrybandat{-.82}{-4}{-3}{C}{-3.72}
+  \geometryband{-.82}{-3}{-2}{A}
+  \geometryband{-.82}{-2}{-1}{B}
+  \geometryband{-.82}{-1}{2}{C}
+  \draw[lens] (-7,-1.07) rectangle (-3.5,-.57);
+  \node[below,inner sep=0pt,font=\scriptsize,text=red!65!black] at (-5.25,-1.09)
+    {exchange lens $Y=(-7,-7/2)$};
+
+  \geometryrow{-1.64}{\textbf{Main: exchange}\\auxiliary retired}
+  \geometryband{-1.64}{-8}{-6}{C}
+  \geometryband{-1.64}{-6}{-5}{B}
+  \geometryband{-1.64}{-5}{-4}{A}
+  \geometryband{-1.64}{-4}{0}{C}
+  \geometryband{-1.64}{0}{1}{A}
+  \geometryband{-1.64}{1}{2}{B}
+
+  \geometryrow{-2.46}{\textbf{Main: first death}\\$C\to A$ on $(-4,0)$}
+  \geometryband{-2.46}{-8}{-6}{C}
+  \geometryband{-2.46}{-6}{-5}{B}
+  \geometryband{-2.46}{-5}{1}{A}
+  \geometryband{-2.46}{1}{2}{B}
+
+  \geometryrow{-3.28}{\textbf{Main: second death}\\$A\to B$ on $(-5,1)$}
+  \geometryband{-3.28}{-8}{-6}{C}
+  \geometryband{-3.28}{-6}{2}{B}
+
+  \geometryrow{-4.10}{\textbf{Main: birth}\\$B\to C$ on $(-3,0)$}
+  \geometryband{-4.10}{-8}{-6}{C}
+  \geometryband{-4.10}{-6}{-3}{B}
+  \geometryband{-4.10}{-3}{0}{C}
+  \geometryband{-4.10}{0}{2}{B}
+
+  \geometryrow{-4.92}{\textbf{Main: final death}\\$B\to C$ on $(-6,-3)$}
+  \geometryband{-4.92}{-8}{0}{C}
+  \geometryband{-4.92}{0}{2}{B}
+\end{tikzpicture}
+
+### Strong-diffeomorphic-approximation-in-three-dimensions-for-p-gt-2-September-24-2026#1
+stage:     statement:\node[font=\bfseries] at (1,.7,2.55) {Input face prism}
+expanded:  statement:\node[font=\bfseries] at (1,.7,2.55) {Input face prism}
+marks:     scope,3D-basis,node,circle
+len: 2942
+\begin{tikzpicture}[font=\small,>=Latex]
+\begin{scope}[x=1.3cm,y=1.3cm]
+ \node[font=\bfseries] at (1.15,2.97) {Output face $D$};
+ \fill[gray!5] (0,0) rectangle (2.3,1.9);
+ \draw[thick] (0,0) rectangle (2.3,1.9);
+ \draw[blue!70!black,thick] (.46,.38) rectangle (1.84,1.52);
+ \fill[white] (.92,.76) rectangle (1.38,1.14);
+ \draw[densely dashed,gray] (.92,.76) rectangle (1.38,1.14);
+ \draw[red!65!black,thick] (1.38,.95)--(2.3,.95);
+ \fill (1.15,.95) circle (1.1pt);
+ \node[below left] at (1.15,.95) {$d_D$};
+ \fill[blue!70!black] (1.84,.95) circle (1.4pt);
+ \node[below left,inner sep=2pt] at (1.84,.95) {$q$};
+ \fill (2.3,.95) circle (1.1pt);
+ \node[right] at (2.3,.95) {$\xi_e(s)$};
+ \draw[->,thick] (2.46,1.25)--(2.46,1.72);
+ \node[right] at (2.46,1.52) {$s$};
+ \node[blue!70!black,above] at (1.15,1.54) {$t=L_D\log r$};
+ \node[align=center] at (1.15,-.45)
+ {$q=d_D+r(\xi_e(s)-d_D)$};
+\end{scope}
+\draw[->,thick] (6cm,1.65cm)--node[above] {$T$} (4.8cm,1.65cm);
+\begin{scope}[shift={(7.1cm,.35cm)},
+ x={(1.3cm,0cm)},y={(.42cm,.36cm)},z={(0cm,1.28cm)}]
+ \node[font=\bfseries] at (1,.7,2.55) {Input face prism};
+ \fill[gray!18] (0,0,0)--(2,0,0)--(2,1.4,0)--(0,1.4,0)--cycle;
+ \fill[gray!12] (0,0,1.7)--(2,0,1.7)--(2,1.4,1.7)--(0,1.4,1.7)--cycle;
+ \draw[gray] (0,0,0)--(2,0,0)--(2,1.4,0)--(0,1.4,0)--cycle;
+ \draw[gray] (0,0,1.7)--(2,0,1.7)--(2,1.4,1.7)--(0,1.4,1.7)--cycle;
+ \draw[gray] (0,0,0)--(0,0,1.7) (2,0,0)--(2,0,1.7)
+  (2,1.4,0)--(2,1.4,1.7) (0,1.4,0)--(0,1.4,1.7);
+ \draw[blue!70!black,thick] (.4,.28,0)--(1.6,.28,0)
+  --(1.6,1.12,0)--(.4,1.12,0)--cycle;
+ \draw[blue!70!black,thick] (.4,.28,1.7)--(1.6,.28,1.7)
+  --(1.6,1.12,1.7)--(.4,1.12,1.7)--cycle;
+ \draw[blue!70!black] (.4,.28,0)--(.4,.28,1.7)
+  (1.6,.28,0)--(1.6,.28,1.7);
+ \draw[blue!70!black,densely dashed] (.4,1.12,0)--(.4,1.12,1.7)
+  (1.6,1.12,0)--(1.6,1.12,1.7);
+ \fill[white] (.8,.56,0)--(1.2,.56,0)--(1.2,.56,1.7)
+  --(.8,.56,1.7)--cycle;
+ \fill[white] (1.2,.56,0)--(1.2,.84,0)--(1.2,.84,1.7)
+  --(1.2,.56,1.7)--cycle;
+ \draw[gray,densely dashed] (.8,.56,0)--(1.2,.56,0)
+  --(1.2,.84,0)--(.8,.84,0)--cycle;
+ \draw[gray,densely dashed] (.8,.56,1.7)--(1.2,.56,1.7)
+  --(1.2,.84,1.7)--(.8,.84,1.7)--cycle;
+ \draw[gray,densely dashed] (.8,.56,0)--(.8,.56,1.7)
+  (1.2,.56,0)--(1.2,.56,1.7)
+  (1.2,.84,0)--(1.2,.84,1.7);
+ \fill[red!45,opacity=.3] (1.2,.7,0)--(2,.7,0)
+  --(2,.7,1.7)--(1.2,.7,1.7)--cycle;
+ \draw[red!65!black,thick] (1.2,.7,0)--(2,.7,0)
+  --(2,.7,1.7)--(1.2,.7,1.7)--cycle;
+ \draw[blue!70!black,very thick] (1.6,.7,0)--(1.6,.7,1.7);
+ \fill[blue!70!black] (1.6,.7,0) circle (1.5pt);
+ \fill[blue!70!black] (1.6,.7,1.7) circle (1.5pt);
+ \node[left,blue!70!black] at (-.15,0,.72) {$A_D(t)$};
+ \node[right,red!65!black,align=left] at (2.12,1.4,.65)
+ {$B_e(s)$\\portion};
+ \node[above] at (1,.7,1.92) {end on $X_+$};
+ \node[below] at (1,.7,-.22) {end on $X_-$};
+ \node[rotate=90,fill=white,inner sep=1pt] at (1,.64,.85) {removed core};
+\end{scope}
+\end{tikzpicture}
+
+### The-Deligne-Drinfeld-conjecture-September-23-2026#1
+stage:     scoped
+expanded:  scoped
+marks:     foreach,scope,node
+len: 2806
+\begin{tikzpicture}[
+    x=1cm,y=1cm,
+    vertex/.style={minimum width=2.7cm,minimum height=1.9cm,inner sep=0pt},
+    tree/.style={line width=.65pt,line cap=round,line join=round},
+    reassociate/.style={-{Stealth[length=2mm]},line width=.7pt},
+    edge value/.style={fill=white,inner sep=3pt,font=\small},
+    leaf/.style={font=\scriptsize,inner sep=1pt},
+    tree caption/.style={font=\small,inner sep=1pt}
+  ]
+    \node[vertex] (A) at (-4.2,0) {};
+    \node[vertex] (D) at (0,2.4) {};
+    \node[vertex] (E) at (4.2,0) {};
+    \node[vertex] (B) at (-2.7,-3) {};
+    \node[vertex] (C) at (2.7,-3) {};
+
+    \draw[reassociate] (A) -- node[edge value,above left] {$p_1$} (D);
+    \draw[reassociate] (D) -- node[edge value,above right] {$p_2$} (E);
+    \draw[reassociate] (A) -- node[edge value,left] {$p_3$} (B);
+    \draw[reassociate] (B) -- node[edge value,above] {$p_4$} (C);
+    \draw[reassociate] (C) -- node[edge value,right] {$p_5$} (E);
+
+    \begin{scope}[shift={(A)}]
+      \draw[tree] (0,.75) -- (-.3,.4) -- (-.6,.05) -- (-.9,-.3)
+        (-.6,.05) -- (-.3,-.3) (-.3,.4) -- (.3,-.3)
+        (0,.75) -- (.9,-.3);
+      \foreach \x/\i in {-.9/1,-.3/2,.3/3,.9/4}
+        \node[leaf,below] at (\x,-.3) {$\i$};
+      \node[tree caption] at (0,-.78) {$\mathsf{A}:\ (((12)3)4)$};
+    \end{scope}
+    \begin{scope}[shift={(D)}]
+      \draw[tree] (0,.75) -- (-.6,.2) -- (-.9,-.3)
+        (-.6,.2) -- (-.3,-.3)
+        (0,.75) -- (.6,.2) -- (.3,-.3)
+        (.6,.2) -- (.9,-.3);
+      \foreach \x/\i in {-.9/1,-.3/2,.3/3,.9/4}
+        \node[leaf,below] at (\x,-.3) {$\i$};
+      \node[tree caption] at (0,-.78) {$\mathsf{D}:\ ((12)(34))$};
+    \end{scope}
+    \begin{scope}[shift={(E)}]
+      \draw[tree] (0,.75) -- (-.9,-.3)
+        (0,.75) -- (.3,.4) -- (-.3,-.3)
+        (.3,.4) -- (.6,.05) -- (.3,-.3)
+        (.6,.05) -- (.9,-.3);
+      \foreach \x/\i in {-.9/1,-.3/2,.3/3,.9/4}
+        \node[leaf,below] at (\x,-.3) {$\i$};
+      \node[tree caption] at (0,-.78) {$\mathsf{E}:\ (1(2(34)))$};
+    \end{scope}
+    \begin{scope}[shift={(B)}]
+      \draw[tree] (0,.75) -- (-.3,.4) -- (-.9,-.3)
+        (-.3,.4) -- (0,.05) -- (-.3,-.3)
+        (0,.05) -- (.3,-.3) (0,.75) -- (.9,-.3);
+      \foreach \x/\i in {-.9/1,-.3/2,.3/3,.9/4}
+        \node[leaf,below] at (\x,-.3) {$\i$};
+      \node[tree caption] at (0,-.78) {$\mathsf{B}:\ ((1(23))4)$};
+    \end{scope}
+    \begin{scope}[shift={(C)}]
+      \draw[tree] (0,.75) -- (-.9,-.3)
+        (0,.75) -- (.3,.4) -- (0,.05) -- (-.3,-.3)
+        (0,.05) -- (.3,-.3) (.3,.4) -- (.9,-.3);
+      \foreach \x/\i in {-.9/1,-.3/2,.3/3,.9/4}
+        \node[leaf,below] at (\x,-.3) {$\i$};
+      \node[tree caption] at (0,-.78) {$\mathsf{C}:\ (1((23)4))$};
+    \end{scope}
+    \node[align=center,font=\small] at (0,-.55)
+      {$p_1+p_2=p_3+p_4+p_5$};
+  \end{tikzpicture}
+
+### The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-September-25-2026#1
+stage:     statement:\draw[very thick,teal!70!black] plot[smooth] coordinates {(0
+expanded:  statement:\draw[very thick,teal!70!black] plot[smooth] coordinates {(0
+marks:     scope,plot,node,circle,bezier
+len: 1477
+\begin{tikzpicture}[x=0.8cm,y=0.8cm,>=Latex]
+ \draw[gray] (0,0) rectangle (6,4);
+ \draw[densely dashed,gray] (1,0)--(1,4) (5,0)--(5,4);
+ \draw[very thick,teal!70!black] plot[smooth] coordinates
+   {(0,0.8) (1,1.15) (2,0.9) (3,1.35) (4,1.0) (5,1.2) (6,0.9)};
+ \draw[very thick,teal!70!black] plot[smooth] coordinates
+   {(0,2.7) (1,2.35) (2,2.55) (3,2.1) (4,2.45) (5,2.3) (6,2.7)};
+ \draw[teal!60!black,densely dashed] (2,1.72) circle (0.65);
+ \draw[teal!60!black,densely dashed] (4.1,1.73) circle (0.65);
+ \draw[<->] (3,1.38)--node[right,fill=white,inner sep=1pt] {$g_j(x)$}
+                  (3,2.08);
+ \node at (3,-0.35) {local annuli join ordered arms};
+ \begin{scope}[xshift=7.5cm]
+  \draw[gray] (0,0) rectangle (6,4);
+  \draw[very thick,teal!70!black] plot[smooth] coordinates
+    {(0,0.6) (1,0.9) (2,0.75) (3,1.05) (4,0.8) (6,0.65)};
+  \draw[very thick,teal!70!black] plot[smooth] coordinates
+    {(0,3.45) (1,3.1) (2,3.3) (3,3.0) (4,3.25) (6,3.4)};
+  \draw[very thick,orange!80!black] (3,1.42)--(3,2.63);
+  \draw[teal!60!black,densely dashed] (3,1.05) circle (0.5);
+  \draw[teal!60!black,densely dashed] (3,3.0) circle (0.5);
+  \draw[blue!65!black,thick,->] (0,2.0).. controls (1.0,1.7) and
+    (1.7,2.25)..(2.45,2.05);
+  \draw[blue!65!black,thick] (3.55,2.05).. controls (4.3,1.85) and
+    (5,2.2)..(6,2.0);
+  \node[anchor=south west,inner sep=1pt] at (3.5,2.18) {$K_m$};
+  \node at (3,-0.35) {a lower--upper connector blocks a crosscut};
+ \end{scope}
+\end{tikzpicture}
+
+### Thompsons-group-F-is-nonamenable-September-23-2026#0
+stage:     statement:\node[anchor=west,align=left,text width=5.2cm] at (5.45,3.15
+expanded:  statement:\node[anchor=west,align=left,text width=5.2cm] at (5.45,3.15
+marks:     foreach,node,text-width
+len: 1081
+\begin{tikzpicture}[x=1.05cm,y=0.62cm,font=\small]
+  \foreach \x in {0,1,2,3,4} {
+    \foreach \y in {0,1,2,3} {
+      \fill[parentblue!13] (\x,\y) rectangle +(1,1);
+    }
+  }
+  \fill[childorange!24] (2,0) rectangle (3,4);
+  \draw[gray!65,thin] (0,0) grid[xstep=1,ystep=1] (5,4);
+  \draw[childorange!65!black,semithick] (2,0) rectangle (3,4);
+  \node at (0.5,4.45) {$I_1$};
+  \node at (1.5,4.45) {$\cdots$};
+  \node[childorange] at (2.5,4.45) {$I_i$};
+  \node at (3.5,4.45) {$\cdots$};
+  \node at (4.5,4.45) {$I_D$};
+  \node[anchor=east] at (-0.2,3.5) {$I_i\cdot I_1$};
+  \node[anchor=east] at (-0.2,2.5) {$\vdots$};
+  \node[anchor=east] at (-0.2,1.5) {$I_i\cdot I_j$};
+  \node[anchor=east] at (-0.2,0.5) {$I_i\cdot I_D$};
+  \node[anchor=west,align=left,text width=5.2cm] at (5.45,3.15)
+    {\textcolor{parentblue}{Separated pairs}\\
+     \(D(D-1)\) terms, each with\\
+     mean in \([\alpha-\eta,\alpha+\eta]\)};
+  \node[anchor=west,align=left,text width=5.2cm] at (5.45,0.95)
+    {\textcolor{childorange}{Nested pairs}\\
+     \(D\) terms, each at least \(-1\)};
+\end{tikzpicture}
+
+### Translative-covering-densities-of-order-n-log-n-September-23-2026#1
+stage:     statement:\draw[edge,dashed] (six) to[out=135,in=45,looseness=5] (six)
+expanded:  statement:\draw[edge,dashed] (six) to[out=135,in=45,looseness=5] (six)
+marks:     node,circle,looseness
+len: 1143
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  slot/.style={circle,draw=black!70,line width=.6pt,
+    minimum size=8mm,inner sep=2pt,font=\small},
+  edge/.style={-{Stealth[length=2.2mm,width=1.5mm]},
+    draw=blue!45!black,line width=.8pt},
+  note/.style={font=\small,align=center,text=black!80}
+]
+  \node[slot] (one) at (0,0) {$1$};
+  \node[slot] (two) at (2,0) {$2$};
+  \node[slot] (three) at (4,0) {$3$};
+  \draw[edge] (one) -- (two);
+  \draw[edge] (two) -- (three);
+  \node[note] at (2,1.35) {directed path};
+  \node[note] at (0,-.8) {$d_P(1)=1$};
+  \node[note] at (2,-.8) {$d_P(2)=2$};
+  \node[note] at (4,-.8) {$d_P(3)=1$};
+
+  \node[slot] (four) at (6.5,0) {$4$};
+  \node[slot] (five) at (8.5,0) {$5$};
+  \draw[edge] (four) to[bend left=27] (five);
+  \draw[edge] (five) to[bend left=27] (four);
+  \node[note] at (7.5,1.35) {directed $2$-cycle};
+  \node[note] at (6.5,-.8) {$d_P(4)=2$};
+  \node[note] at (8.5,-.8) {$d_P(5)=2$};
+
+  \node[slot] (six) at (11.5,0) {$6$};
+  \draw[edge,dashed] (six) to[out=135,in=45,looseness=5] (six);
+  \node[note] at (11.5,1.35) {optional diagonal match};
+  \node[note] at (11.5,-.8) {$d_P(6)=0$};
+\end{tikzpicture}
+
+### Universal-Tensor-Squares-for-Symmetric-Groups-September-24-2026#0
+stage:     pgfmath
+expanded:  pgfmath
+marks:     foreach,pgfmath,ifnum,node
+len: 764
+\begin{tikzpicture}[x=.31cm,y=-.31cm,every node/.style={font=\small}]
+ \foreach \row/\width in {1/10,2/9,3/7,4/6,5/5,6/4,7/3,8/2,9/2,10/1}{
+  \foreach \column in {1,...,\width}{
+   \pgfmathtruncatemacro{\staircasecell}{\row+\column<=10}
+   \ifnum\staircasecell=1
+    \fill[blue!15] (\column-1,\row-1) rectangle (\column,\row);
+   \else
+    \fill[orange!45] (\column-1,\row-1) rectangle (\column,\row);
+   \fi
+   \draw[black!55] (\column-1,\row-1) rectangle (\column,\row);
+  }
+ }
+ \fill[blue!15] (12,2) rectangle (13,3);
+ \draw[black!55] (12,2) rectangle (13,3);
+ \node[right] at (13.5,2.5) {staircase $\rho_9$};
+ \fill[orange!45] (12,4) rectangle (13,5);
+ \draw[black!55] (12,4) rectangle (13,5);
+ \node[right] at (13.5,4.5) {matched additions};
+\end{tikzpicture}
+

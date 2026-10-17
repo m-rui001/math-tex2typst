@@ -1,0 +1,32 @@
+{
+  "paper": "Contact-Fano-manifolds-and-the-LeBrun-Salamon-conjecture-September-23-2026",
+  "ok": true,
+  "typ_lines": 1128,
+  "included_pdf_pages": 0,
+  "formulas": 940,
+  "math_failed": 0,
+  "labels": 123,
+  "equations": 3,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "940",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "flafter"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Contact-Fano-manifolds-and-the-LeBrun-Salamon-conjecture-September-23-2026.tex"
+}

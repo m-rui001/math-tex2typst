@@ -1,0 +1,9 @@
+\documentclass{article}
+\usepackage{tikz}
+\pagestyle{empty}
+\begin{document}
+\begin{tikzpicture}
+  \path (1,2); \pgfgetlastxy{\ea}{\eb}
+  \typeout{MIN ea=\ea eb=\eb}
+\end{tikzpicture}
+\end{document}

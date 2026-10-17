@@ -1,0 +1,9 @@
+\documentclass[tikz,border=0pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+\draw[green!60!black,line width=0.4pt] (0,0)--(10,0)(0,0)--(0,10);
+\draw[blue,very thick] plot[smooth] coordinates {(0,0.8) (1,1.15) (2,0.9) (3,1.35) (4,1) (5,1.2) (6,0.9)};
+\end{tikzpicture}
+\end{document}

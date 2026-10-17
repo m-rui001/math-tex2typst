@@ -1,0 +1,69 @@
+913 pictures, 695 reach the compile gate, 1.0s
+  695  would-compile
+        A-boundary-field-gap-for-the-spin-one-Heisen \begin{tikzpicture}[>=Stealth, site/.style={draw,minimum width=9mm,minimum height=8mm}, every node/.style={font=\small}] \foreach \y in
+        A-boundary-only-obstruction-to-four-dimensio \begin{tikzpicture}[font=\small,>=Stealth, block/.style={draw,rounded corners,align=center,inner sep=6pt}, every path/.style={line widt
+        A-boundary-only-obstruction-to-four-dimensio \begin{tikzpicture}[font=\small,>=Stealth, every path/.style={line width=.6pt}] \begin{scope}[shift={(0,0)}] \fill[gray!10] (-1.9,-1.25
+        A-boundary-only-obstruction-to-four-dimensio \begin{tikzpicture}[font=\small,>=Stealth, body/.style={draw,rounded corners,align=center,inner sep=5pt}, capnode/.style={draw,rounded 
+  167  stmt-refused
+        A-C1-Counterexample-to-the-Entropy-Conjectur \node[phase,fill=blue!5] (reset) {Reset\\\(t\in[2,5]\)\\\(v'_\ell=0\)}
+        A-CH-Obstruction-to-a-Prescribed-Categoricit \definecolor{rowshade}{RGB}{182,218,223}
+ \definecolor{columnshade}{RGB}{249,221,167}
+ 
+  
+   \ifnum0>0
+    \fill[columnshade] (0,-0) r
+        A-classification-of-finite-Euclidean-Ramsey- \node[box] (length) {Fix the number of colors $r$.\\
+  Choose a Hales--Jewett length $n$.}
+        A-counterexample-to-Kaplanskys-quasitrace-co \node[draw=blue!50!black,dashed,rounded corners=3pt,
+          inner xsep=4mm,inner ysep=8mm,fit=(e0)(er)] (window) {}
+   12  unsupported:clip
+        Almost-everywhere-regularity-of-stationary-i \begin{tikzpicture}[x=1.55cm,y=1.55cm,>=Latex,font=\small] \begin{scope} \clip (-.25,-1.1) rectangle (4.4,1.65); \fill[blue!5] (0,0) ci
+        Every-complex-K3-surface-is-Oka-September-23 \begin{tikzpicture}[x=0.9cm,y=0.9cm,>=Latex,font=\small] \begin{scope} \clip (0,0) ellipse (4.1 and 1.55); \fill[black!4] (-4.2,-1.6) r
+        Existential-universal-real-sentences-in-the- \begin{tikzpicture}[x=1cm,y=1cm, font=\small] \draw[rounded corners=18pt,fill=black!2] (0,0) rectangle (10,4.2); \node[anchor=north wes
+        Finite-cylinder-approximation-of-ruled-sets- \begin{tikzpicture}[scale=0.95] \begin{scope} \clip (-2,-2) rectangle (2,2); \foreach \i in {-4,...,4} {\foreach \j in {-4,...,4} { \pg
+   11  scope
+        A-Smooth-Metric-with-No-Local-Isometric-Imme  \begin{scope} \draw[->,gray] (-.2,0)--(4.1,0) node[right,black] {\(X\)}; \fill (0,0) circle (1.5pt) node[below=4pt] {\(0\)}; \draw[fil
+        Bochner-Riesz-Multipliers-in-Three-Dimension  \begin{scope}[shift={(3.05,0)}] \node[font=\small\bfseries] at (0,2.10) {Common coarsening}; \fill[figuregray!7] (-2.8,-1.35) rectangl
+        Critical-strip-crossing-mass-on-the-honeycom  \begin{scope}[xshift={1.45*mod(0,5)*1cm},yshift={-2.1*floor(0/5)*1cm}] \draw[black!30] (-.45,0) rectangle (.45,1); \fill[black!25] (-.
+        Disk-transfer-representations-and-confined-b  \begin{scope}[xshift=-3.35cm,yshift=.15cm,scale=.8] \draw[fill=gray!7] (-1,-.65) rectangle (1,.65); \node at (0,0) {$\check R(u)$}; \d
+    8  unsupported:pgfmathsetmacro
+        A-uniform-Hilbert-transform-estimate-for-Lip \begin{tikzpicture}[x=.94cm,y=.74cm,>=Stealth,font=\small] \foreach \i in {0,...,9} \node[font=\scriptsize] at (\i,.62) {\(\i\)}; \node
+        Conditional-permutations-in-a-revealed-switc \begin{tikzpicture}[ x=1cm,y=1cm,>=Latex, every node/.style={font=\small}, gridline/.style={draw=black!45,line width=.35pt}, tableentry
+        Continuous-Phase-Foliations-Create-Analytic- \begin{tikzpicture}[font=\small,>=stealth,line cap=round] \pgfmathsetmacro{\selectedsupport}{sqrt(4.34*cos(60)^2+1.61*sin(60)^2)} \pgfm
+        Critical-strip-crossing-mass-on-the-honeycom \begin{tikzpicture}[x=1.55cm,y=1.55cm,font=\small,>=Latex] \pgfmathsetmacro{\bandheight}{sqrt(3)/2} \fill[blue!4] (-.8,\bandheight) rec
+    6  insane-markup
+        A-directional-zero-one-law-under-strict-elli #cetz.canvas({
+  import cetz.draw: *
+  content((0, 0.85), [(a) Common departure bands])
+  content((2, 0.35), [positive])
+  content((3.9
+        A-Polynomial-Time-2-Approximation-for-Shorte #cetz.canvas({
+  import cetz.draw: *
+  content((0, 6.05), [A window layer])
+  content((3.9, 0.75), [start $x$])
+  line((0, 0.75), (3.9,
+        Additive-hardness-and-unbounded-configuratio #cetz.canvas({
+  import cetz.draw: *
+  content((0.15, 6.65), [One vertex label])
+  content((15.35, 6.65), [schematic; not to scale])
+  
+        Positive-scalar-curvature-and-uniform-codime #cetz.canvas({
+  import cetz.draw: *
+  rect((0, 0), (2.3, 2.2), fill: black)
+  rect((2.3, 0), (5, 2.2), fill: black)
+  line((0, 0), (5,
+    6  foreach-failed
+        A-Fully-Polynomial-Randomized-Approximation- \begin{tikzpicture}[x=.59cm,y=1cm, reference/.style={draw=black!25,line width=.45pt}, selected/.style={draw=black,line width=1.5pt}, ve
+        A-Fully-Polynomial-Randomized-Approximation- \begin{tikzpicture}[x=1.2cm,y=1cm, reference/.style={draw=black!28,densely dashed,line width=.5pt}, selected/.style={draw=black,line wi
+        A-two-dimensional-area-law-from-a-global-spe \begin{tikzpicture}[scale=1.45, line width=.45pt] \begin{scope}[xshift=-1.7cm] \fill[blue!14] (-1,0) rectangle (0,1); \fill[orange!22] 
+        Snaky-in-21-Maker-moves-September-25-2026.te \begin{tikzpicture}[x=6.5mm,y=6.5mm,font=\small] \foreach \shift in {0,7}{ \begin{scope}[xshift=\shift cm] \draw[gray!35,step=1] (-3.5,
+    5  unsupported:pgfmathtruncatemacro
+        A-Counterexample-to-Kuroshs-Division-Ring-Pr \begin{tikzpicture}[ x=1cm,y=1cm,>=Stealth, every node/.style={font=\small}, vertex/.style={circle,draw=black!65,fill=white,minimum siz
+        A-finite-entropy-system-without-a-smooth-pos \begin{tikzpicture}[x=.92cm,y=1cm,>=Stealth] \foreach \j in {0,1,2,3,4,5,6}{ \draw (\j,0) rectangle ++(1,.55); } \foreach \j in {0,1,2}
+        A-Gepner-stability-condition-on-every-smooth \begin{tikzpicture}[x=1.45cm,y=1cm,>=Stealth, every node/.style={font=\small}] \foreach \k in {0,...,5} { \node (v\k) at (\k,1.1) {$V_{
+        Finite-Circle-Obstructions-Binary-Codes-and- \begin{tikzpicture}[x=.72cm,y=.75cm,>=Stealth,font=\small] \node[anchor=east] at (-.25,2) {source row}; \node[anchor=east] at (-.25,0) 
+    3  unsupported:def
+        Mass-and-covering-exponents-for-fixed-length \begin{tikzpicture}[x=2.6cm,y=2.6cm,font=\small] \def\d{0.8660254038} \fill[gray!9] (-.78,-.30) rectangle (2.20,0); \fill[blue!7] (-.5,
+        Radius-of-comparison-equals-half-the-mean-di \begin{tikzpicture}[ x=.22\linewidth,y=8mm, font=\small, every node/.style={inner sep=2pt}, original/.style={draw=black!70,fill=black!8
+        The-Critical-Spin-Field-of-the-Planar-XY-Mod \begin{tikzpicture}[scale=.68, every node/.style={font=\small}] \def\wall{(4,0)--(4,1)--(3.75,1)--(3.75,1.75) --(3.5,1.75)--(3.5,2.25)-
+CONVERTED 583 of 913 pictures (63.9%) in 114.0s

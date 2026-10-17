@@ -1,0 +1,243 @@
+===== A-Linear-Clock-for-Random-Walk-on-Tree-Weighte#0  pic 0  worst 5.04
+    \draw[->,gray] (-1.7,0) -- (-1.7,3.1) node[above] {height};
+    \draw[thick] (0,0.15) -- (0,2.95) node[above] {$b$};
+    \draw[thick] (3,1.5) -- (3,2.95) node[above] {$w$};
+    \draw[thick] (6,0.15) -- (6,2.95) node[above] {$d$};
+    \draw[->,blue!65!black,thick] (0.08,2.3) -- (2.92,2.3);
+    \draw[->,blue!65!black,thick] (3.08,2.3) -- (5.92,2.3);
+    \draw[->,blue!65!black,thick] (0.08,0.62) -- (5.92,0.62);
+    \node[above] at (1.5,2.3) {$b\to w$};
+    \node[above] at (4.5,2.3) {$w\to d$};
+    \node[below] at (3,0.62) {$b\to d$};
+    \draw[densely dashed] (-1.9,1.5) -- (6.4,1.5);
+    \node[left] at (-1.9,1.5) {$H$};
+    \node[anchor=west,fill=white,inner sep=2pt] at (3.25,1.73)
+    \draw[red!65!black,very thick] (-0.65,0.45) -- (-0.65,2.5);
+    \draw[red!65!black] (-0.85,0.45) -- (-0.45,0.45);
+    \draw[red!65!black] (-0.85,2.5) -- (-0.45,2.5);
+    \node[anchor=east,rotate=90,red!65!black] at (-0.93,2.45)
+===== A-boundary-only-obstruction-to-four-dimensiona#1  pic 1  worst 3.12
+    \begin{scope}[shift={(0,0)}]
+    \draw[->] (-1.7,0) -- (1.7,0) node[right] {$x$};
+    \draw[->] (0,-1.05) -- (0,1.05) node[above] {$y$};
+    \node[align=center] at (0,-1.8)
+    {Body plane $n=v=0$\\basis curves meet once};
+    \begin{scope}[shift={(6,0)}]
+    \draw[->,gray] (-2,0) -- (2,0) node[right] {$n$};
+    \draw[->,gray] (0,-.2) -- (0,1.65) node[above] {$v$};
+    \draw[->,thick] (0,0) -- (1.3,1.3)
+    node[right,align=left] {$x$-annulus\\$n=v=s$};
+    \draw[->,thick] (0,0) -- (-1.3,1.3)
+    node[left,align=right] {$y$-annulus\\$n=-s,\ v=s$};
+    \draw[dashed] (-1.6,.75) -- (1.6,.75);
+    \node[anchor=west,inner sep=2pt] at (1.65,.75) {$v=s>0$};
+    \node[align=center] at (0,-1.8)
+    {Normal plane $(n,v)$\\separate points at each positive level};
+===== A-continuum-temperature-singularity-for-a-radi#1  pic 1  worst 5.45
+    \draw[->] (-0.4,0) -- (5.4,0) node[right] {$s$};
+    \draw[->] (0,-0.2) -- (0,3.7) node[above] {$d$};
+    \draw[blue!65!black] (2.8,2) circle (1.15);
+    \draw[dashed] (0,2) node[left] {$\rho=g_2$} -- (5.0,2);
+    \node[align=center] at (2.8,0.45) {same density, distinct slopes};
+    \node at (2.8,3.5) {$\overline B(g,\gamma)\subset\partial Q_\infty(\beta_c,h_c)$};
+===== Constructible-tame-Hecke-eigensheaves-in-posit#3  pic 0  worst 3.29
+    \node[box] (unram) {Unramified eigencomplex\\on a smooth curve};
+    \node[box,right=1.1cm of unram] (enh) {Eigencomplex\\on $\cA_1^+$};
+    \node[box,right=1.1cm of enh] (ord) {Perverse eigensheaf\\on $\cA_1$};
+    \draw[arr] (unram) -- node[lab,above=8mm]{nodal nearby cycles\\and restriction} (enh);
+    \draw[arr] (enh) -- node[lab,above=8mm]{perverse cohomology\\and $q_!$} (ord);
+    \node[lab,above=18mm of enh] {Construction in characteristic zero};
+    \node[box,below=1.2cm of ord] (positive) {Perverse eigensheaf\\on $\Bun_{G,B,x}(X)$};
+    \draw[arr] (ord) -- node[lab,right]{mixed-characteristic\\nearby cycles} (positive);
+===== Disk-transfer-representations-and-confined-bri#1  pic 1  worst 3.10
+    \begin{scope}
+    \draw[fill=gray!4] (0,0) circle (1.12);
+    \draw[seamblock] (180:1.12) arc (180:0:1.12);
+    \node[blue!65!black] at (0,1.65) {block $A$};
+    \node at (0,2.08) {Upper disk};
+    \draw[arcpath] (150:1.12) .. controls (130:.65) and (110:.65) .. (90:1.12);
+    \draw[arcpath] (30:1.12) .. controls (10:.65) and (-10:.65) .. (-30:1.12);
+    \draw[arcpath] (-90:1.12) .. controls (-110:.65) and (-130:.65) .. (-150:1.12);
+    \fill (\a:1.12) circle (1.3pt);\node at (\a:1.34) {$\k$};}
+    \draw[gray] (0,0) circle (2.2pt);
+    \node[gray] at (0,-.25) {end};
+    \begin{scope}[xshift=5.2cm]
+    \draw[fill=gray!4] (0,0) circle (1.12);
+    \draw[seamblock] (-180:1.12) arc (-180:0:1.12);
+    \node[blue!65!black] at (0,-1.65) {block $A$};
+    \node at (0,2.08) {Lower disk};
+    \draw[arcpath] (-150:1.12) .. controls (-170:.65) and (170:.65) .. (150:1.12);
+    \draw[arcpath] (-90:1.12) .. controls (-70:.65) and (-50:.65) .. (-30:1.12);
+    \draw[arcpath] (30:1.12) .. controls (50:.65) and (70:.65) .. (90:1.12);
+    \fill (\a:1.12) circle (1.3pt);\node at (\a:1.34) {$\k$};}
+    \draw[gray] (0,0) circle (2.2pt);
+    \node[gray] at (0,-.25) {end};
+    \node at (2.6,-2.14) {Identify equally numbered ports and the two copies of the seam.};
+===== Finite-Monoid-Computations-and-a-Uniform-Gener#0  pic 0  worst 3.92
+    \draw[fill=black!8] (1,2) rectangle (6,2.5);
+    \draw[fill=black!8] (2,1) rectangle (7,1.5);
+    \draw[fill=black!8] (3,0) rectangle (8,0.5);
+    \node[anchor=east] at (0.75,2.25) {seed 1};
+    \node[anchor=east] at (0.75,1.25) {seed 2};
+    \node[anchor=east] at (0.75,0.25) {seed 3};
+    \draw[densely dashed] (1,-0.2) -- (1,-1.5);
+    \draw[densely dashed] (8,-0.2) -- (8,-1.5);
+    \draw[very thick] (1,-1) -- (11,-1);
+    \draw[->] (11.25,-1) -- (12,-1);
+    \node[above] at (4.5,-1) {seed union agrees with $\pi$};
+    \node[below] at (9.5,-1) {continuation};
+    \draw (10.88,-1.13) -- (11.12,-0.87);
+    \draw (10.88,-0.87) -- (11.12,-1.13);
+    \node[above] at (11,-0.75) {$q$};
+    \node[below] at (11.1,-1.55) {first mismatch};
+===== Finite-algebraic-envelopes-and-the-Boone-Higma#1  pic 1  worst 5.66
+    \node (O) at (0,0) {$O$};
+    \node (L) at (3,0) {$L$};
+    \node (R) at (6,0) {$R$};
+    \draw[->] (O) -- node[above] {$\alpha$} (L);
+    \draw[->] (L) -- node[above] {heads} (R);
+    \draw[->] (R) to[bend left=35] node[below] {$\omega$} (O);
+    \draw[->] (L) to[loop above] node[above] {$b_L$} (L);
+    \draw[->] (R) to[loop above] node[above] {$b_R$} (R);
+===== Finite-tensor-savings-and-exact-Fourier-circui#4  pic 0  worst 3.40
+    \node at (0,1.35) {$M_0$};
+    \node[draw,fill=gray!12,minimum width=.85cm,minimum height=.55cm] (b1) at (1.3,1.35) {$B_1$};
+    \node at (2.6,1.35) {$M_1$};
+    \node[draw,fill=gray!12,minimum width=.85cm,minimum height=.55cm] (b2) at (3.9,1.35) {$B_2$};
+    \node at (5.2,1.35) {$\cdots$};
+    \node at (6.6,1.35) {$M_{t-1}$};
+    \node[draw,fill=gray!12,minimum width=.85cm,minimum height=.55cm] (bt) at (8,1.35) {$B_t$};
+    \node at (9.35,1.35) {$M_t$};
+    \node at (10.7,1.35) {$\cdots$};
+    \draw[->] (.35,1.35)--(.82,1.35);
+    \draw[->] (1.78,1.35)--(2.24,1.35);
+    \draw[->] (2.95,1.35)--(3.42,1.35);
+    \draw[->] (4.38,1.35)--(4.88,1.35);
+    \draw[->] (7.12,1.35)--(7.52,1.35);
+    \draw[->] (8.48,1.35)--(8.89,1.35);
+    \node[draw,minimum width=2cm,minimum height=.65cm] (g) at (2.3,-.05) {gather $P_t$};
+    \node[draw,fill=gray!12,minimum width=3.6cm,minimum height=.65cm] (j) at (5.5,-.05) {$J$: $k_i$ copies of each $A_i$};
+    \node[draw,minimum width=2.2cm,minimum height=.65cm] (s) at (8.85,-.05) {scatter $P_t^{-1}$};
+    \draw[->] (g.east)--(j.west);
+    \draw[->] (j.east)--(s.west);
+    \draw[dashed] (bt.south)--(j.north);
+    \node[align=center] at (5.5,-.9) {Identity spectators may carry arbitrary data.\\
+===== Relative-independence-of-the-separable-quotien#0  pic 0  worst 4.97
+    \node (x) {$X=\ker(Q-B)$};
+    \node[right=of x] (v) {$V=\overline{B(X)}$};
+    \node[above=of x] (e) {$E^*$};
+    \node[above=of v] (w) {$W=E^*/X_0$};
+    \draw[->] (e) -- node[above] {$Q$} (w);
+    \draw[->] (x) -- node[below] {$B|_X$} (v);
+    \draw[->] (x) -- (e);
+    \draw[->] (v) -- (w);
+===== Renewal-and-changes-of-law-for-critical-honeyc#6  pic 6  worst 3.84
+    \begin{scope}
+    \node[align=center] at (1.1,3.95) {two bridges and a tip choice};
+    {\draw[dashed,gray] (-1.15,\y)--(3.55,\y);
+    \node[left] at (-1.15,\y) {$\lab$};}
+    \draw[very thick,blue!65!black] (.65,0)--(.3,.3)--(.35,.75)
+    \draw[very thick,blue!65!black] (1.35,0)--(1.8,.1)--(2.5,.5)
+    \draw[very thick,red!70!black] (.65,0)--(.65,-.25)
+    \draw[very thick,->] (0,1.8)--(3.6,1.8);
+    \draw[fill=white] (2.8,1.8) circle (1.7pt);
+    \node[above] at (0,1.86) {$t$};
+    \node[above right] at (2.8,1.86) {shorter end};
+    \node[below,red!70!black] at (1,-.62) {three-center connector};
+    \draw[<->] (-.55,1.45)--(2.8,1.45)
+    \node[above left,blue!65!black] at (-.4,3.15) {longer end};
+    \draw[->,thick] (4.15,1.1)--(5.7,1.1)
+    \node[below,align=center] at (4.93,.98) {translate\\the tip to $0$};
+    \begin{scope}[xshift=7.4cm]
+    \node[align=center] at (1.1,3.95) {a slit chord};
+    \draw[thick] (-1.15,3.05)--(3.55,3.05);
+    \draw[thick] (-1.15,-1.3)--(3.55,-1.3);
+    \node[left] at (-1.15,3.05) {$L+1$};
+    \node[left] at (-1.15,-1.3) {$-s_0$};
+    \draw[dashed,gray] (-1.15,1.8)--(3.55,1.8);
+    \node[left] at (-1.15,1.8) {$n$};
+    \draw[dashed,gray] (-1.15,0)--(-.14,0);
+    \node[left] at (-1.15,0) {$0$};
+    \draw[very thick] (3.55,.06)--(0,.06)
+    \draw[very thick,blue!65!black] (2.8,.06)--(2.9,.5)--(2.35,.85)
+    \draw[very thick,red!70!black] (1.35,1.8)--(1.35,2.05)
+    \draw[very thick,blue!65!black] (.65,1.8)--(.3,1.5)--(.35,1.05)
+    \draw[->,blue!65!black,thick] (2.89,.35)--(2.9,.5);
+    \node[below] at (2.8,-.16) {$a$};
+    \node[above,red!70!black] at (1,2.36) {$n+2/3$};
+    \node[below left] at (-.03,-.1) {tip};
+===== Tame-Hecke-Eigensheaves-with-Several-Marked-Po#1  pic 1  worst 3.29
+    \draw[thick] (-2.5,0) ellipse (1.0 and 1.6);
+    \draw[thick] (2.5,0) ellipse (1.0 and 1.6);
+    \node at (-2.65,0) {$X_1$};
+    \node at (2.65,0) {$X_2$};
+    \draw[dashed] (-1.72,\yy)--(1.72,\yy);
+    \node[above] at (-1.32,\yy) {$x_{1\ii}$};
+    \node[above] at (1.32,\yy) {$x_{2\ii}$};
+    \node[fill=white,inner sep=2pt] at (0,\yy) {$B\mu_m$};
+    \node at (0,0) {$\vdots$};
+    \node[align=center] at (-2.5,-2.1)
+    {positive branch $u$\\enhanced $B$-flags};
+    \node[align=center] at (2.5,-2.1)
+    {negative branch $v$\\enhanced $B^-$-flags};
+    \draw[->,thick] (1.5,2.05) to[bend right=12]
+    node[above,align=center] {$f$ reverses orientation\\at every boundary}
+    \node[align=center] at (0,-3.12)
+    $\rho_2(c_{2i})=\rho_1(c_{1i})^{-1}$\\[3pt]
+===== Tame-Hecke-Eigensheaves-with-Several-Marked-Po#2  pic 1  worst 5.52
+    \draw[thick] (-2.5,0) ellipse (1.0 and 1.6);
+    \draw[thick] (2.5,0) ellipse (1.0 and 1.6);
+    \node at (-2.65,0) {$X_1$};
+    \node at (2.65,0) {$X_2$};
+    \draw[dashed] (-1.72,\yy)--(1.72,\yy);
+    \node[above] at (-1.32,\yy) {$x_{1\ii}$};
+    \node[above] at (1.32,\yy) {$x_{2\ii}$};
+    \node[fill=white,inner sep=2pt] at (0,\yy) {$B\mu_m$};
+    \node at (0,0) {$\vdots$};
+    \node[align=center] at (-2.5,-2.1)
+    {positive branch $u$\\enhanced $B$-flags};
+    \node[align=center] at (2.5,-2.1)
+    {negative branch $v$\\enhanced $B^-$-flags};
+    \draw[->,thick] (1.5,2.05) to[bend right=12]
+    node[above,align=center] {$f$ reverses orientation\\at every boundary}
+    \node[align=center] at (0,-3.12)
+    $\rho_2(c_{2i})=\rho_1(c_{1i})^{-1}$\\[3pt]
+===== The-Blockwise-Alperin-Weight-Conjecture-Septem#0  pic 0  worst 4.56
+    \node[stage,text width=12cm] (twist)
+    {Marked genus-one curve: large divisor index\\
+    and independent absolute field differentials\\
+    \node[stage,text width=5.5cm,anchor=north] (genus)
+    {Differential estimate and divisor-degree divisibility\\Sharp inseparable genus bound
+    \node[stage,text width=5.5cm,anchor=north] (lift)
+    {Valued lift and marked-cover descent\\Small orbit gives an extension
+    \node[fit=(genus)(lift),inner sep=0pt,outer sep=0pt] (branches) {};
+    \node[stage,text width=12cm,below=10mm of branches] (specialization)
+    {Section comparison, finite presentation, and connectedness\\
+    No such marked $J$-cover over $L$ with $[L:K_s]_p<p^h$\\
+    \node[stage,text width=12cm,below=7mm of specialization] (count)
+    {Every Sylow orbit has size divisible by $p^h$\\
+    \node[stage,text width=12cm,below=7mm of count] (blocks)
+    {Chain inversion and central trace limits (\Cref{sec:group})\\
+    \draw[flow] (twist.south) -- (branch-split) -| (genus.north);
+    \draw[flow] (twist.south) -- (branch-split) -| (lift.north);
+    \draw[flow] (genus.south) -- (genus.south |- specialization.north);
+    \draw[flow] (lift.south) -- (lift.south |- specialization.north);
+    \draw[flow] (specialization.south) -- (count.north);
+    \draw[flow] (count.south) -- (blocks.north);
+===== The-Grothendieck-homotopy-hypothesis-via-eleme#4  pic 3  worst 5.61
+    \node[vertex,label=above left:\(x_0\)] (x0) at (0,1.7) {};
+    \node[vertex,label=above right:\(x_1\)] (x1) at (4.2,1.7) {};
+    \node[vertex,label=below left:\(y_0\)] (y0) at (0,0) {};
+    \node[vertex,label=below right:\(y_1\)] (y1) at (4.2,0) {};
+    \draw[->,thick] (x0) -- node[above] {\(h\)} (x1);
+    \draw[->,thick] (x0) -- node[left] {\(a_0\)} (y0);
+    \draw[->,thick] (x1) -- node[right] {\(a_1\)} (y1);
+    \draw[->,thick,dashed] (y0) -- node[above] {\(k\)} (y1);
+===== The-maximum-number-of-mutually-unbiased-bases-#0  pic 0  worst 3.98
+    \node[box] (seed) {Arbitrary second basis $H/\sqrt6$\\
+    \node[box,below=of seed] (polar) {Stage A: all completions of each seed\\
+    \node[box,below=of polar] (phase) {Stages A and B: certified phase balls\\
+    \node[box,below=of phase] (graph) {Stage C: all possible additional vectors\\
+    \node[box,below=of graph] (end) {Every required two-clique pattern excluded\\
+    \draw[arr] (seed)--(polar);\draw[arr] (polar)--(phase);
+    \draw[arr] (phase)--(graph);\draw[arr] (graph)--(end);

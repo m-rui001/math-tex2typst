@@ -1,0 +1,42 @@
+== nodes seen by emit_node, over every picture that builds
+class                      nodes   hangs    pics  papers  shaped
+empty node text              385     395      59      46     385
+node has own text              3       3       1       1       3
+pin instead of label           0       0       0       0       0
+
+== labels counted on a node but not drawn on the page: 0
+
+== what the position slot says (the parser's own value string)
+   below                  108
+   above                  84
+   left                   75
+   right                  75
+   below left             16
+   above left             15
+   below right            13
+   above right            12
+
+== nodes writing more than one label key (source spelling count): {2: 10}
+
+-- empty node text
+   A-counterexample-to-Hadwigers-conjecture-S   left:$A_1$ | own=
+   A-counterexample-to-Hadwigers-conjecture-S   left:$A_2$ | own=
+   A-counterexample-to-Hadwigers-conjecture-S   right:$B_1$ | own=
+   A-counterexample-to-Hadwigers-conjecture-S   right:$B_2$ | own=
+   A-Counterexample-to-Kaplanskys-Direct-Fini   above:{$f$} | own=
+   A-Counterexample-to-Kaplanskys-Direct-Fini   above:{$f$} | own=
+   A-Counterexample-to-Kaplanskys-Direct-Fini   below:{$v$} | own=
+   A-Counterexample-to-Kaplanskys-Direct-Fini   above:{$f$} | own=
+   A-Counterexample-to-Kaplanskys-Direct-Fini   below:{$v$} | own=
+   A-counterexample-to-the-Colin-de-Verdiere-   left:\(A_1\) | own=
+   A-counterexample-to-the-Colin-de-Verdiere-   left:\(A_2\) | own=
+   A-counterexample-to-the-Colin-de-Verdiere-   right:\(B_1\) | own=
+   A-counterexample-to-the-Colin-de-Verdiere-   right:\(B_2\) | own=
+   A-finite-entropy-system-without-a-smooth-p   above left:{$x$} | own=
+
+-- node has own text
+   The-Sharp-Terminal-Leave-in-Random-Triangl   above:root | own=$0$
+   The-Sharp-Terminal-Leave-in-Random-Triangl   below:$\operatorname{birth}(a)$ | own=$5$
+   The-Sharp-Terminal-Leave-in-Random-Triangl   below:$\operatorname{birth}(b)$ | own=$7$
+
+-- pin instead of label

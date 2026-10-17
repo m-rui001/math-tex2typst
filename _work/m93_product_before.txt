@@ -1,0 +1,3 @@
+papers scanned 724   canvas maths strings 10412
+BARE slash   : 292 slashes in 273 strings over 126 papers
+QUOTED "/": 0 glyphs in 0 papers

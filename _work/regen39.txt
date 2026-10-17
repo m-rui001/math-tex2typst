@@ -1,0 +1,8 @@
+regenerating 62 papers
+10/62 compiled=10 elapsed=14s
+20/62 compiled=20 elapsed=49s
+30/62 compiled=30 elapsed=49s
+40/62 compiled=40 elapsed=52s
+50/62 compiled=50 elapsed=61s
+60/62 compiled=60 elapsed=71s
+DONE 62 compiled=62

@@ -1,0 +1,26 @@
+\documentclass{article}
+\begin{document}
+\section{One}
+
+\begin{figure}
+\centering
+X
+\caption{Two names under one caption.}
+\label{fig:first}
+\label{fig:second}
+\end{figure}
+
+\begin{table}
+\centering
+\begin{tabular}{cc}1&2\end{tabular}
+\caption{First block.}
+\label{tab:one}
+\begin{tabular}{cc}3&4\end{tabular}
+\caption{Second block.}
+\label{tab:two}
+\end{table}
+
+First: \ref{fig:first}. Second: \ref{fig:second}.
+One: \ref{tab:one}. Two: \ref{tab:two}.
+
+\end{document}

@@ -1,0 +1,15 @@
+L74 replaced: old_len=203 new_len=207
+L111 fixed 1 site
+L43 fixed 1 site
+L71 fixed 1 site
+L37 fixed 1 site
+L93 fixed 1 site
+L138 fixed 1 site
+L138 fixed 1 site
+L205 fixed 1 site
+L207 fixed 1 site
+L223 fixed 1 site
+block 142-150 deleted, D=176 BT=26 removed
+body-side note inserted after line 220
+bytes 111465 -> 107696, lines 307
+APPLIED

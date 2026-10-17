@@ -1,0 +1,13 @@
+E:/math/研究笔记\D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md	join	398	- [推测] 若我忘了 $\alpha_r$ 交换子而直接写 $Dv=(	  \alpha_r v$ 这类多余项，后续 $\mathcal D(R
+E:/math/研究笔记\D116-有限因子的生成子问题：相对生成与扰动独立性的反推笔记.md	join	1449	$|\tau(\xi^*W_\ell)|\ge\dfrac{\alpha	>\dfrac{\alpha s^2}2-\dfrac{\alpha s
+E:/math/研究笔记\D122-迹投影方法与一致性质Gamma：从有限分拆到非单侧吸收的反推笔记.md	join	803	> For every $n\ge2$ there are orthog	> D\cap A'$ summing to $1_D$ such th
+E:/math/研究笔记\D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md	join	1206	是因为 carrier 是 $\{1\}$ 与 $\mathsf{Fin	(\mathsf{Fin}\ 3)\ (\mathsf{Fin}\ 3)
+E:/math/研究笔记\D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md	join	984	`CellularFillings.lean` 四片就合计 $32{,}	=122{,}034$ B，是全文 tex 的近两倍。入口 `Main.
+E:/math/研究笔记\D218-严格椭圆方向零一律的反向重构笔记.md	join	566	`\eqref{eq:cut-averaging}` $\1_{U_l}	\le\frac1{c_02^l}\sum_{s\in I_l}\1_{
+E:/math/研究笔记\D218-严格椭圆方向零一律的反向重构笔记.md	join	555	`\eqref{eq:lower-delta}` 给 $\Delta_{	\le2^{-G}a_l$，$a_l=2^lF_+(2^{l-1})$，
+E:/math/研究笔记\D218-严格椭圆方向零一律的反向重构笔记.md	join	328	`\eqref{eq:exact-bridge-list}`：$\mat	\prod_i W(\gamma_i)$，其中 $\sum_i L(\g
+E:/math/研究笔记\D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md	join	616	$\Lambda_{\pi}=\{(\operatorname{pr}l	\pi_{*}l\bmod kH=(1\otimes\tau)z\}$（
+E:/math/研究笔记\D51-无限有限表示单可均群.md	sect	0	2	
+E:/math/研究笔记\D89-酉化蕴含均称-Dixmier离散群问题的机器化拆解.md	join	814	`:108-118` 取对数得 $\log2+k+2k\log9-\fr	=\log2-(\frac{25}2-1-2\log9)k<0$（系数 
+E:/math/研究笔记\D95-用独立行替换高斯行的Cd代价.md	tick	932	用中心冠界:`\sup_s	用中心冠界:$\sup_s
+E:/math/研究笔记\D99-欧氏Steinitz-Bergstrom定理：符号前缀范数根号d界与S2d等于Theta根号d的反推笔记.md	join	192	> Then the bounded open convex centr	> \lVert R_tx\rVert_2<A_0\sqrt d\ (0

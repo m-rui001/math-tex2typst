@@ -1,0 +1,12 @@
+D51 line=[49] head=# D51 无限、有限表示、单、可均群：反推思维链 对象论文：An infinite finitely presented simple amenable group（OpenA
+D64 line=[] head=# D64 装箱问题的加性难度与无界配置间隙：我把"多浪费常数个箱"这件事做成了一场配额争夺战 对象论文：`Additive hardness and unbounded con
+D65 line=[] head=# D65 渐近中点一致凸与树空间的无界菱形畸变:我把 1/12 拆成 8+4 的那一夜 对象论文:`Asymptotic midpoint uniform convexity 
+D67 line=[] head=# D67 条件坐标扫描与解析迁移：我把"条件化"从障碍改写成账本 对象论文：`Conditional coordinate sweeps and analytic transf
+D68 line=[63] head=# D68 相容性熵与 Thorp 扫描的谱：我把一次扫描的全部奇异值收进一个有界正则矩 对象论文：`Compatibility entropy and the spectrum
+D69 line=[67] head=# D69 立方格临界渗流：我把一行免责声明当作取证起点 对象论文：`Critical bond and site percolation on the cubic lattic
+D72 MISSING
+D73 MISSING
+D74 line=[] head=# D74 任意极化曲面上的极大 Seshadri 常数：我把定性 Nagata--Biran 反推成一条有限插值通道 对象论文：`Maximal Seshadri consta
+D75 MISSING
+D76 MISSING
+queue lines total=162

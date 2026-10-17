@@ -1,0 +1,2 @@
+PAREN line=407 | $$k_1(n)=\sum_{x_*<m\le X}\mathbf 1_{\{n=F(m)\}}\frac{F'(m)}N\rho_D(m)\sum_{\substack{u\le H\ \text{squarefree}\\(u,D)=1}}B_u(m).$$
+counts dollar=4930 lp=1 rp=0

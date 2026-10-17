@@ -1,0 +1,15 @@
+== run74 22:45 ==
+rows: 724
+  cetz_converted             995 over 555 papers
+  cetz_refused                34 over  31 papers
+  cetz_split                   9 over   7 papers
+  figure_content_unhandled     0 over   0 papers
+  empty figures               13 over   9 papers
+  quoted pictures             34  (refused pictures shown as source)
+
+most refused in one paper:
+files with residue: 0 ; occurrences: 0
+quoted LaTeX on the page: 34 blocks over 31 papers
+zones: {}
+_work/shot_Smooth-Anisotropic-Uniqu_p9.png  page 9  caption 'A local schematic cross-section of the common exterior cap. The bounda'
+== done ==

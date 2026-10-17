@@ -1,0 +1,78 @@
+dash fix change face -- same base, old law stubbed
+pictures: 1058 in 572 papers
+canvases changed: 225 over 144 papers
+newly refused: 0   newly built: 0
+dash tokens: 707 added, 0 removed
+
+A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in-Spatial-Dimensions-at-Least-Four-October-5-2026#0: 2 lines
+  -  line((11.4, 0.43), (11.4, 3.8), stroke: (thickness: 0.7pt, cap: "round", join: "round"))
+  +  line((11.4, 0.43), (11.4, 3.8), stroke: (thickness: 0.7pt, cap: "round", join: "round", dash: "densely-dashed"))
+A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026#0: 4 lines
+  0, 0.43), (-0.92, 1.47), (-0.15, 0.43), stroke: (thickness: 0.55pt, miter-limit: 10))
+  1.1, 1.65), (0.15, 0.43), (0.92, 1.47), stroke: (thickness: 0.55pt, miter-limit: 10))
+  0, 0.43), (-0.92, 1.47), (-0.15, 0.43), stroke: (thickness: 0.55pt, miter-limit: 10, dash: "densely-dashed"))
+  1.1, 1.65), (0.15, 0.43), (0.92, 1.47), stroke: (thickness: 0.55pt, miter-limit: 10, dash: "densely-dashed"))
+A-Counterexample-to-the-Infinite-Matroid-Packing-Covering-Conjecture-September-24-2026#0: 4 lines
+  -  line((-5.807, 0), (-5.301, 0), stroke: (thickness: 0.4pt, miter-limit: 10))
+  -  line((5.301, 0), (5.807, 0), stroke: (thickness: 0.4pt, miter-limit: 10))
+  +  line((-5.807, 0), (-5.301, 0), stroke: (thickness: 0.4pt, miter-limit: 10, dash: "densely-dotted"))
+  +  line((5.301, 0), (5.807, 0), stroke: (thickness: 0.4pt, miter-limit: 10, dash: "densely-dotted"))
+A-Fully-Polynomial-Randomized-Approximation-Scheme-for-Perfect-Matchings-in-General-Graphs-September-23-2026#0: 2 lines
+  -  line((4.72, 0), (5.31, 0), stroke: (paint: rgb("#000000"), thickness: 1.8pt, miter-limit: 10))
+  +  line((4.72, 0), (5.31, 0), stroke: (paint: rgb("#000000"), thickness: 1.8pt, miter-limit: 10, dash: "densely-dotted")
+A-Fully-Polynomial-Randomized-Approximation-Scheme-for-Perfect-Matchings-in-General-Graphs-September-23-2026#1: 20 lines
+  -  line((0, 1.7), (1.2, 1.7), stroke: (paint: rgb("#b8b8b8"), thickness: 0.5pt, miter-limit: 10))
+  -  line((0, 0), (1.2, 0), stroke: (paint: rgb("#b8b8b8"), thickness: 0.5pt, miter-limit: 10))
+  -  line((1.2, 1.7), (2.4, 1.7), stroke: (paint: rgb("#b8b8b8"), thickness: 0.5pt, miter-limit: 10))
+  -  line((1.2, 0), (2.4, 0), stroke: (paint: rgb("#b8b8b8"), thickness: 0.5pt, miter-limit: 10))
+  -  line((2.4, 1.7), (3.6, 1.7), stroke: (paint: rgb("#b8b8b8"), thickness: 0.5pt, miter-limit: 10))
+  -  line((2.4, 0), (3.6, 0), stroke: (paint: rgb("#b8b8b8"), thickness: 0.5pt, miter-limit: 10))
+A-Fully-Polynomial-Randomized-Approximation-Scheme-for-Perfect-Matchings-in-General-Graphs-September-23-2026#2: 4 lines
+  -  line((0, 0), (3.5, 0), stroke: (thickness: 0.8pt, miter-limit: 10))
+  +  line((0, 0), (3.5, 0), stroke: (thickness: 0.8pt, miter-limit: 10, dash: "densely-dashed"))
+  8.8, -1.15), (7.1, -1.15), close: true, stroke: (paint: rgb("#bfbfbf"), thickness: 0.4pt, miter-limit: 10))
+  8.8, -1.15), (7.1, -1.15), close: true, stroke: (paint: rgb("#bfbfbf"), thickness: 0.4pt, miter-limit: 10, dash: "densely-dashed")
+A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Maps-October-5-2026#0: 2 lines
+  -  line((-1.615, 1.35), (5.44, 1.35), stroke: (thickness: 0.4pt, miter-limit: 10))
+  +  line((-1.615, 1.35), (5.44, 1.35), stroke: (thickness: 0.4pt, miter-limit: 10, dash: "densely-dashed"))
+A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-September-24-2026#0: 2 lines
+  -  line((0, 1.15), (0, 3.2), stroke: (thickness: 0.4pt, miter-limit: 10))
+  +  line((0, 1.15), (0, 3.2), stroke: (thickness: 0.4pt, miter-limit: 10, dash: "densely-dashed"))
+A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-September-24-2026#1: 10 lines
+  line((-2.504, 3.265), (-0.7855, 4.181), stroke: (thickness: 0.4pt, miter-limit: 10))
+  -  line((0, 4.181), (0, 3.265), stroke: (thickness: 0.4pt, miter-limit: 10))
+  -  line((0, 3.265), (0, 4.181), stroke: (thickness: 0.4pt, miter-limit: 10))
+    line((0.7855, 4.181), (2.504, 3.265), stroke: (thickness: 0.4pt, miter-limit: 10))
+    line((2.504, 3.265), (0.7855, 4.181), stroke: (thickness: 0.4pt, miter-limit: 10))
+  line((-2.504, 3.265), (-0.7855, 4.181), stroke: (thickness: 0.4pt, miter-limit: 10, dash: "densely-dashed"))
+A-Pivotal-Amplitude-for-Voronoi-Percolation-from-Cardys-Formula-October-5-2026#2: 2 lines
+  -  circle((0.3, 0), radius: 2, stroke: (paint: rgb("#999999"), thickness: 0.4pt, cap: "round", miter-limit: 10))
+  +  circle((0.3, 0), radius: 2, stroke: (paint: rgb("#999999"), thickness: 0.4pt, cap: "round", miter-limit: 10, dash: "de
+A-Polynomial-Time-2-Approximation-for-Shortest-Common-Superstring-September-24-2026#0: 2 lines
+  -  line((1.6, 0.75), (1.6, 1.92), stroke: (paint: rgb("#bfbfbf"), thickness: 0.45pt, miter-limit: 10))
+  +  line((1.6, 0.75), (1.6, 1.92), stroke: (paint: rgb("#bfbfbf"), thickness: 0.45pt, miter-limit: 10, dash: "densely-dotted"
+A-Polynomial-Time-2-Approximation-for-Shortest-Common-Superstring-September-24-2026#1: 6 lines
+  -  line((0, 0.75), (0, 3), stroke: (paint: rgb("#bfbfbf"), thickness: 0.45pt, miter-limit: 10))
+  -  line((5.76, 0.75), (5.76, 3), stroke: (paint: rgb("#bfbfbf"), thickness: 0.45pt, miter-limit: 10))
+  -  line((-0.48, 3), (0, 3), stroke: (paint: rgb("#bfbfbf"), thickness: 0.45pt, miter-limit: 10))
+  +  line((0, 0.75), (0, 3), stroke: (paint: rgb("#bfbfbf"), thickness: 0.45pt, miter-limit: 10, dash: "densely-dotted"
+  +  line((5.76, 0.75), (5.76, 3), stroke: (paint: rgb("#bfbfbf"), thickness: 0.45pt, miter-limit: 10, dash: "densely-dotted"
+  +  line((-0.48, 3), (0, 3), stroke: (paint: rgb("#bfbfbf"), thickness: 0.45pt, miter-limit: 10, dash: "densely-dotted"
+
+tokens added, by value (707 in all):
+  "densely-dashed"           436
+  "densely-dotted"           258
+  (3pt, 2pt, 0.8pt, 2pt)     3
+  (3pt, 2.2pt)               3
+  (4pt, 2.5pt)               2
+  (3pt, 2pt)                 2
+  (4pt, 2pt)                 1
+  (3pt, 2pt, 0.4pt, 2pt)     1
+  (4pt, 2pt, 1pt, 2pt)       1
+
+new-form tokens: product 716   emitter 707
+papers where the product's non-bare dash tokens differ from the emitter's: 2
+  Self-dual-random-cluster-interfaces-below-one-September- product 35  emitter 45
+  Gaussian-free-field-limits-of-weighted-integer-Lipschitz product 15  emitter 8
+  Self-dual-random-cluster-interfaces-below-on: 12 pictures (tikzpicture 12)  built here 12, canvas blocks here 12  product: 12 canvas blocks
+  Gaussian-free-field-limits-of-weighted-integ: 3 pictures (tikzpicture 3)  built here 2, canvas blocks here 2  product: 3 canvas blocks

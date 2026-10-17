@@ -1,0 +1,34 @@
+{
+  "paper": "The-free-uniform-spanning-forest-is-a-factor-of-IID-September-25-2026",
+  "ok": true,
+  "typ_lines": 482,
+  "included_pdf_pages": 0,
+  "formulas": 393,
+  "math_failed": 0,
+  "labels": 53,
+  "equations": 4,
+  "theorems": 1,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "393",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "tocbibind"
+  ],
+  "macros_skipped": [
+    "\\renewcommand\\P"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-free-uniform-spanning-forest-is-a-factor-of-IID-September-25-2026.tex"
+}

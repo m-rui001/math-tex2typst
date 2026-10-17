@@ -1,0 +1,33 @@
+{
+  "paper": "No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026",
+  "ok": true,
+  "typ_lines": 1023,
+  "included_pdf_pages": 0,
+  "formulas": 908,
+  "math_failed": 0,
+  "labels": 130,
+  "equations": 60,
+  "theorems": 1,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "908",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "flafter",
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026\\main.typ:673:333\n    │\n673 │   Apply Tessera–Tointon’s Corollary 2.4 with growth exponent $d + 1$, $lambda = 1 \\/ 2$, and the transitive group $A$ #cite(label(\"TesseraTointon2021\")) Corollary 2.4. Its hypotheses require only one sufficiently large scale and do not require $A$ to be closed in $\"Aut\" \\( Gamma \\)$. The conclusion supplies a normal subgroup $H lt.tri A$ whose orbits have finite diameter, such that $Q = A \\/ H$ acts faithfully on $Gamma \\/ H$, is finitely generated and virtually nilpotent, and has finite vertex stabilizers. The $H$-orbits are finite because $Gamma$ is locally finite.\n    │                                                                                                                                                                                                                                                                                                                                              ^^^\n\nwarning: `gt.tri` is deprecated, use `gt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026\\main.typ:684:13\n    │\n684 │ $ N = N_0 gt.tri N_1 gt.tri dots.h.c gt.tri N_k = { 1 } $\n    │              ^^^\n\nwarning: `gt.tri` is deprecated, use `gt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026\\main.typ:684:24\n    │\n684 │ $ N = N_0 gt.tri N_1 gt.tri dots.h.c gt.tri N_k = { 1 } $\n    │                         ^^^\n\nwarning: `gt.tri` is deprecated, use `gt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026\\main.typ:684:40\n    │\n684 │ $ N = N_0 gt.tri N_1 gt.tri dots.h.c gt.tri N_k = { 1 } $\n    │                                         ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 4,
+  "source": "E:\\math\\_work\\flat\\No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026.tex"
+}

@@ -1,0 +1,7 @@
+products: 439 papers carry a rule above pgf's default (sources ask for one in 428 papers)
+emitted thickness values: {'0.800pt': 2094, '1.200pt': 685, '0.600pt': 458, '0.450pt': 265, '0.650pt': 252, '0.550pt': 174, '0.500pt': 167, '0.300pt': 157, '0.350pt': 132, '1.000pt': 124, '0.700pt': 122, '0.900pt': 102, '1.100pt': 84, '0.850pt': 81, '1.050pt': 55, '1.500pt': 54, '1.400pt': 46, '2.000pt': 39, '4.000pt': 39, '1.150pt': 33, '1.300pt': 28, '0.250pt': 26, '3.000pt': 22, '1.350pt': 15, '1.250pt': 15, '2.300pt': 14, '1.600pt': 13, '5.000pt': 13, '14.000pt': 12, '1.700pt': 11, '1.450pt': 9, '0.750pt': 6, '2.400pt': 6, '12.000pt': 6, '1.800pt': 5, '0.950pt': 4, '3.200pt': 3, '24.000pt': 2, '13.000pt': 2, '20.000pt': 2, '19.000pt': 2, '8.000pt': 1, '2.500pt': 1}
+papers that ask for a heavier pen than any rule they carry: 4
+   Mean-payoff-parity-games-in-quasipolynomial-time-October-5-2026 carried=0.0     asked=0.6     src-pics=1 emitted=1 canvases-on-page=1
+   A-power-saving-for-intersective-polynomial-differences-with-an-exponent-depending-only-on-the-degree-October-5-2026 carried=0.0     asked=0.55    src-pics=1 emitted=1 canvases-on-page=1
+   Nonuniqueness-for-the-periodic-hard-sphere-Boltzmann-equation-September-23-2026 carried=0.0     asked=0.55    src-pics=1 emitted=1 canvases-on-page=1
+   One-Rational-Matrix-Hitting-Point-for-Noncommutative-Formulas-September-24-2026 carried=0.0     asked=0.45    src-pics=1 emitted=1 canvases-on-page=1

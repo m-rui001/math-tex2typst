@@ -1,0 +1,28 @@
+zero-length emissions=24  stroke:none=10  stroked butt=14  stroked round/square=0
+
+A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Map stroke-none  L816   compound-path({circle((0, 0), radius: 1.522, fill: rgb("#f2f2f2"), stroke: none); circle((0, 0), radius: 0.5775, fill: rgb("#f2f2f
+A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Map stroke-none  L830   compound-path({circle((5.25, 0), radius: 1.522, fill: rgb("#f2f2f2"), stroke: none); circle((5.25, 0), radius: 0.5775, fill: rgb("
+A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite-O stroke-none  L847   compound-path({circle((2.2, -4.62), radius: 1.19, fill: rgb("#d1d1d1"), stroke: none); circle((2.2, -4.62), radius: 0.68, fill: rg
+A-Torsion-Free-Group-Algebra-with-Zero-Divisors-September- stroke-none  L608   compound-path({circle((0, 0), radius: 0.9379, fill: rgb("#e9e9e9"), stroke: none); circle((0, 0), radius: 0.4316, fill: rgb("#e9e9
+A-typical-start-upper-bound-for-low-temperature-SK-Glauber butt         L478   line((2.5, 0), (2.5, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+A-typical-start-upper-bound-for-low-temperature-SK-Glauber butt         L480   line((4.4, 0), (4.4, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+A-typical-start-upper-bound-for-low-temperature-SK-Glauber butt         L484   line((10.3, 0), (10.3, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+A-typical-start-upper-bound-for-low-temperature-SK-Glauber butt         L502   line((4.9, -2.85), (4.9, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+A-typical-start-upper-bound-for-low-temperature-SK-Glauber butt         L506   line((9.7, -2.85), (9.7, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+Essential-Singularity-of-the-Correlation-Length-in-the-Pla stroke-none  L1350  compound-path({circle((8.6, 2.3), radius: 1.68, fill: rgb("#e0e0ff"), stroke: none); circle((8.6, 2.3), radius: 1.4, fill: rgb("#e
+Essential-Singularity-of-the-Correlation-Length-in-the-Pla stroke-none  L1351  compound-path({circle((8.6, 2.3), radius: 0.42, fill: rgb("#e0e0ff"), stroke: none); circle((8.6, 2.3), radius: 0.35, fill: rgb("#
+Finite-ordinary-minimal-model-programs-on-compact-Kahler-f butt         L102   line((0, -2.626), (0, -2.626), stroke: (paint: rgb("#466687"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", leng
+Quantitative-Superexponential-Bounds-for-van-der-Waerden-N stroke-none  L537   compound-path({circle((0, 0), radius: 1.485, fill: rgb("#e8e8ff"), stroke: none); circle((0, 0), radius: 1.05, fill: rgb("#e8e8ff"
+Quasipolynomial-Bounds-for-Arithmetic-Progressions-Septemb stroke-none  L282   line((6.153, -2.05), (6.153, -2.05), stroke: none)
+Rigidity-of-Smooth-Billiards-with-a-Continuous-Caustic-Col stroke-none  L53    compound-path({circle((0, 0), radius: (2.55, 1.7), fill: rgb("#ebeff2"), stroke: none); circle((0, 0), radius: (2.295, 1.286), fil
+Sharpness-of-the-Cyclic-Integral-Floer-Bound-Below-the-Sta butt         L537   line((0, 0), (0, 0), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+Sharpness-of-the-Cyclic-Integral-Floer-Bound-Below-the-Sta butt         L551   line((5.6, 0), (5.6, 0), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+Sharpness-of-the-Cyclic-Integral-Floer-Bound-Below-the-Sta butt         L555   line((6.82, 0), (6.82, 0), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+Sharpness-of-the-Cyclic-Integral-Floer-Bound-Below-the-Sta butt         L557   line((7.43, 0), (7.43, 0), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+Sharpness-of-the-Cyclic-Integral-Floer-Bound-Below-the-Sta butt         L565   line((11.2, 0), (11.2, 0), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+The-Bass-trace-conjecture-for-complex-group-rings-Septembe butt         L529   line((-2.1, 0), (-2.1, 0), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10))
+The-Kakeya-maximal-conjecture-in-three-dimensions-Septembe butt         L1890  line((0, 0.53), (0, 0.53), stroke: (paint: rgb("#808080"), thickness: 0.8pt, miter-limit: 10))
+The-Kakeya-maximal-conjecture-in-three-dimensions-Septembe butt         L1913  line((0, -4.67), (0, -4.67), stroke: (paint: rgb("#808080"), thickness: 0.8pt, miter-limit: 10))
+The-critical-Liouville-quantum-sphere-and-geometric-limits stroke-none  L2516  compound-path({circle((0, 0), radius: 3.854, fill: rgb("#f1cfc5"), stroke: none); circle((0, 0), radius: 3.731, fill: rgb("#f1cfc5
+
+blob cases (the only shape §7's row is about): 0 over 0 papers

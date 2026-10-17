@@ -1,0 +1,6 @@
+a dash written as a picture's scope default -- the head read by cetz.opts
+pictures scanned: 932 in 724 papers
+
+HEAD brackets carrying a dash key: 0
+
+`every path` declarations carrying a dash key: 0

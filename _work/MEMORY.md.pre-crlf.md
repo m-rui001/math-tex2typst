@@ -1,0 +1,31 @@
+# Memory index
+- [节号缺陷四族与机械修法](note-numbering-repair.md) — 块置换/重号重排/补记改号/缺号＝文章丢失；`C_gap=0` 对标题形状是瞎的，量具换 `gap_census2`；作者申报过的缺号不搬正。
+
+- [图→CeTz 产物质量抽查](typst-figure-quality-audit.md) — 图内文字把命令名印成字母的成因在 `cetz.MATH_SYMBOLS`，不是 pandoc；`word_overlap_report` 的 FIGURE 标签会把表格缺陷记成图缺陷。
+- [Typst corpus run economics and residue counting](typst-corpus-run-economics.md) — 全库一轮 ~325 s（727 篇时代）；residue 计数基 2026-10-08 换过，跨代数字不可比。
+- [残留与图收尾清单](typst-residue-closing-checklist.md) — 现行基 **run138**（724/724、residue 0/0、闸门 918/14/0、画布 1055/932）、测试 **153**、§7 现 **14 行**、§2 **68 条轴**；#83（轴 66 `\!` 的 em 价）已修，#84／#85（轴 67／68 互压普查的控制侧＋字母级深度）把人口收到 122 张／107 篇、**真缺陷 23 张／35 对**，能动发射器的只有 on-ink **20 对／15 张**；`foreign` 的 15 对实测两支改法都否＝挂起。
+- [dangling 归属与图的残留表面](typst-dangling-hrule-closing.md) — run107 一代的 dangling／caption／`\tag` 收口史；口径已被 run125 取代，只当机制参考。
+- [TikZ 语义用 pdflatex 量](tikz-semantics-measure-with-pdflatex.md) — 每条位置／尺寸律的读数与量法都在这（#63 的 `top-edge/bottom-edge`、#69 的 14.85 对 17.34bp、#73 的墨宽 7.699pt、#74 的竖半高）；轴 59：控制图认标尺只认最长那条线；轴 61：页上认箭只认「单 `l` 杆＋三段小折线尖」；轴 62：**Typst 把文字发成文字**（墨只能像素量）、弯箭＝pgf 三次贝塞尔；轴 63：**对角方向键的距离是半径**（每轴 `d/√2`），`of`／`and` 要 load `positioning`；轴 65：**scope 的 shift 走在位的矩阵、节点自己的走字面**，同一选项表内按书写顺序，picture head 的顺序差页上不可测（`\pgfgetlastxy` 回用户坐标）；轴 67：**互压普查要有 pdflatex 控制侧**（standalone 必须带该篇正文字号），控制页 `boxes=0` 不等于「干净」；轴 68：**叠字深度分三档定价**（行盒→span 墨盒→字母，269→209→196 在同一份人口上），跨代不可比、同代要写明切在哪档，探针**只能调尺自己的函数**（私有墨盒副本＝第二把尺，196 对 200 之争由此来）。
+- [batch_typst.py 运行陷阱](batch-typst-run-hazards.md) — 无 --help；跑批途中改 tools 不影响在飞那轮；写探针只用 Write；typst 活排队在 marker 后；改 `flatten` 先跑 `tools/inventory.py`；路径用 os.path；量产物串只数 `typst/`（`preprints/*/typst/` 是旧拷贝）。
+- [论文目录名只能 glob](preprint-dir-name-globs.md) — 台账截到 44 字、日期后缀凭记忆写必错；报「没有这个目录」先怀疑名字。
+- [在飞写手的文末锚位冻结](inflight-writer-anchor-freeze.md) — 红旗落在在飞那篇文末就只定位不动刀；形似同族的修法先 dry-run 否证，`NO-SITE` 即零落盘。
+- [研究笔记范围与产能](research-notes-scope-lean-queue.md) — 主线1 只做 162 篇 Lean 队列；新建 ≥70,000 B，续写只用 Edit 追加；覆盖封零后判据换成结构合规。
+- [Lean 队列覆盖台账](lean-queue-coverage-ledger.md) — 进度只认 primary.py；records.txt 首列是 yaml 行号；归属只认陈述逐字对齐。
+- [落盘会被回滚](note-write-rollback-hazard.md) — 笔记与 `next_batch.md` 都会被整篇退回；量两次才算收稿；追加中文只用引号 heredoc。
+- [禁词批量清理](style-ban-batch-repair.md) — 闸门中文常量要 `\uXXXX` 转义；bash `grep -o` 对中文假 0；禁串一律一趟 `sweep.py`。
+- [派单查重与 transcript 恢复](dispatch-dedupe-transcript-recovery.md) — 派前必做三步；零落盘有四成因，判据只看 glob；规格矛盾比数值窗口更致命。
+- [主线2 全库范围与吞吐](mainline2-whole-corpus-scope.md) — 560 行队列已派完（`covered=559`、剩 1 行豁免）；行号冻结禁 `--regen`；剩活只有质量腿与收尾复量。
+- [派单 prompt 的两类自伤](dispatch-prompt-length-hazard.md) — 永久条款写进规格、prompt 只留参数；dir/row/bytes 当场粘贴双查；禁令清单不许手打。
+- [本体侧收稿修补配方](body-side-note-gate-fixes.md) — 自报双向不可信；`badLedgerRows` 是块内序号；补记行号要最后测；宏凭据只用 KaTeX，掩码就地打空格；unclosed 红旗总在全文最后一个 span（真元凶在上游百行外）；欠账表要两种引用记法一起数。
+- [笔记落盘丢 .md 扩展名](note-filename-missing-md.md) — 丢扩展名或题名带 `/` 会伪装 unfired；普查 glob 别用 `*/D*.md`（`_work/` 有旧稿）。
+- [行内代码闭合符误写成美元号](note-inline-code-backtick-vs-dollar.md) — `tex:173` 这类位置引用的闭合反引号常打成 `$`；逐行奇偶先就地改回反引号。
+- [标题宏、⌞、公式编号](typst-title-macros-and-vrule.md) — run44 起残留 0/0、编号在右；含 `\operatorname`→`\mathrm` 与 `\hfill` 泄漏两个教训。
+- [caption 落页的两个机制](typst-caption-loss-mechanisms.md) — prep 侧已封零；量具三坑（跨公式 needle、fitz 字母空隙、重音 NFKD），余下旗标是抽取假象。
+- [拒绝 TikZ 的族与两个丢内容机制](typst-refused-tikz-families.md) — 真实拒绝面是逐句构造；`\foreach` 不是原因；float 多 `\label` 只留一个；`\cite` 在 `\text{}` 里变 `[??]`。
+- [OpenAI 撤掉的三篇](openai-withdrawn-papers-2026-10-06.md) — 撤稿只改 README，答案在 `history.md`；台账 82/83/498 三行豁免。
+- [控制字展开吃空格 + 补丁脚本写坏文件](tex-expansion-space-swallowing.md) — `_substitute_cs` 的词法也咬我们自塞的标记（标记两侧留空格）；落盘用 raw 串并跑 `sweep_control_chars.py`。
+- [并行改同一模块的合并协议](typst-refusal-merge-protocol.md) — 规格先行＋每 agent 一个 sandbox＋只交 patch；`patch` 被 CRLF 卡死就用 `git merge-file` 三方合。
+- [拒绝腿收口：16→1 与标签链](typst-refusal-leg-closed.md) — 基线 run125；产物侧实测缺 8 张／6 篇而 quoted 只剩 1 段，静态 14 是另一套基；dangling 是 caption 标签链。
+- [改动面用打桩 diff 量](probe-churn-by-stub-diff.md) — 旧律打桩在同一基上 diff 才是改动面；「页 vs 新 build」不是量具；差额追到源语句；喂给量具的串要换成发射器看到的（#78 那 23 处假账）；#81：全库前后差不是回归测试，「worse 0」要同一把尺读同一源图两版。
+- [一轮图改动要用渲染页收口](close-a-figure-round-with-screenshots.md) — 用户长期要求「记得抽查图片」；150 dpi 整页看不见 11pt 偏移，要 300 dpi 裁带；看完就清 `_work/*.png`。
+- [浮动体标签链与数学内 cite](typst-float-label-chain-and-math-cites.md) — `[??]` 已封零；pandoc 只留 region 内最后一个 `\label`，所以 alias 要读整个 region；判据在渲染页上。

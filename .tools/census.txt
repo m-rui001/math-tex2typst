@@ -1,0 +1,5 @@
+L1    L1-Embeddings-of-Graphs-of-Bounded-Treewidth  dir
+L3    A-classification-of-finite-Euclidean-Ramsey-  dir
+L16   A-doubling-Hilbert-subset-with-no-finite-dim  dir
+L92   Nonuniqueness-for-Bounded-Measurable-Scalar-  dir
+both=158 dir_only=4 q_only=0 neither=0 total=162

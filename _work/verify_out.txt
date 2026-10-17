@@ -1,0 +1,126 @@
+### D214 (D214-边界行列式复杂度三次下界之路.md) line 60 [\F] :: total_lines=300
+       57| 
+       58| 它的展开是子集对求和（selector.tex:23-29 的 eq:selector-subsets）：$S,T\subseteq[k]$、$|S|=|T|=q$、$S\cap T=\varnothing$，权为 $(\prod_{i\in T}\theta_i)\operatorname{per}(X_{C,C})$，$C=[k]\setminus(S\cup T)$。$S$ 记录对角线上贡献 $s$ 的位置，$T$ 记录贡献 $t\theta_i$ 的位置；不相交是因为
+       59| 
+  >>   60| 这副面孔在 $\Z[\theta][X]$ 里成立，因此对任何域的特化都成立。论文用两副面孔的策略在 proof-flow.tex:4-42 里画得很清楚：同一张图，左边分支在 $\mathbb C$ 上用永久投影，右边分支在 $K=\overline{\F}_2$ 上用平面曲线几何。最后两条分支在 $\mathbb C$ 里汇合：几何在特征 2 提供的开集，被拿回到复数上做投影。这个"integral first, specialize twice"的架构是全篇最漂亮的设计
+       61| 
+       62| 参数选择：主构造取 $q=\lfloor(k-1)/3\rfloor$、$r=k-2q$、$T=\binom{q+2}{2}$（adjugate.tex:16-20）。$q\approx k/3$ 让 $r\approx k/3$ 线性、$T\approx k^2/18$ 二次，且 $0\le q\le c=r-1$ 保证后面的互补单项式指数非负（adjugate.tex:21-25、196-199）。`[推测]` 三分点的选择大概率来自不等式 $r-1\ge q$（intr
+       63| 
+
+### D214 (D214-边界行列式复杂度三次下界之路.md) line 74 [psmallmatrix] :: total_lines=300
+       71| 
+       72| $$H=\begin{pmatrix}-1&-1&1\\-1&-1&1\\1&1&1\end{pmatrix}$$
+       73| 
+  >>   74| （selector.tex:119-121），加四条边界边，仅第一条入边带权 $-2w$。边界状态 $(I,O)$ 的内部完成总权 $\Phi_w(I,O)$ 给出表（selector.tex:139-148）：只有 $(\varnothing,\varnothing)\mapsto-2$ 与 $(\{1,2\},\{1,2\})\mapsto-2w$ 存活，所有单元素平衡态恰好抵消，非平衡态无完成。验证用三行文字：$\operatorname{per} H=-2$；删一 $
+       75| 
+       76| 组装：$2k$ 个等式 gadgets（两色各 $k$ 个），同一指标 $i$ 的两个 gadget 共享主行列端点、内部与门端点互异（selector.tex:164-171，配图 figures/selector-wiring.tex）。按外部边集 $E$ 分组求和，完成总权分解为 $w_{\mathrm{out}}(E)\prod\Phi_{w_{i,c}}(I_{i,c},O_{i,c})$（selector.tex:180-187），由表知除非全部 gadgets 
+       77| 
+
+### D214 (D214-边界行列式复杂度三次下界之路.md) line 125 [\A + \m] :: total_lines=300
+      122| 
+      123| 纤维侧的钥匙是行伴随 $R_X=(1,\dots,1)\operatorname{adj}(sI+tD+uX)$：$Z'_X$ 是它在固定 $C$ 上的零概形（dimension.tex:127-137）。作者注明转置后 $R_X=0$ 形如"Ahu 意义下谱除子的左右核方程"（引 Adams--Harnad--Hurtubise 的 (1.29)，dimension.tex:141-145），但统一有限长度要自己证。lem:row-adjugate-scheme（dimen
+      124| 
+  >>  125| Hilbert 侧 lem:hilbert-count（dimension.tex:246-310）：约化平面曲线 $C$ 上 $\dim\operatorname{Hilb}^N(C)\le N$，任意特征。作者先交代 Baranovsky 复数上的 punctual Quot 用交换幂零算子加循环向量（引 Lemma 2.2），Premet 给任意特征的 punctual 平面界（引 Cor 4.1），这里自给的证明是中心化子计数（dimension.tex:237-24
+      126| 
+      127| prop:matrix-fiber（dimension.tex:317-351）：$\mathcal I_C=\{(X,Z')\in\mathcal F_C\times\operatorname{Hilb}^N(C):R_X|_{Z'}=0\}$ 是闭关联（限制到普适有限平坦子概形、前推公共扭，得向量丛截面之零轨迹，dimension.tex:326-332）。每个 $X$ 携 $Z'_X$ 出现在关联中；反向若行在 $Z'$ 上消失则 $J'_X\subset I_{Z'}
+      128| 
+
+### D96 (D96-残差球上的记忆与样本下界：无噪高斯回归中) line 519 [\d] :: total_lines=661
+      516| 
+      517| ## 20. 互相关账目：条目界怎么失效，行列式比怎么接管
+      518| 
+  >>  519| $h$ 个方向 $Y_1,\ldots,Y_h$ 在同一个随机 $K$ 维子空间 $L\subset E$（$\dim E=N$，$1\le h<K\le N$）里条件独立同分布 $\sigma_L$，我的第一版是把互相关矩阵 $G_{ij}=\langle Y_i,Y_j\rangle$ 逐条目压住：由 $L$ 在 $E$ 里均匀，$\mathbb E\langle Y_i,Y_j\rangle=0$（$i\ne j$）、$\mathbb E\langle Y_i,Y_j\
+      520| 
+      521| 改向的关键是把互相关换成 Gram 行列式比。取 $V$ 的正交基 $v_1,\ldots,v_j$，则
+      522| $\operatorname{dist}(y,V)^2=\frac{\det\Gram(y,v_1,\ldots,v_j)}{\det\Gram(v_1,\ldots,v_j)}$，
+
+### D139 (D139-单格覆盖的n对数n阶界：采样器层级与电) line 276 [\lem] :: total_lines=514
+      273| > ` \frac{h_b^b}{p_b}\gamma_b\bigl(h_b(t-\lambda-\eps)\bigr)`
+      274| > `       \ge e^{-\eta_b}g_b(x)P_{b,t_z}(\eps).`
+      275| 
+  >>  276| （b）中间步骤补齐。$\lambda\in L_b$ 的验证只有一行（463--464）：$k-z$ 模 $p_b$ 约化为 $c$，而 $c\in C_b$，故 $\frac{k-z}{p_b}\in C_b/p_b$。$p_bt=k+\{p_bt\}$（465--466）给出 $\tau=\frac{z+\{p_bt\}}{p_b}\in t_z+[0,p_b^{-1})^b=Q_z$。整数位向量平移保持 $L_b$（467），$\tau\in[0,1)^b$ 与 $\v
+      277| 
+      278| （c）机械理由。$k=\lfloor p_bt\rfloor$ 与 $x=k\bmod p_b$ 把连续点先落到格胞再落到有限群，两步都是坐标向；$z$ 用标准代表元（444 行的 again using standard representatives）是必需的，否则 $t_z=z/p_b$ 的锚点解释会变。$e^{-\eta_b}$ 、不是 $e^{-O(\eta_b)}$：$\eta_b=bh_b^2/p_b$ 比任何固定负幂衰减得快，层级里 hierarchy.tex
+      279| 
+
+### D84 (D84-高余维Riesz变换一致矩形性的五步链条) line 193 [\H group] :: total_lines=1029
+      190| 
+      191| (b) 我补的推导。定义里三个次序要拆开看：先给 $\theta,M$，再给 $x,r$，最后给 $g$。若把 $M$ 的量化挪到 $r$ 之后（即允许 Lipschitz 常数依赖尺度），定义会退化成"逐尺度 Lipschitz 可近似"，那在高余维里比一致矩形性弱，因为它允许近似图的斜率随尺度爆炸，而 David--Semmes 的判别法链条里"大块的 Lipschitz 像"必须是均匀 Lipschitz 的（thm:bwgl 的结论写的正是 $L$ 与 $a,r$ 无
+      192| 
+  >>  193| (c) 假设与常数的机械理由。$\theta>0$ 的量级最终由 $\mu\bigl(B(x,r)\cap g(B_\R^n}(0,r))\bigr)$ 与 $\mu(B(x,r))$ 的比例给出，论文在 thm:main 证明里把它落到 $c\theta_0 2^{-n}r^n$（`07-packing-endpoint.tex` 末尾），所以 $\theta$ 是"判别法给的 $\theta_0$"乘"测度与 $\H^n$ 比较常数"乘一个 $2^{-n}$ 的覆盖损失。
+      194| 
+      195| (d) `[推测]` 候选失败路线一：用双 Lipschitz 像（bilipschitz charts）替代 Lipschitz 像，在高余维里需要额外的法向单射性控制，我的证明给不出斜率一致性。`[推测]` 候选失败路线二：容许 $g$ 的定义域是 $\R^n$ 上的任意可测集（Reifenberg 型），会得到一个真弱的结论，无法由 Carleson 打包导出。`[推测]` 候选失败路线三：把 $\theta r^n$ 换成 $\theta\mu(B(x,r))$，看似
+      196| 
+
+### D31 (D31-非谱形双曲锥.md) line 304 [\H no-arg] :: total_lines=1252
+      301| 
+      302| 从秩 1 到全体 $\mathbb S^4_+$ 的推广是谱分解：$\forall v,u:\ u^\top\Phi_y(vv^\top)u=b(v_0u'-u_0v',y)\ge0$（Lemma 2.1 的非负性），故每个 $vv^\top$ 映到半定；$X=\sum_k\mu_kw_kw_k^\top$（$\mu_k\ge0$）加 $\Phi_y$ 线性给 $\Phi_y(X)\succeq0$；线性加保半定等价于保序（$\Phi_y(A-B)=\Phi_y(A)-\Ph
+      303| 
+  >>  304| Lean 对应：`Model.lean:31-38` 的 `phi`（用 `Fin.cases` 逐元素定义块）、`69-73` 的 `choiLam`；秩 1 恒等式 `MatrixBasic.lean:61` 的 `phi_rank_one`，标度 `MatrixBasic.lean:40/49` 的 `phi_scaling_general` / `phi_scaling`；实版正性 `MatrixLinear.lean:47` 的 `posSemidef_sum_ou
+      305| 
+      306| 多项式本体在 `01-introduction.tex:53-61`：
+      307| 
+
+### D100 (D100-准Riemann假设：Re-s大于八分) line 498 [$ in math] :: total_lines=1606
+      495| 
+      496| $$r_*(t)=\frac{(2-8x/9)t-5x/9}{D_x},\qquad D_x=3-\frac{17x}9,$$
+      497| 
+  >>  498| 我自己推一遍：$x+(1-x)r=(2-\frac{8x}9)(t-r)-\frac{4x}9$ 移项得 $r[(1-x)+(2-\frac{8x}9)]=\frac{4x}9+(2-\frac{8x}9)t-x$，左括号 $=3-\frac{8x}9+... $ 注意 $(1-x)+(2-\frac{8x}9)=3-\frac{17x}9=D_x$ ✓；右 $=(2-\frac{8x}9)t-\frac{5x}9$ ✓。与论文完全一致，所以 $D_x$ 是两条线斜率的绝对值
+      499| 
+      500| 逆容量与朴素容量的界：$z_M(r)=\frac{1-r}2\le\frac{1-\frac{23}{37}}2=\frac7{37}$ ✓（P:15381-15382）；朴素侧 $m\ge\frac13-O(\epsilon)$ 给 $z_P(m)=\frac{1-2m}{6\kappa}\le\frac{1-\frac23}{6\cdot\frac34}=\frac{1/3}{9/2}=\frac2{27}$ ✓（P:15382-15383，用 $\kappa\ge\fr
+      501| 
+
+### D160 (D160-半代数有界域的紧商对称化：从Kollá) line 223 [macro-arg EOF] :: total_lines=880
+      220| \]
+      221| 左端闭、右端紧，故左端紧。从 $R=r$ 起迭代就得到所有半径。我原来漏掉的正是 $r/4$ 这个系数：它保证测地点落在已知紧球内而剩余段短到能被 $r$-球接住，$r/4$ 换任何数都还能工作，但必须小于 $r/2$。这个"用一致半径迭代扩球"的写法，与我熟悉的完备黎曼度量论证在结构上相同，只是这里根本没有测地完备性假设，紧性从 $\Gamma K=U$ 来。
+      222| 
+  >>  223| 连续性原理（第 202--213 行）是全套边界论证的机械核心，它的陈述我要抄准：$\Omega$ 是光滑 ambient 坐标邻域，$A:[0,1]\times\overline\mathbb D\to\Omega$ 连续、每个 $A_t$ 在 $\mathbb D$ 上全纯，若
+      224| \[
+      225|  A_t(\partial\D)\subset U\quad(0\leq t\leq1),\qquad A_0(\overline\D)\subset U,
+      226| \]
+
+### D125 (D125-RCD空间沿每条测地线的弱Hessia) line 478 [\closedball] :: total_lines=595
+      475| 
+      476| - 目标被写成二阶差分的局部界：`LocalDistribution.lean:31--33` 构造性给出 $\forall\varepsilon>0,\exists\delta>0$ 使得对 $x\pm h\in(0,1)$，`secondDifference (F ∘ evalReal σ) h x ≤ D^2*G (evalReal σ x)+ε`。
+      477| - $\varepsilon$ 的除法：`LocalDistribution.lean:35` 取 $e=\varepsilon/(D^2+1)$，于是 $D^2e\le\varepsilon$（`LocalDistribution.lean:97--101` 用 `div_le_iff₀` 与 $D^2\le D^2+1$）。$+1$ 保证 $D=0$ 时仍然合法。
+  >>  478| - 一致连续的紧集：`LocalDistribution.lean:37--38` 在 $\closedball{\sigma(0)}{D+1}$ 上用 `isCompact_closedBall ... .uniformContinuousOn_of_continuous`，得模数 $\eta$；取 $R:=\min\{\eta,1\}$、$\delta:=\frac{R}{2(D+1)}$（`LocalDistribution.lean:39--41`）。$D+1$ 的外
+      479| - 子段作为曲线：`LocalDistribution.lean:44--47` 用 `restrictCurve u v σ` 把 $[x-h,x+h]$ 段常速重参数化为整条 `Curve X`，并用 `hσ.restrictCurve u v` 保持 `IsGeodesic`。这正是论文里"strict subsegment 的常速重参数化 $\tau$"（`every-geodesic.tex:22--23`）的机器形态，而它不需要 Deng 定理：`IsGeodes
+      480| - 收尾：`LocalDistribution.lean:103--112` 调用 `setIntegral_second_deriv_le_of_local_differences`（来自 `Calculus.ScalarLocalBound`，见该文件 `LocalDistribution.lean:3` 的 import）把逐点二阶差分界转成 $\int F\cdot\varphi''\le D^2\int G\varphi$，并用 `integral_const_mu
+      481| 
+
+### D71 (D71-完美匹配多面体的熵与面维数.md) line 142 [\T transpose] :: total_lines=746
+      139| 
+      140| 关键引理八（二阶变分，`03:118-125`）：$G$ 有 $2m\ge2$ 点、$x$ 全分数，若 $J_c-H$ 在 $x$ 局部极大，则 $0\ge d-s+(c+1)m$，$d=\dim F_x$，$s=|E|$。
+      141| 
+  >>  142| (b) 完整推导。取引理七的 $p,\theta$，记 $T=T(x)$。对方向 $v$ 定义 tilt 曲线 $\Phi(t)=\log\sum_a e^{(\theta+tv)\cdot a}$，$p_a(t)=e^{(\theta+tv)\cdot a-\Phi(t)}$，$y(t)=\mathbb E_t[a]$。面上指数律给出 $H(y(t))=\Phi(t)-(\theta+tv)\cdot y(t)$。协方差 $K=\sum_a p_a(a-x)(a-x)^\T
+      143| 
+      144| (c) 阶数与常数的账。$H$ 下界证明（`03:199-225`）：原图阶记 $2M$，取 $c=2-2/M+\varepsilon$。$J_c-H$ 在紧 $P(G)$ 上取最大（引理六），若最大值正、地点 $x$，删 0 边与 1 边端点（引理五），残图阶 $2m$，$1\le m\le M$，全分数；残点上 $J_c-H$ 仍是**全局**最大（每个残图可行均值加回固定匹配边仍是原可行均值，三函数不变）；几何界 $d\ge s-3m+2$ 代入迹障碍：
+      145| 
+
+### D18 (D18-Tachikawa第二猜想反例.md) line 956 [DeclareMathOperator KEEP] :: total_lines=1014
+      953| | 四件套 | $T=C\ltimes DC$、$B=C\otimes_k C$（$E=T\otimes_k T$ 与 $X=s\otimes_k s$ 在 introduction.tex:132） | introduction.tex:131 | 后面每一节的载体；$B\subset E$ 见 (algebra.tex:126) | 少一层张量则 $\tau_1,\tau_2$ 只有一个，(b:polynomial-koszul) 的两变量序列不存在 |
+      954| | $W^a$ 的预告 | $k$（$a=-3,0$），其余 $0$ | introduction.tex:163 | (b:W) 与 (triangular.tex:11) 之间的第三处 | 三处同值不同源，改构造时容易只改一处，这也是我坚持把三行都登记进台账的原因 |
+      955| | 代数闭域版本 | 取 $k$ 的代数闭包（有限域排除写在 introduction.tex:297） | introduction.tex:294 | (cor:homological) 的特征 2 代数闭域推论 | 这句限定保护的是参数的超越性；去掉后 (triangular.tex:94) 的行列式论证在有限域上失效 |
+  >>  956| | $\operatorname{id}$ 的记号 | $\DeclareMathOperator{\operatorname{id}}{id}$ | paper.tex:27 | 全文 $\operatorname{id}({}_BB)\le4$ 与 $\operatorname{id}_\Gamma\Gamma=\infty$ 的排版来源 | 记号本身无害，但抄笔记时容易把 $\id$ 读成恒等映射，我在 §11 就为此重读过一次 |
+      957| | 成稿日期 | September 23, 2026 | paper.tex:50 | 文件名与 §0 目录名的一致性检查 | 与队列第 10 行的目录名逐字对不上时，说明我挂错了素材 |
+      958| | 摘要口径 | 对称代数 + 非投射有限模 + 所有正度自延伸消失 + 扩域后仍成立 | paper.tex:55 | (cor:homological) 的"persists after every extension"一句 | 摘要里"persist"没有 (consequences.tex:100) 的基变换作支撑就是空话 |
+      959| | 转移后的正合 | 作为右模 $A=R\oplus DR$，故 $\operatorname{Res} A\otimes_RP=P\oplus I$ | transfer.tex:76 | (tr:injective-tail) 与 (tr:nakayama-evaluation) | 这一步给出 $M$ 的投射消解，删掉则正半边的 Ext 无定义可言 |
+
+### D238 (D238-平方差自由集的固定幂节省.md) line 744 [\math KEEP self-correct] :: total_lines=884
+      741| 第二条：复查发现两处 LaTeX 记号笔误，为免动已落盘正文，在此声明正确
+      742| 写法供阅读者替换：其一，§3"把 $A\subseteq[N]$ 接上去"段内
+      743| $Y(N,A)=Z_{\mathcal P_N}(G)$ 无误，但 §7 首段引用的算子式中误写
+  >>  744| $\mathcal Z_{\math P}$，应为 $\mathcal Z_{\mathcal P}$；其二，§7 末段
+      745| $\lVert T\rvert_{H_U}\rVert$ 应为
+      746| $\lVert T\rvert_{H_U}\rVert_{\mathrm{op}}$ 且开闭记号应配对
+      747| $\lVert\cdot\rVert$。两处均不影响论证。探针行保留在 §0 登记块内，
+
+### D211 (D211-三边际Coulomb代价的Monge拟) line 233 [# heading WAIVER] :: total_lines=318
+      230| 
+      231| 第三处停在 cell 划分对 $\eta$ 的依赖。重分配之后，源片 $B_{ijk}$ 的点被送到 $A_j$ 与 $A_k$ 里，我需要的只是像点仍落在原分量集 $K_j\subset U$ 内，而 `build/sections/infima.tex:80-82` 的重置（把例外值改到目标 cell 内定点）与 `build/sections/infima.tex:98-100` 的"所有两两距离仍 $\ge\eta$"正是靠这一点。也就是说，我保住分离性的办法是让每个
+      232| 
+  >>  233| 第四处停在 $Y_k$ 与 $W_k$ 的像为什么不交。$Y_k(B)\subset U_k^+$ 与 $W_k(B)\subset U_k^-$ 由 `build/sections/certificate.tex:101-103` 给出，两个 $k$ 之间靠 $U_1^+,U_1^-,U_2^+,U_2^-$ 四个球的相互不交（`build/sections/certificate.tex:10-11` 的设定与 `build/sections/certificate.te
+      234| 
+      235| ## §19 勘误（已落盘内容不做改写，错误在此登记）
+      236| 
+

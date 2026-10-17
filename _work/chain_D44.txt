@@ -1,0 +1,10 @@
+### region_check D44 442
+seg=144 hdr=0 sep=3 rows=81 hist={6: 81, 4: 12}
+badpipe=[(472, 4, '| 指标 | `OAI/Algebra/Finitistic` | `OAI/Algebra/FinitisticAsymmetry` |'), (474, 4, '| `.lean` 文件数 | 546 | 42 |'), (475, 4, '| 总行数 | 45,195 | 4,996 |'), (476, 4, '| 顶层声明总数 | 3,863 | 399 |'), (477, 4, '| sorry | 0 | 0 |'), (478, 4, '| admit / `axiom` 声明 / native_decide / maxHeartbeats | 各 0 | 各 0 |'), (479, 4, '| 直接 `Classical.choice` | 10 处 | 0 处 |'), (480, 4, '| `Classical.decEq` | 31 行 | 0 行 |'), (481, 4, '| `classical` 战术（词式） | 55 | 28 |'), (482, 4, '| docstring（`/--`） | 1,703 | 0 |'), (483, 4, '| Mathlib 导入 | 精确导入合计 332 行 | 42/42 个文件各一行裸 `import Mathlib` |')]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+rc=0
+### pipe_table_check D44 (该篇该表窗口，表头竖线数=该表续行应有竖线数)
+TABLE D44 hdr=442 pipes=6 block=21 sep=1 rows=20 hist={6: 21} badpipe=[]
+rc=0

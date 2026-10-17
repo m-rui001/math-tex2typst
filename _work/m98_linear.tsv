@@ -1,0 +1,592 @@
+paper	source	form	bare_slashes	frac_calls	typst
+A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in-Spatial-Dimensions-at-Least-Four-October-5-2026	D_v-\frac{k-1}{2}v=B_v	group|stacked	0	1	$D_v - frac(k - 1, 2) v = B_v$
+A-Conditional-Reduction-for-Algebraic-Kuga-Satake-Correspondences-September-10-2026	\lambda=(\tfrac12,\ldots,\tfrac12)	simple|bare	2	0	$lambda = \( 1 / 2 \, dots.h \, 1 / 2 \)$
+A-Counterexample-to-Kuroshs-Division-Ring-Problem-September-23-2026	\frac1e\mathbb Z	simple|bare	1	0	$1 / e bb(Z)$
+A-Fock-space-inequality-and-the-Laughlin-spectral-gap-September-24-2026	m_z=\frac32(3z-1)(-1/2)^z-e_z	simple|bare	1	0	$m_z = 3 / 2 \( 3 z - 1 \) \( - 1 \/ 2 \)^z - e_z$
+A-Fully-Polynomial-Randomized-Approximation-Scheme-for-Perfect-Matchings-in-General-Graphs-September-23-2026	N(K+\tfrac52a+2)	simple|bare	1	0	$N \( K + 5 / 2 a + 2 \)$
+A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Maps-October-5-2026	nL_n=-\tfrac12\mu_n^{-1}H_n	simple|bare	1	0	$n L_n = - 1 / 2 mu_n^(- 1) H_n$
+A-Low-Space-Algorithm-for-Worst-Case-Subset-Sum-September-26-2026	h_*=2-\tfrac34\log3	simple|bare	1	0	$h_(*) = 2 - 3 / 4 log 3$
+A-Pivotal-Amplitude-for-Voronoi-Percolation-from-Cardys-Formula-October-5-2026	\frac14(\sum_{j\ne i}\cot((w_i-w_j)/2))_{i=1}^4	simple|bare	1	0	$1 / 4 \( sum_(j eq.not i) cot \( \( w_i - w_j \) \/ 2 \) \)_(i = 1)^4
+A-Sharp-Threshold-Bound-for-Monotone-Graph-Properties-September-25-2026	\sigma\log(4/\sigma)\le\tfrac12\log8<2	simple|bare	1	0	$sigma log \( 4 \/ sigma \) lt.eq 1 / 2 log 8 < 2$
+A-Three-Manifold-Without-Conjugate-Points-and-Without-a-Nonpositively-Curved-Metric-September-24-2026	\frac{d}{ds}|J(s)|^2>0	simple|stacked	0	1	$frac(d, d s) \| J \( s \) \|^2 > 0$
+A-Torsion-Free-Counterexample-to-the-Kadison-Kaplansky-Projection-Conjecture-September-23-2026	\frac12\sum_i h_i(t)^2(\beta_\ell+\beta_\ell)\|\zeta\|^2	simple|bare	1	0	$1 / 2 sum_i h_i \( t \)^2 \( beta_ell + beta_ell \) parallel zeta par
+A-classification-of-finite-Euclidean-Ramsey-configurations-September-23-2026	\tfrac12(Q+Q^*)	simple|bare	1	0	$1 / 2 \( Q + Q^(*) \)$
+A-conditional-abelianity-theorem-for-special-fourfold-pairs-with-a-half-weight-divisor-October-5-2026	(X,\tfrac12D)	simple|bare	1	0	$\( X \, 1 / 2 D \)$
+A-conditional-abelianity-theorem-for-special-fourfold-pairs-with-a-half-weight-divisor-October-5-2026	K_X+\tfrac12D	simple|bare	1	0	$K_X + 1 / 2 D$
+A-counterexample-to-Kaplanskys-quasitrace-conjecture-September-23-2026	f(t)=2\log(1+\epsilon t)-\frac32\log t	simple|bare	1	0	$f \( t \) = 2 log \( 1 + epsilon.alt t \) - 3 / 2 log t$
+A-counterexample-to-Kaplanskys-quasitrace-conjecture-September-23-2026	\sum_iT_i^*Q^{-1}T_i=\frac32P^{-1}	simple|bare	1	0	$sum_i T_i^(*) Q^(- 1) T_i = 3 / 2 P^(- 1)$
+A-counterexample-to-Kaplanskys-quasitrace-conjecture-September-23-2026	\tfrac12I_{E_{j+1}}	simple|bare	1	0	$1 / 2 I_(E_(j + 1))$
+A-counterexample-to-Kaplanskys-quasitrace-conjecture-September-23-2026	P^*P\ge\tfrac12 I	simple|bare	1	0	$P^(*) P gt.eq 1 / 2 I$
+A-counterexample-to-Sidorenkos-conjecture-September-23-2026	\tfrac23\sum_e b(h_e)=2m\le66	simple|bare	1	0	$2 / 3 sum_e b \( h_e \) = 2 m lt.eq 66$
+A-counterexample-to-Sidorenkos-conjecture-September-23-2026	-\tfrac13\sum_e b(h_e)	simple|bare	1	0	$- 1 / 3 sum_e b \( h_e \)$
+A-density-uniform-condensate-bound-for-dilute-Bose-gases-September-27-2026	\tfrac12	simple|bare	1	0	$1 / 2$
+A-density-uniform-condensate-bound-for-dilute-Bose-gases-September-27-2026	\tfrac12	simple|bare	1	0	$1 / 2$
+A-dimension-free-logarithmic-Sobolev-inequality-for-subgaussian-log-concave-measures-September-23-2026	\frac12\log(2\pi e(1+L))	simple|bare	1	0	$1 / 2 log \( 2 pi e \( 1 + L \) \)$
+A-dimension-free-logarithmic-Sobolev-inequality-for-subgaussian-log-concave-measures-September-23-2026	\frac12\log(2\pi e)	simple|bare	1	0	$1 / 2 log \( 2 pi e \)$
+A-directional-zero-one-law-under-strict-ellipticity-September-23-2026	\tfrac12\log J	simple|bare	1	0	$1 / 2 log J$
+A-finite-Smith-Toda-complex-V4-at-the-prime-1009-September-23-2026	[e\mid e]=\tfrac12d[e^2]	simple|bare	1	0	$\[ e divides e \] = 1 / 2 d \[ e^2 \]$
+A-finite-Smith-Toda-complex-V4-at-the-prime-1009-September-23-2026	[\xi^p\mid\xi^p]=\tfrac12d[\xi^{2p}]	simple|bare	1	0	$\[ xi^p divides xi^p \] = 1 / 2 d \[ xi^(2 p) \]$
+A-finite-entropy-separation-of-microstates-and-nonmicrostates-free-entropy-September-25-2026	-\infty<\chi(X)\leq\chi^*(X)-\tfrac12<\infty	simple|bare	1	0	$- oo < chi \( X \) lt.eq chi^(*) \( X \) - 1 / 2 < oo$
+A-finite-entropy-separation-of-microstates-and-nonmicrostates-free-entropy-September-25-2026	\frac12\sum_i\log(2\pi e w_i)	simple|bare	1	0	$1 / 2 sum_i log \( 2 pi e w_i \)$
+A-finite-entropy-separation-of-microstates-and-nonmicrostates-free-entropy-September-25-2026	\frac n2\log(2\pi h)	simple|bare	1	0	$n / 2 log \( 2 pi h \)$
+A-finite-entropy-separation-of-microstates-and-nonmicrostates-free-entropy-September-25-2026	\frac n2\log(2\pi eR^2)	simple|bare	1	0	$n / 2 log \( 2 pi e R^2 \)$
+A-finite-time-singularity-of-Calabi-flow-on-projective-space-September-24-2026	y\partial_y=\frac23s\partial_s	simple|bare	1	0	$y partial_y = 2 / 3 s partial_s$
+A-finite-time-singularity-of-Calabi-flow-on-projective-space-September-24-2026	-\phi_s+a_c(s)\Delta^2\phi+\tfrac12\phi=0	simple|bare	1	0	$- phi.alt_s + a_c \( s \) Delta^2 phi.alt + 1 / 2 phi.alt = 0$
+A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026	1-\tfrac12\cdot2=0	simple|bare	1	0	$1 - 1 / 2 dot.op 2 = 0$
+A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026	-\tfrac12\cdot2=-1	simple|bare	1	0	$- 1 / 2 dot.op 2 = - 1$
+A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026	+\tfrac12	simple|bare	1	0	$+ 1 / 2$
+A-marked-tensor-obstruction-to-four-dimensional-disk-embedding-September-24-2026	\chi(Y)=\tfrac12\chi(T)=0	simple|bare	1	0	$chi \( Y \) = 1 / 2 chi \( T \) = 0$
+A-marked-tensor-obstruction-to-four-dimensional-disk-embedding-September-24-2026	\mathcal F(a)=\dd a+\tfrac12[a,a]	simple|bare	1	0	$cal(F) \( a \) = ⅆ a + 1 / 2 \[ a \, a \]$
+A-marked-tensor-obstruction-to-four-dimensional-disk-embedding-September-24-2026	\frac12\delta H^{\mathsf T}(\operatorname{Hess}S)(H)\delta H	simple|bare	1	0	"$1 / 2 delta H^(sans(T)) \( ""Hess"" S \) \( H \) delta H$"
+A-nondegenerate-counterexample-to-the-Morse-number-Arnold-bound-September-23-2026	Q=\frac12\sum_js_j|z_j|^2	simple|bare	1	0	$Q = 1 / 2 sum_j s_j \| z_j \|^2$
+A-polynomial-time-construction-of-strong-thin-trees-September-23-2026	a_r=\tfrac12(1+6\epsilon_r)	simple|bare	1	0	$a_r = 1 / 2 \( 1 + 6 epsilon.alt_r \)$
+A-polynomial-time-construction-of-strong-thin-trees-September-23-2026	\mathcal Df=\nabla f\cdot\mu+\tfrac12\operatorname{Tr}(\nabla^2f\Sigma	simple|bare	1	0	"$cal(D) f = nabla f dot.op mu + 1 / 2 ""Tr"" \( nabla^2 f Sigma \)$"
+A-radial-continuum-phase-transition-with-algebraic-decay-September-24-2026	C_{\mathcal D}=\tfrac12\sup_{\mathcal D}\beta\, U^2	simple|bare	1	0	$C_(cal(D)) = 1 / 2 sup_(cal(D)) beta thin U^2$
+A-radial-continuum-phase-transition-with-algebraic-decay-September-24-2026	s\ge\tfrac12R_0\sqrt q	simple|bare	1	0	$s gt.eq 1 / 2 R_0 sqrt(q)$
+A-sharp-Fourier-certificate-for-planar-circle-packing-September-23-2026	\dfrac89(3+\sqrt2+\sqrt3+\sqrt6)	simple|bare	1	0	$8 / 9 \( 3 + sqrt(2) + sqrt(3) + sqrt(6) \)$
+A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026	m+\tfrac12\log\det\operatorname{Cov}(\mu)-h(\mu)	simple|bare	1	0	"$m + 1 / 2 log det ""Cov"" \( mu \) - h \( mu \)$"
+A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026	\tfrac{x}{2}\sinh(2x)+x^2-\cosh(2x)+1	simple|bare	1	0	$x / 2 sinh \( 2 x \) + x^2 - cosh \( 2 x \) + 1$
+A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026	\log q(a)=-a^2/2-\frac12\log(2\pi)+t(a)	simple|bare	1	0	$log q \( a \) = - a^2 \/ 2 - 1 / 2 log \( 2 pi \) + t \( a \)$
+A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026	\langle a,b\rangle\le\|a\|^2+\frac14\|b\|^2	simple|bare	1	0	$chevron.l a \, b chevron.r lt.eq parallel a parallel^2 + 1 / 4 parall
+A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026	Q(u,v)=\frac{43}{100}u^2+\frac{26}{100}uv+\frac{68}{25}v^2	simple|bare	3	0	$Q \( u \, v \) = 43 / 100 u^2 + 26 / 100 u v + 68 / 25 v^2$
+A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026	\frac1{50}(1-2u)(1+68u)\ge0	simple|bare	1	0	$1 / 50 \( 1 - 2 u \) \( 1 + 68 u \) gt.eq 0$
+A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026	V_0-\frac7{50}\|Y\|^2	simple|bare	1	0	$V_0 - 7 / 50 parallel Y parallel^2$
+A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026	u_-\le\tfrac12+\tfrac12\coth(\delta/2)-1/\delta	simple|bare	2	0	$u_(-) lt.eq 1 / 2 + 1 / 2 coth \( delta \/ 2 \) - 1 \/ delta$
+A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026	\theta_0=\tfrac12\log(200\pi)	simple|bare	1	0	$theta_0 = 1 / 2 log \( 200 pi \)$
+A-single-lattice-covering-bound-of-order-n-log-n-September-23-2026	\frac23\log_2(2\pi e)+o(1)	simple|bare	1	0	$2 / 3 log_2 \( 2 pi e \) + o \( 1 \)$
+A-single-lattice-covering-bound-of-order-n-log-n-September-23-2026	\eta_m/m\to\tfrac14\log(27/16)>0	simple|bare	1	0	$eta_m \/ m arrow.r 1 / 4 log \( 27 \/ 16 \) > 0$
+A-single-lattice-covering-bound-of-order-n-log-n-September-23-2026	\eta_b<\frac12b^{0.56}	simple|bare	1	0	$eta_b < 1 / 2 b^0.56$
+A-singular-normal-affine-surface-with-free-tangent-sheaf-September-23-2026	\frac1{2\pi i}\int\omega	simple|stacked	0	1	$frac(1, 2 pi i) integral omega$
+A-singular-normal-affine-surface-with-free-tangent-sheaf-September-23-2026	\Psi_{ij}+\frac34\epsilon_{ij}d\log r_1	simple|bare	1	0	$Psi_(i j) + 3 / 4 epsilon.alt_(i j) d log r_1$
+A-singular-normal-affine-surface-with-free-tangent-sheaf-September-23-2026	\frac34\epsilon_{ij}	simple|bare	1	0	$3 / 4 epsilon.alt_(i j)$
+A-smooth-three-torus-diffeomorphism-with-simple-Lebesgue-spectrum-September-23-2026	\tfrac12\dd z	simple|bare	1	0	$1 / 2 ⅆ z$
+A-spectral-gap-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026	(r-u)^2\le\frac32r^2+3u^2	simple|bare	1	0	$\( r - u \)^2 lt.eq 3 / 2 r^2 + 3 u^2$
+A-spectral-gap-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026	\beta\leq\frac12+\varepsilon	simple|bare	1	0	$beta lt.eq 1 / 2 + epsilon$
+A-strict-four-row-permanent-inequality-and-permutation-moments-September-26-2026	\langle g,h\rangle=\tfrac14\sum_jg(j)h(j)	simple|bare	1	0	$chevron.l g \, h chevron.r = 1 / 4 sum_j g \( j \) h \( j \)$
+A-strict-four-row-permanent-inequality-and-permutation-moments-September-26-2026	\tfrac12v_0\log_2v_0+\tfrac12v_1\log_2v_1	simple|bare	2	0	$1 / 2 v_0 log_2 v_0 + 1 / 2 v_1 log_2 v_1$
+A-strict-four-row-permanent-inequality-and-permutation-moments-September-26-2026	\tfrac12v\log_2v	simple|bare	1	0	$1 / 2 v log_2 v$
+A-strict-four-row-permanent-inequality-and-permutation-moments-September-26-2026	\tfrac12K\log(N/K)	simple|bare	1	0	$1 / 2 K log \( N \/ K \)$
+A-two-dimensional-area-law-from-a-global-spectral-gap-September-24-2026	z=\tfrac12\log(p_i/p_k)	simple|bare	1	0	$z = 1 / 2 log \( p_i \/ p_k \)$
+A-typical-start-upper-bound-for-low-temperature-SK-Glauber-dynamics-September-24-2026	\nabla U(z)\cdot(T(z)-z)+\tfrac12\|T(z)-z\|^2	simple|bare	1	0	$nabla U \( z \) dot.op \( T \( z \) - z \) + 1 / 2 parallel T \( z \)
+A-typical-start-upper-bound-for-low-temperature-SK-Glauber-dynamics-September-24-2026	\beta\leq\frac12+\varepsilon	simple|bare	1	0	$beta lt.eq 1 / 2 + epsilon$
+A-uniform-Hilbert-transform-estimate-for-Lipschitz-directions-September-25-2026	\tfrac12 e^{-CG^{-1/2}}\ge\tfrac14	simple|bare	2	0	$1 / 2 e^(- C G^(- 1 \/ 2)) gt.eq 1 / 4$
+Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026	\frac14 4^{-n}<s_n\le4^{-n}	simple|bare	1	0	$1 / 4 4^(- n) < s_n lt.eq 4^(- n)$
+Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026	\frac13-\frac{2\delta}{3}-\kappa	group/simple|bare	1	1	$1 / 3 - frac(2 delta, 3) - kappa$
+Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026	\tfrac12t^{.10\delta}D_0(f)	simple|bare	1	0	$1 / 2 t^(.10 delta) D_0 \( f \)$
+Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026	\frac{c_*}{2}\mathbf1_{\mathcal S_{m,E}}-8r_Q/(\eta N)	group|bare	1	0	$c_(*) / 2 upright(bold(1))_(cal(S)_(m \, E)) - 8 r_Q \/ \( eta N \)$
+Algebraic-Kuga-Satake-correspondences-and-Hodge-conjectures-on-a-K3-quadratic-locus-September-30-2026	\tfrac12d\log x	simple|bare	1	0	$1 / 2 d log x$
+Algebraic-Kuga-Satake-correspondences-and-Hodge-conjectures-on-a-K3-quadratic-locus-September-30-2026	c_1(M)=\tfrac12c_1(M^2)	simple|bare	1	0	$c_1 \( M \) = 1 / 2 c_1 \( M^2 \)$
+Algebraic-Kuga-Satake-correspondences-and-Hodge-conjectures-on-a-K3-quadratic-locus-September-30-2026	\tfrac12(e_1+e_2+e_3+e_4)	simple|bare	1	0	$1 / 2 \( e_1 + e_2 + e_3 + e_4 \)$
+Algebraic-Kuga-Satake-correspondences-and-Hodge-conjectures-on-a-K3-quadratic-locus-September-30-2026	\tfrac12(e_1+e_2+e_3-e_4)	simple|bare	1	0	$1 / 2 \( e_1 + e_2 + e_3 - e_4 \)$
+Algebraic-Kuga-Satake-correspondences-and-Hodge-conjectures-on-a-K3-quadratic-locus-September-30-2026	\tfrac12(\pm e_1\pm e_2\pm e_3\pm e_4)	simple|bare	1	0	$1 / 2 \( plus.minus e_1 plus.minus e_2 plus.minus e_3 plus.minus e_4 
+All-temperature-pressure-for-orthogonally-invariant-Ising-spin-glasses-September-25-2026	\tfrac12\int\lambda\,\mu(d\lambda)	simple|bare	1	0	$1 / 2 integral lambda thin mu \( d lambda \)$
+All-temperature-pressure-for-orthogonally-invariant-Ising-spin-glasses-September-25-2026	\ell(v)+\frac12\int pv	simple|bare	1	0	$ell \( v \) + 1 / 2 integral p v$
+All-temperature-pressure-for-orthogonally-invariant-Ising-spin-glasses-September-25-2026	-\frac12\int_0^{p_0}f'(D_p(r))\,dr	simple|bare	1	0	$- 1 / 2 integral_0^(p_0) f' \( D_p \( r \) \) thin d r$
+All-temperature-pressure-for-orthogonally-invariant-Ising-spin-glasses-September-25-2026	-\tfrac12e^{N^2-4N}	simple|bare	1	0	$- 1 / 2 e^(N^2 - 4 N)$
+All-temperature-pressure-for-orthogonally-invariant-Ising-spin-glasses-September-25-2026	d\ell^{(n)}=-\tfrac12\sum_iw_iB_i^{(n)}dh_i	simple|bare	1	0	$d ell^(\( n \)) = - 1 / 2 sum_i w_i B_i^(\( n \)) d h_i$
+All-temperature-pressure-for-orthogonally-invariant-Ising-spin-glasses-September-25-2026	G_1(p)+\ell^{[\mathbf m]}(v)+\tfrac12\int pv	simple|bare	1	0	$G_1 \( p \) + ell^(\[ upright(bold(m)) \]) \( v \) + 1 / 2 integral p
+Almost-Linear-Time-Maximum-Cardinality-Matching-in-Sparse-General-Graphs-September-24-2026	\frac12\sum_{ij\text{ matched}}\|p_i-p_j\|_2^2	simple|bare	1	0	"$1 / 2 sum_(i j upright("" matched"")) parallel p_i - p_j parallel_2^2$"
+Almost-Linear-Time-Maximum-Cardinality-Matching-in-Sparse-General-Graphs-September-24-2026	\tfrac12M^{-(4a-8)/a^2}	simple|bare	1	0	$1 / 2 M^(- \( 4 a - 8 \) \/ a^2)$
+Almost-everywhere-Fourier-convergence-in-L-log-L-September-23-2026	\frac34 b^{1/2}(|x|^2+b^2)^{-1/4}	simple|bare	1	0	$3 / 4 b^(1 \/ 2) \( \| x \|^2 + b^2 \)^(- 1 \/ 4)$
+Almost-everywhere-Fourier-convergence-in-L-log-L-September-23-2026	\frac12\sum\delta_p	simple|bare	1	0	$1 / 2 sum delta_p$
+Almost-everywhere-regularity-of-stationary-integral-varifolds-September-23-2026	\sigma=\tfrac12-\tfrac1p>0	simple|bare	2	0	$sigma = 1 / 2 - 1 / p > 0$
+Ambiently-homeomorphic-isolated-hypersurface-germs-in-C4-with-multiplicities-four-and-five-September-27-2026	p=\frac14\sum_{\gamma\in\mu_4}\gamma	simple|bare	1	0	$p = 1 / 4 sum_(gamma in mu_4) gamma$
+Ambiently-homeomorphic-isolated-hypersurfaces-of-multiplicities-two-and-three-September-24-2026	\tfrac12\operatorname{Tr}_{E/F}h(x,y)	simple|bare	1	0	"$1 / 2 ""Tr""_(E \/ F) h \( x \, y \)$"
+An-Infinite-Finitely-Presented-Simple-Amenable-Group-September-23-2026	\frac12\|p-q\|_1\le\|\sqrt p-\sqrt q\|_2	simple|bare	1	0	$1 / 2 parallel p - q parallel_1 lt.eq parallel sqrt(p) - sqrt(q) para
+An-L3-bound-for-the-trilinear-Hilbert-transform-October-5-2026	\tfrac12\log_2h	simple|bare	1	0	$1 / 2 log_2 h$
+An-L3-bound-for-the-trilinear-Hilbert-transform-October-5-2026	\tfrac12d_0^9b_2(H_{\max}+1)	simple|bare	1	0	$1 / 2 d_0^9 b_2 \( H_max + 1 \)$
+An-atomic-certificate-for-triangular-lattice-universal-optimality-September-26-2026	\tfrac12[d_b^2\ell e^{-sE_b},V]	simple|bare	1	0	$1 / 2 \[ d_b^2 ell e^(- s E_b) \, V \]$
+An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026	\tfrac12 2^{\lfloor(n-4)/127\rfloor}-1	simple|bare	1	0	$1 / 2 2^(floor.l \( n - 4 \) \/ 127 floor.r) - 1$
+An-exponential-two-way-deterministic-state-lower-bound-for-one-way-liveness-September-25-2026	\frac12 2^{\lfloor(h-2)/127\rfloor}-1	simple|bare	1	0	$1 / 2 2^(floor.l \( h - 2 \) \/ 127 floor.r) - 1$
+An-integral-scalar-curvature-bound-for-real-simplicial-volume-October-5-2026	\frac56	simple|bare	1	0	$5 / 6$
+An-isomorphism-of-the-free-group-factors-September-23-2026	B(\tfrac12,\tfrac32)=\pi/2	simple|bare	2	0	$B \( 1 / 2 \, 3 / 2 \) = pi \/ 2$
+Annular-variation-of-the-triangular-Hilbert-transform-at-the-symmetric-point-October-5-2026	\sum_{v=0}^2 b(X_v)\ge\tfrac13 b(\sum_vX_v)	simple|bare	1	0	$sum_(v = 0)^2 b \( X_v \) gt.eq 1 / 3 b \( sum_v X_v \)$
+Area-controlled-end-replacement-and-the-Bondi-Penrose-inequality-in-the-CKS-class-September-27-2026	\chi=\tfrac U2(\partial_r\gamma-\mathcal L_s\gamma)	simple|bare	1	0	$chi = U / 2 \( partial_r gamma - cal(L)_s gamma \)$
+Arithmetic-classification-and-non-Pisot-singularity-for-Bernoulli-convolutions-October-3-2026	\mathcal T\rho=\tfrac12(T_0)_*\rho+\tfrac12(T_1)_*\rho	simple|bare	2	0	$cal(T) rho = 1 / 2 \( T_0 \)_(*) rho + 1 / 2 \( T_1 \)_(*) rho$
+Arithmetic-classification-and-non-Pisot-singularity-for-Bernoulli-convolutions-October-3-2026	\tfrac12e^{.75L'}	simple|bare	1	0	$1 / 2 e^(.75 L')$
+Arithmeticity-of-twisted-finite-correspondences-for-lattices-over-local-fields-September-23-2026	a\in\frac12\mathbb Z_{>0}	simple|bare	1	0	$a in 1 / 2 bb(Z)_(> 0)$
+Arithmeticity-of-twisted-finite-correspondences-for-lattices-over-local-fields-September-23-2026	\tfrac12(e_1\pm e_2\pm e_3\pm e_4)	simple|bare	1	0	$1 / 2 \( e_1 plus.minus e_2 plus.minus e_3 plus.minus e_4 \)$
+Asymptotically-minimal-maxima-of-real-Littlewood-polynomials-September-23-2026	\mu=\frac12\sum_k(1-|X_k|)	simple|bare	1	0	$mu = 1 / 2 sum_k \( 1 - \| X_k \| \)$
+BKT-universality-for-height-and-planar-spin-fields-September-24-2026	\bar\rho_B=\frac14\sum_e\rho_{B,e}	simple|bare	1	0	$macron(rho)_B = 1 / 4 sum_e rho_(B \, e)$
+BKT-universality-for-height-and-planar-spin-fields-September-24-2026	\exp(-\frac12\sum_iQ_i^2)	simple|bare	1	0	$exp \( - 1 / 2 sum_i Q_i^2 \)$
+BKT-universality-for-height-and-planar-spin-fields-September-24-2026	z_{Gm}\ge\frac32z_m	simple|bare	1	0	$z_(G m) gt.eq 3 / 2 z_m$
+BKT-universality-for-height-and-planar-spin-fields-September-24-2026	\psi(t)=1-\frac12\sigma^2(t-t_0)^2+O(|t-t_0|^4)	simple|bare	1	0	$psi \( t \) = 1 - 1 / 2 sigma^2 \( t - t_0 \)^2 + O \( \| t - t_0 \|^
+BKT-universality-for-height-and-planar-spin-fields-September-24-2026	\frac12(v,Tv)-(f,v)	simple|bare	1	0	$1 / 2 \( v \, T v \) - \( f \, v \)$
+BKT-universality-for-height-and-planar-spin-fields-September-24-2026	|e^y-1-y|\le\tfrac12|y|^2e^{|y|}	simple|bare	1	0	$\| e^y - 1 - y \| lt.eq 1 / 2 \| y \|^2 e^(\| y \|)$
+BKT-universality-for-height-and-planar-spin-fields-September-24-2026	\frac1{2\pi}\int\log|z-ae^{it}|\dd t=\log\max\{|z|,a\}	simple|stacked	0	1	$frac(1, 2 pi) integral log \| z - a e^(i t) \| ⅆ t = log max { \| z \
+BKT-universality-for-height-and-planar-spin-fields-September-24-2026	\frac{d}{dk}a(k)	simple|stacked	0	1	$frac(d, d k) a \( k \)$
+BKT-universality-for-height-and-planar-spin-fields-September-24-2026	(1,-\frac12\sqrt{b/H})	simple|bare	1	0	$\( 1 \, - 1 / 2 sqrt(b \/ H) \)$
+BKT-universality-for-height-and-planar-spin-fields-September-24-2026	\eta_*<\tfrac12\sqrt{b/H}<M_*	simple|bare	1	0	$eta_(*) < 1 / 2 sqrt(b \/ H) < M_(*)$
+BKT-universality-for-height-and-planar-spin-fields-September-24-2026	M_*>\tfrac12\sqrt{b/H}	simple|bare	1	0	$M_(*) > 1 / 2 sqrt(b \/ H)$
+BKT-universality-for-height-and-planar-spin-fields-September-24-2026	\frac{d}{dk}a(k)=v(k)	simple|stacked	0	1	$frac(d, d k) a \( k \) = v \( k \)$
+Blochs-Law-for-Finite-Range-Heisenberg-Ferromagnets-in-Three-Dimensions-October-5-2026	S\in\{\tfrac12,1,\tfrac32,\ldots\}	simple|bare	2	0	$S in { 1 / 2 \, 1 \, 3 / 2 \, dots.h }$
+Blochs-Law-for-Finite-Range-Heisenberg-Ferromagnets-in-Three-Dimensions-October-5-2026	S\in\{\tfrac12,1,\tfrac32,\ldots\}	simple|bare	2	0	$S in { 1 / 2 \, 1 \, 3 / 2 \, dots.h }$
+Blochs-Law-for-Finite-Range-Heisenberg-Ferromagnets-in-Three-Dimensions-October-5-2026	\tfrac12	simple|bare	1	0	$1 / 2$
+Blochs-Law-for-Finite-Range-Heisenberg-Ferromagnets-in-Three-Dimensions-October-5-2026	\tfrac12	simple|bare	1	0	$1 / 2$
+Boundary-graph-deformations-for-the-spacetime-Penrose-inequality-September-27-2026	m_{\mathrm{ADM}}\ge\frac12(A_*/\omega_3)^{2/3}	simple|bare	1	0	"$m_(upright(""ADM"")) gt.eq 1 / 2 \( A_(*) \/ omega_3 \)^(2 \/ 3)$"
+Boundary-graph-deformations-for-the-spacetime-Penrose-inequality-September-27-2026	E\ge\frac12(|S|_g/\omega_3)^{2/3}	simple|bare	1	0	$E gt.eq 1 / 2 \( \| S \|_g \/ omega_3 \)^(2 \/ 3)$
+Boundary-graph-deformations-for-the-spacetime-Penrose-inequality-September-27-2026	-\epsilon+\frac18\log(1+\ell^2\sigma^2)	simple|bare	1	0	$- epsilon.alt + 1 / 8 log \( 1 + ell^2 sigma^2 \)$
+Boundary-graph-deformations-for-the-spacetime-Penrose-inequality-September-27-2026	G(t)=t+\frac16\log(1+l(t)^2\sigma^2)	simple|bare	1	0	$G \( t \) = t + 1 / 6 log \( 1 + l \( t \)^2 sigma^2 \)$
+Boundary-graph-deformations-for-the-spacetime-Penrose-inequality-September-27-2026	Z-t=\frac16\log D\ge0	simple|bare	1	0	$Z - t = 1 / 6 log D gt.eq 0$
+Boundary-graph-deformations-for-the-spacetime-Penrose-inequality-September-27-2026	H_B=\tfrac12g^{ab}\partial_4g_{ab}	simple|bare	1	0	$H_B = 1 / 2 g^(a b) partial_4 g_(a b)$
+Boundary-graph-deformations-for-the-spacetime-Penrose-inequality-September-27-2026	\tfrac12\lambda_0^{1+\alpha_2}	simple|bare	1	0	$1 / 2 lambda_0^(1 + alpha_2)$
+Boundary-graph-deformations-for-the-spacetime-Penrose-inequality-September-27-2026	\tfrac12|T^0|^2+|M|^2+\tfrac23j^2	simple|bare	2	0	$1 / 2 \| T^0 \|^2 + \| M \|^2 + 2 / 3 j^2$
+Boundary-graph-deformations-for-the-spacetime-Penrose-inequality-September-27-2026	G(t)=t+\frac16\log(1+l(t)^2\sigma^2)	simple|bare	1	0	$G \( t \) = t + 1 / 6 log \( 1 + l \( t \)^2 sigma^2 \)$
+Boundary-graph-deformations-for-the-spacetime-Penrose-inequality-September-27-2026	S\le C(N)+\tfrac12S	simple|bare	1	0	$S lt.eq C \( N \) + 1 / 2 S$
+Boundary-graph-deformations-for-the-spacetime-Penrose-inequality-September-27-2026	Z=t+\frac16\log(1+l(t)^2\sigma^2)	simple|bare	1	0	$Z = t + 1 / 6 log \( 1 + l \( t \)^2 sigma^2 \)$
+Bounded-klt-complements-for-Fano-contractions-September-25-2026	\frac1n E(|-nK_X|)\le A_X(E)	simple|bare	1	0	$1 / n E \( \| - n K_X \| \) lt.eq A_X \( E \)$
+Bounded-scalar-curvature-and-smooth-extension-of-four-dimensional-Ricci-flow-September-24-2026	C^a_{ij}=\tfrac12(\partial_i p_{ja}+\partial_jp_{ia}-\partial_ap_{ij})	simple|bare	1	0	$C_(i j)^a = 1 / 2 \( partial_i p_(j a) + partial_j p_(i a) - partial_
+Brownian-continuum-random-tree-limits-of-finite-Fortuin-Kasteleyn-maps-above-four-September-24-2026	\frac14\frac{1-p}{4}=u	group/simple|bare	1	1	$1 / 4 frac(1 - p, 4) = u$
+Brownian-continuum-random-tree-limits-of-finite-Fortuin-Kasteleyn-maps-above-four-September-24-2026	\tfrac12	simple|bare	1	0	$1 / 2$
+Brownian-continuum-random-tree-limits-of-finite-Fortuin-Kasteleyn-maps-above-four-September-24-2026	\tfrac12	simple|bare	1	0	$1 / 2$
+Buffered-comparison-and-stopping-band-resolution-in-critical-Ising-September-23-2026	\tfrac12s^{7/8}\Delta M_J	simple|bare	1	0	$1 / 2 s^(7 \/ 8) Delta M_J$
+Cap-selected-amplitudes-and-triangle-chords-for-honeycomb-walks-September-26-2026	\Delta=\frac12\sum_k(m_k-m_{k+1})^2	simple|bare	1	0	$Delta = 1 / 2 sum_k \( m_k - m_(k + 1) \)^2$
+Cap-selected-amplitudes-and-triangle-chords-for-honeycomb-walks-September-26-2026	\Delta=\frac12\sum(m_k-m_{k+1})^2\ge M	simple|bare	1	0	$Delta = 1 / 2 sum \( m_k - m_(k + 1) \)^2 gt.eq M$
+Catalans-constant-is-irrational-September-24-2026	\tfrac12\log2	simple|bare	1	0	$1 / 2 log 2$
+Catalans-constant-is-irrational-September-24-2026	J_{ij}=\tfrac32Z^0(i,j)	simple|bare	1	0	$J_(i j) = 3 / 2 Z^0 \( i \, j \)$
+Catalans-constant-is-irrational-September-24-2026	\kappa\|p\|_*^2+\tfrac12\|v\|_*^2	simple|bare	1	0	$kappa parallel p parallel_(*)^2 + 1 / 2 parallel v parallel_(*)^2$
+Combinatorial-Invariance-of-Kazhdan-Lusztig-Polynomials-September-24-2026	(n+\tfrac12)\theta\ge\pi	simple|bare	1	0	$\( n + 1 / 2 \) theta gt.eq pi$
+Compatibility-entropy-and-the-spectrum-of-a-Thorp-sweep-September-26-2026	\tfrac12\sqrt{1/16}=1/8	simple|bare	1	0	$1 / 2 sqrt(1 \/ 16) = 1 \/ 8$
+Compatibility-entropy-and-the-spectrum-of-a-Thorp-sweep-September-26-2026	\tfrac12\sqrt\varepsilon	simple|bare	1	0	$1 / 2 sqrt(epsilon)$
+Compatibility-entropy-and-the-spectrum-of-a-Thorp-sweep-September-26-2026	\frac12\sqrt{1/5}	simple|bare	1	0	$1 / 2 sqrt(1 \/ 5)$
+Compatibility-entropy-and-the-spectrum-of-a-Thorp-sweep-September-26-2026	H=D-D_c-\tfrac12u\Delta	simple|bare	1	0	$H = D - D_c - 1 / 2 u Delta$
+Computing-the-Random-3-SAT-Threshold-September-27-2026	\tfrac12 C^2e^{2C}m_0	simple|bare	1	0	$1 / 2 C^2 e^(2 C) m_0$
+Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026	\bar\partial(Ue_1)=\tfrac12a^{0,1}Ue_1	simple|bare	1	0	$macron(partial) \( U e_1 \) = 1 / 2 a^(0 \, 1) U e_1$
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	\frac12\sqrt{ma_T}\le\frac12\sqrt{na_T}	simple|bare	2	0	$1 / 2 sqrt(m a_T) lt.eq 1 / 2 sqrt(n a_T)$
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	\frac12\sqrt{n\kappa_d^R}	simple|bare	1	0	$1 / 2 sqrt(n kappa_d^R)$
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	\frac12 n^{-5/2}	simple|bare	1	0	$1 / 2 n^(- 5 \/ 2)$
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	\frac12\|B_{j-1}f^*\|_2^2\le\frac12\|B_mf^*\|_2^2	simple|bare	2	0	$1 / 2 parallel B_(j - 1) f^(*) parallel_2^2 lt.eq 1 / 2 parallel B_m 
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	\frac12\|B_mf^*\|_2^2	simple|bare	1	0	$1 / 2 parallel B_m f^(*) parallel_2^2$
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	\frac12 n^{-1/2}	simple|bare	1	0	$1 / 2 n^(- 1 \/ 2)$
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	\gamma_p=-\frac14\log_2(1-p/4)>0	simple|bare	1	0	$gamma_p = - 1 / 4 log_2 \( 1 - p \/ 4 \) > 0$
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	\frac12\sum_{i=r}^{d-1}2^{-i}\le2^{-r}	simple|bare	1	0	$1 / 2 sum_(i = r)^(d - 1) 2^(- i) lt.eq 2^(- r)$
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	a=-\frac18\log_2(1-\delta/4)	simple|bare	1	0	$a = - 1 / 8 log_2 \( 1 - delta \/ 4 \)$
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	\varepsilon_n\le\tfrac12n^{(3-h\gamma)/2}=o(1)	simple|bare	1	0	$epsilon_n lt.eq 1 / 2 n^(\( 3 - h gamma \) \/ 2) = o \( 1 \)$
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	\tfrac12n^{-5/2}	simple|bare	1	0	$1 / 2 n^(- 5 \/ 2)$
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	\tfrac12n^{(3-a(1/8)R)/2}=o(1)	simple|bare	1	0	$1 / 2 n^(\( 3 - a \( 1 \/ 8 \) R \) \/ 2) = o \( 1 \)$
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	0<b<\min\{-\tfrac12\log_2(1-\varepsilon/4),\tfrac12\}	simple|bare	2	0	$0 < b < min { - 1 / 2 log_2 \( 1 - epsilon \/ 4 \) \, 1 / 2 }$
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	-\tfrac12\log_2\sigma	simple|bare	1	0	$- 1 / 2 log_2 sigma$
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	-\tfrac12\log_2(63/64)>1/200	simple|bare	1	0	$- 1 / 2 log_2 \( 63 \/ 64 \) > 1 \/ 200$
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	0<\beta<\min\{-\tfrac12\log_2\sigma,\tfrac12\}	simple|bare	2	0	$0 < beta < min { - 1 / 2 log_2 sigma \, 1 / 2 }$
+Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026	\frac12\sqrt{ha_t}	simple|bare	1	0	$1 / 2 sqrt(h a_t)$
+Conformal-Limits-of-Critical-Square-Lattice-Random-Cluster-Interfaces-October-5-2026	H_R-\tfrac12	simple|bare	1	0	$H_R - 1 / 2$
+Conformal-Limits-of-Critical-Square-Lattice-Random-Cluster-Interfaces-October-5-2026	H_R-\tfrac12+P_R	simple|bare	1	0	$H_R - 1 / 2 + P_R$
+Conformal-Limits-of-Critical-Square-Lattice-Random-Cluster-Interfaces-October-5-2026	-s-\tfrac32	simple|bare	1	0	$- s - 3 / 2$
+Conformal-Limits-of-Critical-Square-Lattice-Random-Cluster-Interfaces-October-5-2026	N=2\lfloor\tfrac12\delta^{-1/(1-3a/8)}\rfloor	simple|bare	1	0	$N = 2 floor.l 1 / 2 delta^(- 1 \/ \( 1 - 3 a \/ 8 \)) floor.r$
+Conformal-Limits-of-Critical-Square-Lattice-Random-Cluster-Interfaces-October-5-2026	\tfrac12\operatorname{tr}(M_1\cdots M_k)	simple|bare	1	0	"$1 / 2 ""tr"" \( M_1 dots.h.c M_k \)$"
+Conformal-flow-and-the-Riemannian-Penrose-inequality-with-minimizing-frontiers-September-27-2026	\tfrac12\delta\leq g_0\leq2\delta	simple|bare	1	0	$1 / 2 delta lt.eq g_0 lt.eq 2 delta$
+Conformal-flow-and-the-Riemannian-Penrose-inequality-with-minimizing-frontiers-September-27-2026	1+\tfrac12\mu(t) r^{-d}	simple|bare	1	0	$1 + 1 / 2 mu \( t \) r^(- d)$
+Conformal-universality-of-bulk-Ising-correlations-under-weak-interactions-September-23-2026	\tfrac12|z-w|^{3/4}>0	simple|bare	1	0	$1 / 2 \| z - w \|^(3 \/ 4) > 0$
+Conformal-universality-of-bulk-Ising-correlations-under-weak-interactions-September-23-2026	\frac1k\binom{2k-2}{k-1}\le4^{k-1}	simple|bare	1	0	$1 / k binom(2 k - 2, k - 1) lt.eq 4^(k - 1)$
+Constant-factor-hardness-of-uniform-sparsest-cut-September-24-2026	\tfrac12 4^{-(d-1)}\ge4^{-k}	simple|bare	1	0	$1 / 2 4^(- \( d - 1 \)) gt.eq 4^(- k)$
+Contact-Fano-manifolds-and-the-LeBrun-Salamon-conjecture-September-23-2026	D_X(x)=\left.\frac{d}{dt}\right|_{0}\exp(tD)x	simple|stacked	0	1	$D_X \( x \) = frac(d, d t)\|_0 exp \( t D \) x$
+Continuum-Coulomb-hardness-with-binary-nuclear-charges-September-24-2026	\tfrac12 e_{\rm axis}+\sigma h_0 e_z	simple|bare	1	0	"$1 / 2 e_(upright(""axis"")) + sigma h_0 e_z$"
+Continuum-Coulomb-hardness-with-binary-nuclear-charges-September-24-2026	\tfrac12 e_{\rm axis}-\sigma h_0 e_z	simple|bare	1	0	"$1 / 2 e_(upright(""axis"")) - sigma h_0 e_z$"
+Counterexamples-to-weak-chromatic-splitting-sphere-kernels-and-descent-exponents-September-27-2026	[0,\tfrac12]	simple|bare	1	0	$\[ 0 \, 1 / 2 \]$
+Counterexamples-to-weak-chromatic-splitting-sphere-kernels-and-descent-exponents-September-27-2026	[\tfrac12,1]	simple|bare	1	0	$\[ 1 / 2 \, 1 \]$
+Counterexamples-to-weak-chromatic-splitting-sphere-kernels-and-descent-exponents-September-27-2026	\tfrac12	simple|bare	1	0	$1 / 2$
+Counterexamples-to-weak-chromatic-splitting-sphere-kernels-and-descent-exponents-September-27-2026	c_{k-1}\leq\tfrac12\leq c_k	simple|bare	1	0	$c_(k - 1) lt.eq 1 / 2 lt.eq c_k$
+Counterexamples-to-weak-chromatic-splitting-sphere-kernels-and-descent-exponents-September-27-2026	c_{k-1}\leq\tfrac12\leq c_k	simple|bare	1	0	$c_(k - 1) lt.eq 1 / 2 lt.eq c_k$
+Critical-Center-Magnetization-in-the-Planar-XY-Model-October-5-2026	C/L<\tfrac13L^{-2/3}	simple|bare	1	0	$C \/ L < 1 / 3 L^(- 2 \/ 3)$
+Critical-Center-Magnetization-in-the-Planar-XY-Model-October-5-2026	\delta_A<\tfrac13L^{-2/3}	simple|bare	1	0	$delta_A < 1 / 3 L^(- 2 \/ 3)$
+Critical-honeycomb-chords-with-prescribed-boundary-endpoints-September-26-2026	t=\tfrac12h^{4/3+\epsilon}	simple|bare	1	0	$t = 1 / 2 h^(4 \/ 3 + epsilon.alt)$
+Critical-local-smoothing-for-the-three-dimensional-wave-equation-September-24-2026	\tfrac12\Delta^{A+\eta}	simple|bare	1	0	$1 / 2 Delta^(A + eta)$
+Critical-local-smoothing-for-the-three-dimensional-wave-equation-September-24-2026	\tfrac14\Delta^\lambda	simple|bare	1	0	$1 / 4 Delta^lambda$
+Critical-mixing-in-the-Sherrington-Kirkpatrick-model-September-25-2026	\frac12\sum_iJ_{ii}	simple|bare	1	0	$1 / 2 sum_i J_(i i)$
+Critical-mixing-in-the-Sherrington-Kirkpatrick-model-September-25-2026	-\tfrac12\log\det R	simple|bare	1	0	$- 1 / 2 log det R$
+Critical-mixing-in-the-Sherrington-Kirkpatrick-model-September-25-2026	-\tfrac12\log(1-a^2)	simple|bare	1	0	$- 1 / 2 log \( 1 - a^2 \)$
+Critical-mixing-in-the-Sherrington-Kirkpatrick-model-September-25-2026	\tfrac12\sqrt{\epsilon r^3}	simple|bare	1	0	$1 / 2 sqrt(epsilon.alt r^3)$
+Critical-mixing-in-the-Sherrington-Kirkpatrick-model-September-25-2026	\tfrac12(1-1/(nR_J))^k	simple|bare	1	0	$1 / 2 \( 1 - 1 \/ \( n R_J \) \)^k$
+Critical-slowing-down-in-the-Sherrington-Kirkpatrick-model-September-24-2026	\frac12\sum_iW_{ii}	simple|bare	1	0	$1 / 2 sum_i W_(i i)$
+Critical-slowing-down-in-the-Sherrington-Kirkpatrick-model-September-24-2026	Q_n\le\tfrac14 n^{-2/3+19/300}	simple|bare	1	0	$Q_n lt.eq 1 / 4 n^(- 2 \/ 3 + 19 \/ 300)$
+Critical-slowing-down-in-the-Sherrington-Kirkpatrick-model-September-24-2026	B_n=\log2+\tfrac12(3+\log2)n	simple|bare	1	0	$B_n = log 2 + 1 / 2 \( 3 + log 2 \) n$
+Critical-strip-crossing-mass-on-the-honeycomb-lattice-September-26-2026	\frac18\sin4w\,P_3((1-\cos4w)/8)	simple|bare	1	0	$1 / 8 sin 4 w thin P_3 \( \( 1 - cos 4 w \) \/ 8 \)$
+Cuntz-comparison-and-Jiang-Su-absorption-September-23-2026	\frac14\,1	simple|bare	1	0	$1 / 4 thin 1$
+Cuntz-comparison-and-Jiang-Su-absorption-September-23-2026	\frac12\,1\le(p')^2+(1-p')^2	simple|bare	1	0	$1 / 2 thin 1 lt.eq \( p' \)^2 + \( 1 - p' \)^2$
+Cuntz-comparison-and-Jiang-Su-absorption-September-23-2026	v_0^*pv_0\le\frac14v_0^*v_0	simple|bare	1	0	$v_0^(*) p v_0 lt.eq 1 / 4 v_0^(*) v_0$
+Cuntz-comparison-and-Jiang-Su-absorption-September-23-2026	s(\frac14-p)s\le0	simple|bare	1	0	$s \( 1 / 4 - p \) s lt.eq 0$
+Cuntz-comparison-and-Jiang-Su-absorption-September-23-2026	s(\frac14-p)s=0	simple|bare	1	0	$s \( 1 / 4 - p \) s = 0$
+Cuntz-comparison-and-Jiang-Su-absorption-September-23-2026	(\frac14-p)s=0	simple|bare	1	0	$\( 1 / 4 - p \) s = 0$
+Cuntz-comparison-and-Jiang-Su-absorption-September-23-2026	\tfrac12\eta^{-3/2}	simple|bare	1	0	$1 / 2 eta^(- 3 \/ 2)$
+Cutoff-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026	\partial_u\phi_u=\tfrac12\Delta_y\phi_u	simple|bare	1	0	$partial_u phi.alt_u = 1 / 2 Delta_y phi.alt_u$
+Cylinder-amplitudes-and-logarithmic-bridge-length-windows-on-the-honeycomb-lattice-September-26-2026	\tfrac16\mathbb Z	simple|bare	1	0	$1 / 6 bb(Z)$
+Cylinder-loop-weights-and-planar-nesting-September-26-2026	\frac\gamma2(I+R)	simple|bare	1	0	$gamma / 2 \( I + R \)$
+Cylinder-loop-weights-and-planar-nesting-September-26-2026	\tfrac12\cosh(2\beta k)>0	simple|bare	1	0	$1 / 2 cosh \( 2 beta k \) > 0$
+Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-September-23-2026	-\langle\ell,\tau m\rangle+\tfrac12\langle G_y,\tau G_z\rangle	simple|bare	1	0	$- chevron.l ell \, tau m chevron.r + 1 / 2 chevron.l G_y \, tau G_z c
+Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026	(a,\frac43 b)	simple|bare	1	0	$\( a \, 4 / 3 b \)$
+Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026	(\frac43 a,b)	simple|bare	1	0	$\( 4 / 3 a \, b \)$
+Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026	\frac43 b	simple|bare	1	0	$4 / 3 b$
+Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026	\frac43 a	simple|bare	1	0	$4 / 3 a$
+Disk-transfer-representations-and-confined-bridge-mass-September-26-2026	t\in\frac12+\frac32\mathbb Z	simple|bare	2	0	$t in 1 / 2 + 3 / 2 bb(Z)$
+Disk-transfer-representations-and-confined-bridge-mass-September-26-2026	R\in\frac32\mathbb Z_{>0}	simple|bare	1	0	$R in 3 / 2 bb(Z)_(> 0)$
+Disk-transfer-representations-and-confined-bridge-mass-September-26-2026	R\in\frac12+\frac32\mathbb Z	simple|bare	2	0	$R in 1 / 2 + 3 / 2 bb(Z)$
+Electromagnetic-tails-and-the-Kerr-Newman-Penrose-inequality-October-5-2026	(\partial_r+\tfrac12)\mathcal RH=0	simple|bare	1	0	$\( partial_r + 1 / 2 \) cal(R) H = 0$
+Electromagnetic-tails-and-the-Kerr-Newman-Penrose-inequality-October-5-2026	w_r+\tfrac12w=0	simple|bare	1	0	$w_r + 1 / 2 w = 0$
+Endpoint-pointwise-convergence-for-the-Schrodinger-equation-in-higher-dimensions-September-24-2026	\tfrac12R^{c\eta}	simple|bare	1	0	$1 / 2 R^(c eta)$
+Entanglement-with-zero-distillable-secret-key-in-local-dimension-ten-September-27-2026	\frac12\sum_{i=0}^1|i,i\rangle\langle i,i|\otimes\sigma	simple|bare	1	0	$1 / 2 sum_(i = 0)^1 \| i \, i chevron.r chevron.l i \, i \| ⊗ sigma$
+Entropy-and-Face-Dimension-of-the-Perfect-Matching-Polytope-September-23-2026	\frac{d}{dt}H(y(t))=-(\theta+tv)\cdot y'(t)	simple|stacked	0	1	$frac(d, d t) H \( y \( t \) \) = - \( theta + t v \) dot.op y' \( t \
+Entropy-equality-and-local-symmetry-in-negative-curvature-September-23-2026	\theta_0=\tfrac12\iota_R\omega_0	simple|bare	1	0	$theta_0 = 1 / 2 iota_R omega_0$
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	\frac{n-2}{2}<q<n-2	group|stacked	0	1	$frac(n - 2, 2) < q < n - 2$
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	q>\frac12	simple|bare	1	0	$q > 1 / 2$
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	\Phi(x,\Pi)=\frac12\operatorname{tr}_\Pi h	simple|bare	1	0	"$Phi \( x \, Pi \) = 1 / 2 ""tr""_Pi h$"
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	F(a)=\tfrac12(a/\omega)^{(k-1)/k}	simple|bare	1	0	$F \( a \) = 1 / 2 \( a \/ omega \)^(\( k - 1 \) \/ k)$
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	v'=-\tfrac12h^\sharp v	simple|bare	1	0	$v' = - 1 / 2 h^sharp v$
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	\tfrac12\langle d\mathcal T,h\rangle	simple|bare	1	0	$1 / 2 chevron.l d cal(T) \, h chevron.r$
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	v'=-\tfrac12h^\sharp v	simple|bare	1	0	$v' = - 1 / 2 h^sharp v$
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	A_{ab}=\tfrac12\partial_s(g_s)_{ab}	simple|bare	1	0	$A_(a b) = 1 / 2 partial_s \( g_s \)_(a b)$
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	\tfrac12(\partial_iw_j+\partial_jw_i)-\Gamma^l_{ij}w_l=-uK_{ij}	simple|bare	1	0	$1 / 2 \( partial_i w_j + partial_j w_i \) - Gamma_(i j)^l w_l = - u K
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	-\tfrac12\mathfrak h^{ab}\partial_{ab}\mathfrak h_{ij}	simple|bare	1	0	$- 1 / 2 frak(h)^(a b) partial_(a b) frak(h)_(i j)$
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	K=\frac12\mathcal L_n g	simple|bare	1	0	$K = 1 / 2 cal(L)_n g$
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	v'_0=-\tfrac12h^\sharp v	simple|bare	1	0	$v'_0 = - 1 / 2 h^sharp v$
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	\sqrt{E^2-|P|_\delta^2}\ge\frac12(A_*(g)/\omega)^{2/3}	simple|bare	1	0	$sqrt(E^2 - \| P \|_delta^2) gt.eq 1 / 2 \( A_(*) \( g \) \/ omega \)^
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	\dot v=-\tfrac12h^\sharp v	simple|bare	1	0	$dot(v) = - 1 / 2 h^sharp v$
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	\dot v=-\tfrac12h^\sharp v	simple|bare	1	0	$dot(v) = - 1 / 2 h^sharp v$
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	-\tfrac12(\pi:B)g	simple|bare	1	0	$- 1 / 2 \( pi : B \) g$
+Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026	2J(\tfrac12(\mathcal A-\mathcal A^*)v)	simple|bare	1	0	$2 J \( 1 / 2 \( cal(A) - cal(A)^(*) \) v \)$
+Equality-cases-in-the-sharp-one-dimensional-matrix-Lieb-Thirring-inequality-October-5-2026	\beta=\sigma-\tfrac12	simple|bare	1	0	$beta = sigma - 1 / 2$
+Equality-cases-in-the-sharp-one-dimensional-matrix-Lieb-Thirring-inequality-October-5-2026	Q_s\geq\tfrac12s^2I	simple|bare	1	0	$Q_s gt.eq 1 / 2 s^2 I$
+Equality-cases-in-the-sharp-one-dimensional-matrix-Lieb-Thirring-inequality-October-5-2026	\beta=\sigma-\tfrac12	simple|bare	1	0	$beta = sigma - 1 / 2$
+Equality-cases-in-the-sharp-one-dimensional-matrix-Lieb-Thirring-inequality-October-5-2026	\beta=\sigma-\tfrac12	simple|bare	1	0	$beta = sigma - 1 / 2$
+Equality-cases-in-the-sharp-one-dimensional-matrix-Lieb-Thirring-inequality-October-5-2026	-\tfrac12<\beta<\tfrac12	simple|bare	2	0	$- 1 / 2 < beta < 1 / 2$
+Equidistribution-of-Primitive-Quartic-Torus-Packets-for-Arbitrary-Orders-October-5-2026	\left(\frac d p\right)=1	simple|bare	1	0	$(d / p) = 1$
+Equidistribution-of-Primitive-Quartic-Torus-Packets-for-Arbitrary-Orders-October-5-2026	\frac12\mathcal L_{L,r}(z)	simple|bare	1	0	$1 / 2 cal(L)_(L \, r) \( z \)$
+Equidistribution-of-Primitive-Sextic-Torus-Packets-October-5-2026	S(s)-\tfrac12\log D+O(1)	simple|bare	1	0	$S \( s \) - 1 / 2 log D + O \( 1 \)$
+Exact-Birch-Swinnerton-Dyer-Formula-from-Low-Selmer-Corank-October-3-2026	\left(\frac{D}{|D'|}\right)=1	group|stacked	0	1	$(frac(D, \| D' \|)) = 1$
+Exact-Derandomization-of-Logarithmic-Space-L-equals-RL-equals-BPL-September-23-2026	\frac12\log_2(f/u)	simple|bare	1	0	$1 / 2 log_2 \( f \/ u \)$
+Exact-Derandomization-of-Logarithmic-Space-L-equals-RL-equals-BPL-September-23-2026	t-j\geq\tfrac34D-h_\circ	simple|bare	1	0	$t - j gt.eq 3 / 4 D - h_compose$
+Exact-Derandomization-of-Logarithmic-Space-L-equals-RL-equals-BPL-September-23-2026	\widetilde s>\tfrac32\widetilde u	simple|bare	1	0	$tilde(s) > 3 / 2 tilde(u)$
+Exact-asymptotic-moduli-in-a-Daugavet-subspace-of-L1-September-27-2026	\tfrac12m_N(t)\le\widehat\delta_N(t)\le m_N(t)	simple|bare	1	0	$1 / 2 m_N \( t \) lt.eq hat(delta)_N \( t \) lt.eq m_N \( t \)$
+Exact-mass-asymptotics-for-the-two-dimensional-O4-lattice-model-October-5-2026	j\in\frac12\mathbb Z_{\ge0}	simple|bare	1	0	$j in 1 / 2 bb(Z)_(gt.eq 0)$
+Exact-mass-asymptotics-for-the-two-dimensional-O4-lattice-model-October-5-2026	S(y)\sim\frac12e^{-\pi y/2}	simple|bare	1	0	$S \( y \) tilde.op 1 / 2 e^(- pi y \/ 2)$
+Exact-mass-asymptotics-for-the-two-dimensional-O4-lattice-model-October-5-2026	\frac12	simple|bare	1	0	$1 / 2$
+Exact-mass-asymptotics-for-the-two-dimensional-O4-lattice-model-October-5-2026	J=\frac12	simple|bare	1	0	$J = 1 / 2$
+Exact-mass-asymptotics-for-the-two-dimensional-O4-lattice-model-October-5-2026	J=\frac12	simple|bare	1	0	$J = 1 / 2$
+Exact-mass-asymptotics-for-the-two-dimensional-O4-lattice-model-October-5-2026	J+\frac12	simple|bare	1	0	$J + 1 / 2$
+Exact-mass-asymptotics-for-the-two-dimensional-O4-lattice-model-October-5-2026	J-\frac12	simple|bare	1	0	$J - 1 / 2$
+Exact-mass-asymptotics-for-the-two-dimensional-O4-lattice-model-October-5-2026	J=0,\frac12	simple|bare	1	0	$J = 0 \, 1 / 2$
+Exact-mass-asymptotics-for-the-two-dimensional-O4-lattice-model-October-5-2026	\frac12	simple|bare	1	0	$1 / 2$
+Exact-mass-asymptotics-for-the-two-dimensional-O4-lattice-model-October-5-2026	\frac12	simple|bare	1	0	$1 / 2$
+Exact-mass-asymptotics-for-the-two-dimensional-O4-lattice-model-October-5-2026	(q-1,j\pm\tfrac12)	simple|bare	1	0	$\( q - 1 \, j plus.minus 1 / 2 \)$
+Exact-mass-asymptotics-for-the-two-dimensional-O4-lattice-model-October-5-2026	j\otimes\tfrac12	simple|bare	1	0	$j ⊗ 1 / 2$
+Exact-mass-asymptotics-for-the-two-dimensional-O4-lattice-model-October-5-2026	(j\pm\tfrac12)	simple|bare	1	0	$\( j plus.minus 1 / 2 \)$
+Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026	J=\tfrac12(kL+\epsilon H)	simple|bare	1	0	$J = 1 / 2 \( k L + epsilon.alt H \)$
+Existential-universal-real-sentences-in-the-counting-hierarchy-October-4-2026	L_a(\alpha)\ge\tfrac12	simple|bare	1	0	$L_a \( alpha \) gt.eq 1 / 2$
+Existential-universal-real-sentences-in-the-counting-hierarchy-October-4-2026	L_a(\alpha)\le-\tfrac12	simple|bare	1	0	$L_a \( alpha \) lt.eq - 1 / 2$
+Existential-universal-real-sentences-in-the-counting-hierarchy-October-4-2026	L(\alpha)\ge\tfrac12	simple|bare	1	0	$L \( alpha \) gt.eq 1 / 2$
+Existential-universal-real-sentences-in-the-counting-hierarchy-October-4-2026	L(\alpha)\le-\tfrac12	simple|bare	1	0	$L \( alpha \) lt.eq - 1 / 2$
+Exponential-decay-in-two-dimensional-classical-On-models-September-23-2026	\lambda_N\geq\tfrac12\log N	simple|bare	1	0	$lambda_N gt.eq 1 / 2 log N$
+Finite-Circle-Obstructions-Binary-Codes-and-Histogram-Embeddings-for-Edit-Distance-September-27-2026	w=\tfrac12\mathbf1	simple|bare	1	0	$w = 1 / 2 upright(bold(1))$
+Finite-Circle-Obstructions-Binary-Codes-and-Histogram-Embeddings-for-Edit-Distance-September-27-2026	w=\tfrac12\mathbf1	simple|bare	1	0	$w = 1 / 2 upright(bold(1))$
+Finite-Circle-Obstructions-Binary-Codes-and-Histogram-Embeddings-for-Edit-Distance-September-27-2026	\operatorname{TV}(P,Q)=\tfrac12\|P-Q\|_1	simple|bare	1	0	"$""TV"" \( P \, Q \) = 1 / 2 parallel P - Q parallel_1$"
+Finite-Circle-Obstructions-Binary-Codes-and-Histogram-Embeddings-for-Edit-Distance-September-27-2026	a\mapsto\tfrac12e_a	simple|bare	1	0	$a mapsto 1 / 2 e_a$
+Finite-Circle-Obstructions-Binary-Codes-and-Histogram-Embeddings-for-Edit-Distance-September-27-2026	\Phi_1(a)=\tfrac12e_a	simple|bare	1	0	$Phi_1 \( a \) = 1 / 2 e_a$
+Finite-Circle-Obstructions-Binary-Codes-and-Histogram-Embeddings-for-Edit-Distance-September-27-2026	V_0(a)=\tfrac12e_a	simple|bare	1	0	$V_0 \( a \) = 1 / 2 e_a$
+Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026	\frac12-\frac1{80n^2}+O(n^{-4})	simple|bare	1	1	$1 / 2 - frac(1, 80 n^2) + O \( n^(- 4) \)$
+Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026	\frac12-\frac{13}{6000}\alpha^2+O(\alpha^4)	simple|bare	2	0	$1 / 2 - 13 / 6000 alpha^2 + O \( alpha^4 \)$
+Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026	\frac12-\frac{13}{6000n^2}+O(n^{-4})	simple|bare	1	1	$1 / 2 - frac(13, 6000 n^2) + O \( n^(- 4) \)$
+Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026	\frac12-\frac{13}{6000}c^2+O(c^4)	simple|bare	2	0	$1 / 2 - 13 / 6000 c^2 + O \( c^4 \)$
+Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026	\frac12-\frac1{120n^2}+O(n^{-4})	simple|bare	1	1	$1 / 2 - frac(1, 120 n^2) + O \( n^(- 4) \)$
+Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026	\frac12-\frac1{7680n^2}+O(n^{-4})	simple|bare	1	1	$1 / 2 - frac(1, 7680 n^2) + O \( n^(- 4) \)$
+Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026	\frac12-\frac{\lambda^2}{1920}+O(\lambda^4)	group/simple|bare	2	0	$1 / 2 - lambda^2 / 1920 + O \( lambda^4 \)$
+Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026	\frac12-\frac{13}{24000n^2}+O(n^{-4})	simple|bare	1	1	$1 / 2 - frac(13, 24000 n^2) + O \( n^(- 4) \)$
+Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026	\frac1p	simple|bare	1	0	$1 / p$
+Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026	\frac1pP'	simple|bare	1	0	$1 / p P'$
+Finite-triangular-approximation-of-radial-sweeps-September-27-2026	A(u)=\tfrac12\sum_i|u_i|\ge1/\sqrt2	simple|bare	1	0	$A \( u \) = 1 / 2 sum_i \| u_i \| gt.eq 1 \/ sqrt(2)$
+Finite-triangular-approximation-of-radial-sweeps-September-27-2026	\tfrac12\int_I B_k(t)^2\,dt	simple|bare	1	0	$1 / 2 integral_I B_k \( t \)^2 thin d t$
+Fontaine-Mazur-modularity-at-the-prime-2-September-23-2026	\dim L-\tfrac12\sum_v h^1_v	simple|bare	1	0	$dim L - 1 / 2 sum_v h_v^1$
+From-critical-crossings-to-quenched-near-critical-universality-in-Voronoi-percolation-October-5-2026	\theta(t)=\frac2\pi\arctan t	simple|bare	1	0	$theta \( t \) = 2 / pi arctan t$
+From-partial-permutation-information-to-Fourier-bounds-September-26-2026	\frac12\binom{L+b}b\ge4^b/2	simple|bare	1	0	$1 / 2 binom(L + b, b) gt.eq 4^b \/ 2$
+From-partial-permutation-information-to-Fourier-bounds-September-26-2026	D_\lambda\ge\frac12\binom nk\ge\frac12 4^k	simple|bare	2	0	$D_lambda gt.eq 1 / 2 binom(n, k) gt.eq 1 / 2 4^k$
+From-partial-permutation-information-to-Fourier-bounds-September-26-2026	D_\lambda\ge\frac12\binom nk\ge\frac12 4^k	simple|bare	2	0	$D_lambda gt.eq 1 / 2 binom(n, k) gt.eq 1 / 2 4^k$
+From-partial-permutation-information-to-Fourier-bounds-September-26-2026	\frac12\log(17/16)	simple|bare	1	0	$1 / 2 log \( 17 \/ 16 \)$
+From-partial-permutation-information-to-Fourier-bounds-September-26-2026	\frac12\sqrt m\log m	simple|bare	1	0	$1 / 2 sqrt(m) log m$
+From-partial-permutation-information-to-Fourier-bounds-September-26-2026	\frac12m\log2	simple|bare	1	0	$1 / 2 m log 2$
+Fujitas-freeness-conjecture-September-23-2026	\varphi=\tfrac12\log\sum |g_i|^2	simple|bare	1	0	$phi = 1 / 2 log sum \| g_i \|^2$
+Full-support-of-the-zero-temperature-Sherrington-Kirkpatrick-order-parameter-September-27-2026	\Phi(s,Y_s)-\frac12\int_t^s\gamma a^2	simple|bare	1	0	$Phi \( s \, Y_s \) - 1 / 2 integral_t^s gamma a^2$
+Full-support-of-the-zero-temperature-Sherrington-Kirkpatrick-order-parameter-September-27-2026	h_t=-\tfrac12h_{xx}	simple|bare	1	0	$h_t = - 1 / 2 h_(x x)$
+Full-support-of-the-zero-temperature-Sherrington-Kirkpatrick-order-parameter-September-27-2026	g_t=\tfrac12g_{xx}	simple|bare	1	0	$g_t = 1 / 2 g_(x x)$
+Full-support-of-the-zero-temperature-Sherrington-Kirkpatrick-order-parameter-September-27-2026	\tfrac12\Delta	simple|bare	1	0	$1 / 2 Delta$
+Full-support-of-the-zero-temperature-Sherrington-Kirkpatrick-order-parameter-September-27-2026	\tfrac12\partial_{xx}	simple|bare	1	0	$1 / 2 partial_(x x)$
+Full-support-of-the-zero-temperature-Sherrington-Kirkpatrick-order-parameter-September-27-2026	\widehat H_n(x)=\frac12x^{\mathsf T}Ax	simple|bare	1	0	$hat(H)_n \( x \) = 1 / 2 x^(sans(T)) A x$
+Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25-2026	J_e=-\frac12\log a_e\ge0	simple|bare	1	0	$J_e = - 1 / 2 log a_e gt.eq 0$
+Generalized-Star-Height-at-Most-Three-September-25-2026	c_j=(j+\tfrac12)G	simple|bare	1	0	$c_j = \( j + 1 / 2 \) G$
+Generalized-Star-Height-at-Most-Three-September-25-2026	t+(j+\tfrac12)G	simple|bare	1	0	$t + \( j + 1 / 2 \) G$
+Generalized-ionization-energies-for-full-Coulomb-atoms-September-24-2026	T=\frac3{10}(3\pi^2)^{2/3}	simple|bare	1	0	$T = 3 / 10 \( 3 pi^2 \)^(2 \/ 3)$
+Generalized-ionization-energies-for-full-Coulomb-atoms-September-24-2026	\frac37q(q^{-4/3})^{7/4}=\frac37q^{-4/3}	simple|bare	2	0	$3 / 7 q \( q^(- 4 \/ 3) \)^(7 \/ 4) = 3 / 7 q^(- 4 \/ 3)$
+Generic-C1-Future-Inextendibility-Near-Rotating-Subextremal-Kerr-Spacetimes-September-23-2026	\chi_i=\tfrac12\mathcal L_{L_i}\gamma	simple|bare	1	0	$chi_i = 1 / 2 cal(L)_(L_i) gamma$
+Generic-C1-Future-Inextendibility-Near-Rotating-Subextremal-Kerr-Spacetimes-September-23-2026	\mathcal H=\tfrac12g^{-1}(\pi,\pi)	simple|bare	1	0	$cal(H) = 1 / 2 g^(- 1) \( pi \, pi \)$
+Generic-C1-Future-Inextendibility-Near-Rotating-Subextremal-Kerr-Spacetimes-September-23-2026	\mathcal H=-\tfrac12	simple|bare	1	0	$cal(H) = - 1 / 2$
+Generic-C1-Future-Inextendibility-Near-Rotating-Subextremal-Kerr-Spacetimes-September-23-2026	F_j:D_j\to\{\mathcal H=-\tfrac12\}\big|_{\mathcal N_j}	simple|bare	1	0	$F_j : D_j arrow.r { cal(H) = - 1 / 2 } \|_(cal(N)_j)$
+Generic-C1-Future-Inextendibility-Near-Rotating-Subextremal-Kerr-Spacetimes-September-23-2026	\operatorname{tr.rev.}_g h=h-\tfrac12(\operatorname{tr}_g h)g	simple|bare	1	0	"$""tr.rev.""_g h = h - 1 / 2 \( ""tr""_g h \) g$"
+Generic-C1-Future-Inextendibility-Near-Rotating-Subextremal-Kerr-Spacetimes-September-23-2026	\nabla_{L_0}+\tfrac12\tau_0	simple|bare	1	0	$nabla_(L_0) + 1 / 2 tau_0$
+Generic-C1-Future-Inextendibility-Near-Rotating-Subextremal-Kerr-Spacetimes-September-23-2026	\frac12\|z_+-z_-\|_{Y^s}	simple|bare	1	0	$1 / 2 parallel z_(+) - z_(-) parallel_(Y^s)$
+Generic-Future-Inextendibility-with-Square-Integrable-Connection-Near-a-Fixed-Kerr-Spacetime-September-23-2026	\mathcal H=\tfrac12g^{\alpha\beta}\pi_\alpha\pi_\beta	simple|bare	1	0	$cal(H) = 1 / 2 g^(alpha beta) pi_alpha pi_beta$
+Generic-Future-Inextendibility-with-Square-Integrable-Connection-Near-a-Fixed-Kerr-Spacetime-September-23-2026	\mathcal H=-\tfrac12	simple|bare	1	0	$cal(H) = - 1 / 2$
+Generic-Future-Inextendibility-with-Square-Integrable-Connection-Near-a-Fixed-Kerr-Spacetime-September-23-2026	S_i=\chi_i-\tfrac12\tau_i\gamma	simple|bare	1	0	$S_i = chi_i - 1 / 2 tau_i gamma$
+Generic-Future-Inextendibility-with-Square-Integrable-Connection-Near-a-Fixed-Kerr-Spacetime-September-23-2026	-\tfrac12(L_i^k\tau_i)\chi_j	simple|bare	1	0	$- 1 / 2 \( L_i^k tau_i \) chi_j$
+Generic-Future-Inextendibility-with-Square-Integrable-Connection-Near-a-Fixed-Kerr-Spacetime-September-23-2026	\tfrac12 e^{-\alpha T/2}	simple|bare	1	0	$1 / 2 e^(- alpha T \/ 2)$
+Generic-Future-Inextendibility-with-Square-Integrable-Connection-Near-a-Fixed-Kerr-Spacetime-September-23-2026	\bar\chi_1=\chi_1+\tfrac12\partial_vk_\gamma	simple|bare	1	0	$macron(chi)_1 = chi_1 + 1 / 2 partial_v k_gamma$
+Generic-Future-Inextendibility-with-Square-Integrable-Connection-Near-a-Fixed-Kerr-Spacetime-September-23-2026	\tfrac12\widehat g_T^{-1}(\pi,\pi)=-\tfrac12	simple|bare	2	0	$1 / 2 hat(g)_T^(- 1) \( pi \, pi \) = - 1 / 2$
+Generic-Future-Inextendibility-with-Square-Integrable-Connection-Near-a-Fixed-Kerr-Spacetime-September-23-2026	\mathcal H(x,\pi)=\frac12g^{\alpha\beta}(x)\pi_\alpha\pi_\beta	simple|bare	1	0	$cal(H) \( x \, pi \) = 1 / 2 g^(alpha beta) \( x \) pi_alpha pi_beta$
+Generic-Future-Inextendibility-with-Square-Integrable-Connection-Near-a-Fixed-Kerr-Spacetime-September-23-2026	|I_T|=\frac23|J_0|+O(\lambda^{-1})>\frac12|J_0|	simple|bare	2	0	$\| I_T \| = 2 / 3 \| J_0 \| + O \( lambda^(- 1) \) > 1 / 2 \| J_0 \|$
+Geometric-Programs-for-Solenoidal-Forcing-September-27-2026	\partial_s(\tfrac12(s-c)^2\chi(s))	simple|bare	1	0	$partial_s \( 1 / 2 \( s - c \)^2 chi \( s \) \)$
+Geometric-Programs-for-Solenoidal-Forcing-September-27-2026	\partial_s(\tfrac12(s-c)^2\chi(s))	simple|bare	1	0	$partial_s \( 1 / 2 \( s - c \)^2 chi \( s \) \)$
+Global-Spherical-Shells-on-Minimal-Surfaces-of-Class-VII-September-24-2026	1+\tfrac12(e^2-K_Y\cdot e)	simple|bare	1	0	$1 + 1 / 2 \( e^2 - K_Y dot.op e \)$
+Global-Support-and-Convex-Injectivity-Domains-under-Weak-MTW-September-25-2026	E(\alpha)=\tfrac12\int_0^T|\dot\alpha|^2\,d\tau	simple|bare	1	0	$E \( alpha \) = 1 / 2 integral_0^T \| dot(alpha) \|^2 thin d tau$
+Global-classical-solutions-of-the-three-dimensional-relativistic-Vlasov-Maxwell-system-September-23-2026	\tfrac12(\log C)j(s-j)	simple|bare	1	0	$1 / 2 \( log C \) j \( s - j \)$
+Global-classical-solutions-of-the-three-dimensional-relativistic-Vlasov-Maxwell-system-September-23-2026	b_j\le\tfrac12(\log C)j(s-j)	simple|bare	1	0	$b_j lt.eq 1 / 2 \( log C \) j \( s - j \)$
+Graph-Decompositions-at-the-Integral-Expectation-Threshold-October-5-2026	\frac12n^{-2/d}	simple|bare	1	0	$1 / 2 n^(- 2 \/ d)$
+Hilberts-tenth-problem-over-the-rational-numbers-September-24-2026	h_\Theta-\tfrac12h_{\mathrm F}^{\mathrm D}	simple|bare	1	0	$h_Theta - 1 / 2 h_(upright(F))^(upright(D))$
+Incompressible-Box-Transport-and-Finite-Computation-September-27-2026	\frac d{dt}\|w\|_2^2=2\langle w,w_t\rangle	simple|stacked	0	1	$frac(d, d t) parallel w parallel_2^2 = 2 chevron.l w \, w_t chevron.r
+Incompressible-Box-Transport-and-Finite-Computation-September-27-2026	\tfrac18\min(R,g_a,g_b)	simple|bare	1	0	$1 / 8 min \( R \, g_a \, g_b \)$
+Incompressible-Box-Transport-and-Finite-Computation-September-27-2026	\tfrac12\dot C_i\times(x-C_i)+(0,0,(\dot a_i/a_i)(x_1-C_{i1})(x_2-C_{i	simple|bare	1	0	$1 / 2 dot(C)_i times \( x - C_i \) + \( 0 \, 0 \, \( dot(a)_i \/ a_i 
+Irrational-cubic-fourfolds-with-geometric-K3-categories-September-24-2026	\tfrac a2m(m+1)+2m+2	simple|bare	1	0	$a / 2 m \( m + 1 \) + 2 m + 2$
+Lifting-sections-from-the-reduced-support-of-an-adjoint-September-27-2026	\tfrac12\sum_{\ell=0}^{r-1}\operatorname{rk}F_\ell>0	simple|bare	1	0	"$1 / 2 sum_(ell = 0)^(r - 1) ""rk"" F_ell > 0$"
+Localization-costs-and-information-growth-for-exact-Gaussian-observations-September-27-2026	c=1-\tfrac12\log2	simple|bare	1	0	$c = 1 - 1 / 2 log 2$
+Localization-costs-and-information-growth-for-exact-Gaussian-observations-September-27-2026	-\frac{k}{2}\log(2\pi\sigma^2)	simple|bare	1	0	$- k / 2 log \( 2 pi sigma^2 \)$
+Logarithmic-Relative-Fluctuations-in-the-Weakly-Disordered-Planar-Ising-Model-October-5-2026	\beta_0=\tfrac12\log(1+\sqrt2)	simple|bare	1	0	$beta_0 = 1 / 2 log \( 1 + sqrt(2) \)$
+Logarithmic-Relative-Fluctuations-in-the-Weakly-Disordered-Planar-Ising-Model-October-5-2026	K_c=\frac12\log(1+\sqrt2)	simple|bare	1	0	$K_c = 1 / 2 log \( 1 + sqrt(2) \)$
+Logarithmic-Relative-Fluctuations-in-the-Weakly-Disordered-Planar-Ising-Model-October-5-2026	\dd K_e/\dd t=\tfrac12\tanh(2K_e)	simple|bare	1	0	$ⅆ K_e \/ ⅆ t = 1 / 2 tanh \( 2 K_e \)$
+Marked-polygon-correlations-and-one-arc-bounds-September-26-2026	-\frac12\log|\det T|	simple|bare	1	0	$- 1 / 2 log \| det T \|$
+Marked-polygon-correlations-and-one-arc-bounds-September-26-2026	J_{N_g}=\exp(-\tfrac14\log(N_g+1)+O(1))	simple|bare	1	0	$J_(N_g) = exp \( - 1 / 4 log \( N_g + 1 \) + O \( 1 \) \)$
+Marked-polygon-correlations-and-one-arc-bounds-September-26-2026	\tfrac12\sum_t|\Re y_t|	simple|bare	1	0	$1 / 2 sum_t \| Re y_t \|$
+Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September-26-2026	q\ge\tfrac12n^{-\delta/2}m_0	simple|bare	1	0	$q gt.eq 1 / 2 n^(- delta \/ 2) m_0$
+Metric-measure-limits-of-subcritical-FK-and-spanning-tree-planar-maps-September-24-2026	-\tfrac12\Delta v=1	simple|bare	1	0	$- 1 / 2 Delta v = 1$
+Metric-measure-limits-of-subcritical-FK-and-spanning-tree-planar-maps-September-24-2026	\exp\{W_f(h)+\tfrac12\|f\|_{\mathcal H}^2\}	simple|bare	1	0	$exp { W_f \( h \) + 1 / 2 parallel f parallel_(cal(H))^2 }$
+Metric-measure-limits-of-subcritical-FK-and-spanning-tree-planar-maps-September-24-2026	(M_*/m_*)4^{-mp}<\tfrac12 4^{-ms}	simple|bare	1	0	$\( M_(*) \/ m_(*) \) 4^(- m p) < 1 / 2 4^(- m s)$
+Metric-measure-limits-of-subcritical-FK-and-spanning-tree-planar-maps-September-24-2026	\tfrac12 I_2	simple|bare	1	0	$1 / 2 I_2$
+Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026	-\frac12\log b+z_i^2/(2b)	simple|bare	1	0	$- 1 / 2 log b + z_i^2 \/ \( 2 b \)$
+Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026	\mathcal D=\partial_t+\frac12\partial_{zz}+mF_z\partial_z	simple|bare	1	0	$cal(D) = partial_t + 1 / 2 partial_(z z) + m F_z partial_z$
+Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026	u(z)=-\frac\beta2(-1-z)_+^2	simple|bare	1	0	$u \( z \) = - beta / 2 \( - 1 - z \)_(+)^2$
+Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026	\frac\beta2(r-L)_+^2	simple|bare	1	0	$beta / 2 \( r - L \)_(+)^2$
+Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026	\frac12\log\eta+B_0\sup w+o(1)	simple|bare	1	0	$1 / 2 log eta + B_0 sup w + o \( 1 \)$
+Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026	\frac N2\log(1-t)	simple|bare	1	0	$N / 2 log \( 1 - t \)$
+Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026	-\frac12\int(r_f-q)p	simple|bare	1	0	$- 1 / 2 integral \( r_f - q \) p$
+Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026	(\partial_s+\frac12\partial_{zz}+ma\partial_z)c=-3mf_{zz}c	simple|bare	1	0	$\( partial_s + 1 / 2 partial_(z z) + m a partial_z \) c = - 3 m f_(z 
+Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026	2K_0\delta\leq\frac12\sqrt{p/2}	simple|bare	1	0	$2 K_0 delta lt.eq 1 / 2 sqrt(p \/ 2)$
+Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026	b_t+\tfrac12b_{hh}+\gamma_n a_n b_h+\gamma_n b^2=0	simple|bare	1	0	$b_t + 1 / 2 b_(h h) + gamma_n a_n b_h + gamma_n b^2 = 0$
+Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026	d_t+\tfrac12d_{hh}+\gamma_n a_n d_h+3\gamma_n b d=0	simple|bare	1	0	$d_t + 1 / 2 d_(h h) + gamma_n a_n d_h + 3 gamma_n b d = 0$
+Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026	q_n\pm\tfrac12\int_t^1s_n	simple|bare	1	0	$q_n plus.minus 1 / 2 integral_t^1 s_n$
+Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026	S(s)=\tfrac12\int_0^1s	simple|bare	1	0	$S \( s \) = 1 / 2 integral_0^1 s$
+Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026	\mathcal L=\tfrac12\partial_z^2+B\partial_z	simple|bare	1	0	$cal(L) = 1 / 2 partial_z^2 + B partial_z$
+Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026	\tfrac12R^2W^2R_{kk}+(R^2WW_k-At_k)R_k	simple|bare	1	0	$1 / 2 R^2 W^2 R_(k k) + \( R^2 W W_k - A t_k \) R_k$
+Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026	\tfrac12(V_i+CW_0)CW_{0,kk}\le0	simple|bare	1	0	$1 / 2 \( V_i + C W_0 \) C W_(0 \, k k) lt.eq 0$
+Midpoint-convexity-from-bounded-tree-potentials-and-path-costs-September-27-2026	\tfrac12(1-\sum_i(p_i^A)^2)	simple|bare	1	0	$1 / 2 \( 1 - sum_i \( p_i^A \)^2 \)$
+Midpoint-convexity-from-two-recursive-potentials-September-27-2026	H_1(p)=\tfrac12\log p	simple|bare	1	0	$H_1 \( p \) = 1 / 2 log p$
+Midpoint-convexity-from-two-recursive-potentials-September-27-2026	H_2(p)=\tfrac12\log(1-p)	simple|bare	1	0	$H_2 \( p \) = 1 / 2 log \( 1 - p \)$
+Milnes-rationality-conjecture-for-abelian-varieties-September-23-2026	\frac12\dim D	simple|bare	1	0	$1 / 2 dim D$
+Natural-Occupation-Measures-for-Critical-Square-Lattice-FK-Interfaces-October-5-2026	Ca^{c_1}<\tfrac12 c_\delta\theta^x a^\delta	simple|bare	1	0	$C a^(c_1) < 1 / 2 c_delta theta^x a^delta$
+Near-square-root-logarithmic-integrality-gaps-for-uniform-sparsest-cut-September-24-2026	\|\mu-w\|_{\mathrm{TV}}=\frac12\sum_v|\mu_v-w_v|	simple|bare	1	0	"$parallel mu - w parallel_(upright(""TV"")) = 1 / 2 sum_v \| mu_v - w_v "
+Nearly-minimal-maxima-and-positive-minima-of-Littlewood-polynomials-October-5-2026	\mu=\frac12\sum_k(1-|X_k|)	simple|bare	1	0	$mu = 1 / 2 sum_k \( 1 - \| X_k \| \)$
+Nonhomeomorphic-closed-aspherical-four-manifolds-with-the-same-homotopy-type-October-4-2026	ds+\tfrac12[s,s]	simple|bare	1	0	$d s + 1 / 2 \[ s \, s \]$
+Nonsingular-systems-of-equations-over-arbitrary-groups-October-5-2026	f'(e^{2\pi it})=\frac{d}{dt}f(e^{2\pi it})	simple|stacked	0	1	$f' \( e^(2 pi i t) \) = frac(d, d t) f \( e^(2 pi i t) \)$
+Nonsingular-systems-of-equations-over-arbitrary-groups-October-5-2026	\|\frac{d}{du}W_u^k\|\leq2\pi|k|\|D\|	simple|stacked	0	1	$parallel frac(d, d u) W_u^k parallel lt.eq 2 pi \| k \| parallel D pa
+Nonuniqueness-of-percolation-on-nonamenable-quasi-transitive-graphs-September-24-2026	s=\tfrac12+\epsilon	simple|bare	1	0	$s = 1 / 2 + epsilon.alt$
+One-sided-negative-sectional-curvature-and-the-holomorphic-Liouville-property-September-25-2026	y-\zeta_j=-\tfrac12 e^{m_0c}\overline{b_v}	simple|bare	1	0	$y - zeta_j = - 1 / 2 e^(m_0 c) overline(b_v)$
+One-sided-negative-sectional-curvature-and-the-holomorphic-Liouville-property-September-25-2026	-\tfrac12\alpha e^{m_0c}	simple|bare	1	0	$- 1 / 2 alpha e^(m_0 c)$
+Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026	D=\frac25(P_1+\cdots+P_5)	simple|bare	1	0	$D = 2 / 5 \( P_1 + dots.h.c + P_5 \)$
+Ordinary-two-point-correlations-of-multiplicative-functions-September-24-2026	\lfloor T_j\rfloor\ge\exp(\tfrac12L^A)	simple|bare	1	0	$floor.l T_j floor.r gt.eq exp \( 1 / 2 L^A \)$
+Ordinary-two-point-correlations-of-multiplicative-functions-September-24-2026	\exp(\tfrac12L^A)	simple|bare	1	0	$exp \( 1 / 2 L^A \)$
+Ordinary-two-point-correlations-of-multiplicative-functions-September-24-2026	(\tfrac12+o(1))L^{203/200}	simple|bare	1	0	$\( 1 / 2 + o \( 1 \) \) L^(203 \/ 200)$
+Ordinary-two-point-correlations-of-multiplicative-functions-September-24-2026	\frac13\sqrt{\log\log X}-O_\chi(1)	simple|bare	1	0	$1 / 3 sqrt(log log X) - O_chi \( 1 \)$
+Path-selection-and-an-elliptic-inequality-on-degenerating-Ricci-flat-trees-September-24-2026	-\frac12g^{ab}\partial_a\partial_bg_{ij}	simple|bare	1	0	$- 1 / 2 g^(a b) partial_a partial_b g_(i j)$
+Planar-Graph-Metrics-Embed-into-L1-with-Constant-Distortion-September-23-2026	8R+E_A+\epsilon+a_1<\tfrac12\,10^{-5}	simple|bare	1	0	$8 R + E_A + epsilon.alt + a_1 < 1 / 2 thin 10^(- 5)$
+Polynomial-PEPS-approximation-of-gapped-square-grid-ground-states-September-24-2026	\tfrac12L^{-a}	simple|bare	1	0	$1 / 2 L^(- a)$
+Polynomial-PEPS-approximation-of-gapped-square-grid-ground-states-September-24-2026	(i+\tfrac12,j+\tfrac12)	simple|bare	2	0	$\( i + 1 / 2 \, j + 1 / 2 \)$
+Positive-eigenvalues-of-the-relative-SU-2-BFSS-Hamiltonian-October-5-2026	h_r=\frac r2(-\Delta_\xi+|\xi|^2)	simple|bare	1	0	$h_r = r / 2 \( - Delta_xi + \| xi \|^2 \)$
+Positive-scalar-curvature-and-uniform-codimension-two-width-September-23-2026	b_*\le\tfrac12\log(1+s^2)\le\log(1+s)\le\sqrt s	simple|bare	1	0	$b_(*) lt.eq 1 / 2 log \( 1 + s^2 \) lt.eq log \( 1 + s \) lt.eq sqrt(
+Positive-scalar-curvature-and-uniform-codimension-two-width-September-23-2026	-\tfrac12\log([1+(1-a^2)s^2]/[1+s^2])	simple|bare	1	0	$- 1 / 2 log \( \[ 1 + \( 1 - a^2 \) s^2 \] \/ \[ 1 + s^2 \] \)$
+Positive-scalar-curvature-and-uniform-codimension-two-width-September-23-2026	L_Ab=e^{-a(t-T)}(1-Ca^2s_B)\ge\tfrac12e^{-a(t-T)}	simple|bare	1	0	$L_A b = e^(- a \( t - T \)) \( 1 - C a^2 s_B \) gt.eq 1 / 2 e^(- a \(
+Positive-scalar-curvature-and-uniform-codimension-two-width-September-23-2026	v_A\ge\tfrac34\inf s_A>0	simple|bare	1	0	$v_A gt.eq 3 / 4 inf s_A > 0$
+Positively-curved-Einstein-four-manifolds-September-23-2026	-\frac12\sum_s t_s I_s(\,\cdot\,)I_s	simple|bare	1	0	$- 1 / 2 sum_s t_s I_s \( thin dot.op thin \) I_s$
+Positively-curved-Einstein-four-manifolds-September-23-2026	\dfrac{9a_0}{48}f(u)(1-u^2/2)S(\min(u,1-u))^3	simple|stacked	0	1	$frac(9 a_0, 48) f \( u \) \( 1 - u^2 \/ 2 \) S \( min \( u \, 1 - u \
+Positively-curved-Einstein-four-manifolds-September-23-2026	\bar M=1-\frac38(b-v)	simple|bare	1	0	$macron(M) = 1 - 3 / 8 \( b - v \)$
+Positively-curved-Einstein-four-manifolds-September-23-2026	\dfrac h3\mathbf E[\delta(|Y|^2+|\bar Y|^2)]\ge0	simple|bare	1	0	$h / 3 upright(bold(E)) \[ delta \( \| Y \|^2 + \| macron(Y) \|^2 \) \
+Positively-curved-Einstein-four-manifolds-September-23-2026	\frac h3\mathbf E[\delta(|Y|^2+|\bar Y|^2)]	simple|bare	1	0	$h / 3 upright(bold(E)) \[ delta \( \| Y \|^2 + \| macron(Y) \|^2 \) \
+Positively-curved-Einstein-four-manifolds-September-23-2026	dm=-\frac34M(p-q)	simple|bare	1	0	$d m = - 3 / 4 M \( p - q \)$
+Positively-curved-Einstein-four-manifolds-September-23-2026	\frac12\sqrt{3/5}\,Mz e^{3/2}	simple|bare	1	0	$1 / 2 sqrt(3 \/ 5) thin M z e^(3 \/ 2)$
+Positively-curved-Einstein-four-manifolds-September-23-2026	\dfrac{a_0^3}{27}u^2(u^4/2+u^6/3)S(\min(u,1-u))	group|bare	1	0	$a_0^3 / 27 u^2 \( u^4 \/ 2 + u^6 \/ 3 \) S \( min \( u \, 1 - u \) \)
+Positively-curved-Einstein-four-manifolds-September-23-2026	\frac14\int_0^1s^2\,ds=\frac1{12}	simple|bare	2	0	$1 / 4 integral_0^1 s^2 thin d s = 1 / 12$
+Positively-curved-Einstein-four-manifolds-September-23-2026	\sum_i\partial_iA_i(0)=\frac12\sum_i\Omega_{ii}(0)=0	simple|bare	1	0	$sum_i partial_i A_i \( 0 \) = 1 / 2 sum_i Omega_(i i) \( 0 \) = 0$
+Positively-curved-Einstein-four-manifolds-September-23-2026	U_2(0)=-\frac12(LU_1)(0)	simple|bare	1	0	$U_2 \( 0 \) = - 1 / 2 \( L U_1 \) \( 0 \)$
+Posterior-replicas-and-conditional-information-in-Gaussian-regression-September-27-2026	\tfrac12|\log\det(AA^{\mathsf T})|	simple|bare	1	0	$1 / 2 \| log det \( A A^(sans(T)) \) \|$
+Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026	\tfrac12c_{\mathrm p}\nu^2	simple|bare	1	0	$1 / 2 c_(upright(p)) nu^2$
+Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026	\mathcal D\ge\tfrac12 k^{-1000}W^2>0	simple|bare	1	0	$cal(D) gt.eq 1 / 2 k^(- 1000) W^2 > 0$
+Prefix-Instructions-and-Incompressible-Flows-September-27-2026	\frac d{dt}\|w\|_2^2=2\langle w,w_t\rangle	simple|stacked	0	1	$frac(d, d t) parallel w parallel_2^2 = 2 chevron.l w \, w_t chevron.r
+Prefix-Instructions-and-Incompressible-Flows-September-27-2026	\epsilon=\tfrac12\min(m_0,d_1/\lambda,d_2/(4\lambda))	simple|bare	1	0	$epsilon.alt = 1 / 2 min \( m_0 \, d_1 \/ lambda \, d_2 \/ \( 4 lambda
+Prime-Predecessors-with-an-Even-Number-of-Prime-Factors-September-17-2026	1\le|v|\le\tfrac52x^3	simple|bare	1	0	$1 lt.eq \| v \| lt.eq 5 / 2 x^3$
+Product-projection-localization-and-the-QAC0-parity-lower-bound-September-24-2026	1-\tfrac12 n^{-\delta}	simple|bare	1	0	$1 - 1 / 2 n^(- delta)$
+Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere-September-23-2026	\int c(t)\frac{d}{dt}f(a(t))\,dt=0	simple|stacked	0	1	$integral c \( t \) frac(d, d t) f \( a \( t \) \) thin d t = 0$
+Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere-September-23-2026	\tfrac12	simple|bare	1	0	$1 / 2$
+Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere-September-23-2026	\tfrac12(d\varphi^2+\sin^2\varphi\,d\theta_y^2)	simple|bare	1	0	$1 / 2 \( d phi^2 + sin^2 phi thin d theta_y^2 \)$
+Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere-September-23-2026	\frac12\zeta^2|\nabla_a\Phi|^2+2|d\zeta|^2|\Phi|^2	simple|bare	1	0	$1 / 2 zeta^2 \| nabla_a Phi \|^2 + 2 \| d zeta \|^2 \| Phi \|^2$
+Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere-September-23-2026	\frac12\|r\|_2^2+c_*\|e\|_2^2	simple|bare	1	0	$1 / 2 parallel r parallel_2^2 + c_(*) parallel e parallel_2^2$
+Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere-September-23-2026	\frac14-\kappa_N	simple|bare	1	0	$1 / 4 - kappa_N$
+Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere-September-23-2026	\kappa_N=\frac14+h	simple|bare	1	0	$kappa_N = 1 / 4 + h$
+Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere-September-23-2026	-\frac12\sum_{i\in I}h_i^2	simple|bare	1	0	$- 1 / 2 sum_(i in I) h_i^2$
+Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere-September-23-2026	\frac14+j	simple|bare	1	0	$1 / 4 + j$
+Quantitative-Near-Kerr-Evolution-and-Generic-C2-Future-Inextendibility-September-23-2026	\tfrac12Jd\,\operatorname{curl}\xi_j	simple|bare	1	0	"$1 / 2 J d thin ""curl"" xi_j$"
+Quantitative-Near-Kerr-Evolution-and-Generic-C2-Future-Inextendibility-September-23-2026	\chi_i=\tfrac12\mathcal L_{L_i}\gamma	simple|bare	1	0	$chi_i = 1 / 2 cal(L)_(L_i) gamma$
+Quantitative-Near-Kerr-Evolution-and-Generic-C2-Future-Inextendibility-September-23-2026	\epsilon(R_0)\sum_k a_k\le\frac14\min_k a_k	simple|bare	1	0	$epsilon.alt \( R_0 \) sum_k a_k lt.eq 1 / 4 min_k a_k$
+Quantum-Depletion-and-Momentum-Distribution-in-the-Dilute-Hard-Sphere-Bose-Gas-October-5-2026	\frac{8}{3\sqrt\pi}\sqrt{\rho a^3}+o(\sqrt{\rho a^3})	group|stacked	0	1	$frac(8, 3 sqrt(pi)) sqrt(rho a^3) + o \( sqrt(rho a^3) \)$
+Quantum-Depletion-for-Fixed-Bounded-Repulsive-Potentials-October-5-2026	\frac{8}{3\sqrt\pi}\sqrt{\rho a^3}+o(\sqrt{\rho a^3})	group|stacked	0	1	$frac(8, 3 sqrt(pi)) sqrt(rho a^3) + o \( sqrt(rho a^3) \)$
+Quenched-SLE-Universality-for-Weakly-Disordered-FK-Ising-Interfaces-October-5-2026	K_0=\frac12\log(1+\sqrt2)	simple|bare	1	0	$K_0 = 1 / 2 log \( 1 + sqrt(2) \)$
+Quenched-SLE-Universality-for-Weakly-Disordered-FK-Ising-Interfaces-October-5-2026	\theta=\frac12\log(v_+/v_-)	simple|bare	1	0	$theta = 1 / 2 log \( v_(+) \/ v_(-) \)$
+Quenched-SLE3-Universality-for-the-Weak-Random-Bond-Ising-Model-October-5-2026	K_0=\tfrac12\log(1+\sqrt2)	simple|bare	1	0	$K_0 = 1 / 2 log \( 1 + sqrt(2) \)$
+Quenched-SLE3-Universality-for-the-Weak-Random-Bond-Ising-Model-October-5-2026	K_0=\frac12\log(1+\sqrt2)	simple|bare	1	0	$K_0 = 1 / 2 log \( 1 + sqrt(2) \)$
+Quenched-SLE3-Universality-for-the-Weak-Random-Bond-Ising-Model-October-5-2026	h=(\pm\frac12,\pm\frac12)	simple|bare	2	0	$h = \( plus.minus 1 / 2 \, plus.minus 1 / 2 \)$
+Quenched-SLE3-limits-for-general-weak-random-bond-Ising-models-October-5-2026	K_0=\tfrac12\log(1+\sqrt2)	simple|bare	1	0	$K_0 = 1 / 2 log \( 1 + sqrt(2) \)$
+Quenched-SLE3-limits-for-general-weak-random-bond-Ising-models-October-5-2026	\beta_c^\rho(\varepsilon)=\tfrac12\log(1+\sqrt2)+O_\rho(\varepsilon^2)	simple|bare	1	0	$beta_c^rho \( epsilon \) = 1 / 2 log \( 1 + sqrt(2) \) + O_rho \( eps
+Random-coordinate-frames-and-partial-permutation-laws-September-26-2026	\frac12(p_t(x)-p_t(y))^2	simple|bare	1	0	$1 / 2 \( p_t \( x \) - p_t \( y \) \)^2$
+Random-coordinate-frames-and-partial-permutation-laws-September-26-2026	n^{3/2}e^{-2d}=\exp((\tfrac32\log2-2)d)\to0	simple|bare	1	0	$n^(3 \/ 2) e^(- 2 d) = exp \( \( 3 / 2 log 2 - 2 \) d \) arrow.r 0$
+Random-coordinate-frames-and-partial-permutation-laws-September-26-2026	\tfrac12\sqrt{n_jE_{j,T}}	simple|bare	1	0	$1 / 2 sqrt(n_j E_(j \, T))$
+Random-subspace-tests-and-trace-smoothing-for-coordinate-sweeps-September-26-2026	\frac12n^{-5}	simple|bare	1	0	$1 / 2 n^(- 5)$
+Random-subspace-tests-and-trace-smoothing-for-coordinate-sweeps-September-26-2026	\frac12n^{-5}	simple|bare	1	0	$1 / 2 n^(- 5)$
+Random-subspace-tests-and-trace-smoothing-for-coordinate-sweeps-September-26-2026	\|\mu-\nu\|_{\rm TV}=\tfrac12\sum_g|\mu(g)-\nu(g)|	simple|bare	1	0	"$parallel mu - nu parallel_(upright(""TV"")) = 1 / 2 sum_g \| mu \( g \)"
+Random-subspace-tests-and-trace-smoothing-for-coordinate-sweeps-September-26-2026	\|\mu_v-U_{S_n}\|_{\rm TV}\le\tfrac12\|Q_n^v-\Pi\|_{\rm HS}\le\tfrac12	simple|bare	2	0	"$parallel mu_v - U_(S_n) parallel_(upright(""TV"")) lt.eq 1 / 2 parallel"
+Rationality-of-the-Canonical-Unramified-Arthur-Filtration-September-24-2026	\mathcal O_X(\tfrac12\operatorname{div}(da))	simple|bare	1	0	"$cal(O)_X \( 1 / 2 ""div"" \( d a \) \)$"
+Rationality-of-the-Canonical-Unramified-Arthur-Filtration-September-24-2026	\tfrac12[x,x]	simple|bare	1	0	$1 / 2 \[ x \, x \]$
+Rationality-of-the-Canonical-Unramified-Arthur-Filtration-September-24-2026	\frac12\langle ex,x\rangle	simple|bare	1	0	$1 / 2 chevron.l e x \, x chevron.r$
+Relative-independence-of-the-separable-quotient-problem-September-23-2026	\frac{2000}{7}L^{1/s}\theta_J=\frac{2000}{7}L/m_J	simple|bare	2	0	$2000 / 7 L^(1 \/ s) theta_J = 2000 / 7 L \/ m_J$
+Routing-densities-and-representation-contraction-for-Thorp-sweeps-September-26-2026	L=\frac12\log_2m	simple|bare	1	0	$L = 1 / 2 log_2 m$
+Routing-densities-and-representation-contraction-for-Thorp-sweeps-September-26-2026	L=\frac12\log_2m	simple|bare	1	0	$L = 1 / 2 log_2 m$
+Routing-densities-and-representation-contraction-for-Thorp-sweeps-September-26-2026	\frac12(\sum_i\lambda_i^2+\sum_j(\lambda'_j)^2)\le an	simple|bare	1	0	$1 / 2 \( sum_i lambda_i^2 + sum_j \( lambda'_j \)^2 \) lt.eq a n$
+Routing-densities-and-representation-contraction-for-Thorp-sweeps-September-26-2026	L=\frac12\log_2D	simple|bare	1	0	$L = 1 / 2 log_2 D$
+Routing-densities-and-representation-contraction-for-Thorp-sweeps-September-26-2026	H_n(\ell)\ge\tfrac12h_n(r)	simple|bare	1	0	$H_n \( ell \) gt.eq 1 / 2 h_n \( r \)$
+Routing-densities-and-representation-contraction-for-Thorp-sweeps-September-26-2026	h_n(r)\ge\frac12r\log n	simple|bare	1	0	$h_n \( r \) gt.eq 1 / 2 r log n$
+Row-column-symmetry-and-contraction-of-coordinate-sweeps-September-26-2026	\|\mu-\nu\|_{\rm TV}=\tfrac12\sum_g|\mu(g)-\nu(g)|	simple|bare	1	0	"$parallel mu - nu parallel_(upright(""TV"")) = 1 / 2 sum_g \| mu \( g \)"
+Row-column-symmetry-and-contraction-of-coordinate-sweeps-September-26-2026	0\le J(\lambda)\le\frac14\log D_\lambda	simple|bare	1	0	$0 lt.eq J \( lambda \) lt.eq 1 / 4 log D_lambda$
+SLE3-universality-for-weak-finite-range-Ising-interactions-September-23-2026	\tfrac12c_b n^{-7/8+\eta}	simple|bare	1	0	$1 / 2 c_b n^(- 7 \/ 8 + eta)$
+SLE3-universality-for-weak-finite-range-Ising-interactions-September-23-2026	\frac12\min_i\tau_i	simple|bare	1	0	$1 / 2 min_i tau_i$
+Scalar-Potentials-and-Slow-Clocks-for-Forced-Fluid-Computation-September-27-2026	\int_0^1\sigma(2t-1)\,dt=\frac12\int_0^1\sigma(v)\,dv=1/4	simple|bare	1	0	$integral_0^1 sigma \( 2 t - 1 \) thin d t = 1 / 2 integral_0^1 sigma 
+Self-dual-random-cluster-interfaces-below-one-September-23-2026	\frac{v}{1+v}\mu_H^a(N_I>0)	group|stacked	0	1	$frac(v, 1 + v) mu_H^a \( N_I > 0 \)$
+Self-dual-random-cluster-interfaces-below-one-September-23-2026	m+\tfrac12	simple|bare	1	0	$m + 1 / 2$
+Self-dual-random-cluster-interfaces-below-one-September-23-2026	2m-\tfrac12	simple|bare	1	0	$2 m - 1 / 2$
+Self-dual-random-cluster-interfaces-below-one-September-23-2026	\tfrac12\log r(u)	simple|bare	1	0	$1 / 2 log r \( u \)$
+Sharp-One-Dimensional-Lieb-Thirring-Constants-September-23-2026	\frac12<\gamma<\frac32	simple|bare	2	0	$1 / 2 < gamma < 3 / 2$
+Sharp-One-Dimensional-Lieb-Thirring-Constants-September-23-2026	\beta=\sigma-\tfrac12\in(-\tfrac12,\tfrac12)	simple|bare	3	0	$beta = sigma - 1 / 2 in \( - 1 / 2 \, 1 / 2 \)$
+Sharp-binary-information-contraction-on-the-discrete-cube-September-24-2026	H(r)=L-\frac12\log(1-r^2)-rV(r)	simple|bare	1	0	$H \( r \) = L - 1 / 2 log \( 1 - r^2 \) - r V \( r \)$
+Sharp-binary-information-contraction-on-the-discrete-cube-September-24-2026	0<\beta_t\le\beta_0=\frac32(L-\frac12)	simple|bare	2	0	$0 < beta_t lt.eq beta_0 = 3 / 2 \( L - 1 / 2 \)$
+Sharp-binary-information-contraction-on-the-discrete-cube-September-24-2026	F(L-h)\sim\tfrac12\log(1/h)	simple|bare	1	0	$F \( L - h \) tilde.op 1 / 2 log \( 1 \/ h \)$
+Sharp-binary-information-contraction-on-the-discrete-cube-September-24-2026	V(s)\sim\tfrac12\log(1/h)	simple|bare	1	0	$V \( s \) tilde.op 1 / 2 log \( 1 \/ h \)$
+Sharp-integral-fillings-in-CAT(0)-spaces-September-23-2026	H'\mapsto\tfrac12\operatorname{tr}H'	simple|bare	1	0	"$H' mapsto 1 / 2 ""tr"" H'$"
+Sharp-integral-fillings-in-CAT(0)-spaces-September-23-2026	2b-2b^2=\tfrac12-2(b-\tfrac12)^2\leq\tfrac12	simple|bare	3	0	$2 b - 2 b^2 = 1 / 2 - 2 \( b - 1 / 2 \)^2 lt.eq 1 / 2$
+Sharp-mass-bounds-for-the-two-dimensional-O4-model-September-23-2026	\frac\beta2\sum_{\langle xy\rangle}|\sigma_x-\sigma_y|^2	simple|bare	1	0	$beta / 2 sum_(chevron.l x y chevron.r) \| sigma_x - sigma_y \|^2$
+Sharp-mass-bounds-for-the-two-dimensional-O4-model-September-23-2026	-\frac18\sum_{xy}K_{xy}:R_xR_y:	simple|bare	1	0	$- 1 / 8 sum_(x y) K_(x y) : R_x R_y :$
+Sharp-mass-bounds-for-the-two-dimensional-O4-model-September-23-2026	\frac12\sum b(p\cdot q)\|A\|_{\mathrm{HS}}^2	simple|bare	1	0	"$1 / 2 sum b \( p dot.op q \) parallel A parallel_(upright(""HS""))^2$"
+Sharp-nodal-length-on-smooth-surfaces-September-23-2026	-\tfrac12+nA^{-m}	simple|bare	1	0	$- 1 / 2 + n A^(- m)$
+Sharp-one-dimensional-Lieb-Thirring-inequalities-for-matrix-potentials-October-5-2026	\beta=\sigma-\tfrac12\in(-\tfrac12,\tfrac12)	simple|bare	3	0	$beta = sigma - 1 / 2 in \( - 1 / 2 \, 1 / 2 \)$
+Sharp-one-dimensional-Lieb-Thirring-inequalities-for-matrix-potentials-October-5-2026	\beta+\tfrac12=\sigma	simple|bare	1	0	$beta + 1 / 2 = sigma$
+Sharp-one-dimensional-Lieb-Thirring-inequalities-for-matrix-potentials-October-5-2026	\sigma=\gamma-\tfrac12	simple|bare	1	0	$sigma = gamma - 1 / 2$
+Short-Egyptian-fractions-September-25-2026	r\ge\tfrac12\exp(k/(2B))	simple|bare	1	0	$r gt.eq 1 / 2 exp \( k \/ \( 2 B \) \)$
+Signed-cylinder-propagation-and-marked-polygons-on-the-honeycomb-lattice-September-26-2026	N\in\frac12\mathbb N_0	simple|bare	1	0	$N in 1 / 2 bb(N)_0$
+Signed-cylinder-propagation-and-marked-polygons-on-the-honeycomb-lattice-September-26-2026	K=\frac12\sum_n\mathsf A_n(h_{1,n}-h_{2,n})	simple|bare	1	0	$K = 1 / 2 sum_n sans(A)_n \( h_(1 \, n) - h_(2 \, n) \)$
+Signed-cylinder-propagation-and-marked-polygons-on-the-honeycomb-lattice-September-26-2026	\tfrac12+\mathbb Z	simple|bare	1	0	$1 / 2 + bb(Z)$
+Signed-cylinder-propagation-and-marked-polygons-on-the-honeycomb-lattice-September-26-2026	\exp(\tfrac12\int_T\mathsf A D\mathsf A)	simple|bare	1	0	$exp \( 1 / 2 integral_T sans(A) D sans(A) \)$
+Signed-cylinder-propagation-and-marked-polygons-on-the-honeycomb-lattice-September-26-2026	\exp(\tfrac12\sum_{i,l}r_i^tK_T(w_l-w_i)r_l)	simple|bare	1	0	$exp \( 1 / 2 sum_(i \, l) r_i^t K_T \( w_l - w_i \) r_l \)$
+Signed-tensor-densities-and-diagram-budgets-for-coordinate-sweeps-September-26-2026	\frac2n\log_2(3n!/4)=2d-2\log_2 e+o(1)	simple|bare	1	0	$2 / n log_2 \( 3 n ! \/ 4 \) = 2 d - 2 log_2 e + o \( 1 \)$
+Signed-tensor-densities-and-diagram-budgets-for-coordinate-sweeps-September-26-2026	\mathcal D_d(\lambda)\le\tfrac14\log D_\lambda	simple|bare	1	0	$cal(D)_d \( lambda \) lt.eq 1 / 4 log D_lambda$
+Signed-tensor-densities-and-diagram-budgets-for-coordinate-sweeps-September-26-2026	\tfrac12((k-M)\log(n/k)-C_1)_+	simple|bare	1	0	$1 / 2 \( \( k - M \) log \( n \/ k \) - C_1 \)_(+)$
+Signed-tensor-densities-and-diagram-budgets-for-coordinate-sweeps-September-26-2026	\mathcal D_d(\lambda)\le\frac14\log D_\lambda	simple|bare	1	0	$cal(D)_d \( lambda \) lt.eq 1 / 4 log D_lambda$
+Simultaneous-primitive-roots-a-conditional-lower-bound-for-prime-bases-October-4-2026	\frac1{j!}(t_1\cdots t_j)^{-1}\dd t_1\cdots\dd t_{j-1}	simple|stacked	0	1	$frac(1, j !) \( t_1 dots.h.c t_j \)^(- 1) ⅆ t_1 dots.h.c ⅆ t_(j - 1)$
+Single-Exponential-Recovery-and-Bounded-Price-Strictness-for-Metric-k-Median-September-24-2026	\frac{t}{1-t}\sum_iV_i	group|stacked	0	1	$frac(t, 1 - t) sum_i V_i$
+Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026	r=\tfrac12-T	simple|bare	1	0	$r = 1 / 2 - T$
+Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026	\tfrac12-T	simple|bare	1	0	$1 / 2 - T$
+Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026	|x|\le\tfrac12	simple|bare	1	0	$\| x \| lt.eq 1 / 2$
+Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026	\mathcal R=[-1,1]\times[-1,\tfrac12+d/2]	simple|bare	1	0	$cal(R) = \[ - 1 \, 1 \] times \[ - 1 \, 1 / 2 + d \/ 2 \]$
+Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026	\frac12\min_{|u|=1}|\pi_{u^\perp}K_2|	simple|bare	1	0	$1 / 2 min_(\| u \| = 1) \| pi_(u^perp) K_2 \|$
+Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026	\sum_i n_i n_i^{\mathsf T}=\frac43 I_3	simple|bare	1	0	$sum_i n_i n_i^(sans(T)) = 4 / 3 I_3$
+Smooth-counterexamples-to-Yaus-nodal-upper-bound-in-dimensions-three-and-four-September-23-2026	\tfrac12n^{-1/4}	simple|bare	1	0	$1 / 2 n^(- 1 \/ 4)$
+Smooth-counterexamples-to-Yaus-nodal-upper-bound-in-dimensions-three-and-four-September-23-2026	\tfrac12 k^{-2/5}	simple|bare	1	0	$1 / 2 k^(- 2 \/ 5)$
+Smooth-isometric-immersions-of-closed-surfaces-into-Euclidean-four-space-September-23-2026	g=\frac23\sum_r\ell_r^2	simple|bare	1	0	$g = 2 / 3 sum_r ell_r^2$
+Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026	\tfrac12<\beta<\min(q,1)	simple|bare	1	0	$1 / 2 < beta < min \( q \, 1 \)$
+Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026	-\epsilon+\frac18\log(1+\ell^2\sigma^2)	simple|bare	1	0	$- epsilon.alt + 1 / 8 log \( 1 + ell^2 sigma^2 \)$
+Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026	K=\tfrac12\mathcal L_n g	simple|bare	1	0	$K = 1 / 2 cal(L)_n g$
+Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026	K=\frac12\mathcal L_n g	simple|bare	1	0	$K = 1 / 2 cal(L)_n g$
+Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026	G(t)=t+\frac16\log(1+l(t)^2\sigma^2)	simple|bare	1	0	$G \( t \) = t + 1 / 6 log \( 1 + l \( t \)^2 sigma^2 \)$
+Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026	Z-t=\frac16\log D\ge0	simple|bare	1	0	$Z - t = 1 / 6 log D gt.eq 0$
+Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026	H_B=\tfrac12g^{ab}\partial_4g_{ab}	simple|bare	1	0	$H_B = 1 / 2 g^(a b) partial_4 g_(a b)$
+Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026	\tfrac12\lambda_0^{1+\alpha_2}	simple|bare	1	0	$1 / 2 lambda_0^(1 + alpha_2)$
+Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026	\dot v=-\tfrac12h^\sharp v	simple|bare	1	0	$dot(v) = - 1 / 2 h^sharp v$
+Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026	\dot v=-\tfrac12h^\sharp v	simple|bare	1	0	$dot(v) = - 1 / 2 h^sharp v$
+Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026	-\tfrac12(\pi:B)g	simple|bare	1	0	$- 1 / 2 \( pi : B \) g$
+Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026	2J(\tfrac12(\mathcal A-\mathcal A^*)v)	simple|bare	1	0	$2 J \( 1 / 2 \( cal(A) - cal(A)^(*) \) v \)$
+Spectral-convergence-for-critical-FK-Ising-planar-maps-October-5-2026	\mathcal E_h=\frac12\mathcal E^0	simple|bare	1	0	$cal(E)_h = 1 / 2 cal(E)^0$
+Spectral-convergence-for-critical-FK-Ising-planar-maps-October-5-2026	\frac12\mathcal E^0	simple|bare	1	0	$1 / 2 cal(E)^0$
+Spectral-convergence-for-critical-FK-Ising-planar-maps-October-5-2026	\frac12\Delta_0	simple|bare	1	0	$1 / 2 Delta_0$
+Spectral-convergence-for-critical-FK-Ising-planar-maps-October-5-2026	\frac12\mathcal E^0	simple|bare	1	0	$1 / 2 cal(E)^0$
+Spectral-scalar-curvature-and-Urysohn-width-in-dimension-three-October-5-2026	H=\frac12\operatorname{tr}_{k(s)}k'(s)	simple|bare	1	0	"$H = 1 / 2 ""tr""_(k \( s \)) k' \( s \)$"
+Spectral-scalar-curvature-and-uniform-Urysohn-width-October-5-2026	2\frac12	simple|bare	1	0	$2 1 / 2$
+Spectral-scalar-curvature-and-uniform-Urysohn-width-October-5-2026	b_*\le\tfrac12\log(1+s^2)\le\sqrt s	simple|bare	1	0	$b_(*) lt.eq 1 / 2 log \( 1 + s^2 \) lt.eq sqrt(s)$
+Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026	S\in\{\frac12,1,\frac32,\ldots\}	simple|bare	2	0	$S in { 1 / 2 \, 1 \, 3 / 2 \, dots.h }$
+Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026	S\in\{\frac12,1,\frac32,\ldots\}	simple|bare	2	0	$S in { 1 / 2 \, 1 \, 3 / 2 \, dots.h }$
+Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026	S\in\{\frac12,1,\frac32,\ldots\}	simple|bare	2	0	$S in { 1 / 2 \, 1 \, 3 / 2 \, dots.h }$
+Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026	\frac12	simple|bare	1	0	$1 / 2$
+Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026	\frac12	simple|bare	1	0	$1 / 2$
+Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026	S=\frac12	simple|bare	1	0	$S = 1 / 2$
+Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026	n_x=b_x^\dagger b_x=S_x^z+\frac12	simple|bare	1	0	$n_x = b_x^dagger b_x = S_x^z + 1 / 2$
+Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026	S\in\{\tfrac12,1,\tfrac32,\ldots\}	simple|bare	2	0	$S in { 1 / 2 \, 1 \, 3 / 2 \, dots.h }$
+Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026	\tfrac12	simple|bare	1	0	$1 / 2$
+Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026	\tfrac12	simple|bare	1	0	$1 / 2$
+Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026	I+\frac12\sum_{\{i,j\}}(\mathcal U_{(ij)}-I)\dd t+o(\dd t)	simple|bare	1	0	$I + 1 / 2 sum_({ i \, j }) \( cal(U)_(\( i j \)) - I \) ⅆ t + o \( ⅆ 
+Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026	\frac12\sum_C\varepsilon_Ca_C	simple|bare	1	0	$1 / 2 sum_C epsilon_C a_C$
+Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026	\mu(\{e\}\times\dd t)=\tfrac12\dd t	simple|bare	1	0	$mu \( { e } times ⅆ t \) = 1 / 2 ⅆ t$
+Square-lattice-FK-interfaces-and-nested-loops-for-1-leq-q-lt-4-September-23-2026	H_R-\tfrac12	simple|bare	1	0	$H_R - 1 / 2$
+Square-lattice-FK-interfaces-and-nested-loops-for-1-leq-q-lt-4-September-23-2026	H_R-\tfrac12+P_R	simple|bare	1	0	$H_R - 1 / 2 + P_R$
+Square-lattice-FK-interfaces-and-nested-loops-for-1-leq-q-lt-4-September-23-2026	-s-\tfrac32	simple|bare	1	0	$- s - 3 / 2$
+Square-lattice-FK-interfaces-and-nested-loops-for-1-leq-q-lt-4-September-23-2026	L(p)=|p-\tfrac12|^{-4/3+o(1)}	simple|bare	1	0	$L \( p \) = \| p - 1 / 2 \|^(- 4 \/ 3 + o \( 1 \))$
+Squarefree-values-of-quartics-and-power-free-values-of-polynomials-September-24-2026	k\ge(\sqrt2-\tfrac12)d	simple|bare	1	0	$k gt.eq \( sqrt(2) - 1 / 2 \) d$
+Stable-Self-Similar-Blowup-for-a-Supercritical-Defocusing-Schrodinger-Equation-on-the-Torus-September-24-2026	\frac12\operatorname{Re}\sum_h\overline q_hq_h'+O(|q|^2)	simple|bare	1	0	"$1 / 2 ""Re"" sum_h overline(q)_h q'_h + O \( \| q \|^2 \)$"
+Staggered-extraction-for-exact-matrix-multiplication-over-every-field-September-24-2026	\ell=\frac12\sum_i s_i	simple|bare	1	0	$ell = 1 / 2 sum_i s_i$
+Stretched-exponential-barriers-for-typical-SK-initial-states-September-24-2026	\frac{\beta^2}{2}\alpha(u+\widetilde u)	group|bare	1	0	$beta^2 / 2 alpha \( u + tilde(u) \)$
+Stretched-exponential-barriers-for-typical-SK-initial-states-September-24-2026	\frac{\beta^2}{2}(\alpha-\widetilde\alpha)\widetilde u^2	group|bare	1	0	$beta^2 / 2 \( alpha - tilde(alpha) \) tilde(u)^2$
+Stretched-exponential-barriers-for-typical-SK-initial-states-September-24-2026	\frac{\beta^2}{2}\int(\widetilde\alpha-\alpha)\Gamma	group|bare	1	0	$beta^2 / 2 integral \( tilde(alpha) - alpha \) Gamma$
+Stretched-exponential-barriers-for-typical-SK-initial-states-September-24-2026	e^u\le1+u+\tfrac12u^2e^u	simple|bare	1	0	$e^u lt.eq 1 + u + 1 / 2 u^2 e^u$
+Strict-convexity-and-differentiability-of-the-planar-exponential-first-passage-limit-shape-September-24-2026	\tfrac34(L/2-2-4\rho)>10	simple|bare	1	0	$3 / 4 \( L \/ 2 - 2 - 4 rho \) > 10$
+Strict-convexity-and-differentiability-of-the-planar-exponential-first-passage-limit-shape-September-24-2026	\xi_2=(j+\tfrac12)S	simple|bare	1	0	$xi_2 = \( j + 1 / 2 \) S$
+Strict-convexity-and-differentiability-of-the-planar-exponential-first-passage-limit-shape-September-24-2026	\xi_1=(i+\tfrac12)S	simple|bare	1	0	$xi_1 = \( i + 1 / 2 \) S$
+Strict-hot-spots-and-absence-of-interior-critical-points-on-smooth-simply-connected-planar-domains-September-24-2026	f(h)=h+\tfrac12-L(h)	simple|bare	1	0	$f \( h \) = h + 1 / 2 - L \( h \)$
+Strict-hot-spots-and-absence-of-interior-critical-points-on-smooth-simply-connected-planar-domains-September-24-2026	h+\tfrac12	simple|bare	1	0	$h + 1 / 2$
+Strict-hot-spots-and-absence-of-interior-critical-points-on-smooth-simply-connected-planar-domains-September-24-2026	h+\tfrac12	simple|bare	1	0	$h + 1 / 2$
+Strict-hot-spots-and-absence-of-interior-critical-points-on-smooth-simply-connected-planar-domains-September-24-2026	L=(h+\tfrac12)-f	simple|bare	1	0	$L = \( h + 1 / 2 \) - f$
+Strong-Ulam-Stability-Characterizes-Amenability-October-5-2026	\frac12 I	simple|bare	1	0	$1 / 2 I$
+Strongly-rational-unitary-vertex-operator-algebras-and-conformal-nets-September-25-2026	[L_m,L_{-m}]=2mL_0+\frac c{12}(m^3-m)	simple|bare	1	0	$\[ L_m \, L_(- m) \] = 2 m L_0 + c / 12 \( m^3 - m \)$
+Strongly-rational-unitary-vertex-operator-algebras-and-conformal-nets-September-25-2026	C'+\frac p{1-\rho}\log(1+N)	simple|stacked	0	1	$C' + frac(p, 1 - rho) log \( 1 + N \)$
+Subpolynomial-dimension-reduction-in-Lp-September-23-2026	\lambda_e=\frac34|a_e|+\frac1{4|E|}	simple|bare	1	1	$lambda_e = 3 / 4 \| a_e \| + frac(1, 4 \| E \|)$
+Symplectic-Ball-Packings-in-Higher-Dimensions-September-23-2026	0<\varepsilon<\frac18\min(g,\min_\Delta H)	simple|bare	1	0	$0 < epsilon < 1 / 8 min \( g \, min_Delta H \)$
+Symplectic-Ball-Packings-in-Higher-Dimensions-September-23-2026	\frac12(x+\sqrt{x^2+\eta_i^2})	simple|bare	1	0	$1 / 2 \( x + sqrt(x^2 + eta_i^2) \)$
+Tangent-flow-uniqueness-2026-09-24	\tfrac12\operatorname{Re}d_1(T)|w(T)|^2	simple|bare	1	0	"$1 / 2 ""Re"" d_1 \( T \) \| w \( T \) \|^2$"
+Tensor-Saturation-for-Even-Spin-Groups-September-24-2026	\tfrac12	simple|bare	1	0	$1 / 2$
+Tensor-Saturation-for-Even-Spin-Groups-September-24-2026	\tau=\tfrac12	simple|bare	1	0	$tau = 1 / 2$
+The-Abelian-Zilber-Pink-Conjecture-September-24-2026	c_1C^2\eta^2<\frac14\sum_\ell\kappa_\ell	simple|bare	1	0	$c_1 C^2 eta^2 < 1 / 4 sum_ell kappa_ell$
+The-Bass-trace-conjecture-for-complex-group-rings-September-24-2026	q_m=\tfrac12q_{m-1}	simple|bare	1	0	$q_m = 1 / 2 q_(m - 1)$
+The-Euclidean-Steinitz-Bergstrom-theorem-September-24-2026	\tfrac13d^{1/p}	simple|bare	1	0	$1 / 3 d^(1 \/ p)$
+The-Euclidean-Steinitz-Bergstrom-theorem-September-24-2026	w=-\tfrac1d(1,\ldots,1)	simple|bare	1	0	$w = - 1 / d \( 1 \, dots.h \, 1 \)$
+The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026	\tfrac12R^{-kc_2}	simple|bare	1	0	$1 / 2 R^(- k c_2)$
+The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026	k-\tfrac12<s<k	simple|bare	1	0	$k - 1 / 2 < s < k$
+The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026	k-1\le q<k-\tfrac12	simple|bare	1	0	$k - 1 lt.eq q < k - 1 / 2$
+The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026	t\in(k-\tfrac12,s)	simple|bare	1	0	$t in \( k - 1 / 2 \, s \)$
+The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026	\tfrac12R^{-w}<|z-z'|\le R^{-w}	simple|bare	1	0	$1 / 2 R^(- w) < \| z - z' \| lt.eq R^(- w)$
+The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026	k-\tfrac12<s<k	simple|bare	1	0	$k - 1 / 2 < s < k$
+The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026	k-\tfrac12	simple|bare	1	0	$k - 1 / 2$
+The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026	[k-1,k-\tfrac12]	simple|bare	1	0	$\[ k - 1 \, k - 1 / 2 \]$
+The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026	q<k-\tfrac12	simple|bare	1	0	$q < k - 1 / 2$
+The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026	q'\le k-\tfrac12	simple|bare	1	0	$q' lt.eq k - 1 / 2$
+The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026	k-\tfrac12	simple|bare	1	0	$k - 1 / 2$
+The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026	k-\tfrac12<s<k	simple|bare	1	0	$k - 1 / 2 < s < k$
+The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026	s\in(k-\tfrac12,k)	simple|bare	1	0	$s in \( k - 1 / 2 \, k \)$
+The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026	k-\tfrac12=S	simple|bare	1	0	$k - 1 / 2 = S$
+The-Gaussian-free-field-limit-of-the-balanced-six-vertex-model-with-variance-multiplier-1-over-arcsin-c-over-2-September-23-2026	N=2\lfloor\tfrac12\delta^{-1/(1-3a/8)}\rfloor	simple|bare	1	0	$N = 2 floor.l 1 / 2 delta^(- 1 \/ \( 1 - 3 a \/ 8 \)) floor.r$
+The-Kerr-Newman-Penrose-Inequality-for-Axisymmetric-Electrovacuum-Exteriors-October-5-2026	\frac12\int\dd\psi	simple|bare	1	0	$1 / 2 integral ⅆ psi$
+The-Kerr-Newman-Penrose-Inequality-for-Axisymmetric-Electrovacuum-Exteriors-October-5-2026	K=\tfrac12\mathcal L_ng	simple|bare	1	0	$K = 1 / 2 cal(L)_n g$
+The-Kerr-Newman-Penrose-Inequality-for-Axisymmetric-Electrovacuum-Exteriors-October-5-2026	\frac12e^{4t}R_{\hat g}	simple|bare	1	0	$1 / 2 e^(4 t) R_(hat(g))$
+The-Kerr-Newman-Penrose-Inequality-for-Axisymmetric-Electrovacuum-Exteriors-October-5-2026	(1-\chi)q=\frac{p+4}{4+pv}S_1(w,w)	group|stacked	0	1	$\( 1 - chi \) q = frac(p + 4, 4 + p v) S_1 \( w \, w \)$
+The-Kerr-Newman-Penrose-Inequality-for-Axisymmetric-Electrovacuum-Exteriors-October-5-2026	\frac32q^2-Fq+\frac12F^2	simple|bare	2	0	$3 / 2 q^2 - F q + 1 / 2 F^2$
+The-Kerr-Newman-Penrose-Inequality-for-Axisymmetric-Electrovacuum-Exteriors-October-5-2026	\tfrac12\lambda_0^{1+\alpha_2}	simple|bare	1	0	$1 / 2 lambda_0^(1 + alpha_2)$
+The-Kerr-Newman-Penrose-Inequality-for-Axisymmetric-Electrovacuum-Exteriors-October-5-2026	E=t-Z=-\tfrac18\log D	simple|bare	1	0	$E = t - Z = - 1 / 8 log D$
+The-Kervaire-Invariant-Problem-at-the-Prime-Three-September-24-2026	\frac32f-d	simple|bare	1	0	$3 / 2 f - d$
+The-Kervaire-Invariant-Problem-at-the-Prime-Three-September-24-2026	\frac92f-d	simple|bare	1	0	$9 / 2 f - d$
+The-Kervaire-Theorem-for-Groups-September-24-2026	f'(e^{2\pi ix})=\frac{d}{dx}f(e^{2\pi ix})	simple|stacked	0	1	$f' \( e^(2 pi i x) \) = frac(d, d x) f \( e^(2 pi i x) \)$
+The-Mahler-Conjecture-for-General-Convex-Bodies-September-22-2026	\tfrac12\cdot.000019+d_*^K\cdot.058\cdot.000020<.000020	simple|bare	1	0	$1 / 2 dot.op .000019 + d_(*)^K dot.op .058 dot.op .000020 < .000020$
+The-Mahler-Conjecture-for-General-Convex-Bodies-September-22-2026	B_1+\tfrac12(P-.0049)_+	simple|bare	1	0	$B_1 + 1 / 2 \( P - .0049 \)_(+)$
+The-Mahler-Conjecture-for-General-Convex-Bodies-September-22-2026	\tfrac14|\Delta P_i^*||\Delta\tanh t_i|	simple|bare	1	0	$1 / 4 \| Delta P_i^(*) \| \| Delta tanh t_i \|$

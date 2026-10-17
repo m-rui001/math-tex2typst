@@ -1,0 +1,36 @@
+
+===== D718 from 1086 =====
+ 1090| Levenshtein,Batu,Kannan,Khanna,McGregor || 第一块，问题的谱系（history.tex:2--9）。删除噪声副本的重建有很宽的信息论历史，Levenshtein 在若干组合与概率信道模型下研究过重建；Batu、Kannan、Khanna、McGregor 把"从独立随机删除迹重建"正式写进理论计算机科学，动机之一涉及序列对
+ 1092| Holenstein,Mitzenmacher,Panigrahy,Wieder,STOC,De--O'Donnell--Servedio, || 第二块，均值一族与它的天花板（history.tex:11--20）。固定删除概率下，Holenstein、Mitzenmacher、Panigrahy、Wieder 的最坏情形样本上界是 $\exp(\widetilde{O}(\sqrt n))$；两篇在 STOC 2017 
+ 1094| Chase,Holden,Lyons,Chase || 第三块，上下界两侧的现在位置（history.tex:22--26）。Chase 把一般样本上界推进到 $\exp(O(n^{1/5}\log^5 n))$；下界一侧 Holden 与 Lyons 给出几乎 $n^{5/4}$ 的界，Chase 在固定删除概率下把它加强到 $\O
+ 1096| Burudgunte,Valiant,Wang || 第四块，本文策略的直接前身（history.tex:27--36）。Burudgunte、Valiant、Wang 证明的样本界形如
+ 1098| exp,bigl,log,bigr || \exp\bigl(p^{-7/3}(\log_2 n)^{c_0}\bigr),
+ 1104| Chen,De,Lee,Servedio || 第六块，非局部统计为什么不可省（history.tex:51--57）。Chen、De、Lee、Servedio 对限制在短连续迹块上的统计查询证明了强下界；本文的统计涉及的秩很少，却可以横跨整条迹；把这些统计从输入坐标搬运到秩坐标用的生成函数恒等式，在高阶迹重建里已有前身。这一
+ 1106| Lasserre,Parrilo,Agmon,Motzkin--Schoenberg,elementary,consequences,Cau || 第七块，松弛框架的出处与自我限制（history.tex:59--64）。正矩松弛是 Lasserre 与 Parrilo 的半正定矩与和平方框架的布尔实例；有限可行性迭代与 Agmon、Motzkin--Schoenberg 的经典松弛法有关系。最后两行的声明很强硬：解析分离与
+ 1122| Hermite,Cauchy--Schwarz,Cauchy--Schwarz,Cauchy--Schwarz || 初等矩界（setup.tex:56--82）。结论三条：$|m_J|\le1$（$|J|\le2D$）；任意至多 $2D$ 个不同输入比特乘积在 $\mathcal E$ 下的值模至多一；在次数至多 $D$ 的多项式上 $\langle P,R\rangle_{\mathcal 
+ 1130| Poisson || 阶 $k$ 特征与它的两件配套物（setup.tex:137--163）。特征是一列多项式 $f_j=\sum_{i_1<\cdots<i_k=j}X_{i_1}\cdots X_{i_k}\prod_{h=1}^{k-1}z_h^{i_{h+1}-i_h}$，$j\in[n]$
+ 1146| Cauchy--Schwarz || 带控制阻尼的乘积（separation.tex:187--228）。结论：$z$ 为至多 $N$ 个 $e^{-a_j+\mathrm i\theta_j}$ 的非空乘积、$a_j\ge\gamma\min\{|\theta_j|,N\theta_j^2\}$ 时，有绝对常数 $
+ 1150| Cayley || 同时延拓与分离界（separation.tex:331--548）。Cayley 变换把圆盘变成半平面：$\lvert Z-q\rvert\le p$ 等价于 $\operatorname{Re}\frac{1+Z}{1-Z}\ge q/p$（$\lvert Z\rvert<1$
+ 1156| Burudgunte,Valiant,Wang,Gram,Gram || 策略声明（multiscale.tex:3--12）。信号 $\mathcal S_f(s,\omega)$ 把距第一个不符点约 $1/s$ 以外的位置打折；单步命题要做的事是把这样的信号搬到小得多的衰减参数上，允许提高特征阶，同时把信号对数的损耗压在八倍以内。紧接着两句我当初读
+ 1158| separation || 单步命题的输入输出（multiscale.tex:14--44）。绝对常数 $0<\beta,\eta_0<1$ 与 $C_0,C_1\ge1$。前提是 $0<S\le4$、$0<S'\le\min\{1,\eta_0S\}$、$4k\le D$，以及对某 $\beta S\le
+ 1160| Fourier || 两半分工与常数顺序（multiscale.tex:46--52、61--64）。证明分两部：先由宽的高斯窗把原信号化成 Fourier 和，再用矩泛函的正性迫使至多四个这样的和之积保住信号而总频率很小；然后展开该积、变形高斯围道，产出具有所断参数的单个特征；前半在本节，转换在围道
+ 1168| Poisson,Cauchy,Fourier,Poisson,Poisson || Poisson 对数账（multiscale.tex:123--158）。$\Lambda(t)=\log\bigl(U/\lvert P(e^{\mathrm it})\rvert\bigr)\ge0$，在边界零点处取 $+\infty$。断言是 $\int_{\mathbb 
+ 1170| Cauchy,Cauchy,Fourier || Cauchy 配对（multiscale.tex:173--226）。记 $w(v)=1/(\pi(1+v^2))$。对每个 $r\ge0$ 存在 $\mathbb R^2$ 上支撑在 $v-v'=r$ 的有限正测度 $\mu_r$，其两个边缘之和不大于 $w(v)\,dv$；$
+ 1172| Poisson,Cauchy,Poisson,Cauchy,Cauchy || 好频率（multiscale.tex:228--266）。设 $s_1,E>0$、$\lvert\omega\rvert\le2.003s_1$、$\Lambda:\mathbb R\to[0,\infty]$ 可测并满足 Poisson 账。结论两条：存在实 $\lambda$
+ 1174| Gram,Hilbert,Cauchy--Schwarz || Gram 链（multiscale.tex:278--305）。$v_0,\ldots,v_J$ 在复 Hilbert 空间内，内积对第一个变量线性，$\lVert v_0\rVert=1$，且对某 $\xi\ge0$ 有 $\lvert\lVert v_i\rVert^2-1\
+ 1176| hence,resulting,Hilbert,Gram || 平衡乘积（multiscale.tex:307--399）。先取足够大的绝对 $C_3$，使好频率供出的所有频率模都不超过 $C_3S$；一至四个形如 $A(t)$ 或 $\overline{A(t)}$（$\lvert t\rvert\le C_3S$）的因子之积称为平衡，条件
+ 1199| Hermite,Gram || | $\mathcal E[P\overline R]$ | 半正定 Hermite 型 | setup.tex:62 | 商空间内积 | Gram 链前提失效 |
+ 1216| Cayley || | $c_2\le\beta\eta/\max\{C_1,C_1^2\}$ | 阻尼常数的取法 | separation.tex:166 | 边距 $\gamma$ | Cayley 下界改变 |
+ 1229| Poisson || | $1.001E$ | Poisson 对数账的上限 | multiscale.tex:130 | 好频率引理 | $2.40$ 与 $2.74$ 改变 |
+ 1230| Cauchy,Fourier,Poisson || | $e^{-\lvert\xi\rvert}$ | Cauchy Fourier 变换 | multiscale.tex:134 | 周期化 | Poisson 测度失 |
+ 1234| Cauchy || | $0.418$ | 区间内的 Cauchy 质量 | multiscale.tex:246 | 单频率界 $2.40E$ | 平均论证失 |
+ 1243| preamble || 自定义宏类一项：第十八节之后各节里，表示取实部的算子名有若干处按素材 preamble 的写法原样抄出，未展开成标准形式，集中在第二十节；素材里以两个字母记虚数单位、以两个字母记期望与实数集复数集的其余几枚宏，我在续写时都展开成了标准写法。
+lines-with-latin=25
+
+===== D04 from 487 =====
+  519| caption || 首访树造法在 thinning.tex:11-20 ：从 $b_0=0$ 起步，某一步落到没访问过的偏移就新增该顶点、用刚走的那步把它接到当前顶点，其余每一步叫返回；$r_{*}$ 记返回数，$b(v)$ 记树顶点的整数偏移，于是 $|E(\mathscr T)|=\ell-r_
+  563| dichotomy || $m^{1/8}$ 不是凭空写的，我按 230-256 行把三次开方数清楚。第一次：树上的连通集含任意两顶点之间的整条路，故对选定的根有唯一最近点，根到最近点的路避开 $p$ 边；若保留标签 $q$ 出现在这条路上，该边两端落在 $A_q^{j}$ 里，于是 $x_q^{j}$ 
+  565| agrees || 反序情形不扔，靠改根救回来（258-287 行）。在块 $2$ 取从其根到最远被选 $x_p^{2}$ 的那一段；每个 $A_p^{2}$ 与该段的交是以 $x_p^{2}$ 为左端点的闭顶点区间，左端点两两不同；段上一个顶点处，任何正长度区间都含一条与之关联的段边，这样的边至多
+  615| since || 证明里我按三格记常数的出处。第一格是槽数：262-265 行写至多 $\ell J+2t_{0}(LJ+1)=O(B\log B)$ ，第 266 行注明用了 $4\varepsilon<\rho$ ；我代进去核过，$\ell J$ 是 $2B\cdot C_0\log B$ 这
+  732| tex || 本笔共十四手，全部用追加方式落盘，写档工具零次调用。第一笔把第 36 与第 37 两节落进去，实测字节增量 $8869$ ，落在第 $10$ 次工具调用处，处在规定的六到十二次窗口内；此后素材一边读、稿子一边长，没有把任何一笔攒到两节以上。逐节字节用分段量尺实测：第 36 节 $
+lines-with-latin=5

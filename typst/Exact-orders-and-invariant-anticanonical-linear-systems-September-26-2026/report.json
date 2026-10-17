@@ -1,0 +1,29 @@
+{
+  "paper": "Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026",
+  "ok": true,
+  "typ_lines": 1017,
+  "included_pdf_pages": 0,
+  "formulas": 945,
+  "math_failed": 0,
+  "labels": 93,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1
+  },
+  "samples": {
+    "formulas": "945"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026.tex"
+}

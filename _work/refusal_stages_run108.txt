@@ -1,0 +1,24 @@
+pictures 1058  converted 1032  refused 26
+
+-- refusal stages --
+   7  transform
+   2  pgfmath
+   2  scoped
+   1  statement:\fill[gray!8] (-1.4,-1,1)--(1.4,-1,1)--(1.4,1.3,1) --(-1.4,1
+   1  statement:\fill[black!3] (1,-1,-1)--(1,1,-1)--(1,1,1)--(1,-1,1)--cycle
+   1  ifnum
+   1  statement:\FiniteSquare{.70}{-1.08}{} \node[finite label,left] at (.35
+   1  statement:\node[amap box] (phase) at (-.235\textwidth,0) {Positively c
+   1  statement:\draw[capacityellipse] (0,0) ellipse (1.00 and .37)
+   1  statement:\node[branch,below=9mm of base,xshift=-.33\textwidth] (stron
+   1  statement:\pinskzero \pinsgroup{0}{.95}{T}{pinsplus} \pinsgroup{0}{-.9
+   1  statement:\draw[blue!65!black,very thick] plot[smooth] coordinates {(-
+   1  statement:\draw[blue!55!black,line width=1.1pt,domain=-2.2:2.2,samples
+   1  statement:\geometryrow{0}{\textbf{Main: initial}\\before the exchange}
+   1  statement:\node[font=\bfseries] at (1,.7,2.55) {Input face prism}
+   1  statement:\draw[very thick,teal!70!black] plot[smooth] coordinates {(0
+   1  statement:\node[anchor=west,align=left,text width=5.2cm] at (5.45,3.15
+   1  statement:\draw[edge,dashed] (six) to[out=135,in=45,looseness=5] (six)
+
+-- samples --
+wrote _work/refusal_stages.txt

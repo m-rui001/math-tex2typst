@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\newsavebox{\ba}\newsavebox{\bb}\newsavebox{\bc}
+% span = shift + 2*1pt, so \wd tells us what xshift means under x=2cm
+\savebox{\ba}{\hbox{\begin{tikzpicture}[x=2cm,y=2cm]\draw (0,0) circle (1pt);
+  \begin{scope}[xshift=1]\draw (0,0) circle (1pt);\end{scope}\end{tikzpicture}}}
+\savebox{\bb}{\hbox{\begin{tikzpicture}[x=2cm,y=2cm]\draw (0,0) circle (1pt);
+  \begin{scope}[xshift=1cm]\draw (0,0) circle (1pt);\end{scope}\end{tikzpicture}}}
+\savebox{\bc}{\hbox{\begin{tikzpicture}[x=2cm,y=2cm]\draw (0,0) circle (1pt);
+  \begin{scope}[shift={(1,0)}]\draw (0,0) circle (1pt);\end{scope}\end{tikzpicture}}}
+\typeout{M xshift-one=\the\wd\ba\space xshift-1cm=\the\wd\bb\space shift-one=\the\wd\bc}
+\end{document}

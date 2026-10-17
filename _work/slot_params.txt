@@ -1,0 +1,46 @@
+
+===== D225 =====
+note=E:/math/研究笔记\D225-高标记数下的Pixton完备性Chow反例.md
+bytes=99724 lines=273 CR=0
+heads=20 first=(3, '## §0 登记与取材范围') last=(219, '## §19 台账')
+head_shapes=["## §14 过紧化的债：加权空间、修正三次与 $-\\tfrac12$ 的由来", "## §15 支撑归纳：三件消失测试与 $10^{60}$ 的颜色预算", "## §16 最终思路与最初设想的差异", "## §17 遗留问题", "## §18 勘误", "## §19 台账"]
+symbol_headers=[223] sep=1
+cite_form full_path_refs=0 basename_refs=44
+ref_examples=["02-strata.tex:196", "02-strata.tex:196", "02-strata.tex:196", "02-strata.tex:235", "02-strata.tex:69", "02-strata.tex:105"]
+inventory (rel bytes lines refs):
+  sections/05-quot.tex                             43283B   957L refs=11
+  sections/03-detector.tex                         31623B   764L refs=8
+  sections/06-coefficient.tex                      25742B   644L refs=7
+  sections/08-support.tex                          25459B   564L refs=6
+  sections/07-compactification.tex                 25424B   512L refs=3
+  sections/04-tensors.tex                          23126B   549L refs=0
+  sections/01-introduction.tex                     16192B   314L refs=0
+  references.tex                                   15416B   368L refs=0
+  sections/02-strata.tex                            9560B   246L refs=9
+  main.tex                                          2756B    79L refs=0
+  figures/proof-map.tex                             2081B    39L refs=0
+  figures/bridge-cuts.tex                           1847B    40L refs=0
+  TOTAL 222509B files=12
+
+===== D713 =====
+note=E:/math/研究笔记\D713-四维对数Iitaka纤维化的统一有效度.md
+bytes=80385 lines=544 CR=0
+heads=20 first=(3, '## §0 登记、总览与这份笔记的写法') last=(531, '## §19 勘误补记')
+head_shapes=["## §14 不可数性矛盾：双有理自同构群的反例命题", "## §15 零维三种情形与正维基定理", "## §16 回到原对：把统一次数搬回原始系统", "## §17 台账", "## §18 自检、未读区间与勘误", "## §19 勘误补记"]
+symbol_headers=[455] sep=1
+cite_form full_path_refs=0 basename_refs=45
+ref_examples=["introduction.tex:26", "introduction.tex:52", "introduction.tex:43", "introduction.tex:47", "introduction.tex:59", "introduction.tex:66"]
+inventory (rel bytes lines refs):
+  sections/scalar.tex                              37789B   775L refs=4
+  sections/index-reductions.tex                    35306B   675L refs=9
+  sections/frobenius.tex                           31383B   676L refs=0
+  sections/chains.tex                              22680B   437L refs=1
+  sections/transports.tex                          19939B   424L refs=3
+  sections/introduction.tex                        18209B   331L refs=19
+  bibliography.tex                                 12886B   289L refs=0
+  sections/reductions.tex                           8296B   161L refs=13
+  sections/relative-inputs.tex                      4692B    97L refs=3
+  sections/conclusion.tex                           4241B    87L refs=0
+  sections/index-completion.tex                     3773B    74L refs=2
+  main.tex                                          3368B   103L refs=0
+  TOTAL 202562B files=12

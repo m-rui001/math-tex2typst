@@ -1,0 +1,7 @@
+notes=734 notes_with_odd_backtick_line=174 odd_lines_total=7466
+---- candidate sites (backtick-digits-dollar inside an odd-backtick line) ----
+D229 odd_bt_lines=2 shape_hits=2
+D410 odd_bt_lines=2 shape_hits=13
+D229 L66 bt=15 dollar=27 cand=48 ctx=1$，那条路把周缘记号认同（`04-algebraicity.tex:46`--`48$）。$G=SL_2$，$\Loc
+D229 L186 bt=21 dollar=21 cand=359 ctx=\operatorname{id}$（`02-tensor.tex:356`--`359$）把"梯度理想成员"翻译成"$
+D410 L19 bt=41 dollar=55 cand=900,440,780,290,470,618,280,560,700,185,270,385,535 ctx=ex` 的 $270$-`330` 行、$530$-`686` 行、$775$-`900$ 行与 $980$ 行之后我只

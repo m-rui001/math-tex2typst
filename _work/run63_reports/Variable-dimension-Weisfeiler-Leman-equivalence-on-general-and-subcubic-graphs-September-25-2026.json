@@ -1,0 +1,31 @@
+{
+  "paper": "Variable-dimension-Weisfeiler-Leman-equivalence-on-general-and-subcubic-graphs-September-25-2026",
+  "ok": true,
+  "typ_lines": 1071,
+  "included_pdf_pages": 0,
+  "formulas": 589,
+  "math_failed": 0,
+  "labels": 109,
+  "equations": 29,
+  "theorems": 3,
+  "figures": 5,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:minipage": 2,
+    "cetz_converted": 6
+  },
+  "samples": {
+    "formulas": "589",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Variable-dimension-Weisfeiler-Leman-equivalence-on-general-and-subcubic-graphs-September-25-2026.tex"
+}

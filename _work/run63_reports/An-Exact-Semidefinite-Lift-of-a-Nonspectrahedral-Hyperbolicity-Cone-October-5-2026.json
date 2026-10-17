@@ -1,0 +1,29 @@
+{
+  "paper": "An-Exact-Semidefinite-Lift-of-a-Nonspectrahedral-Hyperbolicity-Cone-October-5-2026",
+  "ok": true,
+  "typ_lines": 290,
+  "included_pdf_pages": 0,
+  "formulas": 259,
+  "math_failed": 0,
+  "labels": 39,
+  "equations": 24,
+  "theorems": 1,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1
+  },
+  "samples": {
+    "formulas": "259"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\An-Exact-Semidefinite-Lift-of-a-Nonspectrahedral-Hyperbolicity-Cone-October-5-2026.tex"
+}

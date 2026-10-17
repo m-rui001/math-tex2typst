@@ -1,0 +1,102 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.26)  13 OCT 2026 17:16
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**roman.tex
+(./roman.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
+(d:/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(d:/texlive/2025/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+)
+(d:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count283
+)
+No file roman.aux.
+\openout1 = `roman.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LET 0 HT=4.30554ptDP=0.0pt
+LET 1 HT=6.94444ptDP=0.0pt
+LET 2 HT=4.30554ptDP=0.0pt
+LET 3 HT=6.94444ptDP=0.0pt
+LET 4 HT=4.30554ptDP=0.0pt
+LET 5 HT=6.94444ptDP=0.0pt
+LET 6 HT=4.30554ptDP=1.94444pt
+LET 7 HT=6.94444ptDP=0.0pt
+LET 8 HT=6.67859ptDP=0.0pt
+LET 9 HT=6.67859ptDP=1.94444pt
+LET 10 HT=6.94444ptDP=0.0pt
+LET 11 HT=6.94444ptDP=0.0pt
+LET 12 HT=4.30554ptDP=0.0pt
+LET 13 HT=4.30554ptDP=0.0pt
+LET 14 HT=4.30554ptDP=0.0pt
+LET 15 HT=4.30554ptDP=1.94444pt
+LET 16 HT=4.30554ptDP=1.94444pt
+LET 17 HT=4.30554ptDP=0.0pt
+LET 18 HT=4.30554ptDP=0.0pt
+LET 19 HT=6.15079ptDP=0.0pt
+LET 20 HT=4.30554ptDP=0.0pt
+LET 21 HT=4.30554ptDP=0.0pt
+LET 22 HT=4.30554ptDP=0.0pt
+LET 23 HT=4.30554ptDP=0.0pt
+LET 24 HT=4.30554ptDP=1.94444pt
+LET 25 HT=4.30554ptDP=0.0pt
+LET 26 HT=6.83331ptDP=0.0pt
+LET 27 HT=6.83331ptDP=0.0pt
+LET 28 HT=6.83331ptDP=0.0pt
+LET 29 HT=6.94444ptDP=0.0pt
+LET 30 HT=6.94444ptDP=0.0pt
+LET 31 HT=4.30554ptDP=0.0pt
+LET 32 HT=6.94444ptDP=0.0pt
+LET 33 HT=6.94444ptDP=0.0pt
+LET 34 HT=1.05554ptDP=0.0pt
+(./roman.aux)
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 417 strings out of 467800
+ 7731 string characters out of 5436061
+ 427301 words of memory out of 5000000
+ 29146 multiletter control sequences out of 15000+600000
+ 626825 words of font info for 40 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 35i,1n,38p,146b,36s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+No pages of output.
+PDF statistics:
+ 0 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

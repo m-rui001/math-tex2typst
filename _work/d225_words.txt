@@ -1,0 +1,69 @@
+tautological     old=5 new=6
+strata           old=15 new=7
+filtraci         old=0 new=2
+CohFT            old=3 new=0
+Frobenius        old=8 new=2
+Chow             old=54 new=30
+kappa            old=21 new=2
+Gorenstein       old=4 new=6
+Pfaffian         old=6 new=4
+Abel             old=1 new=2
+Beauville        old=0 new=1
+Mukai            old=4 new=1
+Pandharipande    old=2 new=4
+Janda            old=5 new=3
+Pixton           old=27 new=8
+Faber            old=7 new=4
+Zvonkine         old=0 new=2
+Arbarello        old=0 new=1
+Cornalba         old=0 new=1
+Graber           old=1 new=1
+Larson           old=1 new=1
+Schmitt          old=2 new=1
+Canning          old=2 new=1
+Mumford          old=2 new=4
+Keel             old=3 new=1
+generic          old=10 new=0
+
+--- non-CJK runs inside new region prose (len>=4) ---
+tensors                  n=32 lines=[410, 411, 412, 413, 414, 415]
+Chow                     n=30 lines=[276, 276, 276, 276, 280, 280]
+introduction             n=10 lines=[441, 442, 443, 444, 445, 446]
+Pixton                   n=8 lines=[276, 360, 360, 364, 364, 368]
+strata                   n=7 lines=[360, 360, 362, 370, 390, 402]
+tautological             n=6 lines=[364, 368, 374, 380, 396, 402]
+Gorenstein               n=5 lines=[364, 380, 380, 380, 380]
+Quot                     n=4 lines=[276, 278, 296, 390]
+Pfaffian                 n=4 lines=[312, 316, 324, 456]
+Mumford                  n=4 lines=[364, 368, 388, 388]
+Faber                    n=4 lines=[364, 364, 364, 380]
+Pandharipande            n=4 lines=[364, 364, 386, 464]
+Chern                    n=3 lines=[308, 308, 370]
+Koszul                   n=3 lines=[342, 346, 396]
+Zagier                   n=3 lines=[364, 364, 380]
+Janda                    n=3 lines=[364, 382, 382]
+Deligne                  n=3 lines=[368, 388, 388]
+Frobenius                n=2 lines=[276, 278]
+Fourier                  n=2 lines=[306, 421]
+filtraci                 n=2 lines=[320, 320]
+kappa                    n=2 lines=[364, 370]
+Gromov                   n=2 lines=[364, 382]
+Witten                   n=2 lines=[364, 382]
+Zvonkine                 n=2 lines=[386, 464]
+Edit                     n=2 lines=[454, 466]
+Mukai                    n=1 lines=[306]
+Beauville                n=1 lines=[306]
+Todd                     n=1 lines=[310]
+Dolbeault                n=1 lines=[310]
+Schur                    n=1 lines=[352]
+Weyl                     n=1 lines=[352]
+Arbarello                n=1 lines=[364]
+Cornalba                 n=1 lines=[364]
+Graber                   n=1 lines=[364]
+Keel                     n=1 lines=[364]
+Canning                  n=1 lines=[380]
+Larson                   n=1 lines=[380]
+Schmitt                  n=1 lines=[380]
+Abel                     n=1 lines=[458]
+Jacobi                   n=1 lines=[458]
+Write                    n=1 lines=[466]

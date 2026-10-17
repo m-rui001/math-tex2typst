@@ -1,0 +1,9 @@
+\documentclass[11pt]{article}
+\usepackage{tikz}
+\typeout{MEASURE base: linewidth=\the\linewidth\ space textwidth=\the\textwidth}
+\begin{document}
+\typeout{MEASURE document: linewidth=\the\linewidth}
+\begin{tikzpicture}[x=.98\linewidth,y=1cm]
+  \draw (0,0) -- (1,0);
+\end{tikzpicture}
+\end{document}

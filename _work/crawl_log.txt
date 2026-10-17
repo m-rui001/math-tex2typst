@@ -1,0 +1,143 @@
+0812.2563 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+0812.2563            OK tex=1 bytes=13894 tar=13894
+1109.4382            OK tex=1 bytes=37333 tar=11054
+1203.0893 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+1203.0893            OK tex=1 bytes=25807 tar=25807
+1412.0940            OK tex=1 bytes=53881 tar=19681
+1511.04222 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+1511.04222           OK tex=1 bytes=12932 tar=12932
+1511.08164 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+1511.08164           OK tex=1 bytes=32732 tar=32732
+1512.03887 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+1512.03887           OK tex=1 bytes=3299 tar=3299
+1603.05765 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+1603.05765           OK tex=1 bytes=90527 tar=90527
+1605.02284 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+1605.02284           OK tex=1 bytes=35315 tar=35315
+1606.08894           OK tex=1 bytes=98391 tar=43536
+1609.05543 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+1609.05543           OK tex=1 bytes=42511 tar=42511
+1703.00292 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+1703.00292           OK tex=1 bytes=18950 tar=18950
+1707.05561 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+1707.05561           OK tex=1 bytes=72680 tar=72680
+1803.04756           OK tex=7 bytes=95719 tar=26469
+1810.12733 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+1810.12733           OK tex=1 bytes=4790 tar=4790
+1907.01114           OK tex=1 bytes=79182 tar=28178
+2005.08303           OK tex=1 bytes=71923 tar=23317
+2006.11238 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+2006.11238           OK tex=1 bytes=44046 tar=44046
+2108.10303           OK tex=1 bytes=10092 tar=4653
+2110.07346           OK tex=15 bytes=103672 tar=1855575
+2205.10915           OK tex=1 bytes=163760 tar=48586
+2402.03975           OK tex=10 bytes=232966 tar=108710
+2512.01401           OK tex=1 bytes=33941 tar=12644
+2603.07555           OK tex=2 bytes=72490 tar=244383
+2607.06334           OK tex=2 bytes=102079 tar=71127
+2609.26222           OK tex=1 bytes=96434 tar=28845
+alg-geom/9408003 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+alg-geom/9408003     OK tex=1 bytes=18884 tar=18884
+math/0005136         OK tex=1 bytes=38262 tar=15759
+math/0106147 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+math/0106147         OK tex=1 bytes=9288 tar=9288
+math/0211159 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+math/0211159         OK tex=1 bytes=34085 tar=34085
+math/0308143 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+math/0308143         OK tex=1 bytes=19227 tar=19227
+math/0406345 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+math/0406345         OK tex=1 bytes=34109 tar=34109
+math/0503651 DOWNLOAD_FAIL
+math/0504020 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+math/0504020         OK tex=1 bytes=98956 tar=98956
+math/0511225 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+math/0511225         OK tex=1 bytes=24546 tar=24546
+math/0511254 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+math/0511254         OK tex=1 bytes=4185 tar=4185
+math/0610203         OK tex=1 bytes=226044 tar=59796
+math/9804058 not-a-tar (file could not be opened successfully:
+- method gz: ReadError('invalid header')
+- method bz2: ReadError('not a bzip2 file')
+- method xz: ReadError('not an lzma file')
+- method tar: ReadError('invalid header')), saved as single tex
+math/9804058         OK tex=1 bytes=12433 tar=12433

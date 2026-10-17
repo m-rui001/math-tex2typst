@@ -1,0 +1,130 @@
+--- a/t2t/convert.py
++++ b/t2t/convert.py
+@@ -8,20 +8,92 @@
+ import shutil
+ from pathlib import Path
+ 
+ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ 
+ from t2t import cetz as cetzmod  # noqa: E402
+-from t2t import emit, mathconv, prep  # noqa: E402
+-from t2t.texutil import find_group
++from t2t import emit, macros, mathconv, prep  # noqa: E402
++from t2t.texutil import find_group, skip_spaces  # noqa: E402
+ 
+ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ MANIFEST = {e['paper']: e for e in json.loads(Path(ROOT, '_work', 'manifest.json').read_text(encoding='utf-8'))}
+ NEWLABEL_RX = re.compile(r"\\newlabel\{([^{}]*)\}\{\{([^{}]*)\}")
+ FIGURE_FLOAT = re.compile(r"\\begin\{figure\*?\}.*?\\end\{figure\*?\}", re.S)
+ CD_BLOCK = re.compile(r"\\begin\{(?:tikzcd|CD)\}.*?\\end\{(?:tikzcd|CD)\}", re.S)
++# The one pattern for a picture held whole out of a body: `picture_scopes` walks its matches and
++# convert_paper substitutes them, so the two cannot disagree about where a drawing starts.
++TIKZ_SPAN = re.compile(r"\\begin\{tikzpicture\}.*?\\end\{tikzpicture\}", re.S)
++# A figure's own style and colour table -- statements that draw nothing, so they can travel with
++# the picture they set up, where the emitter already folds them in.
++STYLE_DECL = re.compile(r"\\(?:tikzset|colorlet|definecolor)(?![A-Za-z])")
++
++
++def picture_scopes(body, table):
++    r"""One (macros, declarations) pair per picture of `body`, in the order the pictures stand.
++
++    A preprint draws with macros its own figure defines, in the `\begingroup` wrapped around the
++    picture -- after `\begin{document}`, where `prep.parse_preamble`, which stops at that word,
++    never reads them. `\FiniteSquare`, `\pinsgroup` and `\geometryrow` therefore never reach the
++    table a picture is expanded against, the statement parser meets a verb it does not know, and
++    the drawing is quoted as LaTeX. The body between two pictures is read in document order and
++    every table stops at the picture it serves, so a later figure's redefinition of the same name
++    cannot answer the drawing above it.
++
++    The block that defines the macros usually also declares the styles and colours the picture
++    draws with. Those are not prose, so they travel into the picture, where `cetz.expand_tikzset`
++    and `cetz._colors` already fold a declaration table into what a statement reads: left behind,
++    a figure that separates two families by ink draws both of them in black. A `\tikzset` that sets
++    a whole-picture default instead of a `/.style` table travels too, because that is the one place
++    the emitter already refuses one -- `cetz.build` answers None for a drawing carrying
++    `\tikzset{line width=2pt}`, measured directly -- while a statement dropped here would let the
++    same figure convert in an ink the author overrode. Nothing in the corpus hangs on the choice
++    today: across the 932 pictures of the 532 flat papers that hold one, no block between two
++    pictures sets a default rather than a style table.
++    """
++    out, scope, pos = [], dict(table), 0
++    for pic in TIKZ_SPAN.finditer(body):
++        region, pos = body[pos:pic.start()], pic.end()
++        extra, _skipped = macros.parse_definitions(region)
++        scope.update(extra)
++        decls = []
++        for m in STYLE_DECL.finditer(region):
++            start = skip_spaces(region, m.end())
++            if region[start:start + 1] != "{":
++                continue
++            try:
++                close = find_group(region, start)
++            except ValueError:
++                continue
++            end = close
++            # \definecolor{name}{rgb}{0,0,1} is a statement of two groups, \colorlet of one
++            while region[end:end + 1] == "{":
++                try:
++                    end = find_group(region, end)
++                except ValueError:
++                    break
++            if m.group(0) == "\\tikzset" and region[end:end + 1] == ";":
++                end += 1
++            decls.append(region[m.start():end])
++        out.append((scope, "\n".join(decls)))
++    return out
++
++
++def with_declarations(pic, decls):
++    r"""A picture with its figure's own declarations as the statements that open it.
++
++    They stand before `\begin{tikzpicture}` in the paper, so TeX has them in force when it reads
++    the drawing, and a declaration the picture writes for itself still overrides them later, as it
++    does there.
++    """
++    head = re.match(r"\\begin\{tikzpicture\}", pic)
++    body = pic[head.end():]
++    _opts, pos = cetzmod._opts_at(body, skip_spaces(body, 0))
++    if _opts is None:
++        return pic
++    return pic[:head.end() + pos] + "\n" + decls + "\n" + body[pos:]
++
+ 
+ 
+ def float_pictures(body, preserve):
+     r"""Hide a commutative diagram that stands as a float's content behind a token.
+ 
+     pandoc reads \begin{figure} as a block and drops an environment it does not know, so a
+@@ -241,19 +313,30 @@
+     def preserve_quote(match):
+         quotes.append(match.group(2))
+         return '\n\nZQT2TQUOTE%d\n\n' % (len(quotes) - 1)
+     body = re.sub(r'\\begin\{(PromptQuote|CoTQuote)\}(.*?)\\end\{\1\}', preserve_quote, body, flags=re.S)
+     body = prep.unwrap_boxes(body)
+     tikz = []
++    scopes = picture_scopes(body, p.macros)
++
+     def preserve_tikz(match):
+         # a drawing is lifted out of the body before the body's own macro pass runs, so it
+         # has to carry its expansions with it: a node label's maths is read by cetz's symbol
+         # table, which knows no paper macros and would drop \Spec from $\Spec R$ outright
+-        tikz.append(prep.expand_macros(match.group(0), p.macros))
++        text = match.group(0)
++        if len(tikz) < len(scopes):
++            table, decls = scopes[len(tikz)]
++            if decls:
++                text = with_declarations(text, decls)
++        else:
++            # a commutative diagram held back by float_pictures: the preamble is all the
++            # macro scope it was ever drawn with, and a tikzcd float declares nothing of its own
++            table = p.macros
++        tikz.append(prep.expand_macros(text, table))
+         return 'ZQT2TTIKZ%d' % (len(tikz) - 1)
+-    body = re.sub(r'\\begin\{tikzpicture\}.*?\\end\{tikzpicture\}', preserve_tikz, body, flags=re.S)
++    body = TIKZ_SPAN.sub(preserve_tikz, body)
+     body = float_pictures(body, preserve_tikz)
+     body = body.replace('\\/', '')
+     body = prep.expand_macros(body, p.macros)
+     body = prep.fix_dialect_prose(body)
+     body = prep.strip_dropped(body)
+     body = prep.array_floats(body)

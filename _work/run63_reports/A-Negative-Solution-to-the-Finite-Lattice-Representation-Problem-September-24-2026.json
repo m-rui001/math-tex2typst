@@ -1,0 +1,30 @@
+{
+  "paper": "A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-September-24-2026",
+  "ok": true,
+  "typ_lines": 2043,
+  "included_pdf_pages": 0,
+  "formulas": 1954,
+  "math_failed": 0,
+  "labels": 225,
+  "equations": 6,
+  "theorems": 10,
+  "figures": 2,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 2
+  },
+  "samples": {
+    "formulas": "1954",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-September-24-2026\\main.typ:104:81\n    │\n104 │   (Normal-subgroup test).  #emph[Suppose that $\\[ D \\, X \\]$ is fenced. If $R lt.tri.eq X$, then either $R lt.eq D$ or $D R = X$. In particular, $\\[ D \\, X \\]$ is not modular. The same assertion applies to a normal subgroup of $X \\/ F$ whenever $F lt.tri.eq X$ and $F lt.eq D$, with bottom $D \\/ F$.]\n    │                                                                                  ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-September-24-2026\\main.typ:104:251\n    │\n104 │   (Normal-subgroup test).  #emph[Suppose that $\\[ D \\, X \\]$ is fenced. If $R lt.tri.eq X$, then either $R lt.eq D$ or $D R = X$. In particular, $\\[ D \\, X \\]$ is not modular. The same assertion applies to a normal subgroup of $X \\/ F$ whenever $F lt.tri.eq X$ and $F lt.eq D$, with bottom $D \\/ F$.]\n    │                                                                                                                                                                                                                                                            ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-September-24-2026\\main.typ:113:92\n    │\n113 │ We will repeatedly use the following explicit form of the subgroup correspondence. If $R lt.tri.eq X$ and $X = D R$, then\n    │                                                                                             ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-September-24-2026\\main.typ:145:165\n    │\n145 │   (Bottlenecks).  #emph[Let $D < B lt.eq Z$, suppose that $\\[ D \\, B \\]$ is fenced, and suppose that $B$ is comparable with every member of $\\[ D \\, Z \\]$. If $R lt.tri.eq Z$ and $R lt.eq.not D$, then \n    │                                                                                                                                                                      ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-September-24-2026\\main.typ:148:82\n    │\n148 │  Consequently a soluble normal subgroup of $Z$ is contained in $D$. If $R \\, Q lt.tri.eq Z$ and \n    │                                                                                   ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-September-24-2026\\main.typ:149:26\n    │\n149 │ $ \\[ R \\, Q \\] lt.eq F lt.tri.eq Z \\, #h(2em) F lt.eq D \\, $\n    │                           ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-September-24-2026\\main.typ:278:175\n    │\n278 │   We claim that $W = hat(Q)$. For $q \\, q' in Q_i$, choose $w in W$ whose $i$th coordinate is $q$ and let $e_i \\( q' \\) in E$ be supported only on coordinate $i$. Since $W lt.tri.eq E$,\n    │                                                                                                                                                                                ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-September-24-2026\\main.typ:404:218\n    │\n404 │   We claim that every index on a route of length $r$ is a product of at most $L_r = r \\( r + 3 \\) \\/ 2$ atoms or their inverses. Induct on $r$, putting $N = \"core\"_H \\( H_1 \\)$ and $B = A \\( U ∩ N \\)$. Since $U ∩ N lt.tri.eq U$, we h",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 35,
+  "source": "E:\\math\\_work\\flat\\A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-September-24-2026.tex"
+}

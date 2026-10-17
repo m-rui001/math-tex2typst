@@ -1,0 +1,31 @@
+{
+  "paper": "A-latest-anchor-induction-with-spectrally-compact-masks-for-worst-case-trace-reconstruction-October-5-2026",
+  "ok": true,
+  "typ_lines": 22,
+  "included_pdf_pages": 0,
+  "formulas": 0,
+  "math_failed": 0,
+  "labels": 0,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "missing_included_pdf": 2
+  },
+  "samples": {
+    "missing_included_pdf": "summary.pdf"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "pdfpages"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-latest-anchor-induction-with-spectrally-compact-masks-for-worst-case-trace-reconstruction-October-5-2026.tex"
+}

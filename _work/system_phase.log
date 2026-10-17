@@ -1,0 +1,34 @@
+elevated start 2026-10-11T17:03:49  admin=True
+=== before ===
+  C: free=24.40 GB
+  D: free=98.10 GB
+
+=== [1] hibernation off ===
+
+  hiberfil exists now: False
+
+=== [2] pagefile reconfigure ===
+  AutomaticManagedPagefile was: True
+  AutomaticManagedPagefile now: False
+  existing Win32_PageFileSetting entries:
+    C:\pagefile.sys  initial=0MB max=0MB
+  C: pagefile set to initial=4096MB max=8192MB
+  D: pagefile created as system-managed
+  re-read:
+    C:\pagefile.sys  initial=4096MB max=8192MB
+    D:\pagefile.sys  initial=0MB max=0MB
+  NOTE: current C:\pagefile.sys stays 32GB until next reboot.
+
+=== [3] shadow copy storage (READ ONLY) ===
+vssadmin 1.1 - Volume Shadow Copy Service administrative command-line tool
+(C) Copyright 2001-2013 Microsoft Corp.
+
+No items found that satisfy the query.
+
+  volume info:
+
+
+=== after ===
+  C: free=37.04 GB
+  D: free=98.10 GB
+=== SYSTEM PHASE DONE ===

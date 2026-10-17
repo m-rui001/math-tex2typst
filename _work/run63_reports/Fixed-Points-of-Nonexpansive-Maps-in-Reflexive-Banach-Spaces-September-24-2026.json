@@ -1,0 +1,41 @@
+{
+  "paper": "Fixed-Points-of-Nonexpansive-Maps-in-Reflexive-Banach-Spaces-September-24-2026",
+  "ok": true,
+  "typ_lines": 537,
+  "included_pdf_pages": 0,
+  "formulas": 450,
+  "math_failed": 0,
+  "labels": 59,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "450",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark",
+    "accsupp"
+  ],
+  "macros_skipped": [
+    "\\renewcommand\\bibfont",
+    "\\providecommandprovidecommand",
+    "\\renewcommand\\bibsection",
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Fixed-Points-of-Nonexpansive-Maps-in-Reflexive-Banach-Spaces-September-24-2026.tex"
+}

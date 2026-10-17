@@ -1,0 +1,2 @@
+probe line A: 设 $N(x)=\exp((\log x)^{u})$ 且 $\rho(u)\le e^{-u\log u}$，行内闭合。
+probe line B: `tex:12` 反引号闭合，另起一行 $x$ 独立。

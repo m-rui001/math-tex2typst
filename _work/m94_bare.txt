@@ -1,0 +1,35 @@
+bare-`/` maths spans: 14367 over 672 papers
+
+== canvas: 0 spans over 0 papers
+
+== body: 14367 spans over 672 papers
+   script-arg             spans=4011  papers=575
+   (nothing of ours)      spans=2672  papers=534
+   #h(,script-arg         spans=1815  papers=495
+   frac(,script-arg       spans=1465  papers=408
+   frac(                  spans=1077  papers=378
+   #h(                    spans=1005  papers=383
+   #h(,frac(,script-arg   spans=821   papers=326
+   #h(,frac(              spans=660   papers=290
+   #scale(,script-arg     spans=368   papers=212
+   #scale(                spans=173   papers=129
+   #h(,#scale(,script-arg spans=106   papers=83
+   #scale(,frac(,script-arg spans=77    papers=69
+   #h(,#scale(            spans=43    papers=40
+   #h(,#scale(,frac(,script-arg spans=41    papers=37
+   #scale(,frac(          spans=26    papers=25
+   #h(,#scale(,frac(      spans=7     papers=7
+   sample  A-C1-Counterexample-to-the-Entropy-Conjectur $ h_(upright("top")) \( f \) = lim_(epsilon arrow.b 0) limsup_(n arrow.r oo) 1 / n log s_f \( n \, epsilon \) . $
+   sample  A-C1-Counterexample-to-the-Entropy-Conjectur $ F_(ell \, m) \( t \, z \) = L^(1 - m) / 10 alpha \( t \) beta_ell \( T_m \( t \, z \) \) Phi_(2^(m + 1)) \( z \) . $
+   sample  A-C1-Counterexample-to-the-Entropy-Conjectur $ \| U_ell \( t \, z \) \| lt.eq 1 / 10 sum_(m = 1)^oo L^(1 - m) = frac(L, 10 \( L - 1 \)) . $
+   sample  A-C1-Counterexample-to-the-Entropy-Conjectur $ \| z_i \| > 1 / 2 . $
+   sample  A-C1-Counterexample-to-the-Entropy-Conjectur $ \| w_u \| lt.eq frac(\| I \|, 10) L^(u - j) lt.eq 1 / 2 . $
+   sample  A-C1-Counterexample-to-the-Entropy-Conjectur $ limsup_(n arrow.r oo) 1 / n log s_X \( n \, epsilon \) lt.eq frac(log 2 + log P \( m \) + tau log Q \( m \), m) . $
+   sample  A-C1-Counterexample-to-the-Entropy-Conjectur $ limsup_(m arrow.r oo) 1 / m log P \( m \) = 0 \, $
+   sample  A-Capacity-Criterion-for-Four-State-Potts-Re $ a_n \( T \, lambda \) = bb(E) thin "TV" #scale(x: 120%, y: 120%)[\(] bb(P) \( sigma_rho in dot.op divides sigma_(L_n) \) \, sans(u) #scale(x: 120%, 
+   sample  A-Capacity-Criterion-for-Four-State-Potts-Re $ A \( p \) = 4 \| p - sans(u) \|^2 \, #h(2em) 0 lt.eq A \( p \) lt.eq 3 \, #h(2em) 1 / 8 A \( p \) lt.eq "TV" \( p \, sans(u) \) lt.eq 1 / 2 sqrt(A \
+   sample  A-Capacity-Criterion-for-Four-State-Potts-Re $ 1 / 8 m \( mu \) lt.eq bb(E) thin "TV" \( p \, sans(u) \) lt.eq 1 / 2 sqrt(m \( mu \)) . $
+   sample  A-Capacity-Criterion-for-Four-State-Potts-Re $ bb(E) x_i = 0 \, #h(2em) bb(E) x_i x_j = m / 3 upright(bold(1))_({ i = j }) \, $
+   sample  A-Capacity-Criterion-for-Four-State-Potts-Re $ m \( mu star.op nu \) lt.eq m \( mu \) + m \( nu \) - c (bb(E)_mu \[ A^2 \] m \( nu \) + m \( mu \) bb(E)_nu \[ A^2 \]) \, #h(2em) c = 1 / 1000 . $
+
+wrote E:\math\_work\m94_bare_slash.tsv

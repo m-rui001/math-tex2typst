@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\math\_work\pipe_fix.py", line 279, in <module>
+    main()
+    ~~~~^^
+  File "E:\math\_work\pipe_fix.py", line 228, in main
+    assert got == nbar, '%s:%d non-code \\| = %d, expected %d' % (pid, ln, got, nbar)
+           ^^^^^^^^^^^
+AssertionError: D25:255 non-code \| = 0, expected 8

@@ -1,0 +1,28 @@
+D177 lines=418->418 cr=0 markers=1->0 bytes=86874->86802 vs_expected_diff_lines=0
+D195 lines=662->662 cr=0 markers=1->0 bytes=85312->85288 vs_expected_diff_lines=0
+D198 lines=343->343 cr=0 markers=1->0 bytes=70706->70695 vs_expected_diff_lines=0
+D202 lines=335->335 cr=0 markers=1->0 bytes=76957->76938 vs_expected_diff_lines=0
+D205 lines=567->567 cr=0 markers=1->0 bytes=80262->80203 vs_expected_diff_lines=0
+D214 lines=300->300 cr=0 markers=5->0 bytes=73295->73153 vs_expected_diff_lines=0
+D224 lines=760->760 cr=0 markers=1->0 bytes=70176->70111 vs_expected_diff_lines=0
+D227 lines=550->550 cr=0 markers=1->0 bytes=101857->101833 vs_expected_diff_lines=0
+D234 lines=491->491 cr=0 markers=1->0 bytes=77108->77086 vs_expected_diff_lines=0
+D242 lines=328->328 cr=0 markers=1->0 bytes=71173->71154 vs_expected_diff_lines=0
+D256 lines=190->190 cr=0 markers=1->0 bytes=71582->71529 vs_expected_diff_lines=0
+D264 lines=1013->1013 cr=0 markers=2->0 bytes=76541->76478 vs_expected_diff_lines=0
+D266 lines=744->744 cr=0 markers=1->0 bytes=125309->125273 vs_expected_diff_lines=0
+D274 lines=335->335 cr=0 markers=2->0 bytes=73058->72970 vs_expected_diff_lines=0
+D295 lines=328->328 cr=0 markers=1->0 bytes=72629->72612 vs_expected_diff_lines=0
+D298 lines=401->401 cr=0 markers=1->0 bytes=106586->106560 vs_expected_diff_lines=0
+D314 lines=761->761 cr=0 markers=1->0 bytes=93825->93757 vs_expected_diff_lines=0
+D330 lines=352->352 cr=0 markers=1->0 bytes=73679->73653 vs_expected_diff_lines=1
+    L237 EXP 取整加克隆引理（第 12 到 34 行）：$G$ 无环自环、$S\ge1$ 点、费用 $0<w_v\le C$；置 $c_v=\lceil Sw_v\rceil$；把每个 $v$ 
+    L237 CUR 取整加克隆引理（第 12 到 34 行）：$G$ 无环自环、$S\ge1$ 点、费用 $0<w_v\le C$；置 $c_v=\lceil Sw_v\rceil$；把每个 $v$ 
+D339 lines=409->409 cr=0 markers=1->0 bytes=72937->72908 vs_expected_diff_lines=0
+D382 lines=497->497 cr=0 markers=1->0 bytes=75846->75822 vs_expected_diff_lines=0
+D389 lines=367->367 cr=0 markers=1->0 bytes=71611->71528 vs_expected_diff_lines=0
+D431 lines=227->227 cr=0 markers=1->0 bytes=70255->70166 vs_expected_diff_lines=0
+D436 lines=363->363 cr=0 markers=1->0 bytes=72481->72430 vs_expected_diff_lines=0
+D437 lines=363->363 cr=0 markers=1->0 bytes=80980->80902 vs_expected_diff_lines=0
+D457 lines=284->284 cr=0 markers=1->0 bytes=70607->70572 vs_expected_diff_lines=0
+HARD INVARIANT FAILURES: none

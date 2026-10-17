@@ -1,0 +1,28 @@
+{
+  "paper": "The-Dimension-of-the-Two-Adic-Hecke-Algebra-at-Odd-Level-October-5-2026",
+  "ok": true,
+  "typ_lines": 288,
+  "included_pdf_pages": 0,
+  "formulas": 218,
+  "math_failed": 0,
+  "labels": 38,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "218"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-Dimension-of-the-Two-Adic-Hecke-Algebra-at-Odd-Level-October-5-2026.tex"
+}

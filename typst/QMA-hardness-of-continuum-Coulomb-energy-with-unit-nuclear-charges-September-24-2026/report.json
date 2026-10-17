@@ -1,0 +1,32 @@
+{
+  "paper": "QMA-hardness-of-continuum-Coulomb-energy-with-unit-nuclear-charges-September-24-2026",
+  "ok": true,
+  "typ_lines": 718,
+  "included_pdf_pages": 0,
+  "formulas": 498,
+  "math_failed": 0,
+  "labels": 49,
+  "equations": 0,
+  "theorems": 6,
+  "figures": 1,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "498",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\QMA-hardness-of-continuum-Coulomb-energy-with-unit-nuclear-charges-September-24-2026.tex"
+}

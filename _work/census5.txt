@@ -1,0 +1,7 @@
+69/100 converted, 100 pictures seen, 12s
+208/300 converted, 300 pictures seen, 38s
+268/400 converted, 400 pictures seen, 49s
+336/500 converted, 500 pictures seen, 63s
+595/900 converted, 900 pictures seen, 116s
+TOTAL 913 pictures, 606 converted (66.4%), papers touched 377, 119s
+DONE

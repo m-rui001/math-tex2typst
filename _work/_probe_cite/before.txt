@@ -1,0 +1,30 @@
+== Kadisons-similarity-theorem-through-uniform-derivation-estimates-September-23-2026
+   ok=True compile_ok=True compile_errors=0 math_failed=0 tokens=0
+   [??]=1  upright("[??]")=1  ZQCT=0
+     75: The difficult part is obtaining a constant independent of matrix size for finite factors. Section 2 first combines Dickson’s row estimate #cite(label("Dickson2014")) Lemma 2.9 with its column counterpart to implement rec
+    105: Dickson’s argument derives the row estimate from Haagerup’s little Grothendieck inequality and credits Christensen with the estimate in this form #cite(label("Dickson2014")) Lemmas 2.8–2.9; this is part of the factorizat
+    107: $ parallel phi parallel_(upright("row")) lt.eq sqrt(2) thin parallel phi parallel^2 #h(2em) upright("[??]") . quad "(4)" $ <eq:dickson-row>
+== The-Restricted-Geometric-Langlands-Equivalence-in-Positive-Characteristic-September-24-2026
+   ok=True compile_ok=True compile_errors=0 math_failed=1 tokens=0
+   [??]=1  upright("[??]")=1  ZQCT=0
+    141: We fix the algebraic closure $K$ throughout. Since $k$ is perfect, every nonzero Witt vector is a power of $p$ times a unit. Thus $R$ is a complete Noetherian discrete valuation ring with uniformizer $p$ and residue fiel
+    143: Choose a smooth projective lift $cal(X) arrow.r S$ of $X$. For completeness, such a lift exists over $W \( k \)$ for every algebraically closed $k$ in either hypothesis. At each infinitesimal lifting step the obstruction
+    151: We will replace $R$ by its integral closure in a finite extension of $"Frac" \( R \)$ inside $K$ when necessary. Such an integral closure is a finite complete discrete valuation ring with residue field $k$; see #cite(lab
+    250: where $cal(L)_K$ is the restriction of a finite-rank lisse sheaf $cal(L)_S$ on $cal(X)$. To see the extension assertion, proper henselian invariance identifies the finite #emph[étale] covers of $cal(X)$ with those of $X$
+    450: On the special fiber, a cotangent vector at $P in cal(B)_s \( k \)$ means an element of $H^0$ of the cotangent-complex fiber. Deformation theory and vector-bundle Serre duality #cite(label("Stacks")) Tag 0BS4, followed b
+    594: whose restriction to $Delta$ is the specified isomorphism. For this, form the smooth space $E_P = P times_(a \, cal(B) \, b) U arrow.r P$. The given diagonal data define a section over $Delta$. First take an étale scheme
+    654: Since its first term vanishes, this identifies $cal(K) tilde.eq i_(*) E_D \( - m \) \[ - 2 m \]$, proving (6.1). In particular, the third term is constant along $D$; no middle-cohomology local system is left unidentified
+    777: Write $overline(A)_i$ and $overline(B)_i$ for their horizontal closures in $U$, and put $e_i = dim A_i$. Each $overline(A)_i$ is integral and dominates $S$. Every nonempty special fiber $\( overline(A)_i \)_s$ is pure of
+    779: The trait is excellent, and hence universally catenary: a complete Noetherian local ring is excellent #cite(label("Stacks")) Tag 07QW. Consequently, at every closed point $v in \( overline(A)_i \)_s$, the dimension formu
+    780: $ dim cal(O)_(overline(A)_i \, v) = e_i + 1 #h(2em) upright("[??]") . quad "(7.2)" $ <eq:support-local-dimension>
+    793: The morphism $Z arrow.r S$ is quasi-finite at $u$, since $u$ is an isolated closed point of its fiber #cite(label("Stacks")) Tag 01TH. Its quasi-finite locus is open, so it contains $z$. Thus $z$ has residue field finite
+    794: #emph[Compute nearby cycles on a finite neighborhood.] Take an affine neighborhood of $u$ inside the quasi-finite locus of $Z arrow.r S$. The henselian decomposition of a finite-type algebra #cite(label("Stacks")) Tag 04
+   1017: If $X = bb(P)^1$, the geometric spectral prestack $Y$ has one connected component: its components are indexed by semisimple geometric local systems #cite(label("AGKRRV")) Proposition 3.7.2, and the geometric étale fundam
+== Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026
+   ok=True compile_ok=True compile_errors=0 math_failed=0 tokens=0
+   [??]=1  upright("[??]")=1  ZQCT=0
+     46: The distinction between existence of an index and a uniform index is already visible in numerical-dimension-zero abundance. Gongyo proved that a numerically trivial log canonical divisor on a projective slc pair is ratio
+     56: The rank argument combines local positivity, moving subvarieties, and section counts. Its order propagation belongs to the Ein–Küchle–Lazarsfeld method #cite(label("EKL1995")); we use the precise chain and scalar constru
+    541: We use its numerical formulation, as in #cite(label("Nakayama2004")) Chapter III and #cite(label("Boucksom2004")). Fix the dimension-dependent integer $M = M \( n \)$ in Birkar’s Calabi–Yau effective birationality theore
+    549: $ "vol" \( overline(A) \) gt.eq M^(- n) #h(2em) upright("[??]") . quad "(5.15)" $ <eq:rank:integral-volume-lower-bound>
+TOTAL over the three papers: [??]=3 stringified-cites=3 leftover-tokens=0

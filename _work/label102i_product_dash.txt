@@ -1,0 +1,16 @@
+dash tokens as the products of run151 spell them
+documents read: 724   canvases on the page: 1055
+
+"dashed"                       651 tokens   234 papers
+"densely-dashed"               442 tokens   114 papers
+"densely-dotted"               261 tokens    67 papers
+"dotted"                        66 tokens    30 papers
+(3pt, 2pt, 0.8pt, 2pt)           3 tokens     1 papers
+(3pt, 2.2pt)                     3 tokens     1 papers
+(4pt, 2.5pt)                     2 tokens     1 papers
+(3pt, 2pt)                       2 tokens     1 papers
+(4pt, 2pt)                       1 tokens     1 papers
+(3pt, 2pt, 0.4pt, 2pt)           1 tokens     1 papers
+(4pt, 2pt, 1pt, 2pt)             1 tokens     1 papers
+
+TOTAL 1433 tokens over 506 canvases in 321 papers

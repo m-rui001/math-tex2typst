@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\begin{document}
+\section{Intro}
+Text with \(a_b\) inline, a citation \cite{Ref1}, \ref{eq:num}, \eqref{eq:num2}, \ref{thm:m}.
+\begin{equation}\label{eq:num}
+  x = \frac{1}{2}
+\end{equation}
+\begin{align}\label{eq:num2}
+  a &= b \\
+  c &= d
+\end{align}
+\[
+  y = z \tag{star}
+\]
+\begin{equation*}
+  p = q
+\end{equation*}
+\begin{theorem}[Main]\label{thm:m}
+  Something holds for all $n$.
+\end{theorem}
+\begin{lemma}\label{lem:l}
+  Aux.
+\end{lemma}
+\begin{proof}
+  Trivial.
+\end{proof}
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+    \node (a) at (0,0) {A};
+    \draw (a) -- (1,1);
+  \end{tikzpicture}
+  \caption{A caption. \label{fig:f}}
+\end{figure}
+\begin{table}
+  \caption{T. \label{tab:t}}
+  \begin{tabular}{lcr}
+    \hline
+    A & B \\ \hline
+    1 & 2 \\
+    \hline
+  \end{tabular}
+\end{table}
+\end{document}

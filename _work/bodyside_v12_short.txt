@@ -1,0 +1,123 @@
+blocks_total=277 with_relative=58 no_relative=219 kept=25
+## D07-量子Heisenberg铁磁体自发磁化.md zoneL384-482 Q(LEN55)=每个维数 $d\ge3$ 与每个自旋 $S\in\{\tfrac12,1,\tfrac32,\ldots\}$
+   REL L95 sec=§11 filecnt=1 ratio=0.943 d=数 $d\ge 3$ 与每个 $S\in\{\tfrac12,1,\tfrac32,\ldots\}$
+   REL L95 sec=§11 filecnt=1 ratio=0.935 d=数 $d\ge 3$ 与每个 $S\in\{\tfrac12,1,\tfrac32,\ldots\}$，
+   REL L95 sec=§11 filecnt=1 ratio=0.933 d=数 $d\ge 3$ 与每个 $S\in\{\tfrac12,1,\tfrac32,\ldots\}
+
+## D07-量子Heisenberg铁磁体自发磁化.md zoneL384-482 Q(LEN26)=核的每次应用重采样相应区间的转移、不重复同一采样置换
+   REL L47 sec=§3 filecnt=1 ratio=0.889 d=的每次应用**重采样**相应区间转移、不重复同一采样置换
+   REL L47 sec=§3 filecnt=1 ratio=0.873 d=的每次应用**重采样**相应区间转移、不重复同一采样置换，
+   REL L47 sec=§3 filecnt=1 ratio=0.868 d=的每次应用**重采样**相应区间转移、不重复同一采样置
+
+## D07-量子Heisenberg铁磁体自发磁化.md zoneL384-482 Q(LEN40)=稠密边界引理结尾只主张支配常数依赖固定体积，把体积一致化全部推给末节的表面阶代价
+   REL L125 sec=§14 filecnt=1 ratio=0.952 d=稠密边界引理结尾特意只主张"支配常数依赖固定体积"，把体积一致化全部推给末节的表面阶代价
+   REL L125 sec=§14 filecnt=1 ratio=0.941 d=的稠密边界引理结尾特意只主张"支配常数依赖固定体积"，把体积一致化全部推给末节的表面阶代价
+   REL L125 sec=§14 filecnt=1 ratio=0.941 d=稠密边界引理结尾特意只主张"支配常数依赖固定体积"，把体积一致化全部推给末节的表面阶代价 
+
+## D08-Mezard-Parisi公式.md zoneL1126-1135 Q(LEN5)=论文没讨论
+   REL L1058 sec=§15 filecnt=1 ratio=0.889 d=论没讨论
+   REL L193 sec=§1 filecnt=3 ratio=0.750 d=论文没
+   REL L408 sec=§2 filecnt=3 ratio=0.750 d=论文没
+
+## D339-平面XY模型临界中心磁化的对数修正与振幅确定.md zoneL370-385 Q(LEN30)=$1/(2j\log L)$ 里 $2\log L$ 的来源
+   REL L248 sec=§15 filecnt=1 ratio=0.931 d=$1/(2j\log L)$ 里的 $2\log L$ 
+   REL L248 sec=§15 filecnt=1 ratio=0.915 d= $1/(2j\log L)$ 里的 $2\log L$ 
+   REL L248 sec=§15 filecnt=1 ratio=0.912 d=$1/(2j\log L)$ 里的 $2\log L$
+
+## D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md zoneL837-850,925-946,947-981,982-1007 Q(LEN4)=本单位置
+   REL L28 sec=§0 filecnt=1 ratio=0.857 d=本单位
+
+## D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md zoneL837-850,925-946,947-981,982-1007 Q(LEN8)=并非随手写的松界
+   REL L873 sec=§? filecnt=1 ratio=0.857 d=随手写的松界
+   REL L873 sec=§? filecnt=1 ratio=0.769 d=手写的松界
+   REL L873 sec=§? filecnt=1 ratio=0.769 d=随手写的松
+
+## D357-盘转移表示与受限桥质量.md zoneL346-360 Q(LEN11)=见 §13 与 §16
+   REL L297 sec=§23 filecnt=1 ratio=0.870 d= §13 上界与 §16
+   REL L297 sec=§23 filecnt=1 ratio=0.833 d= §13 上界与 §16 
+   REL L297 sec=§23 filecnt=1 ratio=0.818 d= §13 上界与 §1
+
+## D359-把单位代价编辑距离压进l1：指数内常数外的匹配夹逼.md zoneL651-668,669-722 Q(LEN37)=使 $\sum_j\omega_j=\frac12$ 且第 1 分量占大头
+   REL L443 sec=§11 filecnt=1 ratio=0.972 d=使 $\sum\omega_j=\frac12$ 且第 1 分量占大头
+   REL L443 sec=§11 filecnt=1 ratio=0.959 d=作使 $\sum\omega_j=\frac12$ 且第 1 分量占大头
+   REL L443 sec=§11 filecnt=1 ratio=0.958 d=使 $\sum\omega_j=\frac12$ 且第 1 分量占大
+
+## D363-椭圆容量传播与球面Fourier限制猜想的完整开范围.md zoneL517-527 Q(LEN9)=§9 消去时间亏空
+   REL L143 sec=§4 filecnt=1 ratio=0.900 d=§9 消去时间支撑亏空
+   REL L143 sec=§4 filecnt=1 ratio=0.875 d=§9 消去时间
+   REL L143 sec=§4 filecnt=1 ratio=0.857 d= §9 消去时间支撑亏空
+
+## D363-椭圆容量传播与球面Fourier限制猜想的完整开范围.md zoneL517-527 Q(LEN22)=§7 落实 joint-coordinate
+   REL L202 sec=§6 filecnt=1 ratio=0.917 d=§7 各情形落实的 joint-coordinate
+   REL L202 sec=§6 filecnt=1 ratio=0.905 d=落实的 joint-coordinate
+   REL L202 sec=§6 filecnt=1 ratio=0.898 d= §7 各情形落实的 joint-coordinate
+
+## D364-平面Schrödinger端点收敛的H三分之一次幂全程.md zoneL457-466,537-555,629-673 Q(LEN16)=…不是一条被磨平了的证明线，是…
+   REL L11 sec=§0 filecnt=1 ratio=0.933 d=不是一条被磨平了的证明线，是
+   REL L11 sec=§0 filecnt=1 ratio=0.897 d=不是一条被磨平了的证明线，
+   REL L11 sec=§0 filecnt=1 ratio=0.897 d=是一条被磨平了的证明线，是
+
+## D364-平面Schrödinger端点收敛的H三分之一次幂全程.md zoneL457-466,537-555,629-673 Q(LEN13)=卡在措辞上，并非卡在构造上
+   REL L31 sec=§1 filecnt=1 ratio=0.917 d=措辞上，并非卡在构造上
+   REL L31 sec=§1 filecnt=1 ratio=0.880 d=措辞上，并非卡在构造上。
+   REL L31 sec=§1 filecnt=1 ratio=0.870 d=措辞上，并非卡在构造
+
+## D364-平面Schrödinger端点收敛的H三分之一次幂全程.md zoneL457-466,537-555,629-673 Q(LEN13)=，是被少数几块板困住的管…
+   REL L226 sec=§7 filecnt=1 ratio=0.960 d=，是被少数几块板困住的管
+   REL L226 sec=§7 filecnt=1 ratio=0.917 d=是被少数几块板困住的管
+   REL L226 sec=§7 filecnt=1 ratio=0.917 d=，是被少数几块板困住的
+
+## D367-负曲率熵等式与局部对称性.md zoneL254-259,276-281,282-371 Q(LEN11)=真正让我夜不能寐的对象
+   REL L226 sec=§18 filecnt=1 ratio=0.900 d=真正让我夜不能寐的
+   REL L226 sec=§18 filecnt=1 ratio=0.857 d=，真正让我夜不能寐的
+   REL L226 sec=§18 filecnt=1 ratio=0.842 d=真正让我夜不能寐
+
+## D367-负曲率熵等式与局部对称性.md zoneL254-259,276-281,282-371 Q(LEN8)=socle 非零
+   REL L110 sec=§9 filecnt=1 ratio=0.857 d=socle 
+   REL L110 sec=§9 filecnt=1 ratio=0.769 d=ocle 
+   REL L110 sec=§9 filecnt=1 ratio=0.769 d=socle
+
+## D367-负曲率熵等式与局部对称性.md zoneL254-259,276-281,282-371 Q(LEN5)=断在哪一步
+   REL L262 sec=§22 filecnt=1 ratio=0.889 d=在哪一步
+   REL L262 sec=§22 filecnt=1 ratio=0.750 d=哪一步
+   REL L262 sec=§22 filecnt=1 ratio=0.750 d=在哪一
+
+## D372-原始六次环面包的一等分布.md zoneL224-239 Q(LEN10)=§6 与 §9 两处
+   REL L174 sec=§13 filecnt=1 ratio=0.889 d=§6 与 §9 
+   REL L174 sec=§13 filecnt=1 ratio=0.842 d=、§6 与 §9 
+   REL L174 sec=§13 filecnt=1 ratio=0.824 d=§6 与 §9
+
+## D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md zoneL264-278 Q(LEN18)=这个顺序本身就是论文最深的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.971 d=这个顺序本身是论文最深的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.944 d=。这个顺序本身是论文最深的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.941 d=这个顺序本身是论文最深的设计声明
+
+## D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md zoneL264-278 Q(LEN15)=这本身是论文最深的的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.929 d=本身是论文最深的设计声明。
+   REL L209 sec=§12 filecnt=1 ratio=0.889 d=本身是论文最深的设计声明
+   REL L209 sec=§12 filecnt=1 ratio=0.889 d=身是论文最深的设计声明。
+
+## D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md zoneL264-278 Q(LEN11)=等于零强制 $B=0$
+   REL L153 sec=§8 filecnt=1 ratio=0.957 d=等于零都强制 $B=0$
+   REL L153 sec=§8 filecnt=1 ratio=0.917 d=式等于零都强制 $B=0$
+   REL L153 sec=§8 filecnt=1 ratio=0.917 d=等于零都强制 $B=0$，
+
+## D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md zoneL234-256 Q(LEN9)=其一般纤维上这对应
+   REL L115 sec=§6 filecnt=1 ratio=0.941 d=一般纤维上这对应
+   REL L115 sec=§6 filecnt=1 ratio=0.889 d=一般纤维上这对应 
+   REL L115 sec=§6 filecnt=1 ratio=0.875 d=一般纤维上这对
+
+## D49-中心圆盘极大算子的端点梯度界.md zoneL714-733,774-781 Q(LEN9)=下半连续性给测度界
+   REL L704 sec=§33 filecnt=1 ratio=0.947 d=下半连续性给出测度界
+   REL L704 sec=§33 filecnt=1 ratio=0.900 d="下半连续性给出测度界
+   REL L704 sec=§33 filecnt=1 ratio=0.900 d=下半连续性给出测度界"
+
+## D52-c0的双Lipschitz吸收而无线性拷贝.md zoneL571-592,593-600,601-606,607-613 Q(LEN19)=θ^J 的 log-Lipschitz
+   REL L549 sec=§29 filecnt=1 ratio=0.878 d=^J$ 的 $\log$-Lipschitz
+   REL L549 sec=§29 filecnt=1 ratio=0.857 d=^J$ 的 $\log$-Lipschitz 
+   REL L549 sec=§29 filecnt=1 ratio=0.850 d=^J$ 的 $\log$-Lipschit
+
+## D71-完美匹配多面体的熵与面维数.md zoneL595-608,718-734,735-746 Q(LEN7)=经两次扩张产物
+   REL L530 sec=§27 filecnt=1 ratio=0.923 d=两次扩张产物
+   REL L530 sec=§27 filecnt=1 ratio=0.833 d=两次扩张产
+   REL L530 sec=§27 filecnt=1 ratio=0.833 d=次扩张产物

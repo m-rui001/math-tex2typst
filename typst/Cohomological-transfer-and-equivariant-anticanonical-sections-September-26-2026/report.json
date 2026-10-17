@@ -1,0 +1,28 @@
+{
+  "paper": "Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026",
+  "ok": true,
+  "typ_lines": 969,
+  "included_pdf_pages": 0,
+  "formulas": 996,
+  "math_failed": 0,
+  "labels": 102,
+  "equations": 43,
+  "theorems": 1,
+  "figures": 0,
+  "tables": 1,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "996"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026.tex"
+}

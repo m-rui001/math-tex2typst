@@ -1,0 +1,42 @@
+{
+  "paper": "Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026",
+  "ok": true,
+  "typ_lines": 3290,
+  "included_pdf_pages": 0,
+  "formulas": 2869,
+  "math_failed": 0,
+  "labels": 399,
+  "equations": 16,
+  "theorems": 192,
+  "figures": 3,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:minipage": 1,
+    "cetz_converted": 3
+  },
+  "samples": {
+    "formulas": "2869",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "aliascnt",
+    "xurl"
+  ],
+  "macros_skipped": [
+    "\\providecommand\\lemmaautorefname",
+    "\\providecommand\\propositionautorefname",
+    "\\providecommand\\corollaryautorefname",
+    "\\providecommand\\definitionautorefname",
+    "\\providecommand\\conventionautorefname",
+    "\\providecommand\\exampleautorefname",
+    "\\providecommand\\remarkautorefname"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026\\main.typ:336:11\n    │\n336 │   If $R lt.tri.eq G$, then $H R$ permutes as a set with every overgroup of $H$. Dedekind’s law consequently makes $H R$ left-modular in $\\[ H \\, G \\]$. There is no proper interior left-modular label: for a putative such label $u$, choose comparable distinct interior labels $v < w$ in another horizontal component. Then\n    │            ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026\\main.typ:372:370\n    │\n372 │   #emph[Trivial bottom and proper nontrivial inner operators.] Suppose $P = 1$ and $1 < I < S$. Transporting $I$ gives a proper interior product label. A label $Y$ in another horizontal component is subdirect: its nontrivial coordinate projection $R$ satisfies $R I = S$, because its join with the product of the $I$’s is full. The subgroup $I$ normalizes $R$, so $R lt.tri.eq R I = S$ and hence $R = S$. Write $\\( T \\, beta \\)$ for the extension describing $Y$ in 3. Its image contains all inner automorphisms. Otherwise $beta \\( T \\) ∩ S$ is a nontrivial proper invariant subgroup of the diagonal, containing $I$. Transporting it over the tied parts and multiplying gives a nonbottom label below $Y$ with proper coordinate projections. It would lie in the same component, contradicting the preceding conclusion about all its labels.\n    │                                                                                                                                                                                                                                                                                                                                                                                   ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026\\main.typ:483:73\n    │\n483 │ At a path node $W$ we maintain an actual nonabelian simple group $B_W lt.tri.eq K_W$ such that\n    │                                                                          ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026\\main.typ:490:176\n    │\n490 │   (Compatibility of ancestor socles).  #emph[Suppose $H lt.eq K lt.eq K_W$, and a local conclusion in $K_W \\/ C_W$ supplies a nonabelian simple normal subgroup $overline(B) lt.tri.eq K \\/ C_W$ contained in the image of $B_W$. Suppose also that $\\( H \\/ C_W \\) overline(B) = K \\/ C_W$, and that its centralizer in $K \\/ C_W$ is soluble and contained in $H \\/ C_W$. Then $overline(B)$ has a unique lift $B lt.eq B_W$, with \n    │                                                                                                                                                                                 ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026\\main.typ:491:7\n    │\n491 │ $ B lt.tri.eq K \\, #h(2em) H B = K \\, #h(2em) C_K \\( B \\) lt.eq H \\, $\n    │        ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026\\main.typ:650:551\n    │\n650 │   We explain the supported inner group choices for $k gt.eq 2$. Use products across blocks of their natural special groups, actually supported (for orthogonal spaces we can take $Omega$ in the sense of the determinant-one spinor kernel in odd characteristic, and the kernel of the Dickson parity in even characteristic; thus in split four-space over two we use the group with the two independent natural $upright(\"SL\"",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 33,
+  "source": "E:\\math\\_work\\flat\\Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026.tex"
+}

@@ -1,0 +1,88 @@
+
+== buckets: (stroked, filled, `cycle` in statement, verb) -> count
+  (True, False, False, 'draw')                   5
+  (False, True, False, 'fill')                   4
+  (False, True, False, '?')                      2
+  (False, True, False, 'draw')                   2
+  (False, True, False, 'node')                   2
+  (True, False, False, '?')                      2
+  (False, False, False, 'path')                  1
+  (False, True, False, 'path')                   1
+  (True, True, False, 'draw')                    1
+
+== per paper
+A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-M face=2 attributed=3 pictures=1   <<< gap
+A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite face=1 attributed=1 pictures=1
+A-Torsion-Free-Group-Algebra-with-Zero-Divisors-Septembe face=1 attributed=3 pictures=1   <<< gap
+A-typical-start-upper-bound-for-low-temperature-SK-Glaub face=5 attributed=5 pictures=1
+Essential-Singularity-of-the-Correlation-Length-in-the-P face=2 attributed=2 pictures=1
+Finite-ordinary-minimal-model-programs-on-compact-Kahler face=1 attributed=1 pictures=1
+Quantitative-Superexponential-Bounds-for-van-der-Waerden face=1 attributed=1 pictures=1
+Quasipolynomial-Bounds-for-Arithmetic-Progressions-Septe face=1 attributed=1 pictures=1
+Rigidity-of-Smooth-Billiards-with-a-Continuous-Caustic-C face=1 attributed=1 pictures=1
+Sharpness-of-the-Cyclic-Integral-Floer-Bound-Below-the-S face=5 attributed=6 pictures=1   <<< gap
+The-Bass-trace-conjecture-for-complex-group-rings-Septem face=1 attributed=1 pictures=1
+The-Kakeya-maximal-conjecture-in-three-dimensions-Septem face=2 attributed=3 pictures=1   <<< gap
+The-critical-Liouville-quantum-sphere-and-geometric-limi face=1 attributed=2 pictures=1   <<< gap
+
+== per emission (stroked first)
+A-typical-start-upper-bound-for-low-temperature-SK-Glaub draw      stroke=True fill=False mark=False cycle=False cap=-
+    emitted line((10.3, 0), (10.3, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+    stmt    \draw[black!65] (leftfine) -- (coarsezero)     (coarsezero) -- (coarseone) (coarseone) -- (crossleft)     (crossright) -- (coarselast) (coarselast) -- (rightfine)
+A-typical-start-upper-bound-for-low-temperature-SK-Glaub draw      stroke=True fill=False mark=False cycle=False cap=-
+    emitted line((4.9, -2.85), (4.9, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+    stmt    \draw[black!65] (pathleft) -- (pathone) (pathone) -- (boundaryleft)     (boundaryright) -- (pathlast) (pathlast) -- (pathright)
+Finite-ordinary-minimal-model-programs-on-compact-Kahler draw      stroke=True fill=True mark=True cycle=False cap=-   UNATTRIBUTED
+    emitted line((0, -2.626), (0, -2.626), stroke: (thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.2cm, fi
+    stmt    \draw[edge] (relative)--(supporting)
+Sharpness-of-the-Cyclic-Integral-Floer-Bound-Below-the-S draw      stroke=True fill=False mark=False cycle=False cap=-
+    emitted line((0, 0), (0, 0), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+    stmt    [x=0.61cm,y=0.23cm,>=stealth] \foreach \origin/\lab in {0/{\delta_j},5.6/{(e_C*\delta)_j},11.2/{(e_M*\delta)_j}} {  \begin{scope}[xshift=\origin cm]  \draw[->,gray] (-.5,0)--(5.7,0);  \forea
+Sharpness-of-the-Cyclic-Integral-Floer-Bound-Below-the-S ?         stroke=True fill=False mark=False cycle=False cap=-
+    emitted line((0, 0), (0, 0), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+    stmt    \end{scope}
+The-Bass-trace-conjecture-for-complex-group-rings-Septem draw      stroke=True fill=False mark=False cycle=False cap=-
+    emitted line((-2.1, 0), (-2.1, 0), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10))
+    stmt    \draw[thin,gray] (z)--(A) (A)--(R) (z)--(C)
+The-Kakeya-maximal-conjecture-in-three-dimensions-Septem draw      stroke=True fill=False mark=False cycle=False cap=-
+    emitted line((0, 0.53), (0, 0.53), stroke: (paint: rgb("#808080"), thickness: 0.8pt, miter-limit: 10))
+    stmt    \foreach \x/\lab in {0/0,.3/{1-\ell},.7/{1-\tau},1/1}  {\draw (\x,.07)--(\x,-.07) node[below] {$\lab$};} \foreach \y/\name/\left in {1/V/0,2/U/.3,3/Y/.7,4/X/1}  {\node[left] at (-.03,\y) {$\
+The-Kakeya-maximal-conjecture-in-three-dimensions-Septem ?         stroke=True fill=False mark=False cycle=False cap=-
+    emitted line((0, -4.67), (0, -4.67), stroke: (paint: rgb("#808080"), thickness: 0.8pt, miter-limit: 10))
+    stmt    \end{scope}
+A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-M fill      stroke=False fill=True mark=False cycle=False cap=-
+    emitted line((0, 0), (0, 0), fill: rgb("#f2f2f2"), stroke: none)
+    stmt    [scale=1.05,>=Stealth]  \fill[gray!10,even odd rule] (0,0) circle (1.45) (0,0) circle (.55)
+A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-M ?         stroke=False fill=True mark=False cycle=False cap=-
+    emitted line((0, 0), (0, 0), fill: rgb("#f2f2f2"), stroke: none)
+    stmt    \end{scope}
+A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite fill      stroke=False fill=True mark=False cycle=False cap=picture head
+    emitted line((2.2, -4.62), (2.2, -4.62), fill: rgb("#d1d1d1"), stroke: none)
+    stmt    \fill[black!18,even odd rule]     (2.20,-4.62) circle (1.19cm)     (2.20,-4.62) circle (0.68cm)
+A-Torsion-Free-Group-Algebra-with-Zero-Divisors-Septembe draw      stroke=False fill=True mark=False cycle=False cap=-
+    emitted line((0, 0), (0, 0), fill: rgb("#e9e9e9"), stroke: none)
+    stmt    \end{scope} \draw[->] (1.65,0)--(3.7,0)
+A-Torsion-Free-Group-Algebra-with-Zero-Divisors-Septembe node      stroke=False fill=True mark=False cycle=False cap=-
+    emitted line((0, 0), (0, 0), fill: rgb("#e9e9e9"), stroke: none)
+    stmt    \end{scope} \node at (6.53,0) {$+$}
+A-Torsion-Free-Group-Algebra-with-Zero-Divisors-Septembe node      stroke=False fill=True mark=False cycle=False cap=-
+    emitted line((0, 0), (0, 0), fill: rgb("#e9e9e9"), stroke: none)
+    stmt    \end{scope} \node at (6.5,-1.65) {$[S]=[S_1]+[S_2]\quad\text{in }H_2(\widetilde X;\mathbb Z)$}
+Essential-Singularity-of-the-Correlation-Length-in-the-P ?         stroke=False fill=True mark=False cycle=False cap=-
+    emitted line((8.6, 2.3), (8.6, 2.3), fill: rgb("#e0e0ff"), stroke: none)
+    stmt    \end{scope}
+Quantitative-Superexponential-Bounds-for-van-der-Waerden path      stroke=False fill=True mark=False cycle=False cap=-
+    emitted line((0, 0), (0, 0), fill: rgb("#e8e8ff"), stroke: none)
+    stmt    [scale=1.05,>=Latex,     every node/.style={font=\small}]   \path[fill=blue!9,even odd rule]     (0,0) circle[radius={sqrt(2)}] (0,0) circle[radius=1]
+Quasipolynomial-Bounds-for-Arithmetic-Progressions-Septe path      stroke=False fill=False mark=False cycle=False cap=-
+    emitted line((6.153, -2.05), (6.153, -2.05), stroke: none)
+    stmt    \path (warm) edge (loss)       (warm) edge (cold)       (own) edge (cold)       (loss) edge (cold)       (cold) edge (next)
+Rigidity-of-Smooth-Billiards-with-a-Continuous-Caustic-C fill      stroke=False fill=True mark=False cycle=False cap=-   UNATTRIBUTED
+    emitted line((0, 0), (0, 0), fill: black, stroke: none)
+    stmt    [scale=.85,>=Stealth] \fill[deepblue!9,even odd rule] (0,0) ellipse (3 and 2)  (0,0) ellipse (2.70 and 1.5133)
+The-critical-Liouville-quantum-sphere-and-geometric-limi fill      stroke=False fill=True mark=False cycle=False cap=picture head
+    emitted line((0, 0), (0, 0), fill: rgb("#f1cfc5"), stroke: none)
+    stmt    \fill[shortcutwall,even odd rule]   (0,0) circle (1.88) (0,0) circle (1.82)
+The-critical-Liouville-quantum-sphere-and-geometric-limi draw      stroke=False fill=True mark=False cycle=False cap=picture head
+    emitted line((0, 0), (0, 0), fill: rgb("#f1cfc5"), stroke: none)
+    stmt    \end{scope}  \draw[shortcutcore,line width=3.2pt,rounded corners=9pt]   (-1.63,.25) -- (-1.50,.25) -- (-1.17,1.10) -- (-.84,1.10)

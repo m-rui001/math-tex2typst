@@ -1,0 +1,33 @@
+{
+  "paper": "Renewal-and-changes-of-law-for-critical-honeycomb-walks-September-26-2026",
+  "ok": true,
+  "typ_lines": 2497,
+  "included_pdf_pages": 0,
+  "formulas": 2372,
+  "math_failed": 0,
+  "labels": 253,
+  "equations": 83,
+  "theorems": 3,
+  "figures": 11,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1,
+    "cetz_converted": 11
+  },
+  "samples": {
+    "formulas": "2372",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Renewal-and-changes-of-law-for-critical-honeycomb-walks-September-26-2026.tex"
+}

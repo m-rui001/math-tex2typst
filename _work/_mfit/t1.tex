@@ -1,0 +1,11 @@
+\documentclass[tikz,border=20pt]{standalone}
+\usetikzlibrary{fit,positioning}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+  \node[text width=2cm,align=center] (a) at (0,0) {first box words here};
+  \path (a.north) coordinate (tmp);
+  \pgfgetlastxy{\gx}{\gy}\typeout{A-lastxy<\gx><\gy>}%
+  \pgfpointanchor{a}{north}\pgfgetlastxy{\hx}{\hy}\typeout{B-pointanchor<\hx><\hy>}%
+  \pgfextractx{\ex}\pgfextracty{\ey{\pgfpointanchor{a}{north}}}\typeout{C-extract<\ex><\ey>}%
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,4 @@
+rc=0
+bare subs          fills=1 hole=(255, 255, 255) band=(208, 209, 208)
+subs carry fill    fills=1 hole=(255, 255, 255) band=(208, 209, 208)
+inner sub white    fills=1 hole=(255, 255, 255) band=(208, 209, 208)

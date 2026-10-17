@@ -1,0 +1,67 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+papers scanned: 724  floor: 0.20 pt
++132 escapes  now  132 / worst   5.07 pt  p78  The-maximum-number-of-mutually-unbiased-bases-in-dim
+        p47  over  5.07  '𝑎3'
+        p47  over  5.07  '𝑏3'
+        p47  over  5.07  '𝑎3'
+ +60 escapes  now   60 / worst  41.04 pt  p222  Self-dual-random-cluster-interfaces-below-one-Septem
+        p145 over 41.04  'identified sides'
+        p145 over 22.61  'identified sides'
+        p187 over  9.98  'short seam 𝛾'
+ +57 escapes  now   57 / worst  48.44 pt  p67  Mass-and-covering-exponents-for-fixed-length-honeyco
+        p17  over 48.44  'return bridge'
+        p17  over 10.35  '𝑎'
+        p17  over 10.35  '𝑏'
+ +50 escapes  now   50 / worst   9.60 pt  p122  Canonical-conformal-limits-of-subcritical-FK-planar-
+        p9   over  9.60  '𝑓0'
+        p9   over  9.60  '𝑓0'
+        p9   over  9.60  '𝑓0'
+ +48 escapes  now   48 / worst   9.79 pt  p115  Uniform-marked-polygon-estimates-and-sharp-finite-br
+        p58  over  9.79  '𝑝1'
+        p58  over  8.33  '𝑝2'
+        p82  over  8.14  'corner'
+ +43 escapes  now   43 / worst  10.16 pt  p75  Cardys-formula-for-critical-Poisson-Voronoi-percolat
+        p6   over 10.16  '𝐶2'
+        p6   over 10.16  '𝐶2'
+        p6   over 10.16  '𝐶2'
+ +32 escapes  now   32 / worst   7.14 pt  p42  The-Deligne-Drinfeld-conjecture-September-23-2026
+        p30  over  7.14  '𝘊:'
+        p30  over  7.14  '𝘈:'
+        p30  over  7.14  '𝘉:'
+ +27 escapes  now   27 / worst   7.87 pt  p16  A-Complete-Local-Domain-Without-a-Small-Cohen-Macaul
+        p11  over  7.87  '𝑒3'
+        p11  over  7.87  '𝑒3'
+        p11  over  7.79  '𝑒1'
+ +25 escapes  now   25 / worst  10.30 pt  p116  Square-lattice-FK-interfaces-and-nested-loops-for-1-
+        p93  over 10.30  'primal arc'
+        p50  over  9.59  '𝑑0'
+        p73  over  9.40  'known bank 𝜋'
+ +24 escapes  now   24 / worst   7.89 pt  p30  Modularity-of-elliptic-curves-over-imaginary-quadrat
+        p10  over  7.89  '0'
+        p10  over  7.89  '1'
+        p10  over  7.89  '+𝑠'
+ +22 escapes  now   22 / worst  12.72 pt  p46  A-Fully-Polynomial-Randomized-Approximation-Scheme-f
+        p17  over 12.72  '𝑣0'
+        p17  over 12.72  '𝑣1'
+        p17  over 12.72  '𝑣2'
+ +21 escapes  now   21 / worst   5.05 pt  p149  Virtual-compact-specialness-of-hyperbolic-one-relato
+        p118 over  5.05  '𝑝'
+        p118 over  5.05  '𝑝'
+        p118 over  5.05  '𝑝'
+ +21 escapes  now   21 / worst  12.58 pt  p44  Planar-Graph-Metrics-Embed-into-L1-with-Constant-Dis
+        p9   over 12.58  '𝑞2'
+        p9   over 12.58  '𝑞2'
+        p9   over 12.58  '𝑞1'
+ +21 escapes  now   21 / worst   9.10 pt  p232  Metric-measure-limits-of-subcritical-FK-and-spanning
+        p80  over  9.10  '𝑞0'
+        p80  over  9.10  '𝑞0'
+        p80  over  9.07  'marker'
+ +21 escapes  now   21 / worst  10.30 pt  p133  Conformal-Limits-of-Critical-Square-Lattice-Random-C
+        p86  over 10.30  'primal arc'
+        p86  over  9.11  '𝑂'
+        p38  over  7.89  '𝑐'
+TOTAL escapes: 1973 over 724 papers
+  math+bottom      904 escapes over 213 papers
+  math+top         829 escapes over 210 papers
+  prose+bottom     132 escapes over  69 papers
+  prose+top        108 escapes over  64 papers

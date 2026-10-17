@@ -1,0 +1,2 @@
+remaining=1
+row=498 bytes=239501 dir=The-rational-Hodge-conjecture-for-products-of-K3-surfaces-October-4-2026

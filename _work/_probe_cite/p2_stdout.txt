@@ -1,0 +1,14 @@
+$a #h(2em) upright("ZQCTn,Dickson2014") upright("Lemma\xa02.9, Equation\xa0(19)") .$
+
+$a #h(2em) upright("ZQCTp,Stacks") upright("Tag\xa002JT") .$
+
+$b #h(2em) upright("ZQCTn,A,B") upright("Lemmas\xa02.8\u20132.9 and\xa00.27") .$
+
+$c upright("see ") upright("ZQCTn,K1") upright(" for the proof")$
+
+$d #h(2em) upright("ZQCTn,SharpO4") upright("Section \u201cScales, observation, and the class of densities\u201d") .$
+
+$e #h(2em) upright("ZQCTn,K_2, with underscore") .$
+
+=== stderr ===
+

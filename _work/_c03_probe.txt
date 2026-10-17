@@ -1,0 +1,1 @@
+[(403, "KaTeX parse error: Can't use function '$' in math mode ", "C' $ 上数值平坦（eq:claim，                  ）。令 $Y:=f^{-1}(C)", '**命题 8.1**（`antican.tex:1077-1115`）：$f\\colon X\\to Z$ 正规投影簇间的解析局部平凡 $\\mathbb P^r$-纤维化，$L$ nef 且 $f$-ample Cartier、$\\nu(X,L)=r$，则 $f_*\\mathcal O_X(L)$ 是')]

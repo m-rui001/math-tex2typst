@@ -1,0 +1,28 @@
+{
+  "paper": "Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026",
+  "ok": true,
+  "typ_lines": 851,
+  "included_pdf_pages": 0,
+  "formulas": 905,
+  "math_failed": 0,
+  "labels": 122,
+  "equations": 29,
+  "theorems": 6,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "905"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026.tex"
+}

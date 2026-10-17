@@ -1,0 +1,29 @@
+--- HDR lines (1-based) ---
+372: | 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+--- em dash lines ---
+9: > `n\log n+n\log\log n+5n$~\cite{Rog57}.` —— overview.tex:30
+13: > `$n^{\log_2\log n+O(1)}$~\cite{Rog59}.` —— overview.tex:38
+17: > `\theta_L(K)\le Cn\log n\,(\log\log n)^{10/3+o(1)}` —— overview.tex:42
+43: > `P_{b,t_z}(\eps)\le e^{-c b^{0.70}},` —— blocks.tex:91
+51: > `\le C'\exp\bigl(s-c's^{1.4}\bigr)\longrightarrow0.` —— final.tex:164
+57: > `no estimate on a single successful` —— overview.tex:110
+63: > `many cosets can contain no usable anchor.` —— blocks.tex:428
+81: > `The fixed vector` —— hierarchy.tex:232
+93: > `\E_{w_1,\ldots,w_k,x}(A(x)-\bar g)^2` —— sampler.tex:60
+99: > `union bound over $H$ would be insufficient under the allowed bound` —— sampler.tex:187
+105: > `moment estimate alone gives a good approximation at most base points. A` —— sampler.tex:9
+115: > `In Li and Liu's two-stage construction, one auxiliary correction is chosen for an entire weighted` —— overview.tex:76
+121: > ` b_{i+1}\le \tfrac12 b_i,\qquad` —— hierarchy.tex:26
+127: > ` \le b_r^{-a}\sum_{k=0}^{r-1}2^{-ak}` —— hierarchy.tex:266
+133: > `$y=x-\sum_{j\notin S}d_jw_j$，even though that offset involves the other` —— blocks.tex:325（该行的原文为 `y=x-\sum_{j\notin S}d_jw_j$, even though that offset involves the other`）
+--- banned phrases / eqref / row7 ---
+23: 还有一个次要动机来自 overview.tex:14--20 对密度定义的解释：一个基本 cell 上覆盖重数的积分等于 $\vol_n(K)$，所以密度衡量的是中心被强制成格时必需的重叠量。换句话说，密度损失完全可以在"有多少个中心携带多少体积"这一账本上被追踪；这暗示我任何 $\log\log n$ 级别的多余因子必然对应某个记账环节的漏损，而漏损点通常是一个全局选择。
+113: 转折点是接受"校正不是一个，而是一族"，并且让这一族递归地互相采样。正文在 overview.tex:76--80 写的是
+164: 标签不等式是 preliminaries.tex:45--49 的 `\eqref{eq:section-labels}`，三行原文为 ` J_a\subset K_y,`（45）、` c\,\vol_n(K)\gamma_D(y)`（47）、` \le C\,\vol_n(K)\gamma_D(y).`（49）。上游输入是 EK 的逐点边缘，preliminaries.tex:21--23：`\left|\frac{f_E(y)}{\
+166: （b）中间步骤补齐。我按证明顺序把缺的环节写全。第一，仿一化：均匀测度变成 isotropic，协方差正定由体内点非空保证（preliminaries.tex:55--57），密度是 log-concave（57--58）。第二，$S=2DR+2$（58），在 $D,R$ 的显示范围内对大 $n$ 有 ` D\le n^\alpha,\qquad S<n^\beta,`（61）与 ` \qquad C_0n^{-\gamma}\le\t
+170: （d）失败路线。[推测] 第一条：跳过上半连续那一步，直接把 a.e. 的下界当逐点用。失败位置很明确，标签 $J_a$ 要在每个 $\|y\|\le R$ 上存在，a.e. 版本会在一个零测高度集上什么也不给，而 final.tex:142--145 的 "For any vertical target $y$" 是对每个 $y$ 取模式的，零测集上的漏洞会摧毁一致覆盖。[推测] 第二条：把塞原点这一步改成"截面非空即取一点 $x_y
+276: （c）机械理由。$k=\lfloor p_bt\rfloor$ 与 $x=k\bmod p_b$ 把连续点先落到格胞再落到有限群，两步都是坐标向；$z$ 用标准代表元（444 行的 again using standard representatives）是必需的，否则 $t_z=z/p_b$ 的锚点解释会变。$e^{-\eta_b}$ 而不是 $e^{-O(\eta_b)}$：$\eta_b=bh_b^2/p_b$ 比任何固定负幂衰减
+350: （b）中间步骤补齐。标注环节的先后顺序我按正文抄下来，因为顺序本身就是论证的一部分：$B$ 与全部竖直常数先定（118--119），$s=\log\log n$、$b_1=\lceil s^2\rceil$（119--120），$R^2=\sum b_ih_i^2$、$m=n-D$（122--124），$D=O(s^2+1)$、$R$ 被 $s$ 的固定多项式控制（125）。套 $\lem:sections$ 得至多 $(Cm^2)^D
+362: `Model.lean`（533 B）把 tex 的定义层落地：`abbrev Space (n : ℕ) := Fin n → ℝ`（12 行）、`IsConvexBody K` 定义为 `IsCompact K ∧ Convex ℝ K ∧ (interior K).Nonempty`（14--15 行）、`LatticeCovers K L` 定义为 `K + (L : Set (Space n)) = Set.univ`（17-
+381: | $R^2$ | $\sum_{i\le r+1}b_ih_i^2\le C(b_1\log(b_1+1)+1)$ | hierarchy.tex:123--125 | $\lem:sections$ 的 $\|y\|\le R$ | 半径变大要求更大的 $M$，标签数膨胀 |
+491: - 一处引用缺陷：第 15 节（b）段末尾的 `$\eqref{}$` 是空引用，应补成 `$\eqref{eq:shear-bound}$` 或直接写成"补齐判据"，位置在该段倒数第二句；这一处属于我自己书写失误，与禁串无关。

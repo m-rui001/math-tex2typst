@@ -1,0 +1,34 @@
+{
+  "paper": "Quadratic-Stabilization-of-the-Canonical-Foulkes-Howe-Map-September-25-2026",
+  "ok": true,
+  "typ_lines": 204,
+  "included_pdf_pages": 0,
+  "formulas": 172,
+  "math_failed": 0,
+  "labels": 25,
+  "equations": 10,
+  "theorems": 5,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "172"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "accsupp"
+  ],
+  "macros_skipped": [
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Quadratic-Stabilization-of-the-Canonical-Foulkes-Howe-Map-September-25-2026.tex"
+}

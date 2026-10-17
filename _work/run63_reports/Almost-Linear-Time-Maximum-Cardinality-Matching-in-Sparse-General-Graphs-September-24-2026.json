@@ -1,0 +1,31 @@
+{
+  "paper": "Almost-Linear-Time-Maximum-Cardinality-Matching-in-Sparse-General-Graphs-September-24-2026",
+  "ok": true,
+  "typ_lines": 2017,
+  "included_pdf_pages": 0,
+  "formulas": 1156,
+  "math_failed": 0,
+  "labels": 256,
+  "equations": 0,
+  "theorems": 2,
+  "figures": 3,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1,
+    "cetz_converted": 3
+  },
+  "samples": {
+    "formulas": "1156",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Almost-Linear-Time-Maximum-Cardinality-Matching-in-Sparse-General-Graphs-September-24-2026.tex"
+}

@@ -1,0 +1,158 @@
+852|downstairs|检验之间的张力；伽罗瓦等式我读成固定源下降的另一半凭证，它允许把覆盖上的截面空间原样搬回 downstairs 一侧的对应物，这正是第二小节要用的形态。
+854|Stein| 恰一维。证明第一步用 Stein 分解化到有限映射，理由是有向正规簇的双有理态射直接像是 
+854|Iitaka|面，在每个素除子的格中正则，由引一的判据升为整体截面（ - ）。两个非零分次环同超越次数，Iitaka 维数相等；底侧若没有正度截面，同一套范数论证排除上侧有（ - ）；一度里两枚独立截面的比
+858|Iitaka|引四，相对 Iitaka 纤维化（ - ）：
+858|Iitaka| 在几何一般纤维上的 Iitaka 维数为 
+858|Stein| 中的相对代数闭包，再铺开、解消有理映射并做 Stein 分解（ - ）。对数替代物的凭证是一条在每充分可分度都成立的整体同构，
+866|Abhyankar|，Abhyankar 不等式反手给出反向，夹成等式，
+870|Iitaka|，在光滑投影模型上取相对 Iitaka 纤维化 
+870|Iitaka| 的对数 Iitaka 维数为零；
+872|Iitaka| 的一般点处；相对 Iitaka 维数为 
+874|coincide| 拉动后一致，两端的截面域与有理映射像的维数 coincide，下降因此整体保住 Iitaka 不变量（ - ）。  从对像维数一致的强调判断，这段下降
+874|Iitaka| 拉动后一致，两端的截面域与有理映射像的维数 coincide，下降因此整体保住 Iitaka 不变量（ - ）。  从对像维数一致的强调判断，这段下降是为次可加性主定理服务的，单有截
+880|generically|后半是对一般差异层秩一条件的第二遍检验（ - ），检验对象即正文归约整条模线推论里的 generically... 不，检验对象即正文归约整条模线推论所要求的条件（ - ）。取对数分解 
+924|build| 嘉当 | build/sections/normalization.tex:33 | §30 下降把覆盖上截面
+924|sections| 嘉当 | build/sections/normalization.tex:33 | §30 下降把覆盖上截面空间搬回源 | 伽
+924|normalization| 嘉当 | build/sections/normalization.tex:33 | §30 下降把覆盖上截面空间搬回源 | 伽罗瓦凭证失手，截面空间认同在
+924|tex| 嘉当 | build/sections/normalization.tex:33 | §30 下降把覆盖上截面空间搬回源 | 伽罗瓦凭证失手，截面空间认同在此断 |
+925|build| | 配射影公式使用 | build/sections/normalization.tex:43 | 引一伽罗瓦等式的证明 |
+925|sections| | 配射影公式使用 | build/sections/normalization.tex:43 | 引一伽罗瓦等式的证明 | 不变量归约到结构
+925|normalization| | 配射影公式使用 | build/sections/normalization.tex:43 | 引一伽罗瓦等式的证明 | 不变量归约到结构层不闭合 |
+925|tex| | 配射影公式使用 | build/sections/normalization.tex:43 | 引一伽罗瓦等式的证明 | 不变量归约到结构层不闭合 |
+926|build| 有理嘉当 | build/sections/normalization.tex:51 | 主线增长率不变才许换模型
+926|sections| 有理嘉当 | build/sections/normalization.tex:51 | 主线增长率不变才许换模型 | 换覆盖每步须
+926|normalization| 有理嘉当 | build/sections/normalization.tex:51 | 主线增长率不变才许换模型 | 换覆盖每步须重算 Iitaka 维数 |
+926|tex| 有理嘉当 | build/sections/normalization.tex:51 | 主线增长率不变才许换模型 | 换覆盖每步须重算 Iitaka 维数 |
+926|Iitaka|rmalization.tex:51 | 主线增长率不变才许换模型 | 换覆盖每步须重算 Iitaka 维数 |
+927|build| | 取充分可分倍数后成立 | build/sections/normalization.tex:64 | 分次环超越次数比较 | 
+927|sections| | 取充分可分倍数后成立 | build/sections/normalization.tex:64 | 分次环超越次数比较 | 上侧截面不再在底侧
+927|normalization| | 取充分可分倍数后成立 | build/sections/normalization.tex:64 | 分次环超越次数比较 | 上侧截面不再在底侧整过，环比较散架 |
+927|tex| | 取充分可分倍数后成立 | build/sections/normalization.tex:64 | 分次环超越次数比较 | 上侧截面不再在底侧整过，环比较散架 |
+928|build| 且截面空间非零 | build/sections/normalization.tex:54 | §31 固定零除子的成比
+928|sections| 且截面空间非零 | build/sections/normalization.tex:54 | §31 固定零除子的成比例运算 | 跨度成
+928|normalization| 且截面空间非零 | build/sections/normalization.tex:54 | §31 固定零除子的成比例运算 | 跨度成比例的论证丢掉一维前提 |
+928|tex| 且截面空间非零 | build/sections/normalization.tex:54 | §31 固定零除子的成比例运算 | 跨度成比例的论证丢掉一维前提 |
+929|build| 压住约化拉动边界，可分度 | build/sections/normalization.tex:87 | 对数拉动单射供应用侧系数
+929|sections| 压住约化拉动边界，可分度 | build/sections/normalization.tex:87 | 对数拉动单射供应用侧系数一推论 | 进边界
+929|normalization| 压住约化拉动边界，可分度 | build/sections/normalization.tex:87 | 对数拉动单射供应用侧系数一推论 | 进边界的门票没有出处 |
+929|tex| 压住约化拉动边界，可分度 | build/sections/normalization.tex:87 | 对数拉动单射供应用侧系数一推论 | 进边界的门票没有出处 |
+930|build| 处雅可比贡献 | build/sections/normalization.tex:99 | 引三的逐素子阶核验 | 
+930|sections| 处雅可比贡献 | build/sections/normalization.tex:99 | 引三的逐素子阶核验 | 边界系数一不再够用
+930|normalization| 处雅可比贡献 | build/sections/normalization.tex:99 | 引三的逐素子阶核验 | 边界系数一不再够用，单射断 |
+930|tex| 处雅可比贡献 | build/sections/normalization.tex:99 | 引三的逐素子阶核验 | 边界系数一不再够用，单射断 |
+931|build| 很一般纤维 | build/sections/normalization.tex:157 | 相对 Iitaka 构
+931|sections| 很一般纤维 | build/sections/normalization.tex:157 | 相对 Iitaka 构造的像维数上界 |
+931|normalization| 很一般纤维 | build/sections/normalization.tex:157 | 相对 Iitaka 构造的像维数上界 | 
+931|tex| 很一般纤维 | build/sections/normalization.tex:157 | 相对 Iitaka 构造的像维数上界 | 
+931|Iitaka| | build/sections/normalization.tex:157 | 相对 Iitaka 构造的像维数上界 | 
+932|Iitaka| | 相对 Iitaka 纤维化的底相对维数 | build/sections/normalization.tex
+932|build| | 相对 Iitaka 纤维化的底相对维数 | build/sections/normalization.tex:115 | §30 里 
+932|sections| | 相对 Iitaka 纤维化的底相对维数 | build/sections/normalization.tex:115 | §30 里 
+932|normalization| | 相对 Iitaka 纤维化的底相对维数 | build/sections/normalization.tex:115 | §30 里 
+932|tex|aka 纤维化的底相对维数 | build/sections/normalization.tex:115 | §30 里 
+933|build| | build/sections/normalization.tex:116 | 秩一比较的纤维零前提 
+933|sections| | build/sections/normalization.tex:116 | 秩一比较的纤维零前提 | 一般 
+933|normalization| | build/sections/normalization.tex:116 | 秩一比较的纤维零前提 | 一般 
+933|tex| | build/sections/normalization.tex:116 | 秩一比较的纤维零前提 | 一般 
+934|build| | 每充分可分度成立 | build/sections/normalization.tex:136 | 对数改造恒等式认截面系
+934|sections| | 每充分可分度成立 | build/sections/normalization.tex:136 | 对数改造恒等式认截面系统 | §30 反
+934|normalization| | 每充分可分度成立 | build/sections/normalization.tex:136 | 对数改造恒等式认截面系统 | §30 反向把截面取回 
+934|tex| | 每充分可分度成立 | build/sections/normalization.tex:136 | 对数改造恒等式认截面系统 | §30 反向把截面取回 
+935|build| | 对数光滑模型上 | build/sections/normalization.tex:123 | 纤维记号 
+935|sections| | 对数光滑模型上 | build/sections/normalization.tex:123 | 纤维记号 
+935|normalization| | 对数光滑模型上 | build/sections/normalization.tex:123 | 纤维记号 
+935|tex| | 对数光滑模型上 | build/sections/normalization.tex:123 | 纤维记号 
+936|build| | 相对剩余超越次数不等式 | build/sections/normalization.tex:183 | 限制赋值的除子性 | 
+936|sections| | 相对剩余超越次数不等式 | build/sections/normalization.tex:183 | 限制赋值的除子性 | 上界丢失，夹逼成单
+936|normalization| | 相对剩余超越次数不等式 | build/sections/normalization.tex:183 | 限制赋值的除子性 | 上界丢失，夹逼成单边 |
+936|tex|| 相对剩余超越次数不等式 | build/sections/normalization.tex:183 | 限制赋值的除子性 | 上界丢失，夹逼成单边 |
+937|build| | 除子赋值恒等式 | build/sections/normalization.tex:185 | 推出 
+937|sections| | 除子赋值恒等式 | build/sections/normalization.tex:185 | 推出 
+937|normalization| | 除子赋值恒等式 | build/sections/normalization.tex:185 | 推出 
+937|tex| | 除子赋值恒等式 | build/sections/normalization.tex:185 | 推出 
+938|build| 中像余维至少二的素子落在光滑轨迹外与除子部分 | build/sections/normalization.tex:191 | 固定模型上抽取的有限性
+938|sections| 中像余维至少二的素子落在光滑轨迹外与除子部分 | build/sections/normalization.tex:191 | 固定模型上抽取的有限性 | 最小规则的底
+938|normalization| 中像余维至少二的素子落在光滑轨迹外与除子部分 | build/sections/normalization.tex:191 | 固定模型上抽取的有限性 | 最小规则的底素子列不完 |
+938|tex|子落在光滑轨迹外与除子部分 | build/sections/normalization.tex:191 | 固定模型上抽取的有限性 | 最小规则的底素子列不完 |
+939|build| | build/sections/normalization.tex:210 | 
+939|sections| | build/sections/normalization.tex:210 | 
+939|normalization| | build/sections/normalization.tex:210 | 
+939|tex| | build/sections/normalization.tex:210 | 
+940|build| | 未分两本账的整个最小规则底项 | build/sections/normalization.tex:213 | §33 判别与模的拆分
+940|sections| | 未分两本账的整个最小规则底项 | build/sections/normalization.tex:213 | §33 判别与模的拆分 | 正文的 
+940|normalization| | 未分两本账的整个最小规则底项 | build/sections/normalization.tex:213 | §33 判别与模的拆分 | 正文的 
+940|tex|分两本账的整个最小规则底项 | build/sections/normalization.tex:213 | §33 判别与模的拆分 | 正文的 
+941|build| 得到 | build/sections/normalization.tex:219 | 固定源下降的单射 | 
+941|sections| 得到 | build/sections/normalization.tex:219 | 固定源下降的单射 | 主不等式的加法输入
+941|normalization| 得到 | build/sections/normalization.tex:219 | 固定源下降的单射 | 主不等式的加法输入丢了底侧 |
+941|tex| 得到 | build/sections/normalization.tex:219 | 固定源下降的单射 | 主不等式的加法输入丢了底侧 |
+942|build| 上方的对数正则等价 | build/sections/normalization.tex:230 | 三段分账的核验 | 不
+942|sections| 上方的对数正则等价 | build/sections/normalization.tex:230 | 三段分账的核验 | 不等式组同 
+942|normalization| 上方的对数正则等价 | build/sections/normalization.tex:230 | 三段分账的核验 | 不等式组同 
+942|tex| 上方的对数正则等价 | build/sections/normalization.tex:230 | 三段分账的核验 | 不等式组同 
+943|build| | 整套不等式的汇合 | build/sections/normalization.tex:233 | 下降的底侧准入判据 |
+943|sections| | 整套不等式的汇合 | build/sections/normalization.tex:233 | 下降的底侧准入判据 | 底截面无从判允许
+943|normalization| | 整套不等式的汇合 | build/sections/normalization.tex:233 | 下降的底侧准入判据 | 底截面无从判允许 |
+943|tex| | 整套不等式的汇合 | build/sections/normalization.tex:233 | 下降的底侧准入判据 | 底截面无从判允许 |
+944|Iitaka| | 相对 Iitaka 维数 | build/sections/normalization.tex:237 | 
+944|build| | 相对 Iitaka 维数 | build/sections/normalization.tex:237 | 
+944|sections| | 相对 Iitaka 维数 | build/sections/normalization.tex:237 | 
+944|normalization| | 相对 Iitaka 维数 | build/sections/normalization.tex:237 | 
+944|tex| 相对 Iitaka 维数 | build/sections/normalization.tex:237 | 
+945|build| | 不依赖形式与度的选取 | build/sections/normalization.tex:260 | 固定零除子的唯一性与最
+945|sections| | 不依赖形式与度的选取 | build/sections/normalization.tex:260 | 固定零除子的唯一性与最小指数 | §31
+945|normalization| | 不依赖形式与度的选取 | build/sections/normalization.tex:260 | 固定零除子的唯一性与最小指数 | §31 成比例运算没有锚 |
+945|tex| | 不依赖形式与度的选取 | build/sections/normalization.tex:260 | 固定零除子的唯一性与最小指数 | §31 成比例运算没有锚 |
+946|build| | 跨度恒等式 | build/sections/normalization.tex:267 | 
+946|sections| | 跨度恒等式 | build/sections/normalization.tex:267 | 
+946|normalization| | 跨度恒等式 | build/sections/normalization.tex:267 | 
+946|tex| | 跨度恒等式 | build/sections/normalization.tex:267 | 
+947|build| | 逐系数夹逼 | build/sections/normalization.tex:289 | 差异层秩一的第二遍检验
+947|sections| | 逐系数夹逼 | build/sections/normalization.tex:289 | 差异层秩一的第二遍检验 | 子对负系数情
+947|normalization| | 逐系数夹逼 | build/sections/normalization.tex:289 | 差异层秩一的第二遍检验 | 子对负系数情形盖不住 |
+947|tex| | 逐系数夹逼 | build/sections/normalization.tex:289 | 差异层秩一的第二遍检验 | 子对负系数情形盖不住 |
+948|build| | 对数分解上非负 | build/sections/normalization.tex:281 | 无差异变换的构造 | 
+948|sections| | 对数分解上非负 | build/sections/normalization.tex:281 | 无差异变换的构造 | 三段夹逼失去起点 
+948|normalization| | 对数分解上非负 | build/sections/normalization.tex:281 | 无差异变换的构造 | 三段夹逼失去起点 |
+948|tex| | 对数分解上非负 | build/sections/normalization.tex:281 | 无差异变换的构造 | 三段夹逼失去起点 |
+949|build| | 对数双有理不变性 | build/sections/normalization.tex:293 | 有理函数空间至多一维 
+949|sections| | 对数双有理不变性 | build/sections/normalization.tex:293 | 有理函数空间至多一维 | 秩一结论推不上
+949|normalization| | 对数双有理不变性 | build/sections/normalization.tex:293 | 有理函数空间至多一维 | 秩一结论推不上更高分解 |
+949|tex| | 对数双有理不变性 | build/sections/normalization.tex:293 | 有理函数空间至多一维 | 秩一结论推不上更高分解 |
+950|build| | build/sections/normalization.tex:308 | 环面素子的阶计算 | 
+950|sections| | build/sections/normalization.tex:308 | 环面素子的阶计算 | 对数微分改写无从下
+950|normalization| | build/sections/normalization.tex:308 | 环面素子的阶计算 | 对数微分改写无从下手 |
+950|tex| | build/sections/normalization.tex:308 | 环面素子的阶计算 | 对数微分改写无从下手 |
+951|build| 的阶公式 | build/sections/normalization.tex:319 | 对数延拓的三分情形 |
+951|sections| 的阶公式 | build/sections/normalization.tex:319 | 对数延拓的三分情形 | 阶的整数性论证悬
+951|normalization| 的阶公式 | build/sections/normalization.tex:319 | 对数延拓的三分情形 | 阶的整数性论证悬空 |
+951|tex| 的阶公式 | build/sections/normalization.tex:319 | 对数延拓的三分情形 | 阶的整数性论证悬空 |
+952|build| | 和式系数恰在此为零 | build/sections/normalization.tex:325 | 系数一极点边界的识别 
+952|sections| | 和式系数恰在此为零 | build/sections/normalization.tex:325 | 系数一极点边界的识别 | 允许极点的轨迹
+952|normalization| | 和式系数恰在此为零 | build/sections/normalization.tex:325 | 系数一极点边界的识别 | 允许极点的轨迹画错 |
+952|tex| | 和式系数恰在此为零 | build/sections/normalization.tex:325 | 系数一极点边界的识别 | 允许极点的轨迹画错 |
+953|build| | 极点边界外正和至少为一 | build/sections/normalization.tex:331 | 非极点素子的正则性 |
+953|sections| | 极点边界外正和至少为一 | build/sections/normalization.tex:331 | 非极点素子的正则性 | 延拓丢掉稠密位 
+953|normalization| | 极点边界外正和至少为一 | build/sections/normalization.tex:331 | 非极点素子的正则性 | 延拓丢掉稠密位 |
+953|tex|| 极点边界外正和至少为一 | build/sections/normalization.tex:331 | 非极点素子的正则性 | 延拓丢掉稠密位 |
+954|build| | 阈值系数双边夹 | build/sections/normalization.tex:377 | §33 判别的有效简单
+954|sections| | 阈值系数双边夹 | build/sections/normalization.tex:377 | §33 判别的有效简单正规交叉 | 判别
+954|normalization| | 阈值系数双边夹 | build/sections/normalization.tex:377 | §33 判别的有效简单正规交叉 | 判别系数一的上界破 |
+954|tex| | 阈值系数双边夹 | build/sections/normalization.tex:377 | §33 判别的有效简单正规交叉 | 判别系数一的上界破 |
+955|build| | 一般点处的对数典范阈值 | build/sections/normalization.tex:366 | 
+955|sections| | 一般点处的对数典范阈值 | build/sections/normalization.tex:366 | 
+955|normalization| | 一般点处的对数典范阈值 | build/sections/normalization.tex:366 | 
+955|tex|| 一般点处的对数典范阈值 | build/sections/normalization.tex:366 | 
+956|build| | 模型改变之间的扭量 | build/sections/normalization.tex:396 | 
+956|sections| | 模型改变之间的扭量 | build/sections/normalization.tex:396 | 
+956|normalization| | 模型改变之间的扭量 | build/sections/normalization.tex:396 | 
+956|tex| | 模型改变之间的扭量 | build/sections/normalization.tex:396 | 
+957|build| 时 | build/sections/normalization.tex:422 | 辅助子对的生成元无关性
+957|sections| 时 | build/sections/normalization.tex:422 | 辅助子对的生成元无关性 | 两处主部分量
+957|normalization| 时 | build/sections/normalization.tex:422 | 辅助子对的生成元无关性 | 两处主部分量的抵消失去对象 |
+957|tex| 时 | build/sections/normalization.tex:422 | 辅助子对的生成元无关性 | 两处主部分量的抵消失去对象 |
+958|build| | 数值等价恒等式 | build/sections/normalization.tex:359 | §33 的底项记账 |
+958|sections| | 数值等价恒等式 | build/sections/normalization.tex:359 | §33 的底项记账 | 判别与模的拆分无
+958|normalization| | 数值等价恒等式 | build/sections/normalization.tex:359 | §33 的底项记账 | 判别与模的拆分无从落笔 |
+958|tex| | 数值等价恒等式 | build/sections/normalization.tex:359 | §33 的底项记账 | 判别与模的拆分无从落笔 |
+TOTAL 157

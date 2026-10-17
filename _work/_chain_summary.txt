@@ -1,0 +1,158 @@
+#### D25  (chain lines=92, bytes=140003)
+  sweep size= 行数=2 ; 其中含非 size= 内容的行数=2
+  所有 size= 行:
+    D25 size=400111
+    D25 size=400111
+  problems 行:
+    D25  {'size': 400111, 'secs': 24, 'contig': True, 'rows': 36, 'math': 8454, 'problems': []}
+  region/table 行:
+    TABLE D25 hdr=252 pipes=4 block=10 sep=1 rows=9 hist={4: 10} badpipe=[]
+    TABLE D25 hdr=300 pipes=4 block=18 sep=1 rows=17 hist={4: 16, 6: 2} badpipe=[(315, 6, '| $\\lVert \\cdot\\rVert_\\partial$ | `main.tex:368-371` | `\\|H\\'), (317, 6, '| $\\gamma$ | `main.tex:329` | `Put $\\gamma=\\|F[A]\\|$.` |')]
+    TABLE D25 hdr=587 pipes=5 block=12 sep=1 rows=11 hist={5: 12} badpipe=[]
+    TABLE D25 hdr=698 pipes=5 block=12 sep=1 rows=11 hist={5: 12} badpipe=[]
+    TABLE D25 hdr=1041 pipes=5 block=10 sep=1 rows=9 hist={5: 10} badpipe=[]
+    TABLE D25 hdr=1342 pipes=5 block=11 sep=1 rows=10 hist={5: 11} badpipe=[]
+    TABLE D25 hdr=1603 pipes=4 block=19 sep=1 rows=18 hist={4: 18, 6: 1} badpipe=[(1611, 6, '| `For a polynomial $F$ normalized by its boundary operator ')]
+    TABLE D25 hdr=1856 pipes=7 block=40 sep=1 rows=39 hist={7: 37, 9: 2, 11: 1} badpipe=[(1870, 9, '| $C_\\rho,\\ \\rho\\in(r,1)$（几何衰减） | `main.tex:196-197` `\\|s_{k'), (1886, 11, '| $(1,i,j,k)$ 四元组 | `main.tex:514-518`（Toeplitz-Hausdorff 重证'), (1887, 9, '| $R_i/3
+    TABLE D25 hdr=2545 pipes=5 block=6 sep=1 rows=5 hist={5: 6} badpipe=[]
+  非 TABLE 的 badpipe 提示行 数=9
+  异常/报错行 数=0
+
+#### D32  (chain lines=11, bytes=302)
+  sweep size= 行数=0 ; 其中含非 size= 内容的行数=0
+  所有 size= 行:
+  problems 行:
+  region/table 行:
+    TABLE D32 hdr=644 pipes=6 block=45 sep=1 rows=44 hist={6: 45} badpipe=[]
+  非 TABLE 的 badpipe 提示行 数=1
+  异常/报错行 数=0
+
+#### D65  (chain lines=11, bytes=302)
+  sweep size= 行数=0 ; 其中含非 size= 内容的行数=0
+  所有 size= 行:
+  problems 行:
+  region/table 行:
+    TABLE D65 hdr=334 pipes=6 block=18 sep=1 rows=17 hist={6: 18} badpipe=[]
+  非 TABLE 的 badpipe 提示行 数=1
+  异常/报错行 数=0
+
+#### D47  (chain lines=11, bytes=2954)
+  sweep size= 行数=0 ; 其中含非 size= 内容的行数=0
+  所有 size= 行:
+  problems 行:
+  region/table 行:
+    TABLE D47 hdr=581 pipes=5 block=27 sep=1 rows=26 hist={5: 27} badpipe=[]
+  非 TABLE 的 badpipe 提示行 数=1
+  异常/报错行 数=0
+
+#### D36  (chain lines=11, bytes=6343)
+  sweep size= 行数=0 ; 其中含非 size= 内容的行数=0
+  所有 size= 行:
+  problems 行:
+  region/table 行:
+    TABLE D36 hdr=591 pipes=6 block=31 sep=1 rows=30 hist={6: 31} badpipe=[]
+  非 TABLE 的 badpipe 提示行 数=1
+  异常/报错行 数=0
+
+#### D26  (chain lines=19, bytes=5277)
+  sweep size= 行数=0 ; 其中含非 size= 内容的行数=0
+  所有 size= 行:
+  problems 行:
+  region/table 行:
+    TABLE D26 hdr=1078 pipes=5 block=21 sep=1 rows=20 hist={5: 21} badpipe=[]
+    TABLE D26 hdr=1102 pipes=5 block=15 sep=1 rows=14 hist={5: 15} badpipe=[]
+  非 TABLE 的 badpipe 提示行 数=2
+  异常/报错行 数=1
+    badpipe=[(1078, 5, '| 数值 | 位置 | 作用 | 动了会坏在哪 |'), (1080, 5, '| $n^{-4}$（nearmax 容差） | tex:216-217；`Energy::exists_nearmax_grid` 输出 '), (1081, 5, '| $n^{-8}=(n^{-4})^2$（baseerror） | tex:221/227、231（eq:Qerror $<4n^{-8}'), (1082, 5, '| $4$（修剪放大因子） | tex:231（eq:Qer
+
+#### D28  (chain lines=11, bytes=304)
+  sweep size= 行数=0 ; 其中含非 size= 内容的行数=0
+  所有 size= 行:
+  problems 行:
+  region/table 行:
+    TABLE D28 hdr=1151 pipes=6 block=34 sep=1 rows=33 hist={6: 34} badpipe=[]
+  非 TABLE 的 badpipe 提示行 数=1
+  异常/报错行 数=0
+
+#### D29  (chain lines=11, bytes=3624)
+  sweep size= 行数=0 ; 其中含非 size= 内容的行数=0
+  所有 size= 行:
+  problems 行:
+  region/table 行:
+    TABLE D29 hdr=819 pipes=7 block=32 sep=1 rows=31 hist={7: 32} badpipe=[]
+  非 TABLE 的 badpipe 提示行 数=1
+  异常/报错行 数=0
+
+#### D41  (chain lines=11, bytes=2998)
+  sweep size= 行数=0 ; 其中含非 size= 内容的行数=0
+  所有 size= 行:
+  problems 行:
+  region/table 行:
+    TABLE D41 hdr=529 pipes=5 block=27 sep=1 rows=26 hist={5: 27} badpipe=[]
+  非 TABLE 的 badpipe 提示行 数=1
+  异常/报错行 数=0
+
+#### D68  (chain lines=11, bytes=477)
+  sweep size= 行数=0 ; 其中含非 size= 内容的行数=0
+  所有 size= 行:
+  problems 行:
+  region/table 行:
+    TABLE D68 hdr=1336 pipes=6 block=52 sep=1 rows=51 hist={6: 52} badpipe=[]
+  非 TABLE 的 badpipe 提示行 数=1
+  异常/报错行 数=0
+
+#### D30  (chain lines=11, bytes=1478)
+  sweep size= 行数=0 ; 其中含非 size= 内容的行数=0
+  所有 size= 行:
+  problems 行:
+  region/table 行:
+    TABLE D30 hdr=797 pipes=6 block=23 sep=1 rows=22 hist={6: 23} badpipe=[]
+  非 TABLE 的 badpipe 提示行 数=1
+  异常/报错行 数=0
+
+#### D34  (chain lines=19, bytes=13518)
+  sweep size= 行数=0 ; 其中含非 size= 内容的行数=0
+  所有 size= 行:
+  problems 行:
+  region/table 行:
+    TABLE D34 hdr=562 pipes=6 block=15 sep=1 rows=14 hist={6: 15} badpipe=[]
+    TABLE D34 hdr=722 pipes=5 block=22 sep=1 rows=21 hist={5: 21, 7: 1} badpipe=[(739, 7, '| 16 | 引理 5.1 用 $\\lVert \\cdot\\rVert_{\\mathrm{TV}}$（`entropy:')]
+  非 TABLE 的 badpipe 提示行 数=2
+  异常/报错行 数=0
+
+#### D24  (chain lines=11, bytes=1211)
+  sweep size= 行数=0 ; 其中含非 size= 内容的行数=0
+  所有 size= 行:
+  problems 行:
+  region/table 行:
+    TABLE D24 hdr=685 pipes=6 block=25 sep=1 rows=24 hist={6: 25} badpipe=[]
+  非 TABLE 的 badpipe 提示行 数=1
+  异常/报错行 数=0
+
+#### D364  (chain lines=11, bytes=305)
+  sweep size= 行数=0 ; 其中含非 size= 内容的行数=0
+  所有 size= 行:
+  problems 行:
+  region/table 行:
+    TABLE D364 hdr=432 pipes=6 block=22 sep=1 rows=21 hist={6: 22} badpipe=[]
+  非 TABLE 的 badpipe 提示行 数=1
+  异常/报错行 数=0
+
+#### D44  (chain lines=11, bytes=981)
+  sweep size= 行数=0 ; 其中含非 size= 内容的行数=0
+  所有 size= 行:
+  problems 行:
+  region/table 行:
+    TABLE D44 hdr=442 pipes=6 block=21 sep=1 rows=20 hist={6: 21} badpipe=[]
+  非 TABLE 的 badpipe 提示行 数=1
+  异常/报错行 数=0
+
+#### D50  (chain lines=11, bytes=526)
+  sweep size= 行数=0 ; 其中含非 size= 内容的行数=0
+  所有 size= 行:
+  problems 行:
+  region/table 行:
+    TABLE D50 hdr=414 pipes=6 block=39 sep=1 rows=38 hist={6: 38, 7: 1} badpipe=[(438, 7, '| 证书在 $P$ 的两边 | 我算：左边 $\\alpha h+\\beta y-1=3\\cdot2+(-4)\\cdot1')]
+  非 TABLE 的 badpipe 提示行 数=1
+  异常/报错行 数=0
+

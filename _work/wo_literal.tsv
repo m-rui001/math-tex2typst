@@ -1,0 +1,400 @@
+D04	D04-L361-I03	anchor,ordermove,table	2	搬到第 $30$ 节末段与第	第 $30$ 节末段与第 $34$ 节题记之间
+D04	D04-L475-I08	count,table	2	搬到第 $30$ 节末段与第	第 $30$ 节末段与第 $34$ 节题记之间，那一步归本体侧，我不
+D08	D08-L1126-I01	btick,english,typo	1	改回正确反引号	正确反引号
+D08	D08-L1126-I01	btick,english,typo	1	删掉一个括号内标签形态，§2	一个括号内标签形态，§21 插入装置句删掉一个未译英文量名
+D10	D10-L1062-I02	count,banstring	1	记作旧稿遗留，实测不成立：全	旧稿遗留，实测不成立：全文该字符的命中行共七行，全部落在本轮新节，按
+D100	D100-L1586-I06	btick,count,banstring,ordermove,typo	1	改写为“源头是 tex 本身	“源头是 tex 本身”
+D103	D103-L789-I06	count,banstring	1	"改写为""屏障因此属于被绕过的"	"""屏障因此属于被绕过的那一类，谈不上被突破""后得 0"
+D107	D107-L2990-I11	btick,english,table,typo	1	改回、第 2940 行那句含	第 2940 行那句含混的自注改写为说明句、第 2469 行一枚未译
+D107	D107-L2990-I11	btick,english,table,typo	1	换成中文、第 2908 行的	中文、第 2908 行的节号写法统一成带 `§` 的形式
+D12	D12-L461-I03	macro	1	替换为 $\text{Lef	$\text{Left}=(A\times\mathrm{Fin}\
+D12	D12-L461-I03	macro	1	"移到""$\text{gadg"	"""$\text{gadget\_hall}$ 的 $2\lvert"
+D12	D12-L522-I16	table	1	换成正式排版，同时把每一步的	正式排版，同时把每一步的出处钉到 `paper.tex` 行号，后面
+D12	D12-L522-I22	macro,count	1	写法是：$P$ 为森林且 $	$P$ 为森林且 $\lvert P\rvert=k$ $\impl
+D125	D125-L576-I01	macro,banstring,table	1	改为逗号与 $\lVert\	逗号与 $\lVert\cdot\rVert$ 写法）
+D129	D129-L418-I05	macro,anchor,count,ordermove,table	1	改为独立名称以恢复连续编号，	独立名称以恢复连续编号，正文既有内容一律只做追加、未删除也未回滚
+D13	D13-L307-I26	other	1	"应为""经过 Lee-Sidi"	"""经过 Lee-Sidiropoulos""，指 dominating"
+D13	D13-L307-I27	other	1	"应为""阶梯状并联度量""，对应"	"""阶梯状并联度量""，对应 GNRS 的 series-paralle"
+D13	D13-L499-I22	macro	1	统一成同一条引理实例的保守写	同一条引理实例的保守写法
+D137	D137-L928-I02	english	1	"该写""步长""），第 28 节"	"""步长""），第 28 节正文有一枚 rare-fast（该写""稀有快"
+D145	D145-L733-I05	macro,count,table	1	换成 `\lvert`	`\lvert`
+D145	D145-L733-I05	macro,count,table	1	改为 `\neq`	`\neq`
+D147	D147-L601-I01	btick,macro,typo	1	应读作 03-tree.te	03-tree.tex 的 206 到 238 段
+D15	D15-L565-I02	btick,typo	1	应读作的内容如下（原文保留，	的内容如下（原文保留，不做删除）：
+D15	D15-L565-I03	macro	1	应读作 `` `:80` `	`` `:80` ``，指向 `04-pairs.tex:80` 的
+D15	D15-L565-I04	other	1	应读作 `` `:230-2	`` `:230-231` ``，指向 `04-pairs.tex:
+D15	D15-L565-I05	other	1	应读作 `` `:85` `	`` `:85` ``，指向 `04-pairs.tex:85` 附
+D15	D15-L565-I06	other	1	应读作 `` `:166-1	`` `:166-168` ``，即 `pairs:exact-mo
+D154	D154-L671-I15	btick,count,banstring	1	改为一对半角连字符或改为冒号	一对半角连字符或改为冒号）、跨文件行号区间的写法 3 处、代码区间尾
+D160	D160-L869-I09	btick,banstring,english,typo	1	移至文件末尾），两类操作均未	文件末尾），两类操作均未删除任何已写内容
+D162	D162-L475-I04	anchor,count,ordermove,table	1	改为第 18 节台账第 5	第 18 节台账第 5 行与第 45 行，复测后错位命中 0
+D163	D163-L534-I03	macro,count,table	1	改为 `\rvert`	`\rvert`
+D163	D163-L534-I03	macro,count,table	1	改为 `\rvert` 写法	`\rvert` 写法，第 187 行与第 334 行各一次换行插入
+D166	D166-L820-I02	btick,macro,table,typo	1	改为逐行成对闭合的 `$..	逐行成对闭合的 `$...$`，
+D166	D166-L820-I02	btick,macro,table,typo	1	改成与 `annulus.t	与 `annulus.tex` 第 238 行一致的 $s\le r
+D173	D173-L304-I06	typo	1	应为 01-prelimin	01-preliminaries.tex:53 到 01-preliminarie
+D173	D173-L304-I06	typo	1	应为 01-prelimin	01-preliminaries.tex:53 到 01-preli
+D173	D173-L304-I12	btick,count,probe	1	改成不含任何定界符的散文句子	不含任何定界符的散文句子
+D174	D174-L805-I03	btick,macro,banstring,english,table,typo	1	"改为""并非""，其中第 23"	"""并非""，其中第 23 节""协变度量没有用级数反演""那句改为""它用的"
+D174	D174-L805-I03	btick,macro,banstring,english,table,typo	1	改为成对的绝对值定界符	对的绝对值定界符
+D175	D175-L231-I03	btick,macro,count,banstring,english,table,probe	1	改成 `\lvert`	`\lvert`
+D175	D175-L231-I03	btick,macro,count,banstring,english,table,probe	1	改成 `\lvert` 与	`\lvert` 与 `\rvert`
+D175	D175-L231-I07	btick,banstring,probe	1	"改成""上限在 Lean 里不"	"""上限在 Lean 里不必被单独证明，它就是类型的形状""，语义不变："
+D175	D175-L231-I07	btick,banstring,probe	1	删掉了同一轮里出现的勾选符号	"了同一轮里出现的勾选符号字面写法与两处旧表述的引号原文，改为""末轮全"
+D175	D175-L245-I01	btick,banstring,probe	1	"改成""上限在 Lean 里不"	"""上限在 Lean 里不必被单独证明，它就是类型的形状""，语义不变："
+D175	D175-L245-I01	btick,banstring,probe	1	删掉了同一轮里出现的勾选符号	"了同一轮里出现的勾选符号字面写法与两处旧表述的引号原文，改为""末轮全"
+D177	D177-L324-I06	btick,macro	1	"改为 ""$\lvert S\"	"""$\lvert S\rvert\le3$"""
+D177	D177-L324-I07	anchor	1	改为指向 §7.2	指向 §7.2
+D179	D179-L349-I03	banstring	1	应为 Krylov--Saf	Krylov--Safonov
+D179	D179-L349-I04	macro	1	应读作 `$\mathcal	`$\mathcal E_{\mathrm{ADM}}=\lvert
+D179	D179-L349-I04	macro	1	"应读作""$\theta\ma"	"""$\theta\mapsto Z\mapsto$（对应的区域）"""
+D18	D18-L1000-I03	macro,count,table	1	改写为 `\lvert\rv	`\lvert\rvert`
+D18	D18-L1000-I03	macro,count,table	1	改写为 `\lvert\rv	`\lvert\rvert`，(e:twist-weights) 的
+D18	D18-L1000-I11	anchor,count,banstring	1	应为 271、algebra	271、algebra.tex:130 应为 129、bimodule.tex:2
+D18	D18-L1000-I11	anchor,count,banstring	1	应为 20、bimodule	20、bimodule.tex:464 应为 465、bimodule.tex:5
+D181	D181-L848-I02	macro	36	2)	$(\delta
+D183	D183-L367-I03	banstring	1	"改成""也就是说""，另一处同一"	"""也就是说""，另一处同一四字转折语改成""得到的结论是""，一处三字因果"
+D184	D184-L518-I03	macro	1	"应为""把 $i_n\le n"	"""把 $i_n\le n$ 这类不等式当作显式条件检查""，那里的下标"
+D186	D186-L338-I03	macro,anchor	1	"应读作""§9 的平面运动"""	"""§9 的平面运动"""
+D186	D186-L338-I04	other	1	改成了显式数值 $t_6=6	了显式数值 $t_6=67{,}240{,}999$，读法按数值为准
+D186	D186-L338-I05	other	1	"应读作""落点 §18 的未答"	"""落点 §18 的未答问题第二条"""
+D186	D186-L338-I07	macro	1	改为 `$C_tH^1$`	`$C_tH^1$`
+D186	D186-L338-I07	macro	1	改为 `$C_tH^1$`，	`$C_tH^1$`，与 `analytic-appendix.te
+D186	D186-L338-I08	other	1	改成 `也就是说`	`也就是说`
+D186	D186-L338-I08	other	1	改成 `它并未…设立上限`	`它并未…设立上限`
+D187	D187-L507-I07	macro	300	main	`build
+D187	D187-L507-I07	macro	300	main	`build
+D188	D188-L684-I05	other	1	应为不带 `$` 的行号范围	不带 `$` 的行号范围
+D188	D188-L684-I06	other	1	"写法是""§5.4 末尾说的"	"""§5.4 末尾说的 noetherian 性""，两处一致，无需修正"
+D190	D190-L554-I02	macro	1	正确写法是 $Q_h^T=\	$Q_h^T=\operatorname{Law}((B^h_t)_
+D190	D190-L554-I07	other	1	"记作""第 276--278"	"""第 276--278 行""，随后正文改用""第 275--278 行"
+D191	D191-L839-I03	ordermove,probe	1	移到探针行之后，把 §1 正	探针行之后，把 §1 正文与 §2 整块上移到 §0 之后，
+D191	D191-L839-I04	btick,macro,banstring	1	改为配对形式	配对形式
+D194	D194-L420-I13	other	1	改为 `framework.	`framework.tex:163--194`
+D194	D194-L420-I13	other	2	改为 `packets.te	`packets.tex:383--590`
+D194	D194-L420-I16	other	1	改为 `classifica	`classification.tex:112--115`
+D194	D194-L420-I17	other	1	应为「同源」	「同源」
+D194	D194-L420-I17	other	1	应为「同源」（isogeny	「同源」（isogeny），分别出现在 §12 的特征 2 两个特殊
+D196	D196-L151-I04	macro	1	应为 $2\pi\mathb	$2\pi\mathbb Z\mathbf 1$（build
+D197	D197-L164-I01	btick,macro,count,ordermove,table,typo	1	改为成对空括号的规范记法）以	对空括号的规范记法）以及一处中英混排的笔误做过原位改写，均未删除任何
+D198	D198-L285-I03	macro,typo	1	应读作 $k\asymp\s	$k\asymp\sigma\log m$ 量级记号,论证不依赖该符
+D198	D198-L285-I04	count	1	"应为 Lemma 3.1;"""	"Lemma 3.1;""Lemma 2.1""在 §15 指 build"
+D198	D198-L285-I04	count	1	"应为 Lemma 3.1;"""	"Lemma 3.1;""Lemma 2.1""在 §15 指 build"
+D199	D199-L253-I05	ordermove	1	换成'独立于 $k$ 的单一	"'独立于 $k$ 的单一 $g$ 同时破所有 $k$'会撞墙""，属于"
+D199	D199-L253-I05	ordermove	1	换成'先 $g$ 后所有 $	"'先 $g$ 后所有 $k$'""即可，其余推导与后续引用不变，主定理"
+D20	D20-L556-I02	macro,table	1	换成 `\lvert`	`\lvert`
+D20	D20-L556-I02	macro,table	1	改回 `main.tex:2	`main.tex:250-253`
+D20	D20-L556-I03	banstring	1	"改成""全在一条外部定理的逆否"	"""全在一条外部定理的逆否里""与""也因此落在 amenable 之外"""
+D20	D20-L556-I04	count	1	换成约 $19{,}000$	约 $19{,}000$ 字节的更紧凑版本，其中包含对本会话刚落盘内
+D201	D201-L220-I02	btick,macro,count	1	"应为：""其定义见 `sect"	"""其定义见 `sections"
+D201	D201-L220-I04	count,typo	1	"删掉的孤立美元号：§4 末"""	"的孤立美元号：§4 末""到 `:335`""后的多余 `$`、§10"
+D202	D202-L279-I02	banstring,ordermove	1	改写为“，并非”	“，并非”
+D202	D202-L279-I02	banstring,ordermove	1	改为逗号，把两处禁用连接词改	逗号，把两处禁用连接词改写为“，并非”句式
+D204	D204-L45-I02	macro	1	换成柄圈 bouquet、$	柄圈 bouquet、$N_a$ 换成生成圈、$P_e$ 换成点，两
+D204	D204-L45-I05	btick,macro,ordermove	1	换成参照值只改动 $\mat	参照值只改动 $\mathfrak m\mathfrak n^3$
+D204	D204-L45-I05	btick,macro,ordermove	1	换成 $\mathfrak	$\mathfrak l$ 的任意自同态
+D204	D204-L327-I14	macro	1	"应为 ""\mathfrak"	"""\mathfrak m_B"""
+D206	D206-L289-I03	btick	1	应读作：`inertia-f	`inertia-foundations.tex:296-322`
+D206	D206-L289-I04	btick,macro	1	应读作：由 Thm 2.5	由 Thm 2.5 得到的下界 $\kappa(Z,K_Z+\Del
+D206	D206-L289-I05	typo	1	应读作 `inertia-m	`inertia-minimality.tex:176-180`
+D206	D206-L289-I06	typo	1	写为 `in:cycle-f	`in:cycle-fabilities`
+D206	D206-L289-I06	typo	1	写为 `in:cycle-f	`in:cycle-fabilities` 再自我更正，应只读作 `
+D207	D207-L259-I03	other	1	换成指纹，指纹的删除依据换成	指纹，指纹的删除依据换成最大流最小割
+D207	D207-L425-I01	count,banstring,table	1	更正为两处短语与一行成对长停	两处短语与一行成对长停顿号，分别位于 §18 末段、§19 末段与
+D211	D211-L225-I02	macro	1	写法是 $\mu(T^{-1	$\mu(T^{-1}(\cdot))=\mu(\cdot)$ 由保
+D211	D211-L235-I08	banstring	1	正确写法是直接给出等价陈述：	"直接给出等价陈述：""我保住分离性的办法是让每个 cell 继承它所属"
+D212	D212-L360-I04	macro,table	1	正确写法是 `$\lvert	`$\lvert S\rvert=12$`，同节后面几行与台账第 1
+D212	D212-L360-I06	banstring,ordermove	1	"换成同义表达（例如把那类""前"	"同义表达（例如把那类""前项否定、后项转折""的句式改成""B 落到别处"""
+D214	D214-L165-I06	macro,count	1	换成一行 $R_X$ 后长度	一行 $R_X$ 后长度恰等于 $\deg\mathcal E$，这
+D214	D214-L250-I03	other	1	"改成""选 $u$ 做第三坐标"	"""选 $u$ 做第三坐标的用意在于让曲线获得可数化的射影量"""
+D215	D215-L189-I02	btick,macro,typo	1	写为 `\rfloor]`	`\rfloor]`
+D215	D215-L189-I02	btick,macro,typo	1	应为 `\rfloor}`	`\rfloor}`
+D215	D215-L189-I03	macro	1	写法是 $\le R_*+2	$\le R_*+2$
+D216	D216-L798-I05	macro	82	sect	build
+D216	D216-L798-I05	macro	82	sect	build
+D217	D217-L193-I04	macro	1	换回 $m(J+c_1)\g	$m(J+c_1)\ge cJ
+D218	D218-L693-I06	other	1	正名是 Paley--Zyg	Paley--Zygmund 型第二矩论证，
+D220	D220-L659-I04	macro,table	2	改为 $\Phi^*\geq	$\Phi^*\geq n
+D221	D221-L172-I01	macro,banstring,typo	1	"换成……""），属于越界用词，"	"……""），属于越界用词，特此登记：该句意图仅是把 16 次幂的可和与"
+D222	D222-L573-I02	banstring	1	"应改为：""但非线性项 $b^"	"""但非线性项 $b^2$ 的演化……"""
+D222	D222-L573-I03	banstring	1	"应改为：""不从 $t=0$"	"""不从 $t=0$ 向前推，改成从 $t=0^-$ 往回追……"""
+D222	D222-L573-I05	macro,banstring	1	"应改为：""关于演化度量 $\"	"""关于演化度量 $\omega(t)^{10}$，固定参考度量 $\"
+D223	D223-L434-I04	macro,banstring	1	"改写为""行列式恰为 $1$，"	"""行列式恰为 $1$，这一强度远超单纯非零"""
+D225	D225-L455-I02	btick,macro	2	"换成任意基以便粘贴局部计算"""	"任意基以便粘贴局部计算""会在此处直接失效，$\mathcal{F}$"
+D225	D225-L455-I06	macro,count	2	换成由独立 $\theta_	由独立 $\theta_{ijk}$ 生成的外代数并直接验证图恒等式
+D226	D226-L247-I02	macro	1	"改写为同义表述（现文为""必须"	"同义表述（现文为""必须按 $1"
+D227	D227-L397-I02	other	1	"应为：""成品把 ordina"	"""成品把 ordinary 放在 corollary、把 list"
+D228	D228-L303-I02	other	1	"改写为""超出 Taylor"	"""超出 Taylor 层面"""
+D228	D228-L303-I03	macro	1	应读作：我的独立复核算术不成	我的独立复核算术不成立，该式的依据只有文本本身与它和度一 Jacob
+D228	D228-L303-I06	macro,count,table	1	改成 `\lvert … \	`\lvert … \rvert`
+D228	D228-L303-I06	macro,count,table	1	改成 `\lvert … \	"`\lvert … \rvert` 或""在 $S$ 上""的写法，改动"
+D229	D229-L255-I01	banstring,table	1	记作六处并给了段落归属，经复	六处并给了段落归属，经复量，实为八处，落在 §1 一段、§2 一段、
+D23	D23-L628-I02	macro	1	"写为""同一数值出现两次""，本"	"""同一数值出现两次""，本表拆成两行，因为它们的改动半径不重叠"
+D231	D231-L193-I03	typo	1	"应读作""multilinea"	"""multilinear 多项式"""
+D232	D232-L391-I02	banstring,typo	1	改为 `## §14`	`## §14`
+D232	D232-L391-I02	banstring,typo	1	改为 `## §14`，节号	`## §14`，节号与标题文字其余部分未动
+D233	D233-L196-I07	macro	1	应为 $\lceil\log	$\lceil\log_2(m+1)\rceil$
+D234	D234-L456-I03	banstring	1	"改成 ""，C 才是"" 之类的"	"""，C 才是"" 之类的独立陈述"
+D234	D234-L486-I01	btick,macro,anchor,count	1	"改成 ""\`≤\` 与 \`"	"""\`≤\` 与 \`<\` 的对照""（用反引号包裹比较符号，不用"
+D235	D235-L591-I09	other	1	应为中文引号配对	中文引号配对
+D236	D236-L1164-I03	macro	1	应读作 §36：$M\del	§36：$M\delta^{3
+D236	D236-L1164-I03	macro	1	应读作 §36：$M\del	§36：$M\delta^{3
+D236	D236-L1164-I04	other	1	应读作 §37.1，	§37.1，
+D238	D238-L734-I02	macro,typo	1	应为 $\mathcal Z	$\mathcal Z_{\mathcal P}$
+D24	D24-L986-I02	other	1	记作 `01:174`	`01:174`
+D24	D24-L986-I02	other	1	记作 `01:174`：该短	`01:174`：该短语在 01-introduction.tex:
+D24	D24-L986-I03	other	1	记作 `01:190-204	`01:190-204`
+D24	D24-L986-I03	other	1	记作 `01:190-204	`01:190-204`：这句在 01-introduction.t
+D24	D24-L986-I04	other	1	记作 `03:52-55`	`03:52-55`
+D24	D24-L986-I04	other	1	记作 `03:52-55`：	`03:52-55`：实为 03-scaling.tex:54-56
+D24	D24-L986-I06	other	1	记作 `01:97-101`	`01:97-101`
+D24	D24-L986-I06	other	1	记作 `01:97-101`	`01:97-101`：引文本体是 01-introduction.
+D244	D244-L159-I06	btick,count	1	"应读作不带定界符的短语""密度"	"不带定界符的短语""密度恰好为 1"""
+D244	D244-L159-I06	btick,count	2	应读作不带定界符的短语	不带定界符的短语
+D246	D246-L256-I03	macro,typo	1	写为不存在的 $\ac$，应	不存在的 $\ac$，应读作 $ac-bd-1$，只影响渲染
+D246	D246-L256-I04	macro	1	"应读作""推导 $\Delta"	"""推导 $\Delta$ 杀掉分式"""
+D246	D246-L256-I04	macro	1	应读作对照 02:144 的	"对照 02:144 的 $F$ 表达式，且该处 ""$k[s,u,N]"
+D247	D247-L237-I07	macro,typo	1	写为对 $\mu\vdash	对 $\mu\vdash j$ 求和且首现于 $b_k$ 的定义位置
+D247	D247-L237-I07	macro,typo	1	应为 $b_k=\sum_{	$b_k=\sum_{\mu\vdash k}D_\mu\opera
+D249	D249-L294-I03	macro	1	应为 $\rfloor,含义	$\rfloor,含义不受影响,对应原文位置在 `02-initia
+D25	D25-L2618-I04	macro	1	改成非严格，先崩的是 `ma	非严格，先崩的是 `main.tex:486`，其后是附录整节
+D25	D25-L2681-I02	macro,table	1	记作 `main.tex:5	`main.tex:561-564`
+D250	D250-L690-I03	other	1	改为中文，位置分别在 §2、	中文，位置分别在 §2、§19 的回避段与 §19 的连续性段末
+D250	D250-L804-I01	btick,count,table,probe	1	"应读作""从 §0 到 §27"	"""从 §0 到 §27""，"
+D250	D250-L804-I01	btick,count,table,probe	1	应写成会话第 16 次工具调	会话第 16 次工具调用（不计读规格那一次则为第 15 次），落在规
+D251	D251-L432-I02	macro	1	应为 `\langle b(	`\langle b(u)\Psi_z,g\rangle`
+D251	D251-L432-I02	macro	1	应为 `\langle b(	`\langle b(u)\Psi_z,g\rangle`，所指是
+D251	D251-L432-I03	macro,table	1	应为 `$\lvert I\	`$\lvert I\rvert\le b_0$`
+D251	D251-L432-I04	macro	1	2\}`	`\le b
+D251	D251-L432-I08	cite,banstring	1	"改成中性句式""重心不在……它"	"中性句式""重心不在……它落在……""，技术内容、公式与行号引用一字未动"
+D251	D251-L432-I11	count,table,probe	1	应为 $87376$	$87376$
+D251	D251-L432-I11	count,table,probe	1	应为正文追加 $5$ 次、含	正文追加 $5$ 次、含探针共 $6$ 次落盘编辑（另有一次未落盘的
+D252	D252-L198-I02	btick,anchor,count,banstring,ordermove,typo	1	写为 `(fourier.t	`(fourier.tex:32-36$)`
+D252	D252-L198-I02	btick,anchor,count,banstring,ordermove,typo	1	应读作 `fourier.t	`fourier.tex:32-36`
+D254	D254-L245-I02	count,probe	1	"应为 6006 字节前后""，"	"6006 字节前后""，实际 6,038，预估偏低 32 字节，原因是我把探针行的中"
+D254	D254-L245-I02	count,probe	1	"应为 6006 字节前后""，"	"6006 字节前后""，实际 6,038，预估偏低 32 字节，原因是"
+D255	D255-L325-I04	macro	1	去掉还有一个副作用对我很有用	还有一个副作用对我很有用：同一句陈述现在可以被射影情形的独立工作引用
+D258	D258-L201-I01	macro,typo	1	正确写法是同一句前一处用的	同一句前一处用的 `$\Lambda_S^{\mathrm{alg}
+D26	D26-L1169-I03	other	1	记作 tex:395，实际在	tex:395，实际在 `main.tex:397`（同段末尾的 $J_p$ 定义
+D26	D26-L1169-I03	other	1	记作 tex:395，实际在	tex:395，实际在 `main.tex:397`（同段末尾的 $
+D26	D26-L1169-I05	other	1	记作 tex:436，`ma	"tex:436，`main.tex:436` 是空行，该句与同段的 ""Each $"
+D26	D26-L1169-I05	other	1	记作 tex:436，`ma	tex:436，`main.tex:436` 是空行，该句与同段的
+D261	D261-L320-I01	banstring,ordermove,table	1	"改为""因 row 次数至多三"	"""因 row 次数至多三，正是 arity 的线性函数"""
+D261	D261-L320-I01	banstring,ordermove,table	1	"改写为""要按 inciden"	"""要按 incident 标号数收费，不能按需求数收费""的肯定式陈述"
+D262	D262-L534-I02	btick,macro	1	正确写法是 `\Bigr\r	`\Bigr\rvert`）
+D262	D262-L534-I07	banstring	1	删掉的是禁令表里同一类的两个	的是禁令表里同一类的两个连接套语
+D264	D264-L932-I01	banstring,table,probe	1	改为配对长竖线记号，与台账条	配对长竖线记号，与台账条款的写法要求一致
+D267	D267-L130-I02	btick,macro,table,typo	1	应为 `\succeq 0`	`\succeq 0`
+D267	D267-L130-I02	btick,macro,table,typo	1	"写为""力性条件""共 3 处（"	"""力性条件""共 3 处（§4 两处、§6 一处），系拼音输入法串扰"
+D268	D268-L1035-I07	banstring,table	1	改成并列陈述），另有一处是在	并列陈述），另有一处是在 §19 补记里把上一轮那个两字转折连接词换
+D268	D268-L1046-I03	macro	1	改成 $8Ad^2$，比值界	$8Ad^2$，比值界从 $1
+D268	D268-L1073-I02	macro	1	更正为 $10^{482}$	$10^{482}$，$J_*$ 从 $10^{658}$ 更正为
+D268	D268-L1073-I08	btick,probe	1	该写作方括号形式的推测标记先	方括号形式的推测标记先前被错放进数学定界符内，现已改正
+D269	D269-L161-I04	macro	1	记作签名、soft pena	签名、soft penalty 记作软惩罚、annealing 记作
+D269	D269-L161-I04	macro	1	记作缺陷类、box-vali	缺陷类、box-valid display 记作盒可行展示
+D269	D269-L161-I20	other	1	改成 unary 承诺（$R	unary 承诺（$R$ 多项式小），端口窗与展开规模都可以同步缩小，理论上能换来
+D269	D269-L161-I20	other	1	改成 unary 承诺（$R	unary 承诺（$R$ 多项式小），端口窗与展开规模都可以同步缩小
+D269	D269-L161-I24	btick,anchor,count,banstring,ordermove,table,probe	1	应为，Write 一次、探针	，Write 一次、探针 Edit 一次、违例清除 Edit 九次、
+D270	D270-L236-I12	macro	1	"改为""$T\to\opera"	"""$T\to\operatorname{Spec} A$"""
+D272	D272-L417-I01	banstring,ordermove	1	换成中性表述，替换只改连接词	中性表述，替换只改连接词、不改任何技术判断与引用行号，本条即是对该次
+D273	D273-L229-I02	count,table,typo	1	"应读作""§0 至 §16 连"	"""§0 至 §16 连续、无跳号""，连续性本身不因此破坏"
+D274	D274-L234-I03	btick,cite,count,ordermove	1	应为一对反引号包裹的行号引用	一对反引号包裹的行号引用
+D275	D275-L625-I09	count,banstring	1	应为 1 次，成因是那条自检	1 次，成因是那条自检文字写在本条之前、我当时漏掉了自己刚在第六处里造出的那一个
+D275	D275-L625-I09	count,banstring	1	应为 1 次，成因是那条自检	1 次，成因是那条自检文字写在本条之前、我当时漏掉了自己刚在第六处里
+D277	D277-L168-I03	macro,count	1	正确写法是 $K(t)=\#	$K(t)=\#\{(\tau,\sigma)\in\mathcal
+D277	D277-L168-I04	count	1	应为两次（§7 第五段恢复公	两次（§7 第五段恢复公共前缀、§9 区间计数各一次，加上 §5 自
+D279	D279-L335-I03	cite,banstring	1	"改写为""绕开直接算，做法是"""	"""绕开直接算，做法是""），句子命题内容与行号引用未动"
+D281	D281-L384-I04	btick,macro	1	应为 $\bigl\lver	$\bigl\lvert\langle(1\otimes C)\xi
+D281	D281-L384-I11	macro	1	换成一般素数 $\ell$（	一般素数 $\ell$（$\theta$ 乘 $\ell$、约化模
+D284	D284-L897-I01	macro,typo	1	正确写法是 $\prod_{	$\prod_{s=0}^{b-1}$
+D284	D284-L897-I01	macro,typo	1	"应读作""分次部分""，指的是按"	"""分次部分""，指的是按 $v$ 之前标签数 $a$ 的过滤所得的分级"
+D286	D286-L169-I04	macro,banstring,table,typo	1	"应读作""不实则""，即系数向量"	"""不实则""，即系数向量缺乏实性时 $\sigma(k)$ 不再自伴、"
+D29	D29-L1062-I06	other	1	记作 ten-labels.	"ten-labels.tex:185-200，而""块尺寸 $3,2,2$""的字面落"
+D29	D29-L1062-I06	other	1	记作 ten-labels.	"ten-labels.tex:185-200，而""块尺寸 $3,2,"
+D29	D29-L1076-I11	btick,anchor,table	1	移到第 864 行，另一张带	"第 864 行，另一张带""记号""表头的下移到第 891 行，于是旧文"
+D290	D290-L549-I03	banstring,table	1	改为类别名表述	类别名表述
+D290	D290-L549-I04	macro,typo	1	应为 $\bigl\lver	$\bigl\lvert\ \bigr\rvert$ 的配对写法，所
+D291	D291-L185-I02	btick,macro,anchor,count,ordermove,table,probe,typo	1	"应读作""最外""，§1 与 §"	"""最外""，§1 与 §13 的""sharp常数"
+D292	D292-L186-I02	count,typo	1	"写为""命题 3.4""与""引理"	"""命题 3.4""与""引理 3.3""，凡遇此两处，请以标签名与所附 `"
+D298	D298-L178-I01	macro	1	应为“$H$ 嵌入如下正合列	“$H$ 嵌入如下正合列”
+D298	D298-L392-I02	cite,anchor,english	1	改回单侧上界加逐点下界，旧句	单侧上界加逐点下界，旧句不回改，以 §19 附注为准
+D299	D299-L363-I02	macro,typo	1	应为 re:field-se	re:field-second（renormalization.tex:221--
+D299	D299-L363-I02	macro,typo	1	应为 re:field-se	re:field-second（renormalization.te
+D300	D300-L311-I03	btick,count,banstring,table	1	改为（只报类别与计数，不复写	（只报类别与计数，不复写命中形态）：两字转折连接词类共 4 处行级命
+D301	D301-L174-I02	typo	1	应为 Ordering），属	Ordering），属专名笔误，与文风禁令无关，阅读时按正确键名理解
+D302	D302-L140-I04	macro	1	去掉小部分只动均值 $o(1	小部分只动均值 $o(1)$，紧支撑里存在 $x\ge\gamma$
+D302	D302-L140-I05	macro	1	换成 $1$ 后，$A-(1	$1$ 后，$A-(1+s)$ 在 $0\le p\le1$ 时恒等
+D302	D302-L140-I05	macro	1	换成 $1$ 的 $F(p)	$1$ 的 $F(p)$，补条给 $\ge1+s$，矛盾收口（08:
+D302	D302-L324-I03	macro,table	1	应读作 `\lvert\cd	`\lvert\cdot\rvert`
+D307	D307-L330-I02	macro	1	应为 $\mathrm{x}	$\mathrm{x}$ 对应的 \mathfrak 记号
+D307	D307-L330-I02	macro	1	"应读作""取 $U,I_0,J"	"""取 $U,I_0,J$ 与 $x$ 处最大理想的公共对数消解""，依"
+D307	D307-L330-I03	macro	1	正确写法是 $\mathfr	$\mathfrak mathbb Q$-因子化，对应 `build
+D308	D308-L362-I01	other	1	"应读作""$-1-k$"""	"""$-1-k$"""
+D309	D309-L277-I03	banstring,table	1	应为 §3、§4 各一，其余	§3、§4 各一，其余为零，与本节登记一致
+D310	D310-L331-I03	macro,banstring	1	写法是：把那个连接换成句号，	"把那个连接换成句号，作""相消得 $\mathbb E[K;\,J\l"
+D311	D311-L324-I02	btick	1	正确写法是 `` `tran	`` `transmission.tex:48` `` 后接全角右括
+D312	D312-L179-I02	macro	1	应为成对的绝对值记号，语义不	对的绝对值记号，语义不受影响，指 $\theta$ 的模
+D312	D312-L247-I02	btick	1	应为一对配对的绝对值定界	一对配对的绝对值定界
+D312	D312-L247-I11	macro,table	1	换回 big 与 Moish	big 与 Moishezon，经 Namikawa 换回投影，经 Fujino
+D312	D312-L247-I11	macro,table	1	换回 $2\pi c_1(K	$2\pi c_1(K_X)$ nef
+D312	D312-L251-I01	btick	1	应为一对配对的绝对值定界	一对配对的绝对值定界
+D313	D313-L251-I09	macro	1	改成别的值，权重 $q^{\	别的值，权重 $q^{\ell
+D313	D313-L251-I09	macro	1	换成独立随机变量，`03-e	独立随机变量，`03-encoding.tex:272`--`276
+D313	D313-L289-I02	banstring,ordermove	1	删掉了，删除范围只到那四个字	了，删除范围只到那四个字的连接词，未删任何论证内容，未调整已落盘的编
+D317	D317-L285-I01	btick,macro,anchor,banstring,table	1	统一为 LF	LF
+D319	D319-L178-I04	table	1	换成绝对值约定要求的写法，含	绝对值约定要求的写法，含义仍是同一个量
+D321	D321-L496-I03	banstring	1	"换成""也就是说""，但那正是"	"""也就是说""，但那正是 §6 与 §12 里已经用过的连接语，删掉更"
+D321	D321-L496-I04	banstring	1	改成只用类别名登记，并给出当	只用类别名登记，并给出当时的行号
+D321	D321-L496-I08	count,typo	1	"应为""四个""，即 main."	"""四个""，即 main.tex 16440、addressed.te"
+D322	D322-L234-I12	macro,probe	1	"改写为""随机权重树上的 lo"	"""随机权重树上的 log-sum""的翻译官，后面的换测度与削减全在树"
+D323	D323-L1392-I04	btick,count,typo	1	换回反引号，替换后美元符总数	反引号，替换后美元符总数为偶数，行内公
+D323	D323-L1392-I04	btick,count,typo	1	换回反引号，替换后美元符总数	反引号，替换后美元符总数为偶数，行内公式仍然成对
+D324	D324-L392-I04	btick,macro,table	1	改成 $\lvert F\r	$\lvert F\rvert$ 的形式
+D324	D324-L392-I05	english	1	"应读作""更锐利的 Liebe"	"""更锐利的 Liebeck--Shalev 估计"""
+D327	D327-L1008-I09	other	1	改为按论文引用（Bartni	按论文引用（Bartnik，`introduction.tex:89
+D330	D330-L262-I08	macro	1	应为 $H M\exp(-p	$H M\exp(-p_MT
+D330	D330-L262-I15	other	1	应读作步骤一对应 §11（§	步骤一对应 §11（§6 至 §8 属架构准备），步骤二对应 §12
+D331	D331-L327-I02	banstring,ordermove	1	改成同义形式，未删除任何小节	同义形式，未删除任何小节，未改变编号顺序，未重排任何已落盘内容
+D331	D331-L327-I05	other	1	删掉，只是就地写成对照形式	，只是就地写成对照形式
+D332	D332-L828-I03	btick	1	改写为一对定界符的说法	一对定界符的说法
+D332	D332-L828-I04	macro,table	1	改为 `\mid`	`\mid`
+D332	D332-L828-I04	macro,table	1	换成配对竖线记号（§12 两	配对竖线记号（§12 两处、§14 两处、§15 一处，另两处同型）
+D333	D333-L153-I02	btick,anchor,english,table,typo	1	应为“映射”	“映射”
+D333	D333-L153-I02	btick,anchor,english,table,typo	1	应为“不可约”	“不可约”
+D335	D335-L298-I03	btick,macro	1	应读作重叠 $\langle	重叠 $\langle\psi_j,\psi_i\rangle$ 的
+D335	D335-L298-I03	btick,macro	1	"去掉限制""漏了一个右定界符，"	"限制""漏了一个右定界符，应为 $Z_*e^{-1.2D}$ 这一加性"
+D336	D336-L397-I01	btick,count,probe	1	换成一对额外的定界符，出现在	一对额外的定界符，出现在当前行号 22、36、60、80、90、92
+D34	D34-L909-I02	macro	1	换成 $B_r$ 的那一步）	$B_r$ 的那一步）
+D340	D340-L622-I05	macro	1	\pi$，正文	$bY
+D340	D340-L705-I07	macro,ordermove,table	1	换成 `\lvert`	`\lvert`
+D340	D340-L705-I07	macro,ordermove,table	1	换成 `\lvert` 与	`\lvert` 与 `\rvert`、`\lVert` 与 `\r
+D341	D341-L463-I05	macro	1	应为 $3\le p<\in	$3\le p<\infty$
+D342	D342-L165-I02	macro,banstring,typo	1	正确写法是 profile-	profile-local.tex:27 的 $\log^{10}n
+D342	D342-L576-I04	anchor,table	1	改为 `cap-multis	`cap-multiscale.tex:80`
+D342	D342-L576-I04	anchor,table	1	改为 `cap-multis	`cap-multiscale.tex:80` 这种文件与行号写法，
+D346	D346-L373-I04	macro,count	1	应读作 $\binom{\l	$\binom{\lfloor(m-1)
+D346	D346-L439-I02	macro	1	"应读作""试验""，全格读法为："	"""试验""，全格读法为：$d\in\{0,1\}$ 的试验得矛盾则禁"
+D346	D346-L439-I03	table	1	"应读作""不相交""，全格读法为"	"""不相交""，全格读法为：$n-1$ 个两两不相交的红 $K_{m-1"
+D349	D349-L575-I03	table	1	统一为限制竖线形式，此后的正	限制竖线形式，此后的正文（§15 等）已统一
+D350	D350-L345-I03	macro,anchor	1	应为 §13，我执笔时把两处	§13，我执笔时把两处早期草稿句的编号按旧序留了下来
+D353	D353-L281-I02	macro,count	1	应读作 §6	§6
+D353	D353-L291-I04	btick,anchor,banstring,typo	1	"改写为""由 gcd 求得，绕"	"""由 gcd 求得，绕开未知分解"""
+D353	D353-L303-I01	btick,anchor,banstring,typo	1	"改写为""由 gcd 求得，绕"	"""由 gcd 求得，绕开未知分解"""
+D356	D356-L837-I01	cite,anchor,banstring,ordermove,typo	1	归位到 §6 末尾、§7 标	§6 末尾、§7 标题之前：
+D356	D356-L982-I01	btick,count,banstring,english,ordermove,table,probe	1	改为「同样地」	「同样地」
+D356	D356-L982-I01	btick,count,banstring,english,ordermove,table,probe	1	改为「本单位于其他队列的行号	「本单位于其他队列的行号：」
+D357	D357-L346-I01	anchor,ordermove	1	搬到 §13 之后，块内次序	§13 之后，块内次序不变，无需改动任何一行既有内容
+D357	D357-L346-I03	other	1	"应读作""作单项式和的 ans"	"""作单项式和的 ansatz"""
+D357	D357-L346-I05	other	1	应读作 $O(R^{1-p}	$O(R^{1-p})$
+D357	D357-L346-I06	other	1	"应读作""见 §13 与 §1"	"""见 §13 与 §16"""
+D358	D358-L144-I05	typo	1	"应为""generic 代数可"	"""generic 代数可分""（对应原文 generic algebr"
+D359	D359-L651-I02	anchor,probe,typo	1	应为 §19，此处更正	§19，此处更正
+D360	D360-L912-I10	count,banstring	1	应读作 574、575、57	574、575、577、586、636、686、718
+D362	D362-L447-I03	macro,count,table,typo	1	写为 68，已按实测改为 8	68，已按实测改为 83，同属自报数值的机械更正
+D362	D362-L447-I03	macro,count,table,typo	1	"应为""由 03 节论证""，因"	"""由 03 节论证""，因为该稠密性出自 `sections"
+D363	D363-L517-I05	typo	1	"应为 ""Fourier 反演"	"""Fourier 反演""，属手滑，申报待清理"
+D366	D366-L175-I02	macro	1	去掉，谱分割后两个交叉项没有	，谱分割后两个交叉项没有可用上界，系数 2 的两笔之一悬空
+D366	D366-L291-I06	banstring,typo	1	正确写法是 `appendi	`appendices
+D367	D367-L232-I04	macro	1	搬到可控邻域来逼 $q$	可控邻域来逼 $q$
+D368	D368-L649-I02	btick,cite,banstring,table	1	应为「变分」	「变分」
+D370	D370-L338-I02	anchor,ordermove	1	移到第 286 行那一节之后	第 286 行那一节之后，或在渲染层按编号重排
+D370	D370-L338-I04	btick,cite,count,typo	1	换回反引号	反引号
+D370	D370-L338-I05	macro,typo	1	对应写法是 `\N I`（见	`\N I`（见 `packets.tex:94` 与 `packe
+D370	D370-L338-I06	macro	1	应写作 `i`	`i`
+D370	D370-L338-I07	macro,anchor	1	统一成 `§4`	`§4`
+D370	D370-L338-I07	macro,anchor	1	统一成 `§4`、`§5`、	`§4`、`§5`、`§6`、`§10`
+D370	D370-L415-I03	count,table	1	改写为 52 行或直接删除	52 行或直接删除
+D371	D371-L732-I02	btick,macro,count	2	改成 `$`	`$`
+D371	D371-L732-I02	btick,macro,count	2	应为 $\operatorn	$\operatorname{covol}(\sigma(I))=\
+D371	D371-L732-I04	btick,macro	2	改成 `$`	`$`
+D371	D371-L732-I04	btick,macro	2	应为 $\gcd(l,\pr	$\gcd(l,\prod_{p\in S}p)=1$，我写成缺右括
+D371	D371-L826-I04	ordermove,table	1	应为 §0 至 §17 递增	§0 至 §17 递增、台账置于 §17 之后或保留 §16 原位由闸门判定
+D371	D371-L826-I04	ordermove,table	1	应为 §0 至 §17 递增	§0 至 §17 递增、台账置于 §17 之后或保留 §16 原位由
+D371	D371-L826-I06	btick,macro,count,probe	1	换成 `$`	`$`
+D371	D371-L826-I06	btick,macro,count,probe	2	应为 $\operatorn	$\operatorname{covol}(\sigma(I))=\
+D371	D371-L826-I09	btick,count,banstring,ordermove,table	1	换成行内公式定界符之后，	行内公式定界符之后，
+D372	D372-L170-I08	macro,typo	7	3]$	$[1
+D372	D372-L224-I01	anchor,ordermove,table	1	搬到 §11 之后，两种搬法	§11 之后，两种搬法等价，我均不动
+D372	D372-L224-I03	macro,typo	7	3]$	$[1
+D373	D373-L724-I05	other	62	sect	`build
+D373	D373-L724-I05	other	62	sect	`build
+D374	D374-L264-I02	macro,count,table	1	应为 $\{\lvert u	$\{\lvert u\rvert\le H\}$，本体侧可对该串机
+D374	D374-L264-I03	anchor,ordermove,table	1	"换成 L209 现存文本""这"	"L209 现存文本""这本身是论文最深的的设计声明"
+D374	D374-L264-I06	macro	2	应为 $-2i\lVert	$-2i\lVert B\rVert_2^2$，原文写作 $2i\l
+D376	D376-L234-I04	macro,count,table	1	应写作 lvert 与 rv	lvert 与 rvert 配对形式;这会让对应行在表格解析时列数虚
+D376	D376-L234-I10	macro,banstring,ordermove,table	1	改为 lvert、rvert	lvert、rvert 配对)再跑列数校验,否则六十四条数据行的 `恰好六个竖号`
+D376	D376-L234-I10	macro,banstring,ordermove,table	1	改为 lvert、rvert	lvert、rvert 配对)再跑列数校验,否则六十四条数据行的 `
+D378	D378-L166-I02	btick	1	改回反引号，仅动定界符、不动	反引号，仅动定界符、不动任何文字与数值
+D380	D380-L245-I03	btick,macro,cite,banstring,typo	1	应为两个行号各带一对反引号或	两个行号各带一对反引号或用连字符接成一个范围
+D382	D382-L428-I04	banstring	1	改成 `--`	`--`
+D382	D382-L428-I04	banstring	1	改成 `-`	`-`
+D385	D385-L409-I04	macro,probe	1	应为 $i\Theta_{h	$i\Theta_{h_J}$，笔记误并为 $i\partial\b
+D388	D388-L508-I08	english,typo	1	"应为""含（inclusion"	"""含（inclusion）"""
+D388	D388-L508-I08	english,typo	1	"应为""那对配对的界"""	"""那对配对的界"""
+D388	D388-L620-I08	table	1	"应为""裸竖线""，此处用代号是"	"""裸竖线""，此处用代号是为了避免在同一段里重复同一字形"
+D390	D390-L207-I03	other	1	"应读作""全程不依赖测度系数的"	"""全程不依赖测度系数的符号""，语义以 §7 末段对应表述为准"
+D391	D391-L223-I01	macro,count,banstring,table,probe	1	换成 `\mid`	`\mid`
+D391	D391-L223-I01	macro,count,banstring,table,probe	1	换成 `\mid` 形式，记	`\mid` 形式，记号语义不变
+D391	D391-L223-I04	macro	1	换成她的 Laurent 设	她的 Laurent 设定会丢 $J$ 的 principal 单位
+D391	D391-L225-I01	macro,count,banstring,table,probe	1	换成 `\mid`	`\mid`
+D391	D391-L225-I01	macro,count,banstring,table,probe	1	换成 `\mid` 形式，记	`\mid` 形式，记号语义不变
+D396	D396-L143-I03	count,typo	2	应为 Lem 3.5	Lem 3.5
+D396	D396-L155-I01	banstring	1	应为 Lem 3.5），第	Lem 3.5），第 13 节第四条对取证边界的申报无修订
+D398	D398-L726-I09	other	1	改为 177 行，改动已在追	177 行，改动已在追加前完成，落盘只有一版
+D401	D401-L411-I04	btick,macro,table,typo	1	"应读作""$\operator"	"""$\operatorname{Backslash operator"
+D402	D402-L435-I05	macro	1	改为展开式 $\alpha	展开式 $\alpha x_{\mathsf L}\mathsf C
+D402	D402-L435-I09	other	1	应为 `compiler.t	`compiler.tex:15-16`
+D402	D402-L435-I09	other	1	应为 `compiler.t	`compiler.tex:15-16`（该句跨这三行，Sectio
+D403	D403-L288-I03	macro,banstring	1	"置为：§1 末段""倾斜的理由"	"§1 末段""倾斜的理由是纯二阶的""之后第 4 段的收束句、§2 末段"
+D404	D404-L468-I05	btick,count	265	sect	`build
+D404	D404-L468-I05	btick,count	265	sect	`build
+D404	D404-L496-I01	macro,anchor,count,table,typo	1	"应为""这里 $A$ 并非对称"	"""这里 $A$ 并非对称""，属笔误，语义指向一致（$q$ 只检测对称"
+D405	D405-L413-I04	btick,macro,count	2	替换为 $\mathrm{k	$\mathrm{k}$，这不影响任何估计
+D407	D407-L281-I06	english	1	"应读作""熔合""""加上 nef"	"""熔合""""加上 nef 对偶""""用固定 Kahler 类截出紧凸截面"
+D407	D407-L281-I16	macro,anchor,count,table	1	统一为带下标mathrm的双	带下标mathrm的双线性型上同调记号 $H^{1,1}_{\mat
+D408	D408-L789-I04	typo	1	"正确写法是""扇区""，指 §9"	"""扇区""，指 §9 与 §32 里 $p=0$ 或 $s=0$ 那层"
+D409	D409-L478-I04	macro,table	1	应为 `$\mathbb P	`$\mathbb P$`
+D409	D409-L478-I04	macro,table	1	应为 `$\operator	`$\operatorname{PV}$`
+D41	D41-L763-I03	btick,typo	1	改成反引号，我只动了那一个字	反引号，我只动了那一个字符，未在任何位
+D41	D41-L763-I03	btick,typo	1	改成反引号，我只动了那一个字	反引号，我只动了那一个字符，未在任何位置补孤立同形字符做奇偶补偿，也
+D41	D41-L779-I01	table	1	"换成""记号""，正文里那份五列"	"""记号""，正文里那份五列规格表头仍只有第 15 节一处，本轮不重抄、"
+D415	D415-L331-I10	btick,anchor	1	"搬到另一侧""这一技巧）在第二"	"另一侧""这一技巧）在第二次追加时被丢弃：那次 Edit 的锚点只取了"
+D415	D415-L331-I13	banstring,table	1	应读作三处，分布为 §2 第	三处，分布为 §2 第一段、§10 第一段与 §15 素材类段落
+D418	D418-L501-I06	macro	1	换成 $(z+\lambda	$(z+\lambda)^{-1}$（依据 `02-edge-law
+D420	D420-L192-I09	btick,count	1	改为美元定界	美元定界
+D420	D420-L192-I10	typo	1	"应为""Borel 域"""	"""Borel 域"""
+D421	D421-L289-I05	macro,count,table	1	应写成分隔算子命令，范数命令	分隔算子命令，范数命令则全部按规格用了左右成对的形式（实测两半各 1
+D424	D424-L851-I01	btick,count,table	1	"应读作""正文收束后合计 1,"	"""正文收束后合计 1,066，闸门线 1,200 由 §20 台账"
+D430	D430-L232-I03	btick,count	1	换回反引号，配对复原，那枚补	反引号，配对复原，那枚补偿字符也一并撤
+D430	D430-L232-I03	btick,count	1	换回反引号，配对复原，那枚补	反引号，配对复原，那枚补偿字符也一并撤去，全文该字符总数回到偶数
+D431	D431-L33-I02	macro	1	换成 $\overline{	$\overline{\partial}$ 问题，在 $\theta
+D431	D431-L151-I05	btick,cite	1	"应写作""两处），属定界符修理"	"""两处），属定界符修理的行文残渣，按落盘后不改原则保留原文"
+D431	D431-L151-I06	probe,typo	1	应为 `pmatrix`	`pmatrix`
+D431	D431-L151-I06	probe,typo	1	写为缺字形式（应为 `pma	缺字形式（应为 `pmatrix` 环境的完整闭合），纯排版误字、不
+D431	D431-L151-I07	macro,typo	1	应为 $e_3(v)=e_1	$e_3(v)=e_1(v)\times e_2(v)$（素材出处
+D431	D431-L209-I08	btick,macro	1	换成整体输运数据的可比对象，	整体输运数据的可比对象，一旦换出 $G(x,[\theta])$，收
+D434	D434-L601-I04	english	1	"应为""该层到其箱""，位置 `"	"""该层到其箱""，位置 `D434-积分期望阈值处的图分解.md:37"
+D434	D434-L601-I08	btick,cite	1	换成了半角冒号（`D434-	了半角冒号（`D434-积分期望阈值处的图分解.md:151-153
+D436	D436-L290-I03	macro,count,english,typo	1	"该写""不相交""的位置留了英文"	"""不相交""的位置留了英文原词;§13 一处把手柄分解的文件名前缀打成"
+D440	D440-L464-I02	anchor,ordermove	1	搬到第 9 节之后	第 9 节之后
+D446	D446-L457-I11	macro,count,table,probe	1	统一为 LF	LF
+D447	D447-L407-I08	btick,count	1	恢复为闭合反引号，计数即恢复	闭合反引号，计数即恢复为偶
+D447	D447-L427-I02	btick,count,typo	1	应为四处，前三处已在上一节列	四处，前三处已在上一节列出位置，第四处在第 26 节第三条差异的段首
+D447	D447-L427-I04	anchor,count	1	"改写为""由 §9 的第二变体"	"""由 §9 的第二变体恒为一""，改写发生在落盘之前，盘上文本以改写后"
+D448	D448-L308-I06	typo	1	写法是 $Bu_s$，与第	$Bu_s$，与第 $13$ 节其余各处的 $u_s$ 一致
+D448	D448-L308-I08	count,table	1	写法是改用配对的正竖线记号，	改用配对的正竖线记号，与同一张表其余各行保持一致
+D449	D449-L238-I02	btick,cite,count	1	换成闭合反引号，内容不变	闭合反引号，内容不变
+D450	D450-L202-I02	btick,macro,cite,count	1	换回美元符, 不做任何奇偶补	美元符, 不做任何奇偶补偿字符
+D452	D452-L209-I05	typo	1	应为“不变压缩子”	“不变压缩子”
+D452	D452-L209-I05	typo	1	应为“不变压缩子”，期望完整	“不变压缩子”，期望完整句子为：“这说明定理的强度恰好锚在投影格的度
+D452	D452-L209-I07	anchor	1	置为保留第 133 至 14	保留第 133 至 141 行一份、整块删除第 142 至 150
+D455	D455-L393-I03	banstring,table,probe	1	"改成""和 $G$ 上的球面度"	"""和 $G$ 上的球面度量只在核心附近一致"
+D455	D455-L393-I05	btick,macro	1	"应为""使得横向参数落在 $J"	"""使得横向参数落在 $J$ 里的每条直线都从 $f_0(E_*)$"
+D455	D455-L393-I06	macro,count,table	1	应为 `$\{\lvert	`$\{\lvert z\rvert\ge R\}\cup\{\infty\}\subset G$`
+D455	D455-L393-I06	macro,count,table	1	应为 `$\{\lvert	`$\{\lvert z\rvert\ge R\}\cup\{\in
+D455	D455-L393-I07	btick,cite,count	1	改成 `02-transfe	`02-transfer.tex:137-152`
+D455	D455-L393-I07	btick,cite,count	1	改成 `02-transfe	`02-transfer.tex:137-152`、`04-laws
+D455	D455-L393-I17	btick,count	1	"改为""四种畸形形态实测零命中"	"""四种畸形形态实测零命中"
+D456	D456-L291-I02	btick,count	1	改为规范的成对美元符号写法	规范的成对美元符号写法
+D457	D457-L189-I01	btick,macro,cite,anchor,count,banstring,english,table,probe,typo	1	统一为反引号包裹的文件名冒号	反引号包裹的文件名冒号行号形态，收尾都
+D457	D457-L189-I01	btick,macro,cite,anchor,count,banstring,english,table,probe,typo	1	统一为反引号包裹的文件名冒号	反引号包裹的文件名冒号行号形态，收尾都是反引号，四种把反引号误写成数

@@ -1,0 +1,83 @@
+canvases walked 1058, built 928
+weight draw                    7870   canvases  853   papers  501
+      A-boundary-field-gap-for-the-spin-one-He#0  line((-1.6, 0), (-0.45, 0), stroke: (thickness: 0.4pt))
+      A-boundary-field-gap-for-the-spin-one-He#0  line((0.45, 0), (1.15, 0), stroke: (thickness: 0.4pt))
+      A-boundary-field-gap-for-the-spin-one-He#0  line((2.05, 0), (2.75, 0), stroke: (thickness: 0.4pt))
+none fill                      3004   canvases  479   papers  293
+      A-boundary-only-obstruction-to-four-dime#0  circle((7.8, 0), radius: 0.07056, fill: black, stroke: none)
+      A-boundary-only-obstruction-to-four-dime#0  circle((9.8, 0), radius: 0.07056, fill: black, stroke: none)
+      A-boundary-only-obstruction-to-four-dime#1  rect((-1.9, -1.25), (1.9, 1.25), fill: rgb("#f2f2f2"), stroke: none)
+none path                       361   canvases   34   papers   22
+      A-finitely-generated-counterexample-to-t#0  line((6.8, 0), (7.6, 0.55), stroke: none)
+      An-explicit-exact-Hausdorff-gauge-for-SL#0  rect((-0.25, -0.15), (14.6, 10.1), stroke: none)
+      An-explicit-exact-Hausdorff-gauge-for-SL#1  rect((-0.9, -1.05), (12.25, 3.85), stroke: none)
+weight filldraw                 118   canvases   40   papers   32
+      A-continuum-temperature-singularity-for-#0  circle((0, 0), radius: (0.2465, 0.1785), fill: rgb("#ffecd9"), stroke: (paint: rgb("#a65300"), thickness: 0.4p
+      A-continuum-temperature-singularity-for-#0  circle((1.45, 2.1), radius: (0.2465, 0.1785), fill: rgb("#ffecd9"), stroke: (paint: rgb("#a65300"), thickness:
+      A-continuum-temperature-singularity-for-#0  circle((7.975, 4.2), radius: (0.2465, 0.1785), fill: rgb("#ffecd9"), stroke: (paint: rgb("#a65300"), thickness
+weight path                      43   canvases   12   papers    9
+      A-Counterexample-to-Walls-D2-Problem-Oct#0  line((0, 0), (3, 1.1), stroke: (thickness: 0.4pt), mark: (end: (symbol: ")>", fill: black)))
+      A-Counterexample-to-Walls-D2-Problem-Oct#0  line((6.2, 1.1), (6.2, -1.1), stroke: (thickness: 0.4pt), mark: (end: (symbol: ")>", fill: black)))
+      A-Counterexample-to-Walls-D2-Problem-Oct#0  line((0, 0), (6.2, -1.1), stroke: (thickness: 0.4pt), mark: (end: (symbol: ")>", fill: black)))
+flip on (path[draw=black!75])     13   canvases    1   papers    1
+      BKT-universality-for-height-and-planar-s#2  line((0.58, 0), (1.74, 0), (1.74, 0.58), (2.32, 0.58), (2.32, 1.74), (1.74, 1.74), (1.74, 2.32), (0.58, 2.32),
+      BKT-universality-for-height-and-planar-s#2  line((0.58, 2.32), (1.74, 2.32), (1.74, 2.9), (2.32, 2.9), (2.32, 4.06), (1.74, 4.06), (1.74, 4.64), (0.58, 4.
+      BKT-universality-for-height-and-planar-s#2  line((2.9, 0), (4.06, 0), (4.06, 0.58), (4.64, 0.58), (4.64, 1.74), (4.06, 1.74), (4.06, 2.32), (2.9, 2.32), (
+flip on (path[draw=teal!45!black])     12   canvases    1   papers    1
+      The-Euclidean-plane-is-not-five-colorabl#2  line((0, 0), (0.033, 0.01884), (0.06619, 0.03734), (0.09957, 0.05551), (0.1331, 0.07335), (0.1669, 0.09086), (
+      The-Euclidean-plane-is-not-five-colorabl#2  line((3.8, -4.712e-16), (3.828, 0.0162), (3.855, 0.03267), (3.883, 0.04942), (3.911, 0.06645), (3.938, 0.08376
+      The-Euclidean-plane-is-not-five-colorabl#2  line((0, 0), (0.00019, 0.038), (0.00076, 0.076), (0.00171, 0.114), (0.00304, 0.152), (0.00475, 0.1899), (0.006
+flip on (path[draw=black!65])     11   canvases    1   papers    1
+      Canonical-conformal-limits-of-subcritica#2  rect((0, 0), (0.902, 0.58), fill: rgb("#dedede"), stroke: (paint: rgb("#595959"), thickness: 0.45pt))
+      Canonical-conformal-limits-of-subcritica#2  rect((2.002, 0), (2.86, 0.58), fill: rgb("#dedede"), stroke: (paint: rgb("#595959"), thickness: 0.45pt))
+      Canonical-conformal-limits-of-subcritica#2  rect((2.86, 0), (4.07, 0.58), fill: rgb("#ffffff"), stroke: (paint: rgb("#595959"), thickness: 0.45pt))
+flip on (path[draw=black!48])     10   canvases    1   papers    1
+      Strict-convexity-and-differentiability-o#1  line((1.02, 1.71), (1.26, 1.47), (1.48, 1.47), (1.48, 1.69), (1.24, 1.93), (1.02, 1.93), close: true, fill: rg
+      Strict-convexity-and-differentiability-o#1  line((2.82, 1.71), (3.06, 1.47), (3.28, 1.47), (3.28, 1.69), (3.04, 1.93), (2.82, 1.93), close: true, fill: rg
+      Strict-convexity-and-differentiability-o#1  line((4.62, 1.71), (4.86, 1.47), (5.08, 1.47), (5.08, 1.69), (4.84, 1.93), (4.62, 1.93), close: true, fill: rg
+flip on (path[draw=black!55])      9   canvases    2   papers    1
+      Uniform-marked-polygon-estimates-and-sha#1  line((-2.263, 0), (2.263, 0), (0, 3.92), close: true, fill: rgb("#ededff"), stroke: (paint: rgb("#737373"), th
+      Uniform-marked-polygon-estimates-and-sha#1  line((2.263, 0), (0.2263, 3.528), (4.3, 3.528), close: true, fill: rgb("#ffeede"), stroke: (paint: rgb("#73737
+      Uniform-marked-polygon-estimates-and-sha#1  line((2.263, 0), (7.695, 0), (4.979, 4.704), close: true, fill: rgb("#edf6ed"), stroke: (paint: rgb("#737373")
+flip on (path[draw=black!22])      7   canvases    1   papers    1
+      Strict-convexity-and-differentiability-o#2  rect((0.86, 0.75), (0.98, 6.31), fill: rgb("#ededed"), stroke: (paint: rgb("#c7c7c7"), thickness: 0.3pt))
+      Strict-convexity-and-differentiability-o#2  rect((1.66, 0.75), (1.78, 6.31), fill: rgb("#ededed"), stroke: (paint: rgb("#c7c7c7"), thickness: 0.3pt))
+      Strict-convexity-and-differentiability-o#2  rect((2.46, 0.75), (2.58, 6.31), fill: rgb("#ededed"), stroke: (paint: rgb("#c7c7c7"), thickness: 0.3pt))
+flip on (path[draw=teal!65!black])      6   canvases    2   papers    1
+      Maximal-Multipoint-Seshadri-Constants-in#0  line((0, 0), (2.64, 0), (0.44, 1.4), (0, 1.05), close: true, stroke: (thickness: 0.8pt))
+      Maximal-Multipoint-Seshadri-Constants-in#0  line((4.65, 0), (7.29, 0), (4.65, 1.4), (4.32, 1.05), close: true, stroke: (thickness: 0.8pt))
+      Maximal-Multipoint-Seshadri-Constants-in#0  line((8.97, 0), (11.94, 0), (9.3, 1.4), close: true, stroke: (thickness: 0.8pt))
+flip on (path[draw=MidnightBlue])      6   canvases    1   papers    1
+      Strict-convexity-and-differentiability-o#0  line((-5.346, 0.658), (-3.654, 0.658), stroke: (thickness: 0.4pt))
+      Strict-convexity-and-differentiability-o#0  bezier((-3.654, 0.658), (-4.5, -1.034), (-3.09, 0.094), (-3.56, -1.034), stroke: (thickness: 0.4pt))
+      Strict-convexity-and-differentiability-o#0  bezier((-4.5, -1.034), (-5.346, 0.658), (-5.44, -1.034), (-5.91, 0.094), stroke: (thickness: 0.4pt))
+flip on (path[draw=RoyalBlue])      5   canvases    1   papers    1
+      Quenched-SLE3-limits-for-general-weak-ra#1  bezier((4.468, 1.52), (3.6, -0.668), (4.335, 1.002), (4.418, -0.4175), stroke: (thickness: 0.7pt, dash: "dashe
+      Quenched-SLE3-limits-for-general-weak-ra#1  bezier((3.6, -0.668), (2.465, 1.403), (2.832, -0.6346), (2.732, 0.8851), stroke: (thickness: 0.7pt, dash: "das
+      Quenched-SLE3-limits-for-general-weak-ra#1  line((2.465, 1.403), (2.615, 1.52), stroke: (thickness: 0.7pt, dash: "dashed"))
+flip on (path[draw=blue!55!black])      4   canvases    1   papers    1
+      Canonical-conformal-limits-of-subcritica#2  rect((0.902, 0), (2.002, 0.58), fill: rgb("#e8e8ff"), stroke: (paint: rgb("#00008c"), thickness: 0.65pt))
+      Canonical-conformal-limits-of-subcritica#2  rect((6.27, 0), (7.37, 0.58), fill: rgb("#e8e8ff"), stroke: (paint: rgb("#00008c"), thickness: 0.65pt))
+      Canonical-conformal-limits-of-subcritica#2  rect((11.64, 0), (12.74, 0.58), fill: rgb("#e8e8ff"), stroke: (paint: rgb("#00008c"), thickness: 0.65pt))
+flip on (path[draw=orange!60!black])      3   canvases    1   papers    1
+      Canonical-conformal-limits-of-subcritica#2  rect((4.07, 0), (5.335, 0.58), fill: rgb("#ffe7cf"), stroke: (paint: rgb("#994d00"), thickness: 0.8pt))
+      Canonical-conformal-limits-of-subcritica#2  rect((9.438, 0), (10.7, 0.58), fill: rgb("#ffe7cf"), stroke: (paint: rgb("#994d00"), thickness: 0.8pt))
+      Canonical-conformal-limits-of-subcritica#2  rect((11.66, -1.65), (11.97, -1.43), fill: rgb("#ffe7cf"), stroke: (paint: rgb("#994d00"), thickness: 0.8pt))
+flip on (path[draw=gray!55])      2   canvases    1   papers    1
+      Conditional-coordinate-sweeps-and-analyt#0  rect((-0.16, -0.16), (0.16, 1.56), fill: rgb("#f0f0f0"), stroke: (paint: rgb("#b9b9b9"), thickness: 0.4pt))
+      Conditional-coordinate-sweeps-and-analyt#0  rect((4.34, -0.16), (4.66, 1.56), fill: rgb("#f0f0f0"), stroke: (paint: rgb("#b9b9b9"), thickness: 0.4pt))
+flip on (path[draw=True])         2   canvases    1   papers    1
+      The-critical-logarithmic-correction-for-#0  line((-0.72, -0.28), (-0.44, -0.28), (-0.44, -0.18), (-0.34, -0.18), (-0.34, 0.18), (-0.44, 0.18), (-0.44, 0.2
+      The-critical-logarithmic-correction-for-#0  line((0.44, -0.28), (0.72, -0.28), (0.72, -0.18), (0.82, -0.18), (0.82, 0.18), (0.72, 0.18), (0.72, 0.28), (0.
+flip on (path[draw=black!40])      2   canvases    1   papers    1
+      Uniform-marked-polygon-estimates-and-sha#3  line((0, -0.6582), (0, 0.6582), (-1.14, 1.316), (-2.28, 0.6582), (-2.28, -0.6582), (-1.14, -1.316), close: tru
+      Uniform-marked-polygon-estimates-and-sha#3  line((0, -0.6582), (1.14, -1.316), (2.28, -0.6582), (2.28, 0.6582), (1.14, 1.316), (0, 0.6582), close: true, f
+flip on (path[draw=black])        1   canvases    1   papers    1
+      An-integral-scalar-curvature-bound-for-r#0  line((2.544, 0.805), (1.15, 1.61), (-0.2443, 0.805), (-0.2443, -0.805), (1.15, -1.61), (2.544, -0.805), close:
+flip on (path[draw=loopsideroute!50])      1   canvases    1   papers    1
+      Canonical-conformal-limits-of-subcritica#4  rect((5.49, -3.45), (5.91, -3.25), fill: rgb("#e2f0f6"), stroke: (paint: rgb("#8ea7b8"), thickness: 0.4pt))
+none filldraw                     1   canvases    1   papers    1
+      Canonical-conformal-limits-of-subcritica#5  rect((3.13, 1.33), (4.18, 3.37), fill: rgb("#fae2d3"), stroke: none)
+flip off (filldraw[draw=none])      1   canvases    1   papers    1
+      Canonical-conformal-limits-of-subcritica#5  rect((3.13, 1.33), (4.18, 3.37), fill: rgb("#fae2d3"), stroke: none)
+papers touched by any bucket: 513   canvases walked 1058

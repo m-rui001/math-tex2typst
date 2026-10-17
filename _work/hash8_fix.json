@@ -1,0 +1,101 @@
+[
+ {
+  "cid": "D211",
+  "line": 227,
+  "old": "因为 $\\mu(U)=1` 已经登记在",
+  "new": "因为 $\\mu(U)=1$ 已经登记在",
+  "expect": 1,
+  "dollars": 1,
+  "ticks": -1,
+  "parity": true,
+  "cred": "闭符误打反引号（元凶行，旗标在 233）"
+ },
+ {
+  "cid": "D211",
+  "line": 233,
+  "old": "\\eqref{eq:split-measure}` 的各项质量",
+  "new": "\\eqref{eq:split-measure}$ 的各项质量",
+  "expect": 1,
+  "dollars": 1,
+  "ticks": -1,
+  "parity": true,
+  "cred": "闭符误打反引号，旗标站"
+ },
+ {
+  "cid": "D80",
+  "line": 2228,
+  "old": "n^3)\\rfloor`（`07:47`",
+  "new": "n^3)\\rfloor$（`07:47`",
+  "expect": 1,
+  "dollars": 1,
+  "ticks": -1,
+  "parity": true,
+  "cred": "闭符误打反引号，素材 07:47-48"
+ },
+ {
+  "cid": "D93",
+  "line": 158,
+  "old": "而 $d\\ge3` 出现在推论",
+  "new": "而 $d\\ge3$ 出现在推论",
+  "expect": 1,
+  "dollars": 1,
+  "ticks": -1,
+  "parity": true,
+  "cred": "闭符误打反引号，同段三处合法形 $d\\ge3$"
+ },
+ {
+  "cid": "D244",
+  "line": 14,
+  "old": "$密度恰好为 1\"这一件事上。",
+  "new": "密度恰好为 1\"这一件事上。",
+  "expect": 1,
+  "dollars": -1,
+  "ticks": 0,
+  "parity": true,
+  "cred": "作者申报的落单开符，删符（§17 勘误第 5 条）"
+ },
+ {
+  "cid": "D244",
+  "line": 167,
+  "old": "末尾\"$密度恰好为 1\"处出现单个定界符",
+  "new": "末尾`\"$密度恰好为 1\"`处出现单个定界符",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 2,
+  "parity": true,
+  "cred": "登记句引用的定界符字面进代码跨度"
+ },
+ {
+  "cid": "D28",
+  "line": 715,
+  "old": "$2M²η 不趋 0。",
+  "new": "2M²η 不趋 0。",
+  "expect": 1,
+  "dollars": -1,
+  "ticks": 0,
+  "parity": true,
+  "cred": "落单开符，本篇 (d) 批注行裸写 Unicode 为家形"
+ },
+ {
+  "cid": "D293",
+  "line": 57,
+  "old": "^n:\\ #(W_n(r;d)",
+  "new": "^n:\\#(W_n(r;d)",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "cred": "classification.tex:40 逐字 \\#(W_n(r;d)"
+ },
+ {
+  "cid": "D356",
+  "line": 929,
+  "old": " 外加成对 $；",
+  "new": " 外加成对 `$`；",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 2,
+  "parity": true,
+  "cred": "工单原文里的记号引用进代码跨度"
+ }
+]

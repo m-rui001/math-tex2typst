@@ -1,0 +1,15 @@
+total macro-arg-EOF: 97
+accent-no-group (ORDER): 77
+truncated (WAIVER/JUDGMENT): 7
+residual: 13
+  3	\eqref
+  1	\mathbb N\to\Set
+  1	p_q=\frac{\sqrt q}{1+\sqrt q},\qquad \kappa(q)=\frac{4\pi}{\arcc
+  1	RD=\mathrm\operatorname{Id}
+  1	B_0P=\mathrm\operatorname{Id}+K
+  1	B_0(\mathrm\operatorname{Id}-H_0)=L+KL
+  1	RD=PL+H_0=\mathrm\operatorname{Id}
+  1	L=(P+H_0)^{-1}(\mathrm\operatorname{Id}-H_0)
+  1	\red
+  1	\sum_{N_u\text{ prime}}a_x(u)\ge(\frac{\mathfrak}2-C_{\rm bal}\k
+  1	k+8(k+1)-\frac{12}{5}(k+1)=\frac{33k+28)/5}

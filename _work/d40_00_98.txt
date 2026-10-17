@@ -1,0 +1,4 @@
+研究笔记\D40-单叶函数严格逆一次幂界.md
+   3| 对象论文：`A strict inverse-first-power bound for univalent functions`（2026-09-24，OpenAI）。
+  13| 
+  14| 第一个词 `inverse-first-power`，逆一次幂。它锁定被积的量是 $|f'|^{-1}$ ，并非 $|f'|^{1}$。这条选择属于算子层面的前提，与对称性审美无关：$p=-1$ 时 $|f'|^{-1}=|Q_F|$ 恰好是某个全纯函数 $F$ 的导数倒数，$\log|Q_F|$ 调和，于是"取模后调不调和"这类算子性质可以随便用；更重要的是逆导数在仿射重基下按 $Q_{T_zF}(w)=Q_F(z\cdot w)/Q_F(z)$ 干净地乘性传播（`01:84`），这让 $A_z\Phi=|Q_F(z)|\Phi(T_zF)$ 构成一个表示 $A_zA_w=A_{z\cdot w}$。正一次幂 $|f'|$ 走不通这条路，正一次幂的端点属于配套论文 `BrennanMethod` 那个 inverse-square 语境，本文明确写"the companion's inverse-square endpoint theorem is not an input"（`00:98`）。所以我一上手就得接受：这是单条指数 $p=-1$ 的定理，不动 $p=1$，`00:56-57` 那句 "it does not settle the proposed value at $p=1$" 是硬边界。

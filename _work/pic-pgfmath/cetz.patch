@@ -1,0 +1,148 @@
+--- a/t2t/cetz.py
++++ b/t2t/cetz.py
+@@ -128,9 +128,18 @@
+     "atan": lambda x: math.degrees(math.atan(x)), "atan2": lambda y, x: math.degrees(math.atan2(y, x)),
+     "sqrt": math.sqrt, "abs": abs, "exp": math.exp, "ln": math.log, "log10": math.log10,
+     "round": lambda x: float(round(x)), "int": lambda x: float(int(x)),
++    # floor/ceil walk out to the neighbouring integer while int() truncates toward zero -- TeX
++    # writes floor(-0.6) = -1 and int(-0.6) = 0, measured in _work/pic-pgfmath/meas_pgfmath.tex
++    "floor": lambda x: float(math.floor(x)), "ceil": lambda x: float(math.ceil(x)),
+     "min": min, "max": max, "pow": lambda a, b: a ** b, "mod": lambda a, b: a % b,
+ }
+-TOKEN_RX = re.compile(r"\s*(?:(\d+\.?\d*|\.\d+)|([A-Za-z]+)|([-+*/^,()]))")
++# One comparison level, looser than + - * / and left-associative: TeX reads `2==1<1` as
++# (2==1)<1 = 1, so a chain mixes `<` and `==` freely and both spellings sit at the same level.
++CMPS = {"<": lambda a, b: a < b, "<=": lambda a, b: a <= b, ">": lambda a, b: a > b,
++        ">=": lambda a, b: a >= b, "==": lambda a, b: a == b, "=": lambda a, b: a == b,
++        "!=": lambda a, b: a != b}
++COMPARE_OPS = ("<=", ">=", "==", "!=", "<", ">")
++TOKEN_RX = re.compile(r"\s*(?:(\d+\.?\d*|\.\d+)|([A-Za-z]+)|(<=|>=|==|!=|[-+*/^,()<>]))")
+ 
+ 
+ def _tokenize(text):
+@@ -149,6 +158,16 @@
+     return out
+ 
+ 
++def _relation(toks, i):
++    """pgfmath's comparison level: every operator returns 1 or 0, and the chain runs left to right."""
++    val, i = _add(toks, i)
++    while i < len(toks) and toks[i][0] == "op" and toks[i][1] in COMPARE_OPS:
++        op = toks[i][1]
++        rhs, i = _add(toks, i + 1)
++        val = 1.0 if CMPS[op](val, rhs) else 0.0
++    return val, i
++
++
+ def _add(toks, i):
+     val, i = _mul(toks, i)
+     while i < len(toks) and toks[i][0] == "op" and toks[i][1] in "+-":
+@@ -190,7 +209,7 @@
+         raise ValueError("end of expression")
+     kind, val = toks[i]
+     if kind == "op" and val == "(":
+-        out, i = _add(toks, i + 1)
++        out, i = _relation(toks, i + 1)
+         if i >= len(toks) or toks[i] != ("op", ")"):
+             raise ValueError("unclosed (")
+         return out, i + 1
+@@ -222,12 +241,16 @@
+ 
+ 
+ def expr(text):
+-    """Evaluate a pgfmath expression in cm; None when it is not pure arithmetic."""
++    r"""Evaluate a pgfmath expression in cm; None when it is not pure arithmetic.
++
++    A comparison is arithmetic: pgfmath hands back 1 or 0 for it, which is exactly the number a
++    `\ifnum` then branches on, so `1+2<=10` is a value and not a refusal.
++    """
+     toks = _tokenize(text)
+     if not toks:
+         return None
+     try:
+-        val, i = _add(toks, 0)
++        val, i = _relation(toks, 0)
+     except (ValueError, ZeroDivisionError, OverflowError, TypeError):
+         return None
+     if i != len(toks) or val is None:
+@@ -1032,15 +1055,25 @@
+     pgfmath is the arithmetic TikZ drawings do by hand, and its expressions are the same ones the
+     coordinate reader already parses. A definition whose expression still names something unknown
+     refuses the picture, as it did while these two commands sat in UNSUPPORTED.
++
++    Each iteration consumes one definition, so the walk ends as soon as the picture has no more of
++    them -- a lattice drawn as an 81-cell foreach carries 162 definitions, and a fixed budget would
++    refuse it for being long.
+     """
+     values = {}
+-    for _ in range(64):
++    while True:
+         m = PGFMATH_DEF.search(body)
+         if not m:
+-            for name, val in values.items():
+-                body = re.sub(re.escape(name) + r"(?![a-zA-Z])", val, body)
+-            return body
+-        pos = m.end()
++            return _values_of(body, values)
++        # TeX expands a macro where the name is *used*, so the numbers computed so far have to be
++        # written into the text before this definition: one sweep at the end would hand every cell
++        # of a redefined loop the last iteration's centre. Rewriting the head changes its length,
++        # so the definition is then read and spliced at its *new* offset -- keeping the old one
++        # cuts the picture mid-token.
++        head = _values_of(body[:m.start()], values)
++        start = len(head)
++        body = head + body[m.start():]
++        pos = start + (m.end() - m.start())
+         if body[pos:pos + 1] != "{":
+             return None
+         text, pos = bracketed(body, pos)
+@@ -1050,13 +1083,13 @@
+         if val is None:
+             return None
+         if m.group(1) == "truncate":
+-            values[m.group(2)] = "%d" % int(round(val))
++            # \pgfmathtruncatemacro cuts toward zero (2.7 -> 2, -2.7 -> -2), it does not round
++            values[m.group(2)] = "%d" % int(val)
+         else:
+             values[m.group(2)] = "%.5g" % val
+         if body[pos:pos + 1] == ";":
+             pos += 1
+-        body = body[:m.start()] + body[pos:]
+-    return None
++        body = body[:start] + body[pos:]
+ 
+ 
+ IFNUM = re.compile(r"\\ifnum\s*")
+@@ -1074,7 +1107,8 @@
+ 
+ 
+ def _cmp(op, a, b):
+-    return a < b if op == "<" else a > b if op == ">" else a == b
++    r"""The \ifnum comparison signs (= < >) and pgfmath's spellings of the same six tests."""
++    return CMPS[op](a, b)
+ 
+ 
+ DEF_PATH = re.compile(r"\\def\\([A-Za-z]+)\s*(\{((?:[^{}]|\{[^{}]*\})*)\})")
+@@ -1120,8 +1154,12 @@
+     keep it and drop the shell. An operand we cannot turn into a number is a branch we
+     would have to guess, and a guess draws lines the author never had, so the whole
+     picture is refused instead.
+-    """
+-    for _ in range(64):
++
++    Each iteration removes one \ifnum shell and its \fi, so the walk ends with the last
++    conditional the picture holds -- a nine-cell strip of eight tests each is 72 of them,
++    and a fixed budget would refuse the picture for being long.
++    """
++    while True:
+         m = IFNUM.search(body)
+         if not m:
+             return body
+@@ -1158,7 +1196,6 @@
+         taken = body[i:then_to] if _cmp(op, lhs, rhs) else (
+             body[else_at + 5:tok.start()] if else_at >= 0 else "")
+         body = body[:m.start()] + taken + body[tok.end():]
+-    return None
+ 
+ 
+ CLIP_STMT = re.compile(r"\\clip\b(?:\s*\[[^\]]*\])?\s*[^;]*;")

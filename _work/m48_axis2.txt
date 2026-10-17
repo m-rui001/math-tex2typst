@@ -1,0 +1,22 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+== the canvas build_cd emits for `A ->[f] \ar[dr,bend left=30,'g'] ; row 2 has B`
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((2.6, -1.7), [$B$])
+  line((0.51, 0), (2.1, 0), mark: (end: ">"))
+  content((1.305, 0.187), [$f$])
+  bezier((0.3573, -0.2336), (2.243, -1.466), (1.234, -0.2823), (1.846, -0.6824), mark: (end: ">"))
+  content((1.681, -0.2679), [$g$])
+})
+== the page it draws (PDF points, y grows DOWN)
+   ink    A    centre (31.12, 37.57)
+   ink    B    centre (104.68, 85.76)
+   ink    f    centre (67.62, 31.14)
+   ink    g    centre (78.63, 44.04)
+   line   (45.58, 37.18) -> (83.56, 37.18)  length 37.98
+   cubic  (41.25, 43.80) -> (91.23, 72.53)  chord 57.65
+   horizontal arrow `->` carries `f` on the LEFT, 6.04pt (0.213cm) off its shaft
+   `bend left=30` bulges to the LEFT of travel, 7.58pt (0.267cm) at its middle
+              its label `g` hangs on the LEFT of the curve, 0.383cm from the apex
+   row order: A centre y 37.57, B centre y 85.76 -> A above B (tikzcd's order)

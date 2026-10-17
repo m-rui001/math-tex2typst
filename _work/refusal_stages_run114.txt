@@ -1,0 +1,26 @@
+pictures 1058  converted 1052  refused 6
+
+-- refusal stages --
+   1  statement:\FiniteSquare{.70}{-1.08}{} \node[finite label,left] at (.35
+   1  statement:\draw[capacityellipse] (0,0) ellipse (1.00 and .37)
+   1  statement:\pinskzero \pinsgroup{0}{.95}{T}{pinsplus} \pinsgroup{0}{-.9
+   1  statement:\geometryrow{0}{\textbf{Main: initial}\\before the exchange}
+   1  scoped
+   1  statement:\node[anchor=west,align=left,text width=5.2cm] at (5.45,3.15
+
+-- the same pictures on the macro-expanded text production actually gates --
+   1  statement:\FiniteSquare{.70}{-1.08}{} \node[finite label,left] at (.35
+   1  statement:\draw[capacityellipse] (0,0) ellipse (1.00 and .37)
+   1  statement:\pinskzero \pinsgroup{0}{.95}{T}{pinsplus} \pinsgroup{0}{-.9
+   1  statement:\geometryrow{0}{\textbf{Main: initial}\\before the exchange}
+   1  scoped
+   1  statement:\node[anchor=west,align=left,text width=5.2cm] at (5.45,3.15
+
+-- refused papers --
+Cylinder-amplitudes-and-logarithmic-bridge-length-wi  [(0, 'statement:\\FiniteSquare{.70}{-1.08}{} \\node[finite label,left] at (.35', 'statement:\\FiniteSquare{.70}{-1.08}{} \\node[finite label,left] at (.35')]
+Elliptic-capacity-propagation-and-Fourier-restrictio  [(0, 'statement:\\draw[capacityellipse] (0,0) ellipse (1.00 and .37)', 'statement:\\draw[capacityellipse] (0,0) ellipse (1.00 and .37)')]
+Gaussian-free-field-limits-of-weighted-integer-Lipsc  [(1, 'statement:\\pinskzero \\pinsgroup{0}{.95}{T}{pinsplus} \\pinsgroup{0}{-.9', 'statement:\\pinskzero \\pinsgroup{0}{.95}{T}{pinsplus} \\pinsgroup{0}{-.9')]
+Polynomial-PEPS-approximation-of-gapped-square-grid-  [(0, 'statement:\\geometryrow{0}{\\textbf{Main: initial}\\\\before the exchange}', 'statement:\\geometryrow{0}{\\textbf{Main: initial}\\\\before the exchange}')]
+The-Deligne-Drinfeld-conjecture-September-23-2026  [(1, 'scoped', 'scoped')]
+Thompsons-group-F-is-nonamenable-September-23-2026  [(0, 'statement:\\node[anchor=west,align=left,text width=5.2cm] at (5.45,3.15', 'statement:\\node[anchor=west,align=left,text width=5.2cm] at (5.45,3.15')]
+wrote _work/refusal_stages.txt and _work/refusal_stages.json

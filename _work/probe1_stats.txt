@@ -1,0 +1,144 @@
+total occurrences=4388 notes=163
+by kind={"body": 4340, "head": 18, "table": 30}
+by cmd={"label": 2258, "ref": 2130}
+in-fence total=2292
+in-fence by kind={"body": 2291, "table": 1}
+fence & table=1
+head lines notes={"D137": 18}
+unique args=3008
+TOP ARG:
+ 143  thm:main
+  10  main:theorem
+  10  eq:5
+   8  eq:main
+   8  prop:upper
+   7  thm:ugc
+   7  eq:J
+   7  eq:free-endpoints
+   7  eq:admissible-sets
+   6  lem:latent
+   6  path:homotopy-ode
+   6  thm:inverse
+   6  eq:subset
+   6  eq:profile-dilation
+   6  thm:tail
+   6  eq:canonical-cycle
+   6  red:expansion
+   5  lem:weights
+   5  eq:mu-positive
+   5  eq:shift
+   5  eq:tangent
+   5  eq:popa-independence
+   5  def:fb-road
+   5  model:metric
+   5  found:lem-gauge-tail
+   5  thm:machine-diagrams
+   5  eq:profile-expansion
+   5  eq:pivot-backward
+   5  eq:cycle-target
+   5  thm:existence
+   5  lem:resolvent
+   5  cor:lp
+   5  eq:insertion
+   5  eq:phi
+   4  eq:source-25
+   4  eq:source-27
+   4  eq:original-system
+   4  prop:cycle-matching
+   4  thm:shortcode
+   4  lem:detector
+   4  eq:X-M
+   4  prop:rankone
+   4  eq:rankone
+   4  eq:divdiff
+   4  eq:M-tangent
+   4  eq:trace-average
+   4  path:coefficient-identity
+   4  lem:padding
+   4  lem:sparse-tv
+   4  lem:posterior
+   4  lem:bias
+   4  prop:low-rank
+   4  lem:clean-law
+   4  lem:coefficient
+   4  eq:separated-bands
+   4  probability:rows
+   4  diag:rectangles
+   4  eq:duality-conjecture
+   4  eq:grouped-approximation
+   4  eq:robust-nonvanishing
+ARG none=1
+
+SAMPLE fence rows:
+D08:35 [body] \begin{theorem}\label{main:theorem}
+D08:36 [body] Under \eqref{model:integrability}--\eqref{model:positivity}, the thermodynamic
+D08:36 [body] Under \eqref{model:integrability}--\eqref{model:positivity}, the thermodynamic
+D08:38 [body] \begin{equation}\label{main:formula}
+D08:117 [body] \label{model:edge}\\
+D08:122 [body] \label{model:site-message}
+D08:138 [body] U_{\theta_j}(x_1^j,\ldots,x_{p-1}^j;\eps)\right),\label{model:vs}\\
+D08:139 [body] V_{\rm e}&=C_\theta(x_1,\ldots,x_p).\label{model:ve}
+D08:216 [body] \begin{lemma}[Insertion calculus]\label{tree:insertion}
+D08:221 [body] \eqref{tree:Y-recursion} uses the kernels before insertion.  The new
+D08:222 [body] kernels are \eqref{tree:updated-kernel}.
+D08:230 [body] \begin{equation}\label{tree:density}
+D08:260 [body] \begin{equation}\label{tree:telescoping}
+D08:268 [body] \begin{equation}\label{tree:Q-rule}
+D08:282 [body] \begin{equation}\label{tree:log-series}
+D08:323 [body] \begin{lemma}[Canceled-anchor expansion]\label{tree:extension-expansion}
+D08:328 [body] \begin{equation}\label{tree:mixed-expansion}
+D08:353 [body] \begin{lemma}[Reference-path totals]\label{tree:reference-total}
+D08:359 [body] \begin{equation}\label{tree:one-reference-total}
+D08:365 [body] \begin{equation}\label{tree:K}
+D08:475 [body] \begin{equation}\label{cavity:grid}
+D08:489 [body] \begin{equation}\label{cavity:reservoir-mean}
+D08:493 [body] \begin{equation}\label{cavity:identity}
+D08:502 [body] \label{cavity:site-insertion}\\
+D08:505 [body] \label{cavity:bond-insertion}
+
+SAMPLE head rows:
+D137:79 ## 3 正下界 $b(n)\ge c_0$：Proposition~\ref{prop:fb-positive}
+D137:98 ## 4 初始化上界 $b(n)\le C_s n^{3/4}$：Proposition~\ref{prop:fb-upper}
+D137:113 ## 5 把非局部标定换成局部位势：Lemma~\ref{found:lem-network} 与 Lemma~\ref{found:lem-finite-cell}
+D137:113 ## 5 把非局部标定换成局部位势：Lemma~\ref{found:lem-network} 与 Lemma~\ref{found:lem-finite-cell}
+D137:132 ## 6 插值、局部包络与线性尺度尾部：Lemma~\ref{found:lem-envelope} 与 Lemma~\ref{found:lem-gauge-tail}
+D137:132 ## 6 插值、局部包络与线性尺度尾部：Lemma~\ref{found:lem-envelope} 与 Lemma~\ref{found:lem-gauge-tail}
+D137:153 ## 7 相位约定与列独立性：Lemma~\ref{phases:locality}
+D137:178 ## 8 观察域、条件收费与选中割：Lemma~\ref{access:conditioning} 与 Lemma~\ref{access:selected-cuts}
+D137:178 ## 8 观察域、条件收费与选中割：Lemma~\ref{access:conditioning} 与 Lemma~\ref{access:selected-cuts}
+D137:215 ## 9 带电荷隧道、走廊与有限体积收集界：Lemma~\ref{access:accounting} 与 Proposition~\ref{access:collection}
+D137:215 ## 9 带电荷隧道、走廊与有限体积收集界：Lemma~\ref{access:accounting} 与 Proposition~\ref{access:collection}
+D137:282 ## 11 行集中与共同二进位截断水平：Lemma~\ref{probability:rows} 与 Lemma~\ref{probability:dyadic}
+D137:282 ## 11 行集中与共同二进位截断水平：Lemma~\ref{probability:rows} 与 Lemma~\ref{probability:dyadic}
+D137:376 ## 14 主提取：Proposition~\ref{links:extraction}
+D137:418 ## 15 两个截断估计：Proposition~\ref{links:asymmetric} 与 Proposition~\ref{links:matched}
+D137:418 ## 15 两个截断估计：Proposition~\ref{links:asymmetric} 与 Proposition~\ref{links:matched}
+D137:555 ## 17 收缩常数的选取顺序：Proposition~\ref{improvement:contraction-proposition}
+D137:591 ## 18 平边排除与率 $\lambda$ 的耦合：Theorem~\ref{thm:exponential-shape} 的收尾
+
+SAMPLE table rows:
+D146:938 | $Q$ | $\le u\,q^{hs}(1+s2^u/\theta)^{hs2^u}$ | 03-compression.tex:271--272 | $Q^2$ 与 \eqref{eq:field-compression-bound} | 少枚举 $i_0$ 会去掉因子 $u$ 但列表不再对一切 $\mu$ 固定 |
+D156:591 | $p_h=1+1/h$ | 变指数聚合参数 | `sections/variable.tex:23` | 递归 \eqref{var:recursion} | 指数变化则 $p^h\le\mathrm{e}$ 不再成立 |
+D156:605 | $N_J(v)=\max\{2A-a,2B+a\}$ | 自由根坐标的范数公式 | `sections/foundations.tex:168` | 等价比较 \eqref{rec:free-root-equivalence} | 公式错则自反性论证断裂 |
+D163:478 | $b=d-k\eta$ | 线性关系 | 01-introduction.tex:219 与 11-tail-proof.tex:16 | 曲面权重与两个切割条件 | 记号移动会同时改掉 \eqref{eq:cut-conditions} 两端 |
+D163:484 | $\frac{d}{k-1}XY^{1-k}+d\pi(X)$ | 中间带例外数 | 02-sieve.tex:97 | \eqref{eq:sieve-sandwich} | $k=1$ 时该界发散 |
+D163:490 | $a_i+\gamma\le\zeta t_i\le a_i+2\gamma$ | 块尺寸约束 | 03-affine-counting.tex:378 | \eqref{eq:affine-branch-count} | 上限改 $3\gamma$ 会超出 $\gamma/2$ 预算 |
+D163:493 | $w^{d-1}H(t_*)>((d+1)(\eta_++b_+t_*)/d^2)^d$ | 第一刀条件 | 05-determinant-cuts.tex:124 | \eqref{eq:parameter-cut-inequalities} | 削弱后归一化行列式不再全为零 |
+D163:497 | $D=\max_I\{U\lvert I\rvert+(kU+V)\deg f_I\}-U\sum_ie_i$ | 提取权重 | 07-hilbert-bounds.tex:44 | \eqref{eq:pair-hilbert} 的首项 | $D\le0$ 时首项系数消失 |
+D163:501 | $3T^2/(2U^2)$ | $\deg S\ge3$ 分支界 | 08-quartic-geometry.tex:81 | \eqref{eq:quartic-surface-hilbert} 第二界 | 少一个独立家族会退到 $(2U+V)D_0$ 那支 |
+D163:505 | $G_0=100000$ | 网格分度 | 10-parameters.tex:15 | `upper` 与 $w$ 的严格上界 | 变粗会使 \eqref{eq:parameter-cut-inequalities} 的严格号失去保证 |
+D163:506 | $\tau=1/50000$ | 位移预算 | 10-parameters.tex:16 | \eqref{eq:parameter-final-box-exponent} | 抬高会让 $d\tau$ 吃掉认证间隙 |
+D163:507 | $2495/10000$ | 停止判据值 | 10-parameters.tex:37 | 区间表与直接曲面范围 \eqref{eq:tail-direct-range} | 调大必须重证 $(4999/10000)^2$ 的间隙 |
+D182:154 | $h^2$ | $2d$（正偶数） | build/sections/introduction.tex:14 | 极化分量参数与投影子分母 | \eqref{spec:primitive-projector} 的 $\frac{h\times h}{2d}$ 失配 |
+D182:156 | $\Gamma_S$ | $\operatorname{CH}^2(S\times A_S\times A_S)_{\mathbb Q}$ | build/sections/introduction.tex:27 | \eqref{eq:cycle-target} 的实现方程 | 余维收支被 §5 的 $b+2-b=2$ 锁定，改动即断 |
+D182:182 | 总空间类 | $\zeta=\operatorname{cl}([Z]_{n+b-2})\in H^4(M,\mathbb Q)$ | build/sections/specialization.tex:93 | 截面性与限制公式 \eqref{spec:restriction} | 纤维类不再局部常 |
+D229:198 | $\lambda(f_i,g_j)=\delta_{ij}$ | 对角交等于单位元 | `00-introduction.tex:84` | Assumption~\ref{ass:disk} | 体外对偶球验证 |
+D24:897 | $\sum_{i=1}^{24}x_i^*x_i=1,\ \sum_{i=1}^{24}x_ix_i^*\le\tfrac23 1$ | 同一对关系的 intro 版本 eq:intro-relations | 01-introduction.tex:141-142 | 导读对读者的承诺，靠 \label{eq:intro-relations} 与 \l
+D24:897 | $\sum_{i=1}^{24}x_i^*x_i=1,\ \sum_{i=1}^{24}x_ix_i^*\le\tfrac23 1$ | 同一对关系的 intro 版本 eq:intro-relations | 01-introduction.tex:141-142 | 导读对读者的承诺，靠 \label{eq:intro-relations} 与 \l
+D242:244 | 矩阵盈余不等式 | $\mathbb E\operatorname{tr} k(A)^2\ge\lVert\partial A\rVert^2-\lVert\partial k(A)\rVert^2+\mathcal C$ | transport.tex:392 | 化简式 \eqref{mat:deficit-reduction} | 破坏则 $-\m
+D242:254 | 对偶界 | $\operatorname{tr}(SW)\le\lVert u\rVert_S^2+\lVert v\rVert_S^2$ | matrix.tex:121 | \eqref{mat:W-bound} 拆平方 | 失则 $W$ 无法控 |
+D242:262 | $\lvert h_0\rvert$ 界 | $\le.67\sqrt p$ | scalar.tex:37 | \eqref{sc:y-cost} 的 $Y$ 代价 | 放大则 $.111$ 破 |
+D242:265 | $F_0$ 切线 | $F_0(S)\le.16+.52S$ | scalar.tex:186 | \eqref{sc:log-bound} 第一界 | 失则 $\log$ 项无夹 |
+D242:267 | 均值距离 | $\tfrac12\le u_-\le\tfrac12+\delta/12$ | scalar.tex:369 | \eqref{sc:threshold} 的 $u_\pm^2$ 界 | 放则系数溢出 |
+D26:1145 | $N>(1+2D)^k$ | 阈值随 $k$ 指数增长 | main.tex:212 | main.tex:383 的 "contrary to \eqref{eq:N}" | 与 main.tex:381 的体积比 $N\le(1+2D)^k$ 必须严格反向；$N$ 改随 $n$ 增长则 main.tex:342 需 $\varepsilon_n=o(
+D26:1149 | $\frac{4D^2}{25N}n^{-7}$ 与 $8n^{-6}$ | eq:Hrate 的两个显式余项 | main.tex:274 | main.tex:276 的 "which proves \eqref{eq:horizontal}" | 前者由 $n^2\cdot4D^2\cdot n^{-9}/(50N)$ 拼出，后者是 $2n^2\c

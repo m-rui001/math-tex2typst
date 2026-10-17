@@ -1,0 +1,18 @@
+################ D29  (D29-Borsuk覆盖断言九维反例.md)
+before: bytes=192274 lines=1093
+ROW line=826  sites=2  pipes 9->7  $=2(parity even)
+OLD| | $\|P_x-P_y\|_F^2=2-2\langle u,v\rangle^2$ | 2.1 | 距离↔夹角刻画 | 直径对 ⟺ 正交对 ⟺ 支集不交的桥 | 无 | 距离一旦依赖夹角以外信息，"块内无正交对"翻译失效，(A) 桥断 |
+NEW| | $\lVert P_x-P_y\rVert_F^2=2-2\langle u,v\rangle^2$ | 2.1 | 距离↔夹角刻画 | 直径对 ⟺ 正交对 ⟺ 支集不交的桥 | 无 | 距离一旦依赖夹角以外信息，"块内无正交对"翻译失效，(A) 桥断 |
+ROW line=834  sites=2  pipes 9->7  $=6(parity even)
+OLD| | $\operatorname{tr}\lvert A\rvert=1$、$\|F(A)\|_1=\operatorname{tr}\lvert A\rvert$ | §14/3.2 | 球面归一 | 恒等式使 $F$ 在球面间取值 | 无 | 恒等式一破，奇映射不再住在球面之间，Prop 4.1 的维数界无从调用 |
+NEW| | $\operatorname{tr}\lvert A\rvert=1$、$\lVert F(A)\rVert_1=\operatorname{tr}\lvert A\rvert$ | §14/3.2 | 球面归一 | 恒等式使 $F$ 在球面间取值 | 无 | 恒等式一破，奇映射不再住在球面之间，Prop 4.1 的维数界无从调用 |
+ROW line=847  sites=2  pipes 9->7  $=10(parity even)
+OLD| | $\sqrt2\,a_{ij}$（非对角） | Rmk 2.2 | Frobenius 双计 | $\|A\|_F^2$ 含 $2a_{ij}^2$ ⇒ 系数 $\sqrt2$ | 无 | 系数改 1 则非对角坐标带 $\sqrt2$ 残差，直径计算多因子 |
+NEW| | $\sqrt2\,a_{ij}$（非对角） | Rmk 2.2 | Frobenius 双计 | $\lVert A\rVert_F^2$ 含 $2a_{ij}^2$ ⇒ 系数 $\sqrt2$ | 无 | 系数改 1 则非对角坐标带 $\sqrt2$ 残差，直径计算多因子 |
+after: bytes=192301 (delta +27) lines=1093 rows_fixed=3 sites_fixed=6 sites_registered=0
+[DRY] nothing written to the note
+D29 file-count \lVert  = 35
+D29 file-count \lvert  = 68
+D29 file-count \mid  = 0
+D29 file-count \upharpoonright = 0
+D29 file-count \Vert  = 0

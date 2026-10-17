@@ -1,0 +1,5 @@
+E:\math\_work\probe93_product_scan.py:58: SyntaxWarning: invalid escape sequence '\/'
+  `\/` is what pandoc's Typst writer puts a literal division slash through, and Typst prints the
+papers scanned 724   canvas maths strings 10412
+BARE slash   : 0 slashes in 0 strings over 0 papers
+QUOTED "/": 286 glyphs in 125 papers

@@ -1,0 +1,31 @@
+{
+  "paper": "Zero-Plane-Rigidity-for-Einstein-Four-Manifolds-October-4-2026",
+  "ok": true,
+  "typ_lines": 1675,
+  "included_pdf_pages": 0,
+  "formulas": 1118,
+  "math_failed": 0,
+  "labels": 95,
+  "equations": 0,
+  "theorems": 4,
+  "figures": 1,
+  "tables": 6,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "1118",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Zero-Plane-Rigidity-for-Einstein-Four-Manifolds-October-4-2026.tex"
+}

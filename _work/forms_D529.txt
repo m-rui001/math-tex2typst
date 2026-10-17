@@ -1,0 +1,6 @@
+note=D529-任意极大交换子代数上的二次强算子铺设.md
+bytes=93079 lines=333
+total-tex-mentions=226
+BARE=225
+ONE-PREFIX=1
+sample: completion.tex=40, introduction.tex=37, coloring.tex=37, reductions.tex=34, polynomials.tex=25, kernels.tex=22, transfer.tex=19, invariant.tex=11

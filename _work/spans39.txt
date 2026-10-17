@@ -1,0 +1,46 @@
+refused spans: 15
+
+=== Cylinder-loop-weights-and-planar-n  converts-as-is=False
+    ALL FIXES -> False
+
+=== Exact-Birch-Swinnerton-Dyer-Formul  converts-as-is=False
+    ALL FIXES -> False
+
+=== Tracial-projection-methods-and-uni  converts-as-is=False
+    ALL FIXES -> False
+
+=== Tracial-projection-methods-and-uni  converts-as-is=False
+    ALL FIXES -> False
+
+=== Tracial-projection-methods-and-uni  converts-as-is=False
+    ALL FIXES -> False
+
+=== Tracial-projection-methods-and-uni  converts-as-is=False
+    ALL FIXES -> False
+
+=== Tracial-projection-methods-and-uni  converts-as-is=False
+    ALL FIXES -> False
+
+=== Tracial-projection-methods-and-uni  converts-as-is=False
+    ALL FIXES -> False
+
+=== Tracial-projection-methods-and-uni  converts-as-is=False
+    ALL FIXES -> False
+
+=== Tracial-projection-methods-and-uni  converts-as-is=False
+    ALL FIXES -> False
+
+=== Tracial-projection-methods-and-uni  converts-as-is=False
+    ALL FIXES -> False
+
+=== Tracial-projection-methods-and-uni  converts-as-is=False
+    ALL FIXES -> False
+
+=== Tracial-projection-methods-and-uni  converts-as-is=False
+    ALL FIXES -> False
+
+=== Tracial-projection-methods-and-uni  converts-as-is=False
+    ALL FIXES -> False
+
+=== Tracial-projection-methods-and-uni  converts-as-is=False
+    ALL FIXES -> False

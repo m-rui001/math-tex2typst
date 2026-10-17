@@ -1,0 +1,33 @@
+{
+  "paper": "Variance-of-the-Random-k-SAT-Hitting-Time-September-27-2026",
+  "ok": true,
+  "typ_lines": 1128,
+  "included_pdf_pages": 0,
+  "formulas": 885,
+  "math_failed": 0,
+  "labels": 159,
+  "equations": 21,
+  "theorems": 10,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "885"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl",
+    "bookmark"
+  ],
+  "macros_skipped": [
+    "\\renewcommand\\bibsection"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Variance-of-the-Random-k-SAT-Hitting-Time-September-27-2026.tex"
+}

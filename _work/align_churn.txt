@@ -1,0 +1,17 @@
+canvases built: before 918, after 918 (refused both ways: 14)
+canvases changed: 82 over 70 papers, lost: 0
+   centred rect / center      260 lines
+   centred circle / center    161 lines
+    2  quantitative-lower-bounds-for-trace-reconstruction-September
+    2  Uniform-computation-of-the-squared-logarithmic-k-server-boun
+    2  The-Unique-Games-Theorem-September-23-2026
+    2  Subpolynomial-query-complexity-for-well-conditioned-log-conc
+    2  Quantum-Depletion-for-Fixed-Bounded-Repulsive-Potentials-Oct
+    2  Nonuniqueness-of-percolation-on-nonamenable-quasi-transitive
+    2  Nonhomeomorphic-closed-aspherical-four-manifolds-with-the-sa
+    2  Finite-tensor-savings-and-exact-Fourier-circuits-September-2
+    2  An-exponential-two-way-deterministic-state-lower-bound-for-o
+    2  A-polynomial-time-algorithm-for-three-machine-unit-job-sched
+    2  A-marked-tensor-obstruction-to-four-dimensional-disk-embeddi
+    2  A-Counterexample-to-Kuroshs-Division-Ring-Problem-September-
+wrote _work/regen_align.txt

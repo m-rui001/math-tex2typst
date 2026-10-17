@@ -1,0 +1,37 @@
+D106 plain count \root              1
+D106 plain count \mathtt{root}      8
+D106 plain count \mathtt            10
+D106 plain count \sqrt              45
+D106 plain count \two               1
+D106 plain count mathtt{root}       8
+D106 plain count (\root h)          0
+D106 plain count (\root T)          0
+D106 plain count $\root h$          0
+D106 plain count \text{third }      1
+D106 plain count \text{curvature }  2
+D106 plain count \text{slope }      1
+D106 plain count \text{root }       0
+D26  plain count \norm              45
+D26  plain count \inner             4
+D26  plain count \langle            58
+D26  plain count \rangle            58
+D26  plain count \|                 288
+D26  plain count \left\langle       9
+
+-- D106 every line index containing \mathtt{root} with per-line count --
+  L1750  count=1 | （这里的 $8a_4$ 就是 $2b_0$，公共部分；奇次部分的分母 $(\mathtt{root}\ h)^3$ 与 $u^{3/2}$ 对应），
+  L1873  count=1 | 从 $a_3<0,a_1\ge0,a_5\ge0$ 得 $0<\text{third }a\,h$，分母 $\mathtt{root}\ h$ 的幂用 `div_pos`+`nlinarith`），
+  L1913  count=1 | $8a_4+(-a_1)/(\mathtt{root}\ T)^3\le\text{curvature }a\,h$，即 $\delta$ 的具体形式取为
+  L1914  count=1 | $(-a_1)/(\mathtt{root}\ T)^3>0$，用 `root h\le\root T` 与 `pow_le_pow_left₀`、`div_le_div` 单调化，
+  L2879  count=1 | $e=\sqrt2f_1,c=2^{3/2}f_3,a=2^{5/2}f_5$、$u=h=(\mathtt{root}\ h)^2/2$ 手算复核，
+  L2887  count=1 | $\delta=\inf_{(0,T]}p''$ 类下界，Lean 用一个具体的 $(\mathtt{root}\ T)^{-3}$ 形式），
+  L2910  count=1 | （$d_0=2f_2\to 2*a\,2$，$2b_0u\to 4a\,4(\mathtt{root}\ h)^2$，
+  L2911  count=1 | $e/(2\sqrt u)\to a\,1/\mathtt{root}\ h$ 等）。
+
+-- D106 every line index containing \root (plain) --
+  L1914  count=1 | $(-a_1)/(\mathtt{root}\ T)^3>0$，用 `root h\le\root T` 与 `pow_le_pow_left₀`、`div_le_div` 单调化，
+
+-- D26 every line with \norm outside ``` fences? list lines+counts --
+  NON-FENCE L376   count=2 | 直接展开验证：$\langle\|G-a\|^2\rangle=\langle\|G\|^2\rangle-2\inner a{\langle G\rangle}+\|a\|^2$，再把 $-2\inner a{\langle G\rangle}+\|a\|^2$ 拆成 $-\|a\|^2-2\inner a{\langle G\rangle-a}$，与 tex 形式一致。素材特别注明"论文写 $
+
+D26 \norm: in-fence=43  outside-fence=2  sum=45  plain-total=45

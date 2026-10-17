@@ -1,0 +1,32 @@
+{
+  "paper": "Reconstruction-of-Function-Fields-from-Mod-ell-Milnor-K-Theory-October-5-2026",
+  "ok": true,
+  "typ_lines": 894,
+  "included_pdf_pages": 0,
+  "formulas": 907,
+  "math_failed": 0,
+  "labels": 89,
+  "equations": 0,
+  "theorems": 4,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "907"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "amscd"
+  ],
+  "macros_skipped": [
+    "\\renewcommand\\labelenumi"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Reconstruction-of-Function-Fields-from-Mod-ell-Milnor-K-Theory-October-5-2026.tex"
+}

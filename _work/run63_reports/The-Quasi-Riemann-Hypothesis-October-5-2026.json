@@ -1,0 +1,29 @@
+{
+  "paper": "The-Quasi-Riemann-Hypothesis-October-5-2026",
+  "ok": true,
+  "typ_lines": 1471,
+  "included_pdf_pages": 0,
+  "formulas": 1311,
+  "math_failed": 0,
+  "labels": 172,
+  "equations": 6,
+  "theorems": 3,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1
+  },
+  "samples": {
+    "formulas": "1311"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: linebreaks are ignored in branches\n     ┌─ \\\\?\\E:\\math\\typst\\The-Quasi-Riemann-Hypothesis-October-5-2026\\main.typ:1234:49\n     │  \n1234 │     $ H = cases(delim: \"{\", I \\, & 3 divides c \\,, #scale(x: 120%, y: 120%)[\\(] 1 & 0\\\n     │ ╭──────────────────────────────────────────────────^\n1235 │ │ u_0 & 1 #scale(x: 120%, y: 120%)[\\)] \\, & v_lambda \\( c \\) = 1 \\, quad u_0 in { lambda \\, - lambda } \\, quad u_0 equiv c med \\( mod med 3 \\) \\,, #scale(x: 120%, y: 120%)[\\(] u_0 & - 1\\\n     │ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────^\n     │  \n     = hint: use commas instead to separate each line\n\nwarning: linebreaks are ignored in branches\n     ┌─ \\\\?\\E:\\math\\typst\\The-Quasi-Riemann-Hypothesis-October-5-2026\\main.typ:1235:145\n     │  \n1235 │   u_0 & 1 #scale(x: 120%, y: 120%)[\\)] \\, & v_lambda \\( c \\) = 1 \\, quad u_0 in { lambda \\, - lambda } \\, quad u_0 equiv c med \\( mod med 3 \\) \\,, #scale(x: 120%, y: 120%)[\\(] u_0 & - 1\\\n     │ ╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────^\n1236 │ │ 1 & 0 #scale(x: 120%, y: 120%)[\\)] \\, & \\( c \\, lambda \\) = 1 \\, quad u_0 equiv a med \\( mod med 3 \\) .) $\n     │ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────^\n     │  \n     = hint: use commas instead to separate each line\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 2,
+  "source": "E:\\math\\_work\\flat\\The-Quasi-Riemann-Hypothesis-October-5-2026.tex"
+}

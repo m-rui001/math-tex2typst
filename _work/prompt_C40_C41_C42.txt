@@ -1,0 +1,57 @@
+你是写手。先完整读 `E:\math\被引笔记\规格.md` 并遵守其中全部条款（取材、记法、结构、体量、落盘、自查都在那里，本派单不复述）。除该文件、本派单文件自身与你本单的素材目录外不得读任何其他文件：**不得读 `研究笔记/`、`preprints/`、`.tools/`、`_work/`（本派单文件自身除外）、`被引笔记/INDEX.md`**。素材只用下面给定的 arXiv 源码 `.tex`；不得读素材目录里的 `.pdf`；不要执行任何 git 命令；不要生成 PDF。
+
+本单要写 3 份 C 稿（按下面给定的顺序，一份写完立刻开下一份）。每份各自满足规格的结构与体量要求。
+
+
+## 一份：C40
+
+- arXiv id：2205.10915
+- 原题名（逐字）：Stable degenerations of singularities
+- 作者（逐字，API 署名）：Chenyang Xu, Ziquan Zhuang
+- 发表年月：2022-05-22
+- 素材目录：`E:\math\被引素材/2205.10915`
+- 主 tex 清单（实测，路径以盘面为准）：
+  - `被引素材/2205.10915/HRFG-local.tex`（163760 字节 / 1660 行）
+- 本语料中引用它的稿号与 bib key（你只在 §0 原样登记，不去读这些稿）：D307（bib key `XuZhuangStable`）；D476（bib key `StableDegeneration`）
+- 成品路径：`E:\math\被引笔记\C40-<中文题名>.md`（中文题名由你按原题拟，不超过 24 字，不得含 `:` 与 `/`）
+- 目标体量：不少于 22,000 字节
+
+## 一份：C41
+
+- arXiv id：2402.03975
+- 原题名（逐字）：Smoothed analysis of deterministic discounted and mean-payoff games
+- 作者（逐字，API 署名）：Bruno Loff, Mateusz Skomra
+- 发表年月：2024-02-06
+- 素材目录：`E:\math\被引素材/2402.03975`
+- 主 tex 清单（实测，路径以盘面为准）：
+  - `被引素材/2402.03975/section_ergodic.tex`（63387 字节 / 603 行）
+  - `被引素材/2402.03975/section_algorithms.tex`（62195 字节 / 528 行）
+  - `被引素材/2402.03975/section_intro.tex`（42358 字节 / 243 行）
+  - `被引素材/2402.03975/section_det_mean_payoff_games.tex`（22306 字节 / 280 行）
+  - `被引素材/2402.03975/Smoothed_analysis.tex`（17068 字节 / 533 行）
+  - `被引素材/2402.03975/section_one_player_simplified.tex`（16620 字节 / 124 行）
+  - `被引素材/2402.03975/section_conclusion.tex`（4217 字节 / 44 行）
+  - `被引素材/2402.03975/figure_complexity_classes.tex`（2524 字节 / 80 行）
+- 本语料中引用它的稿号与 bib key（你只在 §0 原样登记，不去读这些稿）：D355（bib key `LoffSkomra2024`）；D80（bib key `LoffSkomra2024`）
+- 成品路径：`E:\math\被引笔记\C41-<中文题名>.md`（中文题名由你按原题拟，不超过 24 字，不得含 `:` 与 `/`）
+- 目标体量：不少于 22,000 字节
+
+## 一份：C42
+
+- arXiv id：2512.01401
+- 原题名（逐字）：Dense Matchings of Linear Size in Graphs with Independence Number 2
+- 作者（逐字，API 署名）：Jung Hon Yip
+- 发表年月：2025-12-01
+- 素材目录：`E:\math\被引素材/2512.01401`
+- 主 tex 清单（实测，路径以盘面为准）：
+  - `被引素材/2512.01401/main.tex`（33941 字节 / 523 行）
+- 本语料中引用它的稿号与 bib key（你只在 §0 原样登记，不去读这些稿）：D207（bib key `yip2025`）；D210（bib key `yip2025`）
+- 成品路径：`E:\math\被引笔记\C42-<中文题名>.md`（中文题名由你按原题拟，不超过 24 字，不得含 `:` 与 `/`）
+- 目标体量：不少于 22,000 字节
+
+## 落地节奏（本单各份合起来算）
+
+- 新建每份稿允许一次 `Write` 落「`# 标题` + `## 0 取证边界`」骨架，此后一律 `Edit` 追加，单笔新增正文不超过 10,000 字节；
+- 第一份的首次落盘落在第 4--10 次工具调用之间；每写完一份立刻开始下一份，不要停下来等确认；
+- 每份落盘后 sleep 90 秒再复量一次字节以证未回滚；
+- 收工报告按规格第 5 条对**每一份稿分别**给数，并给出各份成品文件的绝对路径与实测字节。

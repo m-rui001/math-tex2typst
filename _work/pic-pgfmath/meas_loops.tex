@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage{tikz}
+\newwrite\meas
+\immediate\openout\meas=meas_loops.txt\relax
+% TeX expands a macro where its name is *used*, so a definition inside a loop has to be read back
+% before the next iteration overwrites it. Every expression below is copied out of the picture that
+% uses it; the dump is the list of numbers that picture must be drawn with.
+\begin{document}
+\begin{tikzpicture}
+  % Kurosh: the offset-one cycle
+  \foreach \j in {0,...,10}{
+    \pgfmathtruncatemacro{\next}{mod(\j+1,11)}
+    \immediate\write\meas{KUROSH \j\space -> \next}
+  }
+  % Gepner: arrow from v(k+1) to v(k)
+  \foreach \k in {0,...,4}{
+    \pgfmathtruncatemacro{\next}{\k+1}
+    \immediate\write\meas{GEPNER \k\space -> \next}
+  }
+  % uniform-Hilbert: row height, the ifnum colour test, bracket spans
+  \foreach \sig in {0,1,2}{
+    \pgfmathsetmacro{\yy}{-1.18*\sig}
+    \immediate\write\meas{HILBERT yy(\sig) = \yy}
+    \foreach \i in {0,...,8}{
+      \pgfmathtruncatemacro{\rr}{mod(\i,3)}
+      \ifnum\rr=\sig\relax
+        \immediate\write\meas{HILBERT thick sig=\sig\space i=\i}
+      \fi
+    }
+    \pgfmathtruncatemacro{\first}{1+\sig}
+    \immediate\write\meas{HILBERT first(\sig) = \first}
+    \foreach \b in {0,1}{
+      \pgfmathtruncatemacro{\aa}{\first+3*\b}
+      \pgfmathtruncatemacro{\bb}{\aa+3}
+      \immediate\write\meas{HILBERT span sig=\sig\space b=\b\space \aa--\bb}
+    }
+  }
+  % crossing number: arc radius
+  \foreach \a/\b in {0/1.55,2.01/4.91,2.01/6,2.56/3.29,2.56/4.91,2.56/6,3.29/4.91}{
+    \pgfmathsetmacro{\rad}{(\b-\a)/2}
+    \immediate\write\meas{CROSS rad \a/\b\space = \rad}
+  }
+  % Subpolynomial: interval rows and histogram bars
+  \foreach \k in {0,...,3}{
+    \pgfmathsetmacro{\rightend}{\k+4}
+    \pgfmathsetmacro{\rowheight}{4.35-0.5*\k}
+    \immediate\write\meas{SUBP end \k\space = \rightend\space height \rowheight}
+  }
+  \foreach \j/\mult in {0/1,1/2,2/3,3/4,4/3,5/2,6/1}{
+    \pgfmathsetmacro{\rightbin}{\j+1}
+    \pgfmathsetmacro{\barheight}{0.34*\mult}
+    \immediate\write\meas{SUBP bin \j\space = \rightbin\space bar \barheight}
+  }
+  % Conditional-permutations: row baseline and column centre
+  \foreach \row in {1,2,3,4}{
+    \pgfmathsetmacro{\yb}{(4-\row)*.68}
+    \foreach \col in {1,...,4}{
+      \pgfmathsetmacro{\xc}{(\col-.5)*.68}
+      \immediate\write\meas{COND row \row\space col \col\space y=\yb\space x=\xc}
+    }
+  }
+  % finite-entropy: the partner column
+  \foreach \j in {0,1,2}{
+    \pgfmathtruncatemacro{\v}{\j+4}
+    \immediate\write\meas{ENTROPY \j\space -> \v}
+  }
+  % Finite-Circle-Obstructions: both tag rows
+  \foreach \i in {0,...,4}{
+    \pgfmathtruncatemacro{\tag}{\i+1}
+    \immediate\write\meas{CIRCLE source \i\space = \tag}
+  }
+  \foreach \i in {0,...,9}{
+    \pgfmathtruncatemacro{\tag}{mod(\i,5)+1}
+    \immediate\write\meas{CIRCLE target \i\space = \tag}
+  }
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,81 @@
+
+\documentclass{article}
+\usepackage{longtable}
+\usepackage{hyperref}
+\newcommand{\phantomsection}{}
+\begin{document}
+\setcounter{table}{3}
+Table~\ref{sweeps:transfer-table} and Table~\ref{sweeps:assembly-collision-HS}
+and Table~\ref{sweeps:assembly-trajectory}.
+\begingroup
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{@{}p{.33\linewidth}p{.29\linewidth}r r r@{}}
+\caption{Sweep bounds and their Fourier applications. Here $q$ is the
+number of label blocks, $A$ is the common coset cap, and $p$ is the
+number of independent shuffle blocks. The exponent $\kappa$ is the
+resulting nonsign Plancherel power.}\label{sweeps:transfer-table}\\
+\toprule
+Input and block parameters & Transfer and norm exponent
+ & $p$ & $\kappa$ & Total time$/d$\\
+\midrule
+\endfirsthead
+\bottomrule
+\endfoot
+\phantomsection\label{sweeps:assembly-trajectory}
+Trajectory truncation,\newline
+Proposition~\ref{sweeps:path-truncation};\newline
+$T/d=2k$, $q=16$, $A=e/\theta$
+&
+Coefficient evaluation,\newline
+\eqref{sweeps:op-bound}, $u=2$;\newline
+operator exponent $\alpha=3/8$
+& $p$ & $2-3p/4$ & $2pk$\\
+\phantomsection\label{sweeps:assembly-eight-orbits}
+Two-sweep energy, \eqref{sweeps:eighth-bound};\newline
+$T/d=2r$, $q=8$, $A=3$
+&
+Orbit, \eqref{sweeps:op-bound}, $u=2$;\newline
+operator exponent $\alpha=1/4$
+& $10$ & $-3$ & $20r$\\
+\phantomsection\label{sweeps:assembly-blocker-orbits}
+Refreshed blocker count,\newline
+$\varepsilon=1/32$;\newline
+$T/d=2048$, $q=32$, $A=4$
+&
+Orbit, \eqref{sweeps:op-bound}, $u=12$;\newline
+operator exponent $\alpha=9/32$
+& $32$ & $-16$ & $65536$\\
+\phantomsection\label{sweeps:assembly-hole-orbits}
+Refreshed available count,\newline
+$\varepsilon=1/128$;\newline
+$T/d=b_0$, $q=128$, $A=4$
+&
+Orbit, \eqref{sweeps:op-bound}, $u=30$;\newline
+operator exponent $\alpha=3/8$
+& $64$ & $-46$ & $64b_0$\\
+\phantomsection\label{sweeps:assembly-colored-HS}
+Uniform signed energy,\newline
+\eqref{sweeps:colored-marginal};\newline
+$\varepsilon=1/16$, $r=2048$,\newline
+$T/d=2r$, $q=16$, $A=4$
+&
+Pointwise character,\newline
+\eqref{sweeps:pointwise-HS-eq};\newline
+$\|\widehat\nu\|_{\mathrm{HS}}^2\le48qD^{-5/8}$
+& $8$ & $-4$ & $32768$\\
+\phantomsection\label{sweeps:assembly-collision-HS}
+Averaged collision bound,\newline
+Proposition~\ref{sweeps:averaged};\newline
+$q=128$, $\varepsilon=1/q$, $R=128q$,\newline
+$T/d=2R$, $A=3$
+&
+Coset Plancherel,\newline
+\eqref{sweeps:coset-HS-eq}, $u=32$;\newline
+HS-squared exponent;\newline
+$\beta=47/64$
+& $64$ & $-46$ & $2097152$\\
+\end{longtable}
+\endgroup
+\end{document}

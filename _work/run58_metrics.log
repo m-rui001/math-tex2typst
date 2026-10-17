@@ -1,0 +1,12 @@
+DONE 724 compiled=724
+rows: 724
+  cetz_converted             965 over 543 papers
+  cetz_refused                64 over  57 papers
+  cetz_split                   9 over   7 papers
+  figure_content_unhandled     0 over   0 papers
+main.typ files scanned: 724
+  any                    102 in 53 papers
+  subscript-shaped       21 in 53 papers
+
+quoted LaTeX on the page: 63 blocks over 57 papers
+zones: {}

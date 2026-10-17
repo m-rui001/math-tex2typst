@@ -1,0 +1,32 @@
+{
+  "paper": "Lifting-sections-from-the-reduced-support-of-an-adjoint-September-27-2026",
+  "ok": true,
+  "typ_lines": 1113,
+  "included_pdf_pages": 0,
+  "formulas": 907,
+  "math_failed": 2,
+  "labels": 129,
+  "equations": 15,
+  "theorems": 2,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 3
+  },
+  "samples": {
+    "formulas": "907",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "amscd"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Lifting-sections-from-the-reduced-support-of-an-adjoint-September-27-2026.tex"
+}

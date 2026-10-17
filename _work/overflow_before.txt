@@ -1,0 +1,64 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+papers scanned: 52
+wrote _work/overflow_before.json
+ +25 escapes  now   25 / worst   7.14 pt  p42  The-Deligne-Drinfeld-conjecture-September-23-2026
+        p30  over  7.14  '𝘊:'
+        p30  over  7.14  '𝘈:'
+        p30  over  7.14  '𝘉:'
+ +23 escapes  now   23 / worst   5.38 pt  p64  Nonhomeomorphic-closed-aspherical-four-manifolds-wit
+        p35  over  5.38  '𝑈𝑎'
+        p35  over  5.38  '𝑈𝑎'
+        p35  over  5.38  '𝑈𝑏'
+ +18 escapes  now   18 / worst   9.10 pt  p232  Metric-measure-limits-of-subcritical-FK-and-spanning
+        p80  over  9.10  '𝑞0'
+        p80  over  9.10  '𝑞0'
+        p179 over  9.09  '𝑡1'
+ +17 escapes  now   17 / worst   3.02 pt  p46  A-Counterexample-to-Kuroshs-Division-Ring-Problem-Se
+        p36  over  3.02  '𝑈𝑠𝑐: forward term'
+        p36  over  2.32  '𝑠2'
+        p36  over  2.20  '𝑠1'
+ +16 escapes  now   16 / worst  11.72 pt  p146  Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere
+        p70  over 11.72  '𝑋1'
+        p70  over 11.72  '𝑋1'
+        p70  over 11.58  '𝑋2'
+ +12 escapes  now   12 / worst   5.90 pt  p90  Endpoint-convergence-for-the-planar-Schrodinger-equa
+        p84  over  5.90  '𝐻𝐼,2'
+        p84  over  5.90  '𝐻𝐼,2'
+        p84  over  5.90  '𝐼= 𝐻𝐼,0'
+ +12 escapes  now   12 / worst   7.45 pt  p171  Cutoff-throughout-the-high-temperature-Sherrington-K
+        p54  over  7.45  '𝑇𝘛'
+        p54  over  7.00  '𝑇𝘛'
+        p54  over  6.24  '𝑗'
+ +11 escapes  now   11 / worst  12.72 pt  p63  The-Euclidean-plane-is-not-five-colorable-September-
+        p58  over 12.72  '𝑧𝐵'
+        p58  over 12.72  '𝑧𝐵'
+        p58  over 12.72  '𝑧𝐵'
+ +10 escapes  now   10 / worst  12.73 pt  p55  Nonuniqueness-of-percolation-on-nonamenable-quasi-tr
+        p44  over 12.73  '𝑔𝐽'
+        p44  over 12.73  'ℎ𝐽'
+        p44  over 12.44  '𝑢= 𝑔0'
+  +9 escapes  now    9 / worst   7.80 pt  p61  The-Gaussian-free-field-limit-of-integer-Lipschitz-h
+        p49  over  7.80  'anchored high patch'
+        p49  over  7.78  '𝑞𝐿'
+        p49  over  7.73  '𝑞𝑅'
+  +9 escapes  now    9 / worst   9.47 pt  p62  A-high-arity-counterexample-to-Pixton-completeness-i
+        p5   over  9.47  'Faithful'
+        p5   over  9.47  'model'
+        p5   over  9.36  'Formal Frobenius algebra'
+  +8 escapes  now    8 / worst   8.46 pt  p87  Ordinary-two-point-correlations-of-multiplicative-fu
+        p60  over  8.46  '6'
+        p60  over  7.68  '1'
+        p60  over  5.83  '𝑢'
+  +8 escapes  now    8 / worst   6.52 pt  p23  An-Irrational-Trace-Counterexample-to-Reduced-Baum-C
+        p18  over  6.52  '𝐵𝑃'
+        p18  over  6.52  '𝐵𝑃'
+        p18  over  6.52  '𝐶2'
+  +8 escapes  now    8 / worst   8.06 pt  p54  A-marked-tensor-obstruction-to-four-dimensional-disk
+        p12  over  8.06  '𝑦'
+        p12  over  5.93  '𝐷𝑦,𝑗'
+        p12  over  5.93  '𝐷𝑧,𝑗'
+  +6 escapes  now    6 / worst   4.82 pt  p95  Routing-densities-and-representation-contraction-for
+        p9   over  4.82  '1'
+        p9   over  4.75  'input'
+        p9   over  4.72  '0'
+TOTAL escapes: 223 over 52 papers

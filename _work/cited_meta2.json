@@ -1,0 +1,414 @@
+[
+ {
+  "arxiv": "0812.2563",
+  "title": "A Sparse Flat Extension Theorem for Moment Matrices",
+  "authors": [
+   "Monique Laurent",
+   "Bernard Mourrain"
+  ],
+  "published": "2008-12-15",
+  "abstract": "In this note we prove a generalization of the flat extension theorem of Curto and Fialkow for truncated moment matrices. It applies to moment matrices indexed by an arbitrary set of monomials and its border, assuming that this set is connected to 1. When formulated in a basis-free setting, this gives an equivalent result for truncated Hankel operators.",
+  "req": "0812.2563"
+ },
+ {
+  "arxiv": "1109.4382",
+  "title": "Numerical triviality and pullbacks",
+  "authors": [
+   "Brian Lehmann"
+  ],
+  "published": "2011-09-20",
+  "abstract": "Let f: X \\to Z be a surjective morphism of smooth complex projective varieties with connected fibers. Suppose that L is a pseudo-effective divisor on X that is f-numerically trivial. We show that there is a divisor D on Z such that L is numerically equivalent to f^*D.",
+  "req": "1109.4382"
+ },
+ {
+  "arxiv": "1203.0893",
+  "title": "Thin shell implies spectral gap up to polylog via a stochastic localization scheme",
+  "authors": [
+   "Ronen Eldan"
+  ],
+  "published": "2012-03-05",
+  "abstract": "We consider the isoperimetric inequality on the class of high-dimensional isotropic convex bodies. We establish quantitative connections between two well-known open problems related to this inequality, namely, the thin shell conjecture, and the conjecture by Kannan, Lovasz, and Simonovits, showing that the corresponding optimal bounds are equivalent up to logarithmic factors. In particular we prove that, up to logarithmic factors, the minimal possible ratio between surface area and volume is attained on ellipsoids. We also show that a positive answer to the thin shell conjecture would imply an optimal dependence on the dimension in a certain formulation of the Brunn-Minkowski inequality. Our results rely on the construction of a stochastic localization scheme for log-concave measures.",
+  "req": "1203.0893"
+ },
+ {
+  "arxiv": "1412.0940",
+  "title": "Counting independent sets in graphs",
+  "authors": [
+   "Wojciech Samotij"
+  ],
+  "published": "2014-12-02",
+  "abstract": "In this short survey article, we present an elementary, yet quite powerful, method of enumerating independent sets in graphs. This method was first employed more than three decades ago by Kleitman and Winston and has subsequently been used numerous times by many researchers in various contexts. Our presentation of the method is illustrated with several applications of it to `real-life' combinatorial problems. In particular, we derive bounds on the number of independent sets in regular graphs, sum-free subsets of $\\{1, \\ldots, n\\}$, and $C_4$-free graphs and give a short proof of an analogue of Roth's theorem on $3$-term arithmetic progressions in sparse random sets of integers which was originally formulated and proved by Kohayakawa, Łuczak, and Rödl.",
+  "req": "1412.0940"
+ },
+ {
+  "arxiv": "1511.04222",
+  "title": "A vanishing theorem of Koll'ar-Ohsawa type",
+  "authors": [
+   "Shin-ichi Matsumura"
+  ],
+  "published": "2015-11-13",
+  "abstract": "For proper surjective holomorphic maps from K\"ahler manifolds to analytic spaces, we give a decomposition theorem for the cohomology groups of the canonical bundle twisted by Nakano semi-positive vector bundles by means of the higher direct image sheaves, by using the theory of harmonic integrals developed by Takegoshi. As an application, we prove a vanishing theorem of Koll'ar-Ohsawa type by combining the L^2-method for the dbar-equation.",
+  "req": "1511.04222"
+ },
+ {
+  "arxiv": "1511.08164",
+  "title": "Minimizing normalized volumes of valuations",
+  "authors": [
+   "Chi Li"
+  ],
+  "published": "2015-11-25",
+  "abstract": "For any $\\mathbb{Q}$-Gorenstein klt singularity $(X,o)$, we introduce a normalized volume function $\\widehat{\\rm vol}$ that is defined on the space of real valuations centered at $o$ and consider the problem of minimizing $\\widehat{\\rm vol}$. We prove that the normalized volume has a uniform positive lower bound by proving an Izumi type estimate for any $\\mathbb{Q}$-Gorenstein klt singularity. Furthermore, by proving a properness estimate, we show that the set of real valuations with uniformly bounded normalized volumes is compact, and hence reduce the existence of minimizers for the normalized volume functional $\\widehat{\\rm vol}$ to a conjectural lower semicontinuity property. We calculate candidate minimizers in several examples to show that this is an interesting and nontrivial problem. In particular, by using an inequality of de-Fernex-Ein-Mustaţă, we show that the divisorial valuation associated to the exceptional divisor of the standard blow up is a minimizer of $\\widehat{\\rm vol}$ for a smooth point. Finally the relation to Fujita's work on divisorial stability is also pointed out.",
+  "req": "1511.08164"
+ },
+ {
+  "arxiv": "1512.03887",
+  "title": "A remark on the decomposition theorem for direct images of canonical sheaves tensorized with semipositive vector bundles",
+  "authors": [
+   "Taro Fujisawa"
+  ],
+  "published": "2015-12-12",
+  "abstract": "The purpose of this short note is to give a remark on the decomposition theorem for direct images of canonical sheaves tensorized with Nakano semipositive vector bundles. Although our result is a direct consequence of Takegoshi's work, it was not stated explicitly in his article. Here we give the precise statement and the proof.",
+  "req": "1512.03887"
+ },
+ {
+  "arxiv": "1603.05765",
+  "title": "Anti-pluricanonical systems on Fano varieties",
+  "authors": [
+   "Caucher Birkar"
+  ],
+  "published": "2016-03-18",
+  "abstract": "In this paper, we study the linear systems $|-mK_X|$ on Fano varieties $X$ with klt singularities. In a given dimension $d$, we prove $|-mK_X|$ is non-empty and contains an element with \"good singularities\" for some natural number $m$ depending only on $d$; if in addition $X$ is $ε$-lc for some $ε&gt;0$, then we show that we can choose $m$ depending only on $d$ and $ε$ so that $|-mK_X|$ defines a birational map. Further, we prove Shokurov's conjecture on boundedness of complements, and show that certain classes of Fano varieties form bounded families.",
+  "req": "1603.05765"
+ },
+ {
+  "arxiv": "1605.02284",
+  "title": "Injectivity theorem for pseudo-effective line bundles and its applications",
+  "authors": [
+   "Osamu Fujino",
+   "Shin-ichi Matsumura"
+  ],
+  "published": "2016-05-08",
+  "abstract": "We formulate and establish a generalization of Kollár's injectivity theorem for adjoint bundles twisted by suitable multiplier ideal sheaves. As applications, we generalize Kollár's torsion-freeness, Kollár's vanishing theorem, and a generic vanishing theorem for pseudo-effective line bundles. Our approach is not Hodge theoretic but analytic, which enables us to treat singular Hermitian metrics with nonalgebraic singularities. For the proof of the main injectivity theorem, we use $L^{2}$-harmonic forms on noncompact Kähler manifolds. For applications, we prove a Bertini-type theorem on the restriction of multiplier ideal sheaves to general members of free linear systems.",
+  "req": "1605.02284"
+ },
+ {
+  "arxiv": "1606.08894",
+  "title": "Existence of valuations with smallest normalized volume",
+  "authors": [
+   "Harold Blum"
+  ],
+  "published": "2016-06-28",
+  "abstract": "Li introduced the normalized volume of a valuation due to its relation to K-semistability. He conjectured that over a klt singularity there exists a valuation with smallest normalized volume. We prove this conjecture and provide an example to show that such a valuation need not be divisorial.",
+  "req": "1606.08894"
+ },
+ {
+  "arxiv": "1609.05543",
+  "title": "Singularities of linear systems and boundedness of Fano varieties",
+  "authors": [
+   "Caucher Birkar"
+  ],
+  "published": "2016-09-18",
+  "abstract": "We study log canonical thresholds (also called global log canonical threshold or $α$-invariant) of $\\mathbb{R}$-linear systems. We prove existence of positive lower bounds in different settings, in particular, proving a conjecture of Ambro. We then show that the Borisov-Alexeev-Borisov conjecture holds, that is, given a natural number $d$ and a positive real number $ε$, the set of Fano varieties of dimension $d$ with $ε$-log canonical singularities forms a bounded family. This implies that birational automorphism groups of rationally connected varieties are Jordan which in particular answers a question of Serre. Next we show that if the log canonical threshold of the anti-canonical system of a Fano variety is at most one, then it is computed by some divisor, answering a question of Tian in this case.",
+  "req": "1609.05543"
+ },
+ {
+  "arxiv": "1703.00292",
+  "title": "A general extension theorem for cohomology classes on non reduced analytic spaces",
+  "authors": [
+   "Junyan Cao",
+   "Jean-Pierre Demailly",
+   "Shin-Ichi Matsumura"
+  ],
+  "published": "2017-03-01",
+  "abstract": "The main purpose of this paper is to generalize the celebrated L${}^2$ extension theorem of Ohsawa-Takegoshi in several directions : the holomorphic sections to extend are taken in a possibly singular hermitian line bundle, the subvariety from which the extension is performed may be non reduced, the ambient manifold is K{ä}hler and holomorphically convex, but not necessarily compact.",
+  "req": "1703.00292"
+ },
+ {
+  "arxiv": "1707.05561",
+  "title": "Stability of Valuations: Higher Rational Rank",
+  "authors": [
+   "Chi Li",
+   "Chenyang Xu"
+  ],
+  "published": "2017-07-18",
+  "abstract": "Given a klt singularity $x\\in (X, D)$, we show that a quasi-monomial valuation $v$ with a finitely generated associated graded ring is the minimizer of the normalized volume function $\\widehat{\\rm vol}_{(X,D),x}$, if and only if $v$ induces a degeneration to a K-semistable log Fano cone singularity. Moreover, such a minimizer is unique among all quasi-monomial valuations up to rescaling. As a consequence, we prove that for a klt singularity $x\\in X$ on the Gromov-Hausdorff limit of Kähler-Einstein Fano manifolds, the intermediate K-semistable cone associated to its metric tangent cone is uniquely determined by the algebraic structure of $x\\in X$, hence confirming a conjecture by Donaldson-Sun.",
+  "req": "1707.05561"
+ },
+ {
+  "arxiv": "1803.04756",
+  "title": "A pseudo-quasi-polynomial algorithm for solving mean-payoff parity games",
+  "authors": [
+   "Laure Daviaud",
+   "Marcin Jurdzinski",
+   "Ranko Lazic"
+  ],
+  "published": "2018-03-13",
+  "abstract": "In a mean-payoff parity game, one of the two players aims both to achieve a qualitative parity objective and to minimize a quantitative long-term average of payoffs (aka. mean payoff). The game is zero-sum and hence the aim of the other player is to either foil the parity objective or to maximize the mean payoff. Our main technical result is a pseudo-quasi-polynomial algorithm for solving mean-payoff parity games. All algorithms for the problem that have been developed for over a decade have a pseudo-polynomial and an exponential factors in their running times; in the running time of our algorithm the latter is replaced with a quasi-polynomial one. By the results of Chatterjee and Doyen (2012) and of Schewe, Weinert, and Zimmermann (2018), our main technical result implies that there are pseudo-quasi-polynomial algorithms for solving parity energy games and for solving parity games with weights. Our main conceptual contributions are the definitions of strategy decompositions for both players, and a notion of progress measures for mean-payoff parity games that generalizes both parity and energy progress measures. The former provides normal forms for and succinct representations of winning strategies, and the latter enables the application to mean-payoff parity games of the order-theoretic machinery that underpins a recent quasi-polynomial algorithm for solving parity games.",
+  "req": "1803.04756"
+ },
+ {
+  "arxiv": "1810.12733",
+  "title": "A new proof of Kiselman's minimum principle for plurisubharmonic functions",
+  "authors": [
+   "Fusheng Deng",
+   "Zhiwei Wang",
+   "Liyou Zhang",
+   "Xiangyu Zhou"
+  ],
+  "published": "2018-10-30",
+  "abstract": "We give a new proof of Kiselman's minimum principle for plurisubharmonic functions, based on Ohsawa-Takegoshi extension theorem.",
+  "req": "1810.12733"
+ },
+ {
+  "arxiv": "1907.01114",
+  "title": "A Minimizing Valuation is Quasi-monomial",
+  "authors": [
+   "Chenyang Xu"
+  ],
+  "published": "2019-07-02",
+  "abstract": "We prove a version of Jonsson-Mustaţǎ's Conjecture, which says for any graded sequence of ideals, there exists a quasi-monomial valuation computing its log canonical threshold. As a corollary, we confirm Chi Li's conjecture that a minimizer of the normalized volume function is always quasi-monomial. Applying our techniques to a family of klt singularities, we show that the volume of klt singularities is a constructible function. As a corollary, we prove that in a family of klt log Fano pairs, the K-semistable ones form a Zariski open set. Together with [Jia17], we conclude that all K-semistable klt Fano varieties with a fixed dimension and volume are parametrized by an Artin stack of finite type, which then admits a separated good moduli space by [BX18, ABHLX19], whose geometric points parametrize K-polystable klt Fano varieties.",
+  "req": "1907.01114"
+ },
+ {
+  "arxiv": "2005.08303",
+  "title": "Uniqueness of the minimizer of the normalized volume function",
+  "authors": [
+   "Chenyang Xu",
+   "Ziquan Zhuang"
+  ],
+  "published": "2020-05-17",
+  "abstract": "We confirm a conjecture of Chi Li which says that the minimizer of the normalized volume function for a klt singularity is unique up to rescaling. This is achieved by defining stability thresholds for valuations, and then showing that a valuation is a minimizer if and only if it is K-semistable, and that K-semistable valuation is unique up to rescaling. As applications, we prove a finite degree formula for volumes of klt singularities and an effective bound of the local fundamental group of a klt singularity.",
+  "req": "2005.08303"
+ },
+ {
+  "arxiv": "2006.11238",
+  "title": "Geometry of polarised varieties",
+  "authors": [
+   "Caucher Birkar"
+  ],
+  "published": "2020-06-19",
+  "abstract": "In this paper we investigate the geometry of projective varieties polarised by ample and more generally nef and big Weil divisors. First we study birational boundedness of linear systems. We show that if $X$ is a projective variety of dimension $d$ with $ε$-lc singularities for $ε&gt;0$, and if $N$ is a nef and big Weil divisor on $X$ such that $N-K_X$ is pseudo-effective, then the linear system $|mN|$ defines a birational map for some natural number $m$ depending only on $d,ε$. This is key to proving various other results. For example, it implies that if $N$ is a big Weil divisor (not necessarily nef) on a klt Calabi-Yau variety of dimension $d$, then the linear system $|mN|$ defines a birational map for some natural number $m$ depending only on $d$. It also gives new proofs of some known results, for example, if $X$ is an $ε$-lc Fano variety of dimension $d$ then taking $N=-K_X$ we recover birationality of $|-mK_X|$ for bounded $m$. We prove similar birational boundedness results for nef and big Weil divisors $N$ on projective klt varieties $X$ when both $K_X$ and $N-K_X$ are pseudo-effective (here $X$ is not assumed $ε$-lc). Using the above, we show boundedness of polarised varieties under some natural conditions. We extend these to boundedness of semi-log canonical Calabi-Yau pairs polarised by effective ample Weil divisors not containing lc centres. We will briefly discuss applications to existence of projective coarse moduli spaces of such polarised Calabi-Yau pairs.",
+  "req": "2006.11238"
+ },
+ {
+  "arxiv": "2108.10303",
+  "title": "Hadwiger's conjecture implies a conjecture of Füredi-Gyárfás-Simonyi",
+  "authors": [
+   "Stijn Cambie"
+  ],
+  "published": "2021-08-23",
+  "abstract": "One of the most important open problems in the field of graph colouring or even graph theory is the conjecture of Hadwiger. This conjecture was the inspiration for many mathematical works, one of them being the work of Füredi, Gyárfás and Simonyi in which they \"risked\" to conjecture the precise bound for a graph with independence number $2$ to contain a certain connected matching. We prove that their conjecture would be a corollary of Hadwiger's conjecture or equivalently if their risky conjecture would be false, then Hadwiger's conjecture would be false as well.",
+  "req": "2108.10303"
+ },
+ {
+  "arxiv": "2110.07346",
+  "title": "Fast value iteration: A uniform approach to efficient algorithms for energy games",
+  "authors": [
+   "Michaël Cadilhac",
+   "Antonio Casares",
+   "Pierre Ohlmann"
+  ],
+  "published": "2021-10-14",
+  "abstract": "We study algorithms for solving parity, mean-payoff and energy games. We propose a systematic framework, which we call Fast value iteration, for describing, comparing, and proving correctness of such algorithms. The approach is based on potential reductions, as introduced by Gurvich, Karzanov and Khachiyan (1988). This framework allows us to provide simple presentations and correctness proofs of known algorithms, unifying the Optimal strategy improvement algorithm by Schewe (2008) and the quasi dominions approach by Benerecetti et al. (2020), amongst others. The new approach also leads to novel symmetric versions of these algorithms, highly efficient in practice, but for which we are unable to prove termination. We report on empirical evaluation, comparing the different fast value iteration algorithms, and showing that they are competitive even to top parity game solvers.",
+  "req": "2110.07346"
+ },
+ {
+  "arxiv": "2205.10915",
+  "title": "Stable degenerations of singularities",
+  "authors": [
+   "Chenyang Xu",
+   "Ziquan Zhuang"
+  ],
+  "published": "2022-05-22",
+  "abstract": "For any Kawamata log terminal (klt) singularity and any minimizer of its normalized volume function, we prove that the associated graded ring is always finitely generated, as conjectured by Chi Li. As a consequence, we complete the last step of establishing the Stable Degeneration Conjecture proposed by Chi Li and the first named author for an arbitrary klt singularity.",
+  "req": "2205.10915"
+ },
+ {
+  "arxiv": "2402.03975",
+  "title": "Smoothed analysis of deterministic discounted and mean-payoff games",
+  "authors": [
+   "Bruno Loff",
+   "Mateusz Skomra"
+  ],
+  "published": "2024-02-06",
+  "abstract": "We devise a policy-iteration algorithm for deterministic two-player discounted and mean-payoff games, that runs in polynomial time with high probability, on any input where each payoff is chosen independently from a sufficiently random distribution. This includes the case where an arbitrary set of payoffs has been perturbed by a Gaussian, showing for the first time that deterministic two-player games can be solved efficiently, in the sense of smoothed analysis. More generally, we devise a condition number for deterministic discounted and mean-payoff games, and show that our algorithm runs in time polynomial in this condition number. Our result confirms a previous conjecture of Boros et al., which was claimed as a theorem and later retracted. It stands in contrast with a recent counter-example by Christ and Yannakakis, showing that Howard's policy-iteration algorithm does not run in smoothed polynomial time on stochastic single-player mean-payoff games. Our approach is inspired by the analysis of random optimal assignment instances by Frieze and Sorkin, and the analysis of bias-induced policies for mean-payoff games by Akian, Gaubert and Hochart.",
+  "req": "2402.03975"
+ },
+ {
+  "arxiv": "2512.01401",
+  "title": "Dense Matchings of Linear Size in Graphs with Independence Number 2",
+  "authors": [
+   "Jung Hon Yip"
+  ],
+  "published": "2025-12-01",
+  "abstract": "For a real number $c &gt; 4$, we prove that every graph $G$ with $α(G) \\leq 2$ and $|V(G)| \\geq ct$ has a matching $M$ with $|M| = t$ such that the number of non-adjacent pairs of edges in $M$ is at most: \\begin{equation*} \\left( \\frac{1}{c\\left(c-1\\right)^2} + O_c\\left(t^{-1/3} \\right) \\right) \\binom{t}{2}. \\end{equation*} This is related to an open problem of Seymour (2016) about Hadwiger's Conjecture, who asked if there is a constant $\\varepsilon &gt; 0$ such that every graph $G$ with $α(G) \\leq 2$ has $\\text{had}(G) \\geq (\\frac{1}{3} + \\varepsilon) |V(G)|$.",
+  "req": "2512.01401"
+ },
+ {
+  "arxiv": "2603.07555",
+  "title": "A symmetric recursive algorithm for mean-payoff games",
+  "authors": [
+   "Pierre Ohlmann"
+  ],
+  "published": "2026-03-08",
+  "abstract": "We propose a new deterministic symmetric recursive algorithm for solving mean-payoff games.",
+  "req": "2603.07555"
+ },
+ {
+  "arxiv": "2607.06334",
+  "title": "Improved subexponential analysis of the Random-Action-Removal algorithm for 2-player turn-based games and non-binary AUSOs",
+  "authors": [
+   "Uri Zwick"
+  ],
+  "published": "2026-07-07",
+  "abstract": "We give a concise description and an improved analysis of the Random-Action-Removal algorithm for solving 2-player, 0-sum, turn-based, possibly infinite duration, stochastic or non-stochastic games played on graphs, or on finite sets of states. More generally, the algorithm can be used to find the sink of an Acyclic Unique Sink Orientation (AUSO) of a non-binary hypercube. The families of games that can be solved by the algorithm include discounted and non-discounted stochastic games (SGs) and Mean Payoff Games (MPGs). The obtained algorithm is the fastest known randomized algorithm for solving such games, slightly improving on a much more complicated algorithm of Hansen and Zwick (STOC 2015). The Random-Action-Removal algorithm is an adaptation of the Random-Facet algorithm used to solve linear programming (LP) problems, or, more generally, LP-type problems. Two dual variants of the Random-Facet algorithm were developed independently by Kalai (STOC 1992) and by Matou{š}ek, Sharir and Welzl (SoCG 1992). For LP problems, the algorithm of Kalai is a primal \\emph{simplex} algorithm, while the algorithm of Matou{š}ek, Sharir and Welzl is a dual \\emph{simplex} algorithm. The Random-Action-Removal algorithm for games or AUSOs is an adaptation of the dual algorithm of Matou{š}ek, Sharir and Welzl, and is a randomized \\emph{strategy iteration} algorithm. Our improved analysis shows that the Random-Action-Removal algorithm solves games with~$n$ states and $m\\ge 2n$ actions in $e^{O(\\sqrt{n\\ln(m/n)})}$ time. This improves on a previous $e^{O(\\sqrt{n\\ln(m/\\sqrt n)})}$ bound for the algorithm that follows from the analysis of Matou{š}ek, Sharir and Welzl (SoCG 1992). An $e^{O(\\sqrt{n\\ln(m/n)})}$ bound, with worse constant factors, was previously obtained using a much more complicated algorithm for solving LP and LP-type problems of Hansen and Zwick (STOC 2015).",
+  "req": "2607.06334"
+ },
+ {
+  "arxiv": "2609.26222",
+  "title": "The Scaling Window of Random $k$-SAT",
+  "authors": [
+   "Gaia Carenini"
+  ],
+  "published": "2026-08-11",
+  "abstract": "We prove a general upper bound for scaling windows of sparse monotone covering problems. From that, we deduce that for every fixed value $k\\geq 3$, the window of random $k$-SAT is $O(n/\\log n)$, improving the Friedgut-Bourgain bound of $O(n/\\log\\log n)$. We also show that random signed Not-All-Equal-$k$-SAT and hypergraph non-two-colourability (Property B) have windows of the same order. Our upper bound for scaling windows of sparse monotone covering problems follows from a general strategy combining the strengthening of Bourgain's sharp threshold theorem by Keevash, Lifshitz, Long, and Minzer with a local-to-random replacement principle. This provides a systematic method for proving scaling-window bounds, addressing a question of Perkins.",
+  "req": "2609.26222"
+ },
+ {
+  "arxiv": "alg-geom/9408003",
+  "title": "Local Positivity of Ample Line Bundles",
+  "authors": [
+   "Lawrence Ein",
+   "Oliver Küchle",
+   "Robert Lazarsfeld"
+  ],
+  "published": "1994-08-09",
+  "abstract": "Let $L$ be a nef line bundle on a smooth complex projective variety $X$ of dimension $n$. Demailly has introduced a very interesting invariant --- the Seshadri constant $ε(L,x)$ --- which in effect measures how positive $L$ is locally near a given point $x \\in X$. For instance, Seshadri's criterion for ampleness may be phrased as stating that $L$ is ample if and only if there exists a positive number $e &gt; 0$ such that $ε(L,x) &gt; e$ for all $x \\in X$, and if $L$ is VERY ample, then $ε(L,x) \\ge 1$ for every $x$. We prove the somewhat surprising result that in each dimension $n$ there is a uniform lower bound on the Seshadri constant of an ample line bundle $L$ at a very general point of $X$. Specifically, $ε(L,x) \\ge (1/n) $ for all $x \\in X$ outside the union of countably many proper subvarieties of $X$. Examples of Miranda show that there cannot exist a bound (independent of $X$ and $L$) that holds at every point. The proof draws inspiration from two sources: first, the arguments used to prove boundedness of Fano manifolds of Picard number one; and secondly some of the geometric ideas involving zero-estimates appearing in the work of Faltings and others on Diophantine approximation and transcendence theory. We give some elementary applications of the main theorem to adjoint and pluricanonical linear series.",
+  "req": "alg-geom/9408003"
+ },
+ {
+  "arxiv": "math/0005136",
+  "title": "On the critical exponents of random k-SAT",
+  "authors": [
+   "David B. Wilson"
+  ],
+  "published": "2000-05-13",
+  "abstract": "There has been much recent interest in the satisfiability of random Boolean formulas. A random k-SAT formula is the conjunction of m random clauses, each of which is the disjunction of k literals (a variable or its negation). It is known that when the number of variables n is large, there is a sharp transition from satisfiability to unsatisfiability; in the case of 2-SAT this happens when m/n --&gt; 1, for 3-SAT the critical ratio is thought to be m/n ~ 4.2. The sharpness of this transition is characterized by a critical exponent, sometimes called ν=ν_k (the smaller the value of νthe sharper the transition). Experiments have suggested that ν_3 = 1.5+-0.1, ν_4 = 1.25+-0.05, ν_5=1.1+-0.05, ν_6 = 1.05+-0.05, and heuristics have suggested that ν_k --&gt; 1 as k --&gt; infinity. We give here a simple proof that each of these exponents is at least 2 (provided the exponent is well-defined). This result holds for each of the three standard ensembles of random k-SAT formulas: m clauses selected uniformly at random without replacement, m clauses selected uniformly at random with replacement, and each clause selected with probability p independent of the other clauses. We also obtain similar results for q-colorability and the appearance of a q-core in a random graph.",
+  "req": "math/0005136"
+ },
+ {
+  "arxiv": "math/0106147",
+  "title": "A reduction map for nef line bundles",
+  "authors": [
+   "Thomas Bauer",
+   "Frederic Campana",
+   "Thomas Eckl",
+   "Stefan Kebekus",
+   "Thomas Peternell",
+   "Slawomir Rams",
+   "Tomasz Szemberg",
+   "Lorenz Wotzlaw"
+  ],
+  "published": "2001-06-18",
+  "abstract": "In a recent preprint, H. Tsuji gave a number of interesting assertions on the structure of pseudo-effective line bundles on projective manifolds. In particular, he postulated the existence of an almost-holomorphic \"reduction map\", whose fibers are maximal subvarieties on which the line bundle is numerically trivial. The purpose of this note is to give a simple, algebraic proof of the existence of a reduction map in the case where the line bundle is nef.",
+  "req": "math/0106147"
+ },
+ {
+  "arxiv": "math/0211159",
+  "title": "The entropy formula for the Ricci flow and its geometric applications",
+  "authors": [
+   "Grisha Perelman"
+  ],
+  "published": "2002-11-11",
+  "abstract": "We present a monotonic expression for the Ricci flow, valid in all dimensions and without curvature assumptions. It is interpreted as an entropy for a certain canonical ensemble. Several geometric applications are given. In particular, (1) Ricci flow, considered on the space of riemannian metrics modulo diffeomorphism and scaling, has no nontrivial periodic orbits (that is, other than fixed points); (2) In a region, where singularity is forming in finite time, the injectivity radius is controlled by the curvature; (3) Ricci flow can not quickly turn an almost euclidean region into a very curved one, no matter what happens far away. We also verify several assertions related to Richard Hamilton's program for the proof of Thurston geometrization conjecture for closed three-manifolds, and give a sketch of an eclectic proof of this conjecture, making use of earlier results on collapsing with local lower curvature bound.",
+  "req": "math/0211159"
+ },
+ {
+  "arxiv": "math/0308143",
+  "title": "The moduli b-divisor of an lc-trivial fibration",
+  "authors": [
+   "Florin Ambro"
+  ],
+  "published": "2003-08-14",
+  "abstract": "We study positivity properties of the moduli (b-)divisor associated to a relative log pair $(X,B)/Y$ with relatively trivial log canonical class.",
+  "req": "math/0308143"
+ },
+ {
+  "arxiv": "math/0406345",
+  "title": "Weighted Bergman spaces and the integral means spectrum of conformal mappings",
+  "authors": [
+   "Haakan Hedenmalm",
+   "Serguei Shimorin"
+  ],
+  "published": "2004-06-17",
+  "abstract": "We study the so-called integral means spectrum for univalent functions on the unit disk. Using an inequality of Prawitz (generalizing the classical area theorem of Gronwall), we find -- by applying a Moebius mapping to lift the result to the bidisk -- that it is possible to obtain rather strong estimates from above on the integral means spectrum.",
+  "req": "math/0406345"
+ },
+ {
+  "arxiv": "math/0503651",
+  "title": "Moment inequalities for functions of independent random variables",
+  "authors": [
+   "Stephane Boucheron",
+   "Olivier Bousquet",
+   "Gabor Lugosi",
+   "Pascal Massart"
+  ],
+  "published": "2005-03-29",
+  "abstract": "A general method for obtaining moment inequalities for functions of independent random variables is presented. It is a generalization of the entropy method which has been used to derive concentration inequalities for such functions [Boucheron, Lugosi and Massart Ann. Probab. 31 (2003) 1583-1614], and is based on a generalized tensorization inequality due to Latala and Oleszkiewicz [Lecture Notes in Math. 1745 (2000) 147-168]. The new inequalities prove to be a versatile tool in a wide range of applications. We illustrate the power of the method by showing how it can be used to effortlessly re-derive classical inequalities including Rosenthal and Kahane-Khinchine-type inequalities for sums of independent random variables, moment inequalities for suprema of empirical processes and moment inequalities for Rademacher chaos and U-statistics. Some of these corollaries are apparently new. In particular, we generalize Talagrand's exponential inequality for Rademacher chaos of order 2 to any order. We also discuss applications for other complex functions of independent random variables, such as suprema of Boolean polynomials which include, as special cases, subgraph counting problems in random graphs.",
+  "req": "math/0503651"
+ },
+ {
+  "arxiv": "math/0504020",
+  "title": "The Picard scheme",
+  "authors": [
+   "Steven L. Kleiman"
+  ],
+  "published": "2005-04-01",
+  "abstract": "We develop in detail most of the theory of the Picard scheme that Grothendieck sketched in two Bourbaki talks and in commentaries on them. Also, we review in brief much of the rest of the theory developed by Grothendieck and by others. But we begin with a twelve-page historical introduction, which traces the development of the ideas from Bernoulli to Grothendieck, and which may appeal to a wider audience.",
+  "req": "math/0504020"
+ },
+ {
+  "arxiv": "math/0511225",
+  "title": "Curvature of vector bundles associated to holomorphic fibrations",
+  "authors": [
+   "Bo Berndtsson"
+  ],
+  "published": "2005-11-09",
+  "abstract": "Let $L$ be a (semi)-positive line bundle over a Kahler manifold, $X$, fibered over a complex manifold $Y$. Assuming the fibers are compact and non-singular we prove that the hermitian vector bundle $E$ over $Y$ whose fibers over points $y$ are the spaces of global sections over $X_y$ to $L\\gr K_{X/Y}$ endowed with the $L^2$-metric is (semi)-positive in the sense of Nakano. We also discuss various applications, among them a partial result on a conjecture of Griffiths on the positivity of ample bundles. This is a revised and much expanded version of a previous preprint with the title `` Bergman kernels and the curvature of vector bundles''.",
+  "req": "math/0511225"
+ },
+ {
+  "arxiv": "math/0511254",
+  "title": "Inversion of adjunction on log canonicity",
+  "authors": [
+   "Masayuki Kawakita"
+  ],
+  "published": "2005-11-10",
+  "abstract": "We prove inversion of adjunction on log canonicity.",
+  "req": "math/0511254"
+ },
+ {
+  "arxiv": "math/0610203",
+  "title": "Existence of minimal models for varieties of log general type",
+  "authors": [
+   "Caucher Birkar",
+   "Paolo Cascini",
+   "Christopher D. Hacon",
+   "James McKernan"
+  ],
+  "published": "2006-10-05",
+  "abstract": "We prove that the canonical ring of a smooth projective variety is finitely generated.",
+  "req": "math/0610203"
+ },
+ {
+  "arxiv": "math/9804058",
+  "title": "Extending Triangulations and Semistable Reduction",
+  "authors": [
+   "D. Abramovich",
+   "J. M. Rojas"
+  ],
+  "published": "1998-04-09",
+  "abstract": "We show that a projective triangulation of a subcomplex of a polyhedral complex can be extended to the whole complex. As a result, we show that the weak semistable reduction result of Abramovich - Karu alg-geom/9707012 can be refined, so that the resulting morphism is semistable in codimension 1.",
+  "req": "math/9804058"
+ }
+]

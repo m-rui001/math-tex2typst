@@ -1,0 +1,31 @@
+{
+  "paper": "Uniform-Cartier-sections-for-Fano-type-contractions-September-25-2026",
+  "ok": true,
+  "typ_lines": 2329,
+  "included_pdf_pages": 0,
+  "formulas": 2375,
+  "math_failed": 0,
+  "labels": 313,
+  "equations": 13,
+  "theorems": 9,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1
+  },
+  "samples": {
+    "formulas": "2375"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\renewcommand\\thesection"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Uniform-Cartier-sections-for-Fano-type-contractions-September-25-2026.tex"
+}

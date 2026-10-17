@@ -1,0 +1,30 @@
+{
+  "paper": "Virtual-compact-specialness-of-hyperbolic-one-relator-groups-September-25-2026",
+  "ok": true,
+  "typ_lines": 3165,
+  "included_pdf_pages": 0,
+  "formulas": 1763,
+  "math_failed": 0,
+  "labels": 301,
+  "equations": 0,
+  "theorems": 1,
+  "figures": 5,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 5
+  },
+  "samples": {
+    "formulas": "1763",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Virtual-compact-specialness-of-hyperbolic-one-relator-groups-September-25-2026.tex"
+}

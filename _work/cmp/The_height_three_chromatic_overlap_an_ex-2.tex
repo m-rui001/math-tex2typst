@@ -1,0 +1,65 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\renewcommand{\thebibliography}[1]{
+  \hthreeOriginalThebibliography{#1}
+  \addcontentsline{toc}{section}{\refname}
+}
+\newcommand{\Fp}{\mathbb F_p}
+\newcommand{\Zp}{\mathbb Z_p}
+\newcommand{\Qp}{\mathbb Q_p}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\F}{\mathbb F}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cM}{\mathcal M}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Spf}{Spf}
+\DeclareMathOperator{\Spa}{Spa}
+\DeclareMathOperator{\Spd}{Spd}
+\DeclareMathOperator*{\colim}{colim}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\cofib}{cofib}
+\DeclareMathOperator{\fib}{fib}
+\DeclareMathOperator{\RHom}{RHom}
+\newcommand{\RGamma}{R\Gamma}
+\newcommand{\LK}[1]{L_{K(#1)}}
+\newcommand{\LN}[1]{L_{#1}}
+\DeclareMathOperator{\hthreeMap}{Map}
+\DeclareMathOperator{\hthreeNrd}{Nrd}
+\DeclareMathOperator{\hthreeTr}{Tr}
+\DeclareMathOperator{\hthreeRes}{Res}
+\DeclareMathOperator{\hthreerank}{rank}
+\DeclareMathOperator{\hthreeim}{im}
+\newcommand{\hthreeid}{\mathrm{id}}
+\newcommand{\hthreects}{\mathrm{cts}}
+\newcommand{\hthreehol}{\mathrm{hol}}
+\newcommand{\hthreepk}{\mathrm{pk}}
+\DeclareMathOperator{\hthreeMod}{Mod}
+\DeclareMathOperator{\hthreeEnd}{End}
+\DeclareMathOperator{\hthreeSL}{SL}
+\newcommand{\Sp}{\mathbb S_p^\wedge}
+\DeclareMathOperator{\Map}{Map}
+\DeclareMathOperator{\Mod}{Mod}
+\newcommand{\id}{\mathrm{id}}
+\begin{document}
+\begin{tikzcd}[column sep=large]
+ C^\bullet_{\hthreects}(G_o,\Lambda_\ell)
+   \arrow[r,"\operatorname{cl}_{c_{o,A},\ell}"] \arrow[d]
+ & R\Gamma_v(\mathcal Y_{1,A},\Lambda_\ell) \arrow[d]\\
+ R\Gamma(G_o,\underline{W_\ell(A)})(*) \arrow[r,"\mathrm{constants}"]
+ & R\Gamma_v(\mathcal Y_{1,A},W_\ell\mathcal O^\flat).
+\end{tikzcd}
+\end{document}

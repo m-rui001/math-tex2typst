@@ -1,0 +1,30 @@
+{
+  "paper": "Quenched-SLE3-limits-for-general-weak-random-bond-Ising-models-October-5-2026",
+  "ok": true,
+  "typ_lines": 1028,
+  "included_pdf_pages": 0,
+  "formulas": 739,
+  "math_failed": 0,
+  "labels": 126,
+  "equations": 7,
+  "theorems": 4,
+  "figures": 2,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 2
+  },
+  "samples": {
+    "formulas": "739",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Quenched-SLE3-limits-for-general-weak-random-bond-Ising-models-October-5-2026.tex"
+}

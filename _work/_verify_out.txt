@@ -1,0 +1,72 @@
+== 1) 全表扫描：以 | 开头且码跨度外仍有 \| 的行 ==
+  D25: 2 行
+     L1360  nbare=2  | $\lvert AB\rvert_2\le\|A\|\lvert B\rvert_2$（两个方向） | 补步 18 (3) | 无。这是算子范数与 HS 范数的相容性，与阶数无关 |
+     L1611  nbare=2  | `For a polynomial $F$ normalized by its boundary operator norm, choose a unit top singular pair $x,y$ for $F[A]$.`（142-143） | `thm:domain` 第 0 步（`main.tex:324
+  D32: 0 行
+  D65: 0 行
+  D47: 0 行
+  D36: 0 行
+  D26: 0 行
+  D28: 0 行
+  D29: 0 行
+  D41: 0 行
+  D68: 0 行
+  D30: 0 行
+  D34: 0 行
+  D24: 0 行
+  D364: 0 行
+  D44: 0 行
+  D50: 1 行
+     L438   nbare=1  | 证书在 $P$ 的两边 | 我算：左边 $\alpha h+\beta y-1=3\cdot2+(-4)\cdot1-1=1$；右边 $(1+2s^2x)(h-1-p)-4s^4(x^2+y^3-sh)=(-1)(-1)-4\cdot0=1$ | 对照 `eq:certificate` | 恒等式的点检验 | 两边
+  合计 3 行（台账内允许保留的应只有码跨度内的，见 3/4 节）
+
+== 2) D68 篇内 \Vert 用法抽样（含本次插入的 3 处，标 NEW） ==
+  L1097  熵侧的分身在 `05:50--59`。固定 $X$ 之后只剩列随机性，$M_{jx}=\#\{i:X_{ij}=x\}$ 写在第 41 行，重列代价的定义与阈值 $m^{0.05}$ 在第 43--44 行，逐字为 $W=\sum_{j,x:\,M_{jx}>m^{0.05}}M_{jx}$；$\nu$ 是成功条件下的列律，$I=D_{\mathrm{KL}}(\nu\Vert\prod_j\nu_j)$ 与 $D=\sum_jD_{\mathrm{KL}
+  L1101  误差分两桶写在第 77--85 行。记 $R=q-y+1$ 为剩余行数，小者满足 $v_x\le m^{0.1}/R$，单项代价不超过 $C(\log m)m^{0.1}/R$；大者的总 $v$ 概率被 $\frac{C}{\log m}D_{\mathrm{KL}}(u\Vert U_R)$ 控制，第 85 行的依据是数据处理不等式，前提是该桶内每个 $x$ 的概率比至少 $m^{0.05}$。两桶求和在第 87 行：第一桶给 $Cm^{1.1}(\lo
+  L1121  第 177--184 行付被排除格的代价。第 179 行的变分不等式 $D(q\Vert q_0)\ge vq(E)-\log(1+q_0(E)(e^v-1))$ 用两次：$v=(\log a)/8$ 处理重原子，第 177 行先忽略每行末尾 $O(a^{3/4})$ 格以保证剩余位数至少 $a^{3/4}$，且参照测度下重集概率至多 $a^{-1/4}$；$v=(\log a)/16$ 处理第 184 行的重复值，那里按行揭示 $B$、行内按列，条件均匀
+  L1133  每格省一个纳特的核心积分在第 71--76 行，逐字是 $\int_0^1\log(x+2B^2/u)dx\le-1+C'\frac{B^2}{u}\log n$，其中 $x$ 是当前行的优先级；重原子质量在第 80 行被 $P_{\mathrm{heavy}}\le\frac{D(p\Vert\operatorname{Unif}_u)}{\log B-1}$ 收费，第 82 行的验证是把 $z\log z-z+1\ge0$ 里的 $z$ 取成 $up_
+  L1155  | $P_{\mathrm{heavy}}\le\frac{D(p\Vert\operatorname{Unif}_u)}{\log B-1}$ | `13:78--82` | `13:89` 的重原子项与 `13:22` 的 $\frac{C}{\log n}\sum_v\log L_v$ | $\log B-1$ 变号时该项无法收费 |
+  L1332  四、带局部秩的四阶矩。`15-singular-bands.tex:205-221`：置 $m=\min(a,b)$、设 $a,b\le2m$ 且 $m$ 足够大，$K=(S_{b})^{a}$、$L=(S_{a})^{b}$ 为行列置换群；$Y=Y_{L}Y_{K}$，$Y_{K},Y_{L}$ 分别是行群与列群上算子的张量积；每个局部因子支在一个维数 $D_{i}$ 的不可约 Fourier 矩阵里、秩至多 $r_{i}$、算子范数至多 $b_{i}$
+  L1346  | $\epsilon=\delta/(2+\delta)$ | $D(\mu\Vert \nu_{*})\ge\epsilon D(\mu\Vert U_{m})-O(\log d)$ | `07-fractional-density.tex:179-187` | 吸收 $\mathbb E_{\zeta}[R_{X}+R_{Y}]$ 的那笔余量 | 系数只剩 $o(1)$ 则坏格与高值无处付账 |
+  L1347  | $D(P\Vert R)\ge\mathbb E_{P}W-\log\mathbb E_{R}e^{W}$ | 允许支撑外取 $-\infty$，只要指数期望为正 | `07-fractional-density.tex:188-193` | 三处势的构造 | 去掉允许 $-\infty$ 那句，被堵候选再也压不出负贡献 |
+  L1446  $$F=\mathcal D(Q_h\Vert U_H),\qquad J=\sum_{k=1}^{c}\mathbb E_h\,\mathcal D(Q_{u_k\mid h}\Vert U_{S_r}),\qquad I=\sum_{k=1}^{c}H_Q(u_k\mid h)-H_Q(u\mid h),$$
+  L1447  则一切足够大 $n$ 有 $I\ge n-O(n^{.57})-O((F+J)/\log n)$，常数绝对、对 $Q$ 一致。第 45 至 54 行补比较：置 $D_C=\sum_k\mathcal D(Q_{u_k}\Vert U_{S_r})$、$S=\sum_k I_Q(h;u_k)$，则 $J=D_C+S$ 且 $\sum_kH_Q(u_k)-H_Q(u\mid h)=I+S$；引理保的是左边 $I$ 本体，换成右边式子就把列对行数组的各自信息也混
+  L1461  三、证明主干（第 41 至 91 行）：钉死数组 $X$，$M_{jx}=\lvert\{i:X_{ij}=x\}\rvert$，重质量 $W=\sum_{j,x:\,M_{jx}>m^{0.05}}M_{jx}$；只随列时成功概率 $\pi$ 满足 $\log\pi\le-n+W+n^{0.57}+(C/\log m)L_C$。第 50 至 58 行的分解：$\nu$ 为给定成功时的列排列条件律，$I=\mathcal D(\nu\Vert\prod_j
+  L1463  四、误差三笔与重标签矩（第 77 至 108 行）。$M_{jx_*}>m^{0.05}$ 的项全部记入 $W$；$v_x\le m^{0.1}/R$（$R=q-y+1$ 为剩余行数）的轻项费 $C(\log m)m^{0.1}/R$，求和至多 $Cm^{1.1}(\log m)^{2}\le n^{0.57}$；其余 $x$ 走数据处理不等式：$U_R$（该列剩余位置均匀）诱导的每个此类 $x$ 概率至多 $m^{0.05}/R$，散度写成非负项 $a\
+  L1513  五、任意相容律熵命题（第 117 至 187 行）：$b$ 行 $a$ 列、$ab=n$、$a\le b\le2a$；一般行置换 $A_i$（$a$ 元）、列置换 $B_c$（$b$ 元），从右至左合成 $BA$ 把 $(i,j)$ 送到第 $B_{A_i(j)}(i)$ 行第 $A_i(j)$ 列；称 $(A,B)$ 合法若对每个 $j$，值 $B_{A_i(j)}(i)$（$1\le i\le b$）互异。命题：对合法构型上任一律 $\nu$，$D_{
+  L1523  三、束打包与熵声称（第 45 至 104 行）：$\eta=1/100$、$B=\lceil n^{\eta}\rceil$；$b_{it}=\#\{t'\colon R_{t'}(i)=R_t(i)\}$，$W$ 数 $b_{it}\ge B$ 的格；$\mathbb E_\nu W\le(D_{\mathrm u}(R)+\log 2)/(c\log n)$，可用 $c=\eta/4$。束＝（行 $i$，值 $r$，$B$ 列 prescribed 同
+
+== 3) D50 登记行 438 与所属表（表头 414） ==
+  HDR414| | 符号/数据 | 数值或表达式 | 位置 | 被谁消费 | 若改动的断点 |
+  SEP415| |---|---|---|---|---|
+  L437 | | $P$ 上的导出值 | 实测：$x=-1$、$y=1$、$s=1$、$p=2$、$F=-1$、$X=Y=0$、$\alpha=3$、$\beta=-4$、$T=\alpha u+\beta(v+uw)=2$ | `paper.tex:314-317`；`CriticalPoint.lean:27-40` | `eq:UG` 的检验、雅可比论证 | Lean 逐条以 `norm_num` 固定：`eval_x/eval_y/eval_s/eval_p/eval_F` 五条 |
+  L438 | | 证书在 $P$ 的两边 | 我算：左边 $\alpha h+\beta y-1=3\cdot2+(-4)\cdot1-1=1$；右边 $(1+2s^2x)(h-1-p)-4s^4(x^2+y^3-sh)=(-1)(-1)-4\cdot0=1$ | 对照 `eq:certificate` | 恒等式的点检验 | 两边同非零正说明 $P\notin\{F=0\}$：残量恰好是 $(1+2s^2x)F\big\|_P$ |
+  L439 | | 临界点发族 | 我算：$P_\lambda=(2\lambda^5,0,-1/(2\lambda^2),1/(2\lambda^3))$，$\lambda\in\mathbb C^\times$，该处 $s=\lambda$、$x=-\lambda^3$、$y=\lambda^2$、$F=-1$、$\nabla F=0$（sympy 逐分量验证恒等于零） | §7 层四；论文只登记一点 | 说明障碍非孤立点 | 台账阶段我把 $w$ 分量写成了 $1/(2\lambda)$，复算发现 $s$ 变成 $\lambda(\lambda^6+1)/2$、$F\ne-1$、梯度非零，遂改回 $1/(2\lambda^3)$。这一处错是我自己的，论文没有这个族 |
+  该行码跨度外 \| 上下文片段:
+     ...同非零正说明 $P\notin\{F=0\}$：残量恰好是 $(1+2s^2x)F\big\|_P$ |...
+  D50 全篇宏计数: \lVert=0 \rVert=0 \lvert=1 \rvert=1 \Vert=0 \mid=6 \upharpoonright=0
+  D50 \mid 出现行:
+     L119   **(c) 假设、常数、次数的机械理由。** 权重赋值：给 $(h,u,v,w)$ 赋权 $(2,1,1,0)$，则 $\mathrm{wt}(x)=\max(3,2+1)=3$（$u^3$ 与 $hv$ 齐平），$\mathrm{wt}(y)=2$（$u^2$ 与 $hw$ 齐平），$x^2,y^3,hs$ 齐次同权 $6$，推出 $\mathrm{wt}(s)=4$；回看 $S$ 的五个单项式
+     L417   | 权重 | $\mathrm{wt}(h,u,v,w)=(2,1,1,0)$ | 我 §4 反推 | 齐次性、$h\mid x^2+y^3$ | 权重改则 $S$ 五单项不再齐权 4，整除性失去唯一通道 |
+     L419   | $y$ | $-u^2+hw$；次数 $(1,2,0,1)$，总 2 | `paper.tex:88-89`；`Identities.lean:54` | cusp、$y^2W-b$ 线性方程 | 符号改 $+u^2$：$y^3$ 展开变号，$h\mid x^2+y^3$ 破产 |
+     L460   第 11 节落表之后我对一处不放心：那张表把 tex 行号与 Lean 行号混在同一栏，核对"断在哪一步"时眼睛得在两份素材间来回跳。这里我另起一张台账，只从 `paper.tex` 取，一行一符号，"位置"栏只写 tex 行号，"数值或增长率"栏把取值与它对各变量的次数或总次数并排写出，方便我在纸上顺着链条走而不必开 Lean。重画这张表时我发现第 11、6、7 节有三处引用的行号与 tex 实
+     L465   | 权重系 | $\mathrm{wt}(h,u,v,w)=(2,1,1,0)$，$\mathrm{wt}\,x,\mathrm{wt}\,y,\mathrm{wt}\,s$ 依次 $3,2,4$ | `paper.tex:87-93` | $S$ 齐次、cusp 整除性 | 换权重后 $S$ 五单项不再齐四次，$h\mid x^2+y^3$ 失去相消通道，停在 `paper.tex:94-95`
+     L488   | $hv,hw$ 微扰 | 尖点两分量各添一项，两项的 $h$ 次数都是 $1$ | `paper.tex:89` | cusp 首项配平、整除性 $h\mid x^2+y^3$ | 去掉任一微扰项，$x^2+y^3$ 留下 $h$ 的零次余量，$h$-整除停在 `paper.tex:94` |
+
+== 4) 16 篇当前字节/行数/宏计数 ==
+  D25 bytes=400111 lines=2784 CR=0  \lVert=45 \rVert=45 \lvert=221 \rvert=221 \Vert=0 \mid=0 \upharpoonright=0 \|=336
+  D32 bytes=151813 lines=921 CR=0  \lVert=72 \rVert=72 \lvert=6 \rvert=6 \Vert=0 \mid=0 \upharpoonright=0 \|=597
+  D65 bytes=130335 lines=753 CR=0  \lVert=52 \rVert=52 \lvert=35 \rvert=34 \Vert=0 \mid=0 \upharpoonright=0 \|=291
+  D47 bytes=126600 lines=751 CR=0  \lVert=14 \rVert=14 \lvert=27 \rvert=27 \Vert=0 \mid=0 \upharpoonright=0 \|=64
+  D36 bytes=115217 lines=839 CR=0  \lVert=4 \rVert=4 \lvert=40 \rvert=40 \Vert=0 \mid=1 \upharpoonright=0 \|=52
+  D26 bytes=188439 lines=1270 CR=0  \lVert=10 \rVert=10 \lvert=3 \rvert=3 \Vert=0 \mid=0 \upharpoonright=0 \|=282
+  D28 bytes=151931 lines=1526 CR=0  \lVert=43 \rVert=43 \lvert=34 \rvert=34 \Vert=0 \mid=2 \upharpoonright=0 \|=0
+  D29 bytes=192301 lines=1093 CR=0  \lVert=39 \rVert=39 \lvert=71 \rvert=71 \Vert=0 \mid=0 \upharpoonright=0 \|=92
+  D41 bytes=124867 lines=831 CR=0  \lVert=0 \rVert=0 \lvert=18 \rvert=18 \Vert=0 \mid=0 \upharpoonright=0 \|=0
+  D68 bytes=371428 lines=1600 CR=0  \lVert=96 \rVert=96 \lvert=136 \rvert=136 \Vert=23 \mid=34 \upharpoonright=0 \|=263
+  D30 bytes=136512 lines=1019 CR=0  \lVert=6 \rVert=6 \lvert=26 \rvert=26 \Vert=0 \mid=0 \upharpoonright=0 \|=82
+  D34 bytes=147536 lines=924 CR=0  \lVert=7 \rVert=7 \lvert=9 \rvert=9 \Vert=0 \mid=3 \upharpoonright=1 \|=42
+  D24 bytes=130739 lines=1018 CR=0  \lVert=3 \rVert=3 \lvert=1 \rvert=1 \Vert=0 \mid=0 \upharpoonright=0 \|=26
+  D364 bytes=71235 lines=673 CR=0  \lVert=15 \rVert=15 \lvert=17 \rvert=17 \Vert=0 \mid=0 \upharpoonright=0 \|=44
+  D44 bytes=105121 lines=585 CR=0  \lVert=1 \rVert=1 \lvert=12 \rvert=12 \Vert=0 \mid=0 \upharpoonright=0 \|=0
+  D50 bytes=101104 lines=591 CR=0  \lVert=0 \rVert=0 \lvert=1 \rvert=1 \Vert=0 \mid=6 \upharpoonright=0 \|=1

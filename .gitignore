@@ -1,0 +1,33 @@
+# 渲染与编译产物：随时可由 README 里那几条命令重生，台账只留读数
+*.pdf
+*.png
+*.aux
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+__pycache__/
+.pytest_cache/
+
+# arXiv 原文与它的展平拷贝（量具输入，重建走 tools/inventory.py）
+preprints/
+_work/flat/
+
+# 上游 openai/math 的内容（Apache-2.0，含 1.48GB Mathlib 快照），请直接读上游仓库
+lean/
+CONTENTS.md
+overview.tex
+
+# 下载素材与推理痕迹
+被引素材/
+reasoning_traces/
+
+# 笔记的历史备份与会话临时抓取
+*.bak
+_tmp_*
+irrpi_raw.txt
+irrpi_utf8.txt
+paper_raw.txt
+paper_utf8.txt
+
+# npm 装的 KaTeX 依赖，跑 _work/katex_census.js 前自己 npm install
+_work/node_modules/

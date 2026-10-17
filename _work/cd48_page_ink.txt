@@ -1,0 +1,14 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+== shaft-through-letters pairs: 33 on 26 pages of 20 papers, out of 56 checked
+     9.1 pt through  A-counterexample-to-Tachikawas-secon p4  'two twists'
+     7.7 pt through  Tame-Hecke-Eigensheaves-with-Several p28  '𝑊'
+     7.2 pt through  A-rational-obstruction-to-strong-chr p41  '𝑋'
+     7.2 pt through  The-Bogomolov-Pop-reconstruction-the p18  '𝑋'
+     7.2 pt through  A-counterexample-to-Tachikawas-secon p21  '𝐻'
+     6.6 pt through  Lifting-sections-from-the-reduced-su p9  '𝑅'
+     6.4 pt through  Minimal-models-in-numerical-dimensio p14  '𝑤'
+     5.4 pt through  Termination-for-projective-log-canon p11  '𝑓'
+     5.4 pt through  Termination-of-generalized-log-canon p16  '𝑓'
+     5.2 pt through  A-rational-obstruction-to-strong-chr p41  '𝑇'
+     4.8 pt through  The-height-three-chromatic-overlap-a p6  '𝑎'
+     4.8 pt through  Counterexamples-to-weak-chromatic-sp p3  '𝑐'

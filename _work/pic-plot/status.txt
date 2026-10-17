@@ -1,0 +1,56 @@
+status: pic-plot (family: plot[smooth] splines + domain/samples function plots), 2026-10-11
+
+Legend: "#raw" = `#raw(block: true, lang: "latex")` fallbacks in `typst/<paper>/main.typ`.
+The BEFORE number is read from the produced pages themselves (the orchestrator's last batch), the
+AFTER number from this sandbox's `t2t/cetz.py` through `cetz.build()` + `cetz.sane()` -- the whole
+drawing decision minus the typst compile gate, which this task must never invoke. Both agree on
+these three papers because the failing statement is a canvas-level refusal, not a compile failure.
+
+Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September-26-2026#9: converted;
+#raw before 1 -> after 0 (10 tikzpictures, canvases 9 -> 10). Two `plot[smooth] coordinates` chains
+(9 and 7 knots, the second inside `scope[xshift=6cm]` of a `[scale=.8]` picture) now emit real cubic
+segments -- measured support 0.2775*tension*(next-prev) at each interior knot, both end knots
+unsupported -- verified in page cm against the paper's own pdflatex control: chain 0 shape exact,
+8 pieces; chain 1 shape exact, 6 pieces.
+The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-September-25-2026#1: converted;
+#raw before 1 -> after 0 (5 tikzpictures, canvases 4 -> 5). Four `plot[smooth]` chains (6/6/5/5
+segments in PDF order) under `[x=0.8cm,y=0.8cm]`; page-cm diff to TeX 0.0001-0.0031 cm, entirely
+the canvas' `%.4g` print, shape exact.
+Nonuniqueness-with-local-conservation-for-the-hard-sphere-Boltzmann-equation-October-5-2026#0:
+converted; #raw before 1 -> after 0 (2 tikzpictures, canvases 1 -> 2). Two
+`domain=-2.2:2.2,samples=70` function plots ({10.3+\x},{c+.23*tanh(1.35*\x)}) that the pgfmath reader
+could not evaluate: `tanh` was missing from the function table. Measured with
+`\pgfmathparse{tanh(-2.97)}` -> -0.99475 and `tanh(1)` -> 0.7615 (`meas/m_tanh.tex`), i.e. the
+hyperbolic function on the raw argument (pgfmathfunctions.misc.code.tex:113), not a degree angle like
+`tan`; `math.tanh` matches to the five digits pgf keeps. Each curve becomes 70 knots at step
+(hi-lo)/(n-1) = 4.4/69 joined straight (no curveto without `smooth`), page-cm shape +0.00004 past
+print tolerance, 69 pieces.
+
+Total: 3 of 3 owned pictures converted; the family's refused count 3 -> 0. No polyline stand-in is
+emitted anywhere: a `smooth` chain that cannot be built returns None (refusal) rather than a
+knot-to-knot path, and `smooth cycle`, `only marks`, `each`, `mesh`/`samples and` and any `mark=` on
+a `plot` are refused on measured grounds (measurements.md 4).
+
+Deliverables under _work/pic-plot/: cetz.patch (difflib unified, a/t2t/cetz.py -> b/t2t/cetz.py,
+6 hunks, 98 added / 36 removed, only the plot/smooth/pgfmath sites), tests.py (9 `def test_*`
+functions, all numbers from pdflatex controls -> 9/9 pass standalone; appended to the sandbox suite
+by run_merged.py -> test_merged.py: Ran 56 tests, 55 pass), measurements.md (the spline law, option
+placement, own-subpath, cycle refusal, sampled-plot + tanh, law -> page cm, the scope caveat), the
+compiled controls and drivers in meas/, scan_family.py (before/after counts for any tree),
+scan_all.py + scan_live.txt/scan_sandbox.txt.
+
+Sandbox suite: test_t2t.py -> 46/47 pass as found; 55/56 with my 9 tests appended. The single failure
+is the pre-existing live-tree `apptr:c` / `\mbox{}` tabular stand-in regression, unrelated to this
+family and fixed separately; it fails identically against the untouched tree.
+
+Regression scan (scan_all.py over all 19 flat papers whose source contains "plot"): the live and
+sandbox trees differ on EXACTLY the three pictures above and on nothing else, so the patch moves no
+other paper's picture in either direction.
+
+Caveat, not mine to fix: inside the honeycomb picture TeX scales the scope's `xshift=6cm` by the
+picture's `scale=.8` (4.8 cm on the page) while the live scope reader adds 6.0 cm, so the second
+scope's curve lands 1.2004 cm to the right of TeX. The spline law itself is exact there (shape
++0.00000); the offset lives in `_transform`/`SCOPE`, owned by the `pic-scoped` family.
+
+Nothing was written to tools/, _work/flat/ or typst/; the patch was not applied to the live tree; the
+typst binary and tools/batch_typst.py were never invoked.

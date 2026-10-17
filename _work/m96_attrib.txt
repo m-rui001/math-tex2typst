@@ -1,0 +1,12 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+frac-braced        $\frac{1}{2}$                  -> $1 / 2$                                        bare=/ 1  escaped 0  frac( 0
+frac-braced-tail   $\frac{1}{2}m \leq E_0$        -> $1 / 2 m lt.eq E_0$                            bare=/ 1  escaped 0  frac( 0
+frac-braced-period $\|z_i\| > \frac{1}{2}.$       -> $parallel z_i parallel > 1 / 2 .$              bare=/ 1  escaped 0  frac( 0
+frac-nobrace       $\frac12$                      -> $1 / 2$                                        bare=/ 1  escaped 0  frac( 0
+dfrac              $\dfrac{1}{2}$                 -> $1 / 2$                                        bare=/ 1  escaped 0  frac( 0
+tfrac              $\tfrac{1}{2}$                 -> $1 / 2$                                        bare=/ 1  escaped 0  frac( 0
+frac-group-den     $\frac{L}{10(L-1)}$            -> $frac(L, 10 \( L - 1 \))$                      bare=/ 0  escaped 0  frac( 1
+literal-tight      $1/2$                          -> $1 \/ 2$                                       bare=/ 0  escaped 1  frac( 0
+literal-spaced     $1 / 2$                        -> $1 \/ 2$                                       bare=/ 0  escaped 1  frac( 0
+literal-letters    $G/P$                          -> $G \/ P$                                       bare=/ 0  escaped 1  frac( 0
+over-construct     $1 \over 2$                    -> $1 \\over 2\$                                  bare=/ 0  escaped 0  frac( 0

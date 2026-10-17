@@ -1,0 +1,7 @@
+file=D410-素数2处的Fontaine-Mazur模性.md
+bytes=90322 lines=589 CR=0
+L148 dollars=4 bticks=6 :: 结果在 `prop:patched-regular-sequence`（`patching.tex:618`-`628` 行）：$\varpi,V_1,\ldots,V_h$ 在 $N_{\eta,\infty}$ 上正则，且
+L218 dollars=24 bticks=24 :: `fields.tex:654`-`655` 行还有一句我特意留着提醒自己：三个事件之间无须独立。支撑它的是 `lem:disjoint-conjugate-selmer`（$W\cap\sigma W=0$，`fields.tex:597`-`620` 行）与 `lem:field-evaluations` 的均匀分
+L356 dollars=8 bticks=8 :: 然后是下降塔。从 $\mathbb{Q}$ 到 $F$ 的 Galois 闭包选一条素数度循环塔（必要时把 $F$ 换成该闭包）。每层上层的 Hilbert 表示在循环 Galois 群下不变：其共轭有相同的不分歧本征系，因为 Galois 表示定义在下层，强唯一性给出识别；循环下降给出下层尖点表示，唯一性到这个扩张的
+L19 dollars=55 bticks=41 :: 我要坦白一件不太体面的事：我没有逐字读完所有九千多行。我按主线取片段，具体覆盖不到的地方是这样的：`deformation.tex` 的 $270$-`330` 行、$530$-`686` 行、$775$-`900$ 行与 $980$ 行之后我只看了定理环境标题与前后衔接句；`completed_forms.tex` 
+shape_backtick_digits_dollar_in_file=0

@@ -1,0 +1,27 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+=== Abundance-in-numerical-dimension-one-for-termi#0  (canvas 22 lines)
+  source: \begin{tikzcd}[column sep=small,row sep=large] & \text{Prepared cycle }(V,D)   \arrow[dl,"\text{Sections~\ref{sec:slopes}--\ref{sec:laurent}}"']   \arrow[dr,"\text{Section~\ref{sec:cartier}}"] & \\ \begin{gathered}\text{Slope bounds and finite jets}\\             \text{Laurent cocycles have primitiv
+  OUR pairs: [(3.6, 'Preparedcycle(V,D)', '??'), (3.6, 'Preparedcycle(V,D)', 'Sections??')]
+  -- ours: 46 words, 'Prepar' matches 1
+     'Prepared'             box x 149.8..193.4  y -1.4..9.6  | line: Sections(-0.4..7.6) ??(-0.4..7.6) Prepared(-1.4..9.6) –(-0.4..7.6) ??(-0.4..7.6) cycle(-1.4..9.6)
+  control pairs: []
+  -- control: 41 words, 'Prepar' matches 1
+     'Prepared'             box x 184.7..227.9  y 5.6..16.6  | line: Prepared(5.6..16.6) cycle(5.6..16.6) (V,(5.6..16.6) D)(5.6..16.6)
+
+=== Irrational-cubic-fourfolds-with-geometric-K3-c#0  (canvas 16 lines)
+  source: \begin{tikzcd}[column sep=large,row sep=large]  & \mathbf P^4\dashrightarrow X    \arrow[dl,"\text{smooth factorization}" description]    \arrow[dr,"\text{Mori factorization}" description] & \\  \text{whole integral surface blocks}    \arrow[d,"\text{Proposition~\ref{gw:net-center}}" description]  &
+  OUR pairs: [(4.12, '⇢X', 'Morifactorization')]
+  -- ours: 24 words, '⇢X' matches 0
+  control pairs: []
+  -- control: 26 words, '⇢X' matches 0
+
+=== The-height-three-chromatic-overlap-an-explicit#1  (canvas 15 lines)
+  source: \begin{tikzcd}[column sep=large]  R\Gamma_{\hthreects}(H,M_{B,C})    \arrow[r,"\Phi-1"]\arrow[d,"\simeq"']  &R\Gamma_{\hthreects}(H,M_{B,C})\arrow[d,"\simeq"]\\  R\Gamma_{\hthreects}(U,\mathcal K_C)\arrow[r,"\Phi-1"]  &R\Gamma_{\hthreects}(U,\mathcal K_C). \end{tikzcd}
+  OUR pairs: [(3.84, 'RΓ', 'Φ−1'), (4.26, ')', 'Φ−1')]
+  -- ours: 14 words, 'RΓ' matches 0
+  control pairs: []
+  -- control: 12 words, 'RΓ' matches 4
+     'RΓcts(H,'             box x 6.7..49.4  y 7.4..19.3  | line: RΓcts(H,(7.4..19.3) MB,C)(7.4..19.3) Φ−1(3.5..11.5) RΓcts(H,(7.4..19.3) MB,C)(7.4..19.3)
+     'RΓcts(H,'             box x 130.9..173.6  y 7.4..19.3  | line: RΓcts(H,(7.4..19.3) MB,C)(7.4..19.3) Φ−1(3.5..11.5) RΓcts(H,(7.4..19.3) MB,C)(7.4..19.3)
+     'RΓcts(U,'             box x 13.4..54.1  y 46.4..58.3  | line: RΓcts(U,(46.4..58.3) KC)(46.3..58.4) Φ−1(42.5..50.6) RΓcts(U,(46.4..58.3) KC).(46.3..58.4)

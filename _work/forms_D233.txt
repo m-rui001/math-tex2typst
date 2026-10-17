@@ -1,0 +1,5 @@
+note=D233-强瘦树的多项式时间构造.md
+bytes=111903 lines=358
+total-tex-mentions=62
+BARE=62
+sample: extraction.tex=19, tree_geometry.tex=14, introduction.tex=6, signing.tex=5, signing_interface.tex=5, iteration.tex=5, normalization.tex=4, fractional_rounding.tex=3

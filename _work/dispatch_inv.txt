@@ -1,0 +1,20 @@
+=== D68 note=D68-相容性熵与Thorp扫描的谱.md bytes=293647 lines=1397 heads=43
+  dirs ranked: Compatibility- x1
+  dir=Compatibility-entropy-and-the-spectrum-of-a-Thorp-sweep-September-26-2026 files=19 total=477823
+  UNCITED n=9 bytes=182923
+      30282 09-projection-deletion.tex
+      28902 13-collision-series.tex
+      26894 08-asymmetric.tex
+      26796 06-tilted-arrays.tex
+      25296 05-inverse-color.tex
+      18789 04-conditional-ranks.tex
+      15825 00-introduction.tex
+       9646 03-spectral-conversion.tex
+        493 compatibility-square.tex
+=== D08 note=D08-Mezard-Parisi公式.md bytes=154754 lines=1036 heads=14
+  dirs ranked: 
+=== D137 note=D137-平面指数第一通过limshape的严格凸与可微：链路逼近与改进界的反推 bytes=215682 lines=865 heads=24
+  dirs ranked: Strict-convexity-and-differentiability-of-the-planar-exponential-first x2
+  dir=Strict-convexity-and-differentiability-of-the-planar-exponential-first-passage-limit-shape-September-24-2026 files=17 total=342346
+  UNCITED n=1 bytes=13640
+      13640 endpoints.tex

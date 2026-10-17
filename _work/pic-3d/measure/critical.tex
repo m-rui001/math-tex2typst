@@ -1,0 +1,25 @@
+\documentclass[tikz]{standalone}
+\usepackage{xcolor}
+\begin{document}
+\begin{tikzpicture}[
+  x={(1.10cm,-0.55cm)},
+  y={(-1.10cm,-0.55cm)},
+  z={(0cm,1.18cm)},
+  line join=round]
+  \fill[black] (0,0,0) circle (1.5pt);
+  \fill[red] (1,-1,-1) circle (1.5pt);
+  \fill[green] (1,1,-1) circle (1.5pt);
+  \fill[blue] (1,1,1) circle (1.5pt);
+  \fill[cyan] (1,-1,1) circle (1.5pt);
+  \fill[magenta] (-1,1,-1) circle (1.5pt);
+  \fill[olive] (1,0.48,0.56) circle (1.5pt);
+  \fill[orange] (1,0,-1) circle (1.5pt);
+  \begin{scope}[x=1cm,y=1cm]
+    \fill[teal] (2.38,0.00) circle (1.5pt);
+    \fill[pink] (-2.95,-1.63) circle (1.5pt);
+    \fill[brown] (-2.40,-1.905) circle (1.5pt);
+    \fill[gray] (-2.95,-0.99) circle (1.5pt);
+    \fill[lime] (0,0,1) circle (1.5pt);
+  \end{scope}
+\end{tikzpicture}
+\end{document}

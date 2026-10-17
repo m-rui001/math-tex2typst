@@ -1,0 +1,26 @@
+D09:379 OK
+D09 applied=1/1 verify=True dollars=+0 ticks=+0 delta=+14B
+D25:1870 OK
+D25:1886 OK
+D25:1887 OK
+D25 applied=3/3 verify=True dollars=+0 ticks=+0 delta=+6B
+D28:1162 OK
+D28:1163 OK
+D28 applied=2/2 verify=True dollars=+4 ticks=+0 delta=+26B
+D34:533 OK
+D34:654 OK
+D34:658 OK
+D34:660 OK
+D34:739 OK
+D34 applied=5/5 verify=True dollars=+0 ticks=+0 delta=+24B
+D43:562 OK
+D43 applied=1/1 verify=True dollars=+0 ticks=+0 delta=+14B
+D49:444 OK
+D49 applied=1/1 verify=True dollars=+0 ticks=+0 delta=+2B
+D53:514 OK
+D53 applied=1/1 verify=True dollars=+2 ticks=+0 delta=+13B
+D103:598 OK
+D103:601 OK
+D103:602 OK
+D103 applied=3/3 verify=True dollars=+0 ticks=+0 delta=+6B
+NOTES=8 rows=17/17 APPLIED

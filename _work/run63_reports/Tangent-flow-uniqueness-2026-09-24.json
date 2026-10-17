@@ -1,0 +1,50 @@
+{
+  "paper": "Tangent-flow-uniqueness-2026-09-24",
+  "ok": true,
+  "typ_lines": 2254,
+  "included_pdf_pages": 0,
+  "formulas": 2501,
+  "math_failed": 0,
+  "labels": 322,
+  "equations": 24,
+  "theorems": 5,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "2501",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark"
+  ],
+  "macros_skipped": [
+    "\\providecommand\\R",
+    "\\providecommand\\C",
+    "\\providecommand\\N",
+    "\\providecommand\\Z",
+    "\\providecommand\\dd",
+    "\\providecommand\\ii",
+    "\\providecommand\\ee",
+    "\\providecommand\\eps",
+    "\\providecommand\\Id",
+    "\\providecommand\\id",
+    "\\providecommand\\grad",
+    "\\providecommand\\supp",
+    "\\providecommand\\dist",
+    "\\providecommand\\osc",
+    "\\providecommand\\av",
+    "\\providecommand\\norm",
+    "\\providecommand\\abs"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Tangent-flow-uniqueness-2026-09-24.tex"
+}

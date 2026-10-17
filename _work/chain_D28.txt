@@ -1,0 +1,10 @@
+### region_check D28 1151
+seg=376 hdr=0 sep=2 rows=78 hist={6: 78}
+badpipe=[]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+rc=0
+### pipe_table_check D28 (该篇该表窗口，表头竖线数=该表续行应有竖线数)
+TABLE D28 hdr=1151 pipes=6 block=34 sep=1 rows=33 hist={6: 34} badpipe=[]
+rc=0

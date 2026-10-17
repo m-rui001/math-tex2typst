@@ -1,0 +1,21 @@
+downstairs old=0 new=1
+coincide old=0 new=1
+generically old=0 new=1
+generic old=19 new=1
+zh 重合 old=0 new=0
+zh 一致 old=6 new=5
+zh 相同 old=4 new=0
+zh 一般地 old=0 new=0
+zh 一般 old=76 new=28
+zh 楼下 old=1 new=0
+zh 底空间 old=0 new=0
+zh 下方 old=0 new=0
+
+LINE 852 downstairs
+ons/normalization.tex:42`-`44`）。判据本身解决全局截面同逐点检验之间的张力；伽罗瓦等式我读成固定源下降的另一半凭证，它允许把覆盖上的截面空间原样搬回 downstairs 一侧的对应物，这正是第二小节要用的形态。
+
+LINE 874 coincide
+uild/sections/normalization.tex:249`-`252`）。这些认同兼容乘幂与乘法，对应的截面比经 $x$ 拉动后一致，两端的截面域与有理映射像的维数 coincide，下降因此整体保住 Iitaka 不变量（`build/sections/normalization.tex:252`-`256`）。`[推测]` 从对像维数一致的
+
+LINE 880 generically
+后半是对一般差异层秩一条件的第二遍检验（`build/sections/normalization.tex:276`-`297`），检验对象即正文归约整条模线推论里的 generically... 不，检验对象即正文归约整条模线推论所要求的条件（`build/sections/normalization.tex:276`-`278`）。取对数分解

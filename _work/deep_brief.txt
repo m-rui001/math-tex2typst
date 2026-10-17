@@ -1,0 +1,18 @@
+==== D233 file=D233-强瘦树的多项式时间构造.md
+wave: D233	row=57	bytes=135078	thin=no	dir=preprints/A-polynomial-time-construction-of-strong-thin-trees-September-23-2026
+bytes=78335 lines=258 heads=12
+last_head=## §11 台账
+head_tail=## §8 二重数模型与同时费用舍入 | ## §9 与最初设想的差距以及遗留缝隙 | ## §10 勘误 | ## §11 台账
+reg_line=这一篇对应派单 D233。派单行给出的参数是 row=57、bytes=135078、thin=no、dir=preprints/A-polynomial-time-construction-of-strong-thin-trees-September-23-2026。我把这行参数原样抄在这里，后面所有取证坐标都以它圈定的目录为限。
+nonempty_tail=| $z_{\{u,v\}}=\frac{n-1}{n}(h_{uv}+h_{vu})$ | HK 归一对称化 | fractional_rounding.tex:137-146 | 承诺 $\ge1$ 的建立 | 去归一则多胞体成员资格论证失效 |
+spec_count=11
+
+==== D452 file=D452-每个无理旋转的不变投影反例.md
+wave: D452	row=275	bytes=160585	thin=no	dir=preprints/Invariant-projection-counterexamples-for-every-irrational-rotation-September-27-2026
+bytes=79233 lines=230 heads=10
+last_head=## §9 自检与勘误
+head_tail=## §6 从可测到连续：余循环改造与伴随算子搬运 | ## §7 乘积模型对照：同一台发动机的第二种点火方式 | ## §8 参数台账 | ## §9 自检与勘误
+reg_line=NONE-IN-FIRST-6
+nonempty_tail=其六，未译残留类：正文尚存七处英文片段，位置与期望替换如下。第 43 行（§2）“realize 成动力学”期望作“实现为动力学”；第 71 行（§3）“domination”期望作“控制”；第 37 行与第 93 行“union bound”期望作“联合界估计”；第 138 行与第 147 行（§6，重复块两份各含一处）“trace”期望作“迹”，该两处将随其五申报的整块删重各消去一半；第 20
+spec_count=1
+

@@ -1,0 +1,31 @@
+{
+  "paper": "Midpoint-convexity-from-bounded-tree-potentials-and-path-costs-September-27-2026",
+  "ok": true,
+  "typ_lines": 1587,
+  "included_pdf_pages": 0,
+  "formulas": 1564,
+  "math_failed": 0,
+  "labels": 182,
+  "equations": 94,
+  "theorems": 6,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:minipage": 2,
+    "cetz_converted": 2
+  },
+  "samples": {
+    "formulas": "1564",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Midpoint-convexity-from-bounded-tree-potentials-and-path-costs-September-27-2026.tex"
+}

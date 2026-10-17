@@ -1,0 +1,45 @@
+### bare-cs-span  站点=5  篇=5
+   D233-强瘦树的多项式时间构造.md:368  '$\\eqref$'
+   D446-分裂切丛在有理连通流形上的自动可积性.md:107  '$\\eqref$'
+   D463-对数Kodaira维数与整条纤维的形变.m:19  '$\\red$'
+   D480-临界方格FK界面的自然占有测度.md:210  '$\\eqref$'
+   D575-十维光滑非二次仿射极大整图.md:100  '$\\eqref$'
+   files: D233-强 D446-分 D463-对 D480-临 D575-十
+### cs-alone-in-brace  站点=1  篇=1
+   D521-具有偶数个素因子的素数前驱.md:176  '{\\mathfrak}'
+   files: D521-具
+### splice-opname  站点=5  篇=1
+   D351-把hypersymplectic四流形变形:78  '\\mathrm\\operatorname'
+   D351-把hypersymplectic四流形变形:78  '\\mathrm\\operatorname'
+   D351-把hypersymplectic四流形变形:78  '\\mathrm\\operatorname'
+   D351-把hypersymplectic四流形变形:78  '\\mathrm\\operatorname'
+   D351-把hypersymplectic四流形变形:78  '\\mathrm\\operatorname'
+   files: D351-把
+### text-nested-dollar  站点=26  篇=22
+   D101-欧氏平面不可五色：刚性-谱-调色板三段论证:120  '\\text{a proper $k$-coloring of $\\R^2$ exists}'
+   D101-欧氏平面不可五色：刚性-谱-调色板三段论证:122  '\\text{a weak measurable $k$-coloring of $\\R^2$ exists}'
+   D114-二对一博弈的完美完全性：采样与双侧解码归约:295  '\\text{$M$ lies in a good row fiber for some $A$}'
+   D114-二对一博弈的完美完全性：采样与双侧解码归约:302  '\\text{the fiber of $AM$ for $A$ is good}'
+   D121-分拆原理不蕴含选择公理：对称模型的支撑下降:247  '\\text{every nonwellorderable surjective image of $A$ is in bijection with $A$.}'
+   D124-自相似测度熵率维数公式：窗、配对与平移增益:100  '\\text{for $\\mu$-almost every $x$}'
+   D139-单格覆盖的n对数n阶界：采样器层级与电路和:352  '\\text{$s$ 的固定幂}'
+   D143-关系代数与树周游：单向活性指数下界的反推笔:303  '\\text{$a$ does not pair left $i$ with right $i$}'
+   D163-四次多项式无平方因子值的数域行列式路线与自:189  '\\text{ 是 $k$-power-free}'
+   D188-五次型Gepner稳定条件构造手记.md:318  '\\text{$E$ 在 }'
+   D188-五次型Gepner稳定条件构造手记.md:319  '\\text{$E$ 在 }'
+   D30-负pinched三维Kähler流形无有界全:93  '\\text{$F$ 有界全纯}'
+   D337-高度二上Hahn--Wilson猜想的fp:20  '\\text{$X$ 的 fp 型 }'
+   D396-复配中的过滤乘积与保边界压缩.md:115  '\\text{至少 $s$ 个槽在 }'
+   D41-敏感度与块敏感度的超二次分离.md:341  '\\text{$\\mathcal G$ 贡献}'
+   D42-无挠群代数含零因子.md:844  '\\text{$U$ an integer}'
+   D44-小finitistic维数无穷的代数.md:40  '\\text{$N_m$ 有限生成}'
+   D56-depth-three布尔电路的平方根指数下:664  '\\text{active added size-$u$ clauses containing this literal}'
+   D56-depth-three布尔电路的平方根指数下:683  '\\text{branch-$1$ steps processing size }'
+   D57-两个拟阵公共基的近似计数.md:74  '\\text{$S$ 是 transversal}'
+   D582-量子海森堡铁磁体的低温自发磁化.md:102  '\\text{$i$ 之后下一钉在 $T$}'
+   D61-choiceless带计数P时间不含P时间.:305  "\\text{for the two edges $e,e'$ of each face $f\\in F(v)$ at $v$}"
+   D64-装箱问题的加性难度与无界配置间隙.md:389  '\\text{for every root-to-leaf path $\\pi$ in $T^\\sigma$}'
+   D708-正特征下一致非交换矩阵击中点.md:282  '\\text{$h_f\\bmod z^N$ 的系数列}'
+   D750-三维量子Heisenberg铁磁体磁化的第:533  '\\text{$n$ 圈的返回贡献}'
+   D81-Foulkes-Howe规范映射的二次稳定门:390  '\\text{for every product $P$ of $b$ vectors}'
+   files: D101-欧 D114-二 D121-分 D124-自 D139-单 D143-关 D163-四 D188-五 D30-负p D337-高 D396-复 D41-敏感 D42-无挠 D44-小f D56-de D57-两个 D582-量 D61-ch D64-装箱 D708-正 D750-三 D81-Fo

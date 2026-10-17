@@ -1,0 +1,18 @@
+built statically: 1039 ; refused statically: 19
+  14  statement
+   2  pgfmath
+   2  scoped
+   1  ifnum
+---- samples ----
+== statement (14)
+   A-Fully-Polynomial-Randomized-Approximation- \begin{tikzpicture}[x=.59cm,y=1cm, reference/.style={draw=black!25,line width=.45pt}, selected/.style={draw=black,line width=1.5pt}, vertex/.style={circle,fill=black,inne
+   A-Fully-Polynomial-Randomized-Approximation- \begin{tikzpicture}[x=1cm,y=1cm, vertex/.style={circle,fill=black,inner sep=1.3pt}, selected/.style={draw=black,line width=1.3pt}] \foreach \prefix/\shift in {a/0,b/6.2} 
+   A-sharp-entropy-bound-and-the-simplex-inequa \begin{tikzpicture}[scale=1.25, x={(1cm,0cm)},y={(0.45cm,0.35cm)},z={(0cm,1.5cm)}, line cap=round,line join=round,font=\small] \coordinate (O) at (0,0,0); \coordinate (P0
+== pgfmath (2)
+   Finite-cylinder-approximation-of-ruled-sets- \begin{tikzpicture}[scale=0.95] \begin{scope} \clip (-2,-2) rectangle (2,2); \foreach \i in {-4,...,4} {\foreach \j in {-4,...,4} { \pgfmathsetmacro{\cx}{\i+.35*\j} \pgfm
+   Universal-Tensor-Squares-for-Symmetric-Group \begin{tikzpicture}[x=.31cm,y=-.31cm,every node/.style={font=\small}] \foreach \row/\width in {1/10,2/9,3/7,4/6,5/5,6/4,7/3,8/2,9/2,10/1}{ \foreach \column in {1,...,\wid
+== scoped (2)
+   No-percolation-at-criticality-on-quasi-trans \begin{tikzpicture}[x=1cm,y=1cm,>=Stealth] \begin{scope}[shift={(-3.1,0)}] \draw[fill=blue!3,draw=blue!50!black] (0,0) circle (1.65); \foreach \ang in {0,45,...,315}{ \dr
+   The-Deligne-Drinfeld-conjecture-September-23 \begin{tikzpicture}[ x=1cm,y=1cm, vertex/.style={minimum width=2.7cm,minimum height=1.9cm,inner sep=0pt}, tree/.style={line width=.65pt,line cap=round,line join=round}, r
+== ifnum (1)
+   Critical-strip-crossing-mass-on-the-honeycom \begin{tikzpicture}[x=1cm,y=1cm,font=\small] \foreach \j/\wt in {0/1,1/A,2/A,3/B,4/B,5/U,6/U,7/E,8/F}{ \begin{scope}[xshift={1.45*mod(\j,5)*1cm},yshift={-2.1*floor(\j/5)*

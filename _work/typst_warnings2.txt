@@ -1,0 +1,8 @@
+reports read 724 (unreadable 0)
+
+ERRORS 0 in 0 papers
+
+WARNINGS 2 in 1 papers
+      2    1 papers  linebreaks are ignored in branches
+          The-Quasi-Riemann-Hypothesis-October | \\?\E:\math\typst\The-Quasi-Riemann-Hypothesis-October-5-2026\main.typ:1235:49
+          The-Quasi-Riemann-Hypothesis-October | \\?\E:\math\typst\The-Quasi-Riemann-Hypothesis-October-5-2026\main.typ:1236:145

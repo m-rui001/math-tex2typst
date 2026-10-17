@@ -1,0 +1,796 @@
+D177	1	A-C1-Counterexample-to-the-Entropy-Conjecture-September-25-2026
+D178	2	A-Capacity-Criterion-for-Four-State-Potts-Reconstruction-on-Trees-October-5-2026
+D179	3	A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in-Spatial-Dimensions-at-Least-Four-October-5-2026
+D180	4	A-Codimension-One-Bound-for-the-Singular-Set-of-a-Stationary-Integral-Varifold-October-5-2026
+D181	5	A-Complete-Local-Domain-Without-a-Small-Cohen-Macaulay-Module-September-23-2026
+D182	6	A-Conditional-Reduction-for-Algebraic-Kuga-Satake-Correspondences-September-10-2026
+D183	7	A-Coulomb-Ground-State-Density-without-Kohn-Sham-Ensemble-Representation-September-25-2026
+D184	8	A-Counterexample-to-Kuroshs-Division-Ring-Problem-September-23-2026
+D185	9	A-Counterexample-to-Walls-D2-Problem-October-6-2026
+D186	10	A-Fixed-Particle-Test-for-Computation-in-a-Forced-Viscous-Flow-September-27-2026
+D187	11	A-Fully-Polynomial-Randomized-Approximation-Scheme-for-Perfect-Matchings-in-General-Graphs-September-23-2026
+D188	12	A-Gepner-stability-condition-on-every-smooth-quintic-threefold-September-24-2026
+D189	13	A-Limiting-Satisfiability-Threshold-for-Every-Fixed-Clause-Size-September-25-2026
+D190	14	A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Maps-October-5-2026
+D191	15	A-Low-Space-Algorithm-for-Worst-Case-Subset-Sum-September-26-2026
+D192	16	A-Modulus-Proof-of-Cannons-Conjecture-September-23-2026
+D193	17	A-Nearly-Quartic-Separation-Between-Randomized-and-Quantum-Query-Complexity-October-5-2026
+
+D194	18	A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-September-24-2026
+
+D195	19	A-PD4-group-without-an-aspherical-manifold-model-September-24-2026
+
+D196	20	A-Pivotal-Amplitude-for-Voronoi-Percolation-from-Cardys-Formula-October-5-2026
+
+D197	21	A-Power-Saving-for-Polynomial-Differences-at-Prime-Arguments-October-5-2026
+
+D198	22	A-Sharp-Threshold-Bound-for-Monotone-Graph-Properties-September-25-2026
+
+D199	23	A-Three-Dimensional-Counterexample-to-Integer-Degree-Harmonic-Dimension-Comparison-September-26-2026
+
+D200	24	A-Torsion-Free-Counterexample-to-Reduced-Baum-Connes-Injectivity-September-23-2026
+D201	25	A-Torsion-Free-Counterexample-to-the-Kadison-Kaplansky-Projection-Conjecture-September-23-2026
+
+D202	26	A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite-October-4-2026
+D203	27	A-boundary-field-gap-for-the-spin-one-Heisenberg-chain-September-24-2026
+D204	28	A-boundary-only-obstruction-to-four-dimensional-disk-embedding-September-24-2026
+
+D205	29	A-closed-Ricci-flow-with-bounded-scalar-curvature-and-finite-time-curvature-blowup-September-24-2026
+
+D206	30	A-conditional-abelianity-theorem-for-special-fourfold-pairs-with-a-half-weight-divisor-October-5-2026
+
+D207	31	A-counterexample-to-Hadwigers-conjecture-September-23-2026
+
+D208	32	A-counterexample-to-Naimarks-problem-in-ZFC-September-24-2026
+
+D209	33	A-counterexample-to-Sidorenkos-conjecture-September-23-2026
+
+D210	34	A-counterexample-to-the-Colin-de-Verdiere-chromatic-conjecture-September-23-2026
+
+D211	35	A-counterexample-to-the-Monge-ansatz-for-the-three-marginal-Coulomb-cost-September-25-2026
+D212	36	A-counterexample-to-the-coarse-Novikov-conjecture-September-23-2026
+D213	37	A-counterexample-to-the-nearby-Lagrangian-conjecture-September-23-2026
+
+D214	38	A-cubic-lower-bound-for-border-determinantal-complexity-of-the-permanent-September-24-2026
+D215	39	A-density-uniform-condensate-bound-for-dilute-Bose-gases-September-27-2026
+
+D216	40	A-dimension-free-logarithmic-Sobolev-inequality-for-subgaussian-log-concave-measures-September-23-2026
+D217	41	A-directional-zero-one-law-for-finite-range-dependent-random-environments-October-5-2026
+
+D218	42	A-directional-zero-one-law-under-strict-ellipticity-September-23-2026
+D219	43	A-finite-Smith-Toda-complex-V4-at-the-prime-1009-September-23-2026
+
+D220	44	A-finite-entropy-separation-of-microstates-and-nonmicrostates-free-entropy-September-25-2026
+D221	45	A-finite-entropy-system-without-a-smooth-positive-volume-model-September-25-2026
+
+D222	46	A-finite-time-singularity-of-Calabi-flow-on-projective-space-September-24-2026
+
+D223	47	A-finitely-generated-counterexample-to-the-Eilenberg-Ganea-conjecture-September-23-2026
+D224	48	A-group-without-fixed-price-October-5-2026
+
+D225	49	A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026
+D226	50	A-latest-anchor-induction-with-spectrally-compact-masks-for-worst-case-trace-reconstruction-October-5-2026
+
+D227	51	A-linear-list-coloring-bound-in-terms-of-the-Hadwiger-number-September-23-2026
+D228	52	A-local-Penrose-inequality-for-conformal-perturbations-of-Schwarzschild-anti-de-Sitter-data-October-5-2026
+D229	53	A-marked-tensor-obstruction-to-four-dimensional-disk-embedding-September-24-2026
+D230	54	A-nondegenerate-counterexample-to-the-Morse-number-Arnold-bound-September-23-2026
+
+D231	55	A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-September-24-2026
+D232	56	A-polynomial-time-algorithm-for-three-machine-unit-job-scheduling-September-24-2026
+D233	57	A-polynomial-time-construction-of-strong-thin-trees-September-23-2026
+D234	58	A-power-improvement-in-the-Heilbronn-triangle-lower-bound-September-25-2026
+D235	59	A-power-saving-for-intersective-polynomial-differences-with-an-exponent-depending-only-on-the-degree-October-5-2026
+
+D236	60	A-power-saving-for-planar-halving-lines-September-25-2026
+
+D237	61	A-power-saving-for-planar-unit-distances-September-23-2026
+
+D238	62	A-power-saving-for-square-difference-free-sets-September-24-2026
+
+D239	63	A-projective-fourfold-with-large-fundamental-group-and-non-Stein-universal-cover-October-5-2026
+
+D240	64	A-rational-obstruction-to-strong-chromatic-splitting-at-height-three-September-25-2026
+
+D241	65	A-sharp-Fourier-certificate-for-planar-circle-packing-September-23-2026
+
+D242	66	A-sharp-entropy-bound-and-the-simplex-inequality-for-isotropic-constants-October-5-2026
+
+D243	67	A-singular-normal-affine-surface-with-free-tangent-sheaf-September-23-2026
+
+D244	68	A-smooth-three-torus-diffeomorphism-with-simple-Lebesgue-spectrum-September-23-2026
+
+D245	69	A-spectral-gap-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026
+
+D246	70	A-stable-coordinate-that-is-not-a-coordinate-in-four-variables-October-5-2026
+
+D247	71	A-strict-four-row-permanent-inequality-and-permutation-moments-September-26-2026
+
+D248	72	A-surface-counterexample-to-Shafarevich-holomorphic-convexity-September-23-2026
+
+D249	73	A-two-dimensional-area-law-from-a-global-spectral-gap-September-24-2026
+D250	74	A-typical-start-upper-bound-for-low-temperature-SK-Glauber-dynamics-September-24-2026
+D251	75	A-uniform-Hilbert-transform-estimate-for-Lipschitz-directions-September-25-2026
+
+D252	76	A-uniform-influence-bound-for-hypergraph-properties-October-5-2026
+D253	77	Abelian-covers-Gale-correspondences-and-the-Hodge-conjecture-for-powers-September-30-2026
+D254	78	Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026
+D255	79	Abundance-after-nonvanishing-for-compact-Kahler-fourfolds-September-27-2026
+D256	80	Abundance-in-numerical-dimension-one-for-terminal-threefolds-in-positive-characteristic-September-24-2026
+D257	81	Algebraic-Kuga-Satake-correspondences-and-Hodge-conjectures-on-a-K3-quadratic-locus-September-30-2026
+D258	82	Algebraicity-of-Kuga-Satake-Correspondences-for-K3-Surfaces-October-3-2026
+D259	83	Algebraicity-of-Weil-classes-on-split-abelian-eightfolds-September-18-2026
+
+D260	84	All-temperature-pressure-for-orthogonally-invariant-Ising-spin-glasses-September-25-2026
+D261	85	Almost-Linear-Time-Maximum-Cardinality-Matching-in-Sparse-General-Graphs-September-24-2026
+D262	86	Almost-everywhere-Fourier-convergence-in-L-log-L-September-23-2026
+D263	87	Almost-everywhere-regularity-of-stationary-integral-varifolds-September-23-2026
+D264	88	Ambiently-homeomorphic-isolated-hypersurface-germs-in-C4-with-multiplicities-four-and-five-September-27-2026
+
+D265	89	Ambiently-homeomorphic-isolated-hypersurfaces-of-multiplicities-two-and-three-September-24-2026
+D266	90	An-Almost-Linear-Approximation-Scheme-for-Edit-Distance-September-24-2026
+D267	91	An-Exact-Semidefinite-Lift-of-a-Nonspectrahedral-Hyperbolicity-Cone-October-5-2026
+D268	92	An-FPRAS-for-Cell-Bounded-Contingency-Tables-September-24-2026
+D269	93	An-FPRAS-for-Common-Integer-Polymatroid-Bases-with-Binary-Capacities-October-5-2026
+
+D270	94	An-Integral-Counterexample-to-Gerstens-Conjecture-September-25-2026
+
+D271	95	An-Integral-Degree-Three-Gersten-Counterexample-September-26-2026
+
+D272	96	An-Irrational-Trace-Counterexample-to-Reduced-Baum-Connes-September-23-2026
+
+D273	97	An-Isolated-Particle-Pole-for-the-Two-Dimensional-O3-Spin-Field-October-4-2026
+
+D274	98	An-L2-Einstein-Gap-for-Nonnegatively-Curved-Four-Manifolds-October-5-2026
+
+D275	99	An-L3-bound-for-the-dyadic-triangular-Hilbert-form-October-5-2026
+
+D276	100	An-L3-bound-for-the-trilinear-Hilbert-transform-October-5-2026
+D277	101	An-asymptotic-formula-for-the-number-of-totients-September-25-2026
+D278	102	An-atomic-certificate-for-triangular-lattice-universal-optimality-September-26-2026
+
+D279	103	An-exact-Hausdorff-gauge-for-SLE-September-25-2026
+D280	104	An-explicit-exact-Hausdorff-gauge-for-SLE-September-26-2026
+
+D281	105	An-explicit-obstruction-to-nuclear-norm-ultrapower-embeddings-September-23-2026
+
+D282	106	An-explicit-power-saving-for-the-exact-discrete-Fourier-transform-September-25-2026
+
+D283	107	An-infinite-finitely-presented-periodic-group-September-23-2026
+D284	108	An-infinite-finitely-presented-residually-finite-2-group-October-5-2026
+D285	109	An-integral-scalar-curvature-bound-for-real-simplicial-volume-October-5-2026
+D286	110	An-isomorphism-of-the-free-group-factors-September-23-2026
+D287	111	An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026
+D288	112	Annular-variation-of-the-triangular-Hilbert-transform-at-the-symmetric-point-October-5-2026
+D289	113	Anticanonical-nonvanishing-from-smooth-semipositivity-September-26-2026
+D290	114	Approximation-Paving-over-Arbitrary-Maximal-Abelian-Subalgebras-September-25-2026
+D291	115	Area-controlled-end-replacement-and-the-Bondi-Penrose-inequality-in-the-CKS-class-September-27-2026
+D292	116	Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026
+D293	117	Arithmetic-classification-and-non-Pisot-singularity-for-Bernoulli-convolutions-October-3-2026
+
+D294	118	Arithmeticity-of-twisted-finite-correspondences-for-lattices-over-local-fields-September-23-2026
+D295	119	B-semiampleness-for-compact-log-smooth-Kahler-fibrations-September-10-2026
+D296	120	BKT-universality-for-height-and-planar-spin-fields-September-24-2026
+D297	121	Balanced-Counterexamples-to-Rysers-Conjecture-at-Prime-Orders-September-27-2026
+D298	122	Baumslag-Solitar-free-one-relator-groups-are-hyperbolic-September-25-2026
+D299	123	Bi-Lipschitz-Coordinates-at-Regular-Points-of-Noncollapsed-RCD-Spaces-September-25-2026
+D300	124	Blochs-Conjecture-for-Surfaces-with-pg-equals-q-equals-0-September-24-2026
+D301	125	Blochs-Law-for-Finite-Range-Heisenberg-Ferromagnets-in-Three-Dimensions-October-5-2026
+D302	126	Bochner-Riesz-Multipliers-in-Three-Dimensions-September-24-2026
+D303	127	Bose-Einstein-condensation-at-positive-temperature-in-the-dilute-hard-sphere-gas-October-5-2026
+D304	128	Boundary-graph-deformations-for-the-spacetime-Penrose-inequality-September-27-2026
+D305	129	Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotients-September-26-2026
+D306	130	Bounded-degree-coboundary-expanders-in-every-dimension-September-24-2026
+D307	131	Bounded-klt-complements-for-Fano-contractions-September-25-2026
+WITHDRAWN-2026-10-06	498	The-rational-Hodge-conjecture-for-products-of-K3-surfaces-October-4-2026
+
+D308	132	Bounded-scalar-curvature-and-smooth-extension-of-four-dimensional-Ricci-flow-September-24-2026
+D309	133	Boundedness-and-persistence-of-weakly-reversible-mass-action-systems-September-25-2026
+D310	134	Brownian-continuum-random-tree-limits-of-finite-Fortuin-Kasteleyn-maps-above-four-September-24-2026
+D311	135	Buffered-comparison-and-stopping-band-resolution-in-critical-Ising-September-23-2026
+D312	136	Canonical-ampleness-of-compact-hyperbolic-Kahler-manifolds-September-23-2026
+D313	137	Canonical-conformal-limits-of-subcritical-FK-planar-maps-September-24-2026
+D314	138	Cap-selected-amplitudes-and-triangle-chords-for-honeycomb-walks-September-26-2026
+D315	139	Cardys-formula-for-critical-Poisson-Voronoi-percolation-September-23-2026
+D316	140	Catalans-constant-is-irrational-September-24-2026
+D317	141	Close-Separable-Cstar-Algebras-Without-Spatial-Conjugacy-October-5-2026
+D318	142	Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026
+D319	143	Combinatorial-Invariance-of-Kazhdan-Lusztig-Polynomials-September-24-2026
+D320	144	Commuting-Division-Coefficient-Forms-and-the-Artinian-Eisenbud-Green-Harris-Conjecture-September-23-2026
+D321	145	Computation-under-Rapidly-Vanishing-Navier-Stokes-Forcing-September-27-2026
+
+D322	146	Computing-the-Random-3-SAT-Threshold-September-27-2026
+D323	147	Conditional-good-minimal-models-for-compact-Kahler-fourfolds-October-5-2026
+D324	148	Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026
+D325	149	Conditional-permutations-in-a-revealed-switching-environment-September-26-2026
+D326	150	Conformal-Limits-of-Critical-Square-Lattice-Random-Cluster-Interfaces-October-5-2026
+D327	151	Conformal-flow-and-the-Riemannian-Penrose-inequality-with-minimizing-frontiers-September-27-2026
+D328	152	Conformal-universality-of-bulk-Ising-correlations-under-weak-interactions-September-23-2026
+D329	153	Constant-factor-hardness-of-Min-UnCut-September-23-2026
+
+D330	154	Constant-factor-hardness-of-directed-feedback-vertex-set-September-23-2026
+D331	155	Constant-factor-hardness-of-uniform-sparsest-cut-September-24-2026
+D332	156	Constructible-tame-Hecke-eigensheaves-in-positive-characteristic-October-5-2026
+
+D333	157	Contact-Fano-manifolds-and-the-LeBrun-Salamon-conjecture-September-23-2026
+
+D334	158	Continuous-Phase-Foliations-Create-Analytic-Caustic-Collars-September-24-2026
+
+D335	159	Continuum-Coulomb-hardness-with-binary-nuclear-charges-September-24-2026
+D336	160	Correspondence-Coloring-Graphs-with-a-Forbidden-Clique-October-5-2026
+D337	161	Counterexamples-to-the-Hahn-Wilson-conjecture-at-height-two-September-26-2026
+
+D338	162	Counterexamples-to-weak-chromatic-splitting-sphere-kernels-and-descent-exponents-September-27-2026
+
+D339	163	Critical-Center-Magnetization-in-the-Planar-XY-Model-October-5-2026
+
+D340	164	Critical-honeycomb-chords-with-prescribed-boundary-endpoints-September-26-2026
+
+D341	165	Critical-local-smoothing-for-the-three-dimensional-wave-equation-September-24-2026
+
+D342	166	Critical-mixing-in-the-Sherrington-Kirkpatrick-model-September-25-2026
+
+D343	167	Critical-strip-crossing-mass-on-the-honeycomb-lattice-September-26-2026
+
+D344	168	Cuntz-comparison-and-Jiang-Su-absorption-September-23-2026
+D345	169	Cutoff-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026
+
+D346	170	Cycle-clique-Ramsey-numbers-September-25-2026
+D347	171	Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026
+
+D348	172	Cylinder-amplitudes-and-logarithmic-bridge-length-windows-on-the-honeycomb-lattice-September-26-2026
+
+D349	173	Cylinder-loop-weights-and-planar-nesting-September-26-2026
+
+D350	174	De-Giorgis-conjecture-in-dimension-eight-September-26-2026
+D351	175	Deforming-hypersymplectic-four-manifolds-to-hyperkahler-triples-September-23-2026
+D352	176	Determination-of-a-metric-and-a-unitary-connection-from-one-boundary-patch-October-5-2026
+
+D353	177	Deterministic-Polynomial-Factorization-over-Prime-Fields-October-4-2026
+D354	178	Deterministic-nonbipartite-Ramanujan-graphs-in-every-fixed-degree-September-23-2026
+
+D355	179	Deterministic-quasipolynomial-time-mean-payoff-games-September-25-2026
+
+D356	180	Diagonal-Fourier-extension-for-positively-curved-surfaces-in-three-dimensions-September-24-2026
+
+D357	181	Disk-transfer-representations-and-confined-bridge-mass-September-26-2026
+D358	182	Donovans-Conjecture-over-Algebraic-Closures-of-Prime-Fields-September-24-2026
+D359	183	Edit-Distance-in-l1-Matching-Bounds-up-to-Constants-in-the-Exponent-September-27-2026
+
+D360	184	Electromagnetic-tails-and-the-Kerr-Newman-Penrose-inequality-October-5-2026
+D361	185	Elementary-Positivity-of-Chromatic-Quasisymmetric-Functions-September-24-2026
+
+D362	186	Elliptic-Squares-and-Zilber-Pink-for-Curves-in-A2-September-24-2026
+
+D363	187	Elliptic-capacity-propagation-and-Fourier-restriction-to-the-sphere-September-24-2026
+
+D364	188	Endpoint-convergence-for-the-planar-Schrodinger-equation-September-24-2026
+
+D365	189	Endpoint-pointwise-convergence-for-the-Schrodinger-equation-in-higher-dimensions-September-24-2026
+
+D366	190	Entanglement-with-zero-distillable-secret-key-in-local-dimension-ten-September-27-2026
+
+D367	191	Entropy-equality-and-local-symmetry-in-negative-curvature-September-23-2026
+
+D368	192	Equality-and-rigidity-in-the-spacetime-Penrose-inequality-September-27-2026
+
+D369	193	Equality-cases-in-the-sharp-one-dimensional-matrix-Lieb-Thirring-inequality-October-5-2026
+
+D370	194	Equidistribution-of-Prime-Degree-Torus-Packets-with-Arbitrary-Local-Type-September-24-2026
+
+D371	195	Equidistribution-of-Primitive-Quartic-Torus-Packets-for-Arbitrary-Orders-October-5-2026
+
+D372	196	Equidistribution-of-Primitive-Sextic-Torus-Packets-October-5-2026
+
+D373	197	Equivariant-Jiang-Su-Stability-for-Amenable-Actions-in-the-Unital-Stably-Finite-Case-October-5-2026
+
+D374	198	Ergodicity-of-triangular-billiards-with-an-irrational-angle-September-25-2026
+
+D375	199	Essential-Singularity-of-the-Correlation-Length-in-the-Planar-XY-Model-October-5-2026
+
+D376	200	Etale-covers-with-a-prescribed-exterior-sheet-September-24-2026
+
+D377	201	Eventual-Categoricity-for-Abstract-Elementary-Classes-September-24-2026
+D378	202	Every-complex-K3-surface-is-Oka-September-23-2026
+D379	203	Every-four-dimensional-Kakeya-set-has-full-Hausdorff-dimension-September-24-2026
+
+D380	204	Exact-Birch-Swinnerton-Dyer-Formula-from-Low-Selmer-Corank-October-3-2026
+
+D381	205	Exact-Derandomization-of-Logarithmic-Space-L-equals-RL-equals-BPL-September-23-2026
+
+D382	206	Exact-Fourier-certificates-for-complex-Hadamard-matrices-of-order-six-September-24-2026
+
+D383	207	Exact-Uniform-Sampling-of-Contingency-Tables-with-Arbitrary-Margins-September-24-2026
+
+D384	208	Exact-mass-asymptotics-for-the-two-dimensional-O4-lattice-model-October-5-2026
+
+D385	209	Exact-orders-and-invariant-anticanonical-linear-systems-September-26-2026
+
+D386	210	Exact-quantum-factoring-over-a-fixed-finite-gate-set-September-25-2026
+
+D387	211	Existential-universal-real-sentences-in-the-counting-hierarchy-October-4-2026
+
+D388	212	Expected-amenable-subalgebras-preserving-core-commutants-September-23-2026
+D389	213	Exponential-PSD-rank-of-positively-shifted-matching-matrices-October-5-2026
+
+D390	214	Failure-of-Bounded-Approximation-in-a-Lipschitz-Free-Space-over-a-Uniformly-Discrete-Metric-Space-September-26-2026
+
+D391	215	Failure-of-finite-assembly-for-a-chromatic-overlap-at-the-prime-three-September-25-2026
+
+D392	216	Failure-of-rational-injectivity-for-maximal-coarse-assembly-October-5-2026
+
+D393	217	Fiber-functors-for-finite-symmetric-tensor-categories-in-positive-characteristic-September-24-2026
+
+D394	218	Filtered-chromatic-splitting-at-generic-primes-September-25-2026
+
+D396	219	Filtered-products-and-boundary-preserving-compression-in-complex-cobordism-September-25-2026
+D397	220	Finite-Circle-Obstructions-Binary-Codes-and-Histogram-Embeddings-for-Edit-Distance-September-27-2026
+D398	221	Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026
+
+D399	222	Finite-Instructions-and-Solenoidal-Shear-Flows-September-27-2026
+D400	223	Finite-Monoid-Computations-and-a-Uniform-Generalized-Star-Height-Bound-September-25-2026
+D401	224	Finite-Smith-Toda-Complexes-at-Varying-Primes-September-23-2026
+
+D402	225	Finite-algebraic-envelopes-and-the-Boone-Higman-conjecture-September-23-2026
+D403	226	Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026
+
+D404	227	Finite-cylinder-approximation-of-ruled-sets-September-27-2026
+D405	228	Finite-generation-for-the-Kn-local-sphere-September-24-2026
+D406	229	Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-5-2026
+
+D407	230	Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-September-24-2026
+D408	231	Finite-triangular-approximation-of-radial-sweeps-September-27-2026
+D409	232	Fixed-energy-universality-for-weak-Anderson-disorder-on-random-regular-graphs-October-5-2026
+
+D410	233	Fontaine-Mazur-modularity-at-the-prime-2-September-23-2026
+
+D411	234	Foulkes-Conjecture-for-the-Sixth-Symmetric-Power-September-25-2026
+
+D412	235	Fourfold-nonvanishing-by-minimal-metrics-and-moving-jets-September-27-2026
+
+D413	236	Frobenius-Structures-on-Tame-Hecke-Eigensheaves-October-5-2026
+
+D414	237	From-critical-crossings-to-quenched-near-critical-universality-in-Voronoi-percolation-October-5-2026
+
+D415	238	From-partial-permutation-information-to-Fourier-bounds-September-26-2026
+
+D416	239	Fujitas-freeness-conjecture-September-23-2026
+
+D417	240	Full-support-of-the-zero-temperature-Sherrington-Kirkpatrick-order-parameter-September-27-2026
+
+D418	241	Functional-universality-of-critical-SK-autocorrelations-October-5-2026
+
+D419	242	GOE-bulk-universality-for-fixed-degree-random-regular-graphs-September-23-2026
+
+D420	243	Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25-2026
+
+D421	244	Generalized-Cartan-Hadamard-isoperimetry-and-Euclidean-equality-rigidity-September-23-2026
+
+D422	245	Generalized-Star-Height-at-Most-Four-September-25-2026
+
+D423	246	Generalized-Star-Height-at-Most-Three-September-25-2026
+D424	247	Generalized-outer-electron-radii-of-neutral-Coulomb-atoms-September-24-2026
+
+D425	248	Generic-C1-Future-Inextendibility-Near-Rotating-Subextremal-Kerr-Spacetimes-September-23-2026
+
+D426	249	Generic-Future-Inextendibility-with-Square-Integrable-Connection-Near-a-Fixed-Kerr-Spacetime-September-23-2026
+
+D427	250	Geometric-Programs-for-Solenoidal-Forcing-September-27-2026
+
+D428	251	Giglis-distributional-curvature-characterization-of-Alexandrov-spaces-September-24-2026
+
+D429	252	Global-Arthur-Enhancements-of-Cuspidal-Excursion-Parameters-October-5-2026
+
+D430	253	Global-Spherical-Shells-on-Minimal-Surfaces-of-Class-VII-September-24-2026
+
+D431	254	Global-Uniqueness-for-the-Smooth-Isotropic-Elasticity-Inverse-Problem-September-24-2026
+
+D432	255	Global-quantum-geometric-Langlands-at-irrational-level-October-4-2026
+D433	256	Goldfelds-analytic-density-conjecture-and-the-2-converse-for-elliptic-curves-September-23-2026
+
+D434	257	Graph-Decompositions-at-the-Integral-Expectation-Threshold-October-5-2026
+
+D435	258	Ground-state-condensation-in-the-dilute-hard-sphere-gas-September-24-2026
+
+D436	259	Hamiltonian-Fixed-Points-Below-the-Stable-Morse-Number-October-5-2026
+
+D437	260	Hamiltonian-Fixed-Points-Below-the-Stable-Morse-Number-in-Dimension-Twenty-Two-October-5-2026
+
+D438	261	Hard-sphere-fluctuations-on-the-regular-Boltzmann-lifespan-September-23-2026
+
+D439	262	Hellinger-contraction-with-arbitrary-Boolean-output-bias-September-24-2026
+
+D440	263	Hilberts-tenth-problem-over-the-rational-numbers-September-24-2026
+
+D441	264	Homogeneous-depth-five-lower-bounds-for-iterated-matrix-multiplication-September-25-2026
+
+D442	265	Hyperbolicity-Cones-Without-Semidefinite-Lifts-October-5-2026
+
+D443	266	Incompressible-Box-Transport-and-Finite-Computation-September-27-2026
+
+D444	267	Infinitely-many-closed-geodesic-images-on-every-Riemannian-sphere-September-24-2026
+
+D445	268	Integer-multiplication-below-n-log-n-September-23-2026
+
+D446	269	Integrability-of-split-tangent-bundles-on-rationally-connected-manifolds-September-23-2026
+D447	270	Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026
+D448	271	Integral-Donovan-Finiteness-over-Witt-Vectors-September-25-2026
+D449	272	Integral-points-on-character-varieties-of-curves-September-25-2026
+D450	273	Interior-regularity-of-planar-Mumford-Shah-minimizers-September-24-2026
+
+D451	274	Invariant-anticanonical-indices-and-conversion-of-twisted-differentials-September-26-2026
+
+D452	275	Invariant-projection-counterexamples-for-every-irrational-rotation-September-27-2026
+D453	276	Irrational-cubic-fourfolds-with-geometric-K3-categories-September-24-2026
+D454	277	Kadisons-similarity-theorem-through-uniform-derivation-estimates-September-23-2026
+D455	278	Koebes-Circle-Domain-Conjecture-September-23-2026
+D456	279	Lechs-multiplicity-conjecture-September-23-2026
+D457	280	Lifting-sections-from-the-reduced-support-of-an-adjoint-September-27-2026
+D458	281	Linear-Variance-of-the-Random-3-SAT-Hitting-Time-October-5-2026
+D459	282	Localization-costs-and-information-growth-for-exact-Gaussian-observations-September-27-2026
+
+D460	283	Log-abundance-for-compact-Kahler-spaces-under-logarithmic-Iitaka-subadditivity-October-4-2026
+
+D461	284	Log-abundance-in-characteristic-zero-September-24-2026
+D462	285	Log-abundance-in-numerical-dimension-one-for-threefolds-in-positive-characteristic-October-5-2026
+D463	286	Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026
+D464	287	Logarithmic-Relative-Fluctuations-in-the-Weakly-Disordered-Planar-Ising-Model-October-5-2026
+D465	288	Marked-polygon-correlations-and-one-arc-bounds-September-26-2026
+D466	289	Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September-26-2026
+D467	290	Maximal-Multipoint-Seshadri-Constants-in-Higher-Dimensions-October-5-2026
+D468	291	Maximal-multipoint-Seshadri-constants-in-positive-characteristic-October-5-2026
+D469	292	Mean-payoff-parity-games-in-quasipolynomial-time-October-5-2026
+D470	293	Metric-Markov-Cotype-Two-of-l1-October-5-2026
+D471	294	Metric-descent-and-rank-preserving-contractions-September-26-2026
+D472	295	Metric-measure-limits-of-subcritical-FK-and-spanning-tree-planar-maps-September-24-2026
+D473	296	Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026
+D474	297	Milnes-rationality-conjecture-for-abelian-varieties-September-23-2026
+D475	298	Minimal-metrics-and-interior-injectivity-for-nef-adjoints-September-27-2026
+D476	299	Minimal-models-and-Mori-fibre-spaces-for-generalized-log-canonical-Q-pairs-September-24-2026
+
+D477	300	Minimal-models-in-numerical-dimension-one-September-24-2026
+D478	301	Modularity-of-elliptic-curves-over-imaginary-quadratic-fields-October-4-2026
+D479	302	Monochromatic-finite-sums-and-products-in-the-positive-integers-September-23-2026
+D480	303	Natural-Occupation-Measures-for-Critical-Square-Lattice-FK-Interfaces-October-5-2026
+D481	304	Near-Inclusions-of-von-Neumann-Algebras-Without-Small-Spatial-Embeddings-October-5-2026
+D482	305	Nearly-minimal-maxima-and-positive-minima-of-Littlewood-polynomials-October-5-2026
+D483	306	No-bigeodesics-in-planar-first-passage-percolation-September-24-2026
+D484	307	No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026
+D485	308	Nonhomeomorphic-closed-aspherical-four-manifolds-with-the-same-homotopy-type-October-4-2026
+D486	309	Nonsingular-systems-of-equations-over-arbitrary-groups-October-5-2026
+D487	310	Nonuniqueness-for-Bounded-Measurable-Scalar-Conductivities-in-Three-Dimensions-September-23-2026
+D488	311	Nonuniqueness-for-the-periodic-hard-sphere-Boltzmann-equation-September-23-2026
+D489	312	Nonuniqueness-of-percolation-on-nonamenable-quasi-transitive-graphs-September-24-2026
+D490	313	Nonuniqueness-with-local-conservation-for-the-hard-sphere-Boltzmann-equation-October-5-2026
+D491	314	Nuclear-dimension-and-Jiang-Su-stability-without-elementary-subquotients-September-23-2026
+D492	315	Numerical-Semiampleness-of-Nef-Adjoint-Divisors-October-3-2026
+
+D493	316	Numerical-semiampleness-of-nef-adjoint-classes-on-compact-Kahler-manifolds-October-4-2026
+D494	317	One-Rational-Matrix-Hitting-Point-for-Noncommutative-Formulas-September-24-2026
+D495	318	One-Sample-Suffices-for-Matroid-Prophet-Inequalities-against-an-Almighty-Adversary-September-23-2026
+D496	319	One-sided-negative-sectional-curvature-and-the-holomorphic-Liouville-property-September-25-2026
+D497	320	Open-Homomorphisms-of-Global-Solvably-Closed-Galois-Groups-October-5-2026
+D498	321	Optimal-order-mixing-of-the-Thorp-shuffle-September-26-2026
+D499	322	Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026
+D500	323	Ordinary-two-point-correlations-of-multiplicative-functions-September-24-2026
+D501	324	P-equals-W-in-composite-rank-for-fixed-determinant-September-24-2026
+D502	325	Parabolic-intersections-in-Artin-groups-September-23-2026
+D503	326	Parity-lifts-and-bounded-treewidth-witnesses-for-Weisfeiler-Leman-equivalence-September-25-2026
+D504	327	Path-selection-and-an-elliptic-inequality-on-degenerating-Ricci-flat-trees-September-24-2026
+D505	328	Pointwise-Multiple-Ergodic-Averages-for-Mixing-Transformations-October-4-2026
+D506	329	Pointwise-convergence-of-fourfold-ergodic-averages-for-mixing-transformations-October-4-2026
+
+D507	330	Pointwise-convergence-of-triple-ergodic-averages-for-mixing-transformations-October-4-2026
+D508	331	Polynomial-Mixing-of-the-Switch-Chain-for-Every-Graphical-Degree-Sequence-September-25-2026
+D509	332	Polynomial-PEPS-approximation-of-gapped-square-grid-ground-states-September-24-2026
+D510	333	Polynomial-Time-Unitary-Synthesis-from-a-Boolean-Oracle-October-5-2026
+
+D511	334	Polynomial-vacuum-representations-and-bridge-mass-for-honeycomb-walks-September-26-2026
+D512	335	Positive-Metric-Entropy-for-the-Standard-Map-at-Large-Parameters-September-23-2026
+D513	336	Positive-eigenvalues-of-the-relative-SU-2-BFSS-Hamiltonian-October-5-2026
+D514	337	Positive-lower-density-of-large-prime-gaps-September-25-2026
+D515	338	Positive-scalar-curvature-and-uniform-codimension-two-width-September-23-2026
+D516	339	Positive-scalar-curvature-forces-rational-inessentiality-September-23-2026
+D517	340	Positively-curved-Einstein-four-manifolds-September-23-2026
+
+D518	341	Positivity-of-Serres-Intersection-Multiplicity-September-23-2026
+D519	342	Prefix-Instructions-and-Incompressible-Flows-September-27-2026
+
+D520	343	Prescribed-large-volume-charges-on-threefolds-with-trivial-canonical-bundle-September-24-2026
+D521	344	Prime-Predecessors-with-an-Even-Number-of-Prime-Factors-September-17-2026
+D522	345	Primitive-roots-for-every-admissible-integer-base-October-4-2026
+D523	346	Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026
+D524	347	Projective-Space-Bases-of-Lagrangian-Fibrations-September-23-2026
+D525	348	Pure-Point-Spectrum-for-the-Two-Dimensional-Anderson-Model-at-Every-Positive-Disorder-September-23-2026
+D526	349	Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere-September-23-2026
+D527	350	QAOA-attains-the-SK-ground-state-energy-in-the-thermodynamic-first-limit-September-25-2026
+D528	351	QMA-hardness-of-continuum-Coulomb-energy-with-unit-nuclear-charges-September-24-2026
+D529	352	Quadratic-Strong-Operator-Paving-over-Arbitrary-Maximal-Abelian-Subalgebras-September-25-2026
+
+D530	353	Quantitative-Near-Kerr-Evolution-and-Generic-C2-Future-Inextendibility-September-23-2026
+D531	354	Quantum-Depletion-and-Momentum-Distribution-in-the-Dilute-Hard-Sphere-Bose-Gas-October-5-2026
+D532	355	Quantum-Depletion-for-Fixed-Bounded-Repulsive-Potentials-October-5-2026
+D533	356	Quasipolynomial-Bounds-for-Arithmetic-Progressions-September-23-2026
+D534	357	Quaternionic-Division-Points-on-Curves-in-the-Siegel-Threefold-September-24-2026
+
+D535	358	Quenched-SLE-Universality-for-Weakly-Disordered-FK-Ising-Interfaces-October-5-2026
+D536	359	Quenched-SLE3-Universality-for-the-Weak-Random-Bond-Ising-Model-October-5-2026
+D537	360	Quenched-SLE3-limits-for-general-weak-random-bond-Ising-models-October-5-2026
+
+D538	361	Radial-transfer-estimates-and-polygon-length-laws-for-honeycomb-walks-September-26-2026
+
+D539	362	Radius-of-comparison-equals-half-the-mean-dimension-September-25-2026
+
+D540	363	Ramanujan-Arthur-Decompositions-of-Cuspidal-Functions-at-Full-Finite-Level-September-24-2026
+D541	364	Random-Walks-on-Critical-FK-Ising-Maps-and-Liouville-Brownian-Motion-October-5-2026
+
+D542	365	Random-coordinate-frames-and-partial-permutation-laws-September-26-2026
+
+D543	366	Random-subspace-tests-and-trace-smoothing-for-coordinate-sweeps-September-26-2026
+
+D544	367	Rational-homology-and-Quillens-conjecture-September-24-2026
+
+D545	368	Rationality-of-the-Canonical-Unramified-Arthur-Filtration-September-24-2026
+
+D546	369	Reconstruction-from-Milnor-K-theory-modulo-the-characteristic-October-5-2026
+
+D547	370	Reconstruction-of-Function-Fields-from-Mod-ell-Milnor-K-Theory-October-5-2026
+D548	371	Relative-denominators-and-effective-systems-for-log-Calabi-Yau-fibrations-September-27-2026
+
+D549	372	Relative-independence-of-the-separable-quotient-problem-September-23-2026
+D550	373	Removable-Boundaries-and-Rigidity-of-Circle-Domains-September-23-2026
+D551	374	Renewal-and-changes-of-law-for-critical-honeycomb-walks-September-26-2026
+D552	375	Rigidity-of-Smooth-Billiards-with-a-Continuous-Caustic-Collar-September-24-2026
+
+D553	376	Rokhlins-multiple-mixing-problem-for-one-transformation-September-23-2026
+
+D554	377	Row-column-symmetry-and-contraction-of-coordinate-sweeps-September-26-2026
+D555	378	SLE3-universality-for-weak-finite-range-Ising-interactions-September-23-2026
+D556	379	Scalar-Potentials-and-Slow-Clocks-for-Forced-Fluid-Computation-September-27-2026
+D557	380	Scale-and-conformal-symmetry-in-four-dimensional-operational-quantum-field-theory-September-26-2026
+D558	381	Schnell-fiber-spaces-and-good-canonical-models-September-24-2026
+
+D559	382	Self-dual-random-cluster-interfaces-below-one-September-23-2026
+D560	383	Semialgebraic-universal-covers-of-normal-projective-varieties-September-24-2026
+
+D561	384	Sharp-Logarithmic-Exponents-for-Fixed-Off-Diagonal-Ramsey-Numbers-September-24-2026
+D562	385	Sharp-One-Third-Stability-of-Brenier-Maps-September-25-2026
+D563	386	Sharp-integral-fillings-in-CAT(0)-spaces-September-23-2026
+D564	387	Sharp-mass-bounds-for-the-two-dimensional-O4-model-September-23-2026
+
+D565	388	Sharp-nodal-length-on-smooth-surfaces-September-23-2026
+D566	389	Sharp-one-dimensional-Lieb-Thirring-inequalities-for-matrix-potentials-October-5-2026
+D567	390	Sharpness-of-the-Cyclic-Integral-Floer-Bound-Below-the-Stable-Morse-Number-October-5-2026
+
+D568	391	Signed-cylinder-propagation-and-marked-polygons-on-the-honeycomb-lattice-September-26-2026
+
+D569	392	Signed-tensor-densities-and-diagram-budgets-for-coordinate-sweeps-September-26-2026
+
+D570	393	Simple-F-infinity-overgroups-of-groups-with-decidable-word-problem-September-23-2026
+D571	394	Simulating-One-Tape-Time-in-Two-Fifths-Power-Space-September-25-2026
+D572	395	Simultaneous-primitive-roots-a-conditional-lower-bound-for-prime-bases-October-4-2026
+D573	396	Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026
+D574	397	Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026
+D575	398	Smooth-Nonquadratic-Affine-Maximal-Graph-in-Dimension-Ten-October-5-2026
+D576	399	Smooth-isometric-immersions-of-closed-surfaces-into-Euclidean-four-space-September-23-2026
+D577	400	Snaky-in-21-Maker-moves-September-25-2026
+D578	401	Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026
+
+D579	402	Spectral-convergence-for-critical-FK-Ising-planar-maps-October-5-2026
+
+D580	403	Spectral-scalar-curvature-and-Urysohn-width-in-dimension-three-October-5-2026
+
+D581	404	Spectral-scalar-curvature-and-uniform-Urysohn-width-October-5-2026
+
+D582	405	Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026
+
+D583	406	Square-lattice-FK-interfaces-and-nested-loops-for-1-leq-q-lt-4-September-23-2026
+
+D584	407	Squared-logarithmic-randomized-k-server-on-arbitrary-metrics-September-24-2026
+
+D585	408	Stabilizer-Orbits-and-Thick-Tensor-Ideals-of-Dualizable-Kn-Local-Spectra-September-24-2026
+
+D586	409	Stable-Self-Similar-Blowup-for-a-Supercritical-Defocusing-Schrodinger-Equation-on-the-Torus-September-24-2026
+
+D587	410	Stretched-exponential-barriers-for-typical-SK-initial-states-September-24-2026
+
+D588	411	Strict-hot-spots-and-absence-of-interior-critical-points-on-smooth-simply-connected-planar-domains-September-24-2026
+
+D589	412	Strong-Ulam-Stability-Characterizes-Amenability-October-5-2026
+
+D590	413	Strong-diffeomorphic-approximation-in-three-dimensions-for-1-le-p-le-2-September-24-2026
+
+D591	414	Strong-diffeomorphic-approximation-in-three-dimensions-for-p-gt-2-September-24-2026
+D592	415	Strongly-rational-unitary-vertex-operator-algebras-and-conformal-nets-September-25-2026
+D593	416	Subset-Sum-in-Time-2-power-0-49n-October-4-2026
+D594	417	Symplectic-Ball-Packings-in-Higher-Dimensions-September-23-2026
+
+D595	418	Tame-Hecke-Eigensheaves-with-Several-Marked-Points-October-5-2026
+D596	419	Tangent-flow-uniqueness-2026-09-24
+D597	420	Temperedness-at-ramified-places-for-globally-generic-exceptional-groups-October-5-2026
+D598	560	uniform-bounds-for-planar-polynomial-limit-cycles-September-24-2026
+D599	559	the-additive-indecomposability-of-the-primes-September-24-2026
+D600	558	quasi-isometric-recognition-of-virtually-polycyclic-groups-September-24-2026
+D601	557	quantitative-lower-bounds-for-trace-reconstruction-September-24-2026
+
+D602	421	Tensor-Saturation-for-Even-Spin-Groups-September-24-2026
+D603	422	Termination-for-projective-log-canonical-fourfolds-with-rational-boundary-September-24-2026
+D604	423	Termination-of-generalized-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026
+D605	424	Termination-of-generalized-log-canonical-flips-on-compact-Kahler-fourfolds-October-5-2026
+D606	425	The-Abelian-Zilber-Pink-Conjecture-September-24-2026
+D607	426	The-Approximation-Threshold-for-Metric-k-Median-September-24-2026
+D608	427	The-Artinian-Lex-Plus-Powers-Betti-Theorem-September-23-2026
+D609	428	The-Blockwise-Alperin-Weight-Conjecture-September-23-2026
+
+D610	429	The-Bogomolov-Pop-reconstruction-theorem-September-23-2026
+D611	430	The-Boltzmann-Grad-limit-for-stable-radial-potentials-on-regular-kinetic-intervals-September-23-2026
+D612	431	The-Campana-Peternell-conjecture-in-dimension-six-September-25-2026
+
+D613	432	The-Critical-Spin-Field-of-the-Planar-XY-Model-October-5-2026
+D614	433	The-Dimension-of-the-Two-Adic-Hecke-Algebra-at-Odd-Level-October-5-2026
+
+D615	434	The-E-times-CM-Component-of-Zilber-Pink-for-Curves-in-A2-September-24-2026
+
+D616	435	The-Gaussian-free-field-limit-of-integer-Lipschitz-heights-with-two-arc-boundary-data-September-25-2026
+
+D617	436	The-Gaussian-free-field-limit-of-the-balanced-six-vertex-model-with-variance-multiplier-1-over-arcsin-c-over-2-September-23-2026
+
+D618	437	The-Generalized-Mukai-Conjecture-September-24-2026
+
+D619	438	The-Hilbert-Smith-conjecture-in-every-finite-dimension-September-23-2026
+D620	439	The-Isoperimetric-Conjecture-for-the-Cubic-Flat-Three-Torus-September-24-2026
+D621	440	The-Kakeya-maximal-conjecture-in-three-dimensions-September-23-2026
+
+D622	441	The-Kerr-Newman-Penrose-Inequality-for-Axisymmetric-Electrovacuum-Exteriors-October-5-2026
+
+D623	442	The-Kervaire-Invariant-Problem-at-the-Prime-Three-September-24-2026
+D624	443	The-Kervaire-Theorem-for-Groups-September-24-2026
+
+D625	444	The-Mahler-Conjecture-for-General-Convex-Bodies-September-22-2026
+
+D626	445	The-Margulis-Platonov-conjecture-over-global-function-fields-October-5-2026
+
+D627	446	The-Margulis-Platonov-conjecture-over-number-fields-September-23-2026
+
+D628	447	The-Mezard-Parisi-formula-for-diluted-spin-glasses-September-23-2026
+
+D629	448	The-PCP-for-PPAD-conjecture-a-quasilinear-reduction-September-25-2026
+
+D630	449	The-Penrose-inequality-for-maximal-asymptotically-hyperbolic-initial-data-October-5-2026
+
+D631	450	The-Poisson-Dirichlet-Law-for-Prime-Predecessors-September-24-2026
+
+D632	451	The-Quasi-Riemann-Hypothesis-October-5-2026
+
+D633	452	The-Reconstruction-Threshold-for-the-Ferromagnetic-Four-State-Potts-Model-October-5-2026
+
+D634	453	The-Restricted-Geometric-Langlands-Equivalence-in-Positive-Characteristic-September-24-2026
+
+D635	454	The-Selmer-converse-for-elliptic-curves-at-every-prime-September-24-2026
+
+D636	455	The-Sharp-Logarithmic-Exponent-of-r-5-t-September-24-2026
+
+D637	456	The-Sharp-Terminal-Leave-in-Random-Triangle-Removal-September-25-2026
+
+D638	457	The-Singer-conjecture-in-dimension-four-September-25-2026
+D639	458	The-Solomon-Yau-least-volume-theorem-September-23-2026
+
+D640	459	The-Stable-Hurewicz-Image-of-the-Sphere-at-Two-September-25-2026
+
+D641	460	The-Strong-Hyperkahler-SYZ-Conjecture-September-23-2026
+D642	461	The-abelianity-conjecture-for-special-compact-Kahler-manifolds-September-23-2026
+D643	462	The-affine-Bernstein-theorem-in-dimensions-three-through-nine-September-24-2026
+
+D644	463	The-arithmetic-category-and-stable-recovery-of-lattice-factors-September-23-2026
+D645	464	The-canonical-massive-continuum-limit-of-the-two-dimensional-O3-model-October-4-2026
+D646	465	The-complexity-of-identifying-a-graph-by-Weisfeiler-Leman-refinement-September-25-2026
+
+D740	556	Zero-Plane-Rigidity-for-Einstein-Four-Manifolds-October-4-2026
+D739	555	Witnessed-symmetric-choice-is-strictly-stronger-than-choiceless-polynomial-time-with-counting-September-24-2026
+D738	554	Weil-classes-and-Hodge-classes-on-abelian-powers-September-30-2026
+D737	553	Weighted-Dilation-Graphs-Smooth-Shifted-Primes-and-Totient-Fibers-September-24-2026
+D736	552	Weak-pure-infiniteness-and-O-infinity-absorption-September-25-2026
+D735	551	Weak-mixing-of-triangular-billiards-with-an-irrational-angle-October-5-2026
+
+D734	550	Weak-and-strong-normalization-in-pure-type-systems-September-25-2026
+D733	549	Virtual-compact-specialness-of-hyperbolic-one-relator-groups-September-25-2026
+D732	548	Virasoro-Constraints-under-Projectivization-October-5-2026
+D731	547	Virasoro-Constraints-for-Projective-Complete-Intersections-September-24-2026
+D730	546	Velocity-Field-Detection-of-Computation-in-Forced-Navier-Stokes-Flows-September-27-2026
+D729	545	Variance-of-the-Random-k-SAT-Hitting-Time-September-27-2026
+
+D728	544	Variable-dimension-Weisfeiler-Leman-equivalence-on-general-and-subcubic-graphs-September-25-2026
+D727	543	Vanishing-of-higher-bounded-Hochschild-cohomology-September-23-2026
+D726	542	Unrestricted-pro-modularity-at-the-prime-two-October-4-2026
+D725	541	Universality-of-critical-quench-autocorrelations-in-the-Sherrington-Kirkpatrick-model-October-5-2026
+D724	540	Universal-strong-Kadison-Kastler-stability-September-23-2026
+D723	539	Universal-optimality-of-the-triangular-lattice-September-23-2026
+
+D722	538	Universal-Tensor-Squares-for-Symmetric-Groups-September-24-2026
+D721	537	Universal-Computation-with-Eventually-Stationary-Navier-Stokes-Forcing-September-27-2026
+D720	536	Uniformization-of-complete-Kahler-manifolds-with-positive-bisectional-curvature-September-23-2026
+D719	535	Uniform-real-Lipschitz-surfaces-on-the-triangular-lattice-September-25-2026
+D718	534	Uniform-quasipolynomial-time-trace-reconstruction-October-5-2026
+D717	533	Uniform-marked-polygon-estimates-and-sharp-finite-bridge-moments-September-26-2026
+
+D741	466	The-critical-Liouville-quantum-sphere-and-geometric-limits-of-FK-maps-at-q-equals-4-September-24-2026
+D742	467	The-critical-correlation-exponent-of-the-planar-XY-model-September-24-2026
+D743	468	The-critical-dimension-for-one-phase-Bernoulli-minimizers-September-24-2026
+
+D716	532	Uniform-log-Iitaka-fibrations-and-bounded-moduli-denominators-October-4-2026
+D715	531	Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026
+D714	530	Uniform-excess-charge-for-Coulomb-molecules-and-the-outer-radius-of-neutral-atoms-September-24-2026
+D713	529	Uniform-effective-log-Iitaka-fibrations-for-fourfolds-September-26-2026
+D712	528	Uniform-computation-of-the-squared-logarithmic-k-server-bound-September-24-2026
+D711	527	Uniform-Stability-of-the-Spherical-Laughlin-Gap-October-5-2026
+
+D744	469	The-critical-logarithmic-correction-for-the-planar-XY-model-October-5-2026
+D745	470	The-curve-scaling-limit-of-half-plane-double-dimers-September-23-2026
+D746	471	The-dyadic-case-of-the-Erdos-similarity-conjecture-September-25-2026
+
+D710	526	Uniform-Pluricanonical-Iitaka-Fibrations-October-3-2026
+D709	525	Uniform-Permanence-in-Weakly-Reversible-Mass-Action-Systems-October-5-2026
+D708	524	Uniform-Matrix-Hitting-Points-in-Every-Positive-Characteristic-October-4-2026
+D707	523	Uniform-Interior-C1alpha-Estimates-for-Infinity-Harmonic-Functions-October-4-2026
+D706	522	Uniform-Cartier-sections-for-Fano-type-contractions-September-25-2026
+D705	521	Unconditional-time-lower-bounds-for-Weisfeiler-Leman-equivalence-September-25-2026
+
+D747	472	The-entropy-photon-number-inequality-September-24-2026
+D748	473	The-equivariant-cohomological-Hikita-conjecture-for-arbitrary-quivers-September-24-2026
+D749	474	The-exact-reconstruction-threshold-for-the-three-state-symmetric-channel-September-25-2026
+
+D704	520	Unbounded-Violations-of-the-Square-Root-Degree-Bound-September-26-2026
+D703	519	Ultraflat-real-Littlewood-polynomials-October-5-2026
+D702	518	Two-step-monodromy-of-special-quasi-projective-varieties-September-24-2026
+D701	517	Turn-Based-Stochastic-Mean-Payoff-Games-in-Deterministic-Quasipolynomial-Time-October-5-2026
+D700	516	Triple-ergodic-averages-with-distinct-integer-slopes-October-4-2026
+D699	515	Triangular-minimality-for-planar-Coulomb-renormalized-energy-September-23-2026
+
+D750	475	The-first-lattice-correction-to-Blochs-law-October-5-2026
+D751	476	The-free-energy-of-the-Ising-random-perceptron-September-24-2026
+D752	477	The-free-energy-of-the-spherical-random-perceptron-September-24-2026
+
+D698	514	Tree-Constructions-for-the-l1-Distortion-of-Binary-Edit-Distance-September-27-2026
+D697	513	Translative-covering-densities-of-order-n-log-n-September-23-2026
+D696	512	Topological-triviality-of-mu-constant-families-of-surface-singularities-September-24-2026
+D695	511	Thomason-Model-Structures-in-Every-Strict-Higher-Dimension-September-25-2026
+D694	510	Thermal-FK-Ising-interfaces-and-massive-SLE-October-5-2026
+D693	509	The-weak-inhomogeneous-Duffin-Schaeffer-conjecture-September-25-2026
+
+D753	478	The-free-uniform-spanning-forest-is-a-factor-of-IID-September-25-2026
+D754	479	The-geometric-case-of-the-Erdos-similarity-conjecture-October-5-2026
+D755	480	The-height-three-chromatic-overlap-an-explicit-filtration-and-its-attachments-September-27-2026
+
+D692	508	The-unique-threshold-bound-state-of-the-SU-N-BFSS-model-September-24-2026
+D691	507	The-two-primary-Birch-Swinnerton-Dyer-formula-in-Selmer-corank-at-most-one-September-24-2026
+D690	506	The-trace-cone-classifies-Razak-Jacelon-stabilizations-September-25-2026
+D689	505	The-spherical-perceptron-with-bi-orthogonally-invariant-disorder-September-24-2026
+D688	504	The-spherical-magnetization-law-for-the-three-dimensional-quantum-Heisenberg-ferromagnet-October-5-2026
+D687	503	The-spacetime-Penrose-inequality-with-charge-and-original-data-rigidity-October-5-2026
+
+D756	481	The-higher-dimensional-Erdos-distinct-distances-conjecture-September-23-2026
+D757	482	The-hypercube-Ramsey-number-has-linear-order-September-23-2026
+D758	483	The-irrationality-exponent-of-pi-is-2-September-24-2026
+
+D686	502	The-spacetime-Penrose-inequality-and-enclosing-area-September-27-2026
+D685	501	The-sharp-singularity-rate-for-biased-symmetric-sign-matrices-October-4-2026
+D684	500	The-sharp-exponential-rate-of-singularity-for-symmetric-Bernoulli-matrices-October-3-2026
+D683	499	The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026
+D682	497	The-rational-Hodge-conjecture-for-CM-abelian-varieties-September-30-2026
+D681	496	The-periodic-spin-one-Haldane-gap-September-24-2026
+
+D759	484	The-joint-Dickman-law-for-consecutive-integers-September-24-2026
+D760	485	The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-September-25-2026
+D761	486	The-l1-Bass-Conjecture-for-Discrete-Groups-October-5-2026
+
+D762	487	The-low-temperature-Sherrington-Kirkpatrick-fluctuation-scale-September-24-2026
+D763	488	The-low-temperature-Sherrington-Kirkpatrick-free-energy-limiting-law-September-24-2026
+D764	489	The-maximum-number-of-mutually-unbiased-bases-in-dimension-six-September-24-2026
+
+D765	490	The-mean-analytic-rank-of-quadratic-twists-of-elliptic-curves-September-23-2026
+D766	491	The-metric-Blaschke-theorem-September-23-2026
+D767	492	The-nonmaximal-anti-de-Sitter-Penrose-Inequality-and-original-data-rigidity-October-5-2026
+
+D768	493	The-normalized-volume-gap-in-dimension-four-September-24-2026
+D769	494	The-ordinary-double-point-gap-in-every-dimension-September-24-2026
+D770	495	The-p-adic-section-conjecture-September-24-2026

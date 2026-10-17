@@ -1,0 +1,11 @@
+anchor=center,rotate=0       box  66.70 x   8.86 pt  offsets from the point:  left  -33.35 right   33.35  top   -4.43 bottom    4.43
+anchor=east,rotate=90        box   8.86 x  66.70 pt  offsets from the point:  left   -4.43 right    4.43  top    0.20 bottom   66.89
+anchor=center,rotate=90      box   8.86 x  66.70 pt  offsets from the point:  left   -4.43 right    4.43  top  -33.35 bottom   33.35
+anchor=east,rotate=-90       box   8.86 x  66.70 pt  offsets from the point:  left   -4.43 right    4.43  top  -66.89 bottom   -0.20
+anchor=north,rotate=90       box   8.86 x  66.70 pt  offsets from the point:  left    0.20 right    9.06  top  -33.35 bottom   33.35
+anchor=west,rotate=90        box   8.86 x  66.70 pt  offsets from the point:  left   -4.43 right    4.43  top  -66.89 bottom   -0.20
+rotate=90                    box   8.86 x  66.70 pt  offsets from the point:  left   -4.43 right    4.43  top  -33.35 bottom   33.35
+anchor=south,rotate=90       box   8.86 x  66.70 pt  offsets from the point:  left   -9.06 right   -0.20  top  -33.35 bottom   33.35
+anchor=south,rotate=45       box  53.42 x  53.42 pt  offsets from the point:  left  -29.98 right   23.44  top  -29.98 bottom   23.44
+anchor=south,rotate=34       box  60.25 x  44.64 pt  offsets from the point:  left  -32.71 right   27.54  top  -26.15 bottom   18.48
+anchor=west,rotate=-63       box  38.17 x  63.45 pt  offsets from the point:  left   -3.85 right   34.32  top   -1.83 bottom   61.61

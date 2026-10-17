@@ -1,0 +1,56 @@
+anchored nodes with a NON-maths body (ratio, not #45): {'prose': 1284}
+
+anchor CARRIED into the product, maths bodies, by construct:
+  plain        3866 nodes / 373 papers
+  rowbreak      243 nodes / 112 papers
+  stackrel       31 nodes /  19 papers
+  sqrt            9 nodes /   6 papers
+  limits          8 nodes /   6 papers
+  leftright       5 nodes /   5 papers
+  frac            4 nodes /   4 papers
+
+same, split by the emitted box form:
+  plain        point       3664
+  rowbreak     point        206
+  plain        typst-box    202
+  rowbreak     typst-box     37
+  stackrel     point         25
+  sqrt         point          9
+  limits       point          7
+  stackrel     typst-box      6
+  frac         point          3
+  leftright    point          3
+  leftright    typst-box      2
+  frac         typst-box      1
+  limits       typst-box      1
+
+anchor ASKED but absent from the lines (#62's face, not #45): {}
+
+canvases holding at least one tall-maths anchored node: 154 over 129 papers
+papers: A-Charged-Reduction-of-the-Spaceti, A-Coulomb-Ground-State-Density-wit, A-Logarithmic-Independence-Bound-f, A-Negative-Solution-to-the-Finite-, A-Nonspectrahedral-Hyperbolicity-C, A-Pivotal-Amplitude-for-Voronoi-Pe, A-Polynomial-Time-2-Approximation-, A-Power-Saving-for-Polynomial-Diff, A-Torsion-Free-Group-Algebra-That-, A-boundary-field-gap-for-the-spin-, A-boundary-only-obstruction-to-fou, A-closed-Ricci-flow-with-bounded-s, A-continuum-temperature-singularit, A-counterexample-to-Kaplanskys-qua, A-counterexample-to-the-Colin-de-V, A-counterexample-to-the-nearby-Lag, A-directional-zero-one-law-for-fin, A-directional-zero-one-law-under-s, A-linear-cycle-and-edge-decomposit, A-polynomial-time-algorithm-for-th, A-polynomial-time-construction-of-, A-power-saving-for-intersective-po, A-power-saving-for-planar-halving-, A-projective-fourfold-with-large-f, A-sharp-entropy-bound-and-the-simp, A-two-dimensional-area-law-from-a-, Almost-everywhere-Fourier-converge, Almost-everywhere-regularity-of-st, An-Isolated-Particle-Pole-for-the-, An-explicit-exact-Hausdorff-gauge-, An-exponential-two-way-determinist, Approximation-Paving-over-Arbitrar, Arithmetic-Stein-degree-bounds-for, Bounded-scalar-curvature-and-smoot, Canonical-conformal-limits-of-subc, Close-Separable-Cstar-Algebras-Wit, Compatibility-entropy-and-the-spec, Computing-the-Random-3-SAT-Thresho, Conformal-universality-of-bulk-Isi, Constructible-tame-Hecke-eigenshea, Continuum-Coulomb-hardness-with-bi, Critical-Center-Magnetization-in-t, Cylinder-amplitudes-and-logarithmi, Cylinder-loop-weights-and-planar-n, Deforming-hypersymplectic-four-man, Directional-transience-implies-bal, Endpoint-convergence-for-the-plana, Entropy-equality-and-local-symmetr, Equality-cases-in-the-sharp-one-di, Equidistribution-of-Primitive-Sext, Exact-Derandomization-of-Logarithm, Exact-asymptotic-moduli-in-a-Dauga, Exponential-decay-in-two-dimension, Failure-of-Bounded-Approximation-i, Finite-cylinder-approximation-of-r, Finite-generation-for-the-Kn-local, Functional-universality-of-critica, Gaussian-free-field-limits-of-weig, Generic-C1-Future-Inextendibility-, Generic-Future-Inextendibility-wit, Hard-sphere-fluctuations-on-the-re, Infinitely-many-closed-geodesic-im, Koebes-Circle-Domain-Conjecture-Se, L1-Embeddings-of-Graphs-of-Bounded, Localization-costs-and-information, Logarithmic-Relative-Fluctuations-, Mass-and-covering-exponents-for-fi, Metric-measure-limits-of-subcritic, Midpoint-convexity-from-two-recurs, Nonsingular-systems-of-equations-o, Nonuniqueness-with-local-conservat, One-Sample-Suffices-for-Matroid-Pr, Parabolic-intersections-in-Artin-g, Perfect-completeness-for-2-to-1-ga, Pointwise-convergence-of-triple-er, Polynomial-PEPS-approximation-of-g, Positive-Metric-Entropy-for-the-St, Positive-scalar-curvature-and-unif, Pure-Point-Spectrum-for-the-Two-Di, Purely-Cosmetic-Surgery-on-Knots-i, Quantitative-Superexponential-Boun, Random-coordinate-frames-and-parti, Rational-homology-and-Quillens-con, Renewal-and-changes-of-law-for-cri, Row-column-symmetry-and-contractio, SLE3-universality-for-weak-finite-, Scalar-Potentials-and-Slow-Clocks-, Self-dual-random-cluster-interface, Semialgebraic-universal-covers-of-, Sharp-binary-information-contracti, Sharp-mass-bounds-for-the-two-dime, Signed-tensor-densities-and-diagra, Single-fold-Diophantine-representa, Smooth-Anisotropic-Uniqueness-in-t, Spontaneous-magnetization-in-the-q, Square-lattice-FK-interfaces-and-n, Strict-convexity-and-differentiabi, Strong-Ulam-Stability-Characterize, Strong-diffeomorphic-approximation, Strong-diffeomorphic-approximation, Subpolynomial-dimension-reduction-, Tame-Hecke-Eigensheaves-with-Sever, Tensor-Saturation-for-Even-Spin-Gr, The-Blockwise-Alperin-Weight-Conje, The-Deligne-Drinfeld-conjecture-Se, The-Gaussian-Propeller-Bound-in-Ev, The-Gaussian-free-field-limit-of-i, The-Sharp-Terminal-Leave-in-Random, The-Strong-Hyperkahler-SYZ-Conject, The-critical-Liouville-quantum-sph, The-crossing-number-of-complete-bi, The-dyadic-case-of-the-Erdos-simil, The-higher-dimensional-Erdos-disti, The-joint-scaling-limit-of-critica, The-metric-Blaschke-theorem-Septem, The-second-Kahn-Kalai-conjecture-S, The-sharp-singularity-rate-for-bia, The-spacetime-Penrose-inequality-a, Two-step-monodromy-of-special-quas, Unconditional-time-lower-bounds-fo, Uniform-Interior-C1alpha-Estimates, Uniform-Stability-of-the-Spherical, Uniform-computation-of-the-squared, Uniform-quasipolynomial-time-trace, Universal-optimality-of-the-triang, Virtual-compact-specialness-of-hyp, Weighted-Dilation-Graphs-Smooth-Sh, the-additive-indecomposability-of-, uniform-bounds-for-planar-polynomi
+
+  frac        A-Nonspectrahedral-Hyperbolicity-Cone- p0 anchor: "west": $\displaystyle u_s=\frac{v+sh}{\sqrt{1+s^2\|h\|^2}},
+      \qquad u_{s=0}=v,\quad \left.\frac{du_s}{ds}\right|
+  frac        A-closed-Ricci-flow-with-bounded-scala p0 anchor: "west": $R_c'(t)=-\dfrac{q-1}{R_c(t)}$
+  leftright   A-Nonspectrahedral-Hyperbolicity-Cone- p0 anchor: "west": $\displaystyle u_s=\frac{v+sh}{\sqrt{1+s^2\|h\|^2}},
+      \qquad u_{s=0}=v,\quad \left.\frac{du_s}{ds}\right|
+  leftright   Failure-of-Bounded-Approximation-in-a- p0 anchor: "south": $2R+\left\|v-w\right\|_\infty$
+  limits      Almost-everywhere-Fourier-convergence- p0 anchor: "west": $\displaystyle\sum_k(U_k-V_k)\le P$
+  limits      Almost-everywhere-Fourier-convergence- p0 anchor: "west": $\displaystyle\sum_{\text{macroblock skips}}P\le1$
+  rowbreak    A-Charged-Reduction-of-the-Spacetime-P p0 anchor: "north-west": \textbf{Added region}\\
+      No energy condition imposed.\\
+      $\widetilde\alpha$ supported in fixed inner
+  rowbreak    A-Charged-Reduction-of-the-Spacetime-P p0 anchor: "north-west": \textbf{Original exterior}\\
+      $\widetilde\alpha$ is closed.\quad
+      On $S$: $|h|>b_2>2b_3$.\\
+      At
+  sqrt        A-Charged-Reduction-of-the-Spacetime-P p1 anchor: "south": On $\Omega^\circ$: $W=u^2-|X|_g^2>0$,\quad $\lambda=\sqrt W$.
+  sqrt        A-Coulomb-Ground-State-Density-without p0 anchor: "north": $\sqrt{n(p,0)}\gtrsim\lambda A(p)p^{-4}$
+  stackrel    A-Charged-Reduction-of-the-Spacetime-P p0 anchor: "north-west": \textbf{Added region}\\
+      No energy condition imposed.\\
+      $\widetilde\alpha$ supported in fixed inner
+  stackrel    A-Charged-Reduction-of-the-Spacetime-P p0 anchor: "north-west": \textbf{Original exterior}\\
+      $\widetilde\alpha$ is closed.\quad
+      On $S$: $|h|>b_2>2b_3$.\\
+      At
+canvases that do not build (not counted): 1

@@ -1,0 +1,618 @@
+checking 56 C notes
+=== C01-有理连通流形与Ricci曲率半正性.md
+   bytes=39609 lines=180 CR=0
+   title=Y heads=9 nums=0..8 contig0=True
+   spec: head0=Y K=8(5-15) seam=Y
+   dollar=1148(even) odd_lines=0 btick=256(even)
+   math: spans=556 disp=18 bytes=13319 share=33.6% stmt_lines=12
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1210.2092 texfiles=1 poscites=99 bad=0
+=== C02-Enriques曲面引论.md
+   bytes=49734 lines=143 CR=0
+   title=Y heads=8 nums=0..7 contig0=True
+   spec: head0=Y K=7(5-15) seam=Y
+   dollar=1898(even) odd_lines=0 btick=352(even)
+   math: spans=939 disp=10 bytes=16569 share=33.3% stmt_lines=1
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1412.7744 texfiles=1 poscites=124 bad=0
+=== C03-反典范丛nef的簇的非消灭问题.md
+   bytes=82503 lines=518 CR=0
+   title=Y heads=10 nums=0..9 contig0=True
+   spec: head0=Y K=9(5-15) seam=Y
+   dollar=2944(even) odd_lines=0 btick=874(even)
+   math: spans=1418 disp=54 bytes=29220 share=35.4% stmt_lines=39
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/2202.13814 texfiles=1 poscites=248 bad=0
+=== C04-关于反典范丛的两条非消灭结果.md
+   bytes=63112 lines=388 CR=0
+   title=Y heads=9 nums=0..8 contig0=True
+   spec: head0=Y K=8(5-15) seam=Y
+   dollar=1672(even) odd_lines=0 btick=456(even)
+   math: spans=806 disp=30 bytes=15809 share=25.0% stmt_lines=22
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=2 rows=16 badpipe=0
+   material=被引素材/2305.19109 texfiles=1 poscites=135 bad=0
+=== C05-反典范丛半正的紧Kähler曲面.md
+   bytes=69448 lines=255 CR=0
+   title=Y heads=10 nums=0..9 contig0=True
+   spec: head0=Y K=9(5-15) seam=Y
+   dollar=2370(even) odd_lines=0 btick=662(even)
+   math: spans=1161 disp=24 bytes=23764 share=34.2% stmt_lines=15
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/2609.26716 texfiles=1 poscites=270 bad=0
+=== C06-紧Kähler流形上的伪有效线丛.md
+   bytes=47649 lines=217 CR=0
+   title=Y heads=10 nums=0..9 contig0=True
+   spec: head0=Y K=9(5-15) seam=Y
+   dollar=1376(even) odd_lines=0 btick=402(even)
+   math: spans=668 disp=20 bytes=9979 share=20.9% stmt_lines=19
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/math_0006205 texfiles=1 poscites=124 bad=0
+=== C07-切向量层的一般nef性.md
+   bytes=67996 lines=604 CR=0
+   title=Y heads=9 nums=0..8 contig0=True
+   spec: head0=Y K=8(5-15) seam=Y
+   dollar=2120(even) odd_lines=0 btick=936(even)
+   math: spans=986 disp=69 bytes=17020 share=25.0% stmt_lines=49
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1703.03175 texfiles=1 poscites=234 bad=0
+=== C08-有理多面体Ehrhart准多项式最高系数计算.md
+   bytes=34116 lines=179 CR=0
+   title=Y heads=9 nums=0..8 contig0=True
+   spec: head0=Y K=8(5-15) seam=Y
+   dollar=936(even) odd_lines=0 btick=314(even)
+   math: spans=445 disp=23 bytes=14654 share=43.0% stmt_lines=6
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=1 rows=11 badpipe=0
+   material=被引素材/1011.1602 texfiles=1 poscites=89 bad=0
+=== C09-Kollár-Nadel型消没定理.md
+   bytes=51959 lines=393 CR=0
+   title=Y heads=9 nums=0..8 contig0=True
+   spec: head0=Y K=8(5-15) seam=Y
+   dollar=1498(even) odd_lines=0 btick=526(even)
+   math: spans=692 disp=56 bytes=16099 share=31.0% stmt_lines=5
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1607.04684 texfiles=1 poscites=183 bad=0
+=== C10-紧Kähler流形的伪有效锥与负Kodaira维.md
+   bytes=35910 lines=193 CR=0
+   title=Y heads=9 nums=0..8 contig0=True
+   spec: head0=Y K=8(5-15) seam=Y
+   dollar=1214(even) odd_lines=0 btick=286(even)
+   math: spans=600 disp=7 bytes=13456 share=37.5% stmt_lines=3
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/math_0405285 texfiles=1 poscites=70 bad=0
+=== C11-Bergman核与相对典范丛伪有效性.md
+   bytes=53088 lines=458 CR=0
+   title=Y heads=10 nums=0..9 contig0=True
+   spec: head0=Y K=9(5-15) seam=Y
+   dollar=2324(even) odd_lines=0 btick=326(even)
+   math: spans=1134 disp=28 bytes=15398 share=29.0% stmt_lines=18
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=2 rows=35 badpipe=0
+   material=被引素材/math_0703344 texfiles=1 poscites=66 bad=0
+=== C12-可动曲线与半稳定层.md
+   bytes=59866 lines=322 CR=0
+   title=Y heads=10 nums=0..9 contig0=True
+   spec: head0=Y K=9(5-15) seam=Y
+   dollar=1680(even) odd_lines=0 btick=574(even)
+   math: spans=800 disp=40 bytes=23724 share=39.6% stmt_lines=5
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1408.4308 texfiles=1 poscites=190 bad=0
+=== C13-约化群的Białynicki-Birula分解.md
+   bytes=30868 lines=230 CR=0
+   title=Y heads=7 nums=0..6 contig0=True
+   spec: head0=Y K=6(5-15) seam=Y
+   dollar=998(even) odd_lines=0 btick=228(even)
+   math: spans=471 disp=14 bytes=12607 share=40.8% stmt_lines=41
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1805.11558 texfiles=1 poscites=58 bad=0
+=== C14-拟有效线丛的消没定理.md
+   bytes=39446 lines=477 CR=0
+   title=Y heads=8 nums=0..7 contig0=True
+   spec: head0=Y K=7(5-15) seam=Y
+   dollar=1290(even) odd_lines=0 btick=280(even)
+   math: spans=501 disp=72 bytes=10173 share=25.8% stmt_lines=32
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/2602.13821 texfiles=1 poscites=36 bad=0
+=== C15-极小模型程序的新视角第二部分.md
+   bytes=44588 lines=211 CR=0
+   title=Y heads=10 nums=0..9 contig0=True
+   spec: head0=Y K=9(5-15) seam=Y
+   dollar=1324(even) odd_lines=0 btick=308(even)
+   math: spans=638 disp=12 bytes=14044 share=31.5% stmt_lines=10
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1005.0614 texfiles=1 poscites=113 bad=0
+=== C16-极小模型纲领的新视角 一.md
+   bytes=70681 lines=565 CR=0
+   title=Y heads=8 nums=0..7 contig0=True
+   spec: head0=Y K=7(5-15) seam=Y
+   dollar=3354(even) odd_lines=0 btick=500(even)
+   math: spans=1562 disp=115 bytes=40096 share=56.7% stmt_lines=16
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1009.3188 texfiles=8 poscites=99 bad=0
+=== C17-nef 反典范丛射影流形分解定理.md
+   bytes=51554 lines=424 CR=0
+   title=Y heads=10 nums=0..9 contig0=True
+   spec: head0=Y K=9(5-15) seam=Y
+   dollar=2302(even) odd_lines=0 btick=648(even)
+   math: spans=1087 disp=64 bytes=25802 share=50.0% stmt_lines=16
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1706.08814 texfiles=1 poscites=77 bad=0
+=== C18-nef反典范除子的射影klt对结构定理.md
+   bytes=22496 lines=212 CR=0
+   title=Y heads=7 nums=0..6 contig0=True
+   spec: head0=Y K=6(5-15) seam=Y
+   dollar=718(even) odd_lines=0 btick=82(even)
+   math: spans=354 disp=5 bytes=4748 share=21.1% stmt_lines=31
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/2105.14308 texfiles=1 poscites=38 bad=0
+=== C19-Kähler广义对的BBY分解.md
+   bytes=41271 lines=195 CR=0
+   title=Y heads=10 nums=0..9 contig0=True
+   spec: head0=Y K=9(5-15) seam=Y
+   dollar=1350(even) odd_lines=0 btick=12(even)
+   math: spans=658 disp=17 bytes=12435 share=30.1% stmt_lines=19
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/2506.23218 texfiles=1 poscites=76 bad=0
+=== C20-矩矩阵的稀疏平坦扩张定理.md
+   bytes=26297 lines=206 CR=0
+   title=Y heads=8 nums=0..7 contig0=True
+   spec: head0=Y K=7(5-15) seam=Y
+   dollar=882(even) odd_lines=0 btick=10(even)
+   math: spans=414 disp=25 bytes=12417 share=47.2% stmt_lines=9
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/0812.2563 texfiles=1 poscites=60 bad=0
+=== C21-伪有效除子的数值平凡与拉回.md
+   bytes=29633 lines=260 CR=0
+   title=Y heads=9 nums=0..8 contig0=True
+   spec: head0=Y K=8(5-15) seam=Y
+   dollar=1498(even) odd_lines=0 btick=28(even)
+   math: spans=720 disp=27 bytes=8417 share=28.4% stmt_lines=36
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1109.4382 texfiles=1 poscites=59 bad=0
+=== C22-薄壳蕴含谱隙至多对数因子.md
+   bytes=27767 lines=400 CR=0
+   title=Y heads=8 nums=0..7 contig0=True
+   spec: head0=Y K=7(5-15) seam=Y
+   dollar=950(even) odd_lines=0 btick=218(even)
+   math: spans=413 disp=31 bytes=9590 share=34.5% stmt_lines=4
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1203.0893 texfiles=1 poscites=81 bad=0
+=== C23-枚举图中的独立集.md
+   bytes=23517 lines=366 CR=0
+   title=Y heads=7 nums=0..6 contig0=True
+   spec: head0=Y K=6(5-15) seam=Y
+   dollar=884(even) odd_lines=0 btick=212(even)
+   math: spans=388 disp=27 bytes=6442 share=27.4% stmt_lines=5
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1412.0940 texfiles=1 poscites=63 bad=0
+=== C24-Kollár-Ohsawa型消没定理.md
+   bytes=61840 lines=660 CR=0
+   title=Y heads=7 nums=0..6 contig0=True
+   spec: head0=Y K=6(5-15) seam=Y
+   dollar=1992(even) odd_lines=0 btick=580(even)
+   math: spans=882 disp=85 bytes=24420 share=39.5% stmt_lines=11
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1511.04222 texfiles=1 poscites=204 bad=0
+=== C25-最小化赋值的正规化体积.md
+   bytes=28227 lines=276 CR=0
+   title=Y heads=10 nums=0..9 contig0=True
+   spec: head0=Y K=9(5-15) seam=Y
+   dollar=1044(even) odd_lines=0 btick=352(even)
+   math: spans=484 disp=38 bytes=14247 share=50.5% stmt_lines=3
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1511.08164 texfiles=1 poscites=101 bad=0
+=== C26-典范层直接像分解定理附半正向量丛之注记.md
+   bytes=22962 lines=244 CR=0
+   title=Y heads=15 nums=0..14 contig0=True
+   spec: head0=Y K=14(5-15) seam=Y
+   dollar=634(even) odd_lines=0 btick=286(even)
+   math: spans=290 disp=27 bytes=6612 share=28.8% stmt_lines=0
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1512.03887 texfiles=1 poscites=58 bad=0
+=== C27-Fano簇上的反典范系统.md
+   bytes=33948 lines=230 CR=0
+   title=Y heads=13 nums=0..12 contig0=True
+   spec: head0=Y K=12(5-15) seam=Y
+   dollar=1722(even) odd_lines=0 btick=692(even)
+   math: spans=854 disp=7 bytes=10290 share=30.3% stmt_lines=3
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1603.05765 texfiles=1 poscites=140 bad=0
+=== C28-伪有效线丛的注入定理及其应用.md
+   bytes=56784 lines=487 CR=0
+   title=Y heads=8 nums=0..7 contig0=True
+   spec: head0=Y K=7(5-15) seam=Y
+   dollar=1914(even) odd_lines=0 btick=270(even)
+   math: spans=863 disp=94 bytes=30980 share=54.6% stmt_lines=62
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1605.02284 texfiles=1 poscites=120 bad=0
+=== C29-正规化体积最小化赋值的存在性.md
+   bytes=55730 lines=544 CR=0
+   title=Y heads=12 nums=0..11 contig0=True
+   spec: head0=Y K=11(5-15) seam=Y
+   dollar=1926(even) odd_lines=0 btick=348(even)
+   math: spans=866 disp=97 bytes=31449 share=56.4% stmt_lines=61
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1606.08894 texfiles=1 poscites=125 bad=0
+=== C30-线性系的奇点与Fano簇的有界性.md
+   bytes=77114 lines=257 CR=0
+   title=Y heads=8 nums=0..7 contig0=True
+   spec: head0=Y K=7(5-15) seam=Y
+   dollar=4174(even) odd_lines=0 btick=974(even)
+   math: spans=2085 disp=2 bytes=28406 share=36.8% stmt_lines=6
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1609.05543 texfiles=1 poscites=164 bad=0
+=== C31-非约化解析空间上同调类的推广延拓定理.md
+   bytes=33268 lines=216 CR=0
+   title=Y heads=6 nums=0..5 contig0=True
+   spec: head0=Y K=5(5-15) seam=Y
+   dollar=1056(even) odd_lines=0 btick=242(even)
+   math: spans=464 disp=62 bytes=17100 share=51.4% stmt_lines=4
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1703.00292 texfiles=1 poscites=99 bad=0
+=== C32-K-半稳定性高有理秩的极小估值.md
+   bytes=28889 lines=119 CR=0
+   title=Y heads=7 nums=0..6 contig0=True
+   spec: head0=Y K=6(5-15) seam=Y
+   dollar=966(even) odd_lines=0 btick=262(even)
+   math: spans=473 disp=9 bytes=11640 share=40.3% stmt_lines=1
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1707.05561 texfiles=1 poscites=110 bad=0
+=== C33-求解均值支付奇偶博弈的伪准多项式算法.md
+   bytes=26973 lines=123 CR=0
+   title=Y heads=7 nums=0..6 contig0=True
+   spec: head0=Y K=6(5-15) seam=Y
+   dollar=876(even) odd_lines=0 btick=242(even)
+   math: spans=429 disp=9 bytes=7202 share=26.7% stmt_lines=3
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1803.04756 texfiles=7 poscites=78 bad=0
+=== C34-多重调和函数Kiselman最小值原理新证.md
+   bytes=47253 lines=544 CR=0
+   title=Y heads=16 nums=0..15 contig0=True
+   spec: head0=Y K=15(5-15) seam=Y
+   dollar=1430(even) odd_lines=0 btick=592(even)
+   math: spans=683 disp=32 bytes=13063 share=27.6% stmt_lines=11
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1810.12733 texfiles=1 poscites=188 bad=0
+=== C35-最小化赋值是准单项的.md
+   bytes=29260 lines=348 CR=0
+   title=Y heads=10 nums=0..9 contig0=True
+   spec: head0=Y K=9(5-15) seam=Y
+   dollar=966(even) odd_lines=0 btick=392(even)
+   math: spans=470 disp=13 bytes=11866 share=40.6% stmt_lines=10
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/1907.01114 texfiles=1 poscites=13 bad=0
+=== C36-正规化体积函数极小者的唯一性.md
+   bytes=31074 lines=364 CR=0
+   title=Y heads=9 nums=0..8 contig0=True
+   spec: head0=Y K=8(5-15) seam=Y
+   dollar=860(even) odd_lines=0 btick=388(even)
+   math: spans=406 disp=24 bytes=15130 share=48.7% stmt_lines=8
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/2005.08303 texfiles=1 poscites=71 bad=0
+=== C37-极化簇的几何.md
+   bytes=28244 lines=273 CR=0
+   title=Y heads=10 nums=0..9 contig0=True
+   spec: head0=Y K=9(5-15) seam=Y
+   dollar=1390(even) odd_lines=0 btick=280(even)
+   math: spans=647 disp=24 bytes=6329 share=22.4% stmt_lines=8
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/2006.11238 texfiles=1 poscites=109 bad=0
+=== C38-Hadwiger猜想蕴含FGS猜想.md
+   bytes=22670 lines=247 CR=0
+   title=Y heads=8 nums=0..7 contig0=True
+   spec: head0=Y K=7(5-15) seam=Y
+   dollar=872(even) odd_lines=0 btick=146(even)
+   math: spans=384 disp=26 bytes=4788 share=21.1% stmt_lines=7
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/2108.10303 texfiles=1 poscites=56 bad=0
+=== C39-快速值迭代与能量博弈的统一算法框架.md
+   bytes=31926 lines=234 CR=0
+   title=Y heads=8 nums=0..7 contig0=True
+   spec: head0=Y K=7(5-15) seam=Y
+   dollar=744(even) odd_lines=0 btick=392(even)
+   math: spans=330 disp=21 bytes=7182 share=22.5% stmt_lines=2
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/2110.07346 texfiles=17 poscites=95 bad=0
+=== C40-奇点的稳定退化.md
+   bytes=46439 lines=187 CR=0
+   title=Y heads=8 nums=0..7 contig0=True
+   spec: head0=Y K=7(5-15) seam=Y
+   dollar=1554(even) odd_lines=0 btick=244(even)
+   math: spans=740 disp=36 bytes=20315 share=43.7% stmt_lines=11
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/2205.10915 texfiles=1 poscites=74 bad=0
+=== C41-确定性折扣与平均支付博弈的平滑分析.md
+   bytes=109215 lines=915 CR=0
+   title=Y heads=10 nums=0..9 contig0=True
+   spec: head0=Y K=9(5-15) seam=Y
+   dollar=2646(even) odd_lines=1 btick=720(even)
+      odd$ L874 c=1
+   math: spans=1101 disp=109 bytes=21472 share=19.7% stmt_lines=22
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/2402.03975 texfiles=10 poscites=132 bad=0
+=== C42-独立数为2的图中的线性稠密匹配.md
+   bytes=98693 lines=862 CR=0
+   title=Y heads=8 nums=0..7 contig0=True
+   spec: head0=Y K=7(5-15) seam=Y
+   dollar=3303(ODD) odd_lines=0 btick=636(even)
+   math: spans=1455 disp=96 bytes=23179 share=23.5% stmt_lines=13
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/2512.01401 texfiles=1 poscites=67 bad=0
+=== C43-均值支付博弈的对称递归算法.md
+   bytes=42858 lines=331 CR=0
+   title=Y heads=8 nums=0..7 contig0=True
+   spec: head0=Y K=7(5-15) seam=Y
+   dollar=1838(even) odd_lines=0 btick=392(even)
+   math: spans=865 disp=27 bytes=10145 share=23.7% stmt_lines=4
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=1 rows=6 badpipe=0
+   material=被引素材/2603.07555 texfiles=3 poscites=106 bad=0
+=== C44-随机动作删除算法的亚指数分析改进.md
+   bytes=45883 lines=500 CR=0
+   title=Y heads=8 nums=0..7 contig0=True
+   spec: head0=Y K=7(5-15) seam=Y
+   dollar=1378(even) odd_lines=0 btick=336(even)
+   math: spans=573 disp=58 bytes=10274 share=22.4% stmt_lines=9
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=1 rows=7 badpipe=0
+   material=被引素材/2607.06334 texfiles=2 poscites=134 bad=0
+=== C45-随机k-SAT的缩放窗口.md
+   bytes=65397 lines=733 CR=0
+   title=Y heads=10 nums=0..9 contig0=True
+   spec: head0=Y K=9(5-15) seam=Y
+   dollar=2526(even) odd_lines=0 btick=320(even)
+   math: spans=1019 disp=122 bytes=14826 share=22.7% stmt_lines=23
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/2609.26222 texfiles=1 poscites=117 bad=0
+=== C46-ample线丛的局部正性.md
+   bytes=28863 lines=161 CR=0
+   title=Y heads=7 nums=0..6 contig0=True
+   spec: head0=Y K=6(5-15) seam=Y
+   dollar=1162(even) odd_lines=0 btick=278(even)
+   math: spans=562 disp=19 bytes=11180 share=38.7% stmt_lines=10
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/alg_geom_9408003 texfiles=1 poscites=79 bad=0
+=== C47-随机k-SAT的临界指数.md
+   bytes=27200 lines=171 CR=0
+   title=Y heads=8 nums=0..7 contig0=True
+   spec: head0=Y K=7(5-15) seam=Y
+   dollar=930(even) odd_lines=0 btick=296(even)
+   math: spans=443 disp=22 bytes=9232 share=33.9% stmt_lines=8
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/math_0005136 texfiles=2 poscites=115 bad=0
+=== C48-nef线丛的约化映射.md
+   bytes=23051 lines=142 CR=0
+   title=Y heads=7 nums=0..6 contig0=True
+   spec: head0=Y K=6(5-15) seam=Y
+   dollar=842(even) odd_lines=0 btick=268(even)
+   math: spans=406 disp=15 bytes=5651 share=24.5% stmt_lines=8
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/math_0106147 texfiles=1 poscites=76 bad=0
+=== C49-Ricci流的熵公式及其几何应用.md
+   bytes=65572 lines=860 CR=0
+   title=Y heads=10 nums=0..9 contig0=True
+   spec: head0=Y K=9(5-15) seam=Y
+   dollar=2566(even) odd_lines=0 btick=440(even)
+   math: spans=1047 disp=118 bytes=17036 share=26.0% stmt_lines=19
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=2 rows=3 badpipe=0
+   material=被引素材/math_0211159 texfiles=1 poscites=164 bad=0
+=== C50-lc平凡纤维化的模b除子.md
+   bytes=73774 lines=685 CR=0
+   title=Y heads=9 nums=0..8 contig0=True
+   spec: head0=Y K=8(5-15) seam=Y
+   dollar=2288(even) odd_lines=0 btick=578(even)
+   math: spans=1068 disp=76 bytes=24418 share=33.1% stmt_lines=34
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=1 rows=8 badpipe=0
+   material=被引素材/math_0308143 texfiles=1 poscites=228 bad=0
+=== C51-加权Bergman空间与共形映射积分均值谱.md
+   bytes=126138 lines=1144 CR=0
+   title=Y heads=8 nums=0..7 contig0=True
+   spec: head0=Y K=7(5-15) seam=Y
+   dollar=3676(even) odd_lines=0 btick=1050(even)
+   math: spans=1640 disp=198 bytes=64787 share=51.4% stmt_lines=43
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=4 rows=72 badpipe=0
+   material=被引素材/math_0406345 texfiles=1 poscites=358 bad=0
+=== C53-Picard概形.md
+   bytes=33196 lines=567 CR=0
+   title=Y heads=9 nums=0..8 contig0=True
+   spec: head0=Y K=8(5-15) seam=Y
+   dollar=1260(even) odd_lines=0 btick=248(even)
+   math: spans=577 disp=34 bytes=10898 share=32.8% stmt_lines=30
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/math_0504020 texfiles=1 poscites=51 bad=0
+=== C54-全纯纤维化向量丛的曲率.md
+   bytes=30140 lines=539 CR=0
+   title=Y heads=9 nums=0..8 contig0=True
+   spec: head0=Y K=8(5-15) seam=Y
+   dollar=1324(even) odd_lines=0 btick=212(even)
+   math: spans=582 disp=52 bytes=9411 share=31.2% stmt_lines=19
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/math_0511225 texfiles=1 poscites=49 bad=0
+=== C55-对数典范性的伴随反演.md
+   bytes=22426 lines=395 CR=0
+   title=Y heads=9 nums=0..8 contig0=True
+   spec: head0=Y K=8(5-15) seam=Y
+   dollar=1002(even) odd_lines=0 btick=150(even)
+   math: spans=472 disp=17 bytes=7728 share=34.5% stmt_lines=14
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/math_0511254 texfiles=1 poscites=43 bad=0
+=== C56-对数一般型簇的极小模型存在性.md
+   bytes=22381 lines=146 CR=0
+   title=Y heads=9 nums=0..8 contig0=True
+   spec: head0=Y K=8(5-15) seam=Y
+   dollar=1006(even) odd_lines=0 btick=44(even)
+   math: spans=491 disp=6 bytes=6781 share=30.3% stmt_lines=2
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/math_0610203 texfiles=1 poscites=54 bad=0
+=== C57-扩张三角剖分与半稳定约化.md
+   bytes=22392 lines=137 CR=0
+   title=Y heads=8 nums=0..7 contig0=True
+   spec: head0=Y K=7(5-15) seam=Y
+   dollar=730(even) odd_lines=0 btick=110(even)
+   math: spans=349 disp=8 bytes=5806 share=25.9% stmt_lines=3
+   bans=none
+   refcite=0
+   toolwords=0
+   tables=0 rows=0 badpipe=0
+   material=被引素材/math_9804058 texfiles=1 poscites=49 bad=0

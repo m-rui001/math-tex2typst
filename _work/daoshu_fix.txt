@@ -1,0 +1,31 @@
+fixed total=29 files=27
+D106 n=1 lines=[2692] size=215483
+D111 n=2 lines=[562, 617] size=121417
+D200 n=1 lines=[168] size=84550
+D211 n=2 lines=[207, 243] size=72708
+D225 n=1 lines=[290] size=155673
+D25 n=1 lines=[2081] size=399702
+D28 n=1 lines=[55] size=151904
+D300 n=1 lines=[235] size=78019
+D333 n=1 lines=[28] size=91940
+D347 n=1 lines=[176] size=88779
+D388 n=1 lines=[323] size=83192
+D389 n=1 lines=[277] size=71611
+D417 n=1 lines=[36] size=71149
+D441 n=1 lines=[55] size=108078
+D477 n=1 lines=[69] size=70912
+D502 n=1 lines=[125] size=102191
+D525 n=1 lines=[48] size=73148
+D609 n=1 lines=[42] size=70206
+D644 n=1 lines=[95] size=74157
+D66 n=1 lines=[44] size=80304
+D695 n=1 lines=[52] size=73678
+D712 n=1 lines=[447] size=73561
+D728 n=1 lines=[359] size=70838
+D752 n=1 lines=[127] size=72623
+D755 n=1 lines=[298] size=75479
+D84 n=1 lines=[157] size=218231
+D95 n=1 lines=[158] size=218577
+remaining BAD corpus-wide=0
+legit GOOD corpus-wide=40
+banned SRC corpus-wide=0

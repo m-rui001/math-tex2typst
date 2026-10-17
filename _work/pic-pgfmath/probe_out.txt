@@ -1,0 +1,364 @@
+======================================================================
+Critical-strip-crossing-mass-on-the-honeycomb-lattice-September-26-2026#1
+STOPPED at ifnum
+ifnum site: '\\ifnum0=1 \\draw[very thick] (-.25,0)--(-.25,1);\\fi\n \\ifnum0='
+  lhs: 0.0 next char: '='
+ifnum site: '\\ifnum0=2 \\draw[very thick] (.25,0)--(.25,1);\\fi\n \\ifnum0=3 '
+  lhs: 0.0 next char: '='
+ifnum site: '\\ifnum0=3 \\draw[very thick] (-.25,0)--(.25,1);\\fi\n \\ifnum0=4'
+  lhs: 0.0 next char: '='
+ifnum site: '\\ifnum0=4 \\draw[very thick] (.25,0)--(-.25,1);\\fi\n \\ifnum0=5'
+  lhs: 0.0 next char: '='
+ifnum site: '\\ifnum0=5 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 0.0 next char: '='
+ifnum site: '\\ifnum0=6 \\draw[very thick] (-.25,1) .. controls (-.25,.55) '
+  lhs: 0.0 next char: '='
+ifnum site: '\\ifnum0=7 \\draw[very thick] (-.25,0)--(-.25,1) (.25,0)--(.25'
+  lhs: 0.0 next char: '='
+ifnum site: '\\ifnum0=8 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 0.0 next char: '='
+ifnum site: '\\ifnum1=1 \\draw[very thick] (-.25,0)--(-.25,1);\\fi\n \\ifnum1='
+  lhs: 1.0 next char: '='
+ifnum site: '\\ifnum1=2 \\draw[very thick] (.25,0)--(.25,1);\\fi\n \\ifnum1=3 '
+  lhs: 1.0 next char: '='
+ifnum site: '\\ifnum1=3 \\draw[very thick] (-.25,0)--(.25,1);\\fi\n \\ifnum1=4'
+  lhs: 1.0 next char: '='
+ifnum site: '\\ifnum1=4 \\draw[very thick] (.25,0)--(-.25,1);\\fi\n \\ifnum1=5'
+  lhs: 1.0 next char: '='
+ifnum site: '\\ifnum1=5 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 1.0 next char: '='
+ifnum site: '\\ifnum1=6 \\draw[very thick] (-.25,1) .. controls (-.25,.55) '
+  lhs: 1.0 next char: '='
+ifnum site: '\\ifnum1=7 \\draw[very thick] (-.25,0)--(-.25,1) (.25,0)--(.25'
+  lhs: 1.0 next char: '='
+ifnum site: '\\ifnum1=8 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 1.0 next char: '='
+ifnum site: '\\ifnum2=1 \\draw[very thick] (-.25,0)--(-.25,1);\\fi\n \\ifnum2='
+  lhs: 2.0 next char: '='
+ifnum site: '\\ifnum2=2 \\draw[very thick] (.25,0)--(.25,1);\\fi\n \\ifnum2=3 '
+  lhs: 2.0 next char: '='
+ifnum site: '\\ifnum2=3 \\draw[very thick] (-.25,0)--(.25,1);\\fi\n \\ifnum2=4'
+  lhs: 2.0 next char: '='
+ifnum site: '\\ifnum2=4 \\draw[very thick] (.25,0)--(-.25,1);\\fi\n \\ifnum2=5'
+  lhs: 2.0 next char: '='
+ifnum site: '\\ifnum2=5 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 2.0 next char: '='
+ifnum site: '\\ifnum2=6 \\draw[very thick] (-.25,1) .. controls (-.25,.55) '
+  lhs: 2.0 next char: '='
+ifnum site: '\\ifnum2=7 \\draw[very thick] (-.25,0)--(-.25,1) (.25,0)--(.25'
+  lhs: 2.0 next char: '='
+ifnum site: '\\ifnum2=8 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 2.0 next char: '='
+ifnum site: '\\ifnum3=1 \\draw[very thick] (-.25,0)--(-.25,1);\\fi\n \\ifnum3='
+  lhs: 3.0 next char: '='
+ifnum site: '\\ifnum3=2 \\draw[very thick] (.25,0)--(.25,1);\\fi\n \\ifnum3=3 '
+  lhs: 3.0 next char: '='
+ifnum site: '\\ifnum3=3 \\draw[very thick] (-.25,0)--(.25,1);\\fi\n \\ifnum3=4'
+  lhs: 3.0 next char: '='
+ifnum site: '\\ifnum3=4 \\draw[very thick] (.25,0)--(-.25,1);\\fi\n \\ifnum3=5'
+  lhs: 3.0 next char: '='
+ifnum site: '\\ifnum3=5 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 3.0 next char: '='
+ifnum site: '\\ifnum3=6 \\draw[very thick] (-.25,1) .. controls (-.25,.55) '
+  lhs: 3.0 next char: '='
+ifnum site: '\\ifnum3=7 \\draw[very thick] (-.25,0)--(-.25,1) (.25,0)--(.25'
+  lhs: 3.0 next char: '='
+ifnum site: '\\ifnum3=8 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 3.0 next char: '='
+ifnum site: '\\ifnum4=1 \\draw[very thick] (-.25,0)--(-.25,1);\\fi\n \\ifnum4='
+  lhs: 4.0 next char: '='
+ifnum site: '\\ifnum4=2 \\draw[very thick] (.25,0)--(.25,1);\\fi\n \\ifnum4=3 '
+  lhs: 4.0 next char: '='
+ifnum site: '\\ifnum4=3 \\draw[very thick] (-.25,0)--(.25,1);\\fi\n \\ifnum4=4'
+  lhs: 4.0 next char: '='
+ifnum site: '\\ifnum4=4 \\draw[very thick] (.25,0)--(-.25,1);\\fi\n \\ifnum4=5'
+  lhs: 4.0 next char: '='
+ifnum site: '\\ifnum4=5 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 4.0 next char: '='
+ifnum site: '\\ifnum4=6 \\draw[very thick] (-.25,1) .. controls (-.25,.55) '
+  lhs: 4.0 next char: '='
+ifnum site: '\\ifnum4=7 \\draw[very thick] (-.25,0)--(-.25,1) (.25,0)--(.25'
+  lhs: 4.0 next char: '='
+ifnum site: '\\ifnum4=8 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 4.0 next char: '='
+ifnum site: '\\ifnum5=1 \\draw[very thick] (-.25,0)--(-.25,1);\\fi\n \\ifnum5='
+  lhs: 5.0 next char: '='
+ifnum site: '\\ifnum5=2 \\draw[very thick] (.25,0)--(.25,1);\\fi\n \\ifnum5=3 '
+  lhs: 5.0 next char: '='
+ifnum site: '\\ifnum5=3 \\draw[very thick] (-.25,0)--(.25,1);\\fi\n \\ifnum5=4'
+  lhs: 5.0 next char: '='
+ifnum site: '\\ifnum5=4 \\draw[very thick] (.25,0)--(-.25,1);\\fi\n \\ifnum5=5'
+  lhs: 5.0 next char: '='
+ifnum site: '\\ifnum5=5 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 5.0 next char: '='
+ifnum site: '\\ifnum5=6 \\draw[very thick] (-.25,1) .. controls (-.25,.55) '
+  lhs: 5.0 next char: '='
+ifnum site: '\\ifnum5=7 \\draw[very thick] (-.25,0)--(-.25,1) (.25,0)--(.25'
+  lhs: 5.0 next char: '='
+ifnum site: '\\ifnum5=8 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 5.0 next char: '='
+ifnum site: '\\ifnum6=1 \\draw[very thick] (-.25,0)--(-.25,1);\\fi\n \\ifnum6='
+  lhs: 6.0 next char: '='
+ifnum site: '\\ifnum6=2 \\draw[very thick] (.25,0)--(.25,1);\\fi\n \\ifnum6=3 '
+  lhs: 6.0 next char: '='
+ifnum site: '\\ifnum6=3 \\draw[very thick] (-.25,0)--(.25,1);\\fi\n \\ifnum6=4'
+  lhs: 6.0 next char: '='
+ifnum site: '\\ifnum6=4 \\draw[very thick] (.25,0)--(-.25,1);\\fi\n \\ifnum6=5'
+  lhs: 6.0 next char: '='
+ifnum site: '\\ifnum6=5 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 6.0 next char: '='
+ifnum site: '\\ifnum6=6 \\draw[very thick] (-.25,1) .. controls (-.25,.55) '
+  lhs: 6.0 next char: '='
+ifnum site: '\\ifnum6=7 \\draw[very thick] (-.25,0)--(-.25,1) (.25,0)--(.25'
+  lhs: 6.0 next char: '='
+ifnum site: '\\ifnum6=8 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 6.0 next char: '='
+ifnum site: '\\ifnum7=1 \\draw[very thick] (-.25,0)--(-.25,1);\\fi\n \\ifnum7='
+  lhs: 7.0 next char: '='
+ifnum site: '\\ifnum7=2 \\draw[very thick] (.25,0)--(.25,1);\\fi\n \\ifnum7=3 '
+  lhs: 7.0 next char: '='
+ifnum site: '\\ifnum7=3 \\draw[very thick] (-.25,0)--(.25,1);\\fi\n \\ifnum7=4'
+  lhs: 7.0 next char: '='
+ifnum site: '\\ifnum7=4 \\draw[very thick] (.25,0)--(-.25,1);\\fi\n \\ifnum7=5'
+  lhs: 7.0 next char: '='
+ifnum site: '\\ifnum7=5 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 7.0 next char: '='
+ifnum site: '\\ifnum7=6 \\draw[very thick] (-.25,1) .. controls (-.25,.55) '
+  lhs: 7.0 next char: '='
+ifnum site: '\\ifnum7=7 \\draw[very thick] (-.25,0)--(-.25,1) (.25,0)--(.25'
+  lhs: 7.0 next char: '='
+ifnum site: '\\ifnum7=8 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 7.0 next char: '='
+ifnum site: '\\ifnum8=1 \\draw[very thick] (-.25,0)--(-.25,1);\\fi\n \\ifnum8='
+  lhs: 8.0 next char: '='
+ifnum site: '\\ifnum8=2 \\draw[very thick] (.25,0)--(.25,1);\\fi\n \\ifnum8=3 '
+  lhs: 8.0 next char: '='
+ifnum site: '\\ifnum8=3 \\draw[very thick] (-.25,0)--(.25,1);\\fi\n \\ifnum8=4'
+  lhs: 8.0 next char: '='
+ifnum site: '\\ifnum8=4 \\draw[very thick] (.25,0)--(-.25,1);\\fi\n \\ifnum8=5'
+  lhs: 8.0 next char: '='
+ifnum site: '\\ifnum8=5 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 8.0 next char: '='
+ifnum site: '\\ifnum8=6 \\draw[very thick] (-.25,1) .. controls (-.25,.55) '
+  lhs: 8.0 next char: '='
+ifnum site: '\\ifnum8=7 \\draw[very thick] (-.25,0)--(-.25,1) (.25,0)--(.25'
+  lhs: 8.0 next char: '='
+ifnum site: '\\ifnum8=8 \\draw[very thick] (-.25,0) .. controls (-.25,.45) '
+  lhs: 8.0 next char: '='
+======================================================================
+Finite-cylinder-approximation-of-ruled-sets-September-27-2026#0
+STOPPED at pgfmath
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-4+.35*-4' | expr() = -5.4
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-4+.35*-4' | expr() = -5.4
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-4+.35*-3' | expr() = -5.05
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-3+.35*-4' | expr() = -4.4
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-4+.35*-2' | expr() = -4.7
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-2+.35*-4' | expr() = -3.4
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-4+.35*-1' | expr() = -4.35
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-1+.35*-4' | expr() = -2.4
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-4+.35*0' | expr() = -4.0
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '0+.35*-4' | expr() = -1.4
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-4+.35*1' | expr() = -3.65
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '1+.35*-4' | expr() = -0.3999999999999999
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-4+.35*2' | expr() = -3.3
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '2+.35*-4' | expr() = 0.6000000000000001
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-4+.35*3' | expr() = -2.95
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '3+.35*-4' | expr() = 1.6
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-4+.35*4' | expr() = -2.6
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '4+.35*-4' | expr() = 2.6
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-3+.35*-4' | expr() = -4.4
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-4+.35*-3' | expr() = -5.05
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-3+.35*-3' | expr() = -4.05
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-3+.35*-3' | expr() = -4.05
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-3+.35*-2' | expr() = -3.7
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-2+.35*-3' | expr() = -3.05
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-3+.35*-1' | expr() = -3.35
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-1+.35*-3' | expr() = -2.05
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-3+.35*0' | expr() = -3.0
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '0+.35*-3' | expr() = -1.0499999999999998
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-3+.35*1' | expr() = -2.65
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '1+.35*-3' | expr() = -0.04999999999999982
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-3+.35*2' | expr() = -2.3
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '2+.35*-3' | expr() = 0.9500000000000002
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-3+.35*3' | expr() = -1.9500000000000002
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '3+.35*-3' | expr() = 1.9500000000000002
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-3+.35*4' | expr() = -1.6
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '4+.35*-3' | expr() = 2.95
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-2+.35*-4' | expr() = -3.4
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-4+.35*-2' | expr() = -4.7
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-2+.35*-3' | expr() = -3.05
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-3+.35*-2' | expr() = -3.7
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-2+.35*-2' | expr() = -2.7
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-2+.35*-2' | expr() = -2.7
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-2+.35*-1' | expr() = -2.35
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-1+.35*-2' | expr() = -1.7
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-2+.35*0' | expr() = -2.0
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '0+.35*-2' | expr() = -0.7
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-2+.35*1' | expr() = -1.65
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '1+.35*-2' | expr() = 0.30000000000000004
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-2+.35*2' | expr() = -1.3
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '2+.35*-2' | expr() = 1.3
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-2+.35*3' | expr() = -0.9500000000000002
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '3+.35*-2' | expr() = 2.3
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-2+.35*4' | expr() = -0.6000000000000001
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '4+.35*-2' | expr() = 3.3
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-1+.35*-4' | expr() = -2.4
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-4+.35*-1' | expr() = -4.35
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-1+.35*-3' | expr() = -2.05
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-3+.35*-1' | expr() = -3.35
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-1+.35*-2' | expr() = -1.7
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-2+.35*-1' | expr() = -2.35
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-1+.35*-1' | expr() = -1.35
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-1+.35*-1' | expr() = -1.35
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-1+.35*0' | expr() = -1.0
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '0+.35*-1' | expr() = -0.35
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-1+.35*1' | expr() = -0.65
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '1+.35*-1' | expr() = 0.65
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-1+.35*2' | expr() = -0.30000000000000004
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '2+.35*-1' | expr() = 1.65
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-1+.35*3' | expr() = 0.04999999999999982
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '3+.35*-1' | expr() = 2.65
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '-1+.35*4' | expr() = 0.3999999999999999
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '4+.35*-1' | expr() = 3.65
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '0+.35*-4' | expr() = -1.4
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-4+.35*0' | expr() = -4.0
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '0+.35*-3' | expr() = -1.0499999999999998
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-3+.35*0' | expr() = -3.0
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '0+.35*-2' | expr() = -0.7
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-2+.35*0' | expr() = -2.0
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '0+.35*-1' | expr() = -0.35
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-1+.35*0' | expr() = -1.0
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '0+.35*0' | expr() = 0.0
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '0+.35*0' | expr() = 0.0
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '0+.35*1' | expr() = 0.35
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '1+.35*0' | expr() = 1.0
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '0+.35*2' | expr() = 0.7
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '2+.35*0' | expr() = 2.0
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '0+.35*3' | expr() = 1.0499999999999998
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '3+.35*0' | expr() = 3.0
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '0+.35*4' | expr() = 1.4
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '4+.35*0' | expr() = 4.0
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '1+.35*-4' | expr() = -0.3999999999999999
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-4+.35*1' | expr() = -3.65
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '1+.35*-3' | expr() = -0.04999999999999982
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-3+.35*1' | expr() = -2.65
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '1+.35*-2' | expr() = 0.30000000000000004
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-2+.35*1' | expr() = -1.65
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '1+.35*-1' | expr() = 0.65
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-1+.35*1' | expr() = -0.65
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '1+.35*0' | expr() = 1.0
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '0+.35*1' | expr() = 0.35
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '1+.35*1' | expr() = 1.35
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '1+.35*1' | expr() = 1.35
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '1+.35*2' | expr() = 1.7
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '2+.35*1' | expr() = 2.35
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '1+.35*3' | expr() = 2.05
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '3+.35*1' | expr() = 3.35
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '1+.35*4' | expr() = 2.4
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '4+.35*1' | expr() = 4.35
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '2+.35*-4' | expr() = 0.6000000000000001
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-4+.35*2' | expr() = -3.3
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '2+.35*-3' | expr() = 0.9500000000000002
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-3+.35*2' | expr() = -2.3
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '2+.35*-2' | expr() = 1.3
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-2+.35*2' | expr() = -1.3
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '2+.35*-1' | expr() = 1.65
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-1+.35*2' | expr() = -0.30000000000000004
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '2+.35*0' | expr() = 2.0
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '0+.35*2' | expr() = 0.7
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '2+.35*1' | expr() = 2.35
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '1+.35*2' | expr() = 1.7
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '2+.35*2' | expr() = 2.7
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '2+.35*2' | expr() = 2.7
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '2+.35*3' | expr() = 3.05
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '3+.35*2' | expr() = 3.7
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '2+.35*4' | expr() = 3.4
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '4+.35*2' | expr() = 4.7
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '3+.35*-4' | expr() = 1.6
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-4+.35*3' | expr() = -2.95
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '3+.35*-3' | expr() = 1.9500000000000002
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-3+.35*3' | expr() = -1.9500000000000002
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '3+.35*-2' | expr() = 2.3
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-2+.35*3' | expr() = -0.9500000000000002
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '3+.35*-1' | expr() = 2.65
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-1+.35*3' | expr() = 0.04999999999999982
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '3+.35*0' | expr() = 3.0
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '0+.35*3' | expr() = 1.0499999999999998
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '3+.35*1' | expr() = 3.35
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '1+.35*3' | expr() = 2.05
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '3+.35*2' | expr() = 3.7
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '2+.35*3' | expr() = 3.05
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '3+.35*3' | expr() = 4.05
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '3+.35*3' | expr() = 4.05
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '3+.35*4' | expr() = 4.4
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '4+.35*3' | expr() = 5.05
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '4+.35*-4' | expr() = 2.6
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-4+.35*4' | expr() = -2.6
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '4+.35*-3' | expr() = 2.95
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-3+.35*4' | expr() = -1.6
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '4+.35*-2' | expr() = 3.3
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-2+.35*4' | expr() = -0.6000000000000001
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '4+.35*-1' | expr() = 3.65
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '-1+.35*4' | expr() = 0.3999999999999999
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '4+.35*0' | expr() = 4.0
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '0+.35*4' | expr() = 1.4
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '4+.35*1' | expr() = 4.35
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '1+.35*4' | expr() = 2.4
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '4+.35*2' | expr() = 4.7
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '2+.35*4' | expr() = 3.4
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '4+.35*3' | expr() = 5.05
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '3+.35*4' | expr() = 4.4
+pgfmath def: \pgfmathsetmacro{\cx} | expr: '4+.35*4' | expr() = 5.4
+pgfmath def: \pgfmathsetmacro{\cy} | expr: '4+.35*4' | expr() = 5.4
+======================================================================
+Universal-Tensor-Squares-for-Symmetric-Groups-September-24-2026#0
+STOPPED at pgfmath
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '1+1<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '1+2<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '1+3<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '1+4<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '1+5<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '1+6<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '1+7<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '1+8<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '1+9<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '1+10<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '2+1<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '2+2<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '2+3<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '2+4<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '2+5<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '2+6<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '2+7<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '2+8<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '2+9<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '3+1<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '3+2<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '3+3<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '3+4<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '3+5<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '3+6<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '3+7<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '4+1<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '4+2<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '4+3<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '4+4<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '4+5<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '4+6<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '5+1<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '5+2<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '5+3<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '5+4<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '5+5<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '6+1<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '6+2<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '6+3<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '6+4<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '7+1<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '7+2<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '7+3<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '8+1<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '8+2<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '9+1<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '9+2<=10' | expr() = None
+pgfmath def: \pgfmathtruncatemacro{\staircasecell} | expr: '10+1<=10' | expr() = None

@@ -1,0 +1,17 @@
+one canvas, the product page and the author's page, 300 dpi
+the pairs beside it are probe81's own rows from the two generations
+
+Polynomial-vacuum-representations-and-bridge-m#2   canvases shipped 4 / source pictures 4   pad tokens on this canvas: 2
+        run151 pairs: 4   2.71pt on-ink Conesphere / pΛ | 1.51pt on-ink Conesphere / rtimes | 2.59pt on-ink Pillowcase / branchedatfourcorners | 2.47pt on-ink O / rtimes
+        this crop's pair, run151: 2.71pt on-ink Conesphere / pΛ | 1.51pt on-ink Conesphere / rtimes
+        run152 pairs: 3   3.43pt on-ink Conesphere / pΛ | 1.51pt on-ink Conesphere / rtimes | 2.47pt on-ink O / rtimes
+        this crop's pair, run152: 3.43pt on-ink Conesphere / pΛ | 1.51pt on-ink Conesphere / rtimes
+        ink ours=35992   body 11pt   crops: ctl=E:\math\_work\m103g_Polynomial2_ctl.png  ours=E:\math\_work\m103g_Polynomial2_ours.png
+
+The-crossing-number-of-complete-bipartite-grap#0   canvases shipped 3 / source pictures 3   pad tokens on this canvas: 4
+        run151 pairs: 0   (not flagged)
+        this crop's pair, run151: (absent)
+        run152 pairs: 1   3.90pt on-ink −1 / Transversechords:
+        this crop's pair, run152: 3.90pt on-ink −1 / Transversechords:
+        ink ours=10257   body 11pt   crops: ctl=E:\math\_work\m103g_The-crossi0_ctl.png  ours=E:\math\_work\m103g_The-crossi0_ours.png
+

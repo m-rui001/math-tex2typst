@@ -1,0 +1,227 @@
+A lines: 163  B lines: 163
+--- A
++++ B
+@@ -4 +4 @@
+-  line((-2.3, 0.46), (2.3, 0.46))
++  line((-2.3, 0.46), (2.3, 0.46), stroke: (paint: rgb("#8c8c8c"), thickness: 0.45pt))
+@@ -6 +6 @@
+-  line((-2.3, -0.46), (2.3, -0.46))
++  line((-2.3, -0.46), (2.3, -0.46), stroke: (paint: rgb("#8c8c8c"), thickness: 0.45pt))
+@@ -10,4 +10,4 @@
+-  circle((0, 0.95), radius: (0.34, 0.23), stroke: (thickness: 0.65pt))
+-  circle((-0.23, 0.98), radius: 0.018, fill: black)
+-  circle((0.2, 1.05), radius: 0.018, fill: black)
+-  circle((0.23, 0.86), radius: 0.018, fill: black)
++  circle((0, 0.95), radius: (0.34, 0.23), fill: rgb("#ebebf7"), stroke: (paint: rgb("#000099"), thickness: 0.65pt))
++  circle((-0.23, 0.98), radius: 0.018, fill: rgb("#000099"))
++  circle((0.2, 1.05), radius: 0.018, fill: rgb("#000099"))
++  circle((0.23, 0.86), radius: 0.018, fill: rgb("#000099"))
+@@ -15,4 +15,4 @@
+-  circle((0, -0.95), radius: (0.34, 0.23), stroke: (thickness: 0.65pt))
+-  circle((-0.23, -0.92), radius: 0.018, fill: black)
+-  circle((0.2, -0.85), radius: 0.018, fill: black)
+-  circle((0.23, -1.04), radius: 0.018, fill: black)
++  circle((0, -0.95), radius: (0.34, 0.23), fill: rgb("#f8f3eb"), stroke: (paint: rgb("#a66b00"), thickness: 0.65pt))
++  circle((-0.23, -0.92), radius: 0.018, fill: rgb("#a66b00"))
++  circle((0.2, -0.85), radius: 0.018, fill: rgb("#a66b00"))
++  circle((0.23, -1.04), radius: 0.018, fill: rgb("#a66b00"))
+@@ -20,4 +20,4 @@
+-  circle((-1.7, 0), radius: (0.34, 0.23), stroke: (thickness: 0.65pt))
+-  circle((-1.93, 0.03), radius: 0.018, fill: black)
+-  circle((-1.5, 0.1), radius: 0.018, fill: black)
+-  circle((-1.47, -0.09), radius: 0.018, fill: black)
++  circle((-1.7, 0), radius: (0.34, 0.23), fill: rgb("#f8f3eb"), stroke: (paint: rgb("#a66b00"), thickness: 0.65pt))
++  circle((-1.93, 0.03), radius: 0.018, fill: rgb("#a66b00"))
++  circle((-1.5, 0.1), radius: 0.018, fill: rgb("#a66b00"))
++  circle((-1.47, -0.09), radius: 0.018, fill: rgb("#a66b00"))
+@@ -25,4 +25,4 @@
+-  circle((1.7, 0), radius: (0.34, 0.23), stroke: (thickness: 0.65pt))
+-  circle((1.47, 0.03), radius: 0.018, fill: black)
+-  circle((1.9, 0.1), radius: 0.018, fill: black)
+-  circle((1.93, -0.09), radius: 0.018, fill: black)
++  circle((1.7, 0), radius: (0.34, 0.23), fill: rgb("#ebebf7"), stroke: (paint: rgb("#000099"), thickness: 0.65pt))
++  circle((1.47, 0.03), radius: 0.018, fill: rgb("#000099"))
++  circle((1.9, 0.1), radius: 0.018, fill: rgb("#000099"))
++  circle((1.93, -0.09), radius: 0.018, fill: rgb("#000099"))
+@@ -30 +30 @@
+-  line((0, 1.23), (0, 1.72))
++  line((0, 1.23), (0, 1.72), stroke: (paint: rgb("#000099"), thickness: 0.8pt))
+@@ -32 +32 @@
+-  line((0, -1.23), (0, -1.72))
++  line((0, -1.23), (0, -1.72), stroke: (paint: rgb("#a66b00"), thickness: 0.8pt))
+@@ -34 +34 @@
+-  line((-2.3, -1.95), (2.3, -1.95))
++  line((-2.3, -1.95), (2.3, -1.95), stroke: (paint: rgb("#808080"), thickness: 0.4pt))
+@@ -36 +36 @@
+-  line((-1.75, -1.95), (-1.05, -1.95), stroke: (thickness: 2.3pt))
++  line((-1.75, -1.95), (-1.05, -1.95), stroke: (paint: rgb("#a66b00"), thickness: 2.3pt))
+@@ -38 +38 @@
+-  line((1.05, -1.95), (1.75, -1.95), stroke: (thickness: 2.3pt))
++  line((1.05, -1.95), (1.75, -1.95), stroke: (paint: rgb("#000099"), thickness: 2.3pt))
+@@ -44,2 +44,2 @@
+-  line((8.564, -1.45), (6.89, 1.45))
+-  line((7.41, -1.45), (5.736, 1.45))
++  line((8.564, -1.45), (6.89, 1.45), stroke: (paint: rgb("#8c8c8c"), thickness: 0.45pt))
++  line((7.41, -1.45), (5.736, 1.45), stroke: (paint: rgb("#8c8c8c"), thickness: 0.45pt))
+@@ -48,4 +48,4 @@
+-  circle((8.05, 0.95), radius: (0.34, 0.23), stroke: (thickness: 0.65pt))
+-  circle((7.82, 0.98), radius: 0.018, fill: black)
+-  circle((8.25, 1.05), radius: 0.018, fill: black)
+-  circle((8.28, 0.86), radius: 0.018, fill: black)
++  circle((8.05, 0.95), radius: (0.34, 0.23), fill: rgb("#ebebf7"), stroke: (paint: rgb("#000099"), thickness: 0.65pt))
++  circle((7.82, 0.98), radius: 0.018, fill: rgb("#000099"))
++  circle((8.25, 1.05), radius: 0.018, fill: rgb("#000099"))
++  circle((8.28, 0.86), radius: 0.018, fill: rgb("#000099"))
+@@ -53,4 +53,4 @@
+-  circle((8.75, 0.05), radius: (0.34, 0.23), stroke: (thickness: 0.65pt))
+-  circle((8.52, 0.08), radius: 0.018, fill: black)
+-  circle((8.95, 0.15), radius: 0.018, fill: black)
+-  circle((8.98, -0.04), radius: 0.018, fill: black)
++  circle((8.75, 0.05), radius: (0.34, 0.23), fill: rgb("#ebebf7"), stroke: (paint: rgb("#000099"), thickness: 0.65pt))
++  circle((8.52, 0.08), radius: 0.018, fill: rgb("#000099"))
++  circle((8.95, 0.15), radius: 0.018, fill: rgb("#000099"))
++  circle((8.98, -0.04), radius: 0.018, fill: rgb("#000099"))
+@@ -58,4 +58,4 @@
+-  circle((6.25, -0.95), radius: (0.34, 0.23), stroke: (thickness: 0.65pt))
+-  circle((6.02, -0.92), radius: 0.018, fill: black)
+-  circle((6.45, -0.85), radius: 0.018, fill: black)
+-  circle((6.48, -1.04), radius: 0.018, fill: black)
++  circle((6.25, -0.95), radius: (0.34, 0.23), fill: rgb("#f8f3eb"), stroke: (paint: rgb("#a66b00"), thickness: 0.65pt))
++  circle((6.02, -0.92), radius: 0.018, fill: rgb("#a66b00"))
++  circle((6.45, -0.85), radius: 0.018, fill: rgb("#a66b00"))
++  circle((6.48, -1.04), radius: 0.018, fill: rgb("#a66b00"))
+@@ -63,4 +63,4 @@
+-  circle((5.55, -0.05), radius: (0.34, 0.23), stroke: (thickness: 0.65pt))
+-  circle((5.32, -0.02), radius: 0.018, fill: black)
+-  circle((5.75, 0.05), radius: 0.018, fill: black)
+-  circle((5.78, -0.14), radius: 0.018, fill: black)
++  circle((5.55, -0.05), radius: (0.34, 0.23), fill: rgb("#f8f3eb"), stroke: (paint: rgb("#a66b00"), thickness: 0.65pt))
++  circle((5.32, -0.02), radius: 0.018, fill: rgb("#a66b00"))
++  circle((5.75, 0.05), radius: 0.018, fill: rgb("#a66b00"))
++  circle((5.78, -0.14), radius: 0.018, fill: rgb("#a66b00"))
+@@ -70 +70 @@
+-  line((9.15, 0.27), (9.84, 0.67))
++  line((9.15, 0.27), (9.84, 0.67), stroke: (paint: rgb("#000099"), thickness: 0.8pt))
+@@ -72 +72 @@
+-  line((5.15, -0.27), (4.46, -0.67))
++  line((5.15, -0.27), (4.46, -0.67), stroke: (paint: rgb("#a66b00"), thickness: 0.8pt))
+@@ -74 +74 @@
+-  line((4.85, -1.95), (9.45, -1.95))
++  line((4.85, -1.95), (9.45, -1.95), stroke: (paint: rgb("#808080"), thickness: 0.4pt))
+@@ -76 +76 @@
+-  line((5.4, -1.95), (6.1, -1.95), stroke: (thickness: 2.3pt))
++  line((5.4, -1.95), (6.1, -1.95), stroke: (paint: rgb("#a66b00"), thickness: 2.3pt))
+@@ -78 +78 @@
+-  line((8.2, -1.95), (8.9, -1.95), stroke: (thickness: 2.3pt))
++  line((8.2, -1.95), (8.9, -1.95), stroke: (paint: rgb("#000099"), thickness: 2.3pt))
+@@ -84,2 +84,2 @@
+-  line((-1.299, -7.1), (0.375, -4.2))
+-  line((-0.375, -7.1), (1.299, -4.2))
++  line((-1.299, -7.1), (0.375, -4.2), stroke: (paint: rgb("#8c8c8c"), thickness: 0.45pt))
++  line((-0.375, -7.1), (1.299, -4.2), stroke: (paint: rgb("#8c8c8c"), thickness: 0.45pt))
+@@ -88,4 +88,4 @@
+-  circle((1.8, -4.47), radius: (0.34, 0.23), stroke: (thickness: 0.65pt))
+-  circle((1.57, -4.44), radius: 0.018, fill: black)
+-  circle((2, -4.37), radius: 0.018, fill: black)
+-  circle((2.03, -4.56), radius: 0.018, fill: black)
++  circle((1.8, -4.47), radius: (0.34, 0.23), fill: rgb("#ebebf7"), stroke: (paint: rgb("#000099"), thickness: 0.65pt))
++  circle((1.57, -4.44), radius: 0.018, fill: rgb("#000099"))
++  circle((2, -4.37), radius: 0.018, fill: rgb("#000099"))
++  circle((2.03, -4.56), radius: 0.018, fill: rgb("#000099"))
+@@ -93,4 +93,4 @@
+-  circle((2.28, -5.1), radius: (0.34, 0.23), stroke: (thickness: 0.65pt))
+-  circle((2.05, -5.07), radius: 0.018, fill: black)
+-  circle((2.48, -5), radius: 0.018, fill: black)
+-  circle((2.51, -5.19), radius: 0.018, fill: black)
++  circle((2.28, -5.1), radius: (0.34, 0.23), fill: rgb("#ebebf7"), stroke: (paint: rgb("#000099"), thickness: 0.65pt))
++  circle((2.05, -5.07), radius: 0.018, fill: rgb("#000099"))
++  circle((2.48, -5), radius: 0.018, fill: rgb("#000099"))
++  circle((2.51, -5.19), radius: 0.018, fill: rgb("#000099"))
+@@ -98,4 +98,4 @@
+-  circle((-1.8, -6.83), radius: (0.34, 0.23), stroke: (thickness: 0.65pt))
+-  circle((-2.03, -6.8), radius: 0.018, fill: black)
+-  circle((-1.6, -6.73), radius: 0.018, fill: black)
+-  circle((-1.57, -6.92), radius: 0.018, fill: black)
++  circle((-1.8, -6.83), radius: (0.34, 0.23), fill: rgb("#f8f3eb"), stroke: (paint: rgb("#a66b00"), thickness: 0.65pt))
++  circle((-2.03, -6.8), radius: 0.018, fill: rgb("#a66b00"))
++  circle((-1.6, -6.73), radius: 0.018, fill: rgb("#a66b00"))
++  circle((-1.57, -6.92), radius: 0.018, fill: rgb("#a66b00"))
+@@ -103,4 +103,4 @@
+-  circle((-2.28, -6.2), radius: (0.34, 0.23), stroke: (thickness: 0.65pt))
+-  circle((-2.51, -6.17), radius: 0.018, fill: black)
+-  circle((-2.08, -6.1), radius: 0.018, fill: black)
+-  circle((-2.05, -6.29), radius: 0.018, fill: black)
++  circle((-2.28, -6.2), radius: (0.34, 0.23), fill: rgb("#f8f3eb"), stroke: (paint: rgb("#a66b00"), thickness: 0.65pt))
++  circle((-2.51, -6.17), radius: 0.018, fill: rgb("#a66b00"))
++  circle((-2.08, -6.1), radius: 0.018, fill: rgb("#a66b00"))
++  circle((-2.05, -6.29), radius: 0.018, fill: rgb("#a66b00"))
+@@ -110 +110 @@
+-  line((-2.38, -5.82), (-2.99, -5.47))
++  line((-2.38, -5.82), (-2.99, -5.47), stroke: (paint: rgb("#a66b00"), thickness: 0.8pt))
+@@ -112 +112 @@
+-  line((-2.3, -7.6), (2.3, -7.6))
++  line((-2.3, -7.6), (2.3, -7.6), stroke: (paint: rgb("#808080"), thickness: 0.4pt))
+@@ -114 +114 @@
+-  line((-1.75, -7.6), (-1.05, -7.6), stroke: (thickness: 2.3pt))
++  line((-1.75, -7.6), (-1.05, -7.6), stroke: (paint: rgb("#000099"), thickness: 2.3pt))
+@@ -116 +116 @@
+-  line((1.05, -7.6), (1.75, -7.6), stroke: (thickness: 2.3pt))
++  line((1.05, -7.6), (1.75, -7.6), stroke: (paint: rgb("#a66b00"), thickness: 2.3pt))
+@@ -122 +122 @@
+-  line((4.45, -5.25), (9.85, -5.25))
++  line((4.45, -5.25), (9.85, -5.25), stroke: (paint: rgb("#8c8c8c"), thickness: 0.45pt))
+@@ -126,4 +126,4 @@
+-  circle((8.45, -4.32), radius: (0.34, 0.23), stroke: (thickness: 0.65pt))
+-  circle((8.22, -4.29), radius: 0.018, fill: black)
+-  circle((8.65, -4.22), radius: 0.018, fill: black)
+-  circle((8.68, -4.41), radius: 0.018, fill: black)
++  circle((8.45, -4.32), radius: (0.34, 0.23), fill: rgb("#ebebf7"), stroke: (paint: rgb("#000099"), thickness: 0.65pt))
++  circle((8.22, -4.29), radius: 0.018, fill: rgb("#000099"))
++  circle((8.65, -4.22), radius: 0.018, fill: rgb("#000099"))
++  circle((8.68, -4.41), radius: 0.018, fill: rgb("#000099"))
+@@ -131,4 +131,4 @@
+-  circle((9.25, -4.85), radius: (0.34, 0.23), stroke: (thickness: 0.65pt))
+-  circle((9.02, -4.82), radius: 0.018, fill: black)
+-  circle((9.45, -4.75), radius: 0.018, fill: black)
+-  circle((9.48, -4.94), radius: 0.018, fill: black)
++  circle((9.25, -4.85), radius: (0.34, 0.23), fill: rgb("#ebebf7"), stroke: (paint: rgb("#000099"), thickness: 0.65pt))
++  circle((9.02, -4.82), radius: 0.018, fill: rgb("#000099"))
++  circle((9.45, -4.75), radius: 0.018, fill: rgb("#000099"))
++  circle((9.48, -4.94), radius: 0.018, fill: rgb("#000099"))
+@@ -136,4 +136,4 @@
+-  circle((5.85, -4.85), radius: (0.34, 0.23), stroke: (thickness: 0.65pt))
+-  circle((5.62, -4.82), radius: 0.018, fill: black)
+-  circle((6.05, -4.75), radius: 0.018, fill: black)
+-  circle((6.08, -4.94), radius: 0.018, fill: black)
++  circle((5.85, -4.85), radius: (0.34, 0.23), fill: rgb("#f8f3eb"), stroke: (paint: rgb("#a66b00"), thickness: 0.65pt))
++  circle((5.62, -4.82), radius: 0.018, fill: rgb("#a66b00"))
++  circle((6.05, -4.75), radius: 0.018, fill: rgb("#a66b00"))
++  circle((6.08, -4.94), radius: 0.018, fill: rgb("#a66b00"))
+@@ -141,4 +141,4 @@
+-  circle((5.05, -4.32), radius: (0.34, 0.23), stroke: (thickness: 0.65pt))
+-  circle((4.82, -4.29), radius: 0.018, fill: black)
+-  circle((5.25, -4.22), radius: 0.018, fill: black)
+-  circle((5.28, -4.41), radius: 0.018, fill: black)
++  circle((5.05, -4.32), radius: (0.34, 0.23), fill: rgb("#f8f3eb"), stroke: (paint: rgb("#a66b00"), thickness: 0.65pt))
++  circle((4.82, -4.29), radius: 0.018, fill: rgb("#a66b00"))
++  circle((5.25, -4.22), radius: 0.018, fill: rgb("#a66b00"))
++  circle((5.28, -4.41), radius: 0.018, fill: rgb("#a66b00"))
+@@ -149 +149 @@
+-  line((7.15, -7.12), (7.15, -6.56), stroke: (paint: rgb("#4d4d4d")))
++  line((7.15, -7.12), (7.15, -6.56), stroke: (paint: rgb("#4d4d4d"), thickness: 0.8pt))
+@@ -151 +151 @@
+-  line((7.15, -7.12), (7.8, -6.745), stroke: (paint: rgb("#4d4d4d")))
++  line((7.15, -7.12), (7.8, -6.745), stroke: (paint: rgb("#4d4d4d"), thickness: 0.8pt))
+@@ -153 +153 @@
+-  line((7.15, -7.12), (6.5, -6.745), stroke: (paint: rgb("#4d4d4d")))
++  line((7.15, -7.12), (6.5, -6.745), stroke: (paint: rgb("#4d4d4d"), thickness: 0.8pt))
+@@ -155 +155 @@
+-  line((4.85, -7.6), (9.45, -7.6))
++  line((4.85, -7.6), (9.45, -7.6), stroke: (paint: rgb("#808080"), thickness: 0.4pt))
+@@ -158,2 +158,2 @@
+-  line((7.7, -7.57), (8.9, -7.57), stroke: (thickness: 2.3pt))
+-  line((7.7, -7.63), (8.9, -7.63), stroke: (thickness: 2.3pt))
++  line((7.7, -7.57), (8.9, -7.57), stroke: (paint: rgb("#000099"), thickness: 2.3pt))
++  line((7.7, -7.63), (8.9, -7.63), stroke: (paint: rgb("#a66b00"), thickness: 2.3pt))
+dashed in A: False in B: False
+arrow/marker in A: False in B: False

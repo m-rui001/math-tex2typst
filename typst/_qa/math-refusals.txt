@@ -1,0 +1,860 @@
+[WARNING] Could not convert TeX math E:=\overline\operatorname{Ric}+3\overline g, rendering as TeX:
+  erline\operatorname{Ric}+3\overline g
+                     ^
+  unexpected "{"
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math F_{\rm presc}(\nu)\ge P_B+H,\qquad
+   F_{\rm presc}(-\nu)\le P_B-H., rendering as TeX:
+  F_{\rm presc}(\nu)\ge P_B+H,\qquad
+         ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math O_{\rm tot}(j), rendering as TeX:
+  O_{\rm tot}(j)
+         ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math T^{\rm tf}, rendering as TeX:
+  T^{\rm tf}
+         ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math &2\partial_i\chi(\partial_jh_{ij}-\partial_i\operatorname{tr} h)
+         +(\partial_i\partial_j\chi)h_{ij}-(\Delta\chi)\operatorname{tr} h;, rendering as TeX:
+  &2\partial_i\chi(\partial_jh_{ij}-\parti
+  ^
+  unexpected '&'
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace, "\\allowbreak", "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math &\int e^{2kZ}\psi^2
+        (\Xi+6k|\,\mathrm d Z|_{A_\chi}^2)\,\,\mathrm d\mu_D\\
+   &=-\int_B\frac{\psi^2e^{2kZ}}{L_0}(V_\lambda)_\nu\,\,\mathrm d A_g
+     -2k\lambda\int e^{2kZ}\psi^2
+                     \langle\kappa,\,\mathrm d Z\rangle_{A_\chi}\,\,\mathrm d\mu_D\\
+   &\quad-2\int e^{2kZ}\psi
+               \langle3\,\mathrm d Z+\lambda\kappa,\,\mathrm d\psi\rangle_{A_\chi}\,\,\mathrm d\mu_D
+     +\int e^{2kZ}\psi^2(p+2)
+               \langle3\,\mathrm d Z+\lambda\kappa,\,\mathrm d t\rangle_{A_\chi}\,\,\mathrm d\mu_D., rendering as TeX:
+  &\int e^{2kZ}\psi^2
+  ^
+  unexpected '&'
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace, "\\allowbreak", "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math (\operatorname{div}_b e-\,\mathrm d\operatorname{tr}_b e)(\partial_\eta)
+   &=2\coth\eta(C-E)r^{-3}
+         -2\partial_\eta(Er^{-3})+o(r^{-3})\\
+   &=(2C+4E)r^{-3}+o(r^{-3})., rendering as TeX:
+   &=2\coth\eta(C-E)r^{-3}
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math -3c\int_S\psi\,\mathrm dA_g
+   ={}&6\int_S\left[u\partial_\nu\psi
+         -\{\partial_\nu u+K(X,\nu)\}\psi\right]\,\mathrm dA_g
+         -3\int_S\partial_\nu\psi\,\mathrm d\eta., rendering as TeX:
+   ={}&6\int_S\left[u\partial_\nu\psi
+      ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math -\Delta_gv_0-b|dv_0|_g
+   &=A\delta(1+\delta)r^{-3-\delta}
+         +O(r^{-3-q})+O(r^{-3-\beta})\ge c_0w., rendering as TeX:
+   &=A\delta(1+\delta)r^{-3-\delta}
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math -\Delta_{g_R}u_R-|K_R|_{g_R}|du_R|_{g_R}
+   &=\frac{\varepsilon_R}{R^3}
+     \left[z_R'|d\rho_R|_{g_R}^2
+         +Rz_R\Delta_{g_R}\rho_R
+         -Rz_R|K_R|_{g_R}|d\rho_R|_{g_R}\right]\\
+   &\ge\frac{\varepsilon_R}{R^3}
+         (c_1z_R'-C_2z_R)., rendering as TeX:
+   &=\frac{\varepsilon_R}{R^3}
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math 16\pi u_s^4(\mu_s-|J_s|_{g_s})
+   &\ge16\pi(\mu-|J|_g)
+          +\frac{8s}{u_s}(-\Delta_g\phi-|K|_g|d\phi|_g)
+   \ge \frac{8s}{u_s}w,\\
+   \theta_{+,s}
+   &=u_s^{-2}\left(\theta_+-\frac{4s}{u_s}\right)., rendering as TeX:
+   &\ge16\pi(\mu-|J|_g)
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math 2k|\langle K(w,\cdot),dZ\rangle_{A_\chi}|
+     &\le k|dZ|_{A_\chi}^2+Ck|K|^2,\\
+   p_L|\langle K(w,\cdot),dt\rangle_{A_\chi}|
+     &\le\tfrac14\delta_0\mathcal T+C(n)|K|^2., rendering as TeX:
+     &\le k|dZ|_{A_\chi}^2+Ck|K|^2,\\
+     ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math H'&=\bar f\bigl(c-\langle Q_H\rangle\bigr)
+                    +\langle\delta f\,J1\rangle,\\
+   0&=\langle\delta f\,Jf\rangle
+     =\bar f\langle\delta f\,J1\rangle
+                    +\langle\delta f\,J\delta f\rangle., rendering as TeX:
+  H'&=\bar f\bigl(c-\langle Q_H\rangle\big
+    ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math R_g&=g^{-1}\partial^2g+\operatorname{smooth}(g^{-1})(\partial g)^2,\\
+   J&=\operatorname{smooth}(g^{-1})\partial K
+         +\operatorname{smooth}(g^{-1})(\partial g)K,, rendering as TeX:
+  R_g&=g^{-1}\partial^2g+\operatorname{smo
+     ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \dot R&=-\operatorname{Ric}^{ij}h_{ij}
+               +\nabla^i\nabla^jh_{ij}-\Delta(\operatorname{tr} h),\\
+   \dot\tau&=-K^{ij}h_{ij},\qquad
+   \bigl(|K|^2\bigr)^{\boldsymbol\cdot}
+         =-2(K^2)^{ij}h_{ij},\qquad
+   (\,\mathrm d V)^{\boldsymbol\cdot}=\tfrac12\operatorname{tr} h\,\mathrm d V,\\
+   (P^{ij})^{\boldsymbol\cdot}
+         &=-h^i{}_aK^{aj}-h^j{}_aK^{ia}
+                  +(K^{ab}h_{ab})g^{ij}+\tau h^{ij},\\
+   (\mathcal L_Xg)^{\boldsymbol\cdot}&=\mathcal L_Xh., rendering as TeX:
+  \dot R&=-\operatorname{Ric}^{ij}h_{ij}
+        ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \mathcal F_{i00}&=\partial_jh_{ij}-\partial_ih_{jj},\\
+   \mathcal F_{i0k}
+    &=2\bigl(K^{\mathrm{lin}}_{ik}
+            -\delta_{ik}\operatorname{tr} K^{\mathrm{lin}}\bigr)
+         +\partial_kh_{0i}-\delta_{ik}\partial_jh_{0j},, rendering as TeX:
+  \mathcal F_{i00}&=\partial_jh_{ij}-\part
+                  ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \nabla_iw_j&=H^f_{ij}-H^f(w,\partial_i)w_j+p d\,t_iw_j,\\
+   \operatorname{div} w&=Q_f+p d\,w(t),
+   &Q_f&=F+(d-\chi)j-\operatorname{tr}_{A_d}K., rendering as TeX:
+  \nabla_iw_j&=H^f_{ij}-H^f(w,\partial_i)w
+             ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \operatorname{Ric}_{\mathbf g,ij}
+    &=\operatorname{Ric}_{g,ij}+\tau K_{ij}-2(K^2)_{ij}
+      +u^{-1}\bigl(\partial_tK_{ij}
+             -(\mathcal L_XK)_{ij}-(\nabla^2u)_{ij}\bigr),\\
+   \operatorname{Ric}_{\mathbf g}(n,n)
+    &=-u^{-1}(\partial_t\tau-X\tau)-|K|^2+u^{-1}\Delta u., rendering as TeX:
+    &=\operatorname{Ric}_{g,ij}+\tau K_{ij
+    ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \sup_{x\in B_r}\int_{B_r}G_{B_r}(x,y)\,\,\mathrm d\mu_2(y)
+   &\le C\sum_{j\ge0}(2^{-j}r)^{-2}
+         \mu_2(B_{2^{1-j}r}(x))\\
+   &\le C\sum_{j\ge0}
+          \bigl((2^{-j}r)^2+(2^{-j}r)^\beta\bigr)
+   \le C(r^2+r^\beta)., rendering as TeX:
+   &\le C\sum_{j\ge0}(2^{-j}r)^{-2}
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \tfrac12e^{4t}R_{\hat g}
+   ={}&8\pi(\mu+J(w))+(1-\delta_0)\mathcal T
+         +(1-\delta_0)\tau a\sigma\\
+      &+w\cdot\nabla C-F\operatorname{tr} K-\rho+m_0(t)\mathcal P., rendering as TeX:
+   ={}&8\pi(\mu+J(w))+(1-\delta_0)\mathcal
+      ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \|u_1[q]-u_1[\hat q]\|_\beta
+       &\leq C\|q-\hat q\|_\beta,\\
+   \|F_2[q]-F_2[\hat q]\|_{2\beta}
+    +\|B_2[q]-B_2[\hat q]\|_{C^0(S)}
+       &\leq C\|q-\hat q\|_\beta,\\
+   \|u_2[q]-u_2[\hat q]\|_\beta
+       &\leq C\|q-\hat q\|_\beta., rendering as TeX:
+       &\leq C\|q-\hat q\|_\beta,\\
+       ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math f_R&=\mathcal L(\chi(h_R-h_{*,R}))
+                        -\chi\mathcal L(h_R-h_{*,R}),\\
+   V_R&=\mathcal D(\chi(k_R-k_{*,R}))
+                        -\chi\mathcal D(k_R-k_{*,R})., rendering as TeX:
+  f_R&=\mathcal L(\chi(h_R-h_{*,R}))
+     ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math f_sJ_s&=\overline J_s+
+              3as\overline K_s(\nabla_{\overline g_s}\phi,\cdot),\\
+   f_s^2\mu_s&=\overline\mu_s-3as\Delta_{\overline g_s}\phi
+                            -3a^2s^2|\,\mathrm d\phi|_{\overline g_s}^2., rendering as TeX:
+  f_sJ_s&=\overline J_s+
+        ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math m_H={}&-\frac{R\delta_R}{2}\sqrt{1+\delta_R}
+   -\frac{H_b(R)B_R}{4}(1+\delta_R)^{3/2}\\
+   &-\frac{B_R^2}{8R^3}(1+\delta_R)^{3/2}., rendering as TeX:
+  m_H={}&-\frac{R\delta_R}{2}\sqrt{1+\delt
+        ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math u^2(\mu_s-|J_s|_{g_s})
+   &\ge\mu-|J|+3s\bigl(-\Delta_g\phi
+                         -|K||\,\mathrm d\phi|-s|\,\mathrm d\phi|^2\bigr)\\
+   &\ge3s\bigl(r^{-4-\delta_1}-s|\,\mathrm d\phi|^2\bigr)., rendering as TeX:
+   &\ge\mu-|J|+3s\bigl(-\Delta_g\phi
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math u^{-1}\operatorname{div} V_\lambda\ge{}&
+   \mu-\tfrac12\operatorname{Scal}_g+J(w)+v\operatorname{Ric}_g(e,e)
+          +\mathcal T-\mathcal S(H^f)+w(F)-F\tau\\
+   &-(1-\lambda)u^{-1}\operatorname{div}(uA_\chi K(w,\cdot))., rendering as TeX:
+  div} V_\lambda\ge{}&
+                     ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \operatorname{sym}\nabla X&=-uK,\\
+    \Delta u&=-\operatorname{div}(K(X,\cdot)^\sharp),
+      \\
+    \operatorname{Hess} u
+     &=u(\operatorname{Ric}_g+\tau K-2K^2)-\mathcal L_XK
+         +8\pi X_{(i}J_{j)}., rendering as TeX:
+  orname{sym}\nabla X&=-uK,\\
+                     ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math &\int_\Gamma e^{2kZ}\eta^2
+         (\mathcal T+k|\nabla_\Gamma Z|^2)\,\mathrm d\Gamma\\
+   &\quad\le C(n)k\int_\Gamma e^{2kZ}
+                  (\eta^2+|d\eta|_g^2)\,\mathrm d\Gamma
+                 +C(n)\int_B e^{2kZ}\eta^2\,\mathrm d A_g., rendering as TeX:
+  &\int_\Gamma e^{2kZ}\eta^2
+  ^
+  unexpected '&'
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace, "\\allowbreak", "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math &\int_{\Omega_R}u k_0
+         \left(\delta_0\mathcal T+\rho+
+                        \tfrac12\delta_0\tau a\sigma\right)\,\mathrm d V_g
+         +2\int_{\Omega_R}u k_0'|dZ|_{A_\chi}^2\,\mathrm d V_g\\
+   &\hspace{18mm}\le C(n)+C\frac\tau\ell
+                                    \int_B Lk_0\,\mathrm d A_g., rendering as TeX:
+  &\int_{\Omega_R}u k_0
+  ^
+  unexpected '&'
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace, "\\allowbreak", "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math &\operatorname{tr}_{A_\chi}\left(K+
+         \frac{l}{\tau\sqrt D}\operatorname{Hess} h_0\right)\\
+   &\quad=P_s+aH_s+\chi K(N,N)
+         +a\chi\left(
+             \frac{\operatorname{Hess} s(N,N)}{|ds|}
+                        +|ds|\frac{\psi''}{\psi'}\right),, rendering as TeX:
+  &\operatorname{tr}_{A_\chi}\left(K+
+  ^
+  unexpected '&'
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace, "\\allowbreak", "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math &\partial_\nu\phi=-1\quad\text{on }B,
+         &\phi&=O_2(r^{-1}),\\
+   &-\Delta_g\phi-|K|_g|d\phi|_g\ge w,
+         &\frac{-\Delta_g\phi}{w}&\longrightarrow1., rendering as TeX:
+  &\partial_\nu\phi=-1\quad\text{on }B,
+  ^
+  unexpected '&'
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace, "\\allowbreak", "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math -6\Delta_{\ell_s}f_s+R_sf_s&=0,
+         & f_s&=1+O(s)\quad\text{uniformly on }W,
+         \\
+   f_s-1&=O_k(r^{-2})
+         &&\text{on the distinguished end},
+         \\
+   \int_{S_R}\partial_{\nu_{\ell_s}}f_s\,dA_{\ell_s}
+         &=\frac16\int_W R_sf_s\,dV_{\ell_s}
+         &&\text{for every sufficiently large }R., rendering as TeX:
+  _{\ell_s}f_s+R_sf_s&=0,
+                     ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math -\Delta_{g_R}u_R-|K_R|_{g_R}|du_R|_{g_R}
+   &=\frac{e_R}{R^3}
+    \{z_R'|dr_y|^2+Rz_R\Delta r_y-Rz_R|K_R||dr_y|\}\\
+   &\ge\frac{e_R}{R^3}(c z_R'-Cz_R)., rendering as TeX:
+   &=\frac{e_R}{R^3}
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math 0={}&\nabla^2u-(\Delta u)g-u\operatorname{Ric}_g+2u(K^2-\tau K)+u\mu g
+         \\
+      &+\mathcal L_XK-(\operatorname{div}X)K
+        -\{X(\tau)+K^{ab}\nabla_aX_b\}g-X_{(i}J_{j)}., rendering as TeX:
+  0={}&\nabla^2u-(\Delta u)g-u\operatornam
+      ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math 16\pi e^{4f}(\mu_f-|J_f|_{g_f})
+   \ge{}&16\pi(\mu-|J|_g)\\
+   &+8\bigl(-\Delta_g f-|df|_g^2-|K|_g|df|_g\bigr)., rendering as TeX:
+   \ge{}&16\pi(\mu-|J|_g)\\
+        ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math 16\pi e^{4f}\mu_f
+     &=16\pi\mu-8\Delta_g f-8|df|_g^2,
+         \\
+   8\pi J_f
+     &=e^{-2f}\bigl(8\pi J+4K(\nabla f,\cdot)\bigr)., rendering as TeX:
+     &=16\pi\mu-8\Delta_g f-8|df|_g^2,
+     ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math A_z\operatorname{grad}(|P|_g^2/2)-GP
+     &=(H_z-\Delta_gz\,g)P=:Q,\\
+   \operatorname{div} Q
+     &=|H_z|_g^2-(\Delta_gz)^2+\operatorname{Ric}_g(P,P)., rendering as TeX:
+     &=(H_z-\Delta_gz\,g)P=:Q,\\
+     ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math D^{-1/2}\operatorname{div}(\sqrt D\,W)
+   &=\sqrt d\bigl(Q_f+p d\,w(t)\bigr),\\
+   u^{-1}\operatorname{div}(uW)
+   &=\sqrt d\bigl(Q_f+(p+2+p d)w(t)\bigr)., rendering as TeX:
+   &=\sqrt d\bigl(Q_f+p d\,w(t)\bigr),\\
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math E&=\frac1{16\pi}\lim_{R\to\infty}
+   \int_{|x|=R}(\partial_jg_{ij}-\partial_ig_{jj})n_\delta^i\,dA_\delta,
+   \\
+   P_i&=\frac1{8\pi}\lim_{R\to\infty}
+   \int_{|x|=R}\bigl(K_{ij}-(\operatorname{tr}_gK)g_{ij}\bigr)n_\delta^j\,dA_\delta,
+   \\
+   Q_E&=\frac1{4\pi}\lim_{R\to\infty}
+   \int_{|x|=R}g(\mathcal E,\nu_R)\,dA_g,
+   \qquad
+   Q_B=\frac1{4\pi}\lim_{R\to\infty}
+   \int_{|x|=R}g(\mathcal B,\nu_R)\,dA_g., rendering as TeX:
+  E&=\frac1{16\pi}\lim_{R\to\infty}
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math E&=\frac1{16\pi}\lim_{r\to\infty}
+     \int_{S_r}(\partial_jg_{ij}-\partial_i g_{jj})n^i
+                      \,\mathrm d A_\delta,\\
+   P_i&=\frac1{8\pi}\lim_{r\to\infty}
+     \int_{S_r}\bigl(K_{ij}-(\operatorname{tr}_gK)g_{ij}\bigr)n^j
+                      \,\mathrm d A_\delta., rendering as TeX:
+  E&=\frac1{16\pi}\lim_{r\to\infty}
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math E&=\frac{1}{6\omega}\lim_{R\to\infty}
+         \int_{|x|=R}(\partial_jg_{ij}-\partial_i g_{jj})
+                      n_\delta^i\,\,\mathrm d A_\delta,\\
+   P_i&=\frac{1}{3\omega}\lim_{R\to\infty}
+         \int_{|x|=R}(K_{ij}-\tau g_{ij})
+                      n_\delta^j\,\,\mathrm d A_\delta., rendering as TeX:
+  E&=\frac{1}{6\omega}\lim_{R\to\infty}
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math F_1&=0,& B_1&=\tfrac14h_q,\\
+   F_2&=\tfrac{15}{2}u_1^2-\tfrac18Q_q,
+   & B_2&=-\tfrac34h_qu_1|_S., rendering as TeX:
+  F_1&=0,& B_1&=\tfrac14h_q,\\
+     ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math I_g(Y)&=|X_1|_g^2+|X_2|_g^2
+         +2\langle X_1\times X_2,Y\rangle_g,
+   \\
+   D_g(Y)&=8\pi\bigl(\mu+J(Y)\bigr)-I_g(Y)., rendering as TeX:
+  I_g(Y)&=|X_1|_g^2+|X_2|_g^2
+        ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math I_g(w)&=|X_o+w\times X_e|^2+|X_e|^2-|w\times X_e|^2\\
+         &\ge|X_e|^2-|w\times X_e|^2
+           =|\alpha|_{\bar g}^2., rendering as TeX:
+  I_g(w)&=|X_o+w\times X_e|^2+|X_e|^2-|w\t
+        ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math P_g(E)
+   &\le P_g(F\cup O)
+   \le P_g(F)+P_g(O)-P_g(F\cap O),\\
+   P_g(O)-P_g(F\cap O)
+   &\le \int_{O\setminus F}\operatorname{div}_gZ\,dV_g
+   \le C\operatorname{Vol}_g(E\triangle F)., rendering as TeX:
+   &\le P_g(F\cup O)
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math V'^2+B_sV^2&=2p'+c,
+   &\frac{VV'}2&=p+r^2d',\\
+   \frac{V^2}2&=2r^2d,
+   &V^2+r^2B_tV^2&=2rNp+r^2c., rendering as TeX:
+  V'^2+B_sV^2&=2p'+c,
+             ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math [\mathcal L,\psi]b
+     &=(\partial_i\partial_j\psi)T_{ij}
+         +2(\partial_i\psi)\partial_jT_{ij},\\
+   ([\mathcal D,\psi]k)_i
+     &=(\partial_j\psi)(k_{ij}-(\operatorname{tr}_\delta k)\delta_{ij})., rendering as TeX:
+     &=(\partial_i\partial_j\psi)T_{ij}
+     ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \Delta_{g_0}\phi_\epsilon
+   &=\frac34(\phi_\epsilon^5-\phi_\epsilon)
+     -\frac{\epsilon^2}{8}|q|_{g_0}^2\phi_\epsilon^{-7}
+         &&\text{on }M,\\
+   \partial_s\phi_\epsilon
+   &=\frac{\epsilon}{4}q_{ss}\phi_\epsilon^{-3}
+         &&\text{on }S,\\
+   \phi_0&=1,\qquad
+   \phi_\epsilon-1\in C^{2,\alpha}_\tau,\qquad
+   \|\phi_\epsilon-1\|_{C^{2,\alpha}_\tau}\longrightarrow0
+         &&\text{as }\epsilon\longrightarrow0., rendering as TeX:
+   &=\frac34(\phi_\epsilon^5-\phi_\epsilon
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \frac12e^{4t}R_{\hat g}
+   ={}&8\pi(\mu+J(w))+(1-\delta_0)\mathcal T
+              +(1-\delta_0)\tau_0a\sigma\\
+      &+w(C)-F\operatorname{tr} K-\rho+m_0(t)\mathcal P., rendering as TeX:
+   ={}&8\pi(\mu+J(w))+(1-\delta_0)\mathcal
+      ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \frac1{r^3}\partial_s\bigl[r^3(u'-pu)\bigr]
+   &=3p(u'-pu)+u''-p'u-pu'\\
+   &=\left(3+\frac2{r^2}-p'-3p^2\right)u
+   =\frac{3m_0}{r^3}u., rendering as TeX:
+   &=3p(u'-pu)+u''-p'u-pu'\\
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \frac{\operatorname{div}(uW)}u
+   &=\sqrt d\left[
+         \operatorname{tr}_{A_d}H^f+(dp+p_L)a\partial_{e_f}t\right],
+   \\
+   \frac{\operatorname{div}(\sqrt D\,W)}{\sqrt D}
+   &=\sqrt d\left[
+         \operatorname{tr}_{A_d}H^f+dp\,a\partial_{e_f}t\right]., rendering as TeX:
+   &=\sqrt d\left[
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \gamma-\delta&=O_k(r^{-2-\epsilon}),\\
+   U&=-\frac{M_1}{r^2}
+         +\frac{H_1(x)}{r^4}
+         +\frac{H_2(x)}{r^6}
+         +O_k(r^{-4-\epsilon})., rendering as TeX:
+  \gamma-\delta&=O_k(r^{-2-\epsilon}),\\
+               ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \int_B L\varphi\,\mathrm d A_g
+   &\le\Pi_n\int_{\mathcal C}u
+         \bigl[(1+\sqrt{\mathcal T})\varphi
+                            +|d\varphi|_{A_\chi}\bigr]\,\mathrm d V_g,
+   \\
+   \int_B\varphi\,\mathrm d A_g
+   &\le\Pi_n\int_{\mathcal C}\sqrt D
+         \bigl[(1+\sqrt{\mathcal T})\varphi
+                            +|d\varphi|_{A_\chi}\bigr]\,\mathrm d V_g., rendering as TeX:
+   &\le\Pi_n\int_{\mathcal C}u
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \int_B L_0\varphi\,\,\mathrm d A_g
+   &\le\Pi_n\int_{\mathcal C}u
+         \bigl((1+\sqrt{\mathcal T})\varphi+|\,\mathrm d\varphi|_{A_\chi}\bigr)\,\,\mathrm d V_g,
+         \\
+   \int_B\varphi\,\,\mathrm d A_g
+   &\le\Pi_n\int_{\mathcal C}\sqrt D
+         \bigl((1+\sqrt{\mathcal T})\varphi+|\,\mathrm d\varphi|_{A_\chi}\bigr)\,\,\mathrm d V_g., rendering as TeX:
+   &\le\Pi_n\int_{\mathcal C}u
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \int_{A_R}\phi[\mathcal L,\psi_R]h\,\,\mathrm d x
+    &=-\mathfrak F_\phi(R)-\int_{A_R}\psi_R\phi f\,\,\mathrm d x,
+         \\
+   \int_{A_R}Y^i([\mathcal D,\psi_R](K-K_*))_i\,\,\mathrm d x
+    &=-\mathfrak G_Y(R)-\int_{A_R}\psi_RY^iF_i\,\,\mathrm d x., rendering as TeX:
+    &=-\mathfrak F_\phi(R)-\int_{A_R}\psi_
+    ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \left\|\psi-\sum_{j=1}^p\epsilon^ju_j\right\|_\beta
+       &=O(\epsilon^{p+1}),\\
+   \left\|L\psi-\sum_{j=1}^p\epsilon^jF_j\right\|_{2\beta}
+       &=O(\epsilon^{p+1}),\\
+   \left\|\partial_s\psi|_S-\sum_{j=1}^p\epsilon^jB_j\right\|_{C^0(S)}
+       &=O(\epsilon^{p+1})., rendering as TeX:
+       &=O(\epsilon^{p+1}),\\
+       ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \mathcal A(z)&=\frac{15}{2}z^2+\frac{15}{2}z^3
+                      +\frac{15}{4}z^4+\frac34z^5,\\
+   \mathcal N_{\epsilon,q}(z)&=\mathcal A(z)
+                      -\frac{\epsilon^2}{8}Q_q(1+z)^{-7},\\
+   \mathcal B_{\epsilon,q}(z)&=\frac{\epsilon}{4}h_q(1+z)^{-3}., rendering as TeX:
+  \mathcal A(z)&=\frac{15}{2}z^2+\frac{15}
+               ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \mathcal F_{\ell ab}
+    ={}&\partial_a h_{\ell b}-\partial_\ell h_{ab}\\
+     &+\eta_{\ell b}
+         (\partial^d h_{ad}-\partial_a\operatorname{tr}_\eta h)
+      -\eta_{ab}
+         (\partial^d h_{\ell d}-\partial_\ell\operatorname{tr}_\eta h)., rendering as TeX:
+    ={}&\partial_a h_{\ell b}-\partial_\el
+       ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \mathcal Lh&=16\pi\mu+O(r^{-2-2q}),\\
+   \partial_j\pi_{ij}&=8\pi J_i+O(r^{-2-2q})., rendering as TeX:
+  \mathcal Lh&=16\pi\mu+O(r^{-2-2q}),\\
+             ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \nabla_i\nabla_jX_k
+   &=\nabla_iB_{jk}+\nabla_jB_{ik}-\nabla_kB_{ij}
+         +\mathcal R_{ijk}(X),\\
+   \mathcal R_{ijk}(X)
+   &=-\tfrac12\bigl(
+         ([\nabla_j,\nabla_i]X)_k
+         +([\nabla_i,\nabla_k]X)_j
+         +([\nabla_j,\nabla_k]X)_i\bigr)., rendering as TeX:
+   &=\nabla_iB_{jk}+\nabla_jB_{ik}-\nabla_
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \nabla_i\nabla_ju
+   ={}&u(\operatorname{Ric}_{g,ij}+\tau K_{ij}-2(K^2)_{ij})-X^a\nabla_aK_{ij}
+         \\
+   &-K_{aj}\nabla_iX^a-K_{ia}\nabla_jX^a+X_{(i}J_{j)}., rendering as TeX:
+   ={}&u(\operatorname{Ric}_{g,ij}+\tau K_
+      ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \nabla_{(i}X_{j)}&=-uK_{ij},
+   \\
+   \Delta u&=-\operatorname{div}_g\bigl(K(X,\cdot)^\sharp\bigr),
+   \\
+   \nabla^2u
+   &=u(\operatorname{Ric}_g+\tau K-2K^2)-\mathcal L_XK+X_{(i}J_{j)}., rendering as TeX:
+  \nabla_{(i}X_{j)}&=-uK_{ij},
+                   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \operatorname{Ric}_{\mathbf g,ij}
+     &=\operatorname{Ric}_{g,ij}+\tau K_{ij}-2(K^2)_{ij}
+         -u^{-1}\bigl[(\mathcal L_XK)_{ij}
+                               +(\operatorname{Hess} u)_{ij}\bigr],
+         \\
+   \operatorname{Scal}_{\mathbf g}
+     &=R+\tau^2+|K|^2
+               -2u^{-1}\bigl(\Delta u+X(\tau)\bigr)., rendering as TeX:
+     &=\operatorname{Ric}_{g,ij}+\tau K_{i
+     ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \operatorname{Ric}_{\mathbf g,ij}
+   &=\operatorname{Ric}_{g,ij}+\tau K_{ij}-2(K^2)_{ij}
+        -u^{-1}\bigl((\mathcal L_XK)_{ij}+(\nabla^2u)_{ij}\bigr),
+   \\
+   R_{\mathbf g}
+   &=R_g+\tau^2+|K|^2-2u^{-1}(\Delta u+X\tau)., rendering as TeX:
+   &=\operatorname{Ric}_{g,ij}+\tau K_{ij}
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \overline\operatorname{Ric}_{ij}
+    &=\operatorname{Ric}_{\gamma,ij}+\partial_t\mathcal K_{ij}
+         +H\mathcal K_{ij}
+         -2(\mathcal K\circ_\gamma\mathcal K)_{ij},\\
+   \overline\operatorname{Ric}_{tt}
+    &=-\operatorname{tr}_\gamma(\partial_t\mathcal K)+|\mathcal K|_\gamma^2,
+   &\overline\operatorname{Ric}_{ti}
+    &=(\operatorname{div}_\gamma\mathcal K)_i-\partial_iH., rendering as TeX:
+  erline\operatorname{Ric}_{ij}
+                     ^
+  unexpected "{"
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \partial_t\gamma&=2\mathcal K,\\
+   \partial_t\mathcal K
+     &=-\operatorname{Ric}_\gamma-3\gamma
+       -(\operatorname{tr}_\gamma\mathcal K)\mathcal K
+       +2\mathcal K\circ_\gamma\mathcal K., rendering as TeX:
+  \partial_t\gamma&=2\mathcal K,\\
+                  ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \tfrac12 C'_{H_j}(x,v)
+    ={}&\ell\sum_i(\nabla_{e_i}\mathbf G_j)(e_i,\zeta)
+         +\mathbf G_j(\nabla\ell,\zeta)\\
+      &+\mathbf G_j\bigl(n,\nabla\ell+\,\mathrm d\ell(v)n\bigr)., rendering as TeX:
+    ={}&\ell\sum_i(\nabla_{e_i}\mathbf G_j
+       ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \widetilde K&=\epsilon^2k+O(\epsilon^3),
+   &\operatorname{tr}_{g_0}k&=0,&\operatorname{div}_{g_0}k&=0,
+   \\
+   \operatorname{Scal}_{\widetilde g}+6
+     &=\epsilon^4|k|_{g_0}^2+O(\epsilon^5)., rendering as TeX:
+  \widetilde K&=\epsilon^2k+O(\epsilon^3),
+              ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \|L\psi-\epsilon^2F_{2,\nu}\|_{2\beta}
+     &\leq C(\epsilon^2d_\nu+\epsilon^3),\\
+   \|\partial_s\psi|_S-\epsilon B_{1,\nu}-\epsilon^2B_{2,\nu}\|_{C^0(S)}
+     &\leq C\bigl((\epsilon+\epsilon^2)d_\nu+\epsilon^3\bigr)., rendering as TeX:
+     &\leq C(\epsilon^2d_\nu+\epsilon^3),\
+     ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math f^2 C_f(x,f^{-1}v)
+     &=C(x,v)+6f^{-1}\bigl[-\Delta_g f+K(\nabla f,v)\bigr],
+         \\
+   f\theta_{+,f}
+     &=\theta_++3\partial_\nu\log f., rendering as TeX:
+     &=C(x,v)+6f^{-1}\bigl[-\Delta_g f+K(\
+     ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math k={}&Q(w)-2uq-2v\operatorname{Hess} u+6uvg_0\\
+       &\quad+2\,\mathrm d u\otimes\,\mathrm d v+2\,\mathrm d v\otimes\,\mathrm d u
+            -2\langle\,\mathrm d u,\,\mathrm d v\rangle_{g_0}g_0., rendering as TeX:
+  k={}&Q(w)-2uq-2v\operatorname{Hess} u+6u
+      ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math t&=-\frac{\log\sigma}{n+3}+\frac{3Z}{n+3}+o(1),\\
+   d&=e^{-6nZ/(n+3)}\sigma^{-\gamma_n}(1+o(1)),
+   &\chi&=\frac{3}{n+3}d(1+o(1)),\\
+   \frac{\sqrt D}{l}&=\sigma(1+o(1))., rendering as TeX:
+  t&=-\frac{\log\sigma}{n+3}+\frac{3Z}{n+3
+   ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math u^2\mu_u&=\mu-3u^{-1}\Delta_g u,\\
+   uJ_u&=J+3K(\operatorname{grad}_g\log u,\cdot)., rendering as TeX:
+  u^2\mu_u&=\mu-3u^{-1}\Delta_g u,\\
+          ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math |S^\sharp|_{\widetilde g}&=|S|_{g_\epsilon}+O(\epsilon^5),
+   \\
+   H_{\widetilde g}(S^\sharp)
+        &=\epsilon^2k_{ss}|_S+O(\epsilon^3)., rendering as TeX:
+  arp|_{\widetilde g}&=|S|_{g_\epsilon}+O(
+                     ^
+  unexpected '&'
+  expecting "\\bangle", "\\brace", "\\brack", "\\choose", "\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle", "{", "\\operatorname", letter, digit, ".", "!", "'", "''", "'''", "''''", "*", "+", ",", "-", ".", "/", ":", ":=", ";", "<", "=", ">", "?", "@", "~", "_", "^", "'", "\\left", "\\lVert", "\\", "\\hyperref" or end of input
+[WARNING] Could not convert TeX math \chi=O_{\rm tot}(2),\qquad
+   \theta=O_{\rm tot}(5)., rendering as TeX:
+  \chi=O_{\rm tot}(2),\qquad
+              ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \mathcal E=b^0E_{\rm new}+b^iP_{{\rm new},i}., rendering as TeX:
+  athcal E=b^0E_{\rm new}+b^iP_{{\rm new},
+                     ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \operatorname{Scal}_{\rm slice}+6
+     =|K_{\rm slice}|^2-(\operatorname{tr} K_{\rm slice})^2,
+   \qquad
+   \operatorname{div}\bigl(K_{\rm slice}-(\operatorname{tr} K_{\rm slice})g_{\rm slice}\bigr)=0., rendering as TeX:
+  torname{Scal}_{\rm slice}+6
+                     ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \overline\operatorname{Ric}=-3\overline g, rendering as TeX:
+  erline\operatorname{Ric}=-3\overline g
+                     ^
+  unexpected "{"
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \begin{split}
+   \mathcal T={}&\tfrac12|T^{\rm tf}|^2
+         +|M+(p+1)ay_t|^2+[4(p+1)-v]|y_t|^2\\
+   &+4(p+1)d\left(x_t+\frac{\chi ak}{4d}\right)^2
+         +\tfrac34\left(F-\frac{\chi k}{3}\right)^2
+         +\frac{4d(9-d)}{3(4+pv)^2}k^2.
+   \end{split}, rendering as TeX:
+  cal T={}&\tfrac12|T^{\rm tf}|^2
+                     ^
+  unexpected "^"
+  expecting "&", "\\\\", white space or "\\end"
+[WARNING] Could not convert TeX math A_\beta:\operatorname{Hess}_g f=G_\beta,
+   \quad A_\beta=(1-\beta)\operatorname{Id}+\betaA_\chi,
+   \quad G_\beta=(1-\beta)\eta_n f+\beta G_s,, rendering as TeX:
+  atorname{Id}+\betaA_\chi,
+                     ^
+  unexpected control sequence \betaA
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \delta\le c\min\{\delta_{\rm alt},b_0\delta_{\mathrm{aff}}/r_*\}., rendering as TeX:
+  c\min\{\delta_{\rm alt},b_0\delta_{\math
+                     ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \begin{gathered}
+   A_\chi:\operatorname{Hess}_g f=G_f,\qquad
+   G_f=\frac{\sqrt D}{l}
+            \bigl(F_{\rm presc}-\operatorname{tr}_{A_\chi}K\bigr),\\
+   |G_f|\le C(n),\qquad 0<\chi_0(n)\le\chi\le1.
+   \end{gathered}, rendering as TeX:
+        \bigl(F_{\rm presc}-\operatorname{
+                     ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math |\nabla w|+|\,\mathrm d\log u|_{A_\chi}+|\nablaA_\chi|
+                    \le\Pi_n(\sqrt{\mathcal T}+|K|)., rendering as TeX:
+  |_{A_\chi}+|\nablaA_\chi|
+                     ^
+  unexpected control sequence \nablaA
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math U\operatorname{Scal}_{\bf g}
+   =U\bigl(\operatorname{Scal}_g+\mathscr B(k,k)\bigr)
+     -2\operatorname{div}(\nabla U+\theta\beta)., rendering as TeX:
+  torname{Scal}_{\bf g}
+                     ^
+  unexpected control sequence \bf
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math C\in C_c^\infty(\overline X),\qquad C_w\le C\le C_b,
+   \qquad C_b\ge0,\quad C_w\le0,\\
+   C=C_b-k_Bs\ \text{near a black face},\qquad
+   C=C_w+k_Bs\ \text{near a white face},\qquad k_B>0,\\
+   b_-=c_b-C_b<0,\qquad b_+=-c_w-C_w>0., rendering as TeX:
+   C=C_b-k_Bs\ \text{near a black face},\q
+   ^
+  unexpected control sequence \\
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math B=B_s\,\,\mathrm d s^2+B_t r^2\sigma,\qquad
+   B_s=1-\frac{2m_0}{r^3},\qquad
+   B_t=1+\frac{m_0}{r^3},\\
+   \nabla^2N=NB,\qquad
+   \operatorname{tr}_{g_0}B=3,\qquad \operatorname{div}_{g_0}B=0,\qquad
+   LN=0., rendering as TeX:
+   \nabla^2N=NB,\qquad
+   ^
+  unexpected control sequence \\
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \begin{split}
+   \operatorname{Ric}_{\bf g}(N_0,N_0)&=-N_0(\theta)-|k|^2+U^{-1}\Delta U,\\
+   \operatorname{Scal}_g&=\operatorname{Scal}_{\bf g}+2\operatorname{Ric}_{\bf g}(N_0,N_0)+|k|^2-\theta^2.
+   \end{split}, rendering as TeX:
+  atorname{Ric}_{\bf g}(N_0,N_0)&=-N_0(\th
+                     ^
+  unexpected control sequence \bf
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \delta_{\rm alt}, rendering as TeX:
+  \delta_{\rm alt}
+              ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \delta_{\rm alt}>0, rendering as TeX:
+  \delta_{\rm alt}>0
+              ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \ell=n_{\rm future}+\nu, rendering as TeX:
+  \ell=n_{\rm future}+\nu
+              ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \mathcal B=\{(x,v):x\inM_{\mathrm{ext}},\ |v|_g\le1\},\qquad
+   C(x,v)=16\pi\bigl(\mu(x)+J_x(v)\bigr),, rendering as TeX:
+  cal B=\{(x,v):x\inM_{\mathrm{ext}},\ |v|
+                     ^
+  unexpected control sequence \inM
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \mathcal E\ge\sqrt{E_{\rm new}^2-|P_{\rm new}|^2}, rendering as TeX:
+  l E\ge\sqrt{E_{\rm new}^2-|P_{\rm new}|^
+                     ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \mathrm{II}=(H/2)g_{\rm leaf}, rendering as TeX:
+  rm{II}=(H/2)g_{\rm leaf}
+                     ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \operatorname{Scal}_{\bf g}=\operatorname{Scal}_g+|k|^2+\theta^2+
+  2N_0(\theta)-2U^{-1}\Delta U, rendering as TeX:
+  torname{Scal}_{\bf g}=\operatorname{Scal
+                     ^
+  unexpected control sequence \bf
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \operatorname{Scal}_{\bf g}=\operatorname{Scal}_{\bar g}-2l^{-1}\bar\Delta l, rendering as TeX:
+  torname{Scal}_{\bf g}=\operatorname{Scal
+                     ^
+  unexpected control sequence \bf
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \overline\operatorname{Ric}(\ell,\ell)=0, rendering as TeX:
+  erline\operatorname{Ric}(\ell,\ell)=0
+                     ^
+  unexpected "{"
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \partialM_{\mathrm{ext}}=S, rendering as TeX:
+  \partialM_{\mathrm{ext}}=S
+           ^
+  unexpected control sequence \partialM
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \partial_\lambda\chi=-\chi^2-\mathcal R_\ell,
+   \qquad
+   \partial_\lambda\theta
+         =-|\chi|^2-\overline\operatorname{Ric}(\ell,\ell)., rendering as TeX:
+  erline\operatorname{Ric}(\ell,\ell).
+                     ^
+  unexpected "{"
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \partial_s g_{\rm leaf}=2f\mathrm{II}=fH g_{\rm leaf}., rendering as TeX:
+  \partial_s g_{\rm leaf}=2f\mathrm{II}=fH
+                    ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \sup_{\mathcal A|_L}|C'_{H_j}|
+         \le C_\ell\|\mathbf G_j-\mathbf G_0\|_{C^1_{\rm sp}(L)}
+         \longrightarrow0,, rendering as TeX:
+  bf G_0\|_{C^1_{\rm sp}(L)}
+                     ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math \tfrac12\{(\operatorname{tr}_{A_d}H^f)^2-|H^f|_{A_d\otimesA_d}^2\}
+     =\mathcal S(H^f),, rendering as TeX:
+  -|H^f|_{A_d\otimesA_d}^2\}
+                     ^
+  unexpected control sequence \otimesA
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math g-\delta_{\rm eucl}=O_j(r_y^{-1}), rendering as TeX:
+  g-\delta_{\rm eucl}=O_j(r_y^{-1})
+                ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math j:\overline{\mathcal E}\toM_{\mathrm{ext}}, rendering as TeX:
+  ine{\mathcal E}\toM_{\mathrm{ext}}
+                     ^
+  unexpected control sequence \toM
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math k_*,\delta_{\rm alt}, rendering as TeX:
+  k_*,\delta_{\rm alt}
+                  ^
+  unexpected control sequence \rm
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Could not convert TeX math {\bf g}=-l^2(\,\mathrm d s_0-\,\mathrm d f)^2+\bar g
+         =-U^2\,\mathrm d s_0^2+g(\,\mathrm d x+\beta\,\mathrm d s_0,\,\mathrm d x+\beta\,\mathrm d s_0),
+   \qquad \beta=l^2\nabla f=Uw., rendering as TeX:
+  {\bf g}=-l^2(\,\mathrm d s_0-\,\mathrm d
+       ^
+  unexpected control sequence \bf
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"

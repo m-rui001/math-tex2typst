@@ -1,0 +1,12 @@
+== CD canvases measured against their column: 126
+   wider than the text block before the fix: 1 over 1 papers
+   wider than the text block after it      : 1 over 1 papers
+   canvases that got wider                 : 42 (median +0.31 cm, worst +3.13 cm)
+   column 15.99  old 16.55 -> new 16.73  Abundance-in-numerical-dimension-one-for-ter
+   column 15.99  old 13.65 -> new 14.94  Irrational-cubic-fourfolds-with-geometric-K3
+   column 16.49  old 13.61 -> new 13.61  A-counterexample-to-Tachikawas-second-conjec
+   column 16.49  old 13.47 -> new 13.47  The-height-three-chromatic-overlap-an-explic
+   column 15.99  old 10.65 -> new 11.13  Infinitely-many-closed-geodesic-images-on-ev
+   column 16.23  old 11.29 -> new 11.29  Log-abundance-in-numerical-dimension-one-for
+   column 15.99  old 10.86 -> new 10.86  Abundance-in-numerical-dimension-one-for-ter
+   column 15.79  old 10.57 -> new 10.57  Uniform-log-Iitaka-fibrations-and-bounded-mo

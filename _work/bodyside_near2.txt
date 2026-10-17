@@ -1,0 +1,2933 @@
+###### D001 D01-对称Mahler猜想与等号分类.md pairs=2
+ DECL_L368  verbatim_lines=[352, 368]  verbatim_outside_decl=[352]
+   Q(20): 逐行奇偶自查为零行异常（判定见下段命令）
+   NEAR r=0.976 L368 cnt=1 : "逐行奇偶自查为零行异常（判定见下段命令）
+   NEAR r=0.976 L368 cnt=1 : 逐行奇偶自查为零行异常（判定见下段命令）"
+   NEAR r=0.974 L368 cnt=2 : 逐行奇偶自查为零行异常（判定见下段命令
+   NEAR r=0.974 L368 cnt=2 : 行奇偶自查为零行异常（判定见下段命令）
+ DECL_L368  verbatim_lines=[368]  verbatim_outside_decl=[]
+   Q(16): 判定过程见会话，结论见本节第三段
+   NEAR r=0.970 L368 cnt=1 : "判定过程见会话，结论见本节第三段
+   NEAR r=0.970 L368 cnt=1 : 判定过程见会话，结论见本节第三段"
+   NEAR r=0.968 L368 cnt=1 : 判定过程见会话，结论见本节第三
+   NEAR r=0.968 L368 cnt=1 : 定过程见会话，结论见本节第三段
+
+###### D004 D04-乘性函数二点关联.md pairs=1
+ DECL_L393  verbatim_lines=[393]  verbatim_outside_decl=[]
+   Q(10): $X$ 可取任意实数
+   NEAR r=0.947 L440 cnt=1 : $X$ 取任意实数
+   NEAR r=0.900 L440 cnt=1 :  $X$ 取任意实数
+   NEAR r=0.900 L440 cnt=1 : $X$ 取任意实数那
+   NEAR r=0.857 L440 cnt=1 : 则 $X$ 取任意实数
+
+###### D005 D05-算术级数拟多项式界.md pairs=2
+ DECL_L113  verbatim_lines=[113]  verbatim_outside_decl=[]
+   Q(11): 为什么恰好长成这个形状
+   NEAR r=0.957 L113 cnt=1 : "为什么恰好长成这个形状
+   NEAR r=0.957 L113 cnt=1 : 为什么恰好长成这个形状"
+   NEAR r=0.952 L113 cnt=1 : 为什么恰好长成这个形
+   NEAR r=0.952 L113 cnt=1 : 什么恰好长成这个形状
+ DECL_L373  verbatim_lines=[373]  verbatim_outside_decl=[]
+   Q(21): 先弃集、再选精度、最后选 $\sigma$
+   NEAR r=0.952 L396 cnt=1 : 先弃集、再选精度、最后定 $\sigma$
+   NEAR r=0.930 L396 cnt=1 :  先弃集、再选精度、最后定 $\sigma$
+   NEAR r=0.930 L396 cnt=1 : 先弃集、再选精度、最后定 $\sigma$ 
+   NEAR r=0.927 L396 cnt=1 : 先弃集、再选精度、最后定 $\sigma
+
+###### D007 D07-量子Heisenberg铁磁体自发磁化.md pairs=2
+ DECL_L299  verbatim_lines=[299]  verbatim_outside_decl=[]
+   Q(61): 当 $v\ge0$ 时 $\lVert\mathrm Av\rVert_{1}\le\lVert v\rVert_{1}$
+   NEAR r=0.833 L351 cnt=1 : | $\lVert\mathrm Av\rVert_{1}\le\lVert v\rVert_{1}$ | 列和界的作
+   NEAR r=0.833 L351 cnt=1 :  $\lVert\mathrm Av\rVert_{1}\le\lVert v\rVert_{1}$ | 列和界的作用
+   NEAR r=0.826 L351 cnt=1 : | $\lVert\mathrm Av\rVert_{1}\le\lVert v\rVert_{1}$ | 列和界的作用
+   NEAR r=0.826 L351 cnt=1 :  $\lVert\mathrm Av\rVert_{1}\le\lVert v\rVert_{1}$ | 列和界的作用 
+ DECL_L380  verbatim_lines=[251, 380]  verbatim_outside_decl=[251]
+   Q(11): 较早的下标不需要可逆性
+   NEAR r=0.957 L251 cnt=2 : "较早的下标不需要可逆性
+   NEAR r=0.957 L251 cnt=2 : 较早的下标不需要可逆性"
+   NEAR r=0.952 L251 cnt=2 : 较早的下标不需要可逆
+   NEAR r=0.952 L251 cnt=2 : 早的下标不需要可逆性
+
+###### D009 D09-MaxCut最优NP难度.md pairs=2
+ DECL_L25  verbatim_lines=[9, 25]  verbatim_outside_decl=[9]
+   Q(12): labeler 允许低效
+   NEAR r=0.923 L399 cnt=1 : labeler 允许指数低效
+   NEAR r=0.889 L399 cnt=1 :  labeler 允许指数低效
+   NEAR r=0.889 L399 cnt=1 : labeler 允许指数低效；
+   NEAR r=0.880 L399 cnt=1 : labeler 允许指数低
+ DECL_L213  verbatim_lines=[213, 330, 401]  verbatim_outside_decl=[330, 401]
+   Q(12): 非空零和子集含两相同向量
+   NEAR r=0.960 L401 cnt=2 : 、非空零和子集含两相同向量
+   NEAR r=0.960 L401 cnt=1 : 非空零和子集含两相同向量）
+   NEAR r=0.957 L401 cnt=3 : 非空零和子集含两相同向
+   NEAR r=0.957 L401 cnt=3 : 空零和子集含两相同向量
+
+###### D010 D10-自由群因子同构.md pairs=1
+ DECL_L709  verbatim_lines=[709]  verbatim_outside_decl=[]
+   Q(17): Voiculescu 的指数化定理
+   NEAR r=0.971 L709 cnt=1 : "Voiculescu 的指数化定理
+   NEAR r=0.971 L709 cnt=1 : Voiculescu 的指数化定理"
+   NEAR r=0.970 L709 cnt=1 : Voiculescu 的指数化定
+   NEAR r=0.970 L709 cnt=1 : oiculescu 的指数化定理
+
+###### D100 D100-准Riemann假设：Re-s大于八分之七的无零点半平面与Dirichlet-L函数显式公式路线的反推笔记.md pairs=2
+ DECL_L955  verbatim_lines=[955]  verbatim_outside_decl=[]
+   Q(17): 文本里能指认为被拒绝或被绕开的动作
+   NEAR r=0.971 L955 cnt=1 : "文本里能指认为被拒绝或被绕开的动作
+   NEAR r=0.971 L955 cnt=1 : 文本里能指认为被拒绝或被绕开的动作"
+   NEAR r=0.970 L955 cnt=1 : 文本里能指认为被拒绝或被绕开的动
+   NEAR r=0.970 L955 cnt=1 : 本里能指认为被拒绝或被绕开的动作
+ DECL_L971  verbatim_lines=[971]  verbatim_outside_decl=[]
+   Q(11): 为什么现有的强结果不够
+   NEAR r=0.957 L971 cnt=1 : "为什么现有的强结果不够
+   NEAR r=0.957 L971 cnt=1 : 为什么现有的强结果不够"
+   NEAR r=0.952 L971 cnt=1 : 为什么现有的强结果不
+   NEAR r=0.952 L971 cnt=1 : 什么现有的强结果不够
+
+###### D103 D103-Landau-Siegel零点的均匀排除：加权环面jet与绝对零点间隙的反推笔记.md pairs=1
+ DECL_L94  verbatim_lines=[94]  verbatim_outside_decl=[]
+   Q(16): 取值在 $\{-1,0,1\}$
+   NEAR r=0.970 L94 cnt=1 : "取值在 $\{-1,0,1\}$
+   NEAR r=0.970 L94 cnt=1 : 取值在 $\{-1,0,1\}$"
+   NEAR r=0.968 L94 cnt=1 : 取值在 $\{-1,0,1\}
+   NEAR r=0.968 L94 cnt=1 : 值在 $\{-1,0,1\}$
+
+###### D104 D104-单折Diophantine表示：幂关系与椭圆曲线互定义性的反推笔记.md pairs=1
+ DECL_L675  verbatim_lines=[675]  verbatim_outside_decl=[]
+   Q(44): | 记号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+   NEAR r=0.989 L675 cnt=1 : "| 记号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+   NEAR r=0.989 L675 cnt=1 : | 记号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |"
+   NEAR r=0.989 L675 cnt=1 : | 记号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 
+   NEAR r=0.989 L675 cnt=1 :  记号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+
+###### D107 D107-唯一博弈定理：从约束图与可判定性到定理11机器化的反推笔记.md pairs=3
+ DECL_L685  verbatim_lines=[685]  verbatim_outside_decl=[]
+   Q(24): 每个矩阵只接受一次替换，即使多条好行纤维在此重叠
+   NEAR r=0.980 L685 cnt=1 : "每个矩阵只接受一次替换，即使多条好行纤维在此重叠
+   NEAR r=0.980 L685 cnt=1 : 每个矩阵只接受一次替换，即使多条好行纤维在此重叠"
+   NEAR r=0.979 L685 cnt=1 : 每个矩阵只接受一次替换，即使多条好行纤维在此重
+   NEAR r=0.979 L685 cnt=1 : 个矩阵只接受一次替换，即使多条好行纤维在此重叠
+ DECL_L2463  verbatim_lines=[2463]  verbatim_outside_decl=[]
+   Q(12): 二进制分子、二进制正分母
+   NEAR r=0.960 L2463 cnt=1 : "二进制分子、二进制正分母
+   NEAR r=0.960 L2463 cnt=1 : 二进制分子、二进制正分母"
+   NEAR r=0.957 L2463 cnt=1 : 二进制分子、二进制正分
+   NEAR r=0.957 L2463 cnt=1 : 进制分子、二进制正分母
+ DECL_L2983  verbatim_lines=[2983]  verbatim_outside_decl=[]
+   Q(32): 这些是上面真实的局部结果；用于分析比较的高斯变量不是输出的一部分
+   NEAR r=0.985 L2983 cnt=1 : "这些是上面真实的局部结果；用于分析比较的高斯变量不是输出的一部分
+   NEAR r=0.985 L2983 cnt=1 : 这些是上面真实的局部结果；用于分析比较的高斯变量不是输出的一部分"
+   NEAR r=0.984 L2983 cnt=1 : 这些是上面真实的局部结果；用于分析比较的高斯变量不是输出的一部
+   NEAR r=0.984 L2983 cnt=1 : 些是上面真实的局部结果；用于分析比较的高斯变量不是输出的一部分
+
+###### D108 D108-完全图交叉数：圆上摆放、相邻手术与逐点验收的反推笔记.md pairs=1
+ DECL_L791  verbatim_lines=[791]  verbatim_outside_decl=[]
+   Q(11): 一串构造画法的交叉计数
+   NEAR r=0.957 L791 cnt=1 : "一串构造画法的交叉计数
+   NEAR r=0.957 L791 cnt=1 : 一串构造画法的交叉计数"
+   NEAR r=0.952 L791 cnt=1 : 一串构造画法的交叉计
+   NEAR r=0.952 L791 cnt=1 : 串构造画法的交叉计数
+
+###### D109 D109-Falconer距离猜想全维版：角增益与递归装配的反推笔记.md pairs=1
+ DECL_L223  verbatim_lines=[223]  verbatim_outside_decl=[]
+   Q(24): 两个 well-separated depths
+   NEAR r=0.980 L223 cnt=1 : "两个 well-separated depths
+   NEAR r=0.980 L223 cnt=1 : 两个 well-separated depths"
+   NEAR r=0.979 L223 cnt=1 : 两个 well-separated depth
+   NEAR r=0.979 L223 cnt=1 : 个 well-separated depths
+
+###### D011 D11-退化反例-三次不动点打破Arnold界.md pairs=2
+ DECL_L294  verbatim_lines=[294]  verbatim_outside_decl=[]
+   Q(18): 流形上的 Hamiltonian 流
+   NEAR r=0.973 L294 cnt=1 : "流形上的 Hamiltonian 流
+   NEAR r=0.973 L294 cnt=1 : 流形上的 Hamiltonian 流"
+   NEAR r=0.971 L294 cnt=1 : 流形上的 Hamiltonian 
+   NEAR r=0.971 L294 cnt=1 : 形上的 Hamiltonian 流
+ DECL_L311  verbatim_lines=[311]  verbatim_outside_decl=[]
+   Q(10): 临界数 $\ge4$
+   NEAR r=0.952 L311 cnt=1 : "临界数 $\ge4$
+   NEAR r=0.952 L311 cnt=1 : 临界数 $\ge4$"
+   NEAR r=0.947 L311 cnt=1 : 临界数 $\ge4
+   NEAR r=0.947 L311 cnt=1 : 界数 $\ge4$
+
+###### D110 D110-强薄树猜想：层级指派构造与对偶树的反推笔记.md pairs=1
+ DECL_L957  verbatim_lines=[957]  verbatim_outside_decl=[]
+   Q(16): 第一轮数 \(j\) 未知但有界
+   NEAR r=0.970 L957 cnt=1 : "第一轮数 \(j\) 未知但有界
+   NEAR r=0.970 L957 cnt=1 : 第一轮数 \(j\) 未知但有界"
+   NEAR r=0.968 L957 cnt=1 : 第一轮数 \(j\) 未知但有
+   NEAR r=0.968 L957 cnt=1 : 一轮数 \(j\) 未知但有界
+
+###### D111 D111-复群环的Bass迹猜想：滤链手术与右射影消没的反推笔记.md pairs=2
+ DECL_L674  verbatim_lines=[674]  verbatim_outside_decl=[]
+   Q(19): 对满足某同调有限性条件的群族证明迹消没
+   NEAR r=0.974 L674 cnt=1 : "对满足某同调有限性条件的群族证明迹消没
+   NEAR r=0.974 L674 cnt=1 : 对满足某同调有限性条件的群族证明迹消没"
+   NEAR r=0.973 L674 cnt=1 : 对满足某同调有限性条件的群族证明迹消
+   NEAR r=0.973 L674 cnt=1 : 满足某同调有限性条件的群族证明迹消没
+ DECL_L674  verbatim_lines=[674]  verbatim_outside_decl=[]
+   Q(26): 每个三元组 $(e,g,n)$ 造一条稀疏闭链再数点
+   NEAR r=0.981 L674 cnt=1 : "每个三元组 $(e,g,n)$ 造一条稀疏闭链再数点
+   NEAR r=0.981 L674 cnt=1 : 每个三元组 $(e,g,n)$ 造一条稀疏闭链再数点"
+   NEAR r=0.980 L674 cnt=1 : 每个三元组 $(e,g,n)$ 造一条稀疏闭链再数
+   NEAR r=0.980 L674 cnt=1 : 个三元组 $(e,g,n)$ 造一条稀疏闭链再数点
+
+###### D112 D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md pairs=1
+ DECL_L1668  verbatim_lines=[1668]  verbatim_outside_decl=[]
+   Q(12): 仿射约束的命中端点数为偶
+   NEAR r=0.960 L1668 cnt=1 : "仿射约束的命中端点数为偶
+   NEAR r=0.960 L1668 cnt=1 : 仿射约束的命中端点数为偶"
+   NEAR r=0.957 L1668 cnt=1 : 仿射约束的命中端点数为
+   NEAR r=0.957 L1668 cnt=1 : 射约束的命中端点数为偶
+
+###### D113 D113-三维有界可测标量电导率的非唯一性：分块与标量化的反推笔记.md pairs=7
+ DECL_L168  verbatim_lines=[168]  verbatim_outside_decl=[]
+   Q(17): 分段常数电压 $\to$ 积分电流
+   NEAR r=0.971 L168 cnt=1 : "分段常数电压 $\to$ 积分电流
+   NEAR r=0.971 L168 cnt=1 : 分段常数电压 $\to$ 积分电流"
+   NEAR r=0.970 L168 cnt=1 : 分段常数电压 $\to$ 积分电
+   NEAR r=0.970 L168 cnt=1 : 段常数电压 $\to$ 积分电流
+ DECL_L176  verbatim_lines=[106, 176]  verbatim_outside_decl=[106]
+   Q(12): $\Lambda$ 相同
+   NEAR r=0.960 L176 cnt=2 : "$\Lambda$ 相同
+   NEAR r=0.960 L176 cnt=2 : $\Lambda$ 相同"
+   NEAR r=0.957 L176 cnt=3 : $\Lambda$ 相
+   NEAR r=0.957 L176 cnt=2 : \Lambda$ 相同
+ DECL_L178  verbatim_lines=[178]  verbatim_outside_decl=[]
+   Q(20): 三个平均相等因为它们的向量与零和平面正交
+   NEAR r=0.976 L178 cnt=1 : "三个平均相等因为它们的向量与零和平面正交
+   NEAR r=0.976 L178 cnt=1 : 三个平均相等因为它们的向量与零和平面正交"
+   NEAR r=0.974 L178 cnt=1 : 三个平均相等因为它们的向量与零和平面正
+   NEAR r=0.974 L178 cnt=1 : 个平均相等因为它们的向量与零和平面正交
+ DECL_L326  verbatim_lines=[326, 353]  verbatim_outside_decl=[353]
+   Q(43): 路径到 $\mathrm{Sym}_3\setminus\mathcal G$ 的距离
+   NEAR r=0.989 L353 cnt=1 : ：路径到 $\mathrm{Sym}_3\setminus\mathcal G$ 的距离
+   NEAR r=0.989 L353 cnt=1 : 路径到 $\mathrm{Sym}_3\setminus\mathcal G$ 的距离可
+   NEAR r=0.988 L353 cnt=2 : 路径到 $\mathrm{Sym}_3\setminus\mathcal G$ 的距
+   NEAR r=0.988 L353 cnt=2 : 径到 $\mathrm{Sym}_3\setminus\mathcal G$ 的距离
+ DECL_L688  verbatim_lines=[688]  verbatim_outside_decl=[]
+   Q(28): 固定的全局秩下界或对所有无穷多方案一致成立的容差都不需要
+   NEAR r=0.982 L688 cnt=1 : "固定的全局秩下界或对所有无穷多方案一致成立的容差都不需要
+   NEAR r=0.982 L688 cnt=1 : 固定的全局秩下界或对所有无穷多方案一致成立的容差都不需要"
+   NEAR r=0.982 L688 cnt=1 : 固定的全局秩下界或对所有无穷多方案一致成立的容差都不需
+   NEAR r=0.982 L688 cnt=1 : 定的全局秩下界或对所有无穷多方案一致成立的容差都不需要
+ DECL_L1114  verbatim_lines=[1114]  verbatim_outside_decl=[]
+   Q(12): 负一半给自己、正一半给子
+   NEAR r=0.960 L1114 cnt=1 : "负一半给自己、正一半给子
+   NEAR r=0.960 L1114 cnt=1 : 负一半给自己、正一半给子"
+   NEAR r=0.957 L1114 cnt=1 : 负一半给自己、正一半给
+   NEAR r=0.957 L1114 cnt=1 : 一半给自己、正一半给子
+ DECL_L1114  verbatim_lines=[1114]  verbatim_outside_decl=[]
+   Q(21): $q$ 分给两子各 $q/2$ 且父不再收
+   NEAR r=0.977 L1114 cnt=1 : "$q$ 分给两子各 $q/2$ 且父不再收
+   NEAR r=0.977 L1114 cnt=1 : $q$ 分给两子各 $q/2$ 且父不再收"
+   NEAR r=0.976 L1114 cnt=1 : $q$ 分给两子各 $q/2$ 且父不再
+   NEAR r=0.976 L1114 cnt=1 : q$ 分给两子各 $q/2$ 且父不再收
+
+###### D114 D114-二对一博弈的完美完全性：采样与双侧解码归约的反推笔记.md pairs=2
+ DECL_L997  verbatim_lines=[997]  verbatim_outside_decl=[]
+   Q(11): 桶表示与行表示必须互换
+   NEAR r=0.957 L997 cnt=1 : "桶表示与行表示必须互换
+   NEAR r=0.957 L997 cnt=1 : 桶表示与行表示必须互换"
+   NEAR r=0.952 L997 cnt=1 : 桶表示与行表示必须互
+   NEAR r=0.952 L997 cnt=1 : 表示与行表示必须互换
+ DECL_L1857  verbatim_lines=[1857]  verbatim_outside_decl=[]
+   Q(19): 该固定 `H_i` 上双线性型的有限集
+   NEAR r=0.974 L1857 cnt=1 : "该固定 `H_i` 上双线性型的有限集
+   NEAR r=0.974 L1857 cnt=1 : 该固定 `H_i` 上双线性型的有限集"
+   NEAR r=0.973 L1857 cnt=1 : 该固定 `H_i` 上双线性型的有限
+   NEAR r=0.973 L1857 cnt=1 : 固定 `H_i` 上双线性型的有限集
+
+###### D115 D115-完全二分图交叉数：Zarankiewicz式与交点归一化的反推笔记.md pairs=1
+ DECL_L177  verbatim_lines=[177]  verbatim_outside_decl=[]
+   Q(11): 共享端点的两边不再相交
+   NEAR r=0.957 L177 cnt=1 : "共享端点的两边不再相交
+   NEAR r=0.957 L177 cnt=1 : 共享端点的两边不再相交"
+   NEAR r=0.952 L177 cnt=1 : 共享端点的两边不再相
+   NEAR r=0.952 L177 cnt=1 : 享端点的两边不再相交
+
+###### D118 D118-逼近性质下的cotype对cotype猜想：Walsh基与系数空间路线的反推笔记.md pairs=2
+ DECL_L9  verbatim_lines=[9]  verbatim_outside_decl=[]
+   Q(35): 把有界逼近算子换成无界逼近算子，然后在某个求和里做一次截断权的重新分配
+   NEAR r=0.986 L9 cnt=1 : "把有界逼近算子换成无界逼近算子，然后在某个求和里做一次截断权的重新分配
+   NEAR r=0.986 L9 cnt=1 : 把有界逼近算子换成无界逼近算子，然后在某个求和里做一次截断权的重新分配"
+   NEAR r=0.986 L9 cnt=1 : 把有界逼近算子换成无界逼近算子，然后在某个求和里做一次截断权的重新分
+   NEAR r=0.986 L9 cnt=1 : 有界逼近算子换成无界逼近算子，然后在某个求和里做一次截断权的重新分配
+ DECL_L24  verbatim_lines=[24]  verbatim_outside_decl=[]
+   Q(14): 证明里哪一步需要算子范数极限
+   NEAR r=0.966 L24 cnt=1 : "证明里哪一步需要算子范数极限
+   NEAR r=0.966 L24 cnt=1 : 证明里哪一步需要算子范数极限"
+   NEAR r=0.963 L24 cnt=1 : 证明里哪一步需要算子范数极
+   NEAR r=0.963 L24 cnt=1 : 明里哪一步需要算子范数极限
+
+###### D120 D120-高斯螺旋桨界在每一维：几何归约与证书分层的反推笔记.md pairs=4
+ DECL_L213  verbatim_lines=[213]  verbatim_outside_decl=[]
+   Q(30): 合并改变 $2\langle z_i,z_j\rangle$
+   NEAR r=0.897 L180 cnt=1 : > $2\langle z_i,z_j\rangle$.
+   NEAR r=0.897 L180 cnt=1 :  $2\langle z_i,z_j\rangle$. 
+   NEAR r=0.881 L180 cnt=1 : > $2\langle z_i,z_j\rangle$. 
+   NEAR r=0.881 L180 cnt=1 :  $2\langle z_i,z_j\rangle$. A
+ DECL_L213  verbatim_lines=[213, 233]  verbatim_outside_decl=[233]
+   Q(11): 最少 active 格
+   NEAR r=0.957 L233 cnt=2 : "最少 active 格
+   NEAR r=0.957 L233 cnt=2 : 最少 active 格"
+   NEAR r=0.952 L233 cnt=2 : 最少 active 
+   NEAR r=0.952 L233 cnt=3 : 少 active 格
+ DECL_L605  verbatim_lines=[243, 605]  verbatim_outside_decl=[243]
+   Q(37): $\sum w_j=0$ 就变成 $m$ 个向量在 $m$ 维空间里和为零
+   NEAR r=0.986 L599 cnt=1 : $\sum w_j=0$ 变成 $m$ 个向量在 $m$ 维空间里和为零
+   NEAR r=0.973 L599 cnt=1 :  $\sum w_j=0$ 变成 $m$ 个向量在 $m$ 维空间里和为零
+   NEAR r=0.973 L599 cnt=1 : $\sum w_j=0$ 变成 $m$ 个向量在 $m$ 维空间里和为零，
+   NEAR r=0.972 L599 cnt=1 : $\sum w_j=0$ 变成 $m$ 个向量在 $m$ 维空间里和为
+ DECL_L605  verbatim_lines=[492, 605]  verbatim_outside_decl=[492]
+   Q(21): 每个 proper subset 线性无关
+   NEAR r=0.950 L610 cnt=3 :  proper subset 线性无关
+   NEAR r=0.927 L610 cnt=1 : 么 proper subset 线性无关
+   NEAR r=0.927 L610 cnt=1 :  proper subset 线性无关在
+   NEAR r=0.905 L610 cnt=1 : 什么 proper subset 线性无关
+
+###### D121 D121-分拆原理不蕴含选择公理：对称模型的支撑下降与可定义性刻画反推笔记.md pairs=1
+ DECL_L176  verbatim_lines=[176]  verbatim_outside_decl=[]
+   Q(45): 枚举在 $M\times\mathbb P$ 这个依赖 $\tau$ 的集合上、没有秩截断
+   NEAR r=0.989 L176 cnt=1 : "枚举在 $M\times\mathbb P$ 这个依赖 $\tau$ 的集合上、没有秩截断
+   NEAR r=0.989 L176 cnt=1 : 枚举在 $M\times\mathbb P$ 这个依赖 $\tau$ 的集合上、没有秩截断"
+   NEAR r=0.989 L176 cnt=1 : 枚举在 $M\times\mathbb P$ 这个依赖 $\tau$ 的集合上、没有秩截
+   NEAR r=0.989 L176 cnt=1 : 举在 $M\times\mathbb P$ 这个依赖 $\tau$ 的集合上、没有秩截断
+
+###### D125 D125-RCD空间沿每条测地线的弱Hessian界：漂移与曲率改值的反推笔记.md pairs=3
+ DECL_L113  verbatim_lines=[113]  verbatim_outside_decl=[]
+   Q(34): 在 $U$ 里放有限多个小的 good cutoff，对和做光滑截断
+   NEAR r=0.986 L113 cnt=1 : "在 $U$ 里放有限多个小的 good cutoff，对和做光滑截断
+   NEAR r=0.986 L113 cnt=1 : 在 $U$ 里放有限多个小的 good cutoff，对和做光滑截断"
+   NEAR r=0.985 L113 cnt=1 : 在 $U$ 里放有限多个小的 good cutoff，对和做光滑截
+   NEAR r=0.985 L113 cnt=1 :  $U$ 里放有限多个小的 good cutoff，对和做光滑截断
+ DECL_L451  verbatim_lines=[28, 451]  verbatim_outside_decl=[28]
+   Q(37): 未约化 $\mathrm{CD}(K,N)$ 加二次 Cheeger 能量
+   NEAR r=0.987 L28 cnt=2 : "未约化 $\mathrm{CD}(K,N)$ 加二次 Cheeger 能量
+   NEAR r=0.987 L28 cnt=2 : 未约化 $\mathrm{CD}(K,N)$ 加二次 Cheeger 能量"
+   NEAR r=0.986 L28 cnt=2 : 未约化 $\mathrm{CD}(K,N)$ 加二次 Cheeger 能
+   NEAR r=0.986 L28 cnt=2 : 约化 $\mathrm{CD}(K,N)$ 加二次 Cheeger 能量
+ DECL_L512  verbatim_lines=[512]  verbatim_outside_decl=[]
+   Q(14): $F$ 作为分布作用二阶算子
+   NEAR r=0.966 L512 cnt=1 : "$F$ 作为分布作用二阶算子
+   NEAR r=0.966 L512 cnt=1 : $F$ 作为分布作用二阶算子"
+   NEAR r=0.963 L512 cnt=1 : $F$ 作为分布作用二阶算
+   NEAR r=0.963 L512 cnt=1 : F$ 作为分布作用二阶算子
+
+###### D127 D127-Ryser覆盖猜想的反例：构造、选取与线覆盖计数的反推笔记.md pairs=1
+ DECL_L82  verbatim_lines=[82]  verbatim_outside_decl=[]
+   Q(12): $s$ 固定、$n$ 大
+   NEAR r=0.960 L82 cnt=1 : "$s$ 固定、$n$ 大
+   NEAR r=0.960 L82 cnt=1 : $s$ 固定、$n$ 大"
+   NEAR r=0.957 L82 cnt=1 : $s$ 固定、$n$ 
+   NEAR r=0.957 L82 cnt=1 : s$ 固定、$n$ 大
+
+###### D128 D128-平面曲线的Nagata猜想：约化、椭圆线与极限的重数不等式反推笔记.md pairs=2
+ DECL_L147  verbatim_lines=[147]  verbatim_outside_decl=[]
+   Q(14): 实斜率离三次 $3$ 的超额
+   NEAR r=0.923 L354 cnt=1 : 实斜率离 $3$ 的超额
+   NEAR r=0.889 L354 cnt=1 :  实斜率离 $3$ 的超额
+   NEAR r=0.889 L354 cnt=1 : 实斜率离 $3$ 的超额 
+   NEAR r=0.857 L354 cnt=1 : | 实斜率离 $3$ 的超额
+ DECL_L391  verbatim_lines=[391]  verbatim_outside_decl=[]
+   Q(10): 放弃纯计数、改靠闭集
+   NEAR r=0.857 L21 cnt=1 : 放弃纯计数，改靠"闭集
+   NEAR r=0.818 L21 cnt=1 : 我放弃纯计数，改靠"闭集
+   NEAR r=0.818 L21 cnt=1 : 放弃纯计数，改靠"闭集"
+
+###### D013 D13-有界树宽图的L1嵌入.md pairs=1
+ DECL_L599  verbatim_lines=[599]  verbatim_outside_decl=[]
+   Q(10): 有限表加一次后继选择
+   NEAR r=0.952 L599 cnt=1 : "有限表加一次后继选择
+   NEAR r=0.952 L599 cnt=1 : 有限表加一次后继选择"
+   NEAR r=0.947 L599 cnt=1 : 有限表加一次后继选
+   NEAR r=0.947 L599 cnt=1 : 限表加一次后继选择
+
+###### D133 D133-有序二元矩阵让多项式removal失效：钉住构造与计数下界的反推笔记.md pairs=1
+ DECL_L1411  verbatim_lines=[1411]  verbatim_outside_decl=[]
+   Q(15): 固定一个避开所有相关改动的选取
+   NEAR r=0.968 L1411 cnt=1 : "固定一个避开所有相关改动的选取
+   NEAR r=0.968 L1411 cnt=1 : 固定一个避开所有相关改动的选取"
+   NEAR r=0.966 L1411 cnt=1 : 固定一个避开所有相关改动的选
+   NEAR r=0.966 L1411 cnt=1 : 定一个避开所有相关改动的选取
+
+###### D135 D135-球面投影矩与正帽控制给出Riesz估计：图模型与停止核的反推笔记.md pairs=2
+ DECL_L817  verbatim_lines=[817]  verbatim_outside_decl=[]
+   Q(13): 对每个满秩 $X$ 是密度
+   NEAR r=0.963 L681 cnt=1 : 对每个满秩 $X$ 都是密度
+   NEAR r=0.929 L681 cnt=1 : "对每个满秩 $X$ 都是密度
+   NEAR r=0.929 L681 cnt=1 : 对每个满秩 $X$ 都是密度"
+   NEAR r=0.923 L681 cnt=1 : 对每个满秩 $X$ 都是密
+ DECL_L871  verbatim_lines=[871]  verbatim_outside_decl=[]
+   Q(20): 这就是 `p:cap-terminal`
+   NEAR r=0.842 L532 cnt=1 : 、`p:cap-terminal` 
+   NEAR r=0.842 L532 cnt=1 : `p:cap-terminal` 与
+   NEAR r=0.821 L532 cnt=1 : `、`p:cap-terminal` 
+   NEAR r=0.821 L532 cnt=1 : 、`p:cap-terminal` 与
+
+###### D136 D136-交错抽取在每个域上都给出精确矩阵乘：联合抽取与叶体积的反推笔记.md pairs=2
+ DECL_L85  verbatim_lines=[85]  verbatim_outside_decl=[]
+   Q(13): 先把各母体节省相加再取最小
+   NEAR r=0.963 L85 cnt=1 : "先把各母体节省相加再取最小
+   NEAR r=0.963 L85 cnt=1 : 先把各母体节省相加再取最小"
+   NEAR r=0.960 L85 cnt=1 : 先把各母体节省相加再取最
+   NEAR r=0.960 L85 cnt=1 : 把各母体节省相加再取最小
+ DECL_L642  verbatim_lines=[642, 726]  verbatim_outside_decl=[726]
+   Q(24): 有限批产出 $K(H_0+C_*)-\beta$
+   NEAR r=0.980 L726 cnt=1 :  有限批产出 $K(H_0+C_*)-\beta$
+   NEAR r=0.980 L726 cnt=1 : 有限批产出 $K(H_0+C_*)-\beta$ 
+   NEAR r=0.979 L726 cnt=2 : 有限批产出 $K(H_0+C_*)-\beta
+   NEAR r=0.979 L726 cnt=2 : 限批产出 $K(H_0+C_*)-\beta$
+
+###### D137 D137-平面指数第一通过limshape的严格凸与可微：链路逼近与改进界的反推笔记.md pairs=8
+ DECL_L491  verbatim_lines=[147, 491]  verbatim_outside_decl=[147]
+   Q(11): 上确界不引入格点数因子
+   NEAR r=0.957 L491 cnt=1 : "上确界不引入格点数因子
+   NEAR r=0.957 L491 cnt=2 : 上确界不引入格点数因子"
+   NEAR r=0.952 L491 cnt=2 : 上确界不引入格点数因
+   NEAR r=0.952 L491 cnt=2 : 确界不引入格点数因子
+ DECL_L519  verbatim_lines=[486, 519]  verbatim_outside_decl=[486]
+   Q(11): 显式 iid 输入支撑
+   NEAR r=0.957 L486 cnt=2 : "显式 iid 输入支撑
+   NEAR r=0.957 L486 cnt=2 : 显式 iid 输入支撑"
+   NEAR r=0.952 L486 cnt=2 : 显式 iid 输入支
+   NEAR r=0.952 L486 cnt=2 : 式 iid 输入支撑
+ DECL_L547  verbatim_lines=[547]  verbatim_outside_decl=[]
+   Q(14): 至多 $H_*M$ 个截断项
+   NEAR r=0.966 L547 cnt=1 : "至多 $H_*M$ 个截断项
+   NEAR r=0.966 L547 cnt=1 : 至多 $H_*M$ 个截断项"
+   NEAR r=0.963 L547 cnt=1 : 至多 $H_*M$ 个截断
+   NEAR r=0.963 L547 cnt=1 : 多 $H_*M$ 个截断项
+ DECL_L547  verbatim_lines=[547]  verbatim_outside_decl=[]
+   Q(11): 至多 $H_*^2M$
+   NEAR r=0.957 L547 cnt=1 : "至多 $H_*^2M$
+   NEAR r=0.957 L547 cnt=1 : 至多 $H_*^2M$"
+   NEAR r=0.952 L547 cnt=1 : 至多 $H_*^2M
+   NEAR r=0.952 L547 cnt=1 : 多 $H_*^2M$
+ DECL_L551  verbatim_lines=[551]  verbatim_outside_decl=[]
+   Q(13): 每个标志位点立刻返回主基线
+   NEAR r=0.963 L551 cnt=1 : "每个标志位点立刻返回主基线
+   NEAR r=0.963 L551 cnt=1 : 每个标志位点立刻返回主基线"
+   NEAR r=0.960 L551 cnt=1 : 每个标志位点立刻返回主基
+   NEAR r=0.960 L551 cnt=1 : 个标志位点立刻返回主基线
+ DECL_L551  verbatim_lines=[551]  verbatim_outside_decl=[]
+   Q(14): 无长度 $L_*+1$ 连段
+   NEAR r=0.966 L551 cnt=1 : "无长度 $L_*+1$ 连段
+   NEAR r=0.966 L551 cnt=1 : 无长度 $L_*+1$ 连段"
+   NEAR r=0.963 L551 cnt=1 : 无长度 $L_*+1$ 连
+   NEAR r=0.963 L551 cnt=1 : 长度 $L_*+1$ 连段
+ DECL_L610  verbatim_lines=[610]  verbatim_outside_decl=[]
+   Q(13): 等号成立则两端同为 $1$
+   NEAR r=0.963 L610 cnt=1 : "等号成立则两端同为 $1$
+   NEAR r=0.963 L610 cnt=1 : 等号成立则两端同为 $1$"
+   NEAR r=0.960 L610 cnt=1 : 等号成立则两端同为 $1
+   NEAR r=0.960 L610 cnt=1 : 号成立则两端同为 $1$
+ DECL_L748  verbatim_lines=[748]  verbatim_outside_decl=[]
+   Q(13): 存在代价 $<x$ 的路径
+   NEAR r=0.963 L748 cnt=1 : "存在代价 $<x$ 的路径
+   NEAR r=0.963 L748 cnt=1 : 存在代价 $<x$ 的路径"
+   NEAR r=0.960 L748 cnt=1 : 存在代价 $<x$ 的路
+   NEAR r=0.960 L748 cnt=1 : 在代价 $<x$ 的路径
+
+###### D014 D14-CH阻碍-范畴性阈值不能被规定.md pairs=2
+ DECL_L10  verbatim_lines=[10, 241]  verbatim_outside_decl=[241]
+   Q(16): 可数基座 + 等大指标 ⟹ 同构
+   NEAR r=0.970 L241 cnt=1 : 可数基座 + 等大指标 ⟹ 同构。
+   NEAR r=0.968 L241 cnt=2 : 可数基座 + 等大指标 ⟹ 同
+   NEAR r=0.968 L241 cnt=2 : 数基座 + 等大指标 ⟹ 同构
+   NEAR r=0.941 L241 cnt=1 : 可数基座 + 等大指标 ⟹ 同构。三
+ DECL_L498  verbatim_lines=[348, 498]  verbatim_outside_decl=[348]
+   Q(12): 同构保持序排序的一元谓词
+   NEAR r=0.960 L348 cnt=1 : ：同构保持序排序的一元谓词
+   NEAR r=0.960 L348 cnt=1 : 同构保持序排序的一元谓词，
+   NEAR r=0.957 L348 cnt=2 : 同构保持序排序的一元谓
+   NEAR r=0.957 L348 cnt=2 : 构保持序排序的一元谓词
+
+###### D142 D142-2NFA补全的指数状态下界：从序反转眼像到嵌套缺失预算的反推笔记.md pairs=1
+ DECL_L603  verbatim_lines=[603]  verbatim_outside_decl=[]
+   Q(54): $z$ 相对 $e$ 缺失的 $F$ 边集合 $\lvert F_e\setminus F_z\rvert$
+   NEAR r=0.991 L603 cnt=1 : "$z$ 相对 $e$ 缺失的 $F$ 边集合 $\lvert F_e\setminus F_z\rvert$
+   NEAR r=0.991 L603 cnt=1 : $z$ 相对 $e$ 缺失的 $F$ 边集合 $\lvert F_e\setminus F_z\rvert$"
+   NEAR r=0.991 L603 cnt=1 : $z$ 相对 $e$ 缺失的 $F$ 边集合 $\lvert F_e\setminus F_z\rvert
+   NEAR r=0.991 L603 cnt=1 : z$ 相对 $e$ 缺失的 $F$ 边集合 $\lvert F_e\setminus F_z\rvert$
+
+###### D145 D145-复杂矩阵乘法低于2.258与矩形界：证书层级与标签补全的反推笔记.md pairs=1
+ DECL_L727  verbatim_lines=[727]  verbatim_outside_decl=[]
+   Q(16): 复杂矩阵乘法低于 $2.258$
+   NEAR r=0.933 L1 cnt=1 : 复杂矩阵乘法低于 2.258
+   NEAR r=0.903 L1 cnt=1 :  复杂矩阵乘法低于 2.258
+   NEAR r=0.903 L1 cnt=1 : 复杂矩阵乘法低于 2.258 
+   NEAR r=0.875 L1 cnt=1 : 5 复杂矩阵乘法低于 2.258
+
+###### D146 D146-度量熵对偶猜想的反例：覆盖数与熵积分的双边分离的反推笔记.md pairs=3
+ DECL_L445  verbatim_lines=[445]  verbatim_outside_decl=[]
+   Q(25): $q$ 与 $\lvert X\rvert$ 之差
+   NEAR r=0.898 L923 cnt=1 : $q$ 换成 $\lvert X\rvert$ 
+   NEAR r=0.880 L923 cnt=1 :  $q$ 换成 $\lvert X\rvert$ 
+   NEAR r=0.880 L923 cnt=1 : $q$ 换成 $\lvert X\rvert$ 会
+   NEAR r=0.863 L923 cnt=1 : 把 $q$ 换成 $\lvert X\rvert$ 
+ DECL_L905  verbatim_lines=[905]  verbatim_outside_decl=[]
+   Q(20): 替换后误差半径变成 $2j$ 而失去控制
+   NEAR r=0.976 L905 cnt=1 : "替换后误差半径变成 $2j$ 而失去控制
+   NEAR r=0.976 L905 cnt=1 : 替换后误差半径变成 $2j$ 而失去控制"
+   NEAR r=0.974 L905 cnt=1 : 替换后误差半径变成 $2j$ 而失去控
+   NEAR r=0.974 L905 cnt=1 : 换后误差半径变成 $2j$ 而失去控制
+ DECL_L962  verbatim_lines=[897, 962]  verbatim_outside_decl=[897]
+   Q(30): 另在各技术节末尾分散记录了 43 条标 `[推测]` 的路线
+   NEAR r=0.984 L897 cnt=1 : ，另在各技术节末尾分散记录了 43 条标 `[推测]` 的路线
+   NEAR r=0.984 L897 cnt=1 : 另在各技术节末尾分散记录了 43 条标 `[推测]` 的路线）
+   NEAR r=0.983 L897 cnt=2 : 另在各技术节末尾分散记录了 43 条标 `[推测]` 的路
+   NEAR r=0.983 L897 cnt=2 : 在各技术节末尾分散记录了 43 条标 `[推测]` 的路线
+
+###### D147 D147-自反Banach空间中非扩张映射的不动点：锚点集与候选树的反推笔记.md pairs=2
+ DECL_L209  verbatim_lines=[209]  verbatim_outside_decl=[]
+   Q(21): 有限同时逼近、Ellis 幂等元、锚点命题
+   NEAR r=0.977 L209 cnt=1 : "有限同时逼近、Ellis 幂等元、锚点命题
+   NEAR r=0.977 L209 cnt=1 : 有限同时逼近、Ellis 幂等元、锚点命题"
+   NEAR r=0.976 L209 cnt=1 : 有限同时逼近、Ellis 幂等元、锚点命
+   NEAR r=0.976 L209 cnt=1 : 限同时逼近、Ellis 幂等元、锚点命题
+ DECL_L603  verbatim_lines=[425, 603]  verbatim_outside_decl=[425]
+   Q(24): 到 `build/sections/02` 段末
+   NEAR r=0.870 L165 cnt=22 : ` 到 `build/sections/02
+   NEAR r=0.870 L165 cnt=21 :  到 `build/sections/02-
+   NEAR r=0.870 L177 cnt=22 : ` 到 `build/sections/02
+   NEAR r=0.870 L177 cnt=21 :  到 `build/sections/02-
+
+###### D149 D149-有限张量节省与精确Fourier电路：价格反证路线的亲历笔记.md pairs=1
+ DECL_L503  verbatim_lines=[503]  verbatim_outside_decl=[]
+   Q(14): 截断 Toeplitz 世界
+   NEAR r=0.966 L503 cnt=1 : "截断 Toeplitz 世界
+   NEAR r=0.966 L503 cnt=1 : 截断 Toeplitz 世界"
+   NEAR r=0.963 L503 cnt=1 : 截断 Toeplitz 世
+   NEAR r=0.963 L503 cnt=1 : 断 Toeplitz 世界
+
+###### D151 D151-中点透镜的树范数尾部控制：联合预算与对消比较的反推笔记.md pairs=2
+ DECL_L369  verbatim_lines=[246, 369]  verbatim_outside_decl=[246]
+   Q(12): 分离的系数误差和边界质量
+   NEAR r=0.960 L369 cnt=1 : "分离的系数误差和边界质量
+   NEAR r=0.960 L369 cnt=1 : 分离的系数误差和边界质量"
+   NEAR r=0.957 L369 cnt=2 : 分离的系数误差和边界质
+   NEAR r=0.957 L369 cnt=2 : 离的系数误差和边界质量
+ DECL_L377  verbatim_lines=[377]  verbatim_outside_decl=[]
+   Q(18): 替换后系数 $b_i=p(S_i)$
+   NEAR r=0.833 L647 cnt=1 : 系数换成 $b_i=rp(S_i)$
+   NEAR r=0.811 L647 cnt=1 : 把系数换成 $b_i=rp(S_i)$
+   NEAR r=0.811 L647 cnt=1 : 系数换成 $b_i=rp(S_i)$。
+
+###### D152 D152-调和高度与阿廷派一型猜想.md pairs=7
+ DECL_L63  verbatim_lines=[63]  verbatim_outside_decl=[]
+   Q(29): 给偏序集找一个良序，让每个新加顶点的 link 是空或可缩
+   NEAR r=0.983 L63 cnt=1 : "给偏序集找一个良序，让每个新加顶点的 link 是空或可缩
+   NEAR r=0.983 L63 cnt=1 : 给偏序集找一个良序，让每个新加顶点的 link 是空或可缩"
+   NEAR r=0.982 L63 cnt=1 : 给偏序集找一个良序，让每个新加顶点的 link 是空或可
+   NEAR r=0.982 L63 cnt=1 : 偏序集找一个良序，让每个新加顶点的 link 是空或可缩
+ DECL_L94  verbatim_lines=[94]  verbatim_outside_decl=[]
+   Q(17): 把已知东西打包、把新东西显式摆出来
+   NEAR r=0.971 L94 cnt=1 : "把已知东西打包、把新东西显式摆出来
+   NEAR r=0.971 L94 cnt=1 : 把已知东西打包、把新东西显式摆出来"
+   NEAR r=0.970 L94 cnt=1 : 把已知东西打包、把新东西显式摆出
+   NEAR r=0.970 L94 cnt=1 : 已知东西打包、把新东西显式摆出来
+ DECL_L418  verbatim_lines=[418]  verbatim_outside_decl=[]
+   Q(16): 整个证明不再是一个具体的几何同伦
+   NEAR r=0.970 L418 cnt=1 : "整个证明不再是一个具体的几何同伦
+   NEAR r=0.970 L418 cnt=1 : 整个证明不再是一个具体的几何同伦"
+   NEAR r=0.968 L418 cnt=1 : 整个证明不再是一个具体的几何同
+   NEAR r=0.968 L418 cnt=1 : 个证明不再是一个具体的几何同伦
+ DECL_L418  verbatim_lines=[418]  verbatim_outside_decl=[]
+   Q(23): 每一步只需要 combinatorial 检查
+   NEAR r=0.979 L418 cnt=1 : "每一步只需要 combinatorial 检查
+   NEAR r=0.979 L418 cnt=1 : 每一步只需要 combinatorial 检查"
+   NEAR r=0.978 L418 cnt=1 : 每一步只需要 combinatorial 检
+   NEAR r=0.978 L418 cnt=1 : 一步只需要 combinatorial 检查
+ DECL_L735  verbatim_lines=[735]  verbatim_outside_decl=[]
+   Q(24): 取层截断 + 应用逆 twist + 再做子对象
+   NEAR r=0.980 L735 cnt=1 : "取层截断 + 应用逆 twist + 再做子对象
+   NEAR r=0.980 L735 cnt=1 : 取层截断 + 应用逆 twist + 再做子对象"
+   NEAR r=0.979 L735 cnt=1 : 取层截断 + 应用逆 twist + 再做子对
+   NEAR r=0.979 L735 cnt=1 : 层截断 + 应用逆 twist + 再做子对象
+ DECL_L841  verbatim_lines=[841]  verbatim_outside_decl=[]
+   Q(15): 素材不足时上网上爬取，不要硬编
+   NEAR r=0.968 L841 cnt=1 : "素材不足时上网上爬取，不要硬编
+   NEAR r=0.968 L841 cnt=1 : 素材不足时上网上爬取，不要硬编"
+   NEAR r=0.966 L841 cnt=1 : 素材不足时上网上爬取，不要硬
+   NEAR r=0.966 L841 cnt=1 : 材不足时上网上爬取，不要硬编
+ DECL_L841  verbatim_lines=[841]  verbatim_outside_decl=[]
+   Q(13): 这条机制在原文里对应...
+   NEAR r=0.963 L841 cnt=1 : "这条机制在原文里对应...
+   NEAR r=0.963 L841 cnt=1 : 这条机制在原文里对应..."
+   NEAR r=0.960 L841 cnt=1 : 这条机制在原文里对应..
+   NEAR r=0.960 L841 cnt=1 : 条机制在原文里对应...
+
+###### D153 D153-从有界树势与路径代价推出中点凸性：配对内向测试反推笔记.md pairs=1
+ DECL_L569  verbatim_lines=[569]  verbatim_outside_decl=[]
+   Q(10): 论文怎么做、我怎么做
+   NEAR r=0.952 L569 cnt=1 : "论文怎么做、我怎么做
+   NEAR r=0.952 L569 cnt=1 : 论文怎么做、我怎么做"
+   NEAR r=0.947 L569 cnt=1 : 论文怎么做、我怎么
+   NEAR r=0.947 L569 cnt=1 : 文怎么做、我怎么做
+
+###### D154 D154-三色图上大独立集的难度构造与分布式对齐.md pairs=4
+ DECL_L211  verbatim_lines=[211]  verbatim_outside_decl=[]
+   Q(60): 到 $A$ 的距离在碰到 $A$ 的分量上是 $1$-Lipschitz，而在不碰到 $A$ 的分量上 bump 恒为零
+   NEAR r=0.992 L211 cnt=1 : "到 $A$ 的距离在碰到 $A$ 的分量上是 $1$-Lipschitz，而在不碰到 $A$ 的分量上 bump 恒为零
+   NEAR r=0.992 L211 cnt=1 : 到 $A$ 的距离在碰到 $A$ 的分量上是 $1$-Lipschitz，而在不碰到 $A$ 的分量上 bump 恒为零"
+   NEAR r=0.992 L211 cnt=1 : 到 $A$ 的距离在碰到 $A$ 的分量上是 $1$-Lipschitz，而在不碰到 $A$ 的分量上 bump 恒为
+   NEAR r=0.992 L211 cnt=1 :  $A$ 的距离在碰到 $A$ 的分量上是 $1$-Lipschitz，而在不碰到 $A$ 的分量上 bump 恒为零
+ DECL_L215  verbatim_lines=[215]  verbatim_outside_decl=[]
+   Q(14): 我的演算、原文只给 $32$
+   NEAR r=0.966 L215 cnt=1 : "我的演算、原文只给 $32$
+   NEAR r=0.966 L215 cnt=1 : 我的演算、原文只给 $32$"
+   NEAR r=0.963 L215 cnt=1 : 我的演算、原文只给 $32
+   NEAR r=0.963 L215 cnt=1 : 的演算、原文只给 $32$
+ DECL_L377  verbatim_lines=[377]  verbatim_outside_decl=[]
+   Q(32): 令 $p$ 为标签的出现层集合的上确界，由连续性其分布函数无原子
+   NEAR r=0.985 L377 cnt=1 : "令 $p$ 为标签的出现层集合的上确界，由连续性其分布函数无原子
+   NEAR r=0.985 L377 cnt=1 : 令 $p$ 为标签的出现层集合的上确界，由连续性其分布函数无原子"
+   NEAR r=0.984 L377 cnt=1 : 令 $p$ 为标签的出现层集合的上确界，由连续性其分布函数无原
+   NEAR r=0.984 L377 cnt=1 :  $p$ 为标签的出现层集合的上确界，由连续性其分布函数无原子
+ DECL_L614  verbatim_lines=[614]  verbatim_outside_decl=[]
+   Q(13): 改了这个数，证明在哪一步断
+   NEAR r=0.963 L614 cnt=1 : "改了这个数，证明在哪一步断
+   NEAR r=0.963 L614 cnt=1 : 改了这个数，证明在哪一步断"
+   NEAR r=0.960 L614 cnt=1 : 改了这个数，证明在哪一步
+   NEAR r=0.960 L614 cnt=1 : 了这个数，证明在哪一步断
+
+###### D156 D156-两个递归势导出的中点凸性.md pairs=1
+ DECL_L565  verbatim_lines=[565]  verbatim_outside_decl=[]
+   Q(16): AMUC 是否蕴含 AUC 可容
+   NEAR r=0.933 L790 cnt=1 : AMUC 蕴含 AUC 可容
+   NEAR r=0.903 L790 cnt=1 :  AMUC 蕴含 AUC 可容
+   NEAR r=0.903 L790 cnt=1 : AMUC 蕴含 AUC 可容。
+   NEAR r=0.875 L790 cnt=1 : 定 AMUC 蕴含 AUC 可容
+
+###### D157 D157-Nagata猜想平面曲线反推笔记：正规束多项式与指数集行插值.md pairs=1
+ DECL_L74  verbatim_lines=[74]  verbatim_outside_decl=[]
+   Q(26): $\mathsf U_r(d,m)$ 对每个构型成立
+   NEAR r=0.945 L875 cnt=1 : $\mathsf U_r(d,m)$ | 对每个构型都成立
+   NEAR r=0.926 L875 cnt=1 : $\mathsf U_r(d,m)$ | 对每个构型都成
+   NEAR r=0.926 L875 cnt=1 : \mathsf U_r(d,m)$ | 对每个构型都成立
+   NEAR r=0.923 L875 cnt=1 : $\mathsf U_r(d,m)$ | 对每个构型
+
+###### D160 D160-半代数有界域的紧商对称化：从Kollár-Pardon问题二十五到Vey模型的反推笔记.md pairs=3
+ DECL_L369  verbatim_lines=[369]  verbatim_outside_decl=[]
+   Q(61): $k$ 个无关行 $\Rightarrow$ 由 $w$ 的分量反解出 $\lVert w\rVert=O_E(t_j)$
+   NEAR r=0.992 L369 cnt=1 : "$k$ 个无关行 $\Rightarrow$ 由 $w$ 的分量反解出 $\lVert w\rVert=O_E(t_j)$
+   NEAR r=0.992 L369 cnt=1 : $k$ 个无关行 $\Rightarrow$ 由 $w$ 的分量反解出 $\lVert w\rVert=O_E(t_j)$"
+   NEAR r=0.992 L369 cnt=1 : $k$ 个无关行 $\Rightarrow$ 由 $w$ 的分量反解出 $\lVert w\rVert=O_E(t_j)
+   NEAR r=0.992 L369 cnt=1 : k$ 个无关行 $\Rightarrow$ 由 $w$ 的分量反解出 $\lVert w\rVert=O_E(t_j)$
+ DECL_L436  verbatim_lines=[436]  verbatim_outside_decl=[]
+   Q(17): 只为正 $\delta$ 声明包含
+   NEAR r=0.971 L436 cnt=1 : "只为正 $\delta$ 声明包含
+   NEAR r=0.971 L436 cnt=1 : 只为正 $\delta$ 声明包含"
+   NEAR r=0.970 L436 cnt=1 : 只为正 $\delta$ 声明包
+   NEAR r=0.970 L436 cnt=1 : 为正 $\delta$ 声明包含
+ DECL_L668  verbatim_lines=[668]  verbatim_outside_decl=[]
+   Q(26): 防止极限双全纯映射获得一个不需要的像分支或一个边界值
+   NEAR r=0.962 L140 cnt=1 : 止极限双全纯映射"获得一个不需要的像分支或一个边界值
+   NEAR r=0.943 L140 cnt=1 : 阻止极限双全纯映射"获得一个不需要的像分支或一个边界值
+   NEAR r=0.943 L140 cnt=1 : 止极限双全纯映射"获得一个不需要的像分支或一个边界值"
+   NEAR r=0.941 L140 cnt=1 : 止极限双全纯映射"获得一个不需要的像分支或一个边界
+
+###### D170 D170-后副本与等标签测度下的记忆约束样本下界.md pairs=1
+ DECL_L553  verbatim_lines=[553]  verbatim_outside_decl=[]
+   Q(27): $A$ 湮灭的那个差空间同时支配 $D$ 的条件高斯律
+   NEAR r=0.982 L553 cnt=1 : "$A$ 湮灭的那个差空间同时支配 $D$ 的条件高斯律
+   NEAR r=0.982 L553 cnt=1 : $A$ 湮灭的那个差空间同时支配 $D$ 的条件高斯律"
+   NEAR r=0.981 L553 cnt=1 : $A$ 湮灭的那个差空间同时支配 $D$ 的条件高斯
+   NEAR r=0.981 L553 cnt=1 : A$ 湮灭的那个差空间同时支配 $D$ 的条件高斯律
+
+###### D173 D173-路由密度与表示压缩-Thorp扫掠.md pairs=2
+ DECL_L308  verbatim_lines=[49, 308]  verbatim_outside_decl=[49]
+   Q(63): 维数与重数这两个杠杆在 01-preliminaries.tex:76 到 01-preliminaries.tex:128。
+   NEAR r=0.992 L308 cnt=1 : "维数与重数这两个杠杆在 01-preliminaries.tex:76 到 01-preliminaries.tex:128。
+   NEAR r=0.992 L308 cnt=1 : 维数与重数这两个杠杆在 01-preliminaries.tex:76 到 01-preliminaries.tex:128。"
+   NEAR r=0.992 L308 cnt=2 : 维数与重数这两个杠杆在 01-preliminaries.tex:76 到 01-preliminaries.tex:128
+   NEAR r=0.992 L308 cnt=2 : 数与重数这两个杠杆在 01-preliminaries.tex:76 到 01-preliminaries.tex:128。
+ DECL_L318  verbatim_lines=[318]  verbatim_outside_decl=[]
+   Q(15): 这几条论证共用初等张量交换估计
+   NEAR r=0.968 L318 cnt=1 : "这几条论证共用初等张量交换估计
+   NEAR r=0.968 L318 cnt=1 : 这几条论证共用初等张量交换估计"
+   NEAR r=0.966 L318 cnt=1 : 这几条论证共用初等张量交换估
+   NEAR r=0.966 L318 cnt=1 : 几条论证共用初等张量交换估计
+
+###### D174 D174-光滑度量下Yau节点集上界的三维与四维反例.md pairs=1
+ DECL_L202  verbatim_lines=[202]  verbatim_outside_decl=[]
+   Q(16): 只丢掉 $k$ 个 $n$ 的幂
+   NEAR r=0.970 L202 cnt=1 : "只丢掉 $k$ 个 $n$ 的幂
+   NEAR r=0.970 L202 cnt=1 : 只丢掉 $k$ 个 $n$ 的幂"
+   NEAR r=0.968 L202 cnt=1 : 只丢掉 $k$ 个 $n$ 的
+   NEAR r=0.968 L202 cnt=1 : 丢掉 $k$ 个 $n$ 的幂
+
+###### D177 D177-把时钟停在50的零熵映射.md pairs=4
+ DECL_L329  verbatim_lines=[103, 329]  verbatim_outside_decl=[]
+   Q(11): 跟我先前试过的简单写法
+   NEAR r=0.957 L329 cnt=1 : "跟我先前试过的简单写法
+   NEAR r=0.957 L329 cnt=1 : 跟我先前试过的简单写法"
+   NEAR r=0.952 L329 cnt=2 : 跟我先前试过的简单写
+   NEAR r=0.952 L329 cnt=2 : 我先前试过的简单写法
+ DECL_L329  verbatim_lines=[151, 329]  verbatim_outside_decl=[151]
+   Q(10): 主坐标的一致无关紧要
+   NEAR r=0.952 L329 cnt=1 : "主坐标的一致无关紧要
+   NEAR r=0.952 L329 cnt=1 : 主坐标的一致无关紧要"
+   NEAR r=0.947 L329 cnt=2 : 主坐标的一致无关紧
+   NEAR r=0.947 L329 cnt=2 : 坐标的一致无关紧要
+ DECL_L329  verbatim_lines=[186, 329]  verbatim_outside_decl=[186]
+   Q(14): 增长是多项式阶的、达不到指数
+   NEAR r=0.966 L329 cnt=1 : "增长是多项式阶的、达不到指数
+   NEAR r=0.966 L329 cnt=1 : 增长是多项式阶的、达不到指数"
+   NEAR r=0.963 L329 cnt=2 : 增长是多项式阶的、达不到指
+   NEAR r=0.963 L329 cnt=2 : 长是多项式阶的、达不到指数
+ DECL_L329  verbatim_lines=[249, 329]  verbatim_outside_decl=[249]
+   Q(16): 其中的 $n-1$ 就是这么来的
+   NEAR r=0.970 L249 cnt=1 : 其中的 $n-1$ 就是这么来的。
+   NEAR r=0.970 L329 cnt=1 : "其中的 $n-1$ 就是这么来的
+   NEAR r=0.970 L329 cnt=1 : 其中的 $n-1$ 就是这么来的"
+   NEAR r=0.968 L249 cnt=2 : 其中的 $n-1$ 就是这么来
+
+###### D179 D179-先把电荷折成能量亏损-带电时空Penrose约化的反推笔记.md pairs=1
+ DECL_L365  verbatim_lines=[365]  verbatim_outside_decl=[]
+   Q(19): 本行用于确认 Edit 追加对落盘有效
+   NEAR r=0.974 L365 cnt=1 : "本行用于确认 Edit 追加对落盘有效
+   NEAR r=0.974 L365 cnt=1 : 本行用于确认 Edit 追加对落盘有效"
+   NEAR r=0.973 L365 cnt=1 : 本行用于确认 Edit 追加对落盘有
+   NEAR r=0.973 L365 cnt=1 : 行用于确认 Edit 追加对落盘有效
+
+###### D018 D18-Tachikawa第二猜想反例.md pairs=1
+ DECL_L992  verbatim_lines=[727, 992]  verbatim_outside_decl=[727]
+   Q(34): $q=0$：$D(eC)\cong Ce$ 的行列式 $q^2=0$
+   NEAR r=0.986 L727 cnt=1 :  $q=0$：$D(eC)\cong Ce$ 的行列式 $q^2=0$
+   NEAR r=0.986 L727 cnt=1 : $q=0$：$D(eC)\cong Ce$ 的行列式 $q^2=0$；
+   NEAR r=0.985 L727 cnt=2 : $q=0$：$D(eC)\cong Ce$ 的行列式 $q^2=0
+   NEAR r=0.985 L727 cnt=2 : q=0$：$D(eC)\cong Ce$ 的行列式 $q^2=0$
+
+###### D184 D184-十一块箭头与hub测试-Kurosh除环问题反例.md pairs=2
+ DECL_L260  verbatim_lines=[260]  verbatim_outside_decl=[]
+   Q(10): 一元级数与辅助块无关
+   NEAR r=0.952 L260 cnt=1 : "一元级数与辅助块无关
+   NEAR r=0.952 L260 cnt=1 : 一元级数与辅助块无关"
+   NEAR r=0.947 L260 cnt=1 : 一元级数与辅助块无
+   NEAR r=0.947 L260 cnt=1 : 元级数与辅助块无关
+ DECL_L522  verbatim_lines=[522]  verbatim_outside_decl=[]
+   Q(25): 与派单给的 build 下 tex 总字节完全一致
+   NEAR r=0.980 L522 cnt=1 : "与派单给的 build 下 tex 总字节完全一致
+   NEAR r=0.980 L522 cnt=1 : 与派单给的 build 下 tex 总字节完全一致"
+   NEAR r=0.980 L522 cnt=1 : 与派单给的 build 下 tex 总字节完全一
+   NEAR r=0.980 L522 cnt=1 : 派单给的 build 下 tex 总字节完全一致
+
+###### D186 D186-固定粒子停机测试的构造路径.md pairs=8
+ DECL_L133  verbatim_lines=[133]  verbatim_outside_decl=[]
+   Q(11): 截断在路径上不引入误差
+   NEAR r=0.917 L135 cnt=1 : 截断在那条路径上不引入误差
+   NEAR r=0.880 L135 cnt=1 : "截断在那条路径上不引入误差
+   NEAR r=0.880 L135 cnt=1 : 截断在那条路径上不引入误差"
+   NEAR r=0.870 L135 cnt=1 : 截断在那条路径上不引入误
+ DECL_L135  verbatim_lines=[135]  verbatim_outside_decl=[]
+   Q(13): 截断在那条路径上不引入误差
+   NEAR r=0.963 L135 cnt=1 : "截断在那条路径上不引入误差
+   NEAR r=0.963 L135 cnt=1 : 截断在那条路径上不引入误差"
+   NEAR r=0.960 L135 cnt=1 : 截断在那条路径上不引入误
+   NEAR r=0.960 L135 cnt=1 : 断在那条路径上不引入误差
+ DECL_L342  verbatim_lines=[342]  verbatim_outside_decl=[]
+   Q(19): 那条关于 invertible 的警告
+   NEAR r=0.974 L342 cnt=1 : "那条关于 invertible 的警告
+   NEAR r=0.974 L342 cnt=1 : 那条关于 invertible 的警告"
+   NEAR r=0.973 L342 cnt=1 : 那条关于 invertible 的警
+   NEAR r=0.973 L342 cnt=1 : 条关于 invertible 的警告
+ DECL_L342  verbatim_lines=[342]  verbatim_outside_decl=[]
+   Q(10): 那条关于可逆性的警告
+   NEAR r=0.952 L342 cnt=1 : "那条关于可逆性的警告
+   NEAR r=0.952 L342 cnt=1 : 那条关于可逆性的警告"
+   NEAR r=0.947 L342 cnt=1 : 那条关于可逆性的警
+   NEAR r=0.947 L342 cnt=1 : 条关于可逆性的警告
+ DECL_L343  verbatim_lines=[92, 343]  verbatim_outside_decl=[92]
+   Q(15): Section 8 的平面运动
+   NEAR r=0.968 L343 cnt=1 : "Section 8 的平面运动
+   NEAR r=0.968 L343 cnt=1 : Section 8 的平面运动"
+   NEAR r=0.966 L343 cnt=2 : Section 8 的平面运
+   NEAR r=0.966 L343 cnt=2 : ection 8 的平面运动
+ DECL_L344  verbatim_lines=[344]  verbatim_outside_decl=[]
+   Q(15): 最迟要到第七千二百万个时间单位
+   NEAR r=0.968 L344 cnt=1 : "最迟要到第七千二百万个时间单位
+   NEAR r=0.968 L344 cnt=1 : 最迟要到第七千二百万个时间单位"
+   NEAR r=0.966 L344 cnt=1 : 最迟要到第七千二百万个时间单
+   NEAR r=0.966 L344 cnt=1 : 迟要到第七千二百万个时间单位
+ DECL_L345  verbatim_lines=[324, 345]  verbatim_outside_decl=[324]
+   Q(16): 落点 §17 第 18 节第二条
+   NEAR r=0.970 L324 cnt=1 : 。落点 §17 第 18 节第二条
+   NEAR r=0.970 L324 cnt=1 : 落点 §17 第 18 节第二条：
+   NEAR r=0.970 L345 cnt=1 : "落点 §17 第 18 节第二条
+   NEAR r=0.970 L345 cnt=1 : 落点 §17 第 18 节第二条"
+ DECL_L345  verbatim_lines=[345]  verbatim_outside_decl=[]
+   Q(15): 落点 §18 的未答问题第二条
+   NEAR r=0.968 L345 cnt=1 : "落点 §18 的未答问题第二条
+   NEAR r=0.968 L345 cnt=1 : 落点 §18 的未答问题第二条"
+   NEAR r=0.966 L345 cnt=1 : 落点 §18 的未答问题第二
+   NEAR r=0.966 L345 cnt=1 : 点 §18 的未答问题第二条
+
+###### D187 D187-给一般图的完美匹配计数装一台采样机.md pairs=4
+ DECL_L27  verbatim_lines=[27]  verbatim_outside_decl=[]
+   Q(21): 完美匹配与 near-perfect 匹配
+   NEAR r=0.930 L59 cnt=1 : 完美匹配相对 near-perfect 匹配
+   NEAR r=0.909 L59 cnt=1 : "完美匹配相对 near-perfect 匹配
+   NEAR r=0.909 L59 cnt=1 : 完美匹配相对 near-perfect 匹配有
+   NEAR r=0.905 L59 cnt=1 : 完美匹配相对 near-perfect 匹
+ DECL_L51  verbatim_lines=[51]  verbatim_outside_decl=[]
+   Q(11): 从带洞状态回到完美状态
+   NEAR r=0.957 L51 cnt=1 : "从带洞状态回到完美状态
+   NEAR r=0.957 L51 cnt=1 : 从带洞状态回到完美状态"
+   NEAR r=0.952 L51 cnt=1 : 从带洞状态回到完美状
+   NEAR r=0.952 L51 cnt=1 : 带洞状态回到完美状态
+ DECL_L205  verbatim_lines=[59, 205]  verbatim_outside_decl=[59]
+   Q(12): 找一个状态空间和一组移动
+   NEAR r=0.960 L59 cnt=1 : ：找一个状态空间和一组移动
+   NEAR r=0.960 L59 cnt=1 : 找一个状态空间和一组移动，
+   NEAR r=0.960 L205 cnt=1 : "找一个状态空间和一组移动
+   NEAR r=0.960 L205 cnt=1 : 找一个状态空间和一组移动"
+ DECL_L515  verbatim_lines=[515]  verbatim_outside_decl=[]
+   Q(10): $P(j)$ 前缀比
+   NEAR r=0.952 L515 cnt=1 : "$P(j)$ 前缀比
+   NEAR r=0.952 L515 cnt=1 : $P(j)$ 前缀比"
+   NEAR r=0.947 L515 cnt=1 : $P(j)$ 前缀
+   NEAR r=0.947 L515 cnt=1 : P(j)$ 前缀比
+
+###### D188 D188-五次型Gepner稳定条件构造手记.md pairs=4
+ DECL_L553  verbatim_lines=[553]  verbatim_outside_decl=[]
+   Q(23): 引用 Bridgeland 的定理把各件拼起来
+   NEAR r=0.979 L553 cnt=1 : "引用 Bridgeland 的定理把各件拼起来
+   NEAR r=0.979 L553 cnt=1 : 引用 Bridgeland 的定理把各件拼起来"
+   NEAR r=0.978 L553 cnt=1 : 引用 Bridgeland 的定理把各件拼起
+   NEAR r=0.978 L553 cnt=1 : 用 Bridgeland 的定理把各件拼起来
+ DECL_L692  verbatim_lines=[325, 692]  verbatim_outside_decl=[325]
+   Q(22): §5.4 末尾说的 noetherian 性
+   NEAR r=0.978 L692 cnt=1 : "§5.4 末尾说的 noetherian 性
+   NEAR r=0.978 L692 cnt=1 : §5.4 末尾说的 noetherian 性"
+   NEAR r=0.977 L692 cnt=2 : §5.4 末尾说的 noetherian 
+   NEAR r=0.977 L692 cnt=2 : 5.4 末尾说的 noetherian 性
+ DECL_L767  verbatim_lines=[767]  verbatim_outside_decl=[]
+   Q(19): 全部零命中，除上面登记的那一条连接词；
+   NEAR r=0.974 L767 cnt=1 : "全部零命中，除上面登记的那一条连接词；
+   NEAR r=0.974 L767 cnt=1 : 全部零命中，除上面登记的那一条连接词；"
+   NEAR r=0.973 L767 cnt=1 : 全部零命中，除上面登记的那一条连接词
+   NEAR r=0.973 L767 cnt=1 : 部零命中，除上面登记的那一条连接词；
+ DECL_L767  verbatim_lines=[767]  verbatim_outside_decl=[]
+   Q(13): 除已登记的连接词之外零命中
+   NEAR r=0.963 L767 cnt=1 : "除已登记的连接词之外零命中
+   NEAR r=0.963 L767 cnt=1 : 除已登记的连接词之外零命中"
+   NEAR r=0.960 L767 cnt=1 : 除已登记的连接词之外零命
+   NEAR r=0.960 L767 cnt=1 : 已登记的连接词之外零命中
+
+###### D189 D189-固定子句长度下随机SAT阈值的极限存在性.md pairs=1
+ DECL_L911  verbatim_lines=[911]  verbatim_outside_decl=[]
+   Q(11): 所有截断收敛到同一极限
+   NEAR r=0.957 L911 cnt=1 : "所有截断收敛到同一极限
+   NEAR r=0.957 L911 cnt=1 : 所有截断收敛到同一极限"
+   NEAR r=0.952 L911 cnt=1 : 所有截断收敛到同一极
+   NEAR r=0.952 L911 cnt=1 : 有截断收敛到同一极限
+
+###### D190 D190-树加权平面地图随机游走的线性时钟研究笔记.md pairs=1
+ DECL_L566  verbatim_lines=[460, 566]  verbatim_outside_decl=[460]
+   Q(12): 必须是恒等式，极限式不够
+   NEAR r=0.960 L566 cnt=2 : "必须是恒等式，极限式不够
+   NEAR r=0.960 L566 cnt=2 : 必须是恒等式，极限式不够"
+   NEAR r=0.957 L566 cnt=2 : 必须是恒等式，极限式不
+   NEAR r=0.957 L566 cnt=2 : 须是恒等式，极限式不够
+
+###### D191 D191-把生成量与存储量拆开算-最坏情况子集和的低空间算法.md pairs=7
+ DECL_L142  verbatim_lines=[142]  verbatim_outside_decl=[]
+   Q(10): 亏了多少比特的表示度
+   NEAR r=0.952 L142 cnt=1 : "亏了多少比特的表示度
+   NEAR r=0.952 L142 cnt=1 : 亏了多少比特的表示度"
+   NEAR r=0.947 L142 cnt=1 : 亏了多少比特的表示
+   NEAR r=0.947 L142 cnt=1 : 了多少比特的表示度
+ DECL_L365  verbatim_lines=[365]  verbatim_outside_decl=[]
+   Q(25): 把要分析的解变成随机对象，同时让输入的统计性质不动
+   NEAR r=0.980 L365 cnt=1 : "把要分析的解变成随机对象，同时让输入的统计性质不动
+   NEAR r=0.980 L365 cnt=1 : 把要分析的解变成随机对象，同时让输入的统计性质不动"
+   NEAR r=0.980 L365 cnt=1 : 把要分析的解变成随机对象，同时让输入的统计性质不
+   NEAR r=0.980 L365 cnt=1 : 要分析的解变成随机对象，同时让输入的统计性质不动
+ DECL_L844  verbatim_lines=[844]  verbatim_outside_decl=[]
+   Q(44): （探针追加：基线 `wc -c` = 897 字节，本行为唯一新增行，复量后继续正文。）
+   NEAR r=0.989 L844 cnt=1 : "（探针追加：基线 `wc -c` = 897 字节，本行为唯一新增行，复量后继续正文。）
+   NEAR r=0.989 L844 cnt=1 : （探针追加：基线 `wc -c` = 897 字节，本行为唯一新增行，复量后继续正文。）"
+   NEAR r=0.989 L844 cnt=1 : （探针追加：基线 `wc -c` = 897 字节，本行为唯一新增行，复量后继续正文。
+   NEAR r=0.989 L844 cnt=1 : 探针追加：基线 `wc -c` = 897 字节，本行为唯一新增行，复量后继续正文。）
+ DECL_L849  verbatim_lines=[849]  verbatim_outside_decl=[]
+   Q(17): §0 在前、`## §` 编号连续
+   NEAR r=0.971 L849 cnt=1 : "§0 在前、`## §` 编号连续
+   NEAR r=0.971 L849 cnt=1 : §0 在前、`## §` 编号连续"
+   NEAR r=0.970 L849 cnt=1 : §0 在前、`## §` 编号连
+   NEAR r=0.970 L849 cnt=1 : 0 在前、`## §` 编号连续
+ DECL_L856  verbatim_lines=[856]  verbatim_outside_decl=[]
+   Q(15): 它已经变成'若干级和流的和流'
+   NEAR r=0.968 L856 cnt=1 : "它已经变成'若干级和流的和流'
+   NEAR r=0.968 L856 cnt=1 : 它已经变成'若干级和流的和流'"
+   NEAR r=0.966 L856 cnt=1 : 它已经变成'若干级和流的和流
+   NEAR r=0.966 L856 cnt=1 : 已经变成'若干级和流的和流'
+ DECL_L874  verbatim_lines=[874]  verbatim_outside_decl=[]
+   Q(16): README.md 我只当索引看
+   NEAR r=0.970 L874 cnt=1 : "README.md 我只当索引看
+   NEAR r=0.970 L874 cnt=1 : README.md 我只当索引看"
+   NEAR r=0.968 L874 cnt=1 : README.md 我只当索引
+   NEAR r=0.968 L874 cnt=1 : EADME.md 我只当索引看
+ DECL_L876  verbatim_lines=[876]  verbatim_outside_decl=[]
+   Q(13): 知道它在，并且没把它当素材
+   NEAR r=0.963 L876 cnt=1 : "知道它在，并且没把它当素材
+   NEAR r=0.963 L876 cnt=1 : 知道它在，并且没把它当素材"
+   NEAR r=0.960 L876 cnt=1 : 知道它在，并且没把它当素
+   NEAR r=0.960 L876 cnt=1 : 道它在，并且没把它当素材
+
+###### D194 D194-同余格表示问题的否定解答：一条被格形状逼出来的群论路线.md pairs=2
+ DECL_L451  verbatim_lines=[451]  verbatim_outside_decl=[]
+   Q(54): 论文明说这数指的是主因子，而指它们的简单直因子（`classification.tex:111--115`）
+   NEAR r=0.865 L151 cnt=2 : 论文明说这数指的是主因子，单个简单直因子不在所指之列（`classification.tex:112--115`）
+   NEAR r=0.855 L151 cnt=2 : 论文明说这数指的是主因子，单个简单直因子不在所指之列（`classification.tex:112--115`
+   NEAR r=0.855 L151 cnt=2 : 文明说这数指的是主因子，单个简单直因子不在所指之列（`classification.tex:112--115`）
+   NEAR r=0.847 L151 cnt=1 : ；论文明说这数指的是主因子，单个简单直因子不在所指之列（`classification.tex:112--115`
+ DECL_L451  verbatim_lines=[151, 451]  verbatim_outside_decl=[151]
+   Q(57): 论文明说这数指的是主因子，单个简单直因子不在所指之列（`classification.tex:112--115`）
+   NEAR r=0.991 L151 cnt=1 : ；论文明说这数指的是主因子，单个简单直因子不在所指之列（`classification.tex:112--115`）
+   NEAR r=0.991 L151 cnt=1 : 论文明说这数指的是主因子，单个简单直因子不在所指之列（`classification.tex:112--115`）；
+   NEAR r=0.991 L151 cnt=2 : 论文明说这数指的是主因子，单个简单直因子不在所指之列（`classification.tex:112--115`
+   NEAR r=0.991 L151 cnt=2 : 文明说这数指的是主因子，单个简单直因子不在所指之列（`classification.tex:112--115`）
+
+###### D195 D195-一个PD4群没有闭非正曲流形模型.md pairs=1
+ DECL_L473  verbatim_lines=[473]  verbatim_outside_decl=[]
+   Q(27): 在离 $v$ 共 $b$ 个 gallery 内被承载
+   NEAR r=0.982 L473 cnt=1 : "在离 $v$ 共 $b$ 个 gallery 内被承载
+   NEAR r=0.982 L473 cnt=1 : 在离 $v$ 共 $b$ 个 gallery 内被承载"
+   NEAR r=0.981 L473 cnt=1 : 在离 $v$ 共 $b$ 个 gallery 内被承
+   NEAR r=0.981 L473 cnt=1 : 离 $v$ 共 $b$ 个 gallery 内被承载
+
+###### D196 D196-从Cardy公式提取Voronoi逾渗色关键点振幅.md pairs=1
+ DECL_L163  verbatim_lines=[163]  verbatim_outside_decl=[]
+   Q(25): 认 out 出 $\gamma=-\lambda$
+   NEAR r=0.980 L163 cnt=1 : "认 out 出 $\gamma=-\lambda$
+   NEAR r=0.980 L163 cnt=1 : 认 out 出 $\gamma=-\lambda$"
+   NEAR r=0.980 L163 cnt=1 : 认 out 出 $\gamma=-\lambda
+   NEAR r=0.980 L163 cnt=1 :  out 出 $\gamma=-\lambda$
+
+###### D198 D198-单调图性质尖锐阈值猜想的显式宽度界.md pairs=2
+ DECL_L79  verbatim_lines=[79]  verbatim_outside_decl=[]
+   Q(12): 右端线性于 $I(h)$
+   NEAR r=0.846 L93 cnt=1 : 右端线性于 $I(f_y)$
+   NEAR r=0.815 L93 cnt=1 : ,右端线性于 $I(f_y)$
+   NEAR r=0.815 L93 cnt=1 : 右端线性于 $I(f_y)$,
+ DECL_L291  verbatim_lines=[291]  verbatim_outside_decl=[]
+   Q(20): §2 拿刀, §3 造机器, §4 装配
+   NEAR r=0.976 L291 cnt=1 : "§2 拿刀, §3 造机器, §4 装配
+   NEAR r=0.976 L291 cnt=1 : §2 拿刀, §3 造机器, §4 装配"
+   NEAR r=0.974 L291 cnt=1 : §2 拿刀, §3 造机器, §4 装
+   NEAR r=0.974 L291 cnt=1 : 2 拿刀, §3 造机器, §4 装配
+
+###### D199 D199-让特征线跑起来三维整次数调和维数比较反例的思维链重建.md pairs=2
+ DECL_L185  verbatim_lines=[185]  verbatim_outside_decl=[]
+   Q(15): 逐坐标方程对足够大的截断都成立
+   NEAR r=0.968 L185 cnt=1 : "逐坐标方程对足够大的截断都成立
+   NEAR r=0.968 L185 cnt=1 : 逐坐标方程对足够大的截断都成立"
+   NEAR r=0.966 L185 cnt=1 : 逐坐标方程对足够大的截断都成
+   NEAR r=0.966 L185 cnt=1 : 坐标方程对足够大的截断都成立
+ DECL_L255  verbatim_lines=[78, 84, 255]  verbatim_outside_decl=[78, 84]
+   Q(21): Berger 那套之所以能锁定有限多个模态
+   NEAR r=0.977 L84 cnt=2 : "Berger 那套之所以能锁定有限多个模态
+   NEAR r=0.977 L84 cnt=2 : Berger 那套之所以能锁定有限多个模态"
+   NEAR r=0.976 L84 cnt=3 : Berger 那套之所以能锁定有限多个模
+   NEAR r=0.976 L84 cnt=3 : erger 那套之所以能锁定有限多个模态
+
+###### D020 D20-群环行列式猜想的反例.md pairs=4
+ DECL_L166  verbatim_lines=[166, 186]  verbatim_outside_decl=[]
+   Q(15): fkDet<1 ⟹ 积分严格负
+   NEAR r=0.968 L166 cnt=2 : "fkDet<1 ⟹ 积分严格负
+   NEAR r=0.968 L166 cnt=2 : fkDet<1 ⟹ 积分严格负"
+   NEAR r=0.966 L166 cnt=2 : fkDet<1 ⟹ 积分严格
+   NEAR r=0.966 L166 cnt=2 : kDet<1 ⟹ 积分严格负
+ DECL_L481  verbatim_lines=[411, 481]  verbatim_outside_decl=[411]
+   Q(11): 行列式在初等变换下不变
+   NEAR r=0.957 L481 cnt=2 : "行列式在初等变换下不变
+   NEAR r=0.957 L481 cnt=2 : 行列式在初等变换下不变"
+   NEAR r=0.952 L481 cnt=2 : 行列式在初等变换下不
+   NEAR r=0.952 L481 cnt=2 : 列式在初等变换下不变
+ DECL_L562  verbatim_lines=[483, 562]  verbatim_outside_decl=[483]
+   Q(12): 全在一条外部定理的逆否里
+   NEAR r=0.960 L483 cnt=1 : ，全在一条外部定理的逆否里
+   NEAR r=0.960 L483 cnt=1 : 全在一条外部定理的逆否里。
+   NEAR r=0.960 L562 cnt=1 : "全在一条外部定理的逆否里
+   NEAR r=0.960 L562 cnt=1 : 全在一条外部定理的逆否里"
+ DECL_L562  verbatim_lines=[495, 562]  verbatim_outside_decl=[495]
+   Q(17): 也因此落在 amenable 之外
+   NEAR r=0.971 L562 cnt=1 : "也因此落在 amenable 之外
+   NEAR r=0.971 L562 cnt=1 : 也因此落在 amenable 之外"
+   NEAR r=0.970 L562 cnt=2 : 也因此落在 amenable 之
+   NEAR r=0.970 L562 cnt=2 : 因此落在 amenable 之外
+
+###### D200 D200-无挠群上约化Baum-Connes装配单射性的整核类.md pairs=2
+ DECL_L111  verbatim_lines=[111]  verbatim_outside_decl=[]
+   Q(10): 哪些坐标是新的随机性
+   NEAR r=0.857 L446 cnt=1 : 哪些坐标提供新的随机性
+   NEAR r=0.818 L446 cnt=1 : ，哪些坐标提供新的随机性
+   NEAR r=0.818 L446 cnt=1 : 哪些坐标提供新的随机性由
+ DECL_L314  verbatim_lines=[314]  verbatim_outside_decl=[]
+   Q(11): 有界面至少 7 弧入射
+   NEAR r=0.880 L491 cnt=1 : 有界面至少 $7$ 个弧入射
+   NEAR r=0.833 L491 cnt=1 : 有界面至少 $7$ 个弧入
+   NEAR r=0.833 L491 cnt=1 : 界面至少 $7$ 个弧入射
+   NEAR r=0.800 L491 cnt=1 : 个有界面至少 $7$ 个弧入
+
+###### D201 D201-无挠反例与分离谱带构造.md pairs=2
+ DECL_L177  verbatim_lines=[177]  verbatim_outside_decl=[]
+   Q(12): 一个足够大 $\ell$
+   NEAR r=0.960 L114 cnt=1 : 一个足够大的 $\ell$
+   NEAR r=0.923 L114 cnt=1 : 取一个足够大的 $\ell$
+   NEAR r=0.923 L114 cnt=1 : 一个足够大的 $\ell$，
+   NEAR r=0.917 L114 cnt=1 : 一个足够大的 $\ell
+ DECL_L224  verbatim_lines=[224]  verbatim_outside_decl=[]
+   Q(170): 其定义见 `sections/spectral.tex:11` 到 `:18`，迹含 $N$ 个矩阵指标的未归一化和；权重 $\mathfrak w_i$ 是为拷贝相交的几何计数预留的余量，即便如此加权迹仍 $o(1)$，这正是 §10 末尾能收小 $\tau_{\Gamma_{\mathrm{proj}},N}(p_0)$ 的根本理由。
+   NEAR r=0.997 L224 cnt=1 : "其定义见 `sections/spectral.tex:11` 到 `:18`，迹含 $N$ 个矩阵指标的未归一化和；权重 $\mathfrak w_i$ 是为拷贝相交的几何计数预留的余量，即便如此加权迹仍 $o(1)$，这正是 §10 末尾能收小 $\tau_{\Gamma_{\mathrm{proj}},N}(p_0)$ 的根本理由。
+   NEAR r=0.997 L224 cnt=1 : 其定义见 `sections/spectral.tex:11` 到 `:18`，迹含 $N$ 个矩阵指标的未归一化和；权重 $\mathfrak w_i$ 是为拷贝相交的几何计数预留的余量，即便如此加权迹仍 $o(1)$，这正是 §10 末尾能收小 $\tau_{\Gamma_{\mathrm{proj}},N}(p_0)$ 的根本理由。"
+   NEAR r=0.997 L224 cnt=1 : 其定义见 `sections/spectral.tex:11` 到 `:18`，迹含 $N$ 个矩阵指标的未归一化和；权重 $\mathfrak w_i$ 是为拷贝相交的几何计数预留的余量，即便如此加权迹仍 $o(1)$，这正是 §10 末尾能收小 $\tau_{\Gamma_{\mathrm{proj}},N}(p_0)$ 的根本理由
+   NEAR r=0.997 L224 cnt=1 : 定义见 `sections/spectral.tex:11` 到 `:18`，迹含 $N$ 个矩阵指标的未归一化和；权重 $\mathfrak w_i$ 是为拷贝相交的几何计数预留的余量，即便如此加权迹仍 $o(1)$，这正是 §10 末尾能收小 $\tau_{\Gamma_{\mathrm{proj}},N}(p_0)$ 的根本理由。
+
+###### D203 D203-奇数开链同场能隙的转移矩阵反推.md pairs=3
+ DECL_L263  verbatim_lines=[263]  verbatim_outside_decl=[]
+   Q(21): 这套把函数空间问题降维成两个标量序列的手法
+   NEAR r=0.955 L77 cnt=1 : 这套"把函数空间问题降维成两个标量序列"的手法
+   NEAR r=0.933 L77 cnt=1 : 。这套"把函数空间问题降维成两个标量序列"的手法
+   NEAR r=0.933 L77 cnt=1 : 这套"把函数空间问题降维成两个标量序列"的手法，
+   NEAR r=0.930 L77 cnt=1 : 这套"把函数空间问题降维成两个标量序列"的手
+ DECL_L263  verbatim_lines=[263]  verbatim_outside_decl=[]
+   Q(33): 这是整篇最漂亮的一击，也是它和我最初固定长度直接估隙设想的最大分野
+   NEAR r=0.985 L263 cnt=1 : "这是整篇最漂亮的一击，也是它和我最初固定长度直接估隙设想的最大分野
+   NEAR r=0.985 L263 cnt=1 : 这是整篇最漂亮的一击，也是它和我最初固定长度直接估隙设想的最大分野"
+   NEAR r=0.985 L263 cnt=1 : 这是整篇最漂亮的一击，也是它和我最初固定长度直接估隙设想的最大分
+   NEAR r=0.985 L263 cnt=1 : 是整篇最漂亮的一击，也是它和我最初固定长度直接估隙设想的最大分野
+ DECL_L263  verbatim_lines=[155, 263]  verbatim_outside_decl=[155]
+   Q(13): 我尊重这个限定，不越界解读
+   NEAR r=0.963 L155 cnt=1 : ，我尊重这个限定，不越界解读
+   NEAR r=0.963 L155 cnt=1 : 我尊重这个限定，不越界解读。
+   NEAR r=0.960 L155 cnt=2 : 我尊重这个限定，不越界解
+   NEAR r=0.960 L155 cnt=2 : 尊重这个限定，不越界解读
+
+###### D204 D204-四维盘嵌入猜想的边界障碍：从自由群问题到Frobenius-Koszul障碍.md pairs=1
+ DECL_L346  verbatim_lines=[45, 346]  verbatim_outside_decl=[]
+   Q(12): （恢复标题，见文末勘误）
+   NEAR r=0.960 L45 cnt=1 : 择（恢复标题，见文末勘误）
+   NEAR r=0.957 L45 cnt=2 : （恢复标题，见文末勘误
+   NEAR r=0.957 L45 cnt=2 : 恢复标题，见文末勘误）
+   NEAR r=0.923 L45 cnt=1 : 选择（恢复标题，见文末勘误）
+
+###### D206 D206-把半权除子的orbifold基本群装进一个八维特殊流形.md pairs=6
+ DECL_L293  verbatim_lines=[293]  verbatim_outside_decl=[]
+   Q(23): 探针行：落盘写入自检（本行仅用于验证写入生效）
+   NEAR r=0.979 L293 cnt=1 : "探针行：落盘写入自检（本行仅用于验证写入生效）
+   NEAR r=0.979 L293 cnt=1 : 探针行：落盘写入自检（本行仅用于验证写入生效）"
+   NEAR r=0.978 L293 cnt=1 : 探针行：落盘写入自检（本行仅用于验证写入生效
+   NEAR r=0.978 L293 cnt=1 : 针行：落盘写入自检（本行仅用于验证写入生效）
+ DECL_L294  verbatim_lines=[294]  verbatim_outside_decl=[]
+   Q(80): 实际 inertia 与加权局部整除（`in:local-divisibility`，`inertia-foundations.tex:296-322` 之前）
+   NEAR r=0.994 L294 cnt=1 : "实际 inertia 与加权局部整除（`in:local-divisibility`，`inertia-foundations.tex:296-322` 之前）
+   NEAR r=0.994 L294 cnt=1 : 实际 inertia 与加权局部整除（`in:local-divisibility`，`inertia-foundations.tex:296-322` 之前）"
+   NEAR r=0.994 L294 cnt=1 : 实际 inertia 与加权局部整除（`in:local-divisibility`，`inertia-foundations.tex:296-322` 之前
+   NEAR r=0.994 L294 cnt=1 : 际 inertia 与加权局部整除（`in:local-divisibility`，`inertia-foundations.tex:296-322` 之前）
+ DECL_L295  verbatim_lines=[233, 295]  verbatim_outside_decl=[233]
+   Q(63): （`inertia-descent.tex:12-16` 处我写的是 `inertia-descent.tex:13-16`）
+   NEAR r=0.992 L295 cnt=1 : "（`inertia-descent.tex:12-16` 处我写的是 `inertia-descent.tex:13-16`）
+   NEAR r=0.992 L295 cnt=1 : （`inertia-descent.tex:12-16` 处我写的是 `inertia-descent.tex:13-16`）"
+   NEAR r=0.992 L295 cnt=2 : （`inertia-descent.tex:12-16` 处我写的是 `inertia-descent.tex:13-16`
+   NEAR r=0.992 L295 cnt=2 : `inertia-descent.tex:12-16` 处我写的是 `inertia-descent.tex:13-16`）
+ DECL_L296  verbatim_lines=[272, 296]  verbatim_outside_decl=[272]
+   Q(39): （`inertia-minimality.tex:176-180` 之前那段）
+   NEAR r=0.987 L296 cnt=1 : "（`inertia-minimality.tex:176-180` 之前那段）
+   NEAR r=0.987 L296 cnt=1 : （`inertia-minimality.tex:176-180` 之前那段）"
+   NEAR r=0.987 L296 cnt=2 : （`inertia-minimality.tex:176-180` 之前那段
+   NEAR r=0.987 L296 cnt=2 : `inertia-minimality.tex:176-180` 之前那段）
+ DECL_L298  verbatim_lines=[298]  verbatim_outside_decl=[]
+   Q(33): generically finite downstairs 纤维群
+   NEAR r=0.985 L298 cnt=1 : "generically finite downstairs 纤维群
+   NEAR r=0.985 L298 cnt=1 : generically finite downstairs 纤维群"
+   NEAR r=0.985 L298 cnt=1 : generically finite downstairs 纤维
+   NEAR r=0.985 L298 cnt=1 : enerically finite downstairs 纤维群
+ DECL_L298  verbatim_lines=[219, 298]  verbatim_outside_decl=[219]
+   Q(14): downstairs 纤维群
+   NEAR r=0.966 L298 cnt=2 :  downstairs 纤维群
+   NEAR r=0.966 L298 cnt=2 : downstairs 纤维群"
+   NEAR r=0.963 L298 cnt=3 : downstairs 纤维
+   NEAR r=0.963 L298 cnt=3 : ownstairs 纤维群
+
+###### D207 D207-Hadwiger猜想反例的二进制构造与四洞强制.md pairs=1
+ DECL_L239  verbatim_lines=[239]  verbatim_outside_decl=[]
+   Q(21): 弱化的开放边界也要说清……不许越过这条边界
+   NEAR r=0.977 L239 cnt=1 : "弱化的开放边界也要说清……不许越过这条边界
+   NEAR r=0.977 L239 cnt=1 : 弱化的开放边界也要说清……不许越过这条边界"
+   NEAR r=0.976 L239 cnt=1 : 弱化的开放边界也要说清……不许越过这条边
+   NEAR r=0.976 L239 cnt=1 : 化的开放边界也要说清……不许越过这条边界
+
+###### D209 D209-Sidorenko猜想反例构造过程研究笔记.md pairs=2
+ DECL_L256  verbatim_lines=[256]  verbatim_outside_decl=[]
+   Q(12): 终态依赖图加最小改动猜测
+   NEAR r=0.960 L256 cnt=1 : "终态依赖图加最小改动猜测
+   NEAR r=0.960 L256 cnt=1 : 终态依赖图加最小改动猜测"
+   NEAR r=0.957 L256 cnt=1 : 终态依赖图加最小改动猜
+   NEAR r=0.957 L256 cnt=1 : 态依赖图加最小改动猜测
+ DECL_L260  verbatim_lines=[150, 260]  verbatim_outside_decl=[150]
+   Q(29): ## §§ 下一段从 transverse 节的细节继续。
+   NEAR r=0.982 L150 cnt=2 : ## §§ 下一段从 transverse 节的细节继续
+   NEAR r=0.982 L150 cnt=2 : # §§ 下一段从 transverse 节的细节继续。
+   NEAR r=0.964 L150 cnt=2 : ## §§ 下一段从 transverse 节的细节继
+   NEAR r=0.964 L150 cnt=2 : # §§ 下一段从 transverse 节的细节继续
+
+###### D021 D21-Saxl猜想-循环多表证明.md pairs=1
+ DECL_L233  verbatim_lines=[233]  verbatim_outside_decl=[]
+   Q(11): 实际证明的是更强的定理
+   NEAR r=0.917 L5 cnt=1 : 实际证明的是更强的循环定理
+   NEAR r=0.880 L5 cnt=1 :  实际证明的是更强的循环定理
+   NEAR r=0.880 L5 cnt=1 : 实际证明的是更强的循环定理：
+   NEAR r=0.870 L5 cnt=1 : 实际证明的是更强的循环定
+
+###### D210 D210-色数如何冲破谱不变量的上界.md pairs=2
+ DECL_L238  verbatim_lines=[238]  verbatim_outside_decl=[]
+   Q(34): 特征二、部分截断的 flat-extension moment 论证
+   NEAR r=0.986 L238 cnt=1 : "特征二、部分截断的 flat-extension moment 论证
+   NEAR r=0.986 L238 cnt=1 : 特征二、部分截断的 flat-extension moment 论证"
+   NEAR r=0.985 L238 cnt=1 : 特征二、部分截断的 flat-extension moment 论
+   NEAR r=0.985 L238 cnt=1 : 征二、部分截断的 flat-extension moment 论证
+ DECL_L251  verbatim_lines=[229, 251, 273]  verbatim_outside_decl=[229, 273]
+   Q(10): $\kappa$ 类
+   NEAR r=0.947 L247 cnt=13 : $\kappa$ 
+   NEAR r=0.900 L247 cnt=8 :  $\kappa$ 
+   NEAR r=0.900 L247 cnt=1 : $\kappa$ 替
+   NEAR r=0.857 L247 cnt=1 : 用 $\kappa$ 
+
+###### D211 D211-三边际Coulomb代价的Monge拟设反例.md pairs=4
+ DECL_L179  verbatim_lines=[179]  verbatim_outside_decl=[]
+   Q(23): 证明里哪些地方用过 Coulomb 的具体形式
+   NEAR r=0.979 L179 cnt=1 : "证明里哪些地方用过 Coulomb 的具体形式
+   NEAR r=0.979 L179 cnt=1 : 证明里哪些地方用过 Coulomb 的具体形式"
+   NEAR r=0.978 L179 cnt=1 : 证明里哪些地方用过 Coulomb 的具体形
+   NEAR r=0.978 L179 cnt=1 : 明里哪些地方用过 Coulomb 的具体形式
+ DECL_L242  verbatim_lines=[96, 242]  verbatim_outside_decl=[96]
+   Q(18): $a_3=e_3$ 那一族根本不需要
+   NEAR r=0.973 L242 cnt=1 : "$a_3=e_3$ 那一族根本不需要
+   NEAR r=0.973 L242 cnt=1 : $a_3=e_3$ 那一族根本不需要"
+   NEAR r=0.971 L242 cnt=2 : $a_3=e_3$ 那一族根本不需
+   NEAR r=0.971 L242 cnt=2 : a_3=e_3$ 那一族根本不需要
+ DECL_L244  verbatim_lines=[231, 244]  verbatim_outside_decl=[231]
+   Q(14): 也就是说，我保住分离性的办法
+   NEAR r=0.966 L244 cnt=1 : "也就是说，我保住分离性的办法
+   NEAR r=0.966 L244 cnt=1 : 也就是说，我保住分离性的办法"
+   NEAR r=0.963 L244 cnt=2 : 也就是说，我保住分离性的办
+   NEAR r=0.963 L244 cnt=2 : 就是说，我保住分离性的办法
+ DECL_L244  verbatim_lines=[231, 244]  verbatim_outside_decl=[231]
+   Q(29): 我保住分离性的办法是让每个 cell 继承它所属分量的身份
+   NEAR r=0.983 L244 cnt=1 : "我保住分离性的办法是让每个 cell 继承它所属分量的身份
+   NEAR r=0.983 L244 cnt=1 : 我保住分离性的办法是让每个 cell 继承它所属分量的身份"
+   NEAR r=0.982 L244 cnt=2 : 我保住分离性的办法是让每个 cell 继承它所属分量的身
+   NEAR r=0.982 L244 cnt=2 : 保住分离性的办法是让每个 cell 继承它所属分量的身份
+
+###### D212 D212-粗Novikov猜想反例的逆向工作笔记-绕行数持久性与常向量平均传递.md pairs=1
+ DECL_L282  verbatim_lines=[1, 282]  verbatim_outside_decl=[1]
+   Q(12): 粗 Novikov 猜想
+   NEAR r=0.960 L1 cnt=1 :  粗 Novikov 猜想
+   NEAR r=0.960 L1 cnt=1 : 粗 Novikov 猜想反
+   NEAR r=0.957 L1 cnt=2 : 粗 Novikov 猜
+   NEAR r=0.957 L1 cnt=2 :  Novikov 猜想
+
+###### D213 D213-邻近拉格朗日猜想的稳定管类反例.md pairs=2
+ DECL_L146  verbatim_lines=[146]  verbatim_outside_decl=[]
+   Q(15): 加 $(d,d)$ 分裂稳定化
+   NEAR r=0.903 L216 cnt=1 :  $(d,d)$ | 分裂稳定化
+   NEAR r=0.875 L216 cnt=1 : 号 $(d,d)$ | 分裂稳定化
+   NEAR r=0.875 L216 cnt=1 :  $(d,d)$ | 分裂稳定化 
+   NEAR r=0.867 L216 cnt=1 :  $(d,d)$ | 分裂稳定
+ DECL_L238  verbatim_lines=[238]  verbatim_outside_decl=[]
+   Q(47): $F|_{\operatorname{Crit}(F)}=-g_b(w)$，Euler 原函数
+   NEAR r=0.925 L208 cnt=1 : _{\operatorname{Crit}(F)}=-g_b(w)$ | Euler 原函数
+   NEAR r=0.915 L208 cnt=1 : t_{\operatorname{Crit}(F)}=-g_b(w)$ | Euler 原函数
+   NEAR r=0.915 L208 cnt=1 : _{\operatorname{Crit}(F)}=-g_b(w)$ | Euler 原函数 
+   NEAR r=0.913 L208 cnt=1 : _{\operatorname{Crit}(F)}=-g_b(w)$ | Euler 原函
+
+###### D215 D215-稀薄Bose气体的密度均匀凝聚下限.md pairs=1
+ DECL_L194  verbatim_lines=[145, 194]  verbatim_outside_decl=[145]
+   Q(17): 距两骨架都 $\le R_*$+2
+   NEAR r=0.971 L194 cnt=1 : 「距两骨架都 $\le R_*$+2
+   NEAR r=0.971 L194 cnt=1 : 距两骨架都 $\le R_*$+2」
+   NEAR r=0.970 L194 cnt=2 : 距两骨架都 $\le R_*$+
+   NEAR r=0.970 L194 cnt=2 : 两骨架都 $\le R_*$+2
+
+###### D216 D216-线性次高斯与维度无关对数Sobolev不等式的反证路线.md pairs=2
+ DECL_L144  verbatim_lines=[144]  verbatim_outside_decl=[]
+   Q(13): $s\to0$ 恢复原测度
+   NEAR r=0.963 L144 cnt=1 : "$s\to0$ 恢复原测度
+   NEAR r=0.963 L144 cnt=1 : $s\to0$ 恢复原测度"
+   NEAR r=0.960 L144 cnt=1 : $s\to0$ 恢复原测
+   NEAR r=0.960 L144 cnt=1 : s\to0$ 恢复原测度
+ DECL_L810  verbatim_lines=[598, 810]  verbatim_outside_decl=[598]
+   Q(26): 还有一个设计选择我不Originally以为是任意的
+   NEAR r=0.981 L598 cnt=1 : 还有一个设计选择我不Originally以为是任意的：
+   NEAR r=0.981 L810 cnt=1 : "还有一个设计选择我不Originally以为是任意的
+   NEAR r=0.981 L810 cnt=1 : 还有一个设计选择我不Originally以为是任意的"
+   NEAR r=0.980 L598 cnt=2 : 还有一个设计选择我不Originally以为是任意
+
+###### D217 D217-方向零一律的有限程依赖证明路线复盘.md pairs=1
+ DECL_L203  verbatim_lines=[14, 203]  verbatim_outside_decl=[14]
+   Q(11): 其他队列第 41 行号
+   NEAR r=0.952 L14 cnt=2 : 其他队列第 41 行
+   NEAR r=0.952 L14 cnt=2 : 他队列第 41 行号
+
+###### D219 D219-素数1009上有限Smith-Toda复形V4的构造追记.md pairs=4
+ DECL_L253  verbatim_lines=[253]  verbatim_outside_decl=[]
+   Q(39): 结论:除未决疑点 (1) 的一个 $p$ 级移位外,所有卡尺我自己扳过都闭合。
+   NEAR r=0.987 L253 cnt=1 : "结论:除未决疑点 (1) 的一个 $p$ 级移位外,所有卡尺我自己扳过都闭合。
+   NEAR r=0.987 L253 cnt=1 : 结论:除未决疑点 (1) 的一个 $p$ 级移位外,所有卡尺我自己扳过都闭合。"
+   NEAR r=0.987 L253 cnt=1 : 结论:除未决疑点 (1) 的一个 $p$ 级移位外,所有卡尺我自己扳过都闭合
+   NEAR r=0.987 L253 cnt=1 : 论:除未决疑点 (1) 的一个 $p$ 级移位外,所有卡尺我自己扳过都闭合。
+ DECL_L253  verbatim_lines=[253]  verbatim_outside_decl=[]
+   Q(12): 所有卡尺我自己扳过都闭合
+   NEAR r=0.960 L253 cnt=1 : ,所有卡尺我自己扳过都闭合
+   NEAR r=0.960 L253 cnt=1 : 所有卡尺我自己扳过都闭合。
+   NEAR r=0.957 L253 cnt=2 : 所有卡尺我自己扳过都闭
+   NEAR r=0.957 L253 cnt=2 : 有卡尺我自己扳过都闭合
+ DECL_L255  verbatim_lines=[255]  verbatim_outside_decl=[]
+   Q(158): (6) 第 13 节同一处推导里留下了 3p^2 带问号、n_C=n_A 等于 987 带问号这两处未写完的自问草稿,其中间值以本条为准:中间量为 3p^2+p、n_C=n_A=1007;此外该节 u_4+2=p^3+p^2+p+3 一行的展开我写得绕,正确读法是 w-\lambda_0 直接给 p^2(p-1)。
+   NEAR r=0.997 L255 cnt=1 : "(6) 第 13 节同一处推导里留下了 3p^2 带问号、n_C=n_A 等于 987 带问号这两处未写完的自问草稿,其中间值以本条为准:中间量为 3p^2+p、n_C=n_A=1007;此外该节 u_4+2=p^3+p^2+p+3 一行的展开我写得绕,正确读法是 w-\lambda_0 直接给 p^2(p-1)。
+   NEAR r=0.997 L255 cnt=1 : (6) 第 13 节同一处推导里留下了 3p^2 带问号、n_C=n_A 等于 987 带问号这两处未写完的自问草稿,其中间值以本条为准:中间量为 3p^2+p、n_C=n_A=1007;此外该节 u_4+2=p^3+p^2+p+3 一行的展开我写得绕,正确读法是 w-\lambda_0 直接给 p^2(p-1)。"
+   NEAR r=0.997 L255 cnt=1 : (6) 第 13 节同一处推导里留下了 3p^2 带问号、n_C=n_A 等于 987 带问号这两处未写完的自问草稿,其中间值以本条为准:中间量为 3p^2+p、n_C=n_A=1007;此外该节 u_4+2=p^3+p^2+p+3 一行的展开我写得绕,正确读法是 w-\lambda_0 直接给 p^2(p-1)
+   NEAR r=0.997 L255 cnt=1 : 6) 第 13 节同一处推导里留下了 3p^2 带问号、n_C=n_A 等于 987 带问号这两处未写完的自问草稿,其中间值以本条为准:中间量为 3p^2+p、n_C=n_A=1007;此外该节 u_4+2=p^3+p^2+p+3 一行的展开我写得绕,正确读法是 w-\lambda_0 直接给 p^2(p-1)。
+ DECL_L279  verbatim_lines=[249, 279]  verbatim_outside_decl=[249]
+   Q(12): 台账注记与第三轮勘误补录
+   NEAR r=0.960 L249 cnt=1 : 台账注记与第三轮勘误补录(
+   NEAR r=0.957 L249 cnt=2 : 台账注记与第三轮勘误补
+   NEAR r=0.957 L249 cnt=2 : 账注记与第三轮勘误补录
+   NEAR r=0.923 L249 cnt=1 : 台账注记与第三轮勘误补录(本
+
+###### D022 D22-无穷拟阵Packing-Covering猜想反例.md pairs=1
+ DECL_L242  verbatim_lines=[242]  verbatim_outside_decl=[]
+   Q(15): $M_1^*=M_1$ 同标号
+   NEAR r=0.968 L242 cnt=1 : "$M_1^*=M_1$ 同标号
+   NEAR r=0.968 L242 cnt=1 : $M_1^*=M_1$ 同标号"
+   NEAR r=0.966 L242 cnt=1 : $M_1^*=M_1$ 同标
+   NEAR r=0.966 L242 cnt=1 : M_1^*=M_1$ 同标号
+
+###### D225 D225-高标记数下的Pixton完备性Chow反例.md pairs=1
+ DECL_L320  verbatim_lines=[99, 312, 320, 427, 459]  verbatim_outside_decl=[99, 312, 427]
+   Q(11): $\delta$ 可逆
+   NEAR r=0.957 L427 cnt=3 :  $\delta$ 可逆
+   NEAR r=0.957 L427 cnt=1 : $\delta$ 可逆 
+   NEAR r=0.952 L427 cnt=6 : $\delta$ 可
+   NEAR r=0.952 L427 cnt=6 : \delta$ 可逆
+
+###### D227 D227-Hadwiger数线性表染色界-研究反推.md pairs=2
+ DECL_L466  verbatim_lines=[418, 466]  verbatim_outside_decl=[418]
+   Q(12): 改 $N$ 破坏存活半数
+   NEAR r=0.960 L418 cnt=1 :  改 $N$ 破坏存活半数
+   NEAR r=0.960 L418 cnt=1 : 改 $N$ 破坏存活半数 
+   NEAR r=0.957 L418 cnt=2 : 改 $N$ 破坏存活半
+   NEAR r=0.957 L418 cnt=2 :  $N$ 破坏存活半数
+ DECL_L546  verbatim_lines=[546]  verbatim_outside_decl=[]
+   Q(16): $6k$ 与 $7k$ 阈值取舍
+   NEAR r=0.970 L288 cnt=1 : $6k$ 与 $7k$ 阈值的取舍
+   NEAR r=0.941 L288 cnt=1 :  $6k$ 与 $7k$ 阈值的取舍
+   NEAR r=0.941 L288 cnt=1 : $6k$ 与 $7k$ 阈值的取舍体
+   NEAR r=0.938 L288 cnt=1 : $6k$ 与 $7k$ 阈值的取
+
+###### D230 D230-非退化反例击穿Morse数Arnold上界.md pairs=1
+ DECL_L259  verbatim_lines=[259]  verbatim_outside_decl=[]
+   Q(17): 奇数行恰为 54 与 106 两行
+   NEAR r=0.971 L259 cnt=1 : "奇数行恰为 54 与 106 两行
+   NEAR r=0.971 L259 cnt=1 : 奇数行恰为 54 与 106 两行"
+   NEAR r=0.970 L259 cnt=1 : 奇数行恰为 54 与 106 两
+   NEAR r=0.970 L259 cnt=1 : 数行恰为 54 与 106 两行
+
+###### D231 D231-有理二元挠椭圆曲线的逐点2-反定理推导笔记.md pairs=1
+ DECL_L195  verbatim_lines=[195]  verbatim_outside_decl=[]
+   Q(90): [推测] 论文把系数节与图节解耦成规则接口，是为了让两台插值机的有限实现阶段可以任意加素数而不触碰解析输入；正文没有直说这个动机，但 §10 的地址引理只引用规则名，支持这个读法。
+   NEAR r=0.994 L195 cnt=1 : "[推测] 论文把系数节与图节解耦成规则接口，是为了让两台插值机的有限实现阶段可以任意加素数而不触碰解析输入；正文没有直说这个动机，但 §10 的地址引理只引用规则名，支持这个读法。
+   NEAR r=0.994 L195 cnt=1 : [推测] 论文把系数节与图节解耦成规则接口，是为了让两台插值机的有限实现阶段可以任意加素数而不触碰解析输入；正文没有直说这个动机，但 §10 的地址引理只引用规则名，支持这个读法。"
+   NEAR r=0.994 L195 cnt=1 : [推测] 论文把系数节与图节解耦成规则接口，是为了让两台插值机的有限实现阶段可以任意加素数而不触碰解析输入；正文没有直说这个动机，但 §10 的地址引理只引用规则名，支持这个读法
+   NEAR r=0.994 L195 cnt=1 : 推测] 论文把系数节与图节解耦成规则接口，是为了让两台插值机的有限实现阶段可以任意加素数而不触碰解析输入；正文没有直说这个动机，但 §10 的地址引理只引用规则名，支持这个读法。
+
+###### D232 D232-三机单位作业调度的全局描述长度路线.md pairs=1
+ DECL_L480  verbatim_lines=[387, 480]  verbatim_outside_decl=[387]
+   Q(10): 最好看的部分偏偏最贵
+   NEAR r=0.952 L387 cnt=1 : 面最好看的部分偏偏最贵
+   NEAR r=0.952 L387 cnt=1 : 最好看的部分偏偏最贵：
+   NEAR r=0.947 L387 cnt=2 : 最好看的部分偏偏最
+   NEAR r=0.947 L387 cnt=2 : 好看的部分偏偏最贵
+
+###### D233 D233-强瘦树的多项式时间构造.md pairs=1
+ DECL_L206  verbatim_lines=[92, 206]  verbatim_outside_decl=[92]
+   Q(13): 第 255 到 257 行
+   NEAR r=0.963 L92 cnt=1 : 。第 255 到 257 行
+   NEAR r=0.963 L92 cnt=1 : 第 255 到 257 行明
+   NEAR r=0.963 L206 cnt=1 : "第 255 到 257 行
+   NEAR r=0.963 L206 cnt=1 : 第 255 到 257 行"
+
+###### D234 D234-Heilbronn三角形下界的幂改进.md pairs=2
+ DECL_L367  verbatim_lines=[175, 367]  verbatim_outside_decl=[175]
+   Q(16): 构造本身可能确实给出幂改进的下界
+   NEAR r=0.970 L367 cnt=1 : "构造本身可能确实给出幂改进的下界
+   NEAR r=0.970 L367 cnt=1 : 构造本身可能确实给出幂改进的下界"
+   NEAR r=0.968 L367 cnt=2 : 构造本身可能确实给出幂改进的下
+   NEAR r=0.968 L367 cnt=2 : 造本身可能确实给出幂改进的下界
+ DECL_L457  verbatim_lines=[457]  verbatim_outside_decl=[]
+   Q(16): 写错了就在文末追加 勘误 节说明
+   NEAR r=0.970 L457 cnt=1 : "写错了就在文末追加 勘误 节说明
+   NEAR r=0.970 L457 cnt=1 : 写错了就在文末追加 勘误 节说明"
+   NEAR r=0.968 L457 cnt=1 : 写错了就在文末追加 勘误 节说
+   NEAR r=0.968 L457 cnt=1 : 错了就在文末追加 勘误 节说明
+
+###### D235 D235-幂节省指数只依赖次数的intersective多项式差集.md pairs=1
+ DECL_L784  verbatim_lines=[752, 784, 835]  verbatim_outside_decl=[752, 835]
+   Q(14): 分母至多 $N$ 的小固定幂
+   NEAR r=0.966 L835 cnt=1 : 留分母至多 $N$ 的小固定幂
+   NEAR r=0.966 L835 cnt=2 : 分母至多 $N$ 的小固定幂的
+   NEAR r=0.963 L835 cnt=3 : 分母至多 $N$ 的小固定
+   NEAR r=0.963 L835 cnt=3 : 母至多 $N$ 的小固定幂
+
+###### D236 D236-平面半线的幂次节省.md pairs=4
+ DECL_L128  verbatim_lines=[128]  verbatim_outside_decl=[]
+   Q(21): activity 为 0 才可能端点集相同
+   NEAR r=0.977 L128 cnt=1 : "activity 为 0 才可能端点集相同
+   NEAR r=0.977 L128 cnt=1 : activity 为 0 才可能端点集相同"
+   NEAR r=0.976 L128 cnt=1 : activity 为 0 才可能端点集相
+   NEAR r=0.976 L128 cnt=1 : ctivity 为 0 才可能端点集相同
+ DECL_L1174  verbatim_lines=[1174]  verbatim_outside_decl=[]
+   Q(21): §6 里那块把一批交换限制到参与点上的操作
+   NEAR r=0.977 L1174 cnt=1 : "§6 里那块把一批交换限制到参与点上的操作
+   NEAR r=0.977 L1174 cnt=1 : §6 里那块把一批交换限制到参与点上的操作"
+   NEAR r=0.976 L1174 cnt=1 : §6 里那块把一批交换限制到参与点上的操
+   NEAR r=0.976 L1174 cnt=1 : 6 里那块把一批交换限制到参与点上的操作
+ DECL_L1176  verbatim_lines=[820, 1176]  verbatim_outside_decl=[820]
+   Q(14): attaches 到顶点测度
+   NEAR r=0.966 L820 cnt=1 :  attaches 到顶点测度
+   NEAR r=0.966 L820 cnt=1 : attaches 到顶点测度并
+   NEAR r=0.966 L1176 cnt=1 : "attaches 到顶点测度
+   NEAR r=0.966 L1176 cnt=1 : attaches 到顶点测度"
+ DECL_L1176  verbatim_lines=[922, 1176]  verbatim_outside_decl=[922]
+   Q(13): 先 attach 紧化位置
+   NEAR r=0.963 L922 cnt=1 : 上先 attach 紧化位置
+   NEAR r=0.963 L922 cnt=1 : 先 attach 紧化位置再
+   NEAR r=0.963 L1176 cnt=1 : "先 attach 紧化位置
+   NEAR r=0.963 L1176 cnt=1 : 先 attach 紧化位置"
+
+###### D238 D238-平方差自由集的固定幂节省.md pairs=1
+ DECL_L742  verbatim_lines=[139, 742]  verbatim_outside_decl=[139]
+   Q(21): 把 $A\subseteq[N]$ 接上去
+   NEAR r=0.977 L139 cnt=1 : 把 $A\subseteq[N]$ 接上去的
+   NEAR r=0.977 L742 cnt=1 : "把 $A\subseteq[N]$ 接上去
+   NEAR r=0.977 L742 cnt=1 : 把 $A\subseteq[N]$ 接上去"
+   NEAR r=0.976 L139 cnt=2 : 把 $A\subseteq[N]$ 接上
+
+###### D239 D239-基本群很大的射影四维与非Stein万有覆叠.md pairs=1
+ DECL_L16  verbatim_lines=[16]  verbatim_outside_decl=[]
+   Q(18): $\widetilde X$ 全纯凸
+   NEAR r=0.973 L16 cnt=1 : "$\widetilde X$ 全纯凸
+   NEAR r=0.973 L16 cnt=1 : $\widetilde X$ 全纯凸"
+   NEAR r=0.971 L16 cnt=1 : $\widetilde X$ 全纯
+   NEAR r=0.971 L16 cnt=1 : \widetilde X$ 全纯凸
+
+###### D024 D24-Kaplansky拟迹猜想反例.md pairs=1
+ DECL_L483  verbatim_lines=[483]  verbatim_outside_decl=[]
+   Q(20): 在 $\varphi$ 眼里可以互相替换
+   NEAR r=0.976 L483 cnt=1 : "在 $\varphi$ 眼里可以互相替换
+   NEAR r=0.976 L483 cnt=1 : 在 $\varphi$ 眼里可以互相替换"
+   NEAR r=0.974 L483 cnt=1 : 在 $\varphi$ 眼里可以互相替
+   NEAR r=0.974 L483 cnt=1 :  $\varphi$ 眼里可以互相替换
+
+###### D241 D241-平面圆堆积的尖锐傅里叶证书反推笔记.md pairs=1
+ DECL_L145  verbatim_lines=[145]  verbatim_outside_decl=[]
+   Q(28): 就是这个解、离表格不超过 $3\cdot10^{-5}$
+   NEAR r=0.982 L145 cnt=1 : "就是这个解、离表格不超过 $3\cdot10^{-5}$
+   NEAR r=0.982 L145 cnt=1 : 就是这个解、离表格不超过 $3\cdot10^{-5}$"
+   NEAR r=0.982 L145 cnt=1 : 就是这个解、离表格不超过 $3\cdot10^{-5}
+   NEAR r=0.982 L145 cnt=1 : 是这个解、离表格不超过 $3\cdot10^{-5}$
+
+###### D243 D243-切层自由的奇点反例逆向复盘.md pairs=2
+ DECL_L376  verbatim_lines=[376]  verbatim_outside_decl=[]
+   Q(10): 方程与关系的乘积为零
+   NEAR r=0.952 L376 cnt=1 : "方程与关系的乘积为零
+   NEAR r=0.952 L376 cnt=1 : 方程与关系的乘积为零"
+   NEAR r=0.947 L376 cnt=1 : 方程与关系的乘积为
+   NEAR r=0.947 L376 cnt=1 : 程与关系的乘积为零
+ DECL_L600  verbatim_lines=[600]  verbatim_outside_decl=[]
+   Q(16): 最后一次追加 12,575 字节
+   NEAR r=0.970 L600 cnt=1 : "最后一次追加 12,575 字节
+   NEAR r=0.970 L600 cnt=1 : 最后一次追加 12,575 字节"
+   NEAR r=0.968 L600 cnt=1 : 最后一次追加 12,575 字
+   NEAR r=0.968 L600 cnt=1 : 后一次追加 12,575 字节
+
+###### D245 D245-高温SK谱隙论文的思维链反推.md pairs=4
+ DECL_L263  verbatim_lines=[263]  verbatim_outside_decl=[]
+   Q(11): 足够晚迭代处的局部凸性
+   NEAR r=0.957 L263 cnt=1 : "足够晚迭代处的局部凸性
+   NEAR r=0.957 L263 cnt=1 : 足够晚迭代处的局部凸性"
+   NEAR r=0.952 L263 cnt=1 : 足够晚迭代处的局部凸
+   NEAR r=0.952 L263 cnt=1 : 够晚迭代处的局部凸性
+ DECL_L263  verbatim_lines=[263]  verbatim_outside_decl=[]
+   Q(27): 残差小的整片区域内 Hessian 正定加流拓扑唯一性
+   NEAR r=0.982 L263 cnt=1 : "残差小的整片区域内 Hessian 正定加流拓扑唯一性
+   NEAR r=0.982 L263 cnt=1 : 残差小的整片区域内 Hessian 正定加流拓扑唯一性"
+   NEAR r=0.981 L263 cnt=1 : 残差小的整片区域内 Hessian 正定加流拓扑唯一
+   NEAR r=0.981 L263 cnt=1 : 差小的整片区域内 Hessian 正定加流拓扑唯一性
+ DECL_L356  verbatim_lines=[356]  verbatim_outside_decl=[]
+   Q(96): $\lvert\mathbb E GR_p^{\mathsf T}U\rvert\le C\norm G_*$ / 弱残差规则 / sections/residuals.tex:889-891
+   NEAR r=0.979 L331 cnt=1 : $\lvert\mathbb E GR_p^{\mathsf T}U\rvert\le C\norm G_*$ | 弱残差规则 | sections/residuals.tex:889-891
+   NEAR r=0.974 L331 cnt=1 :  $\lvert\mathbb E GR_p^{\mathsf T}U\rvert\le C\norm G_*$ | 弱残差规则 | sections/residuals.tex:889-891
+   NEAR r=0.974 L331 cnt=1 : $\lvert\mathbb E GR_p^{\mathsf T}U\rvert\le C\norm G_*$ | 弱残差规则 | sections/residuals.tex:889-891 
+   NEAR r=0.974 L331 cnt=1 : $\lvert\mathbb E GR_p^{\mathsf T}U\rvert\le C\norm G_*$ | 弱残差规则 | sections/residuals.tex:889-89
+ DECL_L356  verbatim_lines=[356]  verbatim_outside_decl=[]
+   Q(84): $\lvert S(x)\rvert\le\alpha n$ 对一切构型 $x$ 同时 / 小场集均匀性 / sections/terminal.tex:392-396
+   NEAR r=0.976 L340 cnt=1 : $\lvert S(x)\rvert\le\alpha n$ 对一切构型 $x$ 同时 | 小场集均匀性 | sections/terminal.tex:392-396
+   NEAR r=0.970 L340 cnt=1 :  $\lvert S(x)\rvert\le\alpha n$ 对一切构型 $x$ 同时 | 小场集均匀性 | sections/terminal.tex:392-396
+   NEAR r=0.970 L340 cnt=1 : $\lvert S(x)\rvert\le\alpha n$ 对一切构型 $x$ 同时 | 小场集均匀性 | sections/terminal.tex:392-396 
+   NEAR r=0.970 L340 cnt=1 : $\lvert S(x)\rvert\le\alpha n$ 对一切构型 $x$ 同时 | 小场集均匀性 | sections/terminal.tex:392-39
+
+###### D246 D246-四变量稳定坐标反例的逆向工程笔记.md pairs=3
+ DECL_L230  verbatim_lines=[230]  verbatim_outside_decl=[]
+   Q(15): $p$ 取 $0$ 与 $1$
+   NEAR r=0.903 L287 cnt=1 : $p$ 代值 $0$ 与 $1$
+   NEAR r=0.875 L287 cnt=1 :  $p$ 代值 $0$ 与 $1$
+   NEAR r=0.875 L287 cnt=1 : $p$ 代值 $0$ 与 $1$ 
+   NEAR r=0.867 L287 cnt=1 : $p$ 代值 $0$ 与 $1
+ DECL_L264  verbatim_lines=[242, 264]  verbatim_outside_decl=[242]
+   Q(16): 推导 $\Delta$ 杀掉分式
+   NEAR r=0.970 L264 cnt=1 : "推导 $\Delta$ 杀掉分式
+   NEAR r=0.970 L264 cnt=1 : 推导 $\Delta$ 杀掉分式"
+   NEAR r=0.968 L264 cnt=2 : 推导 $\Delta$ 杀掉分
+   NEAR r=0.968 L264 cnt=2 : 导 $\Delta$ 杀掉分式
+ DECL_L264  verbatim_lines=[250, 264]  verbatim_outside_decl=[250]
+   Q(12): $k[s,u,N]$ 型
+   NEAR r=0.960 L264 cnt=1 : "$k[s,u,N]$ 型
+   NEAR r=0.960 L264 cnt=1 : $k[s,u,N]$ 型"
+   NEAR r=0.957 L264 cnt=2 : $k[s,u,N]$ 
+   NEAR r=0.957 L264 cnt=2 : k[s,u,N]$ 型
+
+###### D247 D247-四行永久式的严格指数与Thorp洗牌置换矩.md pairs=4
+ DECL_L241  verbatim_lines=[37, 241]  verbatim_outside_decl=[37]
+   Q(15): 小正 $t$ 立即破坏不等式。
+   NEAR r=0.968 L241 cnt=1 : "小正 $t$ 立即破坏不等式。
+   NEAR r=0.968 L241 cnt=1 : 小正 $t$ 立即破坏不等式。"
+   NEAR r=0.966 L241 cnt=2 : 小正 $t$ 立即破坏不等式
+   NEAR r=0.966 L241 cnt=2 : 正 $t$ 立即破坏不等式。
+ DECL_L316  verbatim_lines=[189, 316]  verbatim_outside_decl=[189]
+   Q(44): 这一条流程教训我写进了 §24 的遗留清单：单调存在性假设应当在证明流水线里最后实例化。
+   NEAR r=0.989 L316 cnt=1 : "这一条流程教训我写进了 §24 的遗留清单：单调存在性假设应当在证明流水线里最后实例化。
+   NEAR r=0.989 L316 cnt=1 : 这一条流程教训我写进了 §24 的遗留清单：单调存在性假设应当在证明流水线里最后实例化。"
+   NEAR r=0.989 L316 cnt=2 : 这一条流程教训我写进了 §24 的遗留清单：单调存在性假设应当在证明流水线里最后实例化
+   NEAR r=0.989 L316 cnt=2 : 一条流程教训我写进了 §24 的遗留清单：单调存在性假设应当在证明流水线里最后实例化。
+ DECL_L318  verbatim_lines=[143, 318]  verbatim_outside_decl=[143]
+   Q(31): 右端只剩 $\sum_s\binom ks=2^k$ 型的东西
+   NEAR r=0.984 L318 cnt=1 : "右端只剩 $\sum_s\binom ks=2^k$ 型的东西
+   NEAR r=0.984 L318 cnt=1 : 右端只剩 $\sum_s\binom ks=2^k$ 型的东西"
+   NEAR r=0.984 L318 cnt=2 : 右端只剩 $\sum_s\binom ks=2^k$ 型的东
+   NEAR r=0.984 L318 cnt=2 : 端只剩 $\sum_s\binom ks=2^k$ 型的东西
+ DECL_L318  verbatim_lines=[193, 318]  verbatim_outside_decl=[193]
+   Q(13): $\S20$ 的一致度下界
+   NEAR r=0.963 L318 cnt=1 : "$\S20$ 的一致度下界
+   NEAR r=0.963 L318 cnt=1 : $\S20$ 的一致度下界"
+   NEAR r=0.960 L318 cnt=2 : $\S20$ 的一致度下
+   NEAR r=0.960 L318 cnt=2 : \S20$ 的一致度下界
+
+###### D248 D248-曲面反例如何杀死Shafarevich全纯凸性.md pairs=2
+ DECL_L822  verbatim_lines=[822]  verbatim_outside_decl=[]
+   Q(16): 本身（第 143 到 145 行
+   NEAR r=0.970 L822 cnt=1 : "本身（第 143 到 145 行
+   NEAR r=0.970 L822 cnt=1 : 本身（第 143 到 145 行"
+   NEAR r=0.968 L822 cnt=1 : 本身（第 143 到 145 
+   NEAR r=0.968 L822 cnt=1 : 身（第 143 到 145 行
+ DECL_L901  verbatim_lines=[901]  verbatim_outside_decl=[]
+   Q(10): ；其二，标记族首行的
+   NEAR r=0.952 L901 cnt=1 : "；其二，标记族首行的
+   NEAR r=0.952 L901 cnt=1 : ；其二，标记族首行的"
+   NEAR r=0.947 L901 cnt=1 : ；其二，标记族首行
+   NEAR r=0.947 L901 cnt=1 : 其二，标记族首行的
+
+###### D025 D25-Crouzeix完整不等式直接证明.md pairs=5
+ DECL_L674  verbatim_lines=[674]  verbatim_outside_decl=[]
+   Q(15): $s$ 作为从正频到负频的映射
+   NEAR r=0.968 L674 cnt=1 : "$s$ 作为从正频到负频的映射
+   NEAR r=0.968 L674 cnt=1 : $s$ 作为从正频到负频的映射"
+   NEAR r=0.966 L674 cnt=1 : $s$ 作为从正频到负频的映
+   NEAR r=0.966 L674 cnt=1 : s$ 作为从正频到负频的映射
+ DECL_L788  verbatim_lines=[788]  verbatim_outside_decl=[]
+   Q(38): 关于 $z$ 的多项式、系数是 $\lambda$ 的 Laurent 级数
+   NEAR r=0.987 L788 cnt=1 : "关于 $z$ 的多项式、系数是 $\lambda$ 的 Laurent 级数
+   NEAR r=0.987 L788 cnt=1 : 关于 $z$ 的多项式、系数是 $\lambda$ 的 Laurent 级数"
+   NEAR r=0.987 L788 cnt=1 : 关于 $z$ 的多项式、系数是 $\lambda$ 的 Laurent 级
+   NEAR r=0.987 L788 cnt=1 : 于 $z$ 的多项式、系数是 $\lambda$ 的 Laurent 级数
+ DECL_L1645  verbatim_lines=[1645]  verbatim_outside_decl=[]
+   Q(26): 重证 Toeplitz-Hausdorff 只要凸性
+   NEAR r=0.840 L198 cnt=1 :  Toeplitz–Hausdorff 凸性重证
+   NEAR r=0.830 L198 cnt=1 : 证明 = Toeplitz–Hausdorff 凸性重
+   NEAR r=0.824 L198 cnt=1 : = Toeplitz–Hausdorff 凸性重证
+   NEAR r=0.824 L198 cnt=1 :  Toeplitz–Hausdorff 凸性重证 
+ DECL_L2211  verbatim_lines=[2211]  verbatim_outside_decl=[]
+   Q(24): 正常 Mathlib 模块每百行 0 到 2 次
+   NEAR r=0.980 L2211 cnt=1 : "正常 Mathlib 模块每百行 0 到 2 次
+   NEAR r=0.980 L2211 cnt=1 : 正常 Mathlib 模块每百行 0 到 2 次"
+   NEAR r=0.979 L2211 cnt=1 : 正常 Mathlib 模块每百行 0 到 2 
+   NEAR r=0.979 L2211 cnt=1 : 常 Mathlib 模块每百行 0 到 2 次
+ DECL_L2772  verbatim_lines=[2772]  verbatim_outside_decl=[]
+   Q(14): 某个固定宽度环带内有碰撞点对
+   NEAR r=0.966 L2772 cnt=1 : "某个固定宽度环带内有碰撞点对
+   NEAR r=0.966 L2772 cnt=1 : 某个固定宽度环带内有碰撞点对"
+   NEAR r=0.963 L2772 cnt=1 : 某个固定宽度环带内有碰撞点
+   NEAR r=0.963 L2772 cnt=1 : 个固定宽度环带内有碰撞点对
+
+###### D250 D250-典型初态出发的低温SK热浴混合上界重建笔记.md pairs=2
+ DECL_L806  verbatim_lines=[718, 806]  verbatim_outside_decl=[718]
+   Q(12): 小节从 §0 到 §26
+   NEAR r=0.960 L718 cnt=1 : 。小节从 §0 到 §26
+   NEAR r=0.960 L718 cnt=1 : 小节从 §0 到 §26 
+   NEAR r=0.960 L806 cnt=1 : "小节从 §0 到 §26
+   NEAR r=0.960 L806 cnt=1 : 小节从 §0 到 §26"
+ DECL_L806  verbatim_lines=[806]  verbatim_outside_decl=[]
+   Q(10): 从 §0 到 §27
+   NEAR r=0.952 L806 cnt=1 : "从 §0 到 §27
+   NEAR r=0.952 L806 cnt=1 : 从 §0 到 §27"
+   NEAR r=0.947 L718 cnt=3 : 从 §0 到 §2
+   NEAR r=0.947 L806 cnt=3 : 从 §0 到 §2
+
+###### D251 D251-沿Lipschitz方向Hilbert变换的一致L2界.md pairs=1
+ DECL_L452  verbatim_lines=[17, 452]  verbatim_outside_decl=[17]
+   Q(11): 其他队列第 75 行号
+   NEAR r=0.952 L17 cnt=2 : 其他队列第 75 行
+   NEAR r=0.952 L17 cnt=2 : 他队列第 75 行号
+
+###### D252 D252-超图性质的一致影响量上界与阈值宽度猜想.md pairs=1
+ DECL_L325  verbatim_lines=[325]  verbatim_outside_decl=[]
+   Q(11): 位置栏 78 行可回落
+   NEAR r=0.957 L325 cnt=1 : "位置栏 78 行可回落
+   NEAR r=0.957 L325 cnt=1 : 位置栏 78 行可回落"
+   NEAR r=0.952 L325 cnt=1 : 位置栏 78 行可回
+   NEAR r=0.952 L325 cnt=1 : 置栏 78 行可回落
+
+###### D253 D253-阿贝尔覆盖Gale对应与Hodge猜想自幂-工作笔记.md pairs=2
+ DECL_L156  verbatim_lines=[156]  verbatim_outside_decl=[]
+   Q(12): 希腊字母连字符后接中文词
+   NEAR r=0.960 L156 cnt=1 : "希腊字母连字符后接中文词
+   NEAR r=0.960 L156 cnt=1 : 希腊字母连字符后接中文词"
+   NEAR r=0.957 L156 cnt=1 : 希腊字母连字符后接中文
+   NEAR r=0.957 L156 cnt=1 : 腊字母连字符后接中文词
+ DECL_L158  verbatim_lines=[158]  verbatim_outside_decl=[]
+   Q(20): 禁止删除、回滚、改写、重排任何已落盘内容
+   NEAR r=0.976 L158 cnt=1 : "禁止删除、回滚、改写、重排任何已落盘内容
+   NEAR r=0.976 L158 cnt=1 : 禁止删除、回滚、改写、重排任何已落盘内容"
+   NEAR r=0.974 L158 cnt=1 : 禁止删除、回滚、改写、重排任何已落盘内
+   NEAR r=0.974 L158 cnt=1 : 止删除、回滚、改写、重排任何已落盘内容
+
+###### D256 D256-正特征三维fold数值维一丰盈性的反推笔记.md pairs=2
+ DECL_L112  verbatim_lines=[112]  verbatim_outside_decl=[]
+   Q(10): 半ampleness
+   NEAR r=0.952 L112 cnt=1 : "半ampleness
+   NEAR r=0.952 L112 cnt=1 : 半ampleness"
+   NEAR r=0.947 L112 cnt=1 : 半amplenes
+   NEAR r=0.947 L112 cnt=1 : ampleness
+ DECL_L114  verbatim_lines=[66, 114]  verbatim_outside_decl=[66]
+   Q(20): 反证假设的全部力量恰好压缩进这五样东西。
+   NEAR r=0.976 L114 cnt=1 : "反证假设的全部力量恰好压缩进这五样东西。
+   NEAR r=0.976 L114 cnt=1 : 反证假设的全部力量恰好压缩进这五样东西。"
+   NEAR r=0.974 L114 cnt=2 : 反证假设的全部力量恰好压缩进这五样东西
+   NEAR r=0.974 L114 cnt=2 : 证假设的全部力量恰好压缩进这五样东西。
+
+###### D257 D257-一张Kuga-Satake张量换回全部次数.md pairs=2
+ DECL_L656  verbatim_lines=[656]  verbatim_outside_decl=[]
+   Q(18): 替换 $t=s+u^2$ 会杀死后者
+   NEAR r=0.973 L656 cnt=1 : "替换 $t=s+u^2$ 会杀死后者
+   NEAR r=0.973 L656 cnt=1 : 替换 $t=s+u^2$ 会杀死后者"
+   NEAR r=0.971 L656 cnt=1 : 替换 $t=s+u^2$ 会杀死后
+   NEAR r=0.971 L656 cnt=1 : 换 $t=s+u^2$ 会杀死后者
+ DECL_L875  verbatim_lines=[875]  verbatim_outside_decl=[]
+   Q(53): 在非平凡成分中，权 1 有效性只剩两个半自旋表示；用同空间计算与有理 Hodge-Hom 下降恢复指定张量
+   NEAR r=0.991 L875 cnt=1 : "在非平凡成分中，权 1 有效性只剩两个半自旋表示；用同空间计算与有理 Hodge-Hom 下降恢复指定张量
+   NEAR r=0.991 L875 cnt=1 : 在非平凡成分中，权 1 有效性只剩两个半自旋表示；用同空间计算与有理 Hodge-Hom 下降恢复指定张量"
+   NEAR r=0.990 L875 cnt=1 : 在非平凡成分中，权 1 有效性只剩两个半自旋表示；用同空间计算与有理 Hodge-Hom 下降恢复指定张
+   NEAR r=0.990 L875 cnt=1 : 非平凡成分中，权 1 有效性只剩两个半自旋表示；用同空间计算与有理 Hodge-Hom 下降恢复指定张量
+
+###### D259 D259-分裂Weil型八维簇上Weil类的代数性.md pairs=1
+ DECL_L998  verbatim_lines=[998]  verbatim_outside_decl=[]
+   Q(15): 改为、另作、此处换成、作者选择
+   NEAR r=0.968 L998 cnt=1 : "改为、另作、此处换成、作者选择
+   NEAR r=0.968 L998 cnt=1 : 改为、另作、此处换成、作者选择"
+   NEAR r=0.966 L998 cnt=1 : 改为、另作、此处换成、作者选
+   NEAR r=0.966 L998 cnt=1 : 为、另作、此处换成、作者选择
+
+###### D026 D26-加倍Hilbert子集无双Lipschitz有限维嵌入.md pairs=4
+ DECL_L703  verbatim_lines=[703]  verbatim_outside_decl=[]
+   Q(17): 每色一行一列加每色锚点 $p_i$
+   NEAR r=0.971 L703 cnt=1 : "每色一行一列加每色锚点 $p_i$
+   NEAR r=0.971 L703 cnt=1 : 每色一行一列加每色锚点 $p_i$"
+   NEAR r=0.970 L703 cnt=1 : 每色一行一列加每色锚点 $p_i
+   NEAR r=0.970 L703 cnt=1 : 色一行一列加每色锚点 $p_i$
+ DECL_L815  verbatim_lines=[815]  verbatim_outside_decl=[]
+   Q(16): 紧 + 任意无限维 Banach
+   NEAR r=0.875 L750 cnt=1 :  10 任意无限维 Banach
+   NEAR r=0.867 L750 cnt=1 :  任意无限维 Banach 
+   NEAR r=0.848 L750 cnt=1 : # 10 任意无限维 Banach
+   NEAR r=0.848 L750 cnt=1 :  10 任意无限维 Banach 
+ DECL_L1179  verbatim_lines=[378, 1179]  verbatim_outside_decl=[378]
+   Q(10): tex:204 原样
+   NEAR r=0.952 L378 cnt=1 : （tex:204 原样
+   NEAR r=0.952 L378 cnt=1 : tex:204 原样）
+   NEAR r=0.952 L1179 cnt=1 : "tex:204 原样
+   NEAR r=0.952 L1179 cnt=1 : tex:204 原样"
+ DECL_L1183  verbatim_lines=[1183]  verbatim_outside_decl=[]
+   Q(26): 半径 $t$ 球内中间层可用标签数（含零标签）的上界
+   NEAR r=0.981 L1183 cnt=1 : "半径 $t$ 球内中间层可用标签数（含零标签）的上界
+   NEAR r=0.981 L1183 cnt=1 : 半径 $t$ 球内中间层可用标签数（含零标签）的上界"
+   NEAR r=0.980 L1183 cnt=1 : 半径 $t$ 球内中间层可用标签数（含零标签）的上
+   NEAR r=0.980 L1183 cnt=1 : 径 $t$ 球内中间层可用标签数（含零标签）的上界
+
+###### D265 D265-ambient同胚与重数的分离.md pairs=1
+ DECL_L345  verbatim_lines=[345]  verbatim_outside_decl=[]
+   Q(20): 删到只剩 $896$ 列 $867$ 行
+   NEAR r=0.976 L345 cnt=1 : "删到只剩 $896$ 列 $867$ 行
+   NEAR r=0.976 L345 cnt=1 : 删到只剩 $896$ 列 $867$ 行"
+   NEAR r=0.974 L345 cnt=1 : 删到只剩 $896$ 列 $867$ 
+   NEAR r=0.974 L345 cnt=1 : 到只剩 $896$ 列 $867$ 行
+
+###### D266 D266-几乎线性编辑距离近似方案的反推.md pairs=2
+ DECL_L454  verbatim_lines=[383, 454]  verbatim_outside_decl=[383]
+   Q(22): 单元格内绝对值用 \lvert \rvert
+   NEAR r=0.978 L383 cnt=1 : ；单元格内绝对值用 \lvert \rvert
+   NEAR r=0.978 L383 cnt=1 : 单元格内绝对值用 \lvert \rvert；
+   NEAR r=0.977 L383 cnt=2 : 单元格内绝对值用 \lvert \rver
+   NEAR r=0.977 L383 cnt=2 : 元格内绝对值用 \lvert \rvert
+ DECL_L570  verbatim_lines=[570]  verbatim_outside_decl=[]
+   Q(12): 用参数把两次误差折成一次
+   NEAR r=0.960 L570 cnt=1 : "用参数把两次误差折成一次
+   NEAR r=0.960 L570 cnt=1 : 用参数把两次误差折成一次"
+   NEAR r=0.957 L570 cnt=1 : 用参数把两次误差折成一
+   NEAR r=0.957 L570 cnt=1 : 参数把两次误差折成一次
+
+###### D268 D268-单元格有界列联表FPRAS的反向推导笔记.md pairs=1
+ DECL_L940  verbatim_lines=[940]  verbatim_outside_decl=[]
+   Q(16): 下面的设定是 laminar 的
+   NEAR r=0.970 L940 cnt=1 : "下面的设定是 laminar 的
+   NEAR r=0.970 L940 cnt=1 : 下面的设定是 laminar 的"
+   NEAR r=0.968 L940 cnt=1 : 下面的设定是 laminar 
+   NEAR r=0.968 L940 cnt=1 : 面的设定是 laminar 的
+
+###### D270 D270-Gersten猜想整系数反例的构造逻辑.md pairs=1
+ DECL_L251  verbatim_lines=[149, 251]  verbatim_outside_decl=[149]
+   Q(85): `sections/geometry.tex:150`--`sections/specialization` 前的 `sections/geometry.tex:166`
+   NEAR r=0.994 L251 cnt=1 : "`sections/geometry.tex:150`--`sections/specialization` 前的 `sections/geometry.tex:166`
+   NEAR r=0.994 L251 cnt=1 : `sections/geometry.tex:150`--`sections/specialization` 前的 `sections/geometry.tex:166`"
+   NEAR r=0.994 L251 cnt=2 : `sections/geometry.tex:150`--`sections/specialization` 前的 `sections/geometry.tex:166
+   NEAR r=0.994 L251 cnt=2 : sections/geometry.tex:150`--`sections/specialization` 前的 `sections/geometry.tex:166`
+
+###### D272 D272-无理迹数投影的铸造路线.md pairs=1
+ DECL_L514  verbatim_lines=[498, 514]  verbatim_outside_decl=[498]
+   Q(19): 这一节是追加的勘误，按规格写在文件最末
+   NEAR r=0.974 L498 cnt=1 : 这一节是追加的勘误，按规格写在文件最末，
+   NEAR r=0.973 L498 cnt=2 : 这一节是追加的勘误，按规格写在文件最
+   NEAR r=0.973 L498 cnt=2 : 一节是追加的勘误，按规格写在文件最末
+   NEAR r=0.950 L498 cnt=1 : 这一节是追加的勘误，按规格写在文件最末，用
+
+###### D273 D273-二维O3自旋场的孤立粒子极点.md pairs=4
+ DECL_L177  verbatim_lines=[75, 177]  verbatim_outside_decl=[75]
+   Q(16): 伴生构造的命题 3.10 式契约
+   NEAR r=0.970 L75 cnt=1 : 自伴生构造的命题 3.10 式契约
+   NEAR r=0.970 L75 cnt=1 : 伴生构造的命题 3.10 式契约（
+   NEAR r=0.968 L75 cnt=2 : 伴生构造的命题 3.10 式契
+   NEAR r=0.968 L75 cnt=2 : 生构造的命题 3.10 式契约
+ DECL_L177  verbatim_lines=[55, 177]  verbatim_outside_decl=[55]
+   Q(10): $m_1=m$ 白拿
+   NEAR r=0.952 L55 cnt=1 : ：$m_1=m$ 白拿
+   NEAR r=0.947 L55 cnt=2 : $m_1=m$ 白
+   NEAR r=0.947 L55 cnt=2 : m_1=m$ 白拿
+   NEAR r=0.909 L55 cnt=1 : 幸：$m_1=m$ 白拿
+ DECL_L233  verbatim_lines=[171, 233]  verbatim_outside_decl=[171]
+   Q(16): 小节编号 §0 至 §15 连续
+   NEAR r=0.970 L233 cnt=1 : "小节编号 §0 至 §15 连续
+   NEAR r=0.970 L233 cnt=1 : 小节编号 §0 至 §15 连续"
+   NEAR r=0.968 L233 cnt=2 : 小节编号 §0 至 §15 连
+   NEAR r=0.968 L233 cnt=2 : 节编号 §0 至 §15 连续
+ DECL_L233  verbatim_lines=[233]  verbatim_outside_decl=[]
+   Q(15): §0 至 §16 连续、无跳号
+   NEAR r=0.968 L233 cnt=1 : "§0 至 §16 连续、无跳号
+   NEAR r=0.968 L233 cnt=1 : §0 至 §16 连续、无跳号"
+   NEAR r=0.966 L233 cnt=1 : §0 至 §16 连续、无跳
+   NEAR r=0.966 L233 cnt=1 : 0 至 §16 连续、无跳号
+
+###### D274 D274-非负曲率四维流形的L2-Einstein间隙.md pairs=1
+ DECL_L55  verbatim_lines=[55]  verbatim_outside_decl=[]
+   Q(36): $\operatorname{div} E=\tfrac14dR$ 给出
+   NEAR r=0.958 L51 cnt=1 : $\operatorname{div} E=\tfrac14 dR$ 
+   NEAR r=0.944 L51 cnt=1 :  $\operatorname{div} E=\tfrac14 dR$ 
+   NEAR r=0.944 L51 cnt=1 : $\operatorname{div} E=\tfrac14 dR$ 让
+   NEAR r=0.943 L51 cnt=1 : $\operatorname{div} E=\tfrac14 dR$
+
+###### D279 D279-用矩量定出SLE的精确Hausdorff规范函数.md pairs=2
+ DECL_L258  verbatim_lines=[258]  verbatim_outside_decl=[]
+   Q(166): older、差常数的界（第 219 到 221 行），第 222 到 223 行承认区域一致的界可以从 Rezaei--Zhan 2017 加 Koebe 推出，然后第 224 到 225 行说明本文另给直接乘积上鞅证明，每个点在自己命中后冻结。冻结这个词是本文独有的机制（multipoint 第 148 到 150 行），它换来
+   NEAR r=0.997 L258 cnt=1 : "older、差常数的界（第 219 到 221 行），第 222 到 223 行承认区域一致的界可以从 Rezaei--Zhan 2017 加 Koebe 推出，然后第 224 到 225 行说明本文另给直接乘积上鞅证明，每个点在自己命中后冻结。冻结这个词是本文独有的机制（multipoint 第 148 到 150 行），它换来
+   NEAR r=0.997 L258 cnt=1 : older、差常数的界（第 219 到 221 行），第 222 到 223 行承认区域一致的界可以从 Rezaei--Zhan 2017 加 Koebe 推出，然后第 224 到 225 行说明本文另给直接乘积上鞅证明，每个点在自己命中后冻结。冻结这个词是本文独有的机制（multipoint 第 148 到 150 行），它换来"
+   NEAR r=0.997 L258 cnt=1 : older、差常数的界（第 219 到 221 行），第 222 到 223 行承认区域一致的界可以从 Rezaei--Zhan 2017 加 Koebe 推出，然后第 224 到 225 行说明本文另给直接乘积上鞅证明，每个点在自己命中后冻结。冻结这个词是本文独有的机制（multipoint 第 148 到 150 行），它换
+   NEAR r=0.997 L258 cnt=1 : lder、差常数的界（第 219 到 221 行），第 222 到 223 行承认区域一致的界可以从 Rezaei--Zhan 2017 加 Koebe 推出，然后第 224 到 225 行说明本文另给直接乘积上鞅证明，每个点在自己命中后冻结。冻结这个词是本文独有的机制（multipoint 第 148 到 150 行），它换来
+ DECL_L262  verbatim_lines=[262]  verbatim_outside_decl=[]
+   Q(65): 矩量规定只对自己的规范证明精确性；一个 $\log\log$ 渐近、一个 Hausdorff 测度与自然参数化相认，它都没有主张。
+   NEAR r=0.992 L262 cnt=1 : "矩量规定只对自己的规范证明精确性；一个 $\log\log$ 渐近、一个 Hausdorff 测度与自然参数化相认，它都没有主张。
+   NEAR r=0.992 L262 cnt=1 : 矩量规定只对自己的规范证明精确性；一个 $\log\log$ 渐近、一个 Hausdorff 测度与自然参数化相认，它都没有主张。"
+   NEAR r=0.992 L262 cnt=1 : 矩量规定只对自己的规范证明精确性；一个 $\log\log$ 渐近、一个 Hausdorff 测度与自然参数化相认，它都没有主张
+   NEAR r=0.992 L262 cnt=1 : 量规定只对自己的规范证明精确性；一个 $\log\log$ 渐近、一个 Hausdorff 测度与自然参数化相认，它都没有主张。
+
+###### D280 D280-SLE精确豪斯多夫规范函数的双重对数修正.md pairs=3
+ DECL_L118  verbatim_lines=[118]  verbatim_outside_decl=[]
+   Q(12): 数字、出处、我复核的路径
+   NEAR r=0.960 L118 cnt=1 : "数字、出处、我复核的路径
+   NEAR r=0.960 L118 cnt=1 : 数字、出处、我复核的路径"
+   NEAR r=0.957 L118 cnt=1 : 数字、出处、我复核的路
+   NEAR r=0.957 L118 cnt=1 : 字、出处、我复核的路径
+ DECL_L162  verbatim_lines=[110, 162]  verbatim_outside_decl=[]
+   Q(15): 不可 sigma-finite
+   NEAR r=0.929 L184 cnt=5 :  sigma-finite
+   NEAR r=0.897 L184 cnt=1 : 非 sigma-finite
+   NEAR r=0.897 L184 cnt=2 :  sigma-finite 
+   NEAR r=0.867 L184 cnt=1 : 的非 sigma-finite
+ DECL_L298  verbatim_lines=[298]  verbatim_outside_decl=[]
+   Q(16): 不需要边界连续模，也不需要长度界
+   NEAR r=0.970 L298 cnt=1 : "不需要边界连续模，也不需要长度界
+   NEAR r=0.970 L298 cnt=1 : 不需要边界连续模，也不需要长度界"
+   NEAR r=0.968 L298 cnt=1 : 不需要边界连续模，也不需要长度
+   NEAR r=0.968 L298 cnt=1 : 需要边界连续模，也不需要长度界
+
+###### D281 D281-核范数超幂嵌入的显式障碍-dyadic群配置与前驱有限链.md pairs=3
+ DECL_L388  verbatim_lines=[7, 388]  verbatim_outside_decl=[7]
+   Q(59): references.bib 1998 行内的 1998 字节级别条目（实测 1998 字节以内，此处只作书目核对用）
+   NEAR r=0.992 L388 cnt=1 : "references.bib 1998 行内的 1998 字节级别条目（实测 1998 字节以内，此处只作书目核对用）
+   NEAR r=0.992 L388 cnt=1 : references.bib 1998 行内的 1998 字节级别条目（实测 1998 字节以内，此处只作书目核对用）"
+   NEAR r=0.991 L388 cnt=2 : references.bib 1998 行内的 1998 字节级别条目（实测 1998 字节以内，此处只作书目核对用
+   NEAR r=0.991 L388 cnt=2 : eferences.bib 1998 行内的 1998 字节级别条目（实测 1998 字节以内，此处只作书目核对用）
+ DECL_L394  verbatim_lines=[394]  verbatim_outside_decl=[]
+   Q(31): $V_{\pi_*}$ copies 的 Hilbert 直和
+   NEAR r=0.984 L394 cnt=1 : "$V_{\pi_*}$ copies 的 Hilbert 直和
+   NEAR r=0.984 L394 cnt=1 : $V_{\pi_*}$ copies 的 Hilbert 直和"
+   NEAR r=0.984 L394 cnt=1 : $V_{\pi_*}$ copies 的 Hilbert 直
+   NEAR r=0.984 L394 cnt=1 : V_{\pi_*}$ copies 的 Hilbert 直和
+ DECL_L394  verbatim_lines=[394]  verbatim_outside_decl=[]
+   Q(21): $V_{\pi_*}$ 的若干份拷贝的直和
+   NEAR r=0.977 L394 cnt=1 : "$V_{\pi_*}$ 的若干份拷贝的直和
+   NEAR r=0.977 L394 cnt=1 : $V_{\pi_*}$ 的若干份拷贝的直和"
+   NEAR r=0.976 L394 cnt=1 : $V_{\pi_*}$ 的若干份拷贝的直
+   NEAR r=0.976 L394 cnt=1 : V_{\pi_*}$ 的若干份拷贝的直和
+
+###### D283 D283-无限有限表示周期群构造手记.md pairs=1
+ DECL_L36  verbatim_lines=[36]  verbatim_outside_decl=[]
+   Q(15): 环上的 Steinberg 群
+   NEAR r=0.968 L36 cnt=1 : "环上的 Steinberg 群
+   NEAR r=0.968 L36 cnt=1 : 环上的 Steinberg 群"
+   NEAR r=0.966 L36 cnt=1 : 环上的 Steinberg 
+   NEAR r=0.966 L36 cnt=1 : 上的 Steinberg 群
+
+###### D284 D284-一个无限有限表示的残余有限二元群.md pairs=3
+ DECL_L109  verbatim_lines=[109]  verbatim_outside_decl=[]
+   Q(23): 截断到 $R/R_{\ge d}$ 之后看矩阵
+   NEAR r=0.979 L109 cnt=1 : "截断到 $R/R_{\ge d}$ 之后看矩阵
+   NEAR r=0.979 L109 cnt=1 : 截断到 $R/R_{\ge d}$ 之后看矩阵"
+   NEAR r=0.978 L109 cnt=1 : 截断到 $R/R_{\ge d}$ 之后看矩
+   NEAR r=0.978 L109 cnt=1 : 断到 $R/R_{\ge d}$ 之后看矩阵
+ DECL_L290  verbatim_lines=[290]  verbatim_outside_decl=[]
+   Q(14): 非零替换类里每个中间字都非零
+   NEAR r=0.966 L290 cnt=1 : "非零替换类里每个中间字都非零
+   NEAR r=0.966 L290 cnt=1 : 非零替换类里每个中间字都非零"
+   NEAR r=0.963 L290 cnt=1 : 非零替换类里每个中间字都非
+   NEAR r=0.963 L290 cnt=1 : 零替换类里每个中间字都非零
+ DECL_L903  verbatim_lines=[510, 903]  verbatim_outside_decl=[510]
+   Q(10): Fixes 两个因子
+   NEAR r=0.952 L510 cnt=1 :  Fixes 两个因子
+   NEAR r=0.952 L510 cnt=1 : Fixes 两个因子。
+   NEAR r=0.952 L903 cnt=1 : "Fixes 两个因子
+   NEAR r=0.952 L903 cnt=1 : Fixes 两个因子"
+
+###### D289 D289-反典范非零截面从光滑半正性出发.md pairs=1
+ DECL_L49  verbatim_lines=[49]  verbatim_outside_decl=[]
+   Q(11): 某个 $H^q$ 非零
+   NEAR r=0.952 L39 cnt=1 : 某 $H^q$ 非零
+   NEAR r=0.909 L39 cnt=1 : 而某 $H^q$ 非零
+   NEAR r=0.909 L39 cnt=1 : 某 $H^q$ 非零，
+   NEAR r=0.870 L39 cnt=1 : 从而某 $H^q$ 非零
+
+###### D029 D29-Borsuk覆盖断言九维反例.md pairs=2
+ DECL_L460  verbatim_lines=[460]  verbatim_outside_decl=[]
+   Q(15): full-support 取值
+   NEAR r=0.929 L456 cnt=11 : full-support 
+   NEAR r=0.929 L833 cnt=11 : full-support 
+   NEAR r=0.929 L835 cnt=11 : full-support 
+   NEAR r=0.897 L456 cnt=7 :  full-support 
+ DECL_L1090  verbatim_lines=[954, 1090]  verbatim_outside_decl=[954]
+   Q(10): 接第 862 行表头
+   NEAR r=0.952 L954 cnt=1 : （接第 862 行表头
+   NEAR r=0.952 L954 cnt=1 : 接第 862 行表头的
+   NEAR r=0.947 L954 cnt=2 : 接第 862 行表
+   NEAR r=0.947 L954 cnt=2 : 第 862 行表头
+
+###### D290 D290-任意MASA上的逼近铺砌：从混合多项式到无期望三段装配.md pairs=1
+ DECL_L7  verbatim_lines=[7]  verbatim_outside_decl=[]
+   Q(18): 每一个 MASA 都具备逼近铺砌性质
+   NEAR r=0.973 L7 cnt=1 : "每一个 MASA 都具备逼近铺砌性质
+   NEAR r=0.973 L7 cnt=1 : 每一个 MASA 都具备逼近铺砌性质"
+   NEAR r=0.971 L7 cnt=1 : 每一个 MASA 都具备逼近铺砌性
+   NEAR r=0.971 L7 cnt=1 : 一个 MASA 都具备逼近铺砌性质
+
+###### D292 D292-对数Calabi-Yau边界成分Stein度一致上界的反推笔记.md pairs=2
+ DECL_L162  verbatim_lines=[162]  verbatim_outside_decl=[]
+   Q(20): 这条自然路线确实会失败、且文本确实在防它
+   NEAR r=0.976 L162 cnt=1 : "这条自然路线确实会失败、且文本确实在防它
+   NEAR r=0.976 L162 cnt=1 : 这条自然路线确实会失败、且文本确实在防它"
+   NEAR r=0.974 L162 cnt=1 : 这条自然路线确实会失败、且文本确实在防
+   NEAR r=0.974 L162 cnt=1 : 条自然路线确实会失败、且文本确实在防它
+ DECL_L168  verbatim_lines=[168]  verbatim_outside_decl=[]
+   Q(20): 补全的截面可能只存在于 $\bar k$
+   NEAR r=0.976 L168 cnt=1 : "补全的截面可能只存在于 $\bar k$
+   NEAR r=0.976 L168 cnt=1 : 补全的截面可能只存在于 $\bar k$"
+   NEAR r=0.974 L168 cnt=1 : 补全的截面可能只存在于 $\bar k
+   NEAR r=0.974 L168 cnt=1 : 全的截面可能只存在于 $\bar k$
+
+###### D293 D293-伯努利卷积的算术分类与非Pisot奇异性.md pairs=1
+ DECL_L219  verbatim_lines=[219]  verbatim_outside_decl=[]
+   Q(20): 这套递推加这条公式不含任何选择与数值容差
+   NEAR r=0.976 L219 cnt=1 : "这套递推加这条公式不含任何选择与数值容差
+   NEAR r=0.976 L219 cnt=1 : 这套递推加这条公式不含任何选择与数值容差"
+   NEAR r=0.974 L219 cnt=1 : 这套递推加这条公式不含任何选择与数值容
+   NEAR r=0.974 L219 cnt=1 : 套递推加这条公式不含任何选择与数值容差
+
+###### D294 D294-局部域格扭致有限对应的算术穷尽性.md pairs=3
+ DECL_L139  verbatim_lines=[139]  verbatim_outside_decl=[]
+   Q(13): 两个边缘测度支撑之间有关系
+   NEAR r=0.963 L139 cnt=1 : "两个边缘测度支撑之间有关系
+   NEAR r=0.963 L139 cnt=1 : 两个边缘测度支撑之间有关系"
+   NEAR r=0.960 L139 cnt=1 : 两个边缘测度支撑之间有关
+   NEAR r=0.960 L139 cnt=1 : 个边缘测度支撑之间有关系
+ DECL_L306  verbatim_lines=[74, 306]  verbatim_outside_decl=[74]
+   Q(17): 与所有 $v_h$ 交换的额外算子
+   NEAR r=0.971 L74 cnt=1 : 何与所有 $v_h$ 交换的额外算子
+   NEAR r=0.971 L74 cnt=1 : 与所有 $v_h$ 交换的额外算子都
+   NEAR r=0.970 L74 cnt=2 : 与所有 $v_h$ 交换的额外算
+   NEAR r=0.970 L74 cnt=2 : 所有 $v_h$ 交换的额外算子
+ DECL_L348  verbatim_lines=[211, 348]  verbatim_outside_decl=[]
+   Q(13): 表本身未读，其内容不作依据
+   NEAR r=0.963 L348 cnt=1 : "表本身未读，其内容不作依据
+   NEAR r=0.963 L348 cnt=1 : 表本身未读，其内容不作依据"
+   NEAR r=0.960 L348 cnt=2 : 表本身未读，其内容不作依
+   NEAR r=0.960 L348 cnt=2 : 本身未读，其内容不作依据
+
+###### D296 D296-粗糙化阈端的高度普适性与低温平面自旋场极限.md pairs=1
+ DECL_L536  verbatim_lines=[536]  verbatim_outside_decl=[]
+   Q(12): 第一批收笔时它是最后一节
+   NEAR r=0.960 L536 cnt=1 : "第一批收笔时它是最后一节
+   NEAR r=0.960 L536 cnt=1 : 第一批收笔时它是最后一节"
+   NEAR r=0.957 L536 cnt=1 : 第一批收笔时它是最后一
+   NEAR r=0.957 L536 cnt=1 : 一批收笔时它是最后一节
+
+###### D300 D300-带基点行列式纤维上的虚拟局部化与Bloch猜想.md pairs=1
+ DECL_L313  verbatim_lines=[313]  verbatim_outside_decl=[]
+   Q(17): 探针行保留在 §4 与 §7 之间
+   NEAR r=0.833 L241 cnt=1 : 探针标记行保留在 §4 结尾与 §7 
+   NEAR r=0.833 L241 cnt=1 : 行保留在 §4 结尾与 §7 标题之间
+   NEAR r=0.811 L241 cnt=1 : 的探针标记行保留在 §4 结尾与 §7 
+   NEAR r=0.811 L241 cnt=1 : 探针标记行保留在 §4 结尾与 §7 标
+
+###### D307 D307-法诺收缩上有界klt补标的阈值反推.md pairs=1
+ DECL_L334  verbatim_lines=[334]  verbatim_outside_decl=[]
+   Q(30): 取 $U,I_0,J$ 与 $x$ 处最大理想的公共对数消解
+   NEAR r=0.984 L334 cnt=1 : "取 $U,I_0,J$ 与 $x$ 处最大理想的公共对数消解
+   NEAR r=0.984 L334 cnt=1 : 取 $U,I_0,J$ 与 $x$ 处最大理想的公共对数消解"
+   NEAR r=0.983 L334 cnt=1 : 取 $U,I_0,J$ 与 $x$ 处最大理想的公共对数消
+   NEAR r=0.983 L334 cnt=1 :  $U,I_0,J$ 与 $x$ 处最大理想的公共对数消解
+
+###### D308 D308-标量有界下的四维Ricci流光滑延拓.md pairs=2
+ DECL_L54  verbatim_lines=[54]  verbatim_outside_decl=[]
+   Q(67): 穿孔终邻域里 $l^{2}\lvert \operatorname{Rm} \rvert$ 沿趋于 puncture 一致趋于 $0$
+   NEAR r=0.832 L48 cnt=1 :  $l^{2}\lvert \operatorname{Rm} \rvert$ 也不行，它在趋于 puncture 的正则点上不一定趋于 $
+   NEAR r=0.832 L48 cnt=1 : $l^{2}\lvert \operatorname{Rm} \rvert$ 也不行，它在趋于 puncture 的正则点上不一定趋于 $0
+   NEAR r=0.832 L48 cnt=1 : l^{2}\lvert \operatorname{Rm} \rvert$ 也不行，它在趋于 puncture 的正则点上不一定趋于 $0$
+ DECL_L364  verbatim_lines=[297, 364]  verbatim_outside_decl=[297]
+   Q(10): 变为 $--1-k$
+   NEAR r=0.952 L364 cnt=1 : "变为 $--1-k$
+   NEAR r=0.952 L364 cnt=1 : 变为 $--1-k$"
+   NEAR r=0.947 L364 cnt=2 : 变为 $--1-k
+   NEAR r=0.947 L364 cnt=2 : 为 $--1-k$
+
+###### D309 D309-弱可逆质量作用系统有界性与持久性的构造链复盘.md pairs=1
+ DECL_L167  verbatim_lines=[167]  verbatim_outside_decl=[]
+   Q(11): 他们到底断言了什么区域
+   NEAR r=0.957 L167 cnt=1 : "他们到底断言了什么区域
+   NEAR r=0.957 L167 cnt=1 : 他们到底断言了什么区域"
+   NEAR r=0.952 L167 cnt=1 : 他们到底断言了什么区
+   NEAR r=0.952 L167 cnt=1 : 们到底断言了什么区域
+
+###### D031 D31-非谱形双曲锥.md pairs=2
+ DECL_L1125  verbatim_lines=[1125]  verbatim_outside_decl=[]
+   Q(11): 我试过什么、为什么不行
+   NEAR r=0.957 L1125 cnt=1 : "我试过什么、为什么不行
+   NEAR r=0.957 L1125 cnt=1 : 我试过什么、为什么不行"
+   NEAR r=0.952 L1125 cnt=1 : 我试过什么、为什么不
+   NEAR r=0.952 L1125 cnt=1 : 试过什么、为什么不行
+ DECL_L1207  verbatim_lines=[1207]  verbatim_outside_decl=[]
+   Q(13): 论文写法对 Lean 写法
+   NEAR r=0.889 L1167 cnt=1 : 论文写法 | Lean 写法
+   NEAR r=0.857 L1167 cnt=1 :  论文写法 | Lean 写法
+   NEAR r=0.857 L1167 cnt=1 : 论文写法 | Lean 写法 
+   NEAR r=0.828 L1167 cnt=1 : | 论文写法 | Lean 写法
+
+###### D310 D310-布朗连续随机树极限与四条以上有限FK图.md pairs=2
+ DECL_L335  verbatim_lines=[335]  verbatim_outside_decl=[]
+   Q(45): activity 求和我不引 Tutte 多项式的通用定理，这里必须诚实：我走的是删缩递推
+   NEAR r=0.989 L335 cnt=1 :  activity 求和我不引 Tutte 多项式的通用定理，这里必须诚实：我走的是删缩递推
+   NEAR r=0.989 L335 cnt=1 : activity 求和我不引 Tutte 多项式的通用定理，这里必须诚实：我走的是删缩递推"
+   NEAR r=0.989 L335 cnt=1 : activity 求和我不引 Tutte 多项式的通用定理，这里必须诚实：我走的是删缩递
+   NEAR r=0.989 L335 cnt=1 : ctivity 求和我不引 Tutte 多项式的通用定理，这里必须诚实：我走的是删缩递推
+ DECL_L337  verbatim_lines=[337]  verbatim_outside_decl=[]
+   Q(57): 相消得 $\mathbb E[K;\,J\le m]$，再乘 $2$；目标量并非 $\mathbb E[1+K]$
+   NEAR r=0.991 L337 cnt=1 : "相消得 $\mathbb E[K;\,J\le m]$，再乘 $2$；目标量并非 $\mathbb E[1+K]$
+   NEAR r=0.991 L337 cnt=1 : 相消得 $\mathbb E[K;\,J\le m]$，再乘 $2$；目标量并非 $\mathbb E[1+K]$"
+   NEAR r=0.991 L337 cnt=1 : 相消得 $\mathbb E[K;\,J\le m]$，再乘 $2$；目标量并非 $\mathbb E[1+K]
+   NEAR r=0.991 L337 cnt=1 : 消得 $\mathbb E[K;\,J\le m]$，再乘 $2$；目标量并非 $\mathbb E[1+K]$
+
+###### D314 D314-三角形弦的平均长度与真空盖选中的振幅.md pairs=2
+ DECL_L340  verbatim_lines=[340]  verbatim_outside_decl=[]
+   Q(18): 任一固定的次可乘且支配元素的矩阵范数
+   NEAR r=0.973 L340 cnt=1 : "任一固定的次可乘且支配元素的矩阵范数
+   NEAR r=0.973 L340 cnt=1 : 任一固定的次可乘且支配元素的矩阵范数"
+   NEAR r=0.971 L340 cnt=1 : 任一固定的次可乘且支配元素的矩阵范
+   NEAR r=0.971 L340 cnt=1 : 一固定的次可乘且支配元素的矩阵范数
+ DECL_L671  verbatim_lines=[625, 671]  verbatim_outside_decl=[625]
+   Q(15): 直径至少 $\delta R$
+   NEAR r=0.968 L625 cnt=1 : 、直径至少 $\delta R$
+   NEAR r=0.968 L625 cnt=1 : 直径至少 $\delta R$ 
+   NEAR r=0.966 L625 cnt=2 : 直径至少 $\delta R
+   NEAR r=0.966 L625 cnt=2 : 径至少 $\delta R$
+
+###### D032 D32-Tingley问题正解.md pairs=2
+ DECL_L26  verbatim_lines=[26]  verbatim_outside_decl=[]
+   Q(12): 跨半径距离恢复失败了多少
+   NEAR r=0.960 L26 cnt=1 : "跨半径距离恢复失败了多少
+   NEAR r=0.960 L26 cnt=1 : 跨半径距离恢复失败了多少"
+   NEAR r=0.957 L26 cnt=1 : 跨半径距离恢复失败了多
+   NEAR r=0.957 L26 cnt=1 : 半径距离恢复失败了多少
+ DECL_L904  verbatim_lines=[904]  verbatim_outside_decl=[]
+   Q(14): 谁离 $g(x)$ 近谁得权
+   NEAR r=0.966 L904 cnt=1 : "谁离 $g(x)$ 近谁得权
+   NEAR r=0.966 L904 cnt=1 : 谁离 $g(x)$ 近谁得权"
+   NEAR r=0.963 L904 cnt=1 : 谁离 $g(x)$ 近谁得
+   NEAR r=0.963 L904 cnt=1 : 离 $g(x)$ 近谁得权
+
+###### D321 D321-快速消失外力下一条粒子如何判定停机.md pairs=2
+ DECL_L183  verbatim_lines=[183]  verbatim_outside_decl=[]
+   Q(15): 力是有效 prescribed
+   NEAR r=0.968 L183 cnt=1 : "力是有效 prescribed
+   NEAR r=0.968 L183 cnt=1 : 力是有效 prescribed"
+   NEAR r=0.966 L183 cnt=1 : 力是有效 prescribe
+   NEAR r=0.966 L183 cnt=1 : 是有效 prescribed
+ DECL_L415  verbatim_lines=[415]  verbatim_outside_decl=[]
+   Q(10): 可以去掉竞争者梯度界
+   NEAR r=0.952 L415 cnt=1 : "可以去掉竞争者梯度界
+   NEAR r=0.952 L415 cnt=1 : 可以去掉竞争者梯度界"
+   NEAR r=0.947 L415 cnt=1 : 可以去掉竞争者梯度
+   NEAR r=0.947 L415 cnt=1 : 以去掉竞争者梯度界
+
+###### D323 D323-条件性极小模型：紧Kähler四维流形非消灭的整条反推路线.md pairs=1
+ DECL_L83  verbatim_lines=[83]  verbatim_outside_decl=[]
+   Q(11): 有没有带符号的规范标架
+   NEAR r=0.957 L83 cnt=1 : "有没有带符号的规范标架
+   NEAR r=0.957 L83 cnt=1 : 有没有带符号的规范标架"
+   NEAR r=0.952 L83 cnt=1 : 有没有带符号的规范标
+   NEAR r=0.952 L83 cnt=1 : 没有带符号的规范标架
+
+###### D324 D324-观测路径之后的条件信息收缩.md pairs=1
+ DECL_L38  verbatim_lines=[38]  verbatim_outside_decl=[]
+   Q(10): $p$ 个独立时间块
+   NEAR r=0.952 L38 cnt=1 : "$p$ 个独立时间块
+   NEAR r=0.952 L38 cnt=1 : $p$ 个独立时间块"
+   NEAR r=0.947 L38 cnt=1 : $p$ 个独立时间
+   NEAR r=0.947 L38 cnt=1 : p$ 个独立时间块
+
+###### D325 D325-条件置换与揭示切换环境中的全牌混合.md pairs=3
+ DECL_L59  verbatim_lines=[59, 63]  verbatim_outside_decl=[63]
+   Q(14): 均匀自由槽集合+独立均匀置换
+   NEAR r=0.966 L63 cnt=2 : "均匀自由槽集合+独立均匀置换
+   NEAR r=0.966 L63 cnt=2 : 均匀自由槽集合+独立均匀置换"
+   NEAR r=0.963 L63 cnt=2 : 均匀自由槽集合+独立均匀置
+   NEAR r=0.963 L63 cnt=2 : 匀自由槽集合+独立均匀置换
+ DECL_L61  verbatim_lines=[61]  verbatim_outside_decl=[]
+   Q(23): 至多 $L=n^{1-1/40}$ 个贫乏载波
+   NEAR r=0.979 L61 cnt=1 : "至多 $L=n^{1-1/40}$ 个贫乏载波
+   NEAR r=0.979 L61 cnt=1 : 至多 $L=n^{1-1/40}$ 个贫乏载波"
+   NEAR r=0.978 L61 cnt=1 : 至多 $L=n^{1-1/40}$ 个贫乏载
+   NEAR r=0.978 L61 cnt=1 : 多 $L=n^{1-1/40}$ 个贫乏载波
+ DECL_L607  verbatim_lines=[73, 607]  verbatim_outside_decl=[73]
+   Q(33): 这里 $u_{\rm c}$ 是 $u$ 在每个粗块内平均后的投影
+   NEAR r=0.985 L73 cnt=1 : 这里 $u_{\rm c}$ 是 $u$ 在每个粗块内平均后的投影，
+   NEAR r=0.985 L607 cnt=1 : "这里 $u_{\rm c}$ 是 $u$ 在每个粗块内平均后的投影
+   NEAR r=0.985 L607 cnt=1 : 这里 $u_{\rm c}$ 是 $u$ 在每个粗块内平均后的投影"
+   NEAR r=0.985 L73 cnt=2 : 这里 $u_{\rm c}$ 是 $u$ 在每个粗块内平均后的投
+
+###### D326 D326-方格随机簇临界界面共形极限的构思重建.md pairs=1
+ DECL_L151  verbatim_lines=[149, 151]  verbatim_outside_decl=[149]
+   Q(12): 两个测试辨认驱动与其括号
+   NEAR r=0.960 L149 cnt=1 : ，两个测试辨认驱动与其括号
+   NEAR r=0.960 L149 cnt=1 : 两个测试辨认驱动与其括号，
+   NEAR r=0.957 L149 cnt=2 : 两个测试辨认驱动与其括
+   NEAR r=0.957 L149 cnt=2 : 个测试辨认驱动与其括号
+
+###### D327 D327-共形流与带极小前界的黎曼彭罗斯不等式全维重构笔记.md pairs=2
+ DECL_L656  verbatim_lines=[656]  verbatim_outside_decl=[]
+   Q(25): 不需要在无穷远处做增长选取，也不需要极限截断水平。
+   NEAR r=0.980 L656 cnt=1 : "不需要在无穷远处做增长选取，也不需要极限截断水平。
+   NEAR r=0.980 L656 cnt=1 : 不需要在无穷远处做增长选取，也不需要极限截断水平。"
+   NEAR r=0.980 L656 cnt=1 : 不需要在无穷远处做增长选取，也不需要极限截断水平
+   NEAR r=0.980 L656 cnt=1 : 需要在无穷远处做增长选取，也不需要极限截断水平。
+ DECL_L1015  verbatim_lines=[168, 1015]  verbatim_outside_decl=[168]
+   Q(10): 这个代入我手算过两遍
+   NEAR r=0.952 L1015 cnt=1 : "这个代入我手算过两遍
+   NEAR r=0.952 L1015 cnt=1 : 这个代入我手算过两遍"
+   NEAR r=0.947 L1015 cnt=2 : 这个代入我手算过两
+   NEAR r=0.947 L1015 cnt=2 : 个代入我手算过两遍
+
+###### D328 D328-弱耦合体相Ising关联的共形普适性.md pairs=4
+ DECL_L50  verbatim_lines=[50]  verbatim_outside_decl=[]
+   Q(15): 任意有界 $F$ 的远距离效应
+   NEAR r=0.968 L50 cnt=1 : "任意有界 $F$ 的远距离效应
+   NEAR r=0.968 L50 cnt=1 : 任意有界 $F$ 的远距离效应"
+   NEAR r=0.966 L50 cnt=1 : 任意有界 $F$ 的远距离效
+   NEAR r=0.966 L50 cnt=1 : 意有界 $F$ 的远距离效应
+ DECL_L50  verbatim_lines=[50]  verbatim_outside_decl=[]
+   Q(14): 有限多个可控的局部自旋管指数
+   NEAR r=0.966 L50 cnt=1 : "有限多个可控的局部自旋管指数
+   NEAR r=0.966 L50 cnt=1 : 有限多个可控的局部自旋管指数"
+   NEAR r=0.963 L50 cnt=1 : 有限多个可控的局部自旋管指
+   NEAR r=0.963 L50 cnt=1 : 限多个可控的局部自旋管指数
+ DECL_L214  verbatim_lines=[214]  verbatim_outside_decl=[]
+   Q(17): 每个自旋翻转扇区里只剩一个主导成分
+   NEAR r=0.971 L214 cnt=1 : "每个自旋翻转扇区里只剩一个主导成分
+   NEAR r=0.971 L214 cnt=1 : 每个自旋翻转扇区里只剩一个主导成分"
+   NEAR r=0.970 L214 cnt=1 : 每个自旋翻转扇区里只剩一个主导成
+   NEAR r=0.970 L214 cnt=1 : 个自旋翻转扇区里只剩一个主导成分
+ DECL_L236  verbatim_lines=[236]  verbatim_outside_decl=[]
+   Q(22): 切割方块落在物理域内部时，条件核与平面核一致
+   NEAR r=0.957 L118 cnt=1 : 切割方块落在物理域内部时，它的条件核与平面核一致
+   NEAR r=0.936 L118 cnt=1 : 。切割方块落在物理域内部时，它的条件核与平面核一致
+   NEAR r=0.936 L118 cnt=1 : 切割方块落在物理域内部时，它的条件核与平面核一致；
+   NEAR r=0.933 L118 cnt=1 : 切割方块落在物理域内部时，它的条件核与平面核一
+
+###### D033 D33-每张图的线性圈与边分解.md pairs=2
+ DECL_L1203  verbatim_lines=[1203]  verbatim_outside_decl=[]
+   Q(21): $D_{\mathrm{sp}}$ 等于几
+   NEAR r=0.900 L377 cnt=11 :  $D_{\mathrm{sp}}$ 
+   NEAR r=0.900 L377 cnt=1 : $D_{\mathrm{sp}}$ a
+   NEAR r=0.878 L377 cnt=1 : s $D_{\mathrm{sp}}$ 
+   NEAR r=0.878 L377 cnt=1 :  $D_{\mathrm{sp}}$ a
+ DECL_L1247  verbatim_lines=[1247]  verbatim_outside_decl=[]
+   Q(13): 存在 $C_0$，可取 2
+   NEAR r=0.963 L1247 cnt=1 : "存在 $C_0$，可取 2
+   NEAR r=0.963 L1247 cnt=1 : 存在 $C_0$，可取 2"
+   NEAR r=0.960 L1247 cnt=2 : 存在 $C_0$，可取 
+   NEAR r=0.960 L1247 cnt=1 : 在 $C_0$，可取 2
+
+###### D330 D330-有向反馈点集常数因子难近度的重构笔记.md pairs=1
+ DECL_L124  verbatim_lines=[124]  verbatim_outside_decl=[]
+   Q(87): 枢轴量与偏置无关，这是 essentials 级的；逐尺度各配一份影响界，不足以把贡献加进同一个尾和；共用前缀在抽测试边之前固定所有点函数，否则坐标清单根本定义不出游戏标号。
+   NEAR r=0.994 L124 cnt=1 : "枢轴量与偏置无关，这是 essentials 级的；逐尺度各配一份影响界，不足以把贡献加进同一个尾和；共用前缀在抽测试边之前固定所有点函数，否则坐标清单根本定义不出游戏标号。
+   NEAR r=0.994 L124 cnt=1 : 枢轴量与偏置无关，这是 essentials 级的；逐尺度各配一份影响界，不足以把贡献加进同一个尾和；共用前缀在抽测试边之前固定所有点函数，否则坐标清单根本定义不出游戏标号。"
+   NEAR r=0.994 L124 cnt=1 : 枢轴量与偏置无关，这是 essentials 级的；逐尺度各配一份影响界，不足以把贡献加进同一个尾和；共用前缀在抽测试边之前固定所有点函数，否则坐标清单根本定义不出游戏标号
+   NEAR r=0.994 L124 cnt=1 : 轴量与偏置无关，这是 essentials 级的；逐尺度各配一份影响界，不足以把贡献加进同一个尾和；共用前缀在抽测试边之前固定所有点函数，否则坐标清单根本定义不出游戏标号。
+
+###### D332 D332-可构造tame-Hecke特征层的正特征构造反推笔记.md pairs=1
+ DECL_L814  verbatim_lines=[814]  verbatim_outside_decl=[]
+   Q(26): $p$ 可以坏、但 Chevalley 限制必须成立
+   NEAR r=0.981 L814 cnt=1 : "$p$ 可以坏、但 Chevalley 限制必须成立
+   NEAR r=0.981 L814 cnt=1 : $p$ 可以坏、但 Chevalley 限制必须成立"
+   NEAR r=0.980 L814 cnt=1 : $p$ 可以坏、但 Chevalley 限制必须成
+   NEAR r=0.980 L814 cnt=1 : p$ 可以坏、但 Chevalley 限制必须成立
+
+###### D335 D335-连续库仑谱下确界在二进制核电荷编码下的QMA难.md pairs=4
+ DECL_L90  verbatim_lines=[90]  verbatim_outside_decl=[]
+   Q(18): 理想 hopping 远小于 $f$
+   NEAR r=0.973 L90 cnt=1 : "理想 hopping 远小于 $f$
+   NEAR r=0.973 L90 cnt=1 : 理想 hopping 远小于 $f$"
+   NEAR r=0.971 L90 cnt=1 : 理想 hopping 远小于 $f
+   NEAR r=0.971 L90 cnt=1 : 想 hopping 远小于 $f$
+ DECL_L90  verbatim_lines=[90]  verbatim_outside_decl=[]
+   Q(14): 理想 hopping 恰为零
+   NEAR r=0.966 L90 cnt=1 : "理想 hopping 恰为零
+   NEAR r=0.966 L90 cnt=1 : 理想 hopping 恰为零"
+   NEAR r=0.963 L90 cnt=1 : 理想 hopping 恰为
+   NEAR r=0.963 L90 cnt=1 : 想 hopping 恰为零
+ DECL_L302  verbatim_lines=[138, 302]  verbatim_outside_decl=[]
+   Q(24): 每个节点配 $40$ 到 $O(D)$ 阶单项式
+   NEAR r=0.980 L302 cnt=1 : "每个节点配 $40$ 到 $O(D)$ 阶单项式
+   NEAR r=0.980 L302 cnt=1 : 每个节点配 $40$ 到 $O(D)$ 阶单项式"
+   NEAR r=0.979 L302 cnt=2 : 每个节点配 $40$ 到 $O(D)$ 阶单项
+   NEAR r=0.979 L302 cnt=2 : 个节点配 $40$ 到 $O(D)$ 阶单项式
+ DECL_L302  verbatim_lines=[302]  verbatim_outside_decl=[]
+   Q(43): 每个保留节点配阶不超过 $L_0$ 的单项式，$L_0$ 取 $D$ 的足够大固定倍数
+   NEAR r=0.989 L302 cnt=1 : "每个保留节点配阶不超过 $L_0$ 的单项式，$L_0$ 取 $D$ 的足够大固定倍数
+   NEAR r=0.989 L302 cnt=1 : 每个保留节点配阶不超过 $L_0$ 的单项式，$L_0$ 取 $D$ 的足够大固定倍数"
+   NEAR r=0.988 L302 cnt=1 : 每个保留节点配阶不超过 $L_0$ 的单项式，$L_0$ 取 $D$ 的足够大固定倍
+   NEAR r=0.988 L302 cnt=1 : 个保留节点配阶不超过 $L_0$ 的单项式，$L_0$ 取 $D$ 的足够大固定倍数
+
+###### D336 D336-团禁止图对应着色的对数增益复盘.md pairs=1
+ DECL_L9  verbatim_lines=[9]  verbatim_outside_decl=[]
+   Q(41): 一个人若从头做这项研究，他大概会先撞哪些墙、墙在哪、绕过去之后为什么是现在这个形状
+   NEAR r=0.988 L9 cnt=1 : "一个人若从头做这项研究，他大概会先撞哪些墙、墙在哪、绕过去之后为什么是现在这个形状
+   NEAR r=0.988 L9 cnt=1 : 一个人若从头做这项研究，他大概会先撞哪些墙、墙在哪、绕过去之后为什么是现在这个形状"
+   NEAR r=0.988 L9 cnt=1 : 一个人若从头做这项研究，他大概会先撞哪些墙、墙在哪、绕过去之后为什么是现在这个形
+   NEAR r=0.988 L9 cnt=1 : 个人若从头做这项研究，他大概会先撞哪些墙、墙在哪、绕过去之后为什么是现在这个形状
+
+###### D337 D337-高度二上Hahn--Wilson猜想的fp型反例.md pairs=1
+ DECL_L280  verbatim_lines=[280]  verbatim_outside_decl=[]
+   Q(50): 单个生成元 $\mathrm{BP}\langle2\rangle_p^\wedge$ 加普通厚闭包
+   NEAR r=0.990 L280 cnt=1 : "单个生成元 $\mathrm{BP}\langle2\rangle_p^\wedge$ 加普通厚闭包
+   NEAR r=0.990 L280 cnt=1 : 单个生成元 $\mathrm{BP}\langle2\rangle_p^\wedge$ 加普通厚闭包"
+   NEAR r=0.990 L280 cnt=1 : 单个生成元 $\mathrm{BP}\langle2\rangle_p^\wedge$ 加普通厚闭
+   NEAR r=0.990 L280 cnt=1 : 个生成元 $\mathrm{BP}\langle2\rangle_p^\wedge$ 加普通厚闭包
+
+###### D340 D340-临界蜂窝弦的定端点长度律与三种端点机制的反推笔记.md pairs=1
+ DECL_L701  verbatim_lines=[624, 701, 709]  verbatim_outside_decl=[709]
+   Q(20): 小节编号自始至终是 $0$ 到 $29$
+   NEAR r=0.976 L701 cnt=2 : "小节编号自始至终是 $0$ 到 $29$
+   NEAR r=0.976 L701 cnt=2 : 小节编号自始至终是 $0$ 到 $29$"
+   NEAR r=0.974 L701 cnt=3 : 小节编号自始至终是 $0$ 到 $29
+   NEAR r=0.974 L701 cnt=3 : 节编号自始至终是 $0$ 到 $29$
+
+###### D341 D341-三维波动方程临界局部平滑的熵论证.md pairs=1
+ DECL_L455  verbatim_lines=[455]  verbatim_outside_decl=[]
+   Q(13): 插入正自由间隙再用圆柱结论
+   NEAR r=0.963 L455 cnt=1 : "插入正自由间隙再用圆柱结论
+   NEAR r=0.963 L455 cnt=1 : 插入正自由间隙再用圆柱结论"
+   NEAR r=0.960 L455 cnt=1 : 插入正自由间隙再用圆柱结
+   NEAR r=0.960 L455 cnt=1 : 入正自由间隙再用圆柱结论
+
+###### D342 D342-临界SK模型单点热浴混合的多项式指数.md pairs=3
+ DECL_L113  verbatim_lines=[113]  verbatim_outside_decl=[]
+   Q(13): 猜一个指数、拟合一个自相关
+   NEAR r=0.963 L113 cnt=1 : "猜一个指数、拟合一个自相关
+   NEAR r=0.963 L113 cnt=1 : 猜一个指数、拟合一个自相关"
+   NEAR r=0.960 L113 cnt=1 : 猜一个指数、拟合一个自相
+   NEAR r=0.960 L113 cnt=1 : 一个指数、拟合一个自相关
+ DECL_L119  verbatim_lines=[119]  verbatim_outside_decl=[]
+   Q(26): 一条随机路径上的协方差估计并非所有倾斜下的稳定性定理
+   NEAR r=0.981 L47 cnt=1 : 一条随机路径上的协方差估计并非"所有倾斜下的稳定性定理
+   NEAR r=0.963 L47 cnt=1 : ：一条随机路径上的协方差估计并非"所有倾斜下的稳定性定理
+   NEAR r=0.963 L47 cnt=1 : 一条随机路径上的协方差估计并非"所有倾斜下的稳定性定理"
+   NEAR r=0.962 L47 cnt=1 : 一条随机路径上的协方差估计并非"所有倾斜下的稳定性定
+ DECL_L364  verbatim_lines=[364]  verbatim_outside_decl=[]
+   Q(20): 在固定 Frobenius 距离下做旋转
+   NEAR r=0.895 L294 cnt=1 : 固定 Frobenius 距离的旋转
+   NEAR r=0.872 L294 cnt=1 :  固定 Frobenius 距离的旋转
+   NEAR r=0.872 L294 cnt=1 : 固定 Frobenius 距离的旋转损
+   NEAR r=0.850 L294 cnt=1 : | 固定 Frobenius 距离的旋转
+
+###### D344 D344-从Cuntz比较到江苏吸收：条件C与中心缺陷填充的思维链还原.md pairs=1
+ DECL_L240  verbatim_lines=[12, 240]  verbatim_outside_decl=[12]
+   Q(12): 其他队列第 168 行号
+   NEAR r=0.957 L12 cnt=2 : 其他队列第 168 行
+   NEAR r=0.957 L12 cnt=2 : 他队列第 168 行号
+
+###### D345 D345-高温SK全区cutoff：从谱边到对数时标的反推笔记.md pairs=1
+ DECL_L321  verbatim_lines=[321]  verbatim_outside_decl=[]
+   Q(24): 零场全区 cutoff 加外场半区 cutoff
+   NEAR r=0.980 L321 cnt=1 : "零场全区 cutoff 加外场半区 cutoff
+   NEAR r=0.980 L321 cnt=1 : 零场全区 cutoff 加外场半区 cutoff"
+   NEAR r=0.979 L321 cnt=1 : 零场全区 cutoff 加外场半区 cutof
+   NEAR r=0.979 L321 cnt=1 : 场全区 cutoff 加外场半区 cutoff
+
+###### D347 D347-循环长度与色固定点损失.md pairs=1
+ DECL_L156  verbatim_lines=[156]  verbatim_outside_decl=[]
+   Q(25): 固定一个有限视图，让两个群在这个视图里长得一模一样
+   NEAR r=0.980 L156 cnt=1 : "固定一个有限视图，让两个群在这个视图里长得一模一样
+   NEAR r=0.980 L156 cnt=1 : 固定一个有限视图，让两个群在这个视图里长得一模一样"
+   NEAR r=0.980 L156 cnt=1 : 固定一个有限视图，让两个群在这个视图里长得一模一
+   NEAR r=0.980 L156 cnt=1 : 定一个有限视图，让两个群在这个视图里长得一模一样
+
+###### D035 D35-最短公共超串的多项式时间二近似.md pairs=1
+ DECL_L979  verbatim_lines=[979]  verbatim_outside_decl=[]
+   Q(10): 主机引理四情形派发表
+   NEAR r=0.952 L979 cnt=1 : "主机引理四情形派发表
+   NEAR r=0.952 L979 cnt=1 : 主机引理四情形派发表"
+   NEAR r=0.947 L979 cnt=1 : 主机引理四情形派发
+   NEAR r=0.947 L979 cnt=1 : 机引理四情形派发表
+
+###### D353 D353-素数域上多项式确定性因子分解的研究笔记.md pairs=4
+ DECL_L285  verbatim_lines=[285]  verbatim_outside_decl=[]
+   Q(34): 一个是行计数不能全等，一个是格元素不能多除一层 $\lambda$。
+   NEAR r=0.986 L285 cnt=1 : "一个是行计数不能全等，一个是格元素不能多除一层 $\lambda$。
+   NEAR r=0.986 L285 cnt=1 : 一个是行计数不能全等，一个是格元素不能多除一层 $\lambda$。"
+   NEAR r=0.985 L285 cnt=1 : 一个是行计数不能全等，一个是格元素不能多除一层 $\lambda$
+   NEAR r=0.985 L285 cnt=1 : 个是行计数不能全等，一个是格元素不能多除一层 $\lambda$。
+ DECL_L285  verbatim_lines=[73, 285]  verbatim_outside_decl=[73]
+   Q(15): §7 无穷格不可除性论证的暖身
+   NEAR r=0.968 L285 cnt=1 : "§7 无穷格不可除性论证的暖身
+   NEAR r=0.968 L285 cnt=1 : §7 无穷格不可除性论证的暖身"
+   NEAR r=0.966 L285 cnt=2 : §7 无穷格不可除性论证的暖
+   NEAR r=0.966 L285 cnt=2 : 7 无穷格不可除性论证的暖身
+ DECL_L287  verbatim_lines=[197, 287]  verbatim_outside_decl=[197]
+   Q(53): 这和我最初设想的带回溯的搜索式算法完全不同，回溯式实现要在乘法表里存分支状态，复杂度分析会立刻失去单调性。
+   NEAR r=0.991 L287 cnt=1 : "这和我最初设想的带回溯的搜索式算法完全不同，回溯式实现要在乘法表里存分支状态，复杂度分析会立刻失去单调性。
+   NEAR r=0.991 L287 cnt=1 : 这和我最初设想的带回溯的搜索式算法完全不同，回溯式实现要在乘法表里存分支状态，复杂度分析会立刻失去单调性。"
+   NEAR r=0.990 L287 cnt=2 : 这和我最初设想的带回溯的搜索式算法完全不同，回溯式实现要在乘法表里存分支状态，复杂度分析会立刻失去单调性
+   NEAR r=0.990 L287 cnt=2 : 和我最初设想的带回溯的搜索式算法完全不同，回溯式实现要在乘法表里存分支状态，复杂度分析会立刻失去单调性。
+ DECL_L289  verbatim_lines=[289]  verbatim_outside_decl=[]
+   Q(16): 这和我最初设想……属于另一篇论文
+   NEAR r=0.970 L289 cnt=1 : "这和我最初设想……属于另一篇论文
+   NEAR r=0.970 L289 cnt=1 : 这和我最初设想……属于另一篇论文"
+   NEAR r=0.968 L289 cnt=1 : 这和我最初设想……属于另一篇论
+   NEAR r=0.968 L289 cnt=1 : 和我最初设想……属于另一篇论文
+
+###### D356 D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md pairs=1
+ DECL_L987  verbatim_lines=[28, 845, 987]  verbatim_outside_decl=[28, 845]
+   Q(12): 其他队列第 180 行号
+   NEAR r=0.960 L28 cnt=1 : ：其他队列第 180 行号
+   NEAR r=0.960 L845 cnt=1 : "其他队列第 180 行号
+   NEAR r=0.960 L845 cnt=1 : 其他队列第 180 行号"
+   NEAR r=0.960 L987 cnt=1 : 「其他队列第 180 行号
+
+###### D357 D357-盘转移表示与受限桥质量.md pairs=1
+ DECL_L354  verbatim_lines=[354]  verbatim_outside_decl=[]
+   Q(11): 见 §13 与 §16
+   NEAR r=0.957 L354 cnt=1 : "见 §13 与 §16
+   NEAR r=0.957 L354 cnt=1 : 见 §13 与 §16"
+   NEAR r=0.952 L354 cnt=1 : 见 §13 与 §1
+   NEAR r=0.952 L354 cnt=1 :  §13 与 §16
+
+###### D358 D358-Donovan猜想在素域代数闭包上的证明.md pairs=2
+ DECL_L154  verbatim_lines=[117, 154]  verbatim_outside_decl=[117]
+   Q(12): GENERIC 代数可分
+   NEAR r=0.960 L154 cnt=1 : "GENERIC 代数可分
+   NEAR r=0.960 L154 cnt=1 : GENERIC 代数可分"
+   NEAR r=0.957 L154 cnt=2 : GENERIC 代数可
+   NEAR r=0.957 L154 cnt=2 : ENERIC 代数可分
+ DECL_L154  verbatim_lines=[154]  verbatim_outside_decl=[]
+   Q(12): generic 代数可分
+   NEAR r=0.960 L154 cnt=1 : "generic 代数可分
+   NEAR r=0.960 L154 cnt=1 : generic 代数可分"
+   NEAR r=0.957 L154 cnt=1 : generic 代数可
+   NEAR r=0.957 L154 cnt=1 : eneric 代数可分
+
+###### D359 D359-把单位代价编辑距离压进l1：指数内常数外的匹配夹逼.md pairs=1
+ DECL_L410  verbatim_lines=[410]  verbatim_outside_decl=[]
+   Q(12): 一个未匹配位对应一次编辑
+   NEAR r=0.960 L410 cnt=1 : "一个未匹配位对应一次编辑
+   NEAR r=0.960 L410 cnt=1 : 一个未匹配位对应一次编辑"
+   NEAR r=0.957 L410 cnt=1 : 一个未匹配位对应一次编
+   NEAR r=0.957 L410 cnt=1 : 个未匹配位对应一次编辑
+
+###### D360 D360-电磁尾迹与Kerr-Newman-Penrose不等式反例构造笔记.md pairs=1
+ DECL_L354  verbatim_lines=[354]  verbatim_outside_decl=[]
+   Q(17): 同一个常数 $C$ 控制两端边界球
+   NEAR r=0.971 L354 cnt=1 : "同一个常数 $C$ 控制两端边界球
+   NEAR r=0.971 L354 cnt=1 : 同一个常数 $C$ 控制两端边界球"
+   NEAR r=0.970 L354 cnt=1 : 同一个常数 $C$ 控制两端边界
+   NEAR r=0.970 L354 cnt=1 : 一个常数 $C$ 控制两端边界球
+
+###### D362 D362-椭圆平方点有限性与A_2曲线Zilber-Pink.md pairs=1
+ DECL_L461  verbatim_lines=[457, 461]  verbatim_outside_decl=[457]
+   Q(15): 全文没有写出任何被禁字符串本身
+   NEAR r=0.968 L457 cnt=1 : ，全文没有写出任何被禁字符串本身
+   NEAR r=0.968 L457 cnt=1 : 全文没有写出任何被禁字符串本身；
+   NEAR r=0.966 L457 cnt=2 : 全文没有写出任何被禁字符串本
+   NEAR r=0.966 L457 cnt=2 : 文没有写出任何被禁字符串本身
+
+###### D363 D363-椭圆容量传播与球面Fourier限制猜想的完整开范围.md pairs=2
+ DECL_L132  verbatim_lines=[132]  verbatim_outside_decl=[]
+   Q(21): 相对原律做一切截断，绝对常数不在限制中累积
+   NEAR r=0.977 L132 cnt=1 : "相对原律做一切截断，绝对常数不在限制中累积
+   NEAR r=0.977 L132 cnt=1 : 相对原律做一切截断，绝对常数不在限制中累积"
+   NEAR r=0.976 L132 cnt=1 : 相对原律做一切截断，绝对常数不在限制中累
+   NEAR r=0.976 L132 cnt=1 : 对原律做一切截断，绝对常数不在限制中累积
+ DECL_L463  verbatim_lines=[463]  verbatim_outside_decl=[]
+   Q(22): 一切截断都相对原律做、绝对常数不在限制中累积
+   NEAR r=0.978 L463 cnt=1 : "一切截断都相对原律做、绝对常数不在限制中累积
+   NEAR r=0.978 L463 cnt=1 : 一切截断都相对原律做、绝对常数不在限制中累积"
+   NEAR r=0.977 L463 cnt=1 : 一切截断都相对原律做、绝对常数不在限制中累
+   NEAR r=0.977 L463 cnt=1 : 切截断都相对原律做、绝对常数不在限制中累积
+
+###### D365 D365-端点逐点收敛：高维薛定谔方程的等号情形.md pairs=1
+ DECL_L405  verbatim_lines=[405]  verbatim_outside_decl=[]
+   Q(12): 端点能否靠对数改进蒙过去
+   NEAR r=0.960 L405 cnt=1 : "端点能否靠对数改进蒙过去
+   NEAR r=0.960 L405 cnt=1 : 端点能否靠对数改进蒙过去"
+   NEAR r=0.957 L405 cnt=1 : 端点能否靠对数改进蒙过
+   NEAR r=0.957 L405 cnt=1 : 点能否靠对数改进蒙过去
+
+###### D366 D366-局部维度十的零密钥纠缠态：一条反向推演的记录.md pairs=1
+ DECL_L275  verbatim_lines=[275]  verbatim_outside_decl=[]
+   Q(11): 要证什么就得有什么形状
+   NEAR r=0.957 L275 cnt=1 : "要证什么就得有什么形状
+   NEAR r=0.957 L275 cnt=1 : 要证什么就得有什么形状"
+   NEAR r=0.952 L275 cnt=1 : 要证什么就得有什么形
+   NEAR r=0.952 L275 cnt=1 : 证什么就得有什么形状
+
+###### D367 D367-负曲率熵等式与局部对称性.md pairs=1
+ DECL_L186  verbatim_lines=[186, 312]  verbatim_outside_decl=[312]
+   Q(14): 有限 isotypic 选择
+   NEAR r=0.966 L312 cnt=1 :  有限 isotypic 选择
+   NEAR r=0.966 L312 cnt=1 : 有限 isotypic 选择 
+   NEAR r=0.963 L312 cnt=2 : 有限 isotypic 选
+   NEAR r=0.963 L312 cnt=2 : 限 isotypic 选择
+
+###### D368 D368-时空Penrose不等式的等号与刚性.md pairs=6
+ DECL_L113  verbatim_lines=[113]  verbatim_outside_decl=[]
+   Q(32): 把原始度量和 $K$ 都恢复为 Schwarzschild 切片
+   NEAR r=0.985 L113 cnt=1 : 「把原始度量和 $K$ 都恢复为 Schwarzschild 切片
+   NEAR r=0.985 L113 cnt=1 : 把原始度量和 $K$ 都恢复为 Schwarzschild 切片」
+   NEAR r=0.984 L113 cnt=1 : 把原始度量和 $K$ 都恢复为 Schwarzschild 切
+   NEAR r=0.984 L113 cnt=1 : 原始度量和 $K$ 都恢复为 Schwarzschild 切片
+ DECL_L245  verbatim_lines=[245]  verbatim_outside_decl=[]
+   Q(19): 保留部分 $S_i$、内部分量替换其余
+   NEAR r=0.974 L245 cnt=1 : 「保留部分 $S_i$、内部分量替换其余
+   NEAR r=0.974 L245 cnt=1 : 保留部分 $S_i$、内部分量替换其余」
+   NEAR r=0.973 L245 cnt=1 : 保留部分 $S_i$、内部分量替换其
+   NEAR r=0.973 L245 cnt=1 : 留部分 $S_i$、内部分量替换其余
+ DECL_L696  verbatim_lines=[696]  verbatim_outside_decl=[]
+   Q(18): 保留部分原始分量、替换其余为内部分量
+   NEAR r=0.973 L696 cnt=1 : 「保留部分原始分量、替换其余为内部分量
+   NEAR r=0.973 L696 cnt=1 : 保留部分原始分量、替换其余为内部分量」
+   NEAR r=0.971 L696 cnt=1 : 保留部分原始分量、替换其余为内部分
+   NEAR r=0.971 L696 cnt=1 : 留部分原始分量、替换其余为内部分量
+ DECL_L958  verbatim_lines=[958]  verbatim_outside_decl=[]
+   Q(13): 改正的截断有一阶导数任意小
+   NEAR r=0.963 L958 cnt=1 : 「改正的截断有一阶导数任意小
+   NEAR r=0.963 L958 cnt=1 : 改正的截断有一阶导数任意小」
+   NEAR r=0.960 L958 cnt=1 : 改正的截断有一阶导数任意
+   NEAR r=0.960 L958 cnt=1 : 正的截断有一阶导数任意小
+ DECL_L1098  verbatim_lines=[1098]  verbatim_outside_decl=[]
+   Q(11): $u$ 倍第二基本形式
+   NEAR r=0.957 L1098 cnt=1 : 「$u$ 倍第二基本形式
+   NEAR r=0.957 L1098 cnt=1 : $u$ 倍第二基本形式」
+   NEAR r=0.952 L1098 cnt=1 : $u$ 倍第二基本形
+   NEAR r=0.952 L1098 cnt=1 : u$ 倍第二基本形式
+ DECL_L1487  verbatim_lines=[1487]  verbatim_outside_decl=[]
+   Q(11): 所有极小元落在同一紧集
+   NEAR r=0.957 L1487 cnt=1 : 「所有极小元落在同一紧集
+   NEAR r=0.957 L1487 cnt=1 : 所有极小元落在同一紧集」
+   NEAR r=0.952 L1487 cnt=1 : 所有极小元落在同一紧
+   NEAR r=0.952 L1487 cnt=1 : 有极小元落在同一紧集
+
+###### D037 D37-Seymour第二邻域猜想证明.md pairs=1
+ DECL_L1222  verbatim_lines=[1222]  verbatim_outside_decl=[]
+   Q(31): $(s,s)\in P$ 给出 $(v,s)\in F_1P$
+   NEAR r=0.892 L1213 cnt=1 : $(s,s)\in P$ gives $(v,s)\in F_1P$
+   NEAR r=0.875 L1213 cnt=1 : $(s,s)\in P$ gives $(v,s)\in F_1P
+   NEAR r=0.875 L1213 cnt=1 : (s,s)\in P$ gives $(v,s)\in F_1P$
+   NEAR r=0.862 L1213 cnt=1 :  $(s,s)\in P$ gives $(v,s)\in F_1P
+
+###### D370 D370-素数次数环面包在任意局部型下的等分布.md pairs=1
+ DECL_L293  verbatim_lines=[293]  verbatim_outside_decl=[]
+   Q(17): 任意局部型是有限 idele 轨道
+   NEAR r=0.971 L293 cnt=1 : "任意局部型是有限 idele 轨道
+   NEAR r=0.971 L293 cnt=1 : 任意局部型是有限 idele 轨道"
+   NEAR r=0.970 L293 cnt=1 : 任意局部型是有限 idele 轨
+   NEAR r=0.970 L293 cnt=1 : 意局部型是有限 idele 轨道
+
+###### D372 D372-原始六次环面包的一等分布.md pairs=2
+ DECL_L174  verbatim_lines=[159, 174, 230]  verbatim_outside_decl=[159]
+   Q(35): 取凸组合 $\lambda_i\in[1/3,2,3]$ 的解使零均值
+   NEAR r=0.986 L230 cnt=2 : "取凸组合 $\lambda_i\in[1/3,2,3]$ 的解使零均值
+   NEAR r=0.986 L230 cnt=2 : 取凸组合 $\lambda_i\in[1/3,2,3]$ 的解使零均值"
+   NEAR r=0.986 L230 cnt=3 : 取凸组合 $\lambda_i\in[1/3,2,3]$ 的解使零均
+   NEAR r=0.986 L230 cnt=3 : 凸组合 $\lambda_i\in[1/3,2,3]$ 的解使零均值
+ DECL_L174  verbatim_lines=[126, 174, 232]  verbatim_outside_decl=[126, 232]
+   Q(12): continuity 集
+   NEAR r=0.960 L232 cnt=2 : "continuity 集
+   NEAR r=0.960 L232 cnt=2 : continuity 集"
+   NEAR r=0.957 L232 cnt=4 : continuity 
+   NEAR r=0.957 L232 cnt=4 : ontinuity 集
+
+###### D373 D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md pairs=6
+ DECL_L269  verbatim_lines=[269]  verbatim_outside_decl=[]
+   Q(22): 对 $(N_j,\varphi_j)$ 一起
+   NEAR r=0.978 L269 cnt=1 : "对 $(N_j,\varphi_j)$ 一起
+   NEAR r=0.978 L269 cnt=1 : 对 $(N_j,\varphi_j)$ 一起"
+   NEAR r=0.977 L269 cnt=1 : 对 $(N_j,\varphi_j)$ 一
+   NEAR r=0.977 L269 cnt=1 :  $(N_j,\varphi_j)$ 一起
+ DECL_L293  verbatim_lines=[293]  verbatim_outside_decl=[]
+   Q(12): 这是在当前迹下逐行中心化
+   NEAR r=0.960 L293 cnt=1 : "这是在当前迹下逐行中心化
+   NEAR r=0.960 L293 cnt=1 : 这是在当前迹下逐行中心化"
+   NEAR r=0.957 L293 cnt=1 : 这是在当前迹下逐行中心
+   NEAR r=0.957 L293 cnt=1 : 是在当前迹下逐行中心化
+ DECL_L427  verbatim_lines=[427]  verbatim_outside_decl=[]
+   Q(12): 在 $C$ 里用同一配方
+   NEAR r=0.960 L427 cnt=1 : "在 $C$ 里用同一配方
+   NEAR r=0.960 L427 cnt=1 : 在 $C$ 里用同一配方"
+   NEAR r=0.957 L427 cnt=1 : 在 $C$ 里用同一配
+   NEAR r=0.957 L427 cnt=1 :  $C$ 里用同一配方
+ DECL_L517  verbatim_lines=[517]  verbatim_outside_decl=[]
+   Q(40): 对 $\operatorname{T}(C)$ 用网 + 逐点收敛 + 一致连续
+   NEAR r=0.988 L517 cnt=1 : "对 $\operatorname{T}(C)$ 用网 + 逐点收敛 + 一致连续
+   NEAR r=0.988 L517 cnt=1 : 对 $\operatorname{T}(C)$ 用网 + 逐点收敛 + 一致连续"
+   NEAR r=0.987 L517 cnt=1 : 对 $\operatorname{T}(C)$ 用网 + 逐点收敛 + 一致连
+   NEAR r=0.987 L517 cnt=1 :  $\operatorname{T}(C)$ 用网 + 逐点收敛 + 一致连续
+ DECL_L565  verbatim_lines=[565]  verbatim_outside_decl=[]
+   Q(19): 每个测试取到 sup 的迹可以各各不同
+   NEAR r=0.974 L565 cnt=1 : "每个测试取到 sup 的迹可以各各不同
+   NEAR r=0.974 L565 cnt=1 : 每个测试取到 sup 的迹可以各各不同"
+   NEAR r=0.973 L565 cnt=1 : 每个测试取到 sup 的迹可以各各不
+   NEAR r=0.973 L565 cnt=1 : 个测试取到 sup 的迹可以各各不同
+ DECL_L703  verbatim_lines=[664, 703]  verbatim_outside_decl=[664]
+   Q(28): $B$ 的 multiplier 代数就是 $B$ 自己
+   NEAR r=0.982 L664 cnt=1 :  $B$ 的 multiplier 代数就是 $B$ 自己
+   NEAR r=0.982 L664 cnt=1 : $B$ 的 multiplier 代数就是 $B$ 自己；
+   NEAR r=0.982 L703 cnt=1 : "$B$ 的 multiplier 代数就是 $B$ 自己
+   NEAR r=0.982 L703 cnt=1 : $B$ 的 multiplier 代数就是 $B$ 自己"
+
+###### D374 D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md pairs=2
+ DECL_L270  verbatim_lines=[270]  verbatim_outside_decl=[]
+   Q(18): 这个顺序本身就是论文最深的设计声明。
+   NEAR r=0.973 L270 cnt=1 : "这个顺序本身就是论文最深的设计声明。
+   NEAR r=0.973 L270 cnt=1 : 这个顺序本身就是论文最深的设计声明。"
+   NEAR r=0.971 L209 cnt=1 : 这个顺序本身是论文最深的设计声明。
+   NEAR r=0.971 L270 cnt=2 : 这个顺序本身就是论文最深的设计声明
+ DECL_L270  verbatim_lines=[270]  verbatim_outside_decl=[]
+   Q(15): 这本身是论文最深的的设计声明。
+   NEAR r=0.968 L270 cnt=1 : "这本身是论文最深的的设计声明。
+   NEAR r=0.968 L270 cnt=1 : 这本身是论文最深的的设计声明。"
+   NEAR r=0.966 L270 cnt=1 : 这本身是论文最深的的设计声明
+   NEAR r=0.966 L270 cnt=1 : 本身是论文最深的的设计声明。
+
+###### D377 D377-抽象初等类的最终范畴性谱.md pairs=7
+ DECL_L271  verbatim_lines=[271]  verbatim_outside_decl=[]
+   Q(38): `mark:pair-isomorphism` 收尾……得到所有 $P_s$
+   NEAR r=0.987 L271 cnt=1 : "`mark:pair-isomorphism` 收尾……得到所有 $P_s$
+   NEAR r=0.987 L271 cnt=1 : `mark:pair-isomorphism` 收尾……得到所有 $P_s$"
+   NEAR r=0.987 L271 cnt=1 : `mark:pair-isomorphism` 收尾……得到所有 $P_s
+   NEAR r=0.987 L271 cnt=1 : mark:pair-isomorphism` 收尾……得到所有 $P_s$
+ DECL_L272  verbatim_lines=[269, 272]  verbatim_outside_decl=[269]
+   Q(13): 全部留在这儿，偷偷改我不干
+   NEAR r=0.963 L272 cnt=1 : "全部留在这儿，偷偷改我不干
+   NEAR r=0.963 L272 cnt=1 : 全部留在这儿，偷偷改我不干"
+   NEAR r=0.960 L272 cnt=2 : 全部留在这儿，偷偷改我不
+   NEAR r=0.960 L272 cnt=2 : 部留在这儿，偷偷改我不干
+ DECL_L277  verbatim_lines=[112, 277]  verbatim_outside_decl=[112]
+   Q(22): 为了供应未封闭可_refinement 的层
+   NEAR r=0.978 L277 cnt=1 : "为了供应未封闭可_refinement 的层
+   NEAR r=0.978 L277 cnt=1 : 为了供应未封闭可_refinement 的层"
+   NEAR r=0.977 L277 cnt=2 : 为了供应未封闭可_refinement 的
+   NEAR r=0.977 L277 cnt=2 : 了供应未封闭可_refinement 的层
+ DECL_L277  verbatim_lines=[277]  verbatim_outside_decl=[]
+   Q(15): 未封闭之 refinement
+   NEAR r=0.968 L277 cnt=1 : "未封闭之 refinement
+   NEAR r=0.968 L277 cnt=1 : 未封闭之 refinement"
+   NEAR r=0.966 L277 cnt=1 : 未封闭之 refinemen
+   NEAR r=0.966 L277 cnt=1 : 封闭之 refinement
+ DECL_L279  verbatim_lines=[279]  verbatim_outside_decl=[]
+   Q(21): 把方案里的有限结构数据 b bound 住
+   NEAR r=0.977 L279 cnt=1 : "把方案里的有限结构数据 b bound 住
+   NEAR r=0.977 L279 cnt=1 : 把方案里的有限结构数据 b bound 住"
+   NEAR r=0.976 L279 cnt=1 : 把方案里的有限结构数据 b bound 
+   NEAR r=0.976 L279 cnt=1 : 方案里的有限结构数据 b bound 住
+ DECL_L279  verbatim_lines=[279]  verbatim_outside_decl=[]
+   Q(21): $b$ 界住标签集合与方案里的有限结构数据
+   NEAR r=0.977 L279 cnt=1 : "$b$ 界住标签集合与方案里的有限结构数据
+   NEAR r=0.977 L279 cnt=1 : $b$ 界住标签集合与方案里的有限结构数据"
+   NEAR r=0.976 L279 cnt=1 : $b$ 界住标签集合与方案里的有限结构数
+   NEAR r=0.976 L279 cnt=1 : b$ 界住标签集合与方案里的有限结构数据
+ DECL_L350  verbatim_lines=[9, 350]  verbatim_outside_decl=[9]
+   Q(31): `04`、`08`、`11`、`12` 四节的正文这轮没有读到
+   NEAR r=0.984 L9 cnt=1 : 。`04`、`08`、`11`、`12` 四节的正文这轮没有读到
+   NEAR r=0.984 L9 cnt=1 : `04`、`08`、`11`、`12` 四节的正文这轮没有读到，
+   NEAR r=0.984 L9 cnt=2 : `04`、`08`、`11`、`12` 四节的正文这轮没有读
+   NEAR r=0.984 L9 cnt=2 : 04`、`08`、`11`、`12` 四节的正文这轮没有读到
+
+###### D378 D378-每张复K3曲面都是Oka.md pairs=1
+ DECL_L162  verbatim_lines=[162]  verbatim_outside_decl=[]
+   Q(30): $q=6$ 够用，允许更大固定 $q$ 吸收无害的裕量重分配
+   NEAR r=0.984 L162 cnt=1 : "$q=6$ 够用，允许更大固定 $q$ 吸收无害的裕量重分配
+   NEAR r=0.984 L162 cnt=1 : $q=6$ 够用，允许更大固定 $q$ 吸收无害的裕量重分配"
+   NEAR r=0.983 L162 cnt=1 : $q=6$ 够用，允许更大固定 $q$ 吸收无害的裕量重分
+   NEAR r=0.983 L162 cnt=1 : q=6$ 够用，允许更大固定 $q$ 吸收无害的裕量重分配
+
+###### D038 D38-Jacobsthal函数二次界.md pairs=2
+ DECL_L310  verbatim_lines=[310]  verbatim_outside_decl=[]
+   Q(46): 某早先或终端 ratio 超过 $S=(\log B)^2$ 且终于 gap $\le K$
+   NEAR r=0.989 L310 cnt=1 : "某早先或终端 ratio 超过 $S=(\log B)^2$ 且终于 gap $\le K$
+   NEAR r=0.989 L310 cnt=1 : 某早先或终端 ratio 超过 $S=(\log B)^2$ 且终于 gap $\le K$"
+   NEAR r=0.989 L310 cnt=1 : 某早先或终端 ratio 超过 $S=(\log B)^2$ 且终于 gap $\le K
+   NEAR r=0.989 L310 cnt=1 : 早先或终端 ratio 超过 $S=(\log B)^2$ 且终于 gap $\le K$
+ DECL_L1112  verbatim_lines=[1112]  verbatim_outside_decl=[]
+   Q(17): 数值/表达式、哪里用、动它会坏什么
+   NEAR r=0.914 L962 cnt=1 : 数值或表达式、在哪里用、动它会坏什么
+   NEAR r=0.889 L962 cnt=1 : 、数值或表达式、在哪里用、动它会坏什么
+   NEAR r=0.889 L962 cnt=1 : 数值或表达式、在哪里用、动它会坏什么。
+   NEAR r=0.882 L962 cnt=1 : 数值或表达式、在哪里用、动它会坏什
+
+###### D380 D380-低Selmer余秩推出精确BSD公式.md pairs=1
+ DECL_L258  verbatim_lines=[195, 258]  verbatim_outside_decl=[]
+   Q(12): 是 essentials
+   NEAR r=0.960 L258 cnt=1 : "是 essentials
+   NEAR r=0.960 L258 cnt=1 : 是 essentials"
+   NEAR r=0.957 L258 cnt=3 : 是 essential
+   NEAR r=0.957 L258 cnt=2 :  essentials
+
+###### D381 D381-对数空间类的精确去随机化.md pairs=1
+ DECL_L287  verbatim_lines=[287]  verbatim_outside_decl=[]
+   Q(28): 分析对象用 $Q$、算法对象用 $Q_{\rm at}$
+   NEAR r=0.982 L287 cnt=1 : "分析对象用 $Q$、算法对象用 $Q_{\rm at}$
+   NEAR r=0.982 L287 cnt=1 : 分析对象用 $Q$、算法对象用 $Q_{\rm at}$"
+   NEAR r=0.982 L287 cnt=1 : 分析对象用 $Q$、算法对象用 $Q_{\rm at}
+   NEAR r=0.982 L287 cnt=1 : 析对象用 $Q$、算法对象用 $Q_{\rm at}$
+
+###### D388 D388-期望可哑子代数保持核心换位子.md pairs=1
+ DECL_L636  verbatim_lines=[630, 636]  verbatim_outside_decl=[630]
+   Q(14): 共做过两次单字符类的就地更正
+   NEAR r=0.966 L630 cnt=1 : 次共做过两次单字符类的就地更正
+   NEAR r=0.966 L630 cnt=1 : 共做过两次单字符类的就地更正，
+   NEAR r=0.966 L636 cnt=1 : "共做过两次单字符类的就地更正
+   NEAR r=0.966 L636 cnt=1 : 共做过两次单字符类的就地更正"
+
+###### D039 D39-光滑度量无局部等距浸入三维空间.md pairs=1
+ DECL_L405  verbatim_lines=[405]  verbatim_outside_decl=[]
+   Q(15): 不需要 $D_\tau$ 收敛
+   NEAR r=0.828 L715 cnt=1 :  $D_\tau$ 无需收敛
+   NEAR r=0.800 L715 cnt=1 : | $D_\tau$ 无需收敛
+   NEAR r=0.800 L715 cnt=1 :  $D_\tau$ 无需收敛、
+
+###### D390 D390-一致离散空间上Lipschitz自由空间的逼近失效.md pairs=2
+ DECL_L213  verbatim_lines=[139, 213]  verbatim_outside_decl=[139]
+   Q(10): 全程不测度系数的符号
+   NEAR r=0.952 L139 cnt=1 : ；全程不测度系数的符号
+   NEAR r=0.952 L139 cnt=1 : 全程不测度系数的符号。
+   NEAR r=0.952 L213 cnt=1 : "全程不测度系数的符号
+   NEAR r=0.952 L213 cnt=1 : 全程不测度系数的符号"
+ DECL_L213  verbatim_lines=[213]  verbatim_outside_decl=[]
+   Q(12): 全程不依赖测度系数的符号
+   NEAR r=0.960 L213 cnt=1 : "全程不依赖测度系数的符号
+   NEAR r=0.960 L213 cnt=1 : 全程不依赖测度系数的符号"
+   NEAR r=0.957 L213 cnt=1 : 全程不依赖测度系数的符
+   NEAR r=0.957 L213 cnt=1 : 程不依赖测度系数的符号
+
+###### D398 D398-有限同余格的刻画与不可判定性.md pairs=3
+ DECL_L78  verbatim_lines=[78]  verbatim_outside_decl=[]
+   Q(11): 构造一个足够大的运算集
+   NEAR r=0.957 L78 cnt=1 : "构造一个足够大的运算集
+   NEAR r=0.957 L78 cnt=1 : 构造一个足够大的运算集"
+   NEAR r=0.952 L78 cnt=1 : 构造一个足够大的运算
+   NEAR r=0.952 L78 cnt=1 : 造一个足够大的运算集
+ DECL_L186  verbatim_lines=[186]  verbatim_outside_decl=[]
+   Q(18): 对每个具体的格，两种表示可以互相替换
+   NEAR r=0.973 L186 cnt=1 : "对每个具体的格，两种表示可以互相替换
+   NEAR r=0.973 L186 cnt=1 : 对每个具体的格，两种表示可以互相替换"
+   NEAR r=0.971 L186 cnt=1 : 对每个具体的格，两种表示可以互相替
+   NEAR r=0.971 L186 cnt=1 : 每个具体的格，两种表示可以互相替换
+ DECL_L263  verbatim_lines=[263]  verbatim_outside_decl=[]
+   Q(16): 含所有允许单项式、系数为独立参数
+   NEAR r=0.970 L263 cnt=1 : "含所有允许单项式、系数为独立参数
+   NEAR r=0.970 L263 cnt=1 : 含所有允许单项式、系数为独立参数"
+   NEAR r=0.968 L263 cnt=1 : 含所有允许单项式、系数为独立参
+   NEAR r=0.968 L263 cnt=1 : 所有允许单项式、系数为独立参数
+
+###### D399 D399-有限指令与螺形剪切流.md pairs=2
+ DECL_L178  verbatim_lines=[178]  verbatim_outside_decl=[]
+   Q(10): 提前声明不需要的假设
+   NEAR r=0.952 L178 cnt=1 : "提前声明不需要的假设
+   NEAR r=0.952 L178 cnt=1 : 提前声明不需要的假设"
+   NEAR r=0.947 L178 cnt=1 : 提前声明不需要的假
+   NEAR r=0.947 L178 cnt=1 : 前声明不需要的假设
+ DECL_L243  verbatim_lines=[243]  verbatim_outside_decl=[]
+   Q(26): 这个论证验证了平台条件，它并没有把平台条件当成假设。
+   NEAR r=0.981 L243 cnt=1 : "这个论证验证了平台条件，它并没有把平台条件当成假设。
+   NEAR r=0.981 L243 cnt=1 : 这个论证验证了平台条件，它并没有把平台条件当成假设。"
+   NEAR r=0.980 L243 cnt=1 : 这个论证验证了平台条件，它并没有把平台条件当成假设
+   NEAR r=0.980 L243 cnt=1 : 个论证验证了平台条件，它并没有把平台条件当成假设。
+
+###### D042 D42-无挠群代数含零因子.md pairs=3
+ DECL_L367  verbatim_lines=[363, 365, 367, 769]  verbatim_outside_decl=[365, 769]
+   Q(10): 含 $\bar t$
+   NEAR r=0.947 L377 cnt=17 :  $\bar t$
+   NEAR r=0.947 L385 cnt=17 :  $\bar t$
+   NEAR r=0.900 L377 cnt=1 : 当 $\bar t$
+   NEAR r=0.900 L377 cnt=12 :  $\bar t$ 
+ DECL_L632  verbatim_lines=[632]  verbatim_outside_decl=[]
+   Q(20): 最小度 $\ge3$ 的多重图边数无上界
+   NEAR r=0.976 L632 cnt=1 : "最小度 $\ge3$ 的多重图边数无上界
+   NEAR r=0.976 L632 cnt=1 : 最小度 $\ge3$ 的多重图边数无上界"
+   NEAR r=0.974 L632 cnt=1 : 最小度 $\ge3$ 的多重图边数无上
+   NEAR r=0.974 L632 cnt=1 : 小度 $\ge3$ 的多重图边数无上界
+ DECL_L878  verbatim_lines=[878]  verbatim_outside_decl=[]
+   Q(13): 走过同一条弧两次的盘二角形
+   NEAR r=0.963 L878 cnt=1 : "走过同一条弧两次的盘二角形
+   NEAR r=0.963 L878 cnt=1 : 走过同一条弧两次的盘二角形"
+   NEAR r=0.960 L878 cnt=1 : 走过同一条弧两次的盘二角
+   NEAR r=0.960 L878 cnt=1 : 过同一条弧两次的盘二角形
+
+###### D043 D43-无挠双曲群非残余有限.md pairs=2
+ DECL_L298  verbatim_lines=[298]  verbatim_outside_decl=[]
+   Q(11): 带约化链接的平面三角图
+   NEAR r=0.957 L298 cnt=1 : "带约化链接的平面三角图
+   NEAR r=0.957 L298 cnt=1 : 带约化链接的平面三角图"
+   NEAR r=0.952 L298 cnt=1 : 带约化链接的平面三角
+   NEAR r=0.952 L298 cnt=1 : 约化链接的平面三角图
+ DECL_L414  verbatim_lines=[414]  verbatim_outside_decl=[]
+   Q(10): 带控制长的路径三角形
+   NEAR r=0.952 L414 cnt=1 : "带控制长的路径三角形
+   NEAR r=0.952 L414 cnt=1 : 带控制长的路径三角形"
+   NEAR r=0.947 L414 cnt=1 : 带控制长的路径三角
+   NEAR r=0.947 L414 cnt=1 : 控制长的路径三角形
+
+###### D047 D47-无共轭点但无非正曲率度量的三流形.md pairs=3
+ DECL_L258  verbatim_lines=[258, 575, 668]  verbatim_outside_decl=[]
+   Q(13): 任意小 horocycle
+   NEAR r=0.963 L668 cnt=1 : 无任意小 horocycle
+   NEAR r=0.963 L668 cnt=1 : 任意小 horocycle,
+   NEAR r=0.960 L668 cnt=3 : 任意小 horocycl
+   NEAR r=0.960 L668 cnt=3 : 意小 horocycle
+ DECL_L575  verbatim_lines=[575]  verbatim_outside_decl=[]
+   Q(15): 无局部 CAT(0) 长度度量
+   NEAR r=0.966 L639 cnt=7 : 局部 CAT(0) 长度度量
+   NEAR r=0.933 L639 cnt=3 : 的局部 CAT(0) 长度度量
+   NEAR r=0.933 L639 cnt=2 : 局部 CAT(0) 长度度量 
+   NEAR r=0.929 L639 cnt=7 : 局部 CAT(0) 长度度
+ DECL_L579  verbatim_lines=[579]  verbatim_outside_decl=[]
+   Q(24): 符号 / 值或范围 / 用在哪 / 动了会坏在哪
+   NEAR r=0.980 L579 cnt=1 : "符号 / 值或范围 / 用在哪 / 动了会坏在哪
+   NEAR r=0.980 L579 cnt=1 : 符号 / 值或范围 / 用在哪 / 动了会坏在哪"
+   NEAR r=0.979 L579 cnt=1 : 符号 / 值或范围 / 用在哪 / 动了会坏在
+   NEAR r=0.979 L579 cnt=1 : 号 / 值或范围 / 用在哪 / 动了会坏在哪
+
+###### D049 D49-中心圆盘极大算子的端点梯度界.md pairs=2
+ DECL_L528  verbatim_lines=[528]  verbatim_outside_decl=[]
+   Q(10): 用在哪、动了会坏在哪
+   NEAR r=0.818 L427 cnt=1 : 用在哪 | 动了会坏在哪
+ DECL_L572  verbatim_lines=[180, 572]  verbatim_outside_decl=[180]
+   Q(12): 一个覆盖所有半径的例外集
+   NEAR r=0.960 L180 cnt=1 : 与一个覆盖所有半径的例外集
+   NEAR r=0.960 L180 cnt=1 : 一个覆盖所有半径的例外集（
+   NEAR r=0.957 L180 cnt=2 : 一个覆盖所有半径的例外
+   NEAR r=0.957 L180 cnt=2 : 个覆盖所有半径的例外集
+
+###### D051 D51-无限有限表示单可均群.md pairs=2
+ DECL_L1266  verbatim_lines=[255, 1266]  verbatim_outside_decl=[]
+   Q(13): 每个 $3$-循环是换位子
+   NEAR r=0.963 L1266 cnt=1 : "每个 $3$-循环是换位子
+   NEAR r=0.963 L1266 cnt=1 : 每个 $3$-循环是换位子"
+   NEAR r=0.960 L1266 cnt=2 : 每个 $3$-循环是换位
+   NEAR r=0.960 L1266 cnt=2 : 个 $3$-循环是换位子
+ DECL_L1419  verbatim_lines=[1419]  verbatim_outside_decl=[]
+   Q(12): 总量不足一千就另起重述节
+   NEAR r=0.960 L1419 cnt=1 : "总量不足一千就另起重述节
+   NEAR r=0.960 L1419 cnt=1 : 总量不足一千就另起重述节"
+   NEAR r=0.957 L1419 cnt=1 : 总量不足一千就另起重述
+   NEAR r=0.957 L1419 cnt=1 : 量不足一千就另起重述节
+
+###### D052 D52-c0的双Lipschitz吸收而无线性拷贝.md pairs=4
+ DECL_L170  verbatim_lines=[170]  verbatim_outside_decl=[]
+   Q(10): 小于 $1/120$
+   NEAR r=0.952 L170 cnt=1 : "小于 $1/120$
+   NEAR r=0.952 L170 cnt=1 : 小于 $1/120$"
+   NEAR r=0.947 L170 cnt=1 : 小于 $1/120
+   NEAR r=0.947 L170 cnt=1 : 于 $1/120$
+ DECL_L219  verbatim_lines=[219]  verbatim_outside_decl=[]
+   Q(19): $B_{\mathcal L}$ 有限
+   NEAR r=0.944 L350 cnt=10 : $B_{\mathcal L}$ 
+   NEAR r=0.919 L350 cnt=6 :  $B_{\mathcal L}$ 
+   NEAR r=0.919 L350 cnt=3 : $B_{\mathcal L}$ |
+   NEAR r=0.895 L350 cnt=1 : 共 $B_{\mathcal L}$ 
+ DECL_L327  verbatim_lines=[327]  verbatim_outside_decl=[]
+   Q(14): 含双 Lipschitz 像
+   NEAR r=0.923 L1 cnt=21 : 双 Lipschitz 
+   NEAR r=0.923 L33 cnt=21 : 双 Lipschitz 
+   NEAR r=0.889 L1 cnt=1 : 的双 Lipschitz 
+   NEAR r=0.889 L1 cnt=1 : 双 Lipschitz 吸
+ DECL_L603  verbatim_lines=[603]  verbatim_outside_decl=[]
+   Q(10): 已落盘内容一字不回改
+   NEAR r=0.900 L573 cnt=1 : 已落盘内容一字未回改
+   NEAR r=0.857 L573 cnt=1 : ；已落盘内容一字未回改
+   NEAR r=0.857 L573 cnt=1 : 已落盘内容一字未回改、
+   NEAR r=0.818 L573 cnt=1 : 次；已落盘内容一字未回改
+
+###### D056 D56-depth-three布尔电路的平方根指数下界.md pairs=1
+ DECL_L384  verbatim_lines=[384]  verbatim_outside_decl=[]
+   Q(16): 至少两条 clause 同时违反
+   NEAR r=0.970 L384 cnt=1 : "至少两条 clause 同时违反
+   NEAR r=0.970 L384 cnt=1 : 至少两条 clause 同时违反"
+   NEAR r=0.968 L384 cnt=1 : 至少两条 clause 同时违
+   NEAR r=0.968 L384 cnt=1 : 少两条 clause 同时违反
+
+###### D057 D57-两个拟阵公共基的近似计数.md pairs=1
+ DECL_L132  verbatim_lines=[132]  verbatim_outside_decl=[]
+   Q(48): 对 $T$ 做任意偏导与非负线性替换后得到的每个齐次二次型，其 Hessian 至多一个正特征值
+   NEAR r=0.990 L132 cnt=1 : "对 $T$ 做任意偏导与非负线性替换后得到的每个齐次二次型，其 Hessian 至多一个正特征值
+   NEAR r=0.990 L132 cnt=1 : 对 $T$ 做任意偏导与非负线性替换后得到的每个齐次二次型，其 Hessian 至多一个正特征值"
+   NEAR r=0.989 L132 cnt=1 : 对 $T$ 做任意偏导与非负线性替换后得到的每个齐次二次型，其 Hessian 至多一个正特征
+   NEAR r=0.989 L132 cnt=1 :  $T$ 做任意偏导与非负线性替换后得到的每个齐次二次型，其 Hessian 至多一个正特征值
+
+###### D058 D58-实Littlewood多项式极大值的渐近最小.md pairs=1
+ DECL_L509  verbatim_lines=[474, 509]  verbatim_outside_decl=[474]
+   Q(17): $p_2$ 在 $e_2$ 频系数
+   NEAR r=0.971 L474 cnt=1 :  $p_2$ 在 $e_2$ 频系数
+   NEAR r=0.971 L474 cnt=1 : $p_2$ 在 $e_2$ 频系数 
+   NEAR r=0.970 L474 cnt=2 : $p_2$ 在 $e_2$ 频系
+   NEAR r=0.970 L474 cnt=2 : p_2$ 在 $e_2$ 频系数
+
+###### D059 D59-向后交织算子与传递交换子.md pairs=1
+ DECL_L131  verbatim_lines=[131]  verbatim_outside_decl=[]
+   Q(10): 每个不变子空间都是尾
+   NEAR r=0.952 L131 cnt=1 : "每个不变子空间都是尾
+   NEAR r=0.952 L131 cnt=1 : 每个不变子空间都是尾"
+   NEAR r=0.947 L131 cnt=2 : 每个不变子空间都是
+   NEAR r=0.947 L131 cnt=1 : 个不变子空间都是尾
+
+###### D064 D64-装箱问题的加性难度与无界配置间隙.md pairs=1
+ DECL_L695  verbatim_lines=[695]  verbatim_outside_decl=[]
+   Q(20): $r'\le r$ 且 $f\le e$
+   NEAR r=0.905 L671 cnt=1 : $r'\le r$ and $f\le e$
+   NEAR r=0.884 L671 cnt=1 :  $r'\le r$ and $f\le e$
+   NEAR r=0.884 L671 cnt=1 : $r'\le r$ and $f\le e$.
+   NEAR r=0.878 L671 cnt=1 : $r'\le r$ and $f\le e
+
+###### D066 D66-中点与树能量导出的菱形畸变.md pairs=1
+ DECL_L319  verbatim_lines=[319]  verbatim_outside_decl=[]
+   Q(10): 旧点距离在替换下不变
+   NEAR r=0.952 L319 cnt=1 : "旧点距离在替换下不变
+   NEAR r=0.952 L319 cnt=1 : 旧点距离在替换下不变"
+   NEAR r=0.947 L319 cnt=1 : 旧点距离在替换下不
+   NEAR r=0.947 L319 cnt=1 : 点距离在替换下不变
+
+###### D067 D67-条件坐标扫描与解析迁移.md pairs=1
+ DECL_L49  verbatim_lines=[49]  verbatim_outside_decl=[]
+   Q(15): 任意 $\mathcal H$
+   NEAR r=0.867 L119 cnt=1 :  $\mathcal H^+$
+   NEAR r=0.839 L119 cnt=1 : 族 $\mathcal H^+$
+   NEAR r=0.839 L119 cnt=1 :  $\mathcal H^+$（
+   NEAR r=0.812 L119 cnt=1 : 广族 $\mathcal H^+$
+
+###### D069 D69-立方格上的临界键与位渗流.md pairs=2
+ DECL_L470  verbatim_lines=[403, 470]  verbatim_outside_decl=[403]
+   Q(25): $3(2m+1)^2\cdot(2m+1)$ 量级
+   NEAR r=0.980 L403 cnt=1 :  $3(2m+1)^2\cdot(2m+1)$ 量级
+   NEAR r=0.980 L403 cnt=1 : $3(2m+1)^2\cdot(2m+1)$ 量级 
+   NEAR r=0.980 L403 cnt=2 : $3(2m+1)^2\cdot(2m+1)$ 量
+   NEAR r=0.980 L403 cnt=2 : 3(2m+1)^2\cdot(2m+1)$ 量级
+ DECL_L516  verbatim_lines=[516]  verbatim_outside_decl=[]
+   Q(27): 两减 $\operatorname{Cov}\ge0$
+   NEAR r=0.877 L502 cnt=2 :  $\operatorname{Cov}(f,g)\ge0$
+   NEAR r=0.857 L502 cnt=2 :  $\operatorname{Cov}(f,g)\ge0
+   NEAR r=0.857 L502 cnt=2 : $\operatorname{Cov}(f,g)\ge0$
+   NEAR r=0.842 L502 cnt=1 : 证 $\operatorname{Cov}(f,g)\ge0
+
+###### D071 D71-完美匹配多面体的熵与面维数.md pairs=4
+ DECL_L362  verbatim_lines=[362]  verbatim_outside_decl=[]
+   Q(13): 把二部图熵不等式往一般图推
+   NEAR r=0.963 L362 cnt=1 : "把二部图熵不等式往一般图推
+   NEAR r=0.963 L362 cnt=1 : 把二部图熵不等式往一般图推"
+   NEAR r=0.960 L362 cnt=1 : 把二部图熵不等式往一般图
+   NEAR r=0.960 L362 cnt=1 : 二部图熵不等式往一般图推
+ DECL_L454  verbatim_lines=[454]  verbatim_outside_decl=[]
+   Q(15): 两个 sharpness 咬合
+   NEAR r=0.929 L370 cnt=3 : 两个 sharpness 
+   NEAR r=0.897 L370 cnt=1 : ，两个 sharpness 
+   NEAR r=0.897 L370 cnt=1 : 两个 sharpness 错
+   NEAR r=0.867 L370 cnt=1 : 四，两个 sharpness 
+ DECL_L629  verbatim_lines=[170, 629]  verbatim_outside_decl=[170]
+   Q(10): 熵恰 $\ln N$
+   NEAR r=0.857 L690 cnt=2 : 熵至多 $\ln N$
+   NEAR r=0.818 L690 cnt=2 : 律熵至多 $\ln N$
+   NEAR r=0.818 L690 cnt=1 : 熵至多 $\ln N$、
+ DECL_L663  verbatim_lines=[663, 712]  verbatim_outside_decl=[712]
+   Q(16): 含 $\frac1k$ 式不断言
+   NEAR r=0.970 L712 cnt=1 : 、含 $\frac1k$ 式不断言
+   NEAR r=0.970 L712 cnt=1 : 含 $\frac1k$ 式不断言 
+   NEAR r=0.968 L712 cnt=2 : 含 $\frac1k$ 式不断
+   NEAR r=0.968 L712 cnt=2 :  $\frac1k$ 式不断言
+
+###### D072 D72-L1的Daugavet子空间的精确渐近模数.md pairs=1
+ DECL_L238  verbatim_lines=[238]  verbatim_outside_decl=[]
+   Q(17): $\|C(y)\|_1$ 控制增量
+   NEAR r=0.824 L139 cnt=1 :  $t\|C(y)\|_1$，增量
+   NEAR r=0.800 L139 cnt=1 : 成 $t\|C(y)\|_1$，增量
+
+###### D074 D74-任意极化曲面上的极大Seshadri常数.md pairs=1
+ DECL_L674  verbatim_lines=[366, 674]  verbatim_outside_decl=[366]
+   Q(10): 齐次测试推出 nef
+   NEAR r=0.952 L366 cnt=1 : ：齐次测试推出 nef
+   NEAR r=0.952 L366 cnt=1 : 齐次测试推出 nef，
+   NEAR r=0.947 L366 cnt=2 : 齐次测试推出 ne
+   NEAR r=0.947 L366 cnt=2 : 次测试推出 nef
+
+###### D076 D76-非平凡Markov型迫使超反身.md pairs=1
+ DECL_L554  verbatim_lines=[554]  verbatim_outside_decl=[]
+   Q(17): $G$ 保留全部 $n$ 个原标签
+   NEAR r=0.971 L554 cnt=1 : "$G$ 保留全部 $n$ 个原标签
+   NEAR r=0.971 L554 cnt=1 : $G$ 保留全部 $n$ 个原标签"
+   NEAR r=0.970 L554 cnt=1 : $G$ 保留全部 $n$ 个原标
+   NEAR r=0.970 L554 cnt=1 : G$ 保留全部 $n$ 个原标签
+
+###### D077 D77-特征二下的五边形退化与Deligne--Drinfeld猜想证明反推.md pairs=1
+ DECL_L351  verbatim_lines=[351]  verbatim_outside_decl=[]
+   Q(11): 系数为一因为系数域 F
+   NEAR r=0.952 L396 cnt=1 : 系数为一因系数域 F
+   NEAR r=0.909 L396 cnt=1 :  系数为一因系数域 F
+   NEAR r=0.909 L396 cnt=1 : 系数为一因系数域 F;
+   NEAR r=0.870 L396 cnt=1 : , 系数为一因系数域 F
+
+###### D080 D80-均值对策博弈随机化准多项式求解的支撑预算递归.md pairs=1
+ DECL_L546  verbatim_lines=[546]  verbatim_outside_decl=[]
+   Q(21): $p\not\ge y$ 至少一个坐标失败
+   NEAR r=0.977 L546 cnt=1 : "$p\not\ge y$ 至少一个坐标失败
+   NEAR r=0.977 L546 cnt=1 : $p\not\ge y$ 至少一个坐标失败"
+   NEAR r=0.976 L546 cnt=1 : $p\not\ge y$ 至少一个坐标失
+   NEAR r=0.976 L546 cnt=1 : p\not\ge y$ 至少一个坐标失败
+
+###### D082 D82-分离电流与密度分裂-四维tamed推compatible笔记.md pairs=1
+ DECL_L278  verbatim_lines=[278]  verbatim_outside_decl=[]
+   Q(11): 先 r↓0 后 n→∞
+   NEAR r=0.909 L262 cnt=1 :  (r↓0 后 n→∞
+   NEAR r=0.870 L262 cnt=1 : 限 (r↓0 后 n→∞
+   NEAR r=0.870 L262 cnt=1 :  (r↓0 后 n→∞)
+   NEAR r=0.833 L262 cnt=1 : 极限 (r↓0 后 n→∞
+
+###### D084 D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md pairs=3
+ DECL_L61  verbatim_lines=[61]  verbatim_outside_decl=[]
+   Q(11): 照抄平面情形的对偶论证
+   NEAR r=0.957 L61 cnt=1 : "照抄平面情形的对偶论证
+   NEAR r=0.957 L61 cnt=1 : 照抄平面情形的对偶论证"
+   NEAR r=0.952 L61 cnt=1 : 照抄平面情形的对偶论
+   NEAR r=0.952 L61 cnt=1 : 抄平面情形的对偶论证
+ DECL_L71  verbatim_lines=[71]  verbatim_outside_decl=[]
+   Q(14): $\mu$ 在许多尺度上平坦
+   NEAR r=0.966 L71 cnt=1 : "$\mu$ 在许多尺度上平坦
+   NEAR r=0.966 L71 cnt=1 : $\mu$ 在许多尺度上平坦"
+   NEAR r=0.963 L71 cnt=1 : $\mu$ 在许多尺度上平
+   NEAR r=0.963 L71 cnt=1 : \mu$ 在许多尺度上平坦
+ DECL_L227  verbatim_lines=[227]  verbatim_outside_decl=[]
+   Q(11): 和与 $a,R$ 无关
+   NEAR r=0.952 L655 cnt=3 : 与 $a,R$ 无关
+   NEAR r=0.909 L655 cnt=1 : "与 $a,R$ 无关
+   NEAR r=0.909 L655 cnt=2 : 与 $a,R$ 无关"
+   NEAR r=0.870 L655 cnt=1 : 则"与 $a,R$ 无关
+
+###### D087 D87-图灵度刚性猜想与四值复原.md pairs=2
+ DECL_L49  verbatim_lines=[49, 797]  verbatim_outside_decl=[]
+   Q(10): 供给适当稠密集的序列
+   NEAR r=0.952 L797 cnt=2 : "供给适当稠密集的序列
+   NEAR r=0.952 L797 cnt=2 : 供给适当稠密集的序列"
+   NEAR r=0.947 L797 cnt=2 : 供给适当稠密集的序
+   NEAR r=0.947 L797 cnt=2 : 给适当稠密集的序列
+ DECL_L357  verbatim_lines=[357]  verbatim_outside_decl=[]
+   Q(19): 每个自同构固定某个锥（锥基依赖自同构）
+   NEAR r=0.974 L357 cnt=1 : "每个自同构固定某个锥（锥基依赖自同构）
+   NEAR r=0.974 L357 cnt=1 : 每个自同构固定某个锥（锥基依赖自同构）"
+   NEAR r=0.973 L357 cnt=1 : 每个自同构固定某个锥（锥基依赖自同构
+   NEAR r=0.973 L357 cnt=1 : 个自同构固定某个锥（锥基依赖自同构）
+
+###### D088 D88-截断、树与部分圆柱：同伦假设组合路线的亲历笔记.md pairs=2
+ DECL_L69  verbatim_lines=[69]  verbatim_outside_decl=[]
+   Q(11): 自由代数闭包的同伦控制
+   NEAR r=0.957 L69 cnt=1 : "自由代数闭包的同伦控制
+   NEAR r=0.957 L69 cnt=1 : 自由代数闭包的同伦控制"
+   NEAR r=0.952 L69 cnt=1 : 自由代数闭包的同伦控
+   NEAR r=0.952 L69 cnt=1 : 由代数闭包的同伦控制
+ DECL_L493  verbatim_lines=[493]  verbatim_outside_decl=[]
+   Q(15): 全局路径对象要同时解释所有运算
+   NEAR r=0.968 L493 cnt=1 : "全局路径对象要同时解释所有运算
+   NEAR r=0.968 L493 cnt=1 : 全局路径对象要同时解释所有运算"
+   NEAR r=0.966 L493 cnt=1 : 全局路径对象要同时解释所有运
+   NEAR r=0.966 L493 cnt=1 : 局路径对象要同时解释所有运算
+
+###### D089 D89-酉化蕴含均称-Dixmier离散群问题的机器化拆解.md pairs=1
+ DECL_L1764  verbatim_lines=[1764]  verbatim_outside_decl=[]
+   Q(19): $\ell^\infty$ 上的正泛函
+   NEAR r=0.944 L1584 cnt=2 : $\ell^\infty$ 上的正
+   NEAR r=0.919 L1584 cnt=2 : "$\ell^\infty$ 上的正
+   NEAR r=0.919 L1584 cnt=1 : $\ell^\infty$ 上的正规
+   NEAR r=0.895 L1584 cnt=1 : 对"$\ell^\infty$ 上的正
+
+###### D090 D90-固定指数的生产链-Yau节点上界幂律反例取证笔记.md pairs=1
+ DECL_L406  verbatim_lines=[406]  verbatim_outside_decl=[]
+   Q(19): 用一个固定的高度量把一族近似度量归一化
+   NEAR r=0.974 L406 cnt=1 : "用一个固定的高度量把一族近似度量归一化
+   NEAR r=0.974 L406 cnt=1 : 用一个固定的高度量把一族近似度量归一化"
+   NEAR r=0.973 L406 cnt=1 : 用一个固定的高度量把一族近似度量归一
+   NEAR r=0.973 L406 cnt=1 : 一个固定的高度量把一族近似度量归一化
+
+###### D091 D91-短埃及分数最小项数的双重对数阶.md pairs=5
+ DECL_L282  verbatim_lines=[282]  verbatim_outside_decl=[]
+   Q(13): 给一个已知的矩估计补个引用
+   NEAR r=0.963 L282 cnt=1 : "给一个已知的矩估计补个引用
+   NEAR r=0.963 L282 cnt=1 : 给一个已知的矩估计补个引用"
+   NEAR r=0.960 L282 cnt=1 : 给一个已知的矩估计补个引
+   NEAR r=0.960 L282 cnt=1 : 一个已知的矩估计补个引用
+ DECL_L282  verbatim_lines=[282]  verbatim_outside_decl=[]
+   Q(20): 重写一个更强的、带截断与移位一致性的定理
+   NEAR r=0.976 L282 cnt=1 : "重写一个更强的、带截断与移位一致性的定理
+   NEAR r=0.976 L282 cnt=1 : 重写一个更强的、带截断与移位一致性的定理"
+   NEAR r=0.974 L282 cnt=1 : 重写一个更强的、带截断与移位一致性的定
+   NEAR r=0.974 L282 cnt=1 : 写一个更强的、带截断与移位一致性的定理
+ DECL_L732  verbatim_lines=[732, 987]  verbatim_outside_decl=[]
+   Q(21): $R=1000$ 个块对固定 $u$ 独立
+   NEAR r=0.977 L732 cnt=2 : "$R=1000$ 个块对固定 $u$ 独立
+   NEAR r=0.977 L732 cnt=2 : $R=1000$ 个块对固定 $u$ 独立"
+   NEAR r=0.976 L732 cnt=2 : $R=1000$ 个块对固定 $u$ 独
+   NEAR r=0.976 L732 cnt=2 : R=1000$ 个块对固定 $u$ 独立
+ DECL_L732  verbatim_lines=[732]  verbatim_outside_decl=[]
+   Q(41): $\sum_{u} \mathbb P(\text{全失败})<1$ 故存在好实现
+   NEAR r=0.988 L732 cnt=1 : "$\sum_{u} \mathbb P(\text{全失败})<1$ 故存在好实现
+   NEAR r=0.988 L732 cnt=1 : $\sum_{u} \mathbb P(\text{全失败})<1$ 故存在好实现"
+   NEAR r=0.988 L732 cnt=1 : $\sum_{u} \mathbb P(\text{全失败})<1$ 故存在好实
+   NEAR r=0.988 L732 cnt=1 : \sum_{u} \mathbb P(\text{全失败})<1$ 故存在好实现
+ DECL_L1154  verbatim_lines=[1154]  verbatim_outside_decl=[]
+   Q(26): 固定集合 $S$、$s=|S|=O(\log r)$
+   NEAR r=0.981 L1154 cnt=1 : "固定集合 $S$、$s=|S|=O(\log r)$
+   NEAR r=0.981 L1154 cnt=1 : 固定集合 $S$、$s=|S|=O(\log r)$"
+   NEAR r=0.980 L1154 cnt=1 : 固定集合 $S$、$s=|S|=O(\log r)
+   NEAR r=0.980 L1154 cnt=1 : 定集合 $S$、$s=|S|=O(\log r)$
+
+###### D093 D93-方向瞬态蕴含弹道性反推笔记.md pairs=2
+ DECL_L60  verbatim_lines=[60]  verbatim_outside_decl=[]
+   Q(15): 选出的 Gaussian 尺度
+   NEAR r=0.828 L440 cnt=1 :  Gaussian 的小尺度
+   NEAR r=0.828 L452 cnt=1 :  Gaussian 尺度"的
+   NEAR r=0.800 L440 cnt=1 : 必 Gaussian 的小尺度
+   NEAR r=0.800 L440 cnt=1 :  Gaussian 的小尺度"
+ DECL_L440  verbatim_lines=[440]  verbatim_outside_decl=[]
+   Q(16): 不必 Gaussian 的小尺度
+   NEAR r=0.970 L440 cnt=1 : "不必 Gaussian 的小尺度
+   NEAR r=0.970 L440 cnt=1 : 不必 Gaussian 的小尺度"
+   NEAR r=0.968 L440 cnt=1 : 不必 Gaussian 的小尺
+   NEAR r=0.968 L440 cnt=1 : 必 Gaussian 的小尺度
+
+###### D095 D95-用独立行替换高斯行的Cd代价.md pairs=1
+ DECL_L91  verbatim_lines=[91]  verbatim_outside_decl=[]
+   Q(15): 条件于 $W$ 之后的 $A$
+   NEAR r=0.968 L91 cnt=1 : "条件于 $W$ 之后的 $A$
+   NEAR r=0.968 L91 cnt=1 : 条件于 $W$ 之后的 $A$"
+   NEAR r=0.966 L91 cnt=1 : 条件于 $W$ 之后的 $A
+   NEAR r=0.966 L91 cnt=1 : 件于 $W$ 之后的 $A$
+
+###### D097 D97-容量小于4的辛球嵌入极化积：对称Mahler猜想的Gromov宽度路线反推笔记.md pairs=6
+ DECL_L699  verbatim_lines=[699]  verbatim_outside_decl=[]
+   Q(22): 沿曲线 $|w|$ 增而 $\Im F$ 定
+   NEAR r=0.978 L699 cnt=1 : "沿曲线 $|w|$ 增而 $\Im F$ 定
+   NEAR r=0.978 L699 cnt=1 : 沿曲线 $|w|$ 增而 $\Im F$ 定"
+   NEAR r=0.977 L699 cnt=1 : 沿曲线 $|w|$ 增而 $\Im F$ 
+   NEAR r=0.977 L699 cnt=1 : 曲线 $|w|$ 增而 $\Im F$ 定
+ DECL_L699  verbatim_lines=[699]  verbatim_outside_decl=[]
+   Q(16): 用一条显式单调性替换一个图形直觉
+   NEAR r=0.970 L699 cnt=1 : "用一条显式单调性替换一个图形直觉
+   NEAR r=0.970 L699 cnt=1 : 用一条显式单调性替换一个图形直觉"
+   NEAR r=0.968 L699 cnt=1 : 用一条显式单调性替换一个图形直
+   NEAR r=0.968 L699 cnt=1 : 一条显式单调性替换一个图形直觉
+ DECL_L808  verbatim_lines=[808]  verbatim_outside_decl=[]
+   Q(12): 绝对一致 vs 相对一致
+   NEAR r=0.960 L808 cnt=1 : "绝对一致 vs 相对一致
+   NEAR r=0.960 L808 cnt=1 : 绝对一致 vs 相对一致"
+   NEAR r=0.957 L808 cnt=1 : 绝对一致 vs 相对一
+   NEAR r=0.957 L808 cnt=1 : 对一致 vs 相对一致
+ DECL_L997  verbatim_lines=[762, 997]  verbatim_outside_decl=[762]
+   Q(20): $\epsilon_k$ 只依赖 $F$
+   NEAR r=0.976 L762 cnt=2 : "$\epsilon_k$ 只依赖 $F$
+   NEAR r=0.976 L762 cnt=2 : $\epsilon_k$ 只依赖 $F$"
+   NEAR r=0.976 L997 cnt=2 : "$\epsilon_k$ 只依赖 $F$
+   NEAR r=0.976 L997 cnt=2 : $\epsilon_k$ 只依赖 $F$"
+ DECL_L1276  verbatim_lines=[1276]  verbatim_outside_decl=[]
+   Q(17): 用多面体 $L\subset K$
+   NEAR r=0.938 L1514 cnt=1 : 多面体 $\subset K$
+   NEAR r=0.909 L1514 cnt=1 : （多面体 $\subset K$
+   NEAR r=0.909 L1514 cnt=1 : 多面体 $\subset K$）
+   NEAR r=0.882 L1514 cnt=1 : 侧（多面体 $\subset K$
+ DECL_L1705  verbatim_lines=[1705]  verbatim_outside_decl=[]
+   Q(29): ## 13. 机器化范围与笔头范围的分界（Lean 取证）
+   NEAR r=0.966 L1604 cnt=1 : ## 15. 机器化范围与笔头范围的分界（Lean 取证）
+   NEAR r=0.947 L1604 cnt=1 : ## 15. 机器化范围与笔头范围的分界（Lean 取证
+   NEAR r=0.947 L1604 cnt=1 : # 15. 机器化范围与笔头范围的分界（Lean 取证）
+   NEAR r=0.929 L1604 cnt=1 : ## 15. 机器化范围与笔头范围的分界（Lean 取

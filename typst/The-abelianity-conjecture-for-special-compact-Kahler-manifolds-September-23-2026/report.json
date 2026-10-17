@@ -1,0 +1,34 @@
+{
+  "paper": "The-abelianity-conjecture-for-special-compact-Kahler-manifolds-September-23-2026",
+  "ok": true,
+  "typ_lines": 1121,
+  "included_pdf_pages": 0,
+  "formulas": 948,
+  "math_failed": 0,
+  "labels": 125,
+  "equations": 47,
+  "theorems": 3,
+  "figures": 1,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1
+  },
+  "samples": {
+    "formulas": "948"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "ragged2e"
+  ],
+  "macros_skipped": [
+    "\\providecommand\\DoNotLoadEpstopdf",
+    "\\renewcommand\\@maketitle"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-abelianity-conjecture-for-special-compact-Kahler-manifolds-September-23-2026.tex"
+}

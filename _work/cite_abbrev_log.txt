@@ -1,0 +1,6 @@
+D577	`708:100	abbrev-nonclick
+D577	`684:011	abbrev-nonclick
+D577	`708:100	abbrev-nonclick
+D577	`684:011	abbrev-nonclick
+D577	`708:100	abbrev-nonclick
+D577	`684:011	abbrev-nonclick

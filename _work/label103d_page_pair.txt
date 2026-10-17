@@ -1,0 +1,21 @@
+one canvas, two laws, the ink of the whole page at 300 dpi (probe81.confirmed)
+now = the product as shipped (run151)   fix = the same canvas regenerated through #103
+ctl = the author's picture as pdflatex draws it, at the paper's own body size
+both pages are laid out under the product's own header, so the two laws share a font
+`stripped` is False only where a declared measure also grew by two seps (#box(width:)
+
+A-Charged-Reduction-of-the-Spacetime-Penrose#0  west/south labels, `every node/.style={inner sep=2pt}`
+        padding: tokens 0 -> 11  (+11)   pages identical once pads are stripped: True
+        ink now=60738 fix=60650  this round=-88   body 11pt   crops: ctl now fix
+        pad spellings fixed: , padding: 0.07056cm
+
+A-Coulomb-Ground-State-Density-without-Kohn-#0  west/east/south/north labels on the default sep
+        padding: tokens 0 -> 11  (+11)   pages identical once pads are stripped: True
+        ink now=12970 fix=12682  this round=-288   body 11pt   crops: ctl now fix
+        pad spellings fixed: , padding: 0.1176cm
+
+A-CH-Obstruction-to-a-Prescribed-Categoricit#0  row/column labels pinned west and north
+        padding: tokens 0 -> 5  (+5)   pages identical once pads are stripped: True
+        ink now=23228 fix=23275  this round=+47   body 11pt   crops: ctl now fix
+        pad spellings fixed: , padding: 0.1176cm
+

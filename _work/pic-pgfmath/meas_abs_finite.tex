@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{tikz}
+\newwrite\meas
+\immediate\openout\meas=meas_abs_finite.txt\relax
+\newdimen\mx
+\newdimen\my
+\def\rd#1#2{\pgfextractx{\mx}{\pgfpointanchor{#1}{center}}%
+            \pgfextracty{\my}{\pgfpointanchor{#1}{center}}%
+            \edef#2{\the\mx,\the\my}}
+\begin{document}
+% Where the 81 lattice squares really sit once the picture's own [scale=0.95] is applied: the node
+% anchor is the canvas point, so pgfmath's centre and the scale factor are folded by TeX itself
+% rather than multiplied here. The square's two corners are probed with the picture's own
+% {\cx-.5}/{\cy+.5} expressions, the spelling the author wrote.
+\begin{tikzpicture}[scale=0.95]
+ \begin{scope}
+  \foreach \i in {-4,...,4} {\foreach \j in {-4,...,4} {
+   \pgfmathsetmacro{\cx}{\i+.35*\j}
+   \pgfmathsetmacro{\cy}{\j+.35*\i}
+   \node[inner sep=0pt] (c) at (\cx,\cy) {};
+   \node[inner sep=0pt] (lo) at ({\cx-.5},{\cy-.5}) {};
+   \node[inner sep=0pt] (hi) at ({\cx+.5},{\cy+.5}) {};
+   \rd{c}\pa\rd{lo}\pb\rd{hi}\pc
+   \immediate\write\meas{CELL \i/\j\space centre=(\pa)\space lo=(\pb)\space hi=(\pc)}
+  }}
+ \end{scope}
+\end{tikzpicture}
+\end{document}

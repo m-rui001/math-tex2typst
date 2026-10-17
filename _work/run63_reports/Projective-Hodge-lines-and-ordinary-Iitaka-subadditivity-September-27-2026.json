@@ -1,0 +1,30 @@
+{
+  "paper": "Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026",
+  "ok": true,
+  "typ_lines": 1029,
+  "included_pdf_pages": 0,
+  "formulas": 908,
+  "math_failed": 0,
+  "labels": 123,
+  "equations": 11,
+  "theorems": 4,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "908",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026\\main.typ:369:374\n    │\n369 │   #strong[The actual period image and its finite quotient.] Choose a rational reference space with lattice and polarization, and let $cal(D)$ be the connected period-domain component containing a chosen lift of the periods. Let $Gamma$ be the arithmetic group of integral polarizing isometries preserving this component; it contains the monodromy of $bb(V)$. Let $Gamma' lt.tri Gamma$ be a normal neat subgroup of finite index. The kernel of\n    │                                                                                                                                                                                                                                                                                                                                                                                       ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 1,
+  "source": "E:\\math\\_work\\flat\\Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026.tex"
+}

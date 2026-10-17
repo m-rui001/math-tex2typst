@@ -1,0 +1,11 @@
+# 粘贴即用的派单参数行（19:34 从 _work/wave_1741.txt 与 _work/next_untaken.txt 原样取，勿手打）
+## 五个待重发的洞（同号原地重发，禁 --take）
+D592 row=415 dir=Strongly-rational-unitary-vertex-operator-algebras-and-conformal-nets-September-25-2026 tex=171652
+D593 row=416 dir=Subset-Sum-in-Time-2-power-0-49n-October-4-2026 tex=111865
+D594 row=417 dir=Symplectic-Ball-Packings-in-Higher-Dimensions-September-23-2026 tex=147917
+D595 row=418 dir=Tame-Hecke-Eigensheaves-with-Several-Marked-Points-October-5-2026 tex=159162
+D597 row=420 dir=Temperedness-at-ramified-places-for-globally-generic-exceptional-groups-October-5-2026 tex=75924
+## 洞清完之后的新建头三行（仍要走 pick.py 1 --take 记账）
+D628	row=447	tex=128849	files=13	thin=no	dir=The-Mezard-Parisi-formula-for-diluted-spin-glasses-September-23-2026
+D629	row=448	tex=570829	files=13	thin=no	dir=The-PCP-for-PPAD-conjecture-a-quasilinear-reduction-September-25-2026
+D630	row=449	tex=331483	files=12	thin=no	dir=The-Penrose-inequality-for-maximal-asymptotically-hyperbolic-initial-data-October-5-2026

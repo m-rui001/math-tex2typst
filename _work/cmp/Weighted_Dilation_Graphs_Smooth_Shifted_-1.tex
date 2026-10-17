@@ -1,0 +1,65 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{tikz}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Torus}{\mathbb T}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\ee}[1]{e\!\left(#1\right)}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\Pplus}{P^{+}}
+\newcommand{\Pminus}{P^{-}}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\Li}{Li}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\rank}{rank}
+\renewcommand{\@maketitle}{
+  \newpage\null\vskip 1em
+  \begin{center}
+    {\LARGE\@title\par}\vskip 1em
+    {\large\@author\par}\vskip .5em
+    {\@date\par}
+  \end{center}
+  \vskip 1em
+}
+\begin{document}
+\begin{tikzpicture}[x=1.25cm,y=0.85cm,>=Stealth,
+  every node/.style={font=\small}]
+ \draw[->,gray] (-.3,0)--(9.4,0) node[right]{visit};
+ \foreach \x in {0,...,9}{\draw[gray] (\x,-.07)--(\x,.07);}
+ \draw[very thick,dashed,blue!65!black] (0,0)--(2,0);
+ \draw[very thick,blue!65!black] (2,0)--(3,0);
+ \draw[very thick,dashed,blue!65!black] (3,0)--(6,0);
+ \draw[very thick,blue!65!black] (6,0)--(7,0);
+ \draw[very thick,dashed,blue!65!black] (7,0)--(9,0);
+ \foreach \x in {2,3,6,7}{\fill[blue!65!black] (\x,0) circle (2.6pt);}
+ \foreach \x in {0,9}{\draw[draw=blue!65!black,fill=white,very thick]
+    (\x,0) circle (2.6pt);}
+ \node[above] at (0,.1){ghost birth at $j$};
+ \node[above] at (2.5,.1){active};
+ \node[above] at (6.5,.1){active};
+ \node[above] at (9,.1){terminate at $i$};
+ \node[below,align=center] at (0,-.15){$-\eta_j$\\$1/(pb_p)$ once};
+ \node[below,align=center] at (2,-.15){promote\\$1/V_g$};
+ \node[below,align=center] at (3,-.15){store\\$r=0$};
+ \node[below,align=center] at (6,-.15){promote\\$1/V_g$};
+ \node[below,align=center] at (7,-.15){store};
+ \node[below] at (9,-.15){$-\eta_i$};
+ \node[above,align=center] at (4.5,.45){pending: $r\gets r+\Delta$\\
+                                  unmarked zero pays $q_t$};
+\end{tikzpicture}
+\end{document}

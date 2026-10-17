@@ -1,0 +1,44 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\makeatletter
+\newcommand\report[2]{%
+  \pgfextractx{\dimen0}{\pgfpointanchor{#1}{center}}%
+  \pgfextracty{\dimen2}{\pgfpointanchor{#1}{center}}%
+  \pgfextractx{\dimen4}{\pgfpointdiff{\pgfpointanchor{#1}{center}}{\pgfpointanchor{#1}{east}}}%
+  \pgfextracty{\dimen6}{\pgfpointdiff{\pgfpointanchor{#1}{center}}{\pgfpointanchor{#1}{north}}}%
+  \typeout{GOT #2 X=\the\dimen0 Y=\the\dimen2 E=\the\dimen4 N=\the\dimen6}}
+\makeatother
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{tikzpicture}
+  \node (t) at (0,0) {T};
+  \node[below left=12mm and -12mm of t] (n) {N};
+  \report{n}{0}
+  \report{t}{100}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node (t) at (0,0) {T};
+  \node[below left=12mm and 12mm of t] (n) {N};
+  \report{n}{1}
+  \report{t}{101}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node (t) at (0,0) {T};
+  \node[left=12mm of t] (n) {N};
+  \report{n}{2}
+  \report{t}{102}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node (t) at (0,0) {T};
+  \node[right=12mm of t] (n) {N};
+  \report{n}{3}
+  \report{t}{103}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node (t) at (0,0) {T};
+  \node[below=12mm of t] (n) {N};
+  \report{n}{4}
+  \report{t}{104}
+\end{tikzpicture}
+\end{document}

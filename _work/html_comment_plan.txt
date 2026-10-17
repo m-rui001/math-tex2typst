@@ -1,0 +1,131 @@
+### D177  file=D177-把时钟停在50的零熵映射.md
+    lines=418  cr=0  markers=1
+    L417  REPAIR whole=True open=True close=True substring_count=1 len=38
+         TEXT: <!-- D177 落盘探针行：基线 16233 字节，写入通路自检 -->
+### D195  file=D195-一个PD4群没有闭非正曲流形模型.md
+    lines=662  cr=0  markers=1
+    L83   REPAIR whole=True open=True close=True substring_count=1 len=14
+         TEXT: <!-- 落盘探针行 -->
+### D198  file=D198-单调图性质尖锐阈值猜想的显式宽度界.md
+    lines=343  cr=0  markers=1
+    L336  REPAIR whole=True open=True close=True substring_count=1 len=11
+         TEXT: <!--MORE-->
+### D202  file=D202-无扭群环失去直有限性的构造复盘.md
+    lines=335  cr=0  markers=1
+    L81   REPAIR whole=True open=True close=True substring_count=1 len=19
+         TEXT: <!-- D202-probe -->
+### D205  file=D205-闭Ricci流有界标量曲率与有限时间全曲率爆炸.md
+    lines=567  cr=0  markers=1
+    L85   REPAIR whole=True open=True close=True substring_count=1 len=39
+         TEXT: <!-- 探针：D205 落盘校验行 2026-09-24 队列 29 -->
+### D214  file=D214-边界行列式复杂度三次下界之路.md
+    lines=300  cr=0  markers=5
+    L80   REPAIR whole=True open=True close=True substring_count=1 len=30
+         TEXT: <!-- CONTINUE-CHECKPOINT-1 -->
+    L133  REPAIR whole=True open=True close=True substring_count=1 len=30
+         TEXT: <!-- CONTINUE-CHECKPOINT-2 -->
+    L248  REPAIR whole=True open=True close=True substring_count=1 len=30
+         TEXT: <!-- CONTINUE-CHECKPOINT-3 -->
+    L285  REPAIR whole=True open=True close=True substring_count=1 len=22
+         TEXT: <!-- EOF-D214-BODY -->
+    L299  REPAIR whole=True open=True close=True substring_count=1 len=30
+         TEXT: <!-- CONTINUE-CHECKPOINT-4 -->
+### D224  file=D224-一个无固定价格群的反例日记.md
+    lines=760  cr=0  markers=1
+    L21   REPAIR whole=True open=True close=True substring_count=1 len=35
+         TEXT: <!-- D224 落盘探针，验证 Edit 是否真的写入磁盘 -->
+### D227  file=D227-Hadwiger数线性表染色界-研究反推.md
+    lines=550  cr=0  markers=1
+    L69   REPAIR whole=True open=True close=True substring_count=1 len=24
+         TEXT: <!-- D227 probe line -->
+### D234  file=D234-Heilbronn三角形下界的幂改进.md
+    lines=491  cr=0  markers=1
+    L256  REPAIR whole=True open=True close=True substring_count=1 len=22
+         TEXT: <!-- probe-D234-OK -->
+### D242  file=D242-熵界协方差对数与单纯形不等式.md
+    lines=328  cr=0  markers=1
+    L327  REPAIR whole=True open=True close=True substring_count=1 len=19
+         TEXT: <!-- probe D242 -->
+### D256  file=D256-正特征三维fold数值维一丰盈性的反推笔记.md
+    lines=190  cr=0  markers=1
+    L189  REPAIR whole=True open=True close=True substring_count=1 len=29
+         TEXT: <!-- D256 落盘探针 P1：字节增量校验行 -->
+### D264  file=D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md
+    lines=1013  cr=0  markers=2
+    L205  REPAIR whole=True open=True close=True substring_count=1 len=31
+         TEXT: <!-- probe D264 single line -->
+    L207  REPAIR whole=True open=True close=True substring_count=1 len=20
+         TEXT: <!-- D264 落盘探针单行 -->
+### D266  file=D266-几乎线性编辑距离近似方案的反推.md
+    lines=744  cr=0  markers=1
+    L81   REPAIR whole=True open=True close=True substring_count=1 len=18
+         TEXT: <!-- 探针行将追加到此处 -->
+### D274  file=D274-非负曲率四维流形的L2-Einstein间隙.md
+    lines=335  cr=0  markers=2
+    L333  REPAIR whole=True open=True close=True substring_count=1 len=19
+         TEXT: <!-- probe-D274 -->
+    L334  REPAIR whole=True open=True close=True substring_count=1 len=37
+         TEXT: <!-- 探针行：基线 13911 字节，Edit 单行追加后复量 -->
+### D295  file=D295-紧对数光滑Kähler纤维化的B半振幅.md
+    lines=328  cr=0  markers=1
+    L55   REPAIR whole=True open=True close=True substring_count=1 len=17
+         TEXT: <!--probe-D295-->
+### D298  file=D298-Gersten猜想在无Baumslag-Solitar子群的单关系群上的证明路径.md
+    lines=401  cr=0  markers=1
+    L67   REPAIR whole=True open=True close=True substring_count=1 len=18
+         TEXT: <!-- D298 落盘探针 -->
+### D314  file=D314-三角形弦的平均长度与真空盖选中的振幅.md
+    lines=761  cr=0  markers=1
+    L151  REPAIR whole=True open=True close=True substring_count=1 len=40
+         TEXT: <!-- D314 probe line: 落盘探针，仅用于验证写入生效 -->
+### D330  file=D330-有向反馈点集常数因子难近度的重构笔记.md
+    lines=352  cr=0  markers=1
+    L61   REPAIR whole=True open=True close=True substring_count=1 len=19
+         TEXT: <!-- D330 落盘探针行 -->
+### D339  file=D339-平面XY模型临界中心磁化的对数修正与振幅确定.md
+    lines=409  cr=0  markers=1
+    L56   REPAIR whole=True open=True close=True substring_count=1 len=19
+         TEXT: <!-- D339 落盘探针行 -->
+### D382  file=D382-六阶复Hadamard矩阵的精确Fourier证书.md
+    lines=497  cr=0  markers=1
+    L40   REPAIR whole=True open=True close=True substring_count=1 len=24
+         TEXT: <!-- probe-line-D382 -->
+### D389  file=D389-正位移匹配矩阵的指数PSD秩.md
+    lines=367  cr=0  markers=1
+    L49   REPAIR whole=True open=True close=True substring_count=1 len=37
+         TEXT: <!-- D389 落盘探针行：建稿后在此追加一行，用于复量字节。 -->
+### D431  file=D431-光滑各向同性弹性逆问题的全局唯一性.md
+    lines=227  cr=0  markers=1
+    L226  REPAIR whole=True open=True close=True substring_count=1 len=43
+         TEXT: <!-- D431 协议探针行：仅用于 Edit 落盘活性验证，不属于正文内容 -->
+### D436  file=D436-稳定Morse数以下的哈密顿不动点.md
+    lines=363  cr=0  markers=1
+    L362  REPAIR whole=True open=True close=True substring_count=1 len=51
+         TEXT: <!-- D436 probe: final-append writability check -->
+### D437  file=D437-二十二维中低于稳定莫尔斯数的哈密顿不动点.md
+    lines=363  cr=0  markers=1
+    L362  REPAIR whole=True open=True close=True substring_count=1 len=38
+         TEXT: <!-- 落盘探针 D437-end，此行仅用于收工复量，非正文内容 -->
+### D457  file=D457-从伴随除子的约化支撑提升截面.md
+    lines=284  cr=0  markers=1
+    L59   REPAIR whole=True open=True close=True substring_count=1 len=21
+         TEXT: <!-- D457 落盘探针占位行 -->
+### D30  (KEEP only note unless also in REPAIR list)
+    L6    KEEP  ticks=4  marker quoted inside a code span (backtick count 4) as part of the source-file description; quoting line is never cleaned
+         TEXT: 素材：`研究笔记\素材\Kähler负pinched三维fold-素材.md`（131,178 字节，末尾 `<!-- 完 -->`）。
+### D374  (KEEP only note unless also in REPAIR list)
+    L65   KEEP  ticks=0  protected by this note's own declaration at L274 (protocol residue, kept and not deleted); ambiguous -> keep and register
+         TEXT: <!-- D374 write-probe -->
+### D374  (KEEP only note unless also in REPAIR list)
+    L274  KEEP  ticks=2  defect declaration line quoting the marker in backticks (protocol residue registration)
+         TEXT: 五、协议残留：L65 的 `<!-- D374 write-probe -->` 一行是落盘探针协议线，按协议保留、不删除。
+### D45  (KEEP only note unless also in REPAIR list)
+    L1    KEEP  ticks=0  recovery-provenance banner, not a self-check probe; carries substantive rebuild info, no probe/verify wording
+         TEXT: <!-- 恢复副本：由 transcript agent-ageneral-purpose-43f5727da3aa401d.jsonl 重放 Write/Edit 序列重建（2026-10-08 18:05）。原稿被重复派遣的 agent 用 Write 覆盖丢失。 -->
+### D217  (KEEP only note unless also in REPAIR list)
+    L16   KEEP  ticks=0  anchor-protocol line whose own text declares permanent retention in place and wording; not a byte probe -> ambiguous, keep and register
+         TEXT: <!-- 锚点行：本行是本稿末段协议记录起点，后续追加一律锚在文件当前最后一段之后，本行与其下探针行永久保留原位原文 -->
+
+measured sites total = 36 ; REPAIR = 31 ; KEEP = 5 ; sum = 36
+notes repaired = 25 ; notes kept-only = 4
+ASSERT ERRORS: none

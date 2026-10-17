@@ -1,0 +1,18 @@
+### D08 bytes=154754 dir=preprints/The-Mezard-Parisi-formula-for-diluted-spin-glasses-September-23-2026/build files=13 total=128849 uncited_n=5 uncited_bytes=17438
+      5301 sections/consequences.tex
+      5092 sections/introduction.tex
+      2828 sections/overview.tex
+      2620 main.tex
+      1597 glyph-mappings.tex
+### D137 bytes=215682 dir=preprints/Strict-convexity-and-differentiability-of-the-planar-exponential-first-passage-limit-shape-September-24-2026/build files=17 total=342346 uncited_n=1 uncited_bytes=13640
+     13640 sections/differentiability/endpoints.tex
+### D68 bytes=293647 dir=preprints/Compatibility-entropy-and-the-spectrum-of-a-Thorp-sweep-September-26-2026/build files=19 total=477823 uncited_n=9 uncited_bytes=182923
+     30282 sections/09-projection-deletion.tex
+     28902 sections/13-collision-series.tex
+     26894 sections/08-asymmetric.tex
+     26796 sections/06-tilted-arrays.tex
+     25296 sections/05-inverse-color.tex
+     18789 sections/04-conditional-ranks.tex
+     15825 sections/00-introduction.tex
+      9646 sections/03-spectral-conversion.tex
+       493 figures/compatibility-square.tex

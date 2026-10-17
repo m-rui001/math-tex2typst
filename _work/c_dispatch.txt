@@ -1,0 +1,232 @@
+# C 稿派单状态（每次派发/收稿就地改这一份，行格式：提示词 | 号位 | 状态 | 实测）
+# 派单正文自带参数，启动语只指文件名；写手对本文件的禁令见各提示词 HEAD 的「本派单文件自身除外」。
+prompt_C01C02.txt            C01,C02              COLLECTED 2026-10-15 18:35（C01 39,609 B／C02 49,734 B，sweep 两趟收敛、禁串零、节号连续、位置串 99+124 bad=0、普查零拒渲）
+prompt_C03C04.txt            C03,C04              FIRED 2026-10-15 17:58
+prompt_C05_C06_C07.txt       C05,C06,C07          FIRED 2026-10-15 18:09
+prompt_C08_C09_C10_C11.txt   C08,C09,C10,C11      FIRED 2026-10-15 18:35（指针式启动：只给派单文件名）
+prompt_C12_C13_C14.txt       C12,C13,C14          PENDING
+prompt_C15_C16_C17.txt       C15,C16,C17          PENDING
+prompt_C18_C19_C20.txt       C18,C19,C20          PENDING
+prompt_C21_C22_C23.txt       C21,C22,C23          PENDING
+prompt_C24_C25_C26.txt       C24,C25,C26          PENDING
+prompt_C27_C28_C29.txt       C27,C28,C29          PENDING
+prompt_C30_C31_C32.txt       C30,C31,C32          PENDING
+prompt_C33_C34_C35.txt       C33,C34,C35          PENDING
+prompt_C36_C37_C38.txt       C36,C37,C38          PENDING
+prompt_C39_C40_C41.txt       C39,C40,C41          PENDING
+prompt_C42_C43_C44.txt       C42,C43,C44          PENDING
+prompt_C45_C46_C47.txt       C45,C46,C47          PENDING
+prompt_C48_C49_C50.txt       C48,C49,C50          PENDING
+prompt_C51_C53_C54.txt       C51,C53,C54          PENDING
+prompt_C55_C56_C57.txt       C55,C56,C57          PENDING
+# 不写作：C52 = math/0503651（arXiv 源码两条路均 403，PDF-only，按规格只登记）
+# 换代记录（两代）：18:15 一份单四份；18:37 收成三份。理由是本体的轮数是瓶颈（每个子 agent 回报要吃一轮），
+# 而一单的份数由子 agent 的工具调用上限定死：实测单份 C 稿约 50 次（C01+C02 那一单 99 次），上限 150 次，
+# 四份要 200 次必然跑断，故三份一单留余量。17 张提示词覆盖 C05--C57 共 52 号（C52 无源不写作），
+# 查重已核：号位无重复、无遗漏（python 逐文件名统计）。
+#
+# 收稿链（一条命令跑完；等它的写手报完再动刀＝在飞锚位冻结，字节过了 22,000 不是收稿凭据）：
+#   python _work/c_collect.py C<nn> [C<mm> ...]
+#     = 宏表重建（_work/macro_extract.py 从 57 份素材 preamble 逐字抽，现 3,751 条）
+#       -> CR 归一（行内单枚 CR 删除，配三条断言）-> python .tools/sweep.py --root=被引笔记 x2（第二趟只允许 size=）
+#       -> KaTeX 普查（第一读，落 _work/_c_sites.jsonl）-> _work/c_macro_fix.py --apply
+#       -> ccheck -> 普查复量 -> _work/index_backfill.py --apply
+#   回改只有一条路：普查报出的宏名查该份素材的定义表，定义体规范化（\textup{Num} 这类文本态算子名 -> \operatorname{Num}，
+#   大小写逐字；\OO -> \mathcal{O} 这类原形直接搬）；表里没有再看宏包凭据（ALIAS：\dasharrow 随 xy-pic main.tex:8、
+#   \mathds 随 dsfont NonVanishing3.tex:18）；两者都无就登记 _work/c_macro_unresolved.txt，不发明形。
+#   链条已在拷贝根验过（--root=_work/probe_c）：全链跑通，普查 8 枚拒渲收到 1 枚（那枚是 C03 L403 的美元号，另一族）。
+#
+# 18:33 KaTeX 普查读数（真实根）：files=6 spans=4472 refused=8 files_hit=3 unclosed_spans=0
+#   C02 \dasharrow 2（L76/78，上一轮回改之后写手新写的两节）
+#   C03 \OO 2（L53/194）＋1 枚「$ 用在数学态」（L403）
+#   C04 \mathds 3 跨度／4 站点（L117/125）
+#   C01、C05、C06 零拒渲
+#
+# 已登记的待收缺陷（写手报完再清，18:35 复量；在飞稿一律不动刀）：
+#   C03 82,563 B：L403 数学态里混进一枚美元号（普查「Can't use '$' in math mode」），sweep 与宏回改都不吃，要按行定点
+#   C02 收稿读数（18:35）：写手自陈的批量更正笔里 sed 把替换串中的 `\l`/`\r` 当 GNU 转义序列吞掉，一度产出 `vert<CR>vert`
+#            损坏（47 枚行内 CR 由此来），下一笔自修；`\Ker` 读作 $\ker$ 是本稿 §0 记号对照行自己申报的读法，不是漂移。
+#   C01/C02 已收：禁串零、CR 零、定界符偶、table_rows 零竖线事故、位置串 bad=0
+#   位置串按 ccheck 每份复量，此前 598 处 bad=0#
+# 2026-10-15 22:10 盘上实况（本体测量）：
+#   已收：C01 39,609／C02 49,734／C03 82,542／C04 63,132／C05 69,448／C06 47,649／C08 34,116／C09 22,064／C10 35,910
+#   在飞：C07、C11、C12（c05c07 单在写 C07；c08c11 单在写 C11；c12c14 单 20:08 派发在写 C12）
+#   prompt_C12_C13_C14.txt = FIRED 2026-10-15 20:08；其后 13 张三份单 PENDING，档位 3 已满，不再加派
+#   .tools/inflight.txt 为空（写手不维护），在飞判定只凭 mtime 与同单后一份是否已起笔
+#
+# C10 已按新链收完（34,297 -> 35,910，三轮 peel 到本单零站点）。上一条登记的那笔缺陷修在尺上：
+#   _work/c_macro_fix.py 的 normalize() 现认 AMS 字体梯子（\fam\msbfam\tenmsb -> \mathbb 等三条，裸名 \Bbb/\Cal/\euf 同此），
+#   先剥 \mathop{..}\nolimits 壳再交 \operatorname 规则；收尾断言花括号配平、体内不得有 \fam、\ten*、*fam、\textfont、\eight*，
+#   不满足就走「登记不发明」那条路，不落盘。_work/c_collect.py 的「普查->回改」改成最多八轮成环
+#   （机理：KaTeX 每个跨度只报第一枚拒渲宏，一层展开必露下一层；C10 实测 180 枚 -> 2 枚 -> 1 枚 -> 零）。
+#   全表读数 3,751 条定义：3,681 可渲／63 登记（全是无字形的裸字体开关，本就不该单独成形）。
+#   残留宏名不等于缺陷：\wt、\NS、\rank、\cO、\Aut、\CP 由 _work/katex_macros.js 的 211 条共享宏表接住，
+#   \wt 是函数宏实测渲染出真 tilde，所以普查「本单零站点」是诚实读数。
+#   待清：C11 29 枚／C12 1 枚／C07 1 枚，在飞稿不动刀。
+# 22:35 追加（本腿实况）：
+#   C12 已收：59,861 -> 59,866 B（\dasharrow 1 枚按 xy-pic 宏包凭据回改），ccheck 全绿、poscites 190 bad=0、末节接缝=Y
+#   C09 末节标题按规格规范化：「## 8 Nakano 半正推广与本稿在本语料里的位置」-> 「## 8 与本语料的接缝」，22,064 -> 22,033 B（仍过下限）
+#   ccheck 新增三条硬结构判据（head0=## 0 取证边界、K 须 5..9、末节须以「与本语料的接缝」收），全 12 份读数：
+#     合格 9 份（C01-C06、C08、C10、C12）；缺末节 3 份（C07 K=1／C11 K=8 末节是「极大中心与延拓」／在飞不动刀）
+#   写手侧实况（只凭盘上 mtime 与量具读数，不凭自报）：c05c07（C07 只到 §1）、c08c11（C11 缺接缝节）、
+#     c12c14（C12 已收，C13/C14 未起笔）三单自 20:36／20:36／21:17 起零写盘，最长静默 111 分钟，且本体未收到完成或失败通知；
+#     一分钟窗口采样（宏表重建 + INDEX 复跑同时跑）实测变动文件=0。
+#   据此加派一张新单 c15c17-write（prompt_C15_C16_C17.txt，22:33 派发）——C15/C16/C17 与三张在飞单可能写的号位零重叠，
+#     即使那三单还活着也不会撞同一份稿；若那三单确认已死，则本腿并发回到 3 档。
+#   回引侧覆盖核对（_work/citeback_plan.py --apply 后）：11 份成稿 -> 应挂节引用稿 8 篇／实挂 8 篇、漏挂=无、节内条目缺=无。
+# 01:40 UTC 追加（配额墙 -> 数学优先入规 -> 写手腿改用 codebuddy）：
+#   配额墙：22:33 那单 c15c17 与本轮新发的两张（C19_C20_C21、C22_C23_C24）在同一分钟全部死于
+#     「You've reached your daily usage limit for Chat」。c15c17 死前把 C15 写完（43,980 B，结构全绿：head0=Y K=9 seam=Y poscites 113 bad=0）。
+#   C15 收稿：43,980 -> 44,588 B（sweep 清禁串 8 处 + 宏展开 +413B + 粘连拆分 +192B），ccheck 全绿、math share 31.2%。
+#     链上暴露两族量具缺陷，都改在尺子上而不是改稿：
+#     (a) 素材 `\DeclareMathOperator{\Int}{int}` 这类纯字母体被展成裸字母串——数学模式里读成一串斜体单字母的乘积，
+#         还要吞掉前面控制字的尾（`\in`+`int` 粘成 `\inint`）。normalize 现把纯字母体一律包成 `\operatorname{}`；
+#         展开式若不是反斜杠开头，替换时前置一个空格（数学模式里空格不要钱，粘连就没机会发生）。
+#     (b) 已经粘出来的坏形走新增「粘连拆分」路数：`\inint` 7 枚／`\subseteqint` 3 枚／`\inrelint` 1 枚／`\subseteqrelint` 1 枚，
+#         共 12 处；左半只认 KaTeX 内置关系符表，右半只认本篇素材 preamble 里展开成算子名的那些词，两侧都有素材凭据，不发明。
+#   数学优先入规（用户指示「我们应该数学优先」）：规格加 4.1 节，明写它压在结构条款之上——主定理要写到公式级别（假设与结论都是
+#     数学，不许只用中文转述"作者证明了某估计"）、推导链要露中间式、反例给具体数字、背景动机不得成节扩张、体量不足靠补数学补。
+#     ccheck 加 MATH_SHARE_LOW 判据（数学跨度字节占比下限 25%）；写手简报 _work/cb_writer_brief.txt 把这几条放在硬约束之前。
+#   全族密度实测 13 份：均值 32.1%；低于下限两份——C06 20.9%（stmt 行 19，叙述挤掉公式）、C07 3.7%（只到 §1，未起完）。
+#     陈述行数薄、要按 4.1 补数学的：C02 1 行／C09 2／C10 3／C12 5／C08 6。
+#   写手腿改用 codebuddy（用户明示授权）：`codebuddy -p -y --model fast-model` headless 实测能 Read/Write，不需交互鉴权。
+#     01:39 起三张单在跑（node PID 4800／13568／9284，并发＝档位 3）：C13_C14_C18、C19_C20_C21、C22_C23_C24；
+#     log 落 _work/cb_<单>.log——注意 `-p` 只在结束时吐字，判活只能看目标稿 mtime 与进程。
+#   回引侧：C15 入节后 8 篇引用稿全部 gate_one problems=[]、contig=True（D289 48 行／D305 70／D318 77／D385 43／D447 59／D451 40／D471 41／D476 37）。
+# 01:45 UTC 追加（占比这把尺误伤，改成两头判）：
+#   先按「占比 < 25%」报了 C06 一份缺陷，读 §6（稿 L126-131）后否证：那份稿的猜想 4.1 三条结论、定理 2.1.1 的
+#     $$\Phi^q_{\omega,h}$$ 满射式都是公式级在写，占比低是长段落逐条推导把散文字节撑起来的结果。
+#   实测展示式枚数（17 份）：C06 disp=20、C03 disp=54、C07 disp=1。判据改为两头都低才响——
+#     ccheck 现报 `math: spans=.. disp=.. bytes=.. share=..% stmt_lines=..`，只有 share<25% 且 disp<5 记 MATH_THIN；
+#     规格 4.1 与写手简报同一条口径一起改（全库只留一个数）。改后全族仅 C07 命中（3.7%＋1 条展示式，那份本就只到 §1）。
+#   codebuddy 侧前四份新稿的读数（只读，未动刀）：C13 share 29.0% disp 7 stmt 17／C19 28.5% 19 19／C22 34.5% 31 4／C23 27.3% 27 5，
+#     位置串实测 bad=0——fast-model 这一路没有编行号。
+# 01:50 UTC 追加（c22c24 交回并收稿；C11 补上缺的接缝节；槽位补派 C07 续写）：
+#   收稿：C22 27,764 -> 27,767／C23 23,461 -> 23,517／C24 22,528 -> 22,545 B，三份 ccheck 全绿（K=7/6/6、seam=Y、bans=none、poscites 81/63/45 bad=0）。
+#     宏回改只两处：C23 `\SF`->`\operatorname{SF}` 4 站、C24 `\dbar`->`\overline{\partial}` 1 站，普查终本单零拒渲站点。
+#   写手自报的数不可用作判据（老规矩再验一次）：C23 自报占比 34.71% 实测 27.4%，C24 自报 44.92% 实测 30.1%；口径只认盘上实测。
+#   C11 缺末节那份缺陷由本体侧补：新增 `## 9 与本语料的接缝`（逐处 grep 语料稿的 Berndtsson/Păun/Bergman 出现处得到的对应，
+#     D289 L121-147 用相对 Bergman 核定理并在 L129 踩了 §3 一致上界的边界、D305 L113 与 L337、D385 L261、D447 L143/L257/L375 用得最重、
+#     D471 只在对照节登记正文未使用），52,790 -> 53,113 B，K=9 seam=Y。两处自伤一并修掉：
+#     (a) 我把 D 稿自己素材的文件名行号（`criterion.tex:174` 等 5 枚）写进 C11，对照本稿素材目录（只有 `main.tex`）全是 NOFILE——
+#         位置串尺是按本稿素材目录验的，跨稿的素材行段只能写成「素材侧在 criterion 那一节」这种非位置串形。
+#     (b) §0 版式表里 `` `\claim X|...\endclaim` `` 那枚竖线：代码跨度里的 `|` 照样进闸门计数（表块自比按字符数，不看是否转义），
+#         改成文字描述「标题与正文之间素材用一根竖线分隔」。badpipe 1 -> 0。
+#   回引侧：citeback_plan --apply 新挂 4 篇稿的对照节（D176 §20 1 条／D207 §23 2 条／D210 §17 2 条／D242 §23 1 条），
+#     连同原有 8 篇共 12 篇 APPLIED，gate_one 全部 problems=[]、contig=True。
+#   并发：c22c24 交回后槽位立刻补一张续写单（prompt_C07续写.txt，禁止 Write、禁止改动已落盘 §0/§1，把 C07 从 §2 写到 §8）；
+#     当前在跑三张：c13c18、c19c21、c07cont。
+# 01:55–02:01 UTC 追加（C19/C20 交回→500 停机→C21 续写；C19 节块置换；量具两处入规）：
+
+- c19c21 那张 codebuddy 单在 C21 的 §0 之后死于「500 the model provider is temporarily unavailable」（log 只有这一行，退出码 0）。C19 39,848／C20 23,016 已落，C21 只剩 733 字节的骨架。凭据：`_work/cb_c19c21.log`。**结论：codebuddy 的 `-p` 退出码不报失败，判成败只看 log 正文与目标文件字节。**
+- 立刻补派 C21 续写单 `_work/prompt_C21续写.txt`（硬约束：`Write` 次数 0、§0 一字不动、Edit 追加、节号 1..K 连续且末节以「与本语料的接缝」收尾、≥22,000 B、数学优先）。09:54 fire，09:59 实测 29,563 B 已过下限。并发仍是 3 档（c13c18／c07cont／c21cont），没有自抬。
+- C19 的块置换：写手把 `## 8 通用 nefness 与 Miyaoka–Yau 型不等式` 追加在了 `## 9 与本语料的接缝` 之后（nums=0..9 但物理序 0,1,…,7,9,8）。修法是把 §8 整块搬到 §9 之前，编号与正文一字不动（`_work/c19_reorder.py`）。复量 contig0=True、seam=Y。
+- 量具入规两条：(1) `ccheck.py` 的禁串「而是」加切分护栏 `(?<![从因])而是`——「从而是」「因而+是」里的 而是 不是转折连词，C19 那 2 枚假阳就是这么来的；(2) KaTeX 拒绝族的三类形在 C19/C20 上补齐：`\tilde\mathcal F` 必须写成 `\tilde{\mathcal F}`（accent 吃组），`\sigma|_X_y` 的重下标写成 `\sigma\rvert_{X_y}`，`\bordermatrix` 与 `\begin{tikzcd}` 无 KaTeX 凭据——前者降级为把行列指标写进第一行第一列的 `\begin{matrix}`（信息零损失），后者按规格改成散文复述四条边与两条复合相等。C19 收稿后 41,271 B／spans 658／share 30.1%／poscites 76 bad=0／零站点；C20 26,223 B／spans 414／share 47.4%／poscites 56 bad=0／零站点。
+- 回引腿：`citeback_plan.py --apply` 本轮 12 篇 APPLIED，其中 D289/D305/D451 +121B、D318 +268B、D385 +565B、D447/D471 +436B（挂上 C19/C20/C21 的行）。12 篇 gate_one 全 `problems=[]`、`contig=True`。
+- 盘面：过下限的 C 稿 22 份（C01–C06、C07 22,982、C08–C12、C13 25,143、C14 37,920、C15、C18 22,502、C19、C20、C21 29,563、C22–C24）；队列剩 35 份待派（`prompt_C25_C26_C27.txt` 起到 `prompt_C56_C57.txt`，C52 是 PDF-only 只登记不写）。全库 KaTeX 残留 423 枚集中在在飞三单（C13 357、C18 与 C14 的新站点等），交回后由 `c_collect` 处理，不手改。
+# 02:05–02:09 UTC 追加（C13/C14 拒渲长尾 → 回改链补上参数宏实参绑定这一环）：
+
+- 本轮收稿读数：C13 30,927 B（spans 471、share 40.8%、seam=Y、contig=True）、C14 39,446 B（spans 501、disp 72、share 25.8%）、C18 22,496 B（spans 354、share 21.1%）、C21 29,633 B（spans 720、disp 27、share≈29.9%、K=8、seam=Y，写手自报与实测一致）、C07 40,256 B（在飞，末节仍是 `## 5`，接缝缺，等它交回再收）。全库 C 族 KaTeX 残留从 641 → 154 枚。
+- **参数宏的 `#N` 是这一族的头号静默坏形**：素材写 `\newcommand{\Dfunctor}[1]{\mathcal{D}_{#1}}`，回改链按模板逐字展开，产出 `\mathcal{D}_{#1}{X}` 这种把 TeX 占位符印进正文的形；KaTeX 报 `Expected '}', got '#'`，而普查对这类站点给的 `tok` 是 null，于是 `c_collect` 认定「无凭据可改」直接跳过。C13 一次就积了 50 枚、C14 积了 22 枚。
+- 修法落在链上而不是落在稿上：`_work/c_macro_fix.py` 新增 `bind_group()`，按花括号配对扫描（支持任意层嵌套，正则那版在 `\mathcal{D}_{#1}{\operatorname{X},\overline{\mathbf{G}}}` 上漏绑定），把紧随 `#N` 的组当实参填进去；`{#1}{X}` 这种外层已被一对括号包裹的，整对换成实参组，得 `_{X}`。只在代码跨度之外做，绑不上的裸 `#N` 计数登记。C13 绑定 74+3 处、残留 0；C14 绑定 12 处。同时把它的落盘闸门从「有宏站点才落」改成「有宏站点或有绑定才落」，并把「ops 为空即退出」改成「ops 为空且无 `#N` 残留才退出」，否则这条路永远走不到。
+- `ALIAS` 补两枚宏包凭据：`\llangle`/`\rrangle` → `\langle\!\langle`/`\rangle\!\rangle`（素材无 `\newcommand` 定义、mathtools 标准形）。C14 的 2 枚展示式由此收掉。
+- **`#N` 之外还有同族的第二形**：KaTeX 自带 `\Set` 且把它当带参宏用（`\Set` 单独出现报 `Unexpected end of input in a macro argument`），素材 1805.11558/main.tex:98 的定义是 `\newcommand{\Set}{\mathbf{Set}}`。因为 `\Set` 不是未定义控制序列，普查给出的 `tok` 仍是 null，回改链同样看不见。本轮按素材凭据在 `_work/c13_set_fix.py` 里做了代码跨度外的定点展开（2 处），C13 收干净。这条判形（报错串是 macro argument 类且末尾是一个反斜杠词）登记为量具下一条要补的口子，不做全库通改。
+- 回引腿：`citeback_plan --apply` 本轮 13 篇 APPLIED（新增 D307 +308B 挂 C07、D476 +133B 挂 C21/C03 两条），gate 全 `problems=[]`、`contig=True`；completed C 稿 23 份，未达下限只有 C26（16,204 B，在飞）。
+- 在飞：c25c27（C25 26,194 已成、C26 16,204 正在写、C27 未开）、c07cont（C07 10:07 仍在追加）。并发 3 档未动。
+
+# 02:11 UTC 停车：见 `_work/park_C_leg.md`（24 份过下限、队列 33 份、在飞三单 c07cont／c25c27／c28c30；欠账三笔＝C07 接缝缺＋C13 一枚 tok=null＋C18 share 21.1%）。goal 17/20 轮，等 /goal resume。
+
+# 02:20–02:26 UTC 追加（看门人上岗；C25/C26/C27 与 C07 收稿；参数宏占位符的第二形）
+
+- 新增 `python` 侧的写手看门人 `_work/c_supervisor.py`（已后台在跑，日志 `_work/c_super.log`）：一张单交回就对该单过下限、120 秒内不再动的稿跑 `c_collect` → `citeback_plan --apply` → 从队列补派下一张，并发上限仍是 **3 档**（占用度按 node.exe 枚数估，所以手工在飞的单会让它临时少派一张，手工单退尽后自动回到 3 档）。它只收自己派的单，未达下限的号只在 log 记「欠账」，不重派整单（重派会重写已完成的份——这条是 C21 那次 500 学的）。坐标与停法写在 `_work/park_C_leg.md`。
+- 手工在飞的 c25c27 交回后我自己收：C25 26,194 → 27,985 B（宏 149 站，`\bx`→`\operatorname{x}` 32、`\ord` 51、`\fm` 36、`\fa` 16；spans 484、disp 38、share 50.0%、poscites 101 bad=0）；C26 22,456 → 22,954 B（66 站）；C27 33,729 → 33,804 B（5 站）。
+- **参数宏占位符的第二形＝占位符不在模板尾部**：素材 `\rddown` 的模板是 `\left\lfloor{#1}\right\rfloor`，回改链把模板逐字发出、实参组跟在 `\right\rfloor` 之后，`bind_group()` 只认紧跟 `#N` 的那个组 ⇒ 零绑定、把 `{#1}` 印进了正文（C27 L151 一枚）。本轮按模板语义手工填成 `\left\lfloor{\Theta'''}\right\rfloor`。**链上正确的形是展开时就把实参代进 `#N` 位**，登记为下一条要补的口子（与 `\Set` 同名撞车那一形同族，两条都还没进链）。
+- c07cont 交回（log 有正文才算交回）：C07 68,108 → 67,988 B，K=8、seam=Y、poscites 234 bad=0、spans 986、disp 69、share 25.0%、stmt 49。两处定点修补：
+  (a) L213 展示式闭符误写成单枚 `$` 且 `\square` 挤在式内——它使其后所有跨度错位，普查那 47 枚「(定界符)」拒渲整族是它的级联；补成 `…\geqslant 0.\quad\square$$` 后本篇残留 47 → **6 枚**，odd_lines 2 → 0。
+  (b) L589 自查段把规格的禁串清单整段抄进正文（禁词计数不看语义，抄清单＝命中），改成不点名的自查陈述；同句在反引号里写的 `$` 一并去掉（那枚 `odd$ L589` 是代码跨度假阳，不是缺陷）。
+- 回引腿：`citeback_plan --apply` 9 篇 APPLIED（D289/D305/D307/D318/D385/D447/D451/D471/D476；Δ>0 的是 D307 +130、D318 +407、D385 +407、D476 +130），`gate_one` 九篇全 `problems=[]`、`contig=True`。
+- 盘面：**28 份过下限**（C01–C15、C18–C29；目录 1,092,833 B → C07 修后约 1,092,7xx）；未落盘 28 个号（C16、C17、C30–C51、C53–C57），C52 是 PDF-only 只登记不写。在飞：c28c30（C29 正在追加）＋看门人的 c16c17。
+- 新欠账：C26 K=14 且末节非接缝、C27 K=12，都超规格 5..9 —— 口径要先定（并节 vs 放宽区间）再动笔，不一边改尺子一边改稿。
+
+# 02:28 UTC 追加（c28c30 手工单我自己收：C28/C29 两份数学密度最高的稿；全库残留 514 → 206）
+
+- 收稿：C28 50,471 → **56,055 B**（宏 513＋11 站两轮回改：`\e`→`\varepsilon` 425、`\dbar` 49、`\hs`→`\operatorname{e}` 86、`\deldel` 5、`\lla/\rra` 11＋11；
+  spans 849、disp 94、share **54.6%**、stmt 62、poscites 119 bad=0、K=7、seam=Y）；
+  C29 **55,682 B**（两轮回改 +6,080 B；宏 416＋8 站：`\lct` 93、`\Val` 64、`\nvol`→`\widehat{\operatorname{vol}}` 56、`\fm` 38、`\Jac` 22、`\init` 17、`\length` 11；
+  spans 866、disp 97、share **56.4%**、stmt 61、poscites 125 bad=0）。这两份是 C 族至今数学占比最高的两份——4.1 入规之后写手侧确实把公式级陈述与中间式写进来了。
+- C29 的 `## 11` 末节是接缝，但 K=11 超规格 5..9（第三份命中：C26 14／C27 12／C29 11）。三份都是「节切得细」而非「内容缺」，
+  口径未定前不并节、也不放宽区间——这条现在是唯一悬着的规格判据，需要用户或下一轮定一个数。
+- C30 是同一张在飞单的第三份（骨架 1,382 B，写手还在追加，未碰）。全库 KaTeX 残留 **514 → 206 枚**，`files_hit=8`。
+- 回引：`citeback --apply` 后 Δ>0 的五篇 D307 +154／D385 +133／D447 +133／D471 +133／D476 +154，`gate_one` 五篇全 `problems=[]`、`contig=True`；带对照节稿数仍是 **13 篇**。
+- 盘面（实测）：**28 份过下限**＝C01–C15、C18–C29，过下限合计 **1,197,770 B**（目录 29 个文件 1,203,587 B，含 C30 骨架 5,817）；未落盘 27 个号（C16、C17 在飞，C31–C51、C53–C57 在看门人队列，C52 PDF-only 不写）。
+  看门人（`c_super.log`）在跑，队列 9 张待派；在飞两张：c28c30 的 C30＋看门人的 c16c17。并发＝3 档。
+
+# 10:42 UTC 追加（链上补齐参数宏实代入位与界定符 \def 凭据；全库残留 206 → 124 枚）
+
+- **参数宏的展开形改了**：`c_macro_fix.py` 不再「把模板逐字发出、再指望后面那个组能被绑回去」，而是展开时就从站点处读实参、代进模板的 `#N` 位（`read_arg`＋`fill`）。
+  站点两形同一条路径：宏名形（`\holom{\psi}{Z}{X}`）与**残模板形**（正文里已经印着 `\ensuremath{#1:#2 \rightarrow #3}{\psi}{Z}{X}` 的那批——普查把这类站点记成 `tok=null`，`ops_for` 拿不到宏名，所以第二条路径按本篇 preamble 的模板字面串找站点）。
+  旧的 `bind_group()` 删掉了：它只认占位符在模板尾部那一形，`\mathcal{D}_{#1}{X}` 之外的 `\left\lfloor{#1}\right\rfloor{mD}`、`\ensuremath{\mbox{Alb}(#1)\hspace{0.5ex}}(X)` 全是它的盲区。占位符被 `{}` 包住就整对换成实参组，被 `()` 包住就填内文（素材 `\proj`、`\Alb` 那一族），绑不上原样留着计数、不落盘不发明。
+- **界定符 `\def` 的凭据口子补上**：`macro_extract.py` 以前在 `\def\rfdown#1.{…}` 的 `#` 处直接丢整条定义（1009.3188/macros.tex 一族 79 处、`\rdown \rup \rcup \map \deriv \gr \alist` 共 80 余个宏全在外）。
+  现在解析参文本，界定符只认实际出现的句点，逐位记在体尾 `\x00` 标记里；回改侧按句点取实参并吃掉句点（`\rfdown\Upsilon_\mu.` → `\lfloor{\Upsilon_\mu}\rfloor`）。宏表 4034 条（C16 280 条，比旧表多 79 条）。
+- **两族新兜底**（都要素材凭据，不凭空造）：
+  (a) **同族简写梯子**：素材按「小写前缀＋字母」成族定义字体宏（`\bC -> \mathbb{C}` 且同族兄弟 ≥2 枚）时，写手沿同一约定的 `\bc` 认这一族；一族两制不作数。
+  (b) **算子名兜底**：整词字母、长度 ≥2、又不是简写形的裸控制字 → `\operatorname{词}`，字母逐字原样（`\Lift \Con \Dis \relint \Conv \Int \Krull \PrId` 这一批写手自己起的名，共 46 枚站点）。图形类（`xymatrix bordermatrix tikzcd`）与盒子/文字外壳类（`mbox hbox text ensuremath ...`）设了 `NOTOPNAME` 例外：前者换算子名会把图吞掉，后者是包着内容的壳，实参组跟在后面。
+- 落地量（实测）：C16 70,664 B（平铺 8 枚＋`\rfdown` 实参代入 1 枚，站点 12→3）；C17 50,705 B（`\ensuremath`→`\mathord` 16 枚＋残模板代入 18 枚，站点 23→4）；C32 28,454 B（算子名 13 枚，站点 46→35）；C33 26,856 B（算子名 33 枚＋残模板 17 枚，站点 41→18）；C27 站点 14 枚未动（`\cB \cG \cL \cV \cX` 在 C27 自己的素材里一枚兄弟都没有，按纪律登记不发明）。
+  **全根 KaTeX 残留 206 → 186 → 124 枚 / files_hit 15**。
+- 两处链上自伤与收口：
+  (a) `\mbox` 没进 ALIAS，被算子名兜底接走成了 `\operatorname{mbox}{Alb}` 四枚坏形——已把 `mbox/hbox -> \text`（KaTeX 的同职形）加进 ALIAS，并把 C17 L365 那四处按 `\text{Alb}` 落回；`NOTOPNAME` 从此把外壳类名字排除在算子名兜底之外。
+  (b) C17 L115 末尾多打的一枚 `$`（`$\varepsilon>0$$）；`）就是它下游 `odd_lines=1` 与那批「(定界符)」的上游元凶，删一枚后 C17 残留 5→4、odd_lines 归零。复述旧律：**定界符族残留先找最上游那记未闭合**。
+- 回引腿：`citeback_plan --apply` 复写 D476（+221B，条目 10）与 D80（+565B，条目 4），`gate_one` 两篇 `problems=[]`、`contig=True`。
+- 盘面：**37 份落盘 / 36 份过下限**（C01–C36，1,490,181 B；C37 骨架在飞）。未写 20 个号（C38–C57，其中 C52 是 PDF-only 只登记不写）。
+  codebuddy 侧 `429 Credits exhausted` 后写手腿换回 Qoder `Agent`：在飞三张单＝C37/C38/C39、C40/C41/C42、C43/C44/C45（**并发仍是 3 档**）。看门人 `c_supervisor.py` 已停（它只驱动 codebuddy，队列也交尽）。
+- 欠账（按可见性排）：C34（K=15、HEAD_NUMBERS_BAD、share 22.2%）、C36（L281 odd `$`＋反引号奇）、C35（`main.tex:171 NOFILE` 位置串）、C16（`需要指出` 禁词 1 枚）、C27 简写族 14 枚、C32 `\A \bc` 与 18 枚定界符、C33 18 枚定界符、K∈5..9 口径（C26 14／C27 12／C29 11／C34 15 四份超区间，未定口径不动笔）。
+
+== 2026-10-16 11:09 UTC（C 腿第 12 轮）
+收稿：C37 28,244／C38 22,670／C39 31,897（11:06 通知，链全绿）；C43 42,858／C44 45,883／C45 65,397（11:07 通知，那单死于 maxTurns=150，稿本身结构全绿 K=9 bans=none poscites bad=0）。
+链上：c_macro_fix 新增第三 pass（下标位族）＋闸门 opsub 判据；全库 KaTeX 残留 129 枚/17 篇 → 36 枚/11 篇（parse-error 族 78 → 3）。C45 由凭据展开 \Prob→\mathbb P 40 枚、\NAE→\operatorname{NAE} 21 枚、\bits→\{0,1\} 10 枚。
+定点修补（c_note_repair4.py，备份 _work/C*.pre-repair4.md）：C07 \mathbb{Q 缺闭括号 8 枚；C34 \mathbb\mathbb{C}^r；C30 符号移植句换代码跨度；C16 Theorem $\ref{t_cox}_n$ 换代码跨度。
+回引：citeback --apply 后 Δ>0 六篇 D318 +127／D355 +175／D385 +127／D458 +422／D729 +422／D80 +175，gate_one 全 problems=[]。
+在飞 3 档：C40_C41_C42（C41 34,425 在写）、C46_C47_C48（C46 28,489／C47 27,200／C48 起笔）、C49_C50_C51（11:06 派）。待派：prompt_C53_C54_C55.txt、prompt_C56_C57.txt。盘面：47 个文件、46 份过下限；未写 C53–C57（C52 PDF-only 只登记）。
+
+## 2026-10-16 11:16–11:31 轮（记 12）
+- 11:16 收 C46/C47/C48（`c_collect`）：28,863／27,200／23,052 B，普查零站点，K=6/7/6，bans=none，poscites bad=0；占比 38.7/33.9/24.5%。
+- 11:16 `citeback_plan.py --apply`：Δ>0 三篇 D308(+343)/D318(+119)/D385(+119)，`gate_one` 三篇全 problems=[]。
+- 11:16 派 prompt_C53_C54_C55 → agent ageneral-purpose-1a4d634dfad67cbe（补上 3 档）。
+- 11:28 链上第四式（c_macro_fix.py 本篇凭据 general 展开，见 park 改动 4）：C29 --apply 3 枚/+48B，复量 refused 53→51、files_hit 14→13；C33/C13/C16/C17/C25/C27/C32 七份 dry-run 零站点。
+- 11:28 量具：c_cite_audit2.py（155 pairs／19 篇 D 稿全带对照节／缺行 0／路径无 0，唯在飞 C53）、c_share_table.py（48 份中位 31.5%、最低 20.9%、<25% 11 份；4.1 联合判据当前零份判缺失）、c_shadow_probe.py、c_gkey_probe.py。
+- 11:29 就绪未派：prompt_C56_C57.txt、prompt_M34_M24_M09.txt（加深单：不新增节、Write=0，靶 C34 stmt=1／C24 stmt=0／C09 stmt=2）。
+- 11:37 链上第五式（定界符贴紧）：新工具 `_work/c_dollar_tighten.py` 按 `spans()` 同一套词法剥开符后／闭符前的空白；全族（跳在飞九号）16 枚＝C13 15＋C48 1，--apply 后 `c_collect C13 C48` 把随即露出的 2 枚真 undef（`\Yplus`→`Y^+`、`\ordtwo`→`<_2`）回改，两份零站点（C13 30,907 B share 40.8% stmt 41／C48 23,051 B）。`c_collect` 已接这一步（sweep 两趟之后、普查之前），规格 §3 第一条加永久条款。复量 refused 52/13 篇，tok=null 只剩 C33 `\wt_\xi`（真无凭据）与在飞 C53。烟测：`c_collect C48` 二次跑 TOTAL=0＝幂等。
+
+== 2026-10-16 11:58 记 13（C53/C54/C55 收稿＋链上第六/七式）==
+- 交回：C53 33,196 / C54 30,140 / C55 22,426 B，K=8、CR=0、bans=none、poscites bad=0，三份 odd_lines 30/18/20 -> 0（并线 34 处），普查零站点。
+- C55 交工自报单笔 Edit 18,692 B（上限 10,000 B）：稿已稳定、结构全绿，登记不返工。
+- 链上第六式＝全库同族字体凭据（c->\mathcal 17 篇、f->\mathfrak 6 篇；b 两制不认）：C27 18 枚、C26 1 枚归零。同名精确凭据那一族覆盖率量出来 0 枚活站点，没写。
+- 链上第七式＝跨行行内式并入 c_line_merge.py（已挂 c_collect，在定界符之后）：并线让 4.1 的尺子重新数到公式，C53 share 29.7->32.8%。踩到游标 off-by-one 每处吞一行正文，硬闸改成「剥空白后逐字相等」。
+- 登记表自清 c_unresolved_prune.py：35 行 -> 6 行（判据只用今天普查有没有站点）。
+- 复量：普查 refused 52/13 -> 35/9（spans 37463、unclosed 0）；非在飞残留 14 枚/6 篇。回引 citeback --apply 后 Δ>0 四篇 D40/D54/D451/D476 gate_one 全 problems=[]。
+- 派：C56/C57（ageneral-purpose-67c374791f725516）＝第三档；在飞另两档 C40_C41_C42、C49_C50_C51。盘面 54 份成品＋C52 豁免，未写只剩在飞那两号。
+记 14（12:19）：C56/C57 交回并 c_collect 收完（双绿、零站点、INDEX 回填）；citeback --apply 后 D307/D471/D476 三篇 gate_one 全 problems=[]；回引腿复量 pairs=169、四项缺=0。空位补派 _work/prompt_M34_M24_M09.txt（C34/C24/C09 加深）＝ageneral-purpose-3f35e42b4f7af1fe，并发仍 3 档。第九式（定界符判据剥行内代码，_work/c_code_mask.py）已进尺子：C42 假 odd_lines 10→0。新量具 c_index_check.py（INDEX↔盘面一致性，现不一致=0）、c_cite_id_check.py（对照行 id↔稿核对，165 行零挂错）、c_odd2.py。
+
+记 15（12:37）：
+- 第六批定点修补 `_work/c_note_repair6.py --apply` 落地 8 枚：C16 `\rfdown\Upsilon_\mu`→`\lfloor..\rfloor` 2、C32 `\A^1`→`\mathbb{A}^1` 5、C33 `\wt_\xi`→`{\rm wt}_\xi` 1；三份 `ccheck` 双绿（70,681／29,232／26,907 B，odd_lines=0、bans=none、poscites bad=0）。备份 `_work/C16.pre-repair6.md` 等三枚。
+- 普查复量 17/7 → **14/6**；非在飞只剩 `\xymatrix`×3（C17/C28/C31）＋ C32 `\bc`×3。登记表自清（`c_unresolved_prune --apply`）6→4 行。
+- 终局量具三件全零：`c_cite_audit2` pairs=169／21 篇 D 稿带节／四向缺陷全 0；`c_index_check` 不一致=0（未挂档仅 C52 豁免）；`c_cite_id_check` rows=165／挂错 0／缺稿 0。
+- 在飞＝3 档：C34/C24/C09 加深、C51 补 §7 接缝、C41/C42 的 4.1 加深。停车坐标 `_work/park_C_leg.md` 已更到 12:35（改动 12..14）。
+
+记 16（13:01）：
+- **K 口径由用户定＝5..15**（12:57）：规格第 4 节改数；`ccheck.py` 新增 `spec_krange()`（区间只从规格读，读不到就报错）、输出行 `K=%d(lo-hi)`；`c_health_table.py` 删掉硬编码 fallback 改 assert。复量 C26 K=14／C27 K=12／C29 K=11 全部合规，健康表扫 48 份**有旗标 0 份**。
+- **C51 接缝单交回并过链**（12:58）：`## 7 与本语料的接缝` 已在末节，126,144 B／1,144 行、K=7、seam=Y、`$`偶、odd_lines=0、bans=none、poscites bad=0、share 51.4%、disp 198、stmt_lines=43、本单零站点；`citeback --apply` 全 Δ=0。编辑侧定点改掉旧缺陷 L1089「转 used 到」→「用到」。
+- 空位补派 `ageneral-purpose-0550fa3d857825b0`＝`_work/prompt_C17_C28_C31_xym.txt`（三条 `\xymatrix` 展示式改写成散文点名＋合态等式）⇒ 并发仍 3 档（另两档＝C34/C24/C09 加深、C41/C42 加深）。
+- 普查 12:58/13:00 两读：`refused=11／6 篇`＝非在飞 `\xymatrix`×3＋C32 `\bc`×3，在飞 C34 3 枚、C09 2 枚（含一枚 `\ar`，加深单自己写进图记号，交回读那一行）。
+- 弃用的一把尺：「中文夹英文词」关键字表（`[汉] [A-Za-z]{3,} [汉]`）全库几千枚命中绝大多数是 `Hermite 度` 类正形，零信息量。
+
+记 17（13:03，只读审计）：
+- 新增量具 `_work/c_material_audit.py`（goal 第一条腿「爬到了什么」的验收，与 `c_index_check.py` 各管一头）：INDEX 行=57、素材目录=56、缺陷=1＝只有 C52（`被引素材/math_0503651` 不存在，规格点名的 PDF-only 豁免）；**其余 56 个号四条判据全过**（目录存在／有 .tex／INDEX 报的主 tex 真在该目录／笔记 §0 逐字写着该目录），未被 INDEX 引用的素材目录=[]。
+- C52 现场重量（不凭记忆）：`export.arxiv.org/e-print/math/0503651` 与 `arxiv.org/e-print/math/0503651` 两条路今天仍 **403**（回的是 7,685 B 的 HTML 错误页，不是 gz/tar）⇒ 豁免成立，号位继续空着，不按「以后也许能下」改尺子。
+
+记 18（13:05）：
+- **第七批定点修补 `_work/c_note_repair7.py --apply`**：C32 `\bc(`→`{\rm bc}(` 三枚（29,232→29,247 B、行数/`$`/反引号不变、CR=0、`ccheck` 全绿）。凭据不是 preamble 的 `\def` 而是**素材正文的字面外壳**：`1707.05561/main.tex:1189/1191/1222` 作者自己写 `${\rm bc}(\Pi_\xi)$`，1191 行给出 Euclidean barycenter 释义 ⇒ 照抄外壳、字母逐字保留，不算发明。判据从此两问：先看本篇 preamble，再看素材字面形，两问都空才登记。这一族全库只有这三枚活站点，没给 `c_macro_fix.py` 加无样本可验的新 pass。
+- 复量：`node katex_census.js` 报 **refused=3 枚／3 篇、other error classes=0**，站点全是 `\xymatrix`（C17/C28/C31，改写单在飞）⇒ 今天 35/9 → 17/7 → 14/6 → 11/6 → **3/3**。登记表 `c_unresolved_prune.py --apply` 撤掉 C32 `\bc`，现 3 行。
+- 素材侧审计（记 17）：`_work/c_material_audit.py` 57 行／56 目录／缺陷只有 C52；C52 两条 e-print 路当天复测仍 403 ⇒ 豁免按盘上量。
+
+记 19（13:15，编辑侧）：收两张单（c_collect C17 C28 C31 改写单／c_collect C34 C24 C09 加深单），citeback Δ=0，登记表撤最后三行⇒空。全库普查 refused=0 files_hit=0 other=0（56 份／41,807 跨度）；56 份全 ≥22,000 B、合计 2,536,514 B、CR=0。负结果：多行 $$ 展示式（c_multiline_disp.py 877 块）不是普查盲区，katex_census 的 spans() 扫整篇文本，KaTeX 认 \begin{CD}，零派工。补尺：ccheck.spec_refcite() 从规格第 24 条那一句自抽名单，量出 174 处／7 篇（C32 88／C33 50／C31 27／C20 4／C13 3／C09 1／C39 1）；临时探针 c_refcite_census.py 已删。零站点空文件把 c_collect／c_macro_fix／c_unresolved_prune 三处 json.loads 读法打崩，已补跳行闸。新派两张 refcite 单（prompt_C32_refcite.txt／prompt_C33_C31_refcite.txt），档位回 3（C41+C42 那张还在飞）。

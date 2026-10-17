@@ -1,0 +1,35 @@
+{
+  "paper": "Filtered-chromatic-splitting-at-generic-primes-September-25-2026",
+  "ok": true,
+  "typ_lines": 2485,
+  "included_pdf_pages": 0,
+  "formulas": 1976,
+  "math_failed": 2,
+  "labels": 251,
+  "equations": 11,
+  "theorems": 6,
+  "figures": 1,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 2,
+    "unhandled_div_class:description": 1,
+    "cetz_refused": 1
+  },
+  "samples": {
+    "formulas": "1976",
+    "cetz_converted": "1",
+    "cetz_refused": "\\begin{tikzpicture}[ every node/.style={align=center,font=\\small}, box/.style={draw,rounded corners=2pt,inner sep=6p"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\Filtered-chromatic-splitting-at-generic-primes-September-25-2026\\main.typ:1434:53\n     │\n1434 │   First keep the translation level finite. If $U' lt.tri U$ is a smaller frame level, its coefficient algebra is a finite torsor for $H = U \\/ U'$. Over the quotient algebra $A$, faithfully flat trivialization makes it a regular $A \\[ H \\]$-module. Projectivity over $A \\[ H \\]$ descends, and $A \\[ H \\]$ is free as a $k \\[ H \\]$-module; hence the additive coefficient module is projective for the finite deck group. The same argument applies to the descended coefficient bundles. Coinvariants identify with the lower-level coefficient by trace: on a trivialized torsor this is the augmentation of the regular module. The fixed finite projective $P_n$-resolution takes equivariant finite sums and retracts, so both assertions hold on its cochain terms.\n     │                                                      ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\Filtered-chromatic-splitting-at-generic-primes-September-25-2026\\main.typ:1600:122\n     │\n1600 │   First take the connected-frame limit at a fixed $h$. Choose a cofinal sequence of normal principal open subgroups $K lt.tri P_s$. Lemma 42 identifies $R Gamma \\( K \\, A_h \\)$ with the finite-frame dual. Compact duality and inverse limit with corestriction therefore give\n     │                                                                                                                           ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 2,
+  "source": "E:\\math\\_work\\flat\\Filtered-chromatic-splitting-at-generic-primes-September-25-2026.tex"
+}

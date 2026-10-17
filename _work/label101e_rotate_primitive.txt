@@ -1,0 +1,14 @@
+#101e: what Typst's own rotate keeps of a turned label -- pt
+
+bare short                         1 span(s)  box  11.40 x  14.92  text='ban'
+bare mid                           1 span(s)  box  11.40 x  34.50  text='uncappe'
+bare long                          1 span(s)  box  11.40 x  82.13  text='uncapped band for t'
+mid in box w=70pt                  1 span(s)  box  11.40 x  39.63  text='uncapped'
+long in box w=200pt                1 span(s)  box  11.40 x 104.33  text='uncapped band for the he'
+mid in box w=62.11pt h=11.4pt      1 span(s)  box  11.40 x  39.63  text='uncapped'
+mid rotate anchor east             NO PDF  #place(top+left)[#rotate(-90deg, anchor: "east")[uncapped band]]
+mid rotate origin east             NO PDF  #place(top+left)[#rotate(-90deg, origin: "east")[uncapped band]]
+mid +45                            1 span(s)  box  38.13 x  38.13  text='pped band'
+mid 180                            1 span(s)  box  62.11 x  11.40  text='uncapped band'
+mid in stack ttb                   1 span(s)  box  11.40 x  34.50  text='uncappe'
+mid in box w=70pt h=11.4pt         1 span(s)  box  11.40 x  42.13  text='uncapped '

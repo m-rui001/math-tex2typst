@@ -1,0 +1,34 @@
+{
+  "paper": "BKT-universality-for-height-and-planar-spin-fields-September-24-2026",
+  "ok": true,
+  "typ_lines": 3371,
+  "included_pdf_pages": 0,
+  "formulas": 3713,
+  "math_failed": 0,
+  "labels": 490,
+  "equations": 29,
+  "theorems": 12,
+  "figures": 4,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 3,
+    "cetz_refused": 1
+  },
+  "samples": {
+    "formulas": "3713",
+    "cetz_converted": "1",
+    "cetz_refused": "\\begin{tikzpicture}[ x=1cm,y=1cm, font=\\footnotesize, history box/.style={draw=black!55,rounded corners=2pt,fill=w"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\BKT-universality-for-height-and-planar-spin-fields-September-24-2026.tex"
+}

@@ -1,0 +1,24 @@
+== run71 13:22 ==
+rows: 724
+  cetz_converted             989 over 551 papers
+  cetz_refused                40 over  35 papers
+  cetz_split                   9 over   7 papers
+  figure_content_unhandled     0 over   0 papers
+  empty figures               13 over   9 papers
+  quoted pictures             40  (refused pictures shown as source)
+
+most refused in one paper:
+   1  Universal-Tensor-Squares-for-Symmetric-Groups-September-24-2026
+   1  Translative-covering-densities-of-order-n-log-n-September-23-202
+   1  The-maximum-number-of-mutually-unbiased-bases-in-dimension-six-S
+   1  The-joint-scaling-limit-of-critical-Ashkin-Teller-currents-Septe
+   1  The-crossing-number-of-complete-graphs-September-23-2026
+   1  The-Deligne-Drinfeld-conjecture-September-23-2026
+   1  The-Critical-Spin-Field-of-the-Planar-XY-Model-October-5-2026
+   1  Strong-diffeomorphic-approximation-in-three-dimensions-for-p-gt-
+   1  Snaky-in-21-Maker-moves-September-25-2026
+   2  Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-B
+files with residue: 0 ; occurrences: 0
+quoted LaTeX on the page: 40 blocks over 35 papers
+zones: {}
+== done ==

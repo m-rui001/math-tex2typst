@@ -1,0 +1,37 @@
+{
+  "paper": "standalone-overview",
+  "ok": true,
+  "typ_lines": 2011,
+  "included_pdf_pages": 0,
+  "formulas": 577,
+  "math_failed": 0,
+  "labels": 389,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:minipage": 372
+  },
+  "samples": {
+    "formulas": "577"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "fontspec",
+    "lastpage",
+    "ragged2e"
+  ],
+  "macros_skipped": [
+    "\\renewcommand\\headrulewidth",
+    "\\renewcommand\\footrulewidth",
+    "\\renewcommand\\headrulewidth"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\standalone-overview.tex"
+}

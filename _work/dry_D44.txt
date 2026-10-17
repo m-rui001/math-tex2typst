@@ -1,0 +1,12 @@
+################ D44  (D44-小finitistic维数无穷的代数.md)
+before: bytes=105112 lines=585
+ROW line=450  sites=2  pipes 8->6  $=12(parity even)
+OLD| | $Z_m$ | $\cong(\mathbb Z/2)^m$，$\|Z_m\|=2^m$ | `02:246-248`、`02:331-340` | 特征 $\chi_m$ 与 $p_\chi$ 定义域 | 独立性失败则 $\chi_m$ 不存在 |
+NEW| | $Z_m$ | $\cong(\mathbb Z/2)^m$，$\lvert Z_m\rvert=2^m$ | `02:246-248`、`02:331-340` | 特征 $\chi_m$ 与 $p_\chi$ 定义域 | 独立性失败则 $\chi_m$ 不存在 |
+after: bytes=105121 (delta +9) lines=585 rows_fixed=1 sites_fixed=2 sites_registered=0
+[DRY] nothing written to the note
+D44 file-count \lVert  = 0
+D44 file-count \lvert  = 10
+D44 file-count \mid  = 0
+D44 file-count \upharpoonright = 0
+D44 file-count \Vert  = 0

@@ -1,0 +1,15 @@
+   BARE  A-rational-obstruction-to-strong-chromatic-s $R Gamma_v \( \[ X \/ G \] \, Lambda_m \)$
+   BARE  A-rational-obstruction-to-strong-chromatic-s $R Gamma_v \( \[ X' \/ G' \] \, Lambda_m \) .$
+   BARE  A-rational-obstruction-to-strong-chromatic-s $\[ f \/ phi.alt \]^(*)$
+   BARE  A-rational-obstruction-to-strong-chromatic-s $H^3 \( G_3 \, bb(Z)_p \) \[ 1 \/ p \]$
+   BARE  A-rational-obstruction-to-strong-chromatic-s $H^3 \( G_3 \, pi_0 E_3^square.stroked.tiny \) \[ 1 \/ p \]$
+   BARE  A-rational-obstruction-to-strong-chromatic-s $H^3 \( G \, bb(Z)_p \) \[ 1 \/ p \]$
+   BARE  A-rational-obstruction-to-strong-chromatic-s $H^3 \( G \, pi_0 hat(B)^square.stroked.tiny \) \[ 1 \/ p \] .$
+   BARE  Filtered-chromatic-splitting-at-generic-prim $R Gamma #h(-0.16667em) (P_n \, R Gamma_c \( cal(X) \/ U \, cal(A) \) ⊗ chevron.l eta chev
+   BARE  The-height-three-chromatic-overlap-an-explic $H_(upright("cts"))^3 \( G_3 \( k \) \, E_(3 \, 0) \( k \) \) \[ 1 \/ p \]$
+   BARE  The-height-three-chromatic-overlap-an-explic $\( "proj lim"_ell H_(upright("cts"))^3 \( G_3 \( k \) \, D_ell \) \) \[ 1 \/ p \]$
+   BARE  The-height-three-chromatic-overlap-an-explic $pi_(- 3) L_0 "holim"_ell L_1 \( T \/ p^ell \) .$
+   BARE  Uniform-effective-log-Iitaka-fibrations-for- $\/ mu_(r \, upright("diag"))$
+papers scanned 724   canvas maths strings 10412
+BARE slash   : 12 slashes in 12 strings over 4 papers
+QUOTED "/": 286 glyphs in 125 papers

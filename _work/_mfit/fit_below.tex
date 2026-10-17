@@ -1,0 +1,25 @@
+\documentclass[tikz,border=20pt]{standalone}
+\usetikzlibrary{fit,positioning,calc}
+\newcommand{\fitdump}[2]{%
+  \pgfpointanchor{#1}{#2}%
+  \pgfgetlastxy{\fitx}{\fity}%
+  \typeout{FIT<#1.#2><\fitx><\fity>}}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+  \node[text width=2cm,align=center] (a) at (0,0) {first box words here};
+  \node[text width=2cm,align=center] (b) at (3.2,2.4) {second box};
+  \coordinate (p) at (-1,-1);
+  \coordinate (q) at (4,3);
+\node[fit=(a)(b),inner sep=0pt,outer sep=0pt] (f) {};\node[below=10mm of f,text width=2cm,align=center] (g) {below the fit};
+\fitdump{f}{north west}
+\fitdump{f}{north east}
+\fitdump{f}{south west}
+\fitdump{f}{south east}
+\fitdump{f}{center}
+\fitdump{g}{north west}
+\fitdump{g}{north east}
+\fitdump{g}{south west}
+\fitdump{g}{south east}
+\fitdump{g}{center}
+\end{tikzpicture}
+\end{document}

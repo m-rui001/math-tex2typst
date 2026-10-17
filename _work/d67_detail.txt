@@ -1,0 +1,12 @@
+== pipe histogram of |-lines ==
+{6: 78, 10: 1}
+== non-6 pipe lines ==
+ 534 n=10 | $\mathcal S\le F(\alpha)+O(p^2\log(s+1))$ | 熵账 | 05-density.tex:108--113 | 扇区标量下界 (05-density.tex:141--149) | $|\sigma|+|\tau|=l$ 破则线性项不再相消 |
+== odd-dollar lines (whole file) ==
+count=1
+ 294 infence=True total variation as \(d\to\infty$, uniformly over deterministic initial
+== headers of ledger ==
+ 329 | 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+ 341 | $c(s)=c_0+1/\sqrt{\log s}$；$e(s)=e_0-1/\sqrt{\log s}$ | 单调趋常数 | 03:150-151 | `ac:eq:15`、$c_*,e_*$ 储备 | 符号反向则子网格归纳利息为负 
+ 497 | 记号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+ 514 | $Q(x,y)=s^{-k}\sum_{A\subseteq[k]}(-1)^{k-\lvert A\rvert}s^{\lvert A\rvert}p_A$ | 交错放置核 | 04-sparse.tex:37--40 | $\lVe

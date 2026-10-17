@@ -1,0 +1,15 @@
+D227 size=70776 row=51 miss_sec=[27, 28, 29, 30] | -Hadwiger数线性表染色界-研究反推.md
+D244 size=75093 row=68 miss_sec=[11, 12] | -用颜色包与素数筛在三环面上造出简单Lebesgue谱.md
+D290 size=97856 row=114 miss_sec=[15] | -任意MASA上的逼近铺砌：从混合多项式到无期望三段装配.m
+D351 size=109453 row=175 miss_sec=[15] | -把hypersymplectic四流形变形成hyperka
+D379 size=78315 row=203 miss_sec=[31] | -每个四维Kakeya集有满Hausdorff维数.md
+D497 size=87112 row=320 miss_sec=[13] | -可解闭伽罗瓦群开同态的刚性.md
+D560 size=139220 row=383 miss_sec=[9] | -正规射影簇的半代数万有覆叠分类.md
+D561 size=78476 row=384 miss_sec=[9] | -固定非对角拉姆齐数的精确对数指数.md
+D569 size=73449 row=392 miss_sec=[14, 27] | -索普洗牌坐标扫掠的带号张量密度与图预算.md
+D574 size=73698 row=397 miss_sec=[10, 13, 17] | -一块边界补丁上的光滑各向异性Calderon唯一性.md
+D578 size=116803 row=401 miss_sec=[7] | -包络面积与刚性视角下的时空彭罗斯不等式.md
+D643 size=75654 row=462 miss_sec=[9] | -仿射伯恩斯坦定理三到九维研究笔记.md
+D742 size=79536 row=467 miss_sec=[7, 11, 13, 16] | -结构系数能隙与平面XY模型临界关联指数1-4.md
+D747 size=75494 row=472 miss_sec=[22] | -熵光子数不等式的两输入有限能量证明.md
+D758 size=96800 row=483 miss_sec=[4] | -圆周率的无理性指数等于2.md

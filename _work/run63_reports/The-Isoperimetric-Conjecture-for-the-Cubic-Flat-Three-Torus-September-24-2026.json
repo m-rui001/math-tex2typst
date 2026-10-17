@@ -1,0 +1,32 @@
+{
+  "paper": "The-Isoperimetric-Conjecture-for-the-Cubic-Flat-Three-Torus-September-24-2026",
+  "ok": true,
+  "typ_lines": 1100,
+  "included_pdf_pages": 0,
+  "formulas": 816,
+  "math_failed": 0,
+  "labels": 111,
+  "equations": 15,
+  "theorems": 5,
+  "figures": 2,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:minipage": 2,
+    "unhandled_div_class:picture": 2,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "816",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-Isoperimetric-Conjecture-for-the-Cubic-Flat-Three-Torus-September-24-2026.tex"
+}

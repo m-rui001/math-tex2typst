@@ -1,0 +1,34 @@
+{
+  "paper": "A-positive-solution-to-Tingleys-problem-September-23-2026",
+  "ok": true,
+  "typ_lines": 362,
+  "included_pdf_pages": 0,
+  "formulas": 330,
+  "math_failed": 0,
+  "labels": 38,
+  "equations": 17,
+  "theorems": 3,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1,
+    "unhandled_div_class:picture": 1,
+    "unhandled_rawinline": 2
+  },
+  "samples": {
+    "formulas": "330"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\renewcommand\\@maketitle",
+    "\\newcommandnewcommand"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-positive-solution-to-Tingleys-problem-September-23-2026.tex"
+}

@@ -1,0 +1,30 @@
+{
+  "paper": "Donovans-Conjecture-over-Algebraic-Closures-of-Prime-Fields-September-24-2026",
+  "ok": true,
+  "typ_lines": 1970,
+  "included_pdf_pages": 0,
+  "formulas": 1731,
+  "math_failed": 0,
+  "labels": 192,
+  "equations": 5,
+  "theorems": 9,
+  "figures": 1,
+  "tables": 1,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "1731"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\renewcommand\\ttdefault"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Donovans-Conjecture-over-Algebraic-Closures-of-Prime-Fields-September-24-2026\\main.typ:121:71\n    │\n121 │ There is an ordinary character of height zero in every block. If $N lt.tri G$ and $B$ covers a block $b$ of $N$, defect groups can be chosen so that $D_b = D_B ∩ N$. Fong–Reynolds reduction replaces the covering problem by the inertia group of $b$, preserving Morita type and defect. If $b$ is invariant and $G \\/ N$ is a $p$-group, then $b$ remains a block of $G$ and\n    │                                                                        ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Donovans-Conjecture-over-Algebraic-Closures-of-Prime-Fields-September-24-2026\\main.typ:182:62\n    │\n182 │   (Transfer across an abelian quotient).  #emph[Suppose $N lt.tri G$ and $G \\/ N$ is abelian. Among blocks $B$ of $G$ of defect order at most $M$, uniform Cartan bounds for their covered blocks of $N$ imply uniform Cartan bounds for $B$. No bound on the $p'$-part of $\\| G \\/ N \\|$ is required.]\n    │                                                               ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Donovans-Conjecture-over-Algebraic-Closures-of-Prime-Fields-September-24-2026\\main.typ:210:42\n    │\n210 │   (Restriction of rows).  #emph[Let $N lt.tri G$, and fix a block $b$ of $N$. Suppose that every block of $G$ covering $b$ has at most $L$ simple modules and decomposition numbers at most $c$. Suppose also that every simple module in these blocks restricts to $N$ with constituent multiplicities at most $u$. Then $b$ has decomposition numbers at most $L c u$. If $G \\/ N$ is cyclic, one may take $u = 1$. If $C lt.eq Z \\( G \\)$, one may instead take $u = \\[ G : N C \\]$.]\n    │                                           ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Donovans-Conjecture-over-Algebraic-Closures-of-Prime-Fields-September-24-2026\\main.typ:519:18\n    │\n519 │   #emph[Let $N lt.tri H$ with cyclic quotient, and let $b$ be a block of $N$. Suppose that every block of $H$ covering $b$ has one simple module and all its decomposition numbers are one. Then every decomposition number of $b$ is at most one. No defect bound on the covering blocks is required. If the original block $b$ has bounded defect, its Cartan entries are therefore bounded.]\n    │                   ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Donovans-Conjecture-over-Algebraic-Closures-of-Prime-Fields-September-24-2026\\main.typ:658:120\n    │\n658 │   $ N = \\[ upright(bold(M)) \\, upright(bold(M)) \\]^F \\/ \\( \\[ upright(bold(M)) \\, upright(bold(M)) \\]^F ∩ Z_p \\) med lt.tri med M \\/ Z_p $\n    │                                                                                                                         ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\Donovans-Conjecture-over-Algebraic-Closures-of-Prime-Fields-September-24-2026\\main.typ:1481:116\n     │\n1481 │   + #emph[Every block of a normal subgroup covered by $B$ is $H$-stable. If $B$ covers a nilpotent block of $H_0 lt.tri.eq H$, then $H_0 lt.eq Z \\( H \\) O_p \\( H \\)$.]\n     │                                                                                                                     ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\Donovans-Conjecture-over-Algebraic-Closures-of-Prime-Fields-September-24-2026\\main.typ:1506:107\n     │\n1506 │   (Compatible partial regular extensions).  #emph[In the notation of Lemma 57, there is an extension $N lt.tri.eq macron(N)$ with abelian $p'$-quotient $A = macron(N) \\/ N$ having the following properties.]\n     │                                                                                                            ^^^\n\nwarning: `lt.tri` is d",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 8,
+  "source": "E:\\math\\_work\\flat\\Donovans-Conjecture-over-Algebraic-Closures-of-Prime-Fields-September-24-2026.tex"
+}

@@ -1,0 +1,50 @@
+[
+ {
+  "cid": "D134",
+  "line": 523,
+  "old": "estimates: $ 0\\le s<a",
+  "new": "estimates: $0\\le s<a",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "grammar",
+  "cred": "bootstrap.tex:33-36：\\begin{equation} 式体行首的缩进空格被压进 \"$…$\"，开符 $ 紧跟空格被跨度语法否决"
+ },
+ {
+  "cid": "D134",
+  "line": 523,
+  "old": "：\"$ P=[M=0]",
+  "new": "：\"$P=[M=0]",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "grammar",
+  "cred": "bootstrap.tex:37-40：\\[ 块式体行首缩进同上一单（素材 P=[M=0],\\qquad H=[M\\ge N^t],…）"
+ },
+ {
+  "cid": "D376",
+  "line": 141,
+  "old": "$\\begin{CD}$ 环境",
+  "new": "`\\begin{CD}` 环境",
+  "expect": 1,
+  "dollars": -2,
+  "ticks": 2,
+  "parity": true,
+  "level": "delim",
+  "cred": "04-quotient.tex:44-50 逐字 \\begin{CD}，这里点名的是环境名不是交换图"
+ },
+ {
+  "cid": "D444",
+  "line": 56,
+  "old": "\\begin{tikzcd} H_K^j(X,X_-)\\arrow[r,\"\\cong\"]\\arrow[d,\"\\mathrm{res}\"']\\& H_K^j(N,Q)\\arrow[d,\"\\mathrm{res\"}]\\\\ H_K^j(X^\\tau,X_-^\\tau)\\arrow[r,\"\\cong\"]\\& H_K^j(N^\\tau,Q^\\tau)\\end{tikzcd}",
+  "new": "\\begin{CD} H_K^j(X,X_-) @>\\cong>> H_K^j(N,Q)\\\\ @V{\\mathrm{res}}VV @VV{\\mathrm{res}}V\\\\ H_K^j(X^\\tau,X_-^\\tau) @>>\\cong> H_K^j(N^\\tau,Q^\\tau)\\end{CD}",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "body",
+  "cred": "local.tex:444-454 的 \\begin{tikzcd} 交换图，重编码为 KaTeX 认识的 {CD} 同方正方形"
+ }
+]

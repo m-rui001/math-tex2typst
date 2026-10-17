@@ -1,0 +1,56 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{positioning}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\def\cartan@theoremrefstepcounter[#1]#2{
+    \let\cartan@saved@refstepcounter\cref@old@refstepcounter
+    \let\cref@old@refstepcounter\Hy@theorem@refstepcounter
+    \refstepcounter[#1]{#2}
+    \let\cref@old@refstepcounter\cartan@saved@refstepcounter
+  }
+\newcommand{\R}{\mathbb R}
+\newcommand{\Sph}{\mathbb S}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\one}{\mathbf1}
+\newcommand{\fint}{\mathchoice{\avgint\displaystyle\textstyle}{\avgint\textstyle\scriptstyle}{\avgint\scriptstyle\scriptscriptstyle}{\avgint\scriptscriptstyle\scriptscriptstyle}\!\int}
+\newcommand{\avgint}[2]{{\setbox0=\hbox{$#1\int$}\vcenter{\hbox{$#2-$}}\kern-.5\wd0}}
+\DeclareMathOperator{\vol}{Vol}
+\DeclareMathOperator{\area}{Area}
+\DeclareMathOperator{\per}{Per}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\Hess}{Hess}
+\DeclareMathOperator{\Sec}{sec}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\divg}{div}
+\DeclareMathOperator{\Lip}{Lip}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\sn}{sn}
+\DeclareMathOperator{\cs}{cs}
+\newcommand{\PaperArrowText}[2]{\mathrel{\begingroup
+  \expandafter\let\expandafter\hookrightarrow\csname PaperOriginalhookrightarrow\endcsname
+  \expandafter\let\expandafter\mapsto\csname PaperOriginalmapsto\endcsname
+  \expandafter\let\expandafter\longrightarrow\csname PaperOriginallongrightarrow\endcsname
+  \pdfliteral direct{/Span << /ActualText <FEFF#1> >> BDC}
+  #2\pdfliteral direct{EMC}\endgroup}}
+\renewcommand{\hookrightarrow}{\PaperArrowText{21AA}{\csname PaperOriginalhookrightarrow\endcsname}}
+\renewcommand{\mapsto}{\PaperArrowText{21A6}{\csname PaperOriginalmapsto\endcsname}}
+\renewcommand{\longrightarrow}{\PaperArrowText{27F6}{\csname PaperOriginallongrightarrow\endcsname}}
+\begin{document}
+\begin{tikzpicture}[scale=0.95,>=Latex]
+  \fill[blue!6] (-2,0) circle (2);
+  \draw[thick,blue!65!black] (-2,0) circle (2);
+  \draw[->,gray!65] (-4.5,0)--(1.8,0);
+  \draw[->,gray!65] (0,-2.35)--(0,2.5);
+  \fill (-2,0) circle (1.5pt) node[below left] {$-RN(x_0)$};
+  \fill (0,0) circle (1.7pt) node[below right] {$0\in T_{x_0}M$};
+  \draw[thick,->] (0,0)--(1.25,0) node[above] {$N(x_0)$};
+  \draw[thick] (-2,0)--(-2,2) node[midway,left] {$R$};
+  \node at (-2,-1.1) {$U_0$};
+  \node[align=center] at (-2,2.65) {A planar section of the tangent-space sphere};
+ \end{tikzpicture}
+\end{document}

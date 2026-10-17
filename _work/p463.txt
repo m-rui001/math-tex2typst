@@ -1,0 +1,24 @@
+note=b'\xe7\xa0\x94\xe7\xa9\xb6\xe7\xac\x94\xe8\xae\xb0\\D463-\xe5\xaf\xb9\xe6\x95\xb0Kodaira\xe7\xbb\xb4\xe6\x95\xb0\xe4\xb8\x8e\xe6\x95\xb4\xe6\x9d\xa1\xe7\xba\xa4\xe7\xbb\xb4\xe7\x9a\x84\xe5\xbd\xa2\xe5\x8f\x98.md'
+bytes=175435 lines=879 cr=0 heads=10
+first_head=b'## \xc2\xa70 \xe7\x99\xbb\xe8\xae\xb0\xe3\x80\x81\xe7\xb4\xa0\xe6\x9d\x90\xe8\xbe\xb9\xe7\x95\x8c\xe4\xb8\x8e\xe6\x9c\xac\xe7\xa8\xbf\xe8\xae\xb0\xe6\xb3\x95'
+last_head=(831)b'## \xc2\xa79 \xe6\x95\xb0\xe5\x80\xbc\xe5\x8f\xb0\xe8\xb4\xa6\xef\xbc\x9a\xe9\x93\xbe\xe8\xb7\xaf\xe9\x87\x8c\xe5\x8a\xa8\xe4\xb8\x8d\xe5\xbe\x97\xe7\x9a\x84\xe5\xb8\xb8\xe6\x95\xb0\xe4\xb8\x8e\xe5\xa2\x9e\xe9\x95\xbf\xe7\x8e\x87'
+head_shape=b'\xc2\xa7 -> next \xc2\xa710'
+std_hdr=[835] sep=[836]
+last_row_cols=5
+build=b'preprints\\Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026\\build' tex=15 bytes=312643 cite_sites=142
+  sections/03-root-hodge.tex               45007 B   985 lines cited=13
+  sections/08-numerical-extension.tex      38975 B   805 lines cited=20
+  sections/04-constancy.tex                37593 B   753 lines cited=10
+  sections/04-constancy-estimates.tex      32965 B   721 lines cited=10
+  sections/02-parameter.tex                32431 B   660 lines cited=16
+  sections/07-descent.tex                  29567 B   719 lines cited=26
+  sections/06-marking.tex                  24050 B   472 lines cited=12
+  references.tex                           18927 B   340 lines cited=0   ZERO-CITED
+  sections/01-introduction.tex             17462 B   338 lines cited=12
+  sections/09-ordinary-reduction.tex       16819 B   348 lines cited=7
+  sections/05-model-comparison.tex         13373 B   254 lines cited=15
+  main.tex                                  3230 B    90 lines cited=1
+  figures/whole-fiber-route.tex             1180 B    25 lines cited=0   aux
+  figures/combined-base.tex                  719 B    18 lines cited=0   aux
+  companion-locators.tex                     345 B     9 lines cited=0   ZERO-CITED
+

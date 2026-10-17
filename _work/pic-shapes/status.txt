@@ -1,0 +1,39 @@
+pic-shapes family — status (3 pictures owned)
+
+Legend: `#raw` = number of `#raw(block: true, lang: "latex")` fallbacks in the paper, before
+(live tools/ as found) and after (this sandbox). count_raw.py counts the build+sane gate only;
+the production gate also runs the typst compile (compiles()), which this task must not invoke, so
+the Thompsons before/after is taken from that reasoning and marked.
+
+1) Translative-covering-densities-of-order-n-log-n-September-23-2026  (pic #1: `to[out=135,in=45,looseness=5]` self-loop on a circle node)
+   converted
+   #raw before 1 -> after 0   (count_raw: live "1 quoted verbatim" -> sandbox "0 quoted verbatim")
+   Self-loop endpoints now taken off the measured border ring (half-size + outer sep), controls on
+   the 0.39*chord rule; geometry asserted in tests.py against measure_loop.py / measure_outer_sep.py.
+
+2) Thompsons-group-F-is-nonamenable-September-23-2026  (pic #0: `\node[anchor=west,align=left,text width=5.2cm]` multi-line legend)
+   converted
+   #raw before 1 -> after 0
+   The legend's `\( ... \)` maths reached the page as literal backslashes (`\[-,+\]`); the canvas
+   built and passed sane but could not compile, which is why production refused it. NODE_MATH now
+   routes `\( ... \)` through the maths body, so the emitted content is clean typst.
+   NOTE: count_raw reports 0 quoted for BOTH trees because it deliberately skips the typst compile
+   gate; the real before/after is 1 -> 0 at the compile gate. See measurements.md section 2.
+
+3) Elliptic-capacity-propagation-and-Fourier-restriction-to-the-sphere-September-24-2026  (pic #0: `\draw[capacityellipse] (0,0) ellipse (1.00 and .37)` inside `scope[rotate=25]`)
+   refused: a rotated ellipse has no CeTz primitive and no single-path way to bake it
+   #raw before 1 -> after 1   (unchanged; the paper's other 2 pictures already convert)
+   PROVEN, not guessed. measure_ellipse_page.py: the scope's rotate=25 turns the ellipse's long axis
+   from 0.00 deg (unturned control) to 25.00 deg on the page, so an axis-aligned emission is wrong.
+   CeTz 0.5.0 draws every ellipse via `circle(radius:(rx,ry))` -> drawable.ellipse(cx,cy,cz,rx,ry)
+   with the radii taken along the canvas axes and NO angle argument (unlike polygon/n-star, which do
+   take `angle:`) — there is no rotated-ellipse primitive. The emitter's single transform path bakes
+   the scope matrix into absolute coordinates and emits bare shape calls, so a `(rx,ry)` pair cannot
+   carry the turn. A Bezier approximation is forbidden (rule 4); a canvas `rotate()` wrapper would be
+   a second transform mechanism (rule 5). Control in tests.py: same picture minus rotate=25 emits
+   `circle((0.12, 0.2), radius: (1, 0.37))`; the turned one returns None.
+
+Sandbox suite: test_t2t.py -> 46/47 pass. The one failure is the known pre-existing live-tree
+regression (apptr:c / `\mbox{}` tabular stand-in in prep.lift_captions), unrelated to this family
+and handled separately.
+Family tests: tests.py -> 7/7 pass.

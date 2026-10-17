@@ -1,0 +1,32 @@
+{
+  "paper": "Sharp-binary-information-contraction-on-the-discrete-cube-September-24-2026",
+  "ok": true,
+  "typ_lines": 1028,
+  "included_pdf_pages": 0,
+  "formulas": 795,
+  "math_failed": 0,
+  "labels": 130,
+  "equations": 2,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "795",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Sharp-binary-information-contraction-on-the-discrete-cube-September-24-2026.tex"
+}

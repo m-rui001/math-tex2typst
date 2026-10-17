@@ -1,0 +1,3 @@
+D587 cites=1843 bad=1
+abbrev=6902 ok=6896 absent=0 ambiguous=0 oob=0 noncite=6
+files=734 cites=174305 ok=174304 absent=1 oob=0 other-dir=0 notes-without-dir=0

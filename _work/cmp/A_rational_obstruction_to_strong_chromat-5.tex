@@ -1,0 +1,40 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\newcommand{\reserveStatementSpace}{
+  \if@nobreak\else\Needspace{6\baselineskip}\fi}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\newcommand{\C}{\mathbb C}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cts}{\mathrm{cts}}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Spd}{Spd}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\RHom}{RHom}
+\newcommand{\Rlim}{R\!\varprojlim}
+\begin{document}
+\begin{tikzcd}[column sep=large]
+ C_{\cts}(G^a,\Lambda_m)[0]
+    \arrow[r,"u^a_{\widetilde Y,G,m}"] \arrow[d,"\iota_m"']
+   &R\Gamma_v(\widetilde Y\times\underline{G^a},\Lambda_m)
+       \arrow[d,"\omega_m"]\\
+ C_{\cts}(G^a,W_m(\widehat L))[0]
+    \arrow[r,"\alpha_{G^a,m}","\sim"']
+   &R\Gamma_v(\widetilde Y\times\underline{G^a},W_m(\cO^\flat)).
+\end{tikzcd}
+\end{document}

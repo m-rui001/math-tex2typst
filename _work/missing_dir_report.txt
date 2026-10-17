@@ -1,0 +1,99 @@
+== D01-对称Mahler猜想与等号分类. NOPAT lines=373
+   350: **取材追溯。** 本稿第 12 节到第 21 节的全部正文素材来自目录 `preprints/The-symmetric-Mahler-conjecture-and-its-equality-cases-September-22-2026
+== D02-Kaplansky直接有限性反例 NOPAT lines=286
+== D03-VlasovMaxwell整体经 NOPAT lines=298
+== D04-乘性函数二点关联.md NOPAT lines=376
+== D05-算术级数拟多项式界.md NOPAT lines=350
+== D06-pi无理指数为2.md NOPAT lines=473
+   472: 旧稿缺陷（§0–§8，已落盘不动）：§0 无"preprints/目录名"逐字登记与"其他队列第 NN 行号"登记（本批素材目录为 The-irrationality-exponent-of-pi-is-2-September-24-202
+== D07-量子Heisenberg铁磁体自 NOPAT lines=383
+== D08-Mezard-Parisi公式. NOPAT lines=1037
+== D09-MaxCut最优NP难度.md NOPAT lines=500
+   27: 台账补表一节的取证口径在此钉死：本笔记正文的全部数值只取自 `E:\math\preprints\A-Direct-Proof-of-Optimal-Max-Cut-Hardness-September-23-2026\build\` 下的
+   334: summary 实测：文件 `E:\math\reasoning_traces\basic-semidefinite-threshold-np-hardness.pdf`，143,206 字节、16 页，PDF 标题页首行 "BasicSD
+== D10-自由群因子同构.md NOPAT lines=1087
+   1082: 素材目录：`preprints/An-isomorphism-of-the-free-group-factors-September-23-2026`
+== D12-Barnette猜想-三次二部平 NOPAT lines=577
+   528: `preprints/Paired-states-and-Hamiltonian-cycles-in-cubic-bipartite-planar-graphs-September-24-2026`
+   536: 同一性是靠 tex 内部字段核对的：第 31 行 `pdftitle={Paired states and Hamiltonian cycles in cubic bipartite planar graphs}`、第 35--36 行 `
+== D128-平面曲线的Nagata猜想：约 NOPAT lines=398
+== D13-有界树宽图的L1嵌入.md NOPAT lines=610
+   314: - preprints 目录全名（日期后缀 `September-23-2026` 是目录名组成部分，原样保留、不可截断）：
+   315: `preprints/L1-Embeddings-of-Graphs-of-Bounded-Treewidth-September-23-2026`
+== D143-关系代数与树周游：单向活性指数 NOPAT lines=933
+   34: 本笔注叙事对应的论文目录为 preprints/An-exponential-two-way-deterministic-state-lower-bound-for-one-way-liveness-September-25-2026，在 
+== D15-有限欧氏Ramsey配置分类.m NOPAT lines=598
+== D177-把时钟停在50的零熵映射.md NOPAT lines=418
+   29: preprints/A-C1-Counterexample-to-the-Entropy-Conjecture-September-25-2026
+== D185-Wall-D2问题反例-循环塔 NOPAT lines=980
+   37: 目录全称：`preprints/A-Counterexample-to-Walls-D2-Problem-October-6-2026`
+== D188-五次型Gepner稳定条件构造 NOPAT lines=776
+   46: 本稿对应语料目录：preprints/A-Gepner-stability-condition-on-every-smooth-quintic-threefold-September-24-2026
+== D19-Ryser覆盖猜想反例-三次曲线 NOPAT lines=453
+   318: 本篇正文唯一来源：`preprints/A-Counterexample-to-Rysers-Covering-Conjecture-September-23-2026`，build 目录 `E:\math\preprints\A-Coun
+   334: 第 13 节的旧表按"层"组织，是给速览用的；这张新表换视角：一行一个量，位置栏精确到 `文件名:行号`（tex 在 `preprints/A-Counterexample-to-Rysers-Covering-Conjecture-Sep
+== D190-树加权平面地图随机游走的线性时 NOPAT lines=568
+   28: preprints/A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Maps-October-5-2026
+   481: 位置栏一律给本会话真实读过的 `文件:行`，文件路径相对 `preprints/A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Maps-October-5-2026/build
+== D21-Saxl猜想-循环多表证明.md NOPAT lines=594
+== D216-线性次高斯与维度无关对数Sob NOPAT lines=928
+   26: 目录 `preprints/A-dimension-free-logarithmic-Sobolev-inequality-for-subgaussian-log-concave-measures-September-23-2026`
+== D219-素数1009上有限Smith- NOPAT lines=286
+   29: preprints/A-finite-Smith-Toda-complex-V4-at-the-prime-1009-September-23-2026
+== D252-超图性质的一致影响量上界与阈值 NOPAT lines=344
+   35: `preprints/A-uniform-influence-bound-for-hypergraph-properties-October-5-2026`
+== D258-Kuga-Satake对应的代 BADDIR name=Algebraicity-of-Kuga-Satake-Correspondences-for-K3-Surfaces-October-3-
+== D259-分裂Weil型八维簇上Weil BADDIR name=Algebraicity-of-Weil-classes-on-split-abelian-eightfolds-September-18-
+== D261-稀疏一般图最大基数匹配的几乎线 NOPAT lines=400
+   27: - 完整目录名：`preprints/Almost-Linear-Time-Maximum-Cardinality-Matching-in-Sparse-General-Graphs-September-24-2026`
+== D327-共形流与带极小前界的黎曼彭罗斯 NOPAT lines=1094
+   37: preprints/Conformal-flow-and-the-Riemannian-Penrose-inequality-with-minimizing-frontiers-September-27-2026
+== D354-固定次数下确定性非二部Rama NOPAT lines=538
+   26: - 目录：`preprints/Deterministic-nonbipartite-Ramanujan-graphs-in-every-fixed-degree-September-23-2026`
+== D356-三维正曲率曲面的对角Fouri NOPAT lines=1007
+   27: 本单取材完整目录名：preprints/Diagonal-Fourier-extension-for-positively-curved-surfaces-in-three-dimensions-September-24-2026
+== D397-编辑距离的有限圆障碍二进制码与 NOPAT lines=282
+   28: preprints/Finite-Circle-Obstructions-Binary-Codes-and-Histogram-Embeddings-for-Edit-Distance-September-27-2026
+== D400-有限半群计算与一致广义星高度界 NOPAT lines=451
+   26: 取材目录：preprints/Finite-Monoid-Computations-and-a-Uniform-Generalized-Star-Height-Bound-September-25-2026
+== D401-变素数处的有限Smith-To NOPAT lines=426
+   28: preprints/Finite-Smith-Toda-Complexes-at-Varying-Primes-September-23-2026
+== D418-临界SK自相关的函数普适性.m NOPAT lines=517
+   27: preprints/Functional-universality-of-critical-SK-autocorrelations-October-5-2026
+== D420-加权整数Lipschitz高度 NOPAT lines=394
+   26: preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-September-25-2026
+== D426-固定Kerr时空附近带平方可积 NOPAT lines=777
+   27: preprints/Generic-Future-Inextendibility-with-Square-Integrable-Connection-Near-a-Fixed-Kerr-Spacetime-September-23-2026
+== D442-双曲性锥没有半正定提升.md NOPAT lines=938
+   28: preprints/Hyperbolicity-Cones-Without-Semidefinite-Lifts-October-5-2026
+== D563-CAT(0)空间尖锐积分填充的 BADDIR name=Sharp-integral-fillings-in-CAT
+== D590-三维低指数强微分同胚逼近的能量 NOPAT lines=443
+   28: 素材目录：preprints/Strong-diffeomorphic-approximation-in-three-dimensions-for-1-le-p-le-2-September-24-2026
+   73: 素材目录：preprints/Strong-diffeomorphic-approximation-in-three-dimensions-for-1-le-p-le-2-September-24-2026
+== D631-素数前驱的泊松狄利克雷定律.m NOPAT lines=633
+   38: 目录：`preprints/The-Poisson-Dirichlet-Law-for-Prime-Predecessors-September-24-2026`
+== D698-二进制编辑距离的树构造与l1畸 NOPAT lines=570
+   26: preprints/Tree-Constructions-for-the-l1-Distortion-of-Binary-Edit-Distance-September-27-2026
+   548: 第一行：preprints/Tree-Constructions-for-the-l1-Distortion-of-Binary-Edit-Distance-September-27-2026
+== D704-平方根次数界无界违反：保方差观 NOPAT lines=498
+   26: preprints/Unbounded-Violations-of-the-Square-Root-Degree-Bound-September-26-2026
+== D711-球形Laughlin能隙一致稳 NOPAT lines=1946
+   31: 本稿唯一取材目录：`preprints/Uniform-Stability-of-the-Spherical-Laughlin-Gap-October-5-2026`
+== D715-半对数典范对数Calabi-Y NOPAT lines=611
+   26: preprints/Uniform-indices-for-semi-log-canonical-log-Calabi-Yau-pairs-October-5-2026
+== D765-椭圆曲线二次扭的均值解析秩.m NOPAT lines=659
+   3: 派单号 D765。这篇笔记对应 preprints 里那篇《The mean analytic rank of quadratic twists of elliptic curves》（日期后缀照抄在 §0 末）。我刚把它写完，正文七节、素
+   28: 素材目录：preprints/The-mean-analytic-rank-of-quadratic-twists-of-elliptic-curves-September-23-2026
+== D80-均值对策博弈随机化准多项式求解的 NOPAT lines=2237
+   39: Lean 登记（`E:\math\lean\formalization.yaml` 是唯一权威登记表，两处条目都要）：书目条目在 `formalization.yaml:527`--`530`，`title: "Randomized qua
+   47: 本笔注叙事对应的论文目录为 preprints/Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026，在 .tools/lean_queue.txt 队列第 
+== D84-高余维Riesz变换一致矩形性的 NOPAT lines=1029
+   27: 本笔注叙事对应的论文目录为 preprints/Riesz-transforms-and-uniform-rectifiability-in-higher-codimension-September-24-2026，在 .tools/lea
+   871: 这一节只做一件事：把论文引用的每个外部对象，与我能真正拿到的一手材料对齐，并把拿不到的部分显式降级。检索面分三层。第一层是书目文件本身，`E:\math\preprints\Riesz-transforms-and-uniform-rect
+== D87-图灵度刚性猜想与四值复原.md NOPAT lines=842
+   27: 本笔注叙事对应的论文目录为 preprints/Rigidity-of-the-Turing-degrees-September-24-2026，在 .tools/lean_queue.txt 队列第 109 行号（按题名逐字匹配登记，本行
+   826: 本篇正文来源的完整路径是 `preprints/Rigidity-of-the-Turing-degrees-September-24-2026`，后缀 `September-24-2026` 按目录名原样登记，它对应队列文件 `E:\ma
+== D90-固定指数的生产链-Yau节点上界 NOPAT lines=1210
+   1044: id: ../preprints/Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026/paper.pdf
+   1180: | introduction.tex:50-54：companion 论文构造固定光滑度量与 $\lambda\to\infty$ 的特征函数列，使 nodal 测度除以 $\sqrt\lambda$ 发散，且"without assert
+total_unresolved=49

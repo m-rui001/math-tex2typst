@@ -1,0 +1,10 @@
+build              35
+sections           35
+normalization      35
+tex                35
+Iitaka             11
+Stein              2
+downstairs         1
+Abhyankar          1
+coincide           1
+generically        1

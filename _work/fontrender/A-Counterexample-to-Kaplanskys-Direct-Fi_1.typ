@@ -1,0 +1,30 @@
+#import "@preview/cetz:0.5.0"
+#let page_rotate = rotate
+#set page(width: 18cm, height: 20cm, margin: 1.5cm)
+#set text(lang: "en", size: 11pt)
+
+#cetz.canvas({
+  import cetz.draw: *
+  rect((-5.04, -1.485), (-0.99, 1.485), stroke: (paint: rgb("#b9b9b9")))
+  content((-3.015, 1.845), [#text(size: 9pt)[Remove a fan of $q$ lines]])
+  line((-3.015, -1.305), (-3.015, 1.305), stroke: (paint: rgb("#808080"), dash: "dashed"))
+  line((-4.725, -0.99), (-1.305, 0.99), stroke: (paint: rgb("#0000a6")))
+  line((-4.725, -0.36), (-1.305, 0.36), stroke: (paint: rgb("#0000a6")))
+  line((-4.725, 0.36), (-1.305, -0.36), stroke: (paint: rgb("#0000a6")))
+  line((-4.725, 0.99), (-1.305, -0.99), stroke: (paint: rgb("#0000a6")))
+  circle((-3.015, 0), radius: 0.08819, fill: rgb("#bf0000"))
+  content((-3.06, 0.072), [#box(inset: 0.3333em, stroke: (thickness: 0.4pt), fill: rgb("#ffffff"), [#text(size: 9pt)[$o$]])])
+  content((-3.015, 0.882), [#box(inset: 0.3333em, stroke: (thickness: 0.4pt), fill: rgb("#ffffff"), [#text(size: 9pt)[$o+e_r$]])])
+  content((-3.015, -1.845), [#text(size: 9pt)[All directions in $W_r$ except $e_r$]])
+  line((-0.585, 0), (0.585, 0), mark: (end: ">"))
+  rect((0.99, -1.485), (5.04, 1.485), stroke: (paint: rgb("#b9b9b9")))
+  content((3.015, 1.845), [#text(size: 9pt)[Insert $q-1$ parallel lines]])
+  line((3.015, -1.305), (3.015, 1.305), stroke: (paint: rgb("#808080"), dash: "dashed"))
+  line((1.53, -1.26), (1.53, 1.26))
+  line((2.295, -1.26), (2.295, 1.26))
+  line((4.23, -1.26), (4.23, 1.26))
+  circle((3.015, 0), radius: 0.08819, fill: rgb("#bf0000"))
+  content((2.97, 0.072), [#box(inset: 0.3333em, stroke: (thickness: 0.4pt), fill: rgb("#ffffff"), [#text(size: 9pt)[$o$]])])
+  content((3.015, 0.882), [#box(inset: 0.3333em, stroke: (thickness: 0.4pt), fill: rgb("#ffffff"), [#text(size: 9pt)[$o+e_r$]])])
+  content((3.015, -1.845), [#text(size: 9pt)[Direction $e_r$; omit the line through $o$]])
+})

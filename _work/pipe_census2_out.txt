@@ -1,0 +1,2 @@
+blocks=1024 table_rows=46466 notes_with_mismatch=0 mismatch_lines=0 escaped_pipes=254
+width_hist=3:273 4:772 5:1311 6:43943 7:162 8:5

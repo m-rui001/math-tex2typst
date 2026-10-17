@@ -1,0 +1,14 @@
+=== typst ===
+$a #h(2em) upright("ZQCTn,Dickson2014") upright("Lemma 2.9, Equation (19)") .$
+
+$a #h(2em) upright("ZQCTp,Stacks") upright("Tag 02JT") .$
+
+$b #h(2em) upright("ZQCTn,A,B") upright("Lemmas 2.8–2.9 and 0.27") .$
+
+$c upright("see ") upright("ZQCTn,K1") upright(" for the proof")$
+
+$d #h(2em) upright("ZQCTn,SharpO4") upright("Section “Scales, observation, and the class of densities”") .$
+
+$e #h(2em) upright("ZQCTn,K_2, with underscore") .$
+
+=== stderr ===

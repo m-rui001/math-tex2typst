@@ -1,0 +1,603 @@
+rows=105  shipped_family=105  corrected_family=99  corrected_quirk=101  shipped_plain=103  artifacts(shipped-only)=11  corrected-only-new-sites=5
+verdicts: {"mech":43,"manual-swap":22,"manual-space-prose":21,"artifact":11,"manual-unresolved":5,"manual-other":3}
+
+#### D100-准Riemann假设：Re-s大于八分之七的无零点半平面与Dirichlet-L函数显式公式路线的反推笔记.md  [可执行] bytes=206636 mtime=16:06:39
+  L498 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "=3-\\frac{8x}9+..."，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=58->58 `line=0->0 gain=1
+     OLD "$，左括号 $=3-\\frac{8x}9+... $ 注意 $(1-x)+(2-\\frac{8x}"
+     NEW "$，左括号 $=3-\\frac{8x}9+...$ 注意 $(1-x)+(2-\\frac{8x}"
+     CTX "项得 $r[(1-x)+(2-\\frac{8x}9)]=\\frac{4x}9+(2-\\frac{8x}9)t-x$，左括号 $=3-\\frac{8x}9+...◂ ▸$ 注意 $(1-x)+(2-\\frac{8x}9)=3-\\frac{17x}9=D_x$ ✓；右 $=(2-\\frac{8x}9)t-\\frac{5x}9$ "
+
+#### D104-单折Diophantine表示：幂关系与椭圆曲线互定义性的反推笔记.md  [可执行] bytes=124591 mtime=00:57:38
+  L553 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="L_0,D_0"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=17->16 `line=0->1 gain=1
+     OLD "码及五个加法元组与五个高度元组、两个邻值最大与 $L_0,D_0$、四松弛量 \"u+W_1-h_Q"
+     NEW "码及五个加法元组与五个高度元组、两个邻值最大与 `L_0,D_0$、四松弛量 \"u+W_1-h_Q"
+     CTX "ledger.tex:51-72）：四个 itemize 块（$Q,R$ 码与代表测试、五邻点与 $[2]Q$ 码及五个加法元组与五个高度元组、两个邻值最大与 ◂$▸L_0,D_0$、四松弛量 \"u+W_1-h_Q,\\ N_Q-u-W_1-1,\\ \\kappa D_0-L_0,\\ \\kappa L_0-D_0$\"）加收尾 \""
+
+#### D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md  [可执行] bytes=215519 mtime=09:34:10
+  L1177 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "X_{rr}=X_{mm}m_m^2+X_mn..."，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=6->6 `line=0->0 gain=1
+     OLD "{rr}=X_{mm}m_m^2+X_mn... $ 只有 $m_m^3$ 项 survive 在"
+     NEW "{rr}=X_{mm}m_m^2+X_mn...$ 只有 $m_m^3$ 项 survive 在"
+     CTX "rX_{rr}=m_r^3(X_mZ_{mm}-Z_mX_{mm})$\n（因为 $X_r=X_mm_m$、$X_{rr}=X_{mm}m_m^2+X_mn...◂ ▸$ 只有 $m_m^3$ 项 survive 在反对称组合里，\n$X_mX_{mm}$ 型项相消），于是 $X_m=\\frac{\\kappa R}{m_r}>0"
+
+#### D113-三维有界可测标量电导率的非唯一性：分块与标量化的反推笔记.md  [可执行] bytes=164242 mtime=13:06:48
+  L843 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "(-\\partial_1h_1-\\partial_3h_3)-(-\\partial_1h_2)"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=32->32 `line=0->0 gain=1
+     OLD "l_3h_3)-(-\\partial_1h_2) $…… 原文说改变量为 $-\\operatorn"
+     NEW "l_3h_3)-(-\\partial_1h_2)$…… 原文说改变量为 $-\\operatorn"
+     CTX "2=0$ ✓），而它们对 $F^1_2-F^2_1$ 的改变是 $(-\\partial_1h_1-\\partial_3h_3)-(-\\partial_1h_2)◂ ▸$…… 原文说改变量为 $-\\operatorname{div} h=-q$ ✓（即 $-\\partial_1h_1-\\partial_2h_2-\\partia"
+
+#### D115-完全二分图交叉数：Zarankiewicz式与交点归一化的反推笔记.md  [可执行] bytes=117450 mtime=00:57:41
+  L24 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="\\lfloor m/2\\rfloor\\lfloor(m-1)/2\\rfloor\\lfloor n/2\\rfloor\\lf"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=1->0 `line=4->5 gain=1
+     OLD "想：四个取整从哪来\n\n我坐下来第一件事，是盯着 $\\lfloor m/2\\rfloor\\lfloo"
+     NEW "想：四个取整从哪来\n\n我坐下来第一件事，是盯着 `\\lfloor m/2\\rfloor\\lfloo"
+     CTX "$m,n$,\n\\[\n \\crn(K_{m,n})=d_m d_n.\n\\]\n```\n\n## 0 初始动机与第一条猜想：四个取整从哪来\n\n我坐下来第一件事，是盯着 ◂$▸\\lfloor m/2\\rfloor\\lfloor(m-1)/2\\rfloor\\lfloor n/2\\rfloor\\lfloor(n-1)/2\\rfloor 这"
+  L404 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体里含被遮罩清白的行内代码/围栏空隙，真缺陷在代码素材里
+     hits_now=1 bytes_delta=-1 $line=15->15 `line=15->15 gain=1
+     OLD "annihilation property of $\\Phi$ imply` 与 `R_{ik}="
+     NEW "annihilation property of$\\Phi$ imply` 与 `R_{ik}="
+     CTX "nclusion.tex:48-52` 的 `Lemma~\\ref{lem:additive} and the annihilation property of◂ ▸$\\Phi$ imply` 与 `R_{ik}=X_i-Y_k`，闭合了整条逻辑：我不需要证明各顶点 gap 相容，只需要一个把 $\\mathcal L$ 杀掉"
+
+#### D117-最大三角Hilbert变换对称点估计：跳跃控制与热流两侧的反推笔记.md  [可执行] bytes=96172 mtime=08:12:45
+  L42 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体里含逐字引号 `"…"` 素材（改它=动原始素材）
+     hits_now=1 bytes_delta=-1 $line=39->39 `line=7->7 gain=1
+     OLD "right)^{1/3}.$\"，左侧三线性形式对 $(A_0,A_1,A_2)\\mapsto(tA"
+     NEW "right)^{1/3}.$\"，左侧三线性形式对$(A_0,A_1,A_2)\\mapsto(tA"
+     CTX "右侧是 \"$\\le C\\prod_{v=0}^2\\left(\\sum_{i,j}h^2|A_v(i,j)|^3\\right)^{1/3}.$\"，左侧三线性形式对◂ ▸$(A_0,A_1,A_2)\\mapsto(tA_0,tA_1,tA_2)$ 是 $t^3$ 次，右侧也是 $t^3$ 次；换成 $q$ 次能量后右侧变 $t^"
+
+#### D123-Petty射影体积猜想四维以上：球面核心与范数刚性的反推笔记.md  [可执行] bytes=88106 mtime=00:57:43
+  L179 INLINE => 假阳 :: GAUGE-BUG(遮罩): shipped 的 fenceMask 只清单行反引号 span、且不认 `\$` 与跨单换行的行内代码，代码/围栏素材里的 $ 泄漏进 span 体；修正遮罩后该行不再成位
+     HOST "核块计算逐字（`sections/05_position.tex:356-359`）：`$\\left.\\mathcal F(A)\\right|_{\\operatorname{ker} A}"
+
+#### D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md  [可执行] bytes=97115 mtime=00:57:43
+  L480 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="样本是否落在 $B"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=3->2 `line=0->1 gain=1
+     OLD "离。对两律 $P,Q$ 与集合 $B$，\n观测\"$样本是否落在 $B$\"给出的信息下界是\n$h_2"
+     NEW "离。对两律 $P,Q$ 与集合 $B$，\n观测\"`样本是否落在 $B$\"给出的信息下界是\n$h_2"
+     CTX "H_v=h(X+V_v)-\\log v$，两者相减时 $\\log v$ 抵消。\n第二步，把小互信息转成 TV 距离。对两律 $P,Q$ 与集合 $B$，\n观测\"◂$▸样本是否落在 $B$\"给出的信息下界是\n$h_2((P(B)+Q(B))/2)-\\tfrac12h_2(P(B))-\\tfrac12h_2(Q(B))$，\n由 "
+
+#### D134-乘积投影定位给出QAC零度parity下界：bootstrap与深度收缩的反推笔记.md  [可执行] bytes=116483 mtime=13:05:27
+  L349 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体里含逐字引号 `"…"` 素材（改它=动原始素材）
+     hits_now=1 bytes_delta=-1 $line=90->90 `line=26->26 gain=1
+     OLD "eta A-1=2\\beta\\ge0$\"；初值由 $W_N(T_0(z))=1$、$W_N(T_1"
+     NEW "eta A-1=2\\beta\\ge0$\"；初值由$W_N(T_0(z))=1$、$W_N(T_1"
+     CTX " 逐字给出归纳两行：\"$ 2\\beta A^j+A^{j-1}\\le A^{j+1}$\" 与 \"$A^2-2\\beta A-1=2\\beta\\ge0$\"；初值由◂ ▸$W_N(T_0(z))=1$、$W_N(T_1(z))=\\beta\\le A$ 起（`polynomial.tex:123-124`）。$A\\le7+4N\\l"
+  L412 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体里含逐字引号 `"…"` 素材（改它=动原始素材）
+     hits_now=1 bytes_delta=-1 $line=8->8 `line=8->8 gain=1
+     OLD "p(-N^\\sigma)$\"，理由 \"since $\\sigma'>\\alpha,\\sigma$."
+     NEW "p(-N^\\sigma)$\"，理由 \"since$\\sigma'>\\alpha,\\sigma$."
+     CTX "ceil N^\\alpha\\rceil+1)\\log(1+N)-N^{\\sigma'}\\right)\\le\\exp(-N^\\sigma)$\"，理由 \"since◂ ▸$\\sigma'>\\alpha,\\sigma$.\"（`depth_reduction.tex:104`）。\n\n（c）机械理由。$\\beta>\\max\\{\\alp"
+  L462 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体里含被遮罩清白的行内代码/围栏空隙，真缺陷在代码素材里
+     hits_now=1 bytes_delta=-1 $line=16->16 `line=6->6 gain=1
+     OLD "tex:153-155` 是关键一句：\"Each $B_j$ is therefore a con"
+     NEW "tex:153-155` 是关键一句：\"Each$B_j$ is therefore a con"
+     CTX " B_3=VP_{\\mathrm{right}}V^\\dagger.$\"，而 `depth_reduction.tex:153-155` 是关键一句：\"Each◂ ▸$B_j$ is therefore a contraction to which \\Cref{lem:propagation} applies. No com"
+  L595 INLINE => 需人工定夺 [swap] :: 把行内代码的闭反引号改成 $：该反引号正与同行的开反引号配对（文件路径/label 引用），改掉即毁掉一处正常代码 span；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=16->17 `line=6->5 gain=1
+     OLD ".\n> \\end{equation}\"\n\n于是 `bootstrap.tex:139-142`：\""
+     NEW ".\n> \\end{equation}\"\n\n于是 $bootstrap.tex:139-142`：\""
+     CTX "recurrence}\n>  s_{i+1}=t_i,\\qquad t_{i+1}=2t_i-s_i-3\\eta.\n> \\end{equation}\"\n\n于是 ◂`▸bootstrap.tex:139-142`：\"Writing $g_i=t_i-s_i$, we have $ g_i=g-3i\\eta,\\qquad t_{"
+  L604 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体里含逐字引号 `"…"` 素材（改它=动原始素材）
+     hits_now=1 bytes_delta=-1 $line=6->6 `line=6->6 gain=1
+     OLD "i>t+Kg/2\\ge t+1>1. $\" 再取 $J\\le K$ 为第一个 $t_J>1$ 的指"
+     NEW "i>t+Kg/2\\ge t+1>1. $\" 再取$J\\le K$ 为第一个 $t_J>1$ 的指"
+     CTX "nd\"\n\n以及 `bootstrap.tex:149-151`：\"$ t_K=t+\\sum_{i=1}^K g_i>t+Kg/2\\ge t+1>1. $\" 再取◂ ▸$J\\le K$ 为第一个 $t_J>1$ 的指标，`bootstrap.tex:152-154`：\"This index and every exponent"
+
+#### D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md  [可执行] bytes=96120 mtime=00:57:47
+  L215 INLINE => 需人工定夺 [swap] :: 把行内代码的闭反引号改成 $：该反引号正与同行的开反引号配对（文件路径/label 引用），改掉即毁掉一处正常代码 span；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=1->2 `line=2->1 gain=1
+     OLD "\\qquad A_1=E_{001},\"\n\n> `idempotents.tex:44-45` \""
+     NEW "\\qquad A_1=E_{001},\"\n\n> $idempotents.tex:44-45` \""
+     CTX "：\n\n> `idempotents.tex:35` \" A=E_{00},\\qquad A_0=E_{000},\\qquad A_1=E_{001},\"\n\n> ◂`▸idempotents.tex:44-45` \" (000,01,1) & A_0,B',C' & A_0+B'+C'\\\\\" 与 \" (001,01,1) & "
+
+#### D145-复杂矩阵乘法低于2.258与矩形界：证书层级与标签补全的反推笔记.md  [可执行] bytes=284461 mtime=06:05:35
+  L115 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体里含逐字引号 `"…"` 素材（改它=动原始素材）
+     hits_now=1 bytes_delta=-1 $line=13->13 `line=8->8 gain=1
+     OLD "nce per \\(\\ell$\"，若真那样计费则 $\\log R_N$ 变成 $t$ 倍级，$D-"
+     NEW "nce per \\(\\ell$\"，若真那样计费则$\\log R_N$ 变成 $t$ 倍级，$D-"
+     CTX "，`371` 明确说 \"This does not charge \\(\\rank(\\mathcal A)\\) once per \\(\\ell$\"，若真那样计费则◂ ▸$\\log R_N$ 变成 $t$ 倍级，$D-A$ 不再相消，指数界直接退回平凡值。[推测] 第二条是不固定条件词频而让频率随输出漂移，此时下一辅助张量的规模"
+  L489 INLINE => 需人工定夺 [swap] :: 把行内代码的闭反引号改成 $：该反引号正与同行的开反引号配对（文件路径/label 引用），改掉即毁掉一处正常代码 span；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=19->20 `line=24->23 gain=1
+     OLD "-certificates.tex:13--21`：\"Use base two, distingu"
+     NEW "-certificates.tex:13--21$：\"Use base two, distingu"
+     CTX "见证：`lem:uniform-update`、$b=288$ 与那条有理闭链\n\n(a) 原文。目标设定 `07-certificates.tex:13--21◂`▸：\"Use base two, distinguished side \\(X\\), and its color \\(\\colB\\). After \\(b\\) b"
+
+#### D148-三维相对论VlasovMaxwell整体经典解的符号增量bootstrap与延迟锥消去.md  [可执行] bytes=70074 mtime=00:57:49
+  L402 INLINE => 需人工定夺 ::  hunter 在本行窗口内找不到任何单字符改动（空格删除或 $↔反引号互换）能清位
+
+#### D155-实L1独立乘积的averaged中点模与AUC重范化障碍.md  [可执行] bytes=117262 mtime=12:22:23
+  L533 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "\\mathbb E|Z-1|=\\int_0^1(1-z)e^{-z}dz+\\int_1^\\infty(z-1)e^{-z}dz=(2-2/e)+(1/e)="，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=14->14 `line=2->2 gain=1
+     OLD ")e^{-z}dz=(2-2/e)+(1/e)= $... 用正文给的对称式更快，$2/e\\app"
+     NEW ")e^{-z}dz=(2-2/e)+(1/e)=$... 用正文给的对称式更快，$2/e\\app"
+     CTX "：$\\mathbb E|Z-1|=\\int_0^1(1-z)e^{-z}dz+\\int_1^\\infty(z-1)e^{-z}dz=(2-2/e)+(1/e)=◂ ▸$... 用正文给的对称式更快，$2/e\\approx0.736$，落在 $(0,2)$ 内，于是 $t_0=a\\rho/(2b)$ 大约 $0.37a/b$。"
+
+#### D163-四次多项式无平方因子值的数域行列式路线与自适应辅助素数.md  [可执行] bytes=123581 mtime=06:05:36
+  L189 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体是整句中文（释放的闭符与前文某枚 $ 组 span；病根在前文那枚孤立 $）
+     hits_now=1 bytes_delta=-1 $line=10->10 `line=0->0 gain=2
+     OLD "1\\le n\\le X:f(n)\\text{ 是 $k$-power-free}\\}$（01-in"
+     NEW "1\\le n\\le X:f(n)\\text{ 是$k$-power-free}\\}$（01-in"
+     CTX "q)=\\#\\{a\\in\\Z/q\\Z:f(a)\\equiv0\\pmod q\\}$，$S_{f,k}(X)=\\#\\{1\\le n\\le X:f(n)\\text{ 是◂ ▸$k$-power-free}\\}$（01-introduction.tex:7-10）。$k$-power-free 的定义包含负整数而排除零（01-intr"
+
+#### D18-Tachikawa第二猜想反例.md  [可执行] bytes=139557 mtime=13:36:02
+  L990 INLINE => 假阳 :: GAUGE-BUG(数字否决): katex_census.js 用 DIG.includes(masked[j+1]==="$" ? "" : …)，String#includes("") 恒真，于是紧跟另一枚 $ 的合法闭符被否决，相邻两个行内 span `$a$$b$` 被读成一枚含 $ 的 span；去掉该 quirk 后不再成位
+     HOST "第二类是旧表把推导量当成给定值。旧表\"$\\Lambda$ 的阶 $2\\times400+\\dim F$\"：tex 只给 $\\dim E=400$（algebra.tex:129）和 $\\Lambda$ 的形状（triangular.tex:108），$\\dim F$ 全文没出现过，旧表把一个我能算但论文没写的量写成了论文给的数。\"$\\operatorname{pd}_{B^e}(\\operatorname{Res} E)\\le8$\" 同理：bimodule.tex:630 的原话是 \"$E$$B^e$-投射消解长度不超过 $8$\"，讲长度，我用 pd 记号转写，属于口径外推，新表里我照 tex"
+  L990 INLINE => 假阳 :: GAUGE-BUG(数字否决): katex_census.js 用 DIG.includes(masked[j+1]==="$" ? "" : …)，String#includes("") 恒真，于是紧跟另一枚 $ 的合法闭符被否决，相邻两个行内 span `$a$$b$` 被读成一枚含 $ 的 span；去掉该 quirk 后不再成位
+     HOST "第二类是旧表把推导量当成给定值。旧表\"$\\Lambda$ 的阶 $2\\times400+\\dim F$\"：tex 只给 $\\dim E=400$（algebra.tex:129）和 $\\Lambda$ 的形状（triangular.tex:108），$\\dim F$ 全文没出现过，旧表把一个我能算但论文没写的量写成了论文给的数。\"$\\operatorname{pd}_{B^e}(\\operatorname{Res} E)\\le8$\" 同理：bimodule.tex:630 的原话是 \"$E$$B^e$-投射消解长度不超过 $8$\"，讲长度，我用 pd 记号转写，属于口径外推，新表里我照 tex"
+
+#### D211-三边际Coulomb代价的Monge拟设反例.md  [可执行] bytes=72708 mtime=04:21:53
+  L227 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体里含被遮罩清白的行内代码/围栏空隙，真缺陷在代码素材里
+     hits_now=1 bytes_delta=-1 $line=23->23 `line=7->7 gain=1
+     OLD "oof.tex:67-70` 那行下界。我把这个 $\\epsilon/3$ 式的粗估计写出来，是因"
+     NEW "oof.tex:67-70` 那行下界。我把这个$\\epsilon/3$ 式的粗估计写出来，是因"
+     CTX "U)=1$。这一步成立以后，支撑不等式才能在 $U^3$ 上逐项积分，才有 `build/sections/proof.tex:67-70` 那行下界。我把这个◂ ▸$\\epsilon/3$ 式的粗估计写出来，是因为它同时解释了\"为什么三边际条件已经够用\"：任何一维边缘已经把全部质量放在 $U$ 上，笛卡尔积的余集是零测并。"
+
+#### D218-严格椭圆方向零一律的反向重构笔记.md  [可执行] bytes=73783 mtime=00:58:05
+  L705 INLINE => 假阳 :: GAUGE-BUG(遮罩): shipped 的 fenceMask 只清单行反引号 span、且不认 `\$` 与跨单换行的行内代码，代码/围栏素材里的 $ 泄漏进 span 体；修正遮罩后该行不再成位
+     HOST "\"$\\EE_{\\mathbf Q_N}\\lvert E\\rVert$\"，定界符左右不配对，正确写法应是 $\\mathbb E_{\\mathbf Q_N}\\lvert E\\rvert$；同一行后面的 $\\lVert e\\rVert$ 用法是对的。五，第 5 节"
+
+#### D219-素数1009上有限Smith-Toda复形V4的构造追记.md  [可执行] bytes=72608 mtime=11:20:58
+  L49 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体是整句中文（释放的闭符与前文某枚 $ 组 span；病根在前文那枚孤立 $）
+     hits_now=1 bytes_delta=-1 $line=35->35 `line=1->1 gain=1
+     OLD "9$)。第二处卡点更本质:有限化之后,残余候选里 $k=p$ 那一行的群根本不为零。May 页上结"
+     NEW "9$)。第二处卡点更本质:有限化之后,残余候选里$k=p$ 那一行的群根本不为零。May 页上结"
+     CTX "ld/sections/03-may-and-first-obstruction.tex:18\\text{-}69$)。第二处卡点更本质:有限化之后,残余候选里◂ ▸$k=p$ 那一行的群根本不为零。May 页上结结实实躺着两个单项式 $cyb\\,A^{N+1}$ 与 $ayb\\,B\\,A^{N}$($03\\text{:}3"
+  L182 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "3p^2?"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=158->158 `line=20->20 gain=1
+     OLD "2p^2-p=p^2+p$?我算得 $3p^2? $ 不对,重算: $N_0p=p^3-2p^2+"
+     NEW "2p^2-p=p^2+p$?我算得 $3p^2?$ 不对,重算: $N_0p=p^3-2p^2+"
+     CTX "_4=p^3+p^2+p+1$、$N_0=p^2-2p+1$,分子 $=p^3+p^2+p+1+p-1-p^3+2p^2-p=p^2+p$?我算得 $3p^2?◂ ▸$ 不对,重算: $N_0p=p^3-2p^2+p$;分子 $=(p^3+p^2+p+1)+(p-1)-(p^3-2p^2+p)=3p^2+1$;除以 $p$ "
+
+#### D249-从全局谱隙到二维纠缠面积律.md  [可执行] bytes=71160 mtime=00:58:12
+  L44 INLINE => 需人工定夺 [swap] :: 把行内代码的闭反引号改成 $：该反引号正与同行的开反引号配对（文件路径/label 引用），改掉即毁掉一处正常代码 span；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=13->14 `line=5->4 gain=1
+     OLD "叠链条就出面积律(`00-history.tex` 第 19 到 23 行是这套机制的文献位置)。"
+     NEW "叠链条就出面积律(`00-history.tex$ 第 19 到 23 行是这套机制的文献位置)。"
+     CTX "测性质。\n\n路线一:二维直接平移 AGSP。一维无阻挠链的投影子幂次把误差压到指数小的同时秩只按常数倍增长,链条叠链条就出面积律(`00-history.tex◂`▸ 第 19 到 23 行是这套机制的文献位置)。我预期的二维版本:对区域 $A$ 造一个保持 $\\Omega$、收缩正交补、且作用在 $A$ 边界附近薄壳上的近"
+
+#### D25-Crouzeix完整不等式直接证明.md  [不可现在执行] bytes=400111 mtime=09:52:06
+  L1490 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="[推测]"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=9->8 `line=7->8 gain=1
+     OLD "由** |\n\n### 11.4 候选失败路线\n\n$[推测]$ 其一，直接用 Minkowski 和"
+     NEW "由** |\n\n### 11.4 候选失败路线\n\n`[推测]$ 其一，直接用 Minkowski 和"
+     CTX "⇒ `lem:exterior-collar` 不可用。**这是本引理必须光滑化（指数和），并非用多边形的全部理由** |\n\n### 11.4 候选失败路线\n\n◂$▸[推测]$ 其一，直接用 Minkowski 和 $K+\\overline{D(0,\\varepsilon)}$。它给凸紧集、$\\operatorname{di"
+
+#### D253-阿贝尔覆盖Gale对应与Hodge猜想自幂-工作笔记.md  [可执行] bytes=71108 mtime=00:58:14
+  L56 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="\\mathcal L=(\\pi_*k_Z)_\\chi"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=11->10 `line=9->10 gain=1
+     OLD "在性定了,下一步是它在哪里被\"看见\"。局部系统 $\\mathcal L=(\\pi_*k_Z)_\\c"
+     NEW "在性定了,下一步是它在哪里被\"看见\"。局部系统 `\\mathcal L=(\\pi_*k_Z)_\\c"
+     CTX ")+(0,1)$,和恰为 $n$,没有其它组合(`build/paper.tex:737-741`)。\n\n线的存在性定了,下一步是它在哪里被\"看见\"。局部系统 ◂$▸\\mathcal L=(\\pi_*k_Z)_\\chi$ 在 $U=(B\\setminus D)^{(n)}$ 外(即遇到分支点的除子)纤维为零:抬升组的稳定子含"
+
+#### D26-加倍Hilbert子集无双Lipschitz有限维嵌入.md  [不可现在执行] bytes=188439 mtime=09:53:37
+  L769 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体里含逐字引号 `"…"` 素材（改它=动原始素材）
+     hits_now=1 bytes_delta=-1 $line=19->19 `line=0->0 gain=1
+     OLD "级）；量化保持\"$与目标和弦数、失真无关\"，外加 $K_B$ 只依赖环境空间。多用的机器：FIP "
+     NEW "级）；量化保持\"$与目标和弦数、失真无关\"，外加$K_B$ 只依赖环境空间。多用的机器：FIP "
+     CTX "摘要那句 \"even for compact subsets of Hilbert space\" 靠的正是这次升级）；量化保持\"$与目标和弦数、失真无关\"，外加◂ ▸$K_B$ 只依赖环境空间。多用的机器：FIP 紧致化引理（把无穷障碍切成有限证书）、对角枚举 $X_j$、有限维 Dvoretzky（严格失真 $<2$）、平"
+
+#### D261-稀疏一般图最大基数匹配的几乎线性时间.md  [可执行] bytes=110259 mtime=00:58:15
+  L143 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="(P+B)S^{O(1/a)+o_a(1)} 的总时间、在每条路径上、对固定充分大参数的所有充分大尺寸做到；实现要么返回"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=11->10 `line=0->1 gain=1
+     OLD "理（第 42 到 68 行）声称这件事可以只用 $(P+B)S^{O(1/a)+o_a(1)} 的"
+     NEW "理（第 42 到 68 行）声称这件事可以只用 `(P+B)S^{O(1/a)+o_a(1)} 的"
+     CTX "交换流，必要时再加上它的完整残量 source-reachable bin 集（第 38 到 40 行）。\n\n引理（第 42 到 68 行）声称这件事可以只用 ◂$▸(P+B)S^{O(1/a)+o_a(1)} 的总时间、在每条路径上、对固定充分大参数的所有充分大尺寸做到；实现要么返回精确的交换流改动以及必要时完整残量可达集"
+
+#### D275-用矩阵能量的曲率拿下dyadic三角Hilbert型的L3界.md  [可执行] bytes=103193 mtime=13:05:27
+  L301 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "\\le3m_i\\sum_{j>k}..."，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=32->32 `line=0->0 gain=1
+     OLD "对值 $\\le3m_i\\sum_{j>k}... $ 作者给出的上界是 $3E_i$，我要把中间一"
+     NEW "对值 $\\le3m_i\\sum_{j>k}...$ 作者给出的上界是 $3E_i$，我要把中间一"
+     CTX "{>i}\\rVert_{\\mathrm{op}}\\le\\norm D_{\\mathrm{op}}\\le1$，故绝对值 $\\le3m_i\\sum_{j>k}...◂ ▸$ 作者给出的上界是 $3E_i$，我要把中间一步补出来：$\\abs{x^*D_{>i}x}\\le\\norm x^2=\\sum_{j>i}m_j^2\\abs{D"
+
+#### D29-Borsuk覆盖断言九维反例.md  [不可现在执行] bytes=192301 mtime=09:53:38
+  L521 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "a-h=s-(N_k-N_{k-1})+..."，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=10->10 `line=0->0 gain=1
+     OLD "$a-h=s-(N_k-N_{k-1})+... $ 即 $k-s=a-h$，是后文分诊（正维/零"
+     NEW "$a-h=s-(N_k-N_{k-1})+...$ 即 $k-s=a-h$，是后文分诊（正维/零"
+     CTX "[补]。\n\n**(c) 机械理由**：四个记号 $s,a,h$ 与 $m=N_k$ 的互锁关系 $s+a=m$、$a-h=s-(N_k-N_{k-1})+...◂ ▸$ 即 $k-s=a-h$，是后文分诊（正维/零维）的代数底座，18 节兑现。\n\n## 18 定理 4.3（二）：仿射卡、水平集 $L$ 与球丛平凡化\n\n**第"
+
+#### D317-任意接近却寻不到共轭酉的分离Cstar代数.md  [可执行] bytes=70547 mtime=00:58:27
+  L125 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体是整句中文（释放的闭符与前文某枚 $ 组 span；病根在前文那枚孤立 $）
+     hits_now=1 bytes_delta=-1 $line=37->37 `line=13->13 gain=1
+     OLD "xt{main.tex:506}$):因为右正则 $\\rho$ 与左正则 $\\lambda$ 交换"
+     NEW "xt{main.tex:506}$):因为右正则$\\rho$ 与左正则 $\\lambda$ 交换"
+     CTX "出 $Y\\in\\lambda(G)'$。这里我留意到 $\\rho(g)\\otimes I\\in D'$(`\\text{main.tex:506}$):因为右正则◂ ▸$\\rho$ 与左正则 $\\lambda$ 交换,所以 $\\rho(g)\\in\\lambda(G)'$,张 $I$ 就落进 $D'$。这个 $\\rho(g)\\o"
+
+#### D339-平面XY模型临界中心磁化的对数修正与振幅确定.md  [可执行] bytes=72908 mtime=04:59:11
+  L296 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "\\lvert \\nabla^a \\eta_l(v)\\rvert"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=4->4 `line=0->0 gain=1
+     OLD "\\nabla^a \\eta_l(v)\\rvert $ | $\\le C_a (1+\\mathrm{"
+     NEW "\\nabla^a \\eta_l(v)\\rvert$ | $\\le C_a (1+\\mathrm{"
+     CTX "tex:254 | §11 与 §13 near-mark 差 | §13 无法闭合  |\n| $\\lvert \\nabla^a \\eta_l(v)\\rvert◂ ▸$ | $\\le C_a (1+\\mathrm{dist}(v,0))^{-1-a}$ | build/sections/inputs.tex:607 | 贴墙"
+  L404 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "m(J) ="，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=48->48 `line=0->0 gain=1
+     OLD "强行让 $s$ 与 $J$ 无关，$m(J) = $ const、$i(J)$ 也会常数化，\"[c"
+     NEW "强行让 $s$ 与 $J$ 无关，$m(J) =$ const、$i(J)$ 也会常数化，\"[c"
+     CTX "都落在进入之后\"，前提是 $i(J) = o(J)$。$i(J) = O(\\log J)$ 显然满足这个前提。若强行让 $s$ 与 $J$ 无关，$m(J) =◂ ▸$ const、$i(J)$ 也会常数化，\"[cJ, 8J] 全在进入之后\"就要靠\"进入之前尺度短、进入之后尺度长\"这种粗界；作者选择 $s \\asymp J^"
+
+#### D342-临界SK模型单点热浴混合的多项式指数.md  [可执行] bytes=139121 mtime=00:58:33
+  L360 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体里含逐字引号 `"…"` 素材（改它=动原始素材）
+     hits_now=1 bytes_delta=-1 $line=39->39 `line=0->0 gain=1
+     OLD "指数\"才是归纳能跑起来的原因。第二，左端是后测度 $\\mu_{h_s}$ 的二乘积，右端却以 $n"
+     NEW "指数\"才是归纳能跑起来的原因。第二，左端是后测度$\\mu_{h_s}$ 的二乘积，右端却以 $n"
+     CTX "，后者只在紧区间内部起作用，写 §12.1 时我只注意到\"$o(1)$ 必须先于 $n$ 选\"，没注意到\"$同一指数\"才是归纳能跑起来的原因。第二，左端是后测度◂ ▸$\\mu_{h_s}$ 的二乘积，右端却以 $nr$ 为尺度，而 $k=nr^3$ 里的 $r$ 是同一次幂：把两者对照，一次偏差的概率代价是 $e^{-cn}"
+
+#### D343-蜂窝格临界带穿越质量幂律-1-4的求取全程复盘.md  [可执行] bytes=82549 mtime=00:58:33
+  L176 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体是整句中文（释放的闭符与前文某枚 $ 组 span；病根在前文那枚孤立 $）
+     hits_now=1 bytes_delta=-1 $line=28->28 `line=0->0 gain=1
+     OLD "近唯一性与有理延拓。Glue 配对内部转置劈分把 $m$ 归约到更小带：两半各走插入与投影一条路，"
+     NEW "近唯一性与有理延拓。Glue 配对内部转置劈分把$m$ 归约到更小带：两半各走插入与投影一条路，"
+     CTX "\\mathsf b_{\\rm red}^-P_{\\rm red}^- $（第 82 到 86 行）加混合特殊化附近唯一性与有理延拓。Glue 配对内部转置劈分把◂ ▸$m$ 归约到更小带：两半各走插入与投影一条路，全程不需要 $S_s^{\\mathsf t}S_s=I$ 这种事实（第 89 到 92 行）。参数的 $\\pi$"
+
+#### D35-最短公共超串的多项式时间二近似.md  [可执行] bytes=130543 mtime=13:05:28
+  L899 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "B_A(s;N_T) ="，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=4->4 `line=4->4 gain=1
+     OLD "k-count` | $B_A(s;N_T) = $ 被阻塞出现数 $\\le N_T(s)$ | "
+     NEW "k-count` | $B_A(s;N_T) =$ 被阻塞出现数 $\\le N_T(s)$ | "
+     CTX "义 | `02-counts.tex:20` | (2.1)(2.2) |\n| (2.4) | `eq:block-count` | $B_A(s;N_T) =◂ ▸$ 被阻塞出现数 $\\le N_T(s)$ | `02-counts.tex:26` | 唯一性论证 |\n| (2.5) | `eq:extension-rul"
+
+#### D375-平面XY模型关联长度的本质奇点.md  [可执行] bytes=75018 mtime=06:05:40
+  L390 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "\\lVert \\partial_b^rK_s\\rVert"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=6->6 `line=0->0 gain=1
+     OLD "rt \\partial_b^rK_s\\rVert $ | $\\le C_{R_0,r}s^{2r}"
+     NEW "rt \\partial_b^rK_s\\rVert$ | $\\le C_{R_0,r}s^{2r}"
+     CTX "ections/entry.tex:185 | 对 $b$ 求导合法性 | §6 全部导数断 |\n| $\\lVert \\partial_b^rK_s\\rVert◂ ▸$ | $\\le C_{R_0,r}s^{2r}$ | sections/entry.tex:196 | 初值导数 $Cs_k^2$ | slaving 起点断"
+
+#### D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md  [可执行] bytes=70386 mtime=00:58:40
+  L173 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "\\lvert B\\rvert"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=4->4 `line=0->0 gain=1
+     OLD "分工瓦解 |\n| $\\lvert B\\rvert $ | 分量在 $D$ 上的度数 | 02-cy"
+     NEW "分工瓦解 |\n| $\\lvert B\\rvert$ | 分量在 $D$ 上的度数 | 02-cy"
+     CTX " 04-quotient.tex:70-80 兑现 | 换成 $\\ell$ 则 §5 与 §7 职能错乱,双素数分工瓦解 |\n| $\\lvert B\\rvert◂ ▸$ | 分量在 $D$ 上的度数 | 02-cycles.tex:41 | §4 分量满射、§9 两次度数计算(04:29-30, 04:61-64) | 稳定"
+  L197 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "p\\mid\\lvert B\\cap P\\rvert"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=4->4 `line=0->0 gain=1
+     OLD "\\mid\\lvert B\\cap P\\rvert $ | 经 $A\\to R$ 满分解 | 04-"
+     NEW "\\mid\\lvert B\\cap P\\rvert$ | 经 $A\\to R$ 满分解 | 04-"
+     CTX "定理 (i)、(ii) 的单射步(04:74-77) | 相交非零则外叶度数 $>1$,(i) 崩 |\n| $p\\mid\\lvert B\\cap P\\rvert◂ ▸$ | 经 $A\\to R$ 满分解 | 04-quotient.tex:31-35 | 式 (4.2) 单点版 | 分解不满则整除断,满性靠秩局部常正  |\n"
+  L207 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "\\lvert B\\rvert"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=6->6 `line=0->0 gain=1
+     OLD "2.1 传递性与 $\\lvert B\\rvert $ 公式 | 无 $\\Omega$-点时(见第 "
+     NEW "2.1 传递性与 $\\lvert B\\rvert$ 公式 | 无 $\\Omega$-点时(见第 "
+     CTX "自由传递纤维 | 经典点的几何纤维是自由传递 $G$-集 | 02-cycles.tex:52-54 | 引理 2.1 传递性与 $\\lvert B\\rvert◂ ▸$ 公式 | 无 $\\Omega$-点时(见第 5 行台账)需另证  |\n| 附件盘逆像为节点环域 | 开边逆像描述 | 02-cycles.tex:12-14"
+
+#### D38-Jacobsthal函数二次界.md  [可执行] bytes=228918 mtime=13:36:03
+  L946 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="1+0.66+0.52+0.34=2.52"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=28->27 `line=18->19 gain=1
+     OLD "bda$。\n\n(d) 预算切分的错位。论文口径：$1+0.66+0.52+0.34=2.52$，对"
+     NEW "bda$。\n\n(d) 预算切分的错位。论文口径：`1+0.66+0.52+0.34=2.52$，对"
+     CTX "hree_loss_lt`（前3 项和 < 43/20）。两边逐字吻合，`Real.log 2` 对 $\\lambda$。\n\n(d) 预算切分的错位。论文口径：◂$▸1+0.66+0.52+0.34=2.52$，对 $I_{\\text{full}}=8/3$ 得 $I>0.14$。Lean 口径：前三项和只证到 $43/20"
+  L999 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "A>"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=20->20 `line=0->0 gain=1
+     OLD "第二道闸门（误差质量 $o(1)$）要求 $A> $ 所有 $\\log B$ 幂的总次数，会牵动 "
+     NEW "第二道闸门（误差质量 $o(1)$）要求 $A>$ 所有 $\\log B$ 幂的总次数，会牵动 "
+     CTX "amardSupport）；指数从 $\\sqrt{\\cdot}$ 退化到 $\\log^{-A}$ 时，第 6 节第二道闸门（误差质量 $o(1)$）要求 $A>◂ ▸$ 所有 $\\log B$ 幂的总次数，会牵动 $C_s$ 与 $\\alpha_{\\max}$ |\n| 异常项 | $\\lvert\\delta\\rvert\\ll"
+
+#### D390-一致离散空间上Lipschitz自由空间的逼近失效.md  [可执行] bytes=70833 mtime=12:22:23
+  L17 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="\\mathcal F"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=28->27 `line=0->1 gain=1
+     OLD "\\R$、$\\N$、$\\mathcal F$（即 $\\mathcal F$）、$\\operatorn"
+     NEW "\\R$、$\\N$、$\\mathcal F$（即 `\\mathcal F$）、$\\operatorn"
+     CTX "rators、walks、tests、references。宏定义集中在 common.tex:32--44：$\\R$、$\\N$、$\\mathcal F$（即 ◂$▸\\mathcal F$）、$\\operatorname{Lip}$、$\\Vert \\cdot\\Vert _{\\mathrm{Lip}}$、$\\mathrm{TV"
+  L17 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="\\mathcal F"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=28->27 `line=0->1 gain=1
+     OLD "\\R$、$\\N$、$\\mathcal F$（即 $\\mathcal F$）、$\\operatorn"
+     NEW "\\R$、$\\N$、$\\mathcal F$（即 `\\mathcal F$）、$\\operatorn"
+     CTX "rators、walks、tests、references。宏定义集中在 common.tex:32--44：$\\R$、$\\N$、$\\mathcal F$（即 ◂$▸\\mathcal F$）、$\\operatorname{Lip}$、$\\Vert \\cdot\\Vert _{\\mathrm{Lip}}$、$\\mathrm{TV"
+
+#### D396-复配中的过滤乘积与保边界压缩.md  [可执行] bytes=72614 mtime=00:58:45
+  L37 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "2\\dim P<"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=26->26 `line=6->6 gain=1
+     OLD "q$ 的目标子集，维数计数要 $2\\dim P< $ 某个 $2q$ 级的界。麻烦在于 $\\dim"
+     NEW "q$ 的目标子集，维数计数要 $2\\dim P<$ 某个 $2q$ 级的界。麻烦在于 $\\dim"
+     CTX ":76`），余维数 $q=D-t\\lfloor s\\rfloor$；挪一个 $\\dim P$ 维的源避开余维 $q$ 的目标子集，维数计数要 $2\\dim P<◂ ▸$ 某个 $2q$ 级的界。麻烦在于 $\\dim P$ 在批量放大时按 $\\ell d_P$ 线性增长，而我能控制的余维数比是 $a$ 定的常数，两头跑不赢。论"
+
+#### D436-稳定Morse数以下的哈密顿不动点.md  [可执行] bytes=72430 mtime=04:59:11
+  L268 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="Y"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=30->29 `line=8->9 gain=1
+     OLD "身实验。\n\n第五条,直接吹爆四次点之外的路线换 $Y$。[推测] 若不吹爆,直接用 $\\mathb"
+     NEW "身实验。\n\n第五条,直接吹爆四次点之外的路线换 `Y$。[推测] 若不吹爆,直接用 $\\mathb"
+     CTX ":22` 的线性计数反驳,绝对缺口 $16$ 与 $N$ 无关,把 $N$ 压小只会让相对亏损变大,值得后续做瘦身实验。\n\n第五条,直接吹爆四次点之外的路线换 ◂$▸Y$。[推测] 若不吹爆,直接用 $\\mathbb{CP}^1\\times\\mathbb{CP}^1$ 与对角圆作用,半转不动集是 $4$ 个孤立点(每个 $\\"
+
+#### D450-平面Mumford-Shah极小元的内部正则性.md  [可执行] bytes=70599 mtime=06:20:36
+  L38 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="K"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=17->16 `line=7->8 gain=1
+     OLD "ev 比较类的弱极小。我们的容许类一条都不给: $K$ 只有 $\\mathcal H^1(K)<\\"
+     NEW "ev 比较类的弱极小。我们的容许类一条都不给: `K$ 只有 $\\mathcal H^1(K)<\\"
+     CTX "直接引用经典正则定理。经典理论的假设清单上写着: 闭集可求长且约化、函数局部有界、pair 属于局部 Sobolev 比较类的弱极小。我们的容许类一条都不给: ◂$▸K$ 只有 $\\mathcal H^1(K)<\\infty$, rectifiable 结构未知; $u$ 只有 $L^2$, 连 $L^\\infty_{\\ma"
+
+#### D47-无共轭点但无非正曲率度量的三流形.md  [不可现在执行] bytes=126600 mtime=09:53:36
+  L191 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体里含逐字引号 `"…"` 素材（改它=动原始素材）
+     hits_now=1 bytes_delta=-1 $line=47->47 `line=14->14 gain=1
+     OLD "\"常数不依赖 $B_1,B_2\"这句要紧:周期在 $\\delta$ 之后才被压到尖点尺度(第 8 "
+     NEW "\"常数不依赖 $B_1,B_2\"这句要紧:周期在$\\delta$ 之后才被压到尖点尺度(第 8 "
+     CTX "节 gauge 恒等式里的 $\\mu$ 惩罚对 $p^{\\mathsf T}\\Delta z$ 的压制没有来源。\"常数不依赖 $B_1,B_2\"这句要紧:周期在◂ ▸$\\delta$ 之后才被压到尖点尺度(第 8 节),若估计含 $B$,选择顺序死循环。为什么写\"依赖 $\\chi$ 的某 $C$\"而不显式化:$\\chi$ 是"
+  L318 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "\\dot x^{\\mathsf T}Q''\\dot x=p^{\\mathsf T}P(2QP'QP'Q-QP''Q)Pp=2p^{\\mathsf T}P'..."，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=84->84 `line=0->0 gain=1
+     OLD "Q)Pp=2p^{\\mathsf T}P'... $ 逐项合并后恰是完备平方展开:$|\\dot z"
+     NEW "Q)Pp=2p^{\\mathsf T}P'...$ 逐项合并后恰是完备平方展开:$|\\dot z"
+     CTX "\\dot x^{\\mathsf T}Q''\\dot x=p^{\\mathsf T}P(2QP'QP'Q-QP''Q)Pp=2p^{\\mathsf T}P'...◂ ▸$ 逐项合并后恰是完备平方展开:$|\\dot z|_Q^2-2w\\dot z^{\\mathsf T}QP'p+w^2|P'p|_Q^2$ 吸收 $2QP'QP'"
+  L593 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "P\\in[1/9,18]Q?"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=12->12 `line=4->4 gain=1
+     OLD "P,Q$ 界 | $P\\in[1/9,18]Q? $ 即 $\\tfrac19\\operatorna"
+     NEW "P,Q$ 界 | $P\\in[1/9,18]Q?$ 即 $\\tfrac19\\operatorna"
+     CTX "_i$ 圆项 $b^{-1}dy_2^2$ | 无碍(被动常数),但须 $>0$,由 $A$ 有界保 |\n| $P,Q$ 界 | $P\\in[1/9,18]Q?◂ ▸$ 即 $\\tfrac19\\operatorname{Id}\\preceq P\\preceq18\\operatorname{Id}$,$Q\\in[\\tfrac1"
+
+#### D48-矩阵乘法九四分之次.md  [可执行] bytes=99188 mtime=00:59:00
+  L391 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体是整句中文（释放的闭符与前文某枚 $ 组 span；病根在前文那枚孤立 $）
+     hits_now=1 bytes_delta=-1 $line=53->53 `line=5->5 gain=1
+     OLD "(w)=c(P_w\\lambda)(x)$）。在 $\\mathcal K'$ 里重复、保留先前冻住"
+     NEW "(w)=c(P_w\\lambda)(x)$）。在$\\mathcal K'$ 里重复、保留先前冻住"
+     CTX "lambda)(zx)=\\lambda(zwx)/\\lambda(w)=c\\lambda(wx)/\\lambda(w)=c(P_w\\lambda)(x)$）。在◂ ▸$\\mathcal K'$ 里重复、保留先前冻住的方程，归纳得任意有限个 $P_z$ 有公共不动点；不动点集闭，紧 + 有限交性质 ⟹ 全部非零 $z$ 的同时"
+  L407 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体是整句中文（释放的闭符与前文某枚 $ 组 span；病根在前文那枚孤立 $）
+     hits_now=1 bytes_delta=-1 $line=33->33 `line=1->1 gain=1
+     OLD "R}(D)$ 形式，见 `880-883$。）再 $\\delta\\downarrow0$（$n$ "
+     NEW "R}(D)$ 形式，见 `880-883$。）再$\\delta\\downarrow0$（$n$ "
+     CTX " 把 $\\operatorname{R}(s)K^j$ 的 $j$ 根写成 $nk+\\operatorname{R}(D)$ 形式，见 `880-883$。）再◂ ▸$\\delta\\downarrow0$（$n$ 固定，$u$ 已从不等式消失）：$nk+\\operatorname{R}(D)\\ge nd^\\nu$。再 $n\\"
+
+#### D505-混合变换的逐点多重遍历平均.md  [可执行] bytes=101968 mtime=00:59:05
+  L145 INLINE => 需人工定夺 ::  hunter 在本行窗口内找不到任何单字符改动（空格删除或 $↔反引号互换）能清位
+     CTX "更大的 $\\sigma$-代数条件，独立性一般会破掉。我写下\"由塔性质立得\"的那一行，是我在这篇稿子里最接近致命的一次错误，因为它破坏的是后面整台机器的前提：$◂\\S$10 的通道闭合与 $\\S$14 的最小支撑博弈都要吃\"$\\lvert J\\rvert\\le3$ 时给完整 $P$ 是乘积律\"这条。\n\n修补后的论证用了三步"
+  L163 INLINE => 需人工定夺 ::  hunter 在本行窗口内找不到任何单字符改动（空格删除或 $↔反引号互换）能清位
+     CTX " 的函子性在 $\\rho$ 上的证明就是把测试函数换成 $G_i\\circ\\rho$ 再用等变性与 Fubini）。第二处是把输入角色换成输出角色的唯一手段：$◂\\S$16 里 $Z=\\mathsf M_b(Y)$ 的第 $j$ 槽旧速度要乘上 $\\frac{j}{b}$（correlations.tex:184-185）"
+
+#### D506-选择长度下的四重平均逐点收敛.md  [可执行] bytes=98608 mtime=14:26:43
+  L133 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "Z_n'="，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=16->16 `line=0->0 gain=1
+     OLD ".tex:181-185）。左边取 $Z_n'= $ 方差 $\\varepsilon^2/128$"
+     NEW ".tex:181-185）。左边取 $Z_n'=$ 方差 $\\varepsilon^2/128$"
+     CTX "Vert G\\rVert_{\\mathrm{op}}$$\n\n（build/sections/04-packing.tex:181-185）。左边取 $Z_n'=◂ ▸$ 方差 $\\varepsilon^2/128$ 的独立正态并用 $\\mathbb E\\max_{n\\le l}g_n\\ge c\\sqrt{\\log l}$（b"
+
+#### D517-正曲率Einstein四维流形分类的两块耦合证明之路.md  [可执行] bytes=91242 mtime=03:10:12
+  L232 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "P_-"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=40->40 `line=0->0 gain=1
+     OLD "、$x+y\\le2$ 下依旧成立。论证：$P_- $ 为总负自旋 $1$ 投影，最高 Hessia"
+     NEW "、$x+y\\le2$ 下依旧成立。论证：$P_-$ 为总负自旋 $1$ 投影，最高 Hessia"
+     CTX "12}(4+y)e-\\frac54B\\Bigr],\n\\]\n右端方括号非负，两条结论在闭不等式 $v+b\\le2$、$x+y\\le2$ 下依旧成立。论证：$P_-◂ ▸$ 为总负自旋 $1$ 投影，最高 Hessian 型是 $P_+P_-$；在该型上 $-U_D\\le y$，故 $\\mathcal P\\le A_0:=4+y"
+
+#### D52-c0的双Lipschitz吸收而无线性拷贝.md  [可执行] bytes=139403 mtime=09:21:28
+  L347 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "2\\lVert u\\rvert"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=10->10 `line=0->0 gain=1
+     OLD "率 2；3、4、$2\\lVert u\\rvert $ | 05:26-34,54-61 | $2^"
+     NEW "率 2；3、4、$2\\lVert u\\rvert$ | 05:26-34,54-61 | $2^"
+     CTX "e、案三加 $G$ 后仍合规 | 取等号则无余量给 $\\theta_i$ |\n| $\\chi$ 与操作界 | 斜率 2；3、4、$2\\lVert u\\rvert◂ ▸$ | 05:26-34,54-61 | $2^h,4^h$、平台 $\\varepsilon/2$ | 平台半径变则案二 $3\\theta/8$ 拼法断  |\n"
+  L356 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "q=\\lVert Q\\rvert"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=14->14 `line=0->0 gain=1
+     OLD "K\\le3$；$q=\\lVert Q\\rvert $ | 06:243, 02:29-37 | $"
+     NEW "K\\le3$；$q=\\lVert Q\\rvert$ | 06:243, 02:29-37 | $"
+     CTX "arepsilon_i$ 不趋零则不可和  |\n| $L_K,q$ | $\\operatorname{Lip} K\\le3$；$q=\\lVert Q\\rvert◂ ▸$ | 06:243, 02:29-37 | $\\operatorname{Lip} F\\le1+L_K\\max\\{1,q\\}$，反界 $\\max\\{1+L_K"
+
+#### D534-Siegel三维簇曲线中的四元数除法点.md  [可执行] bytes=111412 mtime=14:11:36
+  L109 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="。无穷位上平行输运认全整一次上同调格，交叉配对仍属 $\\tfrac14\\mathbb{Z}"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=3->2 `line=0->1 gain=1
+     OLD "}(\\alpha_j^2)\\le C(dh)^c$。无穷位上平行输运认全整一次上同调格，交叉配对仍"
+     NEW "}(\\alpha_j^2)\\le C(dh)^c`。无穷位上平行输运认全整一次上同调格，交叉配对仍"
+     CTX ")\\rvert^2\\le\\operatorname{Tr}(\\beta_i^2)\\operatorname{Tr}(\\alpha_j^2)\\le C(dh)^c◂$▸。无穷位上平行输运认全整一次上同调格，交叉配对仍属 $\\tfrac14\\mathbb{Z}$；紧中心圆盘上两点 Hodge 范数经该输运一致可比，正范数的 Ca"
+
+#### D54-Brennan猜想与sharp逆平方积分均值.md  [可执行] bytes=108284 mtime=11:43:14
+  L727 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="\\lVert L^n\\rvert $ 先验 | $1\\le\\lVert L^n\\rvert \\le625\\cdot4^n"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=10->9 `line=2->3 gain=3
+     OLD "=A_{z\\cdot w}$ 的字展开 |\n| $\\lVert L^n\\rvert $ 先验 | "
+     NEW "=A_{z\\cdot w}$ 的字展开 |\n| `\\lVert L^n\\rvert $ 先验 | "
+     CTX "` | $L^n=v_n\\sum A$、Prop 2.4 的格胞 | 非 dyadic 网格破坏 $A_zA_w=A_{z\\cdot w}$ 的字展开 |\n| ◂$▸\\lVert L^n\\rvert $ 先验 | $1\\le\\lVert L^n\\rvert \\le625\\cdot4^n$ | `01:215-220` | $"
+  L742 INLINE => 需人工定夺 :: 修正口径下仍成 span，但本行未被 hunter 记为可清位（同一行的多个 site 共用一条 op 之外的余位）
+  L747 INLINE => 需人工定夺 :: 修正口径下仍成 span，但本行未被 hunter 记为可清位（同一行的多个 site 共用一条 op 之外的余位）
+
+#### D562-Brenier映射的三分之一阶锐利稳定性.md  [可执行] bytes=71980 mtime=04:06:26
+  L76 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "a/a^{3}"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=22->22 `line=0->0 gain=1
+     OLD "在 $b=a/2$ 下之比恰是 $a/a^{3} $ 的平方根结构，即 $\\sqrt a$ 对 $"
+     NEW "在 $b=a/2$ 下之比恰是 $a/a^{3}$ 的平方根结构，即 $\\sqrt a$ 对 $"
+     CTX "b/2$ 来自换岗测度；目标距离平方是 $ab^2$，来自被搬运质量 $a$ 乘位移平方 $b^2$。两式的幂次在 $b=a/2$ 下之比恰是 $a/a^{3}◂ ▸$ 的平方根结构，即 $\\sqrt a$ 对 $a^{3/2}$，指数比 $1/3$ 由\"质量一次、位移二次\"这两个不可动的计数决定。也就是说，任何证明都必须在"
+
+#### D58-实Littlewood多项式极大值的渐近最小.md  [可执行] bytes=86108 mtime=06:05:33
+  L457 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "\\lvert \\lambda_{a_i}\\rvert"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=6->6 `line=0->0 gain=1
+     OLD "vert \\lambda_{a_i}\\rvert $，$2\\sum w_i<1$ | spread"
+     NEW "vert \\lambda_{a_i}\\rvert$，$2\\sum w_i<1$ | spread"
+     CTX "20/\\delta)}$ | 若依赖 $N$ 或 $\\delta$，闭合第一步死 |\n| $w_i$ | $\\lvert \\lambda_{a_i}\\rvert◂ ▸$，$2\\sum w_i<1$ | spreading:39, packing:40 | Lemma 3.1 输入 | 等号情形闭区间无法严格入槽  |\n| $"
+
+#### D585-稳定子轨道局部稠密性与厚张量理想链.md  [可执行] bytes=102996 mtime=00:59:19
+  L77 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "0<\\lvert t\\rvert <\\lvert a_1\\rvert"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=12->12 `line=0->0 gain=1
+     OLD "\\rvert <\\lvert a_1\\rvert $） | 04-deformations.tex"
+     NEW "\\rvert <\\lvert a_1\\rvert$） | 04-deformations.tex"
+     CTX "$ | $a_1=\\alpha_x'(0)\\ne0$，$\\alpha_x(t)\\ne0$（$0<\\lvert t\\rvert <\\lvert a_1\\rvert◂ ▸$） | 04-deformations.tex:612 | 非零性检验 | 若 $a_1=0$ 则 $\\nu_x$ 可能为零态射  |\n| $\\iota_g$"
+
+#### D59-向后交织算子与传递交换子.md  [可执行] bytes=85121 mtime=14:11:36
+  L200 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "=2(0+1+\\dots+(m-1))+..."，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=98->98 `line=2->2 gain=1
+     OLD "$=2(0+1+\\dots+(m-1))+... $ 让我直接算：窗 $\\{-m,\\dots,m-"
+     NEW "$=2(0+1+\\dots+(m-1))+...$ 让我直接算：窗 $\\{-m,\\dots,m-"
+     CTX "（$d=m$），对称地 $d$ 值取 $m,m-1,\\dots,1,0,0,1,\\dots,m$（两次谷），和 $=2(0+1+\\dots+(m-1))+...◂ ▸$ 让我直接算：窗 $\\{-m,\\dots,m-1\\}$，$d(-1)=0,d(0)=1,d(-2)=2,d(1)=2$... 实际 $d$ 在负 $j$ 是 "
+  L299 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="e^{-10}"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=12->11 `line=0->1 gain=2
+     OLD "1$，双侧无界情形矛盾消失，支撑分离断 |\n| $e^{-10}$ | $\\lVert S\\rve"
+     NEW "1$，双侧无界情形矛盾消失，支撑分离断 |\n| `e^{-10}$ | $\\lVert S\\rve"
+     CTX "73-175 | 中段几何和上界、$1\\le C_\\lambda+o(1)$ | 若 $C_\\lambda\\ge1$，双侧无界情形矛盾消失，支撑分离断 |\n| ◂$▸e^{-10}$ | $\\lVert S\\rvert $ | introduction.tex:46; GlobalOperators.lean:140 | 范"
+  L305 INLINE => 需人工定夺 :: 修正口径下仍成 span，但本行未被 hunter 记为可清位（同一行的多个 site 共用一条 op 之外的余位）
+
+#### D60-模谱均值的有界恢复.md  [可执行] bytes=115037 mtime=13:05:28
+  L1154 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "\\lvert 1-cd\\rvert"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=12->12 `line=2->2 gain=1
+     OLD "_0$ 得 $\\lvert 1-cd\\rvert $ 界 | $H_0=0$ 时除法崩，靠 $E$"
+     NEW "_0$ 得 $\\lvert 1-cd\\rvert$ 界 | $H_0=0$ 时除法崩，靠 $E$"
+     CTX "xi \\right\\rVert$ | 正，随 $\\delta$ 变 | `05:176-177` | 除以 $H_0$ 得 $\\lvert 1-cd\\rvert◂ ▸$ 界 | $H_0=0$ 时除法崩，靠 $E$ 小矩形非零排除  |\n| $2\\pi\\Z$、$\\pi\\Z$ | 离散格 | `05:143`、`05:313-"
+
+#### D601-迹重构定量下界的反推笔记.md  [可执行] bytes=72622 mtime=15:09:03
+  L212 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体是整句中文（释放的闭符与前文某枚 $ 组 span；病根在前文那枚孤立 $）
+     hits_now=1 bytes_delta=-1 $line=25->25 `line=0->0 gain=1
+     OLD "。\n\n拟合事件 $\\mathcal F=\\{每个 $j$ 层顶点 $I$ 有 $|Y_I|\\le "
+     NEW "。\n\n拟合事件 $\\mathcal F=\\{每个$j$ 层顶点 $I$ 有 $|Y_I|\\le "
+     CTX "ree}$ 对每个叶输出独立应用 $\\mathcal K_{i-1}$，并按标号指定的时序连接得到的二元字与侧迹。\n\n拟合事件 $\\mathcal F=\\{每个◂ ▸$j$ 层顶点 $I$ 有 $|Y_I|\\le T_j/8$，$1\\le j<b\\}$ 依赖朝向比特。投影引理说 $\\mathrm{TV}(\\mathcal K"
+
+#### D65-渐近中点一致凸与树空间的无界菱形畸变.md  [不可现在执行] bytes=130335 mtime=09:53:35
+  L227 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "g(0)=N(z)\\ge 1-"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=22->22 `line=0->0 gain=1
+     OLD ",$g$ 凸且 $g(0)=N(z)\\ge 1- $…注意这里中心 $z$ 取单位,一般 $N(z"
+     NEW ",$g$ 凸且 $g(0)=N(z)\\ge 1-$…注意这里中心 $z$ 取单位,一般 $N(z"
+     CTX "r{t_0}\\bigl(N(z+t_0y)-1\\bigr).$$\n我把这步补全:设 $g(r)=N(z+ry)$,$g$ 凸且 $g(0)=N(z)\\ge 1-◂ ▸$…注意这里中心 $z$ 取单位,一般 $N(z)=1$ 时 $g(0)=1$,凸函数割线单调:$\\frac{g(r)-g(0)}{r}\\ge\\frac{g(t"
+  L326 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "="，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=22->22 `line=0->0 gain=1
+     OLD "psilon=2$ 定死:它由\"中间点距离 $= $ 父边长度 $=2\\ell$\"与 $y_j$ "
+     NEW "psilon=2$ 定死:它由\"中间点距离 $=$ 父边长度 $=2\\ell$\"与 $y_j$ "
+     CTX "amonds:53-54] 引法);本篇靠具体范数把绝对损失 $1/12$ 钉死,才躲开递推。\n- $\\varepsilon=2$ 定死:它由\"中间点距离 $=◂ ▸$ 父边长度 $=2\\ell$\"与 $y_j$ 除 $\\ell$ 的归一共同给出,分子分母同步,与 $k,m$ 无关,这正是每层损失均匀的来源。若把 $y_j$"
+  L388 INLINE => 需人工定夺 ::  hunter 在本行窗口内找不到任何单字符改动（空格删除或 $↔反引号互换）能清位
+     CTX "1$,$\\sum_g m_g^2=1\\le1$ 闭合。$H$ 内后缀只有 $[r,r]$,$f$-和为 $1\\ge 2sm_g=1/2$,所以入选最段,原号 $◂+$1,取 $\\sigma_{v_1}=-1$,$c=-e_{v_1}$。$v^+=c+k=0$,$v^-=c-k=-2e_{v_1}$。验证 $\\rho(f+s"
+  L718 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="\\S$2.IV],tex 实际是 general-forests.tex:37 的                   "），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=12->11 `line=2->3 gain=1
+     OLD "节号。第 11 节写 [Banakh2000, $\\S$2.IV],tex 实际是 general"
+     NEW "节号。第 11 节写 [Banakh2000, `\\S$2.IV],tex 实际是 general"
+     CTX ")加 1 段正文插叙。第 15 节\"proof 环境出现 8 次\"的总数不受影响。\n勘误第六条,Banakh 的节号。第 11 节写 [Banakh2000, ◂$▸\\S$2.IV],tex 实际是 general-forests.tex:37 的 `\\cite[\\S2.II]{Banakh2000}`。我大概在复述\"沿 G"
+
+#### D72-L1的Daugavet子空间的精确渐近模数.md  [可执行] bytes=111320 mtime=13:06:48
+  L761 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "\\lVert y-C(y)\\rvert =1-\\lVert C(y)\\rvert"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=12->12 `line=0->0 gain=1
+     OLD "ert =1-\\lVert C(y)\\rvert $；moduli:35 的 $2\\vert x\\"
+     NEW "ert =1-\\lVert C(y)\\rvert$；moduli:35 的 $2\\vert x\\"
+     CTX "$ 反比缩小 | moduli:24-26 | moduli:48-50 的 $\\lVert y-C(y)\\rvert =1-\\lVert C(y)\\rvert◂ ▸$；moduli:35 的 $2\\vert x\\vert/t$ | 改常数高度则 $\\min\\{\\vert x\\vert,t\\vert y\\vert\\}$ 与 "
+  L787 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "2=\\lVert g\\rvert +\\lVert g^{(k)}\\rvert"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=12->12 `line=0->0 gain=1
+     OLD "rt +\\lVert g^{(k)}\\rvert $ | construction:224,230"
+     NEW "rt +\\lVert g^{(k)}\\rvert$ | construction:224,230"
+     CTX "p-choice) 需重选 $r$ |\n| $108$ | $54\\cdot2$，$2=\\lVert g\\rvert +\\lVert g^{(k)}\\rvert◂ ▸$ | construction:224,230 | construction:185 与 (kw:coefficient-bound) | 球半径若 $>1$"
+
+#### D75-vanDerWaerden数的定量超指数下界.md  [可执行] bytes=189446 mtime=10:04:53
+  L96 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "-2\\times10^{-5}k\\log k+\\frac{k^{0.9}\\log k}{ }"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=38->38 `line=10->10 gain=1
+     OLD "+\\frac{k^{0.9}\\log k}{ } $... 精确地说 `06:237-241` 给"
+     NEW "+\\frac{k^{0.9}\\log k}{ }$... 精确地说 `06:237-241` 给"
+     CTX "q+\\frac{\\gamma k}{4}\\log p$ 为负，即 $-2\\times10^{-5}k\\log k+\\frac{k^{0.9}\\log k}{ }◂ ▸$... 精确地说 `06:237-241` 给出系数 $2c-\\gamma/80=1/50000-1/8000=-21/200000<0$，这一项里根本没有 "
+  L353 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "1/8-1/32-1/250=(125-25-4)/1000\\cdot..."，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=58->58 `line=4->4 gain=1
+     OLD "=(125-25-4)/1000\\cdot... $，精确地 $=0.125-0.03125-0."
+     NEW "=(125-25-4)/1000\\cdot...$，精确地 $=0.125-0.03125-0."
+     CTX "bb P(E)$ 的指数慢 4 倍，剩下 $2/500$ 付邻居。三者的算术余量：$1/8-1/32-1/250=(125-25-4)/1000\\cdot...◂ ▸$，精确地 $=0.125-0.03125-0.004=0.08975$，乘 $100$ 得 $8.975>\\log2=0.693$，余量极大。$l(E)\\ge"
+  L443 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "|av_i|\\le\\frac{4MH}{h}\\cdot\\frac{a h}{k}\\cdot\\frac{k}{h}..."，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=40->40 `line=6->6 gain=1
+     OLD "h}{k}\\cdot\\frac{k}{h}... $，论文给 $|av_i|\\le4MH/h$（用"
+     NEW "h}{k}\\cdot\\frac{k}{h}...$，论文给 $|av_i|\\le4MH/h$（用"
+     CTX "equiv av_i\\pmod1$。又 $|av_i|\\le\\frac{4MH}{h}\\cdot\\frac{a h}{k}\\cdot\\frac{k}{h}...◂ ▸$，论文给 $|av_i|\\le4MH/h$（用 $a<k/h$ 与 $|v_i|\\le4MH/k$ 相乘：$a|v_i|<(k/h)(4MH/k)=4MH/h"
+  L730 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "F=\\lvert U\\rvert +\\lvert V\\rvert"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=14->14 `line=2->2 gain=1
+     OLD " U\\rvert +\\lvert V\\rvert $ | $\\log F$ 变大，$T_{\\mat"
+     NEW " U\\rvert +\\lvert V\\rvert$ | $\\log F$ 变大，$T_{\\mat"
+     CTX "og k)$ | 02:144-146, 02:181 | `count:global` 的 $F=\\lvert U\\rvert +\\lvert V\\rvert◂ ▸$ | $\\log F$ 变大，$T_{\\mathrm{glob}}$ 失去 $o(M)$  |\n| $49$ | $N(I)$ 内网格端点数上限 | 02:2"
+  L876 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "k\\ge k_*"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=32->32 `line=10->10 gain=1
+     OLD "\\ge2k^{1/2}$；对 $k\\ge k_* $ 有 $k^{1/5}+2k^{1/10}+1"
+     NEW "\\ge2k^{1/2}$；对 $k\\ge k_*$ 有 $k^{1/5}+2k^{1/10}+1"
+     CTX "+1$，故 $h_0=D^2\\le(k^{1/10}+1)^2=k^{1/5}+2k^{1/10}+1$；$2M\\ge2k^{1/2}$；对 $k\\ge k_*◂ ▸$ 有 $k^{1/5}+2k^{1/10}+1<2k^{1/2}<k$ 成立（两侧都是幂律，指数 $1/5<1<1/2$ 的比较在 $k$ 大时逐项生效，左侧"
+
+#### D750-三维量子Heisenberg铁磁体磁化的第一格点修正.md  [可执行] bytes=85690 mtime=06:05:43
+  L533 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体是整句中文（释放的闭符与前文某枚 $ 组 span；病根在前文那枚孤立 $）
+     hits_now=1 bytes_delta=-1 $line=16->16 `line=4->4 gain=1
+     OLD "是玻色和的微扰读法。它在我的纸面上死于两条：一是 $n$ 可以大到 $\\beta/L$ 量级，逐阶"
+     NEW "是玻色和的微扰读法。它在我的纸面上死于两条：一是$n$ 可以大到 $\\beta/L$ 量级，逐阶"
+     CTX " $n$ 展开，$r=\\sum_{n\\ge1}(\\text{$n$ 圈的返回贡献})$，再逐阶估计。这在物理上就是玻色和的微扰读法。它在我的纸面上死于两条：一是◂ ▸$n$ 可以大到 $\\beta/L$ 量级，逐阶误差累加会吃掉 $\\beta^{-5/2}$ 的预算；二是将 Bose 和截断到 $n\\le n_0$ 就直接丢"
+
+#### D758-圆周率的无理性指数等于2.md  [可执行] bytes=96821 mtime=03:24:15
+  L261 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "="，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=14->14 `line=0->0 gain=1
+     OLD "好等于 $R\\deg_W C$。我特别核对\"$= $\"，并非\"$\\le$\"的必要性：$A-(1+\\"
+     NEW "好等于 $R\\deg_W C$。我特别核对\"$=$\"，并非\"$\\le$\"的必要性：$A-(1+\\"
+     CTX "个极大值；当极大值为正时某坐标的纯幂达到该界，当极大值为零时常数单项式达到该界，所得截面没有公共零点，于是次数正好等于 $R\\deg_W C$。我特别核对\"$=◂ ▸$\"，并非\"$\\le$\"的必要性：$A-(1+\\sigma)E$ 的半正性右端系数 $(1+\\sigma)$ 与曲线不等式的 $(1+\\sigma)$ 必须同尺"
+
+#### D79-均称性反用与位移障碍-F群非均称性证明笔记.md  [可执行] bytes=82492 mtime=12:22:24
+  L56 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "x_g ="，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=6->6 `line=0->0 gain=1
+     OLD "文 Lemma 1.2) f: 令 $x_g = $ 某个 g 的轨道平均, 断言 $x_{hg}"
+     NEW "文 Lemma 1.2) f: 令 $x_g =$ 某个 g 的轨道平均, 断言 $x_{hg}"
+     CTX "受\"要 Hilbert 值对象\"之后, 我一度想这样用 Benyamini-Sternfeld 型位移映射 (论文 Lemma 1.2) f: 令 $x_g =◂ ▸$ 某个 g 的轨道平均, 断言 $x_{hg} = f(x_g)$ 型的函数方程给出 g 上的离散动力系, 再用 f 的位移正下界给出轨道不闭合。断点: f "
+  L104 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="J'.\" (finite-proof.tex:77-79)。\n\n(b) 推导补全: $[0,1]\\setminus(I\\"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=13->12 `line=0->1 gain=1
+     OLD "$ and $J$ affinely onto $J'.\" (finite-proof.tex:7"
+     NEW "$ and $J$ affinely onto `J'.\" (finite-proof.tex:7"
+     CTX " $h\\in F$ whose restrictions carry $I$ affinely onto $I'$ and $J$ affinely onto ◂$▸J'.\" (finite-proof.tex:77-79)。\n\n(b) 推导补全: $[0,1]\\setminus(I\\cup J)$ 恰有三个开间隙: 左间隙"
+
+#### D80-均值对策博弈随机化准多项式求解的支撑预算递归.md  [可执行] bytes=251140 mtime=06:08:16
+  L2021 INLINE => 假阳 :: GAUGE-BUG(遮罩): shipped 的 fenceMask 只清单行反引号 span、且不认 `\$` 与跨单换行的行内代码，代码/围栏素材里的 $ 泄漏进 span 体；修正遮罩后该行不再成位
+     HOST "| $\\varepsilon$ | $2^{-J}$ | `04:23`、`04:26` | `04a` 与 `06:82`、`06:183`、`06:292` 的失败概率；`05:451` 的 $2s\\varepsilon$；`06:394`--`396` | 分析专用、算法不构造分母 $2^J`（`04:26`）；若把它变成实际参数则位长爆炸，`07:231` 的多项式 $P(L)$ 断 |"
+  L2023 INLINE => 假阳 :: GAUGE-BUG(遮罩): shipped 的 fenceMask 只清单行反引号 span、且不认 `\$` 与跨单换行的行内代码，代码/围栏素材里的 $ 泄漏进 span 体；修正遮罩后该行不再成位
+     HOST "| $\\delta$ | $\\lfloor B/(4s)\\rfloor$ | `03:261`、`04:85` | 紧化位移量；`03:283` 的 $\\delta\\ge32$；`04a:89` 的 $nB/\\delta\\le8ns$ 更新数 | 取 $B/(2s)$ 则 `03:284` 的 $2\\delta\\le hB$ 断（变成 $2\\delta\\le B/s$ 仍 $\\le hB$，但 `03:283` 的 $B-2\\delta\\ge B/2$ 失效），`03:265` 的 $c>0` 无法保证，witness $u$ 不再是 subsolution |"
+
+#### D85-三十二行签名阵列与标签耦合：Talagrand离散凸性猜想的反推笔记.md  [可执行] bytes=147750 mtime=08:12:45
+  L658 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "2^{-h}>..."，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=22->22 `line=0->0 gain=1
+     OLD "<2^{-64r}$ 得 $2^{-h}>... $ 严格地：$h$ 是 $\\lceil-\\log"
+     NEW "<2^{-64r}$ 得 $2^{-h}>...$ 严格地：$h$ 是 $\\lceil-\\log"
+     CTX "$\\mathcal G_0$），落在唯一的 $h$ 使 $2^{-(h+1)}<w\\le2^{-h}$，由 $w<2^{-64r}$ 得 $2^{-h}>...◂ ▸$ 严格地：$h$ 是 $\\lceil-\\log_2w\\rceil$ 型指标，$w<2^{-64r}$ 蕴含 $h\\ge64r$。\n\nbin 的 $|\\math"
+  L684 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "\\log T+D\\cdot..."，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=34->34 `line=4->4 gain=1
+     OLD " m$ 压过 $\\log T+D\\cdot... $，实测 $D=1$ 时 $m=2^{h}$ 太"
+     NEW " m$ 压过 $\\log T+D\\cdot...$，实测 $D=1$ 时 $m=2^{h}$ 太"
+     CTX "le2^{h+1}$ 与目标族门槛 $2^{Dh}=2^{h}$ 会让 covering 的残余项需要 $\\pi m$ 压过 $\\log T+D\\cdot...◂ ▸$，实测 $D=1$ 时 $m=2^{h}$ 太小，$\\pi m^2=2^{-16h}\\cdot2^{2h}=2^{-14h}\\to0$，残余项指数变成正，爆掉"
+
+#### D86-循环Hadamard猜想的机器与笔头-特征交替积与二进制残迹.md  [可执行] bytes=83404 mtime=00:59:46
+  L47 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的闭符（体="\\forall u"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=6->5 `line=0->1 gain=1
+     OLD "(§2.2), 有限算力与 $\\forall u$ 之间没有归约 (§2.3), 命题强度自伤 ("
+     NEW "(§2.2), 有限算力与 $\\forall u` 之间没有归约 (§2.3), 命题强度自伤 ("
+     CTX " 失败路线汇总\n\n四条路线, 断点分别是: 差集投影丢失刚性 (§2.1), 解析估计与精确等式之间没有翻译器 (§2.2), 有限算力与 $\\forall u◂$▸ 之间没有归约 (§2.3), 命题强度自伤 ($\\S$2.4)。它们共同把可行空间挤到唯一一条路上: 一切信息都得在分圆整环的局部化里用赋值和残迹来表达, 且"
+
+#### D92-Lp次多项式降维-重尾矩台账与截断ramp.md  [可执行] bytes=84688 mtime=08:12:45
+  L230 INLINE => 需人工定夺 [swap] :: 被改的 $ 当前是合法 span 的开符（体="Y"），改成反引号即毁掉一处正常数学；属奇偶补偿，spec 禁止
+     hits_now=1 bytes_delta=0 $line=39->38 `line=2->3 gain=1
+     OLD "2-706)\n\n(a) 逐字(节点引文)。构造 $Y$:\"On the region $\\{\\|v"
+     NEW "2-706)\n\n(a) 逐字(节点引文)。构造 `Y$:\"On the region $\\{\\|v"
+     CTX "### 5.9 第 6 节构造:稳定 marginals、裁剪与投影($1<p<2$, paper.tex:542-706)\n\n(a) 逐字(节点引文)。构造 ◂$▸Y$:\"On the region $\\{\\|v\\|_\\infty>1\\}$, this is an ordinary signed compound Pois"
+  L234 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "(\\log n)^{1-p}\\cdot O((\\log n)^{2-p})…"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=80->80 `line=2->2 gain=1
+     OLD "\\cdot O((\\log n)^{2-p})… $ 即 $(\\log n)^{-\\,(p-1)}"
+     NEW "\\cdot O((\\log n)^{2-p})…$ 即 $(\\log n)^{-\\,(p-1)}"
+     CTX "g K=O(H^{2-p})$,故 $\\log d/\\log n\\to0$,速率 $(\\log n)^{1-p}\\cdot O((\\log n)^{2-p})…◂ ▸$ 即 $(\\log n)^{-\\,(p-1)}$。$T$ 与 $K$ 分离消费:$T$ 管裁剪($|Y|\\le T$),$K=HT$ 管投影放大;Lean 用"
+  L284 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "J<\\sup\\lvert Z_e\\rvert"，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=14->14 `line=0->0 gain=1
+     OLD " $J<\\sup\\lvert Z_e\\rvert $ 时 $\\cosh s-1\\le C_0s^2"
+     NEW " $J<\\sup\\lvert Z_e\\rvert$ 时 $\\cosh s-1\\le C_0s^2"
+     CTX "mathbb E e^{\\pm W_e/J}\\le e^{C_0}$;截断误差 $C_pJ^pn^{-3}$ | $J<\\sup\\lvert Z_e\\rvert◂ ▸$ 时 $\\cosh s-1\\le C_0s^2$ 的小量前提断  |\n| $K$(p>2) | $8J\\log(2n)$ | paper.tex:962 | "
+
+#### D93-方向瞬态蕴含弹道性反推笔记.md  [不可现在执行] bytes=271165 mtime=10:09:49
+  L130 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体里含被遮罩清白的行内代码/围栏空隙，真缺陷在代码素材里
+     hits_now=1 bytes_delta=-1 $line=5->5 `line=5->5 gain=1
+     OLD "界 $C'e^{-c'B}$(`:297`)。取 $B$ 大即反证。\n\n为什么这一步是转折，并非普"
+     NEW "界 $C'e^{-c'B}$(`:297`)。取$B$ 大即反证。\n\n为什么这一步是转折，并非普"
+     CTX "的形状于是成了:多项式下界 $p_hc_2/B`(`02-geometry.tex:208-210`)对上指数上界 $C'e^{-c'B}$(`:297`)。取◂ ▸$B$ 大即反证。\n\n为什么这一步是转折，并非普通引理?我给出三条实测理由。\n\n理由一:它是全文唯一同时买到两个结论的引理。`02-geometry.tex:3"
+  L636 INLINE => 需人工定夺 [space] :: 删空格后成形的 span 体里含被遮罩清白的行内代码/围栏空隙，真缺陷在代码素材里
+     hits_now=1 bytes_delta=-1 $line=41->41 `line=23->23 gain=1
+     OLD ":24`、`eq:13`),其逐次质量累积表我按 $d^{k}$ 型估计理解,原文给出的是操作描述"
+     NEW ":24`、`eq:13`),其逐次质量累积表我按$d^{k}$ 型估计理解,原文给出的是操作描述"
+     CTX "\\ge r_s$ 假设。`[断言点]`:`:88-149` 的 $k$ 次迭代我核对了开头设定与所用方程(`eq:24`、`eq:13`),其逐次质量累积表我按◂ ▸$d^{k}$ 型估计理解,原文给出的是操作描述。\n\n(d) `[推测]` 失败路线:一,用一次 `eq:13` 型偏离直接分 $k$ 组:单次只提供两组。二,"
+  L886 INLINE => 假阳 :: GAUGE-BUG(遮罩): shipped 的 fenceMask 只清单行反引号 span、且不认 `\$` 与跨单换行的行内代码，代码/围栏素材里的 $ 泄漏进 span 体；修正遮罩后该行不再成位
+     HOST "| $p_h$ | $p_h=P_0(D_h)>0$,记录词原始概率 | `02-geometry.tex:9,35,60` | `eq:2` 宽度均值界 `02-geometry.tex:45`;记录几乎必然出现 `02-geometry.tex:63-69`;$\\epsilon_0$ `02-geometry.tex:250`;多项式下界 $p_hc_2/B$ `02-geometry.tex:209` | $p_h=0$ 则 $\\mathbb E L=\\infty`,`eq:1`(`02-geometry.tex:116`)的空间半径一阶矩断,§03 的 $\\bar L$ 有限性失去来源"
+
+#### D94-正则轨迹剪枝与量子奇偶下界.md  [可执行] bytes=145320 mtime=06:22:08
+  L424 INLINE => 可机械替换 [space] :: 闭符前多一枚空格：删掉这枚空格后 span 体是纯数学 "\\lvert\\langle T\\chi,G\\psi\\rvert\\le\\exp(m^{r'}-m^s)+2\\exp(m^{r'}-\\theta)<..."，即作者本意的式子
+     hits_now=1 bytes_delta=-1 $line=44->44 `line=18->18 gain=1
+     OLD "2\\exp(m^{r'}-\\theta)<... $ 我照原文写成 $\\exp(m^{r'}-m^"
+     NEW "2\\exp(m^{r'}-\\theta)<...$ 我照原文写成 $\\exp(m^{r'}-m^"
+     CTX "4`):$\\lvert\\langle T\\chi,G\\psi\\rvert\\le\\exp(m^{r'}-m^s)+2\\exp(m^{r'}-\\theta)<...◂ ▸$ 我照原文写成 $\\exp(m^{r'}-m^s)+2\\exp(m^{r'}-m^\\theta)=O(\\exp(-m^q))$,理由是 $s>r'>q$ 与 "
+
+#### D95-用独立行替换高斯行的Cd代价.md  [不可现在执行] bytes=297714 mtime=09:43:10
+  L754 INLINE => 假阳 :: GAUGE-BUG(数字否决): katex_census.js 用 DIG.includes(masked[j+1]==="$" ? "" : …)，String#includes("") 恒真，于是紧跟另一枚 $ 的合法闭符被否决，相邻两个行内 span `$a$$b$` 被读成一枚含 $ 的 span；去掉该 quirk 后不再成位
+     HOST "- `[推测]` 若 $q_w$ 取 $\\lfloor\\log b_w\\rfloor$ ，并非 $\\lceil\\log b_w\\rceil`,`$b_w\\ge e^{q-1}$$ 会变成 $b_w<e^q$,覆盖数的推导 `03:122-127` 需要\"$j$ 极大化且 $q$ 是上取整\"才能给每球质量 $\\ge e^{q-1}R_j^\\ell$;用下取整则每球质量 $\\ge e^{q}R_j^\\ell$ 但 $b_w$ 可能 $<e^q$,不等式方向断。$-q+Cd$ 变成 $-q+q'+Cd$,相消不完全。"
+  L1617 INLINE => 假阳 :: GAUGE-BUG(遮罩): shipped 的 fenceMask 只清单行反引号 span、且不认 `\$` 与跨单换行的行内代码，代码/围栏素材里的 $ 泄漏进 span 体；修正遮罩后该行不再成位
+     HOST "| $N$ (padding 后状态基数) | $(T+2)2^M$ | `07-streaming-applications.tex:136` | §7 `lem:r-stopping-reduction` 与 §5.7 `rfib:block` 的 $\\log N\\le d^2$ 前提 | 若 $T+2$ 换成 $T+1`,与 `07:147` $p\\le(T+1)2^M\\epsilon^{d-1}$ 联立会少一 padding 状态,`07:157` 的 $T>d/4$ 无记忆前提断在边界情形 |"
+  L1670 INLINE => 假阳 :: GAUGE-BUG(遮罩): shipped 的 fenceMask 只清单行反引号 span、且不认 `\$` 与跨单换行的行内代码，代码/围栏素材里的 $ 泄漏进 span 体；修正遮罩后该行不再成位
+     HOST "- $\\epsilon\\le1/10`:`07:130` 与 `00:107` 两处独立声明。上限 1/10 保证 (i) `07b:30` 的 radius condition 成立,(ii) `07:152` 的 $L\\le C(M+1+\\log d)/d$ 里的 $C$ 可以选绝对,(iii) `07a:81` 的 $L\\ge\\log10>\\log4$ 保正;三处联立要求 $\\log(1/\\epsilon)\\ge\\log10$ 与 §6 表里\"若允许 $\\epsilon>1/10$\"一栏对齐。"
+  L1675 INLINE => 假阳 :: GAUGE-BUG(遮罩): shipped 的 fenceMask 只清单行反引号 span、且不认 `\$` 与跨单换行的行内代码，代码/围栏素材里的 $ 泄漏进 span 体；修正遮罩后该行不再成位
+     HOST "- $p\\ge3/5`:`07:149`。摘要里\"success at least $2/3$\"与这里的 $3/5$ 是两个不同门槛:$3/5$ 是\"无记忆下界 $T>d/4$\"与\"$p\\le(T+1)2^M\\epsilon^{d-1}$ 联立\"这一具体比较里的选择;$2/3$ 是端点主定理的假设(`07a:12`、`07b:52`、`07c:27`)。两者之间的差 $2/3-3/5=1/15$ 未被论文明说,只在 `07b:27` 的 $2/3-25/42=1/14$ 处出现\"两个减法\"里的第二个,这是端点分片内部才用到的簿记。"
+
+#### D96-残差球上的记忆与样本下界：无噪高斯回归中 streaming learner 的反推笔记.md  [可执行] bytes=126153 mtime=06:05:34
+  L585 INLINE => 需人工定夺 ::  hunter 在本行窗口内找不到任何单字符改动（空格删除或 $↔反引号互换）能清位
+     CTX "--30 的 $\\min\\{1,(8\\epsilon/R)^{D-1}\\}$ 直接压过 $(8\\epsilon/r)^p$。回溯步 $i+1\\to i$ 里，$◂\\S$20 的态最大给出 $\\mathbb E_N\\max_{v'}F_{v'}(N)\\le w^{1/m}2^{3d}U_0$，$U_0=G^{J-i-1}(8"
+
+== 修正口径新暴露、shipped 口径漏记的 family 位 (5)
+   D80 L2021 INLINE body="2^J   04:26                   07:231                 \n                                                        "
+   D93 L886 INLINE body="\\mathbb E L=\\infty   eq:1   02-geometry.tex:116                                    \n                          "
+   D95 L754 INLINE body="\\lceil\\log b_w\\rceil   $b_w\\ge e^{q-1}"
+   D95 L1617 INLINE body="T+1     07:147                                                 07:157                         \n               "
+   D95 L1670 INLINE body="\\epsilon\\le1/10   07:130     00:107                         07b:30                              07:152        "

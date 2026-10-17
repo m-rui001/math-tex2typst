@@ -1,0 +1,229 @@
+# C27 Fano 簇上的反典范系统（arXiv:1603.05765）
+
+## 0 取证边界
+
+- arXiv id：1603.05765
+- 作者（原文署名逐字）：Caucher Birkar
+- 发表年月：2016-03-18
+- 素材目录：`被引素材/1603.05765`
+- 主 tex 清单：`main.tex`（349529 字节 / 6998 行）
+- 本语料引用它的稿号与 bib key：
+  - D307（bib key `BirkarComplements`）
+  - D476（bib key `BirkarComplements`）
+- 取材薄读之处：仅读取 `main.tex`；`\D`/`\N`/`\PP`/`\A`/`\Q`/`\R`/`\Z`/`\Accum`/`\Ass`/`\Bs`/`\CDiv`/`\cent`/`\CH`/`\cont`/`\codim`/`\CS`/`\divi`/`\Div`/`\dom`/`\exc`/`\Fix`/`\Hom`/`\im`/`\ima`/`\ind`/`\internal`/`\kernel`/`\lcm`/`\lct`/`\mld`/`\mult`/`\LCS`/`\Mov`/`\NEbar`/`\Nef`/`\nil`/`\NonSing`/`\Pic`/`\Proj`/`\vol`/`\xExt`/`\xHom`/`\x`/`\rddown`/`\nrd`/`\bir` 等命令按 preamble 翻译为 KaTeX 形；`\lct` 写为 $\operatorname{lct}$、`\vol` 写为 $\operatorname{vol}$、`\NEbar` 写为 $\overline{\operatorname{NE}}$、`\Pic` 写为 $\operatorname{Pic}$ 等。
+
+## 1 论文概览与主结果
+
+`main.tex:157-166` 的题名是「Anti-pluricanonical systems on Fano varieties」，作者署名「Caucher Birkar」，2010 MSC 主题为 14J45 (Fano varieties)、14E30 (Mori theory)、14C20 (Linear systems)、14E05 (Rational and birational maps)。`main.tex:172-180` 的摘要说明：固定维数 $d$ 下，对任意带 klt 奇点的 $d$ 维 Fano 簇 $X$，存在依赖 $d$ 的 $m$ 使 $|-mK_X|$ 非空且含一个「好奇异」除子；若额外要求 $X$ 是 $\epsilon$-lc，则 $m$ 可依赖 $d$ 与 $\epsilon$，并使 $|-mK_X|$ 定义双有理映射。论文还证明了 Shokurov 的补有界性猜想，并由此推出某些 Fano 簇类是有界族。
+
+`main.tex:215-221`（`t-eff-non-van-fano`）是有效非消没定理：存在仅依赖 $d$ 的 $m$，使任意 $d$ 维带 klt 奇点的 Fano 簇 $X$ 都有 $h^0(-mK_X)\neq 0$，且 $|-mK_X|$ 含 $M$ 使 $(X,\frac{1}{m}M)$ 是 lc。`main.tex:231-235`（`t-eff-bir-e-lc`）是有效双有理性：对任意 $d$、$\epsilon>0$，存在仅依赖 $d$、$\epsilon$ 的 $m$，使任意 $d$ 维 $\epsilon$-lc 弱 Fano 簇 $X$ 都有 $|-mK_X|$ 定义双有理映射。
+
+`main.tex:254-257`（`t-BAB-exc-usual`）把 Fano 簇分为「非例外」与「例外」两类，称 $X$ 非例外若存在 $0\le P\sim_\mathbb{Q}-K_X$ 使 $(X,P)$ 不是 klt，否则称例外。定理断言：$d$ 维例外弱 Fano 簇的集合构成有界族。
+
+`main.tex:263-274`（`t-BAB-good-boundary`）是另一条有界性：设 $(X,B)$ 满足 $(X,B)$ 是 $\epsilon$-lc 维 $d$、$B$ 大且 $K_X+B\sim_\mathbb{R} 0$、$B$ 的系数 $\ge\delta$，则所有这样的 $X$ 构成有界族。`main.tex:284-287`（`conj-BAB`）的 Alexeev-Borisov-Borisov 猜想：固定 $d$、$\epsilon$，所有 $\epsilon$-lc Fano 簇 $X$ 构成有界族；本论文在 BAB 序列论文 B-BAB 中给出证明。
+
+`main.tex:303-308`（`t-BAB-to-bnd-vol`）把 BAB 猜想降维：若 BAB 在 $d-1$ 维成立，则 $\vol(-K_X)$ 在 $d$ 维 $\epsilon$-lc 弱 Fano 簇上有仅依赖 $d$、$\epsilon$ 的上界。`main.tex:327-345`（`t-bnd-compl-usual`）是 Shokurov 1986 年猜想的补有界性：设 $(X,B)$ 是 $d$ 维 lc 对，$B$ 的系数在固定有限集 $\mathfrak{R}$ 决定的超标准集 $\Phi(\mathfrak{R})$、$X$ 是 Fano 型、$-(K_X+B)$ 是 nef，则存在仅依赖 $d$、$\mathfrak{R}$ 的 $n$ 使 $K_X+B$ 有 $n$-补 $K_X+B^+$ 且 $B^+\ge B$。
+
+`main.tex:379-395`（`t-bnd-compl-usual-local`）给出相对版本：设 $X\to Z$ 是收缩、$(X,B)$ 是 lc 维 $d$、$X$ 在 $Z$ 上 Fano 型、$-(K_X+B)$ 在 $Z$ 上 nef，则 $Z$ 上的每点都有仅依赖 $d$、$\mathfrak{R}$ 的 $n$-补。`main.tex:404-418`（`cor-bnd-index`）是推论：在同样设定下，若 $V\subset X$ 是非 klt 中心且 $X$ 在 $V$ 一般点附近 klt，则 $n(K_X+B)$ 在 $V$ 一般点附近 Cartier。
+
+`main.tex:429-446`（`t-bnd-compl`）是更广义的补有界性：设 $(X',B'+M')$ 是 generalized polarized pair，维 $d$，$pM$ 是 b-Cartier，$X'$ 是 Fano 型、$-(K_{X'}+B'+M')$ nef，则有仅依赖 $d$、$p$、$\mathfrak{R}$ 的 $n$ 使 $K_{X'}+B'+M'$ 有 $n$-补 $K_{X'}+B'^+ M'$，$B'^+\ge B'$。
+
+`main.tex:457-461`（`t-BAB-exc`）是例外对的有界性：设 $(X',B'+M')$ 是 $d$ 维例外广义对，则这样的 $(X',B')$ 构成对数有界族。
+
+`main.tex:465-481` 概述论文结构：§2 是预备、§3 讨论 adjunction、§4 证 `t-eff-bir-e-lc`、§5 证 `t-BAB-good-boundary`、§6 证广义对的补有界性、§7 处理例外对、§8 相对补、§9 证 `t-BAB-to-bnd-vol`、§10 是各主定理的最终拼装。
+
+## 2 预备：超标准系数集与广义对
+
+`main.tex:650-809`（Preliminaries）给出基础记号。`main.tex:654` 假设所有簇都在零特征代数闭域上；$\mathbb{N}=\{1,2,3,\dots\}$ 不含 $0$。
+
+**收缩**（`main.tex:656-660`）：收缩 $f\colon X\to Y$ 是 projective morphism 满足 $f_*\cO_X=\cO_Y$（不必双有理），连通纤维；若 $X\to Z\to Y$ 是 Stein 分解则 $Z\to Y$ 是同构；$X$ 正规蕴含 $Y$ 正规。
+
+**超标准集**（`main.tex:662-680`，`ss-dcc-sets`）：对 $\mathfrak{R}\subset[0,1]$ 定义
+
+$$\Phi(\mathfrak{R})=\left\{1-\frac{r}{m}\mid r\in\mathfrak{R},m\in\mathbb{N}\right\}$$
+
+为 $\mathfrak{R}$ 的超标准集。$\mathfrak{R}$ 有限时 $\Phi(\mathfrak{R})$ 是仅以 $1$ 为聚点的有理数 DCC 集。$I=I(\mathfrak{R})$ 是最小自然数使 $Ir\in\mathbb{Z}$ 对所有 $r\in\mathfrak{R}$，$I$ 整除 $n$ 时有 $nb\le\lfloor(n+1)b\rfloor$ 对所有 $b\in\Phi(\mathfrak{R})$（`PSh-II` Lemma 3.5）。
+
+**除子**（`main.tex:683-721`）：设 $X$ 正规，$M$ 是 $\mathbb{R}$-除子，记 $\mu_DM$ 为素除子 $D$ 在 $M$ 中的系数。若每个非零系数属于 $\Phi$，记 $M\in\Phi$。$M^{\ge a}$、$M^{>a}$ 等记号忽略掉相应分量。`main.tex:690-691` 称 $M$ 是 b-Cartier 若它是 $\mathbb{Q}$-Cartier 且存在双有理收缩 $\phi\colon W\to X$（$W$ 正规）使 $\phi^*M$ Cartier。
+
+`main.tex:692-696` 在 $f\colon X\to Z$ 形态射下定义水平/垂直除子。`main.tex:697-704` 写 $M\sim L$（resp. $\sim_\mathbb{Q}$、$\sim_\mathbb{R}$）当 $M-L=f^*N$ 对 Cartier（resp. $\mathbb{Q}$-Cartier、$\mathbb{R}$-Cartier）除子 $N$ 成立。
+
+**线性系**（`main.tex:723-781`，`ss-lin-systems`）：$D$ 是 Weil 除子。`main.tex:725-728` 称 $|D|$ 是线性系，记 $|D|=\mathcal{L}(D)$。`main.tex:730-733` 给出 $|D|$ 的维数定义 $\dim|D|$（设其维 $\ge 0$）。`main.tex:735-748` 定义 base locus $\operatorname{Bs}|D|$ 与移动部分 $\operatorname{Mov}|D|$，记 $|D|_{\rm free}$ 是 base-point-free 部分。`main.tex:749-766` 在 $\mathbb{R}$-除子情形 $D$ 是移动 / nef / ample / big 的定义（`main.tex:750-762`）。
+
+**b-除子**（`main.tex:782-795`，`ss-b-divisor`）：b-除子是 $X$ 的双有理模型除子的相容族，记 $\mathbb{R}$-b-除子 $M$ 为 $\mathbb{R}$-b-Cartier 若存在双有理 $\phi\colon W\to X$ 使 $\phi^*M$ Cartier。
+
+**对**（`main.tex:796-818`）：$(X,B)$ 是 lc / klt / plt 当 $K_X+B$ 是 $\mathbb{Q}$-Cartier 或 $\mathbb{R}$-Cartier 时对数差异 $\ge -1$（resp. $>-1$、$>-1$ 且 $X$ 在一般点附近 klt）。`main.tex:809-818` 写 dualizing sheaf 的存在与 Grothendieck dual 形式。
+
+**MMP**（`main.tex:819-835`，`ss-MMP`）：$X$ 是 $\mathbb{Q}$-factorial 维 $d$、$(X,B)$ 是 lc，Fano 型对存在 $\mathbb{R}$-除子 $G$ 使 $(X,G)$ 是 klt 且 $-(K_X+G)$ ample。MMP 终止由 BCHM 给出。
+
+**Fano 对**（`main.tex:836-900`）：$(X,B)$ 称为 Fano 对若 $X$ 是 Fano 型且 $-(K_X+B)$ ample。`main.tex:843-849` 列出 Fano 对在 MMP 下的保持。`main.tex:850-859` 把弱 Fano 对定义为 $-(K_X+B)$ nef 且 big 的 Fano 型对。`main.tex:860-869` 描述例外性：存在 $0\le B'\sim_\mathbb{R}-(K_X+B)$ 使 $(X,B')$ 是 lc 但非 klt 时称非例外；否则例外。
+
+**广义极化对**（`main.tex:901-1047`，`ss-gpp`）：广义对由 $(X',B'+M')$、$\phi\colon X\to X'$、$M$（b-除子）三段数据给出，$K_{X'}+B'+M'$ 由 $\phi$ 拉回为 $K_X+B+M$。`main.tex:917-925` 给出广义 lc / klt / plt / Fano 型的定义。`main.tex:931-941` 给出 generalized pull-back 与 push-forward 的法则（numerical pull-back、crepant pull-back）。`main.tex:941-1047` 列出广义对的若干标准性质与降维程序。
+
+## 3 补与非 klt 中心
+
+`main.tex:1128-1180`（`ss-compl`）定义补。设 $(X,B)$ 是 lc 对且 $-(K_X+B)$ nef。$K_X+B^+$ 是 $K_X+B$ 的 $n$-补若 $n(K_X+B)\sim nB^+$ 且 $(X,B^+)$ 是 lc。$B^+\ge B$ 表示按系数逐项 $\ge$。`main.tex:1153-1164` 给出推论：当 $(X,B)$ 是 lc 且 $B$ 的系数在 $\Phi(\mathfrak{R})$、$X$ 是 Fano 型、$-(K_X+B)$ nef 时，可取仅依赖 $d$、$\mathfrak{R}$ 的 $n$ 使 $K_X+B$ 有 $n$-补。
+
+`main.tex:1181-1284`（`ss-bnd-couples`）给出有界族的定义。`main.tex:1186-1195` 把 $(X,B)$ 与 $(X',B')$ 称为同构若存在同构 $\theta\colon X\overset{\sim}{\to} X'$ 把 $B$ 拉到 $B'$。`main.tex:1196-1211` 写 $\mathcal{V}$ 是 $(X,B)$ 的族，若存在有限型 $S$ 与 $\cO_S$-平坦 proper 族 $\mathcal{X}\to S$、$\mathcal{B}\subset\mathcal{X}$ 使 $\mathcal{V}$ 的成员（模同构）由 $(\mathcal{X}_s,\mathcal{B}_s)$ 给出。`main.tex:1212-1223` 称族有界若至多有限个亏格、至多有限个成员（模同构）。`main.tex:1224-1247` 把「对数有界」定义为：存在有限型 $S$ 与 $\mathcal{X}\to S$、$\mathcal{B}\subset\mathcal{X}$ 使对任何 $(X,B)\in\mathcal{V}$ 存在闭点 $s\in S$ 与同构 $(X,B)\simeq(\mathcal{X}_s,\mathcal{B}_s)$。
+
+`main.tex:1285-1414`（`ss-cartier-index`）把有界族中的 Cartier 指数控制：若 $(X,B)$ 在有界族中且 $K_X+B$ 是 Cartier，则 $n(K_X+B)$ 在一般成员上的 Cartier 指数一致有界。这条性质在补有界性证明中反复使用。
+
+`main.tex:1415-1532`（`ss-cov-fam-subvar`）定义覆盖族：若对任何一般闭点对 $x,y\in X$ 存在 $G\in\mathcal{G}$ 含 $x$ 且 $(X,\Delta)$ 在 $y$ 不 klt，则称 $\mathcal{G}$ 是覆盖族。`main.tex:1507-1532` 把它应用到 Fano 簇的 anti-canonical 系统上：选取 $0\le\Delta\sim_\mathbb{Q}-mK_X$、$(X,\Delta)$ klt 且有非 klt 中心 $G$ 含 $x$，则 $G$ 的维数可被控制。
+
+`main.tex:1533-1545`（`ss-potentially-birational`）定义潜在双有理除子：$D$ 是潜在双有理若存在 $m$ 使 $|m(K_X+D)|$ 定义双有理映射。`main.tex:1546-1665`（`ss-non-klt-centres`）给出非 klt 中心的覆盖族构造：在一般闭点对 $x,y\in X$ 上构造 $\Delta$ 使 $x$ 是唯一的非 klt 中心点，$y$ 处非 klt。
+
+`main.tex:1666-1697`（`ss-pseudo-effective-thresholds`）写伪有效阈值 $\tau(D;L)$：最大的 $x$ 使 $L-xD$ 伪有效。`main.tex:1698-1727`（`ss-numerical-Kodaira-dimension`）数值 Kodaira 维 $\kappa_\sigma(D)$：用数值等价定义的渐近维数。`main.tex:1728-1795`（`ss-volume`）写体积 $\vol(D)$ 与渐近 Hodge 系数。
+
+`main.tex:1796-1842`（`ss-restriction`）写限制正合列 $H^0(L)\to H^0(L|_S)\to H^1(L-S)$ 与 Kawamata-Viehweg 消没定理 $H^q(K_X+L)=0$（$q>0$、$L$ nef big）。`main.tex:1843-1875`（`ss-descent-nef`）写 nef 除子的下降：若 $X\to Y$ proper 且 $L$ nef 且 $L|_{X_y}$ ample，则 $L$ 在 $X$ 上 ample。`main.tex:1876-1897`（`ss-large-boundaries`）把 $(X,B)$ 称为 large boundary 若 $B$ 大且 $\Supp B$ 是 SNC。`main.tex:1898-1925`（`ss-a-close-0`）处理对数差异接近 $0$ 的除子：ACC for $\operatorname{lct}$ 给出 log discrepancies 的 DCC。`main.tex:1926-2033`（`ss-coeff-close-1`）处理系数接近 $1$ 的边界：Kawamata-Viehweg 加细后 $B$ 的某些系数可上调至 $1$。
+
+## 4 Adjunction：除子形式、纤维空间、非 klt 中心
+
+`main.tex:2034-2034` 起是 §3，标题是 Adjunction。`main.tex:2043-2232`（`ss-q-adjunction`）给出（广义）除子 adjunction：
+
+(i) 设 $(X',B'+M')$ 是广义对，$\phi\colon X\to X'$，$S'$ 是 $B'$ 中系数 $1$ 的分量的正规化，$S$ 是其在 $X$ 上的双有理变换。把 $\phi$ 取为 $(X',B')$ 的 log 分辨，写 $K_X+B+M=\phi^*(K_{X'}+B'+M')$，令 $B_S=(B-S)|_S$、$M_S\sim_\mathbb{R} M|_S$，则
+
+$$K_S+B_S+M_S\sim_\mathbb{R}(K_X+B+M)|_S,$$
+
+再设 $\psi\colon S\to S'$、$B_{S'}=\psi_*B_S$、$M_{S'}=\psi_*M_S$，得
+
+$$K_{S'}+B_{S'}+M_{S'}\sim_\mathbb{R}(K_{X'}+B'+M')|_{S'},$$
+
+此即广义除子 adjunction（`main.tex:2061-2068`）。$M=0$ 时退化为标准除子 adjunction。
+
+(ii) `main.tex:2076-2092` 指出广义 adjunction 公式不唯一（$M_S$ 不唯一）；若 $pM$ 是 b-Cartier，则可取 $M_S$ 使 $pM_S$ 是 b-Cartier 且 $p(K_{X'}+B'+M')|_{S'}$ 在线性等价下良定义。
+
+(iii) `main.tex:2097-2140`（`l-inv-adjunction`）证明 adjunction 反转：设 $(X',B'+M')$ 是 $\mathbb{Q}$-factorial 广义对，$S'$ 是 $B'$ 中系数 $1$ 的分量，$(X',S')$ plt。若 $(S',B_{S'}+M_{S'})$ 是广义 lc，则 $(X',B'+M')$ 在 $S'$ 附近广义 lc。证明路径：假设 $(X',B'+M')$ 在 $S'$ 附近不广义 lc，取 $\alpha\in(0,1)$、$\Gamma'=(1-\alpha)S'+\alpha B'$，把问题转化为 $(X',\Gamma'+\alpha M')$ 在 $S'$ 附近不广义 lc 但 $(S',\Gamma_{S'}+\alpha M_{S'})$ 广义 klt。取丰沛 $A\ge 0$ 与有效 $C\ge 0$ 使 $A+C\sim 0/X'$、$S$ 不在 $C$ 支撑上；取 $\epsilon>0$ 小的 $G\sim_\mathbb{R}\epsilon A+M/X'$；令 $\Delta=B+G+\epsilon C$，则 $K_X+\Delta\sim_\mathbb{R}0/X'$，$(X',\Delta')$ 不 lc 但 $(S,\Delta_S)$ sub-klt；adjunction $K_S+\Delta_S=(K_X+\Delta)|_S$ 与 $(S',\Delta_{S'})$ klt 矛盾于普通 adjunction 反转 Kawakita。
+
+(iv) `main.tex:2145-2232`（`l-div-adj-dcc`）证明 adjunction 系数受控：设 $p\in\mathbb{N}$、$\mathfrak{R}\subset[0,1]$ 有限，则存在仅依赖 $p$、$\mathfrak{R}$ 的有限集 $\mathfrak{S}\subset[0,1]$，使满足：(a) $(X',B'+M')$ 维 $d$ 广义 lc、(b) $S'$ 是 $\lfloor B'\rfloor$ 分量正规化、(c) $B'\in\Phi(\mathfrak{R})$ 且 $pM$ 是 b-Cartier、(d) 广义 adjunction $K_{S'}+B_{S'}+M_{S'}\sim_\mathbb{R}(K_{X'}+B'+M')|_{S'}$ 时，$B_{S'}\in\Phi(\mathfrak{S})$。证明降维到面情形（取超平面截面使 $X'$ 是面），利用 $K_{X'}+B'$ 自动 $\mathbb{R}$-Cartier（`BZh` Remark 4.8）、Shokurov-log-flips Proposition 3.9/Corollary 3.10 的 Cartier 指数控制 $l\in\mathbb{N}$ 仅依赖 $(X',S')$、再用 $\mu_VB_{S'}=1-1/l+\sum b_i\alpha_i/l$ 的形式拆分，把 $\mu_VB_{S'}$ 表达为 $\Phi(\mathfrak{S})$ 中的元素。
+
+`main.tex:2235-2377`（`ss-adj-fib-spaces`）给出纤维空间的 adjunction（canonical bundle formula）。设 $f\colon X\to T$ 是 proper morphism，$(X,B)$ 是 lc 对，$K_X+B\sim_\mathbb{Q} f^*(K_T+B_T+M_T)$，其中 $B_T$ 是 discriminant divisor、$M_T$ 是 moduli divisor（b-除子）。`main.tex:2240-2254` 给出 adjunction 公式的存在性（BZh）与 $B_T$、$M_T$ 的构造：$B_T$ 的系数在 $\Phi(\mathfrak{R})$、$pM_T$ 是 b-Cartier。`main.tex:2255-2266`（`l-fib-adj-dcc`）给出 adjunction 后 $B_T$ 的系数 DCC 性质：固定 $d$、$p$、$\mathfrak{R}$ 时存在仅依赖这三者的有限集 $\mathfrak{S}$，使 $B_T\in\Phi(\mathfrak{S})$。
+
+`main.tex:2378-2697`（`ss-adj-non-klt-centres`）处理非 klt 中心的 adjunction。设 $G$ 是 $(X,B)$ 的非 klt 中心，$F$ 是 $G$ 的正规化，则可写
+
+$$(K_X+B)|_F\sim_\mathbb{Q} K_F+B_F+P_F,$$
+
+其中 $B_F$ 是 discriminant、$P_F$ 是 pseudo-effective b-除子（Birkar Zhang 16 / BZh Construction 4.1）。`main.tex:2395-2418`（`constr-adjunction-non-klt-centre`）构造方式：取 $\Delta\in[0,1]\cap\mathbb{Q}$ 使 $\Delta\sim_\mathbb{Q} B+C$、$(X,\Delta)$ 在 $G$ 一般点处 lc，取 $\Delta'$ 使 $K_X+\Delta'=\phi^*(K_X+\Delta)$ 在 $X'$ 上；adjunction $K_{F'}+B_{F'}=(\phi|_{F'})^*(K_F+B_F)$。`main.tex:2420-2445`（`t-subadjunction`）证明 sub-adjunction 在维数 $\le d$ 时成立，$B_F$ 的系数在 $\Phi(\mathfrak{R})$，$P_F$ 是 pseudo-effective。`main.tex:2446-2510` 给出构造细节：取足够一般 $\Delta$、adjunction 后 $\Delta_F=B_F+P_F$ 在 $F$ 上的限制。`main.tex:2510-2560`（`l-sub-bnd-on-gen-subvar`）证明 sub-adjunction 的 $\Lambda_F$ 子估计：对一般子簇 $V\subset X$ 存在 $\Lambda_F$ 使 $K_F+\Lambda_F=K_X|_F$、$(F,\Lambda_F)$ sub-$\epsilon$-lc、$\Delta_F-\Lambda_F$ 是 $\Theta_F-\Lambda_F$ 的良定义 $\mathbb{Q}$-除子。`main.tex:2560-2697`（`l-subadjunction-integral-div`）给出整数除子 sub-adjunction 形式：当 $D$ 是整数除子时，$D_F$ 在 $\Theta_F+D_F$ 中的系数 $\ge 1$。
+
+`main.tex:2698-2921`（`ss-lift-section-non-klt`）证明从非 klt 中心提升截面。设 $X\to Z$ 是 proper morphism、$(X,B)$ 是 lc 对、$G$ 是非 klt 中心、$B\in\Phi(\mathfrak{R})$、$Z$ 是 Fano 型 over $Z$、$-(K_X+B)$ nef over $Z$。`main.tex:2715-2735`（`p-lift-section-lcc`）证明 $|n(K_X+B)|$ 的非空截面在 $G$ 附近可被提升到 $X$，使得 $K_X+B$ 仍有 $n$-补。
+
+## 5 有效双有理性
+
+`main.tex:2922-3962` 是 §4，标题「Effective birationality」。`main.tex:2932-3032`（`ss-sing-bnd-fam`）处理有界族中的奇异性：设 $(X,B)$ 在有界族中且 $B\in\Phi(\mathfrak{R})$，则存在仅依赖 $d$、$\mathfrak{R}$ 的 $\epsilon>0$ 使 $(X,B)$ 是 $\epsilon$-lc（Birkar-Hacon-Xu HX 推论 1.3）。`main.tex:3040-3236`（`ss-log-bir-bnd-cert`）给出对数双有理有界性：若 $X$ 是 Fano 型且 $-(K_X+\Delta)$ ample、$\Delta\in\Phi(\mathfrak{R})$、$(X,\Delta)$ 是 $\epsilon$-lc，则存在仅依赖 $d$、$\epsilon$、$\mathfrak{R}$ 的 $v$ 使 $\vol(-(K_X+\Delta))\le v$。`main.tex:3244-3471`（`ss-bnd-sing-non-klt-centre`）处理非 klt 中心上的奇异性有界：若 $G$ 是 $(X,B)$ 非 klt 中心、$F$ 是其正规化、$B_F\in\Phi(\mathfrak{S})$、$(F,B_F+P_F)$ 满足特定条件，则 $\operatorname{lct}$ 在 $F$ 上有仅依赖维数与 $\mathfrak{S}$ 的下界。
+
+`main.tex:3472-3681`（`ss-eff-bir-good-Q-compl`）证 `t-eff-bir-e-lc` 在 $\mathbb{Q}$-补有界的情形。设 $(X,B)$ 是 Fano 对且 $K_X+B$ 有 $\mathbb{Q}$-补，则 $|m(K_X+B)|$ 对某个仅依赖 $d$、$\epsilon$、$\mathfrak{R}$ 的 $m$ 定义双有理映射。证明取 $0\le B^+\sim_\mathbb{Q}-(K_X+B)$（$\mathbb{Q}$-补），对 $M\in |mB^+|$ 写 $K_X+B+\frac{1}{m}M$ 是 lc，从而 $|-mK_X|$ 双有理。
+
+`main.tex:3682-3962`（`ss-eff-bir-nearly-can`）处理近典范 Fano 簇。`main.tex:3694-3740`（`p-eff-bir-delta-2`）证明：若 $\Delta\sim_\mathbb{Q}-2K_X$ 是 $\delta$-lc 且 $X$ 是 klt，则存在仅依赖 $d$、$\delta$ 的 $m$ 使 $|-mK_X|$ 定义双有理映射。`main.tex:3741-3796`（`p-eff-bir-tau`）证明：若 $(X,\Delta)$ 是 Fano 对、$\Delta\sim_\mathbb{Q}-K_X$、$(X,\Delta)$ 是 $\tau$-lc 且 $X$ 是 $\mathbb{Q}$-factorial，则存在仅依赖 $d$、$\tau$ 的 $m$ 使 $|-mK_X|$ 定义双有理映射。
+
+## 6 `t-BAB-good-boundary` 的证明
+
+`main.tex:3963-4112` 是 §5，证 `t-BAB-good-boundary`。设 $d\in\mathbb{N}$、$\epsilon$、$\delta>0$、$(X,B)$ 是 $\epsilon$-lc 维 $d$、$B$ 大且 $K_X+B\sim_\mathbb{R} 0$、$B$ 的系数 $\ge\delta$。证明步骤：
+
+(i) `main.tex:3980-3995` 把问题化为 $B$ 是有效除子：取 $0\le M\sim_\mathbb{R} K_X+B$（小调整使 $B\ge\delta$ 仍成立），把 $K_X+B$ 写为 $K_X+B$。
+
+(ii) `main.tex:3996-4020` 应用 BCHM 与 MMP：取 $\Delta=\sum b_iB_i$ 是 $\mathbb{Q}$-边界、$b_i\ge\delta$，对 $-K_X$ 跑 MMP 得模型 $X'$、$\Delta'$。由 HMX2 的 local ACC 与 global ACC 知 $K_{X'}+\Delta'$ 是 nef。
+
+(iii) `main.tex:4020-4060` 应用 ACC for lc thresholds（Birkar-Hacon-Xu）：$(X',\Delta')$ 的 lc 阈值有仅依赖 $d$、$\delta$ 的下界 $\epsilon'$。结合 $\epsilon$-lc 假设得 $\epsilon'$ 一致有界。
+
+(iv) `main.tex:4060-4110` 收尾：用 Hacon-Xu HX Theorem 1.3 把 $(X,\Delta)$ 视为对数有界族，应用 log boundedness 完成。
+
+## 7 补有界性的证明
+
+`main.tex:4113-5350` 是 §6（`ss-bnd-compl`）。`main.tex:4144-4194`（`ss-compl-remarks`）是补的若干标准性质。`main.tex:4195-4414`（`ss-fib-adj-dcc`）证明 adjunction for fibre spaces 在 $B_T$ 的系数 DCC：固定 $d$、$p$、$\mathfrak{R}$，存在仅依赖这三者的有限集 $\mathfrak{S}$，使 (a) $(X',B'+M')$ 维 $d$ 广义 lc、(b) $B'\in\Phi(\mathfrak{R})$、$pM$ 是 b-Cartier、(c) $X'$ 是 Fano 型、(d) $-(K_{X'}+B'+M')$ nef 时，$B_T\in\Phi(\mathfrak{S})$、$pM_T$ 是 b-Cartier。证明反复用 canonical bundle formula（BZh）与 sub-adjunction 把 $B_T$、$M_T$ 系数控制到 DCC。
+
+`main.tex:4415-4569`（`ss-pull-compl-base`）从纤维空间 $f\colon X\to T$ 的基 $T$ 上拉回补：设 $K_T+B_T+M_T$ 有 $n$-补 $K_T+B_T^+ M_T$，则 $K_X+B+\frac{1}{n}f^*(B_T^+-B_T)M_X$ 是 $K_X+BM_X$ 的 $n$-补，其中 $M_X=f^*M_T$。证明需要 $pM_X$ 是 b-Cartier（$pM_T$ b-Cartier 蕴含）。
+
+`main.tex:4570-5273`（`ss-lift-compl-non-klt`）从非 klt 中心 $G$ 提升补：设 $G\subset X$ 是非 klt 中心、$S'$ 是 $B'$ 中系数 $1$ 的分量、$K_{S'}+B_{S'}+M_{S'}$ 有 $n$-补 $K_{S'}+B_{S'}^+M_{S'}$，则 $K_X+B+\frac{1}{n}(B^+-B)+M$ 是 $K_X+B+M$ 的 $n$-补。证明路径：
+
+(a) `main.tex:4580-4610`（`p-bnd-compl-non-big`）若 $-(K_X+B)$ nef 且大、$S$ 是 $B$ 中系数 $1$ 的分量、$S$ 是 Fano 型，则 $K_X+B$ 在 $S$ 附近有 $n$-补 $K_X+B^+$，且 $n$ 仅依赖 $d$、$\mathfrak{R}$。证明用限制正合列与 Kawamata-Viehweg 消没把 $S$ 上的补拉回。
+
+(b) `main.tex:4610-4690`（`p-bnd-compl-non-klt`）若 $(X,B)$ 非例外、$K_X+B\sim_\mathbb{Q} 0$、$V$ 是 $(X,B)$ 的非 klt 中心、$X\to Z$ 是 $V$ 的 fibration，则在 $V$ 上应用归纳得 $V$ 上的补，再提升到 $X$。
+
+(c) `main.tex:4690-4770`（`p-BAB-exc-to-compl`）反向：若 $(X,B)$ 是例外且 $X$ 是 Fano 簇，则 $|mK_X|$ 对仅依赖 $d$、$\epsilon$ 的 $m$ 定义双有理映射（用 `t-eff-bir-e-lc`），从而 $K_X+\frac{1}{m}M$ 是 lc 补。
+
+`main.tex:5274-5350`（`ss-bnd-compl`）综合：给定 $d$、$p\in\mathbb{N}$、$\mathfrak{R}$，存在仅依赖这三者的 $n$ 使 $(X',B'+M')$ 维 $d$ 广义 lc、$B'\in\Phi(\mathfrak{R})$、$pM$ b-Cartier、$X'$ Fano 型、$-(K_{X'}+B'+M')$ nef 时，$K_{X'}+B'+M'$ 有 $n$-补 $K_{X'}+B'^+ M'$ 且 $B'^+\ge B'$。
+
+证明归纳在维数 $d$ 上。非例外情形用 `p-bnd-compl-non-big` 或 `p-bnd-compl-non-klt`；例外情形用 `p-BAB-exc-to-compl`。$M_T$ 的 DCC 由 `l-fib-adj-dcc` 控制。
+
+## 8 例外对的有界性
+
+`main.tex:5351-6093` 是 §7。`main.tex:5383-5451`（`ss-bnd-sing`）证 `l-exc-bnd-sing`：设 $(X',B'+M')$ 维 $d$ 例外广义对、$B'\in\Phi$、$pM$ b-Cartier、$X'$ Fano 型。则对任何 $0\le P'\sim_\mathbb{R}-(K_{X'}+B'+M')$，$(X',B'+P'+M')$ 广义 $\epsilon$-lc，$\epsilon$ 仅依赖 $d$、$p$、$\Phi$。
+
+证明：设 $D''$ 是 $a=a(D'',X',B'+P'+M')$ 最小的素除子，$a<1$。取 $\phi\colon X''\to X'$ 收缩 $D''$、$K_{X''}+B''+M''=\phi^*(K_{X'}+B'+M')$、$P''=\phi^*P'$。设 $e$、$c$ 是 $D''$ 在 $B''$、$P''$ 的系数，$e+c=1-a>0$。跑 $-(K_{X''}+B''+cD''+M'')$ 的 MMP 得 $X'''$、$-(K_{X'''}+B'''+cD'''+M''')$ nef。取 $\epsilon$ 由 `p-B'-to-Theta'` 给出，假设 $a<\epsilon$ 取矛盾：把 $D'''$ 在 $(B'''+cD''')$ 中靠近 $1$ 的系数上调到 $1$ 得 $\Theta'''$，跑 $-(K_{X'''}+\Theta'''+M''')$ 的 MMP 得 $\overline{X}$、$\left\lfloor{\Theta'''}\right\rfloor \neq 0$ 故 $(\overline{X},\overline{\Theta}+\overline{M})$ 非广义 klt，又因 $-(K_{\overline{X}}+\overline{\Theta}+\overline{M})$ nef 故非例外，由 `l-exc-compare-bigger-model` 反设 $(X',B'+M')$ 例外。
+
+`main.tex:5454-5575`（`ss-from-compl-to-BAB-exc-usual`）证 `l-from-compl-to-BAB-exc-usual`：设 `t-bnd-compl` 在维 $\le d-1$ 成立、`t-bnd-compl-usual-local` 在维 $d$ 成立，则 `t-BAB-exc-usual` 在维 $d$ 成立。
+
+证明：设反设，存在 $d$ 维例外弱 Fano 序列 $X_i$ 不构成有界族。`main.tex:5513-5522` 用 $q_i\in\mathbb{N}$ 是使 $|-q_iK_{X_i}|$ base-point-free 的最小数；$K_{X_i}$ 有 $q_i$-补且由例外性该补必 klt。由 HX Theorem 1.3 知 $q_i$ 不是有限集，故 $q_i$ 严格递增。把 $X_i$ 换成由 $-K_{X_i}$ 定义的收缩 $\widetilde{X}_i$（Fano 簇）后不减一般性。
+
+设 $\epsilon_i$ 是 $X_i$ 的最小对数差异，$\epsilon=\limsup\epsilon_i$。`main.tex:5523-5550` 若 $\epsilon<1$，取 birational $X_i'\to X_i$ 收缩唯一 $D_i'$、$a(D_i',X_i,0)=\epsilon_i$、$e_i=1-\epsilon_i\ge 1-\epsilon$；跑 `l-the-simpler-directed-MMP` 得 $X_i''\to T_i''$、$\widetilde{e}_i\ge 1-\epsilon$、$K_{X_i''}+\widetilde{e}_iD_i''$ 在 $T_i''$ 上数值平凡。取 $0\le P_i''\sim_\mathbb{Q}-(K_{X_i''}+\widetilde{e}_iD_i'')$、crepant pull-back 得 $K_{X_i}+P_i$ 是有效除子使 $P_i\ge 0$。由 `l-exc-bnd-sing` 知 $(X_i,P_i)$ 是 $\widetilde{\epsilon}$-lc，$(X_i'',\widetilde{e}_iD_i'')$ 亦 $\widetilde{\epsilon}$-lc。
+
+`main.tex:5550-5575` 若 $\dim T_i''>0$ 用 $X_i''\to T_i''$ 上的纤维维归纳、用 `t-BAB-good-boundary` 得 $\widetilde{e}_i$ 在有限集中；若 $\dim T_i''=0$ 用 HX Theorem 1.3 直接得 $X_i''$ 有界，矛盾。
+
+`main.tex:5576-5674`（`ss-bnd-exc-thresholds`）证 `l-exc-threshold`：例外阈值（$\tau$）一致有界。`main.tex:5675-5743`（`ss-bnd-vol`）证 `l-exc-bnd-vol`：例外对的 $\vol(-K_X)$ 仅依赖维数。`main.tex:5744-5794`（`ss-bnd-lct`）证 `l-exc-bnd-lct`：例外对的 lc 阈值下界仅依赖维数。`main.tex:5795-5937`（`ss-from-lct-to-var`）证 `p-from-bnd-lct-to-bnd-var`：lc 阈值一致下界的 Fano 簇构成有界族。`main.tex:5938-6093`（`ss-from-compl-to-BAB-exc`）证 `p-from-compl-to-BAB-exc`：从 `t-bnd-compl` 在维 $\le d-1$ 成立、`t-bnd-compl-usual-local` 在维 $d$ 成立，推出 `t-BAB-exc` 在维 $d$ 成立。证明路径用 `l-exc-bnd-sing`、`l-exc-threshold`、`l-exc-bnd-vol`、`l-exc-bnd-lct`、`p-from-bnd-lct-to-bnd-var`。
+
+## 9 相对补有界性
+
+`main.tex:6094-6499` 是 §8。`main.tex:6102-6115`（`p-bnd-compl-usual-local`）证 `t-bnd-compl-usual-local` 是 `t-bnd-compl-usual` 与 `t-bnd-compl-usual-local` 在 $d-1$ 维的推论。证明路径：取 $\Delta\in[0,1]\cap\mathbb{Q}$ 使 $\Delta\sim_\mathbb{Q}-aK_X$、$(X,\Delta)$ 在 $V$ 附近 klt，adjunction $K_V+B_V=(K_X+B)|_V$ 在 $V$ 上 $\mathbb{Q}$-补有界；再用 `p-lift-section-lcc` 把 $V$ 上的补提升到 $X$。
+
+## 10 反典范体积有界
+
+`main.tex:6500-6729` 是 §9，证 `t-BAB-to-bnd-vol`。设 BAB 猜想在维 $d-1$ 成立。`main.tex:6511-6522` 概述证明：若 $\vol(-K_X)$ 过大，找 $0\le B\sim_\mathbb{Q}-aK_X$（$a>0$ 充分小）、$(X,B)$ 是 $\epsilon'$-lc、$\vol(B)>(2d)^d$、$\epsilon'=\epsilon'$ 在 $(0,\epsilon)$ 中固定。提取素除子 $D'$ 使 $a(D',X,B)=\epsilon'$，由 birational $X'\to X$、$K_{X'}+eD'=\phi^*K_X$、$K_{X'}+B'=\phi^*(K_X+B)$。$e\le 1-\epsilon$、$\mu_{D'}B'=1-\epsilon'$。
+
+`main.tex:6555-6576`（Step 2）跑 $-D'$ 的 MMP 得 $-D'$-Mori fibre space $X''\to Z$、$D''$ 在 $X''$ 上 ample over $Z$。令 $b_i=1/a_i-1$、$b_i\to\infty$，则 $K_{X_i}+B_i+b_iB_i\sim_\mathbb{Q} 0$，由此得
+
+$$K_{X_i'}+B_i'+b_iP_i'=K_{X_i'}+B_i'+b_i\phi_i^*B_i\sim_\mathbb{Q} K_{X_i'}+B_i'+H_i'\sim_\mathbb{Q} 0$$
+
+（$H_i$ 是一般丰沛 $\mathbb{Q}$-除子）。`main.tex:6575-6577` 由此存在 $s_i\ge b_i(\epsilon-\epsilon')$ 使 $K_{X_i''}+s_iD_i''\sim_\mathbb{Q} 0/Z_i$，$s_i\to\infty$。
+
+`main.tex:6580-6596`（Step 3）若 $\dim Z_i>0$，$V_i$ 是 $X_i''\to Z_i$ 的一般纤维；$(X_i'',B_i''+H_i'')$ 是 $\epsilon'$-lc，故 $V_i$ 是 $\epsilon'$-lc Fano。由 BAB 在维 $\le d-1$，$V_i$ 属有界族。$K_{V_i}+s_iD_{V_i}\sim_\mathbb{Q} 0$（$D_{V_i}=D_i''|_{V_i}$），由 `l-bnd-fam-intersection` 矛盾。故 $\dim Z_i=0$。
+
+`main.tex:6598-6627`（Step 4）固定 $i$ 创造非 klt 中心的覆盖族 $\mathcal{G}$：对一般闭点对 $x_i,y_i\in X_i$ 存在 $G_i\in\mathcal{G}$ 与 $\Delta_i\sim_\mathbb{Q}-a_iK_{X_i}$ 使 $(X_i,\Delta_i)$ 在 $x_i$ 处 lc 且唯一非 klt 中心是 $G_i$，$(X_i,\Delta_i)$ 在 $y_i$ 处不 klt。$\dim G_i\ne 0$（由连通性原则）。设 $F_i$ 是 $G_i$ 的正规化，由 `constr-adjunction-non-klt-centre` 与 `t-subadjunction` 和 ACC for lc thresholds，存在 $\Theta_{F_i}\in\Phi(\Phi)$（$\Phi$ 是固定 DCC 集仅依赖 $d$）使 $(K_{X_i}+\Delta_i)|_{F_i}\sim_\mathbb{Q} K_{F_i}+\Theta_{F_i}+P_{F_i}$，$P_{F_i}$ 伪有效（把 $a_i$ 替换使 $P_{F_i}$ 大且有效）。
+
+`main.tex:6629-6641`（Step 5）取 $F_i'$ 为 $(F_i,\Delta_{F_i})$ 的 log 分辨，定义 $\Sigma_{F_i'}$：若 $w_i\le 0$ 取系数 $0$，否则取 $\min(w_i,1-\epsilon')$。则 $\Sigma_{F_i'}=\Delta_{F_i'}+E_{F_i'}-N_{F_i'}$（$E_{F_i'},N_{F_i'}$ 无公共分量，$E_{F_i'}$ exceptional/$F_i$，$N_{F_i'}$ 的分量系数 $>1-\epsilon'$，$N_{F_i'}\neq 0$），$(F_i',\Sigma_{F_i'})$ 是 $\epsilon'$-lc。
+
+`main.tex:6644-6667`（Step 6）取 $(F_i'',\Sigma_{F_i''})$ 是 $(F_i',\Sigma_{F_i'})$ over $F_i$ 的 log 极小模型，$K_{F_i''}+\Sigma_{F_i''}=K_{F_i''}+\Delta_{F_i''}+E_{F_i''}-N_{F_i''}\sim_\mathbb{Q} E_{F_i''}-N_{F_i''}/F_i$。由 negativity lemma，$E_{F_i''}=0$，故 $\Delta_{F_i''}=\Sigma_{F_i''}+N_{F_i''}\ge 0$。取 $L_{F_i''}\sim_\mathbb{Q}-(K_{F_i''}+\Delta_{F_i''})$ 使 $(F_i'',\Sigma_{F_i''}+L_{F_i''})$ $\epsilon'$-lc。跑 $K_{F_i''}+\Sigma_{F_i''}+L_{F_i''}$ 的 MMP 得 $\widetilde{F}_i\to T_i$ Mori fibre space。由 BAB 在维 $\le d-1$，一般纤维有界。
+
+`main.tex:6669-6686`（Step 7）由 `l-sub-bnd-on-gen-subvar`，写 $K_{F_i}+\Lambda_{F_i}=K_{X_i}|_{F_i}$，$(F_i,\Lambda_{F_i})$ sub-$\epsilon$-lc，$\Delta_{F_i}-\Lambda_{F_i}\ge \Theta_{F_i}-\Lambda_{F_i}\ge 0$。$K_{F_i''}+\Lambda_{F_i''}$ 拉回 $K_{F_i}+\Lambda_{F_i}$，则 $\Delta_{F_i''}-\Lambda_{F_i''}$ 是 $\Delta_{F_i}-\Lambda_{F_i}$ 拉回，
+
+$$\Delta_{F_i''}-\Lambda_{F_i''}\sim_\mathbb{Q}\Delta_i|_{F_i''}\sim_\mathbb{Q} a_is_iD_{F_i''}$$
+
+其中 $D_{F_i''}=D_i|_{F_i''}$。由 Step 6，$N_{\widetilde{F}_i}$ 在 $T_i$ 上 ample。取 $\widetilde{C}_i$ 为 ample over $T_i$ 的分量，$C_i''$ 是其在 $F_i''$ 上的双有理变换，则 $\widetilde{C}_i$ 是 $\Delta_{\widetilde{F}_i}-\Lambda_{\widetilde{F}_i}$ 的分量，系数 $>(\epsilon-\epsilon')$。
+
+`main.tex:6696-6722`（Step 8）把 $K_{X_i}+\Delta_i+s_i(1-a_i)D_i\sim_\mathbb{Q} 0$ 限制到一般纤维：
+
+$$K_{\widetilde{F}_i}+\Delta_{\widetilde{F}_i}+\frac{1-a_i}{a_i}(\Delta_{\widetilde{F}_i}-\Lambda_{\widetilde{F}_i})\sim_\mathbb{Q} 0.$$
+
+$\widetilde{C}_i$ 在 $\frac{1-a_i}{a_i}(\Delta_{\widetilde{F}_i}-\Lambda_{\widetilde{F}_i})$ 中的系数 $\ge\frac{(1-a_i)(\epsilon-\epsilon')}{a_i}\to\infty$。再由 `l-bnd-fam-intersection` 得矛盾。
+
+## 11 主结果的最终拼装
+
+`main.tex:6730-6789`（§10）把 §2–§9 的结果拼装成主定理。`main.tex:6737-6741`（`t-bnd-compl-usual-local`）由 `t-bnd-compl-usual` 在维 $d-1$ 与 `t-bnd-compl-usual-local` 在维 $d$ 推出。
+
+`main.tex:6743-6749`（`cor-bnd-index`）：shrinking $X$ 在 $V$ 的一般点附近，$(X,\Delta)$ klt 故 $X$ 在自身上 Fano 型，由 `t-bnd-compl-usual-local` 在维 $d$，$K_X+B$ 在 $v$ 附近有 $n$-补 $K_X+B^+$。$B^+=B$ 在 $v$ 附近故 $n(K_X+B)$ 在 $v$ 附近 Cartier。
+
+`main.tex:6751-6755`（`t-BAB-exc-usual`）由 `t-bnd-compl` 在维 $\le d-1$、`t-bnd-compl-usual-local` 在维 $d$ 与 `l-from-compl-to-BAB-exc-usual` 推出。
+
+`main.tex:6757-6761`（`t-BAB-exc`）由 `t-bnd-compl` 在维 $\le d-1$、`t-bnd-compl-usual-local` 在维 $d$ 与 `p-from-compl-to-BAB-exc` 推出。
+
+`main.tex:6764-6768`（`t-bnd-compl`）由 `t-bnd-compl-usual-local` 在维 $d$、`t-BAB-exc` 在维 $d$ 与 `p-BAB-exc-to-compl` 推出。
+
+`main.tex:6770-6773`（`t-bnd-compl-usual`）是 `t-bnd-compl` 在 $M=0$ 情形的特例。
+
+`main.tex:6776-6779`（`t-eff-non-van-fano`）由 `t-bnd-compl-usual` 推出。
+
+`main.tex:6782-6785`（`t-eff-bir-e-lc`）由 `t-eff-non-van-fano` 与 `p-eff-bir-delta-2` 推出。
+
+## 12 与本语料的接缝
+
+`main.tex:157-166` 的题名「Anti-pluricanonical systems on Fano varieties」对应 D307（`BirkarComplements`）与 D476（`BirkarComplements`）两稿。
+
+`main.tex:215-221`（`t-eff-non-van-fano`）是 `BirkarComplements` 的非消没部分：存在仅依赖 $d$ 的 $m$ 使 $|-mK_X|$ 非空且含 $M$ 使 $(X,\frac{1}{m}M)$ lc。`main.tex:231-235`（`t-eff-bir-e-lc`）是 `BirkarComplements` 的双有理性部分：存在仅依赖 $d$、$\epsilon$ 的 $m$ 使 $|-mK_X|$ 定义双有理映射。
+
+`main.tex:327-345`（`t-bnd-compl-usual`）是 `BirkarComplements` 引用的核心：在 $d$ 维 lc 对 $(X,B)$、$B\in\Phi(\mathfrak{R})$、$X$ Fano 型、$-(K_X+B)$ nef 时，存在仅依赖 $d$、$\mathfrak{R}$ 的 $n$ 使 $K_X+B$ 有 $n$-补 $K_X+B^+$ 且 $B^+\ge B$。
+
+`main.tex:429-446`（`t-bnd-compl`）是更广义的版本：广义极化对 $(X',B'+M')$、$pM$ b-Cartier 时存在仅依赖 $d$、$p$、$\mathfrak{R}$ 的 $n$ 使 $K_{X'}+B'+M'$ 有 $n$-补。`main.tex:457-461`（`t-BAB-exc`）是例外对的有界性，D307/D476 也常引用这条把例外对统一进有界族框架。
+
+`main.tex:263-274`（`t-BAB-good-boundary`）是另一条与 `BirkarComplements` 接合的有界性：$(X,B)$ $\epsilon$-lc 维 $d$、$B$ 大且 $K_X+B\sim_\mathbb{R} 0$、$B$ 系数 $\ge\delta$，则所有这样的 $X$ 构成有界族。这是 HX Theorem 1.3 的精细化。
+
+`main.tex:303-308`（`t-BAB-to-bnd-vol`）把 BAB 猜想降维：若 BAB 在 $d-1$ 成立则 $\vol(-K_X)$ 在 $d$ 维 $\epsilon$-lc 弱 Fano 簇上有界。`main.tex:284-287`（`conj-BAB`）是 Alexeev-Borisov-Borisov 猜想，由本论文与续作 B-BAB 完成。
+
+接缝记号：D307/D476 引述 `BirkarComplements` 时记 $X$ 为 $d$ 维 Fano 簇带 klt 奇点，$B$ 为有效 $\mathbb{Q}$-除子，$\Phi(\mathfrak{R})$ 为超标准集，$K_X+B$ 的 $n$-补按本文 §3 定义。本论文与配套续作 B-BAB 共同完成 BAB 猜想，D307/D476 在引用本论文时通常同时引用 B-BAB。

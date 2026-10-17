@@ -1,0 +1,35 @@
+{
+  "paper": "Failure-of-finite-assembly-for-a-chromatic-overlap-at-the-prime-three-September-25-2026",
+  "ok": true,
+  "typ_lines": 1650,
+  "included_pdf_pages": 0,
+  "formulas": 1550,
+  "math_failed": 0,
+  "labels": 207,
+  "equations": 7,
+  "theorems": 2,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 3,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "1550",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [
+    "\\newcommandnewcommand"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\Failure-of-finite-assembly-for-a-chromatic-overlap-at-the-prime-three-September-25-2026\\main.typ:500:12\n    │\n500 │   For $V lt.tri U$ open, $L^V \\/ L^U$ is a finite étale $U \\/ V$-torsor. Perfection commutes with finite étale base change. After completion it remains the finite étale torsor\n    │             ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 1,
+  "source": "E:\\math\\_work\\flat\\Failure-of-finite-assembly-for-a-chromatic-overlap-at-the-prime-three-September-25-2026.tex"
+}

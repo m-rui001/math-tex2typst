@@ -1,0 +1,41 @@
+{
+  "paper": "Disk-transfer-representations-and-confined-bridge-mass-September-26-2026",
+  "ok": true,
+  "typ_lines": 2172,
+  "included_pdf_pages": 0,
+  "formulas": 2091,
+  "math_failed": 0,
+  "labels": 201,
+  "equations": 2,
+  "theorems": 1,
+  "figures": 4,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 4
+  },
+  "samples": {
+    "formulas": "2091",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark"
+  ],
+  "macros_skipped": [
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand",
+    "\\let\\OriginalMapsto",
+    "\\renewcommandrenewcommand",
+    "\\let\\OriginalLongrightarrow",
+    "\\renewcommandrenewcommand",
+    "\\let\\OriginalUpbracefill",
+    "\\renewcommandrenewcommand"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Disk-transfer-representations-and-confined-bridge-mass-September-26-2026.tex"
+}

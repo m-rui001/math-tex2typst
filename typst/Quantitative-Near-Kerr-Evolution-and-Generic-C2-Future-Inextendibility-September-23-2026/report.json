@@ -1,0 +1,34 @@
+{
+  "paper": "Quantitative-Near-Kerr-Evolution-and-Generic-C2-Future-Inextendibility-September-23-2026",
+  "ok": true,
+  "typ_lines": 3733,
+  "included_pdf_pages": 0,
+  "formulas": 3250,
+  "math_failed": 0,
+  "labels": 510,
+  "equations": 18,
+  "theorems": 77,
+  "figures": 1,
+  "tables": 3,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "3250",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "aliascnt"
+  ],
+  "macros_skipped": [
+    "\\renewcommand\\bibfont"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Quantitative-Near-Kerr-Evolution-and-Generic-C2-Future-Inextendibility-September-23-2026.tex"
+}

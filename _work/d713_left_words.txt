@@ -1,0 +1,5 @@
+primary|lar.tex:204：若其局部基础理想关于 $\mathfrak m_x$ -primary，则 $n$ 枚一般成员在局部交重数至少 $(l\tau)^
+primary|基础轨迹的一支，故其基础理想在那里关于极大理想 $\mathfrak m$ 为 primary，且含在 $\mathfrak m^{\lceil l\de
+primary|数典范且 $S$ 是那里的对数典范中心：计算阈值的赋值中心其基础理想阶为正，而 primary 条件使该中心在定域之后恰为 $S$。数值伴随那一引理取 $
+field|theta(H_p)$；因 $p$ 在 $p'$ 上代数，它们在固定的 overfield 里的代数闭包相同，故 $K_p=K_{p'}$；像的方程子
+invert|满性，且它靠开性得到，靠不上任何统一声称。其后把 $r$ 与数据里有限多个分母都invert…（写作"全部反演为可逆元"），frobenius.tex:

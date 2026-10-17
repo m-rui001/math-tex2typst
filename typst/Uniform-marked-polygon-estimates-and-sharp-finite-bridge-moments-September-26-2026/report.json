@@ -1,0 +1,34 @@
+{
+  "paper": "Uniform-marked-polygon-estimates-and-sharp-finite-bridge-moments-September-26-2026",
+  "ok": true,
+  "typ_lines": 2425,
+  "included_pdf_pages": 0,
+  "formulas": 2898,
+  "math_failed": 0,
+  "labels": 211,
+  "equations": 5,
+  "theorems": 2,
+  "figures": 8,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:auxlemma": 7,
+    "unhandled_div_class:auxproposition": 8,
+    "cetz_converted": 8
+  },
+  "samples": {
+    "formulas": "2898",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Uniform-marked-polygon-estimates-and-sharp-finite-bridge-moments-September-26-2026.tex"
+}

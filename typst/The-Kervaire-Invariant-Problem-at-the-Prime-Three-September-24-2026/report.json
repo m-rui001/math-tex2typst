@@ -1,0 +1,31 @@
+{
+  "paper": "The-Kervaire-Invariant-Problem-at-the-Prime-Three-September-24-2026",
+  "ok": true,
+  "typ_lines": 3230,
+  "included_pdf_pages": 0,
+  "formulas": 2279,
+  "math_failed": 1,
+  "labels": 303,
+  "equations": 34,
+  "theorems": 7,
+  "figures": 1,
+  "tables": 9,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 2,
+    "unhandled_div_class:samepage": 1
+  },
+  "samples": {
+    "formulas": "2279",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-Kervaire-Invariant-Problem-at-the-Prime-Three-September-24-2026.tex"
+}

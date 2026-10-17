@@ -1,0 +1,16 @@
+== D90 D90-固定指数的生产链-Yau节点上界幂律反例取证笔记.md
+   verified-dirs=['Power-law-violations-of-Yaus-nodal-upper-bound-September-23-20']
+   raw-names-seen=['Power-law-violations-of-Yaus-nodal-upper-bou', 'Smooth-counterexamples-to-Yaus-nodal-upper-b']
+   ctx[素材]: 素材地图 /  / ### 0.1 素材边界 /  / 正文素材只从 tex 取。我本人实测布局如下（字节数为 `wc -c` 实测）： /  / - `build/main.tex` 3,516 B：`\documentclass[11pt]{article}`，`\pdfauthor={OpenAI}`，`\title{Power-law violations of\\Yau's nodal upper bound}
+== D92 D92-Lp次多项式降维-重尾矩台账与截断ramp.md
+   verified-dirs=['Subpolynomial-dimension-reduction-in-Lp-September-23-2026\\']
+   raw-names-seen=['Subpolynomial-dimension-reduction-in-Lp-Sept']
+   ctx[素材]: 素材只来自 `build/paper.tex`;PDF 一个字没碰;Lean 侧只看登记文件与本模块目录。所有行号都是我用 Grep/Read 实测的,不是转抄。 /  / ## §0 paper.tex 布局与条目地图实测 /  / ### 0.1 目录与文件 /  / 实测目录列表:`README.md`、`build`、`paper.pdf`、`typst`。正文唯一 tex 是 `build/paper.tex`
+== D86 D86-循环Hadamard猜想的机器与笔头-特征交替积与二进制残迹.md
+   verified-dirs=['The-circulant-Hadamard-conjecture-September-23-2026\\']
+   raw-names-seen=['The-circulant-Hadamard-conjecture-September-']
+   ctx[素材]: 素材只从这些 tex 读, 仓库 PDF 加密, pdftotext 一次都没用, 也不打算用。 /  / 登记面: `E:\math\lean\formalization.yaml` 第 1010-1012 行把这篇挂在 `ComparatorChallenges/CirculantHadamard.json` 上, 声明 `OAI.CirculantHadamard.exists_iff_order_
+== D12 D12-Barnette猜想-三次二部平面图Hamilton圈.md
+   verified-dirs=['Paired-states-and-Hamiltonian-cycles-in-cubic-bipartite-planar']
+   raw-names-seen=['Paired-states-and-Hamiltonian-cycles-in-cubi']
+   ctx[素材]: 素材来源：E:\math\研究笔记\素材\Barnette-素材.md；论文 TeX 837 行；Lean 31 文件 8936 行。）* /  /  / ## 九、台账补表 /  / 先交代口径差异，免得和旧稿混读：旧稿 6.4 节那张表的栏目是 论文 / Lean / 差异性质，它记的是两条流水线在形状上的错位，不逐条落到"某个数被谁吃掉"。本节按符号立项，一行一个量，出处一律给 `文件名:行号`（`paper.

@@ -1,0 +1,39 @@
+
+== fused-identifier: 13 sites / 6 papers ==
+   Eventual-Categoricity-for-Abstract-Elementary- W_s0,f_s0                          $W_s\in\mathcal C_m$
+   Eventual-Categoricity-for-Abstract-Elementary- W_s1,f_s1                          $W_s\in\mathcal C_m$
+   Eventual-Categoricity-for-Abstract-Elementary- partial  W_s0                      $\partial J$
+   Eventual-Categoricity-for-Abstract-Elementary- partial  W_s1                      $\partial J$
+   Eventual-Categoricity-for-Abstract-Elementary- q_s0                               $q_s$
+   Eventual-Categoricity-for-Abstract-Elementary- q_s1                               $q_s$
+   Exact-Derandomization-of-Logarithmic-Space-L-e 1^n0                               $1^n0x$
+   Localization-costs-and-information-growth-for- eta  =r_A2^(-j)                    \(\Theta(d)\)
+   Smooth-Anisotropic-Uniqueness-in-the-Calderon-    T_y1=1,    T_"yx"^i=y^i.        $\displaystyle
+       \|w\|_{O_i}\leq C\|w\|_{S_i}^{\gamma_i}
+        
+   The-complexity-of-identifying-a-graph-by-Weisf l1                                 \(l1\)
+   The-complexity-of-identifying-a-graph-by-Weisf l2                                 \(l2\)
+   The-complexity-of-identifying-a-graph-by-Weisf l3                                 \(l3\)
+   The-hypercube-Ramsey-number-has-linear-order-S N lt.eq  n2^n                      
+
+== hash-or-dollar: 10 sites / 5 papers ==
+   A-nondegenerate-counterexample-to-the-Morse-nu \# "Fix" ( phi_H^1)= chi  (M)+128  
+   A-nondegenerate-counterexample-to-the-Morse-nu "Morse" (M)-\# "Fix" ( phi_H^1)    
+   A-two-dimensional-area-law-from-a-global-spect A_h\#_p B_h                        $A_{h,g}$
+   Edit-Distance-in-l1-Matching-Bounds-up-to-Cons \#                                 $\#^B$
+   Edit-Distance-in-l1-Matching-Bounds-up-to-Cons \#^q                               $\#^q$
+   Edit-Distance-in-l1-Matching-Bounds-up-to-Cons \#                                 $\#^B$
+   Localization-costs-and-information-growth-for- \# "net"  lt.eq  (1+4 dot.op  2^j) 
+   Sharp-integral-fillings-in-CAT(0)-spaces-Septe \{t\} times  A arrow.r.bar  (F_t)_ 
+   Sharp-integral-fillings-in-CAT(0)-spaces-Septe B_h=(F_h)_\#A                      $\partial B_h=0$
+   Sharp-integral-fillings-in-CAT(0)-spaces-Septe D_h=F_\#([0,h] times  A)           $\partial D_h=B_h-A$
+
+== comment: 4 sites / 3 papers ==
+   Pure-Point-Spectrum-for-the-Two-Dimensional-An L_*/3+O(b_m)                       $L_*$
+   Pure-Point-Spectrum-for-the-Two-Dimensional-An L_*/2                              $L_*$
+   Relative-independence-of-the-separable-quotien W=E^*/X_0                          $W=E^*/Y$
+   Staggered-extraction-for-exact-matrix-multipli 6 dot.op  C_*/6=C_*                
+
+== slash-edge: 2 sites / 1 papers ==
+   The-Kakeya-maximal-conjecture-in-three-dimensi /b                                 $\log_N(Na/b)\in[0,1]$
+   The-Kakeya-maximal-conjecture-in-three-dimensi /b                                 $\log_N(Na/b)\in[0,1]$

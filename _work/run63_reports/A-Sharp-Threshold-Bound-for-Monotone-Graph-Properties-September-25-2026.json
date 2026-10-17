@@ -1,0 +1,30 @@
+{
+  "paper": "A-Sharp-Threshold-Bound-for-Monotone-Graph-Properties-September-25-2026",
+  "ok": true,
+  "typ_lines": 278,
+  "included_pdf_pages": 0,
+  "formulas": 231,
+  "math_failed": 0,
+  "labels": 29,
+  "equations": 2,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1,
+    "unhandled_div_class:picture": 1
+  },
+  "samples": {
+    "formulas": "231"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-Sharp-Threshold-Bound-for-Monotone-Graph-Properties-September-25-2026.tex"
+}

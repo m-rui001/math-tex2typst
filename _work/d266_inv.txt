@@ -1,0 +1,20 @@
+### D266 file=D266-几乎线性编辑距离近似方案的反推.md bytes=77189 lines=460 heads=23
+dir=preprints/An-Almost-Linear-Approximation-Scheme-for-Edit-Distance-September-24-2026/build files=13 total=144144 uncited=13409
+     24292 sections/10-work.tex cited
+     17853 sections/05-bands.tex cited
+     16173 sections/07-regret.tex cited
+     16055 sections/03-seed.tex cited
+     13409 sections/06-comparison.tex UNCITED
+     11988 sections/01-introduction.tex cited
+     11641 sections/04-cones.tex cited
+      9987 sections/02-geometry.tex cited
+      9822 sections/09-numerics.tex cited
+      8407 sections/08-accuracy.tex cited
+      1919 figures/connection-cost.tex cited
+      1461 macros.tex cited
+      1137 paper.tex cited
+-- tail headings --
+    362 ## §19 勘误
+    372 ## §20 自检
+    388 ## §21 台账
+    451 ## §22 追加勘误

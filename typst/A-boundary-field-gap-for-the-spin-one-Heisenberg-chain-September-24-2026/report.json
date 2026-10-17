@@ -1,0 +1,34 @@
+{
+  "paper": "A-boundary-field-gap-for-the-spin-one-Heisenberg-chain-September-24-2026",
+  "ok": true,
+  "typ_lines": 1170,
+  "included_pdf_pages": 0,
+  "formulas": 701,
+  "math_failed": 0,
+  "labels": 149,
+  "equations": 18,
+  "theorems": 2,
+  "figures": 1,
+  "tables": 4,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "701",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl",
+    "flafter",
+    "bookmark"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-boundary-field-gap-for-the-spin-one-Heisenberg-chain-September-24-2026.tex"
+}

@@ -1,0 +1,11 @@
+snapshot 1
+== tests ==
+----------------------------------------------------------------------
+Ran 20 tests in 2.183s
+
+OK
+== positioned probe ==
+refused  Deterministic-Polynomial-Factorization-over-Prime-Fi
+refused  Hellinger-contraction-with-arbitrary-Boolean-output-
+two-value positioning: built 0 / refused 2
+== batch ==

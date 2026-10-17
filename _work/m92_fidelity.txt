@@ -1,0 +1,72 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+== hash-script   TeX $F_\#A$
+   CONTROL           F#A          [0.0, 0.49]
+   esc       ==   F#A          [-1.1, 0.56]   max|dgap| 1.101
+   str       ==   F#A          [-1.1, 0.56]   max|dgap| 1.101
+   sym       ==   F#A          [-1.1, 0.56]   max|dgap| 1.101
+
+== hash-plain   TeX $\#A$
+   CONTROL           #A           [0.0]
+   esc       ==   #A           [-0.0]   max|dgap| 0.000
+   str       ==   #A           [0.0]   max|dgap| 0.000
+   sym       ==   #A           [-0.0]   max|dgap| 0.000
+
+== hash-sup   TeX $\#^q$
+   CONTROL           #q           [0.01]
+   esc       ==   #q           [-0.0]   max|dgap| 0.011
+   str       ==   #q           [-0.0]   max|dgap| 0.011
+   sym       ==   #q           [-0.0]   max|dgap| 0.011
+
+== hash-connect   TeX $A\#_p B$
+   CONTROL           A#pB         [0.0, 0.0, 0.5]
+   esc       ==   A#pB         [0.0, -0.0, 0.56]   max|dgap| 0.063
+   str       ==   A#pB         [0.0, -0.0, 0.56]   max|dgap| 0.063
+   sym       ==   A#pB         [0.0, -0.0, 0.56]   max|dgap| 0.063
+
+== fused-script   TeX $W_{s0}$
+   CONTROL           Ws0          [0.01, 0.0]
+   space     ==   Ws0          [-1.0, 0.0]   max|dgap| 1.006
+   str0      ==   Ws0          [-1.0, 0.0]   max|dgap| 1.006
+   grp       FAILED   ['\\\\?\\E:\\math\\_work\\_m92fid\\fused-script-grp.typ:2:24: error: unknown variable: s0']
+
+== fused-top   TeX $l1$
+   CONTROL           l1           [0.2]
+   space     ==   l1           [0.0]   max|dgap| 0.199
+   str1      ==   l1           [0.0]   max|dgap| 0.199
+
+== fused-power   TeX $n2^n$
+   CONTROL           n2n          [0.0, 0.0]
+   space     ==   n2n          [0.0, 0.0]   max|dgap| 0.001
+   str2      ==   n2n          [0.0, 0.0]   max|dgap| 0.001
+   grp       !=   n(2)n        [0.0, -0.0, 0.0, 0.0]
+
+== fused-digitrun   TeX $x_{ab12}$
+   CONTROL           xab12        [-0.0, 0.0, 0.0, 0.0]
+   space     ==   xab12        [0.0, -0.0, 0.0, 0.0]   max|dgap| 0.004
+   mix       ==   xab12        [0.0, -0.0, 0.0, 0.0]   max|dgap| 0.004
+
+== star-slash   TeX $L_*/3$
+   CONTROL           L∗/3         [-0.0, 0.5, 0.0]
+   space     !=   L∗           [-0.0] | 3            []
+   sym       ==   L∗/3         [0.0, 0.56, 0.0]   max|dgap| 0.060
+   str       ==   L∗/3         [0.0, 0.56, 0.0]   max|dgap| 0.060
+   div       FAILED   ['\\\\?\\E:\\math\\_work\\_m92fid\\star-slash-div.typ:2:34: error: unknown symbol modifier']
+
+== star-slash-half   TeX $L_*/2$
+   CONTROL           L∗/2         [-0.01, 0.5, 0.0]
+   space     !=   L∗           [0.0] | 2            []
+   sym       ==   L∗/2         [0.0, 0.56, 0.0]   max|dgap| 0.060
+   str       ==   L∗/2         [0.0, 0.56, 0.0]   max|dgap| 0.060
+
+== inline-slash   TeX $E/2$
+   CONTROL           E/2          [0.58, 0.0]
+   tight     !=   E            [] | 2            []
+   space     !=   E            [] | 2            []
+   sym       ==   E/2          [0.54, 0.0]   max|dgap| 0.038
+   str       ==   E/2          [0.54, 0.0]   max|dgap| 0.038
+   div       FAILED   ['\\\\?\\E:\\math\\_work\\_m92fid\\inline-slash-div.typ:2:32: error: unknown symbol modifier']
+
+== script-baseline   TeX $W_{s}$
+   CONTROL           Ws           [0.0]
+   paren     ==   Ws           [-1.0]   max|dgap| 1.004

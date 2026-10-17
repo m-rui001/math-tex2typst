@@ -1,0 +1,30 @@
+{
+  "paper": "Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September-26-2026",
+  "ok": true,
+  "typ_lines": 1792,
+  "included_pdf_pages": 0,
+  "formulas": 1558,
+  "math_failed": 0,
+  "labels": 145,
+  "equations": 41,
+  "theorems": 3,
+  "figures": 10,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 10
+  },
+  "samples": {
+    "formulas": "1558",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September-26-2026.tex"
+}

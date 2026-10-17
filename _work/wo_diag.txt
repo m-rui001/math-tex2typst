@@ -1,0 +1,569 @@
+=== quality counters ===
+ALREADY-DONE|bad-len-ge6 = 527
+ALREADY-DONE|bad-short = 8
+ALREADY-DONE|good-body-count-1-3 = 534
+ALREADY-DONE|good-body-count-4-15 = 1
+ALREADY-DONE|good-len-ge6 = 485
+ALREADY-DONE|good-short = 12
+ALREADY-DONE|has-bad = 535
+ALREADY-DONE|has-good = 497
+CONFLICT-RISK|bad-len-ge6 = 3
+CONFLICT-RISK|bad-short = 0
+CONFLICT-RISK|good-body-count-1-3 = 3
+CONFLICT-RISK|good-len-ge6 = 3
+CONFLICT-RISK|good-short = 0
+CONFLICT-RISK|has-bad = 3
+CONFLICT-RISK|has-good = 3
+EXEC|bad-len-ge6 = 60
+EXEC|bad-short = 4
+EXEC|good-body-count-1-3 = 56
+EXEC|good-body-count-4-15 = 8
+EXEC|good-len-ge6 = 49
+EXEC|good-short = 5
+EXEC|has-bad = 64
+EXEC|has-good = 54
+NEEDS-NEW-LINE|bad-len-ge6 = 24
+NEEDS-NEW-LINE|bad-short = 0
+NEEDS-NEW-LINE|good-body-count-1-3 = 20
+NEEDS-NEW-LINE|good-body-count-4-15 = 4
+NEEDS-NEW-LINE|good-len-ge6 = 18
+NEEDS-NEW-LINE|good-short = 0
+NEEDS-NEW-LINE|has-bad = 24
+NEEDS-NEW-LINE|has-good = 18
+STALE-COORD|good-len-ge6 = 0
+STALE-COORD|good-short = 2
+STALE-COORD|has-bad = 0
+STALE-COORD|has-good = 2
+
+=== 12 ALREADY-DONE samples ===
+---- D08-L1126-I01 | D08-Mezard-Parisi公式.md | fam=btick,english,typo
+  FIX: 改回正确反引号→正确反引号 / 删掉一个括号内标签形态，§2→一个括号内标签形态，§21 插入装置句删掉一个未译英文量名
+   L='改回正确反引号' R='正确反引号'
+    bad='正确反引号'
+    good='正确反引号'
+    occ=[[1128, 1]] body=[] decl=[[1128, 1]] good_body=[[1128, 1]] delta=0 parity=[]
+   L='删掉一个括号内标签形态，§2' R='一个括号内标签形态，§21 插入装置句删掉一个未译英文量名'
+    bad='删掉一个括号内标签形态，§21'
+    good='一个括号内标签形态，§21 插入装置句删掉一个未译英文量名'
+    occ=[[1128, 1]] body=[] decl=[[1128, 1]] good_body=[[1128, 1]] delta=40 parity=[]
+---- D10-L1062-I02 | D10-自由群因子同构.md | fam=count,banstring
+  FIX: 记作旧稿遗留，实测不成立：全→旧稿遗留，实测不成立：全文该字符的命中行共七行，全部落在本轮新节，按
+   L='记作旧稿遗留，实测不成立：全' R='旧稿遗留，实测不成立：全文该字符的命中行共七行，全部落在本轮新节，按'
+    bad='旧稿遗留，实测不成立：全文该字符的命中行共七行'
+    good='旧稿遗留，实测不成立：全文该字符的命中行共七行，全部落在本轮新节，按行号为'
+    occ=[[1066, 1]] body=[] decl=[[1066, 1]] good_body=[[1066, 1]] delta=42 parity=[]
+---- D100-L1586-I06 | D100-准Riemann假设：Re-s大于八分之七的无零点半平面与Dirichlet-L函数显式公式路线的反推笔记.md | fam=btick,count,banstring,ordermove,typo
+  FIX: 改写为“源头是 tex 本身→“源头是 tex 本身”
+   L='改写为“源头是 tex 本身' R='“源头是 tex 本身”'
+    bad='“源头是 tex 本身”'
+    good='“源头是 tex 本身”'
+    occ=[[1598, 1]] body=[] decl=[[1598, 1]] good_body=[[1598, 1]] delta=0 parity=[]
+---- D103-L789-I06 | D103-Landau-Siegel零点的均匀排除：加权环面jet与绝对零点间隙的反推笔记.md | fam=count,banstring
+  FIX: 改写为"屏障因此属于被绕过的→"屏障因此属于被绕过的那一类，谈不上被突破"后得 0
+   L='改写为"屏障因此属于被绕过的' R='"屏障因此属于被绕过的那一类，谈不上被突破"后得 0'
+    bad='"屏障因此属于被绕过的那一类，谈不上被突破"'
+    good='"屏障因此属于被绕过的那一类，谈不上被突破"后得 0'
+    occ=[[801, 1]] body=[] decl=[[801, 1]] good_body=[[801, 1]] delta=8 parity=[]
+---- D107-L2990-I11 | D107-唯一博弈定理：从约束图与可判定性到定理11机器化的反推笔记.md | fam=btick,english,table,typo
+  FIX: 改回、第 2940 行那句含→第 2940 行那句含混的自注改写为说明句、第 2469 行一枚未译 / 换成中文、第 2908 行的→中文、第 2908 行的节号写法统一成带 `§` 的形式
+   L='改回、第 2940 行那句含' R='第 2940 行那句含混的自注改写为说明句、第 2469 行一枚未译'
+    bad='、第 2940 行那句含混的自注改写为说明句'
+    good='第 2940 行那句含混的自注改写为说明句、第 2469 行一枚未译英文词'
+    occ=[[3004, 1]] body=[] decl=[[3004, 1]] good_body=[[3004, 1]] delta=33 parity=[]
+   L='换成中文、第 2908 行的' R='中文、第 2908 行的节号写法统一成带 `§` 的形式'
+    bad='中文、第 2908 行的节号写法统一成带'
+    good='中文、第 2908 行的节号写法统一成带 `§` 的形式'
+    occ=[[3004, 1]] body=[] decl=[[3004, 1]] good_body=[[3004, 1]] delta=15 parity=[]
+---- D12-L522-I16 | D12-Barnette猜想-三次二部平面图Hamilton圈.md | fam=table
+  FIX: 换成正式排版，同时把每一步的→正式排版，同时把每一步的出处钉到 `paper.tex` 行号，后面
+   L='换成正式排版，同时把每一步的' R='正式排版，同时把每一步的出处钉到 `paper.tex` 行号，后面'
+    bad='正式排版，同时把每一步的出处钉到'
+    good='正式排版，同时把每一步的出处钉到 `paper.tex` 行号，后面台账表就沿用这套记法'
+    occ=[[556, 1]] body=[] decl=[[556, 1]] good_body=[[556, 1]] delta=58 parity=[]
+---- D12-L522-I22 | D12-Barnette猜想-三次二部平面图Hamilton圈.md | fam=macro,count
+  FIX: 写法是：$P$ 为森林且 $→$P$ 为森林且 $\lvert P\rvert=k$ $\impl
+   L='写法是：$P$ 为森林且 $' R='$P$ 为森林且 $\\lvert P\\rvert=k$ $\\impl'
+    bad='写法是：$P$ 为森林且 $\\lvert'
+    good='$P$ 为森林且 $\\lvert P\\rvert=k$ $\\implies$'
+    occ=[[564, 1]] body=[] decl=[[564, 1]] good_body=[[564, 1]] delta=10 parity=[['dollar', 564]]
+---- D125-L576-I01 | D125-RCD空间沿每条测地线的弱Hessian界：漂移与曲率改值的反推笔记.md | fam=macro,banstring,table
+  FIX: 改为逗号与 $\lVert\→逗号与 $\lVert\cdot\rVert$ 写法）
+   L='改为逗号与 $\\lVert\\' R='逗号与 $\\lVert\\cdot\\rVert$ 写法）'
+    bad='逗号与 $\\lVert\\cdot\\rVert'
+    good='逗号与 $\\lVert\\cdot\\rVert$ 写法）'
+    occ=[[578, 1]] body=[] decl=[[578, 1]] good_body=[[578, 1]] delta=11 parity=[['dollar', 578]]
+---- D129-L418-I05 | D129-弱钉住平面距离定理：层级、方差与无界矛盾的反推笔记.md | fam=macro,anchor,count,ordermove,table
+  FIX: 改为独立名称以恢复连续编号，→独立名称以恢复连续编号，正文既有内容一律只做追加、未删除也未回滚
+   L='改为独立名称以恢复连续编号，' R='独立名称以恢复连续编号，正文既有内容一律只做追加、未删除也未回滚'
+    bad='独立名称以恢复连续编号，正文既有内容一律只做追加'
+    good='独立名称以恢复连续编号，正文既有内容一律只做追加、未删除也未回滚'
+    occ=[[428, 1]] body=[] decl=[[428, 1]] good_body=[[428, 1]] delta=24 parity=[]
+---- D13-L307-I26 | D13-有界树宽图的L1嵌入.md | fam=other
+  FIX: 应为"经过 Lee-Sidi→"经过 Lee-Sidiropoulos"，指 dominating
+   L='应为"经过 Lee-Sidi' R='"经过 Lee-Sidiropoulos"，指 dominating'
+    bad='"经过 Lee-Sidiropoulos"'
+    good='"经过 Lee-Sidiropoulos"，指 dominating'
+    occ=[[361, 1]] body=[] decl=[[361, 1]] good_body=[[361, 1]] delta=17 parity=[]
+---- D13-L307-I27 | D13-有界树宽图的L1嵌入.md | fam=other
+  FIX: 应为"阶梯状并联度量"，对应→"阶梯状并联度量"，对应 GNRS 的 series-paralle
+   L='应为"阶梯状并联度量"，对应' R='"阶梯状并联度量"，对应 GNRS 的 series-paralle'
+    bad='"阶梯状并联度量"，对应'
+    good='"阶梯状并联度量"，对应 GNRS 的 series-parallel'
+    occ=[[362, 1]] body=[] decl=[[362, 1]] good_body=[[362, 1]] delta=25 parity=[]
+---- D13-L499-I22 | D13-有界树宽图的L1嵌入.md | fam=macro
+  FIX: 统一成同一条引理实例的保守写→同一条引理实例的保守写法
+   L='统一成同一条引理实例的保守写' R='同一条引理实例的保守写法'
+    bad='统一成同一条引理实例的保守写法'
+    good='同一条引理实例的保守写法'
+    occ=[[549, 1]] body=[] decl=[[549, 1]] good_body=[[549, 1]] delta=-9 parity=[]
+
+=== all EXEC rows ===
+---- D04-L361-I03 | D04-乘性函数二点关联.md | fam=anchor,ordermove,table
+  FIX: 搬到第 $30$ 节末段与第→第 $30$ 节末段与第 $34$ 节题记之间
+    bad='搬到第 $30$ 节末段与第'
+    good='第 $30$ 节末段与第 $34$ 节题记之间'
+    body=[[483, 1]] decl=[[367, 1]] good_body=[[367, 1], [483, 1]] delta=15 parity=[]
+---- D04-L475-I08 | D04-乘性函数二点关联.md | fam=count,table
+  FIX: 搬到第 $30$ 节末段与第→第 $30$ 节末段与第 $34$ 节题记之间，那一步归本体侧，我不
+    bad='搬到第 $30$ 节末段与第'
+    good='第 $30$ 节末段与第 $34$ 节题记之间，那一步归本体侧，我不动'
+    body=[[367, 1]] decl=[[483, 1]] good_body=[[483, 1]] delta=51 parity=[]
+---- D147-L601-I01 | D147-自反Banach空间中非扩张映射的不动点：锚点集与候选树的反推笔记.md | fam=btick,macro,typo
+  FIX: 应读作 03-tree.te→03-tree.tex 的 206 到 238 段
+    bad='03-tree.tex'
+    good='03-tree.tex 的 206 到 238 段'
+    body=[[7, 1], [67, 2], [69, 4], [85, 4], [151, 2], [171, 1], [187, 1], [205, 1], [297, 1], [301, 1], [305, 1], [307, 4], [313, 1], [317, 1], [321, 2], [323, 2], [331, 1], [335, 1], [339, 4], [347, 1], [351, 1], [355, 4], [363, 1], [367, 1], [371, 2], [373, 2], [381, 1], [385, 1], [389, 6], [397, 2], [403, 1], [407, 3], [415, 1], [419, 2], [425, 9], [427, 4], [429, 2], [593, 2], [595, 2], [628, 1], [629, 1], [630, 1], [631, 1], [633, 1], [634, 1]] decl=[[603, 3]] good_body=[[603, 1]] delta=20 parity=[]
+---- D173-L304-I06 | D173-路由密度与表示压缩-Thorp扫掠.md | fam=typo
+  FIX: 应为 01-prelimin→01-preliminaries.tex:53 到 01-preliminarie / 应为 01-prelimin→01-preliminaries.tex:53 到 01-preli
+    bad='01-preliminaries'
+    good='01-preliminaries.tex:53 到 01-preliminaries.tex:55（Section'
+    body=[[19, 1], [21, 1], [31, 2], [35, 4], [39, 10], [43, 3], [45, 3], [47, 3], [49, 12], [51, 6], [185, 1], [186, 1], [187, 1], [188, 1], [189, 1], [190, 2], [191, 1], [192, 1], [193, 1], [282, 1], [286, 1]] decl=[[308, 2], [316, 5]] good_body=[[316, 1]] delta=45 parity=[]
+    bad='01-preliminaries'
+    good='01-preliminaries.tex:53 到 01-preliminaries.tex:55（Section'
+    body=[[19, 1], [21, 1], [31, 2], [35, 4], [39, 10], [43, 3], [45, 3], [47, 3], [49, 12], [51, 6], [185, 1], [186, 1], [187, 1], [188, 1], [189, 1], [190, 2], [191, 1], [192, 1], [193, 1], [282, 1], [286, 1]] decl=[[308, 2], [316, 5]] good_body=[[316, 1]] delta=45 parity=[]
+---- D190-L554-I02 | D190-树加权平面地图随机游走的线性时钟研究笔记.md | fam=macro
+  FIX: 正确写法是 $Q_h^T=\→$Q_h^T=\operatorname{Law}((B^h_t)_
+    bad='$Q_h^T=\\operatorname{Law}((B^t_t)\\dots)$'
+    good='$Q_h^T=\\operatorname{Law}((B^h_t)_{0\\le t\\le T}\\mid h)$'
+    body=[[48, 1]] decl=[[558, 1]] good_body=[[558, 1]] delta=15 parity=[]
+---- D194-L420-I13 | D194-同余格表示问题的否定解答：一条被格形状逼出来的群论路线.md | fam=other
+  FIX: 改为 `framework.→`framework.tex:163--194` / 改为 `packets.te→`packets.tex:383--590`
+    bad='`framework.tex`'
+    good='`framework.tex:163--194` 之前`'
+    body=[[80, 1], [416, 1]] decl=[] good_body=[[441, 1]] delta=17 parity=[['btick', 80], ['btick', 416]]
+    bad='`packets.tex:13--21`'
+    good=None
+    body=[[227, 1]] decl=[] good_body=[[241, 1], [402, 1], [442, 2]] delta=2 parity=[]
+---- D198-L285-I03 | D198-单调图性质尖锐阈值猜想的显式宽度界.md | fam=macro,typo
+  FIX: 应读作 $k\asymp\s→$k\asymp\sigma\log m$ 量级记号,论证不依赖该符
+    bad='$k\\asymp\\sigma\\log m$'
+    good='$k\\asymp\\sigma\\log m$ 量级记号,论证不依赖该符'
+    body=[[165, 1]] decl=[[289, 1]] good_body=[[289, 1]] delta=35 parity=[]
+---- D207-L235-I01 | D207-Hadwiger猜想反例的二进制构造与四洞强制.md | fam=macro,table
+  FIX: 应为 $23m/150>2/→$23m/150>2/3$ 即 $m>100/23\approx4.
+    bad='$23m/150>2/3$'
+    good='$23m/150>2/3$ 即 $m>100/23\\approx4.35$'
+    body=[[233, 1]] decl=[[237, 1]] good_body=[[237, 1]] delta=26 parity=[]
+---- D216-L798-I05 | D216-线性次高斯与维度无关对数Sobolev不等式的反证路线.md | fam=macro
+  FIX: 应读作 build/sect→build/sections/07-observations.tex:940，即 / 应读作 build/sect→build/sections/07-observations.tex
+    bad='build/sections/01-introduction.tex'
+    good=None
+    body=[[12, 1], [32, 1], [854, 1], [855, 1], [856, 1], [857, 1], [858, 1], [859, 1], [860, 1], [861, 1], [862, 1], [863, 1], [864, 1], [865, 1]] decl=[] good_body=[[812, 1]] delta=10 parity=[]
+    bad='build/sections/01-introduction.tex'
+    good=None
+    body=[[12, 1], [32, 1], [854, 1], [855, 1], [856, 1], [857, 1], [858, 1], [859, 1], [860, 1], [861, 1], [862, 1], [863, 1], [864, 1], [865, 1]] decl=[] good_body=[[15, 1], [812, 1], [827, 1], [830, 1], [906, 1], [907, 1], [908, 1], [909, 1], [910, 1], [911, 1], [912, 1], [913, 1], [914, 1], [915, 1], [916, 1]] delta=0 parity=[]
+---- D220-L659-I04 | D220-有限熵下微观态与非物质态自由熵分离的反例.md | fam=macro,table
+  FIX: 改为 $\Phi^*\geq→$\Phi^*\geq n/(u+c)$ ，并非 $\sum 1/v
+    bad='$\\Phi^*\\geq n/(u+c)$'
+    good='$\\Phi^*\\geq n/(u+c)$ ，并非 $\\sum 1/v_i(u)$'
+    body=[[495, 1]] decl=[[667, 1]] good_body=[[495, 1], [667, 1]] delta=26 parity=[]
+---- D225-L455-I02 | D225-高标记数下的Pixton完备性Chow反例.md | fam=btick,macro
+  FIX: 换成任意基以便粘贴局部计算"→任意基以便粘贴局部计算"会在此处直接失效，$\mathcal{F}$
+    bad='任意基以便粘贴局部计算"会在此处直接失效'
+    good='任意基以便粘贴局部计算"会在此处直接失效，$\\mathcal{F}$'
+    body=[[312, 1]] decl=[[459, 1]] good_body=[[312, 1], [459, 1]] delta=16 parity=[]
+---- D235-L591-I09 | D235-幂节省指数只依赖次数的intersective多项式差集.md | fam=other
+  FIX: 应为中文引号配对→中文引号配对
+    bad='中文引号配对'
+    good='中文引号配对'
+    body=[[682, 1]] decl=[[607, 1]] good_body=[[607, 1], [682, 1]] delta=0 parity=[]
+---- D24-L986-I02 | D24-Kaplansky拟迹猜想反例.md | fam=other
+  FIX: 记作 `01:174`→`01:174` / 记作 `01:174`：该短→`01:174`：该短语在 01-introduction.tex:
+    bad='`01:174`'
+    good='`01:174`'
+    body=[[130, 1]] decl=[[990, 1]] good_body=[[130, 1], [990, 1]] delta=0 parity=[]
+    bad='`01:174`：该短'
+    good='`01:174`：该短语在 01-introduction.tex:'
+    body=[] decl=[[990, 1]] good_body=[[990, 1]] delta=27 parity=[]
+---- D24-L986-I03 | D24-Kaplansky拟迹猜想反例.md | fam=other
+  FIX: 记作 `01:190-204→`01:190-204` / 记作 `01:190-204→`01:190-204`：这句在 01-introduction.t
+    bad='`01:190-204`'
+    good='`01:190-204`'
+    body=[[124, 1], [216, 1]] decl=[[991, 1]] good_body=[[124, 1], [216, 1], [991, 1]] delta=0 parity=[]
+    bad='`01:190-204`'
+    good='`01:190-204`：这句在 01-introduction.t'
+    body=[[124, 1], [216, 1]] decl=[[991, 1]] good_body=[[991, 1]] delta=30 parity=[]
+---- D24-L986-I04 | D24-Kaplansky拟迹猜想反例.md | fam=other
+  FIX: 记作 `03:52-55`→`03:52-55` / 记作 `03:52-55`：→`03:52-55`：实为 03-scaling.tex:54-56
+    bad='`03:52-55`'
+    good='`03:52-55`'
+    body=[[253, 1]] decl=[[992, 1]] good_body=[[253, 1], [992, 1]] delta=0 parity=[]
+    bad='`03:52-55`：'
+    good='`03:52-55`：实为 03-scaling.tex:54-56'
+    body=[] decl=[[992, 1]] good_body=[[992, 1]] delta=27 parity=[]
+---- D24-L986-I06 | D24-Kaplansky拟迹猜想反例.md | fam=other
+  FIX: 记作 `01:97-101`→`01:97-101` / 记作 `01:97-101`→`01:97-101`：引文本体是 01-introduction.
+    bad='`01:97-101`'
+    good='`01:97-101`'
+    body=[[43, 1], [861, 1]] decl=[[994, 1]] good_body=[[43, 1], [861, 1], [994, 1]] delta=0 parity=[]
+    bad='`01:97-101`'
+    good='`01:97-101`：引文本体是 01-introduction.'
+    body=[[43, 1], [861, 1]] decl=[[994, 1]] good_body=[[994, 1]] delta=35 parity=[]
+---- D247-L237-I07 | D247-四行永久式的严格指数与Thorp洗牌置换矩.md | fam=macro,typo
+  FIX: 写为对 $\mu\vdash→对 $\mu\vdash j$ 求和且首现于 $b_k$ 的定义位置 / 应为 $b_k=\sum_{→$b_k=\sum_{\mu\vdash k}D_\mu\opera
+    bad='写为对 $\\mu\\vdash'
+    good='对 $\\mu\\vdash j$ 求和且首现于 $b_k$ 的定义位置'
+    body=[] decl=[[251, 1]] good_body=[[251, 1]] delta=38 parity=[['dollar', 251]]
+    bad='$b_k=\\sum_{\\mu\\vdash j}D_\\mu\\operatorname{Tr} B_{(n-j,\\mu)}$'
+    good='$b_k=\\sum_{\\mu\\vdash k}D_\\mu\\operatorname{Tr} B_{(n-k,\\mu)}$'
+    body=[[143, 1]] decl=[] good_body=[[251, 1]] delta=0 parity=[]
+---- D252-L198-I02 | D252-超图性质的一致影响量上界与阈值宽度猜想.md | fam=btick,anchor,count,banstring,ordermove,typo
+  FIX: 写为 `(fourier.t→`(fourier.tex:32-36$)` / 应读作 `fourier.t→`fourier.tex:32-36`
+    bad='写为 `(fourier.tex:32-36'
+    good=None
+    body=[] decl=[[203, 1]] good_body=[[203, 1]] delta=-4 parity=[['dollar', 203], ['btick', 203]]
+    bad='`fourier.tex`'
+    good=None
+    body=[[15, 1], [52, 1], [86, 1]] decl=[] good_body=[[52, 1], [88, 1], [138, 1], [203, 1]] delta=6 parity=[]
+---- D277-L168-I03 | D277-欧拉函数值个数的渐近公式.md | fam=macro,count
+  FIX: 正确写法是 $K(t)=\#→$K(t)=\#\{(\tau,\sigma)\in\mathcal
+    bad='$K(t)=\\#.$'
+    good='$K(t)=\\#\\{(\\tau,\\sigma)\\in\\mathcal G(t)^2:\\tau\\ne\\sigma,\\ F(\\tau)=F(\\sigma)\\}$'
+    body=[[102, 1]] decl=[] good_body=[[170, 1]] delta=68 parity=[]
+---- D284-L897-I01 | D284-一个无限有限表示的残余有限二元群.md | fam=macro,typo
+  FIX: 正确写法是 $\prod_{→$\prod_{s=0}^{b-1}$ / 应读作"分次部分"，指的是按→"分次部分"，指的是按 $v$ 之前标签数 $a$ 的过滤所得的分级
+    bad='$\\prod_{h=1}^m(D_hF_h)=(D_1\\cdots D_m)\\prod_{h=1}^m(D_{>h}^{-1}F_hD_{>h}),$'
+    good=None
+    body=[[399, 1]] decl=[] good_body=[[901, 1]] delta=-56 parity=[]
+    bad='"分次部分"，指的是按'
+    good=None
+    body=[] decl=[[905, 1]] good_body=[[905, 1]] delta=49 parity=[]
+---- D29-L1062-I06 | D29-Borsuk覆盖断言九维反例.md | fam=other
+  FIX: 记作 ten-labels.→ten-labels.tex:185-200，而"块尺寸 $3,2,2$"的字面落 / 记作 ten-labels.→ten-labels.tex:185-200，而"块尺寸 $3,2,
+    bad='ten-labels.tex,'
+    good='ten-labels.tex:185-200，而"块尺寸 $3,2,2$"的字面落在第'
+    body=[[166, 1]] decl=[] good_body=[[1074, 1]] delta=50 parity=[]
+    bad='ten-labels.tex,'
+    good='ten-labels.tex:185-200，而"块尺寸 $3,2,2'
+    body=[[166, 1]] decl=[] good_body=[[1074, 1]] delta=30 parity=[['dollar', 166]]
+---- D341-L463-I05 | D341-三维波动方程临界局部平滑的熵论证.md | fam=macro
+  FIX: 应为 $3\le p<\in→$3\le p<\infty$
+    bad='$3\\le p<\\infty$'
+    good='$3\\le p<\\infty$'
+    body=[[436, 1], [438, 1]] decl=[[469, 1]] good_body=[[436, 1], [438, 1], [469, 1]] delta=0 parity=[]
+---- D357-L346-I05 | D357-盘转移表示与受限桥质量.md | fam=other
+  FIX: 应读作 $O(R^{1-p}→$O(R^{1-p})$
+    bad='$O(R^{1-p})$'
+    good='$O(R^{1-p})$'
+    body=[[157, 1]] decl=[[352, 1]] good_body=[[157, 1], [352, 1]] delta=0 parity=[]
+---- D366-L291-I06 | D366-局部维度十的零密钥纠缠态：一条反向推演的记录.md | fam=banstring,typo
+  FIX: 正确写法是 `appendi→`appendices/arithmetic.tex`、`appen
+    bad='`appendices/arithmetic.tex`'
+    good='`appendices/arithmetic.tex`、`appendices/supplementary-checks.tex`'
+    body=[[9, 1]] decl=[[303, 1]] good_body=[[9, 1], [303, 1]] delta=40 parity=[]
+---- D371-L732-I04 | D371-任意阶本原四次环面包线的等分布.md | fam=btick,macro
+  FIX: 改成 `$`→`$` / 应为 $\gcd(l,\pr→$\gcd(l,\prod_{p\in S}p)=1$，我写成缺右括
+    bad='改成 `$`'
+    good=None
+    body=[] decl=[[739, 1], [747, 1]] good_body=[[739, 2], [746, 1], [747, 1], [852, 2], [856, 1], [873, 1], [876, 1], [878, 1], [882, 1]] delta=-7 parity=[]
+    bad='$\\gcd(l,\\prod_{p\\in S}p=1$'
+    good=None
+    body=[[429, 1], [855, 1]] decl=[] good_body=[[746, 1]] delta=22 parity=[]
+---- D374-L264-I02 | D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md | fam=macro,count,table
+  FIX: 应为 $\{\lvert u→$\{\lvert u\rvert\le H\}$，本体侧可对该串机
+    bad='$\\{\\lvert u\\rvert \\le H\\}$'
+    good='$\\{\\lvert u\\rvert\\le H\\}$，本体侧可对该串机'
+    body=[[231, 1]] decl=[] good_body=[[268, 1]] delta=26 parity=[]
+---- D374-L264-I06 | D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md | fam=macro
+  FIX: 应为 $-2i\lVert →$-2i\lVert B\rVert_2^2$，原文写作 $2i\l
+    bad='$-2i\\lVert B\\rVert_2^2$'
+    good='$-2i\\lVert B\\rVert_2^2$，原文写作 $2i\\lVert B\\rVert_2^2$'
+    body=[[201, 1]] decl=[[276, 1]] good_body=[[276, 1]] delta=38 parity=[]
+---- D396-L143-I03 | D396-复配中的过滤乘积与保边界压缩.md | fam=count,typo
+  FIX: 应为 Lem 3.5→Lem 3.5
+    bad='Lem 3.5'
+    good='Lem 3.5'
+    body=[[119, 1], [157, 1], [217, 1]] decl=[[149, 1]] good_body=[[119, 1], [149, 1], [157, 1], [217, 1]] delta=0 parity=[]
+---- D398-L726-I09 | D398-有限同余格的刻画与不可判定性.md | fam=other
+  FIX: 记作 `sections/d→`sections/diophantine.tex:178` / 改为 177 行，改动已在追→177 行，改动已在追加前完成，落盘只有一版
+    bad='`sections/diophantine.tex`'
+    good='`sections/diophantine.tex:178`'
+    body=[[9, 1]] decl=[[732, 1], [752, 1]] good_body=[[774, 1]] delta=4 parity=[]
+    bad='177 行，改动已在追加前完成'
+    good=None
+    body=[] decl=[[775, 1]] good_body=[[775, 1]] delta=21 parity=[]
+---- D404-L468-I05 | D404-受控集的有限柱面逼近.md | fam=btick,count
+  FIX: 应为 `build/sect→`build/sections/product-methods.tex:240-244` / 应为 `build/sect→`build/sections/product-methods.te
+    bad='`build/sections/introduction.tex:13-16`'
+    good='`build/sections/product-methods.tex:240-244`'
+    body=[[7, 1]] decl=[] good_body=[[279, 1], [478, 1]] delta=5 parity=[]
+    bad='`build/sections/introduction.tex:13-16`'
+    good='`build/sections/product-methods.tex:240-244`'
+    body=[[7, 1]] decl=[] good_body=[[279, 1], [478, 1]] delta=5 parity=[]
+---- D405-L413-I04 | D405-Kn局部球面的有限生成.md | fam=btick,macro,count
+  FIX: 替换为 $\mathrm{k→$\mathrm{k}$，这不影响任何估计
+    bad='$\\mathrm{k}$'
+    good='$\\mathrm{k}$，这不影响任何估计'
+    body=[[293, 1]] decl=[[421, 1]] good_body=[[421, 1]] delta=27 parity=[]
+---- D420-L192-I09 | D420-加权整数Lipschitz高度的高斯自由场极限.md | fam=btick,count
+  FIX: 改为美元定界→美元定界
+    bad='美元定界'
+    good='美元定界'
+    body=[[393, 1]] decl=[[204, 1]] good_body=[[204, 1], [393, 1]] delta=0 parity=[]
+---- D491-L368-I02 | D491-无初等理想子商时的核维度与江苏稳定性.md | fam=btick,count,typo
+  FIX: 改为闭合反引号，第六处删去落→闭合反引号，第六处删去落在代码跨度内部的一个孤立同形字符，第七处同样 / 改为闭合反引号→闭合反引号
+    bad='闭合反引号，第六处删去落在代码跨度内部的一个孤立同形字符'
+    good='闭合反引号，第六处删去落在代码跨度内部的一个孤立同形字符，第七处同样是把收尾位置误写的字符'
+    body=[] decl=[[372, 1]] good_body=[[372, 1]] delta=51 parity=[]
+    bad='闭合反引号'
+    good='闭合反引号'
+    body=[[316, 1]] decl=[[372, 2]] good_body=[[316, 1], [372, 2]] delta=0 parity=[]
+---- D519-L245-I02 | D519-前缀指令的信息保留与不可压缩流实现.md | fam=macro,count
+  FIX: 应读作非终端偏移 $3,6,→非终端偏移 $3,6,9,\ldots$ 与终端偏移 $-3,-6,
+    bad='非终端偏移 $3,6,9,\\ldots'
+    good='非终端偏移 $3,6,9,\\ldots$ 与终端偏移 $-3,-6,-9,\\ldots'
+    body=[[191, 1]] decl=[[249, 1]] good_body=[[249, 1]] delta=34 parity=[]
+---- D519-L245-I05 | D519-前缀指令的信息保留与不可压缩流实现.md | fam=macro,typo
+  FIX: 应为 sheet-geome→sheet-geometry.tex:201-205，文件名写错
+    bad='sheet-geometry.tex:32-35'
+    good='sheet-geometry.tex:201-205，文件名写错'
+    body=[[21, 1]] decl=[] good_body=[[255, 1]] delta=20 parity=[]
+---- D539-L297-I05 | D539-比较半径恰为平均维数之半.md | fam=count,english
+  FIX: 应写作 `06-regula→`06-regularity.tex:46-48`
+    bad='`06-regularity.tex`'
+    good='`06-regularity.tex:46-48`'
+    body=[[18, 1], [180, 1]] decl=[] good_body=[[307, 1]] delta=6 parity=[]
+---- D573-L230-I02 | D573-双圆柱覆盖的斜率场扰动与半面积下界反例.md | fam=table
+  FIX: 应读作 §19→§19
+    bad='§19'
+    good='§19'
+    body=[[238, 1], [316, 1], [320, 2]] decl=[[234, 4]] good_body=[[234, 4], [238, 1], [316, 1], [320, 2]] delta=0 parity=[]
+---- D585-L653-I03 | D585-稳定子轨道局部稠密性与厚张量理想链.md | fam=banstring
+  FIX: 替换为「因此是」→「因此是」 / 替换为「因此是」即可通顺→「因此是」即可通顺
+    bad='「因此是」「故」'
+    good='「因此是」即可通顺。其三，第 446 行是第 406 行那句「该论证同时覆盖某个坐标为零或极限组为零的情形」'
+    body=[[651, 1]] decl=[] good_body=[[657, 1]] delta=118 parity=[]
+    bad='「因此是」即可通顺。其三，第 446 行是第 406 行那句「该论证同时覆盖某个坐标为零或极限组为零的情形」'
+    good='「因此是」即可通顺。其三，第 446 行是第 406 行那句「该论证同时覆盖某个坐标为零或极限组为零的情形」'
+    body=[] decl=[[657, 1]] good_body=[[657, 1]] delta=0 parity=[]
+---- D587-L478-I01 | D587-典型SK初态的拉伸指数混合势垒.md | fam=btick,cite,count
+  FIX: 改回定界符→定界符 / 改回反引号→反引号
+    bad='定界符逐行成对的修补（把打错的闭合符'
+    good='定界符'
+    body=[[469, 1]] decl=[] good_body=[[469, 1], [480, 2], [484, 1], [496, 1]] delta=-45 parity=[]
+    bad='反引号（原第'
+    good='反引号（原第'
+    body=[] decl=[[480, 1]] good_body=[[480, 1]] delta=0 parity=[]
+---- D715-L592-I02 | D715-半对数典范对数Calabi-Yau对的均匀指数.md | fam=other
+  FIX: 更正为：小节编号从 0 到 →小节编号从 0 到 21 连续（第 20 节与第 21 节之间没有跳
+    bad='小节编号从 0 到'
+    good='小节编号从 0 到 21 连续（第 20 节与第 21 节之间没有跳号'
+    body=[[564, 1]] decl=[[596, 2]] good_body=[[596, 1]] delta=54 parity=[]
+---- D716-L873-I06 | D716-一致对数饭高纤维化与有界模空间分母.md | fam=macro,count,banstring,table
+  FIX: 换成 `\operatorn→`\operatorname{ord}` / 换成 `\operatorn→`\operatorname{ord}` 与 `\operatorn
+    bad='`\\operatorname{div}`'
+    good='`\\operatorname{ord}` 与 `'
+    body=[[803, 1]] decl=[[885, 1]] good_body=[[885, 1]] delta=6 parity=[['btick', 803], ['btick', 885]]
+    bad='`\\operatorname{div}`'
+    good='`\\operatorname{ord}` 与 `\\operatorname{div}`'
+    body=[[803, 1]] decl=[[885, 1]] good_body=[[885, 1]] delta=25 parity=[]
+---- D720-L258-I04 | D720-完备正双截曲率Kähler流形的单值化.md | fam=typo
+  FIX: 应为 §2 至 §4 的三条→§2 至 §4 的三条错路
+    bad='§2 至 §4 的三条错路'
+    good='§2 至 §4 的三条错路'
+    body=[[406, 1]] decl=[[266, 1]] good_body=[[266, 1], [406, 1]] delta=0 parity=[]
+---- D720-L260-I04 | D720-完备正双截曲率Kähler流形的单值化.md | fam=typo
+  FIX: 应为 §2 至 §4 的三条→§2 至 §4 的三条错路
+    bad='§2 至 §4 的三条错路'
+    good='§2 至 §4 的三条错路'
+    body=[[406, 1]] decl=[[266, 1]] good_body=[[266, 1], [406, 1]] delta=0 parity=[]
+---- D760-L573-I03 | D760-临界Ashkin-Teller电流的联合标度极限.md | fam=macro
+  FIX: 改写为 $A_{-\alph→$A_{-\alpha,\beta}$ 并在原处注明了改写理由
+    bad='$A_{-\\alpha,\\beta}(f)$'
+    good='$A_{-\\alpha,\\beta}$ 并在原处注明了改写理由'
+    body=[[90, 1]] decl=[] good_body=[[579, 1]] delta=31 parity=[]
+---- D765-L571-I05 | D765-椭圆曲线二次扭的均值解析秩.md | fam=anchor,count
+  FIX: 应为 §10→§10 / 应为 §9（该处实测正确，无→§9（该处实测正确，无需处理）与 §13、§14 的两处"见后文"未给节号
+    bad='§10）'
+    good='§10'
+    body=[[179, 1]] decl=[] good_body=[[179, 1], [231, 1], [243, 1], [313, 1], [493, 2], [499, 1], [577, 1], [581, 2]] delta=-3 parity=[]
+    bad='§9（该处实测正确，无需处理）与'
+    good='§9（该处实测正确，无需处理）与 §13、§14 的两处"见后文"未给节号'
+    body=[] decl=[[581, 1]] good_body=[[581, 1]] delta=45 parity=[]
+
+=== all NEEDS-NEW-LINE / STALE-COORD / NO-VERBATIM rows ===
+---- NEEDS-NEW-LINE | D12-L461-I03 | D12-Barnette猜想-三次二部平面图Hamilton圈.md | fam=macro
+  FIX: 替换为 $\text{Lef→$\text{Left}=(A\times\mathrm{Fin}\ / 移到"$\text{gadg→"$\text{gadget\_hall}$ 的 $2\lvert
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='$\\text{Left}=(A\\times\\mathrm{Fin}\\ 2)\\oplus\\mathrm{Inc}\\ R$' good=None occ=[[447, 1], [466, 1]] good_body=[[447, 1], [466, 1]] parity=[['dollar', 447], ['dollar', 466]]
+    bad='移到"$\\text{gadget\\_hall}' good=None occ=[[466, 1]] good_body=[[466, 1]] parity=[]
+---- STALE-COORD | D162-L475-I04 | D162-Kaplansky直接有限性猜想在特征二的反例：从配对恒等式到终止有限搜索的反推笔记.md | fam=anchor,count,ordermove,table
+  FIX: 
+  reason=quote not locatable on disk (even by 10-char prefix) flags=[]
+---- NEEDS-NEW-LINE | D188-L684-I05 | D188-五次型Gepner稳定条件构造手记.md | fam=other
+  FIX: 应为 `sections/g→`sections/grid.tex:421-428` / 应为不带 `$` 的行号范围→不带 `$` 的行号范围
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='`sections/grid.tex:41-42`' good='`sections/grid.tex:421-428``' occ=[[111, 1], [402, 1]] good_body=[[524, 1], [691, 1]] parity=[['btick', 111], ['btick', 402]]
+    bad='不带 `$` 的行号范围' good='不带 `$` 的行号范围' occ=[[691, 1]] good_body=[[691, 1]] parity=[]
+---- NEEDS-NEW-LINE | D194-L420-I16 | D194-同余格表示问题的否定解答：一条被格形状逼出来的群论路线.md | fam=other
+  FIX: 改为 `classifica→`classification.tex:112--115`
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='`classification.tex`' good='`classification.tex:112--115`）」。原文是 "The number refers to chief factors, not to their sim occ=[[80, 1], [144, 2], [388, 1], [436, 1]] good_body=[[451, 1]] parity=[['btick', 80], ['btick', 388], ['btick', 436]]
+---- NEEDS-NEW-LINE | D204-L45-I05 | D204-四维盘嵌入猜想的边界障碍：从自由群问题到Frobenius-Koszul障碍.md | fam=btick,macro,ordermove
+  FIX: 换成参照值只改动 $\mat→参照值只改动 $\mathfrak m\mathfrak n^3$ / 换成 $\mathfrak →$\mathfrak l$ 的任意自同态
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='参照值只改动 $\\mathfrak' good='参照值只改动 $\\mathfrak m\\mathfrak n^3$' occ=[[59, 1]] good_body=[[59, 1]] parity=[['dollar', 59]]
+    bad='$\\mathfrak m\\mathfrak n^3$' good='$\\mathfrak l$ 的任意自同态；再取三线性函数泛函生成的秩一算子 $' occ=[[59, 1], [135, 2]] good_body=[[59, 1]] parity=[['dollar', 59]]
+---- NEEDS-NEW-LINE | D206-L289-I03 | D206-把半权除子的orbifold基本群装进一个八维特殊流形.md | fam=btick
+  FIX: 应读作：`inertia-f→`inertia-foundations.tex:296-322`
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='`inertia-foundations.tex`' good='`inertia-foundations.tex:296-322` 之前）"一句混进一个多余的美元符号，语句也不顺。应读作：`' occ=[[9, 1], [11, 1], [177, 1]] good_body=[[294, 1]] parity=[['btick', 9], ['btick', 11], ['btick', 177]]
+---- NEEDS-NEW-LINE | D206-L289-I04 | D206-把半权除子的orbifold基本群装进一个八维特殊流形.md | fam=btick,macro
+  FIX: 应读作：由 Thm 2.5 →由 Thm 2.5 得到的下界 $\kappa(Z,K_Z+\Del
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='由 Thm 2.5' good='由 Thm 2.5 得到的下界 $\\kappa(Z,K_Z+\\Delta_Z)\\ge\\ell' occ=[[233, 1], [295, 1]] good_body=[[295, 1]] parity=[['dollar', 233], ['dollar', 295]]
+---- NEEDS-NEW-LINE | D206-L289-I05 | D206-把半权除子的orbifold基本群装进一个八维特殊流形.md | fam=typo
+  FIX: 应读作 `inertia-m→`inertia-minimality.tex:176-180`
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='`inertia-minimality.tex`' good='`inertia-minimality.tex:176-180` 之前那段）"同型笔误，应读作 `' occ=[[9, 1], [177, 1]] good_body=[[296, 1]] parity=[['btick', 9], ['btick', 177]]
+---- STALE-COORD | D218-L693-I06 | D218-严格椭圆方向零一律的反向重构笔记.md | fam=other
+  FIX: 
+  reason=quote not locatable on disk (even by 10-char prefix) flags=[]
+---- NEEDS-NEW-LINE | D225-L455-I06 | D225-高标记数下的Pixton完备性Chow反例.md | fam=macro,count
+  FIX: 换成由独立 $\theta_→由独立 $\theta_{ijk}$ 生成的外代数并直接验证图恒等式
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='由独立 $\\theta_{ijk}' good='由独立 $\\theta_{ijk}$ 生成的外代数并直接验证图恒等式（' occ=[[386, 1], [467, 1]] good_body=[[386, 1], [467, 1]] parity=[['dollar', 386], ['dollar', 467]]
+---- STALE-COORD | D238-L734-I03 | D238-平方差自由集的固定幂节省.md | fam=macro,ordermove,probe
+  FIX: 
+  reason=quote not locatable on disk (even by 10-char prefix) flags=[]
+---- NEEDS-NEW-LINE | D25-L2681-I02 | D25-Crouzeix完整不等式直接证明.md | fam=macro,table
+  FIX: 记作 `main.tex:5→`main.tex:561-564`
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='`main.tex:58-66`' good='`main.tex:561-564`。当前 tex 里这段在 `' occ=[[94, 1], [2046, 1]] good_body=[[2685, 1]] parity=[['btick', 94], ['btick', 2046]]
+---- NO-VERBATIM | D277-L172-I02 | D277-欧拉函数值个数的渐近公式.md | fam=count,table
+  FIX: 
+  reason=fix column empty (intent only) flags=[]
+---- NO-VERBATIM | D296-L550-I02 | D296-粗糙化阈端的高度普适性与低温平面自旋场极限.md | fam=count,banstring,probe
+  FIX: 
+  reason=fix column empty (intent only) flags=[]
+---- NEEDS-NEW-LINE | D307-L330-I03 | D307-法诺收缩上有界klt补标的阈值反推.md | fam=macro
+  FIX: 正确写法是 $\mathfr→$\mathfrak mathbb Q$-因子化，对应 `build
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='$\\mathfrak mathbb Q$' good='$\\mathfrak mathbb Q$-因子化，对应 `build/sections/scale-tower.tex:69` 与 `build/sections/scale- occ=[[20, 2], [54, 1], [62, 1], [175, 1], [187, 1], [335, 3], [337, 1]] good_body=[[335, 1]] parity=[['dollar', 54], ['dollar', 62], ['dollar', 175], ['dollar', 187], ['dollar', 335], ['dollar', 337]]
+---- NEEDS-NEW-LINE | D332-L828-I04 | D332-可构造tame-Hecke特征层的正特征构造反推笔记.md | fam=macro,table
+  FIX: 改为 `\mid`→`\mid` / 换成配对竖线记号（§12 两→配对竖线记号（§12 两处、§14 两处、§15 一处，另两处同型）
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='`\\mid`；绝对值用 `' good='`\\mid`' occ=[[15, 1]] good_body=[[15, 1], [836, 1], [852, 1]] parity=[['btick', 15]]
+    bad='配对竖线记号（§12 两处' good='配对竖线记号（§12 两处、§14 两处、§15 一处，另两处同型）' occ=[[836, 1]] good_body=[[836, 1]] parity=[]
+---- NEEDS-NEW-LINE | D342-L165-I02 | D342-临界SK模型单点热浴混合的多项式指数.md | fam=macro,banstring,typo
+  FIX: 正确写法是 profile-→profile-local.tex:27 的 $\log^{10}n
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='profile-spectral(64860)' good='profile-local.tex:27 的 $\\log^{10}n' occ=[[11, 1]] good_body=[[169, 1]] parity=[['dollar', 11]]
+---- STALE-COORD | D353-L281-I02 | D353-素数域上多项式确定性因子分解的研究笔记.md | fam=macro,count
+  FIX: 应读作 §6→§6
+  reason=neither declared bad form nor expected text found on disk flags=['BAD-NOT-ON-DISK']
+    bad=None good='§6' occ=None good_body=None parity=None
+---- NO-VERBATIM | D362-L447-I09 | D362-椭圆平方点有限性与A_2曲线Zilber-Pink.md | fam=btick,count,banstring,table
+  FIX: 
+  reason=fix column empty (intent only) flags=[]
+---- STALE-COORD | D365-L468-I03 | D365-端点逐点收敛：高维薛定谔方程的等号情形.md | fam=macro
+  FIX: 
+  reason=quote not locatable on disk (even by 10-char prefix) flags=[]
+---- STALE-COORD | D370-L415-I07 | D370-素数次数环面包在任意局部型下的等分布.md | fam=probe
+  FIX: 可以安全删除
+  reason=neither declared bad form nor expected text found on disk flags=[]
+---- NEEDS-NEW-LINE | D371-L732-I02 | D371-任意阶本原四次环面包线的等分布.md | fam=btick,macro,count
+  FIX: 改成 `$`→`$` / 应为 $\operatorn→$\operatorname{covol}(\sigma(I))=\
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='改成 `$`' good=None occ=[[739, 1], [747, 1]] good_body=[[739, 2], [746, 1], [747, 1], [852, 2], [856, 1], [873, 1], [876, 1], [878, 1], [882, 1]] parity=[]
+    bad='$\\operatorname{Pic}(\\mathcal O)$' good=None occ=[[98, 1]] good_body=[[139, 1], [738, 1], [760, 1], [851, 1]] parity=[['dollar', 98]]
+---- NEEDS-NEW-LINE | D371-L826-I06 | D371-任意阶本原四次环面包线的等分布.md | fam=btick,macro,count,probe
+  FIX: 换成 `$`→`$` / 应为 $\operatorn→$\operatorname{covol}(\sigma(I))=\
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='`$` 未配对、并让该行的反引号计数变成奇数。修法：把收尾反引号改成 `' good=None occ=[[739, 1]] good_body=[[739, 2], [746, 1], [747, 1], [852, 2], [856, 1], [873, 1], [876, 1], [878, 1], [882, 1]] parity=[['btick', 739]]
+    bad='$\\operatorname{Pic}(\\mathcal O)$' good=None occ=[[98, 1]] good_body=[[139, 1], [738, 1], [760, 1], [851, 1]] parity=[['dollar', 98]]
+---- NO-VERBATIM | D371-L826-I10 | D371-任意阶本原四次环面包线的等分布.md | fam=btick,count
+  FIX: 
+  reason=fix column empty (intent only) flags=[]
+---- NEEDS-NEW-LINE | D372-L170-I08 | D372-原始六次环面包的一等分布.md | fam=macro,typo
+  FIX: 应为 $[1/3,2/3]$→$[1/3,2/3]$，同句后半句"系数可限制在 $[1/3,2/3
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='$[1/3,2/3]$），支撑 $' good='$[1/3,2/3]$，同句后半句"系数可限制在 $[1/3,2/3]$' occ=[[159, 1]] good_body=[[174, 1]] parity=[['dollar', 159]]
+---- NEEDS-NEW-LINE | D372-L224-I03 | D372-原始六次环面包的一等分布.md | fam=macro,typo
+  FIX: 应为 $[1/3,2/3]$→$[1/3,2/3]$，同句后半已写对
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='$[1/3,2/3]$），支撑 $' good='$[1/3,2/3]$，同句后半已写对' occ=[[159, 1]] good_body=[[230, 1]] parity=[['dollar', 159]]
+---- STALE-COORD | D376-L234-I02 | D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md | fam=count,banstring
+  FIX: 直接删除
+  reason=neither declared bad form nor expected text found on disk flags=[]
+---- STALE-COORD | D384-L610-I05 | D384-二维O4格点模型的精确质量渐近.md | fam=banstring
+  FIX: 改成 "奇宇称迹"，第 $4→"奇宇称迹"，第 $460$、$595$ 两行改成"奇迹比值"
+  reason=neither declared bad form nor expected text found on disk flags=['BAD-NOT-ON-DISK']
+    bad=None good=None occ=None good_body=None parity=None
+---- NO-VERBATIM | D394-L446-I04 | D394-一般素数处的过滤色分裂.md | fam=btick,count,table
+  FIX: 
+  reason=fix column empty (intent only) flags=[]
+---- NEEDS-NEW-LINE | D402-L435-I09 | D402-有限代数包与Boone-Higman猜想.md | fam=other
+  FIX: 应为 `compiler.t→`compiler.tex:15-16` / 应为 `compiler.t→`compiler.tex:15-16`（该句跨这三行，Sectio
+  reason=replacement changes line-level delimiter parity flags=[]
+    bad='`compiler.tex`' good='`compiler.tex:15-16`（该句跨这三行，Section 2.4 的引注落在第 16 行），我在上一条里写的 `' occ=[[23, 1]] good_body=[[448, 1]] parity=[['btick', 23]]
+    bad='`compiler.tex`' good='`compiler.tex:15-16`（该句跨这三行，Section 2.4 的引注落在第 16 行），我在上一条里写的 `' occ=[[23, 1]] good_body=[[448, 1]] parity=[['btick', 23]]
+---- STALE-COORD | D434-L601-I05 | D434-积分期望阈值处的图分解.md | fam=other
+  FIX: 建议删除
+  reason=neither declared bad form nor expected text found on disk flags=[]
+---- NO-VERBATIM | D466-L236-I01 | D466-固定长度六角蜂窝行走的质量与覆叠指数.md | fam=btick,macro,count,english,table
+  FIX: 
+  reason=fix column empty (intent only) flags=[]
+---- NO-VERBATIM | D539-L297-I07 | D539-比较半径恰为平均维数之半.md | fam=count,banstring,probe
+  FIX: 
+  reason=fix column empty (intent only) flags=[]
+---- NO-VERBATIM | D545-L237-I05 | D545-阿瑟滤过的有理性：从幂零奇性支集到矩量判据.md | fam=count,table,typo
+  FIX: 
+  reason=fix column empty (intent only) flags=[]
+---- NO-VERBATIM | D556-L228-I04 | D556-标量势与慢时钟：受迫流体中的停机探测.md | fam=btick,count,banstring,table
+  FIX: 
+  reason=fix column empty (intent only) flags=[]
+---- NO-VERBATIM | D556-L238-I01 | D556-标量势与慢时钟：受迫流体中的停机探测.md | fam=anchor,count,table
+  FIX: 
+  reason=fix column empty (intent only) flags=[]
+---- NO-VERBATIM | D573-L206-I02 | D573-双圆柱覆盖的斜率场扰动与半面积下界反例.md | fam=count
+  FIX: 
+  reason=fix column empty (intent only) flags=[]
+---- NO-VERBATIM | D744-L427-I02 | D744-平面XY模型临界对数修正与振幅提取笔记.md | fam=count,banstring
+  FIX: 
+  reason=fix column empty (intent only) flags=[]
+---- NO-VERBATIM | D745-L445-I02 | D745-半平面双二聚体环的曲线标度极限.md | fam=count,probe
+  FIX: 
+  reason=fix column empty (intent only) flags=[]
+---- NO-VERBATIM | D758-L711-I08 | D758-圆周率的无理性指数等于2.md | fam=btick,cite,count,banstring,english,table,probe
+  FIX: 
+  reason=fix column empty (intent only) flags=[]
+---- STALE-COORD | D772-L1126-I03 | D772-CM阿贝尔簇的有理Hodge猜想.md | fam=anchor,table
+  FIX: 
+  reason=quote not locatable on disk (even by 10-char prefix) flags=[]
+---- STALE-COORD | D776-L624-I02 | D776-时空Penrose不等式与围面积.md | fam=macro,banstring,table,typo
+  FIX: 
+  reason=quote not locatable on disk (even by 10-char prefix) flags=[]
+---- CONFLICT-RISK | D94-L326-I01 | D94-正则轨迹剪枝与量子奇偶下界.md | fam=macro,count
+  FIX: 应为 `grep -o "u→`grep -o "uniform" sections/*.tex`
+  reason=note is being written by another agent (D80/D94/D66); registered only flags=[]
+    bad='`grep -o "uniform" sections/*.lean`' good='`grep -o "uniform" sections/*.tex`' occ=[[328, 1]] good_body=[[328, 1]] parity=[]
+---- CONFLICT-RISK | D94-L326-I03 | D94-正则轨迹剪枝与量子奇偶下界.md | fam=macro,anchor,count,ordermove
+  FIX: 应为 Corollary 6→Corollary 6.3;§5.14(a) 引文 Corollary 5.3 应 / 应为 Corollary 6→Corollary 6.3;§5.14(a) 引文 Corollar
+  reason=note is being written by another agent (D80/D94/D66); registered only flags=[]
+    bad='Corollary 6.3' good='Corollary 6.3;§5.14(a) 引文 Corollary 5.3 应为' occ=[[80, 1], [332, 1]] good_body=[[332, 1]] parity=[]
+    bad='Corollary 6.3' good='Corollary 6.3;§5.14(a) 引文 Corollary' occ=[[80, 1], [332, 1]] good_body=[[332, 1]] parity=[]
+---- STALE-COORD | D97-L1657-I30 | D97-容量小于4的辛球嵌入极化积：对称Mahler猜想的Gromov宽度路线反推笔记.md | fam=anchor,ordermove
+  FIX: 改为 15→15
+  reason=neither declared bad form nor expected text found on disk flags=['BAD-NOT-ON-DISK']
+    bad=None good='15' occ=None good_body=None parity=None

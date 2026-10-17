@@ -1,0 +1,528 @@
+2026-10-14T00:59:49.709Z
+D09-MaxCut最优NP难度.md	89	6	\Ex30 \bitsx1 \Infx8 \Stabx19 \GWx8 \onex9 \TVx3 \epsx24 \Valx5 \cutx1 \Fx3
+D10-自由群因子同构.md	15	1	\Fx3 \ex3 \Catx9 \Cx1
+D101-欧氏平面不可五色：刚性-谱-调色板三段论证的反推笔记.md	7	1	\Cx1 \Qx2 \distx3
+D103-Landau-Siegel零点的均匀排除：加权环面jet与绝对零点间隙的反推笔记.md	17	0	\Nmx16 \Cx1
+D104-单折Diophantine表示：幂关系与椭圆曲线互定义性的反推笔记.md	85	2	\NNx34 \ZZx15 \QQx12 \Powx10 \bitsx23
+D105-一致最稀疏割的近根号对数整数性间隙：kernel与contraction路线的反推笔记.md	31	0	\Ex31 \OPTx4 \GLx7 \opx1
+D107-唯一博弈定理：从约束图与可判定性到定理11机器化的反推笔记.md	121	7	\Fx17 \epsx26 \Ex33 \rankx14 \OPTx15 \valx17 \Spanx5 \Homx3 \imx4 \TVx1
+D108-完全图交叉数：圆上摆放、相邻手术与逐点验收的反推笔记.md	24	4	\PPx23
+D109-Falconer距离猜想全维版：角增益与递归装配的反推笔记.md	4	0	\TVx4
+D11-退化反例-三次不动点打破Arnold界.md	106	2	\Fixx26 \Critx42 \Hamx2 \CPx9 \idx20 \CritSetx21 \Cx8
+D111-复群环的Bass迹猜想：滤链手术与右射影消没的反推笔记.md	40	2	\HSx4 \HHx3 \Cx27 \conx3 \trx3 \suppx7
+D112-一维Lieb-Thirring最优常数：连接路径与谱不等式的反推笔记.md	57	0	\sechx23 \clx6 \Symx11 \HSx12 \transposex11 \opx2 \Trx1
+D113-三维有界可测标量电导率的非唯一性：分块与标量化的反推笔记.md	107	17	\Idx31 \diagx4 \Divx22 \trx4 \epsx25 \distx2 \locx1 \curlx1 \suppx3 \Tx1 \ddx15 \+x1
+D115-完全二分图交叉数：Zarankiewicz式与交点归一化的反推笔记.md	20	2	\crnx4 \rankx14
+D117-最大三角Hilbert变换对称点估计：跳跃控制与热流两侧的反推笔记.md	29	1	\Cx1 \trx4 \opx15 \diagx4 \ddx6 \HSx7 \suppx1
+D118-逼近性质下的cotype对cotype猜想：Walsh基与系数空间路线的反推笔记.md	135	0	\Ex70 \GLx10 \epsx87 \rankx5 \Spanx3 \Fx16 \Oddx5 \Idx24 \Radx6
+D119-顶点覆盖的因子二硬度门槛：列表编码与限制约束的反推笔记.md	74	10	\valx4 \Varx7 \Ex54 \distx5 \indx1 \convx1
+D12-Barnette猜想-三次二部平面图Hamilton圈.md	12	0	\iix18
+D121-分拆原理不蕴含选择公理：对称模型的支撑下降与可定义性刻画反推笔记.md	59	2	\PPx19 \ACwox8 \idx2 \ACx6 \Fixx12 \ranx2 \ZFCx3 \forcesx5 \suppx2 \ZFx2 \Ordx1 \HSx2
+D122-迹投影方法与一致性质Gamma：从有限分拆到非单侧吸收的反推笔记.md	66	4	\Ux1 \Tx3 \suppx9 \sgnx1 \Trx12 \Cx7 \Kx2 \Herx8 \Fwx8 \Aomx13 \Cux1
+D123-Petty射影体积猜想四维以上：球面核心与范数刚性的反推笔记.md	116	2	\Sphx2 \Ex118 \suppx2 \gradSx8 \Varx3 \sgnx3 \lapSx5 \Idx5 \rangex4 \trx8 \Kerx4
+D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md	25	3	\Ex19 \Lawx5 \suppx1
+D125-RCD空间沿每条测地线的弱Hessian界：漂移与曲率改值的反推笔记.md	146	26	\RCDx31 \Hessx7 \CDx25 \divgx13 \Testx18 \Lipx3 \suppx22 \Entx11
+D126-Saxl猜想的循环polytabloid证明：带宽矩阵与列收缩的反推笔记.md	2	0	\Cx2 \Matx1
+D127-Ryser覆盖猜想的反例：构造、选取与线覆盖计数的反推笔记.md	56	0	\PPx14 \Fx56 \Ex6
+D129-弱钉住平面距离定理：层级、方差与无界矛盾的反推笔记.md	58	16	\Qx8 \Cx6 \1x13 \Ix6 \Ex28 \suppx3
+D130-弱MTW下的一致双Holder传输：jet展开与谱尺度估计的反推笔记.md	77	0	\oscx2 \volx3 \Idx42 \gradx10 \Hessx12 \epsx18
+D131-紧Kahler流形万有覆叠分裂：可去奇点与度量全局化的反推笔记.md	123	10	\ddx63 \Ppx19 \Dx23 \Cx14 \rankx1 \Ricx4 \trx15 \regx2 \prx3
+D132-平面图度量嵌入L1的常数失真：几何生成插值与装配的反推笔记.md	48	33	\1x2 \distx5 \Lipx11
+D134-乘积投影定位给出QAC零度parity下界：bootstrap与深度收缩的反推笔记.md	83	35	\QACx3 \cUx12 \cBx30 \suppx3 \Ex5
+D135-球面投影矩与正帽控制给出Riesz估计：图模型与停止核的反推笔记.md	31	6	\distx5 \volx2 \Ex13 \affx3 \Probx4 \1x1
+D136-交错抽取在每个域上都给出精确矩阵乘：联合抽取与叶体积的反推笔记.md	13	0	\CWx11 \Fx2
+D137-平面指数第一通过limshape的严格凸与可微：链路逼近与改进界的反推笔记.md	113	5	\Bcalx22 \Ex63 \PPx35
+D138-对称Mahler猜想的等号情形：零亏量、单纯形与中位分割的反推笔记.md	2	0	\Cx2
+D139-单格覆盖的n对数n阶界：采样器层级与电路和的反推笔记.md	110	42	\volx12 \epsx22 \indx9 \Fx6 \Ex27 \Probx7
+D14-CH阻碍-范畴性阈值不能被规定.md	56	0	\Conx21 \LSx16 \cfx25 \Qx1 \rankx1
+D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md	26	4	\Finftyx4 \Fx18 \FPinftyx1
+D141-弱MTW下的全局支撑与凸单射域：首刀支撑与度展开的反推笔记.md	50	0	\diamx2 \Idx20 \epsx10 \Spanx6 \Hessx7 \cox2 \oscx3 \gradx2 \volx3
+D143-关系代数与树周游：单向活性指数下界的反推笔记.md	36	21	\Lfunx5 \OWLx4 \rankx4 \idx3
+D144-三图等子的摊平记账：二次曲面上ample而无Griffiths正度量丛的反推笔记.md	108	7	\PPx45 \OOx47 \SLx2 \Idx9 \Symx9 \ddcx12 \CCx8 \ZZx6
+D145-复杂矩阵乘法低于2.258与矩形界：证书层级与标签补全的反推笔记.md	129	5	\rankx3 \brankx6 \enx23 \Ex21 \Trx6 \diagx2 \Prbx2 \HHx15 \colBx26 \colAx30 \colCx30 \indx1 \calHx1 \calFx2 \Cx1 \IIx1
+D146-度量熵对偶猜想的反例：覆盖数与熵积分的双边分离的反推笔记.md	30	0	\absconvx8 \Fx17 \suppx2 \convx3
+D147-自反Banach空间中非扩张映射的不动点：锚点集与候选树的反推笔记.md	38	4	\diamx21 \convx14 \Lipx1
+D148-三维相对论VlasovMaxwell整体经典解的符号增量bootstrap与延迟锥消去.md	7	3	\suppx4
+D149-有限张量节省与精确Fourier电路：价格反证路线的亲历笔记.md	66	0	\GLx20 \Spanx3 \diagx8 \Cx32 \Matx9 \epsx18
+D152-调和高度与阿廷派一型猜想.md	12	0	\Zbbx13 \Cx3
+D154-三色图上大独立集的难度构造与分布式对齐.md	162	0	\distx27 \valx1 \idx3 \Tx14 \epsx133 \Ex21 \Qx4
+D155-实L1独立乘积的averaged中点模与AUC重范化障碍.md	248	73	\whdeltax19 \cofx5 \Ex174 \PPx56
+D157-Nagata猜想平面曲线反推笔记：正规束多项式与指数集行插值.md	64	7	\Cx25 \Wx17 \Ppx12 \multx3 \Totx3 \Picx1 \ordx2
+D159-离散立方体上二元信息的精确收缩.md	19	0	\Ex24
+D16-径向对势的连续温度奇点.md	27	1	\convx22 \Tx3 \ddx1
+D160-半代数有界域的紧商对称化：从Kollár-Pardon问题二十五到Vey模型的反推笔记.md	59	4	\Cx47 \Dx11 \epsx7
+D162-Kaplansky直接有限性猜想在特征二的反例：从配对恒等式到终止有限搜索的反推笔记.md	47	1	\Fx15 \Matx15 \rankx4 \suppx8 \diagx2 \idx2 \imx2
+D163-四次多项式无平方因子值的数域行列式路线与自适应辅助素数.md	57	3	\epsx23 \Cx24 \Qx19
+D164-高斯素数有界步长行走的有限周期筛障碍.md	28	0	\TVx6 \avx4 \Ex19 \Prbx2
+D165-宇称翻转与加权分级-多项式阈值函数平均敏感度线性阶的反推笔记.md	61	7	\Prbx10 \sgnx11 \opx4 \Ex37 \Idx2
+D166-二维经典O(n)模型的指数衰减：聚类、旋转与环面尺度反推笔记.md	4	0	\Ex5
+D167-径向连续相变与代数衰减尾：有限分割与支撑几何反推笔记.md	35	21	\ddx3 \eex10 \convx7 \distx1
+D169-无噪高斯回归中记忆与精度的真实账本.md	39	17	\Ex17 \distx5 \Probx4 \affx3 \opx4 \volx2
+D17-整数次调和维数比较的反例.md	15	0	\Ricx7 \Idx8 \trx6
+D170-后副本与等标签测度下的记忆约束样本下界.md	21	0	\opx20 \affx1 \tcx1 \indx1
+D171-完全Crouzeix定理的思考链-最优度量与公共边界密度.md	6	3	\Dx4 \Tx2
+D172-第二个Kahn-Kalai猜想的常数账与树约化复算.md	68	0	\PPx41 \EEx31 \UUx11 \TTx4 \eex1
+D173-路由密度与表示压缩-Thorp扫掠.md	54	0	\opx19 \TVx3 \Trx5 \HSx8 \Ex25 \PPx2 \KLx1
+D174-光滑度量下Yau节点集上界的三维与四维反例.md	204	3	\Sphx10 \Tx5 \HHx4 \ddx161 \suppx12 \Idx21 \Hessx4 \gradx18 \distx2 \Divx11 \trx7 \divgx7 \volx10
+D175-良条件对数凹采样的次多项式查询复杂度与维度指数零.md	59	0	\TVx12 \polylogx37 \trx2 \opx4 \Ex2 \Wtwox2 \Lipx2 \HSx1
+D176-正则树上自由Ising模型IID阈值的锐利因子.md	102	1	\Ex103 \ddx40 \Varx7 \distx4
+D177-把时钟停在50的零熵映射.md	14	0	\htopx12 \idx2
+D178-四态Potts树上重构的容量判据反推笔记.md	91	0	\Ex79 \Capacityx8 \calCx6 \unifx9 \Probx3 \TVx8 \childrenx1
+D179-先把电荷折成能量亏损-带电时空Penrose约化的反推笔记.md	62	2	\trx11 \ddx53 \Areax4 \Divx4
+D18-Tachikawa第二猜想反例.md	295	8	\Homx70 \cokerx10 \sHomx31 \Extx58 \radx13 \cHx52 \Endx13 \sEndx1 \Resx12 \imx9 \pdx16 \cIx20 \Conex2 \addx10 \idimx18 \trx4 \domdimx6 \socx1
+D180-余维一上界：把奇异集维数钉在m-1上的反推手记.md	178	1	\Hhx39 \Singx15 \Regx1 \sptx30 \IIx6 \trx19 \ddx100 \volx11 \Lipx1 \diverx15 \Idx2
+D181-完备锥上的斜率配平与没有小Cohen-Macaulay模的三维完备局部整环.md	23	1	\depthx5 \Specx2 \Fracx1 \rkx8 \Torx5 \Totx1
+D183-一条平面尾迹顶穿Kohn-Sham系综表示.md	11	0	\Varx3 \Trx8 \suppx1 \Domx2
+D185-Wall-D2问题反例-循环塔与四行扭曲边界矩阵.md	79	0	\abx14 \Cx25 \Qx20 \imx2 \RPx13 \idx8 \Homx2
+D186-固定粒子停机测试的构造路径.md	23	0	\Tx13 \diverx11
+D187-给一般图的完美匹配计数装一台采样机.md	39	0	\epsx22 \Prbx1 \Ex19 \Varx3 \calEx8
+D188-五次型Gepner稳定条件构造手记.md	119	13	\Dx6 \OOx82 \Extx4 \Knumx10 \Cx11 \rkx1 \Qx4 \Homx20 \Cohx4 \imx1 \Dbx1
+D189-固定子句长度下随机SAT阈值的极限存在性.md	117	12	\EEx53 \satx17 \PPx31 \epsx20 \Varx11 \indx8 \Binx4 \Fx2
+D19-Ryser覆盖猜想反例-三次曲线弯出的刚度.md	32	0	\Fx28 \Ex7 \PPx5
+D190-树加权平面地图随机游走的线性时钟研究笔记.md	119	2	\Ex30 \cEx5 \Lawx5 \enx27 \ddx63 \ELx8 \volx6 \Cx1 \enstarx1 \distx4 \1x7 \diamx2
+D191-把生成量与存储量拆开算-最坏情况子集和的低空间算法.md	8	4	\polyx4
+D192-模数无界与Cannon猜想反推笔记.md	48	3	\Spherex3 \Isomx2 \diamx8 \Modx3 \cQx4 \Qhatx4 \oscx19 \distx2 \Stabx2 \HHx5 \ZZx1
+D193-四次分离指数最优性思维全记录.md	40	5	\Qx23 \Dx9 \bitsx1 \Ex8 \bsx6
+D195-一个PD4群没有闭非正曲流形模型.md	5	0	\PDx5
+D196-从Cardy公式提取Voronoi逾渗色关键点振幅.md	48	3	\epsx54 \Ex18 \Cx1 \TVx4 \Ppx1
+D197-素数自变量多项式差的幂节省.md	2	0	\Fx1 \Prbx1
+D198-单调图性质尖锐阈值猜想的显式宽度界.md	45	1	\Varx17 \Ex26 \1x3 \epsx1
+D20-群环行列式猜想的反例.md	55	0	\Matx15 \diagx24 \Fx19 \Cx2 \Qx2
+D200-无挠群上约化Baum-Connes装配单射性的整核类.md	69	0	\Ginjx32 \Crx22 \Cx4 \Fx14 \HHx12 \Qx1
+D201-无挠反例与分离谱带构造.md	28	4	\Gbasex13 \eex3 \Gprojx11
+D202-无扭群环失去直有限性的构造复盘.md	6	0	\Ftwox6
+D203-奇数开链同场能隙的转移矩阵反推.md	8	0	\Trx8
+D204-四维盘嵌入猜想的边界障碍：从自由群问题到Frobenius-Koszul障碍.md	4	1	\SLx3
+D205-闭Ricci流有界标量曲率与有限时间全曲率爆炸.md	135	0	\Ricx66 \Rmx45 \Spx24 \Utx16 \Ztx6
+D206-把半权除子的orbifold基本群装进一个八维特殊流形.md	53	6	\OOx37 \PPx13 \CCx17 \codimx1
+D207-Hadwiger猜想反例的二进制构造与四洞强制.md	68	1	\cmx34 \cXx4 \Fx6 \cVx3 \transx6 \cIx4 \cEx2 \GLx2 \Ex4 \cKx4 \epsx5 \cBx2 \rankx1
+D208-Naimark问题ZFC反例复盘：可数决定替代状态猜测.md	3	0	\Adx3
+D209-Sidorenko猜想反例构造过程研究笔记.md	48	6	\Homx2 \Ex29 \Fx4 \1x7 \rankx7 \Varx1 \TVx1
+D210-色数如何冲破谱不变量的上界.md	18	0	\rawlawx4 \cEx8 \Ex3 \cXx1 \suppx1 \imx4 \cBx2
+D211-三边际Coulomb代价的Monge拟设反例.md	54	12	\ddx24 \Ex8 \calHx10 \suppx5 \Idx2
+D212-粗Novikov猜想反例的逆向工作笔记-绕行数持久性与常向量平均传递.md	79	20	\idx1 \lfx11 \HHx14 \SLx15 \Qx7 \KKx7 \Cx6 \Adx8 \propx3
+D213-邻近拉格朗日猜想的稳定管类反例.md	28	5	\Whx5 \imx5 \Intx3 \Diffx2 \idx2 \Hsx6 \Critx6
+D214-边界行列式复杂度三次下界之路.md	150	11	\bdcx23 \dcx7 \perx28 \Singx5 \Cx17 \Matx2 \PPx21 \adjx12 \cOx28 \imx5 \trx1 \lengthx19 \cokerx4 \Homx3 \GLx1 \Hilbx7 \codimx4 \Specx1 \Grx2 \rankx1 \diagx1
+D215-稀薄Bose气体的密度均匀凝聚下限.md	20	0	\ddx22 \Trx2
+D216-线性次高斯与维度无关对数Sobolev不等式的反证路线.md	117	5	\Entx10 \Idx14 \Ex75 \Covx3 \Lawx5 \suppx1 \Domx6 \Icalx14 \Varx2 \rankx4 \Probx1 \opx3 \trx4 \HSx1
+D217-方向零一律的有限程依赖证明路线复盘.md	27	0	\ZZx4 \Depx6 \Entx11 \EEx5 \onex6
+D218-严格椭圆方向零一律的反向重构笔记.md	27	1	\EEx17 \cFx1 \RRx1 \1x9 \ZZx4 \PPx1
+D22-无穷拟阵Packing-Covering猜想反例.md	6	0	\clx9
+D220-有限熵下微观态与非物质态自由熵分离的反例.md	37	0	\Volx5 \Ex19 \KLx18 \trx15
+D221-零熵系统没有光滑正体积模型：切换定律与辛图检验的碰撞.md	4	0	\TVx4
+D222-Calabi流在复射影空间上的有限时间奇点构造.md	25	10	\CPx17 \Cx7 \epsx10
+D223-二维分类空间为何不存在.md	32	0	\SUx14 \cdimx1 \gdimx2 \onex13 \Cx1 \Qx1
+D225-高标记数下的Pixton完备性Chow反例.md	75	0	\Mbarx14 \Salgx4 \Pspanx17 \Autx3 \Qx22 \CHx7 \Spx3 \Homx18 \Symx1 \Picx1 \Extx3 \tdx1 \Mx1
+D228-局部Penrose不等式与共形微扰的四次障碍.md	238	5	\epsx228 \AHx11 \ddx70 \Ricx7 \trx10 \Divx7 \scalx8 \IIx7 \Hessx13 \gradx1 \tfx4
+D229-从一个记号张量障碍倒推四维圆盘嵌入的否证.md	68	0	\Critx1 \trx15 \Jacx9 \Spfx2 \Locx3 \kkx5 \ddx31 \idx3 \gx7 \Adx9
+D23-Kaplansky奇特征直接有限性反例.md	62	0	\Fx23 \Matx20 \diagx8 \imx13 \idx2
+D230-非退化反例击穿Morse数Arnold上界.md	47	0	\Specx2 \Fixx25 \Morsex15 \Cx2 \augx2 \Fx3 \Homx5 \Jacx1 \Endx1 \Qx4 \Critx3
+D231-有理二元挠椭圆曲线的逐点2-反定理推导笔记.md	12	1	\Selx5 \rankx4 \Shax3 \Qx1
+D233-强瘦树的多项式时间构造.md	60	10	\Idx29 \trx15 \convx1 \opx3 \Qx2 \diagx4 \Ex6 \Spanx1 \rankx1
+D235-幂节省指数只依赖次数的intersective多项式差集.md	89	6	\radx8 \Fx11 \Ex37 \1x22 \epsx14 \Cx4 \suppx2 \Qx2
+D237-平面单位距离的power saving：一个上指数被撬动的思维链.md	39	10	\Ex36 \KLx2 \Cx2 \Qx1 \Probx1
+D238-平方差自由集的固定幂节省.md	42	10	\Fx9 \Ex21 \Cx4 \suppx2
+D239-基本群很大的射影四维与非Stein万有覆叠.md	114	3	\imx4 \Cx12 \Jacx9 \BBx15 \Qx2 \Endx2 \cDx8 \idx1 \PPx24 \cSx32 \Symx5 \distx7 \diamx1 \codimx1 \Picx1
+D240-高度三强色谱分裂的有理障碍.md	96	0	\Qx44 \Fx10 \Cx2 \Autx2 \Galx1 \Rlimx8 \ctsx11 \Spdx10 \cOx11 \Homx1 \GLx4 \trx3 \Endx1
+D241-平面圆堆积的尖锐傅里叶证书反推笔记.md	14	0	\RRx2 \ddx8 \ZZx4
+D242-熵界协方差对数与单纯形不等式.md	83	0	\ddx2 \Covx11 \Ex47 \Varx5 \trx26 \Idx12
+D243-切层自由的奇点反例逆向复盘.md	186	14	\CCx45 \mx2 \Derx15 \PPx16 \OOx69 \cTx11 \Resx12 \Symx1 \Trx4 \Homx3 \cFx38 \cIx44 \idx2 \Specx6
+D244-用颜色包与素数筛在三环面上造出简单Lebesgue谱.md	125	10	\ddx34 \eex34 \Tx39 \epsx28 \Cx1 \1x14 \suppx2 \Reax5 \calCx4
+D245-高温SK谱隙论文的思维链反推.md	134	59	\Covx6 \Dx14 \sechx4 \Ex55 \ddx12 \Varx6 \Probx18 \wtx4 \diagx4 \Trx6 \onex5 \Lipx1 \Frobx4
+D246-四变量稳定坐标反例的逆向工程笔记.md	32	2	\Cx6 \Ax12 \grx4 \Specx4 \Gx3 \SLx1
+D247-四行永久式的严格指数与Thorp洗牌置换矩.md	46	0	\Ex7 \Trx39 \Resx2 \Ppx6 \Indx2 \opx4
+D248-曲面反例如何杀死Shafarevich全纯凸性.md	47	0	\imx4 \Fx15 \idx22 \Cx2 \PPx8 \Autx1
+D249-从全局谱隙到二维纠缠面积律.md	30	3	\Trx6 \Ex15 \distx2 \Symx2 \polyx3 \diamx1 \idx1
+D25-Crouzeix完整不等式直接证明.md	278	145	\Cx46 \Dx37 \Tx69 \trx38 \diagx6 \distx12 \Reax1
+D251-沿Lipschitz方向Hilbert变换的一致L2界.md	40	0	\Lipx10 \onex22 \Cx1 \distx6 \suppx3 \Ex1
+D252-超图性质的一致影响量上界与阈值宽度猜想.md	38	0	\Varx25 \Ex13
+D253-阿贝尔覆盖Gale对应与Hodge猜想自幂-工作笔记.md	61	4	\Jacx11 \Dx12 \Qx13 \CHx2 \PPx8 \Gmx8 \Ax5 \Cx3 \Grx1 \Ux1 \prx3 \kkx3 \Qbarx1
+D254-弱无序Anderson模型的绝对连续谱.md	52	0	\PPx4 \EEx6 \Schurx2 \diagx11 \Idx17 \distx11 \Ranx2 \CCx1 \RRx1 \ZZx1
+D255-非消失之后的abundance与紧致Kähler四维形的地板生成.md	102	11	\Qx25 \OOx73 \NSx4 \Suppx10 \Cx6 \PPx4 \grx5 \DRx2
+D256-正特征三维fold数值维一丰盈性的反推笔记.md	110	2	\Qx4 \Picx6 \cOx62 \cRx25 \Suppx1 \rkx10 \Homx6 \tdx1 \cBx3 \idx11 \cZx6 \PPx8 \cLx5
+D257-一张Kuga-Satake张量换回全部次数.md	206	11	\Qx134 \CHx21 \Cx10 \Endx7 \Spinx1 \idx13 \NSx9 \clx3 \Hgx11 \GLx2 \SOx11 \Picx4 \PPx21 \Kmx1 \Jacx1 \Symx1 \imx2 \rankx4 \Homx5
+D260-正交不变Ising自旋玻璃的全温度压强.md	47	1	\diagx3 \Ex37 \Trx4 \Probx6 \indx4 \suppx1
+D261-稀疏一般图最大基数匹配的几乎线性时间.md	10	1	\polylogx5 \volx3 \Ex1 \distx1
+D263-带号超量与高度湮灭的逆向思维链.md	52	0	\ddx40 \epsx13 \Divx2 \volx3
+D264-C4中环境同胚重数四与五的孤立超曲面germ研究笔记.md	48	5	\Qx22 \Tx4 \Hhx9 \Dx13 \trx4 \Cx3
+D265-ambient同胚与重数的分离.md	77	2	\Cx13 \ordx11 \rankx4 \Fx3 \Qx50 \Resx2 \SUx9 \GLx3 \Ax2
+D266-几乎线性编辑距离近似方案的反推.md	20	3	\EDx2 \Ex9 \indx5 \connx4
+D267-非谱双曲性锥的精确半正定提升反推笔记.md	37	3	\trx27 \adjx6 \Symx7 \Cx2 \Reax1 \rangex1
+D268-单元格有界列联表FPRAS的反向推导笔记.md	16	2	\distx3 \Varx12 \TVx1
+D269-二值容量公共整多面体基FPRAS研究笔记.md	36	1	\epsx22 \PPx3 \onex28 \ddx4 \volx5 \Ex2 \convx1 \rankx1 \Varx1
+D27-Fock空间不等式与Laughlin谱隙.md	17	1	\epsx6 \FFx8 \LLx1 \ranx3
+D270-Gersten猜想整系数反例的构造逻辑.md	112	1	\Qx14 \Fracx6 \Fx27 \Picx15 \Galx5 \OOx36 \Specx18 \Brx3 \Dcalx7 \Projx1
+D271-整三次Gersten核类：一条五次分歧曲线的复盘.md	164	24	\Qx29 \Fracx17 \Xx9 \OOx9 \Fx55 \Specx27 \Trx6
+D272-无理迹数投影的铸造路线.md	109	0	\Qx12 \Gsurx36 \Fx42 \Cx5 \specx5 \Adjx9 \suppx10 \distx2
+D273-二维O3自旋场的孤立粒子极点.md	53	10	\suppx8 \Ex20 \Trx3 \Covx12 \onex1 \sgnx2 \Probx9
+D274-非负曲率四维流形的L2-Einstein间隙.md	175	24	\ddx31 \Ricx54 \Scalx6 \Rmx67 \CPx6 \diamx4 \diverx4 \Ex14 \Volx7
+D275-用矩阵能量的曲率拿下dyadic三角Hilbert型的L3界.md	234	119	\cAx35 \cDx13 \suppx3 \ddx16 \trx38 \Ex16 \Idx29 \diagx8 \opx7 \HSx8
+D277-欧拉函数值个数的渐近公式.md	10	0	\ex5 \ddx3 \onex3
+D279-用矩量定出SLE的精确Hausdorff规范函数.md	151	0	\PPx39 \diamx4 \EEx55 \Hausx7 \HHx18 \ddx60 \DDx5 \indx29 \distx1
+D28-双曲群无几何CAT0作用.md	4	1	\CATx3
+D281-核范数超幂嵌入的显式障碍-dyadic群配置与前驱有限链.md	18	0	\SLx17 \Ux1
+D283-无限有限表示周期群构造手记.md	75	0	\Stx18 \Ex13 \GLx5 \Fx37 \Homx5 \Qx12
+D284-一个无限有限表示的残余有限二元群.md	157	0	\Fx46 \Stx92 \Ex39 \Idx27 \Matx7 \GLx14
+D285-负标量曲率积分界与实单体积.md	75	0	\Scalx31 \Volx13 \wscalx19 \IIx16 \trx1 \diverx5 \HSx3 \indicx3 \Ex3 \Varx3 \Ricx2
+D286-自由群因子的同构一个小余圈吞掉额外生成元.md	77	43	\Fx9 \iix17 \Catx9 \ex1 \Trx2
+D287-三次高斯和的一阶矩与精确截断.md	4	0	\Trx1 \Reax3
+D288-环形变分攻克对称点三角希尔伯特变换.md	56	0	\HSx10 \ddx36 \trx13 \suppx1 \Dilx8
+D289-反典范非零截面从光滑半正性出发.md	71	0	\OOx33 \ordx16 \Cx31 \Suppx3
+D290-任意MASA上的逼近铺砌：从混合多项式到无期望三段装配.md	17	0	\diagx3 \Ex10 \Trx1 \Adx1 \onex4
+D291-面积可控的端替换与CKS类中的Bondi-Penrose不等式.md	18	4	\Sphx14 \TFx3
+D292-对数Calabi-Yau边界成分Stein度一致上界的反推笔记.md	113	35	\Qx23 \OOx27 \simqx13 \sdegx3 \Suppx4 \Pjx2 \Picx4 \kbx2 \Specx10 \birx2 \coeffx1
+D293-伯努利卷积的算术分类与非Pisot奇异性.md	20	1	\Pbbx4 \Ex21
+D294-局部域格扭致有限对应的算术穷尽性.md	49	22	\Spx5 \Adx12 \Trx5 \idx5
+D295-紧对数光滑Kähler纤维化的B半振幅.md	78	8	\Picx9 \Qx14 \ordx15 \cOx21 \Grx9 \Nmx9 \Cx1 \cVx1 \cLx3 \cHx2 \Kerx1 \cGx7 \rkx1
+D296-粗糙化阈端的高度普适性与低温平面自旋场极限.md	155	2	\nnx24 \bcx34 \Ex38 \Probx1 \beffx31 \Tx6 \Varx24 \suppx1 \distx1 \ddx1 \epsx28 \Covx5
+D297-素数阶Ryser猜想的平衡反例-分裂线与铅笔预算.md	19	0	\Prbx21
+D299-取值空间里的重整化-非塌缩RCD空间正则点双Lipschitz坐标工作笔记.md	94	4	\Idx56 \mx37 \RCDx5 \ddx27 \Hessx14 \suppx2
+D30-负pinched三维Kähler流形无有界全纯坐标.md	19	4	\Bx10 \Cx10
+D300-带基点行列式纤维上的虚拟局部化与Bloch猜想.md	61	1	\CHx42 \Albx4 \fibx2 \RHomx6 \Extx3 \idx1 \virx7 \Divx2 \tdx1 \Picx4 \eux7 \RGammax5 \Homx1
+D301-Bloch律在有限距离Heisenberg铁磁体下的逐段破译手记.md	8	5	\Divx1 \distx2
+D302-三维Bochner--Riesz猜想的熵与packet证明思路重建.md	198	31	\epsx103 \Planckx10 \betaqx23 \betacx11 \Mutx16 \Entx41 \EEx24 \KLx2 \PPx9 \indx4
+D303-硬球气体正温度玻色爱因斯坦凝聚.md	60	2	\Trx4 \ddx33 \Ex17 \diamx1 \cRx6 \indx5 \PPx5 \Affx14
+D304-边界图变形与时空Penrose不等式的三条路线.md	136	0	\epsx54 \ghatx6 \ddx23 \trx26 \Divx1 \cTx21 \divgx5 \gradx14 \Idx4 \Adx4 \cPx3 \Ricx3 \Hessx6
+D305-有界反典范度量与环商不变截面.md	102	10	\OOx36 \IIx4 \QQx26 \CCx21 \PEx7 \Suppx2 \rankx2 \esssupx3 \Autx1 \Liex4 \RRx2
+D307-法诺收缩上有界klt补标的阈值反推.md	39	4	\OOx3 \Qx13 \ordx4 \lctx2 \volx3 \Cx3 \Divx8 \Specx1
+D308-标量有界下的四维Ricci流光滑延拓.md	76	0	\Ricx44 \Rmx37
+D31-非谱形双曲锥.md	98	58	\Symx21 \adjx13 \projx6 \trx2 \opx21
+D310-布朗连续随机树极限与四条以上有限FK图.md	90	11	\Ex93 \ddx1
+D312-紧致双曲Kähler流形的典范放大性.md	113	6	\Dx13 \ddcx22 \Cx5 \ddx13 \trx28 \cLx15 \epsx45
+D313-次临界FK平面图的典范共形极限.md	51	0	\Chatx14 \diamx8 \ddx20 \Cx8 \EEx3 \PPx17 \distx1 \Lawx2
+D315-打开回路恒等式：临界Poisson--Voronoi渗流的Cardy公式.md	86	0	\Cx1 \epsx80 \Petax4 \Espx6 \indx3 \PPx9 \EEx9 \suppx1 \diamx4 \ddx5 \omx3 \Varx3 \iix2
+D317-任意接近却寻不到共轭酉的分离Cstar代数.md	134	2	\Bx6 \idx84 \KKx13 \Ex45 \Cx5 \distx3 \spanopx1
+D32-Tingley问题正解.md	30	5	\cox20 \clcox6
+D321-快速消失外力下一条粒子如何判定停机.md	17	4	\Tx13
+D322-随机3-SAT阈值的可计算性.md	77	0	\Ex65 \Probx9 \Poix11 \1x3 \ddx19 \Varx9
+D323-条件性极小模型：紧Kähler四维流形非消灭的整条反推路线.md	115	2	\OOx51 \Qx47 \cFx2 \Suppx12 \PPx5 \rkx2 \Picx3 \ddcx3 \Cx2 \ordx1 \NAx1 \iix2
+D324-观测路径之后的条件信息收缩.md	74	2	\TVx19 \Unifx10 \Ex46 \opx4 \HSx13
+D325-条件置换与揭示切换环境中的全牌混合.md	49	0	\Ex32 \trx5 \sgnx2 \TVx19 \opx4 \HSx9
+D326-方格随机簇临界界面共形极限的构思重建.md	24	2	\SLEx9 \CLEx4 \epsx7 \FKx2
+D327-共形流与带极小前界的黎曼彭罗斯不等式全维重构笔记.md	16	1	\Volx8 \Areax1 \suppx3 \distx4
+D328-弱耦合体相Ising关联的共形普适性.md	35	4	\diamx4 \Ex28 \onex1 \Cx8
+D329-MinUnCut常数因子难度的还原之路.md	99	8	\OPTx11 \Fx2 \Ex28 \Cx24 \sgnx1 \epsx28 \ddx2 \Probx1 \Costx2 \NPx2 \RPx1
+D33-每张图的线性圈与边分解.md	41	8	\epsx27 \Ex6
+D330-有向反馈点集常数因子难近度的重构笔记.md	52	13	\DFVSx15 \Ex30 \TVx2
+D331-均匀最稀疏割常数因子难度的逆向重建.md	133	2	\epsx22 \Varx13 \cDx15 \Fx27 \indx10 \cLx6 \cSx3 \Spanx1 \rankx3 \diagx3 \Probx14 \suppx1 \Ex24 \KLx1 \ddx15
+D332-可构造tame-Hecke特征层的正特征构造反推笔记.md	229	5	\Gdx40 \etx5 \cAx33 \Heckex31 \Bunx14 \adx15 \Liex13 \ICx8 \Specx5 \cBx53 \Nilpx2 \QCohx2 \IndCohx3 \Autx1 \Adx1 \Resx7 \SSx3 \cHx5 \Grx14 \Repx5 \cFx9 \Perfx2 \idx16 \Trx4 \Endx6 \cOx6 \lccx1 \rkx3 \Locx1 \imx1 \restrx1
+D333-接触Fano流形与LeBrun-Salamon猜想的证明思路.md	234	21	\PPx99 \OOx104 \Picx12 \Spx4 \Rmx3 \ZZx11 \GLx1 \CCx13 \PGLx2 \Homx5 \rankx2 \cokerx1 \Totx3 \Specx1 \Symx3 \idx2 \Autx1 \Liex2 \adx5 \Endx1
+D334-连续相位叶层如何逼出解析焦散领.md	74	21	\cSx13 \epsx45 \iix3 \Tx3
+D335-连续库仑谱下确界在二进制核电荷编码下的QMA难.md	35	2	\Cx5 \Specx4 \Qx1 \polyx6 \ddx22 \distx1 \suppx2 \Trx5
+D336-团禁止图对应着色的对数增益复盘.md	48	21	\EEx17 \PPx8 \TVx4 \KLx4
+D337-高度二上Hahn--Wilson猜想的fp型反例.md	94	3	\Thickx40 \BPx22 \Fx15 \Specx13 \Gmx4 \holimx4 \cofibx8 \Homx1 \Perfx1 \Qx1 \Spx2
+D338-弱色散分裂的球完备化反例、命名beta幂核与下降指数障碍.md	104	0	\Qx6 \Funx3 \fibx9 \expnx13 \Fx15 \Stx10 \Gx14 \mx6 \ctsx20 \Galx4 \cdx4 \imx9 \onex3 \Totx7 \Spx6 \cofibx5 \Trx5
+D339-平面XY模型临界中心磁化的对数修正与振幅确定.md	41	31	\Ex13
+D341-三维波动方程临界局部平滑的熵论证.md	68	37	\epsx37 \Idx2 \Probx5 \Ex1
+D342-临界SK模型单点热浴混合的多项式指数.md	46	1	\Dx26 \ddx4 \Ex16 \Entx6 \Varx7 \Covx3 \Pprobx1
+D343-蜂窝格临界带穿越质量幂律-1-4的求取全程复盘.md	23	1	\Ex22 \Probx5
+D344-从Cuntz比较到江苏吸收：条件C与中心缺陷填充的思维链还原.md	79	1	\Cux25 \Fx2 \herx1 \idx3 \Annx7 \epsx54 \Idealx2 \distx1 \Adx1 \Kx1 \Finx1
+D345-高温SK全区cutoff：从谱边到对数时标的反推笔记.md	40	1	\Ex29 \ddx12 \suppx2 \specx7 \Varx1 \Entx1
+D347-循环长度与色固定点损失.md	126	1	\onex29 \Qx32 \Spx12 \Borx15 \Funx7 \Homx14 \idx12 \Autx6 \imx4 \Surx3 \Endx3 \Fx5 \trx2 \Mapx8 \suppx9 \Spcx1 \ctsx10
+D348-六角晶格桥长对数窗口的反推之路.md	8	0	\diamx7 \Pfx1
+D35-最短公共超串的多项式时间二近似.md	110	37	\OPTx23 \epsx43 \prefx1 \sufx3 \ZZx7
+D350-八维De Giorgi猜想的正面解决：反推一条从单调性到平面heteroclinic的证明链.md	57	0	\Idx2 \ddx28 \epsx20 \cHx1 \distx7 \trx1 \sechx7
+D351-把hypersymplectic四流形变形成hyperkahler三元组.md	101	5	\ddx130 \Idx6 \Picx3 \epsx4 \Cx2
+D352-由单个边界片确定度量与幺正联络.md	14	0	\Cx15
+D353-素数域上多项式确定性因子分解的研究笔记.md	47	1	\Fpx29 \Qx10 \Nmx10
+D355-平均收益博弈确定性拟多项式算法的质量再加权递归.md	22	16	\lox2 \hix2 \Basicx11 \Qx3 \Labelx5
+D356-三维正曲率曲面的对角Fourier延拓攻坚笔记.md	16	1	\ddx16
+D357-盘转移表示与受限桥质量.md	1	0	\diamx1
+D358-Donovan猜想在素域代数闭包上的证明.md	36	0	\Resx4 \ordx6 \Fx3 \GLx5 \cOx16 \idx2 \Picx2 \Brx4
+D359-把单位代价编辑距离压进l1：指数内常数外的匹配夹逼.md	53	0	\Ex12 \epsx2 \encx6 \EDx25 \IDx34
+D36-投影体体积的单纯形最大反例.md	18	2	\convx4 \volx11 \projx14
+D360-电磁尾迹与Kerr-Newman-Penrose不等式反例构造笔记.md	65	0	\ddx92 \trx4 \Areax3 \Sphx10
+D361-初等正性与终止置换见证.md	51	7	\ginvx10 \Qx11 \Adx12 \invx12 \idx2 \Cx7
+D362-椭圆平方点有限性与A_2曲线Zilber-Pink.md	150	21	\Qx78 \Ax6 \Endx18 \Trx24 \cPx9 \GSpx7 \Spx15 \Cx9 \SOx8 \Gmx1 \diagx3 \Specx2 \discx2 \GLx4 \Matx5 \Liex2 \ordx7 \SLx1 \idx4 \trx4 \Adx1
+D363-椭圆容量传播与球面Fourier限制猜想的完整开范围.md	1	0	\Entx3
+D364-平面Schrödinger端点收敛的H三分之一次幂全程.md	1	0	\suppx1
+D365-端点逐点收敛：高维薛定谔方程的等号情形.md	71	1	\epsx70 \ddx15
+D366-局部维度十的零密钥纠缠态：一条反向推演的记录.md	107	15	\Tx22 \Cx22 \trx47 \ranx7 \Adx5 \rankx5 \Qx9 \Fx3
+D367-负曲率熵等式与局部对称性.md	7	0	\adx5 \Eux2
+D368-时空Penrose不等式的等号与刚性.md	13	0	\Areax3 \trx3 \Ricx2 \symx3 \Mextx2 \IIx1 \divgx2
+D369-矩阵Lieb-Thirring等号情形研究笔记.md	72	0	\Trx9 \trx18 \sechx27 \Cx3 \diagx5 \opx13 \Symx3 \HSx7
+D37-Seymour第二邻域猜想证明.md	116	66	\imx36 \rankx32
+D370-素数次数环面包在任意局部型下的等分布.md	96	7	\SLx15 \Qx22 \cOx20 \Discx2 \volx15 \ddx13 \epsx17 \cVx8 \onex6
+D371-任意阶本原四次环面包线的等分布.md	153	1	\OOx94 \Discx5 \Qx24 \Picx1 \diagx1 \covolx7 \volx13 \Nmx23 \Trx19 \Galx1 \suppx1 \Ex6 \Resx1
+D372-原始六次环面包的一等分布.md	49	0	\covolx2 \diagx2 \SLx4 \volx3 \Discx5 \Qx4 \Adx3 \Resx1 \ddx19 \onex4 \Trx1 \suppx3 \Ex5 \diamx1 \distx2
+D373-可均作用的等变Jiang--Su稳定性幺元稳定有限情形证明笔记.md	107	0	\Autx2 \Tx47 \epsx27 \iux18 \HSx13 \Trx14 \Adx5
+D374-无理角三角形台球的遍历性：双层构造与两步极限的论证缝隙地图.md	107	1	\epsx148 \ddx6
+D375-平面XY模型关联长度的本质奇点.md	49	3	\epsx31 \Ex6 \Varx15 \Covx1
+D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md	10	5	\Galx6
+D377-抽象初等类的最终范畴性谱.md	58	0	\cfx14 \Qx3 \rkx4 \Autx1 \Kx25 \tpx14 \clx1 \cix1
+D378-每张复K3曲面都是Oka.md	28	0	\Cx19 \Qx7 \idx1 \SOx2
+D38-Jacobsthal函数二次界.md	113	9	\eex13 \1x11 \Pbbx15 \Ex29 \epsx37 \Klx3 \radx3 \lix2 \oox1
+D380-低Selmer余秩推出精确BSD公式.md	90	1	\Qx65 \corankx3 \ordx2 \rankx4 \Shax28 \Regx6 \Cx2 \Selx5 \lengthx7 \imx2
+D381-对数空间类的精确去随机化.md	16	0	\Lclassx5 \RLx9 \BPLx9
+D382-六阶复Hadamard矩阵的精确Fourier证书.md	42	0	\Cx9 \Tx7 \Ex9 \Reex11 \ordx12 \trx4 \Qx1
+D383-任意边缘下列联表的精确均匀采样.md	31	2	\epsx3 \TVx12 \Varx9 \volx13 \Ppx1 \Ex2
+D384-二维O4格点模型的精确质量渐近.md	158	26	\ex126 \ddx15 \Ex7 \Trx15 \Cx4 \iix19 \sechx2 \diagx1
+D385-精确阶与不变反典范线性系.md	131	10	\Qx20 \Specx2 \Cx45 \ordx14 \trdegx1 \divisorx11 \OOx34 \coeffx3 \ddcx4 \rankx3 \Picx7
+D386-固定门集上的精确量子因子化.md	3	0	\ordx3
+D387-存在一元实语句在计数层级中的定位.md	58	19	\EATRx3 \PPx9 \CHx6 \PSPACEx3 \Fx5 \sgnx9 \ETRx2 \Qx2 \FPx2
+D388-期望可哑子代数保持核心换位子.md	37	2	\Bx15 \Ux4 \Cx8 \HHx7 \suppx3 \Ex2 \Adx1 \convx1 \onex1
+D389-正位移匹配矩阵的指数PSD秩.md	87	2	\rankpsdx15 \trx61 \Ex23 \distx13 \rankx4
+D39-光滑度量无局部等距浸入三维空间.md	41	19	\IIx21 \ddx1
+D390-一致离散空间上Lipschitz自由空间的逼近失效.md	53	9	\Fx19 \Lipx5 \TVx5 \distx2 \Ex11 \Ppx1 \Idx7 \suppx1
+D391-色重叠在素数三处有限装配失效.md	83	9	\Thickx5 \Endx1 \Autx1 \idx3 \Nrdx7 \colimx6 \Spax4 \Zpx16 \Qpx12 \Homx6 \Fpx14 \Liex2 \Cctsx11 \Totx3
+D392-极大粗装配的有理单射性失效.md	37	1	\KXx12 \KKx8 \SLx8 \propx6 \Adx5 \Cx5
+D393-正特征有限对称张量范畴的纤维函子.md	1	0	\trx1
+D394-一般素数处的过滤色分裂.md	5	0	\Qx1 \GLx4
+D396-复配中的过滤乘积与保边界压缩.md	16	4	\rcx2 \holimx1 \fibx6 \idx3 \cofibx2 \mdimx3
+D397-编辑距离的有限圆障碍二进制码与直方图嵌入.md	18	0	\EDx21 \LCSx5
+D40-单叶函数严格逆一次幂界.md	108	0	\DDx6 \SSSx6 \HHx13 \KKx9 \Ex58 \rex12 \imx14 \indx11 \Cx3
+D401-变素数处的有限Smith-Toda复形.md	24	5	\mapx6 \colimx1 \cofibx8 \Fx6 \Totx1
+D406-紧Kahler四流形上有限极小模型程序.md	3	0	\BCx4
+D407-紧Kahler四流形上有限极小模型程序九月稿.md	15	0	\BCx17 \Qx1
+D409-随机正则图上弱Anderson无序的固定能量普适性.md	17	0	\PPx10 \PVx7
+D41-敏感度与块敏感度的超二次分离.md	5	1	\bsx4
+D410-素数2处的Fontaine-Mazur模性.md	6	1	\adx7
+D417-零温Sherrington-Kirkpatrick序参量的满支撑.md	3	0	\suppx3
+D418-临界SK自相关的函数普适性.md	3	0	\Idx3
+D419-固定度随机正则图的GOE体普适性.md	35	0	\Idx15 \EEx18 \Trx6 \PVx3 \diagx2 \Cx1 \ddx3 \PPx1
+D42-无挠群代数含零因子.md	1	0	\diamx1
+D420-加权整数Lipschitz高度的高斯自由场极限.md	32	2	\indx6 \suppx2 \Probx2 \Ex10 \ddx14 \Tx2 \distx1 \Varx1
+D421-广义Cartan-Hadamard等周不等式与欧氏等号刚性.md	54	4	\volx12 \snx23 \Hessx6 \csx13 \suppx2 \onex1 \divgx11 \Lipx1 \Secx2 \areax1
+D422-广义星高度至多四.md	4	0	\epsx4
+D424-中性库原原子的外层电子半径.md	2	0	\Probx2
+D425-旋转亚极端Kerr时空附近的C1未来不可延展性.md	7	0	\ddx1 \epsx6 \suppx1
+D429-尖点远足参数的整体Arthur提升.md	248	12	\Fx11 \Qx9 \SLx19 \Liex10 \Frobx15 \GLx2 \Specx16 \Adx33 \RHomx24 \suppx6 \gx27 \Cohx9 \Satx2 \Frx11 \Mapx2 \Repx5 \Homx27 \Trx7 \Perfx2 \cOx6 \Symx10 \Extx8 \Endx12 \idx6 \rkx1 \Indx1 \adx9 \fibx2
+D43-无挠双曲群非残余有限.md	44	1	\Fx18 \trx9 \rankx25
+D433-Goldfeld解析密度猜想与椭圆曲线的2-converse.md	14	0	\Selx10 \Shax7
+D435-稀薄硬球玻色气体的基态凝聚.md	11	2	\PPx8 \diamx1
+D436-稳定Morse数以下的哈密顿不动点.md	4	1	\rankx5 \Morsex1
+D437-二十二维中低于稳定莫尔斯数的哈密顿不动点.md	6	0	\CPx5 \Torx2
+D438-硬球涨落极限在正则Boltzmann生存期上的达成.md	207	0	\epsx211 \Bolx10 \ddx68 \Ex13 \TVx6 \indx3
+D44-小finitistic维数无穷的代数.md	73	4	\pdx12 \findimx11 \gldimx20 \Endx1 \Karx5 \Homx3 \idx4 \Dx3 \Conex3 \Extx4 \Torx1 \radx12 \Findimx4 \projx1
+D440-有理数上的希尔伯特第十问题与有限理性测试.md	1	0	\Shax1
+D442-双曲性锥没有半正定提升.md	33	1	\rankx25 \ranx4 \epsx2 \Grx2 \Symx1
+D446-分裂切丛在有理连通流形上的自动可积性.md	88	1	\prx7 \idx2 \PPx31 \rkx4 \OOx27 \whx61 \CCx4 \evx2
+D45-Auslander-Reiten猜想显式反例.md	311	20	\kkx99 \Homx65 \Extx73 \radx50 \idx16 \Endx10 \cokerx22 \imx27
+D453-无理解的三次四次形与几何K3范畴.md	2	0	\Kux2
+D454-卡迪森相似定理经一致导子估计的统一证明.md	3	0	\distx3
+D457-从伴随除子的约化支撑提升截面.md	51	1	\PPx11 \Cx5 \wtx1 \Qx18 \Suppx3 \kkx15
+D458-随机3-SAT击中时间的线性方差.md	1	0	\indx1
+D459-精确高斯观测下的定位代价与信息增长.md	4	0	\Probx5
+D46-复仿射空间消去律失效.md	74	13	\Affx23 \Gax3 \Specx8 \grx3 \wtx8 \Clx2 \Autx1 \kkx11 \ordx4 \Rtx6 \Gtx3 \Dtx2
+D460-紧Kähler空间在对数Iitaka亚可加性假设下的对数丰度.md	12	0	\ordx3 \volx8 \rkx1
+D461-特征零对数丰度：带号边界、形式提升与Frobenius比对.md	47	0	\OOx32 \Suppx5 \volx3 \Cx15
+D463-对数Kodaira维数与整条纤维的形变.md	12	1	\Cx1 \Qx1 \kbarx1 \Varx1 \ordx1 \ddcx1 \cOx1 \Birx6
+D464-弱无序平面Ising模型的对数相对涨落.md	18	0	\Ex18 \Probx1 \onex1 \Covx1
+D465-带标记多边形关联与单弧界.md	3	0	\diamx3
+D466-固定长度六角蜂窝行走的质量与覆叠指数.md	7	0	\Probx8
+D467-高维极大多点Seshadri常数.md	18	1	\multx4 \Cx5 \volx4 \convx4 \ordx1
+D468-正特征域上极大多点塞沙德里常数.md	1	0	\Ax1
+D472-次临界FK与生成树平面图的度量测度极限.md	4	0	\Pbbx1 \Probx2 \SLEx1
+D473-负球感知机的微观阻塞.md	123	1	\Ex52 \epsx54 \ddx28 \indx9 \Varx2 \cNx5 \Probx21 \esssupx1
+D476-广义对数典范Q对的极小模型与Mori纤维空间.md	1	0	\Cx1
+D478-虚二次域上椭圆曲线的模性.md	4	0	\PGLx2 \GLx2
+D479-正整数中有限和与有限积的单色性：预测与对齐两原理的反推笔记.md	49	2	\FSx1 \Qx5 \Ex23 \1x4 \PPx9 \suppx1 \epsx7 \FPx1
+D48-矩阵乘法九四分之次.md	52	2	\rankx51 \epsx1 \degenx1
+D480-临界方格FK界面的自然占有测度.md	107	1	\1x10 \Ex51 \ddx29 \Reax2 \Ppx36 \Cx2 \distx7 \trx5
+D482-Littlewood多项式的近似极小极大值与正的极小值.md	12	0	\Tx6 \ex7
+D484-准传递图在临界点不发生渗流.md	36	1	\pcx28 \PPx9
+D487-三维有界可测标量电导率逆问题的非唯一性.md	6	0	\epsx5 \Idx2
+D489-非可均准传递图上渗流的非唯一性.md	22	3	\Autx1 \trx15 \Nbx6
+D49-中心圆盘极大算子的端点梯度界.md	90	15	\ddx44 \Lipx3 \distx11 \suppx7 \Probx6 \1x7 \Ex5
+D490-带局部守恒量的硬球玻尔兹曼方程非唯一性.md	11	1	\ddx4 \esssupx2 \indx5 \suppx1
+D492-半正伴随除子的数值半丰性.md	20	13	\OOx2 \Qx2 \rkx3 \Suppx1
+D495-单子样本足以对抗全能对手的拟阵先知不等式.md	93	8	\rkx33 \clx19 \OPTx15 \Exx33 \Probx8
+D497-可解闭伽罗瓦群开同态的刚性.md	204	30	\Galx31 \Qx160 \Cx1 \Frx18 \corx10 \resx4 \Indx6 \Fx10 \Clx2 \Adx3
+D499-轨道形底与对数Iitaka次可加性.md	10	1	\ordx5 \rankx4
+D50-非坐标多项式与三维仿射零纤维.md	12	0	\CCx1 \Affx10 \gradx2
+D500-普通两点乘性函数相关的每一步截断证明.md	42	1	\Ex8 \Pbbx7 \epsx38
+D501-复合秩固定行列式P=W全上同调比较.md	3	0	\SLx1 \GLx2
+D502-阿廷群抛物子群交的调和高度证明.md	8	0	\socx2 \Topx6
+D504-退化里奇平直树的路径选择与椭圆不等式.md	4	0	\Ricx5
+D505-混合变换的逐点多重遍历平均.md	41	2	\Ex43 \lawx4 \trx2
+D506-选择长度下的四重平均逐点收敛.md	30	11	\ddx23 \Ex1
+D509-平方格点有隙基态的多项式PEPS逼近.md	2	0	\Trx2
+D51-无限有限表示单可均群.md	200	8	\Altx48 \OOx93 \RRx6 \ZZx61 \Symx8 \TVx10 \HSx3 \imx7
+D510-布尔神谕下的多项式时间酉合成.md	2	0	\Trx2
+D515-正标量曲率与余维二一致宽度.md	46	0	\Scalx17 \UWx3 \lapx2 \Divx1 \ddx8 \epsx9 \distx3 \trx4 \gradx2 \diamx2
+D516-正数量曲率迫使有理非本质性的证明链条重建.md	33	18	\Scalx14 \sgnx1 \distx1 \Ricx5
+D518-Serre交汇重数正性猜想的证明笔记.md	2	0	\Specx4
+D52-c0的双Lipschitz吸收而无线性拷贝.md	38	2	\Lipx27 \suppx12
+D520-平凡典范丛三维簇上的标定大体积中心荷.md	29	1	\tdx13 \Knumx5 \RRx6 \QQx9 \OOx5 \ZZx1 \Dbx1
+D521-具有偶数个素因子的素数前驱.md	6	1	\1x2 \ex4
+D522-每个容许整数底数的原根.md	7	1	\ordx1 \Qx3 \ddx1 \GLx1
+D523-射影霍奇线与寻常稻冈次可加性.md	80	11	\rkx11 \Picx1 \Qx22 \Cx15 \Endx1 \Homx1 \Autx2 \ordx2 \cOx19 \Symx3 \idx3 \volx1 \ddcx6 \Grx1
+D524-拉格朗日纤维化的底必为射影空间.md	6	0	\Homx11 \Endx1
+D525-二维Anderson模型在任意正无序度下的纯点谱.md	7	0	\Ex1 \PPx6
+D531-稀释硬球玻色气体耗竭动量分布的证明之路.md	9	0	\epsx7 \Trx2
+D532-固定有界斥势的博戈留波夫耗竭.md	6	0	\Ppx2 \Ex7 \1x1
+D535-弱无序FK-Ising界面的淬火SLE普适性.md	2	0	\epsx2
+D536-弱随机键Ising模型的淬火SLE3普适性与对数衰乱轨道.md	18	0	\Probx4 \Ex11 \Varx4 \ddx1
+D537-一般弱随机键Ising模型的淬火SLE3极限研究笔记.md	58	1	\Probx10 \Ex46 \Varx4 \Covx3 \ddx2
+D545-阿瑟滤过的有理性：从幂零奇性支集到矩量判据.md	4	0	\Bunx1 \sslashx1 \cptx2
+D547-模ell-Milnor积重构函数域.md	33	1	\Isomx4 \Frobx3 \trdegx9 \Homx3 \rrankx3 \suppx1 \ordx8 \Specx1 \Galx2 \PGLx4 \Affx2
+D548-对数卡拉比-丘纤维化的相对分母与有效线性系统.md	13	1	\multx2 \Clx8 \Picx4 \Homx1
+D550-可移除边界与圆域刚性的重建.md	29	0	\ddx31 \locx2 \oscx1 \diamx1
+D552-连续焦散围领逼出椭圆.md	4	0	\ddx7
+D553-罗赫林单变换多重混合问题的正向解答反推.md	8	0	\Lawx2 \idx3 \Kerx2 \trx1
+D554-行列对称删除格恢复与坐标扫描的有界阶收缩.md	2	0	\HSx3
+D555-弱有限程扰动如何保住弦型三型界面.md	3	2	\distx1
+D559-次一自对偶随机集群界面的共形极限.md	11	4	\PPx1 \iix6
+D56-depth-three布尔电路的平方根指数下界.md	42	0	\corrx23 \bitsx11 \Ex11
+D560-正规射影簇的半代数万有覆叠分类.md	3	2	\Cx1
+D561-固定非对角拉姆齐数的精确对数指数.md	1	0	\Ex1
+D564-二维O4模型的锐利质量界.md	4	0	\ddx2 \specx1 \Cx1
+D565-光滑曲面上零点集长度的尖锐上界.md	1	0	\epsx1
+D57-两个拟阵公共基的近似计数.md	96	3	\rankx30 \Omx31 \Probx5 \onex5 \calEx10 \Varx19 \Qprojx9 \Ex15
+D574-一块边界补丁上的光滑各向异性Calderon唯一性.md	5	0	\suppx1 \trx1 \distx1 \volx1 \rankx1
+D578-包络面积与刚性视角下的时空彭罗斯不等式.md	73	0	\Areax4 \Scalx4 \trx12 \Ricx10 \Mextx5 \ddx50 \AHx1 \epsx18 \Hessx8 \Divx4 \scalx2
+D58-实Littlewood多项式极大值的渐近最小.md	43	16	\Tx5 \ex25 \Cx1 \sgnx3
+D582-量子海森堡铁磁体的低温自发磁化.md	11	1	\distx8 \Trx2 \suppx1
+D583-方格图随机簇界面与嵌套环圈的共形极限.md	3	0	\Cx1 \CLEx2
+D585-稳定子轨道局部稠密性与厚张量理想链.md	155	1	\Endx3 \Qpx25 \mmx44 \OOx25 \Zpx18 \Homx5 \Specx11 \Fpx4 \Fracx4 \Spfx2 \Perfx8 \Cpx26 \Liex5 \idx1 \Suppx2 \Spcx7 \Annx2
+D587-典型SK初态的拉伸指数混合势垒.md	320	4	\kapx21 \PPx65 \EEx65 \TVx6 \Sigx12 \Ex109 \Probx4 \Varx12 \ddx92 \trx10 \cPx14 \epsx13 \Covx5 \suppx7 \1x1
+D589-强Ulam稳定性与可均性的刻画.md	10	1	\trx9
+D59-向后交织算子与传递交换子.md	56	42	\Bx8 \Latx1 \ranx5 \Cx3
+D591-三维强微分同胚逼近p大于2研究笔记.md	1	0	\epsx1
+D595-多点标记的温和特征层构造手记.md	18	0	\Specx3 \Gdx10 \Repx3 \Grx3
+D60-模谱均值的有界恢复.md	229	188	\Cx24 \Bx10 \Domx2 \suppx5 \linspanx1 \idx2 \BCx1
+D604-紧致凯勒四折广义典范翻转终止性的反推笔记.md	22	0	\bMx17 \Excx2 \Suppx5
+D607-度量k中位近似阈值：有向比较不等式与势函数路线的反推笔记.md	44	0	\OPTx2 \Ex35 \Varx7 \Probx2
+D61-choiceless带计数P时间不含P时间.md	10	0	\CPTx10
+D610-函数域重构定理的思维链反推.md	39	0	\Zellx24 \Isomx14 \Frobx2 \Homx4 \Fellx2 \Qellx2
+D611-稳定径向势在正则动能区间上的玻尔兹曼-格拉德极限.md	12	0	\ddx4 \epsx15
+D613-临界自旋场的平面XY模型.md	1	0	\Varx1
+D614-2进赫克代数在奇水平处的维数：上下界夹逼复盘.md	49	0	\frakxx47 \frakmx4 \epsx8 \Specx1
+D615-A2中曲线的E乘CM分量齐尔伯-平克定理与轨道下界.md	63	0	\Ax17 \Qbarx5 \imx3 \Liex1 \Endx6 \discx1 \Qx4 \Cx6 \Homx1 \cplxx2 \CMx18
+D616-整数Lipschitz高度在双弧边界数据下的高斯自由场极限.md	17	1	\Trix3 \EEx14 \PPx2
+D617-方差乘子为-1-over-arcsin-c-over-2-的平衡六顶点模型的高斯自由场极限.md	32	0	\ddx45 \sgnx2 \diagx1 \Trx1
+D619-各有限维下的希尔伯特-史密斯猜想.md	248	30	\Zpx33 \Tx32 \Pcatx16 \Dx48 \idx30 \ptx15 \Qx38 \imx3 \Homeox2 \Fixx2 \Tzerox6 \Pzerox3 \Conex5 \Homx11 \Bcatx38 \Bzerox11 \Cx7
+D62-广义振幅衰减信道的经典容量与熵不等式.md	126	17	\Ax32 \atanhx17 \entx41 \diagx12 \Trx32 \ddx26 \Cx14
+D621-三维的卡克亚极大猜想.md	7	0	\leexpx5 \Probx1 \eqexpx1
+D622-轴对称电真空外部克尔-纽曼-彭罗斯不等式.md	86	0	\divgx12 \ddx113 \epsx14 \Areax1
+D623-素数三处的凯尔韦尔不变量问题.md	116	45	\Extx10 \Fx35 \Qx3 \calOx16 \BPx25 \MUx6 \Totx4 \Autx1 \Trx1 \Resx3 \imx2 \Homx1 \calAx3 \HFx1
+D626-全局函数域上的Margulis-Platonov猜想.md	65	4	\SUx2 \Ux9 \Resx10 \Shax4 \bbPx2 \diagx4 \Galx1 \ordx7 \Liex1 \bbAx1 \SLx8 \Nrdx14 \GLx2 \PGLx2 \PSLx4 \imx1 \bbZx5 \bbGx7
+D627-数域上的Margulis-Platonov猜想.md	34	0	\SLx8 \SUx2 \Ux5 \Nrdx3 \Resx5 \bbCx1 \bbGx11 \Galx2 \Liex1 \ordx1 \Shax1 \bbAx1
+D628-稀释自旋玻璃的空腔层级变分公式.md	15	0	\Ex3 \epsx18
+D629-编码路径与两尺度组合实现拟线性归约.md	39	0	\epsx40
+D63-三维平铺单胞无完全周期平铺.md	42	30	\Fx12
+D630-极大渐近双曲初始数据的庞罗斯不等式.md	80	8	\AHx6 \Areax5 \epsx10 \ddx46 \trx9 \Scalx8 \Perx2 \AFx1
+D631-素数前驱的泊松狄利克雷定律.md	2	0	\1x2
+D632-准黎曼猜想的立方高斯和下降证明.md	106	2	\Reax11 \Qx4 \OOx14 \NKx90 \indx11 \precbdx14 \ddx3 \Ex9
+D633-铁磁四态波茨模型的重构阈值.md	4	0	\unifx5
+D634-正特征受限几何朗兰兹等价.md	55	4	\Funx2 \QCohx11 \IndCohx7 \QLissex11 \IndLissex2 \Specx2 \Bunx8 \Shvx16 \Liex5 \Adx1 \Endx1 \Vectx7 \Frobx1 \Repx3 \Nilpx11 \RGammax1
+D635-椭圆曲线在每个素数处的塞尔默逆定理.md	7	0	\Shax7
+D636-r(5,t)的尖锐对数指数.md	19	0	\EEx21 \PPx1
+D64-装箱问题的加性难度与无界配置间隙.md	125	0	\OPTx20 \LPx15 \indx8 \FTx8 \Tpx5 \Zancx12 \Upx12 \DMx16 \Tmx11 \Umx13 \FMx6 \Srowx10 \FGx5 \Yancx4 \Wauxx8 \DGx4 \lenx4 \classPx1 \classNPx1
+D645-二维O3模型正则大质量连续极限的构造.md	10	0	\Ex12
+D67-条件坐标扫描与解析迁移.md	17	0	\TVx1 \opx12 \Trx5
+D68-相容性熵与Thorp扫描的谱.md	64	0	\opx20 \TVx5 \Trx24 \HSx9 \PPx12
+D687-带电荷的时空彭罗斯不等式与原始数据刚性.md	32	0	\Areax6 \EEx18 \BBx22
+D688-三维量子Heisenberg铁磁体的球面磁化律.md	126	7	\Trx31 \ddx5 \Ex50 \PPx15 \Cx1 \Reax20 \Imax4 \diagx6 \Divx2 \distx3 \1x10 \Varx2 \sechx1
+D690-迹锥分类Razak-Jacelon稳定化.md	1	0	\UHFx1
+D691-二进主部BSD公式在Selmer余秩至多一.md	39	0	\anx13 \Selx6 \Picx2 \Shax12 \Regx8 \corankx1 \torsx1
+D692-SU(N)BFSS模型的唯一阈值束缚态.md	27	0	\Kerx10 \Trx4 \adx3 \Spinx6 \Ux3 \SUx2
+D694-热FK-Ising界面与有质量SLE.md	6	1	\Cx1 \Imax2 \iix1 \Dx1 \ddx1
+D695-每个严格高维中的Thomason模型结构.md	49	0	\Sdx29 \Exx20 \nCatx6
+D697-平移覆盖密度可达nlogn阶.md	1	0	\volx1
+D698-二进制编辑距离的树构造与l1畸变下界.md	32	0	\EDx11 \LCSx6 \wtx5 \Tx6 \Prbx2 \encx3 \ordx1 \distx1
+D70-SherringtonKirkpatrick模型的临界慢化.md	88	0	\Varx14 \sechx5 \TVx2 \Probx26 \Trx5 \Ex43 \diagx4 \oscx7
+D701-随机均值收益博弈的确定性拟多项式时间.md	74	0	\valx12 \MPx9 \onex43 \cLx9 \Ex17 \Prbx1
+D702-特殊拟射影簇的两步单值化与一个非特殊纤维.md	220	0	\GLx2 \Albx5 \imx4 \Torx5 \Qx33 \mx22 \gx119 \kkx65 \PPx50 \Blx1 \OOx10 \Suppx2 \divisorx3 \Gmx2 \unx2 \Cx3 \Liex2
+D703-超平坦实Littlewood多项式.md	14	0	\Tx4 \ex11 \Cx1
+D706-法诺型收缩的一致卡蒂埃截面：从阈值比值到特征钉住障碍.md	42	2	\Cx8 \Suppx3 \Qx5 \ordx11 \divisorx6 \trdegx3 \volx7
+D708-正特征下一致非交换矩阵击中点.md	6	0	\ordx6
+D709-弱可逆质量作用系统中的类一致永久性：仿射极小、割通量与尺度迭代.md	10	0	\epsx7 \onex3
+D71-完美匹配多面体的熵与面维数.md	41	9	\convx3 \Entx11 \suppx5 \affx1 \rix1 \Ex2 \rankx1 \trx12 \diagx1 \Covx1
+D710-一致多重典范饭高纤维化.md	79	0	\OOx21 \Qx25 \Cx6 \Divx17 \ordx8 \volx3 \Birx4 \Clx1
+D713-四维对数Iitaka纤维化的统一有效度.md	3	0	\multx4
+D714-均匀超额电荷与中性原子外半径.md	54	0	\Cx4 \Trx5 \epsx7 \cTx19 \Ex11 \cFx10
+D715-半对数典范对数Calabi-Yau对的均匀指数.md	71	0	\Qx23 \Cx33 \PPx6 \Divx3 \Trx1 \OOx8 \multx2 \volx2 \Specx1
+D716-一致对数饭高纤维化与有界模空间分母.md	86	0	\Qx5 \OOx11 \ordx38 \Cx16 \Divx18 \simqx10 \Suppx2
+D718-均匀拟多项式时间迹重建的反推笔记.md	68	0	\EEx16 \iix35 \RRx11 \rex17 \CCx2
+D72-L1的Daugavet子空间的精确渐近模数.md	18	5	\epsx8 \Ex2 \PPx3
+D720-完备正双截曲率Kähler流形的单值化.md	12	0	\epsx14
+D722-对称群张量平方覆盖定理的反推思维链.md	18	0	\GLx5 \sgnx2 \Cx6 \Indx2 \Spanx2 \adjx1 \Symx4
+D723-三角格普适最优性与高斯傅里叶插值.md	14	0	\ddx6 \Reax5 \Imax5
+D724-强Kadison-Kastler稳定性的反推思维链.md	192	4	\epsx27 \Bx57 \dcbx26 \barotimesx19 \IIx14 \cbx15 \adx16 \Cx8 \Ux14 \Ex3 \idx2 \IIIx10 \distx18 \Adx2
+D725-临界淬火自关联的普适性.md	2	0	\Sgx2
+D726-无限制前模性-素数二处的全Hecke代数.md	140	0	\Qx51 \OOx57 \GLx11 \epsx14 \kkx5 \adx5 \SLx6 \Homx5 \Fracx2 \Symx3 \WDx1 \Specx1 \edimx3 \rankx1 \Fx1 \ctsx1 \Endx1
+D73-完整Coulomb原子的广义电离能.md	125	0	\TFx50 \Trx2 \Ex34 \Cx6 \epsx36 \indx16 \Probx4
+D731-射影完全交的Virasoro约束反推笔记.md	13	0	\Blx4 \Qx1 \Cx1 \idx2 \prx2 \PPx3
+D733-双曲单关系群的虚拟紧特殊性.md	28	0	\Qx22 \rkx6 \Stabx2 \Homx1
+D735-无理角三角形台球弱混合的证法链反推.md	163	0	\epsx213
+D737-加权膨胀图与平滑移位素数的反推思维链.md	2	0	\Pminusx1 \Lix1
+D738-从Weil平面到阿贝尔自幂上的全部Hodge类.md	41	0	\Qx39 \CHx1 \Cx6 \Qbarx1
+D739-见证对称选择严格强于带计数的无选择多项式时间.md	4	0	\WSCx1 \Autx2 \TCx1
+D74-任意极化曲面上的极大Seshadri常数.md	81	11	\Cx39 \PPx8 \convx4 \ordx22 \multx4
+D743-单相伯努利极小元临界维数七研究笔记.md	1	0	\Idx1
+D744-平面XY模型临界对数修正与振幅提取笔记.md	10	0	\Ex5 \ddx4 \Probx2 \Varx2
+D745-半平面双二聚体环的曲线标度极限.md	6	0	\diamx10
+D75-vanDerWaerden数的定量超指数下界.md	28	4	\Ppx22 \cLx4 \Ex1 \Tx2 \distx1
+D750-三维量子Heisenberg铁磁体磁化的第一格点修正.md	40	9	\Trx1 \PPx15 \EEx17 \Dx7
+D752-球面随机感知机的自由能：任意有界势下变分公式的两类增量证明.md	19	5	\Ex21
+D753-自由一致生成森林的无根因子编码与响应恒等式.md	1	0	\Ex1
+D754-几何级数相似度猜想的有限路由证明反推笔记.md	13	0	\Probx4 \Ex11
+D759-连续整数联合Dickman律.md	6	0	\Probx6
+D76-非平凡Markov型迫使超反身.md	101	0	\cSx12 \TVx8 \Ex32 \convx2 \cAx36 \Probx7 \onex23 \distx9 \Spanx2
+D760-临界Ashkin-Teller电流的联合标度极限.md	4	0	\ddx5
+D761-离散群的l1-Bass猜想.md	10	6	\suppx4
+D762-低温Sherrington-Kirkpatrick涨落尺度.md	12	2	\sdx4 \Varx5 \trx2
+D763-低温Sherrington-Kirkpatrick自由能极限律.md	8	2	\Varx6
+D764-六维空间中两两无偏基的最大个数.md	11	0	\Cx12
+D767-非极大反德西特彭罗斯不等式与原始数据刚性.md	2	0	\suppx2
+D769-各维度中的常二重点间隙.md	28	1	\Ax9 \Intx16 \PPx1 \Reesx1
+D77-特征二下的五边形退化与Deligne--Drinfeld猜想证明反推.md	73	4	\Qx28 \Fx22 \adx14 \wtx17 \Liex5 \grx8 \idx2
+D772-CM阿贝尔簇的有理Hodge猜想.md	19	2	\CHx7 \Homx7 \Endx2 \Hdgx1 \codimx2
+D773-反向对数小平不等式与可加性.md	5	0	\Liex5
+D774-对称伯努利矩阵奇点概率的尖锐指数速率.md	1	0	\affx1
+D775-有偏对称符号矩阵奇点的尖锐速率.md	14	0	\rankx13 \radx4
+D78-对数Brunn-Minkowski猜想的矩坐标与张量平方路线.md	164	0	\Ex101 \epsx65 \trx45 \Varx1
+D79-均称性反用与位移障碍-F群非均称性证明笔记.md	67	66	\idx1
+D80-均值对策博弈随机化准多项式求解的支撑预算递归.md	86	76	\Basicx12 \Solvex16 \Askx25 \Orientx8 \OrientPlusx10 \clipx11
+D81-Foulkes-Howe规范映射的二次稳定门槛.md	162	46	\Symx121 \Cx33 \Avx8 \Sax6
+D82-分离电流与密度分裂-四维tamed推compatible笔记.md	56	2	\imx6 \Idx8 \cLx17 \indx13 \angx6 \transx6 \prx4
+D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md	119	37	\distx18 \Lipx22 \suppx29 \diamx20
+D86-循环Hadamard猜想的机器与笔头-特征交替积与二进制残迹.md	86	1	\nx23 \epsx23 \mx37 \Fx3 \Cx2 \Fracx4 \Qx1
+D87-图灵度刚性猜想与四值复原.md	10	0	\Qx1 \leTx3 \Autx8 \DTx2
+D88-截断、树与部分圆柱：同伦假设组合路线的亲历笔记.md	21	0	\colimx2 \Modx7 \opx1 \Homx7 \idx4 \skx3 \Spacesx6
+D89-酉化蕴含均称-Dixmier离散群问题的机器化拆解.md	28	6	\HSx8 \Trx8 \Cx5 \onex9
+D91-短埃及分数最小项数的双重对数阶.md	14	0	\ex13 \Ex5 \Probx2
+D92-Lp次多项式降维-重尾矩台账与截断ramp.md	50	4	\Ex43 \Probx12
+D94-正则轨迹剪枝与量子奇偶下界.md	75	28	\Parityx2 \onex52 \Trx2 \suppx3
+D95-用独立行替换高斯行的Cd代价.md	82	7	\Ex73 \distx9 \Gramx4 \Probx3 \indx1
+D96-残差球上的记忆与样本下界：无噪高斯回归中 streaming learner 的反推笔记.md	76	45	\Ex29 \distx10 \Lawx2 \Probx7
+D97-容量小于4的辛球嵌入极化积：对称Mahler猜想的Gromov宽度路线反推笔记.md	107	34	\interiorx41 \volx29 \ddcx12 \Cx9 \dcx7 \Dx2
+D98-Kirchberg-Rodam字符判据：central-sequence代数无字符等价于吸收Jiang-Su代数的反推笔记.md	3	0	\otmaxx3 \sax1
+D99-欧氏Steinitz-Bergstrom定理：符号前缀范数根号d界与S2d等于Theta根号d的反推笔记.md	15	0	\trx19 \HSx4
+2026-10-14T06:58:29.634Z
+D08-Mezard-Parisi公式.md	25	6	\epsx17 \Ex7
+2026-10-14T06:58:30.100Z
+D15-有限欧氏Ramsey配置分类.md	89	0	\Qx67 \trx20 \suppx6 \Symx1
+2026-10-14T06:58:30.510Z
+D21-Saxl猜想-循环多表证明.md	94	0	\Cx25 \sgnx17 \Homx15 \Indx20 \lenx7 \Altx2 \Matx10 \adjx16 \trx4 \Resx2
+2026-10-14T06:58:31.027Z
+D90-固定指数的生产链-Yau节点上界幂律反例取证笔记.md	115	0	\ddx128 \Hhx15 \diverx7 \Ex8 \Ppx7
+2026-10-14T06:58:31.451Z
+D128-平面曲线的Nagata猜想：约化、椭圆线与极限的重数不等式反推笔记.md	53	0	\multx5 \Ppx15 \Cx14 \Totx5 \Picx3 \Wx11 \ordx3
+2026-10-14T06:58:31.776Z
+D232-三机单位作业调度的全局描述长度路线.md	72	0	\Fx22 \rkx21 \Ax9 \dotcupx11 \Kx19 \Qualx8 \keyx7 \samex3 \switchx3
+2026-10-14T06:58:32.084Z
+D306-逐维有界度上边缘扩张子的构造反推笔记.md	128	3	\epsx20 \Fx64 \imx2 \distx7 \skelx8 \SLx14 \CCx5 \wtHx6 \GLx12 \srx7 \Torx3 \wtCx1
+2026-10-14T06:58:32.484Z
+D320-交换的除代数系数线性型与Artinian-Eisenbud-Green-Harris猜想.md	158	2	\Cx29 \Hilbx3 \Symx19 \PPx35 \cOx30 \smx10 \Picx20 \Endx7 \Galx2 \cFx6 \cDx6 \tdx6 \Qx3 \rkx1
+2026-10-17T03:17:59.651Z
+D84-高余维Riesz变换一致矩形性的五步链条-归一化高度能量反推笔记.md	37	17	\Hx32
+2026-10-17T03:29:52.442Z
+D04-乘性函数二点关联.md	1	0	\Cx1
+D05-算术级数拟多项式界.md	1	0	\Adx1
+D222-Calabi流在复射影空间上的有限时间奇点构造.md	8	0	\CPx6 \Cx1 \epsx2
+D229-从一个记号张量障碍倒推四维圆盘嵌入的否证.md	1	0	\Locx1
+D254-弱无序Anderson模型的绝对连续谱.md	1	0	\diagx1
+D269-二值容量公共整多面体基FPRAS研究笔记.md	1	0	\suppx1
+D273-二维O3自旋场的孤立粒子极点.md	1	0	\sgnx1
+D291-面积可控的端替换与CKS类中的Bondi-Penrose不等式.md	4	2	\Sphx2
+D302-三维Bochner--Riesz猜想的熵与packet证明思路重建.md	31	9	\epsx36
+D310-布朗连续随机树极限与四条以上有限FK图.md	11	2	\opx9
+D45-Auslander-Reiten猜想显式反例.md	18	8	\Homx15
+D497-可解闭伽罗瓦群开同态的刚性.md	2	0	\Homx2
+D596-嵌入曲面平均曲率流首奇时刻切流唯一性.md	48	0	\ddx25 \eex43
+D752-球面随机感知机的自由能：任意有界势下变分公式的两类增量证明.md	2	0	\Ex2
+2026-10-17T03:52:10.427Z
+D255-非消失之后的abundance与紧致Kähler四维形的地板生成.md	5	0	\redx5
+D292-对数Calabi-Yau边界成分Stein度一致上界的反推笔记.md	13	10	\redx3

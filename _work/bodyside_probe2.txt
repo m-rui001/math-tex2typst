@@ -1,0 +1,13 @@
+D196-从Cardy公式提取Voronoi逾渗色关键点振幅.md L147 len=874
+MATCH: -cm^2}$（06-amplitude.tex:369-412）。注意我全程没认出 $K_R$ 的主项是谁，行列式把未知因子自己消掉了，这是"振幅存在但值不显"的
+CODEPOINTS: U+6CA1(没) U+8BA4(认) U+51FA(出) U+0020( )
+
+D08-Mezard-Parisi公式.md L1058 len=638
+MATCH: 致速率的读法互证）。引短语与 `sections/overview.tex:43-45` 逐字同一，两处自证。[推测] 论没讨论两个极限方向对调的后果：先深度后系统尺寸时，沿深度平均的控制无法再由例外树吸收，归纳的入口直接失守，这条路径的可行性我目
+CODEPOINTS: U+0020( ) U+8BBA(论) U+6CA1(没) U+8BA8(讨) U+8BBA(论) U+4E24(两)
+
+=== counts
+D08-Mezard-Parisi公式.md  pat=论没讨论  hits=[1058]
+D08-Mezard-Parisi公式.md  pat=论文没讨论  hits=[1130]
+D196-从Cardy公式提取Voronoi逾渗色关键点振幅.md  pat=认 out 出  hits=[163]
+D196-从Cardy公式提取Voronoi逾渗色关键点振幅.md  pat=认出  hits=[147, 163]

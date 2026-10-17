@@ -1,0 +1,846 @@
+{
+ "\\*": {
+  "n": 0,
+  "tex": "\\ast"
+ },
+ "\\0": {
+  "n": 0,
+  "tex": "\\mathbf{0}"
+ },
+ "\\1": {
+  "n": 0,
+  "tex": "\\mathbf{1}"
+ },
+ "\\Ad": {
+  "n": 0,
+  "tex": "\\operatorname{Ad}"
+ },
+ "\\Ann": {
+  "n": 0,
+  "tex": "\\operatorname{Ann}"
+ },
+ "\\Aut": {
+  "n": 0,
+  "tex": "\\operatorname{Aut}"
+ },
+ "\\BE": {
+  "n": 0,
+  "tex": "\\mathbb{E}"
+ },
+ "\\Bigrvert": {
+  "n": 0,
+  "tex": "\\Bigr|"
+ },
+ "\\Bl": {
+  "n": 0,
+  "tex": "\\operatorname{Bl}"
+ },
+ "\\Br": {
+  "n": 0,
+  "tex": "\\operatorname{Br}"
+ },
+ "\\C": {
+  "n": 0,
+  "tex": "\\mathbb{C}"
+ },
+ "\\CH": {
+  "n": 0,
+  "tex": "\\operatorname{CH}"
+ },
+ "\\CP": {
+  "n": 0,
+  "tex": "\\mathbb{CP}"
+ },
+ "\\CSB": {
+  "n": 0,
+  "tex": "\\operatorname{CSB}"
+ },
+ "\\Cone": {
+  "n": 0,
+  "tex": "\\operatorname{Cone}"
+ },
+ "\\Cref": {
+  "n": 1,
+  "tex": "\\text{#1}"
+ },
+ "\\DFAS": {
+  "n": 0,
+  "tex": "\\operatorname{DFAS}"
+ },
+ "\\E": {
+  "n": 0,
+  "tex": "\\mathbb{E}"
+ },
+ "\\Eff": {
+  "n": 0,
+  "tex": "\\operatorname{Eff}"
+ },
+ "\\End": {
+  "n": 0,
+  "tex": "\\operatorname{End}"
+ },
+ "\\Equation": {
+  "n": 0,
+  "tex": "\\operatorname{Equation}"
+ },
+ "\\Ev": {
+  "n": 0,
+  "tex": "\\operatorname{Ev}"
+ },
+ "\\Exc": {
+  "n": 0,
+  "tex": "\\operatorname{Exc}"
+ },
+ "\\Ext": {
+  "n": 0,
+  "tex": "\\operatorname{Ext}"
+ },
+ "\\Fin": {
+  "n": 0,
+  "tex": "\\operatorname{Fin}"
+ },
+ "\\Flag": {
+  "n": 0,
+  "tex": "\\operatorname{Flag}"
+ },
+ "\\Flevel": {
+  "n": 0,
+  "tex": "\\operatorname{Flevel}"
+ },
+ "\\Floor": {
+  "n": 1,
+  "tex": "\\lfloor#1\\rfloor"
+ },
+ "\\Frac": {
+  "n": 0,
+  "tex": "\\operatorname{Frac}"
+ },
+ "\\Full": {
+  "n": 0,
+  "tex": "\\operatorname{Full}"
+ },
+ "\\GL": {
+  "n": 0,
+  "tex": "\\operatorname{GL}"
+ },
+ "\\Gal": {
+  "n": 0,
+  "tex": "\\operatorname{Gal}"
+ },
+ "\\Gram": {
+  "n": 0,
+  "tex": "\\operatorname{Gram}"
+ },
+ "\\HH": {
+  "n": 0,
+  "tex": "\\mathbb{H}"
+ },
+ "\\HM": {
+  "n": 0,
+  "tex": "\\operatorname{HM}"
+ },
+ "\\HS": {
+  "n": 0,
+  "tex": "\\mathrm{HS}"
+ },
+ "\\Hess": {
+  "n": 0,
+  "tex": "\\operatorname{Hess}"
+ },
+ "\\Hg": {
+  "n": 0,
+  "tex": "\\operatorname{Hg}"
+ },
+ "\\Hilb": {
+  "n": 0,
+  "tex": "\\operatorname{Hilb}"
+ },
+ "\\Hom": {
+  "n": 0,
+  "tex": "\\operatorname{Hom}"
+ },
+ "\\Id": {
+  "n": 0,
+  "tex": "\\operatorname{Id}"
+ },
+ "\\Isom": {
+  "n": 0,
+  "tex": "\\operatorname{Isom}"
+ },
+ "\\KL": {
+  "n": 0,
+  "tex": "\\operatorname{KL}"
+ },
+ "\\KS": {
+  "n": 0,
+  "tex": "\\operatorname{KS}"
+ },
+ "\\Ktail": {
+  "n": 0,
+  "tex": "\\operatorname{Ktail}"
+ },
+ "\\Lemma": {
+  "n": 0,
+  "tex": "\\operatorname{Lemma}"
+ },
+ "\\Lie": {
+  "n": 0,
+  "tex": "\\operatorname{Lie}"
+ },
+ "\\Lipnorm": {
+  "n": 0,
+  "tex": "\\operatorname{Lipnorm}"
+ },
+ "\\MK": {
+  "n": 0,
+  "tex": "\\operatorname{MK}"
+ },
+ "\\Map": {
+  "n": 0,
+  "tex": "\\operatorname{Map}"
+ },
+ "\\Mat": {
+  "n": 0,
+  "tex": "\\operatorname{Mat}"
+ },
+ "\\MaxCut": {
+  "n": 0,
+  "tex": "\\operatorname{MaxCut}"
+ },
+ "\\NI": {
+  "n": 0,
+  "tex": "\\operatorname{NI}"
+ },
+ "\\NS": {
+  "n": 0,
+  "tex": "\\operatorname{NS}"
+ },
+ "\\O": {
+  "n": 0,
+  "tex": "\\mathcal{O}"
+ },
+ "\\Ord": {
+  "n": 0,
+  "tex": "\\operatorname{Ord}"
+ },
+ "\\OrderedDistinctPoints": {
+  "n": 0,
+  "tex": "\\operatorname{OrderedDistinctPoints}"
+ },
+ "\\PD": {
+  "n": 0,
+  "tex": "\\operatorname{PD}"
+ },
+ "\\PGL": {
+  "n": 0,
+  "tex": "\\operatorname{PGL}"
+ },
+ "\\Part": {
+  "n": 0,
+  "tex": "\\operatorname{Part}"
+ },
+ "\\Pbb": {
+  "n": 0,
+  "tex": "\\mathbb{P}"
+ },
+ "\\Pic": {
+  "n": 0,
+  "tex": "\\operatorname{Pic}"
+ },
+ "\\Prim": {
+  "n": 0,
+  "tex": "\\operatorname{Prim}"
+ },
+ "\\Proj": {
+  "n": 0,
+  "tex": "\\operatorname{Proj}"
+ },
+ "\\Q": {
+  "n": 0,
+  "tex": "\\mathbb{Q}"
+ },
+ "\\QQ": {
+  "n": 0,
+  "tex": "\\mathbb{Q}"
+ },
+ "\\RP": {
+  "n": 0,
+  "tex": "\\mathbb{RP}"
+ },
+ "\\Real": {
+  "n": 0,
+  "tex": "\\mathbb{R}"
+ },
+ "\\Res": {
+  "n": 0,
+  "tex": "\\operatorname{Res}"
+ },
+ "\\Ric": {
+  "n": 0,
+  "tex": "\\operatorname{Ric}"
+ },
+ "\\SDP": {
+  "n": 0,
+  "tex": "\\operatorname{SDP}"
+ },
+ "\\SL": {
+  "n": 0,
+  "tex": "\\operatorname{SL}"
+ },
+ "\\SO": {
+  "n": 0,
+  "tex": "\\operatorname{SO}"
+ },
+ "\\SU": {
+  "n": 0,
+  "tex": "\\operatorname{SU}"
+ },
+ "\\Sat": {
+  "n": 0,
+  "tex": "\\operatorname{Sat}"
+ },
+ "\\Sing": {
+  "n": 0,
+  "tex": "\\operatorname{Sing}"
+ },
+ "\\Sp": {
+  "n": 0,
+  "tex": "\\operatorname{Sp}"
+ },
+ "\\Span": {
+  "n": 0,
+  "tex": "\\operatorname{Span}"
+ },
+ "\\Spec": {
+  "n": 0,
+  "tex": "\\operatorname{Spec}"
+ },
+ "\\Sph": {
+  "n": 0,
+  "tex": "\\mathbb{S}"
+ },
+ "\\Stab": {
+  "n": 0,
+  "tex": "\\operatorname{Stab}"
+ },
+ "\\Supp": {
+  "n": 0,
+  "tex": "\\operatorname{Supp}"
+ },
+ "\\Sym": {
+  "n": 0,
+  "tex": "\\operatorname{Sym}"
+ },
+ "\\Thm": {
+  "n": 0,
+  "tex": "\\operatorname{Thm}"
+ },
+ "\\Time": {
+  "n": 0,
+  "tex": "\\operatorname{Time}"
+ },
+ "\\To": {
+  "n": 0,
+  "tex": "\\operatorname{To}"
+ },
+ "\\Tr": {
+  "n": 0,
+  "tex": "\\operatorname{Tr}"
+ },
+ "\\Trd": {
+  "n": 0,
+  "tex": "\\operatorname{Trd}"
+ },
+ "\\Two": {
+  "n": 0,
+  "tex": "\\operatorname{Two}"
+ },
+ "\\Var": {
+  "n": 0,
+  "tex": "\\operatorname{Var}"
+ },
+ "\\WPP": {
+  "n": 0,
+  "tex": "\\operatorname{WPP}"
+ },
+ "\\ZZ": {
+  "n": 0,
+  "tex": "\\mathbb{Z}"
+ },
+ "\\abs": {
+  "n": 1,
+  "tex": "|#1|"
+ },
+ "\\ac": {
+  "n": 0,
+  "tex": "\\operatorname{ac}"
+ },
+ "\\alg": {
+  "n": 0,
+  "tex": "\\operatorname{alg}"
+ },
+ "\\an": {
+  "n": 0,
+  "tex": "\\operatorname{an}"
+ },
+ "\\arctanh": {
+  "n": 0,
+  "tex": "\\operatorname{arctanh}"
+ },
+ "\\asc": {
+  "n": 0,
+  "tex": "\\operatorname{asc}"
+ },
+ "\\av": {
+  "n": 0,
+  "tex": "\\operatorname{av}"
+ },
+ "\\avg": {
+  "n": 0,
+  "tex": "\\operatorname{avg}"
+ },
+ "\\bigrvert": {
+  "n": 0,
+  "tex": "\\bigr|"
+ },
+ "\\cD": {
+  "n": 0,
+  "tex": "\\mathcal{D}"
+ },
+ "\\cJ": {
+  "n": 0,
+  "tex": "\\mathcal{J}"
+ },
+ "\\cO": {
+  "n": 0,
+  "tex": "\\mathcal{O}"
+ },
+ "\\cR": {
+  "n": 0,
+  "tex": "\\mathcal{R}"
+ },
+ "\\cT": {
+  "n": 0,
+  "tex": "\\mathcal{T}"
+ },
+ "\\calB": {
+  "n": 0,
+  "tex": "\\mathcal{B}"
+ },
+ "\\calE": {
+  "n": 0,
+  "tex": "\\mathcal{E}"
+ },
+ "\\calF": {
+  "n": 0,
+  "tex": "\\mathcal{F}"
+ },
+ "\\calG": {
+  "n": 0,
+  "tex": "\\mathcal{G}"
+ },
+ "\\calN": {
+  "n": 0,
+  "tex": "\\mathcal{N}"
+ },
+ "\\calP": {
+  "n": 0,
+  "tex": "\\mathcal{P}"
+ },
+ "\\can": {
+  "n": 0,
+  "tex": "\\operatorname{can}"
+ },
+ "\\cdeg": {
+  "n": 0,
+  "tex": "\\operatorname{cdeg}"
+ },
+ "\\ceil": {
+  "n": 1,
+  "tex": "\\lceil#1\\rceil"
+ },
+ "\\cite": {
+  "n": 1,
+  "tex": "\\text{#1}"
+ },
+ "\\cl": {
+  "n": 0,
+  "tex": "\\operatorname{cl}"
+ },
+ "\\codim": {
+  "n": 0,
+  "tex": "\\operatorname{codim}"
+ },
+ "\\coker": {
+  "n": 0,
+  "tex": "\\operatorname{coker}"
+ },
+ "\\colim": {
+  "n": 0,
+  "tex": "\\operatorname{colim}"
+ },
+ "\\const": {
+  "n": 0,
+  "tex": "\\operatorname{const}"
+ },
+ "\\cts": {
+  "n": 0,
+  "tex": "\\operatorname{cts}"
+ },
+ "\\curveDegree": {
+  "n": 0,
+  "tex": "\\operatorname{curveDegree}"
+ },
+ "\\dR": {
+  "n": 0,
+  "tex": "\\mathrm{dR}"
+ },
+ "\\dec": {
+  "n": 0,
+  "tex": "\\operatorname{dec}"
+ },
+ "\\degavg": {
+  "n": 0,
+  "tex": "\\operatorname{degavg}"
+ },
+ "\\dg": {
+  "n": 0,
+  "tex": "\\operatorname{dg}"
+ },
+ "\\diam": {
+  "n": 0,
+  "tex": "\\operatorname{diam}"
+ },
+ "\\dif": {
+  "n": 0,
+  "tex": "\\mathrm{d}"
+ },
+ "\\dist": {
+  "n": 0,
+  "tex": "\\operatorname{dist}"
+ },
+ "\\ee": {
+  "n": 0,
+  "tex": "\\operatorname{ee}"
+ },
+ "\\eps": {
+  "n": 0,
+  "tex": "\\varepsilon"
+ },
+ "\\eqref": {
+  "n": 1,
+  "tex": "\\text{(#1)}"
+ },
+ "\\ev": {
+  "n": 0,
+  "tex": "\\operatorname{ev}"
+ },
+ "\\exc": {
+  "n": 0,
+  "tex": "\\operatorname{exc}"
+ },
+ "\\fib": {
+  "n": 0,
+  "tex": "\\operatorname{fib}"
+ },
+ "\\floor": {
+  "n": 1,
+  "tex": "\\lfloor#1\\rfloor"
+ },
+ "\\gap": {
+  "n": 0,
+  "tex": "\\operatorname{gap}"
+ },
+ "\\gen": {
+  "n": 0,
+  "tex": "\\operatorname{gen}"
+ },
+ "\\gtrimes": {
+  "n": 0,
+  "tex": "\\rtimes"
+ },
+ "\\hofib": {
+  "n": 0,
+  "tex": "\\operatorname{hofib}"
+ },
+ "\\hookive": {
+  "n": 0,
+  "tex": "\\hookrightarrow"
+ },
+ "\\i": {
+  "n": 0,
+  "tex": "\\mathrm{i}"
+ },
+ "\\id": {
+  "n": 0,
+  "tex": "\\operatorname{id}"
+ },
+ "\\igr": {
+  "n": 0,
+  "tex": "\\operatorname{igr}"
+ },
+ "\\im": {
+  "n": 0,
+  "tex": "\\operatorname{im}"
+ },
+ "\\ind": {
+  "n": 0,
+  "tex": "\\operatorname{ind}"
+ },
+ "\\inner": {
+  "n": 2,
+  "tex": "\\langle #1,#2\\rangle"
+ },
+ "\\ip": {
+  "n": 2,
+  "tex": "\\langle #1,#2\\rangle"
+ },
+ "\\label": {
+  "n": 1,
+  "tex": ""
+ },
+ "\\lcm": {
+  "n": 0,
+  "tex": "\\operatorname{lcm}"
+ },
+ "\\len": {
+  "n": 0,
+  "tex": "\\operatorname{len}"
+ },
+ "\\loc": {
+  "n": 0,
+  "tex": "\\operatorname{loc}"
+ },
+ "\\localSlope": {
+  "n": 0,
+  "tex": "\\operatorname{localSlope}"
+ },
+ "\\logeps": {
+  "n": 0,
+  "tex": "\\operatorname{logeps}"
+ },
+ "\\longhookrightarrow": {
+  "n": 0,
+  "tex": "\\hookrightarrow"
+ },
+ "\\maj": {
+  "n": 0,
+  "tex": "\\operatorname{maj}"
+ },
+ "\\mathfr": {
+  "n": 1,
+  "tex": "\\mathfrak{#1}"
+ },
+ "\\mathfrm": {
+  "n": 1,
+  "tex": "\\mathfrak{#1}"
+ },
+ "\\mix": {
+  "n": 0,
+  "tex": "\\operatorname{mix}"
+ },
+ "\\negMulLog": {
+  "n": 0,
+  "tex": "\\operatorname{negMulLog}"
+ },
+ "\\norm": {
+  "n": 1,
+  "tex": "\\Vert #1\\Vert"
+ },
+ "\\normtwo": {
+  "n": 1,
+  "tex": "\\Vert #1\\Vert_2"
+ },
+ "\\nullity": {
+  "n": 0,
+  "tex": "\\operatorname{nullity}"
+ },
+ "\\one": {
+  "n": 0,
+  "tex": "\\mathbf{1}"
+ },
+ "\\op": {
+  "n": 0,
+  "tex": "\\operatorname{op}"
+ },
+ "\\per": {
+  "n": 0,
+  "tex": "\\operatorname{per}"
+ },
+ "\\poly": {
+  "n": 0,
+  "tex": "\\operatorname{poly}"
+ },
+ "\\pos": {
+  "n": 0,
+  "tex": "\\operatorname{pos}"
+ },
+ "\\pp": {
+  "n": 0,
+  "tex": "\\operatorname{pp}"
+ },
+ "\\pr": {
+  "n": 0,
+  "tex": "\\operatorname{pr}"
+ },
+ "\\proj": {
+  "n": 0,
+  "tex": "\\operatorname{proj}"
+ },
+ "\\prop": {
+  "n": 0,
+  "tex": "\\operatorname{prop}"
+ },
+ "\\pt": {
+  "n": 0,
+  "tex": "\\operatorname{pt}"
+ },
+ "\\qedhere": {
+  "n": 0,
+  "tex": ""
+ },
+ "\\rad": {
+  "n": 0,
+  "tex": "\\operatorname{rad}"
+ },
+ "\\range": {
+  "n": 0,
+  "tex": "\\operatorname{range}"
+ },
+ "\\rank": {
+  "n": 0,
+  "tex": "\\operatorname{rank}"
+ },
+ "\\ref": {
+  "n": 1,
+  "tex": "\\text{#1}"
+ },
+ "\\reg": {
+  "n": 0,
+  "tex": "\\operatorname{reg}"
+ },
+ "\\res": {
+  "n": 0,
+  "tex": "\\operatorname{res}"
+ },
+ "\\rffloor": {
+  "n": 0,
+  "tex": "\\rfloor"
+ },
+ "\\rge": {
+  "n": 0,
+  "tex": "\\operatorname{rge}"
+ },
+ "\\rigr": {
+  "n": 0,
+  "tex": "\\operatorname{rigr}"
+ },
+ "\\scal": {
+  "n": 0,
+  "tex": "\\operatorname{scal}"
+ },
+ "\\sgn": {
+  "n": 0,
+  "tex": "\\operatorname{sgn}"
+ },
+ "\\sign": {
+  "n": 0,
+  "tex": "\\operatorname{sign}"
+ },
+ "\\span": {
+  "n": 0,
+  "tex": "\\operatorname{span}"
+ },
+ "\\sqrtg": {
+  "n": 0,
+  "tex": "\\sqrt{g}"
+ },
+ "\\sslash": {
+  "n": 0,
+  "tex": "\\mathbin{/\\!/}"
+ },
+ "\\succe": {
+  "n": 0,
+  "tex": "\\operatorname{succe}"
+ },
+ "\\supp": {
+  "n": 0,
+  "tex": "\\operatorname{supp}"
+ },
+ "\\td": {
+  "n": 0,
+  "tex": "\\operatorname{td}"
+ },
+ "\\textdollar": {
+  "n": 0,
+  "tex": "\\$"
+ },
+ "\\til": {
+  "n": 1,
+  "tex": "\\widetilde{#1}"
+ },
+ "\\tree": {
+  "n": 0,
+  "tex": "\\operatorname{tree}"
+ },
+ "\\uphook": {
+  "n": 0,
+  "tex": "\\hookrightarrow"
+ },
+ "\\vare": {
+  "n": 0,
+  "tex": "\\varepsilon"
+ },
+ "\\vol": {
+  "n": 0,
+  "tex": "\\operatorname{vol}"
+ },
+ "\\wh": {
+  "n": 1,
+  "tex": "\\widehat{#1}"
+ },
+ "\\widilde": {
+  "n": 1,
+  "tex": "\\widetilde{#1}"
+ },
+ "\\box": {
+  "n": 0,
+  "tex": "\\square"
+ },
+ "\\dd": {
+  "n": 0,
+  "tex": "\\mathrm{d}"
+ },
+ "\\diag": {
+  "n": 0,
+  "tex": "\\operatorname{diag}"
+ },
+ "\\EX": {
+  "n": 0,
+  "tex": "\\mathbb{E}"
+ },
+ "\\Ex": {
+  "n": 0,
+  "tex": "\\mathbb{E}"
+ },
+ "\\fint": {
+  "n": 0,
+  "tex": "\\int"
+ },
+ "\\GG": {
+  "n": 0,
+  "tex": "\\mathbb{G}"
+ },
+ "\\lhook": {
+  "n": 0,
+  "tex": "\\hookleftarrow"
+ },
+ "\\restrict": {
+  "n": 0,
+  "tex": "\\restriction"
+ },
+ "\\wt": {
+  "n": 1,
+  "tex": "\\widetilde{#1}"
+ }
+}

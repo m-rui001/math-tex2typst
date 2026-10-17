@@ -1,0 +1,34 @@
+{
+  "paper": "Virasoro-Constraints-for-Projective-Complete-Intersections-September-24-2026",
+  "ok": true,
+  "typ_lines": 983,
+  "included_pdf_pages": 0,
+  "formulas": 607,
+  "math_failed": 0,
+  "labels": 136,
+  "equations": 11,
+  "theorems": 4,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "607"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\defdef",
+    "\\defdef",
+    "\\let\\VirasoroSavedRefstepcounter",
+    "\\letlet",
+    "\\letlet"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Virasoro-Constraints-for-Projective-Complete-Intersections-September-24-2026.tex"
+}

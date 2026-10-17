@@ -1,0 +1,21 @@
+lines 20
+itz  hits=7 (new-region>=520: 7)
+  544 | `history-fragment.tex:27--29` 与 `history-fragment.tex:29--32` 是真空无对称这一侧的两端。Luk 在没有对称性的真空方程里构造了弱零奇点；D
+  550 | 第一件证曲率 blow-up 与局部 Lipschitz 不可延伸，跨过位于类时无穷附近的一段视界，前提是非线性的 Price 律式渐近，并且一个非轴对称的主导曲率幅值非零。第二件从特征数据出发，数据
+  554 | 第三件判据对我还有一层直接用：带符号的、稳健的曲率信息配合受控平行输运，这个组合与我 §3 里那个 $Q_d(w,\tau)$ 的定义是同族，那里也是把曲率张量放在沿测地线平行标架下取正 Hilber
+  585 | | $C^{0,1}$ | 局部 Lipschitz 档，先例结论所在 | history-fragment.tex:36 | §38 三件工作的档位对照 | 误当本文目标则测试要求过强 |
+  586 | | $C^{0,1}$ | 连续可延，并非 Lipschitz 的弱零奇点档 | history-fragment.tex:40 | §37 末段的定档 | 与 $C^2$ 混档则 §4 反证失去落点
+  602 | | 带符号曲率 | 几何判据的另一半 | history-fragment.tex:44 | §38 末段 | 符号稳健性丢失则阻不住 Lipschitz 延伸 |
+  628 | 缺陷按类别申报，落盘后不作任何就地改字。第一类，成对的长停顿号两处，分在 §38 与 §39 各一处。第二类，被禁的提示性套语一处，在 §40。第三类，被禁的转折构式两处：§39 一处三字形、§41 
+=== blow  hits=1 (new-region>=520: 1)
+  550 | 第一件证曲率 blow-up 与局部 Lipschitz 不可延伸，跨过位于类时无穷附近的一段视界，前提是非线性的 Price 律式渐近，并且一个非轴对称的主导曲率幅值非零。第二件从特征数据出发，数据
+=== nonlinear  hits=1 (new-region>=520: 1)
+  562 |  nonlinear 那一层在 `history-fragment.tex:73--77`：慢旋转 Kerr 的非线性稳定性由几何与波动方程那一系分析建立。我原来的算盘是把外部这一整块外包给现成结果，
+=== Four  hits=2 (new-region>=520: 1)
+  365 | `04-stationary.tex:560--629` 是平稳节里我此前只登记过标题的指标段。它的引理形状：无共轭的物理原问题与带支撑转置问题，对每个 $\operatorname{Re}\zeta
+  530 | 素材头一句就把我混用了很久的两个概念分开：`history-fragment.tex:1--5` 讲 Fourès--Bruhat 与 Choquet--Bruhat--Geroch 的柯西理论把整体
+ZH 利普希茨 total=0 old=0 new=0
+ZH 希茨 total=0 old=0 new=0
+ZH  Lipschitz  total=10 old=0 new=10
+ZH 爆破 total=0 old=0 new=0
+ZH 非线性 total=20 old=10 new=10

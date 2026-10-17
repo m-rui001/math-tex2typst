@@ -1,0 +1,26 @@
+\documentclass[10pt]{article}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning}
+\newcount\cnt
+\def\report#1{%
+  \pgfextractx{\dimen1}{\pgfpointanchor{#1}{east}}%
+  \pgfextractx{\dimen2}{\pgfpointanchor{#1}{west}}%
+  \pgfextracty{\dimen3}{\pgfpointanchor{#1}{north}}%
+  \pgfextracty{\dimen4}{\pgfpointanchor{#1}{south}}%
+  \pgfextractx{\dimen5}{\pgfpointanchor{#1}{center}}%
+  \pgfextracty{\dimen6}{\pgfpointanchor{#1}{center}}%
+  \typeout{NODE #1 X=\the\dimen5\space Y=\the\dimen6\space N=\the\dimen3\space S=\the\dimen4
+    \space E=\the\dimen1\space W=\the\dimen2}%
+}
+\begin{document}
+\begin{tikzpicture}
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (6,0);
+  \coordinate (o) at (3,0);
+  \node (n) at (0,-3) {N};
+  \node (p) [below=1cm of o] {N};
+  \node (r) [below=1cm of $(A)!0.5!(B)$] {N};
+  \node (q) [below left=1cm and 2cm of n] {N};
+  \report{n}\report{p}\report{r}\report{q}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,1006 @@
+# D356 三维正曲率曲面对角 Fourier 延拓的攻坚笔记
+
+## §0 素材登记与本笔记的读法
+
+这一单是主线 2 非 Lean 队列里的 D356。我面对的论文题为
+"Diagonal Fourier extension for positively curved surfaces in three dimensions"，
+作者署名 OpenAI，落款 September 24, 2026（`build/paper.tex:38-40`）。
+build 目录下 .tex 总量 81,717 字节，按制表口径属厚素材，所以我先量后读，
+没有整篇顺序通读。逐文件字节数是我开工第一步实测的：
+`paper.tex` 2,291，`sections/00-introduction.tex` 9,268，
+`sections/01-setup.tex` 3,230，`sections/02-packets.tex` 14,532，
+`sections/03-density.tex` 12,375，`sections/04-sparse.tex` 13,709，
+`sections/05-global.tex` 15,566，`sections/06-surfaces.tex` 8,733，
+`figures/argument-map.tex` 2,013。build 下没有第二版式目录
+`build/source/`，正文全部在 `sections/` 与 `figures/` 之下；
+`typst/` 分片按规格不算来源，PDF 我一个字都没碰。
+取证调用我一共用了 15 次：wave 参数行 1 次，字节清单 1 次，
+九个 .tex 全文实读 9 次（其中 wrapper、intro、setup 三连并在一个批里），
+定理与环境定位 grep 1 次，两条输入引文 grep 1 次，目录索引 1 次，
+重名检查 1 次。首次落盘即本文件，发生在第 16 次调用，符合协议。
+
+我的读法是：先读 intro 拿到主定理与依赖指数段，再按 01 到 06 的顺序读主干，
+把每个证明节的开头假设与结尾吸收项标出行号；图文件 argument-map 最后读，
+用它校验我对论证拓扑的理解。本笔记正文按推进顺序写，失败路线与转折穿插在各节内部，
+第 13 节给变量台账。两处登记挂在节末：
+
+本单取材完整目录名：preprints/Diagonal-Fourier-extension-for-positively-curved-surfaces-in-three-dimensions-September-24-2026
+本单位于其他队列的行号：其他队列第 180 行号
+
+## §1 初始动机：我要的到底是一个什么样的不等式
+
+让我把欲望说清楚。给定 $\Sigma\subset\R^3$ 紧致光滑正曲率曲面（允许光滑边界），
+延拓算子 $E_\Sigma f(x)=\int_\Sigma f(\xi)e^{2\pi i x\cdot\xi}\,d\sigma(\xi)$
+（`00-introduction.tex:11-13`）。我要证的是对角界：同一个 $p$ 进、同一个 $p$ 出，
+$\|E_\Sigma f\|_{L^p(\R^3)}\le C_{\Sigma,p}\|f\|_{L^p(\Sigma)}$，
+对一切 $3<p<\infty$（`00-introduction.tex:18-27`，即定理 `thm:main`）。
+正曲率的含义是第二基本形式定点，每张坐标卡里法向量选得让它是正定的
+（`00-introduction.tex:14-16`）。
+
+起点当然是 Tomas--Stein：$L^2(\Sigma)\to L^4(\R^3)$（`00-introduction.tex:36-38`）。
+从 1975 年到这本论文写出来之前，三维情形人们沿着一条下降的楼梯走：
+Guth 的多项式分割拿到有界数据估计 $p>13/4$（`00-introduction.tex:47-49`），
+Shayya 在同一范围做出对角界（`00-introduction.tex:50-51`），
+Kim 给了另一套处理（`00-introduction.tex:51-52`），
+Wang 的 broom 方法改进截断抛物面的有界数据限制（`00-introduction.tex:53-54`），
+Wang--Wu 用 decoupling 加双端 Furstenberg 不等式把紧致正曲率曲面（含边界）
+的对角界推到 $p>22/7$（`00-introduction.tex:54-57`）。
+楼梯的每一级都靠更强的几何输入，可是对角猜想要求的一直是整条 $p>3$。
+$p=3$ 恰好是三维的标度临界指数：对 $N\times N\times N$ 的空间做标度计数，
+对角界在 $p=3$ 处标度不变，往下去任何 $p\le3$ 都会被 Knapp 型反例顶住。
+我最初的猜想形式很朴素：既然 decoupling 已经把 $\ell^p$ 正交性喂到嘴边，
+再把 multilinear-to-linear 机器开足马力，应该能把 22/7 一路磨到 3。
+
+这个朴素路线在我这里很快失去吸引力，原因记录在论文自己的结构里：
+它引用的两个输入是配对出现的。一个是 packet 传播定理
+（`00-introduction.tex:101-104`，引用 `OpenAIPacket2026` 的定理 6.4，
+由 `02-packets.tex:1-5` 顶部的 `\providecommand` 把编号 6.4、公式 6.8、
+小节 6.1、定义 6.3、证明节 7 全部硬编码进本论文的宏里），
+它控制的是任意有限复系数数组通过椭圆容量测得的振荡；
+另一个是 Kakeya 极大定理（`00-introduction.tex:105-107`，引用 `OpenAIKakeya2026`
+定理 1.1），它控制的是非负加权管的聚集
+（`00-introduction.tex:64-66` 把分工写明：packet 与极大函数输入各管一头，
+前者管振荡系数，后者管这些系数落在管上的正密度）。
+我意识到这等于宣告：单纯把已有线性机器再拧一圈并不能到 $p>3$，
+需要把"系数的振荡消相"与"管的几何聚集"拆成两个独立定理输入，
+然后在中间补一段把它们焊接起来的密度转换。本论文 03 到 05 节的全部工作量
+就集中在这段焊接上。这一步是我读完全稿后确认的路线，它和我最初设想的区别是：
+我不再指望任何单一的代数化不等式吃掉对角端点，而接受一个"双输入加中间转换"的架构，
+代价是要额外证明三个转换引理（相位插入、密度分组、联合稀疏球估计）。
+
+## §2 双输入架构与 argument map 的拓扑
+
+图 `argument-map.tex:14-40` 把整条链画成七个框。左列顶是
+"正曲率坐标卡插入允许的相位"，右列顶是"$L^3$ Kakeya 极大定理，损失
+$\rho^{-s}$ 对每个 $s>0$"；第二行左边是"packet 定理：复数组，坐标掩码"，
+右边是"加权管估计：非负管权重"。两条腿在第三框
+"Density grouping / Sampled cubic estimate" 汇合，往下依次是
+"Joint estimate on sparse balls"、"Level-set cover and loss removal，
+图 $L^3\to L^p$，$p>3$"、"Finite charts and surface measure，
+曲面 $L^p\to L^p$，$p>3$"（`argument-map.tex:14-32`）。
+标题说明强调两个输入彼此独立、在采样三次估计处才相遇
+（`argument-map.tex:42-44`）。
+
+我对这张图的第一反应是核对"独立性"到底有多独立。Kakeya 输入的使用形态
+在 `03-density.tex:28-47`：极大算子
+$K_\rho g(\omega)=\sup_{a\in\R^3}\frac{1}{\pi\rho^2}\int_{\mathcal T_\rho(a,\omega)}\lvert g\rvert$，
+圆柱长 1、体积 $\pi\rho^2$；输入定理声明对每个 $s>0$ 存在有限 $M(s)\ge1$ 使
+$\lVert K_\rho g\rVert_{L^3(S^2)}\le M(s)\rho^{-s}\lVert g\rVert_{L^3(\R^3)}$
+（`03-density.tex:38-45`），且全篇只用 $0<s\le1$（`03-density.tex:46-47`）。
+packet 输入的使用形态在 `02-packets.tex:276-319`：源定理 6.4 经过本节末尾
+的特化论证（`02-packets.tex:321-350`）落到式 `eq:packet-bound`：
+$N^{-6}\sum_{\nu',z',j}\lvert c_{\nu',z',j}\rvert^3 \le P(\kappa,\eta)N^{10\kappa+\eta}m(d)\mathcal K_\kappa(d)^{1/2}$。
+两个输入各自带一个"拒绝给速率"的常数：$P(\kappa,\eta)$ 与 $M(s)$，
+论文在 `02-packets.tex:352-355` 和 `00-introduction.tex:165-168` 两处都声明
+不对它们的小参数退化做任何多项式承诺。这个克制后来在 §7 的指数依赖账里
+变成硬约束：我能带走的只有显式的初等损失，$P$、$M$ 原样进常数。
+
+## §3 第一块绊脚石：一致凸性并不等于"允许的相位"
+
+02 节开门见山就是我当初会栽的坑。`02-packets.tex:6-8` 写明：
+"我们先核对我引用的 packet 定理的精确相位要求：仅有 Hessian 一致正定
+并不是它陈述里的假设"。这句话值得每个做限制问题的人贴在桌上。
+引用侧的相位类在 `02-packets.tex:12-16` 描述：从一小块球面图出发，
+把相位光滑延拓到整个 $\R^2$，Hessian 一致正定且可微，
+二阶以上导数全部有界；延拓的制造方式是截掉与二次 Taylor 多项式的差。
+具体形式在 `02-packets.tex:20-31`：写
+$q_s(\xi)=-\sqrt{1-\lvert\xi\rvert^2}$ 与 $Q_s(\xi)=-1+\frac12\lvert\xi\rvert^2$，
+取固定小 $\rho>0$ 与光滑截断 $\zeta$，在 $B(0,\rho)$ 上恒为 1、
+支撑落在 $B(0,2\rho)$，令
+$\phi=Q_s+\zeta(q_s-Q_s)$（式 `eq:spherical-continuation`），
+并要求它满足椭圆的双边界 `eq:ellipticity`
+（$cI\le D^2\phi\le CI$ 且二阶以上导数有界，`01-setup.tex:19-22`）。
+注意 `02-packets.tex:34` 特意补了一句：截断不要求径向。
+
+我一开始的候选做法是把任意正曲率坐标卡直接仿射标准化后硬套这个形式：
+卡片的相位和 $q_s$ 的差在卡片内是 $O(\rho^2)$ 级，看起来乘个截断就完事。
+失败点在差项的符号与大小失控。设 $D=q_s-Q_s$，它在 $0<\lvert\xi\rvert<1$
+严格为正（`02-packets.tex:98`），可我加进去的任何修正式都可能把组合系数
+顶出 $[0,1]$，或者把 Hessian 拖离正定。真正的转折是引理 `lem:continuation`
+（`02-packets.tex:37-111`）的"把目标图塞进过渡环带"的思路，我把它拆成五步读：
+
+第一步，造一个带平台的基准相位。取 $\zeta_0$ 在 $B(0,\rho)$ 上为 1、
+支撑在 $B(0,2\rho)$，并且在环带内一点 $\xi_1$（$\rho<\lvert\xi_1\rvert<2\rho$）
+的邻域 $V$ 上恒等于 $1/2$（`02-packets.tex:47-50`）。
+令 $q=Q_s+\zeta_0(q_s-Q_s)$，则 $q''=I+O(\rho^2)$：差项 $q_s-Q_s$ 的
+零、一、二阶导数在截断支撑上各是 $O(\rho^4)$、$O(\rho^3)$、$O(\rho^2)$
+级（`02-packets.tex:52-57`），$\rho$ 固定得足够小就保证 $q$ 一致凸
+（`02-packets.tex:58-59`）。平台值 $1/2$ 是留给第二步微调的余量，这个细节
+我在第一遍读的时候完全没有领会它的用途。
+
+第二步，用仿射变换匹配目标图的二阶 jet。目标卡片在基准点高度函数 $h_0$，
+记 $H=h_0''(0)>0$、$B=q''(\xi_1)>0$，取可逆矩阵 $A$ 使 $A^{\mathsf T}HA=B$，
+论文明说可以取 $A=H^{-1/2}B^{1/2}$（`02-packets.tex:61-63`）。
+在 $\xi_1$ 附近定义 $\psi$：把 $h_0$ 复合上 $A(\xi-\xi_1)$，
+补常数 $q(\xi_1)-h_0(0)$，再补一次项
+$(\nabla q(\xi_1)-A^{\mathsf T}\nabla h_0(0))\cdot(\xi-\xi_1)$
+（`02-packets.tex:65-71`），于是 $\psi$ 与 $q$ 在 $\xi_1$ 处同值、同梯度、
+同 Hessian（`02-packets.tex:72-73`）。关键是这一整套改动由环境频率空间的
+可逆仿射映射诱导：底部 $x\mapsto\xi_1+A^{-1}x$，高度上加新底部坐标的仿射函数
+（`02-packets.tex:74-76`）。我不是在改相位函数，我是在合法地改坐标系。
+
+第三步，局部把 $\psi$ 缝合进 $q$。取 $\vartheta$ 在 $B(0,1)$ 上为 1、
+支撑在 $B(0,2)$，小 $\epsilon>0$ 令
+$R_\epsilon(\xi)=\vartheta((\xi-\xi_1)/\epsilon)(\psi(\xi)-q(\xi))$
+（`02-packets.tex:78-84`）。两个 jet 匹配加上 Taylor 给出
+$\lVert D^jR_\epsilon\rVert_\infty\le C\epsilon^{3-j}$，$j=0,1,2$
+（`02-packets.tex:86-91`），所以 $\phi=q+R_\epsilon$ 在 $\epsilon$ 足够小时
+仍一致凸，并在 $B(\xi_1,\epsilon)$ 上与 $\psi$ 重合；而它在紧集外恒等于
+$Q_s$，于是二阶以上导数全部有界（`02-packets.tex:92-95`）。
+
+第四步，验证 $\phi$ 恰好还在允许类里，这是平台 $1/2$ 兑现的位置。
+在 $V$ 上收缩使 $D\ge d_0>0$，则 $R_\epsilon/D$ 零延拓后光滑，令
+$\widetilde\zeta=\zeta_0+R_\epsilon/D$（`02-packets.tex:97-103`）。
+扰动支撑上 $\zeta_0=1/2$ 且 $\lvert R_\epsilon/D\rvert\le C\epsilon^3/d_0$，
+把 $\epsilon$ 再压小使后者至多 $1/4$，就得
+$0\le\widetilde\zeta\le1$，内外支撑性质与 $\zeta_0$ 相同，并且
+$\phi=Q_s+\widetilde\zeta(q_s-Q_s)$（`02-packets.tex:104-109`）。
+所有选择只依赖固定的目标图（`02-packets.tex:110`）。我读完这四步的感受是：
+引理把"任意椭圆芽"归约成"允许类里一个具体的点"，代价是接受一次固定的
+仿射标准化，而后者对 $L^p$ 范数只贡献 $\det$ 幂次因子，这正是一路顺风的地方。
+
+第五步是容易被跳过的注脚：插入图落在过渡环带，packet 定理却允许固定有界区域
+内的任意频率标号，引用侧定义 6.3 并不要求标号落在球形区 $B(0,\rho)$
+（`02-packets.tex:113-121`）；于是所有与插入图相交的窗口以及后续使用的终端窗口
+可以并成一个固定有界频率区域（`02-packets.tex:121-123`）。
+若没有这条说明，我担心整条链会被"标号必须贴着球冠"的假约束卡死。
+01 节还交代了边界点为何也在管辖内：边界处光滑参数化延到开邻域，
+投影到切平面微分可逆，逆定理给出开平面邻域上的图，限制回来即原曲面片
+（`01-setup.tex:9-13`，引 Lee 的光滑边界约定，`01-setup.tex:9` 行注 Chapter 1, pp. 27-28）。
+
+## §4 方窗框架、容量与原子范数：把 packet 定理调到我们的刻度上
+
+核对完相位类，02 节剩下的工作是把 packet 定理改写成我们采样用的形状。
+尺度三元组在式 `eq:packet-scales`（`02-packets.tex:133-138`）：
+固定 dyadic $N\ge2$、$\delta=N^{-1}$，对 dyadic 因子 $1\le m\le N$ 令
+$\theta=m\delta$、$r=m^{-2}$、$w=r\theta=\delta/m$。
+指标为 $(\nu,z,I)$，$\nu\in\theta\Z^2$，$z\in D_{\mathrm f}^{-1}w\Z^2$，
+$[0,1)$ 切成长度 $r$ 的区间 $I$（`02-packets.tex:139-145`）。
+分析算子 $(\mathsf P_{m,I}f)_{\nu,z}$ 与综合算子
+$\mathsf S_{m,I}d$ 定义在 `02-packets.tex:147-157`，
+窗口来自 01 节的平方分割 $\sum_{\nu}(\chi_a^\nu)^2=1$
+（`eq:window-partition`，`01-setup.tex:27-37`；构造法：紧支撑 bump 除以
+整数平移平方和的平方根，分母光滑、正、周期，`01-setup.tex:33-36`）。
+选方窗的好处是精确框架恒等式（引理 `lem:packet-frame`，
+`02-packets.tex:161-191`）：
+$\mathsf S_{m,I}\mathsf P_{m,I}f=f$，
+$\lVert\mathsf P_{m,I}f\rVert_{\ell^2}^2=(D_{\mathrm f}\theta)^2\lVert f\rVert_2^2$，
+综合算子范数 $(D_{\mathrm f}\theta)^{-1}$。证明的枢纽一行是
+$N^2w\theta=1$ 使 $N^2z$ 跑遍 $(D_{\mathrm f}\theta)^{-1}\Z^2$
+（`02-packets.tex:175-176`），对每个固定 $\nu$ 就是一块边长
+$D_{\mathrm f}\theta$ 的方块上的 Fourier 系数，Parseval 加反转、
+再对 $\nu$ 求和使用 $\sum_\nu(\chi_\theta^\nu)^2=1$（`02-packets.tex:177-191`）。
+我注意到这里全部是恒等式，没有任何不等式损耗，这为后面"样本立方和恰好抵消
+$N^6$"埋了伏笔。
+
+容量的定义在 `02-packets.tex:193-218`。对 $0<\kappa<1/10$，
+中心椭圆 $E$ 半轴 $L\ge a>0$ 任意朝向，权
+$W_\kappa(E)=L^{1+\kappa}a^{1-\kappa}$；对单箱有限数组 $c$ 定义
+$K_{\theta,r}(c)$ 为对所有 $E,u,v$（要求 $L\ge a\ge\theta$，
+平移 $u,v$ 独立，半轴无上界限制，`02-packets.tex:209-210`）的
+$\frac{\theta^2}{W_\kappa(E)}\sum\lvert c_{\nu,z}\rvert^2$ 取上确界，求和约束
+$U_\nu\in u+E$、$z\in v+rE$（式 `eq:packet-general-capacity`，
+`02-packets.tex:199-203`）；再定义标尺
+$G_{\theta,r}(c)^3=(w^2\sum\lvert c\rvert^2)K_{\theta,r}(c)^{1/2}$
+（`eq:packet-gauge`，`02-packets.tex:204-207`）。
+原子范数 $A_{\theta,r}$ 是按坐标逐点 domination 的 infimum 和，
+$\mathcal A_m(c)^3=r\sum_I A_{\theta,r}(c_I)^3$
+（`02-packets.tex:211-218`）。引理 `lem:packet-atomic`
+（`02-packets.tex:221-252`）给出两件事：$A$ 是范数、对绝对值 domination 单调、
+被坐标掩码压缩；以及下界 $rw^2\sum\lvert c\rvert^3\le\mathcal A_m(c)^3$
+（`eq:packet-atomic-lower`）。证明思路是独立平移的两个半径 $\theta$ 圆盘
+覆盖任何指定指标，得 $K\ge\lVert c\rVert_\infty^2$，从而
+$G^3\ge w^2\lVert c\rVert_2^2\lVert c\rVert_\infty \ge w^2\lVert c\rVert_3^3$，再对 domination 用 $\ell^3$ 三角不等式
+（`02-packets.tex:231-246`）。单点代价 $w^{2/3}\lvert c_{\nu,z}\rvert$
+保证 infimum 有限（`02-packets.tex:247-249`）。
+
+初始尺度 $m=1$ 时只有一个箱 $[0,1)$，记号
+$\mathcal K_\kappa(d)=K_{\delta,1}(d)$、
+$m(d)=\delta^2\sum_{\nu,z}\lvert d_{\nu,z}\rvert^2$
+（`eq:packet-capacity`，`02-packets.tex:254-260`），于是
+$G_{\delta,1}(d)^3=m(d)\mathcal K_\kappa(d)^{1/2}$（`02-packets.tex:261-262`）。
+特化论证（`02-packets.tex:321-350`）取 $m=N$，读出尺度表：
+输入 $(\theta,r,w)=(\delta,1,\delta)$，输出 $(1,N^{-2},N^{-2})$，
+$t_I=j/N^2$，输出处 $rw^2=N^{-6}$（`02-packets.tex:322-330`）。
+这一步把引文里"单步映射 $T_m$"的抽象陈述翻译成了我们的采样语言：
+$Sd$ 是初始综合（`eq:packet-synthesis`，`02-packets.tex:295-300`），
+$c_{\nu',z',j}$ 是终端分析样本（`eq:packet-samples`，
+`02-packets.tex:301-305`），其中 $\nu'\in\Z^2$、
+$z'\in D_{\mathrm f}^{-1}N^{-2}\Z^2$、$j=0,\dots,N^2-1$。
+有界标号集对充分大 $N$ 落进同一个容许复杂度范围（引文定义 6.3 要求
+$m\le N\le m^B$ 且位置标号尺寸至多 $m^B$，`02-packets.tex:269-274`），
+有限多个更小 dyadic 尺度靠放大常数吸收（`02-packets.tex:341-343`）。
+于是得到式 `eq:packet-bound`，即 §2 写过的那条三次采样界。
+
+读完 02 节我明白了一件事：packet 定理给的是"振荡系数的三次均值"控制，
+右端却是容量 $\mathcal K_\kappa(d)$ 乘质量 $m(d)$ 的混合几何量；
+而我最终要的是纯数据范数 $\lVert h\rVert_3$。
+中间隔着的就是 03 节的密度转换：把容量拆成正管上的质量分组，
+再用 Kakeya 输入去吃这些正管。这正是 §2 架构图里两腿汇合的那一格。
+## §5 密度转换：一次对偶、一条束下界、一层 dyadic 分组
+
+03 节要解决的问题在节首写得很白（`03-density.tex:3-10`）：把
+Theorem `thm:packet` 用到任意初始数组上，而不对系数大小强加任何条件；
+工具是一条正管估计加一个按容量的分解。正管密度函数定义在
+`eq:tube-function`（`03-density.tex:12-21`）：
+$T_{\nu,z}=\{(X,t):0\le t\le1,\ \lvert X-z-tU_\nu\rvert\le\delta\}$，
+$H_d(X,t)=\sum_{\nu,z}\lvert d_{\nu,z}\rvert^2\mathbf1_{T_{\nu,z}}$，
+$b_\nu(d)=\sum_z\lvert d_{\nu,z}\rvert^2$。每根管体积
+$\pi\delta^2$，所以 $\int_{\R^3}H_d=\pi m(d)$（`eq:tube-mass`，
+`03-density.tex:23-26`）。我留意到这里全部是非负的、无振荡的量：
+Kakeya 输入只吃这样的东西，振荡信息已经全部被 packet 定理消化掉了。
+
+第一个输出是引理 `lem:weighted`（`03-density.tex:50-59`）：
+$\int H_d^{3/2}\le CM(s)^{3/2}\delta^{-3s/2}\delta^2\sum_\nu b_\nu(d)^{3/2}$。
+证明（`03-density.tex:61-119`）分四拍。第一拍把速度向量变成方向：
+由 `eq:velocity-monotonicity`（`01-setup.tex:60-63`）速度映射在固定频率
+标号范围内双 Lipschitz；再经 $U\mapsto(U,1)/\sqrt{1+\lvert U\rvert^2}$
+（逆 $\omega\mapsto\omega'/\omega_3$，在 $\omega_3$ 离零有界的范围同样双
+Lipschitz）得方向集 $\omega_\nu$，彼此以固定正倍数的 $\delta$ 分离
+（`03-density.tex:62-71`）。第二拍取半径 $c_1\delta$ 的两两不交球冠
+$\Omega_\nu$，面积上下界 $c_2\delta^2$ 与 $C_2\delta^2$
+（`03-density.tex:72-75`）。第三拍是几何包含：管中心段长
+$\sqrt{1+\lvert U_\nu\rvert^2}$ 有界，对 $\omega\in\Omega_\nu$ 管到该方向
+直线的距离 $O(\delta)$，投影覆盖至多 $C_3$ 个圆柱 $\mathcal T_{C_4\delta}$，
+于是 $\int_{T_{\nu,z}}\lvert g\rvert\le C\delta^2K_{C_4\delta}g(\omega)$
+（`03-density.tex:77-92`）。第四拍平均、加权、求和，
+对 $B_d=\sum_\nu b_\nu(d)\mathbf1_{\Omega_\nu}$ 用不交性得
+$\lVert B_d\rVert_{L^{3/2}(S^2)} \le C(\delta^2\sum_\nu b_\nu^{3/2})^{2/3}$，
+再 Hölder 加输入 `eq:kakeya-input`，$L^{3/2}$ 与 $L^3$ 对偶后取 $3/2$ 次幂
+（`03-density.tex:93-119`）。有一句注释我读到时拍了下桌子："对位置的求和
+不造成损失，因为 $K_\rho$ 已经对圆柱位置取了上确界"
+（`03-density.tex:116-118`）。这正是极大函数型输入比逐管计数强的地方。
+
+第二个输出是束下界（`03-density.tex:121-146`）：若坐标子数组 $q$ 支撑在
+$U_\nu\in u+E$、$z\in v+E$，则对 $0\le t\le1$，
+$H_q(\cdot,t)$ 的水平支撑落在 $v+tu+3E$，因为
+$B(0,\delta)\subset E$ 且椭圆中心对称凸，$E+tE=(1+t)E$
+（`03-density.tex:128-134`）；面积至多 $9\pi La$。Hölder 反向使用得
+$\int H_q^{3/2}\ge\pi m(q)(m(q)/W_\kappa(E))^{1/2}/3$
+（`eq:bundle-lower`，`03-density.tex:138-144`），且对离心率 $L/a$、
+独立平移 $u,v$、以及 $\kappa$ 一致（`03-density.tex:145-146`）。
+这条不等式把"容量测试选出的束"与"管的三次积分"焊在一起：
+容量 $\rho=m/W_\kappa$ 越大，束对 $\int H^{3/2}$ 的贡献越实。
+
+第三个输出，也是最核心的引理 `lem:density`（`03-density.tex:148-248`）：
+任意非零有限数组 $d$、$n=\#\operatorname{supp}d$，存在支撑两两不交的
+坐标子数组分解 $d=\sum_{i=1}^J d^{(i)}$，$J\le C\log(2+n)$，使
+$\sum_i m(d^{(i)})\mathcal K_\kappa(d^{(i)})^{1/2} \le C\int H_d^{3/2}$（`eq:density-cost`），常数绝对，
+与系数大小和 $\kappa$ 无关（`03-density.tex:148-163`）。
+证明的骨架我逐段核对过。先记 $D=\max\lvert d_{\nu,z}\rvert^2$，
+半径 $\delta$ 的独立平移圆盘给出 $D\le\mathcal K_\kappa(d)\le nD$
+（`eq:capacity-range`，`03-density.tex:166-172`），容量对坐标限制单调。
+取门槛 $A=D/n^2$：容量不超 $A$ 的残量其代价
+$m(r)\mathcal K_\kappa(r)^{1/2}\le\delta^2D^{3/2}$，
+而任何一个平方模等于 $D$ 的原始条目对 $H_d$ 贡献 $D\mathbf1_{T_{\nu,z}}$，
+故 $\int H_d^{3/2}\ge\pi\delta^2D^{3/2}$，残量代价被
+$\pi^{-1}\int H_d^{3/2}$ 统一接住（`03-density.tex:175-189`）。
+主循环是贪心：只要 $\mathcal K_\kappa(r_j)>A$，就取密度至少为
+上确界一半的椭圆测试（不需要上确界被取到，`03-density.tex:200`），
+令 $q_j$ 为该测试选中的全部非零坐标，$\rho_j=m(q_j)/W_\kappa(E_j) \ge\mathcal K_\kappa(r_j)/2$，残量 $r_{j+1}=r_j-q_j$；每步至少去掉一个
+非零元，至多 $n$ 步终止（`03-density.tex:190-204`）。
+分组按"被选出时所属残量的容量"落进哪个 dyadic 层
+$\lambda_k=2^kA\le\mathcal K_\kappa(r_j)<2\lambda_k$；层数组 $d_k$ 是该层
+第一次移除时残量的坐标限制，故 $\mathcal K_\kappa(d_k)<2\lambda_k$，
+且层内每个 $\rho_j\ge\lambda_k/2$，于是
+$m(d_k)\mathcal K_\kappa(d_k)^{1/2}\le2\sum_j m(q_j)\sqrt{\rho_j}$，
+再用束下界、$q_j$ 的不交性（管函数逐点被 $H_d$ 控制）与
+$\sum x_j^{3/2}\le(\sum x_j)^{3/2}$，得层代价和
+$\le C\int H_d^{3/2}$（`03-density.tex:206-234`，式 `eq:level-cost`）。
+最后数层数：容量落在 $(A,nD]$，端点比 $n^3$，非空 dyadic 层至多
+$1+\lfloor3\log_2n\rfloor$，加上终止残量得 $J\le C\log(2+n)$；
+$n=1$ 的退化情形单独一句话处理干净（`03-density.tex:240-247`）。
+这里我最欣赏的设计是 $A=D/n^2$ 的取法：它刚好让"最大单系数的管贡献"
+与"低容量残量的总代价"同阶，门槛既不用知道 $\ell^3$ 范数也不用系数
+分布假设，这正是"不对系数大小强加条件"的兑现方式。
+
+合拢是命题 `prop:discrete`（`03-density.tex:251-299`）：
+$\sum\lvert c_{\nu',z',j}\rvert^3\le CN^6P(\kappa,\eta)M(s)^{3/2}N^{\gamma_0}\log^2(2+N)\delta^2\sum_\nu b_\nu(d)^{3/2}$，
+$\gamma_0=10\kappa+\eta+3s/2$（`eq:discrete-critical`）。
+证明：线性性给 $c=\sum_ic^{(i)}$，$\ell^3$ 三角不等式与对 $i$ 的有限和
+Hölder 造出 $J^2$，packet 界 `eq:packet-bound` 逐片套（掩码限制不改标号界，
+同一片用同一个 $P(\kappa,\eta)$，`03-density.tex:296-298`），
+再套 `eq:density-cost` 与 `lem:weighted`；固定有界范围内频率标号与位置标号
+各 $O(N^2)$ 个，故 $n\le CN^4$，$\log^2$ 出炉
+（`03-density.tex:269-299`）。$C$ 与 $N$ 的门槛独立于
+$\kappa,\eta,s$；参数依赖只住在 $P$ 与 $M$ 里（`03-density.tex:263-266`）。
+
+## §6 稀疏球联合估计：删共振、算子范数、拼样本、铺球
+
+命题 `prop:sparse`（`04-sparse.tex:14-34`）是全篇技术密度最高的一格。
+设定：$h$ 支撑在 $Q_0$、$\lVert h\rVert_3\le1$、$0<\mu\le\mu_0$；
+$\mathcal B$ 是等半径 $R$ 的有限球族，满足
+$\#\mathcal B\le\mu^{-8}$、$R\ge\mu^{-100}$、
+两心距至少 $\mu^{-40}R$；dyadic $N$ 满足 $4R\le N^2<16R$。
+结论：$\lvert\{\lvert F\rvert>\mu\}\cap\bigcup_{\mathcal B}B\rvert \le C\mu^{-3}P(\kappa,\eta)M(s)^{3/2}N^{\gamma_0}\log^2(2+N)$
+（`eq:sparse-estimate`），并且 $C$、$\mu_0$ 对 $\kappa,\eta,s$、
+球心位置、以及球心间可任意大的间距都一致（`04-sparse.tex:32-34`）。
+节首的动机段（`04-sparse.tex:3-12`）说：要日后把 $N^{\gamma_0}$ 去掉，
+就需要对许多远离区域用单一数据范数换一条联合估计；两个平移在少数方向上
+不产生振荡，把这些方向封在一个小频率集里扔掉，$L^\infty$ 代价很小，
+剩下的平移在初始 packet 尺度上近乎正交。
+
+证明的四段里，第一段是共振删频（`04-sparse.tex:56-88`）。
+记 $a_B=x_B-(0,0,N^2/2)$，两球心之差拆成 $(q,s_0)\in\R^2\times\R$，
+$H=\lvert(q,s_0)\rvert$；共振集
+$\Omega_{B,\widetilde B}=\{\xi\in Q_0:\lvert q+s_0\nabla\phi(\xi)\rvert \le H\mu^{20}\}$（`04-sparse.tex:57-63`）。若它非空，则
+$H\le\lvert q\rvert+\lvert s_0\rvert\le H\mu^{20}+(G+1)\lvert s_0\rvert$，
+对充分小 $\mu_0$ 逼出 $\lvert s_0\rvert\ge H/[2(G+1)]$
+（`04-sparse.tex:64-69`）；再由速度单调性，集内两点距离至多
+$C\mu^{20}/c$，面积 $\le C\mu^{40}$（`04-sparse.tex:70-76`）。
+对球对求并：$\#\mathcal B\le\mu^{-8}$ 给球对数 $\mu^{-16}$ 级，
+并集 $\Omega$ 面积 $\le C\mu^{24}$（`04-sparse.tex:77-78`）。
+砍掉 $\Omega$ 后 $h_*=h\mathbf1_{Q_0\setminus\Omega}$，
+Hölder 直接给 $\lVert F-F_*\rVert_\infty\le \lVert\chi_1^{\nu_*}\rVert_\infty\lVert h\rVert_3\lvert\Omega\rvert^{2/3} \le C\mu^{16}\le\mu/2$（`eq:sparse-excision`，
+`04-sparse.tex:79-85`）。作者自己注明 20、40、100 这些幂次留了富余，
+具体数值无关紧要（`04-sparse.tex:86-88`）。我第一遍读时纠结过
+"$\lvert\Omega\rvert^{2/3}$ 从哪来"：那是 $L^3$ 数据配 $L^{3/2}$ 可积性的
+Hölder，指数 2/3 恰是对偶数；这个"数据只进 $L^3$"的细节在第三段还会再撞见。
+
+第二段是初始系数的联合质量界。定义移位调制
+$h_{B,u}(\xi)=h_*(\xi)e((a_B+u)\cdot(\xi,\phi(\xi)))$、其 packet 分析
+$d_{\nu,z}^{B,u}$ 与局部质量 $b_\nu^{B,u}$（`eq:sparse-analysis`，
+`04-sparse.tex:96-107`），目标是对 $u\in\mathcal U=[0,D^{-1})^2\times[0,1)$
+一致地 $\sum_{\mathcal B}b_\nu^{B,u}\le C\delta^2 \int_{\Gamma_\nu}\lvert h_*\rvert^2$（`eq:sparse-joint-mass`，
+`04-sparse.tex:108-113`）。手法是把三个指标 $(B,z,\cdot)$ 拼成一个
+算子 $T_\nu$ 作用在未删集限制的 $L^2(\R^2)$ 上：扩大定义域的好处写得很直白
+（`04-sparse.tex:125-128`），$T_\nu T_\nu^*$ 的核带着光滑振幅
+$(\chi_\delta^\nu)^2$，不携带删集 $\Omega$ 的示性函数，逐点振荡积分
+可以直接做。对角块是 Parseval，算子范数 $\le C\delta^2$
+（`04-sparse.tex:130-140`）。非对角块一个条目是
+$\int(\chi_\delta^\nu)^2e((q+N^2(z-\widetilde z))\cdot\xi+s_0\phi(\xi))$。
+换元 $\xi=\nu+\delta v$ 后，取
+$v_0=(q+s_0\nabla\phi(\xi_g))/\lvert q+s_0\nabla\phi(\xi_g)\rvert$
+（$\xi_g$ 避开所有共振集所以有定义）与 $\Lambda=\delta H\mu^{20}$，
+两个相位估计是命门：方向导数
+$D_{v_0}\Psi\ge\delta(H\mu^{20}-CH\delta-2ZN^2)\ge\Lambda/2$
+（`eq:sparse-phase-first`，`04-sparse.tex:156-159`），
+二阶以上导数 $\le C_\alpha H\delta^2\le C_\alpha\Lambda$，且
+$\Lambda\ge\frac1{16}N\mu^{-20}$（`eq:sparse-phase-higher`，
+`04-sparse.tex:160-163`）。两个误差项 $CH\delta$ 与 $2ZN^2$ 分别折成
+$C\mu^{30}$ 与 $32Z\mu^{20}$ 由 `eq:sparse-scale`（`04-sparse.tex:49-54`）
+控制，固定 $\mu_0$ 后总和不过一半（`04-sparse.tex:165-170`）。
+对固定方向 $v_0$ 反复分部积分给出核衰减
+$\le C_k\delta^2\Lambda^{-k}\le C_k\delta^2N^{-k}$
+（`eq:sparse-kernel-decay`，`04-sparse.tex:172-179`），
+配套说明用算子 $(2\pi iD_{v_0}\Psi)^{-1}D_{v_0}$ 及其伴随，
+$(D_{v_0}\Psi)^{-1}$ 的固定阶方向导数是 $O_k(\Lambda^{-1})$ 级，
+不需要一阶导数上界；并且这些常数在 $H\to\infty$ 时保持一致，
+因为下界与高阶上界携带同一个因子 $H$（`04-sparse.tex:181-189`）。
+这最后一点正是"对任意大的球心间距一致"的物理来源，我读到这里回头才理解
+命题陈述为何敢写"中心位置与最大间距都一致"。
+每球块保留的空间标号至多 $C_ZN^2$ 个，非对角块的行列各
+$C_Z\mu^{-8}N^2\le C_ZN^3$ 个条目，取 $k=4$ 用行列和界吃 $\ell^2$
+算子范数，非对角块范数也 $\le C\delta^2$，合起来
+$\lVert T_\nu\rVert_{2\to2}^2\le C\delta^2$（`04-sparse.tex:191-199`）。
+顺着窗口有界重叠与 $\lvert\Gamma_\nu\rvert\le C\delta^2$，Hölder 两步
+把联合质量送进所需形状：$\delta^2\sum_{\nu,\mathcal B} (b_\nu^{B,u})^{3/2}\le C\delta^5\sum_\nu(\int_{\Gamma_\nu} \lvert h_*\rvert^2)^{3/2}\le C\delta^6\lVert h_*\rVert_3^3\le C\delta^6$
+（`eq:sparse-l3-mass`，`04-sparse.tex:201-213`）。
+$C\delta^6$ 这个数在第四段与 $N^6$ 对消，是全链条最漂亮的一次收支相抵。
+
+第三段重建样本并处理被弃的空间尾（`04-sparse.tex:215-276`）。
+对截断数组 $d^{B,u}$（限制 $\lvert z\rvert\le Z$）套综合采样映射，保留
+$\nu'=\nu_*$、$\lvert z'\rvert\le1$、$0\le j<N^2$，要证一致近似
+$c_{z',j}^{B,u}=F_*(a_B+u+(N^2z',j))+O(N^{-3})$
+（`eq:sparse-samples`）。工具是初始尺度的完整框架恒等式
+（`eq:sparse-full-frame`）与精确质量式
+$\sum_{\nu,z}\lvert\widehat d_{\nu,z}^{B,u}\rvert^2 =(D\delta)^2\lVert h_*\rVert_2^2\le C\delta^2$
+（`eq:sparse-full-mass`，`04-sparse.tex:226-240`）：质量式对
+"$h\in L^3\cap L^2_{Q_0}$" 成立，而且球心的巨大调制 $a_B$ 完全不改
+$\ell^2$ 质量（`04-sparse.tex:241-243`），这句解释了我先前的心头疑团：
+为什么中心可以任意远。被舍弃的 $\lvert z\rvert>Z$ 到保留输出的矩阵条目
+$A_{z',j;\nu,z}$，换元后沿 $-z/\lvert z\rvert$ 的相位导数至少
+$N(\lvert z\rvert-1-G)\ge cN(1+\lvert z\rvert)$，二阶以上因
+$j\delta^2\le1$ 一致有界，同一套分部积分给
+$\lvert A\rvert\le C_k[N(1+\lvert z\rvert)]^{-k}$
+（`eq:sparse-tail-entry`，`04-sparse.tex:245-262`）；网格上
+$\sum_{\lvert z\rvert>Z}(1+\lvert z\rvert)^{-2k}\le C_kN^2$（$k>2$），
+行尾平方和 $C_kN^{4-2k}$，配对 $\widehat d$ 后 $C_kN^{1-k}$，
+取 $k=4$ 即 $O(N^{-3})$（`04-sparse.tex:263-272`）。
+收尾一句很要紧：所有无穷和可由 `eq:sparse-full-frame` 的 $L^2$ 收敛
+正当化，尾配对由 Cauchy--Schwarz 绝对收敛，于是数据与删集的尖锐边界
+都没有被微分过（`04-sparse.tex:272-276`）。这就是为什么 $L^3$ 粗数据
+能一路活着到最后：振荡性全部由光滑振幅与相位承担，示性函数从不进分部积分。
+
+第四段收拢（`04-sparse.tex:278-325`）。对每个保留数组套
+`prop:discrete` 并对 $\mathcal B$ 求和；`eq:sparse-l3-mass` 把
+$N^6$ 恰好抵消，得 $\sum_{\mathcal B,z',j}\lvert c\rvert^3\le CPM^{3/2}N^{\gamma_0}\log^2$。样本总数
+$O(\mu^{-8}N^6)=O(N^7)$ 个（终端空间标号 $O(N^4)$、时间 $N^2$），
+立方误差和至多 $CN^7N^{-9}=CN^{-2}$，用 $\lvert a+b\rvert^3\le 4(\lvert a\rvert^3+\lvert b\rvert^3)$ 与 $P,M\ge1$ 把误差并进去，
+得对 $u$ 一致的 `eq:sparse-cube-sum`。再对公共偏移 $u$ 积分：
+每个球内的样本格化成不交的半开胞 $a_B+(N^2z',j)+\mathcal U$，
+这些胞覆盖 $B$：对 $y\in B$ 令 $r=y-a_B$，则
+$\lvert r'\rvert\le R\le N^2/4$、$N^2/4\le r_3\le3N^2/4$，
+水平胞角点 $\ell'$ 满足 $\lvert\ell'\rvert\le N^2/4+\sqrt2/D<N^2$，
+于是 $z'=\ell'/N^2$ 与 $j=\lfloor r_3\rfloor$ 都在保留标号里；
+换元 Jacobian 为 1，偏移域体积固定 $D^{-2}$（`04-sparse.tex:299-322`）。
+最后 $\{\lvert F\rvert>\mu\}$ 上 `eq:sparse-excision` 保证
+$\lvert F_*\rvert>\mu/2$，Chebyshev 一击出 `eq:sparse-estimate`
+（`04-sparse.tex:323-325`）。全证明的每个选择只用固定几何常数与固定
+微分阶数，所以 $\mu_0$ 对 $\kappa,\eta,s$ 一致（`04-sparse.tex:327-329`）。
+
+我对这一节的整体印象：它把 Bourgain--Guth 与 Kim 附录里的稀疏球策略
+（`00-introduction.tex:129-139`）做成了一条自足的、双向一致的引理，
+一致性两端分别是"间距可以无穷大"与"参数可以无穷小"。
+
+## §7 全局化：占有数、无直径约束的覆盖、去损失账本
+
+05 节开场把任务拆成两句（`05-global.tex:3-6`）：用受控数量的稀疏族覆盖
+每个超水平集；$L^4$ 与梯度界控制被占用的单位立方体数；局部点计数的慢增长
+让我们在没有直径约束的情况下选出半径。
+
+先把初等军火备好。引理 `lem:basic`（`05-global.tex:18-89`）：
+若 $\phi''\ge cI$，则 $\lVert G\rVert_{L^4(\R^3)} \le(\pi/c)^{1/4}\lVert g\rVert_{L^2(\R^2)}$（`eq:elementary-lfour`）。
+证明走的是 Tomas--Stein 式卷积路线：$\lambda*\lambda$ 是图上有限复测度的
+自卷积，对检验函数 $v$ 用 Cauchy--Schwarz 把双积分转成变量
+$m=\xi+\xi'$、$w=r\omega$（线性变换绝对 Jacobian 为 1），核心一不等式是
+$H'_{m,\omega}(r)=\int_{-r}^{r}\omega^{\mathsf T}\phi''(m/2+s\omega) \omega\,\,d s\ge2cr$（`05-global.tex:53-59`），于是 $H_{m,\omega}$ 严格增，
+代换 $s=H_{m,\omega}(r)$ 把双积分折成 $\le(\pi/c)\lVert v\rVert_2^2$
+（`05-global.tex:60-68`）。由 $L^2$ 表示定理得 $\lambda*\lambda$ 有 $L^2$
+密度、范数至多 $(\pi/c)^{1/2}\lVert g\rVert_2^2$，其 Fourier 变换在缓增
+分布意义下是 $G(-\,\cdot)^2$，Plancherel 收尾；作者特意注明这套推理对粗数据
+成立、事先不假设卷积有密度（`05-global.tex:69-77`）。对
+$F=E_\phi(h\chi_1^{\nu_*})$，紧支撑加 Hölder 把 $\lVert g\rVert_2$、
+$\lVert g\rVert_1$、带 $\lvert(\xi,\phi(\xi))\rvert$ 权的 $L^1$ 都折成
+$\lVert h\rVert_3$ 的固定倍数，得三合一界
+$\lVert F\rVert_4+\lVert F\rVert_\infty+\lVert\nabla F\rVert_\infty \le C_{\mathrm b}\lVert h\rVert_3$（`eq:basic-bounds`，
+`05-global.tex:78-88`）；求导进积分号合法的缘由是积分元支撑在固定紧集内。
+
+占有数引理 `lem:occupancy`（`05-global.tex:98-126`）：归一化
+$\lVert h\rVert_3\le1$，$A_\mu=\{\lvert F\rvert>\mu\}$，称与 $A_\mu$
+相交的单位方格为被占用。结论：被占用方格至多 $C_X\mu^{-7}$ 个；
+$\mu\le C_X^{-1}$ 时每格取一点得 $\#X\le\mu^{-8}$。证明在每格选点
+$x_Q$ 后用梯度界：在 $B(x_Q,r_\mu)$（$r_\mu=\mu/(2C_{\mathrm b})$）上
+$\lvert F\rvert>\mu/2$；这些球重叠度至多 $125=5^3$，因为落在一个球内的
+点到其球心距离不超过 1，能装下这种球心的单位方格至多 $5^3$ 个
+（`05-global.tex:110-113`）。于是
+$\#\mathcal Q\cdot\pi\mu^7/(96C_{\mathrm b}^3) \le\sum_{\mathcal Q}\int_{B(x_Q,r_\mu)}\lvert F\rvert^4 \le125C_{\mathrm b}^4$，可取 $C_X=\max\{1,12000C_{\mathrm b}^7/\pi\}$
+（`05-global.tex:114-120`）。无穷多个占用格会给出任意大的有限子族，
+矛盾，所以全体有限（`05-global.tex:121-124`）。我读这段时注意到幂次 7 的
+出处：$\mu^7=\mu\cdot\mu^6$ 是"球内值 $\times$ 球体积"，$r_\mu^3$ 与
+$(\mu/2)^4$ 的 $L^4$ 权重合流正好给 7 次；后面覆盖引理要的
+$\mu^{-8}$ 只需 $\mu\le C_X^{-1}$ 的松裕。
+
+覆盖引理 `lem:sparse-cover`（`05-global.tex:144-231`）是我最想反复品的组合段。
+几何门槛 $\mu^{-60}\ge8$、$\mu^{-100}>2$（`eq:fixed-geometric-thresholds`，
+`05-global.tex:139-141`）先钉死。尺度表：$\beta=\tau/4$、
+$J=\lceil32/\tau\rceil+1$、$R_j=\mu^{-100(j+1)}$（`eq:cover-scales`，
+`05-global.tex:147-151`）。每个点 $x\in X$ 数
+$n_j(x)=\#(X\cap B(x,R_j))$；若所有 $j<J$ 处 $n_{j+1}>\mu^{-\beta}n_j$，
+则 $n_J>\mu^{-\beta J}>\mu^{-8}\ge\#X$，矛盾，故每点至少有一个慢增长指标
+$n_{j+1}(x)\le\mu^{-\beta}n_j(x)$（`eq:slow-growth`，
+`05-global.tex:171-177`）。按 $(j,k)$（$2^k\le n_j(x)<2^{k+1}$）分组，
+非空组至多 $J(1+8\log_2(1/\mu))$ 个。组内取极大不交球族 $B(y,R_j)$、
+心集 $Y$：未被选中的球必与某选中球相交，故组内所有方格被 $\{B(y,4R_j)\}$
+覆盖（`05-global.tex:186-193`）。在 $Y$ 上建图，$x\sim y$ 当
+$\lvert x-y\rvert<R_{j+1}/2$：固定 $x$ 的邻居们的原球 $B(y,R_j)$ 两两不交
+且都含于 $B(x,R_{j+1})$（门槛式保证 $R_j<R_{j+1}/2$），每个邻居球至少
+$2^k$ 点而 $n_{j+1}(x)<\mu^{-\beta}2^{k+1}$，故度数 $<2\mu^{-\beta}$，
+贪心着色至多 $3\mu^{-\beta}$ 色；同色心间距至少
+$R_{j+1}/2=\frac{\mu^{-100}}2R_j\ge\mu^{-40}(4R_j)$，恰是
+`prop:sparse` 要求的分离（`05-global.tex:195-217`）。乘起来得族数
+$3J(1+8\log_2(1/\mu))\mu^{-\beta}$（`eq:family-count`）。
+配套 $N$：$4R\le N^2<16R$ 且 $N<8\mu^{-50J}$（`eq:cover-N`，
+`05-global.tex:220-224`）。这段的两句收刀我要原样记住：论证不用点的绝对
+位置，也不用 $X$ 的直径，不同簇可以任意远；开球的使用顺带解决边界情形，
+极大性保证未选球与选中球相交，图距离阈值取等号也不伤弱分离
+（`05-global.tex:226-231`）。没有直径约束是稀疏球方法在超水平集场景的命门：
+$A_\mu$ 的几何在无穷远可以任意野，任何"先框进大球再分层"的做法都会把
+$\mu^{-8}$ 卡爆。
+
+主定理 `thm:graph`（`05-global.tex:235-324`）把账本摊开。取
+$\tau=p-3$、$\theta=10^{-6}\tau^2$（`eq:theta-choice`）。在
+`prop:sparse` 里令 $\kappa=\eta=s=\theta$，于是
+$\gamma_0=10\kappa+\eta+\frac32s=\frac{25}{2}\theta$。预算核心是
+$J\le34/\tau$ 与 $50J\gamma_0\le\frac{17}{800}\tau<\frac{\tau}{4}$
+（`eq:exponent-budget`，`05-global.tex:262-266`）：后者让每族尺度上
+$N^{\gamma_0}\le8^{\gamma_0}\mu^{-\tau/4}\le2\mu^{-\tau/4}$，
+而 $\log(2+N)\le53J(1+\log(1/\mu))$。逐族套 `prop:sparse` 再求和：
+$\lvert A_\mu\rvert\le CP(\theta,\theta)M(\theta)^{3/2} J^3(1+\log(1/\mu))^3\mu^{-3-\tau/2}$（`eq:global-distribution`）。
+损耗清单写得明白：着色花 $\mu^{-\beta}=\mu^{-\tau/4}$，尺度因子再至多
+$\mu^{-\tau/4}$，组计数贡献一个 $J(1+\log(1/\mu))$，
+`prop:sparse` 里的 $\log^2$ 贡献另外两个（`05-global.tex:281-286`）。
+千刀万剐后合成 $\mu^{-3-\tau/2}$，比 $\mu^{-3}$ 只贵 $\mu^{-\tau/2}$。
+蛋糕分层：$\lVert F\rVert_p^p=p\int_0^\infty\mu^{p-1}\lvert A_\mu\rvert\,d\mu$
+在范数已知有限之前由 Tonelli 合法（`05-global.tex:288-292`）；
+$\mu<\mu_0$ 段需要
+$\int_0^1\mu^{-1+\tau/2}(1+\log(1/\mu))^3\,d\mu =\frac2\tau+\frac{12}{\tau^2}+\frac{48}{\tau^3}+\frac{96}{\tau^4} \le158\tau^{-4}$（`eq:layer-integral`，代换 $u=\log(1/\mu)$ 逐项积分，
+`05-global.tex:296-303`）；配上 $J^3\le34^3\tau^{-3}$、$p\le4$，
+小层贡献 $\le CP(\theta,\theta)M(\theta)^{3/2}\tau^{-7}$
+（`05-global.tex:304-306`）。大层 $\mu\ge\mu_0$ 用
+$\lVert F\rVert_4$ 直接封：$\le\mu_0^{-1}C_{\mathrm b}^4$，
+因 $P,M\ge1$、$\tau\le1$ 被前者吸收（`05-global.tex:308-316`）。
+$p>4$ 干脆利落：$\lVert F\rVert_p^p\le \lVert F\rVert_\infty^{p-4}\lVert F\rVert_4^4\le C_{\mathrm b}^p\lVert h\rVert_3^p$
+（`05-global.tex:319-323`）。节末声明：$\tau^{-7}$ 显式记录初等去损失，
+输入定理不给 $P$、$M$ 的速率，所以全式不断言最佳常数是 $(p-3)^{-1}$ 的
+多项式（`05-global.tex:326-331`）。
+
+下界命题 `prop:lower`（`05-global.tex:335-406`）不用 Kakeya 也不用 packet。
+取内点仿射图 $\Psi(\xi)=v_0+L(\xi,\phi(\xi))$、
+$f=g/J_\Sigma$ 于卡上零延拓，则 $B_f=\sup_{3\le p\le4}\lVert f\rVert_{L^p(\Sigma)}<\infty$。
+水平 Plancherel 给 $\int_{\R^2}\lvert G\rvert^2\,d y'=A=\lVert g\rVert_2^2$
+恒定，二阶矩恒等式给 $\int\lvert y'\rvert^2\lvert G\rvert^2\,d y'\le B_g(1+t)^2$（`05-global.tex:364-371`）；取
+$K=\max\{1,(2B_g/A)^{1/2}\}$，圆盘外质量至多 $A/2$，盘内 Hölder 逼出
+$\int\lvert G(\cdot,t)\rvert^p\ge c_g(1+t)^{2-p}$
+（`eq:horizontal-lower-bound`，`05-global.tex:375-389`，$c_g$ 是两个显式
+正数的最小值）；对 $t\ge0$ 积分得 $\lVert G\rVert_p^p\ge c_g/(p-3)$。
+仿射坐标贡献相位模与 $|\det L|^{-1}$ 因子
+（`05-global.tex:393-397`），收口
+$C^{\mathrm{best}}_{\Sigma,p}\ge B_f^{-1}\min\{d_g^{1/3},d_g^{1/4}\} (p-3)^{-1/p}$（`05-global.tex:398-405`）。这是"时间集中"型 Knapp 反例的
+严格化：波包在抛物型 spread 下沿 $t$ 轴铺开的 $(1+t)^{2-p}$ 可积性
+恰在 $p=3$ 处发散。上界 $\tau^{-7/p}$、下界 $\tau^{-1/p}$，中间差多少，
+§9 再算。
+
+## §8 回到曲面与两个推论：雅可比全程在岗
+
+06 节前段（`06-surfaces.tex:3-68`）把 `thm:graph` 拼成 `thm:main`。
+有限小卡覆盖，逐卡经 `lem:continuation` 固定仿射标准化进入允许相位类，
+构造与常数逐卡固定、与 $p$ 无关（`06-surfaces.tex:5-10`）；
+用从属可测分割避免假设数据跨卡光滑延拓（`06-surfaces.tex:11-12`）。
+单卡写成 $\xi=v_0+L(\zeta,\phi(\zeta))$，面积元 $J_\Sigma(\zeta)\,d\zeta$
+光滑严格正；卡上数据换 $g=f\circ\Psi\cdot J_\Sigma$、卡外零，则
+$E_\Sigma f(x)=e(x\cdot v_0)\int g(\zeta)e((L^{\mathsf T}x)'\cdot\zeta+ (L^{\mathsf T}x)_3\phi(\zeta))\,d\zeta$。物理变量代换 $y=L^{\mathsf T}x$
+给 $L^p$ 范数带 $|\det L|^{-1/p}$（`06-surfaces.tex:38-39`）；
+输入侧两条 Hölder：$\lVert g\rVert_3^3\le(\sup_AJ_\Sigma)^2 \int_{\Sigma_{\mathrm{chart}}}\lvert f\rvert^3\,d\sigma$ 与有限测度嵌入
+$\lVert f\rVert_{L^3}\le\sigma(\Sigma_{\mathrm{chart}})^{1/3-1/p} \lVert f\rVert_{L^p}$（`06-surfaces.tex:40-48`）。窗口分割后逐块套
+`thm:graph`，行列式、面积、窗口、卡数因子对 $3<p\le4$ 一致有界，
+三角不等式求和得 `eq:main` 与定量式 `eq:quantitative-intro`，
+$P_\Sigma$ 取有限个 packet 常数的最大并放大到至少 1
+（`06-surfaces.tex:49-57`）。$p>4$ 走局部 $L^4$、$L^\infty$ 直封；
+没有用到 $f$ 的光滑性，也没用到其零延拓在参数平面上的光滑性，
+边界卡因此自动在内（`06-surfaces.tex:59-63`）。`prop:lower` 补下界，
+`thm:main` 与全部 $p$ 依赖宣告完成（`06-surfaces.tex:65-68`）。
+
+Schrödinger 局部光滑推论（`06-surfaces.tex:70-108`）走
+Lee--Rogers--Seeger 传输：紧抛物面 $\Sigma=\{(y,\lvert y\rvert^2): \lvert y\rvert\le1\}$、$\,d\sigma=w(y)\,d y$、$w=\sqrt{1+4\lvert y\rvert^2}$；
+对数据 $g/w$ 用 `thm:main`，固定输出变量代换得紧频率延拓界
+$\lVert\int_{\lvert y\rvert\le1}g(y)e^{i(\tau\lvert y\rvert^2-\xi\cdot y)} \,d y\rVert_{L^p(\R^3_{\xi,\tau})}\le C_p\lVert g\rVert_{L^p}$，
+正是 LRS 定理输入其 (1.3) 式、双侧同指数 $p$ 的形状
+（`06-surfaces.tex:78-90`）。LRS Theorem 1.1（空间维 2、Besov 求和指数 2）
+给 $\lVert e^{it\Delta}f\rVert_{L^p(\R^2\times[0,1])}\le C_p\lVert f\rVert_{B^p_{\alpha,2}}$，$\alpha=2(1-2/p)-2/p=2-6/p$
+（`06-surfaces.tex:90-96`）。非齐次 Littlewood--Paley 环带一致乘子界
+$\lVert P_kf\rVert_p\le C_s2^{-ks}\lVert(I-\Delta)^{s/2}f\rVert_p$
+使 $\sum_k2^{-2k(s-\alpha)}$ 在 $s>\alpha$ 收敛，Besov 折回
+Sobolev（`06-surfaces.tex:97-105`）；Schwartz 上证明、稠密性延拓
+（`06-surfaces.tex:105-107`）。阈值不可降半格：Rogers 必要条件引在
+`00-introduction.tex:83-85`。我核对过一处容易含糊的点：这里的 $p$ 同时是
+空间与时间的指数、也是初值 Sobolev 的可积指数，全靠 LRS 传输定理把
+"对角延拓"翻译为"对角光滑"，两个 $p$ 相等不是巧合，是定理陈述 (1.3)
+里两侧同名的直接结果。
+
+Bourgain 振荡积分推论 `cor:bourgain-oscillatory`
+（`06-surfaces.tex:110-224`）处理相位
+$\phi(x,t;y)=x\cdot y+\psi(t;y)$，假设
+$M(t,y)=D_y^2\partial_t\psi$ 定且 $\partial_tM=cM$。第一步是漂亮的
+张量追逐：$M$ 是 Hessian 所以导数交换，
+$(\partial_{y_k}c)M_{ij}=(\partial_{y_i}c)M_{kj}$，乘 $M^{-1}$ 缩并得
+$\nabla yc=0$，输入球连通故 $c=c(t)$（`06-surfaces.tex:147-158`）。
+于是 $\partial_t\psi=\rho(t)h(y)+b(t)\cdot y+d(t)$，积分并用
+$\psi(0;y)=0$ 得 $\psi=S(t)h(y)+B(t)\cdot y+D(t)$，其中
+$S'=\rho>0$ 有光滑局部逆，纯输出变量替换
+$\kappa(u,s)=(u-B(t(s)),t(s))$ 把相位拉直成
+$u\cdot y+s\,h(y)+r(s)$，$D_y^2h=M(0,y)$ 定（`06-surfaces.tex:159-182`）。
+一般光滑振幅 $A(z,y)$ 零延拓后在边长 $L$ 固定立方体 $Q$ 上周期展开为
+Fourier 级数，分部积分给 $\lVert A_k\rVert_\infty\le C_m(1+\lvert k\rvert)^{-m}$（$m>3$），系数绝对可和、共同紧频率支撑、
+常数与 $N$ 无关（`06-surfaces.tex:184-195`）。取图片
+$\omega(y)=(y,h(y))$、$g_k=A_kf/w$，逐系数用 `thm:main`：
+$\lVert g_k\rVert_{L^p(\Sigma)}\le\lVert A_k\rVert_\infty\lVert f\rVert_p$
+（`06-surfaces.tex:196-209`），Minkowski 求和、单位模因子 $e^{iNr(s)}$
+与逐频 $E_\Sigma g_k(Nz/2\pi)$ 的标度给出 $(2\pi/N)^{3/p}$ 前因子
+（`06-surfaces.tex:210-217`），$\kappa$ 换回只贡献
+$\sup|\det D\kappa|^{1/p}$（`06-surfaces.tex:218-219`）；
+绝对可和性与 $f$ 的局部 $L^1$ 可积性正当化级数与积分交换
+（`06-surfaces.tex:220-221`）。结论 `eq:bourgain-oscillatory`：
+$N$ 的幂次衰减 $N^{-3/p}$，无进一步损失（`06-surfaces.tex:222-223`）。
+这条推论是我见过把"输出拉直"与"对角延拓"缝合得最干净的一种写法：
+相位条件 $\partial_tD_y^2\partial_t\psi=c\,D_y^2\partial_t\psi$ 恰好是
+Bourgain 条件的平移不变形态（`00-introduction.tex:96-98`），
+拉直后所有 $t$ 依赖进坐标替换，剩下的就是一个固定椭圆图。
+
+## §9 指数的账：上界与下界之间隔着什么
+
+先把记号摆正。$C_{\Sigma,p}^{\mathrm{best}}$ 是 `eq:main` 的算子范数；
+$M(s)\ge1$ 是带损失 $\delta^{-s}$ 的 Kakeya 极大估计常数；
+$P_\Sigma(\kappa,\eta)\ge1$ 是后文用到的有限多个固定卡片与窗口配置里
+最大的 packet 常数（`00-introduction.tex:152-157`）。对 $3<p\le4$，
+$\theta=10^{-6}(p-3)^2$，上界是
+$C(\Sigma)(p-3)^{-7/p}P_\Sigma(\theta,\theta)^{1/p}M(\theta)^{3/(2p)}$
+（`eq:quantitative-intro`，`00-introduction.tex:158-164`），其中
+$C(\Sigma)$ 对 $p\in(3,4]$ 一致。下界侧，对非空 $\Sigma$ 取固定光滑数据，
+$C_{\Sigma,p}^{\mathrm{best}}\ge c(\Sigma)(p-3)^{-1/p}$
+（`eq:lower-intro`，`00-introduction.tex:169-174`，证明即
+`prop:lower`）。论文两次强调同一句诚实话：输入定理对每个正损失指数只保证
+有限常数，没有任何增长速率假设，所以 `eq:quantitative-intro`
+记录的只是初等损失，不断言最佳常数是 $(p-3)^{-1}$ 的多项式
+（`00-introduction.tex:165-168`；`05-global.tex:326-331` 在图级界处
+重复了同样的声明）。
+
+我自己的小结账是这样的。可见损失 $\tau^{-7}$ 完全来自去损失环节的内部
+簿记：$\tau^{-4}$ 出自层积分 `eq:layer-integral`，它吸收
+$(1+\log(1/\mu))^3$ 与 $\mu^{-\tau/2}$；$\tau^{-3}$ 出自族数里的
+$J^3$，而 $J\le34/\tau$（`05-global.tex:262-266`、`05-global.tex:304-306`）。
+上下界之间隔着 $\tau^{-6/p}$ 的差距，我认为缺口有三个候选来源，
+论文对最优性没有表态，以下全部标注 [推测]：其一，分布函数
+`eq:global-distribution` 里三重对数与三色因子的乘积结构，换更精细的
+分层或许能压到 $\tau^{-1}$ 附近；其二，真正的黑洞是 $P(\theta,\theta)$ 与
+$M(\theta)$，它们随 $\theta\downarrow0$ 的行为在两个输入定理里都是
+存在性的，如果 packet 常数本身以 $\theta^{-A}$ 速度爆炸，初等簿记毫无意义；
+其三，下界 `prop:lower` 只用单包时间集中（`05-global.tex:364-391`），
+它未必饱和，也许存在更凶的构造把真值推向 $\tau^{-7/p}$ 一边。
+读到这里我把一个工作问题写进待办：在允许相位类里造一族测试数组，
+看 $G_{\delta,1}$ 与 $\mathcal K_\kappa$ 的比值在 $\kappa\to0$ 时怎样退化，
+这直接探测 $P(\kappa,\eta)$ 的下界行为，而 `02-packets.tex:352-355`
+明说本文不处理它。
+
+## §10 坑位复盘：走不通的路与文中的路标
+
+这一节把我在推演中撞墙的位置逐条列出，尽量给出论文里对应的路标行号；
+凡属我的脑补都标 [推测]。
+
+坑一，以为一致凸就够了。我起初认定 packet 定理对相位的全部要求就是
+`eq:ellipticity` 加高阶导数有界，直接把坐标卡延拓代进去。
+`02-packets.tex:6-8` 一句话打脸：一致凸性并非其陈述假设。允许类是
+构造性的 $\phi=Q_s+\zeta(q_s-Q_s)$（`02-packets.tex:20-31`），
+形状约束比曲率约束严。绕行方案即 §3 的插入引理。[推测] 引文作者把类写窄
+多半是因为证明里的代数操作要沿球面 Taylor 差的精确结构展开；
+本文不去窥探引文内部，只在 `02-packets.tex:352-355` 重申常数依赖选定延拓。
+
+坑二，jet 匹配想用全局相似变换。要让 $h_0''$ 变成 $q''(\xi_1)$，我的第一
+反应是找一个标量加旋转：只有两矩阵成比例时才行，一般椭圆对根本不可对角化
+到彼此。正解是合同标准化 $A^{\mathsf T}HA=B$，存在性一行带过
+（`02-packets.tex:61-63`），并且必须看清这个频率端改动是环境可逆仿射映射
+的一部分（`02-packets.tex:74-76`），否则 $L^p$ 范数没有合法变换律。
+
+坑三，想给初始数组加 $\ell^2$ 归一化再套 packet 界。定理的卖点恰恰是对
+任意有限复数组成立且允许任意坐标掩码（`02-packets.tex:264-268`、
+`02-packets.tex:347-349`，`00-introduction.tex:101-104`）。[推测] 一旦加
+归一化，`lem:density` 的分片就不再合法：各片容量天差地别，掩码后总质量
+不守恒，$\sum_i m(d^{(i)})\mathcal K_\kappa(d^{(i)})^{1/2}$ 无从谈起。
+
+坑四，想用逐球估计加求和绕过联合界。若对每球单独用一遍
+`prop:discrete`，右端出现 $\#\mathcal B$ 份 $\delta^2\sum_\nu b_\nu^{3/2}$，
+求和后总质量 $\le C\mu^{-8}\delta^6$ 级，再乘 $N^6$ 就把
+$\mu^{-8}$ 直接漏进最终界，$\mu_0$ 压不住。联合估计
+`eq:sparse-joint-mass` 把 $\mu^{-8}$ 折进算子行列和（`04-sparse.tex:191-196`），
+这是 04 节存在的唯一理由；动机段 `04-sparse.tex:5-8` 写得很直白。
+
+坑五，忘了远距平移会在少数方向失去振荡。两球相距越远，
+$q+s_0\nabla\phi$ 越大，看似越振荡；危险的是 $q$ 与 $s_0\nabla\phi$
+近乎抵消的 $\xi$，它们构成共振集。删集的面积账 $\mu^{40}$ 与并集 $\mu^{24}$
+（`04-sparse.tex:70-78`）以及一致于 $H$ 的分部积分常数
+（`04-sparse.tex:181-189`）合起来才让"任意远"合法。
+
+坑六，覆盖想当然用直径界。经典分层引理（对照
+`05-global.tex:130-132` 引 Bourgain--Guth 附录 Lemma A.2 的姿态）常在
+有界点集里做；$A_\mu$ 的点集 $X$ 无界也无直径控制。慢增长选择
+`eq:slow-growth` 加"不用绝对位置与直径"的收刀
+（`05-global.tex:171-177`、`05-global.tex:226-228`）是本文给出的关键改装。
+[推测] 这一步若沿用直径版本，$\mu^{-\beta J}$ 的账会在无穷远的簇上重来一遍。
+
+坑七，对删集的尖锐边界做微分。$h_*=h\mathbf1_{Q_0\setminus\Omega}$
+只进数据侧；算子 $T_\nu$ 的定义域铺在未删的 $L^2(\R^2)$ 上，
+Gram 核只带光滑振幅 $(\chi_\delta^\nu)^2$（`04-sparse.tex:115-128`），
+尾估计 同样地 不碰示性函数（`04-sparse.tex:272-276`）。[推测] 若把删集
+写进振幅，分部积分每步都会多出边界分布项，$k=4$ 的衰减买不回 $\mu$ 的负幂。
+
+坑八，损失参数选错量级。$\theta$ 必须是 $\tau$ 的二次方。
+$\gamma_0=\frac{25}{2}\theta$、$J\approx32/\tau$，于是
+$50J\gamma_0=\frac{25\cdot32}{\tau}\theta\cdot2=\frac{1600\theta}{\tau}$
+量级的比较（精确常数见 `05-global.tex:263-266`：
+$50J\gamma_0\le\frac{17}{800}\tau$）要求
+$\theta\lesssim\tau^2$。若取 $\theta\propto\tau$，尺度因子
+$N^{\gamma_0}$ 折出的 $\mu^{-\tau/4}$ 裕量被吃光，`eq:global-distribution`
+里 $\mu^{-3-\tau/2}$ 的可积性没了下文。$\theta=10^{-6}\tau^2$ 里的
+$10^{-6}$ 只是把上面那串粗略比较做严的富余系数。
+
+## §11 与既有路线并排：这台机器摆在哪一级台阶
+
+把 `00-introduction.tex:35-66` 的背景段重排成一张台阶表：
+Tomas--Stein 给 $L^2\to L^4$（`00-introduction.tex:36-38`）；
+Tao--Vargas--Vega 双线性框架与 Wolff 锥估计确立波包与横截交互
+（`00-introduction.tex:39-42`）；Tao 的抛物面估计、Bennett--Carbery--Tao
+多线性估计、Bourgain--Guth 路线把交互连回线性问题
+（`00-introduction.tex:41-45`）；Guth 多项式分割开有界数据 $p>13/4$
+（`00-introduction.tex:47-49`）；Shayya 与 Kim 在同一范围取到对角
+（`00-introduction.tex:50-52`）；Wang 的 broom 推进截断抛物面的有界数据
+限制（`00-introduction.tex:52-54`）；Wang--Wu 用 decoupling 与双端
+Furstenberg 不等式把含边界紧致正曲率曲面的对角界推到 $p>22/7$
+（`00-introduction.tex:54-57`）。另一条平行轨道是因子化：对球与二次图，
+从有界数据到对角只需指数任意小增（`00-introduction.tex:58-62`，
+Bourgain 1991 与 Buschenhenke 2024）。本文对这条轨道的定位写在
+`00-introduction.tex:62-64`：这里处理一般光滑椭圆坐标卡，靠的是 packet
+定理的完整数组形式与显式相位延拓，两者角色分明。
+
+我体会最深的差别有三层。第一层是公理化位置：22/7 及之前的每一步都在
+增加几何输入的内部强度（多项式分割、broom、Furstenberg），本文把强度
+外包给两个 companion 定理（`00-introduction.tex:101-107`），本论文内化
+的全部是转换层：容量到管（03）、管到 $L^3$ 数据（04）、分布到范数（05）。
+第二层是"正负分离"的哲学：振荡的复系数交给 packet，非负的管密度交给
+Kakeya，两侧的常数都拒绝速率（`02-packets.tex:352-355`、
+`00-introduction.tex:165-168`）。这在旧路线里对应的是把两件事混在同一个
+归纳里做，本文的图（`argument-map.tex:42-44`）把汇合点画在采样三次框，
+我认为是全文最干净的一处架构声明。第三层是权重管的血统：正向加权管的
+对偶形式与方向加位置的表述沿用 Tao--Vargas--Vega 的经典混合范数框架
+（`03-density.tex:8-10`、`00-introduction.tex:124-127`）；
+去损失沿用 Tao 的稀疏球策略及 Bourgain--Guth、Kim 附录的细化
+（`00-introduction.tex:134-137`）。[推测] 选择这些经典接口应是刻意为之：
+新东西只留在两处引理（容量分解与联合稀疏界）里，让可复核性最大化。
+
+## §12 读完之后我带走的未解问题
+
+问题一，输入常数的速率。$P(\kappa,\eta)$ 与 $M(s)$ 在
+$\kappa,\eta,s\downarrow0$ 时的行为是本架构最大的暗箱，论文三处声明不给
+承诺（`00-introduction.tex:165-168`、`02-packets.tex:352-355`、
+`05-global.tex:326-331`）。[推测] 若引文 6.4 的证明是归纳复杂度的，
+$P$ 可能对 $\eta^{-1}$ 呈塔式增长，届时对角界虽有却 practically 不可用；
+定量限制问题的下一刀应该先砍这里。我在 §9 说的 $\mathcal K_\kappa$ 与
+$G_{\delta,1}$ 比值实验是探测它的最小问题。
+
+问题二，$p=3$ 端点本身。`thm:main` 与局部光滑推论都停在开端点
+（`00-introduction.tex:20`、`00-introduction.tex:74`）。
+标度上 $p=3$ 不变、Knapp 反例在 $p<3$ 禁止，但 $p=3$ 正逆问题在三维
+紧致正曲率情形论文没有触碰。[推测] 本架构在 $p=3$ 失效的位置是
+分布界 $\mu^{-3-\tau/2}$ 的层积分恰好临界，除非 packet 输入在三次之外
+还供得出对数改进。
+
+问题三，高维移植。全链条的三次幂并非偶然：$L^3$ Kakeya 极大
+（`03-density.tex:41-44`）、$\int H_d^{3/2}$（`eq:weighted-tubes`）、
+终端立方和 $N^{-6}$（`eq:packet-bound`）与 $\lVert h\rVert_3$ 输入互相咬合，
+维数一换四个指数要同时重算。[推测] $\R^{n+1}$ 版要先有 $n$ 维 Kakeya
+极大在匹配指数上的对应物，而那个正是公开难题；本文没有讨论。
+
+问题四，曲率退化。速度单调性 `eq:velocity-monotonicity`
+（`01-setup.tex:60-63`）在 03 的方向分离（`03-density.tex:62-63`）、
+04 的共振直径（`04-sparse.tex:70-74`）与 05 的 $L^4$（`05-global.tex:53-59`）
+至少三处独立消费；双曲点处它彻底反向。[推测] 负曲率有经典的指数型
+振荡增益，理论上或可另立一台机器，但把椭圆插入引理
+`lem:continuation` 换成鞍点版本，第一步 $A^{\mathsf T}HA=B$ 就不存在
+合同标准化，得先解决惯性指数问题。
+
+问题五，常数的曲面依赖。约定允许常数吃固定的曲面、卡片、频率支撑与窗口
+（`00-introduction.tex:176-180`）。[推测] 若想把 $C(\Sigma)$ 做成对
+$C^\infty$ 拓扑紧族一致的，需要追踪 `lem:continuation` 中
+$\rho$、$\epsilon$、$d_0$ 对图的依赖，论文逐卡固定、不做一致性，
+这条留白对数值实现有影响。
+
+问题六，局部光滑的时间区间。推论输出在 $\R^2\times[0,1]$
+（`eq:schrodinger-smoothing`，`00-introduction.tex:77-80`），
+时间轴上的大区间版本要靠通常的传播半群迭代，代价是多项式时间因子；
+[推测] 与 Strichartz 全局理论的对接本文未做，属于引用 LRS 框架的自然
+延伸方向。
+
+## §13 变量与常数台账
+
+| 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+| --- | --- | --- | --- | --- |
+| $3<p<\infty$ | 对角猜想目标指数范围 | `00-introduction.tex:20` | `thm:main` 与全部推论 | 下探到 $p=3$ 后层积分 `eq:layer-integral` 失去可积性 |
+| $\theta=10^{-6}(p-3)^2$ | 损失参数唯一取法 | `00-introduction.tex:158` | `eq:quantitative-intro`、`thm:graph` | 改取 $\theta\propto(p-3)$ 则 `eq:exponent-budget` 崩溃 |
+| $(p-3)^{-7/p}$ | 上界显式幂 | `00-introduction.tex:161` | 最终常数结构 | $J^3$ 或层积分少一幂就变 $\tau^{-8}$ |
+| $(p-3)^{-1/p}$ | 下界幂 | `00-introduction.tex:172` | `prop:lower` | 丢 $(1+t)^{2-p}$ 对 $t$ 的积分则下界退化为常数 |
+| $M(s)$ | Kakeya 极大常数，放大到至少 1 | `03-density.tex:38-40` | `lem:weighted`、$M(\theta)^{3/(2p)}$ | 无正损失有限常数保证则密度转换无料可吃 |
+| $\delta=N^{-1}$ | 尺度倒数 | `02-packets.tex:133` | 全节尺度表 | dyadic 约束一改框架恒等式脱格 |
+| $\theta=m\delta$，$r=m^{-2}$，$w=\delta/m$ | packet 三重尺度 | `02-packets.tex:135-137` | 分析综合算子 `eq:packet-analysis` | $N^2w\theta\ne1$ 时 Fourier 格错位，`lem:packet-frame` 失效 |
+| $W_\kappa(E)=L^{1+\kappa}a^{1-\kappa}$ | 椭圆权 | `02-packets.tex:195` | 容量与束下界 `eq:bundle-lower` | 去掉 $(L/a)^{\kappa}$ 后容量失去区分扁束的能力 |
+| $0<\kappa<1/10$ | 容量形状参数范围 | `02-packets.tex:193` | `thm:packet`、`lem:density` | 越出引文允许范围后 $C$ 不受任何定理控制 |
+| $\mathcal K_\kappa(d)$ | 椭圆容量上确界测试 | `02-packets.tex:199-203` | $G$、$A$、`eq:packet-bound` | 平移 $u$、$v$ 若被强制相等，方向位置解耦失效 |
+| $G_{\theta,r}(c)^3=(w^2\sum\lvert c\rvert^2)K^{1/2}$ | 标尺 | `02-packets.tex:204-206` | `eq:packet-source` 右端 | 幂 $1/2$ 一改，与束下界 $\sqrt\rho$ 衔接断裂 |
+| $rw^2\sum\lvert c\rvert^3\le\mathcal A_m(c)^3$ | 原子范数下界 | `02-packets.tex:226-227` | `eq:packet-bound` 左端 | 无它则采样立方和塞不进 packet 定理 |
+| $P(\kappa,\eta)$ | packet 常数，无速率承诺 | `02-packets.tex:309-312` | `eq:packet-bound`、`prop:discrete` | 一旦假设任何多项式速率即违背原文声明 |
+| 输入 $(\delta,1,\delta)$，输出 $(1,N^{-2},N^{-2})$ | 特化尺度表 | `02-packets.tex:324-329` | `eq:packet-bound` | 输出处 $rw^2\ne N^{-6}$ 则归一化错位 |
+| $\lvert T_{\nu,z}\rvert=\pi\delta^2$ | 管体积 | `03-density.tex:23` | 质量式 `eq:tube-mass` | 截面半径一改所有 $\pi$ 簿记重结 |
+| $\int H_d=\pi m(d)$ | 管质量恒等 | `03-density.tex:24-26` | 束下界与分解引理 | $m(d)$ 的 $\delta^2$ 权一改，$D\le\mathcal K_\kappa\le nD$ 失配 |
+| $\int H_d^{3/2}\le CM(s)^{3/2}\delta^{-3s/2}\delta^2\sum_\nu b_\nu(d)^{3/2}$ | 加权管界 | `03-density.tex:53-57` | `prop:discrete` | 球冠不交性一丢 $\ell^{3/2}$ 结构即散 |
+| $\int H_q^{3/2}\ge(\pi/3)m(q)(m(q)/W_\kappa(E))^{1/2}$ | 束下界 | `03-density.tex:138-144` | `lem:density` 的层代价 | 支撑放大 $3E$ 改成 $E$ 则覆盖论证有洞 |
+| $J\le C\log(2+n)$ | 容量分组层数 | `03-density.tex:154` | `prop:discrete` 的 $\log^2$ 因子 | 层数若随 $n$ 多项式，$\log^2$ 变正幂损失 |
+| $A=D/n^2$ | 容量门槛 | `03-density.tex:175` | 残量吸收（`03-density.tex:178-188`） | 门槛差半阶则 $\delta^2D^{3/2}$ 与 $\int H_d^{3/2}$ 不再同阶 |
+| $n\le CN^4$ | 初始标号总量 | `03-density.tex:286-287` | $J^2$ 化为 $\log^2(2+N)$ | 标号范围若随 $N$ 长大则对数变幂 |
+| $\gamma_0=10\kappa+\eta+3s/2$ | 合并损失指数 | `03-density.tex:256` | `prop:sparse`、`thm:graph` | $3s/2$ 一项改动要重结 $\mu^{-\tau/4}$ 预算 |
+| $\#\mathcal B\le\mu^{-8}$ | 球族规模上限 | `04-sparse.tex:20` | `prop:sparse` 与覆盖引理 | 上限改 $\mu^{-9}$ 则慢增长引理的前提 $\beta J>8$ 断裂 |
+| $R\ge\mu^{-100}$，$\lvert x_B-x_{\widetilde B}\rvert\ge\mu^{-40}R$ | 稀疏参数 | `04-sparse.tex:21-22` | 相位下界 `eq:sparse-phase-first` | 分离常数低于 $\mu^{20}$ 量级则一半因子失败 |
+| $4R\le N^2<16R$ | 尺度量子化 | `04-sparse.tex:24` | 胞覆盖（`04-sparse.tex:306-315`） | 区间一动 $z'$、$j$ 的保留标号覆盖失败 |
+| $\lvert\Omega\rvert\le C\mu^{24}$，$\lVert F-F_*\rVert_\infty\le\mu/2$ | 共振删集账 | `04-sparse.tex:77-85` | Chebyshev 收口 | 删集面积幂不足则一致小差额无法吸收 |
+| $\Lambda\ge N\mu^{-20}/16$ | 振荡强度 | `04-sparse.tex:163` | 核衰减 `eq:sparse-kernel-decay` | $\Lambda$ 丢 $H$ 因子则大间距一致性失效 |
+| $\lvert A_{z',j;\nu,z}\rvert\le C_k[N(1+\lvert z\rvert)]^{-k}$ | 空间尾条目 | `04-sparse.tex:260-261` | 样本近似 `eq:sparse-samples` | $k=4$ 降到 $k=2$ 时尾误差不可求和 |
+| $\delta^2\sum_{\nu,\mathcal B}(b_\nu^{B,u})^{3/2}\le C\delta^6$ | 联合质量收口 | `04-sparse.tex:204-213` | 与 $N^6$ 精确对消 | 幂次变 $\delta^{6-\epsilon}$ 则对消失败，$\mu^{-8}$ 损失漏进界 |
+| 样本总数 $O(N^7)$，立方误差 $\le CN^{-2}$ | 误差簿记 | `04-sparse.tex:287-290` | `eq:sparse-cube-sum` | 尾误差 $O(N^{-3})$ 若退化则立方和塞不回去 |
+| $\lVert G\rVert_{L^4}\le(\pi/c)^{1/4}\lVert g\rVert_2$ | 初等四次界 | `05-global.tex:25-28` | 占有数与高层吸收 | $H'_{m,\omega}\ge2cr$ 改成 $cr$ 只动常数不动可行性 |
+| $C_X\mu^{-7}$，$C_X=\max\{1,12000C_{\mathrm b}^7/\pi\}$ | 占用格计数 | `05-global.tex:99-101`、`05-global.tex:120` | 覆盖引理输入 $\#X\le\mu^{-8}$ | 重叠度若升到 $6^3$ 则常数 12000 需重结 |
+| $\beta=\tau/4$，$J=\lceil32/\tau\rceil+1$，$R_j=\mu^{-100(j+1)}$ | 覆盖尺度表 | `05-global.tex:147-151` | 慢增长与贪心着色 | $\beta J\le8$ 时慢增长指标可能不存在 |
+| $3J(1+8\log_2(1/\mu))\mu^{-\beta}$ | 球族总数 | `05-global.tex:153-155` | `eq:global-distribution` | 颜色数若多花 $\mu$ 正幂则 $\tau/2$ 可积性被吃光 |
+| $50J\gamma_0\le(17/800)\tau$ | 指数预算核心 | `05-global.tex:263-266` | $N^{\gamma_0}\le2\mu^{-\tau/4}$ | $\theta$ 的 $\tau^2$ 阶一丢此行当场失效 |
+| $\int_0^1\mu^{-1+\tau/2}(1+\log(1/\mu))^3\,d\mu\le158\tau^{-4}$ | 层积分 | `05-global.tex:296-299` | $\tau^{-7}$ 合成 | 分布幂次改 $\mu^{-3-\tau}$ 则积分发散 |
+| $\alpha=2-6/p$ | 光滑性 Sobolev 阈值 | `06-surfaces.tex:95` | `cor:schrodinger-smoothing` | $s=\alpha$ 时 Besov 级数不可求和 |
+| $N^{-3/p}$ | 振荡积分衰减 | `06-surfaces.tex:140` | `cor:bourgain-oscillatory` | 输出拉直失败则常数对 $N$ 失去一致 |
+| $\lvert\det L\rvert^{-1/p}$ | 仿射卡因子 | `06-surfaces.tex:38-39` | 多卡拼接 | 丢 $\det$ 因子则逐卡常数的 $p$ 依赖全错 |
+| $(\sup J_\Sigma)^2$，$\sigma^{1/3-1/p}$ | 面积元与有限测度嵌入 | `06-surfaces.tex:41-48` | $L^p$ 输入换成 $L^3$ | $J_\Sigma$ 的幂 2 改 1 则 $\lVert g\rVert_3$ 失控 |
+
+## 勘误
+
+- 类别：续写覆盖事故。第三次追加时误将 §6 末段整段作为锚点替换掉，
+该段原文在此照抄补录，供本体侧机械清理时归位到 §6 末尾、§7 标题之前：
+"我对这一节的整体印象：它把 Bourgain--Guth 与 Kim 附录里的稀疏球策略
+（`00-introduction.tex:129-139`）做成了一条自足的、双向一致的引理，
+一致性两端分别是"间距可以无穷大"与"参数可以无穷小"。"
+- 类别：措辞笔误。§0 末尾第二条登记行的引导语"本单位置"应为
+"本单位于其他队列的行号"，登记串本身"其他队列第 180 行号"逐字无误。
+- 类别：语体残留。§10 坑七一句中混入英文词 likewise，应为"同样地"；
+该句其余内容与行号引用均准确。
+- 类别：禁串自查。收稿前对全部禁令字符串做过检索；若有命中将按类别
+在本节追加申报，不会就地改写。
+
+## 附录：尺度算术的独立复核
+
+这一附录是我合上稿子前自己重算一遍的账：论文写出的每个数值系数，我用手推
+重新走一遍，凡能复算吻合的都在这里登记，凡是复算不出、只能信任原文的
+也如实说明。目的有两个：一是确认我对论证的理解没有跑偏；二是给后续
+复用这些常数的单子留一份可以直接抄的核对表。
+
+第一笔，层积分恒等式。`eq:layer-integral` 断言
+$\int_0^1\mu^{-1+\tau/2}(1+\log(1/\mu))^3\,d\mu\le158\tau^{-4}$。
+代换 $u=\log(1/\mu)$ 后积分化为
+$\int_0^\infty e^{-\tau u/2}(1+u)^3\,d u$。展开
+$(1+u)^3=1+3u+3u^2+u^3$，用
+$\int_0^\infty e^{-au}u^k\,d u=k!/a^{k+1}$（$a=\tau/2$）逐项得
+$\frac{2}{\tau}+\frac{12}{\tau^2}+\frac{48}{\tau^3}+\frac{96}{\tau^4}$，
+与 `05-global.tex:296-299` 显示的四个单项逐一吻合；$\tau\le1$ 时总和
+$\le(2+12+48+96)\tau^{-4}=158\tau^{-4}$，界恰。这笔账我全对上了。
+
+第二笔，指数预算 $50J\gamma_0\le\frac{17}{800}\tau$。
+$\tau\le1$ 时 $J=\lceil32/\tau\rceil+1\le34/\tau$；
+取 $\kappa=\eta=s=\theta$ 得 $\gamma_0=\frac{25}{2}\theta$，
+$\theta=10^{-6}\tau^2$，于是
+$50J\gamma_0\le50\cdot\frac{34}{\tau}\cdot\frac{25}{2}\cdot10^{-6}\tau^2 =0.02125\tau$，而 $\frac{17}{800}=0.02125$ 恰好相等。
+这说明 `05-global.tex:263-266` 的那个大分数不是随手写的松界，是把 $J\le34/\tau$ 与 $\gamma_0=12.5\theta$ 的乘积算满后的精确值，
+再和 $\tau/4=0.25\tau$ 比较留出近十二倍富余。$10^{-6}$ 的富余系数
+正是 §10 坑八里"二次方必要性"的定量来源。
+
+第三笔，占有数里的 $\pi\mu^7/(96C_{\mathrm b}^3)$。球半径
+$r_\mu=\mu/(2C_{\mathrm b})$，球内 $\lvert F\rvert>\mu/2$，
+$L^4$ 均值下界为 $(\mu/2)^4\cdot\frac43\pi r_\mu^3 =\frac{\mu^4}{16}\cdot\frac{4\pi}{3}\cdot\frac{\mu^3}{8C_{\mathrm b}^3} =\frac{\pi\mu^7}{96C_{\mathrm b}^3}$，与 `05-global.tex:115` 的分数完全一致；
+右端 $125C_{\mathrm b}^4$ 中 125 来自 $5^3$ 重叠度乘 $\lVert F\rVert_4^4\le C_{\mathrm b}^4$
+（`05-global.tex:110-117`）。解出 $\#\mathcal Q\le \frac{125\cdot96}{\pi}C_{\mathrm b}^7\mu^{-7}\approx\frac{12000}{\pi}C_{\mathrm b}^7\mu^{-7}$，
+这正是 `05-global.tex:120` 取 $C_X=\max\{1,12000C_{\mathrm b}^7/\pi\}$ 的算术：
+$125\cdot96=12000$ 分毫不差。
+
+第四笔，束下界的 $\pi/3$。支撑面积 $\le9\pi La$，
+Hölder 给 $\int H_q^{3/2}\ge(\int H_q)^{3/2}/|\operatorname{supp}|^{1/2} \ge(\pi m(q))^{3/2}/(3\sqrt{\pi La})=\frac{\pi}{3}m(q)\sqrt{m(q)/(La)}$，
+再用 $W_\kappa(E)\ge La$ 把根号内换成 $m(q)/W_\kappa(E)$ 方向正确，
+得 `eq:bundle-lower` 的 $\frac{\pi}{3}m(q)(m(q)/W_\kappa(E))^{1/2}$
+（`03-density.tex:138-144`）。三个因子 $\pi$、$1/3$、根号各就各位。
+
+第五笔，振荡强度 $\Lambda$ 的下界。$\Lambda=\delta H\mu^{20}$，
+分离条件 $H\ge\mu^{-40}R$ 与 $N^2<16R$ 给
+$H>\mu^{-40}N^2/16$，故
+$\Lambda=\frac1N H\mu^{20}>\frac{N\mu^{-20}}{16}$，
+即 `eq:sparse-phase-higher` 尾端的显式常数（`04-sparse.tex:163`）。
+配套的 $N^{\gamma_0}$ 折算：$N<8\mu^{-50J}$（`eq:cover-N`）两边取
+$\gamma_0$ 次幂，$8^{\gamma_0}=8^{12.5\times10^{-6}\tau^2}\le2$（$\tau\le1$），
+$\mu^{-50J\gamma_0}\le\mu^{-17\tau/800}<\mu^{-\tau/4}$，
+合成 `05-global.tex:270-271` 的 $N^{\gamma_0}\le2\mu^{-\tau/4}$。
+
+第六笔，样本计数的收支。球数 $\mu^{-8}\le N$（`eq:sparse-scale`，
+`04-sparse.tex:51`），每球样本 $O(N^6)$（终端空间 $O(N^4)$ 乘时间 $N^2$），
+总样本 $O(\mu^{-8}N^6)\le O(N^7)$（`04-sparse.tex:287-288`）；单样本误差
+$O(N^{-3})$ 的立方和 $O(N^7)O(N^{-9})=O(N^{-2})$（`04-sparse.tex:289-290`），
+确实趋于零。联合质量式 `eq:sparse-l3-mass` 右端 $C\delta^6=CN^{-6}$
+与 `prop:discrete` 左乘的 $N^6$ 精确对消（`04-sparse.tex:278-285`），
+这是 §6 里我说"最漂亮收支相抵"的完整算术。
+
+第七笔，对数折算 $\log(2+N)\le53J(1+\log(1/\mu))$。
+$N<8\mu^{-50J}$ 取自然对数：
+$\log N<\log8+50J\log(1/\mu)\le\log8+50J(1+\log(1/\mu))$，
+又 $J\ge1$ 时 $\log8<3<J$，故 $\log(2+N)\le\log2+\log N$ 被
+$53J(1+\log(1/\mu))$ 稳稳包住（`05-global.tex:272` 的 53 是
+"$50+3$"量级的粗取，我不再优化它）。
+
+复算不出、只能信任原文的账有两处。其一，`lem:weighted` 里圆柱覆盖数
+$C_3$、$C_4$ 的具体大小依赖管到直线的 $O(\delta)$ 距离中的隐含常数
+（`03-density.tex:77-92`），原文不给数值，我给的台账行只登记结构。
+其二，贪心着色的 $3\mu^{-\beta}$ 中因子 3 依赖度数 $<2\mu^{-\beta}$
+加上 $+1$ 再放缩（`05-global.tex:205-206`），在 $\mu^{-\beta}\ge8$
+（`eq:fixed-geometric-thresholds`）下成立，我验证了不等式方向，
+但没去追踪是否存在 $\mu^{-\beta}$ 更小的边界组。两处均按规格
+标注信任来源，不硬编。
+
+## 勘误（续）
+
+- 类别：表格格式笔误。§13 台账第 12 数据行（原子范数下界行）的首格
+末尾误多一个反引号、缺一个闭合美元符，规范形态应为
+"rw^2\sum\lvert c\rvert^3\le\mathcal A_m(c)^3" 外加成对 `$`；
+该行其余四格与六个竖线均无误。请本体侧机械修正。
+- 类别：文风禁令命中自查。全文检索对过渡套语一族命中 1 处，
+位于正文第 141 行（§3 五步拆解之后、以仿射映射小结的那句开头处）；
+命中串在此不重述，交本体侧按禁串清册处理。禁令其余各项
+（长破折号、整行分隔线、装饰加粗、其余四族套语、表中标记符号）检索为零命中。
+- 类别：申报补记。§10 坑七句中的英文残留 likewise 与上一条同批清理即可；
+本笔记落盘期间未发生回滚，收工复核数据见交付报告。
+- 类别：文风禁令命中自查（第二批，附录落盘后复检）。新增命中一处，
+位于正文第 905 行（附录第二笔中"并非随手写的松界"之后接续的那一组
+对照句式，属于禁表第一族的连接词），串在此不重述，交本体侧清册处理。
+- 类别：自指命中申报。上文勘误（续）第三条在罗列禁令族目时把表中标记
+符号本身原样写进了稿内（现正文第 970 行行尾附近），构成一次自指命中；
+该符号仅作类目名使用，请本体侧连同括注一并机械删除或改写。
+- 类别：数字更正申报。同一条中"其余各项检索为零命中"的表述对长破折号、
+整行分隔线、装饰加粗与其余套语各族成立，对表中标记符号一族不成立
+（即上一条自指命中），以本条为准。
+
+## 附录 B：小节行号索引与清理工单坐标
+
+以下为收稿时正文各节起始行与本次申报涉及的行号，供本体侧机械清理时直接
+定位；行数统计基于 UTF-8 按行读取，行号以当前稿为准，后续追加不影响它们。
+小节起点：§0 在第 3 行，§1 在第 30 行，§2 在第 71 行，§3 在第 99 行，
+§4 在第 172 行，§5 在第 242 行，§6 在第 334 行，§7 在第 458 行，
+§8 在第 577 行，§9 在第 650 行，§10 在第 685 行，§11 在第 746 行，
+§12 在第 779 行，§13 在第 822 行，勘误首节在第 867 行，
+附录在第 881 行前后起，勘误（续）起于第 956 行。
+待清理坐标汇总：第 141 行为过渡套语首命中（§3 内，仿射映射小结句首）；
+第 905 行为对照句式族第二命中（附录第二笔）；第 970 行附近有表中标记符号
+的自指写入；§6 末段整段错位待归位（原文已在勘误首节照抄）；§0 第二条
+登记行引导语四字笔误；§10 坑七句中一处英文词残留；§13 台账第 12 数据行
+首格反引号与美元符不成对。以上七项均属机械可修，本笔记一律不就地改动。
+台账共 40 数据行、每行六个竖线、无空格的占位符，位置栏全部来自本会话
+对 build 下 .tex 的真实读取；正文引用行号凡与取证输出不一致处以取证输出
+为准。本附录同时充当收稿自检页：全稿除首行一级标题之外共 15 个二级节标题、
+编号 §0 至 §13 连续无跳号，另有勘误两节与附录两节不带编号。
+- 类别：本附录自述数字更正（落盘后复测）。上段"共 15 个二级节标题"
+是最后一次统计前的旧值，实测当前为 18 个：§0 至 §13 十四个编号节，
+加勘误首节、附录、勘误（续）、本附录 B 共四个无编号节；
+"勘误（续）起于第 956 行"应更正为第 961 行，"附录在第 881 行前后起"
+实测恰为第 881 行；本笔记最终行数与字节数以交付报告两次复量为准。
+其余坐标申报（第 141、905、970 行及各笔误条目）复测未漂移，维持有效。
+- 类别：表述晦涩申报。上段被更正原文中"97 行一级之外"一语本意是
+"除首行一级标题之外"，行文含混，请本体侧按此本意处理，数字 97 无
+统计含义，可整词删除不影响语义完整。
+
+代价同样清楚。两个输入定理本身各有几百行的证明工程（引文编号 6.4 与
+定理 1.1），本文的"短"是借来的；$P$、$M$ 无速率意味着对角界在
+$p\downarrow3$ 处的真实爆炸律整体悬空；而且架构对正曲率强依赖，
+`eq:velocity-monotonicity`（`01-setup.tex:60-63`）在双曲点直接失效，
+共振删集与管分离两处同时失去根基。[推测] 把 packet 输入换成适配双曲
+相位的版本或许是独立一单的工作，本论文对此一字未提。
+
+## 本体侧清理补记（2026-10-13）
+
+附录 B 申报的七项工单已全部落地，逐项交回。§13 台账第 12 数据行首格的美元符
+与反引号已成对（全稿 `$` 计数 +1、反引号 −1，该行竖线仍是六个）；§10 坑七的
+英文残留改为「同样地」；§0 第二条登记行的引导语改为「本单位于其他队列的行号：」，
+登记串「其他队列第 180 行号」逐字未动；§6 末段按勘误首节照抄的文本归位到 §7
+标题之前；自指写入的表中标记符号连同括注改写为类目名，全稿已无该字形；§3
+仿射映射小结句首的过渡套语（申报为第 141 行）删去那个连接词，句子主干「我不是
+在改相位函数，我是在合法地改坐标系」原样保留；附录第二笔的对照句式（申报为第
+905 行）其连接词早先已被清册换成「，是」，因此留下的其实是一枚跨行的重复逗号，
+本体侧删去行首那一枚并把两行并成一行。另按「表述晦涩申报」自述的本意，把
+「全稿 97 行一级之外」写作「全稿除首行一级标题之外」，未增删语义。
+
+行号已全部漂移，原坐标留档不改。现测（UTF-8 按行读取）：§0 第 3 行，§1 第 30 行，
+§2 第 71 行，§3 第 98 行，§4 第 171 行，§5 第 240 行，§6 第 328 行，§7 第 446 行，
+§8 第 554 行，§9 第 620 行，§10 第 655 行，§11 第 716 行，§12 第 749 行，§13 第 792 行，
+勘误首节第 837 行，附录第 851 行，勘误（续）第 925 行，附录 B 第 947 行，本节紧随其后。
+漂移有三个来源，都不是改写：全库的行内公式并线扫在本笔记吃掉 29 行（把上下两行并成
+一行的那种）；本轮又把 §6、§7、§8 与附录里五处跨三行的行内式各并成一行（再少 10 行）；
+§6 归位插回三行加一个空行。落盘后全稿 1007 行、77,716 字节、CR 字节 0、二级节标题 19 个
+（附录 B 自述的 18 个是本体侧动手之前的计数，本节自身就是一个）。
+
+复量结果：行内 `$…$` 按 micromark 语法的跨行旗标只剩 1 处，在第 929 行，那是勘误（续）
+首条为了描述这个字符本身而写下的字面 `$`，它把往后 47 行的第一个开符吃掉，属申报文本
+自身，不改；闸门复测台账 40 数据行、每行六竖线、数学字符计数合规、`problems=[]`。

@@ -1,0 +1,68 @@
+==== D25 bytes=400111 lines=2784 rows_fixed=26 sites_fixed=86
+  本次插入: \lVert +41 \rVert +41 \lvert +2 \rvert +2
+  现值全篇: \lVert=45 \rVert=45 \lvert=221 \rvert=221 \Vert=0 \mid=0 \upharpoonright=0
+  目标行核对失败=[(1360, 6, 4, 2, 6, 4), (1611, 6, 4, 2, 6, 4)] ；目标行码跨度内 \| 保留=6 枚
+==== D32 bytes=151813 lines=921 rows_fixed=11 sites_fixed=42
+  本次插入: \lVert +18 \rVert +18 \lvert +3 \rvert +3
+  现值全篇: \lVert=72 \rVert=72 \lvert=6 \rvert=6 \Vert=0 \mid=0 \upharpoonright=0
+  目标行核对失败=[] ；目标行码跨度内 \| 保留=0 枚
+==== D65 bytes=130335 lines=753 rows_fixed=3 sites_fixed=16
+  本次插入: \lVert +8 \rVert +8
+  现值全篇: \lVert=52 \rVert=52 \lvert=35 \rvert=34 \Vert=0 \mid=0 \upharpoonright=0
+  目标行核对失败=[] ；目标行码跨度内 \| 保留=0 枚
+==== D47 bytes=126600 lines=751 rows_fixed=3 sites_fixed=12
+  本次插入: \lVert +6 \rVert +6
+  现值全篇: \lVert=14 \rVert=14 \lvert=27 \rvert=27 \Vert=0 \mid=0 \upharpoonright=0
+  目标行核对失败=[] ；目标行码跨度内 \| 保留=0 枚
+==== D36 bytes=115217 lines=839 rows_fixed=4 sites_fixed=10
+  本次插入: \lvert +5 \rvert +5
+  现值全篇: \lVert=4 \rVert=4 \lvert=40 \rvert=40 \Vert=0 \mid=1 \upharpoonright=0
+  目标行核对失败=[] ；目标行码跨度内 \| 保留=0 枚
+==== D26 bytes=188439 lines=1270 rows_fixed=3 sites_fixed=6
+  本次插入: \lVert +3 \rVert +3
+  现值全篇: \lVert=10 \rVert=10 \lvert=3 \rvert=3 \Vert=0 \mid=0 \upharpoonright=0
+  目标行核对失败=[] ；目标行码跨度内 \| 保留=0 枚
+==== D28 bytes=151931 lines=1526 rows_fixed=3 sites_fixed=6
+  本次插入: \lvert +3 \rvert +3
+  现值全篇: \lVert=43 \rVert=43 \lvert=34 \rvert=34 \Vert=0 \mid=2 \upharpoonright=0
+  目标行核对失败=[] ；目标行码跨度内 \| 保留=0 枚
+==== D29 bytes=192301 lines=1093 rows_fixed=3 sites_fixed=6
+  本次插入: \lVert +3 \rVert +3
+  现值全篇: \lVert=39 \rVert=39 \lvert=71 \rvert=71 \Vert=0 \mid=0 \upharpoonright=0
+  目标行核对失败=[] ；目标行码跨度内 \| 保留=0 枚
+==== D41 bytes=124867 lines=831 rows_fixed=3 sites_fixed=6
+  本次插入: \lvert +3 \rvert +3
+  现值全篇: \lVert=0 \rVert=0 \lvert=18 \rvert=18 \Vert=0 \mid=0 \upharpoonright=0
+  目标行核对失败=[] ；目标行码跨度内 \| 保留=0 枚
+==== D68 bytes=371428 lines=1600 rows_fixed=3 sites_fixed=5
+  本次插入: \lVert +1 \rVert +1 \Vert +3
+  现值全篇: \lVert=96 \rVert=96 \lvert=136 \rvert=136 \Vert=23 \mid=34 \upharpoonright=0
+  目标行核对失败=[] ；目标行码跨度内 \| 保留=0 枚
+==== D30 bytes=136512 lines=1019 rows_fixed=1 sites_fixed=4
+  本次插入: \lVert +2 \rVert +2
+  现值全篇: \lVert=6 \rVert=6 \lvert=26 \rvert=26 \Vert=0 \mid=0 \upharpoonright=0
+  目标行核对失败=[] ；目标行码跨度内 \| 保留=0 枚
+==== D34 bytes=147536 lines=924 rows_fixed=2 sites_fixed=4
+  本次插入: \lVert +2 \rVert +2
+  现值全篇: \lVert=7 \rVert=7 \lvert=9 \rvert=9 \Vert=0 \mid=3 \upharpoonright=1
+  目标行核对失败=[] ；目标行码跨度内 \| 保留=2 枚
+==== D24 bytes=130739 lines=1018 rows_fixed=1 sites_fixed=2
+  本次插入: \lVert +1 \rVert +1
+  现值全篇: \lVert=3 \rVert=3 \lvert=1 \rvert=1 \Vert=0 \mid=0 \upharpoonright=0
+  目标行核对失败=[] ；目标行码跨度内 \| 保留=0 枚
+==== D364 bytes=71235 lines=673 rows_fixed=1 sites_fixed=2
+  本次插入: \lVert +1 \rVert +1
+  现值全篇: \lVert=15 \rVert=15 \lvert=17 \rvert=17 \Vert=0 \mid=0 \upharpoonright=0
+  目标行核对失败=[] ；目标行码跨度内 \| 保留=0 枚
+==== D44 bytes=105121 lines=585 rows_fixed=1 sites_fixed=2
+  本次插入: \lvert +1 \rvert +1
+  现值全篇: \lVert=1 \rVert=1 \lvert=12 \rvert=12 \Vert=0 \mid=0 \upharpoonright=0
+  目标行核对失败=[] ；目标行码跨度内 \| 保留=0 枚
+==== D50 bytes=101104 lines=591 rows_fixed=0 sites_fixed=0
+  本次插入: (none)
+  现值全篇: \lVert=0 \rVert=0 \lvert=1 \rvert=1 \Vert=0 \mid=6 \upharpoonright=0
+  目标行核对失败=[] ；目标行码跨度内 \| 保留=0 枚
+  登记未改行(行,表外竖线,表头竖线,残留\|)=[(438, 7, 6, 1)]
+
+TOTAL rows_fixed=68 sites_fixed=209 sites_registered=1 (sites_fixed+registered=210)
+TOTAL 插入宏: \lVert +86 \rVert +86 \lvert +17 \rvert +17 \Vert +3 ；宏插入合计 209 枚

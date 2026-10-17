@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{tikz}
+% bbox centre of a single dot = the probed point, in pt
+\newcommand{\probeD}[2]{%
+  \begin{tikzpicture}#1
+    \coordinate (a) at (0,0); \coordinate (b) at (3,2);
+    \fill #2 circle (0.01pt);
+    \pgfextractx{\dimen0}{\pgfpointanchor{current bounding box}{center}}%
+    \pgfextracty{\dimen1}{\pgfpointanchor{current bounding box}{center}}%
+    \typeout{PROBE: \the\dimen0\space\the\dimen1}%
+  \end{tikzpicture}}
+\newcommand{\probeS}[2]{%
+  \begin{tikzpicture}#1
+    \begin{scope}[shift={(1,0)}]
+      \fill #2 circle (0.01pt);
+    \end{scope}
+    \pgfextractx{\dimen0}{\pgfpointanchor{current bounding box}{center}}%
+    \pgfextracty{\dimen1}{\pgfpointanchor{current bounding box}{center}}%
+    \typeout{SCOPE: \the\dimen0\space\the\dimen1}%
+  \end{tikzpicture}}
+\begin{document}
+\probeD{}{(a -| b)}
+\probeD{}{(a |- b)}
+\probeD{}{(0,0)}
+\probeD{[x=2cm,y=3cm]}{(0,0)}
+\probeS{}{(0,0)}
+\probeS{[x=2cm,y=3cm]}{(0,0)}
+\end{document}

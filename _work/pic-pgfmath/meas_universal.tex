@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{pgf}
+\usepackage{tikz}
+\newwrite\meas
+\immediate\openout\meas=meas_universal.txt\relax
+\begin{document}
+\begin{tikzpicture}[x=.31cm,y=-.31cm,every node/.style={font=\small}]
+ \foreach \row/\width in {1/10,2/9,3/7,4/6,5/5,6/4,7/3,8/2,9/2,10/1}{
+  \foreach \column in {1,...,\width}{
+   \pgfmathtruncatemacro{\staircasecell}{\row+\column<=10}
+   \ifnum\staircasecell=1
+     \immediate\write\meas{CELL \row/\column staircase=\staircasecell BLUE}
+   \else
+     \immediate\write\meas{CELL \row/\column staircase=\staircasecell ORANGE}
+   \fi
+  }
+ }
+\end{tikzpicture}
+\end{document}

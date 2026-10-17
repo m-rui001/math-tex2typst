@@ -1,0 +1,139 @@
+%% D25 PAT=\\lVert[^$]{0,40}_\\partial hits=0
+%% D25 PAT=FG hits=8
+   e.\nThe argument below keeps their multiplication order, using the two\nproducts $FG$ and $GF$ separately.\n```\n\n三句话是全文的密码本：complete 就等于对 $m$ 一致；标量证明未必扛得住放大，因为系数矩阵不交
+   tely.\n```\n\n三句话是全文的密码本：complete 就等于对 $m$ 一致；标量证明未必扛得住放大，因为系数矩阵不交换；应对办法是保住乘法顺序，把 $FG$ 与 $GF$ 分开用。我在草稿纸上抄这三句抄了不止一次，因为后面每一步"为什么这么绕"都能回到它。\n\n还有两件事在我进场时就决定了我打算省掉什么。第一，同仓
+   us.lean:58-66`，用 `Polynomial.eval₂RingHom'`，系数环的像必须与 $A\otimes1$ 交换才张得出这个演算）。而 $FG$ 与 $GF$ 分开用这件事被拆成两条方向不同的乘积界 `hsSq_mul_le` 与 `hsSq_mul_le_right`（`HilbertSchmidt
+   ional |y*G[A]x| ≤ a(Σ‖C_k‖²)^{1/2}\n        │   (5) 有序测试 eq:ordered-products: y*(FG)[A]x=γ x*G[A]x, y*(GF)[A]x=γ y*G[A]y\n        │   (6) prop:coefficients + HS 乘积界
+   n each side of the polynomial being estimated.`：不化约 $A$、不假设移位结构，用"两侧各放一个测试多项式"（$FG$ 与 $GF$）代替"取一个极值函数"。\n- Jin 2026 / Lorist--Schwenninger 2026 / Luo 2026：三篇标量（$m=
+   ，于是一步 $\|F\|_\partial\le\sup_{\partial\Omega}\|F\|$ 就够了（`main.tex:380` 那条链里的 $\|FG\|_\partial\le\|G\|_\partial$ 用到它）。选 $L^2$ 的深层原因在第 9 节：最后的比较是一个**迹**不等式，迹需要 Hilb
+   urent 阶、边界频率"。`main.tex:367-371` 那句 `Write the full finite Faber expansions as $FG=\sum_kb_kU_k$` 的有限性、以及 $U_k$ 只在 $k\le\deg F+\deg G$ 出现这件事都要重写，$1,\tfrac12$ 权重配平
+   型 `Fin m` 加 `0<m` 显式排除 |\n| "$G$ 是多项式" | 第 247 行 | 有限正频即有限和；`thm:domain` 里 $\deg(FG)=\deg F+\deg G$ 保证 $FG$ 的 Faber 展开有限 | 换成 $G$ 全纯（无穷 Faber 级数）需要额外的收敛与闭性论证；我不需要，
+%% D25 PAT=contraction hits=8
+   \npositive definite $S$ with $\|S\|\|S^{-1}\|\le2$ such that\n$S f(A)S^{-1}$ is a contraction, where $f:\Omega\to\D$ is an interior\nconformal map and $\D=\{z\in\C:|z|<1\}$. 
+   n $\mu$ and using the normalization in that variable shows that $T$ is an $L^2$ contraction.\n```\n\n展开：固定 $\mu$，由 $K(\cdot,\mu)\ge0$ 与 $\int K(\lambda,\mu)d\tau(\lambda)=1$，
+   ach variable makes the map from the positive part to the negative part an $L^2$ contraction`（136-138） | $K=1+s+\bar s$ 的三条性质（`lem:faber` 第 (6)(7) 条）⇒ `prop:coefficients` 前
+   oefficients` 前两步 | "integral one in each variable" = 两个角向边际恒等式（`main.tex:233`），"contraction" = $\|Tf\|_2\le\|f\|_2$ |\n| `its squared boundary Hilbert--Schmidt norm lies be
+   stant two. In the nonnormal case, they make the conformal\nimage of the matrix a contraction by a similarity with condition number at\nmost two, using the numerical-range el
+   ent"处在同一个结构岗位。这是我自己找的对应，论文没说。\n5. `they make the conformal image of the matrix a contraction by a similarity with condition number at most two, using the numerical-range el
+   $（`main.tex:202`）积分恰为 1 | 这是 $K$ 的**归一化来源**；若右端是 $c\ne1$，马尔可夫核收缩（`markov_kernel_contraction`）需要归一化，权重 $1,2$ 全部重标。**该恒等式只在 $\lambda\ne\mu$ 成立**，`main.tex:229` 的 "distinct" 
+   ng in μ and using the normalization in that variable shows that $T$ is an $L^2$ contraction`）。Lean 里这一步是 `markov_kernel_contraction`（`CircleFourier.lean` 与 `KernelContract
+%% D25 PAT=norm_bloch|\\lVert u\\rVert hits=3
+   er the unit sphere in $\R^3$ | `Convexity.lean`：`bloch`（`:84`）、`norm_sq_three`/`norm_bloch`/`bloch_surjective_sphere`/`threeLinear`/`threeLinear_ker_ne_bot`/`twoForm`/`tw
+   R^2$ 线性核非空得凸性 | 三个 2（$2\Re,2\Im$）**必须是同一个 2**，否则像不在半径 $\|u\|^2+\|v\|^2=1$ 的球面上（`norm_bloch` 与 `bloch_surjective_sphere` 就是这条）；换成 $(\Re,\Im,\cdot)$ 会掉到半球。$\R^3$ 的 3 与"核非空"
+   性"数值范围是凸集" | 514-522 重证 | `Convexity.lean` 13 条声明 273 行（Bloch 球 `bloch`(`:84`)/`norm_bloch`(`:90`)/`bloch_surjective_sphere`(`:101`)/`threeLinear_ker_ne_bot`(`:137`)/`two
+%% D25 PAT=\\lVert[^$]{0,30}\\rVert hits=5
+   wcommand{\HS}[1]{\lvert #1\rvert_2` 值得一提：论文把 HS 范数写成 $\lvert\cdot\rvert_2$ ，并非 $\lVert\cdot\rVert_{\mathrm{HS}}$。$[分析]$ 配合 `main.tex:180` 那句 `We use the unnormalized Hilbert--Sc
+   ain.tex:526-530`：幂零例子左端 2 不变，右端变小，例子直接翻不等号 |\n| $2$（`thm:domain` 域上常数） | 数值 2，在 $\lVert F(z)\rVert\le1$（$\partial\Omega$ 上）归一化下 | `main.tex:324` | `thm:main` 的缩放引用 `main.tex:520-
+   a=1$ 则 $a=\infty$，`main.tex:391`、`main.tex:405`、`main.tex:421` 全是空界 |\n| $\gamma=\lVert F[A]\rVert$（归一化标尺） | 变量；$\gamma=0$ 先分流 | `main.tex:329`（分流句）、`main.tex:330-332`（单位奇异对 eq:s
+   n.tex:65` 不可降声明失去唯一载体 |\n| $\begin{pmatrix}0&2\\0&0\end{pmatrix}$（幂零例子） | 右上元 2；$\lVert A\rVert=2$、$\max_{W(A)}\lvert z\rvert=1$ | `main.tex:528`（定义）、`main.tex:530`（验证句） | `th
+   "即此 |\n| $11.08$、$1+\sqrt2$、条件数 2、相似常数 2（历史外部值） | $11.08$、$1+\sqrt2$、条件数 $\le2$、$\lVert S\rVert\lVert S^{-1}\rVert\le2$ | `main.tex:76`、`main.tex:82`、`main.tex:86-88`、`main.tex:117` | 引言比较段 `mai
+%% D26 PAT=\\lVert|\\lvert hits=8
+   d by adding a color-$i$ displacement at an unused level of size $r$, then $\left\lVert F_i(p)-F(p)\right\rVert\le Dr$ wherever the added displacement is permitted. Th
+   chitz 常数 | main.tex:141 | $K\subseteq[0,D^2]^2$ main.tex:166；eq:N main.tex:212；$\lVert F_i-F\rVert\le Dr$ main.tex:237 | $D$ 挪进下界则 main.tex:237 的偏移界带尺度 $a$，main.tex:3
+   给不出 |\n| $Nnr\times Nr$ | 周期块尺寸，长边带 $n$ | main.tex:229 | main.tex:320 的重复声明；行面积 $\lvert P\rvert/N$ main.tex:322；长度因子 main.tex:337 | 把 $n$ 从长边挪走则 main.tex:255 的补偿句反号，$n
+   ain.tex:212 的阈值变 $(1+2D/c)^k$，同时 main.tex:375 的余量收紧，两处联动 |\n| $c_p$ | $(\mathbb E\lvert g_1\rvert^p)^{1/p}\in(0,\infty)$ | main.tex:393 | $J_px=c_p^{-1}\lim_m\sum x_ig
+   \downarrow0$" 就是在给这个顺序立法。\n\n步 8（论文里的调用，main.tex:293-295，前提逐条对）。空间是 $Q$ 配归一化面积测度，$\lvert Q\rvert=L_xL_y$ 有限且正（$L_x,L_y\ge l/2>0$，main.tex:229）；$s_n=\lVert G_V^x\rVert^2
+   $Q$ 配归一化面积测度，$\lvert Q\rvert=L_xL_y$ 有限且正（$L_x,L_y\ge l/2>0$，main.tex:229）；$s_n=\lVert G_V^x\rVert^2$、$t_n=\lVert G_V^y\rVert^2$ 可测，因选取场按竖条颜色分片（main.tex:241），有限色、每片是可
+   t=L_xL_y$ 有限且正（$L_x,L_y\ge l/2>0$，main.tex:229）；$s_n=\lVert G_V^x\rVert^2$、$t_n=\lVert G_V^y\rVert^2$ 可测，因选取场按竖条颜色分片（main.tex:241），有限色、每片是可测集上的可测函数；逐点取值于 $K$ 由 eq:Kbo
+   可测集上的可测函数；逐点取值于 $K$ 由 eq:Kbounds（main.tex:244）；均值假设 $\mathbb E(A-s_n)=\langle A-\lVert G_V^x\rVert^2\rangle_Q=\eta_n\to0$ 正是 eq:eta（main.tex:287-291）的结论。吐出 eq:Vynorm（
+%% D26 PAT=c_p|gauss|Gauss|g hits=8
+    of Hilbert space."\n\n所以论文的成品是三层：thm:main（Hilbert 反例，第 1 到 8 节处理）、cor:lp（同一度量空间经 Gauss 级数等距搬进每个 $L_p$，第 9 节）、cor:banach（紧版本进任意无限维 Banach，第 10 节）。摘要把 Banach 版放在最前面宣传，而
+   \n      └─► 体积打包 N ≤ (1+2D)^k，与 (eq:N) 矛盾。  ∎ thm:main\n\nSection 6 (cor:lp)：  归一化 Gauss 级数 J_p: ℓ_2 → L_p[0,1] 等距\n      └─► 同一 S 在每个 L_p（1≤p<∞）中有 doubling≤76800 的无障碍副本
+   uad 定理（$\alpha<1$ 可行）形成互补拼图。论文未讨论 snowflake 变体，此对照是素材推断。\n\n## 9 有限-$p$ 函数空间障碍：一条 Gauss 等距把 $S$ 原样搬进每个 $L_p$\n\n对应素材 2.9，tex:385-412。节的开场白（tex:387）先定调："A normalized Gaus
+   auss 等距把 $S$ 原样搬进每个 $L_p$\n\n对应素材 2.9，tex:385-412。节的开场白（tex:387）先定调："A normalized Gaussian series gives isometric realizations of the same fixed metric space in real $
+    子集，而 doubling 常数 76800 一个数都没动。"动都没动"正是这个推论的全部技术内容，我按 tex:392-406 推一遍中间步骤。\n\n第一步，Gauss 等距恒等式。固定 $p$，在 Lebesgue 的 $[0,1]$ 上取独立同分布标准 Gauss 列 $(g_i)_{i\ge1}$。存在性论文未证（教材事
+   ，我按 tex:392-406 推一遍中间步骤。\n\n第一步，Gauss 等距恒等式。固定 $p$，在 Lebesgue 的 $[0,1]$ 上取独立同分布标准 Gauss 列 $(g_i)_{i\ge1}$。存在性论文未证（教材事实：$[0,1]$ 上可以构造可数多个独立标准正态随机变量，比如二进制展开加 Box–Muller；
+   [0,1]$ 上可以构造可数多个独立标准正态随机变量，比如二进制展开加 Box–Muller；Lean 侧若要做这条会需要现成引理或显式构造 [推测]）。令 $c_p=(\mathbb E|g_1|^p)^{1/p}\in(0,\infty)$：高斯的全部有限矩存在且非零，这是"$1\le p<\infty$ 通吃"的真正凭
+   ty)$：高斯的全部有限矩存在且非零，这是"$1\le p<\infty$ 通吃"的真正凭据。对有限支撑实序列 $a$，$\sum_i a_ig_i$ 是中心 Gauss、方差 $\sum_i a_i^2$，正态的 $p$ 矩等于 $c_p^p(\sum a_i^2)^{p/2}$，于是 tex:394 的等式：\n\n```tex
+%% D47 PAT=S\(p,e\)|\\lVert S|\\lvert S hits=8
+   "$\times L$"齐次形,后面对 $S$ 的三个估计也全按 $L$ 线性(tur:186-188 明文 $S(e,e)$ 只需 $\propto L$、$S(p,e)$ 误差 $\propto|p_1|$)。\n\n(d) `[推测]` 失败分岔。其一,想同时再要求 $z(0)=z(L)$(周期化场):标量 $h$ 已饱和,再约
+   ).\n\end{equation}\nThe smallest first factor in this inequality is\n S(p,p)-\frac{S(p,e)^2}{S(e,e)+\mu^{-1}}.\n\end{equation}\n\end{lemma}\n```\n```tex\n\begin{lemma}\label{
+   (1+v_0^2),\label{eq:turning-Spp}\\\n S(e,e)&\le C_e L,\label{eq:turning-See}\\\n |S(p,e)-Lp_1|&\le C_m\delta L|p_1|.\label{eq:turning-Spe}\n\end{align}\n\end{lemma}\n```\n\n
+   76-177)。最小化:对 $\alpha$ 展开 $S(p-\alpha e,p-\alpha e)+\alpha^2/\mu=S(p,p)-2\alpha S(p,e)+\alpha^2(S(e,e)+\mu^{-1})$,配方得最小值 $S(p,p)-S(p,e)^2/(S(e,e)+\mu^{-1})$,在 $\alpha
+   e)+\alpha^2/\mu=S(p,p)-2\alpha S(p,e)+\alpha^2(S(e,e)+\mu^{-1})$,配方得最小值 $S(p,p)-S(p,e)^2/(S(e,e)+\mu^{-1})$,在 $\alpha^*=\frac{S(p,e)}{S(e,e)+\mu^{-1}}$ 取到。三条估计的推导(依 t
+   (S(e,e)+\mu^{-1})$,配方得最小值 $S(p,p)-S(p,e)^2/(S(e,e)+\mu^{-1})$,在 $\alpha^*=\frac{S(p,e)}{S(e,e)+\mu^{-1}}$ 取到。三条估计的推导(依 tur:206-262 补步骤)。第一款:$\Phi_p(w)=\int F'(t)w\,ds
+   m=a(0)+\sqrt{2C_0a(0)}+2\sqrt{2C_0a(0)/3}$(tur:260-262),两条交叉项合并。\n\n(c) 机械理由。为什么 $S(p,e)$ 的误差必须 $\propto|p_1|$:tur:186-190 明说"$S(e,e)$ 只需 $\propto L$,而 $S(p,e)$ 要保持接近 $
+   械理由。为什么 $S(p,e)$ 的误差必须 $\propto|p_1|$:tur:186-190 明说"$S(e,e)$ 只需 $\propto L$,而 $S(p,e)$ 要保持接近 $Lp_1$、误差 $\propto|p_1|$,仅用 $|p|$ 控制的误差在 $p_1$ 小时不够"。量化地:增益分子 $S(p,e)^2$
+%% D47 PAT=\\lVert p_1|p_1\\rVert|\\lvert p_1 hits=3
+   | 与增益不同货币则无法对消,判据无从验证 |\n| 误差量级要求 | $S(e,e)$ 只需 $\propto L$,$S(p,e)$ 误差须 $\propto\lvert p_1\rvert$ | build/sections/turning.tex:188 | §15(c) 刀锋陈述 | 误差按 $\lvert p\rvert$ 控则
+   }$ 则 $x/(1+C_ex)$ 单调链断 |\n| $S(p,e)$ 界 | $\lvert S(p,e)-Lp_1\rvert\le C_m\delta L\lvert p_1\rvert$ | build/sections/turning.tex:201 | §16 增益分子 $(Lp_1)^{2}(1-C_m\delta)^{2}
+   }p_1^{2}$,$D=P'(0)-P'(t)\succeq0$ | build/sections/turning.tex:248 | §15 混合项折成 $\lvert p_1\rvert$ 级 | 用算子范数粗界则回到 $\lvert p\rvert$ 级,刀锋失 |\n| 奇异容许 | 该式在 $D$ 奇异时仍成立 | build/
+%% D29 PAT=\\lVert A\\rVert_F hits=2
+   于 $\operatorname{diam}Y$ 的片，geometry.tex:102 的 $\varepsilon_i>0$ 无从逼出，第一桥塌 |\n| $\lVert A\rVert_F^2=\operatorname{tr}(A^2)$ 与 trace-one 超平面 | 该超平面是 $9$ 维欧氏空间 | introduction.tex:
+   数 $\sqrt2$ | geometry.tex:55-64 | geometry.tex:65-69 说明九维见证与所述度量一致 | 任一分母或系数改掉，$\lVert A\rVert_F$ 与 $\mathbb R^9$ 欧氏长度不再等值 |\n| $[m]=\{1,\ldots,m\}$，$\Delta^{m-1}=\{t_i\ge0,\ \s
+%% D68 PAT=\\Vert|\\mid hits=8
+   m past}\|P)\n \ge P_{\rm past}(\mathcal L)\n       \mathcal D(P_{\rm past}(\,\cdot\mid\mathcal L)\|P_{\rm light})\n \ge P_{\rm past}(\mathcal L)[-\log P_{\rm light}(A_
+   ne\n\[\n F=\mathcal D(Q_h\|U_H),\qquad\n J=\sum_{k=1}^c\mathbb E_h\mathcal D(Q_{u_k\mid h}\|U_{S_r}),\qquad\n I=\sum_{k=1}^cH_Q(u_k\mid h)-H_Q(u\mid h).\n\]\nFor all suff
+   =1}^c\mathbb E_h\mathcal D(Q_{u_k\mid h}\|U_{S_r}),\qquad\n I=\sum_{k=1}^cH_Q(u_k\mid h)-H_Q(u\mid h).\n\]\nFor all sufficiently large $n$,\n\begin{equation}\n I\ge n-O(
+   E_h\mathcal D(Q_{u_k\mid h}\|U_{S_r}),\qquad\n I=\sum_{k=1}^cH_Q(u_k\mid h)-H_Q(u\mid h).\n\]\nFor all sufficiently large $n$,\n\begin{equation}\n I\ge n-O(n^{.57})-O((F
+   亏量）与 $S=\sum_kI_Q(h;u_k)$（各列对行数组的互信息之和），则\n\n$$J=D_C+S,\qquad \sum_kH_Q(u_k)-H_Q(u\mid h)=I+S.$$\n\n我的验证：$\mathcal D(Q_{u_k|h}\|U)=H(U)-H(u_k\mid h)$ 对 $k$ 求和，$H(U_{S_r
+   ad \sum_kH_Q(u_k)-H_Q(u\mid h)=I+S.$$\n\n我的验证：$\mathcal D(Q_{u_k|h}\|U)=H(U)-H(u_k\mid h)$ 对 $k$ 求和，$H(U_{S_r}^{\,c})=c\log(r!)$，而 $D_C$ 用无条件 $H(u_k)$；$I_Q(h;u_k)=H(u
+   $ 求和，$H(U_{S_r}^{\,c})=c\log(r!)$，而 $D_C$ 用无条件 $H(u_k)$；$I_Q(h;u_k)=H(u_k)-H(u_k\mid h)$，故 $J=\sum_k[\log(r!)-H(u_k\mid h)]=\sum_k[\log(r!)-H(u_k)]+\sum_kI_Q(h;u_k)
+    $D_C$ 用无条件 $H(u_k)$；$I_Q(h;u_k)=H(u_k)-H(u_k\mid h)$，故 $J=\sum_k[\log(r!)-H(u_k\mid h)]=\sum_k[\log(r!)-H(u_k)]+\sum_kI_Q(h;u_k)=D_C+S$。第二条同理，左边 $\sum_kH(u_k)-H(u\
+%% D36 PAT=\\lvert B|\\lvert T_d|\\lvert \\Pi T_d hits=8
+   形 | 维数取错成 $d-2$，eq:facet 与纤维论证同时错位；删延拓则 :223-224 无法对任意 $(u,v)$ 相加 |\n| $\kappa_j=\lvert B_2^j\rvert$ | $j$ 维单位球体积 | main.tex:52-53 | 只在 Lemma 4 逼近段：:273-275 的 $P\subset 
+   公式的测度一侧断供，只剩 eq:zonotope 的几何一侧；§5 批注重构全赖这段 |\n| eq:product-body：$\Pi(A\times B)=(\lvert B\rvert\Pi A)\times(\lvert A\rvert\Pi B)$ | 交叉配对缩放 | main.tex:197-199 | :226-227 
+   tex:197-199 | :226-227 支撑函数识别；:228-236 体积记账 | 配对写成 $(\lvert A\rvert\Pi A)\times(\lvert B\rvert\Pi B)$ 则 :231 起错；$r=s=10$ 同型特例恰好掩盖该错（§15 速记 (5)） |\n| facet 二分：$F\times B$
+   219 面积-法向量；:220-221 正交面积因子 | 二分写错则 :223-224 求和混进交叉项，Prop 3 证明整体塌 |\n| 乘积面积-法向量 $(\lvert B\rvert s_F\nu_F,0)$ 与 $(0,\lvert A\rvert s_G\nu_G)$ | 两族线段生成子 | main.tex:215-219
+   219 | :222-225 亮度相加；§1 路线 B 的 $\binom{22}{20}=231$ 子行列式账同源 | 漏一块的缩放则 :231 分子因子 $\lvert B\rvert^r\lvert A\rvert^s$ 整体错一档 |\n| eq:multiplicative：$R_{r+s}(A\times B)=R_r(A)
+   rt^s$ 整体错一档 |\n| eq:multiplicative：$R_{r+s}(A\times B)=R_r(A)R_s(B)$ 及展开链 $\frac{\lvert B\rvert^r\lvert A\rvert^s\lvert\Pi A\rvert\lvert\Pi B\rvert}{(\lvert A\rvert\lver
+   ert B\rvert^r\lvert A\rvert^s\lvert\Pi A\rvert\lvert\Pi B\rvert}{(\lvert A\rvert\lvert B\rvert)^{r+s-1}}$ | 可乘性正式化 | main.tex:201-203, main.tex:228-236 | :392-394 Thm 1
+    指数 $d-1$ 错写成 $d$ 则 :294-297 的 $d(d-1)$ 连锁错档；一般体 $R_d$ 不变性只剩多胞形版 |\n| Prop 5 三连：$\lvert T_d\rvert=1/d!$，$\lvert\Pi T_d\rvert=(d+1)/((d-1)!)^d$，$R_d(T_d)=c_d$ | 单纯形值 | main
+%% D28 PAT=\\lvert\\Omega|\\lvert S_n|3-s|3\\u2212s hits=8
+   或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |\n| --- | --- | --- | --- | --- |\n| $N=2n$ | $\lvert S_n\rvert=2n$，唯一趋参 | 02-model.tex:44 | 四表全部 $N$ 幂概率；04-sampling.tex:501 匹配计数 | 字母表规
+   字段 $212=32+2\cdot90$ | 共享核字段只计一次的约定 | 02-model.tex:124 | 04-sampling.tex:501 的 $\lvert\Omega_n\rvert=(1+o(1))N^{3-\beta-90\delta}$ | 重复计则期望指数要重推，04-sampling.tex:503 均匀边缘断，0
+   t^2$ | 均值涨率改 $O(1)$ 则 05-energy.tex:146 逐前缀非空坏，05-energy.tex:130 的 $25$ 界断 |\n| $\lvert\Omega_n\rvert=(1+o(1))N^{3-\beta-90\delta}$ | 主匹配计数 | 04-sampling.tex:501 | 04-sampli
+    子模（04-sampling.tex:56-58）。主期望：\n$h(\mathcal F)=212-(17+12+180)=3,\qquad\mathbb E\lvert\Omega_n\rvert=N^{h_\theta(\mathcal F)}=N^{3-\beta-90\delta}$，\n等式精确的原因是每个赋值在每张不同表各取一行、
+   （3）$(\sigma_1(e),\ldots,\sigma_t(e))$ 的律与 $S_n^t$ 均匀积律全变差距离 $o(1)$。归一化五连：记 $L_N=\lvert\Omega_n\rvert$、$\lambda_N=\mathbb EL_N$、指定支的期望条目数 $a_N$、偏差和 $D_N=\sum_{\sigma\in\Omeg
+    $\mathbb ED_N=o(\lambda_Na_N)$，Markov 转为概率意义 $D_N=o(\lambda_Na_N)$；由 $\mathbb E\lvert\Omega_n\rvert/\lvert\Omega_n\rvert\to1$ 的单点集中、$Z_N=\sum_{\sigma}A_\sigma$ 与 $\lvert Z
+   bda_Na_N)$，Markov 转为概率意义 $D_N=o(\lambda_Na_N)$；由 $\mathbb E\lvert\Omega_n\rvert/\lvert\Omega_n\rvert\to1$ 的单点集中、$Z_N=\sum_{\sigma}A_\sigma$ 与 $\lvert Z_N-L_Na_N\rvert\le D_
+   域内每个足够小的正 $(\alpha,\beta,\delta)$（$\beta>7\alpha$）使四事以概率趋 1 同时成立：$\Omega_n$ 非空、$\lvert\Omega_n\rvert=(1+o(1))N^{3-\beta-90\delta}$、均匀律 $\mu_N$ 的单字段边缘与 $S_n$ 均匀全变差 $o(1)$、$\
+%% D24 PAT=\\lVert P|P\^\*P hits=8
+   bert 空间、令 $x_i$ 为移位之和。关系式照样成立，但"限制到某个坐标"在那种实现下是压缩，并非 $*$-同态，而第 9 节的关键一步需要坐标求值把 $P^*P\ge\tfrac12I$ 原样带到该坐标上。满 $*$-同态给保序双向，压缩只给一侧。论文的措辞只有 "in one bounded operator pro
+   angle W^*W\xi,\xi\rangle$）。\n\n步 8（多项式逼近与下界）。取 $*$-多项式矩阵 $P$ 使 $\|P-W\|<1/5$。恒等式 $P^*P-W^*W=(P-W)^*P+W^*(P-W)$（展开核对：$P^*P-W^*P+W^*P-W^*W$）。取范数，用 $\|P\|<1+\tfrac15$：\n$
+   式逼近与下界）。取 $*$-多项式矩阵 $P$ 使 $\|P-W\|<1/5$。恒等式 $P^*P-W^*W=(P-W)^*P+W^*(P-W)$（展开核对：$P^*P-W^*P+W^*P-W^*W$）。取范数，用 $\|P\|<1+\tfrac15$：\n$$\|P^*P-I_{2m}\|<\tfrac15(1+\tfrac1
+   *W=(P-W)^*P+W^*(P-W)$（展开核对：$P^*P-W^*P+W^*P-W^*W$）。取范数，用 $\|P\|<1+\tfrac15$：\n$$\|P^*P-I_{2m}\|<\tfrac15(1+\tfrac15)+\tfrac15=\tfrac{11}{25}=0.44<\tfrac12,$$\n自伴元范数 $<
+   ac15=\tfrac{11}{25}=0.44<\tfrac12,$$\n自伴元范数 $<\tfrac12$ 推 $I+A\ge\tfrac12I$，取 $A=P^*P-I$ 得 (5.2) $P^*P\ge\tfrac12I_{2m}$。\n\n关于 $1/5$：真正需要的是 $2\delta+\delta^2<1$，即 $\d
+   5}=0.44<\tfrac12,$$\n自伴元范数 $<\tfrac12$ 推 $I+A\ge\tfrac12I$，取 $A=P^*P-I$ 得 (5.2) $P^*P\ge\tfrac12I_{2m}$。\n\n关于 $1/5$：真正需要的是 $2\delta+\delta^2<1$，即 $\delta<\sqrt2-1\app
+   | 由 $E_{j+1}=E_j\oplus E_j$ 的等距嵌入唯一确定 |\n| $\frac15$ | 多项式逼近容差 | Thm 5.1 | 推出 $\|P^*P-I\|<\frac{11}{25}$ | 需要 $<\sqrt{3/2}-1\approx0.225$，$\frac15=0.2$ 是就近取的 |\n| $\f
+   {11}{25}$ | 需要 $<\sqrt{3/2}-1\approx0.225$，$\frac15=0.2$ 是就近取的 |\n| $\frac12$ | $P^*P\ge\frac12I$ | Thm 5.1 | 极分解的一致界来源 | $1-\frac{11}{25}=\frac{14}{25}>\frac12$ |\n|
+%% D30 PAT=\\lVert f\\rVert hits=2
+   $N$ 的选取（03-peaks.tex:231-241） | $a\ge2$ 时 $N$ 窗口可能为空，轮廓构造断在第一步 |\n| $f,b,R_0$ | $\lVert f\rVert_\infty<1$，$f=-s_1$ 于 $[0,\alpha]$，$\int e^{-y}f=0$，$b'-b=f$，$b(0)=0$，支集 $\subse
+   ruction.tex:36-43） | 失效则 $I_0(1)$ 不再等于 $-\Delta$，负平均没有基准值 |\n| $c_0$ | $=\frac{1-\lVert f\rVert_\infty}{4}>0$ | 04-densities-construction.tex:10-14 | $K_*>2C_2/c_0$（04-densiti
+%% D34 PAT=\\lVert\\\\cdot|\\lVert [a-z] hits=2
+   H_j$ | 以顶点权为参照的熵与平均熵 | entropy.tex:71-77 | 熵上界与增量 | 断在 entropy.tex:241-266 |\n| $\lVert a-b\rVert_{\mathrm{TV}}$ | $\frac12\sum_y\lvert a(y)-b(y)\rvert$ | entropy.tex:78
+   ropy.tex:282-287 |\n| 共享拒绝 | $\mathbb P(Y_i\ne Y_{i'})\le\frac{2d}{1+d}\le2d$，$d=\lVert p_i-p_{i'}\rVert_{\mathrm{TV}}$ | coupling.tex:19-31, :46-57 | 三角形两端同标签 | 断在 coup
+%% D364 PAT=\\lVert f\\rVert|H\^\{1/3\} hits=8
+   最在意的一条（`main.tex:38`、`01-introduction.tex:23` 的\nTheorem~\ref{thm:main}）：对 $f\in H^{1/3}$，存在一个满测度集合 $E_f$，使得先对高斯正则化取极限\n$u_f(x,t)=\lim_{a\downarrow0}U_af(x,t)$ 对每个实数 $0<
+   n.tex:84` 的 \eqref{eq:intro-maximal}，左边是对 $\sup_t|S(t)f|$ 在单位球上积分，\n右边是 $C\|f\|_{H^{1/3}}$）。我一开始觉得这是退让，读到 §9 才懂这是被结构逼出来的正确形状：$p>2$ 的凸性亏损\n只够喂 $L^1$ 级的求和，硬要 $L^3$ 会把那个必须留
+    S)^{1/3}\|v\|_2^2$\n（`02-preliminaries.tex:271`）。那个 $1/3$ 次幂就是端点指数唯一的物理来源。整篇论文 $H^{1/3}$ 之所以是端点，\n往下挖到底，挖到的就是这个 $(\cdot)^{1/3}$。加权版本 \eqref{eq:prelim-weighted-fractal}（
+   eorem~\ref{thm:maximal}（`09-endpoint.tex:455`）把上面缝成局部强极大估计：对紧支撑 Fourier 的 $f\in H^{1/3}$，\n$\int_{B(x_0,1)}\sup_{0\le t<1}|S(t)f(x)|dx\le C\|f\|_{H^{1/3}}$（`09-endpoint
+   ourier 的 $f\in H^{1/3}$，\n$\int_{B(x_0,1)}\sup_{0\le t<1}|S(t)f(x)|dx\le C\|f\|_{H^{1/3}}$（`09-endpoint.tex:459` 的 \eqref{eq:endpoint-strong-maximal}）。\n证明用频率分片 $\psi_0+
+   idehat f_j\|_2^2)^{1/2}(\sum_j2^{-2j/3}\|G_{2^j}([0,1))\|_2^2)^{1/2}\le C\|f\|_{H^{1/3}}$\n（`09-endpoint.tex:491` 的 \eqref{eq:endpoint-frequency-cauchy-schwarz}）。第一因子之所
+   不同的量：一个绝对常数、一个尺度一致、一个严格大于 2 的指数。我的最终体会是，端点之所以是\n端点，恰好卡在这三个"必须"同时成立的最紧处；把任何一个松一格，$H^{1/3}$ 的 $1/3$ 就退回 $1/3+\epsilon$。\n而 §10 的代表元构造（`09-endpoint.tex:630`）把这三块的分析结论接回"几乎处
+   ame/dyadic 须尺度一致 | 图题注 | `dependencies.tex:27` | 全局分档 | 放松则 §8 不闭合 |\n| $C\|f\|_{H^{1/3}}$ 端点界 | 主极大常数 | `09-endpoint.tex:461` | 全文落点 | 三柱松一格即退等号 |\n\n（另：§12、§15 两张表共同构成本
+%% D44 PAT=\\lvert Z_m\\rvert hits=6
+   k$ | $\mathbb C$（特征 0） | `06:254`、`01:25` | $e=(1+z_0)/2$ 的 $1/2$；$p_\chi$ 的 $1/\lvert Z_m\rvert$ | 特征 2 下 $e$ 不存在，§2 全线塌（姊妹例走特征 2 是另一条机器） |\n| $\lvert I\rvert$ | 3 | `02:47` | 
+   4}$ | 该式由 68 行的平方关系与 224 行的中心性合成，任一条失踪则阶结论断 |\n| $(\mathbb Z/2\mathbb Z)^m$ | 阶 $\lvert Z_m\rvert=2^m$，随 $m$ 指数增长 | build/sections/02-selection-process.tex:248 | 332-333 行的 $Z_m
+   m-1}$ 归零 | 符号位前移则 26-27 行的灭绝时刻同步前移，主定理下界 $2m-2$ 的口径跟着改 |\n| $p_{\chi_m}=\frac{1}{\lvert Z_m\rvert}\sum_{z\in Z_m}\chi_m(z)^{-1}z$ | 单位元系数 $\lvert Z_m\rvert^{-1}=2^{-m}$ | build/
+    $p_{\chi_m}=\frac{1}{\lvert Z_m\rvert}\sum_{z\in Z_m}\chi_m(z)^{-1}z$ | 单位元系数 $\lvert Z_m\rvert^{-1}=2^{-m}$ | build/sections/02-selection-process.tex:343-344 | 346 行的 $Y_m$、3
+   $15$、$\operatorname{gl.dim} D\le3l+2$ 都属此类；补表把同一批量按"数值加增长率"重记，凡是随参数变化的量都补出增长形态，$\lvert Z_m\rvert=2^m$ 与 $\dim_{\mathbb F_2}S_m=m$ 是指数对线性的分界，$\sum_q\binom jq=2^j$ 是层内项数的指数增长，$\o
+   没有行的对象：约定式的记号（$[x,y]$ 的展开顺序、$K[s]^n=K^{n+s}$ 的移位符号）、核格与表格原像这类中间数据、以及只出现在分母里的系数 $\lvert Z_m\rvert^{-1}=2^{-m}$。粗估与正文给定值在栏内明确区分，例如 $2^{25m}$ 一格写着本文的粗估，$\mathcal O$ 与 $\mathcal B_
+%% D41 PAT=\\lvert\\\\mathcal hits=0
+%% D65 PAT=\\lVert x\\rVert|\\lVert y\\rVert|x\\\\pm z hits=4
+   -77) | 该 $\ge$ 用掉 $\lvert\beta_i\rvert\le2m_g$(paired.tex:50-51), 幅度放宽即断 |\n| $s=\lVert y\rVert(12\lVert x\rVert)^{-1}$ | 最优点 | paired.tex:86-87 | eq:paired 的尾折扣 $1/12$(paired
+    $\lvert\beta_i\rvert\le2m_g$(paired.tex:50-51), 幅度放宽即断 |\n| $s=\lVert y\rVert(12\lVert x\rVert)^{-1}$ | 最优点 | paired.tex:86-87 | eq:paired 的尾折扣 $1/12$(paired.tex:11-13) | 预算常
+   Vert\le R$, $\lVert y_i-y_j\rVert\ge\varepsilon$ | diamonds.tex:14-19 | 结论 $R^2-\lVert x\rVert^2\ge\varepsilon^2/48$(diamonds.tex:21-23) | 只给单侧上界则 diamonds.tex:32-35 的凸配对给不出 
+   rt H\rvert$,闭单位球紧,$x$ 作为其上的连续线性泛函取到范数,测试元 $f$ 同时满足 $f=P_Hf$、$\rho(f)\le1$、$x(f)=\lVert x\rVert$。尾侧没有这条:$Q_HX$ 一般无限维,所以 paired.tex:28-31 对 $k$ 只写 "pairings as close as desired
+%% D50 PAT=\\mid|upharpoonright|大 hits=8
+   idenberg 与 Maubach 对 $a(x)y+b(x,z,t)$、$a\ne0$ 型方程给出肯定（62-66，即"$y$ 的系数只依赖一个变量"的那一大类，零纤维为 $\mathbb A^3$ 就能被环境自同构拉直）；Ghosh–Gupta–Pal 在系数与除子的额外假设下研究多元线性超曲面（69-71）；Gh
+    $F$ 落入"某一变量的一次式"，借现成直线化定理\n\n进场后我的第一条施工路线是顺着肯定结果反推：既然 $a(x)y+b(x,z,t)$（$a\ne0$）这一大类在 $\mathbb C^{[4]}$ 里"零纤维 $\cong\mathbb A^3$ 必可直线化"（`paper.tex:62-66`），那反例必须离开所
+   下界：$x=u^3+hv$ 里 $u^3$ 的次数不能再低，$u^2$ 的话 $x^2+y^3$ 首项配对变成 $u^4\pm u^6$ 无法相消，整除性 $h\mid x^2+y^3$ 直接破产（相消是 $\mathrm{wt}$ 齐次里唯一的零化通道，除非引入 $v,w$ 的补偿项，而补偿项自己又要被整除，归纳下去就是权分
+   取 $c=1$ 时 $2m=3n$ 的最小正整数解 $(m,n)=(3,2)$；(3,2) 的互素性来自 $2,3$ 互素，通解 $k(3,2)$ 使次数整体变大，见要求二的下界。要求二：$x,y$ 系数部分 $2ax+3by^2+3b^2y$ 必须带因子 $s$（好写成 $-sp$），单项式自动满足。要求三：$p(x,
+   n` 五条 `norm_num` 全灭 |\n| 权重 | $\mathrm{wt}(h,u,v,w)=(2,1,1,0)$ | 我 §4 反推 | 齐次性、$h\mid x^2+y^3$ | 权重改则 $S$ 五单项不再齐权 4，整除性失去唯一通道 |\n| $x$ | $u^3+hv$；次数 $(1,3,1,0)$，总 3 |
+   .tex:88-89`；`Identities.lean:54` | cusp、$y^2W-b$ 线性方程 | 符号改 $+u^2$：$y^3$ 展开变号，$h\mid x^2+y^3$ 破产 |\n| $S$ | $2u^3v+3u^4w+h(v^2-3u^2w^2)+h^2w^3$；实测 5 单项式，次数 $(2,4,2,3
+   7 节有三处引用的行号与 tex 实际行号有出入，按"以 tex 为准"，更正记在本节末尾 12.1 小节，不回改那几节原文。表格单元一律避开裸竖线，整除写 `\mid`，绝对值写 `\lvert \rvert`，以免破列。\n\n| 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |\n| ---
+   {wt}\,s$ 依次 $3,2,4$ | `paper.tex:87-93` | $S$ 齐次、cusp 整除性 | 换权重后 $S$ 五单项不再齐四次，$h\mid x^2+y^3$ 失去相消通道，停在 `paper.tex:94-95` |\n| 二项系数 2,3 | $2=\binom{2}{1}$、$3=\binom{
+%% D32 PAT=\\lvert D_q|\\lVert D_q hits=2
+   )-qf(y)\|-\|x-qy\|$ | eq:defect(149) | `Basic.lean:50` | 跨半径缺陷度量 |\n| $M$ | $\sup\lvert D_q\rvert$，$0\le M\le1$ | eq:defect(150), eq:defectbound(159) | `Basic.lean:60`（sSu
+   ) | 把 $q$ 放到 $1$ 以外则 $\min(q,1-q)$ 形状失配，main.tex:159 往后的区间论证全需重排 |\n| $M$ | $\sup\lvert D_q(x,y)\rvert$，$0\le M\le1$ | main.tex:150 与 159 | 取等式(main.tex:169)；$E$ 的定义(main.

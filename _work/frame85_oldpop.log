@@ -1,0 +1,28 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+flagged canvases: 152 of 1055
+frames accepted by is_frame: 83 in 152 canvases
+  signatures: {"qu/s": 77, "re/fs": 5, "re/s": 1}
+  ratio width/own-text-width, by invaded vs clean frame:
+    invaded n=34    p10 1.92  p50 6.47  p90 16.12  max 21.25
+    clean      n=49    p10 2.36  p50 4.08  p90 14.18  max 33.19
+  foreign pairs by the invaded box's ratio:
+    ratio [0,1.5)        pairs=4   (depth >1.5pt: 4)
+    ratio [1.5,2.5)      pairs=3   (depth >1.5pt: 3)
+    ratio [2.5,4)        pairs=9   (depth >1.5pt: 8)
+    ratio [4,8)          pairs=17  (depth >1.5pt: 12)
+    ratio [8,1e+09)      pairs=17  (depth >1.5pt: 9)
+  frames a ratio rule would keep as node frames:
+    <= 1.25 x own text: frames 0     (of 83)  foreign pairs dropped 50  
+    <= 1.50 x own text: frames 0     (of 83)  foreign pairs dropped 50  
+    <= 2.00 x own text: frames 1     (of 83)  foreign pairs dropped 50  
+    <= 2.50 x own text: frames 3     (of 83)  foreign pairs dropped 47  
+    <= 3.00 x own text: frames 5     (of 83)  foreign pairs dropped 47  
+    <= 4.00 x own text: frames 19    (of 83)  foreign pairs dropped 46  
+    <= 6.00 x own text: frames 34    (of 83)  foreign pairs dropped 39  
+on-ink candidates (line boxes): 299 in 128 canvases
+   depth [0,1.5): line-box 121   window-ink(旧判据) 97    span-paint 43    letter-paint 41  
+   depth [1.5,3): line-box 102   window-ink(旧判据) 96    span-paint 90    letter-paint 81  
+   depth [3,inf): line-box 76    window-ink(旧判据) 76    span-paint 76    letter-paint 74  
+   window-ink(旧判据) keeps 269 pairs in 128 canvases; deepest priced [8.27, 8.27, 7.6, 7.52, 7.19, 7.17]
+   span-paint         keeps 209 pairs in 99 canvases; deepest priced [7.78, 7.47, 7.44, 7.31, 7.1, 6.98]
+   letter-paint       keeps 196 pairs in 95 canvases; deepest priced [5.76, 5.66, 5.61, 5.52, 5.45, 5.29]

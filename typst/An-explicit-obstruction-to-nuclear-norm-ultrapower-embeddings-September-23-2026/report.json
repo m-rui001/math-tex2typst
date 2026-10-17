@@ -1,0 +1,32 @@
+{
+  "paper": "An-explicit-obstruction-to-nuclear-norm-ultrapower-embeddings-September-23-2026",
+  "ok": true,
+  "typ_lines": 428,
+  "included_pdf_pages": 0,
+  "formulas": 360,
+  "math_failed": 0,
+  "labels": 41,
+  "equations": 16,
+  "theorems": 1,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "360",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "hypcap"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\An-explicit-obstruction-to-nuclear-norm-ultrapower-embeddings-September-23-2026.tex"
+}

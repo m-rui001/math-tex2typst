@@ -1,0 +1,5 @@
+2026-10-14 派单侧三条口径：
+- **`Agent` 工具的 `mode` 只接受 `default/acceptEdits/auto/dontAsk/plan/yolo`**：写 `mode:"bypassPermissions"` 在参数校验阶段就整批挡回（两条后台单都没起来，报错不含单子信息），改 `auto` 后同一条 prompt 直接通过。写手单一律 `mode:"auto"` + `run_in_background:true`。
+- **`inflight.txt` 必须在拿到 launch 成功回执之后写**：上一趟先把 roster 改成 `D41 D207 D111`，而 D207／D111 当时根本没起单，roster 与现实分叉，收稿趟只能靠 `wc -c` 与 mtime 反查谁真的在飞。次序应是 探针→launch→写 roster。
+- **欠账表允许同一篇二次入队，筛号只挡 bib**：D68 上一轮才收完，`node debt_census.js` 复量仍有未引用 199,919 B（整枚最大 `07-fractional-density.tex` 32,763 B），仍是全库最深，就再派一棒续写；被筛掉的六单（D499／D463／D358／D225／D710／D627）都是 `biggest=` 落在 `references.tex` 或 `bibliography.tex`，bib 不产生思维链。
+- **旧批次稿（D111、D68）不在 `wave.txt`／`other_queue.txt` 里**：它们的 §0 用的是绝对路径式"素材登记"，没有"其他队列第 NN 行号"。派单必须明写「不要改动 §0、不要按 wave.txt 找参数行」，否则写手按规格第 1 步去 grep 参数行，找不到就会去重登记或改 §0，把双登记判据弄坏。

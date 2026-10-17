@@ -1,0 +1,35 @@
+\documentclass[10pt]{article}
+\usepackage{tikz}
+\newcommand{\measure}[3]{%
+  \begin{tikzpicture}[font=#1]
+    \node[draw, text width=5.7cm, align=left, inner sep=8pt] (a) at (0,0) {#2};
+    \pgfextracty{\dimen0}{\pgfpointanchor{a}{north}}%
+    \pgfextracty{\dimen1}{\pgfpointanchor{a}{south}}%
+    \typeout{H #3 N=\the\dimen0\space D=\the\dimexpr\dimen0-\dimen1\relax}%
+  \end{tikzpicture}%
+}
+\begin{document}
+\measure{\tiny}{one}{tiny/1}
+\measure{\tiny}{one\\two}{tiny/2}
+\measure{\scriptsize}{one}{scriptsize/1}
+\measure{\scriptsize}{one\\two}{scriptsize/2}
+\measure{\footnotesize}{one}{footnotesize/1}
+\measure{\footnotesize}{one\\two}{footnotesize/2}
+\measure{\small}{one}{small/1}
+\measure{\small}{one\\two}{small/2}
+\measure{\normalsize}{one}{normalsize/1}
+\measure{\normalsize}{one\\two}{normalsize/2}
+\measure{\large}{one}{large/1}
+\measure{\large}{one\\two}{large/2}
+\measure{\Large}{one}{Large/1}
+\measure{\Large}{one\\two}{Large/2}
+\measure{\LARGE}{one}{LARGE/1}
+\measure{\LARGE}{one\\two}{LARGE/2}
+\measure{\huge}{one}{huge/1}
+\measure{\huge}{one\\two}{huge/2}
+\measure{\Huge}{one}{Huge/1}
+\measure{\Huge}{one\\two}{Huge/2}
+\measure{\small}{one\\[3pt]two}{small/2brk3}
+\measure{\small}{one\\[5pt]two}{small/2brk5}
+x
+\end{document}

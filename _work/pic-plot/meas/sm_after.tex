@@ -1,0 +1,8 @@
+\documentclass[tikz,border=0pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+\draw[green!60!black,line width=0.4pt] (0,0)--(10,0)(0,0)--(0,10);
+\draw[blue,very thick] (-1,-1) -- (0,0) plot[smooth] coordinates {(1,1) (2,0) (3,1)} -- (4,0);
+\end{tikzpicture}
+\end{document}

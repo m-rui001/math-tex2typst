@@ -1,0 +1,25 @@
+D177 size=86802 
+D195 size=85288 
+D198 size=70695 
+D202 size=76938 
+D205 size=80203 
+D214 size=73153 
+D224 size=70111 
+D227 size=101833 
+D234 size=77086 
+D242 size=71154 
+D256 size=71529 
+D264 size=76478 
+D266 size=125273 
+D274 size=72970 
+D295 size=72612 
+D298 size=106560 
+D314 size=93757 
+D330 size=73653 ba=1
+D339 size=72908 
+D382 size=75822 
+D389 size=71528 
+D431 size=70166 
+D436 size=72430 
+D437 size=80902 
+D457 size=70572 

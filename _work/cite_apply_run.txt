@@ -1,0 +1,39 @@
+EXCLUDE D587 08-n-locking.tex:331 @note:485
+rows=81 skipped=1
+  RESOLVED D328 renorm.tex:516 -> renormalization.tex:516-517
+conflicts=1
+  CONFLICT D328 renorm.tex:516 -> renormalization.tex:516-517 | renormalization.tex:516
+D106 sites=1 bytes=215482->215483 +1 | 2601:fiting.tex:552=>fitting.tex:552
+D109 sites=2 bytes=158796->158796 +0 | 890:03_angular_gain.tex:897-929=>03_angular_gain.tex:872-919 1001:03_angular_gain.tex:897-929=>03_angular_gain.tex:872-919
+D110 sites=2 bytes=155635->155673 +38 | 1019:postprocess.tex:112=>hierarchy_assigned_postprocess.tex:112 1044:postprocess.tex:50=>hierarchy_assigned_postprocess.tex:50
+D117 sites=1 bytes=96167->96172 +5 | 227:heat.tex:355=>jumps.tex:353-355
+D122 sites=1 bytes=128053->128064 +11 | 75:main.tex:123-135=>01_introduction.tex:123-135
+D131 sites=2 bytes=146846->146876 +30 NONEXACT[trunc@224] | 99:boxes.tex:244=>02-rational-boxes.tex:244 224:boxes.tex:186--189=>04-metric-globalization.tex:186--189
+D134 sites=1 bytes=114769->114769 +0 | 163:localization.tex:141=>introduction.tex:141
+D219 sites=2 bytes=72581->72608 +27 | 51:obstruction.tex:751=>05-final-obstruction.tex:751-769 73:preliminaries.tex:104=>02a-cobar-preliminaries.tex:104-111
+D228 sites=1 bytes=74463->74463 +0 | 233:00-introduction.tex:116-120=>00-introduction.tex:114-116
+D231 sites=1 bytes=71429->71436 +7 | 220:intro.tex:39-43=>introduction.tex:39-43
+D234 sites=1 bytes=77107->77108 +1 | 255:09-prime-interval.tex:118=>03-norm-digits.tex:118-120
+D277 sites=2 bytes=72378->72388 +10 | 38:duction.tex:86-93=>introduction.tex:86-93 50:duction.tex:82-84=>introduction.tex:82-84
+D328 sites=22 bytes=70643->70845 +202 NONEXACT[dash@200,dash@200,trunc@242] | 200:renorm.tex:526--527=>renormalization.tex:526--527 200:renorm.tex:536--537=>renormalization.tex:536--537 202:renorm.tex:186=>renormalization.tex:186 202:renorm.tex:201=>renormalization.tex:201 202:renorm.tex:95=>renormalization.tex:95 202:renorm.tex:558=>renormalization.tex:558 242:renorm.tex:516--517=>renormalization.tex:516--517 279:renorm.tex:95=>renormalization.tex:95 280:renorm.tex:186=>renormalization.tex:186 281:renorm.tex:201=>renormalization.tex:201 282:renorm.tex:255=>renormalization.tex:255 283:renorm.tex:526-527=>renormalization.tex:526-527 284:renorm.tex:536-537=>renormalization.tex:536-537 285:renorm.tex:558=>renormalization.tex:558 316:renorm.tex:85=>renormalization.tex:85 317:renorm.tex:143=>renormalization.tex:143 318:renorm.tex:187=>renormalization.tex:187 319:renorm.tex:423=>renormalization.tex:423 320:renorm.tex:519=>renormalization.tex:519 321:renorm.tex:516=>renormalization.tex:516-517 339:renorm.tex:118-121=>renormalization.tex:118-121 350:renorm.tex:197=>renormalization.tex:197
+D422 sites=1 bytes=80706->80704 +-2 | 148:05-episodes.tex:411-413=>06-splits.tex:411-413
+D430 sites=1 bytes=70562->70562 +0 | 66:surfaces.tex:408-415=>weighted.tex:408-411
+D436 sites=8 bytes=72486->72481 +-5 | 28:history.tex:10=>history.tex:6 28:history.tex:12=>history.tex:6 30:history.tex:14=>history.tex:8 30:history.tex:16=>history.tex:8 244:hints.tex:68=>handles.tex:68 284:history.tex:14=>history.tex:8 284:history.tex:16=>history.tex:8 284:history.tex:16=>history.tex:8
+D439 sites=1 bytes=100005->100002 +-3 | 57:preliminaries.tex:53=>large-bias.tex:53
+D455 sites=1 bytes=80689->80689 +0 | 243:05-streams.tex:569-599=>06-streams.tex:569-599
+D53 sites=1 bytes=119369->119370 +1 | 132:braid.tex:59-66=>braids.tex:59-66
+D548 sites=18 bytes=93369->93489 +120 | 26:intro.tex:98-103=>introduction.tex:98-103 26:intro.tex:98-100=>introduction.tex:98-100 28:intro.tex:13-15=>introduction.tex:13-15 30:intro.tex:75-81=>introduction.tex:75-81 30:intro.tex:82-86=>introduction.tex:82-86 32:intro.tex:88-91=>introduction.tex:88-91 36:intro.tex:43-62=>introduction.tex:43-62 44:intro.tex:64-66=>introduction.tex:64-66 44:intro.tex:67-71=>introduction.tex:67-71 46:intro.tex:35-41=>introduction.tex:35-41 50:intro.tex:17-22=>introduction.tex:17-22 54:intro.tex:53=>introduction.tex:53 56:intro.tex:88-91=>introduction.tex:88-91 62:intro.tex:20-22=>introduction.tex:20-22 64:intro.tex:92-95=>introduction.tex:92-95 140:intro.tex:152-156=>introduction.tex:152-156 154:intro.tex:7-13=>residue.tex:6-8 206:intro.tex:192-194=>introduction.tex:192-194
+D557 sites=1 bytes=76346->76346 +0 | 25:07-short-products.tex:1120-1250=>07-short-products.tex:1179-1211
+D56 sites=1 bytes=142819->142818 +-1 | 184:common.tex:41-47=>common.tex:9-15
+  KEPT-ERRATUM D587 line=485 08-n-locking.tex:331
+D587 sites=1 bytes=199498->199503 +5 | 222:08-n-locking.tex:331=>08-narrow-locking.tex:331
+D596 sites=1 bytes=71768->71769 +1 | 72:finit-jet.tex:13=>finite-jet.tex:13
+D62 sites=3 bytes=89919->89943 +24 | 269:alt.tex:77-140=>alternative.tex:77-140 308:alt.tex:20-67=>alternative.tex:20-67 539:alt.tex:7-9=>alternative.tex:7-9
+D757 sites=1 bytes=122380->122380 +0 | 76:01-regime-guide.tex:184-186=>01-introduction.tex:184-186
+D759 sites=1 bytes=100753->100757 +4 | 926:moments.tex:701=>moments.tex:630-698
+D85 sites=1 bytes=147752->147750 +-2 | 74:03_density.tex:172-173=>00_intro.tex:172-173
+D92 sites=1 bytes=84689->84688 +-1 | 202:papers.tex:511-518=>paper.tex:511-518
+APPLIED files=29 sites=81 bytes=+473
+notFoundInNote=2
+  MISS D328 renorm.tex:526
+  MISS D328 renorm.tex:536

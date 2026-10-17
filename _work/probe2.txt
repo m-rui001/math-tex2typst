@@ -1,0 +1,123 @@
+notes with odd fence-line count=1 {"D63": 43}
+notes with any fence=125
+notes with dir resolved=731 missing=1 ["D113"]
+notes with zero build tex=[]
+total labels built=90092
+
+NON-FENCE occurrences=2096 notes=121
+non-fence by kind={"body": 2049, "head": 18, "table": 29}
+non-fence by cmd={"ref": 1443, "label": 653}
+non-fence arg in material labelset=2080
+non-fence arg NOT in material labelset=16
+non-fence args starting sec: =53
+TOP non-fence args:
+  65 thm:main                                 inmat=True
+  10 eq:5                                     inmat=True
+   7 eq:J                                     inmat=True
+   7 eq:admissible-sets                       inmat=True
+   6 path:homotopy-ode                        inmat=True
+   6 eq:subset                                inmat=True
+   6 eq:profile-dilation                      inmat=True
+   6 eq:canonical-cycle                       inmat=True
+   6 red:expansion                            inmat=True
+   5 lem:weights                              inmat=True
+   5 eq:mu-positive                           inmat=True
+   5 eq:tangent                               inmat=True
+   5 def:fb-road                              inmat=True
+   5 model:metric                             inmat=True
+   5 found:lem-gauge-tail                     inmat=True
+   5 thm:machine-diagrams                     inmat=True
+   5 eq:profile-expansion                     inmat=True
+   5 eq:pivot-backward                        inmat=True
+   5 eq:cycle-target                          inmat=True
+   5 eq:insertion                             inmat=True
+   4 eq:source-25                             inmat=True
+   4 eq:source-27                             inmat=True
+   4 eq:X-M                                   inmat=True
+   4 eq:shift                                 inmat=True
+   4 prop:rankone                             inmat=True
+   4 eq:rankone                               inmat=True
+   4 eq:divdiff                               inmat=True
+   4 eq:M-tangent                             inmat=True
+   4 eq:trace-average                         inmat=True
+   4 path:coefficient-identity                inmat=True
+   4 eq:separated-bands                       inmat=True
+   4 probability:rows                         inmat=True
+   4 eq:duality-conjecture                    inmat=True
+   4 eq:grouped-approximation                 inmat=True
+   4 eq:robust-nonvanishing                   inmat=True
+   4 eq:cut-conditions                        inmat=True
+   4 eq:wedge-condition                       inmat=True
+   4 tr:normalization                         inmat=True
+   4 tr:surplus                               inmat=True
+   4 thm:fock                                 inmat=True
+   4 rel:fiber-contribution                   inmat=True
+   4 rel:correspondence                       inmat=True
+   4 lem:birational                           inmat=True
+   4 rel:pairing                              inmat=True
+   4 eq:moving-ratio                          inmat=True
+   4 har:prop:maximum                         inmat=True
+   4 har:subsec:small                         inmat=True
+   4 eq:src6                                  inmat=True
+   4 eq:label-contraction                     inmat=True
+   4 prop:termination                         inmat=True
+
+NON-FENCE not-in-material SAMPLE (60):
+D117:231 [body] None | 第 0 节我把 maximal 的困难押在"算子族的极大化"上，读完 `maximal.tex` 才发现这一节的第一个句子就把接口交给了 jumps：`maximal.tex:3-4` 逐字 "The estimate of Section~\ref{sec{jumps}} allows diffe
+D124:804 [body] lem:lem:pair-bound | > submeasure of $\nu$, as in Lemma~\ref{lem:lem:pair-bound}.
+D244:68 [body] 式 253 | 精细密度是整个引理最锋利的部分。设 $K(s,y)$ 为 $W(s,a)\psi(a)^2\,\mathrm d a$ 在 $a\mapsto sJ(a)$ 下的推前密度（02-passages.tex:114-116），则每个残差类 $j\equiv h\pmod P$ 的展开时间密度在 $L^1
+D259:818 [body] spread:period-selection | "Let $Z$ and $a\theta^4+w$ be as in Proposition~\ref{spread:period-selection}"、
+D259:820 [body] spread:hilbert-loci | Lemma~\ref{spread:hilbert-loci}"、"Since $\Pi$ was chosen outside
+D259:821 [body] spread:chern-constancy | $\mathcal E_{\mathrm{Hilb}}$"、"Lemma~\ref{spread:chern-constancy} therefore gives
+D346:102 [body] H | 有了 \eqref{H} 里的 $H$，还差最后一块拼图：$H$ 里要能造出长度恰好 $\ell$、两端颜色不同的路径。Lemma clq:coloured-path 正是这句话：设 $s\ge4$，$H$ 连通非二部无 $K_s$，$\delta(H)\ge s$，且对任意不相邻两点 $\{a,b
+D370:65 [body] local-question | 于是我把第一层的目标改写成一个更弱、但恰好够用的形式：只要上界，不要渐近；而且上界允许带 $\kappa_K=\operatorname*{Res}_{s=1}\zeta_K(s)$ 这个因子。理由在 `paper.tex:181`--`184`：把 Dedekind zeta 的留数保留在展开后的
+D370:65 [body] shell-moment | 于是我把第一层的目标改写成一个更弱、但恰好够用的形式：只要上界，不要渐近；而且上界允许带 $\kappa_K=\operatorname*{Res}_{s=1}\zeta_K(s)$ 这个因子。理由在 `paper.tex:181`--`184`：把 Dedekind zeta 的留数保留在展开后的
+D370:65 [body] residue-count | 于是我把第一层的目标改写成一个更弱、但恰好够用的形式：只要上界，不要渐近；而且上界允许带 $\kappa_K=\operatorname*{Res}_{s=1}\zeta_K(s)$ 这个因子。理由在 `paper.tex:181`--`184`：把 Dedekind zeta 的留数保留在展开后的
+D370:161 [body] wrong-turns | 我最在意的是"$\kappa_K$ 留在右边"这件事的代数后果：展开恒等式前面的系数是 $1/(\sqrt D\,\kappa_K)$，与这里的 $\kappa_K y/q$ 相除，$\kappa_K$ 正好消掉，剩下 $y/(q\sqrt D)=y/Q$。`geometry.tex:117`--`
+D370:227 [body] wrong-turns | 我读这段时最意外的反道是最后那句声明：论证对每个固定 $x$、固定 $r$ 用同一常数，没有把缩小半径与包极限交换（`geometry.tex:146`--`149`）。这个声明的价值在 $\S$\ref{wrong-turns} 第九条里我已经认过账。另一个细节是"逐点选择可以不可测"：因为我只需
+D370:303 [body] local-question | 把 $\S$\ref{local-question} 这个标题留着，是为了把第四点的准确问法写下来，免得以后自己又退回粗版本。问题应当这样问：对所有满足 $L_\ell\subset R_\ell$ 且 $R_\ell L_\ell=R_\ell$ 的局部全模 $L_\ell$（亦即 `packet
+D380:215 [body] eq:source-N | （二）两套标签体系并存。引言里的公式标签是 \label{eq:height-convention}（`01-introduction.tex:37`）、\label{eq:bsd-main}（54）、\label{eq:normalized-quotient}（143）、\label{eq:int
+D473:60 [body] ... | 换测度引理（main.tex:455-484，即 Lemma \ref{...}，本文按 main.tex 行号引用）：$0<T<\infty$ 几乎必然、$\mathbb E|\log T|^2<\infty$；叶概率按 $e^{X_\tau}$ 重加权时家谱律保持；根标记保持；$\mathbb 
+D517:185 [body] 3 | 分析侧的输入是弱范数方程与方差的接力（04-volume.tex:589--615）：对 $b$ 积分 \eqref{3} 用法，用 $\bar\sigma\le1$ 与 $\bar e\ge\frac53\lvert\nabla b\rvert^2$，得 $P-\mathbf E b\ge\fra
+
+SEC: ARGS SAMPLE (40):
+D101:704 sec:transitions | $H_i$.  Section~\ref{sec:transitions} supplies the transition graphs
+D101:1656 sec:angular-certificate-verifi | The rational certificate in Section~\ref{sec:angular-certificate-verification}
+D101:1845 sec:angular-certificate-verifi | 转折点九，从"数值验证属于证明之外"改到"证书是证明的一部分"。触发文本是 angular.tex:568--570 的图注句 "The rational certificate in Section~\ref{sec:angular-certificate-verificati
+D104:511 sec:conventions | 组装（computation.tex:347-358）："Given the recursively enumerable set $S\subseteq\mathbb N^n$, choose the machine of Lemma~\ref{lem:counter-univ
+D105:204 sec:repair | 这一片标签很特别：\label{sec:repair} 与 \label{sec:metric} 同挂在 repair.tex:2-3 一节开头（"The finite negative-type semimetric"），而正文文件 metric.tex 是这一节的续篇。修补是
+D105:204 sec:metric | 这一片标签很特别：\label{sec:repair} 与 \label{sec:metric} 同挂在 repair.tex:2-3 一节开头（"The finite negative-type semimetric"），而正文文件 metric.tex 是这一节的续篇。修补是
+D110:144 sec:sparsification | > This appendix proves the precise form of the Marcus--Spielman--Srivastava theorem used in Section~\ref{sec:sparsification}. ... In particu
+D112:130 sec:spectral | > $i$ eigenfunctions. Section~\ref{sec:spectral} will use this observation to
+D112:1213 sec:path | > The bounds from Section~\ref{sec:path} place every pair
+D131:436 sec:hartogs | (c) 机械理由。半径链 $r/10<r/9<r/3$ 的三级余数各有其职：$r$ 保证 $f^{-1}(B_\rho(z,r))\subset U$；$r/9$ 是输入所在球，$a_m,a'_m$ 都在其中故路径长度 $<2r/9+\eta$；路径像到 $z$ 的 $\rho$
+D131:436 sec:global | (c) 机械理由。半径链 $r/10<r/9<r/3$ 的三级余数各有其职：$r$ 保证 $f^{-1}(B_\rho(z,r))\subset U$；$r/9$ 是输入所在球，$a_m,a'_m$ 都在其中故路径长度 $<2r/9+\eta$；路径像到 $z$ 的 $\rho$
+D131:446 sec:prelim | `intro.tex:251--254` 交代顺序：The main proof occupies Sections~\ref{sec:prelim}--\ref{sec:global}. Section~\ref{sec:canonical} proves the metric
+D131:446 sec:global | `intro.tex:251--254` 交代顺序：The main proof occupies Sections~\ref{sec:prelim}--\ref{sec:global}. Section~\ref{sec:canonical} proves the metric
+D131:446 sec:canonical | `intro.tex:251--254` 交代顺序：The main proof occupies Sections~\ref{sec:prelim}--\ref{sec:global}. Section~\ref{sec:canonical} proves the metric
+D133:1293 sec:distance | > We first prove the distance bound in Section~\ref{sec:distance}.
+D138:500 sec:median | > In Section~\ref{sec:median}, we compare representation costs as $X$ approaches
+D140:769 sec:products | "as established in Section~\ref{sec:products}" 就是这条引用。
+D143:82 sec:machines | > Acceptance means that a finite computation reaches an accepting state; a nonaccepting infinite computation rejects. We initially count an 
+D146:626 sec:compression | > Section~\ref{sec:compression}, every pair of distinct $x,y\in X$ has
+D146:699 sec:partitions | > As in Section~\ref{sec:partitions}, define
+D185:460 sec:tower | Section~\ref{sec:tower}." 也就是说，第 3 节的存在理由是一条等式，见 §17。
+D22:209 sec:counterexample | **(a) 逐字文本**。06-counterexample.tex:94-99："Every finite subset of $E$ is independent in each $M_i$, because all its component parts are finit
+D26:692 sec:crossings | tex:72 的第三段策略摘要在此完全兑现："Section~\ref{sec:crossings} selects one period block and a line of every color in each direction with the required sm
+D29:339 sec:geometry | 这就是过渡 (A) 的本体，也是第 2 节染色死路的正式下葬处。intro 第 86-87 行（T10）给它补了一句口径声明："Section~\ref{sec:geometry} proves this reduction for arbitrary covering sets
+D31:467 sec:pencil | 于是剩下的唯一办法是反证：假设存在任何有限齐次实对称 pencil 表示 $K$，从它内部榨出结构。我把 §4 的任务写成一句话（`01-introduction.tex:108-111`）："The remaining argument assumes an arbitrary
+D31:1110 sec:reduced | 第 20 行 `\DeclareMathOperator{\proj}{proj}` 全文未被使用，正文三处（`05-norm.tex:10,12,101`）一律手写 `\operatorname{proj}_{\ker \cdot}`。这个细节与我在第 9 节里对 $P(v),
+D32:80 sec:supports | > Section~\ref{sec:supports} supplies the finite-dimensional supports and continuous radial contacts. Section~\ref{sec:attainment} makes a p
+D32:80 sec:attainment | > Section~\ref{sec:supports} supplies the finite-dimensional supports and continuous radial contacts. Section~\ref{sec:attainment} makes a p
+D32:80 sec:alignment | > Section~\ref{sec:supports} supplies the finite-dimensional supports and continuous radial contacts. Section~\ref{sec:attainment} makes a p
+D32:80 sec:comparison | > Section~\ref{sec:supports} supplies the finite-dimensional supports and continuous radial contacts. Section~\ref{sec:attainment} makes a p
+D32:80 sec:extension | > Section~\ref{sec:supports} supplies the finite-dimensional supports and continuous radial contacts. Section~\ref{sec:attainment} makes a p
+D32:80 sec:appendix | > Section~\ref{sec:supports} supplies the finite-dimensional supports and continuous radial contacts. Section~\ref{sec:attainment} makes a p
+D32:289 sec:appendix | > We use the uniform strict-contraction form of Darbo's fixed-point theorem \cite{Darbo1955}, proved in Appendix~\ref{sec:appendix}.
+D33:913 sec:routing | 第 15 条时间线也顺带说明：`main.tex:245-249` "Sections~\ref{sec:routing} and~\ref{sec:residue} establish the routing and small-residue tools. Section~\
+D33:913 sec:residue | 第 15 条时间线也顺带说明：`main.tex:245-249` "Sections~\ref{sec:routing} and~\ref{sec:residue} establish the routing and small-residue tools. Section~\
+D33:913 sec:splitting | 第 15 条时间线也顺带说明：`main.tex:245-249` "Sections~\ref{sec:routing} and~\ref{sec:residue} establish the routing and small-residue tools. Section~\
+D33:913 sec:folding | 第 15 条时间线也顺带说明：`main.tex:245-249` "Sections~\ref{sec:routing} and~\ref{sec:residue} establish the routing and small-residue tools. Section~\
+D33:913 sec:induction | 第 15 条时间线也顺带说明：`main.tex:245-249` "Sections~\ref{sec:routing} and~\ref{sec:residue} establish the routing and small-residue tools. Section~\
+D36:573 sec:facets | ① 经典定位（:60-61）："The extremal values of this affine-invariant functional are classical questions in convex geometry."（泛陈述无引文）。② 协变归属（:61-63）：
+D36:573 sec:simplex | ① 经典定位（:60-61）："The extremal values of this affine-invariant functional are classical questions in convex geometry."（泛陈述无引文）。② 协变归属（:61-63）：

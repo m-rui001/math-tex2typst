@@ -1,0 +1,15 @@
+D08 -> {"dir": "The-Mezard-Parisi-formula-for-diluted-spin-glasses-September-23-2026", "ncite": 9, "nmatch": 8, "ndir_tex": 13, "tied": 1, "runner_up": "The-free-energy-of-the-Ising-random-perceptron-September-24-2026", "runner_up_match": 3}
+D137 -> ABSENT
+D68 -> ABSENT
+D08 head40:
+# D08 · 稀释自旋玻璃的 Mézard–Parisi 公式：反推笔记（深版）
+
+> 依据：论文 tex（11 节 2692 行：model/overview/trees/upper/cavity/perturbations/decorrelation/comparison/reduction/consequences）、5 页 reasoning summary。[推测] 标注反推成分。
+
+引文行号形如 `trees:84`，指 `build/sections/trees.tex` 第 84 行；summary 的引文一律逐字抄自 `E:\math\reasoning_traces\mezard-parisi-formula.tex`（211 行，可直读，同目录 pdf 已加密），标 `sum:行号`。论文正文我只从 tex 取，逐字引用的tex 用代码块原样保留，行内数学符号按论文写法。素材来源 `研究笔记\素材\MezardParisi-素材.md`（四节：定理总览、逐引理带批注重构、summary 时间线、常数与参数表）全部读完并吸收，其 §二 的 (a)(b)(c)(d) 四段式是我下面各节骨架的原型。
+
+记号与论文一致：$m_d$ 是指数网格、$\delta=1/L$、$\gamma_\beta=m_{d_\beta}-n_\beta m_{d_\beta+1}$ 是内部顶点的树密度指数、$\kappa(S)$ 是规定参考树的总扩展系数、$Q_k$ 是 $k$ 叶树的抽样律、$\mathscr F_d$ 是深度 $d$ 的前缀 sigma 域、$\mathcal A_{L,\eta}$ 是未归一化深度平均算子、$v_N(S,d)$ 是逐点条件协方差的平方、$R_S$ 是 multioverlap。这一版把每个关键引理补成四段：逐字引用原陈述、推导补到中间步骤、常数与阶数的机械理由、候选失败路线与其卡点。
+
+Lean 一侧本篇没有条目（检索证据与判据在第 10 节）。
+
+## 0. 出发点：先花力气找反例，一无所获本身就是信息

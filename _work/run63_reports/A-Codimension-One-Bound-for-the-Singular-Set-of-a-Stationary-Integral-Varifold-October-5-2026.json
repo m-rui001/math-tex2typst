@@ -1,0 +1,30 @@
+{
+  "paper": "A-Codimension-One-Bound-for-the-Singular-Set-of-a-Stationary-Integral-Varifold-October-5-2026",
+  "ok": true,
+  "typ_lines": 804,
+  "included_pdf_pages": 0,
+  "formulas": 898,
+  "math_failed": 0,
+  "labels": 123,
+  "equations": 13,
+  "theorems": 2,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "898"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\renewcommand\\bibfont"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-Codimension-One-Bound-for-the-Singular-Set-of-a-Stationary-Integral-Varifold-October-5-2026.tex"
+}

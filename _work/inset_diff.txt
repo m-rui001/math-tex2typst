@@ -1,0 +1,14 @@
+canvas verdicts: {'identical': 639, 'changed': 279, 'refused both': 14}
+changed canvases 279, papers 223, differing lines 1204
+lost 0 []   gained 0 []
+-- biggest canvases
+   Gaussian-free-field-limits-of-weighted-integer pic2   17 lines
+   The-nonmaximal-anti-de-Sitter-Penrose-Inequali pic0   15 lines
+   Integral-points-on-character-varieties-of-curv pic0   12 lines
+   The-unique-threshold-bound-state-of-the-SU-N-B pic0   12 lines
+   A-Charged-Reduction-of-the-Spacetime-Penrose-I pic1   11 lines
+   A-hyperbolic-group-with-no-geometric-CAT0-acti pic1   11 lines
+   BKT-universality-for-height-and-planar-spin-fi pic3   11 lines
+   Failure-of-finite-assembly-for-a-chromatic-ove pic0   11 lines
+   Nonuniqueness-with-local-conservation-for-the- pic1   11 lines
+   A-Complete-Local-Domain-Without-a-Small-Cohen- pic0   10 lines

@@ -1,0 +1,5 @@
+note=D278-三角晶格通用最优性的原子证书：从模36节点到659行极小值的反推笔记.md
+bytes=92894 lines=346
+total-tex-mentions=47
+WITH-BUILD=47
+sample: main.tex=47

@@ -1,0 +1,21 @@
+note=E:/math/研究笔记\D499-轨道形底与对数Iitaka次可加性.md
+bytes=101402 lines=838 CR=0
+dir=Orbifold-and-logarithmic-Iitaka-subadditivity-September-26-2026
+heads=28 first=(3, '## §0 登记与写作范围') last=(834, '## §27 勘误补记的节号更正')
+last6=["## §22 遗留问题、证据缺口与我拒绝硬编的地方", "## §23 自查记录", "## §24 勘误登记", "## §25 台账", "## §26 勘误补记", "## §27 勘误补记的节号更正"]
+table_headers=[(775, '符号')] separators=[776]
+cite_form full=262 base=163
+inventory:
+  sections/period-positivity.tex                   45323B   924L refs=52
+  sections/general-type-addition.tex               34694B   686L refs=12
+  sections/root-comparison.tex                     31963B   676L refs=52
+  references.tex                                   22869B   407L refs=0
+  sections/normalization.tex                       20120B   429L refs=0
+  sections/applications.tex                        19950B   442L refs=20
+  sections/reduced-root.tex                        17476B   392L refs=14
+  sections/models.tex                              17322B   365L refs=37
+  sections/introduction.tex                        15708B   313L refs=42
+  sections/adjoint-addition.tex                    11388B   248L refs=32
+  main.tex                                          3008B    88L refs=0
+  figures/two-maps.tex                               523B    14L refs=1
+  TOTAL 240344B files=12

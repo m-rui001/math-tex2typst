@@ -1,0 +1,10 @@
+cid 数=57 宏定义合计=3751 缺失 tex=0
+==== C19-Kähler广义对的BBY分解.md 起点 bytes=41271 lines=195 CR=0
+   sweep: C19 size=41271
+   sweep: C19 size=41271
+   普查1 全根 refused=423 files_hit=4 other=0｜本单 零站点
+   macro: C19 无可回改站点（普查零站点，或全部无凭据已登记） 未决=无
+   ccheck: checking 1 C notes | === C19-Kähler广义对的BBY分解.md |    bytes=41271 lines=195 CR=0 |    title=Y heads=10 nums=0..9 contig0=True |    spec: head0=Y K=9(5-9) seam=Y |    dollar=1350(even) odd_lines=0 btick=12(even) |    math: spans=658 disp=17 bytes=12435 share=30.1% stmt_lines=19 |    bans=none |    tables=0 rows=0 badpipe=0 |    material=被引素材/2506.23218 texfiles=1 poscites=76 bad=0
+   普查终 全根 refused=423 files_hit=4 other=0｜本单 零站点
+   C19 收稿后 bytes=41271 lines=195 CR=0
+APPLIED 被引笔记/INDEX.md size=8494

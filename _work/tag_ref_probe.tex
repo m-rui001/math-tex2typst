@@ -1,0 +1,14 @@
+% What does \eqref print for a display whose number was replaced by \tag?
+%
+% The four `(no-number)` dangling refs in the corpus come from
+%   \[ ... \tag{$(\ast_{\mathrm{adj}})$}\label{sg:ambient-adjunction} \] ... \eqref{sg:ambient-adjunction}
+% Our emitter reads the tag, fails to, and registers the label with an empty number, printing `[??]`.
+% This is the control: pdflatex answers with the tag itself, so the reference is resolvable and the
+% text on the page is the tag's own rendering. Compare the two \eqref lines in the PDF text.
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[ A = B. \tag{$\ast_{\mathrm{adj}}$}\label{eq:tagged} \]
+\[ C = D. \label{eq:plain} \]
+Tagged: \eqref{eq:tagged}. Plain: \eqref{eq:plain}. Ref: \ref{eq:tagged}.
+\end{document}

@@ -1,0 +1,1492 @@
+[
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D145",
+  "line": 253,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D212",
+  "line": 80,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D214",
+  "line": 60,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D214",
+  "line": 85,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D214",
+  "line": 139,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D214",
+  "line": 204,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D362",
+  "line": 115,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D362",
+  "line": 117,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D362",
+  "line": 451,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D362",
+  "line": 495,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D362",
+  "line": 501,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D389",
+  "line": 91,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D58",
+  "line": 179,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D58",
+  "line": 181,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D58",
+  "line": 183,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D58",
+  "line": 187,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D58",
+  "line": 189,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D58",
+  "line": 213,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D58",
+  "line": 461,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D81",
+  "line": 292,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\F",
+  "kind": "macro",
+  "bad": "\\F",
+  "good": "\\mathbb{F}",
+  "note": "D81",
+  "line": 519,
+  "flag": "",
+  "declared_count": 21
+ },
+ {
+  "family": "\\d",
+  "kind": "macro",
+  "bad": "\\d",
+  "good": "\\mathrm{d}",
+  "note": "D96",
+  "line": 519,
+  "flag": "",
+  "declared_count": 16
+ },
+ {
+  "family": "\\d",
+  "kind": "macro",
+  "bad": "\\d",
+  "good": "\\mathrm{d}",
+  "note": "D96",
+  "line": 530,
+  "flag": "",
+  "declared_count": 16
+ },
+ {
+  "family": "\\d",
+  "kind": "macro",
+  "bad": "\\d",
+  "good": "\\mathrm{d}",
+  "note": "D96",
+  "line": 532,
+  "flag": "",
+  "declared_count": 16
+ },
+ {
+  "family": "\\d",
+  "kind": "macro",
+  "bad": "\\d",
+  "good": "\\mathrm{d}",
+  "note": "D96",
+  "line": 535,
+  "flag": "",
+  "declared_count": 16
+ },
+ {
+  "family": "\\d",
+  "kind": "macro",
+  "bad": "\\d",
+  "good": "\\mathrm{d}",
+  "note": "D96",
+  "line": 535,
+  "flag": "",
+  "declared_count": 16
+ },
+ {
+  "family": "\\d",
+  "kind": "macro",
+  "bad": "\\d",
+  "good": "\\mathrm{d}",
+  "note": "D96",
+  "line": 584,
+  "flag": "",
+  "declared_count": 16
+ },
+ {
+  "family": "\\d",
+  "kind": "macro",
+  "bad": "\\d",
+  "good": "\\mathrm{d}",
+  "note": "D96",
+  "line": 599,
+  "flag": "",
+  "declared_count": 16
+ },
+ {
+  "family": "\\d",
+  "kind": "macro",
+  "bad": "\\d",
+  "good": "\\mathrm{d}",
+  "note": "D96",
+  "line": 599,
+  "flag": "",
+  "declared_count": 16
+ },
+ {
+  "family": "\\d",
+  "kind": "macro",
+  "bad": "\\d",
+  "good": "\\mathrm{d}",
+  "note": "D96",
+  "line": 601,
+  "flag": "",
+  "declared_count": 16
+ },
+ {
+  "family": "\\d",
+  "kind": "macro",
+  "bad": "\\d",
+  "good": "\\mathrm{d}",
+  "note": "D96",
+  "line": 604,
+  "flag": "",
+  "declared_count": 16
+ },
+ {
+  "family": "\\d",
+  "kind": "macro",
+  "bad": "\\d",
+  "good": "\\mathrm{d}",
+  "note": "D96",
+  "line": 611,
+  "flag": "",
+  "declared_count": 16
+ },
+ {
+  "family": "\\d",
+  "kind": "macro",
+  "bad": "\\d",
+  "good": "\\mathrm{d}",
+  "note": "D96",
+  "line": 611,
+  "flag": "",
+  "declared_count": 16
+ },
+ {
+  "family": "\\d",
+  "kind": "macro",
+  "bad": "\\d",
+  "good": "\\mathrm{d}",
+  "note": "D96",
+  "line": 622,
+  "flag": "",
+  "declared_count": 16
+ },
+ {
+  "family": "\\d",
+  "kind": "macro",
+  "bad": "\\d",
+  "good": "\\mathrm{d}",
+  "note": "D96",
+  "line": 624,
+  "flag": "",
+  "declared_count": 16
+ },
+ {
+  "family": "\\d",
+  "kind": "macro",
+  "bad": "\\d",
+  "good": "\\mathrm{d}",
+  "note": "D96",
+  "line": 648,
+  "flag": "",
+  "declared_count": 16
+ },
+ {
+  "family": "\\d",
+  "kind": "macro",
+  "bad": "\\d",
+  "good": "\\mathrm{d}",
+  "note": "D96",
+  "line": 651,
+  "flag": "",
+  "declared_count": 16
+ },
+ {
+  "family": "\\OOo",
+  "kind": "macro",
+  "bad": "\\OOo",
+  "good": "\\mathcal{O}",
+  "note": "D492",
+  "line": 446,
+  "flag": "",
+  "declared_count": 12
+ },
+ {
+  "family": "\\OOo",
+  "kind": "macro",
+  "bad": "\\OOo",
+  "good": "\\mathcal{O}",
+  "note": "D492",
+  "line": 459,
+  "flag": "",
+  "declared_count": 12
+ },
+ {
+  "family": "\\OOo",
+  "kind": "macro",
+  "bad": "\\OOo",
+  "good": "\\mathcal{O}",
+  "note": "D492",
+  "line": 517,
+  "flag": "",
+  "declared_count": 12
+ },
+ {
+  "family": "\\OOo",
+  "kind": "macro",
+  "bad": "\\OOo",
+  "good": "\\mathcal{O}",
+  "note": "D492",
+  "line": 517,
+  "flag": "",
+  "declared_count": 12
+ },
+ {
+  "family": "\\OOo",
+  "kind": "macro",
+  "bad": "\\OOo",
+  "good": "\\mathcal{O}",
+  "note": "D492",
+  "line": 563,
+  "flag": "",
+  "declared_count": 12
+ },
+ {
+  "family": "\\OOo",
+  "kind": "macro",
+  "bad": "\\OOo",
+  "good": "\\mathcal{O}",
+  "note": "D492",
+  "line": 563,
+  "flag": "",
+  "declared_count": 12
+ },
+ {
+  "family": "\\OOo",
+  "kind": "macro",
+  "bad": "\\OOo",
+  "good": "\\mathcal{O}",
+  "note": "D492",
+  "line": 563,
+  "flag": "",
+  "declared_count": 12
+ },
+ {
+  "family": "\\OOo",
+  "kind": "macro",
+  "bad": "\\OOo",
+  "good": "\\mathcal{O}",
+  "note": "D492",
+  "line": 565,
+  "flag": "",
+  "declared_count": 12
+ },
+ {
+  "family": "\\OOo",
+  "kind": "macro",
+  "bad": "\\OOo",
+  "good": "\\mathcal{O}",
+  "note": "D492",
+  "line": 565,
+  "flag": "",
+  "declared_count": 12
+ },
+ {
+  "family": "\\OOo",
+  "kind": "macro",
+  "bad": "\\OOo",
+  "good": "\\mathcal{O}",
+  "note": "D492",
+  "line": 577,
+  "flag": "",
+  "declared_count": 12
+ },
+ {
+  "family": "\\OOo",
+  "kind": "macro",
+  "bad": "\\OOo",
+  "good": "\\mathcal{O}",
+  "note": "D492",
+  "line": 579,
+  "flag": "",
+  "declared_count": 12
+ },
+ {
+  "family": "\\OOo",
+  "kind": "macro",
+  "bad": "\\OOo",
+  "good": "\\mathcal{O}",
+  "note": "D492",
+  "line": 616,
+  "flag": "",
+  "declared_count": 12
+ },
+ {
+  "family": "\\diff",
+  "kind": "macro",
+  "bad": "\\diff",
+  "good": "\\mathrm{diff}",
+  "note": "D213",
+  "line": 43,
+  "flag": "",
+  "declared_count": 5
+ },
+ {
+  "family": "\\diff",
+  "kind": "macro",
+  "bad": "\\diff",
+  "good": "\\mathrm{diff}",
+  "note": "D213",
+  "line": 72,
+  "flag": "",
+  "declared_count": 5
+ },
+ {
+  "family": "\\diff",
+  "kind": "macro",
+  "bad": "\\diff",
+  "good": "\\mathrm{diff}",
+  "note": "D213",
+  "line": 152,
+  "flag": "",
+  "declared_count": 5
+ },
+ {
+  "family": "\\diff",
+  "kind": "macro",
+  "bad": "\\diff",
+  "good": "\\mathrm{diff}",
+  "note": "D213",
+  "line": 177,
+  "flag": "",
+  "declared_count": 5
+ },
+ {
+  "family": "\\diff",
+  "kind": "macro",
+  "bad": "\\diff",
+  "good": "\\mathrm{diff}",
+  "note": "D213",
+  "line": 180,
+  "flag": "",
+  "declared_count": 5
+ },
+ {
+  "family": "\\T",
+  "kind": "macro",
+  "bad": "\\T",
+  "good": "\\top",
+  "note": "D71",
+  "line": 142,
+  "flag": "",
+  "declared_count": 5
+ },
+ {
+  "family": "\\T",
+  "kind": "macro",
+  "bad": "\\T",
+  "good": "\\top",
+  "note": "D71",
+  "line": 142,
+  "flag": "",
+  "declared_count": 5
+ },
+ {
+  "family": "\\T",
+  "kind": "macro",
+  "bad": "\\T",
+  "good": "\\top",
+  "note": "D71",
+  "line": 142,
+  "flag": "",
+  "declared_count": 5
+ },
+ {
+  "family": "\\T",
+  "kind": "macro",
+  "bad": "\\T",
+  "good": "\\top",
+  "note": "D71",
+  "line": 142,
+  "flag": "",
+  "declared_count": 5
+ },
+ {
+  "family": "\\T",
+  "kind": "macro",
+  "bad": "\\T",
+  "good": "\\top",
+  "note": "D71",
+  "line": 142,
+  "flag": "",
+  "declared_count": 5
+ },
+ {
+  "family": "\\du",
+  "kind": "macro",
+  "bad": "\\du",
+  "good": "\\mathrm{d}u",
+  "note": "D761",
+  "line": 287,
+  "flag": "",
+  "declared_count": 4
+ },
+ {
+  "family": "\\du",
+  "kind": "macro",
+  "bad": "\\du",
+  "good": "\\mathrm{d}u",
+  "note": "D761",
+  "line": 303,
+  "flag": "",
+  "declared_count": 4
+ },
+ {
+  "family": "\\du",
+  "kind": "macro",
+  "bad": "\\du",
+  "good": "\\mathrm{d}u",
+  "note": "D761",
+  "line": 303,
+  "flag": "",
+  "declared_count": 4
+ },
+ {
+  "family": "\\du",
+  "kind": "macro",
+  "bad": "\\du",
+  "good": "\\mathrm{d}u",
+  "note": "D761",
+  "line": 315,
+  "flag": "",
+  "declared_count": 4
+ },
+ {
+  "family": "\\asy",
+  "kind": "macro",
+  "bad": "\\asy",
+  "good": "\\asymp",
+  "note": "D131",
+  "line": 153,
+  "flag": "",
+  "declared_count": 2
+ },
+ {
+  "family": "\\asy",
+  "kind": "macro",
+  "bad": "\\asy",
+  "good": "\\asymp",
+  "note": "D537",
+  "line": 257,
+  "flag": "",
+  "declared_count": 2
+ },
+ {
+  "family": "\\ot",
+  "kind": "macro",
+  "bad": "\\ot",
+  "good": "\\otimes",
+  "note": "D44",
+  "line": 376,
+  "flag": "",
+  "declared_count": 2
+ },
+ {
+  "family": "\\ot",
+  "kind": "macro",
+  "bad": "\\ot",
+  "good": "\\otimes",
+  "note": "D44",
+  "line": 376,
+  "flag": "",
+  "declared_count": 2
+ },
+ {
+  "family": "\\dv",
+  "kind": "macro",
+  "bad": "\\dv",
+  "good": "\\mathrm{d}v",
+  "note": "D761",
+  "line": 281,
+  "flag": "",
+  "declared_count": 2
+ },
+ {
+  "family": "\\dv",
+  "kind": "macro",
+  "bad": "\\dv",
+  "good": "\\mathrm{d}v",
+  "note": "D761",
+  "line": 303,
+  "flag": "",
+  "declared_count": 2
+ },
+ {
+  "family": "\\lambdah",
+  "kind": "macro",
+  "bad": "\\lambdah",
+  "good": "\\lambda h",
+  "note": "D125",
+  "line": 448,
+  "flag": "",
+  "declared_count": 1
+ },
+ {
+  "family": "\\asypto",
+  "kind": "macro",
+  "bad": "\\asypto",
+  "good": "\\asymp",
+  "note": "D198",
+  "line": 165,
+  "flag": "",
+  "declared_count": 1
+ },
+ {
+  "family": "\\alphah",
+  "kind": "macro",
+  "bad": "\\alphah",
+  "good": "\\alpha h",
+  "note": "D560",
+  "line": 149,
+  "flag": "",
+  "declared_count": 1
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "A:[0,1]\\times\\overline\\mathbb D\\to\\Omega",
+  "good": "A:[0,1]\\times\\overline{\\mathbb D}\\to\\Omega",
+  "note": "D160",
+  "line": 223,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "A_t(\\overline\\mathbb D)\\subset U",
+  "good": "A_t(\\overline{\\mathbb D})\\subset U",
+  "note": "D160",
+  "line": 227,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "T=\\{t:A_t(\\overline\\mathbb D)\\subset U\\}",
+  "good": "T=\\{t:A_t(\\overline{\\mathbb D})\\subset U\\}",
+  "note": "D160",
+  "line": 229,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "[0,1]\\times\\overline\\mathbb D",
+  "good": "[0,1]\\times\\overline{\\mathbb D}",
+  "note": "D160",
+  "line": 233,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb Q",
+  "good": "\\overline{\\mathbb Q}",
+  "note": "D163",
+  "line": 234,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\widehat{\\operatorname{err}}_Z(h)\\le\\frac12\\widehat\\mathbb E_Z\\lvert Y-P(X)\\rvert",
+  "good": "\\widehat{\\operatorname{err}}_Z(h)\\le\\frac12\\widehat{\\mathbb E}_Z\\lvert Y-P(X)\\rvert",
+  "note": "D165",
+  "line": 677,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\frac12\\widehat\\mathbb E_Z\\lvert Y-q(X)\\rvert",
+  "good": "\\frac12\\widehat{\\mathbb E}_Z\\lvert Y-q(X)\\rvert",
+  "note": "D165",
+  "line": 678,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D",
+  "good": "\\overline{\\mathbb D}",
+  "note": "D171",
+  "line": 205,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D",
+  "good": "\\overline{\\mathbb D}",
+  "note": "D171",
+  "line": 225,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D",
+  "good": "\\overline{\\mathbb D}",
+  "note": "D171",
+  "line": 243,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\widehat\\mathbb C\\setminus K_i",
+  "good": "\\widehat{\\mathbb C}\\setminus K_i",
+  "note": "D196",
+  "line": 83,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\partial_\\lambda\\theta=-\\lvert\\chi\\rvert^2-\\overline\\operatorname{Ric}(\\ell,\\ell)",
+  "good": "\\partial_\\lambda\\theta=-\\lvert\\chi\\rvert^2-\\overline{\\operatorname{Ric}}(\\ell,\\ell)",
+  "note": "D228",
+  "line": 149,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D\\to\\overline U",
+  "good": "\\overline{\\mathbb D}\\to\\overline U",
+  "note": "D25",
+  "line": 381,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D",
+  "good": "\\overline{\\mathbb D}",
+  "note": "D25",
+  "line": 388,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D",
+  "good": "\\overline{\\mathbb D}",
+  "note": "D25",
+  "line": 405,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D",
+  "good": "\\overline{\\mathbb D}",
+  "note": "D25",
+  "line": 405,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D\\to\\overline U",
+  "good": "\\overline{\\mathbb D}\\to\\overline U",
+  "note": "D25",
+  "line": 432,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "W(A)\\subseteq\\overline\\mathbb D",
+  "good": "W(A)\\subseteq\\overline{\\mathbb D}",
+  "note": "D25",
+  "line": 1884,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "W(A)\\subseteq\\overline\\mathbb D",
+  "good": "W(A)\\subseteq\\overline{\\mathbb D}",
+  "note": "D25",
+  "line": 1885,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "W(\\text{sharpnessMatrix})\\subseteq\\overline\\mathbb D",
+  "good": "W(\\text{sharpnessMatrix})\\subseteq\\overline{\\mathbb D}",
+  "note": "D25",
+  "line": 2128,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D",
+  "good": "\\overline{\\mathbb D}",
+  "note": "D25",
+  "line": 2760,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "N_k=\\{w:\\operatorname{dist}(w,\\overline\\mathbb D)<1/k\\}",
+  "good": "N_k=\\{w:\\operatorname{dist}(w,\\overline{\\mathbb D})<1/k\\}",
+  "note": "D25",
+  "line": 2760,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\operatorname{dist}(w_{k_j},\\overline\\mathbb D)<1/{k_j}\\to0",
+  "good": "\\operatorname{dist}(w_{k_j},\\overline{\\mathbb D})<1/{k_j}\\to0",
+  "note": "D25",
+  "line": 2761,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D",
+  "good": "\\overline{\\mathbb D}",
+  "note": "D25",
+  "line": 2761,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "p\\in\\overline\\mathbb D",
+  "good": "p\\in\\overline{\\mathbb D}",
+  "note": "D25",
+  "line": 2761,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "q\\in\\overline\\mathbb D",
+  "good": "q\\in\\overline{\\mathbb D}",
+  "note": "D25",
+  "line": 2761,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\tilde g|_{\\overline\\mathbb D}=g",
+  "good": "\\tilde g|_{\\overline{\\mathbb D}}=g",
+  "note": "D25",
+  "line": 2762,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D",
+  "good": "\\overline{\\mathbb D}",
+  "note": "D25",
+  "line": 2765,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\{w:\\operatorname{dist}(w,\\overline\\mathbb D)<\\varepsilon\\}\\subset N_{k_*}",
+  "good": "\\{w:\\operatorname{dist}(w,\\overline{\\mathbb D})<\\varepsilon\\}\\subset N_{k_*}",
+  "note": "D25",
+  "line": 2765,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D",
+  "good": "\\overline{\\mathbb D}",
+  "note": "D25",
+  "line": 2765,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D\\subset N_{k_*}",
+  "good": "\\overline{\\mathbb D}\\subset N_{k_*}",
+  "note": "D25",
+  "line": 2765,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\operatorname{dist}(w,\\overline\\mathbb D)=\\max(0,|w|-1)",
+  "good": "\\operatorname{dist}(w,\\overline{\\mathbb D})=\\max(0,|w|-1)",
+  "note": "D25",
+  "line": 2765,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\widehat\\mathcal T_{s}",
+  "good": "\\widehat{\\mathcal T}_{s}",
+  "note": "D264",
+  "line": 376,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\widehat\\mathcal T_{0}",
+  "good": "\\widehat{\\mathcal T}_{0}",
+  "note": "D264",
+  "line": 467,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\widehat\\mathcal D",
+  "good": "\\widehat{\\mathcal D}",
+  "note": "D264",
+  "line": 644,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\Sigma_{i}\\subset\\widehat\\mathcal D",
+  "good": "\\Sigma_{i}\\subset\\widehat{\\mathcal D}",
+  "note": "D264",
+  "line": 645,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "I_{i}=(\\Gamma_{i}\\setminus\\text{领圈})\\cap\\widehat\\mathcal D",
+  "good": "I_{i}=(\\Gamma_{i}\\setminus\\text{领圈})\\cap\\widehat{\\mathcal D}",
+  "note": "D264",
+  "line": 650,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D",
+  "good": "\\overline{\\mathbb D}",
+  "note": "D312",
+  "line": 43,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D",
+  "good": "\\overline{\\mathbb D}",
+  "note": "D312",
+  "line": 67,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "W^{1,p}\\hookrightarrow C^0(\\overline\\mathbb D)",
+  "good": "W^{1,p}\\hookrightarrow C^0(\\overline{\\mathbb D})",
+  "note": "D312",
+  "line": 67,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D",
+  "good": "\\overline{\\mathbb D}",
+  "note": "D312",
+  "line": 75,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D",
+  "good": "\\overline{\\mathbb D}",
+  "note": "D312",
+  "line": 75,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D",
+  "good": "\\overline{\\mathbb D}",
+  "note": "D312",
+  "line": 85,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\widehat\\mathcal O_{C,o}\\simeq Q=R[[u,v]]/(uv-\\tau^r)",
+  "good": "\\widehat{\\mathcal O}_{C,o}\\simeq Q=R[[u,v]]/(uv-\\tau^r)",
+  "note": "D333",
+  "line": 83,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbf F_p^{\\,q}",
+  "good": "\\overline{\\mathbf F}_p^{\\,q}",
+  "note": "D353",
+  "line": 45,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\operatorname{End}_{\\overline\\mathbb Q}(\\mathscr A_t)\\otimes\\mathbb Q\\simeq\\operatorname{Mat}_2(\\mathbb Q)",
+  "good": "\\operatorname{End}_{\\overline{\\mathbb Q}}(\\mathscr A_t)\\otimes\\mathbb Q\\simeq\\operatorname{Mat}_2(\\mathbb Q)",
+  "note": "D362",
+  "line": 143,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\mathcal O_t=\\operatorname{End}_{\\overline\\mathbb Q}(\\mathscr A_t)",
+  "good": "\\mathcal O_t=\\operatorname{End}_{\\overline{\\mathbb Q}}(\\mathscr A_t)",
+  "note": "D362",
+  "line": 143,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "z=(a,U)\\in\\mathbb A^N(\\overline\\mathbb Q)",
+  "good": "z=(a,U)\\in\\mathbb A^N(\\overline{\\mathbb Q})",
+  "note": "D362",
+  "line": 277,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "W\\subseteq\\mathbb A^N_{\\overline\\mathbb Q}",
+  "good": "W\\subseteq\\mathbb A^N_{\\overline{\\mathbb Q}}",
+  "note": "D362",
+  "line": 285,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\operatorname{End}_{\\overline\\mathbb Q}(A_s)\\otimes\\mathbb Q\\simeq\\operatorname{Mat}_2(\\mathbb Q)",
+  "good": "\\operatorname{End}_{\\overline{\\mathbb Q}}(A_s)\\otimes\\mathbb Q\\simeq\\operatorname{Mat}_2(\\mathbb Q)",
+  "note": "D362",
+  "line": 379,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\mathcal O_s=\\operatorname{End}_{\\overline\\mathbb Q}(A_s)",
+  "good": "\\mathcal O_s=\\operatorname{End}_{\\overline{\\mathbb Q}}(A_s)",
+  "note": "D362",
+  "line": 379,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb Q",
+  "good": "\\overline{\\mathbb Q}",
+  "note": "D362",
+  "line": 395,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb Q",
+  "good": "\\overline{\\mathbb Q}",
+  "note": "D362",
+  "line": 399,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb Q",
+  "good": "\\overline{\\mathbb Q}",
+  "note": "D362",
+  "line": 399,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb Q",
+  "good": "\\overline{\\mathbb Q}",
+  "note": "D362",
+  "line": 405,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb Q",
+  "good": "\\overline{\\mathbb Q}",
+  "note": "D362",
+  "line": 405,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\Sigma(C)=C(\\overline\\mathbb Q)\\cap\\bigcup_{\\substack{Z\\subset\\mathcal A_2\\ \\text{special}\\\\ \\dim Z\\le1}}Z(\\overline\\mathbb Q)",
+  "good": "\\Sigma(C)=C(\\overline{\\mathbb Q})\\cap\\bigcup_{\\substack{Z\\subset\\mathcal A_2\\ \\text{special}\\\\ \\dim Z\\le1}}Z(\\overline{\\mathbb Q})",
+  "note": "D362",
+  "line": 411,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb Q",
+  "good": "\\overline{\\mathbb Q}",
+  "note": "D362",
+  "line": 415,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\operatorname{End}_{\\overline\\mathbb Q}(A_s)\\otimes\\mathbb Q",
+  "good": "\\operatorname{End}_{\\overline{\\mathbb Q}}(A_s)\\otimes\\mathbb Q",
+  "note": "D362",
+  "line": 415,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\{s\\in C(\\overline\\mathbb Q):A_s\\sim E^2,\\ E\\ \\text{无 CM}\\}",
+  "good": "\\{s\\in C(\\overline{\\mathbb Q}):A_s\\sim E^2,\\ E\\ \\text{无 CM}\\}",
+  "note": "D362",
+  "line": 471,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\operatorname{End}_{\\overline\\mathbb Q}(A_s)\\otimes\\mathbb Q",
+  "good": "\\operatorname{End}_{\\overline{\\mathbb Q}}(A_s)\\otimes\\mathbb Q",
+  "note": "D362",
+  "line": 472,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\widehat\\operatorname{Var}_bX_{n_j,s}",
+  "good": "\\widehat{\\operatorname{Var}}_bX_{n_j,s}",
+  "note": "D375",
+  "line": 139,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "j(\\overline\\mathbb Q)",
+  "good": "j(\\overline{\\mathbb Q})",
+  "note": "D429",
+  "line": 17,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "j(\\overline\\mathbb Q)",
+  "good": "j(\\overline{\\mathbb Q})",
+  "note": "D429",
+  "line": 69,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\underline\\operatorname{RHom}_{R_-}(C_x,D_M)=0",
+  "good": "\\underline{\\operatorname{RHom}}_{R_-}(C_x,D_M)=0",
+  "note": "D429",
+  "line": 103,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\underline\\operatorname{RHom}_S(R_{-,B},S)\\simeq R_{-,B}\\otimes_C\\det(F)[-n]",
+  "good": "\\underline{\\operatorname{RHom}}_S(R_{-,B},S)\\simeq R_{-,B}\\otimes_C\\det(F)[-n]",
+  "note": "D429",
+  "line": 105,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\underline\\operatorname{RHom}_S(C,S)\\simeq C\\otimes\\det(F)[-n]",
+  "good": "\\underline{\\operatorname{RHom}}_S(C,S)\\simeq C\\otimes\\det(F)[-n]",
+  "note": "D429",
+  "line": 105,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\underline\\operatorname{RHom}_{R_{-,B}}(C,R_{-,B})\\simeq C",
+  "good": "\\underline{\\operatorname{RHom}}_{R_{-,B}}(C,R_{-,B})\\simeq C",
+  "note": "D429",
+  "line": 105,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\operatorname{sh}H^\\bullet(B^0_{\\mathrm{sph}})\\xrightarrow\\sim\\underline\\operatorname{End}_Y^\\bullet(L_S)=\\mathcal O(Y)",
+  "good": "\\operatorname{sh}H^\\bullet(B^0_{\\mathrm{sph}})\\xrightarrow\\sim\\underline{\\operatorname{End}}_Y^\\bullet(L_S)=\\mathcal O(Y)",
+  "note": "D429",
+  "line": 107,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\mathbb E\\Bigl(\\sum_u a_uH(u)\\Bigr)^2=\\int_{\\widehat\\mathbb T\\setminus\\{0\\}}\\Bigl|\\sum_u a_ue^{ip\\cdot u}\\Bigr|^2 C(dp),",
+  "good": "\\mathbb E\\Bigl(\\sum_u a_uH(u)\\Bigr)^2=\\int_{\\widehat{\\mathbb T}\\setminus\\{0\\}}\\Bigl|\\sum_u a_ue^{ip\\cdot u}\\Bigr|^2 C(dp),",
+  "note": "D616",
+  "line": 87,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\overline\\mathbb D",
+  "good": "\\overline{\\mathbb D}",
+  "note": "D694",
+  "line": 97,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\widehat\\operatorname{vol}_{S,\\Delta}(v)=A^n\\operatorname{vol}(v)",
+  "good": "\\widehat{\\operatorname{vol}}_{S,\\Delta}(v)=A^n\\operatorname{vol}(v)",
+  "note": "D706",
+  "line": 400,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\widehat\\mathbb P_{N,t}(d\\omega,d\\sigma,A)\\propto\\mathbb P_{\\rm b}(d\\omega)\\nu_b(A)\\chi_{D_0\\cup A}(\\omega,\\sigma)",
+  "good": "\\widehat{\\mathbb P}_{N,t}(d\\omega,d\\sigma,A)\\propto\\mathbb P_{\\rm b}(d\\omega)\\nu_b(A)\\chi_{D_0\\cup A}(\\omega,\\sigma)",
+  "note": "D750",
+  "line": 453,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\widehat\\mathbb P_{N,t}(j\\in A)\\le b_\\beta(t)",
+  "good": "\\widehat{\\mathbb P}_{N,t}(j\\in A)\\le b_\\beta(t)",
+  "note": "D750",
+  "line": 489,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\widehat\\mathbb P_{N,t}(\\mathcal A_x^c)\\le C_{S,\\beta}b_\\beta(t)",
+  "good": "\\widehat{\\mathbb P}_{N,t}(\\mathcal A_x^c)\\le C_{S,\\beta}b_\\beta(t)",
+  "note": "D750",
+  "line": 489,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\widehat\\mathbb P_{N,t}(j\\in A)\\le b_\\beta(t)",
+  "good": "\\widehat{\\mathbb P}_{N,t}(j\\in A)\\le b_\\beta(t)",
+  "note": "D750",
+  "line": 635,
+  "flag": "",
+  "declared_count": 77
+ },
+ {
+  "family": "DELIM-GROUP",
+  "kind": "span",
+  "bad": "\\frac1{V_N}\\sum_j\\widehat\\mathbb E_{N,t}d_{D_0\\cup A}(j)",
+  "good": "\\frac1{V_N}\\sum_j\\widehat{\\mathbb E}_{N,t}d_{D_0\\cup A}(j)",
+  "note": "D750",
+  "line": 636,
+  "flag": "",
+  "declared_count": 77
+ }
+]

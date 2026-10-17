@@ -1,0 +1,65 @@
+D106 \mathtt total = 6 ; \mathtt{root} = 4
+  L2879 | ...$e=\sqrt2f_1,c=2^{3/2}f_3,a=2^{5/2}f_5$、$u=h=(\mathtt{root}\ h)^2/2$ 手算复核，...
+  L2887 | ...$\delta=\inf_{(0,T]}p''$ 类下界，Lean 用一个具体的 $(\mathtt{root}\ T)^{-3}$ 形式），...
+  L2910 | ...（$d_0=2f_2\to 2*a\,2$，$2b_0u\to 4a\,4(\mathtt{root}\ h)^2$，...
+  L2911 | ...$e/(2\sqrt u)\to a\,1/\mathtt{root}\ h$ 等）。...
+
+D77 \mathtt                0
+D77 \text{                 1
+D77 \mathrm{               39
+D77 \operatorname{         57
+D77 \mathbb                50
+D77 binary-free-Lie phrase 2
+D77 ^{...}                 230
+
+-- D77 all superscript-brace forms (unique) --
+   ^{n-1}               32
+   ^{-1}                23
+   ^{*}                 11
+   ^{15}                10
+   ^{2k}                8
+   ^{r+1}               8
+   ^{r+s}               7
+   ^{j-1}               6
+   ^{k}                 6
+   ^{k_1}               5
+   ^{a_d}               5
+   ^{\eta-1}            5
+   ^{2i}                4
+   ^{j-2}               4
+   ^{i_0}               4
+   ^{i_r}               4
+   ^{k_i}               4
+   ^{n+1}               4
+   ^{3N}                4
+   ^{j-3}               3
+   ^{i_1}               3
+   ^{M-2K}              3
+   ^{p+q}               3
+   ^{M-K}               3
+   ^{n/d}               3
+   ^{11}                3
+   ^{\two}              3
+   ^{M+N}               3
+   ^{j+1}               2
+   ^{j}                 2
+
+-- D77 lines with 二元自由 Lie --
+   L496 | ...), 权 $n$ 上求和吃 $\sum_r$ 有限性 (由 $3r\le n$ 卡住)。我第一版没意识到 $d_n$ 与二元自由 Lie $\dim_{\mathbb Q}L_n^{\two}=\frac1n\sum_{d\mid n}\mu(d)2^{n/d}$ 之间的关系, 把后者当"上界"去比, 于是 $d_3=1$ 对 $2$、$d_5=1$ 对 $6$、$d_7=1$ 对 $18$、...
+   L552 | ...athbb Q W_1=\dim_\mathbb Q W_2=0$ (lem:low-weights, 02:13), 二元自由 Lie 侧 $\dim_\mathbb Q L_1^{\two}=2$ (即 $x,y$) 与 $\dim_\mathbb Q L_2^{\two}=1$ (即 $[x,y]$, 系数 $3$ 由三元式对 $[x,y]$ 给, 02:20-21), $\mathfr...
+
+-- D238 verbatim math spans containing the defect --
+   L298 | ...$\lvert\mathcal Z_{\math P}((g_v))\rvert\le\prod_v Z_{\mathcal P}(g_v)^{1/d}$。证明的第一层：乘积律 $\mu_{\mathcal P}$ 在...
+   L744 | ...$\mathcal Z_{\math P}$，应为 $\mathcal Z_{\mathcal P}$；其二，§7 末段...
+
+-- whole-file occurrence counts of candidate OLD strings --
+   D238 L298 OLD      hits=1  bytes=39  | \lvert\mathcal Z_{\math P}((g_v))\rvert
+   D238 L744 OLD      hits=1  bytes=31  | $\mathcal Z_{\math P}$，应为
+   D106 L1750 OLD     hits=1  bytes=16  | (\root h)^3$ 与
+   D106 L1873 OLD     hits=1  bytes=23  | 分母 $\root h$ 的幂
+   D106 L1913 OLD     hits=1  bytes=21  | (-a_1)/(\root T)^3\le
+   D106 L1914 OLD     hits=1  bytes=22  | $(-a_1)/(\root T)^3>0$
+   D77 L496 OLD       hits=1  bytes=10  | L_n^{\two}
+   D77 L552 OLD-a     hits=1  bytes=12  | L_1^{\two}=2
+   D77 L552 OLD-b     hits=1  bytes=12  | L_2^{\two}=1
+   D30 L827 OLD       hits=1  bytes=34  | $E:\math\lean\OAI\Geometry\Kahler$

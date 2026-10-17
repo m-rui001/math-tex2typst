@@ -1,0 +1,30 @@
+{
+  "paper": "An-Endpoint-Gradient-Bound-for-the-Centered-Disk-Maximal-Operator-September-26-2026",
+  "ok": true,
+  "typ_lines": 1277,
+  "included_pdf_pages": 0,
+  "formulas": 1127,
+  "math_failed": 0,
+  "labels": 188,
+  "equations": 7,
+  "theorems": 4,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "1127",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\An-Endpoint-Gradient-Bound-for-the-Centered-Disk-Maximal-Operator-September-26-2026.tex"
+}

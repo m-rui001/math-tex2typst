@@ -1,0 +1,2 @@
+notes=46 real_total=777 masked_total=3661 by_location={"body": 734, "head": 18, "table": 25} masks={"fence": 2338, "quoterange": 314, "blockquote": 860, "englishline": 75, "indent": 62, "display": 12}
+notes=46 real_total=777 masked_total=3661 by_location={"body": 734, "head": 18, "table": 25} masks={"fence": 2338, "quoterange": 314, "blockquote": 860, "englishline": 75, "indent": 62, "display": 12}

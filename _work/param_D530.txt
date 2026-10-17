@@ -1,0 +1,26 @@
+note=E:/math/研究笔记\D530-定量近Kerr演化与一般C2未来不可延伸.md
+bytes=115749 lines=519 CR=0
+dir=Quantitative-Near-Kerr-Evolution-and-Generic-C2-Future-Inextendibility-September-23-2026
+heads=35 first=(3, '## §0 派单登记与工作约定') last=(514, '## §34 本批事实性勘误一条')
+last6=["## §29 加深：远端锚定域的半径一致点与比较节的回归能量估计", "## §30 加深：约束附录的 Newton 右逆、四点矩条件与环带原函数", "## §31 加深：三角比较引理的显式形态与幂级数主控", "## §32 台账续（只追加数据行）", "## §33 本批加深自检与申报", "## §34 本批事实性勘误一条"]
+table_headers=[(240, '符号'), (474, '记号')] separators=[241, 475]
+cite_form full=0 base=308
+inventory:
+  sections/04-stationary.tex                       80042B  1630L refs=22
+  sections/05-compact.tex                          74881B  1367L refs=29
+  sections/09-packet.tex                           70024B  1507L refs=68
+  sections/07-interior.tex                         60809B  1331L refs=32
+  appendices/far-energy.tex                        55560B   719L refs=13
+  appendices/far-sources.tex                       51753B   701L refs=18
+  sections/08-comparison.tex                       46400B   960L refs=18
+  sections/06-far.tex                              35148B   702L refs=13
+  sections/03-geometry.tex                         34334B   800L refs=13
+  appendices/constraints.tex                       24106B   580L refs=11
+  sections/01-introduction.tex                     15384B   277L refs=42
+  sections/02-category.tex                         11266B   235L refs=26
+  sections/history-fragment.tex                     6772B   113L refs=0
+  main.tex                                          2804B    80L refs=0
+  glyph-mappings.tex                                1746B    45L refs=0
+  appendices/triangular.tex                         1557B    36L refs=5
+  macros.tex                                         797B    24L refs=0
+  TOTAL 573383B files=17

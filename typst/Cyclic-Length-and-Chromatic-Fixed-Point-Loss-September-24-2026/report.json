@@ -1,0 +1,35 @@
+{
+  "paper": "Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026",
+  "ok": true,
+  "typ_lines": 934,
+  "included_pdf_pages": 0,
+  "formulas": 811,
+  "math_failed": 1,
+  "labels": 101,
+  "equations": 5,
+  "theorems": 5,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "811",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\let\\manuscriptoriginalhookrightarrow",
+    "\\defdef",
+    "\\let\\manuscriptoriginallongmapsto",
+    "\\defdef"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026.tex"
+}

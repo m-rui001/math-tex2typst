@@ -1,0 +1,7 @@
+bodies carrying bounds/bounds        : 1102
+bodies carrying cap-height/baseline  : 582
+bodies carrying some other edge pair : 0
+STALE (text edges over a body with a '$'): 0 over 0 papers
+
+papers: 
+run132 regen list: 259 papers; stale papers NOT on it: 0

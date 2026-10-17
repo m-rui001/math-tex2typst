@@ -1,0 +1,33 @@
+{
+  "paper": "The-Euclidean-Steinitz-Bergstrom-theorem-September-24-2026",
+  "ok": true,
+  "typ_lines": 802,
+  "included_pdf_pages": 0,
+  "formulas": 726,
+  "math_failed": 0,
+  "labels": 106,
+  "equations": 50,
+  "theorems": 2,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "726",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl",
+    "bookmark"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-Euclidean-Steinitz-Bergstrom-theorem-September-24-2026.tex"
+}

@@ -1,0 +1,30 @@
+{
+  "paper": "Semialgebraic-universal-covers-of-normal-projective-varieties-September-24-2026",
+  "ok": true,
+  "typ_lines": 1299,
+  "included_pdf_pages": 0,
+  "formulas": 1166,
+  "math_failed": 0,
+  "labels": 143,
+  "equations": 30,
+  "theorems": 2,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "1166",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\Semialgebraic-universal-covers-of-normal-projective-varieties-September-24-2026\\main.typ:1261:138\n     │\n1261 │   Put $Gamma = pi_1 \\( X' \\)$ for the finite cover $X' arrow.r X$ used in Section 7. Lemmas 51 and 52, with $m = a$ as above, give $K' lt.tri Gamma$ with $K' tilde.eq bb(Z)^(2 m)$. If $m > 0$, this is an infinite normal amenable subgroup, so the Cheeger–Gromov theorem #cite(label(\"CheegerGromov1986\")) Theorem 0.3(3) and the proof of Corollary 0.6 makes every group $L^2$-Betti number of $Gamma$ vanish. Asphericity identifies these with $b_j^(\\( 2 \\)) \\( X' \\)$, and finite-cover proportionality gives $b_j^(\\( 2 \\)) \\( X' \\) = \\[ pi_1 \\( X \\) : Gamma \\] b_j^(\\( 2 \\)) \\( X \\)$, proving the claim.\n     │                                                                                                                                           ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 1,
+  "source": "E:\\math\\_work\\flat\\Semialgebraic-universal-covers-of-normal-projective-varieties-September-24-2026.tex"
+}

@@ -1,0 +1,59 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{patterns}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\E}{\mathbb E}
+\renewcommand{\P}{\mathbb P}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\en}{\mathsf e}
+\newcommand{\enstar}{\mathsf e^{*}}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cQ}{\mathcal Q}
+\DeclareMathOperator{\EL}{EL}
+\DeclareMathOperator{\Cap}{Cap}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\osc}{osc}
+\DeclareMathOperator{\Law}{Law}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Area}{Area}
+\newcommand{\articleid}[1]{\begingroup\Urlmuskip=0mu plus 2mu\relax\nolinkurl{#1}\endgroup}
+\begin{document}
+\begin{tikzpicture}[x=0.85cm,y=0.9cm,>=Stealth,
+                    every node/.style={font=\small}]
+ \fill[blue!7] (-0.15,2.1) rectangle (6.15,2.55);
+ \fill[blue!7] (-0.15,0.4) rectangle (6.15,0.85);
+ \draw[->,gray] (-1.7,0) -- (-1.7,3.1) node[above] {height};
+ \draw[thick] (0,0.15) -- (0,2.95) node[above] {$b$};
+ \draw[thick] (3,1.5) -- (3,2.95) node[above] {$w$};
+ \draw[thick] (6,0.15) -- (6,2.95) node[above] {$d$};
+ \draw[->,blue!65!black,thick] (0.08,2.3) -- (2.92,2.3);
+ \draw[->,blue!65!black,thick] (3.08,2.3) -- (5.92,2.3);
+ \draw[->,blue!65!black,thick] (0.08,0.62) -- (5.92,0.62);
+ \node[above] at (1.5,2.3) {$b\to w$};
+ \node[above] at (4.5,2.3) {$w\to d$};
+ \node[below] at (3,0.62) {$b\to d$};
+ \draw[densely dashed] (-1.9,1.5) -- (6.4,1.5);
+ \node[left] at (-1.9,1.5) {$H$};
+ \fill (3,1.5) circle (2pt);
+ \node[anchor=west,fill=white,inner sep=2pt] at (3.25,1.73)
+            {$s_w^a+m_w^a$};
+ \draw[red!65!black,very thick] (-0.65,0.45) -- (-0.65,2.5);
+ \draw[red!65!black] (-0.85,0.45) -- (-0.45,0.45);
+ \draw[red!65!black] (-0.85,2.5) -- (-0.45,2.5);
+ \node[anchor=east,rotate=90,red!65!black] at (-0.93,2.45)
+            {uncapped band};
+\end{tikzpicture}
+\end{document}

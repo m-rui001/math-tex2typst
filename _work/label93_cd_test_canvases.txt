@@ -1,0 +1,77 @@
+=== stacked ===
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0.293), [$upright("first line")$])
+  content((0, -0.293), [$upright("second line")$])
+  content((0, -1.878), [$upright("below")$])
+  line((0, -0.5655), (0, -1.606), mark: (end: ">"))
+})
+=== wide-label ===
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((0, -1.239), [$B$])
+  line((0, -0.2725), (0, -0.9661), mark: (end: ">"))
+  content((1.479, -0.6193), [#text(size: 0.73em)[$g r o u p a n d r e s i d u e d u a l i t y$]])
+})
+=== short-label ===
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((1.596, 0), [$B$])
+  line((0.336, 0), (1.26, 0), mark: (end: ">"))
+  content((0.7978, 0.2266), [#text(size: 0.73em)[$f$]])
+})
+=== swap-label ===
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((1.596, 0), [$B$])
+  line((0.336, 0), (1.26, 0), mark: (end: ">"))
+  content((0.7978, -0.2266), [#text(size: 0.73em)[$f$]])
+})
+=== bend22 ===
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((3.059, 0), [$B$])
+  bezier((0.336, 0), (2.723, 0), (1.199, 0.3488), (1.86, 0.3488), mark: (end: ">"))
+  content((1.53, 0.4882), [#text(size: 0.73em)[$f$]])
+})
+=== bendright22 ===
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((3.059, 0), [$B$])
+  bezier((0.336, 0), (2.723, 0), (1.199, -0.3488), (1.86, -0.3488), mark: (end: ">"))
+  content((1.53, -0.4882), [#text(size: 0.73em)[$f$]])
+})
+=== bendbare ===
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((3.059, 0), [$B$])
+  bezier((0.336, 0), (2.723, 0), (1.142, 0.4655), (1.917, 0.4655), mark: (end: ">"))
+  content((1.53, 0.5758), [#text(size: 0.73em)[$f$]])
+})
+=== hook ===
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((1.596, 0), [$B$])
+  line((0.336, 0), (1.26, 0), mark: (end: ">"))
+  line((0.336, 0), (0.336, 0.3))
+})
+=== cd-xy ===
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$A$])
+  content((1.797, 0), [$B$])
+  line((0.336, 0), (1.461, 0), mark: (end: ">"))
+})
+--- the tikzcd the CD translation writes ---
+\begin{tikzcd}[column sep=1.125cm,row sep=0.199cm] A \arrow[r] & B \end{tikzcd}
+
+cell boxes: one letter 0.672 cm wide, 0.545 cm tall; empty 0.540
+separations: column normal 0.924, column large 1.385, row normal 0.694, row large 1.040
+8em -> 3.093 cm, 3.2cm -> 3.200 cm, huge -> 1.847 cm

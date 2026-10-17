@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/TKpaHpqAIjQ9kUUxj5U3lqlPN3A</id>
+  <title>arXiv Query: search_query=&amp;id_list=math/0503651,math/0504020,math/0511225,math/0511254,math/0610203,math/9804058&amp;start=0&amp;max_results=6</title>
+  <updated>2026-10-15T09:59:22Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=6&amp;id_list=math/0503651,math/0504020,math/0511225,math/0511254,math/0610203,math/9804058" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>6</opensearch:itemsPerPage>
+  <opensearch:totalResults>6</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/math/0503651v1</id>
+    <title>Moment inequalities for functions of independent random variables</title>
+    <updated>2005-03-29T07:02:00Z</updated>
+    <link href="https://arxiv.org/abs/math/0503651v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0503651v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  A general method for obtaining moment inequalities for functions of independent random variables is presented. It is a generalization of the entropy method which has been used to derive concentration inequalities for such functions [Boucheron, Lugosi and Massart Ann. Probab. 31 (2003) 1583-1614], and is based on a generalized tensorization inequality due to Latala and Oleszkiewicz [Lecture Notes in Math. 1745 (2000) 147-168]. The new inequalities prove to be a versatile tool in a wide range of applications. We illustrate the power of the method by showing how it can be used to effortlessly re-derive classical inequalities including Rosenthal and Kahane-Khinchine-type inequalities for sums of independent random variables, moment inequalities for suprema of empirical processes and moment inequalities for Rademacher chaos and U-statistics. Some of these corollaries are apparently new. In particular, we generalize Talagrand's exponential inequality for Rademacher chaos of order 2 to any order. We also discuss applications for other complex functions of independent random variables, such as suprema of Boolean polynomials which include, as special cases, subgraph counting problems in random graphs.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-03-29T07:02:00Z</published>
+    <arxiv:comment>Published at http://dx.doi.org/10.1214/009117904000000856 in the Annals of Probability (http://www.imstat.org/aop/) by the Institute of Mathematical Statistics (http://www.imstat.org)</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Annals of Probability 2005, Vol. 33, No. 2, 514-560</arxiv:journal_ref>
+    <author>
+      <name>Stephane Boucheron</name>
+    </author>
+    <author>
+      <name>Olivier Bousquet</name>
+    </author>
+    <author>
+      <name>Gabor Lugosi</name>
+    </author>
+    <author>
+      <name>Pascal Massart</name>
+    </author>
+    <arxiv:doi>10.1214/009117904000000856</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1214/009117904000000856" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0511254v2</id>
+    <title>Inversion of adjunction on log canonicity</title>
+    <updated>2005-11-15T08:51:08Z</updated>
+    <link href="https://arxiv.org/abs/math/0511254v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0511254v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We prove inversion of adjunction on log canonicity.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-11-10T14:16:03Z</published>
+    <arxiv:comment>4 pages; minor typos in the proof of Lemma 3 corrected</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Masayuki Kawakita</name>
+    </author>
+    <arxiv:doi>10.1007/s00222-006-0008-z</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00222-006-0008-z" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0610203v2</id>
+    <title>Existence of minimal models for varieties of log general type</title>
+    <updated>2008-08-14T01:48:07Z</updated>
+    <link href="https://arxiv.org/abs/math/0610203v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0610203v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We prove that the canonical ring of a smooth projective variety is finitely generated.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-10-05T21:19:20Z</published>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Caucher Birkar</name>
+    </author>
+    <author>
+      <name>Paolo Cascini</name>
+    </author>
+    <author>
+      <name>Christopher D. Hacon</name>
+    </author>
+    <author>
+      <name>James McKernan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0504020v1</id>
+    <title>The Picard scheme</title>
+    <updated>2005-04-01T14:37:52Z</updated>
+    <link href="https://arxiv.org/abs/math/0504020v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0504020v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We develop in detail most of the theory of the Picard scheme that Grothendieck sketched in two Bourbaki talks and in commentaries on them. Also, we review in brief much of the rest of the theory developed by Grothendieck and by others. But we begin with a twelve-page historical introduction, which traces the development of the ideas from Bernoulli to Grothendieck, and which may appeal to a wider audience.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-04-01T14:37:52Z</published>
+    <arxiv:comment>83 pages, expanded notes on the author's lectures at the ICTP Advanced School in Basic Algebraic Geometry, 7-18 July 2003</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Steven L. Kleiman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/9804058v1</id>
+    <title>Extending Triangulations and Semistable Reduction</title>
+    <updated>1998-04-09T17:58:07Z</updated>
+    <link href="https://arxiv.org/abs/math/9804058v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/9804058v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We show that a projective triangulation of a subcomplex of a polyhedral complex can be extended to the whole complex. As a result, we show that the weak semistable reduction result of Abramovich - Karu alg-geom/9707012 can be refined, so that the resulting morphism is semistable in codimension 1.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1998-04-09T17:58:07Z</published>
+    <arxiv:comment>8 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>D. Abramovich</name>
+    </author>
+    <author>
+      <name>J. M. Rojas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0511225v2</id>
+    <title>Curvature of vector bundles associated to holomorphic fibrations</title>
+    <updated>2007-08-20T09:18:37Z</updated>
+    <link href="https://arxiv.org/abs/math/0511225v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0511225v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Let $L$ be a (semi)-positive line bundle over a Kahler manifold, $X$, fibered over a complex manifold $Y$. Assuming the fibers are compact and non-singular we prove that the hermitian vector bundle $E$ over $Y$ whose fibers over points $y$ are the spaces of global sections over $X_y$ to $L\gr K_{X/Y}$ endowed with the $L^2$-metric is (semi)-positive in the sense of Nakano. We also discuss various applications, among them a partial result on a conjecture of Griffiths on the positivity of ample bundles. This is a revised and much expanded version of a previous preprint with the title `` Bergman kernels and the curvature of vector bundles''.</summary>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-11-09T12:00:30Z</published>
+    <arxiv:comment>This revision simplifies some proofs. An incorrect proof from the appendix has also been withdrawn (it was not used in the rest of the paper)</arxiv:comment>
+    <arxiv:primary_category term="math.CV"/>
+    <arxiv:journal_ref>Ann of Math (2) 169 (2009), no 2, pp 531-560</arxiv:journal_ref>
+    <author>
+      <name>Bo Berndtsson</name>
+    </author>
+  </entry>
+</feed>

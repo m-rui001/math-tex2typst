@@ -1,0 +1,49 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\newcommand{\Fp}{\mathbb F_p}
+\newcommand{\Zp}{\mathbb Z_p}
+\newcommand{\Qp}{\mathbb Q_p}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\F}{\mathbb F}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cM}{\mathcal M}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Spf}{Spf}
+\DeclareMathOperator{\Spa}{Spa}
+\DeclareMathOperator{\Spd}{Spd}
+\DeclareMathOperator*{\colim}{colim}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\cofib}{cofib}
+\DeclareMathOperator{\fib}{fib}
+\DeclareMathOperator{\RHom}{RHom}
+\newcommand{\RGamma}{R\Gamma}
+\newcommand{\LK}[1]{L_{K(#1)}}
+\newcommand{\LN}[1]{L_{#1}}
+\begin{document}
+\begin{tikzcd}[row sep=large]
+ \left(\colim_{S^\vee}\RGamma(P_n,P)^\vee\right)\otimes_kR
+   \arrow[d,"\text{group and residue duality}","\simeq"']\\
+ \RGamma\!\left(P_n,
+     (\colim_F H^m_{\mathfrak m}(M))\otimes_kR\right)[n^2]
+   \arrow[d,"\text{principal parts and positive extension}","\simeq"']\\
+ \RGamma\!\left(P_n,\RGamma_c(\mathcal X/U,\mathscr A)
+                    \otimes\langle\eta\rangle\right)[m+n^2]
+   \arrow[d,"\text{the common torsor nerve}","\simeq"']\\
+ \RGamma\!\left(U,\RGamma_c(Z,\mathscr A)
+                    \otimes\langle\eta\rangle\right)[m+n^2].
+\end{tikzcd}
+\end{document}

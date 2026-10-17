@@ -1,0 +1,33 @@
+content(...) with an anchor and no padding: 5055 sites
+canvases: 782   papers: 451
+by text-size tier: [('9pt', 3532), ('body', 956), ('7pt', 289), ('8pt', 259), ('9.5pt', 15), ('10pt', 4)]
+
+side anchors used: ['center', 'east', 'north', 'south', 'west']
+centre-only anchors (a symmetric pad moves nothing): []
+
+first 25:
+  A-C1-Counterexample-to-the-Entropy-Conjecture-September-25 north   9pt      ((6.864, -1.075), [#text(size: 9pt)[$a(t)=L$ throughout prep
+  A-CH-Obstruction-to-a-Prescribed-Categoricity-Threshold-Se west    9pt      ((3.952, 0.468), [#text(size: 9pt)[column $k$]], anchor: "we
+  A-CH-Obstruction-to-a-Prescribed-Categoricity-Threshold-Se north   9pt      ((-0.52, -3.952), [#text(size: 9pt)[row $n$]], anchor: "nort
+  A-CH-Obstruction-to-a-Prescribed-Categoricity-Threshold-Se west    9pt      ((4.16, -0.624), [#text(size: 9pt)[$k lt.eq n$: adjust in ro
+  A-CH-Obstruction-to-a-Prescribed-Categoricity-Threshold-Se west    9pt      ((4.16, -1.664), [#text(size: 9pt)[$n<k$: adjust in column $
+  A-CH-Obstruction-to-a-Prescribed-Categoricity-Threshold-Se west    9pt      ((4.16, -2.964), [#text(size: 9pt)[Highlighted examples:#lin
+  A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in west    9pt      ((0, 4.78), [#text(size: 9pt)[Both scalar solves take place 
+  A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in west    9pt      ((15.5, 3.88), [#text(size: 9pt)[$|h|$]], anchor: "west")
+  A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in south   9pt      ((5, 4.02), [#text(size: 9pt)[$0$]], anchor: "south")
+  A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in south   9pt      ((7.25, 4.02), [#text(size: 9pt)[$b_3"/"4$]], anchor: "south
+  A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in south   9pt      ((9.5, 4.02), [#text(size: 9pt)[$b_3"/"2$]], anchor: "south"
+  A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in south   9pt      ((11.4, 4.02), [#text(size: 9pt)[$c_h$]], anchor: "south")
+  A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in south   9pt      ((14, 4.02), [#text(size: 9pt)[$b_3$]], anchor: "south")
+  A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in west    9pt      ((0, 3.25), [#text(size: 9pt)[Charged estimate on $cal(U)_N$
+  A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in west    9pt      ((0, 2.45), [#text(size: 9pt)[Additional positive margin]], 
+  A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in west    9pt      ((0, 1.65), [#text(size: 9pt)[Trace profile $cal(H) (|h|)$]]
+  A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in west    9pt      ((0, 0.85), [#text(size: 9pt)[Heights in the retained $cal(D
+  A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in south   9pt      ((7.9, 8), [#text(size: 9pt)[On $Omega^ compose$: $W=u^2-|X|
+  A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in south   9pt      ((3.65, 7.53), [#text(size: 9pt)[$u|_S>0$]], anchor: "south"
+  A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in south   9pt      ((12.15, 7.53), [#text(size: 9pt)[$u|_S=0$]], anchor: "south
+  A-Coulomb-Ground-State-Density-without-Kohn-Sham-Ensemble- south   9pt      ((0, 2.1), [#text(size: 9pt)[$z$]], anchor: "south")
+  A-Coulomb-Ground-State-Density-without-Kohn-Sham-Ensemble- east    9pt      ((-0.2469, 1.25), [#text(size: 9pt)[$+"De"_z$]], anchor: "ea
+  A-Coulomb-Ground-State-Density-without-Kohn-Sham-Ensemble- east    9pt      ((-0.2469, -1.25), [#text(size: 9pt)[$-"De"_z$]], anchor: "e
+  A-Coulomb-Ground-State-Density-without-Kohn-Sham-Ensemble- north   9pt      ((3.3, -0.12), [#text(size: 9pt)[median plane]], anchor: "no
+  A-Coulomb-Ground-State-Density-without-Kohn-Sham-Ensemble- south   9pt      ((3.15, 0.5), [#text(size: 9pt)[$p arrow.r.long infinity$]],

@@ -1,0 +1,20 @@
+mask=corrected digit=plain files=734 spans=864965 katex_refused=186 files_hit=114 unclosed_spans=0
+dollar_family=49 distinct_files=35 inline=49 display=0
+--- other error classes=31
+     45  KaTeX parse error: Can't use function '$' in math mode 
+     12  KaTeX parse error: No such environment: psmallmatrix 
+      8  KaTeX parse error: Expected '}', got 'EOF' at end of input
+      7  KaTeX parse error: Expected group after '_' 
+      7  KaTeX parse error: Double subscript 
+      6  KaTeX parse error: Can't use function '\(' in math mode 
+      6  KaTeX parse error: Double superscript 
+      5  KaTeX parse error: Expected 'EOF', got '\right' 
+      5  KaTeX parse error: Expected group after '^' 
+      2  KaTeX parse error: Can't use function '$' in math mode 
+
+(
+      2  KaTeX parse error: Can't use function '\mathbf' in text mo
+      2  KaTeX parse error: Expected & or \\ or \cr or \end at end 
+      1  KaTeX parse error: Expected 'EOF', got '\end' 
+    \̲e̲n̲d
+      1  KaTeX parse error: Expected 'EOF', got '_' 

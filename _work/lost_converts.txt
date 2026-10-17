@@ -1,0 +1,60 @@
+{'gate: before label work': 789, 'gate: now': 778, 'flipped to refusal': 13}
+  A-boundary-only-obstruction-to-four-dimensional-disk-embeddi
+      was B_r=R_r                          now partial B_r=R_r
+      was alpha_r                          now "alpha _r"
+      was beta_r                           now "beta _r"
+      canvas tail: ebreak()Opposite signs have equal Wall labels.])   content((7, -0.65), [The unused $y_r$ cap remains in $M$#linebreak()and kills the label-comparison 
+  A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in-S
+      was                                  now alpha
+      was                                  now alpha
+      was "h0"                             now "harrow".r.long 0
+      canvas tail: {{"component" "of" }\{|h|<c_h\} { "containing" "the" "far" "end"}}, b_3/2<c_h<b_3.$#linebreak() $"(K_{{new}}|_{ D_N}) {x D_N:b_3/4lt.eq |h(x)|lt.eq c_
+  A-Coulomb-Ground-State-Density-without-Kohn-Sham-Ensemble-Re
+      was p                                now "parrow".r.long infinity
+      was {n(p,0)} A(p)p^{-4}              now {n(p,0)} lambda A(p)p^{-4}
+      canvas tail: 7.1, 0.9), [$z$])   line((7.1, 0), (7.1, 0.9), mark: (end: ">"))   content((7.8, 1.43), [translated window])   content((7.8, -1.45), [${n(p,0)} A(p)p^
+  A-PD4-group-without-an-aspherical-manifold-model-September-2
+      was D P "BH"                         now "Darrow".r.long P "BH"
+      was N Q "BG"                         now "Narrow".r.long Q "BG"
+      canvas tail: )   line((1, -1), (0, -1), mark: (end: ">"))   content((0, -1), [direction control#linebreak()and sphere surgery])   line((0, -1), (0, -2), mark: (end
+  A-projective-fourfold-with-large-fundamental-group-and-non-S
+      was |lambda_i|<0.01                  now "|lambda _i|<0.01"
+      was |lambda_i|>4                     now "|lambda _i|>4"
+      was C P^1_{lambda}                   now "Carrow".r.long  P^1_{lambda }
+      canvas tail: ))   content((10.01, 3.89), [blue], fill: rgb("#ffffff"))   content((10.07, 2.82), [red], fill: rgb("#ffffff"))   content((9.15, -0.3), [$z_2=lambda_i
+  Almost-everywhere-Fourier-convergence-in-L-log-L-September-2
+      was dots.h  B_N                      now dots.h   B_N
+      was C_1:  j                          now C_1:  "jarrow".r.long
+      was C_2:  j                          now C_2:  "jarrow".r.long
+      canvas tail: pleted targets])   content((0.15, -6.91), [$j_1>j_2>dots.h, a_{j_{k+1}}({"entry"})lt.eq a_{j_k}({"exit"})$])   content((9.3, -6.91), [$\ {"drops"}lt."
+  Critical-Center-Magnetization-in-the-Planar-XY-Model-October
+      was v=L^h,  D=M/v                    now v=L^h,  D=M/"varrow".r.long infinity
+      canvas tail:   content((2.88, -3.2), [$"LM"$], fill: rgb("#ffffff"))   line((-2.88, -3.2), (2.88, -3.2), mark: (start: "<", end: ">"))   content((0, 3), [$v=L^h, D
+  Directional-transience-implies-ballisticity-September-23-202
+      was g(D_*,Omega)                     now g(D_*,Omega )
+      was x_-                              now "x alpha _-"
+      was y_+                              now "y alpha _+"
+      canvas tail: 65, 2.6), stroke: (paint: rgb("#737373")), mark: (start: "<", end: ">"))   content((0, 2.7), [$Z_{ "loc"}(x,y;Omega)$ uses only the two outer neighbor
+  Fiber-functors-for-finite-symmetric-tensor-categories-in-pos
+      was S S'                             now "Sarrow".r.long S'
+      was A,B,C C_{{"ex"}}                 now A,B,"Cin"  C_{ {"ex"}}
+      canvas tail: nt((-2.8, -0.95), [$S S'$ implies $d(S')lt.eq d(S)$])   content((1.83, -2.1), [$A,B,C C_{{"ex"}}$#linebreak() unique outgoing neighbor at each cycle v
+  Nonuniqueness-with-local-conservation-for-the-hard-sphere-Bo
+      was U_N U<infinity
+         r_N/T_N  now U_"Narrow".r.long U<infinity   arrow.r.double.long
+      canvas tail: #ffffff"))   content((7.25, 2.24), [$t/T_N=(t/r_N)/U_N, x/T_N=(x/r_N)/U_N$], fill: rgb("#ffffff"))   content((7.05, -0.12), [$U_N U<infinity r_N/T_N 1
+  Projective-Space-Bases-of-Lagrangian-Fibrations-September-23
+      was T_0(e_0)                         now T_0 iota (e_0)
+      was "R''_0"                          now "R'' alpha _0"
+      was R'times_{t,A,s}Z                 now "R'times _{t,A,s}Z"
+      canvas tail: t((3.5, -4.15), [$y-x$])   line((0, -4.15), (3.5, -4.15), mark: (end: ">"))   content((0, -5.02), [$(rho,) T_0: mu(rho,):z y,$#linebreak()$y-z=(x-z)+(
+  Removable-Boundaries-and-Rigidity-of-Circle-Domains-Septembe
+      was 10                               now 1"arrow".r.long 0
+      was "_{{slice}}| V|^2  s
+       gt.e now "_{ {slice}}| V|^2  s
+       gt.eq  {1}{2L}"
+      canvas tail: , 0), mark: (end: ">"))   content((1.712, 0.0945), [$10$])   content((2.604, -0.063), [$V=0$])   content((0, -3.077), [$"_{{slice}}| V|^2 s gt.eq {1}{
+  Self-dual-random-cluster-interfaces-below-one-September-23-2
+      was "Kn" n                           now "Knlog" n
+      was R_{ "arm"}:  s c_0r {"and"}  C_0 now R_{ "arm"}:  "sarrow".r.long c_0r   {"and"}  C_0"r
+      canvas tail: : 0deg, radius: 0.2375, stroke: (paint: rgb("#808080")))   content((12.21, 0.19), [$t$])   content((8.883, -0.665), [$R_{ "arm"}: s c_0r {"and"} C_0r 

@@ -1,0 +1,27 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator*{\colim}{colim}
+\DeclareMathOperator*{\hocolim}{hocolim}
+\begin{document}
+\begin{tikzcd}[column sep=8em,row sep=4em]
+ \mathsf B_2(M)
+   \arrow[r,"\text{integrated $N$ case of \eqref{eq:T16}}","\sim"']
+   \arrow[d,"\text{insertion comparison}"']
+ &\mathsf P_N(M)
+   \arrow[d,"\text{period of \eqref{eq:T21}}"]\\
+ \mathsf B_1(M)
+   \arrow[r,"\text{$G$ case of \eqref{eq:T16}}"']
+ &\mathsf P_G(M).
+\end{tikzcd}
+\end{document}

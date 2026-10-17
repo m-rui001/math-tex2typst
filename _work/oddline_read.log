@@ -1,0 +1,52 @@
+   D113:30  $=0  ```
+>> D113:31  $=1  There exist real scalar functions $\gamma_0,\gamma_1\in
+   D113:32  $=3  L^\infty(B(0,3);\R)$ and constants $0<c<C<\infty$ such that
+   ----------------------------------------
+   D113:31  $=1  There exist real scalar functions $\gamma_0,\gamma_1\in
+>> D113:32  $=3  L^\infty(B(0,3);\R)$ and constants $0<c<C<\infty$ such that
+   D113:33  $=0  \begin{enumerate}[label=\textup{(\roman*)},itemsep=2pt]
+   ----------------------------------------
+   D219:48  $=0  
+>> D219:49  $=35  第二版也走不通,卡点有两处。第一处是规模:$s=qk+1$ 在 $k$ 大时有二十万以上的条带要处理,直接计算是痴人说梦,必须先有有限截断。截断的来源后来找到了两条互补的:正性引理 $w\geq s$(归一化 cobar 里每条约化余巴因子至少吃掉权重 1;$01\text{-}01-framework.tex:142\text{-}
+   D219:50  $=0  
+   ----------------------------------------
+   D219:118  $=0  
+>> D219:119  $=53  lifting 装置:`J=\Sigma^{-q}C(\alpha)$、上商 $\varepsilon:J\to S^0$,余纤维正合列给出判据"$x\in\pi_gY$ 提升到 $\pi_g(J\wedge Y)$ 当且仅当 $\alpha x=0$"(`05:48-63`)。平均 Retract:$n=p-1$、$n!$ 是 $p
+   D219:120  $=0  
+   ----------------------------------------
+   D38:156  $=2  a lower bound for $S_1(B)$.
+>> D38:157  $=1  Every included node satisfies $J_d\ge w^{a_\star}.
+   D38:158  $=0  \end{lemma}
+   ----------------------------------------
+   D47:190  $=0  
+>> D47:191  $=47  (c) 每个数与假设的机械理由。$1/9$、$18$、$1/18$、$9$:两次标架转换各乘 $\le3$ 的裕度堆出来的,Lean 把它们硬编码进 `PassageBounds`(`NoConjugatePoints.lean:1291-1297`:`sqnorm q/9 ≤ qform ... ≤ 18*sqnorm q`、`sq
+   D47:192  $=0  
+   ----------------------------------------
+   D52:602  $=0  
+>> D52:603  $=1  本轮追加的正文（本文件第 390 行及之后）共引入 1,870 枚数学定界符字符，逐行配对全通过：新写的每一行都以成对开合结束，没有半截行内代码把闭合反引号误写成同形字符的情形。全文定界符计数 4,721、为奇，源头在旧稿第 102 行的一处 `\(` 与 `$` 错口配对（旧稿 §3 的引述句，前缀 `\(` 从素材原文照抄、尾部按
+   D52:604  $=0  
+   ----------------------------------------
+   D59:301  $=20  | $d(j)$ | $j+1$($j\ge0$),$-j$($j<0$) | weights.tex:95 | $\min_j\sum d$ 的居中窗、双谷 $-1,0$ | 若谷位置移出 $-1,0$，最小和不再是 $m(m+1)/(m+1)^2$，$\lfloor(n+1)^2/4\rfloor$ 对不上 |
+>> D59:302  $=13  | $\beta_{-1},\beta_0$ | 均 $e^{-c}$，全轴最大 | weights.tex:43 | $\lVert S_x\rvert =e^{-c}$、弥散侧片标识 | 若 $\beta_{-1}\ne\beta_0$，中心两权不等，`conclusion:104` 的"$=e^{-c}$ 恰两个"$断，$P_r
+   D59:303  $=8  | $\delta$ | $T_{m+1}-T_m\in\{0,N_m\}$ | weights.tex:11,55 | 跨块增量两式 | 若 $\delta\notin\{0,N_m\}$，`eq:residue-nesting` 破，跨块单调两下界 $\ge c$ 不再保证 |
+   ----------------------------------------
+   D79:103  $=0  
+>> D79:104  $=13  (a) 逐字引用: "If $I<J$ and $I'<J'$ are pairs of internal basic intervals, there is an $h\in F$ whose restrictions carry $I$ affinely onto $I'$ and $J$ affinely onto $J'." 
+   D79:105  $=0  
+   ----------------------------------------
+   D85:49  $=0  
+>> D85:50  $=11  第三条直觉，也是最后活下来的那条，来自 `c_\rho(\mathcal G)=\sum_{I\in\mathcal G}\rho^{|I|}$ 这个式子（`00_intro.tex:20-22`）。它的每一项恰好是 $\mu_p$ 下包含 $I$ 那一柱的概率，所以 `00_intro.tex:25-26` 说这样的覆盖用 unio
+   D85:51  $=0  
+   ----------------------------------------
+   D85:938  $=8  | $2^{-64\lvert U\rvert}$ 与 $2^{-6r}$ | 见 $G$、$B$ 两行 | `sections/02_weights.tex:138`、`sections/02_weights.tex:143` | 同上 | 同上 |
+>> D85:939  $=7  | $E_k$ 的 $k$ 允许重复 | 定义级许可 | `sections/00_intro.tex:15` | `03_density.tex:51-56` 的重分组；`03_density.tex:79-80` 的重复 32 次；`Model.lean:44-46` 的 `Fin k → Finset α` | 禁止重复则 `E
+   D85:940  $=18  | $31/32$ | union bound 产出 | `sections/03_density.tex:18`；`sections/03_density.tex:49` | `03_density.tex:49` 的 $\ge1/2$；`Main.lean:43` 的 `calc (1/2:ℝ) ≤ 1 - 1/32 := by 
+   ----------------------------------------
+   D92:219  $=0  
+>> D92:220  $=21  (a) 逐字(要点):"On $\Omega=(0,\infty)\times\{1,\ldots,m\}$, set $d\nu(r,t)=pr^{-p-1}dr$ on each copy indexed by $t$, $g_e(t)=(x_i(t)-x_j(t))/\delta_e$, $v_e(r,t)=rg_e(t)$. 
+   D92:221  $=0  
+   ----------------------------------------
+   D92:229  $=0  
+>> D92:230  $=39  (a) 逐字(节点引文)。构造 $Y$:"On the region $\{\|v\|_\infty>1\}$, this is an ordinary signed compound Poisson sum… For each $j\ge0$, independently sample the region $A_j=\{2^{-j
+   D92:231  $=0  
+   ----------------------------------------

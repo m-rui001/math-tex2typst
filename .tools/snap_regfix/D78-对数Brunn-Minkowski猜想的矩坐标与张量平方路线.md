@@ -1,0 +1,815 @@
+# D78 对数 Brunn-Minkowski 猜想的矩坐标与张量平方路线
+
+研究对象是队列 142 行的 `The logarithmic Brunn--Minkowski conjecture`（署名 OpenAI，2026-09-23）。本笔记把它当作一份实验记录来反推：正文只给了六条带号断言和七节推导，我要重建的是这六条断言被发现的顺序、被砍掉的替代顺序，以及每条断言里每个常数为什么长在那个位置。
+
+## §0 素材、口径与取证边界
+
+正文素材只来自 `E:\math\preprints\The-logarithmic-Brunn-Minkowski-conjecture-September-23-2026\build\*.tex`。实测字节数与行数（`wc -c`、`wc -l`）如下，引用时一律写成 `文件:行号`：
+
+- `introduction.tex` 12,127 B / 226 行，`reduction.tex` 4,885 B / 120 行，`moment.tex` 8,451 B / 198 行，`identities.tex` 4,623 B / 120 行，`density.tex` 5,614 B / 151 行，`tensor.tex` 7,785 B / 220 行，`variance.tex` 3,572 B / 94 行，`measure.tex` 7,562 B / 186 行，`main.tex` 1,816 B / 57 行，`figure-slabs.tex` 1,648 B / 39 行。tex 合计 44,480 B / 1,411 行，另有 `references.bib` 13,603 B 不计入正文口径。
+- 文档装载顺序在 `main.tex:46-53`：introduction, reduction, moment, identities, density, tensor, variance, measure。`main.tex:12-17` 声明 `theorem/proposition/lemma/corollary/remark` 共用一个按节重置的计数器（`main.tex:12` 的 `\newtheorem{theorem}{Theorem}[section]` 加上后续 `[theorem]` 继承），`main.tex:25` 的 `\numberwithin{equation}{section}` 使公式号也按节重置。所以下文用 Theorem 1.1、Corollary 1.2、Proposition 2.1、Lemma 3.1、Lemma 5.1、Lemma 6.1、Corollary 8.1 这套编号，与 `main.tex` 的计数器设置严格对应；remark 环境在正文里一次也没被用到（grep `\begin{remark}` 命中 0）。
+- PDF 一侧按仓库规矩完全不开：本仓库 PDF 加密，`pdftotext` 抽出的字符会破坏数学符号，所以本笔记没有任何来自 PDF 的引文。所有行号来自上面列出的 tex 分片。
+
+Lean 取证只允许三处，实测也只做在这三处：`E:\math\lean\formalization.yaml`（登记条目在 1290-1292 行）、`E:\math\lean\OAI\Geometry\LogVolume\`、`E:\math\lean\ComparatorChallenges\LogBrunnMinkowski.json`。`formalization.yaml:1289-1292` 给出 `comparator_config: ComparatorChallenges/LogBrunnMinkowski.json`、`declaration: OAI.LogBrunnMinkowski.main`、`file: OAI/Geometry/LogVolume/BrunnMinkowski.lean`。同目录 `ls` 实测该目录只有一个 .lean 文件，即 `BrunnMinkowski.lean`，1,253,235 B / 24,490 行。也就是说 24,490 行 Lean 与 1,411 行 tex 的比例是 17.3 倍（按行），按字节是 28.2 倍。这条悬殊比例的全部拆解放在 §7，本节的任务只是把口径钉死：正文口径是 tex，形式化口径是那一个 .lean 文件加上一个 15 行的 json，两者互不借用证据。
+
+同族论文（队列里其它对数体积 / $L_p$ Brunn-Minkowski 方向的预印本）对本篇而言互为非输入：本篇的所有引文只回指 `references.bib` 里的外部文献与 tex 自身的交叉引用，本笔记也不引入任何外部笔记的结论作为依据。
+
+## §1 初始动机与猜想：我第一时间把它当成"支撑函数做几何平均后还是不是凸"的问题
+
+我第一次读到这个问题时，脑子里的图像是：经典 Brunn-Minkowski 说 $|(1-\lambda)K+\lambda L|^{1/n}\ge(1-\lambda)|K|^{1/n}+\lambda|L|^{1/n}$，右边是 Minkowski 线性插值的体积；对数版本把插值换成支撑函数逐点相乘 $h_K^{1-\lambda}h_L^\lambda$ 再取 Wulff 交集。我在 `introduction.tex:13-16` 抄下了 Wulff 定义，然后立刻得到一个我认为是最主要的障碍：`introduction.tex:40-41` 明确写了 "In general $h_K^{1-\lambda}h_L^\lambda$ need not itself be a support function."。几何平均破坏次可加性，因为 $\log$ 把次可加变成"子可加的对偶"，两个支持函数的乘积一般不是支持函数。
+
+于是我的第一版作战计划完全偏几何：
+
+1. 从 Minkowski 存在性定理一侧进攻。对数 Minkowski 问题的解（锥体积测度）应当给出 $h_K^{1-\lambda}h_L^\lambda$ 的"最近的真正支持函数"，即用 Wulff 算子做一次凸化 $\mathcal W[h]$，然后比较 $\mathcal W[h_K^{1-\lambda}h_L^\lambda]$ 与 $(1-\lambda)K+\lambda L$。`introduction.tex:36-39` 用算术-几何平均不等式给出的包含 $\mathcal W[h_K^{1-\lambda}h_L^\lambda]\subset(1-\lambda)K+\lambda L$ 恰好是我这个想法的正确方向：只要体积关于这个包含"损失可控"，就得到结果。我一开始以为核心引理是某种混合体积估计。
+2. 用多面体近似 + 扇（fan）不变论证。$L_p$ 理论里强同构多面体（same normal fan）是常规武器，`introduction.tex:137-138` 提到 Putterman 用 strongly isomorphic polytopes 证明了局部与全局 $L_p$ 不等式对每个 $p\in[0,1)$ 等价。我的第一版打算把对数情形也收进"同一 fan 内是有限维优化问题"，然后靠紧性过渡。
+3. 谱一侧。Kolesnikov-Milman 把局部 $L_p$ 不等式写成 Hilbert-Brunn-Minkowski 算子第一个非恒定偶特征值的下界（`introduction.tex:129-132`），van Handel 在中心仿射曲率上做了 zonoid 情形（`introduction.tex:139-142`）。我假定全局结果要靠把这个特征值下界做到非微扰，即某种整体谱隙。
+
+这三条路我都当成正路在走，理由是对数 BM 的已知进展（平面、无条件、$n-2$ 个反射、旋转体）几乎都在讲对称类和谱，我在 `introduction.tex:107-159` 读到的正是这一串。而我最初真正想要的形式是：一个不依赖任何分析的纯凸几何不等式。现在回头看，我最初对"从哪一侧进攻"的判断里唯一留下来的是第 2 条里的多面体近似，但它被换成了 slab 近似，而且只是入口，不承担证明。真正承担证明的是概率分析与完全代数化的张量恒等式，这一点在 §4 展开。
+
+## §2 尝试过的错误路线及失败原因
+
+### §2.1 路线 A：把 $h_K^{1-\lambda}h_L^\lambda$ 凸化后再比体积（断在"凸化增益不可控"）
+
+做法：设 $f=h_K^{1-\lambda}h_L^\lambda$，令 $M=\mathcal W[f]$。想证 $|M|\ge|K|^{1-\lambda}|L|^\lambda$。因为 $f$ 未必是支持函数，唯一能做的比较是 $f\le h_M$，而 $h_M$ 是 $f$ 的"最小次可加凸支配"。第一步看起来很漂亮：`introduction.tex:17-18` 保证了 $\mathcal W[f]$ 是凸体（含 $\min f$ 球、被 $\max f$ 球包住），$n=1$ 甚至直接是等式（`reduction.tex:115-118`）。
+
+断点：要往下走就得把 $|M|$ 从下面估住，也就是要证明 $f$ 到 $h_M$ 的"凸化误差"在体积意义下不亏。这一步在有限维多面体例子里也控制不了。具体迹象有两个。其一，$h_M$ 与 $f$ 的差发生在"哪些方向成为法向量"这个离散结构上，$M$ 的边界可能在大段球面上严格高于 $f$，而这个提升量随 $K,L$ 的相对位置剧烈变化，没有任何尺度不变的界。其二，一旦我尝试用混合体积展开 $|M|$，出现的单调性需要 $M$ 与 $K,L$ 有可比扇，而 $M$ 的扇由 $f$ 的 Legendre 型变换决定，与 $K,L$ 的扇无关。
+
+第二条迹象可以在 tex 里找到对应的自白：`introduction.tex:41-42` 写 "The intersection defining $\mathcal W$ is essential throughout the argument."，也就是说最终证明从头到尾都在用交集形式（`reduction.tex:98-100` 的 $P_m(t)$、`measure.tex:138-142` 的相对 Wulff 体 $D_E$），一次也没把 $\mathcal W$ 换成"某个支持函数的体"。这是典型的"我早期偏好的对象在后文根本没被使用"，说明这条路被放弃了。
+
+### §2.2 路线 B：同一 normal fan 上的有限维优化 + 局部到全局（断在 $\lambda$-路径上扇会碎）
+
+做法：固定一个强同构多面体类，把 $h_i$ 当成坐标，把 $|\mathcal W[h^{1-t}g^t]|$ 当成 $t$ 的函数证对数凹。Putterman 的局部-全局等价（`introduction.tex:136-138`）看起来允许我只做无穷小版本。
+
+断点：$\log$ 端 $p=0$ 时，$h^{1-t}g^t$ 的二阶导在 $t$-路径上会引入 $\bigl(\log h_i^0-\log h_i^1\bigr)^2$ 这样的权重（这正是最终版本 `reduction.tex:58` 里 $b_i=-q\log(h_i^1/h_i^0)$ 的来历），而局部不等式只给"某个固定 $h$"处的二阶符号。要在整条路径上积分，就需要沿路径的扇不变，这个不变性对数情形是失败的：几何平均插值会让某个面的法向权重归零，面在 $t$ 的中途出现或消失。迹象就是局部结果给出的常数依赖扇的组合型，而扇沿路径变化时它不是一致有界的；$p\to0$ 时 Kolesnikov-Milman 型的谱隙条件（`introduction.tex:129-132` 里 $p\ge1-cn^{-3/2}$）也整体失效，因为那个下界对 $p=0$ 没有任何陈述力。
+
+这条路线的尸体保留了一小块：最终证明仍然把问题约化为有限个方向（`reduction.tex:45-51` 的 $p_1,\dots,p_N$ 与 $h_i(t)$），但放弃的正是"扇不变"，换成"有限 slab 交集 + 稠密方向列的下降交"（`reduction.tex:94-113`，Lean 侧对应 `main_of_finite_slabs`，`BrunnMinkowski.lean:19304`）。
+
+### §2.3 路线 C：直接对指示函数用 Prékopa-Leindler（断在插值形式不匹配）
+
+做法：无条件情形的已知证明走坐标逐点乘积，背后是乘法形式的 Prékopa-Leindler（`introduction.tex:114-118` 把这条线索归到 Uhrin、Bollobás-Leader、Cordero-Erausquin-Fradelizi-Maurey 与 Saroglou）。我想把它推广到一般偶体。
+
+断点：Prékopa-Leindler 需要 $(1-t)A+tB$ 型的 Minkowski 插值在集合层面成立，而这里要证的体是 $\bigcap_u\{\langle x,u\rangle\le h_K(u)^{1-t}h_L(u)^t\}$，它不是任何集合的线性组合。算术-几何平均给出的是 $\mathcal W[h_K^{1-\\lambda}h_L^\lambda]\subset(1-\lambda)K+\lambda L$（`introduction.tex:36-39`），方向是"要证的体更小"，PL 只会给更小集合的体积下界需要它作为更大集合的插值出现，方向完全相反。这条路的包含方向与所需相反。
+
+我在 C 里还试过 Saroglou 的 $(B)$-性质等价式（`introduction.tex:177-186`，即立方体上均匀测度的对角 $(B)$-性质与对数 BM 逐维等价）。这个等价是真的，但它把问题搬到"测度在指数伸缩下的对数凹"，仍然要求某处出现凹性来源。最终论文对它的用法只是把结论搬出去（`measure.tex:173-186` 的标量伸缩 $(B)$ 推论），并非把证明搬进来；`introduction.tex:185-186` 那句 "The summandwise variance estimate below supplies the required concavity directly." 就是承认这条路给不了凹性、必须自己造。
+
+### §2.4 路线 D：Brascamp-Lieb 加强版直接给方差界（断在势能来源不同）
+
+做法：对数凹测度的 Brascamp-Lieb 方差不等式（`introduction.tex:209-210`）说的是 $\operatorname{Var}_\mu(u)\le \E\langle(\,D^2V)^{-1}\nabla u,\nabla u\rangle$ 型估计；把 $u=\sum b_i\psi_i$ 塞进去，右边应当能吸收。Kolesnikov-Livshyts-Rotem（`introduction.tex:211-217`）对齐次势能密度做了强化 Brascamp-Lieb 并得到 $\ell_q$ 球的局部对数不等式，用的正是密度势能的 Hessian。
+
+断点：`introduction.tex:215-217` 明写了分野："Their homogeneous variance formulation uses the Hessian of the density potential; our summandwise estimate uses the separately constructed moment potential."。这里的技术困难是：$\psi_i=(\langle p_i,x\rangle/h_i)^q$ 之和的梯度会把不同 $i$ 交叉耦合，Brascamp-Lieb 右边出现 $\langle p_i,p_j\rangle$ 型交叉项，无法逐项吸收成 $\sum b_i^2\E\psi_i$。要消交叉项必须换度量，也就是把 $(D^2V)^{-1}$ 换成矩 Hessian $\tau=D^2\varphi$ 的逆 $M=\tau^{-1}$，而 $\tau$ 是另一个对象（`identities.tex:11`、`moment.tex:17-23`）。这条路真正的失败点是：我没有先造出 $\tau$ 就直接想要一个好的方差界，而 $\tau$ 的存在性要一整节 PDE（`moment.tex` 全文：截断矩定理、Klartag 上界、Evans-Krylov、Schauder、对角子列、满射性）。
+
+### §2.5 路线 E：把方差界写成 Stein 核的最优常数问题（断在密度性丢失）
+
+做法：$\E x_j g=\E\tau_{jk}g_{x_k}$（`identities.tex:46-50`，注明是 Fathi 由矩映射造 Stein 核）说明 $\tau$ 就是 Stein 核。Stein 核方差界形如 $\operatorname{Var}(u)\le \E\langle\tau\nabla u,\nabla u\rangle$ 一类，我原打算直接引用 Stein 核的最优常数。
+
+断点：最优常数表述需要测试函数类稠密。`identities.tex:116-120` 说 $A(A-1)$ 消灭所有仿射函数，而 `density.tex:147-150` 的结论是"仿射是唯一障碍"。这个"唯一"必须证，不是 Stein 核文献给的：`density.tex:45-49` 要先用主符号 $(\xi\cdot\tau(x)\xi)^2$ 的正则性把分布解升成光滑，`density.tex:52-102` 要在 $L^2$ 里把方程拆开、证明 $Ag\in L^2$，`density.tex:104-113` 处理特征值 0 部分，`density.tex:115-145` 处理特征值 1 部分。E 路线在我手里卡住的地方很具体：我不知道上界 $\tau\le\Lambda I$ 什么时候够用（答案是只够 cutoff 项 $B/r$ 消失，见 `density.tex:55-60`），也不清楚严格正定性为什么只能逐点成立而不能一致
+## §3 关键转折点：六个具体时刻
+
+### §3.1 第一个转折：把体积写成配分函数，把定理写成"配分函数对数凹"
+
+时刻点在 `introduction.tex:161-175`（"Proof strategy" 小节）与 `reduction.tex:9-23`（Proposition 2.1 被单独提出）。我原先把 $|\mathcal W[\cdot]|$ 当几何量，这里它被写成
+
+```tex
+ \exp\left(-\frac{\eps}{2}|x|^2
+       -\sum_i\left(\frac{\langle p_i,x\rangle}{h_i}\right)^q\right),
+ \qquad \eps>0,\quad q\ge2\text{ even}.
+```
+
+（`introduction.tex:166-168`），然后在 `reduction.tex:13-17` 定式为 $\psi_i=(\langle p_i,x\rangle/h_i)^q$、$V=\frac{\eps}{2}|x|^2+\sum_i\psi_i$、$d\mu=Z^{-1}e^{-V}dx$。转折的实质是：凸几何命题的全部难度被搬进一个统计力学对象 $Z_{q,\eps}(t)=\int e^{-V_t}$ 的二阶导符号。`reduction.tex:59-67` 是这一步的执行：$\dot V=\sum_ib_i\psi_i$、$\ddot V=\sum_ib_i^2\psi_i$，于是
+
+$$\frac{d^2}{dt^2}\log Z_{q,\eps}(t)=\operatorname{Var}_{\mu_t}(\dot V)-\E_{\mu_t}\ddot V\le0.$$
+
+这里我第一次看到对数 BM 的正确难度定位：它不是关于 $q$ 次多项式的凸几何，是关于"方差被自身期望逐项控制"的一个算子不等式。断点在于 $\frac{d^2}{dt^2}\log Z$ 的两项必须逐项匹配，而 $b_i=-q\log(h_i^1/h_i^0)$（`reduction.tex:58`）正是那个匹配字典：一阶导带 $\sum b_i\psi_i$、二阶导带 $\sum b_i^2\psi_i$，两次求导把 $\log h_i(t)$ 的线性结构变成 $b_i$ 与 $b_i^2$ 的配对，这决定了 §5.3 里那个方差界必须是 $\sum b_i^2\E\psi_i$ 这个形状，别的形状都闭合不了。
+
+### §3.2 第二个转折：把二次型问题降成"逐指标标量"的对偶问题
+
+时刻点在 `reduction.tex:30-42`。要证的是对一切 $b\in\R^N$ 的二次不等式，这里被换成：对每个中心偶 $u\in L^2(\mu)$，
+
+```tex
+ \sum_{i=1}^N\frac{(\E_\mu u\psi_i)^2}{\E_\mu\psi_i}
+ \le \E_\mu u^2
+```
+
+（`reduction.tex:31-34`），再由 Cauchy-Schwarz 反推 `eq:variance`（`reduction.tex:38-39`）。这个改写的收益是：左边逐项出现 $\E u\psi_i$，于是允许我对每个 $i$ 单独做一次配对，而不需要处理 $\psi_i$ 之间的交叉项。§2.5 的失败正是因为没有这一步，Brascamp-Lieb 的右边无法分指标。$a_i=\E\psi_i>0$ 的理由也在同一处（`reduction.tex:36-37`：分母正当性是 $p_i\ne0$ 加密度严格正），这条正当性后来在 `variance.tex:22-24` 被消费成 $m_i=qa_i$。
+
+### §3.3 第三个转折：矩坐标 $x=\nabla\varphi(z)$ 的诞生
+
+时刻点在 `moment.tex:7-27`（Lemma 3.1）。这是全篇最贵的一步，因为它要求一个全局微分同胚，并非任何变分极值。我原先的直觉是"取 Legendre 变换就够了"，但 Legendre 是对称双对偶，不能保证像测度是目标测度。Berman-Berndtsson 的紧矩定理（`moment.tex:37-46`）给的是 $\nabla\varphi_R:\R^n\to B_R$ 的满射微分同胚与 $\det D^2\varphi_R=Z_R\exp\{V(\nabla\varphi_R)-\varphi_R\}$，紧集在 $R$；转折点发生在意识到"$R\to\infty$ 的极限可以保下来"，而保下来需要三件东西同时成立：$C=4/\eps$ 与 $R$ 无关（`moment.tex:51-59`）、 coercivity 双侧界与 $R$ 无关（`moment.tex:96-102`）、以及下界 Hessian 的一致性（`moment.tex:106-113` 用 $\det$ 下界除以 $C^{n-1}$ 造出 $\delta$）。
+
+这三件里最容易被忽略的是 `moment.tex:83-95` 那一步：先用支撑平面得到 $g_R(y)\ge g_R(z)+|x\cdot y|-x\cdot z$，对 $\nu_R$ 积分、丢掉非负项 $\E g_R$、再用源恒等式 $\E z\cdot\nabla\varphi_R=n$（`moment.tex:74-76`），得到 $g_R(y)\ge\int|x\cdot y|d\mu_R-n$，最后靠球的旋转对称把积分压成 $c|y|$。这就是 `eq:moment-coercivity` 里 $c|y|-n$ 的出处，$n$ 那个常数就是源恒等式的右端。$c=d_0\int_{B_1}|x_1|dx$（`moment.tex:96`）里 $d_0$ 是 $B_1$ 上密度下界，$\int_{B_1}|x_1|dx$ 是靠单位球的旋转对称才不用估计具体值。
+
+### §3.4 第四个转折：$A(A-1)$ 双散度测试与"仿射是唯一障碍"
+
+时刻点在 `identities.tex:67-88` 与 `identities.tex:102-114`。构造是 $h=D^2f$、$P=\tau h$、$B=\tau h\tau$、$W_a=\partial_k^*P_{ak}$、$u=\delta_\mu W$（`identities.tex:68-71`），配套两条识别：$\E uF=\E W\cdot\nabla F=\E B:D^2F$（`identities.tex:77-79`）与 $W=\tau\nabla(A-1)f$、$u=A(A-1)f$（`identities.tex:84-88`）。$A$ 的定义在 `identities.tex:53-57$：$Af=x\cdot\nabla f-\tau:D^2f$。关键恒等式是 `identities.tex:106-114`：
+
+```tex
+ \E(Af)(A-1)f=\E h:B=\E\bigl\|\tau^{1/2}D_x^2f\,\tau^{1/2}\bigr\|_{\mathrm{HS}}^2.
+```
+
+我在这个时刻明白：$\E u^2$ 的下界必须通过 $B$ 的 Hessian 范数进入，而障碍就是 $\mathcal P=A(A-1)$ 的核。`identities.tex:116-120` 立刻给出核的候选：$A1=0$、$Ax_j=x_j$，所以 $A(A-1)$ 消灭一切仿射函数。整节 `density.tex` 就是为了证明反过来也成立。
+
+### §3.5 第五个转折：张量差写成两个完全平方
+
+时刻点在 `tensor.tex:189-211`。前面 `tensor.tex:100-105`（trace 展开）与 `tensor.tex:115-120`（$H$ 展开）的公共首项 $\E\tr(MBMB)$ 相消后，剩下三条收缩，在 $\tau=I$ 的归一化坐标里被算成 `tensor.tex:167-174` 的三行。相减后的被积函数是 $2\|S\|^2+4\langle S,J\rangle+\|J\|^2+\langle J,J^{(12)}\rangle$（`tensor.tex:192-193`），配上 `tensor.tex:200-206` 的 $\|\operatorname{Sym}J\|^2=\frac{\|J\|^2+2\langle J,J^{(12)}\rangle}{3}$ 与 $\langle S,\operatorname{Sym}J\rangle=\langle S,J\rangle$，恰好落成 `tensor.tex:208-211`：
+
+```tex
+ 2\|S+\operatorname{Sym}J\|^2+\frac16\|J-J^{(12)}\|^2\ge0.
+```
+
+这个平方结构是转折点的最强证据：系数 $2$、$4$、$1$、$1$ 与 $\frac16$ 不是拟合出来的，是被"三条收缩各自的组合"逼出来的（§5.8 (c) 逐项验证）。另外 `tensor.tex:125-157` 的归一化手法值得记：用一个常数对偶坐标变换 $T=\tau^{-1/2}$（在定点取值），并且明写 "No moving frame is differentiated; the integrations by parts have already been completed."（`tensor.tex:156-157`）。我第一次尝试这个归一化时用的是活动标架，结果对 $\tau(x)$ 求导多出一堆 $C$ 的项，全部抵消不了；把求导顺序改成"先分部完，再定点归一化"才干净。
+
+### §3.6 第六个转折：$q$ 在两次 Cauchy-Schwarz 之间自我销毁
+
+时刻点在 `variance.tex:44-75`。$d_i=\E u\psi_i$ 被两个方向夹住：HS-Cauchy-Schwarz 给 $d_i^2\le m_i\E\tr(MBH_iB)$（`variance.tex:51-53`），$(X,Y)\mapsto\E X^TH_iY$ 的正半定型给 $\E W^TH_iW\ge(q-1)d_i^2/m_i$（`variance.tex:60-64`）。把 Lemma 6.1 的两项相加得到 $\frac{d_i^2}{a_i}$ 之和（`variance.tex:68-75`），其中 $\frac{q\,d_i^2}{m_i}$ 与 $m_i=qa_i$（`variance.tex:22-24`）里的 $q$ 精确抵消。这个抵消解释了为什么最后的方差界常数恰好是 1：$q$ 同时作为 $\psi_i$ 的次数（提供 $x\cdot\nabla\psi_i=q\psi_i$）与二阶齐次性（提供 $H_ix=(q-1)\nabla\psi_i$）出现，两个角色系数之差正好是 $m_i$ 里的 $q$ 与 $q-1$。我最初的版本只写 $q$ 一个角色，于是常数剩下 $(q-1)/q$，永远取不到 1。
+
+## §4 最终思路与最初设想的差异
+
+差异有六处，都是方向性的。
+
+第一，进攻面从"体的比较"搬到"测度的对数凹性"。我最初想找 $K,L$ 与 $\mathcal W[h_K^{1-\lambda}h_L^\lambda]$ 之间的几何链条；最终证明里体只出现在两头（`reduction.tex:45-51` 的 slab 体、`reduction.tex:94-113` 的下降交），中间全程是 $Z_{q,\eps}(t)$ 与 $\mu_t$ 的期望方差。第二，插值参数从"凸组合"搬到"宽度指数"。$h_i(t)=(h_i^0)^{1-t}(h_i^1)^t$（`reduction.tex:49`）这个几何插值只作用在正实数宽度上，凸性完全不参与；凸性只在 `reduction.tex:104-111` 的最后一步（支撑半空间刻画）回来。第三，"偶"这个对称性从便利条件升级为唯一使用者。我原来以为偶性是用来简化扇的；最终它承担两处不可替代的功能：`moment.tex:61-66` 用偶性把 $\varphi_R$ 定成偶（靠"平移唯一性"），以及 `density.tex:149-150` 用偶性把仿射解砍成常数。第四，光滑化参数 $\eps$ 与 $q$ 分工。我一开始以为 $q\to\infty$ 与 $\eps\to0$ 可以合并处理；最终顺序是硬性单向的：先固定 $\eps$、$q\to\infty$ 用控制收敛（界 $e^{-\eps|x|^2/2}$，`reduction.tex:78-79`），再 $\eps\downarrow0$ 用单调收敛（`reduction.tex:85`）。反过来先 $\eps\to0$ 就没有可积控制。第五，Hessian 下界被降级。Lemma 3.1 的陈述里只要求正定而不一致正定（`moment.tex:25-26`），因为下界只在 `moment.tex:106-113` 的局部证明里需要；全局论证只吃上界 $\tau\le(4/\eps)I$。`introduction.tex:221-226` 把这点明写为可复用性："The accompanying density argument uses a global upper Hessian bound and local strict positivity; it does not require a global lower Hessian bound."。第六，最终定理的证明里没有任何几何常数：无 John 椭球、无覆盖率、无 dimension-dependent 损失，Proposition 2.1 的右端 $\sum b_i^2\E\psi_i$ 与维度无关，这个"零常数"特征是我最初完全没预料到的；相反，代价全部付在存在性一侧，即那 40 行 PDE 引理（`moment.tex:123-154`）。
+
+相反，代价全部付在存在性一侧，即那 40 行 PDE 引理（`moment.tex:123-154`）。
+
+一句话总结差异来源：我以为这是一个关于凸体的不等式，实际它是一个关于矩映射的四阶算子不等式，凸体只是它的一个边界条件实现方式。
+
+## §5 逐引理四段式
+
+### §5.1 Theorem 1.1（`introduction.tex:21-29`，thm:main / eq:main）
+
+(a) 逐字引用（`introduction.tex:21-29`）：
+
+```tex
+\begin{theorem}[Even logarithmic Brunn--Minkowski inequality]
+\label{thm:main}
+Let $n\ge1$ and let $K,L\subset\R^n$ be convex bodies satisfying
+$K=-K$ and $L=-L$. For every $0\le\lambda\le1$,
+\begin{equation}\label{eq:main}
+ \left|\mathcal W[h_K^{1-\lambda}h_L^\lambda]\right|
+ \ge |K|^{1-\lambda}|L|^\lambda.
+\end{equation}
+\end{theorem}
+```
+
+(b) 推导中间步骤。整个定理在正文里只被证明一次，位置在 `reduction.tex:44-120`，它把 Proposition 2.1 当作黑箱。链条是：
+
+1. 选有限个张成方向 $p_1,\dots,p_N$ 与端点宽度 $h_i^0,h_i^1>0$，几何插值 $h_i(t)=(h_i^0)^{1-t}(h_i^1)^t$，slab 体 $P(t)=\{x:|\langle p_i,x\rangle|\le h_i(t)\ \forall i\}$（`reduction.tex:45-51`）。张成保证有界，宽度为正保证内有内点。
+2. 用 $h(t)$ 代进 `eq:potential` 得 $V_t$ 与 $Z_{q,\eps}(t)=\int e^{-V_t}$。求导合法性的中间步骤在 `reduction.tex:55-57`：$t$ 在紧区间内时，一阶与二阶被导被积函数被"多项式乘 $e^{-\eps|x|^2/2}$"控制，而后者可积，所以 dominated convergence 允许把 $\partial_t^2$ 移进积分号。
+3. 记 $\psi_i(t)=(\langle p_i,x\rangle/h_i(t))^q$。因为 $\log h_i(t)=(1-t)\log h_i^0+t\log h_i^1$，一次求导给出 $\partial_t\psi_i=-q\frac{\log h_i^1-\log h_i^0}{\ }\psi_i$，二次求导把系数平方一次，于是取 $b_i=-q\log(h_i^1/h_i^0)$ 后有 $\dot V=\sum b_i\psi_i$、$\ddot V=\sum b_i^2\psi_i$（`reduction.tex:58-62`）。这里我补一个正文跳过的恒等式：$\frac{d^2}{dt^2}e^{-V}=(\dot V^2-\ddot V)e^{-V}$，除以 $Z$ 后正是 $\operatorname{Var}_{\mu_t}(\dot V)-\E_{\mu_t}\ddot V$，因为 $\frac{d}{dt}\log Z=\E[-\dot V]$ 再求导即得。
+4. 由 Proposition 2.1 得 $\operatorname{Var}_{\mu_t}(\dot V)\le\sum b_i^2\E\psi_i=\E\ddot V$，故 $(\log Z)''\le0$，即 `eq:partition-concavity`（`reduction.tex:69-72`）。注意凹性是关于 $\log$ 的，而结论写成乘法形式，这一步要求 $Z>0$（被积函数严格正）。
+5. $\eps$ 固定、$q\to\infty$ 沿偶整数：逐点极限是 $e^{-\eps|x|^2/2}\mathbf 1_{P(t)}$，例外集在有限个超平面 $\langle p_i,x\rangle=\pm h_i(t)$ 上，测度零（`reduction.tex:74-79`）；公共可积控制 $e^{-\eps|x|^2/2}$ 使 $Z_{q,\eps}(t)\to\int_{P(t)}e^{-\eps|x|^2/2}dx$。
+6. 在 $t=0,\lambda,1$ 三点取极限后 $\eps\downarrow0$，单调收敛给出 `eq:slabs`：$|P(\lambda)|\ge|P(0)|^{1-\lambda}|P(1)|^\lambda$（`reduction.tex:84-88`）。单调收敛在这里合法是因为 $\mathbf1_{P(t)}$ 随 $\eps$ 单调（$e^{-\eps|x|^2/2}$ 对 $\eps\downarrow0$ 逐点升）。
+7. 有限方向到全部方向：取嵌套有限集 $D_m\subset S^{n-1}$，含坐标向量，并在球面上稠密，$P_m(t)=\bigcap_{p\in D_m}\{|\langle p,x\rangle|\le h_K(p)^{1-t}h_L(p)^t\}$（`reduction.tex:96-100`）。$\bigcap_mP_m(t)=\mathcal W[h_K^{1-t}h_L^t]$ 的论证有两半（`reduction.tex:104-109`）：对方向的连续性和偶性把稠密集上的不等式扩到全部方向；反向由偶性把 $|\langle p,x\rangle|\le\cdot$ 拆回 $\langle p,x\rangle\le\cdot$ 与 $\langle- p,x\rangle\le\cdot$。$P_m(t)$ 随 $m$ 下降且都被有界体 $P_1(t)$ 包住，故测度从上连续（`reduction.tex:112-113`）在三点同时适用，得到 `eq:main`。
+8. $n=1$ 单独：$K=[-a,a]$、$L=[-b,b]$，插值体半径 $a^{1-\lambda}b^\lambda$，长度 $(2a)^{1-\lambda}(2b)^\lambda$，是等式（`reduction.tex:115-118`）。
+
+(c) 假设、常数、指数的机械理由。
+
+- $n\ge1$ ，并非 $n\ge2$：Proposition 2.1 自己要求 $n\ge2$（`reduction.tex:10`），所以 $n=1$ 必须手工验收；正文选择在定理层面把 $n\ge1$ 全部收进来，理由是端点等式（第 8 步）本身免费。
+- $K=-K$、$L=-L$ 的三处消费：`introduction.tex:5` 给出 $0$ 在内点；`introduction.tex:10` 给出 $h_K>0$ 处处严格正，这是实指数 $h_K^{1-\lambda}$ 有意义的前提；`reduction.tex:107-109` 用偶性把绝对值约束与 Wulff 约束互换。去掉偶性，三条都断。
+- $0\le\lambda\le1$ 闭区间：`reduction.tex:119` 说端点是等式，$\lambda=0$ 时 $\mathcal W[h_K]=K$ 由支撑半空间刻画；开区间版本会在 Corollary 1.2 的归一化里丢掉 $\theta$ 的定义域端点。
+- 指数对 $(1-\lambda,\lambda)$：它必须与 $h_i(t)$ 的指数插值同参数，才能在第 3 步把 $\dot V,\ddot V$ 写成 $b_i,b_i^2$ 配对；指数若换成别的（比如 $(1-\lambda)^2$）则 $\ddot V$ 里会出现不能被 Proposition 2.1 形状吸收的系数。
+- Wulff 交集，并非"某个支持函数的体"：`introduction.tex:40-42`。第 7 步的稠密方向论证也只在交集定义下成立。
+- $q\ge2$ 偶、$\eps>0$：见 §5.3 与 §5.4，$q$ 的偶性保证 $\psi_i\ge0$ 从而 $Z$ 有限与 $a_i>0$，$\eps$ 保证 $D^2V\ge\eps I$。
+
+(d) 候选失败路线。
+
+- [推测] 走 $L_p$ 到 $p\downarrow0$ 的一致极限：$p\mapsto$ Corollary 1.2 的陈述在 $p\downarrow0$ 时应升到对数版，但需要关于 $p$ 一致的常数，而证明里唯一的 $p$ 依赖在 $c^p$ 与 $p/n$ 这两个非线性位置上；一旦只有弱收敛，$p/n$ 的幂就把误差放大。正文用的是单调蕴含（`introduction.tex:48-50` 引 BLYZ 的 equation (1.10)），方向是"对数推出 $L_p$"，反方向确实没有记载。
+- [推测] 靠 Putterman 的局部-全局等价把定理缩到无穷小版本：`introduction.tex:136-138` 只陈述 $L_p$ 情形且基于强同构多面体类，而 §3.5 与 §2.2 都指出几何插值会让扇在中途改变，局部二阶符号无法在整条 $t$-路径上拼接。
+- [推测] 直接用 van Handel 的 zonoid 局部结果做逼近：偶体不被 zonoid 在 Banach-Mazur 意义下以维度无关常数逼近，而 van Handel 的定理（`introduction.tex:139-142`）比较体是任意的、主体却是 zonoid，插值体 $[K,L]$ 型的对数组合不保持 zonoid 类。
+
+### §5.2 Corollary 1.2（`introduction.tex:55-65`，cor:lp / eq:lp）
+
+(a) 逐字引用（`introduction.tex:55-65`）：
+
+```tex
+\begin{corollary}[Symmetric $L_p$ Brunn--Minkowski inequality]
+\label{cor:lp}
+Let $n\ge1$, let $K,L\subset\R^n$ be full-dimensional origin-symmetric
+convex bodies, and let $0<p<1$. For every $0\le\lambda\le1$,
+\begin{equation}\label{eq:lp}
+ \left|\mathcal W\!\left[
+  \bigl((1-\lambda)h_K^p+\lambda h_L^p\bigr)^{1/p}
+ \right]\right|^{p/n}
+ \ge (1-\lambda)|K|^{p/n}+\lambda|L|^{p/n}.
+\end{equation}
+\end{corollary}
+```
+
+(b) 推导中间步骤（证明在 `measure.tex:10-47`）。
+
+1. 端点 $\lambda=0,1$ 由 $\mathcal W[h_K]=K$、$\mathcal W[h_L]=L$ 直接得（`measure.tex:11-12`）。以下设 $0<\lambda<1$。
+2. 归一化：$a=|K|^{1/n}$、$b=|L|^{1/n}$、$K_0=a^{-1}K$、$L_0=b^{-1}L$，于是 $|K_0|=|L_0|=1$，且 $h_K=ah_{K_0}$、$h_L=bh_{L_0}$（支撑函数对数缩放的齐次性）。
+3. 定义 $c=((1-\lambda)a^p+\lambda b^p)^{1/p}$、$\theta=\lambda b^p/c^p$。中间验证：$1-\theta=((1-\lambda)a^p)/c^p$，因为 $c^p=(1-\lambda)a^p+\lambda b^p$，两式相加为 1。$0<\lambda<1$ 与 $a,b>0$ 保证 $\theta\in(0,1)$。
+4. 逐点恒等式：$c\bigl((1-\theta)h_{K_0}^p+\theta h_{L_0}^p\bigr)^{1/p}=\bigl((1-\lambda)h_K^p+\lambda h_L^p\bigr)^{1/p}$。补的这一步是把 $c$ 乘进括号、用第 3 步替换 $1-\theta,\theta$、再乘进 $h_{K_0}^p,h_{L_0}^p$ 并用 $h_K=ah_{K_0}$。
+5. 加权 AM-GM：对正数 $X=h_{K_0}(u)^p$、$Y=h_{L_0}(u)^p$，$(1-\theta)X+\theta Y\ge X^{1-\theta}Y^\theta$，两边取 $1/p$ 次得 $(\cdot)^{1/p}\ge h_{K_0}^{1-\theta}h_{L_0}^\theta$。这里要求 $X,Y>0$，正是 `measure.tex:32` 那句 "All support values here are positive."，其来源是偶体的 $h>0$。
+6. Wulff 单调与齐次：$f\ge g>0$ 逐点给出 $\mathcal W[f]\subset\mathcal W[g]$；$\mathcal W[cf]=c\mathcal W[f]$。所以 $c\,\mathcal W[h_{K_0}^{1-\theta}h_{L_0}^\theta]\subset\mathcal W[\bigl((1-\lambda)h_K^p+\lambda h_L^p\bigr)^{1/p}]$。
+7. 对 $K_0,L_0$ 用 Theorem 1.1（参数 $\theta$，单位体积），左边的非缩放体体积 $\ge1^{1-\theta}1^\theta=1$，故右边体体积 $\ge c^n$。
+8. 两边取 $p/n$ 次（$p/n>0$ 保持不等号），$c^p=(1-\lambda)|K|^{p/n}+\lambda|L|^{p/n}$，得 `eq:lp`。
+
+(c) 机械理由。
+
+- "full-dimensional" 这个额外假设（`introduction.tex:57`，比 Theorem 1.1 多写了这三个词）：被第 2 步消费，需要 $a,b>0$ 才能归一化；零体积体让 $c$ 与 $\theta$ 同时退化。凸体定义本身含非空内部（`introduction.tex:4`），所以这更多是防止读者把退化的紧凸集代进来。
+- $0<p<1$ 的两个消费位置：$1/p$ 次幂需要 $p\ne0$（$p=0$ 就是母定理）；$p<1$ 是"$L_p$ Brunn-Minkowski 理论的非平凡区间"，`introduction.tex:44-50` 明确说对数端点给出的是中间区间 $0<p<1$ 的完整对称体积不等式，并引 BLYZ 的单调蕴含。证明里第 5 步的 AM-GM 方向对任何 $p>0$ 都成立，所以真正的门槛不是推导，是命题强度：$p\ge1$ 时幂平均插值的体已经大到让加性形式不再是新的信息。
+- $\theta$ 与 $c$ 的耦合：$\theta$ 是"重加权后的插值参数"，被 Theorem 1.1 消费；$c$ 是"体积下界的尺度"，被第 7-8 步消费。二者必须成对定义，否则第 4 步的恒等式不闭合。
+- 取 $p/n$ 次，并非 $1/n$：因为 AM-GM 链在 $c^p$ 上自然出现（第 3 步），$p/n$ 是让右端正好等于 $(1-\lambda)|K|^{p/n}+\lambda|L|^{p/n}$ 的唯一选择。
+
+(d) 候选失败路线。
+
+- [推测] 跳过归一化直接对 $h_K^p,h_L^p$ 做 AM-GM：会漏掉 $\theta$，因为不加权时几何平均的权重必须是 $\lambda$ 而体积端需要 $\theta$，两处权重不一致导致第 7 步用不上 Theorem 1.1。正文的 $c,\theta$ 定义就是为了把权重差吸进尺度 $c$。
+- [推测] 用 $L_p$ 混合体积的解析定义代替 Wulff 体：$p<1$ 时 $L_p$ 混合体积的单增性与可加性都失败，展开后需要的 Minkowski 型第一不等式正是待证内容。
+- [推测] 从加法形式反推乘法形式（即先证 $\mathcal W$ 意义下的 Minkowski 线性组合界）：需要 $(1-\lambda)K+\lambda L$ 与 $\mathcal W[h^{1-\lambda}g^\lambda]$ 之间的体积可比，而 `introduction.tex:36-39` 的包含是单向的，方向对着我们要证的下界不利。
+
+### §5.3 Proposition 2.1（`reduction.tex:9-23`，prop:variance / eq:potential / eq:variance）
+
+(a) 逐字引用（`reduction.tex:9-23`）：
+
+```tex
+\begin{proposition}[Variance bound]\label{prop:variance}
+Let $n\ge2$, $N\ge1$, $q\ge2$ be an even integer, and $\eps>0$.
+Let $p_1,\ldots,p_N\in\R^n\setminus\{0\}$ and $h_1,\ldots,h_N>0$.
+Set
+\begin{equation}\label{eq:potential}
+ \psi_i(x)=\left(\frac{\langle p_i,x\rangle}{h_i}\right)^q,
+ \qquad V(x)=\frac{\eps}{2}|x|^2+\sum_{i=1}^N\psi_i(x),
+ \qquad d\mu=Z^{-1}e^{-V(x)}\,dx,
+\end{equation}
+where $Z=\int_{\R^n}e^{-V(x)}\,dx$. For all real $b_1,\ldots,b_N$,
+\begin{equation}\label{eq:variance}
+ \Var_\mu\left(\sum_{i=1}^N b_i\psi_i\right)
+ \le\sum_{i=1}^N b_i^2\E_\mu\psi_i.
+\end{equation}
+\end{proposition}
+```
+
+(b) 推导中间步骤。这条命题是全篇的分析核心，证明分布在 `reduction.tex:30-42`（对偶化）、`moment.tex`（坐标）、`identities.tex`（算子与测试类）、`density.tex`（稠密）、`tensor.tex`（张量界）、`variance.tex:8-94`（收尾）。补出的中间环节：
+
+1. 对偶化：目标是对一切 $b$ 的二次不等式，被换成对一切中心偶 $u\in L^2(\mu)$ 的 $\sum_i(\E u\psi_i)^2/\E\psi_i\le\E u^2$（`reduction.tex:31-34`）。反推：取 $u=\sum b_i\psi_i-\E(\cdot)$，记 $d_i=\E u\psi_i$，则 $\|u\|_2^2=\sum b_id_i$，两次 Cauchy-Schwarz 得 $\|u\|_2^2\le(\sum b_i^2a_i)^{1/2}(\sum d_i^2/a_i)^{1/2}\le(\sum b_i^2a_i)^{1/2}\|u\|_2$（`variance.tex:84-90`），除掉 $\|u\|_2$ 并平方即 `eq:variance`；$\|u\|_2=0$ 时结论显然（`variance.tex:91-92`）。
+2. 分母正当性：$a_i=\E\psi_i>0$，因为 $p_i\ne0$ 且密度处处正（`reduction.tex:36-37`、`variance.tex:15-16`）。
+3. 用 Lemma 3.1 得 $0<\tau\le(4/\eps)I$（`variance.tex:10-11`），$H_i=D^2\psi_i$ 半正定。
+4. 齐次性两条：$x\cdot\nabla\psi_i=q\psi_i$、$H_ix=(q-1)\nabla\psi_i$（`variance.tex:17-20`）。第二条的重构：$H_i=q(q-1)\langle p_i,x\rangle^{q-2}p_i\otimes p_i/h_i^q$，与 $x$ 缩并得 $q(q-1)\langle p_i,x\rangle^{q-1}p_i/h_i^q=(q-1)\nabla\psi_i$。
+5. 非紧函数的伴随合法性（正文最容易跳的地方）：对 $k=\eta_R\partial_{x_j}\psi_i$ 用 $\E x_jk=\E\tau_{jk}\partial_{x_k}k$ 并对 $j$ 求和，多出的一项被 $CR^{-1}\E[|\nabla\psi_i|\mathbf1_{|x|\ge R}]$ 控制并趋零，其余收敛靠 $\tau$ 有界与多项式矩有限（`variance.tex:25-32`），得 $m_i:=\E\tr(\tau H_i)=qa_i$（`variance.tex:22-24`）。
+6. 对 $F=\psi_i$ 用配对式 `eq:test-pairing`：$d_i=\E u\psi_i=\E W\cdot\nabla\psi_i=\E\tr(BH_i)$（`variance.tex:40-43`）。这一步让同一个数同时是"对偶配对"与"矩阵收缩"。
+7. 第一次 Cauchy-Schwarz：矩阵场 $H_i^{1/2}\tau^{1/2}$ 与 $H_i^{1/2}B\tau^{-1/2}$ 的 HS 内积（连同积分）配对出 $\tr(H_iB)$，得 $d_i^2\le m_i\E\tr(MBH_iB)$（`variance.tex:47-53`）。此步不需要 $B$ 半正定（`variance.tex:54`）。
+8. 第二次 Cauchy-Schwarz：半正定形式 $(X,Y)\mapsto\E X^TH_iY$ 作用在 $x$ 与 $W$ 上，配 $\E x^TH_ix=(q-1)m_i$、$\E x^TH_iW=(q-1)d_i$，得 $\E W^TH_iW\ge(q-1)d_i^2/m_i$（`variance.tex:55-64`）。
+9. 相加：$H=\eps I+\sum_iH_i$，用 Lemma 6.1 的 `eq:tensor-energy`，$\E u^2\ge\sum_i(\E\tr(MBH_iB)+\E W^TH_iW)\ge\sum_i\frac{qd_i^2}{m_i}=\sum_i\frac{d_i^2}{a_i}$（`variance.tex:66-75`）；丢掉的 $\eps$ 项非负因为 $M$ 正定、$B$ 对称（`variance.tex:76-77`）。
+10. 稠密化：Lemma 5.1 说 $u=A(A-1)f$（$f$ 偶、紧支）在中心偶子空间稠密；$\psi_i\in L^2(\mu)$ 使 $u\mapsto\E u\psi_i$ 连续，故第 9 步扩到全部中心偶 $u$（`variance.tex:80-83`）。
+
+(c) 机械理由。
+
+- 量词四条 $n\ge2$、$N\ge1$、$q\ge2$ 偶、$\eps>0$（`reduction.tex:10`）：$n\ge2$ 被 Lemma 3.1 陈述直接继承（`moment.tex:8`），而 Theorem 1.1 的一维分支在 `reduction.tex:115-118` 手工验成等式，所以 $n\ge2$ 是分析机器启动的最低维度，并非不等式的门槛。$N\ge1$ 保证求和非空，Lean 侧把它实成了 `Nonempty κ`（`BrunnMinkowski.lean:20145`）。$q$ 偶的三处消费：$\psi_i\ge0$ 使 $a_i>0$、$V$ 偶使 $\varphi$ 偶（`moment.tex:61-66`）、每个 $\psi_i$ 凸使 $D^2V\ge\eps I$ 成立；$q\ge2$ 保证 $H_i$ 半正定（第 8 步的半正定形式）并避开 $q=1$ 时 $H_i=0$ 的退化。$\eps$ 的两处消费：$Z<\infty$ 即使 $p_i$ 不张成（`reduction.tex:25-26`）、$D^2V\ge\eps I$ 启动 Lemma 3.1。
+- $p_i\ne0$、$h_i>0$：前者保 $a_i>0$（消费在 `variance.tex:15-16`），后者使 $\psi_i$ 实值光滑且 $\log h_i(t)$ 有意义（消费在 `reduction.tex:49-58`）。Lean 侧原样保留为 `hp : ∀ i, p i ≠ 0`、`hh : ∀ i, 0 < h i`（`BrunnMinkowski.lean:18974`）。
+- $b_i$ 全体实数：`reduction.tex:58` 的 $b_i=-q\log(h_i^1/h_i^0)$ 可正可负，命题不能只对非负 $b$ 陈述；`eq:variance` 两端同为 $b$ 的二次型，故符号无关。
+- 右端形状 $\sum b_i^2\E\psi_i$：被 `reduction.tex:60-67` 的 $\ddot V=\sum b_i^2\psi_i$ 精确消费。若右端多出任何大于 1 的常数，$(\log Z)''\le0$ 失效，定理全断。这个刚性正是第 4-9 步里 $q$ 与 $q-1$ 必须同时出现的原因。
+
+(d) 候选失败路线。
+
+- [推测] 去掉 $\eps$ 取 $V=\sum\psi_i$：$p_i$ 张成时 $Z$ 仍有限，但 $D^2V\ge\eps I$ 失效，$4/\eps$ 变成无穷，`density.tex:57-60` 的 $B/r$ 与 `variance.tex:76-77` 的丢项都失去一致性。
+- [推测] 每个方向用不同偶次 $q_i$：第 4-9 步逐指标仍成立（$m_i=q_ia_i$ 照样抵消），断点在 `reduction.tex:74-83`：$q\to\infty$ 需要一组同时对角的 $q_i$，而逐点极限 $\mathbf1_{P(t)}$ 要求所有 slab 的指数一起升；单一 $q$ 把这个技术风险清零。
+- [推测] 跳过对偶化直接估 $\Var(\sum b_i\psi_i)$：那会要 $B=\tau D^2f\tau$ 半正定，而一般 $f$ 的 $B$ 不定，第 7 步"不需要 $B$ 半正定"就失去作用；对偶化把二次型问题拆成标量配对 $d_i$，才允许两次方向相反的经典 Cauchy-Schwarz 夹逼。
+
+### §5.4 Lemma 3.1（`moment.tex:7-27`，lem:moment / eq:moment / eq:moment-truncated / eq:moment-source-identity / eq:moment-coercivity）
+
+(a) 逐字引用（`moment.tex:7-27`，其中 `moment.tex:10-13` 的定义式我核过原文）：
+
+```tex
+\begin{lemma}[Moment coordinates]\label{lem:moment}
+Let $n\ge2$, $\eps>0$, and let $V\in C^\infty(\R^n)$ be even with
+$D^2V\ge\eps I$.  Set
+\[
+ Z=\int_{\R^n}e^{-V(x)}\,dx,
+ \qquad d\mu(x)=Z^{-1}e^{-V(x)}\,dx.
+\]
+There is an even $\varphi\in C^\infty(\R^n)$ such that
+$d\nu(z)=e^{-\varphi(z)}\,dz$ is a probability measure,
+$\nabla\varphi$ is a diffeomorphism of $\R^n$ onto $\R^n$, and
+\begin{equation}\label{eq:moment}
+ (\nabla\varphi)_\#\nu=\mu,
+ \qquad 0<D^2\varphi\le\frac4\eps I,
+ \qquad
+ \log\det D^2\varphi
+   =V(\nabla\varphi)+\log Z-\varphi.
+\end{equation}
+Moreover, $\varphi(z)\ge c|z|-b$ for some $c>0$ and $b<\infty$.
+The lower Hessian bound in \eqref{eq:moment} means positive definiteness
+at every point; it need not be uniform on $\R^n$.
+\end{lemma}
+```
+
+(b) 推导中间步骤（14 步，对应 `moment.tex:29-186`）。
+
+1. $V(x)\ge V(0)+\eps|x|^2/2$（均匀凸性）给 $0<Z<\infty$（`moment.tex:30-31`）。
+2. 截断：$R\ge2$，$Z_R=\int_{B_R}e^{-V}$，$\mu_R=Z_R^{-1}\mathbf1_{B_R}e^{-V}dx$（`moment.tex:32-36`）。$R\ge2$ 保证 $B_1\subset B_R$，第 8 步要用。
+3. Berman-Berndtsson 紧矩定理作用在 $\overline B_R$ 与正光滑密度 $e^{-V}/Z_R$ 上，给光滑凸势 $\varphi_R$（模平移唯一），$\nabla\varphi_R:\R^n\to B_R$ 微分同胚，且 `eq:moment-truncated`：$\det D^2\varphi_R=Z_R\exp\{V(\nabla\varphi_R)-\varphi_R\}$（`moment.tex:37-46`）。中心假设由偶性满足（`moment.tex:48`）。沿该微分同胚积分此方程得 $\nu_R=e^{-\varphi_R}dz$ 是概率且 $(\nabla\varphi_R)_\#\nu_R=\mu_R$（`moment.tex:47-50`）。
+4. Klartag 估计给 $0<D^2\varphi_R\le CI$，$C=4/\eps$，与 $R$ 无关（`moment.tex:51-59`），输入是：球有光滑正曲率边界、$\rho_R=V+\log Z_R$ 凸且光滑、其在 $B_R$ 上连同各阶导有界、$D^2\rho_R\ge\eps I$。我的重构：$B_R=R\,B_1$，缩到单位球时凸模变 $R^2\eps$，Hessian 界回乘 $R^2$，$R$ 精确消掉，剩下的 $4$ 是标准化单位球上的通用常数；正文没写这层缩放，只声明与 $R$ 无关。[推测]
+5. 偶性：把 $0$ 的原像平移到 $0$（唯一极小点），反射给同一目标的第二个势且极小点也在 $0$，模平移唯一性迫使 $\varphi_R$ 偶（`moment.tex:61-66`）。
+6. 第一版 coercivity：取斜率 $\pm(R/2)e_i$ 的原像，其支撑平面给 $\varphi_R(z)\ge\frac{R}{2\sqrt n}|z|-b_R$，$b_R$ 可与 $R$ 有关（`moment.tex:64-69`）。补的中间步：$2n$ 个支撑平面取最大给 $\frac R2\max_i|z_i|-b_R$，再用 $\max_i|z_i|\ge|z|/\sqrt n$。$\sqrt n$ 只活在这一行，之后被吸收进"$\nu_R$ 有指数尾"。
+7. 源恒等式 `eq:moment-source-identity`：由 $|\nabla\varphi_R|\le R$ 与指数尾，$\operatorname{div}(ze^{-\varphi_R})$ 用扩张紧截断积分为零；展开 $\operatorname{div}(z)=n$，得 $\E_{\nu_R}z\cdot\nabla\varphi_R=n$（`moment.tex:70-76`）。
+8. 与 $R$ 无关的下界：$m_R=\varphi_R(0)$、$g_R=\varphi_R-m_R\ge0$。cap 与 $\nabla\varphi_R(0)=0$ 给 $g_R(y)\le C|y|^2/2$、$|\nabla\varphi_R(y)|\le C|y|$。凸性在 $z$ 处给 $g_R(y)\ge g_R(z)+x\cdot(y-z)$；用偶性在 $-z$ 处给 $g_R(y)\ge g_R(z)-x\cdot y-x\cdot z$；取大：$g_R(y)\ge g_R(z)+|x\cdot y|-x\cdot z$，其中 $x=\nabla\varphi_R(z)$（`moment.tex:78-86`）。对 $\nu_R$ 积分、丢非负 $\E g_R$、用第 7 步：$g_R(y)\ge\int|x\cdot y|d\mu_R-n$（`moment.tex:87-91`）。$\mu_R$ 在 $B_1$ 上密度 $\ge d_0=Z^{-1}\exp(-\max_{\overline B_1}V)>0$（这里用到 $Z_R\le Z$），球的旋转对称把 $\int_{B_1}|x\cdot y|dx$ 化为 $|y|\int_{B_1}|x_1|dx$，于是 $c=d_0\int_{B_1}|x_1|dx>0$（`moment.tex:92-96`），得 `eq:moment-coercivity` 左半。
+9. `eq:moment-coercivity` 右半：$\int e^{-\varphi_R}=1$ 即 $e^{m_R}=\int e^{-g_R}$；下界 $g_R\ge c|y|-n$ 给上界 $e^{m_R}\le e^n\int e^{-c|y|}dy$，上界 $g_R\le C|y|^2/2$ 给下界 $e^{m_R}\ge(2\pi/C)^{n/2}$（`moment.tex:96-102`）。副产品是所有 $e^{-\varphi_R}$ 的公共可积控制。
+10. 局部一致椭圆：$Z_2\le Z_R\le Z$ 加 `eq:moment-truncated` 在固定球上给 $\det D^2\varphi_R$ 正下界；配 $D^2\varphi_R\le CI$ 得 $\delta I\le D^2\varphi_R\le CI$，机制是"行列式 $\ge d>0$ 且各特征值 $\le C$ 则各特征值 $\ge d/C^{n-1}$"（`moment.tex:106-113`）。
+11. 右端 $f_R=V(\nabla\varphi_R)+\log Z_R-\varphi_R$ 在该球上一致 Lipschitz，依据 $\nabla f_R=D^2\varphi_R\nabla V(\nabla\varphi_R)-\nabla\varphi_R$ 一致有界（`moment.tex:114-121`）。我核到这条与 `tensor.tex:66-70` 的关系 $\tau_{ik}V_{x_k}=x_i+c_i$、$c_i=\tr(MC_i)$ 相容，即 $\nabla f_R$ 由 $D^3\varphi_R$ 的收缩表示；正文随后用 Evans-Krylov 与 Schauder 补齐高阶导，所以我把它读作"在 $\delta I\le D^2\varphi_R\le CI$ 与 $V$ 光滑的前提下，$f_R$ 的一致 Lipschitz 是椭圆链条的输入"。
+12. 造一致椭圆算子：取光滑凹标量 $s$，在比 $[\delta,C]$ 略大的区间上等于 $\log$，$s'$ 被正上下界控制（把 $1/t$ 的递减导数光滑接成正尾，`moment.tex:123-128`）。$\mathcal F(Q)=\tr s(Q)$ 光滑、凹、一致椭圆：一阶导特征值 $s'(\lambda_i)$，二阶变差系数含 $s''(\lambda_i)$ 与 $s'$ 的非正差商，且在考虑的 Hessian 上等于 $\log\det$（`moment.tex:128-133`）。非齐次 Evans-Krylov（引 Wang 推论 2.3）作用在 $\mathcal F(D^2\varphi_R)=f_R$，给一致内部 $C^{2,\alpha}$（`moment.tex:133-136`）。
+13. 求导 bootstrap：$w_{R,k}=\partial_k\varphi_R$ 满足 $(D^2\varphi_R)^{-1}:D^2w_{R,k}=\nabla V(\nabla\varphi_R)\cdot\nabla w_{R,k}-w_{R,k}$，$Q:N=\tr(Q^TN)$（`moment.tex:138-143`）；主系数与右端在较小球上一致 $C^\alpha$，内部 Schauder（引 Fernandez-Real-Ros-Oton 定理 2.20 与推论 2.21）给一致 $C^{3,\alpha}$，迭代得各阶（`moment.tex:144-149`）。对角子列极限给偶 $\varphi$、正定 Hessian、同一上界、对数方程，以及与 $R$ 无关的 $\varphi_R(z)\ge c|z|-b$（`moment.tex:150-154`）。
+14. 收尾：公共指数控制使 $\int e^{-\varphi}=1$（受控收敛）；对每个有界连续 $h$ 得 $\int h(\nabla\varphi)e^{-\varphi}=\lim_R\int h\,d\mu_R=\int h\,d\mu$，即 $(\nabla\varphi)_\#\nu=\mu$（`moment.tex:156-165`）。单射由单调性积分恒等式（`moment.tex:166-171`）；像稠密否则某个开球被 $\mu$ 的处处正密度漏掉；固定 $x_0$，取 $x_0\pm e_i$ 的小扰动得有限像点 $y_j$ 使凸包含某 $B_r(x_0)$，支撑平面给 $\varphi(z)-x_0\cdot z\ge r|z|-b_{x_0}$，故取到最小值，最小点处 $\nabla\varphi=x_0$；局部光滑逆拼成全局光滑逆（`moment.tex:172-185`）。
+15. 末尾记账（`moment.tex:188-199`）：记 $x=\nabla\varphi(z)$、$\tau(x)=D^2\varphi((\nabla\varphi)^{-1}(x))$，光滑、偶、正定、上界 $(4/\eps)I$；梯度是奇函数，其逆也是；紧支光滑函数的原像仍紧支，故后面所有紧支撑分部在两套坐标里都合法。
+
+(c) 机械理由与消费者。
+
+- $\eps$：唯一产出物是 $C=4/\eps$，随后被 `variance.tex:10-11`、`density.tex:10` 的 $\Lambda$、`tensor.tex` 的一致界、Lean 侧 `MomentHessianCap`（`BrunnMinkowski.lean:24170`）与 `hupper` 前提（`BrunnMinkowski.lean:18976`）消费。$\eps$ 变大则 cap 变小、逼近变差，这是 §5.3 里两个极限必须分序的根本原因。
+- $V$ 偶：被第 5 步消费，产出 $\varphi$ 偶，再被 `density.tex:32-36`（$A$ 保奇偶）与 `variance.tex:14-16` 消费。
+- $V\in C^\infty$：第 12-13 步的任意阶 bootstrap 与第 11 步的 $\nabla V$ 紧集有界。
+- 下界只逐点正定（`moment.tex:25-26`）：一致下界 $\delta$ 只在第 10 步的每个固定球内成立，陈述刻意不写全局 $\delta$；消费者是第 12 步椭圆性与 `density.tex:112-113`、`density.tex:143-145` 的逐点严格正定。
+- coercivity $\varphi\ge c|z|-b$：三个消费者，指数尾（`moment.tex:103-104`）、$\int e^{-\varphi}=1$ 的受控收敛（`moment.tex:156-157`）、$m_R$ 两侧界（`moment.tex:99-102`）。
+- `eq:moment` 第三式：消费者是 `tensor.tex:62-70` 与 `tensor.tex:86-90`，Lean 侧对应 `ActualMoment.euclidean` 的行列式分量（`BrunnMinkowski.lean:24333-24335`）。
+- $n\ge2$：逐条检查后第 6、8、14 步在 $n=1$ 也成立；它是与 Prop 2.1 对齐的量词约定。
+
+(d) 候选失败路线。
+
+- [推测] 直接用 Brenier 或 Knott 的全空间矩映射：它把 $e^{-\phi}$ 推给目标但只给凸势（ Alexandrov 意义），拿不到 `eq:moment` 的对数行列式等式与 $4/\eps$ 一致上界，后两节的全部输入落空。
+- [推测] 不截断、把 Klartag 的 Hessian 估计直接用在无界目标上：他的命题前提是紧凸体与其正曲率边界（`moment.tex:56` 明写），无界情形没有陈述；即便有，也要证 $C$ 与截断无关才能取极限。
+- [推测] 用 Caffarelli 内部 $W^{2,p}$ 代替 Evans-Krylov：得到积分正则，并非 $C^{2,\alpha}$，第 13 步需要主系数 $C^\alpha$ 才能启动 Schauder，链条在第一环断。
+- [推测] 用 Alexandrov-Pogorelov 整体 MA 正则性：整体估计给不出与 $R$ 无关的局部界，且右端含 $\log Z_R$ 随 $R$ 漂移，唯一性论证不闭合。
+
+### §5.5 Lemma 5.1（`density.tex:7-25`，lem:density / eq:density-cutoff / eq:density-two-estimates / eq:density-approximation）
+
+(a) 逐字引用（`density.tex:7-25`）：
+
+```tex
+\begin{lemma}[Density of even tests]\label{lem:density}
+Let $d\mu=\rho(x)\,dx$ be a probability measure on $\R^n$ with a smooth,
+strictly positive, even density.  Let $\tau$ be a smooth even symmetric
+matrix field with $0<\tau(x)\le\Lambda I$ for some finite $\Lambda$, and set
+\[
+ Af=x\cdot\nabla f-\tau:D^2f.
+\]
+Suppose that $A$ has the integration formula
+\[
+ \E[hAf]=\E[\nabla h\cdot\tau\nabla f]
+ \qquad(f,h\in C_c^\infty(\R^n))
+\]
+and satisfies the compact Hessian identity~\eqref{eq:hessian}.
+Then
+\[
+ \overline{\{A(A-1)f:f\in C_c^\infty(\R^n),\ f\text{ even}\}}^{\,L^2(\mu)}
+ =\{g\in L^2(\mu):g\text{ even},\ \E g=0\}.
+\]
+\end{lemma}
+```
+
+(b) 推导中间步骤（对应 `density.tex:27-151`）。
+
+1. 记 $\Gamma(f,h)=\nabla f\cdot\tau\nabla h$、$\Gamma(f)=\Gamma(f,f)$。积分公式在一因子光滑、另一因子紧支时仍成立（在支集外插截断），于是紧支光滑 $k$ 有 $\E Ak=0$（取 $h=1$ 的截断版本）。$A$ 保奇偶（$x\cdot\nabla$ 把偶变偶、$\tau:D^2f$ 保偶，$\tau$ 偶），所以值域含在中心偶函数里（`density.tex:28-33`）。
+2. 设 $g$ 是中心偶 $L^2(\mu)$ 且与值域正交。奇 $f$ 的 $A(A-1)f$ 是奇函数，偶 $g$ 与其正交自动成立；形式对称给出 $\mathcal Pg=A(A-1)g=0$ 分布意义（`density.tex:35-40`）。权重化的对称性：$d\mu=\rho dx$ 时 $\mathcal P^t(\rho g)=\rho\,\mathcal Pg$（转置对 Lebesgue 测度取），正交性让左边为 0，$\rho$ 光滑严格正于是 $\mathcal Pg=0$（`density.tex:41-44`）。
+3. $\mathcal P$ 的主符号是 $(\xi\cdot\tau(x)\xi)^2$，对 $\xi\ne0$ 为正（因为 $\tau$ 逐点正定），内部椭圆正则性给 $g\in C^\infty$（引 Dyatlov 定理 14.2；`density.tex:45-49` 说明只用紧集上的正性）。
+4. 截断：$0\le\eta_r\le1$，在 $B_r$ 上为 1、$B_{2r}$ 外为 0，$|\nabla\eta_r|\le C/r$、$|D^2\eta_r|\le C/r^2$，$r\ge1$。由 $\tau\le\Lambda I$ 得与 $r$ 无关的 $B,K$ 使 $\Gamma(\eta_r)^{1/2}\le B/r$、$|A\eta_r|\le K$（`eq:density-cutoff`）。我的重构：$\Gamma(\eta)^{1/2}\le\Lambda^{1/2}|\nabla\eta|\le\Lambda^{1/2}C/r$，故 $B=\Lambda^{1/2}C$；$|A\eta|\le|x||\nabla\eta|+\Lambda|D^2\eta|\le 2r\cdot C/r+\Lambda C/r^2\le 2C+\Lambda C$（这里 $|x|\le2r$ 用在导数支集 $B_{2r}\setminus B_r$ 上，正是 `density.tex:61-63` 的说明），故 $K=2C+\Lambda C$，$r\ge1$ 保证最后一项不放大。
+5. 记 $v=Ag$（起初只是光滑函数），$G=\|g\|_2$、$X_r=\|\eta_r^2v\|_2$、$Y_r^2=\E[\eta_r^2\Gamma(g)]$。用 $\eta_r^4g$ 检验 $\mathcal Pg=0$ 得 $\E[v(A-1)(\eta_r^4g)]=0$。
+6. 乘积法则 $A(ab)=aAb+bAa-2\Gamma(a,b)$ 展开 $(A-1)(\eta_r^4g)$。我补齐正文跳过的两次迭代：$A(\eta^2)=2\eta A\eta-2\Gamma(\eta)$；$A(\eta^3)=\eta A(\eta^2)+\eta^2A\eta-2\Gamma(\eta,\eta^2)=3\eta^2A\eta-6\eta\Gamma(\eta)$；$A(\eta^4)=\eta A(\eta^3)+\eta^3A\eta-2\Gamma(\eta,\eta^3)=4\eta^3A\eta-12\eta^2\Gamma(\eta)$。又 $\Gamma(\eta^4,g)=4\eta^3\Gamma(\eta,g)$。合并即 `density.tex:76-83` 的三行展开式。
+7. 由 Cauchy-Schwarz 与 `eq:density-cutoff` 得 `eq:density-two-estimates`：$X_r\le aG+\frac{8B}{r}Y_r$、$Y_r^2\le GX_r+\frac{2B}{r}GY_r$、$a=1+4K+12B^2$。机制：$X_r^2=\E[\eta^4v^2]=-\E[v\cdot(\text{第 6 步括号})]$，括号里三块的系数 $4,12,1$ 分别被 $K,B^2,1$ 吸收（$\eta^3|A\eta|\le K$、$\eta^2\Gamma(\eta)\le B^2$、$\eta^4\le1$），交叉项 $8\eta^3\Gamma(\eta,g)$ 用 $|\Gamma(\eta,g)|\le\Gamma(\eta)^{1/2}\Gamma(g)^{1/2}\le(B/r)\Gamma(g)^{1/2}$。第一条若 $X_r=0$ 显然，否则把 $X_r^2$ 的估计除以 $X_r$（`density.tex:91-92`）。第二条来自对 $\E[\eta^2gAg]$ 分部：$Y_r^2=\E[\eta^2gv]-2\E[\eta g\Gamma(\eta,g)]$（`density.tex:92-96`）。
+8. 合并：$Y_r^2\le aG^2+10BGY_r$，故 $Y_r$、$X_r$ 对 $r$ 一致有界；球穷竭给 $v=Ag\in L^2(\mu)$。于是可设 $w=g-v\in L^2(\mu)$，$Aw=0$、$Av=v$（验证：$\mathcal Pg=0$ 即 $Ag-A^2g=v-Av=0$；$Aw=Ag-A^2g=0$）。这里 $10=8+2$ 是两条估计里系数直接相加。
+9. 调和部分：用 $\eta_r^2w$ 检验 $Aw=0$，配 `eq:density-cutoff` 得 $(\E[\eta_r^2\Gamma(w)])^{1/2}\le(2B/r)\|w\|_2$；在固定球上令 $r\to\infty$ 得 $\Gamma(w)=0$，$\tau$ 严格正定推出 $w$ 常数（`density.tex:104-113`）。系数 $2$ 来自 $A(\eta^2)$ 与 $\Gamma(\eta^2,w)$ 两处乘积法则各自贡献一份 $2\eta\Gamma(\eta,w)$。
+10. 特征值 1 部分：对 $Av=v$ 作同样检验，$Z_r^2=\E[\eta_r^2\Gamma(v)]$ 满足 $Z_r^2\le\|v\|_2^2+(2B/r)\|v\|_2Z_r$，故 $\E\Gamma(v)<\infty$。取 $f_r=\eta_rv$，由 $Af_r=\eta_rv+vA\eta_r-2\Gamma(\eta_r,v)$ 得 `eq:density-approximation`：$f_r\to v$、$Af_r\to v$于 $L^2(\mu)$，因为 $\|vA\eta_r\|_2\le K\|v\mathbf1_{B_{2r}\setminus B_r}\|_2\to0$、$\|\Gamma(\eta_r,v)\|_2\le(B/r)(\E\Gamma(v))^{1/2}\to0$（`density.tex:115-137`）。
+11. 把 `eq:hessian` 用在紧支 $f_r$ 上：$\E\|\tau^{1/2}D^2f_r\tau^{1/2}\|^2=\|Af_r\|_2^2-\E[f_rAf_r]\to0$。在固定球上 $f_r=v$ 对充分大 $r$ 成立，密度与 $\tau$ 的正性迫使 $D^2v=0$，故 $v$ 仿射，$Av=v$ 消掉常数项（`density.tex:138-145`）。
+12. $g=w+v$ 仿射、偶，故为常数；中心化为零故 $g=0$；取正交补即证（`density.tex:147-150`）。
+
+(c) 机械理由。
+
+- 假设"密度光滑严格正且偶"：严格正在第 2 步（$\rho$ 可除掉）与第 11 步（正性传递到 $D^2v=0$）；光滑在第 2 步的 $\mathcal P^t(\rho g)=\rho\mathcal Pg$；偶在第 12 步把仿射解砍成常数，也是整节标题"even tests"的唯一用处。
+- 假设"$0<\tau\le\Lambda I$，$\Lambda$ 有限"：上界在第 4 步造 $B,K$（与 $r$ 无关）；逐点正定在第 3 步（主符号正）与第 9、11 步。陈述完全不需要下界一致，这正是 `introduction.tex:223-225` 强调的可复用点。
+- $r\ge1$：被 $K=2C+\Lambda C$ 的推导消费（$r^{-2}\le r^{-1}\le1$）；若允许 $r\to0$ 则 $|A\eta_r|$ 无界，第 7 步的 $a$ 爆掉。
+- $\eta_r$ 的 $1$-与 $2$-阶梯度标度 $C/r$、$C/r^2$：这是 $B/r$ 与 $K$ 两个量级的来源，也是第 8-10 步里所有 $1/r$ 消失的原因。指数选择（$B_r$ 到 $B_{2r}$）只影响 $C$ 的数值。
+- $a=1+4K+12B^2$：三项分别来自第 6 步括号里的 $-\eta^4$、$4\eta^3A\eta$、$-12\eta^2\Gamma(\eta)$。任何改动（比如把 $A$ 换成 $A-c$）都会重排这三项。
+- 幂次 $\eta_r^4$ 与 $\eta_r^2$：第 5 步用 $\eta^4$ 是为了让左边正好出现 $X_r^2=\E[\eta^4v^2]$；第 9-10 步用 $\eta^2$ 是为了让 $\Gamma$ 项正好是 $Y_r^2,Z_r^2$。
+- 需要的输入 `eq:hessian`：只在第 11 步使用，且只对紧支函数使用，这与 Lemma 3.1 只给逐点正定相匹配。
+- 结论的形式：闭包在 $L^2(\mu)$ 里、右侧是"偶且中心"，被 `variance.tex:80-83` 唯一消费，用来把 `eq:dual-bound` 从稠密类扩到全部中心偶 $u$。
+
+(d) 候选失败路线。
+
+- [推测] 不用正交补，是直接对给定的中心偶 $g$ 解 $\mathcal Pf=g$：那是四阶方程，需要全局先验估计；正文只需要分布解的分类，代价是第 3-11 步的截断论证，但避开了任何一致椭圆下界。
+- [推测] 用 $A$ 在 $L^2(\mu)$ 上的自伴谱定理：正文在 `identities.tex:62-63` 明确拒绝算子域的断言（"These formulas involve no operator-domain assertion"），走谱路线要先证 $A$ 的本质自伴性，而这需要 $\tau$ 的下界或完备性条件；即便证到，仍需证明谱只在 $\{0,1\}$ 上落在核里，等于把第 9-11 步重做一遍。
+- [推测] 用 Hörmander 平方和定理替代椭圆正则性：若 $\tau$ 退化则主符号只半正定，那时必须转向子椭圆估计，而第 3 步的正性论证（以及 Lemma 3.1 能给的逐点正定）都不够；正文选 $C^\infty$ 密度加逐点正定正是为了让最便宜的椭圆正则够用。
+
+### §5.6 Corollary 8.1（`measure.tex:76-91`，cor:measure / eq:measure-logbm / eq:b-function / eq:relative-wulff-inclusion）
+
+(a) 逐字引用（`measure.tex:76-91`）：
+
+```tex
+\begin{corollary}[Measure inequality and scalar $(B)$-conjecture]
+\label{cor:measure}
+Let $n\ge1$, let $\mu$ be an even log-concave Radon measure on $\R^n$, and
+let $K,L\subset\R^n$ be origin-symmetric convex bodies. Then, for every
+$0\le\lambda\le1$,
+\begin{equation}\label{eq:measure-logbm}
+ \mu\bigl(\mathcal W[h_K^{1-\lambda}h_L^\lambda]\bigr)
+ \ge \mu(K)^{1-\lambda}\mu(L)^\lambda.
+\end{equation}
+Consequently, for every origin-symmetric convex body $K\subset\R^n$, the
+function
+\begin{equation}\label{eq:b-function}
+ \R\ni t\longmapsto \mu(e^tK)
+\end{equation}
+is log-concave.
+\end{corollary}
+```
+
+(b) 推导中间步骤（证明在 `measure.tex:93-186`）。
+
+1. 记 $D=\mathcal W[h_K^{1-\lambda}h_L^\lambda]$，固定 $0<\lambda<1$（端点在最后用约定处理）。零测度情形显然（`measure.tex:96`）。
+2. 局部化：取原点中心闭球 $C$ 使 $K\cup L\cup D\subset C$ 且 $0<\mu(C)<\infty$。可行性由三体紧、$\mu$ 是非零 Radon 测度（在紧集上有限，$D$ 有内点所以 $\mu(C)>0$ 需偶性与对数凹性配合，正文把这步当作显然）。定义 $\nu(A)=\mu(A\cap C)/\mu(C)$。
+3. $\nu$ 偶且对数凹：偶性直接由 $\mu$ 偶；对数凹用凸性 $C$ 给的包含 $(1-\theta)(A\cap C)+\theta(B\cap C)\subset((1-\theta)A+\theta B)\cap C$（`measure.tex:104-108`），再用 $\mu$ 的定义不等式。中间验证：左边是 $(A\cap C)$ 与 $(B\cap C)$ 的 Minkowski 插值，任取 $(1-\theta)a+\theta b$（$a\in A\cap C$、$b\in B\cap C$）既在 $(1-\theta)A+\theta B$ 中又在 $C$ 中（$C$ 凸）。
+4. 归约：因 $K,L,D\subset C$，$\mu(C)$ 在 `eq:measure-logbm` 两边同次幂相消（左边一次、右边 $1-\lambda+\lambda=1$ 次），故只需对 $\nu$ 证（`measure.tex:109-111`）。这一步的指数匹配是 $\lambda$ 在 $[0,1]$ 的原因。
+5. 支撑子空间：$E=\operatorname{affhull}(\operatorname{supp}\nu)$，偶性给 $E=-E$ 故 $E$ 是线性子空间（`measure.tex:113-115`）。$\dim E=0$ 时 $\nu=\delta_0$，三体都含 $0$，等式成立。设 $d=\dim E\ge1$，等距识别 $E\cong\R^d$。
+6. Borell 表示：先用内正则把紧集定义的对数凹性等价换成 Borel 集版本（用内测度，`measure.tex:117-119`），再对 $E$ 上的 $\nu$ 用 Borell 定理（引 $s=0$ 情形）把它表示成某个 $k\le d$ 维对数凹密度的仿射像。支撑张成 $E$ 逼仿射映射秩为 $d$，故 $k=d$、映射可逆，$\nu$ 在 $E$ 上有对数凹密度 $f$（`measure.tex:119-124`）。偶性给 $f(x)=f(-x)$ 几乎处处，用 $\sqrt{f(x)f(-x)}$ 取偶的代表（仍是同密度的对数凹函数，因为对数凹性在逐点几何平均下封闭）。
+7. 相对 Wulff 体：$K_E=K\cap E$、$L_E=L\cap E$ 是 $E$ 中的偶凸体（$K,L$ 含 $0$ 的邻域，故与 $E$ 的交仍有相对内点）。相对支撑函数 $h^E_{K_E}(v)=\max_{y\in K_E}\langle y,v\rangle$（$v\in E$），相对 Wulff 体 $D_E=\bigcap_{v\in E}\{x\in E:\langle x,v\rangle\le h^E_{K_E}(v)^{1-\lambda}h^E_{L_E}(v)^\lambda\}$。用全部 $v\in E$ ，并非单位向量给同一体，靠齐次性（`measure.tex:143-144`）。
+8. 关键包含 `eq:relative-wulff-inclusion`：$P_E$ 为正交投影，$x\in D_E$、$u\in S^{n-1}$ 时 $\langle x,u\rangle=\langle x,P_Eu\rangle\le h^E_{K_E}(P_Eu)^{1-\lambda}h^E_{L_E}(P_Eu)^\lambda\le h_K(u)^{1-\lambda}h_L(u)^\lambda$，因为 $h^E_{K_E}(P_Eu)=\max_{y\in K\cap E}\langle y,u\rangle\le h_K(u)$；$P_Eu=0$ 时中间乘积为 $0$（这里用到偶体支撑函数在零向量取 $0$、以及正性使幂有意义）。故 $D_E\subset D\cap E$。
+9. 收尾：$d$ 维的 Theorem 1.1 加 $d$ 维的 Saroglou 传递定理给 $\nu(D_E)\ge\nu(K_E)^{1-\lambda}\nu(L_E)^\lambda$；$\nu$ 支撑在 $E$ 上，故 $\nu(D)=\nu(D\cap E)\ge\nu(D_E)\ge\nu(K)^{1-\lambda}\nu(L)^\lambda$（$\nu(K_E)=\nu(K)$ 因支撑在 $E$）。端点 $\lambda=0,1$ 由 Wulff 体退回 $K,L$ 与端点约定给等式（`measure.tex:170-171`）。
+10. $(B)$-猜想部分：$h_{e^sK}=e^sh_K$ 给 $\mathcal W[h_{e^sK}^{1-\lambda}h_{e^tK}^\lambda]=e^{(1-\lambda)s+\lambda t}K$，对 $e^sK$、$e^tK$ 用 `eq:measure-logbm` 即 $\mu(e^{(1-\lambda)s+\lambda t}K)\ge\mu(e^sK)^{1-\lambda}\mu(e^tK)^\lambda$，这正是 `eq:b-function` 的对数凹性（`measure.tex:173-186`）。
+
+(c) 机械理由。
+
+- "$\mu$ 偶"：消费两次，第 5 步把仿射包变成线性子空间，第 6 步把密度换成偶代表；Saroglou 的传递定理本身只对偶密度陈述（`measure.tex:67-70`）。
+- "对数凹"用紧集定义（`measure.tex:53-58`）：第 3 步的 $\nu$ 验证与第 6 步换 Borel 版本都靠它；Radon 假设只要求在紧集上有限，总质量可以无限，这是第 2 步能选到 $\mu(C)<\infty$ 的依据。
+- "凸体 $K,L$"：第 2 步的紧性、第 7 步的 $K\cap E$ 有相对内点、第 8 步的支撑函数正性，三处消费。
+- 端点约定（`measure.tex:63-65`："Endpoint products in an interpolation inequality are understood as the corresponding endpoint values."）：被第 9 步末与 $\mu(K)=0$ 或 $\infty$ 的乘积歧义消掉；没有这条约定，$\mu(K)=\infty$ 时 `eq:measure-logbm` 右边写不出。
+- 允许密度为零、不需归一化（`measure.tex:70-71`）：第 6 步的 $f$ 正是这种密度，Saroglou 定理在此形式下适用。
+- "同一维度 $d$"：第 9 步两次都用 $d$ 维版本，定理 1.1 与 Saroglou 传递都不跨维，所以支撑子空间约化必须把维度降到 $d$ ，并非降到某个 $k\le d$；第 6 步的"$k=d$"论证正是为了这个匹配。
+
+(d) 候选失败路线。
+
+- [推测] 直接对 $\mu$ 用 Saroglou 而不做子空间约化：他的定理陈述是关于 $d$ 维 Lebesgue 测度的密度（`measure.tex:71-74` 明写），支撑在低维子空间上的 Radon 测度没有密度，必须先用 Borell 把"仿射像"变成"有密度"。
+- [推测] 用 John 椭球把 $\mu$ 各向同性化后套体积版：那引入维度依赖常数，而 `eq:measure-logbm` 是无常数的精确形式，一旦各向同性化就再也回不来。
+- [推测] 跳过 $\sqrt{f(x)f(-x)}$ 而对 a.e. 偶的密度直接引 Saroglou：多数文献要求逐点偶或上半连续代表，用 a.e. 等价的密度代入 Wulff 不等式会在零测集上失去比较基准；几何平均那一步正好同时给出偶性与对数凹性，成本极低。
+
+### §5.7 无编号但承重的关键块（第 4 节与第 7 节）
+
+第 4 节 `identities.tex` 与第 7 节 `variance.tex` 没有带号断言，但四段式对它们同样适用，我按同一格式压缩记录。
+
+(a) 引用。`identities.tex:53-57`：
+
+```tex
+\begin{equation}\label{eq:operator-A}
+ Af=\delta_\mu(\tau\nabla_x f)
+   =\partial_k^*f_{x_k}
+   =x\cdot\nabla_x f-\tau:D_x^2f
+\end{equation}
+```
+
+`identities.tex:43-45`：$\partial_k^*P_{ak}=(\delta_\mu(P\tau))_a$。`identities.tex:68-71` 的五元组 $h=D^2f$、$P=\tau h$、$B=\tau h\tau$、$W_a=\partial_k^*P_{ak}$、$u=\delta_\mu W$。`identities.tex:84-88`：$W=\nabla_z[((A-1)f)(x(z)]=\tau\nabla_x(A-1)f$、$u=A(A-1)f$。`variance.tex:66-75` 的 `eq:dual-bound`。
+
+(b) 中间步骤。
+
+- $A$ 的三重等号：第一条是定义，第二条把 $\delta_\mu$ 作用在向量场 $\tau\nabla f$ 上并写 $\partial_k^*=x_k-\partial_k$，第三条展开 $\sum_k(x_kf_{x_k}-\tau_{jk}f_{x_jx_k})$。形式对称与 `eq:A-form` $\E gAf=\E\nabla g\cdot\tau\nabla f$ 来自 `eq:row-adjoint` 取 $P=\tau\nabla g$（这一步正文写作"两次伴随"，我补的配对是 $\E g\,\partial_k^*(\tau\nabla f)_{\cdot k}=\E(\partial_kg)\tau_{ik}f_{x_k}$ 再换回 $x$ 坐标）。
+- $Ax_j=x_j$（$A$ 的漂移部分作用在坐标上，$\tau:D^2x_j=0$）、$A1=0$，所以 $A(A-1)$ 消灭一切仿射函数（`identities.tex:116-117`）。
+- `eq:W-gradient` 的直接验证：展开 $W_a=x_k\tau_{ai}f_{x_ix_k}-C_{aik}f_{x_ix_k}-\tau_{ai}\tau_{jk}f_{x_ix_kx_j}$（`identities.tex:92-96`），与 $\partial_{z_a}((A-1)f)$ 对比，$x\cdot\nabla_xf$ 产生的一阶梯项与 $-f$ 的一阶梯项恰好相消（正文 `identities.tex:97-98` 明写这点）。副产品：$D_zW$ 对称。
+- `eq:hessian` 的四步链：$\E(Af)(A-1)f=\E\nabla f\cdot\tau\nabla(A-1)f$（`eq:A-form` 取 $g=(A-1)f$）$=\E\nabla f\cdot W$（`eq:W-gradient`）$=\E h:B$（`eq:test-pairing` 取 $F=f$ 的一阶形式）$=\E\|\tau^{1/2}D^2f\tau^{1/2}\|^2_{\rm HS}$（$B=\tau h\tau$ 的平方展开）。
+- `eq:dual-bound` 的四步链与丢弃项：`variance.tex:68-75` 第一行是 `eq:tensor-energy`；第二行用 $H=\eps I+\sum_iH_i$ 拆两项并把 `eq:first-cs`、`eq:second-cs` 代入；第三行是 $m_i=qa_i$ 的抵消；丢弃的 $\eps$ 块是 $Q:\eps I$ 型，$\tr(MB\cdot\eps I\cdot B)=\eps\tr(MB^2)\ge0$（$M$ 正定、$B$ 对称故 $MB^2$ 的迹非负，正文 `variance.tex:76-77` 用的正是这条）。
+
+(c) 机械理由。
+
+- 约定 $Q:L=\tr(Q^TL)$（`identities.tex:18`）：所有双点积的取值规则，若换成 $\tr(Q L)$ 则 $B:D^2F$ 一类不再对非对称 $L$ 良定义。
+- $\partial_k^*=x_k-\partial_k$ 的符号：$\partial_k$ 在 $L^2(\nu)$ 的伴随是 $-\partial_k+\partial_k\varphi=x_k-\partial_k$（因 $\partial_k\varphi=x_k$，`identities.tex:24-27`）；这个符号约定使 $A$ 是 Klartag 矩-Hessian 扩散生成元的相反数（`identities.tex:63-65$），从而 $Ax_j=+x_j$ ，并非 $-x_j$，第 (b) 里"仿射是障碍"的正负号全赖此约定。
+- $\delta_\mu W=\sum_j(V_{x_j}W_j-\partial_{x_j}W_j)$（`identities.tex:29-33`）：$-\partial_{x_j}$ 在 $L^2(\mu)$ 的伴随是 $V_{x_j}-\partial_{x_j}$，所以 $\delta_\mu$ 是负加权散度；矩阵上按行作用（`identities.tex:34`）这一点决定了 `eq:row-adjoint` 里 $(P\tau)_a$ 的指标顺序。
+- 第 7 节里 $H_i$ 半正定、$a_i>0$、$m_i=qa_i$：三个输入分别消费在第 8、第 9 步的 Cauchy-Schwarz 与分母上。
+- $\varepsilon$ 在 `eq:dual-bound` 里只以"被丢掉的正当项"出现：这说明引理对 $\varepsilon$ 的依赖全部在 $M\le(\varepsilon/4)I$ 型界上，而最终不等式不含 $\varepsilon$，与 §5.3(c) 的"常数必须是 1"一致。
+
+(d) 候选失败路线。
+
+- [推测] 不引入 $\partial_k^*$、全程在 $z$ 坐标算：$W$ 与 $B$ 的定义就要靠 $\partial_k^*$ 把伴随项吸进散度形式，纯 $z$ 坐标会出现 $\nabla\varphi$ 与 $\nabla V$ 两个漂移，`eq:W-gradient` 里的一阶项不再相消。
+- [推测] 把 $A$ 取成 Klartag 的原号（不加负号）：则 $Ax_j=-x_j$，$A(A-1)$ 换成 $A(A+1)$，`eq:hessian` 右端多一个负号，第 4 节到第 6 节所有二次型的正负都要重排。
+- [推测] 用 `eq:test-pairing` 的一阶形式（经 $\nabla F$），并非二阶形式来估 $d_i$：一阶形式给 $\E W\cdot\nabla\psi_i$，第 8 步需要的 $\E x^TH_iW$ 型结构就要额外用齐次性 $H_ix=(q-1)\nabla\psi_i$ 换一次；正文两条都用（`variance.tex:41-43` 同时写下三种表达），说明单用哪一条都不够。
+
+### §5.8 Lemma 6.1（`tensor.tex:10-34`，lem:tensor / eq:tensor-estimate / eq:tensor-energy / eq:bochner / eq:twice-moment / eq:trace-expansion / eq:H-expansion / eq:tensor-squares）
+
+(a) 逐字引用（`tensor.tex:10-34`）：
+
+```tex
+\begin{lemma}[Moment-coordinate tensor estimate]\label{lem:tensor}
+Let $d\mu=Z^{-1}e^{-V}dx$ and $d\nu=e^{-\varphi}dz$ be smooth
+probability measures on $\R^n$.  Suppose $D_z^2\varphi$ is positive
+definite and $x=\nabla\varphi(z)$ is a smooth diffeomorphism pushing
+$\nu$ to $\mu$.
+For a real $f\in C_c^\infty(\R_x^n)$, put
+\[
+ \tau=D_z^2\varphi,\quad M=\tau^{-1},\quad H=D_x^2V,
+ \quad B=\tau(D_x^2f)\tau,
+ \quad W=\delta_\mu B,
+ \quad u=\delta_\mu W.
+\]
+View source fields in target coordinates by the inverse moment map.
+Then
+\begin{equation}\label{eq:tensor-estimate}
+ \E\tr\bigl((D_xW)^2\bigr)
+ \ge \E\tr(MBHB),
+\end{equation}
+and
+\begin{equation}\label{eq:tensor-energy}
+ \E u^2\ge\E\tr(MBHB)+\E W^THW.
+\end{equation}
+Here $(D_xW)_{ij}=\partial_{x_j}W_i$, and the square in
+\eqref{eq:tensor-estimate} is a matrix square.
+\end{lemma}
+```
+
+(b) 推导中间步骤。
+
+1. Bochner 部分（`tensor.tex:43-55`）。对任意此类向量场 $W$ 与 $u=\delta_\mu W$：$\partial_{x_i}u=H_{ij}W_j+(V_{x_j}-\partial_{x_j})\partial_{x_i}W_j$。来源是把 $\delta_\mu W=\sum_j(V_{x_j}W_j-\partial_{x_j}W_j)$ 对 $x_i$ 求导，$\partial_{x_i}W_j$ 与 $W_j$ 的导数交换（光滑），而 $\partial_{x_i}V_{x_j}=H_{ij}$。与 $W_i$ 配对取期望：第一项给 $\E W^THW$；第二项用 $\partial_{x_j}$ 的 $L^2(\mu)$ 伴随是 $V_{x_j}-\partial_{x_j}$，把 $(V_{x_j}-\partial_{x_j})$ 移到 $W_i$ 上得 $\E(\partial_{x_j}W_i)(\partial_{x_i}W_j)$。按 $(D_xW)_{ij}=\partial_{x_j}W_i$ 的定义，$\sum_{ij}\partial_{x_j}W_i\partial_{x_i}W_j=\tr((D_xW)^2)$，是矩阵平方的迹，并非 Hilbert-Schmidt 平方（`tensor.tex:32-33` 专门澄清）。左边 $\E u^2=\E W_i\partial_{x_i}u$ 用了配对式 `eq:test-pairing` 取 $F=u$。
+2. 矩方程两次求导（`tensor.tex:60-90`）。由 `eq:moment` 解出 $V(x(z))=\varphi(z)+\log\det\tau(z)-\log Z$。对 $z_i$ 求导：左 $\tau_{ik}V_{x_k}$，右 $x_i+\tr(MC_i)$（因 $\partial_i\log\det\tau=\tr(M\partial_i\tau)=\tr(MC_i)$，$(C_i)_{kl}=C_{ikl}$，$C=D_z^3\varphi$），得 $\tau_{ik}V_{x_k}=x_i+c_i$、$c_i=\tr(MC_i)$。再对 $z_j$ 求导：左端 $C_{ijk}V_{x_k}+\tau_{ik}H_{kl}\tau_{jl}$，右端 $\tau_{ij}+\partial_j(M_{kl}C_{ikl})=\tau_{ij}+(\partial_jM_{kl})C_{ikl}+M_{kl}\varphi_{klij}$，用 $\partial_jM=-MC_jM$ 把 $(\partial_jM_{kl})C_{ikl}$ 写成 $-\tr(MC_iMC_j)$，整理即 `tensor.tex:71-76` 的 $(\tau H\tau)_{ij}=\tau_{ij}+M_{kl}\varphi_{klij}-\tr(MC_iMC_j)-C_{ijk}V_{x_k}$。
+3. 把四阶项与 $\nabla_xV$ 项合并成加权散度（`tensor.tex:78-90`）。两条准备式：$\partial_dM_{dk}=-M_{da}C_{abd}M_{bk}=-c_bM_{bk}$，以及 $\partial_dM_{dk}-x_dM_{dk}=-V_{x_k}$（后者由第 2 步的 $\tau_{ik}V_{x_k}=x_i+c_i$ 与 $M=\tau^{-1}$ 缩并得出）。用 $D_z^4\varphi$ 的全对称性，$M_{kl}\varphi_{klij}=(\partial_dM_{dk})C_{ijk}+M_{dk}\partial_dC_{ijk}$ 且 $C_{ijk}V_{x_k}$ 与之合并成 $(\partial_d-x_d)(M_{dk}C_{ijk})$，得 `eq:twice-moment`：$(\tau H\tau-\tau)_{ij}=(\partial_d-x_d)(M_{dk}C_{ijk})-\tr(MC_iMC_j)$。
+4. $D_zW$ 的分解（`tensor.tex:92-98`）。交换子 $[\partial_l,\partial_k^*]=\tau_{kl}$（$\partial_l=\partial_{z_l}$、$\partial_k^*=x_k-\partial_k$、$x_k=\partial_k\varphi$，故 $[\partial_l,x_k]=\tau_{lk}$）。于是 $D_zW=B+R$、$R_{al}=\partial_k^*\partial_lP_{ak}$，其中交换子贡献 $\tau_{kl}P_{ak}=(P\tau)_{al}=B_{al}$（因 $P=\tau h$、$B=\tau h\tau$）。$D_zW$ 与 $B$ 都对称故 $R$ 对称。再由 $D_xW=D_zW\cdot M$ 得 $D_xW=(B+R)M$，且 $MBM=h$。
+5. 迹展开（`eq:trace-expansion`，`tensor.tex:98-105`）。$\tr((D_xW)^2)=\tr((B+R)M(B+R)M)$，展开四块，交叉块合并成 $2\E(\partial_kh_{al})(\partial_lP_{ak})$（这一步用一次分部积分，把 $R$ 里的 $\partial_k^*$ 转成对 $h$ 的导数），得到 $\E\tr(MBMB)+2\E(\partial_kh_{al})(\partial_lP_{ak})+\E\tr(MRMR)$。末项非负：$\tr(MRMR)=\|M^{1/2}RM^{1/2}\|_{\rm HS}^2$（用 $R$ 对称）。
+6. $H$ 展开（`eq:H-expansion`，`tensor.tex:108-120`）。$\E\tr(MBHB)$ 里 $H$ 的系数矩阵是 $Q=MBMBM=h\tau h$（逐步：$MBM=h$，故 $MBMBM=hBM=h\tau h\tau\tau^{-1}=h\tau h$），即 $\tr(MBHB)=Q:(\tau H\tau)$。代入 `eq:twice-moment`，$Q:\tau=\tr(h\tau h\tau)=\tr(MBMB)$；散度块用 $(\partial_d-x_d)=-\partial_d^*$ 的反对称性分部积分一次，得 $-\E(\partial_dQ_{ij})M_{dk}C_{ijk}$；剩下 $-\E Q_{ij}\tr(MC_iMC_j)$。
+7. 两式相减，公共首项 $\E\tr(MBMB)$ 消掉，剩 $2\E(\partial_kh_{al})(\partial_lP_{ak})+\E\tr(MRMR)+\E(\partial_dQ_{ij})M_{dk}C_{ijk}+\E Q_{ij}\tr(MC_iMC_j)$。要证 `eq:tensor-estimate` 就是证这个差逐点非负（在去掉非负 $R$ 项之后）。
+8. 定点归一化（`tensor.tex:125-157`）。对常数可逆矩阵 $T$ 作 $z=Tz'$、$x'=T^Tx$、$f'(x')=f(T^{-T}x')$，配套 $\varphi'=\varphi(Tz')-\log|\det T|$、$V'(x')=V(T^{-T}x')$、$Z'=|\det T|Z$。我核过这组变换同时保住：两个概率测度（换元）、$x'=\nabla_{z'}\varphi'$、矩方程（$\log\det D^2\varphi'$ 的右端多出 $\log|\det T|$ 与 $V'$ 的换元相消）。变换律见 `tensor.tex:140-144` 的九项表：$\tau,B,R,P,W$ 协变（左乘 $T^T$ 右乘 $T$），$M,h,H,Q$ 逆变（$T^{-1}\cdot T^{-T}$），$z$-导数指标（含 $C$ 的三个指标）与 $\partial_k^*$ 协变。于是每个收缩标量不变，例如 $(\partial_kh_{al})(\partial_lP_{ak})$ 中每个指标恰好配一次协变一次逆变；$D_{x'}W'=T^T(D_xW)T^{-T}$ 使 $\tr((D_xW)^2)$ 不变。取 $T=\tau^{-1/2}$（用该点取值）即可设 $\tau=I$。关键约束：所有导数都在这个常数变换下计算，活动标架不被求导，因为分部积分已经完成（`tensor.tex:154-157`）。
+9. 归一化坐标里的三条收缩（`eq:normalized-cross` / `eq:normalized-derivative` / `eq:normalized-cubic`，`tensor.tex:159-187`）。记 $S_{ijk}=f_{x_ix_jx_k}$（全对称）、$J_{ijk}=h_{ia}C_{ajk}$（后两指标对称）、$J^{(12)}_{ijk}=J_{jik}$。
+   - 交叉项：$\partial_kh_{al}=S_{alk}$，$\partial_lP_{ak}=\partial_l(\tau_{ai}h_{ik})=C_{ail}h_{ik}+S_{akl}$（$\tau=I$ 帧内 $\partial_l\tau_{ai}=C_{ail}$），故 $2(\partial_kh_{al})(\partial_lP_{ak})=2\|S\|^2+2\langle S,J\rangle$（$J$ 的定义把 $C_{ail}h_{ik}$ 与 $S$ 的缩并写成 $\langle S,J\rangle$，用到 $C$ 全对称）。
+   - 导数项：$\partial_dQ_{ij}=\partial_d(h\tau h)_{ij}$ 微分两个 $h$ 因子给两份 $\langle S,J\rangle$，微分中间 $\tau$ 因子给 $\sum_{iabjd}h_{ia}C_{abd}h_{bj}C_{ijd}=\sum_d\tr(hC_dhC_d)=\langle J,J^{(12)}\rangle$，故 $(\partial_dQ_{ij})C_{ijd}=2\langle S,J\rangle+\langle J,J^{(12)}\rangle$。
+   - 三次项：$\tau=I$ 时 $Q=h^2$，$Q_{ij}\tr(C_iC_j)=\|J\|^2$（展开 $Q$ 与迹，用 $C$ 全对称）。
+10. 差为 $2\|S\|^2+4\langle S,J\rangle+\|J\|^2+\langle J,J^{(12)}\rangle$（`tensor.tex:189-194`）。全对称化 $(\operatorname{Sym}J)_{ijk}=\frac{J_{ijk}+J_{jik}+J_{kij}}{3}$。我核过两个辅助式：$\|\operatorname{Sym}J\|^2=\frac{\|J\|^2+2\langle J,J^{(12)}\rangle}{3}$（九项交叉积里，$J$ 后两指标对称与 $J^{(12)}\|=\|J\|$ 使三项自配给出 $3\|J\|^2$、六项互配两两相等给出 $6\langle J,J^{(12)}\rangle$），以及 $\langle S,\operatorname{Sym}J\rangle=\langle S,J\rangle$（$S$ 全对称）。于是
+$$2\|S+\\operatorname{Sym}J\|^2+\tfrac16\|J-J^{(12)}\|^2=2\|S\|^2+4\langle S,J\rangle+\tfrac23(\|J\|^2+2\langle J,J^{(12)}\rangle)+\tfrac16(2\|J\|^2-2\langle J,J^{(12)}\rangle)$$
+$$=2\|S\|^2+4\langle S,J\rangle+\|J\|^2+\langle J,J^{(12)}\rangle,$$
+与第 10 步的被积式逐项相等，这就是 `eq:tensor-squares`（`tensor.tex:208-211`）。逐点非负证毕 `eq:tensor-estimate`；与第 1 步的 `eq:bochner` 合并即 `eq:tensor-energy`。
+11. 结尾记账（`tensor.tex:217-220`）：软 slab 势能下 $H=D^2V$ 是正定二次部分加各齐次单量的半正定 Hessian 之和，所以 `eq:tensor-energy` 右端可以逐单量拆分使用。
+
+(c) 机械理由。
+
+- 假设"两个都是概率测度、$D_z^2\varphi$ 正定、$x=\nabla\varphi$ 是光滑微分同胚且推 $\nu$ 到 $\mu$"：这四条恰好是全部伴随式（$\partial_k^*=x_k-\partial_k$、$\delta_\mu$）与两套坐标互译所需的最小集，$\tau$ 正定保证 $M$ 存在且第 5 步的 $\|M^{1/2}RM^{1/2}\|^2$ 有意义；"推 $\nu$ 到 $\mu$" 保证 $\E$ 在两套坐标下同值（`identities.tex:15-16`）。注意本引理不吃 $4/\eps$ 上界，也不吃 $V$ 凸；上界只在别处消费，这使引理可复用。
+- 假设"$f$ 实值且 $C_c^\infty$"：实值让 $B,W,u$ 实值从而迹与内积无共轭歧义；$f$ 紧支保证 $h,B,W,u$ 在两套坐标里都紧支（`identities.tex:72-74` 与 `moment.tex:193-198`），于是第 1、6 步的分部积分边界项为零，$F$ 也不必紧支（`identities.tex:80`）。
+- $\tr((D_xW)^2)$ ，并非 $\|D_xW\|^2_{\rm HS}$：`tensor.tex:32-33` 明确"矩阵平方"。差别就是 $\langle J,J^{(12)}\rangle$ 这一项；换成 HS 平方则第 10 步的对配恒等式不再闭合（差里余下无法配成平方的一块）。[推测]
+- 系数 $1/6$ 与 $2$：由第 10 步的两条辅助式的分母 $3$ 与 $\|J-J^{(12)}\|^2$ 展开的 $1/2$ 相乘得到，纯代数刚性；若把 $2\|S+\operatorname{Sym}J\|^2$ 的 $2$ 改成任何别的数，$\|S\|^2$ 与 $\langle S,J\rangle$ 的系数比就与第 9 步不符。
+- $T=\tau^{-1/2}$ 只在定点取值、且必须在分部积分完成后使用（`tensor.tex:154-157`）：这是本引理最容易被写坏的环节，我把它记成"先分部后归一化"的操作次序律。
+- $Q=h\tau h$：它是 $H$ 在 $\tr(MBHB)$ 里的系数矩阵（第 6 步推导），也是第 9 步里"微分中间因子"的来源；$\tau=I$ 时退化为 $h^2$，与 `eq:normalized-cubic` 的推导一致。
+
+(d) 候选失败路线。
+
+- [推测] 走 Bakry-Émery 的 $\Gamma_2$ 标量演算：$\Gamma_2$ 给出 HS 平方与 Ric 项，正好的是"非负"，缺的是 $\tr(MBHB)$ 这一具体收缩；$\langle J,J^{(12)}\rangle$ 无法在标量演算里出现，第 10 步的完全平方闭合失败。正文 `tensor.tex:38-42` 承认背景是 Bakry-Émery 与 KLR 的传输-Hessian 公式，但坚持"这里要的是向量场的恒等式，所以显式推并保留 $\tr((D_xW)^2)$"。
+- [推测] 活动标架对角化 $\tau(x)$：对随点变化的 $T(x)$ 求导会造出 $\partial T$ 型一阶项，交叉项 $2\langle S,J\rangle$ 的系数被污染，平方闭合失效；正文用常数 $T$ 且强调"活动标架不被求导"就是这条路的墓碑。
+- [推测] 用 Cauchy-Schwarz 粗估 $4\langle S,J\rangle$（例如 $\le2\|S\|^2+\frac12\|J\|^2$）：$\|\operatorname{Sym}J\|^2$ 型信息丢失，余量变号，`eq:tensor-estimate` 不再成立；更糟的是即使勉强成立，任何损失都会通过 `variance.tex:72` 传进 `eq:variance` 的右端常数，而 §5.3(c) 说明那个常数必须是 1。
+- [推测] 跳过 `eq:twice-moment` 直接在 $x$ 坐标里估 $H$：$H$ 与 $\tau$ 之间没有点wise关系（$D^2V$ 不含 $\varphi$ 的信息），必须靠矩方程把 $\tau H\tau$ 与 $C$ 挂钩，这正是第 2-3 步的全部作用。
+
+## §6 常数与参数台账
+
+| 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+| --- | --- | --- | --- | --- |
+| $\lambda$（正文定理侧）；$t$（证明侧同物异名） | 闭区间 $[0,1]$ | introduction.tex:24；reduction.tex:47 | $h_i(t)=(h_i^0)^{1-t}(h_i^1)^t$ 与 `eq:main` | 出区间则 $h_i(t)$ 的端点识别 `reduction.tex:110-111` 失效，$t=0,1$ 不再给 $K,L$ |
+| $n$ 的下界 | 定理 $n\ge1$，分析机器 $n\ge2$ | introduction.tex:23；reduction.tex:10；moment.tex:8 | `reduction.tex:115-118` 的一维手工验证 | 把 $n\ge2$ 改成 $n\ge1$ 后 Lemma 3.1 的 $2n$ 个支撑平面论证与球 $B_1$ 上的 $\lvert x_1\rvert$ 积分仍能走，但 `reduction.tex:45` 的"张成方向有限集"在 $n=1$ 需单独选方向 |
+| $N$ | $\ge1$，有限 | reduction.tex:10；reduction.tex:45 | 所有 $\sum_{i=1}^N$ 与 $b\in\R^N$ | 取 $N=0$ 时 `eq:variance` 两端皆 0，命题空转；`reduction.tex:52` 的"张成"要求 $N\ge n$ |
+| $q$ | $\ge2$ 的偶整数，最终 $q\to\infty$ | reduction.tex:10；reduction.tex:74 | $\psi_i$ 的凸性、$m_i=qa_i$、$H_ix=(q-1)\nabla\psi_i$（variance.tex:17-20） | 改奇数则 $\psi_i$ 变号、$a_i>0$ 与 $D^2V\ge\eps I$ 同时失效；固定不改无穷则 `eq:slabs` 得不到指示函数 |
+| $\eps$ | 任意 $>0$，最终 $\downarrow0$ | reduction.tex:10；reduction.tex:85 | $Z<\infty$、$D^2V\ge\eps I$、$C=4/\eps$ | 令 $\eps=0$ 时 $p_i$ 不张成即 $Z=\infty$（`reduction.tex:25-26`）；先 $\eps\to0$ 再 $q\to\infty$ 会失去控制函数 $e^{-\eps\lvert x\rvert^2/2}$ |
+| $h_i^0,h_i^1$ | 严格正 | reduction.tex:46 | $\log h_i^1/h_i^0$、$b_i$ | 有一个为 0 则 $b_i$ 发散，`reduction.tex:60-62` 的 $\dot V,\ddot V$ 不再是 $L^1$ |
+| $b_i$ | $-q\log(h_i^1/h_i^0)$，可正可负 | reduction.tex:58 | $\dot V=\sum b_i\psi_i$、$\ddot V=\sum b_i^2\psi_i$ | 换成 $-\log(h_i^1/h_i^0)$（丢 $q$）则 $\ddot V$ 差因子 $q^2$，`eq:variance` 右端常数不再是 1 |
+| $p_i$ | 非零向量，证明中取单位向量 | reduction.tex:11；reduction.tex:96-99 | $a_i>0$、稠密方向穷竭 | $p_i=0$ 使 $\psi_i\equiv0$、$d_i/a_i$ 成 $0/0$ |
+| $C$ | $4/\eps$，与 $R$ 无关 | moment.tex:54；moment.tex:192 | $\delta I\le D^2\varphi_R\le CI$、$\Lambda$、$B,K$、Lean 的 `hupper` | 依赖 $R$ 时子列极限与 `eq:moment-coercivity` 的上界同时失效 |
+| $\delta$ | $d/C^{n-1}$，$d$ 为 $\det D^2\varphi_R$ 的局部下界 | moment.tex:111-113 | $s$ 函数在 $[\delta,C]$ 上取 $\log$、一致椭圆性 | 无一致 $\delta$ 时 Evans-Krylov 与 Schauder 的常数不一致，`moment.tex:150` 的对角子列不存在 |
+| $R$ | $\ge2$，$R\to\infty$ 沿子列 | moment.tex:32；moment.tex:150 | $B_1\subset B_R$、$Z_2\le Z_R\le Z$ | $R<1$ 时 $d_0$ 的定义域 $B_1$ 超出支撑，`moment.tex:92-96` 的下界断 |
+| $d_0$ | $Z^{-1}\exp(-\max_{\bar B_1}V)>0$ | moment.tex:93 | $c$、密度下界 | 若 $Z_R>Z$ 则此下界方向反，`moment.tex:109` 的 $Z_2\le Z_R\le Z$ 是它的根据 |
+| $c$ | $d_0\int_{B_1}\lvert x_1\rvert\,dx>0$，与 $R$ 无关 | moment.tex:96 | coercivity $c\lvert y\rvert-n\le g_R(y)$、指数尾、$\int e^{-\varphi}=1$ | 依赖 $R$ 则公共可积控制丢失（`moment.tex:103-104`），受控收敛两条链全断 |
+| $n$（源恒等式右端） | 恰为维数 $n$ | moment.tex:75 | coercivity 里的 $-n$、$e^{m_R}\le e^n\int e^{-c\lvert y\rvert}dy$ | 若源恒等式右端是 $m\ne n$，则 $-n$ 换成 $-m$，$e^m$ 界随之改，但 $\int e^{-\varphi}=1$ 的验证会矛盾 |
+| $R/(2\sqrt n)$ | 随 $R$ 线性、随 $n$ 衰减 | moment.tex:67 | 第一版 coercivity 与指数尾 | $\sqrt n$ 来自 $\max_i\lvert z_i\rvert\ge\lvert z\rvert/\sqrt n$；去掉它只影响 $b_R$ 的量级，不影响与 $R$ 无关的那版界 |
+| $(2\pi/C)^{n/2}$ 与 $e^n\int e^{-c\lvert y\rvert}dy$ | $e^{m_R}$ 的双侧夹 | moment.tex:97-102 | $m_R$ 一致有界、极限测度归一 | 任一侧失守则 $\int e^{-\varphi}=1$ 或 $\delta$ 下界不成 |
+| $\Lambda$ | 有限上界，$0<\tau\le\Lambda I$ | density.tex:10 | $B,K$、$a$、$Y_r,Z_r$ 一致界 | $\Lambda=\infty$ 时 `eq:density-cutoff` 失效，`density.tex:97-99` 的一致有界不成，$Ag\in L^2$ 断 |
+| $B$ | $\Lambda^{1/2}C_{\eta}$（截断梯度常数乘 $\Lambda^{1/2}$） | density.tex:54-58 | $\Gamma(\eta_r)^{1/2}\le B/r$、$a=1+4K+12B^2$ | 若 $B$ 依赖 $r$，所有 $1/r$ 消失的论证（`density.tex:104-121`）失效 |
+| $K$ | $2C_{\eta}+\Lambda C_{\eta}$，用 $\lvert x\rvert\le2r$ | density.tex:58-63 | $\lvert A\eta_r\rvert\le K$、$a$ 的 $4K$ 项 | 用 $\tau$ 的下界替代上界则 $K$ 无界 |
+| $a$ | $1+4K+12B^2$ | density.tex:89 | $X_r\le aG+(8B/r)Y_r$、$Y_r^2\le aG^2+10BGY_r$ | 系数 4、12 与展开式 `density.tex:76-83` 逐项对应，改 $\eta_r^4$ 的幂就错 |
+| $10$ | $8+2$ | density.tex:98 | $Y_r$ 一致界 | 由两条估计的系数直接相加，改 $\eta_r$ 的支撑比例会重算 |
+| $r$ | $\ge1$，$r\to\infty$ | density.tex:54；density.tex:112 | $B/r\to0$、$K$ 一致 | 允许 $r<1$ 则 $r^{-2}$ 放大，$K$ 不成立 |
+| $a_i$ | $\E\psi_i>0$ | variance.tex:13 | $d_i/a_i$、`eq:variance` 右端 | $a_i=0$ 时对偶式分母崩，Lean 侧对应 `mean_summand_pos`（BrunnMinkowski.lean:19011） |
+| $m_i$ | $\E\tr(\tau H_i)=qa_i$ | variance.tex:22-24 | `eq:first-cs`、`eq:second-cs`、`eq:dual-bound` | 若只知 $m_i\le qa_i$，第 9 步得到的是带 $(q-1)/q$ 损失的界 |
+| $d_i$ | $\E u\psi_i=\E W\cdot\nabla\psi_i=\E\tr(BH_i)$ | variance.tex:41-42 | 两次 Cauchy-Schwarz 的公共量 | 三个表达式任一条不成立，两条估计就无法夹同一个数 |
+| $q-1$ | 二阶齐次系数的落差 | variance.tex:19 | $\E x^TH_ix=(q-1)m_i$、`eq:second-cs` | 换成一般次齐次（次数 $q$）以外的势，$\E x^TH_iW=(q-1)d_i$ 不成立 |
+| $Q$ | $MBMBM=h\tau h$；归一化下 $h^2$ | tensor.tex:111；tensor.tex:186-187 | `eq:H-expansion` 的三条收缩 | 若 $Q\ne MBM\cdot BM$，$\tau H\tau$ 的系数识别错，平方闭合失败 |
+| $1/6$ | $\frac16\lVert J-J^{(12)}\rVert^2$ 的系数 | tensor.tex:210 | `eq:tensor-squares` 的逐项对配 | 改成任何别的数，$\langle J,J^{(12)}\rangle$ 系数与第 9 步不符，差式不再非负 |
+| $2$ | $2\lVert S+\operatorname{Sym}J\rVert^2$ 的系数 | tensor.tex:209 | 同上，且解释 $2\lVert S\rVert^2$ 与 $4\langle S,J\rangle$ | 改系数则 $\lVert S\rVert^2$ 项余量非零，符号不定 |
+| $1/3$ | $\operatorname{Sym}J$ 的平均因子 | tensor.tex:198 | $\lVert\operatorname{Sym}J\rVert^2=\frac{\lVert J\rVert^2+2\langle J,J^{(12)}\rangle}{3}$ | 若 $J$ 失去后两指标对称，九项交叉积的计数变，辅助式不成立 |
+| $\theta$ | $\lambda b^p/c^p\in(0,1)$ | measure.tex:20-21 | Theorem 1.1 的插值参数 | $\lambda=0$ 或 $1$ 时 $\theta$ 端点化，需另走 `measure.tex:11-12` |
+| $c$（Corollary 1.2 侧） | $((1-\lambda)a^p+\lambda b^p)^{1/p}$，故 $c^p$ 是右端 | measure.tex:20 | $\mathcal W[cf]=c\mathcal W[f]$ 与最终 $p/n$ 次幂 | 与上表 coercivity 的 $c$ 同字母不同物，两处不可混用 |
+| $p$ | $0<p<1$ | introduction.tex:58 | $1/p$ 与 $p/n$ 两次幂、$c^p$ | $p=0$ 回到母定理；$p<0$ 时 $1/p$ 反号，`measure.tex:44-46` 的最后一步方向错 |
+| $d$ | $\dim E=\dim\operatorname{supp}\nu$ | measure.tex:116 | Theorem 1.1 与 Saroglou 传递都降到 $d$ 维 | 若 Borell 给的 $k<d$（`measure.tex:122-123`），两次定理的维度不匹配，`eq:relative-wulff-inclusion` 之后无法收尾 |
+| $1.6$、$22.5^\circ$、$45^\circ$ | 图中椭圆半轴与八角方向 | figure-slabs.tex:19-20（式内 $\cos(22.5+45\kappa)/\cos(22.5)$）、figure-slabs.tex:8、figure-slabs.tex:25 | 仅供 `fig:slab-exhaustion` 说明 $P_2\supset P_4\supset E$ | 该图不承担证明，但 `reduction.tex:92-93` 明确引用它来说明方向穷竭 |
+
+依赖链（哪个量喂给哪个量）。$\eps$ 与 $V$ 的凸性喂给 Klartag 得 $C=4/\eps$；$C$ 与 $d_0$ 喂给 $c$（coercivity），$c$ 与 $C$ 一起喂给 $m_R$ 的双侧界与公共可积控制，后者喂给 $\delta I\le D^2\varphi_R\le CI$，$\delta$ 与 $C$ 喂给 $s$ 函数与 $\mathcal F$，进而喂给 $C^{2,\alpha}$、Schauder 迭代与极限 $\varphi$；$\varphi$ 产出的 $\tau$ 上界 $(4/\eps)I$ 同时是 `eq:dual-bound` 里 $M$ 的正定性来源和 `density.tex:10` 的 $\Lambda$；$\Lambda$ 喂 $B,K$，$B,K$ 喂 $a$ 与 $10BG$，二者喂 $Ag\in L^2$，最终喂"仿射是唯一障碍"这条稠密性；$q$ 沿两条路喂：一次进 $m_i=qa_i$，一次进 $\E x^TH_ix=(q-1)m_i$，两路在 `eq:dual-bound` 第三行相消，消净后 $q$ 只剩"取无穷"的极限角色；$b_i$ 由 $h_i^0,h_i^1$ 与 $q$ 喂入，喂给 $\dot V,\ddot V$，喂给 $(\log Z)''\le0$，喂给 `eq:partition-concavity`，再经 $q\to\infty$、$\eps\downarrow0$ 喂给 `eq:slabs`，最后由 $D_m$ 的稠密穷竭喂给 `eq:main`；`eq:main` 与 $c,\theta$ 喂给 `eq:lp`，与 Saroglou 传递、Borell 表示和 $d=\dim E$ 喂给 `eq:measure-logbm` 与 `eq:b-function`。
+
+## §7 Lean 取证
+
+### §7.1 登记与文件实况
+
+`E:\math\lean\formalization.yaml:1289-1292` 登记三条：`comparator_config: ComparatorChallenges/LogBrunnMinkowski.json`、`declaration: OAI.LogBrunnMinkowski.main`、`file: OAI/Geometry/LogVolume/BrunnMinkowski.lean`。`ls -la OAI/Geometry/LogVolume/` 实测该目录只有一个文件，`BrunnMinkowski.lean`，1,253,235 B；`wc -l` 给 24,490 行。tex 侧 9 个分片合计 1,411 行 / 44,480 B。悬殊比是：1 个 Lean 文件对 9 个 tex 分片，行数比 17.3，字节比 28.2。
+
+### §7.2 顶层声明逐类计数（`grep -c "^关键词\b"`，行首锚定即顶层）
+
+- `theorem` 183，`lemma` 1284，`def` 277，`abbrev` 15，`instance` 2，`structure` 4。
+- 其余类别实测为零：`inductive` 0、`class` 0、`example` 0、`opaque` 0、`mutuum` 0、`axiom` 0。
+- 组织单元：`^namespace` 211 处、`^end` 322 处、`^section` 78 处、`^open` 454 处；`private`/`protected` 合计 1 处。
+- lemma 对 theorem 的比是 1284 比 183，约 7 比 1，说明绝大多数断言是中间步骤，并非成果命名，这与 tex 侧只有 6 条带号断言形成同方向的对比。
+
+### §7.3 漏洞与公理审计
+
+- `sorry` 命中 0，`sorryAx` 命中 0，`admit` 命中 0（`error` 只作为标识符子串出现在 `holder_error`、`hError` 这类命名里，`BrunnMinkowski.lean:21589`、`:21707`，不是 tactic）。
+- `axiom` 关键词命中 0；`#print axioms` 命中 0，也就是说这个文件内部没有做公理审计，审计在比较器配置那一侧完成。
+- 文件里出现 `propext`（`:2966`、`:7590`）、`Classical.choice`（`:6271`）作为被调用的引理，与允许的三条公理一致。
+
+### §7.4 tactic 词频前十（正则按词边界统计，含 tactic 位与项模式位）
+
+`have` 3105、`rw` 1665、`exact` 1162、`simp` 877、`intro` 678、`apply` 675、`simpa` 549、`let` 436、`change` 392、`obtain` 354。第十一到十八位供参照：`positivity` 308、`linarith` 306、`ring` 277、`dsimp` 236、`norm_num` 228、`refine` 211、`show` 189、`filter_upwards` 174。分布特征：等式改写类（`rw`+`simp`+`simpa`+`dsimp`+`ring`+`norm_num`）与局部结构类（`have`+`obtain`+`let`+`change`）占绝对多数，自动化搜索类（`aesop`、`omega`、`gcongr`、`mono`、`conv`）合计远低于 `have`，说明这是一份以手工等式追踪为主的形式化，并非靠搜索器堆出来的。
+
+### §7.5 比较器配置
+
+`ComparatorChallenges/LogBrunnMinkowski.json` 全文 15 行。`theorem_names` 是长度 1 的列表，唯一条目 `OAI.LogBrunnMinkowski.main`。`definition_names` 是空列表。`permitted_axioms` 是长度 3 的列表：`propext`、`Quot.sound`、`Classical.choice`，即 Lean 的标准三公理，没有额外允许任何自定义公理。`enable_nanoda` 为 `false`。`challenge_module` 是 `ComparatorChallenges.LogBrunnMinkowski`，`solution_module` 是 `OAI.Geometry.LogVolume.BrunnMinkowski`。
+
+结论口径：验收面只有一个定理名，也就是说无论 tex 侧写了多少推论，比较器只认 `OAI.LogBrunnMinkowski.main`。
+
+### §7.6 逐条对应关系（tex 六条带号断言对 Lean 一个文件）
+
+| tex 断言 | Lean 侧对应 | 状态 |
+| --- | --- | --- |
+| Theorem 1.1（thm:main） | `theorem main`（`BrunnMinkowski.lean:24481-24486`），由 `main_of_softVariance`（`:20208`）一步产出，`MainStatement`（`:19030-19034`）是其命题形式 | 在 |
+| Proposition 2.1（prop:variance） | `SoftVarianceStatement`（`:20144-20152`）加 `theorem softVariance`（`:24468-24479`），内部调 `MomentSlab.variance_from_moment`（`:18973-19016`） | 在，但被特化 |
+| Lemma 3.1（lem:moment） | `ActualMoment.euclidean`（`:24328-24360`）与 `ActualMoment.coordinates`（`:24370-24379`），外加 `CompactMomentVariational`、`MomentHessianCap`（`:24170`）、`PositiveDiffeomorphism`（`:24228`） | 在，但只覆盖 slab 势能 |
+| 第 4 节 identities（无编号） | `MomentOperator`（`:14345`）、`MomentKernel`（`:15942`）、`stein`（`:14204`）、`TargetCoordinates`（`:14161`）、`MomentMatrix`（`:14478`） | 在 |
+| Lemma 5.1（lem:density） | `MomentKernel.centered_even_mem_closure`（`:16466`）配合 `EvenClosure`（`:16398`）、`DensityEnergy`（`:14614`、`:14850`、`:15045`）、`DensityLimit`（`:15541`）、`SmoothCutoff`（`:14729`） | 在 |
+| Lemma 6.1（lem:tensor） | `TensorEstimate`（`:16897`）、`IntegratedTensor`（`:17205`）、`FullTensor.tensor_estimate`（`:17558-17565`）、`MetricTensor`（`:16574`）、`MomentTrace`（`:17139`） | 在 |
+| 第 2 节的极限与穷竭（无编号） | `SlabPartition`（`:19416`）、`SoftSlabLimits`（`:19769`）、`SlabReduction`（`:19928`）、`main_of_finite_slabs`（`:19304`）、`iInter_finiteSlabs_eq_wulff`（`:19249`）、`tendsto_volume_finiteSlabs`（`:19274`）、`main_dimension_one`（`:19381`） | 在 |
+| Corollary 1.2（cor:lp） | 无。`grep -i` 对 `powermean`、`lpBrunn`、`lpCombination` 皆 0 命中 | 缺席 |
+| Corollary 8.1（cor:measure） | 无。`Saroglou`、`Borell`、`logConcave`、`Radon`、`coneVolume` 皆 0 命中 | 缺席 |
+
+### §7.7 缺席的两条：没轮到还是不能形式化
+
+Corollary 1.2 一侧的证据支持"还没轮到"。它的证明（`measure.tex:10-47`）只用 Theorem 1.1、加权 AM-GM、$\mathcal W$ 的单调与齐次、以及 $p/n$ 次幂单调，全部是 Mathlib 常规弹药；文件里甚至连 `logCombination` 之外的第二种插值都没有定义（`definition_names` 为空也印证比较器不要求）。
+
+Corollary 8.1 一侧的证据支持"按当前口径无法闭合"。它的两处外部输入是 Saroglou 的传递定理（`measure.tex:67-70`、`:159-161`）与 Borell 的对数凹测度表示（`measure.tex:119-124`）。这两条都不在 Mathlib 里，而 `permitted_axioms` 只放行 `propext`、`Quot.sound`、`Classical.choice`，没有给任何"把外部定理当公理收下"的余地。所以在不扩公理的前提下，Corollary 8.1 只能靠从第一性原理重证 Saroglou 与 Borell，那是另一篇论文的工作量；把这一条判为"当前口径下的实质障碍"，并非"排队没排到"。至于支撑子空间约化本身（`measure.tex:113-168`）不涉及外部定理，属于可形式化但未做的部分。
+
+### §7.8 入口定理的陈述强度：Lean 侧对 tex 侧
+
+逐点对比 `theorem main`（`:24481-24485`）与 Theorem 1.1（`introduction.tex:21-29`）。
+
+- 参数化方式：tex 写 $n\ge1$ 与两个体；Lean 写 `(n : ℕ) (hn : 1 ≤ n) (K L : Set (Space n))`，体是 `Set (EuclideanSpace ℝ (Fin n))` ，并非抽象的 $\R^n$。这带来 tex 没有的一维处理位置差：tex 在证明末尾手工处理 $n=1$（`reduction.tex:115-118`），Lean 在 `main_of_softVariance`（`:20210-20213`）用 `by_cases hn₁ : n = 1` 分岔，一边接 `main_dimension_one`，一边用 `omega` 造 `2 ≤ n`。逻辑内容相同，代码结构上 Lean 把分岔放在了调用侧。
+- 凸体定义：`IsConvexBody := IsCompact ∧ Convex ℝ ∧ (interior).Nonempty`（`:17-18`），与 `introduction.tex:4` 的"紧凸且有内点"逐项对应；tex 的 Corollary 1.2 额外写 "full-dimensional" 只是提醒，Lean 侧无需额外假设，因为定义已含非空内部。
+- 对称性：`OriginSymmetric K := ∀ x, x ∈ K ↔ -x ∈ K`（`:20-21`），比 tex 的 $K=-K$ 强一点（写成集合等价的逐点形式），但等价。
+- 支撑函数：Lean 用 `sSup`（`:23-24`），并非 $\max$，并单独证 `support_attained`（`:19039-19043`，靠紧集像的 `sSup_mem`）；tex 直接写 $\max$。这是表述成本差，不是强度差。
+- Wulff 体：`wulff f := {x | ∀ u, ‖u‖ = 1 → ⟪x, u⟫ ≤ f u}`（`:26-27`），即只对单位法向量化，与 tex 的 $u\in S^{n-1}$ 一致。tex 在 `measure.tex:143-144` 靠齐次性说明"所有 $v\in E$ 与单位向量给同一体"，Lean 侧把这条化进定义了。
+- 结论的数域：tex 是 $|\cdot|\ge$ 的实数不等式；Lean 是 `(volume K) ^ (1 - t) * (volume L) ^ t ≤ volume (logCombination K L t)`，其中 `volume` 是 `MeasureTheory.volume`，取值为 `ENNReal`，幂是 `ENNReal.rpow`。为了这条式子良定义，必须额外有 `body_volume_ne_top`（`:19165-19166`，由紧性给 `measure_ne_top`）与 `body_volume_pos`（`:19162-19163`），还要有 `ennreal_rpow_le_of_toReal`（`:20079`）在有限 slab 体上把 `ENNReal` 降到 `ℝ≥0∞` 的 `toReal`。这是我在 tex 里完全看不见的成本：tex 写 $|K|$ 时默认有限，Lean 要显式排除 $\top$。方向上两边一致（Lean 把待证式左右对调写成 $\le$）。
+- 分析侧入口的强度差：`SoftVarianceStatement`（`:20144-20152`）比 Proposition 2.1 窄。其一，方向集被固定成 `Fintype κ` 上的 `p : κ → Fin n → ℝ`，tex 里是抽象的 $N$ 个向量；其二，势能被 `MvPolynomial` 具体化成 `SlabReduction.features p h q`，tex 里是自由多项式；其三，方差与均值走 `SlabPartition.variance`、`SlabPartition.mean` 并带参数 `(fun _ => 0) 0`（速率与基准点），tex 无对应记号；其四，$n\ge2$ 写成 `2 ≤ n`，与 tex 同。
+- 指数编码差：tex 要求 $q\ge2$ 偶；Lean 把指数写成 `q+2`（`variance_from_moment` 全文用 `potential ε p h (q+2)`，`:18977`），只假设 `Even q`，于是 `q+2 ≥ 2` 自动成立（`:18989` 用 `hq.add even_two`）。到 `softVariance` 收尾时再反向替换：`hqm : Even (q-2)`、`hqq : q-2+2 = q`（`:24472-24477`），最后 `simp only [hqq] at hv`。这是纯编码选择，不改变数学内容，但意味着 Lean 的 $q$ 与 tex 的 $q$ 差 2，跨口径引用时必须换算。
+- 矩坐标引理的强度差：`ActualMoment.euclidean`（`:24328-24338`）把 Lemma 3.1 的三件事拆开写：`ContDiff ℝ ∞ φ`、逐点 `PosDef`、`(4/ε) • 1 - hess φ` 半正定、`Real.log det` 等式，外加一个 `Φ : E ≃ₜ E`（拓扑同胚）满足 `(Φ : E → E) = gradient φ` 且 `Φ.symm` 也 `ContDiff ℝ ∞`。tex 说"$\nabla\varphi$ 是 $\R^n$ 到自身的光滑微分同胚"，Lean 用"同胚 + 两侧 `ContDiff ∞`"表达，等价；但 tex 里"偶的 $\varphi$"这一条在 `ActualMoment.euclidean` 的陈述中不作为结论出现，偶性改由输入侧的 `SoftSlab.potential_even`（`:24345`）供给，即 Lean 把偶性做成了前提的传递，并非结论的产出。tex 的 `Moreover, $\varphi(z)\ge c|z|-b$` 在 `ActualMoment.euclidean` 的结论里也没有独立出现，它被 `CompactMomentVariational.exists_C11_global` 的中间量 `hs` 承担（`:24343-24347`），只作为构造过程的内部界存在。这是我在 Lean 侧看到的最实质的陈述弱化：coercivity 从"定理的一部分"降级为"引理链的私有中间产物"。
+- 覆盖比例的另一面：文件里与 PDE 正则性直接相关的命名空间密集到 `ABPGeometry`（`:5706`）、`WeakHarnack`（`:6816`）、`OscillationIteration`（`:8325`）、`LinearSchauder`（`:23363`）、`MomentSchauder`（`:23843`）、`HolderJets`（`:23483`）、`LocalParametrix`（`:9652`）、`SchwartzKernel`（`:20240`）、`AnnularFourier`（`:20847`）。tex 用 31 行（`moment.tex:106-154`）引三个外部结果（Wang 推论 2.3、Fernandez-Real-Ros-Oton 定理 2.20 与推论 2.21）就跳过的部分，Lean 侧自建了从 ABP、Harnack、振荡衰减到 Schauder 与参数轴的整条链。这就是 17 倍行数差的主要来源。
+
+## §8 外部文献检索
+
+这一节分两栏写，物理上隔开，不混排。§8.2 是"论文口径"：论文正文自己声明引用了什么，逐条给 `文件:行号`，全部来自 `build/*.tex` 里的 `\cite` 命令本身，属于允许的正文素材。§8.3 到 §8.6 是"外部口径"：我这次独立上网爬到的东西，带 arXiv 编号或期刊链接和日期。两栏之间只做对照，不做互相填充；凡是外部检索空手的条目，我在 §8.5 与 §8.6 里如实标 `[推测]`，不去猜内容。
+
+### §8.1 检索口径与工具边界
+
+先交代边界，避免把两栏的证据强度混起来读。
+
+1. 素材侧约束：本次任务禁止读 PDF，也禁止 `pdftotext`（该仓库 PDF 加密，抽出的符号会坏）。`references.bib` 不是 `.tex`，按同一口径我没有打开。因此"论文引用了哪些外部结果"这个问题，我只能从 `.tex` 正文里的 `\cite[...]{} ` 命令重建，能拿到的是引用键、引用位置、以及正文写出的定位符（例如"[Theorem~2.20 and Corollary~2.21]"），拿不到的是每条引用的完整书目（期刊卷期、DOI、发表年与预印年）。这是一个真实的信息缺口，我在下面涉及书目的句子都用 `[推测]` 标注。
+2. 外部侧方法：arXiv API 的关键词检索为主（返回条目、版本、首次提交日期、作者），WebSearch 为补充（常返回聚合站，并非原始论文，这类命中我只作为线索，不作为书目）。检索词全部由论文正文的作者姓与结果定位符生成，不含论文未出现的假设。
+3. 判定规则：一条论文引用算"外部命中"，要求外部返回的作者姓、题名主题、年份三者与引用键以及引用位置的定位符相容；只有作者姓相容而年份或题名不相容的，我记为"待核"。
+
+### §8.2 论文口径：正文实际声明的外部条目
+
+把 44 处 `\cite` 按正文功能归类，每条给位置。这些是论文自己的声明，与我的检索无关。
+
+第一组，猜想史与已知情形（全部在 introduction）：
+- `introduction.tex:76` `[Theorem~3.1]{Saroglou2016}`，`introduction.tex:80` `[Corollary~3.2]{Saroglou2016}`：偶性约化与支撑子空间侧的两件工具。
+- `introduction.tex:113` `[Theorem~1.2]{Saroglou2015}`，`introduction.tex:182` `[Theorem~1.5]{Saroglou2015}`：Saroglou 的 log-凹函数两件结果。
+- `introduction.tex:50` `[equation~(1.10) and the following paragraph, p.~1977]{BLZY2012}`，`introduction.tex:87` `[Problem~1.1]{BLZY2012}`，`introduction.tex:103` `[Lemma~3.2]{BLZY2012}`，`introduction.tex:109` `[Theorem~1.3]{BLZY2012}`：猜想提出处与原始约化引理。
+- `introduction.tex:104` `[Theorem~1.1]{BLYZ2013}`；`introduction.tex:88` `[Theorem~2, p.~3264]{Stancu2018}`；`introduction.tex:121` `[Theorem~2]{BK2022}`。
+- `introduction.tex:124` `{Rotem2014,Cordero2002}`；`introduction.tex:129` `{CLM2017}`；`introduction.tex:132` `{KM2022}`；`introduction.tex:136` `{CHLL2020}`。
+- `introduction.tex:138` `[Theorem~1.7]{Putterman2021}`：局部与全局版本等价。
+- `introduction.tex:142` `[Theorem~1.4 of the cited arXiv version]{vanHandel2023}`；`introduction.tex:146` `{Milman2025}`。
+- `introduction.tex:153` `[Theorem~A]{Iffland2026}`；`introduction.tex:156` `[Theorems~1.2 and~1.3]{Lu2026}`；`introduction.tex:157` `[Theorem~1.1]{Xi2026}`：正文把这三条列为最近的部分情形。
+- `introduction.tex:94` `{Firey1962}`、`introduction.tex:95` `{Lutwak1993}`：$L_p$ 分支的出处；`introduction.tex:116` `{Uhrin1994,BollobasLeader1995,CFM2004}`：离散/组合侧的 log-BM。
+
+第二组，矩坐标与正则性机器：
+- `introduction.tex:196` `{BermanBerndtsson2013}`、`introduction.tex:197` `{KlartagArxiv2013}`、`introduction.tex:198` `{CEK2015}`：正文在此处交代矩坐标路线的出处。
+- `moment.tex:38` `[Theorem~1.1]{BermanBerndtsson2013}`：紧致矩定理，正文直接引用其定理号。
+- `moment.tex:51` `[Proposition~3.1 and Remark~3.5]{KlartagArxiv2013}`：Hessian 上界 $C=4/\eps$ 的出处。
+- `moment.tex:134` `[Corollary~2.3]{Wang2012}`：非齐次 Evans--Krylov 估计。
+- `moment.tex:147` `[Theorem~2.20 and Corollary~2.21]{FernandezRealRosOton2023}`：内部 Schauder Bootstrap。
+- `identities.tex:48` `[Theorem~2.3 of the cited arXiv version]{Fathi2019}`：Fathi 的 moment-map 构造 Stein 核。
+- `identities.tex:64` `[Section~6]{KlartagArxiv2013}`。
+- `density.tex:48` `[Theorem~14.2]{Dyatlov2026}`：密度一节借用其算子/微局部工具。
+
+第三组，张量与测度侧：
+- `tensor.tex:39` `[Proposition~3]{BakryEmery1985}`：$\Gamma$ 演算与 Bochner 恒等式的规范形式。
+- `tensor.tex:40` `[Section~4.3]{KLR2026}`；`identities.tex:104` `[Proposition~4.8]{KLR2026}`；`introduction.tex:211` `[Theorem~1.4 and Corollaries~1.5--1.6]{KLR2026}`；`introduction.tex:219` `[Section~4.3]{KLR2026}`：KLR 是本文外部引用中最重的一条，四个位置分别取定理、推论与两节内容。
+- `introduction.tex:210` `{BrascampLieb1976}`；`introduction.tex:218` `{Kolesnikov2014}`。
+- `measure.tex:70`、`measure.tex:160` `[Theorem~3.1]{Saroglou2016}`；`measure.tex:185` `[Corollary~3.2]{Saroglou2016}`；`measure.tex:120` `[Theorem~1.1, with $s=0$]{Borell1974}`：表示定理，正文明确写了取 $s=0$ 的特化。
+
+清点：44 处引用、约 30 个不同引用键。其中只出现在 introduction 的有 18 个键，说明第 1 节承担全部书目定位，第 2 到第 8 节只在 8 个键上做实质依赖：`BermanBerndtsson2013`、`KlartagArxiv2013`（4 处）、`Wang2012`、`FernandezRealRosOton2023`、`Fathi2019`、`Dyatlov2026`、`BakryEmery1985`、`KLR2026`（4 处）、`Saroglou2016`（3 处）、`Borell1974`。这与 §7 的 Lean 实测吻合：Lean 侧把 4 个正则性引用全部自建展开，把 `Saroglou2016` 与 `Borell1974` 留成 0 命中，正好对应两条推论缺席。
+
+### §8.3 外部口径：本次独立命中的条目
+
+以下每条都是 arXiv API 或期刊页面直接返回的内容，我不做任何补全。
+
+对数/对称 BM 相关：
+- `2609.08495v1`，Xi，"A very short unified proof of Dar's conjecture and Log-Brunn--Minkowski in the plane"，首次提交 2026-09-08。
+- `2608.20730v3`，Lu，"Logarithmic Brunn--Minkowski Inequality under $n-2$ Reflection Symmetries"，2026-08-21。
+- `2602.17912v2`，Iffland，旋转体侧结果，2026-02-20。
+- `2610.10152v1`，Liu--Sun--Xiong，"The centered logarithmic Brunn--Minkowski inequality"，2026-10-07。
+- `2510.19061v2`，Wang，缺陷量单调性方向。
+- `2307.04266v4`，Xi，反向 log-BM。
+- `2602.23350v2`，Armeniakos--Ulivelli，(B)-猜想方向。
+- `2210.00194v3`，Böröczky 综述；`2101.02549v6`，Böröczky--De 定量稳定性；`1404.7811v2`，Stancu。
+- `1711.01089`，$p<1$ 的局部 $L^p$-BM 方向（WebSearch 线索）。
+- Putterman，"Equivalence of the local and global versions of the $L^p$-Brunn--Minkowski inequalities"，J. Funct. Anal.（sciencedirect 页 S0022123621000380，2021）。
+
+凸体体积/矩测度方向：
+- `1309.2767`，Klartag，"Logarithmically-concave moment measures I"。
+- `1304.0630`，Cordero-Erausquin--Klartag，"Moment Measures"。
+- `1606.06586v4`，Colesanti--Livshyts--Marsiglietti；`2003.05282v2`，Hosle--Kolesnikov--Livshyts。
+- `2202.09429v2`，van Handel，zonoid 方向。
+- `1409.4346v2` 与 `1311.4954v4`，Saroglou 两篇（作者姓与主题相容）。
+- `2507.12099v3`，Kolesnikov--Livshyts--Rotem，"On $p$-Brunn--Minkowski and Brascamp--Lieb inequalities"，首次提交 2025-07-16，最新修订 2026-08-26。
+- `1605.09702`，De Philippis--Figalli（MA 正则性侧的相邻文献，我的检索词带出的，非论文引用）。
+- `2604.09914`，Bonnet--Rubinstein；`1907.01823`，Barthe--Klartag。
+
+### §8.4 两栏对照
+
+下表只做"我在外部是否找到了论文声明的那条"，不填书目细节。依据强度写实测到的东西：题名+作者+日期三者齐为"强"，只有作者与主题为"中"，完全没返回原始论文为"空"。
+
+| 论文引用键 | 外部命中 | 依据强度 |
+| --- | --- | --- |
+| `Xi2026`（introduction.tex:157） | `2609.08495v1`，题名含 Log-Brunn--Minkowski 与 Dar 猜想，2026-09-08 | 强 |
+| `Lu2026`（introduction.tex:156） | `2608.20730v3`，题名含对数 BM 与反射对称 | 强 |
+| `Iffland2026`（introduction.tex:153） | `2602.17912v2`，旋转体 | 强 |
+| `KLR2026`（5 处） | `2507.12099v3`，Kolesnikov--Livshyts--Rotem | 强 |
+| `KlartagArxiv2013`（4 处） | `1309.2767`，log-凹矩测度 I | 强 |
+| `CEK2015`（introduction.tex:198） | `1304.0630`，Moment Measures | 中 |
+| `Saroglou2016`（3 处） | `1311.4954v4` 或 `1409.4346v2` 之一，两篇都带出，配对未定 | 中 |
+| `Saroglou2015`（introduction.tex:113,182） | 同上另一篇 | 中 |
+| `vanHandel2023`（introduction.tex:142） | `2202.09429v2` | 中 |
+| `CLM2017`（introduction.tex:129） | `1606.06586v4`，Colesanti--Livshyts--Marsiglietti | 中 |
+| `Putterman2021`（introduction.tex:138） | JFA 页面 S0022123621000380 | 强 |
+| `Stancu2018`（introduction.tex:88） | `1404.7811v2`，Stancu（年份与期刊版不符，正文给 p.~3264，属 2018 期刊版） | 中 |
+| `BK2022`（introduction.tex:121） | 未直接返回；相邻的 `2210.00194v3`、`2101.02549v6` 作者姓部分相容 | 空（推测配对） |
+| `CHLL2020`（introduction.tex:136） | `2003.05282v2` 作者为 Hosle--Kolesnikov--Livshyts，与四姓缩写不合 | 空 |
+| `BermanBerndtsson2013`（2 处） | 两次检索只返回聚合站与中文讲座页，无原始论文 | 空 |
+| `Wang2012`（moment.tex:134） | 只返回汪徐家主页与无关期刊条目 | 空 |
+| `FernandezRealRosOton2023`（moment.tex:147） | 只返回相邻主题的中文聚合条目与 `1406.5825`（另一作者的 $C^{2,\alpha}$ 估计） | 空 |
+| `Dyatlov2026`（density.tex:48） | 未检索到，检索词偏微局部分析，超出我这次设定的关键词集合 | 空 |
+| `Borell1974`（measure.tex:120） | 1974 年 Inventiones 论文不在 arXiv，检索无意义 | 空（原因明确） |
+| `Fathi2019`（identities.tex:48） | 未单独检索（正文明确写"arXiv version"，可判定预印本存在） | 空 |
+| `BakryEmery1985`（tensor.tex:39） | 1985 年 Séminaire de Probabilités，不在 arXiv | 空（原因明确） |
+| `BrascampLieb1976`、`Firey1962`、`Lutwak1993`、`Uhrin1994`、`BollobasLeader1995`、`Cordero2002`、`Rotem2014`、`KM2022`、`Milman2025`、`Kolesnikov2014`、`BLZY2012`、`BLYZ2013`、`CFM2004` | 本轮未逐条检索，不写结论 | 未检索 |
+
+### §8.5 本文自身的外部痕迹
+
+以"logarithmic Brunn-Minkowski conjecture OpenAI 2026"为题名式检索，返回的是中文讲义页、维基"人工智能协助的数学发现列表"条目页、以及若干研讨会通知，没有一条给出这篇预印本的 arXiv 编号、DOI 或投稿记录；两个页面尝试抓取时都失败。据此我只能给出以下事实性判断：
+
+- 我这次检索没有得到本文的独立发表痕迹，因此无法确认本文是否已通过期刊或 arXiv 版本公开。`[推测]`
+- 本文若成立，其编号情形（偶体、$0<p<1$ 的对称 $L_p$ BM 推论 `cor:lp`）在外部检索里最接近的公开条目是 `2609.08495v1`（平面情形）与 `2608.20730v3`（带 $n-2$ 个反射对称的情形），两者都是部分情形，且日期都在本文之前。`[推测]`（这一句是外部检索的比对结果，不含正文证据）
+- 外部检索没有出现"对称对数 BM 猜想已被完整证明并有社区独立验证"的任何条目。我据此判定本文在 2026-09-23 的声明时点上属于前沿结果，属于我的检索边界内的事实，不构成对正确性的评价。
+
+### §8.6 时间线核对
+
+这一步很关键，因为引用日期与本文日期相差不到两周时，"版本"就有实质意义。本文文件名与签署日期是 2026-09-23。
+
+- `2609.08495v1` 提交 2026-09-08，早于本文 15 天。`introduction.tex:157` 引其"Theorem~1.1"作为平面情形，时间相容。
+- `2507.12099v3` 最新修订 2026-08-26，早于本文。正文 5 处引用（含 `[Proposition~4.8]`、`[Theorem~1.4 and Corollaries~1.5--1.6]`、两处 Section 4.3）取的编号与该版本相容；若是 v2 及更早版本，编号会移动。这是我从外部检索得到的、能约束论文版本一致性的唯一一条。`[推测]`（"编号会移动"是对多版本 arXiv 论文的一般性观察，非本文证据）
+- `2608.20730v3`（2026-08-21）、`2602.17912v2`、`2602.23350v2`、`2604.09914` 都早于本文。
+- `2610.10152v1` 提交 2026-10-07，晚于本文 14 天。因此它只能是本文之后的响应或独立工作，不可能是本文的输入；它把"centered"（带重心条件）作为标题限定词，与本文 `reduction.tex:115-118` 的 $n=1$ 边界处理在主题上相邻。此处只描述主题相邻，不作内容比较，因为我没有读它的正文。
+- 论文口径与外部口径的分界线：`[推测]` 全部集中在 §8.4 表的"空"行、§8.5 的三条、§8.6 的第四与第五行的内容比较部分；其余条目都带有可核对的日期或编号。
+
+### §8.7 检索结果对读法的影响
+
+两点实际影响，都是关于我怎么读这篇论文，不是关于论文对不对。
+
+1. 正则性机器的三根外部支柱（`Wang2012`、`FernandezRealRosOton2023`、`Dyatlov2026`）我在外部一条都没抓到原始文本，`BermanBerndtsson2013` 也空手。于是 §5.4 的第 11 到 13 步（一致 Lipschitz 右端、求导 bootstrap、$\mathcal F(Q)=\tr s(Q)$ 的对数次线性）以及 §5.5 第 3 步的主符号 $(\xi\cdot\tau\xi)^2$ 与内部椭圆正则性，我对这几处的中间步骤补全，只能靠正文给出的定量形式（$C=4/\eps$、$\delta=d/C^{n-1}$、引用位置的定理/推论编号）反推，可信度低于其他补全。这一点必须写在外部口径里，不能混进正文口径。
+2. `Saroglou2016` 与 `Borell1974` 的引用位置（`measure.tex:70,160,185`、`measure.tex:120`）在论文口径里是定理号级引用，说明第 8 节把两件测度论结果当作现成机器使用；外部检索只带回两篇 Saroglou 预印本而无书目，`Borell1974` 根本无法在 arXiv 检索。这与 §7 里 Corollary 8.1 在 Lean 侧 0 命中的事实叠在一起，给出了同一个结论的两份独立证据：cor:measure 那一层的障碍是外部机器的可用性。
+
+## §9 自查与清点
+
+### §9.1 编号条目清点
+
+论文 `build/*.tex` 里被 `newtheorem` 环境编号并实际出现的断言，共 7 条，与本文 §5 的子节一一对应：
+
+| 论文断言 | 位置 | 本文子节 | 四段是否齐备 |
+| --- | --- | --- | --- |
+| Theorem 1.1（thm:main） | `introduction.tex:21-29` | §5.1 | (a)(b)(c)(d) |
+| Corollary 1.2（cor:lp） | `introduction.tex:55-65` | §5.2 | (a)(b)(c)(d) |
+| Proposition 2.1（prop:variance） | `reduction.tex:9-23` | §5.3 | (a)(b)(c)(d) |
+| Lemma 3.1（lem:moment） | `moment.tex:7-27` | §5.4 | (a)(b)(c)(d) |
+| Lemma 5.1（lem:density） | `density.tex:7-25` | §5.5 | (a)(b)(c)(d) |
+| Lemma 6.1（lem:tensor） | `tensor.tex:10-34` | §5.8 | (a)(b)(c)(d) |
+| Corollary 8.1（cor:measure） | `measure.tex:76-91` | §5.6 | (a)(b)(c)(d) |
+
+子节号与论文编号的顺序不一致是事实：§5.6 装的是 Corollary 8.1，§5.8 装的是 Lemma 6.1，物理顺序与论文编号顺序相反。原因是 §5.6 落盘在先，§5.8 是后补的追加段，而本任务禁止覆盖或删除已落盘段落，所以我保留物理顺序，只在这一节说明，不回去改写 §5.6。第 4 节与第 7 节没有编号断言，但承担了从矩坐标到张量估计的全部推导，因此单独立一节 §5.7 处理，四段式同样齐备。
+### §9.2 已知瑕疵清单
+
+以下三条是写作过程中我自己造成的，逐条如实记录，不做掩饰，也不通过删改已落盘段落来抹掉痕迹。
+
+1. §5.7 引用了 §5.8 才正式抄出的标签（`eq:tensor-squares` 等），属于前向引用。读者需要先看 §5.8 才能核对 §5.7 的最后一句。
+2. §5.1(c) 与 §5.4(a) 里有若干行内代码段的收尾字符写错（例如把 `identities.tex:53-57` 的行尾括号写成 `$`），影响的是行内代码的高亮显示，位置与行号本身都是实测正确的。
+3. §5.8 里两处公式的行内写法有残缺（`\partial_t\psi_i` 那处花括号收尾不完整，以及 `W=\nabla_z[((A-1)f)(x(z)]` 的括号不配对）。这两处的规范文本在 §5.1(a) 与 §5.4(a) 的围栏引用里是完整正确的，因此读者可以对照。
+
+这三条都在已落盘段落内部，按本任务的落盘规则我不回去覆盖它们。
+
+### §9.3 两栏口径的物理分界
+
+正文口径（论文 tex 的实测行号）出现的位置：§0、§1、§2、§3、§4、§5 全部 (a)(b) 段、§6 台账的第 3 列。外部口径（我这次检索的 arXiv 编号与日期）只出现在 §8.3、§8.4、§8.5、§8.6 以及 §9 之外的两句转述。Lean 口径只出现在 §7 与 §9.1 的对照说明。三者不混排，`[推测]` 标记只出现在 §2 的 (d) 段候选路线、§5 各子节的 (d) 段、以及 §8.4 表的"空"行、§8.5 与 §8.6 的指定位置。
+
+### §9.4 Lean 词频的复核与一处校正
+
+§7.4 那行的前十是在不同批次里测的，其中 `intro` 678 与 `apply` 675 用的是按行计数（同一行出现两次只算一次），其余八个是按词边界的出现次数。最后一次统一复核全部改用 `grep -ow` 的出现次数口径，同一命令跑全部词，结果是：`have` 3105、`rw` 1665、`exact` 1162、`simp` 877、`intro` 679、`apply` 684、`simpa` 549、`let` 436、`change` 392、`obtain` 354；参照位 `positivity` 308、`linarith` 306、`ring` 277、`dsimp` 236、`norm_num` 228、`refine` 211、`show` 189、`filter_upwards` 174。与 §7.4 已落盘的数字相比，只有 `intro` 与 `apply` 两项各差 1 和 9，原因就是我刚才说的口径混用，其余八项与全部参照位逐字相同。
+
+复核同时确认了 §7 的三个关键读数没有变动：行数 24490、字节 1253235、`^theorem` 183、`^lemma` 1284、`^def` 277、`^abbrev` 15、`^instance` 2、`^structure` 4、`^axiom` 0、`sorry` 0、`#print axioms` 0；自动化类 `aesop` 0、`omega` 27、`gcongr` 17、`mono` 70、`conv` 7，合计 121。§7 正文按落盘规则不回改，这一节给出统一口径下的正确读数，两处并存时以本节为准。
+
+

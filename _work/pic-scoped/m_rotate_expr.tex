@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{tikz}
+\pagestyle{empty}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  % calibration: canvas pt reported by pgfgetlastxy for known points
+  \path (3,0);  \pgfgetlastxy{\cax}{\cay}
+  \typeout{CAL x=\cax,y=\cay}
+
+  % control 1: the refused picture's scope options, expression angle
+  \begin{scope}[shift={(45:1.65)},rotate={45/2+90}]
+    \path (0.19,0);  \pgfgetlastxy{\ea}{\eb}
+    \typeout{EXPR a=\ea,\eb}
+    \path (-0.19,0); \pgfgetlastxy{\ec}{\ed}
+    \typeout{EXPR b=\ec,\ed}
+    \path (0,1);     \pgfgetlastxy{\ee}{\ef}
+    \typeout{EXPR c=\ee,\ef}
+  \end{scope}
+
+  % control 2: identical scope with the expression pre-evaluated
+  \begin{scope}[shift={(45:1.65)},rotate={112.5}]
+    \path (0.19,0);  \pgfgetlastxy{\la}{\lb}
+    \typeout{LIT a=\la,\lb}
+    \path (-0.19,0); \pgfgetlastxy{\lc}{\ld}
+    \typeout{LIT b=\lc,\ld}
+    \path (0,1);     \pgfgetlastxy{\le}{\lf}
+    \typeout{LIT c=\le,\lf}
+  \end{scope}
+
+  % control 3: deg suffix after an expression
+  \begin{scope}[shift={(45:1.65)},rotate={45/2+90 deg}]
+    \path (0.19,0);  \pgfgetlastxy{\da}{\db}
+    \typeout{DEG a=\da,\db}
+  \end{scope}
+
+  % control 4: expression-only rotation, no shift, to pin the matrix alone
+  \begin{scope}[rotate={20+30}]
+    \path (1,0); \pgfgetlastxy{\ga}{\gb}
+    \typeout{SUM a=\ga,\gb}
+  \end{scope}
+
+  % control 5: the refused picture at ang=0
+  \begin{scope}[shift={(0:1.65)},rotate={0/2+90}]
+    \path (-.19,0); \pgfgetlastxy{\ha}{\hb}
+    \typeout{ANG0 b=\ha,\hb}
+    \path (.19,0);  \pgfgetlastxy{\hc}{\hd}
+    \typeout{ANG0 a=\hc,\hd}
+  \end{scope}
+\end{tikzpicture}
+\end{document}

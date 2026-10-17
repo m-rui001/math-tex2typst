@@ -1,0 +1,25 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+#104h: the four `fit=` canvases -- the product page and the author's page, 300 dpi,
+     with probe81's pair rows for the two generations beside each.
+
+A-counterexample-to-Kaplanskys-quasitrace-conjecture#0   canvases shipped 1
+        run152 pairs (0): (none)
+        run153 pairs (0): (none)
+        ink ours=16932   body 11pt   crops: ctl=E:\math\_work\m104h_A-counterexa0_ctl.png  ours=E:\math\_work\m104h_A-counterexa0_ours.png
+
+Finite-Congruence-Lattices-Characterization-and-Unde#2   canvases shipped 4
+        run152 pairs (0): (none)
+        run153 pairs (0): (none)
+        ink ours=10084   body 11pt   crops: ctl=E:\math\_work\m104h_Finite-Congr2_ctl.png  ours=E:\math\_work\m104h_Finite-Congr2_ours.png
+
+Perfect-completeness-for-2-to-1-games-September-23-2#0   canvases shipped 1
+        run152 pairs (1): 2.88pt on-ink ancestors / X=∑
+        run153 pairs (0): (none)
+        ink ours=81559   body 11pt   crops: ctl=E:\math\_work\m104h_Perfect-comp0_ctl.png  ours=E:\math\_work\m104h_Perfect-comp0_ours.png
+
+The-Blockwise-Alperin-Weight-Conjecture-September-23#0   canvases shipped 2
+        run152 pairs (5): 2.37pt on-ink Smallorbitgivesanexten / (7) | 4.56pt on-ink Smallorbitgivesanexten / =1 | 3.36pt on-ink Valuedliftandmarked-co / p | 1.37pt on-ink Valuedliftandmarked-co / s | 1.16pt on-ink Differentialestimatean / Nosuchmarked
+        run153 pairs (0): (none)
+        ink ours=66739   body 11pt   crops: ctl=E:\math\_work\m104h_The-Blockwis0_ctl.png  ours=E:\math\_work\m104h_The-Blockwis0_ours.png
+
+

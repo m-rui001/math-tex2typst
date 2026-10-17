@@ -1,0 +1,40 @@
+== rule under test: withdrawn -- a fixed 0.45 cm
+== CD canvases: built 126 over 56 papers; refused 0 over 0 papers
+== arrow labels by arrow direction: count, and how many a line crosses (dist < need)
+   horizontal  labels  152   crossed    0   (median label width 0.00 cm)
+   vertical    labels  192   crossed   69   (median label width 1.91 cm)
+   diagonal    labels   50   crossed   20   (median label width 0.89 cm)
+   crossed by its OWN arrow's line   : 67
+   crossed by another arrow's line   : 22
+     own  Filtered-chromatic-splitting dist 0.450 need 3.675  $upright("principal parts and positive exten
+     own  Filtered-chromatic-splitting dist 0.450 need 2.570  $upright("group and residue duality")$
+     own  Filtered-chromatic-splitting dist 0.450 need 2.400  $upright("the common torsor nerve")$
+     own  Rationality-of-the-Canonical dist 0.450 need 2.315  $upright("supported Hom pairings")$
+     own  Global-quantum-geometric-Lan dist 0.450 need 2.145  $upright("insertion comparison")$
+     own  Unrestricted-pro-modularity- dist 0.450 need 2.145  $upright("forget factors ") 2 \, dots.h \, b
+     own  Rationality-of-the-Canonical dist 0.450 need 2.060  $upright("coefficient descent")$
+     own  Constructible-tame-Hecke-eig dist 0.450 need 2.060  $"Ex"_delta^(*) thin \, med Psi \( upright("
+   papers with a crossed label: 34 over 89 labels
+   per-paper worst:
+       9  Thomason-Model-Structures-in-Every-Strict-Higher-Dimensi
+       8  A-rational-obstruction-to-strong-chromatic-splitting-at-
+       6  Anticanonical-nonvanishing-from-smooth-semipositivity-Se
+       5  Constructible-tame-Hecke-eigensheaves-in-positive-charac
+       5  Global-quantum-geometric-Langlands-at-irrational-level-O
+       4  Infinitely-many-closed-geodesic-images-on-every-Riemanni
+       4  Irrational-cubic-fourfolds-with-geometric-K3-categories-
+       3  Abundance-in-numerical-dimension-one-for-terminal-threef
+       3  Filtered-chromatic-splitting-at-generic-primes-September
+       3  Log-abundance-for-compact-Kahler-spaces-under-logarithmi
+     dist 0.450 need 3.675 w 7.35  Filtered-chromatic-splitting-a  $upright("principal parts and positive exten
+     dist 0.450 need 2.570 w 5.14  Filtered-chromatic-splitting-a  $upright("group and residue duality")$
+     dist 0.450 need 2.400 w 4.80  Filtered-chromatic-splitting-a  $upright("the common torsor nerve")$
+     dist 0.450 need 2.315 w 4.63  Rationality-of-the-Canonical-U  $upright("supported Hom pairings")$
+     dist 0.450 need 2.145 w 4.29  Global-quantum-geometric-Langl  $upright("insertion comparison")$
+     dist 0.450 need 2.145 w 4.29  Unrestricted-pro-modularity-at  $upright("forget factors ") 2 \, dots.h \, b
+     dist 0.450 need 2.060 w 4.12  Rationality-of-the-Canonical-U  $upright("coefficient descent")$
+     dist 0.450 need 2.060 w 4.12  Constructible-tame-Hecke-eigen  $"Ex"_delta^(*) thin \, med Psi \( upright("
+     dist 0.450 need 2.060 w 4.12  Counterexamples-to-weak-chroma  $lambda_(L_(K \( h \)) X) thin L_(K \( h \))
+     dist 0.450 need 1.975 w 3.95  Tame-Hecke-Eigensheaves-with-S  $c_V \( A_W \( Q \) \) thin B_V \( c_W \( Q 
+== environments written inside a CD environment, and whether CD_STACK protects them
+       4  gathered       protected  1 papers

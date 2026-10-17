@@ -1,0 +1,34 @@
+{
+  "paper": "Blochs-Conjecture-for-Surfaces-with-pg-equals-q-equals-0-September-24-2026",
+  "ok": true,
+  "typ_lines": 1342,
+  "included_pdf_pages": 0,
+  "formulas": 994,
+  "math_failed": 0,
+  "labels": 140,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 2,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "994"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark",
+    "accsupp"
+  ],
+  "macros_skipped": [
+    "\\newcommandnewcommand",
+    "\\renewcommand\\hookrightarrow"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Blochs-Conjecture-for-Surfaces-with-pg-equals-q-equals-0-September-24-2026.tex"
+}

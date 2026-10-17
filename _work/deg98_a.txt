@@ -1,0 +1,118 @@
+== A-typical-start-upper-bound-for-low-temperature-SK-Glauber-dynamics-September-24-2026#0 ==
+== source: E:\math\_work\flat\A-typical-start-upper-bound-for-low-temperature-SK-Glauber-dynamics-September-24-2026.tex ==
+  \begin{tikzpicture}[
+    x=1cm,y=1cm,font=\small,
+    coarse/.style={circle,draw=blue!55!black,fill=white,
+      line width=.8pt,minimum size=5.5mm,inner sep=0pt},
+    fine/.style={rectangle,draw=black!80,fill=black!12,
+      line width=.8pt,minimum size=5.5mm,inner sep=0pt},
+    forced/.style={coarse,draw=red!65!black,fill=red!8,line width=1.2pt},
+    flip/.style={circle,fill=black!65,minimum size=1.8mm,inner sep=0pt},
+    boundary/.style={circle,draw=red!65!black,fill=red!8,
+      line width=.8pt,minimum size=3mm,inner sep=0pt}
+  ]
+    \fill[black!3] (-.05,-.75) rectangle (7.3,.9);
+    \fill[blue!3] (7.3,-.75) rectangle (13.5,.9);
+    \draw[densely dotted,black!55] (7.3,-.75) -- (7.3,.9);
+    \node at (3.6,.63) {$S$};
+    \node at (10.4,.63) {$S^{\mathrm c}$};
+  
+    \node[fine] (leftfine) at (.65,0) {};
+    \node[coarse] (coarsezero) at (2.5,0) {};
+    \node[coarse] (coarseone) at (4.4,0) {};
+    \node[forced] (crossleft) at (6.3,0) {};
+    \node[forced] (crossright) at (8.3,0) {};
+    \node[coarse] (coarselast) at (10.3,0) {};
+    \node[fine] (rightfine) at (12.8,0) {};
+    \draw[black!65] (leftfine) -- (coarsezero)
+      (coarsezero) -- (coarseone) (coarseone) -- (crossleft)
+      (crossright) -- (coarselast) (coarselast) -- (rightfine);
+    \draw[red!65!black,line width=1.1pt] (crossleft) -- (crossright);
+    \node[below=1mm] at (leftfine.south) {$x_{\rm f}^{(0)}$};
+    \node[below=1mm] at (rightfine.south) {$x_{\rm f}^{(1)}$};
+    \node[below=1mm] at (crossleft.south) {$u$};
+    \node[below=1mm] at (crossright.south) {$v$};
+    \node[fill=white,inner sep=1.5pt] at (7.3,.48)
+      {$d_H(u,v)\le R$};
+    \node at (6.7,-1.12)
+      {Every step has a coarse endpoint; coarse outputs avoid $\mathcal D_R$.};
+  
+    \node at (7.3,-1.85)
+      {Expand the crossing step into single-spin flips: length $\ell\le R$.};
+    \draw[densely dotted,black!55] (7.3,-2.25) -- (7.3,-3.4);
+    \node[forced] (pathleft) at (3.8,-2.85) {};
+    \node[flip] (pathone) at (4.9,-2.85) {};
+    \node[boundary] (boundaryleft) at (6.2,-2.85) {};
+    \node[boundary] (boundaryright) at (8.4,-2.85) {};
+    \node[flip] (pathlast) at (9.7,-2.85) {};
+    \node[forced] (pathright) at (10.8,-2.85) {};
+    \draw[black!65] (pathleft) -- (pathone) (pathone) -- (boundaryleft)
+      (boundaryright) -- (pathlast) (pathlast) -- (pathright);
+    \draw[red!65!black,line width=1.1pt] (boundaryleft) -- (boundaryright);
+    \node[above=2mm,red!65!black] at (7.3,-2.85) {boundary edge};
+    \node[below=1mm] at (pathleft.south) {$u=y_0$};
+    \node[below=1mm] at (boundaryleft.south) {$y_t$};
+    \node[below=1mm] at (boundaryright.south) {$y_{t+1}$};
+    \node[below=1mm] at (pathright.south) {$v=y_\ell$};
+    \node at (2.65,-2.85) {$S$};
+    \node at (12,-2.85) {$S^{\mathrm c}$};
+    \node[red!65!black] at (7.3,-3.83)
+      {$d_H(u,\partial S),\ d_H(v,\partial S)\le\ell\le R
+        \quad\Longrightarrow\quad u,v\in\mathcal D_R$.};
+  \end{tikzpicture}
+-- emitted --
+#cetz.canvas({
+  import cetz.draw: *
+  rect((-0.05, -0.75), (7.3, 0.9), fill: rgb("#f7f7f7"), stroke: none)
+  rect((7.3, -0.75), (13.5, 0.9), fill: rgb("#f7f7ff"), stroke: none)
+  line((7.3, -0.75), (7.3, 0.9), stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10))
+  content((3.6, 0.63), [#text(size: 9pt)[$S$]])
+  content((10.4, 0.63), [#text(size: 9pt)[$S^( upright(c) )$]])
+  circle((0.65, 0), radius: 0.05, fill: rgb("#e0e0e0"), stroke: (paint: rgb("#333333"), thickness: 0.8pt, miter-limit: 10))
+  circle((2.5, 0), radius: 0.275, fill: rgb("#ffffff"), stroke: (paint: rgb("#00008c"), thickness: 0.8pt, miter-limit: 10))
+  circle((4.4, 0), radius: 0.275, fill: rgb("#ffffff"), stroke: (paint: rgb("#00008c"), thickness: 0.8pt, miter-limit: 10))
+  circle((6.3, 0), radius: 0.275, fill: rgb("#ffebeb"), stroke: (paint: rgb("#a60000"), thickness: 1.2pt, miter-limit: 10))
+  circle((8.3, 0), radius: 0.275, fill: rgb("#ffebeb"), stroke: (paint: rgb("#a60000"), thickness: 1.2pt, miter-limit: 10))
+  circle((10.3, 0), radius: 0.275, fill: rgb("#ffffff"), stroke: (paint: rgb("#00008c"), thickness: 0.8pt, miter-limit: 10))
+  circle((12.8, 0), radius: 0.05, fill: rgb("#e0e0e0"), stroke: (paint: rgb("#333333"), thickness: 0.8pt, miter-limit: 10))
+  line((0.925, 0), (2.211, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  line((2.5, 0), (2.5, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  line((2.789, 0), (4.111, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  line((4.4, 0), (4.4, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  line((4.689, 0), (6.004, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  line((6.596, 0), (8.004, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  line((8.596, 0), (10.01, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  line((10.3, 0), (10.3, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  line((10.59, 0), (12.53, 0), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  line((6.596, 0), (8.004, 0), stroke: (paint: rgb("#a60000"), thickness: 1.1pt, miter-limit: 10))
+  content((0.65, -0.375), [#text(size: 9pt)[$x_( upright(f) )^((0))$]], anchor: "north")
+  content((12.8, -0.375), [#text(size: 9pt)[$x_( upright(f) )^((1))$]], anchor: "north")
+  content((6.3, -0.3962), [#text(size: 9pt)[$u$]], anchor: "north")
+  content((8.3, -0.3962), [#text(size: 9pt)[$v$]], anchor: "north")
+  content((7.3, 0.48), [#box(inset: 0.05292cm, stroke: none, fill: rgb("#ffffff"), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds"); #align(center)[#text(size: 9pt)[$d_H(u,v) lt.eq R$]]])])
+  content((6.7, -1.12), [#text(size: 9pt)[Every step has a coarse endpoint; coarse outputs avoid $cal(D)_R$.]])
+  content((7.3, -1.85), [#text(size: 9pt)[Expand the crossing step into single-spin flips: length $ell lt.eq R$.]])
+  line((7.3, -2.25), (7.3, -3.4), stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10))
+  circle((3.8, -2.85), radius: 0.275, fill: rgb("#ffebeb"), stroke: (paint: rgb("#a60000"), thickness: 1.2pt, miter-limit: 10))
+  circle((4.9, -2.85), radius: 0.09, fill: rgb("#595959"), stroke: none)
+  circle((6.2, -2.85), radius: 0.15, fill: rgb("#ffebeb"), stroke: (paint: rgb("#a60000"), thickness: 0.8pt, miter-limit: 10))
+  circle((8.4, -2.85), radius: 0.15, fill: rgb("#ffebeb"), stroke: (paint: rgb("#a60000"), thickness: 0.8pt, miter-limit: 10))
+  circle((9.7, -2.85), radius: 0.09, fill: rgb("#595959"), stroke: none)
+  circle((10.8, -2.85), radius: 0.275, fill: rgb("#ffebeb"), stroke: (paint: rgb("#a60000"), thickness: 1.2pt, miter-limit: 10))
+  line((4.096, -2.85), (4.803, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  line((4.9, -2.85), (4.9, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  line((4.997, -2.85), (6.036, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  line((6.364, -2.85), (8.236, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  line((8.564, -2.85), (9.603, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  line((9.7, -2.85), (9.7, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  line((9.797, -2.85), (10.5, -2.85), stroke: (paint: rgb("#595959"), thickness: 0.4pt, miter-limit: 10))
+  line((6.364, -2.85), (8.236, -2.85), stroke: (paint: rgb("#a60000"), thickness: 1.1pt, miter-limit: 10))
+  content((7.3, -2.65), [#text(fill: rgb("#a60000"))[#text(size: 9pt)[boundary edge]]], anchor: "south")
+  content((3.8, -3.246), [#text(size: 9pt)[$u=y_0$]], anchor: "north")
+  content((6.2, -3.114), [#text(size: 9pt)[$y_t$]], anchor: "north")
+  content((8.4, -3.114), [#text(size: 9pt)[$y_(t+1)$]], anchor: "north")
+  content((10.8, -3.246), [#text(size: 9pt)[$v=y_ ell$]], anchor: "north")
+  content((2.65, -2.85), [#text(size: 9pt)[$S$]])
+  content((12, -2.85), [#text(size: 9pt)[$S^( upright(c) )$]])
+  content((7.3, -3.83), [#text(fill: rgb("#a60000"))[#text(size: 9pt)[$d_H(u, partial S),#h(0.3333em) d_H(v, partial S) lt.eq ell lt.eq R arrow.r.double.long u,v in cal(D)_R$.]]])
+})

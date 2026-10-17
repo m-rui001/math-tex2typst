@@ -1,0 +1,76 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{amscd}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\DeclareMathOperator{\Bun}{Bun}
+\DeclareMathOperator{\Loc}{Loc}
+\DeclareMathOperator{\LS}{LS}
+\DeclareMathOperator{\SS}{SS}
+\DeclareMathOperator{\QCoh}{QCoh}
+\DeclareMathOperator{\IndCoh}{IndCoh}
+\DeclareMathOperator{\Perf}{Perf}
+\DeclareMathOperator{\Rep}{Rep}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\IC}{IC}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\Fl}{Fl}
+\DeclareMathOperator{\Shv}{Shv}
+\DeclareMathOperator{\Perv}{Perv}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Nilp}{Nilp}
+\DeclareMathOperator{\Gal}{Gal}
+\newcommand{\Gd}{\widehat G}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cN}{\mathcal N}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cY}{\mathcal Y}
+\newcommand{\cX}{\mathcal X}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\bA}{\mathbb A}
+\newcommand{\bP}{\mathbb P}
+\newcommand{\bG}{\mathbb G}
+\newcommand{\bQ}{\mathbb Q}
+\newcommand{\bZ}{\mathbb Z}
+\newcommand{\bC}{\mathbb C}
+\newcommand{\bF}{\mathbb F}
+\newcommand{\bR}{\mathbb R}
+\newcommand{\et}{\mathrm{\acute et}}
+\newcommand{\restr}{\mathrm{restr}}
+\newcommand{\lcc}{\mathrm{lcc}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\pt}{\mathrm{pt}}
+\newcommand{\pH}{{}^{p}\!H}
+\newcommand{\Hecke}{\mathsf H}
+\newcommand{\boxt}{\boxtimes}
+\newcommand{\xto}[1]{\xrightarrow{#1}}
+\newcommand{\into}{\hookrightarrow}
+\begin{document}
+\begin{CD}
+ B_V\bigl(\Psi(Q\boxtimes L)\bigr)
+   @>{c_V(Q\boxtimes L)}>> \Psi A_V(Q\boxtimes L)\\
+ @V{\sim}VV @VV{\sim}V\\
+ B_V(Q)\otimes L_\partial
+   @>{c_V(Q)\otimes\mathrm{id}}>>
+       \Psi A_V(Q)\otimes L_\partial.
+\end{CD}
+\end{document}

@@ -1,0 +1,25 @@
+distinct residue formulas: 1049
+sample converted: '$\\( * \\)$'
+still refused: 952 ; converted on replay: 97
+   294  env:equation           \begin{equation} \beta_B=\delta_i b_\ell \qquad\text{when $B$ is a square in r
+    87  env:align              \begin{align} &m_0(ba-1)-a(k+1)+ba(ck-C_0)\notag\\ &\hspace{12mm} =a\bigl(m_0b
+    71  env:align*             \begin{align*} &(1+p_z)\mathsf A+(\mathsf A+\mathsf R) +(1+p_z)(\mathsf A+\mat
+    57  env:tikzcd             \begin{tikzcd} (X',\Delta') \arrow[r,"u"] \arrow[d,"f'"'] & (X,\Delta) \arrow[
+    35  \widehat               (\widehat\mathcal T_s',\mathcal T_s') =(\widehat N_s,N_s)\ \cup\ (\widehat A_s
+    29  env:array              \begin{array}[b]{c|l@{\qquad}c|l} n & a & n & a\\ \hline 2 & \texttt{++} & 7 &
+    28  \mathcal               (D^2\mathcal R(0))_{i,j'} =DT(u_0)[\widetilde{\bf v}_i]\cdot \widetilde{\bf v}
+    24  \overline              A_t(\overline\mathbb D)\subset U
+    22  env:split              \begin{split} &(n-1)!\|\ell\|^2\sum_iw_i^2 -(n-2)!\|\ell\|^2\sum_{i\ne j}w_iw_
+    19  \rm                    (({\rm tr}\,p)^2/8-{ \rm tr}(p^2)/4)\ell_\mu\ell_\nu
+    17  \mathbb                G(\mathbb Q)\backslash G(\mathbb A_\mathbb Q)/G(\widehat\mathbb Z)
+    16  \operatorname          D=\operatorname{End}^0_{\overline\mathbb Q}(A)
+    15  \widetilde             (-1)^{\widetilde{\cal W}_{ab}}
+    10  \sum                   0=\sum_{n\in S}v_nQ(An)R\bigl(A(m+n-u)\bigr) =v_uR(Am)\ne0.\qedhere
+    10  \left                  Cr^{-1}\left(\mathchoice{{\setbox0=\hbox{$\displaystyle\int$}\vcenter{\hbox{$\
+    10  \eqref                 \eqref{eq:add-available-congruences}
+     8  env:CD                 \begin{CD} L_{\mathcal E^{(b)}} @>{-\widehat\otimes_{\mathcal E^{(b)}}P^{(b)}}
+     7  \le                    0\le\pi(x)\le\left\lVert{x}\right\rVertq
+     7  env:psmallmatrix       A=\begin{psmallmatrix}0&2\\0&0\end{psmallmatrix}
+     7  \mathop                G=\mathop{\mathchoice{\mkern2mu\int\mkern-15mu-\mkern7mu}{\mkern2mu\int\mkern-
+     7  env:aligned            \begin{aligned} &(P_{k,*}+30hV) \bigl\{V(A_1,Y_*,A_{12})-\kappa_*(5,1,0)\bigr\
+     6  \lhook                 (G,X)\lhook\joinrel\longrightarrow (\operatorname{GSp}(V,\psi),X_{\mathrm{Sieg

@@ -1,0 +1,42 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{tikz-cd}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\usetikzlibrary{fit}
+\usetikzlibrary{backgrounds}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\newcommand{\DoNotLoadEpstopdf}{}
+\newcommand{\nCat}{n\mathrm{Cat}}
+\newcommand{\omCat}{\omega\mathrm{Cat}}
+\newcommand{\sSet}{\mathrm{sSet}}
+\newcommand{\Street}{N_n}
+\newcommand{\OrdN}{N}
+\newcommand{\U}[1]{U_{#1}}
+\newcommand{\Uinf}[1]{U^{\infty}_{#1}}
+\newcommand{\Disk}[1]{D_{#1}}
+\newcommand{\Orient}[1]{\mathcal O_{#1}}
+\newcommand{\trunc}{\tau_n}
+\newcommand{\Sd}{\mathrm{Sd}}
+\newcommand{\Ex}{\mathrm{Ex}}
+\newcommand{\id}{\mathrm{id}}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator*{\colim}{colim}
+\DeclareMathOperator{\Ob}{Ob}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\sk}{sk}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\cod}{cod}
+\newcommand{\KQ}{\mathrm{KQ}}
+\newcommand{\inj}{\text{-}\mathrm{inj}}
+\newcommand{\cell}{\text{-}\mathrm{cell}}
+\newcommand{\cof}{\text{-}\mathrm{cof}}
+\begin{document}
+\begin{tikzcd}[column sep=large]
+ P_Z(X) \arrow[r,hook] \arrow[d,"\gamma_{Z,X}"'] &
+ P_B(X) \arrow[d,"\gamma_{B,X}"]\\
+ \Street V_Z(X) \arrow[r,hook] & \Street V_B(X)
+ \end{tikzcd}
+\end{document}

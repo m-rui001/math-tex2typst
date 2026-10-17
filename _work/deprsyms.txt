@@ -1,0 +1,24 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+distinct symbol spellings in products: 143
+
+DEPRECATED 5 names, 284 occurrences, 37 papers
+  lt.tri                      121 uses   24 papers   `lt.tri` is deprecated, use `lt.closed` instead
+  lt.tri.eq                   119 uses    9 papers   `lt.tri` is deprecated, use `lt.closed` instead
+  tack.r.double                21 uses    5 papers   `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`
+  gt.tri.eq                    20 uses    3 papers   `gt.tri` is deprecated, use `gt.closed` instead
+  gt.tri                        3 uses    1 papers   `gt.tri` is deprecated, use `gt.closed` instead
+
+UNKNOWN to typst 6 names, 221 occurrences, 17 papers
+  fin.dim                       9 uses    1 papers   unknown variable: fin
+  gl.dim                        6 uses    1 papers   unknown variable: gl
+  stroked.small               118 uses    4 papers   unknown variable: stroked
+  stroked.t                    65 uses    4 papers   unknown variable: stroked
+  stroked.tiny                 18 uses    5 papers   unknown variable: stroked
+  tr.rev                        5 uses    3 papers   op does not have field "rev"
+
+glyph parity (codepoint read back with fitz; compile rc=0):
+  gt.tri                 ⊳ U+22B3  ->  gt.closed              ⊳ U+22B3   SAME GLYPH
+  gt.tri.eq              ⊵ U+22B5  ->  gt.closed              ⊳ U+22B3   DIFFERENT GLYPH
+  lt.tri                 ⊲ U+22B2  ->  lt.closed              ⊲ U+22B2   SAME GLYPH
+  lt.tri.eq              ⊴ U+22B4  ->  lt.closed              ⊲ U+22B2   DIFFERENT GLYPH
+  tack.r.double          ⊨ U+22A8  ->  tack.rr                ⊨ U+22A8   SAME GLYPH

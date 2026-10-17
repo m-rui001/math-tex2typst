@@ -1,0 +1,50 @@
+Part C notes parsed = 196  sum ORDER=149
+post refused spans = 365
+post summary: spans=859274 refused=365 filesHit=174
+baseline (plan header): spans=857603 refused=511 filesHit=196
+touched notes = 35
+declared ORDER sites whose bad form is STILL refused on the declared line = 0
+per-note post vs plan residue (expected = JUDGMENT+KEEP+WAIVER of that note):
+  D25     post=3 == residue=3  OK
+  D44     post=1 == residue=1  OK
+  D58     post=1 == residue=1  OK
+  D71     post=0 == residue=0  OK
+  D81     post=0 == residue=0  OK
+  D96     post=1 == residue=1  OK
+  D125    post=3 == residue=3  OK
+  D131    post=0 == residue=0  OK
+  D145    post=2 == residue=2  OK
+  D160    post=0 == residue=0  OK
+  D163    post=2 == residue=2  OK
+  D165    post=0 == residue=0  OK
+  D171    post=0 == residue=0  OK
+  D196    post=0 == residue=0  OK
+  D198    post=0 == residue=0  OK
+  D212    post=0 == residue=0  OK
+  D213    post=0 == residue=0  OK
+  D214    plan: ORDER=4 JUD=4 KEEP=0 WAIV=0 total=8 | post=5 | delta=+1
+     line 74 KaTeX parse error: No such environment: psmallmatrix  body='\\begin{psmallmatrix}-1&1\\\\1&1\\end{psmallmatrix}'
+     line 125 \A body='P_\\ell\\subset\\operatorname{Hilb}^\\ell(\\A^2)'
+     line 125 \m body='\\m^{\\ell}'
+     line 139 KaTeX parse error: Unexpected end of input in a macro argu body='\\bar\\theta\\in\\overline\\mathbb{F}_2^a'
+     line 271 KaTeX parse error: No such environment: psmallmatrix  body='H=\\begin{psmallmatrix}-1&-1&1\\\\-1&-1&1\\\\1&1&1\\end{psmallmatrix}'
+  D228    post=0 == residue=0  OK
+  D264    post=0 == residue=0  OK
+  D312    post=0 == residue=0  OK
+  D333    post=1 == residue=1  OK
+  D353    post=0 == residue=0  OK
+  D362    post=0 == residue=0  OK
+  D375    post=1 == residue=1  OK
+  D389    post=0 == residue=0  OK
+  D429    post=0 == residue=0  OK
+  D492    post=1 == residue=1  OK
+  D537    post=0 == residue=0  OK
+  D560    post=0 == residue=0  OK
+  D616    post=0 == residue=0  OK
+  D694    post=0 == residue=0  OK
+  D706    post=0 == residue=0  OK
+  D750    post=2 == residue=2  OK
+  D761    post=0 == residue=0  OK
+notes whose post count differs from the plan residue = 1
+non-touched plan notes with changed refused count = 1
+  D94     plan_total=1 post=2 delta=+1

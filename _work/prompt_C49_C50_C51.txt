@@ -1,0 +1,50 @@
+你是写手。先完整读 `E:\math\被引笔记\规格.md` 并遵守其中全部条款（取材、记法、结构、体量、落盘、自查都在那里，本派单不复述）。除该文件、本派单文件自身与你本单的素材目录外不得读任何其他文件：**不得读 `研究笔记/`、`preprints/`、`.tools/`、`_work/`（本派单文件自身除外）、`被引笔记/INDEX.md`**。素材只用下面给定的 arXiv 源码 `.tex`；不得读素材目录里的 `.pdf`；不要执行任何 git 命令；不要生成 PDF。
+
+本单要写 3 份 C 稿（按下面给定的顺序，一份写完立刻开下一份）。每份各自满足规格的结构与体量要求。
+
+
+## 一份：C49
+
+- arXiv id：math/0211159
+- 原题名（逐字）：The entropy formula for the Ricci flow and its geometric applications
+- 作者（逐字，API 署名）：Grisha Perelman
+- 发表年月：2002-11-11
+- 素材目录：`E:\math\被引素材/math_0211159`
+- 主 tex 清单（实测，路径以盘面为准）：
+  - `被引素材/math_0211159/main.tex`（107201 字节 / 1848 行）
+- 本语料中引用它的稿号与 bib key（你只在 §0 原样登记，不去读这些稿）：D274（bib key `Perelman`）；D308（bib key `PerelmanEntropy`）
+- 成品路径：`E:\math\被引笔记\C49-<中文题名>.md`（中文题名由你按原题拟，不超过 24 字，不得含 `:` 与 `/`）
+- 目标体量：不少于 22,000 字节
+
+## 一份：C50
+
+- arXiv id：math/0308143
+- 原题名（逐字）：The moduli b-divisor of an lc-trivial fibration
+- 作者（逐字，API 署名）：Florin Ambro
+- 发表年月：2003-08-14
+- 素材目录：`E:\math\被引素材/math_0308143`
+- 主 tex 清单（实测，路径以盘面为准）：
+  - `被引素材/math_0308143/main.tex`（64189 字节 / 2027 行）
+- 本语料中引用它的稿号与 bib key（你只在 §0 原样登记，不去读这些稿）：D307（bib key `AmbroModuli`）；D476（bib key `AmbroCBF`）
+- 成品路径：`E:\math\被引笔记\C50-<中文题名>.md`（中文题名由你按原题拟，不超过 24 字，不得含 `:` 与 `/`）
+- 目标体量：不少于 22,000 字节
+
+## 一份：C51
+
+- arXiv id：math/0406345
+- 原题名（逐字）：Weighted Bergman spaces and the integral means spectrum of conformal mappings
+- 作者（逐字，API 署名）：Haakan Hedenmalm, Serguei Shimorin
+- 发表年月：2004-06-17
+- 素材目录：`E:\math\被引素材/math_0406345`
+- 主 tex 清单（实测，路径以盘面为准）：
+  - `被引素材/math_0406345/main.tex`（130100 字节 / 3127 行）
+- 本语料中引用它的稿号与 bib key（你只在 §0 原样登记，不去读这些稿）：D40（bib key `HedenmalmShimorin`）；D54（bib key `HedenmalmShimorin2005`）
+- 成品路径：`E:\math\被引笔记\C51-<中文题名>.md`（中文题名由你按原题拟，不超过 24 字，不得含 `:` 与 `/`）
+- 目标体量：不少于 22,000 字节
+
+## 落地节奏（本单各份合起来算）
+
+- 新建每份稿允许一次 `Write` 落「`# 标题` + `## 0 取证边界`」骨架，此后一律 `Edit` 追加，单笔新增正文不超过 10,000 字节；
+- 第一份的首次落盘落在第 4--10 次工具调用之间；每写完一份立刻开始下一份，不要停下来等确认；
+- 每份落盘后 sleep 90 秒再复量一次字节以证未回滚；
+- 收工报告按规格第 5 条对**每一份稿分别**给数，并给出各份成品文件的绝对路径与实测字节。

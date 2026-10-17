@@ -1,0 +1,10 @@
+file=D08-Mezard-Parisi公式.md
+bytes=195044
+CR=0
+LF=1173
+lines=1174
+damaged_total=0
+restated_total=2
+damaged_lines=[]
+restated_lines=[1058, 1130]
+L1058_dam=0 L1058_res=1 L1058_len=1352

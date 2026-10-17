@@ -1,0 +1,46 @@
+files=734 wrap1=2 wrapN=29 unclosed=0 files_hit=23
+('D123-Petty射影', 2, 1, 0)
+('D108-完全图交叉数：', 0, 2, 0)
+('D234-Heilbro', 0, 2, 0)
+('D244-用颜色包与素数', 0, 2, 0)
+('D249-从全局谱隙到二', 0, 2, 0)
+('D370-素数次数环面包', 0, 2, 0)
+('D93-方向瞬态蕴含弹道', 0, 2, 0)
+('D101-欧氏平面不可五', 0, 1, 0)
+('D115-完全二分图交叉', 0, 1, 0)
+('D134-乘积投影定位给', 0, 1, 0)
+('D140-型F无穷通用群', 0, 1, 0)
+('D145-复杂矩阵乘法低', 0, 1, 0)
+('D201-无挠反例与分离', 0, 1, 0)
+('D211-三边际Coul', 0, 1, 0)
+D101-欧氏平面不可五 189 WRAP3 $E_{\rm disc}. ~     \end{lemma}                                       (
+D108-完全图交叉数： 104 WRAP2 $: an incoming traversal starts the chord and an outgoing traversal en
+D108-完全图交叉数： 130 WRAP2 $: both sides have degree at most \(N-1\) and agree at all \(N\) nodes
+D115-完全二分图交叉 24 WRAP9 $\lfloor m/2\rfloor\lfloor(m-1)/2\rfloor\lfloor n/2\rfloor\lfloor(n-1)
+D123-Petty射影 179 WRAP3 $\left.\mathcal F(A)\right|_{\operatorname{ker} A} ~  =-\frac{k}{n(n+k)}
+D123-Petty射影 197 WRAP1 $s_i^2c\norm{Qf_i}_2^2 ~  \le a_i^2-s_i^2t_i^2\le a_i^2-1.$` ~  ~ (b) 补齐。位置：
+D123-Petty射影 218 WRAP1 $\mathcal A_B(\partial C)^n ~  \ge n^n\kappa_n\,\mathcal V_B(C)^{n-1}.$`
+D134-乘积投影定位给 523 WRAP9 $"。多项式一侧的转移界是 `bootstrap.tex:54-59`： ~  ~ > "\begin{equation} ~ > \label{eq:
+D140-型F无穷通用群 215 WRAP5 $" ~  ~ 这里最后一条我按原样记录：表格第 45 行的正文是 `(001,01,1) & A_1,B',C' & A_1+B'+C'.`。 ~ 跨
+D145-复杂矩阵乘法低 489 WRAP2 $。 ~  ~ (b) 中间步骤。先补 $\alpha$ 判据：叶律给 $S=b\log2$、$T=bD$，`cor:balance` 与成本 $C
+D201-无挠反例与分离 56 WRAP4 $），这个"小字母表"后面控 Cayley 里未用边要用。 ~  ~ ## §5 展开性：把平均间隙和真实间隙分开证 ~  ~ 顶点有了，槽也齐了，可置换表
+D211-三边际Coul 233 WRAP4 $\eqref{eq:split-measure}` 的各项质量比较合法。我把这一处也列进来，是因为这是全篇最容易在正式稿里被读者跳过、却在
+D218-严格椭圆方向零 703 WRAP2 $）" 同样 ~ 是反引号内的多余 `$`，合计四处，同上不影响公式配对。四，第 10 节我把端点矩写成 ~ "$\EE_{\mathbf Q_N}
+D234-Heilbro 464 WRAP12 $" 对照写成两句独立陈述。 ~  ~ 上述合计约十四处，分布在 §6、§7、§9、§11、§14、§15、§17、§18、§20 各节里。修正只是
+D234-Heilbro 476 WRAP10 $）两行的第四栏出现竖线越界：前者用了 `$|\mathcal{O}|$` 的基数竖线，后者用了 `$\|ma_1\|_q$` 的范数竖线；
+D244-用颜色包与素数 14 WRAP4 $密度恰好为 1"这一件事上。 ~  ~ ## 1. 初始动机与第一个猜想 ~  ~ 最初把这个问题拿到手时，我对 Banach 简单 Lebesgue 谱
+D244-用颜色包与素数 167 WRAP6 $密度恰好为 1"处出现单个定界符、该段行内无与之成对的另一枚，属排版手滑；语义应读作不带定界符的短语"密度恰好为 1"。全文收工时若 `$
+D249-从全局谱隙到二 44 WRAP4 $e^{-gt}`(第 243 到 245 行)只用到全局隙。但那里的对象是算子期望的范数,配合 Poisson 时钟做空间截断(第 51 
+D249-从全局谱隙到二 300 WRAP2 $\rfloor,含义不受影响,对应原文位置在 `02-initial.tex` 第 271 到 275 行。 ~ 2. §9 第四段"契形定位
+D25-Crouzeix 1490 WRAP2 $|s_{kj}|\le C_\rho\rho^{k+j}` ⇒ `prop:coefficients` 的核 $K$ 无从定义。失败机制是
+D253-阿贝尔覆盖Ga 56 WRAP2 $\Delta-挠子`结构,证明用deck 位移沿置换循环的乘积恒等这一手(`build/paper.tex:757-770`);单值群的作
+D28-双曲群无几何CA 715 WRAP40 $2M²η 不趋 0。证据是 "The order is important" 的直接命令句。 ~  ~ ### 6.2 引理 5.1（energy
+D356-三维正曲率曲面 929 WRAP47 $； ~ 该行其余四格与六个竖线均无误。请本体侧机械修正。 ~ - 类别：文风禁令命中自查。全文检索对过渡套语一族命中 1 处， ~ 位于正文第 141
+D370-素数次数环面包 261 WRAP2 $）。 ~  ~ 第一段的价值是 $M(g_f)$ 确实是全格且完备化就是 $\widehat M(g_f)$：取 $d\ge1$ 使 $d\wid
+D370-素数次数环面包 332 WRAP2 $），不同排序给出不同的包；素材没讨论不同排序的包之间是否有关系，我也没有证据说它们等价。 ~  ~ 第十件，右作用转换的普适性。`entropy.
+D401-变素数处的有限 417 WRAP2 $\operatorname{Full}`，见 `build/sections/03-layer.tex:148-157`；那组缩写是本稿引
+D450-平面Mumfo 38 WRAP2 $\int_V\lvert w\rvert^2\le 2\int_V\lvert w-g\rvert^2+2\lvert V\rvert\,
+D79-均称性反用与位移 104 WRAP2 $J'." (finite-proof.tex:77-79)。 ~  ~ (b) 推导补全: $[0,1]\setminus(I\cup J)$ 恰
+D80-均值对策博弈随机 2228 WRAP4 $D_*=1+\lfloor\log_{10/9}(n^3)\rfloor`（`07:47`--`48`）这一层在 Lean 侧不是显式项，
+D93-方向瞬态蕴含弹道 136 WRAP2 $)、以及 0.8 的 template 概率(N02-1 的 iid 词加上 Hopf 型极大不等式)。三件东西里没有任何一件涉及词长。所
+D93-方向瞬态蕴含弹道 158 WRAP13 $d\ge3` 出现在推论 N01-2 的假设里(`01-introduction.tex:206`)并承担外部输入(引用 companio

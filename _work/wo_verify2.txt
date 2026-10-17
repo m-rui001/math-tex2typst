@@ -1,0 +1,11 @@
+notes in corpus=734
+literal_pairs=622
+ORDER=517
+rows_with_literal_pair=492
+no_arrow=18
+quote_verbatim_no_arrow=16
+arrow_but_no_literal=7
+quote_verbatim_arrow_unsound=3
+
+literal pairs=622 over 302 notes; notes with >=2 pairs=167
+top: D585:10, D371:9, D24:8, D186:7, D251:7, D370:7, D455:7, D175:6, D431:6, D15:5, D194:5, D206:5, D269:5, D312:5, D391:5, D61:5, D636:5, D12:4, D18:4, D20:4

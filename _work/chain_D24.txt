@@ -1,0 +1,10 @@
+### region_check D24 685
+seg=334 hdr=0 sep=3 rows=133 hist={6: 133, 5: 10}
+badpipe=[(841, 5, '| 项目 | 论文 | Lean | 我的判断 |'), (843, 5, '| 缺陷不等式 | $\\tau(a+b)-\\tau(a)-\\tau(b)\\ge\\frac1{144}$ | $\\frac1{144}\\le('), (844, 5, '| 公理 (i) | 一条 $\\tau(x^*x)=\\tau(xx^*)\\ge0$ | `square_nonneg` + `square_'), (845, 5, '| 公理 (iii) | 在每个 abelian $C^*$-子代数上线性 | 闭交换非单元 $*$-子代数上存在复线性 `f` 相合 | '), (846, 5, '| $2$-拟迹 | $\\sigma$ 在左上角限制为 $\\tau$ | `upperLeft` + `∃ σ`，另有 `extension'), (847, 5, '| Theorem 2.1 | 单一双箭头，引 MR | `State.lean` + `Quasitrace.lean` 两站，中间 15'), (848, 5, '| 陈类非零 | $c_p(G)=\\prod z_i^{K_i}\\ne0$ | 障碍论 `IntegralHomology.Obstruct'), (849, 5, '| $M_{48}$ 放大 | $M_k(A)\\cong M_{48k}(B)$ | `actualDefectAmplificationE'), (850, 5, '| 极分解 | 两行初等论证 | `Ultrapower/` 19 文件 | 机器留了备用路线 |')]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+rc=0
+### pipe_table_check D24 (该篇该表窗口，表头竖线数=该表续行应有竖线数)
+TABLE D24 hdr=685 pipes=6 block=25 sep=1 rows=24 hist={6: 25} badpipe=[]
+rc=0

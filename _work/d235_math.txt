@@ -1,0 +1,1 @@
+dollar=4930  paren_open=1 paren_close=0

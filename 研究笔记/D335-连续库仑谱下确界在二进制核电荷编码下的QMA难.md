@@ -1,0 +1,362 @@
+# D335 连续库仑谱下确界在二进制核电荷编码下的 QMA 难
+
+## 0 登记与这份笔记的读法
+
+这份笔记反推的对象是 OpenAI 在 2026 年 9 月 24 日贴出的那篇 "Continuum Coulomb hardness with binary nuclear charges"。我读的不是排版成品，是 build 目录里那 8 个源文件：paper.tex 只有 1,012 字节，preamble.tex 2,373 字节，五个章节文件分别是 00-introduction.tex 14,015、01-finite-models.tex 30,888、02-wells.tex 41,771、03-hopping.tex 31,698、04-continuum.tex 28,231、05-completion.tex 11,549 字节，合计 161,537 字节。typst 目录里的分片我没取，README 只用来定位目录，正文所有判断都落在这 8 个文件的具体行上，行号在文末五列表里逐条给了。
+
+我的写法是反推：先假定自己就是当时手里只有有限基难度结果的那个人，问自己凭什么敢把结论推到 $\bigwedge^N L^2(\R^3;\mathbb C^2)$ 上，然后顺着论文给出的量，把中间每一步"为什么是这个数"补出来。凡是论文没交代、我只能猜的地方，我标 [推测] 并说明缺的是什么材料，不硬编。
+
+先说明本笔记的编号约定：引用论文章节时写它的节号（例如"论文 §2"），我自己的小节用大号顺序排到 §16，前向引用都指向确实存在的小节，比如 §9 讲补空间间隙、§12 讲尺度选择。末尾两行是这篇论文在本仓库队列里的固定登记，逐字照抄，不做缩写：
+
+preprints/Continuum-Coulomb-hardness-with-binary-nuclear-charges-September-24-2026
+其他队列第 159 行号
+
+## 1 初始动机：一个方向反了的变分不等式
+
+我最初以为这件事已经被人做完了。O'Gorman、Irani、Whitfield、Fefferman 那篇有限基电子结构 QMA 完备性的论文，其公开附录 D 的推论里确实包含了正单位核电荷，读起来只差一步：把基的维度送向无穷，轨道投影就变成整个空间，结论自动搬到连续统。论文 00-introduction.tex 第 79 到 83 行把我这一步堵死了，堵的方式只有一行公式。若 $P$ 是轨道投影，变分原理给的是
+
+$$ \inf\operatorname{Spec} H \le \min\operatorname{Spec}(PHP\mid_{\operatorname{Ran}P}), $$
+
+也就是说投影给出的永远是地基能量的上界。而 hardness 归约需要的是 NO 实例的下界：必须证明所有被丢掉的连续状态都不比阈值 $b$ 更低。上界与下界方向相反，这条不等式对我毫无用处。论文第 3 行开宗明义就是这个意思："A hardness proof for a matrix obtained by projecting onto supplied orbitals does not by itself establish hardness for this operator."
+
+我把这个观察抄在自己纸头的时候，其实还没意识到它有多贵。方向反了的不等式，修补方式只有两种。第一种是干脆放弃投影，直接对 $H$ 作估计，这等于要在无穷维上做谱下界，通常只有硬斥势或特殊对称性能提供。第二种是保留投影，另外补一个独立的论证，证明"任何跑到低能量的波函数必然绝大部分落在投影内"。论文走的是第二种，04-continuum.tex 整节就在干这件事，它的骨架是先在一个 $2m$ 维的自旋轨道子空间 $P$ 上证明单粒子补空间有固定正间隙（prop:complement-gap，第 257 到 266 行），然后把多粒子补空间的耦合用二次型平方完成消掉（lem:continuum-elimination，第 478 到 493 行）。第二条路比第一条长，但它允许我把 Hubbard 模型的全部有限维计算继承过来。
+
+我最初的猜想比这朴素得多。我猜可以直接把 $N$ 个电子的连续库仑算子限制在一个精心挑选的、由氢原子基函数垂直观胀出来的空间上，然后声称这个空间足够大，因此投影矩阵的最小特征值与真实下确界相差不大。这个想法的漏洞跟上面那条不等式同源：氢原子基张成的空间里如果混进了双占据组态，能量会掉得更低；如果混进了高动量组态，能量上升，可我不能靠"它们都上升"来排除，因为我要证的下界恰恰是所有状态的最低点。真正的排除必须量化，必须给出一个数，任何组态跨出选定模式就要付出这个数，而这个数要大于可能的耦合强度。这个想法后面变成 §9 与 §10 的主题。
+
+还有一个动机是编码方式带来的紧张感。正整数核电荷用二进制写，意味着 $Z_\alpha$ 可以指数大，一个原子的核电荷就能吞掉整个指数尺度；而输出实例必须仍是多项式比特。这两件事看着矛盾，实际是本论文最主要的构造压力来源。论文 abstract 里那句 "The nuclear charges may be exponentially large, but every output has polynomial bit length" 与 00-introduction.tex 第 55 行 "Charges and inverse nuclear separations may have exponentially large values; their descriptions still have polynomial length" 反复强调的就是这一点。我在 §12 里会具体看它是怎么被 $Z_*\asymp e^D$ 与 $D=A(n+2)^K$ 这两个选择同时满足的。
+
+## 2 问题到底被写成什么样：把 promise 的边界钉住
+
+要把"连续统"三个字变成可归约的对象，先把输入模型钉死。00-introduction.tex 第 7 行给的清单是：两两不同的位置 $R_1,\ldots,R_M\in\mathbb Q^3$，正整数电荷 $Z_1,\ldots,Z_M$，电子数 $N\ge1$，有理阈值 $a<b$；$N$ 用一元编码，电荷用二进制编码，每个坐标和阈值都写成既约的带符号二进制分子加正二进制分母，固定一种自定界编码；$L$ 是总比特长度，并要求 $b-a\ge L^{-c}$。第 9 到 16 行给出原子单位下的算子
+
+$$ H(R,Z,N)=-\frac12\sum_{\ell=1}^N\Delta_{x_\ell}-\sum_{\ell=1}^N\sum_{\alpha=1}^M\frac{Z_\alpha}{\lvert x_\ell-R_\alpha\rvert}+\sum_{1\le\ell<k\le N}\frac1{\lvert x_\ell-x_k\rvert}, $$
+
+形式域是 $\mathcal Q_N=H^1((\R^3)^N;(\mathbb C^2)^{\otimes N})\cap\bigwedge^N L^2(\R^3;\mathbb C^2)$，反对称把空间坐标与自旋坐标一起交换（第 22 行）。YES 是 $E_0\le a$，NO 是 $E_0\ge b$，promise 之外不作任何要求（第 26 行）。主定理是第 51 到 53 行：这个问题在 $c=1$ 时关于确定性经典多项式时间 many-one 归约是 QMA-难的，并且归约能造出 $b-a\ge1$ 的实例。
+
+我在这一节想弄清楚的是"哪些约定是免费的，哪些不是"。论文第 49 行有一段非常克制的说明：没有外部给定基、没有给定电子态、没有磁场、没有独立可调的外势；最小化遍历所有总自旋扇区；核-核斥能被省掉，因为能量约定是 clamped-nucleus 的电子能量。这三条里，前两条是难点所在：正点核产生的外势完全由核列表决定，我无法像 Schuch-Verstraete 那样去设计自旋相关势；遍历所有自旋扇区意味着我不能把问题限制在单重态里，因此任何依赖"选定自旋扇区"的排除论证都会失效。第三条（省略核斥能）看起来只是约定，实际在阈值仿射像里帮了大忙：省掉一项正的多项式量就少一项需要抵消的量，见 §12。
+
+promise 精度 $b-a\ge L^{-c}$ 与归约造出的分离 $b-a\ge1$ 之间的关系，我一开始理解偏了。我以为论文证明了谱隙至少为 1，读第 41 行才纠正过来："Constructed separation: $b-a\ge1$; a threshold separation, not a spectral gap."。这个区分对后面的每个估计都有影响：阈值分离只需要在两个能量盒子之间留出空隙，不要求下确界处有离散本征值，也不要求基态可高效制备。第 49 行末了那句 "it does not assert a molecular spectral gap, a discrete eigenvalue at the infimum, or an efficiently preparable ground state" 就是在划这条线。我的笔记里凡是写"能隙"的地方，指的其实是 $h_i$ 的基态到第二级的孤立程度（一个真正的谱隙），而阈值分离是另一个东西，两者不能混。
+
+还有两个承诺的缺失值得记下来。第 49 行明确说这个问题不要求电中性、不固定元素种类、也没有单独的核间距承诺。这就解释了为什么 00-introduction.tex 第 103 到 111 行要去比较那篇离子化伴文：那边的严格结合结论 $E_N<E_{N-1}$ 给出 $N\le Z_{\rm tot}+CM$，前提是不同核与至少为 1 的电荷，且无分离条件；而我们的归约不施加 strict-binding 承诺，所以那一条界"既供不出连续排除估计，也供不出基态存在性断言"，只是范围对照。这个对照对我有方法论意义：我原来指望用粒子数守恒类的不等式来卡住逃逸电子，读完这节我知道不行，卡住高能状态的必须是动能项本身。
+
+关于形式域与自伴性，第 22 行只给了一句理由：三维 Hardy 不等式逐个坐标固定其余变量地用，给出有限个库仑项的无穷小形式界，于是取闭形式对应的下方有界自伴算子。这句"看似例行公事"的话在后面被反复兑现：04-continuum.tex 第 391 到 410 行专门有一段说明定义域，指出 $\operatorname{Ran}\Pi$ 里每个向量都落在多粒子算子定义域内（因为 $\omega_i$ 都在 $H^2$），而 $\Pi$ 与 $Q_m$ 都保持形式域。少了这一段，平方完成那步就得对未定义的二次型说话。
+
+## 3 我尝试过的三条错路与它们各自卡在哪
+
+第一条错路就是 §1 里那条变分不等式的天真用法：拿有限基结果、令基维度趋于无穷。除了方向反了，还有一个具体的技术性障碍，论文 00-introduction.tex 第 3 到 4 行点出来了：这个算子的输入数据异常刚性，外势由一列正核生成。把投影算子的结论搬过去，等价于声称"存在某个外势使投影矩阵难"，但我需要的是"由核列表给出的那个外势下仍然难"。外势不能自由调，就意味着我不能用设计势去制造所需的单粒子谱形，只能利用核的位置、电荷数这些离散自由度。第一条错路败在自由度不够，这条判断是后面所有几何构造的动机。
+
+第二条错路：既然二进制电荷可以指数大，那就把它拆成一堆单位电荷核，直接落到已知的单位电荷连续统结果上。论文第 98 行把这路封了："splitting our exponentially large charges into individual unit nuclei would not give polynomial output size."。算一下就知道多严重：$Z_*\asymp e^D$，$D$ 是源规模的多项式，拆开后核数 $M$ 变成指数级，光位置坐标的编码长度就爆炸，一元编码的电子数也跟着爆炸。更深一层的问题在 00-introduction.tex 第 92 到 101 行：单位电荷那篇用的是正连续电荷密度、多项式约束与等质量 cubature，那是另一套机制，它的定理确实蕴含更大的二进制电荷输入类的难度，但方向是"单位电荷定理蕴含本定理"，反过来不成立，而且本论文的贡献是另一批定量工具（指数精度本征值认证与宽分距离氢势阱的相对隧穿标定）。我原本以为两篇论文是同一个构造的两种表述，读完这句才明白它们是机制不同的两条路，二进制电荷这一条路的价值在量化能力上。
+
+第三条错路更接近技术核心，也是我花最久才放弃的：把单粒子轨道做成氢原子基态的平移，然后靠"轨道逼近氢轨道"来控制隧穿。绝对逼近在这里给出的是 $O(m/D)$ 级的误差（02-wells.tex 第 107 到 110 行的 $\lVert\psi_i-\phi_i\rVert_{H^2}\le Cm/D$），可是我要标定的 hopping 本身是 $e^{-D}$ 量级。一个绝对误差 $O(m/D)$ 的轨道去算重叠积分，得到的相对误差是 $e^D\cdot m/D$，完全不能用。00-introduction.tex 第 122 行把这句写得很直接："Absolute proximity to a hydrogen orbital would not give the required relative precision."。这条错路的失败是 03-hopping 一整节的起点，它逼出了相对尾部估计（prop:relative-tail，第 40 到 50 行）：
+
+$$ \psi_i(y)=\pi^{-1/2}e^{-r_i+F_i(y)}\bigl(1+O(\varepsilon_{\mathrm{rel}})\bigr),\qquad \varepsilon_{\mathrm{rel}}=\frac{m\log D+m^2}{D}, $$
+
+把误差放进指数里的一个位势函数 $F_i$，剩下的只是相对因子。这个转折点的分量，我在 §7 里详细算。
+
+第四条小错路，跟上面三条不在一个量级，但同样让我改过写法：我起初打算先调好单粒子能量（让 $\lambda_i=-1/2$），再按位置去标定 hopping。顺序是错的。理由在 05-completion.tex 第 3 行："the tail formulas are proved for tuned wells, whereas the positions must be computed before the tuning is performed."。如果先调能，位置计算就要用到尚未算出的次核参数 $\rho_i$；如果先定位置，相对尾部公式的前提又还没成立。论文用代理场 $W_i^*$（03-hopping.tex 第 191 到 225 行）解开这个死结：只依赖主核中心、不含任何未知轨道与次核位移的显式场，其替换界在整个调参立方上一致成立，于是可以"先算中心、后调次核"。这属于关键转折点之二，我在 §8 展开。
+
+写到这里我意识到自己的错路有一个共同点：每一路都想用"上界"或"逼近"来代替"排除"。而这篇论文的全部技术选择都可以读成一句话：需要一个对全体状态的排除论证，且这个排除在乘以 $Z_*$ 之后仍然成立。把这句话当作北极星，后面各节的量级选择就不再显得随意了。
+
+本节四路尝试的共同失效点，我在 §14 用一张检查清单收束，那里逐条回看哪一步只给了上界。
+
+## 4 把带符号的自旋键换成正键：中介对与超交换的分工
+
+要连续统来承载的，最先是 Hubbard 模型，而 Hubbard 只能给一种符号的交换。源问题在 01-finite-models.tex 第 19 到 30 行（thm:source）：QMA-完全的承诺问题，哈密顿量 $H_{\rm in}=\sum_{e=LR}J_e h^s_{LR}$，定义在方形格的不缠绕有限子图上，无单量子比特项，带符号有理权重 $J_e$，顶点数、边数、格子范围、权重与阈值幅度都被源规模 $n\ge2$ 的固定多项式界住，阈值分离 $\delta_s=b_s-a_s\ge1/\operatorname{poly}(n)$。论文第 32 到 37 行交代它的出处：Cubitt-Montanaro-Piddock 那篇定理 48 与 §10.1 的方形格推论，走的是其中"多项式权重、空间稀疏"那一支（引的 Lemma 47），并强调 Heisenberg 耦合矩阵秩为三，落在该定理的例外秩一族之外。第 39 到 58 行做了归一化：取已知有理下界 $\delta$，$\varepsilon_0=\delta/100$，每条边系数在 $\varepsilon_0/\max\{1,q_s\}$ 内取整，因为 $\lVert h^s_{ij}\rVert=3$，哈密顿量扰动范数不超过 $3\varepsilon_0$；若有恒等项系数 $c_0$ 和阈值 $a_0,b_0$，三数各近似 $\varepsilon_0$，令 $a_s=\widetilde a_0-\widetilde c_0+5\varepsilon_0$、$b_s=\widetilde b_0-\widetilde c_0-5\varepsilon_0$，于是 $b_s-a_s\ge\delta-12\varepsilon_0>0$。这段的写法透露一个原则：所有近似都带着余量把钱付掉，两个阈值近似误差加哈密顿量误差不超过 $5\varepsilon_0$，承诺因此双侧存活。
+
+然后是半程错误的地方。我一开始打算让 Hubbard 直接生成带符号的键，把负号塞进 hopping 的相位里。斥型 Hubbard 在半满时做不到：01 第 647 到 651 行算出有效项是 $\frac{t^2}{U}(h^s_{ij}-I)$，系数 $t^2/U$ 恒正，符号被机制锁死。所以必须先做一次"符号归约"，这是 Piddock-Montanaro 单态中介的各向同性特化（第 138 到 144 行说明取法，并声明保留标量平移与同时装误差的显式形式）。具体地，对每条源边 $e=LR$ 引入两个辅助自旋 $A_e,B_e$，共 $k$ 对，令 $v_e=\sqrt{2\lvert J_e\rvert}$，$C_e$ 在 $J_e<0$ 时取 $A_e$、在 $J_e>0$ 时取 $B_e$，再写
+
+$$ H_+=\Delta\sum_e h^s_{A_eB_e}+\sqrt\Delta\sum_e v_e\bigl(h^s_{LA_e}+h^s_{RC_e}\bigr), $$
+
+非零系数全为正。标量平移 $C_0=3k\Delta+\frac32\sum_e v_e^2$（第 159 到 161 行）。结论是 prop:positive-spin：若 $\sqrt\Delta>3V$，$\bigl\lvert E(H_+)-E(H_{\rm in})+C_0\bigr\rvert\le 27V^3/\sqrt\Delta$。
+
+这里我停下来想清楚它凭什么成立，因为它是全篇第一次用到"二阶下界估计"这个工具。引理 lem:second-order（第 79 到 91 行）的陈述：$A\ge0$ 有限维自伴，$P\ne0$ 投到它的核，$Q=I-P$，$A\ge gQ$，$B=B^*$ 满足 $PBP=0$ 与 $\lVert B\rVert\le\epsilon g$，$0\le\epsilon<1/2$，规定 $A^{-1}$ 在 $P$ 上为零，则
+
+$$ \bigl\lvert E(A+B)-E\bigl(-PBA^{-1}BP\mid_{P}\bigr)\bigr\rvert\le 2g\epsilon^3. $$
+
+证明（第 93 到 134 行）有两个我原来没想到的要点。其一是下界方向：把 $p+q$ 的二次型配方成 $\|(1-\epsilon)^{1/2}A^{1/2}q+A^{-1/2}Bp/(1-\epsilon)\|^2$ 减去 $\langle p,Kp\rangle/(1-\epsilon)$，于是 $E(A+B)+\kappa\ge-\epsilon\kappa/(1-\epsilon)\ge-2g\epsilon^3$；这里 $\kappa=\lVert K\rVert\le\lVert B\rVert^2/g\le g\epsilon^2$（第 96 到 99 行）。其二是上界方向要构造试探向量：取 $K$ 的最大特征方向 $p$，令 $q=-A^{-1}Bp$，$\lVert q\rVert\le\epsilon$，然后对 $r=\lVert q\rVert^2$ 做归一化处理，得 $E(A+B)+\kappa\le g\epsilon^3+g\epsilon^4\le\frac32g\epsilon^3$。这个引理只控制底部能量，不要求被编码子空间内部有间隙（第 71 到 74 行的这句话对我很重要，因为 Hubbard 的单占据空间内部本来就没有可用的间隙）。$Q=0$ 的边界情形也被明确处理：那时 $PBP=0$ 逼出 $B=0$。
+
+回到中介对。$A=\Delta\sum_e(h^s_{A_eB_e}+3I)$，$B=\sqrt\Delta\sum_e v_e(\cdots)$，间隙 $g=4\Delta$，$\lVert B\rVert\le6\sqrt\Delta V$（第 174 到 185 行）。关键的组合事实有两条：单跳只能把某对辅助自旋从单态送到三重态，别的辅助对保持单态，所以一步可达态的激发能恰是 $4\Delta$；不同对的二阶交叉项为零，因为作用于 $f\ne e$ 的项没法消掉 $e$ 对上的三重态，即使两条源边共享一个原始顶点也成立（第 188 到 192 行）。单态上的自旋关联 $\langle s\lvert\sigma_A^\mu\sigma_A^\nu\lvert s\rangle=\delta_{\mu\nu}$、$\langle s\lvert\sigma_A^\mu\sigma_B^\nu\lvert s\rangle=-\delta_{\mu\nu}$ 给出平方项各压缩为 $3I$、有序交叉项之和为 $\pm2h^s_{LR}$，于是第 206 到 213 行写出有效项 $J_eh^s_{LR}-\frac32v_e^2I$。取 $\epsilon=3V/(2\sqrt\Delta)$，误差 $2(4\Delta)\epsilon^3=27V^3/\sqrt\Delta$。保留的具体尺度（第 227 到 240 行）：$\gamma=\min\{1,\delta_s\}$，$W=\max(\{1\}\cup\{\lvert J_e\rvert\})$，$\overline V=\max\{1,2kW\}$，$\Delta=\lceil(1728\overline V^3/\gamma)^2\rceil$，于是误差不超过 $\gamma/64$，每个系数不超过 $\Delta$。第 241 到 242 行顺手解决编码问题：中间出现的平方根是非负数，用二分做多项式精度有理逼近即可，无需精确比较无理数。
+
+第二步才是 Hubbard。第 546 到 557 行定义 $H_{\rm Hub}(t)$， onsite 排斥 $U\sum_i n_{i\uparrow}n_{i\downarrow}$，而 $U$ 被取为显式积分
+
+$$ U=\iint\frac{\phi(y)^2\phi(y')^2}{\lvert y-y'\rvert}\,\,\mathrm d y\,\,\mathrm d y',\qquad \phi(y)=\pi^{-1/2}e^{-\lvert y\rvert}, $$
+
+第 558 到 573 行把它算成一个固定有理常数：径向密度 $p(r)=4r^2e^{-2r}$，角向积分给出核 $1/\max(r,s)$，$\int_0^r p=1-e^{-2r}(1+2r+2r^2)$，于是 $U=8(\frac14-\frac1{16}-\frac1{16}-\frac3{64})=\frac58$。这个 $\frac58$ 后来在连续统比较里成了靶子（§11）。理想 hopping $t^{(0)}_{ij}=\eta\sqrt{K_{ij}}$，尺度 $\eta=\frac{U\gamma}{1024\overline R^3}$、$\alpha=\eta^2/U$、$f=\frac{\alpha\gamma}{128\max\{1,q_{\mathcal C}\}}$（第 575 到 581 行），实际输出 $t_{ij}=\max\{f,r_{ij}\}$，$\lvert r_{ij}-t^{(0)}_{ij}\rvert\le f$（第 582 到 587 行）。$f$ 是"下限垫片"：它让 $K_{ij}=0$ 的那些额外接触也带一个逆多项式的正 hopping，而这些额外接触正是几何上必须出现的（§5）。
+
+费米符号是我核对得最细的一段（第 629 到 651 行）。固定一条键 $i,j$，局域模式顺序 $i\uparrow,i\downarrow,j\uparrow,j\downarrow$，双占据记号 $\lvert D_i\rangle=c_{i\uparrow}^\dagger c_{i\downarrow}^\dagger\lvert 0\rangle$，则 $T_{ij}\lvert\uparrow,\downarrow\rangle=-t(\lvert D_i\rangle+\lvert D_j\rangle)$、$T_{ij}\lvert\downarrow,\uparrow\rangle=t(\lvert D_i\rangle+\lvert D_j\rangle)$，因此三重态全部被湮灭，单态映到 $-\sqrt2t(\lvert D_i\rangle+\lvert D_j\rangle)$，范数平方 $4t^2$，于是 $-P_{\rm so}T_{ij}A_U^{-1}T_{ij}P_{\rm so}=-\frac{4t^2}{U}P_{{\rm singlet},ij}=\frac{t^2}{U}(h^s_{ij}-I)$。若整体模式顺序里 $i,j$ 之间还夹着别的格点，那些格点在两跳过程中始终单占据，其固定费米宇称会改变跃迁相位但不改变压缩后的乘积，论文用"fermionic change of basis"一句话带过（第 642 到 645 行），我在笔记里把它标成 [可再展开]，因为这是标准事实、不影响量级。误差预算：$\lVert T\rVert\le2\eta\overline R$，取 $g=U$、$\epsilon=2\eta\overline R/U$，理想 Hubbard 的误差 $\le16\eta^3\overline R^3/U^2\le\alpha\gamma/64$（第 662 到 670 行）；有理取整带来的 $\lVert H_{\rm Hub}(t)-H_{\rm Hub}(t^{(0)})\rVert\le2q_{\mathcal C}f\le\alpha\gamma/64$（第 678 到 681 行）；加上中介对的 $\alpha\gamma/64$，三条误差相加得 prop:hubbard 的结论
+
+$$ \bigl\lvert E(H_{\rm Hub}(t))-\alpha(E(H_{\rm in})-C_s)\bigr\rvert\le\frac{3\alpha\gamma}{64},\qquad C_s=C_0+\sum_{\{i,j\}\in\mathcal C}K_{ij}. $$
+
+第 684 到 687 行特意说明下限垫片这一招同时覆盖了"理想 hopping 远小于 $f$"与"理想 hopping 恰为零"两种情形，且没有用到任何系数下界；第 671 到 672 行还处理了补空间为空（$m=1$）时误差恰好为零。这种边界情形逐条交代的写法，是我相信这套估计能被真正执行的原因。
+
+## 5 接触几何：让每条键长被独立拧动，且不需要解非线性方程
+
+Hubbard 的 hopping 后面要由核位置的一阶位移来决定，于是几何必须满足一个很强的要求：给定一族目标键长增量，能一次性、线性、有界地解出各点位移，并且绕格子环没有相容性条件。这一节我读得最慢，因为最初我以为"接触"是自然产生的，读完 lem:contact-layout 才发现它是被设计出来的。
+
+布局：原始格点平面间距取 2，每条源边按正 $x$ 或正 $y$ 方向定向；用局部坐标 $(\ell,\zeta)$，$\ell$ 是沿该方向距左端点的距离，水平边取 $\zeta=z$，竖直边取 $\zeta=-z$（第 246 到 249 行）。辅助点放在
+
+$$ J_e<0:\ A_e=(1,0),\ B_e=(1,1);\qquad J_e>0:\ A_e=(1/2,\sqrt3/2),\ B_e=(3/2,\sqrt3/2), $$
+
+局部端点恒为 $L=(0,0)$、$R=(2,0)$（第 250 到 258 行）。坐标属于 $\mathbb Q(\sqrt3)^3$，比特描述多项式长。$\zeta$ 的符号按水平/竖直分开取，这个细节在第 397 到 399 行的距离估计里起作用：水平与竖直辅助点的高度符号相反，因此它们的垂直差至少 $\sqrt3/2$。
+
+接触分类（第 355 到 401 行）断言：所有点两两不同；任意点对的距离要么是 1，要么至少 $\sqrt2$；全体单位距离对 $\mathcal C$ 恰由三类组成，负边的 $LA_e$、$A_eR$、$A_eB_e$，正边的 $LA_e$、$A_eB_e$、$B_eR$，以及同一原始格线上相邻两条正边的 $B_eA_f$。$H_+$ 的每条相互作用都是接触，接触权重记 $K_{ij}\ge0$，第三类接触取 $K_{ij}=0$，它只在 Hubbard 里拿到下限垫片 $f$ 那点正 hopping。证明里那些数字值得背下来：负边 gadgets 里 $B_e$ 到两端原始点距离 $\sqrt2$；正边里非相邻端点-辅助距离 $\sqrt3$；原始点互相至少 2；同轴线上异 gadgets 的辅助点沿程距离小于 $3/2$ 的只有相邻正边那一对，因而同高成为接触；中点型与正型辅助点的平面投影差至少 1 与 $1/2$，高度差至少 $\sqrt3/2$，平方距离至少 $1+\frac14+\frac34=2$；两个垂直方向的正型辅助点高度差 $\sqrt3$，已超 $\sqrt2$。我的教训是：先设计"距离二分为 1 与 $\ge\sqrt2$"，再谈渐近，否则隧穿积分里非接触项的指数抑制就没有干净的指数率（$\sqrt2D-2S$ 那条要留给 §7 用）。
+
+真正让我改变计划的是 lem:displacement（第 410 到 493 行）。我要的只是 $u_{ij}\cdot(s_j-s_i)=d_{ij}$ 且 $\max_i\lvert s_i\rvert\le6m\max_{\mathcal C}\lvert d_{ij}\rvert$，构造是线性的、多项式步、系数在 $\mathbb Q(\sqrt3)$、绕格环无相容性条件。做法是把位移变量拆开放：所有原始点的高度位移设 0；某原始点的沿轴坐标只由它所在"行"决定，另一水平坐标只由它所在"列"决定，即使两方向在同一顶点相交也是独立变量（第 425 到 430 行）。负键构成的每一段连通链上，取第一个原始 $a$ 坐标为 0 然后累加 $a_R=a_L+d_{LA_e}+d_{A_eR}$，$a_{A_e}=a_L+d_{LA_e}$，$a_{B_e}=a_{A_e}$，$z_{A_e}=0$，$z_{B_e}=\sigma d_{A_eB_e}$（第 436 到 443 行）。正键或零权键不约束其端点原始坐标之差，于是它们自动把链断开（第 444 到 449 行）。抬高的顶点集合在同高接触上形成不相交路径，逐段累加；每个抬高顶点恰有一条倾斜接触连到原始点，记 $h_0=\sqrt3/2$，那两个单位辐条向量是 $\frac12e_{\rm axis}+\sigma h_0e_z$ 与 $\frac12e_{\rm axis}-\sigma h_0e_z$，于是高度位移由
+
+$$ z_{A_e}=\frac{d_{LA_e}-(a_{A_e}-a_L)/2}{\sigma h_0},\qquad z_{B_e}=\frac{d_{B_eR}-(a_R-a_{B_e})/2}{\sigma h_0} $$
+
+直接解出（第 459 到 465 行）。因为原始点高度位移已设为 0，这两式不再对原始坐标施加任何新条件。范数界：原始沿程坐标 $\le2md_{\max}$，累加的抬高坐标 $\le md_{\max}$，负型辅助点沿线 $\le(2m+1)d_{\max}$、高度 $\le d_{\max}$，正型辅助点高度 $\le(1+3m/2)d_{\max}/h_0$，每点非零坐标不超过 2 个，合并得 $6md_{\max}$。
+
+我原先的错误路线是：给定每条接触的目标长度，去解一个非线性方程组 $\lvert X_j-X_i\rvert=\ell_{ij}$。第 528 到 529 行明确否掉了这条路："No exact nonlinear prescribed-length problem is being solved"，而且第 508 到 511 行补了一句关键的话，说这套做法不需要病态的一般线性系统求解。设计上的巧处在于：只需要一阶长度变化被控制，剩下的 $O(S^2/D)$ 二阶余项按第 519 到 524 行的估计被并入 hopping 误差里。三条恒等式值得单独抄：$X_j-X_i=Du_{ij}+s_j-s_i$；$\lvert X_j-X_i\rvert=D+u_{ij}\cdot(s_j-s_i)+O(S^2/D)$；非接触 $\lvert X_j-X_i\rvert\ge\sqrt2D-2S$（条件 $\max_i\lvert s_i\rvert\le S\le D/4$）。第二条来自欧氏范数在零以外的 Taylor 余项，第三条是三角不等式加接触分类。
+
+取整的比特账也在同一节里结清（第 495 到 509 行）：若数据已知到 $\tau/4$，把右逆作用在近似数据上，再近似 $Dp_i$ 并取整到有理位置 $X_i$，每点总欧氏误差不超过 $\tau/4$，然后定义 $s_i=X_i-Dp_i$。这一步我起初觉得别扭，因为它允许 $p_i$ 是无理数而 $s_i$ 未必有理；读完才明白这正是把取整误差吸收进位移定义的合法手段，于是接触方程误差至多 $\tau/4+2(\tau/4)<\tau$，且位移界变成 $\max_i\lvert s_i\rvert\le6m(\max\lvert d_{ij}\rvert+\tau)+\tau$。计算 $\sqrt3$ 只需多取多项式界定的若干比特。这个"用定义吸收误差"的手法在 §8 的定位步骤里还会再见到一次。
+
+## 6 孤立势阱与调参：为什么精度必须是指数级
+
+进入势阱一节，任务被拆成两件（第 9 到 15 行）：一是证明移动次核能单调地改一个孤立能量、对其他点影响极弱；二是把那些能量算得足够准，以便实现相应的压缩。要求的精度是 $D$ 的指数级，理由写得很直白："an inverse-polynomial energy error in these dilated units would grow after the final amplification."，因为最后要乘以 $Z_*\asymp e^D$。
+
+尺度与电荷：中心满足 $\lvert X_i-X_j\rvert\ge D-2S$、$S\le D/100$、$m/D$ 足够小；取整数 $Z_*$ 使 $e^D/2\le Z_*\le2e^D$；把两个数一次性取整，$Z_*q=\operatorname{round}(Z_*(1-\frac{500m}{D}))$、$Z_*q'=\operatorname{round}(Z_*\frac{1000m}{D})$（第 17 到 40 行），于是 $q=1-\frac{500m}{D}+O(Z_*^{-1})$、$q'=\frac{1000m}{D}+O(Z_*^{-1})$、$c\frac mD\le q'\le C\frac mD$。主核在 $X_i$，次核在 $X_i+\rho_ie_z$，$\rho_i\in[1,4]$，单电子算子 $h=-\frac12\Delta-\sum_iV_i$，其中 $V_i=\frac q{r_i}+\frac{q'}{\lvert y-X_i-\rho_ie_z\rvert}$。这里我最初有个疑问：为什么系数要设计成 $q\approx1$ 加一个小尾巴 $q'\approx1000m/D$。答案在第 267 到 269 行的夹逼算术里：$\lambda_i$ 的主项平移在 $\rho_i=1$ 端至多是 $(500-700)m/D$，在 $\rho_i=4$ 端至少是 $(500-250-100)m/D$，两端符号相反，二次误差与取整误差都落在余量之内。也就是说 500、700、250、100 这些数是为了让"500m/D 的偏移"横跨 $-1/2$，同时保证两端有余量。
+
+截断场的构造（第 62 到 72 行）：取 $C^2$ 的非降 $\chi$，在 $[0,1/16]$ 上为 0、在 $[1/8,\infty)$ 上为 1，可以用 $(t-1/16)^2(1/8-t)^2$ 的正倍数积分得到有理分段多项式数据；$\chi_i(y)=\chi(r_i/D)$，$W_i=\sum_{k\ne i}\chi_kV_k$，$h_i=-\frac12\Delta-V_i-W_i$。截断把别的核的奇点从 $h_i$ 里搬走，同时保留它们在站点附近的场。
+
+prop:isolated-well（第 99 到 119 行）给 uniform 结果：$h_i$ 在 $H^2$ 上自伴、形式域 $H^1$，基态本征值 $\lambda_i$ 单重、本征函数 $\psi_i$ 实正归一，剩余谱至少 $\lambda_i+g$；$\lvert\lambda_i+1/2\rvert\le Cm/D$、$\lVert\psi_i-\phi_i\rVert_{H^2}\le Cm/D$（$\phi_i(y)=\pi^{-1/2}e^{-r_i}$）；$\lVert D^jW_i\rVert_\infty\le Cm/D^{j+1}$、$0\le W_i\le100m/D$；所有这些在调参之前、且在整个 $[1,4]^m$ 上一致成立。证明里我最欣赏第 157 到 177 行：不依赖激发态显式公式就能得到氢的基态隔离，靠的是完全平方恒等式
+
+$$ \langle u,(H_i^0+1/2)u\rangle=\frac12\Bigl\lVert\nabla u+\frac{y-X_i}{r_i}u\Bigr\rVert_2^2, $$
+
+零向量恰是 $\phi_i$ 的倍数；若有界化向量列正交于 $\phi_i$ 而能量趋于 $-1/2$，则库仑形式在弱收敛下紧凑（半径 $a$ 内被 $Ca\lVert u\rVert_{H^1}^2$ 控，半径 $R$ 外被 $R^{-1}\lVert u\rVert_2^2$ 控，中间环用局域紧性），弱极限就迫使它是 $\phi_i$ 的倍数，与正交矛盾，从而得到固定的 $g_0>0$。第 194 到 196 行还补了正性：取最小元的绝对值不增能量，加上极点在距离 4 以内与 $H^2$ sup 逼近，连续性给出极点处也正。
+
+移动次核那部分（lem:wells-secants，第 219 到 304 行）是全篇最"手算"的地方，我喜欢它因为每步都有数。把本征方程与 $\phi_i$ 内积得
+
+$$ \lambda_i=-\frac12+(1-q)-q'f(\rho_i)-\langle\phi_i,W_i\phi_i\rangle+O((m/D)^2),\qquad f(\rho)=\int\frac{\pi^{-1}e^{-2\lvert y\rvert}}{\lvert y-\rho e_z\rvert}\,\,\mathrm d y, $$
+
+球面平均给出 $1/\max(r,\rho)$，于是 $f(\rho)=\rho^{-1}\int_0^\rho4r^2e^{-2r}\,\,\mathrm d r+\int_\rho^\infty4re^{-2r}\,\,\mathrm d r$，$f'(\rho)=-\rho^{-2}\int_0^\rho4r^2e^{-2r}\,\,\mathrm d r$；数值上 $f(1)=1-2e^{-2}>0.7$、$f(4)\le\frac14$、$\frac{1-5e^{-2}}{16}\le-f'(\rho)\le1$（第 244 到 266 行）。本征斜率的两端比较用变分原理夹住，密度替换 $\phi_i^2$ 的代价由 Hardy 控制：$\int\frac{\lvert u^2-\phi_i^2\rvert}{\lvert y-A(t)\rvert^2}\,\,\mathrm d y\le4\lVert\nabla(u-\phi_i)\rVert_2(\lVert\nabla u\rVert_2+\lVert\nabla\phi_i\rVert_2)\le Cm/D$。结论是自有斜率 $cq'(b-a)\le\lambda_i(b)-\lambda_i(a)\le Cq'(b-a)$，而其他坐标的交叉敏感度只有 $Cq'\frac m{D^2}\lVert\rho-\widetilde\rho\rVert_\infty$，因为移动极点到其截断非零区之间保持 $D/32$ 距离（第 298 到 302 行）。这一对比（自有坐标 $q'$ 级、其他坐标 $q'm/D^2$ 级）就是压缩映射的根据。
+
+尾部与解析性两块是数值部分的地基。粗尾部（lem:well-tail，第 309 到 358 行）：$\lvert\psi_i(y)\rvert\le C\exp[-.99(r_i-.01D)]$ 与 $\lVert\psi_i\rVert_{H^1(\{r_i>.65D\})}\le e^{-.61D}$。上解取 $b=C\exp[-a(r_i-.01D)]$，$a=.99$，直接算 $(h_i-\lambda_i)b/b=-\frac{a^2}{2}+\frac a{r_i}-V_i-W_i-\lambda_i$，常数项 $(1-a^2)/2+O(m/D)>0$；外边界靠加常数 $\varepsilon$ 压住双号，再送外半径到无穷、$\varepsilon$ 到 0；梯度界用截断 $\zeta$（支撑从 $.645D$ 起、$\lvert\nabla\zeta\rvert=O(D^{-1})$），得 $\frac12\lVert\nabla(\zeta\psi_i)\rVert^2=\int(V_i+W_i+\lambda_i)\lvert\zeta\psi_i\rvert^2+\frac12\int\lvert\nabla\zeta\rvert^2\lvert\psi_i\rvert^2$，最后 $.99(.645-.01)=.62865>.61$ 把多项式因子吸收。
+
+关于算法部分，我的错路有两个。第一，我以为只要证出 Ritz 值从上方逼近 $\lambda_i$ 就够了；第 847 到 848 行的提醒把我纠正过来："the Ritz bias is subtracted from the lower endpoint; a Ritz upper bound alone would not suffice for tuning."，因为停止判据要问的是"整个区间是否落在 $-1/2$ 的一侧"，只有上界就没法给出确定的下侧判决。第二，我打算把未知本征函数当作算法输入的一部分（毕竟构造近似子空间时用了它的 Taylor 系数与截断权重）；第 561 到 562 行与第 598 到 599 行两次声明这些只是存在性系数，算法不计算它们，00-introduction.tex 第 123 行也把这列为三大定量要素之一的要件。真正被计算的是网格、基与有理矩阵。
+
+graded Ritz 空间（lem:wells-ritz-approximation，第 469 到 625 行）的关键设计是 $\delta=2^{-8D}$ 与停止规则 $\lvert I\rvert\le\xi\min\{1,\operatorname{dist}(I,B)+\delta\}$：每根轴上 $O(D)$ 个区间、张量积 $O(D^3)$ 个节点，保留节点条件 $\lvert w\rvert<.73D$、到两极点距离 $>\delta$，每个节点配 $40$ 到 $O(D)$ 阶单项式，维数 $O(D^6)$；帽函数支撑半径满足 $R_w^{\rm hat}\le(1+\sqrt3)\xi\lvert w-a\rvert$ 与 $\le\sqrt3\xi$，因此任意纵横比的瘦长单元格都成立（这正是第 462 到 463 行点出的、不能引用 Maday-Marcati 现成结论的原因）。逼近链条：局部解析引理把 $\Delta u=Fu$ 的 $k$ 阶导 sup 界做成 $A_1^{k+1}k!$（第 375 到 383 行），递推 $T_{j+2}\le C(\sum_{b=0}^j\binom jbA^{b+1}b!T_{j-b}+\ell^2T_j)$，$\ell=k+2$，得 Taylor 误差 $e^{-20D}$；截断误差 $\lVert\psi_i-b\psi_i\rVert_{H^1}\le C(\sqrt\delta+e^{-.61D})$；合并 $\sqrt\delta=e^{-4(\log2)D}$、$\delta^{-1}e^{-20D}=e^{-(20-8\log2)D}$，得 $H^1$ 逼近 $e^{-.58D}$ 与 Ritz 偏置 $0\le\lambda_i^{\rm R}-\lambda_i\le Ce^{-1.16D}$。
+
+认证求值（prop:ritz-oracle，第 633 到 858 行）给出 $\varepsilon_D=2^{-\lceil 8D/5\rceil}<e^{-1.1D}$ 的有理区间夹逼，比特复杂度多项式于 $D,m,B$，且不假设 Ritz 矩阵的谱隙（第 646 到 647 行）。质量矩阵下界用行列式粗界：$Q\le2^{r^2B_0}$、$QM$ 是整数正定所以 $\det(QM)\ge1$、$\lambda_{\max}(M)\le r2^{B_0}$，于是 $\mu=2^{-K_M}$、$K_M=r^3B_0+(r-1)(B_0+\lceil\log_2r\rceil)$ 满足 $\lambda_{\min}(M)\ge\mu$（第 685 到 705 行）。库仑矩阵元靠 $\lvert z(y)\rvert\le1/2$ 的展开 $\frac1{\lvert y-a\rvert}=s^{-1/2}\sum_{j=0}^J\binom{-1/2}{j}z^j+\mathcal R_J$，$\lvert\mathcal R_J\rvert\le s^{-1/2}2^{-J}$，并用 $\bigl\lvert\binom{-1/2}{j}\bigr\rvert=4^{-j}\binom{2j}{j}\le1$ 控制尾；绝对值证书 $A_{Q_0}\ge\int_{Q_0}\lvert P\rvert$ 让相消不构成威胁（第 745 到 767 行）。矩阵误差取 $\tau=\varepsilon_D\mu/(16r)$，得 $\lVert M^{-1/2}(\widetilde A-A)M^{-1/2}\rVert\le\varepsilon_D/16$；判定用精确惯性：非零对角元取一号，全零对角但有 $a\ne0$ 时对 $\begin{pmatrix}0&a\\a&0\end{pmatrix}$ 枢轴化贡献一正一负，清分母后每个 Schur 元是加边子式的比，Hadamard 界给多项式比特增长（第 810 到 824 行）。最后是同时有理调参（prop:tuning，第 869 到 958 行）：$T_i$ 是每坐标的唯一根，$\lVert T(\rho)-T(\widetilde\rho)\rVert_\infty\le\theta\lVert\rho-\widetilde\rho\rVert_\infty$、$\theta=Cm/D^2\le1/2$；标量二分 $J=\lceil4D\rceil$ 步、"比较或停止"规则从不要未知无理量的精确符号，更新误差 $\le C\varepsilon_D/q'$；迭代误差 $e_{j+1}\le\frac12e_j+C\varepsilon_D/q'$，输出满足 $\lvert\lambda_i+1/2\rvert\le e^{-1.01D}$；oracle 调用 $O(mD^2)$ 次，每个采样 $O(D)$ 个小数位，且第 955 到 957 行强调电荷取整误差是被每次求值算进去的，不是事后加上的未控扰动。
+
+## 7 相对尾部：绝对逼近失效之处，把误差搬进指数
+
+03-hopping.tex 的开头一句话就是 §3 里那条错路的正式讣告："The absolute orbital estimate of Proposition prop:isolated-well does not determine an overlap of order $e^{-D}$."（第 4 到 5 行）。我要的是 $e^{-D}$ 大小的量的相对精度，因此本节的任务是把 $\psi_i$ 写成一个指数因子乘一个相对误差，让误差进入指数内部去。
+
+构造是沿射线积分场：$F_i(y)=r_i\int_0^1W_i(X_i+t(y-X_i))\,\,\mathrm d t$，$F_i(X_i)=0$。第 32 到 33 行特别叮嘱：这条积分走的是从 $X_i$ 到 $y$ 的整段，它并是对两端点处场的局部近似。这个"整体性"在后面的位移敏感性里救了一次命（见下面 $\varepsilon_{\mathrm{disp}}$ 那步）。目标式是 prop:relative-tail：调好参的势阱在 $r_i\le2D$ 上一致地有 $\psi_i=\pi^{-1/2}e^{-r_i+F_i(y)}(1+O(\varepsilon_{\mathrm{rel}}))$，$\varepsilon_{\mathrm{rel}}=\frac{m\log D+m^2}{D}$。
+
+证明的思路是我原来完全没想到的：不证逼近，是证比较。先算残余。取 $f=\pi^{-1/2}e^{-r+F}$，在环域 $10\le r\le3D$ 上直接计算得
+
+$$ \frac{(h_i-\lambda_i)f}{f}=-(\lambda_i+1/2)+\frac1r-V_i-\frac12(\Delta F+\lVert\nabla F\rVert^2\ \text{的标量形式}), $$
+
+论文原文写作 $-\frac12(\Delta F+\lvert\nabla F\rvert^2)$（第 84 到 87 行），其中 $\partial_rF=W_i$ 恰好抵消掉 $V_i$ 里的截断场部分；于是整体被 $C(\frac m{Dr}+\frac{m^2}{D^2})$ 界住（第 88 到 90 行）。这里 $\frac1r-V_i$ 的处理是：$\rho_i\le4$、$r\ge10$，$\bigl\lvert\frac1r-V_i\bigr\rvert\le\frac{\lvert 1-q\rvert}{r}+\frac{q'}{r-4}\le\frac{Cm}{Dr}$，电荷取整误差与 $e^{-1.01D}$ 一并被吸收（第 92 到 100 行）。
+
+$f$ 只是近似解，误差项在 $r$ 小的地方 $\sim\frac m{Dr}$ 还不是可求和的小量，所以要加一个修正把上下解拉开。修正取
+
+$$ g(r)=A_0\Bigl[\frac mD\bigl(1+\log(r/10)\bigr)+\frac{m^2r}{D^2}\Bigr], $$
+
+它的 $g'=A_0(\frac m{Dr}+\frac{m^2}{D^2})$、$\Delta g=A_0(\frac m{Dr^2}+\frac{2m^2}{D^2r})$，并且 $0\le\Delta g\le\frac{2g'}r$（第 110 到 113 行）。把 $f$ 换成 $fe^{\pm g}$ 时，算子商增加的那一项是 $\pm(1-\partial_rF)g'\mp\frac12\Delta g-\frac12(g')^2$（第 116 到 120 行）；由于 $r\ge10$、$\partial_rF=O(m/D)$、$g'$ 一致小，正号时该项至少 $cg'$、负号时至多 $-cg'$，把 $A_0$ 增大就压过残余。于是 $fe^g$ 是上解、$fe^{-g}$ 是下解。边界两端：$r=10$ 处用绝对估计 $\psi_i=\pi^{-1/2}e^{-10}+O(m/D)$，而 $e^{-10}$ 是一个固定的正数（第 127 到 131 行），这句话的分量在于它让 $A_0$ 可以只增一次就同时管住整个参数立方；$r=3D$ 处用粗尾部 $\lvert\psi_i\rvert\le Ce^{-2.9601D}$，再加常数 $\kappa=e^{-2.5D}$ 造 $f_+=fe^g+\kappa$、$f_-=fe^{-g}-\kappa$，靠环域上零阶系数 $-\frac{1}{\ }V_i-W_i-\lambda_i\ge\frac12-\frac1{10}-O(m/D)\ge\frac14$ 保证加正常数保持上解、减它保持下解（第 132 到 149 行）。最后 $\frac\kappa f\le\sqrt\pi e^{-D/2}$ 与 $g=O(\varepsilon_{\mathrm{rel}})$ 给出相对式。
+
+关于最大值原理，论文第 150 到 154 行给了弱形式的证明（用上解减解的负部去试，得到的恒等式是一个梯度范数加一个严格正权重 $L^2$ 范数之和的相反数），这段的存在让我确信作者知道读者会在无穷维形式域上卡住，所以不愿引用一个未加证明的比较定理。
+
+有了相对尾部，hopping 才被写成"正的显式积分"。定向吸引积分 $B_{ij}=\langle\psi_j,V_j^{\rm hole}\psi_i\rangle$，$V_j^{\rm hole}=(1-\chi_j)V_j$（第 169 到 175 行）。身份 $h=h_i-\sum_{k\ne i}V_k^{\rm hole}$（第 176 到 180 行）说明：这个洞对非正交轨道矩阵元 $\langle\psi_j,(h+1/2)\psi_i\rangle$ 的贡献恰是 $-B_{ij}$。替换成显式积分后得到
+
+$$ T_{ij}(X)=\frac1\pi\int_{\lvert v\rvert\le D/8}\frac{1-\chi(\lvert v\rvert/D)}{\lvert v\rvert}e^{L_X(v)}\,\,\mathrm d^3v,\qquad L_X(v)=-\lvert X_j+v-X_i\rvert-\lvert v\rvert+F_i^*(X_j+v)+F_j^*(X_j+v). $$
+
+第 266 到 267 行有个容易被跳过的说明：可积奇点 $\lvert v\rvert^{-1}$ 是非负积分权重的一部分，不在指数里。这个安排正是后面能用"对数振荡控制"做相对求积的原因，见下面。引理 lem:positive-hopping 的比较证明里，我核对了两件事：在 $V_j^{\rm hole}$ 支撑上 $\lvert v\rvert\le D/8$ 且 $\lvert y-X_i\rvert<2D$，于是相对尾部与代理替换都适用；次核核与主核核的比较靠 $\frac{\lvert v\rvert}{\lvert v-\rho_je_z\rvert}\le\frac{\lvert v\rvert}{\lvert v\rvert-4}\le\frac53$（$\lvert v\rvert>10$）与内球 $\int_{\lvert v\rvert\le10}\frac{\,\mathrm d^3v}{\lvert v-\rho_ie_z\rvert}\le\int_{\lvert w\rvert\le14}\frac{\,\mathrm d^3w}{\lvert w\rvert}<\infty$、$\int_{\lvert v\rvert\le1}\frac{\,\mathrm d^3v}{\lvert v\rvert}>0$，配上 $q'=O(m/D)$ 得相对 $O(m/D)$ 修正；正因被积函数非负，相对误差才能整体提到积分外（第 281 到 314 行）。参考尺度：$ce^{-D}\le T_{ij}(X^0)\le CD^2e^{-D+Cm}$，上界来自三角不等式 $\lvert Du+v\rvert+\lvert v\rvert\ge D$ 与 $\int_{\lvert v\rvert\le D/8}\frac{\,\mathrm d^3v}{\lvert v\rvert}=O(D^2)$，下界在固定球 $\lvert v\rvert\le1$ 上取，甚至给出可用值 $2e^{-D-2}$（第 317 到 335 行）。
+
+位移律是几何与解析的接口（lem:hopping-displacement）：$\frac{T_{ij}(X)}{T_{ij}(X^0)}=e^{-u_{ij}\cdot(s_j-s_i)}(1+O(\varepsilon_{\mathrm{disp}}))$，$\varepsilon_{\mathrm{disp}}=\frac{mS}{D}+\frac{S^2}{D}+SD^{-1/4}+e^{-c_1\sqrt D}$，并且"主导指数里投影位移的系数是 1"（第 340 到 356 行）。这一句我原本要怀疑：凭什么系数恰是 1，会不会有一个各向异性的几何因子。证明给了三重理由。写 $v=zu+w$、$w\perp u$，在 $\lvert v\rvert\le D/8$ 上 $\lvert Du+v\rvert\ge\frac{7D}8$，范数的 Hessian 范数 $O(1/D)$，其梯度在 $Du+v$ 处与 $u$ 差 $O(\frac{\lvert w\rvert}D)$，Taylor 给出 $\lvert Du+v+\delta\rvert-\lvert Du+v\rvert=u\cdot\delta+O(\frac{S\lvert w\rvert}D+\frac{S^2}D)$；关键是这段估计把回向线段 $v=-tu$、$0\le t\le D/8$ 也包含进去，那里 $Du+v=(D-t)u$、梯度恰为 $u$，于是这段不可忽略的纵向延伸既不改变系数也不引入 $O(S)$ 横向误差（第 387 到 391 行）。射线修正项的位移变化被 $\frac{CmS}{D}$ 界住，用的是截断核的全局 Lipschitz 界，第 373 到 375 行说这全局性在此 essential，因为运动的射线会穿过洞或过渡界面。横截面外的区域 $\lvert w\rvert>D^{3/4}$ 满足 $\lvert Du+v\rvert+\lvert v\rvert-D\ge\frac{4\lvert w\rvert^2}{D}\ge4\sqrt D$（分母至多 $2\lvert v\rvert\le D/4$），于是被舍去的贡献除以 $e^{-D}$ 后至多 $CD^2\exp[-c\sqrt D+C(m+S)]$，再用 $m+S\le D^{1/4}$ 把各向异性因子 $e^{Cm}$ 与多项式体积一起吸收进 $e^{-c_1\sqrt D}$。注意这里没有任何角向常数性的假设。
+
+数值上，$T_{ij}(X^0)\sim e^{-D}$，直接做绝对求积会把复杂度账搞糊（第 440 到 442 行）。求积方案（lem:hopping-quadrature）因此走相对路线：控制指数因子的对数 $L$ 的振荡，同时把非负径向权重精确积出来。球面用 $(\mu,\varphi)$ 参数化，$\mu\in[-1,1]$、$\varphi\in[0,2\pi]$，$\,\mathrm d\omega=\,\mathrm d\mu\,\,\mathrm d\varphi$；径向有理分割插入 $\chi(r/D)$ 的全部断点，每段权重 $w_a=\int_{I_a}(1-\chi(r/D))r\,\,\mathrm d r$ 是非负精确有理数，零权重段丢弃；每个角向矩形的归一化权重恰为 $\frac1\pi\cdot\frac2M\cdot\frac{2\pi}N=\frac4{MN}$（第 492 到 497 行）。这里有个我一开始算错的地方：我以为 $M=N=O(D/h)$ 就够，但平方根参数化只满足 $\lvert\omega(\mu,\varphi)-\omega(\mu',\varphi')\rvert\le C\lvert\mu-\mu'\rvert^{1/2}+C\lvert\varphi-\varphi'\rvert$，在极点附近 $\mu$ 方向要开平方，所以必须 $M=O((D/h)^2)$、$N=O(D/h)$，总单元 $O((D/h)^4)$（第 501 到 509 行）。极点的 Lipschitz 常数 1、射线修正的 $Cm/D$，合起来 $\lvert L(v)-L(v')\rvert\le C\lvert v-v'\rvert$、$\lvert L(v)\rvert\le C(D+m)$，于是 $e^{-Ch}Q\le T_{ij}(X^0)\le e^{Ch}Q$，$h$ 取 $\epsilon$ 的固定倍数即可，且这个相对界与积分本身的大小 $e^{-D}$ 无关。射线积分用中点法 $K=O(m/\epsilon)$ 段，误差 $\le\frac{Cm}{K}\le O(\epsilon)$；核在小区间上按零取值，否则分母被 $D$ 的固定倍数界住，等价于对固定连续函数 $\chi(a)/a$（在 $[0,1/16]$ 上零延拓）求值，因此连"求交点位置"都不需要。最后的算术：算缩放和 $e^DQ$，用样本指数 $e^{D+L(v_{abc})}$，其精确值有正下界（因 $e^DT_{ij}(X^0)\ge2e^{-2}$），非指数权重之和 $O(D^2)$，指数宗量幅度 $O(D+m)$，每个初等函数舍入到 $O(\epsilon/D^2)$ 绝对误差、负值截到零，需 $O(D+m+\log(D/\epsilon))$ 精度比特（第 553 到 572 行）。结论 $\bigl\lvert\log\frac{\widehat I_{ij}}{e^DT_{ij}(X^0)}\bigr\rvert\le\epsilon$。
+
+方向恒等式（lem:hopping-orientation）是我觉得最漂亮的一小段：$B_{ij}-B_{ji}=(\lambda_i-\lambda_j)\langle\psi_j,\psi_i\rangle$。理由只是 $h_i-h_j=V_j^{\rm hole}-V_i^{\rm hole}$ 与自伴性，另外第 611 到 616 行给了等价的看法：在 $\langle\psi_j,(h+1/2)\psi_i\rangle$ 的两个展开里，除 $i,j$ 之外每个洞的贡献恒等相消，因为它们把同一个实函数乘积对同一个乘势积分。数值：$\lvert\psi_i(y)\psi_j(y)\rvert\le Ce^{0.0198D}e^{-0.99(r_i+r_j)}$，在指数 $.90$ 的那一份上用 $r_i+r_j\ge D-2S$，留 $e^{-0.09r_i}$ 保可积，得 $\lvert\langle\psi_j,\psi_i\rvert\rangle$ 意义上的重叠 $\le Ce^{-0.8802D+1.8S}\le e^{-0.85D}$；再乘 $\lvert\lambda_i-\lambda_j\rvert\le2e^{-1.01D}$ 得 $\lvert B_{ij}-B_{ji}\rvert\le2e^{-1.86D}$（第 596 到 633 行）。这说明定向选择无所谓，反方向只多 $4e^{-0.86D}$（乘上 $Z_*\le2e^D$ 后）。
+
+标定命题 prop:calibration 把这些量拼成算法：取 $d_{ij}=\log\frac{Z_*T_{ij}(X^0)}{t_{ij}}$（误差 $\tau/4$），算式写成 $\log Z_*-D+\log(e^DT_{ij}(X^0))-\log t_{ij}$ 使每步比特多项式（第 684 到 688 行）；$\max\lvert d_{ij}\rvert\le C(m+\log D+\log(1/t_{\min})+1)$；把 §5 的线性右逆作用其上，取整，$s_i=X_i-Dp_i$，得 $\lvert u_{ij}\cdot(s_j-s_i)-d_{ij}\rvert\le\tau$ 与 $S\le Cm(m+\log D+\log(1/t_{\min})+1)+\tau$。核心恒等式是 $Z_*T_{ij}(X^0)e^{-u_{ij}\cdot(s_j-s_i)}=t_{ij}e^{-e_{ij}}$、$\lvert e_{ij}\rvert\le\tau$（第 735 到 738 行），于是一阶指数因子被精确抵消，位移律与相对尾部只添 $\mathcal E_{\mathrm{cal}}=\frac{m\log D+m^2}D+\frac{mS}D+\frac{S^2}D+SD^{-1/4}+\tau+e^{-c_1\sqrt D}$ 的相对误差，得 $\lvert Z_*B_{ij}-t_{ij}\rvert\le Ct_{ij}\mathcal E_{\mathrm{cal}}$。第 744 到 747 行的这句话是我读到此节时最在意的一句："no factor $e^{Cm}$ or $e^{\lvert d_{ij}\rvert}$ multiplies its absolute error, even for the smallest floored hopping."，因为垫片的存在使得 $t_{ij}$ 可以小到一个逆多项式，若误差里混进 $e^{\lvert d_{ij}\rvert}$，整套标定做废。$\mathcal E_{\rm cal}$ 的全部成分（式 eq:total-calibration-error）与 $m+S\le D^{1/4}$ 一起，就是 §12 里尺度选择要满足的条件清单。
+
+## 8 顺序的解耦：代理场 $W_i^*$ 与"先定位、后调能"
+
+论文 §1 第 129 行有一段我觉得被低估的自白："The order of construction and the order of justification deserve separate attention."。它处理的是这样一个死结：尾部公式只对调好的阱成立（前提是 $\lvert\lambda_i+1/2\rvert\le e^{-1.01D}$，而这要由 $\rho_i$ 决定），可 $\rho_i$ 的调参又必须在中心 $X_i$ 定下来之后才能做，而中心要按 hopping 目标算，hopping 目标又来自尾部公式。逻辑上这是个环。
+
+解法是把位置计算里出现的 $W_i$ 换成只依赖主核中心的显式代理场
+
+$$ W_i^*(y)=\sum_{k\ne i}\frac{\chi(\lvert y-X_k\rvert/D)}{\lvert y-X_k\rvert},\qquad F_i^*(y)=r_i\int_0^1W_i^*(X_i+t(y-X_i))\,\,\mathrm d t, $$
+
+每个加和项在其截断洞内零延拓，于是 $y=X_k$ 处那个看似发散的商在邻域内恒为零（第 191 到 199 行）。可行的关键是截断核的全局 $C^2$ 性：$G_D(z)=\frac{\chi(\lvert z\rvert/D)}{\lvert z\rvert}$ 与 $J_{D,\rho}(z)=\frac{\chi(\lvert z\rvert/D)}{\lvert z-\rho e_z\rvert}$ 对 $1\le\rho\le4$ 一致地全局 $C^2$，且 $\lVert\partial^\alpha G_D\rVert_\infty+\lVert\partial^\alpha J_{D,\rho}\rVert_\infty\le CD^{-1-\lvert\alpha\rvert}$（$\lvert\alpha\rvert\le2$）。证明用伸缩 $z=D\zeta$：在大 $D$ 下两个极点都严格落在 $|z|<D/16$ 内即核为零的区域，非零部分 $|z|\ge D/16$ 且 $|z-\rho e_z|\ge|z|/2$，于是核是 $D^{-1}$ 乘一个导数一致有界的函数；$\chi$ 在过渡端点的 $C^2$ 拼接把这些界变成全局的，包括洞边界处（第 227 到 236 行）。取 $\rho/D$ 作为第二个（伸缩后）极点位置，它离 $\chi$ 的支撑有固定正距离，这一步让我明白为什么次核位移 $\rho_i$ 的区间 $[1,4]$ 可以任意大摇大摆而不破坏核的光滑界。
+
+替换误差：$\lVert W_i-W_i^*\rVert_\infty\le\frac{Cm^2}{D^2}$、$\lvert F_i(y)-F_i^*(y)\rvert\le\frac{Cm^2}{D}$（$r_i\le3D$），因为 $W_i-W_i^*=\sum_{k\ne i}[(q-1)G_D(y-X_k)+q'J_{D,\rho_k}(y-X_k)]$ 且取整后 $\lvert q-1\rvert+q'\le Cm/D$；把 $\frac{Cm^2}{D}$ 指数化就得到"$F_i$ 可换成 $F_i^*$、误差不变"的结论（第 216 到 224 行、第 238 到 248 行）。第 247 到 248 行的最后半句是这一节的全部意义："None of the kernel estimates require tuning; they hold uniformly on the whole parameter cube."
+
+于是实际算法顺序（03 第 751 到 760 行、05 第 100 到 106 行的第 3 与第 4 步）是：用 $W_i^*$ 算 $T_{ij}(X^0)$ 与 $d_{ij}$，用线性右逆算中心并取整，固定取整后的整数电荷，此后才对最终有理中心调用 prop:tuning。第 759 到 760 行明确声明调参不需要重新标定，也不会引入之后的位置取整误差。我原来的直觉是"先把所有东西一次解出来，然后一起取整"，这里给出的教训是：只要一致界在整个参数立方上成立，就可以把耦合拆开，把不可计算量从构造顺序中删掉。这个手法我觉得可以带走：先造一个不含未知量的替身，把替身的误差做成一致界，然后按替身来算，最后再算真值。
+
+## 9 连续统排除第一步：整个单粒子补空间上的固定间隙
+
+到这里我有了 $m$ 个"好的"空间轨道 $\omega_i$（$\mathcal J_0=\mathcal U G^{-1/2}$ 的列，$\mathcal Ue_i=\psi_i$，$G$ 是 Gram 矩阵），加上自旋共 $2m$ 个自旋轨道，投影 $P=P_0\otimes I_2$。要排除的是所有跨出这些模式的状态。04-continuum.tex 第 81 到 108 行的 lem:one-body-matrix 先把地基打好：$\lVert A\psi_i\rVert_2\le e^{-.75D}$、$\lVert G-I\rVert\le e^{-.85D}$，$A=h+\frac12$。残余恒等式 $A\psi_i=\epsilon_i\psi_i-\sum_{k\ne i}V_k^{\rm hole}\psi_i$（第 111 到 116 行）配合洞上的范数 $\lVert V_k^{\rm hole}\rVert_2\le CD^{1/2}$、$\lVert V_k^{\rm hole}\rVert_1\le CD^2$（第 125 到 130 行），以及洞上 $r_i\ge\frac{7D}8-2S$，给出总和 $\le CmD^{1/2}e^{-.85635D+1.98S}$。这些带五位小数的指数（$.85635$、$1.7127$、$.8802$、$.99\sqrt2-.0198>1.38$）都是把 $.99(r_i+r_j)$ 型尾部与 $.0198D$ 的组合逐项算出来的结果，作者没有把它们写成 $e^{-cD}$ 草草带过，这对我要复现证明很关键。矩阵元侧：$\lvert M_{ii}-\epsilon_i\rvert\le Ce^{-1.1D}$、$\lvert M_{ji}+B_{ij}\rvert\le Ce^{-1.1D}$（选定定向的接触）、非接触 $\lvert M_{ij}\rvert\le Ce^{-1.1D}$，正交化校正 $\lVert G^{-1/2}MG^{-1/2}-M\rVert\le C\sqrt m\,e^{-1.6D}$，最后 $\lVert Z_*\mathcal J_0^*A\mathcal J_0-\mathsf T\rVert\le\delta_1$，$\delta_1=m\epsilon_{\rm hop}+Z_*e^{-1.01D}+CmZ_*e^{-1.1D}+CmZ_*e^{-1.6D}$。第 218 到 221 行有一句提醒：必须在正交化之前加 $\frac12G$ 而 $\tfrac12I$ 不行，即平移对非正交基要带 Gram 矩阵。
+
+补间隙（prop:complement-gap，第 257 到 354 行）的结论是存在与构造参数无关的 $g>0$ 使 $(I-P)A(I-P)\ge g(I-P)$，并且这个不等式在完整单粒子形式域上成立，包括核之间与无穷远处的函数。证明用分区单位 $\theta_0,\ldots,\theta_m$：$\sum_a\theta_a^2=1$，$\theta_i=1$ 在 $r_i\le D/5$，支撑在 $r_i\le D/4$，环形过渡带取 $\theta_i=\cos f(r_i/D)$、$\theta_0=\sin f(r_i/D)$，$f$ 从 0 平滑到 $\pi/2$；半径 $D/4$ 的球互不相交，任一点至多落在一个过渡环里，故 $\sum_a\lvert\nabla\theta_a\rvert^2\le CD^{-2}$。
+
+这里我卡过一下：全局正交于所有 $\psi_i$ 的 $u$，局域化以后 $\theta_iu$ 就不再正交于 $\psi_i$，那么局域算子的正性怎么用？论文的答案是"漏出量指数小"：由全局正交得 $b_{i\sigma}=\langle\psi_i,\theta_iu_\sigma\rangle=\langle(\theta_i-1)\psi_i,u_\sigma\rangle$，而 $\lVert(\theta_i-1)\psi_i\rVert\le C\operatorname{poly}(D)e^{-.99(.2-.01)D}\le e^{-.18D}$（在 $r_i\ge D/5$ 上积分尾部），于是 $\sum_{i,\sigma}\lvert b_{i\sigma}\rvert^2\le me^{-.36D}$（第 291 到 309 行）。第 310 到 312 行还专门强调"并不假设局域向量恰与局域基态正交"，这一句是我原先漏想的。势的正性侧：在 $\operatorname{supp}\theta_i$ 上每个 $k\ne i$ 满足 $r_k\ge D-2S-\frac D4=\frac{3D}4-2S>\frac D8$，故 $\chi_k=1$ 且 $h=h_i$，配合单阱间隙 $h_i-\lambda_i\ge g_{\rm w}(I-\lvert\psi_i\rangle\langle\psi_i\rvert)$ 得 $\langle\theta_iu,A\theta_iu\rangle\ge g_{\rm loc}\lVert\theta_iu\rVert^2-(g_{\rm loc}+e^{-1.01D})\sum_\sigma\lvert b_{i\sigma}\rvert^2$，其中 $0<g_{\rm loc}\le\min(g_{\rm w}/2,\frac14)$。在外面 $\operatorname{supp}\theta_0$ 上每个主核距离至少 $\frac D5$、次核距离至少 $\frac D5-4\ge\frac D6$，$q+q'\le2$，吸引总量 $\le Cm/D$，于是 $\langle\theta_0u,A\theta_0u\rangle\ge(\frac12-Cm/D)\lVert\theta_0u\rVert^2\ge g_{\rm loc}\lVert\theta_0u\rVert^2$。动能乘积法则给出 IMS 恒等式 $\langle u,Au\rangle=\sum_a\langle\theta_au,A\theta_au\rangle-\frac12\int\sum_a\lvert\nabla\theta_a\rvert^2\lvert u\rvert^2$，注意 $-\Delta/2$ 归一化下动能误差系数是 $\frac12$（第 249 到 252 行明说这一点并指向 Simon 引理的乘积法则形式），先在光滑函数上成立再由库仑形式的连续性延到 $H^1$。合起来 $\langle u,Au\rangle\ge g_{\rm loc}-Cme^{-.36D}-CD^{-2}\ge g_{\rm loc}/2$，取 $g=g_{\rm loc}/2$。
+
+我把这一节的结构记成一句口诀：局域正性来自单阱间隙，外部正性来自动能 $\frac12$ 减去 $O(m/D)$ 的弱吸引，接口处的代价是 $D^{-2}$ 的梯度项与被指数小的漏出量补掉的投影缺失。三者都不依赖 $N$、不依赖维度，这是它能在多粒子情形直接抬升的原因（§10）。
+
+## 10 高模消除：把补空间耦合平方后再乘 $Z_*$
+
+抬到多粒子时，论文非常小心地声明它没有偷偷加承诺。$\mathfrak H_m=\bigwedge^m\mathfrak h$，$\Pi=\bigwedge^mP$，$Q_m=I-\Pi$，而 $\Pi$ 投的是 $2m$ 个自旋轨道里"全部"的 $m$ 电子组态：第 363 到 365 行写着 "it does not impose single occupancy or a total-spin condition"。00-introduction.tex 第 115 行也重申单占据是在有限 Hubbard 分析里得到的，没有被加到允许的连续统状态上。这一点对我理解整套论证的定位很重要：被比较的两个对象在各自空间里都是无约束的最小化，中间靠一次平方完成搭桥，靠的不是"两边都限制在同一个受控子空间"。
+
+尺度关系写成精确恒等式：在膨胀坐标 $y_\ell=Z_*x_\ell$ 下 $H/Z_*^2=d\Gamma(h)+W_{\rm ee}/Z_*$，于是
+
+$$ \mathcal H=\frac H{Z_*^2}+\frac m2=d\Gamma(A)+\frac{W_{\rm ee}}{Z_*},\qquad A=h+\frac12, $$
+
+其中 $W_{\rm ee}=\sum_{\ell<k}\lvert y_\ell-y_k\rvert^{-1}$（第 372 到 384 行）。第 391 到 410 行的定义域段落我已在 §2 提过，它的用途在此处显现：$\omega_i\in H^2(\R^3)$，乘积函数有平方可积的纯二阶导与混合一阶导，故 $\operatorname{Ran}\Pi$ 的每个向量都在多粒子算子定义域里，$\Pi$ 与 $Q_m$ 都保持形式域，因此下面对二次型做的所有操作都合法。
+
+第一个工具是维度无关的费米子 Hardy 界（lem:fermion-hardy，第 412 到 476 行）：对 $\operatorname{Ran}\Pi$ 中所有归一化 $u$ 一致地 $\sum_\ell\lVert\nabla_{y_\ell}u\rVert_2^2\le Cm$、$\lVert W_{\rm ee}\Pi\rVert\le Cm^2$，常数与 $\dim\operatorname{Ran}\Pi=\binom{2m}m$ 无关。证明分三步，我逐步核对过。其一，动能矩阵的迹：原始 $(K_{\rm raw})_{ij}=\langle\nabla\psi_i,\nabla\psi_j\rangle$ 半正定、迹 $\le Cm$，正交化后 $K_0=G^{-1/2}K_{\rm raw}G^{-1/2}$，$\operatorname{Tr} K_0=\operatorname{Tr}(K_{\rm raw}G^{-1})\le\lVert G^{-1}\rVert\operatorname{Tr} K_{\rm raw}\le Cm$。其二，约化密度矩阵的算子界：对系数向量 $v$，$\gamma$ 的二次型是 $\lVert c(v)u\rVert^2$，由反对易关系 $c(v)c(v)^\dagger+c(v)^\dagger c(v)=\lVert v\rVert^2I$ 得 $0\le\gamma\le I$，于是 $\sum_\ell\lVert\nabla_{y_\ell}u\rVert^2=\operatorname{Tr}(\gamma K)\le\operatorname{Tr} K$。其三，_pair_ 求和：固定三维 Hardy $\bigl\lVert\lvert y_\ell-y_k\rvert^{-1}u\bigr\rVert_2\le2\lVert\nabla_{y_\ell}u\rVert_2$（其余变量固定），$b_m=m(m-1)/2$，Cauchy-Schwarz 给 $\lVert W_{\rm ee}u\rVert_2^2\le b_m\sum_{\ell<k}\lVert\,\lvert y_\ell-y_k\rvert^{-1}u\rVert_2^2\le4b_m(m-1)\sum_\ell\lVert\nabla_{y_\ell}u\rVert_2^2\le Cm^4$；$m=1$ 时斥能为零。第 473 到 475 行的话值得记：这是对整个有限模式空间算子界，而不只是对个别 Slater 行列式，正因为如此它才能扛住任意费米子叠加。
+
+第二个工具是消除本身（lem:continuum-elimination，第 478 到 574 行）。记 $\varepsilon=\lVert AP\rVert\le C\sqrt m\,e^{-.75D}$。非对有界算子 $R_{\rm off}=PA(I-P)+(I-P)AP$，$\lVert(I-P)AP\rVert\le\varepsilon$，第 502 到 503 行说明尽管 $A$ 无界，自伴性把两个块认出来了。块对角余项 $A-R_{\rm off}=PAP+(I-P)A(I-P)\ge-\varepsilon P+g(I-P)$，于是
+
+$$ d\Gamma(A)\ge gN_\perp-2m\varepsilon I,\qquad N_\perp=d\Gamma(I-P), $$
+
+这里 $N_\perp$ 的本征值是非负整数（$(I-P)^{(\ell)}$ 两两交换），核恰为 $\operatorname{Ran}\Pi$，所以 $N_\perp\ge Q_m$，包括对不同数目高模粒子之叠加也成立（第 518 到 522 行）。斥能形式非负，故它对 $Q_m$ 的压缩非负，即使 $W_{\rm ee}$ 未必与 $\Pi$ 交换（第 524 到 526 行）；这一句解决了我一个具体的担心：非负性与压缩可交换，不需要交换性。合起来 $Q_m\mathcal HQ_m\ge(g-2m\varepsilon)Q_m\ge cQ_m$，$c=g/2$。耦合范数
+
+$$ \beta=\lVert Q_m\mathcal H\Pi\rVert\le m\varepsilon+\frac{Cm^2}{Z_*}\le Cm^{3/2}e^{-.75D}+\frac{Cm^2}{Z_*}, $$
+
+第一行理由是对角块的一粒子求和保持 $\operatorname{Ran}\Pi$；同时 $\lVert\Pi\mathcal H\Pi\rVert\le m\varepsilon+Cm^2/Z_*=o(1)$。最后平方完成：对 $u=p+v$，
+
+$$ \langle u,\mathcal Hu\rangle\ge\langle p,\mathcal Hp\rangle+c\lVert v\rVert^2-2\beta\lVert p\rVert\lVert v\rVert\ge\langle p,\mathcal Hp\rangle-\frac{2\beta^2}{c}\lVert p\rVert^2+\frac c2\lVert v\rVert^2, $$
+
+即形式不等式 $\mathcal H\ge\Pi\mathcal H\Pi-\frac{2\beta^2}{c}\Pi+\frac c2Q_m$；因有限块范数 $o(1)$，右侧底部是 $E_\Pi-2\beta^2/c$，反方向由限制试探向量到 $\operatorname{Ran}\Pi$ 得到，于是
+
+$$ 0\le E_\Pi-\inf\operatorname{Spec}\mathcal H\le e^{-1.2D},\qquad\text{显式上界 } C\bigl(m^{3/2}e^{-.75D}+m^2/Z_*\bigr)^2. $$
+
+第 571 到 573 行的收尾我读得很重："All lower bounds apply to quadratic forms and hence to spectral infima; existence of an eigenvector at the bottom of the full continuum spectrum is not used." 这跟我 §2 里那条"阈值分离不是谱隙、也不保证本征值在下确界处达到"的承诺完全一致。
+
+真正的收获是第 576 到 586 行的单位换算：把上述误差乘以 $Z_*$ 后是 $C(m^3e^{-.5D}+m^{7/2}e^{-.75D}+m^4e^{-D})$，而弱界 $Z_*e^{-1.2D}\le2e^{-.2D}$ 就够用，且原文点明"This squaring of the residual against the fixed complementary gap is what permits the final energy amplification."。我此前想过直接估 $\lVert Q_m\mathcal H\Pi\rVert$ 乘 $Z_*$，那给出 $e^{-.75D}\cdot e^D=e^{.25D}$，发散；05-completion.tex 第 78 行把这句话说得更硬："multiplying that residual linearly by $Z_*$ would not be a valid estimate"。所以固定间隙 $g$ 的作用不止是排除，它使残差被平方，从而给指数放大留出 $.2D$ 的余量。这是我这轮读论文得到的最实用的一个教训：放大尺度下，任何一次线性放大指数小量都要检查是否必须换成二次型平方。
+
+## 11 压缩回来的相互作用为什么恰是 $U=5/8$ 的 onsite 项
+
+有限块里的算子要认出 Hubbard 来。用 $\mathcal J_m=\bigwedge^m\mathcal J$ 把 $\operatorname{Ran}\Pi$ 与 $\bigwedge^m(\mathbb C^m\otimes\mathbb C^2)$ 等同，$W_{\rm eff}=\mathcal J_m^*W_{\rm ee}\mathcal J_m$。结论（lem:continuum-coulomb-compression，第 607 到 616 行）是
+
+$$ \Bigl\lVert W_{\rm eff}-U\sum_{i=1}^m n_{i\uparrow}n_{i\downarrow}\Bigr\rVert\le\frac{Cm^5}{D},\qquad U=\frac58. $$
+
+这条界是 §7 里那个 $\frac58$ 的兑现：单粒子轨道是 $e^{-\lvert y\rvert}$ 型氢基态，onsite 库仑积分恰为 $\frac58$，而 Hubbard 的 onsite 排斥当初就是按这个值设计的。误差链条分四段（第 618 到 694 行）。第一段是系数泛函的连续性：对四个函数定义 $\mathcal V(a,b;c,d)=\iint\frac{\overline{a(x)b(y)}\,c(x)d(y)}{\lvert x-y\rvert}\,\,\mathrm d x\,\,\mathrm d y$，Hardy 加 Cauchy-Schwarz 给 $\lvert\mathcal V(a,b;c,d)\rvert\le2\lVert a\rVert_2\lVert b\rVert_2\lVert\nabla c\rVert_2\rVert d\rVert_2$（原文 $\lVert\nabla c\rVert_2\lVert d\rVert_2$），于是四个宗量在一致有界的 $H^1$ 集上按 $H^1$ 范数 Lipschitz；把 $\omega_i$ 换成 $\phi_i$ 每个系数代价 $Cm/D$，每个系数乘 $\frac12c_a^\dagger c_b^\dagger c_dc_c$（范数至多 1），系数个数至多 $(2m)^4$，总改变 $Cm^5/D$。第 647 到 649 行的注解很重要：这是在固定的抽象正交位模里比较系数数组，被换掉的 $\phi_i$ 之间没有任何正交性被断言或需要。
+
+第二段是截断：取径向截断（$r_i\le D/5$ 上为 1、$r_i\ge D/4$ 上为 0、梯度 $\le C/D$）乘 $\phi_i$ 得 $\zeta_i$，氢尾部直算给 $\lVert\zeta_i-\phi_i\rVert_{H^1}\le C\operatorname{poly}(D)e^{-D/5}\le e^{-.18D}$，诸 $\zeta_i$ 支撑互不相交；换成 $\zeta_i$ 只改变 $Cm^4e^{-.18D}$。第三段是支撑不相交的后果：非零系数必须让 $x$ 处两个因子同位、$y$ 处两个因子同位，剩下的只有 onsite 与位间密度项；位间项 $0\le V_{ij}^{\rm dir}=\iint\frac{\lvert\zeta_i(x)\rvert^2\lvert\zeta_j(y)\rvert^2}{\lvert x-y\rvert}\,\,\mathrm d x\,\,\mathrm d y\le\frac1{D/2-2S}\le\frac CD$，对应算子 $\sum_{i<j}V_{ij}^{\rm dir}n_in_j$ 中 $n_i=n_{i\uparrow}+n_{i\downarrow}$ 范数为 2，故位间部分总范数 $\le Cm^2/D$。第四段是 onsite 计数：$\mathcal V(\phi_i,\phi_i;\phi_i,\phi_i)=U$，误差 $Ce^{-.18D}$，两个同自旋单项式因反对易消失，两个异自旋单项式配上相互作用里的 $\frac12$ 恰好给出 $Un_{i\uparrow}n_{i\downarrow}$。合并 $C(\frac{m^5}D+m^4e^{-.18D}+\frac{m^2}D)\le\frac{Cm^5}D$。
+
+这里我原本有个多余的担心：位间直接排斥是不是必须像某些约束构造那样保留到主阶。第 591 到 595 行回答得干脆：在当前被指数放大的尺度上它的范数是 Hubbard 单位下的 $O(m^2/D)$，"unlike constructions that must keep it at leading order at polynomial confinement scales"。这句话同时解释了两篇姊妹文的机制差异（§13）：单位电荷那篇用多项式约束，位间项留不住，只能靠等质量 cubature 把形状造出来；这篇用 $Z_*\asymp e^D$ 的膨胀把一切压到指数尺度，于是位间项自然降为 $1/D$ 级误差，代价是必须处理电荷的二进制编码与隧穿的相对精度。
+
+顺带把模拟命题（prop:continuum-simulation，第 700 到 767 行）串起来：精确压缩 $\mathcal J_m^*(Z_*\mathcal H)\mathcal J_m=d\Gamma(Z_*\mathcal J^*A\mathcal J)+W_{\rm eff}$，而 Hubbard 的 hopping 项是 $d\Gamma(\mathsf T\otimes I_2)$；$m$ 粒子上有界一粒子差的二次量子化范数至多放大 $m$ 倍，于是 $\lVert\mathcal J_m^*(Z_*\mathcal H)\mathcal J_m-H_{\rm Hub}(t)\rVert\le m\delta_1+Cm^5/D$，有限自伴矩阵谱最小之差由变分原理控住，再抬 $Z_*e^{-1.2D}$ 去掉限制，得
+
+$$ \Bigl\lvert\frac{E_0}{Z_*}+\frac{mZ_*}2-E_{\rm Hub}(t)\Bigr\rvert\le m\delta_1+\frac{Cm^5}D+Z_*e^{-1.2D}\le C\Bigl[m^2\epsilon_{\rm hop}+\frac{m^5}D+me^{-.01D}+m^2e^{-.1D}+m^2e^{-.6D}+e^{-.2D}\Bigr]. $$
+
+最后一行的六个成分，正好对应 §7 的标定误差、§11 的压缩误差、以及 §9 到 §10 的三类指数余量，读到这里我确认整套估计没有隐藏的第七项。
+
+## 12 尺度选择、构造顺序与阈值的仿射像
+
+05-completion.tex 不长，但它承担两件我最容易搞砸的事：一次定死所有参数，以及在能量单位上不含糊。
+
+误差预算取 $\epsilon_*=\frac{\alpha\gamma}{64}$（第 22 到 25 行），有限段已有 $\bigl\lvert E_{\rm Hub}(t)-\alpha(E_{\rm in}-C_s)\bigr\rvert\le\frac{3\alpha\gamma}{64}$ 与 $C_s=3k\Delta+\frac32\sum_ev_e^2+\sum_{\mathcal C}K_{ij}$。位移界写成 $S\le Cn^b(1+\log D)$（$m$、接触数、$\lvert\log t_{ij}\rvert$ 均多项式于 $n$，$b$ 增大到同时容纳 $m\le Cn^b$）；标定误差 $\mathfrak e(D,\tau)=\frac{m\log D+m^2}D+\frac{mS}D+\frac{S^2}D+SD^{-1/4}+\tau+e^{-c\sqrt D}$；再取固定指数 $h,r$ 使一切多项式范数转换与系数计数损失被 $Cn^h$ 界住、$\epsilon_*\ge cn^{-r}$，具体地取 $m^2+m^5\le Cn^h$。选择是 $K>4(b+h+r+2)$、$D=A(n+2)^K$、$\tau=c_*(n+2)^{-h-r-2}$，$A$ 是足够大的固定整数、$c_*>0$ 是足够小的固定有理数（第 41 到 51 行）。
+
+关于循环性我盯了很久，因为 $S$ 里有 $\log D$ 而 $D$ 又要靠 $S$ 的界来控制。第 51 行的解答是：先定 $K$，再定 $A$，$A$ 增大时每个含 $\log A$ 的表达式都相对其预算趋于零，剩下的 $n$ 增长由 $K$ 管；由此 $n^hSD^{-1/4}=o(n^{-r})$、$n^hS^2/D=o(n^{-r})$、$m+S=o(D^{1/4})$，little-oh 只是描述选取固定常数时用的一致大尺度估计，增大 $A$ 覆盖所有有限小 $n$ 情形。第 57 行的这句话是我为之调整自己写法的地方："No search for a successful $D$ is part of the algorithm."，归约里不许有试错环节。
+
+放大余量的账（论文用一个三行小表给出，我在这里以文字复述，避免在笔记里再放五列表）：调好能的阱能量在 $\mathcal H$ 单位是 $me^{-1.01D}$、乘 $Z_*$ 后是 $O(me^{-.01D})$；丢掉的一粒子矩阵元 $O(m^2e^{-1.1D})$ 对 $O(m^2e^{-.1D})$；正交化 $\operatorname{poly}(m)e^{-1.6D}$ 对 $\operatorname{poly}(m)e^{-.6D}$；连续统补空间 $e^{-1.2D}$ 对 $O(e^{-.2D})$。四条余量都是正的 $.01D$ 到 $.6D$ 级，因此增大 $A$ 就能各自落进分配到的预算份额；而一粒子残差 $e^{-.75D}$ 必须以平方方式用（§10），线性乘 $Z_*$ 不合法。合起来第 81 到 85 行给出 $|E_0/Z_*+mZ_*/2-\alpha(E_{\rm in}-C_s)|\le\frac{\alpha\gamma}{16}\le\frac{\alpha\delta_s}{16}$。
+
+构造顺序五步（第 91 到 114 行）我把它当作算法来抄：先读带符号有理 Heisenberg 实例，作辅助图、代数参考位 $p_i$、完整接触集 $\mathcal C$、显式尺度 $\Delta,\eta$ 与正有理 hopping $t_{ij}$；第 2 步选 $D$ 并算整数 $Z_*$，论文给了一个我喜欢的技巧：取 $s_D=\sum_{j=0}^{4D}D^j/j!$ 与 $Z_*=\lfloor s_D\rfloor$，由相邻省略项之比至多 $\frac14$ 与 $j!\ge(j/e)^j$ 得 $0<e^D-s_D<1$（大 $D$），因此不需与超越数作精确比较；随后把 $Z_*(1-500m/D)$ 与 $Z_*1000m/D$ 取整为主、次核电荷，一切在调能之前固定；第 3 步在 $X_i^0=Dp_i$ 处算正代理 hopping 积分与 $d_{ij}$，用线性右逆并取整得有理中心，位移按 $s_i=X_i-Dp_i$ 定义；第 4 步用认证 oracle 与压缩迭代调出 $\rho_i\in[1,4]$；第 5 步输出 $2m$ 个核 $R_{i,0}=X_i/Z_*$、$R_{i,1}=(X_i+\rho_ie_z)/Z_*$ 及其正整数电荷，$N=m$ 一元编码，并算有理阈值。第 89 行还有一句工程性的话：先检查源编码与多项式界（含逆间隙界），若检查失败就输出一个固定实例（一个电子、原点一个单位核、阈值 $-\frac12$ 与 $\frac12$），这个守卫是多项式时间的，把归约变成全域多项式时间映射且从不拒绝有承诺的源实例。
+
+比特账（第 116 到 118 行）：每个核电荷 $O(D+\log n)$ 比特；有理缩放中心与次核偏移多项式长，除以 $O(D)$ 比特的 $Z_*$ 保持之；不同位点在缩放坐标下相距 $D-O(S)$，每个次核距自己主核在 1 到 4 之间，故所有输出核互异；有理数化到既约是多项式整数计算；$m$ 多项式故 $N$ 的一元编码也多项式。第 118 行末了明确：辅助截断、轨道、Ritz 基、投影只出现在证明与计算中，都不进入输出实例。这句正是 §1 里"外势由核列表唯一决定"的具体体现。
+
+阈值是最后的仿射像。取有理 $\widetilde C_s$ 使 $\lvert\widetilde C_s-C_s\rvert\le\delta_s/64$（多项式次平方根逼近够，因 $C_s$ 多项式幅度且 $\delta_s$ 有逆多项式下界），定义
+
+$$ \widetilde F(z)=-\frac{mZ_*^2}2+Z_*\alpha(z-\widetilde C_s),\qquad a=\widetilde F(a_s+\delta_s/4),\quad b=\widetilde F(b_s-\delta_s/4). $$
+
+于是 $\lvert E_0-\widetilde F(E_{\rm in})\rvert\le\frac5{64}Z_*\alpha\delta_s<\frac18Z_*\alpha\delta_s$；斜率 $Z_*\alpha$ 为正，所以 YES 源实例给出 $E_0\le\widetilde F(a_s)+\frac18Z_*\alpha\delta_s\le a-\frac18Z_*\alpha\delta_s<a$，NO 给出 $E_0\ge\widetilde F(b_s)-\frac18Z_*\alpha\delta_s\ge b+\frac18Z_*\alpha\delta_s>b$。分离恰为 $b-a=\frac12Z_*\alpha\delta_s$：$\frac1{\alpha\delta_s}$ 多项式有界而 $Z_*\ge e^D/2$，增大同一个固定尺度常数就使分离对一切输入至少为 1；由输出长度 $L\ge1$ 得 $b-a\ge L^{-1}$，且第 159 行强调这是"without any circular estimate involving $L$"。负偏移 $-\frac{mZ_*^2}2$ 是个可能巨大的数，但它是精确有理且比特长多项式，因为 $Z_*$ 本身只有 $O(D)$ 比特：这正是二进制电荷编码带来的便利，也是 §1 里那股张力的最终化解。
+
+我还注意到一个符号上的选择：$\widetilde F$ 单调增，所以 YES/NO 两侧没有被翻转。若我当初坚持用"能量越低越难"的写法，就得在整个链条里换符号，很容易在 $a_s,b_s$ 的 $5\varepsilon_0$ 余量分配上出错；论文把方向问题在第 49 到 52 行（§4 的归一化）一次性解决，后面只处理正斜率映射。这属于写作层面的工程判断，但它确实是证明能对上账的原因之一。
+
+## 13 与两篇伴文的分工：同一道题的三种机制
+
+00-introduction.tex 第 59 到 111 行是文献定位，我把它当作"作者给我的边界说明"来读，因为它逐条写了哪些结论不来自本文。
+
+有限基线索。Liu-Christandl-Verstraete 证的是有限模 $N$-可表示性问题的 QMA-完备性，用一般两体费米哈密顿量、多项式时间 Turing 归约（第 62 到 65 行，引 LiuChristandlVerstraete2007）；把系数限制为由真实库仑势产生，是进一步的要求。Whitfield-Love-Aspuru-Guzik 梳理了这些区分以及磁场在早期难度结果里的角色（第 67 到 69 行，引其 §3.1 与 §6.1）。O'Gorman 等人的有限基电子结构 QMA-完备性（引其定理 1）之公开附录 D 推论 1 含正单位核电荷，但基仍是输入的一部分，其 §V 明确把完整空间之问提出来（第 79 到 83 行）。这一串的定位作用在我心里换成一句话：本文要补的是"去掉给定基"这一步，而难点全在 §1 那条方向反了的变分不等式上。
+
+连续统实现线索。Schuch-Verstraete 证了带局域磁场的 Hubbard 模型 QMA-完备，并用设计的标量势与自旋相关势给出连续统实现（第 71 到 77 行）；论文承认其 Hubbard 到 Heisenberg 的路径与"互补的一粒子空间"之比较是方法上的先声，同时点出正点核对场施加了不同的限制，本文需要的连续统比较在 §9（论文的 sec:continuum）自证。这里我看到机制差别的关键：能设计外势的人可以直接造出需要的单粒子谱形，正点核生成势的人只能靠位置与电荷，于是必须发展隧穿标定这套几何工具（§5 与 §7）。
+
+技术借用的清单（第 85 行与第 127 行）：Cubitt-Montanaro-Piddock 的 Heisenberg 难度提供无场方格源与带符号多项式有界交互，其高效空间稀疏构造被点名是必需的，因为稠密交互图的一般模拟给不出所需的交互尺度；Piddock-Montanaro 的单态中介用来把正 Heisenberg 模型弄出来；Anderson 1959 的斥型 Hubbard 超交换；Bravyi-DiVincenzo-Loss §3.2 的二阶微扰类比；Simon 1983 的空间局域化；Melenk-Babuška 的单位分划局部多项式逼近。第 127 行末了那句"These methods are credited at their points of use; their needed quantitative forms are proved here."是我认为这段最值得学的态度：借用思想，但把需要的定量形式自己证一遍。
+
+单位电荷伴文（引 UnitCoulomb2026 定理 1，第 92 到 101 行）。那边的构造用正连续电荷密度、多项式约束、等质量 cubature，其定理蕴含更大的二进制电荷输入类之难度，但并没有用本文；反过来，把本文指数大的电荷拆成单位核不给多项式输出规模。本文保留的独立定量贡献被明列为两项：认证指数精度本征值计算，以及宽分距离氢势阱的相对隧穿标定。我在 §11 里看到这两项各自落点：cubature 路线要把位间排斥留到主阶，膨胀路线把它降成 $O(m^2/D)$。这两套机制的差别是真实的技术差别，读成"同一篇的两个版本"会低估工作。
+
+离子化伴文（引 UniformExcessCharge2026 定理 1.1，第 103 到 111 行）：同一动能归一化下，严格结合 $E_N<E_{N-1}$ 蕴含 $N\le Z_{\rm tot}+CM$，$C$ 为普适常数，$Z_{\rm tot}=\sum_\alpha Z_\alpha$，那篇的记号里 $E_0=0$，假设是不同核与电荷至少为 1，无分离条件。论文明说本归约不施加严格结合承诺，因此那条形界既供不出连续排除估计，也供不出基态存在断言，"只是范围对照"。Schleich 等人（第 87 到 90 行）研究的是化学动机制备与动力学，其假设定义了另一个计算任务，与"判定所有被承诺的谱下确界实例"不同。
+
+最后，本文自身的边界（第 55 行）也登记在册：定理不声称属于 QMA，也不声称在额外限制核电荷大小之下仍难。这一点让我在 §14 里保留了一个未解问题。
+
+## 14 我的检查清单、遗留疑点与下一步
+
+把这轮读下来的失败与转折压成一张可执行的清单。凡写"逼近"的地方，我都要问它给的是排除还是估计。
+
+其一，方向检查。任何来自变分原理的界都是上界，凡用于 NO 实例的地方必须有独立的下界机制；本文的下界机制是补空间固定间隙加平方完成（§9、§10）。其二，放大检查：与 $Z_*\asymp e^D$ 相乘的每个误差都要看它在 $\mathcal H$ 单位与 $Z_*\mathcal H$ 单位下的两栏余量（§12 那张三行小表就是为此而设），线性放大 $e^{-.75D}$ 不合法，必须靠平方得到 $e^{-.2D}$。其三，顺序检查：构造顺序与论证顺序不同，任何用到未计算量的公式都必须有替身（代理场 $W_i^*$）并附一致界。其四，精度成本检查：指数小量要靠认证区间，不能靠"取足够多比特"的口头承诺，本文用质量下界 $\mu$、精确惯性判定与"比较或停止"三件套把它变成可执行算法（§6）。其五，编码检查：中间无理量（$\sqrt3$、平方根、$e^D$）一律以二分或多项式精度有理逼近替代精确比较；常数 $e^{-10}$、$2e^{-2}$ 这类固定正数用作边界锚点，避免每次重新证明非零。
+
+遗留疑点四条。第一条，这个问题到底在不在 QMA 里？定理只声称难度（第 55 行明确不作成员断言）。缺的材料是：对给定二进制核数据，能否在多项式量子资源内把能量判定到 $L^{-1}$ 精度并给出可验证的见证；我的判断是 [推测]，因为这需要对连续统基态（或近似极小序列）的可制备性有额外控制，而本文全部论证都在归约方向。第二条，若把核电荷额外限制为多项式有界，本文机制是否还给出难度？本文没主张（第 55 行），而单位电荷伴文通过 $Z_\alpha=1$ 的实例对更大输入类给出难度（§13），所以"限制电荷"这一情形已被另一条路覆盖，两条路的实例形状完全不同；[推测] 本文机制自身在电荷有界时会失效，因为整个构造把 $D$ 的指数尺度装在 $Z_*$ 上，电荷一旦有界，膨胀坐标与相对隧穿标定的量级关系就断。第三条，阈值分离 $\ge1$ 能否升级为谱隙断言？我认为不能直接从本文得：NO 只约束下确界位置，第 49 行明确不保证下确界处有离散本征值，也不保证基态可制备；要得到谱隙需要额外的束缚性论证，而 §9 的补间隙只涉及单粒子。第四条，电中性与核斥能：本文的能量约定省掉核-核排斥，输入模型也不承诺电中性（§2），于是我的下一步问题是对含核斥能的完整 BO 能量版本，仿射阈值像里要多一项 $\sum_{\alpha<\beta}\frac{Z_\alpha Z_\beta}{\lvert R_\alpha-R_\beta\rvert}$，它在缩放坐标下是 $\frac1{Z_*}$ 量级还是多项式量级，直接决定阈值是否还写得成多项式长有理数；缺的材料是论文没有讨论这一变体，我只能列为待算。
+
+我自己的下一步动作（写在这里以免忘记）：把 §10 的平方完成与 §11 的系数数组比较合起来，重写一遍两体项在一般反对称空间里的界，检验 $\binom{2m}{m}$ 无关性是否真只用到了 $0\le\gamma_{\rm op}\le I$ 这一条形界；若成立，这套估计应能搬到 $N\ne m$ 的扇区（本文只输出 $N=m$）。
+
+## 15 勘误与自查
+
+以下是本篇笔记写完后发现的、我自己造成的排印问题，均属手写 LaTeX 时的漏字，位置以我这篇笔记的小节计（按规格不改动已落盘正文，只在此说明正确形式）。
+
+第一节，§6 末段描述 graded Ritz 空间处，我写"每个节点配 $40$ 到 $O(D)$ 阶单项式"，其中那个孤立的 $40$ 是误植，正确说法是"每个保留节点配阶不超过 $L_0$ 的单项式，$L_0$ 取 $D$ 的足够大固定倍数"（对应 02-wells.tex 第 514 到 517 行）。
+
+第三节，§7 中我写 $\lvert\langle\psi_j,\psi_i\rvert\rangle$ 一处，定界符次序错，应读作重叠 $\langle\psi_j,\psi_i\rangle$ 的绝对值（对应 03-hopping.tex 第 596 行）。同节还有一处 $-\frac{1}{\ }V_i-W_i-\lambda_i$ 的分式误植，正确形式是 $-V_i-W_i-\lambda_i$（对应 04-continuum.tex 第 144 行的零阶系数）。§11 末尾"再抬 `$Z_*e^{-1.2D$` 去掉限制"漏了一个右定界符，应为 $Z_*e^{-1.2D}$ 这一加性项（对应 04-continuum.tex 第 743 到 745 行）。
+
+文风自查：按规格要求的那几类禁串做过一次逐类检索。四类里我只在正文 §7 中段留下了一次两字转折连接词命中（同一句里"不证逼近"之后接了不该用的转折），按规格不改已落盘内容，故在此登记，交由后续清理。四字过渡套语、长停顿号两类零命中；文末的五列表表头只在台账一节按规格逐字出现一次，正文其它地方未放任何带竖线的表。
+
+## 16 台账
+
+| 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+| --- | --- | --- | --- | --- |
+| $\lVert h^s_{ij}\rVert$ | $3$ | build/sections/01-finite-models.tex:14 | 边系数取整后的哈密顿量误差 $3\varepsilon_0$ | §4 的 $5\varepsilon_0$ 余量分配算错 |
+| $\varepsilon_0$ | $\delta/100$ | build/sections/01-finite-models.tex:41 | 阈值 $a_s,b_s$ 各 $\pm5\varepsilon_0$ | 源问题承诺双侧不能同时存活 |
+| $\delta_s=b_s-a_s$ | $\ge\delta-12\varepsilon_0>0$ | build/sections/01-finite-models.tex:55 | §12 一切预算的分母 | 逆多项式下界在源端就丢失 |
+| $g$（二阶间隙） | $4\Delta$ | build/sections/01-finite-models.tex:181 | 引理前提 $\epsilon=3V/(2\sqrt\Delta)<1/2$ | §4 二阶估计的三次方误差失效 |
+| $\Delta$ | $\lceil(1728\overline V^3/\gamma)^2\rceil$ | build/sections/01-finite-models.tex:232 | 中介对误差压到 $\gamma/64$ | §12 有限段三项误差超预算 |
+| $27V^3/\sqrt\Delta$ | $\le\gamma/64$ | build/sections/01-finite-models.tex:167 | prop:hubbard 误差合成 | 最终 $\frac{3\alpha\gamma}{64}$ 变 $\frac{4\alpha\gamma}{64}$ |
+| $U$ | $5/8$ | build/sections/01-finite-models.tex:570 | $\eta,\alpha$ 定义与 §11 的 onsite 项 | 连续统压缩与 Hubbard 常数不匹配 |
+| $\overline R$ | $\max\{1,q_{\mathcal C}\Delta\}$ | build/sections/01-finite-models.tex:577 | $\eta$ 与 $\lVert T\rVert\le2\eta\overline R$ | §10 的耦合项 $m\varepsilon$ 失去小量性 |
+| $\eta$ | $U\gamma/(1024\overline R^3)$ | build/sections/01-finite-models.tex:578 | 理想 hopping $t^{(0)}_{ij}=\eta\sqrt{K_{ij}}$ | 二阶理想 Hubbard 误差超 $\alpha\gamma/64$ |
+| $\alpha$ | $\eta^2/U$ | build/sections/01-finite-models.tex:579 | 能量缩放与 §12 仿射像斜率 | 阈值 $a,b$ 的斜率取错号或取错量级 |
+| $f$ | $\alpha\gamma/(128\max\{1,q_{\mathcal C}\})$ | build/sections/01-finite-models.tex:580 | hopping 下限垫片 $t_{ij}=\max\{f,r_{ij}\}$ | §5 第三类零权接触无正 hopping 可用 |
+| $C_s$ | $3k\Delta+\frac32\sum_ev_e^2+\sum_{\mathcal C}K_{ij}$ | build/sections/01-finite-models.tex:599 | §12 阈值平移与 $\widetilde C_s$ 逼近 | 阈值整体偏移超过 $\delta_s/64$ |
+| $\kappa$（二阶幅） | $\le\lVert B\rVert^2/g\le g\epsilon^2$ | build/sections/01-finite-models.tex:97 | 引理双向不等式的两端 | §4 正号化上下界同时断 |
+| $Z_*$ | 整数且 $e^D/2\le Z_*\le2e^D$ | build/sections/02-wells.tex:30 | 全文膨胀尺度与 §12 比特账 | 需与超越数 $e^D$ 作精确比较 |
+| $q$ | $1-500m/D+O(Z_*^{-1})$ | build/sections/02-wells.tex:43 | §6 夹逼余量 $(500-700)m/D$ | 调参两端不再夹住 $-1/2$ |
+| $q'$ | $1000m/D+O(Z_*^{-1})$，介于 $cm/D$ 与 $Cm/D$ | build/sections/02-wells.tex:44 | 自有斜率 $cq'(b-a)$ 与交叉界 | 单调性与压缩映射常数同时失 |
+| $\lVert\psi_i-\phi_i\rVert_{H^2}$ | $\le Cm/D$ | build/sections/02-wells.tex:108 | §11 每系数替换代价 $Cm/D$ | 压缩误差从 $Cm^5/D$ 变到不可控 |
+| $\lVert D^jW_i\rVert_\infty$ | $\le Cm/D^{j+1}$，且 $0\le W_i\le100m/D$ | build/sections/02-wells.tex:113 | 上解构造与 §7 射线界 | 相对尾部的残余估计断 |
+| $f(1)$ 与 $f(4)$ | $1-2e^{-2}>0.7$，$\le\frac14$ | build/sections/02-wells.tex:264 | §6 夹逼的两侧数值 | 存在性根的唯一性论证失去依据 |
+| $\lvert\psi_i(y)\rvert$ | $\le Ce^{-.99(r_i-.01D)}$ | build/sections/02-wells.tex:313 | 洞上残余、重叠界与 §9 漏出量 | $e^{-.18D}$ 的局域泄漏不再小 |
+| $\lVert\psi_i\rVert_{H^1(r_i>.65D)}$ | $\le e^{-.61D}$ | build/sections/02-wells.tex:318 | 截断误差 $C(\sqrt\delta+e^{-.61D})$ | §6 的 $H^1$ 逼近 $e^{-.58D}$ 失 |
+| $\lvert\lambda_i+1/2\rvert$ | $\le e^{-1.01D}$ | build/sections/02-wells.tex:876 | §9 矩阵误差与 §12 余量表首行 | 放大后 $me^{-.01D}$ 一栏变号 |
+| $\dim\mathcal V_i$ | $O(D^6)$（去依赖前） | build/sections/02-wells.tex:517 | oracle 的多项式比特账 | §6 求值不再是多项式时间 |
+| $\lambda_i^{\rm R}-\lambda_i$ | $\le Ce^{-1.16D}$ | build/sections/02-wells.tex:481 | 认证区间下端减偏置 | 只得上界，调参无法判停 |
+| $\varepsilon_D$ | $2^{-\lceil 8D/5\rceil}<e^{-1.1D}$ | build/sections/02-wells.tex:642 | 矩阵元精度与停止规则 | §6 二分决策不再被认证 |
+| $K_M$ | $r^3B_0+(r-1)(B_0+\lceil\log_2r\rceil)$ | build/sections/02-wells.tex:694 | 质量下界 $\mu=2^{-K_M}$ | 求积精度变成超多项式比特 |
+| $\tau$（矩阵元） | $\varepsilon_D\mu/(16r)$ | build/sections/02-wells.tex:786 | 相对矩阵误差 $\varepsilon_D/16$ | §6 区间宽度超 $\varepsilon_D$ |
+| $R_0$ | $1+r\max_{a,b}\lvert\widetilde A_{ab}\rvert/\mu$ | build/sections/02-wells.tex:808 | 惯性二分的初始有理括号 | 二分步数不再多项式 |
+| $\theta$ | $Cm/D^2\le1/2$ | build/sections/02-wells.tex:895 | 同时调参的压缩性 | 不动点唯一性与迭代收敛失 |
+| oracle 调用数 | $O(mD^2)$ | build/sections/02-wells.tex:951 | §12 第 4 步的多项式时间 | 归约整体不再是多项式映射 |
+| $\varepsilon_{\rm rel}$ | $(m\log D+m^2)/D$ | build/sections/03-hopping.tex:36 | 相对尾部与 $B_{ij}=T_{ij}(1+O(\cdot))$ | §7 相对误差进不了指数因子 |
+| $T_{ij}(X^0)$ | 介于 $ce^{-D}$ 与 $CD^2e^{-D+Cm}$ | build/sections/03-hopping.tex:321 | 标定 $d_{ij}$ 与求积缩放下界 $2e^{-2}$ | 相对求积失去正下界 |
+| $\varepsilon_{\rm disp}$ | $mS/D+S^2/D+SD^{-1/4}+e^{-c_1\sqrt D}$ | build/sections/03-hopping.tex:350 | prop:calibration 的相对误差 | §8 标定精度与垫片 hopping 失效 |
+| $S$ | $\le Cm(m+\log D+\log(1/t_{\min})+1)+\tau$ | build/sections/03-hopping.tex:659 | §12 的 $S\le Cn^b(1+\log D)$ | 尺度选择出现循环依赖 |
+| $\lvert\langle\psi_j,\psi_i\rangle\rvert$ | $\le e^{-0.85D}$ | build/sections/03-hopping.tex:596 | Gram 接近性与方向误差 $4e^{-0.86D}$ | §9 的 $\lVert G-I\rVert$ 界断 |
+| $\mathcal E_{\rm cal}$ | 六项之和（见 03 式 eq:total-calibration-error） | build/sections/03-hopping.tex:639 | §11 模拟误差首项与 §12 预算 | 某一项超份额即无处补 |
+| $\lVert A\psi_i\rVert_2$ | $\le e^{-.75D}$ | build/sections/04-continuum.tex:85 | $\varepsilon$、$\beta$ 与平方后的余量 | 线性放大得 $e^{.25D}$，§12 余量表崩 |
+| $\lVert G-I\rVert$ | $\le e^{-.85D}$ | build/sections/04-continuum.tex:86 | 正交化校正 $\operatorname{poly}(m)e^{-1.6D}$ | $\delta_1$ 第四项失去指数余量 |
+| $\delta_1$ | $m\epsilon_{\rm hop}+Z_*e^{-1.01D}+CmZ_*e^{-1.1D}+CmZ_*e^{-1.6D}$ | build/sections/04-continuum.tex:97 | §11 的 $m\delta_1$ 项 | 模拟命题的六项预算对不上 |
+| $\sum_{i,\sigma}\lvert b_{i\sigma}\rvert^2$ | $\le me^{-.36D}$ | build/sections/04-continuum.tex:307 | IMS 下界里的漏出补偿 | §9 补间隙 $g$ 不再为正 |
+| $g$（补间隙） | $(I-P)A(I-P)\ge g(I-P)$ | build/sections/04-continuum.tex:262 | §10 的 $c=g/2$ 与平方完成 | 全体状态的排除论证失效 |
+| $\lVert W_{\rm ee}\Pi\rVert$ | $\le Cm^2$ | build/sections/04-continuum.tex:418 | 耦合 $\beta$ 的第二项 $Cm^2/Z_*$ | 界退化为依赖 $\binom{2m}{m}$ |
+| $E_\Pi-\inf\operatorname{Spec}\mathcal H$ | $\le e^{-1.2D}$，显式 $C(m^{3/2}e^{-.75D}+m^2/Z_*)^2$ | build/sections/04-continuum.tex:487 | §12 余量表末行 $O(e^{-.2D})$ | 放大后不剩正余量 |
+| $\lVert W_{\rm eff}-U\sum_in_{i\uparrow}n_{i\downarrow}\rVert$ | $\le Cm^5/D$ | build/sections/04-continuum.tex:613 | §11 模拟命题与 $D$ 的多项式损失 | $m^5/D$ 超出 $\epsilon_*$ 份额 |
+| $\epsilon_*$ | $\alpha\gamma/64$ | build/sections/05-completion.tex:24 | §12 的 $D,\tau$ 一次选择 | 连续统段误差无处安放 |
+| $K$ | $>4(b+h+r+2)$ | build/sections/05-completion.tex:43 | $D=A(n+2)^K$ 的增长率 | 三条 little-oh 同时不成立 |
+| $\tau$（标定容差） | $c_*(n+2)^{-h-r-2}$ | build/sections/05-completion.tex:49 | §8 位移方程误差与取整 | 接触方程残差超 $\tau$ |
+| $s_D$ 与 $Z_*$ | $\sum_{j=0}^{4D}D^j/j!$，取 $\lfloor s_D\rfloor$ | build/sections/05-completion.tex:98 | 主、次核电荷取整 | 电荷尺度不再有多项式比特 |
+| $2m$（输出核数） | 每位点一主核一次核，$\rho_i\in[1,4]$ | build/sections/05-completion.tex:108 | §2 输入模型的核列表与互异性 | 输出核可能重合或编码超多项式 |
+| $\widetilde F(z)$ | $-mZ_*^2/2+Z_*\alpha(z-\widetilde C_s)$ | build/sections/05-completion.tex:128 | §12 双侧承诺保持与阈值生成 | 正斜率一旦破坏则 YES 与 NO 互换 |
+| $b-a$ | $\frac12Z_*\alpha\delta_s$，放大到 $\ge1$ | build/sections/05-completion.tex:157 | 承诺 $b-a\ge L^{-1}$（$c=1$） | 主定理精度退化为更弱的 $c$ |

@@ -1,0 +1,33 @@
+{
+  "paper": "The-PCP-for-PPAD-conjecture-a-quasilinear-reduction-September-25-2026",
+  "ok": true,
+  "typ_lines": 2957,
+  "included_pdf_pages": 0,
+  "formulas": 2368,
+  "math_failed": 0,
+  "labels": 398,
+  "equations": 0,
+  "theorems": 3,
+  "figures": 1,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1,
+    "unhandled_div_class:picture": 1
+  },
+  "samples": {
+    "formulas": "2368"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\defdef",
+    "\\renewcommand\\paragraph"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-PCP-for-PPAD-conjecture-a-quasilinear-reduction-September-25-2026.tex"
+}

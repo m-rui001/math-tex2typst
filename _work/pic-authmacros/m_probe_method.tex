@@ -1,0 +1,22 @@
+% Which pgf call reports the transform a scope really applies? Three spellings of the same
+% point inside shift={(2cm,3cm)}: only one of them can be the one a \draw uses.
+\documentclass{article}
+\usepackage{tikz}
+\pagestyle{empty}
+\makeatletter
+\def\show#1{\typeout{#1 = \pgf@sys@tonumber{\pgf@x}pt,\pgf@sys@tonumber{\pgf@y}pt}}
+\makeatother
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \begin{scope}[shift={(2,3)}]
+    \makeatletter
+    \pgf@process{\pgfpointxy{-.35}{-.35}}\show{plain-pgfpointxy}
+    \pgf@process{\pgfpointtransformed{\pgfpointxy{-.35}{-.35}}}\show{transformed}
+    \node (n) at (-.35,-.35) {};
+    \pgf@process{\pgfpointanchor{n}{center}}\show{anchor}
+    \path (-.35,-.35) coordinate (c);
+    \pgf@process{\pgfpointanchor{c}{center}}\show{coordinate}
+    \makeatother
+  \end{scope}
+\end{tikzpicture}
+\end{document}

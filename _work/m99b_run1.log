@@ -1,0 +1,40 @@
+
+== canvases holding a degenerate line(), with every path verb counted
+
+### A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Maps-October-5-
+    paths={'circle': 8, 'line': 7}  degenerate=2
+      #cetz.canvas({
+      import cetz.draw: *
+      circle((0, 0), radius: 1.522, fill: rgb("#f2f2f2"), stroke: none)
+      circle((0, 0), radius: 0.5775, fill: rgb("#f2f2f2"), stroke: none)
+  >>> line((0, 0), (0, 0), fill: rgb("#f2f2f2"), stroke: none)
+      circle((0, 0), radius: 1.522, stroke: (thickness: 0.4pt, miter-limit: 10))
+      circle((0, 0), radius: 0.5775, stroke: (thickness: 0.4pt, miter-limit: 10))
+      content((0, 0), [#text(size: 9pt)[$u_m=0$]])
+      content((-1.596, 0), [$u_m=1$], anchor: "east")
+      line((0.5148, 0.432), (1.038, 0.8707), stroke: (paint: rgb("#0000a6"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: rgb("#0000
+      line((-0.5148, 0.432), (-1.038, 0.8707), stroke: (paint: rgb("#0000a6"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: rgb("#00
+      line((-0.5148, -0.432), (-1.038, -0.8707), stroke: (paint: rgb("#0000a6"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: rgb("#
+      line((0.5148, -0.432), (1.038, -0.8707), stroke: (paint: rgb("#0000a6"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: rgb("#00
+      arc((1.039, 0.3374), start: 18deg, stop: 153deg, radius: 1.092, stroke: (paint: rgb("#a60000"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbo
+      content((0, 1.617), [#text(fill: rgb("#a60000"))[dual period $C_m$]], anchor: "south")
+      content((0, -1.68), [#text(fill: rgb("#0000a6"))[primal current $upright(d) u_m$]], anchor: "north")
+      line((1.995, 0.63), (3.255, 0.63), stroke: (thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      content((2.625, 0.0525), [unit-period#linebreak()recovery])
+      circle((5.25, 0), radius: 1.522, fill: rgb("#f2f2f2"), stroke: none)
+      circle((5.25, 0), radius: 0.5775, fill: rgb("#f2f2f2"), stroke: none)
+  >>> line((5.25, 0), (5.25, 0), fill: rgb("#f2f2f2"), stroke: none)
+      circle((5.25, 0), radius: 1.522, stroke: (thickness: 0.4pt, miter-limit: 10))
+      circle((5.25, 0), radius: 0.5775, stroke: (thickness: 0.4pt, miter-limit: 10))
+      arc((6.289, 0.3374), start: 18deg, stop: 330deg, radius: 1.092, stroke: (paint: rgb("#a60000"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbo
+      content((5.25, 0), [$alpha_m$])
+      content((5.25, 1.617), [#text(fill: rgb("#a60000"))[exact period $1$]], anchor: "south")
+      content((5.25, -1.68), [$| chevron.l upright(d) u_m, alpha_m chevron.r |=1$], anchor: "north")
+      })
+
+### A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite-October-4-202
+    paths={'circle': 8, 'line': 2}  degenerate=1
+      #cetz.canvas({
+      import cetz.draw: *
+      content((0, -2.82), [#text(size: 9pt)[Band returning to an inner cone disk]], anchor: "west")
+      circle((2.2, -4.62), radius: 1.19, 

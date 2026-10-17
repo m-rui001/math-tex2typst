@@ -1,0 +1,28 @@
+#100l: label ink vs the arrow it labels (top gap, bottom gap, rule y) -- pt
+
+### Relative-independence-of-the-separable-quotient-prob#0
+ours  above  53.89 below -64.89  rule y   63.53  '𝑄'
+ours  above  -9.65 below  -1.35  rule y   63.53  '𝐵|'
+ours  above -11.72 below   4.02  rule y   63.53  '𝑋'
+ctl    above  58.56 below -69.47  rule y   74.03  'Q'
+ctl    above -14.40 below   3.49  rule y   74.03  'B'
+ctl    above -14.26 below   3.35  rule y   74.03  '|'
+ctl    above -15.45 below   7.48  rule y   74.03  'X'
+
+### The-Grothendieck-homotopy-hypothesis-via-elementary-#4
+ours  above   0.59 below -11.59  rule y   10.24  '𝒫︀(𝑖)ℎ'
+ours  above  -9.65 below  -1.35  rule y   68.41  '(id'
+ours  above -11.72 below   4.02  rule y   68.41  '𝑌'
+ours  above  -9.65 below  -1.35  rule y   68.41  ', 𝑖𝑢̄)'
+ctl    above -61.88 below  50.97  rule y   20.37  'Y'
+ctl    above   4.32 below -15.23  rule y   20.37  'P'
+ctl    above   4.18 below -15.09  rule y   20.37  '('
+ctl    above   4.18 below -15.09  rule y   20.37  'i'
+ctl    above   4.18 below -15.09  rule y   20.37  ')'
+ctl    above   4.18 below -15.09  rule y   20.37  'h'
+ctl    above -14.40 below   3.49  rule y   76.60  '(id'
+ctl    above -15.45 below   7.48  rule y   76.60  'Y'
+ctl    above -16.09 below   3.49  rule y   76.60  ', i'
+ctl    above -14.40 below   3.49  rule y   76.60  '¯'
+ctl    above -14.40 below   3.49  rule y   76.60  'u'
+ctl    above -14.40 below   3.49  rule y   76.60  ')'

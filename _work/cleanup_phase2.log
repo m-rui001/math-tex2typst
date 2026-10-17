@@ -1,0 +1,21 @@
+phase2 start 2026-10-11T16:58:53
+   1.21 GB  [del] Trae CN (no uninstall entry, stale 158d+)
+   0.97 GB  [del] legacy WeChat 3.x tree (stale 769d; current app uses xwechat)
+   0.37 GB  [del] MarsCode extension data (stale 388d)
+   1.22 GB  [del] Quark superseded build (launcher is 7.3.5.1009)
+   0.01 GB  [purge] Quark temp
+   0.00 GB  [del] workbuddy logs
+   0.10 GB  [del] MATLAB ServiceHost logs
+   0.00 GB  [del] MATLAB ServiceHost crash reports
+   0.08 GB  [del] WeChat logs
+   0.00 GB  [purge] WeMeet logs
+   0.30 GB  [del] codex sessions (stale 17d)
+   0.03 GB  [del] codex cache
+   0.02 GB  [del] codex tmp
+   0.42 GB  [purge] bun install cache
+   0.00 GB  [purge] zcode tmp
+   0.00 GB  [del] vscode editor backups
+   0.54 GB  [purge] Temp items age>3d
+   0.21 GB  [purge] pip '~' partial dirs
+   0.50 GB  [purge] Python __pycache__
+free=17.89 GB

@@ -1,0 +1,29 @@
+{
+  "paper": "An-Artin-group-with-no-geometric-CAT-0-action-September-23-2026",
+  "ok": true,
+  "typ_lines": 789,
+  "included_pdf_pages": 0,
+  "formulas": 725,
+  "math_failed": 0,
+  "labels": 87,
+  "equations": 2,
+  "theorems": 5,
+  "figures": 3,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1
+  },
+  "samples": {
+    "formulas": "725"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\An-Artin-group-with-no-geometric-CAT-0-action-September-23-2026.tex"
+}

@@ -1,0 +1,32 @@
+#import "@preview/cetz:0.5.0"
+#let page_rotate = rotate
+#set page(width: 18cm, height: 20cm, margin: 1.5cm)
+#set text(lang: "en", size: 11pt)
+
+#cetz.canvas({
+  import cetz.draw: *
+  rect((-0.1275, 1.89), (5.228, 2.295), fill: rgb("#ededff"))
+  rect((-0.1275, 0.36), (5.228, 0.765), fill: rgb("#ededff"))
+  line((-1.445, 0), (-1.445, 2.79), stroke: (paint: rgb("#808080")), mark: (end: ">"))
+  content((-1.445, 2.79), [height], anchor: "south")
+  line((0, 0.135), (0, 2.655))
+  content((0, 2.655), [$b$], anchor: "south")
+  line((2.55, 1.35), (2.55, 2.655))
+  content((2.55, 2.655), [$w$], anchor: "south")
+  line((5.1, 0.135), (5.1, 2.655))
+  content((5.1, 2.655), [$d$], anchor: "south")
+  line((0.068, 2.07), (2.482, 2.07), stroke: (paint: rgb("#0000a6")), mark: (end: ">"))
+  line((2.618, 2.07), (5.032, 2.07), stroke: (paint: rgb("#0000a6")), mark: (end: ">"))
+  line((0.068, 0.558), (5.032, 0.558), stroke: (paint: rgb("#0000a6")), mark: (end: ">"))
+  content((1.275, 2.07), [#text(size: 9pt)[$b arrow.r w$]], anchor: "south")
+  content((3.825, 2.07), [#text(size: 9pt)[$w arrow.r d$]], anchor: "south")
+  content((2.55, 0.558), [#text(size: 9pt)[$b arrow.r d$]], anchor: "north")
+  line((-1.615, 1.35), (5.44, 1.35))
+  content((-1.615, 1.35), [#text(size: 9pt)[$H$]], anchor: "east")
+  circle((2.55, 1.35), radius: 0.07056, fill: black)
+  content((2.762, 1.557), [#box(inset: 0.3333em, stroke: (thickness: 0.4pt), fill: rgb("#ffffff"), [#text(size: 9pt)[$s_w^a+m_w^a$]])])
+  line((-0.5525, 0.405), (-0.5525, 2.25), stroke: (paint: rgb("#a60000")))
+  line((-0.7225, 0.405), (-0.3825, 0.405), stroke: (paint: rgb("#a60000")))
+  line((-0.7225, 2.25), (-0.3825, 2.25), stroke: (paint: rgb("#a60000")))
+  content((-0.7905, 2.205), [#text(fill: rgb("#a60000"))[#page_rotate(-90deg)[#text(size: 9pt)[uncapped band]]]], anchor: "east")
+})

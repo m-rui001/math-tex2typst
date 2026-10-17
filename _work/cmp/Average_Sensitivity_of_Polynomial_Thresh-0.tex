@@ -1,0 +1,65 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prb}{\mathbb P}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\HS}{\mathrm{HS}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=.9cm,line cap=round,line join=round,
+                      font=\small]
+    \begin{scope}
+      \fill[gray!17] (0,0) -- (3,0) -- (0,3) -- cycle;
+      \draw[step=1,gray!25,very thin] (0,0) grid (4,4);
+      \draw[gray!65] (0,4) -- (4,4) -- (4,0);
+      \draw[->] (0,0) -- (4.25,0) node[right] {$r$};
+      \draw[->] (0,0) -- (0,4.25) node[above] {$s$};
+      \node[below left=2pt] at (0,0) {$0$};
+      \draw (3,.05) -- (3,-.05) node[below=2pt] {$n-d$};
+      \draw (4,.05) -- (4,-.05) node[below=2pt] {$n$};
+      \draw (.05,3) -- (-.05,3) node[left=2pt] {$n-d$};
+      \draw (.05,4) -- (-.05,4) node[left=2pt] {$n$};
+      \draw[thick,dashed] (0,3) -- (3,0)
+        node[midway,above=2pt,sloped,fill=white,inner sep=1pt]
+        {$r+s=n-d$};
+      \draw[thick] (0,4) -- (4,0)
+        node[midway,above=2pt,sloped,fill=white,inner sep=1pt]
+        {$r+s=n$};
+      \node[align=center] at (.85,.85) {zero\\blocks};
+      \node[align=center,font=\scriptsize] at (2.95,3.25)
+        {other blocks\\not specified};
+      \node[above=10pt] at (2,4.25) {Grade blocks $\Pi_sH\Pi_r$};
+    \end{scope}
+
+    \draw[->,thick] (4.48,2) -- (5.57,2);
+    \node[align=center,font=\scriptsize] at (5.02,2.63)
+      {$u=s$\\$v=n-r$};
+
+    \begin{scope}[xshift=6cm]
+      \fill[gray!17] (0,1) -- (0,4) -- (3,4) -- cycle;
+      \draw[step=1,gray!25,very thin] (0,0) grid (4,4);
+      \draw[gray!65] (0,4) -- (4,4) -- (4,0);
+      \draw[->] (0,0) -- (4.25,0) node[right] {$u$};
+      \draw[->] (0,0) -- (0,4.25) node[above] {$v$};
+      \node[below left=2pt] at (0,0) {$0$};
+      \draw (4,.05) -- (4,-.05) node[below=2pt] {$n$};
+      \draw (.05,1) -- (-.05,1) node[left=2pt] {$d$};
+      \draw (.05,4) -- (-.05,4) node[left=2pt] {$n$};
+      \draw[thick,dashed] (0,1) -- (3,4)
+        node[midway,above=2pt,sloped,fill=white,inner sep=1pt]
+        {$v=u+d$};
+      \draw[thick] (0,0) -- (4,4)
+        node[midway,below=2pt,sloped,fill=white,inner sep=1pt]
+        {$v=u$};
+      \node[align=center] at (.85,3.1) {zero\\mass};
+      \node at (2.65,.95) {$v-u\le d$};
+      \node[above=10pt] at (2,4.25) {Reflected coupling $(U,V)$};
+    \end{scope}
+  \end{tikzpicture}
+\end{document}

@@ -1,0 +1,186 @@
+=== SYSTEM INFO ===
+admin=False
+OS: Microsoft Windows 11 家庭版 中文版 build 26300
+     n/a  C:\hiberfil.sys
+     n/a  C:\pagefile.sys
+     n/a  C:\swapfile.sys
+     n/a  C:\Windows.old
+     n/a  C:\DumpStack.log.tmp
+
+=== WINDOWS CLEANUP-RELEVANT (GB) ===
+     12.25  C:\Windows\WinSxS
+      0.16  C:\Windows\SoftwareDistribution
+      0.00  C:\Windows\Temp
+      2.51  C:\Windows\Installer
+      0.09  C:\Windows\Logs
+      0.45  C:\ProgramData\Microsoft\Windows Defender
+      0.00  C:\Users\hp\AppData\Local\Microsoft\Windows\INetCache
+      0.00  C:\Users\hp\Downloads
+     n/a  C:\Windows\System32\config\Txv
+
+=== C:\Users\hp\AppData\Local\Temp (children, top 20) ===
+     5,405 MB  qoder-cli-cn
+       274 MB  st-content
+       240 MB  vscode-stable-user-x64
+       102 MB  mate-smoke2
+        57 MB  Clash Verge-2.5.7-updater-EULDUK
+        36 MB  8C8A563B-6279-4B1A-B1C8-3447E3D823A1
+        10 MB  awesome-pi
+         8 MB  DiagOutputDir
+         4 MB  snap1803
+         3 MB  tmpebsqmm3u
+         3 MB  aac
+         2 MB  pi-stdout-clean-J0HVgB
+         2 MB  node-compile-cache
+         1 MB  WSLDVCPlugin
+         1 MB  eqtest
+         1 MB  jiti
+         1 MB  conv_test
+         0 MB  tmp.Datn1lLiDl
+         0 MB  mahler
+         0 MB  pub
+
+=== C:\Users\hp\AppData\Local\Programs (children, top 20) ===
+     4,694 MB  Python
+     3,322 MB  Quark
+       102 MB  mate
+        54 MB  Common
+
+=== C:\Users\hp\.qoder-cn (children, top 25) ===
+     1,701 MB  logs
+       879 MB  projects
+        31 MB  plugins
+        28 MB  file-history
+        16 MB  tmp
+         7 MB  .bin
+         2 MB  bin
+         0 MB  .models
+         0 MB  host-actions
+         0 MB  .auth
+         0 MB  shell-snapshots
+         0 MB  tasks
+         0 MB  memory
+         0 MB  entry
+         0 MB  .cache
+         0 MB  app
+         0 MB  qoder-knowledge
+         0 MB  ipc
+         0 MB  skills
+
+=== C:\Users\hp\AppData\Roaming\Code (children, top 12) ===
+     1,028 MB  User
+       441 MB  WebStorage
+       279 MB  agent-host
+       105 MB  CachedExtensionVSIXs
+        99 MB  Crashpad
+        80 MB  CachedData
+        16 MB  Cache
+         9 MB  clp
+         3 MB  CachedProfilesData
+         2 MB  Partitions
+         2 MB  GPUCache
+         1 MB  logs
+
+=== C:\Users\hp\AppData\Roaming\Tencent (children, top 12) ===
+     1,226 MB  xwechat
+       994 MB  WeChat
+       761 MB  WeMeet
+        48 MB  WeGame
+         2 MB  Androws
+         0 MB  QQNTOpenSDK
+         0 MB  QQ
+         0 MB  Tencentdl
+         0 MB  Logs
+         0 MB  xCast
+         0 MB  libsdk
+         0 MB  WGLogin
+
+=== C:\Users\hp\AppData\Roaming\Trae CN (children, top 12) ===
+       506 MB  User
+       419 MB  ModularData
+       158 MB  WebStorage
+        42 MB  CachedData
+        33 MB  Crashpad
+        30 MB  logs
+        24 MB  Partitions
+        12 MB  Cache
+        11 MB  CachedExtensionVSIXs
+         6 MB  GPUCache
+         1 MB  monitor
+         1 MB  CachedProfilesData
+
+=== C:\Users\hp\AppData\Local\Microsoft (children, top 15) ===
+       778 MB  Edge
+       368 MB  vscode-cpptools
+       202 MB  Windows
+       124 MB  Office
+        92 MB  Olk
+        88 MB  OneDrive
+        59 MB  WinGet
+        41 MB  FontCache
+        14 MB  TypeScript
+         8 MB  Internet Explorer
+         5 MB  OneNote
+         3 MB  Media Player
+         2 MB  GameDVR
+         1 MB  PowerToys
+         0 MB  TokenBroker
+
+=== C:\Users\hp\AppData\Local\Packages (children, top 12) ===
+       254 MB  EDRLab.ThoriumReader_r3hax6t39xm4t
+       230 MB  OpenAI.Codex_2p2nqsd0c76g0
+       209 MB  MicrosoftWindows.Client.CBS_cw5n1h2txyewy
+       118 MB  MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy
+        71 MB  Microsoft.GetHelp_8wekyb3d8bbwe
+        47 MB  Microsoft.Windows.Photos_8wekyb3d8bbwe
+        25 MB  microsoft.windowscommunicationsapps_8wekyb3d8bbwe
+        22 MB  Clipchamp.Clipchamp_yxz26nhyzhsrt
+        21 MB  Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy
+        13 MB  AD2F1837.myHP_v10z8vjag6ke6
+        12 MB  Microsoft.ZuneVideo_8wekyb3d8bbwe
+         8 MB  AD2F1837.HPSystemEventUtility_v10z8vjag6ke6
+
+=== C:\Users\hp\AppData\Roaming\npm (children, top 8) ===
+     1,876 MB  node_modules
+
+=== C:\Users\hp\.vscode (children, top 8) ===
+     1,092 MB  extensions
+         0 MB  cli
+
+=== FILES > 200 MB under C:\Users\hp (top 40) ===
+      5.00 GB  C:\Users\hp\AppData\Local\Temp\qoder-cli-cn\E--math\cd5786df-ab20-47eb-8821-405d0c904858\tasks\b3j93hpcc.output
+      3.58 GB  C:\Users\hp\Documents\NetSarang Computer\8\Xftp\Temporary\online1\mengxr\KoopmanLab\data\ns_V1e-3_N5000_T50.mat
+      0.98 GB  C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\tensorflow\python\_pywrap_tensorflow_common.dll
+      0.60 GB  C:\Users\hp\Documents\NetSarang Computer\8\Xftp\Temporary\online1\mengxr\KoopmanLab\data\burgers_data_R10.mat
+      0.49 GB  C:\Users\hp\AppData\Local\@genieworkbuddy-desktop-updater\installer.exe
+      0.37 GB  C:\Users\hp\AppData\Local\Quark\User Data\updates\46076fa642e3a2b04266c2b55094ebbf.exe
+      0.35 GB  C:\Users\hp\AppData\Local\Microsoft\vscode-cpptools\7adbfa10e4a3fb9bbbf4686156f3d623\.BROWSE.VC.DB
+      0.32 GB  C:\Users\hp\AppData\Roaming\Code\User\globalStorage\saoudrizwan.claude-dev\puppeteer\.chromium-browser-snapshots\chromium\win64-1674699\chrome-win\interactive_ui_tests.exe
+      0.32 GB  C:\Users\hp\.elan\toolchains\leanprover--lean4---v4.34.1\lib\lean\libLean.a
+      0.31 GB  C:\Users\hp\AppData\Local\OpenAI\Codex\bin\2e5e00daee91c61d\codex.exe
+      0.31 GB  C:\Users\hp\.qoder-cn\logs\runs\2026-10-08T15-32-02-991+08-00-9cteqq-p8752\qodercli.log
+      0.30 GB  C:\Users\hp\.codex\plugins\.plugin-appserver\codex.exe
+      0.30 GB  C:\Users\hp\AppData\Local\Programs\Quark\7.3.5.1009\quark.dll
+      0.30 GB  C:\Users\hp\AppData\Roaming\Code\User\globalStorage\saoudrizwan.claude-dev\puppeteer\.chromium-browser-snapshots\chromium\win64-1674699\chrome-win\chrome.dll
+      0.29 GB  C:\Users\hp\AppData\Local\javasharedresources\C290M4F1A64P_sharedcc_hp_G41L00
+      0.29 GB  C:\Users\hp\AppData\Local\Programs\Quark\7.0.7.940\quark.dll
+      0.28 GB  C:\Users\hp\AppData\Local\Temp\qoder-cli-cn\E--math\868ef0b2-35ea-4cf7-a06f-390bf550a4e2\tasks\bb4c0703x.output
+      0.27 GB  C:\Users\hp\AppData\Roaming\Tencent\WeMeet\Global\UpdatePackages\f56aafd4ed571415e1a9f91792c72bf3.exe
+      0.26 GB  C:\Users\hp\AppData\Roaming\com.qodercn.app.stable\main.sqlite
+      0.25 GB  C:\Users\hp\AppData\Local\Programs\Quark\7.3.5.1009\Resources\app.asar
+      0.25 GB  C:\Users\hp\AppData\Local\Programs\Quark\7.3.5.1009\Resources\app_asar.dll
+      0.25 GB  C:\Users\hp\AppData\Roaming\Code\agent-host\sdk-cache\claude\0.3.220\win32-x64\node_modules\@anthropic-ai\claude-agent-sdk-win32-x64\claude.exe
+      0.25 GB  C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\torch\lib\torch_cpu.dll
+      0.25 GB  C:\Users\hp\AppData\Roaming\Trae CN\ModularData\ai-agent\database.db
+      0.24 GB  C:\Users\hp\AppData\Local\Programs\Quark\7.0.7.940\Resources\app_asar.dll
+      0.24 GB  C:\Users\hp\AppData\Local\Programs\Quark\7.0.7.940\Resources\app.asar
+      0.23 GB  C:\Users\hp\AppData\Local\Temp\vscode-stable-user-x64\CodeSetup-stable-2a59476c9bfcb90b3ddc372c36762471b7dfad1c.exe
+      0.23 GB  C:\Users\hp\AppData\Local\MathWorks\ServiceHost\v2026.10.0.4\bin\win64\libcef.dll
+      0.23 GB  C:\Users\hp\AppData\Local\NRC\Saved\ProgramBinaryCache\D3DGraphics_V32902_D32085_S-1934880708_R8.ushaderprecache
+      0.22 GB  C:\Users\hp\AppData\Roaming\Tencent\xwechat\xplugin\Plugins\RadiumWMPF\25715\extracted\runtime\flue.dll
+      0.21 GB  C:\Users\hp\AppData\Local\qoder-updater\installer.exe
+      0.21 GB  C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\jaxlib\jax_common.dll
+      0.20 GB  C:\Users\hp\AppData\Local\qoder-cn-updater\installer.exe
+      0.20 GB  C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\~axlib\jax_common.dll
+
+=== DONE ===

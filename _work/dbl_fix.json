@@ -1,0 +1,122 @@
+[
+ {
+  "cid": "D155",
+  "line": 497,
+  "old": "\\lVert f\\rVert_1_1\\le\\lVert f\\rVert_1_2",
+  "new": "\\lVert f\\rVert_1\\le\\lVert f\\rVert_2",
+  "expect": 2,
+  "dollars": 0,
+  "ticks": 0,
+  "cred": "Hölder；两站同串"
+ },
+ {
+  "cid": "D274",
+  "line": 43,
+  "old": "\\norm E_{g_j}_2\\to0",
+  "new": "\\norm{E_{g_j}}_2\\to0",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "cred": "main.tex:198"
+ },
+ {
+  "cid": "D296",
+  "line": 111,
+  "old": "\\beta_{\\mathrm{eff}}_c",
+  "new": "\\beta_{\\mathrm{eff},c}",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "cred": "introduction.tex:98"
+ },
+ {
+  "cid": "D36",
+  "line": 553,
+  "old": "\\lambda\\to A^{1/10}^-",
+  "new": "\\lambda\\to A^{1/10-}",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "cred": "main.tex:473"
+ },
+ {
+  "cid": "D370",
+  "line": 39,
+  "old": "(RM')_\\ell/M'_\\ell'",
+  "new": "(RM')_\\ell/M'_\\ell",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "cred": "packets.tex:41  (RM')_\\ell/M'_\\ell"
+ },
+ {
+  "cid": "D486",
+  "line": 102,
+  "old": "\\det B[1..t_a\\mid j_1..j_t_a]",
+  "new": "\\det B[1..t_a\\mid j_1..j_{t_a}]",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "cred": "fixed-space.tex:273"
+ },
+ {
+  "cid": "D489",
+  "line": 129,
+  "old": "X_t^D(u)s_t^{D\\setminus A}^D(v)",
+  "new": "X_t^D(u)s_t^{D\\setminus A}(v)",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "cred": "deformation.tex:296"
+ },
+ {
+  "cid": "D493",
+  "line": 278,
+  "old": "J_F+M_i^*_F",
+  "new": "J_F+M_i^*\\rvert_F",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "cred": "06-cycles.tex:428；表格格内 house 形 \\rvert"
+ },
+ {
+  "cid": "D555",
+  "line": 306,
+  "old": "\\sum_{J'_s'}\\sigma",
+  "new": "\\sum_{J'_s}\\sigma",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "cred": "02-pure-inputs.tex:225  \\sum_{J'_s}"
+ },
+ {
+  "cid": "D555",
+  "line": 317,
+  "old": "\\sigma_x\\sigma'_x'",
+  "new": "\\sigma_x\\sigma'_x",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "cred": "03-transfer.tex:292-295"
+ },
+ {
+  "cid": "D570",
+  "line": 147,
+  "old": "b_v=s_kv_d_1",
+  "new": "b_v=s_vd_1",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "cred": "stage.tex:107"
+ },
+ {
+  "cid": "D94",
+  "line": 227,
+  "old": "\\psi_0=|+\\rangle^n|0\\rangle^a|0\\rangle^n^n",
+  "new": "\\psi_0=|+\\rangle^n|0\\rangle^a|0\\rangle_R^n",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "cred": "07-parity.tex:24-26"
+ }
+]

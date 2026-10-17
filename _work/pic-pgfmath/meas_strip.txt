@@ -1,0 +1,9 @@
+J 0 wt=1 xshift=0.0cm yshift=0.0cm branch=none
+J 1 wt=A xshift=1.45cm yshift=0.0cm branch=vert-left
+J 2 wt=A xshift=2.9cm yshift=0.0cm branch=vert-right
+J 3 wt=B xshift=4.34999cm yshift=0.0cm branch=diag-up
+J 4 wt=B xshift=5.79999cm yshift=0.0cm branch=diag-down
+J 5 wt=U xshift=0.0cm yshift=-2.1cm branch=arc-bottom
+J 6 wt=U xshift=1.45cm yshift=-2.1cm branch=arc-top
+J 7 wt=E xshift=2.9cm yshift=-2.1cm branch=two-vertical
+J 8 wt=F xshift=4.34999cm yshift=-2.1cm branch=two-arcs

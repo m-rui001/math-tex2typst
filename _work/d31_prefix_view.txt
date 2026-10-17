@@ -1,0 +1,97 @@
+   25 01       | 被否定的对象需要先把定义钉住（`01:4-23`）：
+   59 01h      | 两个口径的切割写在 `01-history.tex` 里，我把它当作本文的边界条件读（`01h:9-11`）：
+   67 01h      | 以及 shadow 口径（`01h:34-40`）：
+   79 01       | `main.tex:14-27` 固定了七条宏与五类环境。`theorem` 按 section 计数，`proposition/lemma/corollary/remark` 与它共享计数器，`\numberwithin{equation}{section}`。所以 Theorem 1.1、Corollary 1.2、Lemma 2.1、Proposition 3.1、3.2
+   79 01       | `main.tex:14-27` 固定了七条宏与五类环境。`theorem` 按 section 计数，`proposition/lemma/corollary/remark` 与它共享计数器，`\numberwithin{equation}{section}`。所以 Theorem 1.1、Corollary 1.2、Lemma 2.1、Proposition 3.1、3.2
+   91 01h      | | `lax-1958` | Lax, Comm. Pure Appl. Math. 11(2), 175-194 | 原始 Lax 猜想：三变量齐次双曲多项式的确定行列式表示（`01h:2-3`） |
+   92 01h      | | `helton-vinnikov-2007` | Helton-Vinnikov, CPAM 60(5), 654-674 | 证明对应的确定行列式表示定理（`01h:4-5`） |
+   93 01h      | | `lewis-parrilo-ramana-2005` | Lewis-Parrilo-Ramana, Proc. AMS 133(9), 2495-2499 | Helton-Vinnikov 形式与 Lax 原始形式的等价（`01h:5-6`） |
+   94 01h      | | `branden-2011` | Brändén, Adv. Math. 226(2), 1202-1212 | 高维 real-zero 多项式，任何正幂次无确定行列式表示（`01h:7-9`，引其 Thm 3.3） |
+   95 01h      | | `kummer-2016-vamos` | Kummer, Acta Appl. Math. 144(1), 11-15 | specialized Vámos 多项式：锥有 $7\times7$ 表示，多项式本身无确定行列式表示（`01h:12-15`） |
+   96 01h      | | `raghavendra-ryder-srivastava-2018` | RRSW, SODA 2019, 2322-2332 | 合适双曲性锥的谱形表示矩阵尺寸的指数下界（`01h:16-18`） |
+   97 01h      | | `netzer-2026` | Netzer, arXiv 2609.12957 | 五变量双曲三次的谱形性（`01h:19-20`，引其 Thm 3.9） |
+   98 01h      | | `kummer-netzer-2026-strict` | Kummer-Netzer, arXiv 2609.24542 | 严格双曲多项式的谱形性（`01h:22-23`，引其 Thm 1）；本篇故意不满足其假设 |
+   99 01h      | | `netzer-sanyal-2015` | Netzer-Sanyal, Math. Program. 153, 213-221 | shadow 正向定理（`01h:36-38`，引其 Thm 1.1） |
+  100 01h      | | `scheiderer-2018` | Scheiderer, SIAM J. Appl. Algebra Geom. 2(1), 26-44 | 局部平方和障碍（`01h:58-59`，引其 §4）；本篇明言不用 shadow 判据 |
+  101 01h      | | `choi-1975` | Choi, Linear Algebra Appl. 12(2), 95-100 | 系数 2 的更早的非负双二次形式（`01h:44-45`） |
+  102 01       | | `choi-lam-1977` | Choi-Lam, Math. Ann. 231(1), 1-18 | 系数 1 的双二次形式（`01:35-36` 引其 §4；极端性见其 Thm 4.4） |
+  103 01h      | | `blekherman-raita-shankar-sinn-2022` | BRSS, arXiv 2204.10625 | 命名为 weak extremality（`01h:48-51`，引其 Def 2.7 与 Thm 3.2） |
+  104 01h      | | `ha-2013` | Ha, Linear Algebra Appl. 439(10), 3156-3165 | 非负双二次形式与实对称矩阵正映射的经典对应（`01h:53-54`、`03:30-32`） |
+  105 01h      | | `dey-gardoll-theobald-2021` | DGT, JPAA 225(7), 106610 | 正映射做锥稳定性证书（`01h:54-55`） |
+  106 01h      | | `garding-1959` | Gärding, J. Math. Mech. 8(6), 957-965 | 双曲性锥的凸性（`01h:1-2`；§7 第 50-51 行再引它做中点论证） |
+  109 01h      | 这张表读出来的第一个信息：正向结果全部聚集在"三变量"、"五次三次的"、"严格双曲"、"允许辅助变量"四个限定之下，而 `branden-2011` 与 `kummer-2016-vamos` 说明"确定行列式表示"这条经典障碍在高维是残缺的。`[推测]` 所以我判断反例只能住在四条限定的交集之外：变量数要大（我最后是 23），次数要高（20 或 16），双曲性必须带重根（不能
+  124 01h      | `[推测]` 我撞的第一堵墙是"没有可用来否定的量"。谱形性是关于集合的陈述：$\exists N\exists A_i$。要证否，我必须对**任意** $N$ 与**任意** $A_i$ 推出矛盾，而 $\det L(x)$ 与 $p(x)$ 之间连比例关系都不能假定（`01h:9-11` 那句 "additional factors"，加上 Kummer 的 Vámos 例
+  124 01h      | `[推测]` 我撞的第一堵墙是"没有可用来否定的量"。谱形性是关于集合的陈述：$\exists N\exists A_i$。要证否，我必须对**任意** $N$ 与**任意** $A_i$ 推出矛盾，而 $\det L(x)$ 与 $p(x)$ 之间连比例关系都不能假定（`01h:9-11` 那句 "additional factors"，加上 Kummer 的 Vámos 例
+  145 01       | 被支配的形式定义在 `01:29-34`：
+  176 01       | 来源核对：$b$ 里只有 $-2\sum_{i<j}z_iy_iz_jy_j$ 产生 $y$ 的交叉项，所以 $y_iy_j$（$i\ne j$）的系数是 $-2z_iz_j$，对称矩阵对应元素 $-z_iz_j$；对角来自 $\sum z_i^2y_i^2$ 与 $\sum z_i^2y_{i+1}^2$ 两项，$y_1^2$ 的系数是 $z_1^2+z_3^2=a_1+a_
+  241 01       | (c) 假设与常数的机械理由。非负性用在两处：让支配条件有意义（$b=0\Rightarrow\ell=0$），以及 §5 里 $A_t\succeq0$、$\alpha=u^\top\Phi_y(vv^\top)u\ge0$ 使 $\lambda_{\max}(\alpha uu^\top)=\alpha$（论文 `05:89-90` 特意补 "also when $\alp
+  243 01h      | (d) `[推测]` 候选失败路线，我留三条。其一，换 Choi 1975 的系数 2 形式 $b_2=\sum z_i^2y_i^2-2\sum_{i<j}z_iy_iz_jy_j+2\sum z_i^2y_{i+1}^2$（`01h:42-45` 说 Choi-Lam 把 extra cyclic squared monomials 的系数从 2 降到 1）。沿同一条曲线 
+  277 01       | 被装入的映射是 `01:43-52`：
+  292 01       | 以及 $Q(y)$（`01:37-42`）：$Q(y)_{ii}=y_i^2+y_{i+1}^2$，$Q(y)_{ij}=-y_iy_j$（$i\ne j$），使 $b(z,y)=z^\top Q(y)z$。
+  302 01h      | 从秩 1 到全体 $\mathbb S^4_+$ 的推广是谱分解：$\forall v,u:\ u^\top\Phi_y(vv^\top)u=b(v_0u'-u_0v',y)\ge0$（Lemma 2.1 的非负性），故每个 $vv^\top$ 映到半定；$X=\sum_k\mu_kw_kw_k^\top$（$\mu_k\ge0$）加 $\Phi_y$ 线性给 $\Phi_y(
+  306 01       | 多项式本体在 `01:53-61`：
+  372 01       | (d) `[推测]` 失败路线三条。其一，用"det 表示唯一性"代替虚部论证，即断言 $p$ 的根是某 pencil 特征值的并：在没有 pencil 之前没有特征值可用，而一旦有（§4 之后的假想对象），两者的 $\det$ 至多差一个额外因子，仍不能逐点比对。`01:124-127` 那句 "It applies to an arbitrary hypothetical 
+  372 01h      | (d) `[推测]` 失败路线三条。其一，用"det 表示唯一性"代替虚部论证，即断言 $p$ 的根是某 pencil 特征值的并：在没有 pencil 之前没有特征值可用，而一旦有（§4 之后的假想对象），两者的 $\det$ 至多差一个额外因子，仍不能逐点比对。`01:124-127` 那句 "It applies to an arbitrary hypothetical 
+  453 01h      | (d) `[推测]` 候选失败路线我留两条，第三条（把切片当 LMI）单独开一节谈，因为它是我在这一步最容易犯的错误。其一，用 $e$ 的内点性做"局部到全局"的多项式比较，即在 $e$ 附近比 $\det L(x)$ 与 $p(x)$：两个齐次多项式在开正测度集上成比例只能确定比例常数非零，不能确定等于 1，而且几何口径本就允许 $\det L$ 与 $p$ 差一个额外因子（
+  465 01h      | 变体三，转成 shadow 口径。Netzer-Sanyal 的定理（`01h:34-38`）说边界非零点全是光滑点的锥是 shadow；如果我能证明本例满足它，就有辅助变量表示，然后……那只会削弱我的结论，因为要否定的正是"原始变量表示"。`[推测]` 我在此处检查了这个锥其实落在该判据之外：取 $X\succ0$ 与使 $Z-\Phi_y(X^{-1})$ 有二重零特征值的
+  465 01h      | 变体三，转成 shadow 口径。Netzer-Sanyal 的定理（`01h:34-38`）说边界非零点全是光滑点的锥是 shadow；如果我能证明本例满足它，就有辅助变量表示，然后……那只会削弱我的结论，因为要否定的正是"原始变量表示"。`[推测]` 我在此处检查了这个锥其实落在该判据之外：取 $X\succ0$ 与使 $Z-\Phi_y(X^{-1})$ 有二重零特征值的
+  467 01       | 于是剩下的唯一办法是反证：假设存在任何有限齐次实对称 pencil 表示 $K$，从它内部榨出结构。我把 §4 的任务写成一句话（`01:108-111`）："The remaining argument assumes an arbitrary pencil defining $K$ and extracts a bilinear square dominated by $b
+  564 01h      | (c) 假设与常数的机械理由，整条命题一起给。"homogeneous"（齐次、无 $A_0$）：第 2、11、12 步的标度全依赖 $L(\lambda x)=\lambda L(x)$；带常数项时 $L(X,s^2Z,sy)$ 的下右块多出 $L_{0,22}$，被 $s^{-2}$ 放大后发散，`eq:scaled-pencil` 与第 9 节全部崩塌。论文把 spect
+  566 01h      | (d) `[推测]` 失败路线三条。其一，跳过公共核压缩直接 Schur：$L_1(X)$ 一般只是半定甚至奇异，奇异左上块的 Schur 条件只给单向蕴含（还需 range 条件），拿不到"⟸"，而"⟸"正是把 pencil 的半定变成 $Z$ 不等式、进而提取 $B$ 的方向；压缩、重标度、$\delta$ 正则三步都是为把"⟸"做成精确等价。其二，允许仿射或辅助变量：仿射
+  753 01       | (a) 推论陈述（`01:78-89`，我把紧接的两行约定一起抄，它们是本节的口径来源）：
+  772 07r      | 节的引言（`07r:3-6`）说明本节的任务与方法："We now remove a factor that is unnecessary for its hyperbolicity cone. A larger block determinant shows directly that the quotient remains polynomial at singular $
+  774 07r      | (b) 第一步，构造 $16\times16$ 分块行列式（`07r:9-26`）：
+  803 07r      | 第二步，Schur 补给出 $q$ 与 $\Phi$ 的关系（`07r:27-30`）：对可逆 $X$，
+  811 07r      | 第三步，因子恒等式（`07r:31-37`）：
+  825 07r      | 第四步，$q$ 的双曲性（`07r:38-40`）："For each real $(X,Z,y)$, the polynomial $q(te-(X,Z,y))$ is a factor of the real-rooted polynomial $p(te-(X,Z,y))$. Hence $q$ is hyperbolic with respect to $e$." 我把
+  827 07r      | 第五步，锥相等（`07r:42-59`）：
+  856 01h      | Lean 侧：§7 与 Corollary 1.2 **没有**被形式化。我在 `OAI/Analysis/HyperbolicCones/` 全目录搜 `reduced`、`degree 16`、`IsHomogeneous ... 16` 三类关键词，零命中；`Main.lean:24-34` 的 `main_result` 里次数项是 `IsHomogeneous 20`
+  882 01h      | `[推测]` 我把这一节进正文明显是防御性的：仓库里存在一篇声称几何猜想为真的 arXiv 预印本，任何读者都会问"你的反例与它矛盾，那么它的证明在哪里错"。附录给的是一个定点回答，而且 `01h:66-67` 立刻切割责任："The construction and proof in the present paper are independent of that comp
+  943 01h      | | 幂次的 definite determinantal representation 不存在（Brändén 型障碍） | Lax 猜想的原始形式就是关于多项式的行列式表示，最容易想到沿它反用 | `01h:8-12`：那个障碍不排除"带额外因子的另一个行列式定义同一个锥"。几何口径针对的正是这个剩余可能 | 凡只谈多项式表示、不谈锥的路线一律作废。这也是我为什么在 §11 
+  946 01h      | | Kummer–Netzer 严格双曲 ⇒ 谱形 | 手上这个多项式很可能不严格双曲；如果它落在已有正结果之外，也许反过来说明它是新对象 | 方向不成立：严格双曲是充分条件，不严格推不出非谱形。`01h:19-26` 用 $p(te-w)=(t-1)^{16}t^4$、$q(te-w)=(t-1)^{12}t^4$ 说明的是"两条正结果都收编不了本例"，并非"本例因此非谱形"
+  947 01h      | | Netzer–Sanyal 光滑边界 ⇒ spectrahedral shadow | 边界光滑性看起来比表示存在性更好验证 | 结论是 shadow（允许辅助变量与线性像），我要否的是原始变量里的直接表示。`01h:36-38` 明确 "makes no assertion about representations using auxiliary variables" 
+  948 01h      | | Scheiderer 的局部 SOS 障碍 | 素材 §1.6 与本节 `01h:56-59` 都提到"相关的总体策略"，看起来可以套 | 局部 SOS 障碍针对 shadow 的非存在性，需要边界邻域上非负形式不是局部 SOS 的证书；本例的推导是"从假设存在的 pencil 里微分出一个被 $b$ 支配的双线性平方"，`01h:58-59` 直说 "it does no
+  948 01h      | | Scheiderer 的局部 SOS 障碍 | 素材 §1.6 与本节 `01h:56-59` 都提到"相关的总体策略"，看起来可以套 | 局部 SOS 障碍针对 shadow 的非存在性，需要边界邻域上非负形式不是局部 SOS 的证书；本例的推导是"从假设存在的 pencil 里微分出一个被 $b$ 支配的双线性平方"，`01h:58-59` 直说 "it does no
+  969 01       | | $d$（$p$ 的次数） | $20$ | 双曲性定义里的根数账；$p(te-x)$ 首项系数 $p(e)=1$；§11 的重数分解 | 它是乘出来的：内层 $4\times4$ 行列式对元素 $4$ 次，元素 $5$ 次，$4\times5=20$。换矩阵尺寸 $n$ 则次数变 $n(n+1)$，$20$ 本身没有最优性（`01:87-88` 明确不作最小声明） |
+ 1076 01h      | 第一个洞：$K$ 是不是 spectrahedral shadow。`01h:36-38` 明写不作断言，而 Netzer–Sanyal 那条光滑边界 ⇒ shadow 的定理在这里用不上，因为第 5 节的两个切片已经告诉我 $\partial K$ 上有秩降点（$w$ 那条射线上 $X$ 半定时 $\Phi_y$ 会退化）。于是本例的处境是：它被证明不是谱形，同时也没有人知道
+ 1078 01       | 第二个洞：维数与次数的下界。`01:87-88` 只有 "We make no claim that the dimension or degree is minimal"。台账里 $20$ 与 $16$ 两行我都追到了乘除来源，但没有一个来源给出下界。Netzer 的五变量三次双曲锥的正结果（`01h:16-17`）说明这个方向不是空问：低维低次可能根本不存在反例。$q$ 的
+ 1078 01h      | 第二个洞：维数与次数的下界。`01:87-88` 只有 "We make no claim that the dimension or degree is minimal"。台账里 $20$ 与 $16$ 两行我都追到了乘除来源，但没有一个来源给出下界。Netzer 的五变量三次双曲锥的正结果（`01h:16-17`）说明这个方向不是空问：低维低次可能根本不存在反例。$q$ 的
+ 1080 01h      | 第三个洞：弱极端性还能不能更省。第 2 节的八步是我目前手里的证明，`01h:46-52` 提到 Blekherman–Raiţă–Shankar–Sinn 用被支配平方的 Taylor 展开刻画弱极端性（其 Thm 3.2），并且论文说它给出的正是"精确这一条性质"的短证明。我的重构里没有把那条刻画用完：我只用到零点与四阶曲线，Taylor 部分被手工做了两阶。如果直接引那条
+ 1082 07r      | 第四个洞：Gårding 凸性在证明链里的位置。第 11 节的偶性加中点凸性论证（$q$ 对 $y$ 偶，于是 $\operatorname{int}K_q$ 沿 $y$ 方向对称，配 Gärding 得凸）我用的是论文的 `07r:44-52`，那一步只依赖"实根性 + $q(e)\ne0$"。`[推测]` 这里其实藏着一次没有明说的选择：本例的凸性不需要任何新论证，Gård
+ 1127 01       | 1. `We make no claim that the dimension or degree is minimal.`（`01:87`）：封堵"23 维 16 次是不是最优"。
+ 1128 01h      | 2. `it makes no assertion about representations using auxiliary variables.`（`01h:39-40`）：封堵"这与 shadow 版猜想什么关系"。
+ 1129 01h      | 3. `it does not invoke a criterion for shadows.`（`01h:60-61`）：封堵"是不是 Scheiderer 路线的特例"。
+ 1130 01       | 4. `without comparing its determinant with $p$.`（`01:126-127`）：封堵"$\det L$ 与 $p$ 的比例关系你用上了吗"。这句是我第 13 节第一行那条 Brändén 墙的正向表述：障碍作用在锥的成员性上，从不比较行列式。
+ 1131 07       | 5. `Its endpoints coincide, so it does not refute an endpoint-only statement.`（`07:53-55`）：封堵"附录推翻了 González Nevado 的定理吗"。
+ 1132 07       | 6. `The nonspectrahedrality result of this paper follows from the construction and obstruction proved above.`（`07:55-56`）：主结果与附录脱钩。
+ 1133 01       | 7. 摘要与定理都把表示限定在 `finite homogeneous real symmetric`（`main.tex:36-37`、`01:18-21`），Hermitian 情形由 `01:88-92` 那句 $\left(\begin{smallmatrix}A&-B\\B&A\end{smallmatrix}\right)$ 化归掉；不含无限维、不含仿射常数项。
+ 1133 01       | 7. 摘要与定理都把表示限定在 `finite homogeneous real symmetric`（`main.tex:36-37`、`01:18-21`），Hermitian 情形由 `01:88-92` 那句 $\left(\begin{smallmatrix}A&-B\\B&A\end{smallmatrix}\right)$ 化归掉；不含无限维、不含仿射常数项。
+ 1207 01       | 第 14 节那张表按"硬编码数字加参数"的口径记：列是符号、值、用在哪、动了会坏在哪，位置写成节号或 `01:87` 这类速记；第 17.3 节按"论文写法对 Lean 写法"记，17.4 节按"符号义项加口诀"记，17.2 节按"论文封口的负面口径"记。下面这张新表换口径：一行一个量，位置列一律写成 build 目录下真实 .tex 的真实行号，被谁消费与断点都指回具体 la
+ 1211 reduced  | | $p$ 的次数 $d$ | $20$ | 01-introduction.tex:64 | `03:44-45` 由内层 $4\times4$ 行列式乘出；根按 $\lambda_1,\ldots,\lambda_{20}$ 记（`03:100-103`） | 换矩阵尺寸则次数重算，`reduced:36-37` 的减法 $16=20-4$ 与 `main.tex:35` 
+ 1212 01       | | 变量数 $m$ | $23=10+10+3$ | 01-introduction.tex:61 | Prop 3.1 计数（`03:36-37`）；Theorem 1.1 中 $L$ 的定义域（`01:67-68`） | $y$ 的分量减到 $2$ 则 `02:59-66` 的符号向量消元失去三对交叉项，弱极端性失效，`06:85` 的逐元归零断 |
+ 1213 01       | | $b$ 的循环指标约定 | 下标按 mod 3 回环 | 01-introduction.tex:27 | eq:form 第三求和（`01:32`）；$Q(y)$ 对角（`01:39`）；`02:23` 的 $a_i=z_i^2$ | 写成同向则 `02:36-38` 的主二阶子式形状变，`02:42-45` 的 AM-GM 一步不再恰好三项 |
+ 1213 01       | | $b$ 的循环指标约定 | 下标按 mod 3 回环 | 01-introduction.tex:27 | eq:form 第三求和（`01:32`）；$Q(y)$ 对角（`01:39`）；`02:23` 的 $a_i=z_i^2$ | 写成同向则 `02:36-38` 的主二阶子式形状变，`02:42-45` 的 AM-GM 一步不再恰好三项 |
+ 1215 01       | | $Q(y)$ | $Q_{ii}=y_i^2+y_{i+1}^2$，$Q_{ij}=-y_iy_j$ | 01-introduction.tex:39-40 | $b(z,y)=z^\top Q(y)z$（`01:42`）；$M(z)$（`02:26-31`）；`reduced:17-18` 的展开 | 任一符号改动则 `02:60` 的零点与 `03:11-14` 的 w
+ 1215 reduced  | | $Q(y)$ | $Q_{ii}=y_i^2+y_{i+1}^2$，$Q_{ij}=-y_iy_j$ | 01-introduction.tex:39-40 | $b(z,y)=z^\top Q(y)z$（`01:42`）；$M(z)$（`02:26-31`）；`reduced:17-18` 的展开 | 任一符号改动则 `02:60` 的零点与 `03:11-14` 的 w
+ 1216 reduced  | | $\Phi_y$ 的分块 | $\begin{pmatrix}\operatorname{tr}(QT)&-r^\top Q\\-Qr&aQ\end{pmatrix}$ | 01-introduction.tex:45-52 | wedge 恒等式（`03:11-14`）；正映射（`03:19-23`）；`reduced:17-18` | 负号改动则 `reduced:11
+ 1216 reduced  | | $\Phi_y$ 的分块 | $\begin{pmatrix}\operatorname{tr}(QT)&-r^\top Q\\-Qr&aQ\end{pmatrix}$ | 01-introduction.tex:45-52 | wedge 恒等式（`03:11-14`）；正映射（`03:19-23`）；`reduced:17-18` | 负号改动则 `reduced:11
+ 1216 reduced  | | $\Phi_y$ 的分块 | $\begin{pmatrix}\operatorname{tr}(QT)&-r^\top Q\\-Qr&aQ\end{pmatrix}$ | 01-introduction.tex:45-52 | wedge 恒等式（`03:11-14`）；正映射（`03:19-23`）；`reduced:17-18` | 负号改动则 `reduced:11
+ 1218 01       | | 内层元素次数 | $5$，两条通路 $4+1$ 与 $2+3$ 同次 | 03-hyperbolic.tex:42-44 | 外层行列式给出 $20$（`03:44-45`） | 两条通路不同次则相减不合法，$p$ 不齐次，`01:4-7` 的双曲性前提整个失效 |
+ 1219 reduced  | | $e$ 与归一化 | $e=(I_4,I_4,0)$，$p(e)=1$ | 01-introduction.tex:65 | 首项系数（`03:78-80`）；unital 落点（`04:81`）；$q(e)=1$（`reduced:37`） | $p(e)$ 若为 $0$ 则根数账与半平面论证（`03:58-80`）同时失去起点 |
+ 1220 reduced  | | 逆公式幂次 | $(\det X)^4$ | 03-hyperbolic.tex:53 | 双曲性证明的桥（`03:75-76`）；与 `reduced:29` 的 $(\det X)^3$ 比较得 `reduced:33` | 幂次错一位则因子差 $4$ 变成别的数，$16=20-4$ 与摘要句一起断 |
+ 1220 reduced  | | 逆公式幂次 | $(\det X)^4$ | 03-hyperbolic.tex:53 | 双曲性证明的桥（`03:75-76`）；与 `reduced:29` 的 $(\det X)^3$ 比较得 `reduced:33` | 幂次错一位则因子差 $4$ 变成别的数，$16=20-4$ 与摘要句一起断 |
+ 1222 reduced  | | $y=0$ 切片的根式 | $\det(tI_4-X)^4\det(tI_4-Z)$，$X$ 的根重数 $4$ | 03-hyperbolic.tex:137 | eq:slice-zero（`03:91-94`）；`04:56` 的公共核非平凡；`reduced:54-57` | 重数 $4$ 读成 $1$ 则 `reduced:54` 的 $(\det X)^3$ 配不
+ 1222 reduced  | | $y=0$ 切片的根式 | $\det(tI_4-X)^4\det(tI_4-Z)$，$X$ 的根重数 $4$ | 03-hyperbolic.tex:137 | eq:slice-zero（`03:91-94`）；`04:56` 的公共核非平凡；`reduced:54-57` | 重数 $4$ 读成 $1$ 则 `reduced:54` 的 $(\det X)^3$ 配不
+ 1222 reduced  | | $y=0$ 切片的根式 | $\det(tI_4-X)^4\det(tI_4-Z)$，$X$ 的根重数 $4$ | 03-hyperbolic.tex:137 | eq:slice-zero（`03:91-94`）；`04:56` 的公共核非平凡；`reduced:54-57` | 重数 $4$ 读成 $1$ 则 `reduced:54` 的 $(\det X)^3$ 配不
+ 1244 reduced  | | $q$ 的块行列式 | $16\times16$ 分块，$q=\det\begin{pmatrix}I_3\otimes X&C^\top\\C(Q(y)\otimes I_4)&Z\end{pmatrix}$ | reduced-polynomial.tex:22-25 | Schur 补给 `reduced:29`；$q(X,Z,0)=(\det X)^3\det Z$
+ 1244 reduced  | | $q$ 的块行列式 | $16\times16$ 分块，$q=\det\begin{pmatrix}I_3\otimes X&C^\top\\C(Q(y)\otimes I_4)&Z\end{pmatrix}$ | reduced-polynomial.tex:22-25 | Schur 补给 `reduced:29`；$q(X,Z,0)=(\det X)^3\det Z$
+ 1244 reduced  | | $q$ 的块行列式 | $16\times16$ 分块，$q=\det\begin{pmatrix}I_3\otimes X&C^\top\\C(Q(y)\otimes I_4)&Z\end{pmatrix}$ | reduced-polynomial.tex:22-25 | Schur 补给 `reduced:29`；$q(X,Z,0)=(\det X)^3\det Z$
+ 1245 reduced  | | $K_i$ | $\begin{pmatrix}0&e_i^\top\\-e_i&0\end{pmatrix}\in\R^{4\times4}$ | reduced-polynomial.tex:11 | $\Phi_y(T)=\sum_{i,j}Q(y)_{ij}K_iTK_j^\top=C(Q(y)\otimes T)C^\top$（`reduced:17-18`） |
+ 1245 01       | | $K_i$ | $\begin{pmatrix}0&e_i^\top\\-e_i&0\end{pmatrix}\in\R^{4\times4}$ | reduced-polynomial.tex:11 | $\Phi_y(T)=\sum_{i,j}Q(y)_{ij}K_iTK_j^\top=C(Q(y)\otimes T)C^\top$（`reduced:17-18`） |
+ 1246 reduced  | | $C$ | $\begin{pmatrix}K_1&K_2&K_3\end{pmatrix}\in\R^{4\times12}$ | reduced-polynomial.tex:12 | `reduced:22-25` 的块宽 | $12=3\times4$ 错则 $16=4+12$ 的拼接断，$q$ 的次数账跟着断 |
+ 1247 reduced  | | 因子分拆 | $p=(\det X)q$ | reduced-polynomial.tex:33 | 次数 $20-4=16$ 与 $q(e)=1$（`reduced:36-37`）；锥相等（`reduced:58`） | 少一个因子则 `reduced:45` 的 $K=K_q\cap\{X\succeq0\}$ 不再能由偶性加 Gärding 中点闭合（`reduced
+ 1247 reduced  | | 因子分拆 | $p=(\det X)q$ | reduced-polynomial.tex:33 | 次数 $20-4=16$ 与 $q(e)=1$（`reduced:36-37`）；锥相等（`reduced:58`） | 少一个因子则 `reduced:45` 的 $K=K_q\cap\{X\succeq0\}$ 不再能由偶性加 Gärding 中点闭合（`reduced
+ 1247 reduced  | | 因子分拆 | $p=(\det X)q$ | reduced-polynomial.tex:33 | 次数 $20-4=16$ 与 $q(e)=1$（`reduced:36-37`）；锥相等（`reduced:58`） | 少一个因子则 `reduced:45` 的 $K=K_q\cap\{X\succeq0\}$ 不再能由偶性加 Gärding 中点闭合（`reduced
+ 1247 reduced  | | 因子分拆 | $p=(\det X)q$ | reduced-polynomial.tex:33 | 次数 $20-4=16$ 与 $q(e)=1$（`reduced:36-37`）；锥相等（`reduced:58`） | 少一个因子则 `reduced:45` 的 $K=K_q\cap\{X\succeq0\}$ 不再能由偶性加 Gärding 中点闭合（`reduced
+ 1248 01       | | 摘要与正文的次数差 | 摘要报 $16$，Theorem 1.1 报 $20$ | main.tex:35 | 与 `01-introduction.tex:64` 的定理头并读；Corollary 1.2（`01:79`）给出桥 | 把摘要读成笔误则 §7 的除法失去动机，`reduced:38-40` 的因子与根包含论证不再被需要 |
+ 1248 reduced  | | 摘要与正文的次数差 | 摘要报 $16$，Theorem 1.1 报 $20$ | main.tex:35 | 与 `01-introduction.tex:64` 的定理头并读；Corollary 1.2（`01:79`）给出桥 | 把摘要读成笔误则 §7 的除法失去动机，`reduced:38-40` 的因子与根包含论证不再被需要 |

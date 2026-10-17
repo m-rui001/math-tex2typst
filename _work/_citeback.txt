@@ -1,0 +1,43 @@
+completed C notes = 56 of 57 ; 未达下限不引=[]
+--- D176  heads=21 last=394 nums_contig=True  Δ+0B  3 行  复写旧节 350B
+D176 APPLIED size=104073 Δ+0B 条目=1 节 ## §20
+--- D207  heads=26 last=433 nums_contig=True  Δ+0B  6 行  复写旧节 758B
+D207 APPLIED size=117789 Δ+0B 条目=4 节 ## §23
+--- D210  heads=18 last=329 nums_contig=True  Δ+0B  6 行  复写旧节 758B
+D210 APPLIED size=71408 Δ+0B 条目=4 节 ## §17
+--- D242  heads=24 last=327 nums_contig=True  Δ+0B  3 行  复写旧节 350B
+D242 APPLIED size=71503 Δ+0B 条目=1 节 ## §23
+--- D274  heads=17 last=334 nums_contig=True  Δ+0B  3 行  复写旧节 342B
+D274 APPLIED size=73311 Δ+0B 条目=1 节 ## §16
+--- D289  heads=19 last=448 nums_contig=True  Δ+0B  12 行  复写旧节 1712B
+D289 APPLIED size=88019 Δ+0B 条目=10 节 ## 18
+--- D305  heads=26 last=449 nums_contig=True  Δ+0B  14 行  复写旧节 1991B
+D305 APPLIED size=73210 Δ+0B 条目=12 节 ## §25
+--- D307  heads=24 last=400 nums_contig=True  Δ+0B  14 行  复写旧节 1832B
+D307 APPLIED size=92054 Δ+0B 条目=12 节 ## 23
+--- D308  heads=21 last=370 nums_contig=True  Δ+0B  3 行  复写旧节 342B
+D308 APPLIED size=75172 Δ+0B 条目=1 节 ## §20
+--- D318  heads=25 last=471 nums_contig=True  Δ+0B  18 行  复写旧节 2634B
+D318 APPLIED size=123315 Δ+0B 条目=16 节 ## §24
+--- D355  heads=27 last=417 nums_contig=True  Δ+0B  7 行  复写旧节 1099B
+D355 APPLIED size=90622 Δ+0B 条目=5 节 ## §26
+--- D385  heads=23 last=425 nums_contig=True  Δ+0B  29 行  复写旧节 4296B
+D385 APPLIED size=83069 Δ+0B 条目=27 节 ## 22
+--- D40  heads=16 last=565 nums_contig=True  Δ+0B  3 行  复写旧节 359B
+D40 APPLIED size=112667 Δ+0B 条目=1 节 ## 15
+--- D447  heads=33 last=511 nums_contig=True  Δ+0B  21 行  复写旧节 3106B
+D447 APPLIED size=119398 Δ+0B 条目=19 节 ## 32
+--- D451  heads=25 last=337 nums_contig=True  Δ+0B  12 行  复写旧节 1704B
+D451 APPLIED size=86257 Δ+0B 条目=10 节 ## §24
+--- D458  heads=26 last=405 nums_contig=True  Δ+0B  4 行  复写旧节 421B
+D458 APPLIED size=76691 Δ+0B 条目=2 节 ## §25
+--- D471  heads=41 last=592 nums_contig=True  Δ+0B  23 行  复写旧节 3428B
+D471 APPLIED size=97762 Δ+0B 条目=21 节 ## 40
+--- D476  heads=23 last=325 nums_contig=True  Δ+0B  16 行  复写旧节 2183B
+D476 APPLIED size=111334 Δ+0B 条目=14 节 ## §22
+--- D54  heads=23 last=794 nums_contig=True  Δ+0B  3 行  复写旧节 359B
+D54 APPLIED size=108644 Δ+0B 条目=1 节 ## 22
+--- D729  heads=23 last=571 nums_contig=True  Δ+0B  4 行  复写旧节 421B
+D729 APPLIED size=70594 Δ+0B 条目=2 节 ## §22
+--- D80  heads=17 last=2383 nums_contig=True  Δ+0B  7 行  复写旧节 1097B
+D80 APPLIED size=252238 Δ+0B 条目=5 节 ## 16

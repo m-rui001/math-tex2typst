@@ -1,0 +1,452 @@
+papers read: 724
+
+call (函数调用原样印出): 13 处 / 4 篇
+   A-nondegenerate-counterexample-to-the-Morse- p1 | The Morse-number form of the Arnold conjecture asks whether #Fix0(𝜙1
+   A-nondegenerate-counterexample-to-the-Morse- p1 | #Fix0(𝜙1
+   A-nondegenerate-counterexample-to-the-Morse- p15 | #Fix0(𝜙1
+   A-nondegenerate-counterexample-to-the-Morse- p20 | #Fix0(𝜙1
+   Hamiltonian-Fixed-Points-Below-the-Stable-Mo p1 | #Fix0(𝜙1
+   Hamiltonian-Fixed-Points-Below-the-Stable-Mo p1 | #Fix0(𝜙1
+   Hamiltonian-Fixed-Points-Below-the-Stable-Mo p14 | 𝐻) = #Fix0(𝜙1
+   Hamiltonian-Fixed-Points-Below-the-Stable-Mo p16 | #Fix0(𝜙1
+   Hamiltonian-Fixed-Points-Below-the-Stable-Mo p1 | unrestricted stable Morse formulation asks whether #Fix0(𝜙1
+   Hamiltonian-Fixed-Points-Below-the-Stable-Mo p1 | 𝐻𝑚) = #Fix0(𝜙1
+   Hamiltonian-Fixed-Points-Below-the-Stable-Mo p15 | 𝐻) = #Fix0(𝜙1
+   Sharpness-of-the-Cyclic-Integral-Floer-Bound p2 | 𝐻) = #Fix0(𝜙1
+   Sharpness-of-the-Cyclic-Integral-Floer-Bound p8 | 𝐻) = #Fix0(𝜙1
+
+dollar (数学定界符 $ 上页): 56 处 / 2 篇
+   The-exact-reconstruction-threshold-for-the-t p46 | for j in $(seq -1 26); do ./grid '$j'; done
+   The-exact-reconstruction-threshold-for-the-t p49 | for j in 0 1 2; do ./interval '$j'; done
+   The-exact-reconstruction-threshold-for-the-t p49 | for j in -1 $(seq 0 26); do ./grid '$j'; done
+   standalone-mezard-parisi-formula p1 | Fix an even integer $p\ge2$, a real number $\alpha>0$, a random function $\theta:\{-1,1\}
+   standalone-mezard-parisi-formula p1 | ^p\to\mathbb R$, and a real random variable $h$. Assume
+   standalone-mezard-parisi-formula p1 | $$
+   standalone-mezard-parisi-formula p1 | $$
+   standalone-mezard-parisi-formula p1 | Require the interaction hypotheses of Panchenko--Talagrand (1.2)--(1.4): for all $s=(s_1,
+   standalone-mezard-parisi-formula p1 | \ldots,s_p)$,
+   standalone-mezard-parisi-formula p1 | $$
+   standalone-mezard-parisi-formula p1 | $$
+   standalone-mezard-parisi-formula p1 | where the $f_\ell:\{-1,1\}\to\mathbb R$ are independent copies of one random function, $b$ is
+   standalone-mezard-parisi-formula p1 | independent of them, and $\mathbb E[(-b)^n]\ge0$ for every integer $n\ge1$. The positive
+   standalone-mezard-parisi-formula p1 | random variable $a$ may depend on the other factorization variables.
+   standalone-mezard-parisi-formula p1 | For each $N$, let $M_N\sim\operatorname{Poisson}(\alpha N)$, let $(i_{\ell,k})$ be
+   standalone-mezard-parisi-formula p1 | independent uniform indices in $\{1,\ldots,N\}$, let $(\theta_k)$ be independent copies of $
+   standalone-mezard-parisi-formula p1 | \theta$, and let $(h_i)$ be independent copies of $h$. These families are mutually
+   standalone-mezard-parisi-formula p1 | independent; indices are sampled with replacement. For $\sigma\in\{-1,1\}^N$, set
+   standalone-mezard-parisi-formula p1 | $$
+   standalone-mezard-parisi-formula p1 | $$
+   standalone-mezard-parisi-formula p1 | All model parameters and disorder laws are fixed as $N\to\infty$; any inverse-temperature
+   standalone-mezard-parisi-formula p1 | parameter is absorbed into $\theta$ and $h$.
+   standalone-mezard-parisi-formula p1 | Define $q_x(s)=e^{xs}/(2\cosh x)$ for $s\in\{-1,1\}$ and $x\in\mathbb R$, and the cavity
+   standalone-mezard-parisi-formula p1 | $$
+   standalone-mezard-parisi-formula p1 | $$
+   standalone-mezard-parisi-formula p1 | $$
+   standalone-mezard-parisi-formula p2 | $$
+   standalone-mezard-parisi-formula p2 | These are $\langle\mathcal E\rangle_x$ and $U$ from (1.5)--(1.7) of the cited paper.
+   standalone-mezard-parisi-formula p2 | Here is a complete definition of its finite-level trial functional. Write $\mathcal
+   standalone-mezard-parisi-formula p2 | M_1=\mathcal P(\mathbb R)$ and $\mathcal M_{j+1}=\mathcal P(\mathcal M_j)$, where $\mathcal
+   standalone-mezard-parisi-formula p2 | P$ denotes Borel probability measures and each space carries its usual weak topology. Fix an
+   standalone-mezard-parisi-formula p2 | integer $r\ge1$, $\zeta\in\mathcal M_{r+1}$, and $0<m_1<\cdots<m_r<1$. For each message label
+   standalone-mezard-parisi-formula p2 | $\omega$, independently generate a chain
+   standalone-mezard-parisi-formula p2 | $$
+   standalone-mezard-parisi-formula p2 | $$
+   standalone-mezard-parisi-formula p2 | Thus $\eta_j^\omega\in\mathcal M_{r-j}$. Generate all chains independently of the physical
+   standalone-mezard-parisi-formula p2 | disorder. Use distinct labels for $x_1,\ldots,x_p$ and for $x_\ell^j$, $j\ge1$, $1\le\ell\le
+   standalone-mezard-parisi-formula p2 | p-1$. Take mutually independent $k\sim\operatorname{Poisson}(\alpha p)$, $\theta,\theta_1,
+   standalone-mezard-parisi-formula p2 | \theta_2,\ldots$ with the prescribed interaction law, and $h$ with the prescribed field law.
+   standalone-mezard-parisi-formula p2 | $$
+   standalone-mezard-parisi-formula p2 | $$
+   standalone-mezard-parisi-formula p2 | For $0\le\ell<r$, let $\mathcal F_\ell$ be generated by all physical disorder just listed and
+   standalone-mezard-parisi-formula p2 | by $\eta_j^\omega$ for all labels $\omega$ and $0\le j\le\ell$. For either positive variable
+   standalone-mezard-parisi-formula p2 | $V$ above, define backwards
+   standalone-mezard-parisi-formula p2 | $$
+   standalone-mezard-parisi-formula p2 | $$
+   standalone-mezard-parisi-formula p2 | $$
+   standalone-mezard-parisi-formula p2 | $$
+   standalone-mezard-parisi-formula p2 | This single-branch construction is equivalent to (5.2)--(5.3), and $\mathcal B_r$ is
+   standalone-mezard-parisi-formula p2 | precisely the right-hand side of Theorem 4, equation (5.10). At level $r=0$, instead take all
+   standalone-mezard-parisi-formula p2 | messages independently with a common arbitrary law $\zeta\in\mathcal M_1$, omit the operators
+   standalone-mezard-parisi-formula p2 | $T_\ell$, and define
+   standalone-mezard-parisi-formula p2 | $$
+   standalone-mezard-parisi-formula p2 | $$
+   standalone-mezard-parisi-formula p3 | $$
+   standalone-mezard-parisi-formula p3 | $$
+
+angle (标签 <name> 上页): 0 处 / 0 篇
+
+bs2 (双反斜杠 \\ 上页): 1 处 / 1 篇
+   standalone-mezard-parisi-formula p2 | \Phi_r=\inf_{\substack{\zeta\in\mathcal M_{r+1}\\0<m_1<\cdots<m_r<1}}\mathcal B_r(\zeta,m).
+
+bscmd (反斜杠控制词上页): 79 处 / 3 篇
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \foreach \x/\name in {0/U,4.2/V,8.4/X_v} {
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \begin{scope}[shift={(\x,0)}]
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \draw[axes,->] (-1.25,0)--(1.35,0);
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \draw[axes,->] (0,-.85)--(0,1.15);
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \node at (0,-1.15) {\(\name\)-plane};
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \end{scope}
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \begin{scope}[shift={(.12,.20)},rotate=25]
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \draw[capacityellipse] (0,0) ellipse (1.00 and .37);
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \draw[linkblue,dashed] (-1,0)--(1,0);
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \end{scope}
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \begin{scope}[shift={(4.05,.26)},rotate=25]
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \draw[capacityellipse] (0,0) ellipse (1.00 and .37);
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \draw[linkblue,dashed] (-1,0)--(1,0);
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \end{scope}
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \begin{scope}[shift={(8.57,.21)},rotate=25]
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \draw[capacityellipse] (0,0) ellipse (.50 and .185);
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \draw[linkblue,dashed] (-.5,0)--(.5,0);
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \end{scope}
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \node at (.05,1.4) {\(E+u_0\)};
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \node at (4.15,1.4) {\(E+v_0\)};
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \node at (8.45,1.4) {\(M^{-1}E+x_0\)};
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \draw[decorate,decoration={brace,mirror,amplitude=4pt}]
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \node at (2.1,-1.98) {initial test};
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \draw[->,thick] (5.8,.3)--(6.8,.3)
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \end{tikzpicture}
+   Short-Egyptian-fractions-September-25-2026 p33 | [14] P. Erdős, “On the sum \sum_{k=1}^{x}d(f(k))”, Journal of the London Mathematical Society, vol. 27,
+   standalone-mezard-parisi-formula p1 | Fix an even integer $p\ge2$, a real number $\alpha>0$, a random function $\theta:\{-1,1\}
+   standalone-mezard-parisi-formula p1 | ^p\to\mathbb R$, and a real random variable $h$. Assume
+   standalone-mezard-parisi-formula p1 | \mathbb E\max_{s\in\{-1,1\}^p}|\theta(s)|+\mathbb E|h|<\infty.
+   standalone-mezard-parisi-formula p1 | \ldots,s_p)$,
+   standalone-mezard-parisi-formula p1 | e^{\theta(s)}=a\left(1+b\prod_{\ell=1}^p f_\ell(s_\ell)\right),\qquad
+   standalone-mezard-parisi-formula p1 | \left|b\prod_{\ell=1}^p f_\ell(s_\ell)\right|<1\quad\text{almost surely},
+   standalone-mezard-parisi-formula p1 | where the $f_\ell:\{-1,1\}\to\mathbb R$ are independent copies of one random function, $b$ is
+   standalone-mezard-parisi-formula p1 | independent of them, and $\mathbb E[(-b)^n]\ge0$ for every integer $n\ge1$. The positive
+   standalone-mezard-parisi-formula p1 | For each $N$, let $M_N\sim\operatorname{Poisson}(\alpha N)$, let $(i_{\ell,k})$ be
+   standalone-mezard-parisi-formula p1 | independent uniform indices in $\{1,\ldots,N\}$, let $(\theta_k)$ be independent copies of $
+   standalone-mezard-parisi-formula p1 | \theta$, and let $(h_i)$ be independent copies of $h$. These families are mutually
+   standalone-mezard-parisi-formula p1 | independent; indices are sampled with replacement. For $\sigma\in\{-1,1\}^N$, set
+   standalone-mezard-parisi-formula p1 | -H_N(\sigma)=\sum_{k=1}^{M_N}\theta_k(\sigma_{i_{1,k}},\ldots,\sigma_{i_{p,k}})+\sum_{i=1}^N
+   standalone-mezard-parisi-formula p1 | h_i\sigma_i,\qquad
+   standalone-mezard-parisi-formula p1 | F_N=\frac1N\mathbb E\log\sum_{\sigma\in\{-1,1\}^N}e^{-H_N(\sigma)}.
+   standalone-mezard-parisi-formula p1 | All model parameters and disorder laws are fixed as $N\to\infty$; any inverse-temperature
+   standalone-mezard-parisi-formula p1 | parameter is absorbed into $\theta$ and $h$.
+   standalone-mezard-parisi-formula p1 | Define $q_x(s)=e^{xs}/(2\cosh x)$ for $s\in\{-1,1\}$ and $x\in\mathbb R$, and the cavity
+   standalone-mezard-parisi-formula p1 | C_\theta(x_1,\ldots,x_p)=\sum_{s\in\{-1,1\}^p}e^{\theta(s)}\prod_{\ell=1}^p q_{x_\ell}
+   standalone-mezard-parisi-formula p1 | (s_\ell),
+   standalone-mezard-parisi-formula p1 | U_\theta(x_1,\ldots,x_{p-1};\varepsilon)=\log\sum_{s\in\{-1,1\}^{p-1}}e^{\theta(s_1,
+   standalone-mezard-parisi-formula p2 | \ldots,s_{p-1},\varepsilon)}\prod_{\ell=1}^{p-1}q_{x_\ell}(s_\ell).
+   standalone-mezard-parisi-formula p2 | These are $\langle\mathcal E\rangle_x$ and $U$ from (1.5)--(1.7) of the cited paper.
+   standalone-mezard-parisi-formula p2 | Here is a complete definition of its finite-level trial functional. Write $\mathcal
+   standalone-mezard-parisi-formula p2 | M_1=\mathcal P(\mathbb R)$ and $\mathcal M_{j+1}=\mathcal P(\mathcal M_j)$, where $\mathcal
+   standalone-mezard-parisi-formula p2 | integer $r\ge1$, $\zeta\in\mathcal M_{r+1}$, and $0<m_1<\cdots<m_r<1$. For each message label
+   standalone-mezard-parisi-formula p2 | $\omega$, independently generate a chain
+   standalone-mezard-parisi-formula p2 | \eta_0^\omega\sim\zeta,\qquad
+   standalone-mezard-parisi-formula p2 | \eta_{j+1}^\omega\mid\eta_j^\omega\sim\eta_j^\omega\quad(0\le j\le r-2),\qquad
+   standalone-mezard-parisi-formula p2 | x^\omega\mid\eta_{r-1}^\omega\sim\eta_{r-1}^\omega.
+   standalone-mezard-parisi-formula p2 | Thus $\eta_j^\omega\in\mathcal M_{r-j}$. Generate all chains independently of the physical
+   standalone-mezard-parisi-formula p2 | disorder. Use distinct labels for $x_1,\ldots,x_p$ and for $x_\ell^j$, $j\ge1$, $1\le\ell\le
+   standalone-mezard-parisi-formula p2 | p-1$. Take mutually independent $k\sim\operatorname{Poisson}(\alpha p)$, $\theta,\theta_1,
+   standalone-mezard-parisi-formula p2 | \theta_2,\ldots$ with the prescribed interaction law, and $h$ with the prescribed field law.
+   standalone-mezard-parisi-formula p2 | V_{\rm s}=\frac12\sum_{\varepsilon=\pm1}\exp\left(h\varepsilon+\sum_{j=1}^k U_{\theta_j}
+   standalone-mezard-parisi-formula p2 | (x_1^j,\ldots,x_{p-1}^j;\varepsilon)\right),\qquad
+   standalone-mezard-parisi-formula p2 | V_{\rm e}=C_\theta(x_1,\ldots,x_p).
+   standalone-mezard-parisi-formula p2 | For $0\le\ell<r$, let $\mathcal F_\ell$ be generated by all physical disorder just listed and
+   standalone-mezard-parisi-formula p2 | by $\eta_j^\omega$ for all labels $\omega$ and $0\le j\le\ell$. For either positive variable
+   standalone-mezard-parisi-formula p2 | T_rV=V,\qquad
+   standalone-mezard-parisi-formula p2 | T_\ell V=\left(\mathbb E\left[(T_{\ell+1}V)^{m_{\ell+1}}\mid\mathcal F_\ell\right]\right)^{1/
+   standalone-mezard-parisi-formula p2 | m_{\ell+1}}
+   standalone-mezard-parisi-formula p2 | \quad(\ell=r-1,\ldots,0).
+   standalone-mezard-parisi-formula p2 | \mathcal B_r(\zeta,m)=\log2+\mathbb E\log T_0V_{\rm s}-\alpha(p-1)\mathbb E\log T_0V_{\rm e},
+   standalone-mezard-parisi-formula p2 | \qquad
+   standalone-mezard-parisi-formula p2 | \Phi_r=\inf_{\substack{\zeta\in\mathcal M_{r+1}\\0<m_1<\cdots<m_r<1}}\mathcal B_r(\zeta,m).
+   standalone-mezard-parisi-formula p2 | This single-branch construction is equivalent to (5.2)--(5.3), and $\mathcal B_r$ is
+   standalone-mezard-parisi-formula p2 | messages independently with a common arbitrary law $\zeta\in\mathcal M_1$, omit the operators
+   standalone-mezard-parisi-formula p2 | $T_\ell$, and define
+   standalone-mezard-parisi-formula p2 | \Phi_0=\inf_{\zeta\in\mathcal M_1}\left\{\log2+\mathbb E\log V_{\rm s}-\alpha(p-1)\mathbb
+   standalone-mezard-parisi-formula p2 | E\log V_{\rm e}\right\}.
+   standalone-mezard-parisi-formula p3 | \lim_{N\to\infty}F_N=\inf_{r\in\mathbb Z_{\ge0}}\Phi_r.
+
+bsbrk (字面 \[ \] \( \)): 21 处 / 12 篇
+   Cardys-formula-for-critical-Poisson-Voronoi- p25 | 𝑗̂𝑒= 𝑋𝑃( 𝟏ℬ︀𝑒\(𝐵𝑠∪𝐵𝑡) ),
+   Critical-bond-and-site-percolation-on-the-cu p5 | 𝐷𝑈= 𝟏{𝑠∉𝑊𝑈}{𝐹(𝐶𝐺\𝑊𝑈(𝑠)) −𝐹(𝐶𝐺\(𝑊𝑈∪𝑈)(𝑠))},
+   Critical-bond-and-site-percolation-on-the-cu p5 | 𝐶𝐺\(𝑊𝑈∪𝑈)(𝑠) = 𝐶𝐺\𝑈(𝑠).
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \node at (0,-1.15) {\(\name\)-plane};
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \node at (.05,1.4) {\(E+u_0\)};
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \node at (4.15,1.4) {\(E+v_0\)};
+   Elliptic-capacity-propagation-and-Fourier-re p9 | \node at (8.45,1.4) {\(M^{-1}E+x_0\)};
+   Elliptic-capacity-propagation-and-Fourier-re p9 | node[midway,above] {\(V+vU\)};
+   Exact-mass-asymptotics-for-the-two-dimension p28 | ℝ\(−1,1)
+   No-percolation-at-criticality-on-quasi-trans p21 | 𝐷𝑈= 𝟏{𝑠∉𝑊𝑈}[𝐹( 𝐶𝐺\𝑊𝑈(𝑠) ) −𝐹( 𝐶𝐺\(𝑊𝑈∪𝑈)(𝑠) )]
+   Nonhomeomorphic-closed-aspherical-four-manif p50 | 𝑒∈𝐸(𝑣)\(𝐼∪{𝑗})
+   Rokhlins-multiple-mixing-problem-for-one-tra p22 | 𝜒𝑗(𝑌𝑎,𝑗)𝑎𝑆(𝑌𝑎,𝑆)𝑏𝑆(𝑌𝑎,𝐼\(𝑆∪{𝑗})) = 𝑐𝑆.
+   Scale-and-conformal-symmetry-in-four-dimensi p67 | 𝑇𝑠𝟏ℝ\(𝑠+ℤ≥0)(𝐻) = 0.
+   Scale-and-conformal-symmetry-in-four-dimensi p68 | 𝟏ℝ\(𝑠+ℤ≥0)(𝐻)𝑇∗
+   Signed-tensor-densities-and-diagram-budgets- p104 | 𝜑:𝑍\[𝑢]↪︎[𝑢]\𝑍
+   Signed-tensor-densities-and-diagram-budgets- p104 | (𝑃𝑍𝑓) |𝑥𝑧=𝑥𝜑(𝑧), 𝑧∈𝑍\[𝑢] .
+   The-Gaussian-free-field-limit-of-the-balance p13 | ∏𝑦∈𝑌\(𝑇∪{𝑝}) 𝑓(𝑦−𝑝), 𝐿𝑌(𝑇, 𝑝) =
+   The-Gaussian-free-field-limit-of-the-balance p13 | ∏𝑦∈𝑌\(𝑇∪{𝑝}) 𝑓(𝑝−𝑦),
+   The-critical-logarithmic-correction-for-the- p18 | ℝ2\(𝐵(0,𝑡)∪𝐵(𝑒1,𝑡))
+   The-critical-logarithmic-correction-for-the- p18 | 𝑄𝑅out\(𝑡𝑃∪(𝑒1+𝑡𝑃))
+   The-joint-Dickman-law-for-consecutive-intege p47 | 𝑝∈𝒬︀𝑔\(𝒫︀(𝑎)∪𝒫︀(𝑧))
+
+brace (花括号包着的调用参数): 19 处 / 18 篇
+   A-classification-of-finite-Euclidean-Ramsey- p24 | det 𝑀 allows us to cancel the tensor evaluation error 𝐷𝑏 through the selected columns: the adjugate
+   A-power-saving-for-intersective-polynomial-d p13 | product using any subset of the four corners again comes from a graph of the stated kind: an unordered
+   Choiceless-polynomial-time-with-counting-doe p2 | Any input order may be used to list the rows and columns: changing it does not change consistency. ◻
+   Deforming-hypersymplectic-four-manifolds-to- p48 | of this kind: start with any closed representative and solve (7.13) for an exact correction. Uniqueness
+   Exact-Fourier-certificates-for-complex-Hadam p27 | Equation numbers in the code comments use the original numbering: the reference in expand_degree1
+   Finite-Congruence-Lattices-Characterization- p111 | nontrivial-adjoint kind: on an odd orthogonal plane such a field has the two singular lines as eigenspaces
+   GOE-bulk-universality-for-fixed-degree-rando p20 | The sign in the second matrix comes from expressing the updated edge list in the old columns: the right
+   Nonhomeomorphic-closed-aspherical-four-manif p45 | each red stroke: five red edges
+   Nonhomeomorphic-closed-aspherical-four-manif p45 | each blue stroke: five blue edges
+   Path-selection-and-an-elliptic-inequality-on p37 | the same kind: triangular field equations with finite free asymptotic data, followed by core and root
+   Planar-Graph-Metrics-Embed-into-L1-with-Cons p30 | suffices, with any two distinct indices as boundary columns: vertical travel attains this distance on that
+   Rational-homology-and-Quillens-conjecture-Se p53 | cover all 𝐷 columns: a column zero on every basis row would be zero on every row. Since each basis row
+   Rigidity-of-Smooth-Billiards-with-a-Continuo p28 | conclusion of this section is an alternative of a particularly rigid kind: at a finite first horizontal wall
+   Signed-tensor-densities-and-diagram-budgets- p67 | rows of the grid, the second 𝑌 by copies of 𝐵𝑠 in the 𝑟 columns: averages factor across the disjoint
+   The-Bass-trace-conjecture-for-complex-group- p21 | Proof. We regard free right modules as columns: an idempotent 𝑒∈𝑀𝑟(ℂ𝐿) acts on the left, with image
+   The-Unique-Games-Theorem-September-23-2026 p3 | their solution planes to 𝒱︀, represented by a matrix with 𝑚= 1 + 2𝑘 columns: one intercept column and
+   The-hypercube-Ramsey-number-has-linear-order p96 | concentration for independent groups beats the union over columns: if 𝐿∗ is the displayed summand
+   The-maximum-number-of-mutually-unbiased-base p23 | computable without forming its 216 columns:
+   The-sharp-singularity-rate-for-biased-symmet p18 | full first three columns:
+
+void (引用取不到值): 0 处 / 0 篇
+
+tilde (硬空格 ~ 上页): 415 处 / 224 篇
+   A-C1-Counterexample-to-the-Entropy-Conjectur p16 | https://pi.math.cornell.edu/~hatcher/AT/AT.pdf
+   A-Complete-Local-Domain-Without-a-Small-Cohe p16 | [18] F. Hirzebruch, “Arrangements of lines and algebraic surfaces,” in Arithmetic and Geometry, Vol.~II,
+   A-Conditional-Reduction-for-Algebraic-Kuga-S p25 | Chapter II, Theorems 5.3 and 8.8; Chapter VI, §9.2. https://people.math.harvard.edu/~demarco/
+   A-Conditional-Reduction-for-Algebraic-Kuga-S p25 | 1993, Lemma 9.2, p.  77. Corrected electronic edition: https://www.mat.univie.ac.at/~michor/
+   A-Counterexample-to-Kaplanskys-Direct-Finite p28 | tions,” in Infinite and Finite Sets, Vol.~II, vol. 10, in Colloquia Mathematica Societatis János Bolyai,
+   A-Counterexample-to-Kaplanskys-Direct-Finite p28 | ~p_erdos/1975-34.pdf
+   A-Counterexample-to-Kuroshs-Division-Ring-Pr p46 | Available: https://people.math.wisc.edu/~hkeisler/ultraproducts-web-final.pdf
+   A-Fully-Polynomial-Randomized-Approximation- p46 | edu/~sinclair/flow.pdf.
+   A-Negative-Solution-to-the-Finite-Lattice-Re p83 | ematics, 1967. [Online].  Available: https://www.math.utah.edu/~ptrapa/math-library/steinberg/
+   A-Negative-Solution-to-the-Finite-Lattice-Re p84 | [Online].  Available: https://math.stanford.edu/~conrad/papers/luminysga3.pdf
+   A-Torsion-Free-Counterexample-to-Reduced-Bau p85 | tions,” in Infinite and Finite Sets, Vol.~II, vol. 10, in Colloquia Mathematica Societatis János Bolyai,
+   A-Torsion-Free-Counterexample-to-the-Kadison p76 | ~p_erdos/1975-34.pdf
+   A-Torsion-Free-Group-Algebra-That-Is-Not-Dir p31 | https://pi.math.cornell.edu/~hatcher/AT/ATpage.html
+   A-Torsion-Free-Group-Algebra-with-Zero-Divis p26 | https://pi.math.cornell.edu/~hatcher/AT/AT.pdf
+   A-boundary-only-obstruction-to-four-dimensio p50 | https://pi.math.cornell.edu/~hatcher/AT/ATpage.html
+   A-conditional-abelianity-theorem-for-special p15 | [Online]. Available: https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/
+   A-continuum-temperature-singularity-for-a-ra p31 | pp. 24–29, 1977, [Online].  Available: https://www.ihes.fr/~ruelle/PUBLICATIONS/%5B48%5D.pdf
+   A-counterexample-to-Sidorenkos-conjecture-Se p51 | and Related Topics, Academic Press, 1979, pp. 165–172. [Online].  Available: https://users.renyi.hu/~
+   A-counterexample-to-Sidorenkos-conjecture-Se p51 | 1984, pp. 419–437. [Online].  Available: https://users.renyi.hu/~miki/waterloo.pdf
+   A-counterexample-to-Sidorenkos-conjecture-Se p52 | [Online].  Available: https://users.cecs.anu.edu.au/~bdm/nauty/pgi.pdf
+   A-counterexample-to-the-Colin-de-Verdiere-ch p128 | fr/~ycolver/All-Articles/88a.pdf
+   A-counterexample-to-the-Colin-de-Verdiere-ch p128 | 5, pp. 1275–1285, 1998, [Online].  Available: https://homepages.cwi.nl/~lex/files/link.pdf
+   A-counterexample-to-the-nearby-Lagrangian-co p28 | bielefeld.de/~fw/algebraic_K_theory_of_spaces_a_manifold_approach.pdf
+   A-counterexample-to-the-nearby-Lagrangian-co p29 | math.cornell.edu/~hatcher/AT/AT.pdf
+   A-counterexample-to-the-nearby-Lagrangian-co p29 | 1988, [Online].  Available: https://people.brandeis.edu/~igusa/Papers/StabilityBig.pdf
+   A-directional-zero-one-law-under-strict-elli p36 | vol. 27, pp. 379–423623–656, 1948, [Online].  Available: https://people.math.harvard.edu/~ctm/
+   A-finite-Smith-Toda-complex-V4-at-the-prime- p42 | [Online].  Available: https://www.math.uni-bonn.de/~schwede/comparison.pdf
+   A-finitely-generated-counterexample-to-the-E p24 | able: https://pi.math.cornell.edu/~hatcher/AT/ATpage.html
+   A-hyperbolic-group-with-no-geometric-CAT0-ac p41 | Society, vol. 57, no. 3, pp. 391–403, 2010, [Online].  Available: https://www.ihes.fr/~gromov/wp-
+   A-hyperbolic-group-with-no-geometric-CAT0-ac p42 | math.cornell.edu/~hatcher/AT/AT.pdf
+   A-linear-list-coloring-bound-in-terms-of-the p40 | hu/~p_erdos/1980-07.pdf
+   A-linear-list-coloring-bound-in-terms-of-the p41 | Theory, Series B, vol. 74, pp. 147–152, 1998, [Online].  Available: https://cgm.cs.mcgill.ca/~breed/
+   A-nine-dimensional-counterexample-to-Borsuks p17 | math.cornell.edu/~hatcher/AT/AT.pdf
+   A-nondegenerate-counterexample-to-the-Morse- p22 | https://webhomes.maths.ed.ac.uk/~v1ranick/books/surgery.pdf
+   A-nondegenerate-counterexample-to-the-Morse- p22 | Available: https://www.math.columbia.edu/~jmorgan/Lecture4scobordism.pdf
+   A-nondegenerate-counterexample-to-the-Morse- p22 | [Online].  Available: https://webhomes.maths.ed.ac.uk/~v1ranick/surgery/hcobord.pdf
+   A-polynomial-time-construction-of-strong-thi p37 | 20211025204852/https://www.sfu.ca/~goddyn/Problems/problems.html
+   A-power-improvement-in-the-Heilbronn-triangl p24 | 194–198, 1932, [Online].  Available: https://www.renyi.hu/~p_erdos/1932-01.pdf
+   A-power-saving-for-planar-halving-lines-Sept p29 | https://users.renyi.hu/~p_erdos/1973-07.pdf
+   A-power-saving-for-planar-halving-lines-Sept p30 | https://w3.impa.br/~viana/out/rokhlin.pdf
+   A-power-saving-for-planar-unit-distances-Sep p53 | www.math.lsa.umich.edu/~wfulton/CurveBook.pdf
+   A-quadratic-bound-for-Jacobsthals-function-S p89 | 234. [Online].  Available: https://webusers.imj-prg.fr/~harald.helfgott/texts/howsmall.pdf
+   A-quadratic-bound-for-Jacobsthals-function-S p89 | https://dms.umontreal.ca/~andrew/PDF/PretendBook050111.pdf
+   A-quadratic-bound-for-Jacobsthals-function-S p89 | [Online]. Available: https://dms.umontreal.ca/~andrew/PDF/Book.To2.5.pdf
+   A-rational-obstruction-to-strong-chromatic-s p53 | ~lurie/papers/Elliptic-II.pdf
+   A-strict-four-row-permanent-inequality-and-p p20 | ematics, vol. 682. Springer-Verlag, 1978. [Online].  Available: https://www-users.cse.umn.edu/~
+   A-strict-four-row-permanent-inequality-and-p p20 | [Online].  Available: https://www.ma.imperial.ac.uk/~mwl/fuchs.pdf
+   A-surface-counterexample-to-Shafarevich-holo p26 | Available: https://www-fourier.univ-grenoble-alpes.fr/~funar/mcgokahgpv25.pdf
+   A-two-dimensional-area-law-from-a-global-spe p93 | vol. 59. American Mathematical Society, 2011. [Online].  Available: https://math.mit.edu/~etingof/
+   A-two-dimensional-area-law-from-a-global-spe p93 | [35] T. Tao, “Lecture Notes 1 for 247A.” [Online]. Available: https://www.math.ucla.edu/~tao/247a.1.06f/
+   A-uniform-Hilbert-transform-estimate-for-Lip p101 | [18] P. Hajłasz, “Harmonic analysis.” [Online]. Available: https://sites.pitt.edu/~hajlasz/Notatki/
+   A-uniform-Hilbert-transform-estimate-for-Lip p101 | [19] T. Tao, “Lecture notes 4 for 247A.” [Online]. Available: https://www.math.ucla.edu/~tao/247a.1.
+   A-uniform-Hilbert-transform-estimate-for-Lip p101 | [22] T. Tao, “Lecture notes 6 for 247B.” [Online]. Available: https://www.math.ucla.edu/~tao/247b.1.
+   A-universal-group-of-type-F-infinity-Septemb p18 | ~hatcher/AT/ATpage.html.
+   Absolutely-Continuous-Spectrum-for-Weak-Diso p103 | Mathematical Society, 2009. [Online].  Available: https://www.mat.univie.ac.at/~gerald/ftp/book-
+   Abundance-after-nonvanishing-for-compact-Kah p89 | vol. 102, no. 3, pp. 513–532, 2000, [Online].  Available: https://www.math.kyoto-u.ac.jp/~fujino/
+   Abundance-after-nonvanishing-for-compact-Kah p90 | www.math.kyoto-u.ac.jp/~fujino/fujiki-vanishing3.pdf
+   Abundance-after-nonvanishing-for-compact-Kah p90 | www.math.kyoto-u.ac.jp/~fujino/fundamental6.pdf
+   Abundance-after-nonvanishing-for-compact-Kah p91 | matical Society, vol. 48, pp. 883–890, 1942, [Online].  Available: https://webhomes.maths.ed.ac.uk/~
+   Abundance-after-nonvanishing-for-compact-Kah p91 | www.normalesup.org/~forgogozo/SGA4/tomes/tome2.pdf
+   Abundance-in-numerical-dimension-one-for-ter p48 | able: https://www.kurims.kyoto-u.ac.jp/~kenkyubu/proj08-mori/confkyoto.pdf
+   Additive-hardness-and-unbounded-configuratio p26 | of Computer Science (FOCS), pages 312–320, 1982. https://pagesperso.g-scop.grenoble-inp.fr/~
+   Algebraic-Kuga-Satake-correspondences-and-Ho p69 | Section 8.2, Theorem 8.8. https://people.math.harvard.edu/~demarco/Math274/Demailly_Compl
+   Algebraic-Kuga-Satake-correspondences-and-Ho p70 | unistra.fr/~lfu/articles/HCWeilViaOG6.pdf.
+   Algebraic-Kuga-Satake-correspondences-and-Ho p70 | 16 September 2024. https://www-fourier.univ-grenoble-alpes.fr/~peters/Books/QuadraticForms/
+   Almost-Linear-Time-Maximum-Cardinality-Match p84 | able: https://www.math.uwaterloo.ca/~harvey/W11/1979-Lovasz-OnDeterminantsMatchingsAndR
+   Almost-everywhere-regularity-of-stationary-i p83 | edu/~lms/ntu-gmt-text.pdf
+   Ambiently-homeomorphic-isolated-hypersurface p31 | able: https://pi.math.cornell.edu/~hatcher/AT/AT.pdf
+   An-Endpoint-Gradient-Bound-for-the-Centered- p47 | ucdavis.edu/~hunter/pdes/pde_notes.pdf
+   An-Endpoint-Gradient-Bound-for-the-Centered- p47 | edu/~lms/ntu-gmt-text.pdf
+   An-Infinite-Finitely-Presented-Simple-Amenab p61 | the Brazilian Mathematical Society, New Series, vol. 56, p. Paper No.~62, 2025, doi: 10.1007/
+   An-Integral-Counterexample-to-Gerstens-Conje p25 | https://sites.math.rutgers.edu/~weibel/Kbook.html
+   An-Integral-Counterexample-to-Gerstens-Conje p25 | universite-paris-saclay.fr/~david.harari/enseignement/m2brauer23/etalbrauer.pdf
+   An-explicit-failure-of-complex-affine-space- p28 | etry, Osaka University Press, Osaka, 2007, 231–255. https://www.math.miami.edu/~kaliman/
+   An-unconditional-first-moment-for-cubic-Gaus p54 | https://www.renyi.hu/~gharcos/bombieri-halasz-montgomery.pdf.
+   Approximate-counting-of-common-bases-of-two- p25 | stat.berkeley.edu/~aldous/RWG/book.html.
+   Approximate-counting-of-common-bases-of-two- p26 | book. https://math.dartmouth.edu/~doyle/docs/walkspdf/walks.pdf.
+   Approximate-counting-of-common-bases-of-two- p27 | homepages.cwi.nl/~lex/co/.
+   Arithmeticity-of-twisted-finite-corresponden p192 | [29] V. F. R. Jones, “Von Neumann Algebras.” [Online]. Available: https://math.berkeley.edu/~vfr/
+   Arithmeticity-of-twisted-finite-corresponden p194 | www.math.stonybrook.edu/~aknapp/download/Beyond2.pdf
+   Balanced-Counterexamples-to-Rysers-Conjectur p42 | [Online].  Available: https://www.renyi.hu/~p_erdos/1975-34.pdf
+   Bi-Lipschitz-Coordinates-at-Regular-Points-o p45 | math.cornell.edu/~hatcher/AT/AT.pdf
+   Bochner-Riesz-Multipliers-in-Three-Dimension p119 | pp. 379–423623–656, 1948, [Online].  Available: https://people.math.harvard.edu/~ctm/home/text/
+   Bounded-Step-Walks-on-Gaussian-Primes-Septem p29 | Berlin, 1977, pp. 43–72. https://www.renyi.hu/~p_erdos/1977-27.pdf.
+   Bounded-Step-Walks-on-Gaussian-Primes-Septem p30 | cornell.edu/~hatcher/AT/ATpage.html.
+   Bounded-anticanonical-metrics-on-klt-pairs-a p21 | 42, no. 5, pp. 643–646, 2018, [Online].  Available: https://www.math.kyoto-u.ac.jp/~fujino/kollar-
+   Bounded-anticanonical-metrics-on-klt-pairs-a p22 | fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf
+   Bounded-klt-complements-for-Fano-contraction p102 | jhu.edu/~shokurov/existcomp3.pdf
+   Bounded-klt-complements-for-Fano-contraction p103 | [36] O. Fujino, “Appendix: Rational singularities.” [Online]. Available: https://www.math.kyoto-u.ac.jp/~
+   Bounded-klt-complements-for-Fano-contraction p103 | [39] J. Mather, “Notes on Topological Stability.” [Online]. Available: https://webhomes.maths.ed.ac.uk/~
+   Bounded-klt-complements-for-Fano-contraction p104 | ~kollar/book/modbook20170720
+   Buffered-comparison-and-stopping-band-resolu p43 | 227–231, 1974, [Online].  Available: https://math.bme.hu/~balint/oktatas/perkolacio/percolation_
+   Canonical-ampleness-of-compact-hyperbolic-Ka p31 | pp. 263–292, 1991, [Online].  Available: https://www.ihes.fr/~gromov/ellipticoperators/137/
+   Canonical-ampleness-of-compact-hyperbolic-Ka p32 | etry, vol. 114, no. 1, pp. 1–39, 2020, [Online].  Available: https://math.univ-cotedazur.fr/~hoering/
+   Canonical-ampleness-of-compact-hyperbolic-Ka p32 | grenoble-alpes.fr/~demailly/manuscripts/regularization.pdf
+   Canonical-conformal-limits-of-subcritical-FK p119 | 2, pp. 105–150, 1985, [Online].  Available: https://www.labmath.uqam.ca/~annales/volumes/09-2/
+   Cohomological-transfer-and-equivariant-antic p46 | No.~58, 2023, doi: 10.1007/s00209-023-03306-6.
+   Cohomological-transfer-and-equivariant-antic p47 | 42, no. 5, pp. 643–646, 2018, [Online].  Available: https://www.math.kyoto-u.ac.jp/~fujino/kollar-
+   Cohomological-transfer-and-equivariant-antic p47 | fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/analmeth_book.pdf
+   Cohomological-transfer-and-equivariant-antic p48 | fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf
+   Combinatorial-Invariance-of-Kazhdan-Lusztig- p32 | undated. https://academicweb.nd.edu/~dyer/papers/ranktwo.pdf.
+   Commuting-Division-Coefficient-Forms-and-the p41 | A. Hatcher, Algebraic Topology, Cambridge University Press, 2002. https://pi.math.cornell.edu/~
+   Commuting-Division-Coefficient-Forms-and-the p41 | A. Hatcher, Vector Bundles & K-Theory, version 2.2, November 2017. https://pi.math.cornell.edu/~
+   Commuting-Division-Coefficient-Forms-and-the p42 | 01/08/2026. https://webusers.imj-prg.fr/~pierre.schapira/LectNotes/SHV.pdf.
+   Compatibility-entropy-and-the-spectrum-of-a- p138 | [Online].  Available: https://www.ma.ic.ac.uk/~mwl/fuchs.pdf
+   Conditional-good-minimal-models-for-compact- p135 | spaces.” [Online]. Available: https://www.math.kyoto-u.ac.jp/~fujino/cone-and-contraction.pdf
+   Conditional-good-minimal-models-for-compact- p135 | grenoble-alpes.fr/~demailly/manuscripts/regularization.pdf
+   Conditional-good-minimal-models-for-compact- p136 | fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf
+   Conditional-good-minimal-models-for-compact- p137 | https://www.math.kyoto-u.ac.jp/~fujino/log-ring-aspm.pdf
+   Conditional-good-minimal-models-for-compact- p137 | Available: https://www.math.kyoto-u.ac.jp/~fujino/MMP21.pdf
+   Conditional-good-minimal-models-for-compact- p137 | Available: https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/analmeth_book.pdf
+   Conditional-information-under-deterministic- p82 | Society, 2011. Author’s lecture-note version, January 10, 2011: https://math.mit.edu/~etingof/
+   Conditional-permutations-in-a-revealed-switc p32 | Society, 2011. Author’s lecture-note version, January 10, 2011: https://math.mit.edu/~etingof/
+   Conditional-permutations-in-a-revealed-switc p32 | texts: https://www.csc.kth.se/~johanh/jhsquare.pdf (October 20, 2005) and https://johanhastad.
+   Constructible-tame-Hecke-eigensheaves-in-pos p50 | sheaves.” [Online].  Available: https://math.uchicago.edu/~drinfeld/langlands/QuantizationHitchi
+   Contact-Fano-manifolds-and-the-LeBrun-Salamo p39 | math.stanford.edu/~conrad/papers/coarsespace.pdf.
+   Contact-Fano-manifolds-and-the-LeBrun-Salamo p40 | Springer-Verlag, Berlin, 2004, 71–122. https://people.tamu.edu/~jml/LMpopreprint.pdf.
+   Contact-Fano-manifolds-and-the-LeBrun-Salamo p40 | https://people.tamu.edu/~jml/AJM-11-3-A1-Landsberg.pdf.
+   Correspondence-Coloring-Graphs-with-a-Forbid p28 | Amsterdam, 1975, pp. 609–627. https://www.renyi.hu/~p_erdos/1975-34.pdf.
+   Correspondence-Coloring-Graphs-with-a-Forbid p29 | Numer. 26, Utilitas Math., Winnipeg, 1980, pp. 125–157. https://www.renyi.hu/~p_erdos/1980-
+
+hash (裸井号 # 上页): 2125 处 / 331 篇
+   A-C1-Counterexample-to-the-Entropy-Conjectur p12 | #{0 ≤𝑖< 𝑟: 𝐹𝑚𝑖𝑥∉𝑉} ≤𝜏𝑟+ 𝐽
+   A-C1-Counterexample-to-the-Entropy-Conjectur p12 | #{0 ≤𝑖< 𝑘𝑥: 𝐹𝑚𝑖𝑥∉𝑉} < 𝜏𝑘𝑥.
+   A-Codimension-One-Bound-for-the-Singular-Set p3 | then 𝑉𝑟= (𝜂𝑟)#𝑉 is the varifold pushforward, whose weight is 𝑟−𝑚(𝜂𝑟)#𝜇. Translated blow-ups will
+   A-Codimension-One-Bound-for-the-Singular-Set p4 | 𝑉𝑝,𝑟= (𝜂𝑝,𝑟)#𝑉.
+   A-Codimension-One-Bound-for-the-Singular-Set p4 | Thus the weight of 𝑉𝑝,𝑟 is 𝑟−𝑚(𝜂𝑝,𝑟)#𝜇. After translating 𝑝 to the origin we abbreviate 𝑉𝑝,𝑟 to 𝑉𝑟. We use
+   A-Codimension-One-Bound-for-the-Singular-Set p5 | 𝑖(𝜂𝑝,𝑟𝑖)# ( ℋ︀𝑠
+   A-Codimension-One-Bound-for-the-Singular-Set p6 | 𝑖(𝜂𝑝,𝐿𝑖)# ( ℋ︀𝑠
+   A-Codimension-One-Bound-for-the-Singular-Set p7 | 𝑀= 𝜋#𝜇−𝑄vol𝑆,
+   A-Codimension-One-Bound-for-the-Singular-Set p7 | 𝐷= 𝜋#(𝑒𝜇).
+   A-Codimension-One-Bound-for-the-Singular-Set p7 | Λ = 𝜋#(𝜆𝜇),
+   A-Codimension-One-Bound-for-the-Singular-Set p7 | 𝑠−𝑚𝜋#𝜇(𝐵𝑐𝑠) ≤𝐶0,
+   A-Codimension-One-Bound-for-the-Singular-Set p7 | |∫𝜂d(𝜋#𝜇−𝑞vol𝑆)| ≤𝐶𝜖𝑠𝑚∥𝜂∥
+   A-Codimension-One-Bound-for-the-Singular-Set p7 | |∫𝜒d(𝜋#𝜇) −𝑞| ≤𝐶𝜖.
+   A-Codimension-One-Bound-for-the-Singular-Set p19 | 𝑀𝑖= (𝜋𝑖)#𝜇𝑖−𝑄vol𝑆𝑖,
+   A-Codimension-One-Bound-for-the-Singular-Set p19 | 𝐷𝑖= (𝜋𝑖)#(𝑒𝑖𝜇𝑖).
+   A-Codimension-One-Bound-for-the-Singular-Set p20 | 𝑖(𝜋𝑖)#(𝑧𝑖𝜇𝑖) ⇀0.
+   A-Codimension-One-Bound-for-the-Singular-Set p22 | 𝑖(𝜋𝑖)#(𝑧𝑖𝜇𝑖) ⇀0.
+   A-Codimension-One-Bound-for-the-Singular-Set p24 | (𝜋𝑖)#(𝑒𝑖𝜇𝑖), and 𝑀𝑖= (𝜋𝑖)#𝜇𝑖−𝑄vol𝑆𝑖. Suppose 𝑎𝑖↓0 and, on each compact subdisk with interior
+   A-Codimension-One-Bound-for-the-Singular-Set p24 | 𝑖(𝜋𝑖)#(𝑧𝑖𝜇𝑖) ⇀0.
+   A-Codimension-One-Bound-for-the-Singular-Set p24 | 𝑖(𝜋𝑖)#(| 𝑧𝑖|2 𝜇𝑖) has a positive uniform lower mass bound on a fixed compact subset
+   A-Codimension-One-Bound-for-the-Singular-Set p24 | 𝑖(𝜋𝑖)#(| 𝑧𝑖|2 𝜇𝑖) ⇀𝜈,
+   A-Codimension-One-Bound-for-the-Singular-Set p24 | 𝑖(𝜋𝑖)#(𝐵𝑖𝜇𝑖) ⇀𝛽,
+   A-Codimension-One-Bound-for-the-Singular-Set p24 | 𝑖(𝜋𝑖)# ( 𝑧𝑖⋅(𝑃𝑇)𝑣ℎ𝜇𝑖) ⇀𝑓.
+   A-Codimension-One-Bound-for-the-Singular-Set p30 | 𝑖(𝜋𝑖)#(𝑧𝑖𝜇𝑖) have uniformly bounded total variation and
+   A-Codimension-One-Bound-for-the-Singular-Set p33 | (𝑇𝑗)#𝜈,
+   A-Codimension-One-Bound-for-the-Singular-Set p33 | (𝑇𝑗)#𝑓,
+   A-Codimension-One-Bound-for-the-Singular-Set p33 | (𝑇𝑗)#(𝛽, 𝑑0, 𝔪).
+   A-Codimension-One-Bound-for-the-Singular-Set p33 | (𝑇𝑗)# ( ℋ︀𝑠′
+   A-Cyclic-Polytabloid-Proof-of-Saxls-Conjectu p3 | 𝑗= #{𝑖:
+   A-Cyclic-Polytabloid-Proof-of-Saxls-Conjectu p4 | Lemma 2.1. (Alternating blocks as polytabloids). Define 𝜃𝑖= #{𝐴∈𝐿: | 𝐴| ≥𝑖}, so that the block
+   A-Cyclic-Polytabloid-Proof-of-Saxls-Conjectu p10 | 𝑟𝑖= #{(𝑖, 𝑗) ∈𝐵ℎ: 𝑖≤𝑘} = ∑
+   A-Direct-Proof-of-Optimal-Max-Cut-Hardness-S p4 | | 𝐶| = #{𝑖: 𝑞𝑖≠0}.
+   A-Direct-Proof-of-Optimal-Max-Cut-Hardness-S p37 | |#{(𝑥, 𝑦) ∈𝑆× 𝑇: 𝑥⋅𝑦∈𝐼} −| 𝐼|
+   A-Fully-Polynomial-Randomized-Approximation- p1 | 𝑍(𝐺) = #{𝑀⊆𝐸: 𝑀 is a perfect matching of 𝐺}.
+   A-Fully-Polynomial-Randomized-Approximation- p1 | graph [5]. Valiant proved that exact counting is #P-complete even for bipartite graphs, where it is the
+   A-Fully-Polynomial-Randomized-Approximation- p34 | 𝑢(𝑃) = 𝑏−#{𝑒∈𝑃:𝑒∉𝐸}.
+   A-Linear-Clock-for-Random-Walk-on-Tree-Weigh p20 | ∫#{occurrences of 𝑒 in 𝑃} 𝜈(d𝑃) for its unsigned edge traffic.
+   A-Linear-Clock-for-Random-Walk-on-Tree-Weigh p46 | #{0 ≤𝑖< 𝑁: 𝑣𝑖= 𝑣} = deg𝑀𝑛(𝑣).
+   A-Linear-Clock-for-Random-Walk-on-Tree-Weigh p48 | 𝐾𝑀,𝑡≔#{𝑒∈ℰ︀𝑀: 𝑡∈𝐼𝑒}.
+   A-Low-Space-Algorithm-for-Worst-Case-Subset- p15 | #{leaf items} ≤𝑢102𝛽𝑗/2,
+   A-Low-Space-Algorithm-for-Worst-Case-Subset- p15 | #{raw child pairs} ≤𝑢202𝛽𝑗.
+   A-Modulus-Proof-of-Cannons-Conjecture-Septem p5 | all-one weights are admissible, while any one path gives the lower bound 1/#𝑇𝑛.
+   A-Modulus-Proof-of-Cannons-Conjecture-Septem p17 | #{𝑞∈𝐸: | 𝑞| ≤𝑡} ≤𝐶′(𝑡+ 1).
+   A-Modulus-Proof-of-Cannons-Conjecture-Septem p18 | #𝑌≤𝐶𝑌𝑎𝑄𝐷,
+   A-Modulus-Proof-of-Cannons-Conjecture-Septem p21 | [(𝐴+ 1)𝑅, (𝐵0 −1)𝑅], so #ℬ︀≍𝑎𝐷′. On ℬ︀× 𝐽 use counting measure times Lebesgue measure. Mark
+   A-PD4-group-without-an-aspherical-manifold-m p4 | 𝐾𝑣= #𝑝(𝑆1 × 𝑆2) \ int 𝜈(𝐿2𝑚),
+   A-PD4-group-without-an-aspherical-manifold-m p17 | 𝐿= 𝑀# 𝑏(𝑆2 × 𝑆2).
+   A-PD4-group-without-an-aspherical-manifold-m p19 | ℎ: 𝑁# 𝑘(𝑆2 × 𝑆2) →𝐿# 𝑘(𝑆2 × 𝑆2)
+   A-PD4-group-without-an-aspherical-manifold-m p20 | pairs on 𝐿∗= 𝑀#(𝑏+ 𝑘)(𝑆2 × 𝑆2) have disjoint punctured 𝑆2 × 𝑆2 neighborhoods. Give the two
+   A-PD4-group-without-an-aspherical-manifold-m p23 | 𝐿≅𝐷𝑒##0< | 𝑣| ≤𝐿(𝐷𝑣∪𝑆𝐽𝑣).
+   A-Polynomial-Time-2-Approximation-for-Shorte p3 | 𝐵𝐴(𝑠; 𝑁𝑇) = #{blocked occurrences of 𝑠 in 𝑇} ≤𝑁𝑇(𝑠).
+   A-Power-Saving-for-Polynomial-Differences-at p9 | 𝑘#{𝑥∈𝔽𝑝: 𝐹(𝑥) = 𝑦, 𝑥 allowed regular},
+   A-Torsion-Free-Counterexample-to-the-Kadison p2 | expansion and 𝑌# provides recovery of long paths from words in a finite alphabet. They agree after
+   A-Torsion-Free-Counterexample-to-the-Kadison p3 | 6 construct the auxiliary graph 𝑌0 with expanding incidences, the gated graph 𝑌# with path recovery,
+   A-Torsion-Free-Counterexample-to-the-Kadison p8 | auxiliary graph 𝑌0 will have expanding bipartite blocks between neighboring layers. A graph 𝑌# on the
+   A-Torsion-Free-Counterexample-to-the-Kadison p11 | Let 𝑌# be the union of the blocks so defined. Every slot has exactly one incident edge, giving the
+   A-Torsion-Free-Counterexample-to-the-Kadison p21 | positions in 𝑌#. This does not yet identify the layer: the labels determine its sign and residue but need
+   A-Torsion-Free-Counterexample-to-the-Kadison p21 | Lemma 6.1. (Recovery of stream prefixes). Suppose two nonbacktracking paths in 𝑌# have the same
+   A-Torsion-Free-Counterexample-to-the-Kadison p22 | input blocks gives equality of its key and gate. This is precisely why Lemma 11 is proved in 𝑌#, with its
+   A-Torsion-Free-Counterexample-to-the-Kadison p23 | We now specify the deleted sets. They are sets of vertices of the common vertex set of 𝑌0 and 𝑌#.
+   A-Torsion-Free-Counterexample-to-the-Kadison p23 | On vertices surviving these deletions the induced graphs from 𝑌0 and 𝑌# are identical. Indeed, from a
+   A-Torsion-Free-Counterexample-to-the-Kadison p24 | At layer 𝑖, delete every vertex supporting a nonempty cyclically nonbacktracking closed path in 𝑌# of
+   A-Torsion-Free-Counterexample-to-the-Kadison p24 | performed in the already specified graph 𝑌#, so it does not depend circularly on the final induced graph.
+   A-Torsion-Free-Counterexample-to-the-Kadison p24 | both of 𝑌0 and of 𝑌#. Combining the three budgets gives a uniform bound
+   A-Torsion-Free-Counterexample-to-the-Kadison p24 | 𝑌 is also one in 𝑌#, and its base vertex was deleted in the third step, proving the fifth item. Take a path
+   A-Torsion-Free-Counterexample-to-the-Kadison p70 | #{children of 𝑥} ∥𝜉(𝑥) ∥
+   A-Torsion-Free-Group-Algebra-That-Is-Not-Dir p12 | (deg(𝑧) −2) = 2𝛽−2𝑐+ #{𝑧: deg(𝑧) = 1}.
+   A-Torsion-Free-Group-Algebra-That-Is-Not-Dir p14 | 𝑏𝒰︀= #{unmatched occurrences of blocks in 𝒰︀}. (4.7)
+   A-Torsion-Free-Group-Algebra-That-Is-Not-Dir p16 | #{𝑊∈𝑇ℎ𝑖: ⌊−log 𝑃(𝑊)⌋= 𝑑𝑖} ≤exp(2𝑑𝑖−𝛿𝑠).
+   A-Torsion-Free-Group-Algebra-with-Zero-Divis p8 | (deg(𝑧) −2) = 2𝛽−2𝑐Δ + #{𝑧: deg(𝑧) = 1}.
+   A-Torsion-Free-Group-Algebra-with-Zero-Divis p12 | 𝑏𝒰︀= #{unmatched block occurrences in 𝒰︀}.
+   A-Torsion-Free-Group-Algebra-with-Zero-Divis p12 | #{𝑊𝑖: ⌊−log 𝑃(𝑊𝑖)⌋= 𝑑𝑖} ≤exp(2𝑑𝑖−𝛿𝑠).
+   A-counterexample-to-Hadwigers-conjecture-Sep p7 | #,
+   A-counterexample-to-Hadwigers-conjecture-Sep p7 | at every tag. The additional #-block lets the self-Gram form 𝐸, defined below, distinguish different
+   A-counterexample-to-Hadwigers-conjecture-Sep p9 | 𝜂 and a matrix 𝐸# characterized on evaluation vectors by
+   A-counterexample-to-Hadwigers-conjecture-Sep p9 | 𝑣(𝑠, 𝑧)𝘛𝐸#𝑣(𝑠′, 𝑧′) = ∑
+   A-counterexample-to-Hadwigers-conjecture-Sep p9 | #𝑀𝜌𝑧′
+   A-counterexample-to-Hadwigers-conjecture-Sep p9 | #,
+   A-counterexample-to-Hadwigers-conjecture-Sep p17 | #{unequal pairs} = 1
+   A-counterexample-to-Hadwigers-conjecture-Sep p24 | 𝑂 blocks, setting the others to zero. Every flavor retains both # and 𝑍 in their entirety. At a fixed label,
+   A-counterexample-to-Hadwigers-conjecture-Sep p25 | #{𝑥∈𝒳︀: ∑
+   A-counterexample-to-Hadwigers-conjecture-Sep p26 | matrices 𝑀𝑎 independently and uniformly. On the two # direction spaces, 𝐸 restricts to
+   A-counterexample-to-Hadwigers-conjecture-Sep p26 | parities to check. These counts are fixed in 𝑛. The 𝑍 and # restrictions also show that the tester part of 𝐸
+   A-counterexample-to-Hadwigers-conjecture-Sep p40 | #{𝑗∉𝐸: 𝑇𝑗≠0} −𝛿𝐶−𝛿𝑅.
+   A-counterexample-to-Hadwigers-conjecture-Sep p52 | the #, 𝑍 blocks. For a pure tag atom, 𝑎(𝑥) = 𝑞(𝑥) and every 𝑏𝑡(𝑥) = 0. The coefficient of its tester 𝜂𝑑,𝑡
+   A-counterexample-to-Hadwigers-conjecture-Sep p53 | At the fixed selector 𝐸# vanishes on pairs. There are at most 2𝑠1 + 1 active terms 𝜉𝑗𝜐′
+   A-counterexample-to-Sidorenkos-conjecture-Se p7 | 3#{bit positions at which the two faces on 𝑒 differ}.
+   A-counterexample-to-Sidorenkos-conjecture-Se p8 | 𝑚𝑗(𝛾) = #{𝑘∈𝑗: ℓ(𝑘) = 𝛾}.
+   A-counterexample-to-Sidorenkos-conjecture-Se p8 | (𝑚𝑗(𝛾) −𝟏{𝛾=ℓ(𝑖)}) = 2 #{𝑘: {𝑖, 𝑘} ∈𝐸, ℓ(𝑘) = 𝛾}.
+   A-counterexample-to-integer-degree-harmonic- p19 | Ric#
+   A-counterexample-to-integer-degree-harmonic- p19 | 𝑔|𝑇𝑆𝑚= Ric#
+   A-counterexample-to-integer-degree-harmonic- p20 | 𝑟2Ric#
+   A-counterexample-to-integer-degree-harmonic- p20 | 𝑔|𝑇𝑆𝑚= Ric#
+   A-counterexample-to-integer-degree-harmonic- p20 | Ric#
+   A-counterexample-to-integer-degree-harmonic- p20 | Ric#
+   A-counterexample-to-the-Colin-de-Verdiere-ch p15 | #{omitted coordinates} ≤5𝜏2𝑣,
+   A-counterexample-to-the-Colin-de-Verdiere-ch p24 | #,
+   A-counterexample-to-the-Colin-de-Verdiere-ch p24 | at every tag. The additional #-block lets the self-Gram form 𝐸, defined below, distinguish different
+   A-counterexample-to-the-Colin-de-Verdiere-ch p26 | 𝜂 and a matrix 𝐸# characterized on evaluation vectors by
+   A-counterexample-to-the-Colin-de-Verdiere-ch p26 | 𝑣(𝑠, 𝑧)𝘛𝐸#𝑣(𝑠′, 𝑧′) = ∑
+   A-counterexample-to-the-Colin-de-Verdiere-ch p26 | #𝑀𝜌𝑧′
+   A-counterexample-to-the-Colin-de-Verdiere-ch p26 | #,
+   A-counterexample-to-the-Colin-de-Verdiere-ch p34 | #{unequal pairs} = 1
+   A-counterexample-to-the-Colin-de-Verdiere-ch p41 | allowed 𝑂 blocks, setting the others to zero. Every flavor retains both # and 𝑍 in their entirety. At a
+   A-counterexample-to-the-Colin-de-Verdiere-ch p41 | #{𝑥∈𝒳︀: ∑
+   A-counterexample-to-the-Colin-de-Verdiere-ch p42 | matrices 𝑀𝑎 independently and uniformly. On the two # direction spaces, 𝐸 restricts to
+   A-counterexample-to-the-Colin-de-Verdiere-ch p42 | parities to check. These counts are fixed in 𝑛. The 𝑍 and # restrictions also show that the tester part of 𝐸
+   A-counterexample-to-the-Colin-de-Verdiere-ch p56 | #{𝑗∉𝐸: 𝑇𝑗≠0} −𝛿𝐶−𝛿𝑅.
+   A-counterexample-to-the-Colin-de-Verdiere-ch p67 | retaining the #, 𝑍 blocks. For a pure tag atom, 𝑎(𝑥) = 𝑞(𝑥) and every 𝑏𝑡(𝑥) = 0. The coefficient of its
+   A-counterexample-to-the-Colin-de-Verdiere-ch p68 | At the fixed selector 𝐸# vanishes on pairs. There are at most 2𝑠1 + 1 active terms 𝜉𝑗𝜐′
+   A-counterexample-to-the-Monge-ansatz-for-the p1 | Here and below | ⋅| is the Euclidean norm. A Monge plan is a coupling of the form (Id, 𝑇2, 𝑇3)#𝜇, where
+   A-counterexample-to-the-Monge-ansatz-for-the p1 | 𝑇2, 𝑇3 : ℝ3 →ℝ3 are Borel maps and (𝑇2)#𝜇= (𝑇3)#𝜇= 𝜇. For a Borel map 𝑇, the pushforward is
+   A-counterexample-to-the-Monge-ansatz-for-the p1 | defined by 𝑇#𝜇(𝐴) = 𝜇(𝑇−1(𝐴)). For a map defined on a set of full measure, we use the same notation
+   A-counterexample-to-the-Monge-ansatz-for-the p1 | Π(𝜇, 𝜇, 𝜇), but every pair of Borel maps 𝑇2, 𝑇3 : ℝ3 →ℝ3 satisfying (𝑇2)#𝜇= (𝑇3)#𝜇= 𝜇 obeys
+   A-counterexample-to-the-Monge-ansatz-for-the p3 | measure 𝜈/3 and each outer component measure (𝑌𝑘)#𝜈/6 or (𝑊𝑘)#𝜈/6. Randomly choosing a branch
+   A-counterexample-to-the-Monge-ansatz-for-the p3 | (𝐻𝑗)#𝜈.
+   A-counterexample-to-the-Monge-ansatz-for-the p3 | There is no Borel map 𝑇: ℝ𝑑→ℝ𝑑 such that 𝑇#𝜇= 𝜇 and
+   A-counterexample-to-the-Monge-ansatz-for-the p7 | 𝐻#𝜈.
+   A-counterexample-to-the-Monge-ansatz-for-the p7 | 𝑐(ℝ3), and change of variables gives 𝐻#𝜈= 𝑔2
+   A-counterexample-to-the-Monge-ansatz-for-the p9 | (𝑇2)#𝜇=(𝑇3)#𝜇=𝜇
+
+rawtex (井号转义写法 #\;): 0 处 / 0 篇

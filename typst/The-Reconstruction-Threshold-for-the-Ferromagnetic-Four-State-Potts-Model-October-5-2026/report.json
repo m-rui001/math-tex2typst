@@ -1,0 +1,30 @@
+{
+  "paper": "The-Reconstruction-Threshold-for-the-Ferromagnetic-Four-State-Potts-Model-October-5-2026",
+  "ok": true,
+  "typ_lines": 657,
+  "included_pdf_pages": 0,
+  "formulas": 399,
+  "math_failed": 0,
+  "labels": 71,
+  "equations": 2,
+  "theorems": 0,
+  "figures": 0,
+  "tables": 2,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "399"
+  },
+  "pandoc_json_warn": "[WARNING] Could not load include file ../verification/checks/certificate.cpp at E:\\math\\_work\\flat\\_work_tex\\The-Reconstruction-Threshold-for-the-Ferromagnetic-Four-State-Potts-Model-October-5-2026.te",
+  "packages_unsupported": [
+    "listings"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-Reconstruction-Threshold-for-the-Ferromagnetic-Four-State-Potts-Model-October-5-2026.tex"
+}

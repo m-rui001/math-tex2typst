@@ -1,0 +1,40 @@
+{
+  "paper": "Cylinder-loop-weights-and-planar-nesting-September-26-2026",
+  "ok": true,
+  "typ_lines": 2320,
+  "included_pdf_pages": 0,
+  "formulas": 2389,
+  "math_failed": 0,
+  "labels": 247,
+  "equations": 103,
+  "theorems": 6,
+  "figures": 3,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 4
+  },
+  "samples": {
+    "formulas": "2389",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "accsupp"
+  ],
+  "macros_skipped": [
+    "\\newcommandnewcommand",
+    "\\let\\OriginalMapsto",
+    "\\renewcommand\\mapsto",
+    "\\let\\OriginalHookrightarrow",
+    "\\renewcommand\\hookrightarrow",
+    "\\let\\OriginalLongrightarrow",
+    "\\renewcommand\\longrightarrow"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Cylinder-loop-weights-and-planar-nesting-September-26-2026.tex"
+}

@@ -1,0 +1,38 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\newcommand{\reserveStatementSpace}{
+  \if@nobreak\else\Needspace{6\baselineskip}\fi}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\newcommand{\C}{\mathbb C}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cts}{\mathrm{cts}}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Spd}{Spd}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\RHom}{RHom}
+\newcommand{\Rlim}{R\!\varprojlim}
+\begin{document}
+\begin{tikzcd}[column sep=large]
+ H^3(G_3,\Z_p)[1/p]
+   \arrow[r] \arrow[d,"{\mathrm{res},\,\mathrm{inf}}"']
+ & H^3(G_3,\pi_0E_3^{\square})[1/p]\arrow[d]\\
+ H^3(G,\Z_p)[1/p]\arrow[r]
+ & H^3(G,\pi_0\widehat B^{\square})[1/p].
+\end{tikzcd}
+\end{document}

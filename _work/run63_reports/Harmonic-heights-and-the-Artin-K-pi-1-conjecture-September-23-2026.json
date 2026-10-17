@@ -1,0 +1,30 @@
+{
+  "paper": "Harmonic-heights-and-the-Artin-K-pi-1-conjecture-September-23-2026",
+  "ok": true,
+  "typ_lines": 1609,
+  "included_pdf_pages": 0,
+  "formulas": 1270,
+  "math_failed": 0,
+  "labels": 212,
+  "equations": 0,
+  "theorems": 2,
+  "figures": 3,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_refused": 3
+  },
+  "samples": {
+    "formulas": "1270",
+    "cetz_refused": "\\begin{tikzpicture}[ x=.01\\linewidth,y=1cm, every node/.style={font=\\footnotesize,align=center}, resul"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Harmonic-heights-and-the-Artin-K-pi-1-conjecture-September-23-2026.tex"
+}

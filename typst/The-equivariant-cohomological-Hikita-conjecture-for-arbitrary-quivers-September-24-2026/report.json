@@ -1,0 +1,28 @@
+{
+  "paper": "The-equivariant-cohomological-Hikita-conjecture-for-arbitrary-quivers-September-24-2026",
+  "ok": true,
+  "typ_lines": 992,
+  "included_pdf_pages": 0,
+  "formulas": 866,
+  "math_failed": 0,
+  "labels": 110,
+  "equations": 5,
+  "theorems": 4,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "866"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-equivariant-cohomological-Hikita-conjecture-for-arbitrary-quivers-September-24-2026.tex"
+}

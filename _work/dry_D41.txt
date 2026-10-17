@@ -1,0 +1,18 @@
+################ D41  (D41-敏感度与块敏感度的超二次分离.md)
+before: bytes=124840 lines=831
+ROW line=536  sites=2  pipes 7->5  $=20(parity even)
+OLD| | $t$ | 16 | 被禁构型规模、$\|\mathcal T\|<t$、系数 $tS'_0$、$\max(r,t)\le2\sqrt M$ | $t\le11$ 时 union bound 的 $M$ 指数 $2t-\frac{t(t-1)}2+t\ge0$ 收不拢；$t\ge19$ 时 $M\ge81$ 供不出 $t\le2\sqrt M$ |
+NEW| | $t$ | 16 | 被禁构型规模、$\lvert \mathcal T\rvert<t$、系数 $tS'_0$、$\max(r,t)\le2\sqrt M$ | $t\le11$ 时 union bound 的 $M$ 指数 $2t-\frac{t(t-1)}2+t\ge0$ 收不拢；$t\ge19$ 时 $M\ge81$ 供不出 $t\le2\sqrt M$ |
+ROW line=541  sites=2  pipes 7->5  $=10(parity even)
+OLD| | $\|\mathcal T\|$ | $\le t-1=15$ | 零侧 $tS'_0$ | 见 $t$；无 labelling 时退化为 $kS'_0$，利润归零 |
+NEW| | $\lvert \mathcal T\rvert$ | $\le t-1=15$ | 零侧 $tS'_0$ | 见 $t$；无 labelling 时退化为 $kS'_0$，利润归零 |
+ROW line=542  sites=2  pipes 7->5  $=20(parity even)
+OLD| | $\|\mathcal G\|$ | $\le3$；孤点 $\le1$ | $S'_1+3J'_1$、$3J'_1$、$v$ 继承系数 3 | $\binom m2\le m$ 是硬账；系数变 4 则 $\epsilon$ 预算需 $\le4^{-d}$，$M\ge16^{d+1}$ |
+NEW| | $\lvert \mathcal G\rvert$ | $\le3$；孤点 $\le1$ | $S'_1+3J'_1$、$3J'_1$、$v$ 继承系数 3 | $\binom m2\le m$ 是硬账；系数变 4 则 $\epsilon$ 预算需 $\le4^{-d}$，$M\ge16^{d+1}$ |
+after: bytes=124867 (delta +27) lines=831 rows_fixed=3 sites_fixed=6 sites_registered=0
+[DRY] nothing written to the note
+D41 file-count \lVert  = 0
+D41 file-count \lvert  = 5
+D41 file-count \mid  = 0
+D41 file-count \upharpoonright = 0
+D41 file-count \Vert  = 0

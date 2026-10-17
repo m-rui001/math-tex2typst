@@ -1,0 +1,25 @@
+== D595 file=D595-多点标记的温和特征层构造手记.md bytes=110330 lines=316
+   bad=正文前五千米 count=2 occ=[250, 252] (expect want=250)
+   good=正文前五千克字符 count=1
+   byte delta per site=6 ; after=110336 ; bad count after repair=1
+   L250: 第 10 类，结构自查：小节编号 $\S0$ 到 $\S17$ 连续且物理排布与编号同序；前向引用（"$\S N$"）都指向真正讨论它的节；五列表头与它的分隔行全文各只出现在 $\S17$；$\S17$ 的每个数据行都有六枚竖线、无空格单元格、无占位破折号；数学定界符总数与逐行奇偶在收工前复量，正文里不出现素材的公式标签形态；两处目录名与队列行的登记串挂在 $\S0$ 末尾、都在正文前五千米以内。
+   L252: 第 11 类，中文量词误用：上一条里"正文前五千米"应作"正文前五千克字符"，我用了一个长度单位；这条属表述缺陷，位置在行 $250$ 段末，留在原处等本体侧处理。
+
+== D570 file=D570-可解字问题群嵌入F无穷型单上群的构造研究笔记.md bytes=72965 lines=256
+   bad=空 $c_*$ 与包含交叠同-cover count=2 occ=[137, 255] (expect want=137)
+   good=空 $c_*$ 与包含交叠同样覆盖 count=0
+   byte delta per site=3 ; after=72968 ; bad count after repair=1
+   L137: 引理 bootstrap 同时对输入长度 $n$ 归纳证明: $f_\eta$ 全定义且不减长度, 规则表在定长球内稳定, 球内合流, 并且语境律 $f_\eta(af_\eta(u)b)=f_\eta(aub)$ 对一切 $a,u,b$ 成立(encoding.tex:526--534). 归纳步: $n=0$ 无检验无归约; $n>0$ 置 $d=\lfloor n/10\rfloor$, 任何表条目或代表搜索中的代码串成本 $\le d$(靠 $|\operatorname{code}(a)|\ge10\operatorname{cost}(a)+2$), 于是不等式 $3\lfloor n/10\rfloor<n$ 使归纳假设交出编译假设到长度 $3d$, 全部检验由 §8 的有界演算停机(encoding.tex:536--549). 有限性: 长度 $\le n$ 的代码串只有有限多个, 哪怕符号字母表可数且含无穷多零成本符号(encoding.tex:550--554). 表稳定性: 固定代码串上的规则由同样的检验与同样的搜索界决定, 左边长 $\le k$ 的规则到长度 $k$ 后永不再变, 更长的规则碰不到短字(encoding.tex:556--561). 局部合流: 不相交出现互可交换(替换可以为空); 含 $\zeta$ 的字一切分支保留 $\zeta$ 且可吸收(代码串不含 $\zeta$); 两个交叠代码规则因首尾标记必须界对齐且同族, 其并为长度 $\le n$ 的整拼接. 零类并: 分支要么引入 $\zeta$ 要么留下带全字零规则的零类拼接, 不可能留下空字(零与单位相异). 非零类并: 设 $c_*$ 为原拼接在原搜索界内的最小代表, 分支给出同长以内的同类串 $c_b$, 它本是候选故 $c_*\le c_b$(短先序), 特别 $|c_*|\le|c_b|$, 于是 $c_*$ 在分支的更小搜索界内仍最小, 每分支经全字规则到达它; 空 $c_*$ 与包含交叠同-cover. 汇合步全部发生在旧并内部、用到外部新邻字母之前; 抹掉单位代码会露出新的可约区但不产生缺失的局部峰, 特别是抹后不同族相邻不构成交叠初峰(encoding.tex:563--606). 终止加局部合流经诺伊曼引理给球内合流: 良基论证在球内成立, 真后代表唯一正规形, 两步公共后代使二者正规形相等(encoding.tex:607--612). 语境律: 对 $|aub|\le n$ 先在语境里归约 $u$; 稳定性把全部规则纳入长度 $n$ 表, 长度永不增, 合流给出 $f_\eta(af_\eta(u)b)=f_\eta(aub)$; 编译假设遂到长度 $n$ 成立, 归纳收口(encoding.tex:614--621). 我把这条链叫做"用归纳把循环砍成梯子": 每一步调用都严格落回更短输入.
+   L255: 按类别申报, 均不在就地处理范围, 交本体侧机械通道: 第一类, 成对长停顿号 $12$ 处, 位置在 §3 反向刻画段、§4 路线 A 段与路线 C 段、§5 转折三段、§6 末段、§13 无(§13 未用), 全部集中在首块. 第二类, 规格第一条禁令所辖的双字组合 $1$ 处, 在 §5 转折一段的"我不再亲手造单群"之后; 同段括注为本意澄清, 不构成第二处. 第三类, 英文残留: 首块 §6 的括注 algebraic interleaving 与斜体 uniformity, §4 路线 B 的短语"外 automorphism 群", 以及全文以英文标签词引用素材命题名的用法(action, ring-data, torus, enlargement, action-monoid-normal-form, finite-extension, bootstrap, permutations, diagonal, stabilizer-torus, compiler, controlled-additivity, uniform-fillings, FFKLZ 等), 中文释义均已在同句或邻近句给出. 第四类, 笔误: §9 代码段中"空 $c_*$ 与包含交叠同-cover"应为"同样覆盖", 属中英夹杂; §7 幂等元段保留了"写错?"的自我纠正式旁白, 语义完好, 形态非常规. 第五类, 结构申报: 无整块错位、无重复小节、无越界追加(各笔均小于上限), 首块低于目标区间差额已在 §14 与交付报告如实登记; 已落盘内容自首块之后未做任何改写、回滚或重排.
+
+== D542 file=D542-随机坐标标架与部分置换律：反推Thorp洗牌线性混合时间的思维链.md bytes=73025 lines=309
+   bad=应越过七万一克一线 count=0 occ=[] (expect want=302)
+   good=应越过七万一千五百一线 count=0
+   byte delta per site=6 ; after=73031 ; bad count after repair=-1
+
+== D494 file=D494-非交换公式的单个有理矩阵命中点.md bytes=81588 lines=305
+   bad=并是非要交代的边角 count=1 occ=[287] (expect want=287)
+   good=并非多余的边角交代 count=1
+   byte delta per site=0 ; after=81588 ; bad count after repair=0
+   L287: 第四处，行次的度账对任何特征都站得住。`build/multiplicity.tex:104-108` 把 $R_j=Z_j/q^j$ 代回，得 $Z_0=u$ 与 $Z_{j+1}=qZ_j'-jq'Z_j+Z_jP$。设 $Z_j$ 的条目度不超过 $j(n-1)$：第一项 $\deg q=n$、$\deg Z_j'\le j(n-1)-1$，合成不超过 $(j+1)(n-1)$；第二项 $\deg q'\le n-1$，合成同界；第三项吃 `build/formula-systems.tex:95` 与 `build/formula-systems.tex:129` 给的 $\deg P\le n-1$，也是 $(j+1)(n-1)$。三项一齐顶在同一个界上，`build/multiplicity.tex:109-110` 的归纳因此无松弛；$n=1$ 那格三项全退化为常数，素材特意点出（`build/multiplicity.tex:110`），我核对过它并是非要交代的边角：$\deg(z^{r})'\le r-1$ 在任何特征都真，故这条度账本身不吃特征零。真正的危险在把 $R_j$ 写回商式时要 $q^j$ 可逆，`build/multiplicity.tex:111` 靠 $q(0)\neq0$，而 $q(0)=n!$ 见 `build/formula-systems.tex:124-125`，这条我在第九处一并算。
+

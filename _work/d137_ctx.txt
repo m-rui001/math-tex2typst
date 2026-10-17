@@ -1,0 +1,15 @@
+  888| 第三段是代价与局域化（`differentiability/endpoints.tex:121-133`）。一次成功试验给出 $\tau<m_0l+Kw$ 的跨越，加上两次竖向附接各 $100\kappa j^2w/\lambda$，总代价 $m_0l+Kw+200\kappa j^2w/\lambda\le m_0l+(K+200\kappa/\lambda)j^2w$，因为 $K\ge100$ 所以 $K\le Kj^2w$；纵向落在 $[X-l,X+2l]$，横向离箱内任何 $r_0$ 不超过 $50j^2w$，两界的系数都由同一个 $C_1$ 供应。这一段的最后一句我特意复读了一遍：论证不要成功试验与附接之间独立（`differentiability/endpoints.tex:132-133`）——竖向预算是"除一个小概率集合外全体环境成立"的确定性陈述，与"某次试验成功"这一事件怎么相关都无所谓，两段只需同时发生。
+
+  898| 真正的机关在这里：对每一段都拿**同一个**横向目标 $r_0=r(p)$ 去用第 26 节的连接引理，然后串起来（`differentiability/endpoints.tex:210-215`）。我起初以为目标必须逐段跟着段的两端走，那样拼接点的横向坐标会逐层漂移，缺陷会按层数累积；实际写法让所有中继点离 $r(p)$ 都不到 $1$，于是整条入口（整条出口）的横向位移本身绝对值小于一（`differentiability/endpoints.tex:222-225`）。代价一侧付的是 $16C_1s\sum_{j\ge J}j^22^{-j}$（`differentiability/endpoints.tex:216-221`），每段按 $m_0$ 乘其纵向位移计费，纵向位移求和恰是 $x(p)-X_p^-$，这一段没有浪费。把两件事合起来就是 `differentiability/endpoints.tex:226-229` 的缺陷界 $H_\sigma(P_p^\pm)\le 16C_1s\sum_{j\ge J}j^22^{-j}+\lvert a_\sigma\rvert$：加的那枚 $\lvert a_\sigma\rvert$ 来自 $\lvert a_\sigma r(\Delta P_p^\pm)\rvert\le\lvert a_\sigma\rvert\cdot1$，`differentiability/endpoints.tex:230-232` 明说整条延拓的位移是唯一进入右边的一项，逐层舍入一分钱都不欠。这条界若写成 $\sum_j$ 个 $\lvert a_\sigma\rvert$，第 28 节选 $J$ 时 $\varepsilon/4$ 的预算就会被 $O(m)$ 的层数吃光，整个双极限次序报废。
+
+PATTERN mesh
+    876| $\max\{0,\cdot\}$ 让 $l_j$ 在 $4j\ge m-1$ 时停成 $1$，也就是纵向网格最终抵达每一根整数列（`differentiability/endpoints.tex:39-40`）；$j_*$ 取上整正是停下的最晚那层，检验方式是 $m-1\le 4j_*$ 给出 $m-4j_*-1\le 0$、故 $l_{j_*}=1$，而 $m-1>4(j_*-1)$ 保证前一层还没停。相邻两层不同 mesh 之比至多为 $16$（`differentiability/endpoints.tex:38-39`），这枚 $16$ 后来变成贪心填格里"每层至多 $16$ 个区间"的系数（`differentiability/endpoints.tex:200-203`），是同一个 $2^4$ 换了个地方收钱。
+    932| 其一，英文残留两处：第 25 节正文有一枚 mesh（该写"步长"），第 28 节正文有一枚 rare-fast（该写"稀有快速跨越"）。另有 Gamma 一词沿用旧稿既有术语，第 20、21、22 节里已经在用，本笔保持同形以维持术语一致，与"落笔即中文"的要求相冲，如实登记。
+
+PATTERN rare-fast
+    906| 预算的三分写在 `differentiability/endpoints.tex:263-272`。先定 $J$ 使 $32C_1\sum_{j\ge J}j^22^{-j}\le\varepsilon/4$，再取 $k$ 足够大使 $2a_*\le\varepsilon s/4$。两条附接由第 27 节的界各给 $16C_1s\sum_{j\ge J}j^22^{-j}+\lvert a_\sigma\rvert$，相加正是 $32C_1s\sum+2\lvert a_\sigma\rvert\le\varepsilon s/4+\varepsilon s/4$，于是 $H_\sigma(\widetilde P)<-\varepsilon s+\varepsilon s/2=-\varepsilon s/2$。这里有个容易看漏的不对称：第一笔约束不含 $s$、是纯 $\varepsil
+    932| 其一，英文残留两处：第 25 节正文有一枚 mesh（该写"步长"），第 28 节正文有一枚 rare-fast（该写"稀有快速跨越"）。另有 Gamma 一词沿用旧稿既有术语，第 20、21、22 节里已经在用，本笔保持同形以维持术语一致，与"落笔即中文"的要求相冲，如实登记。
+
+PATTERN \*\*[^*]+\*\*
+    898| 真正的机关在这里：对每一段都拿**同一个**横向目标 $r_0=r(p)$ 去用第 26 节的连接引理，然后串起来（`differentiability/endpoints.tex:210-215`）。我起初以为目标必须逐段跟着段的两端走，那样拼接点的横向坐标会逐层漂移，缺陷会按层数累积；实际写法让所有中继点离 $r(p)$ 都不到 $1$，于是整条入口（整条出口）的横向位移本身绝对值小于一（`differentiability/endpoints.tex:222-225`）。代价一侧付的是 $16C_1s\sum_{j\ge J}j^22^{-j}$（`differentiability/endpoints.tex:216-221`），每段按 $m_0$ 乘其纵向位移计费，纵向位移求和恰是 $x(p)-X_p^-$，这一段没有浪费。把两件事合起来就是 `differentiability
+

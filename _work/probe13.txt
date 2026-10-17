@@ -1,0 +1,6 @@
+D108:134 fence=False cjk=2 arg=lem:weights
+> `main.tex:513-523`（节录）"For exponents \(a,b\le n-2\), the chain \[ z_{a,b}=\sum_{i,p}w_iw_p t_i^a t_p^b[ip] \] has boundary \[ \left(\sum_iw_i t_i^a\right)\sum_pw_p t_p^b\ee_p - \left(\sum_pw_p t_p^b\right)\sum_iw_i t_i^a\ee_i=0 \] by Lemma~\ref{lem:weights}."
+
+D91:459 fence=True cjk=3 arg=lem:distint
+\begin{lemma}[Removing repetitions]\label{lem:distint}   % 实际 label 为 lem:distinct
+

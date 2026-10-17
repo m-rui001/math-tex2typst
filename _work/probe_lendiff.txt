@@ -1,0 +1,18 @@
+D26   L376   chars= 423 bytes= 637 dollars=24 backticks= 0
+D30   L827   chars= 492 bytes= 817 dollars= 2 backticks=30
+D238  L298   chars= 109 bytes= 133 dollars= 4 backticks= 0
+D238  L744   chars=  60 bytes=  79 dollars= 4 backticks= 0
+D77   L496   chars= 867 bytes=1222 dollars=86 backticks= 0
+D77   L552   chars= 706 bytes=1020 dollars=44 backticks= 0
+D106  L1750  chars=  65 bytes= 113 dollars= 8 backticks= 0
+D106  L1873  chars=  90 bytes= 110 dollars= 6 backticks= 4
+D106  L1913  chars=  68 bytes=  86 dollars= 4 backticks= 0
+D106  L1914  chars=  82 bytes= 100 dollars= 2 backticks= 6
+
+D106 occurrences of (\root T)^3      = 2
+D106 occurrences of \root            = 5
+D106 occurrences of \mathtt{root}    = 4
+D106 occurrences of \sqrt            = 45
+D77  occurrences of L_n^{\two}        = 1
+D77  occurrences of ^{\two}           = 3
+D77  occurrences of ^{(2)}            = 0

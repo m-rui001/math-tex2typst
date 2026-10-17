@@ -1,0 +1,24 @@
+  CNT D31 meta-protect @1207 count=2 want=1  `01:
+  CNT D31 01 @79 count=2 want=1  `01:
+  CNT D31 01 @1133 count=2 want=1  `01:
+  CNT D31 01 @1213 count=2 want=1  `01:
+  CNT D31 meta-restore @1207 count=2 want=1  `:
+  CNT D31 87-88 @969 count=1 want=0  `01-introduction.tex:87-88
+  CNT D31 87-88 @1078 count=1 want=0  `01-introduction.tex:87-88
+  CNT D31 87 @1127 count=1 want=0  `01-introduction.tex:87`
+  CNT D31 88-92 @1133 count=1 want=0  `01-introduction.tex:88-92
+  CNT D31 netzer @1078 count=1 want=0  `01h:16-17
+  CNT D37 @1148 count=1 want=0  `03:334-356`
+  CNT D37 @1632 count=1 want=0  `03:334-356`
+  CNT D95 07b @374 count=1 want=0  `07b:96-99`
+  CNT D95 03 @699 count=1 want=0  `03:38-238`
+  CNT D54 @766 count=1 want=0  （其笔记第 14 行转述的 `00:98`）
+D31 01->full=28(+504B) 07r->reduced=7(+28B) 87->86-87=3 88-92->88-89=1 01h:16-17->19-20=1 meta-keep=2
+     bytes 173856->174330 (+474)  tick 2763->2764  dollar 4652->4652  pipe 604->604
+D37 03:334-356 -> 02:334-356 sites=2 (02-pruning.tex 356 行，03 只 148)
+     bytes 241504->241504 (+0)  tick 4436->4436  dollar 4970->4970  pipe 1595->1595
+D54 跨篇 `00:98`->散文 sites=1 (D40 00-introduction.tex:98 实测为该句)
+     bytes 108249->108284 (+35)  tick 1022->1022  dollar 3756->3756  pipe 987->987
+D95 07b:96-99->90-96=1 (文件 96 行，uniform-prior 句在 90-96) 03:38-238->38-236=1 (文件 236 行)
+     bytes 218577->218577 (+0)  tick 3876->3876  dollar 6711->6711  pipe 583->583
+APPLY=False total=+509 B

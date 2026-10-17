@@ -1,0 +1,30 @@
+canvases built: before 917, after 918
+canvases changed: 138 over 105 papers, lost: 0
+   empty node radius/outline  952 lines
+   other                      238 lines
+   declared circle re-range   155 lines
+   text-sized circle          87 lines
+   other> A-Counterexample-to-Kuroshs-Divisi | line((2.735, 4.916), (3.3, 4.75), stroke: (paint: rgb("#0000a6"), thickness: 0.85pt), mark: (end: ">"))
+   other> A-Counterexample-to-Kuroshs-Divisi | line((3.78, 4.442), (4.166, 3.997), stroke: (paint: rgb("#0000a6"), thickness: 0.85pt), mark: (end: ">"))
+   other> A-Counterexample-to-Kuroshs-Divisi | line((4.403, 3.478), (4.486, 2.895), stroke: (paint: rgb("#0000a6"), thickness: 0.85pt), mark: (end: ">"))
+   other> A-Counterexample-to-Kuroshs-Divisi | line((4.405, 2.331), (4.16, 1.795), stroke: (paint: rgb("#0000a6"), thickness: 0.85pt), mark: (end: ">"))
+   other> A-Counterexample-to-Kuroshs-Divisi | line((3.787, 1.364), (3.292, 1.046), stroke: (paint: rgb("#0000a6"), thickness: 0.85pt), mark: (end: ">"))
+   other> A-Counterexample-to-Kuroshs-Divisi | line((2.745, 0.8851), (2.155, 0.8851), stroke: (paint: rgb("#0000a6"), thickness: 0.85pt), mark: (end: ">"))
+   other> A-Counterexample-to-Kuroshs-Divisi | line((1.608, 1.046), (1.113, 1.364), stroke: (paint: rgb("#0000a6"), thickness: 0.85pt), mark: (end: ">"))
+   other> A-Counterexample-to-Kuroshs-Divisi | line((0.7395, 1.795), (0.4948, 2.331), stroke: (paint: rgb("#0000a6"), thickness: 0.85pt), mark: (end: ">"))
+   other> A-Counterexample-to-Kuroshs-Divisi | line((0.4137, 2.895), (0.4975, 3.478), stroke: (paint: rgb("#0000a6"), thickness: 0.85pt), mark: (end: ">"))
+   other> A-Counterexample-to-Kuroshs-Divisi | line((0.7343, 3.997), (1.12, 4.442), stroke: (paint: rgb("#0000a6"), thickness: 0.85pt), mark: (end: ">"))
+   gained> Translative-covering-densities-of-order-n-log-n-Sept pic 1
+    4  Virtual-compact-specialness-of-hyperbolic-one-relator-groups
+    4  Nonuniqueness-of-percolation-on-nonamenable-quasi-transitive
+    4  An-exponential-two-way-deterministic-state-lower-bound-for-o
+    3  Variable-dimension-Weisfeiler-Leman-equivalence-on-general-a
+    3  Planar-Graph-Metrics-Embed-into-L1-with-Constant-Distortion-
+    3  Almost-Linear-Time-Maximum-Cardinality-Matching-in-Sparse-Ge
+    3  A-nine-dimensional-counterexample-to-Borsuks-covering-assert
+    3  A-hyperbolic-group-with-no-geometric-CAT0-action-September-2
+    3  A-Fully-Polynomial-Randomized-Approximation-Scheme-for-Perfe
+    2  The-maximal-triangular-Hilbert-transform-at-the-symmetric-po
+    2  The-Sharp-Terminal-Leave-in-Random-Triangle-Removal-Septembe
+    2  The-Grothendieck-homotopy-hypothesis-via-elementary-expansio
+wrote _work/regen_circle.txt

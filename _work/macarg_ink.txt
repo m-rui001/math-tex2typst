@@ -1,0 +1,18 @@
+  BODY "\\text{$s$ 的固定幂}"
+  INK  "s 的固定幂s 的固定幂"
+  DOLLAR-INK no
+  BODY "\\text{s 的固定幂}"
+  INK  "s 的固定幂s 的固定幂"
+  DOLLAR-INK no
+  BODY "\\text{\\textit{s} 的固定幂}"
+  INK  "s 的固定幂s 的固定幂"
+  DOLLAR-INK no
+  BODY "\\text{ 是 $k$-power-free}"
+  INK  "是 k-power-free 是 k-power-free"
+  DOLLAR-INK no
+  BODY "\\text{$F$ 有界全纯}"
+  INK  "F 有界全纯F 有界全纯"
+  DOLLAR-INK no
+  BODY "\\text{$n$ 圈的返回贡献}"
+  INK  "n 圈的返回贡献n 圈的返回贡献"
+  DOLLAR-INK no

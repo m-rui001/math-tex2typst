@@ -1,0 +1,221 @@
+--- a/t2t/cetz.py
++++ b/t2t/cetz.py
+@@ -369,6 +369,8 @@
+ # figure uses. Both only ever add to a box the author already fixed in centimetres.
+ NODE_DISTANCE = 1.0
+ INNER_SEP = 0.1
++# pgf's own rule width: a node's border anchors sit half of it outside the box the author fixed.
++PGF_LINE_WIDTH = 0.4 * UNITS["pt"]
+ DIRECTION = {"right": (1, 0), "left": (-1, 0), "above": (0, 1), "below": (0, -1),
+              "above right": (1, 1), "above left": (-1, 1),
+              "below right": (1, -1), "below left": (-1, -1)}
+@@ -451,6 +453,44 @@
+         if got is not None:
+             h = max(h or 0.0, got)
+     return (None if w is None else w / 2.0, None if h is None else h / 2.0)
++
++
++def _outer_sep(o, xf):
++    """How far a node's border sits outside the box the author fixed, in cm.
++
++    Measured against pdflatex (`_work/pic-shapes/measure_outer_sep.py`): TikZ's `outer sep` answers
++    half the node's own line width, whether or not the node is drawn -- 0.4070cm of radius for a
++    `minimum size=8mm` circle on pgf's 0.4pt rule, 0.4351cm for the same node with `line width=2pt`
++    -- and a size the author wrote replaces that answer exactly.
++    """
++    sep = o.get("outer sep")
++    if sep is not None and sep is not True and str(sep).strip() != "auto":
++        return _length(str(sep), xf)
++    width = o.get("line width")
++    if width is None or width is True:
++        return PGF_LINE_WIDTH / 2.0
++    got = _length(str(width), xf)
++    return None if got is None else got / 2.0
++
++
++def _anchor_ring(o, xf):
++    """The radius of the circle a `to` leaves and re-enters a *round* node through, or None.
++
++    TikZ puts a tangent `to`'s endpoints on the node's border, not its centre, and for a `circle`
++    node that border is the declared half-size plus `outer sep`; `_work/pic-shapes/measure_outer_sep.py`
++    reads the radius as exactly that for `minimum size` 8mm and 20mm, for an undrawn node and for
++    one with a written `outer sep`. A node sized by its own text is the one case the numbers will
++    not give back -- the label `wide text here` grew its circle to 1.2423cm against the 0.4070cm its
++    `minimum size=8mm` claims -- so a node whose box was never written down keeps the ring None and
++    its loop stays refused rather than drawn on a guessed circle.
++    """
++    if o.get("circle") is not True:
++        return None
++    hw, hh = node_size(o, xf)
++    sep = _outer_sep(o, xf)
++    if hw is None or hh is None or hw != hh or sep is None:
++        return None
++    return hw + sep
+ 
+ 
+ def box_visible(o):
+@@ -660,7 +700,7 @@
+         o = resolve_opts(o, styles)
+     head = _node_at(stmt[pos:], names, xf, o)
+     if head and head[0]:
+-        names[head[0]] = tuple(head[1]) + node_size(o, xf)
++        names[head[0]] = tuple(head[1]) + node_size(o, xf) + (_anchor_ring(o, xf),)
+ 
+ 
+ def split_statements(body):
+@@ -842,6 +882,12 @@
+ 
+ LINEBREAK = re.compile(r"\\\\\s*(?:\[[^\]]*\])?")
+ TEXTCOLOR = re.compile(r"\\textcolor\s*\{([^{}]*)\}\s*(\{(?:[^{}]|\{[^{}]*\})*\})")
++# a node body's maths arrives in either delimiter: `$...$` or the plain-TeX `\( ... \)`
++# spelling, which the prose pass below strips of its command names -- measured on a
++# Thompsons-group legend, `\([\alpha-\eta,\alpha+\eta]\)` reached the page as `\[-,+\]`.
++# TeX reads `\\` as one control sequence, so the second backslash of a line break is not
++# the backslash of an opening delimiter: the lookbehind keeps `\\(i)' the prose TeX makes.
++NODE_MATH = re.compile(r"\$([^$]*)\$|(?<!\\)\\\((.*?)\\\)")
+ 
+ 
+ def _markup_text(chunk):
+@@ -865,7 +911,7 @@
+ 
+ 
+ def node_text(inner, pal=None):
+-    r"""A TikZ node body -> Typst markup: '$...$' stays math, '\\' breaks the line.
++    r"""A TikZ node body -> Typst markup: delimited maths stays math, '\\' breaks the line.
+ 
+     A colour written on the text itself is read the way a stroke colour is, because the
+     markup pass below deletes command names and would leave the specification standing on
+@@ -881,9 +927,9 @@
+     if re.search(r"\\textcolor", keep):
+         return None
+     out, pos = [], 0
+-    for m in re.finditer(r"\$([^$]*)\$", keep):
++    for m in NODE_MATH.finditer(keep):
+         out.append(_prose(keep[pos:m.start()]))
+-        body = _math_body(m.group(1))
++        body = _math_body(next(g for g in m.groups() if g is not None))
+         out.append("$" + body + "$" if body else "")
+         pos = m.end()
+     out.append(_prose(keep[pos:]))
+@@ -1655,6 +1701,48 @@
+     return ((a[0] + b[0]) / 2 - uy * off, (a[1] + b[1]) / 2 + ux * off)
+ 
+ 
++# the page direction a `to` with no `out=` leaves along, and one with no `in=` arrives along
++TANGENT_FALLBACK = (45.0, 135.0)
++
++
++def _tangent_dirs(angles):
++    """The two page directions a tangent `to` leaves and arrives along.
++
++    A key that is not written stands for its own measured direction -- 45 at the start, 135 at the
++    end -- not for the other key's angle, and not for a straight arrival
++    (`_work/measure_tangent_table.py` reads both out of a pdflatex render).
++    """
++    return tuple(TANGENT_FALLBACK[i] if angles[i] is None else angles[i] for i in (0, 1))
++
++
++def _ring_at(names, a, b):
++    """The border ring of the node a path leaves and comes back to, or None.
++
++    Only a loop answers to this, and only a round node carries a ring at all: the coordinate token
++    has long been consumed by the time the curve is built, so the ring is read back off the name
++    registered at that very centre.
++    """
++    if a != b:
++        return None
++    for rec in (names or {}).values():
++        if len(rec) > 4 and rec[4] is not None and (rec[0], rec[1]) == a:
++            return rec[4]
++    return None
++
++
++def _ring_endpoints(a, b, angles, ring):
++    """A loop's endpoints, carried off the centre and onto the ring it leaves and returns on.
++
++    TikZ takes a `to` whose two ends name the same node from that node's border: the anchors are the
++    ring's points under the two tangent directions, and the chord, controls and head all follow from
++    them (`_work/pic-shapes/measure_loop.py` reads a loop on an 8mm circle leaving at
++    (-0.2878, 0.2878) and arriving at (0.2878, 0.2878) about its centre).
++    """
++    return tuple((at[0] + math.cos(math.radians(ang)) * ring,
++                  at[1] + math.sin(math.radians(ang)) * ring)
++                 for at, ang in zip((a, b), _tangent_dirs(angles)))
++
++
+ def _tangent_controls(a, b, angles, loose=1.0):
+     """Control points for TikZ `to[out=α,in=β]`, both 0.39 of the chord along the tangent.
+ 
+@@ -1664,17 +1752,18 @@
+     own direction is. So `to[out=30]` still curves at the far end instead of arriving straight.
+     `looseness` scales that length and nothing else (`_work/measure_looseness.py` reads 0.39·L at
+     the control points for L=0.5, 2 and 5), so the two endpoints move together along their tangents.
++    The chord is the one between the *endpoints*, which for a loop are already the node's border
++    anchors -- `_work/pic-shapes/measure_outer_sep.py` reads off/chord = 1.9498 at looseness 5 for
++    anchors, centres and round nodes of four different sizes alike.
+     """
+     dx, dy = b[0] - a[0], b[1] - a[1]
+     length = math.hypot(dx, dy)
+     if length == 0:
+         return None
+     off = length * 0.39 * loose
+-    out = []
+-    for at, ang, fallback in ((a, angles[0], 45.0), (b, angles[1], 135.0)):
+-        rad = math.radians(fallback if ang is None else ang)
+-        out.append((at[0] + math.cos(rad) * off, at[1] + math.sin(rad) * off))
+-    return tuple(out)
++    return tuple((at[0] + math.cos(math.radians(ang)) * off,
++                  at[1] + math.sin(math.radians(ang)) * off)
++                 for at, ang in zip((a, b), _tangent_dirs(angles)))
+ 
+ 
+ def _render(seg, closed, mark, sa, fill):
+@@ -1974,7 +2063,8 @@
+                 return None
+             a, b = poly[-2], poly[-1]
+             names[m.group(2).strip()] = (a[0] + t * (b[0] - a[0]),
+-                                         a[1] + t * (b[1] - a[1])) + node_size(no, xf)
++                                         a[1] + t * (b[1] - a[1])) \
++                + node_size(no, xf) + (_anchor_ring(no, xf),)
+             pos += m.end()
+             continue
+         m = re.match(r"\s*(?:circle|ellipse)\s*(?=[\[(])", chunk)
+@@ -2132,6 +2222,9 @@
+                 if ctrl is not None:
+                     curve = (_control(start, ctrl[0]), _control(p, ctrl[1]))
+                 elif tangent is not None:
++                    ring = _ring_at(names, start, p)
++                    if ring is not None:
++                        start, p = _ring_endpoints(start, p, tangent[0], ring)
+                     curve = _tangent_controls(start, p, *tangent)
+                 else:
+                     curve = (_bend_control(start, p, bend),) * 2
+@@ -2154,7 +2247,8 @@
+                 prev, t, no, inner, tilt, off, nm = pending
+                 base = _node_along(prev, p, 0.5 if t is None else t, seg)
+                 if nm:
+-                    names[nm] = (base[0] + off[0], base[1] + off[1]) + node_size(no, xf)
++                    names[nm] = (base[0] + off[0], base[1] + off[1]) \
++                        + node_size(no, xf) + (_anchor_ring(no, xf),)
+                 for line in emit_node(fmt(base[0] + off[0], base[1] + off[1]), inner, no,
+                                       pal, angle=_slant(xf) + tilt):
+                     nodes.append(line)
+@@ -2183,7 +2277,8 @@
+         else:
+             base = _node_along(done[0], done[1], t, done[2])
+         if nm:
+-            names[nm] = (base[0] + off[0], base[1] + off[1]) + node_size(no, xf)
++            names[nm] = (base[0] + off[0], base[1] + off[1]) \
++                + node_size(no, xf) + (_anchor_ring(no, xf),)
+         for line in emit_node(fmt(base[0] + off[0], base[1] + off[1]), inner, no, pal,
+                               angle=_slant(xf) + tilt):
+             nodes.append(line)
+@@ -2240,7 +2335,7 @@
+         at = (at[0] + off[0], at[1] + off[1])
+         size = node_size(o, xf)
+         if name:
+-            names[name] = tuple(at) + size
++            names[name] = tuple(at) + size + (_anchor_ring(o, xf),)
+         box = None
+         if box_visible(o) and None not in size:
+             box = "%s, %s" % (fmt(at[0] - size[0], at[1] - size[1]),

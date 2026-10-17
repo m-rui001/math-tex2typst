@@ -1,0 +1,56 @@
+你是写手。先完整读 `E:\math\被引笔记\规格.md` 并遵守其中全部条款（取材、记法、结构、体量、落盘、自查都在那里，本派单不复述）。除该文件、本派单文件自身与你本单的素材目录外不得读任何其他文件：**不得读 `研究笔记/`、`preprints/`、`.tools/`、`_work/`（本派单文件自身除外）、`被引笔记/INDEX.md`**。素材只用下面给定的 arXiv 源码 `.tex`；不得读素材目录里的 `.pdf`；不要执行任何 git 命令；不要生成 PDF。
+
+本单要写 3 份 C 稿（按下面给定的顺序，一份写完立刻开下一份）。每份各自满足规格的结构与体量要求。
+
+
+## 一份：C31
+
+- arXiv id：1703.00292
+- 原题名（逐字）：A general extension theorem for cohomology classes on non reduced analytic spaces
+- 作者（逐字，API 署名）：Junyan Cao, Jean-Pierre Demailly, Shin-Ichi Matsumura
+- 发表年月：2017-03-01
+- 素材目录：`E:\math\被引素材/1703.00292`
+- 主 tex 清单（实测，路径以盘面为准）：
+  - `被引素材/1703.00292/main.tex`（66133 字节 / 1409 行）
+- 本语料中引用它的稿号与 bib key（你只在 §0 原样登记，不去读这些稿）：D318（bib key `CDM2017`）；D385（bib key `CDM2017`）
+- 成品路径：`E:\math\被引笔记\C31-<中文题名>.md`（中文题名由你按原题拟，不超过 24 字，不得含 `:` 与 `/`）
+- 目标体量：不少于 22,000 字节
+
+## 一份：C32
+
+- arXiv id：1707.05561
+- 原题名（逐字）：Stability of Valuations: Higher Rational Rank
+- 作者（逐字，API 署名）：Chi Li, Chenyang Xu
+- 发表年月：2017-07-18
+- 素材目录：`E:\math\被引素材/1707.05561`
+- 主 tex 清单（实测，路径以盘面为准）：
+  - `被引素材/1707.05561/main.tex`（245162 字节 / 3299 行）
+- 本语料中引用它的稿号与 bib key（你只在 §0 原样登记，不去读这些稿）：D307（bib key `LiXuStable`）；D476（bib key `LiXuHigherRank`）
+- 成品路径：`E:\math\被引笔记\C32-<中文题名>.md`（中文题名由你按原题拟，不超过 24 字，不得含 `:` 与 `/`）
+- 目标体量：不少于 22,000 字节
+
+## 一份：C33
+
+- arXiv id：1803.04756
+- 原题名（逐字）：A pseudo-quasi-polynomial algorithm for solving mean-payoff parity games
+- 作者（逐字，API 署名）：Laure Daviaud, Marcin Jurdzinski, Ranko Lazic
+- 发表年月：2018-03-13
+- 素材目录：`E:\math\被引素材/1803.04756`
+- 主 tex 清单（实测，路径以盘面为准）：
+  - `被引素材/1803.04756/strategy-decompositions.tex`（31912 字节 / 657 行）
+  - `被引素材/1803.04756/progress-measures.tex`（24320 字节 / 532 行）
+  - `被引素材/1803.04756/introduction.tex`（17353 字节 / 318 行）
+  - `被引素材/1803.04756/lifting.tex`（10695 字节 / 224 行）
+  - `被引素材/1803.04756/winsets-to-decompositions.tex`（6239 字节 / 128 行）
+  - `被引素材/1803.04756/main.tex`（4757 字节 / 128 行）
+  - `被引素材/1803.04756/macros.tex`（443 字节 / 19 行）
+- 本语料中引用它的稿号与 bib key（你只在 §0 原样登记，不去读这些稿）：D355（bib key `DaviaudJurdzinskiLazic2018`）；D80（bib key `DaviaudJurdzinskiLazic2018`）
+- 成品路径：`E:\math\被引笔记\C33-<中文题名>.md`（中文题名由你按原题拟，不超过 24 字，不得含 `:` 与 `/`）
+- 目标体量：不少于 22,000 字节
+
+## 落地节奏（本单各份合起来算）
+
+- 新建每份稿允许一次 `Write` 落「`# 标题` + `## 0 取证边界`」骨架，此后一律 `Edit` 追加，单笔新增正文不超过 10,000 字节；
+- 第一份的首次落盘落在第 4--10 次工具调用之间；每写完一份立刻开始下一份，不要停下来等确认；
+- 每份落盘后 sleep 90 秒再复量一次字节以证未回滚；
+- 收工报告按规格第 5 条对**每一份稿分别**给数，并给出各份成品文件的绝对路径与实测字节。

@@ -1,0 +1,28 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+pages scanned: 36130 ; pages with coincident words: 20462 ; pairs: 67847
+of those pages, vector-drawing pages: 1750 over 529 papers
+  2984  The-hypercube-Ramsey-number-has-linear-order p172  FIGURE  'where'/'𝑀𝑖≥𝑐𝑁𝑒−𝑞𝑎𝐶,'@233,713; 'where'/'𝑀𝑖≥𝑐𝑁𝑒−𝑔𝑎𝐵,'@233,713
+  1147  Conditional-permutations-in-a-revealed-switc p27   FIGURE  '𝑇{(ℓ)}'/'𝑇{(ℓ)}'@406,161; '𝑇{(ℓ)}'/'𝑇{(ℓ)}'@406,161
+   549  Complex-Matrix-Multiplication-Below-2.258-an p85   FIGURE  '10−2'/'10−1'@496,714; '10−2'/'10−3'@496,714
+   432  A-sharp-Fourier-certificate-for-planar-circl p27   FIGURE  '100'/'76'@176,721; '100'/'79'@176,721
+   396  Catalans-constant-is-irrational-September-24 p44   FIGURE  '1'/'1'@190,718; '1'/'1'@190,718
+    86  Signed-tensor-densities-and-diagram-budgets- p22   FIGURE  'separate'/'nontrivial'@271,708; 'bound.'/'2𝑑'@312,708
+    65  Turn-Based-Stochastic-Mean-Payoff-Games-in-D p15   FIGURE  '𝐷'/'fixed.'@239,88; 'Plus'/'Provisional'@161,89
+    48  Gaussian-free-field-limits-of-weighted-integ p47   prose  '\pinsgroup{-2.28}{-.55}{L}{pinsminus}'/'five'@142,723; '\pinsgroup{-2.28}{-.55}{L}{pinsminus}'/'moves'@142,72
+    45  Strong-diffeomorphic-approximation-in-three- p47   prose  '(1.2,.84,0)--(1.2,.84,1.7);'/'rectangular'@123,723; '(1.2,.84,0)--(1.2,.84,1.7);'/'face'@123,723
+    41  Cylinder-amplitudes-and-logarithmic-bridge-l p9    prose  '\node[finite'/'Figure'@86,723; '\node[finite'/'1:'@86,723
+    33  Polynomial-removal-fails-for-ordered-binary- p7    prose  '𝐵(𝑥+'/'0'@208,270; '𝑦+'/'0'@238,270
+    31  Nonuniqueness-with-local-conservation-for-th p17   prose  '1:'/'\foreach'@110,717; 'The'/'\foreach'@120,717
+    29  Threshold-parallel-repetition-for-finite-dim p12   prose  '𝐻𝛾'/'𝑥,'@118,107; '𝐻𝛾'/'𝑦,'@138,107
+    28  GOE-bulk-universality-for-fixed-degree-rando p14   FIGURE  '𝑒+'/'𝑖+'@358,71; '𝑒+'/'𝑖−𝑒−'@444,71
+    27  the-additive-indecomposability-of-the-primes p65   prose  'p='/'child'@172,106; 'vH_-'/'(𝑝,'@190,106
+    27  The-Penrose-inequality-for-maximal-asymptoti p14   prose  '−𝐼Φ/𝑁−𝐼(div𝑔𝒦︀−'/'d𝜅)'@230,113; '−𝐽𝑞𝑙2'/'1'@377,152
+    27  Failure-of-finite-assembly-for-a-chromatic-o p55   prose  '𝑀𝑞'/'𝑠.'@396,254; '𝐸̃𝑠,𝑞'/'𝑟'@110,420
+    27  A-pointwise-2-converse-for-elliptic-curves-w p77   prose  'path'/'2.'@254,266; 'path'/'−'@254,266
+    26  The-critical-logarithmic-correction-for-the- p72   prose  'ℛ︀𝑔,'/'𝑖|'@130,188; 'tor'/'𝑗(𝑑)'@149,188
+    26  The-Penrose-inequality-for-maximal-asymptoti p15   prose  '𝑗″𝒫︀('/'d𝑓,'@260,73; 'd𝑓,'/'d𝑓)'@272,74
+    26  Signed-tensor-densities-and-diagram-budgets- p85   prose  '𝜎𝑢/2'/'𝐶𝑌1/2'@284,83; '𝜌𝑢/2'/'𝑅ℎ𝑢/2'@244,83
+    25  Generic-C1-Future-Inextendibility-Near-Rotat p57   prose  '𝑤±'/'𝑇'@84,100; '𝑇(𝐸±'/'𝑔±'@320,138
+    25  Abundance-in-numerical-dimension-one-for-ter p27   prose  '𝐶𝑎−1'/'𝑖+𝑠−1(𝐸).'@91,77; '𝑍𝑖,𝑎'/'𝑠'@203,115
+    25  A-Gepner-stability-condition-on-every-smooth p13   prose  '𝑁𝛾(Φ−1'/'∗𝑣)'@271,165; 'Φ−1'/'∗𝑣.'@297,206
+    24  Perfect-completeness-for-2-to-1-games-Septem p31   FIGURE  'X=_{0'/'ancestors'@190,164; '!='/'ancestors'@225,164

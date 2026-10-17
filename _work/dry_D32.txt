@@ -1,0 +1,42 @@
+################ D32  (D32-Tingley问题正解.md)
+before: bytes=151624 lines=921
+ROW line=646  sites=2  pipes 8->6  $=4(parity even)
+OLD| | $S_X$ | $\{x:\|x\|=1\}$，继承度量 | 49 | `Model.lean:12` | 全篇舞台 |
+NEW| | $S_X$ | $\{x:\lVert x\rVert=1\}$，继承度量 | 49 | `Model.lean:12` | 全篇舞台 |
+ROW line=647  sites=4  pipes 10->6  $=4(parity even)
+OLD| | $D_q(x,y)$ | $\|f(x)-qf(y)\|-\|x-qy\|$ | eq:defect(149) | `Basic.lean:50` | 跨半径缺陷度量 |
+NEW| | $D_q(x,y)$ | $\lVert f(x)-qf(y)\rVert-\lVert x-qy\rVert$ | eq:defect(149) | `Basic.lean:50` | 跨半径缺陷度量 |
+ROW line=649  sites=2  pipes 8->6  $=8(parity even)
+OLD| | $\|D_q\|\le2\min(q,1-q)$ | Lipschitz 加 $D_0=D_1=0$ | eq:defectbound(159) | `Basic.lean:110` | 挤 $t\in[M/2,1-M/2]$；$M\le1$ |
+NEW| | $\lvert D_q\rvert\le2\min(q,1-q)$ | Lipschitz 加 $D_0=D_1=0$ | eq:defectbound(159) | `Basic.lean:110` | 挤 $t\in[M/2,1-M/2]$；$M\le1$ |
+ROW line=652  sites=4  pipes 10->6  $=6(parity even)
+OLD| | $\|(a_n)\|_{\mathcal U}$ | $\lim_{\mathcal U}\|a_n\|$ | 179-181 | `UltraNormed.lean:175` | 半范数逼商 $Q_X$ |
+NEW| | $\lVert (a_n)\rVert_{\mathcal U}$ | $\lim_{\mathcal U}\lVert a_n\rVert$ | 179-181 | `UltraNormed.lean:175` | 半范数逼商 $Q_X$ |
+ROW line=654  sites=4  pipes 10->6  $=8(parity even)
+OLD| | $x_0,y,t$ | $\|f(x_0)-tf(y)\|-\|x_0-ty\|=M$，$M/2\le t\le1-M/2$ | eq:maximal(167-170), 174 | `DefectAttainment.lean:51` | attained 入口；$t\in(0,1)$ |
+NEW| | $x_0,y,t$ | $\lVert f(x_0)-tf(y)\rVert-\lVert x_0-ty\rVert=M$，$M/2\le t\le1-M/2$ | eq:maximal(167-170), 174 | `DefectAttainment.lean:51` | attained 入口；$t\in(0,1)$ |
+ROW line=660  sites=2  pipes 8->6  $=4(parity even)
+OLD| | eq:equality | $r=u+M$、$\|pv+rg(v)\|=p+r$ | 248-250 | `extremal_radius_identities` | 公共支撑产生点 |
+NEW| | eq:equality | $r=u+M$、$\lVert pv+rg(v)\rVert=p+r$ | 248-250 | `extremal_radius_identities` | 公共支撑产生点 |
+ROW line=662  sites=8  pipes 14->6  $=4(parity even)
+OLD| | eq:contraction | $\|g(v)-g(v')\|\le\frac{up}{rs}\|v-v'\|+\frac{2\|u-u'\|}{r}+\frac{2u\|p-p'\|}{rs}$ | 280-284 | `ReturnMapEstimate.lean:82,170` | $\chi$ 压缩原型 |
+NEW| | eq:contraction | $\lVert g(v)-g(v')\rVert\le\frac{up}{rs}\lVert v-v'\rVert+\frac{2\lvert u-u'\rvert}{r}+\frac{2u\lvert p-p'\rvert}{rs}$ | 280-284 | `ReturnMapEstimate.lean:82,170` | $\chi$ 压缩原型 |
+ROW line=676  sites=4  pipes 10->6  $=4(parity even)
+OLD| | eq:perturb | $\|sw+\eta b\|-\|pv+\eta y\|\le M$（$0<\eta<t$） | 403-405 | `RadialPerturbation.lean:87,110` | 大分支矛盾主不等式 |
+NEW| | eq:perturb | $\lVert sw+\eta b\rVert-\lVert pv+\eta y\rVert\le M$（$0<\eta<t$） | 403-405 | `RadialPerturbation.lean:87,110` | 大分支矛盾主不等式 |
+ROW line=680  sites=4  pipes 10->6  $=10(parity even)
+OLD| | $F,G$ | $\|y+\lambda v\|$、$\|b+\lambda w\|$，$F(0)=G(0)=1$、$F(p/t)=G(s/t)=1/t$ | 431-439 | `hx hfx` 传入 `SmallChord` | secant 单调双函数 |
+NEW| | $F,G$ | $\lVert y+\lambda v\rVert$、$\lVert b+\lambda w\rVert$，$F(0)=G(0)=1$、$F(p/t)=G(s/t)=1/t$ | 431-439 | `hx hfx` 传入 `SmallChord` | secant 单调双函数 |
+ROW line=681  sites=4  pipes 10->6  $=2(parity even)
+OLD| | 终结等式 | $\epsilon F(r/\epsilon)=\|y-z\|=\|b-f(z)\|=\epsilon G(u/\epsilon)$ | 444-449 | `hiso` `ChordContradiction.lean:41-44` | 矛盾收口 |
+NEW| | 终结等式 | $\epsilon F(r/\epsilon)=\lVert y-z\rVert=\lVert b-f(z)\rVert=\epsilon G(u/\epsilon)$ | 444-449 | `hiso` `ChordContradiction.lean:41-44` | 矛盾收口 |
+ROW line=683  sites=4  pipes 10->6  $=6(parity even)
+OLD| | $\delta$（中点缺陷） | $\|F(m)-m'\|\le\|a-c\|/2$，反射翻倍 $2\delta$ | 465-472 | （Mathlib MazurUlam，未重证） | 仿射步 |
+NEW| | $\delta$（中点缺陷） | $\lVert F(m)-m'\rVert\le\lVert a-c\rVert/2$，反射翻倍 $2\delta$ | 465-472 | （Mathlib MazurUlam，未重证） | 仿射步 |
+after: bytes=151813 (delta +189) lines=921 rows_fixed=11 sites_fixed=42 sites_registered=0
+[DRY] nothing written to the note
+D32 file-count \lVert  = 68
+D32 file-count \lvert  = 6
+D32 file-count \mid  = 0
+D32 file-count \upharpoonright = 0
+D32 file-count \Vert  = 0

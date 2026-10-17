@@ -1,0 +1,10 @@
+### region_check D30 797
+seg=223 hdr=0 sep=3 rows=68 hist={6: 67, 4: 14}
+badpipe=[(831, 4, '| 论文构件 | 文件（行数） | 关键定理/定义 |'), (833, 4, '| 主定理 | `Main.lean` (44) | `controlled_potential` (:23)、`main_theorem`'), (834, 4, '| 定义 | `Definitions.lean` (158) | `hartogs` (:18)、`sectional` (:66)、`I'), (835, 4, '| 障碍引理 | `Obstruction.lean` (273) | `map_obstruction` (:249)、`jacobian'), (836, 4, '| §3 峰 | `BasePeaks.lean` (186)、`BaseSets.lean` (377) | `homogeneousPe'), (837, 4, '| §3 轮廓 | `BaseProfiles.lean` (295) | `RadialProfiles` (:172)、`cosh_st'), (838, 4, '| §4 密度 | `BaseDensityDefinitions.lean` (56)、`BaseDensityInduction.lea'), (839, 4, '| §5 测试 | `BaseLogTests.lean` (137)、`BaseMeans.lean` (45)、`BaseModelPa'), (840, 4, '| §6 位势 | `BaseMinorant.lean` (181)、`BaseChartEstimates.lean` (209) | '), (841, 4, '| §7-§8 Hartogs | `MetricCalculus.lean` (1513)、`HartogsCompletenessSup'), (842, 4, '| §8 框架/误差 | `LocalFrame.lean` (594)、`LocalFrameTools.lean` (317)、`Err'), (843, 4, '| §9 pinching | `PinchingAlgebra.lean` (311)、`PinchingCompact.lean` (2'), (844, 4, '| §2 迁移 | `HartogsTransfer.lean` (49)、`HartogsFrame.lean` (138)、`Harto')]
+dollar_odd=0 []
+vsplit=0 []
+std_hdr_corpus=0
+rc=0
+### pipe_table_check D30 (该篇该表窗口，表头竖线数=该表续行应有竖线数)
+TABLE D30 hdr=797 pipes=6 block=23 sep=1 rows=22 hist={6: 23} badpipe=[]
+rc=0

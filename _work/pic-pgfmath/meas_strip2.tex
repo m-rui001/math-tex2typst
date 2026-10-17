@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{pgf}
+\usepackage{tikz}
+\newwrite\meas
+\immediate\openout\meas=meas_strip2.txt\relax
+\newcount\mycnt
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\foreach \j/\wt in {0/1,1/A,2/A,3/B,4/B,5/U,6/U,7/E,8/F}{
+ \begin{scope}[xshift={1.45*mod(\j,5)*1cm},yshift={-2.1*floor(\j/5)*1cm}]
+  \path (-.45,0) coordinate (L) (.45,1) coordinate (R) (0,-.35) coordinate (W);
+ \end{scope}
+ \path (L) coordinate (LB);
+ \pgfgetlastxy{\lx}{\ly}
+ \path (R) coordinate (RB);
+ \pgfgetlastxy{\rx}{\ry}
+ \path (W) coordinate (WB);
+ \pgfgetlastxy{\wx}{\wy}
+ \immediate\write\meas{ABS \j\space wt=\wt\space L=(\lx,\ly) R=(\rx,\ry) W=(\wx,\wy)}
+}
+\end{tikzpicture}
+\end{document}

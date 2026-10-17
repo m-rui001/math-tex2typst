@@ -1,0 +1,859 @@
+# C49 Ricci流的熵公式及其几何应用（arXiv:math/0211159）
+
+## 0 取证边界
+
+- arXiv id：math/0211159
+- 原题名（逐字）：The entropy formula for the Ricci flow and its geometric applications
+- 作者（原文署名逐字）：Grisha Perelman。脚注署名逐字：St.Petersburg branch of Steklov Mathematical Institute, Fontanka 27, St.Petersburg 191011, Russia
+- 发表年月：2002-11-11
+- 素材目录：`E:\math\被引素材/math_0211159`
+- 主 tex 清单（盘面实测）：`被引素材/math_0211159/main.tex`，107201 字节 / 1847 行（派单记 1848 行，差额为末行 `\end{document}` 后的空行计数口径）。目录内除 `main.tex` 外无其它 `.tex`、无 `.bib`、无 `.pdf`
+- 本语料引用它的稿号与 bib key：D274（bib key `Perelman`）；D308（bib key `PerelmanEntropy`）
+- 取证读法：`main.tex` 第 1-330、330-710、710-1090、1090-1470、1470-1847 行各一次逐行读完，preamble 与正文全部过目；引用位置串全部出自这五段。第 1-127 行是排版与 `\newcommand` 声明，第 1760-1847 行是参考文献列表，二者只用于解释记号，不作为数学陈述来源
+- 记法折算：素材用 `\cF`、`\cW`、`\cV`、`\cR` 四个宏，本稿一律展开为 `\mathcal F`、`\mathcal W`、`\mathcal V`、`\mathcal R`；素材的 `\mbox{Ric}`、`\mbox{dist}`、`\mbox{vol}` 类形写作 `\operatorname{Ric}`、`\operatorname{dist}`；`\triangle` 在本稿写作 `\Delta`（同义，KaTeX 可渲）；素材 `\mathbb{R}`、`\mathbb{S}^N`、`\mathbb{Z}_2` 原样保留。素材里 `\tilde{V}` 指约化体积，本稿写作 `\widetilde V`；`\de`、`\al`、`\be`、`\bt`、`\bx`、`\e` 是 `\delta`、`\alpha`、`\beta`、`\bar t`、`\bar x`、`\epsilon` 的缩写宏，本稿直接写标准形
+- 编号口径：素材以 `parag`、`parstr` 环境自造段落号，同一计数器内节号与段号连写（如 7.1、11.1），定理环境 `thm/lem/prop/cor` 共用该计数器；本稿引用素材定理时按素材盘面文字给"第 $\S$ 段落号 + 位置串"，不搬素材 `\label`
+
+## 1 梯度流解释：$\mathcal F$ 泛函、一阶变分与命题 1.2
+
+素材第 1 节（`main.tex:285-361`）把 Ricci 流写成某个泛函的 $L^2$ 梯度，这是全文两条单调量（$\mathcal F$、$\mathcal W$）的源头。
+
+泛函定义在 `main.tex:286-287`：对闭流形 $M$ 上的黎曼度量 $g_{ij}$ 与函数 $f$，
+
+$$
+\mathcal F=\int_M(R+|\nabla f|^2)e^{-f}dV .
+$$
+
+一阶变分在 `main.tex:290-295`，记 $\delta g_{ij}=v_{ij}$、$\delta f=h$、$v=g^{ij}v_{ij}$，素材给的第一个形是
+
+$$
+\delta \mathcal F(v_{ij},h)=\int_M e^{-f}\left[-\Delta v+\nabla_i\nabla_j v_{ij}-R_{ij}v_{ij}-v_{ij}\nabla_i f\nabla_j f+2\langle\nabla f,\nabla h\rangle+(R+|\nabla f|^2)(v/2-h)\right],
+$$
+
+第二个形（`main.tex:293-295`）把散度项积分换部后合并成
+
+$$
+=\int_M e^{-f}\left[-v_{ij}(R_{ij}+\nabla_i\nabla_j f)+(v/2-h)(2\Delta f-|\nabla f|^2+R)\right].
+$$
+
+关键判别在 `main.tex:295-299`：$v/2-h$ 恒等于零当且仅当测度 $dm=e^{-f}dV$ 保持不变。于是对称张量 $-(R_{ij}+\nabla_i\nabla_j f)$ 就是泛函
+
+$$
+\mathcal F^m=\int_M(R+|\nabla f|^2)dm
+$$
+
+的 $L^2$ 梯度，此时 $f$ 的含义换成 $\log(dV/dm)$。给定测度 $m$ 就可考虑梯度流
+
+$$
+(g_{ij})_t=-2(R_{ij}+\nabla_i\nabla_j f),
+$$
+
+一般 $m$ 下这个流可能连短时存在都没有；但存在时它就是加了微分同胚修正的 Ricci 流。`main.tex:303-306` 点出实质：不同的 $m$ 给出同一个流（模微分同胚），$m$ 的选择相当于规范选择。
+
+命题 1.2（`main.tex:308-311`）给梯度流的先验上界：设 $\mathcal F^m$ 的梯度流在 $t\in[0,T]$ 上存在，则在 $t=0$ 处有
+
+$$
+\mathcal F^m\le\frac{n}{2T}\int_M dm .
+$$
+
+证明链（`main.tex:311-325`）先归一 $\int_Mdm=1$。梯度流方程与 $\mathcal F^m$ 的演化写作 (1.1)、(1.2)：
+
+$$
+(g_{ij})_t=-2(R_{ij}+\nabla_i\nabla_j f),\quad f_t=-R-\Delta f,
+$$
+
+$$
+\frac{d}{dt}\mathcal F^m=2\int|R_{ij}+\nabla_i\nabla_j f|^2\,dm .
+$$
+
+用合适的微分同胚修正后得到 (1.3) 与保留下来的 (1.4)：
+
+$$
+(g_{ij})_t=-2R_{ij},\quad f_t=-\Delta f+|\nabla f|^2-R,
+$$
+
+$$
+\mathcal F_t=2\int|R_{ij}+\nabla_i\nabla_j f|^2e^{-f}dV .
+$$
+
+设 $A_{ij}=R_{ij}+\nabla_i\nabla_j f$，迹 $g^{ij}A_{ij}=R+\Delta f$。对对称二阶张量有 $|A|^2\ge\frac1n(\operatorname{tr}A)^2$；又由 $\int e^{-f}dV=1$ 与 Cauchy-Schwarz 有 $\int h^2e^{-f}dV\ge(\int he^{-f}dV)^2$，取 $h=R+\Delta f$。再注意换部公式 $\int(\Delta f)e^{-f}dV=-\int|\nabla f|^2e^{-f}dV$ 给出 $\mathcal F=\int(R+\Delta f)e^{-f}dV$。三步串起来就是 `main.tex:323-325` 那一行：
+
+$$
+\mathcal F_t\ge\frac2n\int(R+\Delta f)^2e^{-f}dV\ge\frac2n\left(\int(R+\Delta f)e^{-f}dV\right)^2=\frac2n\mathcal F^2 .
+$$
+
+收尾是一维比较：$u(t)=\mathcal F(t)>0$ 满足 $u'\ge\frac2n u^2$，即 $(1/u)'\le-\frac2n$，在 $[0,T]$ 上积分得 $\frac1{u(T)}\le\frac1{u(0)}-\frac{2T}n$；流在 $T$ 处光滑存在故 $u(T)<\infty$，$\frac1{u(T)}>0$，于是 $\frac1{u(0)}>\frac{2T}n$，即 $u(0)\le\frac n{2T}$。取等号要求 $A_{ij}$ 处处为纯迹部分，正是梯度孤子的痕迹。
+
+第 1.3 段（`main.tex:327-346`）把 $\mathcal F^m$ 挂到 Bochner-Lichnerowicz 公式上。经典形是 $\nabla^*\nabla u_i=(d^*d+dd^*)u_i-R_{ij}u_j$ 与 $\nabla^*\nabla\psi=\delta^2\psi-\frac14R\psi$；把 $dV$ 换成 $dm=e^{-f}dV$ 后得到修改形
+
+$$
+\nabla^{*m}\nabla u_i=(d^{*m}d+dd^{*m})u_i-R^m_{ij}u_j,\quad \nabla^{*m}\nabla\psi=(\delta^m)^2\psi-\frac14R^m\psi,
+$$
+
+其中 $\delta^m\psi=\delta\psi-\frac12(\nabla f)\cdot\psi$，并引出两个张量
+
+$$
+R^m_{ij}=R_{ij}+\nabla_i\nabla_j f,\quad R^m=2\Delta f-|\nabla f|^2+R .
+$$
+
+`main.tex:342` 强调 $g^{ij}R^m_{ij}=R+\Delta f\ne R^m$，迹与该标量曲率不是同一个量；`main.tex:343-345` 给出仍成立的 Bianchi 恒等式
+
+$$
+\nabla_i^{*m}R^m_{ij}=\nabla_iR^m_{ij}-R_{ij}\nabla_i f=\frac12\nabla_j R^m,
+$$
+
+并有 $\mathcal F^m=\int_MR^mdm=\int_Mg^{ij}R^m_{ij}dm$（`main.tex:346`）。第 1.4* 段（`main.tex:348-361`）交代出处：DeTurck 的微分同胚修正、弦论低能有效作用量里的同一个 $\mathcal F$（$f$ 称 dilaton 场）、Bakry-Émery 的带测度 Ricci 张量。
+
+## 2 无呼吸子定理 I：$\lambda$、$\bar\lambda$ 与稳态、扩张情形
+
+素材第 2 节（`main.tex:363-433`）在模微分同胚与缩放的度量空间上把 Ricci 流当动力系统，排除非平凡周期轨道。
+
+定义在 `main.tex:364-382`：若存在 $t_1<t_2$ 与 $\alpha>0$ 使 $\alpha g_{ij}(t_1)$ 与 $g_{ij}(t_2)$ 只差一个微分同胚，则 $g_{ij}(t)$ 称为呼吸子；$\alpha=1$、$\alpha<1$、$\alpha>1$ 分别叫稳态、收缩、扩张呼吸子。对每一对 $t_1,t_2$ 都成立的（即只差微分同胚与缩放）称为 Ricci 孤子。孤子度量在每一时刻满足
+
+$$
+R_{ij}+cg_{ij}+\nabla_i b_j+\nabla_j b_i=0,
+$$
+
+$c$ 为常数、$b_i$ 为一形式；当 $b_i=\frac12\nabla_i a$ 时称梯度 Ricci 孤子。`main.tex:379-382` 给出梯度收缩孤子的基本例：Gaussian 孤子，$g_{ij}$ 取 $\mathbb R^n$ 上的欧氏度量，$c=1$，$a=-|x|^2/2$。
+
+第一个单调量（`main.tex:390-397`）：
+
+$$
+\lambda(g_{ij})=\inf \mathcal F(g_{ij},f),\qquad \int_M e^{-f}dV=1,
+$$
+
+它正是算子 $-4\Delta+R$ 的最低特征值。由 (1.4) 知 $\lambda(g_{ij}(t))$ 随 $t$ 不减；若 $\lambda(t_1)=\lambda(t_2)$，则 $t\in[t_1,t_2]$ 上对取到 infimum 的 $f$ 有 $R_{ij}+\nabla_i\nabla_j f=0$，故稳态呼吸子必为稳态孤子。
+
+扩张情形需要尺度不变版本（`main.tex:399-400`）：
+
+$$
+\bar\lambda(g_{ij})=\lambda(g_{ij})V^{2/n}(g_{ij}).
+$$
+
+断言（`main.tex:403-405`）：$\bar\lambda$ 在其非正处沿 Ricci 流不减，且除非处于梯度孤子否则单调严格。断言为何足以排除扩张呼吸子，见 `main.tex:405-410`：扩张呼吸子上必有某 $t\in[t_1,t_2]$ 使 $dV/dt>0$；另一方面对每个 $t$，
+
+$$
+-\frac{d}{dt}\log V=\frac1V\int RdV\ge\lambda(t),
+$$
+
+故 $\bar\lambda$ 在 $[t_1,t_2]$ 上不可能处处非负，断言适用。
+
+断言的证明（`main.tex:411-417`）把 $f$ 取为 $\mathcal F$ 的极小元，然后逐不等式展开：
+
+$$
+\frac{d\bar\lambda}{dt}\ge 2V^{2/n}\int|R_{ij}+\nabla_i\nabla_j f|^2e^{-f}dV+\frac2n V^{(2-n)/n}\lambda\int-RdV,
+$$
+
+再写成无迹部分平方加方差两项：
+
+$$
+\ge 2V^{2/n}\left[\int\left|R_{ij}+\nabla_i\nabla_j f-\frac1n(R+\Delta f)g_{ij}\right|^2e^{-f}dV+\frac1n\left(\int(R+\Delta f)^2e^{-f}dV-\left(\int(R+\Delta f)e^{-f}dV\right)^2\right)\right]\ge0 .
+$$
+
+第一步用的是 $\lambda$ 的演化（同 (1.4) 的推导）加上 $V^{2/n}$ 的导数 $\frac{d}{dt}V^{2/n}=-\frac2nV^{2/n}\cdot\frac1V\int RdV$；第二步是减掉迹部分的代数恒等式 $|A|^2=|A-\frac1n(\operatorname{tr}A)g|^2+\frac1n(\operatorname{tr}A)^2$；第三步是 $\lambda=\int(R+\Delta f)e^{-f}dV$ 与 $\mathcal F$ 的极小性把 $\int(R+\Delta f)^2e^{-f}dV$ 换成方差。两项都非负，故单调性成立。
+
+同一条不等式链顺带排除闭流形上的非平凡稳态与扩张梯度孤子（`main.tex:418-427`）：取等号要求 $R+\Delta f$ 在 $M$ 上为常数；而极小元 $f$ 的 Euler-Lagrange 方程是 $2\Delta f-|\nabla f|^2+R=const$。两式相减得 $\Delta f-|\nabla f|^2=const$，又 $\int(\Delta f-|\nabla f|^2)e^{-f}dV=0$ 逼出该常数为 $0$，极大值原理给出 $f$ 为常数。第 2.4 段（`main.tex:427-433`）申报更简单的替代证明来自 Hamilton 关于 $RV^{2/n}$ 最小值单调性的工作。
+
+## 3 $\mathcal W$ 熵泛函、单调性公式 (3.4) 与收缩呼吸子的排除
+
+收缩情形 $\lambda>0$ 时 $\mathcal F$ 不够用，素材第 3 节（`main.tex:434-513`）显式插入尺度参数 $\tau$，定义（`main.tex:439-441`）
+
+$$
+\mathcal W(g_{ij},f,\tau)=\int_M\left[\tau(|\nabla f|^2+R)+f-n\right](4\pi\tau)^{-\frac n2}e^{-f}dV,
+$$
+
+限制在满足归一化（`main.tex:442-443`）的 $f$ 上：
+
+$$
+\int_M(4\pi\tau)^{-\frac n2}e^{-f}dV=1,\qquad \tau>0.
+$$
+
+$\mathcal W$ 在 $\tau$ 与 $g_{ij}$ 同时缩放下不变（`main.tex:444-445`）。推广 (1.3) 的演化方程组 (3.3) 在 `main.tex:445-447`：
+
+$$
+(g_{ij})_t=-2R_{ij},\quad f_t=-\Delta f+|\nabla f|^2-R+\frac{n}{2\tau},\quad \tau_t=-1 .
+$$
+
+`main.tex:448-451` 把 $f$ 的方程改写成共轭热方程：令 $u=(4\pi\tau)^{-\frac n2}e^{-f}$，则 $\Box^*u=0$，其中共轭热算子
+
+$$
+\Box^*=-\frac{\partial}{\partial t}-\Delta+R .
+$$
+
+于是"直接计算"给出全文的核心单调性公式 (3.4)（`main.tex:451-453`）：
+
+$$
+\frac{d\mathcal W}{dt}=\int_M2\tau\left|R_{ij}+\nabla_i\nabla_j f-\frac{1}{2\tau}g_{ij}\right|^2(4\pi\tau)^{-\frac n2}e^{-f}dV .
+$$
+
+右端是非负被积函数的积分，零点恰是梯度收缩 Ricci 孤子方程 $R_{ij}+\nabla_i\nabla_jf-\frac1{2\tau}g_{ij}=0$。两个泛函常量随之定义（`main.tex:454-457`）：
+
+$$
+\mu(g_{ij},\tau)=\inf_f\mathcal W(g_{ij},f,\tau),\qquad \nu(g_{ij})=\inf_{\tau>0}\mu(g_{ij},\tau),
+$$
+
+第一个 infimum 取遍满足 (3.2) 的光滑 $f$。由 (3.4) 得 $\nu(g_{ij}(t))$ 沿 Ricci 流不减。`main.tex:457-461` 补两条定性事实：闭流形上 $\mu$ 的定义里光滑极小元总是存在；当 $-4\Delta+R$ 的首特征值为正时 $\lim_{\tau\to\infty}\mu(g_{ij},\tau)=+\infty$。
+
+有了 $\nu$ 的单调性，排除收缩呼吸子就归约为一条断言（`main.tex:463-466`）：对闭流形 $M$ 上任意度量 $g_{ij}$，函数 $\mu(g_{ij},\tau)$ 在小 $\tau>0$ 时为负，且 $\tau\to0$ 时趋于零。
+
+证明梗概（`main.tex:466-488`）分两半。第一半给负号：设 $\bar\tau>0$ 小到从 $g_{ij}$ 出发的 Ricci 流在 $[0,\bar\tau]$ 上存在，取 $u=(4\pi\tau)^{-\frac n2}e^{-f}$ 为从 $t=\bar\tau$ 处 $\delta$ 函数出发、$\tau(t)=\bar\tau-t$ 的共轭热方程解，则 $\mathcal W(g_{ij}(t),f(t),\tau(t))$ 在 $t\to\bar\tau$ 时趋于零，故由 (3.4) 沿时间往回看单调不减得到
+
+$$
+\mu(g_{ij},\bar\tau)\le\mathcal W(g_{ij}(0),f(0),\tau(0))<0 .
+$$
+
+第二半给极限零：设 $\tau\to0$，极小元记 $f^\tau$，若有
+
+$$
+\mathcal W(\tfrac12\tau^{-1}g_{ij},f^\tau,\tfrac12)=\mathcal W(g_{ij},f^\tau,\tau)=\mu(g_{ij},\tau)\le c<0,
+$$
+
+则度量 $\frac12\tau^{-1}g_{ij}$ 收敛到欧氏度量，若能从 $f^\tau$ 抽出收敛子列，就在 $\mathbb R^n$ 上得到 $f$ 满足 $\int_{\mathbb R^n}(2\pi)^{-\frac n2}e^{-f}dx=1$ 与
+
+$$
+\int_{\mathbb R^n}\left[\frac12|\nabla f|^2+f-n\right](2\pi)^{-\frac n2}e^{-f}dx<0 .
+$$
+
+该不等式与 Gross 的高斯对数 Sobolev 不等式矛盾。素材给出换到标准形的替换（`main.tex:486-487`）：取 $f=|x|^2/2-2\log\phi$ 并分部积分，上式左边就化成 $\int(\frac12|\nabla\phi|^2+\phi^2\log\phi^2)(2\pi)^{-n/2}dx$ 一类标准量，其非负即 Gross 不等式。素材声明这一论证容易严格化，细节留给读者。
+
+第 3.2 段（`main.tex:491-503`）反过来用 (3.4) 证不等式：在满足 $R_{ij}-g_{ij}-\nabla_ib_j-\nabla_jb_i=0$ 的收缩孤子上，Ricci 流下 $g_{ij}(t)$ 与 $(1-2t)g_{ij}(0)$ 等距，故
+
+$$
+\mu(g_{ij}(t),\tfrac12-t)=\mu(g_{ij}(0),\tfrac12),
+$$
+
+(3.4) 的单调性迫使 $\mu(g_{ij},\frac12)$ 的极小元 $f$ 满足
+
+$$
+R_{ij}+\nabla_i\nabla_j f-g_{ij}=0,
+$$
+
+这就是收缩 Ricci 孤子上的对数 Sobolev 不等式及其等号刻画。第 3.3* 段（`main.tex:504-513`）交代三维无呼吸子定理先前由 Ivey 用几乎非负曲率估计证得，对数 Sobolev 在几何演化方程里先前出现在 Ecker 的工作中。
+
+## 4 无局部坍缩定理 I、$\kappa$-非坍缩与 blow-up 极限
+
+素材第 4 节（`main.tex:515-559`）是 (3.4) 的第一个硬应用。
+
+局部坍缩的定义（`main.tex:518-523`）：设 $g_{ij}(t)$ 是 $(g_{ij})_t=-2R_{ij}$ 在 $[0,T)$ 上的光滑解；若存在时间列 $t_k\to T$ 与时刻 $t_k$ 的度量球 $B_k=B(p_k,r_k)$，使得 $r_k^2/t_k$ 有界、$B_k$ 内 $|Rm|(g_{ij}(t_k))\le r_k^{-2}$、且
+
+$$
+r_k^{-n}\operatorname{Vol}(B_k)\to0,
+$$
+
+则称解在 $T$ 处局部坍缩。定理（`main.tex:523-525`）：$M$ 闭且 $T<\infty$ 时 $g_{ij}(t)$ 在 $T$ 处不局部坍缩。
+
+证明（`main.tex:526-535`）是一条 $\mu$ 的分歧论证。假设存在坍缩球列 $B_k=B(p_k,r_k)$ 于 $t_k\to T$，断言 $\mu(g_{ij}(t_k),r_k^2)\to-\infty$。取试验函数（`main.tex:529-532`）
+
+$$
+f_k(x)=-\log\phi\left(\operatorname{dist}_{t_k}(x,p_k)r_k^{-1}\right)+c_k,
+$$
+
+其中 $\phi$ 在 $[0,\frac12]$ 上取 $1$、在 $[\frac12,1]$ 上递减、在 $[1,\infty)$ 上极接近 $0$，$c_k$ 是归一化常数；由 $r_k^{-n}\operatorname{Vol}(B_k)\to0$ 知 $c_k\to-\infty$。把这些代入 $\mathcal W$ 就得 $\mu(g_{ij}(t_k),r_k^2)\to-\infty$。再用 (3.4) 的单调性把 $\tau=r_k^2$ 处的 infimum 往回推到初始度量：
+
+$$
+\mu(g_{ij}(0),t_k+r_k^2)\le\mu(g_{ij}(t_k),r_k^2)\to-\infty .
+$$
+
+而 $t_k+r_k^2$ 有界（因 $r_k^2/t_k$ 有界且 $t_k\to T<\infty$），有界 $\tau$ 区间上 $\mu(g_{ij}(0),\tau)$ 有下界（第 3 节极小元存在性与紧性），矛盾。
+
+$\kappa$-非坍缩的定义（`main.tex:537-540`）：度量 $g_{ij}$ 称为在尺度 $\rho$ 上 $\kappa$-非坍缩，若每个半径 $r<\rho$ 且满足 $|Rm|(x)\le r^{-2}$（对一切 $x\in B$）的度量球 $B$ 都有体积至少 $\kappa r^n$。两条封闭性质在 `main.tex:541-545`：$\kappa$-非坍缩尺度 $\rho$ 度量列的极限仍 $\kappa$-非坍缩于尺度 $\rho$；$\alpha^2g_{ij}$ 在尺度 $\alpha\rho$ 上 $\kappa$-非坍缩当 $g_{ij}$ 在尺度 $\rho$ 上如此。定理 4.1 的实质推论（`main.tex:545-550`）：给定闭流形上的初始度量与 $T<\infty$，存在 $\kappa=\kappa(g_{ij},T)>0$，使解在 $[0,T)$ 上一致地在尺度 $T^{1/2}$ 上 $\kappa$-非坍缩。
+
+推论（`main.tex:552-559`）是 Hamilton 紧性定理与 $\kappa$-非坍缩的合成：设 $g_{ij}(t)$, $t\in[0,T)$, $M$ 闭, $T<\infty$，若有 $t_k\to T$、$p_k\in M$ 与常数 $C$ 使 $Q_k=|Rm|(p_k,t_k)\to\infty$ 且 $t<t_k$ 时 $|Rm|(x,t)\le CQ_k$，则以因子 $Q_k$ 在 $p_k$ 处缩放（`main.tex:156-160` 说明时间与度量同因子缩放）的度量列有子列光滑收敛（模微分同胚）到 Ricci 流的完备古代解，且该古代解对某 $\kappa>0$ 在所有尺度上 $\kappa$-非坍缩。这一条是后续第 11、12 节全部结构分析的入口。
+
+## 5 统计类比：$\mathcal W$ 是负熵，以及无限维 Ricci-flat 形式
+
+素材第 5 节（`main.tex:559-612`）把 $\mathcal W$ 读成正则系综的负熵，第 6 节（`main.tex:613-704`）把这套读数几何化，并从中读出约化体积的定义。
+
+第 5.1 段（`main.tex:562-569`）先复述热力学：温度 $\beta^{-1}$ 的正则系综配分函数 $Z=\int\exp(-\beta E)d\omega(E)$，态密度测度 $\omega(E)$ 与 $\beta$ 无关，于是
+
+$$
+<E>=-\frac{\partial}{\partial\beta}\log Z,\qquad S=\beta\langle E\rangle+\log Z,\qquad \sigma=\langle(E-\langle E\rangle)^2\rangle=\frac{\partial^2}{(\partial\beta)^2}\log Z .
+$$
+
+然后把几何侧塞进去（`main.tex:570-577`）：固定带概率测度 $m$ 的闭流形 $M$，系统由随温度 $\tau$ 变化的度量 $g_{ij}(\tau)$ 描述，演化方程取
+
+$$
+(g_{ij})_\tau=2(R_{ij}+\nabla_i\nabla_j f),\qquad dm=udV,\quad u=(4\pi\tau)^{-\frac n2}e^{-f},
+$$
+
+配分函数给成 $\log Z=\int(-f+\frac n2)dm$。由此算出三个量（`main.tex:578-582`）：
+
+$$
+\langle E\rangle=-\tau^2\int_M\left(R+|\nabla f|^2-\frac{n}{2\tau}\right)dm,
+$$
+
+$$
+S=-\int_M\left[\tau(R+|\nabla f|^2)+f-n\right]dm,
+$$
+
+$$
+\sigma=2\tau^4\int_M\left|R_{ij}+\nabla_i\nabla_j f-\frac{1}{2\tau}g_{ij}\right|^2dm .
+$$
+
+对照 §3 可见 $S$ 就是 $-\mathcal W$ 在测度 $dm$ 下的形，$\sigma$ 的被积式正是 (3.4) 右端那个无迹平方（差因子 $2\tau^4$ 与测度约定）。`main.tex:582-585` 说明另一种推导：把 (3.3) 里的 $t$ 导数全换成负 $\tau$ 导数，会得到同样的 $Z$、$\langle E\rangle$、$S$、$\sigma$，只是 $dm$ 换成 $udV$。
+
+三条符号结论在 `main.tex:586-596`：$\sigma\ge0$，且只在梯度收缩孤子上为零；$\langle E\rangle\ge0$，只要流对一切足够小的 $\tau>0$ 存在（由命题 1.2 的 $\mathcal F^m\le\frac n{2T}\int dm$ 推出）；熵的符号需要额外假设，两种情形是 (a) $u$ 在 $\tau\to0$ 时趋于 $\delta$ 函数，(b) $u$ 是函数列 $u_i$ 的极限，每个 $u_i$ 在 $\tau\to\tau_i>0$ 时趋于 $\delta$ 函数且 $\tau_i\to0$。情形 (a) 下 $\langle E\rangle$、$S$、$\sigma$ 都随 $\tau\to0$ 归零；情形 (b)（$g_{ij}(\tau)$ 在 $\tau=0$ 奇异时有意义）下 $S$ 可趋于正极限。古代解（流对所有大 $\tau$ 存在）时问 $\tau\to\infty$ 的熵行为，素材提出的问题（`main.tex:599-600`）：$S$ 有界是否必有梯度收缩孤子。第 11 节把这一问题变成一个可证的命题。第 5.2 段（`main.tex:601-605`）说明该类比与重整化群流描述的关系：后者对高能态做平均，前者用指数因子压制高能态。第 5.3* 段（`main.tex:606-609`）申报 Chow 在二维轨道形上找到过另一个 Ricci 流熵公式，与本文公式看不出关系。
+
+第 6.1 段（`main.tex:618-633`）给出实现"恒温器"嵌入的具象度量。取
+
+$$
+\tilde M=M\times\mathbb S^N\times\mathbb R^+,
+$$
+
+下标约定：$i,j$ 跑 $M$ 因子，$\alpha,\beta$ 跑 $\mathbb S^N$ 因子，$\mathbb R^+$ 上的坐标 $\tau$ 记为下标 $0$。度量分量（`main.tex:620-622`）：
+
+$$
+\tilde g_{ij}=g_{ij},\qquad \tilde g_{\alpha\beta}=\tau g_{\alpha\beta},\qquad \tilde g_{00}=\frac{N}{2\tau}+R,
+$$
+
+$$
+\tilde g_{i\alpha}=\tilde g_{i0}=\tilde g_{\alpha 0}=0,
+$$
+
+其中 $g_{ij}$ 按后向 Ricci 流 $(g_{ij})_\tau=2R_{ij}$ 随 $\tau$ 演化，$g_{\alpha\beta}$ 是 $\mathbb S^N$ 上常截面曲率 $\frac1{2N}$ 的度量。算出来的结果（`main.tex:628-634`）：该度量的曲率张量分量与 Hamilton 发现的矩阵 Harnack 表达式及其迹逐分量一致（模 $N^{-1}$），且 Ricci 张量所有分量在模 $N^{-1}$ 意义下为零。热方程与共轭热方程在此框架里变成 Laplace 方程（`main.tex:634-643`）：$u$ 在 $M$ 上满足热方程当且仅当其沿 $\mathbb S^N$ 纤维常值地扩张到 $\tilde M$ 的 $\tilde u$ 满足
+
+$$
+\tilde\Delta\tilde u=0\quad \operatorname{mod} N^{-1},
+$$
+
+而 $u$ 满足共轭热方程当且仅当 $\tilde u^*=\tau^{-\frac{N-1}{2}}\tilde u$ 在 $\tilde M$ 上调和（模 $N^{-1}$）。
+
+第 6.2 段（`main.tex:643-671`）从 $\tilde g$ 造出与系统等距（模 $N^{-1}$）、对应保持 $m$ 的后向流的度量 $g^m$。第一步施加小微分同胚
+
+$$
+(x^i,y^\alpha,\tau)\mapsto\left(x^i,y^\alpha,\tau\left(1-\frac{2f}{N}\right)\right),
+$$
+
+得到分量（模 $N^{-1}$）
+
+$$
+\tilde g^m_{ij}=\tilde g_{ij},\qquad \tilde g^m_{\alpha\beta}=\left(1-\frac{2f}{N}\right)\tilde g_{\alpha\beta},\qquad \tilde g^m_{00}=\tilde g_{00}-2f_\tau-\frac{f}{\tau},\qquad \tilde g^m_{i0}=-\nabla_i f,
+$$
+
+$\tilde g^m_{i\alpha}=\tilde g^m_{\alpha 0}=0$。第二步施加沿 $M$ 方向水平微分同胚，使 $(g^m_{ij})_\tau=2(R_{ij}+\nabla_i\nabla_j f)$，其余分量变成
+
+$$
+g^m_{\alpha\beta}=\left(1-\frac{2f}{N}\right)\tilde g_{\alpha\beta},\qquad g^m_{00}=\tilde g^m_{00}-|\nabla f|^2=\frac1\tau\left(\frac N2-\left[\tau(2\Delta f-|\nabla f|^2+R)+f-n\right]\right),
+$$
+
+$$
+g^m_{i0}=g^m_{\alpha 0}=g^m_{i\alpha}=0 .
+$$
+
+`main.tex:665-671` 的物理读法：$g^m$ 中 $\tau=$ 常数的超曲面体积元是 $\tau^{N/2}e^{-f}$ 乘 $M$ 与 $\mathbb S^N$ 的标准形，其标量曲率在模 $N^{-1}$ 下为
+
+$$
+\frac1\tau\left(\frac N2+\tau(2\Delta f-|\nabla f|^2+R)+f\right),
+$$
+
+于是熵 $S$ 乘 inverse temperature $\beta$ 大体上就是该超曲面总标量曲率的相反数。
+
+第 6.3 段（`main.tex:671-695`）是对 $\tilde g$ 用 Bishop-Gromov 相对体积比较的启发式推导，这一步直接给出约化体积的形式。取球心 $p$ 在 $\tau=0$ 处。$p$ 到任一点 $q$ 的最短测地线必正交于 $\mathbb S^N$ 纤维；这类曲线 $\gamma(\tau)$ 的长度为
+
+$$
+\int_0^{\tau(q)}\sqrt{\frac{N}{2\tau}+R+|\dot\gamma_M(\tau)|^2}\,d\tau=\sqrt{2N\tau(q)}+\frac1{\sqrt{2N}}\int_0^{\tau(q)}\sqrt{\tau}\left(R+|\dot\gamma_M(\tau)|^2\right)d\tau+O(N^{-\frac32}),
+$$
+
+展开用的是 $\sqrt{a+b}=\sqrt a+\frac b{2\sqrt a}+O(b^{3/2}/a^{5/2})$，取 $a=\frac N{2\tau}$。故最短测地线应当在 $M$ 内最小化
+
+$$
+\mathcal L(\gamma)=\int_0^{\tau(q)}\sqrt{\tau}\left(R+|\dot\gamma_M(\tau)|^2\right)d\tau,
+$$
+
+其下确界记 $L(q_M)$。$\tilde M$ 中以 $p$ 为心、半径 $\sqrt{2N\tau(q)}$ 的度量球面在 $O(N^{-1})$ 意义下贴近超曲面 $\tau=\tau(q)$，其体积算作
+
+$$
+V(\mathbb S^N)\int_M\left(\sqrt{\tau(q)}-\frac{1}{2N}L(x)+O(N^{-2})\right)^Ndx,
+$$
+
+用 $(1-x/N)^N\to e^{-x}$ 展开后，该体积与 $\sqrt{2N\tau(q)}^{\,N+n}$ 之比是常数乘 $N^{-\frac n2}$ 再乘
+
+$$
+\int_M\tau(q)^{-\frac n2}\exp\left(-\frac{1}{\sqrt{2\tau(q)}}L(x)\right)dx+O(N^{-1}).
+$$
+
+这个积分被命名为约化体积 $\widetilde V(\tau(q))$（`main.tex:693-694`）。$O(N^{-1})$ 项丢掉后，$\widetilde V$ 恰好是 §6 定义 $\widetilde V(\tau)=\int_M\tau^{-\frac n2}e^{-l(q,\tau)}dq$ 的形式，其中约化距离 $l=\frac1{2\sqrt\tau}L$。`main.tex:694-695` 声明该积分应当随 $\tau$ 减小而增加，严格证明留给第 7 节。第 6.4* 段（`main.tex:696-704`）交代 Chow-Chu 已在 $M\times\mathbb R$ 上构造过解释 Hamilton Harnack 表达式的（可能退化的）黎曼度量并可能满足 Ricci 孤子方程，本文的构造与之在某种意义上对偶；约化体积公式形似 Huisken 平均曲率流的单调性公式，但单调方向相反。
+
+## 6 比较几何：$\mathcal L$-长度、约化距离与 $\widetilde V$ 单调性的严格证明
+
+素材第 7 节（`main.tex:705-910`）把 §5 末尾那个启发式积分变成定理，第 8 节（`main.tex:911-990`）把它用于局部化的无坍缩。
+
+设定（`main.tex:705-709`）：演化度量 $(g_{ij})_\tau=2R_{ij}$，$M$ 闭，或各 $g_{ij}(\tau)$ 完备且曲率一致有界。对曲线 $\gamma(\tau)$, $0<\tau_1\le\tau\le\tau_2$ 关联 $\mathcal L$-长度（`main.tex:710-712`）
+
+$$
+\mathcal L(\gamma)=\int_{\tau_1}^{\tau_2}\sqrt{\tau}\left(R(\gamma(\tau))+|\dot\gamma(\tau)|^2\right)d\tau,
+$$
+
+其中 $R$ 与 $|\dot\gamma|^2$ 都在 $g_{ij}(\tau)$ 里算。记 $X(\tau)=\dot\gamma(\tau)$，沿 $\gamma$ 的变分场 $Y$ 给出一阶变分（`main.tex:716-724`，公式 (7.1)）
+
+$$
+\delta_Y(\mathcal L)=2\sqrt{\tau}\langle X,Y\rangle\Big|_{\tau_1}^{\tau_2}+\int_{\tau_1}^{\tau_2}\sqrt{\tau}\left\langle Y,\nabla R-2\nabla_XX-4\operatorname{Ric}(X,\cdot)-\frac1{\tau}X\right\rangle d\tau,
+$$
+
+推导链是先用挠率为零把 $\langle\nabla_YX,X\rangle$ 换成 $\langle\nabla_XY,X\rangle$，再用 $\frac{d}{d\tau}\langle Y,X\rangle=\langle\nabla_XY,X\rangle+\langle Y,\nabla_XX\rangle$ 把 $2\langle\nabla_XY,X\rangle$ 的一部分搬回 $\langle Y,\nabla_XX\rangle$ 一侧，并把 $\langle Y,2\nabla_XY\rangle$ 写成 $2\operatorname{Ric}(Y,X)$ 与 $\langle Y,\nabla_Y(\cdots)\rangle$ 的组合，最后剩下素材那一行中间的 $\langle Y,\nabla R\rangle+2\frac{d}{d\tau}\langle Y,X\rangle-2\langle Y,\nabla_XX\rangle-4\operatorname{Ric}(Y,X)$。于是 $\mathcal L$-测地线方程 (7.2)（`main.tex:726-728`）：
+
+$$
+\nabla_XX-\frac12\nabla R+\frac1{2\tau}X+2\operatorname{Ric}(X,\cdot)=0 .
+$$
+
+两点 $p,q$ 与 $\tau_2>\tau_1>0$ 之间总有 $\mathcal L$-最短曲线，且每条最短曲线是 $\mathcal L$-测地线；$\tau_1=0$ 的情形可延拓，此时 $\sqrt{\tau}X(\tau)$ 在 $\tau\to0$ 有极限（`main.tex:728-734`）。固定 $p$、$\tau_1=0$，记 $L(q,\bar\tau)$ 为连接 $p,q$ 的 $\mathcal L$-最短曲线的 $\mathcal L$-长度；$L$-测地线不唯一时下面的不等式在 barrier 意义或分布意义仍成立（`main.tex:737-742`）。
+
+一阶变分给出（`main.tex:743-745`）
+
+$$
+\nabla L(q,\bar\tau)=2\sqrt{\bar\tau}X(\bar\tau),\qquad |\nabla L|^2=4\bar\tau|X|^2=-4\bar\tau R+4\bar\tau(R+|X|^2),
+$$
+
+对 $\bar\tau$ 的偏导（`main.tex:747-748`）
+
+$$
+L_{\bar\tau}(q,\bar\tau)=\sqrt{\bar\tau}(R+|X|^2)-\langle X,\nabla L\rangle=2\sqrt{\bar\tau}R-\sqrt{\bar\tau}(R+|X|^2).
+$$
+
+估计 $R+|X|^2$ 要沿 $\gamma$ 求导（`main.tex:750-754`）
+
+$$
+\frac{d}{d\tau}\left(R(\gamma(\tau))+|X(\tau)|^2\right)=R_\tau+\langle\nabla R,X\rangle+2\langle\nabla_XX,X\rangle+2\operatorname{Ric}(X,X),
+$$
+
+代入 (7.2) 消去 $\nabla_XX$ 得
+
+$$
+=R_\tau+\frac1{\tau}R+2\langle\nabla R,X\rangle-2\operatorname{Ric}(X,X)-\frac1{\tau}(R+|X|^2)=-H(X)-\frac1{\tau}(R+|X|^2),
+$$
+
+这里 $H(X)$ 是（取 $t=-\tau$）Hamilton 的迹 Harnack 表达式；由该恒等式可解出 $H(X)=-R_\tau-\frac1{\tau}R-2\langle\nabla R,X\rangle+2\operatorname{Ric}(X,X)$，素材未单列 $H(X)$ 的显式形，本稿按 (7.3) 的等式读。乘积分因子 $\tau^{3/2}$ 就得到公式 (7.4)（`main.tex:756-757`）
+
+$$
+\bar\tau^{\frac32}(R+|X|^2)(\bar\tau)=-K+\frac12 L(q,\bar\tau),\qquad K=K(\gamma,\bar\tau)=\int_0^{\bar\tau}\tau^{\frac32}H(X)d\tau,
+$$
+
+进而 (7.5)、(7.6)（`main.tex:760-765`）
+
+$$
+L_{\bar\tau}=2\sqrt{\bar\tau}R-\frac{1}{2\bar\tau}L+\frac1{\bar\tau}K,\qquad |\nabla L|^2=-4\bar\tau R+\frac2{\sqrt{\bar\tau}}L-\frac4{\sqrt{\bar\tau}}K .
+$$
+
+二阶变分（`main.tex:766-779`）从
+
+$$
+\delta_Y^2(\mathcal L)=\int_0^{\bar\tau}\sqrt{\tau}\left(Y\cdot Y\cdot R+2\langle\nabla_Y\nabla_YX,X\rangle+2|\nabla_YX|^2\right)d\tau
+$$
+
+出发，用 $\frac{d}{d\tau}\langle\nabla_YY,X\rangle=\langle\nabla_X\nabla_YY,X\rangle+\langle\nabla_YY,\nabla_XX\rangle+2Y\cdot\operatorname{Ric}(Y,X)-X\cdot\operatorname{Ric}(Y,Y)$ 换部，$Y(0)=0$ 时得到公式 (7.7)
+
+$$
+\delta_Y^2(\mathcal L)=2\langle\nabla_YY,X\rangle\sqrt{\bar\tau}+\int_0^{\bar\tau}\sqrt{\tau}\left(\nabla_Y\nabla_Y R+2\langle R(Y,X)Y,X\rangle+2|\nabla_XY|^2+2\nabla_X\operatorname{Ric}(Y,Y)-4\nabla_Y\operatorname{Ric}(Y,X)\right)d\tau .
+$$
+
+固定 $Y(\bar\tau)$、$|Y(\bar\tau)|=1$，用常微分方程 (7.8)（`main.tex:783-784`）沿 $\gamma$ 反向构造 $Y$
+
+$$
+\nabla_XY=-\operatorname{Ric}(Y,\cdot)+\frac1{2\tau}Y,
+$$
+
+则 $\frac{d}{d\tau}\langle Y,Y\rangle=2\operatorname{Ric}(Y,Y)+2\langle\nabla_XY,Y\rangle=\frac1{\tau}\langle Y,Y\rangle$，故 $|Y(\tau)|^2=\frac{\tau}{\bar\tau}$，特别 $Y(0)=0$。把 (7.8) 代入 (7.7)、丢弃 $-2\nabla_YY$ 与 (7.2) 左端的标量积，并用 $\frac{d}{d\tau}\operatorname{Ric}(Y,Y)=\operatorname{Ric}_\tau(Y,Y)+\nabla_X\operatorname{Ric}(Y,Y)+\frac1\tau\operatorname{Ric}(Y,Y)-2|\operatorname{Ric}(Y,\cdot)|^2$ 收项，得 (7.9)（`main.tex:799-800`）
+
+$$
+\operatorname{Hess}_L(Y,Y)\le\frac1{\sqrt{\bar\tau}}-2\sqrt{\bar\tau}\operatorname{Ric}(Y,Y)-\int_0^{\bar\tau}\sqrt{\tau}\,H(X,Y)d\tau,
+$$
+
+其中矩阵 Harnack 表达式（`main.tex:801-805`）
+
+$$
+H(X,Y)=-\nabla_Y\nabla_Y R-2\langle R(Y,X)Y,X\rangle-4\left(\nabla_X\operatorname{Ric}(Y,Y)-\nabla_Y\operatorname{Ric}(Y,X)\right)-2\operatorname{Ric}_\tau(Y,Y)+2|\operatorname{Ric}(Y,\cdot)|^2-\frac1{\tau}\operatorname{Ric}(Y,Y).
+$$
+
+对 $\bar\tau$ 处单位正交基求迹即 (7.10)（`main.tex:807-808`）
+
+$$
+\Delta L\le-2\sqrt{\tau}R+\frac n{\sqrt{\tau}}-\frac1{\tau}K .
+$$
+
+$\mathcal L$-Jacobi 场（$\mathcal L$-测地线族变分之导数）满足 (7.11)（`main.tex:813-816`）
+
+$$
+\frac{d}{d\tau}|Y|^2=2\operatorname{Ric}(Y,Y)+\frac1{\sqrt{\bar\tau}}\operatorname{Hess}_L(Y,Y)\le\frac1{\bar\tau}-\frac1{\sqrt{\bar\tau}}\int_0^{\bar\tau}\tau^{\frac12}H(X,\tilde Y)d\tau,
+$$
+
+$\tilde Y$ 由 (7.8) 以 $\tilde Y(\bar\tau)=Y(\bar\tau)$ 解出；等号成立仅当 $\tilde Y$ 本身是 $\mathcal L$-Jacobi 场，此时 $\frac{d}{d\tau}|Y|^2=\frac1{\bar\tau}$。于是（`main.tex:822-831`，公式 (7.12)）对 $\mathcal L$-指数映射的 Jacobi 行列式 $J$，
+
+$$
+\frac{d}{d\tau}\log J(\tau)\le\frac{n}{2\bar\tau}-\frac12\bar\tau^{-\frac32}K,
+$$
+
+等号当且仅当 $2\operatorname{Ric}+\frac1{\sqrt{\bar\tau}}\operatorname{Hess}_L=\frac1{\bar\tau}g$。
+
+定义约化距离（`main.tex:832`）$l(q,\tau)=\frac1{2\sqrt{\bar\tau}}L(q,\bar\tau)$。沿 $\gamma$ 由 (7.4) 得
+
+$$
+\frac{d}{d\tau}l=-\frac1{2\bar\tau}l+\frac12(R+|X|^2)=-\frac12\bar\tau^{-\frac32}K,
+$$
+
+与 (7.12) 相加即得整条 $\mathcal L$-测地线上 $\tau^{-\frac n2}e^{-l(\tau)}J(\tau)$ 随 $\tau$ 不减（`main.tex:836-839`），单调严格除非处于梯度收缩孤子。对 $M$ 积分得约化体积函数（`main.tex:840-841`）
+
+$$
+\widetilde V(\tau)=\int_M\tau^{-\frac n2}\exp(-l(q,\tau))dq
+$$
+
+的单调性。等价地，把 (7.5)、(7.6)、(7.10) 组合成微分不等式 (7.13)（`main.tex:843-845`）
+
+$$
+l_{\bar\tau}-\Delta l+|\nabla l|^2-R+\frac{n}{2\bar\tau}\ge0
+$$
+
+并积分，同样得单调性；另一条常用不等式 (7.14)（`main.tex:846-847`）
+
+$$
+2\Delta l-|\nabla l|^2+R+\frac{l-n}{\bar\tau}\le0 .
+$$
+
+令 $\bar L(q,\tau)=2\sqrt{\tau}L(q,\tau)$，由 (7.5)、(7.10) 得 (7.15)（`main.tex:849-851`）
+
+$$
+\bar L_{\bar\tau}+\Delta\bar L\le2n,
+$$
+
+故 $\bar L(\cdot,\bar\tau)-2n\bar\tau$ 的最小值随 $\bar\tau$ 不减，特别 $\min l(\cdot,\bar\tau)\le\frac n2$ 对每个 $\bar\tau>0$ 成立（`main.tex:851-855`）。$l$ 的下界更容易：$R_\tau=-\Delta R-2|\operatorname{Ric}|^2$ 与极大值原理给出，流存在于 $\tau\in[0,\tau_0]$ 时 $R(\cdot,\tau)\ge-\frac{n}{2(\tau_0-\tau)}$（`main.tex:855-858`）。第 7.4* 段（`main.tex:904-910`）申报这些计算是经典测地线变分理论的自然改写，更近的参照是 Li-Yau 为线性抛物方程引入的"长度"。
+
+第 7.2 段（`main.tex:859-870`）加曲率算子非负假设：Hamilton 微分 Harnack 不等式成立，解定义在 $\tau\in[0,\tau_0]$ 时有
+
+$$
+H(X,Y)\ge-\operatorname{Ric}(Y,Y)\left(\frac1{\tau}+\frac1{\tau_0-\tau}\right)\ge-R\left(\frac1{\tau}+\frac1{\tau_0-\tau}\right)|Y|^2,\qquad H(X)\ge-R\left(\frac1{\tau}+\frac1{\tau_0-\tau}\right),
+$$
+
+故 $\tau\le(1-c)\tau_0$（$c>0$）时由 (7.6)、(7.11) 得 (7.16)、(7.17)
+
+$$
+|\nabla l|^2+R\le\frac{Cl}{\tau},\qquad \frac{d}{d\tau}\log|Y|^2\le\frac1{\tau}(Cl+1)\quad(\text{$\mathcal L$-Jacobi 场 }Y).
+$$
+
+第 7.3 段（`main.tex:871-897`）是约化体积的第一次应用，给定理 4.1 弱化版本的独立证明。把曲率条件加强到抛物邻域：要求 $|Rm|(x,t)\le r_k^{-2}$ 对所有 $x\in B_k$、$t_k-r_k^2\le t\le t_k$。令 $\tau_k(t)=t_k-t$，$p=p_k$，
+
+$$
+\epsilon_k=r_k^{-1}\operatorname{Vol}(B_k)^{\frac1n}\to0 .
+$$
+
+断言 $\widetilde V_k(\epsilon_kr_k^2)<3\epsilon_k^{\frac n2}$（$k$ 大时）。证明用 $\mathcal L$-指数映射把积分搬到 $T_pM$ 上：长度不超过 $\frac12\epsilon_k^{-\frac12}$ 的向量产生的 $\mathcal L$-测地线在时间 $\epsilon_kr_k^2$ 内无法逃出 $B_k$，其贡献不超过 $2\epsilon_k^{\frac n2}$；更长向量的贡献由 Jacobi 行列式比较定理控制，不超过 $\exp(-\frac12\epsilon_k^{-\frac12})$。另一方面 $\widetilde V_k(t_k)$（即 $t=0$ 时）离零有界：由 $\min l_k(\cdot,t_k-\frac12T)\le\frac n2$ 取到 $q_k$，只考虑满足 $\gamma(t_k-\frac12T)=q_k$ 的曲线 $\gamma$，而 $t\in[0,\frac12T]$ 上所有几何量一致有界，故 $l_k(\cdot,t_k)$ 有一致上界。单调性要求 $\widetilde V_k(t_k)\le\widetilde V_k(\epsilon_kr_k^2)$，矛盾。`main.tex:897-904` 顺带加强推论 4.2：所得古代解若定义在 $(-\infty,0)$，则任取 $p$ 与 $t_0>0$、$\tau(t)=t_0-t$ 构造的 $\widetilde V(\tau)$ 都从下方被 $\kappa$ 控制。
+
+第 8 节（`main.tex:911-990`）给局部化版本。定义（`main.tex:913-919`）：解在 $(x_0,t_0)$ 处尺度 $r>0$ 上 $\kappa$-坍缩，若 $|Rm|(x,t)\le r^{-2}$ 对一切满足 $\operatorname{dist}_{t_0}(x,x_0)<r$、$t_0-r^2\le t\le t_0$ 的 $(x,t)$，且时刻 $t_0$ 的球 $B(x_0,r^2)$ 体积小于 $\kappa r^n$。定理 8.2（`main.tex:919-927`）：对任意 $A>0$ 存在 $\kappa=\kappa(A)>0$，使得若光滑解在 $0\le t\le r_0^2$ 上、$|Rm|(x,t)\le r_0^{-2}$ 于 $\operatorname{dist}_0(x,x_0)<r_0$、且初始时刻 $\operatorname{Vol}B(x_0,r_0)\ge A^{-1}r_0^n$，则在满足 $\operatorname{dist}_{r_0^2}(x,x_0)\le Ar_0$ 的点 $(x,r_0^2)$ 处不可能在小于 $r_0$ 的尺度上 $\kappa$-坍缩。
+
+证明（`main.tex:927-940`）先归一 $r_0=1$、$\operatorname{dist}_1(x,x_0)=A$，取 $p=x$、$\tau(t)=1-t$。坍缩逼 $\widetilde V(r^2)$ 极小；$\widetilde V(1)$ 不小，除非 $\min l(\cdot,\frac12)$ 在 $\operatorname{dist}_{1/2}(\cdot,x_0)\le\frac1{10}$ 的球上很大；于是要用 (7.15) 与极大值原理估计 $\bar L$，这需要距离函数的下界。引理 8.3（`main.tex:941-949`）正是这一条：设 $\operatorname{Ric}(x,t_0)\le(n-1)K$ 当 $\operatorname{dist}_{t_0}(x,x_0)<r_0$，则 $d(x,t)=\operatorname{dist}_t(x,x_0)$ 在 $t=t_0$、$B(x_0,r_0)$ 外满足
+
+$$
+d_t-\Delta d\ge-(n-1)\left(\frac23Kr_0+r_0^{-1}\right)
+$$
+
+（必要时按 barrier 意义理解），以及 $\frac{d}{dt}\operatorname{dist}_t(x_0,x_1)\ge-2(n-1)(\frac23Kr_0+r_0^{-1})$ 于 $t=t_0$。证明（`main.tex:950-965`）用 $d_t(x)=\int_\gamma-\operatorname{Ric}(X,X)$ 与 $\Delta d\le\sum_{k=1}^{n-1}s''_{Y_k}(\gamma)$，$Y_k$ 在 $x_0$ 处消失、在 $x$ 处补足 $X$ 成正交基，$s''_{Y_k}$ 是长度的二阶变分；取 $Y_k$ 在 $x$ 到 $x_1$（$d(x_1,t_0)=r_0$）之间平行、在 $x_1$ 到 $x_0$ 之间线性，则
+
+$$
+\Delta d\le\int_{r_0}^{d(x,t_0)}-\operatorname{Ric}(X,X)ds+\int_0^{r_0}\left(\frac{s^2}{r_0^2}(-\operatorname{Ric}(X,X))+\frac{n-1}{r_0^2}\right)ds=d_t+\int_0^{r_0}\left(\operatorname{Ric}(X,X)\left(1-\frac{s^2}{r_0^2}\right)+\frac{n-1}{r_0^2}\right)ds,
+$$
+
+末式用 $\operatorname{Ric}(X,X)\ge-(n-1)K$ 与 $\int_0^{r_0}(1-s^2/r_0^2)ds=\frac23r_0$ 定出上界 $(n-1)(\frac23Kr_0+r_0^{-1})$。
+
+主证明（`main.tex:966-990`）对
+
+$$
+h(y,t)=\phi\left(d(y,t)-A(2t-1)\right)\left(\bar L(y,1-t)+2n+1\right)
+$$
+
+用极大值原理，$\phi$ 在 $(-\infty,\frac1{20})$ 上取 $1$、在 $(\frac1{20},\frac1{10})$ 上快速升到无穷，并满足 (8.1)
+
+$$
+2(\phi')^2/\phi-\phi''\ge(2A+100n)\phi'-C(A)\phi,
+$$
+
+$C(A)<\infty$。由 7.1 末注 $\bar L+2n+1\ge1$ 于 $t\ge\frac12$；$\min h(y,1)\le h(x,1)=2n+1$，$\min h(y,\frac12)$ 在 $d(y,\frac12)\le\frac1{10}$ 处取到。计算（公式 (8.2)、(8.3)）
+
+$$
+\Box h=(\bar L+2n+1)(-\phi''+(d_t-\Delta d-2A)\phi')-2\langle\nabla\phi,\nabla\bar L\rangle+(\bar L_t-\Delta\bar L)\phi,
+$$
+
+$$
+\nabla h=(\bar L+2n+1)\nabla\phi+\phi\nabla\bar L .
+$$
+
+在 $h$ 的极小点 $\nabla h=0$，故 (8.4)
+
+$$
+\Box h=(\bar L+2n+1)\left(-\phi''+(d_t-\Delta d-2A)\phi'+2(\phi')^2/\phi\right)+(\bar L_t-\Delta\bar L)\phi .
+$$
+
+$\phi'\ne0$ 处 $d(y,t)\ge\frac1{20}$ 且 $B(x_0,\frac1{20})$ 内 $\operatorname{Ric}\le n-1$，引理 8.3(a) 给 $d_t-\Delta d\ge-100(n-1)$；配 (8.1) 与 (7.15) 得
+
+$$
+\Box h\ge-(\bar L+2n+1)C(A)\phi-2n\phi\ge-(2n+C(A))h,
+$$
+
+即 $\min h$ 不能下降太快，所需的 $\bar L$ 上界成立，定理得证。
+
+## 7 共轭热方程的微分 Harnack 不等式与伪局部性定理
+
+素材第 9 节（`main.tex:991-1053`）把 (3.4) 换成逐点形式，第 10 节（`main.tex:1055-1239`）用它证明伪局部性。
+
+命题（`main.tex:992-998`）：设 $g_{ij}(t)$ 解 $(g_{ij})_t=-2R_{ij}$, $0\le t\le T$，$u=(4\pi(T-t))^{-\frac n2}e^{-f}$ 满足共轭热方程
+
+$$
+\Box^*u=-u_t-\Delta u+Ru=0,
+$$
+
+则
+
+$$
+v=\left[(T-t)(2\Delta f-|\nabla f|^2+R)+f-n\right]u
+$$
+
+满足公式 (9.1)
+
+$$
+\Box^*v=-2(T-t)\left|R_{ij}+\nabla_i\nabla_j f-\frac1{2(T-t)}g_{ij}\right|^2 .
+$$
+
+素材声明证明是"routine computation"（`main.tex:998`），右端非正。它蕴含 (3.4)：把 $v$ 对 $dm=udV$ 积分并用 $\frac{d}{dt}\int uv=\int((\Box u)v-u(\Box^*v))$（$\Box=\partial_t-\Delta$ 与 $\Box^*$ 互为形式伴生，见 `main.tex:1036-1037`）即得 $\mathcal W$ 的单调；逐点形式的优势在需要局部论证时显现（`main.tex:1000-1002`）。
+
+三条推论依次是（`main.tex:1003-1027`）：
+
+1. 闭流形上（或极大值原理可用时）$\min v/u$ 随 $t$ 不减。
+2. 若 $u$ 在 $t\to T$ 时趋于 $\delta$ 函数，则 $v\le0$ 对所有 $t<T$。证明（`main.tex:1007-1013`）取 $h$ 满足随演化度量走的普通热方程 $h_t=\Delta h$，则 $\frac{d}{dt}\int hu=0$ 而 $\frac{d}{dt}\int hv\ge0$（由 (9.1)），只需验证对处处正的 $h$ 有 $\lim_{t\to T}\int hv\le0$，而该极限其实是零。
+3. 同假设下对任意光滑曲线 $\gamma(t)$ 成立公式 (9.2)
+
+$$
+-\frac{d}{dt}f(\gamma(t),t)\le\frac12\left(R(\gamma(t),t)+|\dot\gamma(t)|^2\right)-\frac1{2(T-t)}f(\gamma(t),t) .
+$$
+
+推导（`main.tex:1017-1023`）：由 $f_t=-\Delta f+|\nabla f|^2-R+\frac{n}{2(T-t)}$ 与 $v\le0$ 得
+
+$$
+f_t+\frac12R-\frac12|\nabla f|^2-\frac{f}{2(T-t)}\ge0,
+$$
+
+另一方面
+
+$$
+-\frac{d}{dt}f(\gamma(t),t)=-f_t-\langle\nabla f,\dot\gamma\rangle\le-f_t+\frac12|\nabla f|^2+\frac12|\dot\gamma|^2,
+$$
+
+用了 $-\langle\nabla f,\dot\gamma\rangle\le\frac12|\nabla f|^2+\frac12|\dot\gamma|^2$（即 $-2ab\le a^2+b^2$）。两式相加即 (9.2)。
+4. 若 $\delta$ 函数集中在 $p$，则
+
+$$
+f(q,t)\le l(q,T-t),
+$$
+
+$l$ 是用 $p$ 与 $\tau(t)=T-t$ 定义的约化距离。证明（`main.tex:1028`）是把 (7.13) 写成 $\Box^*\exp(-l)\le0$ 后用比较。
+
+第 9.6 段（`main.tex:1029-1044`）用共轭热方程基本解刻画 Ricci 流本身：设 $(g_{ij})_t=A_{ij}(t)$，则 $\Box=\partial_t-\Delta$、$\Box^*=-\partial_t-\Delta-\frac12A$（$A=g^{ij}A_{ij}$），使 $\frac{d}{dt}\int uv=\int((\Box u)v-u(\Box^*v))$。取 $\Box^*$ 从 $(p,0)$ 处 $\delta$ 函数出发的基本解 $u=(-4\pi t)^{-\frac n2}e^{-f}$，对一般 $A_{ij}$，函数 $(\Box\bar f+\frac{\bar f}t)(q,t)$（$\bar f=f-\int fu$）在 $(p,0)$ 附近是 $O(1)$；Ricci 流 $A_{ij}=-2R_{ij}$ 由条件 $(\Box\bar f+\frac{\bar f}t)(q,t)=o(1)$ 刻画，此时它实际是 $O(|pq|^2+|t|)$。
+
+定理 10.1（伪局部性，`main.tex:1056-1065`）：对每个 $\alpha>0$ 存在 $\delta>0$、$\epsilon>0$，使得若有光滑解 $(g_{ij})_t=-2R_{ij}$ 在 $0\le t\le(\epsilon r_0)^2$ 上，且 $t=0$ 时 $R(x)\ge-r_0^{-2}$ 与
+
+$$
+\operatorname{Vol}(\partial\Omega)^n\ge(1-\delta)c_n\operatorname{Vol}(\Omega)^{n-1}
+$$
+
+对任意 $x,\Omega\subset B(x_0,r_0)$ 成立（$c_n$ 为欧氏等周常数），则
+
+$$
+|Rm|(x,t)\le\alpha t^{-1}+(\epsilon r_0)^{-2}
+$$
+
+ whenever $0<t\le(\epsilon r_0)^2$、$d(x,t)=\operatorname{dist}_t(x,x_0)<\epsilon r_0$。`main.tex:1065-1071` 的读法：Ricci 流下几乎奇异的区域不能立刻显著影响几乎欧氏的区域；按重整化群流的解释，高能标上看起来平凡的区域在略低能标上不会突然变得高度非平凡。
+
+证明是反证加三步断言。归一 $r_0=1$（`main.tex:1090-1093`），可设 $\alpha$ 小，$\alpha<\frac1{100n}$，记
+
+$$
+M_\alpha=\{(x,t):|Rm|(x,t)\ge\alpha t^{-1}\}.
+$$
+
+断言 1（`main.tex:1094-1102`）：若 $g_{ij}(t)$ 在 $0\le t\le\epsilon^2$ 上、$A\epsilon<\frac1{100n}$，且存在 $(x,t)$（$0\le t\le\epsilon^2$、$d(x,t)<\epsilon$）使 $|Rm|(x,t)>\alpha t^{-1}+\epsilon^{-2}$，则可找到 $(\bar x,\bar t)\in M_\alpha$，$0<\bar t\le\epsilon^2$、$d(\bar x,\bar t)<(2A+1)\epsilon$，使得公式 (10.1)、(10.2)
+
+$$
+|Rm|(x,t)\le4|Rm|(\bar x,\bar t)\quad\text{只要}\quad(x,t)\in M_\alpha,\ 0<t\le\bar t,\ d(x,t)\le d(\bar x,\bar t)+A|Rm|^{-\frac12}(\bar x,\bar t).
+$$
+
+构造是迭代序列 $(x_k,t_k)$：起点任取满足 $0<t_1\le\epsilon^2$、$d(x_1,t_1)<\epsilon$、$|Rm|(x_1,t_1)\ge\alpha t_1^{-1}+\epsilon^{-2}$ 的点；若 $(x_k,t_k)$ 因某 $(x,t)$ 满足 (10.2) 而不满足 (10.1) 而不能用，就把它取作 $(x_{k+1},t_{k+1})$。于是（`main.tex:1111-1112`）
+
+$$
+|Rm|(x_k,t_k)\ge4^{k-1}|Rm|(x_1,t_1)\ge4^{k-1}\epsilon^{-2},\qquad d(x_k,t_k)\le(2A+1)\epsilon,
+$$
+
+解光滑故序列有限，末元素即为所求。断言 2（`main.tex:1114-1128`）：对上述 $(\bar x,\bar t)$，记 $Q=|Rm|(\bar x,\bar t)$，则 (10.1) 在抛物柱（公式 (10.3)）
+
+$$
+\bar t-\frac12\alpha Q^{-1}\le t\le\bar t,\qquad \operatorname{dist}_{\bar t}(x,\bar x)\le\frac1{10}AQ^{-\frac12}
+$$
+
+内成立。理由：$Q\ge\alpha\bar t^{-1}$ 给 $\bar t-\frac12\alpha Q^{-1}\ge\frac12\bar t$；不满足 (10.1) 的点必属 $M_\alpha$；三角不等式给 $d(x,\bar t)\le d(\bar x,\bar t)+\frac1{10}AQ^{-1/2}$；再用引理 8.3(b) 知 $t$ 从 $\bar t$ 降到 $\bar t-\frac12\alpha Q^{-1}$ 时 $x$ 逃不出以 $x_0$ 为心、半径 $d(\bar x,\bar t)+AQ^{-1/2}$ 的球。
+
+主论证（`main.tex:1129-1139`）取 $\epsilon\to0$、$\delta\to0$ 与违反结论的解列，缩 $\epsilon$ 后可设公式 (10.4)
+
+$$
+|Rm|(x,t)\le\alpha t^{-1}+2\epsilon^{-2}\quad\text{当 }0\le t\le\epsilon^2,\ d(x,t)\le\epsilon,
+$$
+
+取 $A=\frac11{100n\epsilon}\to\infty$，构造 $(\bar x,\bar t)$，考虑从 $(\bar x,\bar t)$ 处 $\delta$ 函数出发的共轭热方程解 $u=(4\pi(\bar t-t))^{-\frac n2}e^{-f}$ 与对应的非正函数 $v$。断言 3（`main.tex:1139-1162`，梗概）：可取时刻 $\tilde t\in[\bar t-\frac12\alpha Q^{-1},\bar t]$ 使球 $B$（时刻 $\tilde t$、以 $\bar x$ 为心、半径 $\sqrt{\bar t-\tilde t}$）上的 $\int_Bv$ 离零有界。论证用缩放极限：若缩放后度量在 $(\bar x,\bar t)$ 的单射半径离零有界，则 Hamilton 紧性定理给完备极限，$|Rm|(\bar x,\bar t)=1$ 且在 $\bar t-\frac12\alpha\le t\le\bar t$ 上 $|Rm|\le4$；基本解 $u$ 收敛到极限流形上的基本解，而极限流形上 $\int_Bv$ 在 $\tilde t=\bar t-\frac12\alpha$ 不能为零，否则 (9.1)  forcing 极限为梯度收缩孤子，与 $|Rm|(\bar x,\bar t)=1$ 相容但与其无界曲率演化不兼容。若单射半径趋于零，则改缩放因子使极限为有限单射半径的平坦流形，此时可选 $\tilde t$ 使 $\int_Bv\to-\infty$。记该下界为 $\beta>0$。
+
+截断函数取（`main.tex:1164-1176`）
+
+$$
+h(y,t)=\phi\left(\frac{\tilde d(y,t)}{10A\epsilon}\right),\qquad \tilde d(y,t)=d(y,t)+200n\sqrt t,
+$$
+
+$\phi$ 在 $(-\infty,1]$ 上为 $1$、在 $[1,2]$ 上递减到零；$h$ 在 $t=0$ 时于 $B(x_0,20A\epsilon)$ 外为零，在 $(\bar x,\bar t)$ 附近为 $1$。计算
+
+$$
+\Box h=\frac1{10A\epsilon}\left(d_t-\Delta d+\frac{100n}{\sqrt t}\right)\phi'-\frac1{(10A\epsilon)^2}\phi'',
+$$
+
+由引理 8.3(a) 与 (10.4)，$\phi'\ne0$ 处 $d_t-\Delta d+\frac{100n}{\sqrt t}\ge0$；再取 $\phi''\ge-10\phi$、$(\phi')^2\le10\phi$。于是
+
+$$
+\left(\int_Mhu\right)_t=\int_M(\Box h)u\le\frac1{(A\epsilon)^2},
+$$
+
+给出 $\int_Mhu\big|_{t=0}\ge\int_Mhu\big|_{t=\bar t}-\frac{\bar t}{(A\epsilon)^2}\ge1-A^{-2}$。又由 (9.1)
+
+$$
+\left(\int_M-hv\right)_t\le\int_M-(\Box h)v\le\frac1{(A\epsilon)^2}\int_M-hv,
+$$
+
+配断言 3 得 $-\int_Mhv\big|_{t=0}\ge\beta\exp(-\frac{\bar t}{(A\epsilon)^2})\ge\beta(1-A^{-2})$。
+
+在 $t=0$ 收网（`main.tex:1183-1189`）。令 $\tilde u=hu$、$\tilde f=f-\log h$，则
+
+$$
+\beta(1-A^{-2})\le-\int_Mhv=\int_M\left[(-2\Delta f+|\nabla f|^2-R)\bar t-f+n\right]hu
+$$
+
+$$
+=\int_M\left[-\bar t|\nabla\tilde f|^2-\tilde f+n\right]\tilde u+\int_M\left[\bar t(|\nabla h|^2/h-Rh)-h\log h\right]u\le\int_M\left[-\bar t|\nabla\tilde f|^2-\tilde f-n\right]\tilde u+A^{-2}+100\epsilon^2,
+$$
+
+其中 $-\int_Muh\log h$ 不超过 $u$ 在环形区域 $B(x_0,20A\epsilon)\setminus B(x_0,10A\epsilon)$ 上的积分，而 $\int_{B(x_0,10A\epsilon)}u\ge\int_M\bar hu\ge1-A^{-2}$（$\bar h=\phi(\frac{\tilde d}{5A\epsilon})$）。把度量乘因子 $\frac12\bar t^{-1}$ 并令 $\epsilon,\delta\to0$，得到半径趋于无穷的度量球列与紧支非负函数列 $u=(2\pi)^{-\frac n2}e^{-f}$，$\int u\to1$ 且
+
+$$
+\int\left[-\frac12|\nabla f|^2-f+n\right]u
+$$
+
+被正常数从下方控制；同时等周常数趋于欧氏常数。这与高斯对数 Sobolev 不等式冲突（球对称重排即可看出，`main.tex:1199-1201`）。
+
+后续四条（`main.tex:1202-1239`）：推论 10.2 给同假设下 $0<t\le(\epsilon r_0)^2$、$x\in B(x_0,\epsilon r_0)$ 时 $\operatorname{Vol}B(x,\sqrt t)\ge c\sqrt t^{\,n}$（$c=c(n)$ 通用）；定理 10.3 把等周假设换成体积假设 $\operatorname{Vol}B(x_0,r_0)\ge(1-\delta)\omega_nr_0^n$（$\omega_n$ 为 $\mathbb R^n$ 单位球体积），结论 $|Rm|(x,t)\le(\epsilon r_0)^{-2}$ 于 $0\le t\le(\epsilon r_0)^2$、$\operatorname{dist}_t(x,x_0)<\epsilon r_0$，证明留给读者，并提问体积假设是否多余；推论 10.4 把 8.2、10.1、10.2 合成"在尺度 $\sqrt t$ 上不 $\kappa(A)$-坍缩"，条件是 $A^{-1}(\epsilon r_0)^2\le t\le(\epsilon r_0)^2$、$\operatorname{dist}_t(x,x_0)\le Ar_0$；第 10.5 段说明从 10.1 可直接得到 Cheeger 微分同胚有限性定理的变体（用 Levy-Gromov 等周不等式把 $\operatorname{Ric}$ 下界加几乎欧氏体积下界转成假设），这比 Cheeger-Colding 的结论假设更弱。
+
+## 8 古代解的结构、$\epsilon$-颈与三维 Ricci 流的整体图景
+
+素材第 11 节（`main.tex:1240-1469`）分类奇点模型，第 12 节（`main.tex:1471-1683`）在三维几乎非负曲率下控制高曲率区域，第 13 节（`main.tex:1684-1759`）给出整体图景与手术。
+
+第 11.1 段（`main.tex:1241-1257`）的框架：考虑 $-\infty<t\le0$ 上的光滑解 $(g_{ij})_t=-2R_{ij}$，每个时刻 $g_{ij}(t)$ 完备、非平、曲率有界、曲率算子非负。Hamilton 的微分 Harnack 不等式只需其迹形式 (11.1)（`main.tex:1246-1247`）
+
+$$
+R_t+2\langle X,\nabla R\rangle+2\operatorname{Ric}(X,X)\ge0,
+$$
+
+其推论 $R_t\ge0$ 说明某时刻 $t_0\le0$ 的标量曲率控制所有 $t\le t_0$ 的曲率。再加一条：固定 $\kappa>0$，要求 $g_{ij}(t)$ 在所有尺度上 $\kappa$-非坍缩。`main.tex:1252-1257` 声明该要求与"熵 $S$ 一致有界"等价，$S$ 按 5.1 用共轭热方程任一基本解定义。这正是 §5 末尾提出的问题的答案形态。
+
+第 11.2 段（`main.tex:1257-1290`）：任取 $(p,t_0)$，按 7.1 用 $\tau(t)=t_0-t$ 定义 $\widetilde V(\tau)$、$l(q,\tau)$；对每个 $\tau>0$ 可找 $q(\tau)$ 使 $l(q,\tau)\le\frac n2$。命题：以因子 $\tau^{-1}$ 在 $q(\tau)$ 处缩放 $g_{ij}(t_0-\tau)$，沿 $\tau\to\infty$ 的子列收敛到非平梯度收缩孤子。证明梗概的推导链（`main.tex:1264-1290`）：由 (7.16)，对每个 $\epsilon>0$ 存在 $\delta>0$，使 $\frac12\bar\tau\le\tau\le\bar\tau$、$\operatorname{dist}^2_{t_0-\bar\tau}(q,q(\bar\tau))\le\epsilon^{-1}\bar\tau$ 时 $l(q,\tau)$ 与 $\tau R(q,t_0-\tau)$ 都不超过 $\delta^{-1}$；配 $\kappa$-非坍缩可取 blow-down 极限 $\bar g_{ij}(\tau)$，定义在 $\tau\in(\frac12,1)$、$(\bar g_{ij})_\tau=2\bar R_{ij}$；$l$ 收敛到局部 Lipschitz 的 $\bar l$，满足 (7.13)、(7.14)（分布意义）。因 $\widetilde V(\tau)$ 不减且离零有界，极限 $\bar V(\tau)$ 必为正常数；该常数严格小于 $\lim_{\tau\to0}\widetilde V(\tau)=(4\pi)^{\frac n2}$（因 $g_{ij}(t)$ 非平）。于是 (7.14) 取等号，故 $\bar l$ 光滑；由 (7.12) 等号刻画，$\bar g_{ij}(\tau)$ 是梯度收缩孤子，满足
+
+$$
+\bar R_{ij}+\bar\nabla_i\bar\nabla_j\bar l-\frac1{2\tau}\bar g_{ij}=0 .
+$$
+
+若该孤子平坦，则 $\bar l$ 由 (7.14) 取等唯一确定，此时 $\bar V$ 恰为 $(4\pi)^{\frac n2}$，被排除。
+
+推论（`main.tex:1291-1301`）：满足 11.1 假设的二维定向解只有圆球面。理由：Hamilton 证明圆球面是二维非平、非负曲率梯度收缩孤子之唯一，故缩放极限必为圆球面；又 Hamilton 证明几乎圆的球面在 Ricci 流下变得更圆，故原古代解必为圆的。
+
+第 11.3 段（`main.tex:1301-1327`）：非紧完备流形 $M$、$\operatorname{Ric}\ge0$、$p\in M$ 时 $\operatorname{Vol}B(p,r)r^{-n}$ 随 $r>0$ 不增，故可定义渐近体积比
+
+$$
+\mathcal V=\lim_{r\to\infty}\operatorname{Vol}B(p,r)r^{-n}.
+$$
+
+命题：11.1 假设下每个 $t$ 都有 $\mathcal V=0$。证明按维数归纳，二维已证。设 $n\ge3$、$\mathcal V>0$ 于某 $t_0$，考虑渐近标量曲率比 $\mathcal R=\limsup R(x,t_0)d^2(x)$（$d(x)$ 为 $t_0$ 时到定点 $x_0$ 的距离）。三分支：$\mathcal R=\infty$ 时可选点列 $x_k$、半径 $r_k>0$ 使 $r_k/d(x_k)\to0$、$R(x_k)r_k^2\to\infty$、$B(x_k,r_k)$ 内 $R(x)\le2R(x_k)$；以因子 $R(x_k)$ 在 $(x_k,t_0)$ blow-up 得非平古代解并分裂出一条直线（Aleksandrov-Toponogov 凹性的标准论证），于是可降维。$0<\mathcal R<\infty$ 时同样论证给出有限半径球内的 blow-up 极限为非平度量锥，被 Hamilton 对非负曲率算子的强极大值原理排除。$\mathcal R=0$ 时（三维及以上）度量平坦。
+
+推论 11.5（`main.tex:1327-1347`）：对每个 $\epsilon>0$ 存在 $A<\infty$，使得若非完备、曲率算子非负的解列 $(g_k)_{ij}(t)$ 定义在 $M_k\times[t_k,0]$、$t=0$ 时球 $B(x_k,r_k)$ 紧含于 $M_k$、$\frac12R(x,t)\le R(x_k,0)=Q_k$ 且 $t_kQ_k\to-\infty$、$r_k^2Q_k\to\infty$，则 $k$ 大时
+
+$$
+\operatorname{Vol}B(x_k,A/\sqrt{Q_k})\le\epsilon(A/\sqrt{Q_k})^n .
+$$
+
+反证取 blow-up 极限得 $\mathcal V(t)>0$ 的非平古代解，可能不满足 $\kappa$-非坍缩；但若对每个 $\kappa>0$ 都违反，则 $\mathcal V(t)$ 在 $t\to-\infty$ 时不离零有界，而 $\mathcal V(t)$ 随 $t$ 不增（Ricci 流降体积，且由引理 8.3(b) 距离每单位时间降速不超过 $C\sqrt R$），矛盾。
+
+推论 11.6（`main.tex:1348-1391`）：对每个 $w>0$ 存在 $B(w)<\infty$、$C(w)<\infty$、$\tau_0(w)>0$。(a) 若解在 $M\times[t_0,0]$ 上、$t=0$ 时 $B(x_0,r_0)$ 紧含于 $M$、每个 $t\in[t_0,0]$ 曲率算子非负且 $\operatorname{Vol}B(x_0,r_0)\ge wr_0^n$，则
+
+$$
+R(x,t)\le Cr_0^{-2}+B(t-t_0)^{-1}\quad\text{当 }\operatorname{dist}_t(x,x_0)\le\tfrac14r_0 .
+$$
+
+(b) 若体积下界只在 $t=0$ 假设，则结论同上、把 $t_0$ 换成 $-\tau_0r_0^2$，条件是 $-t_0\ge\tau_0r_0^2$。证明归一 $r_0=1$，(a) 反证取 $B,C\to\infty$ 与违反点 $(x,t)$，按 10.1 的断言 1、2 论证找到 $(\bar x,\bar t)$ 满足 $\operatorname{dist}_{\bar t}(\bar x,x_0)<\frac13$、$Q=R(\bar x,\bar t)>C+B(\bar t-t_0)^{-1}$、且 $R(x',t')\le2Q$ 于 $\bar t-AQ^{-1}\le t'\le\bar t$、$\operatorname{dist}_{\bar t}(x',\bar x)<AQ^{-\frac12}$（$A$ 随 $B,C$ 趋于无穷）；在 $(\bar x,\bar t)$ 用推论 11.5 加相对体积比较与 $w$ 假设矛盾。(b) 取 $B=B(5^{-n}w)$、$C=C(5^{-n}w)$，设 $[-\tau,0]$ 是把 $w$ 换成 $5^{-n}w$ 后 (a) 假设仍成立的最大时间区间，则 $t=-\tau$ 时 $\operatorname{Vol}B(x_0,1)\le5^{-n}w$；由引理 8.3(b)，$t=-\tau$ 时的 $B(x_0,\frac14)$ 包含 $t=0$ 时的 $B(x_0,\frac14-10(n-1)(\tau\sqrt C+2\sqrt{B\tau}))$，前者体积不小于后者，故取 $\tau_0(w)$ 使后者半径 $>\frac15$ 即可。素材补言（`main.tex:1388-1391`）：把"曲率算子非负"换成在以 $x_0$ 为心的时变度量球内 $\ge-r_0^{-2}$ 同样成立。
+
+第 11.7 段（`main.tex:1392-1433`）限制到三维定向流形。闭流形情形：11.1 假设下解必为 $\mathbb S^3$ 或 $\mathbb S^2\times\mathbb R$ 的商（同二维论证，梯度收缩孤子已由 Hamilton 分类）。定理（非紧情形）：满足 11.1 假设的非紧古代解之集合在缩放意义下紧，即从任一组以 $(x_k,0)$ 为中心、$R(x_k,0)=1$ 的解中可抽出光滑收敛子列，极限满足同样条件。证明要点：只需证 $R(y_k,0)\to\infty$ 时 $\operatorname{dist}_0(x_k,y_k)\to\infty$。反设不然，按 $R(z_k,0)\operatorname{dist}_0^2(x_k,z_k)=1$ 且 $z_k$ 是 $t=0$ 时离 $x_k$ 最近的这类点来定义 $z_k$；断言 $R(z,0)/R(z_k,0)$ 在 $B(z_k,2R(z_k,0)^{-\frac12})$ 上一致有界，否则用 11.5 与非负曲率相对体积比较知 $B(z_k,R(z_k,0)^{-\frac12})$ 在其半径尺度上坍缩。于是 Shi 的局部导数估计给 $|R_t(z_k,t)|$ 阶为 $R^2(z_k,0)$；再用积分 (11.1) 得到的 Harnack 不等式比出
+
+$$
+1=R(x_k,0)\ge cR(z_k,-cR^{-1}(z_k,0))\ge cR(z_k,0)
+$$
+
+（某小 $c>0$），故 $R(z_k,0)$ 有界；此时 $y_k$ 在有界距离内导致 $B(x_k,c)$ 坍缩，矛盾。极限在 $t=0$ 曲率有界的证明：不然可取 $y_i\to\infty$、$R(y_i,0)\to\infty$、$B(y_i,A_iR(y_i,0)^{-\frac12})$ 内 $R(y,0)\le2R(y_i,0)$（$A_i\to\infty$）；以因子 $R(y_i,0)$ 缩放取极限，得满足 11.1 且分裂直线的解，由 11.3 必为圆无限柱；故 $i$ 大时每个 $y_i$ 落在半径 $(\frac12R(y_i,0))^{-\frac12}\to0$ 的圆柱形颈中，这在非负曲率的开流形上不可能。
+
+第 11.8 段（`main.tex:1433-1450`）定义 $\epsilon$-颈：固定 $\epsilon>0$，$x_0$ 称为 $\epsilon$-颈的中心，若集合
+
+$$
+\{(x,t):-(\epsilon Q)^{-1}<t\le0,\ \operatorname{dist}_0^2(x,x_0)<(\epsilon Q)^{-1}\},\qquad Q=R(x_0,0)
+$$
+
+内的解以因子 $Q$ 缩放后（在某固定光滑拓扑下）$\epsilon$-接近 evolving 圆柱的对应部分，该圆柱在 $t=0$ 标量曲率为 $1$。推论（定理 11.7 及其证明）：对任意 $\epsilon>0$ 存在 $C=C(\epsilon,\kappa)>0$，使 $M_\epsilon=\{x:x$ 不是 $\epsilon$-颈中心$\}$ 紧、
+
+$$
+\operatorname{diam}M_\epsilon\le CQ^{-\frac12},\qquad C^{-1}Q\le R(x,0)\le CQ\ (x\in M_\epsilon),
+$$
+
+其中 $Q=R(x_0,0)$ 取 $x_0\in\partial M_\epsilon$。第 11.9 段（`main.tex:1450-1467`）两条申报：存在 $\kappa_0>0$ 使任一满足某 $\kappa>0$ 的解自动满足 $\kappa=\kappa_0$；作者相信三维非紧、$\kappa$-非坍缩、曲率有界正的古代解在同缩放下唯一，即 R. Bryant 研究的旋转对称梯度稳态孤子，并申报有"可信但不够严格"的论证说明这类古代解可延为 eternal 解（$t\in(-\infty,+\infty)$），梯度稳态孤子类中的唯一性可证。
+
+第 12.1 段（`main.tex:1472-1475`）定义 $\phi$-几乎非负曲率：$\phi$ 是趋于零的递减函数，解满足
+
+$$
+Rm(x,t)\ge-\phi(R(x,t))R(x,t)\quad\text{对每个 }(x,t).
+$$
+
+定理 12.1（`main.tex:1476-1566`）：给定 $\epsilon>0$、$\kappa>0$ 与这样的 $\phi$，存在 $r_0>0$，使得闭三维流形上有 $\phi$-几乎非负曲率、在尺度 $<r_0$ 上 $\kappa$-非坍缩的解 $g_{ij}(t)$（$0\le t\le T$）满足：对任意 $t_0\ge1$、$Q=R(x_0,t_0)\ge r_0^{-2}$ 的 $(x_0,t_0)$，区域
+
+$$
+\{(x,t):\operatorname{dist}^2_{t_0}(x,x_0)<(\epsilon Q)^{-1},\ t_0-(\epsilon Q)^{-1}\le t\le t_0\}
+$$
+
+以因子 $Q$ 缩放后 $\epsilon$-接近某个满足 11.1 假设的古代解的对应部分。证明是反证：$r_0\to0$，挑出结论不成立且曲率 $Q$ 几乎最小的 $(x_0,t_0)$，使结论对 $R(x,t)>2Q$、$t_0-HQ^{-1}\le t\le t_0$ 的点成立（$H\to\infty$）。断言 1（`main.tex:1499-1508`）：$t_0-HQ^{-1}\le\bar t\le t_0$ 时，若 $\bar t-c\bar Q^{-1}\le t\le\bar t$、$\operatorname{dist}_{\bar t}(x,\bar x)\le c\bar Q^{-\frac12}$，则 $R(x,t)\le4\bar Q$，其中 $\bar Q=Q+R(\bar x,\bar t)$，$c=c(\kappa)>0$ 小；依据是对 $R(x,t)>2Q$ 的点已有 $|R_t|\le CR^2$、$|\nabla R|\le CR^{3/2}$。断言 2（`main.tex:1508-1554`）给出沿测地线的曲率增长控制，其证明用"若不然取缩放极限，沿 $\gamma$ 取极限度量"的两分支论证：分支一，曲率在离 $\bar x$ 有界距离上有界，则极限是非负曲率近柱状度量，$\gamma$ 走向无穷，极限上任一点曲率不超过 $c^{-1}$，故 $z$ 必已逃到无穷；分支二，取极限得在 $\bar x$ 附近光滑、曲率大处呈柱状、柱半径趋于零并停在有限距离处的首个奇异点 $o$，除 $o$ 外光滑非负曲率，柱状部分半径至多是到 $o$ 距离的 $\epsilon$ 倍，故 $o$ 处曲率在 Aleksandrov 意义下非负，邻域必呈锥形，即以 $x_i\to o$、因子 $R(x_i,\bar t)$ 缩放收敛到非负曲率非平度量锥的一段；再用断言 1 升级为 Ricci 流在时间区间上的收敛，与 Hamilton 强极大值原理矛盾。收尾（`main.tex:1555-1595`）：由断言 2 得 $t=t_0$ 时缩放度量在有界距离内曲率有界，配 $\kappa$-非坍缩可取光滑极限；极限曲率有界非负（否则开非负曲率流形里出现半径趋于零的柱颈列）；由断言 1 极限在 $t_0$ 之前一段时间也存在。设 $t'$ 为使极限在 $(t',t_0]$ 存在的最小时刻，Hamilton Harnack 给
+
+$$
+R_t(x,t)\ge-R(x,t)(t-t')^{-1}\ \Rightarrow\ R(x,t)\le\tilde Q\frac{t_0-t'}{t-t'},
+$$
+
+$\tilde Q=\max R(\cdot,t_0)$；由引理 8.3(b) 得 $\operatorname{dist}_t(x,y)\le\operatorname{dist}_{t_0}(x,y)+C$，$C=10n(t_0-t')\sqrt{\tilde Q}$。非紧情形再用 $D>0$ 与 $d=\operatorname{dist}_{t_0}(x_0,y)>D$、$\operatorname{dist}_{t_0}(x,y)=d$、$\operatorname{dist}_{t_0}(x,x_0)>\frac32d$ 的构型说明 $R(y,t)$ 在紧集外一致有界（两条测地线在 $y$ 处夹角近 $0$ 或 $\pi$，前者被距离假设排除，后者要求 $x,x_0$ 被 $y$ 附近直径阶为 $R(y,t)^{-\frac12}$ 的邻域分隔，$R(y,t)$ 过大时不可能）。紧集外一致有界加断言 2 给全局一致曲率界，再由断言 1 把极限延过 $t'$，矛盾。
+
+定理 12.2（`main.tex:1596-1629`）：给定 $\phi$，对每个 $A>0$ 存在 $K=K(A)<\infty$，使三维 $\phi$-几乎非负曲率解若满足定理 8.2 假设（$r_0=1$），则 $\operatorname{dist}_1(x,x_0)<A$ 时 $R(x,1)\le K$。证明先验断言：存在 $K=K(A)<\infty$，使 $R(x,1)>K$、$\operatorname{dist}_1(x,x_0)<A$ 的点 $(x,1)$ 都满足定理 12.1 的结论（$\epsilon$ 固定小）；再用 12.1 的断言 2 于连接 $x,x_0$ 的最短测地线合适段。定理 12.3（`main.tex:1630-1674`）：对每个 $w>0$ 存在 $\tau(w)>0$、$K(w)<\infty$、$\rho(w)>0$，使闭三维流形上 $[0,T)$ 上的 $\phi$-几乎非负曲率解、球 $B(x_0,r_0)$ 在 $t=t_0$ 时体积 $\ge wr_0^n$ 且截面曲率 $\ge-r_0^{-2}$，则只要 $t_0\ge4\tau r_0^2$、$\phi(r_0^{-2})<\rho$，就有
+
+$$
+R(x,t)<Kr_0^{-2}\quad\text{当 }t\in[t_0-\tau r_0^2,t_0],\ \operatorname{dist}_t(x,x_0)\le\tfrac14r_0 .
+$$
+
+推论 12.4（`main.tex:1675-1683`）：给定 $\phi$ 与 $w>0$ 存在 $\rho>0$，使 $t_0\ge1$、$r_0<\rho$ 的球 $B(x_0,r_0)$ 若 $\min_{B}Rm(\cdot,t_0)=-r_0^{-2}$，则 $\operatorname{Vol}B(x_0,r_0)\le wr_0^n$，即小尺度上的坍缩只能出现在曲率负得与尺度匹配的地方。
+
+第 13.1 段（`main.tex:1686-1719`）：设解在 $M\times[1,\infty)$（$M$ 闭定向三维）上光滑。按 Hamilton 的结果，归一化曲率 $\widetilde{Rm}(x,t)=tRm(x,t)$ 满足 $\widetilde{Rm}(x,t)\ge-\phi(\widetilde R(x,t))\widetilde R(x,t)$，$\phi$ 在无穷远处形如 $1/\log$。定理：对每个 $w>0$ 存在 $K(w)<\infty$、$\rho(w)>0$，使充分大的 $t$ 时 $M$ 有厚-薄分解 $M=M_{\text{thick}}\cup M_{\text{thin}}$：(a) $x\in M_{\text{thick}}$ 时 $B(x,\rho(w)\sqrt t)$ 内 $|\widetilde{Rm}|\le K$ 且该球体积 $\ge\frac1{10}w(\rho(w)\sqrt t)^n$；(b) $y\in M_{\text{thin}}$ 时存在 $r=r(y)$、$0<r<\rho(w)\sqrt t$，使 $B(y,r)$ 内 $Rm\ge-r^{-2}$ 且体积 $<wr^n$。厚部分按 Hamilton 的论证沿 $t\to\infty$、$w\to0$ 的子列收敛到（可能不连通的）有限体积完备双曲流形，其尖点（若有）在 $M$ 中不可压缩；薄部分在三维坍缩理论下对充分小 $w$ 同胚于图流形。遗留问题（`main.tex:1714-1719`）：归一化曲率是否必在 $t\to\infty$ 时有界；可约流形与有限基本群流形是否可有在无穷时间区间上光滑演化的度量。
+
+第 13.2 段（`main.tex:1720-1752`）：设解在 $M\times[1,T)$、$t\to T$ 奇异。由 12.1，$t\to T$ 时要么曲率处处趋于无穷（此时 $M$ 是 $\mathbb S^3$ 或 $\mathbb S^2\times\mathbb R$ 的商），要么高曲率区域是若干颈与带帽颈的并，极限变成角（horn）。作者未证明角是否直径有限。可在 $t=T$ 用光滑帽替换角的尖端并继续跑流，且帽可选得使每个有限时间区间内手术只发生有限次；该证明与 12.1 的论证同精神，技术上复杂但无新思想。取极限是否得到典范定义的过奇异 Ricci 流，作者未证明（11.9 的唯一性猜想若成立会有帮助）。由 12.2 型的论证可证每个最大角在奇异时刻 $T$ 的体积至少 $cT^n$，从而解从某有限时刻起光滑（若非空）；于是原流形的拓扑可重建为若干流形的连通和，每个要么有 13.1 的厚-薄分解，要么是 $\mathbb S^3$、$\mathbb S^2\times\mathbb R$ 的商。第 13.3* 段（`main.tex:1753-1759`）指出 Anderson 的椭圆方程路径与本工作的平行：1.1 已说明 Ricci 流是某个贴近总标量曲率泛函的梯度流。
+
+## 9 与本语料的接缝
+
+本稿登记的两处回引（照派单原样登记，未去读语料稿正文，因为派单禁读 `研究笔记/`）：
+
+| 语料稿号 | bib key | 该 key 最可能锚定的本文结论 | 在本稿里的读法位置 |
+|---|---|---|---|
+| D274 | `Perelman` | Ricci 流熵公式与无局部坍缩定理整体（第 3、4、7、8 节） | §3 的 $\mathcal W$ 与 (3.4)；§4 的定理 4.1 与 $\kappa$-非坍缩定义；§6 的 $\widetilde V$ 单调性 |
+| D308 | `PerelmanEntropy` | 熵泛函 $\mathcal W$、单调性公式（3.4）与统计类比 | §3 定义式与 (3.4)；§5 的 $S$、$\langle E\rangle$、$\sigma$ 三式 |
+
+若 D274、D308 侧引用的是"熵沿 Ricci 流单调不减"这一条，对应本稿 §3 的公式 (3.4)（`main.tex:451-453`），读法要点有三：其一是被积式 $2\tau|R_{ij}+\nabla_i\nabla_j f-\frac1{2\tau}g_{ij}|^2$，等号情形即梯度收缩孤子方程 $R_{ij}+\nabla_i\nabla_j f-\frac1{2\tau}g_{ij}=0$；其二是 $f$ 侧的约束 $\int_M(4\pi\tau)^{-n/2}e^{-f}dV=1$ 与演化 $f_t=-\Delta f+|\nabla f|^2-R+\frac{n}{2\tau}$，即 $u=(4\pi\tau)^{-n/2}e^{-f}$ 走共轭热方程 $\Box^*u=0$；其三是尺度 $\tau$ 自身满足 $\tau_t=-1$，故 $\tau$ 是后向时间余量，不是任意参数。若引用的是"无局部坍缩/非坍缩性"，对应本稿 §4（定理 4.1、推论 blow-up 极限在所有尺度 $\kappa$-非坍缩）与 §6 末的定理 8.2，记号 $\kappa=\kappa(g_{ij},T)$ 与 $\kappa=\kappa(A)$ 是两种不同的依赖关系，前者依赖初始度量与终结时刻，后者只依赖距离与体积比的界 $A$。若引用的是奇点模型的结构定理，对应 §8 的定理 11.7（古代解集合模缩放紧）、11.8 的 $\epsilon$-颈推论 $\operatorname{diam}M_\epsilon\le CQ^{-1/2}$ 与定理 12.1（高曲率区域 $\epsilon$-接近古代解）、定理 13.1（厚-薄分解）。
+
+素材侧一条常被误读的点，接缝处值得带上：$l$ 与 $\widetilde V$ 的定义依赖一个基点 $p$ 与后向时间 $\tau(t)=t_0-t$，同一古代解在不同基点下的 $\widetilde V(\tau)$ 不同，但 7.3 末（`main.tex:897-904`）给出的下界 $\kappa$ 是随 blow-up 极限一并继承的，不依赖基点选取。另一条：本稿 §4 的 $\mu(g_{ij},\tau)\to-\infty$ 论证只用 (3.4) 的单调方向 $\mu(g_{ij}(0),t_k+r_k^2)\le\mu(g_{ij}(t_k),r_k^2)$，读作"越早的度量在大 $\tau$ 处熵更低"。
+
+本笔同时作拼接与形体的更正登记（按规格只在此申报，不回改已落盘文字）：
+
+1. 第 7 节第 659 行行首的英文残词 `whenever` 应读作"只要"，其后条件 $0<t\le(\epsilon r_0)^2$、$d(x,t)<\epsilon r_0$ 不变。
+2. 第 7 节第 693 行的 `$A=\frac11{100n\epsilon}\to\infty$` 应读作 $A=\frac1{100n\epsilon}\to\infty$（素材原文为 $A=\frac{1}{100n\epsilon}\to\infty$，`main.tex:1135`）；同一行内的英文残词 `forcing` 应读作"逼出"；同行 `$A=\frac11{...}$` 前一处 `$\frac1{100n\epsilon}$` 的写法在 `main.tex:1092`、`main.tex:1097` 的假设 $A\epsilon<\frac1{100n}$ 处已给出正确形。
+3. 第 7 节第 612 行的 `routine computation` 是素材 `main.tex:998` 的原话逐字引用，非正文用语。
+4. 本稿成文过程中出现过一次拼接事故：第 4 节末尾的两段（$\kappa$-非坍缩的定义、blow-up 推论）一度错落到文件尾部，第 8 节末尾一度多出一份第 7 节"后续四条"段的重复残片；两处均已归位与去重，全部正文段落一条未少，实测差额为去掉的 901 字节重复残片。

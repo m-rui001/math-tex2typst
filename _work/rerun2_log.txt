@@ -1,0 +1,26 @@
+20/727 compiled=18 elapsed=5s
+40/727 compiled=36 elapsed=10s
+60/727 compiled=49 elapsed=14s
+80/727 compiled=64 elapsed=19s
+100/727 compiled=79 elapsed=24s
+120/727 compiled=96 elapsed=30s
+140/727 compiled=111 elapsed=35s
+160/727 compiled=128 elapsed=40s
+180/727 compiled=143 elapsed=50s
+200/727 compiled=158 elapsed=54s
+220/727 compiled=175 elapsed=60s
+240/727 compiled=188 elapsed=70s
+260/727 compiled=203 elapsed=77s
+280/727 compiled=221 elapsed=85s
+300/727 compiled=237 elapsed=93s
+Traceback (most recent call last):
+  File "E:\math\tools\batch_typst.py", line 63, in <module>
+    main()
+    ~~~~^^
+  File "E:\math\tools\batch_typst.py", line 58, in main
+    temp.replace(ROOT / 'typst/batch-report.json')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 780, in replace
+    os.replace(self, target)
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+PermissionError: [WinError 5] ¾Ü¾ø·ÃÎÊ¡£: 'E:\\math\\typst\\batch-report.tmp' -> 'E:\\math\\typst\\batch-report.json'

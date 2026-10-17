@@ -1,0 +1,72 @@
+<stdin>:3: SyntaxWarning: invalid escape sequence '\d'
+===== D37  D37-Seymour第二邻域猜想证明.md  lines=1716
+    1 | # D37 Seymour 第二邻域猜想：我把 pruning 的账单拆成 $d$ 与 $d'$ 两笔
+    4 | TeX 源码：`E:\math\preprints\A-proof-of-Seymours-second-neighborhood-conjecture-September-23-2026\build\source\`，共 `main.tex`(47 行) + `00-introduction.tex`(140) + `01-reduction.tex`(242) + `02-pruning.tex`(356) + `03-incompatibility.tex`(148) + `04-weighted-consequences.tex`(70) + `05-directed-cycle-co
+    6 | 引文行号形如 `02:16`，指 `02-pruning.tex` 第 16 行；Lean 侧形如 `Deletion:75`。
+   44 | The main additional ingredient is a pruning bound for arbitrary finite
+   46 | after pruning; this dependence makes the final extremal argument possible.
+  278 | 左端 $d_1-|Q|$ 来自 `hfirstCard`（`Deletion:172-174`，精确等式 $|N_{1,s}^+(v)|+|Q|=|N_{1,r}^+(v)|$）加上 $v$ 在 $D_T$ 里好（`hvGood`）。右端是一个"损失加增益"的形状：$N_{2,s}^+(v)$ 相对 $N_{2,r}^+(v)$ 至少丢掉 $C$（`hloss`），至多得到 $B=Q\cap F(T)$（`hgain`），而 $C$ 与 $N_{2,s}^+(v)$ 不交（`hlossDisjoint`）。这个"至少丢 $C$、至多得 $B$"被 Lean 抽成一个与图无关的算术引理 `car
+  514 | Lean 侧它就是 `Extremal.no_strictSubsetGrowth_of_pruning`（`ExtremalContradiction:27-45`），三个输入是 `hr : IsOriented r`、`hpos : PositiveIndegree r`、`hprune : PruningStatement r`，结论 `¬ StrictSubsetGrowth r`。注意 `PruningStatement` 是被当作输入传进来的，而它由 `Pruning.pruning g` 现场提供，后者对任意关系成立。这条切分说明作者把"与定向性无关的纯关系事实"和"用定向性的部
+  547 | in the objective lets the points left uncovered by pruning offset the
+  551 | 我先把它的含义翻译成账本语言。目标 $M+d$ 的候选上界来自补集增益 $|\mathcal R|+|\mathcal C|>M+2d$（下节），pruning 会删掉至多 $|H|+q$ 个成员，其中 $q$ 是"删除后仍未被覆盖的 $Z$ 点数"。新目标 $M'+d'$ 里 $d'$ 与 $q$ 的关系是 $q\le d'$（因为 $Z\subseteq X^2$，被删后仍未覆盖的 $Z$ 点当然是新对 $(P',Q')$ 的未覆盖点，Lean 的 `uncoveredZ_card_le`（`ExtremalCounting:31-38`）就是这条包含）。于是净收益 $>M+2d-(d+d
+  618 | ## 11 引理 3.1（pruning）：右端两项各自不可省
+  623 | \begin{lemma}[Pruning]\label{lem:pruning}
+  645 | \begin{equation}\label{eq:pruning-bound}
+  667 | 例 A（$|H|$ 单项不够）：取 $X$ 含六个不同点 $p,i_1,i_2,s,j_1,j_2$，弧为 $p\to i_1$、$p\to i_2$、$s\to j_1$、$s\to j_2$。令 $\mathcal R=\{(p,j_1),(p,j_2)\}$，$\mathcal C=\{(i_1,s),(i_2,s)\}$。四个有序对两两冲突（条件都是 $p\to i_k$ 与 $s\to j_m$），所以 $H=\{(p,s)\}$ 只有一个点而 $Z=\{(i_k,j_m)\}$ 有四个点。要消掉所有冲突至少要删两个成员（冲突图是 $K_{2,2}$，其顶点覆盖数为 2），因此任何形
+  679 | `[推测]` 我在这个引理上走错过的第一条路是贪心删除：反复取一对冲突 $(r,c)$，删掉两端之一。它能保持"初始无冲突成员不被删"，也能终止（冲突数有限），但账单无法关闭。贪心删 $m$ 次对应 $m$ 对冲突，而同一个 $(p,s)\in H$ 可以被任意多个冲突共用（只要固定 $p,j,s$ 变 $i$），同一个 $z\in Z$ 同理，所以 $m$ 与 $|H|+|Z|$ 之间没有一般关系。例 A 里 $|H|+|Z|=5$ 而 $m=2$ 看似没事，把例 A 推广成 $\mathcal R$ 有 $k$ 个成员、$\mathcal C$ 有 $k$ 个成员的全冲突配置，就有 $|H
+  734 | Figure~\ref{fig:pruning} displays the three edges forced by one conflict.
+  747 | `figures/pruning.tex` 里 $z_L$ 与 $z_R$ 画成矩形（`copy` 样式）、$c$ 与 $r$ 画成实心圆（`original` 样式），$z_L$--$c$ 与 $r$--$z_R$ 两段是 `dashed` 并标注 `covers $z$`，$c$--$r$ 一段实线标注 `conflict`（`figures/pruning.tex:8-14`）。二分侧是 $z_L\in\mathcal V_L$、$c\in\mathcal V_R$、$r\in\mathcal V_L$、$z_R\in\mathcal V_R$，所以"顶点交替"这句图注是在解释画法，并非
+  775 | 覆盖到 pruning 的转化（`02:108-119`）是这一节里我读得最慢的一段，因为它同时给出删除定义、无冲突性和计费式：
+  788 | Thus the cover gives exactly~\eqref{eq:pruning-bound} and retains every
+  846 | \begin{equation}\label{eq:pruning-maps}
+  866 | \begin{equation}\label{eq:pruning-commute}
+  904 | \label{eq:pruning-rank-bound}
+ 1039 | `[推测]` 这段我看到的两条可能的前身写法。第一条：直接引用 Edmonds 1967 的定理形式（"generic rank 等于最大匹配数"）而不重证。论文引用它但立刻说 "We apply the determinant argument within coordinate blocks"，我猜原因是需要的量不止秩，还有"指定列集合 $R_\alpha$ 构成 $\operatorname{im} L$ 的基"这一附加性质；Edmonds 的定理只给秩的数值，不给基的位置。Lean 侧的证据很硬：`exists_pruning_rank_coefficients` 的结论同时含 `hd
+ 1094 | \begin{equation}\label{eq:pruning-lifts}
+ 1109 | Lean 把这段抽成一个与 pruning 无关的线性代数模块 `KernelBasisLifts.lean`。核心定义 `kernelLift`（51-54）：
+ 1120 | `liftCoefficients` 用 `Classical.choose (cover (Pi.single j 1))` 取系数（40-43），是纯选择公理式的构造；配套的 `kernelLift_normalized`（79-91）证的正是 `U e (left f) = if e = f then 1 else 0`，它把"限制成不同单位向量"拆成两个假设的使用：`hdisjoint f`（$r'\notin R_\alpha$）把求和项清零，`hleft`（端点互异）把 $e\ne f$ 时的 `Pi.single` 消掉。整个模块对 `E : Type*` 泛化（论文的 $k$ 
+ 1135 | \eqref{eq:pruning-lifts}.  All these coordinates vanish, so every
+ 1140 | by~\eqref{eq:pruning-commute}. Thus $\dim\ker A\geq k$, establishing
+ 1148 | 匹配界到覆盖再到 pruning 的最后一段（`03:334-356`）：
+ 1151 | \emph{From the matching bound to a pruning.}
+ 1178 | theorem pruning (r : V → V → Prop) : PruningStatement r := by
+ 1181 | 它的证明体内依次调用无冲突平凡分支、`exists_maximum_matching_min_cost`、`isMaximumMatching_{right,left}Block_of_minimum_crossing`、`augmented_matching_card_le_corners`、`exists_pruning_of_augmented_matching_bound`。
+ 1241 | Apply Lemma~\ref{lem:pruning} to obtain conflict-free families
+ 1250 | Consequently at most $d'$ points of $Z$ are uncovered after pruning.
+ 1251 | By Lemma~\ref{lem:pruning} and~\eqref{eq:old-uncovered-bound}, at most $d+d'$ members
+ 1264 | 我要在这里登记一处论文与 Lean 都不显眼但很要紧的不对称：$d'$ 的定义写成了 $|X|^2-|F_1P'|-|F_2Q'|$，而 $P',Q'$ 相容，所以它等于 $|X\times X|-|F_1P'\cup F_2Q'|$，即新未覆盖点数；但 $q$ 是"$Z$ 中未被覆盖的点数"，而 $Z\subseteq X\times X$，故 $q\le d'$。论文那句 "A point is covered by a kept left member exactly when it belongs to $F_1P'$" 就是在把 pruning 引理里的 `covered`（按 `L
+ 1266 | 最后的算术在 Lean 里是 `objective_lt_of_pruning`（`ExtremalCounting:40-51`）一次 `omega`，它的四个输入是 `hpr.deletion_bound`（$\le|H|+q$）、`hH`（$|H|\le d$）、`hZ`（$q\le d'$）、`hgain`（$M+2d<|\mathcal R|+|\mathcal C|$），加上 `hR`/`hC` 两条 sdiff 拆分（$|P'|=|\mathcal R|-|\mathcal R\setminus P'|$ 等）。装配点 `no_strictSubsetGrowth_of_prun
+ 1268 | `[推测]` 这半程我走过的一条弯路是：把 $\mathcal R,\mathcal C$ 定义成 $X\times X\setminus F_2Q$ 与 $X\times X\setminus F_1P$（只去掉一步像）。这样 $|\mathcal R|+|\mathcal C|=2|X|^2-|F_2Q|-|F_1P|=|X|^2+d$，而需要的是 $>M+2d$，两者比较变成 $|X|^2-d>M$，即 $|F_1P|+|F_2Q|>|P|+|Q|$，这条没有任何来源。要走 (18) 那种"把 $|F^2|$ 换成 $|F|$ 的严格界"的代换，补集就必须取两步像：$|F_2^2Q|<2
+ 1283 | Lean 的同一段是 `Main.lean:11-18`，我把它和论文的两句逐一对表：`by_contra h` 与 `counterexample_iff_not_conjecture` 是"if the theorem were false"；`counterexample_reduction hr hcounter` 是 Proposition 2.1（`01:10-20`），它交出 `n, hn : 0 < n`、`g`、`hg : IsOriented g`、`hpos : PositiveIndegree g`、`hgrowth : StrictSubsetGrowth g`，后者
+ 1301 | 其余全部环节，包括引理 3.1 的整个证明、引理 3.2、命题 4.1 的计数主体，都不需要反对称或无环。这个分布和我在第 11 节的判断一致：pruning 是纯关系事实。定向性只从三个口子进来：$N_2$ 的精确距离语义（两处 `asymmetric`/`loopless`）、极小反例的正入度（一处 `loopless`）、$\Delta$ 的相容性（一处 `asymmetric`）。整篇论文的力学全在不知道定向性的地方。
+ 1438 | 依赖拓扑我按 `import OAI.Combinatorics.SecondNeighborhood.*` 逐文件抽了一遍，最长链有 14 层，落在 pruning 的线性代数一侧：
+ 1448 | 规模分布也值得登记：pruning 一节（论文 `02-pruning.tex` 的 356 行、两个引理）在 Lean 里占 28 个文件、3286 行，占全模块 68%；归约一节（`01-reduction.tex` 242 行、一个命题两个引理）占 10 个文件、1127 行，具体是 `ReductionCore 61 / Deletion 259 / SubsetAugmentation 60 / SubsetDeficit 62 / Reindex 91 / MinimalCounterexample 164 / TransitiveBlowup 181 / Reduction 27
+ 1456 | 第三，König 的交替路。论文 `02:334-356` 完整给出 $W_L,W_R$ 构造与 $K=(\mathcal V_L\setminus W_L)\cup W_R$。Lean 的 `MatchingCover.lean` 走 `Mathlib.Combinatorics.Hall.Finite`，用 Hall 条件双向饱和证覆盖存在与等式，并额外产出两个非孤立条件（被 `CoverPruning:17-18` 消费）。交替路构造在整个模块里没有对应物，这是全篇最大的一处"论文给的构造 Lean 没用"。
+ 1470 | 第十，"$R_\alpha$ 列是 $\operatorname{im} L$ 的基"。论文 `02:216-217` 一句。Lean 拆成 `GenericRankColumns`（三条：无关、张成、`exists_selectedColumns_mulVec`）加 `KernelBasisLifts`（`kernelLift` 与其归一化性质，`{I J F κ E}` 五个类型参数、完全与 pruning 无关的通用形式），共 178 行。
+ 1476 | `[推测]` 关于形式化范围我只有两条可核对的推断，都带不确定性。第一条：作者把 pruning 写成 28 个文件，并非一个长文件，从依赖图看是为了让 `MaxSupportKernel`、`GenericRank*`、`Matching` 这些底座保持与 $V,r,R,C$ 无关的通用陈述，便于复用与单独检查；`KernelBasisLifts` 的五个类型参数支持这个读法。第二条：两节推论不进形式化，我猜是因为 Seacrest 的等价（`04:43-46`）本身依赖他论文里的 Prop 2 与 Thm 1，那部分内容不在本仓库，形式化要先补一个外部等价；而 `ComparatorCha
+ 1482 | | $M,d$ 与目标 $M+d$ | $M=|P|+|Q|\le 2|X|^2$、$d\le|X|^2$、目标 $\le 3|X|^2$；整数值，故每次严格改进至少 $+1$ | `03:42-46` "$M=\abs{P}+\abs{Q},\qquad d=\abs{X}^2-\abs{F_1P}-\abs{F_2Q}$"；`03:47-49` "Such a maximum exists because $X$ is finite. Compatibility makes $d$ the number of points outside $F_1P\cup F_2Q$."；Lean `o
+ 1483 | | $d'$ | $d'=|X|^2-|F_1P'|-|F_2Q'|$；$q\le d'$ | `03:123-125`；`03:126-128`；Lean 与 $d$ 共用 `uncoveredCount r P' Q'`（`ExtremalCounting:15-16`），上界由 `uncoveredZ_card_le`（31-38）给出 | `03:130` "at most $d+d'$ members were deleted, counting the two sides separately"、`objective_lt_of_pruning` 的 `hZ` 输入 | $d$ 与
+ 1484 | | $\Delta$／`diagonal` | $|\Delta|=|X|$，$\Delta\subseteq P\cap Q$ 是可行对的条件之一 | `03:34` "$\Delta=\{(v,v):v\in X\}$"、`03:41` "The pair $P=Q=\Delta$ is compatible"、`03:96-99` "The preservation clause of Lemma~\ref{lem:pruning} thus applies to every diagonal member on both sides"；Lean `ExtremalImages.lean
+ 1485 | | 平凡分支 $Z=H=\varnothing$ | 账单右端为 0，删除数为 0 | `02:71` 整句；`02:110-111`（$q$ 的定义在 $|Z|=0$ 时空真）；Lean `Pruning.lean:1-19` 的调用链里 `exists_augmented_maximum_matching` 对空 `Z`、空 `H` 给出空匹配 | `CoverPruning` 的 `omega`、`exists_pruning_of_augmented_matching_bound` | [推测] 论文没有为这一分支单写一行，它由 (9) 的空真成立自动覆盖；Lean 侧 `Z r R 
+ 1505 | | 目标函数系数 $1$ | $M=\abs P+\abs Q$，$d=\abs X^2-\abs{F_1P}-\abs{F_2Q}$ | `03:42-46`、`ExtremalCounting:18-19` | 极值选择 `exists_maximizing_pair`（`ExtremalCounting:53-68`） | `objective` 的定义就是 `P.card + Q.card + uncoveredCount r P Q`，系数被写进 `def`，改它要同时改 `objective_lt_of_pruning:51` 的那次 `omega` |
+ 1513 | | $|\mathcal R\setminus\mathcal R'|+|\mathcal C\setminus\mathcal C'|\le|H|+q$ | 引理 3.1 账单形状 | `02:32-37`（eq:pruning-bound） | `PruningResult.deletion_bound`（`PruningDefinitions:59-60`） | 右边第二项必须是"修剪后 uncovered 点数"，`00:132-133` 明说这是整篇的关键设计；换成修剪前计数则望远镜末项变不回 $M+d$ |
+ 1514 | | $|Z|+|H|$ | 覆盖尺寸阈值 | `02:108-109`、`02:114-117`（eq:cover-charge）、`02:332` | `CoverPruning:19` 的 `hbound`、`exists_pruning_of_augmented_matching_bound:132-133` | 收紧到 $|Z|$ 会让"无冲突时不删任何点"的平凡情形（`PruningDefinitions:234-245` 的 `pruningResult_self`）与账单不再同时成立 |
+ 1516 | | $\operatorname{rank} L=\ell,\ \operatorname{rank} N=t,\ \dim\ker A\ge k$ | 秩条件三联 | `02:189` | eq:pruning-rank-bound（`02:194-199`） | `LocalMaximalRanks`（`KernelConflict:20`）的四个字段是它的形式化替身 |
+ 1528 | | `2 * uncoveredCount` 与 `1 * uncoveredCount` | 同一个量的两个系数 | `ExtremalContradiction:15` 与 `ExtremalCounting:19` | `objective_lt_of_pruning:40-51` | 两个系数的差就是望远镜的余量来源，`omega` 只认这两个字面 |
+ 1531 | | `PruningResult` 六字段 | 两条包含、无冲突、两条保留、一条账单 | `PruningDefinitions:53-60` | `objective_lt_of_pruning`、`pruning_preserves_diagonal`（`ExtremalCompatibility:188-202`） | `retain_left/retain_right` 是论文 `02:101-106` 那句的方向反转（第 23 节第九标本）；删任一条 `omega` 就少一个等式 |
+ 1580 | 第九处，系数选择的接线层次。论文 `02:216-219` 的"选系数"一句在 Lean 是一条四级调用链：`RankBoundFromMinors:25-26` 调 `exists_pruning_rank_coefficients`（`GenericRankSelection.lean:35`，内部 60 行调 `exists_coefficients_localMaximalRanks`），后者（`GenericRankCoefficients.lean:48`）在 67 行调 `exists_eval_maximal_support_rank`（`GenericRankFamily.l
+ 1596 | 我用整词匹配加 `.名称` 投影两种用法一起统计，模块 289 条声明里有 29 条零消费者，去掉 comparator 目标 `Main.exists_goodVertex` 剩 28 条。分布：`Basic.lean` 8 条（`IsOriented.of_asymmetric`、`image_mono`、`image_relation_mono`、`image_univ_eq_univ`、`first_second_disjoint`、`secondNeighbors_eq_image_sdiff`、`sink_secondNeighbors_eq_empty`、`exists_sink
+ 1624 | 第三处分岔在修剪层的记账对象。论文 `00:132-133` 那句 "This is why the pruning lemma must charge part of its cost to the points left uncovered after deletion" 是作者自己标出的因果。走这条的花费最大：pruning 一侧 28 个文件、3286 行，占全模块 67.6%（实测 3286/4861，与第 23 节的 68% 同口径），里面要造增广图（`AugmentedGraph.lean` 的 `↥R ⊕ ↥(Z r R C)` 类型分离）、四个矩阵映射（`MatrixMaps
+ 1632 | 只在特殊情形核过的结论也列一遍，免后被误用：$m=n+1$ 的最小性我只在 $-m+n<0$ 与 $m>\abs{V(D)}$ 的代数层面核过，没有对具体图类逐一试过更小的 $m$；定向性不可省那条（第 27 条四）我只在 $|X|\le2$ 上穷举；$3r+1$ 的紧例只有 $r=1$ 与 $r=2$ 两个；推论 5.1 (ii) 的全正不可能只有两点弧一个例子；$29$ 条零引用声明的统计依赖整词与 `.名称` 投影两种匹配，若存在 tactic 字符串里或 `show` 语句里的间接引用，我的计数会偏高，这部分我没有用 Lean 的 `#print` 依赖图复核，`.lake` 里没有 
+ 1639 | | 定理计数器 | `theorem` 环境带 `[section]` 前缀，`lemma`、`proposition`、`corollary`、`remark` 四类用 `[theorem]` 共享同一计数器 | main.tex:19-24 | 03:130 那行的 `\ref{lem:pruning}` 与 02:10、02:48、03:8、04:8、05:15 五个编号 | 把 `corollary` 拆成独立计数器后，04:8 与 05:15 的推论号与 00:1 引言里我按号回查的读法错位，装配段引用 02:10 时取到的号也跟着变 |
+ 1647 | | 两个删除成本的来源行 | 一句里两项：$\le d$ 与 $\le d'$，即分头记账 | 00:124 | 00:125 的合计与 03:112-113 那句 `\ref{lem:pruning}` 与 `\eqref{eq:old-uncovered-bound}` 的联用 | 若 00:124 写成单一项，02:110-113 的回收步与 03:129 的 "at most $d'$ points of $Z$" 就对不上分头口径，[推测] 00:125 我只看了合计那半句的前半 |
+ 1664 | | 覆盖给出账单 | 02:118-02:119 宣布 (eq:pruning-bound) 与保留条款同时成立 | 02:118-02:119 | 03:8 的装配段与我在 `## 11` 记过的 $q$ 的不可省性 | 该宣布挪位后，03:112-03:113 那处 `\ref` 与 `\eqref` 的联用取不到账单形状 |
+ 1698 | | 修剪后的严格增长不可存在 | `no_strictSubsetGrowth_of_pruning`，结论形状是假设修剪存在即违反严格增长 | ExtremalContradiction.lean:29 | Main.lean:11 的出口 | 该定理一断，03:8 的矛盾在机器侧没有收口，`ExtremalCounting` 那条极值比较链（旧表按 40-51 登记）失去落点 |
+===== D95  D95-用独立行替换高斯行的Cd代价.md  lines=1720
+  374 | - 为什么 "This assertion is about the uniform-prior experiment." 要单列:`07:328-329` 与 `07b:96-99` 需要另一条推理把 worst-signal 前提换成 uniform-prior 前提,两者不可混用。
+  611 | - 为什么两个界都"for every fixed $s$"且一致于 $\delta$:$\delta$ 一致性让 Fatou 能取下极限,而 $s$ 逐点(fixed)让例外集 $E_\rho$ 只依赖 $\rho$ 不依赖 $s$ 之外的量。注意临界半径一节需要 $F$-a.e. $s$(`03:160`),one-level 一节需要 $\mu$-a.e.(`04:174`),而 two-label 一节需要**每一个** fixed $s$(`04:555-556`:"for every fixed \(w\) of positive probability and every \(s
+  699 | #### 条目 10:Theorem `thm:r-critical-comparison`(Critical-radius comparison),`03-critical-radius.tex:22-36`,证明 `03:38-238`
+===== D54  D54-Brennan猜想与sharp逆平方积分均值.md  lines=793
+  766 | 同一技术线有两篇，我这份笔记对应 $p=-2$（逆平方），`D40-单叶函数严格逆一次幂界.md` 对应 $p=-1$（逆一次幂）。分界按两篇正文各自的排他声明划：本篇 `00-history:101-108` 写着配套论文证明"uniform inverse-first-power bound with exponent strictly below $1/4$"、否掉 Kraetzer 在 $p=-1$ 的有界谱预测，并且"The proof here does not use that strict estimate; its Hölder interpolation from \eqr
+===== D587  D587-典型SK初态的拉伸指数混合势垒.md  lines=499
+  485 | - 第 222 行（第 17 节）：位置引用 `08-n-locking.tex:331` 漏了窄环文件名中的中间段，正确形式是 `08-narrow-locking.tex:331`，同一行后半给出的 `08-narrow-locking.tex:336` 是对的。

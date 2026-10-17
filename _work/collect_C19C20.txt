@@ -1,0 +1,22 @@
+cid 数=57 宏定义合计=3751 缺失 tex=0
+==== C19-Kähler广义对的BBY分解.md 起点 bytes=39854 lines=195 CR=0
+   sweep: C19 size=39854 lr=2
+   sweep: C19 size=39854
+==== C20-矩矩阵的稀疏平坦扩张定理.md 起点 bytes=23016 lines=206 CR=0
+   sweep: C20 size=23016
+   sweep: C20 size=23016
+   普查1 全根 refused=693 files_hit=6 other=3｜本单 C19 51 枚=(定界符) \BC \Image \calV \calW \free \qf \xymatrix / C20 232 枚=\AAA \BB \CC \DD \Ker \MM \PK \PR \bordermatrix \tL
+   macro: C19 站点=67 增量=+975B /    \Image         -> \operatorname{Im}        2        凭据=素材 preamble /    \calV          -> \mathcal V               1        凭据=素材 preamble /    \calW          -> \mathcal W               1        凭据=素材 preamble /    \free          -> \operatorname{free}      2        凭据=素材 preamble /    \qf            -> \text{\rm\tiny qf}       61       凭据=素材 preamble /    未决（已登记 _work/c_macro_unresolved.txt）：\BC \xymatrix / APPLIED size=40829 +975B 备份=_work/C19.pre-macrofix.md
+   macro: C20 站点=355 增量=+3203B /    \AAA           -> \mathcal A               4        凭据=素材 preamble /    \BB            -> \mathcal B               62       凭据=素材 preamble /    \CC            -> \mathcal C               156      凭据=素材 preamble /    \DD            -> \mathcal D               2        凭据=素材 preamble /    \Ker           -> \operatorname{ker}       30       凭据=素材 preamble /    \MM            -> \mathcal M               33       凭据=素材 preamble /    \PK            -> \mathbb K[\mathbf x]     32       凭据=素材 preamble /    \PR            -> \mathbb R[\mathbf x]     8        凭据=素材 preamble /    \tL            -> \tilde \Lambda           28       凭据=素材 preamble /    未决（已登记 _work/c_macro_unresolved.txt）：\bordermatrix / APPLIED size=26219 +3203B 备份=_work/C20.pre-macrofix.md
+   普查2 全根 refused=423 files_hit=6 other=3｜本单 C19 11 枚=(定界符) \BC \base \xymatrix / C20 2 枚=\bordermatrix
+   macro: C19 站点=1 增量=+14B /    \base          -> \operatorname{base}      1        凭据=素材 preamble /    未决（已登记 _work/c_macro_unresolved.txt）：\BC \xymatrix / APPLIED size=40843 +14B 备份=_work/C19.pre-macrofix.md
+   macro: C20 无可回改站点（普查零站点，或全部无凭据已登记） 未决=\bordermatrix
+   普查3 全根 refused=422 files_hit=6 other=3｜本单 C19 10 枚=(定界符) \BC \xymatrix / C20 2 枚=\bordermatrix
+   macro: C19 无可回改站点（普查零站点，或全部无凭据已登记） 未决=\BC \xymatrix
+   macro: C20 无可回改站点（普查零站点，或全部无凭据已登记） 未决=\bordermatrix
+   ccheck: checking 1 C notes | === C19-Kähler广义对的BBY分解.md |    bytes=40843 lines=195 CR=0 |    title=Y heads=10 nums=0..9 contig0=True |    spec: head0=Y K=9(5-9) seam=Y |    dollar=1324(even) odd_lines=0 btick=12(even) |    math: spans=643 disp=19 bytes=12328 share=30.2% stmt_lines=19 |    bans=none |    tables=0 rows=0 badpipe=0 |    material=被引素材/2506.23218 texfiles=1 poscites=76 bad=0
+   ccheck: checking 1 C notes | === C20-矩矩阵的稀疏平坦扩张定理.md |    bytes=26219 lines=206 CR=0 |    title=Y heads=8 nums=0..7 contig0=True |    spec: head0=Y K=7(5-9) seam=Y |    dollar=882(even) odd_lines=0 btick=10(even) |    math: spans=414 disp=25 bytes=12417 share=47.4% stmt_lines=9 |    bans=none |    tables=0 rows=0 badpipe=0 |    material=被引素材/0812.2563 texfiles=1 poscites=56 bad=0
+   普查终 全根 refused=422 files_hit=6 other=3｜本单 C19 10 枚=(定界符) \BC \xymatrix / C20 2 枚=\bordermatrix
+   C19 收稿后 bytes=40843 lines=195 CR=0
+   C20 收稿后 bytes=26219 lines=206 CR=0
+APPLIED 被引笔记/INDEX.md size=8506

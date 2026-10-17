@@ -1,0 +1,33 @@
+{
+  "paper": "A-radial-continuum-phase-transition-with-algebraic-decay-September-24-2026",
+  "ok": true,
+  "typ_lines": 1064,
+  "included_pdf_pages": 0,
+  "formulas": 807,
+  "math_failed": 0,
+  "labels": 136,
+  "equations": 18,
+  "theorems": 24,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "807",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "aliascnt",
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-radial-continuum-phase-transition-with-algebraic-decay-September-24-2026.tex"
+}

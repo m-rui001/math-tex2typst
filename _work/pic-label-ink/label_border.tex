@@ -1,0 +1,425 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\begin{document}
+\setbox0=\hbox{Reset\\\(t\in[2,5]\)\\\(v'_\ell=0\)}\typeout{INK 0 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {Reset\\\(t\in[2,5]\)\\\(v'_\ell=0\)};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 0 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{\(\k\)}\typeout{INK 1 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {\(\k\)};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 1 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{\(\n\)}\typeout{INK 2 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {\(\n\)};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 2 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{\(\cdots\)}\typeout{INK 3 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {\(\cdots\)};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 3 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{\(\vdots\)}\typeout{INK 4 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {\(\vdots\)};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 4 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$|h|$}\typeout{INK 5 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$|h|$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 5 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$\lab$}\typeout{INK 6 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$\lab$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 6 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{Charged estimate on $\mathcal U_N$}\typeout{INK 7 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {Charged estimate on $\mathcal U_N$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 7 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{Additional positive margin}\typeout{INK 8 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {Additional positive margin};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 8 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$b_3/4\leq |h|\leq b_3$}\typeout{INK 9 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$b_3/4\leq |h|\leq b_3$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 9 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{Trace profile $\mathcal H(|h|)$}\typeout{INK 10 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {Trace profile $\mathcal H(|h|)$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 10 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$0$}\typeout{INK 11 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$0$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 11 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{transition}\typeout{INK 12 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {transition};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 12 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{plateau $M$}\typeout{INK 13 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {plateau $M$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 13 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{Heights in the retained $\mathcal D_N$}\typeout{INK 14 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {Heights in the retained $\mathcal D_N$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 14 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$0\leq |h|\leq c_h$}\typeout{INK 15 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$0\leq |h|\leq c_h$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 15 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$u|_S>0$}\typeout{INK 16 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$u|_S>0$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 16 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$u|_S=0$}\typeout{INK 17 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$u|_S=0$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 17 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$e_1$}\typeout{INK 18 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$e_1$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 18 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$e_2$}\typeout{INK 19 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$e_2$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 19 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$e_3$}\typeout{INK 20 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$e_3$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 20 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$e_4$}\typeout{INK 21 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$e_4$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 21 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{median plane}\typeout{INK 22 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {median plane};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 22 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{translated window}\typeout{INK 23 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {translated window};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 23 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$a$}\typeout{INK 24 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$a$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 24 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$b$}\typeout{INK 25 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$b$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 25 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{Remove a fan of $q$ lines}\typeout{INK 26 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {Remove a fan of $q$ lines};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 26 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$o$}\typeout{INK 27 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$o$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 27 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$o+e_r$}\typeout{INK 28 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$o+e_r$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 28 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{All directions in $W_r$ except $e_r$}\typeout{INK 29 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {All directions in $W_r$ except $e_r$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 29 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{Insert $q-1$ parallel lines}\typeout{INK 30 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {Insert $q-1$ parallel lines};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 30 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{Direction $e_r$; omit the line through $o$}\typeout{INK 31 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {Direction $e_r$; omit the line through $o$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 31 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$\Phi$}\typeout{INK 32 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$\Phi$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 32 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$X$}\typeout{INK 33 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$X$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 33 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$Y$}\typeout{INK 34 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$Y$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 34 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$\bar eD\bar fE$}\typeout{INK 35 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$\bar eD\bar fE$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 35 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$\bar gD$}\typeout{INK 36 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$\bar gD$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 36 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$E$}\typeout{INK 37 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$E$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 37 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{one boundary}\typeout{INK 38 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {one boundary};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 38 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{two components}\typeout{INK 39 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {two components};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 39 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{hub $\p$}\typeout{INK 40 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {hub $\p$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 40 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{leaf $(i,\p)$}\typeout{INK 41 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {leaf $(i,\p)$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 41 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{common hub $*$}\typeout{INK 42 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {common hub $*$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 42 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{The offset-one cycle}\typeout{INK 43 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {The offset-one cycle};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 43 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{All four offsets at one vertex}\typeout{INK 44 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {All four offsets at one vertex};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 44 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$j$}\typeout{INK 45 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$j$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 45 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$j+1$}\typeout{INK 46 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$j+1$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 46 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$j+2$}\typeout{INK 47 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$j+2$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 47 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$j+3$}\typeout{INK 48 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$j+3$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 48 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$j+4$}\typeout{INK 49 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$j+4$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 49 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{Translate this pattern modulo $11$.}\typeout{INK 50 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {Translate this pattern modulo $11$.};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 50 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$i$}\typeout{INK 51 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$i$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 51 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$w=(w_1,w_2)\in Y$}\typeout{INK 52 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$w=(w_1,w_2)\in Y$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 52 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$F$}\typeout{INK 53 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$F$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 53 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$\widehat A_i$}\typeout{INK 54 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$\widehat A_i$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 54 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$A_i$}\typeout{INK 55 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$A_i$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 55 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{infinite cyclic\\cover}\typeout{INK 56 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {infinite cyclic\\cover};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 56 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{central bundle}\typeout{INK 57 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {central bundle};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 57 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$v$}\typeout{INK 58 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$v$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 58 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{one child per pair}\typeout{INK 59 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {one child per pair};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 59 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{both in one pair}\typeout{INK 60 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {both in one pair};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 60 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$P\in R_j$\\$z=z_n$}\typeout{INK 61 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$P\in R_j$\\$z=z_n$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 61 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$u$}\typeout{INK 62 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$u$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 62 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$x_8$}\typeout{INK 63 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$x_8$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 63 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$x_9$}\typeout{INK 64 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$x_9$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 64 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{even tiling}\typeout{INK 65 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {even tiling};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 65 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{odd tiling}\typeout{INK 66 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {odd tiling};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 66 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{sole probe}\typeout{INK 67 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {sole probe};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 67 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$T_J$}\typeout{INK 68 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$T_J$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 68 W=\the\dimen0}
+\end{tikzpicture}
+\setbox0=\hbox{$C_J$}\typeout{INK 69 W=\the\wd0}
+\begin{tikzpicture}
+  \node (a) at (0,0) {$C_J$};
+  \pgfextractx{\dimen0}{\pgfpointdiff{\pgfpointanchor{a}{center}}{\pgfpointanchor{a}{east}}}
+  \typeout{BORDER 69 W=\the\dimen0}
+\end{tikzpicture}
+\end{document}

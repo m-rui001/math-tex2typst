@@ -1,0 +1,15 @@
+lines-with-dedicated=152 missing=10 shared=0
+
+MISSING
+L14   A-Direct-Proof-of-Optimal-Max-Cut-Hardness-September-23-2026
+L85   Memory-and-precision-in-noiseless-Gaussian-regression-September-27-2026
+L98   Posterior-replicas-and-conditional-information-in-Gaussian-regression-September-27
+L99   Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026
+L110  Routing-densities-and-representation-contraction-for-Thorp-sweeps-September-26-202
+L116  Smooth-counterexamples-to-Yaus-nodal-upper-bound-in-dimensions-three-and-four-Sept
+L121  Subpolynomial-query-complexity-for-well-conditioned-log-concave-sampling-September
+L129  The-complete-Crouzeix-theorem-September-23-2026
+L146  The-second-Kahn-Kalai-conjecture-September-24-2026
+L147  The-sharp-factor-of-IID-threshold-for-the-free-Ising-model-on-regular-trees-Septem
+
+SHARED

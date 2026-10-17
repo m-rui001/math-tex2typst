@@ -1,0 +1,55 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\makeatletter
+\newcommand\report[2]{%
+  \pgfextracty{\dimen6}{\pgfpointdiff{\pgfpointanchor{#1}{center}}{\pgfpointanchor{#1}{north}}}%
+  \pgfextracty{\dimen8}{\pgfpointdiff{\pgfpointanchor{#1}{south}}{\pgfpointanchor{#1}{center}}}%
+  \typeout{GOT #2 N=\the\dimen6 S=\the\dimen8}}
+\makeatother
+\begin{document}
+\begin{tikzpicture}
+  \node (n0) at (0,0) {$\left(x\right)$};
+  \report{n0}{0}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node (n1) at (0,0) {$\left(a\right)$};
+  \report{n1}{1}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node (n2) at (0,0) {$\left\{u\right\}$};
+  \report{n2}{2}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node (n3) at (0,0) {$\left|q\right|$};
+  \report{n3}{3}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node (n4) at (0,0) {$\left(x^{2}\right)$};
+  \report{n4}{4}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node (n5) at (0,0) {$\left(\frac{1}{2}\right)$};
+  \report{n5}{5}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node (n6) at (0,0) {$\left(\sum_i a\right)$};
+  \report{n6}{6}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node (n7) at (0,0) {$\left(x\right)y$};
+  \report{n7}{7}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node (n8) at (0,0) {$\left(\int_0^1 f\right)$};
+  \report{n8}{8}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node (n9) at (0,0) {$\left\{\frac{1}{2}\right\}$};
+  \report{n9}{9}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node (n10) at (0,0) {map to $\left(x\right)$};
+  \report{n10}{10}
+\end{tikzpicture}
+\end{document}

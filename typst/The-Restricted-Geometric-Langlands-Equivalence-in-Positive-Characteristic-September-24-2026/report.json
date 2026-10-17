@@ -1,0 +1,30 @@
+{
+  "paper": "The-Restricted-Geometric-Langlands-Equivalence-in-Positive-Characteristic-September-24-2026",
+  "ok": true,
+  "typ_lines": 1074,
+  "included_pdf_pages": 0,
+  "formulas": 887,
+  "math_failed": 1,
+  "labels": 111,
+  "equations": 3,
+  "theorems": 5,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_split": 2
+  },
+  "samples": {
+    "formulas": "887",
+    "cetz_split": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-Restricted-Geometric-Langlands-Equivalence-in-Positive-Characteristic-September-24-2026.tex"
+}

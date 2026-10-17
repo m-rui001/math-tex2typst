@@ -1,0 +1,39 @@
+distinct=93 fused_tokens=35 fused_occ=74 plain_occ=190 refused_spans=618
+tail_hist={"tail1":70,"tail5":3,"tail2":1}
+  \lem x13  = \le + m
+  \inX x9  = \in + X
+  \betam x5  = \beta + m
+  \langleg x4  = \langle + g
+  \langlev x3  = \langle + v
+  \rangleG x3  = \rangle + G
+  \toM x3  = \to + M
+  \langlex x3  = \langle + x
+  \texttcaxe x2  = \text + tcaxe
+  \toX x2  = \to + X
+  \langleV x2  = \langle + V
+  \lambdaG x2  = \lambda + G
+  \lambdah x1  = \lambda + h
+  \ltl x1  = \lt + l
+  \sqrth x1  = \sqrt + h
+  \ranglem x1  = \rangle + m
+  \ellr x1  = \ell + r
+  \leqc x1  = \leq + c
+  \deltaR x1  = \delta + R
+  \lceilD x1  = \lceil + D
+  \langleB x1  = \langle + B
+  \ella x1  = \ell + a
+  \textrewol x1  = \text + rewol
+  \hookrightarrowX x1  = \hookrightarrow + X
+  \langleA x1  = \langle + A
+  \langleH x1  = \langle + H
+  \deltaM x1  = \delta + M
+  \operatornameSm x1  = \operatorname + Sm
+  \alphah x1  = \alpha + h
+  \setu x1  = \set + u
+  \mapstoK x1  = \mapsto + K
+  \langley x1  = \langle + y
+  \langleF x1  = \langle + F
+  \langleu x1  = \langle + u
+  \langlef x1  = \langle + f
+--- not fused（本名没人认：素材宏或单字母简写）: 58
+\Ec x1 \root x4 \box x1 \tabalign x1 \ldash x1 \closedball x2 \ball x1 \asy x2 \Csum x4 \fint x10 \F x21 \DeclareMathOperator x1 \asypto x1 \diff x5 \A x3 \m x1 \GG x9 \math x3 \lc x5 \hsSq x2 \diag x1 \dd x23 \sr x2 \q x2 \V x3 \D x1 \K x1 \wt x1 \G x3 \j x1 \M x1 \Ex x2 \ii x1 \o x2 \ot x2 \ldim x1 \w x1 \stEnd x1 \stHom x1 \wide x1 \Zd x1 \OOo x12 \At x2 \ar x1 \cr x1 \Ce x2 \+ x1 \Zmod x1 \g x1 \T x5 \dv x2 \du x4 \lhook x1 \two x3 \restrict x6 \eqno x1 \EX x1 \d x16

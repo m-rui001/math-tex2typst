@@ -1,0 +1,5 @@
+notes scanned: 734
+lines containing opening marker: 36
+opening marker occurrences (sites): 36
+notes hit: 29
+notes with CR bytes: []

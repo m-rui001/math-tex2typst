@@ -1,0 +1,31 @@
+=== D24 (1018 lines)
+  block@707 rows=3  上方相邻行:
+    685 pipes=6 | | 记号 | 值或定义 | 出处 | 在链条里的作用 | 敏感度 [推测] |
+    686 pipes=6 | | --- | --- | --- | --- | --- |
+    687 pipes=6 | | $m,R$ | 正整数，双层测试索引 | Thm 5.1 | $m$ 管矩阵尺寸，$R$ 管词长上界；对角化的两根轴 | 无自由度，必须两者都跑遍 |
+    688 pipes=6 | | $d_0$ | $64m4^R$ | Prop 4.1 | 底层丛秩，一切秩的母数 | 系数 $64$ 很松，只需覆盖 incidence 不等式的余量；$4^R$ 与窗口长度耦合，不可减 |
+    689 pipes=6 | | $d_j$ | $4^jd_0$ | Prop 4.1 | 第 $j$ 级秩 | 递推比 $4$ 被两条夹逼唯一确定（第 5 节） |
+    690 pipes=6 | | $b_i$ | $\frac{15}{4}d_{i-1}$ | Prop 4.1 | 第 $i$ 个新射影空间因子的线丛贡献量 | $\frac{15}{4}$ 要保证 $r=\frac{15}{4}d$ 的大块 incidence 有
+    691 pipes=6 | | $a_{0,j}$ | $d_04^{-j}$ | Prop 4.1 | 平凡因子 $L_0$ 在第 $j$ 级的乘度 | 每级除 $4$ 是 $h_0$ 有界的唯一原因 |
+    692 pipes=6 | | $a_{i,j}$ | $960m4^{R+2i-j-2}$ | Prop 4.1 | $L_i$ 在 $E_j$ 中的乘度 | 由 $b_i$ 与 $4^{-(j-i)}$ 唯一决定，无自由参数 |
+    693 pipes=6 | | $K_i$ | $320m^24^{2i-2}(4^{R-i+1}-1)$ | Prop 4.1 | 第 $i$ 个 $\mathbb{CP}$ 因子的维数、$c_1$ 的幂次 | 闭式来自几何级数，$\sum_{j=i}^Ra_{i,
+    694 pipes=6 | | $Y$ | $\prod_{i=1}^R\mathbb{CP}^{K_i}$ | Prop 4.1 | 底空间；$\dim_{\mathbb R}Y=2p$，$p=\sum_iK_i$ | 陈类次数 $p$ 恰好等于底维数一半的两倍，这
+    695 pipes=6 | | $h_0$ | $\frac43md_0(1-4^{-(R+1)})<2md_0$ | Prop 4.1 | $G$ 中平凡部分 $L_0^{\oplus h_0}$ 的秩 | 关键余量 $2-\frac43=\frac23$（单位 $
+    696 pipes=6 | | $\eta_j$ | $<\frac{20}{3}md_j$ | Prop 4.1 | 前缀底空间 $\prod_{i\le j}\mathbb{CP}^{K_i}$ 的实维数上界 | 与 $b_i=\frac{15}{4}d_{i-1
+    697 pipes=6 | | $q_{\text{small}}$ | $16$ | Prop 4.1 | 小块映射数（进旧线丛、点底） | $q=7$ 时余量 $0.08$，$q=6$ 失败（第 8 节边界算例） |
+    698 pipes=6 | | $q_{\text{large}}$ | $8$ | Prop 4.1 | 大块映射数（进新块） | 与 $\frac{15}{4}d$、$\frac{20}{3}md$ 三方互相牵制 |
+    699 pipes=6 | | $N$ | $24=16+8$ | Thm 5.1 | 生成元个数 | 进入分母 $2N$ |
+    700 pipes=6 | | $\lambda$ | $2$ | (3.2) 展开倍数 | $\dim\sum T_iS\ge2\dim S$ | 势函数的强制条件要求 $\alpha<\lambda$ |
+    701 pipes=6 | | $\alpha$ | $\frac32$ | Lemma 3.2 | 势函数 $g_y$ 里 $\log\det P$ 的系数 | 见下面 13.2，$\alpha$ 与 $c$ 有一一关系 |
+    702 pipes=6 | | $c$ | $\frac23$ | (5.1) 行界 | 缺陷里的 $1-c$ | $c=1/\alpha$，所以 $\alpha\to2^-$ 时 $c\to\frac12$ |
+    703 pipes=6 | | $\epsilon$ | 逐纤维最小特征值下界 | Lemma 3.2 | 紧性论证的入口 | 只用于证存在，不进最终常数 |
+    704 pipes=6 | | $[a,A]$ | 子水平集区间 | Lemma 3.2 | 保证唯一极小点存在 | 同上 |
+    705 pipes=6 | | $2^{-1/2}$ | 延拓映射系数 | Prop 4.1 | 使 $j>R$ 的行和 $\le\frac12$ | 由 $E_{j+1}=E_j\oplus E_j$ 的等距嵌入唯一确定 |
+    706 pipes=8 | | $\frac15$ | 多项式逼近容差 | Thm 5.1 | 推出 $\|P^*P-I\|<\frac{11}{25}$ | 需要 $<\sqrt{3/2}-1\approx0.225$，$\frac15=0.2$ 是就近取的 |
+=== D28 (1526 lines)
+  block@1167 rows=9  上方相邻行:
+    1151 pipes=6 | | 记号 | 值/定义 | 来源 | 作用 | 敏感度 |
+    1152 pipes=6 | | --- | --- | --- | --- | --- |
+Traceback (most recent call last):
+  File "<stdin>", line 33, in <module>
+UnicodeEncodeError: 'gbk' codec can't encode character '\u2212' in position 52: illegal multibyte sequence

@@ -1,0 +1,13 @@
+source pictures: 1058 in 572 papers
+  a `rotate` on a node: 51 nodes / 37 pictures / 32 papers
+  rotate AND a named `anchor=`: 10 nodes / 10 pictures / 8 papers
+A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Maps-October-5-2026	0	east	anchor=east,rotate=90,red!65!black	(-0.93,2.45)
+A-directional-zero-one-law-under-strict-ellipticity-September-23-2026	0	south	rotate=90,anchor=south	(-.45,-1.95)
+A-directional-zero-one-law-under-strict-ellipticity-September-23-2026	1	south	rotate=90,anchor=south	(-1.0,2.3)
+Finite-triangular-approximation-of-radial-sweeps-September-27-2026	1	east	anchor=east,rotate=90	(-1.17,0)
+Generic-C1-Future-Inextendibility-Near-Rotating-Subextremal-Kerr-Spacetimes-September-23-2026	1	west	anchor=west,rotate=-63	(3.7,1.95)
+Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September-26-2026	3	south	rotate=90,anchor=south	(3.03,1.47)
+Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026	1	south	rotate=90,anchor=south	(-0.15,1.68)
+Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026	2	south	rotate=45,anchor=south,inner sep=3pt	(2.011,0.861)
+The-Boltzmann-Grad-limit-for-stable-radial-potentials-on-regular-kinetic-intervals-September-23-2026	0	south	rotate=90,anchor=south,font=\footnotesize	(-2.72,1.5)
+uniform-bounds-for-planar-polynomial-limit-cycles-September-24-2026	2	south	rotate=34,anchor=south	(1.05,0.96)

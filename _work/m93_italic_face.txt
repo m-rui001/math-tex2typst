@@ -1,0 +1,6 @@
+\/ in flat sources      : 5 sites over 5 papers
+\/ in emission dump     : 0 records []
+\/ in shipped canvases  : 12 slashes in 12 maths strings over 4 papers
+   _math_body('X \\/ G') -> 'X \\/ G'   safe=True
+   _math_body('A\\/B') -> 'A\\/B'   safe=True
+   _math_body('1/2') -> '1"/"2'   safe=True

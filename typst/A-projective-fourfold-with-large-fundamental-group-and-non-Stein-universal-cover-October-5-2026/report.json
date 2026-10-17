@@ -1,0 +1,33 @@
+{
+  "paper": "A-projective-fourfold-with-large-fundamental-group-and-non-Stein-universal-cover-October-5-2026",
+  "ok": true,
+  "typ_lines": 1159,
+  "included_pdf_pages": 0,
+  "formulas": 751,
+  "math_failed": 0,
+  "labels": 109,
+  "equations": 7,
+  "theorems": 3,
+  "figures": 3,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1,
+    "cetz_converted": 3
+  },
+  "samples": {
+    "formulas": "751",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "flafter"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-projective-fourfold-with-large-fundamental-group-and-non-Stein-universal-cover-October-5-2026.tex"
+}

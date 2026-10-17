@@ -1,0 +1,99 @@
+\documentclass[border=20pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning,calc}
+\makeatletter
+% One dump per (reference node, new node) pair. Each anchor is read as a zero-length lineto so
+% \pgfgetlastxy has a last position on the path; it answers in the picture's user coordinates (轴 65).
+\def\dump#1#2#3#4{%
+  \path (#1.east) -- +(0pt,0pt);  \pgfgetlastxy{\AdiA}{\AdiB}%
+  \path (#1.north) -- +(0pt,0pt); \pgfgetlastxy{\AniA}{\AniB}%
+  \path (#1.center) -- +(0pt,0pt);\pgfgetlastxy{\AciA}{\AciB}%
+  \path (#2.west) -- +(0pt,0pt);  \pgfgetlastxy{\BwiA}{\BwiB}%
+  \path (#2.south) -- +(0pt,0pt); \pgfgetlastxy{\BsiA}{\BsiB}%
+  \path (#2.center) -- +(0pt,0pt);\pgfgetlastxy{\BciA}{\BciB}%
+  % one record per anchor: \typeout breaks a log line at TeX's \line, which LaTeX shadows with a
+  % macro, so a record cannot be widened -- it has to be written short
+  \typeout{DUMP|#3|#4|A.east|\AdiA|\AdiB}%
+  \typeout{DUMP|#3|#4|A.north|\AniA|\AniB}%
+  \typeout{DUMP|#3|#4|A.center|\AciA|\AciB}%
+  \typeout{DUMP|#3|#4|B.west|\BwiA|\BwiB}%
+  \typeout{DUMP|#3|#4|B.south|\BsiA|\BsiB}%
+  \typeout{DUMP|#3|#4|B.center|\BciA|\BciB}%
+}
+\makeatother
+\begin{document}
+
+\begin{tikzpicture}
+  \node (A) {X};
+  \node [right=of A] (B) {Y};
+  \node [above=of A] (C) {Y};
+  \dump{A}{B}{default}{right}
+  \dump{A}{C}{default}{above}
+\end{tikzpicture}
+
+\begin{tikzpicture}[node distance=13mm and 36mm]
+  \node (A) {X};
+  \node [right=of A] (B) {Y};
+  \node [above=of A] (C) {Y};
+  \dump{A}{B}{13and36}{right}
+  \dump{A}{C}{13and36}{above}
+\end{tikzpicture}
+
+\begin{tikzpicture}[node distance=36mm and 13mm]
+  \node (A) {X};
+  \node [right=of A] (B) {Y};
+  \node [above=of A] (C) {Y};
+  \dump{A}{B}{36and13}{right}
+  \dump{A}{C}{36and13}{above}
+\end{tikzpicture}
+
+\begin{tikzpicture}[node distance=2cm]
+  \node (A) {X};
+  \node [right=of A] (B) {Y};
+  \node [above=of A] (C) {Y};
+  \dump{A}{B}{2cm}{right}
+  \dump{A}{C}{2cm}{above}
+\end{tikzpicture}
+
+\begin{tikzpicture}[node distance=13mm and 36mm]
+  \node (A) {X};
+  \node [right=2cm of A] (B) {Y};
+  \dump{A}{B}{13and36-plus2cm}{right-override}
+\end{tikzpicture}
+
+\begin{tikzpicture}[node distance=13mm and 36mm]
+  \node (A) {X};
+  \node [above right=of A] (B) {Y};
+  \dump{A}{B}{13and36}{above-right}
+\end{tikzpicture}
+
+\begin{tikzpicture}[node distance=13mm and 36mm]
+  \node (A) {some wider text here};
+  \node [right=of A] (B) {Y};
+  \dump{A}{B}{13and36}{wideref-right}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+  \node (A) {X};
+  \begin{scope}[node distance=13mm and 36mm]
+    \node [right=of A] (B) {Y};
+  \end{scope}
+  \dump{A}{B}{scope13and36}{right}
+\end{tikzpicture}
+
+% does a distance written in mm/cm follow the picture's own scales?
+\begin{tikzpicture}[scale=0.5]
+  \node (A) {X};
+  \node [right=of A] (B) {Y};
+  \dump{A}{B}{scale05-default}{right}
+\end{tikzpicture}
+
+\begin{tikzpicture}[x=0.5cm,y=0.5cm,node distance=13mm and 36mm]
+  \node (A) {X};
+  \node [right=of A] (B) {Y};
+  \node [above=of A] (C) {Y};
+  \dump{A}{B}{x05y05-13and36}{right}
+  \dump{A}{C}{x05y05-13and36}{above}
+\end{tikzpicture}
+
+\end{document}

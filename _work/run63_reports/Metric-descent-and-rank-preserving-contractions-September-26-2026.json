@@ -1,0 +1,30 @@
+{
+  "paper": "Metric-descent-and-rank-preserving-contractions-September-26-2026",
+  "ok": true,
+  "typ_lines": 1632,
+  "included_pdf_pages": 0,
+  "formulas": 1452,
+  "math_failed": 0,
+  "labels": 197,
+  "equations": 15,
+  "theorems": 7,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "1452"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Metric-descent-and-rank-preserving-contractions-September-26-2026.tex"
+}

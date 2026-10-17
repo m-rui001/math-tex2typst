@@ -1,0 +1,8 @@
+A-boundary-only-obstruction-to-four-dimensional-disk-embedding-September-24-2026
+A-linear-list-coloring-bound-in-terms-of-the-Hadwiger-number-September-23-2026
+A-nine-dimensional-counterexample-to-Borsuks-covering-assertion-September-23-2026
+A-power-saving-for-intersective-polynomial-differences-with-an-exponent-depending-only-on-the-degree-October-5-2026
+Exact-Uniform-Sampling-of-Contingency-Tables-with-Arbitrary-Margins-September-24-2026
+Mean-payoff-parity-games-in-quasipolynomial-time-October-5-2026
+Nonuniqueness-for-the-periodic-hard-sphere-Boltzmann-equation-September-23-2026
+One-Rational-Matrix-Hitting-Point-for-Noncommutative-Formulas-September-24-2026

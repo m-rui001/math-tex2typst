@@ -1,0 +1,29 @@
+== Finite-algebraic-envelopes-and-the-Boone-Higman-conjecture-September-23-2026#1 ==
+== source: E:\math\_work\flat\Finite-algebraic-envelopes-and-the-Boone-Higman-conjecture-September-23-2026.tex ==
+  \begin{tikzpicture}[scale=1]
+  \node (O) at (0,0) {$O$};
+  \node (L) at (3,0) {$L$};
+  \node (R) at (6,0) {$R$};
+  \draw[->] (O) -- node[above] {$\alpha$} (L);
+  \draw[->] (L) -- node[above] {heads} (R);
+  \draw[->] (R) to[bend left=35] node[below] {$\omega$} (O);
+  \draw[->] (L) to[loop above] node[above] {$b_L$} (L);
+  \draw[->] (R) to[loop above] node[above] {$b_R$} (R);
+  \end{tikzpicture}
+-- emitted --
+#cetz.canvas({
+  import cetz.draw: *
+  content((0, 0), [$O$])
+  content((3, 0), [$L$])
+  content((6, 0), [$R$])
+  line((0.2657, 0), (2.734, 0), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: ">"))
+  content((1.5, 0), [$alpha$], anchor: "south")
+  line((3.266, 0), (5.734, 0), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: ">"))
+  content((4.5, 0), [heads], anchor: "south")
+  bezier((6, 0), (0, 0), (4.083, -1.342), (1.917, -1.342), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: ">"))
+  content((3, -1.007), [$omega$], anchor: "north")
+  line((3, 0), (3, 0), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: ">"))
+  content((3, 0), [$b_L$], anchor: "south")
+  line((6, 0), (6, 0), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: ">"))
+  content((6, 0), [$b_R$], anchor: "south")
+})

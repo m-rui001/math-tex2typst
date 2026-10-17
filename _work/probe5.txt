@@ -1,0 +1,51 @@
+D63 open-at-EOF=false
+D63 in-fence line span: first=13 last=407 count=153
+
+notes with fence open at EOF=[]
+occurrences whose fence flag changes under strict rules=0
+
+D113 in ptab=True dir=
+  D113 occurrences=0
+  preprints candidates=[]
+
+--- D244 line 68 dir=A-smooth-three-torus-diffeomorphism-with-simple-Lebesgue-spectrum-September-23-2026
+   arg='式 253' cmd=ref inbuild=False | 精细密度是整个引理最锋利的部分。设 $K(s,y)$ 为 $W(s,a)\psi(a)^2\,\mathrm d a$ 在 $a\mapsto sJ(a)$ 下的推前密度（02-passages.tex:114-116），则每个残差类 $j\equiv h\pmod P$ 的展开时间密度在 $L^1(\R)$ 意义下 $o(1)$ 逼近 $Q_{N,h}(t)=\sum_{k\in\Z}K(t,Nt-h-kP)$（02-passages.tex:117-123），再折回 $\
+   tex files in whole dir=7 build-only=7
+
+--- D346 line 102 dir=Cycle-clique-Ramsey-numbers-September-25-2026
+   arg='H' cmd=ref inbuild=False | 有了 \eqref{H} 里的 $H$，还差最后一块拼图：$H$ 里要能造出长度恰好 $\ell$、两端颜色不同的路径。Lemma clq:coloured-path 正是这句话：设 $s\ge4$，$H$ 连通非二部无 $K_s$，$\delta(H)\ge s$，且对任意不相邻两点 $\{a,b\}$ 有 $\lvert N_H[\{a,b\}]\rvert\ge2s$，则对任意非常值 $\chi\colon V(H)\to\{0,1\}$ 与 $1\le\ell\le2
+   tex files in whole dir=17 build-only=17
+
+--- D473 line 60 dir=Microscopic-jamming-in-the-negative-spherical-perceptron-September-24-2026
+   arg='...' cmd=ref inbuild=False | 换测度引理（main.tex:455-484，即 Lemma \ref{...}，本文按 main.tex 行号引用）：$0<T<\infty$ 几乎必然、$\mathbb E|\log T|^2<\infty$；叶概率按 $e^{X_\tau}$ 重加权时家谱律保持；根标记保持；$\mathbb E\log\sum v_\tau e^{X_\tau}=\mathbb E X_\varnothing$。
+   tex files in whole dir=1 build-only=1
+
+--- D517 line 185 dir=Positively-curved-Einstein-four-manifolds-September-23-2026
+   arg='3' cmd=ref inbuild=False | 分析侧的输入是弱范数方程与方差的接力（04-volume.tex:589--615）：对 $b$ 积分 \eqref{3} 用法，用 $\bar\sigma\le1$ 与 $\bar e\ge\frac53\lvert\nabla b\rvert^2$，得 $P-\mathbf E b\ge\frac49\mathbf E\lvert\nabla\sqrt b\rvert^2$；$\bar e/b$ 的可积性经磨光给出 $c=\sqrt b\in H^1$。取 $G(c)=c
+   tex files in whole dir=14 build-only=14
+
+--- D124 line 804 dir=The-entropy-rate-dimension-formula-for-self-similar-measures-on-the-line-September-24-2026
+   arg='lem:lem:pair-bound' cmd=ref inbuild=False | > submeasure of $\nu$, as in Lemma~\ref{lem:lem:pair-bound}.
+   tex files in whole dir=7 build-only=7
+
+--- D259 line 818 dir=None
+   arg='spread:period-selection' cmd=ref inbuild=False | "Let $Z$ and $a\theta^4+w$ be as in Proposition~\ref{spread:period-selection}"、
+
+--- D380 line 215 dir=Exact-Birch-Swinnerton-Dyer-Formula-from-Low-Selmer-Corank-October-3-2026
+   arg='eq:height-convention' cmd=label inbuild=True | （二）两套标签体系并存。引言里的公式标签是 \label{eq:height-convention}（`01-introduction.tex:37`）、\label{eq:bsd-main}（54）、\label{eq:normalized-quotient}（143）、\label{eq:intro-inequality}（157）、\label{eq:intro-pair}（159）；正文第 5 节以后一律是 \label{eq:source-N} 加手写 \tag{N
+   arg='eq:bsd-main' cmd=label inbuild=True | （二）两套标签体系并存。引言里的公式标签是 \label{eq:height-convention}（`01-introduction.tex:37`）、\label{eq:bsd-main}（54）、\label{eq:normalized-quotient}（143）、\label{eq:intro-inequality}（157）、\label{eq:intro-pair}（159）；正文第 5 节以后一律是 \label{eq:source-N} 加手写 \tag{N
+   arg='eq:normalized-quotient' cmd=label inbuild=True | （二）两套标签体系并存。引言里的公式标签是 \label{eq:height-convention}（`01-introduction.tex:37`）、\label{eq:bsd-main}（54）、\label{eq:normalized-quotient}（143）、\label{eq:intro-inequality}（157）、\label{eq:intro-pair}（159）；正文第 5 节以后一律是 \label{eq:source-N} 加手写 \tag{N
+   arg='eq:intro-inequality' cmd=label inbuild=True | （二）两套标签体系并存。引言里的公式标签是 \label{eq:height-convention}（`01-introduction.tex:37`）、\label{eq:bsd-main}（54）、\label{eq:normalized-quotient}（143）、\label{eq:intro-inequality}（157）、\label{eq:intro-pair}（159）；正文第 5 节以后一律是 \label{eq:source-N} 加手写 \tag{N
+   arg='eq:intro-pair' cmd=label inbuild=True | （二）两套标签体系并存。引言里的公式标签是 \label{eq:height-convention}（`01-introduction.tex:37`）、\label{eq:bsd-main}（54）、\label{eq:normalized-quotient}（143）、\label{eq:intro-inequality}（157）、\label{eq:intro-pair}（159）；正文第 5 节以后一律是 \label{eq:source-N} 加手写 \tag{N
+   arg='eq:source-N' cmd=label inbuild=False | （二）两套标签体系并存。引言里的公式标签是 \label{eq:height-convention}（`01-introduction.tex:37`）、\label{eq:bsd-main}（54）、\label{eq:normalized-quotient}（143）、\label{eq:intro-inequality}（157）、\label{eq:intro-pair}（159）；正文第 5 节以后一律是 \label{eq:source-N} 加手写 \tag{N
+   tex files in whole dir=12 build-only=12
+
+--- D117 line 231 dir=The-maximal-triangular-Hilbert-transform-at-the-symmetric-point-September-24-2026
+   arg=None cmd=ref inbuild=False | 第 0 节我把 maximal 的困难押在"算子族的极大化"上，读完 `maximal.tex` 才发现这一节的第一个句子就把接口交给了 jumps：`maximal.tex:3-4` 逐字 "The estimate of Section~\ref{sec{jumps}} allows different truncation / endpoints at every output position. We first use this freedom on a finit
+   tex files in whole dir=11 build-only=11
+
+--- D370 line 65 dir=Equidistribution-of-Prime-Degree-Torus-Packets-with-Arbitrary-Local-Type-September-24-2026
+   arg='local-question' cmd=ref inbuild=False | 于是我把第一层的目标改写成一个更弱、但恰好够用的形式：只要上界，不要渐近；而且上界允许带 $\kappa_K=\operatorname*{Res}_{s=1}\zeta_K(s)$ 这个因子。理由在 `paper.tex:181`--`184`：把 Dedekind zeta 的留数保留在展开后的理想计数里，就够了；Stark 的例外零点下降（Stark 1974）加上 Shiu 定理（Pollack 的一致形式）提供了不依赖 subconvexity 的所需界；奇数次排除
+   arg='shell-moment' cmd=ref inbuild=False | 于是我把第一层的目标改写成一个更弱、但恰好够用的形式：只要上界，不要渐近；而且上界允许带 $\kappa_K=\operatorname*{Res}_{s=1}\zeta_K(s)$ 这个因子。理由在 `paper.tex:181`--`184`：把 Dedekind zeta 的留数保留在展开后的理想计数里，就够了；Stark 的例外零点下降（Stark 1974）加上 Shiu 定理（Pollack 的一致形式）提供了不依赖 subconvexity 的所需界；奇数次排除
+   arg='residue-count' cmd=ref inbuild=False | 于是我把第一层的目标改写成一个更弱、但恰好够用的形式：只要上界，不要渐近；而且上界允许带 $\kappa_K=\operatorname*{Res}_{s=1}\zeta_K(s)$ 这个因子。理由在 `paper.tex:181`--`184`：把 Dedekind zeta 的留数保留在展开后的理想计数里，就够了；Stark 的例外零点下降（Stark 1974）加上 Shiu 定理（Pollack 的一致形式）提供了不依赖 subconvexity 的所需界；奇数次排除
+   tex files in whole dir=7 build-only=7

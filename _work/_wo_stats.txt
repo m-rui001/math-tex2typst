@@ -1,0 +1,68 @@
+D*.md scanned=734  notes_with_declared_sections=627  sections=1113  items_in_sections=7253
+sections_without_items=1
+cat_EXCLUDED = 2661
+cat_JUDGMENT = 3283
+cat_KEEP = 101
+cat_ORDER = 517
+cat_WAIVER = 691
+kind_already-fixed-in-place = 16
+kind_checker-false-positive = 691
+kind_defect-needs-wording = 3283
+kind_mechanical-count-correction = 16
+kind_mechanical-delete = 5
+kind_mechanical-target-given = 496
+kind_no-defect-register = 2011
+kind_process-register = 634
+kind_quotes-bad-form = 101
+tsv_rows=4592
+
+ORDER kinds
+      16 mechanical-count-correction
+       5 mechanical-delete
+     496 mechanical-target-given
+
+ORDER items by family
+     188 macro
+     187 count
+     160 btick
+     135 table
+     114 banstring
+     112 typo
+      58 other
+      54 anchor
+      50 ordermove
+      39 probe
+      32 english
+      26 cite
+
+top notes by ORDER items
+   7  D370-素数次数环面包在任意局部型下的等分布.md
+   6  D371-任意阶本原四次环面包线的等分布.md
+   6  D585-稳定子轨道局部稠密性与厚张量理想链.md
+   5  D15-有限欧氏Ramsey配置分类.md
+   5  D186-固定粒子停机测试的构造路径.md
+   5  D251-沿Lipschitz方向Hilbert变换的一致L2界.md
+   5  D431-光滑各向同性弹性逆问题的全局唯一性.md
+   5  D455-Koebe圆盘域猜想的兼容坐标与路径律融合.md
+   4  D206-把半权除子的orbifold基本群装进一个八维特殊流形.md
+   4  D24-Kaplansky拟迹猜想反例.md
+   4  D268-单元格有界列联表FPRAS的反向推导笔记.md
+   4  D312-紧致双曲Kähler流形的典范放大性.md
+   4  D357-盘转移表示与受限桥质量.md
+   4  D372-原始六次环面包的一等分布.md
+   4  D539-比较半径恰为平均维数之半.md
+   3  D12-Barnette猜想-三次二部平面图Hamilton圈.md
+   3  D13-有界树宽图的L1嵌入.md
+   3  D175-良条件对数凹采样的次多项式查询复杂度与维度指数零.md
+   3  D194-同余格表示问题的否定解答：一条被格形状逼出来的群论路线.md
+   3  D20-群环行列式猜想的反例.md
+   3  D204-四维盘嵌入猜想的边界障碍：从自由群问题到Frobenius-Koszul障碍.md
+   3  D207-Hadwiger猜想反例的二进制构造与四洞强制.md
+   3  D222-Calabi流在复射影空间上的有限时间奇点构造.md
+   3  D228-局部Penrose不等式与共形微扰的四次障碍.md
+   3  D269-二值容量公共整多面体基FPRAS研究笔记.md
+
+ORDER verification tally
+   291 unverifiable
+   208 no
+    18 yes

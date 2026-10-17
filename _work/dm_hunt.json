@@ -1,0 +1,2869 @@
+[
+ {
+  "file": "D100-准Riemann假设：Re-s大于八分之七的无零点半平面与Dirichlet-L函数显式公式路线的反推笔记.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 498,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 58,
+    "dollar_line_after": 58,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "$，左括号 $=3-\\frac{8x}9+... $ 注意 $(1-x)+(2-\\frac{8x}",
+    "NEW": "$，左括号 $=3-\\frac{8x}9+...$ 注意 $(1-x)+(2-\\frac{8x}",
+    "hits": 1,
+    "ctx": "2-\\frac{8x}9)t-x$，左括号 $=3-\\frac{8x}9+...[ ]$ 注意 $(1-x)+(2-\\frac{8x}9)=3-\\frac{17x}9"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 5606,
+  "dollar_after": 5606,
+  "tick_before": 1238,
+  "tick_after": 1238,
+  "bytes_before": 206636,
+  "bytes_after": 206635
+ },
+ {
+  "file": "D104-单折Diophantine表示：幂关系与椭圆曲线互定义性的反推笔记.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 1,
+  "classes_before": {
+   "KaTeX parse error: Expected 'EOF', got '_' ": 1,
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {
+   "KaTeX parse error: Expected 'EOF', got '_' ": 1
+  },
+  "ops": [
+   {
+    "line": 553,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 17,
+    "dollar_line_after": 16,
+    "tick_line_before": 0,
+    "tick_line_after": 1,
+    "OLD": "码及五个加法元组与五个高度元组、两个邻值最大与 $L_0,D_0$、四松弛量 \"u+W_1-h_Q",
+    "NEW": "码及五个加法元组与五个高度元组、两个邻值最大与 `L_0,D_0$、四松弛量 \"u+W_1-h_Q",
+    "hits": 1,
+    "ctx": "表测试、五邻点与 $[2]Q$ 码及五个加法元组与五个高度元组、两个邻值最大与 [$]L_0,D_0$、四松弛量 \"u+W_1-h_Q,\\ N_Q-u-W_1-1,\\"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 3233,
+  "dollar_after": 3232,
+  "tick_before": 194,
+  "tick_after": 195,
+  "bytes_before": 124591,
+  "bytes_after": 124591
+ },
+ {
+  "file": "D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 1177,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 6,
+    "dollar_line_after": 6,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "{rr}=X_{mm}m_m^2+X_mn... $ 只有 $m_m^3$ 项 survive 在",
+    "NEW": "{rr}=X_{mm}m_m^2+X_mn...$ 只有 $m_m^3$ 项 survive 在",
+    "hits": 1,
+    "ctx": "$X_r=X_mm_m$、$X_{rr}=X_{mm}m_m^2+X_mn...[ ]$ 只有 $m_m^3$ 项 survive 在反对称组合里，\n$X_mX_{m"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 6462,
+  "dollar_after": 6462,
+  "tick_before": 1000,
+  "tick_after": 1000,
+  "bytes_before": 215519,
+  "bytes_after": 215518
+ },
+ {
+  "file": "D113-三维有界可测标量电导率的非唯一性：分块与标量化的反推笔记.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 1,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1,
+   "KaTeX parse error: Undefined control sequence: \\tabalign ": 1
+  },
+  "classes_after": {
+   "KaTeX parse error: Undefined control sequence: \\tabalign ": 1
+  },
+  "ops": [
+   {
+    "line": 843,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 32,
+    "dollar_line_after": 32,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "l_3h_3)-(-\\partial_1h_2) $…… 原文说改变量为 $-\\operatorn",
+    "NEW": "l_3h_3)-(-\\partial_1h_2)$…… 原文说改变量为 $-\\operatorn",
+    "hits": 1,
+    "ctx": "ial_1h_1-\\partial_3h_3)-(-\\partial_1h_2)[ ]$…… 原文说改变量为 $-\\operatorname{div} h=-q$ ✓"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 4178,
+  "dollar_after": 4178,
+  "tick_before": 1394,
+  "tick_after": 1394,
+  "bytes_before": 164242,
+  "bytes_after": 164241
+ },
+ {
+  "file": "D115-完全二分图交叉数：Zarankiewicz式与交点归一化的反推笔记.md",
+  "fam_before": 2,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 2
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 24,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 1,
+    "dollar_line_after": 0,
+    "tick_line_before": 4,
+    "tick_line_after": 5,
+    "OLD": "想：四个取整从哪来\n\n我坐下来第一件事，是盯着 $\\lfloor m/2\\rfloor\\lfloo",
+    "NEW": "想：四个取整从哪来\n\n我坐下来第一件事，是盯着 `\\lfloor m/2\\rfloor\\lfloo",
+    "hits": 1,
+    "ctx": "\n\n## 0 初始动机与第一条猜想：四个取整从哪来\n\n我坐下来第一件事，是盯着 [$]\\lfloor m/2\\rfloor\\lfloor(m-1)/2\\rfloor\\"
+   },
+   {
+    "line": 404,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 15,
+    "dollar_line_after": 15,
+    "tick_line_before": 15,
+    "tick_line_after": 15,
+    "OLD": "annihilation property of $\\Phi$ imply` 与 `R_{ik}=",
+    "NEW": "annihilation property of$\\Phi$ imply` 与 `R_{ik}=",
+    "hits": 1,
+    "ctx": "ditive} and the annihilation property of[ ]$\\Phi$ imply` 与 `R_{ik}=X_i-Y_k`，闭合了整条逻辑"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2779,
+  "dollar_after": 2778,
+  "tick_before": 1447,
+  "tick_after": 1448,
+  "bytes_before": 117450,
+  "bytes_after": 117449
+ },
+ {
+  "file": "D117-最大三角Hilbert变换对称点估计：跳跃控制与热流两侧的反推笔记.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 42,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 39,
+    "dollar_line_after": 39,
+    "tick_line_before": 7,
+    "tick_line_after": 7,
+    "OLD": "right)^{1/3}.$\"，左侧三线性形式对 $(A_0,A_1,A_2)\\mapsto(tA",
+    "NEW": "right)^{1/3}.$\"，左侧三线性形式对$(A_0,A_1,A_2)\\mapsto(tA",
+    "hits": 1,
+    "ctx": "h^2|A_v(i,j)|^3\\right)^{1/3}.$\"，左侧三线性形式对[ ]$(A_0,A_1,A_2)\\mapsto(tA_0,tA_1,tA_2)$ 是"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2456,
+  "dollar_after": 2456,
+  "tick_before": 1358,
+  "tick_after": 1358,
+  "bytes_before": 96172,
+  "bytes_after": 96171
+ },
+ {
+  "file": "D124-自相似测度熵率维数公式：窗、配对与平移增益的反推笔记.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 1,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1,
+   "KaTeX parse error: Undefined control sequence: \\ldash ": 1
+  },
+  "classes_after": {
+   "KaTeX parse error: Undefined control sequence: \\ldash ": 1
+  },
+  "ops": [
+   {
+    "line": 480,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 3,
+    "dollar_line_after": 2,
+    "tick_line_before": 0,
+    "tick_line_after": 1,
+    "OLD": "离。对两律 $P,Q$ 与集合 $B$，\n观测\"$样本是否落在 $B$\"给出的信息下界是\n$h_2",
+    "NEW": "离。对两律 $P,Q$ 与集合 $B$，\n观测\"`样本是否落在 $B$\"给出的信息下界是\n$h_2",
+    "hits": 1,
+    "ctx": "第二步，把小互信息转成 TV 距离。对两律 $P,Q$ 与集合 $B$，\n观测\"[$]样本是否落在 $B$\"给出的信息下界是\n$h_2((P(B)+Q(B))/2)-"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 3223,
+  "dollar_after": 3222,
+  "tick_before": 734,
+  "tick_after": 735,
+  "bytes_before": 97115,
+  "bytes_after": 97115
+ },
+ {
+  "file": "D134-乘积投影定位给出QAC零度parity下界：bootstrap与深度收缩的反推笔记.md",
+  "fam_before": 6,
+  "fam_after": 0,
+  "refused_before": 6,
+  "refused_after": 1,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 5,
+   "KaTeX parse error: {equation} can be used only in display ": 1
+  },
+  "classes_after": {
+   "KaTeX parse error: Can't use function '\\(' in math mode \n\n": 1
+  },
+  "ops": [
+   {
+    "line": 349,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 90,
+    "dollar_line_after": 90,
+    "tick_line_before": 26,
+    "tick_line_after": 26,
+    "OLD": "eta A-1=2\\beta\\ge0$\"；初值由 $W_N(T_0(z))=1$、$W_N(T_1",
+    "NEW": "eta A-1=2\\beta\\ge0$\"；初值由$W_N(T_0(z))=1$、$W_N(T_1",
+    "hits": 1,
+    "ctx": "1}$\" 与 \"$A^2-2\\beta A-1=2\\beta\\ge0$\"；初值由[ ]$W_N(T_0(z))=1$、$W_N(T_1(z))=\\beta\\le A$"
+   },
+   {
+    "line": 412,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 8,
+    "dollar_line_after": 8,
+    "tick_line_before": 8,
+    "tick_line_after": 8,
+    "OLD": "p(-N^\\sigma)$\"，理由 \"since $\\sigma'>\\alpha,\\sigma$.",
+    "NEW": "p(-N^\\sigma)$\"，理由 \"since$\\sigma'>\\alpha,\\sigma$.",
+    "hits": 1,
+    "ctx": "a'}\\right)\\le\\exp(-N^\\sigma)$\"，理由 \"since[ ]$\\sigma'>\\alpha,\\sigma$.\"（`depth_reducti"
+   },
+   {
+    "line": 462,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 16,
+    "dollar_line_after": 16,
+    "tick_line_before": 6,
+    "tick_line_after": 6,
+    "OLD": "tex:153-155` 是关键一句：\"Each $B_j$ is therefore a con",
+    "NEW": "tex:153-155` 是关键一句：\"Each$B_j$ is therefore a con",
+    "hits": 1,
+    "ctx": "depth_reduction.tex:153-155` 是关键一句：\"Each[ ]$B_j$ is therefore a contraction to whic"
+   },
+   {
+    "line": 523,
+    "from": "`",
+    "to": "$",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 10,
+    "dollar_line_after": 11,
+    "tick_line_before": 6,
+    "tick_line_after": 5,
+    "OLD": "选取在 `bootstrap.tex:25-35`：\"Choose fixed auxiliary",
+    "NEW": "选取在 `bootstrap.tex:25-35$：\"Choose fixed auxiliary",
+    "hits": 1,
+    "ctx": "emma}\"\n\n（b）辅助指数的选取在 `bootstrap.tex:25-35[`]：\"Choose fixed auxiliary exponents $s<a<"
+   },
+   {
+    "line": 595,
+    "from": "`",
+    "to": "$",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 16,
+    "dollar_line_after": 17,
+    "tick_line_before": 6,
+    "tick_line_after": 5,
+    "OLD": ".\n> \\end{equation}\"\n\n于是 `bootstrap.tex:139-142`：\"",
+    "NEW": ".\n> \\end{equation}\"\n\n于是 $bootstrap.tex:139-142`：\"",
+    "hits": 1,
+    "ctx": "}=2t_i-s_i-3\\eta.\n> \\end{equation}\"\n\n于是 [`]bootstrap.tex:139-142`：\"Writing $g_i=t_i"
+   },
+   {
+    "line": 604,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 6,
+    "dollar_line_after": 6,
+    "tick_line_before": 6,
+    "tick_line_after": 6,
+    "OLD": "i>t+Kg/2\\ge t+1>1. $\" 再取 $J\\le K$ 为第一个 $t_J>1$ 的指",
+    "NEW": "i>t+Kg/2\\ge t+1>1. $\" 再取$J\\le K$ 为第一个 $t_J>1$ 的指",
+    "hits": 1,
+    "ctx": "+\\sum_{i=1}^K g_i>t+Kg/2\\ge t+1>1. $\" 再取[ ]$J\\le K$ 为第一个 $t_J>1$ 的指标，`bootstrap.tex"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2409,
+  "dollar_after": 2411,
+  "tick_before": 2004,
+  "tick_after": 2002,
+  "bytes_before": 116483,
+  "bytes_after": 116479
+ },
+ {
+  "file": "D140-型F无穷通用群：填充、胞腔近似与幂等元包络的反推笔记.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 1,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {
+   "KaTeX parse error: Expected 'EOF', got '&' ": 1
+  },
+  "ops": [
+   {
+    "line": 215,
+    "from": "`",
+    "to": "$",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 1,
+    "dollar_line_after": 2,
+    "tick_line_before": 2,
+    "tick_line_after": 1,
+    "OLD": "\\qquad A_1=E_{001},\"\n\n> `idempotents.tex:44-45` \"",
+    "NEW": "\\qquad A_1=E_{001},\"\n\n> $idempotents.tex:44-45` \"",
+    "hits": 1,
+    "ctx": "uad A_0=E_{000},\\qquad A_1=E_{001},\"\n\n> [`]idempotents.tex:44-45` \" (000,01,1) & A_"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2845,
+  "dollar_after": 2846,
+  "tick_before": 1212,
+  "tick_after": 1211,
+  "bytes_before": 96120,
+  "bytes_after": 96120
+ },
+ {
+  "file": "D145-复杂矩阵乘法低于2.258与矩形界：证书层级与标签补全的反推笔记.md",
+  "fam_before": 2,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1,
+   "KaTeX parse error: Can't use function '$' in math mode \n\n(": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 115,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 13,
+    "dollar_line_after": 13,
+    "tick_line_before": 8,
+    "tick_line_after": 8,
+    "OLD": "nce per \\(\\ell$\"，若真那样计费则 $\\log R_N$ 变成 $t$ 倍级，$D-",
+    "NEW": "nce per \\(\\ell$\"，若真那样计费则$\\log R_N$ 变成 $t$ 倍级，$D-",
+    "hits": 1,
+    "ctx": "(\\mathcal A)\\) once per \\(\\ell$\"，若真那样计费则[ ]$\\log R_N$ 变成 $t$ 倍级，$D-A$ 不再相消，指数界直接退回平"
+   },
+   {
+    "line": 489,
+    "from": "`",
+    "to": "$",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 19,
+    "dollar_line_after": 20,
+    "tick_line_before": 24,
+    "tick_line_after": 23,
+    "OLD": "-certificates.tex:13--21`：\"Use base two, distingu",
+    "NEW": "-certificates.tex:13--21$：\"Use base two, distingu",
+    "hits": 1,
+    "ctx": "\n(a) 原文。目标设定 `07-certificates.tex:13--21[`]：\"Use base two, distinguished side \\(X\\)"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 8276,
+  "dollar_after": 8277,
+  "tick_before": 2886,
+  "tick_after": 2885,
+  "bytes_before": 284461,
+  "bytes_after": 284460
+ },
+ {
+  "file": "D148-三维相对论VlasovMaxwell整体经典解的符号增量bootstrap与延迟锥消去.md",
+  "fam_before": 1,
+  "fam_after": 1,
+  "refused_before": 1,
+  "refused_after": 1,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "ops": [],
+  "unresolved": [
+   {
+    "line": 402,
+    "kind": "INLINE",
+    "body": "130         行引用了                          （$1456"
+   }
+  ],
+  "dollar_before": 2440,
+  "dollar_after": 2440,
+  "tick_before": 710,
+  "tick_after": 710,
+  "bytes_before": 70074,
+  "bytes_after": 70074
+ },
+ {
+  "file": "D155-实L1独立乘积的averaged中点模与AUC重范化障碍.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 4,
+  "refused_after": 3,
+  "classes_before": {
+   "KaTeX parse error: Expected 'EOF', got '\\right' ": 1,
+   "KaTeX parse error: Double subscript ": 2,
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {
+   "KaTeX parse error: Expected 'EOF', got '\\right' ": 1,
+   "KaTeX parse error: Double subscript ": 2
+  },
+  "ops": [
+   {
+    "line": 533,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 14,
+    "dollar_line_after": 14,
+    "tick_line_before": 2,
+    "tick_line_after": 2,
+    "OLD": ")e^{-z}dz=(2-2/e)+(1/e)= $... 用正文给的对称式更快，$2/e\\app",
+    "NEW": ")e^{-z}dz=(2-2/e)+(1/e)=$... 用正文给的对称式更快，$2/e\\app",
+    "hits": 1,
+    "ctx": "int_1^\\infty(z-1)e^{-z}dz=(2-2/e)+(1/e)=[ ]$... 用正文给的对称式更快，$2/e\\approx0.736$，落在 $(0"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2610,
+  "dollar_after": 2610,
+  "tick_before": 2038,
+  "tick_after": 2038,
+  "bytes_before": 117262,
+  "bytes_after": 117261
+ },
+ {
+  "file": "D163-四次多项式无平方因子值的数域行列式路线与自适应辅助素数.md",
+  "fam_before": 2,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 2,
+  "classes_before": {
+   "KaTeX parse error: Unexpected end of input in a macro argu": 1,
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {
+   "KaTeX parse error: Unexpected end of input in a macro argu": 1,
+   "KaTeX parse error: Expected 'EOF', got '}' ": 1
+  },
+  "ops": [
+   {
+    "line": 189,
+    "from": " ",
+    "to": "",
+    "gain": 2,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 10,
+    "dollar_line_after": 10,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "1\\le n\\le X:f(n)\\text{ 是 $k$-power-free}\\}$（01-in",
+    "NEW": "1\\le n\\le X:f(n)\\text{ 是$k$-power-free}\\}$（01-in",
+    "hits": 1,
+    "ctx": "$S_{f,k}(X)=\\#\\{1\\le n\\le X:f(n)\\text{ 是[ ]$k$-power-free}\\}$（01-introduction.tex:7"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 3242,
+  "dollar_after": 3242,
+  "tick_before": 1032,
+  "tick_after": 1032,
+  "bytes_before": 123581,
+  "bytes_after": 123580
+ },
+ {
+  "file": "D211-三边际Coulomb代价的Monge拟设反例.md",
+  "fam_before": 2,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1,
+   "KaTeX parse error: Expected 'EOF', got '#' \n\n#̲# §19 勘误（已落": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 227,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 23,
+    "dollar_line_after": 23,
+    "tick_line_before": 7,
+    "tick_line_after": 7,
+    "OLD": "oof.tex:67-70` 那行下界。我把这个 $\\epsilon/3$ 式的粗估计写出来，是因",
+    "NEW": "oof.tex:67-70` 那行下界。我把这个$\\epsilon/3$ 式的粗估计写出来，是因",
+    "hits": 1,
+    "ctx": "uild/sections/proof.tex:67-70` 那行下界。我把这个[ ]$\\epsilon/3$ 式的粗估计写出来，是因为它同时解释了\"为什么三边际条件"
+   },
+   {
+    "line": 233,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 21,
+    "dollar_line_after": 20,
+    "tick_line_before": 15,
+    "tick_line_after": 16,
+    "OLD": " single $K_a$\"）。\n\n第四处停在 $Y_k$ 与 $W_k$ 的像为什么不交。$Y_",
+    "NEW": " single $K_a$\"）。\n\n第四处停在 `Y_k$ 与 $W_k$ 的像为什么不交。$Y_",
+    "hits": 1,
+    "ctx": "ach belongs to a single $K_a$\"）。\n\n第四处停在 [$]Y_k$ 与 $W_k$ 的像为什么不交。$Y_k(B)\\subset U_k^"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 1649,
+  "dollar_after": 1648,
+  "tick_before": 556,
+  "tick_after": 557,
+  "bytes_before": 72708,
+  "bytes_after": 72707
+ },
+ {
+  "file": "D219-素数1009上有限Smith-Toda复形V4的构造追记.md",
+  "fam_before": 2,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 2
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 49,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 35,
+    "dollar_line_after": 35,
+    "tick_line_before": 1,
+    "tick_line_after": 1,
+    "OLD": "9$)。第二处卡点更本质:有限化之后,残余候选里 $k=p$ 那一行的群根本不为零。May 页上结",
+    "NEW": "9$)。第二处卡点更本质:有限化之后,残余候选里$k=p$ 那一行的群根本不为零。May 页上结",
+    "hits": 1,
+    "ctx": ".tex:18\\text{-}69$)。第二处卡点更本质:有限化之后,残余候选里[ ]$k=p$ 那一行的群根本不为零。May 页上结结实实躺着两个单项式 $cyb\\"
+   },
+   {
+    "line": 182,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 158,
+    "dollar_line_after": 158,
+    "tick_line_before": 20,
+    "tick_line_after": 20,
+    "OLD": "2p^2-p=p^2+p$?我算得 $3p^2? $ 不对,重算: $N_0p=p^3-2p^2+",
+    "NEW": "2p^2-p=p^2+p$?我算得 $3p^2?$ 不对,重算: $N_0p=p^3-2p^2+",
+    "hits": 1,
+    "ctx": "p^2+p+1+p-1-p^3+2p^2-p=p^2+p$?我算得 $3p^2?[ ]$ 不对,重算: $N_0p=p^3-2p^2+p$;分子 $=(p^3+p^2"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2484,
+  "dollar_after": 2484,
+  "tick_before": 434,
+  "tick_after": 434,
+  "bytes_before": 72608,
+  "bytes_after": 72606
+ },
+ {
+  "file": "D249-从全局谱隙到二维纠缠面积律.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 44,
+    "from": "`",
+    "to": "$",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 13,
+    "dollar_line_after": 14,
+    "tick_line_before": 5,
+    "tick_line_after": 4,
+    "OLD": "叠链条就出面积律(`00-history.tex` 第 19 到 23 行是这套机制的文献位置)。",
+    "NEW": "叠链条就出面积律(`00-history.tex$ 第 19 到 23 行是这套机制的文献位置)。",
+    "hits": 1,
+    "ctx": "数小的同时秩只按常数倍增长,链条叠链条就出面积律(`00-history.tex[`] 第 19 到 23 行是这套机制的文献位置)。我预期的二维版本:对区域 $A$"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 1400,
+  "dollar_after": 1401,
+  "tick_before": 189,
+  "tick_after": 188,
+  "bytes_before": 71160,
+  "bytes_after": 71160
+ },
+ {
+  "file": "D25-Crouzeix完整不等式直接证明.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 3,
+  "refused_after": 2,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode \n\n$": 1,
+   "KaTeX parse error: Undefined control sequence: \\hsSq ": 2
+  },
+  "classes_after": {
+   "KaTeX parse error: Undefined control sequence: \\hsSq ": 2
+  },
+  "ops": [
+   {
+    "line": 1490,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 9,
+    "dollar_line_after": 8,
+    "tick_line_before": 7,
+    "tick_line_after": 8,
+    "OLD": "由** |\n\n### 11.4 候选失败路线\n\n$[推测]$ 其一，直接用 Minkowski 和",
+    "NEW": "由** |\n\n### 11.4 候选失败路线\n\n`[推测]$ 其一，直接用 Minkowski 和",
+    "hits": 1,
+    "ctx": "（指数和），并非用多边形的全部理由** |\n\n### 11.4 候选失败路线\n\n[$][推测]$ 其一，直接用 Minkowski 和 $K+\\overline{D("
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 8454,
+  "dollar_after": 8453,
+  "tick_before": 6518,
+  "tick_after": 6519,
+  "bytes_before": 400111,
+  "bytes_after": 400111
+ },
+ {
+  "file": "D253-阿贝尔覆盖Gale对应与Hodge猜想自幂-工作笔记.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 56,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 11,
+    "dollar_line_after": 10,
+    "tick_line_before": 9,
+    "tick_line_after": 10,
+    "OLD": "在性定了,下一步是它在哪里被\"看见\"。局部系统 $\\mathcal L=(\\pi_*k_Z)_\\c",
+    "NEW": "在性定了,下一步是它在哪里被\"看见\"。局部系统 `\\mathcal L=(\\pi_*k_Z)_\\c",
+    "hits": 1,
+    "ctx": ":737-741`)。\n\n线的存在性定了,下一步是它在哪里被\"看见\"。局部系统 [$]\\mathcal L=(\\pi_*k_Z)_\\chi$ 在 $U=(B\\setm"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 1269,
+  "dollar_after": 1268,
+  "tick_before": 585,
+  "tick_after": 586,
+  "bytes_before": 71108,
+  "bytes_after": 71108
+ },
+ {
+  "file": "D26-加倍Hilbert子集无双Lipschitz有限维嵌入.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 4,
+  "refused_after": 3,
+  "classes_before": {
+   "KaTeX parse error: Undefined control sequence: \\rangleG ": 3,
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {
+   "KaTeX parse error: Undefined control sequence: \\rangleG ": 3
+  },
+  "ops": [
+   {
+    "line": 769,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 19,
+    "dollar_line_after": 19,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "级）；量化保持\"$与目标和弦数、失真无关\"，外加 $K_B$ 只依赖环境空间。多用的机器：FIP ",
+    "NEW": "级）；量化保持\"$与目标和弦数、失真无关\"，外加$K_B$ 只依赖环境空间。多用的机器：FIP ",
+    "hits": 1,
+    "ctx": "t space\" 靠的正是这次升级）；量化保持\"$与目标和弦数、失真无关\"，外加[ ]$K_B$ 只依赖环境空间。多用的机器：FIP 紧致化引理（把无穷障碍切成有限证"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 4817,
+  "dollar_after": 4817,
+  "tick_before": 1590,
+  "tick_after": 1590,
+  "bytes_before": 188439,
+  "bytes_after": 188438
+ },
+ {
+  "file": "D261-稀疏一般图最大基数匹配的几乎线性时间.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 143,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 11,
+    "dollar_line_after": 10,
+    "tick_line_before": 0,
+    "tick_line_after": 1,
+    "OLD": "理（第 42 到 68 行）声称这件事可以只用 $(P+B)S^{O(1/a)+o_a(1)} 的",
+    "NEW": "理（第 42 到 68 行）声称这件事可以只用 `(P+B)S^{O(1/a)+o_a(1)} 的",
+    "hits": 1,
+    "ctx": "第 38 到 40 行）。\n\n引理（第 42 到 68 行）声称这件事可以只用 [$](P+B)S^{O(1/a)+o_a(1)} 的总时间、在每条路径上、对固定充分"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 1971,
+  "dollar_after": 1970,
+  "tick_before": 300,
+  "tick_after": 301,
+  "bytes_before": 110259,
+  "bytes_after": 110259
+ },
+ {
+  "file": "D275-用矩阵能量的曲率拿下dyadic三角Hilbert型的L3界.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 5,
+  "refused_after": 4,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1,
+   "KaTeX parse error: Expected 'EOF', got '}' ": 4
+  },
+  "classes_after": {
+   "KaTeX parse error: Expected 'EOF', got '}' ": 4
+  },
+  "ops": [
+   {
+    "line": 301,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 32,
+    "dollar_line_after": 32,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "对值 $\\le3m_i\\sum_{j>k}... $ 作者给出的上界是 $3E_i$，我要把中间一",
+    "NEW": "对值 $\\le3m_i\\sum_{j>k}...$ 作者给出的上界是 $3E_i$，我要把中间一",
+    "hits": 1,
+    "ctx": "hrm{op}}\\le1$，故绝对值 $\\le3m_i\\sum_{j>k}...[ ]$ 作者给出的上界是 $3E_i$，我要把中间一步补出来：$\\abs{x^*D_"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2432,
+  "dollar_after": 2432,
+  "tick_before": 396,
+  "tick_after": 396,
+  "bytes_before": 103193,
+  "bytes_after": 103192
+ },
+ {
+  "file": "D29-Borsuk覆盖断言九维反例.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 521,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 10,
+    "dollar_line_after": 10,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "$a-h=s-(N_k-N_{k-1})+... $ 即 $k-s=a-h$，是后文分诊（正维/零",
+    "NEW": "$a-h=s-(N_k-N_{k-1})+...$ 即 $k-s=a-h$，是后文分诊（正维/零",
+    "hits": 1,
+    "ctx": "$ 的互锁关系 $s+a=m$、$a-h=s-(N_k-N_{k-1})+...[ ]$ 即 $k-s=a-h$，是后文分诊（正维/零维）的代数底座，18 节兑现。\n"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 4560,
+  "dollar_after": 4560,
+  "tick_before": 732,
+  "tick_after": 732,
+  "bytes_before": 192301,
+  "bytes_after": 192300
+ },
+ {
+  "file": "D317-任意接近却寻不到共轭酉的分离Cstar代数.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 1,
+  "classes_before": {
+   "KaTeX parse error: Undefined control sequence: \\lem ": 1,
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {
+   "KaTeX parse error: Undefined control sequence: \\lem ": 1
+  },
+  "ops": [
+   {
+    "line": 125,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 37,
+    "dollar_line_after": 37,
+    "tick_line_before": 13,
+    "tick_line_after": 13,
+    "OLD": "xt{main.tex:506}$):因为右正则 $\\rho$ 与左正则 $\\lambda$ 交换",
+    "NEW": "xt{main.tex:506}$):因为右正则$\\rho$ 与左正则 $\\lambda$ 交换",
+    "hits": 1,
+    "ctx": "es I\\in D'$(`\\text{main.tex:506}$):因为右正则[ ]$\\rho$ 与左正则 $\\lambda$ 交换,所以 $\\rho(g)\\in\\"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 1956,
+  "dollar_after": 1956,
+  "tick_before": 792,
+  "tick_after": 792,
+  "bytes_before": 70547,
+  "bytes_after": 70546
+ },
+ {
+  "file": "D339-平面XY模型临界中心磁化的对数修正与振幅确定.md",
+  "fam_before": 2,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 2
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 296,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 4,
+    "dollar_line_after": 4,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "\\nabla^a \\eta_l(v)\\rvert $ | $\\le C_a (1+\\mathrm{",
+    "NEW": "\\nabla^a \\eta_l(v)\\rvert$ | $\\le C_a (1+\\mathrm{",
+    "hits": 1,
+    "ctx": "闭合  |\n| $\\lvert \\nabla^a \\eta_l(v)\\rvert[ ]$ | $\\le C_a (1+\\mathrm{dist}(v,0))^{-1-"
+   },
+   {
+    "line": 404,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 48,
+    "dollar_line_after": 48,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "强行让 $s$ 与 $J$ 无关，$m(J) = $ const、$i(J)$ 也会常数化，\"[c",
+    "NEW": "强行让 $s$ 与 $J$ 无关，$m(J) =$ const、$i(J)$ 也会常数化，\"[c",
+    "hits": 1,
+    "ctx": "g J)$ 显然满足这个前提。若强行让 $s$ 与 $J$ 无关，$m(J) =[ ]$ const、$i(J)$ 也会常数化，\"[cJ, 8J] 全在进入之后\"就要"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2220,
+  "dollar_after": 2220,
+  "tick_before": 315,
+  "tick_after": 315,
+  "bytes_before": 72908,
+  "bytes_after": 72906
+ },
+ {
+  "file": "D342-临界SK模型单点热浴混合的多项式指数.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 360,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 39,
+    "dollar_line_after": 39,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "指数\"才是归纳能跑起来的原因。第二，左端是后测度 $\\mu_{h_s}$ 的二乘积，右端却以 $n",
+    "NEW": "指数\"才是归纳能跑起来的原因。第二，左端是后测度$\\mu_{h_s}$ 的二乘积，右端却以 $n",
+    "hits": 1,
+    "ctx": " $n$ 选\"，没注意到\"$同一指数\"才是归纳能跑起来的原因。第二，左端是后测度[ ]$\\mu_{h_s}$ 的二乘积，右端却以 $nr$ 为尺度，而 $k=nr^3"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2975,
+  "dollar_after": 2975,
+  "tick_before": 82,
+  "tick_after": 82,
+  "bytes_before": 139121,
+  "bytes_after": 139120
+ },
+ {
+  "file": "D343-蜂窝格临界带穿越质量幂律-1-4的求取全程复盘.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 176,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 28,
+    "dollar_line_after": 28,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "近唯一性与有理延拓。Glue 配对内部转置劈分把 $m$ 归约到更小带：两半各走插入与投影一条路，",
+    "NEW": "近唯一性与有理延拓。Glue 配对内部转置劈分把$m$ 归约到更小带：两半各走插入与投影一条路，",
+    "hits": 1,
+    "ctx": "2 到 86 行）加混合特殊化附近唯一性与有理延拓。Glue 配对内部转置劈分把[ ]$m$ 归约到更小带：两半各走插入与投影一条路，全程不需要 $S_s^{\\mat"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2252,
+  "dollar_after": 2252,
+  "tick_before": 22,
+  "tick_after": 22,
+  "bytes_before": 82549,
+  "bytes_after": 82548
+ },
+ {
+  "file": "D35-最短公共超串的多项式时间二近似.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 899,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 4,
+    "dollar_line_after": 4,
+    "tick_line_before": 4,
+    "tick_line_after": 4,
+    "OLD": "k-count` | $B_A(s;N_T) = $ 被阻塞出现数 $\\le N_T(s)$ | ",
+    "NEW": "k-count` | $B_A(s;N_T) =$ 被阻塞出现数 $\\le N_T(s)$ | ",
+    "hits": 1,
+    "ctx": "(2.4) | `eq:block-count` | $B_A(s;N_T) =[ ]$ 被阻塞出现数 $\\le N_T(s)$ | `02-counts.tex:2"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 3658,
+  "dollar_after": 3658,
+  "tick_before": 1524,
+  "tick_after": 1524,
+  "bytes_before": 130543,
+  "bytes_after": 130542
+ },
+ {
+  "file": "D375-平面XY模型关联长度的本质奇点.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 390,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 6,
+    "dollar_line_after": 6,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "rt \\partial_b^rK_s\\rVert $ | $\\le C_{R_0,r}s^{2r}",
+    "NEW": "rt \\partial_b^rK_s\\rVert$ | $\\le C_{R_0,r}s^{2r}",
+    "hits": 1,
+    "ctx": " 全部导数断 |\n| $\\lVert \\partial_b^rK_s\\rVert[ ]$ | $\\le C_{R_0,r}s^{2r}$ | sections/ent"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 1822,
+  "dollar_after": 1822,
+  "tick_before": 64,
+  "tick_after": 64,
+  "bytes_before": 75018,
+  "bytes_after": 75017
+ },
+ {
+  "file": "D376-带指定外部叶的有限étale覆盖的同时构造反推笔记.md",
+  "fam_before": 3,
+  "fam_after": 0,
+  "refused_before": 4,
+  "refused_after": 1,
+  "classes_before": {
+   "KaTeX parse error: {CD} can be used only in display mode.": 1,
+   "KaTeX parse error: Can't use function '$' in math mode ": 3
+  },
+  "classes_after": {
+   "KaTeX parse error: {CD} can be used only in display mode.": 1
+  },
+  "ops": [
+   {
+    "line": 173,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 4,
+    "dollar_line_after": 4,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "分工瓦解 |\n| $\\lvert B\\rvert $ | 分量在 $D$ 上的度数 | 02-cy",
+    "NEW": "分工瓦解 |\n| $\\lvert B\\rvert$ | 分量在 $D$ 上的度数 | 02-cy",
+    "hits": 1,
+    "ctx": "§5 与 §7 职能错乱,双素数分工瓦解 |\n| $\\lvert B\\rvert[ ]$ | 分量在 $D$ 上的度数 | 02-cycles.tex:41 | §4"
+   },
+   {
+    "line": 197,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 4,
+    "dollar_line_after": 4,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "\\mid\\lvert B\\cap P\\rvert $ | 经 $A\\to R$ 满分解 | 04-",
+    "NEW": "\\mid\\lvert B\\cap P\\rvert$ | 经 $A\\to R$ 满分解 | 04-",
+    "hits": 1,
+    "ctx": ">1$,(i) 崩 |\n| $p\\mid\\lvert B\\cap P\\rvert[ ]$ | 经 $A\\to R$ 满分解 | 04-quotient.tex:31-"
+   },
+   {
+    "line": 207,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 6,
+    "dollar_line_after": 6,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "2.1 传递性与 $\\lvert B\\rvert $ 公式 | 无 $\\Omega$-点时(见第 ",
+    "NEW": "2.1 传递性与 $\\lvert B\\rvert$ 公式 | 无 $\\Omega$-点时(见第 ",
+    "hits": 1,
+    "ctx": ".tex:52-54 | 引理 2.1 传递性与 $\\lvert B\\rvert[ ]$ 公式 | 无 $\\Omega$-点时(见第 5 行台账)需另证  |\n| 附"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 1396,
+  "dollar_after": 1396,
+  "tick_before": 106,
+  "tick_after": 106,
+  "bytes_before": 70386,
+  "bytes_after": 70383
+ },
+ {
+  "file": "D38-Jacobsthal函数二次界.md",
+  "fam_before": 2,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 2
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 946,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 28,
+    "dollar_line_after": 27,
+    "tick_line_before": 18,
+    "tick_line_after": 19,
+    "OLD": "bda$。\n\n(d) 预算切分的错位。论文口径：$1+0.66+0.52+0.34=2.52$，对",
+    "NEW": "bda$。\n\n(d) 预算切分的错位。论文口径：`1+0.66+0.52+0.34=2.52$，对",
+    "hits": 1,
+    "ctx": "l.log 2` 对 $\\lambda$。\n\n(d) 预算切分的错位。论文口径：[$]1+0.66+0.52+0.34=2.52$，对 $I_{\\text{full}"
+   },
+   {
+    "line": 999,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 20,
+    "dollar_line_after": 20,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "第二道闸门（误差质量 $o(1)$）要求 $A> $ 所有 $\\log B$ 幂的总次数，会牵动 ",
+    "NEW": "第二道闸门（误差质量 $o(1)$）要求 $A>$ 所有 $\\log B$ 幂的总次数，会牵动 ",
+    "hits": 1,
+    "ctx": "og^{-A}$ 时，第 6 节第二道闸门（误差质量 $o(1)$）要求 $A>[ ]$ 所有 $\\log B$ 幂的总次数，会牵动 $C_s$ 与 $\\alpha_"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 8317,
+  "dollar_after": 8316,
+  "tick_before": 850,
+  "tick_after": 851,
+  "bytes_before": 228918,
+  "bytes_after": 228917
+ },
+ {
+  "file": "D390-一致离散空间上Lipschitz自由空间的逼近失效.md",
+  "fam_before": 2,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 2
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 17,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 28,
+    "dollar_line_after": 27,
+    "tick_line_before": 0,
+    "tick_line_after": 1,
+    "OLD": "\\R$、$\\N$、$\\mathcal F$（即 $\\mathcal F$）、$\\operatorn",
+    "NEW": "\\R$、$\\N$、$\\mathcal F$（即 `\\mathcal F$）、$\\operatorn",
+    "hits": 1,
+    "ctx": "mon.tex:32--44：$\\R$、$\\N$、$\\mathcal F$（即 [$]\\mathcal F$）、$\\operatorname{Lip}$、$\\Vert"
+   },
+   {
+    "line": 17,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 27,
+    "dollar_line_after": 26,
+    "tick_line_before": 1,
+    "tick_line_after": 2,
+    "OLD": "lvert \\cdot\\right\\rvert $、$\\operatorname{dist}$、$",
+    "NEW": "lvert \\cdot\\right\\rvert `、$\\operatorname{dist}$、$",
+    "hits": 1,
+    "ctx": "\\rVert $、$\\left\\lvert \\cdot\\right\\rvert [$]、$\\operatorname{dist}$、$\\mathbb E$、$\\mat"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 1946,
+  "dollar_after": 1944,
+  "tick_before": 0,
+  "tick_after": 2,
+  "bytes_before": 70833,
+  "bytes_after": 70833
+ },
+ {
+  "file": "D396-复配中的过滤乘积与保边界压缩.md",
+  "fam_before": 2,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 1,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1,
+   "KaTeX parse error: Unexpected end of input in a macro argu": 1
+  },
+  "classes_after": {
+   "KaTeX parse error: Unexpected end of input in a macro argu": 1
+  },
+  "ops": [
+   {
+    "line": 37,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 26,
+    "dollar_line_after": 26,
+    "tick_line_before": 6,
+    "tick_line_after": 6,
+    "OLD": "q$ 的目标子集，维数计数要 $2\\dim P< $ 某个 $2q$ 级的界。麻烦在于 $\\dim",
+    "NEW": "q$ 的目标子集，维数计数要 $2\\dim P<$ 某个 $2q$ 级的界。麻烦在于 $\\dim",
+    "hits": 1,
+    "ctx": "dim P$ 维的源避开余维 $q$ 的目标子集，维数计数要 $2\\dim P<[ ]$ 某个 $2q$ 级的界。麻烦在于 $\\dim P$ 在批量放大时按 $\\el"
+   },
+   {
+    "line": 115,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 44,
+    "dollar_line_after": 44,
+    "tick_line_before": 4,
+    "tick_line_after": 4,
+    "OLD": ")=\\{y\\in C(t,N):\\text{至少 $s$ 个槽在 }\\partial[-1,1]^",
+    "NEW": ")=\\{y\\in C(t,N):\\text{至少$s$ 个槽在 }\\partial[-1,1]^",
+    "hits": 1,
+    "ctx": "}$。核心对象 $Q_s(t,N)=\\{y\\in C(t,N):\\text{至少[ ]$s$ 个槽在 }\\partial[-1,1]^t\\}$ 是有限多面体（指定因子"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 1818,
+  "dollar_after": 1818,
+  "tick_before": 276,
+  "tick_after": 276,
+  "bytes_before": 72614,
+  "bytes_after": 72612
+ },
+ {
+  "file": "D436-稳定Morse数以下的哈密顿不动点.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 268,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 30,
+    "dollar_line_after": 29,
+    "tick_line_before": 8,
+    "tick_line_after": 9,
+    "OLD": "身实验。\n\n第五条,直接吹爆四次点之外的路线换 $Y$。[推测] 若不吹爆,直接用 $\\mathb",
+    "NEW": "身实验。\n\n第五条,直接吹爆四次点之外的路线换 `Y$。[推测] 若不吹爆,直接用 $\\mathb",
+    "hits": 1,
+    "ctx": "只会让相对亏损变大,值得后续做瘦身实验。\n\n第五条,直接吹爆四次点之外的路线换 [$]Y$。[推测] 若不吹爆,直接用 $\\mathbb{CP}^1\\times\\ma"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2330,
+  "dollar_after": 2329,
+  "tick_before": 856,
+  "tick_after": 857,
+  "bytes_before": 72430,
+  "bytes_after": 72430
+ },
+ {
+  "file": "D450-平面Mumford-Shah极小元的内部正则性.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 38,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 17,
+    "dollar_line_after": 16,
+    "tick_line_before": 7,
+    "tick_line_after": 8,
+    "OLD": "ev 比较类的弱极小。我们的容许类一条都不给: $K$ 只有 $\\mathcal H^1(K)<\\",
+    "NEW": "ev 比较类的弱极小。我们的容许类一条都不给: `K$ 只有 $\\mathcal H^1(K)<\\",
+    "hits": 1,
+    "ctx": "、pair 属于局部 Sobolev 比较类的弱极小。我们的容许类一条都不给: [$]K$ 只有 $\\mathcal H^1(K)<\\infty$, rectifia"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 1797,
+  "dollar_after": 1796,
+  "tick_before": 475,
+  "tick_after": 476,
+  "bytes_before": 70599,
+  "bytes_after": 70599
+ },
+ {
+  "file": "D47-无共轭点但无非正曲率度量的三流形.md",
+  "fam_before": 3,
+  "fam_after": 0,
+  "refused_before": 9,
+  "refused_after": 6,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 3,
+   "KaTeX parse error: No such environment: psmallmatrix ": 6
+  },
+  "classes_after": {
+   "KaTeX parse error: No such environment: psmallmatrix ": 6
+  },
+  "ops": [
+   {
+    "line": 191,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 47,
+    "dollar_line_after": 47,
+    "tick_line_before": 14,
+    "tick_line_after": 14,
+    "OLD": "\"常数不依赖 $B_1,B_2\"这句要紧:周期在 $\\delta$ 之后才被压到尖点尺度(第 8 ",
+    "NEW": "\"常数不依赖 $B_1,B_2\"这句要紧:周期在$\\delta$ 之后才被压到尖点尺度(第 8 ",
+    "hits": 1,
+    "ctx": "elta z$ 的压制没有来源。\"常数不依赖 $B_1,B_2\"这句要紧:周期在[ ]$\\delta$ 之后才被压到尖点尺度(第 8 节),若估计含 $B$,选择顺序"
+   },
+   {
+    "line": 318,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 84,
+    "dollar_line_after": 84,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "Q)Pp=2p^{\\mathsf T}P'... $ 逐项合并后恰是完备平方展开:$|\\dot z",
+    "NEW": "Q)Pp=2p^{\\mathsf T}P'...$ 逐项合并后恰是完备平方展开:$|\\dot z",
+    "hits": 1,
+    "ctx": "}P(2QP'QP'Q-QP''Q)Pp=2p^{\\mathsf T}P'...[ ]$ 逐项合并后恰是完备平方展开:$|\\dot z|_Q^2-2w\\dot z^{"
+   },
+   {
+    "line": 593,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 12,
+    "dollar_line_after": 12,
+    "tick_line_before": 4,
+    "tick_line_after": 4,
+    "OLD": "P,Q$ 界 | $P\\in[1/9,18]Q? $ 即 $\\tfrac19\\operatorna",
+    "NEW": "P,Q$ 界 | $P\\in[1/9,18]Q?$ 即 $\\tfrac19\\operatorna",
+    "hits": 1,
+    "ctx": ",由 $A$ 有界保 |\n| $P,Q$ 界 | $P\\in[1/9,18]Q?[ ]$ 即 $\\tfrac19\\operatorname{Id}\\preceq P\\"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 3667,
+  "dollar_after": 3667,
+  "tick_before": 744,
+  "tick_after": 744,
+  "bytes_before": 126600,
+  "bytes_after": 126597
+ },
+ {
+  "file": "D48-矩阵乘法九四分之次.md",
+  "fam_before": 2,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 2
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 391,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 53,
+    "dollar_line_after": 53,
+    "tick_line_before": 5,
+    "tick_line_after": 5,
+    "OLD": "(w)=c(P_w\\lambda)(x)$）。在 $\\mathcal K'$ 里重复、保留先前冻住",
+    "NEW": "(w)=c(P_w\\lambda)(x)$）。在$\\mathcal K'$ 里重复、保留先前冻住",
+    "hits": 1,
+    "ctx": "mbda(wx)/\\lambda(w)=c(P_w\\lambda)(x)$）。在[ ]$\\mathcal K'$ 里重复、保留先前冻住的方程，归纳得任意有限个 $P_"
+   },
+   {
+    "line": 407,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 33,
+    "dollar_line_after": 33,
+    "tick_line_before": 1,
+    "tick_line_after": 1,
+    "OLD": "R}(D)$ 形式，见 `880-883$。）再 $\\delta\\downarrow0$（$n$ ",
+    "NEW": "R}(D)$ 形式，见 `880-883$。）再$\\delta\\downarrow0$（$n$ ",
+    "hits": 1,
+    "ctx": "k+\\operatorname{R}(D)$ 形式，见 `880-883$。）再[ ]$\\delta\\downarrow0$（$n$ 固定，$u$ 已从不等式消失）："
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 3423,
+  "dollar_after": 3423,
+  "tick_before": 1251,
+  "tick_after": 1251,
+  "bytes_before": 99188,
+  "bytes_after": 99186
+ },
+ {
+  "file": "D505-混合变换的逐点多重遍历平均.md",
+  "fam_before": 2,
+  "fam_after": 2,
+  "refused_before": 2,
+  "refused_after": 2,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 2
+  },
+  "classes_after": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 2
+  },
+  "ops": [],
+  "unresolved": [
+   {
+    "line": 145,
+    "kind": "INLINE",
+    "body": "\\S$10 的通道闭合与 $\\S$14 的最小支撑博弈都要吃\""
+   },
+   {
+    "line": 163,
+    "kind": "INLINE",
+    "body": "\\S$16 里 $Z=\\mathsf M_b(Y)"
+   }
+  ],
+  "dollar_before": 2452,
+  "dollar_after": 2452,
+  "tick_before": 8,
+  "tick_after": 8,
+  "bytes_before": 101968,
+  "bytes_after": 101968
+ },
+ {
+  "file": "D506-选择长度下的四重平均逐点收敛.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 133,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 16,
+    "dollar_line_after": 16,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": ".tex:181-185）。左边取 $Z_n'= $ 方差 $\\varepsilon^2/128$",
+    "NEW": ".tex:181-185）。左边取 $Z_n'=$ 方差 $\\varepsilon^2/128$",
+    "hits": 1,
+    "ctx": "tions/04-packing.tex:181-185）。左边取 $Z_n'=[ ]$ 方差 $\\varepsilon^2/128$ 的独立正态并用 $\\mathb"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2278,
+  "dollar_after": 2278,
+  "tick_before": 19,
+  "tick_after": 19,
+  "bytes_before": 98608,
+  "bytes_after": 98607
+ },
+ {
+  "file": "D517-正曲率Einstein四维流形分类的两块耦合证明之路.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 232,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 40,
+    "dollar_line_after": 40,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "、$x+y\\le2$ 下依旧成立。论证：$P_- $ 为总负自旋 $1$ 投影，最高 Hessia",
+    "NEW": "、$x+y\\le2$ 下依旧成立。论证：$P_-$ 为总负自旋 $1$ 投影，最高 Hessia",
+    "hits": 1,
+    "ctx": "论在闭不等式 $v+b\\le2$、$x+y\\le2$ 下依旧成立。论证：$P_-[ ]$ 为总负自旋 $1$ 投影，最高 Hessian 型是 $P_+P_-$；在该"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2770,
+  "dollar_after": 2770,
+  "tick_before": 0,
+  "tick_after": 0,
+  "bytes_before": 91242,
+  "bytes_after": 91241
+ },
+ {
+  "file": "D52-c0的双Lipschitz吸收而无线性拷贝.md",
+  "fam_before": 2,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 2
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 347,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 10,
+    "dollar_line_after": 10,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "率 2；3、4、$2\\lVert u\\rvert $ | 05:26-34,54-61 | $2^",
+    "NEW": "率 2；3、4、$2\\lVert u\\rvert$ | 05:26-34,54-61 | $2^",
+    "hits": 1,
+    "ctx": " $\\chi$ 与操作界 | 斜率 2；3、4、$2\\lVert u\\rvert[ ]$ | 05:26-34,54-61 | $2^h,4^h$、平台 $\\vare"
+   },
+   {
+    "line": 356,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 14,
+    "dollar_line_after": 14,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "K\\le3$；$q=\\lVert Q\\rvert $ | 06:243, 02:29-37 | $",
+    "NEW": "K\\le3$；$q=\\lVert Q\\rvert$ | 06:243, 02:29-37 | $",
+    "hits": 1,
+    "ctx": "eratorname{Lip} K\\le3$；$q=\\lVert Q\\rvert[ ]$ | 06:243, 02:29-37 | $\\operatorname{Li"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 4723,
+  "dollar_after": 4723,
+  "tick_before": 986,
+  "tick_after": 986,
+  "bytes_before": 139403,
+  "bytes_after": 139401
+ },
+ {
+  "file": "D534-Siegel三维簇曲线中的四元数除法点.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 109,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 3,
+    "dollar_line_after": 2,
+    "tick_line_before": 0,
+    "tick_line_after": 1,
+    "OLD": "}(\\alpha_j^2)\\le C(dh)^c$。无穷位上平行输运认全整一次上同调格，交叉配对仍",
+    "NEW": "}(\\alpha_j^2)\\le C(dh)^c`。无穷位上平行输运认全整一次上同调格，交叉配对仍",
+    "hits": 1,
+    "ctx": "\\operatorname{Tr}(\\alpha_j^2)\\le C(dh)^c[$]。无穷位上平行输运认全整一次上同调格，交叉配对仍属 $\\tfrac14\\math"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2848,
+  "dollar_after": 2847,
+  "tick_before": 8,
+  "tick_after": 9,
+  "bytes_before": 111412,
+  "bytes_after": 111412
+ },
+ {
+  "file": "D54-Brennan猜想与sharp逆平方积分均值.md",
+  "fam_before": 3,
+  "fam_after": 0,
+  "refused_before": 3,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 3
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 727,
+    "from": "$",
+    "to": "`",
+    "gain": 3,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 10,
+    "dollar_line_after": 9,
+    "tick_line_before": 2,
+    "tick_line_after": 3,
+    "OLD": "=A_{z\\cdot w}$ 的字展开 |\n| $\\lVert L^n\\rvert $ 先验 | ",
+    "NEW": "=A_{z\\cdot w}$ 的字展开 |\n| `\\lVert L^n\\rvert $ 先验 | ",
+    "hits": 1,
+    "ctx": "dic 网格破坏 $A_zA_w=A_{z\\cdot w}$ 的字展开 |\n| [$]\\lVert L^n\\rvert $ 先验 | $1\\le\\lVert L^n\\"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 3756,
+  "dollar_after": 3755,
+  "tick_before": 1022,
+  "tick_after": 1023,
+  "bytes_before": 108284,
+  "bytes_after": 108284
+ },
+ {
+  "file": "D562-Brenier映射的三分之一阶锐利稳定性.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 76,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 22,
+    "dollar_line_after": 22,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "在 $b=a/2$ 下之比恰是 $a/a^{3} $ 的平方根结构，即 $\\sqrt a$ 对 $",
+    "NEW": "在 $b=a/2$ 下之比恰是 $a/a^{3}$ 的平方根结构，即 $\\sqrt a$ 对 $",
+    "hits": 1,
+    "ctx": "位移平方 $b^2$。两式的幂次在 $b=a/2$ 下之比恰是 $a/a^{3}[ ]$ 的平方根结构，即 $\\sqrt a$ 对 $a^{3/2}$，指数比 $1/"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 1750,
+  "dollar_after": 1750,
+  "tick_before": 1,
+  "tick_after": 1,
+  "bytes_before": 71980,
+  "bytes_after": 71979
+ },
+ {
+  "file": "D58-实Littlewood多项式极大值的渐近最小.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 457,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 6,
+    "dollar_line_after": 6,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "vert \\lambda_{a_i}\\rvert $，$2\\sum w_i<1$ | spread",
+    "NEW": "vert \\lambda_{a_i}\\rvert$，$2\\sum w_i<1$ | spread",
+    "hits": 1,
+    "ctx": " |\n| $w_i$ | $\\lvert \\lambda_{a_i}\\rvert[ ]$，$2\\sum w_i<1$ | spreading:39, packing:"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2662,
+  "dollar_after": 2662,
+  "tick_before": 626,
+  "tick_after": 626,
+  "bytes_before": 86108,
+  "bytes_after": 86107
+ },
+ {
+  "file": "D585-稳定子轨道局部稠密性与厚张量理想链.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 77,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 12,
+    "dollar_line_after": 12,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "\\rvert <\\lvert a_1\\rvert $） | 04-deformations.tex",
+    "NEW": "\\rvert <\\lvert a_1\\rvert$） | 04-deformations.tex",
+    "hits": 1,
+    "ctx": "ne0$（$0<\\lvert t\\rvert <\\lvert a_1\\rvert[ ]$） | 04-deformations.tex:612 | 非零性检验 | 若"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 3798,
+  "dollar_after": 3798,
+  "tick_before": 478,
+  "tick_after": 478,
+  "bytes_before": 102996,
+  "bytes_after": 102995
+ },
+ {
+  "file": "D59-向后交织算子与传递交换子.md",
+  "fam_before": 3,
+  "fam_after": 0,
+  "refused_before": 5,
+  "refused_after": 1,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 3,
+   "KaTeX parse error: Undefined control sequence: \\Ce ": 2
+  },
+  "classes_after": {
+   "KaTeX parse error: Undefined control sequence: \\Ce ": 1
+  },
+  "ops": [
+   {
+    "line": 200,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 98,
+    "dollar_line_after": 98,
+    "tick_line_before": 2,
+    "tick_line_after": 2,
+    "OLD": "$=2(0+1+\\dots+(m-1))+... $ 让我直接算：窗 $\\{-m,\\dots,m-",
+    "NEW": "$=2(0+1+\\dots+(m-1))+...$ 让我直接算：窗 $\\{-m,\\dots,m-",
+    "hits": 1,
+    "ctx": "\\dots,m$（两次谷），和 $=2(0+1+\\dots+(m-1))+...[ ]$ 让我直接算：窗 $\\{-m,\\dots,m-1\\}$，$d(-1)=0,d("
+   },
+   {
+    "line": 299,
+    "from": "$",
+    "to": "`",
+    "gain": 2,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 12,
+    "dollar_line_after": 11,
+    "tick_line_before": 0,
+    "tick_line_after": 1,
+    "OLD": "1$，双侧无界情形矛盾消失，支撑分离断 |\n| $e^{-10}$ | $\\lVert S\\rve",
+    "NEW": "1$，双侧无界情形矛盾消失，支撑分离断 |\n| `e^{-10}$ | $\\lVert S\\rve",
+    "hits": 1,
+    "ctx": " 若 $C_\\lambda\\ge1$，双侧无界情形矛盾消失，支撑分离断 |\n| [$]e^{-10}$ | $\\lVert S\\rvert $ | introduct"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2905,
+  "dollar_after": 2904,
+  "tick_before": 640,
+  "tick_after": 641,
+  "bytes_before": 85121,
+  "bytes_after": 85120
+ },
+ {
+  "file": "D60-模谱均值的有界恢复.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 1154,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 12,
+    "dollar_line_after": 12,
+    "tick_line_before": 2,
+    "tick_line_after": 2,
+    "OLD": "_0$ 得 $\\lvert 1-cd\\rvert $ 界 | $H_0=0$ 时除法崩，靠 $E$",
+    "NEW": "_0$ 得 $\\lvert 1-cd\\rvert$ 界 | $H_0=0$ 时除法崩，靠 $E$",
+    "hits": 1,
+    "ctx": "176-177` | 除以 $H_0$ 得 $\\lvert 1-cd\\rvert[ ]$ 界 | $H_0=0$ 时除法崩，靠 $E$ 小矩形非零排除  |\n| $2"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 3388,
+  "dollar_after": 3388,
+  "tick_before": 1324,
+  "tick_after": 1324,
+  "bytes_before": 115037,
+  "bytes_after": 115036
+ },
+ {
+  "file": "D601-迹重构定量下界的反推笔记.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 212,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 25,
+    "dollar_line_after": 25,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "。\n\n拟合事件 $\\mathcal F=\\{每个 $j$ 层顶点 $I$ 有 $|Y_I|\\le ",
+    "NEW": "。\n\n拟合事件 $\\mathcal F=\\{每个$j$ 层顶点 $I$ 有 $|Y_I|\\le ",
+    "hits": 1,
+    "ctx": "指定的时序连接得到的二元字与侧迹。\n\n拟合事件 $\\mathcal F=\\{每个[ ]$j$ 层顶点 $I$ 有 $|Y_I|\\le T_j/8$，$1\\le j<b"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 1991,
+  "dollar_after": 1991,
+  "tick_before": 0,
+  "tick_after": 0,
+  "bytes_before": 72622,
+  "bytes_after": 72621
+ },
+ {
+  "file": "D65-渐近中点一致凸与树空间的无界菱形畸变.md",
+  "fam_before": 4,
+  "fam_after": 1,
+  "refused_before": 4,
+  "refused_after": 1,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 4
+  },
+  "classes_after": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "ops": [
+   {
+    "line": 227,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 22,
+    "dollar_line_after": 22,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": ",$g$ 凸且 $g(0)=N(z)\\ge 1- $…注意这里中心 $z$ 取单位,一般 $N(z",
+    "NEW": ",$g$ 凸且 $g(0)=N(z)\\ge 1-$…注意这里中心 $z$ 取单位,一般 $N(z",
+    "hits": 1,
+    "ctx": "设 $g(r)=N(z+ry)$,$g$ 凸且 $g(0)=N(z)\\ge 1-[ ]$…注意这里中心 $z$ 取单位,一般 $N(z)=1$ 时 $g(0)=1$,"
+   },
+   {
+    "line": 326,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 22,
+    "dollar_line_after": 22,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "psilon=2$ 定死:它由\"中间点距离 $= $ 父边长度 $=2\\ell$\"与 $y_j$ ",
+    "NEW": "psilon=2$ 定死:它由\"中间点距离 $=$ 父边长度 $=2\\ell$\"与 $y_j$ ",
+    "hits": 1,
+    "ctx": ",才躲开递推。\n- $\\varepsilon=2$ 定死:它由\"中间点距离 $=[ ]$ 父边长度 $=2\\ell$\"与 $y_j$ 除 $\\ell$ 的归一共同给出"
+   },
+   {
+    "line": 718,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 12,
+    "dollar_line_after": 11,
+    "tick_line_before": 2,
+    "tick_line_after": 3,
+    "OLD": "节号。第 11 节写 [Banakh2000, $\\S$2.IV],tex 实际是 general",
+    "NEW": "节号。第 11 节写 [Banakh2000, `\\S$2.IV],tex 实际是 general",
+    "hits": 1,
+    "ctx": "。\n勘误第六条,Banakh 的节号。第 11 节写 [Banakh2000, [$]\\S$2.IV],tex 实际是 general-forests.tex:37 "
+   }
+  ],
+  "unresolved": [
+   {
+    "line": 388,
+    "kind": "INLINE",
+    "body": "+$1,取 $\\sigma_{v_1}=-1"
+   },
+   {
+    "line": 388,
+    "kind": "INLINE",
+    "body": "+$1,取 $\\sigma_{v_1}=-1"
+   }
+  ],
+  "dollar_before": 3308,
+  "dollar_after": 3307,
+  "tick_before": 542,
+  "tick_after": 543,
+  "bytes_before": 130335,
+  "bytes_after": 130333
+ },
+ {
+  "file": "D72-L1的Daugavet子空间的精确渐近模数.md",
+  "fam_before": 2,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 2
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 761,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 12,
+    "dollar_line_after": 12,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "ert =1-\\lVert C(y)\\rvert $；moduli:35 的 $2\\vert x\\",
+    "NEW": "ert =1-\\lVert C(y)\\rvert$；moduli:35 的 $2\\vert x\\",
+    "hits": 1,
+    "ctx": "\\lVert y-C(y)\\rvert =1-\\lVert C(y)\\rvert[ ]$；moduli:35 的 $2\\vert x\\vert/t$ | 改常数高度则"
+   },
+   {
+    "line": 787,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 12,
+    "dollar_line_after": 12,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "rt +\\lVert g^{(k)}\\rvert $ | construction:224,230",
+    "NEW": "rt +\\lVert g^{(k)}\\rvert$ | construction:224,230",
+    "hits": 1,
+    "ctx": "，$2=\\lVert g\\rvert +\\lVert g^{(k)}\\rvert[ ]$ | construction:224,230 | construction:"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 4246,
+  "dollar_after": 4246,
+  "tick_before": 652,
+  "tick_after": 652,
+  "bytes_before": 111320,
+  "bytes_after": 111318
+ },
+ {
+  "file": "D75-vanDerWaerden数的定量超指数下界.md",
+  "fam_before": 5,
+  "fam_after": 0,
+  "refused_before": 5,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 5
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 96,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 38,
+    "dollar_line_after": 38,
+    "tick_line_before": 10,
+    "tick_line_after": 10,
+    "OLD": "+\\frac{k^{0.9}\\log k}{ } $... 精确地说 `06:237-241` 给",
+    "NEW": "+\\frac{k^{0.9}\\log k}{ }$... 精确地说 `06:237-241` 给",
+    "hits": 1,
+    "ctx": "es10^{-5}k\\log k+\\frac{k^{0.9}\\log k}{ }[ ]$... 精确地说 `06:237-241` 给出系数 $2c-\\gamma/8"
+   },
+   {
+    "line": 353,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 58,
+    "dollar_line_after": 58,
+    "tick_line_before": 4,
+    "tick_line_after": 4,
+    "OLD": "=(125-25-4)/1000\\cdot... $，精确地 $=0.125-0.03125-0.",
+    "NEW": "=(125-25-4)/1000\\cdot...$，精确地 $=0.125-0.03125-0.",
+    "hits": 1,
+    "ctx": "：$1/8-1/32-1/250=(125-25-4)/1000\\cdot...[ ]$，精确地 $=0.125-0.03125-0.004=0.08975$，乘 $"
+   },
+   {
+    "line": 443,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 40,
+    "dollar_line_after": 40,
+    "tick_line_before": 6,
+    "tick_line_after": 6,
+    "OLD": "h}{k}\\cdot\\frac{k}{h}... $，论文给 $|av_i|\\le4MH/h$（用",
+    "NEW": "h}{k}\\cdot\\frac{k}{h}...$，论文给 $|av_i|\\le4MH/h$（用",
+    "hits": 1,
+    "ctx": "{h}\\cdot\\frac{a h}{k}\\cdot\\frac{k}{h}...[ ]$，论文给 $|av_i|\\le4MH/h$（用 $a<k/h$ 与 $|v_i"
+   },
+   {
+    "line": 730,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 14,
+    "dollar_line_after": 14,
+    "tick_line_before": 2,
+    "tick_line_after": 2,
+    "OLD": " U\\rvert +\\lvert V\\rvert $ | $\\log F$ 变大，$T_{\\mat",
+    "NEW": " U\\rvert +\\lvert V\\rvert$ | $\\log F$ 变大，$T_{\\mat",
+    "hits": 1,
+    "ctx": "bal` 的 $F=\\lvert U\\rvert +\\lvert V\\rvert[ ]$ | $\\log F$ 变大，$T_{\\mathrm{glob}}$ 失去 $"
+   },
+   {
+    "line": 876,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 32,
+    "dollar_line_after": 32,
+    "tick_line_before": 10,
+    "tick_line_after": 10,
+    "OLD": "\\ge2k^{1/2}$；对 $k\\ge k_* $ 有 $k^{1/5}+2k^{1/10}+1",
+    "NEW": "\\ge2k^{1/2}$；对 $k\\ge k_*$ 有 $k^{1/5}+2k^{1/10}+1",
+    "hits": 1,
+    "ctx": "2k^{1/10}+1$；$2M\\ge2k^{1/2}$；对 $k\\ge k_*[ ]$ 有 $k^{1/5}+2k^{1/10}+1<2k^{1/2}<k$ 成立（"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 6956,
+  "dollar_after": 6956,
+  "tick_before": 2270,
+  "tick_after": 2270,
+  "bytes_before": 189446,
+  "bytes_after": 189441
+ },
+ {
+  "file": "D750-三维量子Heisenberg铁磁体磁化的第一格点修正.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 1,
+  "classes_before": {
+   "KaTeX parse error: Unexpected end of input in a macro argu": 1,
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {
+   "KaTeX parse error: Unexpected end of input in a macro argu": 1
+  },
+  "ops": [
+   {
+    "line": 533,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 16,
+    "dollar_line_after": 16,
+    "tick_line_before": 4,
+    "tick_line_after": 4,
+    "OLD": "是玻色和的微扰读法。它在我的纸面上死于两条：一是 $n$ 可以大到 $\\beta/L$ 量级，逐阶",
+    "NEW": "是玻色和的微扰读法。它在我的纸面上死于两条：一是$n$ 可以大到 $\\beta/L$ 量级，逐阶",
+    "hits": 1,
+    "ctx": "})$，再逐阶估计。这在物理上就是玻色和的微扰读法。它在我的纸面上死于两条：一是[ ]$n$ 可以大到 $\\beta/L$ 量级，逐阶误差累加会吃掉 $\\beta^{"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2048,
+  "dollar_after": 2048,
+  "tick_before": 462,
+  "tick_after": 462,
+  "bytes_before": 85690,
+  "bytes_after": 85689
+ },
+ {
+  "file": "D758-圆周率的无理性指数等于2.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 261,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 14,
+    "dollar_line_after": 14,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "好等于 $R\\deg_W C$。我特别核对\"$= $\"，并非\"$\\le$\"的必要性：$A-(1+\\",
+    "NEW": "好等于 $R\\deg_W C$。我特别核对\"$=$\"，并非\"$\\le$\"的必要性：$A-(1+\\",
+    "hits": 1,
+    "ctx": "所得截面没有公共零点，于是次数正好等于 $R\\deg_W C$。我特别核对\"$=[ ]$\"，并非\"$\\le$\"的必要性：$A-(1+\\sigma)E$ 的半正性右端系"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2908,
+  "dollar_after": 2908,
+  "tick_before": 0,
+  "tick_after": 0,
+  "bytes_before": 96821,
+  "bytes_after": 96820
+ },
+ {
+  "file": "D79-均称性反用与位移障碍-F群非均称性证明笔记.md",
+  "fam_before": 2,
+  "fam_after": 0,
+  "refused_before": 2,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1,
+   "KaTeX parse error: Can't use function '$' in math mode \n\n(": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 56,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 6,
+    "dollar_line_after": 6,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "文 Lemma 1.2) f: 令 $x_g = $ 某个 g 的轨道平均, 断言 $x_{hg}",
+    "NEW": "文 Lemma 1.2) f: 令 $x_g =$ 某个 g 的轨道平均, 断言 $x_{hg}",
+    "hits": 1,
+    "ctx": "ernfeld 型位移映射 (论文 Lemma 1.2) f: 令 $x_g =[ ]$ 某个 g 的轨道平均, 断言 $x_{hg} = f(x_g)$ 型的函数方"
+   },
+   {
+    "line": 104,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 13,
+    "dollar_line_after": 12,
+    "tick_line_before": 0,
+    "tick_line_after": 1,
+    "OLD": "$ and $J$ affinely onto $J'.\" (finite-proof.tex:7",
+    "NEW": "$ and $J$ affinely onto `J'.\" (finite-proof.tex:7",
+    "hits": 1,
+    "ctx": "ffinely onto $I'$ and $J$ affinely onto [$]J'.\" (finite-proof.tex:77-79)。\n\n(b) 推导补全"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 1785,
+  "dollar_after": 1784,
+  "tick_before": 250,
+  "tick_after": 251,
+  "bytes_before": 82492,
+  "bytes_after": 82491
+ },
+ {
+  "file": "D80-均值对策博弈随机化准多项式求解的支撑预算递归.md",
+  "fam_before": 2,
+  "fam_after": 1,
+  "refused_before": 2,
+  "refused_after": 1,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode \n| ": 1,
+   "KaTeX parse error: Expected 'EOF', got '#' \n\n#̲## 7.5 与姊妹条": 1
+  },
+  "classes_after": {
+   "KaTeX parse error: Can't use function '$' in math mode \n| ": 1
+  },
+  "ops": [
+   {
+    "line": 2228,
+    "from": "`",
+    "to": "$",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 3,
+    "dollar_line_after": 4,
+    "tick_line_before": 47,
+    "tick_line_after": 46,
+    "OLD": " tex：`thm:bit-complexity`（`07:11`--`16`）说的\"$2^{O(",
+    "NEW": " tex：`thm:bit-complexity$（`07:11`--`16`）说的\"$2^{O(",
+    "hits": 1,
+    "ctx": "引用 big-O 记法。\n\n对照 tex：`thm:bit-complexity[`]（`07:11`--`16`）说的\"$2^{O(\\log^2(L+2))}$ 位"
+   }
+  ],
+  "unresolved": [
+   {
+    "line": 2021,
+    "kind": "INLINE",
+    "body": "2^J   04:26                   07:231                 \n                                                                                                                                                  "
+   },
+   {
+    "line": 2021,
+    "kind": "INLINE",
+    "body": "2^J   04:26                   07:231                 \n                                                                                                                                                  "
+   }
+  ],
+  "dollar_before": 7543,
+  "dollar_after": 7544,
+  "tick_before": 5349,
+  "tick_after": 5348,
+  "bytes_before": 251140,
+  "bytes_after": 251140
+ },
+ {
+  "file": "D85-三十二行签名阵列与标签耦合：Talagrand离散凸性猜想的反推笔记.md",
+  "fam_before": 2,
+  "fam_after": 0,
+  "refused_before": 3,
+  "refused_after": 1,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 2,
+   "KaTeX parse error: Undefined control sequence: \\eqno ": 1
+  },
+  "classes_after": {
+   "KaTeX parse error: Undefined control sequence: \\eqno ": 1
+  },
+  "ops": [
+   {
+    "line": 658,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 22,
+    "dollar_line_after": 22,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": "<2^{-64r}$ 得 $2^{-h}>... $ 严格地：$h$ 是 $\\lceil-\\log",
+    "NEW": "<2^{-64r}$ 得 $2^{-h}>...$ 严格地：$h$ 是 $\\lceil-\\log",
+    "hits": 1,
+    "ctx": "w\\le2^{-h}$，由 $w<2^{-64r}$ 得 $2^{-h}>...[ ]$ 严格地：$h$ 是 $\\lceil-\\log_2w\\rceil$ 型指标，$"
+   },
+   {
+    "line": 684,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 34,
+    "dollar_line_after": 34,
+    "tick_line_before": 4,
+    "tick_line_after": 4,
+    "OLD": " m$ 压过 $\\log T+D\\cdot... $，实测 $D=1$ 时 $m=2^{h}$ 太",
+    "NEW": " m$ 压过 $\\log T+D\\cdot...$，实测 $D=1$ 时 $m=2^{h}$ 太",
+    "hits": 1,
+    "ctx": "ring 的残余项需要 $\\pi m$ 压过 $\\log T+D\\cdot...[ ]$，实测 $D=1$ 时 $m=2^{h}$ 太小，$\\pi m^2=2^{-1"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 3584,
+  "dollar_after": 3584,
+  "tick_before": 2534,
+  "tick_after": 2534,
+  "bytes_before": 147750,
+  "bytes_after": 147748
+ },
+ {
+  "file": "D86-循环Hadamard猜想的机器与笔头-特征交替积与二进制残迹.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 1,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 47,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 6,
+    "dollar_line_after": 5,
+    "tick_line_before": 0,
+    "tick_line_after": 1,
+    "OLD": "(§2.2), 有限算力与 $\\forall u$ 之间没有归约 (§2.3), 命题强度自伤 (",
+    "NEW": "(§2.2), 有限算力与 $\\forall u` 之间没有归约 (§2.3), 命题强度自伤 (",
+    "hits": 1,
+    "ctx": "析估计与精确等式之间没有翻译器 (§2.2), 有限算力与 $\\forall u[$] 之间没有归约 (§2.3), 命题强度自伤 ($\\S$2.4)。它们共同把可行"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2340,
+  "dollar_after": 2339,
+  "tick_before": 236,
+  "tick_after": 237,
+  "bytes_before": 83404,
+  "bytes_after": 83404
+ },
+ {
+  "file": "D92-Lp次多项式降维-重尾矩台账与截断ramp.md",
+  "fam_before": 3,
+  "fam_after": 0,
+  "refused_before": 3,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 3
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 230,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 39,
+    "dollar_line_after": 38,
+    "tick_line_before": 2,
+    "tick_line_after": 3,
+    "OLD": "2-706)\n\n(a) 逐字(节点引文)。构造 $Y$:\"On the region $\\{\\|v",
+    "NEW": "2-706)\n\n(a) 逐字(节点引文)。构造 `Y$:\"On the region $\\{\\|v",
+    "hits": 1,
+    "ctx": "2$, paper.tex:542-706)\n\n(a) 逐字(节点引文)。构造 [$]Y$:\"On the region $\\{\\|v\\|_\\infty>1\\}$, "
+   },
+   {
+    "line": 234,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 80,
+    "dollar_line_after": 80,
+    "tick_line_before": 2,
+    "tick_line_after": 2,
+    "OLD": "\\cdot O((\\log n)^{2-p})… $ 即 $(\\log n)^{-\\,(p-1)}",
+    "NEW": "\\cdot O((\\log n)^{2-p})…$ 即 $(\\log n)^{-\\,(p-1)}",
+    "hits": 1,
+    "ctx": " $(\\log n)^{1-p}\\cdot O((\\log n)^{2-p})…[ ]$ 即 $(\\log n)^{-\\,(p-1)}$。$T$ 与 $K$ 分离消费"
+   },
+   {
+    "line": 284,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 14,
+    "dollar_line_after": 14,
+    "tick_line_before": 0,
+    "tick_line_after": 0,
+    "OLD": " $J<\\sup\\lvert Z_e\\rvert $ 时 $\\cosh s-1\\le C_0s^2",
+    "NEW": " $J<\\sup\\lvert Z_e\\rvert$ 时 $\\cosh s-1\\le C_0s^2",
+    "hits": 1,
+    "ctx": "$C_pJ^pn^{-3}$ | $J<\\sup\\lvert Z_e\\rvert[ ]$ 时 $\\cosh s-1\\le C_0s^2$ 的小量前提断  |\n| $K"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 2732,
+  "dollar_after": 2731,
+  "tick_before": 802,
+  "tick_after": 803,
+  "bytes_before": 84688,
+  "bytes_after": 84686
+ },
+ {
+  "file": "D93-方向瞬态蕴含弹道性反推笔记.md",
+  "fam_before": 4,
+  "fam_after": 0,
+  "refused_before": 4,
+  "refused_after": 0,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 3,
+   "KaTeX parse error: Expected 'EOF', got '#' \n\n#̲# §5 逐条还原:带": 1
+  },
+  "classes_after": {},
+  "ops": [
+   {
+    "line": 130,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 5,
+    "dollar_line_after": 5,
+    "tick_line_before": 5,
+    "tick_line_after": 5,
+    "OLD": "界 $C'e^{-c'B}$(`:297`)。取 $B$ 大即反证。\n\n为什么这一步是转折，并非普",
+    "NEW": "界 $C'e^{-c'B}$(`:297`)。取$B$ 大即反证。\n\n为什么这一步是转折，并非普",
+    "hits": 1,
+    "ctx": "x:208-210`)对上指数上界 $C'e^{-c'B}$(`:297`)。取[ ]$B$ 大即反证。\n\n为什么这一步是转折，并非普通引理?我给出三条实测理由。\n\n"
+   },
+   {
+    "line": 158,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 11,
+    "dollar_line_after": 10,
+    "tick_line_before": 19,
+    "tick_line_after": 20,
+    "OLD": "它被写成一句动机,没有独立的证明句。\n\n差异五:$d\\ge2$ 的角色比我预想的弱,而 $d\\ge",
+    "NEW": "它被写成一句动机,没有独立的证明句。\n\n差异五:`d\\ge2$ 的角色比我预想的弱,而 $d\\ge",
+    "hits": 1,
+    "ctx": "N08 时能核对该机制的存在,但它被写成一句动机,没有独立的证明句。\n\n差异五:[$]d\\ge2$ 的角色比我预想的弱,而 $d\\ge3$ 的角色比我预想的强。我原以"
+   },
+   {
+    "line": 636,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 41,
+    "dollar_line_after": 41,
+    "tick_line_before": 23,
+    "tick_line_after": 23,
+    "OLD": ":24`、`eq:13`),其逐次质量累积表我按 $d^{k}$ 型估计理解,原文给出的是操作描述",
+    "NEW": ":24`、`eq:13`),其逐次质量累积表我按$d^{k}$ 型估计理解,原文给出的是操作描述",
+    "hits": 1,
+    "ctx": "核对了开头设定与所用方程(`eq:24`、`eq:13`),其逐次质量累积表我按[ ]$d^{k}$ 型估计理解,原文给出的是操作描述。\n\n(d) `[推测]` 失败"
+   },
+   {
+    "line": 886,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 13,
+    "dollar_line_after": 12,
+    "tick_line_before": 17,
+    "tick_line_after": 18,
+    "OLD": "x)>0$ 与 `eq:4` 一起失效 |\n| $p_h$ | $p_h=P_0(D_h)>0$,",
+    "NEW": "x)>0$ 与 `eq:4` 一起失效 |\n| `p_h$ | $p_h=P_0(D_h)>0$,",
+    "hits": 1,
+    "ctx": "度带内不能永久受限\"崩掉,$q(x)>0$ 与 `eq:4` 一起失效 |\n| [$]p_h$ | $p_h=P_0(D_h)>0$,记录词原始概率 | `02-ge"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 6203,
+  "dollar_after": 6201,
+  "tick_before": 4309,
+  "tick_after": 4311,
+  "bytes_before": 271165,
+  "bytes_after": 271163
+ },
+ {
+  "file": "D94-正则轨迹剪枝与量子奇偶下界.md",
+  "fam_before": 1,
+  "fam_after": 0,
+  "refused_before": 3,
+  "refused_after": 2,
+  "classes_before": {
+   "KaTeX parse error: Double superscript ": 1,
+   "KaTeX parse error: Expected 'EOF', got '}' ": 1,
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {
+   "KaTeX parse error: Double superscript ": 1,
+   "KaTeX parse error: Expected 'EOF', got '}' ": 1
+  },
+  "ops": [
+   {
+    "line": 424,
+    "from": " ",
+    "to": "",
+    "gain": 1,
+    "shape": "space",
+    "bytes_delta": -1,
+    "dollar_line_before": 44,
+    "dollar_line_after": 44,
+    "tick_line_before": 18,
+    "tick_line_after": 18,
+    "OLD": "2\\exp(m^{r'}-\\theta)<... $ 我照原文写成 $\\exp(m^{r'}-m^",
+    "NEW": "2\\exp(m^{r'}-\\theta)<...$ 我照原文写成 $\\exp(m^{r'}-m^",
+    "hits": 1,
+    "ctx": "exp(m^{r'}-m^s)+2\\exp(m^{r'}-\\theta)<...[ ]$ 我照原文写成 $\\exp(m^{r'}-m^s)+2\\exp(m^{r'}-"
+   }
+  ],
+  "unresolved": [],
+  "dollar_before": 3760,
+  "dollar_after": 3760,
+  "tick_before": 716,
+  "tick_after": 716,
+  "bytes_before": 145320,
+  "bytes_after": 145319
+ },
+ {
+  "file": "D95-用独立行替换高斯行的Cd代价.md",
+  "fam_before": 3,
+  "fam_after": 1,
+  "refused_before": 3,
+  "refused_after": 1,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 3
+  },
+  "classes_after": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "ops": [
+   {
+    "line": 754,
+    "from": "`",
+    "to": "$",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 26,
+    "dollar_line_after": 27,
+    "tick_line_before": 6,
+    "tick_line_after": 5,
+    "OLD": ") `[推测]` 候选失败路线。\n- `[推测]` 若 $q_w$ 取 $\\lfloor\\log ",
+    "NEW": ") `[推测]` 候选失败路线。\n- `[推测]$ 若 $q_w$ 取 $\\lfloor\\log ",
+    "hits": 1,
+    "ctx": "arisonMain`。\n\n(d) `[推测]` 候选失败路线。\n- `[推测][`] 若 $q_w$ 取 $\\lfloor\\log b_w\\rfloor$ ，并非 "
+   },
+   {
+    "line": 1617,
+    "from": "$",
+    "to": "`",
+    "gain": 1,
+    "shape": "swap",
+    "bytes_delta": 0,
+    "dollar_line_before": 13,
+    "dollar_line_after": 12,
+    "tick_line_before": 11,
+    "tick_line_after": 12,
+    "OLD": "前提\"变回\"硬约束\",§4 第三段失效 |\n| $N$ (padding 后状态基数) | $(T",
+    "NEW": "前提\"变回\"硬约束\",§4 第三段失效 |\n| `N$ (padding 后状态基数) | $(T",
+    "hits": 1,
+    "ctx": "o(d^2)$ 从\"结论形状反读前提\"变回\"硬约束\",§4 第三段失效 |\n| [$]N$ (padding 后状态基数) | $(T+2)2^M$ | `07-st"
+   }
+  ],
+  "unresolved": [
+   {
+    "line": 1670,
+    "kind": "INLINE",
+    "body": "\\epsilon\\le1/10   07:130     00:107                         07b:30                              07:152                                               07a:81                                             "
+   }
+  ],
+  "dollar_before": 9143,
+  "dollar_after": 9143,
+  "tick_before": 4462,
+  "tick_after": 4462,
+  "bytes_before": 297714,
+  "bytes_after": 297714
+ },
+ {
+  "file": "D96-残差球上的记忆与样本下界：无噪高斯回归中 streaming learner 的反推笔记.md",
+  "fam_before": 1,
+  "fam_after": 1,
+  "refused_before": 1,
+  "refused_after": 1,
+  "classes_before": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "classes_after": {
+   "KaTeX parse error: Can't use function '$' in math mode ": 1
+  },
+  "ops": [],
+  "unresolved": [
+   {
+    "line": 585,
+    "kind": "INLINE",
+    "body": "\\S$20 的态最大给出 $\\mathbb E_N\\max_{v'}F_{v'}(N)\\le w^{1/m}2^{3d}U_0"
+   }
+  ],
+  "dollar_before": 1488,
+  "dollar_after": 1488,
+  "tick_before": 6,
+  "tick_after": 6,
+  "bytes_before": 126153,
+  "bytes_after": 126153
+ }
+]

@@ -1,0 +1,7 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={}]
+\node[draw,minimum size=8mm] (s) at (0,0) {6};\draw (s) to[out=135,in=45,looseness=5] (s);
+\end{tikzpicture}
+\end{document}

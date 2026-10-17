@@ -1,0 +1,11 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+--- column ---
+  A           centre   49.03 pt = 1.730 cm   ink gap  40.80   cell ink 8.2 + 8.3   shaft 0.0 pt, cell height 10.9
+  ABCDEFGHIJ  centre  119.66 pt = 4.221 cm   ink gap  41.85   cell ink 82.4 + 73.2   shaft 0.0 pt, cell height 10.9
+--- row ---
+  A           centre   21.10 pt = 0.744 cm   ink gap  10.19   cell ink 8.2 + 8.3   shaft 0.0 pt, cell height 10.9
+  ABCDEFGHIJ  centre   21.10 pt = 0.744 cm   ink gap  10.19   cell ink 82.4 + 73.2   shaft 0.0 pt, cell height 10.9
+
+what build_cd gives for two one-letter cells (its box 0.672cm wide, 0.545cm tall):
+  column   tiny 25.60pt  small 32.14pt  scriptsize 38.69pt  normal 45.24pt  large 58.34pt  huge 71.43pt
+  row      tiny 23.98pt  small 28.91pt  scriptsize 33.85pt  normal 38.78pt  large 48.64pt  huge 58.51pt

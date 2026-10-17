@@ -1,0 +1,16 @@
+notes=166 claimed=153 unclaimed=9 multi=2
+
+UNCLAIMED
+L3    A-classification-of-finite-Euclidean-Ramsey-configurations-September-2
+L82   Integral-and-fractional-expectation-thresholds-are-equivalent-Septembe
+L85   Memory-and-precision-in-noiseless-Gaussian-regression-September-27-202
+L92   Nonuniqueness-for-Bounded-Measurable-Scalar-Conductivities-in-Three-Di
+L98   Posterior-replicas-and-conditional-information-in-Gaussian-regression-
+L110  Routing-densities-and-representation-contraction-for-Thorp-sweeps-Sept
+L116  Smooth-counterexamples-to-Yaus-nodal-upper-bound-in-dimensions-three-a
+L121  Subpolynomial-query-complexity-for-well-conditioned-log-concave-sampli
+L146  The-second-Kahn-Kalai-conjecture-September-24-2026
+
+MULTI
+L9    A-Counterexample-to-Rysers-Covering-Conjectur D127,D19
+L50   Matrix-Multiplication-Nine-Fourths-October-2- D145,D48

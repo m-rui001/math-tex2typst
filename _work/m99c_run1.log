@@ -1,0 +1,57 @@
+sites=19  pictures=19  papers=18  nested-about-one-point=7
+sites=19  pictures=19  papers=18  nested-about-one-point=7
+
+== statements carrying a fill rule
+
+A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Map#2  [scale=1.05,>=Stealth]  \fill[gray!10,even odd rule] (0,0) circle (1.45) (0,0) circle (.55)
+    subpath tokens: {'circle': 2}
+    NESTED about 0,0: radii ['1.45', '.55']
+
+A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Planar-Map#2  \begin{scope}[xshift=5cm]   \fill[gray!10,even odd rule] (0,0) circle (1.45) (0,0) circle (.55)
+    subpath tokens: {'circle': 2}
+    NESTED about 0,0: radii ['1.45', '.55']
+
+A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite-O#3  \fill[black!18,even odd rule]     (2.20,-4.62) circle (1.19cm)     (2.20,-4.62) circle (0.68cm)
+    subpath tokens: {'circle': 2}
+    NESTED about 2.20,-4.62: radii ['1.19', '0.68']
+
+A-Torsion-Free-Group-Algebra-with-Zero-Divisors-September-#1  [x=0.83cm,y=0.83cm,>=Latex,font=\small,line width=0.6pt] \begin{scope}  \fill[gray!17,even odd rule] (0,0) circle (1.13) (0,0) circle (0.52)
+    subpath tokens: {'circle': 2}
+    NESTED about 0,0: radii ['1.13', '0.52']
+
+BKT-universality-for-height-and-planar-spin-fields-Septemb#1  [scale=.70]  \fill[blue!10,even odd rule] (-3,-3) rectangle (3,3)                            (-2.15,-2.15) rectangle (2.15,2.15)
+    subpath tokens: {'rectangle': 2}
+
+Essential-Singularity-of-the-Correlation-Length-in-the-Pla#1  \end{scope} \begin{scope}[xshift=8.6cm,yshift=2.3cm]  \fill[blue!12,even odd rule] (0,0) circle (1.68) (0,0) circle (1.4)
+    subpath tokens: {'circle': 2}
+    NESTED about 0,0: radii ['1.68', '1.4']
+
+Essential-Singularity-of-the-Correlation-Length-in-the-Pla#1  \fill[blue!12,even odd rule] (0,0) circle (.42) (0,0) circle (.35)
+    subpath tokens: {'circle': 2}
+    NESTED about 0,0: radii ['.42', '.35']
+
+Exponential-decay-in-two-dimensional-classical-On-models-S#0  [scale=0.95]  \path[fill=gray!15,even odd rule]    (-1.78,-1.78) rectangle (1.78,1.78)    (-1.22,-1.22) rectangle (1.22,1.22)
+    subpath tokens: {'rectangle': 2}
+
+Nonuniqueness-with-local-conservation-for-the-hard-sphere-#0  \begin{scope}[shift={(3.1,6.65)}]     \foreach \inner/\outer/\period in       {1.025/1.475/.36,.678/0.989/.16,.449/0.661/.0711}{       \begin{scope}[even odd rule]         \clip (0,0) circle[radius=\outer]           (0,0) circle[radius=\inner];         \foreach \k in {-23,...,23}{           \path[jetplus] ({\k*\period},-1.6)             rectangle ({(\k+.25)*\period},1.6);           \path[jetminus]
+    subpath tokens: {'rectangle': 2, 'circle': 3}
+
+Positive-scalar-curvature-forces-rational-inessentiality-S#0  \draw[->] (z.south)--node[right] {$F_k$, nonzero degree} (1.85,-2.65)
+    subpath tokens: {'--': 1}
+
+Pure-Point-Spectrum-for-the-Two-Dimensional-Anderson-Model#1  [x=1cm,y=1cm,>=Stealth, line width=0.55pt]   \fill[black!12,even odd rule]     (-3.25,-3.25) rectangle (3.25,3.25)     (-2.60,-2.60) rectangle (2.60,2.60)
+    subpath tokens: {'rectangle': 2}
+
+Pure-Point-Spectrum-for-the-Two-Dimensional-Anderson-Model#1  \fill[blue!14,even odd rule]     (-1.94,-1.94) rectangle (1.94,1.94)     (-1.45,-1.45) rectangle (1.45,1.45)
+    subpath tokens: {'rectangle': 2}
+
+Quantitative-Superexponential-Bounds-for-van-der-Waerden-N#0  [scale=1.05,>=Latex,     every node/.style={font=\small}]   \path[fill=blue!9,even odd rule]     (0,0) circle[radius={sqrt(2)}] (0,0) circle[radius=1]
+    subpath tokens: {'circle': 2}
+
+Rigidity-of-Smooth-Billiards-with-a-Continuous-Caustic-Col#0  [scale=.85,>=Stealth] \fill[deepblue!9,even odd rule] (0,0) ellipse (3 and 2)  (0,0) ellipse (2.70 and 1.5133)
+    subpath tokens: {'ellipse': 2}
+
+The-Gaussian-free-field-limit-of-integer-Lipschitz-heights#1  [x=0.42cm,y=0.42cm,>=Stealth,font=\small]   \fill[gray!12,even odd rule] (-7,-7) rectangle (7,7)                               (-5,-5) rectangle (5,5)
+    subpath tokens: {'rectangle': 2}
+
+The-Gaussian-free-field-limit-of-integer-Lipschitz-heights#1  \fill[gray!24,even odd rule] (-1,-1) rectangle (1,1)                  

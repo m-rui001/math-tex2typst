@@ -1,0 +1,38 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\D}{\mathsf D}
+\newcommand{\K}{\mathsf K}
+\newcommand{\otL}{\otimes^{\mathbf L}}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\pd}{pd}
+\DeclareMathOperator{\gldim}{gl.dim}
+\DeclareMathOperator{\findim}{fin.dim}
+\DeclareMathOperator{\Findim}{Fin.dim}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Cone}{Cone}
+\DeclareMathOperator{\Kar}{Kar}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\thick}{thick}
+\DeclareMathOperator{\perf}{perf}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\Mod}{Mod}
+\DeclareMathOperator{\modu}{mod}
+\begin{document}
+\begin{tikzcd}[column sep=huge]
+ \D^b(B\text{-}\modu)
+ \arrow[r,bend left=22,"O\otL_B-"] &
+ \D^b((B\otimes_k C)\text{-}\modu)
+ \arrow[l,bend left=22,"T\otL_{B\otimes_k C}-"]
+\end{tikzcd}
+\end{document}

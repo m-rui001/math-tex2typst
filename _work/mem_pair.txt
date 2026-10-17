@@ -1,0 +1,2 @@
+- **抓定义只认 `\newcommand` 系五种写法会漏掉 mathtools 的成对定界符**：`\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}`（2 体）与 `\DeclarePairedDelimiterX{\abs}[1]{\lvert}{\rvert}{\,#1\,}`（3 体，码体里含 `#1`）在 `preprints/*/build` 的 29 份 tex 里定义了 6 个宏（`\norm` 24／`\abs` 21／`\floor` 7／`\ceil` 7／`\ip` 6／`\set` 2），恰好是残留名单的头几名；`find_defs` 补第三条模式按花括号配平读体、拼成 `\left<L> <code> \right<R>` 后，全库一次落盘 **notes=51 expanded=284 bytes=+5,122**，`katex_refused` 1,010→946。
+---

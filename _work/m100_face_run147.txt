@@ -1,0 +1,1 @@
+canvases 115   foreign 48   on-ink 159   depth <=1.5 54   1.5-3 72   >3 33

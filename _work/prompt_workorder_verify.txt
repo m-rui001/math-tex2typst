@@ -1,0 +1,45 @@
+# 只读任务：作者工单 ORDER 队列的可执行性核验
+
+工作目录：`E:\math`。研究对象是中国数学研究笔记语料 `E:\math\研究笔记\`（734 篇 `D###-题名.md`，UTF-8，禁 CR）。
+
+## 背景
+
+`E:\math\_work\workorders.tsv` 是上一趟全库 harvest 产出的作者工单索引，4,592 行 / 2,094,803 字节，16 列制表符分隔：
+
+`id  note  sec_line  sec_head  no  label  cat  kind  fam  stated  cur  verified  quote  fix  evidence  verify_note`
+
+分类实测：`JUDGMENT/defect-needs-wording` 3,283；`WAIVER/checker-false-positive` 691；`ORDER/mechanical-target-given` 496；`KEEP/quotes-bad-form` 101；`ORDER/mechanical-count-correction` 16；`ORDER/mechanical-delete` 5。`cat=ORDER` 共 517 行，分布在 310 篇笔记里，其中 `fix` 列非空 503 行。
+
+这 517 行从未被执行过。此前只手工走过两单（`_work/d370_workorders.py`、`_work/d452_workorder.py`，脚本与读数都在 `_work/`，可当配方参考）。台账里记过的口径：workorders.tsv 只是定位索引，`quote` 是作者申报的缺陷原句，`fix` 是作者给的期望文本；申报行会逐字引用坏形，那一处属 KEEP，回填后计数只应「按笔数下降」，不该断言归零。
+
+## 本单要回答的问题
+
+对全部 517 行 `cat=ORDER`，逐行判定它今天能不能安全执行，产出**一条可以直接交给执行腿的队列**。不许写任何笔记，不许写 `.tools/`，这是只读核验单。
+
+## 硬约束
+
+1. **零落盘**：不得写 `研究笔记/` 下任何文件，不得运行任何会写笔记的工具（`.tools/sweep.py`、`_work/fuse_fix.py`、`_work/btick_flip.py --apply` 一律禁止）。你只能读笔记。
+2. 不得执行任何 git 命令（只读的 `git status` 也不行）。不得读任何 PDF，不得用 `pdftotext`。不得改 `preprints/` 下任何文件。
+3. 另有三个写手正在追写 `D80`、`D94`、`D66` 三篇，一支 KaTeX 修补腿正在全库改宏。**这三篇只许登记不许判定为可执行**，坐标按未核验处理；KaTeX 腿改的是宏与定界符，可能落在同一行，所以你在核验时必须以你当下读到的字节为准，发现同一行既有 ORDER 工单又有可能被宏改动触及（行里有未定义控制序列、`\R` `\F` `\d` `\overline\mathbb` 一类），在报告里标 `CONFLICT-RISK`。
+4. 中文不许打到 stdout（这台机器 GBK 会乱码），一律 `io.open(...,'wb')` 写 UTF-8 文件再用 Read 工具读回。任何含反引号或反斜杠的脚本必须用 Write 工具落成 `_work/*.py` 再跑，绝不允许塞进 `python -c "..."`（bash 会把反引号当命令替换执行，把串吃掉）。落盘后断言 CR 计数为 0。
+5. 笔记文件名一律用 tsv 的 `note` 列原样去 `研究笔记/` 下定位（那列就是真实文件名），不许凭 `D###` 拼题名；glob 时注意 `_work/` 里有旧稿副本。
+
+## 核验内容（每行都要给结论）
+
+对每一行：读该篇笔记的当前字节，按 `sec_line`/`quote` 定位。
+
+- `quote` 里的坏形当前是否仍在盘上、在哪些行、各几次；
+- `fix` 是否能构成一次**同行整串替换**（行数不变、定界符奇偶不变、字节增量可算出来）；
+- 若 `quote` 定位到的行已经写好（盘上已是期望文本）判 `ALREADY-DONE`；
+- 若必须插行、搬块、改行数、或 `fix` 只是意旨没有逐字文本判 `NEEDS-NEW-LINE` 或 `NO-VERBATIM`；
+- 若坏形出现在申报/勘误行自身逐字引用的位置判 `KEEP-DECLARATION`，不计入执行；
+- 其余按你判断给 `EXEC`，并写清一句话理由。
+
+## 交付物（全部放 `_work/`，文件名照抄）
+
+1. `_work/workorder_exec_queue.txt`：制表符分隔，表头 `note  line  bad  good  byte_delta  verdict  reason`，每行一处**待执行**缺陷位（同一 tsv 行若盘上多处命中就展开成多行），`verdict` 只放 `EXEC` 与 `CONFLICT-RISK` 两类，按 `note` 分组、组内按行号降序（降序执行可避免行号前移，这是旧配方里 D452 记过的）。
+2. `_work/workorder_exec_summary.txt`：分类计数（`EXEC`/`ALREADY-DONE`/`NEEDS-NEW-LINE`/`NO-VERBATIM`/`KEEP-DECLARATION`/`CONFLICT-RISK`/`STALE-COORD`），涉及的笔记篇数，按笔记排序的 ORDER 行数前 30 名，以及每类的典型形状两例（逐字引用盘上文本，注明 `note:行`）。
+3. `_work/workorder_exec_batches.txt`：把 `EXEC` 队列按每批不超过约 60 处、且**同一篇只出现在一批里**切成若干批，给出每批的篇数、处数、净字节增量预估、以及是否触碰在飞三篇（应为否）。
+4. 你的最终报告：实测读过的笔记篇数与调用次数、四类交付物的字节数、上述分类计数、以及在核验过程中发现的 tsv 本身不可信之处（例如 `quote` 在盘上找不到的行有多少、`sec_line` 漂移的比例），这些要如实写，不许粉饰。
+
+判据只看盘上实测。规格里没有的猜测不要写成结论；形义不明就登记，不发明修法。

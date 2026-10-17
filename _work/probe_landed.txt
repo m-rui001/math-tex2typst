@@ -1,0 +1,9 @@
+==== D106-五次Lienard系统的两个极限环：model-fitting-arcs三段论证的反推笔记.md  chars=145385 (earlier 145349, diff +36)  bytes=215519
+   OLD now hits=0 ; NEW hits=1 ; predicted delta=+9 bytes
+   OLD now hits=0 ; NEW hits=1 ; predicted delta=+9 bytes
+   OLD now hits=0 ; NEW hits=1 ; predicted delta=+9 bytes
+   OLD now hits=0 ; NEW hits=1 ; predicted delta=+9 bytes
+
+==== D238-平方差自由集的固定幂节省.md  chars=44322 (earlier 44319, diff +3)  bytes=70729
+   OLD now hits=0 ; NEW hits=1 ; predicted delta=+3 bytes
+

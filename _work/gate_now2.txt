@@ -1,0 +1,4 @@
+total=734 bad=3
+D111-复群环的Bass迹猜想：滤链手术与右射影消没的反推笔记.md                      121417  ban=1
+D207-Hadwiger猜想反例的二进制构造与四洞强制.md                           97918  ban=1
+D68-相容性熵与Thorp扫描的谱.md                                    263005  emDash=4

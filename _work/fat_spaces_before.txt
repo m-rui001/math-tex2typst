@@ -1,0 +1,7 @@
+median space width over the corpus: 2.75 pt (max 14.4 pt)
+Triple-ergodic-averages-with-distinct-integer-slopes-Octob     1 fat spaces  median 2.75  widest 13.6
+The-Quasi-Riemann-Hypothesis-October-5-2026                    1 fat spaces  median 2.75  widest 12.0
+Pointwise-convergence-of-triple-ergodic-averages-for-mixin     1 fat spaces  median 2.75  widest 14.4
+Conditional-information-under-deterministic-coordinate-swe     1 fat spaces  median 2.75  widest 12.5
+
+spaces wider than 12.0 pt: 4 in 4 papers of 724 scanned

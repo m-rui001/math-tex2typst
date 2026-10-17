@@ -1,0 +1,80 @@
+##### unexpected argument 33
+-- A-boundary-field-gap-for-the-spin-one-Heisenberg-chain-September-24-2026 main.typ:1017:116
+      $ E_0^(upright(o p p)) ( m ) + a m lt.eq frac(chevron.l psi_m , ( H_m^(upright(o p p)) + a m I ) psi_m chevron.r, chevron.l psi_m , psi_m chevron.r) = frac(H_m^(*), 500000 V_m) < 202100 / 500000 = alpha . $
+-- A-CH-Obstruction-to-a-Prescribed-Categoricity-Threshold-September-24-2026 main.typ:33:100
+    $ "(1.2)" quad upright("If ") K upright(" is categorical in some ") lambda gt.eq H ( K ) upright("","")\
+-- A-Charged-Reduction-of-the-Spacetime-Penrose-Inequality-in-Spatial-Dimensions-at-Least-Four-October-5-2026 main.typ:374:91
+      $ - Delta_g h - lambda B frac(chevron.l upright(d) phi.alt_R , upright(d) h chevron.r_g, sqrt(| upright(d) phi.alt_R |_g^2 + a_0^2)) , #h(2em) partial_nu h = 0 , quad h |_(S_R) = 0 . $
+-- A-closed-Ricci-flow-with-bounded-scalar-curvature-and-finite-time-curvature-blowup-September-24-2026 main.typ:393:67
+    $ c ( x , t ) = frac(2 chevron.l "Rm" ( "Ric" ) , "Ric" chevron.r, | "Ric" |^2) quad upright("where ") | "Ric" | > 0 $
+-- A-counterexample-to-Tachikawas-second-conjecture-September-23-2026 main.typ:204:106
+      $ frac("Hom"_G #scale(x: 120%, y: 120%)[(] N , ker ( P_0 arrow.r P_(- 1) ) #scale(x: 120%, y: 120%)[)], "im" #scale(x: 120%, y: 120%)[(] "Hom"_G ( N , P_1 ) arrow.r "Hom"_G ( N , ker ( P_0 arrow.r P_(- 1) ) ) #scale(x: 120%, y: 120%)[)]) . $
+-- A-counterexample-to-the-Colin-de-Verdiere-chromatic-conjecture-September-23-2026 main.typ:435:52
+    $ limsup_j frac("Tr" chevron.l H_j , H_j chevron.r, v_j) lt.eq eta , $
+-- A-density-uniform-condensate-bound-for-dilute-Bose-gases-September-27-2026 main.typ:34:64
+    $ frac(chevron.l u_0 , gamma_(N , L , T)^(( 1 )) u_0 chevron.r, N) gt.eq c_(*) ( v ) . $
+-- A-dimension-free-logarithmic-Sobolev-inequality-for-subgaussian-log-concave-measures-September-23-2026 main.typ:32:93
+    $ "(1.1)" quad sup_(| theta | = 1) bb(E) exp #h(-1em) (frac(chevron.l X , theta chevron.r^2, a^2)) lt.eq 2 . $ <eq:intro-subgaussian>
+##### unknown variable 22
+-- A-counterexample-to-Hadwigers-conjecture-September-23-2026 main.typ:2049:62
+      $ "(14.5)" quad beta lt.eq h_j^theta lt.eq 1 quad upright(""almosteverywhere,foralmostevery"") theta . $ <eq:rare-unary-density-lower>
+-- A-hyperbolic-group-with-no-geometric-CAT0-action-September-25-2026 main.typ:146:31
+    $ r_(b_D , X_D) quad upright(""followedbythelooseletteredge,"") $
+-- A-Modulus-Proof-of-Cannons-Conjecture-September-23-2026 main.typ:834:43
+      $ "(6.13)" quad sum_({ i , j } upright(""far,assignedto"") i) mu ( cal(D)_(i j) ) lt.eq C a^(Q l) mu ( Z ) . $ <eq:cost-total-upper>
+-- A-power-saving-for-square-difference-free-sets-September-24-2026 main.typ:390:81
+    $ underbrace((( Y_(( u , w ) , i) )_(i in \[ m_s \]))_(w in Pi_(+)), r upright(""lists,eachoflength"") m_s) quad arrow.l.r quad underbrace(( Y'_(u , ( w , i )) )_(( w , i ) in Pi_(+) times \[ m_s \]), upright("one list of length ") m_(s + 1) = r m_s) $
+-- A-quadratic-bound-for-Jacobsthals-function-September-25-2026 main.typ:1276:121
+      $ cal(I)_(upright(bold(u))) = #scale(x: 120%, y: 120%)[{] ( p , q ) in cal(P) times cal(C) : & med ( p , q ) upright(""isnonstructured,and"")\
+-- A-Torsion-Free-Counterexample-to-Reduced-Baum-Connes-Injectivity-September-23-2026 main.typ:1289:84
+    $ b , med upright("profiles and matrix size") ; #h(2em) epsilon.alt , k , upright(""mesh,types,net"") ; #h(2em) K_1 , C , s , H_0 . $
+-- A-Torsion-Free-Group-Algebra-with-Zero-Divisors-September-23-2026 main.typ:111:32
+    $ ( macron(t) , u ) & upright(""ordinary,ordinary"") & upright(""ordinary,extra"") & upright(""extra,extra"")\
+-- Almost-Linear-Time-Maximum-Cardinality-Matching-in-Sparse-General-Graphs-September-24-2026 main.typ:329:53
+    $ #scale(x: 120%, y: 120%)[(] R + B + \# { upright(""externalpricing,point,oredgeoperations"") } #scale(x: 120%, y: 120%)[)] S^(O ( 1 / a ) + o_a ( 1 )) $
+##### unexpected slash 12
+-- A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026 main.typ:866:31
+    $ "Div"_P ( X / S ) times_S X_(/ S)^(\[ r_(upright(l o w)) \]) , $
+-- A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026 main.typ:887:63
+    $ rho : cal(Q)_(upright(l o w)) = "Div"_P ( X / S ) times_S X_(/ S)^(\[ r_(upright(l o w)) \]) arrow.r "Div"_P ( X / S ) $
+-- A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026 main.typ:919:793
+    For a smooth morphism with a relative perfect obstruction theory, the obstruction sheaf is locally free and its virtual pullback is smooth pullback capped with its top Chern class. This follows by locally splitting the cotangent comparison onto the locally free relative cotangent; equivalently, the 
+-- A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026 main.typ:927:172
+    Adjoin $m = 3 t_0$ independent surface positions to $cal(Q)$. At each position insert $"ch"_2^(bb(G)_m) ( Q )$, cap with the smoothly pulled virtual class, and push to $X_(/ S)^m$. This push is proper. The torus acts trivially on the output. Before localization the total codimension is $2 m - v$. An
+-- A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026 main.typ:960:73
+    The surviving fixed contribution must be expanded as a Chow class on $X_(/ S)^m$, with every output retained. Relative EGL recursion for surface pushforwards to a base appears in [29] Section 2.1, Lemma 2.1 and Proposition 2.2; the same work also treats one and two marked curve outputs [29] Section 
+-- Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026 main.typ:631:49
+    ], table.cell(rowspan: 1, colspan: 1)[Total time$/ d$
+-- Counterexamples-to-weak-chromatic-splitting-sphere-kernels-and-descent-exponents-September-27-2026 main.typ:350:127
+      (Full finite tensor cube).  #emph[For $s gt.eq 0$ there is a natural equivalence of arrows over $upright(i d)_V$ in $cal(C)_(/ V)$: 
+##### unexpecte 1
+-- A-high-arity-counterexample-to-Pixton-completeness-in-Chow-September-24-2026 ?
+    
+##### expected content, found array 2
+-- Algebraicity-of-Weil-classes-on-split-abelian-eightfolds-September-18-2026 main.typ:1069:41
+    $ "Hom"_(cal(D)_Lambda) ( X , Y ) = cases(delim: "{", xor.big_(x in X ∩ Y) Lambda x , & X prec Y ,, 0 , & upright("otherwise") ;) $
+-- An-L3-bound-for-the-trilinear-Hilbert-transform-October-5-2026 main.typ:792:43
+    $ "(5)" quad & sum_(I in cal(I)_m) | I | lr(|H_I #scale(x: 120%, y: 120%)[(] psi_a z_(a , I) , psi_b z_(b , I) ; Q #scale(x: 120%, y: 120%)[)]|)\
+##### unclosed delimiter 1
+-- Approximation-Paving-over-Arbitrary-Maximal-Abelian-Subalgebras-September-25-2026 main.typ:289:67
+      $ lr(|⟨e_j , upright(bold(1))_(( lambda , oo )) ( B ) e⟩|) & = lr(|⟨e_j , upright(bold(1))_(( - oo , lambda \]) ( B ) e⟩|)\
+##### expected expression 18
+-- Counterexamples-to-the-Hahn-Wilson-conjecture-at-height-two-September-26-2026 main.typ:1496:44
+    $ H^(*) ( b ; bb(F)_p ) tilde.equiv cal(A) / / E ( Q_0 , Q_1 , Q_2 ) , $
+-- Counterexamples-to-the-Hahn-Wilson-conjecture-at-height-two-September-26-2026 main.typ:1509:520
+      The target spectral sequence collapses by the dimensions in Milnor’s dual Steenrod algebra calculation, recalled in [29] Theorem 3.1.1(b). The injective map and naturality then force the source to collapse page by page. Connectivity gives convergence, and the resulting map on mod-$p$ homology is i
+-- Counterexamples-to-the-Hahn-Wilson-conjecture-at-height-two-September-26-2026 main.typ:1757:48
+      $ H^(*) ( b_1 ; bb(F)_p ) tilde.equiv cal(A) / / E ( Q_0 , Q_1 ) . $
+-- Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026 main.typ:143:374
+    For a finite group $F$, its rational Burnside ring is the product of copies of $bb(Q)$ indexed by conjugacy classes of subgroups. The $I$-mark of a finite $F$-set $X$ is $| X^I |$. We denote by $e_I^F$ the idempotent with mark one at the conjugacy class of $I$ and zero at all others. A finite $F$-se
+-- Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026 main.typ:188:121
+    Write $bb(A) ( F )$ for the Burnside ring of a finite group $F$. Sending an $F$-set $S$ to the transfer of $1$ along $S / / F arrow.r B F$ gives a ring map
+-- Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026 main.typ:242:172
+    Continuity means that the homomorphism into the automorphism group of the chosen object has open kernel. Thus $cal(X)_Gamma ( B F ) = "Hom"_(upright(c t s)) ( Gamma , F ) / / F$. A finite section of $Gamma$ means a finite continuous quotient of a closed subgroup.
+-- Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026 main.typ:336:30
+      $ "Iso" ( f alpha , beta ) / / "Aut" ( alpha ) , $
+-- Cyclic-Length-and-Chromatic-Fixed-Point-Loss-September-24-2026 main.typ:395:21
+      $ Y_j ( X ) = X^j / / Sigma_j $
+##### missing argument 1
+-- Endpoint-convergence-for-the-planar-Schrodinger-equation-September-24-2026 main.typ:1952:66
+      $ sum_(j gt.eq k) sum_(I in cal(D)_j) m_(P_(I , k))^alpha lt.eq frac(m_(\[ 0 , 1 ))^alpha, 2^alpha - 2) . $

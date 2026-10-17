@@ -1,0 +1,29 @@
+{
+  "paper": "The-Quasi-Riemann-Hypothesis-October-5-2026",
+  "ok": true,
+  "typ_lines": 1572,
+  "included_pdf_pages": 0,
+  "formulas": 1311,
+  "math_failed": 0,
+  "labels": 172,
+  "equations": 6,
+  "theorems": 3,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1
+  },
+  "samples": {
+    "formulas": "1311"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-Quasi-Riemann-Hypothesis-October-5-2026.tex"
+}

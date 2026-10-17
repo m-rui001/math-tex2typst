@@ -1,0 +1,23 @@
+canvases built: 924 (refused both ways: 1)
+canvases moved: 333 in 259 papers, 1105 lines
+  edge pairs rewritten: 1105 (to bounds 1105, kept cap/baseline 0)
+started drawing: 0   stopped drawing: 0
+wrote _work/regen_needed.txt (259 papers)
+  A-C1-Counterexample-to-the-Entropy-Conjecture-#0 line 2
+    old content((0, 0), [#box(width: 3.082cm, inset: 0.1411cm, radius: 2pt, stroke: (paint: rgb("#595959"), thickness: 0.4pt), fill: rgb("#f2f2ff"), [#set tex
+    new content((0, 0), [#box(width: 3.082cm, inset: 0.1411cm, radius: 2pt, stroke: (paint: rgb("#595959"), thickness: 0.4pt), fill: rgb("#f2f2ff"), [#set tex
+  A-Charged-Reduction-of-the-Spacetime-Penrose-I#0 line 2
+    old content((0, 6.4), [#box(width: 5.391cm, inset: 0.07056cm, stroke: (paint: rgb("#999999"), thickness: 0.4pt), fill: rgb("#f7f7f7"), [#set text(hyphenat
+    new content((0, 6.4), [#box(width: 5.391cm, inset: 0.07056cm, stroke: (paint: rgb("#999999"), thickness: 0.4pt), fill: rgb("#f7f7f7"), [#set text(hyphenat
+  A-Charged-Reduction-of-the-Spacetime-Penrose-I#1 line 5
+    old content((3.65, 6.88), [#box(width: 7.003cm, inset: 0.1764cm, stroke: (paint: rgb("#8c8c8c"), thickness: 0.5pt), fill: rgb("#f7f7f7"), [#set text(hyphe
+    new content((3.65, 6.88), [#box(width: 7.003cm, inset: 0.1764cm, stroke: (paint: rgb("#8c8c8c"), thickness: 0.5pt), fill: rgb("#f7f7f7"), [#set text(hyphe
+  A-Complete-Local-Domain-Without-a-Small-Cohen-#0 line 13
+    old content((1.531e-16, 2.5), [#box(inset: 0.1058cm, stroke: (thickness: 0.4pt), fill: rgb("#ffffff"), [#set text(hyphenate: false, top-edge: "cap-height"
+    new content((1.531e-16, 2.5), [#box(inset: 0.1058cm, stroke: (thickness: 0.4pt), fill: rgb("#ffffff"), [#set text(hyphenate: false, top-edge: "bounds", bo
+  A-Counterexample-to-Kaplanskys-Direct-Finitene#1 line 10
+    old content((-3.06, 0.072), [#box(inset: 0.03528cm, stroke: none, fill: rgb("#ffffff"), [#set text(hyphenate: false, top-edge: "cap-height", bottom-edge: 
+    new content((-3.06, 0.072), [#box(inset: 0.03528cm, stroke: none, fill: rgb("#ffffff"), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bou
+  A-Counterexample-to-Kaplanskys-Direct-Finitene#0 line 25
+    old content((-2.375, -1.425), [#box(inset: 0.1411cm, radius: 4pt, stroke: (thickness: 0.4pt), [#set text(hyphenate: false, top-edge: "cap-height", bottom-
+    new content((-2.375, -1.425), [#box(inset: 0.1411cm, radius: 4pt, stroke: (thickness: 0.4pt), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge

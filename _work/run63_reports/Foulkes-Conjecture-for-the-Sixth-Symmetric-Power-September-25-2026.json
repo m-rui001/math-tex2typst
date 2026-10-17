@@ -1,0 +1,37 @@
+{
+  "paper": "Foulkes-Conjecture-for-the-Sixth-Symmetric-Power-September-25-2026",
+  "ok": true,
+  "typ_lines": 872,
+  "included_pdf_pages": 0,
+  "formulas": 557,
+  "math_failed": 0,
+  "labels": 71,
+  "equations": 21,
+  "theorems": 0,
+  "figures": 0,
+  "tables": 2,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "557"
+  },
+  "pandoc_json_warn": "[WARNING] Could not load include file ../verification/programs/appendix-a.cpp at E:\\math\\_work\\flat\\_work_tex\\Foulkes-Conjecture-for-the-Sixth-Symmetric-Power-September-25-2026.tex line 1580 column 17",
+  "packages_unsupported": [
+    "listings",
+    "xurl",
+    "accsupp"
+  ],
+  "macros_skipped": [
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand",
+    "\\renewcommandrenewcommand"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Foulkes-Conjecture-for-the-Sixth-Symmetric-Power-September-25-2026.tex"
+}

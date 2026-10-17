@@ -1,0 +1,40 @@
+==== SUMMARIZE
+{
+  "documents": 724,
+  "compiled": 724,
+  "unique_formulas_within_documents": 761830,
+  "native_formulas_reported": 761721,
+  "latex_formula_fallbacks": 109,
+  "latex_literals_remaining": 0,
+  "documents_with_formula_fallbacks": 51,
+  "documents_with_unhandled_figure_content": 0,
+  "documents_with_unresolved_references": 0,
+  "failed_documents": []
+}
+==== RESIDUE
+files with residue: 0 ; occurrences: 0
+quoted LaTeX on the page: 1 blocks over 1 papers
+zones: {}
+==== GATE
+built 918, refused 14, compile-failed 0
+==== POPULATION
+papers 724 / source pictures 932 / canvases on the page 1055
+pictures with no canvas: 1 ; quoted latex blocks: 1 over 1 papers
+  Elliptic-capacity-propagation-and-Fourier-restriction-to-the pics=3 canvas=2 quoted=1
+==== ROUND 80 (this run's own readings)
+regen list: 15 papers (_work/regen80.txt), 15/15 compiled
+churn (_work/probe80_diagonal_churn.py): canvases built 924, refused both ways 1,
+    moved 19 in 15 papers, 41 lines, started drawing 0, stopped drawing 0
+products (_work/probe80_product_check.py): moved 19 / 41 lines / corner anchors gained 41,
+    stale 0, no product 0
+census (_work/probe50_diagonal_keys.py): one-distance 41 sites / 15 papers (1pt-5pt),
+    `of`-form 8 sites / 3 papers, `=of x` 3 sites / 1 paper, bare 465 sites / 139 papers
+keyword-vs-table gap (_work/probe50_diagonal_keys.py gap): 517 keyword hits land 1:1 on a
+    diagonal key, 52 are the value of `label=` (`label=above left:{$x$}`) -> 517+52=569 = the
+    keyword view's 78+491, closed to the line
+pdflatex (_work/measure_diagonal_offset.py): corner = opposite corner (as the bare spelling),
+    single distance is a RADIUS: 2pt -> (-1.4142,+1.4142)pt, 3pt -> 2.1213, 1cm -> 0.7071;
+    `outer sep=0pt` moves the corner nowhere different; `d1 and d2` = vertical, horizontal
+    per-axis with no radius and exists in the corpus only with `of`; `left above` is not a key
+tests: 151 OK (148 -> 150 in #48, +1 this round)
+NOTE: the four sections above were re-run by A at 16:21 after B's 20-paper minipage regen landed -- readings identical to run135.

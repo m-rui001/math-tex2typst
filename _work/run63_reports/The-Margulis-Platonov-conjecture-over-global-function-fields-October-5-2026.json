@@ -1,0 +1,32 @@
+{
+  "paper": "The-Margulis-Platonov-conjecture-over-global-function-fields-October-5-2026",
+  "ok": true,
+  "typ_lines": 2199,
+  "included_pdf_pages": 0,
+  "formulas": 2016,
+  "math_failed": 0,
+  "labels": 209,
+  "equations": 12,
+  "theorems": 2,
+  "figures": 1,
+  "tables": 2,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "2016",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "flafter"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n   ┌─ \\\\?\\E:\\math\\typst\\The-Margulis-Platonov-conjecture-over-global-function-fields-October-5-2026\\main.typ:33:123\n   │\n33 │   #emph[Let $k$ be a global function field and let $G$ be an absolutely almost simple simply connected $k$-group. If $N lt.tri G \\( k \\)$ and $N subset.eq.not Z \\( G \\( k \\) \\)$, then \n   │                                                                                                                            ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n   ┌─ \\\\?\\E:\\math\\typst\\The-Margulis-Platonov-conjecture-over-global-function-fields-October-5-2026\\main.typ:36:35\n   │\n36 │  for an open normal subgroup $W lt.tri H_A$. This holds in every positive characteristic, including when $G$ is anisotropic over $k$.]\n   │                                    ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\The-Margulis-Platonov-conjecture-over-global-function-fields-October-5-2026\\main.typ:125:246\n    │\n125 │   This is the finite-index reduction in Margulis’s normal subgroup theorem #cite(label(\"Margulis1979\")) Theorem 2.4.6 and Corollary 2.4.9#cite(label(\"Margulis\")). We recall the passage from an arithmetic lattice to all rational points. Let $N lt.tri S \\( k \\)$ contain a noncentral element $z$. Choose a finite set of places $T$ containing $A$, the places where $z$ is not integral, and two further places at which $S$ is split. Fix compact open subgroups $K_v subset S \\( k_v \\)$ for $v in.not T$, using an integral model outside finitely many places, and arrange that $z in K_v$ there. Put\n    │                                                                                                                                                                                                                                                       ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\The-Margulis-Platonov-conjecture-over-global-function-fields-October-5-2026\\main.typ:151:36\n    │\n151 │   For the last assertion, let $N lt.tri S \\( k \\)$ be noncentral. By 3, the quotient $S \\( k \\) \\/ N$ is finite. Choose $e$ divisible by its exponent; then $R subset N$. If $V = 1$, we have $R = delta_A^(- 1) \\( P_0 \\)$, and density induces an isomorphism $S \\( k \\) \\/ R tilde.eq H_A \\/ P_0$. The inverse image in $H_A$ of the subgroup corresponding to $N \\/ R$ is open and normal and has rational inverse image $N$. This proves the claimed reduction. ◻\n    │                                     ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\The-Margulis-Platonov-conjecture-over-global-function-fields-October-5-2026\\main.typ:1790:12\n     │\n1790 │   Let $N lt.tri S \\( k \\)$ be noncentral. By 3, the group $S \\( k \\) \\/ N$ is finite. Choose an integer $e gt.eq 1$ divisible by its exponent. With the notation (2.4), we have $R subset N$, while 38 gives\n     │             ^^^\n\n",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 5,
+  "source": "E:\\math\\_work\\flat\\The-Margulis-Platonov-conjecture-over-global-function-fields-October-5-2026.tex"
+}

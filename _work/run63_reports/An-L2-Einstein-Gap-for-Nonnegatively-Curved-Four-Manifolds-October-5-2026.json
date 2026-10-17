@@ -1,0 +1,30 @@
+{
+  "paper": "An-L2-Einstein-Gap-for-Nonnegatively-Curved-Four-Manifolds-October-5-2026",
+  "ok": true,
+  "typ_lines": 370,
+  "included_pdf_pages": 0,
+  "formulas": 294,
+  "math_failed": 0,
+  "labels": 51,
+  "equations": 2,
+  "theorems": 2,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "294"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\An-L2-Einstein-Gap-for-Nonnegatively-Curved-Four-Manifolds-October-5-2026.tex"
+}

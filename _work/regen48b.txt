@@ -1,0 +1,7 @@
+regenerating 52 papers
+10/52 compiled=10 elapsed=15s
+20/52 compiled=20 elapsed=17s
+30/52 compiled=30 elapsed=23s
+40/52 compiled=40 elapsed=25s
+50/52 compiled=50 elapsed=32s
+DONE 52 compiled=52

@@ -1,0 +1,44 @@
+\documentclass[tikz,border=2pt,11pt]{standalone}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\usetikzlibrary{fit}
+\usetikzlibrary{backgrounds}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+\newcommand{\F}{\mathbb F}
+\newcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathbb E}
+\renewcommand{\P}{\mathbb P}
+\newcommand{\1}{\mathbf 1}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Lag}{Lag}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Hom}{hom}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\TV}{TV}
+\begin{document}
+\begin{tikzpicture}[font=\small]
+  \fill[blue!7] (-1.25,0) ellipse (2.05 and 1.45);
+  \fill[orange!9] (1.25,0) ellipse (2.05 and 1.45);
+  \draw[blue!60!black,thick] (-1.25,0) ellipse (2.05 and 1.45);
+  \draw[orange!70!black,thick] (1.25,0) ellipse (2.05 and 1.45);
+  \node[blue!60!black] at (-2.4,1.35) {$U_e$};
+  \node[orange!70!black] at (2.4,1.35) {$U_f$};
+  \node at (-1.7,.75) {$(w,j)$};
+  \node at (-2.0,-.1) {$(v,l)$};
+  \node at (-1.45,-.85) {$(w,l)$};
+  \node at (1.7,.75) {$(z,j)$};
+  \node at (2.0,-.1) {$(v,m)$};
+  \node at (1.45,-.85) {$(z,m)$};
+  \fill[linkblue] (0,.55) circle (1.7pt);
+  \node[align=center] at (0,-.05) {$\kappa$\\$=(v,j)$};
+  \node at (0,-1.9) {$M_\kappa=U_e\cup U_f,\qquad
+                    \Gamma_\kappa=M_\kappa\setminus\{\kappa\}$};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,24 @@
+note=E:/math/研究笔记\D71-完美匹配多面体的熵与面维数.md
+bytes=151705 lines=610 CR=0
+dir=Entropy-and-Face-Dimension-of-the-Perfect-Matching-Polytope-September-23-2026
+heads=34 first=(10, '## 0 我进场时手里有什么') last=(595, '## 33 勘误补录（本批自查，已落盘文字一律不回改）')
+last6=["## 28 附录 A 第一部：消交叉的全案账、树计数、商空间与残基分档", "## 29 附录 A 第二部：系数 3 与 4 的环境读法与三层保留声明", "## 30 附录 B 的次序依赖与附录 C 的分层账", "## 31 勘误（旧稿缺陷按类别申报，原文一律不动）", "## 32 台账续行（只追加数据行，表头沿用 §18）", "## 33 勘误补录（本批自查，已落盘文字一律不回改）"]
+table_headers=[(376, '符号'), (574, '记号')] separators=[377, 575]
+cite_form full=0 base=268
+inventory:
+  appendices/appendix-a.tex                        25513B   608L refs=9
+  sections/02-polytope.tex                         18334B   419L refs=0
+  sections/01-introduction.tex                     16042B   288L refs=53
+  sections/03-entropy.tex                          12701B   277L refs=35
+  sections/10-examples.tex                         11773B   298L refs=5
+  appendices/appendix-b.tex                        10324B   274L refs=4
+  sections/09-algorithm.tex                         9843B   239L refs=21
+  sections/08-odd-cuts.tex                          9566B   204L refs=51
+  sections/07-optimization.tex                      8155B   255L refs=39
+  sections/04-consequences.tex                      7311B   189L refs=0
+  sections/06-objective.tex                         7086B   196L refs=31
+  appendices/appendix-c.tex                         4841B   108L refs=1
+  sections/05-weighted.tex                          3189B    90L refs=15
+  main.tex                                          2781B    78L refs=4
+  figures/odd-cut-recursion.tex                     2126B    56L refs=0
+  TOTAL 149585B files=15

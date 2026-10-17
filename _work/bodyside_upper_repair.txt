@@ -1,0 +1,20 @@
+mode=APPLY
+D486 L174 swap bytes -10  bad-in-line 1->0
+D486 file bytes 71067 -> 71057 (delta -10) lines 291 -> 291 bad-left 0
+D486 WRITTEN
+D494 L287 swap bytes +0  bad-in-line 1->0
+D494 file bytes 81588 -> 81588 (delta +0) lines 304 -> 304 bad-left 0
+D494 WRITTEN
+D542 L302 swap bytes +3  bad-in-line 1->0
+D542 file bytes 73025 -> 73028 (delta +3) lines 308 -> 308 bad-left 1
+D542 WRITTEN
+D543 L250 swap bytes -7  bad-in-line 1->0
+D543 L250 swap bytes -5  bad-in-line 1->0
+D543 file bytes 72931 -> 72919 (delta -12) lines 269 -> 269 bad-left 0
+D543 WRITTEN
+D570 L137 swap bytes +3  bad-in-line 1->0
+D570 file bytes 72965 -> 72968 (delta +3) lines 255 -> 255 bad-left 1
+D570 WRITTEN
+D595 L250 swap bytes +6  bad-in-line 1->0
+D595 file bytes 110330 -> 110336 (delta +6) lines 315 -> 315 bad-left 1
+D595 WRITTEN

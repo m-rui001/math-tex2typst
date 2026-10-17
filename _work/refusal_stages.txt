@@ -1,0 +1,99 @@
+### statement:\FiniteSquare{.70}{-1.08}{} \node[finite label,left] at (.35 (1) [Cylinder-amplitudes-and-logarithmic-bridge-lengt#0]
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  font=\small,
+  finite boundary/.style={draw=black!30,line width=.4pt},
+  finite arc/.style={draw=black,line width=1.05pt,line cap=round},
+  every node/.style={inner sep=1.5pt},
+  finite label/.style={font=\footnotesize},
+  finite heading/.style={anchor=west,font=\small\bfseries}
+]
+  \node[finite heading] at (0,0) {(a) Square-cell states};
+  \node[anchor=east,font=\footnotesize] at (13.4,0)
+    {Separate drawings are alternative states.};
+
+  \FiniteSquare{.70
+
+===================
+
+### statement:\draw[capacityellipse] (0,0) ellipse (1.00 and .37) (1) [Elliptic-capacity-propagation-and-Fourier-restri#0]
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,
+  axes/.style={gray!65,thin},
+  capacityellipse/.style={draw=linkblue,fill=linkblue!8,thick}]
+  \foreach \x/\name in {0/U,4.2/V,8.4/X_v} {
+    \begin{scope}[shift={(\x,0)}]
+      \draw[axes,->] (-1.25,0)--(1.35,0);
+      \draw[axes,->] (0,-.85)--(0,1.15);
+      \node at (0,-1.15) {\(\name\)-plane};
+    \end{scope}
+  }
+  \begin{scope}[shift={(.12,.20)},rotate=25]
+    \draw[capacityellipse] (0,0) ellipse (1.00 and .37);
+    \draw[linkblue,dashed] (-1,0)--
+
+===================
+
+### statement:\pinskzero \pinsgroup{0}{.95}{T}{pinsplus} \pinsgroup{0}{-.9 (1) [Gaussian-free-field-limits-of-weighted-integer-L#1]
+\begin{tikzpicture}[x=1cm,y=1cm,font=\footnotesize]
+  \begin{scope}
+    \node[pins title] at (0,2.15) {(a) Initial placement};
+    \draw[pins gap] (-2.30,.46)--(2.30,.46)
+      node[right,black] {$\ell_+$};
+    \draw[pins gap] (-2.30,-.46)--(2.30,-.46)
+      node[right,black] {$\ell_-$};
+    \pinskzero
+    \pinsgroup{0}{.95}{T}{pinsplus}
+    \pinsgroup{0}{-.95}{B}{pinsminus}
+    \pinsgroup{-1.70}{0}{L}{pinsminus}
+    \pinsgroup{1.70}{0}{R}{pinsplus}
+    \draw[pins move,pinsplus] (0,1.23)--(0,1.7
+
+===================
+
+### statement:\geometryrow{0}{\textbf{Main: initial}\\before the exchange} (1) [Polynomial-PEPS-approximation-of-gapped-square-g#0]
+\begin{tikzpicture}[
+  x=.86cm,y=1cm,
+  bandA/.style={fill=orange!35,draw=black!35,line width=.3pt},
+  bandB/.style={fill=cyan!28,draw=black!35,line width=.3pt},
+  bandC/.style={fill=black!12,draw=black!35,line width=.3pt},
+  lens/.style={draw=red!65!black,dashed,line width=.8pt}
+]
+  \foreach \geometrytick in {-8,-7,...,2} {
+    \draw[black!10,line width=.3pt]
+      (\geometrytick,.48) -- (\geometrytick,-5.17);
+    \draw[black!60,line width=.35pt]
+      (\geometrytick,.55) -- (\geometrytick,.65)
+
+===================
+
+### scoped (1) [The-Deligne-Drinfeld-conjecture-September-23-202#1]
+\begin{tikzpicture}[
+    x=1cm,y=1cm,
+    vertex/.style={minimum width=2.7cm,minimum height=1.9cm,inner sep=0pt},
+    tree/.style={line width=.65pt,line cap=round,line join=round},
+    reassociate/.style={-{Stealth[length=2mm]},line width=.7pt},
+    edge value/.style={fill=white,inner sep=3pt,font=\small},
+    leaf/.style={font=\scriptsize,inner sep=1pt},
+    tree caption/.style={font=\small,inner sep=1pt}
+  ]
+    \node[vertex] (A) at (-4.2,0) {};
+    \node[vertex] (D) at (0,2.4) {};
+    \node[v
+
+===================
+
+### statement:\node[anchor=west,align=left,text width=5.2cm] at (5.45,3.15 (1) [Thompsons-group-F-is-nonamenable-September-23-20#0]
+\begin{tikzpicture}[x=1.05cm,y=0.62cm,font=\small]
+  \foreach \x in {0,1,2,3,4} {
+    \foreach \y in {0,1,2,3} {
+      \fill[parentblue!13] (\x,\y) rectangle +(1,1);
+    }
+  }
+  \fill[childorange!24] (2,0) rectangle (3,4);
+  \draw[gray!65,thin] (0,0) grid[xstep=1,ystep=1] (5,4);
+  \draw[childorange!65!black,semithick] (2,0) rectangle (3,4);
+  \node at (0.5,4.45) {$I_1$};
+  \node at (1.5,4.45) {$\cdots$};
+  \node[childorange] at (2.5,4.45) {$I_i$};
+  \node at (3.5,4.45) {$\cdots$};
+  \node at (4.

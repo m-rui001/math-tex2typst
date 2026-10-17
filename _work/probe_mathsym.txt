@@ -1,0 +1,2 @@
+1 unusable words in math mode
+\varphi            -> varphi         varphi       error: unknown variable: varphi ┌─ \\?\C:\Users\hp\AppData\Local\Temp\tmp0vyo7jfm\t.typ:3:

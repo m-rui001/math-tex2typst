@@ -1,0 +1,30 @@
+cid 数=57 宏定义合计=3751 缺失 tex=0
+==== C13-约化群的Białynicki-Birula分解.md 起点 bytes=25143 lines=230 CR=0
+   sweep: C13 size=25143
+   sweep: C13 size=25143
+==== C14-拟有效线丛的消没定理.md 起点 bytes=37920 lines=477 CR=0
+   sweep: C14 size=37914 em=0
+   sweep: C14 size=37914
+==== C18-nef反典范除子的射影klt对结构定理.md 起点 bytes=22502 lines=212 CR=0
+   sweep: C18 size=22496 em=3
+   sweep: C18 size=22496
+   普查1 全根 refused=423 files_hit=4 other=0｜本单 C13 357 枚=\DX \Dfunctor \Fbar \Gbar \Gmult \Gprod \Group \Hfunctor \Irr \NN \Nbar \Ndiag \Nroup \Uplus \Xplus \Zformal \cA \cB \cI \fplus \iinfty \iinftyX \into \ioneX \isectionX \kk \kkbar \oneparam \ordone \sigmabar \varX / C14 50 枚=\NN \RR \Vol \ddbar \llangle \nd
+   macro: C13 站点=532 增量=+5998B /    \DX            -> \mathcal{D}_{#1}{\operatorname{X}} 13       凭据=素材 preamble /    \Dfunctor      -> \mathcal{D}_{#1}         19       凭据=素材 preamble /    \Fbar          -> \overline{\mathbf{F}}    9        凭据=素材 preamble /    \Gbar          -> \overline{\mathbf{G}}    109      凭据=素材 preamble /    \Gmult         -> \mathbb{G}_m             26       凭据=素材 preamble /    \Gprod         -> \mathbf{G}\times \mathbf{G}^{\mathrm{op}} 3        凭据=素材 preamble /    \Group         -> \mathbf{G}               99       凭据=素材 preamble /    \Hfunctor      -> \widehat{\mathcal{D}}_{#1} 18       凭据=素材 preamble /    \Irr           -> \operatorname{Irr}       3        凭据=素材 preamble /    \NN            -> \mathbb N                2        凭据=素材 preamble /    \Nbar          -> \overline{\mathbf{N}}    12       凭据=素材 preamble /    \Ndiag         -> \mathbf{N}^{\mathrm{diag}} 2        凭据=素材 preamble /    \Nroup         -> \mathbf{N}               6        凭据=素材 preamble /    \Uplus         -> U^{+}                    5        凭据=素材 preamble /    \Xplus         -> \operatorname{X}^+       29       凭据=素材 preamble /    \Zformal       -> \mathcal Z               3        凭据=素材 preamble /    \cA            -> \mathcal A               16       凭据=素材 preamble /    \cB            -> \mathcal B               9        凭据=素材 preamble /    \cI            -> \mathcal I               7        凭据=素材 preamble /    \fplus         -> f^+                      2        凭据=素材 preamble /    \iinfty        -> \pi_{#1}                 2        凭据=素材 preamble /    \iinftyX       -> \pi_{#1}{\operatorname{X}} 13       凭据=素材 preamble /    \into          -> \hookrightarrow          4        凭据=素材 preamble /    \ioneX         -> i_{#1}{\operatorname{X}} 8        凭据=素材 preamble /    \isectionX     -> s_{#1}{\operatorname{X}} 4        凭据=素材 preamble /    \kk            -> \operatorname{k}         32       凭据=素材 preamble /    \kkbar         -> \overline{k}             5        凭据=素材 preamble /    \oneparam      -> \mathbb{G}_{m, \operatorname{k}} 2        凭据=素材 preamble /    \ordone        -> <_1                      1        凭据=素材 preamble /    \sigmabar      -> \overline{\sigma}        3        凭据=素材 preamble /    \varX          -> \operatorname{X}         66       凭据=素材 preamble / APPLIED size=31141 +5998B 备份=_work/C13.pre-macrofix.md
+   macro: C14 站点=61 增量=+1636B /    \NN            -> \mathbb{N}               3        凭据=素材 preamble /    \RR            -> \mathbb{R}               1        凭据=素材 preamble /    \Vol           -> \operatorname{Vol}       2        凭据=素材 preamble /    \ddbar         -> \operatorname{i}\partial\overline{#1}{\partial} 30       凭据=素材 preamble /    \nd            -> \operatorname{nd}        25       凭据=素材 preamble /    未决（已登记 _work/c_macro_unresolved.txt）：\llangle / APPLIED size=39550 +1636B 备份=_work/C14.pre-macrofix.md
+   macro: C18 无可回改站点（普查零站点，或全部无凭据已登记） 未决=无
+   普查2 全根 refused=95 files_hit=4 other=5｜本单 C13 56 枚=(定界符) \onto / C14 23 枚=(定界符) \llangle
+   macro: C13 站点=2 增量=+26B /    \onto          -> \twoheadrightarrow       2        凭据=素材 preamble / APPLIED size=31167 +26B 备份=_work/C13.pre-macrofix.md
+   macro: C14 无可回改站点（普查零站点，或全部无凭据已登记） 未决=\llangle
+   macro: C18 无可回改站点（普查零站点，或全部无凭据已登记） 未决=无
+   普查3 全根 refused=93 files_hit=4 other=5｜本单 C13 54 枚=(定界符) / C14 23 枚=(定界符) \llangle
+   macro: C13 无可回改站点（普查零站点，或全部无凭据已登记） 未决=无
+   macro: C14 无可回改站点（普查零站点，或全部无凭据已登记） 未决=\llangle
+   macro: C18 无可回改站点（普查零站点，或全部无凭据已登记） 未决=无
+   ccheck: checking 1 C notes | === C13-约化群的Białynicki-Birula分解.md |    bytes=31167 lines=230 CR=0 |    title=Y heads=7 nums=0..6 contig0=True |    spec: head0=Y K=6(5-9) seam=Y |    dollar=998(even) odd_lines=0 btick=228(even) |    math: spans=471 disp=14 bytes=12835 share=41.2% stmt_lines=41 |    bans=none |    tables=0 rows=0 badpipe=0 |    material=被引素材/1805.11558 texfiles=1 poscites=58 bad=0
+   ccheck: checking 1 C notes | === C14-拟有效线丛的消没定理.md |    bytes=39550 lines=477 CR=0 |    title=Y heads=8 nums=0..7 contig0=True |    spec: head0=Y K=7(5-9) seam=Y |    dollar=1290(even) odd_lines=0 btick=280(even) |    math: spans=501 disp=72 bytes=10237 share=25.9% stmt_lines=32 |    bans=none |    tables=0 rows=0 badpipe=0 |    material=被引素材/2602.13821 texfiles=1 poscites=36 bad=0
+   ccheck: checking 1 C notes | === C18-nef反典范除子的射影klt对结构定理.md |    bytes=22496 lines=212 CR=0 |    title=Y heads=7 nums=0..6 contig0=True |    spec: head0=Y K=6(5-9) seam=Y |    dollar=718(even) odd_lines=0 btick=82(even) |    math: spans=354 disp=5 bytes=4748 share=21.1% stmt_lines=31 |    bans=none |    tables=0 rows=0 badpipe=0 |    material=被引素材/2105.14308 texfiles=1 poscites=38 bad=0
+   普查终 全根 refused=93 files_hit=4 other=5｜本单 C13 54 枚=(定界符) / C14 23 枚=(定界符) \llangle
+   C13 收稿后 bytes=31167 lines=230 CR=0
+   C14 收稿后 bytes=39550 lines=477 CR=0
+   C18 收稿后 bytes=22496 lines=212 CR=0
+APPLIED 被引笔记/INDEX.md size=8494

@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{tikz}
+\pagestyle{empty}
+\begin{document}
+% does shift={(A)} use the node's canvas point verbatim, or its cm values as user units?
+% head x=2cm separates the two readings: A sits 2cm right of the origin;
+% verbatim canvas -> scope origin 56.9pt; user-unit reading -> 113.8pt.
+\begin{tikzpicture}[x=2cm,y=2cm]
+  \node (A) at (1,0) {};
+  \path (A); \pgfgetlastxy{\nax}{\nay}
+  \typeout{NODEA \nax,\nay}
+
+  \begin{scope}[shift={(A)}]
+    \path (0,0); \pgfgetlastxy{\sax}{\say}
+    \typeout{NAMEDSHIFT \sax,\say}
+  \end{scope}
+
+  \begin{scope}[shift={(1,0)}]
+    \path (0,0); \pgfgetlastxy{\pnx}{\pny}
+    \typeout{PAIRSHIFT \pnx,\pny}
+  \end{scope}
+
+  % a sized node: is the shift target its centre?
+  \node[minimum width=2.7cm,minimum height=1.9cm] (B) at (1,2) {};
+  \path (B.center); \pgfgetlastxy{\bcx}{\bcy}
+  \typeout{NODEBCENTRE \bcx,\bcy}
+  \begin{scope}[shift={(B)}]
+    \path (0,0); \pgfgetlastxy{\sbx}{\sby}
+    \typeout{NAMEDSHIFTB \sbx,\sby}
+  \end{scope}
+
+  % named shift inside an enclosing rotated scope: canvas-verbatim or through the matrix?
+  \begin{scope}[rotate=90]
+    \begin{scope}[shift={(A)}]
+      \path (0,0); \pgfgetlastxy{\rbx}{\rby}
+      \typeout{NAMEDINROT \rbx,\rby}
+    \end{scope}
+  \end{scope}
+
+  % plain pair shift inside the same rotated scope, for comparison
+  \begin{scope}[rotate=90]
+    \begin{scope}[shift={(1,0)}]
+      \path (0,0); \pgfgetlastxy{\rcx}{\rcy}
+      \typeout{PAIRINROT \rcx,\rcy}
+    \end{scope}
+  \end{scope}
+
+  % named shift carrying a drawing unit check: a local (0,.75) point under x=2cm
+  \begin{scope}[shift={(A)}]
+    \path (0,.75); \pgfgetlastxy{\tdx}{\tdy}
+    \typeout{LOCALPT \tdx,\tdy}
+  \end{scope}
+\end{tikzpicture}
+\end{document}

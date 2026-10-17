@@ -1,0 +1,8 @@
+cols=16 rows=4592
+head=id|note|sec_line|sec_head|no|label|cat|kind|fam|stated|cur|verified|quote|fix|evidence|verify_note
+-- cat (4 distinct): JUDGMENT=3283, WAIVER=691, ORDER=517, KEEP=101
+-- kind (6 distinct): defect-needs-wording=3283, checker-false-positive=691, mechanical-target-given=496, quotes-bad-form=101, mechanical-count-correction=16, mechanical-delete=5
+-- fam (348 distinct): other=733, banstring=505, macro=316, count=290, table=130, btick,count=128, english=127, ordermove=104, count,banstring=97, btick=81, btick,count,table=81, count,table=77, typo=74, macro,count=72, anchor=66, macro,table=58, banstring,table=55, macro,count,table=54
+-- verified (3 distinct): -=4366, no=208, yes=18
+rows_with_nonempty_fix=503
+fix_by_cat=ORDER=503

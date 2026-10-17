@@ -1,0 +1,10 @@
+D256 lines=286 cr=0 markers=0 bytes=96584
+snapshot lines=190 markers=1 bytes=71582
+L188..191 now:
+   187|| $H^0(X,\mathcal O_X(mK_X))\otimes_{k_0}k$ | 截面空间基变换等式 | sections/cartier.tex:586-588 | §
+   188|| $\kappa(X,K_X)=1$ | 结论的 Kodaira 维数 | sections/introduction.tex:19-20 | §7 收尾与摘要 | 若 $\nu
+   189|
+   190|## §12 Cartier 下降逐步骤的定理凭据：从 $p$-基到水平投影算子
+   191|
+   192|我在 §7 把终局矛盾的两只手记住了，但当时没把"下降"本身的工序拆开——那里我只写到"用 Katz 的水平投影算子与截断 Taylor 展开把带 Cartier 固定联络的线丛沿
+first189_lines_match_my_repaired_baseline=True None

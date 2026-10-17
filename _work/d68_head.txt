@@ -1,0 +1,20 @@
+# D68 相容性熵与 Thorp 扫描的谱：我把一次扫描的全部奇异值收进一个有界正则矩
+
+对象论文：`Compatibility entropy and the spectrum of a Thorp sweep`（2026-09-26，OpenAI）。
+TeX 源码：`E:\math\preprints\Compatibility-entropy-and-the-spectrum-of-a-Thorp-sweep-September-26-2026\build\`（`main.tex` + `sections/00-introduction` … `sections/16-pointwise-smoothing`，17 个分片共 6864 行、477330 字节；`references.bib` 254 行、31 条 `@` 条目）。
+Lean：`E:\math\lean\OAI\Probability\ThorpCompatibility\`（34 个 `.lean`，3341 行，138890 字节），comparator 配置 `ComparatorChallenges/ThorpWeightedCompatibility.json`，被认证的只有 `OAI.ThorpCompatibility.weightedCompatibility_main` 一条。
+引文行号记法：`02:137` 表示 `sections/02-entropy-route.tex` 第 137 行。
+
+记号与论文一致：$n=2^d$ 是牌数，$d$ 是坐标数（位数），$m=\sqrt n$，矩形是 $A\times D$ 且 $AD=n$；$R=(S_D)^A$、$C=(S_A)^D$ 分别是行群与列群；$T_n$ 是一次坐标扫描的卷积算子，$Z_n(p)$ 是它的正则 $p$ 矩（未归一化，含正则重数）。我把论文里所有形如 $n^{.54}$ 的十进制指数照抄成原样，因为它们是带余量的选择，不是精确值。
+
+## 0 我进场时手里有什么
+
+摘要只给了两句（`main.tex:45`）：
+
+```tex
+We prove that the Thorp shuffle on $n=2^d$ cards mixes in $\Theta(d)$ physical shuffles. After a sufficiently large fixed number of coordinate sweeps, the total-variation distance of the full permutation from uniform tends to zero as $d\to\infty$.
+```
+
+我在动手前先确认这句话里的数量级是从哪里来的。Thorp 1973 提出这个洗牌（论文转述在 `00:6`，出处引 Thorp 原文 Section 3.1, page 844），$2^d$ 张牌，每个物理步把位置按 $x\mapsto(x_2,\dots,x_d,x_1+\xi_{x_2,\dots,x_d})$ 送出去，$\xi$ 是 $2^{d-1}$ 个独立公平位。一条已知的下界是 $2d-O(1)$，纯靠支撑大小：$t$ 步最多 $2^{tn/2}$ 个硬币串，而 $n!$ 张牌的全排列需要 $n\log_2 n$ 量级的支撑（`00:6`）。已知上界的历史线论文在 `00:8` 写得很清楚：
+
+> The first polylogarithmic full-deck bound was Morris's $O(d^{44})$ theorem, announced in 2005 and published in 2008~\cite{Morris2008}. Montenegro and Tetali sharpened its evolving-set analysis to $O(d^{29})$~\cite[Section~6.4, Theorems~6.14--6.15]{MontenegroTetali2006}. Morris then introduced entropy contraction arguments giving $

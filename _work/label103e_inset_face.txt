@@ -1,0 +1,45 @@
+#box(... inset: 0.3333em) sites: 446 over 128 canvases / 108 papers
+by text size of the body: [('9pt', 351), ('body', 50), ('8pt', 45)]
+by the anchor the canvas pins it with: [('no-anchor', 390), ('west', 41), ('north', 9), ('south', 4), ('east', 2)]
+
+first 40:
+A-Counterexample-to-Kuroshs-Division-Ring-Problem-#2  9pt      no-anchor    content((2.45, 2.9), [#box(width: 2.9cm, inset: 0.3333em, [#set text(hyphenate: false, top-edge: "bo  x1
+A-Fixed-Particle-Test-for-Computation-in-a-Forced-#0  9pt      no-anchor    content((0, 0), [#box(width: 2.15cm, inset: 0.3333em, radius: 4pt, stroke: (thickness: 0.4pt, miter-  x1
+A-Fixed-Particle-Test-for-Computation-in-a-Forced-#0  9pt      no-anchor    content((4.8, 0), [#box(width: 2.8cm, inset: 0.3333em, radius: 4pt, stroke: (thickness: 0.4pt, miter  x1
+A-Fixed-Particle-Test-for-Computation-in-a-Forced-#0  9pt      no-anchor    content((10.5, 0), [#box(width: 2.8cm, inset: 0.3333em, radius: 4pt, stroke: (thickness: 0.4pt, mite  x1
+A-Nearly-Quartic-Separation-Between-Randomized-and#0  9pt      no-anchor    content((-4, 1.8), [#box(width: 2.7cm, inset: 0.3333em, radius: 2pt, stroke: (thickness: 0.4pt, mite  x1
+A-Nearly-Quartic-Separation-Between-Randomized-and#0  9pt      no-anchor    content((0, 1.8), [#box(width: 2.7cm, inset: 0.3333em, radius: 2pt, stroke: (thickness: 0.4pt, miter  x1
+A-Nearly-Quartic-Separation-Between-Randomized-and#0  9pt      no-anchor    content((4, 1.8), [#box(width: 2.7cm, inset: 0.3333em, radius: 2pt, stroke: (thickness: 0.4pt, miter  x1
+A-Nearly-Quartic-Separation-Between-Randomized-and#0  8pt      no-anchor    content((0, 3), [#box(width: 3.9cm, inset: 0.3333em, [#set text(hyphenate: false, top-edge: "cap-hei  x1
+A-Nearly-Quartic-Separation-Between-Randomized-and#0  9pt      no-anchor    content((0, -0.2), [#box(width: 3.7cm, inset: 0.3333em, stroke: (thickness: 0.4pt, miter-limit: 10),  x1
+A-Nearly-Quartic-Separation-Between-Randomized-and#0  8pt      no-anchor    content((-4, -0.85), [#box(width: 3cm, inset: 0.3333em, [#set text(hyphenate: false, top-edge: "boun  x1
+A-Nearly-Quartic-Separation-Between-Randomized-and#0  8pt      no-anchor    content((4, -0.85), [#box(width: 3cm, inset: 0.3333em, [#set text(hyphenate: false, top-edge: "bound  x1
+A-PD4-group-without-an-aspherical-manifold-model-S#0  9pt      west         content((0, -3.462), [#box(width: 3.7cm, inset: 0.3333em, [#set text(hyphenate: false, top-edge: "ca  x1
+A-Power-Saving-for-Polynomial-Differences-at-Prime#0  9pt      north        content((5.4, -3.02), [#box(width: 11.6cm, inset: 0.3333em, [#set text(hyphenate: false, top-edge: "  x1
+A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-#0  9pt      no-anchor    content((8.15, 2.93), [#box(width: 1.02cm, height: 0.48cm, inset: 0.3333em, radius: 1pt, stroke: (th  x1
+A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-#0  9pt      no-anchor    content((11.65, 2.93), [#box(width: 1.02cm, height: 0.48cm, inset: 0.3333em, radius: 1pt, stroke: (t  x1
+A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-#0  9pt      no-anchor    content((8.15, 2.18), [#box(width: 1.02cm, height: 0.48cm, inset: 0.3333em, radius: 1pt, stroke: (th  x1
+A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-#0  9pt      no-anchor    content((11.65, 2.18), [#box(width: 1.02cm, height: 0.48cm, inset: 0.3333em, radius: 1pt, stroke: (t  x1
+A-boundary-field-gap-for-the-spin-one-Heisenberg-c#0  9pt      no-anchor    content((0, 0), [#box(width: 0.9cm, height: 0.8cm, inset: 0.3333em, stroke: (thickness: 0.4pt, miter  x1
+A-boundary-field-gap-for-the-spin-one-Heisenberg-c#0  9pt      no-anchor    content((1.6, 0), [#box(width: 0.9cm, height: 0.8cm, inset: 0.3333em, stroke: (thickness: 0.4pt, mit  x1
+A-boundary-field-gap-for-the-spin-one-Heisenberg-c#0  9pt      no-anchor    content((4.8, 0), [#box(width: 0.9cm, height: 0.8cm, inset: 0.3333em, stroke: (thickness: 0.4pt, mit  x1
+A-boundary-field-gap-for-the-spin-one-Heisenberg-c#0  9pt      no-anchor    content((0, -1.8), [#box(width: 0.9cm, height: 0.8cm, inset: 0.3333em, stroke: (thickness: 0.4pt, mi  x1
+A-boundary-field-gap-for-the-spin-one-Heisenberg-c#0  9pt      no-anchor    content((1.6, -1.8), [#box(width: 0.9cm, height: 0.8cm, inset: 0.3333em, stroke: (thickness: 0.4pt,   x1
+A-boundary-field-gap-for-the-spin-one-Heisenberg-c#0  9pt      no-anchor    content((4.8, -1.8), [#box(width: 0.9cm, height: 0.8cm, inset: 0.3333em, stroke: (thickness: 0.4pt,   x1
+A-closed-Ricci-flow-with-bounded-scalar-curvature-#1  9pt      north        content((3, -1.38), [#box(width: 6.4cm, inset: 0.3333em, [#set text(hyphenate: false, top-edge: "bou  x1
+A-closed-Ricci-flow-with-bounded-scalar-curvature-#1  9pt      north        content((8.5, -1.38), [#box(width: 4.9cm, inset: 0.3333em, [#set text(hyphenate: false, top-edge: "b  x1
+A-counterexample-to-Kaplanskys-quasitrace-conjectu#0  9pt      no-anchor    content((0, 0), [#box(width: 1.2cm, height: 0.9cm, inset: 0.3333em, radius: 2pt, stroke: (thickness:  x1
+A-counterexample-to-Kaplanskys-quasitrace-conjectu#0  9pt      no-anchor    content((1.8, 0), [#box(width: 1.2cm, height: 0.9cm, inset: 0.3333em, radius: 2pt, stroke: (thicknes  x1
+A-counterexample-to-Kaplanskys-quasitrace-conjectu#0  9pt      no-anchor    content((5.1, 0), [#box(width: 1.2cm, height: 0.9cm, inset: 0.3333em, radius: 2pt, stroke: (thicknes  x1
+A-counterexample-to-Kaplanskys-quasitrace-conjectu#0  9pt      no-anchor    content((7.2, 0), [#box(width: 1.2cm, height: 0.9cm, inset: 0.3333em, radius: 2pt, stroke: (thicknes  x1
+A-counterexample-to-the-Monge-ansatz-for-the-three#0  9pt      no-anchor    content((0, 0), [#box(width: 2.25cm, inset: 0.3333em, radius: 4pt, stroke: (thickness: 0.4pt, miter-  x1
+A-counterexample-to-the-Monge-ansatz-for-the-three#0  9pt      no-anchor    content((3.8, 0), [#box(width: 2.25cm, inset: 0.3333em, radius: 4pt, stroke: (paint: rgb("#000099"),  x1
+A-counterexample-to-the-Monge-ansatz-for-the-three#0  9pt      no-anchor    content((-3.8, 0), [#box(width: 2.25cm, inset: 0.3333em, radius: 4pt, stroke: (paint: rgb("#000099")  x1
+A-counterexample-to-the-Monge-ansatz-for-the-three#0  9pt      no-anchor    content((0, 1.9), [#box(width: 2.25cm, inset: 0.3333em, radius: 4pt, stroke: (paint: rgb("#994d00"),  x1
+A-counterexample-to-the-Monge-ansatz-for-the-three#0  9pt      no-anchor    content((0, -1.9), [#box(width: 2.25cm, inset: 0.3333em, radius: 4pt, stroke: (paint: rgb("#994d00")  x1
+A-linear-list-coloring-bound-in-terms-of-the-Hadwi#1  9pt      no-anchor    content((0, 2), [#box(width: 2.15cm, height: 0.75cm, inset: 0.3333em, radius: 4pt, stroke: (thicknes  x1
+A-linear-list-coloring-bound-in-terms-of-the-Hadwi#1  9pt      no-anchor    content((3.8, 2), [#box(width: 2.15cm, height: 0.75cm, inset: 0.3333em, radius: 4pt, stroke: (thickn  x1
+A-linear-list-coloring-bound-in-terms-of-the-Hadwi#1  9pt      no-anchor    content((7.6, 2), [#box(width: 2.15cm, height: 0.75cm, inset: 0.3333em, radius: 4pt, stroke: (thickn  x1
+A-linear-list-coloring-bound-in-terms-of-the-Hadwi#1  9pt      no-anchor    content((0, 0), [#box(width: 2.15cm, height: 0.75cm, inset: 0.3333em, radius: 4pt, stroke: (thicknes  x1
+A-linear-list-coloring-bound-in-terms-of-the-Hadwi#1  9pt      no-anchor    content((3.8, 0), [#box(width: 2.15cm, height: 0.75cm, inset: 0.3333em, radius: 4pt, stroke: (thickn  x1
+A-linear-list-coloring-bound-in-terms-of-the-Hadwi#1  9pt      no-anchor    content((7.6, 0), [#box(width: 2.15cm, height: 0.75cm, inset: 0.3333em, radius: 4pt, stroke: (thickn  x1

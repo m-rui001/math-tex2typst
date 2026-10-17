@@ -1,0 +1,31 @@
+{
+  "paper": "A-Smooth-Metric-with-No-Local-Isometric-Immersion-into-Three-Space-September-24-2026",
+  "ok": true,
+  "typ_lines": 783,
+  "included_pdf_pages": 0,
+  "formulas": 461,
+  "math_failed": 0,
+  "labels": 79,
+  "equations": 5,
+  "theorems": 3,
+  "figures": 4,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:maintheorem": 1,
+    "cetz_converted": 4
+  },
+  "samples": {
+    "formulas": "461",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-Smooth-Metric-with-No-Local-Isometric-Immersion-into-Three-Space-September-24-2026.tex"
+}

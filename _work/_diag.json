@@ -1,0 +1,27 @@
+{
+ "spans": 33053,
+ "refused": 47,
+ "filesHit": 11,
+ "undef": {
+  "\\rfdown": 2,
+  "\\xymatrix": 3,
+  "\\cU": 1,
+  "\\cL": 1,
+  "\\cV": 3,
+  "\\cX": 4,
+  "\\cB": 2,
+  "\\cG": 4,
+  "\\A": 5,
+  "\\bc": 3,
+  "\\Cond": 1,
+  "\\dgraph": 10,
+  "\\disc": 1,
+  "\\edges": 2,
+  "\\dens": 1
+ },
+ "other": {
+  "KaTeX parse error: Can't use function '$' in math mode ": 1,
+  "KaTeX parse error: Extra } ": 2,
+  "KaTeX parse error: Expected group after '_' ": 1
+ }
+}

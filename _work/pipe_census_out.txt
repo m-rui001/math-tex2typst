@@ -1,0 +1,153 @@
+notes_with_badpipe=115 bad_lines=2623 pipe_lines=45609 notes_scanned=731
+hist=2:30 3:270 4:779 5:1247 6:42986 7:193 8:47 9:22 10:13 11:7 12:7 13:2 14:3 15:2 22:1
+D25 x253
+D38 x155
+D33 x106
+D34 x102
+D36 x87
+D26 x81
+D31 x75
+D164 x71
+D91 x61
+D93 x57
+D92 x55
+D56 x52
+D84 x51
+D48 x49
+D144 x46
+D42 x46
+D27 x44
+D78 x44
+D90 x44
+D85 x40
+D160 x36
+D35 x34
+D103 x33
+D29 x32
+D80 x32
+D41 x27
+D43 x27
+D47 x27
+D49 x26
+D154 x25
+D157 x25
+D156 x24
+D37 x24
+D345 x23
+D327 x21
+D46 x21
+D142 x20
+D158 x20
+D39 x20
+D45 x19
+D81 x19
+D79 x18
+D106 x17
+D131 x17
+D163 x17
+D18 x17
+D155 x16
+D24 x16
+D30 x16
+D44 x15
+D105 x14
+D143 x14
+D21 x14
+D401 x14
+D60 x14
+D22 x13
+D23 x13
+D354 x13
+D104 x12
+D152 x12
+D219 x12
+D32 x12
+D87 x12
+D03 x11
+D153 x11
+D165 x11
+D236 x11
+D379 x11
+D148 x10
+D150 x10
+D161 x10
+D188 x10
+D28 x10
+D373 x10
+D572 x10
+D765 x10
+D232 x9
+D370 x9
+D439 x9
+D99 x8
+D01 x7
+D51 x6
+D599 x6
+D10 x5
+D12 x5
+D101 x3
+D297 x3
+D608 x3
+D65 x3
+D746 x3
+D758 x3
+D09 x2
+D110 x2
+D205 x2
+D305 x2
+D339 x2
+D341 x2
+D408 x2
+D426 x2
+D507 x2
+D632 x2
+D06 x1
+D14 x1
+D259 x1
+D268 x1
+D346 x1
+D360 x1
+D364 x1
+D375 x1
+D405 x1
+D50 x1
+D53 x1
+D643 x1
+D759 x1
+D769 x1
+notes_with_badpipe=115 bad_lines=2623 pipe_lines=45609 notes_scanned=731
+hist=2:30 3:270 4:779 5:1247 6:42986 7:193 8:47 9:22 10:13 11:7 12:7 13:2 14:3 15:2 22:1
+D25 x253
+   252 n=4 | 维度 | 本篇 DirectCrouzeix（直接） | StructuralCrouzeix（结构） |
+   253 n=4 | --- | --- | --- |
+   255 n=12 | 核心产出 | 一条数不等式 $\|P[A]\|\le2\max_{W(A)}\|P\|$ | 一个算子对象：正定 $S$，$\|S\|\|S^{-1}\|\le2$，使 $Sf(A)S^{-1}$ 为压缩 |
+   256 n=4 | 边界表示 | 不存在全局边界测度；只在一次估计里临时用 $R+R^*$ | 存在同一个归一化正边界密度，对一切系数维数、一切近 $\overline\Omega$ 全纯的函数统一表示 |
+   257 n=4 | 主要工具 | 单变元 Fourier 分析（$L^2(\mathbb T;M_m)$）加双变元正核 $K(\lambda,\mu)$ | 变分/极小度量（minimizing metric） |
+   258 n=4 | 估计对象 | 一个多项式 $F$ 加它的一对奇异向量（`main.tex:329`） | 整个泛函演算的表示 |
+D38 x155
+   848 n=4 | 目录 | 文件 | 行数 |
+   849 n=4 |---|---|---|
+   850 n=4 | Estimates/ | 197 | 36,577 |
+   851 n=4 | Siegel/ | 105 | 32,757 |
+   852 n=4 | Paths/ | 82 | 14,417 |
+   853 n=4 | Primes/ | 78 | 14,106 |
+D33 x106
+   903 n=5 | 节 | 位置 | 逐字关键句 | 防什么（[推测]） |
+   904 n=5 |---|---|---|---|
+   905 n=5 | §2 约定 | `preliminaries.tex:4-10` | "Unless explicitly stated otherwise, graphs are finite, simple and undire
+   906 n=5 | §3 路由 | `routing.tex:4-12` | "Besides edge-disjointness of all routes, we will need internal vertex-disjoint
+   907 n=5 | §4 小残差 | `residue.tex:4-8` | "Reserving vertices and edges to connect and close paths is already central to 
+   908 n=5 | §5 分层 | `splitting.tex:4-13` | "Only edges leave when a piece is extracted: the residual graph retains every
+D34 x102
+   97 n=4 | 项 | `eq:optimizer-cross-mass`（引理 2.3） | `eq:cross-mass`（抽象定义 3.1） |
+   98 n=4 |---|---|---|
+   99 n=4 | 常数 | $C_r=16r^2$（显式、含 $r$） | 任意 $C\ge1$（抽象） |
+   100 n=4 | 前提 | $G$ 非空、$K_r$-free、$w$ 是 $F_G$ 的极大点 | 无，只是 $(G,w)$ 的一个性质 |
+   101 n=4 | 集合 | $S,D$，明写"可不交" | $A,B$，"every $A,B\subseteq V(G)$" |
+   530 n=8 | $n,d$ | $n$ 顶点，平均度 $d=2|E|/n\ge2$ | `introduction:6-7,16` | 结论的分母与门槛 | $d\ge2$ 是门槛：$d<2$ 时 $\log d<0$，右端为负，结
+D36 x87
+Traceback (most recent call last):
+  File "E:\math\_work\pipe_census.py", line 46, in <module>
+    print(u"   %d n=%d %s" % (ln, c, txt))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\u2082' in position 22: illegal multibyte sequence

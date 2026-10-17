@@ -1,0 +1,28 @@
+{
+  "paper": "Classical-capacity-and-entropy-inequalities-for-generalized-amplitude-damping-September-24-2026",
+  "ok": true,
+  "typ_lines": 601,
+  "included_pdf_pages": 0,
+  "formulas": 434,
+  "math_failed": 0,
+  "labels": 89,
+  "equations": 2,
+  "theorems": 0,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "434"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Classical-capacity-and-entropy-inequalities-for-generalized-amplitude-damping-September-24-2026.tex"
+}

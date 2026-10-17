@@ -1,0 +1,146 @@
+{
+ "D02": {
+  "dir": "A-Counterexample-to-Kaplanskys-Direct-Finiteness-Conjecture-in-Characteristic-Two-September-23-2026",
+  "ncite": 8,
+  "nmatch": 8,
+  "ndir_tex": 10,
+  "tied": 1,
+  "runner_up": "Boundedness-and-persistence-of-weakly-reversible-mass-action-systems-September-25-2026",
+  "runner_up_match": 2
+ },
+ "D03": {
+  "dir": "Global-classical-solutions-of-the-three-dimensional-relativistic-Vlasov-Maxwell-system-September-23-2026",
+  "ncite": 11,
+  "nmatch": 11,
+  "ndir_tex": 14,
+  "tied": 1,
+  "runner_up": "The-Generalized-Mukai-Conjecture-September-24-2026",
+  "runner_up_match": 3
+ },
+ "D04": {
+  "dir": "Ordinary-two-point-correlations-of-multiplicative-functions-September-24-2026",
+  "ncite": 10,
+  "nmatch": 10,
+  "ndir_tex": 18,
+  "tied": 1,
+  "runner_up": "Diagonal-Fourier-extension-for-positively-curved-surfaces-in-three-dimensions-September-24-2026",
+  "runner_up_match": 1
+ },
+ "D05": {
+  "dir": "Quasipolynomial-Bounds-for-Arithmetic-Progressions-September-23-2026",
+  "ncite": 10,
+  "nmatch": 10,
+  "ndir_tex": 28,
+  "tied": 1,
+  "runner_up": "Diagonal-Fourier-extension-for-positively-curved-surfaces-in-three-dimensions-September-24-2026",
+  "runner_up_match": 2
+ },
+ "D06": {
+  "dir": "The-irrationality-exponent-of-pi-is-2-September-24-2026",
+  "ncite": 4,
+  "nmatch": 4,
+  "ndir_tex": 5,
+  "tied": 1,
+  "runner_up": "The-crossing-number-of-complete-graphs-September-23-2026",
+  "runner_up_match": 1
+ },
+ "D07": {
+  "dir": "Spontaneous-magnetization-in-the-quantum-Heisenberg-ferromagnet-September-24-2026",
+  "ncite": 9,
+  "nmatch": 9,
+  "ndir_tex": 11,
+  "tied": 1,
+  "runner_up": "A-degenerate-counterexample-to-the-critical-number-Arnold-bound-September-23-2026",
+  "runner_up_match": 2
+ },
+ "D08": {
+  "dir": "The-Mezard-Parisi-formula-for-diluted-spin-glasses-September-23-2026",
+  "ncite": 9,
+  "nmatch": 8,
+  "ndir_tex": 13,
+  "tied": 1,
+  "runner_up": "The-free-energy-of-the-Ising-random-perceptron-September-24-2026",
+  "runner_up_match": 3
+ },
+ "D128": {
+  "dir": "Nagatas-Conjecture-for-Plane-Curves-September-23-2026",
+  "ncite": 7,
+  "nmatch": 7,
+  "ndir_tex": 8,
+  "tied": 1,
+  "runner_up": "Integral-and-fractional-expectation-thresholds-are-equivalent-September-23-2026",
+  "runner_up_match": 3
+ },
+ "D15": {
+  "dir": "A-classification-of-finite-Euclidean-Ramsey-configurations-September-23-2026",
+  "ncite": 8,
+  "nmatch": 8,
+  "ndir_tex": 9,
+  "tied": 1,
+  "runner_up": "The-rational-Hodge-conjecture-for-CM-abelian-varieties-September-30-2026",
+  "runner_up_match": 4
+ },
+ "D21": {
+  "dir": "A-Cyclic-Polytabloid-Proof-of-Saxls-Conjecture-September-24-2026",
+  "ncite": 6,
+  "nmatch": 6,
+  "ndir_tex": 8,
+  "tied": 1,
+  "runner_up": "A-uniform-influence-bound-for-hypergraph-properties-October-5-2026",
+  "runner_up_match": 2
+ },
+ "D232": {
+  "dir": "A-polynomial-time-algorithm-for-three-machine-unit-job-scheduling-September-24-2026",
+  "ncite": 14,
+  "nmatch": 14,
+  "ndir_tex": 66,
+  "tied": 1,
+  "runner_up": "Uniform-Stability-of-the-Spherical-Laughlin-Gap-October-5-2026",
+  "runner_up_match": 4
+ },
+ "D258": {
+  "dir": "Global-Arthur-Enhancements-of-Cuspidal-Excursion-Parameters-October-5-2026",
+  "ncite": 1,
+  "nmatch": 1,
+  "ndir_tex": 1,
+  "tied": 2,
+  "runner_up": "Weak-pure-infiniteness-and-O-infinity-absorption-September-25-2026",
+  "runner_up_match": 1
+ },
+ "D259": {
+  "dir": "A-hyperbolic-group-with-no-geometric-CAT0-action-September-25-2026",
+  "ncite": 12,
+  "nmatch": 2,
+  "ndir_tex": 12,
+  "tied": 1,
+  "runner_up": "Schnell-fiber-spaces-and-good-canonical-models-September-24-2026",
+  "runner_up_match": 1
+ },
+ "D306": {
+  "dir": "Bounded-degree-coboundary-expanders-in-every-dimension-September-24-2026",
+  "ncite": 8,
+  "nmatch": 8,
+  "ndir_tex": 8,
+  "tied": 1,
+  "runner_up": "Tame-Hecke-Eigensheaves-with-Several-Marked-Points-October-5-2026",
+  "runner_up_match": 5
+ },
+ "D320": {
+  "dir": "Commuting-Division-Coefficient-Forms-and-the-Artinian-Eisenbud-Green-Harris-Conjecture-September-23-2026",
+  "ncite": 11,
+  "nmatch": 11,
+  "ndir_tex": 11,
+  "tied": 1,
+  "runner_up": "A-singular-normal-affine-surface-with-free-tangent-sheaf-September-23-2026",
+  "runner_up_match": 3
+ },
+ "D90": {
+  "dir": "Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026",
+  "ncite": 6,
+  "nmatch": 6,
+  "ndir_tex": 6,
+  "tied": 1,
+  "runner_up": "Ultraflat-real-Littlewood-polynomials-October-5-2026",
+  "runner_up_match": 3
+ }
+}

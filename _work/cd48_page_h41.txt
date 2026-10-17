@@ -1,0 +1,6 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+== shaft-through-letters pairs: 4 on 2 pages of 2 papers, out of 56 checked
+     1.6 pt through  Two-step-monodromy-of-special-quasi- p18  '𝑏'
+     1.5 pt through  Tame-Hecke-Eigensheaves-with-Several p14  '1'
+     1.5 pt through  Tame-Hecke-Eigensheaves-with-Several p14  '1'
+     1.4 pt through  Tame-Hecke-Eigensheaves-with-Several p14  '𝑞'

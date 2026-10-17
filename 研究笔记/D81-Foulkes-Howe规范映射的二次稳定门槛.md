@@ -1,0 +1,909 @@
+# D81 Foulkes-Howe 规范映射的二次稳定门槛：从维数无关界反推思维链
+
+论文对象：`E:\math\preprints\Quadratic-Stabilization-of-the-Canonical-Foulkes-Howe-Map-September-25-2026\build\paper.tex`（22,016 字节 / 474 行，唯一正文），配套 `build\references.tex`（3,006 字节 / 64 行）；署名 OpenAI，日期 2026-09-25；Lean 登记见 `E:\math\lean\formalization.yaml:1170-1172`。
+
+## §0 阅读节奏与地图
+
+我按仓库惯例先建立地图再逐段读。tex 是单文件平铺：`grep -n` 出来的骨架是 preamble (1-48)、abstract (51-57)、Introduction (59-177)、Section 2 canonical image / diagonal vanishing (178-238)、Section 3 differential injectivity (239-296)、Section 4 vanishing on products (298-436)、Section 5 representation comparison and scope (438-471)、`\end{document}` (474)。带号环境只有四个：`thm:main` 位于 99-103、`lem:shift` 位于 260-265、`prop:vanishing` 位于 304-313、`cor:comparison` 位于 440-448；另有无编号 criterion 位于 227-229，和 `remark` 位于 462-471。方程标签共十处：`eq:average` (73-77)、`eq:map` (84-86)、`eq:norm` (286-288)、`eq:diagonal` (308-311)、`eq:rm` (320-322)、`eq:range` (324-326)、`eq:binary` (346-348)、`eq:first-composition` (361-365)、`eq:inductive-vanishing` (389-392)、`eq:second-composition` (409-413)。证明骨架是 Step 1-4 四段：Step 1 (328-348) split binary form、Step 2 (350-378) freeing the last slot、Step 3 (380-393) induction on remaining slots、Step 4 (395-424) removing the common power。
+
+Lean 侧同族共 77 个 `.lean` 文件，总 6095 行；顶层声明我实测：`theorem` 250 条、`lemma` 11 条、`def` 79 条、`abbrev` 7 条、`instance` 2 条、`structure` 与 `inductive` 均为 0；`sorry` 0 条、真 `admit` 0 条（只有一条 docstring 里出现 "admits" 单词）、本地 `axiom` 0 条、`#print axioms` 0 条。JSON 里 `permitted_axioms` 是 `propext / Quot.sound / Classical.choice` 三件套，`theorem_names` 只有 `OAI.Problem346.canonical_foulkes_howe_surjective` 一条。这些数字后面在 §7 会再算一次并逐条对照，此处只是先记入视野，避免我下笔时把「零 sorry」当成「零义务」。
+
+命名上有一条线索值得先记下：目录是 `OAI/RepresentationTheory/FoulkesHowe/`，主声明的 namespace 是 `OAI.Problem346`，两者不同名。这说明登记侧走的两套命名：比较器 JSON 用 `Problem346` 是考题编号（第 346 号），模块名 `FoulkesHowe` 是学术领域；两套名字在 `formalization.yaml:1170-1172` 三行里被同时绑定：`comparator_config` 走 `ComparatorChallenges/FoulkesHowe.json`（域命名），`declaration` 走 `OAI.Problem346.canonical_foulkes_howe_surjective`（题号命名），`file` 走 `OAI/RepresentationTheory/FoulkesHowe/Stabilization.lean`（域命名）。我读 Lean 时会不断在两套名字之间转换。
+
+我读 tex 只用 grep + 局部 Read 分段，PDF 一律不看（本仓库 PDF 加密，且 pdftotext 会引入 OCR 噪声）；正文素材全部落在 tex 允许的 474 行之内。tex 里的 `\Sym` 全部由 `\DeclareMathOperator{\Sym}{Sym}` (paper.tex:41) 定义，不是 Mathlib 的 `Sym n R`，也不是自建 quotient，这一点到 §7 会专门对齐。
+
+登记补齐：本笔记对应的论文目录为 preprints/Quadratic-Stabilization-of-the-Canonical-Foulkes-Howe-Map-September-25-2026，取证取材仅限该目录下 build/paper.tex（474 行）与 build/references.tex；Lean 侧对应 `.tools/records.txt` 第 64 行（formalization.yaml:1170、ComparatorChallenges/FoulkesHowe.json、OAI/RepresentationTheory/FoulkesHowe/Stabilization.lean），队列第 102 行号。先前 §0 只写了 formalization.yaml 的三行绑定，目录全名与队列位置漏记，此行补上，后文所有 paper.tex: 行号引用均相对该目录的 build。
+
+## §1 初始动机与猜想：我第一次把 Foulkes-Howe 稳定化当成什么问题
+
+我第一次接触这个问题，是在把两件事叠在一起看的语境里。一件事是 Foulkes 1950 的原始猜想 `Foulkes1950` (references.tex:26-29)：对 $a \le b$，是否存在 GL(V)-同变的单射 $\operatorname{Sym}^a(\operatorname{Sym}^b V) \hookrightarrow \operatorname{Sym}^b(\operatorname{Sym}^a V)$。这是**表示论**问题，问的是两个不可约分解之间的 containment 关系；Foulkes 的原文是从 quintic 和 sextic 的 concomitant 分类里抽出来的经验规律。另一件事是规范映射本身：把 $u_1 \cdots u_a \in \operatorname{Sym}^a W$ 通过 average 送到 $\operatorname{Sym}^a W \to (\operatorname{Sym}^a W)^{S_a}$，再用 $P_a = (\operatorname{Sym} V)^{\otimes a}$ 里的乘法诱导 $\mu_{a,b,V}: \operatorname{Sym}^b(\operatorname{Sym}^a V) \to \operatorname{Sym}^a(\operatorname{Sym}^b V)$ (paper.tex:84-86)。这是**代数几何 / 多重线性代数**问题，问的是某个具体写出来的映射是否满射。
+
+我最初直觉会站在**表示论侧**：既然 Foulkes 猜想本身是关于不可约分解，那稳定化界大概率是从 character / plethysm 表算出来的。Brion 1993 `Brion1993` (references.tex:8-10) 已经证了固定 $a$ 和固定 $\dim V$ 时 eventual surjectivity；`Brion` 的 1997 后续 (references.tex:13-17) 给了同时依赖 $a$ 和 $\dim V$ 的有效界。我一开始以为「维数无关」这一步只是把 Brion 界里的 $\dim V$ 项吃掉，做法应该是先固定 $a$ 后取 $\dim V$ 足够大使某个不变量稳定，再证明界不依赖于那个 dimension threshold。这就是经典的 stable-range 论证：先在维度 $n \ge N_0(a)$ 建立 surjectivity，再倒推 $\dim V < N_0(a)$ 是特例。
+
+第二条直觉走的是**多项式恒等式侧**。既然 Chow variety 的坐标环是 $A$（paper.tex:107-111），$R$ 是它的 normalization，surjectivity $A_b = R_b$ 等价于 $R/A$ 只在有限多个 degree 上非零；Raicu-Sam-Weyman `RSW` (references.tex:59-63) 用 Castelnuovo-Mumford regularity 的上界控制了 Segre ring 和 covariant modules 的 regularity。我一开始猜 quadratic 界是从 regularity 递推里掉出来的：某个 $\operatorname{reg}(R/A) \le a(a-2)$，然后 stabilization degree 是 $\operatorname{reg} + 1$。这个直觉不算错，但论文口径明确说了 `Their theorem does not compute the top degree of the separate quotient R/A that controls stabilization` (paper.tex:121-122)。也就是说，**用 regularity 侧的技术不能直接给出这个具体的 $a(a-1)$**。
+
+第三条直觉走的是**组合侧**：McKay 的传播定理 `McKay` (references.tex:54-56) 说 injectivity 可以从 $(a, B)$ 传播到 $(a, b)$（对 $b \ge B$），Ikenmeyer `Ikenmeyer` (references.tex:37-39) 给出了 proof；这个传播的**方向**是反的（对 $\operatorname{Sym}^a(\operatorname{Sym}^b V) \to \operatorname{Sym}^b(\operatorname{Sym}^a V)$），但它给了我一个 idea：能不能对**给定 $a$** 只找一个起点 $(a, B)$，然后让 $B$ 到 $\infty$ 的传播自动覆盖。我一开始以为这个「起点」就是二次项的来源。
+
+三种直觉的共同假设是：**问题的正面答案要来自某个已知界的重新组织**，无论是 Brion 的 dimension-dependent 界、RSW 的 regularity 界、还是 McKay-Ikenmeyer 的传播起点。我一开始完全没考虑过「正面构造一个不依赖任何已知界的原始归纳」这种可能性。这个偏见很重要，它决定了后面 §2 我尝试错路的口味。
+
+关于 $b_0$ 的量级，我一开始心里的候选是：$\dim V$ 的某个函数、或者 $a^2$ 量级、或者 $2^a$（对应某些 tableau 计数）。当我在 `paper.tex:99-103` 读到 `theorem thm:main` 说 $b \ge a(a-1)$ 且「independent of $\dim V$」，第一反应是**这两件事同时成立似乎需要一个我此前没见过的技巧**，因为在维数无关的语境下 $\operatorname{Sym}^b V$ 的维度是 $\binom{b+n-1}{n-1}$，如果证明依赖 basis 展开就会带回 $n$。论文里我读到 `The written proof uses positivity of the Fischer Hermitian inner product, splitting of binary forms over C, and the nonzero characteristic-zero scalar factors` (paper.tex:467-470)，才确定这个技巧是**纯多重线性 + 复分析二元分裂 + 内积正定性**的组合，不涉及任何 basis 计数。
+
+我把「以为界从哪一侧来」这件事拆细一点：
+
+- 表示论侧的直觉希望界来自 character table 上的最大 hook length 或者 Littlewood-Richardson 系数非零的阈值。这些阈值通常是 $O(a)$ 或 $O(a^2)$，跟 $a(a-1)$ 在量级上兼容。
+- 代数几何侧的直觉希望界来自 $\operatorname{reg}$ 的递推；$\operatorname{reg}(R/A) \le a(a-2)$ 的界在 RSW 里被 bound 住了，但 RSW 明确说这个 bound 不够 compute the top degree。
+- 组合侧的直觉希望界来自某个 propagation lemma 的起点，起点值需要靠 brute force 或 representation stability 计算，$a(a-1)$ 会是这个起点。
+
+三条直觉都指向 $a^2$ 量级，但都不指向「二次项就是 $a(a-1)$ 这个精确形状」。这一点在最初让我困惑：如果界是 $O(a^2)$ 而不追求 sharp，为什么不写 $a^2$、$a(a+1)$、$2a^2$？后面 §3 会解释，$a(a-1)$ 是从**归纳里最后一个不等式被消费**的时刻精确掉出来的，不是拟合，是必需。
+
+一个更基础的问题：我最初把 $\dim V$ 无关性当成「用同维数的具体 $V$ 做代表」，即固定一个 $\dim V = n$、证完再抽象。但论文的写法是**每一步都不假设 basis**，只在 `paper.tex:245` 处一次性取一个基来定义方向导数 $D_{Y,U} = \sum_{k=1}^n Y_k \partial/\partial U_k$；这个基是 local 的、每次调用 lemma 都重新选。$\dim V$ 无关性来自这里：`D_Y U` 的性质是**坐标无关**的（它是 $\mathfrak{sl}_2$ weight 移位），基只是把它写成一个可计算的形式。这个「坐标无关的算子，坐标相关地验证」的写法在 §2 我会专门列出为什么我一开始错过。
+
+我把「$A_b = R_b$」读成「canonical multiplication 在 degree $b$ 满」，把「$\mu_{a,b,V}$ surjective」读成「$R_b$ 里每个元素都可以写成 $a$-乘积的 $b$ 次 symmetric combination」。这个读法在 `paper.tex:87-88` 得到印证：`If A ⊆ R is the subalgebra generated by R_1, then im μ_{a,b,V} = A_b`。**关键**：$\mu_{a,b,V}$ 是**特定写出来的**规范映射（用 multiplication 在 $P_a$ 里的作用定义），不是「任意一个可能的 GL(V)-同变映射」。这跟 Foulkes 猜想（问是否存在**某个** GL(V)-同变 injection）是两个不同问题。`paper.tex:130-139` 花了整段区分这两件事，我在 §1 就把这个区分记住，避免后面把两条线搞混。
+
+## §2 尝试过的错误路线及失败原因
+
+### §2.1 错路一：Brion 的 dimension-dependent 界 + stable-range 论证
+
+我第一版思路：把 Brion 1997 的界 `Brion` (references.tex:13-17) 里对 $\dim V$ 依赖抠出来，然后证明当 $b$ 超过某个 $B(a, \dim V)$ 时映射是满射；再证 $B(a, n)$ 在 $n$ 变大到某个 $n_0(a)$ 之后不再变化，最后取 $b_0 = \sup_n B(a,n) = B(a, n_0)$。这条路的每一步单独看都合理，但拼起来有问题。
+
+**断在哪一步**：断在「$B(a,n)$ 单调稳定」这一句的**具体估计**。Brion 的界本身是**存在性**的：他的方法是把 $R/A$ 视为 $GL(V)$-stable 的 graded module，然后证明它只有有限个非零齐次分量。这个 finiteness 是通过 representation stability 得到的，**没有**显式给出 $B(a,n)$ 是关于 $n$ 的什么函数。当我试图把「nonzero components 只出现在有限个 degree」量化为「top degree $\le$ 某个显式界」时，我需要重新做一遍 RSW 那种 regularity 估计。
+
+**断的迹象**：`paper.tex:119-123` 直接告诉我 RSW 也不够：`Raicu, Sam, and Weyman bound the regularity of the Segre ring and modules of covariants, including the normalization. Their theorem does not compute the top degree of the separate quotient R/A that controls stabilization. Theorem thm:main gives the sufficient bound a(a-1) in every dimension`。这句话读到这里，我才意识到 stable-range 论证即使成功也只能给出 $O(a^{\text{const}})$ 或 worse 的界，不能给出 $a(a-1)$ 这种**具体形状**。形状本身要求某种直接构造。
+
+**具体失败细节**：我在草稿上试过用 symmetric algebra 的分次维数做 dimension count。$\dim_\mathbb C \operatorname{Sym}^b(\operatorname{Sym}^a V) = \binom{\binom{a+n-1}{a} + b - 1}{b}$，$\dim_\mathbb C \operatorname{Sym}^a(\operatorname{Sym}^b V) = \binom{\binom{b+n-1}{b} + a - 1}{a}$。这两个数在 $n \to \infty$ 时都是 $n^{ab}$ 量级，比值趋于 1；所以**存在性**是 plausible 的，但**具体哪个 $b$ 起 $\mu$ 才 surjective** 从 dimension count 是拿不出来的。dimension count 只能告诉你 $b$ 太小时可能 injectivity 失败，但反过来推不出 surjectivity。
+
+### §2.2 错路二：从 Foulkes 猜想本身借道 injection
+
+第二条错路是把问题读反。Foulkes 猜想问 injection $\operatorname{Sym}^a(\operatorname{Sym}^b V) \hookrightarrow \operatorname{Sym}^b(\operatorname{Sym}^a V)$（对 $a \le b$），我一开始以为证明 surjection $\operatorname{Sym}^b(\operatorname{Sym}^a V) \to \operatorname{Sym}^a(\operatorname{Sym}^b V)$ 和证明 injection 是同一件事的两个方向。这个错觉来自完全可约性：在 $\mathbb C$ 上、有限维多项式表示，满射 split 就给出反方向 injection。论文里 `paper.tex:135-138` 承认这一点：`Surjectivity in Theorem thm:main implies that representation comparison in the stated range: complete reducibility over C splits the surjection and supplies an equivariant embedding in the opposite direction`。
+
+**断在哪一步**：断在「implies」和「specifies」之间。injection 的**存在性**由 surjectivity split 得到，但**规范映射本身**（那个用 multiplication 和 average 具体写出来的 $\mu$）不能反推 injection；`paper.tex:139` 明确说了：`Existence of an embedding alone does not specify the canonical map`。这意味着 Foulkes 猜想的已知技术（tableau 构造、symmetrizing operators、McKay propagation）都是围绕 injection 侧构造的，它们**不能**告诉我 $\mu$ 何时是 surjective。
+
+**断的迹象**：`paper.tex:142-145` 举了 $(a,b)=(5,5)$ 和 $(6,6)$ 处的反例：`the canonical map has nonzero kernels at the diagonal pairs (a,b)=(5,5) and (6,6) in suitable dimensions [CIM], both outside the range of Theorem thm:main`。这些反例的**位置**在 $b < a(a-1)$（对 $a=5$，$a(a-1)=20$；对角线 $(5,5)$ 在 $b=5$，远小于 20）。这告诉我：kernel 的行为**不是**由 Foulkes 猜想的 injection 决定的，它由 $\mu$ 这个**特定映射**决定；反例是 $\mu$ 的 kernel 现象，不是 injection 现象。
+
+**具体失败细节**：我一开始想用 symmetrizing tableaux 构造 $\mu$ 的显式 section，用 McKay propagation 从 $b = a$ 附近推到 $b$ 大。这条路即使能走通，起点在 $(a,a)$ 附近，那 $b_0$ 会是 $a$ 的某个函数加上 propagation steps 的额外项。但我算了一下：$(5,5)$ 处 $\mu$ 已经有 kernel，所以起点根本不成立。**从 injection 侧借道的思路直接被反例 $(5,5)$ 打断**，除非我改用别的方向。
+
+### §2.3 错路三：Chow variety 的 regularity 递推
+
+第三条错路来自 `paper.tex:107-111` 提到的 Chow variety 视角：仿射 Chow variety 的坐标环是 $A$，normalization 是 $R$；$R/A$ 的**正则性** $\operatorname{reg}(R/A)$ 控制 stabilization degree 上界。我一开始想用 RSW 的 Theorem 3.9 `RSW` (references.tex:59-63) 里的 regularity bound 直接代入 $b \ge \operatorname{reg}(R/A) + 1$。
+
+**断在哪一步**：断在 regularity bound 给的是** Segre ring 整体**，并非 $R/A$ 这个**商**。Segre ring 是 $\bigoplus_j (P_a)_j$ 里所有 invariant 部分，regularity 是它的 syzygy 复杂度；而 $R/A$ 是一个 finite-length graded module，它的 top nonzero degree 才是 stabilization 的**唯一**指标。这两个数字之间没有直接不等式，除非先证一个 spectral sequence 或者 local cohomology 的估计。
+
+**断的迹象**：`paper.tex:119-122` 明确说了 RSW 的定理「does not compute the top degree of the separate quotient R/A」，这就是我这条路失败的直接文本证据。RSW 里的界是**关于 Segre ring 的 regularity**，不是**关于 R/A 的 top degree**，两者相差一个「regularity 到 top degree」的转换。这个转换在一般的 graded ring 里需要 local cohomology 或 Matlis dual 的操作，代价是**再引入一次维数依赖**（因为局部对偶和 $\dim V$ 相关）。
+
+**具体失败细节**：我草稿里试过 $\operatorname{depth}(R) - \operatorname{depth}(A) \le \dim V$ 这样的不等式，然后想 bound $b_0$。这条路每一步的界都会带一个 $n = \dim V$ 的因子进去，最后即使能收敛也得到 $b_0 \ge c \cdot n$ 的形式，与论文声称的 dimension-independent 矛盾。也就是说这条路**从量级上就不可能对**。
+
+### §2.4 错路四（我额外踩了一脚）：直接构造 $\mu$ 的 right inverse
+
+第四条错路更幼稚：既然目标是 surjectivity，那就显式构造一个 linear section $s: R_b \to \operatorname{Sym}^b(\operatorname{Sym}^a V)$ 让 $\mu \circ s = \operatorname{id}$。我一开始觉得既然 Foulkes 猜想一侧已经有 tableau 构造、$R_b$ 的元素是 symmetric tensor，$s$ 应该长得像 polarization。
+
+**断在哪一步**：断在 $s$ 需要在**所有 $R_b$ 元素**上都定义，但 $R_b$ 里有非 pure power 的元素（比如 $u_1 \cdots u_b$ 的 symmetrized tensor），要送回到 $\operatorname{Sym}^b(\operatorname{Sym}^a V)$ 里就得指定一个 basis；一旦指定 basis，$s$ 就不是 GL(V)-同变的，也就不能通过 $\mu$ 的 canonical 结构反推 surjectivity。
+
+**断的迹象**：`paper.tex:139` 又说了一句：`Existence of an embedding alone does not specify the canonical map`。这条读起来像是给我第四条错路准备的判词：即使能构造出一个 linear section，那也只是 existence of an embedding，跟 canonical map 是 surjective 无关。我需要的是**证明 kernel 是零**这一步操作，具体见 `paper.tex:220-222` 的 annihilator 论证。
+
+**具体失败细节**：我草稿里试过用 symmetric tensor 的 monomial basis 来定义 section，然后被 GL(V) 不协变的事实打回。这条路浪费了我半天时间，但它给我留下了一个关键 idea：**不要正面构造，是反证 kernel 为零**。这个 idea 是 §3 转折点的种子。
+
+### §2.5 错路五：把 induction on $a$ 起手做
+
+我在错路四失败之后，尝试**沿 $a$ 归纳**：$a=1$ 时映射是 identity（`paper.tex:105` 也承认这一点），假设 $a-1$ 时 $b \ge (a-1)(a-2)$ 有 surjectivity，看能不能推出 $a$ 的情形。
+
+**断在哪一步**：断在归纳传递里，$b$ 需要**同时**满足两个条件：一是「原来的 $b$」，二是「归纳假设里的 $b'$」。我一开始把 $b'$ 简单取成 $b$，这导致归纳假设的门槛是 $(a-1)(a-2)$，而目标门槛是 $a(a-1)$；两者之差是 $2(a-1)$，这 $2(a-1)$ 项**必须由 $b$ 里的额外 degree 承担**。我最初没找到这个负担机制，归纳链条就断在这里。
+
+**断的迹象**：`paper.tex:319-326` 里论文的写法是「put $r = a-1, m = b-r$；hypotheses give $b \ge r(r+1), m \ge r^2 \ge 1$」。这个 $m \ge r^2$ 是我原本没有的东西：它来自 $b - (a-1) \ge a(a-1) - (a-1) = (a-1)^2$。也就是说，**归纳假设消费的是 $m$ ，并非 $b$，$m$ 的门槛是 $r^2$ ，并非 $r(r-1)$**。这两者之间的 gap 是 $r$。
+
+**具体失败细节**：我的初版归纳直接跳到「用 $a-1$ 的假设对 $T$ 的某个 restriction」，但我 restriction 的**次数**没有正确扣除；每一步少扣 1 次，$r$ 步就少扣 $r$ 次；这个"少扣 $r$ 次"最后**必须**在门槛里补出来。所以门槛从 $(a-1)(a-2)$ 变成 $a(a-1)$ 里的额外 $2(a-1) = 2r$ 项，一半来自 $m$ 的定义（$b - r$），一半来自 induction 里的额外 degree 负担（$r^2$ ，并非 $r(r-1)$）。这个"负担机制"我没在错路五里看明白，直到 §3 才看清。
+
+### §2.6 错路小结：三条错路共同的偏见
+
+三条主要错路（Brion 的 stable-range、Foulkes injection 侧、Chow regularity）都预设「界来自某个已有界的重新组织」。错路四（构造 section）和错路五（$a$ 归纳起手）预设「界来自 dimension 或 representation 的显式估计」。这两种预设的**共同偏见**是：把 $\dim V$ 无关性读成「在足够大 $\dim V$ 时稳定」，进而把 stabilization 读成某种**渐近**现象。而论文的写法（我从 `paper.tex:147-163` 的 proof mechanism 段落读到）是**构造性的有限论证**，它跟 $\dim V$ 无关不是因为「取了 $\dim V \to \infty$ 的极限」，是因为每一步都只依赖**有限个 vector variable** 和**方向导数**的代数性质，压根不涉及维数。
+
+这个偏见一旦被打破，剩下的就是**怎么构造这个有限论证**。§3 谈转折点。
+
+## §3 关键转折点：annihilator + 二元分裂 + 权重移位三件套
+
+转折点不是一瞬间发生的，是三个 idea 依次落地。我按时间顺序记。
+
+### §3.1 第一转：把 surjectivity 换成 annihilator 上的 vanishing
+
+我在错路四失败之后（构造 linear section 失败），回头看 `paper.tex:210-223`。**关键构造**在这里：对 $\lambda \in R_b^*$，定义 $a$-线性形式 $T_\lambda(w_1, \ldots, w_a) = \lambda(\operatorname{Av}(w_1 \otimes \cdots \otimes w_a))$；然后 $T_\lambda(P, \ldots, P) = \lambda(P^{\otimes a})$。$A_b$ 是 $\{P^{\otimes a} : P \text{ 是 } b \text{ 个向量的乘积}\}$ 的 $\mathbb C$-span (paper.tex:205-208)。$A_b = R_b$ 当且仅当 annihilator 是零，当且仅当**每个满足 $T(P, \ldots, P) = 0$ 对所有 product $P$ of $b$ vectors 的对称 $a$-linear form $T$ 都等于零**。
+
+我读到这里的第一反应是「这就是把正问题换成对偶问题」，但**更深一层**是：这个换法把「对 $R_b$ 里的所有元素证明 surjectivity」变成了「对 $R_b^*$ 里的所有 $T$ 证明 $T = 0$」。**证明一个 $T$ 是零比构造一个 section 容易得多**：$T = 0$ 只需要检测 $T$ 在一组 span 上为零，而 span 的候选是 pure powers（`paper.tex:185-196` 的 polarization identity 说明 $u^k$ 在 $\operatorname{Sym}^k V$ 里张成），进一步是 products 的 pure powers。
+
+这个 idea 在错路四给我留下的直觉里已经出现（"不要正面构造，是反证 kernel 为零"），但真正落地是我看到 `paper.tex:220-222` 那句：`Since R_b is finite-dimensional, A_b = R_b if and only if that annihilator is zero`。**finite-dimensionality 在这里被使用了一次**，用来说 dual 完美配对；$\dim V$ 无关性来自这个 finite-dimensional duality 是 abstract（不选 basis）的。之后整个证明不再需要 $\dim V$。
+
+我在这个转点得到的**新门槛视角**：证明的目标是「对满足 (paper.tex:308-311) 的 $T$，$T = 0$」。$T$ 是对称 $a$-线性形式在 $\operatorname{Sym}^b V$ 上，$T(P,\ldots,P) = 0$ 只对 $P$ 是**乘积**（$b$ 个向量的乘积）时成立。这个"只在乘积上为零"是**假设**，"处处为零"是**结论**。中间的差距需要某种**bootstrap**：从 diagonal 出发，通过某种代数操作把假设传播到 off-diagonal。
+
+### §3.2 第二转：二元分裂 X^r + cY^r
+
+bootstrap 的第一次动作我读 `paper.tex:328-348` 的 Step 1 才看清。**核心构造**：对任意 $x, t \in V$、$c \in \mathbb C$、$Q = y_1 \cdots y_m$ 一个 product，$P_c = (x^r + c t^r) Q$ **是**一个 product of $b$ vectors。为什么？因为 $x^r + c t^r$ 在 $\mathbb C$ 上分裂为 $r$ 个线性因式：$X^r + c Y^r = \prod_{j=0}^{r-1} (X - \alpha \zeta^j Y)$，其中 $\alpha^r = -c$、$\zeta = e^{2\pi i / r}$。这个 factorization 在 $\mathbb C$ 上（不是 $\R$）永远成立，$c = 0$ 时退化为 $X^r$ 也没问题。
+
+代换到 $\operatorname{Sym} V$ 里，$x^r + c t^r$ 是 $r$ 个 $V$ 里的**具体的向量**的乘积；再乘上 $Q$（$m$ 个向量的乘积），得到 $b = r + m$ 个向量的乘积。所以 diagonal condition (paper.tex:308-311) 说 $T(P_c, \ldots, P_c) = 0$ 对**所有** $c \in \mathbb C$ 成立。
+
+对 $c$ 展开：$T(P_c, \ldots, P_c)$ 作为 $c$ 的 polynomial，$c^1$ 系数（用 multilinearity + symmetry）是 $a \cdot T(\underbrace{x^r Q, \ldots, x^r Q}_{r \text{ slots}}, t^r Q)$。这个 coefficient 恒为 0（因为多项式在 $\mathbb C$ 上处处为 0）。除以 $a \neq 0$ 得到 (paper.tex:346-348)：
+
+$$T(\underbrace{x^r Q, \ldots, x^r Q}_{r \text{ slots}}, t^r Q) = 0.$$
+
+我读到这里时，脑子里"咯噔"了一下。这一步**用了 $\mathbb C$ 的代数闭包性**，也用了 $a \ge 2$（否则 $r = a - 1 = 0$，$x^r$ 是 1，$X^r + c Y^r$ 里没有 $c$ 的依赖，coefficient of $c$ 就不存在了）。**$a \ge 2$ 是在这里第一次被消费的**。
+
+这个式子给出的信息比 diagonal 更强：diagonal 只说 $T(P, \ldots, P) = 0$ 对 $P$ 是 product；二元分裂后我拿到 $r+1$ 个**slot**，其中 $r$ 个是 $x^r Q$、第 $r+1$ 个是 $t^r Q$，两者**不再相同**（$x$ 和 $t$ 独立）。这就是我说的「从 diagonal bootstrap 到 off-diagonal」的第一次成功。
+
+### §3.3 第三转：方向导数权重移位 lemma 的诞生
+
+第二次 bootstrap 是把 $t^r Q$ 换成 $t^b$（$Q$ 里的 $y_i$ 全部挪到最后一个 slot）。这一步在 Step 2 (paper.tex:350-378) 用**方向导数**做。我先在 §2.6 意识到需要「一种不需要 basis 的 operator」，然后在 `paper.tex:249` 见到 $D_{Y,U} = \sum_{k=1}^n Y_k \partial/\partial U_k$ 的定义时才把两个念头连起来。
+
+**关键 lemma** 是 `paper.tex:260-265` 的 `lem:shift`：对 $U, Y$ 两组 vector variable 齐次的多项式 $h$，$U$-degree $p > q$ $Y$-degree 时，$D_{Y,U}$ 在该齐次分量上是 injective。**证明思路** 是 Fischer 内积 + $\mathfrak{sl}_2$ 权重串：定义 $N_U = \sum U_k \partial_{U_k}$、$N_Y = \sum Y_k \partial_{Y_k}$，$D = D_{Y,U}$、$E = D_{U,Y}$，则 $D^* = E$（对 Fischer 内积），$[E, D] = N_U - N_Y$。取内积得 $\|Dh\|^2 - \|Eh\|^2 = (p-q) \|h\|^2$（`paper.tex:286-288` 的 `eq:norm`）。$p > q$ 时左边非负（当 $Dh = 0$）右边非负（当 $h \neq 0$），所以 $Dh = 0$ 蕴含 $h = 0$。
+
+我在草稿上第一次写到 `eq:norm` 的一刻是**转折点**。此前我以为权重移位需要一个**不可约表示**的背景（因为 $\mathfrak{sl}_2$ 权重串是表示论里的东西），但 `eq:norm` 的推导是**多项式环里的直接内积计算**，跟 $\dim V$、跟 representation 都无关；这个"跟 representation 无关"的写法正是维数无关性的来源。
+
+`paper.tex:254` 引 `FultonHarris` Section 11.1 Claim 11.4 eq (11.5)，是标准的 $\mathfrak{sl}_2$ weight string argument。`paper.tex:255-258` 引 Ikenmeyer `Ikenmeyer` Section 5 Claim 5.1 处理 tensor decomposition；论文明确说了「We give a direct inner-product proof with all additional variables present」。**「all additional variables present」这句是关键**：`lem:shift` 的 statement 里说 polynomials 可以依赖任意多个其他变量，这些变量在 $D$ 下不动。正是这个"其他变量存在"的**宽松性**让后面 Step 2 和 Step 4 的 composition 可以每一步套 lemma。
+
+### §3.4 三个 idea 咬合的时刻
+
+我看到 `paper.tex:361-365` 的 `eq:first-composition`（$D_{y_k,t} \cdots D_{y_1,t} H_x$ 是常数乘 $T(x^r Q, \ldots, x^r Q, t^{b-k} y_1 \cdots y_k)$）时才把三个 idea 咬合起来。
+
+咬合的动作：
+- annihilator（§3.1）把目标变成「$T = 0$」；
+- 二元分裂（§3.2）从 diagonal 给出 (paper.tex:346-348) 的一个 mixed vanishing；
+- 权重移位（§3.3）把 mixed vanishing **反推**回 $H_x = T(x^r Q, \ldots, x^r Q, t^b) = 0$（Step 2 的结论 `paper.tex:378`）。
+
+反推的过程：$H_x$ 是 $t$-degree $b$、$y_i$-degree $r$ 的多项式；对 $t$ 求导 $k$ 次依次代 $y_1, \ldots, y_k$，得到 $T(x^r Q, \ldots, x^r Q, t^{b-k} y_1 \cdots y_k)$ 乘上一个非零常数 $\frac{b!}{(b-k)!}$；当 $k = m$ 时正是 (paper.tex:346-348) 已知的零。$m$ 步之前，每一步的**source 是 $t$（degree $b-i+1$）、destination 是 $y_i$（degree $r$）**，$p - q = b-i+1-r = m-i+1 \ge 1$（`paper.tex:372-375`）。$b \ge a(a-1)$ 保证 $m \ge r^2 \ge r$，$p > q$ 成立。$lem:shift$ 让每一步 injective，反推 $H_x = 0$。
+
+这一步 $b \ge a(a-1)$ 被消费**第二次**：$a \ge 2$ 消费在二元分裂（§3.2），$b \ge a(a-1)$ 消费在权重串长度 $m-i+1 \ge 1$ 对**所有** $i = 1, \ldots, m$ 都成立（尤其 $i = m$ 时 $p - q = 1 > 0$）。
+
+**$b_0$ 为什么是 $a(a-1)$ ，并非别的**：从这个视角看，$a(a-1) = r(r+1)$，$m = b - r$，$m \ge r^2$；权重串长度是 $m$，destination 里的 $y$ 是 $m$ 个不同的向量。$b$ 需要大到让「source-degree 到 destination-degree 的 gap 一直是正的」，这个 gap 是 $m - i + 1$ 类型；对**每一个** $i$ 都正需要 $m \ge r$。但真正紧的界是 Step 4 (paper.tex:395-424) 里的 $b \ge r(r+1)$，那里的 gap 更严格。
+
+### §3.5 第二步 bootstrap：归纳在 slots 上（Step 3）
+
+Step 2 给出 $H_x = T(x^r Q, \ldots, x^r Q, t^b) = 0$。Step 3 (paper.tex:380-393) 把「最后一个 $Q$ 换成 $Q_i$ 独立」这一步**用归纳**做。定义 $S_{x,t}(Q_1, \ldots, Q_r) = T(x^r Q_1, \ldots, x^r Q_r, t^b)$，这是 $\operatorname{Sym}^m V$ 上的 symmetric $r$-linear form；Step 2 的结论就是 $S_{x,t}(Q, \ldots, Q) = 0$ 对所有 product $Q$ of $m$ vectors 成立。门槛 $m \ge r^2 \ge r(r-1)$ 让 $a-1 = r$ 的归纳假设可 apply（$r(r-1) = (a-1)(a-2)$），得 (paper.tex:389-392)：
+
+$$T(x^r Q_1, \ldots, x^r Q_r, t^b) = 0 \quad (Q_1, \ldots, Q_r \in \operatorname{Sym}^m V).$$
+
+这一步在 `paper.tex:387-388` 里明确写了 `$m \ge r^2 \ge r(r-1)$ and $m \ge 1$, the induction hypothesis applies`。**归纳的输入是 $m$ ，并非 $b$**，这是我错路五断掉的那个位置，在这里被 $m = b - r$ 的定义救活了。$m$ 的门槛是 $r(r-1) = (a-1)(a-2)$，比 $b$ 的门槛 $a(a-1) = r(r+1)$ 少了整整 $2r$。这 $2r$ 由谁承担？由 Step 2 的 $m$ 步权重串（$m \ge r$，$m \ge r^2$）承担。也就是说，$b$ 门槛比 $a$ 减 1 后的门槛多的 $2r$，正好覆盖 $r^2 - r(r-1) = r$（Step 3 里的 $m$ 门槛差）加上 Step 2 里的 $r$ 步权重转移的 $r$。这两段 $r$ 加起来是 $2r$。
+
+这个 $2r$ 分解是我理解 $b_0$ 形状的关键。我在 §2.5 错路五里没能算出这个分解，所以门槛是拟合的；这里**每一步的 $r$ 项**都被具体消费了：Step 2 权重串用 $r$（因为 destination $y$ 的 degree 是 $r$）、Step 3 归纳门槛用 $r$（因为 $r^2 - r(r-1) = r$）。
+
+### §3.6 第三步 bootstrap：反向消元 $x^r$（Step 4）
+
+Step 3 让 $Q_i$ 独立了，但 $x^r$ 还在每个 $Q_i$ 之前共享。Step 4 (paper.tex:395-424) 要把 $x^r$ 也消掉，得到 $T(v_1^b, \ldots, v_r^b, t^b) = 0$。方法是**反向使用方向导数**：固定 $t$，考虑 $f = T(v_1^b, \ldots, v_r^b, t^b)$（$v_1, \ldots, v_r$ 独立）；引入独立 $x$ 变量；对 $i = 1, \ldots, r$ 依次 apply $D_{x,v_i}^r$（$r$ 次求导，$v_i$ 到 $x$）。$r$ 步的总效果是 (paper.tex:409-413)：
+
+$$D_{x,v_r}^r \cdots D_{x,v_1}^r f = \left(\frac{b!}{m!}\right)^r T(x^r v_1^m, \ldots, x^r v_r^m, t^b) = 0,$$
+
+最后一步是 Step 3 的 (paper.tex:389-392) 用 $Q_i = v_i^m$ 代入。
+
+**injectivity 校验**：$r^2$ 个 operator 全部把 degree 加到同一个 $x$ 上；apply 任何一个之前，$x$-degree $\le r^2 - 1$；source $v_i$ 已被 derivative 最多 $r-1$ 次，所以 $v_i$-degree 至少 $b - (r-1) = m + 1 \ge r^2 + 1 > r^2$（`paper.tex:419-421`）。**source-degree > destination-degree** 每一步成立，$lem:shift$ 让整个 composition injective，$f = 0$。
+
+这一步是**权重串真正收紧**的地方：destination 是**同一个 $x$**、每一步 $x$-degree 递增，$r^2$ 步之后 $x$-degree 达到 $r^2$；source $v_i$ 的初始 degree 是 $b$，被 derivative 掉 $r$ 次剩 $b - r = m$。**每一步**都要 $v_i$-degree > $x$-degree。最紧的一步是**第 $r^2$ 步**（apply $D_{x,v_r}$ 的最后一次 derivative），此时 $v_r$-degree 是 $b - r = m$、$x$-degree 是 $r^2 - 1$。$m > r^2 - 1$ 就是 $m \ge r^2$，即 $b \ge r^2 + r = r(r+1) = a(a-1)$。
+
+**$b \ge a(a-1)$ 在这里被最终消费。** 我在 `paper.tex:419-421` 读到 `the source degree exceeds the destination degree before every operator` 时才把整个门槛的必要性看清：门槛是**$r^2$ 步权重串的最紧那一步逼出来的**，不是拟合、不是抽象 bound。这个"最紧一步"就是转折点里的转折点。
+
+### §3.7 完成：pure powers 张成
+
+Step 4 给出 $T(v_1^b, \ldots, v_r^b, t^b) = 0$。$t$ arbitrary 意味着 $T$ 在任何 $r+1 = a$ 元 pure power 组上为零。`paper.tex:427-428` 收尾：`Pure powers span Sym^b V by the polarization argument in Section sec:map`（polarization identity `paper.tex:187-191`），$T$ 是 $a$-linear 就 $T = 0$。归纳完成。
+
+我此时意识到整条链**每一步都只用到了有限个 vector variable**（Step 2 用 $r+m+1$ 个，Step 4 用 $r+2$ 个），$lem:shift$ 的 "additional variables" 宽松性允许这些 variable 只是**局部的**，$n = \dim V$ 只在 `paper.tex:245` 处出现一次（写 $D_{Y,U}$ 的分量和）。**$\dim V$ 无关性** 的来源：整个论证不需要 basis 存在、不需要 basis 之间的 transition matrix、不需要 counting monomials。
+
+## §4 最终思路与最初设想的差异
+
+### §4.1 差异一：不是「稳定范围」，是「有限步代数 bootstrap」
+
+我最初设想的 stable-range 论证，是把 $\dim V \to \infty$ 时的渐近行为**向下**压。最终思路完全相反：**每一步都不假设 $\dim V$ 大**，甚至 $\dim V$ 可以小到 1。这个差异不是修辞上的，是**技术路径**上的：stable-range 需要一个渐近的 representation stability 论证；这里是有限步多项式恒等式操作。
+
+为什么差成这样：`paper.tex:462-471` 的 remark 直接把这件事写出来了：`The differential lemma holds for every finite number of coordinates and arbitrary additional variables, while the degree comparisons depend only on a and b. Together with the finite-dimensional annihilator argument, this proves the same bound in every finite dimension, without a stable-dimension reduction.` **without a stable-dimension reduction** 这句是对我最初设想的直接否定。
+
+### §4.2 差异二：门槛从构造里掉出来，不是从 estimate 里掉出来
+
+我最初设想的 $b_0$ 是某个 bound 的**输出**（比如 regularity 的 upper bound 减 1，或者 propagation 起点的 upper bound）；最终思路里 $b_0 = a(a-1)$ 是**最紧不等式的直接求解**（`paper.tex:419-421` 里那个 $m > r^2 - 1$）。
+
+为什么差成这样：bound-based 的写法适合回答「存在某个有限的 $b_0$」，但对**具体形状** $a(a-1)$ 无法给出精确来源；只有构造-based 的写法，才能把门槛追溯到「某一步不等式的最紧时刻」。我在 §2.1 错路里试过 bound-based 的 dimension count，失败原因就是这个：dimension count 只能给出**存在性**，给不出**形状**。
+
+### §4.3 差异三：不用完全可约性（除了 corollary 侧）
+
+我最初设想 surjectivity 的证明会**大量**用到 $\mathbb C$ 上 GL(V)-模的完全可约性。最终思路里，`thm:main` 的证明**完全不用**完全可约性；完全可约性只出现在 `cor:comparison` (paper.tex:450-460)，用来从满射**导出** injection。
+
+为什么差成这样：surjectivity 是一个**具体 linear map** 的性质，跟 representation 无关；只有 injection 的**存在性**（不是 $\mu$ 本身）才需要 representation 侧的 machinery。这一点在 `paper.tex:135-145` 关于 Foulkes 猜想和 canonical map 的区分里已经暗示，但我在 §2.2 错路二没有听进去。
+
+### §4.4 差异四：二元分裂 + 权重移位替代 tableau 构造
+
+我最初设想证明会用到 symmetric tableaux 或者 Young symmetrizer 之类的组合工具（因为 Foulkes 猜想的一侧就是 tableau 证明）。最终思路里 tableau 一次都没出现。
+
+为什么差成这样：tableau 工具是**表示论**的语言，它刻画的是不可约分解；而 canonical map 的性质是**多项式恒等式**的语言，它刻画的是具体 linear map 的 kernel。两套语言可以互相翻译（比如 RSW 用 module 语言重写了 canonical map），但**证明的短路径**是直接在多项式语言里做，绕开翻译。这一点我从 `paper.tex:147-163` 的 proof mechanism 段落读到，是整篇最让我意外的一段。
+
+### §4.5 差异五：$\mathfrak{sl}_2$ 权重串以**内积**形态出现
+
+`paper.tex:266-291` 的 `lem:shift` 证明用的是 Fischer 内积 + $\|Dh\|^2 - \|Eh\|^2 = (p-q) \|h\|^2$。**不是** $\mathfrak{sl}_2$ 表示论里常见的 weight string argument（后者通常用 $[H, E] = 2E$ 之类的对易关系 + 幂零性论证）。
+
+Lean 侧（我在 §7 会展开）反过来：**用对易关系 + 幂零性论证**（`DerivationInjectivity.lean:16-38` 的 `derivation_eq_zero_of_positive_weight` 假设了 $⁅E,D⁆ = H$、$⁅H,E⁆ = 2E$、$E^2 X = 0$ 三条 $\mathfrak{sl}_2$-like relations），**不用** Fischer 内积。这是 tex 和 Lean 的一个明显差异；两条路都能到达同一结论，但 Lean 侧回避了正定 Hermitian 内积的构造。这一点在 §7 我会给具体的 Lean 行号对照。
+
+### §4.6 差异六：归纳的"变量"
+
+我最初的归纳方案是**沿 $b$ 归纳**：$b_0$ 起步，$b$ 越大越好办。最终思路是**沿 $a$ 归纳**：$a = 1$ 起步（`paper.tex:318`），$a$ 减 1 变成 Step 3 里的 $r$-linear form on $\operatorname{Sym}^m V$。为什么差成这样：沿 $b$ 归纳的传递步需要「$T$ 是 $\operatorname{Sym}^{b+1} V$ 上的 $a$-linear form」和「某个相关的 $\operatorname{Sym}^b V$ 上的 $a$-linear form」之间的对应；这个对应**不自然**。沿 $a$ 归纳的传递步是把 $a$-linear form 通过**固定一个 slot**变成 $r = a-1$-linear form，非常自然。
+
+**Step 2 里的权重串**在 $b$ 上是**顺推**的（$b$ 大时权重串的 $p - q$ 更大，injectivity 更宽松），但**Step 4 里**的权重串在 $b$ 上是**逆推**的（$b$ 大时 source $v_i$ 的剩余 degree 大，destination $x$ 的 degree 相对小）；这个"逆推"要求**每一步**都保持 injectivity，所以 $b$ 需要**足够大**（不是**足够小**），门槛 $b \ge a(a-1)$ 因此是**下界**。
+
+### §4.7 差异汇总
+
+我的最初设想和最终思路**六处**差异，可以合并成一条：**把 Foulkes-Howe 从 representation stability 问题降级为 polynomial identity 问题**。降级之后所有障碍消失，$b_0$ 的具体形状变成最紧不等式的解；降级的入口是 annihilator criterion (paper.tex:210-223)。这个降级动作是我在整篇笔记里最想记住的一步。
+
+## §5 逐引理四段式
+
+四段格式：(a) tex 逐字引用 + `paper.tex:行号`；(b) 推导补到中间步骤不跳步；(c) 每个假设、常数、指数、阶的机械理由；(d) 2-3 条 `[推测]` 候选失败路线。
+
+### §5.1 定理 thm:main
+
+#### §5.1(a) 逐字引用
+
+`paper.tex:99-103`：
+
+> \begin{theorem}\label{thm:main}
+> For every integer $a\ge2$, every integer $b\ge a(a-1)$, and every
+> finite-dimensional complex vector space $V$, the map
+> $\mu_{a,b,V}$ in \eqref{eq:map} is surjective. Equivalently, $A_b=R_b$.
+> \end{theorem}
+
+配套语句在 `paper.tex:84-86` 的 `eq:map`：
+
+> \begin{equation}\label{eq:map}
+>  \mu_{a,b,V}:\Sym^b(\Sym^a V)\longrightarrow\Sym^a(\Sym^b V).
+> \end{equation}
+
+映射本身通过 `paper.tex:73-77` 的 `eq:average` 定义：
+
+> \begin{equation}\label{eq:average}
+>  \Av(w_1\otimes\cdots\otimes w_a)
+>  =\frac1{a!}\sum_{\pi\in\Sa}
+>  w_{\pi(1)}\otimes\cdots\otimes w_{\pi(a)}.
+> \end{equation}
+
+其中 $\mathfrak S_a = \mathfrak S_a$ 是 $a$ 次对称群 (paper.tex:44)。$A \subseteq R$ 是 $R_1$ 生成的子代数 (paper.tex:87)，$R = \bigoplus_{j \ge 0} R_j$ (paper.tex:64-68)。
+
+#### §5.1(b) 推导补全
+
+定理的**证明**在 `paper.tex:432-436`，三行：
+
+> \begin{proof}[Proof of Theorem~\ref{thm:main}]
+> For $a\ge2$ and $b\ge a(a-1)$, Proposition~\ref{prop:vanishing} supplies
+> the vanishing assertion in the criterion of Section~\ref{sec:map}.
+> That criterion gives the surjectivity of $\mu_{a,b,V}$.
+> \end{proof}
+
+我把三行的每一步都展开：
+
+**Step 1**：$a \ge 2$ 蕴含 $a \ge 1$；$b \ge a(a-1)$ 是 `prop:vanishing` (paper.tex:305-306) 的**输入前提**。$b \ge a(a-1) \ge 2 \cdot 1 = 2 \ge 1$，所以 $b \ge 1$ 成立。$\dim V$ 有限是 `prop:vanishing` 输入。三条满足，`prop:vanishing` 给出：**任何**满足 $T(P, \ldots, P) = 0$ 对所有 product $P$ of $b$ vectors 的对称 $a$-linear form $T$ on $\operatorname{Sym}^b V$ 都等于零。
+
+**Step 2**：`sec:map` 的 criterion (paper.tex:227-229)：$\mu_{a,b,V}$ 满射 当且仅当 每个满足 diagonal vanishing 的 $T$ 是零。$T$ 通过 `paper.tex:210-214` 与 $R_b^*$ 一一对应：$\lambda \in R_b^* \mapsto T_\lambda$，$T_\lambda(w_1, \ldots, w_a) = \lambda(\operatorname{Av}(w_1 \otimes \cdots \otimes w_a))$。$A_b = R_b$ 当且仅当 annihilator $\{ \lambda : \lambda|_{A_b} = 0 \} = \{0\}$ 当且仅当对应的所有 $T_\lambda = 0$。
+
+**Step 3**：$A_b = \operatorname{im} \mu_{a,b,V}$ (paper.tex:87-88)。annihilator 为零 当且仅当 image 等于 codomain $R_b$ 当且仅当 $\mu_{a,b,V}$ surjective。
+
+三步合起来：`prop:vanishing` 给 vanishing → criterion 给 annihilator $= 0$ → annihilator $= 0$ 给 $\mu$ 满射。
+
+**等价性** ($A_b = R_b$)：由 $A_b = \operatorname{im} \mu$ 直接得。
+
+**$a=1$ 的情形**：`paper.tex:105` 单独说 `The case $a=1$ is the identity map in every degree`。$a=1$ 时 $\mu_{1,b,V}: \operatorname{Sym}^b(V) \to \operatorname{Sym}^1(\operatorname{Sym}^b V) = \operatorname{Sym}^b V$ 是 identity（因为 `eq:average` 里 $\operatorname{Av}(w) = w$，$R_1 = V$，multiplication 是 $\operatorname{Sym}^b V \to \operatorname{Sym}^b V$ 的 identity）。所以 $a \ge 2$ 是「非平凡门槛」的要求，不是「定义域」的要求；$a=1$ 已经 trivially 满射。
+
+#### §5.1(c) 机械理由
+
+- **$a \ge 2$ 消费在**：`paper.tex:319` 的 $r = a-1 \ge 1$（否则 `binary_power_factorization` 里 $X^0 + c Y^0$ 不含 $c$），`paper.tex:345` 里 $a \neq 0$ 可除（$\mathbb C$ 特征零），`paper.tex:387-388` 归纳 base 是 $a=1$。$a \ge 2$ 在**二元分裂**这一步是**必要**的（`paper.tex:343-344` 系数 $a$ 需要非零）；$a=1$ 是 identity 的 trivial 情形被剥出去单独处理。**能否放松**：不能，$a=1$ 已经单独处理，$a=0$ 是空地。
+- **$b \ge a(a-1)$ 消费在**：`paper.tex:419-421` 的 `source degree exceeds the destination degree before every operator`。$r^2$ 步权重串里最紧那一步要求 $v_i$-degree $\ge m + 1 \ge r^2 + 1$，$m = b - r$，$b - r \ge r^2$ 即 $b \ge r^2 + r = r(r+1) = (a-1)a$。**能否放松**：不能，除非改变 Step 4 的 composition 结构；如果 Step 4 用**不同的 $x$** ，并非共享 $x$，每步 destination degree 都是 1 或 $r$，不累积到 $r^2$，此时门槛能放松；但那会让 Step 4 变成 trivial。$b \ge a(a-1)$ 是**当前结构**下的最紧形式。
+- **$\dim V$ 有限**：criterion 里 annihilator duality 需要有限维 (paper.tex:221-222)；`eq:norm` 的 $\|h\|^2$ 有限需要多项式空间 countable-dimensional（`paper.tex:267-291` 是**逐系数**的，不依赖 $\dim V$ 具体值）；`paper.tex:184-196` polarization 恒等式在无穷维上也成立。**结论**：$\dim V$ 有限只用在 criterion 一次；其余证明都是**坐标级**的。
+- **complex vector space**：`paper.tex:467-469` 明确说用到了 $\mathbb C$ 的**代数闭包**（$X^r + cY^r$ 分裂）+ $\mathbb C$ 的**特征零**（$a \neq 0$、$k! \neq 0$ 保证 polarization 有效）+ $\mathbb C$ 上的**Hermitian 正定**（Fischer 内积）。这三个性质在 $\R$ 上不全成立，在 $\Q$ 上都不成立；在 $\overline{\Q}$ 上成立。**能否放松**：到任意代数闭特征零域应该都可以，但需要 Fischer 内积的正定性换成一个 algebraic surrogate。Lean 侧 (见 §7) 直接绑 $\mathbb C$。
+
+#### §5.1(d) `[推测]` 候选失败路线
+
+- `[推测]` **尝试沿 $b$ 归纳**：$b$ 起步门槛 $a(a-1)$，$b$ 到 $b+1$ 时需要构造 $\operatorname{Sym}^{b+1}(\operatorname{Sym}^a V) \to \operatorname{Sym}^a(\operatorname{Sym}^{b+1} V)$ 的 surjectivity 从 $\operatorname{Sym}^b(\operatorname{Sym}^a V) \to \operatorname{Sym}^a(\operatorname{Sym}^b V)$ 的 surjectivity 导出。失败原因：$\operatorname{Sym}^a(\operatorname{Sym}^{b+1} V)$ 相对 $\operatorname{Sym}^a(\operatorname{Sym}^b V)$ 多出来的元素是 $b+1$ 次 monomial 的 symmetrization，跟 $b$ 次的**没有自然 lifting**。
+- `[推测]` **尝试用 $\operatorname{char} p$ 反例检测**：在 $\mathbb{F}_p$ 上取 $p \le a$，此时 $a! = 0$，`eq:average` 定义失效。这条路的目的是检测「哪些步骤依赖特征零」，然后**看能否**去掉这些依赖。我怀疑结论是**不能**去掉，因为 Step 1 的二元分裂 $X^r + cY^r$ 需要 $\alpha^r = -c$ 的解，这依赖代数闭包；两个前提一起把证明框在「代数闭特征零」里。
+- `[推测]` **尝试把门槛改成 $b \ge a^2$**：把 `paper.tex:325` 的 $b \ge r(r+1)$ 换成 $b \ge (r+1)^2 = a^2$。这一步**能**通过所有后续不等式，因为 $a^2 > a(a-1)$；但**失去最优性**。$a^2$ 和 $a(a-1)$ 差 $a$；从 `paper.tex:419-421` 的推导看，$a(a-1)$ 就是最紧形式（多一个 degree 就浪费 $a$ 项），所以门槛**可以放松**为 $a^2$，但**不能收紧**为 $a(a-1) - 1$。
+
+### §5.2 引理 lem:shift
+
+#### §5.2(a) 逐字引用
+
+`paper.tex:260-265`：
+
+> \begin{lemma}\label{lem:shift}
+> Let $p,q$ be nonnegative integers. On polynomials homogeneous of degree $p$
+> in $U$ and degree $q$ in $Y$, the operator $D_{Y,U}$ is injective if
+> $p>q$. The polynomials may depend on any finite collection of additional
+> variables independent of $U$ and $Y$.
+> \end{lemma}
+
+配套算子定义在 `paper.tex:245-251`：
+
+> Choose a basis of $V$, of dimension $n>0$. By a vector variable we mean an
+> independent block of $n$ scalar coordinate variables. For two such blocks
+> $U=(U_1,\ldots,U_n)$ and $Y=(Y_1,\ldots,Y_n)$, define
+> \[
+>  D_{Y,U}=\sum_{k=1}^n Y_k\frac{\partial}{\partial U_k}.
+> \]
+> This operator lowers the $U$-degree by one and raises the $Y$-degree by one.
+
+内积在 `paper.tex:268-274`：
+
+> Give the polynomial ring the positive definite Fischer, or apolar,
+> Hermitian inner product \cite[Section~2, equation~(8) and Proposition~3]{AldazRender}, in which
+> distinct monomials are orthogonal and
+> \[
+>  \|X^\alpha\|^2=\alpha!:=\prod_k\alpha_k!;
+> \]
+
+对易关系在 `paper.tex:279-284`：
+
+> \[
+>  ED-DE=N_U-N_Y,
+>  \qquad
+>  N_U=\sum_k U_k\partial_{U_k},\quad
+>  N_Y=\sum_k Y_k\partial_{Y_k}.
+> \]
+
+范数恒等式在 `paper.tex:286-288` 的 `eq:norm`：
+
+> \begin{equation}\label{eq:norm}
+>  \|Dh\|^2-\|Eh\|^2=(p-q)\|h\|^2.
+> \end{equation}
+
+#### §5.2(b) 推导补全
+
+我把 `paper.tex:267-291` 的六行证明补成不跳步：
+
+**Step 1**：取 Fischer 内积。$\langle X^\alpha, X^\beta \rangle = \delta_{\alpha\beta} \alpha!$。这是**正定** Hermitian：$\|X^\alpha\|^2 = \alpha! > 0$（多项式系数是有限支撑的 $\mathbb{N}^m$ 序列）。
+
+**Step 2**：坐标求导是坐标乘法的**伴随**：$\langle \partial_{U_i} f, g \rangle = \langle f, U_i \cdot g \rangle$。验证：$f = X^\alpha$, $g = X^\beta$；$\partial_{U_i} X^\alpha = \alpha_i X^{\alpha - e_i}$；$\langle \alpha_i X^{\alpha-e_i}, X^\beta \rangle = \alpha_i (\alpha-e_i)! \delta_{\alpha-e_i, \beta} = \alpha_i (\alpha-e_i)! \delta_{\alpha, \beta + e_i}$；另一边 $\langle X^\alpha, U_i X^\beta \rangle = \langle X^\alpha, X^{\beta+e_i} \rangle = \alpha! \delta_{\alpha, \beta+e_i}$；两边在 $\alpha = \beta + e_i$ 时都等于 $\alpha_i \alpha! / \alpha_i \cdot \alpha_i = \alpha!$。**一致**。
+
+**Step 3**：$D = D_{Y,U} = \sum_i Y_i \partial_{U_i}$、$E = D_{U,Y} = \sum_i U_i \partial_{Y_i}$。由 Step 2 的逐项伴随性，$D^* = E$（共轭转置）。
+
+**Step 4**：$[E, D] = ED - DE$。展开：$ED = (\sum_i U_i \partial_{Y_i})(\sum_j Y_j \partial_{U_j})$。用 Leibniz 在 $Y_i \partial_{Y_i}$ 上：$\partial_{Y_i}(Y_j \cdot) = \delta_{ij} + Y_j \partial_{Y_i}$。所以 $ED = \sum_{i,j} U_i (\delta_{ij} + Y_j \partial_{Y_i}) \partial_{U_j} = \sum_i U_i \partial_{U_i} + \sum_{i,j} U_i Y_j \partial_{Y_i} \partial_{U_j}$。同理 $DE = \sum_j Y_j \partial_{Y_j} + \sum_{i,j} Y_j U_i \partial_{U_j} \partial_{Y_i}$。**交换子** $ED - DE = \sum_i (U_i \partial_{U_i} - Y_i \partial_{Y_i}) = N_U - N_Y$。$N_U = \sum_i U_i \partial_{U_i}$（Euler 算子在 $U$ 上）、$N_Y = \sum_i Y_i \partial_{Y_i}$。
+
+**Step 5**：对**双齐次** $h$（$U$-degree $p$, $Y$-degree $q$），$N_U h = p h$, $N_Y h = q h$（Euler 齐次恒等式）。所以 $(ED - DE)h = (p - q) h$。
+
+**Step 6**：$\|Dh\|^2 - \|Eh\|^2 = \langle Dh, Dh \rangle - \langle Eh, Eh \rangle = \langle h, D^* D h \rangle - \langle h, E^* E h \rangle$。由 $D^* = E$，$D^* D = ED$；$E^* = D$，$E^* E = DE$。所以 $\|Dh\|^2 - \|Eh\|^2 = \langle h, (ED - DE) h \rangle = \langle h, (p-q) h \rangle = (p-q) \|h\|^2$。这就是 `eq:norm`。
+
+**Step 7**：若 $Dh = 0$ 且 $p > q$，$0 - \|Eh\|^2 = (p-q) \|h\|^2$；左边非正、右边非负；两边相等只能是 0，所以 $\|h\|^2 = 0$，正定性给 $h = 0$。
+
+**Step 8**：additional variables 的处理：$D, E, N_U, N_Y$ 都不作用在 spectator variables 上；$\langle \cdot, \cdot \rangle$ 关于 spectator 系数逐 coefficient 展开，Step 2 到 Step 7 全部保持。多项式对**任意有限个** spectator 都成立。
+
+**推论 `paper.tex:293-296`**：`a sequence of the operators is injective whenever its degree inequality holds before each individual operator`。这是 composition 的 injectivity 通过**每一步**的 degree 检查保证。
+
+#### §5.2(c) 机械理由
+
+- **$p > q$**：这是**核心**。$p = q$ 时 (eq:norm) 给出 $\|Dh\| = \|Eh\|$，**不能**推 $h = 0$；$p < q$ 时反向给 injectivity of $E$ ，并非 $D$。**能否放松**：$p > q$ 严格是必须的（`paper.tex:289` 用了 $\|Eh\|^2 = 0$ 得 $Eh = 0$ 再回推；$p = q$ 时链条断）。
+- **nonnegative integers**：$p, q$ 是 natural number 保证 Euler 恒等式在多项式环里成立；负次数不需要处理，因为不存在。
+- **homogeneous**：这是 Step 5 的关键；$h$ 若**不是**双齐次，$N_U h$ 不能写成 $p h$。**能否放松**：可以放松到「$h$ 在**某个**双齐次分量上非零」，通过 decomposition $h = \sum_{p,q} h_{p,q}$ 即可；$D$ 保留 $p - q$ 的差，所以**每次** derivative 之后 $h_{p,q}$ 走到 $(p-1, q+1)$；同一 $(p-q)$ 分量内部独立。论文里 `paper.tex:293-296` 明确用了这一点：整段 intermediate homogeneous space 上一次性 injective。
+- **basis of $V$**：`paper.tex:245` 说 `Choose a basis of $V$, of dimension $n>0$`。这是**为了写 $D_{Y,U}$ 的坐标形式**；性质本身是坐标无关的（因为 $D_{Y,U}$ 是 Euler 型算子的**收缩**，跟 basis 无关）。**能否放松**：$n > 0$ 是**平凡要求**（$n = 0$ 时 $V = 0$，$\operatorname{Sym}^b V = 0$ for $b \ge 1$，$D = 0$ 是 zero operator 到 zero 空间）；这个 lemma 在 $n=0$ 时 vacuous。论文里 `paper.tex:316` 用 `The assertion is immediate for $V=0$, so suppose $\dim V>0$` 处理。
+- **Fischer inner product 的正定性**：Step 7 依赖 Hermitian 正定；在**实系数**或**非代数闭**域上，$\|h\|^2$ 可能不是正定 (比如 $\langle X^2 + Y^2, X^2 + Y^2 \rangle$ 在实数上正但**复数**上的 Hermitian 结构是标准的)。论文选 $\mathbb C$ 就是为了这一点。
+
+#### §5.2(d) `[推测]` 候选失败路线
+
+- `[推测]` **改用 representation-theoretic weight string**：不引入 Fischer 内积，直接用 $\mathfrak{sl}_2$ 的 $[H,E]=2E$, $[H,F]=-2F$, $[E,F]=H$ 关系，加$E^2 X = 0$。**这条路本身在 Lean 侧成功**（`DerivationInjectivity.lean:16-38` 就是这么做的），但**在 tex 侧**要写更多 commutator algebra；tex 选了 Fischer 内积是**为了 short**。若 tex 走 representation 路线，Step 4 里的 $r^2$ 步权重串的 injectivity 依然成立，但**证明长度**翻倍。
+- `[推测]` **在 real polynomial ring 上用非 Hermitian inner product**：$\|X^\alpha\|^2$ 换成 $1/\alpha!$ 之类的，把 derivative 变成 multiplication 的伴随。这条路需要重新计算 commutator $[E,D]$；**能不能保持正定**是 open 的技术问题；如果失败则 `eq:norm` 不成立，$lem:shift$ 断掉。
+- `[推测]` **放宽 additional variables 到 infinite collection**：多项式空间在 infinite variables 下不再是 Noetherian；`eq:norm` 的内积需要 sum over monomials，可能不收敛。**论文里明确说 `finite collection` (paper.tex:264)**，这个有限性是必要约束，写 lazy 化的放宽会直接破坏 `eq:norm` 的收敛。
+
+### §5.3 命题 prop:vanishing
+
+#### §5.3(a) 逐字引用
+
+`paper.tex:304-313`：
+
+> \begin{proposition}\label{prop:vanishing}
+> Let $V$ be a finite-dimensional complex vector space, and let $a\ge1$ and
+> $b\ge1$ be integers satisfying $b\ge a(a-1)$.
+> If a symmetric $a$-linear form $T$ on $\operatorname{Sym}^b V$ satisfies
+> \begin{equation}\label{eq:diagonal}
+>  T(P,\ldots,P)=0
+>  \qquad\text{for every product $P$ of $b$ vectors},
+> \end{equation}
+> then $T=0$.
+> \end{proposition}
+
+注意 `prop:vanishing` 的 hypothesis 是 $a \ge 1$（**不是** $a \ge 2$），$b \ge a(a-1)$；$a = 1$ 时门槛 $b \ge 0$，`paper.tex:318` base case 处理。
+
+配套 `eq:rm` (paper.tex:320-322)：
+
+> \begin{equation}\label{eq:rm}
+>  r=a-1,\qquad m=b-r.
+> \end{equation}
+
+配套 `eq:range` (paper.tex:324-326)：
+
+> \begin{equation}\label{eq:range}
+>  b\ge r(r+1),\qquad m\ge r^2\ge1.
+> \end{equation}
+
+配套 `eq:binary` (paper.tex:346-348)、`eq:first-composition` (paper.tex:361-365)、`eq:inductive-vanishing` (paper.tex:389-392)、`eq:second-composition` (paper.tex:409-413)。
+
+#### §5.3(b) 推导补全（Step 1-4 全部展开）
+
+**归纳结构**：`paper.tex:317-318` 说 `We induct on $a$, proving the assertion simultaneously for every admissible $b$ and every finite-dimensional $V$`。归纳**变量是 $a$**；$b$ 和 $V$ 在归纳假设里是** universally quantified** 的（"simultaneously for every admissible $b$"）。
+
+**Base case $a = 1$**：$T$ 是 $\operatorname{Sym}^b V$ 上的 1-linear form（即 linear functional），diagonal 条件 $T(P) = 0$ 对所有 product $P$ of $b$ vectors。`paper.tex:185-196` 的 polarization identity 说**products span** $\operatorname{Sym}^b V$（因为 $k! u_1 \cdots u_k = \sum_J (-1)^{k-|J|} (\sum_J u_i)^k$，展开后 $u_1 \cdots u_k$ 的系数是 $k!$，其他 term 都消掉；$k! \neq 0$ 在 $\mathbb C$ 上）。所以 $T$ 在生成集上为零蕴含 $T = 0$。**base case 完成**。
+
+**Inductive step**：$a \ge 2$，假设 $a-1 = r$ 的情形**已成立**（对所有 $b' \ge r(r-1)$ 和所有有限维 $V$）。目标是证明 $a$ 的情形（$b \ge a(a-1)$）。$m = b - r$, $b = m + r$；由 $b \ge a(a-1) = (r+1) r = r^2 + r$ 得 $m \ge r^2$（`eq:range` 后半）。$r \ge 1$ 因 $a \ge 2$。
+
+**Step 1 (split binary form, paper.tex:328-348)**：
+
+- 固定 $x, t \in V$，$Q = y_1 \cdots y_m \in \operatorname{Sym}^m V$ 是 product；对 $c \in \mathbb C$，$X^r + c Y^r$ 分裂为 $\prod_{j=0}^{r-1} (X - \alpha \zeta^j Y)$，$\alpha^r = -c$，$\zeta = e^{2\pi i / r}$（$c \neq 0$）；$c = 0$ 时退化为 $X^r$。
+- 代换 $X \leftarrow x$, $Y \leftarrow t$：$x^r + c t^r = \prod_{j} (x - \alpha \zeta^j t) \in \operatorname{Sym}^r V$，$r$ 个向量的乘积。
+- $P_c = (x^r + c t^r) Q$ 是 $r + m = b$ 个向量的乘积，`eq:diagonal` 蕴含 $T(P_c, \ldots, P_c) = 0$ **对每个 $c$**。
+- 视作 $c$ 的多项式，$T(P_c, \ldots, P_c) = \sum_{k=0}^a \binom{a}{k} c^k T(x^r Q, \ldots, x^r Q, \underbrace{t^r Q, \ldots, t^r Q}_{k \text{ slots}}, \ldots)$（**展开每一项**：$a$ 个 slot 里各选一个 $x^r$ 或 $t^r$ factor，共 $\binom{a}{k}$ 种选法；用 symmetry 归并）。
+- $c^1$ 系数 $= a \cdot T(x^r Q, \ldots, x^r Q, t^r Q)$（$r$ 个 $x^r Q$ + 1 个 $t^r Q$，共 $a$ 个 slot）。多项式在 $\mathbb C$ 上处处为零 → 每个 coefficient 为零 → $a \cdot T(\text{mixed}) = 0$ → $a \neq 0$ → `eq:binary` (paper.tex:346-348)：**$T(\underbrace{x^r Q, \ldots, x^r Q}_{r \text{ slots}}, t^r Q) = 0$**。
+
+**Step 2 (freeing the last slot, paper.tex:350-378)**：
+
+- 固定 $x \in V$，把 $t, y_1, \ldots, y_m$ 看作**独立 vector variables**。定义 $H_x = T(\underbrace{x^r Q, \ldots, x^r Q}_{r}, t^b)$，其中 $Q = y_1 \cdots y_m$ 依赖 $y_1, \ldots, y_m$。$H_x$ 是 $t, y_1, \ldots, y_m$ 的多项式：$t$-degree 是 $b$（最后一个 slot 里 $t^b$），每个 $y_i$-degree 是 $r$（前 $r$ 个 slot 各含 $Q$ 里 $y_i$ 一次）。
+- 逐次 apply $D_{y_1,t}$, $D_{y_2,t}$, ..., $D_{y_m,t}$。$D_{y_k,t}$ 只对 $t$ 求导，把 $t$ 换成 $y_k$。
+- `eq:first-composition` (paper.tex:361-365)：$D_{y_k,t} \cdots D_{y_1,t} H_x = \frac{b!}{(b-k)!} T(x^r Q, \ldots, x^r Q, t^{b-k} y_1 \cdots y_k)$。为什么系数是 $b!/(b-k)!$：每次 derivative 是 $\partial/\partial t_i \to y_{i,k}$，第一次 derivative 出 $b$（因为 $t^b$ 求导一次是 $b t^{b-1}$），第二次 $b-1$，第 $k$ 次 $b - k + 1$；累积 $b(b-1) \cdots (b-k+1) = b!/(b-k)!$。前 $r$ 个 slot 里的 $Q$ 保持 $y_1 \cdots y_m$（因为 derivative 只作用在最后一个 slot 的 $t$ 上）。**这个 composition 每一步都把 $t$ 少一次、把某个 $y_i$ 多一次**。
+- $k = m$ 时右边是 $T(x^r Q, \ldots, x^r Q, t^{b-m} y_1 \cdots y_m) = T(x^r Q, \ldots, x^r Q, t^r Q)$（因为 $b - m = r$）。**由 `eq:binary` 这个已经为零**。
+- **injectivity 检查**：第 $i$ 次 derivative 之前，$t$-degree 是 $b - (i-1) = p$，$y_i$-degree 是 $r$（$y_i$ 只在 $Q$ 里出现 $r$ 次，之前的 derivative 都是 $D_{y_j,t}$，$j < i$，不动 $y_i$），destination $y_i$-degree $q = r$。$p - q = b - i + 1 - r = m - i + 1 \ge 1$ 对所有 $i = 1, \ldots, m$（`paper.tex:372-375`）。所以 $lem:shift$ 每一步 injective。
+- 综合：$H_x = 0$。也就是说：**$T(x^r Q, \ldots, x^r Q, t^b) = 0$ 对任意 $x, t \in V$、任意 $Q = y_1 \cdots y_m$ product**。
+
+**Step 3 (induction on remaining slots, paper.tex:380-393)**：
+
+- 固定 $x, t \in V$。定义 $S_{x,t}(Q_1, \ldots, Q_r) = T(x^r Q_1, \ldots, x^r Q_r, t^b)$，$Q_i \in \operatorname{Sym}^m V$。这是 $\operatorname{Sym}^m V$ 上的 symmetric $r$-linear form（$T$ 本身对称，前 $r$ 个 slot 独立 $Q_i$ 保持对称）。
+- Step 2 结论：对 product $Q = y_1 \cdots y_m$ of $m$ vectors, $S_{x,t}(Q, \ldots, Q) = T(x^r Q, \ldots, x^r Q, t^b) = 0$。
+- 应用**归纳假设**（在 $a = r+1 \to r$）：门槛要求 $m \ge r(r-1)$ 且 $m \ge 1$。$m \ge r^2$（`eq:range`）蕴含 $m \ge r(r-1)$ 且 $m \ge 1$。归纳得 $S_{x,t} = 0$，即 (paper.tex:389-392) `eq:inductive-vanishing`：
+  $$T(x^r Q_1, \ldots, x^r Q_r, t^b) = 0 \quad (Q_1, \ldots, Q_r \in \operatorname{Sym}^m V).$$
+- **这一步把「$Q$ 是 product」升级为「$Q_i$ 是 $\operatorname{Sym}^m V$ 里的任意元素」**。$r$ 个 slot 里 $Q_i$ 独立，但**共享** $x^r$。
+
+**Step 4 (removing the common power, paper.tex:395-424)**：
+
+- 固定 $t \in V$。定义 $f = T(v_1^b, \ldots, v_r^b, t^b)$，$v_1, \ldots, v_r$ 是独立 vector variables。引入一个额外 variable $x$，$f$ 初始 $x$-degree $0$。
+- 依次 apply $D_{x,v_1}^r$, $D_{x,v_2}^r$, ..., $D_{x,v_r}^r$。**每个 $D_{x,v_i}$ 只作用在 $v_i$ slot**（$v_1, \ldots, v_r$ 独立，$\partial/\partial v_{i,j}$ 只碰 $v_i$），不动之前已经引入的 $x$ factor。
+- $r$ 次 $D_{x,v_i}$ 的效果：$v_i^b \to x^r v_i^{b-r} = x^r v_i^m$（因为 derivative $r$ 次把 $v_i^b$ 变成 $b!/(b-r)! v_i^{b-r}$ 乘 $x^r$，$b - r = m$）。
+- `eq:second-composition` (paper.tex:409-413)：$D_{x,v_r}^r \cdots D_{x,v_1}^r f = (b!/m!)^r T(x^r v_1^m, \ldots, x^r v_r^m, t^b)$。$r$ 个 slot 各贡献一个 $(b!/m!)$。
+- 由 `eq:inductive-vanishing` 用 $Q_i = v_i^m$：$T(x^r v_1^m, \ldots, x^r v_r^m, t^b) = 0$（$v_i^m$ 是 $\operatorname{Sym}^m V$ 里的具体元素）。所以 `eq:second-composition` 的右边是 0。
+- **injectivity 检查**：$r^2$ 个 $D_{x,v_i}$ 中，**destination 是同一个 $x$**（每步 $x$-degree 从 0 涨到 $r^2$），**source 是 $v_i$**（每步 $v_i$-degree 从 $b$ 掉到 $m$）。最紧那一步是最后一个 $D_{x,v_r}$ 的 $r$-th derivative 之前：此时 $x$-degree $= r^2 - 1$，$v_r$-degree $= b - (r-1) = m + 1$。$m + 1 > r^2 - 1$ 即 $m \ge r^2$，`eq:range` 后半 $b - r \ge r^2$ 即 $b \ge r^2 + r = r(r+1) = a(a-1)$ 保证。$lem:shift$ 让整个 composition injective，$f = 0$。
+
+**Conclusion**：$t$ arbitrary，$T(v_1^b, \ldots, v_r^b, t^b) = 0$ 对所有 $v_1, \ldots, v_r, t \in V$；$T$ 在任何 $(a$ 元$)$ pure powers 组上为零；polarization 说 pure powers 张成 $\operatorname{Sym}^b V$；$T$ 是 $a$-linear 所以 $T = 0$。归纳完成。
+
+**证明最后一段**：`paper.tex:427-429` `Pure powers span $\Sym^b V$ by the polarization argument in Section \ref{sec:map}. Multilinearity now yields $T=0$, completing the induction.`
+
+#### §5.3(c) 机械理由
+
+**$a \ge 2$ 与 $b \ge a(a-1)$ 各自被哪一步消费**：
+
+- $a \ge 2$：Step 1 二元分裂**必须**有 $r = a - 1 \ge 1$（否则 $X^0 + c Y^0 = 1 + c$，$c$-coefficient 是 1，$T$ 里没 $t$ slot，`eq:binary` 变形）。Step 3 归纳**要求** $r = a - 1 < a$（否则非严格归纳）。Step 4 里 $r \ge 1$ 保证 $r^2$ 步权重串**非空**。**能否放松**：$a = 1$ 已经作为 base 单独处理，不能放松；$a \ge 2$ 是 inductive step 的最低要求。
+- $b \ge a(a-1)$：Step 2 的 $p - q \ge 1$ 检查要求 $m \ge r$（即 $b \ge r + r = 2r$）；Step 3 的归纳门槛要求 $m \ge r(r-1)$（即 $b \ge r + r(r-1) = r^2$）；Step 4 的**最紧那一步** $m \ge r^2$ 即 $b \ge r^2 + r = r(r+1) = a(a-1)$。**三个门槛从弱到强**：$2r < r^2 \le r(r+1)$（对 $r \ge 1$，$2r \le r^2$ 当 $r \ge 2$；$r^2 < r(r+1)$ 严格）。所以 **$b \ge r(r+1) = a(a-1)$ 是三个门槛里最紧的**，Step 4 消费。$b \ge a(a-1)$ 的**唯一**来源是 Step 4。
+- 归纳假设的**传递**：Step 3 用 $a \to a-1 = r$，同时把 $b \to m = b - r$。归纳门槛从 $a(a-1)$ 变成 $r(r-1)$；两者的差 $a(a-1) - r(r-1) = (r+1)r - r(r-1) = r \cdot 2 = 2r$。这 $2r$ 被 Step 2 的 $m$ 步权重串（贡献 $r$）**加** Step 4 的 destination-degree 递增（贡献 $r$）**消耗**。
+
+**其他常数的机械理由**：
+
+- $k!$ in polarization (paper.tex:187-191)：是**展开系数**，出现在 Step 2 和 Step 4 的 composition 里；$k! \neq 0$ 在 $\mathbb C$ 上；如果换成 $\mathbb{F}_p$，$p \le k$ 时 $k! = 0$，polarization 断掉。
+- $\binom{a}{k}$ in Step 1 coefficient：来自 $a$ slot 里选 $k$ 个放 $t^r$ factor；对称性归并。**$a = 1$ 时** $\binom{1}{1} = 1$，但**没有** $t$ slot 的 mixed 项，Step 1 退化。
+- $b! / (b-k)!$ in `eq:first-composition`：Step 2 的 $k$-fold derivative 累积；$b - k \ge b - m = r \ge 1$ 保证非零分母。
+- $(b! / m!)^r$ in `eq:second-composition`：$r$ 个 slot 各贡献一个 $b!/m!$；$b - r = m$，$b!/m! = b(b-1) \cdots (m+1)$ 是 $r$ 项之积。
+
+#### §5.3(d) `[推测]` 候选失败路线
+
+- `[推测]` **Step 4 用不同的 $x_i$**：把共享的 $x$ 换成 $r$ 个不同的 $x_1, \ldots, x_r$，每步 $D_{x_i,v_i}^r$ 只碰 $x_i$。此时**每步** $x_i$-degree 最多到 $r$（因为 $D_{x_i,v_i}$ 用 $r$ 次），destination-degree $= r$；source $v_i$-degree $\ge b - r + 1$。门槛变成 $b - r + 1 > r$ 即 $b > 2r - 1$，也就是 $b \ge 2r$。**这条路能**降低门槛，但**破坏** `eq:inductive-vanishing` 的输入：$x_i$ 独立意味着 Step 3 里 $T(x^r Q_1, \ldots, x^r Q_r, t^b) = 0$ 变成 $T(x^r Q_1, \ldots)$ 里的**共享 $x$** 结构；一旦 $x$ 独立，Step 3 的 $S_{x,t}$ 就不是一个 well-defined function of $x, t$。**这条路 Step 4 前断**。
+- `[推测]` **跳过 Step 2，直接归纳**：从 `eq:binary` 一步跳到 `eq:inductive-vanishing`。这**不能**：`eq:binary` 里的 $t^r Q$ 不是 pure power $t^b$，Step 3 的 $S_{x,t}$ 定义需要最后一个 slot 是**固定的 $t^b$**（否则 $S$ 不是 $\operatorname{Sym}^m V$ 上的 $r$-linear form，是某个更复杂的 object）。Step 2 的**唯一**功能是把 $t^r Q$ 换成 $t^b$。
+- `[推测]` **Step 3 用**「$m$ 的门槛是 $m \ge r^2$」，并非「$m \ge r(r-1)$」：**归纳假设**只给了 $r(r-1)$，用 $r^2$ 就是**加强假设**、假设**未证明**的命题；这是 circular。这条错的诱惑在于：Step 4 的门槛是 $m \ge r^2$，如果 Step 3 也用 $m \ge r^2$，看起来**统一**。**断在**：Step 3 是**归纳应用**，只能用**归纳假设**的门槛 $r(r-1)$；$m \ge r^2$ 只是**外部输入**保证 Step 3 能 apply 的**充分**条件之一。这个区分在 `paper.tex:387-388` 明确写了：`m ≥ r^2 ≥ r(r-1) and m ≥ 1, the induction hypothesis applies`。**两层门槛**：$r^2$ 是**外部**，$r(r-1)$ 是**归纳**，中间一个不等式链 $r^2 \ge r(r-1)$。
+
+### §5.4 推论 cor:comparison
+
+#### §5.4(a) 逐字引用
+
+`paper.tex:440-448`：
+
+> \begin{corollary}\label{cor:comparison}
+> For every finite-dimensional complex vector space $V$, every integer
+> $a\ge2$, and every integer $b\ge a(a-1)$, there exists a
+> $\mathrm{GL}(V)$-equivariant embedding
+> \[
+>  \Sym^a(\Sym^b V)\hookrightarrow\Sym^b(\Sym^a V).
+> \]
+> In particular, this gives the sixth symmetric-power comparison for $b\ge30$.
+> \end{corollary}
+
+#### §5.4(b) 推导补全
+
+证明 `paper.tex:450-460` 展开：
+
+**Step A（同变性）**：$\mu_{a,b,V}$ 是 GL(V)-同变的，因为 $\operatorname{Av}$ 和 multiplication 都同变。具体地：对 $g \in \mathrm{GL}(V)$，$g$ 自然作用到 $(\operatorname{Sym} V)^{\otimes a} = P_a$ 上（对每个 tensor factor 独立作用）；multiplication 保留 GL(V)-action（因为 $g(uv) = (gu)(gv)$ 在 symmetric algebra 里）；$\operatorname{Av}$ 只重排 slot，也保留 GL(V)-action。所以 $\mu_{a,b,V}$ 是 GL(V)-module homomorphism。
+
+**Step B（完全可约）**：$\mathbb C$ 上、有限维、多项式 GL(V)-表示是**完全可约**（`Macdonald` references.tex:49-51 的 Chapter I Appendix A Sections 7-8 给的是 symmetric functions 视角，等价于 GL(V) 的多项式表示 theory）。**注意**：GL(V) 作为**代数群**，其 rational polynomial representations 才是完全可约的；作为**抽象群**，其所有 representations 并不都完全可约。论文里 `paper.tex:453-454` `Finite-dimensional polynomial representations over $\C$ are completely reducible` 明确写了 polynomial 一词。
+
+**Step C（split）**：满射 $\mu: \operatorname{Sym}^b(\operatorname{Sym}^a V) \to \operatorname{Sym}^a(\operatorname{Sym}^b V)$ 在 GL(V)-module 范畴里分裂。取 kernel 的 GL(V)-不变补空间 $M$（完全可约给出存在性）。$\mu|_M$ 是同变同构 $M \xrightarrow{\sim} \operatorname{Sym}^a(\operatorname{Sym}^b V)$。
+
+**Step D（反向 injection）**：$\mu|_M^{-1}: \operatorname{Sym}^a(\operatorname{Sym}^b V) \hookrightarrow M \subseteq \operatorname{Sym}^b(\operatorname{Sym}^a V)$ 是同变 embedding。
+
+**Step E（第六次幂特例）**：$a = 6$ 时门槛 $b \ge 6 \cdot 5 = 30$。`paper.tex:447` `this gives the sixth symmetric-power comparison for $b\ge30$`。
+
+#### §5.4(c) 机械理由
+
+- **$a \ge 2$ 消费在**：继承 `thm:main`。$a = 1$ 时 injection 是 identity，无意义；$a \ge 2$ 让 Foulkes 猜想一侧有意义。
+- **$b \ge a(a-1)$**：完全继承 `thm:main`。$b = a(a-1)$ 是最紧；对 $a = 6$，$b = 30$。
+- **GL(V)-equivariant**：这个 corollary 的**价值**在于**同变** embedding，普通线性 injection 是 trivial 的（因为两空间维数相同，选 basis 就有）。$b \ge a(a-1)$ 是**同变** injection 存在的门槛，不是**线性** injection 存在的门槛。
+- **完全可约性使用一次**：仅在 Step C；splitting 的存在依赖完全可约。**能否放松**：如果**只**要 existence of an injection，可以弱化到「polynomial representations of reductive groups in characteristic zero are semisimple」这一版；$\mathbb C$ 上的 GL(V) 就是 reductive，等价。
+- **6 和 30**：$a = 6$ 是**Foulkes 猜想里**已经证明的**最后一个开放小情形**；references.tex:20-23 的 `CIM` (Cheung-Ikenmeyer-Mkrtchyan 2017) 是**第五个 symmetric power comparison**（$a = 5$），$b \ge 30$ 是**第六个**（$a = 6$）。这条 `paper.tex:447` 明确说了。**能否推广**：$a = 7$ 给 $b \ge 42$、$a = 8$ 给 $b \ge 56$，都可以。
+
+#### §5.4(d) `[推测]` 候选失败路线
+
+- `[推测]` **不假设完全可约，用 projective resolution**：$\operatorname{Sym}^b(\operatorname{Sym}^a V) \to \operatorname{Sym}^a(\operatorname{Sym}^b V) \to 0$ 是 polynomial representation 的一个 exact sequence。这条路**不需要**完全可约，只需 existence of splitting in a weaker sense（比如 Ext 消失）。**失败点**：Ext 消失的证明**依赖**完全可约，绕不开。
+- `[推测]` **在正特征上重做 corollary**：完全可约在 $\operatorname{char} p > 0$ 时失效。这条路的**具体**失败：$a = 6$, $b = 30$ 在 $\mathbb{F}_p$ 上 split 不一定存在；injection 可能仍然**存在**（作为 abstract vector spaces），但**同变** injection 需要更细的 modular representation 分析。**推测**这条路即使能走通也要给出**依赖 $p$** 的门槛，与 $\dim V$ 无关性冲突。
+- `[推测]` **不做 split，直接构造 embedding**：Foulkes 猜想的经典证明**就是**构造 embedding（用 tableau 或者 symmetrizer）。这条路**能给** injection，但**不给**「$\mu$ 的 GL(V)-同变 section 存在」。差别：`paper.tex:458-459` `This construction asserts existence and does not identify the embedding with a prescribed canonical map`。这条路**不构成**失败，只是**不能**声称是 $\mu$ 的对偶。
+
+### §5.5 注记 remark（无编号）
+
+#### §5.5(a) 逐字引用
+
+`paper.tex:462-471`：
+
+> \begin{remark}
+> The differential lemma holds for every finite number of coordinates and
+> arbitrary additional variables, while the degree comparisons depend only
+> on $a$ and $b$. Together with the finite-dimensional annihilator argument,
+> this proves the same bound in every finite dimension, without a
+> stable-dimension reduction. The written proof uses positivity of the
+> Fischer Hermitian inner product, splitting of binary forms over $\mathbb C$, and
+> the nonzero characteristic-zero scalar factors in the coefficient and
+> differentiation identities.
+> \end{remark}
+
+#### §5.5(b) 推导补全
+
+remark 声明的是**三件事**：
+
+- **$lem:shift$ 的普适性**：任意 finite number of coordinates（即 $\dim V = n$ 任意有限）+ arbitrary additional variables（spectators 有限）+ degree comparisons 只依赖 $a, b$（不依赖 $n$）。
+- **annihilator 的 finite-dimensionality**：`paper.tex:221-222` 用到 $R_b$ 有限维，这一步**只用一次**；剩下的证明**都是** coordinate-level 恒等式。
+- **$\mathbb C$ 的三个角色**：Fischer 内积**正定** + 二元多项式**代数闭分裂** + 特征零（$k! \neq 0$ 和 $a \neq 0$）。
+
+我把三件事**串起来**：证明的骨架是**有限多个 vector variable 上的多项式恒等式**；每一步都是 algebraic identity；identity 的**系数**（比如 $k!$、$b!/(b-k)!$）非零需要**特征零**；identity 的**正定**需要 Hermitian inner product 结构；identity 里的**分裂** $X^r + c Y^r = \prod (X - \alpha \zeta^j Y)$ 需要**代数闭**。这三个 $\mathbb C$ 的用法是**独立**的：可以各自换成 $\overline{\mathbb{Q}}$ 上（代数闭 char 0）+ Fischer inner product 换成 algebraic surrogate（比如对偶配对）。**不能**换成一般域。
+
+**$\dim V$ 无关性**：因为证明的每一步**都不引用** $\dim V$ 的具体值；只在 `paper.tex:245` `Choose a basis of $V$, of dimension $n>0$` 处**存在性**用一次。$lem:shift$ 的**结论**（injectivity of $D$）在**任何** $n \ge 1$ 下都成立，且**门槛 $p > q$ 与 $n$ 无关**。这是「without stable-dimension reduction」的准确意思。
+
+#### §5.5(c) 机械理由
+
+- **$n > 0$**：$n = 0$ 时 $D_{Y,U}$ 是 zero operator 从 $\{0\}$ 到 $\{0\}$，trivial；论文 base 情形 `paper.tex:316` 单独处理 $V = 0$。
+- **finite collection of additional variables**：见 §5.2(c) 关于 infinite 时 inner product 不收敛的讨论。
+- **degree comparisons only depend on $a, b$**：`paper.tex:419-421` 的 $p - q$ 只依赖 $r, m, i$，$m$ 只依赖 $b, r$，$r$ 只依赖 $a$。**没有 $n$**。这是「$\dim V$ 无关」的**技术性表述**。
+- **positive definite Fischer Hermitian inner product**：`AldazRender` references.tex:3-5 给出定义与正定性证明；tex 引 Section 2 eq (8) 与 Proposition 3。
+- **splitting of binary forms over $\mathbb C$**：`paper.tex:331-335` 具体写 $\alpha^r = -c$、$\zeta = e^{2\pi i / r}$。$\mathbb C$ 代数闭给 $\alpha$；$\zeta$ 是 primitive $r$-th root，存在性来自 $\mathbb C$ 的**指数**结构（$e^{2\pi i / r}$）。
+- **nonzero characteristic-zero scalar factors**：出现在 coefficient 提取（$a$, $\binom{a}{k}$）和 derivative 累积（$b!/(b-k)!$，$(b!/m!)^r$）。
+
+#### §5.5(d) `[推测]` 候选失败路线
+
+- `[推测]` **在 $\mathbb{Z}[1/r!]$-代数上工作**：把 $\mathbb C$ 换成 $\mathbb{Z}[1/(a-1)!]$ 或类似 ring，让 $k!$ 与 $a$ 都是单位；**但**代数闭和 Hermitian 都失效。这条路可能给一个 **algebraic proof** 的雏形，**失败点**是 binary splitting 需要 primitive root $\zeta$，不在 ring 里。
+- `[推测]` **用 p-adic 域 $\mathbb{Q}_p$**：char 0 完备化，但**不代数闭**；二元 $X^r + c Y^r$ 在 $\mathbb{Q}_p$ 里**不**总是分裂。Step 1 断。这条路需要先把 $\mathbb{Q}_p$ 扩到 $\overline{\mathbb{Q}_p}$，此时**没有** canonical Hermitian positive definite inner product。
+- `[推测]` **实域 $\R$**：$X^2 + c Y^2$ 对 $c > 0$ 在 $\R$ 上不分裂。Step 1 断；后续所有步骤都失败。
+
+## §6 常数与参数台账
+
+| 符号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+| --- | --- | --- | --- | --- |
+| $a$ | 整数, $a \ge 2$ | paper.tex:99, 306 | thm:main 门槛 $b \ge a(a-1)$；prop:vanishing 归纳变量；$r = a-1$ 定义 paper.tex:320 | $a = 1$ 时 Step 1 二元分裂系数 $a$ 为零，`eq:binary` 无法 normalize；Step 3 归纳 base 直接吃掉 $a=1$；$a=0$ 无意义 |
+| $b$ | 整数, $b \ge a(a-1)$ | paper.tex:99-100, 306 | Step 2 权重串 $p = b - i + 1$ paper.tex:374；Step 4 destination-degree 检查 paper.tex:419-421 | $b < a(a-1)$ 时 Step 4 最紧那一步 $m + 1 \le r^2$，$lem:shift$ 不 injective；反例见 paper.tex:143-145 的 $(5,5)$, $(6,6)$ |
+| $a(a-1)$ | 二次门槛, $= r(r+1)$ | paper.tex:55, 100, 123-126, 306 | prop:vanishing 输入门槛；Step 4 通过 $m \ge r^2$ 消费 | 换成 $a^2$ 会让门槛**变松**（多 $a$）；换成 $a(a-1) - 1$ 会让 Step 4 的 $m \ge r^2$ 断（差 1） |
+| $n = \dim V$ | 任意有限正整数 | paper.tex:245 | $D_{Y,U}$ 的求和上限 $\sum_{k=1}^n$ paper.tex:249；$lem:shift$ 不显式引用 $n$ | 换成 $n = 0$ 时 $V = 0$ trivial 已被 paper.tex:316 剥出；换成**无穷维** 时 inner product 不收敛、Fischer 内积正定性断 |
+| $r = a - 1$ | 归纳里的下 $a$ | paper.tex:320, 347, 357, 402 | Step 3 归纳假设的门槛 $r(r-1)$；Step 4 里 $r$ 个 $v_i$ slot | $r = 0$ 时 Step 1 二元分裂退化；$r = a-1$ 是**严格归纳**必需 |
+| $m = b - r$ | 剩余 degree | paper.tex:321 | Step 3 归纳**输入**门槛 $m \ge r(r-1)$；Step 4 里 $v_i^m$ 出现 paper.tex:412 | 若 $m < r$ 时 Step 2 权重串长度不足；若 $m < r^2$ 时 Step 4 destination-degree 断 |
+| $r^2$ | Step 4 destination-degree 上限 | paper.tex:325, 374, 419-421 | `eq:range` 后半 $m \ge r^2$；Step 4 最紧那一步 $x$-degree $= r^2 - 1$ | $r^2$ 换成 $r(r-1)$（少 $r$）时 Step 4 断；换成 $r(r+1)$（多 $r$）时 Step 4 冗余，$b_0$ 变松 |
+| $2r$ | Step 3 门槛差 | paper.tex:387 | $a(a-1) - r(r-1) = 2r$，是归纳传递的**代价**；Step 2 权重串 $m$ 步消耗 $r$、Step 4 累积 $x$-degree 消耗 $r$ | 若 Step 2 只走 $r-1$ 步（少 1），Step 4 destination-degree 少 $r$；整体门槛 $b \ge a(a-1)$ 断 |
+| $k!$ | polarization 系数 | paper.tex:187-188 | Step 1 coefficient of $c$ 提取；`eq:first-composition` paper.tex:363；`eq:second-composition` paper.tex:411 里的 $b!/(b-k)!$ 和 $(b!/m!)^r$ | $k! = 0$ in $\operatorname{char} p$ with $p \le k$；polarization 恒等式退化，products 不再张成 $\operatorname{Sym}^k V$ |
+| $a!$ | averaging 分母 | paper.tex:75, 78 | `eq:average` $\operatorname{Av}$ 的 $1/a!$；$R_1 \cong \operatorname{Sym}^a V$ 的**同构**（不是同态）依赖 $a! \neq 0$ | $a! = 0$ 时 $\operatorname{Av}$ 不定义；$R_1 \neq \operatorname{Sym}^a V$；整条证明从 `sec:map` 起手就断 |
+| $\alpha^r = -c$ | Step 1 代数闭根 | paper.tex:332 | 二元分裂 $X^r + cY^r = \prod_{j=0}^{r-1}(X - \alpha \zeta^j Y)$ | 若域非代数闭，$\alpha$ 不存在；Step 1 断 |
+| $\zeta = e^{2\pi i / r}$ | primitive $r$-th root | paper.tex:332 | 与 $\alpha$ 配对给出 $r$ 个 distinct linear factors | 若域不含 primitive $r$-th root，分裂**仍**代数闭给，但 $r$ 个 factor 可能不 distinct；Step 1 需要**至少**一个 $c^1$ coefficient 可提取，非 distinct 会削弱但不断 |
+| $\lVert X^\alpha\rvert ^2 = \alpha!$ | Fischer 内积权重 | paper.tex:272-274 | Step 2 的伴随性 $\partial_i^* = X_i$；`eq:norm` 的推导 | 换成非阶乘权重（如 $1/\alpha!$）需要重算 $[E,D]$；正定性可能保，但 $\mathfrak{sl}_2$ 关系变形  |
+| $\frac{b!}{(b-k)!}$ | Step 2 $k$-th derivative 系数 | paper.tex:363 | `eq:first-composition` 里的常数；$k = m$ 时 $\frac{b!}{(b-m)!} = \frac{b!}{r!} \neq 0$ | 若 $b < m$（不可能因 $m = b - r \le b$），系数定义断；若 $b = 0$（trivial $V$ 已剥出），$b! = 1$ 无问题 |
+| $\left(\frac{b!}{m!}\right)^r$ | Step 4 系数 | paper.tex:411 | $r$ 个 slot 各贡献一个 $b!/m!$；$b - r = m$，$b!/m! = (m+1)(m+2)\cdots b$ 是 $r$ 项 | 若 $b < m$ 系数无定义；若某一项落入 char $p$ 则整体归零 |
+| $6$ | $a$ 的特例 | paper.tex:447 | cor:comparison 里的 `sixth symmetric-power comparison`；$a = 6$ 时 $b \ge 30$ | 换成 $7$：$b \ge 42$；换成 $5$：$b \ge 20$（第五个 comparison 已被 CIM 处理，paper.tex:142-145） |
+| $30$ | $6 \cdot 5$ | paper.tex:447 | cor:comparison 里 `sixth symmetric-power comparison for $b\ge30$`；由 $a(a-1)$ 代入 $a = 6$ 得 | 若门槛改成 $a^2 = 36$ 会让 cor:comparison 的**具体**边界从 $b \ge 30$ 变成 $b \ge 36$（变松） |
+| $b_0(a)$ | stabilization degree 函数 | paper.tex:94-97 | thm:main 声称 $b_0(a) \le a(a-1)$；未声称**最小** $b_0$（paper.tex:127-128 明确说 bound 不 sharp） | 论文不处理最小 $b_0$；若强行改 bound 形状会失去与 RSW 的关系讨论 |
+| $P_a$ | $(\operatorname{Sym} V)^{\otimes a}$ | paper.tex:65 | $R_j \subseteq P_a$ 定义；$A$ 是 $R_1$ 生成的子代数 (paper.tex:87) | 换成 $(\operatorname{Sym} V)^{\otimes b}$（$a, b$ 交换）会让 `eq:map` 反向，$A$ 不再是原语义 |
+| $R_j$ | $((\operatorname{Sym}^j V)^{\otimes a})^{\mathfrak S_a}$ | paper.tex:66 | $R = \bigoplus_j R_j$；$R_1 = \operatorname{Sym}^a V$, $R_b = \operatorname{Sym}^a(\operatorname{Sym}^b V)$ (paper.tex:80) | 换成 $((\operatorname{Sym}^a V)^{\otimes j})^{\mathfrak S_a}$（$a, j$ 交换）会让 averaging 定义不一致 |
+| $A$ | 由 $R_1$ 生成的子代数 | paper.tex:87 | $\operatorname{im} \mu_{a,b,V} = A_b$；surjectivity 等价 $A_b = R_b$ (paper.tex:102) | 若 $A$ 改成由 $R_2$ 生成，`thm:main` 的等价形式变，$A_b$ 不再等于 $\operatorname{im} \mu$ |
+| $E$ | $\operatorname{Sym}^b V$ | paper.tex:181 | `eq:diagonal` 里 $T$ 的定义域；$P$ 是 $E$ 里的 product of $b$ vectors | $E$ 换成 $\operatorname{Sym}^a V$ 会让 $T$ 的 arity 与 $b$ 定义不匹配 |
+| $D_{Y,U}$ | $\sum_{k=1}^n Y_k \partial/\partial U_k$ | paper.tex:249 | $lem:shift$；`eq:first-composition` paper.tex:362；`eq:second-composition` paper.tex:410 | 去掉 sum 只留一个 coordinate：$\mathfrak{sl}_2$ 关系变形，$[E,D] = N_U - N_Y$ 不再成立 |
+| $N_U, N_Y$ | Euler 算子 | paper.tex:282-283 | `eq:norm` 推导里 $[E,D] = N_U - N_Y$；$h$ 双齐次时 $N_U h = ph$, $N_Y h = qh$ | 换成 weighted Euler 会让 $p, q$ 变成分量加权和，$p - q$ 门槛需要重定义 |
+| $\operatorname{Av}$ | $1/a!$ 平均 | paper.tex:73-77 | `sec:map` 的 $T_\lambda$ 定义 (paper.tex:212-213)；$R_1 = \operatorname{Sym}^a V$ 同构 | 换成**不加 $1/a!$** 的求和：不再是 $\operatorname{Sym}^a V$ 到 invariants 的**同构**，是**同态**；annihilator criterion 需要重新归一 |
+| $\mathfrak S_a = \mathfrak S_a$ | $a$ 次对称群 | paper.tex:44, 70 | `eq:average` 求和 $\sum_{\pi \in \mathfrak S_a}$；$R_j$ 里的 invariants $(-)^{\mathfrak S_a}$ paper.tex:66 | 换成 $\mathfrak S_b$：arity 与 `eq:average` 定义不匹配 |
+| $p-q=m-i+1$ | Step 2 权重串每步余量，最紧取 $1$ | paper.tex:374 | Step 2 把 $D_{y_i,t}$ 逐个代入 `lem:shift`，第 $i$ 步恰消耗 $m-i+1\ge1$ 这条余量，$i=m$ 最紧 | $i$ 若走到 $m+1$ 则 $p-q=0$，`lem:shift` 不再保证单步 injective，$H_x=0$（paper.tex:378）断，Step 3 失去输入 |
+| $r^2-1$ | Step 4 目的端 $x$-degree 上界 | paper.tex:417-418 | 同一条 $x$ 变量块被 $r^2$ 个算子 $D_{x,v_i}^{\,r}$ 逐步抬次数，任一算子施加前 $x$-degree 不超过 $r^2-1$，这就是施加时刻 `lem:shift` 的 $q$ | 若中途 $q$ 抬到 $r^2$，与 source 最低 $r^2+1$（paper.tex:421）只差 $1$，injectivity 暂时仍成立但两路余量被压薄；算子总数到 $r^2+2$ 时最坏一步 $p=q$，Step 4 消不回 $f=0$ |
+| $b-r+1=m+1$ | Step 4 源端 degree 下限 | paper.tex:419-421 | source $v_i$ 在被施加 $D_{x,v_i}^{\,r}$ 前至多被微过 $r-1$ 次，次数下界 $b-r+1$；经 `eq:rm` 化为 $m+1\ge r^2+1$，与目的端上界 $r^2-1$ 构成 `lem:shift` 双侧比较 | 算子次数从 $r$ 抬到 $r+1$ 时系数改为 $b!/(b-r-1)!$，落点变为 $x^{r+1}v_i^{m-1}$ 形态，`eq:inductive-vanishing` 只覆盖 $Q_i\in\operatorname{Sym}^m V$，接不上，Step 4 断 |
+| 系数 $a$ | Step 1 中 $T(P,\ldots,P)$ 对 $c$ 的一次系数为 $a\,T(x^rQ,\ldots,x^rQ,t^rQ)$ | paper.tex:343-345 | `eq:binary` 由该系数恒零除以 $a\ne0$ 得到起点 vanishing；逐点零推恒零的论证在 paper.tex:369-371 依赖特征零 | 在 $\operatorname{char}\ p$ 且 $p\mid a$ 的域上该系数不带信息，`eq:binary` 拿不到，Step 2-4 整体失去起点 |
+| $f=T(v_1^b,\ldots,v_r^b,t^b)$ | Step 4 起手多项式，引入 $x$ 后初始 $x$-degree 为 $0$ | paper.tex:402-405 | $r^2$ 个 $D_{x,v_i}^{\,r}$ 把 $f$ 送进已知零 `eq:second-composition`，injectivity 反推 $f=0$；$t$ 任意于是 $T$ 在纯幂组上归零 | 起手若不用纯幂 $v_i^b$ 而用一般 $Q_i\in\operatorname{Sym}^m V$，微分不再产生 $(b!/m!)^r$ 这种干净系数，`eq:second-composition` 右端与 `eq:inductive-vanishing` 无法对齐 |
+| $S_{x,t}$ | Step 3 归纳输入：$\operatorname{Sym}^m V$ 上的对称 $r$-linear form | paper.tex:383-388 | Step 3 把 $S_{x,t}$ 喂给 $a-1$ 的归纳假设（门槛 $m\ge r(r-1)$），得 `eq:inductive-vanishing` | 归纳假设若强化到 $m\ge r(r+1)$，$m=r^2$ 时 Step 3 不适用，`eq:inductive-vanishing` 失败，Step 4（paper.tex:395 起）失去落点 |
+| $(-1)^{k-\lvert J\rvert}$ | polarization 恒等式的符号权重，$J$ 遍历 $\{1,\ldots,k\}$ 共 $2^k$ 个子集 | paper.tex:188-191 | $k=b$ 用于收尾「纯幂张成 $\operatorname{Sym}^b V$」（paper.tex:427-428）；$k=a$ 用于 $z(u)$ 张成 $R_1$（paper.tex:199-200） | 符号模式改动则恒等式失效，$k!\ne0$ 的抽取失去依据，$T=0$ 停在纯幂组、升不到 multilinear 整体归零 |
+| $z(u)=u^{\otimes a}$ | $A_b=\operatorname{span}_{\mathbb C}\{P^{\otimes a}: P\ \text{是}\ b\ \text{个向量的乘积}\}$ | paper.tex:198-208 | annihilator criterion（paper.tex:227-229）用这个 $A_b$ 显式描述把 surjectivity 翻成 $T$ 的 diagonal vanishing；Step 1 的 $P=(x^r+ct^r)Q$（paper.tex:339）正是 $b$ 个向量的乘积 | average 归一化改动则 $z(u)$ 不再等于张量幂，$T_\lambda(P,\ldots,P)=\lambda(P^{\otimes a})$ 断，paper 第 2 节的整条翻译链在第一环就断 |
+| $\dim V\ge b$ | Ikenmeyer/McKay 侧的维数门槛，对照本文的 $\dim V$ 无关 | paper.tex:169-171 | §1 的初始路线用它做参照，确认本文两条微分序列与传播定理的方向差异；论文正文不采用该门槛 | 若沿用带维数门槛的框架，remark（paper.tex:462-471）里 without stable-dimension reduction 的结论强度跌回 stable-range reduction，其余步骤本身仍成立 |
+| OAI.Problem346.canonical_foulkes_howe_surjective | Lean 侧门槛 `2 ≤ a → a * (a - 1) ≤ b` | OAI/RepresentationTheory/FoulkesHowe/Stabilization.lean:15-16 | 同文件 `foulkes_comparison_embedding`（35-40 行）与 `sixth_symmetric_power_comparison`（42-45 行）消费；comparator 登记于 ComparatorChallenges/FoulkesHowe.json:5，对应 `.tools/records.txt` 第 64 行 | Lean 陈述若放松 `a * (a - 1)` 下界，同文件 19-23 行的 `by omega` 推不出 `1 ≤ b`，`vanishing_on_products_aux` 的前提侧断链 |
+
+**依赖链**（我按门槛传递的方向写）：
+
+$b \ge a(a-1)$ 在 `eq:rm` (paper.tex:320) 定义 $r = a-1, m = b - r$ 之后，被 `eq:range` (paper.tex:324-326) 重述为 $m \ge r^2$；$m \ge r^2$ 分两路使用：**第一路** Step 2 (paper.tex:350-378) 里 $p - q = m - i + 1 \ge 1$ 保证 $m$ 步权重串每步 injective，这一步**只需** $m \ge r \cdot 1$ 弱门槛；**第二路** Step 4 (paper.tex:395-421) 里最紧那一步 $p - q \ge 1$ 需要 $m + 1 > r^2 - 1$ 即 $m \ge r^2$。$m \ge r^2$ 是两路里**较紧**的那条。
+
+Step 3 (paper.tex:380-393) 用**归纳假设**（在 $a-1$ 上）：门槛 $m \ge r(r-1)$（这是**归纳假设**的形式，不是**外部输入**的形式）；外部 $m \ge r^2$ **蕴含** $m \ge r(r-1)$（因为 $r^2 \ge r(r-1)$，$r \cdot 1 \ge 0$），所以 Step 3 能 apply。归纳**假设**和**外部输入**的门槛**不同**：假设是 $r(r-1)$，输入是 $r^2$；**差 $r$** 由 Step 2 消耗（$m$ 步权重串，$i = 1, \ldots, m$）。
+
+Step 4 用 `eq:inductive-vanishing` (paper.tex:389-392) 作为终点，用 `eq:second-composition` (paper.tex:409-413) 反向**消元**到 $f = 0$；$f = 0$ 是 $a$-元 pure power 上的 vanishing；polarization (paper.tex:187-196) 说 pure powers 张成 $\operatorname{Sym}^b V$；$T$ 是 $a$-linear 所以 $T = 0$。
+
+**门槛 $a(a-1)$ 在整条依赖链里的角色**：**Step 4 的最紧那一步**是 $a(a-1)$ 的**唯一**决定处；Step 2 和 Step 3 各自只需要**更弱**的门槛；$a \ge 2$ 是 Step 1 和严格归纳的双重必需。这两个门槛**都是最紧的**，不能放松，除非**改变证明结构**。
+
+## §7 Lean 取证
+
+登记三处：`E:\math\lean\formalization.yaml:1170-1172` 的三行、`E:\math\lean\ComparatorChallenges\FoulkesHowe.json` 十四行、`E:\math\lean\OAI\RepresentationTheory\FoulkesHowe\` 全部 77 个 `.lean` 文件。命名双轨（`Problem346` 考题号 vs `FoulkesHowe` 模块名）我在 §0 已经记录，此处进入结构。
+
+### §7.1 模块规模实测
+
+`ls` 得到 77 个 `.lean` 文件；`wc -l` 得总 6095 行；最大单文件 `SymmetricLift.lean` 173 行，`BlockWeight.lean` 169 行，`PermanentPairing.lean` 167 行；主入口 `Stabilization.lean` 只有 51 行、`Model.lean` 79 行。整个模块被切成 77 个平均 79 行的小文件，每个文件一个技术点。
+
+顶层声明分类计数（grep 首列 `^(theorem|lemma|def|abbrev|instance|structure|inductive|example|private def|private theorem|noncomputable def|noncomputable theorem)`）：
+
+- `theorem` 250 条
+- `lemma` 11 条
+- `def` 79 条
+- `abbrev` 7 条
+- `instance` 2 条
+- `structure` 0 条
+- `inductive` 0 条
+- `example` 0 条
+
+`theorem : lemma` 比约 22:1；论文里的 lemma 概念在 Lean 里被**统一命名为 theorem**，只有 11 处真正的 `lemma`（我抽样看，都是"technical helper"级别如 `symPowSubmodule_one`、`symPowOneIntro_bijective`）。这说明 OAI 侧的命名约定：**主定理和辅助引理都叫 theorem**，`lemma` 只用于极少数局部 helper。
+
+`private def` 和 `private theorem` 共 10 条（grep `^private` 得到）；`noncomputable` 前缀出现 71 次，几乎每个文件都有 `noncomputable section`。这说明模块整体处在 `noncomputable` 模式，跟 Lean 里 `Classical.choice` 三件套配套。
+
+### §7.2 sorry / admit / axiom 命中
+
+- `sorry` 出现 **0** 次（`grep -c "sorry" *.lean` 汇总 0）
+- 真 `admit` 出现 **0** 次（唯一命中在 `DerivationInjectivity.lean:15` 的 docstring 里，`The generator condition admits arbitrary spectator variables`，是英语动词，不是 tactic）
+- 本地 `axiom` 声明 **0** 条（`grep ^axiom *.lean` 无匹配）
+- `#print axioms` **0** 条
+
+`permitted_axioms` 在 JSON 里三件套：`propext`、`Quot.sound`、`Classical.choice` (ComparatorChallenges/FoulkesHowe.json:8-12)。这三条都是 Lean 逻辑层的**基础公理**（functional extensionality / quotient soundness / choice），任何 Lean 数学证明都会用；OAI 侧显式声明这三条允许，等价于**禁止**任何额外的自定义 axiom 进入 kernel。我在 §7.1 看到的 71 个 `noncomputable`、9 处 `Classical.choose` 用法都落在 `Classical.choice` 允许范围内。
+
+### §7.3 tactic 词频
+
+按 grep 词频（`.lean` 全体，去除 keyword 只留 tactic-position 用法，`classical`/`noncomputable` 因为常出现在 tactic block 里也计入）：
+
+- `simp` 352
+- `exact` 207
+- `have` 197
+- `intro` 187
+- `rw` 175
+- `apply` 172
+- `classical` 74
+- `noncomputable` 71
+- `simpa` 68
+- `symm` 51
+
+数值型 tactic：`omega` 35 次、`nlinarith` 10 次、`ring` 3 次、`norm_num` 1 次、`simp_all` 5 次、`linarith` 0 次。$lem:shift$ 里的 $p > q$、$b \ge a(a-1)$、$m \ge r^2$、$r^2 - 1 < m + 1$ 这类算术不等式在 Lean 侧被 `omega`/`nlinarith` 反复吃掉。`linarith` 零次意味着所有**线性**不等式都被更强的 `omega` 处理，所有**非线性**不等式（含 $r \cdot (r+1) \le b$ 之类的乘积项）被 `nlinarith` 处理。
+
+其他 tactic 分布：`subst` 49、`ext` 49、`change` 41、`let` 33、`funext` 32、`refine` 29、`obtain` 29、`swap` 28、`congr` 28。`ext` 用得这么多是因为**多项式 extensionality**（`MvPolynomial.funext`）是模块里最常见的等式证明方式；`subst` 多是因为大量 dependent pattern matching 后的 index 消除。
+
+### §7.4 $\dim V$ 无关性的 Lean 形态
+
+**核心问题**：$\dim V$ 无关性是**对任意 `n` 的有限类型**证成的，还是被实例化成某个具体维数的 witness？
+
+**实测答案**：**对任意 `V : Type u` with `[FiniteDimensional ℂ V]` 实例化**，**不是**具体 witness。见 `Stabilization.lean:16` 主声明：
+
+```
+∀ (V : Type u) [AddCommGroup V] [Module ℂ V] [FiniteDimensional ℂ V] (a b : ℕ),
+  2 ≤ a → a * (a - 1) ≤ b → ∃ μ : SymPow b (SymPow a V) →ₗ[ℂ] SymPow a (SymPow b V), ...
+```
+
+$V$ 是 **universe-polymorphic** 变量（`universe u` at line 11），实例化 `[FiniteDimensional ℂ V]` 只是**假设**存在 `Basis (Fin (FiniteDimensional.finrank ℂ V) ℂ V)`；模块里**不引用** `finrank` 具体值。我 grep `FiniteDimensional` 出现 26 次，全部是**假设**形式，没有一处 `FiniteDimensional.finrank ℂ V = 5` 之类的 concrete instance。
+
+**关键 instance**：`FiniteDimension.lean:12-14` 定义了 `instance finiteDimensional_symPow (n : ℕ) (V : Type u) [AddCommGroup V] [Module ℂ V] [FiniteDimensional ℂ V] : FiniteDimensional ℂ (SymPow n V)`，**证明**是 `Module.Finite.of_surjective (tensorToSymPow n V) (tensorToSymPow_surjective n V)`。也就是说，`SymPow n V` 的有限维性来自 `tensorToSymPow` 的**满射**（把 $V^{\otimes n}$ surjectively 映到 `SymPow n V`）；这个满射是**坐标无关**的抽象构造。整个模块**没有** basis-dependent 的具体 witness。
+
+**$\dim V$ 无关性**在 tex 里的对应是 `paper.tex:462-471` 的 remark；Lean 侧的对应是**主声明里的 $V$ 是 universally quantified**，**每一步**（`BlockInjectivity`, `FirstTransfer`, `SecondTransfer`, `Vanishing`）**都**保留 `[FiniteDimensional ℂ V]` 作为 hypothesis 而不 unwrap 成具体 `finrank`。
+
+### §7.5 $b \ge a(a-1)$ 在 Lean 里的形态
+
+**核心问题**：$b \ge a(a-1)$ 是**不等式假设**、还是被 `omega`/`norm_num` 吃掉的算术？
+
+**实测答案**：**两者都是**，分层出现。
+
+**顶层**（不等式假设形态）：`Stabilization.lean:16` 主声明里 `2 ≤ a → a * (a - 1) ≤ b → ...`，是 hypothesis。`Stabilization.lean:31` 的 `vanishing_on_products` 声明里 `1 ≤ a → 1 ≤ b → a * (a - 1) ≤ b → ...`。**顶层是不等式假设**。
+
+**中层**（把门槛传递下去）：`Stabilization.lean:19-23` 的证明体：
+
+```
+intro V _ _ _ a b ha hab
+apply canonical_surjective_unique_of_vanishing a b V
+have hb : 1 ≤ b := by
+  have hpred : 1 ≤ a - 1 := by omega
+  have hprod := Nat.mul_le_mul ha hpred
+  omega
+exact vanishing_on_products_aux V a b (by omega) hb hab
+```
+
+`omega` 两次处理 `1 ≤ a - 1` 和 `1 ≤ b`（从 `2 ≤ a` 和 `a * (a - 1) ≤ b` 推出的算术），第三个 `(by omega)` 是 `1 ≤ a`。**这一层**把不等式门槛**用 omega 拆开**。
+
+**底层**（门槛被最紧步消费）：`StabilizationBounds.lean:10-27` 的 `stabilization_reduction`：
+
+```
+theorem stabilization_reduction {a b : ℕ} (ha : 2 ≤ a)
+    (hab : a * (a - 1) ≤ b) :
+    let r := a - 1
+    let m := b - r
+    1 ≤ r ∧ r * (r + 1) ≤ b ∧ r * r ≤ m ∧
+      1 ≤ m ∧ r * (r - 1) ≤ m := by ...
+```
+
+这个 theorem 把 $b \ge a(a-1)$ 拆成**五个**子门槛，其中 `r * r ≤ m` 就是 Step 4 需要的 $m \ge r^2$。证明里 `nlinarith` 两次（第 24, 25 行），`omega` 一次（第 17 行）。
+
+**再往下**（Step 4 的 injectivity 检查）：`StabilizationBounds.lean:47-52` 的 `second_shift_weight` 声明 `hb : r * (r + 1) ≤ b` 作为 hypothesis，证明是 `have h := second_shift_weight_gap hr hb hi hir hj; omega`。这里 `hb` 是**门槛被最终消费**的位置：`r * (r+1) ≤ b` 通过 `nlinarith`（在 `second_shift_weight_gap` line 43）变成 $(i-1)r + j + 2 \le b - j$，也就是 `lem:shift` 需要的**source-degree 大于 destination-degree**。
+
+**总结**：门槛在 Lean 里的形态是**三层结构**：顶层 hypothesis（`a * (a - 1) ≤ b`），中层 `omega`/`nlinarith` 拆解为五个子门槛，底层 `r * (r + 1) ≤ b` 直接对应 tex 里 Step 4 的最紧那一步。**norm_num** 在 `Stabilization.lean:45` 只出现一次（`sixth_symmetric_power_comparison` 里的 `by norm_num`，验证 `2 ≤ 6` 和 `6 · 5 = 30 ≤ b`）。
+
+### §7.6 对称幂在 Lean 侧：Mathlib 路线还是自建 quotient
+
+**核心问题**：$\operatorname{Sym}$ 在 Lean 里是 Mathlib 的 `Sym` / `Polynomial` 路线，还是自建 quotient？
+
+**实测答案**：`SymPow` 是**自建 abbrev**，但**建立在 Mathlib 的 `SymmetricAlgebra` 之上**；不是 Mathlib 的 `Sym n R` 路线；也不是自建 quotient inductive type。
+
+具体：`Model.lean:12-21`：
+
+```
+def symMonomialRaw (n : ℕ) (V : Type u) [AddCommGroup V] [Module ℂ V]
+    (v : Fin n → V) : SymmetricAlgebra ℂ V :=
+  ∏ i : Fin n, SymmetricAlgebra.ι ℂ V (v i)
+
+def symPowSubmodule (n : ℕ) (V : Type u) [AddCommGroup V] [Module ℂ V] :
+    Submodule ℂ (SymmetricAlgebra ℂ V) :=
+  Submodule.span ℂ (Set.range (symMonomialRaw n V))
+
+abbrev SymPow (n : ℕ) (V : Type u) [AddCommGroup V] [Module ℂ V] :=
+  ↥(symPowSubmodule n V)
+```
+
+`SymmetricAlgebra ℂ V` 在 Mathlib 里定义为 `Polynomial (AddMonoidAlgebra ℂ V)`（**不是** `Sym n R` 的 quotient inductive type）。这里的 `SymPow n V` 是 `SymmetricAlgebra ℂ V` 的**子模**：由所有 $n$ 个 `ι(v_i)` 乘积张成；`ι` 是 degree-1 piece 的 inclusion。**关键**：这个子模**等于** $\operatorname{Sym}^n V$（`SymmetricAlgebra` 的分次里的第 $n$ 级），但 Lean 侧不通过**分次**定义它，而通过**products 的 span** 定义它。
+
+**为什么这样定义**：因为论文的核心论证（polarization）需要「**products span** $\operatorname{Sym}^k V$」这件事（`paper.tex:195-196`），而**products span**在分次定义里需要一次证明（`paper.tex:185-196` 的 polarization identity）。用 span-of-products 作为**定义**，把 span 事实**吸进 definition**，之后所有证明里「products span $\operatorname{Sym}^k V$」都变成 `Submodule.coe_span` 之类的 trivial 事实。**这是**「把论文的难点前置到定义里」的 Lean 侧典型手法。
+
+**grep 佐证**：模块内 `SymmetricAlgebra` 出现 87 次、`MvPolynomial` 出现 166 次（在 `BlockWeight.lean`, `FirstPolynomial.lean`, `MonomialMultilinear.lean` 里做多项式 extensionality）、`Polynomial` 出现 26 次（在 `BinaryFactorization.lean` 里做 $X^r + c Y^r$ 因式分解）；**Mathlib 的 `Sym n R`** 一次都没出现（我 grep 严格 `^import` 里没有 `Mathlib.RepresentationTheory.SymmetricAlgebra` 之类的额外 import；`Sym` 的独立使用没匹配到）。
+
+**方向导数算子**：`BlockWeight.lean:18` 定义 `weightedEuler (w : σ → ℕ) : Derivation R (MvPolynomial σ R) (MvPolynomial σ R) := ∑ i : σ, (w i) • ((X i) • pderiv i)`；`blockWeight` 是指示函数 (line 62)。**这是把 tex 里 $D_{Y,U} = \sum Y_k \partial/\partial U_k$ 换到 `MvPolynomial (β × ι) ℂ` 的坐标级实现**；tex 需要**选基** (paper.tex:245)，Lean 需要**选 `Fintype ι`**（`BlockWeight.lean:13` `[Fintype σ]`）。这个**选**在 Lean 里通过 `Module.finBasis ℂ V` 实现（`SecondTransfer.lean:67` `let e := Module.finBasis ℂ V`），仍然是**任意基**，不是**特定基**。
+
+### §7.7 injectivity lemma 的 Lean 形态（与 tex 差异）
+
+**tex 里 `lem:shift`**：Fischer Hermitian inner product + $\|Dh\|^2 - \|Eh\|^2 = (p-q) \|h\|^2$ 的正定性论证（`paper.tex:267-291`）。
+
+**Lean 里对应**：`DerivationInjectivity.lean:16-38` 的 `derivation_eq_zero_of_positive_weight`。**不用内积**，用 $\mathfrak{sl}_2$-like 三条 relations：
+
+```
+theorem derivation_eq_zero_of_positive_weight
+    (D E H : Derivation K (MvPolynomial σ K) (MvPolynomial σ K))
+    (hED : ⁅E, D⁆ = H) (hHE : ⁅H, E⁆ = (2 : K) • E)
+    (hEX : ∀ i : σ, E (E (X i)) = 0)
+    (f : MvPolynomial σ K) (p q : ℕ) (hpq : q < p)
+    (hf : H f = ((p : K) - q) • f) (hDf : D f = 0) : f = 0
+```
+
+三条 relations 是 `E D - D E = H`、`H E - E H = 2E`、`E^2 X_i = 0`；这是**标准 $\mathfrak{sl}_2$** 的 $[F, E] = H$、$[H, E] = 2E$、幂零性。**证明**通过 `ShiftInjectivity.eq_zero_of_positive_weight`（另一个文件里的抽象 weight-string argument），可能来自 Mathlib 或 OAI 内部。
+
+**BlockInjectivity.lean:18-40** 是把这个 lemma 具体到 `shift src dst`（对应 tex 的 $D_{Y,U}$）：三条 relations 通过 `commutator src dst` 和 `weight_commutator src dst` 建立（在 `PolynomialShift.lean` 里）。
+
+**差异**：tex 走**正定 Hermitian 内积**（analysis 味道），Lean 走**代数 sl2 relations + 幂零性**（algebra 味道）。两条路都能到达 injectivity；tex 用 Fischer 内积更**短**（一次正定性检查），Lean 用 commutator 更**构造性**（不需要实数上的正定）。这个差异是 OAI 形式化时的**技术选择**，反映 tex 侧 proof mechanism 段落（`paper.tex:147-163`）里那句「**direct inner-product proof**」的**取舍空间**。
+
+### §7.8 Step 2 与 Step 4 的 Lean 结构
+
+**Step 2 (freeing the last slot)** 在 Lean 里对应 `FirstTransfer.lean` 里的 `firstPolynomial_zero_of_chain` + `first_transfer`；调用 `BackwardCancellation.lean` 的 `eq_zero_of_backward_chain`（从 $k = m$ 反向递推到 $k = 0$）。每一步 injectivity 通过 `BlockInjectivity.eq_zero_of_shift_eq_zero` 建立。
+
+**Step 4 (removing the common power)** 在 Lean 里对应 `SecondTransfer.lean:58-77` 的 `second_transfer`。**关键**：这里的 injectivity 检查允许**任意 progress vector** $k : Fin r \to \mathbb{N}$，$k(j) \le r$ 对所有 $j$，无需按固定顺序。`zero_of_upward_grid` 是网格上的向上递推，`polynomial_step` (line 32) 每一步从 `k[i] += 1` 状态回推到 `k[i]` 状态。**destination-degree 检查**通过 `StabilizationBounds.grid_shift_weight` (line 56) 保证：`(∑ j, counts j) < b - counts i` 从 `hb : r * (r + 1) ≤ b` 得（`nlinarith` 一次，`omega` 一次）。
+
+这**对应** tex `paper.tex:417-421` 的「$r^2$ individual operators all raise the degree of the same variable block $x$」，但 Lean 侧允许**任意 interleaving**（不固定 $i$ 顺序），因为 destination $x$ 是**同一个** block；tex 侧的「before any one is applied, its degree is at most $r^2 - 1$」正好被 Lean 的 `∑ counts j ≤ r · r = r²`（`grid_shift_weight` line 60-64）覆盖。**Lean 的写法更一般**：把「destination-degree 递增」的**具体** interleaving 抽象为**任意 progress vector**，门槛**不变**（$m \ge r^2$）。
+
+### §7.9 与 tex 声明的对应清单
+
+| tex 声明 | tex 位置 | Lean 对应 | Lean 位置 |
+| --- | --- | --- | --- |
+| `thm:main` | paper.tex:99-103 | `canonical_foulkes_howe_surjective` | Stabilization.lean:15-23 |
+| `eq:average` | paper.tex:73-77 | `foulkesFormula` (用 factorial 逆乘) | Model.lean:27-34 |
+| `eq:map` | paper.tex:84-86 | `IsFoulkesMap` | Model.lean:36-40 |
+| criterion (unnumbered) | paper.tex:227-229 | `IsFoulkesMap.surjective_of_vanishing` | Annihilator.lean:14-35 |
+| `lem:shift` | paper.tex:260-265 | `PolynomialShift.eq_zero_of_shift_eq_zero` + `derivation_eq_zero_of_positive_weight` | BlockInjectivity.lean:18-40 + DerivationInjectivity.lean:16-38 |
+| `eq:norm` | paper.tex:286-288 | 无直接对应（Lean 用 commutator relations 替代） | PolynomialShift.lean 里的 `commutator src dst` 与 `weight_commutator src dst` |
+| `prop:vanishing` | paper.tex:304-313 | `vanishing_on_products` | Stabilization.lean:30-33 |
+| `eq:diagonal` | paper.tex:308-311 | 假设 `hdiag : ∀ y, T (fun _ => symMonomial b V y) = 0` | Stabilization.lean:31 末尾 |
+| `eq:rm` | paper.tex:320-322 | `stabilization_reduction` 里的 `let r := a - 1; let m := b - r` | StabilizationBounds.lean:12-13 |
+| `eq:range` | paper.tex:324-326 | `stabilization_reduction` 结论 `r * r ≤ m` | StabilizationBounds.lean:14 |
+| Step 1 `eq:binary` | paper.tex:346-348 | `binary_diagonal_to_mixed_products` | BinaryVanishing.lean:15-32 |
+| Step 2 `eq:first-composition` | paper.tex:361-365 | `first_transfer` 与 `firstPolynomial_zero_of_chain` | FirstTransfer.lean |
+| Step 3 `eq:inductive-vanishing` | paper.tex:389-392 | `vanishing_induction_from_transfer_steps` 主体 | Vanishing.lean:16-66 |
+| Step 4 `eq:second-composition` | paper.tex:409-413 | `second_transfer` 与 `polynomial_step` | SecondTransfer.lean:32-77 |
+| `cor:comparison` | paper.tex:440-448 | `foulkes_comparison_embedding` | Stabilization.lean:35-40 |
+| sixth case $b \ge 30$ | paper.tex:447 | `sixth_symmetric_power_comparison` | Stabilization.lean:42-45 |
+| `remark` | paper.tex:462-471 | 分散在 `FiniteDimension.lean`, `StabilizationBounds.lean`, `BlockWeight.lean` | 见 §7.4-§7.6 |
+
+`cor:comparison` 在 Lean 里的**构造**（`Stabilization.lean:35-40`）：把 `canonical_foulkes_howe_surjective` 用在 **dual** `Module.Dual ℂ V` 上，得到 dual 空间的 surjection；再通过 `PairingConstruction.comparison_of_surjection` 转成原空间的 embedding。**这一步用了 perfect pairing** `symPowDualMap_isPerfPair`（`DualEquivalence.lean:14` instance），**不是**完全可约性；这跟 tex 侧「choose invariant complement」的**具体 split** 是**两条不同**的实现路径。**推测**：Lean 侧走 perfect pairing 是因为「GL(V)-invariant complement」的构造需要 representation-theoretic machinery（完全可约），而 perfect pairing 只需要 finite-dimensionality（`DualEquivalence.lean` 里已建立）。**避开完全可约**是 Lean 侧的一个技术简化。
+
+### §7.10 模块组织：77 个文件的技术分布
+
+按文件名分类，77 个文件大致落在六组：
+
+- **Group A: 基础定义**（Model, FiniteDimension, TensorPresentation, Multiplication, Spanning, DegreeOne, Polarization）：定义 `SymPow`, `IsFoulkesMap`, `symmetricMultilinearForm` 等；把 tex 里 `sec:map` 的 polarization + averaging 落地。
+- **Group B: canonical map 与 annihilator**（CanonicalMap, GeneratorLift, FoulkesMultilinear, FoulkesSymmetries, FoulkesDiagonal, MonomialMultilinear, MultilinearPolynomial, Annihilator, DualComparison, DualEquivalence, SymmetricDual, PermanentPairing, PairingConstruction, PairingLift, PlethysmDual, Actions, Functoriality, Naturality）：把 $\mu_{a,b,V}$ 的**存在性**和**唯一性**（`exists_foulkesMap_from_spanning` CanonicalMap.lean:64）建立；把 criterion 换成 Lean 里的 `IsFoulkesMap.surjective_of_vanishing`（Annihilator.lean:14）。
+- **Group C: 多项式模型与 shift operator**（MultilinearDescent, FlattenedForm, FlattenedSwap, SymmetricLift, FirstPolynomial, PolynomialShift, ShiftSequence, ShiftNilpotence, ShiftHomogeneity, SumShift, BlockDerivation, BlockWeight, BlockInjectivity, DerivationInjectivity）：tex 里 `sec:differential` 的 Lean 对应；把 $D_{Y,U}$ 定义成 `MvPolynomial` 上的 `shift`。
+- **Group D: Step 1 二元分裂**（BinaryFactorization, BinaryVanishing, DiagonalCoefficient, DiagonalPolarization, EncodedCancellation, PowerSpan, FixedSlot, SlotDerivative, LinearCase）：`binary_power_factorization` (BinaryFactorization.lean:11-40) 给出 $X^r + cY^r$ 分裂；`binary_diagonal_to_mixed_products` 是 Step 1 结论。
+- **Group E: Step 2 与 Step 4 transfer**（FirstLabels, FirstCounts, FirstTransfer, FirstSwap 未见于文件名但存在, BackwardCancellation, TransferDerivative, TransferEndpoints, SecondLabels, SecondCounts, SecondEndpoints, SecondSwap, SecondTransfer, GridCancellation, RowSwap, MonomialCut）：两条权重串的具体 injectivity 检查；网格归纳 `zero_of_upward_grid` 在 `GridCancellation.lean` 里。
+- **Group F: 归纳骨架与最终 theorem**（Vanishing, VanishingOne, VanishingFirst, VanishingInduction, ProductVanishing, StabilizationBounds, Surjectivity, Stabilization, DualEmbedding, AlgebraEvaluation, EncodingHomogeneous）：`vanishing_induction_from_transfer_steps` (Vanishing.lean:16-66) 是**沿 $a$ 归纳**的骨架；`Stabilization.lean` 是主入口。
+
+**观察**：文件命名里出现了 4 次 `Vanishing*`、5 次 `First*`、4 次 `Second*`、2 次 `Shift*`、2 次 `Block*`；**Step 2 (First) 和 Step 4 (Second) 是两条独立的 weight-shift 通道**，各自有 labels/counts/endpoints/swap/transfer 五个配套 helper。这是**证明结构**在**文件系统**里的直接投影；tex 只有 4 段 Step 而 Lean 有 77 个文件，比例约 20:1，反映**每一步 tex 段落**都被展开成 20 个左右的 Lean lemma。
+
+### §7.11 OAI.Problem346 与目录 FoulkesHowe 的命名分裂
+
+主 namespace 是 `OAI.Problem346`（`Stabilization.lean:13`, `Model.lean:10`, 68 个文件里都是 `namespace Problem346`）；文件目录是 `RepresentationTheory/FoulkesHowe/`。两套命名同时活在 `formalization.yaml:1170-1172` 的三行里。这个分裂我推测源自 OAI 侧的**考题编号系统**：每篇论文被分配一个数字题号，题号在**内部登记**（`OAI.Problem346`）而**外部标题**（`FoulkesHowe`）保留学术可读性。这个双命名不是 tex 侧的事，纯是形式化侧的组织约定。
+
+**次要观察**：模块里的**顶层 theorem 声明**都不写 `OAI.Problem346.` 前缀，靠 `namespace Problem346` 自动 wrap；但 JSON `theorem_names` 里 `OAI.Problem346.canonical_foulkes_howe_surjective` 是**全限定名**，`formalization.yaml:1171` 也是**全限定名**。所以双命名体现在**内部 namespace** 与**外部登记字符串**之间。
+
+### §7.12 Lean 与 tex 的一个具体差异：Fischer 内积 vs commutator
+
+tex `paper.tex:267-274` 引入 Fischer 内积 $\|X^\alpha\|^2 = \alpha!$ 并**显式**声明 `positive definite`（引用 `AldazRender`）。Lean 侧 `DerivationInjectivity.lean` 完全**不用**内积，只用 $\mathfrak{sl}_2$ 三条 commutator relations。**这个差异不是等价性选择**，是**技术选择**：Lean 侧的抽象 `ShiftInjectivity.eq_zero_of_positive_weight`（在 `ShiftInjectivity.lean` 里，我未展开）大概是 OAI 内部已经建立的**通用** lemma，用于**任何**满足 sl2 relations 的算子；tex 侧的 Fischer 内积是**一次性**构造，专门给多项式用。Lean 侧走**通用** lemma 的路是**减少**每个新证明的**基础建设**成本，代价是**证明结构**离 tex 稍远。
+
+**推测**：如果**要求** Lean 完全 mirror tex 用 Fischer 内积，需要在 `MvPolynomial` 上**独立**构造一个正定 Hermitian inner product（`InnerProductSpace ℂ (MvPolynomial σ ℂ)`），这本身是一个几百行的基础工作。**避开**这一步是 OAI 侧的合理选择。
+
+## §8 外部文献检索与先行工作对照
+
+我按任务要求做**两栏物理分栏**：**A 栏（论文口径）**只允许来自 `paper.tex` 和 `references.tex` 的原文；**B 栏（检索到的外部对照）**记录我尝试爬到的一手来源，凡拿不到的都标 `[推测]`。检索强度我按**三级**打：`强` = 直接一手 PDF 或 arXiv abstract 可核对；`中` = aggregator 页面或二手引用可核对；`弱` = 只搜到相关领域关键词、无法定位一手文献。
+
+### §8.1 A 栏：论文口径的直接引用清单
+
+`references.tex` 里全部 11 条 bibitem，按主题分组：
+
+**Foulkes 猜想原始来源**：`Foulkes1950` (references.tex:26-29) `H. O. Foulkes, Concomitants of the quintic and sextic up to degree four in the coefficients of the ground form, J. London Math. Soc. 25 (1950), 205-209`。论文正文引用点：`paper.tex:130-134` 「The canonical-map question must be distinguished from the ordinary Foulkes conjecture [Foulkes1950], which asks, for $a \le b$, for a $\mathrm{GL}(V)$-equivariant injection $\operatorname{Sym}^a(\operatorname{Sym}^b V) \hookrightarrow \operatorname{Sym}^b(\operatorname{Sym}^a V)$ [Conjecture 2.10 of RSW]」。**A 栏结论**：论文明确把 canonical map 与 Foulkes injection **分开**；Foulkes 1950 是 injection 猜想的**一手来源**，论文口径里**不**把它当成 surjectivity 的来源。
+
+**Brion 稳定性质**：`Brion1993` (references.tex:8-10) `M. Brion, Stable properties of plethysm: on two conjectures of Foulkes, Manuscripta Math. 80 (1993), 347-371`。论文引用点：`paper.tex:114` 「Brion established eventual surjectivity [Brion1993]」。**A 栏结论**：Brion 1993 是**存在性** eventual surjectivity 的**一手来源**；论文口径把 `thm:main` 定位为 Brion 的**有效化**版本。
+
+**Brion 显式界**：`Brion` (references.tex:13-17) `M. Brion, Sur certains modules gradués associés aux produits symétriques, in Algèbre non commutative (Reims 1995), Sém. Congr. 2, SMF, 1997, 157-183`。论文引用点：`paper.tex:115-116` 「subsequently gave an effective bound involving both $a$ and the dimension [Theorem 3.3 of Brion]」。**A 栏结论**：Brion 1997 的界**依赖** $\dim V$；`thm:main` 声称的**dimension-independent** 界是相对 Brion 1997 的**改进**。
+
+**CIM 反例**：`CIM` (references.tex:20-23) `M.-W. Cheung, C. Ikenmeyer, S. Mkrtchyan, Symmetrizing tableaux and the 5th case of the Foulkes conjecture, J. Symbolic Comput. 80 (2017), 833-843; arXiv:1509.03944v1`。论文引用点：`paper.tex:142-145` 「the canonical map has nonzero kernels at the diagonal pairs $(a,b) = (5,5)$ and $(6,6)$ in suitable dimensions [arXiv version, Theorem 6(b),(c) and Remark 7 of CIM], both outside the range of Theorem thm:main」。**A 栏结论**：CIM 提供了 canonical map **not** injective 的**具体**反例；这两处的 $(a,b)$ 都在 $b < a(a-1)$ 之外，与 `thm:main` 门槛**吻合**。
+
+**Fulton-Harris**：`FultonHarris` (references.tex:32-34) 教科书；论文引用点：`paper.tex:253-254` 「compare [Section 11.1, Claim 11.4 and equation (11.5) of FultonHarris]」。**A 栏结论**：$\mathfrak{sl}_2$ weight string 的经典出处；`lem:shift` 的标准模板。
+
+**Ikenmeyer propagation**：`Ikenmeyer` (references.tex:37-39) `C. Ikenmeyer, On McKay's propagation theorem for the Foulkes conjecture, arXiv:1509.04957v1, 2015`。论文引用点：`paper.tex:165-171` 「Successive weight shifts also occur in Ikenmeyer's proof [Section 5 of Ikenmeyer] of McKay's propagation theorem [McKay]... For fixed $a$ and $B \ge a$, injectivity at $(a, B)$ propagates to every $(a, b)$ with $b \ge B$」。**A 栏结论**：Ikenmeyer 是**传播**方向上的 weight-shift 论证；本文的两个序列**包围** slots 归纳，是**新写法**（`paper.tex:172-173` 「Here the two sequences surround an induction on the number of slots and give a surjectivity range directly」）。
+
+**Landsberg GCT**：`Landsberg` (references.tex:42-45) `J. M. Landsberg, Geometric complexity theory: an introduction for geometers, Ann. Univ. Ferrara 61 (2015), 65-117; arXiv:1305.7387`。论文引用点：`paper.tex:113` 「see also Landsberg [Section 7.6, Propositions 7.11-7.12]」、`paper.tex:124-126` 「It also answers positively the request for a polynomial bound in [Problem 7.19 of Landsberg]: in that source's notation $d = b$, $n = a$, and $w = \dim V$, the bound is $d \ge n(n-1)$, including when $w = n$」。**A 栏结论**：Landsberg 教科书式 survey 的 Problem 7.19 是**公开问题**；`thm:main` 直接**回答**了这个问题（**多项式** bound 且 **dimension-independent**）。
+
+**Macdonald 完全可约**：`Macdonald` (references.tex:49-51) `I. G. Macdonald, Symmetric Functions and Hall Polynomials, 2nd ed., Oxford, 1995`。论文引用点：`paper.tex:453-454` 「Finite-dimensional polynomial representations over $\mathbb C$ are completely reducible [Chapter I, Appendix A, Sections 7-8 of Macdonald]」。**A 栏结论**：`cor:comparison` 的 split 步骤用 Macdonald 的经典 reference。
+
+**McKay 传播**：`McKay` (references.tex:54-56) `T. McKay, On plethysm conjectures of Stanley and Foulkes, J. Algebra 319 (2008), 2050-2071`。论文引用点：`paper.tex:166` 「Ikenmeyer's proof [of McKay's propagation theorem [McKay]]」。**A 栏结论**：McKay 是**传播**定理的**一手来源**，Ikenmeyer 提供了证明。
+
+**Raicu-Sam-Weyman**：`RSW` (references.tex:59-63) `C. Raicu, S. V. Sam, J. Weyman, On some modules supported in the Chow variety, Vietnam J. Math. 50 (2022), 501-521; arXiv:2108.10910v1`。论文引用点：`paper.tex:88-92` 「If $A \subseteq R$ is the subalgebra generated by $R_1$, then $\operatorname{im} \mu_{a,b,V} = A_b$. In positive dimension, Raicu-Sam-Weyman [Section 2 of RSW] formulate this map as $\operatorname{Sym}^b(D^a V) \to D^a(\operatorname{Sym}^b V)$, with divided powers realized as invariant tensors」、`paper.tex:119-123` 「Raicu, Sam, and Weyman bound the regularity of the Segre ring and modules of covariants, including the normalization [Theorem 3.9 of RSW]. Their theorem does not compute the top degree of the separate quotient $R/A$」。**A 栏结论**：RSW 是**divided power** 与 **Chow variety** 视角的一手来源；本文用 $\operatorname{Sym}$ ，并非 divided powers 是**归一化选择**；RSW 的 regularity bound **不够** compute top degree of $R/A$。
+
+**Aldaz-Render Fischer 内积**：`AldazRender` (references.tex:3-5) `J. M. Aldaz and H. Render, A Fischer type decomposition theorem from the apolar inner product, Anal. Math. Phys. 13 (2023), article 91`。论文引用点：`paper.tex:268-270` 「positive definite Fischer, or apolar, Hermitian inner product [Section 2, equation (8) and Proposition 3 of AldazRender]」。**A 栏结论**：`lem:shift` 里的 Fischer 内积正定性是 Aldaz-Render 2023 的**一手**结果。
+
+### §8.2 B 栏：任务点名的三组先行工作对照
+
+任务要求与 Foulkes 原始猜想、Landesman-Ram-Rumely-Wilson、Kemper、Powers-Regev 对照。我在 `references.tex` 里核对：
+
+- **Foulkes 原始猜想**：`references.tex:26-29` 有 `Foulkes1950`，A 栏已覆盖。
+- **Landesman-Ram-Rumely-Wilson**：**不**在 `references.tex` 里。
+- **Kemper**：**不**在 `references.tex` 里。
+- **Powers-Regev**：**不**在 `references.tex` 里。
+
+**检索强度记录**：我三次尝试 WebSearch：
+
+1. `Landesman Ram Rumely Wilson Foulkes conjecture symmetric powers` - 结果全是 aggregator（zhangqiaokeyan、archive.org、cgl.org.cn 之类），无一手 PDF 无 arXiv abstract；我未能定位**具体**的 LRRW 论文标题、发表年份与主定理内容。**检索强度：弱**。
+2. `Kemper symmetric powers invariant theory Foulkes conjecture algorithm` - 结果是 aggregator + 一本 Springer invariant theory 教科书章节链接，未能定位到 Kemper 关于 Foulkes 猜想的具体**一手**论文。**检索强度：弱**。
+3. `Powers Regev Foulkes conjecture representation theory arXiv` - 结果包含一个 aggregator 的「On a Conjecture of Foulkes」条目和一个 MathOverflow 关于 plethysm 的讨论；未能定位到 Powers-Regev 的具体一手论文。**检索强度：弱**。
+
+按任务的「拿不到一手来源就标 `[推测]`」，以下对照都是 `[推测]`：
+
+- `[推测]` **LRRW 与本文的关系**：Landesman-Ram-Rumely-Wilson 我**记忆**里与 Foulkes 猜想和 plethysm 计算的**算法**相关，可能是**计算**上的推进（比如用 symbolic 或 combinatorial 方法验证特定 $(a,b)$ 情形的 injection）。**如果**这条记忆成立，LRRW 侧的**技术**是 computational representation theory，与本文的 polynomial-identity 侧**没有直接**引用关系；论文口径没有引 LRRW 是**合理**的（两条路技术正交）。**检索强度：弱**，我不写具体年份与期刊。
+- `[推测]` **Kemper 与本文的关系**：Kemper 我**记忆**里在**计算不变量论**方向有系统性工作（`computational invariant theory` 相关 monograph），涉及有限群不变量环的 Noether 数、Hilbert basis、regularity 界。**如果**这条记忆成立，Kemper 的技术侧**接近** RSW 的 regularity 路线；本文 §2.1 和 §2.3 的失败尝试正是**这条路线**。论文口径没有引 Kemper，可能是因为 Kemper 的具体结果**不直接**给出 Foulkes-Howe canonical map 的 surjectivity 界。**检索强度：弱**。
+- `[推测]` **Powers-Regev 与本文的关系**：Powers-Regev 我**记忆**里与 Foulkes 猜想**具体**小情形（可能是 $a = 3, 4$ 或 $a \le 5$）的 representation comparison 相关，是**组合**+**character** 路线。**如果**这条记忆成立，Powers-Regev 与 CIM 的**具体** $a = 5, 6$ 反例是**同一层次**的工作；本文口径引了 CIM 但没引 Powers-Regev，可能是因为 Powers-Regev 处理的是 $a$ 更小的情形（比 CIM 更**基础**），CIM 已经**覆盖**了这些情形。**检索强度：弱**。
+
+**诚实标注**：上面三条 `[推测]` 是**我记忆**里的方向感，未经一手文献核对；如果 OAI 侧未来把这三组文献加入 `references.tex`，我的具体对照需要重写。**任务要求**「与论文口径物理分栏」：本节 A 栏（§8.1）与 B 栏（§8.2）在**同一节 §8** 里但通过**「A 栏」/「B 栏」显式段头**物理分开；`paper.tex` 与 `references.tex` 的引用**只**在 A 栏；`[推测]` **只**在 B 栏；两栏的**引用**语法不同（A 栏用 `references.tex:行号` 或 `paper.tex:行号`；B 栏只有 `[推测]` 前缀）。
+
+### §8.3 论文口径的**空白点**
+
+我从 A 栏和 B 栏的对照里能确认论文**没有**处理的**具体**问题：
+
+- **最小 $b_0$**：`paper.tex:127-128` 明确说 「The present argument does not determine the least stabilization degree in general; the bound is not asserted to be sharp」。**本文**给的是**充分**门槛，不是**必要**门槛。
+- **一般域上的推广**：`paper.tex:467-470` 声明只用了 $\mathbb C$ 的**代数闭 + 特征零 + Hermitian 正定**；**没有**声称推广到 $\overline{\Q}$ 或 p-adic。**本文**在**其他域**上的**状态**是 open（我 §5.2(d) 和 §5.5(d) 的 `[推测]` 讨论就是这个空白）。
+- **kernel 结构**：`paper.tex:142-145` 只说 canonical map 在 $(5,5)$, $(6,6)$ 处**有** kernel；**没有**说 kernel 长什么样。**本文**不处理 kernel 的 representation-theoretic 分解。
+- **divided powers 版本**：`paper.tex:88-92` 通过 RSW 提到 divided powers 视角 $\operatorname{Sym}^b(D^a V) \to D^a(\operatorname{Sym}^b V)$；**本文**用 $\operatorname{Sym}$ 不用 $D$，两者通过 `eq:average` 归一化转换。**本文**不处理 divided powers 侧的**独立**界。
+
+### §8.4 与先行工作的**技术**关系一句话总结
+
+按 A 栏的十一个 bibitem，我按**依赖强度**排序：
+
+- **硬依赖**：`AldazRender`（Fischer 内积正定性）、`Macdonald`（完全可约性）、`Foulkes1950`（问题本身）、`RSW`（canonical map 的语言与问题定义）。这四个是**论证骨架**用到的**一手**素材。
+- **软依赖**：`Brion1993`（存在性的先例）、`Brion`（$\dim V$-dependent 界的先例）、`CIM`（$b < a(a-1)$ 时反例的先例）、`Landsberg`（Problem 7.19 是本文回答的目标）。这四个是**上下文**用到的**先例**。
+- **比较对象**：`Ikenmeyer` 和 `McKay`（weight-shift 传播的另一方向）、`FultonHarris`（$\mathfrak{sl}_2$ weight string 的经典表述）。这三个是**技术**上的**平行**工作。
+
+B 栏（LRRW、Kemper、Powers-Regev）都是 `[推测]` 级别的**候选平行工作**，与本文**无直接引用**关系。
+
+### §8.5 我从外部检索里带回来的**新** idea
+
+`[推测]` 如果 LRRW 是 computational 路线，那**验证** $b_0(a) = a(a-1)$ 是否是**最小** stabilization degree（对**小** $a$）是**可行**的：对每个 $a \le 6$ 逐 degree 检查 $\mu$ 的 rank，看 $b < a(a-1)$ 时是否**真的**存在 kernel。**如果** LRRW 侧有这样的实现（我未验证），本文的 `thm:main` 是**充分**界的**理论**证明，LRRW 侧的计算是**最小**界的**经验**证据；两者**互补**。
+
+`[推测]` 如果 Kemper 是 computational invariant theory 路线，那**验证** $R/A$ 的**top nonzero degree** 是否是 $a(a-1) - 1$ 是**可行**的：`paper.tex:117-119` 说 $R/A$ 只在有限 degree 非零；如果**能算出** $R/A$ 的具体 Hilbert series，就能定出**实际**的 $b_0$。**如果** Kemper 侧有 Hilbert series 计算的**通用**软件，这是**直接**跟进的一个**具体**实验方向。
+
+`[推测]` 如果 Powers-Regev 是**小情形** injection 路线，那**对比** $a = 3, 4$ 时本文门槛 $b \ge 6, 12$ 与 Powers-Regev 已知 injection 起点是**可行**的；本文的**充分**门槛**很可能**远大于**实际**门槛（因为 `paper.tex:128` 已经承认 bound not sharp）。这个 gap 的**具体**大小是**未来**工作。

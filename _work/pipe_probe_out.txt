@@ -1,0 +1,141 @@
+D25|255|vbars=12|pipe=8|dollar=even|MATCH=YES|npipe_now=12|tbl_start=252|hpipe=4|ncols=3|outside\|=8(census 8)|inside\|=0|$=8
+   HDR: | 维度 | 本篇 DirectCrouzeix（直接） | StructuralCrouzeix（结构） |
+D25|259|vbars=8|pipe=4|dollar=even|MATCH=YES|npipe_now=8|tbl_start=252|hpipe=4|ncols=3|outside\|=4(census 4)|inside\|=0|$=8
+   HDR: | 维度 | 本篇 DirectCrouzeix（直接） | StructuralCrouzeix（结构） |
+D25|315|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=300|hpipe=4|ncols=3|outside\|=2(census 2)|inside\|=2|$=4
+   HDR: | 记号 | tex 出处 | 定义原文或说明 |
+D25|596|vbars=11|pipe=6|dollar=even|MATCH=YES|npipe_now=11|tbl_start=587|hpipe=5|ncols=4|outside\|=6(census 6)|inside\|=0|$=28
+   HDR: | 对象 | 出现位置 | 机械理由 | 放宽后崩在哪 |
+D25|700|vbars=9|pipe=4|dollar=even|MATCH=YES|npipe_now=9|tbl_start=698|hpipe=5|ncols=4|outside\|=4(census 4)|inside\|=0|$=22
+   HDR: | 对象 | 位置 | 作用 | 放宽或改动后的崩点 |
+D25|702|vbars=7|pipe=2|dollar=even|MATCH=YES|npipe_now=7|tbl_start=698|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=0|$=8
+   HDR: | 对象 | 位置 | 作用 | 放宽或改动后的崩点 |
+D25|703|vbars=7|pipe=2|dollar=even|MATCH=YES|npipe_now=7|tbl_start=698|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=0|$=6
+   HDR: | 对象 | 位置 | 作用 | 放宽或改动后的崩点 |
+D25|705|vbars=7|pipe=2|dollar=even|MATCH=YES|npipe_now=7|tbl_start=698|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=0|$=18
+   HDR: | 对象 | 位置 | 作用 | 放宽或改动后的崩点 |
+D25|708|vbars=7|pipe=2|dollar=even|MATCH=YES|npipe_now=7|tbl_start=698|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=0|$=8
+   HDR: | 对象 | 位置 | 作用 | 放宽或改动后的崩点 |
+D25|709|vbars=7|pipe=2|dollar=even|MATCH=YES|npipe_now=7|tbl_start=698|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=0|$=14
+   HDR: | 对象 | 位置 | 作用 | 放宽或改动后的崩点 |
+D25|1043|vbars=15|pipe=10|dollar=even|MATCH=YES|npipe_now=15|tbl_start=1041|hpipe=5|ncols=4|outside\|=10(census 10)|inside\|=0|$=20
+   HDR: | 对象 | 位置 | 作用 | 放宽或改动后的崩点 |
+D25|1044|vbars=7|pipe=2|dollar=even|MATCH=YES|npipe_now=7|tbl_start=1041|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=0|$=10
+   HDR: | 对象 | 位置 | 作用 | 放宽或改动后的崩点 |
+D25|1046|vbars=7|pipe=2|dollar=even|MATCH=YES|npipe_now=7|tbl_start=1041|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=0|$=16
+   HDR: | 对象 | 位置 | 作用 | 放宽或改动后的崩点 |
+D25|1344|vbars=11|pipe=6|dollar=even|MATCH=YES|npipe_now=11|tbl_start=1342|hpipe=5|ncols=4|outside\|=6(census 6)|inside\|=0|$=18
+   HDR: | 对象 | 位置 | 作用 | 放宽或改动后的崩点 |
+D25|1345|vbars=7|pipe=2|dollar=even|MATCH=YES|npipe_now=7|tbl_start=1342|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=0|$=18
+   HDR: | 对象 | 位置 | 作用 | 放宽或改动后的崩点 |
+D25|1609|vbars=8|pipe=4|dollar=even|MATCH=YES|npipe_now=8|tbl_start=1603|hpipe=4|ncols=3|outside\|=4(census 4)|inside\|=0|$=6
+   HDR: | 引言原句 | 正文位置 | 我的核对 |
+D25|1871|vbars=9|pipe=2|dollar=even|MATCH=YES|npipe_now=9|tbl_start=1856|hpipe=7|ncols=6|outside\|=2(census 2)|inside\|=0|$=16
+   HDR: | 值 | 论文位置 | Lean 对应 | 作用 | 敏感度（改坏的后果） | 我的判定 |
+D25|1872|vbars=9|pipe=2|dollar=even|MATCH=YES|npipe_now=9|tbl_start=1856|hpipe=7|ncols=6|outside\|=2(census 2)|inside\|=0|$=8
+   HDR: | 值 | 论文位置 | Lean 对应 | 作用 | 敏感度（改坏的后果） | 我的判定 |
+D25|1876|vbars=9|pipe=2|dollar=even|MATCH=NO|npipe_now=9|tbl_start=1856|hpipe=7|ncols=6|outside\|=2(census 2)|inside\|=0|$=24
+   CENSUS: | $\delta$（外逼近厚度） | `main.tex:464` `For $0<\delta<1$, choose a finite Euclidean $\delta$-net …`、`:468` `$\Omega_\delta=\{z:\Phi_\delta(z)<1\}$`、`:510` `$\delta_j=1/(j+1)$` | `Geometry.exists_exponential_outer` 的 `ε` 参数 + `δ := min (1/2) (ε/(2*C))`（`OuterApproximation.lean:70`）；主证明里 `obtain ⟨δ,hδ,hδV⟩ := (isCompact_numericalRange A).exists_thickening_subset_open hV hWV`（`CompleteBound.lean:82`） | 两
+   FILE  : | $\delta$（外逼近厚度） | `main.tex:464` `For $0<\delta<1$, choose a finite Euclidean $\delta$-net …`、`:468` `$\Omega_\delta=\{z:\Phi_\delta(z)<1\}$`、`:510` `$\delta_j=1/(j+1)$` | `Geometry.exists_exponential_outer` 的 `ε` 参数 + `δ := min (1/2) (ε/(2*C))`（`OuterApproximation.lean:70`）；主证明里 `obtain ⟨δ,hδ,hδV⟩ := (isCompact_numericalRange A).exists_thickening_subset_open hV hWV`（`CompleteBound.lean:82`） | 两重身份：网格精度、支撑函数下移量 | `0<δ<1` 的上界 1 是**任意的**（只为参数化好看）；真正的敏感度在 Lean 的 `min (1/2) (·)`：那个 $\tfrac12$ 保证 $h_K(\nu)+\delta$ 不把 $\Omega_\delta$ 撑出包含 $K$ 的最小范围。$[推测]$ 主要服务于 `axis_support_bound` 里的 $\|z\|\le L$ 结论 | 论文侧的两个 $\delta$ 同量级是我在 11.3 表里记的"刻意合并" |
+   HDR: | 值 | 论文位置 | Lean 对应 | 作用 | 敏感度（改坏的后果） | 我的判定 |
+D25|1882|vbars=9|pipe=2|dollar=even|MATCH=YES|npipe_now=9|tbl_start=1856|hpipe=7|ncols=6|outside\|=2(census 2)|inside\|=0|$=14
+   HDR: | 值 | 论文位置 | Lean 对应 | 作用 | 敏感度（改坏的后果） | 我的判定 |
+D25|1884|vbars=11|pipe=4|dollar=even|MATCH=YES|npipe_now=11|tbl_start=1856|hpipe=7|ncols=6|outside\|=4(census 4)|inside\|=0|$=8
+   HDR: | 值 | 论文位置 | Lean 对应 | 作用 | 敏感度（改坏的后果） | 我的判定 |
+D25|1885|vbars=11|pipe=4|dollar=even|MATCH=NO|npipe_now=11|tbl_start=1856|hpipe=7|ncols=6|outside\|=4(census 4)|inside\|=0|$=24
+   CENSUS: | $A=\begin{pmatrix}0&2\\0&0\end{pmatrix}$ | `main.tex:528` | `def sharpnessMatrix := !![0, 2; 0, 0]`（`Sharpness.lean:32`） | 唯一反例 | 那个 **2**（，并非 1）就是让 $\|A\|=2$ 且 $W(A)\subseteq\overline{\mathbb D}$ 同时成立的选择：一般地 $\begin{pmatrix}0&t\\0&0\end{pmatrix}$ 给出 $\|A\|=t$、$\max_{W(A)}\lvert z\rvert=t/2$，比值恒为 2。论文取 $t=2$ 是为了让右端恰为 1。**Lean 用 `sharpnessCoefficients := ![0, 1]`（`:34`）把 $P(z)=z$ 编成 $B_0=0,B_1=1$
+   FILE  : | $A=\begin{pmatrix}0&2\\0&0\end{pmatrix}$ | `main.tex:528` | `def sharpnessMatrix := !![0, 2; 0, 0]`（`Sharpness.lean:32`） | 唯一反例 | 那个 **2**（，并非 1）就是让 $\|A\|=2$ 且 $W(A)\subseteq\overline{\mathbb D}$ 同时成立的选择：一般地 $\begin{pmatrix}0&t\\0&0\end{pmatrix}$ 给出 $\|A\|=t$、$\max_{W(A)}\lvert z\rvert=t/2$，比值恒为 2。论文取 $t=2$ 是为了让右端恰为 1。**Lean 用 `sharpnessCoefficients := ![0, 1]`（`:34`）把 $P(z)=z$ 编成 $B_0=0,B_1=1$，与 `main.tex:526` 的 "$m=1$, $P(z)=z$" 一致** | "比值恒为 2"是我的**外部计算**（单参数族），论文只给 $t=2$ |
+   HDR: | 值 | 论文位置 | Lean 对应 | 作用 | 敏感度（改坏的后果） | 我的判定 |
+D25|1886|vbars=15|pipe=4|dollar=even|MATCH=NO|npipe_now=15|tbl_start=1856|hpipe=7|ncols=6|outside\|=4(census 4)|inside\|=4|$=22
+   CENSUS: | $(1,i,j,k)$ 四元组 | `main.tex:514-518`（Toeplitz-Hausdorff 重证）：`$(2\Re(\bar uv),2\Im(\bar uv),\|u\|2-\|v\|2)$` ranges over the unit sphere in $\R^3$ | `Convexity.lean`：`bloch`（`:84`）、`norm_sq_three`/`norm_bloch`/`bloch_surjective_sphere`/`threeLinear`/`threeLinear_ker_ne_bot`/`twoForm`/`twoForm_bloch`/`convex_twoForm`/`convex_quadratic_range`（13 条声明，273 行） | 用 Bloch 球参数化把 $W(A)$ 写成实二次映射像，再由 $\R^3\t
+   FILE  : | $(1,i,j,k)$ 四元组 | `main.tex:514-518`（Toeplitz-Hausdorff 重证）：`$(2\Re(\bar uv),2\Im(\bar uv),\|u\|2-\|v\|2)$` ranges over the unit sphere in $\R^3$ | `Convexity.lean`：`bloch`（`:84`）、`norm_sq_three`/`norm_bloch`/`bloch_surjective_sphere`/`threeLinear`/`threeLinear_ker_ne_bot`/`twoForm`/`twoForm_bloch`/`convex_twoForm`/`convex_quadratic_range`（13 条声明，273 行） | 用 Bloch 球参数化把 $W(A)$ 写成实二次映射像，再由 $\R^3\to\R^2$ 线性核非空得凸性 | 三个 2（$2\Re,2\Im$）**必须是同一个 2**，否则像不在半径 $\|u\|^2+\|v\|^2=1$ 的球面上（`norm_bloch` 与 `bloch_surjective_sphere` 就是这条）；换成 $(\Re,\Im,\cdot)$ 会掉到半球。$\R^3$ 的 3 与"核非空"需要 $\dim\ker\ge1$（`threeLinear_ker_ne_bot`），即线性映射 $\R^3\to\R^2$ 的秩亏，这在 `Convexity.lean` 里是一个独立引理 | 我在 12.1 补步 4、5 手算过恒等式与符号相容性 |
+   HDR: | 值 | 论文位置 | Lean 对应 | 作用 | 敏感度（改坏的后果） | 我的判定 |
+D25|2550|vbars=7|pipe=2|dollar=even|MATCH=YES|npipe_now=7|tbl_start=2545|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=0|$=6
+   HDR: | 数字 | 论文侧位置与写法 | Lean 侧的实际路径 | 笔记位置 |
+D32|646|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=644|hpipe=6|ncols=5|outside\|=2(census 2)|inside\|=0|$=4
+   HDR: | 对象/常数 | 取值或定义 | 出处（TeX） | Lean | 用途与敏感度 |
+D32|647|vbars=10|pipe=4|dollar=even|MATCH=YES|npipe_now=10|tbl_start=644|hpipe=6|ncols=5|outside\|=4(census 4)|inside\|=0|$=4
+   HDR: | 对象/常数 | 取值或定义 | 出处（TeX） | Lean | 用途与敏感度 |
+D32|649|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=644|hpipe=6|ncols=5|outside\|=2(census 2)|inside\|=0|$=8
+   HDR: | 对象/常数 | 取值或定义 | 出处（TeX） | Lean | 用途与敏感度 |
+D32|652|vbars=10|pipe=4|dollar=even|MATCH=YES|npipe_now=10|tbl_start=644|hpipe=6|ncols=5|outside\|=4(census 4)|inside\|=0|$=6
+   HDR: | 对象/常数 | 取值或定义 | 出处（TeX） | Lean | 用途与敏感度 |
+D32|654|vbars=10|pipe=4|dollar=even|MATCH=YES|npipe_now=10|tbl_start=644|hpipe=6|ncols=5|outside\|=4(census 4)|inside\|=0|$=8
+   HDR: | 对象/常数 | 取值或定义 | 出处（TeX） | Lean | 用途与敏感度 |
+D32|660|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=644|hpipe=6|ncols=5|outside\|=2(census 2)|inside\|=0|$=4
+   HDR: | 对象/常数 | 取值或定义 | 出处（TeX） | Lean | 用途与敏感度 |
+D32|662|vbars=14|pipe=8|dollar=even|MATCH=YES|npipe_now=14|tbl_start=644|hpipe=6|ncols=5|outside\|=8(census 8)|inside\|=0|$=4
+   HDR: | 对象/常数 | 取值或定义 | 出处（TeX） | Lean | 用途与敏感度 |
+D32|676|vbars=10|pipe=4|dollar=even|MATCH=YES|npipe_now=10|tbl_start=644|hpipe=6|ncols=5|outside\|=4(census 4)|inside\|=0|$=4
+   HDR: | 对象/常数 | 取值或定义 | 出处（TeX） | Lean | 用途与敏感度 |
+D32|680|vbars=10|pipe=4|dollar=even|MATCH=YES|npipe_now=10|tbl_start=644|hpipe=6|ncols=5|outside\|=4(census 4)|inside\|=0|$=10
+   HDR: | 对象/常数 | 取值或定义 | 出处（TeX） | Lean | 用途与敏感度 |
+D32|681|vbars=10|pipe=4|dollar=even|MATCH=YES|npipe_now=10|tbl_start=644|hpipe=6|ncols=5|outside\|=4(census 4)|inside\|=0|$=2
+   HDR: | 对象/常数 | 取值或定义 | 出处（TeX） | Lean | 用途与敏感度 |
+D32|683|vbars=10|pipe=4|dollar=even|MATCH=YES|npipe_now=10|tbl_start=644|hpipe=6|ncols=5|outside\|=4(census 4)|inside\|=0|$=6
+   HDR: | 对象/常数 | 取值或定义 | 出处（TeX） | Lean | 用途与敏感度 |
+D65|341|vbars=14|pipe=8|dollar=even|MATCH=YES|npipe_now=14|tbl_start=334|hpipe=6|ncols=5|outside\|=8(census 8)|inside\|=0|$=12
+   HDR: | 符号/常数 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+D65|342|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=334|hpipe=6|ncols=5|outside\|=2(census 2)|inside\|=0|$=12
+   HDR: | 符号/常数 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+D65|348|vbars=12|pipe=6|dollar=even|MATCH=YES|npipe_now=12|tbl_start=334|hpipe=6|ncols=5|outside\|=6(census 6)|inside\|=0|$=18
+   HDR: | 符号/常数 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+D47|594|vbars=7|pipe=2|dollar=even|MATCH=YES|npipe_now=7|tbl_start=581|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=0|$=12
+   HDR: | 符号 | 值 | 用在哪 | 动了会坏在哪 |
+D47|595|vbars=11|pipe=6|dollar=even|MATCH=YES|npipe_now=11|tbl_start=581|hpipe=5|ncols=4|outside\|=6(census 6)|inside\|=0|$=6
+   HDR: | 符号 | 值 | 用在哪 | 动了会坏在哪 |
+D47|597|vbars=9|pipe=4|dollar=even|MATCH=YES|npipe_now=9|tbl_start=581|hpipe=5|ncols=4|outside\|=4(census 4)|inside\|=0|$=8
+   HDR: | 符号 | 值 | 用在哪 | 动了会坏在哪 |
+D36|600|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=591|hpipe=6|ncols=5|outside\|=2(census 2)|inside\|=0|$=0
+   HDR: | 记号 | 值 | 出处 | 作用 | 敏感度 |
+D36|601|vbars=10|pipe=4|dollar=even|MATCH=YES|npipe_now=10|tbl_start=591|hpipe=6|ncols=5|outside\|=4(census 4)|inside\|=0|$=0
+   HDR: | 记号 | 值 | 出处 | 作用 | 敏感度 |
+D36|602|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=591|hpipe=6|ncols=5|outside\|=2(census 2)|inside\|=0|$=0
+   HDR: | 记号 | 值 | 出处 | 作用 | 敏感度 |
+D36|603|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=591|hpipe=6|ncols=5|outside\|=2(census 2)|inside\|=0|$=0
+   HDR: | 记号 | 值 | 出处 | 作用 | 敏感度 |
+D26|1090|vbars=7|pipe=2|dollar=even|MATCH=YES|npipe_now=7|tbl_start=1078|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=0|$=14
+   HDR: | 数值 | 位置 | 作用 | 动了会坏在哪 |
+D26|1096|vbars=7|pipe=2|dollar=even|MATCH=YES|npipe_now=7|tbl_start=1078|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=0|$=18
+   HDR: | 数值 | 位置 | 作用 | 动了会坏在哪 |
+D26|1116|vbars=7|pipe=2|dollar=even|MATCH=YES|npipe_now=7|tbl_start=1102|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=0|$=10
+   HDR: | 数值 | 位置 | 作用 | 动了会坏在哪 |
+D28|1166|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=1151|hpipe=6|ncols=5|outside\|=2(census 2)|inside\|=0|$=0
+   HDR: | 记号 | 值/定义 | 来源 | 作用 | 敏感度 |
+D28|1176|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=1151|hpipe=6|ncols=5|outside\|=2(census 2)|inside\|=0|$=0
+   HDR: | 记号 | 值/定义 | 来源 | 作用 | 敏感度 |
+D28|1184|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=1151|hpipe=6|ncols=5|outside\|=2(census 2)|inside\|=0|$=0
+   HDR: | 记号 | 值/定义 | 来源 | 作用 | 敏感度 |
+D29|826|vbars=9|pipe=2|dollar=even|MATCH=YES|npipe_now=9|tbl_start=819|hpipe=7|ncols=6|outside\|=2(census 2)|inside\|=0|$=2
+   HDR: | 符号/数值 | 定义处 | 被使用的性质 | 临界性 | 富余量 | 动了会坏在哪 |
+D29|834|vbars=9|pipe=2|dollar=even|MATCH=YES|npipe_now=9|tbl_start=819|hpipe=7|ncols=6|outside\|=2(census 2)|inside\|=0|$=6
+   HDR: | 符号/数值 | 定义处 | 被使用的性质 | 临界性 | 富余量 | 动了会坏在哪 |
+D29|847|vbars=9|pipe=2|dollar=even|MATCH=YES|npipe_now=9|tbl_start=819|hpipe=7|ncols=6|outside\|=2(census 2)|inside\|=0|$=10
+   HDR: | 符号/数值 | 定义处 | 被使用的性质 | 临界性 | 富余量 | 动了会坏在哪 |
+D41|536|vbars=7|pipe=2|dollar=even|MATCH=YES|npipe_now=7|tbl_start=529|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=0|$=20
+   HDR: | 记号 | 值 | 用在哪 | 动了会坏在哪 |
+D41|541|vbars=7|pipe=2|dollar=even|MATCH=YES|npipe_now=7|tbl_start=529|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=0|$=10
+   HDR: | 记号 | 值 | 用在哪 | 动了会坏在哪 |
+D41|542|vbars=7|pipe=2|dollar=even|MATCH=YES|npipe_now=7|tbl_start=529|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=0|$=20
+   HDR: | 记号 | 值 | 用在哪 | 动了会坏在哪 |
+D68|1346|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=1336|hpipe=6|ncols=5|outside\|=2(census 2)|inside\|=0|$=8
+   HDR: | 记号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+D68|1347|vbars=7|pipe=1|dollar=even|MATCH=YES|npipe_now=7|tbl_start=1336|hpipe=6|ncols=5|outside\|=1(census 1)|inside\|=0|$=6
+   HDR: | 记号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+D68|1370|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=1336|hpipe=6|ncols=5|outside\|=2(census 2)|inside\|=0|$=6
+   HDR: | 记号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+D30|804|vbars=10|pipe=4|dollar=even|MATCH=YES|npipe_now=10|tbl_start=797|hpipe=6|ncols=5|outside\|=4(census 4)|inside\|=0|$=10
+   HDR: | 对象 | 值（论文） | 来源 | 用途 | 敏感度（改动后果） |
+D34|570|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=562|hpipe=6|ncols=5|outside\|=2(census 2)|inside\|=0|$=10
+   HDR: | 符号 / 数值 | 值 | 出处 | 角色 | 敏感性 |
+D34|739|vbars=9|pipe=2|dollar=even|MATCH=YES|npipe_now=9|tbl_start=722|hpipe=5|ncols=4|outside\|=2(census 2)|inside\|=2|$=4
+   HDR: | 编号 | 论文措辞 | Lean 措辞 | 差异性质 |
+D24|706|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=685|hpipe=6|ncols=5|outside\|=2(census 2)|inside\|=0|$=8
+   HDR: | 记号 | 值或定义 | 出处 | 在链条里的作用 | 敏感度 [推测] |
+D364|453|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=432|hpipe=6|ncols=5|outside\|=2(census 2)|inside\|=0|$=2
+   HDR: | 记号 | 数值或增长率 | 位置(文件:行) | 被谁消费 | 若改动断在哪一步 |
+D44|450|vbars=8|pipe=2|dollar=even|MATCH=YES|npipe_now=8|tbl_start=442|hpipe=6|ncols=5|outside\|=2(census 2)|inside\|=0|$=12
+   HDR: | 符号 | 数值或阈值 | 出现位置 | 被谁消费 | 若改动断在哪一步 |
+D50|438|vbars=7|pipe=1|dollar=even|MATCH=YES|npipe_now=7|tbl_start=414|hpipe=6|ncols=5|outside\|=1(census 1)|inside\|=0|$=10
+   HDR: | 符号/数据 | 数值或表达式 | 位置 | 被谁消费 | 若改动的断点 |
+TOTAL rows=67 files=16

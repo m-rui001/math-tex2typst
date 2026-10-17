@@ -1,0 +1,155 @@
+#101i: cetz's own `content(..., angle:, anchor:)` vs pgf on the same label -- pt
+label = `uncapped band` at 10pt, both engines relative to the dot the picture puts at (0,0)
+pgf = _work/probe101b_pgf_nodes.run_page; ours = _work/probe81_label_box_face.render
+ruler = _work/probe101a_rot_variants.ink_offsets
+
+east rot90                 pgf [rotate=90,anchor=east]
+  pgf   box   9.96 x  66.72  left   -5.30 right    4.67 top    3.50 bottom   70.22  (pdf bytes=12828 mtime=2026-10-17 09:57:37)
+  ours  box  11.40 x  62.11  left   -6.82 right    4.58 top   -0.00 bottom   62.11
+        content((0, 0), [uncapped band], angle: 90deg, anchor: "east")
+        delta (ours - pgf): box  +1.44 x  -4.61  left  -1.52 right  -0.09 top  -3.50 bottom  -8.11
+
+west rot90                 pgf [rotate=90,anchor=west]
+  pgf   box   9.96 x  66.72  left   -5.30 right    4.67 top  -70.24 bottom   -3.52  (pdf bytes=12827 mtime=2026-10-17 09:57:38)
+  ours  box  11.40 x  62.11  left   -6.82 right    4.58 top  -62.11 bottom   -0.00
+        content((0, 0), [uncapped band], angle: 90deg, anchor: "west")
+        delta (ours - pgf): box  +1.44 x  -4.61  left  -1.52 right  -0.09 top  +8.13 bottom  +3.52
+
+north rot90                pgf [rotate=90,anchor=north]
+  pgf   box   9.96 x  66.72  left    2.65 right   12.61 top  -33.37 bottom   33.35  (pdf bytes=12828 mtime=2026-10-17 09:57:39)
+  ours  box  11.40 x  62.11  left   -2.36 right    9.04 top  -31.06 bottom   31.06
+        content((0, 0), [uncapped band], angle: 90deg, anchor: "north")
+        delta (ours - pgf): box  +1.44 x  -4.61  left  -5.01 right  -3.57 top  +2.32 bottom  -2.29
+
+south rot90                pgf [rotate=90,anchor=south]
+  pgf   box   9.96 x  66.72  left  -13.24 right   -3.28 top  -33.37 bottom   33.35  (pdf bytes=12827 mtime=2026-10-17 09:57:40)
+  ours  box  11.40 x  62.11  left  -11.28 right    0.12 top  -31.06 bottom   31.06
+        content((0, 0), [uncapped band], angle: 90deg, anchor: "south")
+        delta (ours - pgf): box  +1.44 x  -4.61  left  +1.96 right  +3.40 top  +2.32 bottom  -2.29
+
+center rot90               pgf [rotate=90,anchor=center]
+  pgf   box   9.96 x  66.72  left   -5.30 right    4.67 top  -33.37 bottom   33.35  (pdf bytes=12827 mtime=2026-10-17 09:57:41)
+  ours  box  11.40 x  62.11  left   -6.82 right    4.58 top  -31.06 bottom   31.06
+        content((0, 0), [uncapped band], angle: 90deg, anchor: "center")
+        delta (ours - pgf): box  +1.44 x  -4.61  left  -1.52 right  -0.09 top  +2.32 bottom  -2.29
+
+no anchor rot90            pgf [rotate=90]
+  pgf   box   9.96 x  66.72  left   -5.30 right    4.67 top  -33.37 bottom   33.35  (pdf bytes=12827 mtime=2026-10-17 09:57:42)
+  ours  box  11.40 x  62.11  left   -6.82 right    4.58 top  -31.06 bottom   31.06
+        content((0, 0), [uncapped band], angle: 90deg)
+        delta (ours - pgf): box  +1.44 x  -4.61  left  -1.52 right  -0.09 top  +2.32 bottom  -2.29
+
+south rot-90               pgf [rotate=-90,anchor=south]
+  pgf   box   9.96 x  66.72  left    3.28 right   13.24 top  -33.35 bottom   33.37  (pdf bytes=12826 mtime=2026-10-17 09:57:42)
+  ours  box  11.40 x  62.11  left   -0.12 right   11.28 top  -31.06 bottom   31.06
+        content((0, 0), [uncapped band], angle: -90deg, anchor: "south")
+        delta (ours - pgf): box  +1.44 x  -4.61  left  -3.40 right  -1.96 top  +2.29 bottom  -2.32
+
+south rot90 sep3           pgf [rotate=90,anchor=south,inner sep=3pt]
+  pgf   box   9.96 x  66.72  left  -12.91 right   -2.95 top  -33.37 bottom   33.35  (pdf bytes=12826 mtime=2026-10-17 09:57:43)
+  ours  box  11.40 x  62.11  left  -14.28 right   -2.88 top  -31.06 bottom   31.06
+        content((0, 0), [#box(inset: 3pt)[uncapped band]], angle: 90deg, anchor: "south")
+        delta (ours - pgf): box  +1.44 x  -4.61  left  -1.37 right  +0.07 top  +2.32 bottom  -2.29
+
+south rot90 footnotesize   pgf [rotate=90,anchor=south,font=\footnotesize]
+  pgf   box   7.97 x  56.67  left  -11.30 right   -3.33 top  -28.32 bottom   28.35  (pdf bytes=10491 mtime=2026-10-17 09:57:44)
+  ours  box   9.12 x  49.69  left   -9.02 right    0.10 top  -24.84 bottom   24.84
+        content((0, 0), [#text(size: 8pt)[uncapped band]], angle: 90deg, anchor: "south")
+        delta (ours - pgf): box  +1.15 x  -6.98  left  +2.27 right  +3.42 top  +3.48 bottom  -3.50
+
+south rot45                pgf [rotate=45,anchor=south]
+  pgf   box  54.22 x  54.22  left  -32.94 right   21.28 top  -32.96 bottom   21.26  (pdf bytes=12828 mtime=2026-10-17 09:57:45)
+  ours  box  51.98 x  51.98  left  -29.94 right   22.04 top  -29.94 bottom   22.04
+        content((0, 0), [uncapped band], angle: 45deg, anchor: "south")
+        delta (ours - pgf): box  -2.24 x  -2.24  left  +3.01 right  +0.77 top  +3.03 bottom  +0.78
+
+west rot-63                pgf [rotate=-63,anchor=west]
+  pgf   box  39.17 x  63.97  left   -2.56 right   36.61 top    0.73 bottom   64.70  (pdf bytes=12829 mtime=2026-10-17 09:57:46)
+  ours  box  38.35 x  60.52  left   -4.08 right   34.27 top   -3.10 bottom   57.42
+        content((0, 0), [uncapped band], angle: -63deg, anchor: "west")
+        delta (ours - pgf): box  -0.81 x  -3.45  left  -1.52 right  -2.33 top  -3.83 bottom  -7.28
+
+south rot34                pgf [rotate=34,anchor=south]
+  pgf   box  60.88 x  45.57  left  -35.05 right   25.83 top  -29.64 bottom   15.93  (pdf bytes=12836 mtime=2026-10-17 09:57:47)
+  ours  box  57.87 x  44.18  left  -32.05 right   25.81 top  -26.72 bottom   17.47
+        content((0, 0), [uncapped band], angle: 34deg, anchor: "south")
+        delta (ours - pgf): box  -3.02 x  -1.39  left  +3.00 right  -0.02 top  +2.92 bottom  +1.54
+
+east no rot                pgf [anchor=east]
+  pgf   box  66.72 x   9.96  left  -70.21 right   -3.49 top   -5.30 bottom    4.67  (pdf bytes=12826 mtime=2026-10-17 09:57:48)
+  ours  box  62.11 x  11.40  left  -62.11 right    0.00 top   -6.82 bottom    4.58
+        content((0, 0), [uncapped band], anchor: "east")
+        delta (ours - pgf): box  -4.61 x  +1.44  left  +8.10 right  +3.49 top  -1.52 bottom  -0.09
+
+east rot90 +pad            pgf [rotate=90,anchor=east]
+  pgf   box   9.96 x  66.72  left   -5.30 right    4.67 top    3.50 bottom   70.22  (pdf bytes=12828 mtime=2026-10-17 09:57:49)
+  ours  box  11.40 x  62.11  left   -6.82 right    4.58 top    3.33 bottom   65.44
+        content((0, 0), [uncapped band], angle: 90deg, anchor: "east", padding: 3.33pt)
+        delta (ours - pgf): box  +1.44 x  -4.61  left  -1.52 right  -0.09 top  -0.17 bottom  -4.77
+
+west rot90 +pad            pgf [rotate=90,anchor=west]
+  pgf   box   9.96 x  66.72  left   -5.30 right    4.67 top  -70.24 bottom   -3.52  (pdf bytes=12827 mtime=2026-10-17 09:57:50)
+  ours  box  11.40 x  62.11  left   -6.82 right    4.58 top  -65.44 bottom   -3.33
+        content((0, 0), [uncapped band], angle: 90deg, anchor: "west", padding: 3.33pt)
+        delta (ours - pgf): box  +1.44 x  -4.61  left  -1.52 right  -0.09 top  +4.80 bottom  +0.19
+
+north rot90 +pad           pgf [rotate=90,anchor=north]
+  pgf   box   9.96 x  66.72  left    2.65 right   12.61 top  -33.37 bottom   33.35  (pdf bytes=12828 mtime=2026-10-17 09:57:51)
+  ours  box  11.40 x  62.11  left    0.97 right   12.37 top  -31.06 bottom   31.05
+        content((0, 0), [uncapped band], angle: 90deg, anchor: "north", padding: 3.33pt)
+        delta (ours - pgf): box  +1.44 x  -4.61  left  -1.68 right  -0.24 top  +2.32 bottom  -2.29
+
+south rot90 +pad           pgf [rotate=90,anchor=south]
+  pgf   box   9.96 x  66.72  left  -13.24 right   -3.28 top  -33.37 bottom   33.35  (pdf bytes=12827 mtime=2026-10-17 09:57:52)
+  ours  box  11.40 x  62.11  left  -14.61 right   -3.21 top  -31.06 bottom   31.05
+        content((0, 0), [uncapped band], angle: 90deg, anchor: "south", padding: 3.33pt)
+        delta (ours - pgf): box  +1.44 x  -4.61  left  -1.37 right  +0.07 top  +2.32 bottom  -2.29
+
+center rot90 +pad          pgf [rotate=90,anchor=center]
+  pgf   box   9.96 x  66.72  left   -5.30 right    4.67 top  -33.37 bottom   33.35  (pdf bytes=12827 mtime=2026-10-17 09:57:53)
+  ours  box  11.40 x  62.11  left   -6.82 right    4.58 top  -31.06 bottom   31.05
+        content((0, 0), [uncapped band], angle: 90deg, anchor: "center", padding: 3.33pt)
+        delta (ours - pgf): box  +1.44 x  -4.61  left  -1.52 right  -0.09 top  +2.32 bottom  -2.29
+
+south rot-90 +pad          pgf [rotate=-90,anchor=south]
+  pgf   box   9.96 x  66.72  left    3.28 right   13.24 top  -33.35 bottom   33.37  (pdf bytes=12826 mtime=2026-10-17 09:57:54)
+  ours  box  11.40 x  62.11  left    3.21 right   14.61 top  -31.06 bottom   31.06
+        content((0, 0), [uncapped band], angle: -90deg, anchor: "south", padding: 3.33pt)
+        delta (ours - pgf): box  +1.44 x  -4.61  left  -0.07 right  +1.37 top  +2.29 bottom  -2.32
+
+south rot90 sep3 +pad      pgf [rotate=90,anchor=south,inner sep=3pt]
+  pgf   box   9.96 x  66.72  left  -12.91 right   -2.95 top  -33.37 bottom   33.35  (pdf bytes=12826 mtime=2026-10-17 09:57:55)
+  ours  box  11.40 x  62.11  left  -14.28 right   -2.88 top  -31.06 bottom   31.06
+        content((0, 0), [uncapped band], angle: 90deg, anchor: "south", padding: 3pt)
+        delta (ours - pgf): box  +1.44 x  -4.61  left  -1.37 right  +0.07 top  +2.32 bottom  -2.29
+
+south rot90 fn +pad        pgf [rotate=90,anchor=south,font=\footnotesize]
+  pgf   box   7.97 x  56.67  left  -11.30 right   -3.33 top  -28.32 bottom   28.35  (pdf bytes=10491 mtime=2026-10-17 09:57:56)
+  ours  box   9.12 x  49.69  left  -12.35 right   -3.23 top  -24.84 bottom   24.84
+        content((0, 0), [#text(size: 8pt)[uncapped band]], angle: 90deg, anchor: "south", padding: 3.33pt)
+        delta (ours - pgf): box  +1.15 x  -6.98  left  -1.06 right  +0.09 top  +3.48 bottom  -3.50
+
+south rot45 +pad           pgf [rotate=45,anchor=south]
+  pgf   box  54.22 x  54.22  left  -32.94 right   21.28 top  -32.96 bottom   21.26  (pdf bytes=12828 mtime=2026-10-17 09:57:57)
+  ours  box  51.98 x  51.98  left  -32.29 right   19.69 top  -32.29 bottom   19.69
+        content((0, 0), [uncapped band], angle: 45deg, anchor: "south", padding: 3.33pt)
+        delta (ours - pgf): box  -2.24 x  -2.24  left  +0.65 right  -1.59 top  +0.67 bottom  -1.57
+
+west rot-63 +pad           pgf [rotate=-63,anchor=west]
+  pgf   box  39.17 x  63.97  left   -2.56 right   36.61 top    0.73 bottom   64.70  (pdf bytes=12829 mtime=2026-10-17 09:57:58)
+  ours  box  38.35 x  60.52  left   -2.57 right   35.79 top   -0.13 bottom   60.39
+        content((0, 0), [uncapped band], angle: -63deg, anchor: "west", padding: 3.33pt)
+        delta (ours - pgf): box  -0.81 x  -3.45  left  -0.01 right  -0.82 top  -0.86 bottom  -4.31
+
+south rot34 +pad           pgf [rotate=34,anchor=south]
+  pgf   box  60.88 x  45.57  left  -35.05 right   25.83 top  -29.64 bottom   15.93  (pdf bytes=12836 mtime=2026-10-17 09:58:00)
+  ours  box  57.87 x  44.18  left  -33.92 right   23.95 top  -29.48 bottom   14.70
+        content((0, 0), [uncapped band], angle: 34deg, anchor: "south", padding: 3.33pt)
+        delta (ours - pgf): box  -3.02 x  -1.39  left  +1.14 right  -1.88 top  +0.16 bottom  -1.22
+
+east no rot +pad           pgf [anchor=east]
+  pgf   box  66.72 x   9.96  left  -70.21 right   -3.49 top   -5.30 bottom    4.67  (pdf bytes=12826 mtime=2026-10-17 09:58:01)
+  ours  box  62.11 x  11.40  left  -65.44 right   -3.33 top   -6.82 bottom    4.58
+        content((0, 0), [uncapped band], anchor: "east", padding: 3.33pt)
+        delta (ours - pgf): box  -4.61 x  +1.44  left  +4.77 right  +0.16 top  -1.52 bottom  -0.09
+

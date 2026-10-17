@@ -1,0 +1,20 @@
+### D416 L624 kind=latin_residue from=window nc=14 verdict=ORDER kinds_all=latin_residue sw=False
+Q: 第二条，同一类里还漏了记号层面的两项。其一是限制与纤维的竖杠：规格要求写成 `\mid`，我在 §17 的三处（$\rho\vert_S$、$\rho^*P\vert_S$、$P\vert_x$ 型）与上表倒数第三行、以及 §11 一处 $
+### MISSING D419 L461
+### MISSING D419 L563
+### D467 L205 kind=latin_residue from=window nc=0 verdict=STALE kinds_all=latin_residue sw=False
+Q: 记号端同样清点。素材 preamble 定义的黑板体数集缩写与若干算符缩写，按 §13 其七的申报，已落盘部分待本体侧展开，未落盘部分（含 §19 台账全部行）一律用标准写法：整数集、有理数集、实数集、复数集、射影空间分别写标准黑板体，重数
+### D467 L305 kind=latin_residue from=window nc=0 verdict=STALE kinds_all=latin_residue sw=False
+Q: 收拢来看，表体是这张笔记的承重墙：正文的每一句判断都能在表里找到行号与文件行位置作锚，反过来表里每一行的"被谁消费"栏都能回到正文某小节。若日后本体侧扫尾脚本把定制宏展开，表体不动，正文的语义不受影响；若日后增删条目，需同步改动的是"被谁消
+### D480 L270 kind=other from=line nc=-1 verdict=WAIVER kinds_all=other sw=False
+Q: 一、自定义宏未展开，本单第二条重缺口。素材在序言里自定义了一批单命令记号，本稿沿用其形态而没有展开成标准写法，实测分六类：期望类 44 处、概率与条件概率类 42 处、积分微元类 29 处、示性函数类 9 处、几何记号类约 30 处（分别指
+### D545 L451 kind=other from=line nc=0 verdict=STALE kinds_all=other sw=False
+Q: 其五，本批新增缺陷，按类别计数，不做就地改动。甲类，术语拉丁残留共 5 处：第 18 节第三段一处限定形容词、第 18 节第六段一处程度形容词、第 19 节第六段一处名词、第 19 节第七段一处名词、第 20 节第二段一处形容词；均系本批撰
+### D597 L335 kind=other from=line nc=0 verdict=STALE kinds_all=other sw=False
+Q: 类别十一，行尾符：本稿全文 331 行的行尾都是回车加换行那一对，是本平台写入工具落盘时的行尾选择；规格要求全文换行为单一换行符，这一条不合规。我没有做整档行尾转换，因为那属于被禁止的整档重写；如需归一，请本体侧用机械通道处理。
+### D742 L298 kind=other from=line nc=0 verdict=STALE kinds_all=other sw=False
+Q: 第四类，结构性垃圾 2 行。第 92 行是一枚探针标记（一次编辑尝试失败后我用最短锚点重探时留下的全大写英文串），落在 §4 末段与 §5 标题之间；第 95 行是一句占位说明（声明本节起为追加块），落在 §5 标题与其正文之间。两者都不是
+### D759 L940 kind=other from=line nc=-1 verdict=ORDER kinds_all=other sw=False
+Q: 第六类是段落引导的加粗。§2 与 §3 用了行首加粗标记做段落引导，共六处，属接近装饰性加粗清单的形态，申报由本体侧判定。
+### D765 L581 kind=other from=line nc=-1 verdict=ORDER kinds_all=other sw=False
+Q: 第四类，前向引用指错节号，共两处：§2 末句提到"膨胀那一步"时写的节号应为 §10；§1 中段提到 Jensen 逐点界时写的节号应为 §9（该处实测正确，无需处理）与 §13、§14 的两处"见后文"未给节号。第一节属指错，本体侧按 §

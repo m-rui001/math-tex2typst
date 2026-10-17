@@ -1,0 +1,33 @@
+#import "@preview/cetz:0.5.0"
+#let page_rotate = rotate
+#set page(width: 18cm, height: 20cm, margin: 1.5cm)
+#set text(lang: "en", size: 11pt)
+
+#cetz.canvas({
+  import cetz.draw: *
+  circle((0, 0), radius: 1.522, fill: rgb("#f2f2f2"))
+  circle((0, 0), radius: 0.5775, fill: rgb("#f2f2f2"))
+  line((0, 0), (0, 0), fill: rgb("#f2f2f2"))
+  circle((0, 0), radius: 1.522)
+  circle((0, 0), radius: 0.5775)
+  content((0, 0), [#text(size: 9pt)[$u_m=0$]])
+  content((-1.596, 0), [$u_m=1$], anchor: "east")
+  line((0.5148, 0.432), (1.038, 0.8707), stroke: (paint: rgb("#0000a6")), mark: (end: ">"))
+  line((-0.5148, 0.432), (-1.038, 0.8707), stroke: (paint: rgb("#0000a6")), mark: (end: ">"))
+  line((-0.5148, -0.432), (-1.038, -0.8707), stroke: (paint: rgb("#0000a6")), mark: (end: ">"))
+  line((0.5148, -0.432), (1.038, -0.8707), stroke: (paint: rgb("#0000a6")), mark: (end: ">"))
+  arc((1.039, 0.3374), start: 18deg, stop: 153deg, radius: 1.092, stroke: (paint: rgb("#a60000")), mark: (end: ">"))
+  content((0, 1.617), [#text(fill: rgb("#a60000"))[dual period $C_m$]], anchor: "south")
+  content((0, -1.68), [#text(fill: rgb("#0000a6"))[primal current $"dd" u_m$]], anchor: "north")
+  line((1.995, 0.63), (3.255, 0.63), mark: (end: ">"))
+  content((2.625, 0.0525), [unit-period#linebreak()recovery])
+  circle((5, 0), radius: 1.522, fill: rgb("#f2f2f2"))
+  circle((5, 0), radius: 0.5775, fill: rgb("#f2f2f2"))
+  line((5, 0), (5, 0), fill: rgb("#f2f2f2"))
+  circle((5, 0), radius: 1.522)
+  circle((5, 0), radius: 0.5775)
+  arc((6.039, 0.3374), start: 18deg, stop: 330deg, radius: 1.092, stroke: (paint: rgb("#a60000")), mark: (end: ">"))
+  content((5, 0), [$alpha_m$])
+  content((5, 1.617), [#text(fill: rgb("#a60000"))[exact period $1$]], anchor: "south")
+  content((5, -1.68), [$| "langle" "dd" u_m, alpha_m "rangle" |=1$], anchor: "north")
+})

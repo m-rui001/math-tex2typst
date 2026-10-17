@@ -1,0 +1,32 @@
+{
+  "paper": "Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026",
+  "ok": true,
+  "typ_lines": 7923,
+  "included_pdf_pages": 0,
+  "formulas": 6023,
+  "math_failed": 0,
+  "labels": 1239,
+  "equations": 106,
+  "theorems": 23,
+  "figures": 4,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 3
+  },
+  "samples": {
+    "formulas": "6023",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "bookmark"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026.tex"
+}

@@ -1,0 +1,62 @@
+[
+ {
+  "cid": "D139",
+  "line": 228,
+  "old": "\\frac12 b^{0.56}\\right)",
+  "new": "\\frac12 b^{0.56})",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "body",
+  "cred": "blocks.tex:158-164：整条展示式的前半（含 \\Prob\\left(\\left|\\log F_b-b\\mu_b\\right|>）故意留在行内代码跨度里，式内只剩孤儿 \\right)；并跨会新造拒渲（\\Prob 未定义）"
+ },
+ {
+  "cid": "D155",
+  "line": 403,
+  "old": "\\ge c(K)\\Big(\\frac t3\\lVert y\\rVert_1-\\frac1K\\lVert u\\rVert_1\\right)",
+  "new": "\\ge c(K)\\left(\\frac t3\\lVert y\\rVert_1-\\frac1K\\lVert u\\rVert_1\\right)",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "body",
+  "cred": "exponential.tex:68 逐字 \\ge c(K)\\left(\\frac t3\\norm{y}-\\frac1K\\norm{u}\\right)，笔记把 \\left 手打成 \\Big 与 \\right 拆配"
+ },
+ {
+  "cid": "D302",
+  "line": 59,
+  "old": "\\mathcal{R}=C_{\\mathcal{B}}(\\eta+\\xi+\\log_{1/\\epsilon}\\!\\left(S_\\epsilon\\right))+C_{\\mathcal{B},\\eta,\\xi,A}\\frac{1+\\log(2+\\ell)}{\\ell}+3\\log_{1/\\epsilon}\\!\\left(\\frac\\right)1{1-q_\\epsilon}+\\omega_{\\mathcal{B}}(\\epsilon)",
+  "new": "\\mathcal{R}=C_{\\mathcal{B}}(\\eta+\\xi+\\log_{1/\\epsilon}\\!\\left(S_\\epsilon\\right))+C_{\\mathcal{B},\\eta,\\xi,A}\\frac{1+\\log(2+\\ell)}{\\ell}+3\\log_{1/\\epsilon}\\!\\left(\\frac{1}{1-q_\\epsilon}\\right)+\\omega_{\\mathcal{B}}(\\epsilon)",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "body",
+  "cred": "10-packet-composition.tex:66-73 逐字 +3\\logeps{\\frac1{1-q_\\eps}}，\\logeps{#1}=\\log_{1/\\epsilon}\\!\\left(#1\\right)"
+ },
+ {
+  "cid": "D302",
+  "line": 154,
+  "old": "\\mathcal R=C_{\\mathcal B}(\\eta+\\xi+\\log_{1/\\epsilon}\\!\\left(S_\\epsilon\\right))+C_{\\mathcal B,\\eta,\\xi,A}\\frac{1+\\log(2+\\ell)}{\\ell}+3\\log_{1/\\epsilon}\\!\\left(\\frac\\right)1{1-q_\\epsilon}+\\omega_{\\mathcal B}(\\epsilon)",
+  "new": "\\mathcal R=C_{\\mathcal B}(\\eta+\\xi+\\log_{1/\\epsilon}\\!\\left(S_\\epsilon\\right))+C_{\\mathcal B,\\eta,\\xi,A}\\frac{1+\\log(2+\\ell)}{\\ell}+3\\log_{1/\\epsilon}\\!\\left(\\frac{1}{1-q_\\epsilon}\\right)+\\omega_{\\mathcal B}(\\epsilon)",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "body",
+  "cred": "同上一处的第二种抄写（本篇 \\mathcal R 不带组），凭据同上"
+ },
+ {
+  "cid": "D191",
+  "line": 860,
+  "old": "$\\left\\lceil$ 与 $\\right\\rvert$ 误配",
+  "new": "`\\left\\lceil` 与 `\\right\\rvert` 误配",
+  "expect": 1,
+  "dollars": -4,
+  "ticks": 4,
+  "parity": true,
+  "level": "delim",
+  "cred": "作者勘误申报句：$…$ 包的是被引述的定界符本身，进代码跨度不改史；$\\nu_i$ 是真数学不动"
+ }
+]

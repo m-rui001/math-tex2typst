@@ -1,0 +1,9 @@
+--- D37 /03:334/
+ 1148 | 匹配界到覆盖再到 pruning 的最后一段（`03:334-356`）：
+ 1632 | 只在特殊情形核过的结论也列一遍，免后被误用：$m=n+1$ 的最小性我只在 $-m+n<0$ 与 $m>\abs{V(D)}$ 的代数层面核过，没有对具体图类逐一试过更小的 $m$；定向性不可省那条（第 27 条四）我只在 $|X|\le2$ 上穷举；$3r+1$ 的紧例只有 $r=1$ 与 $r=2$ 两个；推论 5.1 (ii) 的全正不可能只有两点弧一个例子；$29$ 条零引用声明的统计依赖整词与 `.名称` 投影两种匹配，若存在 tactic 字符串里或 `show` 语句里的间接引用，我的计数会偏高，这部分我没有用 Lean 的 `#print` 依赖图复核，`.lake` 里没有 build 产物也无法复核。第 23 节那张统计表的 261 与 61 两个数、第 20 节普查里把 `secondNeighbors_eq_image_sdiff` 列为定向性使用点的那一条、`03
+--- D54 /00:98/
+  766 | 同一技术线有两篇，我这份笔记对应 $p=-2$（逆平方），`D40-单叶函数严格逆一次幂界.md` 对应 $p=-1$（逆一次幂）。分界按两篇正文各自的排他声明划：本篇 `00-history:101-108` 写着配套论文证明"uniform inverse-first-power bound with exponent strictly below $1/4$"、否掉 Kraetzer 在 $p=-1$ 的有界谱预测，并且"The proof here does not use that strict estimate; its Hölder interpolation from \eqref{eq:main-uniform} gives exponent $1/2$ with an arbitrary positive loss at $t=-1$"；D40 正文（其笔记第 14 行转述的 `00:98`）写着 "the companion's inverse-square endpoint theorem is not an input"。两句话互不相让，所以正确的读法是把它们看成同一机器上的两个不同权重设置：$A_z$ 的权重本篇是 $\lvert Q_F(z)\rvert^2$（D40 是 $\lvert Q_F(z)\rvert$），$A_zA_w=A_{z\cdot w}$ 的望远镜只对与权重同幂的赋值成立，两篇因此共用仿射律与临界点比较的骨架，各自需要自己的 $k$、自己的矩、自己的计数不等式，谁都不能把对方的结论当输入。本篇自己给的 $t=-1$ 结果是 $\varepsilon$ 损失下的指数 $1/2$（`06:87-96` 的 $q=-t/2=1/2$），严格小于 $1/4$ 的那个 $t=-1$ 界属于 D40，两者在 $t=-1$ 处的差（$1/2$ 与 $1/4$）说明本篇的 Hölder 插值在该点远未最优，而把它当成本篇的前提就会犯循环论证：D40 的证明结构里同样需要一条本类算子的本征测度，若本篇引用 D40 的严格界来推本篇的 $t=-2$ 界，方向上仍是较不紧的结果供较紧的结果，与第 2 节 (d) 路线里的插向限制一致。我在本篇正文里不复述 D40 的任何推导，也不在任何一步用它的 $<1/4$ 数字。
+--- D587 /08-n-locking/
+  485 | - 第 222 行（第 17 节）：位置引用 `08-n-locking.tex:331` 漏了窄环文件名中的中间段，正确形式是 `08-narrow-locking.tex:331`，同一行后半给出的 `08-narrow-locking.tex:336` 是对的。
+DIR? preprints\Bi-Lipschitz-Coordinates-at-Regular-Points-of-Noncollapsed-RCD-Spaces-September-25-2026
+DIR? preprints\Weak-Hessian-bounds-along-every-geodesic-in-RCD-spaces-September-24-2026

@@ -1,0 +1,33 @@
+=== RUN 140 (post #86 regression fix: #h(<x>em) written off with a space) 10-14 21:41
+--- probe_gate_all.py
+built 918, refused 14, compile-failed 0
+--- residue.py
+files with residue: 0 ; occurrences: 0
+quoted LaTeX on the page: 1 blocks over 1 papers
+zones: {}
+--- summarize_typst.py
+{
+  "documents": 724,
+  "compiled": 724,
+  "unique_formulas_within_documents": 761830,
+  "native_formulas_reported": 761721,
+  "latex_formula_fallbacks": 109,
+  "latex_literals_remaining": 0,
+  "documents_with_formula_fallbacks": 51,
+  "documents_with_unhandled_figure_content": 0,
+  "documents_with_unresolved_references": 0,
+  "failed_documents": []
+}
+--- probe_canvas_population.py
+papers 724 / source pictures 932 / canvases on the page 1055
+pictures with no canvas: 1 ; quoted latex blocks: 1 over 1 papers
+  Elliptic-capacity-propagation-and-Fourier-restriction-to-the pics=3 canvas=2 quoted=1
+--- probe_canvas_all_origin.py
+papers=724 canvases_total= degenerate=0
+--- probe83_product_count.py
+population = 724 .typ over 724 papers
+#h(-1em)                 0 occurrences     0 papers
+#h(-0.16667em)        3427 occurrences   425 papers
+#h(0em)                209 occurrences    72 papers
+thin                 38597 occurrences   716 papers
+med                  26032 occurrences   719 papers

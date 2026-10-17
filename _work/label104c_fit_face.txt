@@ -1,0 +1,16 @@
+flat pictures scanned in 724 papers
+fit= statements: 5 over 4 canvases / 4 papers
+placement statements that consume a fit node: 4 over 3 canvases
+
+-- fit= statements (first 40) --
+  A-counterexample-to-Kaplanskys-quasitrace-co#0  name=-              fit=(e0)
+  Finite-Congruence-Lattices-Characterization-#2  name=p1             fit=(t1)
+  Finite-Congruence-Lattices-Characterization-#2  name=p2             fit=(t2)
+  Perfect-completeness-for-2-to-1-games-Septem#0  name=cards          fit=(left)
+  The-Blockwise-Alperin-Weight-Conjecture-Sept#0  name=branches       fit=(genus)
+
+-- consumers (first 40) --
+  Finite-Congruence-Lattices-Characterization-#2  above=3pt of p1
+  Finite-Congruence-Lattices-Characterization-#2  above=3pt of p2
+  Perfect-completeness-for-2-to-1-games-Septem#0  below=5mm of cards
+  The-Blockwise-Alperin-Weight-Conjecture-Sept#0  below=10mm of branches

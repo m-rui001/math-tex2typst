@@ -1,0 +1,74 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+papers scanned: 724  floor: 1.00 pt
+wrote _work/overflow_run131.json
++132 escapes  now  132 / worst   5.07 pt  p78  The-maximum-number-of-mutually-unbiased-bases-in-dim
+        p47  over  5.07  '𝑎3'
+        p47  over  5.07  '𝑏3'
+        p47  over  5.07  '𝑎3'
+ +59 escapes  now   59 / worst  41.04 pt  p222  Self-dual-random-cluster-interfaces-below-one-Septem
+        p145 over 41.04  'identified sides'
+        p145 over 22.61  'identified sides'
+        p145 over 10.66  '𝑧𝑗'
+ +52 escapes  now   52 / worst  48.44 pt  p67  Mass-and-covering-exponents-for-fixed-length-honeyco
+        p17  over 48.44  'return bridge'
+        p17  over 10.35  '𝑎'
+        p17  over 10.35  '𝑏'
+ +48 escapes  now   48 / worst   9.79 pt  p115  Uniform-marked-polygon-estimates-and-sharp-finite-br
+        p58  over  9.79  '𝑝1'
+        p58  over  8.33  '𝑝2'
+        p82  over  8.14  'corner'
+ +47 escapes  now   47 / worst  10.80 pt  p122  Canonical-conformal-limits-of-subcritical-FK-planar-
+        p70  over 10.80  '𝑟'
+        p70  over 10.80  '𝑟'
+        p9   over  9.60  '𝑓0'
+ +41 escapes  now   41 / worst  10.16 pt  p75  Cardys-formula-for-critical-Poisson-Voronoi-percolat
+        p6   over 10.16  '𝐶2'
+        p6   over 10.16  '𝐶2'
+        p6   over 10.16  '𝐶2'
+ +33 escapes  now   33 / worst   7.97 pt  p16  A-Complete-Local-Domain-Without-a-Small-Cohen-Macaul
+        p11  over  7.97  '𝑒2'
+        p11  over  7.97  '𝐿23'
+        p11  over  7.97  '𝑒2'
+ +27 escapes  now   27 / worst   6.67 pt  p80  Nonuniqueness-with-local-conservation-for-the-hard-s
+        p16  over  6.67  '|𝑧| < 𝑎'
+        p16  over  5.24  '1'
+        p16  over  5.24  '1'
+ +26 escapes  now   26 / worst   7.97 pt  p27  Integral-points-on-character-varieties-of-curves-Sep
+        p16  over  7.97  'ℎ𝑄'
+        p12  over  6.52  '…, 𝑊𝑖𝑗, …'
+        p12  over  6.52  '…, 𝑊𝑖𝑗, …'
+ +25 escapes  now   25 / worst   7.14 pt  p42  The-Deligne-Drinfeld-conjecture-September-23-2026
+        p30  over  7.14  '𝘊:'
+        p30  over  7.14  '𝘈:'
+        p30  over  7.14  '𝘉:'
+ +21 escapes  now   21 / worst   7.89 pt  p30  Modularity-of-elliptic-curves-over-imaginary-quadrat
+        p10  over  7.89  '0'
+        p10  over  7.89  '1'
+        p10  over  7.89  '+𝑠'
+ +21 escapes  now   21 / worst  10.65 pt  p17  A-nine-dimensional-counterexample-to-Borsuks-coverin
+        p12  over 10.65  '𝑐'
+        p12  over 10.65  '𝑒'
+        p12  over 10.65  '𝑑'
+ +21 escapes  now   21 / worst  12.72 pt  p46  A-Fully-Polynomial-Randomized-Approximation-Scheme-f
+        p17  over 12.72  '𝑣0'
+        p17  over 12.72  '𝑣1'
+        p17  over 12.72  '𝑣2'
+ +20 escapes  now   20 / worst   5.05 pt  p149  Virtual-compact-specialness-of-hyperbolic-one-relato
+        p118 over  5.05  '𝑝'
+        p118 over  5.05  '𝑝'
+        p118 over  5.05  '𝑝'
+ +19 escapes  now   19 / worst   8.98 pt  p40  Quenched-SLE3-limits-for-general-weak-random-bond-Is
+        p30  over  8.98  '𝑆'
+        p30  over  7.29  '𝐶+'
+        p30  over  7.09  '𝑎−'
+TOTAL escapes: 1875 over 724 papers
+Traceback (most recent call last):
+  File "E:\math\_work\probe_frame_ink_overflow.py", line 147, in <module>
+    main()
+    ~~~~^^
+  File "E:\math\_work\probe_frame_ink_overflow.py", line 134, in main
+    n = sum(r["cats"][cat] for r in rows.values())
+  File "E:\math\_work\probe_frame_ink_overflow.py", line 134, in <genexpr>
+    n = sum(r["cats"][cat] for r in rows.values())
+            ~~~~~~~~~^^^^^
+KeyError: 'math+bottom'

@@ -1,0 +1,28 @@
+reports read 724 (unreadable 0)
+
+ERRORS 0 in 0 papers
+
+WARNINGS 135 in 40 papers
+     94   29 papers  `lt.tri` is deprecated, use `lt.closed` instead
+          A-classification-of-finite-Euclidean | \\?\E:\math\typst\A-classification-of-finite-Euclidean-Ramsey-configurations-September-23-2026\main.typ:577:158
+          A-Negative-Solution-to-the-Finite-La | \\?\E:\math\typst\A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-September-24-2026\main.typ:106:81
+          A-Negative-Solution-to-the-Finite-La | \\?\E:\math\typst\A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-September-24-2026\main.typ:106:251
+          A-Negative-Solution-to-the-Finite-La | \\?\E:\math\typst\A-Negative-Solution-to-the-Finite-Lattice-Representation-Problem-September-24-2026\main.typ:115:92
+     18    4 papers  `gt.tri` is deprecated, use `gt.closed` instead
+          A-Cyclic-Polytabloid-Proof-of-Saxls- | \\?\E:\math\typst\A-Cyclic-Polytabloid-Proof-of-Saxls-Conjecture-September-24-2026\main.typ:80:410
+          A-Cyclic-Polytabloid-Proof-of-Saxls- | \\?\E:\math\typst\A-Cyclic-Polytabloid-Proof-of-Saxls-Conjecture-September-24-2026\main.typ:82:12
+          A-Cyclic-Polytabloid-Proof-of-Saxls- | \\?\E:\math\typst\A-Cyclic-Polytabloid-Proof-of-Saxls-Conjecture-September-24-2026\main.typ:82:57
+          A-Cyclic-Polytabloid-Proof-of-Saxls- | \\?\E:\math\typst\A-Cyclic-Polytabloid-Proof-of-Saxls-Conjecture-September-24-2026\main.typ:138:57
+     18    5 papers  `tack.double` is deprecated, use repeated letters instead, e.g., `tack.rr`
+          Eventual-Categoricity-for-Abstract-E | \\?\E:\math\typst\Eventual-Categoricity-for-Abstract-Elementary-Classes-September-24-2026\main.typ:1298:78
+          Hilberts-tenth-problem-over-the-rati | \\?\E:\math\typst\Hilberts-tenth-problem-over-the-rational-numbers-September-24-2026\main.typ:312:24
+          Hilberts-tenth-problem-over-the-rati | \\?\E:\math\typst\Hilberts-tenth-problem-over-the-rational-numbers-September-24-2026\main.typ:313:50
+          Linear-Variance-of-the-Random-3-SAT- | \\?\E:\math\typst\Linear-Variance-of-the-Random-3-SAT-Hitting-Time-October-5-2026\main.typ:64:34
+      2    2 papers  content labelled multiple times
+          The-low-temperature-Sherrington-Kirk | \\?\E:\math\typst\The-low-temperature-Sherrington-Kirkpatrick-fluctuation-scale-September-24-2026\main.typ:1877:0
+          The-low-temperature-Sherrington-Kirk | \\?\E:\math\typst\The-low-temperature-Sherrington-Kirkpatrick-fluctuation-scale-September-24-2026-alternate-1\main.typ:1877:0
+      2    1 papers  linebreaks are ignored in branches
+          The-Quasi-Riemann-Hypothesis-October | \\?\E:\math\typst\The-Quasi-Riemann-Hypothesis-October-5-2026\main.typ:1235:49
+          The-Quasi-Riemann-Hypothesis-October | \\?\E:\math\typst\The-Quasi-Riemann-Hypothesis-October-5-2026\main.typ:1236:145
+      1    1 papers  `lt.tri` is d
+          Donovans-Conjecture-over-Algebraic-C | ?

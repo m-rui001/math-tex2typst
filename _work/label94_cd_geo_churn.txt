@@ -1,0 +1,6 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+old-law stub reproduces the pre-round assertions: yes
+
+canvases: 126 built, 0 refused both ways, 0 unchanged
+this round's churn: 126 canvases in 56 papers (moved 126, gained 0, lost 0)
+wrote _work/regen94.txt (56 papers); with #88's list to regen: 56 papers

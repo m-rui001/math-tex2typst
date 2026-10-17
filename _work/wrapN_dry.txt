@@ -1,0 +1,110 @@
+D101-欧氏平面不可五 all-skipped cand=1
+D106-五次Liena lines 2285-2287
+    2285 三个平均我用 Beta 函数算：$\int_0^{2\pi}\cos^4\sin^2=4\cdot\tfrac12B(\tfrac52,\tfrac32)
+    2286 =2\cdot\tfrac{\Gamma(5/2)\Gamma(3/2)}{\Gamma(4)}=2\cdot\tfrac{(3\sqrt\pi/4)(\sqrt\pi/2)}{6}
+    2287 =\tfrac{\pi}{8}$；$\int_0^{2\pi}\cos^2\sin^2=2B(\tfrac32,\tfrac32)=2\cdot\tfrac{(\sqrt\pi/2)^2}{2
+== D106-五次Liena joins=1 size 215484->215484
+D108-完全图交叉数： all-skipped cand=2
+D112-一维Lieb- lines 1502-1504
+    1502 再代 $r=1/\sigma$、$p=1+\sigma$：$(\int W^p)^{-1}=\frac{\sigma}{((1+\sigma)/\sigma)^{1+\sigma}
+    1503 \mathrm B(1/2,1+\sigma)}=\frac{\sigma^\sigma}{(1+\sigma)^{1+\sigma}}\frac1{\mathrm B(1/2,1+\sigm
+    1504 =A_\sigma/\mathrm B(1/2,1+\sigma)=\ell_\sigma$ ✓，与 \eqref{spectral:constant} 完全一致。
+== D112-一维Lieb- joins=1 size 142331->142331
+D115-完全二分图交叉 all-skipped cand=1
+D116-有限因子的生成 lines 1688-1690
+    1688 非对角切割：$E_{12}=E_{11}BE_{22}$，逐块算是 $\begin{pmatrix}1&0\\0&0\end{pmatrix}
+    1689 \begin{pmatrix}a_3&1_N\\1_N&a_4\end{pmatrix}\begin{pmatrix}0&0\\0&1\end{pmatrix}
+    1690 =\begin{pmatrix}0&1_N\\0&0\end{pmatrix}$ ✓，
+== D116-有限因子的生成 joins=1 size 160791->160791
+D123-Petty射影 all-skipped cand=1
+D124-自相似测度熵率 lines 1271-1273
+    1271 $H(p)=s_*\chi$ 的验算：$H(p)=-\sum_ip_i\log p_i=-\sum_i\lvert r_i\rvert^{s_*}
+    1272 \log\lvert r_i\rvert^{s_*}=s_*\bigl(-\sum_i\lvert r_i\rvert^{s_*}\log\lvert r_i\rvert\bigr)
+    1273 =s_*\chi$，用了 $\sum_ip_i=1$ 与 $p_i=\lvert r_i\rvert^{s_*}$。
+== D124-自相似测度熵率 joins=1 size 96898->96898
+D134-乘积投影定位给 all-skipped cand=1
+D140-型F无穷通用群 all-skipped cand=1
+D145-复杂矩阵乘法低 all-skipped cand=1
+D201-无挠反例与分离 all-skipped cand=1
+D211-三边际Coul all-skipped cand=1
+D218-严格椭圆方向零 lines 706-708
+    706 "`05-entropy.tex:142-144$ 的公式" 与第 12 节 "`06-posterior-contact.tex:18-20$）" 同样
+    707 是反引号内的多余 `$`，合计四处，同上不影响公式配对。四，第 10 节我把端点矩写成
+    708 "$\EE_{\mathbf Q_N}\lvert E\rVert$"，定界符左右不配对，正确写法应是 $\EE_{\mathbf Q_N}\lvert E\rvert$；同一行后面的 $\l
+== D218-严格椭圆方向零 joins=1 size 72559->72559
+D222-Calabi流 all-skipped cand=1
+D234-Heilbro all-skipped cand=2
+D238-平方差自由集的 lines 637-639
+    637 $\mathcal Y(N)\le KN^{-\sigma_0}+(1+u_N)\bigl((1-\rho)
+    638 \mathcal Y(n_\varnothing)+\rho\sum_{q_B\le N^\tau}\eta_B\mathcal Y(n_B)
+    639 \bigr)$，$u_N\to0$。
+== D238-平方差自由集的 joins=1 size 70458->70458
+D244-用颜色包与素数 all-skipped cand=2
+D249-从全局谱隙到二 all-skipped cand=2
+D25-Crouzeix all-skipped cand=1
+D253-阿贝尔覆盖Ga all-skipped cand=1
+D28-双曲群无几何CA all-skipped cand=1
+D356-三维正曲率曲面 lines 354-356
+    354 Hölder 直接给 $\lVert F-F_*\rVert_\infty\le
+    355 \lVert\chi_1^{\nu_*}\rVert_\infty\lVert h\rVert_3\lvert\Omega\rvert^{2/3}
+    356 \le C\mu^{16}\le\mu/2$（`eq:sparse-excision`，
+D356-三维正曲率曲面 lines 399-401
+    399 把联合质量送进所需形状：$\delta^2\sum_{\nu,\mathcal B}
+    400 (b_\nu^{B,u})^{3/2}\le C\delta^5\sum_\nu(\int_{\Gamma_\nu}
+    401 \lvert h_*\rvert^2)^{3/2}\le C\delta^6\lVert h_*\rVert_3^3\le C\delta^6$
+D356-三维正曲率曲面 lines 481-483
+    481 $\#\mathcal Q\cdot\pi\mu^7/(96C_{\mathrm b}^3)
+    482 \le\sum_{\mathcal Q}\int_{B(x_Q,r_\mu)}\lvert F\rvert^4
+    483 \le125C_{\mathrm b}^4$，可取 $C_X=\max\{1,12000C_{\mathrm b}^7/\pi\}$
+D356-三维正曲率曲面 lines 533-535
+    533 $\int_0^1\mu^{-1+\tau/2}(1+\log(1/\mu))^3\dd\mu
+    534 =\frac2\tau+\frac{12}{\tau^2}+\frac{48}{\tau^3}+\frac{96}{\tau^4}
+    535 \le158\tau^{-4}$（`eq:layer-integral`，代换 $u=\log(1/\mu)$ 逐项积分，
+D356-三维正曲率曲面 lines 887-889
+    887 $L^4$ 均值下界为 $(\mu/2)^4\cdot\frac43\pi r_\mu^3
+    888 =\frac{\mu^4}{16}\cdot\frac{4\pi}{3}\cdot\frac{\mu^3}{8C_{\mathrm b}^3}
+    889 =\frac{\pi\mu^7}{96C_{\mathrm b}^3}$，与 `05-global.tex:115` 的分数完全一致；
+== D356-三维正曲率曲面 joins=5 size 77428->77428
+D365-端点逐点收敛： lines 404-407
+    404 $\Bigl\lvert\int_\Omega w(x)\sum_jS(t(x))f_{2^j}(x)\dd x\Bigr\rvert
+    405 \le C\Bigl(\sum_j2^{2js}\lVert f_{2^j}\rVert_2^2\Bigr)^{1/2}
+    406       \Bigl(\sum_j2^{-2js}\lVert G_{2^j}([0,1))\rVert_2^2\Bigr)^{1/2}
+    407 \le C\lVert f\rVert_{H^s}$，
+== D365-端点逐点收敛： joins=1 size 109822->109816
+D370-素数次数环面包 all-skipped cand=2
+D371-任意阶本原四次 lines 424-426
+    424 $\sum_{z\in F,\ \Tr z=m,\ z\in R_{F,p}(p\notin S),\ z-z_p^0\in p^{v_p(l)}R_{F,p}(p\mid l)}
+    425 \phi(z)\prod_{p\in S}f_p^*(z)
+    426 =A_{\phi}l^{-2}\prod_{p\in S}d_p(m)\,(1+O(X^{-\theta}))$，
+== D371-任意阶本原四次 joins=1 size 81092->81092
+D401-变素数处的有限 all-skipped cand=1
+D413-温和Hecke lines 771-773
+    771 $\chi_V(\text{enhancement monodromy})
+    772 =\operatorname{Tr}(\text{boundary monodromy on }V_{\sigma_1})\,\mathrm{id}_{Q}
+    773 =(\dim V)\,\mathrm{id}_{Q}$，
+== D413-温和Hecke joins=1 size 89154->89154
+D450-平面Mumfo all-skipped cand=1
+D514-大素数间隙的正 lines 1014-1016
+    1014 完全混合导数：$(-1)^j\partial_1\cdots\partial_j\widetilde{F}_j
+    1015 =(-1)^j\partial_1\cdots\partial_j F_j+(-1)^j\partial_1\cdots\partial_j F_j^{Tf_{j+1}}
+    1016 =f_j+Tf_{j+1}$。
+D514-大素数间隙的正 lines 1078-1080
+    1078 $\prod_{p\le Y}H_p(\mathbf{z})-\prod_{p\le Y}H_p(0)
+    1079 =\sum_{p_0\le Y}(H_{p_0}(\mathbf{z})-H_{p_0}(0))\prod_{p\ne p_0,p\le Y}H_p(0)
+    1080 \cdot\prod_{\substack{p\le Y\\p>p_0}}\frac{H_p(\mathbf{z})}{H_p(0)}$...
+== D514-大素数间隙的正 joins=2 size 74231->74231
+D711-球形Laugh lines 1669-1671
+    1669 $\left|\frac{d}{dt}\operatorname{Tr}(\rho_{t}A)\right|
+    1670 \le C\bigl(\operatorname{Tr}(\rho_{t}H)\bigr)^{1/2}
+    1671 \bigl(K\operatorname{Tr}(\rho_{t}G)\bigr)^{1/2}$
+D711-球形Laugh lines 1682-1685
+    1682 $\left|\operatorname{Tr}(\rho_{\infty}A)\right|
+    1683 \le C\operatorname{Tr}(\rho_{\infty}(N-\mathcal{N}))
+    1684 =C\mu^{-1}\operatorname{Tr}(\rho_{\infty}G)
+    1685 \le C\operatorname{Tr}(\rho_{0}G)$。
+== D711-球形Laugh joins=2 size 148713->148713
+D79-均称性反用与位移 all-skipped cand=1
+D80-均值对策博弈随机 all-skipped cand=1
+D93-方向瞬态蕴含弹道 all-skipped cand=2
+队列台账.md all-skipped cand=1
+TOTAL joins=18 files=12 skipped=30 dry

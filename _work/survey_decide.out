@@ -1,0 +1,89 @@
+=== RAM / VM ===
+RAM total=0.0 GB  free=18.2 GB
+pagefile: C:\pagefile.sys  alloc=32768 MB  peak=44 MB
+AutomaticManagedPagefile=True
+
+=== HIBERNATION STATE ===
+此系统上有以下睡眠状态:
+    待机 (S0 低电量待机) 连接的网络
+    休眠
+    快速启动
+
+此系统上没有以下睡眠状态:
+    待机 (S1)
+	系统固件不支持此待机状态。
+	当支持 S0 低电量待机时，禁用此待机状态。
+
+    待机 (S2)
+	系统固件不支持此待机状态。
+
+=== Temp\qoder-cli-cn : session dirs (MB, age days) ===
+    5,405 MB  age=   0.0d  session=E--math
+        0 MB  age=   0.2d  session=E--MATE
+        0 MB  age=   4.7d  session=E--BabelTele
+
+total sessions: 
++
+3
+sessions older than 3 days: 
++
+1
+MB in sessions older than 3 days: 0
+
+=== .qoder-cn\logs breakdown ===
+    1,098 MB  runs
+      602 MB  sessions
+        1 MB  qoder-context.log
+        0 MB  qoder-qmind
+        0 MB  qoder-context-hook.log
+run dirs total=290  older than 7d=90
+
+=== C:\Users\hp\.cache breakdown (MB) ===
+    1,315 MB  codex-runtimes
+        6 MB  mathlib
+        0 MB  huggingface
+        0 MB  selenium
+        0 MB  gdown
+        0 MB  modelscope
+        0 MB  puppeteer
+
+=== Documents\NetSarrer Xftp Temporary ===
+4.19 GB  C:\Users\hp\Documents\NetSarang Computer\8\Xftp\Temporary
+    4,286 MB  NetSarang Computer
+       43 MB  ESCUDE
+       36 MB  CUMCM
+        7 MB  近月少女的礼仪
+        6 MB  少女理论及其周边
+        1 MB  Level Ichi
+        0 MB  dds
+        0 MB  MuseScore4
+
+=== Quark versions in Programs\Quark ===
+    1,248 MB  7.0.7.940
+    1,469 MB  7.3.5.1009
+      571 MB  components
+        0 MB  Dictionaries
+        0 MB  PS
+       14 MB  Temp
+
+=== pip / npm / uv caches ===
+      339 MB  C:\Users\hp\AppData\Local\pip\Cache
+      543 MB  C:\Users\hp\AppData\Local\npm-cache
+        0 MB  C:\Users\hp\AppData\Local\uv
+      434 MB  C:\Users\hp\.bun
+      368 MB  C:\Users\hp\AppData\Local\Microsoft\vscode-cpptools
+       16 MB  C:\Users\hp\AppData\Roaming\Code\Cache
+      105 MB  C:\Users\hp\AppData\Roaming\Code\CachedExtensionVSIXs
+      779 MB  C:\Users\hp\AppData\Roaming\Code\User\globalStorage\saoudrizwan.claude-dev
+      778 MB  C:\Users\hp\AppData\Local\Microsoft\Edge
+      943 MB  C:\Users\hp\.codex
+      378 MB  C:\Users\hp\.marscode
+      493 MB  C:\Users\hp\.zcode
+      208 MB  C:\Users\hp\.workbuddy
+      224 MB  C:\Users\hp\.android
+    1,352 MB  C:\Users\hp\AppData\Local\MathWorks
+      242 MB  C:\Users\hp\AppData\Local\NRC
+      506 MB  C:\Users\hp\AppData\Local\@genieworkbuddy-desktop-updater
+      300 MB  C:\Users\hp\AppData\Local\javasharedresources
+
+=== DONE ===

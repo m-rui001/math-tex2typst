@@ -1,0 +1,11 @@
+
+===== D718 new region from 1086 =====
+ENGLISH-RUN=0
+BRACE-IMBALANCE=1
+  1122| diff=-1 | 初等矩界（setup.tex:56--82）。结论三条：$|m_J|\le1$（$|J|\le2D$）；任意至多 $2D$ 个不同输入比特乘积在 $\mathcal E}$ 下的值模至多一；在次数至多 $D$ 的多项式上 $\langle P,R\rangle_{\mathcal E}=\mathc
+BAN-SHAPE(full note)=0
+
+===== D04 new region from 487 =====
+ENGLISH-RUN=0
+BRACE-IMBALANCE=0
+BAN-SHAPE(full note)=0

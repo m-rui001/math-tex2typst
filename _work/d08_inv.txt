@@ -1,0 +1,15 @@
+exists=True
+files=13 total=128849
+    28116 decorrelation.tex  CITED
+    24900 trees.tex  CITED
+    24547 perturbations.tex  CITED
+    11582 comparison.tex  CITED
+     6231 model.tex  CITED
+     6083 upper.tex  CITED
+     5972 cavity.tex  CITED
+     5301 consequences.tex  UNCITED
+     5092 introduction.tex  UNCITED
+     3980 reduction.tex  CITED
+     2828 overview.tex  UNCITED
+     2620 main.tex  UNCITED
+     1597 glyph-mappings.tex  UNCITED

@@ -1,0 +1,39 @@
+== CD canvases: built 126 over 56 papers; refused 0 over 0 papers
+== arrow labels by arrow direction: count, and how many a line crosses (dist < need)
+   horizontal  labels  146   crossed    0   (median label width 0.00 cm)
+   vertical    labels  199   crossed   59   (median label width 2.59 cm)
+   diagonal    labels   49   crossed   21   (median label width 1.06 cm)
+   crossed by its OWN arrow's line   : 37
+   crossed by another arrow's line   : 43
+     own  Infinitely-many-closed-geode dist 0.890 need 1.720  $epsilon.alt_(q - 1)$
+     own  Log-abundance-for-compact-Ka dist 1.230 need 2.060  $"Bl"_( Delta_X times "PP"^1)$
+     own  A-counterexample-to-Tachikaw dist 0.975 need 1.720  $overline(b)_(n + 1)$
+     own  Counterexamples-to-weak-chro dist 1.230 need 1.975  $lambda_(L_(K \( n \)) X)$
+     own  A-rational-obstruction-to-st dist 1.145 need 1.805  $\[ f \/ phi.alt \]^(*)$
+     own  A-rational-obstruction-to-st dist 1.145 need 1.805  $E \( gamma_g \)^delta$
+     own  Infinitely-many-closed-geode dist 0.805 need 1.465  $epsilon.alt'_q$
+     own  Infinitely-many-closed-geode dist 0.720 need 1.380  $epsilon.alt_q$
+   papers with a crossed label: 29 over 80 labels
+   per-paper worst:
+       9  A-rational-obstruction-to-strong-chromatic-splitting-at-
+       9  Thomason-Model-Structures-in-Every-Strict-Higher-Dimensi
+       8  Anticanonical-nonvanishing-from-smooth-semipositivity-Se
+       5  Global-quantum-geometric-Langlands-at-irrational-level-O
+       5  Infinitely-many-closed-geodesic-images-on-every-Riemanni
+       4  Counterexamples-to-weak-chromatic-splitting-sphere-kerne
+       4  Logarithmic-Kodaira-dimension-and-whole-fiber-variation-
+       3  Constructible-tame-Hecke-eigensheaves-in-positive-charac
+       3  Log-abundance-for-compact-Kahler-spaces-under-logarithmi
+       3  The-height-three-chromatic-overlap-an-explicit-filtratio
+     dist 1.120 need 3.250 w 6.50  Counterexamples-to-weak-chroma  $lambda_(L_(K \( h \)) X) thin L_(K \( h \))
+     dist 0.350 need 2.060 w 4.12  Global-quantum-geometric-Langl  $upright("insertion comparison")$
+     dist 0.043 need 1.210 w 2.42  Logarithmic-Kodaira-dimension-  $q = h compose x$
+     dist 0.605 need 1.465 w 2.93  Global-quantum-geometric-Langl  $upright("period of ") upright("??")$
+     dist 1.553 need 2.400 w 4.80  Global-quantum-geometric-Langl  $upright("integrated ") N upright(" case of 
+     dist 0.450 need 1.284 w 2.59  An-algebra-of-infinite-little-  $T "otL"_(B ⊗_k C)-$
+     dist 0.890 need 1.720 w 3.44  Infinitely-many-closed-geodesi  $epsilon.alt_(q - 1)$
+     dist 1.230 need 2.060 w 4.12  Log-abundance-for-compact-Kahl  $"Bl"_( Delta_X times "PP"^1)$
+     dist 0.975 need 1.720 w 3.44  A-counterexample-to-Tachikawas  $overline(b)_(n + 1)$
+     dist 1.230 need 1.975 w 3.95  Counterexamples-to-weak-chroma  $lambda_(L_(K \( n \)) X)$
+== environments written inside a CD environment, and whether CD_STACK protects them
+       4  gathered       protected  1 papers

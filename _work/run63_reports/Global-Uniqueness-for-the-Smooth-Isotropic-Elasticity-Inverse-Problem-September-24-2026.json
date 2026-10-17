@@ -1,0 +1,28 @@
+{
+  "paper": "Global-Uniqueness-for-the-Smooth-Isotropic-Elasticity-Inverse-Problem-September-24-2026",
+  "ok": true,
+  "typ_lines": 632,
+  "included_pdf_pages": 0,
+  "formulas": 593,
+  "math_failed": 0,
+  "labels": 81,
+  "equations": 12,
+  "theorems": 4,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "593"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Global-Uniqueness-for-the-Smooth-Isotropic-Elasticity-Inverse-Problem-September-24-2026.tex"
+}

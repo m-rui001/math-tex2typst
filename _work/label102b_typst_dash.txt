@@ -1,0 +1,40 @@
+Typst/CetZ dash arrays read back off the compiled page (8cm line)
+pgf's numbers for comparison (leg A, _work/label102a_dash_pgf.txt): dashed 2.989/2.989, densely dashed 2.989/1.993, loosely dashed 2.989/5.978,
+dotted <pen>/1.993, densely dotted <pen>/0.996, loosely dotted <pen>/3.985 (pen 0.4pt -> .3985, 1.6pt -> 1.594 in page units)
+
+== thickness 0.4pt ==
+dash value               pdf dashes
+none                     [] 0
+"dashed"                 [ 3 3 ] 0
+"densely-dashed"         [ 3 2 ] 0
+"loosely-dashed"         [ 3 6 ] 0
+"dotted"                 [ .4 2 ] 0
+"densely-dotted"         [ .4 1 ] 0
+"loosely-dotted"         [ .4 4 ] 0
+(3pt, 3pt)               [ 3 3 ] 0
+(3pt, 2pt)               [ 3 2 ] 0
+(3pt, 6pt)               [ 3 6 ] 0
+(0.4pt, 2pt)             [ .4 2 ] 0
+(3pt, 2pt, 0.4pt, 2pt)   [ 3 2 .4 2 ] 0
+(2mm, 3mm)               [ 5.6692917 8.503937 ] 0
+(1.5cm, 0.5cm)           [ 42.519685 14.173228 ] 0
+(3bp, 2bp)               COMPILE FAILED
+
+== thickness 1.6pt ==
+dash value               pdf dashes
+none                     [] 0
+"dashed"                 [ 3 3 ] 0
+"densely-dashed"         [ 3 2 ] 0
+"loosely-dashed"         [ 3 6 ] 0
+"dotted"                 [ 1.6 2 ] 0
+"densely-dotted"         [ 1.6 1 ] 0
+"loosely-dotted"         [ 1.6 4 ] 0
+(3pt, 3pt)               [ 3 3 ] 0
+(3pt, 2pt)               [ 3 2 ] 0
+(3pt, 6pt)               [ 3 6 ] 0
+(0.4pt, 2pt)             [ .4 2 ] 0
+(3pt, 2pt, 0.4pt, 2pt)   [ 3 2 .4 2 ] 0
+(2mm, 3mm)               [ 5.6692917 8.503937 ] 0
+(1.5cm, 0.5cm)           [ 42.519685 14.173228 ] 0
+(3bp, 2bp)               COMPILE FAILED
+

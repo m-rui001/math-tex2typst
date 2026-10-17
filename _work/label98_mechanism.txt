@@ -1,0 +1,481 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+on-ink face: 17 rows over 13 canvases / 13 papers
+
+=== Finite-algebraic-envelopes-and-the-Boone-Higman-co#1  worst 5.66  (3 rows)
+  5.66  dx 2.12 dy 2.78  'R'                    x 'R'                     same-baseline
+        box1=(170.0,5.2,178.3,16.2)  w8.3 h11.0
+        box2=(173.0,4.0,179.6,11.7)  w6.6 h7.7
+  4.90  dx 2.05 dy 2.75  'L'                    x 'L'                     same-baseline
+        box1=(85.5,5.3,93.0,16.3)  w7.5 h11.0
+        box2=(88.3,4.2,94.3,11.9)  w6.0 h7.7
+  3.06  dx 3.55 dy 6.51  'R'                    x 'b'                     stacked
+        box1=(170.0,5.2,178.3,16.2)  w8.3 h11.0
+        box2=(168.3,-1.4,173.0,9.6)  w4.7 h11.0
+  -- content() calls carrying those texts --
+       5: content((6, 0), [$R$])
+      15: content((6, 0), [$b_R$], anchor: "south")
+       4: content((3, 0), [$L$])
+      13: content((3, 0), [$b_L$], anchor: "south")
+      10: bezier((6, 0), (0, 0), (4.083, -1.342), (1.917, -1.342), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: ">"))
+  -- source picture 1 --
+     \begin{tikzpicture}[scale=1] \node (O) at (0,0) {$O$}
+     \node (L) at (3,0) {$L$}
+     \node (R) at (6,0) {$R$}
+     \draw[->] (O) -- node[above] {$\alpha$} (L)
+     \draw[->] (L) -- node[above] {heads} (R)
+     \draw[->] (R) to[bend left=35] node[below] {$\omega$} (O)
+     \draw[->] (L) to[loop above] node[above] {$b_L$} (L)
+     \draw[->] (R) to[loop above] node[above] {$b_R$} (R)
+     \end{tikzpicture}
+
+=== The-Grothendieck-homotopy-hypothesis-via-elementar#4  worst 5.61  (1 rows)
+  5.61  dx12.93 dy 3.81  'Y×Y'                  x ',iū)'                 apart-in-x
+        box1=(39.6,50.5,68.2,61.5)  w28.5 h11.0
+        box2=(31.3,54.3,50.6,65.3)  w19.3 h11.0
+  -- content() calls carrying those texts --
+      14: content((0.9069, -1.602), [$( upright("id")_Y,i macron(u) )$], anchor: "north")
+  -- source picture 4 --
+     \begin{tikzpicture}[baseline=(current bounding box.center),                    node distance=1.45cm and 3.2cm,>=Stealth] \node (a) {\(X\)}
+     \node (b) [right=of a] {\(\mathcal P Y\)}
+     \node (c) [below=of a] {\(Y\)}
+     \node (d) at (b |- c) {\(Y\times Y\).}
+     \draw[->] (a) -- node[above] {\(\mathcal P(i)h\)} (b)
+     \draw[->] (a) -- node[left] {\(i\)} (c)
+     \draw[->] (b) -- node[right] {\((p_0,p_1)\)} (d)
+     \draw[->] (c) -- node[below] {\((\id_Y,i\bar u)\)} (d)
+     \end{tikzpicture}
+
+=== A-continuum-temperature-singularity-for-a-radial-p#1  worst 5.45  (1 rows)
+  5.45  dx 1.01 dy 5.11  'ρ=g'                  x 'w'                     stacked
+        box1=(55.6,51.8,81.3,62.8)  w25.7 h11.0
+        box2=(63.5,46.6,71.4,57.6)  w7.9 h11.0
+  -- content() calls carrying those texts --
+       2: import cetz.draw: *
+       4: content((5.67, 0), [$s$], anchor: "west")
+      14: content((2.331, 2.1), [$w_-$], anchor: "south-east")
+      16: content((3.549, 2.1), [$w_+$], anchor: "south-west")
+  -- source picture 1 --
+     \begin{tikzpicture}[scale=1.05,>=Stealth]  \draw[->] (-0.4,0) -- (5.4,0) node[right] {$s$}
+     \draw[->] (0,-0.2) -- (0,3.7) node[above] {$d$}
+     \fill[blue!8] (2.8,2) circle (1.15)
+     \draw[blue!65!black] (2.8,2) circle (1.15)
+     \draw[dashed] (0,2) node[left] {$\rho=g_2$} -- (5.0,2)
+     \fill (2.8,2) circle (1.4pt) node[below] {$g$}
+     \fill (2.22,2) circle (2pt) node[above left] {$w_-$}
+     \fill (3.38,2) circle (2pt) node[above right] {$w_+$}
+     \node[align=center] at (2.8,0.45) {same density, distinct slopes}
+     \node at (2.8,3.5) {$\overline B(g,\gamma)\subset\partial Q_\infty(\beta_c,h_c)$}
+     \end{tikzpicture}
+
+=== A-Linear-Clock-for-Random-Walk-on-Tree-Weighted-Pl#0  worst 5.04  (2 rows)
+  4.80  dx 9.35 dy22.86  'height'               x 'uncappedban'           apart-in-x
+        box1=(25.6,-2.1,49.1,8.1)  w23.5 h10.3
+        box2=(22.9,0.2,33.1,51.5)  w10.3 h51.3
+  5.04  dx 0.09 dy23.33  'H'                    x 'uncappedban'           stacked
+        box1=(24.3,44.7,31.8,53.7)  w7.5 h9.0
+        box2=(22.9,0.2,33.1,51.5)  w10.3 h51.3
+  -- content() calls carrying those texts --
+       6: content((-1.445, 2.79), [#text(size: 9pt)[height]], anchor: "south")
+      22: content((2.762, 1.557), [#box(inset: 0.07056cm, stroke: none, fill: rgb("#ffffff"), [#set text(hyphenate: false, top-edge: "bounds", bottom-edge: "bounds"); #align(center
+      26: content((-0.7905, 2.205), [#page_rotate(-90deg)[#text(fill: rgb("#a60000"))[#text(size: 9pt)[uncapped band]]]], anchor: "east")
+      20: content((-1.615, 1.35), [#text(size: 9pt)[$H$]], anchor: "east")
+  -- source picture 0 --
+     \begin{tikzpicture}[x=0.85cm,y=0.9cm,>=Stealth,                     every node/.style={font=\small}]  \fill[blue!7] (-0.15,2.1) rectangle (6.15,2.55)
+     \fill[blue!7] (-0.15,0.4) rectangle (6.15,0.85)
+     \draw[->,gray] (-1.7,0) -- (-1.7,3.1) node[above] {height}
+     \draw[thick] (0,0.15) -- (0,2.95) node[above] {$b$}
+     \draw[thick] (3,1.5) -- (3,2.95) node[above] {$w$}
+     \draw[thick] (6,0.15) -- (6,2.95) node[above] {$d$}
+     \draw[->,blue!65!black,thick] (0.08,2.3) -- (2.92,2.3)
+     \draw[->,blue!65!black,thick] (3.08,2.3) -- (5.92,2.3)
+     \draw[->,blue!65!black,thick] (0.08,0.62) -- (5.92,0.62)
+     \node[above] at (1.5,2.3) {$b\to w$}
+     \node[above] at (4.5,2.3) {$w\to d$}
+     \node[below] at (3,0.62) {$b\to d$}
+     \draw[densely dashed] (-1.9,1.5) -- (6.4,1.5)
+     \node[left] at (-1.9,1.5) {$H$}
+     \fill (3,1.5) circle (2pt)
+     \node[anchor=west,fill=white,inner sep=2pt] at (3.25,1.73)             {$s_w^a+m_w^a$}
+     \draw[red!65!black,very thick] (-0.65,0.45) -- (-0.65,2.5)
+     \draw[red!65!black] (-0.85,0.45) -- (-0.45,0.45)
+     \draw[red!65!black] (-0.85,2.5) -- (-0.45,2.5)
+     \node[anchor=east,rotate=90,red!65!black] at (-0.93,2.45)             {uncapped band}
+     \end{tikzpicture}
+
+=== Relative-independence-of-the-separable-quotient-pr#0  worst 4.97  (1 rows)
+  4.97  dx35.71 dy 5.12  'X=ker(Q−B)'           x 'B|'                    apart-in-x
+        box1=(-0.0,48.6,78.7,59.6)  w78.7 h11.0
+        box2=(69.2,53.7,80.9,64.7)  w11.7 h11.0
+  -- content() calls carrying those texts --
+       3: content((0, 0), [$X= ker (Q-B)$])
+      10: content((1.401, 0), [$B|_X$], anchor: "north")
+  -- source picture 0 --
+     \begin{tikzpicture}[>=Stealth,node distance=13mm and 36mm] \node (x) {$X=\ker(Q-B)$}
+     \node[right=of x] (v) {$V=\overline{B(X)}$}
+     \node[above=of x] (e) {$E^*$}
+     \node[above=of v] (w) {$W=E^*/X_0$}
+     \draw[->] (e) -- node[above] {$Q$} (w)
+     \draw[->] (x) -- node[below] {$B|_X$} (v)
+     \draw[->] (x) -- (e)
+     \draw[->] (v) -- (w)
+     \end{tikzpicture}
+
+=== The-Blockwise-Alperin-Weight-Conjecture-September-#0  worst 4.56  (2 rows)
+  4.56  dx71.84 dy 3.42  'Smallorbitgivesanextensionwithsmall' x '=1'                    apart-in-x
+        box1=(189.8,87.6,341.3,97.9)  w151.6 h10.3
+        box2=(186.7,84.9,200.7,93.9)  w14.0 h9.0
+  3.36  dx16.83 dy 3.79  'Valuedliftandmarked-coverdescent' x 'p'                     apart-in-x
+        box1=(199.4,74.5,336.0,84.8)  w136.6 h10.3
+        box2=(249.0,72.7,252.8,79.0)  w3.7 h6.3
+  -- content() calls carrying those texts --
+       5: content((3.2, -1.645), [#box(width: 5.994cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false
+       6: content((0, -1.791), [#box(width: 12.49cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, 
+       2: import cetz.draw: *
+       3: content((0, 0), [#box(width: 12.49cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, top-e
+       4: content((-3.2, -1.645), [#box(width: 5.994cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: fals
+       7: content((0, -3.896), [#box(width: 12.49cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, 
+       8: content((0, -5.816), [#box(width: 12.49cm, inset: 0.2469cm, radius: 2pt, stroke: (paint: rgb("#737373"), thickness: 0.4pt, miter-limit: 10), [#set text(hyphenate: false, 
+       9: line((0, -0.7452), (0, -1.145), stroke: (thickness: 0.6pt, miter-limit: 10))
+      10: line((0, -1.145), (-3.2, -1.145), stroke: (thickness: 0.6pt, miter-limit: 10))
+      11: line((-3.2, -1.145), (-3.2, -1.645), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+      12: line((0, -0.7452), (0, -1.145), stroke: (thickness: 0.6pt, miter-limit: 10))
+      13: line((0, -1.145), (3.2, -1.145), stroke: (thickness: 0.6pt, miter-limit: 10))
+      14: line((3.2, -1.145), (3.2, -1.645), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+      15: line((-3.2, -2.827), (-3.2, -1), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+      16: line((3.2, -2.827), (3.2, -1), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+      17: line((0, -2.581), (0, -3.281), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+      18: line((0, -4.511), (0, -5.211), stroke: (thickness: 0.6pt, miter-limit: 10), mark: (end: (symbol: ">>", length: 0.1764cm, fill: black)))
+  -- source picture 0 --
+     \begin{tikzpicture}[   every node/.style={font=\small,align=center},   stage/.style={draw=black!55,rounded corners=2pt,inner sep=7pt},   flow/.style={-{Stealth[length=5pt
+     \coordinate (branch-top) at ($(twist.south)+(0,-9mm)$)
+     \coordinate (branch-split) at ($(twist.south)+(0,-4mm)$)
+     \node[stage,text width=5.5cm,anchor=north] (genus)   at ($(branch-top)+(-3.2cm,0)$)   {Differential estimate and divisor-degree divisibility\\Sharp inseparable genus boun
+     \node[stage,text width=5.5cm,anchor=north] (lift)   at ($(branch-top)+(3.2cm,0)$)   {Valued lift and marked-cover descent\\Small orbit gives an extension    with small $p
+     \node[fit=(genus)(lift),inner sep=0pt,outer sep=0pt] (branches) {}
+     \node[stage,text width=12cm,below=10mm of branches] (specialization)   {Section comparison, finite presentation, and connectedness\\    No such marked $J$-cover over $L$ 
+     \node[stage,text width=12cm,below=7mm of specialization] (count)   {Every Sylow orbit has size divisible by $p^h$\\    Uniform tuple divisibility (\Cref{thm:tuple-divisib
+     \node[stage,text width=12cm,below=7mm of count] (blocks)   {Chain inversion and central trace limits (\Cref{sec:group})\\    $l(B)=|W_p(B)|$}
+     \draw[flow] (twist.south) -- (branch-split) -| (genus.north)
+     \draw[flow] (twist.south) -- (branch-split) -| (lift.north)
+     \draw[flow] (genus.south) -- (genus.south |- specialization.north)
+     \draw[flow] (lift.south) -- (lift.south |- specialization.north)
+     \draw[flow] (specialization.south) -- (count.north)
+     \draw[flow] (count.south) -- (blocks.north)
+     \end{tikzpicture}
+
+=== An-explicit-counterexample-to-the-Auslander-Reiten#0  worst 4.32  (1 rows)
+  4.32  dx16.62 dy 4.52  'FAsmallmatrix)'       x 'finitequotient'        apart-in-x
+        box1=(91.8,130.6,158.9,139.6)  w67.1 h9.0
+        box2=(115.8,125.4,168.1,135.7)  w52.3 h10.3
+  -- content() calls carrying those texts --
+      11: line((0.68, 3.3), (2.741, 3.3), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      13: line((5.659, 3.3), (7.825, 3.3), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      15: line((8.6, 2.773), (8.6, 1.77), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      17: line((0.3387, 1.4), (3.231, 1.4), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      18: content((2.1, 1.4), [#text(size: 9pt)[fiber projection]], anchor: "south")
+      19: line((5.169, 1.4), (7.92, 1.4), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      21: line((0, 1.08), (0, 0.2644), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      23: line((1.688, -0.3), (3.21, -0.3), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      24: content((2.1, -0.3), [#text(size: 9pt)[finite quotient]], anchor: "south")
+  -- source picture 0 --
+     \begin{tikzpicture}[>=Stealth,every node/.style={font=\small},  box/.style={draw,rounded corners=2pt,inner sep=6pt,align=center},  lab/.style={font=\footnotesize,align=ce
+     \node[box] (t) at (4.2,3.3) {$T=C\ltimes DC$\\$\Ext_T^*(s,s)=\kk[\tau]$}
+     \node[box] (a) at (8.6,3.3) {$A=T\otimes T$\\$X=s\otimes s$}
+     \node[box] (f) at (0,1.4) {$F$}
+     \node[box] (u) at (4.2,1.4) {$U_{H_1}\oplus U_{H_2}$}
+     \node[box] (cone) at (8.6,1.4) {$\mathcal C[3]$}
+     \node[box] (lam) at (0,-.3) {$\Lambda=\left(\begin{smallmatrix}A&0\\F&A\end{smallmatrix}\right)$}
+     \node[box] (z) at (4.2,-.3) {$Z$ from $X,v$}
+     \draw[->] (c)--node[above=9mm,lab]{trivial extension}(t)
+     \draw[->] (t)--node[above=9mm,lab]{tensor square}(a)
+     \draw[->] (a)--node[right,lab]{two cones\\and shift}(cone)
+     \draw[->] (f)--node[above,lab]{fiber projection}(u)
+     \draw[->] (u)--node[above,lab]{lifted twists}(cone)
+     \draw[->] (f)--node[left,lab]{triangular\\algebra}(lam)
+     \draw[->] (lam)--node[above,lab]{finite quotient}(z)
+     \end{tikzpicture}
+
+=== Irrational-cubic-fourfolds-with-geometric-K3-categ#0  worst 4.12  (1 rows)
+  4.12  dx39.41 dy 0.33  '⇢X'                   x 'Morifactorization'     same-baseline
+        box1=(185.7,-1.4,208.8,9.6)  w23.2 h11.0
+        box2=(205.0,0.5,268.4,8.5)  w63.4 h8.0
+  -- content() calls carrying those texts --
+      11: content((5.91, -0.01492), [#text(size: 0.73em)[$upright("Mori factorization")$]])
+  -- source picture 0 --
+     \begin{tikzcd}[column sep=large,row sep=large]  & \mathbf P^4\dashrightarrow X    \arrow[dl,"\text{smooth factorization}" description]    \arrow[dr,"\text{Mori factorizat
+
+=== Finite-Monoid-Computations-and-a-Uniform-Generaliz#0  worst 3.92  (1 rows)
+  3.92  dx31.29 dy 9.04  'continuation'         x 'firstmismatch'         apart-in-x
+        box1=(170.1,54.9,227.6,67.5)  w57.5 h12.5
+        box2=(197.9,64.0,262.4,76.5)  w64.5 h12.5
+  -- content() calls carrying those texts --
+       6: content((0.5175, 1.305), [seed 1], anchor: "east")
+       7: content((0.5175, 0.725), [seed 2], anchor: "east")
+       8: content((0.5175, 0.145), [seed 3], anchor: "east")
+      13: content((3.105, -0.58), [seed union agrees with $pi$], anchor: "south")
+      14: content((6.555, -0.58), [continuation], anchor: "north")
+      17: content((7.59, -0.435), [$q$], anchor: "south")
+      18: content((7.659, -0.899), [first mismatch], anchor: "north")
+       3: rect((0.69, 1.16), (4.14, 1.45), fill: rgb("#ebebeb"), stroke: (thickness: 0.4pt, miter-limit: 10))
+       4: rect((1.38, 0.58), (4.83, 0.87), fill: rgb("#ebebeb"), stroke: (thickness: 0.4pt, miter-limit: 10))
+       5: rect((2.07, 0), (5.52, 0.29), fill: rgb("#ebebeb"), stroke: (thickness: 0.4pt, miter-limit: 10))
+      12: line((7.762, -0.58), (8.28, -0.58), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+  -- source picture 0 --
+     \begin{tikzpicture}[x=0.69cm,y=0.58cm,>=Stealth]   \draw[fill=black!8] (1,2) rectangle (6,2.5)
+     \draw[fill=black!8] (2,1) rectangle (7,1.5)
+     \draw[fill=black!8] (3,0) rectangle (8,0.5)
+     \node[anchor=east] at (0.75,2.25) {seed 1}
+     \node[anchor=east] at (0.75,1.25) {seed 2}
+     \node[anchor=east] at (0.75,0.25) {seed 3}
+     \draw[densely dashed] (1,-0.2) -- (1,-1.5)
+     \draw[densely dashed] (8,-0.2) -- (8,-1.5)
+     \draw[very thick] (1,-1) -- (11,-1)
+     \draw[->] (11.25,-1) -- (12,-1)
+     \node[above] at (4.5,-1) {seed union agrees with $\pi$}
+     \node[below] at (9.5,-1) {continuation}
+     \draw (10.88,-1.13) -- (11.12,-0.87)
+     \draw (10.88,-0.87) -- (11.12,-1.13)
+     \node[above] at (11,-0.75) {$q$}
+     \node[below] at (11.1,-1.55) {first mismatch}
+     \end{tikzpicture}
+
+=== Renewal-and-changes-of-law-for-critical-honeycomb-#6  worst 3.84  (1 rows)
+  3.84  dx 1.85 dy 5.78  'p'                    x 'longerend'             stacked
+        box1=(15.6,20.7,20.1,29.7)  w4.5 h9.0
+        box2=(0.0,14.3,39.4,24.5)  w39.4 h10.3
+  -- content() calls carrying those texts --
+       2: import cetz.draw: *
+       3: content((0.99, 3.555), [#text(size: 9pt)[two bridges and a tip choice]])
+       4: line((-1.035, 0), (3.195, 0), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10, dash: "dashed"))
+       5: content((-1.035, 0), [#text(size: 9pt)[$0$]], anchor: "east")
+       6: line((-1.035, 1.62), (3.195, 1.62), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10, dash: "dashed"))
+       7: content((-1.035, 1.62), [#text(size: 9pt)[$n$]], anchor: "east")
+       8: line((-1.035, 2.79), (3.195, 2.79), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10, dash: "dashed"))
+       9: content((-1.035, 2.79), [#text(size: 9pt)[$p$]], anchor: "east")
+      10: line((0.585, 0), (0.27, 0.27), (0.315, 0.675), (-0.54, 1.08), (-0.495, 1.62), (-0.765, 1.98), (-0.225, 2.34), (-0.36, 2.79), stroke: (paint: rgb("#0000a6"), thickness: 1.
+      11: line((1.215, 0), (1.62, 0.09), (2.25, 0.45), (2.115, 0.855), (2.61, 1.17), (2.52, 1.62), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      12: line((0.585, 0), (0.585, -0.225), (0.9, -0.45), (1.215, -0.225), (1.215, 0), stroke: (paint: rgb("#b20000"), thickness: 1.2pt, miter-limit: 10))
+      16: line((0, 1.62), (3.24, 1.62), stroke: (thickness: 1.2pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      18: circle((2.52, 1.62), radius: 0.05997, fill: rgb("#ffffff"), stroke: (thickness: 0.4pt, miter-limit: 10))
+      19: content((0, 1.674), [#text(size: 9pt)[$t$]], anchor: "south")
+      20: content((2.52, 1.674), [#text(size: 9pt)[shorter end]], anchor: "south-west")
+      21: content((0.9, -0.558), [#text(fill: rgb("#b20000"))[#text(size: 9pt)[three-center connector]]], anchor: "north")
+      22: line((-0.495, 1.305), (2.52, 1.305), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (start: (symbol: ">>", fill: black), end: (symbol: ">>", fill: black)))
+      23: content((1.012, 1.305), [#text(size: 9pt)[gap $>G$]], anchor: "north")
+      24: content((-0.36, 2.835), [#text(fill: rgb("#0000a6"))[#text(size: 9pt)[longer end]]], anchor: "south-east")
+      25: line((3.735, 0.99), (5.13, 0.99), stroke: (thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      26: content((4.433, 0.99), [#text(size: 9pt)[$y'=n-y$]], anchor: "south")
+      27: content((4.437, 0.882), [#text(size: 9pt)[translate#linebreak()the tip to $0$]], anchor: "north")
+      28: content((8.39, 3.555), [#text(size: 9pt)[a slit chord]])
+      29: line((6.365, 2.745), (10.6, 2.745), stroke: (thickness: 0.8pt, miter-limit: 10))
+      30: line((6.365, -1.17), (10.6, -1.17), stroke: (thickness: 0.8pt, miter-limit: 10))
+      31: content((6.365, 2.745), [#text(size: 9pt)[$L+1$]], anchor: "east")
+      32: content((6.365, -1.17), [#text(size: 9pt)[$-s_0$]], anchor: "east")
+      33: line((6.365, 1.62), (10.6, 1.62), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10, dash: "dashed"))
+      34: content((6.365, 1.62), [#text(size: 9pt)[$n$]], anchor: "east")
+      35: line((6.365, 0), (7.274, 0), stroke: (paint: rgb("#808080"), thickness: 0.4pt, miter-limit: 10, dash: "dashed"))
+      36: content((6.365, 0), [#text(size: 9pt)[$0$]], anchor: "east")
+      37: merge-path({line((7.4, 0.054), (10.6, 0.054), (10.6, -0.054), (7.4, -0.054)); bezier((7.4, -0.054), (7.4, 0.054), (7.358, -0.054), (7.358, 0.054))}, close: false, fill: r
+      38: line((10.6, 0.054), (7.4, 0.054), stroke: (thickness: 1.2pt, miter-limit: 10))
+      39: bezier((7.4, 0.054), (7.4, -0.054), (7.358, 0.054), (7.358, -0.054), stroke: (thickness: 1.2pt, miter-limit: 10))
+      40: line((7.4, -0.054), (10.6, -0.054), stroke: (thickness: 1.2pt, miter-limit: 10))
+      41: line((9.92, 0.054), (10.01, 0.45), (9.515, 0.765), (9.65, 1.17), (9.02, 1.53), (8.615, 1.62), stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, miter-limit: 10))
+      42: line((8.615, 1.62), (8.615, 1.845), (8.3, 2.07), (7.985, 1.845), (7.985, 1.62), stroke: (paint: rgb("#b20000"), thickness: 1.2pt, miter-limit: 10))
+      46: line((7.985, 1.62), (7.67, 1.35), (7.715, 0.945), (6.86, 0.54), (6.905, 0), (6.635, -0.36), (7.175, -0.72), (7.04, -1.17), stroke: (paint: rgb("#0000a6"), thickness: 1.2p
+      48: line((10, 0.315), (10.01, 0.45), stroke: (paint: rgb("#0000a6"), thickness: 0.8pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: rgb("#0000a6"))))
+      49: content((9.92, -0.144), [#text(size: 9pt)[$a$]], anchor: "north")
+      50: content((8.3, 2.124), [#text(fill: rgb("#b20000"))[#text(size: 9pt)[$n+2"/"3$]]], anchor: "south")
+      51: content((7.373, -0.09), [#text(size: 9pt)[tip]], anchor: "north-east")
+  -- source picture 6 --
+     \begin{tikzpicture}[x=.9cm,y=.9cm,>=stealth,font=\small]   \begin{scope}     \node[align=center] at (1.1,3.95) {two bridges and a tip choice}
+     \foreach \y/\lab in {0/{0},1.8/{n},3.1/{p}}       {\draw[dashed,gray] (-1.15,\y)--(3.55,\y)
+     \node[left] at (-1.15,\y) {$\lab$};}     \draw[very thick,blue!65!black] (.65,0)--(.3,.3)--(.35,.75)       --(-.6,1.2)--(-.55,1.8)--(-.85,2.2)--(-.25,2.6)--(-.4,3.1)
+     \draw[very thick,blue!65!black] (1.35,0)--(1.8,.1)--(2.5,.5)       --(2.35,.95)--(2.9,1.3)--(2.8,1.8)
+     \draw[very thick,red!70!black] (.65,0)--(.65,-.25)       --(1,-.5)--(1.35,-.25)--(1.35,0)
+     \foreach \x/\y in {.65/-.25,1/-.5,1.35/-.25}       {\fill[red!70!black] (\x,\y) circle (1.4pt);}     \draw[very thick,->] (0,1.8)--(3.6,1.8)
+     \fill (0,1.8) circle (1.5pt)
+     \draw[fill=white] (2.8,1.8) circle (1.7pt)
+     \node[above] at (0,1.86) {$t$}
+     \node[above right] at (2.8,1.86) {shorter end}
+     \node[below,red!70!black] at (1,-.62) {three-center connector}
+     \draw[<->] (-.55,1.45)--(2.8,1.45)       node[midway,below] {gap $>G$}
+     \node[above left,blue!65!black] at (-.4,3.15) {longer end}
+     \end{scope}   \draw[->,thick] (4.15,1.1)--(5.7,1.1)     node[midway,above,align=center] {$y'=n-y$}
+     \node[below,align=center] at (4.93,.98) {translate\\the tip to $0$}
+     \begin{scope}[xshift=7.4cm]     \node[align=center] at (1.1,3.95) {a slit chord}
+     \draw[thick] (-1.15,3.05)--(3.55,3.05)
+     \draw[thick] (-1.15,-1.3)--(3.55,-1.3)
+     \node[left] at (-1.15,3.05) {$L+1$}
+     \node[left] at (-1.15,-1.3) {$-s_0$}
+     \draw[dashed,gray] (-1.15,1.8)--(3.55,1.8)
+     \node[left] at (-1.15,1.8) {$n$}
+     \draw[dashed,gray] (-1.15,0)--(-.14,0)
+     \node[left] at (-1.15,0) {$0$}
+     \fill[gray!15] (0,.06)--(3.55,.06)--(3.55,-.06)--(0,-.06)       to[out=180,in=180] (0,.06)
+     \draw[very thick] (3.55,.06)--(0,.06)       to[out=180,in=180] (0,-.06)--(3.55,-.06)
+     \draw[very thick,blue!65!black] (2.8,.06)--(2.9,.5)--(2.35,.85)       --(2.5,1.3)--(1.8,1.7)--(1.35,1.8)
+     \draw[very thick,red!70!black] (1.35,1.8)--(1.35,2.05)       --(1,2.3)--(.65,2.05)--(.65,1.8)
+     \foreach \x/\y in {.65/2.05,1/2.3,1.35/2.05}       {\fill[red!70!black] (\x,\y) circle (1.4pt);}     \draw[very thick,blue!65!black] (.65,1.8)--(.3,1.5)--(.35,1.05)      
+     \fill (2.8,.06) circle (1.5pt)
+     \draw[->,blue!65!black,thick] (2.89,.35)--(2.9,.5)
+     \node[below] at (2.8,-.16) {$a$}
+     \node[above,red!70!black] at (1,2.36) {$n+2/3$}
+     \node[below left] at (-.03,-.1) {tip}
+     \end{scope} \end{tikzpicture}
+
+=== Finite-tensor-savings-and-exact-Fourier-circuits-S#4  worst 3.40  (1 rows)
+  3.40  dx 4.79 dy 5.43  '(x'                   x ')'                     stacked
+        box1=(161.2,46.7,172.1,57.7)  w10.9 h11.0
+        box2=(159.6,52.2,164.2,63.2)  w4.6 h11.0
+  -- content() calls carrying those texts --
+       3: content((0, 1.425), [$(x_-,y_-)$])
+       4: content((5.7, 1.425), [$(x_+,y_+)$])
+       5: content((0, -0.19), [$(x_-+y_-,#h(0.1667em) x_--y_-)$])
+       6: content((5.7, -0.19), [$(x_++y_+,#h(0.1667em) x_+-y_+)$])
+       7: line((0.742, 1.425), (4.958, 1.425), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+       8: content((2.85, 1.425), [$V$], anchor: "south")
+       9: line((0, 1.124), (0, 0.111), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      10: content((0, 0.6175), [$F$], anchor: "east")
+      11: line((5.7, 1.124), (5.7, 0.111), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      12: content((5.7, 0.6175), [$F$], anchor: "west")
+      13: line((1.333, -0.19), (4.367, -0.19), stroke: (thickness: 0.4pt, miter-limit: 10), mark: (end: (symbol: ">>", fill: black)))
+      14: content((2.85, -0.19), [$"diag" (B,-B^(- sans(T) ))$], anchor: "north")
+      15: })
+  -- source picture 4 --
+     \begin{tikzpicture}[>=stealth, every node/.style={align=center},                     scale=0.95, transform shape]  \node (a) at (0,1.5) {$ (x_-,y_-) $}
+     \node (b) at (6,1.5) {$ (x_+,y_+) $}
+     \node (c) at (0,-0.2) {$ (x_-+y_-,\,x_--y_-) $}
+     \node (e) at (6,-0.2) {$ (x_++y_+,\,x_+-y_+) $}
+     \draw[->] (a) -- node[above] {$V$} (b)
+     \draw[->] (a) -- node[left] {$F$} (c)
+     \draw[->] (b) -- node[right] {$F$} (e)
+     \draw[->] (c) -- node[below] {$\diag(B,-B^{-\mathsf T})$} (e)
+     \end{tikzpicture}
+
+=== Cylinder-amplitudes-and-logarithmic-bridge-length-#0  worst 3.32  (1 rows)
+  3.32  dx22.50 dy 5.90  'y'                    x 'Firstmeansleft;'       apart-in-x
+        box1=(61.2,146.5,65.6,155.5)  w4.4 h9.0
+        box2=(11.6,151.8,70.1,162.1)  w58.5 h10.3
+  -- content() calls carrying those texts --
+      80: content((1.9, -4.12), [#text(size: 9pt)[$B(y"/"x)$]])
+      85: content((0.85, -3.35), [#text(size: 9pt)[$T$: new first#linebreak()$y$]])
+      88: content((3.05, -4.98), [#text(size: 9pt)[$B$: old second#linebreak()$y$]])
+      93: content((1.9, -5.66), [#text(size: 9pt)[First means left;#linebreak()$s= "old" "right""/""old" "left"$.]])
+  -- source picture 0 --
+     \begin{tikzpicture}[   x=1cm,y=1cm,   font=\small,   finite boundary/.style={draw=black!30,line width=.4pt},   finite arc/.style={draw=black,line width=1.05pt,line cap=ro
+     \node[anchor=east,font=\footnotesize] at (13.4,0)     {Separate drawings are alternative states.}
+     \FiniteSquare{.70}{-1.08}{}   \node[finite label,left]  at (.35,-1.08) {$L$}
+     \node[finite label,below] at (.70,-1.43) {$B$}
+     \node[finite label,right] at (1.05,-1.08) {$R$}
+     \node[finite label,above] at (.70,-.73) {$T$}
+     \node[finite label] at (.70,-1.96) {vacant ($1$)}
+     \node at (3.05,-.43) {$u$}
+     \FiniteSquare{2.50}{-1.08}{     \draw[finite arc] (-.35,0) .. controls (-.13,0) and (0,.13) .. (0,.35);}   \FiniteSquare{3.60}{-1.08}{     \draw[finite arc] (0,-.35) .. c
+     \node at (5.65,-.43) {$U$}
+     \FiniteSquare{5.10}{-1.08}{     \draw[finite arc] (-.35,0) .. controls (-.13,0) and (0,-.13) .. (0,-.35);}   \FiniteSquare{6.20}{-1.08}{     \draw[finite arc] (0,.35) .. 
+     \node at (8.25,-.43) {$v$}
+     \FiniteSquare{7.70}{-1.08}{\draw[finite arc] (-.35,0)--(.35,0);}   \FiniteSquare{8.80}{-1.08}{\draw[finite arc] (0,-.35)--(0,.35);}   \node[finite label] at (8.25,-1.70) 
+     \node at (10.65,-.43) {$w$}
+     \FiniteSquare{10.65}{-1.08}{     \draw[finite arc] (-.35,0) .. controls (-.13,0) and (0,.13) .. (0,.35)
+     \draw[finite arc] (0,-.35) .. controls (0,-.13) and (.13,0) .. (.35,0);}   \node[finite label] at (10.65,-1.70) {$LT,BR$}
+     \node at (12.55,-.43) {$W$}
+     \FiniteSquare{12.55}{-1.08}{     \draw[finite arc] (-.35,0) .. controls (-.13,0) and (0,-.13) .. (0,-.35)
+     \draw[finite arc] (0,.35) .. controls (0,.13) and (.13,0) .. (.35,0);}   \node[finite label] at (12.55,-1.70) {$LB,TR$}
+     \draw[black!20] (0,-2.25)--(13.4,-2.25)
+     \node[finite heading] at (0,-2.62) {(b) The swap $B(s)$}
+     \node[finite heading] at (4.30,-2.62) {(c) Triangle $P$}
+     \node[finite heading] at (10.35,-2.62) {(d) Cap $C$}
+     \draw[finite boundary] (1.90,-3.32)--(2.70,-4.12)--(1.90,-4.92)--(1.10,-4.12)--cycle
+     \node at (1.90,-4.12) {$B(y/x)$}
+     \foreach \p in {(1.50,-3.72),(2.30,-3.72),(1.50,-4.52),(2.30,-4.52)}     \fill[black!45] \p circle (1.2pt)
+     \node[finite label,align=center] at (.85,-3.35) {$T$: new first\\$y$}
+     \node[finite label,align=center] at (3.05,-3.35) {$R$: new second\\$x$}
+     \node[finite label,align=center] at (.85,-4.98) {$L$: old first\\$x$}
+     \node[finite label,align=center] at (3.05,-4.98) {$B$: old second\\$y$}
+     \draw[black!40,line width=.35pt] (1.40,-3.66)--(1.10,-3.50)
+     \draw[black!40,line width=.35pt] (2.40,-3.66)--(2.73,-3.50)
+     \draw[black!40,line width=.35pt] (1.40,-4.58)--(1.10,-4.79)
+     \draw[black!40,line width=.35pt] (2.40,-4.58)--(2.73,-4.79)
+     \node[finite label,align=center] at (1.90,-5.66)     {First means left
+     \\$s=\text{old right}/\text{old left}$.}
+     \draw[black!20] (4.05,-2.88)--(4.05,-5.96)
+     \node[finite label] at (7.13,-3.09) {$m\longmapsto(qm,m/q)$}
+     \FiniteTriangle{4.90}{-4.06}{}   \FiniteTriangle{6.40}{-4.06}{     \draw[finite arc] (0,-.33) .. controls (0,-.14) and (-.09,-.07) .. (-.24,.09);}   \FiniteTriangle{7.90}
+     \node[finite label] at (6.40,-4.73) {$X$}
+
+=== Disk-transfer-representations-and-confined-bridge-#1  worst 3.10  (1 rows)
+  3.10  dx 4.12 dy 8.95  'block'                x '2'                     stacked
+        box1=(204.3,109.8,231.3,122.3)  w27.0 h12.5
+        box2=(219.2,101.6,224.7,112.6)  w5.5 h11.0
+  -- content() calls carrying those texts --
+       5: content((0, 1.732), [#text(fill: rgb("#0000a6"))[block $A$]])
+      10: circle((-1.018, 0.588), radius: 0.04586, fill: black, stroke: none)
+      12: circle((7.201e-17, 1.176), radius: 0.04586, fill: black, stroke: none)
+      14: circle((1.018, 0.588), radius: 0.04586, fill: black, stroke: none)
+      16: circle((1.018, -0.588), radius: 0.04586, fill: black, stroke: none)
+      18: circle((7.201e-17, -1.176), radius: 0.04586, fill: black, stroke: none)
+      20: circle((-1.018, -0.588), radius: 0.04586, fill: black, stroke: none)
+      30: content((5.46, -1.732), [#text(fill: rgb("#0000a6"))[block $A$]])
+      35: circle((4.442, -0.588), radius: 0.04586, fill: black, stroke: none)
+      37: circle((5.46, -1.176), radius: 0.04586, fill: black, stroke: none)
+      39: circle((6.478, -0.588), radius: 0.04586, fill: black, stroke: none)
+      41: circle((6.478, 0.588), radius: 0.04586, fill: black, stroke: none)
+      43: circle((5.46, 1.176), radius: 0.04586, fill: black, stroke: none)
+      45: circle((4.442, 0.588), radius: 0.04586, fill: black, stroke: none)
+       4: arc((-1.176, 1.44e-16), start: 180deg, stop: 0deg, radius: 1.176, stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, cap: "round", join: "round"))
+       6: content((0, 2.184), [Upper disk])
+       7: bezier((-1.018, 0.588), (7.201e-17, 1.176), (-0.4387, 0.5228), (-0.2334, 0.6413), stroke: (paint: rgb("#404040"), thickness: 0.8pt, cap: "round", join: "round"))
+       8: bezier((1.018, 0.588), (1.018, -0.588), (0.6721, 0.1185), (0.6721, -0.1185), stroke: (paint: rgb("#404040"), thickness: 0.8pt, cap: "round", join: "round"))
+       9: bezier((7.201e-17, -1.176), (-1.018, -0.588), (-0.2334, -0.6413), (-0.4387, -0.5228), stroke: (paint: rgb("#404040"), thickness: 0.8pt, cap: "round", join: "round"))
+      11: content((-1.218, 0.7035), [$1$])
+      13: content((8.615e-17, 1.407), [$2$])
+      15: content((1.218, 0.7035), [$3$])
+      17: content((1.218, -0.7035), [$4$])
+      21: content((-1.218, -0.7035), [$6$])
+      23: content((0, -0.2625), [#text(fill: rgb("#808080"))[end]])
+      24: circle((-1.176, 0), radius: 0.0635, fill: rgb("#b20000"), stroke: none)
+      26: circle((1.176, 0), radius: 0.0635, fill: rgb("#b20000"), stroke: none)
+      29: arc((4.284, -1.44e-16), start: -180deg, stop: 0deg, radius: 1.176, stroke: (paint: rgb("#0000a6"), thickness: 1.2pt, cap: "round", join: "round"))
+      31: content((5.46, 2.184), [Lower disk])
+      32: bezier((4.442, -0.588), (4.442, 0.588), (4.788, -0.1185), (4.788, 0.1185), stroke: (paint: rgb("#404040"), thickness: 0.8pt, cap: "round", join: "round"))
+      33: bezier((5.46, -1.176), (6.478, -0.588), (5.693, -0.6413), (5.899, -0.5228), stroke: (paint: rgb("#404040"), thickness: 0.8pt, cap: "round", join: "round"))
+      34: bezier((6.478, 0.588), (5.46, 1.176), (5.899, 0.5228), (5.693, 0.6413), stroke: (paint: rgb("#404040"), thickness: 0.8pt, cap: "round", join: "round"))
+      36: content((4.242, -0.7035), [$1$])
+      38: content((5.46, -1.407), [$2$])
+      46: content((4.242, 0.7035), [$6$])
+      48: content((5.46, -0.2625), [#text(fill: rgb("#808080"))[end]])
+      49: circle((4.284, 0), radius: 0.0635, fill: rgb("#b20000"), stroke: none)
+      51: circle((6.636, 0), radius: 0.0635, fill: rgb("#b20000"), stroke: none)
+      53: content((2.73, -2.247), [Identify equally numbered ports and the two copies of the seam.])
+  -- source picture 1 --
+     \begin{tikzpicture}[scale=1.05,line cap=round,line join=round,  arcpath/.style={thick,black!75},seamblock/.style={very thick,blue!65!black}] \begin{scope} \draw[fill=gray
+     \draw[seamblock] (180:1.12) arc (180:0:1.12)
+     \node[blue!65!black] at (0,1.65) {block $A$}
+     \node at (0,2.08) {Upper disk}
+     \draw[arcpath] (150:1.12) .. controls (130:.65) and (110:.65) .. (90:1.12)
+     \draw[arcpath] (30:1.12) .. controls (10:.65) and (-10:.65) .. (-30:1.12)
+     \draw[arcpath] (-90:1.12) .. controls (-110:.65) and (-130:.65) .. (-150:1.12)
+     \foreach \a/\k in {150/1,90/2,30/3,-30/4,-90/5,-150/6}{  \fill (\a:1.12) circle (1.3pt)
+     \node at (\a:1.34) {$\k$};} \draw[gray] (0,0) circle (2.2pt)
+     \node[gray] at (0,-.25) {end}
+     \fill[red!70!black] (-1.12,0) circle (1.8pt) node[left=4pt] {$f$}
+     \fill[red!70!black] (1.12,0) circle (1.8pt) node[right=4pt] {$f'$}
+     \end{scope} \begin{scope}[xshift=5.2cm] \draw[fill=gray!4] (0,0) circle (1.12)
+     \draw[seamblock] (-180:1.12) arc (-180:0:1.12)
+     \node[blue!65!black] at (0,-1.65) {block $A$}
+     \node at (0,2.08) {Lower disk}
+     \draw[arcpath] (-150:1.12) .. controls (-170:.65) and (170:.65) .. (150:1.12)
+     \draw[arcpath] (-90:1.12) .. controls (-70:.65) and (-50:.65) .. (-30:1.12)
+     \draw[arcpath] (30:1.12) .. controls (50:.65) and (70:.65) .. (90:1.12)
+     \foreach \a/\k in {-150/1,-90/2,-30/3,30/4,90/5,150/6}{  \fill (\a:1.12) circle (1.3pt)
+     \node at (\a:1.34) {$\k$};} \draw[gray] (0,0) circle (2.2pt)
+     \node[gray] at (0,-.25) {end}
+     \fill[red!70!black] (-1.12,0) circle (1.8pt) node[left=4pt] {$f$}
+     \fill[red!70!black] (1.12,0) circle (1.8pt) node[right=4pt] {$f'$}
+     \end{scope} \node at (2.6,-2.14) {Identify equally numbered ports and the two copies of the seam.}
+     \end{tikzpicture}
+
+shape tally:
+  apart-in-x      8 rows /  7 canvases
+  stacked         6 rows /  6 canvases
+  same-baseline   3 rows /  2 canvases

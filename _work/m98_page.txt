@@ -1,0 +1,61 @@
+pool=902 body-channel maths carrying a `\frac`-family command, sampled=700, pandoc answered=591, refused=109
+pandoc stderr: [WARNING] Could not convert TeX math \|\mu-\rho\|_{\TV}=\frac{1}{2}\sum_x|\mu(x)-\rho(x)|, rendering as TeX:
+  \|\mu-\rho\|_{\TV}=\frac{1}{2}\sum_x|\mu
+                   ^
+  unexpected control sequence \TV
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+[WARNING] Cou
+
+emitted form by source operand scope:
+   simple|bare                  559
+   simple|stacked               16
+   group|stacked                8
+   group|bare                   5
+   group/simple|bare            3
+
+GROUP-sided source fraction emitted as a bare slash with no `frac(` call: 6 spans
+   Absolutely-Continuous-Spectrum-for-Weak-  \frac{c_*}{2}\mathbf1_{\mathcal S_{m,E}}-8r_Q/(\eta N)
+                                             -> $c_(*) / 2 upright(bold(1))_(cal(S)_(m \, E)) - 8 r_Q \/ \( eta N \)$
+                                                operands: [('c_*', '2')]
+   Finite-angular-cylinder-covers-below-the  \frac12-\frac{\lambda^2}{1920}+O(\lambda^4)
+                                             -> $1 / 2 - lambda^2 / 1920 + O \( lambda^4 \)$
+                                                operands: [('\\lambda^2', '1920')]
+   Positively-curved-Einstein-four-manifold  \dfrac{a_0^3}{27}u^2(u^4/2+u^6/3)S(\min(u,1-u))
+                                             -> $a_0^3 / 27 u^2 \( u^4 \/ 2 + u^6 \/ 3 \) S \( min \( u \, 1 - u \) \)$
+                                                operands: [('a_0^3', '27')]
+   Stretched-exponential-barriers-for-typic  \frac{\beta^2}{2}\alpha(u+\widetilde u)
+                                             -> $beta^2 / 2 alpha \( u + tilde(u) \)$
+                                                operands: [('\\beta^2', '2')]
+   Stretched-exponential-barriers-for-typic  \frac{\beta^2}{2}(\alpha-\widetilde\alpha)\widetilde u^2
+                                             -> $beta^2 / 2 \( alpha - tilde(alpha) \) tilde(u)^2$
+                                                operands: [('\\beta^2', '2')]
+   Stretched-exponential-barriers-for-typic  \frac{\beta^2}{2}\int(\widetilde\alpha-\alpha)\Gamma
+                                             -> $beta^2 / 2 integral \( tilde(alpha) - alpha \) Gamma$
+                                                operands: [('\\beta^2', '2')]
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+== page reading of the flagged spans (bar width, glyphs under the bar)
+
+   Absolutely-Continuous-Spectrum-for-Weak-  TeX \frac{c_*}{2}\mathbf1_{\mathcal S_{m,E}}-8r_Q/(\eta N)
+                                             CTRL ['7.73pt/1']
+                                             TYPST ['6.47pt/1']   $c_(*) / 2 upright(bold(1))_(cal(S)_(m \, E)) - 8 r_Q \/ \
+
+   Finite-angular-cylinder-covers-below-the  TeX \frac12-\frac{\lambda^2}{1920}+O(\lambda^4)
+                                             CTRL ['3.97pt/1', '15.88pt/4']
+                                             TYPST ['3.98pt/1', '15.93pt/4']   $1 / 2 - lambda^2 / 1920 + O \( lambda^4 \)$
+
+   Positively-curved-Einstein-four-manifold  TeX \dfrac{a_0^3}{27}u^2(u^4/2+u^6/3)S(\min(u,1-u))
+                                             CTRL []
+                                             TYPST ['8.14pt/2']   $a_0^3 / 27 u^2 \( u^4 \/ 2 + u^6 \/ 3 \) S \( min \( u \,
+
+   Stretched-exponential-barriers-for-typic  TeX \frac{\beta^2}{2}\alpha(u+\widetilde u)
+                                             CTRL ['8.76pt/1']
+                                             TYPST ['8.42pt/1']   $beta^2 / 2 alpha \( u + tilde(u) \)$
+
+   Stretched-exponential-barriers-for-typic  TeX \frac{\beta^2}{2}(\alpha-\widetilde\alpha)\widetilde u^2
+                                             CTRL ['8.76pt/1']
+                                             TYPST ['8.42pt/1']   $beta^2 / 2 \( alpha - tilde(alpha) \) tilde(u)^2$
+
+   Stretched-exponential-barriers-for-typic  TeX \frac{\beta^2}{2}\int(\widetilde\alpha-\alpha)\Gamma
+                                             CTRL ['8.76pt/1']
+                                             TYPST ['8.42pt/1']   $beta^2 / 2 integral \( tilde(alpha) - alpha \) Gamma$

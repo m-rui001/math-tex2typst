@@ -1,0 +1,10 @@
+### region_check D68 1336
+seg=265 hdr=0 sep=2 rows=93 hist={6: 93}
+badpipe=[]
+dollar_odd=1 [(1591, '七、数学闭合与引用纪律。全文件 `$` 共 12,719 枚，奇数；奇数行只有 1077 一行（旧 §23 的既有缺陷，本轮未触碰），也就是')]
+vsplit=0 []
+std_hdr_corpus=0
+rc=0
+### pipe_table_check D68 (该篇该表窗口，表头竖线数=该表续行应有竖线数)
+TABLE D68 hdr=1336 pipes=6 block=52 sep=1 rows=51 hist={6: 52} badpipe=[]
+rc=0

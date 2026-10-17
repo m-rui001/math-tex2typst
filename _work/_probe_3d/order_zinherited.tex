@@ -1,0 +1,14 @@
+\documentclass[tikz]{standalone}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+
+  \fill[black] (0,0) circle (2pt);
+  \begin{scope}[x=2cm,y=2cm]
+    \fill[olive] (0,0) circle (3pt);
+    \fill[orange] (1,0) circle (3pt);
+    \fill[violet] (0,1) circle (3pt);
+    \fill[cyan] (0,0,1) circle (3pt);
+  \end{scope}
+
+\end{tikzpicture}
+\end{document}

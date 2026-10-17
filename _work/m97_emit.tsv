@@ -1,0 +1,43 @@
+paper	verdict	source	math_body
+A-Fully-Polynomial-Randomized-Approximation-Scheme-for-Perfect-Matchings-in-General-Graphs-September-23-2026	frac-call	\tfrac12	frac(1, 2)
+A-Three-Manifold-Without-Conjugate-Points-and-Without-a-Nonpositively-Curved-Metric-September-24-2026	frac-call	\frac14	frac(1, 4)
+A-Three-Manifold-Without-Conjugate-Points-and-Without-a-Nonpositively-Curved-Metric-September-24-2026	frac-call	\frac34	frac(3, 4)
+A-classification-of-finite-Euclidean-Ramsey-configurations-September-23-2026	frac-call	1,\frac12,\ldots,\frac1n	1, frac(1, 2) , dots.h  , frac(1, n)
+A-closed-Ricci-flow-with-bounded-scalar-curvature-and-finite-time-curvature-blowup-September-24-2026	frac-call	R_c'(t)=-\dfrac{q-1}{R_c(t)}	R_c'(t)=- frac(q-1, R_c(t))
+A-finitely-generated-counterexample-to-the-Eilenberg-Ganea-conjecture-September-23-2026	frac-call	\frac14	frac(1, 4)
+A-finitely-generated-counterexample-to-the-Eilenberg-Ganea-conjecture-September-23-2026	frac-call	\frac12	frac(1, 2)
+A-finitely-generated-counterexample-to-the-Eilenberg-Ganea-conjecture-September-23-2026	frac-call	\frac34	frac(3, 4)
+A-hyperbolic-group-with-no-geometric-CAT0-action-September-25-2026	frac-call	\frac12	frac(1, 2)
+A-hyperbolic-group-with-no-geometric-CAT0-action-September-25-2026	frac-call	\frac12	frac(1, 2)
+An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026	frac-call	\ge\frac12	gt.eq  frac(1, 2)
+An-exponential-state-lower-bound-for-two-way-nondeterministic-complementation-September-25-2026	frac-call	\ge\frac12	gt.eq  frac(1, 2)
+Bochner-Riesz-Multipliers-in-Three-Dimensions-September-24-2026	frac-call	m=2,\quad L=3,\quad b(u)=\tfrac32(1-u)	m=2,    L=3,    b(u)= frac(3, 2) (1-u)
+Conformal-flow-and-the-Riemannian-Penrose-inequality-with-minimizing-frontiers-September-27-2026	frac-call	\displaystyle a_i=\frac{q(r_i)}{r_i}	   a_i= frac(q(r_i), r_i)
+Conformal-flow-and-the-Riemannian-Penrose-inequality-with-minimizing-frontiers-September-27-2026	frac-call	\mu_i(\{D_i\le a_i\})\ge\tfrac12\mu_i(B_1)	mu_i(\{D_i lt.eq  a_i\}) gt.eq  frac(1, 2)  mu_i(B_1)
+Conformal-flow-and-the-Riemannian-Penrose-inequality-with-minimizing-frontiers-September-27-2026	frac-call	\mu_i(\{D_i\ge a_i\})\ge\tfrac12\mu_i(B_1)	mu_i(\{D_i gt.eq  a_i\}) gt.eq  frac(1, 2)  mu_i(B_1)
+Conformal-flow-and-the-Riemannian-Penrose-inequality-with-minimizing-frontiers-September-27-2026	frac-call	\displaystyle W_i=\frac{\zeta_i}{a_i}	   W_i= frac( zeta_i, a_i)
+Endpoint-pointwise-convergence-for-the-Schrodinger-equation-in-higher-dimensions-September-24-2026	frac-call	f_i(s)=\dfrac{k}{2}(s_H-s)_+	f_i(s)= frac(k, 2) (s_H-s)_+
+Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026	frac-call	t=\tfrac12	t= frac(1, 2)
+Hardness-of-finding-large-independent-sets-in-three-colorable-graphs-September-24-2026	frac-call	\varphi(x)+\tfrac12	phi  (x)+ frac(1, 2)
+Hardness-of-finding-large-independent-sets-in-three-colorable-graphs-September-24-2026	frac-call	\tfrac13	frac(1, 3)
+Hardness-of-finding-large-independent-sets-in-three-colorable-graphs-September-24-2026	frac-call	\tfrac23	frac(2, 3)
+Hardness-of-finding-large-independent-sets-in-three-colorable-graphs-September-24-2026	frac-call	d_{\T}(\varphi(x),\varphi(y))\ge\tfrac38	d_( T )( phi  (x), phi  (y)) gt.eq  frac(3, 8)
+Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September-26-2026	frac-call	\tfrac12e_\tau	frac(1, 2) e_ tau
+Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September-26-2026	frac-call	\tfrac12e_{\tau'}	frac(1, 2) e_( tau  ')
+Mass-and-covering-exponents-for-fixed-length-honeycomb-walks-September-26-2026	frac-call	p'-p=\tfrac12e_\tau+n_1e_1+n_2e_2+\tfrac12e_{\tau'}	p'-p= frac(1, 2) e_ tau  +n_1e_1+n_2e_2+ frac(1, 2) e_( tau  ')
+Nonuniqueness-with-local-conservation-for-the-hard-sphere-Boltzmann-equation-October-5-2026	frac-call	\dfrac{1-l_N}{U_N}	frac(1-l_N, U_N)
+Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026	frac-call	R'\le\frac9{10}R	R' lt.eq  frac(9, 10) R
+Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026	frac-call	R'\le\frac9{10}R	R' lt.eq  frac(9, 10) R
+Spacetime-Penrose-inequalities-enclosing-area-charge-and-rigidity-October-5-2026	frac-call	m=\tfrac12(r+Q^2/r)	"m= frac(1, 2) (r+Q^2""/""r)"
+Staggered-extraction-for-exact-matrix-multiplication-over-every-field-September-24-2026	frac-call	\displaystyle\frac{C_*}{6}	   frac(C_*, 6)
+Tensor-Saturation-for-Even-Spin-Groups-September-24-2026	frac-call	m_e^0\in\Z+\tfrac12	m_e^0 in   Z + frac(1, 2)
+Tensor-Saturation-for-Even-Spin-Groups-September-24-2026	frac-call	|d_e|=\tfrac12	|d_e|= frac(1, 2)
+Tensor-Saturation-for-Even-Spin-Groups-September-24-2026	frac-call	m_e^0\in\Z+\tfrac12	m_e^0 in   Z + frac(1, 2)
+Tensor-Saturation-for-Even-Spin-Groups-September-24-2026	frac-call	|d_e|=\tfrac12	|d_e|= frac(1, 2)
+The-crossing-number-of-complete-graphs-September-23-2026	frac-call	\tfrac12(-1+1)=0	frac(1, 2) (-1+1)=0
+The-nonmaximal-anti-de-Sitter-Penrose-Inequality-and-original-data-rigidity-October-5-2026	frac-call	\kappa=\frac{1+3r_h^2}{2r_h}	kappa  = frac(1+3r_h^2, 2r_h)
+The-p-adic-section-conjecture-September-24-2026	frac-call	D>v_p(m)+\dfrac{1}{p-1}	D>v_p(m)+ frac(1, p-1)
+Turn-Based-Stochastic-Mean-Payoff-Games-in-Deterministic-Quasipolynomial-Time-October-5-2026	frac-call	(a,\frac43 b)	(a, frac(4, 3)  b)
+Turn-Based-Stochastic-Mean-Payoff-Games-in-Deterministic-Quasipolynomial-Time-October-5-2026	frac-call	(\frac43 a,b)	( frac(4, 3)  a,b)
+Uniform-quasipolynomial-time-trace-reconstruction-October-5-2026	frac-call	w=\dfrac{1+Z}{1-Z}	w= frac(1+Z, 1-Z)
+Virtual-compact-specialness-of-hyperbolic-one-relator-groups-September-25-2026	frac-call	i-\tfrac12	i- frac(1, 2)

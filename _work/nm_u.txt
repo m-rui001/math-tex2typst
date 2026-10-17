@@ -1,0 +1,3 @@
+D207 from-line 273 segLines=160 defs=37 survivors=1
+  \rank x8 -> \operatorname{rank}
+unresolved=["\\pair","\\norm","\\abs"]

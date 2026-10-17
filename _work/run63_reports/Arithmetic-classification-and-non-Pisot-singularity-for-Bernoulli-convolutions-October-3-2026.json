@@ -1,0 +1,30 @@
+{
+  "paper": "Arithmetic-classification-and-non-Pisot-singularity-for-Bernoulli-convolutions-October-3-2026",
+  "ok": true,
+  "typ_lines": 1173,
+  "included_pdf_pages": 0,
+  "formulas": 1043,
+  "math_failed": 0,
+  "labels": 151,
+  "equations": 23,
+  "theorems": 0,
+  "figures": 1,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "cetz_refused": 1
+  },
+  "samples": {
+    "formulas": "1043",
+    "cetz_refused": "\\begin{tikzpicture}[>=stealth, every node/.style={font=\\small}] \\node[draw,circle,double,minimum size=9mm] (z) at (0,0"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Arithmetic-classification-and-non-Pisot-singularity-for-Bernoulli-convolutions-October-3-2026.tex"
+}

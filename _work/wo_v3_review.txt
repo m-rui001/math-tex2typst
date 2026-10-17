@@ -1,0 +1,486 @@
+
+======== EXEC (155 rows, showing 14) ========
+---- EXEC | D335-L298-I03 | D335-连续库仑谱下确界在二进制核电荷编码下的QMA难.md | fam=btick,macro | kind=mechanical-target-given
+   sec_line=298 anchor=[304] decl_range=[298, 307] window_len=335
+   FIX: 应读作重叠 $\langle→重叠 $\langle\psi_j,\psi_i\rangle$ 的 / 去掉限制"漏了一个右定界符，→限制"漏了一个右定界符，应为 $Z_*e^{-1.2D}$ 这一加性
+   VNOTE: sig=`\langle` found at [76, 78, 124, 130, 162] ; author's line 596 drifted
+   WINDOW: 第三节，§7 中我写 $\lvert\langle\psi_j,\psi_i\rvert\rangle$ 一处，定界符次序错，应读作重叠 $\langle\psi_j,\psi_i\rangle$ 的绝对值（对应 03-hopping.tex 第 596 行）。同节还有一处 $-\frac{1}{\ }V_i-W_i-\lambda_i$ 的分式误植，正确形式是 $-V_i-W_i-\lambda_i$（对应 04-continuum.tex 第 144 行的零阶系数）。§11 末尾"再抬 $Z_*e^{-1.2D$ 去掉限制"漏了一个右定界符，应为 $Z_*e^{-1.2D}$ 这一加性项（对应 04-continuum.tex 第 743 到 745 行）。
+    CAND mk=应读作 bad='\\lvert\\langle\\psi_j,\\psi_i\\rvert\\rangle' good='\\langle\\psi_j,\\psi_i\\rangle' nb=1 ng=2 bad_all=[[172, 1], [304, 1]] good_all=[[172, 1], [304, 1], [346, 1]] rej=None flags=[]
+    CAND mk=应为 bad='再抬 $Z_*e^{-1.2D$ 去掉限制' good='Z_*e^{-1.2D}' nb=1 ng=2 bad_all=[[244, 1], [304, 1]] good_all=[[230, 1], [246, 1], [304, 1]] rej=None flags=[]
+    SITE L172 cnt=1 delta=-12 macro=[]
+      LINE: 方向恒等式（lem:hopping-orientation）是我觉得最漂亮的一小段：$B_{ij}-B_{ji}=(\lambda_i-\lambda_j)\langle\psi_j,\psi_i\rangle$。理由只是 $h_i-h_j=V_j^{\rm hole}-V_i^{\rm hole}$ 与自伴性，另外第 611 到 616 行给了等价的看法：在 $\langle\psi_j,(h+1/2)\psi_i\rangle$ 的两个展开里，除 $i,j$ 之外每个洞的贡献恒等相消，因为它们把同一个实函数乘积
+    SITE L244 cnt=1 delta=-21 macro=[]
+      LINE: 顺带把模拟命题（prop:continuum-simulation，第 700 到 767 行）串起来：精确压缩 $\mathcal J_m^*(Z_*\mathcal H)\mathcal J_m=d\Gamma(Z_*\mathcal J^*A\mathcal J)+W_{\rm eff}$，而 Hubbard 的 hopping 项是 $d\Gamma(\mathsf T\otimes I_2)$；$m$ 粒子上有界一粒子差的二次量子化范数至多放大 $m$ 倍，于是 $\lVert\mathcal J_m^*
+   reason=2 verbatim site(s) on disk, same-line swap, parity preserved flags=[]
+---- EXEC | D223-L434-I04 | D223-二维分类空间为何不存在.md | fam=macro,banstring | kind=mechanical-target-given
+   sec_line=434 anchor=[442] decl_range=[434, 443] window_len=393
+   FIX: 改写为"行列式恰为 $1$，→"行列式恰为 $1$，这一强度远超单纯非零"
+   VNOTE: sig=`\begin` found at [203, 205, 207, 208]
+   WINDOW: 三、字级修正清单（已就地完成，均为清除文风禁令所列字符串的命中与修复坏掉的命令，论证内容不变）：§3 的一处英文残词改成"平移副本"；§4 首段把那句带英文残词的比较句改写为"行列式恰为 $1$，这一强度远超单纯非零"；§4 末段的长破折号改分号；§9 把那句角色界定改写为"它是'循环'的索引集，暂时还称不上关系元"；§10 的分块矩阵命令补全为 \begin{pmatrix}；§11 的一处显示公式补齐 \[\] 定界；§11 末段那句关于"不跨越"的对照改写为"给的是不可跨越这一条，强度高于单纯的小"；§12 标题里的英文词改成"局部化"；§13 末段那句对照改写为"写成'共轭不变'、故意严于'任意开集'"；§14 首句改写为"靠拉回，不靠下放"；§15 的英文词改成
+    CAND mk=改写为 bad='平移副本' good='行列式恰为 $1$，这一强度远超单纯非零' nb=1 ng=1 bad_all=[[64, 1], [442, 1]] good_all=[[82, 1], [442, 1]] rej=None flags=[]
+    CAND mk=改写为 bad='行列式恰为 $1$，这一强度远超单纯非零' good="它是'循环'的索引集，暂时还称不上关系元" nb=1 ng=0 bad_all=[[82, 1], [442, 1]] good_all=[[442, 1]] rej=None flags=[]
+    CAND mk=改写为 bad='不跨越' good='给的是不可跨越这一条，强度高于单纯的小' nb=6 ng=1 bad_all=[[292, 2], [294, 1], [418, 1], [442, 1], [470, 1], [475, 1]] good_all=[[250, 1], [442, 1]] rej=None flags=[]
+    CAND mk=改成 bad='给的是不可跨越这一条，强度高于单纯的小' good='局部化' nb=1 ng=5 bad_all=[[250, 1], [442, 1]] good_all=[[50, 1], [252, 1], [260, 1], [408, 1], [442, 1], [480, 1]] rej=None flags=[]
+    SITE L82 cnt=1 delta=4 macro=[]
+      LINE: （`build/sections/geometry.tex:18-19`；引言里把它写成等价形式 $\langle x,y\mid x^2=y^5,\ x^2=(xy^{-1})^3\rangle$，`build/sections/introduction.tex:22-25`）。为什么是这两个关系？我把它当作一次筛选试验来记。我要的是二维、单顶点，并且胞腔边界 $\partial_2:C_2(K;\Z)\to C_1(K;\Z)$ 本身就是同构，这样无圈性不必附加任何可除性或挠的讨论。$C_2$ 由两个关系元张成
+    SITE L250 cnt=1 delta=-48 macro=[]
+      LINE: 我第一次读这个论证时误以为它是个 $\epsilon$-$\delta$ 的例行估算，直到我自己试着把结论加强成线性界才看清结构：线性项必须精确抵消，抵消的依据是那条系数恒等式，剩下的是二次项，于是才有一个"无法跨越"的门槛。若我只用 $\lvert L(z,v)-1\rvert\le\operatorname{length}(z)\epsilon$ 这种粗估计，就得到 $h\le c\epsilon+ch$，只有当 $c$ 足够小时才能吸收，而 $c$ 由 $\mathcal D$ 的大小与词长决定，根本不可控。
+    SITE L320 cnt=1 delta=-6 macro=[]
+      LINE: 这一节的力学我总结如下：靠拉回，不靠下放。$\mathcal T$-标号是我自由选取的，所以可以从商上拉回；$S$-标号是被规定的，所以只能保证"用到的那有限多条像边取相同标号"，而这恰是 $P$ 上单射所提供的服务。我先前把这一段读成"取极限"，读第二遍才明白极限对象只存在于 $\mathscr P$ 的坐标拓扑里，没有任何一致性要求跨商成立。
+   reason=15 verbatim site(s) on disk, same-line swap, parity preserved flags=['MACRO-ON-SITE']
+---- EXEC | D370-L338-I07 | D370-素数次数环面包在任意局部型下的等分布.md | fam=macro,anchor | kind=mechanical-target-given
+   sec_line=338 anchor=[352] decl_range=[338, 353] window_len=232
+   FIX: 统一成 `§4`→`§4` / 统一成 `§4`、`§5`、→`§4`、`§5`、`§6`、`§10`
+   VNOTE: sig=`{#local-question}` found at [301]
+   WINDOW: 六、交叉引用体例不统一。第 65、161、227、277 行用了 `$\S$\ref{...}` 这种从 LaTeX 带过来的写法，与全文 `§N` 体例不一致。四处引用的目标锚点 `{#shell-moment}`、`{#residue-count}`、`{#wrong-turns}`、`{#local-question}` 分别建在第 93、131、163、275 行的标题上，都存在，因此没有悬空引用；建议统一成 `§4`、`§5`、`§6`、`§10`。
+    CAND mk=统一成 bad='{#local-question}' good='§4' nb=1 ng=3 bad_all=[[301, 1], [352, 1]] good_all=[[65, 1], [93, 1], [352, 1], [431, 1]] rej=None flags=[]
+    SITE L301 cnt=1 delta=-14 macro=[]
+      LINE: ### 局部权重的一致上界究竟问什么 {#local-question}
+   reason=1 verbatim site(s) on disk, same-line swap, parity preserved flags=[]
+---- EXEC | D186-L338-I07 | D186-固定粒子停机测试的构造路径.md | fam=macro | kind=mechanical-target-given
+   sec_line=338 anchor=[347] decl_range=[338, 351] window_len=270
+   FIX: 改为 `$C_tH^1$`→`$C_tH^1$` / 改为 `$C_tH^1$`，→`$C_tH^1$`，与 `analytic-appendix.te
+   VNOTE: sig=`$C_tH^1$` found at [231]
+   WINDOW: 6. §16 一处把压力条件写成 `$C_tC_t^{\,*}H^1$`，已在本句内改为 `$C_tH^1$`，与 `analytic-appendix.tex:89-90` 的表述一致。 7. 文风禁词清理（同句内字词级替换，共 8 处）：§15 与 §20 各一处的过渡短语统一改成 `也就是说`；§18 里三处带否定词的短语分别改成 `它并未…设立上限`、`这一格并非空的`、`能否任意`；§16 一处的并列短语改成 `只到光滑、够不到解析`；§6 两处连接词分别简化为 `会让` 与 `接着回收`。除这些以外，正文其余句子保持原样。
+    CAND mk=改为 bad='$C_tC_t^{\\,*}H^1$' good='$C_tH^1$' nb=0 ng=1 bad_all=[[347, 1]] good_all=[[231, 1], [347, 1]] rej=None flags=[]
+    CAND mk=改成 bad='也就是说' good='它并未…设立上限' nb=None ng=None bad_all=None good_all=None rej=ellipsis-in-target flags=[]
+    CAND mk=改成 bad='能否任意' good='只到光滑、够不到解析' nb=1 ng=1 bad_all=[[264, 1], [348, 1]] good_all=[[235, 1], [348, 1]] rej=None flags=[]
+    SITE L264 cnt=1 delta=18 macro=[]
+      LINE: 留给我自己的三个未答问题。其一，能不能把三个坐标的分工压缩：平面运算加一维历史是我目前的最省配置，若机器本身带两条带，$J$ 会变大，$\Lambda$ 变大，$S_n$ 更天文，而坐标数目不变；有没有编码能让 $\Lambda$ 与 $J$ 脱钩，我没有头绪。其二，检测器 $O$ 与标签 $a_*$ 能否任意：我的构造把它们钉死在 $1/2<x<1$ 与 $(1/8,3/8,0)$，靠 $x\leq1/4$ 与 $x\geq3/4$ 之间的空隙；若允许 $O$ 跨过 $x=1/4$，编码就要重排，这问题我没做。其
+   reason=1 verbatim site(s) on disk, same-line swap, parity preserved flags=[]
+---- EXEC | D197-L164-I01 | D197-素数自变量多项式差的幂节省.md | fam=btick,macro,count,ordermove,table,typo | kind=mechanical-target-given
+   sec_line=164 anchor=[166] decl_range=[164, 167] window_len=897
+   FIX: 改为成对空括号的规范记法）以→对空括号的规范记法）以及一处中英混排的笔误做过原位改写，均未删除任何
+   VNOTE: sig=`\Xi` found at [101, 138, 202, 212, 239] ; author's line 4 drifted
+   WINDOW: 按规格要求以追加方式登记本节，不改写上文。第一处：§13 第五条的转引行内代码尾部曾多带一个杂散的美元符号（`main.tex:58-62` 之后），已原位删除并在登记；引用内容是摘要第 4 行的 "a fixed power saving"（`main.tex:59-62`）。第二处：§13 第三条同类杂符（`kernel.tex:174` 之后）亦已原位删除，正确转引是核节第 174 行的原句 "No positivity is required of $k_1$"。这两次删符只清除误植的单个字符，不动任何论断文字，按规格在此登记全过程。第三处：§2 第二条路线里 "需要不必是反射正的" 是对 `tuples.tex:88-90` 原句 "Such a law has
+    CAND mk=删除 bad='main.tex:58-62' good='a fixed power saving' nb=1 ng=0 bad_all=[[132, 1], [166, 1]] good_all=[[166, 1]] rej=None flags=[]
+    CAND mk=删除 bad='kernel.tex:174' good='No positivity is required of $k_1$' nb=2 ng=0 bad_all=[[28, 1], [128, 1], [166, 1]] good_all=[[166, 1]] rej=None flags=[]
+    CAND mk=原句 bad='tuples.tex:88-90' good='Such a law has the cycle property and the required mixing, but need n nb=0 ng=0 bad_all=[[166, 1]] good_all=[[166, 1]] rej=None flags=[]
+    SITE L28 cnt=1 delta=20 macro=[]
+      LINE: 第三条路线：希望核 $k_1$ 是正测度。如果 $k_1\ge 0$，禁避条件 $(A-A)\cap\mathcal D_l=\{0\}$ 可以给出逐点不等式，许多估计会简化。但 $k_1$ 的支撑被钉死在 $\mathcal D_l\cap[N]$ 上（`kernel.tex:164-174`），同时要在傅里叶侧逼近模型核 $k_0$，后者在一个完整剩余类 $n\equiv r\pmod D$ 上摊匀（`kernel.tex:82-86`）。素数值的局部分布与这个摊匀模型之间隔着局部因子 $a_{p,j}+b_{
+    SITE L128 cnt=1 delta=20 macro=[]
+      LINE: 其三，我以为带符号核是为了省篇幅，实际符号承担了正性与支撑不可兼得的全部压力（`kernel.tex:174` 处的原句 "No positivity is required"），且混合权重 $p^{-|S|\delta/2}$ 的配对修复策略（`tuples.tex:366-384`）在整数版是否以同形出现，本文无法判断，[推测] 继承自伴生论文 Section 3 的框架、改动集中在把 admissibility 注入支撑约束。
+    SITE L132 cnt=1 delta=6 macro=[]
+      LINE: 其五，我以为 $c_h$ 会像 Thorner--Zaman 对 $p-1$ 那样给出可算指数（`introduction.tex:70-71`），实际 $c_h=a_0/d$、$d=(L!)^{2t+1}$ 是双指数怪物，论文满足于存在性；摘要用 "fixed power saving" 一词（`main.tex:58-62` 处）而没有数值声明，与引言"强于经典零点自由域"的表述一致。
+   reason=3 verbatim site(s) on disk, same-line swap, parity preserved flags=[]
+---- EXEC | D585-L643-I07 | D585-稳定子轨道局部稠密性与厚张量理想链.md | fam=other | kind=mechanical-target-given
+   sec_line=643 anchor=[657] decl_range=[643, 670] window_len=489
+   FIX: 应为「上的」→「上的」
+   VNOTE: sig=`上.big` found at [195]
+   WINDOW: 其一，台账中有五行的单元格内以成对裸竖线书写绝对值（应代换为成对的左竖宏与右竖宏），行号为第 51、77、81、84、85 行，对应条目为 $\mathfrak m_C$、引理 fin:curve、引理 fin:translation、$\alpha_x$ 与 $a_1$、$K(N)$ 行；这五行因此各有八枚或十枚竖线，其余四十四行均为恰好六枚。其二，第 153 行后半有一处三字转折短语，属禁串清单第二项，替换为「因此是」即可通顺。其三，第 446 行是第 406 行那句「该论证同时覆盖某个坐标为零或极限组为零的情形」的重复，物理位置落在 §7.5 段末，成因是追加批的锚点取自该句所在段落；内容重复但不影响任何论证，未搬动亦未删除。其四，第 195 行「上.big」多一个
+    CAND mk=应为 bad='上.big' good='上的' nb=1 ng=21 bad_all=[[195, 1], [657, 1]] good_all=[[16, 1], [133, 1], [135, 1], [161, 1], [201, 1], [241, 2], [295, 1], [354, 2], [360, 1], [372, 1], [392, 1], [474, 1], [490, 1], [577, 2], [585, 1], [609, 1], [615, 2], [657, 1]] rej=None flags=[]
+    SITE L195 cnt=1 delta=-1 macro=['mathbb']
+      LINE: 站点约定：$\operatorname{Perf}_C$ 上.big pro-étale 站点；仿射 $S=\operatorname{Spa}(R,R^+)$ 上 $\mathcal H_s(S)=\Gamma_s(R^{\circ\circ})$，$\mathcal B(\mathcal V)(S)=H^0(X_S,\mathcal V_S)$（`03-bundles.tex:74` 与 `03-bundles.tex:96`）。两点常被忽略的技术选择值得记下。第一，$R^{\circ\circ}\subset
+   reason=1 verbatim site(s) on disk, same-line swap, parity preserved flags=['MACRO-ON-SITE']
+---- EXEC | D206-L289-I04 | D206-把半权除子的orbifold基本群装进一个八维特殊流形.md | fam=btick,macro | kind=mechanical-target-given
+   sec_line=289 anchor=[295] decl_range=[289, 301] window_len=434
+   FIX: 应读作：由 Thm 2.5 →由 Thm 2.5 得到的下界 $\kappa(Z,K_Z+\Del
+   VNOTE: sig=`\Delta` found at [153, 185, 191, 193, 211]
+   WINDOW: 3. §13 里"（`inertia-descent.tex:12-16` 处我写的是 `inertia-descent.tex:13-16`）"同样混入多余美元符号，应读作：由 Thm 2.5 得到的下界 $\kappa(Z,K_Z+\Delta_Z)\ge\ell$ 在 `inertia-descent.tex:13-16`。 4. §15 第 6 条里"（`inertia-minimality.tex:176-180` 之前那段）"同型笔误，应读作 `inertia-minimality.tex:176-180`。 5. §13 开头把引理名误写为 `in:cycle-fabilities` 再自我更正，应只读作 `in:cycle-families`（`inert
+    CAND mk=应读作 bad='（`inertia-descent.tex:12-16` 处我写的是 `inertia-descent.tex:13-16`）' good='\\kappa(Z,K_Z+\\Delta_Z)\\ge\\ell' nb=1 ng=1 bad_all=[[233, 1], [295, 1]] good_all=[[233, 1], [295, 1]] rej=None flags=[]
+    CAND mk=应读作 bad='（`inertia-minimality.tex:176-180` 之前那段）' good='inertia-minimality.tex:176-180' nb=1 ng=2 bad_all=[[272, 1], [296, 1]] good_all=[[227, 1], [272, 1], [296, 2]] rej=None flags=[]
+    CAND mk=误写为 bad='in:cycle-fabilities' good='inertia-minimality.tex:176-180' nb=1 ng=2 bad_all=[[223, 1], [297, 1]] good_all=[[227, 1], [272, 1], [296, 2]] rej=None flags=[]
+    CAND mk=读作 bad='in:cycle-fabilities' good='in:cycle-families' nb=1 ng=2 bad_all=[[223, 1], [297, 1]] good_all=[[223, 1], [227, 1], [297, 1]] rej=None flags=[]
+    SITE L233 cnt=1 delta=-48 macro=[]
+      LINE: **第二个极小量与 Iitaka 纤维。** 由 Thm 2.5，每个 prepared 模型上 $\kappa(Z,K_Z+\Delta_Z)\ge\ell$（`inertia-descent.tex:12-16` 处我写的是 `inertia-descent.tex:13-16`），对所有模型与所有同源取极小得 $b$，在 $Z_0$ 达到，$b\ge\ell$，且 $b$ 作为下界在后续换模型与同源后仍成立（`inertia-descent.tex:20-29`）。消解 Iitaka 纤维化与全部相关支撑于 
+    SITE L272 cnt=1 delta=-21 macro=[]
+      LINE: 6. **剩下情形迫使 $\dim A<\dim X$。** `in:kernel` 说 $K=\operatorname{im}\pi_1(P_a\setminus D)$；若 $\alpha$ 一般纤维是点（$s=0$），右端平凡，与 $K$ 无限矛盾。故长路线处理的对象自动满足 $1\le\ell\le s$（`inertia-minimality.tex:176-180` 之前那段），这个下界不是装饰，是情形排除的副产品。
+    SITE L223 cnt=1 delta=11 macro=['overline']
+      LINE: **好的参数与 $\ell$。** `in:cycle-fabilities` 我写成 `in:cycle-families`（`inertia-minimality.tex:115-158`）：用可数多个 Hilbert 概形与其万族，约化不可约且不含于 $D$ 的子簇参数集是可构造集；在每支的稠密光滑开上映入射分量消解（连同 $D$ 的原像），配泛型光滑与边界 strata，得光滑真、相对 SNC、纤维双有理映到成员、余一般几何既约的族；对更低维补支重复，Noetherian 归纳一支不丢。$A$ 去掉可数个真
+   reason=4 verbatim site(s) on disk, same-line swap, parity preserved flags=['MACRO-ON-SITE']
+---- EXEC | D357-L346-I03 | D357-盘转移表示与受限桥质量.md | fam=other | kind=mechanical-target-given
+   sec_line=346 anchor=[352] decl_range=[346, 360] window_len=243
+   FIX: 应读作"作单项式和的 ans→"作单项式和的 ansatz"
+   VNOTE: no verbatim signature
+   WINDOW: 类别三，公式笔误三处：其一，§8 末段"作_ansatz_为单项式和"应读作"作单项式和的 ansatz"；其二，§14 中显示式 "\lesssim B^{2}/Q(m)\asymp R^{-2p}\cdot R^{-(1-p)\cdot(-1)}\ldots" 后半截作废，正确量级为该节括注所指的 $B^{2}/m^{1-p}\asymp\delta^{\,p-1}R^{-5/4}$；其三，§15 折点段"花 $O(R^{R^{1-p}})$"应读作 $O(R^{1-p})$。
+    CAND mk=应读作 bad='作_ansatz_为单项式和' good='作单项式和的 ansatz' nb=1 ng=0 bad_all=[[102, 1], [352, 1]] good_all=[[352, 1]] rej=None flags=[]
+    CAND mk=应读作 bad='花 $O(R^{R^{1-p}})$' good='O(R^{1-p})' nb=1 ng=1 bad_all=[[199, 1], [352, 1]] good_all=[[157, 1], [352, 1]] rej=None flags=[]
+    SITE L199 cnt=1 delta=-10 macro=[]
+      LINE: 折点缝合（第 633 到 661 行）把上述直料接成折线路线：$j\le2$ 个宏观折点，相邻段法向转 $\pm60^\circ$；每个折点放一个小容许等边三角形，进出口两面法向 $-n_{\rm prev},+n_{\rm next}$、夹角 $120^\circ$，边距取 $hR$ 小固定阶、两面位置在宏观小窗口内浮动；三角形内连接指定两面的弦质量 $\gtrsim R^{\alpha}$、$\alpha=1-p$（引用 c2:eq-K2 的不同边比较与循环对称）。每条折线-割线向量净贡献 $R^{-1-p-2
+    SITE L102 cnt=1 delta=-1 macro=[]
+      LINE: 命题 c2:prop-disk-vector 把不动点向量 $\psi_N$ 钉成多项式：每个盘配对坐标 $\Phi_{N,\alpha}=(\prod_i x_i^{-a_i/2})\,p_N(x)\psi_{N,\alpha}$ 是关于 $x_i$ 次数至多 $N-1-a_i$ 的多项式（第 186 到 191 行）。证明路线是我预期里最费力的一条：先在每条融合超平面 $x_i=q^{3}x_j$ 上按"插入 $K\psi_{N-2}$、再把标签 $j$ 沿循环序滑回锚位 $i$"给出处方 $B_{ij}$；再
+   reason=2 verbatim site(s) on disk, same-line swap, parity preserved flags=[]
+---- EXEC | D717-L595-I03 | D717-临界蜂窝多边形的一致标记估计与尖锐有限桥矩.md | fam=macro,count,table | kind=mechanical-target-given
+   sec_line=595 anchor=[601] decl_range=[595, 608] window_len=150
+   FIX: 正确写法是用绝对值定界命令包→用绝对值定界命令包住 $L$），使该行的竖线计数由六枚变成八枚
+   VNOTE: no verbatim signature
+   WINDOW: 第二类，台账格内成对竖线。§17 台账"环形界"一行的数值单元格里，基数的单竖线字符对被写成了裸竖线形态（正确写法是用绝对值定界命令包住 $L$），使该行的竖线计数由六枚变成八枚。规格指明这类"台账格内成对裸竖线"由机械清理通道清除，清理后该行恢复为六枚竖线。请勿由人工逐格改写，以免再次破坏列对齐。
+    CAND mk=正确写法是 bad='环形界' good='L' nb=1 ng=115 bad_all=[[560, 1], [601, 1]] good_all=[[85, 1], [87, 3], [88, 4], [90, 2], [100, 9], [126, 4], [132, 2], [136, 1], [140, 1], [142, 1], [144, 1], [148, 3], [149, 4], [153, 1], [155, 2], [157, 1], [178, 1], [180, 1], [186, 2], [196, 1], [204, 1], [218, 1], [234, 1], [240, 1], [261, 2], [310, 1], [314, 2], [317, 2], [322, 3], [324, 2], [353, 3], [356, 2], [358, 3], [362, 2], [366, 2], [367, 1], [374, 1], [380, 2], [382, 6], [390, 3], [392, 1], [474, 1], [533, 2], [534, 1], [535, 1], [536, 2], [537, 1], [538, 1], [539, 1], [540, 1], [541, 7], [545, 1], [548, 1], [560, 2], [568, 1], [569, 3], [589, 2], [601, 1]] rej=None flags=[]
+    SITE L560 cnt=1 delta=-8 macro=[]
+      LINE: | 环形界 | $\sum_{L}\kappa^{\lvert L\rvert}\le C$ | uniform-nesting.tex:98 | §10 的大多边形代价 | 有界因子归一化错 |
+   reason=1 verbatim site(s) on disk, same-line swap, parity preserved flags=[]
+---- EXEC | D190-L554-I02 | D190-树加权平面地图随机游走的线性时钟研究笔记.md | fam=macro | kind=mechanical-target-given
+   sec_line=554 anchor=[558] decl_range=[554, 568] window_len=1169
+   FIX: 正确写法是 $Q_h^T=\→$Q_h^T=\operatorname{Law}((B^h_t)_
+   VNOTE: sig=`01-introduction.tex` found at [13, 14, 22, 40, 45] ; author's line 110 drifted
+   WINDOW: 1. §1 末段我把主定理里的连续侧记号写成 $Q_h^T=\operatorname{Law}((B^t_t)\dots)$，正确写法是 $Q_h^T=\operatorname{Law}((B^h_t)_{0\le t\le T}\mid h)$（见 `01-introduction.tex` 第 110 行）。这是打字错误，不影响上下文其余陈述。 2. §0 第三段"至于时间顺序、心情形形的部分"应作"至于时间顺序与语气形态的部分"。 3. §8 引用源码那句里我多打了一个字母，写成 "IIt never evaluates"，原文为 "It never evaluates a previously chosen kernel on a forced-offset 
+    CAND mk=正确写法是 bad='Q_h^T=\\operatorname{Law}((B^t_t)\\dots)' good='Q_h^T=\\operatorname{Law}((B^h_t)_{0\\le t\\le T}\\mid h)' nb=1 ng=0 bad_all=[[48, 1], [558, 1]] good_all=[[558, 1]] rej=None flags=[]
+    CAND mk=应作 bad='至于时间顺序、心情形形的部分' good='至于时间顺序与语气形态的部分' nb=0 ng=0 bad_all=[[559, 1]] good_all=[[559, 1]] rej=None flags=[]
+    CAND mk=应作 bad='变化右HAND 一侧' good='变化右端一侧' nb=1 ng=0 bad_all=[[430, 1], [561, 1]] good_all=[[561, 1]] rej=None flags=[]
+    CAND mk=应作 bad='我 originally 预期' good='我原先预期' nb=1 ng=0 bad_all=[[458, 1], [562, 1]] good_all=[[562, 1]] rej=None flags=[]
+    SITE L430 cnt=1 delta=-2 macro=[]
+      LINE: 大 $n$ 时分母有下界，故 $q_n$ 均值为零、sup 有界、$\mu_n(|q_n|)\le C_1\mu_n(U_n)$，(iv) 给出 $\|G_nq_n\|_\infty\le C_2\mu_n(U_n)^\rho$，并且 $\mathsf e_n(G_nq_n)=\mu_n((G_nq_n)q_n)\le\|G_nq_n\|_\infty\mu_n(|q_n|)$。于是 $u_n-G_nq_n$ 在 $U_n$ 上调和、sup 与能量有界，(iii) 给等度连续；先选 $U$ 使 $G_nq_n$ 的
+    SITE L458 cnt=1 delta=-6 macro=[]
+      LINE: 差距一（时钟）：我 originally 预期要经过"逆量子面积"或某个 annealed 出口时刻中位数，最终证的是 $X^n_{nt}$，一点面积修正都没有。原因现在清楚了：面积修正已经被 $\mu_n$ 的选取与 $1/2$ 的形式因子吸收干净，剩下的自由度恰是每条边的计数，而 `dyn:energy-clock` 把它写成恒等式。我原先把"速度测度"和"时钟"混为一谈，实际上前者是 $L^2(\mu_h)$ 的选择，后者是形式前的常数。
+    SITE L48 cnt=1 delta=15 macro=[]
+      LINE: 于是主定理 `thm:main` 的形式就是我想要的："对每个有限 $T>0$，$Q_n^T=\operatorname{Law}((X^n_{nt})_{0\le t\le T}\mid M_n,T_n)$ 与 $Q_h^T=\operatorname{Law}((B^t_t)\dots)$"，连同测度空间一起，在 $\delta_T$ 这个把 $(K,d,\mu,Q)$ 四元组当状态的度量下收敛，并且 $c=1$。$\delta_T$ 定义在 `01-introduction.tex` 第 92--96 行：三
+   reason=3 verbatim site(s) on disk, same-line swap, parity preserved flags=[]
+---- EXEC | D519-L245-I05 | D519-前缀指令的信息保留与不可压缩流实现.md | fam=macro,typo | kind=mechanical-target-given
+   sec_line=245 anchor=[255] decl_range=[245, 262] window_len=151
+   FIX: 应为 sheet-geome→sheet-geometry.tex:201-205，文件名写错
+   VNOTE: sig=`\times` found at [51, 53, 93, 101, 109]
+   WINDOW: 文字笔误类两处：§12 中"落在状带 $[o_s,o_s+1]\times[0,1]$ 内"与"未缩放的状区间"两处漏字，应为"状态带"与"状态区间"；§6 中"analysis.tex:201-205 补上周期化"一句的行号区间应为 sheet-geometry.tex:201-205，文件名写错。
+    CAND mk=应为 bad='未缩放的状区间' good='状态带' nb=1 ng=0 bad_all=[[167, 1], [255, 1]] good_all=[[255, 1]] rej=None flags=[]
+    SITE L167 cnt=1 delta=-12 macro=[]
+      LINE: 先把满盒子公设写清。设 $D_i^\pm$ 是以 $z=0$ 为中心的正宽度有理盒，$c_i^\pm$ 是中心、$R_i^\pm$ 是水平投影、$h_{ik}^\pm$ 是坐标半宽；假设族内水平投影正分离，$h_{ik}^+=\lambda_{ik}h_{ik}^-$，$\prod_k\lambda_{ik}=1$。这正是 §7 引理的假设。加法裕量的实现取 $H_3=\max_{i,\pm}h_{i3}^\pm$ 与 $g=\min(\{1\}\cup\{\max_{k=1,2}(\lvert c_{ik}^\p
+   reason=1 verbatim site(s) on disk, same-line swap, parity preserved flags=[]
+---- EXEC | D251-L432-I02 | D251-沿Lipschitz方向Hilbert变换的一致L2界.md | fam=macro | kind=mechanical-target-given
+   sec_line=432 anchor=[436] decl_range=[432, 447] window_len=1489
+   FIX: 应为 `\langle b(→`\langle b(u)\Psi_z,g\rangle` / 应为 `\langle b(→`\langle b(u)\Psi_z,g\rangle`，所指是
+   VNOTE: sig=`\langle b(u)\Psi_z,g\rvert\rangle` found at [157] ; author's line 1110 drifted
+   WINDOW: 1. §11 末段一处配对式我写成 `\langle b(u)\Psi_z,g\rvert\rangle`，多出一个右绝对值记号，正确应为 `\langle b(u)\Psi_z,g\rangle`，所指是 `02-reductions.tex` 第 1110 行的连续 packet 表示。 2. §14 首段 `$\lvert I\rvert\rvert\le b_0$` 重复写了右竖线记号，应为 `$\lvert I\rvert\le b_0$`。 3. §15 第二步的平行四边形定义里 `\le b/2\rvert\}` 同样多写一个右记号，应为 `\le b/2\}`。 4. §19 里线计数引理证明中的 $Q$ 指 dyadic 区间，与 §25、§27 的分离
+    CAND mk=应为 bad='\\langle b(u)\\Psi_z,g\\rvert\\rangle' good='\\langle b(u)\\Psi_z,g\\rangle' nb=1 ng=0 bad_all=[[157, 1], [436, 1]] good_all=[[436, 1]] rej=None flags=[]
+    CAND mk=应为 bad='$\\lvert I\\rvert\\rvert\\le b_0$' good='$\\lvert I\\rvert\\le b_0$' nb=1 ng=2 bad_all=[[187, 1], [437, 1]] good_all=[[59, 1], [164, 1], [437, 1]] rej=None flags=[]
+    CAND mk=应为 bad='\\le b/2\\rvert\\}' good='\\le b/2\\}' nb=1 ng=0 bad_all=[[199, 1], [438, 1]] good_all=[[438, 1]] rej=None flags=[]
+    CAND mk=应为 bad='当时全文 $87171$ 字节' good='87376' nb=1 ng=0 bad_all=[[445, 1], [450, 1]] good_all=[[445, 2]] rej=None flags=[]
+    SITE L452 cnt=1 delta=-16 macro=[]
+      LINE: 登记核查：完整目录名与"其他队列第 75 行号"两条各占一行，挂在 §0 末尾，位于正文前 $5000$ 字符内。落盘核查：新建稿用一次写文件工具完成，此后全部改动由追加式编辑完成，探针行在标题下方、不属于任何追加的锚点；追加共四次，每次单独量过字节数，单次均未超过 $25000$ 字节。表格核查：全文只有文末一节含五列表格，表头两行只出现一次，补录没有重复表头；每行恰有 $6$ 个竖线，单元格内没有裸竖线，限制算子写作 `\mid`，绝对值与范数分别用 `\lvert`、`\rVert` 系列，单元格里的数学不加
+    SITE L452 cnt=1 delta=-14 macro=[]
+      LINE: 登记核查：完整目录名与"其他队列第 75 行号"两条各占一行，挂在 §0 末尾，位于正文前 $5000$ 字符内。落盘核查：新建稿用一次写文件工具完成，此后全部改动由追加式编辑完成，探针行在标题下方、不属于任何追加的锚点；追加共四次，每次单独量过字节数，单次均未超过 $25000$ 字节。表格核查：全文只有文末一节含五列表格，表头两行只出现一次，补录没有重复表头；每行恰有 $6$ 个竖线，单元格内没有裸竖线，限制算子写作 `\mid`，绝对值与范数分别用 `\lvert`、`\rVert` 系列，单元格里的数学不加
+    SITE L450 cnt=1 delta=-22 macro=[]
+      LINE: 违例扫描的做法与结果：对本文全文做一次字面串检索，覆盖三个两字转折连接词类及其连读形式、三类四字与六字过渡套语、单个字符的长停顿号、整行三横线、以及勾号类符号，命中数为 $0$；扫描在 §29 落盘后跑过一次（当时全文 $87171$ 字节，命中 $0$），收工前再跑一次，两次结果都写进交付报告。小节标题不复述该节首句，这一点我逐节核对过：首句一律从具体对象或动作起笔，标题承担索引作用。全文没有加粗的装饰性列表，没有对话残留，没有关于自身能力的声明，行内公式统一用成对单美元符号，换行是 LF，前向引用只指 0 到 
+   reason=6 verbatim site(s) on disk, same-line swap, parity preserved flags=['MACRO-ON-SITE']
+---- EXEC | D186-L338-I03 | D186-固定粒子停机测试的构造路径.md | fam=macro,anchor | kind=mechanical-target-given
+   sec_line=338 anchor=[343] decl_range=[338, 351] window_len=571
+   FIX: 应读作"§9 的平面运动"→"§9 的平面运动"
+   VNOTE: sig=`\Psi` found at [92, 94, 98, 124, 131]
+   WINDOW: 2. §7 里的前向引用写成 "Section 8 的平面运动"，应读作"§9 的平面运动"；§8 只到仿射端点映射 $F_j$，路径 $\Psi_{j,s}$ 与 Hamiltonian 实现在 §9。 3. §20 中"最迟要到第七千二百万个时间单位"这一汉语数量级写法不规范，我在同句内改成了显式数值 $t_6=67{,}240{,}999$，读法按数值为准。 4. §21 验收项第 5 条写"落点 §17 第 18 节第二条"，应读作"落点 §18 的未答问题第二条"。 5. §8 一行推导里 $(2N-3)\kappa$ 曾误写成双反斜杠的 `\\kappa`，已在本句内改回单反斜杠。 6. §16 一处把压力条件写成 `$C_tC_t^{\,*}H^1$`，已在
+    CAND mk=应读作 bad='Section 8 的平面运动' good='§9 的平面运动' nb=1 ng=0 bad_all=[[92, 1], [343, 1]] good_all=[[343, 1]] rej=None flags=[]
+    CAND mk=改成 bad='最迟要到第七千二百万个时间单位' good='t_6=67{,}240{,}999' nb=0 ng=2 bad_all=[[344, 1]] good_all=[[306, 1], [307, 1], [344, 1]] rej=None flags=[]
+    CAND mk=应读作 bad='落点 §17 第 18 节第二条' good='落点 §18 的未答问题第二条' nb=1 ng=0 bad_all=[[324, 1], [345, 1]] good_all=[[345, 1]] rej=None flags=[]
+    CAND mk=误写成 bad='\\\\kappa' good='(2N-3)\\kappa' nb=0 ng=1 bad_all=[[346, 1]] good_all=[[109, 1], [346, 1]] rej=None flags=[]
+    SITE L324 cnt=1 delta=5 macro=[]
+      LINE: 4. 一个固定粒子。落点 §17 第 18 节第二条：$a_*=(1/8,3/8,0)$ 写死在定理 (3)，我另问了能否换。
+    SITE L92 cnt=1 delta=-6 macro=[]
+      LINE: 第二个转折是把"记录"与"执行"分开在时间上，即每步两脉冲。记录脉冲里平面坐标 $P$ 按住不动，$z$ 加上 $j_n\Lambda^{-n-1}$；执行脉冲里 $z$ 按住不动，$P$ 走 Section 8 的平面运动 $\Psi_{j_n,\cdot}$。图 `main.tex:354-374` 就是这个流程：起点 $P\in R_j,z=z_n$；第一段"record $j$、$P$ 固定"到 $z=z_n+j\Lambda^{-n-1}$；第二段"apply $\Psi_{j,s}$、$z$ 固定"到 
+    SITE L264 cnt=1 delta=18 macro=[]
+      LINE: 留给我自己的三个未答问题。其一，能不能把三个坐标的分工压缩：平面运算加一维历史是我目前的最省配置，若机器本身带两条带，$J$ 会变大，$\Lambda$ 变大，$S_n$ 更天文，而坐标数目不变；有没有编码能让 $\Lambda$ 与 $J$ 脱钩，我没有头绪。其二，检测器 $O$ 与标签 $a_*$ 能否任意：我的构造把它们钉死在 $1/2<x<1$ 与 $(1/8,3/8,0)$，靠 $x\leq1/4$ 与 $x\geq3/4$ 之间的空隙；若允许 $O$ 跨过 $x=1/4$，编码就要重排，这问题我没做。其
+   reason=3 verbatim site(s) on disk, same-line swap, parity preserved flags=[]
+---- EXEC | D204-L327-I14 | D204-四维盘嵌入猜想的边界障碍：从自由群问题到Frobenius-Koszul障碍.md | fam=macro | kind=mechanical-target-given
+   sec_line=327 anchor=[355] decl_range=[327, 360] window_len=51
+   FIX: 应为 "\mathfrak →"\mathfrak m_B"
+   VNOTE: sig=`\mathfrak` found at [113, 115, 119, 123, 125]
+   WINDOW: - 第 254 行：LaTeX 误拼 "\mathfrm_B"，应为 "\mathfrak m_B"。
+    CAND mk=应为 bad='\\mathfrm_B' good='\\mathfrak m_B' nb=1 ng=12 bad_all=[[254, 1], [355, 1]] good_all=[[254, 1], [258, 7], [262, 2], [355, 1], [402, 1], [403, 1]] rej=None flags=[]
+    SITE L254 cnt=1 delta=3 macro=[]
+      LINE: 公式 frob:base（第 490--495 行）：$B=\Bbbk[s_1,s_2,s_3]/(s_1^2,s_2^2,s_3^2)$、$\mathfrak m_B=(s_1,s_2,s_3)$、$w=s_1s_2s_3$。代入 $a_{i_r,1}=s_r$（$r=1,2,3$）、其余斜率坐标置零，记 $a=a(s)$；由分离式与 $s_r^2=0$，形变势恰为 $W_s(C)=F(C)+\sum_rs_rp_{i_r}(C_{i_r}^+)$（公式 frob:deformed-potential）：无混合参
+   reason=1 verbatim site(s) on disk, same-line swap, parity preserved flags=[]
+
+======== NO-VERBATIM (291 rows, showing 12) ========
+---- NO-VERBATIM | D577-L308-I02 | D577-蛇形六格骨牌二十一步制胜的证明卡片工程.md | fam=anchor,banstring | kind=mechanical-target-given
+   sec_line=308 anchor=[312] decl_range=[308, 327] window_len=78
+   FIX: 置为 §11 的基卡与锚点解→§11 的基卡与锚点解码段一处、§12 的转移战术段一处、§13 的
+   VNOTE: no verbatim signature
+   WINDOW: 禁串类：表拒绝含义的双字连接式共三处命中，位置为 §11 的基卡与锚点解码段一处、§12 的转移战术段一处、§13 的局部回应检查段一处；该字形在此不复现。
+   reason=declaration gives no marker-adjacent verbatim span pair flags=[]
+---- NO-VERBATIM | D560-L282-I07 | D560-正规射影簇的半代数万有覆叠分类.md | fam=btick,count,table | kind=mechanical-target-given
+   sec_line=282 anchor=[296] decl_range=[282, 301] window_len=187
+   FIX: 统一为单一换行符，回车计数 →单一换行符，回车计数 0
+   VNOTE: no verbatim signature
+   WINDOW: 七类，数学定界符与台账自查。全文数学定界符总数 3,488 枚，为本节追加前实测，是偶数；逐行扫描后奇数枚的行数为 0，即逐行成对成立。台账区数据行 56 行，每行恰好六枚竖线，表头全文只出现一次，分隔行一行，格内无裸竖线也无空格子，限制算子与绝对值均用专门的定界符写法。全文换行统一为单一换行符，回车计数 0。小节标题行现有 18 枚，缺的是第 9 节标题行，缘由见二类。
+   reason=declaration gives no marker-adjacent verbatim span pair flags=[]
+---- NO-VERBATIM | D221-L172-I01 | D221-零熵系统没有光滑正体积模型：切换定律与辛图检验的碰撞.md | fam=macro,banstring,typo | kind=mechanical-target-given
+   sec_line=172 anchor=[174] decl_range=[172, 175] window_len=351
+   FIX: 换成……"），属于越界用词，→……"），属于越界用词，特此登记：该句意图仅是把 16 次幂的可和与
+   VNOTE: sig=`\omega` found at [128]
+   WINDOW: 按落盘规则，已写内容不得删改，错误只在此登记。本稿 §3 倒数第二段出现了被文风禁令列管的字符串"也就是说"（原句为"也就是说（此词仅指汇率比喻，正式表述见 §10），指数本身可以换成……"），属于越界用词，特此登记：该句意图仅是把 16 次幂的可和与发散称作汇率类比，正式表述已在 §10 首段以接口表四行对接给出，本勘误后文与终检均不再使用该词族。其余禁词族（"，并非"、"，并非"、"，是"连读、"值得注意"、"需要指出"、"总的来看"、"大体上"、长破折号、整行分隔线、emoji）经自查均为零命中；若终检另有发现，仍在本节追加登记。另登记一处笔误级瑕疵：§9 中"$T$ 左移符号"按 06:26-28 的定义 $\omega'_t=\omega_{t+1}$ 应为左移
+    CAND mk=原句 bad='也就是说' good='也就是说（此词仅指汇率比喻，正式表述见 §10），指数本身可以换成……' nb=None ng=None bad_all=None good_all=None rej=ellipsis-in-target flags=[]
+   reason=pair extracted from the declaration but neither form is on disk flags=[]
+---- NO-VERBATIM | D394-L446-I04 | D394-一般素数处的过滤色分裂.md | fam=btick,count,table | kind=mechanical-count-correction
+   sec_line=446 anchor=[454] decl_range=[446, 457] window_len=179
+   FIX: 
+   VNOTE: re-measure bytes: author=86147 now=86924
+   WINDOW: 本笔之后的实测：86,147 字节，净增 1,654，452 行，`## ` 小节 25 个即编号 0 到 24 连续，台账仍是表头一次加数据行 67 行，美元定界符总数 1,739 个（其中 7 个属于第 22 节登记的那类不成对用法：六处引文配对错写加一处行内代码里的示例符号）。上一段里"全文 444 行"是追加本段之前量的，以本段的 452 行为准。
+   reason=declaration gives no marker-adjacent verbatim span pair flags=[]
+---- NO-VERBATIM | D244-L159-I06 | D244-用颜色包与素数筛在三环面上造出简单Lebesgue谱.md | fam=btick,count | kind=mechanical-target-given
+   sec_line=159 anchor=[167] decl_range=[159, 168] window_len=138
+   FIX: 应读作不带定界符的短语"密度→不带定界符的短语"密度恰好为 1" / 应读作不带定界符的短语→不带定界符的短语
+   VNOTE: no verbatim signature
+   WINDOW: 5. 杂字符残留二（未配对的行内公式定界符）：§0 第三段末尾"$密度恰好为 1"处出现单个定界符、该段行内无与之成对的另一枚，属排版手滑；语义应读作不带定界符的短语"密度恰好为 1"。全文收工时若 `$` 总数呈奇数，即由这一枚造成，其余皆成对。语义应读作不带定界符的短语。
+   reason=declaration gives no marker-adjacent verbatim span pair flags=[]
+---- NO-VERBATIM | D770-L398-I03 | D770-p-adic截面猜想.md | fam=anchor,ordermove | kind=mechanical-target-given
+   sec_line=398 anchor=[404] decl_range=[398, 423] window_len=147
+   FIX: 移到 §17 之后，搬正后编→§17 之后，搬正后编号顺序即为 §0 到 §22 连续
+   VNOTE: no verbatim signature
+   WINDOW: 二、整块落错位置。§18 全局推论与 §19 量级的账这两节的整块，物理位置在 §14 末段之后、§15 标题之前；锚点误取了 §14 末句（该句在全文唯一，但未复核它并非当时文件末段）。请本体侧用整块搬迁工具把这两节移到 §17 之后，搬正后编号顺序即为 §0 到 §22 连续。我自己不搬。
+   reason=declaration gives no marker-adjacent verbatim span pair flags=[]
+---- NO-VERBATIM | D567-L154-I01 | D567-稳定Morse数之下循环整系数Floer界的尖锐性.md | fam=anchor,table | kind=mechanical-target-given
+   sec_line=154 anchor=[156] decl_range=[154, 157] window_len=497
+   FIX: 应读作本文实际存放台账的最后→本文实际存放台账的最后一节，因 §15 之后又追加了勘误与台账两节，
+   VNOTE: no verbatim signature
+   WINDOW: 本节按类别补正 §14 的申报，已落盘文字一律不动。结构类一处：§14 里"台账表头全文仅在 §15 出现一次"一句中，台账节号应读作本文实际存放台账的最后一节，因 §15 之后又追加了勘误与台账两节，编号顺延，前向引用随之指向顺延后的节号，不涉及内容搬动。申报修正类两处：其一，纯英文术语残留族的分布申报需更正，§7 两处、§8 两处、§9 三处、§10 一处、§13 一处，共九处，此前写成"§8 三处"是把 §13 的一处误记入 §8，总数不变；其二，聊天残留与排版瑕疵类的双空格一处，位置申报 §6 无误，但同一句中相邻词距在后续节里另有一处类似形态，一并计入本类共两处，字形不复写。计数复核类一处：§14 声明 [推测] 共七处，逐节再点后确认为七处，分布 §2 一处、
+   reason=declaration gives no marker-adjacent verbatim span pair flags=[]
+---- NO-VERBATIM | D201-L220-I04 | D201-无挠反例与分离谱带构造.md | fam=count,typo | kind=mechanical-target-given
+   sec_line=220 anchor=[226] decl_range=[220, 227] window_len=165
+   FIX: 删掉的孤立美元号：§4 末"→的孤立美元号：§4 末"到 `:335`"后的多余 `$`、§10
+   VNOTE: sig=`:111` found at [76, 116]
+   WINDOW: - 正文里散落三处本应删掉的孤立美元号：§4 末"到 `:335`"后的多余 `$`、§10 首段残句"到 `:18`"后的多余 `$`（该句已被截断，见上）、§11"到 `:111`"后的多余 `$`。依规格我不回改已落盘处，仅在此声明：这三处 `$` 为笔误，其后应无配对 `$`；全文美元号总数与奇偶我将在交付报告如实给出。
+   reason=declaration gives no marker-adjacent verbatim span pair flags=[]
+---- NO-VERBATIM | D97-L1657-I24 | D97-容量小于4的辛球嵌入极化积：对称Mahler猜想的Gromov宽度路线反推笔记.md | fam=macro,count | kind=mechanical-target-given
+   sec_line=1657 anchor=[1696] decl_range=[1657, 1711] window_len=528
+   FIX: 换成"这条线索给不出 4，因→"这条线索给不出 4，因为…"的因果形式
+   VNOTE: no verbatim signature
+   WINDOW: - `grep -o "不是[^。；]\{0,14\}，是"` 实测无命中。这类对照句式我在草稿里写过两次，都在改写时换成"这条线索给不出 4，因为…"的因果形式；理由记在 2 节。 - 派单禁的五个过渡短语（两个"值得/需要说"型、一个"换一种说法"型、两个"收束总结"型），逐个 `grep -o | wc -l` 命中数全为 0。自检脚本在本节列了 grep 命令本身，五个短语的原词我不在这里复述，复述就会让自己造的检测项命中。 - 无能力免责声明（"我无法确定""资料有限""抱歉"三类合计命中 0）；不确定处一律写成"没有证据"或"要落实得读 …，超出本次授权"。 - 排版符号核对：草稿里我一路用一个对号字符作逐步核对的尾标，共 84 处，收尾时把它们改写进句法（"
+    CAND mk=换成 bad='grep -o "不是[^。；]\\{0,14\\}，是"' good='这条线索给不出 4，因为…' nb=None ng=None bad_all=None good_all=None rej=ellipsis-in-target flags=[]
+   reason=pair extracted from the declaration but neither form is on disk flags=[]
+---- NO-VERBATIM | D279-L335-I03 | D279-用矩量定出SLE的精确Hausdorff规范函数.md | fam=cite,banstring | kind=mechanical-target-given
+   sec_line=335 anchor=[341] decl_range=[335, 344] window_len=186
+   FIX: 改写为"绕开直接算，做法是"→"绕开直接算，做法是"），句子命题内容与行号引用未动
+   VNOTE: no verbatim signature
+   WINDOW: 三，本节之外有一次就地改动需要申报：§7 首段原本含一个两字转折连接词，落在禁令的第一类里，为了让本文件的该类命中数为零，我在追加本节前对该短语做了一次最小替换（把句子里的连接结构改写为"绕开直接算，做法是"），句子命题内容与行号引用未动。这是规格"已落盘内容不回改"的一次例外，我按规格要求在交付报告与本节同时申报，理由是两个约束不可能同时满足时，零命中是更硬的那一个。
+   reason=declaration gives no marker-adjacent verbatim span pair flags=[]
+---- NO-VERBATIM | D372-L224-I06 | D372-原始六次环面包的一等分布.md | fam=count,banstring,table,probe | kind=mechanical-target-given
+   sec_line=224 anchor=[236] decl_range=[224, 239] window_len=352
+   FIX: 改写为两式记法 build/→两式记法 build/ 星号 .tex 与 build/source
+   VNOTE: sig=`build/**/*.tex` found at [5, 178]
+   WINDOW: 补一类，编号五，通配星号两处：§0 与 §14 导语中的记法 `build/**/*.tex` 含两个相邻星号，那是代码段里的路径通配符，装饰性加粗标记从未在本稿使用；扫描器若按串匹配会在这两行报出命中，特此登记其来源与语义，原文星号不删。需要归一时可改写为两式记法 build/ 星号 .tex 与 build/source/ 星号 .tex（本会话实测该目录只有前一种版式，`build/source/` 不存在，目录列表以 §0 为准）。另复核一行三横线独立成行的形态在全盘无出现，台账的分隔行是表头两行逐字自带的标准形态，不属于整行禁令的对象。本节全部申报以 terminal 实测数字为准：小节标题 `## ` 共 16 个，台账数据行 38 行，正文引用小节 §0 至
+   reason=declaration gives no marker-adjacent verbatim span pair flags=[]
+---- NO-VERBATIM | D202-L279-I02 | D202-无扭群环失去直有限性的构造复盘.md | fam=banstring,ordermove | kind=mechanical-target-given
+   sec_line=279 anchor=[283] decl_range=[279, 290] window_len=230
+   FIX: 改写为“，并非”→“，并非” / 改为逗号，把两处禁用连接词改→逗号，把两处禁用连接词改写为“，并非”句式
+   VNOTE: sig=`，并非` found at [73, 217]
+   WINDOW: 其一，三处在位修订。本稿在追加 §9 至 §12 的同时，对 §3、§7 末段的三处文字做过原位最小修订：把两处中文长破折号改为逗号，把两处禁用连接词改写为“，并非”句式。动因是文风禁令要求这些字符串全文零命中，而已落盘段落若保留则整体退稿风险高于纯追加纪律；修订未改动任何数学内容、小节编号与论证顺序。修订后自查命中数：长破折号、两组禁用连接词、三组套话、整行分隔符均为零。此为对“禁止改写已落盘内容”条款的一次有意越界，如实申报，请闸门按内容合规优先处理。
+   reason=declaration gives no marker-adjacent verbatim span pair flags=[]
+
+======== ALREADY-DONE (31 rows, showing 12) ========
+---- ALREADY-DONE | D391-L225-I01 | D391-色重叠在素数三处有限装配失效.md | fam=macro,count,banstring,table,probe | kind=mechanical-count-correction
+   sec_line=225 anchor=[227] decl_range=[225, 228] window_len=436
+   FIX: 换成 `\mid`→`\mid` / 换成 `\mid` 形式，记→`\mid` 形式，记号语义不变
+   VNOTE: re-measure bytes: author=25000 now=71460
+   WINDOW: 对 §13 的自检结论补一条更正：长停顿号类在落盘正文中有四处命中，分别位于本文件第 94、131、146、152 行附近（含 §10 末段的对举处与 §5 的两处夹注）。按派单指令，此类禁串不就地改字，只在此按类别名申报，申报时不复写串本身；§13 写的"命中数为零"以本节为准覆盖。其余类别复查结果不变：转折对举类零命中（"而"字后接单字均非是、非两字），五个套语类零命中，整行三短横类零命中，双逗号类零命中，emoji 与勾号类零命中。另申报一处机械合规修正：§14 台账"特征实现"行原首格按论文原文抄了一个裸竖线（限制记号），与"格内无裸竖线"的硬门冲突，我按规格给出的替写方式把它换成 `\mid` 形式，记号语义不变；这是本会话对已落盘文字的唯一一次原位替换，属两条
+    CAND mk=换成 bad='格内无裸竖线' good='\\mid' nb=0 ng=4 bad_all=[[227, 1]] good_all=[[26, 1], [152, 1], [216, 1], [227, 1], [247, 1]] rej=None flags=[]
+   reason=expected form present on 4 body line(s), declared bad form absent flags=[]
+---- ALREADY-DONE | D76-L605-I06 | D76-非平凡Markov型迫使超反身.md | fam=btick,macro,count | kind=mechanical-target-given
+   sec_line=605 anchor=[617] decl_range=[605, 623] window_len=1002
+   FIX: 改成了 $\lvert S\→了 $\lvert S\rvert(2R+1)^r$ 的增长率表述
+   VNOTE: claim 1021 行 (nothing recomputed)
+   WINDOW: 五、复核行号时撞出来的口径差，如实登记： 1. 行数。§0 首段旧稿记 main.tex "实测 1021 行"，本轮 `wc -l` 给 1020；references.tex 我实测 99 行、4115 字节，与旧稿记的字节数吻合；figures/chart-transport.tex 实测 14 行、548 字节。差一拍来自末尾换行的计数口径（数换行符的工具给 1020，逐行编号的读取工具会把最后的空行也编上号）。我以 1020 登记，旧稿那句话原样保留。 2. 图与正文同式。figures/chart-transport.tex:13 的标注写作 $C(T_s(a_i))=C'(a_i)$，main.tex:442 写作 $C'(a)=C(T_s(a))$，两式只
+    CAND mk=改成 bad='规模与某范数无关' good='\\lvert S\\rvert(2R+1)^r' nb=0 ng=1 bad_all=[[621, 1]] good_all=[[534, 1], [621, 1]] rej=None flags=[]
+   reason=expected form present on 1 body line(s), declared bad form absent flags=['QUOTE-CROSSES-LINES(16)']
+---- ALREADY-DONE | D261-L320-I01 | D261-稀疏一般图最大基数匹配的几乎线性时间.md | fam=banstring,ordermove,table | kind=mechanical-target-given
+   sec_line=320 anchor=[322] decl_range=[320, 331] window_len=598
+   FIX: 改为"因 row 次数至多三→"因 row 次数至多三，正是 arity 的线性函数" / 改写为"要按 inciden→"要按 incident 标号数收费，不能按需求数收费"的肯定式陈述
+   VNOTE: no verbatim signature
+   WINDOW: 先申报两处对已落盘文本的改写。规格第 24 条要求"不删除、不回滚、不改写、不重排任何已落盘内容"，同一份规格第 37 到 42 行又要求违例串零命中。写作过程中我有两句成稿后落入禁令表的串：一处出现在 §2 末段（那四个字的过渡套语），一处出现在 §15 末段（同一类套语），另有一处在 §5 末段出现两字转折连接词与相邻数字连读形成的同类违例。我的处理是当场做同义替换：§2 处删去该套语并把句首改为直接陈述；§15 处同样删去该套语，句子改以"接口里的三条寿命条款"起头；§5 处把连读拆开，改为"因 row 次数至多三，正是 arity 的线性函数"。三次替换都只动被命中的那几个字，不移动任何小节、不删除任何判断、不改任何引证行号，落盘顺序与编号全部保持原样。这是本单申
+    CAND mk=改为 bad='接口里的三条寿命条款' good='因 row 次数至多三，正是 arity 的线性函数' nb=0 ng=1 bad_all=[[322, 1]] good_all=[[77, 1], [322, 1]] rej=None flags=[]
+   reason=expected form present on 1 body line(s), declared bad form absent flags=[]
+---- ALREADY-DONE | D15-L565-I03 | D15-有限欧氏Ramsey配置分类.md | fam=macro | kind=mechanical-target-given
+   sec_line=565 anchor=[571] decl_range=[565, 579] window_len=417
+   FIX: 应读作 `` `:80` `→`` `:80` ``，指向 `04-pairs.tex:80` 的
+   VNOTE: sig=`\epsilon` found at [103, 107, 240, 348, 349] ; author's line 390 drifted
+   WINDOW: 1. 第 390 行的 `` `:80$ `` 应读作 `` `:80` ``，指向 `04-pairs.tex:80` 的分块 $(1,1)$ 项 $A=C_{HH}+\epsilon I_H$。 2. 第 394 行的 `` `:230-231$ `` 应读作 `` `:230-231` ``，指向 `04-pairs.tex:230-231` 固定 $n$ 的那句。 3. 第 428 行的 `` `:85$ `` 应读作 `` `:85` ``，指向 `04-pairs.tex:85` 附近关于 $UP_V=0$ 的句子；同段的"It preserves diagonal factors"在 `04-pairs.tex:88` 之上、`:85-88` 区间内。 4.
+    CAND mk=应读作 bad=' `:230-231$ ' good=' `:230-231` ' nb=0 ng=1 bad_all=[[572, 1]] good_all=[[447, 1], [572, 1]] rej=None flags=[]
+    CAND mk=应读作 bad=' `:166-168$ ' good=' `:166-168` ' nb=0 ng=0 bad_all=[[574, 1]] good_all=[[574, 1]] rej=None flags=[]
+   reason=expected form present on 1 body line(s), declared bad form absent flags=[]
+---- ALREADY-DONE | D20-L556-I02 | D20-群环行列式猜想的反例.md | fam=macro,table | kind=mechanical-target-given
+   sec_line=556 anchor=[560] decl_range=[556, 570] window_len=199
+   FIX: 换成 `\lvert`→`\lvert` / 改回 `main.tex:2→`main.tex:250-253`
+   VNOTE: sig=`\rvert` found at [221, 457, 523, 526, 532]
+   WINDOW: 一、台账格式修正四处：$\theta$ 行、$D$ 行、$k$ 的最小值行、$\det$ 族行，第二栏原把集合基数写成一对裸竖线，与"每行恰好六个竖线、单元格内不许裸竖线"冲突，已就地换成 `\lvert` 与 `\rvert` 记法，数值含义一字未改。另有一处位置栏我误打成 `main.tex:250-225`，已改回 `main.tex:250-253`，对应 eq:support 那三行。
+    CAND mk=换成 bad='每行恰好六个竖线、单元格内不许裸竖线' good='\\lvert' nb=0 ng=7 bad_all=[[560, 1]] good_all=[[221, 1], [457, 1], [523, 1], [526, 1], [532, 1], [546, 1], [554, 1], [560, 1]] rej=None flags=[]
+    CAND mk=改回 bad='main.tex:250-225' good='main.tex:250-253' nb=0 ng=1 bad_all=[[560, 1]] good_all=[[521, 1], [560, 1]] rej=None flags=[]
+   reason=expected form present on 7 body line(s), declared bad form absent flags=[]
+---- ALREADY-DONE | D65-L708-I05 | D65-渐近中点一致凸与树空间的无界菱形畸变.md | fam=macro,count,table | kind=mechanical-target-given
+   sec_line=708 anchor=[733] decl_range=[708, 753] window_len=2093
+   FIX: 应为 6;第一次跑逮出一行含→6;第一次跑逮出一行含裸 `|`(`$\|\alpha_i'\|\ge2sm_g$ / 改成 `$\lvert\al→`$\lvert\alpha_i'\rvert\ge2sm_g$`
+   VNOTE: sig=`^abbrev|^structure|^instance|^example` found at [363] ; author's line 1 drifted
+   WINDOW: 21.4 机检补记(命令与输出实抄,本轮全部再跑一次)。 标签清点:`grep -ho "\label{...}" sections/*.tex` 得 25 条,分解为 thm 1、lem 6、eq 12、sec 6;figures 侧另有 fig 3 条(fig:diamond、fig:forest-gates、fig:paired-cut)。六个 lem 名按字母序 bounded-tree、cones、forest-structure、lens、modulus-conventions、paired,与第 0 节、第 15 节的清单一致。 proof 环境:`grep -cF "\begin{proof}"` 逐文件得 diamonds 2(:26,:61)、fore
+    CAND mk=应为 bad="awk -F'|' '{print NF}'" good='|' nb=0 ng=678 bad_all=[[741, 1]] good_all=[[42, 2], [56, 2], [86, 4], [88, 20], [92, 4], [144, 2], [171, 8], [173, 4], [175, 2], [176, 8], [177, 6], [184, 5], [187, 2], [191, 2], [207, 2], [209, 4], [213, 4], [236, 6], [237, 6], [248, 4], [249, 4], [253, 4], [254, 4], [260, 12], [262, 8], [263, 10], [264, 4], [265, 2], [266, 2], [271, 2], [272, 4], [273, 4], [274, 4], [275, 2], [276, 8], [279, 16], [280, 2], [284, 2], [291, 2], [294, 4], [302, 4], [307, 2], [312, 30], [313, 6], [314, 2], [318, 2], [321, 14], [322, 4], [325, 2], [328, 4], [329, 1], [330, 2], [334, 6], [335, 6], [336, 6], [337, 6], [338, 6], [339, 6], [340, 6], [341, 14], [342, 8], [343, 6], [344, 6], [345, 6], [346, 6], [347, 6], [348, 12], [349, 6], [350, 6], [351, 6], [358, 4], [360, 4], [361, 2], [363, 8], [368, 2], [387, 10], [388, 4], [389, 6], [390, 10], [391, 4], [408, 12], [416, 6], [417, 6], [418, 6], [419, 6], [420, 6], [421, 6], [422, 6], [423, 6], [424, 6], [425, 6], [426, 6], [427, 6], [428, 6], [429, 6], [430, 6], [431, 6], [432, 6], [433, 6], [434, 6], [435, 6], [436, 6], [437, 6], [438, 6], [439, 6], [440, 6], [441, 6], [442, 6], [443, 6], [444, 6], [445, 6], [446, 6], [447, 6], [448, 6], [449, 6], [450, 6], [451, 6], [452, 6], [453, 6], [454, 6], [455, 6], [456, 6], [457, 6], [511, 4], [581, 4], [583, 2], [584, 2], [622, 2], [626, 4], [659, 2], [677, 2], [684, 2], [694, 1], [717, 6], [729, 4], [737, 6], [739, 6], [740, 5], [741, 5]] rej=None flags=[]
+    CAND mk=改成 bad="$\\|\\alpha_i'\\|\\ge2sm_g$" good="$\\lvert\\alpha_i'\\rvert\\ge2sm_g$" nb=0 ng=1 bad_all=[[741, 1]] good_all=[[437, 1], [741, 1]] rej=None flags=[]
+   reason=expected form present on 678 body line(s), declared bad form absent flags=['QUOTE-CROSSES-LINES(24)']
+---- ALREADY-DONE | D391-L223-I01 | D391-色重叠在素数三处有限装配失效.md | fam=macro,count,banstring,table,probe | kind=mechanical-count-correction
+   sec_line=223 anchor=[227] decl_range=[223, 248] window_len=436
+   FIX: 换成 `\mid`→`\mid` / 换成 `\mid` 形式，记→`\mid` 形式，记号语义不变
+   VNOTE: re-measure bytes: author=25000 now=71460
+   WINDOW: 对 §13 的自检结论补一条更正：长停顿号类在落盘正文中有四处命中，分别位于本文件第 94、131、146、152 行附近（含 §10 末段的对举处与 §5 的两处夹注）。按派单指令，此类禁串不就地改字，只在此按类别名申报，申报时不复写串本身；§13 写的"命中数为零"以本节为准覆盖。其余类别复查结果不变：转折对举类零命中（"而"字后接单字均非是、非两字），五个套语类零命中，整行三短横类零命中，双逗号类零命中，emoji 与勾号类零命中。另申报一处机械合规修正：§14 台账"特征实现"行原首格按论文原文抄了一个裸竖线（限制记号），与"格内无裸竖线"的硬门冲突，我按规格给出的替写方式把它换成 `\mid` 形式，记号语义不变；这是本会话对已落盘文字的唯一一次原位替换，属两条
+    CAND mk=换成 bad='格内无裸竖线' good='\\mid' nb=0 ng=3 bad_all=[[227, 1]] good_all=[[26, 1], [152, 1], [216, 1], [227, 1], [247, 1]] rej=None flags=[]
+   reason=expected form present on 3 body line(s), declared bad form absent flags=[]
+---- ALREADY-DONE | D194-L420-I16 | D194-同余格表示问题的否定解答：一条被格形状逼出来的群论路线.md | fam=other | kind=mechanical-target-given
+   sec_line=420 anchor=[451] decl_range=[420, 456] window_len=255
+   FIX: 改为 `classifica→`classification.tex:112--115`
+   VNOTE: no verbatim signature
+   WINDOW: 2. §8 的 (L4) 改前「论文明说这数指的是主因子，而指它们的简单直因子（`classification.tex:111--115`）」，改后「论文明说这数指的是主因子，单个简单直因子不在所指之列（`classification.tex:112--115`）」。原文是 "The number refers to chief factors, not to their simple direct factors."，行号也按本轮核对结果改为 `classification.tex:112--115`。
+    CAND mk=改为 bad='The number refers to chief factors, not to their simple direct factor good='classification.tex:112--115' nb=0 ng=1 bad_all=[[451, 1]] good_all=[[151, 1], [451, 2]] rej=None flags=[]
+   reason=expected form present on 1 body line(s), declared bad form absent flags=[]
+---- ALREADY-DONE | D225-L455-I06 | D225-高标记数下的Pixton完备性Chow反例.md | fam=macro,count | kind=mechanical-target-given
+   sec_line=455 anchor=[467] decl_range=[455, 482] window_len=473
+   FIX: 换成由独立 $\theta_→由独立 $\theta_{ijk}$ 生成的外代数并直接验证图恒等式
+   VNOTE: sig=`\theta` found at [55, 81, 82, 183, 234]
+   WINDOW: 第五处，§31 末段整段被吞，被吞原文如下：方法段还有一处我读第二遍才重视的先例清单。`01-introduction.tex:176-179` 说检测器用的是二维拓扑场论熟悉的图演算；`01-introduction.tex:179-183` 说奇辛曲线配对与各向同性支撑修正的收缩消失有 Pandharipande--Zvonkine 的系数挠层构造作先例；差别在本文把系数环换成由独立 $\theta_{ijk}$ 生成的外代数并直接验证图恒等式（`01-introduction.tex:184-185`）。这句对我意味着检测器一侧没有外部定理兜底，可信度全在 §6 的计数与 §5 的压缩规则上；读到这里我把 §4 与 §6 的重读了一遍，确认本稿那两节的记号与 `04
+    CAND mk=读作 bad='系数挠层构造' good='上同调场论构造' nb=0 ng=1 bad_all=[[467, 2]] good_all=[[386, 1], [467, 1]] rej=None flags=[]
+   reason=expected form present on 1 body line(s), declared bad form absent flags=[]
+---- ALREADY-DONE | D269-L161-I20 | D269-二值容量公共整多面体基FPRAS研究笔记.md | fam=other | kind=mechanical-target-given
+   sec_line=161 anchor=[185] decl_range=[161, 192] window_len=394
+   FIX: 改成 unary 承诺（$R→unary 承诺（$R$ 多项式小），端口窗与展开规模都可以同步缩小，理论上能换来 / 改成 unary 承诺（$R→unary 承诺（$R$ 多项式小），端口窗与展开规模都可以同步缩小
+   VNOTE: no verbatim signature
+   WINDOW: 补充核对七，开放接口与我的判断，三条。其一，整套标尺服务"按位计费"，若把容量改成 unary 承诺（$R$ 多项式小），端口窗与展开规模都可以同步缩小，理论上能换来小指数的运行时间，但论文明说关心的只是编码依赖、优化运行时间是另一件事（introduction.tex:72-74），[推测] 它不愿为细粒度版本分叉出第二套常数系统。其二，Prékopa 只给通常对数凹，本文需要的是离散定量的双签名，平滑加严格凹二次项的手法在"盒上正权重加凸惩罚积分"这一类里应当可以推广，但推广的最小假设是什么，论文没有试，我也不敢替它猜。其三，互补 factorial 提升的相等域只有 transversal，缺陷类靠比值 $q$ 兜底；若将来需要两类以上缺陷（双洞状态），现框架的乘法
+    CAND mk=改成 bad='按位计费' good='R' nb=0 ng=50 bad_all=[[185, 1]] good_all=[[1, 1], [5, 2], [7, 1], [8, 1], [9, 3], [15, 1], [19, 1], [31, 3], [33, 3], [35, 1], [39, 2], [41, 1], [49, 2], [55, 1], [57, 1], [94, 1], [97, 1], [109, 2], [111, 1], [112, 1], [113, 1], [115, 1], [129, 1], [145, 2], [169, 1], [171, 1], [183, 1], [185, 1], [191, 1], [199, 2], [200, 3], [202, 3], [205, 1], [208, 1], [215, 1], [226, 1], [249, 1], [250, 1], [258, 1]] rej=None flags=[]
+   reason=expected form present on 50 body line(s), declared bad form absent flags=[]
+---- ALREADY-DONE | D476-L313-I02 | D476-广义对数典范Q对的极小模型与Mori纤维空间.md | fam=table | kind=mechanical-target-given
+   sec_line=313 anchor=[317] decl_range=[313, 324] window_len=154
+   FIX: 改成「（对、半正数据与偏差）→「（对、半正数据与偏差）」 / 改成「广义对的一切双有理操作→「广义对的一切双有理操作」
+   VNOTE: sig=`（对、半正数据与偏差）` found at [235]
+   WINDOW: 术语误选两处照申报改：第 235 行括注「（对偶、半正数据与偏差）」改成「（对、半正数据与偏差）」，第 245 行「广义对偶的一切双有理操作」改成「广义对的一切双有理操作」，与本篇题名「广义对数典范Q对」以及 §20 台账行的「对」字口径对齐。第 277 行申报句里逐字引用的那枚错形保留，它是记录不是缺陷。
+    CAND mk=改成 bad='（对偶、半正数据与偏差）' good='（对、半正数据与偏差）' nb=0 ng=1 bad_all=[[317, 1]] good_all=[[235, 1], [317, 1]] rej=None flags=[]
+    CAND mk=改成 bad='广义对偶的一切双有理操作' good='广义对的一切双有理操作' nb=0 ng=1 bad_all=[[317, 1]] good_all=[[245, 1], [317, 1]] rej=None flags=[]
+   reason=expected form present on 1 body line(s), declared bad form absent flags=[]
+---- ALREADY-DONE | D570-L253-I01 | D570-可解字问题群嵌入F无穷型单上群的构造研究笔记.md | fam=banstring,english,ordermove,typo | kind=mechanical-target-given
+   sec_line=253 anchor=[255] decl_range=[253, 256] window_len=696
+   FIX: 应为"同样覆盖", 属中英夹→"同样覆盖", 属中英夹杂; §7 幂等元段保留了"写错?"的自我纠
+   VNOTE: no verbatim signature
+   WINDOW: 按类别申报, 均不在就地处理范围, 交本体侧机械通道: 第一类, 成对长停顿号 $12$ 处, 位置在 §3 反向刻画段、§4 路线 A 段与路线 C 段、§5 转折三段、§6 末段、§13 无(§13 未用), 全部集中在首块. 第二类, 规格第一条禁令所辖的双字组合 $1$ 处, 在 §5 转折一段的"我不再亲手造单群"之后; 同段括注为本意澄清, 不构成第二处. 第三类, 英文残留: 首块 §6 的括注 algebraic interleaving 与斜体 uniformity, §4 路线 B 的短语"外 automorphism 群", 以及全文以英文标签词引用素材命题名的用法(action, ring-data, torus, enlargement, act
+    CAND mk=应为 bad='空 $c_*$ 与包含交叠同-cover' good='同样覆盖' nb=0 ng=1 bad_all=[[255, 1]] good_all=[[137, 1], [255, 1]] rej=None flags=[]
+   reason=expected form present on 1 body line(s), declared bad form absent flags=[]
+
+======== KEEP-DECLARATION (30 rows, showing 12) ========
+---- KEEP-DECLARATION | D15-L565-I05 | D15-有限欧氏Ramsey配置分类.md | fam=other | kind=mechanical-target-given
+   sec_line=565 anchor=[573] decl_range=[565, 579] window_len=229
+   FIX: 应读作 `` `:85` `→`` `:85` ``，指向 `04-pairs.tex:85` 附
+   VNOTE: no verbatim signature; author's line kept
+   WINDOW: 3. 第 428 行的 `` `:85$ `` 应读作 `` `:85` ``，指向 `04-pairs.tex:85` 附近关于 $UP_V=0$ 的句子；同段的"It preserves diagonal factors"在 `04-pairs.tex:88` 之上、`:85-88` 区间内。 4. 第 459 行的 `` `:166-168$ `` 应读作 `` `:166-168` ``，即 `pairs:exact-moment` 的公式行号。
+    CAND mk=应读作 bad=' `:166-168$ ' good=' `:166-168` ' nb=0 ng=0 bad_all=[[574, 1]] good_all=[[574, 1]] rej=None flags=[]
+   reason=bad form only where the declaration itself quotes it (line 574) flags=[]
+---- KEEP-DECLARATION | D401-L411-I04 | D401-变素数处的有限Smith-Toda复形.md | fam=btick,macro,table,typo | kind=mechanical-target-given
+   sec_line=411 anchor=[419] decl_range=[411, 426] window_len=426
+   FIX: 应读作"$\operator→"$\operatorname{Backslash operator
+   VNOTE: sig=`\operatorname` found at [121, 127, 129, 145, 151]
+   WINDOW: 申报九，上一段自身还带着一处排版破损：原文 `\operatorname{Full}` 的行内公式收尾符被误写成反引号，正确的定界符应是美元号，即应读作"$\operatorname{Backslash operatorname{Full}}$"这种展开形式的算子名，公式在此处会连同那个反引号一起吃掉后续行文的配对。该破损位于已落盘内容之内，按不得改写已落盘内容的规则我只在此登记，不做就地修补；阅读时把 §22.1 申报八里的 `$\operatorname{Part}$ 与 $\operatorname{Full}` 连带处解析为"$\operatorname{Part}$ 与 $\operatorname{Full}$"即可，语义不受影响。台账区（§22 的表格）已经
+    CAND mk=误写成 bad='$\\operatorname{Backslash operatorname{Full}}$' good='\\operatorname{Full}' nb=0 ng=0 bad_all=[[419, 1]] good_all=[[417, 1], [419, 3]] rej=None flags=[]
+    CAND mk=应读作 bad='\\operatorname{Full}' good='$\\operatorname{Backslash operatorname{Full}}$' nb=0 ng=0 bad_all=[[417, 1], [419, 3]] good_all=[[419, 1]] rej=None flags=[]
+   reason=bad form only where the declaration itself quotes it (line 419) flags=[]
+---- KEEP-DECLARATION | D214-L250-I03 | D214-边界行列式复杂度三次下界之路.md | fam=other | kind=mechanical-target-given
+   sec_line=250 anchor=[255] decl_range=[250, 259] window_len=407
+   FIX: 改成"选 $u$ 做第三坐标→"选 $u$ 做第三坐标的用意在于让曲线获得可数化的射影量"
+   VNOTE: no verbatim signature; author's line kept
+   WINDOW: 2. 第 74 行含一个以 `而` 开头、以 `非` 结尾的两字对比连接词（"解出来的 ... 猜出来的"之间）；第 85 行含一个以 `而` 开头、以 `是` 结尾、中间夹 `不` 的三字连接词（"选 $u$ 做第三个齐次坐标 ... 直接看仿射矩阵"之间），它同时命中该三字串与其中后两字组成的二字串。两处合规写法：前者拆成"是解出来的，办法是列抵消方程求最小实现"，后者改成"选 $u$ 做第三坐标的用意在于让曲线获得可数化的射影量"。 3. §0 的双登记两行（完整目录名行与行号行）落点在第 5、6 行，位于 §0 内容开头，规格原文要求"挂在 §0 末尾"。两行内容本身逐字合规、也落在正文前 5,000 字符内；位置偏差的成因是我把登记块当作 §0 的第一块内容写，
+    CAND mk=改成 bad='是解出来的，办法是列抵消方程求最小实现' good='选 $u$ 做第三坐标的用意在于让曲线获得可数化的射影量' nb=0 ng=0 bad_all=[[255, 1]] good_all=[[255, 1]] rej=None flags=[]
+   reason=bad form only where the declaration itself quotes it (line 255) flags=[]
+---- KEEP-DECLARATION | D388-L620-I08 | D388-期望可哑子代数保持核心换位子.md | fam=table | kind=mechanical-target-given
+   sec_line=620 anchor=[632] decl_range=[620, 637] window_len=101
+   FIX: 应为"裸竖线"，此处用代号是→"裸竖线"，此处用代号是为了避免在同一段里重复同一字形
+   VNOTE: no verbatim signature
+   WINDOW: 说明定位：上面补记里的"裸X线云云"指的是同节"竖线合规"条目中那个竖线类名词的第二种写法，正写应为"裸竖线"，此处用代号是为了避免在同一段里重复同一字形。这是本节最后一处更正，台账表体到此为止不再动。
+    CAND mk=应为 bad='竖线合规' good='裸竖线' nb=0 ng=0 bad_all=[[625, 1], [630, 1], [632, 1]] good_all=[[625, 1], [632, 1]] rej=None flags=[]
+   reason=bad form only where the declaration itself quotes it (line 625) flags=[]
+---- KEEP-DECLARATION | D448-L308-I06 | D448-整系数Donovan有限性在Witt向量上.md | fam=typo | kind=mechanical-target-given
+   sec_line=308 anchor=[320] decl_range=[308, 329] window_len=192
+   FIX: 写法是 $Bu_s$，与第 →$Bu_s$，与第 $13$ 节其余各处的 $u_s$ 一致
+   VNOTE: no verbatim signature
+   WINDOW: 五、两处记号笔误与一处名称拼写。第 $13$ 节第 $164$ 行把交叉生成元写作大写字母加下标的形式，同段两处，期望写法是 $Bu_s$，与第 $13$ 节其余各处的 $u_s$ 一致；第 $8$ 节第 $112$ 行"刚性格几何"多打一个字，期望是"刚性几何"；第 $2$ 节一位合作者的姓氏少打一个字母，期望是 Farrell--Kessar。三处都已落盘，按规格不做就地替换。
+    CAND mk=写法是 bad='164' good='Bu_s' nb=0 ng=0 bad_all=[[320, 1]] good_all=[[320, 1]] rej=None flags=[]
+   reason=bad form only where the declaration itself quotes it (line 320) flags=[]
+---- KEEP-DECLARATION | D181-L848-I02 | D181-完备锥上的斜率配平与没有小Cohen-Macaulay模的三维完备局部整环.md | fam=macro | kind=mechanical-target-given
+   sec_line=848 anchor=[852] decl_range=[848, 896] window_len=600
+   FIX: 换成 $(\delta/2)→$(\delta/2)^2$ 直接代出来的,
+   VNOTE: sig=`\delta` found at [547, 930]
+   WINDOW: 1. 常数 $6$ 是否最优。§13 说清了两处 $\frac14$ 的来源, 但没告诉我"宽度至多一"能否改进到某个 $\delta<1$。若能把配平引理的区间宽度压到 $\delta$, 障碍会锐到 $K_X^2-2c_2(X)\le(3+\delta^2\cdot3)H^2$ 这一族形式。 `[推测]` 这个式子是我按 §13 的方差上界 $\le\frac14$ 换成 $(\delta/2)^2$ 直接代出来的, 论文没有这句,我没有验证它是否与 lem:balance 的机制相容,故只作为问题留下。 2. $P$ 能否在半稳定的意义下被"合并因子"。§10 里我只拿到宽度; 真要半稳定,基本变形的做法(Chen--Sun 的最优延拓, surface.tex 之
+    CAND mk=换成 bad='\\le\\frac14' good='(\\delta/2)^2' nb=0 ng=0 bad_all=[[855, 1]] good_all=[[855, 1]] rej=None flags=[]
+   reason=bad form only where the declaration itself quotes it (line 855) flags=['QUOTE-CROSSES-LINES(32)']
+---- KEEP-DECLARATION | D707-L477-I03 | D707-无限调和函数的一致内部C1alpha估计.md | fam=btick,macro,table | kind=mechanical-target-given
+   sec_line=477 anchor=[483] decl_range=[477, 486] window_len=197
+   FIX: 应改为不含竖线的写法（例如把→不含竖线的写法（例如把"在 $\tau=0$ 处取值"移出公式、用文
+   VNOTE: sig=`\tau` found at [109, 225, 343, 345, 349]
+   WINDOW: 补充二，求值竖线。§6 中段三点估计的二阶变分公式在收尾处使用了一枚求值竖线记号（数学环境中的裸竖线），位置在 `02-flatness.tex:199--204` 对应的本稿公式末尾。按"任何位置都不要写裸竖线"的口径，这一处应改为不含竖线的写法（例如把"在 $\tau=0$ 处取值"移出公式、用文字描述，或改写成不含求值竖线的等价表达式）。该处不在五列表格内，不影响台账任何数据行的判读。
+    CAND mk=应改为 bad='任何位置都不要写裸竖线' good='在 $\\tau=0$ 处取值' nb=0 ng=0 bad_all=[[483, 1]] good_all=[[483, 1]] rej=None flags=[]
+   reason=bad form only where the declaration itself quotes it (line 483) flags=[]
+---- KEEP-DECLARATION | D581-L353-I05 | D581-谱标量曲率与一致乌雷松宽度.md | fam=macro | kind=mechanical-target-given
+   sec_line=353 anchor=[385] decl_range=[353, 414] window_len=458
+   FIX: 换成 $v_1/l$、$t$→$v_1/l$、$t$ 换成 $t-\beta$ 后，最后四个切向项
+   VNOTE: sig=`\langle` found at [65]
+   WINDOW: （四）图比较的切向盈余。在 $h=v_1^2\mathrm{d}q^2+\gamma_q$ 下，把 $v_1$ 换成 $v_1/l$、$t$ 换成 $t-\beta$ 后，最后四个切向项的改变量是 $$2\langle\mathrm{d}_\gamma\log v_1,\mathrm{d}_\gamma\beta\rangle-\lvert\mathrm{d}_\gamma\beta\rvert^2=f(2-f)\lvert\mathrm{d}_\gamma\log s\rvert^2\ge0,\qquad f=-s\beta_s,$$ 其中用到 $\beta_s=\frac12\frac{\theta_s}{1-\theta}$ 与 $\mathrm{d}_\gamma
+    CAND mk=换成 bad='v_1' good='v_1/l' nb=0 ng=0 bad_all=[[385, 3], [386, 1], [387, 1]] good_all=[[385, 1]] rej=None flags=[]
+    CAND mk=换成 bad='t' good='t-\\beta' nb=None ng=None bad_all=None good_all=None rej=too-short flags=[]
+   reason=bad form only where the declaration itself quotes it (line 385) flags=['QUOTE-CROSSES-LINES(90)']
+---- KEEP-DECLARATION | D455-L393-I17 | D455-Koebe圆盘域猜想的兼容坐标与路径律融合.md | fam=btick,count | kind=mechanical-target-given
+   sec_line=393 anchor=[427] decl_range=[393, 430] window_len=267
+   FIX: 改为"四种畸形形态实测零命中→"四种畸形形态实测零命中
+   VNOTE: no verbatim signature; author's line kept
+   WINDOW: 类别十二，全文定界符计数的自伤一处。第 407 行（§16 类别六）我在行内代码里单独写了一个指代数学定界符本身的字符，它不是公式的开始也不是结尾，却让全文该字符的总数变成奇数（实测 1629），并使该行成为全文唯一一行奇数计数。同一行末尾我还写着"总数为偶"，这句在写下时是好的，被上面那个指代字符推翻。期望全文：把该行最后两句改为"四种畸形形态实测零命中；行内代码闭合无误；全文数学定界符总数为偶，逐行奇偶检查零行为奇"，并删去那个放在行内代码里的指代字符。我不做就地替换，也不用补字符的方式凑偶，因为凑出来的配对会掩盖真实计数。
+    CAND mk=改为 bad='总数为偶' good='四种畸形形态实测零命中；行内代码闭合无误；全文数学定界符总数为偶，逐行奇偶检查零行为奇' nb=0 ng=0 bad_all=[[407, 1], [427, 2]] good_all=[[427, 1]] rej=None flags=[]
+   reason=bad form only where the declaration itself quotes it (line 407) flags=[]
+---- KEEP-DECLARATION | D431-L33-I02 | D431-光滑各向同性弹性逆问题的全局唯一性.md | fam=macro | kind=mechanical-target-given
+   sec_line=33 anchor=[37] decl_range=[33, 42] window_len=1228
+   FIX: 换成 $\overline{→$\overline{\partial}$ 问题，在 $\theta
+   VNOTE: sig=`\operatorname` found at [17, 21, 27, 29, 45]
+   WINDOW: 第一条：NU 1994 的勘误（`introduction.tex:61-68`）指出两处缺陷，其一是"一个平面矩阵输运方程的初值问题未必可解"。这一条杀伤力被低估过：三维 CGO 构造里，沿 $\operatorname{Re}\theta,\operatorname{Im}\theta$ 张成的平面解输运方程 $D_\theta Y=M_\theta Y$，平面上的初值问题只给一条特征线上的传播，遇到源项或单值性要求时根本不够；其二是"把修正后的 CGO 解代回边界等式，得到的是一个拟微分方程，原文却按偏微分方程处理"。教训被这篇论文正面吸收：平面输运的求解换成 $\overline{\partial}$ 问题，在 $\theta=\alpha+i\beta$、$|\
+    CAND mk=换成 bad='把修正后的 CGO 解代回边界等式，得到的是一个拟微分方程，原文却按偏微分方程处理' good='\\overline{\\partial}' nb=0 ng=0 bad_all=[[37, 1]] good_all=[[37, 1]] rej=None flags=[]
+   reason=bad form only where the declaration itself quotes it (line 37) flags=[]
+---- KEEP-DECLARATION | D188-L684-I05 | D188-五次型Gepner稳定条件构造手记.md | fam=other | kind=mechanical-target-given
+   sec_line=684 anchor=[691] decl_range=[684, 694] window_len=385
+   FIX: 应为 `sections/g→`sections/grid.tex:421-428` / 应为不带 `$` 的行号范围→不带 `$` 的行号范围
+   VNOTE: no verbatim signature
+   WINDOW: 4. 三处混入多余符号：`sections/aisles.tex:110-111``、`sections/aisles.tex:124-125``（§5.1 与 §5.3）、`sections/grid.tex:421-428``（§12.1）各多了一个 `$`，应为不带 `$` 的行号范围；§12.1 那处我顺手写了"已改"两字，读作"应为 `sections/grid.tex:421-428`"。 5. §5.4 末尾我把 noetherian 性的使用处指向 §7.2，正文里 §7.2 引用的写法是"§5.4 末尾说的 noetherian 性"，两处一致，无需修正；列在此处只是提醒读者 §5.3 是证明、§5.4 是用途。 6. §9.3 里我写"那是 §10 的
+    CAND mk=应为 bad='（§12.1）各多了一个 ' good=' 的行号范围；§12.1 那处我顺手写了"已改"两字，读作"应为 ' nb=0 ng=0 bad_all=[[691, 1]] good_all=[[691, 1]] rej=None flags=[]
+    CAND mk=读作 bad='，应为不带 ' good='应为 `sections/grid.tex:421-428`' nb=0 ng=0 bad_all=[[691, 1]] good_all=[[691, 1]] rej=None flags=[]
+   reason=bad form only where the declaration itself quotes it (line 691) flags=[]
+---- KEEP-DECLARATION | D268-L1073-I08 | D268-单元格有界列联表FPRAS的反向推导笔记.md | fam=btick,probe | kind=mechanical-target-given
+   sec_line=1073 anchor=[1087] decl_range=[1073, 1090] window_len=169
+   FIX: 该写作方括号形式的推测标记先→方括号形式的推测标记先前被错放进数学定界符内，现已改正
+   VNOTE: no verbatim signature
+   WINDOW: - 措辞类四处：§22 里一句被我把"与我先前"写成了不通的"必须先前"，现已理顺；同一句里那个本该写作方括号形式的推测标记先前被错放进数学定界符内，现已改正；§22 一处把"约束的是位数"写成了重复表述，已合并；§22 里一处中英混排的词已改成中文。这四处全部发生在 §22 本轮刚写的段落与 §19 补记内，没有触及任何早期论证小节。
+    CAND mk=写成了 bad='必须先前' good='与我先前' nb=0 ng=0 bad_all=[[1087, 1]] good_all=[[1087, 1]] rej=None flags=[]
+   reason=bad form only where the declaration itself quotes it (line 1087) flags=[]
+
+======== STALE-COORD (6 rows, showing 6) ========
+---- STALE-COORD | D162-L475-I04 | D162-Kaplansky直接有限性猜想在特征二的反例：从配对恒等式到终止有限搜索的反推笔记.md | fam=anchor,count,ordermove,table | kind=mechanical-target-given
+   sec_line=475 anchor=[] decl_range=None window_len=None
+   FIX: 改为第 18 节台账第 5 →第 18 节台账第 5 行与第 45 行，复测后错位命中 0
+   VNOTE: sig=`OAI/RingTheory/DirectFiniteness/Finite` found at [36, 384, 550, 551] ; author's line 5 drifted
+   WINDOW: 
+   reason=declared quote absent from disk, not even as a 10-char normalised prefix flags=[]
+---- STALE-COORD | D218-L693-I06 | D218-严格椭圆方向零一律的反向重构笔记.md | fam=other | kind=mechanical-target-given
+   sec_line=693 anchor=[] decl_range=None window_len=None
+   FIX: 正名是 Paley--Zyg→Paley--Zygmund 型第二矩论证，
+   VNOTE: no verbatim signature
+   WINDOW: 
+   reason=declared quote absent from disk, not even as a 10-char normalised prefix flags=[]
+---- STALE-COORD | D238-L734-I03 | D238-平方差自由集的固定幂节省.md | fam=macro,ordermove,probe | kind=mechanical-target-given
+   sec_line=734 anchor=[] decl_range=None window_len=None
+   FIX: 应为 $\lVert T\r→$\lVert T\rvert_{H_U}\rVert_{\math
+   VNOTE: sig=`\mathrm` found at [251, 259, 264, 265, 269]
+   WINDOW: 
+   reason=declared quote absent from disk, not even as a 10-char normalised prefix flags=[]
+---- STALE-COORD | D365-L468-I03 | D365-端点逐点收敛：高维薛定谔方程的等号情形.md | fam=macro | kind=mechanical-delete
+   sec_line=468 anchor=[] decl_range=None window_len=None
+   FIX: 请删除
+   VNOTE: sig=`$s_n=\frac{n}{2(n+1)}}$` found at [47]
+   WINDOW: 
+   reason=declared quote absent from disk, not even as a 10-char normalised prefix flags=[]
+---- STALE-COORD | D772-L1126-I03 | D772-CM阿贝尔簇的有理Hodge猜想.md | fam=anchor,table | kind=mechanical-target-given
+   sec_line=1126 anchor=[] decl_range=None window_len=None
+   FIX: 移至 §15 末尾或保留现状→§15 末尾或保留现状
+   VNOTE: no verbatim signature
+   WINDOW: 
+   reason=declared quote absent from disk, not even as a 10-char normalised prefix flags=[]
+---- STALE-COORD | D776-L624-I02 | D776-时空Penrose不等式与围面积.md | fam=macro,banstring,table,typo | kind=mechanical-target-given
+   sec_line=624 anchor=[] decl_range=None window_len=None
+   FIX: 应为 $|P|_\delta→$|P|_\delta^2$，已勘误）
+   VNOTE: sig=`\delta` found at [26, 31, 34, 45, 48]
+   WINDOW: 
+   reason=declared quote absent from disk, not even as a 10-char normalised prefix flags=[]
+
+======== NEEDS-NEW-LINE (2 rows, showing 2) ========
+---- NEEDS-NEW-LINE | D367-L232-I04 | D367-负曲率熵等式与局部对称性.md | fam=macro | kind=mechanical-target-given
+   sec_line=232 anchor=[240] decl_range=[232, 245] window_len=273
+   FIX: 搬到可控邻域来逼 $q$→可控邻域来逼 $q$
+   VNOTE: sig=`\rho` found at [152, 347, 367]
+   WINDOW: 咬合三，逼近列 $p_{n,R}$ 让标签光滑。smooth:propagation（07 第 368 到 381 行）先由 backward 几何把 $f^{-n}K^+$ 放进轴的角坐标邻域，再在有限截断 $R$ 下取 $p_{n,R}(v)=\sum_{l=0}^R q_l(\rho(f^{-n}v))[t(f^{-n}v)^l]$。这里我读到的关键仍是"有限 $R$"：不试图让级数收敛，只截到足够高的有限阶，靠 $f^{-n}$ 把点搬到可控邻域来逼 $q$。这与 §16 的权重线性增长、§18 的有限段哲学是同一个信条的三次现身。
+    CAND mk=搬到 bad='f^{-n}' good='q' nb=4 ng=76 bad_all=[[152, 2], [154, 1], [240, 4], [347, 1]] good_all=[[11, 1], [18, 2], [42, 1], [46, 2], [54, 1], [58, 4], [64, 2], [66, 2], [68, 2], [72, 1], [88, 2], [92, 2], [94, 4], [102, 1], [136, 2], [142, 2], [144, 1], [150, 1], [152, 1], [154, 1], [156, 3], [158, 5], [166, 2], [170, 2], [178, 1], [204, 1], [210, 1], [218, 1], [220, 1], [222, 2], [236, 2], [238, 2], [240, 2], [242, 6], [264, 1], [268, 4], [291, 1], [297, 1], [320, 1], [321, 2], [322, 1], [323, 1], [324, 1], [328, 1], [336, 2], [346, 1], [347, 1], [359, 2], [365, 2]] rej=None flags=['MOVE-VERB']
+   reason=sites found but the swap is not same-line-parity-safe: move-verb flags=[]
+---- NEEDS-NEW-LINE | D700-L569-I06 | D700-三条互异整数斜率的三重遍历平均.md | fam=macro | kind=mechanical-target-given
+   sec_line=569 anchor=[593] decl_range=[569, 596] window_len=212
+   FIX: 移到左边得到 $C_N(q)→左边得到 $C_N(q)\le2CA_\tau$
+   VNOTE: sig=`\tau` found at [280, 324, 326, 331, 337]
+   WINDOW: 补充核对四：一致常数那一步的不等式 $C_N(q)\le CA_\tau+C\tau C_N(q)$。它要求 $C\tau<1/2$ 才能把末项移到左边得到 $C_N(q)\le2CA_\tau$。这里的 $C$ 来自外层归一化里的 $16^{4/q}$ 与 $4/3$，对 $2<q<3$ 有界。若 $q$ 取得使 $16^{4/q}$ 过大，$C$ 变大，$\tau$ 就要取得更小，级数阈值也要更小，但可行性不受影响。
+    CAND mk=移到 bad='C\\tau<1/2' good='C_N(q)\\le2CA_\\tau' nb=2 ng=0 bad_all=[[337, 1], [478, 1], [593, 1]] good_all=[[593, 1]] rej=None flags=['MOVE-VERB']
+   reason=sites found but the swap is not same-line-parity-safe: move-verb flags=[]

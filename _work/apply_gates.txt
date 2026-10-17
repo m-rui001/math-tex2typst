@@ -1,0 +1,70 @@
+APPLIED -> exec_order_apply.txt  (groups=18 skipped=0)
+GATELINE D25 | pass1=[D25 size=399742 ] | pass2=[D25 size=399742 ] | gate=[D25  {'size': 399742, 'secs': 24, 'contig': True, 'rows': 36, 'math': 8454, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D44 | pass1=[D44 size=105112 ] | pass2=[D44 size=105112 ] | gate=[D44  {'size': 105112, 'secs': 19, 'contig': True, 'rows': 58, 'math': 3344, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=7 skipped=0)
+GATELINE D58 | pass1=[D58 size=86108 ] | pass2=[D58 size=86108 ] | gate=[D58  {'size': 86108, 'secs': 18, 'contig': True, 'rows': 34, 'math': 2662, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D71 | pass1=[D71 size=182883 ] | pass2=[D71 size=182883 ] | gate=[D71  {'size': 182883, 'secs': 42, 'contig': True, 'rows': 37, 'math': 5144, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=2 skipped=0)
+GATELINE D81 | pass1=[D81 size=125139 ] | pass2=[D81 size=125139 ] | gate=[D81  {'size': 125139, 'secs': 9, 'contig': True, 'rows': 36, 'math': 3158, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=13 skipped=0)
+GATELINE D96 | pass1=[D96 size=126153 ] | pass2=[D96 size=126153 ] | gate=[D96  {'size': 126153, 'secs': 27, 'contig': True, 'rows': 49, 'math': 1535, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D125 | pass1=[D125 size=123042 ] | pass2=[D125 size=123042 ] | gate=[D125  {'size': 123042, 'secs': 21, 'contig': True, 'rows': 47, 'math': 3024, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D131 | pass1=[D131 size=147079 ] | pass2=[D131 size=147079 ] | gate=[D131  {'size': 147079, 'secs': 25, 'contig': True, 'rows': 40, 'math': 3526, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D145 | pass1=[D145 size=284461 ] | pass2=[D145 size=284461 ] | gate=[D145  {'size': 284461, 'secs': 51, 'contig': True, 'rows': 58, 'math': 8442, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=4 skipped=0)
+GATELINE D160 | pass1=[D160 size=129294 ] | pass2=[D160 size=129294 ] | gate=[D160  {'size': 129294, 'secs': 24, 'contig': True, 'rows': 46, 'math': 3230, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D163 | pass1=[D163 size=123581 ] | pass2=[D163 size=123581 ] | gate=[D163  {'size': 123581, 'secs': 16, 'contig': True, 'rows': 55, 'math': 3242, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=2 skipped=0)
+GATELINE D165 | pass1=[D165 size=82337 ] | pass2=[D165 size=82337 ] | gate=[D165  {'size': 82337, 'secs': 17, 'contig': True, 'rows': 48, 'math': 1772, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=3 skipped=0)
+GATELINE D171 | pass1=[D171 size=71169 ] | pass2=[D171 size=71169 ] | gate=[D171  {'size': 71169, 'secs': 23, 'contig': True, 'rows': 39, 'math': 1962, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D196 | pass1=[D196 size=70617 ] | pass2=[D196 size=70617 ] | gate=[D196  {'size': 70617, 'secs': 18, 'contig': True, 'rows': 39, 'math': 1350, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D198 | pass1=[D198 size=70694 ] | pass2=[D198 size=70694 ] | gate=[D198  {'size': 70694, 'secs': 24, 'contig': True, 'rows': 36, 'math': 1774, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D212 | pass1=[D212 size=94862 ] | pass2=[D212 size=94862 ] | gate=[D212  {'size': 94862, 'secs': 21, 'contig': True, 'rows': 50, 'math': 2026, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=5 skipped=0)
+GATELINE D213 | pass1=[D213 size=70972 ] | pass2=[D213 size=70972 ] | gate=[D213  {'size': 70972, 'secs': 15, 'contig': True, 'rows': 59, 'math': 1760, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=4 skipped=0)
+GATELINE D214 | pass1=[D214 size=73185 ] | pass2=[D214 size=73185 ] | gate=[D214  {'size': 73185, 'secs': 19, 'contig': True, 'rows': 35, 'math': 1972, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D228 | pass1=[D228 size=74465 ] | pass2=[D228 size=74465 ] | gate=[D228  {'size': 74465, 'secs': 26, 'contig': True, 'rows': 56, 'math': 1790, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=5 skipped=0)
+GATELINE D264 | pass1=[D264 size=76488 ] | pass2=[D264 size=76488 ] | gate=[D264  {'size': 76488, 'secs': 28, 'contig': True, 'rows': 41, 'math': 2126, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=5 skipped=0)
+GATELINE D312 | pass1=[D312 size=71420 ] | pass2=[D312 size=71420 ] | gate=[D312  {'size': 71420, 'secs': 19, 'contig': True, 'rows': 53, 'math': 1568, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D333 | pass1=[D333 size=91942 ] | pass2=[D333 size=91942 ] | gate=[D333  {'size': 91942, 'secs': 16, 'contig': True, 'rows': 38, 'math': 2836, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D353 | pass1=[D353 size=71047 ] | pass2=[D353 size=71047 ] | gate=[D353  {'size': 71047, 'secs': 18, 'contig': True, 'rows': 43, 'math': 2188, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=19 skipped=0)
+GATELINE D362 | pass1=[D362 size=113550 ] | pass2=[D362 size=113550 ] | gate=[D362  {'size': 113550, 'secs': 21, 'contig': True, 'rows': 83, 'math': 2610, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D375 | pass1=[D375 size=75018 ] | pass2=[D375 size=75018 ] | gate=[D375  {'size': 75018, 'secs': 20, 'contig': True, 'rows': 50, 'math': 1822, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D389 | pass1=[D389 size=71536 ] | pass2=[D389 size=71536 ] | gate=[D389  {'size': 71536, 'secs': 15, 'contig': True, 'rows': 40, 'math': 1905, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=7 skipped=0)
+GATELINE D429 | pass1=[D429 size=130954 ] | pass2=[D429 size=130954 ] | gate=[D429  {'size': 130954, 'secs': 17, 'contig': True, 'rows': 51, 'math': 3814, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=8 skipped=0)
+GATELINE D492 | pass1=[D492 size=122115 ] | pass2=[D492 size=122115 ] | gate=[D492  {'size': 122115, 'secs': 26, 'contig': True, 'rows': 40, 'math': 3072, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D537 | pass1=[D537 size=82512 ] | pass2=[D537 size=82512 ] | gate=[D537  {'size': 82512, 'secs': 17, 'contig': True, 'rows': 41, 'math': 1398, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D560 | pass1=[D560 size=139285 ] | pass2=[D560 size=139285 ] | gate=[D560  {'size': 139285, 'secs': 22, 'contig': True, 'rows': 40, 'math': 3634, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D616 | pass1=[D616 size=85615 ] | pass2=[D616 size=85615 ] | gate=[D616  {'size': 85615, 'secs': 18, 'contig': True, 'rows': 49, 'math': 1494, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D694 | pass1=[D694 size=73808 ] | pass2=[D694 size=73808 ] | gate=[D694  {'size': 73808, 'secs': 25, 'contig': True, 'rows': 46, 'math': 1224, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=1 skipped=0)
+GATELINE D706 | pass1=[D706 size=70835 ] | pass2=[D706 size=70835 ] | gate=[D706  {'size': 70835, 'secs': 19, 'contig': True, 'rows': 40, 'math': 1436, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=5 skipped=0)
+GATELINE D750 | pass1=[D750 size=85690 ] | pass2=[D750 size=85690 ] | gate=[D750  {'size': 85690, 'secs': 24, 'contig': True, 'rows': 60, 'math': 2048, 'problems': []}]
+APPLIED -> exec_order_apply.txt  (groups=5 skipped=0)
+GATELINE D761 | pass1=[D761 size=85707 ] | pass2=[D761 size=85707 ] | gate=[D761  {'size': 85707, 'secs': 14, 'contig': True, 'rows': 54, 'math': 2198, 'problems': []}]

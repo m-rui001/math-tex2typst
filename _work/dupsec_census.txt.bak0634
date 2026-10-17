@@ -1,0 +1,38 @@
+notes_with_dup_or_nonmono=37
+D621 secs=27 uniq=19 dup=[9, 10, 11, 12, 13, 14, 16, 17] order_ok=False size=107627
+D627 secs=28 uniq=25 dup=[10, 11, 22] order_ok=False size=114363
+D262 secs=32 uniq=31 dup=[20] order_ok=True size=92625
+D265 secs=12 uniq=11 dup=[0] order_ok=True size=83306
+D319 secs=24 uniq=23 dup=[5] order_ok=True size=71368
+D392 secs=16 uniq=15 dup=[0] order_ok=True size=70757
+D77 secs=24 uniq=18 dup=[5] order_ok=True size=187446
+D94 secs=11 uniq=10 dup=[5] order_ok=True size=98303
+D51 secs=18 uniq=17 dup=[0] order_ok=False size=227443
+D79 secs=12 uniq=11 dup=[7] order_ok=False size=81783
+D87 secs=16 uniq=15 dup=[0] order_ok=False size=143853
+D188 secs=19 uniq=19 dup=[] order_ok=False size=93233
+D190 secs=22 uniq=22 dup=[] order_ok=False size=100136
+D196 secs=18 uniq=18 dup=[] order_ok=False size=70065
+D204 secs=13 uniq=13 dup=[] order_ok=False size=137915
+D236 secs=41 uniq=41 dup=[] order_ok=False size=101838
+D247 secs=25 uniq=25 dup=[] order_ok=False size=75239
+D259 secs=30 uniq=30 dup=[] order_ok=False size=80795
+D300 secs=19 uniq=19 dup=[] order_ok=False size=77024
+D304 secs=18 uniq=18 dup=[] order_ok=False size=70432
+D309 secs=39 uniq=39 dup=[] order_ok=False size=70452
+D313 secs=16 uniq=16 dup=[] order_ok=False size=80777
+D344 secs=14 uniq=14 dup=[] order_ok=False size=70138
+D357 secs=25 uniq=25 dup=[] order_ok=False size=70540
+D366 secs=16 uniq=16 dup=[] order_ok=False size=76758
+D370 secs=15 uniq=15 dup=[] order_ok=False size=76623
+D371 secs=18 uniq=18 dup=[] order_ok=False size=81092
+D372 secs=16 uniq=16 dup=[] order_ok=False size=70248
+D393 secs=22 uniq=22 dup=[] order_ok=False size=95919
+D551 secs=19 uniq=19 dup=[] order_ok=False size=76746
+D552 secs=20 uniq=20 dup=[] order_ok=False size=94851
+D620 secs=17 uniq=17 dup=[] order_ok=False size=70528
+D645 secs=27 uniq=27 dup=[] order_ok=False size=92765
+D646 secs=24 uniq=24 dup=[] order_ok=False size=72023
+D752 secs=23 uniq=23 dup=[] order_ok=False size=72492
+D766 secs=17 uniq=17 dup=[] order_ok=False size=109157
+D770 secs=23 uniq=23 dup=[] order_ok=False size=84621

@@ -1,0 +1,88 @@
+=== picture (8)
+  [A-rational-obstruction-to-strong-chromat]
+    \begin{tikzcd}[column sep=large] \mathscr{D}_C^{\mathrm{or}} \arrow[r,bend left=18,"\mathfrak{s}"] &\mathscr{D}_\Gamma^{\mathrm{or}} \arrow[l,bend left=18,"\mathfrak{f}"]
+  [An-Integral-Counterexample-to-Gerstens-C]
+    \begin{tikzcd}[column sep=large,row sep=large] \operatorname{Typ}(h)\arrow[r,"1"]\arrow[d,"1"']& \operatorname{Typ}(h)\arrow[d,"1"]
+    \operatorname{Typ}(h)\arrow[r,"1-g"']&\operatorname{Typ}(h), \end{tikzcd} \qquad h=g\text{ or }h=1.
+  [Global-quantum-geometric-Langlands-at-ir]
+    \begin{gathered} \begin{tikzcd}[ampersand replacement=\&,column sep=large,row sep=large] \mathcal{C} \arrow[r,"L"] \arrow[dr,"e_B(S')^\vee"'] \& A \arrow[d,"\Phi"]
+    \& B \end{tikzcd}
+    R\simeq(M')^\vee e_B^{-1}\Phi. \end{gathered}
+=== control sequence \vrule (5)
+  [Sharp-integral-fillings-in-CAT(0)-spaces]
+    \|C\mathbin{\vrule height 1.4ex depth -0.3ex width .07ex\vrule height .07ex depth 0ex width .7ex} E\|=\|C\|\mathbin{\vrule height 1.4ex depth -0.3ex width .07ex\vrule hei
+  [Sharp-integral-fillings-in-CAT(0)-spaces]
+    C\mathbin{\vrule height 1.4ex depth -0.3ex width .07ex\vrule height .07ex depth 0ex width .7ex}\{u>t\}
+  [Sharp-integral-fillings-in-CAT(0)-spaces]
+    C=C\mathbin{\vrule height 1.4ex depth -0.3ex width .07ex\vrule height .07ex depth 0ex width .7ex} E+C\mathbin{\vrule height 1.4ex depth -0.3ex width .07ex\vrule height .0
+=== "\\" (3)
+  [An-integral-scalar-curvature-bound-for-r]
+    \begin{aligned} p_z&=-\frac{\epsilon a(F_i^2+\delta^2)+(1-v^2)/2}{z^2} -\frac{\epsilon a+\beta}{N^2} \le-\frac{\epsilon a}{N^2} &&\text{in Case \text{(i)}},
+    p_z&=-\frac{eB}{w}\sec^2\bigl((f_0-ez)/w\bigr) \le-\frac{eB_{\min}}{w} &&\text{in Case \text{(ii)}}. \end{aligned}
+  [Finite-Monoid-Computations-and-a-Uniform]
+    \begin{array}{cl} i & \(A_i(t,q)\)
+    \hline 0 & \(q-t\in W_1\), or \(\mathcal{A}(t)\) and no main trial is perfectly predicted at these boundaries;
+    1 & some \(u_\lambda(t)\) changes under a shift of magnitude at most \(R_1\);
+    2 & \(q-t\in W_2\);
+    3 & some \([z_\lambda(t)-H,z_\lambda(t)+H]\) is markerless, but an inner marker lies among the next \(2R_2\) positions to its right;
+    4 & \(\eta(t)\) changes under a shift of magnitude at most \(w_E\). \end{array}
+  [Midpoint-lenses-in-segment-spaces-Septem]
+    \begin{array}{c|c|c} \text{assumed positive lower bound}& \text{error less than}&\text{growth factor}
+    \hline 0<d<\overline{\delta}_N(t_0)&\min(a/2,ad/2)&1+d/2\rule{0pt}{13pt}
+    2\varepsilon<\overline{\delta}_N(t_0)& \min(a/2,a\varepsilon/2)&1+\varepsilon/2
+    d=\overline{\delta}_N(t_0)>0&\min(a/2,ad/4)&1+d/4 \end{array}
+=== control sequence \boldone (3)
+  [Uniformization-of-complete-Kahler-manifo]
+    K^{-1},\qquad \boldone,\qquad T^{1,0}M\otimes K^{-1}.
+  [Uniformization-of-complete-Kahler-manifo]
+    \|\boldone_E\mathcal{H}_a\boldone_F\|_{2\to2} \le C\exp\bigl(-c\operatorname{dist}(E,F)^2/a\bigr).
+  [Uniformization-of-complete-Kahler-manifo]
+    |\Delta_{h_t}k_1|\le C e^\rho\delta_1^{-3} \boldone_{\{\chi_1=1\}}.
+=== control sequence \longhookrightarrowactual (2)
+  [Abundance-in-numerical-dimension-one-for]
+    B^1\longhookrightarrowactual F_*\Omega, \qquad (B^1)^!\longhookrightarrowactual F_*\omega_V.
+  [Blochs-Conjecture-for-Surfaces-with-pg-e]
+    h^1/h^0(T_{\mathrm{prod}}^\mathrm{vir}) \longhookrightarrowactual h^1/h^0(T_{U_b}^\mathrm{vir})
+=== control sequence \quadf (2)
+  [Finite-ordinary-minimal-model-programs-o]
+    L-(K_{f^{-1}U}+C_U)\quadf\text{-nef over }U.
+  [Finite-ordinary-minimal-model-programs-o]
+    L-(K_{f^{-1}U}+C_U)\quadf\text{-nef over }U.
+=== control sequence \bigr (2)
+  [Monochromatic-finite-sums-and-products-i]
+    R'_L(b) =\exp\bigl(-\lambda'_L\tbinom{b}{j} V\bigr) R_L(b) \exp\bigl(-m_L\tbinom{b}{j} V\bigr).
+  [Monochromatic-finite-sums-and-products-i]
+    R_L(b)= \exp\bigl(\lambda'_L\tbinom{b}{j} V\bigr) R'_L(b) \exp\bigl(m_L\tbinom{b}{j} V\bigr).
+=== control sequence \[ (1)
+  [Complex-Matrix-Multiplication-Below-2.25]
+    C=\begin{pmatrix}9D_0&3\sqrt{3}(D_1-D_2)
+    3\sqrt{3}(D_1-D_2)&-3D_0+6D_1+6D_2\end{pmatrix}. Writing \[ d=\frac{D_0+D_1+D_2}{3},\qquad f=\frac{D_0+\zeta D_1+\zeta^2D_2}{3}, \] the operator is \mathcal{L} u =36\bigl
+=== control sequence \quadp (1)
+  [Conditional-good-minimal-models-for-comp]
+    K_{\widetilde{Y}}+\widetilde{\Gamma} =p^*J_i+E,\qquad E\ge0\quadp\text{-exceptional}.
+=== control sequence \quadh (1)
+  [Finite-ordinary-minimal-model-programs-o]
+    L-(K_T+\Theta_U)\quadh\text{-ample}.
+=== control sequence \rule (1)
+  [Hellinger-contraction-with-arbitrary-Boo]
+    \begin{array}{c|c|c} \text{range of }m & \text{lower bound for }L(m) &\text{upper bound for }R(m,s)
+    \hline \rule{0pt}{22pt}(0,3/50] & \dfrac{220141}{265000}>\dfrac{4}{5} & \dfrac{10032241}{12775350}<\dfrac{4}{5}
+    [3/50,1/5]&\dfrac{3953}{6000}>\dfrac{16}{25} &\dfrac{4504}{7245}<\dfrac{16}{25}. \end{array}
+=== control sequence \quadu (1)
+  [Metric-descent-and-rank-preserving-contr]
+    K_{Y'}+\Delta'_m=u^*(K_Y+\Delta_m)+E_m,\qquad E_m\geq0\quadu\text{-exceptional}.
+=== "{" (1)
+  [The-critical-Liouville-quantum-sphere-an]
+    X_t\overset\mathrm{law}=tX_1
+=== control sequence \ref (1)
+  [The-PCP-for-PPAD-conjecture-a-quasilinea]
+    (\ref{ib:affine-expansion}.1)
+=== control sequence \quadQ (1)
+  [The-weak-pinned-planar-distance-theorem-]
+    a,b,a',b'\in\mathbb{C},\qquad a\ne a',\quad b\ne b', \qquad a'\in\operatorname{supp}\beta_1,\quad b'\in\operatorname{supp}\beta_2 \quadQ\text{-almost surely}.
+=== control sequence \quadq (1)
+  [Uniform-log-Iitaka-fibrations-and-bounde]
+    p^*(K_X+B)=q^*(K_{X'}+B')+E, \qquad E\geq0\quadq\text{-exceptional};
+=== "|" (1)
+  [Uniformization-of-complete-Kahler-manifo]
+    \begin{split} |p(W_b)-\partial_tN -\Delta_{h_t}\bigl(d_{0,j}+(1+s)k_1\bigr)\bigr| \le C'_j(1+B_j)^{c_3} (\delta_1\delta_2)^{-c_3}\boldone_{\{\chi_2=1\}}. \end{split}

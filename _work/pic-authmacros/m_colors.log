@@ -1,0 +1,172 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.26)  11 OCT 2026 10:44
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**m_colors.tex
+(./m_colors.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
+(d:/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(d:/texlive/2025/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+)
+(d:/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(d:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(d:/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+)
+(d:/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(d:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count283
+)
+No file m_colors.aux.
+\openout1 = `m_colors.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+(d:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count284
+\scratchdimen=\dimen149
+\scratchbox=\box53
+\nofMPsegments=\count285
+\nofMParguments=\count286
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count287
+\MPscratchDim=\dimen150
+\MPnumerator=\count288
+\makeMPintoPDFobject=\count289
+\everyMPtoPDFconversion=\toks18
+)
+COLOR:red=rgb/1,0,0
+COLOR:green=rgb/0,1,0
+COLOR:blue=rgb/0,0,1
+COLOR:cyan=cmyk/1,0,0,0
+COLOR:magenta=cmyk/0,1,0,0
+COLOR:yellow=cmyk/0,0,1,0
+COLOR:black=gray/0
+COLOR:white=gray/1
+COLOR:gray=gray/0.5
+
+! Package xcolor Error: Undefined color `grey'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ...lack}\probe{white}\probe{gray}\probe{grey}
+                                                  \probe{orange}\probe{purple}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+COLOR:grey=gray/0
+COLOR:orange=rgb/1,0.5,0
+COLOR:purple=rgb/0.75,0,0.25
+COLOR:violet=rgb/0.5,0,0.5
+COLOR:teal=rgb/0,0.5,0.5
+COLOR:olive=cmyk/0,0,1,0.5
+COLOR:lime=rgb/0.75,1,0
+COLOR:brown=rgb/0.75,0.5,0.25
+COLOR:pink=rgb/1,0.75,0.75
+COLOR:darkgray=gray/0.25
+COLOR:lightgray=gray/0.75
+
+! Package xcolor Error: Undefined color `darkgrey'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ...darkgray}\probe{lightgray}\probe{darkgrey}
+                                                  \probe{lightgrey}\probe{ol...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+COLOR:darkgrey=gray/0
+
+! Package xcolor Error: Undefined color `lightgrey'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ...ightgray}\probe{darkgrey}\probe{lightgrey}
+                                                  \probe{olive}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+COLOR:lightgrey=gray/0
+COLOR:olive=cmyk/0,0,1,0.5
+COLOR:red!60!black=rgb/0.6,0,0
+COLOR:orange!65!black=rgb/0.65,0.325,0
+COLOR:blue!60!black=rgb/0,0,0.6
+COLOR:cyan!28=cmyk/0.28,0,0,0
+COLOR:orange!35=rgb/1,0.825,0.65
+COLOR:cyan!28=cmyk/0.28,0,0,0
+COLOR:black!12=gray/0.88
+COLOR:black!45=gray/0.55
+COLOR:black!6=gray/0.94
+(./m_colors.aux)
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 1369 strings out of 467800
+ 20676 string characters out of 5436061
+ 427301 words of memory out of 5000000
+ 30075 multiletter control sequences out of 15000+600000
+ 626825 words of font info for 40 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,1n,49p,167b,37s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+No pages of output.
+PDF statistics:
+ 0 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

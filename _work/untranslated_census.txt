@@ -1,0 +1,12 @@
+notes=734 with_expect=3 total_expect_sites=9
+untranslated_kw_notes=110
+english_fragment_notes=2
+
+D452 expect=7
+D190 expect=1
+D249 expect=1
+
+---- sites (first 60) ----
+D190 L444 逐次用 `dyn:resolvent`（含其变化数据版本）与测度弱收敛，把它换成 $\mu$ 上同一表达式；由闭形式的半群--resolvent 关系这也是扩散 $B$ 的同一积分期望；另一方面在大时间盒外用 $\prod_j\|f_j\|_\infty$ 乘指数积的尾一致控制，弱路径收敛加固定时刻在连续路径上的连续性给出它是 $Q$ 的同一期望。乘积期望作为 $(t_1,\ldots,t_k)$ 的有界连续函数（含零间隔）多重 Laplace 变换唯一，逐坐标用一维唯一性再用连续性去掉几乎处处限定；乘积测试决定紧
+D249 L182 局域化引理 lem:amplification-local-products(第 42 到 235 行)是我最想整段背下的工程杰作。玩法:每个锚标号跑独立速率 1 的 Poisson 时钟,$[0,t]$ 上按发生顺序积 $G_i$ 得 $D$,只保留距 $S$ 不超 $r$ 的事件得 $D_{\rm ret}$,再把每个因子换成 $r$-截断版 $G_{i,r}$ 得 $L$。结论两条:截断替换的期望范数差 $\mathbb E\lVert D_{\rm ret}-L\rVert\le Ct|S|(1+r)^2e
+D452 L229 其六，未译残留类：正文尚存七处英文片段，位置与期望替换如下。第 43 行（§2）“realize 成动力学”期望作“实现为动力学”；第 71 行（§3）“domination”期望作“控制”；第 37 行与第 93 行“union bound”期望作“联合界估计”；第 138 行与第 147 行（§6，重复块两份各含一处）“trace”期望作“迹”，该两处将随其五申报的整块删重各消去一半；第 205 行台账行内“telescoping”期望作“望远求和”，第 207 行台账行内“finite”期望作“有限”；第 2

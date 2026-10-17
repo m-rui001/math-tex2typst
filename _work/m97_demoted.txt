@@ -1,0 +1,26 @@
+E:\math\_work\probe97_demoted.py:4: SyntaxWarning: invalid escape sequence '\/'
+  `\frac` pandoc linearized, while an author-typed slash arrives escaped (`\/`).  #93 shipped a
+canvas `"/"` sites: 286 over 125 papers
+   literal          sites=202    papers=99
+   frac-nobrace     sites=44     papers=23
+   no-source-match  sites=30     papers=25
+   frac             sites=10     papers=7
+
+samples where the source writes a fraction:
+   A-Gepner-stability-condition-on-every-smooth frac-nobrace   $4"/"5$
+   A-classification-of-finite-Euclidean-Ramsey- frac-nobrace   $1"/"t$
+   A-classification-of-finite-Euclidean-Ramsey- frac-nobrace   $t(1"/"t)=1$
+   A-counterexample-to-the-Monge-ansatz-for-the frac-nobrace   $1"/"3$
+   A-counterexample-to-the-Monge-ansatz-for-the frac-nobrace   $1"/"6$
+   A-counterexample-to-the-Monge-ansatz-for-the frac-nobrace   $1"/"6$
+   A-counterexample-to-the-Monge-ansatz-for-the frac-nobrace   $1"/"6$
+   A-counterexample-to-the-Monge-ansatz-for-the frac-nobrace   $1"/"6$
+   A-uniform-Hilbert-transform-estimate-for-Lip frac-nobrace   $tilde.op G^(-1"/"4)d(i)$
+   A-uniform-Hilbert-transform-estimate-for-Lip frac-nobrace   $ frac("QH"_j, w) =G^(1"/"4)$
+   Additive-hardness-and-unbounded-configuratio frac-nobrace   $[1"/"2,9"/"16)$
+   Almost-everywhere-Fourier-convergence-in-L-l frac-nobrace   $1"/"2$
+   Ambiently-homeomorphic-isolated-hypersurface frac-nobrace   $1"/"2$
+   An-explicit-exact-Hausdorff-gauge-for-SLE-Se frac-nobrace   $P(k+1"/"2,0)$
+   Bose-Einstein-condensation-at-positive-tempe frac-nobrace   $n"/"2$
+
+wrote E:\math\_work\m97_demoted.tsv

@@ -1,0 +1,74 @@
+[
+ {
+  "cid": "D192",
+  "line": 75,
+  "old": "\\tag{02\\02_scalar.tex:23-25}",
+  "new": "\\tag{02\\_scalar.tex:23-25}",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "body",
+  "cred": "02_scalar.tex:23-25＝eq:records；全库 236 处 \\tag{} 仅 5 处含反斜杠"
+ },
+ {
+  "cid": "D192",
+  "line": 144,
+  "old": "\\tag{02\\02_scalar.tex:294-296}",
+  "new": "\\tag{02\\_scalar.tex:294-296}",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "body",
+  "cred": "02_scalar.tex:294-296＝eq:annular；同上一单"
+ },
+ {
+  "cid": "D200",
+  "line": 227,
+  "old": "$00\\00_introduction.tex:187$",
+  "new": "`00_introduction.tex:187`",
+  "expect": 1,
+  "dollars": -2,
+  "ticks": 2,
+  "parity": true,
+  "level": "delim",
+  "cred": "00_introduction.tex:185-188 逐字 commuting pair (z,x)；本篇同行三处凭证都是行内代码"
+ },
+ {
+  "cid": "D200",
+  "line": 253,
+  "old": "$04\\04_analysis.tex:171$",
+  "new": "`04_analysis.tex:171`",
+  "expect": 1,
+  "dollars": -2,
+  "ticks": 2,
+  "parity": true,
+  "level": "delim",
+  "cred": "04_analysis.tex:169-172 逐字 nearest integer to n\\alpha"
+ },
+ {
+  "cid": "D133",
+  "line": 1087,
+  "old": "$\\begin{pmatrix}1&0\\1&1\\end{pmatrix}:$",
+  "new": "$\\begin{pmatrix}1&0\\\\1&1\\end{pmatrix}:$",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "code",
+  "cred": "03b-count.tex:80 逐字 1&0\\\\1&1；本篇 1105 行同矩阵的正确形"
+ },
+ {
+  "cid": "D114",
+  "line": 790,
+  "old": "`\\2\\E`",
+  "new": "`2\\E`",
+  "expect": 1,
+  "dollars": 0,
+  "ticks": 0,
+  "parity": true,
+  "level": "code",
+  "cred": "03-sampling.tex:305-311 展开的一次项＝2\\(q_C-1)，宏表无 \\2"
+ }
+]

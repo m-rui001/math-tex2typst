@@ -1,0 +1,4 @@
+   1  content: unexpected slash й░йд \\?\C:\Users\hp\AppData\Local\Temp\tmpe9
+          content((0, -0.609), [$Q_{/2}$])
+   1  content: named-argument syntax can only be used with functions й░йд \\?
+          content((4, 0.45), [$K=pi( x:D.E)$])

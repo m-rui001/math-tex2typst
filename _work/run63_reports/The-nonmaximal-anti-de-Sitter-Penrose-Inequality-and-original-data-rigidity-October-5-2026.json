@@ -1,0 +1,30 @@
+{
+  "paper": "The-nonmaximal-anti-de-Sitter-Penrose-Inequality-and-original-data-rigidity-October-5-2026",
+  "ok": true,
+  "typ_lines": 3858,
+  "included_pdf_pages": 0,
+  "formulas": 3764,
+  "math_failed": 0,
+  "labels": 602,
+  "equations": 0,
+  "theorems": 1,
+  "figures": 1,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 1
+  },
+  "samples": {
+    "formulas": "3764",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-nonmaximal-anti-de-Sitter-Penrose-Inequality-and-original-data-rigidity-October-5-2026.tex"
+}

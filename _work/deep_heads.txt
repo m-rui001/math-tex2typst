@@ -1,0 +1,15 @@
+== D535 bytes=71674 heads=12 lines=208
+   L127 ## 9 与最初设想的落差、遗留的缝隙与可搬走的构件
+   L143 ## 10 自检记录与勘误
+   L157 ## 11 台账
+   LASTLINE(89 chars): | $\varepsilon_0$ | 主定理扰动阈值,与区域无关 | sections/introduction.tex:81 | 主定理陈述 | 与近似无关的量词次序崩塌 |
+== D256 bytes=71529 heads=12 lines=190
+   L108 ## §9 勘误与文风自检
+   L119 ## §10 再咀嚼：几个我打算带回工具箱的构件
+   L141 ## §11 台账
+   LASTLINE(105 chars): | $\kappa(X,K_X)=1$ | 结论的 Kodaira 维数 | sections/introduction.tex:19-20 | §7 收尾与摘要 | 若 $\nu$ 假设松动则该等式无来源 |
+== D278 bytes=73000 heads=11 lines=265
+   L203 ## §8 附录审计：原子二字的落点与一次全文复盘
+   L213 ## §9 勘误与自检
+   L219 ## §10 台账：常数、界与去处
+   LASTLINE(91 chars): | $27\cdot21+4\cdot23=659$ | 行极小决策数 | build/main.tex:2264 | §8 证书规模与可复核声明 | 多胞形或胞表改动则计数即变 |

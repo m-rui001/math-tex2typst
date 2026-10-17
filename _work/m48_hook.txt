@@ -1,0 +1,2 @@
+hook spellings inside tikzcd arrows: 40 in 12 papers
+   hook                     40

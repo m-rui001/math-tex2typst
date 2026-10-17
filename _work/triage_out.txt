@@ -1,0 +1,85 @@
+total sites: 511
+=== undef tokens (count) ===
+\F	21	files=D145,D212,D214,D362,D389,D58,D81
+\d	16	files=D96
+\lem	13	files=D139,D317
+\OOo	12	files=D492
+\diff	5	files=D213
+\lc	5	files=D243
+\T	5	files=D71
+\root	4	files=D106
+\Csum	4	files=D137
+\du	4	files=D761
+\A	3	files=D214,D243
+\math	3	files=D238,D30
+\rangleG	3	files=D26
+\V	3	files=D295
+\G	3	files=D307,D385
+\two	3	files=D77
+\closedball	2	files=D125
+\asy	2	files=D131,D537
+\hsSq	2	files=D25
+\texttcaxe	2	files=D257
+\sr	2	files=D258
+\q	2	files=D278,D354
+\o	2	files=D384
+\ot	2	files=D44
+\At	2	files=D51
+\Ce	2	files=D59
+\dv	2	files=D761
+\Ec	1	files=D08
+\tabalign	1	files=D113
+\ldash	1	files=D124
+\lambdah	1	files=D125
+\ball	1	files=D125
+\DeclareMathOperator	1	files=D18
+\asypto	1	files=D198
+\m	1	files=D214
+\ltl	1	files=D216
+\ellr	1	files=D282
+\D	1	files=D30
+\K	1	files=D302
+\j	1	files=D327
+\M	1	files=D329
+\ldim	1	files=D44
+\w	1	files=D45
+\stEnd	1	files=D45
+\stHom	1	files=D45
+\wide	1	files=D457
+\Zd	1	files=D484
+\textrewol	1	files=D492
+\ar	1	files=D520
+\cr	1	files=D523
+\alphah	1	files=D560
+\setu	1	files=D57
+\+	1	files=D62
+\Zmod	1	files=D63
+\g	1	files=D630
+\joinrel	1	files=D77
+\eqno	1	files=D85
+
+=== other classes (count) ===
+101	KaTeX parse error: Can't use function '$' in math mode 	files=63
+97	KaTeX parse error: Unexpected end of input in a macro argu	files=32
+30	KaTeX parse error: Expected group as argument to '\H' 	files=1
+26	KaTeX parse error: Expected 'EOF', got '}' 	files=19
+12	KaTeX parse error: No such environment: psmallmatrix 	files=4
+10	KaTeX parse error: Expected '}', got 'EOF' at end of input	files=9
+9	KaTeX parse error: Extra } 	files=4
+7	KaTeX parse error: Expected group after '_' 	files=6
+7	KaTeX parse error: Double subscript 	files=6
+6	KaTeX parse error: Can't use function '\(' in math mode 	files=5
+6	KaTeX parse error: Double superscript 	files=5
+5	KaTeX parse error: Expected 'EOF', got '\right' 	files=4
+5	KaTeX parse error: Expected group after '^' 	files=4
+3	KaTeX parse error: Got function '\H' with no arguments as 	files=1
+2	KaTeX parse error: Can't use function '$' in math mode 
+
+(	files=2
+2	KaTeX parse error: Can't use function '\mathbf' in text mo	files=1
+2	KaTeX parse error: Expected & or \\ or \cr or \end at end 	files=2
+Traceback (most recent call last):
+  File "E:\math\_work\triage_probe.py", line 34, in <module>
+    print("%d\t%s\tfiles=%d" % (len(ss), c, len(files)))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\u0332' in position 55: illegal multibyte sequence

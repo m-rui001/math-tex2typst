@@ -1,0 +1,11 @@
+\documentclass[tikz,border=0pt]{standalone}
+\begin{document}
+\begin{tikzpicture}
+\pgfmathparse{tanh(-2.97)}\typeout{MEASURE tanh(-2.97) = \pgfmathresult}
+\pgfmathparse{tanh(1)}\typeout{MEASURE tanh(1) = \pgfmathresult}
+\pgfmathparse{tanh(2.97)}\typeout{MEASURE tanh(2.97) = \pgfmathresult}
+\pgfmathparse{tanh(1.35*-2.2)}\typeout{MEASURE tanh(1.35*-2.2) = \pgfmathresult}
+\pgfmathparse{tan(-2.97)}\typeout{MEASURE tan(-2.97) = \pgfmathresult}
+\pgfmathparse{0.23*tanh(-2.97)}\typeout{MEASURE 0.23*tanh(-2.97) = \pgfmathresult}
+\end{tikzpicture}
+\end{document}

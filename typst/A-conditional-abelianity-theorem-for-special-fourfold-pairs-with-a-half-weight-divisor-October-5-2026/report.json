@@ -1,0 +1,30 @@
+{
+  "paper": "A-conditional-abelianity-theorem-for-special-fourfold-pairs-with-a-half-weight-divisor-October-5-2026",
+  "ok": true,
+  "typ_lines": 362,
+  "included_pdf_pages": 0,
+  "formulas": 262,
+  "math_failed": 0,
+  "labels": 41,
+  "equations": 0,
+  "theorems": 3,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "262"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "amscd"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\A-conditional-abelianity-theorem-for-special-fourfold-pairs-with-a-half-weight-divisor-October-5-2026.tex"
+}

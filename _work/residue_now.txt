@@ -1,0 +1,74 @@
+files with residue: 87 ; occurrences: 1896
+zones: {'math': 1655, 'markup': 218, 'code': 23}
+   167  \arrow            
+          A-rational-obstruction:$ "(2.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n C_{\\mathrm{cts}}^{\\bullet}(G,\\Lambda_m)\n     \\arrow[r,\"u_{
+          A-rational-obstruction:$ "(3.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n \\mathscr{D}_C^{\\mathrm{or}}\n    \\arrow[r,bend left=18,\"\\ma
+          A-rational-obstruction:$ "(6.1)" quad "\n\n\\begin{tikzcd}[column sep=large,row sep=large]\n H^i(H,W(k)) \\arrow[r,\"\\sim\"] \\arrow[d]\n   & 
+    78  \mathcal          
+          A-rational-obstruction:$ "(6.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n C_{\\mathrm{cts}}(G^a,\\Lambda_m)[0]\n    \\arrow[r,\"u^a_{\\wid
+          A-rational-obstruction:$ "(6.8)" quad "\n\n\\begin{tikzcd}[column sep=large]\n C_{\\mathrm{cts}}^{\\bullet}(G,\\Lambda_m)\n      \\arrow[r,\"\\
+          All-temperature-pressu:$ "(6.5)" quad "\n\n \\mathbb{R}^{N+n}\n =\\MathActualText{2A01005F00610020211B005F00610020002800640069006D0020003D00200
+    77  \begin            
+          A-Direct-Proof-of-Opti:$ "\\begin{aligned}\n \\textnormal{YES:}\\quad&\\operatorname{Val}\\ge\\frac{1+t}{2}-\\varepsilon,\\\\\n \\textnormal{NO
+          A-rational-obstruction:$ "(2.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n C_{\\mathrm{cts}}^{\\bullet}(G,\\Lambda_m)\n     \\arrow[r,\"u_{
+          A-rational-obstruction:$ "(3.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n \\mathscr{D}_C^{\\mathrm{or}}\n    \\arrow[r,bend left=18,\"\\ma
+    77  \end              
+          A-Direct-Proof-of-Opti:$ "\\begin{aligned}\n \\textnormal{YES:}\\quad&\\operatorname{Val}\\ge\\frac{1+t}{2}-\\varepsilon,\\\\\n \\textnormal{NO
+          A-rational-obstruction:$ "(2.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n C_{\\mathrm{cts}}^{\\bullet}(G,\\Lambda_m)\n     \\arrow[r,\"u_{
+          A-rational-obstruction:$ "(3.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n \\mathscr{D}_C^{\\mathrm{or}}\n    \\arrow[r,bend left=18,\"\\ma
+    71  \text             
+          A-spectral-gap-through:$ "(8.8)" quad "\\begin{aligned}\n \\max_{i,j}|J_{ij}|\\le n^{-1/4},\\qquad\n \\|J\\|,\\|U\\|,\\|Q\\|\\le M,\\qquad\n r_
+          A-Torsion-Free-Group-A:$ "\\operatorname{Pr}(\\text{this enlarged pattern is realized})\n \\le\\min_j\\operatorname{E}X_j\n \\le\\min_j B_j\n \
+          A-Torsion-Free-Group-A:$ "\\operatorname{diam}(\\Lambda)\\le dL\n \\quad\\text{for every connected component }\\Lambda\\text{ of }\\Gamma\n }" 
+    62  \emph             
+          Commuting-Division-Coe:\\emph\{On the Eisenbud--Green--Harris conjecture\},
+          Commuting-Division-Coe:\\emph\{Quadratic Ideals in Six Variables and the Eisenbud--Green--Harris
+          Commuting-Division-Coe:\\emph\{Godeaux--Serre varieties and the \\'etale index\},
+    59  \href             
+          Commuting-Division-Coe:\\href\{https://arxiv.org/abs/1212.2653\}\{arXiv:1212.2653\}.]
+          Commuting-Division-Coe:\\href\{https://arxiv.org/abs/2607.20035v1\}\{arXiv:2607.20035v1\},
+          Commuting-Division-Coe:\\href\{https://doi.org/10.1017/is013003003jkt220\}\{doi:10.1017/is013003003jkt220\}.
+    52  \le               
+          A-Direct-Proof-of-Opti:$ "\\begin{aligned}\n \\textnormal{YES:}\\quad&\\operatorname{Val}\\ge\\frac{1+t}{2}-\\varepsilon,\\\\\n \\textnormal{NO
+          A-spectral-gap-through:$ "(8.8)" quad "\\begin{aligned}\n \\max_{i,j}|J_{ij}|\\le n^{-1/4},\\qquad\n \\|J\\|,\\|U\\|,\\|Q\\|\\le M,\\qquad\n r_
+          A-Torsion-Free-Group-A:Let $B_j$ be the product of the right-hand sides of (3.10) and (3.11). Thus $ "\\operatorname{E}X_j\\le B_j" $. Multiply
+    51  \mathrm           
+          A-rational-obstruction:$ "(2.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n C_{\\mathrm{cts}}^{\\bullet}(G,\\Lambda_m)\n     \\arrow[r,\"u_{
+          A-rational-obstruction:$ "(3.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n \\mathscr{D}_C^{\\mathrm{or}}\n    \\arrow[r,bend left=18,\"\\ma
+          A-rational-obstruction:$ "(6.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n C_{\\mathrm{cts}}(G^a,\\Lambda_m)[0]\n    \\arrow[r,\"u^a_{\\wid
+    50  \qquad            
+          A-rational-obstruction:$ "(3.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n \\mathscr{D}_C^{\\mathrm{or}}\n    \\arrow[r,bend left=18,\"\\ma
+          A-spectral-gap-through:$ "(8.8)" quad "\\begin{aligned}\n \\max_{i,j}|J_{ij}|\\le n^{-1/4},\\qquad\n \\|J\\|,\\|U\\|,\\|Q\\|\\le M,\\qquad\n r_
+          Abundance-in-numerical:$ "(5.14)" quad "\n\n B^1\\longhookrightarrowactual F_*\\Omega,\n \\qquad\n (B^1)^!\\longhookrightarrowactual F_*\\omega
+    41  \textbf           
+          Commuting-Division-Coe:Proc. Amer. Math. Soc. \\textbf\{143\} (2015), no.~1, 105--115.
+          Commuting-Division-Coe:J. K-Theory \\textbf\{11\} (2013), no.~2, 283--295.
+          Commuting-Division-Coe:Bull. Amer. Math. Soc. \\textbf\{65\} (1959), 276--281.
+    41  \tau              
+          The-higher-dimensional:$ "\\sum_\\tau w_1(\\tau)\n \\le |X\\cap L_1|\\,|Y\\cap L'_1|\\le H^2,\n \\qquad w_2(\\tau)\\le H." $
+          The-PCP-for-PPAD-conje:retains precisely those frequencies with $nu_i = b$. For each $a in H$, decompose $underline(a^(- 1) nu) < tau$ into at 
+          The-PCP-for-PPAD-conje:The partial target at cutoff $ "\\tau" $ is $Y_tau = E_(upright(o u t)) \( P_tau v \)$. Compare it with the completed cu
+    40  \Gamma            
+          A-rational-obstruction:$ "(2.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n C_{\\mathrm{cts}}^{\\bullet}(G,\\Lambda_m)\n     \\arrow[r,\"u_{
+          A-rational-obstruction:$ "(3.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n \\mathscr{D}_C^{\\mathrm{or}}\n    \\arrow[r,bend left=18,\"\\ma
+          A-rational-obstruction:$ "(6.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n C_{\\mathrm{cts}}(G^a,\\Lambda_m)[0]\n    \\arrow[r,\"u^a_{\\wid
+    38  \omega            
+          A-rational-obstruction:$ "(6.4)" quad "\n\n\\begin{tikzcd}[column sep=large]\n C_{\\mathrm{cts}}(G^a,\\Lambda_m)[0]\n    \\arrow[r,\"u^a_{\\wid
+          Abundance-in-numerical:$ "(5.14)" quad "\n\n B^1\\longhookrightarrowactual F_*\\Omega,\n \\qquad\n (B^1)^!\\longhookrightarrowactual F_*\\omega
+          Conditional-good-minim:The canonical object on a normal space $X$ is its reflexive canonical sheaf $ "\\omega_X" $. For an effective rational W
+    36  \operatorname     
+          A-Direct-Proof-of-Opti:$ "\\begin{aligned}\n \\textnormal{YES:}\\quad&\\operatorname{Val}\\ge\\frac{1+t}{2}-\\varepsilon,\\\\\n \\textnormal{NO
+          A-Torsion-Free-Group-A:Let $B_j$ be the product of the right-hand sides of (3.10) and (3.11). Thus $ "\\operatorname{E}X_j\\le B_j" $. Multiply
+          A-Torsion-Free-Group-A:$ "\\operatorname{Pr}(\\text{this enlarged pattern is realized})\n \\le\\min_j\\operatorname{E}X_j\n \\le\\min_j B_j\n \
+    35  \@l               
+          Random-coordinate-fram:The degree assertions follow from [22] Theorem nameusecompanion\@l:degree-all-powers. The same companion gives separate 
+          Random-coordinate-fram:For $v in V_rho$, write $v_i = Q_i v$ and $W_i = "span" { rho \( h \) v_i : h in H_i }$. The single-vector orbit lemma [
+          Random-coordinate-fram:Its transform is the projection $P_(sigma \, H \, tau)$ onto all copies of $tau$ in $sigma \|_H$. Thus $accent(f * e_(H 
+    31  \sum              
+          Routing-densities-and-:$ "\\begin{aligned}\n \\sigma\\le\\max_W\\{&\\sigma_0+\\sigma_1+4\\log M\n      -(\\mathcal{L}-\\mathcal{L}_0-\\mathcal{
+          The-higher-dimensional:Appendix 8 proves concentration bounds for these evaluation flats, both in the full skew-form space and inside one fixed
+          The-higher-dimensional:$ "\\sum_i\\left(\\sum_\\alpha c_{i,\\alpha}t^\\alpha\\right)\n                m_i|_{\\text{generic fiber}}=0." $
+    27  \overline         
+          Midpoint-lenses-in-seg:$ "\\begin{array}{c|c|c}\n \\text{assumed positive lower bound}&\n \\text{error less than}&\\text{growth factor}\\\\\\hl
+          The-higher-dimensional:Such an $R$ has specializations to algebraically closed fields of arbitrarily large positive characteristic. Here is the
+          The-higher-dimensional:$ "(\\ref*{geo:secants)" quad "\\overline{T_pX}\\subseteq\\overline{T_qY}\n \\quad\\text{in }\\mathbb{C}^d/\\mathbb{C}(q

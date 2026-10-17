@@ -1,0 +1,96 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+
+== ratio-digits   TeX $1/2$
+   CONTROL               1/2            [0.0, 0.0]
+   lines on the control page: 1
+   today      !=   lines=2 1              [] | 2              []
+   str        ==   lines=1 1/2            [0.0, 0.0]   max|dgap| 0.000
+   str-sp     ==   lines=1 1/2            [3.32, 3.32]   max|dgap| 3.320
+   sym        ==   lines=1 1/2            [0.0, 0.0]   max|dgap| 0.000
+
+== ratio-script   TeX $b_3/4$
+   CONTROL               b3/4           [0.0, 0.49, 0.0]
+   lines on the control page: 1
+   today      !=   lines=2 b3             [0.0] | 4              []
+   str        ==   lines=1 b3/4           [0.0, 0.56, 0.0]   max|dgap| 0.065
+   str-sp     ==   lines=1 b3/4           [0.0, 3.88, 3.32]   max|dgap| 3.385
+
+== ratio-letters   TeX $A/k$
+   CONTROL               A/k            [0.0, 0.0]
+   lines on the control page: 1
+   today      !=   lines=2 A              [] | k              []
+   str        ==   lines=1 A/k            [0.0, 0.0]   max|dgap| 0.000
+   str-sp     ==   lines=1 A/k            [3.32, 3.32]   max|dgap| 3.320
+
+== ratio-group   TeX $\mathbb{Z}^2\times\mathbb{Z}/\mathbb{Q}$
+   CONTROL               Z2×Z/Q         [0.71, 2.71, 2.21, 0.16, 0.0]
+   lines on the control page: 1
+   today      !=   lines=2 Z2×Z           [0.0, 2.78, 3.61] | Q              []
+   str        ==   lines=1 Z2×Z/Q         [0.0, 2.78, 2.22, 0.0, 0.0]   max|dgap| 0.708
+
+== ratio-long-tail   TeX $R^2/d_{ij}^{\,2}$
+   CONTROL               R2/d2          [0.09, 0.49, 0.0, 1.36] | ij             [0.0]
+   lines on the control page: 2
+   today      !=   lines=3 R2             [0.11] | d2             [0.89] | ij             [0.0]
+   str        ==   lines=2 R2/d2          [0.24, 0.56, 0.0, 1.41] | ij             [0.0]   max|dgap| 0.153
+
+== ratio-exp   TeX $G^{-1/4}$
+   CONTROL               G−1/4          [0.0, 0.0, 0.0, 0.0]
+   lines on the control page: 1
+   today      !=   lines=2 G−1            [0.0, 0.7] | 4              []
+   str        ==   lines=1 G−1/4          [0.0, 0.0, 0.0, 0.0]   max|dgap| 0.001
+
+== star-slash   TeX $L_*/3$
+   CONTROL               L∗/3           [-0.0, 0.5, 0.0]
+   lines on the control page: 1
+   today      FAILED   ['\\\\?\\E:\\math\\_work\\_m93fid\\star-slash-today.typ:2:23: error: unexpected end of block comment']
+   str        ==   lines=1 L∗/3           [0.0, 0.56, 0.0]   max|dgap| 0.060
+   str-sp     ==   lines=1 L∗/3           [0.0, 3.88, 3.32]   max|dgap| 3.380
+
+== leading-slash   TeX $x=/b$
+   CONTROL               x=/b           [2.77, 2.77, 0.0]
+   lines on the control page: 1
+   today      !=   lines=2 x=             [1.0] | b              []
+   str        ==   lines=1 x=/b           [2.78, 2.78, 0.0]   max|dgap| 0.008
+   str-sp     ==   lines=1 x=/b           [2.78, 2.78, 3.32]   max|dgap| 3.320
+
+== frac-control   TeX $\frac{QH_j}{w}=G^{1/4}$
+   CONTROL               QHj            [-0.0, -0.01] | =G1/4          [2.77, -0.0, 0.0, 0.0] | w              []
+   lines on the control page: 3
+   stacked    !=   lines=3 QHj            [0.0, 0.0] | w=G1/4         [7.9, 2.78, 0.0, 0.0, 0.0] |                []
+   today      !=   lines=5 QHj            [0.0, 0.0] | 1              [] | w=G            [7.9, 2.78] |                [] | 4              []
+
+== emit-greek   TeX $\beta/4$
+   CONTROL               β/4            [0.53, 0.0]
+   lines on the control page: 1
+   emit       ==   lines=1 β/4            [0.36, 0.0]   max|dgap| 0.168
+
+== emit-pi   TeX $\pi/2$
+   CONTROL               π/2            [0.36, 0.0]
+   lines on the control page: 1
+   emit       ==   lines=1 π/2            [0.25, 0.0]   max|dgap| 0.109
+
+== emit-quoted-word   TeX $Lr/8$
+   CONTROL               Lr/8           [0.0, 0.28, 0.0]
+   lines on the control page: 1
+   emit       ==   lines=1 Lr/8           [0.0, 0.0, 0.0]   max|dgap| 0.279
+
+== emit-quoted-ks   TeX $f_i(s)=(-ks/2)_+$
+   CONTROL               fi(s)=(−ks/2)+ [0.0, 0.5, 0.0, 0.0, 2.77, 2.77, -0.01, 0.0, 0.32, 0.0, 0.0, 0.0, -0.02]
+   lines on the control page: 1
+   emit       ==   lines=1 fi(s)=(−ks/2)+ [0.0, 0.0, 0.0, 0.0, 3.34, 2.78, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]   max|dgap| 0.568
+
+== emit-sqrt-left   TeX $\sqrt{\gamma}/2$
+   CONTROL               √γ/2           [0.0, 0.56, 0.0]
+   lines on the control page: 1
+   emit       ==   lines=1 √γ/2           [-0.0, 0.53, 0.0]   max|dgap| 0.028
+
+== emit-paren-right   TeX $\ell/(2s)$
+   CONTROL               l/(2s)         [0.0, 0.0, 0.0, 0.0, 0.0]
+   lines on the control page: 1
+   emit       ==   lines=1 l/(2s)         [0.09, 0.0, 0.0, 0.0, 0.0]   max|dgap| 0.090
+
+== emit-mathbb-right   TeX $H/\mathbb{Z}H$
+   CONTROL               H/ZH           [0.26, -0.56, 0.72]
+   lines on the control page: 1
+   emit       ==   lines=1 H/ZH           [0.78, 0.0, 0.0]   max|dgap| 0.717

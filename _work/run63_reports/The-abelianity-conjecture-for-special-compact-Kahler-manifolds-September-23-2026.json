@@ -1,0 +1,34 @@
+{
+  "paper": "The-abelianity-conjecture-for-special-compact-Kahler-manifolds-September-23-2026",
+  "ok": true,
+  "typ_lines": 1055,
+  "included_pdf_pages": 0,
+  "formulas": 946,
+  "math_failed": 0,
+  "labels": 125,
+  "equations": 47,
+  "theorems": 3,
+  "figures": 1,
+  "tables": 1,
+  "stats": {
+    "formulas": 1,
+    "unhandled_div_class:samepage": 1
+  },
+  "samples": {
+    "formulas": "946"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "ragged2e"
+  ],
+  "macros_skipped": [
+    "\\providecommand\\DoNotLoadEpstopdf",
+    "\\renewcommand\\@maketitle"
+  ],
+  "compile_ok": true,
+  "compile_err_full": "warning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\The-abelianity-conjecture-for-special-compact-Kahler-manifolds-September-23-2026\\main.typ:972:258\n    │\n972 │ Consider all finite covers just described and their good Albanese fibres $S$. For each connected meromorphic fibration $S arrow.r.dashed T$, let $C$ be the image in the corresponding Albanese fibre group $N$ of a resolved general fibration fibre. Then $C lt.tri N$. Among these fibrations for which $N \\/ C$ is infinite, minimize $dim T$, and denote the minimum by $ell$. The identity fibration is admissible because $N$ is infinite; the fibration to a point is not. Hence\n    │                                                                                                                                                                                                                                                                   ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\The-abelianity-conjecture-for-special-compact-Kahler-manifolds-September-23-2026\\main.typ:979:285\n    │\n979 │   #emph[After a further connected finite étale cover, there is a fibration $c : X arrow.r.dashed Z$ over the Albanese torus $A$, with connected general fibres and relative base dimension $ell$. If $B_0$ is the actual image of a general $c$-fibre group, then $B_0 subset.eq N$, $B_0 lt.tri G$, and $Q = N \\/ B_0$ is infinite.]\n    │                                                                                                                                                                                                                                                                                              ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n    ┌─ \\\\?\\E:\\math\\typst\\The-abelianity-conjecture-for-special-compact-Kahler-manifolds-September-23-2026\\main.typ:990:81\n    │\n990 │   Choose a cover, a good fibre $S$, and a fibration attaining $ell$. Write $C lt.tri N$ for its fibre-group image. The general fibration fibres give compact irreducible cycles of dimension $dim S - ell$, after taking their images in $X$. Choose one through a point of the fibration’s general locus in $S$ outside all the nondominant evaluation images prepared above. Choose a family from the list, with $p : W arrow.r T$ and $e : W arrow.r X$, containing this member. Its compact evaluation must dominate $X$, and hence is surjective.\n    │                                                                                  ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\The-abelianity-conjecture-for-special-compact-Kahler-manifolds-September-23-2026\\main.typ:1017:216\n     │\n1017 │   Choose this cover before choosing a further quotient. For every surjection $psi : Q' arrow.r.twohead P$ with $P$ infinite, the $Gamma$-reduction of $psi compose nu'$ on $S'$ has resolved general fibre image $C' lt.tri N'$ with finite image in $P$. If $N' \\/ C'$ were finite, the whole image in $P$ would be a finite union of translates of that finite image, which is impossible. The reduction is therefore an admissible fibration in the minimum, and its dimension is at least $ell$. This one cover works for every infinite quotient of $Q'$, as required by (M). The prepared model was arbitrary; repeating the choice of a very general good $S$ on each model proves the assertion on every prepared model. ◻\n     │                                                                                                                                                                                                                         ^^^\n\nwarning: `lt.tri` is deprecated, use `lt.closed` instead\n     ┌─ \\\\?\\E:\\math\\typst\\The-abelianity-conjecture-for-special-compact-Kahler-manifolds-September-23-2026\\main.typ:1034:499\n     │\n1034 │ Take the Stein factorization $c' : X' arrow.r.dashed Z'$ of the old map $c$ after this cover. A connected $",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 6,
+  "source": "E:\\math\\_work\\flat\\The-abelianity-conjecture-for-special-compact-Kahler-manifolds-September-23-2026.tex"
+}

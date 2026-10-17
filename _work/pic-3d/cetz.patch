@@ -1,0 +1,26 @@
+--- a/t2t/cetz.py
++++ b/t2t/cetz.py
+@@ -357,7 +357,11 @@
+     return ["stroke: (%s)" % ", ".join(parts)] if parts else []
+ 
+ 
+-ANCHORED = re.compile(r"([-\w]+)(?:\s*\.\s*[-\w ]+)?")
++# a node's name is whatever stands inside the parentheses, and pgf reads the whole token: measured
++# against pdflatex (_work/pic-3d/measure_names.py), a `\coordinate (qf axes)` drawn from by
++# `(qf axes)--(3,2)` lands on exactly the same line as the un-spaced spelling, so a space inside a
++# name is part of the name and not a separator
++ANCHORED = re.compile(r"([-\w](?:[-\w ]*[-\w])?)(?:\s*\.\s*[-\w ]+)?")
+ NODE_DEF = re.compile(r"\\(?:node|coordinate)\b\s*")
+ # positioning-library syntax: 'below=2cm of a', 'below of=a'
+ POSITIONED = re.compile(r"\bof\b\s*=?\s*[-\w]")
+@@ -1622,7 +1626,9 @@
+     """
+     rest = rest.lstrip()
+     name = None
+-    m = re.match(r"\(([-\w]+)\)\s*", rest)
++    # the same reading as ANCHORED: pgf takes the whole parenthesised token as the name, spaces
++    # included, so a figure that names its points `qf axes` has to have those names registered
++    m = re.match(r"\(([-\w](?:[-\w ]*[-\w])?)\)\s*", rest)
+     if m:
+         name, rest = m.group(1), rest[m.end():].lstrip()
+     if not rest.startswith("at"):

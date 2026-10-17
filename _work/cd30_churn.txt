@@ -1,0 +1,12 @@
+== CD canvases built: 126 over 56 papers (old rule: 126 over 56)
+   canvases whose text changes: 98
+   papers to regenerate       : 48
+   wrote regen_needed.txt
+     A-Complete-Local-Domain-Without-a-Small-Cohen-Macaulay-Modul
+     A-counterexample-to-Tachikawas-second-conjecture-September-2
+     A-rational-obstruction-to-strong-chromatic-splitting-at-heig
+     Abundance-in-numerical-dimension-one-for-terminal-threefolds
+     An-Integral-Counterexample-to-Gerstens-Conjecture-September-
+     Anticanonical-nonvanishing-from-smooth-semipositivity-Septem
+     B-semiampleness-for-compact-log-smooth-Kahler-fibrations-Sep
+     Bounded-anticanonical-metrics-on-klt-pairs-and-torus-quotien

@@ -1,0 +1,13 @@
+D24 split=1 lines=['707:3']
+D28 split=2 lines=['1167:9', '1177:7']
+D30 split=1 lines=['805:15']
+D32 split=4 lines=['655:5', '663:13', '677:3', '684:5']
+D34 split=1 lines=['571:6']
+D36 split=1 lines=['604:18']
+D37 split=1 lines=['1487:3']
+D44 split=1 lines=['451:12']
+D50 split=1 lines=['439:14']
+D53 headerless=1 lines=['512:28']
+D65 split=2 lines=['343:5', '349:3']
+D68 split=2 lines=['1348:22', '1371:17']
+headed=830 headerless=1 headerless_files=1 split=17 split_files=11

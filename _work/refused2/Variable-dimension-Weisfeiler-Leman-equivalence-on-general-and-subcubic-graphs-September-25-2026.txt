@@ -1,0 +1,8 @@
+REFUSED []
+  raw:      \textnormal{\textsc{Subcubic-WL-Equiv}}
+  cleaned:  \text{\text{Subcubic-WL-Equiv}}
+  warn: [WARNING] Could not convert TeX math \text{\text{Subcubic-WL-Equiv}}, rendering as TeX: \text{\text{Subcubic-WL-Equiv}} ^ unexpected "\\" expecting "}", text, "{", "$", "$$", "\\(" or "\\["
+REFUSED []
+  raw:      \textnormal{\textsc{WL-Equiv}}
+  cleaned:  \text{\text{WL-Equiv}}
+  warn: [WARNING] Could not convert TeX math \text{\text{WL-Equiv}}, rendering as TeX: \text{\text{WL-Equiv}} ^ unexpected "\\" expecting "}", text, "{", "$", "$$", "\\(" or "\\["

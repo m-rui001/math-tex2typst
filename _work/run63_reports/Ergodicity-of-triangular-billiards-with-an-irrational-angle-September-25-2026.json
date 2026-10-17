@@ -1,0 +1,28 @@
+{
+  "paper": "Ergodicity-of-triangular-billiards-with-an-irrational-angle-September-25-2026",
+  "ok": true,
+  "typ_lines": 286,
+  "included_pdf_pages": 0,
+  "formulas": 225,
+  "math_failed": 0,
+  "labels": 34,
+  "equations": 20,
+  "theorems": 7,
+  "figures": 0,
+  "tables": 0,
+  "stats": {
+    "formulas": 1
+  },
+  "samples": {
+    "formulas": "225"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Ergodicity-of-triangular-billiards-with-an-irrational-angle-September-25-2026.tex"
+}

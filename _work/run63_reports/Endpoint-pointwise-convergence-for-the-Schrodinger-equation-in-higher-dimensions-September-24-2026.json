@@ -1,0 +1,32 @@
+{
+  "paper": "Endpoint-pointwise-convergence-for-the-Schrodinger-equation-in-higher-dimensions-September-24-2026",
+  "ok": true,
+  "typ_lines": 2236,
+  "included_pdf_pages": 0,
+  "formulas": 2365,
+  "math_failed": 0,
+  "labels": 331,
+  "equations": 16,
+  "theorems": 5,
+  "figures": 2,
+  "tables": 0,
+  "stats": {
+    "formulas": 1,
+    "cetz_converted": 2
+  },
+  "samples": {
+    "formulas": "2365",
+    "cetz_converted": "1"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": true,
+  "compile_err_full": "",
+  "compile_errors": 0,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Endpoint-pointwise-convergence-for-the-Schrodinger-equation-in-higher-dimensions-September-24-2026.tex"
+}

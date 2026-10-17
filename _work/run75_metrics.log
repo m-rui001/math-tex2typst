@@ -1,0 +1,19 @@
+== run75 23:11 ==
+rows: 724
+  cetz_converted            1002 over 559 papers
+  cetz_refused                27 over  26 papers
+  cetz_split                   9 over   7 papers
+  figure_content_unhandled     0 over   0 papers
+  empty figures               13 over   9 papers
+  quoted pictures             27  (refused pictures shown as source)
+
+most refused in one paper:
+files with residue: 0 ; occurrences: 0
+quoted LaTeX on the page: 27 blocks over 26 papers
+zones: {}
+papers scanned: 724 ; compiled: 724
+dangling_ref: 17 occurrences over 12 papers
+       4  Uniform-marked-polygon-estimates-and-sharp-f  fig:strip-double-row
+       2  The-Kervaire-Invariant-Problem-at-the-Prime-  finite:enclosures
+no caption page found for Radius-of-comparison
+== done ==

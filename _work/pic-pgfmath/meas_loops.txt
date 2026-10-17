@@ -1,0 +1,89 @@
+KUROSH 0 -> 1
+KUROSH 1 -> 2
+KUROSH 2 -> 3
+KUROSH 3 -> 4
+KUROSH 4 -> 5
+KUROSH 5 -> 6
+KUROSH 6 -> 7
+KUROSH 7 -> 8
+KUROSH 8 -> 9
+KUROSH 9 -> 10
+KUROSH 10 -> 0
+GEPNER 0 -> 1
+GEPNER 1 -> 2
+GEPNER 2 -> 3
+GEPNER 3 -> 4
+GEPNER 4 -> 5
+HILBERT yy(0) = 0.0
+HILBERT thick sig=0 i=0
+HILBERT thick sig=0 i=3
+HILBERT thick sig=0 i=6
+HILBERT first(0) = 1
+HILBERT span sig=0 b=0 1--4
+HILBERT span sig=0 b=1 4--7
+HILBERT yy(1) = -1.18
+HILBERT thick sig=1 i=1
+HILBERT thick sig=1 i=4
+HILBERT thick sig=1 i=7
+HILBERT first(1) = 2
+HILBERT span sig=1 b=0 2--5
+HILBERT span sig=1 b=1 5--8
+HILBERT yy(2) = -2.35999
+HILBERT thick sig=2 i=2
+HILBERT thick sig=2 i=5
+HILBERT thick sig=2 i=8
+HILBERT first(2) = 3
+HILBERT span sig=2 b=0 3--6
+HILBERT span sig=2 b=1 6--9
+CROSS rad 0/1.55 = 0.775
+CROSS rad 2.01/4.91 = 1.45
+CROSS rad 2.01/6 = 1.995
+CROSS rad 2.56/3.29 = 0.36499
+CROSS rad 2.56/4.91 = 1.175
+CROSS rad 2.56/6 = 1.72
+CROSS rad 3.29/4.91 = 0.81
+SUBP end 0 = 4.0 height 4.35
+SUBP end 1 = 5.0 height 3.85
+SUBP end 2 = 6.0 height 3.35
+SUBP end 3 = 7.0 height 2.85
+SUBP bin 0 = 1.0 bar 0.34
+SUBP bin 1 = 2.0 bar 0.68
+SUBP bin 2 = 3.0 bar 1.01999
+SUBP bin 3 = 4.0 bar 1.35999
+SUBP bin 4 = 5.0 bar 1.01999
+SUBP bin 5 = 6.0 bar 0.68
+SUBP bin 6 = 7.0 bar 0.34
+COND row 1 col 1 y=2.03998 x=0.34
+COND row 1 col 2 y=2.03998 x=1.01999
+COND row 1 col 3 y=2.03998 x=1.69998
+COND row 1 col 4 y=2.03998 x=2.37997
+COND row 2 col 1 y=1.35999 x=0.34
+COND row 2 col 2 y=1.35999 x=1.01999
+COND row 2 col 3 y=1.35999 x=1.69998
+COND row 2 col 4 y=1.35999 x=2.37997
+COND row 3 col 1 y=0.68 x=0.34
+COND row 3 col 2 y=0.68 x=1.01999
+COND row 3 col 3 y=0.68 x=1.69998
+COND row 3 col 4 y=0.68 x=2.37997
+COND row 4 col 1 y=0.0 x=0.34
+COND row 4 col 2 y=0.0 x=1.01999
+COND row 4 col 3 y=0.0 x=1.69998
+COND row 4 col 4 y=0.0 x=2.37997
+ENTROPY 0 -> 4
+ENTROPY 1 -> 5
+ENTROPY 2 -> 6
+CIRCLE source 0 = 1
+CIRCLE source 1 = 2
+CIRCLE source 2 = 3
+CIRCLE source 3 = 4
+CIRCLE source 4 = 5
+CIRCLE target 0 = 1
+CIRCLE target 1 = 2
+CIRCLE target 2 = 3
+CIRCLE target 3 = 4
+CIRCLE target 4 = 5
+CIRCLE target 5 = 1
+CIRCLE target 6 = 2
+CIRCLE target 7 = 3
+CIRCLE target 8 = 4
+CIRCLE target 9 = 5
