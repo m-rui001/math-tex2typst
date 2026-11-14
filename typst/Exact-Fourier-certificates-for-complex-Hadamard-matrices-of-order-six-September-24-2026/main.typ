@@ -42,7 +42,7 @@ The conjecture has one exceptional equivalence class. Here two Hadamard matrices
 This is the cubic matrix in Tao’s construction #cite(label("Tao2004")) p. 254; the same representative already appears in Moorhouse’s study of $2$-transitive complex Hadamard matrices #cite(label("Moorhouse2001")) Example 1.1. Its five noninitial indices form a cycle: adjacent indices carry the exponent $1$ and nonadjacent distinct indices carry $- 1$. The matrix and its entrywise square are both Hadamard.
 
 #thm([Theorem 1.1.])[
-  (Fourier vanishing).  #emph[Let $H$ be a complex Hadamard matrix of order six. If $H$ is not equivalent to the cubic matrix $T$ in (2), then 
+  (Fourier vanishing).  #emph[Let $H$ be a complex Hadamard matrix of order six. If $H$ is not equivalent to the cubic matrix $T$ in (2), then
 $ g_H \( pi alpha \) = 0 #h(2em) upright("for every coordinate permutation ") pi . $
 
 ]
@@ -65,7 +65,7 @@ Bandeira, Doppelbauer, and Kunisky proved that positive-definite polynomials of 
 The individual-matrix statement also supplies an input to a second exact certificate within this paper. It yields the following complete-family obstruction.
 
 #thm([Theorem 1.2.])[
-  (No complete family).  #emph[There do not exist seven orthonormal bases $B_r = \( b_(r \, 0) \, dots.h \, b_(r \, 5) \)$ of $bb(C)^6$, $1 lt.eq r lt.eq 7$, such that 
+  (No complete family).  #emph[There do not exist seven orthonormal bases $B_r = \( b_(r \, 0) \, dots.h \, b_(r \, 5) \)$ of $bb(C)^6$, $1 lt.eq r lt.eq 7$, such that
 $ \| chevron.l b_(r \, i) \, b_(s \, j) chevron.r #scale(x: 120%, y: 120%)[\|]^2 = 1 / 6 #h(2em) \( r eq.not s \, med 0 lt.eq i \, j lt.eq 5 \) . $
 
 ]
@@ -130,12 +130,12 @@ Permuting the rows or columns of $A$ leaves this expectation unchanged. Replacin
 For a balanced integer row $a$, its order is $"ord" \( a \) = sum_(j : a_j > 0) a_j$, consistently with the notation for charges. The following relation eliminates any row of order one.
 
 #thm([Lemma 3.2.])[
-  (Contraction of an order-one row).  #emph[Let $A$ be a balanced exponent matrix with $p$ rows and $q lt.eq 6$ columns, and suppose row $i$ has order one. For $ell eq.not i$, let $A_(i arrow.r ell)$ be obtained by adding row $i$ to row $ell$ and then deleting row $i$. If $p lt.eq 6$, then 
+  (Contraction of an order-one row).  #emph[Let $A$ be a balanced exponent matrix with $p$ rows and $q lt.eq 6$ columns, and suppose row $i$ has order one. For $ell eq.not i$, let $A_(i arrow.r ell)$ be obtained by adding row $i$ to row $ell$ and then deleting row $i$. If $p lt.eq 6$, then
 #[#set math.equation(numbering: n => "(5)")
  $ \( 7 - p \) m_H \( A \) = - sum_(0 lt.eq ell < p\
 ell eq.not i) m_H \( A_(i arrow.r ell) \) . $ <eq:injective-contraction>]
 
- If $p = 7$, the valid relation is instead 
+ If $p = 7$, the valid relation is instead
 #[#set math.equation(numbering: n => "(6)")
  $ sum_(0 lt.eq ell < 7\
 ell eq.not i) m_H \( A_(i arrow.r ell) \) = 0 . $ <eq:seven-row-contraction>]
@@ -165,7 +165,7 @@ for the average over the two orientations and all row permutations. The ordered 
 Let $\( 6 \)_k = 6 dot.op 5 dots.h.c \( 6 - k + 1 \)$, with $\( 6 \)_0 = 1$.
 
 #thm([Lemma 3.3.])[
-  (Equality-pattern expansion).  #emph[Let $a_1 \, dots.h \, a_n in bb(Z)^6$ be balanced charges satisfying $sum_(j = 1)^n a_j = 0$, and let $A$ be the matrix with these columns. For a set partition $cal(S)$ of ${ 1 \, dots.h \, n }$, form $A_(cal(S))$ by replacing the columns in each block $S in cal(S)$ by their sum $sum_(j in S) a_j$. Then 
+  (Equality-pattern expansion).  #emph[Let $a_1 \, dots.h \, a_n in bb(Z)^6$ be balanced charges satisfying $sum_(j = 1)^n a_j = 0$, and let $A$ be the matrix with these columns. For a set partition $cal(S)$ of ${ 1 \, dots.h \, n }$, form $A_(cal(S))$ by replacing the columns in each block $S in cal(S)$ by their sum $sum_(j in S) a_j$. Then
 #[#set math.equation(numbering: n => "(8)")
  $ ⟨"Re" product_(j = 1)^n g_(tilde(H)) \( a_j \)⟩_H = sum_(cal(S) upright(" a set partition of ") { 1 \, dots.h \, n }\
 \| cal(S) \| lt.eq 6) frac(\( 6 \)_(\| cal(S) \|), 6^n) thin m_H \( A_(cal(S)) \) . $ <eq:injective-partitions>]
@@ -207,7 +207,7 @@ $ q_(upright("cross")) = \( 2 \, 0 \, 0 \, - 2 \, 0 \, 0 \) \, #h(2em) q_(uprigh
 Every term defining $L_H$ has total charge $w$. The nonzero entries of $q_(upright("cross"))$ lie in opposite sign triples of $alpha$, whereas those of $q_(upright("same"))$ lie in the same triple. These two choices will supply the squared-row inner products in the proof of the dichotomy.
 
 #thm([Proposition 3.4.])[
-  (Single-matrix certificate).  #emph[For every $6 times 6$ Hadamard matrix $H$ and for each $q in { q_(upright("cross")) \, q_(upright("same")) }$, 
+  (Single-matrix certificate).  #emph[For every $6 times 6$ Hadamard matrix $H$ and for each $q in { q_(upright("cross")) \, q_(upright("same")) }$,
 #[#set math.equation(numbering: n => "(10)")
  $ 3 chevron.l \| L_(tilde(H)) \|^2 #scale(x: 120%, y: 120%)[chevron.r]_H + ⟨\| g_(tilde(H)) \( alpha \) g_(tilde(H)) \( q \) \|^2⟩_H = 0 . $ <eq:pair-certificate>]
 
@@ -306,15 +306,15 @@ $ H_(r s) \( i \, k \) = sqrt(6) thin chevron.l b_(r \, i) \, b_(s \, k) chevron
 Unbiasedness and orthonormality imply that $H_(r s)$ is Hadamard and that $H_(s r) = H_(r s)^(*)$. With a reference basis $r$ fixed, we abbreviate $H_(r s)$ and $g_(H_(r s))$ to $H_s$ and $g_s$.
 
 #thm([Lemma 5.1.])[
-  #emph[For each fixed reference basis the following identities hold. First, 
+  #emph[For each fixed reference basis the following identities hold. First,
 #[#set math.equation(numbering: n => "(12)")
  $ g_s \( d \) = 0 quad \( d in D \) \, #h(2em) sum_(s eq.not r) g_s \( a \) = 0 quad \( "ord" \( a \) = 2 \) . $ <eq:order-two>]
 
- For arbitrary charges $a \, b$ and each coordinate $i$, 
+ For arbitrary charges $a \, b$ and each coordinate $i$,
 #[#set math.equation(numbering: n => "(13)")
  $ sum_(j = 0)^5 g_s \( a + e_i - e_j \) g_s \( b - e_i + e_j \) = g_s \( a + b \) . $ <eq:same-matrix>]
 
- The same identity holds with both shifts reversed. For distinct external bases $s \, t eq.not r$, 
+ The same identity holds with both shifts reversed. For distinct external bases $s \, t eq.not r$,
 #[#set math.equation(numbering: n => "(14)")
  $ sum_(d in D) g_s \( a + d \) g_t \( b - d \) = 0 . $ <eq:different-matrices>]
 
@@ -595,11 +595,11 @@ The same sampled column $z$ is used in every function $F_t \( a \)$. This use of
 In the formulas below, an index $1$ on $F$ denotes the average over five bases in (31); a label $1$ in $cal(M)$ denotes a representative of those bases after taking expectation.
 
 #thm([Lemma 6.1.])[
-  (Gram entries).  #emph[For balanced $a \, v$, put $upright(bold(b)) = \( a \, - v \, v - a \)$. If $\( s \, t \) in { 0 \, 1 }^2$ and $\( s \, t \) eq.not \( 1 \, 1 \)$, then 
+  (Gram entries).  #emph[For balanced $a \, v$, put $upright(bold(b)) = \( a \, - v \, v - a \)$. If $\( s \, t \) in { 0 \, 1 }^2$ and $\( s \, t \) eq.not \( 1 \, 1 \)$, then
 #[#set math.equation(numbering: n => "(32)")
  $ "Re" thin bb(E) #scale(x: 120%, y: 120%)[\(] F_s \( a \) overline(F_t \( v \)) #scale(x: 120%, y: 120%)[\)] = cal(M) \( \( s \, t \, 0 \) \; upright(bold(b)) \) . $ <eq:gram-first>]
 
- For the remaining case, 
+ For the remaining case,
 #[#set math.equation(numbering: n => "(33)")
  $ "Re" thin bb(E) #scale(x: 120%, y: 120%)[\(] F_1 \( a \) overline(F_1 \( v \)) #scale(x: 120%, y: 120%)[\)] = 1 / 5 cal(M) \( \( 1 \, 1 \, 0 \) \; upright(bold(b)) \) + 4 / 5 cal(M) \( \( 1 \, 2 \, 0 \) \; upright(bold(b)) \) . $ <eq:gram-second>]
 
@@ -618,18 +618,18 @@ The three-factor moments in Lemma 11 can be simplified using symmetry, characte
   (Mixed-moment reductions).  #emph[Under (27), the following operations and identities are valid.]
   + #emph[A common coordinate permutation of all charges, simultaneous negation of all charges, a simultaneous reordering of factors and their labels, and an arbitrary injective renaming of the used labels preserve (28). A zero charge factor may be omitted. Coordinates on which every charge is zero may also be omitted, with the remaining coordinates interpreted as a uniform injection into the six row positions.]
   + #emph[The moment vanishes if any charge has order one or is a coordinate permutation of $alpha$.]
-  + #emph[Suppose that $a_j$ has order two and its label $s_j$ occurs only once. Let $S$ be the set of distinct used labels and $l = \| S \|$. For each $t in S \\ { s_j }$, let $upright(bold(s))^(j arrow.r t)$ be obtained from $upright(bold(s))$ by replacing $s_j$ with $t$. Then 
+  + #emph[Suppose that $a_j$ has order two and its label $s_j$ occurs only once. Let $S$ be the set of distinct used labels and $l = \| S \|$. For each $t in S \\ { s_j }$, let $upright(bold(s))^(j arrow.r t)$ be obtained from $upright(bold(s))$ by replacing $s_j$ with $t$. Then
 #[#set math.equation(numbering: n => "(34)")
  $ cal(M) \( upright(bold(s)) \; upright(bold(a)) \) = - frac(1, 7 - l) sum_(t in S \\ { s_j }) cal(M) \( upright(bold(s))^(j arrow.r t) \; upright(bold(a)) \) . $ <eq:singleton-reduction>]
 
 ]
-  + #emph[If all labels are equal, the moment is a linear combination of the pair moments (29). More precisely, let $A$ have columns $a_1 \, dots.h \, a_n$, after removing its zero rows. For a set partition $cal(P)$ of ${ 1 \, dots.h \, n }$, let $A_(cal(P))$ have one column $sum_(j in B) a_j$ for each block $B in cal(P)$. Then 
+  + #emph[If all labels are equal, the moment is a linear combination of the pair moments (29). More precisely, let $A$ have columns $a_1 \, dots.h \, a_n$, after removing its zero rows. For a set partition $cal(P)$ of ${ 1 \, dots.h \, n }$, let $A_(cal(P))$ have one column $sum_(j in B) a_j$ for each block $B in cal(P)$. Then
 #[#set math.equation(numbering: n => "(35)")
  $ cal(M) \( \( s \, dots.h \, s \) \; upright(bold(a)) \) = sum_(cal(P) upright(" a set partition")\
 \| cal(P) \| lt.eq 6) frac(\( 6 \)_(\| cal(P) \|), 6^n) thin m \( A_(cal(P)) \) \, $ <eq:single-label-partitions>]
 
  where $\( 6 \)_k = 6 dot.op 5 dots.h.c \( 6 - k + 1 \)$. Zero rows or columns in $A_(cal(P))$ may be deleted as in Section 3.]
-  + #emph[For balanced $a \, b \, c$ with $a + b + c = 0$, 
+  + #emph[For balanced $a \, b \, c$ with $a + b + c = 0$,
 #[#set math.equation(numbering: n => "(36)")
  $ & sum_(j = 0)^5 cal(M) #scale(x: 120%, y: 120%)[\(] \( s \, s \, u \) \; \( a + e_i - e_j \, b - e_i + e_j \, c \) #scale(x: 120%, y: 120%)[\)] = cal(M) #scale(x: 120%, y: 120%)[\(] \( s \, u \) \; \( a + b \, c \) #scale(x: 120%, y: 120%)[\)] \,\
  & sum_(d in D) cal(M) #scale(x: 120%, y: 120%)[\(] \( s \, t \, u \) \; \( a + d \, b - d \, c \) #scale(x: 120%, y: 120%)[\)] = 0 #h(2em) \( s eq.not t \) . $ <eq:mixed-same>]
@@ -712,7 +712,7 @@ q in C_lambda) "sgn" \( q \) thin F_(t_i) \( P_p P_q v_i \) #h(2em) \( 0 lt.eq i
 In particular, $\( P_p P_q v \)_i = v_(q \( p \( i \) \))$, which is the order implemented by #raw("perm(perm(v,q),p)") in the appendix. Formula (38) defines a finite linear combination of the functions (31) for every listed pair.
 
 #thm([Proposition 6.3.])[
-  (Mixed-moment certificate).  #emph[Each matrix $Z_lambda$ specified above is positive definite. Under the mixed-moment identities of Lemma 12, the forms (38) satisfy 
+  (Mixed-moment certificate).  #emph[Each matrix $Z_lambda$ specified above is positive definite. Under the mixed-moment identities of Lemma 12, the forms (38) satisfy
 #[#set math.equation(numbering: n => "(39)")
  $ 5 sum_lambda 10^(15 - e_lambda) bb(E) #scale(x: 120%, y: 120%)[\(] Y_lambda^(*) Z_lambda Y_lambda #scale(x: 120%, y: 120%)[\)] & lt.eq frac(- 613302797399911 + 179721388988719, 6480)\
  & = - 2007321335237 / 30 < 0 . $ <eq:mixed-certificate>]
@@ -750,7 +750,7 @@ The calculation has three steps. First, expand each expression in named moments 
 Both certificates use finite systems of linear equations in their moment coordinates. The same substitution procedure applies to either system. Include the constant moment as a coordinate, so that every moment equation is homogeneous in the enlarged coordinate vector. Clearing denominators turns the equations into integer rows. The lists called #raw("I") in the program specify a fixed priority order on the coordinates. This choice affects the form of the answer and, in the mixed calculation, the size of its residual coefficient sum; it does not add any relation.
 
 #thm([Lemma 7.1.])[
-  (Exact substitutions).  #emph[Let $W in bb(Z)^(r times N)$ consist of selected moment equations after their denominators have been cleared. Suppose a set $J$ of $r$ columns gives a square submatrix $W_J$ invertible modulo a prime. Put $F = { 1 \, dots.h \, N } \\ J$. If a rational matrix $P in bb(Q)^(N times N)$ satisfies 
+  (Exact substitutions).  #emph[Let $W in bb(Z)^(r times N)$ consist of selected moment equations after their denominators have been cleared. Suppose a set $J$ of $r$ columns gives a square submatrix $W_J$ invertible modulo a prime. Put $F = { 1 \, dots.h \, N } \\ J$. If a rational matrix $P in bb(Q)^(N times N)$ satisfies
 $ P_(F \, F) = I \, #h(2em) P_(* \, J) = 0 \, #h(2em) W P = 0 \, $
 
  then every real vector $upright(bold(m))$ satisfying $W upright(bold(m)) = 0$ obeys $upright(bold(m)) = P upright(bold(m))$. Thus the rows of $P$ give valid substitutions for all coordinates in terms of the coordinates indexed by $F$.]
@@ -925,6 +925,5 @@ The literal #raw("data") near the end specifies each shape, its ordered list of 
 Equation numbers in the code comments use the original numbering: the reference in #raw("expand_degree1") is to the contractions of Lemma 4, and those in #raw("mixeq") are to (13) and (14).
 
 #raw(block: true, lang: "Complete exact verifier", "")
-
 
 #bibliography("refs.bib", style: "ieee", title: [References])

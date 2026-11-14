@@ -28,57 +28,128 @@
 
 == 1 From structural obstacles to marked hierarchies <from-structural-obstacles-to-marked-hierarchies>
 
-The reasoning begins with the gap between the interpolation upper bound of Panchenko and Talagrand [5] and the desired lower bound. Panchenko’s finite-RSB analysis [4] supplies a model for identifying the spin distribution, but pair-overlap ultrametricity alone does not determine the multioverlaps needed in a diluted system. Initial checks look for a counterexample in the assumptions: a nonintegrable factorization constant, asymmetric fields, interactions close to the positivity boundary, or messages tending to infinity. None yields one. Constant interactions instead provide a normalization check.
+The reasoning begins with the gap between the interpolation upper bound of Panchenko and Talagrand [5] and the
+  desired lower bound. Panchenko’s finite-RSB analysis [4] supplies a model for identifying the spin distribution,
+  but pair-overlap ultrametricity alone does not determine the multioverlaps needed in a diluted system.
+  Initial checks look for a counterexample in the assumptions:
+  a nonintegrable factorization constant, asymmetric fields, interactions close to the positivity boundary,
+  or messages tending to infinity. None yields one. Constant interactions instead provide a normalization check.
 
-A many-site cavity argument appears promising: condition on randomness shared by all sites in a hierarchical representation, then seek independent site messages. The difficulty is that this shared randomness can adapt to the sampled sites. A pointwise law of large numbers gives no uniform comparison, and pinning may select states with the wrong weights.
+A many-site cavity argument appears promising: condition on randomness shared by all sites in a hierarchical
+  representation, then seek independent site messages. The difficulty is that this shared randomness can adapt to
+  the sampled sites. A pointwise law of large numbers gives no uniform comparison,
+  and pinning may select states with the wrong weights.
 
 VERBATIM EXCERPT
 
 #raw(block: true, "\nAha recursive structure: overfitting shared variable can simulate original model at smaller scale.\n")
 
-Enriched Gaussian fields, as in Mourrat and Panchenko [3], and the Hamilton–Jacobi viewpoint of Mourrat [2], suggest auxiliary hierarchies. Poisson perturbations motivated by the multioverlap identities in Barbier and Panchenko [1] offer more direct tests. The Bayesian setting does not transfer automatically: posterior-sampled observations and fractionally weighted observations have different laws.
+Enriched Gaussian fields, as in Mourrat and Panchenko [3], and the Hamilton–Jacobi viewpoint of Mourrat [2],
+  suggest auxiliary hierarchies. Poisson perturbations motivated by the multioverlap identities in Barbier and
+  Panchenko [1] offer more direct tests. The Bayesian setting does not transfer automatically:
+  posterior-sampled observations and fractionally weighted observations have different laws.
 
-The investigation therefore works directly with iterated power means and their tilted path transitions. A marked perturbation can specify where replicas branch; expanding the change of density gives signed coefficients for extending an old replica tree. For two replicas, the resulting identity suggests approximate invariance under replacing a child when adjacent exponents are close. Higher products are harder: their coefficients alternate in sign, dummy anchors cancel, and conditional projections cannot simply be inserted as arbitrary test functions.
+The investigation therefore works directly with iterated power means and their tilted path transitions.
+  A marked perturbation can specify where replicas branch; expanding the change of density gives signed
+  coefficients for extending an old replica tree. For two replicas,
+  the resulting identity suggests approximate invariance under replacing a child when adjacent exponents are
+  close. Higher products are harder: their coefficients alternate in sign, dummy anchors cancel,
+  and conditional projections cannot simply be inserted as arbitrary test functions.
 
-The target becomes conditional decorrelation of sitewise product vectors, followed by concentration of ordinary multioverlaps. Fresh subtrees isolate useful conditional moments, but recovering a whole prescribed shape requires division by products of small exponent gaps. Coarse partitions and equal-exponent refinements repeatedly encounter the same problem: available continuity errors are too large after that division.
+The target becomes conditional decorrelation of sitewise product vectors,
+  followed by concentration of ordinary multioverlaps. Fresh subtrees isolate useful conditional moments,
+  but recovering a whole prescribed shape requires division by products of small exponent gaps.
+  Coarse partitions and equal-exponent refinements repeatedly encounter the same problem:
+  available continuity errors are too large after that division.
 
 == 2 Shifting branching depths <shifting-branching-depths>
 
-Further pinning attempts fail to reconcile their observation law with the cavity comparison. An exact purity claim also proves too strong: hidden Poisson–Dirichlet clustering inside a strict exponent jump can retain nontrivial overlap variation. Factorial-polynomial expansions and a cancellation using two copies expose squared covariance terms, but do not yet turn the signed identities into the desired ordinary covariance estimate.
+Further pinning attempts fail to reconcile their observation law with the cavity comparison.
+  An exact purity claim also proves too strong: hidden Poisson–Dirichlet clustering inside a strict exponent jump
+  can retain nontrivial overlap variation. Factorial-polynomial expansions and a cancellation using two copies
+  expose squared covariance terms, but do not yet turn the signed identities into the desired ordinary covariance
+  estimate.
 
-The change is to shift every internal branching depth of the target tree by one level. These shifted splits avoid the old tree’s branching depths. Each new branching vertex must then pay a small fresh-divergence factor, matching the small factor in the prescribed shape’s normalization. The proposed shift still requires an averaged error estimate:
+The change is to shift every internal branching depth of the target tree by one level.
+  These shifted splits avoid the old tree’s branching depths.
+  Each new branching vertex must then pay a small fresh-divergence factor,
+  matching the small factor in the prescribed shape’s normalization.
+  The proposed shift still requires an averaged error estimate:
 
 VERBATIM EXCERPT
 
 #raw(block: true, "\nGreat! Need carefully prove average error little with shifted depths not rare\n")
 
-The proposed induction replaces proper descendant groups by conditional mean vectors. An anchor identity supplies a positive weighted sum of squared replacement differences; bounded martingale increments control the one-level shifts after averaging over depths. A separate marker anchor introduces a fresh copy before the original first split, converting conditional decorrelation into ordinary shape-wise multioverlap concentration. The order of limits matters: errors in fixed-depth identities disappear before the hierarchy is refined.
+The proposed induction replaces proper descendant groups by conditional mean vectors.
+  An anchor identity supplies a positive weighted sum of squared replacement differences;
+  bounded martingale increments control the one-level shifts after averaging over depths.
+  A separate marker anchor introduces a fresh copy before the original first split,
+  converting conditional decorrelation into ordinary shape-wise multioverlap concentration.
+  The order of limits matters: errors in fixed-depth identities disappear before the hierarchy is refined.
 
-The power-mean expansion is organized directly by adding paths. Its logarithmic coefficient magnitudes telescope, yielding a geometric remainder estimate after rescaling a bounded positive insertion. On the upper-bound side, normalization by the interaction at the all-plus configuration avoids demanding separate integrability of the factorization constant. The sign calculation reduces to the even-power convexity remainder
+The power-mean expansion is organized directly by adding paths.
+  Its logarithmic coefficient magnitudes telescope, yielding a geometric remainder estimate after rescaling a
+  bounded positive insertion. On the upper-bound side, normalization by the interaction at the all-plus
+  configuration avoids demanding separate integrability of the factorization constant.
+  The sign calculation reduces to the even-power convexity remainder
 
 $ A^p - p A B^(p - 1) + \( p - 1 \) B^p gt.eq 0 . $
 
-For the lower bound, sublinear marked Poisson perturbations yield identities while a diagonal selection retains low cavity increments. Polarization isolates prescribed branching patterns.
+For the lower bound, sublinear marked Poisson perturbations yield identities while a diagonal selection retains
+  low cavity increments. Polarization isolates prescribed branching patterns.
 
-Finally, a uniformly sampled site’s leaf magnetization defines trial messages through its inverse hyperbolic tangent and successive conditional laws. Empirical spin-pattern probabilities are combinations of multioverlaps; concentration allows their replacement by the probabilities of independent trial labels. Exceptional tree shapes, large insertion counts, and series tails are removed in sequence. The next stage examines the proposed construction for gaps in its tree identities, conditioning steps, and limiting arguments.
+Finally, a uniformly sampled site’s leaf magnetization defines trial messages through its inverse hyperbolic
+  tangent and successive conditional laws. Empirical spin-pattern probabilities are combinations of multioverlaps;
+  concentration allows their replacement by the probabilities of independent trial labels.
+  Exceptional tree shapes, large insertion counts, and series tails are removed in sequence.
+  The next stage examines the proposed construction for gaps in its tree identities, conditioning steps,
+  and limiting arguments.
 
 == 3 Checking the identities and closing the comparison <checking-the-identities-and-closing-the-comparison>
 
-The final stage returns repeatedly to whether a target subtree remains correctly distributed when its anchor already belongs to an old tree. Marginalizing the unused paths preserves the prescribed independent transitions. This permits conditional covariance estimates even when the observable being tested is correlated with the extension.
+The final stage returns repeatedly to whether a target subtree remains correctly distributed when its anchor
+  already belongs to an old tree. Marginalizing the unused paths preserves the prescribed independent transitions.
+  This permits conditional covariance estimates even when the observable being tested is correlated with the extension.
 
-The coefficient calculation is checked at two levels and reorganized as a positive squared-difference identity. Distinct new branching vertices are charged to distinct fresh divergences, including when their depths coincide. This is the point of the shift: after normalization, the absolute coefficient bounds remain controlled. Along unary stretches, bounded vector martingales have bounded total squared increments, so the averaged error from moving a depth by one tends to zero.
+The coefficient calculation is checked at two levels and reorganized as a positive squared-difference identity.
+  Distinct new branching vertices are charged to distinct fresh divergences, including when their depths coincide.
+  This is the point of the shift: after normalization, the absolute coefficient bounds remain controlled.
+  Along unary stretches, bounded vector martingales have bounded total squared increments,
+  so the averaged error from moving a depth by one tends to zero.
 
-Another concern is whether varying the small insertion parameter silently changes the background measure. The calculation instead treats each value as a hypothetical extra factor in the same fixed background. Poisson removal supplies that background, cancellation removes the anchor factor, and uniform analytic estimates permit coefficient extraction. Polarized marks then select the required tree constraints.
+Another concern is whether varying the small insertion parameter silently changes the background measure.
+  The calculation instead treats each value as a hypothetical extra factor in the same fixed background.
+  Poisson removal supplies that background, cancellation removes the anchor factor,
+  and uniform analytic estimates permit coefficient extraction.
+  Polarized marks then select the required tree constraints.
 
-The conditional-decorrelation induction and the marker-anchor variance argument are checked together. Proper child groups are replaced by conditional means, and the resulting three-copy estimate controls the normalized squared conditional covariance. Ordinary multioverlap concentration follows by comparing a fresh copy with the original shape. In the cavity comparison, fresh uniformly sampled sites give empirical pattern masses; the trial hierarchy uses their expectations. Finite cutoffs leave only finitely many such comparisons, while nonregular shapes and analytic tails contribute vanishing errors.
+The conditional-decorrelation induction and the marker-anchor variance argument are checked together.
+  Proper child groups are replaced by conditional means, and the resulting three-copy estimate controls the
+  normalized squared conditional covariance. Ordinary multioverlap concentration follows by comparing a fresh copy
+  with the original shape. In the cavity comparison, fresh uniformly sampled sites give empirical pattern masses;
+  the trial hierarchy uses their expectations. Finite cutoffs leave only finitely many such comparisons,
+  while nonregular shapes and analytic tails contribute vanishing errors.
 
-To return from bounded disorder to the stated first-moment assumptions, the construction subtracts the all-plus interaction value and truncates the normalized interaction and field. Uniform free-energy and trial-functional error bounds allow the truncations to be removed. The final response claims that the resulting lower comparison matches the interpolation upper bound, giving the existence of the limit and the infimum over finite hierarchies.
+To return from bounded disorder to the stated first-moment assumptions,
+  the construction subtracts the all-plus interaction value and truncates the normalized interaction and field.
+  Uniform free-energy and trial-functional error bounds allow the truncations to be removed.
+  The final response claims that the resulting lower comparison matches the interpolation upper bound,
+  giving the existence of the limit and the infimum over finite hierarchies.
 
 #heading(level: 1)[References]
-#bibitem([1])[Jean Barbier and Dmitry Panchenko. #emph[Strong replica symmetry in high-dimensional optimal Bayesian inference]. Communications in Mathematical Physics #strong[393]\(3) (2022), 1199--1239. #link("https://doi.org/10.1007/s00220-022-04387-w").]
-#bibitem([2])[Jean-Christophe Mourrat. #emph[The Parisi formula is a Hamilton--Jacobi equation in Wasserstein space]. Canadian Journal of Mathematics #strong[74]\(3) (2022), 607--629. #link("https://doi.org/10.4153/S0008414X21000031").]
-#bibitem([3])[Jean-Christophe Mourrat and Dmitry Panchenko. #emph[Extending the Parisi formula along a Hamilton--Jacobi equation]. Electronic Journal of Probability #strong[25] (2020), paper no.~23, 1--17. #link("https://doi.org/10.1214/20-EJP432").]
-#bibitem([4])[Dmitry Panchenko. #emph[Structure of finite-RSB asymptotic Gibbs measures in the diluted spin glass models]. Journal of Statistical Physics #strong[162]\(1) (2016), 1--42. #link("https://doi.org/10.1007/s10955-015-1385-8").]
-#bibitem([5])[Dmitry Panchenko and Michel Talagrand. #emph[Bounds for diluted mean-fields spin glass models]. Probability Theory and Related Fields #strong[130]\(3) (2004), 319--336. #link("https://doi.org/10.1007/s00440-004-0342-2").]
-
-
+#bibitem([1])[Jean Barbier and Dmitry Panchenko. #emph[Strong replica symmetry in high-dimensional optimal
+  Bayesian inference]. Communications in Mathematical Physics #strong[393]\(3) (2022), 1199--1239.
+  #link("https://doi.org/10.1007/s00220-022-04387-w").]
+#bibitem([2])[Jean-Christophe Mourrat. #emph[The Parisi formula is a Hamilton--Jacobi equation in Wasserstein
+  space]. Canadian Journal of Mathematics #strong[74]\(3) (2022), 607--629.
+  #link("https://doi.org/10.4153/S0008414X21000031").]
+#bibitem([3])[Jean-Christophe Mourrat and Dmitry Panchenko.
+  #emph[Extending the Parisi formula along a Hamilton--Jacobi equation].
+  Electronic Journal of Probability #strong[25] (2020), paper no.~23, 1--17.
+  #link("https://doi.org/10.1214/20-EJP432").]
+#bibitem([4])[Dmitry Panchenko. #emph[Structure of finite-RSB asymptotic Gibbs measures in the diluted spin glass
+  models]. Journal of Statistical Physics #strong[162]\(1) (2016), 1--42.
+  #link("https://doi.org/10.1007/s10955-015-1385-8").]
+#bibitem([5])[Dmitry Panchenko and Michel Talagrand. #emph[Bounds for diluted mean-fields spin glass models].
+  Probability Theory and Related Fields #strong[130]\(3) (2004), 319--336.
+  #link("https://doi.org/10.1007/s00440-004-0342-2").]

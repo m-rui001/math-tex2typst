@@ -24,19 +24,39 @@ and conformal nets]]
 
 == 1 Introduction <sec:introduction>
 
-Vertex operator algebras and conformal nets are two mathematical formulations of chiral conformal field theory. A vertex operator algebra records field modes and their algebraic identities. A conformal net assigns von Neumann algebras of bounded observables to intervals of the circle. Their expected correspondence has both an analytic and a representation-theoretic part. Formal commutation of fields must lead to commuting local algebras, and algebraic modules must correspond to Hilbert-space sectors with the same fusion and braiding.
+Vertex operator algebras and conformal nets are two mathematical formulations of chiral conformal field theory.
+  A vertex operator algebra records field modes and their algebraic identities.
+  A conformal net assigns von Neumann algebras of bounded observables to intervals of the circle.
+  Their expected correspondence has both an analytic and a representation-theoretic part.
+  Formal commutation of fields must lead to commuting local algebras,
+  and algebraic modules must correspond to Hilbert-space sectors with the same fusion and braiding.
 
-We establish this correspondence for every simple unitary strongly rational complex vertex operator algebra. The functor in the result is the Carpi–Weiner–Xu construction: it completes a unitary module and integrates its actual closed smeared fields. The tensor product on the net side is Connes fusion, with the Doplicher–Haag–Roberts braiding.
+We establish this correspondence for every simple unitary strongly rational complex vertex operator algebra.
+  The functor in the result is the Carpi–Weiner–Xu construction:
+  it completes a unitary module and integrates its actual closed smeared fields.
+  The tensor product on the net side is Connes fusion, with the Doplicher–Haag–Roberts braiding.
 
 === 1.1 The statement <the-statement>
 
-Let $V$ be a complex vertex operator algebra, with vacuum $Omega$, conformal vector $nu$ and conformal energy $L_0$. It is of #emph[CFT type] if
+Let $V$ be a complex vertex operator algebra, with vacuum $Omega$,
+  conformal vector $nu$ and conformal energy $L_0$. It is of #emph[CFT type] if
 
-$ V = xor.big_(n gt.eq 0) V_n \, #h(2em) V_0 = bb(C) Omega . $
+$ V = xor.big_(n gt.eq 0) V_n \, wide V_0 = bb(C) Omega . $
 
-Write $C_2 \( V \) = "span" { a_(\( - 2 \)) b : a \, b in V }$. We call $V$ #emph[strongly rational] if it is of CFT type, is isomorphic to its graded contragredient, is rational, and has finite-dimensional quotient $V \/ C_2 \( V \)$. Here rationality means complete reducibility of admissible modules. Unitarity means that $V$ has a normalized positive invariant Hermitian form and its corresponding antilinear PCT involution $Theta$.
+Write $C_2 \( V \) = "span" { a_(\( - 2 \)) b : a \, b in V }$.
+  We call $V$ #emph[strongly rational] if it is of CFT type, is isomorphic to its graded contragredient,
+  is rational, and has finite-dimensional quotient $V \/ C_2 \( V \)$.
+  Here rationality means complete reducibility of admissible modules.
+  Unitarity means that $V$ has a normalized positive invariant Hermitian form and its corresponding antilinear PCT
+  involution $Theta$.
 
-We use grading-restricted finite-length modules: their conformal-energy spaces are finite dimensional, and their weights are bounded below. Their algebraic braided tensor category is denoted by $"Rep" \( V \)$. Its tensor product is the Huang–Lepowsky fusion product. The category $"Rep"^u \( V \)$ consists of such modules with positive invariant Hermitian forms, and module homomorphisms. We call $V$ #emph[strongly unitary] when every simple module is unitarizable, and #emph[completely unitary] when, in addition, the canonical invariant Hermitian fusion forms are positive definite. In the latter case the module category is a unitary modular tensor category.
+We use grading-restricted finite-length modules: their conformal-energy spaces are finite dimensional,
+  and their weights are bounded below. Their algebraic braided tensor category is denoted by $"Rep" \( V \)$.
+  Its tensor product is the Huang–Lepowsky fusion product. The category $"Rep"^u \( V \)$ consists of such modules
+  with positive invariant Hermitian forms, and module homomorphisms.
+  We call $V$ #emph[strongly unitary] when every simple module is unitarizable,
+  and #emph[completely unitary] when, in addition, the canonical invariant Hermitian fusion forms are positive
+  definite. In the latter case the module category is a unitary modular tensor category.
 
 For a homogeneous $a in V$ of weight $d_a$, write
 
@@ -45,217 +65,439 @@ $ Y \( a \, z \) = sum_(n in bb(Z)) a_(\( n \)) z^(- n - 1) . $
 Polynomial energy bounds mean that, for each $a$, there are $C > 0$ and nonnegative integers $p \, k$ such that
 
 #[#set math.equation(numbering: n => "(1.1)")
- $ parallel a_(\( n \)) b parallel lt.eq C \( 1 + \| n \| \)^p parallel \( 1 + L_0 \)^k b parallel \, #h(2em) n in bb(Z) \, quad b in V . $ <eq:intro-energy>]
+ $ parallel a_(\( n \)) b parallel lt.eq C \( 1 + \| n \| \)^p parallel \( 1 + L_0 \)^k b parallel \, wide
+   n in bb(Z) \, quad b in V . $ <eq:intro-energy>]
 
 These bounds define closable smeared fields
 
 #[#set math.equation(numbering: n => "(1.2)")
- $ Y \( a \, f \) = integral.cont_(S^1) Y \( a \, z \) f \( z \) z^(d_a) frac(d z, 2 pi i z) \, #h(2em) f in C^oo \( S^1 \) \, $ <eq:intro-smear>]
+ $ Y \( a \, f \) = integral.cont_(S^1) Y \( a \, z \) f \( z \) z^(d_a) frac(d z, 2 pi i z) \, wide
+   f in C^oo \( S^1 \) \, $ <eq:intro-smear>]
 
 initially on $V$. For a nonempty nondense open interval $I subset S^1$, set
 
 #[#set math.equation(numbering: n => "(1.3)")
- $ A_V \( I \) = W^(*) #h(-0.16667em) {overline(Y \( a \, f \)) : a in V upright(" homogeneous") \, med "supp" f subset I} . $ <eq:intro-net>]
+ $ A_V \( I \) = W^(*) #h(-0.16667em) {overline(Y \( a \, f \)) : a in V upright(" homogeneous") \, med
+   "supp" f subset I} . $ <eq:intro-net>]
 
-Here the von Neumann algebra generated by closed operators is the algebra generated by their bounded graph or polar data. The VOA is #emph[CKLW-strongly local] if it is energy-bounded and $A_V \( I \) subset A_V \( I' \)'$, where $I'$ is the interior of the complementary arc.
+Here the von Neumann algebra generated by closed operators is the algebra generated by their bounded graph or
+  polar data. The VOA is #emph[CKLW-strongly local] if it is energy-bounded and $A_V \( I \) subset
+  A_V \( I' \)'$, where $I'$ is the interior of the complementary arc.
 
-A conformal net $A$ is #emph[completely rational] if it is irreducible, split, strongly additive and has finite $mu$-index. Split means that separated interval algebras generate their spatial tensor product. Strong additivity means that removing one interior point from an interval does not change the algebra generated by its two components. For two disjoint intervals $E = I_1 union I_3$, the $mu$-index is the index of $A \( E \) subset A \( E' \)'$. We write $"Rep"^f \( A \)$ for the additive category of finite-index, equivalently dualizable, locally normal DHR representations, including finite sums of the tensor unit. The scalar case is described in Section 2.
+A conformal net $A$ is #emph[completely rational] if it is irreducible, split,
+  strongly additive and has finite $mu$-index. Split means that separated interval algebras generate their spatial
+  tensor product. Strong additivity means that removing one interior point from an interval does not change the
+  algebra generated by its two components. For two disjoint intervals $E = I_1 union I_3$,
+  the $mu$-index is the index of $A \( E \) subset A \( E' \)'$.
+  We write $"Rep"^f \( A \)$ for the additive category of finite-index, equivalently dualizable,
+  locally normal DHR representations, including finite sums of the tensor unit.
+  The scalar case is described in Section 2.
 
-A unitary $V$-module $M$ is #emph[strongly integrable] if there are compatible normal representations $pi_I^M$ of $A_V \( I \)$ on its Hilbert completion $cal(H)_M$ satisfying
+A unitary $V$-module $M$ is #emph[strongly integrable] if there are compatible normal representations $pi_I^M$ of
+  $A_V \( I \)$ on its Hilbert completion $cal(H)_M$ satisfying
 
 #[#set math.equation(numbering: n => "(1.4)")
- $ pi_I^M #h(-0.16667em) (overline(Y^V \( a \, f \))) = overline(Y^M \( a \, f \)) \, #h(2em) "supp" f subset I . $ <eq:intro-cwx>]
+ $ pi_I^M #h(-0.16667em) (overline(Y^V \( a \, f \))) = overline(Y^M \( a \, f \)) \, wide
+   "supp" f subset I . $ <eq:intro-cwx>]
 
-The equality includes the domains of the closed operators. Normal representations act on affiliated operators through their graph projections. The resulting Hilbert-completion functor is denoted by $F_(upright("CWX"))^V$.
+The equality includes the domains of the closed operators.
+  Normal representations act on affiliated operators through their graph projections.
+  The resulting Hilbert-completion functor is denoted by $F_(upright("CWX"))^V$.
 
 #thm([Theorem 1.1.])[
   #emph[Let $V$ be a simple unitary strongly rational vertex operator algebra over $bb(C)$. Then:]
-  + #emph[$V$ has polynomial energy bounds and is CKLW-strongly local. The algebras (1.3) form an irreducible conformal net $A_V$.]
-  + #emph[$V$ is completely unitary: every simple grading-restricted module is unitarizable, and all canonical invariant Hermitian fusion forms are positive definite.]
-  + #emph[Every unitary grading-restricted finite-length module is strongly integrable, with the closed-field equality (1.4).]
+  + #emph[$V$ has polynomial energy bounds and is CKLW-strongly local.
+    The algebras (1.3) form an irreducible conformal net $A_V$.]
+  + #emph[$V$ is completely unitary: every simple grading-restricted module is unitarizable,
+    and all canonical invariant Hermitian fusion forms are positive definite.]
+  + #emph[Every unitary grading-restricted finite-length module is strongly integrable,
+    with the closed-field equality (1.4).]
   + #emph[The net $A_V$ is completely rational.]
-  + #emph[After choosing invariant positive forms on the simple modules, the Carpi–Weiner–Xu functor gives a braided unitary tensor equivalence 
+  + #emph[After choosing invariant positive forms on the simple modules,
+    the Carpi–Weiner–Xu functor gives a braided unitary tensor equivalence
 $ "Rep" \( V \) tilde.eq "Rep"^u \( V \) arrow.r^(med F_(upright("CWX"))^V med) "Rep"^f \( A_V \) . $
 
- The tensor structure and braiding on the right are Connes fusion and DHR braiding, with a common orientation convention for the circle.]
+ The tensor structure and braiding on the right are Connes fusion and DHR braiding,
+   with a common orientation convention for the circle.]
 ] <thm:main>
 
-The equivalence also compares extensions of the two theories. A conformal VOA extension enlarges $V$ while preserving its vacuum and conformal vector; a local net extension enlarges the interval algebras compatibly with their conformal symmetries. Gui’s comparison theorems identify their finite-index counterparts through the corresponding commutative algebra objects. Corollary 22 gives the precise normalized correspondence and identifies the representation functors of the extended theories.
+The equivalence also compares extensions of the two theories.
+  A conformal VOA extension enlarges $V$ while preserving its vacuum and conformal vector;
+  a local net extension enlarges the interval algebras compatibly with their conformal symmetries.
+  Gui’s comparison theorems identify their finite-index counterparts through the corresponding commutative algebra
+  objects. Corollary 22 gives the precise normalized correspondence and identifies the representation functors of
+  the extended theories.
 
 === 1.2 The correspondence problem and earlier work <the-correspondence-problem-and-earlier-work>
 
-Carpi, Kawahigashi, Longo and Weiner made strong locality the analytic condition for constructing a conformal net from a simple unitary VOA [5] Theorems 6.8 and 8.1. Their examples include unitary affine and Virasoro VOAs and the moonshine VOA, and their construction is compatible with unitary subalgebras. They conjectured strong locality for every simple unitary VOA [5] Conjecture 8.18. Theorem 1 establishes this assertion under strong rationality and then compares the full representation theories in that setting. The locality issue is substantial: commuting unbounded fields on a common domain need not generate commuting von Neumann algebras.
+Carpi, Kawahigashi, Longo and Weiner made strong locality the analytic condition for constructing a conformal net
+  from a simple unitary VOA [5] Theorems 6.8 and 8.1. Their examples include unitary affine and Virasoro VOAs and
+  the moonshine VOA, and their construction is compatible with unitary subalgebras.
+  They conjectured strong locality for every simple unitary VOA [5] Conjecture 8.18.
+  Theorem 1 establishes this assertion under strong rationality and then compares the full representation theories
+  in that setting. The locality issue is substantial: commuting unbounded fields on a common domain need not
+  generate commuting von Neumann algebras.
 
-The two representation theories already possess rich tensor structures. Huang’s results give rigidity and modularity for strongly rational VOAs [22,23], while Kawahigashi–Longo–Müger establish modularity for completely rational conformal nets [25]. Identifying these structures requires more than constructing the vacuum net. The Carpi–Weiner–Xu functor integrates unitary modules through their closed fields and is fully faithful on strongly integrable modules [18] Theorem 4.3, [14] Theorem 4.24. Gui’s tensor comparison then identifies VOA fusion and braiding with Connes fusion and DHR braiding under charged-field hypotheses [17] Corollary 3.23.
+The two representation theories already possess rich tensor structures.
+  Huang’s results give rigidity and modularity for strongly rational VOAs [22,23],
+  while Kawahigashi–Longo–Müger establish modularity for completely rational conformal nets [25].
+  Identifying these structures requires more than constructing the vacuum net.
+  The Carpi–Weiner–Xu functor integrates unitary modules through their closed fields and is fully faithful on
+  strongly integrable modules [18] Theorem 4.3, [14] Theorem 4.24.
+  Gui’s tensor comparison then identifies VOA fusion and braiding with Connes fusion and DHR braiding under
+  charged-field hypotheses [17] Corollary 3.23.
 
-Complete unitarity, full braided equivalence and complete rationality are already known for affine VOAs at positive integral levels, even positive-definite lattice VOAs, parafermion VOAs at positive integral levels, and type $A D E$ discrete-series $W$-algebras. Gui’s results also cover finite tensor products of these classes and regular cosets of unitary inclusions between such tensor products [17] Theorem I. His extension results propagate the comparison through further extensions and coset constructions under their stated hypotheses [14] Theorem 6.18 and Example 6.19. Here the analytic and positivity hypotheses for the tensor embedding are established from strong rationality and unitarity, and a separate reconstruction argument proves that every finite-index sector is in its image.
+Complete unitarity, full braided equivalence and complete rationality are already known for affine VOAs at
+  positive integral levels, even positive-definite lattice VOAs, parafermion VOAs at positive integral levels,
+  and type $A D E$ discrete-series $W$-algebras. Gui’s results also cover finite tensor products of these classes
+  and regular cosets of unitary inclusions between such tensor products [17] Theorem I.
+  His extension results propagate the comparison through further extensions and coset constructions under their
+  stated hypotheses [14] Theorem 6.18 and Example 6.19. Here the analytic and positivity hypotheses for the tensor
+  embedding are established from strong rationality and unitarity,
+  and a separate reconstruction argument proves that every finite-index sector is in its image.
 
-In the converse direction, Henriques and Tener construct a unitary VOA from a conformal net with finite-dimensional vacuum energy spaces, recover a VOA from its associated net under their AQFT-locality condition, and reconstruct modules from net representations [20] Theorems A–C and 8.9. Their AQFT-locality condition does not include polynomial energy bounds. Their annulus representation theory and bounded vacuum operations for multidisc embeddings provide the geometric tools used here [21,19]. Those constructions start from an existing net. In this paper they enter after the independent proof of strong locality, first for creation fields and ultimately for the reconstruction of arbitrary irreducible sectors.
+In the converse direction, Henriques and Tener construct a unitary VOA from a conformal net with
+  finite-dimensional vacuum energy spaces, recover a VOA from its associated net under their AQFT-locality
+  condition, and reconstruct modules from net representations [20] Theorems A–C and 8.9.
+  Their AQFT-locality condition does not include polynomial energy bounds.
+  Their annulus representation theory and bounded vacuum operations for multidisc embeddings provide the geometric
+  tools used here [21,19]. Those constructions start from an existing net.
+  In this paper they enter after the independent proof of strong locality,
+  first for creation fields and ultimately for the reconstruction of arbitrary irreducible sectors.
 
-Two earlier analytic methods are especially important to the proof. Carpi, Tanimoto and Weiner showed that optimal energy order for Hermitian primary generators implies strong locality [7] Theorem 3.7, with the correction [6]. Carpi and Tomassini obtained a $C_2$ exponential bound and used a contracting estimate to improve exponential growth to polynomial growth [8] Proposition 3.17 and Theorem 4.5. Here a finite-$C_2$ filtration supplies the first contraction for a generating family. A sharper normal-product count and a second contraction then yield the optimal order required for locality.
+Two earlier analytic methods are especially important to the proof.
+  Carpi, Tanimoto and Weiner showed that optimal energy order for Hermitian primary generators implies strong
+  locality [7] Theorem 3.7, with the correction [6]. Carpi and Tomassini obtained a $C_2$ exponential bound and
+  used a contracting estimate to improve exponential growth to polynomial growth [8] Proposition 3.17 and
+  Theorem 4.5. Here a finite-$C_2$ filtration supplies the first contraction for a generating family.
+  A sharper normal-product count and a second contraction then yield the optimal order required for locality.
 
-For loop-group models based on $S U \( N \)$, Wassermann computed Connes fusion using bounded primary fields and their transport relations [32]. Gui’s transport identities and Tener’s transport-form framework express candidate VOA fusion inner products through ordinary vertex operators [18,30]; Gui further developed their canonical normalization and geometric positivity [16]. Tener’s positivity theorem for regular VOAs assumes a unitary structure on the algebraic fusion product and a corresponding net representation of the source module [30] Theorem 4.4. Our argument constructs positivity on the full algebraic fusion object before presuming that it is unitarizable. To reach the remaining simple modules, we use Carnahan–Miyamoto’s fixed-point regularity and the Barron–Dong–Mason permutation construction [3,2]. The required permutation product rests on the extension tensor structures of Creutzig–Kanade–McRae and McRae [9,28] and the one-slot intertwiner correspondence of Dong–Li–Xu–Yu [11] Theorems 5.5 and 5.9.
+For loop-group models based on $S U \( N \)$, Wassermann computed Connes fusion using bounded primary fields and
+  their transport relations [32]. Gui’s transport identities and Tener’s transport-form framework express
+  candidate VOA fusion inner products through ordinary vertex operators [18,30];
+  Gui further developed their canonical normalization and geometric positivity [16].
+  Tener’s positivity theorem for regular VOAs assumes a unitary structure on the algebraic fusion product and a
+  corresponding net representation of the source module [30] Theorem 4.4.
+  Our argument constructs positivity on the full algebraic fusion object before presuming that it is unitarizable.
+  To reach the remaining simple modules, we use Carnahan–Miyamoto’s fixed-point regularity and the
+  Barron–Dong–Mason permutation construction [3,2]. The required permutation product rests on the extension tensor
+  structures of Creutzig–Kanade–McRae and McRae [9,28] and the one-slot intertwiner correspondence of
+  Dong–Li–Xu–Yu [11] Theorems 5.5 and 5.9.
 
 === 1.3 Proof strategy <proof-strategy>
 
-The central ordering issue is that a positive form on $V$ does not initially give positive forms on its modules or fusion products. We first work with modules already carrying such forms. An intertwining operator is viewed as a charged field, with a charge module, a source module and a target module. Its creation case has the vacuum $V$ as source. This supplies a starting point for the following sequence.
+The central ordering issue is that a positive form on $V$ does not initially give positive forms on its modules or
+  fusion products. We first work with modules already carrying such forms.
+  An intertwining operator is viewed as a charged field, with a charge module,
+  a source module and a target module. Its creation case has the vacuum $V$ as source.
+  This supplies a starting point for the following sequence.
 
-+ #emph[From $C_2$-cofiniteness to a net.] In Section 3, a finite generating family controls all normal products, and positivity of certain zero modes gives an exponential starting bound. Two contraction inequalities first give polynomial growth and then, for Hermitian quasi-primary fields of weight $d gt.eq 2$, the energy order $d - 1$ needed for locality. A sharper normal-product count and a Möbius estimate supply the second contraction.
-+ #emph[Integrating modules with given positive forms.] In Section 4, a fixed doubled annulus bounds local insertions by the norm of the inserted state. A Möbius factorization makes a round-annulus estimate uniform as the insertion approaches the circle. These estimates give polynomial bounds and bounded local regularizations for creation fields. Section 5 uses their total ranges to construct normal local-algebra actions on every already unitary module, with equality of the actual closed smeared fields.
-+ #emph[Positive fusion for unitary inputs.] Creation operators give positive Gram matrices in the vacuum local algebra. The normal representations just constructed transfer those matrices to any unitary source module. In Section 6, rigidity supplies a nondegenerate invariant form on the algebraic fusion product, and positivity of polynomial moments separates its conformal-energy spaces. This proves positivity of the canonical fusion form. The resulting charged-field bounds then apply to every intertwining operator between unitary modules.
-+ #emph[Unitarizing all simple modules.] Fix a simple module $P$, with graded contragredient $P^or$, set $D = V ⊗ V$, and let $U$ be its flip-fixed subalgebra. The transposition-twisted $D$-module $T$ obtained from the vacuum $V$ is unitary over $U$. In Section 7, the permutation product detects every simple constituent of $R = P ⊗ P^or$, restricted to $U$, inside the positive fusion product $T times.square_U T^or$. Thus $R$ has a positive $U$-invariant form. The action of the anti-invariant part of $D$ produces a second such form; their sum is invariant under all of $D$. Restriction to a copy of $P$ gives the required positive $V$-invariant form.
-+ #emph[From a tensor embedding to all sectors.] Section 8 now verifies Gui’s hypotheses for the CWX braided unitary tensor embedding, so every module gives a finite-index sector. Section 9 starts with an arbitrary irreducible locally normal net representation, without an index or finite-energy-multiplicity assumption. Its rotation spectrum is discrete. Henriques–Tener reconstruction, including [20] Remark 9.8, and algebraic regularity produce an ordinary simple module inside it; a reducing-projection argument identifies the whole sector with that module. The finite list of sectors, the split property and the Longo–Xu dichotomy give complete rationality. Decomposition into irreducibles then proves the equivalence for all additive finite-index objects.
++ #emph[From $C_2$-cofiniteness to a net.] In Section 3, a finite generating family controls all normal products,
+  and positivity of certain zero modes gives an exponential starting bound.
+  Two contraction inequalities first give polynomial growth and then,
+  for Hermitian quasi-primary fields of weight $d gt.eq 2$, the energy order $d - 1$ needed for locality.
+  A sharper normal-product count and a Möbius estimate supply the second contraction.
++ #emph[Integrating modules with given positive forms.] In Section 4,
+  a fixed doubled annulus bounds local insertions by the norm of the inserted state.
+  A Möbius factorization makes a round-annulus estimate uniform as the insertion approaches the circle.
+  These estimates give polynomial bounds and bounded local regularizations for creation fields.
+  Section 5 uses their total ranges to construct normal local-algebra actions on every already unitary module,
+  with equality of the actual closed smeared fields.
++ #emph[Positive fusion for unitary inputs.] Creation operators give positive Gram matrices in the vacuum local
+  algebra. The normal representations just constructed transfer those matrices to any unitary source module.
+  In Section 6, rigidity supplies a nondegenerate invariant form on the algebraic fusion product,
+  and positivity of polynomial moments separates its conformal-energy spaces.
+  This proves positivity of the canonical fusion form. The resulting charged-field bounds then apply to every
+  intertwining operator between unitary modules.
++ #emph[Unitarizing all simple modules.] Fix a simple module $P$, with graded contragredient $P^or$, set $D =
+  V ⊗ V$, and let $U$ be its flip-fixed subalgebra. The transposition-twisted $D$-module $T$ obtained from the
+  vacuum $V$ is unitary over $U$. In Section 7, the permutation product detects every simple constituent of $R =
+  P ⊗ P^or$, restricted to $U$, inside the positive fusion product $T times.square_U T^or$.
+  Thus $R$ has a positive $U$-invariant form. The action of the anti-invariant part of $D$ produces a second such
+  form; their sum is invariant under all of $D$. Restriction to a copy of $P$ gives the required positive
+  $V$-invariant form.
++ #emph[From a tensor embedding to all sectors.] Section 8 now verifies Gui’s hypotheses for the CWX braided
+  unitary tensor embedding, so every module gives a finite-index sector.
+  Section 9 starts with an arbitrary irreducible locally normal net representation,
+  without an index or finite-energy-multiplicity assumption. Its rotation spectrum is discrete.
+  Henriques–Tener reconstruction, including [20] Remark 9.8,
+  and algebraic regularity produce an ordinary simple module inside it;
+  a reducing-projection argument identifies the whole sector with that module.
+  The finite list of sectors, the split property and the Longo–Xu dichotomy give complete rationality.
+  Decomposition into irreducibles then proves the equivalence for all additive finite-index objects.
 
-Optimal energy order is needed for ordinary fields to generate a local net. For charged fields, polynomial bounds combined with bounded annulus regularization suffice.
+Optimal energy order is needed for ordinary fields to generate a local net.
+  For charged fields, polynomial bounds combined with bounded annulus regularization suffice.
 
 == 2 Algebraic and analytic conventions <sec:preliminaries>
 
-Throughout, $V$ has the hypotheses of Theorem 1. We collect the algebraic inputs that do not require positivity of all modules, and fix the operator conventions used in the estimates.
+Throughout, $V$ has the hypotheses of Theorem 1. We collect the algebraic inputs that do not require positivity of
+  all modules, and fix the operator conventions used in the estimates.
 
 === 2.1 Modules, duality and fusion <modules-duality-and-fusion>
 
-By the regularity theorem of Abe–Buhl–Dong [1] Theorem 4.5, every weak $V$-module is an algebraic direct sum of ordinary simple modules. There are finitely many simple isomorphism classes. Their lowest conformal weights are rational [10] Theorem 11.3. These weights are not assumed nonnegative before a positive invariant form is known. In the grading-restricted category, each simple occurs with finite multiplicity: infinitely many copies would give an infinite-dimensional space at its lowest weight. Thus the categories used here have finite length.
+By the regularity theorem of Abe–Buhl–Dong [1] Theorem 4.5,
+  every weak $V$-module is an algebraic direct sum of ordinary simple modules.
+  There are finitely many simple isomorphism classes. Their lowest conformal weights are rational [10]
+  Theorem 11.3. These weights are not assumed nonnegative before a positive invariant form is known.
+  In the grading-restricted category, each simple occurs with finite multiplicity:
+  infinitely many copies would give an infinite-dimensional space at its lowest weight.
+  Thus the categories used here have finite length.
 
-The Huang–Lepowsky tensor theory supplies the fusion product $M times.square N$ and its universal intertwining operator. For a target $K$, postcomposition identifies
+The Huang–Lepowsky tensor theory supplies the fusion product $M times.square
+  N$ and its universal intertwining operator. For a target $K$, postcomposition identifies
 
 $ "Hom"_V \( M times.square N \, K \) quad upright("with intertwining operators of type") quad binom(K, M med N) . $
 
-Products and iterates of these operators have absolutely convergent matrix coefficients in their respective regions, and the fusing isomorphism identifies them. We use the positive-real convention
+Products and iterates of these operators have absolutely convergent matrix coefficients in their respective
+  regions, and the fusing isomorphism identifies them. We use the positive-real convention
 
 $ x_1 > x_2 > x_1 - x_2 > 0 $
 
-for this identification, with real logarithms. The convergence and associativity statements include sums over intermediate conformal-energy projections [22] Theorems 3.5 and 3.7, Remark 3.8. Huang’s rigidity and modularity theorems apply under precisely the present strong rationality hypotheses [23] Theorems 1.1, 3.8 and 4.6. In particular the graded contragredient $M^or$ is a categorical dual. No positive form on $M$ is needed for these algebraic assertions.
+for this identification, with real logarithms. The convergence and associativity statements include sums over
+  intermediate conformal-energy projections [22] Theorems 3.5 and 3.7, Remark 3.8.
+  Huang’s rigidity and modularity theorems apply under precisely the present strong rationality hypotheses [23]
+  Theorems 1.1, 3.8 and 4.6. In particular the graded contragredient $M^or$ is a categorical dual.
+  No positive form on $M$ is needed for these algebraic assertions.
 
-We use ordinary, nonlogarithmic intertwining operators; the modules under consideration are semisimple with diagonalizable $L_0$. Their skew-symmetry and contragredient transformations are those of Frenkel–Huang–Lepowsky [13]. The conjugate module $macron(M)$ is the conjugate vector space with the action conjugated using $Theta$. For an arbitrary module its #emph[Hermitian dual] is
+We use ordinary, nonlogarithmic intertwining operators; the modules under consideration are semisimple with
+  diagonalizable $L_0$. Their skew-symmetry and contragredient transformations are those of Frenkel–Huang–Lepowsky
+  [13]. The conjugate module $macron(M)$ is the conjugate vector space with the action conjugated using $Theta$.
+  For an arbitrary module its #emph[Hermitian dual] is
 
 $ M^(upright(h)) = \( macron(M) \)^or . $
 
 The natural pairing is
 
 #[#set math.equation(numbering: n => "(2.1)")
- $ \[ x \, lambda \]_M = overline(lambda \( macron(x) \)) \, #h(2em) x in M \, quad lambda in M^(upright(h)) . $ <eq:hermitian-pairing>]
+ $ \[ x \, lambda \]_M = overline(lambda \( macron(x) \)) \, wide x in M \, quad
+   lambda in M^(upright(h)) . $ <eq:hermitian-pairing>]
 
-It is linear in $x$ and conjugate-linear in $lambda$. This pairing has no positivity assertion. An invariant sesquilinear form on $M$ corresponds to a module map $M arrow.r M^(upright(h))$.
+It is linear in $x$ and conjugate-linear in $lambda$. This pairing has no positivity assertion.
+  An invariant sesquilinear form on $M$ corresponds to a module map $M arrow.r M^(upright(h))$.
 
-All Hermitian inner products in the paper are linear in their first variable. A unitary module is a finite orthogonal sum of unitary simples: the grade-wise orthogonal complement of a submodule is invariant by the mode adjoint identities. A homomorphism between finite-length unitary modules extends to a bounded operator on their completions, and its adjoint is again a module homomorphism. To see the boundedness, decompose into simple types. On an irreducible type invariant positive forms differ by a positive scalar, by Schur’s lemma; the remaining maps act on finite-dimensional multiplicity spaces.
+All Hermitian inner products in the paper are linear in their first variable.
+  A unitary module is a finite orthogonal sum of unitary simples:
+  the grade-wise orthogonal complement of a submodule is invariant by the mode adjoint identities.
+  A homomorphism between finite-length unitary modules extends to a bounded operator on their completions,
+  and its adjoint is again a module homomorphism. To see the boundedness, decompose into simple types.
+  On an irreducible type invariant positive forms differ by a positive scalar, by Schur’s lemma;
+  the remaining maps act on finite-dimensional multiplicity spaces.
 
-The spectrum of $L_0$ on a unitary module is nonnegative. At a lowest vector of weight $h$, the relation $\[ L_1 \, L_(- 1) \] = 2 L_0$ gives $parallel L_(- 1) x parallel^2 = 2 h parallel x parallel^2$. Every weight in that simple module is $h + n$ for an integer $n gt.eq 0$; finite orthogonal sums give the general case. Constants in our estimates may depend on the fixed module; uniformity over all modules is unnecessary.
+The spectrum of $L_0$ on a unitary module is nonnegative.
+  At a lowest vector of weight $h$, the relation $\[ L_1 \, L_(- 1) \] =
+  2 L_0$ gives $parallel L_(- 1) x parallel^2 = 2 h parallel x parallel^2$.
+  Every weight in that simple module is $h + n$ for an integer $n gt.eq 0$;
+  finite orthogonal sums give the general case. Constants in our estimates may depend on the fixed module;
+  uniformity over all modules is unnecessary.
 
 === 2.2 Modes, smooth vectors and closed operators <modes-smooth-vectors-and-closed-operators>
 
 For a homogeneous state $a$ of weight $d$, the #emph[physical modes] are
 
 #[#set math.equation(numbering: n => "(2.2)")
- $ a \[ m \] = a_(\( m + d - 1 \)) \, #h(2em) \[ L_0 \, a \[ m \] \] = - m thin a \[ m \] . $ <eq:physical-modes>]
+ $ a \[ m \] = a_(\( m + d - 1 \)) \, wide \[ L_0 \, a \[ m \] \] = - m thin a \[ m \] . $ <eq:physical-modes>]
 
-We use the same convention for intertwining fields, whose physical indices may lie in nonintegral translates of $bb(Z)$. On an algebraic module, let $Pi_lambda$ denote the projection onto the $L_0$-eigenspace of energy $lambda$ along the other eigenspaces. This definition does not require a Hermitian form. On a unitary completion, the same symbol denotes its orthogonal extension, and $P_N$ denotes the spectral projection onto energies at most $N$. We write
+We use the same convention for intertwining fields, whose physical indices may lie in nonintegral translates of
+  $bb(Z)$. On an algebraic module, let $Pi_lambda$ denote the projection onto the $L_0$-eigenspace of energy
+  $lambda$ along the other eigenspaces. This definition does not require a Hermitian form.
+  On a unitary completion, the same symbol denotes its orthogonal extension,
+  and $P_N$ denotes the spectral projection onto energies at most $N$. We write
 
 $ cal(H)_M^oo = ⋂_(k gt.eq 0) "Dom" \( 1 + L_0 \)^k $
 
 for the smooth vectors, with their energy Sobolev seminorms. Their finite-energy subspace is the algebraic module $M$.
 
-A state is #emph[quasi-primary] if $L_1 a = 0$, and #emph[primary] if $L_n a = 0$ for every $n > 0$. A quasi-primary state of integral weight $d$ is called Hermitian when $\( - 1 \)^d Theta a = a$. The invariant form then gives the level-wise adjoint identity
+A state is #emph[quasi-primary] if $L_1 a = 0$, and #emph[primary] if $L_n a = 0$ for every $n > 0$.
+  A quasi-primary state of integral weight $d$ is called Hermitian when $\( - 1 \)^d Theta a = a$.
+  The invariant form then gives the level-wise adjoint identity
 
 #[#set math.equation(numbering: n => "(2.3)")
  $ a \[ m \]^(*) = a \[ - m \] . $ <eq:hermitian-mode-adjoint>]
 
-For a general state, the adjoint formula has the additional, finitely many $L_1$-descendant terms. We use (2.3) only with its stated hypothesis.
+For a general state, the adjoint formula has the additional, finitely many $L_1$-descendant terms.
+  We use (2.3) only with its stated hypothesis.
 
-Polynomial mode bounds imply that smooth smearings and their formal adjoints map smooth vectors continuously to smooth vectors. Indeed Fourier coefficients of a smooth test decay faster than every power, and commuting $\( 1 + L_0 \)^k$ across a mode costs only a polynomial in its energy shift. Finite-energy truncations converge in all these seminorms. Consequently the closures of a polynomially bounded smear from finite-energy vectors and from smooth vectors agree. We will repeatedly use this explicit core.
+Polynomial mode bounds imply that smooth smearings and their formal adjoints map smooth vectors continuously to
+  smooth vectors. Indeed Fourier coefficients of a smooth test decay faster than every power,
+  and commuting $\( 1 + L_0 \)^k$ across a mode costs only a polynomial in its energy shift.
+  Finite-energy truncations converge in all these seminorms.
+  Consequently the closures of a polynomially bounded smear from finite-energy vectors and from smooth vectors
+  agree. We will repeatedly use this explicit core.
 
-For a charged field, smearing is performed on an interval with a chosen angular lift; its physical normalization is $z^d cal(Y) \( a \, z \)$. Fractional powers use the branch specified by that lift. Changing the normalization by a smooth nowhere-zero phase merely changes the test function. At a reflected coordinate the conjugate branch is always used.
+For a charged field, smearing is performed on an interval with a chosen angular lift;
+  its physical normalization is $z^d cal(Y) \( a \, z \)$. Fractional powers use the branch specified by that
+  lift. Changing the normalization by a smooth nowhere-zero phase merely changes the test function.
+  At a reflected coordinate the conjugate branch is always used.
 
-Positive-energy unitary Virasoro representations integrate to the centrally extended covering group of circle diffeomorphisms and satisfy the usual linear energy bounds [5] Proposition 3.2, Remark 3.3 and Theorem 3.4; see also [31] Theorem 5.2.1 and Proposition 5.3.1. The resulting Möbius and diffeomorphism operators preserve the smooth space. We use their fixed conformal normalization; in particular the Virasoro relation $\[ L_1 \, L_(- 1) \] = 2 L_0$ fixes the additive constant in $L_0$. Annulus actions and their Sobolev properties will be introduced only after the local net has been constructed.
+Positive-energy unitary Virasoro representations integrate to the centrally extended covering group of circle
+  diffeomorphisms and satisfy the usual linear energy bounds [5] Proposition 3.2, Remark 3.3 and Theorem 3.4;
+  see also [31] Theorem 5.2.1 and Proposition 5.3.1. The resulting Möbius and diffeomorphism operators preserve
+  the smooth space. We use their fixed conformal normalization;
+  in particular the Virasoro relation $\[ L_1 \, L_(- 1) \] = 2 L_0$ fixes the additive constant in $L_0$.
+  Annulus actions and their Sobolev properties will be introduced only after the local net has been constructed.
 
-For a closed densely defined operator $T$, its graph is a closed subspace of the direct sum of its source and target Hilbert spaces. The entries of the orthogonal graph projection are bounded operators. Graph projections allow us to state precisely that a normal representation carries one closed field to another, or that a bounded projection reduces a closed field. Agreement on a dense set alone will not be used as a substitute for agreement of closed graphs.
+For a closed densely defined operator $T$, its graph is a closed subspace of the direct sum of its source and
+  target Hilbert spaces. The entries of the orthogonal graph projection are bounded operators.
+  Graph projections allow us to state precisely that a normal representation carries one closed field to another,
+  or that a bounded projection reduces a closed field. Agreement on a dense set alone will not be used as a
+  substitute for agreement of closed graphs.
 
 === 2.3 Creation and the adjoint convention <creation-and-the-adjoint-convention>
 
 For a unitary module $M$, the creation intertwining operator is
 
 #[#set math.equation(numbering: n => "(2.4)")
- $ cal(Y)_M^(+) \( a \, z \) v = e^(z L_(- 1)) Y^M \( v \, - z \) a \, #h(2em) a in M \, quad v in V . $ <eq:creation>]
+ $ cal(Y)_M^(+) \( a \, z \) v = e^(z L_(- 1)) Y^M \( v \, - z \) a \, wide a in M \, quad v in V . $ <eq:creation>]
 
-Its type is $binom(M, M med V)$. We use Tener’s adjoint convention [30] Section 2 and Proposition 3.10; its adjoint, the annihilation operator, is
+Its type is $binom(M, M med V)$. We use Tener’s adjoint convention [30] Section 2 and Proposition 3.10;
+  its adjoint, the annihilation operator, is
 
-$ cal(Y)_M^(-) = \( cal(Y)_M^(+) \)^dagger \, #h(2em) upright("of type ") binom(V, macron(M) med M) . $
+$ cal(Y)_M^(-) = \( cal(Y)_M^(+) \)^dagger \, wide upright("of type ") binom(V, macron(M) med M) . $
 
 For positive $r$, put
 
 #[#set math.equation(numbering: n => "(2.5)")
  $ theta_r a = e^(r L_1) e^(i pi L_0) r^(- 2 L_0) macron(a) in macron(M) . $ <eq:theta-convention>]
 
-For complex coordinates the logarithms follow the chosen angular lift. The reflection formula uses $theta_(macron(w))$ and the coordinate $macron(w)^(- 1)$. These conventions fix the phase of every transport form below, including when the lowest weight of $M$ is nonintegral. The comparison with Gui’s canonical fusion normalization is made explicitly in the positivity argument.
+For complex coordinates the logarithms follow the chosen angular lift.
+  The reflection formula uses $theta_(macron(w))$ and the coordinate $macron(w)^(- 1)$.
+  These conventions fix the phase of every transport form below,
+  including when the lowest weight of $M$ is nonintegral. The comparison with Gui’s canonical fusion normalization
+  is made explicitly in the positivity argument.
 
-Tener’s Propositions 3.10–3.11 [30] give two inputs we will need before general fusion positivity. First, creation satisfies the vacuum-source transport identity. Second, for unitary charge, source and target, an intertwining operator applied to finite-energy vectors has Hilbert-space values on $0 < \| z \| < 1$, holomorphic on each branch. The latter conclusion uses regularity and convergence of products with the adjoint intertwiner. It does not require an energy bound or a net representation on the source. We will distinguish this Hilbert-valued convergence from the operator bounds that we prove later.
+Tener’s Propositions 3.10–3.11 [30] give two inputs we will need before general fusion positivity.
+  First, creation satisfies the vacuum-source transport identity.
+  Second, for unitary charge, source and target, an intertwining operator applied to finite-energy vectors has
+  Hilbert-space values on $0 < \| z \| < 1$, holomorphic on each branch.
+  The latter conclusion uses regularity and convergence of products with the adjoint intertwiner.
+  It does not require an energy bound or a net representation on the source.
+  We will distinguish this Hilbert-valued convergence from the operator bounds that we prove later.
 
 === 2.4 The scalar case <the-scalar-case>
 
-If $V = bb(C) Omega$, the conformal vector is zero, every grading-restricted module is finite dimensional in degree zero, and all fields are constant scalar fields. The net on the one-dimensional vacuum space is the scalar net. It is irreducible, split and strongly additive, and its two-interval index is one. Its additive dualizable representation category is the category of finite-dimensional Hilbert spaces. Creation, fusion and CWX integration are the usual tensor product over $bb(C)$, with the flip braiding. Thus Theorem 1 holds in this case.
+If $V = bb(C) Omega$, the conformal vector is zero, every grading-restricted module is finite dimensional in
+  degree zero, and all fields are constant scalar fields. The net on the one-dimensional vacuum space is the
+  scalar net. It is irreducible, split and strongly additive, and its two-interval index is one.
+  Its additive dualizable representation category is the category of finite-dimensional Hilbert spaces.
+  Creation, fusion and CWX integration are the usual tensor product over $bb(C)$, with the flip braiding.
+  Thus Theorem 1 holds in this case.
 
-We assume $V eq.not bb(C) Omega$ henceforth. Its central charge is positive: $parallel nu parallel^2 = c \/ 2$, so $c = 0$ would force $nu = 0$, and then CFT type would force $V = V_0 = bb(C) Omega$. The nontriviality assumption is used in the flip-orbifold argument and in the usual conformal-net sector theory.
+We assume $V eq.not bb(C) Omega$ henceforth. Its central charge is positive:
+  $parallel nu parallel^2 = c \/ 2$, so $c = 0$ would force $nu = 0$, and then CFT type would force $V = V_0 =
+  bb(C) Omega$. The nontriviality assumption is used in the flip-orbifold argument and in the usual conformal-net
+  sector theory.
 
 == 3 Energy bounds and strong locality <sec:energy>
 
-Our first analytic task is to construct the vacuum net. We do this without assuming that any module has already been integrated to a net representation. The argument has two stages. A finite set of quasi-primary generators first gives polynomial energy bounds of unspecified order. A second estimate improves the order to the conformal weight minus one, which is the order needed for the strong-locality criterion.
+Our first analytic task is to construct the vacuum net. We do this without assuming that any module has already
+  been integrated to a net representation. The argument has two stages.
+  A finite set of quasi-primary generators first gives polynomial energy bounds of unspecified order.
+  A second estimate improves the order to the conformal weight minus one,
+  which is the order needed for the strong-locality criterion.
 
 #thm([Theorem 3.1.])[
-  #emph[Let $V$ be a simple unitary strongly rational vertex operator algebra, and let $W$ be a grading-restricted unitary $V$-module. Every vertex operator on $W$ satisfies polynomial energy bounds. More precisely, if $a in V_d$ is quasi-primary, $d gt.eq 2$, and $\( - 1 \)^d Theta a = a$, then there are constants $C_a > 0$ and $p_a in bb(Z)_(gt.eq 0)$ such that 
+  #emph[Let $V$ be a simple unitary strongly rational vertex operator algebra,
+    and let $W$ be a grading-restricted unitary $V$-module. Every vertex operator on $W$ satisfies polynomial
+    energy bounds. More precisely, if $a in V_d$ is quasi-primary, $d gt.eq 2$, and $\( - 1 \)^d Theta a = a$,
+    then there are constants $C_a > 0$ and $p_a in bb(Z)_(gt.eq 0)$ such that
 #[#set math.equation(numbering: n => "(3.1)")
- $ parallel a \[ m \] xi parallel lt.eq C_a \( 1 + \| m \| \)^(p_a) parallel \( 1 + L_0 \)^(d - 1) xi parallel \, #h(2em) m in bb(Z) \, quad xi in W . $ <eq:optimal-vertex-bound>]
+ $ parallel a \[ m \] xi parallel lt.eq C_a \( 1 + \| m \| \)^(p_a) parallel \( 1 + L_0 \)^(d - 1) xi parallel \,
+   wide m in bb(Z) \, quad xi in W . $ <eq:optimal-vertex-bound>]
 
- Weight-one fields and the Virasoro field satisfy energy bounds of at most linear order. The constants may depend on $V$, $W$, and $a$.]
+ Weight-one fields and the Virasoro field satisfy energy bounds of at most linear order.
+   The constants may depend on $V$, $W$, and $a$.]
 ] <thm:energy>
 
-The scalar VOA satisfies the theorem directly. We assume for the proof that $V eq.not bb(C) Omega$, and fix $W$. Since $W$ is a finite orthogonal sum of ordinary unitary modules, it suffices to establish all estimates on those summands and take the maximum of the finitely many constants. Write $W \( h \)$ for the energy-$h$ subspace, with $W \( h \) = 0$ when $h$ is absent. These spaces are finite dimensional and mutually orthogonal. Unitarity of the positive-energy Virasoro representation gives $h gt.eq 0$. We use the spectral projections
+The scalar VOA satisfies the theorem directly. We assume for the proof that $V eq.not bb(C) Omega$, and fix $W$.
+  Since $W$ is a finite orthogonal sum of ordinary unitary modules,
+  it suffices to establish all estimates on those summands and take the maximum of the finitely many constants.
+  Write $W \( h \)$ for the energy-$h$ subspace, with $W \( h \) = 0$ when $h$ is absent.
+  These spaces are finite dimensional and mutually orthogonal.
+  Unitarity of the positive-energy Virasoro representation gives $h gt.eq 0$. We use the spectral projections
 
-$ P_N = upright(bold(1))_(\[ 0 \, N \]) \( L_0 \) \, #h(2em) Pi_h = upright(bold(1))_({ h }) \( L_0 \) \, #h(2em) H = 1 + L_0 . $
+$ P_N = upright(bold(1))_(\[ 0 \, N \]) \( L_0 \) \, wide Pi_h = upright(bold(1))_({ h }) \( L_0 \) \, wide H =
+  1 + L_0 . $
 
-All mode identities below initially act on finite-energy vectors. For an Hermitian quasi-primary $a$ of weight $d$, the invariant form gives
+All mode identities below initially act on finite-energy vectors.
+  For an Hermitian quasi-primary $a$ of weight $d$, the invariant form gives
 
 #[#set math.equation(numbering: n => "(3.2)")
- $ a \[ m \]^(*) = a \[ - m \] \, #h(2em) \[ L_j \, a \[ m \] \] = \( \( d - 1 \) j - m \) a \[ j + m \] quad \( j = - 1 \, 0 \, 1 \) \, $ <eq:energy-adjoint>]
+ $ a \[ m \]^(*) = a \[ - m \] \, wide \[ L_j \, a \[ m \] \] = \( \( d - 1 \) j - m \) a \[ j + m \]
+   quad \( j = - 1 \, 0 \, 1 \) \, $ <eq:energy-adjoint>]
 
 where the adjoint is taken between the indicated energy spaces.
 
 === 3.1 A finite generating filtration <a-finite-generating-filtration>
 
-Choose an integer $D gt.eq 2$ such that $V_w = C_2 \( V \)_w$ for all $w > D$. In each weight $1 \, dots.h \, D$, choose a finite set of Hermitian vectors spanning the quasi-primary space, and let $S$ be their union. Such a choice is possible because $\( - 1 \)^w Theta$ is an antilinear involution of that space. We distinguish the conformal weight of a monomial from the sum of the weights of its generators.
+Choose an integer $D gt.eq 2$ such that $V_w = C_2 \( V \)_w$ for all $w > D$.
+  In each weight $1 \, dots.h \, D$, choose a finite set of Hermitian vectors spanning the quasi-primary space,
+  and let $S$ be their union. Such a choice is possible because $\( - 1 \)^w
+  Theta$ is an antilinear involution of that space. We distinguish the conformal weight of a monomial from the sum
+  of the weights of its generators.
 
 #thm([Lemma 3.2.])[
-  #emph[Every homogeneous vector of weight $w$ is a linear combination of monomials 
+  #emph[Every homogeneous vector of weight $w$ is a linear combination of monomials
 #[#set math.equation(numbering: n => "(3.3)")
- $ b = a_(\( - 1 - n_1 \))^1 dots.h.c a_(\( - 1 - n_ell \))^ell Omega \, #h(2em) a^i in S \, quad n_i gt.eq 0 \, $ <eq:energy-monomial>]
+ $ b = a_(\( - 1 - n_1 \))^1 dots.h.c a_(\( - 1 - n_ell \))^ell Omega \, wide a^i in S \, quad n_i gt.eq 0 \,
+   $ <eq:energy-monomial>]
 
- with 
-$ D_b := sum_(i = 1)^ell d_(a^i) \, #h(2em) w = D_b + sum_(i = 1)^ell n_i . $
+ with
+$ D_b := sum_(i = 1)^ell d_(a^i) \, wide w = D_b + sum_(i = 1)^ell n_i . $
 
  If the vector belongs to $C_2 \( V \)_w$, the monomials can be chosen with $D_b lt.eq w - 1$.]
 ] <lem:energy-filtration>
 
 #proof[
-  Let $E_t$ be the span of arbitrary-mode strings of elements of $S$ on $Omega$ whose total generator weight is at most $t$. Induction on string length, using the iterate identity, gives
+  Let $E_t$ be the span of arbitrary-mode strings of elements of $S$ on $Omega$ whose total generator weight is at
+    most $t$. Induction on string length, using the iterate identity, gives
   #[#set math.equation(numbering: n => "(3.4)")
-   $ u_(\( r \)) E_s subset E_(t + s) #h(2em) \( u in E_t \, r in bb(Z) \) . $ <eq:energy-filtration-stability>]
-  For the induction step, write a chosen string as $u = a_(\( m \)) u'$, with $a in S$ and $u'$ of generator degree at most $t - d_a$. The iterate formula expresses $u_(\( r \)) v$, $v in E_s$, as a sum of terms of the two forms
-  $ a_(\( m - j \)) u'_(\( r + j \)) v \, #h(2em) u'_(\( m + r - j \)) a_(\( j \)) v \, #h(2em) j gt.eq 0 . $
-  For the first, apply induction to $u'$ and then prepend the generator mode. For the second, $a_(\( j \)) v in E_(s + d_a)$, so induction on $u'$ again gives a vector in $E_(t + s)$. Each of the two sums truncates on the fixed vector $v$.
+   $ u_(\( r \)) E_s subset E_(t + s) wide \( u in E_t \, r in bb(Z) \) . $ <eq:energy-filtration-stability>]
+  For the induction step, write a chosen string as $u = a_(\( m \)) u'$,
+    with $a in S$ and $u'$ of generator degree at most $t - d_a$.
+    The iterate formula expresses $u_(\( r \)) v$, $v in E_s$, as a sum of terms of the two forms
+  $ a_(\( m - j \)) u'_(\( r + j \)) v \, wide u'_(\( m + r - j \)) a_(\( j \)) v \, wide j gt.eq 0 . $
+  For the first, apply induction to $u'$ and then prepend the generator mode.
+    For the second, $a_(\( j \)) v in E_(s + d_a)$, so induction on $u'$ again gives a vector in $E_(t + s)$.
+    Each of the two sums truncates on the fixed vector $v$.
   We first prove $V_w subset E_w$ by induction on $w$. At weights at most $D$, use the orthogonal decomposition
   $ V_w = \( V_w ∩ ker L_1 \) + L_(- 1) V_(w - 1) . $
-  The first summand is spanned by our chosen generators, and differentiation does not increase generator weight. A homogeneous term $u_(\( - 2 \)) v$ of weight $w$ has $upright("wt") \( u \) + upright("wt") \( v \) = w - 1$. If both factors have positive weight, induction and (3.4) put it in $E_(w - 1)$. If $v = Omega$, it is $L_(- 1) u$ and has the same property; terms with $u in bb(C) Omega$ vanish. This proves $C_2 \( V \)_w subset E_(w - 1)$ and completes the induction above $D$ as well.
-  Now order an arbitrary-mode string by moving nonnegative ordinary modes to the right. A commutator of modes of generators $a \, b$ involves $a_(\( j \)) b$, $j gt.eq 0$, of weight at most $d_a + d_b - 1$. The inclusion just proved places this state in $E_(d_a + d_b - 1)$. Thus every commutator term lowers the total generator weight, whereas the uncommuted term moves the chosen nonnegative mode one place to the right. Induction on total generator weight, and then on the number of such moves, puts the string into negative ordinary-mode form. A nonnegative mode reaching $Omega$ vanishes. Taking homogeneous components proves both assertions. ◻
+  The first summand is spanned by our chosen generators, and differentiation does not increase generator weight.
+    A homogeneous term $u_(\( - 2 \)) v$ of weight $w$ has $upright("wt") \( u \) + upright("wt") \( v \) = w -
+    1$. If both factors have positive weight, induction and (3.4) put it in $E_(w - 1)$.
+    If $v = Omega$, it is $L_(- 1) u$ and has the same property; terms with $u in bb(C) Omega$ vanish.
+    This proves $C_2 \( V \)_w subset E_(w - 1)$ and completes the induction above $D$ as well.
+  Now order an arbitrary-mode string by moving nonnegative ordinary modes to the right.
+    A commutator of modes of generators $a \, b$ involves $a_(\( j \)) b$, $j gt.eq 0$, of weight at most $d_a +
+    d_b - 1$. The inclusion just proved places this state in $E_(d_a + d_b - 1)$.
+    Thus every commutator term lowers the total generator weight,
+    whereas the uncommuted term moves the chosen nonnegative mode one place to the right.
+    Induction on total generator weight, and then on the number of such moves,
+    puts the string into negative ordinary-mode form. A nonnegative mode reaching $Omega$ vanishes.
+    Taking homogeneous components proves both assertions. ◻
 ]
 
-We shall use only finitely many expansions from Lemma 3 at a time. Constants may depend on these fixed expansions. In particular, no uniformity over all monomials is asserted.
+We shall use only finitely many expansions from Lemma 3 at a time. Constants may depend on these fixed expansions.
+  In particular, no uniformity over all monomials is asserted.
 
-Here is the mode expansion that controls the intermediate energies. Iterating the negative-product formula from the outside of (3.3) places each generator either on the left, with physical index
+Here is the mode expansion that controls the intermediate energies.
+  Iterating the negative-product formula from the outside of (3.3) places each generator either on the left,
+  with physical index
 
 #[#set math.equation(numbering: n => "(3.5)")
- $ - d_(a^i) - n_i - j_i \, #h(2em) upright("or on the right, with index") #h(2em) 1 - d_(a^i) + j_i \, #h(2em) j_i gt.eq 0 . $ <eq:energy-left-right-indices>]
+ $ - d_(a^i) - n_i - j_i \, wide upright("or on the right, with index") wide 1 - d_(a^i) + j_i \, wide j_i gt.eq
+   0 . $ <eq:energy-left-right-indices>]
 
-The coefficients are products of signed binomial coefficients, bounded by $C_b product_i \( 1 + j_i \)^(n_i)$. There are finitely many order patterns; in each pattern every left factor precedes every right factor. The vacuum mode imposes the constraint that the physical indices sum to the desired mode of $b$.
+The coefficients are products of signed binomial coefficients, bounded by $C_b product_i \( 1 + j_i \)^(n_i)$.
+  There are finitely many order patterns; in each pattern every left factor precedes every right factor.
+  The vacuum mode imposes the constraint that the physical indices sum to the desired mode of $b$.
 
-In a matrix element with both endpoint energies at most $N$, move the left factors to the testing vector by adjunction. They then all lower energy. Each right factor can raise energy by at most $d_(a^i) - 1$. Every intermediate vector therefore lies in $P_(N + c_b) W$ for a fixed integer $c_b$, and every relevant $j_i$ is $O_b \( 1 + N \)$. This proves finiteness of the sums used below and permits the insertion of those fixed intermediate cutoffs.
+In a matrix element with both endpoint energies at most $N$,
+  move the left factors to the testing vector by adjunction. They then all lower energy.
+  Each right factor can raise energy by at most $d_(a^i) - 1$.
+  Every intermediate vector therefore lies in $P_(N + c_b) W$ for a fixed integer $c_b$,
+  and every relevant $j_i$ is $O_b \( 1 + N \)$. This proves finiteness of the sums used below and permits the
+  insertion of those fixed intermediate cutoffs.
 
 === 3.2 Polynomial energy bounds <polynomial-energy-bounds>
 
@@ -263,50 +505,70 @@ For integer $N gt.eq 1$, define
 
 $ B_N = max (1 \, max_(a in S \, thin m in bb(Z)) parallel P_N a \[ m \] P_N parallel^(1 \/ d_a)) . $
 
-The $d_a$th root measures growth per unit of generator weight, so a monomial of generator degree $D_b$ contributes the power $B_(N + c_b)^(D_b)$. Only $\| m \| lt.eq N$ can contribute. The preceding mode expansion gives, for each fixed homogeneous $u in V_w$,
+The $d_a$th root measures growth per unit of generator weight,
+  so a monomial of generator degree $D_b$ contributes the power $B_(N + c_b)^(D_b)$.
+  Only $\| m \| lt.eq N$ can contribute. The preceding mode expansion gives, for each fixed homogeneous $u in V_w$,
 
 #[#set math.equation(numbering: n => "(3.6)")
  $ parallel P_N u \[ mu \] P_N parallel lt.eq C_u \( 1 + N \)^(p_u) B_(N + c_u)^w . $ <eq:rough-monomial-bound>]
 
 All cutoffs and exponents in this preliminary estimate are fixed once the expression for $u$ is fixed.
 
-We need an initial growth bound before improving (3.6). For $a in S$ of weight $d$, set $T_a = \( a_(\( - 1 \)) a \) \[ 0 \]$. The normal-product formula reads
+We need an initial growth bound before improving (3.6). For $a in S$ of weight $d$,
+  set $T_a = \( a_(\( - 1 \)) a \) \[ 0 \]$. The normal-product formula reads
 
 #[#set math.equation(numbering: n => "(3.7)")
- $ T_a = sum_(j gt.eq 0) #scale(x: 120%, y: 120%)[\(] a \[ - d - j \] a \[ d + j \] + a \[ d - 1 - j \] a \[ j + 1 - d \] #scale(x: 120%, y: 120%)[\)] . $ <eq:positive-normal-product>]
+ $ T_a = sum_(j gt.eq 0) #scale(x: 120%, y: 120%)[\(] a \[ - d - j \] a \[ d + j \] +
+   a \[ d - 1 - j \] a \[ j + 1 - d \] #scale(x: 120%, y: 120%)[\)] . $ <eq:positive-normal-product>]
 
-Every summand is a positive square as a finite-energy quadratic form. The second family contains $a \[ m \]^(*) a \[ m \]$ for every $m gt.eq 0$. Consequently
+Every summand is a positive square as a finite-energy quadratic form.
+  The second family contains $a \[ m \]^(*) a \[ m \]$ for every $m gt.eq 0$. Consequently
 
 #[#set math.equation(numbering: n => "(3.8)")
  $ sum_(m gt.eq 0) parallel a \[ m \] xi parallel^2 lt.eq chevron.l T_a xi \, xi chevron.r . $ <eq:positive-column>]
 
-Zhu’s ordinary-module one-point convergence theorem applies to $a_(\( - 1 \)) a$ [34] Sections 4.3–4.4 and Theorem 4.4.1. Its finiteness Condition C holds here: besides $C_2$-cofiniteness and finite-dimensional grades, the required spanning by Virasoro descendants of primary vectors follows from unitarity. For fixed $0 < q < 1$ we therefore have
+Zhu’s ordinary-module one-point convergence theorem applies to $a_(\( - 1 \))
+  a$ [34] Sections 4.3–4.4 and Theorem 4.4.1. Its finiteness Condition C holds here:
+  besides $C_2$-cofiniteness and finite-dimensional grades,
+  the required spanning by Virasoro descendants of primary vectors follows from unitarity.
+  For fixed $0 < q < 1$ we therefore have
 
 $ Z_a \( q \) := "Tr"_W \( T_a q^(L_0) \) < oo . $
 
-Here the trace is the convergent graded sum $sum_h q^h "Tr"_(W \( h \)) \( T_a \|_(W \( h \)) \)$; no bounded operator extension of $T_a$ is presumed. Positivity on each energy level and (3.8) give
+Here the trace is the convergent graded sum $sum_h q^h "Tr"_(W \( h \)) \( T_a \|_(W \( h \)) \)$;
+  no bounded operator extension of $T_a$ is presumed. Positivity on each energy level and (3.8) give
 
 $ sup_(xi in W \( h \)\
 parallel xi parallel = 1) sum_(m gt.eq 0) parallel a \[ m \] xi parallel^2 lt.eq q^(- h) Z_a \( q \) . $
 
-Negative compressed modes are controlled by adjunction. It follows that $log B_N = O \( N + 1 \)$. This is the positive-trace method used for the vacuum exponential bound in [8] Lemma 3.5 and Proposition 3.17; the ordinary-module trace theorem gives the version needed here.
+Negative compressed modes are controlled by adjunction. It follows that $log B_N = O \( N + 1 \)$.
+  This is the positive-trace method used for the vacuum exponential bound in [8] Lemma 3.5 and Proposition 3.17;
+  the ordinary-module trace theorem gives the version needed here.
 
 For $a in S$ of weight $d$ and $m > 0$, the mode commutator is
 
 #[#set math.equation(numbering: n => "(3.9)")
- $ C_(a \, m) := \[ a \[ m \] \, a \[ - m \] \] = sum_(j gt.eq 0) binom(d - 1 + m, j) \( a_(\( j \)) a \) \[ 0 \] . $ <eq:self-mode-commutator>]
+ $ C_(a \, m) := \[ a \[ m \] \, a \[ - m \] \] = sum_(j gt.eq 0)
+   binom(d - 1 + m, j) \( a_(\( j \)) a \) \[ 0 \] . $ <eq:self-mode-commutator>]
 
 The nonzero states on the right have weights at most $2 d - 1$. Thus (3.6), uniformly for $1 lt.eq m lt.eq N$, implies
 
 #[#set math.equation(numbering: n => "(3.10)")
  $ parallel C_(a \, m) P_N parallel lt.eq C \( 1 + N \)^p B_(N + c)^(2 d - 1) . $ <eq:rough-commutator>]
 
-The descent from a commutator estimate to a mode estimate is the mechanism used in [7] Proposition 3.3. We record it explicitly with its input-energy cutoff, which enters the subsequent iteration. Put $A_h = parallel a \[ - m \] : W \( h \) arrow.r W \( h + m \) parallel$, interpreting absent levels as zero. Adjunction and (3.9) give
+The descent from a commutator estimate to a mode estimate is the mechanism used in [7] Proposition 3.3.
+  We record it explicitly with its input-energy cutoff, which enters the subsequent iteration.
+  Put $A_h = parallel a \[ - m \] : W \( h \) arrow.r W \( h + m \) parallel$, interpreting absent levels as zero.
+  Adjunction and (3.9) give
 
 #[#set math.equation(numbering: n => "(3.11)")
  $ A_h^2 lt.eq A_(h - m)^2 + parallel C_(a \, m) \|_(W \( h \)) parallel . $ <eq:mode-norm-descent>]
 
-Indeed, apply the identity to a unit vector in $W \( h \)$, and note that $parallel a \[ m \] \|_(W \( h \)) parallel = A_(h - m)$. Iterating descends to negative energy in at most $1 + N \/ m$ steps when $h lt.eq N$. There is no factor depending on the dimensions of the levels. The raising mode may have output above $N$; only the input level enters the commutator estimate.
+Indeed, apply the identity to a unit vector in $W \( h \)$,
+  and note that $parallel a \[ m \] \|_(W \( h \)) parallel = A_(h - m)$.
+  Iterating descends to negative energy in at most $1 + N \/ m$ steps when $h lt.eq N$.
+  There is no factor depending on the dimensions of the levels.
+  The raising mode may have output above $N$; only the input level enters the commutator estimate.
 
 The same argument applied to $\[ L_m \, L_(- m) \] = 2 m L_0 + c / 12 \( m^3 - m \)$ gives
 
@@ -318,24 +580,41 @@ In particular $L_(plus.minus 1)$ have linear energy bounds. For the zero mode of
 #[#set math.equation(numbering: n => "(3.13)")
  $ d thin a \[ 0 \] = \[ L_1 \, a \[ - 1 \] \] . $ <eq:zero-mode-rough-transfer>]
 
-The two products involve only a fixed shift of input energy. Combining (3.10)–(3.13), and enlarging a common fixed cutoff, yields
+The two products involve only a fixed shift of input energy.
+  Combining (3.10)–(3.13), and enlarging a common fixed cutoff, yields
 
 #[#set math.equation(numbering: n => "(3.14)")
- $ B_N lt.eq C \( 1 + N \)^p B_(N + c)^rho \, #h(2em) rho = 1 - frac(1, 2 D) < 1 . $ <eq:first-energy-contraction>]
+ $ B_N lt.eq C \( 1 + N \)^p B_(N + c)^rho \, wide rho = 1 - frac(1, 2 D) < 1 . $ <eq:first-energy-contraction>]
 
-The use of an exponential starting bound to close a contraction with an additive cutoff also appears in the proof of [8] Theorem 4.5. Here the finite-$C_2$ filtration supplies the contracting estimate. The contraction remains effective despite the increasing cutoff: after $r$ iterations,
+The use of an exponential starting bound to close a contraction with an additive cutoff also appears in the proof
+  of [8] Theorem 4.5. Here the finite-$C_2$ filtration supplies the contracting estimate.
+  The contraction remains effective despite the increasing cutoff: after $r$ iterations,
 
-$ log B_N lt.eq sum_(j = 0)^(r - 1) rho^j #scale(x: 120%, y: 120%)[\(] log C + p log \( 1 + N + j c \) #scale(x: 120%, y: 120%)[\)] + rho^r log B_(N + r c) . $
+$ log B_N lt.eq sum_(j = 0)^(r - 1) rho^j #scale(x: 120%, y: 120%)[\(] log C +
+  p log \( 1 + N + j c \) #scale(x: 120%, y: 120%)[\)] + rho^r log B_(N + r c) . $
 
-The final term tends to zero by the exponential starting bound. The inequality $1 + N + j c lt.eq \( 1 + N \) \( 1 + j c \)$ bounds the sum by $C' + frac(p, 1 - rho) log \( 1 + N \)$. Hence $B_N$ grows polynomially.
+The final term tends to zero by the exponential starting bound.
+  The inequality $1 + N + j c lt.eq \( 1 + N \) \( 1 + j c \)$ bounds the sum by $C' +
+  frac(p, 1 - rho) log \( 1 + N \)$. Hence $B_N$ grows polynomially.
 
-For an arbitrary mode $u \[ mu \]$ on $W \( h \)$, apply (3.6) with an endpoint cutoff of size $O \( 1 + h + \| mu \| \)$. This bounds its norm by a polynomial in $1 + h + \| mu \|$. Distinct input energy levels have distinct output levels under a fixed mode, so the squared norms add. We have proved polynomial energy bounds for every vertex operator on $W$.
+For an arbitrary mode $u \[ mu \]$ on $W \( h \)$, apply (3.6) with an endpoint cutoff of size
+  $O \( 1 + h + \| mu \| \)$. This bounds its norm by a polynomial in $1 + h + \| mu \|$.
+  Distinct input energy levels have distinct output levels under a fixed mode, so the squared norms add.
+  We have proved polynomial energy bounds for every vertex operator on $W$.
 
-In particular, smooth smears and their formal adjoints map $cal(H)_W^oo = ⋂_(r gt.eq 0) cal(D) \( H^r \)$ continuously into itself: the mode shifts cost only polynomial factors, while smooth Fourier coefficients decrease faster than any power. Spectral truncation shows that closing a smear from $W$ or from $cal(H)_W^oo$ gives the same operator. These facts will justify the covariance calculation below.
+In particular, smooth smears and their formal adjoints map $cal(H)_W^oo = ⋂_(r gt.eq 0)
+  cal(D) \( H^r \)$ continuously into itself: the mode shifts cost only polynomial factors,
+  while smooth Fourier coefficients decrease faster than any power.
+  Spectral truncation shows that closing a smear from $W$ or from $cal(H)_W^oo$ gives the same operator.
+  These facts will justify the covariance calculation below.
 
 === 3.3 A sharper normal-product estimate <a-sharper-normal-product-estimate>
 
-Normal-product estimates also prove the closure of polynomial energy bounds under homogeneous generation [5] Proposition 6.1. The estimate below keeps the specific energy power needed for the second contraction and locality. We divide the zero-mode norm by its target power $N^(d - 1)$ for $d gt.eq 2$. The column normalization is chosen so that its square has the desired energy power $N^(2 d - 1)$ for the positive zero mode $T_a$. Define
+Normal-product estimates also prove the closure of polynomial energy bounds under homogeneous generation [5]
+  Proposition 6.1. The estimate below keeps the specific energy power needed for the second contraction and
+  locality. We divide the zero-mode norm by its target power $N^(d - 1)$ for $d gt.eq 2$.
+  The column normalization is chosen so that its square has the desired energy power $N^(2 d - 1)$ for the
+  positive zero mode $T_a$. Define
 
 $ R_a \( N \) = sup_(xi in P_N W\
 parallel xi parallel lt.eq 1) (sum_(m gt.eq 0) parallel a \[ m \] xi parallel^2)^(1 \/ 2) $
@@ -349,83 +628,127 @@ d_a gt.eq 2) (frac(parallel a \[ 0 \] P_N parallel, N^(d_a - 1)))^(1 \/ d_a)) . 
 The preceding bounds show that $X_N$ grows at most polynomially. The column contains at most $1 + N$ nonzero modes.
 
 #thm([Lemma 3.3.])[
-  #emph[For a monomial $b$ in (3.3) of weight $w gt.eq 2$, there are constants $C_b \, c_b$ such that 
+  #emph[For a monomial $b$ in (3.3) of weight $w gt.eq 2$, there are constants $C_b \, c_b$ such that
 #[#set math.equation(numbering: n => "(3.16)")
- $ parallel b \[ 0 \] P_N parallel lt.eq C_b N^(w - 1) X_(N + c_b)^(D_b) #h(2em) \( N gt.eq 1 \) . $ <eq:sharp-normal-product>]
+ $ parallel b \[ 0 \] P_N parallel lt.eq C_b N^(w - 1) X_(N + c_b)^(D_b) wide \( N gt.eq 1 \) .
+   $ <eq:sharp-normal-product>]
 
  At weights zero and one the corresponding bounds are a constant and $C_b N^(1 \/ 2) X_N$, respectively.]
 ] <lem:sharp-normal-product>
 
 #proof[
-  Use the left/right expansion (3.5) for the zero mode, between unit vectors $eta \, xi in P_N W$. Consider first an order pattern having $p gt.eq 1$ left and $q gt.eq 1$ right factors. Let $D_L \, D_R$ be the sums of generator weights on those sides, and let $L \( bold(j)_L \) \, R \( bold(j)_R \)$ denote their ordered products of modes. Write
-  $ A_(bold(j)_L) = parallel L \( bold(j)_L \)^(*) eta parallel \, #h(2em) B_(bold(j)_R) = parallel R \( bold(j)_R \) xi parallel . $
+  Use the left/right expansion (3.5) for the zero mode, between unit vectors $eta \, xi in P_N W$.
+    Consider first an order pattern having $p gt.eq 1$ left and $q gt.eq 1$ right factors.
+    Let $D_L \, D_R$ be the sums of generator weights on those sides, and let $L \( bold(j)_L \) \,
+    R \( bold(j)_R \)$ denote their ordered products of modes. Write
+  $ A_(bold(j)_L) = parallel L \( bold(j)_L \)^(*) eta parallel \, wide B_(bold(j)_R) =
+    parallel R \( bold(j)_R \) xi parallel . $
   Repeated use of the column bound defining $X$, with the fixed intermediate cutoff already established, gives
   #[#set math.equation(numbering: n => "(3.17)")
    $ sum_(bold(j)_L) A_(bold(j)_L)^2 & lt.eq C N^(2 D_L - p) X_(N + c_b)^(2 D_L) \,\
 sum_(bold(j)_R) B_(bold(j)_R)^2 & lt.eq C N^(2 D_R - q) X_(N + c_b)^(2 D_R) . $ <eq:left-path-squares>]
   To include the finitely many negative right indices, observe that for a fixed positive integer $s$,
-  $ parallel a \[ - s \] P_M parallel = parallel P_M a \[ s \] parallel lt.eq parallel a \[ s \] P_(M + s) parallel lt.eq R_a \( M + s \) . $
-  Thus adding those finitely many indices to the column costs only a constant and a fixed cutoff enlargement. Equations (3.17)–(3.17) follow by applying this one-factor estimate successively to the vectors on each path and then summing. Orthogonality between different paths is not needed.
+  $ parallel a \[ - s \] P_M parallel = parallel P_M a \[ s \] parallel lt.eq
+    parallel a \[ s \] P_(M + s) parallel lt.eq R_a \( M + s \) . $
+  Thus adding those finitely many indices to the column costs only a constant and a fixed cutoff enlargement.
+    Equations (3.17)–(3.17) follow by applying this one-factor estimate successively to the vectors on each path
+    and then summing. Orthogonality between different paths is not needed.
   Let $cal(L) \, cal(R)$ be the sets of left and right factors. By (3.5), the zero-mode constraint is
   $ sum_(i in cal(R)) j_i - sum_(i in cal(L)) j_i = D_b + sum_(i in cal(L)) n_i - q . $
-  Thus one index is determined by the others. Given a left tuple, at most $C N^(q - 1)$ right tuples complete it: the last right index is determined by the other $q - 1$ indices. Conversely, there are at most $C N^(p - 1)$ left completions of a right tuple. Cauchy–Schwarz over the constrained pairs therefore gives
-  $ sum_(upright("constraint")) A_(bold(j)_L) B_(bold(j)_R) & lt.eq (C N^(q - 1) sum_(bold(j)_L) A_(bold(j)_L)^2)^(1 \/ 2) (C N^(p - 1) sum_(bold(j)_R) B_(bold(j)_R)^2)^(1 \/ 2)\
+  Thus one index is determined by the others. Given a left tuple, at most $C N^(q - 1)$ right tuples complete it:
+    the last right index is determined by the other $q - 1$ indices.
+    Conversely, there are at most $C N^(p - 1)$ left completions of a right tuple.
+    Cauchy–Schwarz over the constrained pairs therefore gives
+  $ sum_(upright("constraint")) A_(bold(j)_L) B_(bold(j)_R) & lt.eq
+    (C N^(q - 1) sum_(bold(j)_L) A_(bold(j)_L)^2)^(1 \/ 2) (C N^(p - 1) sum_(bold(j)_R) B_(bold(j)_R)^2)^(1 \/ 2)\
  & lt.eq C N^(D_L + D_R - 1) X_(N + c_b)^(D_L + D_R) . $
-  The constraint has saved one power of $N$ from the unconstrained count. The binomial coefficients cost at most $N^(sum_i n_i)$, producing exactly the power $w - 1$ in (3.16).
-  An all-left pattern cannot have total physical index zero. In an all-right pattern, the indices have fixed lower bounds and sum to zero, so every index and the number of terms are bounded independently of $N$. If $ell gt.eq 2$, individual column bounds give a power $D_b - ell \/ 2 lt.eq D_b - 1$, which suffices. If $ell = 1$ and $n_1 = 0$, use the zero-mode term in $X_N$. If $ell = 1$ and $n_1 > 0$, the weaker power $d_(a^1) - 1 \/ 2$ is bounded by $w - 1$; differentiation at the zero physical mode has a fixed scalar coefficient. The vacuum and weight-one cases follow directly from their defining bounds. ◻
+  The constraint has saved one power of $N$ from the unconstrained count.
+    The binomial coefficients cost at most $N^(sum_i n_i)$, producing exactly the power $w - 1$ in (3.16).
+  An all-left pattern cannot have total physical index zero.
+    In an all-right pattern, the indices have fixed lower bounds and sum to zero,
+    so every index and the number of terms are bounded independently of $N$.
+    If $ell gt.eq 2$, individual column bounds give a power $D_b - ell \/ 2 lt.eq D_b - 1$, which suffices.
+    If $ell = 1$ and $n_1 = 0$, use the zero-mode term in $X_N$.
+    If $ell = 1$ and $n_1 > 0$, the weaker power $d_(a^1) - 1 \/ 2$ is bounded by $w - 1$;
+    differentiation at the zero physical mode has a fixed scalar coefficient.
+    The vacuum and weight-one cases follow directly from their defining bounds. ◻
 ]
 
-For $a in S$ of weight $d gt.eq 2$, subtract the identity (3.9) at $m = 0$ from that at $m > 0$. The former is the zero operator. This removes the $j = 0$ term without requiring the state $a_(\( 0 \)) a$ to vanish. Only fields of weights at most $2 d - 2$ remain, with coefficients polynomial in $m$. Lemma 4 now gives
+For $a in S$ of weight $d gt.eq 2$, subtract the identity (3.9) at $m = 0$ from that at $m > 0$.
+  The former is the zero operator. This removes the $j = 0$ term without requiring the state $a_(\( 0 \))
+  a$ to vanish. Only fields of weights at most $2 d - 2$ remain, with coefficients polynomial in $m$. Lemma 4 now gives
 
 #[#set math.equation(numbering: n => "(3.18)")
  $ parallel C_(a \, m) P_N parallel lt.eq C \( 1 + m \)^p N^(2 d - 3) X_(N + c)^(2 d - 2) . $ <eq:sharp-commutator>]
 
-The weight-one estimate also fits this bound because $N^(1 \/ 2) lt.eq N^(2 d - 3)$; the weight-zero term is bounded. For all other terms the generator degree is at most their conformal weight. The descent (3.11), with at most $1 + N \/ m$ steps, consequently proves
+The weight-one estimate also fits this bound because $N^(1 \/ 2) lt.eq N^(2 d - 3)$;
+  the weight-zero term is bounded. For all other terms the generator degree is at most their conformal weight.
+  The descent (3.11), with at most $1 + N \/ m$ steps, consequently proves
 
 #[#set math.equation(numbering: n => "(3.19)")
- $ parallel a \[ m \] P_N parallel lt.eq C \( 1 + \| m \| \)^p N^(d - 1) X_(N + c)^(d - 1) \, #h(2em) m eq.not 0 . $ <eq:sharp-nonzero-mode>]
+ $ parallel a \[ m \] P_N parallel lt.eq C \( 1 + \| m \| \)^p N^(d - 1) X_(N + c)^(d - 1) \, wide
+   m eq.not 0 . $ <eq:sharp-nonzero-mode>]
 
-For a negative mode this follows directly by applying the raising-mode recurrence at input energy at most $N$. Thus the cutoff in $X$ does not grow with $\| m \|$. Positive modes of index greater than $N$ vanish.
+For a negative mode this follows directly by applying the raising-mode recurrence at input energy at most $N$.
+  Thus the cutoff in $X$ does not grow with $\| m \|$. Positive modes of index greater than $N$ vanish.
 
 === 3.4 Transferring the bound to the zero mode <transferring-the-bound-to-the-zero-mode>
 
-The commutator (3.13) would lose one energy power. Möbius covariance transfers the estimate without that loss. For Hermitian primary fields, [7] Proposition 3.1 transfers an energy bound from one Fourier mode to all smooth smearings without increasing its energy order. We give the quantitative cutoff transfer for quasi-primary generators because its uniformity is needed in the last iteration.
+The commutator (3.13) would lose one energy power. Möbius covariance transfers the estimate without that loss.
+  For Hermitian primary fields, [7] Proposition 3.1 transfers an energy bound from one Fourier mode to all smooth
+  smearings without increasing its energy order. We give the quantitative cutoff transfer for quasi-primary
+  generators because its uniformity is needed in the last iteration.
 
-Let $a in S$ have weight $d gt.eq 2$. Positive-energy unitary Möbius integration acts on $cal(H)_W$; it does not require a net representation. With the physical smearing convention, the test $f \( e^(i theta.alt) \) = e^(i theta.alt)$ selects $a \[ 1 \]$. Write $a \( f \) = Y^W \( a \, f \)$ for this module smear. The quasi-primary commutators (3.2) integrate on the smooth domain to
+Let $a in S$ have weight $d gt.eq 2$. Positive-energy unitary Möbius integration acts on $cal(H)_W$;
+  it does not require a net representation. With the physical smearing convention,
+  the test $f \( e^(i theta.alt) \) = e^(i theta.alt)$ selects $a \[ 1 \]$.
+  Write $a \( f \) = Y^W \( a \, f \)$ for this module smear.
+  The quasi-primary commutators (3.2) integrate on the smooth domain to
 
-$ U_g a \( f \) U_g^(*) = a \( f_g \) \, #h(2em) f_g \( g \( theta.alt \) \) = g' \( theta.alt \)^(d - 1) f \( e^(i theta.alt) \) . $
+$ U_g a \( f \) U_g^(*) = a \( f_g \) \, wide f_g \( g \( theta.alt \) \) =
+  g' \( theta.alt \)^(d - 1) f \( e^(i theta.alt) \) . $
 
-One obtains this identity by differentiating the conjugation with the inversely evolving test; the preliminary polynomial bounds justify the differentiation. The positive-energy Möbius representation and these covariance facts are recalled in [7] Section 2.
+One obtains this identity by differentiating the conjugation with the inversely evolving test;
+  the preliminary polynomial bounds justify the differentiation.
+  The positive-energy Möbius representation and these covariance facts are recalled in [7] Section 2.
 
 Take the flow generated by $\( L_1 - L_(- 1) \) \/ 2$. Its infinitesimal action on $a \[ 1 \]$ is
 
 $ [frac(L_1 - L_(- 1), 2) \, a \[ 1 \]] = frac(d - 2, 2) a \[ 2 \] + d / 2 a \[ 0 \] . $
 
-The mean of $f_g$ therefore has nonzero derivative at the identity. Fix a small $g$ for which that mean, denoted $c_g$, is nonzero. Compression to one energy level gives
+The mean of $f_g$ therefore has nonzero derivative at the identity.
+  Fix a small $g$ for which that mean, denoted $c_g$, is nonzero. Compression to one energy level gives
 
 #[#set math.equation(numbering: n => "(3.20)")
  $ Pi_h U_g a \[ 1 \] U_g^(*) Pi_h = c_g a \[ 0 \] Pi_h . $ <eq:mobius-zero-compression>]
 
 The conjugate $H' = U_g H U_g^(*)$ is a fixed linear combination of $1 \, L_0 \, L_1 \, L_(- 1)$. By (3.12),
 
-$ H' P_M W subset P_(M + 1) W \, #h(2em) parallel H' P_M parallel lt.eq C_g \( 1 + M \) . $
+$ H' P_M W subset P_(M + 1) W \, wide parallel H' P_M parallel lt.eq C_g \( 1 + M \) . $
 
 Consequently, for every integer $j gt.eq 1$,
 
 #[#set math.equation(numbering: n => "(3.21)")
- $ parallel H^j U_g^(*) P_N parallel = parallel \( H' \)^j P_N parallel lt.eq C_g^j product_(i = 0)^(j - 1) \( 1 + N + i \) lt.eq C_g^j \( 1 + N + j \)^j . $ <eq:mobius-growing-moment>]
+ $ parallel H^j U_g^(*) P_N parallel = parallel \( H' \)^j P_N parallel lt.eq
+   C_g^j product_(i = 0)^(j - 1) \( 1 + N + i \) lt.eq C_g^j \( 1 + N + j \)^j . $ <eq:mobius-growing-moment>]
 
-For fixed powers, the same product estimate gives the usual Sobolev continuity of $U_g$ and $U_g^(*)$, and hence preservation of $cal(H)_W^oo$. For a growing power it controls a spectral tail. Choose an integer $K > 4 C_g$. If $r$ is fixed and $N > r$, then
+For fixed powers, the same product estimate gives the usual Sobolev continuity of $U_g$ and $U_g^(*)$,
+  and hence preservation of $cal(H)_W^oo$. For a growing power it controls a spectral tail.
+  Choose an integer $K > 4 C_g$. If $r$ is fixed and $N > r$, then
 
 #[#set math.equation(numbering: n => "(3.22)")
- $ parallel H^r \( 1 - P_(K N) \) U_g^(*) P_N parallel & lt.eq \( K N \)^(- \( N - r \)) parallel H^N U_g^(*) P_N parallel\
+ $ parallel H^r \( 1 - P_(K N) \) U_g^(*) P_N parallel & lt.eq \( K N \)^(- \( N - r \)) parallel H^N U_g^(*) P_N
+   parallel\
  & lt.eq C_r N^r \( 3 C_g \/ K \)^N . $ <eq:mobius-tail>]
 
-The finitely many remaining $N$ are absorbed into the constant. In particular, the tail is bounded in every fixed graph norm, with $K$ independent of $N$ and of the dimension of $P_N W$.
+The finitely many remaining $N$ are absorbed into the constant.
+  In particular, the tail is bounded in every fixed graph norm,
+  with $K$ independent of $N$ and of the dimension of $P_N W$.
 
 Choose $r$ at least the preliminary polynomial energy order of $a \[ 1 \]$. Equations (3.19) and (3.22) give
 
-$ parallel a \[ 1 \] U_g^(*) P_N parallel & lt.eq parallel a \[ 1 \] P_(K N) parallel + parallel a \[ 1 \] H^(- r) parallel thin parallel H^r \( 1 - P_(K N) \) U_g^(*) P_N parallel\
+$ parallel a \[ 1 \] U_g^(*) P_N parallel & lt.eq parallel a \[ 1 \] P_(K N) parallel +
+  parallel a \[ 1 \] H^(- r) parallel thin parallel H^r \( 1 - P_(K N) \) U_g^(*) P_N parallel\
  & lt.eq C N^(d - 1) X_(K N + c)^(d - 1) + O \( 1 \) . $
 
 Compress using (3.20). Since $a \[ 0 \]$ preserves energy, taking the supremum of its level norms proves
@@ -437,125 +760,221 @@ The bounded error is absorbed because $X gt.eq 1$ and $N gt.eq 1$.
 
 === 3.5 Closing the optimal estimate <closing-the-optimal-estimate>
 
-Return to the positive operator $T_a$ in (3.7), for any generator of weight $d$, including $d = 1$. If $2 d > D$, its defining state lies in $C_2 \( V \)_(2 d)$, so Lemma 3 supplies an expansion with generator degree at most $2 d - 1$. If $2 d lt.eq D$, decompose that state into a quasi-primary part and an element of $L_(- 1) V_(2 d - 1)$. The latter is in $C_2 \( V \)$ and has the same strict degree saving. The former is a fixed combination of generators of weight $2 d$ and is controlled by (3.23). In both cases,
+Return to the positive operator $T_a$ in (3.7), for any generator of weight $d$, including $d = 1$.
+  If $2 d > D$, its defining state lies in $C_2 \( V \)_(2 d)$,
+  so Lemma 3 supplies an expansion with generator degree at most $2 d - 1$.
+  If $2 d lt.eq D$, decompose that state into a quasi-primary part and an element of $L_(- 1) V_(2 d - 1)$.
+  The latter is in $C_2 \( V \)$ and has the same strict degree saving.
+  The former is a fixed combination of generators of weight $2 d$ and is controlled by (3.23). In both cases,
 
 #[#set math.equation(numbering: n => "(3.24)")
  $ parallel T_a P_N parallel lt.eq C N^(2 d - 1) X_(K_0 N)^(2 d - 1) $ <eq:sharp-positive-product>]
 
 for a sufficiently large fixed integer $K_0$.
 
-Here and below the different enlarged cutoffs can indeed be replaced by a common one. Although $X_N$ itself need not be monotone, all its unnormalized column and zero-mode numerators are monotone. If $N lt.eq M lt.eq c N$, its definition gives $X_N lt.eq c X_M$. The finitely many fixed cutoff enlargements therefore change only the constant in (3.24).
+Here and below the different enlarged cutoffs can indeed be replaced by a common one.
+  Although $X_N$ itself need not be monotone, all its unnormalized column and zero-mode numerators are monotone.
+  If $N lt.eq M lt.eq c N$, its definition gives $X_N lt.eq c X_M$.
+  The finitely many fixed cutoff enlargements therefore change only the constant in (3.24).
 
-Take the square root in (3.8) and (3.24), and then the $d$th root in the definition of $X_N$. The column term contracts with exponent $\( 2 d - 1 \) \/ \( 2 d \)$. Equation (3.23) contracts each zero-mode term with exponent $\( d - 1 \) \/ d$. Thus
+Take the square root in (3.8) and (3.24), and then the $d$th root in the definition of $X_N$.
+  The column term contracts with exponent $\( 2 d - 1 \) \/ \( 2 d \)$.
+  Equation (3.23) contracts each zero-mode term with exponent $\( d - 1 \) \/ d$. Thus
 
 #[#set math.equation(numbering: n => "(3.25)")
- $ X_N lt.eq C X_(K_0 N)^sigma \, #h(2em) sigma = 1 - frac(1, 2 D) < 1 . $ <eq:second-energy-contraction>]
+ $ X_N lt.eq C X_(K_0 N)^sigma \, wide sigma = 1 - frac(1, 2 D) < 1 . $ <eq:second-energy-contraction>]
 
-The first contraction allowed an additive cutoff enlargement and used an exponential starting bound. Here the cutoff grows multiplicatively; the polynomial bound already proved for $X_N$ suffices. Namely,
+The first contraction allowed an additive cutoff enlargement and used an exponential starting bound.
+  Here the cutoff grows multiplicatively; the polynomial bound already proved for $X_N$ suffices. Namely,
 
 $ log X_N lt.eq frac(log C, 1 - sigma) + sigma^j log X_(K_0^j N) \, $
 
-and the last term is bounded by $sigma^j \( C' + s log N + s j log K_0 \)$, which tends to zero. We conclude that $X_N$ is uniformly bounded.
+and the last term is bounded by $sigma^j \( C' + s log N + s j log K_0 \)$, which tends to zero.
+  We conclude that $X_N$ is uniformly bounded.
 
-Equations (3.19) and (3.23) now give (3.1) for every $a in S$ of weight at least two. To pass from cutoff estimates to a general finite-energy vector, use $N = max \( 1 \, ceil.l h ceil.r \)$ on each input level $W \( h \)$ and add squared norms: a fixed mode has different output energies for different input energies. Any specified Hermitian quasi-primary can be included in such an $S$ by enlarging the fixed integer $D$.
+Equations (3.19) and (3.23) now give (3.1) for every $a in S$ of weight at least two.
+  To pass from cutoff estimates to a general finite-energy vector, use $N =
+  max \( 1 \, ceil.l h ceil.r \)$ on each input level $W \( h \)$ and add squared norms:
+  a fixed mode has different output energies for different input energies.
+  Any specified Hermitian quasi-primary can be included in such an $S$ by enlarging the fixed integer $D$.
 
-For a weight-one generator, boundedness of $X_N$ gives $R_a \( N \) lt.eq C N^(1 \/ 2)$. For positive modes this is already a half-order energy estimate. For a negative mode $- m$, adjunction on the output level gives a bound by $C \( 1 + h + m \)^(1 \/ 2)$ on $W \( h \)$, and
+For a weight-one generator, boundedness of $X_N$ gives $R_a \( N \) lt.eq C N^(1 \/ 2)$.
+  For positive modes this is already a half-order energy estimate.
+  For a negative mode $- m$, adjunction on the output level gives a bound by $C \( 1 + h + m \)^(1 \/ 2)$ on
+  $W \( h \)$, and
 
 $ \( 1 + h + m \)^(1 \/ 2) lt.eq \( 1 + m \)^(1 \/ 2) \( 1 + h \)^(1 \/ 2) . $
 
-Thus weight-one fields satisfy, in particular, at most linear energy bounds. Linear combinations of the Hermitian generators give the same conclusion for all of $V_1$. The Virasoro estimate was proved in (3.12). This completes the proof of Theorem 2.
+Thus weight-one fields satisfy, in particular, at most linear energy bounds.
+  Linear combinations of the Hermitian generators give the same conclusion for all of $V_1$.
+  The Virasoro estimate was proved in (3.12). This completes the proof of Theorem 2.
 
 #thm([Corollary 3.4.])[
-  #emph[Every simple unitary strongly rational VOA $V$ is CKLW-strongly local. Its smeared vertex operators generate an irreducible conformal net $A_V$.]
+  #emph[Every simple unitary strongly rational VOA $V$ is CKLW-strongly local.
+    Its smeared vertex operators generate an irreducible conformal net $A_V$.]
 ] <cor:locality>
 
 #proof[
-  The unitary Virasoro decomposition expresses $V$ as a sum of highest-weight representations. Equivalently, at each energy the orthogonal complement of the negative-Virasoro-mode descendants consists of primary vectors. These primary spaces are spanned by Hermitian vectors. Hence the conformal vector and Hermitian primary vectors generate $V$; see [7] Remark 3.9. A finite family suffices: decompose the vectors in $S$ into Virasoro descendants and take Hermitian bases of the finitely many primary spaces that occur. Together with $nu$, these vectors generate $S$ and hence $V$.
-  Theorem 2 gives the optimal order $d - 1$ for every such primary of weight $d gt.eq 2$, and supplies the required current and Virasoro bounds. The corrected strong-locality criterion [7] Theorem 3.7, with its Hermitian hypothesis [6], therefore applies. Finally [5] Theorem 6.8 constructs the irreducible conformal net from this simple unitary strongly local VOA. ◻
+  The unitary Virasoro decomposition expresses $V$ as a sum of highest-weight representations.
+    Equivalently, at each energy the orthogonal complement of the negative-Virasoro-mode descendants consists of
+    primary vectors. These primary spaces are spanned by Hermitian vectors.
+    Hence the conformal vector and Hermitian primary vectors generate $V$; see [7] Remark 3.9.
+    A finite family suffices: decompose the vectors in $S$ into Virasoro descendants and take Hermitian bases of
+    the finitely many primary spaces that occur. Together with $nu$, these vectors generate $S$ and hence $V$.
+  Theorem 2 gives the optimal order $d - 1$ for every such primary of weight $d gt.eq 2$,
+    and supplies the required current and Virasoro bounds. The corrected strong-locality criterion [7]
+    Theorem 3.7, with its Hermitian hypothesis [6], therefore applies.
+    Finally [5] Theorem 6.8 constructs the irreducible conformal net from this simple unitary strongly local VOA. ◻
 ]
 
-We have constructed $A_V$ independently of any fusion positivity or module integration. In the following section it is this vacuum net that supplies the annulus operators.
+We have constructed $A_V$ independently of any fusion positivity or module integration.
+  In the following section it is this vacuum net that supplies the annulus operators.
 
 == 4 Annuli and charged-field estimates <sec:annuli>
 
-We now use the conformal net $A_V$ constructed in Corollary 5. The purpose of this section is to obtain analytic bounds for charged fields before constructing the net representations associated to their target modules. The source of a charged field will initially be the vacuum module $V$. More generally, the argument works whenever its source module has already been integrated. This order will allow us to prove integration before using positivity of general fusion products.
+We now use the conformal net $A_V$ constructed in Corollary 5.
+  The purpose of this section is to obtain analytic bounds for charged fields before constructing the net
+  representations associated to their target modules. The source of a charged field will initially be the vacuum
+  module $V$. More generally, the argument works whenever its source module has already been integrated.
+  This order will allow us to prove integration before using positivity of general fusion products.
 
 === 4.1 Localized annuli and their ranges <localized-annuli-and-their-ranges>
 
-We use the annulus constructions of Henriques–Tener [21,20,19]. An annulus may have incoming and outgoing boundaries that touch, but do not cross. A lift of an annulus means an element of the centrally extended covering semigroup $tilde("Ann")_c$, where $c$ is the central charge. Lifts act by bounded operators in positive-energy unitary Virasoro representations. Gluing is multiplication, with the right factor acting first, and reflection is denoted by $dagger$ and acts by the Hilbert-space adjoint. On the grading-restricted unitary modules used below, fixed lifted annuli and their adjoints preserve every energy Sobolev space and hence the smooth domain continuously [21] Theorem 4.8, Remark 4.9 and Theorem 5.5.
+We use the annulus constructions of Henriques–Tener [21,20,19].
+  An annulus may have incoming and outgoing boundaries that touch, but do not cross.
+  A lift of an annulus means an element of the centrally extended covering semigroup $tilde("Ann")_c$,
+  where $c$ is the central charge. Lifts act by bounded operators in positive-energy unitary Virasoro
+  representations. Gluing is multiplication, with the right factor acting first,
+  and reflection is denoted by $dagger$ and acts by the Hilbert-space adjoint.
+  On the grading-restricted unitary modules used below, fixed lifted annuli and their adjoints preserve every
+  energy Sobolev space and hence the smooth domain continuously [21] Theorem 4.8, Remark 4.9 and Theorem 5.5.
 
-The VOA reconstructed from $A_V$ is $V$ itself [20] Theorem 8.9(ii). Thus the point-insertion labels in that construction are the vectors of $V$. We write $underline(A) \[ v \( z \) \]$ for an insertion with the standard local coordinate $zeta mapsto z + zeta$. More generally, $p_(*) v \( 0 \)$ denotes the label obtained by a change of local coordinate $p$; for $p \( zeta \) = z + q zeta$, $q > 0$, it is $\( q^(L_0) v \) \( z \)$. Finite-energy labels are transported by the usual formal coordinate action. Insertions compose under gluing and depend holomorphically on their positions. They also commute with reflection [20] Section 6 and Proposition 6.19.
+The VOA reconstructed from $A_V$ is $V$ itself [20] Theorem 8.9(ii).
+  Thus the point-insertion labels in that construction are the vectors of $V$.
+  We write $underline(A) \[ v \( z \) \]$ for an insertion with the standard local coordinate $zeta mapsto z +
+  zeta$. More generally, $p_(*) v \( 0 \)$ denotes the label obtained by a change of local coordinate $p$;
+  for $p \( zeta \) = z + q zeta$, $q > 0$, it is $\( q^(L_0) v \) \( z \)$.
+  Finite-energy labels are transported by the usual formal coordinate action.
+  Insertions compose under gluing and depend holomorphically on their positions.
+  They also commute with reflection [20] Section 6 and Proposition 6.19.
 
-For $0 < rho lt.eq 1$ a smooth function on $S^1$, consider the radial annulus whose incoming and outgoing parametrizations are
+For $0 < rho lt.eq 1$ a smooth function on $S^1$, consider the radial annulus whose incoming and outgoing
+  parametrizations are
 
-$ e^(i theta.alt) mapsto rho \( e^(i theta.alt) \) e^(i theta.alt) \, #h(2em) e^(i theta.alt) mapsto e^(i theta.alt) . $
+$ e^(i theta.alt) mapsto rho \( e^(i theta.alt) \) e^(i theta.alt) \, wide e^(i theta.alt) mapsto e^(i theta.alt) . $
 
-If $1 - rho$ is compactly supported in an interval $I$, radial interpolation gives a lift $underline(A)$ localized in $I$. Its vacuum operator belongs to $A_V \( I \)$. The same holds for its point insertions, and their actions in a locally normal representation $pi$ are their images under $pi_I$ [20] Lemma 6.8. The reflected double
+If $1 - rho$ is compactly supported in an interval $I$, radial interpolation gives a lift $underline(A)$ localized
+  in $I$. Its vacuum operator belongs to $A_V \( I \)$. The same holds for its point insertions,
+  and their actions in a locally normal representation $pi$ are their images under $pi_I$ [20] Lemma 6.8.
+  The reflected double
 
 $ hat(A) = underline(A)^dagger underline(A) $
 
 can be drawn in the plane between the radial curves $rho$ and $rho^(- 1)$. The two annuli meet along the unit circle.
 
-The complementary-annulus argument below is the exact-preimage argument of [20] Lemma 7.9. We record its range and density consequences in the form used for charged fields.
+The complementary-annulus argument below is the exact-preimage argument of [20] Lemma 7.9.
+  We record its range and density consequences in the form used for charged fields.
 
 #thm([Lemma 4.1.])[
-  (Ranges of annulus operators).  #emph[Let $underline(A) \, underline(B)$ be lifted annuli satisfying $underline(A) underline(B) = s_0^(L_0)$, with $0 < s_0 < 1$, in a positive-energy representation with dense finite-energy subspace $E$. Then 
-$ E subset "ran" underline(A) \, #h(2em) underline(A)^(- 1) E = underline(B) E \, #h(2em) overline(underline(A)^(- 1) E) = cal(H) . $
+  (Ranges of annulus operators).  #emph[Let $underline(A) \,
+    underline(B)$ be lifted annuli satisfying $underline(A) underline(B) = s_0^(L_0)$, with $0 < s_0 < 1$,
+    in a positive-energy representation with dense finite-energy subspace $E$. Then
+$ E subset "ran" underline(A) \, wide underline(A)^(- 1) E = underline(B) E \, wide
+  overline(underline(A)^(- 1) E) = cal(H) . $
 
  Every radial annulus above admits such a complementary factor $underline(B)$ when $s_0 < min rho$.]
 ] <lem:annulus-range>
 
 #proof[
-  The geometric complement between the circle of radius $s_0$ and the incoming boundary gives $B$. Choose its lift so that the product is the standard lift of the round annulus; any necessary scalar and winding are absorbed in this fixed choice. Annulus operators are injective with dense range [20] Lemma 4.15. Since $s_0^(L_0)$ is invertible on $E$, its range contains $E$, and $underline(B) E subset underline(A)^(- 1) E$. Conversely, if $underline(A) xi in E$, injectivity of $underline(A)$ gives
+  The geometric complement between the circle of radius $s_0$ and the incoming boundary gives $B$.
+    Choose its lift so that the product is the standard lift of the round annulus;
+    any necessary scalar and winding are absorbed in this fixed choice.
+    Annulus operators are injective with dense range [20] Lemma 4.15.
+    Since $s_0^(L_0)$ is invertible on $E$, its range contains $E$,
+    and $underline(B) E subset underline(A)^(- 1) E$. Conversely, if $underline(A) xi in E$,
+    injectivity of $underline(A)$ gives
   $ xi = underline(B) s_0^(- L_0) underline(A) xi in underline(B) E . $
-  Finally, $underline(B)$ is bounded with dense range and $E$ is dense. These observations also prove the assertion when the energy eigenspaces are not finite dimensional; compare [20] Lemma 7.9. ◻
+  Finally, $underline(B)$ is bounded with dense range and $E$ is dense.
+    These observations also prove the assertion when the energy eigenspaces are not finite dimensional;
+    compare [20] Lemma 7.9. ◻
 ]
 
-Let $N$ be an already strongly integrable unitary $V$-module, with local representations $pi_I^N$. Subscripts $N$ on annulus operators refer to the resulting net representation. The Virasoro action used here is the module Virasoro action: the closed stress-energy smears agree by strong integration, and a partition of unity identifies their modes, including $L_0$. The reconstructed module is consequently $N$, by the uniqueness statement in [20] Theorem 9.5(ii) and Corollary 9.6. In particular, for the standard lifted round annulus with radii $s < R$,
+Let $N$ be an already strongly integrable unitary $V$-module, with local representations $pi_I^N$.
+  Subscripts $N$ on annulus operators refer to the resulting net representation.
+  The Virasoro action used here is the module Virasoro action:
+  the closed stress-energy smears agree by strong integration, and a partition of unity identifies their modes,
+  including $L_0$. The reconstructed module is consequently $N$,
+  by the uniqueness statement in [20] Theorem 9.5(ii) and Corollary 9.6.
+  In particular, for the standard lifted round annulus with radii $s < R$,
 
 #[#set math.equation(numbering: n => "(4.1)")
  $ A_(R \, s \, N) \[ v \( z \) \] = R^(- L_0) Y^N \( v \, z \) s^(L_0) $ <eq:round-insertion>]
 
-in finite-energy matrix coefficients. For a radial annulus $A$ and $z$ in its interior, gluing with the complementary factor in Lemma 6 gives
+in finite-energy matrix coefficients. For a radial annulus $A$ and $z$ in its interior,
+  gluing with the complementary factor in Lemma 6 gives
 
 #[#set math.equation(numbering: n => "(4.2)")
  $ underline(A)_N \[ v \( z \) \] xi & = Y^N \( v \, z \) underline(A)_N xi \,\
-chevron.l hat(A)_N \[ v \( z \) \] xi \, eta chevron.r & = chevron.l Y^N \( v \, z \) underline(A)_N xi \, underline(A)_N eta chevron.r \, #h(2em) xi \, eta in underline(A)_N^(- 1) N . $ <eq:annulus-insertion>]
+chevron.l hat(A)_N \[ v \( z \) \] xi \, eta chevron.r & = chevron.l Y^N \( v \, z \) underline(A)_N xi \,
+  underline(A)_N eta chevron.r \, wide xi \, eta in underline(A)_N^(- 1) N . $ <eq:annulus-insertion>]
 
-These are identities on the indicated exact dense preimages, rather than identities of arbitrary products of unbounded operators.
+These are identities on the indicated exact dense preimages,
+  rather than identities of arbitrary products of unbounded operators.
 
 === 4.2 A fixed-disc estimate and a uniform round estimate <a-fixed-disc-estimate-and-a-uniform-round-estimate>
 
 #thm([Lemma 4.2.])[
-  (Insertion in a fixed disc).  #emph[Let $hat(A) = underline(A)^dagger underline(A)$ be a fixed localized double, and let $S_0$ be a closed round disc strictly inside it. There is a constant $C_(hat(A) \, S_0)$ such that, for every Möbius embedding $p : bb(D) arrow.r circle(S)_0$ and $v in V$, 
+  (Insertion in a fixed disc).  #emph[Let $hat(A) = underline(A)^dagger underline(A)$ be a fixed localized double,
+    and let $S_0$ be a closed round disc strictly inside it. There is a constant $C_(hat(A) \, S_0)$ such that,
+    for every Möbius embedding $p : bb(D) arrow.r circle(S)_0$ and $v in V$,
 #[#set math.equation(numbering: n => "(4.3)")
  $ parallel hat(A)_N \[ p_(*) v \( 0 \) \] parallel lt.eq C_(hat(A) \, S_0) parallel v parallel $ <eq:fixed-disc-bound>]
 
- in every already integrated unitary module $N$. Here $bb(D)$ is the closed unit disc, and embeddings are smooth up to their boundaries.]
+ in every already integrated unitary module $N$. Here $bb(D)$ is the closed unit disc,
+   and embeddings are smooth up to their boundaries.]
 ] <lem:fixed-disc>
 
 #proof[
-  Write the underlying double as $D_(upright("out")) \\ circle(D)_(upright("in"))$. The inclusion $S_0 union.sq D_(upright("in")) arrow.r D_(upright("out"))$ is a multidisc embedding: the incoming closed discs are disjoint, although $D_(upright("in"))$ may meet the outgoing boundary. The bounded map of [19] Theorem A, or Theorem 3.6 yields
+  Write the underlying double as $D_(upright("out")) \\ circle(D)_(upright("in"))$.
+    The inclusion $S_0 union.sq D_(upright("in")) arrow.r D_(upright("out"))$ is a multidisc embedding:
+    the incoming closed discs are disjoint, although $D_(upright("in"))$ may meet the outgoing boundary.
+    The bounded map of [19] Theorem A, or Theorem 3.6 yields
   $ H_0 \( S_0 \) ⊗ H_0 \( D_(upright("in")) \) arrow.r H_0 \( D_(upright("out")) \) . $
-  Evaluating its first slot at an inserted vector, and using [19] Corollary A.1, gives the corresponding inserted annulus operator. The boundary identification operators are unitary; the scalar comparing the fixed lift with this vacuum map is independent of the insertion [20] Lemma 6.10.
-  Identify $S_0$ conformally with $bb(D)$. The resulting Möbius embedding factors into disc automorphisms and a dilation of radius less than one. Its covered univalent lift acts by unitaries and a positive-energy contraction. The state associated to $p_(*) v \( 0 \)$ in $H_0 \( S_0 \)$ therefore has norm at most $parallel v parallel$. This proves the vacuum bound. The inserted vacuum operator belongs to $A_V \( I \)$ for the localizing interval of the double. Its image under $pi_I^N$ is the inserted operator on $N$; contractivity proves the same bound there. ◻
+  Evaluating its first slot at an inserted vector, and using [19] Corollary A.1,
+    gives the corresponding inserted annulus operator. The boundary identification operators are unitary;
+    the scalar comparing the fixed lift with this vacuum map is independent of the insertion [20] Lemma 6.10.
+  Identify $S_0$ conformally with $bb(D)$. The resulting Möbius embedding factors into disc automorphisms and a
+    dilation of radius less than one. Its covered univalent lift acts by unitaries and a positive-energy
+    contraction. The state associated to $p_(*) v \( 0 \)$ in $H_0 \( S_0 \)$ therefore has norm at most $parallel
+    v parallel$. This proves the vacuum bound. The inserted vacuum operator belongs to $A_V \( I \)$ for the
+    localizing interval of the double. Its image under $pi_I^N$ is the inserted operator on $N$;
+    contractivity proves the same bound there. ◻
 ]
 
 In particular, over a compact subarc on which $rho < 1$, put
 
-$ delta = \| z \|^(- 1) - \| z \| \, #h(2em) q = 2 delta . $
+$ delta = \| z \|^(- 1) - \| z \| \, wide q = 2 delta . $
 
-For $\| z \| < 1$ sufficiently close to one, the small disc $z + q bb(D)$ lies in one of finitely many fixed discs strictly inside the double. Lemma 7 is thus uniform for the labels $\( q^(L_0) v \) \( z \)$ throughout that collar. The next estimate supplies the corresponding uniform control when both boundaries are round and shrink towards the insertion. A bound for each fixed annulus would not control this degeneration. We instead factor the round cutoff through one fixed dented annulus: the moving factors will be a Möbius unitary and a contraction, while the pulled-back insertion stays in one fixed disc.
+For $\| z \| < 1$ sufficiently close to one, the small disc $z +
+  q bb(D)$ lies in one of finitely many fixed discs strictly inside the double.
+  Lemma 7 is thus uniform for the labels $\( q^(L_0) v \) \( z \)$ throughout that collar.
+  The next estimate supplies the corresponding uniform control when both boundaries are round and shrink towards
+  the insertion. A bound for each fixed annulus would not control this degeneration.
+  We instead factor the round cutoff through one fixed dented annulus:
+  the moving factors will be a Möbius unitary and a contraction,
+  while the pulled-back insertion stays in one fixed disc.
 
 #thm([Proposition 4.3.])[
-  (Uniform round-annulus estimate).  #emph[Let $N$ be an already integrated unitary $V$-module. Set 
-$ a = 1 - 10^(- 4) \, #h(2em) gamma_t \( zeta \) = frac(zeta + t, 1 + t zeta) \, #h(2em) r = gamma_t \( a \) \, #h(2em) s = gamma_t \( 1 \/ 2 \) \, #h(2em) 0 lt.eq t < 1 . $
+  (Uniform round-annulus estimate).  #emph[Let $N$ be an already integrated unitary $V$-module. Set
+$ a = 1 - 10^(- 4) \, wide gamma_t \( zeta \) = frac(zeta + t, 1 + t zeta) \, wide r = gamma_t \( a \) \, wide s =
+  gamma_t \( 1 \/ 2 \) \, wide 0 lt.eq t < 1 . $
 
- With $delta = r^(- 1) - r$ and $q = 2 delta$, there is a constant $C_N$, independent of $t$ and $v$, such that 
+ With $delta = r^(- 1) - r$ and $q = 2 delta$, there is a constant $C_N$, independent of $t$ and $v$, such that
 #[#set math.equation(numbering: n => "(4.4)")
- $ parallel A_(1 \/ s \, s \, N) \[ \( q^(L_0) v \) \( r \) \] parallel lt.eq C_N parallel v parallel \, #h(2em) v in V . $ <eq:uniform-round>]
+ $ parallel A_(1 \/ s \, s \, N) \[ \( q^(L_0) v \) \( r \) \] parallel lt.eq C_N parallel v parallel \, wide
+   v in V . $ <eq:uniform-round>]
 
- Moreover, 
+ Moreover,
 #[#set math.equation(numbering: n => "(4.5)")
  $ 5000 lt.eq frac(1 - s, 1 - r) lt.eq 6667 . $ <eq:round-comparable>]
 
@@ -563,9 +982,17 @@ $ a = 1 - 10^(- 4) \, #h(2em) gamma_t \( zeta \) = frac(zeta + t, 1 + t zeta) \,
 ] <prop:round-annulus>
 
 #proof[
-  #emph[The fixed geometry.] Fix $p_0 \( zeta \) = - 0.2 + 0.8 zeta$, whose image disc has diameter $\[ - 1 \, 0.6 \]$. Choose a radial annulus $A_(*)$ with inner radius $0.85$ for $\| theta.alt \| lt.eq 0.1$, inner radius between $0.85$ and $1$ everywhere, and inner radius $1$ for $\| theta.alt \| gt.eq 0.2$. Its incoming disc contains $p_0 \( bb(D) \)$: over $\| theta.alt \| < 0.2$ the latter disc has radial boundary less than $0.61$, and elsewhere it lies in $bb(D)$. The double of $A_(*)$ contains
+  #emph[The fixed geometry.] Fix $p_0 \( zeta \) = - 0.2 + 0.8 zeta$,
+    whose image disc has diameter $\[ - 1 \, 0.6 \]$. Choose a radial annulus $A_(*)$ with inner radius $0.85$ for
+    $\| theta.alt \| lt.eq 0.1$, inner radius between $0.85$ and $1$ everywhere,
+    and inner radius $1$ for $\| theta.alt \| gt.eq 0.2$. Its incoming disc contains $p_0 \( bb(D) \)$:
+    over $\| theta.alt \| < 0.2$ the latter disc has radial boundary less than $0.61$,
+    and elsewhere it lies in $bb(D)$. The double of $A_(*)$ contains
   $ S_0 = { zeta : \| zeta - 1 \| lt.eq 0.05 } $
-  strictly in its interior, since this disc has argument of absolute value less than $0.051$ and radii between $0.95$ and $1.05$. Factor the univalent annulus $p_0$ as $A_(*) C$, and fix lifts with $underline(A)_(*) underline(C)$ equal to the covered univalent lift of $p_0$. The factor $C$ is fixed; Figure 1 shows the geometry of its outer factor.
+  strictly in its interior, since this disc has argument of absolute value less than $0.051$ and radii between
+    $0.95$ and $1.05$. Factor the univalent annulus $p_0$ as $A_(*) C$,
+    and fix lifts with $underline(A)_(*) underline(C)$ equal to the covered univalent lift of $p_0$.
+    The factor $C$ is fixed; Figure 1 shows the geometry of its outer factor.
   #figure(
     [#grid(
     columns: (0.47fr, 0.5fr,),
@@ -611,23 +1038,38 @@ $ a = 1 - 10^(- 4) \, #h(2em) gamma_t \( zeta \) = frac(zeta + t, 1 + t zeta) \,
   )],
     caption: [Figure 1: The fixed geometry used in the round-annulus factorization. The blue disc $p_0 \( bb(D) \)$ lies in the incoming disc, and the orange insertion disc lies strictly inside the gray doubled annulus. The dashed curve is the unit-circle interface. The transition curves in the overview are schematic; the magnified panel uses the stated radii on the central part of the dent. ],
   ) <fig:fixed-annulus>
-  #emph[Factoring the shrinking annulus.] The map $gamma_t$ moves the fixed point $a$ to $r$. We arrange the remaining incoming boundary by writing $s "id" = gamma_t compose p_0 compose b_t$, namely by defining
+  #emph[Factoring the shrinking annulus.] The map $gamma_t$ moves the fixed point $a$ to $r$.
+    We arrange the remaining incoming boundary by writing $s "id" = gamma_t compose p_0 compose b_t$, namely by defining
   $ b_t = p_0^(- 1) compose gamma_t^(- 1) compose \( s "id" \) . $
-  After doubling, the factor $gamma_t$ will cancel against its adjoint. The insertion will then lie between the same fixed factors $underline(C)^(*)$ and $underline(C)$, with only the contractions $underline(b)_t^(*)$ and $underline(b)_t$ outside them.
-  The disc $gamma_t^(- 1) \( s bb(D) \)$ has real diameter with endpoints $- \( s + t \) \/ \( 1 + s t \) > - 1$ and $1 \/ 2$. It lies strictly in $p_0 \( bb(D) \)$, so $b_t$ is a strict Möbius disc embedding. Its covered univalent lift is a contraction, whereas the lift of $gamma_t$ is unitary. Choose these lifts so that
+  After doubling, the factor $gamma_t$ will cancel against its adjoint.
+    The insertion will then lie between the same fixed factors $underline(C)^(*)$ and $underline(C)$,
+    with only the contractions $underline(b)_t^(*)$ and $underline(b)_t$ outside them.
+  The disc $gamma_t^(- 1) \( s bb(D) \)$ has real diameter with endpoints $- \( s + t \) \/ \( 1 + s t \) > -
+    1$ and $1 \/ 2$. It lies strictly in $p_0 \( bb(D) \)$, so $b_t$ is a strict Möbius disc embedding.
+    Its covered univalent lift is a contraction, whereas the lift of $gamma_t$ is unitary. Choose these lifts so that
   #[#set math.equation(numbering: n => "(4.6)")
    $ s^(L_0) = underline(gamma)_t thin underline(A)_(*) underline(C) thin underline(b)_t $ <eq:round-factorization>]
-  is the standard round-annulus lift. This is an equality in the covered univalent semigroup, whose inclusion lifts to $tilde("Ann")_c$ [20] Section 4.2: the Virasoro cocycle vanishes on the univalent subalgebra, so this lift introduces no scalar ambiguity. Any winding adjustment acts unitarily.
+  is the standard round-annulus lift. This is an equality in the covered univalent semigroup,
+    whose inclusion lifts to $tilde("Ann")_c$ [20] Section 4.2:
+    the Virasoro cocycle vanishes on the univalent subalgebra, so this lift introduces no scalar ambiguity.
+    Any winding adjustment acts unitarily.
   Consider the insertion coordinate $p_t \( zeta \) = gamma_t^(- 1) \( r + q zeta \)$. The identities
-  $ 1 - t r = frac(1 - t^2, 1 + t a) \, #h(2em) frac(q, 1 - t r) = frac(2 \( 1 - a^2 \), t + a) < 0.000401 \, $
+  $ 1 - t r = frac(1 - t^2, 1 + t a) \, wide frac(q, 1 - t r) = frac(2 \( 1 - a^2 \), t + a) < 0.000401 \, $
   and
   $ gamma_t^(- 1) \( r + h \) - a = frac(\( 1 - t^2 \) h, \( 1 - t r \) \( 1 - t r - t h \)) $
   show, for $\| h \| lt.eq q$, that
   $ \| gamma_t^(- 1) \( r + h \) - a \| lt.eq frac(2 \( 0.000401 \), 1 - 0.000401) < 0.000803 . $
-  Consequently $p_t \( bb(D) \) subset circle(S)_0$ for every $t$. The map has no pole there. Also $s > t$, so the pole $1 \/ t$ of $gamma_t^(- 1)$ is outside the round annulus with outer radius $1 \/ s$. Since $gamma_t$ commutes with reflection in the unit circle, we may double (4.6), carrying along the insertion. The unitary factors cancel, and gluing gives the exact operator identity
+  Consequently $p_t \( bb(D) \) subset circle(S)_0$ for every $t$. The map has no pole there.
+    Also $s > t$, so the pole $1 \/ t$ of $gamma_t^(- 1)$ is outside the round annulus with outer radius $1 \/ s$.
+    Since $gamma_t$ commutes with reflection in the unit circle, we may double (4.6),
+    carrying along the insertion. The unitary factors cancel, and gluing gives the exact operator identity
   #[#set math.equation(numbering: n => "(4.7)")
-   $ A_(1 \/ s \, s \, N) \[ \( q^(L_0) v \) \( r \) \] = underline(b)_(t \, N)^(*) underline(C)_N^(*) \( underline(A)_(*)^dagger underline(A)_(*) \)_N \[ \( p_t \)_(*) v \( 0 \) \] underline(C)_N underline(b)_(t \, N) . $ <eq:round-doubled>]
-  #emph[The uniform bound.] Lemma 7 bounds the middle factor by a fixed constant times $parallel v parallel$. Thus the right side has norm at most $C_(hat(A)_(*) \, S_0) parallel underline(C)_N parallel^2 parallel v parallel$. In particular, no radius-dependent comparison scalar is introduced.
+   $ A_(1 \/ s \, s \, N) \[ \( q^(L_0) v \) \( r \) \] = underline(b)_(t \, N)^(*)
+     underline(C)_N^(*) \( underline(A)_(*)^dagger underline(A)_(*) \)_N \[ \( p_t \)_(*) v \( 0 \) \]
+     underline(C)_N underline(b)_(t \, N) . $ <eq:round-doubled>]
+  #emph[The uniform bound.] Lemma 7 bounds the middle factor by a fixed constant times $parallel v parallel$.
+    Thus the right side has norm at most $C_(hat(A)_(*) \, S_0) parallel underline(C)_N parallel^2 parallel v
+    parallel$. In particular, no radius-dependent comparison scalar is introduced.
   Finally,
   $ frac(1 - s, 1 - r) = 5000 frac(1 + t a, 1 + t \/ 2) \, $
   which proves (4.5). ◻
@@ -637,62 +1079,95 @@ $ a = 1 - 10^(- 4) \, #h(2em) gamma_t \( zeta \) = frac(zeta + t, 1 + t zeta) \,
 
 Recall from (2.4) that, for a unitary module $M$, the creation and annihilation intertwiners are
 
-$ cal(Y)_M^(+) \( a \, z \) v = e^(z L_(- 1)) Y^M \( v \, - z \) a \, #h(2em) cal(Y)_M^(-) = \( cal(Y)_M^(+) \)^dagger . $
+$ cal(Y)_M^(+) \( a \, z \) v = e^(z L_(- 1)) Y^M \( v \, - z \) a \, wide cal(Y)_M^(-) = \( cal(Y)_M^(+) \)^dagger . $
 
-Their types are respectively $binom(M, M thin V)$ and $binom(V, macron(M) thin M)$. The charge transform (2.5), for a complex coordinate with a chosen logarithm, is
+Their types are respectively $binom(M, M thin V)$ and $binom(V, macron(M) thin M)$.
+  The charge transform (2.5), for a complex coordinate with a chosen logarithm, is
 
 $ theta_(macron(z)) a = e^(macron(z) L_1) e^(i pi L_0) macron(z)^(- 2 L_0) macron(a) \, $
 
 using the conjugate logarithm at $macron(z)$. For unitary modules $M \, N$, define the diagonal transport form by
 
 #[#set math.equation(numbering: n => "(4.8)")
- $ frak(t)_z^(M \, N) \( a ⊗ b \, a' ⊗ b' \) = chevron.l Y^N #scale(x: 120%, y: 120%)[\(] cal(Y)_M^(-) \( theta_(macron(z)) a' \, macron(z)^(- 1) - z \) a \, z #scale(x: 120%, y: 120%)[\)] b \, b' chevron.r . $ <eq:transport-form>]
+ $ frak(t)_z^(M \, N) \( a ⊗ b \, a' ⊗ b' \) = chevron.l Y^N #scale(x: 120%, y: 120%)[\(]
+   cal(Y)_M^(-) \( theta_(macron(z)) a' \, macron(z)^(- 1) - z \) a \, z #scale(x: 120%, y: 120%)[\)] b \,
+   b' chevron.r . $ <eq:transport-form>]
 
-We use this for $0 < \| z \| < 1$ and $\| z \| > \| z \|^(- 1) - \| z \|$. At positive real $z$ all positive-coordinate logarithms are real; on a rotated diagonal the two insertion coordinates have the same argument and the reflected logarithm is the conjugate one. The form is linear in its first entry.
+We use this for $0 < \| z \| < 1$ and $\| z \| > \| z \|^(- 1) - \| z \|$.
+  At positive real $z$ all positive-coordinate logarithms are real;
+  on a rotated diagonal the two insertion coordinates have the same argument and the reflected logarithm is the
+  conjugate one. The form is linear in its first entry.
 
-Regularity gives absolute convergence of these matrix coefficients. More precisely, the ordinary intertwiners between unitary modules have Hilbert-space values at $0 < \| z \| < 1$, with branchwise norm holomorphy [30] Definition 2.8, Lemma 2.9 and Proposition 3.11. Creation satisfies the identity
+Regularity gives absolute convergence of these matrix coefficients.
+  More precisely, the ordinary intertwiners between unitary modules have Hilbert-space values at $0 < \| z \| <
+  1$, with branchwise norm holomorphy [30] Definition 2.8, Lemma 2.9 and Proposition 3.11.
+  Creation satisfies the identity
 
 #[#set math.equation(numbering: n => "(4.9)")
- $ frak(t)_z^(M \, V) \( a ⊗ b \, a' ⊗ b' \) = chevron.l cal(Y)_M^(+) \( a \, z \) b \, cal(Y)_M^(+) \( a' \, z \) b' chevron.r $ <eq:creation-transport>]
+ $ frak(t)_z^(M \, V) \( a ⊗ b \, a' ⊗ b' \) = chevron.l cal(Y)_M^(+) \( a \, z \) b \,
+   cal(Y)_M^(+) \( a' \, z \) b' chevron.r $ <eq:creation-transport>]
 
 without assuming energy bounds, integration of $M$, or positivity of general fusion forms [30] Proposition 3.10.
 
 #thm([Lemma 4.4.])[
-  (Hilbert-state insertions).  #emph[Let $M \, N$ be unitary modules, with $N$ already integrated. For homogeneous $a \, a' in M$ of weights $d \, d'$, set 
-$ u_z = cal(Y)_M^(-) \( theta_(macron(z)) a' \, macron(z)^(- 1) - z \) a \, #h(2em) delta = \| z \|^(- 1) - \| z \| \, #h(2em) q = 2 delta . $
+  (Hilbert-state insertions).  #emph[Let $M \, N$ be unitary modules, with $N$ already integrated.
+    For homogeneous $a \, a' in M$ of weights $d \, d'$, set
+$ u_z = cal(Y)_M^(-) \( theta_(macron(z)) a' \, macron(z)^(- 1) - z \) a \, wide
+  delta = \| z \|^(- 1) - \| z \| \, wide q = 2 delta . $
 
- As $\| z \|$ tends to one on a fixed branch, 
+ As $\| z \|$ tends to one on a fixed branch,
 #[#set math.equation(numbering: n => "(4.10)")
- $ q^(- L_0) u_z in cal(H)_V \, #h(2em) parallel q^(- L_0) u_z parallel lt.eq C_(a \, a') delta^(- d - d') . $ <eq:annulus-hilbert-state>]
+ $ q^(- L_0) u_z in cal(H)_V \, wide parallel q^(- L_0) u_z parallel lt.eq
+   C_(a \, a') delta^(- d - d') . $ <eq:annulus-hilbert-state>]
 
- For a fixed dent with $z$ in its inner collar, $hat(A)_N \[ u_z \( z \) \]$ is well defined by norm limits of energy truncations, belongs to $pi_I^N \( A_V \( I \) \)$, and has norm at most $C delta^(- d - d')$. On $underline(A)_N^(- 1) N$ in both variables it obeys 
+ For a fixed dent with $z$ in its inner collar, $hat(A)_N \[ u_z \( z \) \]$ is well defined by norm limits of
+   energy truncations, belongs to $pi_I^N \( A_V \( I \) \)$, and has norm at most $C delta^(- d - d')$.
+   On $underline(A)_N^(- 1) N$ in both variables it obeys
 #[#set math.equation(numbering: n => "(4.11)")
- $ chevron.l hat(A)_N \[ u_z \( z \) \] xi \, eta chevron.r = frak(t)_z^(M \, N) \( a ⊗ underline(A)_N xi \, a' ⊗ underline(A)_N eta \) . $ <eq:transport-cutoff>]
+ $ chevron.l hat(A)_N \[ u_z \( z \) \] xi \, eta chevron.r =
+   frak(t)_z^(M \, N) \( a ⊗ underline(A)_N xi \, a' ⊗ underline(A)_N eta \) . $ <eq:transport-cutoff>]
 
  For the round annuli of Proposition 8, the same bound holds with the cutoffs $s^(L_0)$ in both entries and $z = r$.]
 ] <lem:transport-cutoff>
 
 #proof[
-  Expand $theta_(macron(z)) a'$ into finitely many vectors of weights $d_j lt.eq d'$. Their coefficients are bounded as $\| z \|$ tends to one. By $L_0$-covariance, applying $q^(- L_0)$ to each annihilation value produces the factor $q^(- d_j - d)$ and an annihilation value at modulus $delta \/ q = 1 \/ 2$. The latter is a Hilbert-space vector by [30] Proposition 3.11; rotations preserve its norm. This proves (4.10).
-  Let $P_n$ be the vacuum energy cutoff. Apply the uniform collar version of (4.3) to $q^(- L_0) \( P_n - P_m \) u_z$. It gives
-  $ parallel hat(A)_N \[ \( P_n u_z \) \( z \) \] - hat(A)_N \[ \( P_m u_z \) \( z \) \] parallel lt.eq C parallel q^(- L_0) \( P_n - P_m \) u_z parallel . $
-  Thus these operators converge in norm, with the asserted bound. Locality and representation transfer persist under that norm limit. For finite truncations, (4.2) applies. Absolute convergence of the transport iterate identifies its limiting matrix coefficients on the exact dense preimages, proving (4.11). The identical argument using (4.4) and (4.1) gives the round-annulus assertion. ◻
+  Expand $theta_(macron(z)) a'$ into finitely many vectors of weights $d_j lt.eq d'$.
+    Their coefficients are bounded as $\| z \|$ tends to one.
+    By $L_0$-covariance, applying $q^(- L_0)$ to each annihilation value produces the factor $q^(- d_j - d)$ and
+    an annihilation value at modulus $delta \/ q = 1 \/ 2$. The latter is a Hilbert-space vector by [30]
+    Proposition 3.11; rotations preserve its norm. This proves (4.10).
+  Let $P_n$ be the vacuum energy cutoff. Apply the uniform collar version of (4.3) to $q^(- L_0) \( P_n - P_m \)
+    u_z$. It gives
+  $ parallel hat(A)_N \[ \( P_n u_z \) \( z \) \] - hat(A)_N \[ \( P_m u_z \) \( z \) \] parallel lt.eq
+    C parallel q^(- L_0) \( P_n - P_m \) u_z parallel . $
+  Thus these operators converge in norm, with the asserted bound.
+    Locality and representation transfer persist under that norm limit. For finite truncations, (4.2) applies.
+    Absolute convergence of the transport iterate identifies its limiting matrix coefficients on the exact dense
+    preimages, proving (4.11). The identical argument using (4.4) and (4.1) gives the round-annulus assertion. ◻
 ]
 
 === 4.4 Charged modes and bounded boundary smears <charged-modes-and-bounded-boundary-smears>
 
 #thm([Lemma 4.5.])[
-  (Analytic tools for a dominated intertwiner).  #emph[Let $M \, N \, K$ be grading-restricted unitary $V$-modules, with $N$ already strongly integrable, and let $Phi$ have type $binom(K, M thin N)$. Fix a homogeneous $a in M$ of weight $d$. Suppose that, for all finite-energy $b in N$ and all diagonal positions sufficiently close to the unit circle on the branches under consideration, 
+  (Analytic tools for a dominated intertwiner).  #emph[Let $M \, N \,
+    K$ be grading-restricted unitary $V$-modules, with $N$ already strongly integrable,
+    and let $Phi$ have type $binom(K, M thin N)$. Fix a homogeneous $a in M$ of weight $d$.
+    Suppose that, for all finite-energy $b in N$ and all diagonal positions sufficiently close to the unit circle
+    on the branches under consideration,
 #[#set math.equation(numbering: n => "(4.12)")
- $ parallel Phi \( a \, z \) b parallel^2 lt.eq C_a frak(t)_z^(M \, N) \( a ⊗ b \, a ⊗ b \) . $ <eq:transport-domination>]
+ $ parallel Phi \( a \, z \) b parallel^2 lt.eq C_a frak(t)_z^(M \, N) \( a ⊗ b \, a ⊗ b \) .
+   $ <eq:transport-domination>]
 
- Then $Phi \( a \, z \)$ has polynomial energy bounds, as do its levelwise adjoint coefficients. Its smooth smears and their formal adjoints preserve the smooth domains continuously.]
-  #emph[For every smooth test $f$ supported compactly in an interval $I$ with a chosen argument, there is a localized radial annulus $underline(A)$ with a dent over $"supp" f$ such that 
+ Then $Phi \( a \, z \)$ has polynomial energy bounds, as do its levelwise adjoint coefficients.
+   Its smooth smears and their formal adjoints preserve the smooth domains continuously.]
+  #emph[For every smooth test $f$ supported compactly in an interval $I$ with a chosen argument,
+    there is a localized radial annulus $underline(A)$ with a dent over $"supp" f$ such that
 #[#set math.equation(numbering: n => "(4.13)")
  $ T_f = overline(Phi \( a \, f \)) thin underline(A)_N : cal(H)_N arrow.r cal(H)_K $ <eq:charged-bounded-cutoff>]
 
- is bounded and defined on all of $cal(H)_N$. Both $T_f$ and $T_f^(*)$ preserve smooth vectors in their respective directions. Moreover, 
-$ N subset "ran" underline(A)_N \, #h(2em) underline(A)_N^(- 1) N upright(" is dense in ") cal(H)_N . $
+ is bounded and defined on all of $cal(H)_N$. Both $T_f$ and $T_f^(*)$ preserve smooth vectors in their respective
+   directions. Moreover,
+$ N subset "ran" underline(A)_N \, wide underline(A)_N^(- 1) N upright(" is dense in ") cal(H)_N . $
 
  These conclusions apply to $Phi = cal(Y)_M^(+)$ and $N = V$ for every already unitary $M$, before integrating $M$.]
 ] <lem:charged-tools>
@@ -700,197 +1175,381 @@ $ N subset "ran" underline(A)_N \, #h(2em) underline(A)_N^(- 1) N upright(" is d
 #proof[
   Lemma 9 and Proposition 8 give
   #[#set math.equation(numbering: n => "(4.14)")
-   $ parallel Phi \( a \, r \) s^(L_0) b parallel lt.eq C \( 1 - r \)^(- d) parallel b parallel \, #h(2em) b in N . $ <eq:charged-radial-estimate>]
-  Write the physical expansion as $Phi \( a \, z \) = sum_mu Phi \( a \) \[ mu \] z^(- mu - d)$, so that a coefficient maps energy $h$ to $h - mu$. For $b$ of energy $h$, project (4.14) to that output energy. Fix $0 < epsilon_a lt.eq 10^(- 4)$ small enough that the transport domination and the cutoff estimate hold whenever $1 - epsilon_a lt.eq r < 1$, and choose
+   $ parallel Phi \( a \, r \) s^(L_0) b parallel lt.eq C \( 1 - r \)^(- d) parallel b parallel \, wide
+     b in N . $ <eq:charged-radial-estimate>]
+  Write the physical expansion as $Phi \( a \, z \) = sum_mu Phi \( a \) \[ mu \] z^(- mu - d)$,
+    so that a coefficient maps energy $h$ to $h - mu$. For $b$ of energy $h$,
+    project (4.14) to that output energy. Fix $0 < epsilon_a lt.eq
+    10^(- 4)$ small enough that the transport domination and the cutoff estimate hold whenever $1 -
+    epsilon_a lt.eq r < 1$, and choose
   $ 1 - r = frac(epsilon_a, 1 + h + \| mu \|) . $
-  The corresponding $t$ lies in $\[ 0 \, 1 \)$. By (4.5), $s gt.eq 1 \/ 2$ and $1 - s lt.eq \( 6667 \) 10^(- 4) \/ \( 1 + h + \| mu \| \)$. Since $- log s lt.eq 2 \( 1 - s \)$, the factor $s^(- h)$ is uniformly bounded. The factor $r^(mu + d)$ is uniformly bounded as well, using $d gt.eq 0$ and $r gt.eq 1 - 10^(- 4)$. Hence
+  The corresponding $t$ lies in $\[ 0 \, 1 \)$. By (4.5), $s gt.eq 1 \/ 2$ and $1 -
+    s lt.eq \( 6667 \) 10^(- 4) \/ \( 1 + h + \| mu \| \)$. Since $- log s lt.eq 2 \( 1 - s \)$,
+    the factor $s^(- h)$ is uniformly bounded. The factor $r^(mu + d)$ is uniformly bounded as well,
+    using $d gt.eq 0$ and $r gt.eq 1 - 10^(- 4)$. Hence
   #[#set math.equation(numbering: n => "(4.15)")
-   $ parallel Phi \( a \) \[ mu \] b parallel lt.eq C \( 1 + h + \| mu \| \)^d parallel b parallel . $ <eq:charged-mode-estimate>]
-  Distinct input energies have distinct output energies for a fixed coefficient. Orthogonality therefore turns this into a polynomial energy bound on $N$. Taking adjoints between individual energy spaces gives the same kind of bound for the adjoint coefficients. Choose any integer energy order at least $d$ when an integer order is desired.
-  On a fixed argument interval, define $Phi \( a \, f \)$ by smearing its physical field $z^d Phi \( a \, z \)$ against $f \( e^(i theta.alt) \) thin d theta.alt \/ \( 2 pi \)$. Other smooth weight factors can be absorbed into $f$. Rapid decay of Fourier coefficients, (4.15), and the energy shifts show that this smear and its formal adjoint map smooth vectors continuously to smooth vectors. For clarity, a target Sobolev seminorm of order $j$ is bounded by an input seminorm of a fixed higher order, times a summable series of polynomially weighted Fourier coefficients. This also shows that finite-energy truncations converge in the graph norm of the smear. The closures of the smears defined on finite-energy and on smooth vectors consequently agree.
-  Choose $underline(A)$ with $rho < 1$ on a neighborhood of $"supp" f$ and with $1 - rho$ compactly supported in $I$. On the fixed dense subspace $underline(A)_N^(- 1) N$, consider
+   $ parallel Phi \( a \) \[ mu \] b parallel lt.eq C \( 1 + h + \| mu \| \)^d parallel b parallel .
+     $ <eq:charged-mode-estimate>]
+  Distinct input energies have distinct output energies for a fixed coefficient.
+    Orthogonality therefore turns this into a polynomial energy bound on $N$.
+    Taking adjoints between individual energy spaces gives the same kind of bound for the adjoint coefficients.
+    Choose any integer energy order at least $d$ when an integer order is desired.
+  On a fixed argument interval, define $Phi \( a \, f \)$ by smearing its physical field $z^d
+    Phi \( a \, z \)$ against $f \( e^(i theta.alt) \) thin d theta.alt \/ \( 2 pi \)$.
+    Other smooth weight factors can be absorbed into $f$. Rapid decay of Fourier coefficients, (4.15),
+    and the energy shifts show that this smear and its formal adjoint map smooth vectors continuously to smooth
+    vectors. For clarity, a target Sobolev seminorm of order $j$ is bounded by an input seminorm of a fixed higher
+    order, times a summable series of polynomially weighted Fourier coefficients.
+    This also shows that finite-energy truncations converge in the graph norm of the smear.
+    The closures of the smears defined on finite-energy and on smooth vectors consequently agree.
+  Choose $underline(A)$ with $rho < 1$ on a neighborhood of $"supp" f$ and with $1 -
+    rho$ compactly supported in $I$. On the fixed dense subspace $underline(A)_N^(- 1) N$, consider
   $ T \( z \) xi = Phi \( a \, z \) underline(A)_N xi . $
   The localized part of Lemma 9, together with (4.12), gives a bounded extension satisfying
   #[#set math.equation(numbering: n => "(4.16)")
    $ parallel T \( z \) parallel lt.eq C \( 1 - \| z \| \)^(- d) $ <eq:charged-collar>]
-  throughout an inner collar over this neighborhood. Its values on the dense initial domain are Hilbert-valued holomorphic functions, by [30] Lemma 2.9 and Proposition 3.11. Local uniform boundedness therefore gives operator-norm holomorphy.
-  For neutral fields, annulus regularization and the Banach-valued boundary argument appear in [20] Proposition 8.4 and Lemma 8.5. The charged collar estimate (4.16) supplies the hypothesis needed here. We spell out the boundary argument. Put
-  $ F_f \( t \) = integral f \( e^(i theta.alt) \) e^(i d theta.alt) T \( t e^(i theta.alt) \) thin frac(d theta.alt, 2 pi) . $
-  All integrals here use the chosen argument and the compact support of $f$. Holomorphy gives $t partial_t T = - i partial_theta.alt T$. After integrating by parts, every radial derivative of order $p$ of $F_f$ is a finite sum of integrals of $T$ against derivatives of the fixed smooth test, multiplied by bounded powers of $t^(- 1)$. Thus
+  throughout an inner collar over this neighborhood. Its values on the dense initial domain are Hilbert-valued
+    holomorphic functions, by [30] Lemma 2.9 and Proposition 3.11.
+    Local uniform boundedness therefore gives operator-norm holomorphy.
+  For neutral fields, annulus regularization and the Banach-valued boundary argument appear in [20]
+    Proposition 8.4 and Lemma 8.5. The charged collar estimate (4.16) supplies the hypothesis needed here.
+    We spell out the boundary argument. Put
+  $ F_f \( t \) = integral f \( e^(i theta.alt) \) e^(i d theta.alt) T \( t e^(i theta.alt) \) thin
+    frac(d theta.alt, 2 pi) . $
+  All integrals here use the chosen argument and the compact support of $f$.
+    Holomorphy gives $t partial_t T = - i partial_theta.alt T$.
+    After integrating by parts, every radial derivative of order $p$ of $F_f$ is a finite sum of integrals of $T$
+    against derivatives of the fixed smooth test, multiplied by bounded powers of $t^(- 1)$. Thus
   $ parallel F_f^(\( p \)) \( t \) parallel lt.eq C_(f \, p) \( 1 - t \)^(- d) . $
-  Choose an integer $p > d$. Taylor’s integral formula from a fixed $t_0 < 1$ expresses $F_f \( t \)$ as a polynomial plus the integral of $\( t - u \)^(p - 1) F_f^(\( p \)) \( u \) \/ \( p - 1 \) !$. The norm of the latter integrand is bounded, uniformly for $u lt.eq t$, by a constant times $\( 1 - u \)^(p - 1 - d)$, which is integrable at one. Dominated convergence proves that $F_f \( t \)$ has an operator-norm limit $T_f$ as $t$ tends to one.
-  On $underline(A)_N^(- 1) N$, the mode expansion and its polynomial bounds identify this limit with $Phi \( a \, f \) underline(A)_N$. For arbitrary $xi in cal(H)_N$, approximate $xi$ by $xi_j in underline(A)_N^(- 1) N$. Then $underline(A)_N xi_j arrow.r underline(A)_N xi$ and $T_f xi_j arrow.r T_f xi$. Closedness of the smeared field proves (4.13) on all of $cal(H)_N$. Lemma 6 supplies the asserted range and density.
-  The product in (4.13) preserves smooth vectors, since both its factors do. If $Phi \( a \, f \)^dagger$ denotes the formal adjoint smear, then every smooth target vector $eta$ belongs to the adjoint domain of $overline(Phi \( a \, f \))$, and
+  Choose an integer $p > d$. Taylor’s integral formula from a fixed $t_0 <
+    1$ expresses $F_f \( t \)$ as a polynomial plus the integral of $\( t - u \)^(p - 1)
+    F_f^(\( p \)) \( u \) \/ \( p - 1 \) !$. The norm of the latter integrand is bounded, uniformly for $u lt.eq
+    t$, by a constant times $\( 1 - u \)^(p - 1 - d)$, which is integrable at one.
+    Dominated convergence proves that $F_f \( t \)$ has an operator-norm limit $T_f$ as $t$ tends to one.
+  On $underline(A)_N^(- 1) N$, the mode expansion and its polynomial bounds identify this limit with
+    $Phi \( a \, f \) underline(A)_N$. For arbitrary $xi in cal(H)_N$,
+    approximate $xi$ by $xi_j in underline(A)_N^(- 1) N$. Then $underline(A)_N xi_j arrow.r
+    underline(A)_N xi$ and $T_f xi_j arrow.r T_f xi$. Closedness of the smeared field proves (4.13) on all of
+    $cal(H)_N$. Lemma 6 supplies the asserted range and density.
+  The product in (4.13) preserves smooth vectors, since both its factors do.
+    If $Phi \( a \, f \)^dagger$ denotes the formal adjoint smear,
+    then every smooth target vector $eta$ belongs to the adjoint domain of $overline(Phi \( a \, f \))$, and
   $ T_f^(*) eta = underline(A)_N^(*) Phi \( a \, f \)^dagger eta . $
-  Indeed this equality follows by pairing with the dense finite-energy core and using the adjoint coefficient bounds. The right side is smooth: the formal adjoint smear preserves smooth vectors and the fixed annulus adjoint preserves every Sobolev space. This proves the remaining domain assertion. Finally, (4.9) supplies (4.12) with constant one for creation, with the vacuum as its integrated source. ◻
+  Indeed this equality follows by pairing with the dense finite-energy core and using the adjoint coefficient
+    bounds. The right side is smooth: the formal adjoint smear preserves smooth vectors and the fixed annulus
+    adjoint preserves every Sobolev space. This proves the remaining domain assertion.
+    Finally, (4.9) supplies (4.12) with constant one for creation, with the vacuum as its integrated source. ◻
 ]
 
 == 5 Integrating the unitary modules <sec:integration>
 
-We now construct the local algebra actions on a unitary module. The input is the bounded regularization of a charged field from Lemma 10. We first show that this regularization intertwines the observables in a disjoint interval as closed operators. Creation fields will then identify the observable algebra on the module with the vacuum algebra. Only the already given positive form on the module is used in this construction.
+We now construct the local algebra actions on a unitary module.
+  The input is the bounded regularization of a charged field from Lemma 10.
+  We first show that this regularization intertwines the observables in a disjoint interval as closed operators.
+  Creation fields will then identify the observable algebra on the module with the vacuum algebra.
+  Only the already given positive form on the module is used in this construction.
 
 For unitary modules $N \, K$ and an interval $J$, define the diagonal observable algebra
 
 #[#set math.equation(numbering: n => "(5.1)")
- $ cal(B)_(N \, K) \( J \) = W^(*) #h(-0.16667em) {overline(Y^N \( v \, g \)) xor overline(Y^K \( v \, g \)) : v in V upright(" homogeneous") \, med g in C_c^oo \( J \)} . $ <eq:diagonal-observable-algebra>]
+ $ cal(B)_(N \, K) \( J \) = W^(*) #h(-0.16667em) {overline(Y^N \( v \, g \)) xor overline(Y^K \( v \, g \)) :
+   v in V upright(" homogeneous") \, med g in C_c^oo \( J \)} . $ <eq:diagonal-observable-algebra>]
 
-As for $A_V$, an unbounded generator means its closed graph data, or equivalently its bounded transform and polar data. If $T : cal(H)_N arrow.r cal(H)_K$ is a closed densely defined operator, its closed lower-corner operator on $cal(H)_N xor cal(H)_K$ is
+As for $A_V$, an unbounded generator means its closed graph data,
+  or equivalently its bounded transform and polar data. If $T : cal(H)_N arrow.r
+  cal(H)_K$ is a closed densely defined operator, its closed lower-corner operator on $cal(H)_N xor cal(H)_K$ is
 
-$ tilde(T) = mat(delim: "(", 0, 0; T, 0) \, #h(2em) "Dom" tilde(T) = "Dom" T xor cal(H)_K . $
+$ tilde(T) = mat(delim: "(", 0, 0; T, 0) \, wide "Dom" tilde(T) = "Dom" T xor cal(H)_K . $
 
-We say that $T$ #emph[strongly intertwines the observables in $J$] when $tilde(T)$ is affiliated with $cal(B)_(N \, K) \( J \)'$.
+We say that $T$ #emph[strongly intertwines the observables in $J$] when $tilde(T)$ is affiliated with
+  $cal(B)_(N \, K) \( J \)'$.
 
 #thm([Proposition 5.1.])[
-  (Strong intertwining from annulus regularization).  #emph[Let $V$ be simple, unitary and strongly rational, and let $M \, N \, K$ be grading-restricted unitary $V$-modules, with $N$ strongly integrable. Let $Phi$ be an intertwining operator of type $binom(K, M thin N)$, and let $a in M$ be homogeneous. Assume that $Phi \( a \, z \)$ satisfies the transport domination hypothesis of Lemma 10. Smear $Phi \( a \, z \)$ against a smooth test $f$ supported in an interval $I$, with a fixed argument branch. If $J$ is disjoint from $I$, then the closed smeared operator $overline(Phi \( a \, f \))$ strongly intertwines the diagonal smeared observables of $N$ and $K$ supported in $J$. This holds for every homogeneous observable in $V$ and for every such choice of tests and argument branches.]
+  (Strong intertwining from annulus regularization).  #emph[Let $V$ be simple, unitary and strongly rational,
+    and let $M \, N \, K$ be grading-restricted unitary $V$-modules, with $N$ strongly integrable.
+    Let $Phi$ be an intertwining operator of type $binom(K, M thin N)$, and let $a in M$ be homogeneous.
+    Assume that $Phi \( a \, z \)$ satisfies the transport domination hypothesis of Lemma 10.
+    Smear $Phi \( a \, z \)$ against a smooth test $f$ supported in an interval $I$, with a fixed argument branch.
+    If $J$ is disjoint from $I$, then the closed smeared operator $overline(Phi \( a \, f \))$ strongly
+    intertwines the diagonal smeared observables of $N$ and $K$ supported in $J$.
+    This holds for every homogeneous observable in $V$ and for every such choice of tests and argument branches.]
 ] <prop:strong-intertwining>
 
 #proof[
-  Write $cal(D)_N = cal(H)_N^oo$ and $cal(D)_K = cal(H)_K^oo$. The polynomial mode estimates imply that smeared fields and their formal adjoints map the corresponding smooth spaces continuously to smooth spaces. Spectral truncations converge in all the smooth seminorms. Consequently a smear has the same closure whether it is initially defined on finite-energy vectors or on smooth vectors. These facts apply both to the observables and, by Lemma 10, to the charged field.
-  Choose the localized annulus $underline(A)$ in that lemma with its dent containing $"supp" f$ and localized in $I$. Its action $underline(A)_N$ is a bounded injective operator with dense range, and
+  Write $cal(D)_N = cal(H)_N^oo$ and $cal(D)_K = cal(H)_K^oo$.
+    The polynomial mode estimates imply that smeared fields and their formal adjoints map the corresponding smooth
+    spaces continuously to smooth spaces. Spectral truncations converge in all the smooth seminorms.
+    Consequently a smear has the same closure whether it is initially defined on finite-energy vectors or on
+    smooth vectors. These facts apply both to the observables and, by Lemma 10, to the charged field.
+  Choose the localized annulus $underline(A)$ in that lemma with its dent containing $"supp"
+    f$ and localized in $I$. Its action $underline(A)_N$ is a bounded injective operator with dense range, and
   #[#set math.equation(numbering: n => "(5.2)")
    $ T_f = overline(Phi \( a \, f \)) underline(A)_N $ <eq:bounded-charge-regularization>]
-  is bounded on all of $cal(H)_N$. Both $T_f$ and $T_f^(*)$ preserve the respective smooth spaces. On $cal(D)_K$ the adjoint is $underline(A)_N^(*) Phi \( a \, f \)^dagger$, where the dagger denotes the formal smeared adjoint. These are assertions about the full bounded regularization, not merely about its restriction to finite energies.
+  is bounded on all of $cal(H)_N$. Both $T_f$ and $T_f^(*)$ preserve the respective smooth spaces.
+    On $cal(D)_K$ the adjoint is $underline(A)_N^(*) Phi \( a \, f \)^dagger$,
+    where the dagger denotes the formal smeared adjoint. These are assertions about the full bounded
+    regularization, not merely about its restriction to finite energies.
   For homogeneous $v in V$ and a smooth $g$ supported in $J$, put
-  $ S_N = overline(Y^N \( v \, g \)) \, #h(2em) S_K = overline(Y^K \( v \, g \)) . $
+  $ S_N = overline(Y^N \( v \, g \)) \, wide S_K = overline(Y^K \( v \, g \)) . $
   On the smooth spaces, the intertwining-operator Jacobi identity gives
   $ Y^K \( v \, g \) Phi \( a \, f \) = Phi \( a \, f \) Y^N \( v \, g \) . $
-  To pass from the formal identity to this equality, multiply the two field orderings by a sufficiently high integral power of the coordinate difference. Polynomial energy bounds make the resulting series smooth-domain distributions. Since the two test supports are disjoint, one can divide the product test by that power. The same argument applies to the adjoint relation, whose observable test has the same support. This is the weak intertwining property in [17] Theorem 3.5.
-  The operator $underline(A)_N$ and its adjoint commute strongly with these observables: $underline(A)_N$ is localized in $I$, whereas $N$ is already integrated and the observables are localized in $J$. Combining this with the weak identities gives
+  To pass from the formal identity to this equality, multiply the two field orderings by a sufficiently high
+    integral power of the coordinate difference. Polynomial energy bounds make the resulting series smooth-domain
+    distributions. Since the two test supports are disjoint, one can divide the product test by that power.
+    The same argument applies to the adjoint relation, whose observable test has the same support.
+    This is the weak intertwining property in [17] Theorem 3.5.
+  The operator $underline(A)_N$ and its adjoint commute strongly with these observables:
+    $underline(A)_N$ is localized in $I$, whereas $N$ is already integrated and the observables are localized in
+    $J$. Combining this with the weak identities gives
   #[#set math.equation(numbering: n => "(5.3)")
-   $ S_K T_f xi = T_f S_N xi quad \( xi in cal(D)_N \) \, #h(2em) S_N T_f^(*) eta = T_f^(*) S_K eta quad \( eta in cal(D)_K \) . $ <eq:bounded-charge-core-commutation>]
-  For the second equality one can pair the first weak intertwining identity for the #emph[formal adjoint observable]. More explicitly, let $S_N^dagger$ and $S_K^dagger$ denote its actions on the smooth spaces. The invariant adjoint formula expresses it as a finite sum of smears of PCT-transformed states and their $L_1$-descendants, with tests still supported in $J$. Thus the first equality also gives $T_f S_N^dagger = S_K^dagger T_f$ on $cal(D)_N$. For $xi in cal(D)_N$ and $eta in cal(D)_K$, using our linear-first inner product convention, we obtain
-  $ chevron.l S_N T_f^(*) eta \, xi chevron.r & = chevron.l T_f^(*) eta \, S_N^dagger xi chevron.r = chevron.l eta \, T_f S_N^dagger xi chevron.r\
- & = chevron.l eta \, S_K^dagger T_f xi chevron.r = chevron.l S_K eta \, T_f xi chevron.r = chevron.l T_f^(*) S_K eta \, xi chevron.r . $
-  All vectors in these pairings are smooth. This proves the second equality in (5.3) without identifying a formal-adjoint closure with the full Hilbert-space adjoint.
+   $ S_K T_f xi = T_f S_N xi quad \( xi in cal(D)_N \) \, wide S_N T_f^(*) eta =
+     T_f^(*) S_K eta quad \( eta in cal(D)_K \) . $ <eq:bounded-charge-core-commutation>]
+  For the second equality one can pair the first weak intertwining identity for the #emph[formal adjoint
+    observable]. More explicitly, let $S_N^dagger$ and $S_K^dagger$ denote its actions on the smooth spaces.
+    The invariant adjoint formula expresses it as a finite sum of smears of PCT-transformed states and their
+    $L_1$-descendants, with tests still supported in $J$. Thus the first equality also gives $T_f S_N^dagger =
+    S_K^dagger T_f$ on $cal(D)_N$. For $xi in cal(D)_N$ and $eta in cal(D)_K$,
+    using our linear-first inner product convention, we obtain
+  $ chevron.l S_N T_f^(*) eta \, xi chevron.r & = chevron.l T_f^(*) eta \, S_N^dagger xi chevron.r =
+    chevron.l eta \, T_f S_N^dagger xi chevron.r\
+ & = chevron.l eta \, S_K^dagger T_f xi chevron.r = chevron.l S_K eta \, T_f xi chevron.r =
+   chevron.l T_f^(*) S_K eta \, xi chevron.r . $
+  All vectors in these pairings are smooth. This proves the second equality in (5.3) without identifying a
+    formal-adjoint closure with the full Hilbert-space adjoint.
   We spell out the passage to closed operators. On $cal(H)_N xor cal(H)_K$, let
-  $ D = S_N xor S_K \, #h(2em) Q_f = mat(delim: "(", 0, 0; T_f, 0) . $
-  Approximation in the graph norms, using the smooth cores, shows that both $Q_f$ and $Q_f^(*)$ preserve $"Dom" D$ and commute with $D$ there. Hence $Q_f xor Q_f$ and its adjoint preserve the closed graph of $D$. They therefore commute with its orthogonal projection. The matrix entries of this graph projection determine the usual bounded transform and polar data of $D$. Thus $Q_f$ commutes with the von Neumann algebra generated by $D$.
+  $ D = S_N xor S_K \, wide Q_f = mat(delim: "(", 0, 0; T_f, 0) . $
+  Approximation in the graph norms, using the smooth cores,
+    shows that both $Q_f$ and $Q_f^(*)$ preserve $"Dom" D$ and commute with $D$ there.
+    Hence $Q_f xor Q_f$ and its adjoint preserve the closed graph of $D$.
+    They therefore commute with its orthogonal projection. The matrix entries of this graph projection determine
+    the usual bounded transform and polar data of $D$. Thus $Q_f$ commutes with the von Neumann algebra generated
+    by $D$.
   As $v$ and $g$ vary, the preceding argument proves $Q_f in cal(B)_(N \, K) \( J \)'$.
-  It remains to remove the annulus. The first-summand compression of $cal(B)_(N \, K) \( J \)$ is $pi_J^N \( A_V \( J \) \)$: its normal range is generated by the module smears, which are the images of the vacuum generators under strong integration. Since $underline(A)_N$ is localized in $I$, both $"diag" \( underline(A)_N \, 1 \)$ and its adjoint commute with $cal(B)_(N \, K) \( J \)$. The closed inverse $underline(A)_N^(- 1)$ is densely defined on $"ran" underline(A)_N$, and inversion preserves the resulting affiliation with the commutant. Therefore
+  It remains to remove the annulus. The first-summand compression of $cal(B)_(N \, K) \( J \)$ is
+    $pi_J^N \( A_V \( J \) \)$: its normal range is generated by the module smears,
+    which are the images of the vacuum generators under strong integration.
+    Since $underline(A)_N$ is localized in $I$, both $"diag" \( underline(A)_N \, 1 \)$ and its adjoint commute
+    with $cal(B)_(N \, K) \( J \)$. The closed inverse $underline(A)_N^(- 1)$ is densely defined on $"ran"
+    underline(A)_N$, and inversion preserves the resulting affiliation with the commutant. Therefore
   $ Q_f mat(delim: "(", underline(A)_N^(- 1), 0; 0, 1) $
-  is densely defined, and its domain and action commute with every unitary in $cal(B)_(N \, K) \( J \)$. It is closable: by (5.2) it is a restriction of the closed operator with lower corner $overline(Phi \( a \, f \))$ and all other corners zero. Its domain contains the finite-energy core in the first summand, since $N subset "ran" underline(A)_N$ by Lemma 6. Its closure is consequently exactly that closed lower-corner operator. This proves its affiliation with $cal(B)_(N \, K) \( J \)'$.
-  This affiliation is the strong intertwining assertion, including the diagram convention used in [17] Section 3.3. Explicitly, on two copies of $cal(H)_N xor cal(H)_K$, repeat the charged corner diagonally and place a diagonal observable in a matrix corner between the copies. The latter is affiliated with $M_2 \( cal(B)_(N \, K) \( J \) \)$, and the repeated charged corner with its commutant. Hence the diagram commutes strongly. All operations above are valid for each fixed branch on $I$. ◻
+  is densely defined, and its domain and action commute with every unitary in $cal(B)_(N \, K) \( J \)$.
+    It is closable: by (5.2) it is a restriction of the closed operator with lower corner
+    $overline(Phi \( a \, f \))$ and all other corners zero. Its domain contains the finite-energy core in the
+    first summand, since $N subset "ran" underline(A)_N$ by Lemma 6.
+    Its closure is consequently exactly that closed lower-corner operator.
+    This proves its affiliation with $cal(B)_(N \, K) \( J \)'$.
+  This affiliation is the strong intertwining assertion, including the diagram convention used in [17]
+    Section 3.3. Explicitly, on two copies of $cal(H)_N xor cal(H)_K$,
+    repeat the charged corner diagonally and place a diagonal observable in a matrix corner between the copies.
+    The latter is affiliated with $M_2 \( cal(B)_(N \, K) \( J \) \)$,
+    and the repeated charged corner with its commutant. Hence the diagram commutes strongly.
+    All operations above are valid for each fixed branch on $I$. ◻
 ]
 
 We next use creation fields to show that the vacuum compression of a diagonal observable algebra loses no information.
 
 #thm([Lemma 5.2.])[
-  (Totality of local creation ranges).  #emph[Let $V$ be simple, unitary and strongly rational, let $M$ be a grading-restricted unitary $V$-module, and let $I$ be a nonempty interval. For every homogeneous $a in M$ and $f in C_c^oo \( I \)$, form the bounded creation regularization 
+  (Totality of local creation ranges).  #emph[Let $V$ be simple, unitary and strongly rational,
+    let $M$ be a grading-restricted unitary $V$-module, and let $I$ be a nonempty interval.
+    For every homogeneous $a in M$ and $f in C_c^oo \( I \)$, form the bounded creation regularization
 $ T_(a \, f) = overline(cal(Y)_M^(+) \( a \, f \)) underline(A)_V $
 
  of Lemma 10; the localized annulus may depend on the test. The closed linear span of their ranges is $cal(H)_M$.]
 ] <lem:creation-totality>
 
 #proof[
-  The transport domination needed here holds with equality for creation and vacuum source. It uses the given form on $M$, and assumes neither integration of $M$ nor positivity of a general fusion product. Since $Omega in "ran" underline(A)_V$, each range contains $cal(Y)_M^(+) \( a \, f \) Omega$.
+  The transport domination needed here holds with equality for creation and vacuum source.
+    It uses the given form on $M$, and assumes neither integration of $M$ nor positivity of a general fusion
+    product. Since $Omega in "ran" underline(A)_V$, each range contains $cal(Y)_M^(+) \( a \, f \) Omega$.
   Suppose $eta in cal(H)_M$ is orthogonal to all these vectors. For each homogeneous $a$, consider
-  $ F_a \( z \) = chevron.l e^(z L_(- 1)) a \, eta chevron.r \, #h(2em) \| z \| < 1 . $
-  Creation gives $cal(Y)_M^(+) \( a \, z \) Omega = e^(z L_(- 1)) a$. The charged energy estimate bounds the Taylor coefficients of $F_a$ by a polynomial in their index. Its boundary value is therefore a distribution with only nonnegative Fourier frequencies. Orthogonality to all the creation smears says that this distribution vanishes on $I$. The smooth weight or branch factor in the smearing convention can be absorbed into the test on this interval.
-  For completeness, such a one-sided distribution is zero if it vanishes on a nonempty arc. Convolve it with smooth approximate identities supported in increasingly small arcs. Each convolution still has only nonnegative frequencies and vanishes on a smaller nonempty arc. It is the smooth boundary value of a holomorphic function in the disc. The Schwarz reflection principle across an arc on which that function is zero, followed by analytic uniqueness, shows that the convolution is identically zero. Passing to the distributional limit proves the claim. Thus $F_a = 0$, and its constant coefficient gives $chevron.l a \, eta chevron.r = 0$. Homogeneous vectors span $M$, which is dense in $cal(H)_M$; hence $eta = 0$. ◻
+  $ F_a \( z \) = chevron.l e^(z L_(- 1)) a \, eta chevron.r \, wide \| z \| < 1 . $
+  Creation gives $cal(Y)_M^(+) \( a \, z \) Omega = e^(z L_(- 1)) a$.
+    The charged energy estimate bounds the Taylor coefficients of $F_a$ by a polynomial in their index.
+    Its boundary value is therefore a distribution with only nonnegative Fourier frequencies.
+    Orthogonality to all the creation smears says that this distribution vanishes on $I$.
+    The smooth weight or branch factor in the smearing convention can be absorbed into the test on this interval.
+  For completeness, such a one-sided distribution is zero if it vanishes on a nonempty arc.
+    Convolve it with smooth approximate identities supported in increasingly small arcs.
+    Each convolution still has only nonnegative frequencies and vanishes on a smaller nonempty arc.
+    It is the smooth boundary value of a holomorphic function in the disc.
+    The Schwarz reflection principle across an arc on which that function is zero,
+    followed by analytic uniqueness, shows that the convolution is identically zero.
+    Passing to the distributional limit proves the claim. Thus $F_a = 0$,
+    and its constant coefficient gives $chevron.l a \, eta chevron.r = 0$.
+    Homogeneous vectors span $M$, which is dense in $cal(H)_M$; hence $eta = 0$. ◻
 ]
 
-Local-intertwiner criteria for module integration are given in [18] Proposition 4.7 and [14] Lemma 4.27. The following diagonal-algebra proof uses the bounded creation operators and their total ranges to establish the representations together with equality of the full closed graphs.
+Local-intertwiner criteria for module integration are given in [18] Proposition 4.7 and [14] Lemma 4.27.
+  The following diagonal-algebra proof uses the bounded creation operators and their total ranges to establish the
+  representations together with equality of the full closed graphs.
 
 #thm([Theorem 5.3.])[
-  (Strong integration of every unitary module).  #emph[Let $V$ be simple, unitary and strongly rational. Every grading-restricted unitary $V$-module $M$ has a unique compatible family of normal representations 
+  (Strong integration of every unitary module).  #emph[Let $V$ be simple, unitary and strongly rational.
+    Every grading-restricted unitary $V$-module $M$ has a unique compatible family of normal representations
 $ pi_J^M : A_V \( J \) arrow.r B \( cal(H)_M \) $
 
- such that, for every homogeneous $v in V$ and $g in C_c^oo \( J \)$, 
+ such that, for every homogeneous $v in V$ and $g in C_c^oo \( J \)$,
 #[#set math.equation(numbering: n => "(5.4)")
  $ pi_J^M #h(-0.16667em) (overline(Y^V \( v \, g \))) = overline(Y^M \( v \, g \)) . $ <eq:exact-cwx-smear>]
 
- Equality here includes the domains of the closed affiliated operators. The canonical Virasoro action of this net representation is the integrated module Virasoro action; in particular its rotations are $e^(i t L_0)$ with the module’s conformal-energy normalization.]
+ Equality here includes the domains of the closed affiliated operators.
+   The canonical Virasoro action of this net representation is the integrated module Virasoro action;
+   in particular its rotations are $e^(i t L_0)$ with the module’s conformal-energy normalization.]
 ] <thm:integration>
 
 #proof[
-  Module energy bounds follow from Theorem 2, and the vacuum net exists by Corollary 5. Fix $J$ and form $cal(B) \( J \) = cal(B)_(V \, M) \( J \)$ as in (5.1), including every homogeneous observable. Its two Hilbert summands reduce all its generators. Vacuum restriction is therefore a normal unital homomorphism
+  Module energy bounds follow from Theorem 2, and the vacuum net exists by Corollary 5.
+    Fix $J$ and form $cal(B) \( J \) = cal(B)_(V \, M) \( J \)$ as in (5.1),
+    including every homogeneous observable. Its two Hilbert summands reduce all its generators.
+    Vacuum restriction is therefore a normal unital homomorphism
   $ r_0 : cal(B) \( J \) arrow.r A_V \( J \) . $
-  It is onto. Indeed, compression of the graph data of a direct sum gives the graph data of its first summand, and these compressed data generate $A_V \( J \)$. The range of a normal homomorphism of von Neumann algebras is a von Neumann algebra, so it contains that generated algebra and is equal to it.
-  The kernel of $r_0$ is $cal(B) \( J \) q$ for a central projection $q$. Choose any interval $I$ disjoint from $J$. Apply Proposition 11 to creation, whose source is the integrated vacuum. Its bounded regularizations commute, as lower corners, with $cal(B) \( J \)$. Since $q$ annihilates the vacuum summand, its restriction $q_M$ to the other summand satisfies
+  It is onto. Indeed, compression of the graph data of a direct sum gives the graph data of its first summand,
+    and these compressed data generate $A_V \( J \)$. The range of a normal homomorphism of von Neumann algebras
+    is a von Neumann algebra, so it contains that generated algebra and is equal to it.
+  The kernel of $r_0$ is $cal(B) \( J \) q$ for a central projection $q$.
+    Choose any interval $I$ disjoint from $J$. Apply Proposition 11 to creation,
+    whose source is the integrated vacuum. Its bounded regularizations commute, as lower corners,
+    with $cal(B) \( J \)$. Since $q$ annihilates the vacuum summand,
+    its restriction $q_M$ to the other summand satisfies
   $ q_M T_(a \, f) = T_(a \, f) q_V = 0 . $
-  Lemma 12 gives $q_M = 0$, hence $q = 0$. Thus $r_0$ is a normal isomorphism. Its inverse is normal as well: an order isomorphism preserves suprema of bounded increasing positive nets. If $r_M$ denotes restriction to the module summand, define
+  Lemma 12 gives $q_M = 0$, hence $q = 0$. Thus $r_0$ is a normal isomorphism. Its inverse is normal as well:
+    an order isomorphism preserves suprema of bounded increasing positive nets.
+    If $r_M$ denotes restriction to the module summand, define
   $ pi_J^M = r_M r_0^(- 1) . $
-  For $J_1 subset J_2$ the diagonal algebras are nested, and both compression maps respect the inclusions. It follows that $pi_(J_2)^M \|_(A_V \( J_1 \)) = pi_(J_1)^M$.
-  We verify the exact closed-operator identity. Let $S_V = overline(Y^V \( v \, g \))$ and $S_M = overline(Y^M \( v \, g \))$. The graph projection of $S_V xor S_M$ has its matrix entries in $cal(B) \( J \)$. Compressing its entries to the two summands yields the graph projections of $S_V$ and $S_M$, respectively. Consequently the matrix amplification of $pi_J^M$ sends the entire graph projection of $S_V$ to that of $S_M$. This is precisely the normal image of an affiliated closed operator, and proves (5.4). In particular the argument identifies closed graphs, rather than merely operators on a dense common domain.
-  The graph data of the vacuum smears generate each $A_V \( J \)$, so the same identity also proves uniqueness. With the module energy bounds, it is the defining property of strong integrability and of the CWX action; see [14] Definition 4.22. Applying the identity to the conformal vector identifies all localized stress-energy fields. Their canonical centrally extended Virasoro actions agree by [17] Proposition 3.10, equivalently [14] Remark 4.23. This gives exactly $e^(i t L_0)$ for rotations, not an arbitrarily shifted positive-energy generator. The normalization is important when using $r^(L_0)$ in annulus factorizations. ◻
+  For $J_1 subset J_2$ the diagonal algebras are nested, and both compression maps respect the inclusions.
+    It follows that $pi_(J_2)^M \|_(A_V \( J_1 \)) = pi_(J_1)^M$.
+  We verify the exact closed-operator identity. Let $S_V = overline(Y^V \( v \, g \))$ and $S_M =
+    overline(Y^M \( v \, g \))$. The graph projection of $S_V xor S_M$ has its matrix entries in $cal(B) \( J \)$.
+    Compressing its entries to the two summands yields the graph projections of $S_V$ and $S_M$, respectively.
+    Consequently the matrix amplification of $pi_J^M$ sends the entire graph projection of $S_V$ to that of $S_M$.
+    This is precisely the normal image of an affiliated closed operator, and proves (5.4).
+    In particular the argument identifies closed graphs, rather than merely operators on a dense common domain.
+  The graph data of the vacuum smears generate each $A_V \( J \)$, so the same identity also proves uniqueness.
+    With the module energy bounds, it is the defining property of strong integrability and of the CWX action;
+    see [14] Definition 4.22. Applying the identity to the conformal vector identifies all localized stress-energy
+    fields. Their canonical centrally extended Virasoro actions agree by [17] Proposition 3.10,
+    equivalently [14] Remark 4.23. This gives exactly $e^(i t L_0)$ for rotations,
+    not an arbitrarily shifted positive-energy generator. The normalization is important when using $r^(L_0)$ in
+    annulus factorizations. ◻
 ]
 
-The construction respects finite orthogonal sums. This follows either from the closed-smear identity and uniqueness, or directly from the diagonal construction. Thus the theorem applies to all objects of the grading-restricted unitary category, including finite sums of the vacuum. It makes no assertion yet that every simple algebraic module admits such a positive form. We establish that remaining assertion after proving positivity of transport for pairs of unitary modules.
+The construction respects finite orthogonal sums. This follows either from the closed-smear identity and
+  uniqueness, or directly from the diagonal construction. Thus the theorem applies to all objects of the
+  grading-restricted unitary category, including finite sums of the vacuum.
+  It makes no assertion yet that every simple algebraic module admits such a positive form.
+  We establish that remaining assertion after proving positivity of transport for pairs of unitary modules.
 
 == 6 Positive forms on fusion products <sec:fusion>
 
-We now use the normal representations constructed in Theorem 13 to transfer a vacuum Gram matrix to an arbitrary unitary module. The algebraic fusion product need not yet be unitary. We first construct a nondegenerate invariant sesquilinear form on that product, and then prove its positivity separately on every conformal-energy space.
+We now use the normal representations constructed in Theorem 13 to transfer a vacuum Gram matrix to an arbitrary
+  unitary module. The algebraic fusion product need not yet be unitary.
+  We first construct a nondegenerate invariant sesquilinear form on that product,
+  and then prove its positivity separately on every conformal-energy space.
 
 For unitary modules $M \, N$, extend the diagonal transport form (4.8) to positive real insertion points by setting
 
 #[#set math.equation(numbering: n => "(6.1)")
- $ frak(t)_(z \, w)^(M \, N) \( a ⊗ b \, a' ⊗ b' \) = chevron.l Y^N #scale(x: 120%, y: 120%)[\(] cal(Y)_M^(-) \( theta_w a' \, w^(- 1) - z \) a \, z #scale(x: 120%, y: 120%)[\)] b \, b' chevron.r_N \, $ <eq:two-point-transport>]
+ $ frak(t)_(z \, w)^(M \, N) \( a ⊗ b \, a' ⊗ b' \) = chevron.l Y^N #scale(x: 120%, y: 120%)[\(]
+   cal(Y)_M^(-) \( theta_w a' \, w^(- 1) - z \) a \, z #scale(x: 120%, y: 120%)[\)] b \, b' chevron.r_N \,
+   $ <eq:two-point-transport>]
 
 where $a \, a' in M$, $b \, b' in N$, and
 
 #[#set math.equation(numbering: n => "(6.2)")
- $ 0 < z \, w < 1 \, #h(2em) w^(- 1) > z > w^(- 1) - z > 0 . $ <eq:positive-transport-region>]
+ $ 0 < z \, w < 1 \, wide w^(- 1) > z > w^(- 1) - z > 0 . $ <eq:positive-transport-region>]
 
-As usual, insertion of a vector in the grade completion means the absolutely convergent sum over its homogeneous components. Thus $frak(t)_(r \, r)^(M \, N) = frak(t)_r^(M \, N)$ in the notation of Section 4.
+As usual, insertion of a vector in the grade completion means the absolutely convergent sum over its homogeneous
+  components. Thus $frak(t)_(r \, r)^(M \, N) = frak(t)_r^(M \, N)$ in the notation of Section 4.
 
 #thm([Theorem 6.1.])[
-  (Positive fusion forms).  #emph[Let $V$ be a simple unitary strongly rational VOA. For any unitary grading-restricted finite-length $V$-modules $M \, N$, let $X = M times.square N$ and let $cal(Y)_X$ be its universal intertwining operator. There is a positive-definite invariant Hermitian form $h_X$ on $X$ such that 
+  (Positive fusion forms).  #emph[Let $V$ be a simple unitary strongly rational VOA.
+    For any unitary grading-restricted finite-length $V$-modules $M \, N$, let $X =
+    M times.square N$ and let $cal(Y)_X$ be its universal intertwining operator.
+    There is a positive-definite invariant Hermitian form $h_X$ on $X$ such that
 #[#set math.equation(numbering: n => "(6.3)")
- $ frak(t)_(z \, w)^(M \, N) \( a ⊗ b \, a' ⊗ b' \) = sum_lambda h_X #scale(x: 120%, y: 120%)[\(] Pi_lambda cal(Y)_X \( a \, z \) b \, Pi_lambda cal(Y)_X \( a' \, w \) b' #scale(x: 120%, y: 120%)[\)] $ <eq:positive-fusion-identity>]
+ $ frak(t)_(z \, w)^(M \, N) \( a ⊗ b \, a' ⊗ b' \) = sum_lambda h_X #scale(x: 120%, y: 120%)[\(] Pi_lambda
+   cal(Y)_X \( a \, z \) b \, Pi_lambda cal(Y)_X \( a' \, w \) b' #scale(x: 120%, y: 120%)[\)]
+   $ <eq:positive-fusion-identity>]
 
- for all the vectors and coordinates in (6.1)–(6.2). The sum converges absolutely. This is the canonical positive normalization of the fusion form.]
+ for all the vectors and coordinates in (6.1)–(6.2). The sum converges absolutely.
+   This is the canonical positive normalization of the fusion form.]
 ] <thm:positive-fusion>
 
 We prove the theorem in the next three subsections and check its normalization in the fourth.
 
 === 6.1 A positive matrix in the local algebra <a-positive-matrix-in-the-local-algebra>
 
-We begin with positivity of the diagonal form. Fix an interval $I$ near $1 in S^1$, a localized dented annulus $underline(A)$ as in Section 4, and its double $hat(A) = underline(A)^dagger underline(A)$. Choose a real $r < 1$ sufficiently close to $1$ in its inner collar. This choice works for every finite list of charge vectors; constants in estimates may depend on that list. Write $delta = r^(- 1) - r$ and $q = 2 delta$.
+We begin with positivity of the diagonal form. Fix an interval $I$ near $1 in S^1$,
+  a localized dented annulus $underline(A)$ as in Section 4, and its double $hat(A) =
+  underline(A)^dagger underline(A)$. Choose a real $r < 1$ sufficiently close to $1$ in its inner collar.
+  This choice works for every finite list of charge vectors; constants in estimates may depend on that list.
+  Write $delta = r^(- 1) - r$ and $q = 2 delta$.
 
 For $a_1 \, dots.h \, a_m in M$, set
 
 $ u_(i j) = cal(Y)_M^(-) \( theta_r a_i \, delta \) a_j quad upright("in the grade completion of ") V . $
 
-By linearity and (4.10), $q^(- L_0) u_(i j) in cal(H)_V$. The fixed-disc estimate (4.3) therefore defines bounded operators
+By linearity and (4.10), $q^(- L_0) u_(i j) in cal(H)_V$.
+  The fixed-disc estimate (4.3) therefore defines bounded operators
 
 #[#set math.equation(numbering: n => "(6.4)")
  $ K_(i j) = hat(A)_V \[ u_(i j) \( r \) \] in A_V \( I \) $ <eq:local-transport-matrix>]
 
-as operator-norm limits of the insertions of the finite level truncations of $u_(i j)$. In particular these limits remain in the same local von Neumann algebra.
+as operator-norm limits of the insertions of the finite level truncations of $u_(i j)$.
+  In particular these limits remain in the same local von Neumann algebra.
 
 The vacuum transport identity for creation, namely Proposition 3.10 of [30], and the insertion identity (4.2) give
 
 #[#set math.equation(numbering: n => "(6.5)")
- $ K_(i j) = T_i \( r \)^(*) T_j \( r \) \, #h(2em) T_j \( r \) = cal(Y)_M^(+) \( a_j \, r \) underline(A)_V . $ <eq:transport-gram>]
+ $ K_(i j) = T_i \( r \)^(*) T_j \( r \) \, wide T_j \( r \) =
+   cal(Y)_M^(+) \( a_j \, r \) underline(A)_V . $ <eq:transport-gram>]
 
-Here the creation operators with the displayed cutoff are bounded by Lemma 10. The equality is first an equality of matrix elements on $underline(A)_V^(- 1) V$, which is dense by Lemma 6; boundedness extends it to the Hilbert space. Thus $\( K_(i j) \)_(i \, j = 1)^m$ is a positive element of $M_m \( A_V \( I \) \)$.
+Here the creation operators with the displayed cutoff are bounded by Lemma 10.
+  The equality is first an equality of matrix elements on $underline(A)_V^(- 1) V$, which is dense by Lemma 6;
+  boundedness extends it to the Hilbert space. Thus $\( K_(i j) \)_(i \, j = 1)^m$ is a positive element of
+  $M_m \( A_V \( I \) \)$.
 
-By Theorem 13, $N$ has a normal local representation $pi_I^N$. Applying its matrix amplification preserves this positivity. For arbitrary $b_1 \, dots.h \, b_m in N$, choose exact preimages $xi_i$ under $underline(A)_N$ as follows. If the complementary annulus of Lemma 6 satisfies $underline(A)_N underline(B)_N = s^(L_0)$, put
+By Theorem 13, $N$ has a normal local representation $pi_I^N$.
+  Applying its matrix amplification preserves this positivity.
+  For arbitrary $b_1 \, dots.h \, b_m in N$, choose exact preimages $xi_i$ under $underline(A)_N$ as follows.
+  If the complementary annulus of Lemma 6 satisfies $underline(A)_N underline(B)_N = s^(L_0)$, put
 
 $ xi_i = underline(B)_N s^(- L_0) b_i . $
 
-The inverse power acts on a finite-energy vector, so this expression is defined and $underline(A)_N xi_i = b_i$. The norm-convergent insertion identity, followed by absolute convergence of the transport series, now gives
+The inverse power acts on a finite-energy vector, so this expression is defined and $underline(A)_N xi_i = b_i$.
+  The norm-convergent insertion identity, followed by absolute convergence of the transport series, now gives
 
 #[#set math.equation(numbering: n => "(6.6)")
- $ sum_(i \, j = 1)^m frak(t)_(r \, r)^(M \, N) \( a_j ⊗ b_j \, a_i ⊗ b_i \) = sum_(i \, j = 1)^m chevron.l pi_I^N \( K_(i j) \) xi_j \, xi_i chevron.r_N gt.eq 0 . $ <eq:transport-positive>]
+ $ sum_(i \, j = 1)^m frak(t)_(r \, r)^(M \, N) \( a_j ⊗ b_j \, a_i ⊗ b_i \) =
+   sum_(i \, j = 1)^m chevron.l pi_I^N \( K_(i j) \) xi_j \, xi_i chevron.r_N gt.eq 0 . $ <eq:transport-positive>]
 
 Only the creation case was used to obtain the vacuum matrix. General fusion positivity has not entered this argument.
 
 === 6.2 The invariant form on the algebraic fusion object <the-invariant-form-on-the-algebraic-fusion-object>
 
-Assume first that $M \, N$ are simple. Associativity in the positive-real region produces an intertwining operator $B$ of type $binom(N, macron(M) med X)$ such that
+Assume first that $M \, N$ are simple. Associativity in the positive-real region produces an intertwining operator
+  $B$ of type $binom(N, macron(M) med X)$ such that
 
 #[#set math.equation(numbering: n => "(6.7)")
- $ Y^N #scale(x: 120%, y: 120%)[\(] cal(Y)_M^(-) \( c \, w^(- 1) - z \) a \, z #scale(x: 120%, y: 120%)[\)] b = B \( c \, w^(- 1) \) cal(Y)_X \( a \, z \) b $ <eq:fused-evaluation>]
+ $ Y^N #scale(x: 120%, y: 120%)[\(] cal(Y)_M^(-) \( c \, w^(- 1) - z \) a \, z #scale(x: 120%, y: 120%)[\)] b =
+   B \( c \, w^(- 1) \) cal(Y)_X \( a \, z \) b $ <eq:fused-evaluation>]
 
-in convergent matrix elements, for $c in macron(M)$, $a in M$ and $b in N$. Its morphism is the associator followed by the annihilation morphism $macron(M) times.square M arrow.r V$ and the left unit action on $N$. The annihilation is nonzero: its adjoint is creation, which sends $a ⊗ Omega$ to $e^(z L_(- 1)) a$. Since $M$ is simple, unitarity identifies $macron(M)$ with $M^or$, and the annihilation morphism is a nonzero multiple of rigid evaluation. We also write $B$ for its corresponding morphism. Consequently rigidity gives an isomorphism
+in convergent matrix elements, for $c in macron(M)$, $a in M$ and $b in N$.
+  Its morphism is the associator followed by the annihilation morphism $macron(M) times.square M arrow.r
+  V$ and the left unit action on $N$. The annihilation is nonzero:
+  its adjoint is creation, which sends $a ⊗ Omega$ to $e^(z L_(- 1)) a$.
+  Since $M$ is simple, unitarity identifies $macron(M)$ with $M^or$,
+  and the annihilation morphism is a nonzero multiple of rigid evaluation.
+  We also write $B$ for its corresponding morphism. Consequently rigidity gives an isomorphism
 
 #[#set math.equation(numbering: n => "(6.8)")
- $ "Hom"_V \( E \, X \) arrow.r "Hom"_V \( macron(M) times.square E \, N \) \, #h(2em) f mapsto B \( 1_(macron(M)) times.square f \) $ <eq:rigid-transport-adjunction>]
+ $ "Hom"_V \( E \, X \) arrow.r "Hom"_V \( macron(M) times.square E \, N \) \, wide
+   f mapsto B \( 1_(macron(M)) times.square f \) $ <eq:rigid-transport-adjunction>]
 
 for every grading-restricted finite-length module $E$.
 
-To turn (6.7) into a form, recall the Hermitian duality from Section 2, which does not require positive forms. For a module $E$, its conjugate $macron(E)$ has mode action
+To turn (6.7) into a form, recall the Hermitian duality from Section 2, which does not require positive forms.
+  For a module $E$, its conjugate $macron(E)$ has mode action
 
 $ v_(\( n \))^(macron(E)) macron(x) = overline(\( Theta v \)_(\( n \))^E x) . $
 
@@ -899,106 +1558,187 @@ Its Hermitian dual is $E^(upright(h)) = \( macron(E) \)^or$, with pairing
 #[#set math.equation(numbering: n => "(6.9)")
  $ \[ x \, lambda \]_E = overline(lambda \( macron(x) \)) . $ <eq:hermitian-dual-pairing>]
 
-The pairing is linear in $x$ and conjugate-linear in $lambda$. Restricted contragredience gives its invariant adjoint relation. The given inner product of $N$ is represented by a linear module isomorphism $H_N : N arrow.r N^(upright(h))$.
+The pairing is linear in $x$ and conjugate-linear in $lambda$.
+  Restricted contragredience gives its invariant adjoint relation.
+  The given inner product of $N$ is represented by a linear module isomorphism $H_N : N arrow.r N^(upright(h))$.
 
-Conjugate $B$ and apply the FHL contragredient transformation [13] Section 5.5, in the explicit algebraic form [24] Equation (3.87), Proposition 3.46, taking the integer branch index in that formula to be $- 1$. Thus we use
+Conjugate $B$ and apply the FHL contragredient transformation [13] Section 5.5,
+  in the explicit algebraic form [24] Equation (3.87), Proposition 3.46,
+  taking the integer branch index in that formula to be $- 1$. Thus we use
 
 $ e^(w L_1) e^(- i pi L_0) w^(- 2 L_0) $
 
-on the conjugated charge, and precompose the second input with $H_N$. This gives an intertwining operator $B^sharp$ of type $binom(X^(upright(h)), M med N)$ with
+on the conjugated charge, and precompose the second input with $H_N$.
+  This gives an intertwining operator $B^sharp$ of type $binom(X^(upright(h)), M med N)$ with
 
 #[#set math.equation(numbering: n => "(6.10)")
- $ \[ x \, B^sharp \( a \, w \) b \]_X = chevron.l B \( theta_w a \, w^(- 1) \) x \, b chevron.r_N #h(2em) \( x in X \, med a in M \, med b in N \, w > 0 \) . $ <eq:hermitian-dual-adjoint>]
+ $ \[ x \, B^sharp \( a \, w \) b \]_X = chevron.l B \( theta_w a \, w^(- 1) \) x \,
+   b chevron.r_N wide \( x in X \, med a in M \, med b in N \, w > 0 \) . $ <eq:hermitian-dual-adjoint>]
 
-The minus phase before conjugation gives the plus phase in $theta_w$. All module weights are real, so these transformations also preserve the prescribed positive-real branches. Universality of $cal(Y)_X$ gives a module map $H : X arrow.r X^(upright(h))$ such that $B^sharp = H cal(Y)_X$.
+The minus phase before conjugation gives the plus phase in $theta_w$.
+  All module weights are real, so these transformations also preserve the prescribed positive-real branches.
+  Universality of $cal(Y)_X$ gives a module map $H : X arrow.r X^(upright(h))$ such that $B^sharp = H cal(Y)_X$.
 
-The map $H$ is surjective. To see the role of rigidity, suppose that the quotient map $q : X^(upright(h)) arrow.r C = "coker" H$ has nonzero target. Hermitian duality identifies $\( X^(upright(h)) \)^(upright(h))$ with $X$, so dualizing $q$ gives a nonzero injection
+The map $H$ is surjective. To see the role of rigidity, suppose that the quotient map $q : X^(upright(h)) arrow.r
+  C = "coker" H$ has nonzero target. Hermitian duality identifies $\( X^(upright(h)) \)^(upright(h))$ with $X$,
+  so dualizing $q$ gives a nonzero injection
 
-$ f = q^(upright(h)) : E = C^(upright(h)) arrow.r X \, #h(2em) f^(upright(h)) H = q H = 0 . $
+$ f = q^(upright(h)) : E = C^(upright(h)) arrow.r X \, wide f^(upright(h)) H = q H = 0 . $
 
-Pairing (6.10) with $f \( E \)$ would imply $B \( 1_(macron(M)) times.square f \) = 0$: the charge transformation $theta_w$ is invertible, and the pairing with $N$ is nondegenerate. This contradicts (6.8). Hermitian duality preserves finite length, so the surjective map $H$ is an isomorphism.
+Pairing (6.10) with $f \( E \)$ would imply $B \( 1_(macron(M)) times.square f \) = 0$:
+  the charge transformation $theta_w$ is invertible, and the pairing with $N$ is nondegenerate.
+  This contradicts (6.8). Hermitian duality preserves finite length, so the surjective map $H$ is an isomorphism.
 
 We have therefore constructed the nondegenerate invariant sesquilinear form
 
 #[#set math.equation(numbering: n => "(6.11)")
  $ h_X \( x \, y \) = \[ x \, H y \]_X . $ <eq:algebraic-fusion-form>]
 
-It pairs distinct energy spaces to zero. At this stage neither Hermitian symmetry nor positivity has been assumed. Combining (6.7) and (6.10) proves (6.3) for this form. Absolute convergence is the ordinary convergence of the product of $B$ and $cal(Y)_X$, applied to the restricted-dual functional supplied by a finite-energy vector of $N$.
+It pairs distinct energy spaces to zero. At this stage neither Hermitian symmetry nor positivity has been assumed.
+  Combining (6.7) and (6.10) proves (6.3) for this form. Absolute convergence is the ordinary convergence of the
+  product of $B$ and $cal(Y)_X$, applied to the restricted-dual functional supplied by a finite-energy vector of $N$.
 
 === 6.3 Extracting positivity at one energy <extracting-positivity-at-one-energy>
 
-The positivity in (6.6) concerns a sum over all output energies. The following lemma separates those energies without first constructing a norm on $X$.
+The positivity in (6.6) concerns a sum over all output energies.
+  The following lemma separates those energies without first constructing a norm on $X$.
 
 #thm([Lemma 6.2.])[
-  (Positive polynomial moments).  #emph[Let $Lambda subset bb(R)$ be countable and bounded below. Suppose complex numbers $c_lambda$ satisfy 
+  (Positive polynomial moments).  #emph[Let $Lambda subset bb(R)$ be countable and bounded below.
+    Suppose complex numbers $c_lambda$ satisfy
 $ sum_(lambda in Lambda) e^(epsilon.alt lambda) \| c_lambda \| < oo quad upright("for some ") epsilon.alt > 0 . $
 
- If $sum_lambda \| p \( lambda \) \|^2 c_lambda$ is real and nonnegative for every complex polynomial $p$, then every $c_lambda$ is real and nonnegative.]
+ If $sum_lambda \| p \( lambda \) \|^2 c_lambda$ is real and nonnegative for every complex polynomial $p$,
+   then every $c_lambda$ is real and nonnegative.]
 ] <lem:positive-moments>
 
 #proof[
-  Set $mu = sum_lambda c_lambda delta_lambda$. Polynomials are dense in $L^2 \( \| mu \| \)$. To see this, let $g$ be orthogonal to them. Cauchy–Schwarz and the exponential moment show that the finite complex measure $g thin \| mu \|$ has an exponential moment of smaller positive order. Its bilateral Laplace transform is holomorphic in a strip containing the imaginary axis. Orthogonality makes every derivative at zero vanish, so the identity theorem makes the transform zero on this strip. Uniqueness of the Fourier transform of a finite measure then gives $g thin \| mu \| = 0$. For completeness, this last uniqueness follows by convolving the measure with Gaussian approximate identities: every convolution has zero Fourier transform and is zero, and the convolutions converge weakly to the measure.
-  For a fixed $lambda$, approximate the indicator of its atom by polynomials $p_n$ in $L^2 \( \| mu \| \)$. Then $\| p_n \|^2$ converges to that indicator in $L^1 \( \| mu \| \)$, because
-  $ parallel \| p_n \|^2 - \| p_m \|^2 parallel_(L^1 \( \| mu \| \)) lt.eq parallel p_n - p_m parallel_(L^2 \( \| mu \| \)) #scale(x: 120%, y: 120%)[\(] parallel p_n parallel_(L^2 \( \| mu \| \)) + parallel p_m parallel_(L^2 \( \| mu \| \)) #scale(x: 120%, y: 120%)[\)] . $
+  Set $mu = sum_lambda c_lambda delta_lambda$. Polynomials are dense in $L^2 \( \| mu \| \)$.
+    To see this, let $g$ be orthogonal to them. Cauchy–Schwarz and the exponential moment show that the finite
+    complex measure $g thin \| mu \|$ has an exponential moment of smaller positive order.
+    Its bilateral Laplace transform is holomorphic in a strip containing the imaginary axis.
+    Orthogonality makes every derivative at zero vanish, so the identity theorem makes the transform zero on this
+    strip. Uniqueness of the Fourier transform of a finite measure then gives $g thin \| mu \| = 0$.
+    For completeness, this last uniqueness follows by convolving the measure with Gaussian approximate identities:
+    every convolution has zero Fourier transform and is zero, and the convolutions converge weakly to the measure.
+  For a fixed $lambda$, approximate the indicator of its atom by polynomials $p_n$ in $L^2 \( \| mu \| \)$.
+    Then $\| p_n \|^2$ converges to that indicator in $L^1 \( \| mu \| \)$, because
+  $ parallel \| p_n \|^2 - \| p_m \|^2 parallel_(L^1 \( \| mu \| \)) lt.eq parallel p_n -
+    p_m parallel_(L^2 \( \| mu \| \)) #scale(x: 120%, y: 120%)[\(] parallel p_n parallel_(L^2 \( \| mu \| \)) +
+    parallel p_m parallel_(L^2 \( \| mu \| \)) #scale(x: 120%, y: 120%)[\)] . $
   Thus the nonnegative integrals $integral \| p_n \|^2 thin d mu$ tend to $c_lambda$. ◻
 ]
 
 Fix the radius $r$ used in (6.6). Consider a finite sum in the grade completion,
 
-$ x = sum_i cal(Y)_X \( a_i \, r \) b_i \, #h(2em) x_lambda = Pi_lambda x \, #h(2em) c_lambda = h_X \( x_lambda \, x_lambda \) . $
+$ x = sum_i cal(Y)_X \( a_i \, r \) b_i \, wide x_lambda = Pi_lambda x \, wide c_lambda =
+  h_X \( x_lambda \, x_lambda \) . $
 
-After decomposing the inputs, we may take all $a_i \, b_i$ homogeneous. The numbers $c_lambda$ have an exponential moment in absolute value. Indeed, choose $z > r$ sufficiently close to $r$ that $z < r^(- 1)$. In the absolutely convergent product with the outer insertion fixed at $r^(- 1)$, replacing the inner radius $r$ by $z$ multiplies its component of weight $lambda$ by
+After decomposing the inputs, we may take all $a_i \, b_i$ homogeneous.
+  The numbers $c_lambda$ have an exponential moment in absolute value.
+  Indeed, choose $z > r$ sufficiently close to $r$ that $z < r^(- 1)$.
+  In the absolutely convergent product with the outer insertion fixed at $r^(- 1)$,
+  replacing the inner radius $r$ by $z$ multiplies its component of weight $lambda$ by
 
 $ \( z \/ r \)^(lambda - "wt" \( a_i \) - "wt" \( b_i \)) . $
 
-Absolute product convergence for each of the finitely many pairs of inputs gives $sum_lambda e^(epsilon.alt lambda) \| c_lambda \| < oo$ for a common $epsilon.alt > 0$. This uses only the sesquilinear form (6.11) and algebraic convergence.
+Absolute product convergence for each of the finitely many pairs of inputs gives $sum_lambda
+  e^(epsilon.alt lambda) \| c_lambda \| < oo$ for a common $epsilon.alt > 0$.
+  This uses only the sesquilinear form (6.11) and algebraic convergence.
 
 The space of such finite sums $x$ is stable under $L_0$, since
 
 #[#set math.equation(numbering: n => "(6.12)")
- $ L_0 cal(Y)_X \( a \, r \) b = cal(Y)_X \( L_0 a \, r \) b + cal(Y)_X \( a \, r \) L_0 b + r cal(Y)_X \( L_(- 1) a \, r \) b . $ <eq:fixed-radius-L0>]
+ $ L_0 cal(Y)_X \( a \, r \) b = cal(Y)_X \( L_0 a \, r \) b + cal(Y)_X \( a \, r \) L_0 b +
+   r cal(Y)_X \( L_(- 1) a \, r \) b . $ <eq:fixed-radius-L0>]
 
-The radius $r$ stays fixed in this step. Each polynomial in $L_0$ introduces only finitely many further charge and source vectors, and the fixed-disc construction of (6.6) applies at this same $r$ to every such finite list. Its constants may change; its positivity conclusion does not. Apply (6.6) to $p \( L_0 \) x$. Grade orthogonality gives
+The radius $r$ stays fixed in this step. Each polynomial in $L_0$ introduces only finitely many further charge and
+  source vectors, and the fixed-disc construction of (6.6) applies at this same $r$ to every such finite list.
+  Its constants may change; its positivity conclusion does not. Apply (6.6) to $p \( L_0 \) x$.
+  Grade orthogonality gives
 
 $ sum_lambda \| p \( lambda \) \|^2 h_X \( x_lambda \, x_lambda \) gt.eq 0 . $
 
 Lemma 15 proves $h_X \( x_lambda \, x_lambda \) gt.eq 0$ at each energy.
 
-These $x_lambda$ run through the whole space $X_lambda$. In fact the span of all coefficients of $cal(Y)_X \( a \, z \) b$ is a graded submodule by the intertwiner commutator formula. The quotient map by that submodule has zero postcomposition with the universal intertwiner, and is therefore zero. For homogeneous inputs each projection at the fixed nonzero radius $r$ is a nonzero scalar multiple of its coefficient. This proves the asserted spanning at each energy.
+These $x_lambda$ run through the whole space $X_lambda$. In fact the span of all coefficients of
+  $cal(Y)_X \( a \, z \) b$ is a graded submodule by the intertwiner commutator formula.
+  The quotient map by that submodule has zero postcomposition with the universal intertwiner,
+  and is therefore zero. For homogeneous inputs each projection at the fixed nonzero radius $r$ is a nonzero
+  scalar multiple of its coefficient. This proves the asserted spanning at each energy.
 
-It follows by polarization that $h_X$ is Hermitian and positive semidefinite on every energy space, and hence on $X$. A zero-norm vector for a positive semidefinite Hermitian form belongs to its radical. Nondegeneracy of (6.11) therefore makes $h_X$ positive definite. In particular, $X$ is now a unitary module. Finite orthogonal decompositions of $M \, N$ extend the construction to arbitrary unitary finite-length modules: creation, annihilation and the transport identity split in exactly these orthogonal blocks.
+It follows by polarization that $h_X$ is Hermitian and positive semidefinite on every energy space,
+  and hence on $X$. A zero-norm vector for a positive semidefinite Hermitian form belongs to its radical.
+  Nondegeneracy of (6.11) therefore makes $h_X$ positive definite. In particular, $X$ is now a unitary module.
+  Finite orthogonal decompositions of $M \, N$ extend the construction to arbitrary unitary finite-length modules:
+  creation, annihilation and the transport identity split in exactly these orthogonal blocks.
 
 === 6.4 Canonical normalization and general charged fields <canonical-normalization-and-general-charged-fields>
 
-With $h_X$ now positive, (6.10) says that $B$ is the adjoint of $cal(Y)_X$ in Tener’s convention. Thus (6.7) is the exact normalized fusion identity for that convention.
+With $h_X$ now positive, (6.10) says that $B$ is the adjoint of $cal(Y)_X$ in Tener’s convention.
+  Thus (6.7) is the exact normalized fusion identity for that convention.
 
 We check the normalization, since fractional charge weights make the adjoint phase significant. Put, for $x > 0$,
 
 $ U_plus.minus \( x \) = e^(x L_1) e^(plus.minus i pi L_0) x^(- 2 L_0) . $
 
-Gui’s contragredient convention is $U_(+) \( x \)$ in [16] Equations (8.3)–(8.5); solving for the adjoint uses $U_(-) \( x \) = U_(+) \( x^(- 1) \)^(- 1)$. On a simple charge module of lowest weight $h$, $U_(-) = e^(- 2 pi i h) U_(+)$. With inner products linear in the first variable, this means that Gui’s adjoint, after the unitary identification of the conjugate charge with the contragredient charge, is $e^(2 pi i h)$ times Tener’s adjoint. Gui’s annihilation operator has the same factor relative to $cal(Y)_M^(-)$: its vacuum coefficient on a top vector $a$ is $e^(i pi h) x^(- 2 h) parallel a parallel^2$, whereas the coefficient for $cal(Y)_M^(-)$ is $e^(- i pi h) x^(- 2 h) parallel a parallel^2$.
+Gui’s contragredient convention is $U_(+) \( x \)$ in [16] Equations (8.3)–(8.5);
+  solving for the adjoint uses $U_(-) \( x \) = U_(+) \( x^(- 1) \)^(- 1)$.
+  On a simple charge module of lowest weight $h$, $U_(-) = e^(- 2 pi i h) U_(+)$.
+  With inner products linear in the first variable, this means that Gui’s adjoint,
+  after the unitary identification of the conjugate charge with the contragredient charge,
+  is $e^(2 pi i h)$ times Tener’s adjoint. Gui’s annihilation operator has the same factor relative to
+  $cal(Y)_M^(-)$: its vacuum coefficient on a top vector $a$ is $e^(i pi h) x^(- 2 h) parallel a parallel^2$,
+  whereas the coefficient for $cal(Y)_M^(-)$ is $e^(- i pi h) x^(- 2 h) parallel a parallel^2$.
 
-The two factors cancel in the fusion identity [16] Equation (8.8). Thus the canonical operator called $A$ in that identity is $1$ for the form just constructed. The identity leaves no scalar freedom: the coefficients of the universal intertwiner span $X$, and their pairings determine its form. This proves the canonical-normalization assertion in Theorem 14. The comparison applies on each orthogonal simple charge summand, so also covers finite sums. Common-angle versions follow by simultaneous $L_0$ rotations, using conjugate logarithms at reflected coordinates. In particular (6.3) at a rotated diagonal is the squared norm of the universal intertwiner there.
+The two factors cancel in the fusion identity [16] Equation (8.8).
+  Thus the canonical operator called $A$ in that identity is $1$ for the form just constructed.
+  The identity leaves no scalar freedom: the coefficients of the universal intertwiner span $X$,
+  and their pairings determine its form. This proves the canonical-normalization assertion in Theorem 14.
+  The comparison applies on each orthogonal simple charge summand, so also covers finite sums.
+  Common-angle versions follow by simultaneous $L_0$ rotations,
+  using conjugate logarithms at reflected coordinates. In particular (6.3) at a rotated diagonal is the squared
+  norm of the universal intertwiner there.
 
-We have proved closure of the unitary modules under the full algebraic fusion product, without yet knowing that every simple module is unitary. The following consequence supplies the charged fields needed for the comparison with conformal nets.
+We have proved closure of the unitary modules under the full algebraic fusion product,
+  without yet knowing that every simple module is unitary. The following consequence supplies the charged fields
+  needed for the comparison with conformal nets.
 
 #thm([Corollary 6.3.])[
-  #emph[Let $V$ be a simple unitary strongly rational VOA, and let $M \, N \, K$ be unitary grading-restricted finite-length $V$-modules. Every intertwining operator $Phi$ of type $binom(K, M med N)$ is polynomially energy-bounded for every homogeneous charge vector and has the strong intertwining property with all observable fields. More precisely, for homogeneous $a in M$ of weight $d$, write 
+  #emph[Let $V$ be a simple unitary strongly rational VOA, and let $M \, N \,
+    K$ be unitary grading-restricted finite-length $V$-modules.
+    Every intertwining operator $Phi$ of type $binom(K, M med N)$ is polynomially energy-bounded for every
+    homogeneous charge vector and has the strong intertwining property with all observable fields.
+    More precisely, for homogeneous $a in M$ of weight $d$, write
 $ Phi \( a \, z \) = sum_mu Phi \( a \) \[ mu \] z^(- mu - d) . $
 
- There are $C > 0$ and nonnegative integers $s \, k$ such that 
-$ parallel Phi \( a \) \[ mu \] b parallel lt.eq C \( 1 + \| mu \| \)^s parallel \( 1 + L_0 \)^k b parallel #h(2em) \( b in N \) . $
+ There are $C > 0$ and nonnegative integers $s \, k$ such that
+$ parallel Phi \( a \) \[ mu \] b parallel lt.eq C \( 1 + \| mu \| \)^s parallel \( 1 + L_0 \)^k b parallel
+  wide \( b in N \) . $
 
- If a smooth test $f$ is supported in a lifted interval $I$, the closed off-diagonal smear $overline(Phi \( a \, f \))$ on $cal(H)_N xor cal(H)_K$ is affiliated with the commutant of the algebra generated by 
-$ "diag" #scale(x: 120%, y: 120%)[\(] overline(Y^N \( v \, g \)) \, overline(Y^K \( v \, g \)) #scale(x: 120%, y: 120%)[\)] \, #h(2em) v in V \, quad "supp" g subset J \, $
+ If a smooth test $f$ is supported in a lifted interval $I$,
+   the closed off-diagonal smear $overline(Phi \( a \, f \))$ on $cal(H)_N xor
+   cal(H)_K$ is affiliated with the commutant of the algebra generated by
+$ "diag" #scale(x: 120%, y: 120%)[\(] overline(Y^N \( v \, g \)) \,
+  overline(Y^K \( v \, g \)) #scale(x: 120%, y: 120%)[\)] \, wide v in V \, quad "supp" g subset J \, $
 
  for every interval $J$ disjoint from $I$.]
 ] <cor:charged-general>
 
 #proof[
-  By universality, $Phi = L cal(Y)_X$ for a module map $L : X = M times.square N arrow.r K$. Both modules are now unitary. Such a map is bounded: decompose into the finitely many unitary simple summands; Schur’s lemma and uniqueness of an invariant form on each simple identify it with a finite family of linear maps between finite-dimensional multiplicity spaces. Theorem 14, including its rotated-diagonal identity, gives
+  By universality, $Phi = L cal(Y)_X$ for a module map $L : X = M times.square N arrow.r K$.
+    Both modules are now unitary. Such a map is bounded: decompose into the finitely many unitary simple summands;
+    Schur’s lemma and uniqueness of an invariant form on each simple identify it with a finite family of linear
+    maps between finite-dimensional multiplicity spaces. Theorem 14, including its rotated-diagonal identity, gives
   $ parallel Phi \( a \, z \) b parallel^2 lt.eq parallel L parallel^2 thin frak(t)_z^(M \, N) \( a ⊗ b \, a ⊗ b \) . $
-  The source $N$ is strongly integrable by Theorem 13. This is precisely the transport domination hypothesis of Lemma 10, which gives the stated mode bounds and bounded annulus-cutoff smears. Proposition 11 then gives the asserted affiliation and strong intertwining property for homogeneous observables. For a finite sum of homogeneous observables, sum the weak commutation identities on the common smooth core before closing. The same bounded regularization and its adjoint preserve that core, so the graph argument of that proposition also applies to the closure of the sum. This proves the assertion for every $v in V$. ◻
+  The source $N$ is strongly integrable by Theorem 13. This is precisely the transport domination hypothesis of
+    Lemma 10, which gives the stated mode bounds and bounded annulus-cutoff smears.
+    Proposition 11 then gives the asserted affiliation and strong intertwining property for homogeneous
+    observables. For a finite sum of homogeneous observables,
+    sum the weak commutation identities on the common smooth core before closing.
+    The same bounded regularization and its adjoint preserve that core,
+    so the graph argument of that proposition also applies to the closure of the sum.
+    This proves the assertion for every $v in V$. ◻
 ]
 
 == 7 Unitarizing every simple module <sec:unitarity>
@@ -1006,239 +1746,552 @@ $ "diag" #scale(x: 120%, y: 120%)[\(] overline(Y^N \( v \, g \)) \, overline(Y^K
 Theorem 14 closes the unitary modules under algebraic fusion. We now use this closure to reach every simple module.
 
 #thm([Theorem 7.1.])[
-  #emph[Let $V$ be a simple unitary strongly rational vertex operator algebra. Every simple grading-restricted $V$-module admits a positive definite invariant Hermitian form. Consequently, every grading-restricted finite-length $V$-module is unitarizable, and $V$ is strongly unitary.]
+  #emph[Let $V$ be a simple unitary strongly rational vertex operator algebra.
+    Every simple grading-restricted $V$-module admits a positive definite invariant Hermitian form.
+    Consequently, every grading-restricted finite-length $V$-module is unitarizable, and $V$ is strongly unitary.]
 ] <thm:strong-unitarity>
 
 Here is how a module with no given positive form enters the unitary theory. Fix a simple $V$-module $P$, and set
 
-$ D = V ⊗ V \, #h(2em) U = D^(chevron.l sigma chevron.r) \, #h(2em) R = P ⊗ P^or \, $
+$ D = V ⊗ V \, wide U = D^(chevron.l sigma chevron.r) \, wide R = P ⊗ P^or \, $
 
-where $sigma$ exchanges the factors. The transposition-twisted vacuum module $T = T_sigma \( V \)$ is unitary over $U$. The permutation fusion formula below produces a nonzero twisted intertwiner of type $binom(T, R med T)$. Its charge map is injective because $R$ is simple over $D$. Consequently it detects every simple constituent of $R \|_U$, placing that constituent in the positive fusion product $T times.square_U T^or$. This gives a positive $U$-invariant form $h_1$ on $R$.
+where $sigma$ exchanges the factors. The transposition-twisted vacuum module $T =
+  T_sigma \( V \)$ is unitary over $U$. The permutation fusion formula below produces a nonzero twisted
+  intertwiner of type $binom(T, R med T)$. Its charge map is injective because $R$ is simple over $D$.
+  Consequently it detects every simple constituent of $R \|_U$,
+  placing that constituent in the positive fusion product $T times.square_U T^or$.
+  This gives a positive $U$-invariant form $h_1$ on $R$.
 
-Restriction to $U$ controls only the flip-invariant fields. To recover the adjoint identity for the remaining fields, write $D = U xor J$, where $J = { d in D : sigma \( d \) = - d }$ is the sign constituent. Its action identifies $J times.square_U R$ with $R$. Transferring the canonical fusion form along that action gives a second form $h_2$. The normalized transport identity interchanges $h_1$ and $h_2$ when taking the adjoint of a $J$-field, so $h_1 + h_2$ is invariant under all of $D$. Its restriction to $P ⊗ bb(C) q$, for any nonzero $q in P^or$, then unitarizes $P$. We prove the algebraic permutation formula first, without using unitarity of $P$.
+Restriction to $U$ controls only the flip-invariant fields.
+  To recover the adjoint identity for the remaining fields, write $D = U xor J$, where $J = { d in D :
+  sigma \( d \) = - d }$ is the sign constituent. Its action identifies $J times.square_U R$ with $R$.
+  Transferring the canonical fusion form along that action gives a second form $h_2$.
+  The normalized transport identity interchanges $h_1$ and $h_2$ when taking the adjoint of a $J$-field, so $h_1 +
+  h_2$ is invariant under all of $D$. Its restriction to $P ⊗ bb(C) q$, for any nonzero $q in P^or$,
+  then unitarizes $P$. We prove the algebraic permutation formula first, without using unitarity of $P$.
 
 === 7.1 The algebraic permutation product <the-algebraic-permutation-product>
 
 #thm([Lemma 7.2.])[
-  (The required permutation product before positivity).  #emph[Let $V$ be simple and strongly rational, let $D = V ⊗ V$, and let $sigma$ exchange the factors. Write $T_sigma \( N \)$ for the Barron–Dong–Mason transposition-twisted module associated to an ordinary $V$-module $N$ [2] Theorem 3.9. The fusion products below are taken among grading-restricted ordinary or $sigma$-twisted $D$-modules. For every ordinary $V$-module $P$, 
+  (The required permutation product before positivity).  #emph[Let $V$ be simple and strongly rational, let $D =
+    V ⊗ V$, and let $sigma$ exchange the factors. Write $T_sigma \( N \)$ for the Barron–Dong–Mason
+    transposition-twisted module associated to an ordinary $V$-module $N$ [2] Theorem 3.9.
+    The fusion products below are taken among grading-restricted ordinary or $sigma$-twisted $D$-modules.
+    For every ordinary $V$-module $P$,
 $ \( P ⊗ P^or \) times.square_D T_sigma \( V \) tilde.equiv T_sigma \( P times.square_V P^or \) . $
 
  No unitarity or positivity of the lowest conformal weight of $P$ is assumed.]
 ] <lem:permutation-before-positivity>
 
 #proof[
-  Put $U = D^(chevron.l sigma chevron.r)$. Cyclic-orbifold regularity [3] Theorem 5.24 and Corollary 5.25 makes $U$ strongly rational. Let $cal(C)$ be its category of grading-restricted generalized modules, with its HLZ vertex tensor category structure, and write $c_(X \, Y)$ for its braiding. We use $L \( n \) = L_n$ for Virasoro modes in the coordinate formulas below. Ordinary $D$-modules and the BDM modules $T_sigma \( N \)$ restrict to objects of $cal(C)$:
+  Put $U = D^(chevron.l sigma chevron.r)$. Cyclic-orbifold regularity [3] Theorem 5.24 and Corollary 5.25 makes
+    $U$ strongly rational. Let $cal(C)$ be its category of grading-restricted generalized modules,
+    with its HLZ vertex tensor category structure, and write $c_(X \, Y)$ for its braiding.
+    We use $L \( n \) = L_n$ for Virasoro modes in the coordinate formulas below.
+    Ordinary $D$-modules and the BDM modules $T_sigma \( N \)$ restrict to objects of $cal(C)$:
   $ L^(T_sigma \( N \)) \( 0 \) = 1 / 2 L^N \( 0 \) + c_V / 16 . $
   This requires boundedness below and finite-dimensional weight spaces, not nonnegative module weights.
-  Regard $D$ as a commutative algebra object in $cal(C)$, and write $star.op$ for the relative product on $"Rep"_(cal(C)) \( D \)$. This product is the cokernel imposing equality of the two $D$-actions. Right exactness allows the ambient associator and its inverse to descend through these quotients, giving an associator for $star.op$ [9] Theorems 2.51–2.53. If $mu_Q$ denotes the action on an object $Q$, the categorical $g$-twisted condition is
+  Regard $D$ as a commutative algebra object in $cal(C)$, and write $star.op$ for the relative product on
+    $"Rep"_(cal(C)) \( D \)$. This product is the cokernel imposing equality of the two $D$-actions.
+    Right exactness allows the ambient associator and its inverse to descend through these quotients,
+    giving an associator for $star.op$ [9] Theorems 2.51–2.53.
+    If $mu_Q$ denotes the action on an object $Q$, the categorical $g$-twisted condition is
   $ mu_Q \( g times.square 1_Q \) c_(Q \, D) c_(D \, Q) = mu_Q . $
-  For the canonical quotient $q : X times.square_U Y arrow.r Q = X star.op Y$ of objects in the $g$- and $h$-sectors, the target lies in the $g h$-sector: precompose this identity with $1_D times.square q$, use the hexagon and balancing, and then apply the two input identities. Right exactness makes that precomposition surjective [28] Proposition 2.4 and Corollary 2.5. The field attached to $mu_Q$ has the vacuum, truncation, derivative, and grading properties; the displayed monodromy condition gives the equivariance for its prescribed twist. Analytic associativity reconstructs its twisted Jacobi identity [28] Propositions 4.11 and 4.13, Remark 4.12 and Theorem 4.14. Thus these are actual twisted modules. Only the known $1$- and $sigma$-sectors are needed, not an exhaustive classification of algebra modules.
-  We spell out the relevant intertwiner dictionary. The two categorical action compatibilities are precisely analytic associativity and skew-associativity for the corresponding $U$-intertwiner $cal(I)$ [9] Theorem 3.44 and Proposition 3.50. Suppose its charge $X$ is ordinary and its source and target are $sigma$-twisted. For $sigma a = \( - 1 \)^j a$ with $j in { 0 \, 1 }$, the matrix coefficients of
+  For the canonical quotient $q : X times.square_U Y arrow.r Q =
+    X star.op Y$ of objects in the $g$- and $h$-sectors, the target lies in the $g h$-sector:
+    precompose this identity with $1_D times.square q$, use the hexagon and balancing,
+    and then apply the two input identities. Right exactness makes that precomposition surjective [28]
+    Proposition 2.4 and Corollary 2.5. The field attached to $mu_Q$ has the vacuum, truncation, derivative,
+    and grading properties; the displayed monodromy condition gives the equivariance for its prescribed twist.
+    Analytic associativity reconstructs its twisted Jacobi identity [28] Propositions 4.11 and 4.13,
+    Remark 4.12 and Theorem 4.14. Thus these are actual twisted modules.
+    Only the known $1$- and $sigma$-sectors are needed, not an exhaustive classification of algebra modules.
+  We spell out the relevant intertwiner dictionary. The two categorical action compatibilities are precisely
+    analytic associativity and skew-associativity for the corresponding $U$-intertwiner $cal(I)$ [9] Theorem 3.44
+    and Proposition 3.50. Suppose its charge $X$ is ordinary and its source and target are $sigma$-twisted.
+    For $sigma a = \( - 1 \)^j a$ with $j in { 0 \, 1 }$, the matrix coefficients of
   $ Y_(upright("target")) \( a \, z_1 \) cal(I) \( x \, z_2 \) y \,\
 cal(I) \( x \, z_2 \) Y_(upright("source")) \( a \, z_1 \) y \,\
 cal(I) \( Y_X \( a \, z_1 - z_2 \) x \, z_2 \) y $
-  are branches of one analytic function $g \( z_1 \, z_2 \)$. For fixed nonzero $z_2$, multiplication by $z_1^(j \/ 2)$ cancels monodromy about $0$. The iterate has integer powers about $z_1 = z_2$, since $X$ is ordinary. These two local loops generate the punctured-plane fundamental group, so $z_1^(j \/ 2) g \( z_1 \, z_2 \)$ is single-valued. Source truncation gives a pole of finite order at $0$, and ordinary-charge truncation gives one at $z_1 = z_2$. At infinity, the finite weight support of the restricted-dual vector and the lower bound on intermediate target weights give polynomial growth. Thus the only possible poles are at $0 \, z_2 \, oo$. To pass from this fixed-$z_2$ rationality to a two-variable formal identity, take homogeneous inputs of weights $h_x \, h_y$, a state $a$ of weight $d$, and a restricted-dual vector of weight $H$. On compatible branches, the $L \( 0 \)$-bracket gives
-  $ z_1^(j \/ 2) g \( z_1 \, z_2 \) = z_2^(H - d - h_x - h_y + j \/ 2) \( z_1 \/ z_2 \)^(j \/ 2) g \( z_1 \/ z_2 \, 1 \) . $
-  The function $u mapsto u^(j \/ 2) g \( u \, 1 \)$ is rational, with poles only at $0 \, 1 \, oo$; the prefactor is a rational power. Its three expansions therefore give the twisted Jacobi identity. The converse follows from formal duality [11] Proposition 2.17. Semisimple $L \( 0 \)$ and the $L \( 0 \)$-bracket remove logarithmic terms. Here the factor is $z_1^(j \/ 2)$, as in Proposition 2.17; this corrects the interchange of the two exponents in the displayed cancellation factor in the proof of [11] Theorem 3.5. Consequently $star.op$ represents exactly the needed twisted intertwining operators. On ordinary modules it is ordinary $D$-fusion [9] Theorem 3.54 and Corollary 3.55.
+  are branches of one analytic function $g \( z_1 \, z_2 \)$.
+    For fixed nonzero $z_2$, multiplication by $z_1^(j \/ 2)$ cancels monodromy about $0$.
+    The iterate has integer powers about $z_1 = z_2$, since $X$ is ordinary.
+    These two local loops generate the punctured-plane fundamental group,
+    so $z_1^(j \/ 2) g \( z_1 \, z_2 \)$ is single-valued. Source truncation gives a pole of finite order at $0$,
+    and ordinary-charge truncation gives one at $z_1 = z_2$. At infinity,
+    the finite weight support of the restricted-dual vector and the lower bound on intermediate target weights
+    give polynomial growth. Thus the only possible poles are at $0 \, z_2 \, oo$.
+    To pass from this fixed-$z_2$ rationality to a two-variable formal identity,
+    take homogeneous inputs of weights $h_x \, h_y$, a state $a$ of weight $d$,
+    and a restricted-dual vector of weight $H$. On compatible branches, the $L \( 0 \)$-bracket gives
+  $ z_1^(j \/ 2) g \( z_1 \, z_2 \) = z_2^(H - d - h_x - h_y + j \/ 2) \( z_1 \/ z_2 \)^(j \/ 2)
+    g \( z_1 \/ z_2 \, 1 \) . $
+  The function $u mapsto u^(j \/ 2) g \( u \, 1 \)$ is rational, with poles only at $0 \, 1 \, oo$;
+    the prefactor is a rational power. Its three expansions therefore give the twisted Jacobi identity.
+    The converse follows from formal duality [11] Proposition 2.17.
+    Semisimple $L \( 0 \)$ and the $L \( 0 \)$-bracket remove logarithmic terms.
+    Here the factor is $z_1^(j \/ 2)$, as in Proposition 2.17;
+    this corrects the interchange of the two exponents in the displayed cancellation factor in the proof of [11]
+    Theorem 3.5. Consequently $star.op$ represents exactly the needed twisted intertwining operators.
+    On ordinary modules it is ordinary $D$-fusion [9] Theorem 3.54 and Corollary 3.55.
   For an integer $k gt.eq 1$, define the coefficients $a_j$ (depending on $k$) by the formal coordinate identity
   #[#set math.equation(numbering: n => "(7.1)")
-   $ exp #h(-0.16667em) (- sum_(j gt.eq 1) a_j x^(j + 1) frac(d, d x)) x = frac(\( 1 + x \)^k - 1, k) \, $ <eq:permutation-delta-coordinate>]
+   $ exp #h(-0.16667em) (- sum_(j gt.eq 1) a_j x^(j + 1) frac(d, d x)) x = frac(\( 1 + x \)^k - 1, k) \,
+     $ <eq:permutation-delta-coordinate>]
   and set
   #[#set math.equation(numbering: n => "(7.2)")
-   $ Delta_k \( z \) = exp #h(-0.16667em) (sum_(j gt.eq 1) a_j z^(- j \/ k) L \( j \)) k^(- L \( 0 \)) z^(\( 1 \/ k - 1 \) L \( 0 \)) . $ <eq:permutation-delta-operator>]
-  These are the coordinate operators of [11] Section 5.1.1, equations (5.3)–(5.5), with the chosen branches of the indicated powers.
-  Write $I_V$ and $I_D$ for the indicated spaces of ordinary and twisted intertwining operators, respectively. For ordinary $V$-modules $M \, N$, the explicit mutually inverse maps of [11] Theorems 5.5, 5.9 and Corollary 5.10 give
+   $ Delta_k \( z \) = exp #h(-0.16667em) (sum_(j gt.eq 1) a_j z^(- j \/ k) L \( j \)) k^(- L \( 0 \))
+     z^(\( 1 \/ k - 1 \) L \( 0 \)) . $ <eq:permutation-delta-operator>]
+  These are the coordinate operators of [11] Section 5.1.1, equations (5.3)–(5.5),
+    with the chosen branches of the indicated powers.
+  Write $I_V$ and $I_D$ for the indicated spaces of ordinary and twisted intertwining operators, respectively.
+    For ordinary $V$-modules $M \, N$, the explicit mutually inverse maps of [11] Theorems 5.5,
+    5.9 and Corollary 5.10 give
   $ I_V binom(W, M med N) tilde.equiv I_D binom(T_sigma \( W \), M ⊗ V med T_sigma \( N \)) \,\
 overline(cal(Y)) \( m ⊗ upright(bold(1)) \, z \) = cal(Y) \( Delta_2 \( z \) m \, z^(1 \/ 2) \) . $
   Together with the BDM equivalence and the ordinary fusion universal property, this identifies the representing object:
   #[#set math.equation(numbering: n => "(7.3)")
    $ \( M ⊗ V \) star.op T_sigma \( N \) tilde.equiv T_sigma \( M times.square_V N \) . $ <eq:permutation-one-slot>]
   This is the universal-property proof of [11] Theorem 6.3, applied only to grading-restricted targets.
-  For completeness, the finite-expansion step in that proof does not require integral module weights. If $L \( 0 \) m = h m$, write
-  $ e^(- sum_(j gt.eq 1) a_j z^(- j) L \( j \)) m = sum_s z^(- s) m_s \, #h(2em) L \( 0 \) m_s = \( h - s \) m_s . $
+  For completeness, the finite-expansion step in that proof does not require integral module weights.
+    If $L \( 0 \) m = h m$, write
+  $ e^(- sum_(j gt.eq 1) a_j z^(- j) L \( j \)) m = sum_s z^(- s) m_s \, wide L \( 0 \) m_s = \( h - s \) m_s . $
   The sum is finite by boundedness below, and
   $ Delta_k \( z^k \)^(- 1) m = z^(\( k - 1 \) h) sum_s k^(h - s) z^(- k s) m_s . $
-  In the weak-associativity substitution this fractional monomial depends only on $z_2$ and multiplies both sides. The corresponding expansion of a state $u in V$ has integral powers. Taking a maximum over the finitely many coefficient pairs and absorbing their finitely many negative integral powers supplies the common exponent used in the proof of [11] Theorem 5.9.
-  To move the slot, pull back all three actions in an intertwiner by $sigma$. This preserves twisted Jacobi and its universal property. For every ordinary $sigma$-twisted object $Q$,
-  $ E_Q = e^(- 2 pi i L^Q \( 0 \)) \, #h(2em) E_Q a_n E_Q^(- 1) = \( - 1 \)^j a_n quad #scale(x: 120%, y: 120%)[\(] sigma a = \( - 1 \)^j a \, med n in j \/ 2 + bb(Z) #scale(x: 120%, y: 120%)[\)] . $
-  Thus $E_Q : Q arrow.r Q^sigma$ is an invertible module map. The charge pullback of $M ⊗ V$ is $V ⊗ M$. Applying simultaneous pullback to (7.3) gives
+  In the weak-associativity substitution this fractional monomial depends only on $z_2$ and multiplies both sides.
+    The corresponding expansion of a state $u in V$ has integral powers.
+    Taking a maximum over the finitely many coefficient pairs and absorbing their finitely many negative integral
+    powers supplies the common exponent used in the proof of [11] Theorem 5.9.
+  To move the slot, pull back all three actions in an intertwiner by $sigma$.
+    This preserves twisted Jacobi and its universal property. For every ordinary $sigma$-twisted object $Q$,
+  $ E_Q = e^(- 2 pi i L^Q \( 0 \)) \, wide E_Q a_n E_Q^(- 1) = \( - 1 \)^j a_n quad
+    #scale(x: 120%, y: 120%)[\(] sigma a = \( - 1 \)^j a \, med n in j \/ 2 + bb(Z) #scale(x: 120%, y: 120%)[\)] . $
+  Thus $E_Q : Q arrow.r Q^sigma$ is an invertible module map. The charge pullback of $M ⊗ V$ is $V ⊗ M$.
+    Applying simultaneous pullback to (7.3) gives
   $ \( V ⊗ M \) star.op T_sigma \( N \) tilde.equiv T_sigma \( M times.square_V N \) . $
   This does not require $M ⊗ V$ itself to be flip-invariant.
-  Finally, put $X = P ⊗ V$, $Y = V ⊗ P^or$. Ordinary tensor-product factorization and the vacuum unit give $X star.op Y tilde.equiv P ⊗ P^or$. Its factorized intertwiner is
+  Finally, put $X = P ⊗ V$, $Y = V ⊗ P^or$. Ordinary tensor-product factorization and the vacuum unit give $X
+    star.op Y tilde.equiv P ⊗ P^or$. Its factorized intertwiner is
   $ \( p ⊗ v \, med u ⊗ q \) mapsto e^(z L_P \( - 1 \)) Y_P \( u \, - z \) p ⊗ Y_(P^or) \( v \, z \) q \, $
-  where $u$ belongs to the first factor and $v$ to the second. The relative associator and the two slot formulas now yield
+  where $u$ belongs to the first factor and $v$ to the second.
+    The relative associator and the two slot formulas now yield
   $ \( P ⊗ P^or \) star.op T_sigma \( V \) & tilde.equiv \( X star.op Y \) star.op T_sigma \( V \)\
  & tilde.equiv X star.op #scale(x: 120%, y: 120%)[\(] Y star.op T_sigma \( V \) #scale(x: 120%, y: 120%)[\)]\
  & tilde.equiv \( P ⊗ V \) star.op T_sigma \( P^or \)\
  & tilde.equiv T_sigma \( P times.square_V P^or \) . $
-  The dictionary permits writing $times.square_D$ for these products. If $V = bb(C)$, the flip is the identity and the statement is immediate. ◻
+  The dictionary permits writing $times.square_D$ for these products.
+    If $V = bb(C)$, the flip is the identity and the statement is immediate. ◻
 ]
 
 === 7.2 From detection to a positive invariant form <from-detection-to-a-positive-invariant-form>
 
 #proof[
-  For $V = bb(C)$, the only simple module is the scalar module, so the assertion is immediate. Assume henceforth that $V eq.not bb(C)$, and fix an arbitrary simple $V$-module $P$. Its algebraic contragredient is denoted by $P^or$; neither module is assumed unitary.
+  For $V = bb(C)$, the only simple module is the scalar module, so the assertion is immediate.
+    Assume henceforth that $V eq.not bb(C)$, and fix an arbitrary simple $V$-module $P$.
+    Its algebraic contragredient is denoted by $P^or$; neither module is assumed unitary.
   #emph[The fixed-point algebra and a unitary twisted module.] Set
-  $ D = V ⊗ V \, #h(2em) sigma \( v ⊗ w \) = w ⊗ v \, #h(2em) U = D^(chevron.l sigma chevron.r) \, #h(2em) J = D^(- sigma) . $
-  Thus $D = U xor J$ as a $U$-module. Tensor products preserve simplicity, regularity, CFT type and self-contragredience. In particular, $D$ is a simple unitary strongly rational VOA. The flip preserves its unitary form and commutes with its PCT operator $Theta^D$. The cyclic fixed-point theorem of Carnahan–Miyamoto [3] Corollary 5.25 applies to $D$: it is simple, nonnegatively graded and regular, with a nonsingular invariant bilinear form. It follows that $U$ is regular. CFT type and the unitary structure are inherited, and the inherited form and PCT also give self-contragredience. Hence $U$ is simple unitary strongly rational, and Theorem 14 applies to $U$.
-  Let $T = T_sigma \( V \)$ be the transposition-twisted $D$-module obtained from the vacuum $V$ by the Barron–Dong–Mason construction [2] Theorem 3.9. This construction preserves the unitary form [16] Lemma 10.12, so $T \|_U$ is unitary. Its conformal energy is
+  $ D = V ⊗ V \, wide sigma \( v ⊗ w \) = w ⊗ v \, wide U = D^(chevron.l sigma chevron.r) \, wide J = D^(- sigma) . $
+  Thus $D = U xor J$ as a $U$-module. Tensor products preserve simplicity, regularity,
+    CFT type and self-contragredience. In particular, $D$ is a simple unitary strongly rational VOA.
+    The flip preserves its unitary form and commutes with its PCT operator $Theta^D$.
+    The cyclic fixed-point theorem of Carnahan–Miyamoto [3] Corollary 5.25 applies to $D$:
+    it is simple, nonnegatively graded and regular, with a nonsingular invariant bilinear form.
+    It follows that $U$ is regular. CFT type and the unitary structure are inherited,
+    and the inherited form and PCT also give self-contragredience.
+    Hence $U$ is simple unitary strongly rational, and Theorem 14 applies to $U$.
+  Let $T = T_sigma \( V \)$ be the transposition-twisted $D$-module obtained from the vacuum $V$ by the
+    Barron–Dong–Mason construction [2] Theorem 3.9. This construction preserves the unitary form [16] Lemma 10.12,
+    so $T \|_U$ is unitary. Its conformal energy is
   $ L_0^T = 1 / 2 L_0^V + c / 16 \, $
   where $c$ is the central charge of $V$. In particular, it has finite-dimensional energy spaces and a lower bound. Put
   $ R = P ⊗ P^or . $
-  The tensor-product module theorem makes $R$ simple over $D$; it too has finite-dimensional energy spaces and a lower bound.
-  The restrictions $T \|_U$ and $R \|_U$ have the same conformal vector and energy spaces as before restriction. They are grading-restricted $U$-modules of finite length. Indeed, regularity decomposes them into simple ordinary $U$-modules. There are finitely many simple types, and infinitely many copies of one type would make the energy space at its lowest weight infinite-dimensional. All fusion products over $U$ used below therefore belong to its finite semisimple module category.
-  #emph[A positive form on the restriction of $R$.] Here $times.square_D$ denotes the product representing twisted intertwining operators among grading-restricted ordinary or $sigma$-twisted $D$-modules, as constructed in Lemma 18. That lemma gives
+  The tensor-product module theorem makes $R$ simple over $D$;
+    it too has finite-dimensional energy spaces and a lower bound.
+  The restrictions $T \|_U$ and $R \|_U$ have the same conformal vector and energy spaces as before restriction.
+    They are grading-restricted $U$-modules of finite length.
+    Indeed, regularity decomposes them into simple ordinary $U$-modules.
+    There are finitely many simple types, and infinitely many copies of one type would make the energy space at
+    its lowest weight infinite-dimensional. All fusion products over $U$ used below therefore belong to its finite
+    semisimple module category.
+  #emph[A positive form on the restriction of $R$.] Here $times.square_D$ denotes the product representing twisted
+    intertwining operators among grading-restricted ordinary or $sigma$-twisted $D$-modules,
+    as constructed in Lemma 18. That lemma gives
   #[#set math.equation(numbering: n => "(7.4)")
-   $ R times.square_D T_sigma \( V \) tilde.equiv T_sigma \( P times.square_V P^or \) . $ <eq:permutation-fusion-detection>]
-  The ordinary labels $P$ and $P^or$ are still not assumed unitary. By rigidity, $P times.square_V P^or$ has a nonzero evaluation onto $V$. Applying $T_sigma$ to this morphism and using (7.4) yields a nonzero twisted intertwining operator $I$: the universal intertwiner’s coefficients generate its target, so composition with a nonzero target morphism cannot vanish. Its type is
+   $ R times.square_D T_sigma \( V \) tilde.equiv T_sigma \( P times.square_V P^or \) .
+     $ <eq:permutation-fusion-detection>]
+  The ordinary labels $P$ and $P^or$ are still not assumed unitary.
+    By rigidity, $P times.square_V P^or$ has a nonzero evaluation onto $V$.
+    Applying $T_sigma$ to this morphism and using (7.4) yields a nonzero twisted intertwining operator $I$:
+    the universal intertwiner’s coefficients generate its target,
+    so composition with a nonzero target morphism cannot vanish. Its type is
   $ binom(T, R med T) . $
-  We need this operator to detect every simple summand of $R \|_U$. For two weak $sigma$-twisted $D$-modules, the space of generalized intertwining operators between them is a weak $D$-module [11] Theorem 4.6; write $cal(H) \( T \, T \)$ for this space with source and target $T$. Moreover, [11] Proposition 4.8 identifies the charge map
-  $ f_I : R arrow.r cal(H) \( T \, T \) \, #h(2em) p mapsto I \( p \, x \) \, $
-  as a homomorphism of weak $D$-modules. Its kernel is therefore a $D$-submodule. Since $R$ is simple and $I$ is nonzero, $f_I$ is injective.
-  Restricting the observable states in the twisted Jacobi identity to $U$ gives the ordinary Jacobi identity, with the same derivative identity and lower truncation. Thus $I$ is an ordinary $U$-intertwining operator. If $S subset R \|_U$ is any simple submodule, injectivity of $f_I$ implies that $I \|_(S times T)$ is nonzero. Rigidity over $U$ then gives a nonzero, hence injective, morphism
+  We need this operator to detect every simple summand of $R \|_U$.
+    For two weak $sigma$-twisted $D$-modules, the space of generalized intertwining operators between them is a
+    weak $D$-module [11] Theorem 4.6; write $cal(H) \( T \, T \)$ for this space with source and target $T$.
+    Moreover, [11] Proposition 4.8 identifies the charge map
+  $ f_I : R arrow.r cal(H) \( T \, T \) \, wide p mapsto I \( p \, x \) \, $
+  as a homomorphism of weak $D$-modules. Its kernel is therefore a $D$-submodule.
+    Since $R$ is simple and $I$ is nonzero, $f_I$ is injective.
+  Restricting the observable states in the twisted Jacobi identity to $U$ gives the ordinary Jacobi identity,
+    with the same derivative identity and lower truncation. Thus $I$ is an ordinary $U$-intertwining operator.
+    If $S subset R \|_U$ is any simple submodule, injectivity of $f_I$ implies that $I \|_(S times T)$ is nonzero.
+    Rigidity over $U$ then gives a nonzero, hence injective, morphism
   $ S arrow.r T times.square_U T^or . $
-  The conjugate-module description of the contragredient gives a unitary form on $T^or$. Theorem 14, applied to $U$, makes $T times.square_U T^or$ unitary. Restricting its positive form unitarizes $S$. Taking the finite orthogonal sum over a simple decomposition of $R \|_U$ gives a positive $U$-invariant form $h_1$ on $R$.
-  The form $h_1$ gives the correct adjoints for fields in $U$. It does not yet give the correct adjoints for fields in $J$, although those fields already act algebraically on $R$. We will construct a second positive form from their action and then add the two forms. Dong and Lin constructed unitary order-two simple-current VOA extensions under compatible antiunitary-involution hypotheses [12] Theorem 3.3. Carpi, Gaudio, Giorgetti and Hillier proved unitarity and complete unitarity of simple CFT-type extensions of a completely unitary base [4] Theorem 4.7. Here the extension algebra $D$ is already unitary, while the arbitrary module $R$ initially has a positive form only after restriction to $U$. The argument below transfers that form to the existing $D$-action.
-  #emph[A second form from the sign action.] Since $V eq.not bb(C)$, the flip is faithful and $J eq.not 0$: if $v$ is independent of $Omega$, then $v ⊗ Omega - Omega ⊗ v$ is a nonzero vector of $J$. The orbifold constituent theorem [27] Corollary 4.8 identifies the tensor subcategory generated by the constituents of $D$ with $"Rep" \( bb(Z) \/ 2 bb(Z) \)$. Here $D$ is an ordinary VOA, so the abelian associativity cocycle in that theorem is trivial. In particular, $J$ is a simple current, that is, a simple invertible object, and
+  The conjugate-module description of the contragredient gives a unitary form on $T^or$.
+    Theorem 14, applied to $U$, makes $T times.square_U T^or$ unitary.
+    Restricting its positive form unitarizes $S$. Taking the finite orthogonal sum over a simple decomposition of
+    $R \|_U$ gives a positive $U$-invariant form $h_1$ on $R$.
+  The form $h_1$ gives the correct adjoints for fields in $U$.
+    It does not yet give the correct adjoints for fields in $J$,
+    although those fields already act algebraically on $R$. We will construct a second positive form from their
+    action and then add the two forms. Dong and Lin constructed unitary order-two simple-current VOA extensions
+    under compatible antiunitary-involution hypotheses [12] Theorem 3.3.
+    Carpi, Gaudio, Giorgetti and Hillier proved unitarity and complete unitarity of simple CFT-type extensions of
+    a completely unitary base [4] Theorem 4.7. Here the extension algebra $D$ is already unitary,
+    while the arbitrary module $R$ initially has a positive form only after restriction to $U$.
+    The argument below transfers that form to the existing $D$-action.
+  #emph[A second form from the sign action.] Since $V eq.not bb(C)$, the flip is faithful and $J eq.not 0$:
+    if $v$ is independent of $Omega$, then $v ⊗ Omega - Omega ⊗ v$ is a nonzero vector of $J$.
+    The orbifold constituent theorem [27] Corollary 4.8 identifies the tensor subcategory generated by the
+    constituents of $D$ with $"Rep" \( bb(Z) \/ 2 bb(Z) \)$. Here $D$ is an ordinary VOA,
+    so the abelian associativity cocycle in that theorem is trivial.
+    In particular, $J$ is a simple current, that is, a simple invertible object, and
   $ J times.square_U J tilde.equiv U . $
   The multiplication morphism
   $ m : J times.square_U J arrow.r U $
-  coming from $Y^D \|_(J times J)$ is nonzero. For example, the invariant bilinear form of $D$ restricts nondegenerately to $J$, so some product of two states in $J$ has a nonzero vacuum coefficient. Thus $m$ is an isomorphism.
+  coming from $Y^D \|_(J times J)$ is nonzero. For example,
+    the invariant bilinear form of $D$ restricts nondegenerately to $J$,
+    so some product of two states in $J$ has a nonzero vacuum coefficient. Thus $m$ is an isomorphism.
   Let
   $ L : J times.square_U R arrow.r R $
-  be the morphism corresponding to the action $Y^R \|_(J times R)$. Ordinary $D$-module associativity, expressed using the fusing isomorphism over $U$, says that
+  be the morphism corresponding to the action $Y^R \|_(J times R)$.
+    Ordinary $D$-module associativity, expressed using the fusing isomorphism over $U$, says that
   #[#set math.equation(numbering: n => "(7.5)")
    $ L \( 1_J times.square L \) alpha_(J \, J \, R) = ell_R \( m times.square 1_R \) . $ <eq:sign-action-square>]
-  Here $alpha_(J \, J \, R) : \( J times.square_U J \) times.square_U R arrow.r J times.square_U \( J times.square_U R \)$ is the associator and $ell_R : U times.square_U R arrow.r R$ is the left unit isomorphism; undecorated fusion signs in this identity are over $U$. The right side is an isomorphism, so $L$ is epic. Tensoring by the invertible object $J$ preserves composition length. The two sides of $L$ have the same finite length, and hence $L$ is an isomorphism.
-  Give $J$ the form inherited from $D$. Apply Theorem 14 to $J$ and $\( R \, h_1 \)$, and transfer its positive invariant fusion form along $L$. This gives a second positive $U$-invariant form $h_2$ on $R$, for which $Y^R \|_(J times R)$ is the transported universal intertwiner. We will show that $h_1 + h_2$ is invariant for all of $D$.
-  #emph[Adjunction exchanges the two forms.] The creation intertwiner of the $U$-module $J$ is $Y^D \|_(J times U)$ by skew symmetry. With the inherited forms, its adjoint annihilation is
+  Here $alpha_(J \, J \, R) : \( J times.square_U J \) times.square_U R arrow.r
+    J times.square_U \( J times.square_U R \)$ is the associator and $ell_R : U times.square_U R arrow.r
+    R$ is the left unit isomorphism; undecorated fusion signs in this identity are over $U$.
+    The right side is an isomorphism, so $L$ is epic. Tensoring by the invertible object $J$ preserves composition
+    length. The two sides of $L$ have the same finite length, and hence $L$ is an isomorphism.
+  Give $J$ the form inherited from $D$. Apply Theorem 14 to $J$ and $\( R \, h_1 \)$,
+    and transfer its positive invariant fusion form along $L$.
+    This gives a second positive $U$-invariant form $h_2$ on $R$,
+    for which $Y^R \|_(J times R)$ is the transported universal intertwiner.
+    We will show that $h_1 + h_2$ is invariant for all of $D$.
+  #emph[Adjunction exchanges the two forms.] The creation intertwiner of the $U$-module $J$ is
+    $Y^D \|_(J times U)$ by skew symmetry. With the inherited forms, its adjoint annihilation is
   #[#set math.equation(numbering: n => "(7.6)")
-   $ cal(Y)_J^(-) \( macron(j) \, z \) j_0 = Y^D \( Theta^D j \, z \) j_0 \, #h(2em) j \, j_0 in J . $ <eq:sign-annihilation>]
-  This follows from unitarity of $D$ and fixes the scalar normalization of the annihilation. The linear identification $macron(J) tilde.equiv J$ in (7.6) sends $macron(j)$ to $Theta^D j$.
+   $ cal(Y)_J^(-) \( macron(j) \, z \) j_0 = Y^D \( Theta^D j \, z \) j_0 \, wide j \,
+     j_0 in J . $ <eq:sign-annihilation>]
+  This follows from unitarity of $D$ and fixes the scalar normalization of the annihilation.
+    The linear identification $macron(J) tilde.equiv J$ in (7.6) sends $macron(j)$ to $Theta^D j$.
   For $w > 0$, define the antilinear charge transform on $D$ by
   $ t_w = e^(w L_1) \( - w^(- 2) \)^(L_0) Theta^D . $
-  The integer grading of $D$ makes this expression unambiguous. For $j \, j' in J$ and finite-energy $r_1 \, r_2 in R$, the exact transport identity of Theorem 14, followed by ordinary $D$-module associativity, gives
+  The integer grading of $D$ makes this expression unambiguous.
+    For $j \, j' in J$ and finite-energy $r_1 \, r_2 in R$, the exact transport identity of Theorem 14,
+    followed by ordinary $D$-module associativity, gives
   #[#set math.equation(numbering: n => "(7.7)")
    $ & h_2 #scale(x: 120%, y: 120%)[\(] Y^R \( j \, z \) r_1 \, Y^R \( j' \, w \) r_2 #scale(x: 120%, y: 120%)[\)]\
- & quad = h_1 #scale(x: 120%, y: 120%)[\(] Y^R \( Y^D \( t_w j' \, w^(- 1) - z \) j \, z \) r_1 \, r_2 #scale(x: 120%, y: 120%)[\)]\
- & quad = h_1 #scale(x: 120%, y: 120%)[\(] Y^R \( t_w j' \, w^(- 1) \) Y^R \( j \, z \) r_1 \, r_2 #scale(x: 120%, y: 120%)[\)] . $ <eq:two-form-transport>]
-  Initially, $0 < z \, w < 1$ and $w^(- 1) > z > w^(- 1) - z > 0$. Pairings of completed vectors on the first line are the absolutely convergent sums over equal energies supplied by the transport identity. On the last line, $h_1 \( thin dot.op thin \, r_2 \)$ is a restricted-dual functional: $h_1$ is $U$-invariant and $U$ has the same conformal vector as $D$. Thus convergent module associativity applies without already assuming $D$-invariance of $h_1$.
-  The vectors $j_(\( n \)) r$, with $j in J$, $r in R$ and $n in bb(Z)$, span $R$. Their span is a $U$-submodule by the intertwiner commutator formula, and is the image of the surjective morphism $L$. Comparing Laurent coefficients in $z$ in (7.7) therefore yields
+ & quad = h_1 #scale(x: 120%, y: 120%)[\(] Y^R \( Y^D \( t_w j' \, w^(- 1) - z \) j \, z \) r_1 \,
+   r_2 #scale(x: 120%, y: 120%)[\)]\
+ & quad = h_1 #scale(x: 120%, y: 120%)[\(] Y^R \( t_w j' \, w^(- 1) \) Y^R \( j \, z \) r_1 \,
+   r_2 #scale(x: 120%, y: 120%)[\)] . $ <eq:two-form-transport>]
+  Initially, $0 < z \, w < 1$ and $w^(- 1) > z > w^(- 1) - z > 0$.
+    Pairings of completed vectors on the first line are the absolutely convergent sums over equal energies
+    supplied by the transport identity. On the last line, $h_1 \( thin dot.op thin \, r_2 \)$ is a restricted-dual
+    functional: $h_1$ is $U$-invariant and $U$ has the same conformal vector as $D$.
+    Thus convergent module associativity applies without already assuming $D$-invariance of $h_1$.
+  The vectors $j_(\( n \)) r$, with $j in J$, $r in R$ and $n in bb(Z)$, span $R$.
+    Their span is a $U$-submodule by the intertwiner commutator formula,
+    and is the image of the surjective morphism $L$. Comparing Laurent coefficients in $z$ in (7.7) therefore yields
   #[#set math.equation(numbering: n => "(7.8)")
-   $ h_2 #scale(x: 120%, y: 120%)[\(] x \, Y^R \( j \, w \) y #scale(x: 120%, y: 120%)[\)] = h_1 #scale(x: 120%, y: 120%)[\(] Y^R \( t_w j \, w^(- 1) \) x \, y #scale(x: 120%, y: 120%)[\)] \, #h(2em) x \, y in R \, quad j in J . $ <eq:two-form-adjoint-one>]
-  For finite-energy $x \, y$, the two sides are finite Laurent polynomials in $w$. Indeed, the forms pair equal energies, the states of $D$ have integer weights, and $e^(w L_1) j$ is a finite sum. Consequently, (7.8) extends from its nonempty initial interval to every $w > 0$.
+   $ h_2 #scale(x: 120%, y: 120%)[\(] x \, Y^R \( j \, w \) y #scale(x: 120%, y: 120%)[\)] =
+     h_1 #scale(x: 120%, y: 120%)[\(] Y^R \( t_w j \, w^(- 1) \) x \, y #scale(x: 120%, y: 120%)[\)] \, wide x \,
+     y in R \, quad j in J . $ <eq:two-form-adjoint-one>]
+  For finite-energy $x \, y$, the two sides are finite Laurent polynomials in $w$.
+    Indeed, the forms pair equal energies, the states of $D$ have integer weights,
+    and $e^(w L_1) j$ is a finite sum. Consequently, (7.8) extends from its nonempty initial interval to every $w > 0$.
   The charge transform satisfies
   #[#set math.equation(numbering: n => "(7.9)")
    $ t_(w^(- 1)) t_w = 1 . $ <eq:charge-reflection-involution>]
-  For completeness, $Theta^D$ commutes with the Virasoro operators and with the real integer-weight signs. Conjugating $e^(w L_1)$ by $\( - w^2 \)^(L_0)$ gives $e^(- w^(- 1) L_1)$, so
+  For completeness, $Theta^D$ commutes with the Virasoro operators and with the real integer-weight signs.
+    Conjugating $e^(w L_1)$ by $\( - w^2 \)^(L_0)$ gives $e^(- w^(- 1) L_1)$, so
   $ t_(w^(- 1)) t_w = e^(w^(- 1) L_1) \( - w^2 \)^(L_0) e^(w L_1) \( - w^(- 2) \)^(L_0) = 1 . $
-  Apply (7.8) at radius $w^(- 1)$ with charge $t_w j$, exchange the two vector slots, and take complex conjugates. Using (7.9) gives the reverse relation
+  Apply (7.8) at radius $w^(- 1)$ with charge $t_w j$, exchange the two vector slots, and take complex conjugates.
+    Using (7.9) gives the reverse relation
   #[#set math.equation(numbering: n => "(7.10)")
-   $ h_1 #scale(x: 120%, y: 120%)[\(] x \, Y^R \( j \, w \) y #scale(x: 120%, y: 120%)[\)] = h_2 #scale(x: 120%, y: 120%)[\(] Y^R \( t_w j \, w^(- 1) \) x \, y #scale(x: 120%, y: 120%)[\)] . $ <eq:two-form-adjoint-two>]
-  Adding (7.8) and (7.10) proves the invariant adjunction for $h = h_1 + h_2$ on states of $J$. It already holds on $U$. Since $D = U xor J$, the form $h$ is $D$-invariant; it is positive definite as a sum of positive definite forms. Only ordinary associativity and the normalized transport identity were used in this construction.
+   $ h_1 #scale(x: 120%, y: 120%)[\(] x \, Y^R \( j \, w \) y #scale(x: 120%, y: 120%)[\)] =
+     h_2 #scale(x: 120%, y: 120%)[\(] Y^R \( t_w j \, w^(- 1) \) x \,
+     y #scale(x: 120%, y: 120%)[\)] . $ <eq:two-form-adjoint-two>]
+  Adding (7.8) and (7.10) proves the invariant adjunction for $h = h_1 + h_2$ on states of $J$.
+    It already holds on $U$. Since $D = U xor J$, the form $h$ is $D$-invariant;
+    it is positive definite as a sum of positive definite forms.
+    Only ordinary associativity and the normalized transport identity were used in this construction.
   Finally, choose a nonzero homogeneous vector $q in P^or$ and put
-  $ h_P \( p \, p' \) = h \( p ⊗ q \, p' ⊗ q \) \, #h(2em) p \, p' in P . $
-  This is positive definite. The fields of $V ⊗ Omega$ act on $P ⊗ bb(C) q$ as the fields of $V$ on $P$, and the PCT charge transform on $v ⊗ Omega$ is the transform on $v$ tensored with $Omega$. The $D$-invariant adjunction therefore restricts to the $V$-invariant adjunction for $h_P$. This unitarizes the arbitrary simple module $P$. Finite direct sums of these forms prove the final assertion. ◻
+  $ h_P \( p \, p' \) = h \( p ⊗ q \, p' ⊗ q \) \, wide p \, p' in P . $
+  This is positive definite. The fields of $V ⊗ Omega$ act on $P ⊗ bb(C) q$ as the fields of $V$ on $P$,
+    and the PCT charge transform on $v ⊗ Omega$ is the transform on $v$ tensored with $Omega$.
+    The $D$-invariant adjunction therefore restricts to the $V$-invariant adjunction for $h_P$.
+    This unitarizes the arbitrary simple module $P$. Finite direct sums of these forms prove the final assertion. ◻
 ]
 
 == 8 The canonical braided unitary tensor embedding <sec:comparison>
 
-The preceding sections provide the analytic and positivity inputs for the categorical comparison. We now identify the tensor structure of the actual CWX functor. Essential surjectivity will be proved in the next section; at this stage we obtain an embedding and finite index for every sector in its image.
+The preceding sections provide the analytic and positivity inputs for the categorical comparison.
+  We now identify the tensor structure of the actual CWX functor.
+  Essential surjectivity will be proved in the next section;
+  at this stage we obtain an embedding and finite index for every sector in its image.
 
-Here $"Rep" \( A_V \)$ denotes the category of compatible families of locally normal representations of the interval algebras, with bounded operators intertwining every local action as morphisms. On the separable Hilbert completions considered here, these are the transportable DHR representations of the circle net; see [25] Section 6.
+Here $"Rep" \( A_V \)$ denotes the category of compatible families of locally normal representations of the
+  interval algebras, with bounded operators intertwining every local action as morphisms.
+  On the separable Hilbert completions considered here, these are the transportable DHR representations of the
+  circle net; see [25] Section 6.
 
 #thm([Theorem 8.1.])[
-  (CWX tensor embedding).  #emph[Let $V$ be simple, unitary and strongly rational. The Hilbert completion and the local actions of Theorem 13 define a fully faithful $*$-functor 
+  (CWX tensor embedding).  #emph[Let $V$ be simple, unitary and strongly rational.
+    The Hilbert completion and the local actions of Theorem 13 define a fully faithful $*$-functor
 $ F_(upright("CWX"))^V : "Rep"^u \( V \) arrow.r "Rep" \( A_V \) . $
 
- It has a unitary tensor structure identifying the Huang–Lepowsky fusion and braiding with Connes fusion and DHR braiding, respectively. In particular every object in its image is dualizable, hence has finite index.]
+ It has a unitary tensor structure identifying the Huang–Lepowsky fusion and braiding with Connes fusion and DHR
+   braiding, respectively. In particular every object in its image is dualizable, hence has finite index.]
 ] <thm:cwx-embedding>
 
 #proof[
-  We first verify the analytic inputs to Gui’s comparison and identify the underlying functor. The additional localizability conditions will be checked before invoking the tensor comparison.
-  #emph[Generating fields and charges.] We verify the hypotheses of Gui’s comparison theorem [17] Section 3.4 and Corollary 3.23. Regularity follows from rationality and $C_2$-cofiniteness. Theorem 17 supplies positive invariant forms on all simple modules; finite orthogonal sums then supply strong unitarity on the grading-restricted category. Theorem 2 gives energy bounds on every unitary module, and Corollary 5 gives strong locality of $V$.
-  Take a generating family $E$ of homogeneous quasi-primary vectors in $V$ as in the energy argument. Since strong locality holds for all vacuum fields, it holds in particular for $E$. Choose one representative of every simple module, equipped with its positive form, as the family of generating charges. This family certainly tensor-generates the algebraic category. In each charge module choose a nonzero lowest-weight vector $a$. It is quasi-primary because $L_1$ lowers conformal energy. Corollary 16 and Lemma 10 give polynomial energy bounds for every intertwining operator between unitary modules with this charge. Proposition 11 gives the strong intertwining property for every homogeneous observable, hence for $E$. The same fixed vector $a$ works for every irreducible intertwining operator with that charge; it has not been chosen separately for different sources or targets.
-  These are exactly Condition A of [17] Section 3.4. The chosen charge vectors are quasi-primary, so Condition B holds as well. Thus [17] Theorem 3.15 identifies the canonical positive fusion structures with a unitary modular tensor category. This agrees with the normalization of Theorem 14; positivity of an unspecified sesquilinear form is not being substituted for canonical positivity.
-  #emph[The underlying fully faithful functor.] The functor on objects is the representation characterized by (5.4). On a module morphism it is its bounded extension to Hilbert completions. Such extensions are bounded because the modules are finite orthogonal sums of simple modules, and a map between simple unitary modules is either zero or a scalar multiple of a unitary isomorphism. The Hilbert adjoint is again a module map. The exact smear identity shows that these extensions intertwine the local algebra actions. They are therefore the morphism maps of the CWX functor, rather than of an independently chosen equivalence. Full faithfulness, including preservation of adjoints, is [17] Theorem 3.17; see also [14] Theorem 4.24. The uniqueness in Theorem 13 identifies the functor there with ours. This full-faithfulness result uses the observable-smear argument of [18] Theorem 4.3: localized stress-energy smears recover $L_0$ and then the algebraic module maps. It precedes the construction of a categorical extension and does not use tensor comparison.
-  #emph[Localizability of finite sums and products.] We use the corrected localizability requirements in [15] item 3. Here is their verification for the operators entering Gui’s categorical partial extension. Write $D_j = 1 + L_0$ on the Hilbert completion of a unitary module. The charged energy bounds and the $L_0$-commutator formula give, for each smeared field $T : cal(H)_j^oo arrow.r cal(H)_k^oo$ and each nonnegative integer $s$, an integer $r_s$ and a constant $C_s$ such that
+  We first verify the analytic inputs to Gui’s comparison and identify the underlying functor.
+    The additional localizability conditions will be checked before invoking the tensor comparison.
+  #emph[Generating fields and charges.] We verify the hypotheses of Gui’s comparison theorem [17] Section 3.4 and
+    Corollary 3.23. Regularity follows from rationality and $C_2$-cofiniteness.
+    Theorem 17 supplies positive invariant forms on all simple modules;
+    finite orthogonal sums then supply strong unitarity on the grading-restricted category.
+    Theorem 2 gives energy bounds on every unitary module, and Corollary 5 gives strong locality of $V$.
+  Take a generating family $E$ of homogeneous quasi-primary vectors in $V$ as in the energy argument.
+    Since strong locality holds for all vacuum fields, it holds in particular for $E$.
+    Choose one representative of every simple module, equipped with its positive form,
+    as the family of generating charges. This family certainly tensor-generates the algebraic category.
+    In each charge module choose a nonzero lowest-weight vector $a$.
+    It is quasi-primary because $L_1$ lowers conformal energy.
+    Corollary 16 and Lemma 10 give polynomial energy bounds for every intertwining operator between unitary
+    modules with this charge. Proposition 11 gives the strong intertwining property for every homogeneous
+    observable, hence for $E$. The same fixed vector $a$ works for every irreducible intertwining operator with
+    that charge; it has not been chosen separately for different sources or targets.
+  These are exactly Condition A of [17] Section 3.4. The chosen charge vectors are quasi-primary,
+    so Condition B holds as well. Thus [17] Theorem 3.15 identifies the canonical positive fusion structures with
+    a unitary modular tensor category. This agrees with the normalization of Theorem 14;
+    positivity of an unspecified sesquilinear form is not being substituted for canonical positivity.
+  #emph[The underlying fully faithful functor.] The functor on objects is the representation characterized by
+    (5.4). On a module morphism it is its bounded extension to Hilbert completions.
+    Such extensions are bounded because the modules are finite orthogonal sums of simple modules,
+    and a map between simple unitary modules is either zero or a scalar multiple of a unitary isomorphism.
+    The Hilbert adjoint is again a module map. The exact smear identity shows that these extensions intertwine the
+    local algebra actions. They are therefore the morphism maps of the CWX functor,
+    rather than of an independently chosen equivalence. Full faithfulness, including preservation of adjoints,
+    is [17] Theorem 3.17; see also [14] Theorem 4.24. The uniqueness in Theorem 13 identifies the functor there
+    with ours. This full-faithfulness result uses the observable-smear argument of [18] Theorem 4.3:
+    localized stress-energy smears recover $L_0$ and then the algebraic module maps.
+    It precedes the construction of a categorical extension and does not use tensor comparison.
+  #emph[Localizability of finite sums and products.] We use the corrected localizability requirements in [15]
+    item 3. Here is their verification for the operators entering Gui’s categorical partial extension.
+    Write $D_j = 1 + L_0$ on the Hilbert completion of a unitary module.
+    The charged energy bounds and the $L_0$-commutator formula give, for each smeared field $T :
+    cal(H)_j^oo arrow.r cal(H)_k^oo$ and each nonnegative integer $s$, an integer $r_s$ and a constant $C_s$ such that
   $ parallel D_k^s T xi parallel lt.eq C_s parallel D_j^(r_s) xi parallel . $
-  Indeed, commuting $L_0$ past a smear differentiates its smooth test and adds its fixed conformal-weight term; iteration reduces the estimate to the polynomial mode bounds. The same argument applies to the formal adjoint. This is the Sobolev estimate used in [17] Section 3.1 and Proposition 3.2.
-  Every bounded net morphism $S$ between objects of the CWX image is, by the full faithfulness just established, the bounded extension of a VOA morphism. All intermediate objects here are completions of VOA fusion products, on which the local actions are already defined. Thus $S$ and $S^(*)$ commute with the respective $L_0$ operators and preserve all Sobolev spaces. Gui’s left and right operators are products of a charged smear with finitely many observable smears [17] Equations (3.18)–(3.19). Their finite compositions, and those compositions followed by a bounded net morphism, therefore have the form covered by the preceding estimates. Consequently each finite sum, with common source and target,
+  Indeed, commuting $L_0$ past a smear differentiates its smooth test and adds its fixed conformal-weight term;
+    iteration reduces the estimate to the polynomial mode bounds. The same argument applies to the formal adjoint.
+    This is the Sobolev estimate used in [17] Section 3.1 and Proposition 3.2.
+  Every bounded net morphism $S$ between objects of the CWX image is, by the full faithfulness just established,
+    the bounded extension of a VOA morphism. All intermediate objects here are completions of VOA fusion products,
+    on which the local actions are already defined. Thus $S$ and $S^(*)$ commute with the respective $L_0$
+    operators and preserve all Sobolev spaces. Gui’s left and right operators are products of a charged smear with
+    finitely many observable smears [17] Equations (3.18)–(3.19).
+    Their finite compositions, and those compositions followed by a bounded net morphism,
+    therefore have the form covered by the preceding estimates.
+    Consequently each finite sum, with common source and target,
   $ B = sum_(alpha = 1)^m c_alpha S_alpha T_(alpha \, n_alpha) dots.h.c T_(alpha \, 1) \|_(cal(H)_j^oo) $
-  is smooth, has a densely defined formal adjoint, and satisfies $parallel B xi parallel lt.eq C parallel D_j^r xi parallel$ for some integer $r$. In particular $B$ is closable. This includes the finite sums of left or right fields in the corrected Definition 2.29 and the finite sums with a bounded morphism required by corrected Definition 2.41.
-  To verify localizability, let $cal(D)_0 subset cal(H)_j^oo$ be a dense linear subspace that is quasi-rotation invariant: for some $delta > 0$ there is a dense $cal(D)_delta subset cal(D)_0$ such that $e^(i t L_0) cal(D)_delta subset cal(D)_0$ for $\| t \| < delta$. Then $cal(D)_0$ is a core for $D_j^r$ [5] Lemma 7.2. To see the regularization explicitly, choose $phi in C_c^oo \( - delta \, delta \)$ and set
+  is smooth, has a densely defined formal adjoint, and satisfies $parallel B xi parallel lt.eq
+    C parallel D_j^r xi parallel$ for some integer $r$. In particular $B$ is closable.
+    This includes the finite sums of left or right fields in the corrected Definition 2.29 and the finite sums
+    with a bounded morphism required by corrected Definition 2.41.
+  To verify localizability, let $cal(D)_0 subset cal(H)_j^oo$ be a dense linear subspace that is quasi-rotation
+    invariant: for some $delta > 0$ there is a dense $cal(D)_delta subset cal(D)_0$ such that $e^(i t L_0)
+    cal(D)_delta subset cal(D)_0$ for $\| t \| < delta$. Then $cal(D)_0$ is a core for $D_j^r$ [5] Lemma 7.2.
+    To see the regularization explicitly, choose $phi in C_c^oo \( - delta \, delta \)$ and set
   $ R_phi = integral phi \( t \) e^(i t L_0) thin d t . $
-  The rapid decay of the Fourier transform of $phi$ makes $D_j^r R_phi$ bounded. Hence $R_phi$ turns Hilbert-norm approximations from $cal(D)_delta$ into Sobolev-norm approximations. For a vector in $cal(D)_delta$, its convolution is itself a Sobolev limit of Riemann sums in $cal(D)_0$. Taking smooth approximate identities for $phi$ now approximates every vector of $"Dom" D_j^r$ in that graph norm. The displayed bound for $B$ turns this approximation into graph approximation for $B$ on $cal(H)_j^oo$. Hence $overline(B \|_(cal(D)_0)) = overline(B)$, as required. Thus the strengthened finite-sum localizability hypotheses hold.
-  #emph[Connes fusion, braiding, and finite index.] Full faithfulness alone would only allow us to transport the VOA tensor structure onto its image. The additional comparison with the already defined net tensor structure is [17] Corollary 3.23. It supplies unitary natural maps
-  $ U_(M \, N) : F_(upright("CWX"))^V \( M \) times.square_(A_V) F_(upright("CWX"))^V \( N \) arrow.r F_(upright("CWX"))^V \( M times.square N \) \, $
-  compatible with the unit and associativity constraints. Here $times.square_(A_V)$ denotes Connes fusion, while $times.square$ denotes VOA fusion. Denote the VOA and net braidings by $c^V$ and $c^(upright("DHR"))$, using the same circle orientation. The maps satisfy
-  $ F_(upright("CWX"))^V \( c_(M \, N)^V \) thin U_(M \, N) = U_(N \, M) thin c_(F_(upright("CWX"))^V \( M \) \, F_(upright("CWX"))^V \( N \))^(upright("DHR")) . $
+  The rapid decay of the Fourier transform of $phi$ makes $D_j^r R_phi$ bounded.
+    Hence $R_phi$ turns Hilbert-norm approximations from $cal(D)_delta$ into Sobolev-norm approximations.
+    For a vector in $cal(D)_delta$, its convolution is itself a Sobolev limit of Riemann sums in $cal(D)_0$.
+    Taking smooth approximate identities for $phi$ now approximates every vector of $"Dom"
+    D_j^r$ in that graph norm. The displayed bound for $B$ turns this approximation into graph approximation for
+    $B$ on $cal(H)_j^oo$. Hence $overline(B \|_(cal(D)_0)) = overline(B)$, as required.
+    Thus the strengthened finite-sum localizability hypotheses hold.
+  #emph[Connes fusion, braiding, and finite index.] Full faithfulness alone would only allow us to transport the
+    VOA tensor structure onto its image. The additional comparison with the already defined net tensor structure
+    is [17] Corollary 3.23. It supplies unitary natural maps
+  $ U_(M \, N) : F_(upright("CWX"))^V \( M \) times.square_(A_V) F_(upright("CWX"))^V \( N \) arrow.r
+    F_(upright("CWX"))^V \( M times.square N \) \, $
+  compatible with the unit and associativity constraints. Here $times.square_(A_V)$ denotes Connes fusion,
+    while $times.square$ denotes VOA fusion. Denote the VOA and net braidings by $c^V$ and $c^(upright("DHR"))$,
+    using the same circle orientation. The maps satisfy
+  $ F_(upright("CWX"))^V \( c_(M \, N)^V \) thin U_(M \, N) =
+    U_(N \, M) thin c_(F_(upright("CWX"))^V \( M \) \, F_(upright("CWX"))^V \( N \))^(upright("DHR")) . $
   Thus the comparison is braided and unitary for the specified fusion and braiding on the net side.
-  Finally, the source category is rigid. Applying this unitary tensor functor to its evaluation and coevaluation maps preserves the conjugate equations. Their images exhibit a dual for every object in the image. The equivalence between dualizability and finite index for the net sectors then gives the last assertion. ◻
+  Finally, the source category is rigid. Applying this unitary tensor functor to its evaluation and coevaluation
+    maps preserves the conjugate equations. Their images exhibit a dual for every object in the image.
+    The equivalence between dualizability and finite index for the net sectors then gives the last assertion. ◻
 ]
 
-The image is closed under finite sums and subobjects. For subobjects, full faithfulness lifts a net projection to a self-adjoint idempotent module endomorphism; its range is a unitary submodule, whose completion is the prescribed subrepresentation. This proves closure of the image, but does not yet rule out a simple sector outside it. The next section establishes precisely that exhaustion statement.
+The image is closed under finite sums and subobjects. For subobjects,
+  full faithfulness lifts a net projection to a self-adjoint idempotent module endomorphism;
+  its range is a unitary submodule, whose completion is the prescribed subrepresentation.
+  This proves closure of the image, but does not yet rule out a simple sector outside it.
+  The next section establishes precisely that exhaustion statement.
 
 == 9 All sectors and complete rationality <sec:exhaustion>
 
-The tensor functor constructed in Theorem 19 gives finite-index representations of the net. We must still show that it accounts for every finite sector. We prove the stronger statement that every irreducible locally normal representation comes from an ordinary unitary module. The point is to reconstruct a weak module before assuming that the representation has finite energy multiplicities. Regularity will then supply those multiplicities.
+The tensor functor constructed in Theorem 19 gives finite-index representations of the net.
+  We must still show that it accounts for every finite sector.
+  We prove the stronger statement that every irreducible locally normal representation comes from an ordinary
+  unitary module. The point is to reconstruct a weak module before assuming that the representation has finite
+  energy multiplicities. Regularity will then supply those multiplicities.
 
-The scalar VOA has already been treated separately. We first consider $V eq.not bb(C) Omega$. All representations of $A_V$ are understood to be compatible families of normal representations of its interval algebras.
+The scalar VOA has already been treated separately. We first consider $V eq.not bb(C) Omega$.
+  All representations of $A_V$ are understood to be compatible families of normal representations of its interval
+  algebras.
 
 #thm([Proposition 9.1.])[
-  #emph[Let $V eq.not bb(C) Omega$ be a simple unitary strongly rational VOA which is energy-bounded and strongly local. Every nonzero irreducible locally normal representation $\( cal(K) \, pi \)$ of $A_V$ is the strong integration of an ordinary simple unitary $V$-module. No finite-index or finite-energy-multiplicity assumption on $pi$ is required.]
+  #emph[Let $V eq.not bb(C) Omega$ be a simple unitary strongly rational VOA which is energy-bounded and strongly
+    local. Every nonzero irreducible locally normal representation $\( cal(K) \, pi \)$ of $A_V$ is the strong
+    integration of an ordinary simple unitary $V$-module. No finite-index or finite-energy-multiplicity assumption
+    on $pi$ is required.]
 ] <prop:exhaustion>
 
 #proof[
-  Write $A = A_V$. Reconstruction will give a weak module on the finite-energy vectors. We first establish the separability and discrete rotation spectrum needed for that construction; regularity will then produce a simple module whose Hilbert closure is the whole sector. The vacuum Hilbert space is separable, since it is the completion of the countable sum of the finite-dimensional spaces $V_n$. The Hilbert space $cal(K)$ is also separable. To see this, choose a countable basis of intervals and, in the unit ball of each corresponding vacuum algebra, a countable $sigma$-strong-\* dense subset. Such subsets exist because these von Neumann algebras have separable preduals. Normality and additivity imply that the images of these countably many subsets generate all the represented local algebras. The norm-closed unital \*-algebra they generate is separable and acts irreducibly. Every nonzero vector is therefore cyclic for this algebra, which proves the claim.
-  The canonical inner Möbius implementation in a locally normal representation has positive energy [33] Theorem 3.8; its Virasoro action and the associated annulus action are the ones used in [20] Sections 2, 4 and 9. Let $H gt.eq 0$ be the self-adjoint generator of the lifted rotation group. Covariance implies that $e^(2 pi i H)$ commutes with every represented local algebra. Irreducibility makes it scalar. Thus, for some $h in \[ 0 \, 1 \)$, the spectral theorem gives
+  Write $A = A_V$. Reconstruction will give a weak module on the finite-energy vectors.
+    We first establish the separability and discrete rotation spectrum needed for that construction;
+    regularity will then produce a simple module whose Hilbert closure is the whole sector.
+    The vacuum Hilbert space is separable, since it is the completion of the countable sum of the
+    finite-dimensional spaces $V_n$. The Hilbert space $cal(K)$ is also separable.
+    To see this, choose a countable basis of intervals and, in the unit ball of each corresponding vacuum algebra,
+    a countable $sigma$-strong-\* dense subset. Such subsets exist because these von Neumann algebras have
+    separable preduals. Normality and additivity imply that the images of these countably many subsets generate
+    all the represented local algebras. The norm-closed unital \*-algebra they generate is separable and acts
+    irreducibly. Every nonzero vector is therefore cyclic for this algebra, which proves the claim.
+  The canonical inner Möbius implementation in a locally normal representation has positive energy [33]
+    Theorem 3.8; its Virasoro action and the associated annulus action are the ones used in [20] Sections 2,
+    4 and 9. Let $H gt.eq 0$ be the self-adjoint generator of the lifted rotation group.
+    Covariance implies that $e^(2 pi i H)$ commutes with every represented local algebra.
+    Irreducibility makes it scalar. Thus, for some $h in \[ 0 \, 1 \)$, the spectral theorem gives
   $ "spec" H subset \( h + bb(Z) \) ∩ \[ 0 \, oo \) . $
-  In particular, $H$ has pure point spectrum. Its eigenspaces $cal(K)_lambda = ker \( H - lambda \)$ need not yet be finite dimensional. Set
+  In particular, $H$ has pure point spectrum. Its eigenspaces $cal(K)_lambda =
+    ker \( H - lambda \)$ need not yet be finite dimensional. Set
   $ M = xor.big_(lambda in "spec" H)^(upright("alg")) cal(K)_lambda . $
   This is a dense subspace of $cal(K)$.
-  The VOA reconstructed from $A_V$ is $V$, with its given conformal vector and inner product [20] Theorem 8.9(ii). Here strong locality supplies AQFT-locality in the terminology of that theorem, and the required finite-dimensional vacuum energy spaces are precisely the spaces $V_n$. We now apply Proposition 9.3, Definition 9.4, Theorem 9.5 and Corollary 9.6 of [20], together with Remark 9.8 of that paper. The remark extends all these conclusions to discrete rotation spectra with possibly infinite-dimensional eigenspaces. They provide a weak unitary $V$-module structure $Y^M$ on $M$ such that
+  The VOA reconstructed from $A_V$ is $V$, with its given conformal vector and inner product [20] Theorem 8.9(ii).
+    Here strong locality supplies AQFT-locality in the terminology of that theorem,
+    and the required finite-dimensional vacuum energy spaces are precisely the spaces $V_n$.
+    We now apply Proposition 9.3, Definition 9.4, Theorem 9.5 and Corollary 9.6 of [20],
+    together with Remark 9.8 of that paper. The remark extends all these conclusions to discrete rotation spectra
+    with possibly infinite-dimensional eigenspaces. They provide a weak unitary $V$-module structure $Y^M$ on $M$
+    such that
   + the conformal operator $L_0^M$ equals $H \|_M$;
   + for every homogeneous $a in V$, smooth test function $f$, and interval $I$ containing its support,
     #[#set math.equation(numbering: n => "(9.1)")
      $ pi_I #h(-0.16667em) (overline(Y \( a \, f \))) = overline(Y^M \( a \, f \) \|_M) . $ <eq:sector-closed-fields>]
-  On the left, a normal representation acts on an affiliated closed operator through its spectral and polar data. In particular, (9.1) asserts equality of closed operators, and $M$ is a core for the operator on either side. It does not assert only equality of formal matrix coefficients. This is the part of the reconstruction theorem needed below.
-  Strong rationality implies regularity: every weak $V$-module is an algebraic direct sum of ordinary simple modules [1] Theorem 4.5. Choose a nonzero ordinary simple submodule $S subset M$. Its inherited Hermitian form is positive and invariant. Because the two conformal operators agree, the homogeneous spaces
+  On the left, a normal representation acts on an affiliated closed operator through its spectral and polar data.
+    In particular, (9.1) asserts equality of closed operators, and $M$ is a core for the operator on either side.
+    It does not assert only equality of formal matrix coefficients.
+    This is the part of the reconstruction theorem needed below.
+  Strong rationality implies regularity: every weak $V$-module is an algebraic direct sum of ordinary simple
+    modules [1] Theorem 4.5. Choose a nonzero ordinary simple submodule $S subset M$.
+    Its inherited Hermitian form is positive and invariant. Because the two conformal operators agree,
+    the homogeneous spaces
   $ S_lambda = S ∩ cal(K)_lambda $
-  are finite dimensional. Let $Q$ be the orthogonal projection of $cal(K)$ onto the Hilbert closure of $S$. Orthogonality of the energy spaces gives
-  $ overline(S) = hat(xor.big)_lambda S_lambda \, #h(2em) Q \( M \) subset S subset M . $
-  We will show that $Q$ commutes with the represented net. The domain argument is necessary here: algebraic invariance of $S$ alone would not give reduction of the closed smeared fields.
-  Both each mode and its algebraic adjoint preserve $S$. Indeed, the unitary adjoint formula expresses the latter as a finite linear combination of modes of PCT-transformed states and their $L_1$-descendants. Consequently $S^perp ∩ M$ is invariant under every mode, and
-  $ Q a_(\( n \))^M x = a_(\( n \))^M Q x #h(2em) \( a in V \, med n in bb(Z) \, med x in M \) . $
-  The projection $Q$ also commutes with every energy projection. For $x in M$, the component of $Y^M \( a \, f \) x$ at a fixed energy is a finite sum of mode terms, since $x$ has only finitely many energy components. Comparing these components proves
-  $ Q Y^M \( a \, f \) x = Y^M \( a \, f \) Q x #h(2em) \( x in M \) . $
-  Both sides are Hilbert-space vectors by the reconstruction theorem, so componentwise equality suffices. The argument extends by finite sums to inhomogeneous $a$.
-  Put $T = overline(Y^M \( a \, f \) \|_M)$. If $x in "Dom" T$, choose $x_j in M$ with $x_j arrow.r x$ and $T x_j arrow.r T x$. Then
-  $ Q x_j arrow.r Q x \, #h(2em) T Q x_j = Q T x_j arrow.r Q T x . $
-  Closedness implies $Q x in "Dom" T$ and $T Q x = Q T x$. The same holds with $1 - Q$ in place of $Q$. Hence the orthogonal decomposition defined by $Q$ reduces $T$, and $Q$ commutes with its bounded polar data. By (9.1), these are the data of the represented vacuum smear. Such data generate $pi_I \( A \( I \) \)$, because vacuum smears generate $A \( I \)$ and $pi_I$ is normal. Thus $Q$ commutes with every represented local algebra.
-  Irreducibility and $S eq.not 0$ now force $Q = 1$. Each $S_lambda$ is closed in $cal(K)_lambda$, so this identity implies $S_lambda = cal(K)_lambda$ for every $lambda$. Therefore $M = S$. In particular the energy multiplicities are finite and $M$ is an ordinary simple unitary module. Finally, (9.1) identifies its strongly integrated representation with $pi$. The identification uses the actual closed smeared fields, as required by the CWX construction. ◻
+  are finite dimensional. Let $Q$ be the orthogonal projection of $cal(K)$ onto the Hilbert closure of $S$.
+    Orthogonality of the energy spaces gives
+  $ overline(S) = hat(xor.big)_lambda S_lambda \, wide Q \( M \) subset S subset M . $
+  We will show that $Q$ commutes with the represented net. The domain argument is necessary here:
+    algebraic invariance of $S$ alone would not give reduction of the closed smeared fields.
+  Both each mode and its algebraic adjoint preserve $S$. Indeed,
+    the unitary adjoint formula expresses the latter as a finite linear combination of modes of PCT-transformed
+    states and their $L_1$-descendants. Consequently $S^perp ∩ M$ is invariant under every mode, and
+  $ Q a_(\( n \))^M x = a_(\( n \))^M Q x wide \( a in V \, med n in bb(Z) \, med x in M \) . $
+  The projection $Q$ also commutes with every energy projection.
+    For $x in M$, the component of $Y^M \( a \, f \) x$ at a fixed energy is a finite sum of mode terms,
+    since $x$ has only finitely many energy components. Comparing these components proves
+  $ Q Y^M \( a \, f \) x = Y^M \( a \, f \) Q x wide \( x in M \) . $
+  Both sides are Hilbert-space vectors by the reconstruction theorem, so componentwise equality suffices.
+    The argument extends by finite sums to inhomogeneous $a$.
+  Put $T = overline(Y^M \( a \, f \) \|_M)$. If $x in "Dom" T$, choose $x_j in M$ with $x_j arrow.r
+    x$ and $T x_j arrow.r T x$. Then
+  $ Q x_j arrow.r Q x \, wide T Q x_j = Q T x_j arrow.r Q T x . $
+  Closedness implies $Q x in "Dom" T$ and $T Q x = Q T x$. The same holds with $1 - Q$ in place of $Q$.
+    Hence the orthogonal decomposition defined by $Q$ reduces $T$, and $Q$ commutes with its bounded polar data.
+    By (9.1), these are the data of the represented vacuum smear.
+    Such data generate $pi_I \( A \( I \) \)$, because vacuum smears generate $A \( I \)$ and $pi_I$ is normal.
+    Thus $Q$ commutes with every represented local algebra.
+  Irreducibility and $S eq.not 0$ now force $Q = 1$. Each $S_lambda$ is closed in $cal(K)_lambda$,
+    so this identity implies $S_lambda = cal(K)_lambda$ for every $lambda$. Therefore $M = S$.
+    In particular the energy multiplicities are finite and $M$ is an ordinary simple unitary module.
+    Finally, (9.1) identifies its strongly integrated representation with $pi$.
+    The identification uses the actual closed smeared fields, as required by the CWX construction. ◻
 ]
 
 #thm([Theorem 9.2.])[
-  #emph[Let $V$ be a simple unitary strongly rational VOA. Its conformal net $A_V$ is completely rational. The CWX functor constructed in Theorem 19 is essentially surjective onto the additive category of finite-index locally normal DHR representations of $A_V$. Consequently it is a braided unitary tensor equivalence 
+  #emph[Let $V$ be a simple unitary strongly rational VOA. Its conformal net $A_V$ is completely rational.
+    The CWX functor constructed in Theorem 19 is essentially surjective onto the additive category of finite-index
+    locally normal DHR representations of $A_V$. Consequently it is a braided unitary tensor equivalence
 $ F_(upright("CWX"))^V : "Rep"^u \( V \) arrow.r^(med tilde.eq med) "Rep"^f \( A_V \) . $
 
 ]
 ] <thm:rationality>
 
 #proof[
-  For the nontrivial VOA, Corollary 5 supplies the net and the hypotheses of Proposition 20. That proposition shows that every irreducible locally normal sector belongs to the CWX image. There are only finitely many such sectors, since $V$ has only finitely many simple modules. They have finite statistical dimension: Theorem 19 sends their rigid module duals and duality maps to net duals and duality maps. No finite-index assumption was used in Proposition 20 to obtain this conclusion.
-  The irreducible diffeomorphism-covariant circle net $A_V$ has the split property by [29] Theorem 5.4. The dichotomy [26] Theorem 4.9 applies to a split conformal net all of whose irreducible sectors have finite statistical dimension. It says that such a net is completely rational or has uncountably many inequivalent irreducible sectors. The finite list above excludes the second alternative. Thus $A_V$ is strongly additive and has finite $mu$-index, as well as being irreducible and split.
-  For a locally normal representation on a separable Hilbert space, complete rationality gives a direct sum of irreducible sectors of finite statistical dimension [25] Corollary 39 and the proof of Corollary 40; Appendix B. The modular-PCT hypothesis is automatic for conformal nets, as explained in Section 3, before Corollary 10, of [25].
-  The same conclusion holds without separability. Indeed, apply the countable-generator construction from Proposition 20 to the present representation $pi$. The resulting separable unital C\*-algebra $D$ satisfies
+  For the nontrivial VOA, Corollary 5 supplies the net and the hypotheses of Proposition 20.
+    That proposition shows that every irreducible locally normal sector belongs to the CWX image.
+    There are only finitely many such sectors, since $V$ has only finitely many simple modules.
+    They have finite statistical dimension: Theorem 19 sends their rigid module duals and duality maps to net
+    duals and duality maps. No finite-index assumption was used in Proposition 20 to obtain this conclusion.
+  The irreducible diffeomorphism-covariant circle net $A_V$ has the split property by [29] Theorem 5.4.
+    The dichotomy [26] Theorem 4.9 applies to a split conformal net all of whose irreducible sectors have finite
+    statistical dimension. It says that such a net is completely rational or has uncountably many inequivalent
+    irreducible sectors. The finite list above excludes the second alternative.
+    Thus $A_V$ is strongly additive and has finite $mu$-index, as well as being irreducible and split.
+  For a locally normal representation on a separable Hilbert space,
+    complete rationality gives a direct sum of irreducible sectors of finite statistical dimension [25]
+    Corollary 39 and the proof of Corollary 40; Appendix B. The modular-PCT hypothesis is automatic for conformal
+    nets, as explained in Section 3, before Corollary 10, of [25].
+  The same conclusion holds without separability. Indeed, apply the countable-generator construction from
+    Proposition 20 to the present representation $pi$. The resulting separable unital C\*-algebra $D$ satisfies
   $ D'' = or.big_I pi_I \( A_V \( I \) \) . $
-  For any vector $xi$, the separable cyclic space $overline(D xi)$ reduces $D$, hence also $D''$ and every represented interval algebra. A maximal orthogonal family of these cyclic reducing spaces exhausts the representation Hilbert space: any nonzero orthogonal complement would supply another such space. Compression to a reducing space preserves local normality. Apply the separable decomposition [25] Corollary 39 and the proof of Corollary 40; Appendix B to each restriction and combine the resulting orthogonal sums.
-  In a dualizable representation only finitely many irreducible summands can occur. Any finite sub-sum of $n$ nonzero summands has statistical dimension at least $n$ and at most the dimension of the representation. This excludes infinite multiplicity even if the full decomposition has an uncountable index set. The CWX functor preserves finite direct sums, and Proposition 20 supplies every irreducible summand. It is therefore essentially surjective onto $"Rep"^f \( A_V \)$. Full faithfulness, the unitary tensor structure and compatibility with the DHR braiding were established in Theorem 19, so the functor is the asserted equivalence.
-  For $V = bb(C) Omega$, the scalar net has $mu$-index one and its additive dualizable representation category is the category of finite-dimensional Hilbert multiplicity spaces. The same is true of finite-length unitary $V$-modules, with their ordinary tensor product and flip braiding. This gives the stated conclusion in the remaining case as well. ◻
+  For any vector $xi$, the separable cyclic space $overline(D xi)$ reduces $D$,
+    hence also $D''$ and every represented interval algebra. A maximal orthogonal family of these cyclic reducing
+    spaces exhausts the representation Hilbert space: any nonzero orthogonal complement would supply another such
+    space. Compression to a reducing space preserves local normality.
+    Apply the separable decomposition [25] Corollary 39 and the proof of Corollary 40;
+    Appendix B to each restriction and combine the resulting orthogonal sums.
+  In a dualizable representation only finitely many irreducible summands can occur.
+    Any finite sub-sum of $n$ nonzero summands has statistical dimension at least $n$ and at most the dimension of
+    the representation. This excludes infinite multiplicity even if the full decomposition has an uncountable
+    index set. The CWX functor preserves finite direct sums, and Proposition 20 supplies every irreducible
+    summand. It is therefore essentially surjective onto $"Rep"^f \( A_V \)$.
+    Full faithfulness, the unitary tensor structure and compatibility with the DHR braiding were established in
+    Theorem 19, so the functor is the asserted equivalence.
+  For $V = bb(C) Omega$, the scalar net has $mu$-index one and its additive dualizable representation category is
+    the category of finite-dimensional Hilbert multiplicity spaces.
+    The same is true of finite-length unitary $V$-modules, with their ordinary tensor product and flip braiding.
+    This gives the stated conclusion in the remaining case as well. ◻
 ]
 
-Together with the energy bounds and strong locality of Theorem 2 and Corollary 5, the unitarization and positive fusion forms of Theorems 17 and 14, and the all-module integration of Theorem 13, this proves all five assertions of Theorem 1. Complete unitarity identifies $"Rep" \( V \)$ with $"Rep"^u \( V \)$; the equivalence just obtained is the specified CWX functor on this category, including finite direct sums.
+Together with the energy bounds and strong locality of Theorem 2 and Corollary 5,
+  the unitarization and positive fusion forms of Theorems 17 and 14, and the all-module integration of Theorem 13,
+  this proves all five assertions of Theorem 1. Complete unitarity identifies $"Rep" \( V \)$ with
+  $"Rep"^u \( V \)$; the equivalence just obtained is the specified CWX functor on this category,
+  including finite direct sums.
 
-The equivalence also gives a formula for the two-interval index. Let $M_1 \, dots.h \, M_s$ represent the simple $V$-modules, with positive forms, and write $d \( M_i \)$ for their positive intrinsic categorical dimensions in $"Rep"^u \( V \)$. A unitary tensor equivalence preserves these dimensions, so they equal the statistical dimensions of the corresponding net sectors. The two-interval index formula [25] Theorem 33 therefore gives
+The equivalence also gives a formula for the two-interval index.
+  Let $M_1 \, dots.h \, M_s$ represent the simple $V$-modules, with positive forms,
+  and write $d \( M_i \)$ for their positive intrinsic categorical dimensions in $"Rep"^u \( V \)$.
+  A unitary tensor equivalence preserves these dimensions, so they equal the statistical dimensions of the
+  corresponding net sectors. The two-interval index formula [25] Theorem 33 therefore gives
 
 $ mu \( A_V \) = sum_(i = 1)^s d \( M_i \)^2 . $
 
@@ -1246,60 +2299,175 @@ Thus the index of the net is the global dimension of the VOA’s unitary fusion 
 
 === 9.1 Finite-index local extensions <sec:extensions>
 
-Gui’s comparison theorems now give an extension-level application of the base equivalence. We use the separable-representation and normalized extension conventions of [14] Definitions 3.9 and 5.1: the VOA embedding is isometric and preserves the vacuum and conformal vector, while the net extension includes the specified isometric vacuum embedding and compatibility of the projective diffeomorphism actions.
+Gui’s comparison theorems now give an extension-level application of the base equivalence.
+  We use the separable-representation and normalized extension conventions of [14] Definitions 3.9 and 5.1:
+  the VOA embedding is isometric and preserves the vacuum and conformal vector,
+  while the net extension includes the specified isometric vacuum embedding and compatibility of the projective
+  diffeomorphism actions.
 
 #thm([Corollary 9.3.])[
-  (Finite-index extension correspondence).  #emph[Let $V$ be a simple unitary strongly rational VOA. Up to isomorphism over the embedded base, $U mapsto A_U$ gives a one-to-one correspondence between the following classes:]
-  + #emph[normalized CFT-type unitary VOA extensions $V arrow.r.hook U$ whose underlying $V$-module is grading-restricted and of finite length;]
+  (Finite-index extension correspondence).  #emph[Let $V$ be a simple unitary strongly rational VOA.
+    Up to isomorphism over the embedded base, $U mapsto A_U$ gives a one-to-one correspondence between the
+    following classes:]
+  + #emph[normalized CFT-type unitary VOA extensions $V arrow.r.hook
+    U$ whose underlying $V$-module is grading-restricted and of finite length;]
   + #emph[normalized irreducible local conformal-net extensions of $A_V$ of finite index.]
-  #emph[The VOA class may equivalently be described by simple CFT-type algebraic extensions with the same conformal vector and finite-length underlying $V$-module, equipped with their unique unitary structure extending that of $V$.]
-  #emph[Let $P$ be the normalized haploid commutative $C^(*)$-Frobenius algebra of $U$ in $"Rep"^u \( V \)$, and let $Theta$ be its transport to $"Rep"^f \( A_V \)$ under the base equivalence. The Q-system extension $B_Theta$ equals $A_U$ as a conformal net on $cal(H)_U$. Moreover, $A_U$ is completely rational and 
+  #emph[The VOA class may equivalently be described by simple CFT-type algebraic extensions with the same
+    conformal vector and finite-length underlying $V$-module,
+    equipped with their unique unitary structure extending that of $V$.]
+  #emph[Let $P$ be the normalized haploid commutative $C^(*)$-Frobenius algebra of $U$ in $"Rep"^u \( V \)$,
+    and let $Theta$ be its transport to $"Rep"^f \( A_V \)$ under the base equivalence.
+    The Q-system extension $B_Theta$ equals $A_U$ as a conformal net on $cal(H)_U$.
+    Moreover, $A_U$ is completely rational and
 $ F_(upright("CWX"))^U compose F_(upright("VOA")) = F_(upright("CN")) compose tilde(F)_(upright("CWX"))^V $
 
- as braided unitary tensor functors with Gui’s tensorators. Here $tilde(F)_(upright("CWX"))^V$ transports unitary local (dyslectic) $P$-modules to local $Theta$-modules, and $F_(upright("VOA"))$ and $F_(upright("CN"))$ are the canonical equivalences from these categories to $"Rep"^u \( U \)$ and $"Rep"^f \( A_U \)$, respectively. In particular, $F_(upright("CWX"))^U$ is a braided unitary tensor equivalence onto all finite-index sectors of $A_U$.]
+ as braided unitary tensor functors with Gui’s tensorators.
+   Here $tilde(F)_(upright("CWX"))^V$ transports unitary local (dyslectic) $P$-modules to local $Theta$-modules,
+   and $F_(upright("VOA"))$ and $F_(upright("CN"))$ are the canonical equivalences from these categories to
+   $"Rep"^u \( U \)$ and $"Rep"^f \( A_U \)$, respectively. In particular,
+   $F_(upright("CWX"))^U$ is a braided unitary tensor equivalence onto all finite-index sectors of $A_U$.]
 ] <cor:finite-index-extensions>
 
 #proof[
-  If $V = bb(C) Omega$, the common zero conformal vector and CFT type force $U = bb(C) Omega$. A finite-index extension of the scalar net has finite-dimensional interval algebras. Since the interval factors of a nontrivial irreducible conformal net are type III [5] Section 3.3, property (7), this extension is also scalar. The functors and tensorators then reduce to those of finite-dimensional Hilbert spaces. We may therefore assume $V eq.not bb(C) Omega$.
-  Theorems 14 and 17 together give complete unitarity, and Corollary 16 gives energy bounds and strong intertwining for every irreducible unitary intertwining operator. These are Gui’s Condition I [14] Definition 4.15. Theorem 21 adds complete rationality and essential surjectivity of the CWX functor, so $V$ satisfies Condition I+ of [14] Definition 6.17. We use Gui’s Wassermann tensorator on the CWX functor; its underlying functor is the one identified in Section 8.
-  Gui’s Theorems 3.13 and 5.3 classify the stated normalized net and unitary VOA extensions by normalized haploid commutative $C^(*)$-Frobenius algebras [14]. A finite-index net extension has a dualizable Q-system object, hence one in $"Rep"^f \( A_V \)$; every such object is a finite sum of VOA completions by Theorem 21, so is separable as required by Gui’s convention. The braided unitary base equivalence therefore transports all these algebra objects and their isomorphisms. For the algebraic VOA formulation, regularity from Section 2 and complete unitarity allow [4] Theorem 4.7, which gives the asserted unique unitary structure for simple CFT-type extensions.
-  Finally, Gui’s Corollary 6.5 and Theorem 6.18(2) pass Condition I+ to $U$. His Theorem 6.11 and Corollary 6.16 then give $A_U = B_Theta$ and the displayed equality of braided unitary tensor functors, with the full finite-index sector category as target [14]. ◻
+  If $V = bb(C) Omega$, the common zero conformal vector and CFT type force $U = bb(C) Omega$.
+    A finite-index extension of the scalar net has finite-dimensional interval algebras.
+    Since the interval factors of a nontrivial irreducible conformal net are type III [5] Section 3.3,
+    property (7), this extension is also scalar. The functors and tensorators then reduce to those of
+    finite-dimensional Hilbert spaces. We may therefore assume $V eq.not bb(C) Omega$.
+  Theorems 14 and 17 together give complete unitarity, and Corollary 16 gives energy bounds and strong
+    intertwining for every irreducible unitary intertwining operator.
+    These are Gui’s Condition I [14] Definition 4.15. Theorem 21 adds complete rationality and essential
+    surjectivity of the CWX functor, so $V$ satisfies Condition I+ of [14] Definition 6.17.
+    We use Gui’s Wassermann tensorator on the CWX functor; its underlying functor is the one identified in Section 8.
+  Gui’s Theorems 3.13 and 5.3 classify the stated normalized net and unitary VOA extensions by normalized haploid
+    commutative $C^(*)$-Frobenius algebras [14]. A finite-index net extension has a dualizable Q-system object,
+    hence one in $"Rep"^f \( A_V \)$; every such object is a finite sum of VOA completions by Theorem 21,
+    so is separable as required by Gui’s convention. The braided unitary base equivalence therefore transports all
+    these algebra objects and their isomorphisms. For the algebraic VOA formulation,
+    regularity from Section 2 and complete unitarity allow [4] Theorem 4.7,
+    which gives the asserted unique unitary structure for simple CFT-type extensions.
+  Finally, Gui’s Corollary 6.5 and Theorem 6.18(2) pass Condition I+ to $U$.
+    His Theorem 6.11 and Corollary 6.16 then give $A_U = B_Theta$ and the displayed equality of braided unitary
+    tensor functors, with the full finite-index sector category as target [14]. ◻
 ]
 
 #heading(level: 1)[References]
-#bibitem([1])[T.~Abe, G.~Buhl and C.~Dong, #emph[Rationality, regularity, and $C_2$-cofiniteness], Trans. Amer. Math. Soc. #strong[356] (2004), 3391--3402. #link("https://doi.org/10.1090/S0002-9947-03-03413-5")[doi:10.1090/S0002-9947-03-03413-5]\; #link("https://arxiv.org/abs/math/0204021v1")[arXiv:math/0204021v1], 1 April 2002.]
-#bibitem([2])[K.~Barron, C.~Dong and G.~Mason, #emph[Twisted sectors for tensor product vertex operator algebras associated to permutation groups], Comm. Math. Phys. #strong[227] (2002), 349--384. #link("https://doi.org/10.1007/s002200200633")[doi:10.1007/s002200200633]\; #link("https://arxiv.org/abs/math/9803118v2")[arXiv:math/9803118v2], 16 December 1999.]
-#bibitem([3])[S.~Carnahan and M.~Miyamoto, #emph[Regularity of fixed-point vertex operator subalgebras], #link("https://arxiv.org/abs/1603.05645v4")[arXiv:1603.05645v4], 13 February 2018.]
-#bibitem([4])[S.~Carpi, T.~Gaudio, L.~Giorgetti and R.~Hillier, #emph[Haploid algebras in $C^(*)$-tensor categories and the Schellekens list], Comm. Math. Phys. #strong[402] (2023), 169--212. #link("https://doi.org/10.1007/s00220-023-04722-9")[doi:10.1007/s00220-023-04722-9].]
-#bibitem([5])[S.~Carpi, Y.~Kawahigashi, R.~Longo and M.~Weiner, #emph[From vertex operator algebras to conformal nets and back], Mem. Amer. Math. Soc. #strong[254] (2018), no.~1213, vi+85 pp. #link("https://doi.org/10.1090/memo/1213")[doi:10.1090/memo/1213]\; #link("https://arxiv.org/abs/1503.01260v4")[arXiv:1503.01260v4], 8 October 2018.]
-#bibitem([6])[S.~Carpi, Y.~Tanimoto and M.~Weiner, #emph[Correction to: Local Energy Bounds and Strong Locality in Chiral CFT], Comm. Math. Phys. #strong[402] (2023), 2129--2130. #link("https://doi.org/10.1007/s00220-023-04791-w")[doi:10.1007/s00220-023-04791-w].]
-#bibitem([7])[S.~Carpi, Y.~Tanimoto and M.~Weiner, #emph[Local energy bounds and strong locality in chiral CFT], Comm. Math. Phys. #strong[390] (2022), 169--192. #link("https://doi.org/10.1007/s00220-021-04291-9")[doi:10.1007/s00220-021-04291-9]. The corrected version used here is #link("https://arxiv.org/abs/2103.16475v5")[arXiv:2103.16475v5], 28 April 2023.]
-#bibitem([8])[S.~Carpi and L.~Tomassini, #emph[Energy bounds for vertex operator algebra extensions], Lett. Math. Phys. #strong[113] (2023), article~59. #link("https://doi.org/10.1007/s11005-023-01682-y")[doi:10.1007/s11005-023-01682-y]\; #link("https://arxiv.org/abs/2303.14097v2")[arXiv:2303.14097v2], 28 May 2023.]
-#bibitem([9])[T.~Creutzig, S.~Kanade and R.~McRae, #emph[Tensor categories for vertex operator superalgebra extensions], Mem. Amer. Math. Soc. #strong[295] (2024), no.~1472. #link("https://doi.org/10.1090/memo/1472")[doi:10.1090/memo/1472]\; #link("https://arxiv.org/abs/1705.05017v2")[arXiv:1705.05017v2], 19 April 2021.]
-#bibitem([10])[C.~Dong, H.~Li and G.~Mason, #emph[Modular-Invariance of Trace Functions in Orbifold Theory and Generalized Moonshine], Comm. Math. Phys. #strong[214] (2000), no.~1, 1--56. #link("https://doi.org/10.1007/s002200000242")[doi:10.1007/s002200000242]\; #link("https://arxiv.org/abs/q-alg/9703016v2")[arXiv:q-alg/9703016v2], 5 May 1997.]
-#bibitem([11])[C.~Dong, H.~Li, F.~Xu and N.~Yu, #emph[Fusion products of twisted modules in permutation orbifolds], Trans. Amer. Math. Soc. #strong[377] (2024), no.~3, 1717--1760. #link("https://doi.org/10.1090/tran/8959")[doi:10.1090/tran/8959]. The version used here is #link("https://arxiv.org/abs/1907.00094v2")[arXiv:1907.00094v2], 5 August 2021.]
-#bibitem([12])[C.~Dong and X.~Lin, #emph[Unitary vertex operator algebras], J. Algebra #strong[397] (2014), 252--277. #link("https://doi.org/10.1016/j.jalgebra.2013.09.007")[doi:10.1016/j.jalgebra.2013.09.007]\; #link("https://arxiv.org/abs/1308.2361v1")[arXiv:1308.2361v1], 11 August 2013.]
-#bibitem([13])[I.~B.~Frenkel, Y.-Z.~Huang and J.~Lepowsky, #emph[On axiomatic approaches to vertex operator algebras and modules], Mem. Amer. Math. Soc. #strong[104] (1993), no.~494, viii+64 pp. #link("https://doi.org/10.1090/memo/0494")[doi:10.1090/memo/0494].]
-#bibitem([14])[B.~Gui, #emph[Comparison of Extensions of Unitary Vertex Operator Algebras and Conformal Nets], #link("https://arxiv.org/abs/2505.03235v3")[arXiv:2505.03235v3], 18 February 2026.]
-#bibitem([15])[B.~Gui, #emph[Errata to "Unbounded field operators in categorical extensions of conformal nets"], 26 July 2026, 2~pp. #link("https://binguimath.github.io/Files/Errata/2020_Strong-Braiding_Errata.pdf")[Author's errata].]
-#bibitem([16])[B.~Gui, #emph[Geometric Positivity of the Fusion Products of Unitary Vertex Operator Algebra Modules], Comm. Math. Phys. #strong[405] (2024), article~72. #link("https://doi.org/10.1007/s00220-024-04959-y")[doi:10.1007/s00220-024-04959-y]\; #link("https://arxiv.org/abs/2306.11856v2")[arXiv:2306.11856v2], 5 March 2024.]
-#bibitem([17])[B.~Gui, #emph[Unbounded field operators in categorical extensions of conformal nets], Invent. Math. #strong[244] (2026), 899--965. #link("https://doi.org/10.1007/s00222-026-01407-7")[doi:10.1007/s00222-026-01407-7]\; #link("https://arxiv.org/abs/2001.03095v5")[arXiv:2001.03095v5], 22 January 2026.]
-#bibitem([18])[B.~Gui, #emph[Unitarity of the modular tensor categories associated to unitary vertex operator algebras, II], Comm. Math. Phys. #strong[372] (2019), 893--950. #link("https://doi.org/10.1007/s00220-019-03534-0")[doi:10.1007/s00220-019-03534-0]\; #link("https://arxiv.org/abs/1712.04931v6")[arXiv:1712.04931v6], 1 November 2019.]
-#bibitem([19])[A.~G.~Henriques and J.~E.~Tener, #emph[A genus zero functorial CFT associated to the vacuum sector of a conformal net], #link("https://arxiv.org/abs/2608.24437v1")[arXiv:2608.24437v1], 25 August 2026.]
-#bibitem([20])[A.~G.~Henriques and J.~E.~Tener, #emph[Every conformal net has an associated unitary VOA], #link("https://arxiv.org/abs/2507.20735v3")[arXiv:2507.20735v3], 10 October 2025.]
-#bibitem([21])[A.~G.~Henriques and J.~E.~Tener, #emph[Integrating positive energy representations of the Virasoro algebra], #link("https://arxiv.org/abs/2506.08684v1")[arXiv:2506.08684v1], 10 June 2025.]
-#bibitem([22])[Y.-Z.~Huang, #emph[Differential equations and intertwining operators], Comm. Contemp. Math. #strong[7] (2005), 375--400. #link("https://doi.org/10.1142/S0219199705001799")[doi:10.1142/S0219199705001799]\; #link("https://arxiv.org/abs/math/0206206v3")[arXiv:math/0206206v3], 15 June 2005.]
-#bibitem([23])[Y.-Z.~Huang, #emph[Rigidity and modularity of vertex tensor categories], Comm. Contemp. Math. #strong[10] (2008), suppl.~1, 871--911. #link("https://doi.org/10.1142/S0219199708003083")[doi:10.1142/S0219199708003083]\; #link("https://arxiv.org/abs/math/0502533v2")[arXiv:math/0502533v2], 22 December 2007.]
-#bibitem([24])[Y.-Z.~Huang, J.~Lepowsky and L.~Zhang, #emph[Logarithmic tensor category theory, II: Logarithmic formal calculus and properties of logarithmic intertwining operators], #link("https://arxiv.org/abs/1012.4196v2")[arXiv:1012.4196v2], 11 May 2012.]
-#bibitem([25])[Y.~Kawahigashi, R.~Longo and M.~Müger, #emph[Multi-interval Subfactors and Modularity of Representations in Conformal Field Theory], Comm. Math. Phys. #strong[219] (2001), 631--669. #link("https://doi.org/10.1007/PL00005565")[doi:10.1007/PL00005565]\; #link("https://arxiv.org/abs/math/9903104v2")[arXiv:math/9903104v2], 15 January 2001.]
-#bibitem([26])[R.~Longo and F.~Xu, #emph[Topological Sectors and a Dichotomy in Conformal Field Theory], Comm. Math. Phys. #strong[251] (2004), 321--364. #link("https://doi.org/10.1007/s00220-004-1063-1")[doi:10.1007/s00220-004-1063-1]\; #link("https://arxiv.org/abs/math/0309366v3")[arXiv:math/0309366v3], 17 March 2004.]
-#bibitem([27])[R.~McRae, #emph[On the tensor structure of modules for compact orbifold vertex operator algebras], Math. Z. #strong[296] (2020), 409--452. #link("https://doi.org/10.1007/s00209-019-02445-z")[doi:10.1007/s00209-019-02445-z]\; #link("https://arxiv.org/abs/1810.00747v5")[arXiv:1810.00747v5], 23 February 2021.]
-#bibitem([28])[R.~McRae, #emph[Twisted modules and $G$-equivariantization in logarithmic conformal field theory], Comm. Math. Phys. #strong[383] (2021), no.~3, 1939--2019. #link("https://doi.org/10.1007/s00220-020-03882-2")[doi:10.1007/s00220-020-03882-2]\; #link("https://arxiv.org/abs/1910.13226v2")[arXiv:1910.13226v2], 19 February 2020.]
-#bibitem([29])[V.~Morinelli, Y.~Tanimoto and M.~Weiner, #emph[Conformal covariance and the split property], Comm. Math. Phys. #strong[357] (2018), 379--406. #link("https://doi.org/10.1007/s00220-017-2961-3")[doi:10.1007/s00220-017-2961-3]\; #link("https://arxiv.org/abs/1609.02196v2")[arXiv:1609.02196v2], 7 October 2018.]
-#bibitem([30])[J.~E.~Tener, #emph[Fusion and positivity in chiral conformal field theory], Geom. Funct. Anal. #strong[34] (2024), 1226--1296. #link("https://doi.org/10.1007/s00039-024-00685-8")[doi:10.1007/s00039-024-00685-8]\; #link("https://arxiv.org/abs/1910.08257v3")[arXiv:1910.08257v3], 13 September 2024.]
-#bibitem([31])[V.~Toledano Laredo, #emph[Integrating Unitary Representations of Infinite-Dimensional Lie Groups], J. Funct. Anal. #strong[161] (1999), 478--508. #link("https://doi.org/10.1006/jfan.1998.3359")[doi:10.1006/jfan.1998.3359]\; #link("https://arxiv.org/abs/math/0106195v1")[arXiv:math/0106195v1], 23 June 2001.]
-#bibitem([32])[A.~Wassermann, #emph[Operator algebras and conformal field theory III. Fusion of positive energy representations of $L S U \( N \)$ using bounded operators], Invent. Math. #strong[133] (1998), 467--538. #link("https://doi.org/10.1007/s002220050253")[doi:10.1007/s002220050253]\; #link("https://arxiv.org/abs/math/9806031v1")[arXiv:math/9806031v1], 7 June 1998.]
-#bibitem([33])[M.~Weiner, #emph[Conformal Covariance and Positivity of Energy in Charged Sectors], Comm. Math. Phys. #strong[265] (2006), 493--506. #link("https://doi.org/10.1007/s00220-006-1536-5")[doi:10.1007/s00220-006-1536-5]\; #link("https://arxiv.org/abs/math-ph/0507066v1")[arXiv:math-ph/0507066v1], 27 July 2005.]
-#bibitem([34])[Y.~Zhu, #emph[Modular invariance of characters of vertex operator algebras], J. Amer. Math. Soc. #strong[9] (1996), 237--302. #link("https://doi.org/10.1090/S0894-0347-96-00182-8")[doi:10.1090/S0894-0347-96-00182-8].]
-
-
+#bibitem([1])[T.~Abe, G.~Buhl and C.~Dong, #emph[Rationality, regularity, and $C_2$-cofiniteness], Trans. Amer.
+  Math. Soc. #strong[356] (2004), 3391--3402.
+  #link("https://doi.org/10.1090/S0002-9947-03-03413-5")[doi:10.1090/S0002-9947-03-03413-5]\;
+  #link("https://arxiv.org/abs/math/0204021v1")[arXiv:math/0204021v1], 1 April 2002.]
+#bibitem([2])[K.~Barron, C.~Dong and G.~Mason, #emph[Twisted sectors for tensor product vertex operator algebras
+  associated to permutation groups], Comm. Math. Phys. #strong[227] (2002), 349--384.
+  #link("https://doi.org/10.1007/s002200200633")[doi:10.1007/s002200200633]\;
+  #link("https://arxiv.org/abs/math/9803118v2")[arXiv:math/9803118v2], 16 December 1999.]
+#bibitem([3])[S.~Carnahan and M.~Miyamoto, #emph[Regularity of fixed-point vertex operator subalgebras],
+  #link("https://arxiv.org/abs/1603.05645v4")[arXiv:1603.05645v4], 13 February 2018.]
+#bibitem([4])[S.~Carpi, T.~Gaudio, L.~Giorgetti and R.~Hillier,
+  #emph[Haploid algebras in $C^(*)$-tensor categories and the Schellekens list], Comm. Math. Phys.
+  #strong[402] (2023), 169--212. #link("https://doi.org/10.1007/s00220-023-04722-9")[doi:10.1007/s00220-023-04722-9].]
+#bibitem([5])[S.~Carpi, Y.~Kawahigashi, R.~Longo and M.~Weiner,
+  #emph[From vertex operator algebras to conformal nets and back], Mem. Amer. Math. Soc.
+  #strong[254] (2018), no.~1213, vi+85 pp. #link("https://doi.org/10.1090/memo/1213")[doi:10.1090/memo/1213]\;
+  #link("https://arxiv.org/abs/1503.01260v4")[arXiv:1503.01260v4], 8 October 2018.]
+#bibitem([6])[S.~Carpi, Y.~Tanimoto and M.~Weiner, #emph[Correction to:
+  Local Energy Bounds and Strong Locality in Chiral CFT], Comm. Math. Phys. #strong[402] (2023), 2129--2130.
+  #link("https://doi.org/10.1007/s00220-023-04791-w")[doi:10.1007/s00220-023-04791-w].]
+#bibitem([7])[S.~Carpi, Y.~Tanimoto and M.~Weiner, #emph[Local energy bounds and strong locality in chiral CFT],
+  Comm. Math. Phys. #strong[390] (2022), 169--192.
+  #link("https://doi.org/10.1007/s00220-021-04291-9")[doi:10.1007/s00220-021-04291-9].
+  The corrected version used here is #link("https://arxiv.org/abs/2103.16475v5")[arXiv:2103.16475v5], 28 April 2023.]
+#bibitem([8])[S.~Carpi and L.~Tomassini, #emph[Energy bounds for vertex operator algebra extensions], Lett. Math.
+  Phys. #strong[113] (2023), article~59.
+  #link("https://doi.org/10.1007/s11005-023-01682-y")[doi:10.1007/s11005-023-01682-y]\;
+  #link("https://arxiv.org/abs/2303.14097v2")[arXiv:2303.14097v2], 28 May 2023.]
+#bibitem([9])[T.~Creutzig, S.~Kanade and R.~McRae, #emph[Tensor categories for vertex operator superalgebra
+  extensions], Mem. Amer. Math. Soc. #strong[295] (2024), no.~1472.
+  #link("https://doi.org/10.1090/memo/1472")[doi:10.1090/memo/1472]\;
+  #link("https://arxiv.org/abs/1705.05017v2")[arXiv:1705.05017v2], 19 April 2021.]
+#bibitem([10])[C.~Dong, H.~Li and G.~Mason, #emph[Modular-Invariance of Trace Functions in Orbifold Theory and
+  Generalized Moonshine], Comm. Math. Phys. #strong[214] (2000), no.~1, 1--56.
+  #link("https://doi.org/10.1007/s002200000242")[doi:10.1007/s002200000242]\;
+  #link("https://arxiv.org/abs/q-alg/9703016v2")[arXiv:q-alg/9703016v2], 5 May 1997.]
+#bibitem([11])[C.~Dong, H.~Li, F.~Xu and N.~Yu, #emph[Fusion products of twisted modules in permutation
+  orbifolds], Trans. Amer. Math. Soc. #strong[377] (2024), no.~3, 1717--1760.
+  #link("https://doi.org/10.1090/tran/8959")[doi:10.1090/tran/8959].
+  The version used here is #link("https://arxiv.org/abs/1907.00094v2")[arXiv:1907.00094v2], 5 August 2021.]
+#bibitem([12])[C.~Dong and X.~Lin, #emph[Unitary vertex operator algebras], J.
+  Algebra #strong[397] (2014), 252--277.
+  #link("https://doi.org/10.1016/j.jalgebra.2013.09.007")[doi:10.1016/j.jalgebra.2013.09.007]\;
+  #link("https://arxiv.org/abs/1308.2361v1")[arXiv:1308.2361v1], 11 August 2013.]
+#bibitem([13])[I.~B.~Frenkel, Y.-Z.~Huang and J.~Lepowsky,
+  #emph[On axiomatic approaches to vertex operator algebras and modules], Mem. Amer. Math. Soc.
+  #strong[104] (1993), no.~494, viii+64 pp. #link("https://doi.org/10.1090/memo/0494")[doi:10.1090/memo/0494].]
+#bibitem([14])[B.~Gui, #emph[Comparison of Extensions of Unitary Vertex Operator Algebras and Conformal Nets],
+  #link("https://arxiv.org/abs/2505.03235v3")[arXiv:2505.03235v3], 18 February 2026.]
+#bibitem([15])[B.~Gui, #emph[Errata to "Unbounded field operators in categorical extensions of conformal nets"],
+  26 July 2026, 2~pp. #link("https://binguimath.github.io/Files/Errata/2020_Strong-Braiding_Errata.pdf")[Author's
+  errata].]
+#bibitem([16])[B.~Gui, #emph[Geometric Positivity of the Fusion Products of Unitary Vertex Operator Algebra
+  Modules], Comm. Math. Phys. #strong[405] (2024), article~72.
+  #link("https://doi.org/10.1007/s00220-024-04959-y")[doi:10.1007/s00220-024-04959-y]\;
+  #link("https://arxiv.org/abs/2306.11856v2")[arXiv:2306.11856v2], 5 March 2024.]
+#bibitem([17])[B.~Gui, #emph[Unbounded field operators in categorical extensions of conformal nets], Invent. Math.
+  #strong[244] (2026), 899--965.
+  #link("https://doi.org/10.1007/s00222-026-01407-7")[doi:10.1007/s00222-026-01407-7]\;
+  #link("https://arxiv.org/abs/2001.03095v5")[arXiv:2001.03095v5], 22 January 2026.]
+#bibitem([18])[B.~Gui, #emph[Unitarity of the modular tensor categories associated to unitary vertex operator
+  algebras, II], Comm. Math. Phys. #strong[372] (2019), 893--950.
+  #link("https://doi.org/10.1007/s00220-019-03534-0")[doi:10.1007/s00220-019-03534-0]\;
+  #link("https://arxiv.org/abs/1712.04931v6")[arXiv:1712.04931v6], 1 November 2019.]
+#bibitem([19])[A.~G.~Henriques and J.~E.~Tener, #emph[A genus zero functorial CFT associated to the vacuum sector
+  of a conformal net], #link("https://arxiv.org/abs/2608.24437v1")[arXiv:2608.24437v1], 25 August 2026.]
+#bibitem([20])[A.~G.~Henriques and J.~E.~Tener, #emph[Every conformal net has an associated unitary VOA],
+  #link("https://arxiv.org/abs/2507.20735v3")[arXiv:2507.20735v3], 10 October 2025.]
+#bibitem([21])[A.~G.~Henriques and J.~E.~Tener, #emph[Integrating positive energy representations of the Virasoro
+  algebra], #link("https://arxiv.org/abs/2506.08684v1")[arXiv:2506.08684v1], 10 June 2025.]
+#bibitem([22])[Y.-Z.~Huang, #emph[Differential equations and intertwining operators], Comm. Contemp. Math.
+  #strong[7] (2005), 375--400. #link("https://doi.org/10.1142/S0219199705001799")[doi:10.1142/S0219199705001799]\;
+  #link("https://arxiv.org/abs/math/0206206v3")[arXiv:math/0206206v3], 15 June 2005.]
+#bibitem([23])[Y.-Z.~Huang, #emph[Rigidity and modularity of vertex tensor categories], Comm. Contemp. Math.
+  #strong[10] (2008), suppl.~1, 871--911.
+  #link("https://doi.org/10.1142/S0219199708003083")[doi:10.1142/S0219199708003083]\;
+  #link("https://arxiv.org/abs/math/0502533v2")[arXiv:math/0502533v2], 22 December 2007.]
+#bibitem([24])[Y.-Z.~Huang, J.~Lepowsky and L.~Zhang, #emph[Logarithmic tensor category theory, II:
+  Logarithmic formal calculus and properties of logarithmic intertwining operators],
+  #link("https://arxiv.org/abs/1012.4196v2")[arXiv:1012.4196v2], 11 May 2012.]
+#bibitem([25])[Y.~Kawahigashi, R.~Longo and M.~Müger, #emph[Multi-interval Subfactors and Modularity of
+  Representations in Conformal Field Theory], Comm. Math. Phys. #strong[219] (2001), 631--669.
+  #link("https://doi.org/10.1007/PL00005565")[doi:10.1007/PL00005565]\;
+  #link("https://arxiv.org/abs/math/9903104v2")[arXiv:math/9903104v2], 15 January 2001.]
+#bibitem([26])[R.~Longo and F.~Xu, #emph[Topological Sectors and a Dichotomy in Conformal Field Theory], Comm.
+  Math. Phys. #strong[251] (2004), 321--364.
+  #link("https://doi.org/10.1007/s00220-004-1063-1")[doi:10.1007/s00220-004-1063-1]\;
+  #link("https://arxiv.org/abs/math/0309366v3")[arXiv:math/0309366v3], 17 March 2004.]
+#bibitem([27])[R.~McRae, #emph[On the tensor structure of modules for compact orbifold vertex operator algebras],
+  Math. Z. #strong[296] (2020), 409--452.
+  #link("https://doi.org/10.1007/s00209-019-02445-z")[doi:10.1007/s00209-019-02445-z]\;
+  #link("https://arxiv.org/abs/1810.00747v5")[arXiv:1810.00747v5], 23 February 2021.]
+#bibitem([28])[R.~McRae, #emph[Twisted modules and $G$-equivariantization in logarithmic conformal field theory],
+  Comm. Math. Phys. #strong[383] (2021), no.~3, 1939--2019.
+  #link("https://doi.org/10.1007/s00220-020-03882-2")[doi:10.1007/s00220-020-03882-2]\;
+  #link("https://arxiv.org/abs/1910.13226v2")[arXiv:1910.13226v2], 19 February 2020.]
+#bibitem([29])[V.~Morinelli, Y.~Tanimoto and M.~Weiner, #emph[Conformal covariance and the split property], Comm.
+  Math. Phys. #strong[357] (2018), 379--406.
+  #link("https://doi.org/10.1007/s00220-017-2961-3")[doi:10.1007/s00220-017-2961-3]\;
+  #link("https://arxiv.org/abs/1609.02196v2")[arXiv:1609.02196v2], 7 October 2018.]
+#bibitem([30])[J.~E.~Tener, #emph[Fusion and positivity in chiral conformal field theory], Geom. Funct. Anal.
+  #strong[34] (2024), 1226--1296.
+  #link("https://doi.org/10.1007/s00039-024-00685-8")[doi:10.1007/s00039-024-00685-8]\;
+  #link("https://arxiv.org/abs/1910.08257v3")[arXiv:1910.08257v3], 13 September 2024.]
+#bibitem([31])[V.~Toledano Laredo, #emph[Integrating Unitary Representations of Infinite-Dimensional Lie Groups],
+  J. Funct. Anal. #strong[161] (1999), 478--508.
+  #link("https://doi.org/10.1006/jfan.1998.3359")[doi:10.1006/jfan.1998.3359]\;
+  #link("https://arxiv.org/abs/math/0106195v1")[arXiv:math/0106195v1], 23 June 2001.]
+#bibitem([32])[A.~Wassermann, #emph[Operator algebras and conformal field theory III.
+  Fusion of positive energy representations of $L S U \( N \)$ using bounded operators], Invent. Math.
+  #strong[133] (1998), 467--538. #link("https://doi.org/10.1007/s002220050253")[doi:10.1007/s002220050253]\;
+  #link("https://arxiv.org/abs/math/9806031v1")[arXiv:math/9806031v1], 7 June 1998.]
+#bibitem([33])[M.~Weiner, #emph[Conformal Covariance and Positivity of Energy in Charged Sectors], Comm. Math.
+  Phys. #strong[265] (2006), 493--506.
+  #link("https://doi.org/10.1007/s00220-006-1536-5")[doi:10.1007/s00220-006-1536-5]\;
+  #link("https://arxiv.org/abs/math-ph/0507066v1")[arXiv:math-ph/0507066v1], 27 July 2005.]
+#bibitem([34])[Y.~Zhu, #emph[Modular invariance of characters of vertex operator algebras], J. Amer. Math. Soc.
+  #strong[9] (1996), 237--302.
+  #link("https://doi.org/10.1090/S0894-0347-96-00182-8")[doi:10.1090/S0894-0347-96-00182-8].]

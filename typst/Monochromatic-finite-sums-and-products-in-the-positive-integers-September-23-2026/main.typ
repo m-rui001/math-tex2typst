@@ -31,10 +31,10 @@ $ "FS" \( A \) = {sum_(a in B) a : diameter eq.not B subset.eq A} \, #h(2em) "FP
 Thus each element of $A$ may occur at most once in an individual sum or product, and singleton subsets are included. We prove the following.
 
 #thm([Theorem 1.1.])[
-  #emph[Let $r \, m gt.eq 1$ be integers, and fix real numbers $R gt.eq 2$ and $D gt.eq 1$. For every coloring $chi : bb(N) arrow.r \[ r \]$, there are distinct positive integers $a_1 < dots.h.c < a_m$ and a color $c in \[ r \]$ such that 
+  #emph[Let $r \, m gt.eq 1$ be integers, and fix real numbers $R gt.eq 2$ and $D gt.eq 1$. For every coloring $chi : bb(N) arrow.r \[ r \]$, there are distinct positive integers $a_1 < dots.h.c < a_m$ and a color $c in \[ r \]$ such that
 $ chi (sum_(j in J) a_j) = chi (product_(j in J) a_j) = c quad upright("for every ") diameter eq.not J subset.eq \[ m \] . $
 
- Equivalently, $"FS" \( A \) union "FP" \( A \)$ is monochromatic for a set $A subset bb(N)$ of cardinality $m$. The elements can additionally be chosen to satisfy 
+ Equivalently, $"FS" \( A \) union "FP" \( A \)$ is monochromatic for a set $A subset bb(N)$ of cardinality $m$. The elements can additionally be chosen to satisfy
 #[#set math.equation(numbering: n => "(1.1)")
  $ a_1 > R \, #h(2em) a_d > R (sum_(k < d) a_k + product_(k < d) a_k)^D quad \( 2 lt.eq d lt.eq m \) . $ <eq:separated-elements>]
 
@@ -44,7 +44,7 @@ $ chi (sum_(j in J) a_j) = chi (product_(j in J) a_j) = c quad upright("for ever
 Theorem 1 resolves Hindman’s finite sums and products conjecture positively. The same assertion for colorings of $bb(N)_0 = { 0 \, 1 \, 2 \, dots.h }$ follows by restriction to $bb(N)$. The separation in (1.1) also eliminates every collision between expressions except the shared singleton values.
 
 #thm([Corollary 1.2.])[
-  #emph[For every finite coloring of $bb(N)$ and every $m gt.eq 1$, there is an $m$-element set $A subset bb(N)$ for which $"FS" \( A \) union "FP" \( A \)$ is monochromatic and 
+  #emph[For every finite coloring of $bb(N)$ and every $m gt.eq 1$, there is an $m$-element set $A subset bb(N)$ for which $"FS" \( A \) union "FP" \( A \)$ is monochromatic and
 $ \| "FS" \( A \) \| = \| "FP" \( A \) \| = 2^m - 1 \, #h(2em) "FS" \( A \) ∩ "FP" \( A \) = A . $
 
  In particular, the union has $2 \( 2^m - 1 \) - m$ distinct elements.]
@@ -173,25 +173,25 @@ The coloring is a map $chi : bb(N) arrow.r \[ r \]$.
 
 #thm([Principle 2.3.])[
   (Prediction).  #emph[For every $m gt.eq 2$ there is an integer $s = s \( m \)$ with the following property. Given $n \, r \, chi$, finite lists satisfying (2.6), and tolerances $0 < tau < 1 \/ 4$, $eta > 0$, there are admissible parameters and step-at-most-$s$ models such that the following conclusions hold along the fixed ultrafilter $cal(U)$ in $w$.]
-  + #emph[For each $B \, a \, c$, 
+  + #emph[For each $B \, a \, c$,
 #[#set math.equation(numbering: n => "(2.7)")
  $ lim_(cal(U)) bb(P) #scale(x: 120%, y: 120%)[\(] chi \( h_B a t_B \) = c \, med S_(B \, a \, c) \( t_B \) lt.eq 2 tau #scale(x: 120%, y: 120%)[\)] lt.eq 3 tau + eta . $ <eq:prediction-calibration>]
 
 ]
-  + #emph[Fix a chain $B_1 \, dots.h \, B_m$, $b in cal(B)$ and a color $c in \[ r \]$. Put 
+  + #emph[Fix a chain $B_1 \, dots.h \, B_m$, $b in cal(B)$ and a color $c in \[ r \]$. Put
 $ c_d = h_(B_d) b_(B_d) \, #h(2em) f_d \( y \) = upright(bold(1))_(chi \( c_d y \) = c) \, #h(2em) nu_d = nu_(B_d) \, #h(2em) S_d = S_(B_d \, b_(B_d) \, c) . $
 
- Here $f_d$ is defined on positive integers and may be extended by zero elsewhere. For $diameter eq.not J subset.eq \[ m \]$ write $d \( J \) = max J$ and 
+ Here $f_d$ is defined on positive integers and may be extended by zero elsewhere. For $diameter eq.not J subset.eq \[ m \]$ write $d \( J \) = max J$ and
 #[#set math.equation(numbering: n => "(2.8)")
  $ L_J \( z \) & = sum_(k in J) c_k / c_(d \( J \)) z_k \,\
 U \( z \) & = product_(diameter eq.not J subset.eq \[ m \]) upright(bold(1))_(chi \( product_(k in J) c_k z_k \) = c) . $ <eq:sum-forms>]
 
- Then the nonnegative weighted count 
+ Then the nonnegative weighted count
 #[#set math.equation(numbering: n => "(2.9)")
  $ cal(I)_(b \, c \, upright(bold(B))) = bb(E)_(z tilde.op ⨂_(d = 1)^m mu_(i_d)) U \( z \) product_(d = 1)^m nu_d \( z_d \) product_(J subset.eq \[ m \]\
 \| J \| gt.eq 2) \( f_(d \( J \)) nu_(d \( J \)) \) \( L_J \( z \) \) $ <eq:weighted-count>]
 
- satisfies, for $z \( t \)_d = t_(B_d)$, 
+ satisfies, for $z \( t \)_d = t_(B_d)$,
 #[#set math.equation(numbering: n => "(2.10)")
  $ lim_(cal(U)) lr(||) * cal(I)_(b \, c \, upright(bold(B))) - bb(E)_t U \( z \( t \) \) product_(J subset.eq \[ m \]\
 \| J \| gt.eq 2) S_(d \( J \)) \( L_J \( z \( t \) \) \) lt.eq eta . $ <eq:prediction-counting>]
@@ -202,11 +202,11 @@ U \( z \) & = product_(diameter eq.not J subset.eq \[ m \]) upright(bold(1))_(ch
 The step bound depends only on the requested chain length $m$. The complexity bound may depend on all the fixed data and tolerances. The extra weights on the sum forms in (2.9) are deliberate: they put the function at each sum under the same majorant as the function at its last summand. Positivity of this weighted count still gives an actual monochromatic configuration.
 
 #thm([Principle 2.4.])[
-  (Alignment).  #emph[For every $n \, r \, s$ there are finite lists $cal(B) \, cal(A)$ satisfying (2.6) and a constant $delta > 0$, depending only on $n \, r \, s$, such that the following holds. For any admissible family, any system of step-at-most-$s$ models, and any fixed $tau > 0$, define $sans(A)_w$ to be the event that some $b in cal(B)$ satisfies, simultaneously for every block $B$, color $c in \[ r \]$, and subset $D subset.eq cal(E)_B$, 
+  (Alignment).  #emph[For every $n \, r \, s$ there are finite lists $cal(B) \, cal(A)$ satisfying (2.6) and a constant $delta > 0$, depending only on $n \, r \, s$, such that the following holds. For any admissible family, any system of step-at-most-$s$ models, and any fixed $tau > 0$, define $sans(A)_w$ to be the event that some $b in cal(B)$ satisfies, simultaneously for every block $B$, color $c in \[ r \]$, and subset $D subset.eq cal(E)_B$,
 #[#set math.equation(numbering: n => "(2.11)")
  $ S_(B \, b_B \, c) \( t_B \) > 2 tau quad arrow.r.double quad S_(B \, b_B \, c) (t_B + sum_(A in D) frac(h_A b_A, h_B b_B) t_A) > tau . $ <eq:alignment-implication>]
 
- Then 
+ Then
 #[#set math.equation(numbering: n => "(2.12)")
  $ liminf_(w arrow.r oo) bb(P) \( sans(A)_w \) gt.eq delta . $ <eq:alignment-probability>]
 
@@ -265,7 +265,7 @@ The following selection uses the Ramsey-by-cardinality and finite-sums argument 
 ]
 
 #thm([Corollary 2.6.])[
-  (Finite interval form with prescribed divisibility).  #emph[Fix integers $r \, m \, q gt.eq 1$ and real numbers $R gt.eq 2$, $D gt.eq 1$. There exists $N$ such that every $r$-coloring of $\[ N \]$ admits $A = { a_1 < dots.h.c < a_m } subset q bb(N)$ with $"FS" \( A \) union "FP" \( A \) subset.eq \[ N \]$ monochromatic and 
+  (Finite interval form with prescribed divisibility).  #emph[Fix integers $r \, m \, q gt.eq 1$ and real numbers $R gt.eq 2$, $D gt.eq 1$. There exists $N$ such that every $r$-coloring of $\[ N \]$ admits $A = { a_1 < dots.h.c < a_m } subset q bb(N)$ with $"FS" \( A \) union "FP" \( A \) subset.eq \[ N \]$ monochromatic and
 $ a_1 > R \, #h(2em) a_d > R (sum_(k < d) a_k + product_(k < d) a_k)^D quad \( 2 lt.eq d lt.eq m \) . $
 
  The subset sums and products have the distinctness properties of Corollary 2.]
@@ -295,28 +295,28 @@ All finite templates in this Section are fixed before the limit $w arrow.r oo$. 
 We give explicit total-mass bounds to distinguish multiplication of an argument from conditioning on divisibility. For a signed measure on $bb(Z)$, write $parallel xi parallel_1 = sum_(n in bb(Z)) \| xi \( n \) \|$. Thus probability total variation is one half of this norm.
 
 #thm([Lemma 3.1.])[
-  (Sampling and changes of variables).  #emph[Let $X gt.eq 2$ be an integer, set 
+  (Sampling and changes of variables).  #emph[Let $X gt.eq 2$ be an integer, set
 $ theta.alt_W = frac(phi.alt \( W \), W) \, quad L_X = log X \, quad Z_X = sum_(X lt.eq n < X^2\
 \( n \, W \) = 1) 1 / n \, quad mu_X \( n \) = frac(upright(bold(1))_(\[ X \, X^2 \)) \( n \) upright(bold(1))_(\( n \, W \) = 1), n Z_X) \, $
 
  and suppose $L_X > W \/ X$. Let $Y$ have law $mu_X$.]
-  + #emph[For $\( k \, W \) = 1$, every residue $a med \( mod med k \)$, and $0 < A < B$, 
+  + #emph[For $\( k \, W \) = 1$, every residue $a med \( mod med k \)$, and $0 < A < B$,
 #[#set math.equation(numbering: n => "(3.1)")
  $ lr(|sum_(A lt.eq n < B\
 \( n \, W \) = 1\
 n equiv a med \( k \)) 1 / n - theta.alt_W / k log B / A|) lt.eq frac(phi.alt \( W \), A) . $ <eq:periodic-harmonic>]
 
- In particular $\| Z_X - theta.alt_W L_X \| lt.eq phi.alt \( W \) \/ X$, and 
+ In particular $\| Z_X - theta.alt_W L_X \| lt.eq phi.alt \( W \) \/ X$, and
 #[#set math.equation(numbering: n => "(3.2)")
  $ lr(|k bb(P) \( Y equiv a med \( mod med k \) \) - 1|) lt.eq E_X \( k \) := frac(W \( k + 1 \), X \( L_X - W \/ X \)) . $ <eq:harmonic-residue-error>]
 
  The total-mass distance of the residue law from uniform measure is also at most $E_X \( k \)$.]
-  + #emph[If $h in W bb(Z)$, then 
+  + #emph[If $h in W bb(Z)$, then
 #[#set math.equation(numbering: n => "(3.3)")
  $ parallel "Law" \( Y + h \) - mu_X parallel_1 lt.eq min (2 \, frac(2 \| h \|, X \( L_X - W \/ X \))) . $ <eq:harmonic-translation>]
 
 ]
-  + #emph[If $1 lt.eq k lt.eq X$ and $\( k \, W \) = 1$, let $eta_k \( n \) = k upright(bold(1))_(k divides n) mu_X \( n \)$, an unnormalized positive measure. Then 
+  + #emph[If $1 lt.eq k lt.eq X$ and $\( k \, W \) = 1$, let $eta_k \( n \) = k upright(bold(1))_(k divides n) mu_X \( n \)$, an unnormalized positive measure. Then
 #[#set math.equation(numbering: n => "(3.4)")
  $ parallel "Law" \( k Y \) - eta_k parallel_1 lt.eq frac(2 log k + \( W k \/ X \) \( 1 + 1 \/ X \), L_X - W \/ X) \, $ <eq:harmonic-dilation>]
 
@@ -341,7 +341,7 @@ For later use, uniform sampling on an integer interval of length $T$ has residue
 The next Corollary identifies the center weights in (2.9) with the actual block-product sampling. Once the shifted factors have bounded models, this identity will remove the remaining weights from the count.
 
 #thm([Corollary 3.2.])[
-  (Product law).  #emph[Let $B = T union { i }$ be a block, and let $t_j$ be the independent harmonic samples at its raw cutoffs. Let $V = V \( w \) gt.eq 1$ be an auxiliary scale, and put $K_T = product_(j in T) X_j^2$. If $log X_i$ dominates every fixed power of $2 + W + K_T + V$, then 
+  (Product law).  #emph[Let $B = T union { i }$ be a block, and let $t_j$ be the independent harmonic samples at its raw cutoffs. Let $V = V \( w \) gt.eq 1$ be an auxiliary scale, and put $K_T = product_(j in T) X_j^2$. If $log X_i$ dominates every fixed power of $2 + W + K_T + V$, then
 #[#set math.equation(numbering: n => "(3.5)")
  $ ∥"Law" \( t_B \) - nu_B mu_i∥_1 = o \( V^(- C) \) #h(2em) upright("for every fixed ") C > 0 . $ <eq:block-product-law>]
 
@@ -361,15 +361,15 @@ We now work on a master index set $\[ N \]$. Here $R_l$ are auxiliary gap length
 #thm([Lemma 3.3.])[
   (Master scales).  #emph[Fix $N$, a bound on block sizes, a finite set $cal(A) subset bb(Q)_(> 0)$, and a finite list $cal(D)$ of nonzero integer polynomials in finitely many prime-parameter slots. There are choices of $h_j \, M \, X_j \, R_l \, P_l^(-) \, P_l^(+)$, for $1 lt.eq j \, l lt.eq N$, with the following properties.]
   + #emph[$h_j = W^(w 2^(N - j))$, and $M$ is a power of $W$, divisible by $W^w$, with $h_j lt.eq M$ for every index and $h_B lt.eq M$ for every block under consideration. Every permitted adding pair satisfies $h_A \/ h_B in W^w bb(N)$. For a master chain and $c_d = h_(B_d) a_d$, $a_d in cal(A)$, all $c_d$ are integers and $c_u \/ c_d in W bb(N)$ when $u < d$, for sufficiently large $w$.]
-  + #emph[There is an integer $e_0 = e_0 \( w \)$ such that, for independent uniform units in the slots modulo $W^(e_0)$, 
+  + #emph[There is an integer $e_0 = e_0 \( w \)$ such that, for independent uniform units in the slots modulo $W^(e_0)$,
 #[#set math.equation(numbering: n => "(3.6)")
  $ bb(P) #scale(x: 120%, y: 120%)[\(] p^(e_0) divides D \( bold(u) \) upright(" for some ") p lt.eq w \, med D in cal(D) #scale(x: 120%, y: 120%)[\)] = o \( 1 \) . $ <eq:small-prime-exception>]
 
  Moreover $W^(e_0 + 1) c_d divides M$ for every possible $c_d$.]
-  + #emph[Writing 
+  + #emph[Writing
 $ V_l = 2 + M + product_(j < l) X_j^2 \, #h(2em) Q_l = W^(e_0) product_(w < p lt.eq V_l) p \, $
 
- the pool $cal(P)_l$ consists of all primes in a finite union of consecutive complete dyadic intervals $\[ P_l^(-) \, P_l^(+) \)$. Its law and harmonic mass are 
+ the pool $cal(P)_l$ consists of all primes in a finite union of consecutive complete dyadic intervals $\[ P_l^(-) \, P_l^(+) \)$. Its law and harmonic mass are
 #[#set math.equation(numbering: n => "(3.7)")
  $ H_l^(upright("pr")) = sum_(p in cal(P)_l) 1 / p \, #h(2em) lambda_l \( p \) = frac(1, p H_l^(upright("pr"))) . $ <eq:prime-pool-law>]
 
@@ -397,7 +397,7 @@ For a block $B = T union { i }$ at these scales, its tail bound $K_T$ and $W$ ar
 The next estimate treats prime factors larger than $V_l$, as well as those controlled by the residue distribution of a pool. The linear-forms estimate below uses residue uniformity separately. Coprimality has a different purpose: in a cyclic group, the subgroups of multiples of two coprime integers together generate the whole group. Section 5 applies this fact to combine cube tests with different step sizes.
 
 #thm([Lemma 3.5.])[
-  (Rough coprimality).  #emph[Let $F$ and $G$ be fixed nonzero integer polynomials in disjoint tuples of independent prime variables. Each variable is sampled with probability proportional to $1 \/ p$ in a dyadic interval $\[ Y \, 2 Y \)$. Let $L$ be the smallest of these lower endpoints. For all sufficiently large $w \, L$, 
+  (Rough coprimality).  #emph[Let $F$ and $G$ be fixed nonzero integer polynomials in disjoint tuples of independent prime variables. Each variable is sampled with probability proportional to $1 \/ p$ in a dyadic interval $\[ Y \, 2 Y \)$. Let $L$ be the smallest of these lower endpoints. For all sufficiently large $w \, L$,
 #[#set math.equation(numbering: n => "(3.8)")
  $ bb(P) \( F G = 0 \) & lt.double_(F \, G) frac(log L, L) \,\
 bb(P) #scale(x: 120%, y: 120%)[\(] F G eq.not 0 \, med gcd \( \| F \|_(> w) \, \| G \|_(> w) \) > 1 #scale(x: 120%, y: 120%)[\)] & lt.double_(F \, G) 1 / w + frac(log L, sqrt(L)) . $ <eq:polynomial-zero-bound>]
@@ -434,7 +434,7 @@ The mean-one linear-forms estimate below plays the role of the pseudorandomness 
   #emph[Let $cal(G)$ be a domain depending only on $bold(p)$, and let $ell_u \( bold(x) \; bold(p) \)$ be homogeneous linear rows. On $cal(G)$ their arguments are integers on the base sampling support. Assume the following conditions.]
   + #emph[Given $bold(p)$ and any possible divisor draws, the joint residue law of $bold(x)$ modulo $K = product_(u = 1)^q sigma_u$ differs in total variation by at most $epsilon.alt_(upright("base"))$ from the uniform law on $\( bb(Z) \/ K bb(Z) \)^d$. The bound is uniform on $cal(G)$.]
   + #emph[For every $w < p lt.eq V$, each row is nonzero modulo $p$ on $cal(G)$. There is a fixed finite list of nonzero integer polynomials in the prime slots such that, if all their values are nonzero modulo $p$, every pair of rows is linearly independent over $bb(F)_p$.]
-  #emph[The CRT law of all prime slots at the primes $w < p lt.eq V$ is within total variation $epsilon.alt_(upright("CRT"))$ of independent uniform units, with independence also across these primes. Then, uniformly in every further prime-only event $cal(E) subset.eq cal(G)$, 
+  #emph[The CRT law of all prime slots at the primes $w < p lt.eq V$ is within total variation $epsilon.alt_(upright("CRT"))$ of independent uniform units, with independence also across these primes. Then, uniformly in every further prime-only event $cal(E) subset.eq cal(G)$,
 #[#set math.equation(numbering: n => "(3.10)")
  $ bb(E)_(bold(p) \, bold(x)) upright(bold(1))_(cal(E)) \( bold(p) \) product_(u = 1)^q nu_u \( ell_u \( bold(x) \; bold(p) \) \) = bb(P) \( cal(E) \) + O (1 / w + V^q \( epsilon.alt_(upright("base")) + epsilon.alt_(upright("CRT")) \)) . $ <eq:restricted-linear-forms>]
 
@@ -510,11 +510,11 @@ All estimates below are uniform over these functions. An $o \( 1 \)$ may depend 
 === 4.1 Prime insertion and weighted mask removal <prime-insertion-and-weighted-mask-removal>
 
 #thm([Lemma 4.1.])[
-  (Prime insertion).  #emph[Let $i > l$ and let $Y$ have law $mu_i$. For every fixed $A > 0$, uniformly over functions $F$ with $\| F \| lt.eq V^A$, 
+  (Prime insertion).  #emph[Let $i > l$ and let $Y$ have law $mu_i$. For every fixed $A > 0$, uniformly over functions $F$ with $\| F \| lt.eq V^A$,
 #[#set math.equation(numbering: n => "(4.2)")
  $ bb(E)_Y F \( Y \) = bb(E)_(p \, Y) F \( p Y \) + o \( 1 \) . $ <eq:prime-average-insertion>]
 
- For a fixed positive integer $k$, coprime to $W$ and bounded by a fixed power of $P_l^(+) + V$, one also has 
+ For a fixed positive integer $k$, coprime to $W$ and bounded by a fixed power of $P_l^(+) + V$, one also has
 #[#set math.equation(numbering: n => "(4.3)")
  $ bb(E)_Y F \( k Y \) = bb(E)_Y k upright(bold(1))_(k divides Y) F \( Y \) + o \( 1 \) \, $ <eq:prime-fixed-dilation>]
 
@@ -542,7 +542,7 @@ Parallelity of templates always means parallelity over the rational function fie
 Reciprocal dilations preserving a product, followed by Cauchy–Schwarz to remove its bounded factor, also occur in the proof of [11] Proposition 2.4 over finite fields. Here the divisibility weights allow the corresponding substitutions on integer variables, and we carry out the elimination for the full family of product masks.
 
 #thm([Lemma 4.2.])[
-  (Weighted removal of multiplicative masks).  #emph[Put $q_(upright("mask")) = 2^m - 1$ and $K_m = q_(upright("mask")) 2^(q_(upright("mask")))$. Starting from (4.1), one obtains a family $cal(R)$ of at most $K_m$ pairwise nonparallel row templates, with one distinguished row $*$, and functions $f_R$ that may depend on the introduced primes, such that 
+  (Weighted removal of multiplicative masks).  #emph[Put $q_(upright("mask")) = 2^m - 1$ and $K_m = q_(upright("mask")) 2^(q_(upright("mask")))$. Starting from (4.1), one obtains a family $cal(R)$ of at most $K_m$ pairwise nonparallel row templates, with one distinguished row $*$, and functions $f_R$ that may depend on the introduced primes, such that
 #[#set math.equation(numbering: n => "(4.5)")
  $ \| cal(C) \|^(2^(q_(upright("mask")))) lt.eq C_m lr(|bb(E)_(bold(p) \, z) product_(R in cal(R)) f_R \( ell_R \( z \) \)|) + o \( 1 \) . $ <eq:mask-removal-output>]
 
@@ -588,18 +588,18 @@ The product masks have been removed. To eliminate a nontarget row by Cauchy–Sc
 Let $cal(R)$ now denote the output family of Lemma 16, and let $d = \| cal(R) \| - 1$. For a nonzero integer $n$, write $\| n \|_(> w)$ and $\| n \|_(lt.eq w)$ for its rough and smooth parts, including multiplicity.
 
 #thm([Lemma 4.3.])[
-  (Polynomial directions and integer translations).  #emph[For each $R eq.not *$ there is an integer polynomial vector $w_R$ such that 
+  (Polynomial directions and integer translations).  #emph[For each $R eq.not *$ there is an integer polynomial vector $w_R$ such that
 $ A_R w_R = 0 \, #h(2em) A_I w_R eq.not 0 quad \( I eq.not R \) . $
 
- There is also an integer polynomial vector $w_0$ with $A_(*) w_0 = 0$ and $A_I w_0 eq.not 0$ for $I eq.not *$. These choices can be made from a finite list determined solely by the row templates. Set 
+ There is also an integer polynomial vector $w_0$ with $A_(*) w_0 = 0$ and $A_I w_0 eq.not 0$ for $I eq.not *$. These choices can be made from a finite list determined solely by the row templates. Set
 #[#set math.equation(numbering: n => "(4.9)")
  $ d_R = A_(*) w_R \, #h(2em) D = product_(R eq.not *) d_R \, #h(2em) M \( bold(p) \) = M \| D \( bold(p) \) \|_(> w) . $ <eq:correlation-modulus>]
 
- On the good prime tuples planned in Lemma 11, the vectors 
+ On the good prime tuples planned in Lemma 11, the vectors
 #[#set math.equation(numbering: n => "(4.10)")
  $ v_(R \, k) = M \( bold(p) \) c_(a_(*)) / c_k w_(R \, k) / d_R \, #h(2em) v_(0 \, k) = M c_(a_(*)) / c_k w_(0 \, k) $ <eq:correlation-integer-directions>]
 
- belong to $W bb(Z)^m$ and have sizes bounded by a fixed power of $P_l^(+) + V$. Their responses satisfy 
+ belong to $W bb(Z)^m$ and have sizes bounded by a fixed power of $P_l^(+) + V$. Their responses satisfy
 #[#set math.equation(numbering: n => "(4.11)")
  $ ell_(*) \( v_R \) = M \( bold(p) \) \, #h(2em) ell_R \( v_R \) = 0 \, #h(2em) ell_(*) \( v_0 \) = 0 . $ <eq:correlation-direction-responses>]
 
@@ -622,11 +622,11 @@ $ A_R w_R = 0 \, #h(2em) A_I w_R eq.not 0 quad \( I eq.not R \) . $
 === 4.3 Additive elimination and removal of the remaining weights <additive-elimination-and-removal-of-the-remaining-weights>
 
 #thm([Lemma 4.4.])[
-  (Weighted additive elimination).  #emph[With the rows, good-tuple law, and modulus of Lemma 17, fix $J_0 in bb(N)$ and put 
+  (Weighted additive elimination).  #emph[With the rows, good-tuple law, and modulus of Lemma 17, fix $J_0 in bb(N)$ and put
 #[#set math.equation(numbering: n => "(4.12)")
  $ L \( bold(p) \) = ⌊frac(R, J_0 M \( bold(p) \))⌋ . $ <eq:correlation-shift-length>]
 
- Independently conditional on the primes, let every $u_R^0 \, u_R^1$ be uniform on $\[ 0 \, L \( bold(p) \) \) ∩ bb(Z)$, for $R eq.not *$. Then 
+ Independently conditional on the primes, let every $u_R^0 \, u_R^1$ be uniform on $\[ 0 \, L \( bold(p) \) \) ∩ bb(Z)$, for $R eq.not *$. Then
 #[#set math.equation(numbering: n => "(4.13)")
  $ lr(|bb(E)_(bold(p) \, z) product_(I in cal(R)) f_I \( ell_I \( z \) \)|)^(2^d) lt.eq C_m lr(|bb(E)_(bold(p) \, z \, u) product_(omega in { 0 \, 1 }^d) g_(*) (ell_(*) \( z \) + M \( bold(p) \) sum_(R eq.not *) u_R^(omega_R))|) + o \( 1 \) . $ <eq:additive-elimination-output>]
 
@@ -668,7 +668,7 @@ $ A_R w_R = 0 \, #h(2em) A_I w_R eq.not 0 quad \( I eq.not R \) . $
 === 4.4 A one-variable cube estimate <a-one-variable-cube-estimate>
 
 #thm([Proposition 4.5.])[
-  (Uniform correlation test).  #emph[For every $m gt.eq 2$ and every nonsingleton target support $J_(*)$, the construction above determines a finite family of integer polynomial templates $D$, with good prime-tuple laws, such that the following holds for every fixed master chain and valid gap $l$. There are an integer $1 lt.eq d lt.eq K_m - 1$, a constant $C_m$, and $theta > 0$, all bounded in terms of $m$ alone, for which 
+  (Uniform correlation test).  #emph[For every $m gt.eq 2$ and every nonsingleton target support $J_(*)$, the construction above determines a finite family of integer polynomial templates $D$, with good prime-tuple laws, such that the following holds for every fixed master chain and valid gap $l$. There are an integer $1 lt.eq d lt.eq K_m - 1$, a constant $C_m$, and $theta > 0$, all bounded in terms of $m$ alone, for which
 #[#set math.equation(numbering: n => "(4.17)")
  $ #box(stroke: black, inset: 3pt, [$ quad \| cal(C) \| lt.eq o \( 1 \) + C_m lr(|bb(E)_(bold(p) \, y \, u) product_(omega subset.eq \[ d \]) g_(*) (y + M \( bold(p) \) sum_(R in omega) \( u_R^1 - u_R^0 \))|)^theta . quad $]) $ <eq:correlation-test>]
 
@@ -738,11 +738,11 @@ The functions, as well as the bounded prime factor, may vary arbitrarily with $w
 To construct $F$, we need more than a mean-one estimate for $nu$. The next Lemma shows that $nu - 1$ is asymptotically orthogonal to the algebra generated by the dual tests, and controls the tests sufficiently to replace them by bounded ones.
 
 #thm([Lemma 5.1.])[
-  (Dual-test pseudorandomness).  #emph[For every fixed $b gt.eq 0$ and dual tests $cal(D)_1 \, dots.h \, cal(D)_b$ at the same block, 
+  (Dual-test pseudorandomness).  #emph[For every fixed $b gt.eq 0$ and dual tests $cal(D)_1 \, dots.h \, cal(D)_b$ at the same block,
 #[#set math.equation(numbering: n => "(5.3)")
  $ bb(E)_(mu_i) \( nu - 1 \) product_(q = 1)^b cal(D)_q = o \( 1 \) $ <eq:prediction-dual-products>]
 
- uniformly over their inputs. The tests may use different permissible gaps and different cube types. If $d_(*)$ bounds the dimensions of these types and $A_(*) = 2^(2^(d_(*)) - 1)$, then for every fixed positive integer $b$, 
+ uniformly over their inputs. The tests may use different permissible gaps and different cube types. If $d_(*)$ bounds the dimensions of these types and $A_(*) = 2^(2^(d_(*)) - 1)$, then for every fixed positive integer $b$,
 #[#set math.equation(numbering: n => "(5.4)")
  $ bb(E)_(mu_i) \( 1 + nu \) \| cal(D) \|^b lt.eq 2 A_(*)^b + o \( 1 \) . $ <eq:prediction-dual-moments>]
 
@@ -772,7 +772,7 @@ To construct $F$, we need more than a mean-one estimate for $nu$. The next Lemma
 We use the separation and polynomial-approximation proof of the dense model theorem developed independently by Gowers [10] Section 4 and Reingold, Trevisan, Tulsiani and Vadhan [28] Section 2. The preceding Lemma supplies the pseudorandomness needed for our particular weighted test class.
 
 #thm([Proposition 5.2.])[
-  (Bounded dense models).  #emph[There are functions $F_(B \, a \, c) : bb(Z) arrow.r \[ 0 \, 1 \]$ such that, for every fixed $J_0$ and every dual test at $B$, 
+  (Bounded dense models).  #emph[There are functions $F_(B \, a \, c) : bb(Z) arrow.r \[ 0 \, 1 \]$ such that, for every fixed $J_0$ and every dual test at $B$,
 #[#set math.equation(numbering: n => "(5.5)")
  $ bb(E)_(mu_i) \( rho - F_(B \, a \, c) \) cal(D) = o \( 1 \) $ <eq:prediction-dense-approximation>]
 
@@ -794,7 +794,7 @@ Here is the first consequence for a chain with a valid gap. In its weighted coun
 The bounded functions $F$ now replace the weighted color factors in the counts. Calibration requires another comparison: $rho$ and $F$ must agree against bounded Lipschitz functions of the eventual prediction $S$, so that small prediction values cannot carry much actual color mass. We first establish this nilsequence testing property, using missing-corner reconstruction to express the tests through the dual tests already controlled. We then choose coarse models whose differences from $F$ have small projections at the finer chain scales. The next subsection turns those projection bounds into counting estimates.
 
 #thm([Lemma 5.3.])[
-  (Testing piecewise nilsequences).  #emph[Fix $B = T union { i }$ and a gap $max T < l < i$. Let $S'$ be any family of bounded real piecewise nilsequences on intervals of length $R_l$ and residues modulo $M$, of step at most $s$ and bounded complexity in the sense of Definition 4. Then 
+  (Testing piecewise nilsequences).  #emph[Fix $B = T union { i }$ and a gap $max T < l < i$. Let $S'$ be any family of bounded real piecewise nilsequences on intervals of length $R_l$ and residues modulo $M$, of step at most $s$ and bounded complexity in the sense of Definition 4. Then
 #[#set math.equation(numbering: n => "(5.6)")
  $ bb(E)_(mu_i) \( rho - F_(B \, a \, c) \) S' = o \( 1 \) . $ <eq:prediction-nilsequence-testing>]
 
@@ -825,14 +825,14 @@ When $l < l' < i$, the divisibility $R_l divides R_(l')$ aligns the smaller inte
 Products and Lipschitz real combinations of finitely many representing families remain representing families, using product nilmanifolds. This includes clipping to $\[ 0 \, 1 \]$.
 
 #thm([Lemma 5.4.])[
-  (Ramsey selection of gap energies).  #emph[For every $epsilon > 0$, a master count $N$ depending only on $n \, r \, \| cal(A) \| \, epsilon$ can be chosen so that there are indices 
+  (Ramsey selection of gap energies).  #emph[For every $epsilon > 0$, a master count $N$ depending only on $n \, r \, \| cal(A) \| \, epsilon$ can be chosen so that there are indices
 $ k_1 < j_1 < k_2 < j_2 < dots.h.c < k_n < j_n $
 
- and $\[ 0 \, 1 \]$-valued piecewise models $S_(B \, a \, c)$ at pivot $i = j_u$ on intervals of length $R_(k_u)$ such that 
+ and $\[ 0 \, 1 \]$-valued piecewise models $S_(B \, a \, c)$ at pivot $i = j_u$ on intervals of length $R_(k_u)$ such that
 #[#set math.equation(numbering: n => "(5.9)")
  $ parallel S_(B \, a \, c) - P_(j_u \, k_u) F_(B \, a \, c) parallel_2 lt.eq epsilon . $ <eq:prediction-coarse-approximation>]
 
- For a chain on the principal indices $j_1 \, dots.h \, j_n$, let $l$ be the padding index immediately before its first pivot. At every block $B = T union { j_u }$ of the chain, 
+ For a chain on the principal indices $j_1 \, dots.h \, j_n$, let $l$ be the padding index immediately before its first pivot. At every block $B = T union { j_u }$ of the chain,
 #[#set math.equation(numbering: n => "(5.10)")
  $ parallel P_(j_u \, l) \( F_(B \, a \, c) - S_(B \, a \, c) \) parallel_2 lt.eq 2 epsilon . $ <eq:prediction-fine-projection>]
 
@@ -867,7 +867,7 @@ The bound is independent of the finite family, the group, and the probability sy
 Second, the Green–Tao–Ziegler inverse theorem, in its finite-list linear-nilsequence formulation [17] Conjecture 1.2 and Theorem 1.3, with the correction [18], gives the following statement. For each integer $t gt.eq 2$ and $delta > 0$, a $1$-bounded function on an integer interval with $U^t$ norm at least $delta$ correlates by at least $c_t \( delta \) > 0$ with a sequence $Phi \( g^k x \)$ on a nilmanifold of step at most $t - 1$. There is a finite list of such nilmanifolds, with connected simply connected groups, from which the manifold is chosen; $parallel Phi parallel_oo lt.eq 1$ and its Lipschitz bound depend only on $t \, delta$. The cases $t = 2 \, 3$ are the established lower-order cases recalled in the Introduction of [17]; Theorem 1.3 supplies the higher orders. No bound on $g$ is asserted or needed. We use only this inverse conclusion, not the original auxiliary Proposition 8.3 addressed by the erratum. The interval norm here is the normalized cube mean with all vertices in the interval, equivalently the zero-extension norm divided by the norm of the interval indicator in a sufficiently large auxiliary cyclic group.
 
 #thm([Lemma 5.5.])[
-  (From subgroup cubes to a fine nilsequence projection).  #emph[Fix a cube type of dimension $d$, a gap $l < i$, and $J_0 gt.eq 1$. Assume $2 \( 2^d \) - 2 lt.eq s$. For every $gamma > 0$ there is $kappa = kappa \( d \, J_0 \, gamma \) > 0$, independent of the master count, the gap, the cutoffs, and the cell probabilities, with the following property. If $h : bb(Z) arrow.r \[ - 1 \, 1 \]$ is a family with $parallel P_(i \, l) h parallel_2 < kappa$, then 
+  (From subgroup cubes to a fine nilsequence projection).  #emph[Fix a cube type of dimension $d$, a gap $l < i$, and $J_0 gt.eq 1$. Assume $2 \( 2^d \) - 2 lt.eq s$. For every $gamma > 0$ there is $kappa = kappa \( d \, J_0 \, gamma \) > 0$, independent of the master count, the gap, the cutoffs, and the cell probabilities, with the following property. If $h : bb(Z) arrow.r \[ - 1 \, 1 \]$ is a family with $parallel P_(i \, l) h parallel_2 < kappa$, then
 #[#set math.equation(numbering: n => "(5.12)")
  $ lim_(cal(U)) lr(|bb(E)_(bold(p) \, y \, u) product_(omega subset \[ d \]) h (y + M_(bold(p)) sum_(j in omega) \( u_j^1 - u_j^0 \))|) lt.eq gamma + O_d \( J_0^(- 1) \) . $ <eq:prediction-subgroup-conclusion>]
 
@@ -944,19 +944,19 @@ The orbit theory underlying this comparison begins with Leibman’s qualitative 
 A rational filtration is a finite decreasing sequence of connected rational subgroups $G_bullet = \( G_j \)_(j gt.eq 0)$ with $G_0 = G_1 = G$ and $\[ G_i \, G_j \] subset.eq G_(i + j)$. A map on $bb(Z)^d$ is polynomial for this filtration if every $k$-fold group difference takes values in $G_k$. Fix a rational Mal’cev basis adapted to the filtration. A horizontal character is a continuous homomorphism $xi : G arrow.r bb(R)$ such that $xi \( Gamma \) subset.eq bb(Z)$; its size is the norm of its integer coefficient vector on the horizontal torus. In particular, characters of bounded size form a finite set.
 
 #thm([Theorem 6.1.])[
-  (Quantitative Leibman theorem, corrected box form).  #emph[Fix a rational filtered nilmanifold as above, a number $d$ of variables, and $0 < delta < 1$. There is a constant $A$, depending only on these data, with the following property. If $P : bb(Z)^d arrow.r G$ is polynomial for this filtration and $\( P \( v \) Gamma \)_(v in { 0 \, dots.h \, N - 1 }^d)$ is not $delta$-equidistributed, then there is a nonzero horizontal character $xi$ of size at most $A$ such that, on writing 
+  (Quantitative Leibman theorem, corrected box form).  #emph[Fix a rational filtered nilmanifold as above, a number $d$ of variables, and $0 < delta < 1$. There is a constant $A$, depending only on these data, with the following property. If $P : bb(Z)^d arrow.r G$ is polynomial for this filtration and $\( P \( v \) Gamma \)_(v in { 0 \, dots.h \, N - 1 }^d)$ is not $delta$-equidistributed, then there is a nonzero horizontal character $xi$ of size at most $A$ such that, on writing
 $ xi \( P \( v \) \) = sum_I alpha_I binom(v, I) \, #h(2em) binom(v, I) = product_(j = 1)^d binom(v_j, I_j) \, $
 
- one has 
+ one has
 #[#set math.equation(numbering: n => "(6.1)")
  $ N^(lr(||) I) ∥alpha_I∥_(bb(R) \/ bb(Z)) lt.eq A #h(2em) \( lr(||) I > 0 \) . $ <eq:rough-leibman-binomial>]
 
  Here $delta$-equidistribution means comparison with Haar probability to error at most $delta$ against every observable of Lipschitz norm at most one. The constant $A$ is independent of the coefficients of $P$ and of $N$.]
-  #emph[The following consequence will be used. Fix also $c \, C \, B \, eta > 0$. Let $cal(Q) subset.eq \[ - C Z \, C Z \]^d$ be an axis-parallel box with each side at least $c Z$, sampled at its integer points. If 
+  #emph[The following consequence will be used. Fix also $c \, C \, B \, eta > 0$. Let $cal(Q) subset.eq \[ - C Z \, C Z \]^d$ be an axis-parallel box with each side at least $c Z$, sampled at its integer points. If
 #[#set math.equation(numbering: n => "(6.2)")
  $ lr(|bb(E)_(x in cal(Q) ∩ bb(Z)^d) F \( P \( x \) Gamma \) - integral_(G \/ Gamma) F|) gt.eq eta \, #h(2em) ∥∥ F_("Lip") lt.eq B \, $ <eq:rough-haar-obstruction>]
 
- then, for sufficiently large $Z$, there is a nonzero horizontal character in a fixed finite list such that, writing $xi \( P \( x \) \) = sum_I theta_I x^I$ in ordinary monomials, 
+ then, for sufficiently large $Z$, there is a nonzero horizontal character in a fixed finite list such that, writing $xi \( P \( x \) \) = sum_I theta_I x^I$ in ordinary monomials,
 #[#set math.equation(numbering: n => "(6.3)")
  $ ∥theta_I∥_(bb(R) \/ bb(Z)) lt.eq A' Z^(- lr(||) I) #h(2em) \( lr(||) I > 0 \) . $ <eq:rough-leibman-monomial>]
 
@@ -990,14 +990,14 @@ The terms containing no occurrence of $A \( x + h \) - A \( x \)$ cancel, since 
 The arithmetic reason that a rough step can be removed is the following fact. Its analytic constants do not depend on the length of the progression. Rational denominators may depend on that length, which is always fixed before taking the asymptotic limit.
 
 #thm([Lemma 6.2.])[
-  (Exact division after interpolation).  #emph[Fix $e gt.eq 1$, $q gt.eq e$, and $A > 0$. For a fixed integer $H gt.eq 2 q + 2$, let 
+  (Exact division after interpolation).  #emph[Fix $e gt.eq 1$, $q gt.eq e$, and $A > 0$. For a fixed integer $H gt.eq 2 q + 2$, let
 $ t_z = t_0 + m z in \[ S \, 2 S \) \, #h(2em) 0 lt.eq z < H \, $
 
- where $m$ is a positive integer with all prime factors at most $w$, and $gcd \( t_z \, W \) = 1$ for every $z$, with $W = product_(p lt.eq w) p$. Suppose $w \, S arrow.r oo$ and $Z \/ S^a arrow.r oo$ for every fixed $a > 0$. Let $theta \( z \)$ be a real polynomial such that $deg \( t_z^e theta \( z \) \) lt.eq q$ and 
+ where $m$ is a positive integer with all prime factors at most $w$, and $gcd \( t_z \, W \) = 1$ for every $z$, with $W = product_(p lt.eq w) p$. Suppose $w \, S arrow.r oo$ and $Z \/ S^a arrow.r oo$ for every fixed $a > 0$. Let $theta \( z \)$ be a real polynomial such that $deg \( t_z^e theta \( z \) \) lt.eq q$ and
 #[#set math.equation(numbering: n => "(6.5)")
  $ ∥t_z^e theta \( z \)∥_(bb(R) \/ bb(Z)) lt.eq A \( S \/ Z \)^e #h(2em) \( 0 lt.eq z < H \) . $ <eq:rough-interpolation-input>]
 
- For all sufficiently large $w$ there is a rational polynomial $M \( z \)$, of degree at most $q - e$, integral at every index $0 lt.eq z < H$, such that 
+ For all sufficiently large $w$ there is a rational polynomial $M \( z \)$, of degree at most $q - e$, integral at every index $0 lt.eq z < H$, such that
 #[#set math.equation(numbering: n => "(6.6)")
  $ lr(|theta \( z \) - M \( z \)|) lt.eq C_q A Z^(- e) #h(2em) \( 0 lt.eq z < H \) . $ <eq:rough-interpolation-output>]
 
@@ -1023,12 +1023,12 @@ $ t_z = t_0 + m z in \[ S \, 2 S \) \, #h(2em) 0 lt.eq z < H \, $
 Call an integer $w$-smooth if all its prime factors are at most $w$. For a nonempty finite set $A$ we use $bb(E)_A$ for normalized counting. The next Proposition compares two sampling laws for the same polynomial family. Its joint polynomial dependence on $t$ and $x$ is essential; the box, residue class, and observable may be chosen separately for each $t$.
 
 #thm([Proposition 6.3.])[
-  (Removal of a rough step).  #emph[Fix $G \/ Gamma$, a number $d gt.eq 1$ of spatial variables, a degree bound $D$, and constants $c \, C \, B > 0$. Along an arbitrary sequence $w arrow.r oo$, let $L \, S \, Z$ satisfy 
+  (Removal of a rough step).  #emph[Fix $G \/ Gamma$, a number $d gt.eq 1$ of spatial variables, a degree bound $D$, and constants $c \, C \, B > 0$. Along an arbitrary sequence $w arrow.r oo$, let $L \, S \, Z$ satisfy
 #[#set math.equation(numbering: n => "(6.9)")
  $ W divides L \, quad L upright(" is ") w upright("-smooth") \, quad S arrow.r oo \, quad S \/ L arrow.r oo \, quad Z \/ S^a arrow.r oo quad upright("for every fixed ") a > 0 . $ <eq:rough-scales>]
 
  Fix a residue $r$ modulo $L$ with $gcd \( r \, W \) = 1$, and put $cal(T) = \[ S \, 2 S \) ∩ \( r + L bb(Z) \)$. Let $P_t \( x \)$ be $G$-valued, with logarithmic coordinates polynomial jointly in $\( t \, x \) in bb(R) times bb(R)^d$ of total degree at most $D$. These polynomials and their coefficients may change with $w$.]
-  #emph[For every $eta > 0$, the proportion of $t in cal(T)$ for which there exist a box $cal(Q) subset.eq \[ - C Z \, C Z \]^d$ with all sides at least $c Z$, a vector $b in bb(Z)^d$, and an observable $F : G \/ Gamma arrow.r bb(C)$ with $∥∥ F_("Lip") lt.eq B$, such that 
+  #emph[For every $eta > 0$, the proportion of $t in cal(T)$ for which there exist a box $cal(Q) subset.eq \[ - C Z \, C Z \]^d$ with all sides at least $c Z$, a vector $b in bb(Z)^d$, and an observable $F : G \/ Gamma arrow.r bb(C)$ with $∥∥ F_("Lip") lt.eq B$, such that
 #[#set math.equation(numbering: n => "(6.10)")
  $ lr(|bb(E)_(x in cal(Q) ∩ bb(Z)^d) F \( P_t \( x \) Gamma \) - bb(E)_(x in cal(Q) ∩ \( b + t bb(Z)^d \)) F \( P_t \( x \) Gamma \)|) gt.eq eta $ <eq:rough-discrepancy>]
 
@@ -1134,7 +1134,7 @@ $ C^q \( H_bullet \) = "HK"^q \( H_bullet \) = ⟨g_D : med D subset.eq \[ q \] 
 For $q = 0$ this is $H$.
 
 #thm([Lemma 7.1.])[
-  (Upper-face coordinates).  #emph[The group $C^q \( H_bullet \)$ is connected, simply connected, and rational. Order the subsets of $\[ q \]$ by increasing cardinality, breaking ties in any fixed way. Every element of $C^q \( H_bullet \)$ has a unique expression 
+  (Upper-face coordinates).  #emph[The group $C^q \( H_bullet \)$ is connected, simply connected, and rational. Order the subsets of $\[ q \]$ by increasing cardinality, breaking ties in any fixed way. Every element of $C^q \( H_bullet \)$ has a unique expression
 #[#set math.equation(numbering: n => "(7.2)")
  $ product_(D subset.eq \[ q \]) \( g_D \)_D \, #h(2em) g_D in H_(\| D \|) \, $ <eq:ordered-face-product>]
 
@@ -1159,7 +1159,7 @@ It has $C_0^q = C_1^q = C^q \( H_bullet \)$ and degree at most $s$. Indeed the b
 The following missing-corner constraint and its coordinate-product consequence appear in [14] Proposition 11.5, proof of Proposition 11.2, and Appendix E. We give the face-coordinate proof, including the uniform approximation over bounded observable families needed in Section 5.
 
 #thm([Lemma 7.2.])[
-  (Continuous missing-corner reconstruction).  #emph[Let $G$ be a connected simply connected nilpotent Lie group of step at most $s$, and let $Gamma$ be a lattice in $G$. Equip $G$ with its lower central filtration, with $G_0 = G_1 = G$. In dimension $s + 1$, any $2^(s + 1) - 1$ vertices of a cube in the image of $C^(s + 1) \( G_bullet \)$ determine the last vertex uniquely and continuously on the set of admissible partial cubes. Linear orbit cubes 
+  (Continuous missing-corner reconstruction).  #emph[Let $G$ be a connected simply connected nilpotent Lie group of step at most $s$, and let $Gamma$ be a lattice in $G$. Equip $G$ with its lower central filtration, with $G_0 = G_1 = G$. In dimension $s + 1$, any $2^(s + 1) - 1$ vertices of a cube in the image of $C^(s + 1) \( G_bullet \)$ determine the last vertex uniquely and continuously on the set of admissible partial cubes. Linear orbit cubes
 $ #scale(x: 120%, y: 120%)[\(] g^(b_0 + sum_(j = 1)^(s + 1) e_j b_j) x #scale(x: 120%, y: 120%)[\)]_e $
 
  belong to this compact cube set.]
@@ -1183,14 +1183,14 @@ $ log P \( b \) = sum_(j = 0)^s b^j U_j \, #h(2em) U_j in frak(h)_j . $
 This definition is unchanged on passing from monomials to binomial polynomials. Products and inverses of adapted polynomials are adapted: in the finite Baker–Campbell–Hausdorff expansion, a term of polynomial degree $j$ belongs to $frak(h)_j$. Terms of degree above $s$ vanish. Constant factors cause no difficulty, since $H_0$ normalizes every level. This definition implies polynomiality by group differences, as required in Theorem 26. More explicitly, suppose the coefficient of degree $j$ in $log R \( b \)$ lies in $frak(h)_(j + v)$. Give a formal shift $t$ degree one as well. BCH shows that every coefficient of total degree $j + k$ in $log \( R \( b + t \) R \( b \)^(- 1) \)$ lies in $frak(h)_(j + k + v)$; brackets of two terms can only increase this filtration index. The expression is zero at $t = 0$, so every surviving monomial uses at least one power of $t$. For each fixed $t$, its degree-$j$ coefficient in $b$ therefore belongs to $frak(h)_(j + v + 1)$. Iterating from $v = 0$ puts every $k$-fold difference in $H_k$. The same argument works with total degree in several variables.
 
 #thm([Lemma 7.3.])[
-  (Taylor coordinates and finite descent).  #emph[Fix a connected simply connected nilpotent group $K$, a lattice $Lambda$, and a rational filtration $K_bullet$ satisfying (7.1). Let $L arrow.r oo$ along any sequence, and let $P_L$ be arbitrary adapted polynomials. After passing to a subsequence there exist a fixed rational filtration $H_bullet$ with $H_i subset.eq K_i$, a positive integer $d_0$, rational elements $sigma_0 \, dots.h \, sigma_(d_0 - 1)$ of $K$, and factorizations 
+  (Taylor coordinates and finite descent).  #emph[Fix a connected simply connected nilpotent group $K$, a lattice $Lambda$, and a rational filtration $K_bullet$ satisfying (7.1). Let $L arrow.r oo$ along any sequence, and let $P_L$ be arbitrary adapted polynomials. After passing to a subsequence there exist a fixed rational filtration $H_bullet$ with $H_i subset.eq K_i$, a positive integer $d_0$, rational elements $sigma_0 \, dots.h \, sigma_(d_0 - 1)$ of $K$, and factorizations
 #[#set math.equation(numbering: n => "(7.4)")
  $ P_L \( b \) Lambda = h_L \( b \) Q_L \( b \) gamma_L \( b \) Lambda \, #h(2em) Q_L \( b \) = product_(j = 1)^s a_(j \, L)^(binom(b, j)) \, quad a_(j \, L) in H_j \, $ <eq:adapted-factorization>]
 
  such that the following hold.]
   + #emph[The maps $beta mapsto h_L \( L beta \)$ converge locally uniformly on $bb(R)$ to a smooth map $h : bb(R) arrow.r K$. They and their first derivatives are bounded on every fixed compact interval, uniformly in $L$.]
   + #emph[For integer $b$, $gamma_L \( b \) Lambda = sigma_(b med mod med d_0) Lambda$.]
-  + #emph[If $1 lt.eq j lt.eq s$ and $xi : H_j arrow.r bb(R)$ is a nonzero rational homomorphism annihilating $H_(j + 1)$ and every $\[ H_i \, H_(j - i) \]$, $1 lt.eq i < j$, then 
+  + #emph[If $1 lt.eq j lt.eq s$ and $xi : H_j arrow.r bb(R)$ is a nonzero rational homomorphism annihilating $H_(j + 1)$ and every $\[ H_i \, H_(j - i) \]$, $1 lt.eq i < j$, then
 #[#set math.equation(numbering: n => "(7.5)")
  $ L^j ∥xi \( a_(j \, L) \)∥_(bb(R) \/ bb(Z)) arrow.r oo . $ <eq:level-irrationality>]
 
@@ -1226,15 +1226,15 @@ $ Gamma_sigma = H ∩ sigma Lambda sigma^(- 1) \, #h(2em) Gamma_sigma^(\[ q \]) 
 These are lattices in their respective groups. By Haar measure on $h H sigma Lambda \/ Lambda$ we mean the image of invariant probability on $H \/ Gamma_sigma$ under $y mapsto h y sigma Lambda$. Use the analogous convention for cube cosets.
 
 #thm([Proposition 7.4.])[
-  (Simultaneous local cube law).  #emph[Under the hypotheses of Lemma 32, retain the subsequence and its data. Define probability measures 
+  (Simultaneous local cube law).  #emph[Under the hypotheses of Lemma 32, retain the subsequence and its data. Define probability measures
 #[#set math.equation(numbering: n => "(7.7)")
  $ m_(beta \, r)^(\[ q \]) = upright("Haar image on ") h \( beta \)^(upright("diag")) C^q \( H_bullet \) sigma_r^(upright("diag")) Lambda^({ 0 \, 1 }^q) \/ Lambda^({ 0 \, 1 }^q) . $ <eq:local-cube-haar>]
 
- The empirical point laws satisfy 
+ The empirical point laws satisfy
 #[#set math.equation(numbering: n => "(7.8)")
  $ frac(1, floor.l L floor.r) sum_(0 lt.eq b < floor.l L floor.r) delta_(P_L \( b \) Lambda) med arrow.r.double 1 / d_0 sum_(r = 0)^(d_0 - 1) integral_0^1 m_(beta \, r)^(\[ 0 \]) thin d beta . $ <eq:joint-point-law>]
 
- For every fixed cube dimension $q$, every $beta in \( 0 \, 1 \)$, every residue $r med mod med d_0$, and every bounded Lipschitz test $F$ on $\( K \/ Lambda \)^({ 0 \, 1 }^q)$, 
+ For every fixed cube dimension $q$, every $beta in \( 0 \, 1 \)$, every residue $r med mod med d_0$, and every bounded Lipschitz test $F$ on $\( K \/ Lambda \)^({ 0 \, 1 }^q)$,
 #[#set math.equation(numbering: n => "(7.9)")
  $ lim_(alpha arrow.b 0) limsup_(L arrow.r oo) lr(|bb(E)_(b_0 \/ L in \[ beta \, beta + alpha \) \, med b_0 equiv r med \( d_0 \)\
 b_j \/ L in \[ 0 \, alpha \) \, med b_j equiv 0 med \( d_0 \) \, med 1 lt.eq j lt.eq q) F #scale(x: 120%, y: 120%)[\(] \( P_L \( b_0 + sum_(j = 1)^q e_j b_j \) Lambda \)_e #scale(x: 120%, y: 120%)[\)] - integral F thin d m_(beta \, r)^(\[ q \])|) = 0 . $ <eq:local-cube-limit-order>]
@@ -1278,11 +1278,11 @@ Choose linear coordinates on $frak(h)$ by choosing, for every $j$, a complement 
 In particular the displacement at weight $j$ uses only coordinates of smaller weight.
 
 #thm([Proposition 7.5.])[
-  (A marginal face symmetry has a joint lift).  #emph[Let $K = K' times K''$ be a connected simply connected nilpotent Lie group with lattice $Lambda = Lambda' times Lambda''$, and let $pi$ denote the first group projection and its induced map of nilmanifolds. Let $H subset.eq K$ be a connected rational subgroup with a connected rational filtration $H_bullet$ satisfying (7.1). Let $h in K$, and let $sigma in K$ be rational. Let $S$ be a fixed automorphism of $K'$ preserving $Lambda'$. Suppose that, for every $1 lt.eq q lt.eq s + 1$, applying $S$ to the entries on any upper codimension-one face preserves setwise the projected cube coset 
+  (A marginal face symmetry has a joint lift).  #emph[Let $K = K' times K''$ be a connected simply connected nilpotent Lie group with lattice $Lambda = Lambda' times Lambda''$, and let $pi$ denote the first group projection and its induced map of nilmanifolds. Let $H subset.eq K$ be a connected rational subgroup with a connected rational filtration $H_bullet$ satisfying (7.1). Let $h in K$, and let $sigma in K$ be rational. Let $S$ be a fixed automorphism of $K'$ preserving $Lambda'$. Suppose that, for every $1 lt.eq q lt.eq s + 1$, applying $S$ to the entries on any upper codimension-one face preserves setwise the projected cube coset
 #[#set math.equation(numbering: n => "(7.13)")
  $ pi (h^(upright("diag")) C^q \( H_bullet \) sigma^(upright("diag")) Lambda^({ 0 \, 1 }^q) \/ Lambda^({ 0 \, 1 }^q)) . $ <eq:projected-face-coset>]
 
- Then there is a polynomial shear $T : frak(h) arrow.r frak(h)$ such that, for every $u in frak(h)$, 
+ Then there is a polynomial shear $T : frak(h) arrow.r frak(h)$ such that, for every $u in frak(h)$,
 #[#set math.equation(numbering: n => "(7.14)")
  $ pi #scale(x: 120%, y: 120%)[\(] h exp \( T u \) sigma Lambda #scale(x: 120%, y: 120%)[\)] = S #scale(x: 120%, y: 120%)[\(] pi \( h exp \( u \) sigma Lambda \) #scale(x: 120%, y: 120%)[\)] . $ <eq:joint-lift-identity>]
 
@@ -1327,11 +1327,11 @@ The lifts of different marginal symmetries may move the same coordinates. The ne
 
 #thm([Lemma 7.7.])[
   (Nilpotence and expanding weighted boxes).  #emph[On any finite-dimensional real vector space with coordinate weights in ${ 1 \, dots.h \, s }$, all the shears (7.12) form a group of nilpotence class at most $s$. This bound does not depend on the dimension or the coefficients of the shears. A direct product with any group of ordinary translations has the same bound.]
-  #emph[Let $frak(h)$ carry the adapted coordinates above, and let $lambda_E$ be normalized Lebesgue measure on 
+  #emph[Let $frak(h)$ carry the adapted coordinates above, and let $lambda_E$ be normalized Lebesgue measure on
 #[#set math.equation(numbering: n => "(7.19)")
  $ B_E = { u : med lr(|u_(j \, k)|) lt.eq E^j upright(" for all ") j \, k } \, #h(2em) E arrow.r oo . $ <eq:weighted-haar-boxes>]
 
- For every fixed finite set $cal(T)$ of shears, 
+ For every fixed finite set $cal(T)$ of shears,
 #[#set math.equation(numbering: n => "(7.20)")
  $ max_(T in cal(T)) ∥T_(*) lambda_E - lambda_E∥_("TV") arrow.r 0 . $ <eq:fixed-shear-tv>]
 
@@ -1400,7 +1400,7 @@ in a nilpotent group of bounded step, every finite coloring admits $k > 0$ and $
 There is a useful uniform finite version of this statement. Give every letter type its own generator in the free nilpotent group of step $s$ on these finitely many generators. On the compact space of its colorings with a fixed finite palette, each successful pair $\( k \, J \)$ defines an open cylinder set. The preceding recurrence statement shows that these cylinders cover the space. A finite subcover gives finitely many pairs $\( k \, J \)$. Pulling a coloring back by the homomorphism that interprets the generators proves the same assertion in every nilpotent group of step at most $s$. The finite alternatives depend on the word templates, polynomial exponents, palette size, and $s$, and on no numerical values assigned to the generators.
 
 #thm([Lemma 8.1.])[
-  (Finite word plan).  #emph[For given $n \, r \, s$, there are a positive integer $q_0$ and finite lists of scale updates and word jumps with the following property, uniformly over the actions and palette maps just specified and the initial centers at all pivots. Start the scale tuple at $\( 1 \, dots.h \, 1 \)$, process the pivots increasingly, and fix an order of their targets. At each pivot one can choose updates (8.1) and jumps from these lists so that, at the resulting scale $b$ and center, the terminal palette comparisons hold simultaneously for all its targets. These comparisons are (8.4) with leading multiplier $d_B$ and word 
+  (Finite word plan).  #emph[For given $n \, r \, s$, there are a positive integer $q_0$ and finite lists of scale updates and word jumps with the following property, uniformly over the actions and palette maps just specified and the initial centers at all pivots. Start the scale tuple at $\( 1 \, dots.h \, 1 \)$, process the pivots increasingly, and fix an order of their targets. At each pivot one can choose updates (8.1) and jumps from these lists so that, at the resulting scale $b$ and center, the terminal palette comparisons hold simultaneously for all its targets. These comparisons are (8.4) with leading multiplier $d_B$ and word
 #[#set math.equation(numbering: n => "(8.5)")
  $ product_(A in D) #scale(x: 120%, y: 120%)[\(] \( B \, A \) \, d_A \/ d_B #scale(x: 120%, y: 120%)[\)] \[ b \] \, $ <eq:alignment-terminal-word>]
 
@@ -1546,7 +1546,7 @@ For given earlier variables and an integer pivot value $x in bb(N)$, let $cal(P)
 For the large $w$ under consideration, every displayed offset is an integer. This follows either from admissibility and the finite rational lists, or directly from the integer powers and (8.8).
 
 #thm([Lemma 8.3.])[
-  (Conditional alignment mass).  #emph[For every fixed $tau > 0$ and every permitted bounded-complexity family of models, outside a set of earlier-variable/microcell/residue conditionings of probability tending to zero, the conditional uniform pivot probability that 
+  (Conditional alignment mass).  #emph[For every fixed $tau > 0$ and every permitted bounded-complexity family of models, outside a set of earlier-variable/microcell/residue conditionings of probability tending to zero, the conditional uniform pivot probability that
 $ cal(P)_i \( b \; p + s \( v \) \) quad upright("holds for some prescribed slot ") v $
 
  is at least $1 \/ \( 2 Q_i \)$. The same statement holds for the conditional harmonic probability, after replacing the constant by $1 \/ \( 3 Q_i \)$ if necessary. The constants are independent of the threshold and model complexity.]
@@ -1662,5 +1662,3 @@ uniformly in all earlier raw variables. Thus (8.24) gives $o \( 1 \)$ uniformly 
 #bibitem([35])[B.~L.~van der Waerden, #emph[Beweis einer Baudetschen Vermutung], Nieuw Arch. Wiskd. (2) #strong[15] (1927), 212--216.]
 #bibitem([36])[T.~Yamada, #emph[Explicit improvements of the Brun--Titchmarsh theorem for arbitrary intervals], arXiv:2312.16090v1, 26 December 2023. #link("https://arxiv.org/abs/2312.16090v1").]
 #bibitem([37])[P.~Zorin-Kranich, #emph[A nilpotent IP polynomial multiple recurrence theorem], J. Anal. Math. #strong[123] (2014), 183--225. #link("https://doi.org/10.1007/s11854-014-0018-5"). Revised version: arXiv:1206.0287v4, 4 June 2018, #link("https://arxiv.org/abs/1206.0287v4").]
-
-

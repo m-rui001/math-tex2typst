@@ -49,8 +49,9 @@ def main():
              '| --- | --- | --- | --- | --- |']
     for r in reports:
         folder = OUT / r['paper']
-        typ = '[源码](<' + str(folder / 'main.typ') + '>)' if (folder / 'main.typ').exists() else '—'
-        pdf = '[PDF](<' + str(folder / 'main.pdf') + '>)' if r.get('compile_ok') else '**编译失败**'
+        rel = r['paper'] + '/'
+        typ = '[源码](<' + rel + 'main.typ>)' if (folder / 'main.typ').exists() else '—'
+        pdf = '[PDF](<' + rel + 'main.pdf>)' if r.get('compile_ok') else '**编译失败**'
         notes = []
         counts = r.get('stats', {})
         for key, label in [('figure_content_unhandled', '图待重绘'), ('dangling_ref', '引用待核对'), ('missing_bibkey', '文献键缺失'), ('unhandled_rawblock', '原始块')]:
@@ -58,7 +59,7 @@ def main():
                 notes.append(label + ' ' + str(counts[key]))
         if r.get('included_pdf_pages'):
             notes.append('PDF 页面保留 ' + str(r['included_pdf_pages']))
-        notes.append('[报告](<' + str(folder / 'report.json') + '>)')
+        notes.append('[报告](<' + rel + 'report.json>)')
         lines.append(f"| {r['paper']} | {typ} | {pdf} | {r.get('formulas',0)} / {r.get('latex_literals_remaining',r.get('math_failed',0))} | {'；'.join(notes)} |")
     (OUT / 'INDEX.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
     print(json.dumps(summary, ensure_ascii=False, indent=2))

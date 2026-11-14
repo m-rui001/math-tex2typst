@@ -36,7 +36,7 @@ The group is the fundamental group of a finite Euclidean triangle complex. We pr
 The same obstruction has a classical consequence for linear representations. A group is #emph[linear over a commutative field $K$] if it admits an injective homomorphism into $upright("GL")_n \( K \)$ for some finite $n gt.eq 1$.
 
 #thm([Corollary 1.2.])[
-  (Finite-dimensional linear obstruction).  #emph[Let $G$ be the finitely generated torsion-free word-hyperbolic group constructed in Theorem 1. For every commutative field $K$, every integer $n gt.eq 1$, and every homomorphism $rho : G arrow.r upright("GL")_n \( K \)$, 
+  (Finite-dimensional linear obstruction).  #emph[Let $G$ be the finitely generated torsion-free word-hyperbolic group constructed in Theorem 1. For every commutative field $K$, every integer $n gt.eq 1$, and every homomorphism $rho : G arrow.r upright("GL")_n \( K \)$,
 $ R_f \( G \) subset.eq ker rho . $
 
  Consequently, one fixed nonidentity element of $G$ is killed by all these representations, simultaneously over all such fields and dimensions. In particular, $G$ is not linear over any commutative field.]
@@ -103,12 +103,12 @@ All limits below are as the prime $q$ tends to infinity with these constants fix
 #thm([Lemma 2.2.])[
   #emph[For all sufficiently large primes $q$, there are $N = \( c + o \( 1 \) \) m$ affine lines $ell_i subset P$, indexed by a set $I$, with distinct marked points $a_i in S^h ∩ ell_i$, and a set $E subset P$ such that:]
   + #emph[the bipartite graph on $P union.sq I$, with edges $z tilde.op i$ when $z in ell_i \\ { a_i }$, has no cycle of length at most $12$;]
-  + #emph[$\| I \( z \) \| gt.eq 4 r^2$ for $z in.not E$, where 
+  + #emph[$\| I \( z \) \| gt.eq 4 r^2$ for $z in.not E$, where
 $ I \( z \) = { i in I : z in ell_i \\ { a_i } } \; $
 
 ]
   + #emph[$\| E \| = o \( m \)$.]
-  #emph[In particular we can fix such data with 
+  #emph[In particular we can fix such data with
 #[#set math.equation(numbering: n => "(2.2)")
  $ q > r \, #h(2em) frac(N r, 4) > 2 m + r \| E \| . $ <eq:strict-budget>]
 
@@ -222,7 +222,7 @@ Let $cal(R) subset G$ be the finite set of rectangular words in (2.6), with $i i
 The following elementary observation makes it possible to choose the characteristic independently of a prospective finite quotient.
 
 #thm([Lemma 2.4.])[
-  (Rank under reduction).  #emph[Let $M$ be an integer matrix whose rows have Euclidean norm at most $sqrt(r)$, where $r gt.eq 1$. For every prime $q > r$, 
+  (Rank under reduction).  #emph[Let $M$ be an integer matrix whose rows have Euclidean norm at most $sqrt(r)$, where $r gt.eq 1$. For every prime $q > r$,
 $ "rank"_(bb(F)_q) M gt.eq 1 / 2 "rank"_(bb(R)) M . $
 
 ]
@@ -438,7 +438,7 @@ The strict angle excess has a uniform metric effect because each small triangle 
 === 4.1 Angle excess and thin diagrams <angle-excess-and-thin-diagrams>
 
 #thm([Lemma 4.1.])[
-  (Uniform thinness of reduced diagrams).  #emph[Choose $M > 0$ larger than every diameter and edge length among the finitely many model triangles and edges. Put 
+  (Uniform thinness of reduced diagrams).  #emph[Choose $M > 0$ larger than every diameter and edge length among the finitely many model triangles and edges. Put
 $ A = M + frac(2 M pi, eta) \, #h(2em) delta = 10 \( A + 1 \) . $
 
  Every geodesic triangle in every reduced diagram is $delta$-thin.]
@@ -494,7 +494,7 @@ $ A = M + frac(2 M pi, eta) \, #h(2em) delta = 10 \( A + 1 \) . $
 The next statement is the form of the classical Morse stability lemma #cite(label("BH1999")) Chapter III.H, Theorem 1.7, p. 401 needed to pass from diagram distances to word distances. We include its proof with constants suited to the present application. In its hypothesis, a subarc means a parameter subinterval of the path; repetitions and retracing are allowed.
 
 #thm([Lemma 4.2.])[
-  (Stability of paths with controlled subarc lengths).  #emph[Let $X$ be a geodesic metric space with $delta$-thin geodesic triangles. Fix $lambda gt.eq 1$ and $C gt.eq 0$. There is $D = D \( delta \, lambda \, C \)$ such that every rectifiable path $sigma$ satisfying 
+  (Stability of paths with controlled subarc lengths).  #emph[Let $X$ be a geodesic metric space with $delta$-thin geodesic triangles. Fix $lambda gt.eq 1$ and $C gt.eq 0$. There is $D = D \( delta \, lambda \, C \)$ such that every rectifiable path $sigma$ satisfying
 #[#set math.equation(numbering: n => "(4.2)")
  $ "length" \( sigma \|_(\[ u \, v \]) \) lt.eq lambda d \( sigma \( u \) \, sigma \( v \) \) + C quad upright("for every ") u lt.eq v $ <eq:all-subarc-bound>]
 
@@ -549,6 +549,5 @@ The next statement is the form of the classical Morse stability lemma #cite(labe
 ]
 
 Together with Propositions 9 and 10, this proves Theorem 3 and completes the proof of Theorem 1.
-
 
 #bibliography("refs.bib", style: "ieee", title: [References])

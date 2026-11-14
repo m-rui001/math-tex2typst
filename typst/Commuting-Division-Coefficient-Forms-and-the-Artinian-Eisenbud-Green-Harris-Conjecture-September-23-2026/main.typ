@@ -23,98 +23,200 @@
 
 == 1 Introduction <sec:introduction>
 
-A homogeneous ideal is constrained both by the equations it contains and by the dimensions of its graded pieces. The Eisenbud–Green–Harris conjecture predicts a particularly concrete form for this constraint: a regular sequence can be replaced by the corresponding pure powers without changing the Hilbert function of a containing ideal. We prove this assertion over the complex numbers in its Artinian formulation, for arbitrary degrees, and then deduce the full characteristic-zero statement for regular sequences of arbitrary positive length. The main construction provides more than the Hilbert-function comparison: it replaces the polynomial variables by commuting linear forms with division-algebra coefficients and retains an ordered basis of the entire polynomial algebra.
+A homogeneous ideal is constrained both by the equations it contains and by the dimensions of its graded pieces.
+  The Eisenbud–Green–Harris conjecture predicts a particularly concrete form for this constraint:
+  a regular sequence can be replaced by the corresponding pure powers without changing the Hilbert function of a
+  containing ideal. We prove this assertion over the complex numbers in its Artinian formulation,
+  for arbitrary degrees, and then deduce the full characteristic-zero statement for regular sequences of arbitrary
+  positive length. The main construction provides more than the Hilbert-function comparison:
+  it replaces the polynomial variables by commuting linear forms with division-algebra coefficients and retains an
+  ordered basis of the entire polynomial algebra.
 
 Let $S = bb(C) \[ x_1 \, dots.h \, x_n \]$ with its standard grading. For a homogeneous ideal $I subset.eq S$, write
 
-$ H_(S \/ I) \( d \) = dim_(bb(C)) \( S \/ I \)_d #h(2em) \( d gt.eq 0 \) . $
+$ H_(S \/ I) \( d \) = dim_(bb(C)) \( S \/ I \)_d wide \( d gt.eq 0 \) . $
 
-A sequence $f_1 \, dots.h \, f_n$ of positive-degree homogeneous elements is #emph[regular] if multiplication by $f_i$ is injective on $S \/ \( f_1 \, dots.h \, f_(i - 1) \)$ for each $i$. Its quotient has Hilbert series
+A sequence $f_1 \, dots.h \, f_n$ of positive-degree homogeneous elements is #emph[regular] if multiplication by
+  $f_i$ is injective on $S \/ \( f_1 \, dots.h \, f_(i - 1) \)$ for each $i$. Its quotient has Hilbert series
 
-$ "Hilb"_(S \/ \( f_1 \, dots.h \, f_n \)) \( t \) = product_(i = 1)^n \( 1 + t + dots.h.c + t^(a_i - 1) \) \, #h(2em) a_i = deg f_i \, $
+$ "Hilb"_(S \/ \( f_1 \, dots.h \, f_n \)) \( t \) = product_(i = 1)^n \( 1 + t + dots.h.c + t^(a_i - 1) \) \,
+  wide a_i = deg f_i \, $
 
 so every ideal containing it has an Artinian quotient.
 
-Eisenbud, Green, and Harris arrived at the conjecture through extensions of Castelnuovo theory. Section 4 of [17] formulates the quadratic case and then proposes the arbitrary-degree pure-power comparison. Their Cayley–Bacharach interpretation already appears in [17] Section 3 and is developed further in [18] Section 2.1. The pure-power model turns the geometric constraints into a problem about monomials with bounded exponents. The construction below supplies that model for an arbitrary homogeneous regular sequence.
+Eisenbud, Green, and Harris arrived at the conjecture through extensions of Castelnuovo theory.
+  Section 4 of [17] formulates the quadratic case and then proposes the arbitrary-degree pure-power comparison.
+  Their Cayley–Bacharach interpretation already appears in [17] Section 3 and is developed further in [18]
+  Section 2.1. The pure-power model turns the geometric constraints into a problem about monomials with bounded
+  exponents. The construction below supplies that model for an arbitrary homogeneous regular sequence.
 
-We first state this construction. If $k \/ bb(C)$ is a field extension and $Delta$ is a central division $k$-algebra, then $Delta \[ x_1 \, dots.h \, x_n \]$ denotes the polynomial algebra with central variables $x_j$. The coefficients in $Delta$ have degree zero. A collection of its linear forms may commute even when their individual coefficients do not.
+We first state this construction. If $k \/ bb(C)$ is a field extension and $Delta$ is a central division
+  $k$-algebra, then $Delta \[ x_1 \, dots.h \, x_n \]$ denotes the polynomial algebra with central variables
+  $x_j$. The coefficients in $Delta$ have degree zero. A collection of its linear forms may commute even when
+  their individual coefficients do not.
 
 #thm([Theorem 1.1.])[
-  (Commuting-form construction).  #emph[Let $n gt.eq 1$, let $2 lt.eq a_1 lt.eq dots.h.c lt.eq a_n$, and let $f_1 \, dots.h \, f_n$ be a homogeneous regular sequence in $bb(C) \[ x_1 \, dots.h \, x_n \]$ with $deg f_i = a_i$. There exist a finitely generated field extension $k \/ bb(C)$, a finite-dimensional central division $k$-algebra $Delta$, and a commutative graded $k$-subalgebra 
+  (Commuting-form construction).  #emph[Let $n gt.eq 1$, let $2 lt.eq a_1 lt.eq dots.h.c lt.eq a_n$,
+    and let $f_1 \, dots.h \, f_n$ be a homogeneous regular sequence in $bb(C) \[ x_1 \, dots.h \, x_n \]$ with
+    $deg f_i = a_i$. There exist a finitely generated field extension $k \/ bb(C)$,
+    a finite-dimensional central division $k$-algebra $Delta$, and a commutative graded $k$-subalgebra
 $ k \[ x_1 \, dots.h \, x_n \] subset.eq A subset.eq Delta \[ x_1 \, dots.h \, x_n \] $
 
- generated by finitely many pairwise commuting linear forms, with distinguished $t_1 \, dots.h \, t_n in A_1$, such that 
+ generated by finitely many pairwise commuting linear forms, with distinguished $t_1 \, dots.h \, t_n in A_1$, such that
 #[#set math.equation(numbering: n => "(1.1)")
- $ t_i^(a_i) = c_i f_i + sum_(l < i) B_(i l) f_l + sum_(d > i) C_(i d) t_d #h(2em) \( 1 lt.eq i lt.eq n \) . $ <eq:construction-triangular>]
+ $ t_i^(a_i) = c_i f_i + sum_(l < i) B_(i l) f_l + sum_(d > i) C_(i d) t_d wide \( 1 lt.eq i lt.eq n \) .
+   $ <eq:construction-triangular>]
 
- Here $c_i in k^times$, $B_(i l) in A_(a_i - a_l)$, and $C_(i d) in A_(a_i - 1)$. Moreover, $A$ is finite over $k \[ x \]$, and 
+ Here $c_i in k^times$, $B_(i l) in A_(a_i - a_l)$, and $C_(i d) in A_(a_i - 1)$.
+   Moreover, $A$ is finite over $k \[ x \]$, and
 $ { t_1^(alpha_1) dots.h.c t_n^(alpha_n) : alpha in bb(Z)_(gt.eq 0)^n } $
 
  is a basis of the full polynomial algebra $Delta \[ x \]$ as a left $Delta$-vector space.]
 ] <thm:construction>
 
-The basis is not restricted to the complete-intersection quotient. In particular, it describes every graded piece before any additional ideal is imposed. This is the interface used for resolution transfer in the companion paper [30] Lemma 4.1. For Hilbert functions, a least-exponent argument already gives the following consequence.
+The basis is not restricted to the complete-intersection quotient.
+  In particular, it describes every graded piece before any additional ideal is imposed.
+  This is the interface used for resolution transfer in the companion paper [30] Lemma 4.1.
+  For Hilbert functions, a least-exponent argument already gives the following consequence.
 
 #thm([Corollary 1.2.])[
-  (Artinian Eisenbud–Green–Harris).  #emph[Let $n gt.eq 1$ and $2 lt.eq a_1 lt.eq dots.h.c lt.eq a_n$. Suppose that a homogeneous ideal $I subset.eq bb(C) \[ x_1 \, dots.h \, x_n \]$ contains a regular sequence $f_1 \, dots.h \, f_n$ with $deg f_i = a_i$. There is a monomial ideal $J subset.eq bb(C) \[ x_1 \, dots.h \, x_n \]$ such that 
-$ x_i^(a_i) in J quad \( 1 lt.eq i lt.eq n \) \, #h(2em) H_(S \/ J) \( d \) = H_(S \/ I) \( d \) quad upright("for every ") d gt.eq 0 . $
+  (Artinian Eisenbud–Green–Harris).  #emph[Let $n gt.eq 1$ and $2 lt.eq a_1 lt.eq dots.h.c lt.eq a_n$.
+    Suppose that a homogeneous ideal $I subset.eq bb(C) \[ x_1 \, dots.h \, x_n \]$ contains a regular sequence
+    $f_1 \, dots.h \, f_n$ with $deg f_i = a_i$. There is a monomial ideal $J subset.eq
+    bb(C) \[ x_1 \, dots.h \, x_n \]$ such that
+$ x_i^(a_i) in J quad \( 1 lt.eq i lt.eq n \) \, wide H_(S \/ J) \( d \) = H_(S \/ I) \( d \) quad
+  upright("for every ") d gt.eq 0 . $
 
 ]
 ] <thm:main>
 
-Thus the Artinian Eisenbud–Green–Harris conjecture is resolved positively over $bb(C)$. One ideal $J$ realizes the entire Hilbert function, and there is no restriction on the further generators of $I$.
+Thus the Artinian Eisenbud–Green–Harris conjecture is resolved positively over $bb(C)$.
+  One ideal $J$ realizes the entire Hilbert function, and there is no restriction on the further generators of $I$.
 
-To describe the lex-plus-powers formulation, order variables by $x_1 > dots.h.c > x_n$, and let $J$ be the monomial ideal in the corollary. In degree $d$, among monomials outside $P = \( x_1^(a_1) \, dots.h \, x_n^(a_n) \)$, take the $q_d = dim_(bb(C)) J_d - dim_(bb(C)) P_d$ lexicographically largest ones. The Clements–Lindström theorem says that these degreewise choices, together with $P$, form an ideal whenever the Hilbert function comes from an ideal containing $P$ [13]. Thus Corollary 2 also gives one lex-plus-powers ideal with the entire prescribed Hilbert function. We use the exact compression statement in [7] Theorem 2.1(i); it is not a premise of Theorem 1.
+To describe the lex-plus-powers formulation, order variables by $x_1 > dots.h.c > x_n$,
+  and let $J$ be the monomial ideal in the corollary. In degree $d$,
+  among monomials outside $P = \( x_1^(a_1) \, dots.h \, x_n^(a_n) \)$, take the $q_d = dim_(bb(C)) J_d -
+  dim_(bb(C)) P_d$ lexicographically largest ones. The Clements–Lindström theorem says that these degreewise
+  choices, together with $P$, form an ideal whenever the Hilbert function comes from an ideal containing $P$ [13].
+  Thus Corollary 2 also gives one lex-plus-powers ideal with the entire prescribed Hilbert function.
+  We use the exact compression statement in [7] Theorem 2.1(i); it is not a premise of Theorem 1.
 
 The Hilbert-function conclusion is not restricted to Artinian quotients or to the coefficient field $bb(C)$.
 
 #thm([Corollary 1.3.])[
-  (Eisenbud–Green–Harris in characteristic zero).  #emph[Let $F$ be a field of characteristic zero, let $S_F = F \[ x_1 \, dots.h \, x_n \]$ be standard graded, and let 
-$ 1 lt.eq c lt.eq n \, #h(2em) 2 lt.eq a_1 lt.eq dots.h.c lt.eq a_c . $
+  (Eisenbud–Green–Harris in characteristic zero).  #emph[Let $F$ be a field of characteristic zero, let $S_F =
+    F \[ x_1 \, dots.h \, x_n \]$ be standard graded, and let
+$ 1 lt.eq c lt.eq n \, wide 2 lt.eq a_1 lt.eq dots.h.c lt.eq a_c . $
 
- If a homogeneous ideal $I subset.eq S_F$ contains a homogeneous regular sequence $f_1 \, dots.h \, f_c$ with $deg f_i = a_i$, there is a monomial ideal $J subset.eq S_F$ containing $P_F = \( x_1^(a_1) \, dots.h \, x_c^(a_c) \)$ such that 
-$ dim_F \( S_F \/ J \)_d = dim_F \( S_F \/ I \)_d #h(2em) \( d gt.eq 0 \) . $
+ If a homogeneous ideal $I subset.eq S_F$ contains a homogeneous regular sequence $f_1 \, dots.h \,
+   f_c$ with $deg f_i = a_i$, there is a monomial ideal $J subset.eq
+   S_F$ containing $P_F = \( x_1^(a_1) \, dots.h \, x_c^(a_c) \)$ such that
+$ dim_F \( S_F \/ J \)_d = dim_F \( S_F \/ I \)_d wide \( d gt.eq 0 \) . $
 
- Moreover, $J$ may be chosen lex-plus-powers: in each degree its monomials outside $P_F$ are the lexicographically greatest $dim_F I_d - dim_F \( P_F \)_d$ monomials outside $P_F$, for the order $x_1 > dots.h.c > x_n$.]
+ Moreover, $J$ may be chosen lex-plus-powers: in each degree its monomials outside $P_F$ are the lexicographically
+   greatest $dim_F I_d - dim_F \( P_F \)_d$ monomials outside $P_F$, for the order $x_1 > dots.h.c > x_n$.]
 ] <cor:characteristic-zero>
 
-The proof in Section 9.1 combines the Artinian result with a reduction to full regular sequences and descent through a finitely generated coefficient field. The division-algebra construction of Theorem 1 itself concerns full regular sequences over $bb(C)$. Section 9 also gives local-cohomology inequalities for the resulting lex-plus-powers ideal and a scheme-theoretic quadratic Cayley–Bacharach bound.
+The proof in Section 9.1 combines the Artinian result with a reduction to full regular sequences and descent
+  through a finitely generated coefficient field. The division-algebra construction of Theorem 1 itself concerns
+  full regular sequences over $bb(C)$. Section 9 also gives local-cohomology inequalities for the resulting
+  lex-plus-powers ideal and a scheme-theoretic quadratic Cayley–Bacharach bound.
 
 === 1.1 Earlier results on EGH <earlier-results-on-egh>
 
-Results depending only on the degrees of the regular sequence have covered important ranges. Caviglia and Maclagan proved EGH when $a_i > sum_(j < i) \( a_j - 1 \)$ for $i gt.eq 3$ [9]; Caviglia and De Stefani extended this to the non-strict inequalities [6] Theorem A. For quadratic sequences, Chen proved the case of at most four variables [11] Theorem 2.2. Caviglia, De Stefani, and Sbarra give an independent proof for five quadrics, alongside a systematic account of the conjecture [7] Theorem 4.14.
+Results depending only on the degrees of the regular sequence have covered important ranges.
+  Caviglia and Maclagan proved EGH when $a_i > sum_(j < i) \( a_j - 1 \)$ for $i gt.eq 3$ [9];
+  Caviglia and De Stefani extended this to the non-strict inequalities [6] Theorem A.
+  For quadratic sequences, Chen proved the case of at most four variables [11] Theorem 2.2.
+  Caviglia, De Stefani, and Sbarra give an independent proof for five quadrics,
+  alongside a systematic account of the conjecture [7] Theorem 4.14.
 
-Other results use additional structure of the forms or the containing ideal. Abedelfatah proves EGH when all forms of the regular sequence split into linear factors [1] Corollary 4.3. Cooper treats subsets of finite reduced complete intersections of types $\( a \, b \)$, $\( 2 \, a \, b \)$, and $\( 3 \, a \, a \)$ [14]. Chong uses liaison to treat sequentially bounded licci ideals with a minimal first link and a minimally contained regular sequence; his results include height-three Gorenstein ideals under the corresponding minimal-containment condition [12] Theorem 3 and Corollary 11.
+Other results use additional structure of the forms or the containing ideal.
+  Abedelfatah proves EGH when all forms of the regular sequence split into linear factors [1] Corollary 4.3.
+  Cooper treats subsets of finite reduced complete intersections of types $\( a \, b \)$, $\( 2 \, a \, b \)$,
+  and $\( 3 \, a \, a \)$ [14]. Chong uses liaison to treat sequentially bounded licci ideals with a minimal first
+  link and a minimally contained regular sequence; his results include height-three Gorenstein ideals under the
+  corresponding minimal-containment condition [12] Theorem 3 and Corollary 11.
 
-Recent work addresses both small-degree cases and asymptotic ranges. Abedelfatah proves EGH for quadratic almost complete intersections in six variables [2] Theorem 4.3. Kuzmanovski obtains Hilbert-function comparisons through prescribed degree ranges when the initial degree is sufficiently large [26] Theorems 1.4–1.5. The construction here applies to arbitrary regular sequences of the stated degrees and gives one ideal with the same Hilbert function in every degree.
+Recent work addresses both small-degree cases and asymptotic ranges.
+  Abedelfatah proves EGH for quadratic almost complete intersections in six variables [2] Theorem 4.3.
+  Kuzmanovski obtains Hilbert-function comparisons through prescribed degree ranges when the initial degree is
+  sufficiently large [26] Theorems 1.4–1.5. The construction here applies to arbitrary regular sequences of the
+  stated degrees and gives one ideal with the same Hilbert function in every degree.
 
 === 1.2 Proof strategy and its methods <proof-strategy-and-its-methods>
 
-The triangular identities in Theorem 1 make the $t_i$ a regular system of parameters on the finite module $Delta \[ x \]$ over $A$. Since they have degree one, a Hilbert-series count gives the full ordered basis. Least exponents of elements of an extended ideal then form one upward-closed set, defining the ordinary monomial ideal. Section 2 establishes this algebraic reduction before the construction begins.
+The triangular identities in Theorem 1 make the $t_i$ a regular system of parameters on the finite module
+  $Delta \[ x \]$ over $A$. Since they have degree one, a Hilbert-series count gives the full ordered basis.
+  Least exponents of elements of an extended ideal then form one upward-closed set,
+  defining the ordinary monomial ideal. Section 2 establishes this algebraic reduction before the construction begins.
 
-We construct the rows from $i = n$ down to $i = 1$. At a stage with $b = a_i$, the aim is to express a suitable right-hand side of the new row as a sum $ell_1^b + dots.h.c + ell_M^b$ of powers of existing forms, then combine these powers two at a time until the sum becomes $t_i^b$. Two difficulties govern the construction: the binary addition matrices must have coefficients in a division algebra containing the old coefficients, and the earlier power identities must remain available when the next degree is smaller.
+We construct the rows from $i = n$ down to $i = 1$. At a stage with $b = a_i$,
+  the aim is to express a suitable right-hand side of the new row as a sum $ell_1^b + dots.h.c +
+  ell_M^b$ of powers of existing forms, then combine these powers two at a time until the sum becomes $t_i^b$.
+  Two difficulties govern the construction: the binary addition matrices must have coefficients in a division
+  algebra containing the old coefficients, and the earlier power identities must remain available when the next
+  degree is smaller.
 
-To retain those identities, we use a finite-dimensional space $U$ of formal linear forms containing the variables $x_j$ and the forms $t_d$ already constructed, together with an ideal $Q subset.eq "Sym" U$ generated in degrees one and two. Evaluation recovers the actual commuting forms, and every earlier identity holds modulo $Q$. Let $frak(j)_b$ be the degree-$b$ part of
+To retain those identities, we use a finite-dimensional space $U$ of formal linear forms containing the variables
+  $x_j$ and the forms $t_d$ already constructed, together with an ideal $Q subset.eq "Sym"
+  U$ generated in degrees one and two. Evaluation recovers the actual commuting forms,
+  and every earlier identity holds modulo $Q$. Let $frak(j)_b$ be the degree-$b$ part of
 
 $ \( Q \, f_1 \, dots.h \, f_i \, t_(i + 1) \, dots.h \, t_n \) subset.eq "Sym" U . $
 
-A linear functional $lambda$ on $"Sym"^b U$ that annihilates $frak(j)_b$ defines the degree-$b$ polynomial $w_lambda \( ell \) = lambda \( ell^b \)$ on $U$. If $W$ is their space, then
+A linear functional $lambda$ on $"Sym"^b U$ that annihilates $frak(j)_b$ defines the degree-$b$ polynomial
+  $w_lambda \( ell \) = lambda \( ell^b \)$ on $U$. If $W$ is their space, then
 
-$ sum_(m = 1)^M ell_m^b in frak(j)_b quad arrow.l.r.double quad sum_(m = 1)^M w \( ell_m \) = 0 #h(2em) \( w in W \) . $
+$ sum_(m = 1)^M ell_m^b in frak(j)_b quad arrow.l.r.double quad sum_(m = 1)^M w \( ell_m \) = 0 wide \( w in W \) . $
 
 Let $X subset.eq bb(P) \( U^(xor M) \)$ be the projectivization of the common zero set of these equations.
 
-The geometric safeguard is that the projective zero set of $Q$ contains no curve of bounded small degree. Section 3 constructs such data from independent quadratic equations, proves that finite homogeneous enlargement preserves the property, and uses it to show that every nonzero $w in W$ has an irreducible factor of multiplicity one. For sufficiently many blocks, Section 4 then proves that $X$ is an integral complete intersection and that the nonzero cone over its smooth locus has arbitrarily high connectivity. The argument allows nonisolated singularities and requires only one simple factor in each member of $W$.
+The geometric safeguard is that the projective zero set of $Q$ contains no curve of bounded small degree.
+  Section 3 constructs such data from independent quadratic equations,
+  proves that finite homogeneous enlargement preserves the property,
+  and uses it to show that every nonzero $w in W$ has an irreducible factor of multiplicity one.
+  For sufficiently many blocks, Section 4 then proves that $X$ is an integral complete intersection and that the
+  nonzero cone over its smooth locus has arbitrarily high connectivity.
+  The argument allows nonisolated singularities and requires only one simple factor in each member of $W$.
 
-The binary addition matrices come from a curve with three sections satisfying $z^b = u^b + v^b$. A generic degree-zero line bundle makes multiplication by these sections linear in $u \, v$. This use of matrix pencils belongs to the generalized Clifford-algebra and vector-bundle correspondence developed by van den Bergh [35] and Kulkarni [25]; the trivial finite-pushforward formulation appears in [15] Proposition 2.5. Section 5 constructs the required curve and pencils explicitly, together with a finite group action. A matrix representation alone does not make the coefficient algebra division.
+The binary addition matrices come from a curve with three sections satisfying $z^b = u^b + v^b$.
+  A generic degree-zero line bundle makes multiplication by these sections linear in $u \, v$.
+  This use of matrix pencils belongs to the generalized Clifford-algebra and vector-bundle correspondence
+  developed by van den Bergh [35] and Kulkarni [25]; the trivial finite-pushforward formulation appears in [15]
+  Proposition 2.5. Section 5 constructs the required curve and pencils explicitly,
+  together with a finite group action. A matrix representation alone does not make the coefficient algebra division.
 
-The two Picard varieties of the curve serve different purposes: degree-zero line bundles parametrize the matrices, while the degree-one Picard variety supplies a free group action and maps carrying prescribed characters. Equivariant descent first gives a central simple algebra. To prove that it is division, we show that the dimension of every finite right module is divisible by the dimension of the algebra, both measured over its center. A nonzero proper right ideal would contradict this divisibility.
+The two Picard varieties of the curve serve different purposes:
+  degree-zero line bundles parametrize the matrices, while the degree-one Picard variety supplies a free group
+  action and maps carrying prescribed characters. Equivariant descent first gives a central simple algebra.
+  To prove that it is division, we show that the dimension of every finite right module is divisible by the
+  dimension of the algebra, both measured over its center. A nonzero proper right ideal would contradict this
+  divisibility.
 
-Section 6 uses a determinant-of-cohomology correction to relate module dimensions to Euler characteristics on a product of Picard varieties. The free action also gives divisibility of Euler characteristics for the corresponding family over $X$, after twisting by $cal(O)_X \( l \)$. The correction uses the formalism of Knudsen and Mumford [24], and its numerical effect follows from Grothendieck’s Riemann–Roch theorem [5]. Section 7 uses the character maps, connectivity of the smooth cone, and integral topological $K$-theory to compare these Euler characteristics and prove that the algebra is division while retaining the old coefficient algebra.
+Section 6 uses a determinant-of-cohomology correction to relate module dimensions to Euler characteristics on a
+  product of Picard varieties. The free action also gives divisibility of Euler characteristics for the
+  corresponding family over $X$, after twisting by $cal(O)_X \( l \)$.
+  The correction uses the formalism of Knudsen and Mumford [24],
+  and its numerical effect follows from Grothendieck’s Riemann–Roch theorem [5].
+  Section 7 uses the character maps, connectivity of the smooth cone,
+  and integral topological $K$-theory to compare these Euler characteristics and prove that the algebra is
+  division while retaining the old coefficient algebra.
 
-The use of highly connected algebraic parameter spaces and finite quotients is related to the Godeaux–Serre approximation method [34] Section 5. Topological restrictions on an algebraic index have a close precedent in Antieau and Williams [3] Theorem 3.4. Here the determinant correction and integral $K$-theory pushforward separate divisibility by the new group order from divisibility by the old algebra’s degree. Consequently the required connectivity can be fixed before enlarging the number of summands. Finally, Section 8 verifies the characters that make the new output invariant and retains the new row through a finite extension defined by linear and quadratic relations. This closes the induction.
+The use of highly connected algebraic parameter spaces and finite quotients is related to the Godeaux–Serre
+  approximation method [34] Section 5. Topological restrictions on an algebraic index have a close precedent in
+  Antieau and Williams [3] Theorem 3.4. Here the determinant correction and integral $K$-theory pushforward
+  separate divisibility by the new group order from divisibility by the old algebra’s degree.
+  Consequently the required connectivity can be fixed before enlarging the number of summands.
+  Finally, Section 8 verifies the characters that make the new output invariant and retains the new row through a
+  finite extension defined by linear and quadratic relations. This closes the induction.
 
-When every $a_i = 2$, Corollary 2 gives the quadratic assertion. The complete-intersection Hilbert series is then $\( 1 + t \)^n$, and the standard monomials of a monomial ideal containing $x_1^2 \, dots.h \, x_n^2$ correspond to a family of subsets of ${ 1 \, dots.h \, n }$ closed under taking subsets. Here this special case follows from the same ordered-basis construction as all other degree sequences; no separate quadratic theorem is required.
+When every $a_i = 2$, Corollary 2 gives the quadratic assertion.
+  The complete-intersection Hilbert series is then $\( 1 + t \)^n$,
+  and the standard monomials of a monomial ideal containing $x_1^2 \, dots.h \,
+  x_n^2$ correspond to a family of subsets of ${ 1 \, dots.h \, n }$ closed under taking subsets.
+  Here this special case follows from the same ordered-basis construction as all other degree sequences;
+  no separate quadratic theorem is required.
 
 Figure 1 records the dependencies within one induction step and the return to its hypotheses before the next row.
 
@@ -141,30 +243,63 @@ Figure 1 records the dependencies within one induction step and the return to i
 
 === 1.3 Conventions and standard tools <subsec:conventions>
 
-Every center $k$ used in the construction is a finitely generated field extension of the original $bb(C)$. The degree of a central simple algebra is the square root of its dimension over its center. Linear forms with division-algebra coefficients always commute as whole elements of the polynomial algebra; their individual coefficients need not commute. When new tensor factors are used, we will specify the stronger coefficientwise commutativity available between distinct factors.
+Every center $k$ used in the construction is a finitely generated field extension of the original $bb(C)$.
+  The degree of a central simple algebra is the square root of its dimension over its center.
+  Linear forms with division-algebra coefficients always commute as whole elements of the polynomial algebra;
+  their individual coefficients need not commute. When new tensor factors are used,
+  we will specify the stronger coefficientwise commutativity available between distinct factors.
 
-Each such $k$ admits an abstract embedding into $bb(C)$: its algebraic closure has the same transcendence degree over $bb(Q)$ as $bb(C)$. These embeddings need not fix the original constants. They are used only for complex topology and numerical base-change comparisons, after the relevant geometric hypotheses have been verified. All actual algebra extensions continue to contain the original $bb(C)$ centrally. In particular, division is proved over the unembedded field by rank divisibility, never inferred from a complex specialization. Embeddings chosen at successive stages need not extend one another.
+Each such $k$ admits an abstract embedding into $bb(C)$: its algebraic closure has the same transcendence degree
+  over $bb(Q)$ as $bb(C)$. These embeddings need not fix the original constants.
+  They are used only for complex topology and numerical base-change comparisons,
+  after the relevant geometric hypotheses have been verified.
+  All actual algebra extensions continue to contain the original $bb(C)$ centrally.
+  In particular, division is proved over the unembedded field by rank divisibility,
+  never inferred from a complex specialization. Embeddings chosen at successive stages need not extend one another.
 
-Projective spaces parameterize lines. For a vector space $U$ of formal forms, $"Sym" U$ gives those forms degree one, and its geometric projective zero sets lie in $bb(P) \( U^or \)$. Polynomial functions $w$ on $U$, in contrast, are evaluated on the forms $ell in U$. We distinguish these two roles when using differentiation.
+Projective spaces parameterize lines. For a vector space $U$ of formal forms,
+  $"Sym" U$ gives those forms degree one, and its geometric projective zero sets lie in $bb(P) \( U^or \)$.
+  Polynomial functions $w$ on $U$, in contrast, are evaluated on the forms $ell in U$.
+  We distinguish these two roles when using differentiation.
 
-We use standard coherent-sheaf and topological $K$-theory with their usual complex orientations. Pullbacks of coherent classes are derived whenever ordinary pullback is not exact. On smooth quasi-projective varieties, finite locally free resolutions give the corresponding topological $K$-classes. For smooth projective varieties, the Riemann–Roch formulas are
+We use standard coherent-sheaf and topological $K$-theory with their usual complex orientations.
+  Pullbacks of coherent classes are derived whenever ordinary pullback is not exact.
+  On smooth quasi-projective varieties, finite locally free resolutions give the corresponding topological
+  $K$-classes. For smooth projective varieties, the Riemann–Roch formulas are
 
-$ chi \( V \, alpha \) = integral_V "ch" \( alpha \) "td" \( V \) \, #h(2em) "ch" \( R p_(*) alpha \) = p_(*) #scale(x: 120%, y: 120%)[\(] "ch" \( alpha \) "td" \( T_p \) #scale(x: 120%, y: 120%)[\)] $
+$ chi \( V \, alpha \) = integral_V "ch" \( alpha \) "td" \( V \) \, wide "ch" \( R p_(*) alpha \) =
+  p_(*) #scale(x: 120%, y: 120%)[\(] "ch" \( alpha \) "td" \( T_p \) #scale(x: 120%, y: 120%)[\)] $
 
-for projection $p$ off a fixed smooth projective factor. These formulas apply to coherent classes, without assuming that their individual higher direct images are locally free; see [5] Sections 4, 6, and 7. The singular-space Euler-characteristic argument needed below is proved separately. The integral projective-space basis and complex Thom class in topological $K$-theory are recalled at their point of use from [23].
+for projection $p$ off a fixed smooth projective factor. These formulas apply to coherent classes,
+  without assuming that their individual higher direct images are locally free; see [5] Sections 4, 6, and 7.
+  The singular-space Euler-characteristic argument needed below is proved separately.
+  The integral projective-space basis and complex Thom class in topological $K$-theory are recalled at their point
+  of use from [23].
 
 == 2 Division coefficients and monomial ideals <sec:reduction>
 
-We first reduce the Hilbert-function problem to identities among commuting linear forms. Their coefficients will lie in a division algebra, but the linear forms themselves will commute. This distinction lets us use commutative algebra to obtain a basis and division-algebra linear algebra to count its least exponents.
+We first reduce the Hilbert-function problem to identities among commuting linear forms.
+  Their coefficients will lie in a division algebra, but the linear forms themselves will commute.
+  This distinction lets us use commutative algebra to obtain a basis and division-algebra linear algebra to count
+  its least exponents.
 
-Throughout, a field $k$ extending the original $bb(C)$ is identified with a central subfield of every $k$-algebra in use. In $Delta \[ x_1 \, dots.h \, x_n \]$, the variables $x_j$ are central and have degree one, and elements of $Delta$ have degree zero.
+Throughout, a field $k$ extending the original $bb(C)$ is identified with a central subfield of every $k$-algebra
+  in use. In $Delta \[ x_1 \, dots.h \, x_n \]$, the variables $x_j$ are central and have degree one,
+  and elements of $Delta$ have degree zero.
 
 #thm([Lemma 2.1.])[
-  (Ordered-basis criterion).  #emph[Let $f_1 \, dots.h \, f_n$ be a homogeneous regular sequence in $S = bb(C) \[ x_1 \, dots.h \, x_n \]$, with $deg f_i = a_i > 0$. Suppose that a field extension $k \/ bb(C)$ and a finite-dimensional central division $k$-algebra $Delta$ have the following property. There is a finite collection of pairwise commuting elements of $Delta \[ x_1 \, dots.h \, x_n \]_1$, containing $x_1 \, dots.h \, x_n$, whose generated commutative $k$-algebra $A$ contains elements $t_1 \, dots.h \, t_n$ of degree one satisfying 
+  (Ordered-basis criterion).  #emph[Let $f_1 \, dots.h \, f_n$ be a homogeneous regular sequence in $S =
+    bb(C) \[ x_1 \, dots.h \, x_n \]$, with $deg f_i = a_i > 0$.
+    Suppose that a field extension $k \/ bb(C)$ and a finite-dimensional central division $k$-algebra $Delta$ have
+    the following property. There is a finite collection of pairwise commuting elements of
+    $Delta \[ x_1 \, dots.h \, x_n \]_1$, containing $x_1 \, dots.h \, x_n$,
+    whose generated commutative $k$-algebra $A$ contains elements $t_1 \, dots.h \, t_n$ of degree one satisfying
 #[#set math.equation(numbering: n => "(2.1)")
- $ t_i^(a_i) = c_i f_i + sum_(l < i) B_(i l) f_l + sum_(d > i) C_(i d) t_d \, #h(2em) 1 lt.eq i lt.eq n \, $ <eq:triangular>]
+ $ t_i^(a_i) = c_i f_i + sum_(l < i) B_(i l) f_l + sum_(d > i) C_(i d) t_d \, wide 1 lt.eq i lt.eq n \,
+   $ <eq:triangular>]
 
- where $c_i in k^times$ and all terms are homogeneous, with $B_(i l) \, C_(i d) in A$. Then $A$ is finite over $k \[ x_1 \, dots.h \, x_n \]$, and 
+ where $c_i in k^times$ and all terms are homogeneous, with $B_(i l) \, C_(i d) in A$.
+   Then $A$ is finite over $k \[ x_1 \, dots.h \, x_n \]$, and
 $ { t_1^(alpha_1) dots.h.c t_n^(alpha_n) : alpha in bb(Z)_(gt.eq 0)^n } $
 
  is a basis of $Delta \[ x_1 \, dots.h \, x_n \]$ as a left $Delta$-vector space.]
@@ -173,51 +308,93 @@ $ { t_1^(alpha_1) dots.h.c t_n^(alpha_n) : alpha in bb(Z)_(gt.eq 0)^n } $
 #proof[
   The regular sequence gives
   #[#set math.equation(numbering: n => "(2.2)")
-   $ "Hilb"_(S \/ \( f_1 \, dots.h \, f_n \)) \( t \) = frac(product_(i = 1)^n \( 1 - t^(a_i) \), \( 1 - t \)^n) = product_(i = 1)^n \( 1 + t + dots.h.c + t^(a_i - 1) \) . $ <eq:regular-hilbert>]
+   $ "Hilb"_(S \/ \( f_1 \, dots.h \, f_n \)) \( t \) = frac(product_(i = 1)^n \( 1 - t^(a_i) \), \( 1 - t \)^n) =
+     product_(i = 1)^n \( 1 + t + dots.h.c + t^(a_i - 1) \) . $ <eq:regular-hilbert>]
   Thus the $f_i$ have no common projective zero, and this remains true after any field extension.
   Put $N = Delta \[ x_1 \, dots.h \, x_n \]$, considered as a right $A$-module. The inclusions
   $ k \[ x_1 \, dots.h \, x_n \] subset.eq A subset.eq N $
-  make $A$ a submodule of the finite free $k \[ x \]$-module $N$. Consequently $A$ is finite over $k \[ x \]$, and both $A$ and the finite right $A$-module $N$ are Noetherian.
-  We claim that $t_1 \, dots.h \, t_n$ is an $N$-regular sequence. First, $A \/ \( t_1 \, dots.h \, t_n \)$ is zero dimensional. Indeed, at a geometric point where all $t_j$ vanish, the identities (2.1), read in increasing order of $i$, give $f_1 = dots.h.c = f_n = 0$. Equation (2.2) then forces all $x_j = 0$, and finiteness over $k \[ x \]$ gives the asserted zero-dimensional quotient.
-  Let $frak(m) = A_(> 0)$, the graded maximal ideal. The central variables $x_1 \, dots.h \, x_n$ form an $N$-regular sequence because $N = Delta \[ x \]$ is free over $k \[ x \]$. Localization preserves the successive injections. Their quotient is $Delta$, on which every positive-degree element of $A$ acts trivially, so it remains nonzero on localization. Thus the sequence is also $N_(frak(m))$-regular. The support dimension of $N_(frak(m))$ is at most $n$ by finiteness over $k \[ x \]$. It therefore equals its depth $n$. The system-of-parameters theorem for finite Cohen–Macaulay modules now implies that $t_1 \, dots.h \, t_n$ is regular on $N_(frak(m))$; see [33] Proposition 10.103.4, Tag 00N6. It is regular on the graded module $N$ as well. To see the localization step explicitly, a nonzero homogeneous element of any graded kernel or quotient cannot be annihilated by an element of $A \\ frak(m)$: the nonzero constant term of that element would survive in the lowest-degree component.
+  make $A$ a submodule of the finite free $k \[ x \]$-module $N$.
+    Consequently $A$ is finite over $k \[ x \]$, and both $A$ and the finite right $A$-module $N$ are Noetherian.
+  We claim that $t_1 \, dots.h \, t_n$ is an $N$-regular sequence.
+    First, $A \/ \( t_1 \, dots.h \, t_n \)$ is zero dimensional.
+    Indeed, at a geometric point where all $t_j$ vanish, the identities (2.1), read in increasing order of $i$,
+    give $f_1 = dots.h.c = f_n = 0$. Equation (2.2) then forces all $x_j = 0$,
+    and finiteness over $k \[ x \]$ gives the asserted zero-dimensional quotient.
+  Let $frak(m) = A_(> 0)$, the graded maximal ideal. The central variables $x_1 \, dots.h \,
+    x_n$ form an $N$-regular sequence because $N = Delta \[ x \]$ is free over $k \[ x \]$.
+    Localization preserves the successive injections. Their quotient is $Delta$,
+    on which every positive-degree element of $A$ acts trivially, so it remains nonzero on localization.
+    Thus the sequence is also $N_(frak(m))$-regular. The support dimension of $N_(frak(m))$ is at most $n$ by
+    finiteness over $k \[ x \]$. It therefore equals its depth $n$.
+    The system-of-parameters theorem for finite Cohen–Macaulay modules now implies that $t_1 \, dots.h \,
+    t_n$ is regular on $N_(frak(m))$; see [33] Proposition 10.103.4, Tag 00N6.
+    It is regular on the graded module $N$ as well. To see the localization step explicitly,
+    a nonzero homogeneous element of any graded kernel or quotient cannot be annihilated by an element of
+    $A \\ frak(m)$: the nonzero constant term of that element would survive in the lowest-degree component.
   Since all the $t_j$ have degree one,
   $ "Hilb"_(N \/ sum_j N t_j) \( t \) = \( 1 - t \)^n "Hilb"_N \( t \) = dim_k Delta . $
-  Its degree-zero part is already $Delta$. Hence, in every positive degree, $N_d = sum_j N_(d - 1) t_j$. Induction on degree, using commutativity of the $t_j$, shows that
+  Its degree-zero part is already $Delta$. Hence, in every positive degree, $N_d = sum_j N_(d - 1) t_j$.
+    Induction on degree, using commutativity of the $t_j$, shows that
   $ { thin t^alpha = t_1^(alpha_1) dots.h.c t_n^(alpha_n) : alpha in bb(Z)_(gt.eq 0)^n thin } $
-  spans $N$ with coefficients on the left in $Delta$. In degree $d$ its cardinality is $binom(n + d - 1, n - 1) = dim_Delta N_d$; it is therefore a left $Delta$-basis. ◻
+  spans $N$ with coefficients on the left in $Delta$. In degree $d$ its cardinality is $binom(n + d - 1, n - 1) =
+    dim_Delta N_d$; it is therefore a left $Delta$-basis. ◻
 ]
 
-The full basis permits a single exponent comparison for every element of an ideal. We now extract the Hilbert-function consequence; no further geometric input is needed.
+The full basis permits a single exponent comparison for every element of an ideal.
+  We now extract the Hilbert-function consequence; no further geometric input is needed.
 
 #thm([Proposition 2.2.])[
-  (Monomial extraction).  #emph[Let $f_1 \, dots.h \, f_n$, $k$, $Delta$, $A$, and $t_1 \, dots.h \, t_n$ satisfy the hypotheses of Lemma 4. For every homogeneous ideal $I subset.eq S = bb(C) \[ x_1 \, dots.h \, x_n \]$ containing the $f_i$, there is one monomial ideal $J subset.eq S$ such that 
-$ x_i^(a_i) in J quad \( 1 lt.eq i lt.eq n \) \, #h(2em) dim_(bb(C)) \( S \/ J \)_d = dim_(bb(C)) \( S \/ I \)_d quad \( d gt.eq 0 \) . $
+  (Monomial extraction).  #emph[Let $f_1 \, dots.h \, f_n$, $k$, $Delta$, $A$, and $t_1 \, dots.h \,
+    t_n$ satisfy the hypotheses of Lemma 4. For every homogeneous ideal $I subset.eq S =
+    bb(C) \[ x_1 \, dots.h \, x_n \]$ containing the $f_i$, there is one monomial ideal $J subset.eq S$ such that
+$ x_i^(a_i) in J quad \( 1 lt.eq i lt.eq n \) \, wide dim_(bb(C)) \( S \/ J \)_d =
+  dim_(bb(C)) \( S \/ I \)_d quad \( d gt.eq 0 \) . $
 
 ]
 ] <prop:monomial-reduction>
 
 #proof[
   Put $N = Delta \[ x_1 \, dots.h \, x_n \]$, with the full left $Delta$-basis of Lemma 4.
-  Extend $I$ to the two-sided ideal $Delta I$ of $N$. For each nonzero homogeneous element of this ideal, take the least exponent in its $t$-basis expansion under lexicographic comparison of the coordinates in the order
+  Extend $I$ to the two-sided ideal $Delta I$ of $N$. For each nonzero homogeneous element of this ideal,
+    take the least exponent in its $t$-basis expansion under lexicographic comparison of the coordinates in the order
   $ alpha_n \, alpha_(n - 1) \, dots.h \, alpha_1 . $
-  Let $E subset.eq bb(Z)_(gt.eq 0)^n$ be the set of all such exponents. Right multiplication by $t_j$ translates every exponent by the same vector $upright(bold(e))_j$, without moving any left coefficient. Thus $E + upright(bold(e))_j subset.eq E$. In each degree, elimination over the division algebra $Delta$ shows that the number of exponents in $E$ is the left dimension of $\( Delta I \)_d$.
+  Let $E subset.eq bb(Z)_(gt.eq 0)^n$ be the set of all such exponents.
+    Right multiplication by $t_j$ translates every exponent by the same vector $upright(bold(e))_j$,
+    without moving any left coefficient. Thus $E + upright(bold(e))_j subset.eq E$.
+    In each degree, elimination over the division algebra $Delta$ shows that the number of exponents in $E$ is the
+    left dimension of $\( Delta I \)_d$.
   For each $i$, Equation (2.1) puts
   $ t_i^(a_i) - sum_(d > i) C_(i d) t_d $
-  in $Delta I$. Expand the $C_(i d)$ in the $t$-basis with coefficients on the left. Every exponent in a term $C_(i d) t_d$ has a positive coordinate of index greater than $i$, and hence is strictly larger than $a_i upright(bold(e))_i$ in the chosen order. It follows that $a_i upright(bold(e))_i in E$.
+  in $Delta I$. Expand the $C_(i d)$ in the $t$-basis with coefficients on the left.
+    Every exponent in a term $C_(i d) t_d$ has a positive coordinate of index greater than $i$,
+    and hence is strictly larger than $a_i upright(bold(e))_i$ in the chosen order.
+    It follows that $a_i upright(bold(e))_i in E$.
   The upward-closed set $E$ defines a single monomial ideal
   $ J = chevron.l thin x^alpha : alpha in E thin chevron.r subset.eq S . $
   It contains the required pure powers. Finally,
   $ N \/ Delta I tilde.eq Delta ⊗_(bb(C)) \( S \/ I \) $
-  as graded left $Delta$-vector spaces. The complementary exponent count in every degree gives the asserted Hilbert function. ◻
+  as graded left $Delta$-vector spaces. The complementary exponent count in every degree gives the asserted
+    Hilbert function. ◻
 ]
 
-Our task is now to construct (2.1), starting with row $n$ and proceeding down to row $1$. At a stage of degree $b = a_i$, the constraints on a new sum of $b$-th powers involve the degree-$b$ part of a formal ideal. We therefore encode earlier, possibly higher-degree rows as consequences of linear and quadratic relations, whose generators still have degree at most $b$. Section 3 defines these constraints and proves the simple-factor property needed for their parameter space.
+Our task is now to construct (2.1), starting with row $n$ and proceeding down to row $1$.
+  At a stage of degree $b = a_i$, the constraints on a new sum of $b$-th powers involve the degree-$b$ part of a
+  formal ideal. We therefore encode earlier, possibly higher-degree rows as consequences of linear and quadratic
+  relations, whose generators still have degree at most $b$.
+  Section 3 defines these constraints and proves the simple-factor property needed for their parameter space.
 
 == 3 Low relations and simple factors <sec:low-relations>
 
-At stage $i$ of the construction, we seek a sum of $b$-th powers that lies in the degree-$b$ ideal piece allowed by the new triangular row, where $b = a_i$. The earlier rows have degrees $a_d gt.eq b$; if we retained them only as equations of those degrees, they need not contribute to this ideal piece. We instead retain them as consequences of linear and quadratic relations among an enlarged collection of formal linear forms.
+At stage $i$ of the construction, we seek a sum of $b$-th powers that lies in the degree-$b$ ideal piece allowed
+  by the new triangular row, where $b = a_i$. The earlier rows have degrees $a_d gt.eq b$;
+  if we retained them only as equations of those degrees, they need not contribute to this ideal piece.
+  We instead retain them as consequences of linear and quadratic relations among an enlarged collection of formal
+  linear forms.
 
-We first describe the equations on a tuple of summands. Each is obtained by summing the values of a degree-$b$ polynomial $w$ on those summands. The next section requires every nonzero $w$ in this linear system to have an irreducible factor of multiplicity one. We obtain this condition by excluding curves of bounded degree from the projective zero set of the relations, and then construct initial data for which this exclusion holds.
+We first describe the equations on a tuple of summands. Each is obtained by summing the values of a degree-$b$
+  polynomial $w$ on those summands. The next section requires every nonzero $w$ in this linear system to have an
+  irreducible factor of multiplicity one. We obtain this condition by excluding curves of bounded degree from the
+  projective zero set of the relations, and then construct initial data for which this exclusion holds.
 
 === 3.1 The induction data <the-induction-data>
 
@@ -228,19 +405,26 @@ $ D = #scale(x: 120%, y: 120%)[\(] max_(1 lt.eq j lt.eq n) a_j #scale(x: 120%, y
 At the beginning of stage $i$, where $n gt.eq i gt.eq 1$, the data are:
 
 + a finitely generated field extension $k \/ bb(C)$ and a finite-dimensional central division $k$-algebra $Delta_0$;
-+ a finite-dimensional $k$-vector space $U$, with $dim U gt.eq 3$, containing the formal variables $x_1 \, dots.h \, x_n$, and a linear evaluation map
++ a finite-dimensional $k$-vector space $U$, with $dim U gt.eq 3$, containing the formal variables $x_1 \,
+  dots.h \, x_n$, and a linear evaluation map
   $ U arrow.r Delta_0 \[ x_1 \, dots.h \, x_n \]_1 $
   whose images commute pairwise and which sends each $x_j$ to the corresponding central variable;
-+ a homogeneous ideal $Q subset.eq "Sym"_k U$, generated in degrees one and two, which vanishes under evaluation, such that $"Sym"_k U \/ Q$ is finite over $k \[ x_1 \, dots.h \, x_n \]$;
-+ formal elements $t_d in U$, for $d > i$, whose rows (2.1) hold in $"Sym"_k U \/ Q$, with nonzero coefficients $c_d in k$.
++ a homogeneous ideal $Q subset.eq "Sym"_k U$, generated in degrees one and two, which vanishes under evaluation,
+  such that $"Sym"_k U \/ Q$ is finite over $k \[ x_1 \, dots.h \, x_n \]$;
++ formal elements $t_d in U$, for $d > i$, whose rows (2.1) hold in $"Sym"_k U \/ Q$,
+  with nonzero coefficients $c_d in k$.
 
 In addition, after every algebraically closed field extension, the closed set
 
 $ cal(C) \( Q \) = V_(+) \( Q \) subset.eq bb(P) \( U^or \) $
 
-contains no integral projective curve of degree at most $D$. We call $cal(C) \( Q \)$ the characteristic set of $Q$. No smoothness, reducedness, or irreducibility is required of this set. Polynomial degree in $"Sym" U$ always refers to the formal linear forms, all of which have degree one.
+contains no integral projective curve of degree at most $D$.
+  We call $cal(C) \( Q \)$ the characteristic set of $Q$. No smoothness, reducedness,
+  or irreducibility is required of this set. Polynomial degree in $"Sym"
+  U$ always refers to the formal linear forms, all of which have degree one.
 
-We use the abstract complex embeddings of Section 1.3 only for topology and numerical comparison; division is always proved over the current field $k$.
+We use the abstract complex embeddings of Section 1.3 only for topology and numerical comparison;
+  division is always proved over the current field $k$.
 
 === 3.2 The equations for the next row <the-equations-for-the-next-row>
 
@@ -249,15 +433,23 @@ Assume the induction data at stage $i$, and write $b = a_i$. The ideal relevant 
 #[#set math.equation(numbering: n => "(3.1)")
  $ frak(j) = \( Q \, f_l med \( 1 lt.eq l lt.eq i \) \, t_d med \( d > i \) \) subset.eq "Sym"_k U . $ <eq:stage-ideal>]
 
-Membership in $frak(j)_b subset.eq "Sym"^b U$ means that a degree-$b$ form has the shape required on the right side of the new row, modulo $Q$, with some scalar coefficient of $f_i$. That coefficient need not yet be nonzero. Section 8 will make it nonzero when choosing the sum of powers.
+Membership in $frak(j)_b subset.eq "Sym"^b U$ means that a degree-$b$ form has the shape required on the right
+  side of the new row, modulo $Q$, with some scalar coefficient of $f_i$.
+  That coefficient need not yet be nonzero. Section 8 will make it nonzero when choosing the sum of powers.
 
 #thm([Lemma 3.1.])[
   #emph[The space $frak(j)_b$ is base-point-free on $bb(P) \( U^or \)$.]
 ] <lem:stage-basepoint>
 
 #proof[
-  Every specified generator of $frak(j)$ has degree at most $b$: the generators of $Q$ have degree at most two, $b gt.eq 2$, and $a_l lt.eq a_i = b$ for $l lt.eq i$. At a projective point, a nonzero generator can be multiplied by a monomial of complementary degree nonzero at that point. Thus a base point of $frak(j)_b$ would annihilate every generator of $frak(j)$.
-  At such a point $f_l = 0$ for $l lt.eq i$ and $t_d = 0$ for $d > i$. The earlier triangular rows, taken in the order $i + 1 \, i + 2 \, dots.h \, n$, imply successively that the remaining $f_d$ also vanish. Equation (2.2) forces all $x_j$ to vanish, which is impossible at a point of $cal(C) \( Q \)$ by finiteness over $k \[ x \]$. ◻
+  Every specified generator of $frak(j)$ has degree at most $b$:
+    the generators of $Q$ have degree at most two, $b gt.eq 2$, and $a_l lt.eq a_i = b$ for $l lt.eq i$.
+    At a projective point, a nonzero generator can be multiplied by a monomial of complementary degree nonzero at
+    that point. Thus a base point of $frak(j)_b$ would annihilate every generator of $frak(j)$.
+  At such a point $f_l = 0$ for $l lt.eq i$ and $t_d = 0$ for $d > i$.
+    The earlier triangular rows, taken in the order $i + 1 \, i + 2 \, dots.h \, n$,
+    imply successively that the remaining $f_d$ also vanish. Equation (2.2) forces all $x_j$ to vanish,
+    which is impossible at a point of $cal(C) \( Q \)$ by finiteness over $k \[ x \]$. ◻
 ]
 
 For $lambda in \( "Sym"^b U \)^or$, define the polynomial on $U$ by $w_lambda \( ell \) = lambda \( ell^b \)$, and put
@@ -265,233 +457,492 @@ For $lambda in \( "Sym"^b U \)^or$, define the polynomial on $U$ by $w_lambda \(
 #[#set math.equation(numbering: n => "(3.2)")
  $ W = { thin w_lambda : lambda \|_(frak(j)_b) = 0 thin } . $ <eq:stage-annihilator>]
 
-Characteristic zero identifies these functionals with degree-$b$ polynomials on $U$, since pure powers span $"Sym"^b U$. For any tuple $ell_1 \, dots.h \, ell_M in U$, we have
+Characteristic zero identifies these functionals with degree-$b$ polynomials on $U$,
+  since pure powers span $"Sym"^b U$. For any tuple $ell_1 \, dots.h \, ell_M in U$, we have
 
-$ sum_(m = 1)^M ell_m^b in frak(j)_b quad arrow.l.r.double quad sum_(m = 1)^M w \( ell_m \) = 0 quad upright("for every ") w in W . $
+$ sum_(m = 1)^M ell_m^b in frak(j)_b quad arrow.l.r.double quad sum_(m = 1)^M w \( ell_m \) = 0 quad
+  upright("for every ") w in W . $
 
-These are the equations on the tuple of summands. To obtain an integral parameter space with a highly connected smooth cone, Section 4 will use the condition that each nonzero $w in W$ has a factor of multiplicity one. The next lemma derives that condition from the absence of small curves in $cal(C) \( Q \)$.
+These are the equations on the tuple of summands. To obtain an integral parameter space with a highly connected
+  smooth cone, Section 4 will use the condition that each nonzero $w in W$ has a factor of multiplicity one.
+  The next lemma derives that condition from the absence of small curves in $cal(C) \( Q \)$.
 
 #thm([Lemma 3.2.])[
-  #emph[Let $U$ be a vector space of dimension at least three over a characteristic-zero field, and let $b gt.eq 2$. Suppose that $Q subset.eq "Sym" U$ is generated in degrees one and two, and that its geometric characteristic set contains no integral curve of degree at most $b \( b - 1 \)$. Let $frak(j)_b subset.eq "Sym"^b U$ be a base-point-free subspace containing $\( Q \)_b$, and define $W$ by (3.2). Then every nonzero element of $W$, after any algebraically closed extension, has an irreducible factor of multiplicity one.]
+  #emph[Let $U$ be a vector space of dimension at least three over a characteristic-zero field, and let $b gt.eq
+    2$. Suppose that $Q subset.eq "Sym" U$ is generated in degrees one and two,
+    and that its geometric characteristic set contains no integral curve of degree at most $b \( b - 1 \)$.
+    Let $frak(j)_b subset.eq "Sym"^b U$ be a base-point-free subspace containing $\( Q \)_b$,
+    and define $W$ by (3.2). Then every nonzero element of $W$, after any algebraically closed extension,
+    has an irreducible factor of multiplicity one.]
 ] <lem:simple-factor>
 
 #proof[
-  Fix $w in W \\ { 0 }$ over an algebraically closed extension. We first show that every repeated factor of $w$ must be linear. If there were no simple factor, a second gradient-map argument would then force $w$ to be a pure power, contradicting base-point-freeness.
-  For every linear or quadratic generator $q$ of $Q$, the annihilation of $q thin "Sym"^(b - deg q) U$ gives the constant-coefficient differential equation
+  Fix $w in W \\ { 0 }$ over an algebraically closed extension.
+    We first show that every repeated factor of $w$ must be linear.
+    If there were no simple factor, a second gradient-map argument would then force $w$ to be a pure power,
+    contradicting base-point-freeness.
+  For every linear or quadratic generator $q$ of $Q$, the annihilation of $q thin "Sym"^(b - deg q)
+    U$ gives the constant-coefficient differential equation
   #[#set math.equation(numbering: n => "(3.3)")
    $ q \( partial \) w = 0 . $ <eq:annihilator-differential>]
-  Here a basis of $U$ identifies its elements with the corresponding constant differential operators on polynomial functions on $U$. This is the differential-operator description of the degreewise annihilator pairing; see [19] pp. 1082–1083, Definitions 1–2 and (5a).
-  Suppose an irreducible factor $p$ occurs in $w = p^r h$ with $r gt.eq 2$ and $p divides.not h$. For a quadratic $q$, the term of lowest possible $p$-adic order in $q \( partial \) w$ is
+  Here a basis of $U$ identifies its elements with the corresponding constant differential operators on polynomial
+    functions on $U$. This is the differential-operator description of the degreewise annihilator pairing;
+    see [19] pp. 1082–1083, Definitions 1–2 and (5a).
+  Suppose an irreducible factor $p$ occurs in $w = p^r h$ with $r gt.eq 2$ and $p divides.not h$.
+    For a quadratic $q$, the term of lowest possible $p$-adic order in $q \( partial \) w$ is
   $ r \( r - 1 \) p^(r - 2) h thin q \( nabla p \) med \( mod med p^(r - 1) \) . $
-  For a linear $q$, it is $r p^(r - 1) h thin q \( nabla p \) med \( mod med p^r \)$. Equation (3.3) therefore shows that, generically on the hypersurface $p = 0$, its projective gradient belongs to $cal(C) \( Q \)$.
-  If that gradient map is nonconstant, it has nonzero differential at some smooth point $a$ of $p = 0$. Choose a tangent vector $v$ at $a$ detected by this differential, and an ambient tangent vector $v_perp$ transverse to the hypersurface. A projective plane through $a$ with tangent plane spanned by $v \, v_perp$ cuts the hypersurface in a curve smooth at $a$, with tangent line spanned by $v$. Its component through $a$ has degree at most $deg p$, and its gradient map is nonconstant. On the normalization of this component, the partial derivatives are sections of the pullback of $cal(O) \( deg p - 1 \)$. After removing their common base divisor, they define a morphism whose pulled-back hyperplane bundle has degree at most $deg p \( deg p - 1 \)$. This degree is the degree of the image curve times the degree of the morphism onto its image. The integral image is therefore a curve in $cal(C) \( Q \)$ of degree at most $b \( b - 1 \)$, a contradiction. If the gradient map is constant instead, Euler’s identity places the hypersurface $p = 0$ in the hyperplane perpendicular to that constant gradient. Irreducibility then forces $p$ to be linear. Thus every repeated irreducible factor of $w$ is linear.
+  For a linear $q$, it is $r p^(r - 1) h thin q \( nabla p \) med \( mod med p^r \)$.
+    Equation (3.3) therefore shows that, generically on the hypersurface $p = 0$,
+    its projective gradient belongs to $cal(C) \( Q \)$.
+  If that gradient map is nonconstant, it has nonzero differential at some smooth point $a$ of $p = 0$.
+    Choose a tangent vector $v$ at $a$ detected by this differential,
+    and an ambient tangent vector $v_perp$ transverse to the hypersurface.
+    A projective plane through $a$ with tangent plane spanned by $v \,
+    v_perp$ cuts the hypersurface in a curve smooth at $a$, with tangent line spanned by $v$.
+    Its component through $a$ has degree at most $deg p$, and its gradient map is nonconstant.
+    On the normalization of this component, the partial derivatives are sections of the pullback of
+    $cal(O) \( deg p - 1 \)$. After removing their common base divisor,
+    they define a morphism whose pulled-back hyperplane bundle has degree at most $deg p \( deg p - 1 \)$.
+    This degree is the degree of the image curve times the degree of the morphism onto its image.
+    The integral image is therefore a curve in $cal(C) \( Q \)$ of degree at most $b \( b - 1 \)$,
+    a contradiction. If the gradient map is constant instead, Euler’s identity places the hypersurface $p =
+    0$ in the hyperplane perpendicular to that constant gradient. Irreducibility then forces $p$ to be linear.
+    Thus every repeated irreducible factor of $w$ is linear.
   Assume, seeking a contradiction, that $w$ has no simple factor. We may then write
-  $ w = c product_(nu = 1)^r p_nu^(m_nu) \, #h(2em) m_nu gt.eq 2 \, $
-  with distinct linear forms $p_nu$, and put $v_nu = nabla p_nu in U^or$. The preceding argument gives $\[ v_nu \] in cal(C) \( Q \)$. For a quadratic generator $q$, logarithmic differentiation yields
-  $ frac(q \( partial \) w, w) = q (sum_(nu = 1)^r frac(m_nu v_nu, p_nu)) - sum_(nu = 1)^r frac(m_nu q \( v_nu \), p_nu^2) . $
-  The left side and each $q \( v_nu \)$ vanish. Together with the linear differential equations, this proves that the ambient projective gradient map of $w$ has image in $cal(C) \( Q \)$. Here the map is defined on the ambient $bb(P) \( U \)$, not just on one factor hypersurface. If it is nonconstant, restrict it to a line along which it varies. The partial derivatives restrict to sections of $cal(O)_(bb(P)^1) \( b - 1 \)$; removing their common zeros gives a nonconstant morphism whose image has degree at most $b - 1$. That image is again a forbidden curve in $cal(C) \( Q \)$.
-  Finally, a constant projective gradient means that all partial derivatives of $w$ are proportional to one fixed vector. After a linear change of coordinates, $w$ depends on only one coordinate. Homogeneity gives $w = c thin p^b$ for a nonzero linear form $p in U^or$. The corresponding functional on $"Sym"^b U$ is, up to the nonzero scalar $c$, evaluation at $p$. Its annihilation of $frak(j)_b$ contradicts base-point freeness. ◻
+  $ w = c product_(nu = 1)^r p_nu^(m_nu) \, wide m_nu gt.eq 2 \, $
+  with distinct linear forms $p_nu$, and put $v_nu = nabla p_nu in U^or$.
+    The preceding argument gives $\[ v_nu \] in cal(C) \( Q \)$.
+    For a quadratic generator $q$, logarithmic differentiation yields
+  $ frac(q \( partial \) w, w) = q (sum_(nu = 1)^r frac(m_nu v_nu, p_nu)) -
+    sum_(nu = 1)^r frac(m_nu q \( v_nu \), p_nu^2) . $
+  The left side and each $q \( v_nu \)$ vanish. Together with the linear differential equations,
+    this proves that the ambient projective gradient map of $w$ has image in $cal(C) \( Q \)$.
+    Here the map is defined on the ambient $bb(P) \( U \)$, not just on one factor hypersurface.
+    If it is nonconstant, restrict it to a line along which it varies.
+    The partial derivatives restrict to sections of $cal(O)_(bb(P)^1) \( b - 1 \)$;
+    removing their common zeros gives a nonconstant morphism whose image has degree at most $b - 1$.
+    That image is again a forbidden curve in $cal(C) \( Q \)$.
+  Finally, a constant projective gradient means that all partial derivatives of $w$ are proportional to one fixed
+    vector. After a linear change of coordinates, $w$ depends on only one coordinate.
+    Homogeneity gives $w = c thin p^b$ for a nonzero linear form $p in U^or$.
+    The corresponding functional on $"Sym"^b U$ is, up to the nonzero scalar $c$, evaluation at $p$.
+    Its annihilation of $frak(j)_b$ contradicts base-point freeness. ◻
 ]
 
-The geometric hypothesis has now supplied the required factor property of $W$. It remains to produce initial division-algebra data with this hypothesis and to show that the finite enlargements in the induction preserve it.
+The geometric hypothesis has now supplied the required factor property of $W$.
+  It remains to produce initial division-algebra data with this hypothesis and to show that the finite
+  enlargements in the induction preserve it.
 
 === 3.3 Starting with generic square roots <starting-with-generic-square-roots>
 
-We construct the initial relations as $s_rho^2 = q_rho \( x \)$, with independent generic quadrics $q_rho$. A curve in their projective zero set would give a finite cover of a curve in $bb(P)^(n - 1)$, on which all the $q_rho$ acquire square roots. For a curve of bounded degree, sufficiently many of these square roots remain independent, forcing the cover degree to exceed the bound. The following field-of-definition estimate makes this argument uniform over all such curves.
+We construct the initial relations as $s_rho^2 = q_rho \( x \)$, with independent generic quadrics $q_rho$.
+  A curve in their projective zero set would give a finite cover of a curve in $bb(P)^(n - 1)$,
+  on which all the $q_rho$ acquire square roots. For a curve of bounded degree,
+  sufficiently many of these square roots remain independent, forcing the cover degree to exceed the bound.
+  The following field-of-definition estimate makes this argument uniform over all such curves.
 
 #thm([Lemma 3.3.])[
-  #emph[For integers $n gt.eq 2$ and $D gt.eq 1$, there is an integer $d_(*) \( n \, D \)$ with the following property. If $Omega$ is an algebraically closed extension of $bb(C)$ and $Z subset.eq bb(P)_Omega^(n - 1)$ is an integral curve of degree at most $D$, then $Z$ is defined over an algebraically closed intermediate field $F_0 subset.eq Omega$ with $"trdeg"_(bb(C)) F_0 lt.eq d_(*) \( n \, D \)$.]
+  #emph[For integers $n gt.eq 2$ and $D gt.eq 1$, there is an integer $d_(*) \( n \, D \)$ with the following
+    property. If $Omega$ is an algebraically closed extension of $bb(C)$ and $Z subset.eq
+    bb(P)_Omega^(n - 1)$ is an integral curve of degree at most $D$,
+    then $Z$ is defined over an algebraically closed intermediate field $F_0 subset.eq
+    Omega$ with $"trdeg"_(bb(C)) F_0 lt.eq d_(*) \( n \, D \)$.]
 ] <lem:bounded-curve-field>
 
 #proof[
-  We use the hyperplane-incidence description of the Chow form [20] Section 1, Proposition 1.1, recalling the argument for curves to make the field-of-definition bound explicit. Consider pairs of hyperplanes whose intersection meets $Z$. The incidence variety over $Z$, with the two hyperplanes chosen through a point of $Z$, is irreducible of dimension $2 n - 3$. A general pair in its image meets $Z$ in finitely many points, so its image is an irreducible divisor in $\( bb(P)^(n - 1) \)^or times \( bb(P)^(n - 1) \)^or$. Its defining bihomogeneous equation has degree $deg Z$ in each block: for a general first hyperplane, the corresponding divisor in the second block is the reduced union of the $deg Z$ hyperplanes representing the points of intersection.
-  This equation recovers $Z$. A point on $Z$ has the property that every pair of hyperplanes through it satisfies the equation. For a point outside $Z$, choose a first hyperplane through it meeting $Z$ properly, and then a second hyperplane through it avoiding the resulting finite set. That pair does not satisfy the equation. This recovery condition is defined over the field of coefficients. Indeed, on a point chart $x_a eq.not 0$, a hyperplane through $x$ has coefficient $h_a = - sum_(j eq.not a) h_j x_j \/ x_a$. Substitute this expression and its counterpart for the second hyperplane into the incidence equation, clear denominators, and set every coefficient in the remaining hyperplane variables to zero. These finite equations express the recovery condition on the chart and agree on overlaps. Over the algebraic closure of the coefficient field, take the reduced structure. In characteristic zero it is geometrically reduced, so extension to $Omega$ gives exactly $Z$.
-  An equation of bidegree $\( d \, d \)$, $d lt.eq D$, uses at most $binom(n - 1 + D, D)^2$ coefficients. Adjoin those coefficients to $bb(C)$, then take its algebraic closure inside $Omega$. This proves the claim, for instance with $d_(*) \( n \, D \) = binom(n - 1 + D, D)^2$. ◻
+  We use the hyperplane-incidence description of the Chow form [20] Section 1, Proposition 1.1,
+    recalling the argument for curves to make the field-of-definition bound explicit.
+    Consider pairs of hyperplanes whose intersection meets $Z$.
+    The incidence variety over $Z$, with the two hyperplanes chosen through a point of $Z$,
+    is irreducible of dimension $2 n - 3$. A general pair in its image meets $Z$ in finitely many points,
+    so its image is an irreducible divisor in $\( bb(P)^(n - 1) \)^or times \( bb(P)^(n - 1) \)^or$.
+    Its defining bihomogeneous equation has degree $deg Z$ in each block:
+    for a general first hyperplane, the corresponding divisor in the second block is the reduced union of the $deg
+    Z$ hyperplanes representing the points of intersection.
+  This equation recovers $Z$. A point on $Z$ has the property that every pair of hyperplanes through it satisfies
+    the equation. For a point outside $Z$, choose a first hyperplane through it meeting $Z$ properly,
+    and then a second hyperplane through it avoiding the resulting finite set.
+    That pair does not satisfy the equation. This recovery condition is defined over the field of coefficients.
+    Indeed, on a point chart $x_a eq.not 0$, a hyperplane through $x$ has coefficient $h_a = -
+    sum_(j eq.not a) h_j x_j \/ x_a$. Substitute this expression and its counterpart for the second hyperplane
+    into the incidence equation, clear denominators, and set every coefficient in the remaining hyperplane
+    variables to zero. These finite equations express the recovery condition on the chart and agree on overlaps.
+    Over the algebraic closure of the coefficient field, take the reduced structure.
+    In characteristic zero it is geometrically reduced, so extension to $Omega$ gives exactly $Z$.
+  An equation of bidegree $\( d \, d \)$, $d lt.eq D$, uses at most $binom(n - 1 + D, D)^2$ coefficients.
+    Adjoin those coefficients to $bb(C)$, then take its algebraic closure inside $Omega$.
+    This proves the claim, for instance with $d_(*) \( n \, D \) = binom(n - 1 + D, D)^2$. ◻
 ]
 
 #thm([Proposition 3.4.])[
-  #emph[For every $n gt.eq 1$ and $D gt.eq 1$, there exist data $k \, Delta_0 \, U \, Q$ satisfying conditions (i)–(iii) above and the condition on $cal(C) \( Q \)$. They may be chosen with 
-$ U = chevron.l x_1 \, dots.h \, x_n \, s_1 \, dots.h \, s_m chevron.r_k \, #h(2em) Q = \( s_rho^2 - q_rho \( x \) : 1 lt.eq rho lt.eq m \) \, $
+  #emph[For every $n gt.eq 1$ and $D gt.eq 1$, there exist data $k \, Delta_0 \, U \,
+    Q$ satisfying conditions (i)–(iii) above and the condition on $cal(C) \( Q \)$. They may be chosen with
+$ U = chevron.l x_1 \, dots.h \, x_n \, s_1 \, dots.h \, s_m chevron.r_k \, wide
+  Q = \( s_rho^2 - q_rho \( x \) : 1 lt.eq rho lt.eq m \) \, $
 
- where $m gt.eq 2$ and the coefficient vectors of the quadrics $q_rho$ are jointly algebraically independent over $bb(C)$.]
+ where $m gt.eq 2$ and the coefficient vectors of the quadrics $q_rho$ are jointly algebraically independent over
+   $bb(C)$.]
 ] <prop:initial-data>
 
 #proof[
-  Choose an even integer $v_0$ and ordinary linear forms $L_1 \, dots.h \, L_(v_0) in bb(C) \[ x \]_1$ whose squares span $bb(C) \[ x \]_2$. Such a choice is possible by polarization, increasing $v_0$ if necessary. For an integer $m$ to be specified, form the skew Laurent algebra on symbols
-  $ y_(rho j)^(plus.minus 1) \, #h(2em) 1 lt.eq rho lt.eq m \, quad 1 lt.eq j lt.eq v_0 \, $
-  in which distinct generators in the same row anticommute and generators in different rows commute. Ordered Laurent monomials give a basis: multiplication is defined by reordering and inserting the prescribed signs. Their leading terms show that this algebra is a domain.
+  Choose an even integer $v_0$ and ordinary linear forms $L_1 \, dots.h \,
+    L_(v_0) in bb(C) \[ x \]_1$ whose squares span $bb(C) \[ x \]_2$.
+    Such a choice is possible by polarization, increasing $v_0$ if necessary.
+    For an integer $m$ to be specified, form the skew Laurent algebra on symbols
+  $ y_(rho j)^(plus.minus 1) \, wide 1 lt.eq rho lt.eq m \, quad 1 lt.eq j lt.eq v_0 \, $
+  in which distinct generators in the same row anticommute and generators in different rows commute.
+    Ordered Laurent monomials give a basis: multiplication is defined by reordering and inserting the prescribed
+    signs. Their leading terms show that this algebra is a domain.
   The squares of the generators are central and algebraically independent. Localize their Laurent polynomial algebra to
   $ k = bb(C) \( y_(rho j)^2 : 1 lt.eq rho lt.eq m \, med 1 lt.eq j lt.eq v_0 \) . $
-  The resulting algebra $Delta_0$ is a finite-dimensional domain over $k$, with basis the monomials whose exponents are zero or one; it is therefore a division algebra. Its center is exactly $k$. Indeed, a parity vector $alpha$ in one row commutes with its $j$-th generator precisely when $sum_(l eq.not j) alpha_l = 0$ modulo two. Writing $T = sum_l alpha_l$, these equations give $alpha_j = T$ for all $j$. Since $v_0$ is even, they imply $T = 0$ and then $alpha = 0$. Applying this in every row proves the claim; linear independence of the parity monomials prevents cancellations.
+  The resulting algebra $Delta_0$ is a finite-dimensional domain over $k$,
+    with basis the monomials whose exponents are zero or one; it is therefore a division algebra.
+    Its center is exactly $k$. Indeed, a parity vector $alpha$ in one row commutes with its $j$-th generator
+    precisely when $sum_(l eq.not j) alpha_l = 0$ modulo two.
+    Writing $T = sum_l alpha_l$, these equations give $alpha_j = T$ for all $j$.
+    Since $v_0$ is even, they imply $T = 0$ and then $alpha = 0$.
+    Applying this in every row proves the claim; linear independence of the parity monomials prevents cancellations.
   Evaluate the new formal forms by
   $ s_rho = sum_(j = 1)^(v_0) y_(rho j) L_j \( x \) . $
   Forms from different rows commute, and their squares are
   $ s_rho^2 = q_rho \( x \) := sum_(j = 1)^(v_0) y_(rho j)^2 L_j \( x \)^2 . $
-  The full-rank linear map from the independent square variables to the coefficients of each quadric shows that the coefficient vectors of the $q_rho$ are jointly algebraically independent. The indicated ideal $Q$ consists of identities, and its quotient is finite over $k \[ x \]$, since every $s_rho$ is integral.
-  This supplies the commuting forms and the quadratic relations. We now choose $m$ so that the resulting finite cover contains no curve of degree at most $D$. Over any algebraically closed extension $Omega$ of $k$, the linear projection
-  $ cal(C) \( Q \)_Omega arrow.r bb(P)_Omega^(n - 1) \, #h(2em) \[ x : s \] mapsto \[ x \] \, $
-  is defined everywhere and is finite. Its pullback of $cal(O) \( 1 \)$ is the ambient $cal(O) \( 1 \)$. If $n = 1$, its target is a point, and there is no curve upstairs. We may then take $m = 2$.
-  Assume $n gt.eq 2$, and suppose an integral curve $T$ of degree at most $D$ occurs upstairs. Its image is an integral curve $Z$; if the map degree is $d$, then
+  The full-rank linear map from the independent square variables to the coefficients of each quadric shows that
+    the coefficient vectors of the $q_rho$ are jointly algebraically independent.
+    The indicated ideal $Q$ consists of identities, and its quotient is finite over $k \[ x \]$,
+    since every $s_rho$ is integral.
+  This supplies the commuting forms and the quadratic relations.
+    We now choose $m$ so that the resulting finite cover contains no curve of degree at most $D$.
+    Over any algebraically closed extension $Omega$ of $k$, the linear projection
+  $ cal(C) \( Q \)_Omega arrow.r bb(P)_Omega^(n - 1) \, wide \[ x : s \] mapsto \[ x \] \, $
+  is defined everywhere and is finite. Its pullback of $cal(O) \( 1 \)$ is the ambient $cal(O) \( 1 \)$.
+    If $n = 1$, its target is a point, and there is no curve upstairs. We may then take $m = 2$.
+  Assume $n gt.eq 2$, and suppose an integral curve $T$ of degree at most $D$ occurs upstairs.
+    Its image is an integral curve $Z$; if the map degree is $d$, then
   $ deg T = d deg Z . $
-  In particular $d lt.eq D$ and $deg Z lt.eq D$. Choose a field of definition $F_0 subset.eq Omega$ for $Z$ as in Lemma 8, and write $d_(*) = d_(*) \( n \, D \)$. Let $r = binom(n + 1, 2)$, the size of each coefficient block. Since all $m r$ coefficients are independent over $bb(C)$, their transcendence degree over $F_0$ is at least $m r - d_(*)$.
-  At least $m - d_(*)$ entire coefficient blocks are jointly independent over $F_0$. For completeness, scan the blocks, retaining a block whenever it contributes all $r$ new independent parameters over the retained blocks and $F_0$. Each rejected block contributes at most $r - 1$ even after all retained blocks have been adjoined. Indeed, enlarging the field generated by the retained blocks can only decrease the transcendence degree contributed by a rejected block. Adjoin all retained blocks first, then the rejected ones. If $j$ blocks were rejected, the total transcendence degree would be at most $m r - j$, so $j lt.eq d_(*)$.
-  Restrict the retained generic quadrics to $Z$. Their zero divisors are nonempty, reduced, supported in the smooth locus, and pairwise disjoint. They can also be taken disjoint from the zeros of a fixed coordinate $x_j$ nonzero on $Z$. These are nonempty open conditions on the jointly generic full quadrics: the complete linear system of quadrics is base-point-free, separates tangent directions on the smooth curve, and can avoid each specified finite set. At a zero of the $rho$-th such divisor, $q_rho \/ x_j^2$ has valuation one, while the other retained functions have valuation zero. Thus their classes are independent in $Omega \( Z \)^times \/ Omega \( Z \)^(times 2)$. The function field of $T$ contains square roots of all these functions, by the equations $s_rho^2 = q_rho$. Consequently
+  In particular $d lt.eq D$ and $deg Z lt.eq D$. Choose a field of definition $F_0 subset.eq
+    Omega$ for $Z$ as in Lemma 8, and write $d_(*) = d_(*) \( n \, D \)$.
+    Let $r = binom(n + 1, 2)$, the size of each coefficient block.
+    Since all $m r$ coefficients are independent over $bb(C)$,
+    their transcendence degree over $F_0$ is at least $m r - d_(*)$.
+  At least $m - d_(*)$ entire coefficient blocks are jointly independent over $F_0$.
+    For completeness, scan the blocks, retaining a block whenever it contributes all $r$ new independent
+    parameters over the retained blocks and $F_0$. Each rejected block contributes at most $r -
+    1$ even after all retained blocks have been adjoined. Indeed,
+    enlarging the field generated by the retained blocks can only decrease the transcendence degree contributed by
+    a rejected block. Adjoin all retained blocks first, then the rejected ones.
+    If $j$ blocks were rejected, the total transcendence degree would be at most $m r - j$, so $j lt.eq d_(*)$.
+  Restrict the retained generic quadrics to $Z$. Their zero divisors are nonempty, reduced,
+    supported in the smooth locus, and pairwise disjoint. They can also be taken disjoint from the zeros of a
+    fixed coordinate $x_j$ nonzero on $Z$. These are nonempty open conditions on the jointly generic full
+    quadrics: the complete linear system of quadrics is base-point-free,
+    separates tangent directions on the smooth curve, and can avoid each specified finite set.
+    At a zero of the $rho$-th such divisor, $q_rho \/ x_j^2$ has valuation one,
+    while the other retained functions have valuation zero. Thus their classes are independent in
+    $Omega \( Z \)^times \/ Omega \( Z \)^(times 2)$. The function field of $T$ contains square roots of all these
+    functions, by the equations $s_rho^2 = q_rho$. Consequently
   $ d = \[ Omega \( T \) : Omega \( Z \) \] gt.eq 2^(m - d_(*)) $
-  by the elementary degree formula for independent squareclasses. Choose $m gt.eq 2$ with $2^(m - d_(*)) > D$. This contradicts $d lt.eq D$ and proves the proposition. ◻
+  by the elementary degree formula for independent squareclasses. Choose $m gt.eq 2$ with $2^(m - d_(*)) > D$.
+    This contradicts $d lt.eq D$ and proves the proposition. ◻
 ]
 
 === 3.4 Preserving the geometric condition <preserving-the-geometric-condition>
 
-The initial data now satisfy the required curve exclusion. Each later stage will enlarge the formal relation algebra by a finite graded extension, still generated in degree one. The following degree comparison shows why the same exclusion survives.
+The initial data now satisfy the required curve exclusion.
+  Each later stage will enlarge the formal relation algebra by a finite graded extension,
+  still generated in degree one. The following degree comparison shows why the same exclusion survives.
 
 #thm([Lemma 3.5.])[
-  #emph[Let $U subset.eq tilde(U)$ be finite-dimensional vector spaces over a field, and let $Q subset.eq "Sym" U$ and $tilde(Q) subset.eq "Sym" tilde(U)$ be homogeneous ideals, with $Q subset.eq tilde(Q)$. Suppose that $"Sym" tilde(U) \/ tilde(Q)$ is finite over $"Sym" U \/ Q$. Then the induced projection of characteristic sets is everywhere defined and finite, and pulls back $cal(O) \( 1 \)$ to $cal(O) \( 1 \)$. In particular, if the first characteristic set contains no integral curve of degree at most $D$ after algebraically closed extension, neither does the second.]
+  #emph[Let $U subset.eq tilde(U)$ be finite-dimensional vector spaces over a field,
+    and let $Q subset.eq "Sym" U$ and $tilde(Q) subset.eq "Sym" tilde(U)$ be homogeneous ideals,
+    with $Q subset.eq tilde(Q)$. Suppose that $"Sym" tilde(U) \/ tilde(Q)$ is finite over $"Sym" U \/ Q$.
+    Then the induced projection of characteristic sets is everywhere defined and finite,
+    and pulls back $cal(O) \( 1 \)$ to $cal(O) \( 1 \)$. In particular,
+    if the first characteristic set contains no integral curve of degree at most $D$ after algebraically closed
+    extension, neither does the second.]
 ] <lem:sparsity-preserved>
 
 #proof[
-  The quotient of the larger graded algebra by all positive-degree old forms is finite dimensional. Hence no point of its projective scheme has all old coordinates zero. The finite graded algebra map therefore induces the stated finite projective morphism, with the asserted hyperplane bundle. On an integral curve, its degree equals the degree of its image multiplied by the positive degree of the restricted morphism. A forbidden curve upstairs would thus give a forbidden curve downstairs. ◻
+  The quotient of the larger graded algebra by all positive-degree old forms is finite dimensional.
+    Hence no point of its projective scheme has all old coordinates zero.
+    The finite graded algebra map therefore induces the stated finite projective morphism,
+    with the asserted hyperplane bundle. On an integral curve,
+    its degree equals the degree of its image multiplied by the positive degree of the restricted morphism.
+    A forbidden curve upstairs would thus give a forbidden curve downstairs. ◻
 ]
 
-These arguments include $b = 2$, when a repeated factor of a quadratic would already make it a pure square. They also include $n = 1$: the auxiliary forms in Proposition 9 ensure $dim U gt.eq 3$, as required by the factor lemma.
+These arguments include $b = 2$, when a repeated factor of a quadratic would already make it a pure square.
+  They also include $n = 1$: the auxiliary forms in Proposition 9 ensure $dim U gt.eq 3$,
+  as required by the factor lemma.
 
-We have constructed the initial induction data and shown that their curve exclusion survives every finite homogeneous enlargement. At each stage, $D gt.eq b \( b - 1 \)$, so Lemmas 6 and 7 show that every nonzero member of the space $W$ in (3.2) has a simple factor. Its equations $sum_m w \( ell_m \) = 0$ are exactly the conditions that $sum_m ell_m^b$ belong to $frak(j)_b$. The next section studies their parameter complete intersection.
+We have constructed the initial induction data and shown that their curve exclusion survives every finite
+  homogeneous enlargement. At each stage, $D gt.eq b \( b - 1 \)$,
+  so Lemmas 6 and 7 show that every nonzero member of the space $W$ in (3.2) has a simple factor.
+  Its equations $sum_m w \( ell_m \) = 0$ are exactly the conditions that $sum_m ell_m^b$ belong to $frak(j)_b$.
+  The next section studies their parameter complete intersection.
 
 == 4 The parameter complete intersections <sec:parameters>
 
-The constraints from Lemma 7 will be imposed on a sum of many powers. Their parameter space must remain integral, and its smooth cone must have enough connectivity to support a later equivariant construction. We prove both properties from the multiplicity-one factor condition. All homology and cohomology in this section have integral coefficients.
+The constraints from Lemma 7 will be imposed on a sum of many powers.
+  Their parameter space must remain integral, and its smooth cone must have enough connectivity to support a later
+  equivariant construction. We prove both properties from the multiplicity-one factor condition.
+  All homology and cohomology in this section have integral coefficients.
 
-The join statement below is the global homogeneous form of the Thom–Sebastiani phenomenon; compare [29] Proposition 4.1 and Appendix for a local nonisolated version. We give the needed global homotopy argument directly, retaining integral homology throughout.
+The join statement below is the global homogeneous form of the Thom–Sebastiani phenomenon;
+  compare [29] Proposition 4.1 and Appendix for a local nonisolated version.
+  We give the needed global homotopy argument directly, retaining integral homology throughout.
 
 #thm([Lemma 4.1.])[
-  (Nonzero levels and joins).  #emph[Let $w$ be a nonzero homogeneous polynomial of degree $b gt.eq 2$ on a complex vector space $U$. Suppose that some irreducible factor of $w$ has multiplicity one. Then $w^(- 1) \( 1 \)$ is connected. For every $M gt.eq 1$, the smooth hypersurface 
+  (Nonzero levels and joins).  #emph[Let $w$ be a nonzero homogeneous polynomial of degree $b gt.eq
+    2$ on a complex vector space $U$. Suppose that some irreducible factor of $w$ has multiplicity one.
+    Then $w^(- 1) \( 1 \)$ is connected. For every $M gt.eq 1$, the smooth hypersurface
 $ F_w = {\( ell_1 \, dots.h \, ell_M \) in U^(xor M) : sum_(m = 1)^M w \( ell_m \) = 1} $
 
- has the homotopy type of the join of $M$ copies of $w^(- 1) \( 1 \)$. Consequently, 
-$ tilde(H)_j \( F_w \; bb(Z) \) = 0 #h(2em) \( 0 lt.eq j lt.eq 2 M - 2 \) . $
+ has the homotopy type of the join of $M$ copies of $w^(- 1) \( 1 \)$. Consequently,
+$ tilde(H)_j \( F_w \; bb(Z) \) = 0 wide \( 0 lt.eq j lt.eq 2 M - 2 \) . $
 
 ]
 ] <lem:homogeneous-joins>
 
 #proof[
-  Projectivization makes $w^(- 1) \( 1 \)$ a cyclic cover of degree $b$ of $bb(P) \( U \) \\ { w = 0 }$. This complement is connected. A small meridian around a smooth point of the multiplicity-one factor, away from all other factors, permutes the $b$ choices of a root by a generator of $mu_b$. The monodromy is therefore transitive, proving connectedness.
-  For the join assertion, consider nonzero homogeneous polynomials $f$ and $g$, of positive degrees $a$ and $c$, in disjoint sets of variables. Cover the level $f \( x \) + g \( y \) = 1$ by
-  $ V_(-) = { "Re" f \( x \) < 2 \/ 3 } \, #h(2em) V_(+) = { "Re" f \( x \) > 1 \/ 3 } . $
+  Projectivization makes $w^(- 1) \( 1 \)$ a cyclic cover of degree $b$ of $bb(P) \( U \) \\ { w = 0 }$.
+    This complement is connected. A small meridian around a smooth point of the multiplicity-one factor,
+    away from all other factors, permutes the $b$ choices of a root by a generator of $mu_b$.
+    The monodromy is therefore transitive, proving connectedness.
+  For the join assertion, consider nonzero homogeneous polynomials $f$ and $g$, of positive degrees $a$ and $c$,
+    in disjoint sets of variables. Cover the level $f \( x \) + g \( y \) = 1$ by
+  $ V_(-) = { "Re" f \( x \) < 2 \/ 3 } \, wide V_(+) = { "Re" f \( x \) > 1 \/ 3 } . $
   On $V_(-)$, a continuous $c$-th root of $1 - f \( x \)$ identifies $V_(-)$ with
   $ f^(- 1) #scale(x: 120%, y: 120%)[\(] { "Re" z < 2 \/ 3 } #scale(x: 120%, y: 120%)[\)] times g^(- 1) \( 1 \) . $
-  The first factor contracts to the origin by $x mapsto t x$, $0 lt.eq t lt.eq 1$, because $f \( t x \) = t^a f \( x \)$. Similarly, $V_(+) tilde.eq f^(- 1) \( 1 \)$. On the intersection both $f \( x \)$ and $1 - f \( x \)$ admit continuous roots, giving a homeomorphism
+  The first factor contracts to the origin by $x mapsto t x$, $0 lt.eq t lt.eq 1$, because $f \( t x \) =
+    t^a f \( x \)$. Similarly, $V_(+) tilde.eq f^(- 1) \( 1 \)$.
+    On the intersection both $f \( x \)$ and $1 - f \( x \)$ admit continuous roots, giving a homeomorphism
   $ V_(-) ∩ V_(+) tilde.eq f^(- 1) \( 1 \) times g^(- 1) \( 1 \) times { z in bb(C) : 1 \/ 3 < "Re" z < 2 \/ 3 } . $
-  Under these identifications, the two inclusion maps are homotopic to the projections onto $g^(- 1) \( 1 \)$ and $f^(- 1) \( 1 \)$. The homotopy pushout for this open cover is their join. Iteration proves the asserted description of $F_w$. The integral homology formula for joins, including its Tor terms, now gives the stated vanishing: joining $M$ connected spaces has no reduced homology below degree $2 M - 1$. Smoothness of every nonzero homogeneous level follows from Euler’s identity. ◻
+  Under these identifications, the two inclusion maps are homotopic to the projections onto $g^(- 1) \( 1 \)$ and
+    $f^(- 1) \( 1 \)$. The homotopy pushout for this open cover is their join.
+    Iteration proves the asserted description of $F_w$. The integral homology formula for joins,
+    including its Tor terms, now gives the stated vanishing: joining $M$ connected spaces has no reduced homology
+    below degree $2 M - 1$. Smoothness of every nonzero homogeneous level follows from Euler’s identity. ◻
 ]
 
 #thm([Theorem 4.2.])[
-  (The parameter spaces).  #emph[Let $k$ be a field admitting an embedding into $bb(C)$, let $U$ be a finite-dimensional $k$-vector space with $dim U gt.eq 3$, and let 
-$ W subset.eq "Sym"^b \( U^or \) \, #h(2em) b gt.eq 2 \, #h(2em) s = dim W . $
+  (The parameter spaces).  #emph[Let $k$ be a field admitting an embedding into $bb(C)$,
+    let $U$ be a finite-dimensional $k$-vector space with $dim U gt.eq 3$, and let
+$ W subset.eq "Sym"^b \( U^or \) \, wide b gt.eq 2 \, wide s = dim W . $
 
- Assume that every nonzero element of $W_(macron(k))$ has an irreducible factor of multiplicity one over an algebraic closure $macron(k)$. For integers $h gt.eq 2$ and $M gt.eq 2 h + 4 s + 10$, put $N_(*) = M dim U$ and define 
+ Assume that every nonzero element of $W_(macron(k))$ has an irreducible factor of multiplicity one over an
+   algebraic closure $macron(k)$. For integers $h gt.eq 2$ and $M gt.eq 2 h + 4 s + 10$, put $N_(*) =
+   M dim U$ and define
 $ Y & = {\( ell_1 \, dots.h \, ell_M \) in U^(xor M) : sum_(m = 1)^M w \( ell_m \) = 0 quad \( w in W \)} \,\
 X & = bb(P) \( Y \) subset.eq bb(P) \( U^(xor M) \) . $
 
- Then $X$ is a geometrically integral complete intersection of codimension $s$, cut out by $s$ equations of degree $b$, and 
+ Then $X$ is a geometrically integral complete intersection of codimension $s$,
+   cut out by $s$ equations of degree $b$, and
 $ "codim"_X "Sing" X gt.eq M - 2 s + 1 > h \, $
 
- with the codimension of the empty locus understood to be infinite. In particular, a general $h$-dimensional projective linear section is a smooth complete intersection contained in $X_(upright("sm"))$.]
-  #emph[After any embedding $k arrow.r.hook bb(C)$, let $Y^o$ be the nonzero cone over $X_(upright("sm"))$. Both $Y^o$ and its unit-norm retract are $\( M + 2 h \)$-connected.]
+ with the codimension of the empty locus understood to be infinite.
+   In particular, a general $h$-dimensional projective linear section is a smooth complete intersection contained
+   in $X_(upright("sm"))$.]
+  #emph[After any embedding $k arrow.r.hook bb(C)$, let $Y^o$ be the nonzero cone over $X_(upright("sm"))$.
+    Both $Y^o$ and its unit-norm retract are $\( M + 2 h \)$-connected.]
 ] <thm:parameters>
 
 #proof[
-  All geometric assertions may be checked after extension to $bb(C)$. The multiplicity-one hypothesis persists under this extension. Indeed forms without a multiplicity-one factor constitute a finite union of images of projective multiplication maps $\( p_1 \, dots.h \, p_t \) mapsto product_nu p_nu^(a_nu)$, with $a_nu gt.eq 2$ and $sum_nu a_nu deg p_nu = b$. Their intersection with $bb(P) \( W \)$ is empty geometrically over $k$, and remains empty after extension. Write $r = dim U$, $d = N_(*) - s$, and $kappa = M + 2 h$. If $s = 0$, then $X = bb(P)^(N_(*) - 1)$ and $Y^o = bb(C)^(N_(*)) \\ { 0 } tilde.eq S^(2 N_(*) - 1)$. The conclusions follow from $2 N_(*) - 2 gt.eq kappa$. Henceforth assume $s gt.eq 1$.
-  #emph[Dimension and the singular locus.] Choose a basis $w_1 \, dots.h \, w_s$ of $W$. A point has defective Jacobian rank for the defining equations of $Y$ only if, for some $\[ w \] in bb(P) \( W \)$,
+  All geometric assertions may be checked after extension to $bb(C)$.
+    The multiplicity-one hypothesis persists under this extension.
+    Indeed forms without a multiplicity-one factor constitute a finite union of images of projective
+    multiplication maps $\( p_1 \, dots.h \, p_t \) mapsto product_nu p_nu^(a_nu)$, with $a_nu gt.eq
+    2$ and $sum_nu a_nu deg p_nu = b$. Their intersection with $bb(P) \( W \)$ is empty geometrically over $k$,
+    and remains empty after extension. Write $r = dim U$, $d = N_(*) - s$, and $kappa = M + 2 h$.
+    If $s = 0$, then $X = bb(P)^(N_(*) - 1)$ and $Y^o = bb(C)^(N_(*)) \\ { 0 } tilde.eq S^(2 N_(*) - 1)$.
+    The conclusions follow from $2 N_(*) - 2 gt.eq kappa$. Henceforth assume $s gt.eq 1$.
+  #emph[Dimension and the singular locus.] Choose a basis $w_1 \, dots.h \, w_s$ of $W$.
+    A point has defective Jacobian rank for the defining equations of $Y$ only if, for some $\[ w \] in bb(P) \( W \)$,
   $ nabla w \( ell_1 \) = dots.h.c = nabla w \( ell_M \) = 0 . $
-  For any nonzero $w$, its gradient vanishing set has dimension at most $r - 1$. The incidence with $bb(P) \( W \)$ therefore bounds the defective-rank locus in $U^(xor M)$ by
+  For any nonzero $w$, its gradient vanishing set has dimension at most $r - 1$.
+    The incidence with $bb(P) \( W \)$ therefore bounds the defective-rank locus in $U^(xor M)$ by
   #[#set math.equation(numbering: n => "(4.1)")
    $ dim { upright("defective rank") } lt.eq N_(*) - M + s - 1 . $ <eq:parameter-jacobian>]
-  Every irreducible component of $Y$ has dimension at least $N_(*) - s$. Since $M > 2 s - 1$, no component is contained in the locus in (4.1). Full Jacobian rank gives local dimension $N_(*) - s$, so all components have dimension $d$ and are generically smooth. The $s$ equations thus have height $s$ in the polynomial ring and form a regular sequence. The resulting complete intersection is Cohen–Macaulay, with no embedded associated primes. As it is generically reduced, it is reduced.
-  Away from the origin, the cone projection is locally a product with $bb(C)^times$, so smoothness of $Y$ is equivalent to smoothness of $X$. Equation (4.1) gives
+  Every irreducible component of $Y$ has dimension at least $N_(*) - s$.
+    Since $M > 2 s - 1$, no component is contained in the locus in (4.1).
+    Full Jacobian rank gives local dimension $N_(*) - s$, so all components have dimension $d$ and are generically
+    smooth. The $s$ equations thus have height $s$ in the polynomial ring and form a regular sequence.
+    The resulting complete intersection is Cohen–Macaulay, with no embedded associated primes.
+    As it is generically reduced, it is reduced.
+  Away from the origin, the cone projection is locally a product with $bb(C)^times$,
+    so smoothness of $Y$ is equivalent to smoothness of $X$. Equation (4.1) gives
   #[#set math.equation(numbering: n => "(4.2)")
    $ "codim"_Y \( Y \\ Y^o \) gt.eq c := M - 2 s + 1 . $ <eq:parameter-omitted>]
-  Here the origin causes no additional restriction: $d gt.eq c$. The same bound applies to $"Sing" X$. It remains to prove integrality and connectivity; we have not yet assumed that the smooth locus is connected.
-  #emph[Homology of the complement.] A point outside $Y$ makes some linear combination of the defining equations nonzero. Recording that combination replaces the complement by a space with contractible fibers over it, while exposing the nonzero hypersurface levels of Lemma 11. Define the open incidence variety
+  Here the origin causes no additional restriction: $d gt.eq c$. The same bound applies to $"Sing" X$.
+    It remains to prove integrality and connectivity; we have not yet assumed that the smooth locus is connected.
+  #emph[Homology of the complement.] A point outside $Y$ makes some linear combination of the defining equations
+    nonzero. Recording that combination replaces the complement by a space with contractible fibers over it,
+    while exposing the nonzero hypersurface levels of Lemma 11. Define the open incidence variety
   $ cal(H) = {\( ell \, \[ w \] \) in bb(C)^(N_(*)) times bb(P) \( W \) : sum_m w \( ell_m \) eq.not 0} . $
-  Projection to $bb(C)^(N_(*)) \\ Y$ is an affine bundle of rank $s - 1$. For a fixed $ell in.not Y$, each line $\[ w \]$ in the fiber has a unique representative satisfying $sum_m w \( ell_m \) = 1$. Thus the fiber is the affine hyperplane on which the nonzero evaluation functional on $W$ equals one. Consequently this projection is a homotopy equivalence.
+  Projection to $bb(C)^(N_(*)) \\ Y$ is an affine bundle of rank $s - 1$.
+    For a fixed $ell in.not Y$, each line $\[ w \]$ in the fiber has a unique representative satisfying $sum_m
+    w \( ell_m \) = 1$. Thus the fiber is the affine hyperplane on which the nonzero evaluation functional on $W$
+    equals one. Consequently this projection is a homotopy equivalence.
   Evaluation also defines a map
   $ p : cal(H) arrow.r cal(B) := cal(O)_(bb(P) \( W \)) \( 1 \)^times . $
-  The value at $\( ell \, \[ w \] \)$ is the nonzero linear functional on the tautological line $k w$ obtained by evaluation at $ell$. Euler’s identity shows that $p$ is a smooth submersion. Its fibers have complex dimension $N_(*) - 1$; after choosing a representative of $\[ w \]$ and rescaling, they are the levels $F_w$ of Lemma 11.
-  The join lemma controls the homology of every fiber of $p$. To pass from these individual fibers to $cal(H)$, we use direct image with proper support; we do not require $p$ to be a locally trivial fibration. Fiber homology becomes compact-support cohomology near the top degree, where the Leray spectral sequence gives the needed comparison. Set $q = 2 N_(*) - 2$. Compact-support Poincaré duality on the fibers [22] Theorem 3.35 and Lemma 11 give
+  The value at $\( ell \, \[ w \] \)$ is the nonzero linear functional on the tautological line $k
+    w$ obtained by evaluation at $ell$. Euler’s identity shows that $p$ is a smooth submersion.
+    Its fibers have complex dimension $N_(*) - 1$; after choosing a representative of $\[ w \]$ and rescaling,
+    they are the levels $F_w$ of Lemma 11.
+  The join lemma controls the homology of every fiber of $p$.
+    To pass from these individual fibers to $cal(H)$, we use direct image with proper support;
+    we do not require $p$ to be a locally trivial fibration. Fiber homology becomes compact-support cohomology
+    near the top degree, where the Leray spectral sequence gives the needed comparison. Set $q = 2 N_(*) - 2$.
+    Compact-support Poincaré duality on the fibers [22] Theorem 3.35 and Lemma 11 give
   #[#set math.equation(numbering: n => "(4.3)")
-   $ R^q p_(!) bb(Z) = bb(Z) \, #h(2em) R^i p_(!) bb(Z) = 0 quad {i > q \,\
+   $ R^q p_(!) bb(Z) = bb(Z) \, wide R^i p_(!) bb(Z) = 0 quad {i > q \,\
 q - \( 2 M - 2 \) lt.eq i < q . $ <eq:parameter-support-rows>]
-  The top sheaf is constant: a submersion chart over a small base open set supplies an oriented open ball in each fiber. Extension by zero maps its top compact-support orientation class to the positive generator for that fiber. This gives an isomorphism from the constant sheaf to the top direct-image sheaf on the open set. The local isomorphisms agree by the complex orientation.
+  The top sheaf is constant: a submersion chart over a small base open set supplies an oriented open ball in each
+    fiber. Extension by zero maps its top compact-support orientation class to the positive generator for that
+    fiber. This gives an isomorphism from the constant sheaf to the top direct-image sheaf on the open set.
+    The local isomorphisms agree by the complex orientation.
   The compact-support Leray spectral sequence is
   $ H_c^a \( cal(B) \, R^i p_(!) bb(Z) \) med arrow.r.double med H_c^(a + i) \( cal(H) \; bb(Z) \) . $
-  The stalk formula and this spectral sequence follow from proper-support base change and derived composition [32] Theorems 5.9 and 5.10; maps between the locally compact Hausdorff spaces here satisfy their hypotheses. Equivalently, one may compactify $p$, extend the constant sheaf by zero, and apply proper base change and Leray. The base is a real $2 s$-dimensional manifold, so its compact-support cohomology with coefficients in any abelian sheaf vanishes above degree $2 s$ [31] Proposition 5.1.2(ii). In total degree $q + 2 s - j$, with $0 lt.eq j lt.eq 2 M - 2$, only the top row of (4.3) can contribute. In fact, the next possible row is $i = q - \( 2 M - 1 \)$, which would require
+  The stalk formula and this spectral sequence follow from proper-support base change and derived composition [32]
+    Theorems 5.9 and 5.10; maps between the locally compact Hausdorff spaces here satisfy their hypotheses.
+    Equivalently, one may compactify $p$, extend the constant sheaf by zero,
+    and apply proper base change and Leray. The base is a real $2 s$-dimensional manifold,
+    so its compact-support cohomology with coefficients in any abelian sheaf vanishes above degree $2
+    s$ [31] Proposition 5.1.2(ii). In total degree $q + 2 s - j$, with $0 lt.eq j lt.eq 2 M - 2$,
+    only the top row of (4.3) can contribute. In fact, the next possible row is $i = q - \( 2 M - 1 \)$,
+    which would require
   $ a gt.eq 2 s - j + 2 M - 1 > 2 s . $
-  An outgoing differential from the top row to another nonzero row has length at least $2 M > 2 s$, and hence has zero target. An incoming differential would come from above the top row. Poincaré duality on $cal(H)$ and $cal(B)$ therefore yields
+  An outgoing differential from the top row to another nonzero row has length at least $2 M > 2 s$,
+    and hence has zero target. An incoming differential would come from above the top row.
+    Poincaré duality on $cal(H)$ and $cal(B)$ therefore yields
   #[#set math.equation(numbering: n => "(4.4)")
-   $ H_j \( cal(H) \; bb(Z) \) tilde.equiv H_j \( cal(B) \; bb(Z) \) #h(2em) \( 0 lt.eq j lt.eq 2 M - 2 \) . $ <eq:parameter-complement-homology>]
+   $ H_j \( cal(H) \; bb(Z) \) tilde.equiv H_j \( cal(B) \; bb(Z) \) wide \( 0 lt.eq j lt.eq 2 M - 2 \) .
+     $ <eq:parameter-complement-homology>]
   The punctured line bundle $cal(B)$ retracts to $S^(2 s - 1)$.
-  #emph[Homology of the smooth cone.] The closed/open compact-support sequence for $Y subset.eq bb(C)^(N_(*))$, followed by duality on its complement, gives
+  #emph[Homology of the smooth cone.] The closed/open compact-support sequence for $Y subset.eq bb(C)^(N_(*))$,
+    followed by duality on its complement, gives
   #[#set math.equation(numbering: n => "(4.5)")
-   $ H_c^(2 d - j) \( Y \; bb(Z) \) tilde.equiv H_(2 s + j - 1) \( bb(C)^(N_(*)) \\ Y \; bb(Z) \) tilde.equiv H_(2 s + j - 1) \( cal(H) \; bb(Z) \) $ <eq:parameter-support-transfer>]
-  for $0 lt.eq j lt.eq kappa$. Both adjacent ambient compact-support groups vanish, since their degrees are below $2 N_(*)$. The homology range in (4.4) applies because
+   $ H_c^(2 d - j) \( Y \; bb(Z) \) tilde.equiv H_(2 s + j - 1) \( bb(C)^(N_(*)) \\ Y \; bb(Z) \) tilde.equiv
+     H_(2 s + j - 1) \( cal(H) \; bb(Z) \) $ <eq:parameter-support-transfer>]
+  for $0 lt.eq j lt.eq kappa$. Both adjacent ambient compact-support groups vanish,
+    since their degrees are below $2 N_(*)$. The homology range in (4.4) applies because
   #[#set math.equation(numbering: n => "(4.6)")
    $ 2 s + kappa - 1 lt.eq 2 M - 2 . $ <eq:parameter-complement-range>]
-  Removing $Y \\ Y^o$ does not change the left side of (4.5). Indeed, a finite filtration of the removed algebraic set by smooth locally closed strata, together with the compact-support closed/open sequence, gives vanishing above its real dimension from the same manifold bound. Equation (4.2) bounds that dimension by $2 \( d - c \)$, whereas
+  Removing $Y \\ Y^o$ does not change the left side of (4.5).
+    Indeed, a finite filtration of the removed algebraic set by smooth locally closed strata,
+    together with the compact-support closed/open sequence, gives vanishing above its real dimension from the same
+    manifold bound. Equation (4.2) bounds that dimension by $2 \( d - c \)$, whereas
   #[#set math.equation(numbering: n => "(4.7)")
-   $ 2 d - j - 1 > 2 \( d - c \) quad \( 0 lt.eq j lt.eq kappa \) \, #h(2em) kappa lt.eq 2 c - 2 = 2 M - 4 s . $ <eq:parameter-removal-range>]
+   $ 2 d - j - 1 > 2 \( d - c \) quad \( 0 lt.eq j lt.eq kappa \) \, wide kappa lt.eq 2 c - 2 = 2 M -
+     4 s . $ <eq:parameter-removal-range>]
   Both (4.6) and (4.7) follow from $M gt.eq 2 h + 4 s + 10$. Duality on $Y^o$ now gives
-  $ H_0 \( Y^o \; bb(Z) \) = bb(Z) \, #h(2em) tilde(H)_j \( Y^o \; bb(Z) \) = 0 quad \( 1 lt.eq j lt.eq kappa \) . $
-  Every irreducible component of $Y$ meets $Y^o$ densely. The smooth loci of distinct components are disjoint, so their union could be connected only if there is one component. Thus $Y$, and hence $X$, is integral.
-  #emph[From homology to homotopy.] The preceding argument leaves only simple connectivity to prove. The quasi-projective Lefschetz theorem [21] Theorem 1.1.3(ii) applies to the smooth open $X_(upright("sm"))$ in the projective variety $X$, with deleted algebraic subset $"Sing" X$. It states that the smooth open has the homotopy type of a space obtained from a sufficiently general hyperplane section by attaching cells of dimension at least the complex dimension of the open. Apply the theorem successively, intersecting the deleted subset with each hyperplane as well. Each section down to a surface therefore surjects on the fundamental group of the preceding smooth open.
-  Since $"codim"_X "Sing" X > h gt.eq 2$, a general surface linear section avoids the singular locus. It is a smooth complete intersection $S_0 subset.eq bb(P)^(s + 2)$ of $s$ hypersurfaces of degree $b$. Such a surface is simply connected. To check the usual smooth flag needed here, replace its defining equations by general invertible linear combinations. Off their common base locus, Bertini gives smooth successive intersections. Along $S_0$, the independent differentials of the defining equations give smoothness of every initial intersection. Smooth projective Lefschetz, applied to these very ample divisors, preserves the fundamental group down to dimension two, starting from projective space. Therefore $pi_1 \( S_0 \) = 0$, and the surjections above give $pi_1 \( X_(upright("sm")) \) = 0$.
-  The cone $Y^o$ is the complement of the zero section in $cal(O)_(X_(upright("sm"))) \( - 1 \)$. Its unit circle bundle has a homotopy exact sequence in which $pi_1 \( S^1 \) = bb(Z)$ surjects onto $pi_1 \( Y^o \)$, since the base is simply connected. Hence $pi_1 \( Y^o \)$ is abelian. Its abelianization is $H_1 \( Y^o \; bb(Z) \) = 0$, so it is trivial. Smooth complex algebraic varieties have CW type. Successive applications of the Hurewicz theorem [22] Theorem 4.32 to the homology vanishing already proved now give $pi_j \( Y^o \) = 0$ for $1 lt.eq j lt.eq kappa$.
-  Radial retraction gives the same connectivity for the unit cone. Finally, the strict bound on the singular codimension and Bertini give the asserted smooth $h$-dimensional sections. All conclusions hold after every complex embedding and imply the stated geometric assertions over $k$. ◻
+  $ H_0 \( Y^o \; bb(Z) \) = bb(Z) \, wide tilde(H)_j \( Y^o \; bb(Z) \) = 0 quad \( 1 lt.eq j lt.eq kappa \) . $
+  Every irreducible component of $Y$ meets $Y^o$ densely. The smooth loci of distinct components are disjoint,
+    so their union could be connected only if there is one component. Thus $Y$, and hence $X$, is integral.
+  #emph[From homology to homotopy.] The preceding argument leaves only simple connectivity to prove.
+    The quasi-projective Lefschetz theorem [21] Theorem 1.1.3(ii) applies to the smooth open $X_(upright("sm"))$
+    in the projective variety $X$, with deleted algebraic subset $"Sing" X$.
+    It states that the smooth open has the homotopy type of a space obtained from a sufficiently general
+    hyperplane section by attaching cells of dimension at least the complex dimension of the open.
+    Apply the theorem successively, intersecting the deleted subset with each hyperplane as well.
+    Each section down to a surface therefore surjects on the fundamental group of the preceding smooth open.
+  Since $"codim"_X "Sing" X > h gt.eq 2$, a general surface linear section avoids the singular locus.
+    It is a smooth complete intersection $S_0 subset.eq bb(P)^(s + 2)$ of $s$ hypersurfaces of degree $b$.
+    Such a surface is simply connected. To check the usual smooth flag needed here,
+    replace its defining equations by general invertible linear combinations.
+    Off their common base locus, Bertini gives smooth successive intersections.
+    Along $S_0$, the independent differentials of the defining equations give smoothness of every initial
+    intersection. Smooth projective Lefschetz, applied to these very ample divisors,
+    preserves the fundamental group down to dimension two, starting from projective space.
+    Therefore $pi_1 \( S_0 \) = 0$, and the surjections above give $pi_1 \( X_(upright("sm")) \) = 0$.
+  The cone $Y^o$ is the complement of the zero section in $cal(O)_(X_(upright("sm"))) \( - 1 \)$.
+    Its unit circle bundle has a homotopy exact sequence in which $pi_1 \( S^1 \) =
+    bb(Z)$ surjects onto $pi_1 \( Y^o \)$, since the base is simply connected. Hence $pi_1 \( Y^o \)$ is abelian.
+    Its abelianization is $H_1 \( Y^o \; bb(Z) \) = 0$, so it is trivial.
+    Smooth complex algebraic varieties have CW type. Successive applications of the Hurewicz theorem [22]
+    Theorem 4.32 to the homology vanishing already proved now give $pi_j \( Y^o \) = 0$ for $1 lt.eq j lt.eq kappa$.
+  Radial retraction gives the same connectivity for the unit cone.
+    Finally, the strict bound on the singular codimension and Bertini give the asserted smooth $h$-dimensional
+    sections. All conclusions hold after every complex embedding and imply the stated geometric assertions over $k$. ◻
 ]
 
 We shall use the unit cone
 
 $ Y_1 = { y in Y^o : parallel y parallel = 1 } \, $
 
-with a Hermitian norm that is the orthogonal sum of norms on the $M$ blocks. Common circle scaling and independent multiplication of the blocks by $b$-th roots of unity preserve $Y$ and its smooth locus. The radial retraction $Y^o arrow.r Y_1$ is equivariant for these commuting actions.
+with a Hermitian norm that is the orthogonal sum of norms on the $M$ blocks.
+  Common circle scaling and independent multiplication of the blocks by $b$-th roots of unity preserve $Y$ and its
+  smooth locus. The radial retraction $Y^o arrow.r Y_1$ is equivariant for these commuting actions.
 
 == 5 Curves realizing binary power addition <sec:curves>
 
-We next construct commuting matrix polynomials that replace two inputs by one output whose $b$-th power is their sum. The matrices vary over a Picard variety. An accompanying finite group action, free on a degree-one Picard variety, will allow the next two sections to control the division algebra obtained by descent.
+We next construct commuting matrix polynomials that replace two inputs by one output whose $b$-th power is their
+  sum. The matrices vary over a Picard variety. An accompanying finite group action,
+  free on a degree-one Picard variety, will allow the next two sections to control the division algebra obtained
+  by descent.
 
-All curves in this section are defined over the original field $bb(C)$. They may therefore be extended to any of the centers used in the construction. For a left group action, transport of line bundles and sections means $g_(*) = \( g^(- 1) \)^(*)$. In particular the action on $"Pic"^d \( C \)$ is $\[ A \] mapsto \[ g_(*) A \]$. A $G$-linearization of a line bundle means lifts of the action to its total space that are linear on fibers and satisfy the group law exactly. This is stronger than isomorphisms between transported bundles whose composites agree only up to a scalar.
+All curves in this section are defined over the original field $bb(C)$.
+  They may therefore be extended to any of the centers used in the construction.
+  For a left group action, transport of line bundles and sections means $g_(*) = \( g^(- 1) \)^(*)$.
+  In particular the action on $"Pic"^d \( C \)$ is $\[ A \] mapsto \[ g_(*) A \]$.
+  A $G$-linearization of a line bundle means lifts of the action to its total space that are linear on fibers and
+  satisfy the group law exactly. This is stronger than isomorphisms between transported bundles whose composites
+  agree only up to a scalar.
 
 #thm([Proposition 5.1.])[
-  (Binary addition data).  #emph[Let $b gt.eq 2$, fix a primitive $b$-th root $zeta$, and put 
-$ G = \( mu_b^b \/ mu_b \) times.r \( bb(Z) \/ b \) \, #h(2em) e = b^b \, $
+  (Binary addition data).  #emph[Let $b gt.eq 2$, fix a primitive $b$-th root $zeta$, and put
+$ G = \( mu_b^b \/ mu_b \) times.r \( bb(Z) \/ b \) \, wide e = b^b \, $
 
- where the denominator is the diagonal subgroup and $bb(Z) \/ b$ permutes the $b$ factors cyclically. There are smooth connected projective curves $C \, T_0$, a connected étale $G$-cover $C arrow.r T_0$, and a genuinely $G$-linearized line bundle $L$ on $C$ with the following properties.]
-  + #emph[The genera and degree satisfy 
-$ g_T := g \( T_0 \) = b - 1 \, #h(2em) g \( C \) - 1 = e \( g_T - 1 \) \, #h(2em) deg L = e . $
+ where the denominator is the diagonal subgroup and $bb(Z) \/ b$ permutes the $b$ factors cyclically.
+   There are smooth connected projective curves $C \, T_0$, a connected étale $G$-cover $C arrow.r T_0$,
+   and a genuinely $G$-linearized line bundle $L$ on $C$ with the following properties.]
+  + #emph[The genera and degree satisfy
+$ g_T := g \( T_0 \) = b - 1 \, wide g \( C \) - 1 = e \( g_T - 1 \) \, wide deg L = e . $
 
 ]
-  + #emph[There are sections $a_alpha in H^0 \( C \, L \)$, indexed by $alpha in bb(Z)_(gt.eq 0)^b$ with $\| alpha \| = b$, whose transport follows the degree-$b$ monomial representation in formal homogeneous coordinates $p_0 \, dots.h \, p_(b - 1)$. The notation $p^alpha$ labels the section $a_alpha$ when $\| alpha \| = b$; it does not assign individual sections of $L$ to the $p_j$. Write $a_alpha = p^alpha$ and set 
-$ z = 1 / b sum_(j = 0)^(b - 1) p_j^b \, #h(2em) u = - 1 / b sum_(j = 0)^(b - 1) zeta^(- j) p_j^b \, #h(2em) v = p_0 dots.h.c p_(b - 1) . $
+  + #emph[There are sections $a_alpha in H^0 \( C \, L \)$,
+    indexed by $alpha in bb(Z)_(gt.eq 0)^b$ with $\| alpha \| = b$,
+    whose transport follows the degree-$b$ monomial representation in formal homogeneous coordinates $p_0 \,
+    dots.h \, p_(b - 1)$. The notation $p^alpha$ labels the section $a_alpha$ when $\| alpha \| = b$;
+    it does not assign individual sections of $L$ to the $p_j$. Write $a_alpha = p^alpha$ and set
+$ z = 1 / b sum_(j = 0)^(b - 1) p_j^b \, wide u = - 1 / b sum_(j = 0)^(b - 1) zeta^(- j) p_j^b \, wide v =
+  p_0 dots.h.c p_(b - 1) . $
 
- They satisfy 
+ They satisfy
 #[#set math.equation(numbering: n => "(5.1)")
- $ p_j^b = z - zeta^j u \, #h(2em) z^b = u^b + v^b . $ <eq:binary-section-relations>]
+ $ p_j^b = z - zeta^j u \, wide z^b = u^b + v^b . $ <eq:binary-section-relations>]
 
- The section $z$ is invariant, and $u \, v$ have characters $chi \, psi : G arrow.r mu_b$, respectively. The pencil $u \, v$ is base-point-free and defines a degree-$e$ morphism $pi : C arrow.r bb(P)^1$ with $L = pi^(*) cal(O) \( 1 \)$.]
-  + #emph[For a generic $A in "Pic"^0 \( C \)$, over its field of definition $kappa$, the space $E_A = H^0 \( C \, A L^(g_T) \)$ has dimension $e$. Multiplication of sections gives isomorphisms 
+ The section $z$ is invariant, and $u \, v$ have characters $chi \, psi : G arrow.r mu_b$, respectively.
+   The pencil $u \, v$ is base-point-free and defines a degree-$e$ morphism $pi : C arrow.r bb(P)^1$ with $L =
+   pi^(*) cal(O) \( 1 \)$.]
+  + #emph[For a generic $A in "Pic"^0 \( C \)$, over its field of definition $kappa$, the space $E_A =
+    H^0 \( C \, A L^(g_T) \)$ has dimension $e$. Multiplication of sections gives isomorphisms
 #[#set math.equation(numbering: n => "(5.2)")
- $ H^0 \( C \, A L^(g_T + j) \) = E_A ⊗_kappa "Sym"_kappa^j chevron.l u \, v chevron.r #h(2em) \( j gt.eq 0 \) . $ <eq:curve-free-module>]
+ $ H^0 \( C \, A L^(g_T + j) \) = E_A ⊗_kappa "Sym"_kappa^j chevron.l u \,
+   v chevron.r wide \( j gt.eq 0 \) . $ <eq:curve-free-module>]
 
- Every $a in H^0 \( C \, L \)$ consequently acts by a homogeneous linear matrix polynomial $M_a \( U \, V \) in "End"_kappa \( E_A \) \[ U \, V \]$. These matrix polynomials commute, preserve all polynomial identities among the sections, and satisfy 
-$ M_u = U thin upright("id") \, #h(2em) M_v = V thin upright("id") \, #h(2em) M_z^b = \( U^b + V^b \) thin upright("id") . $
+ Every $a in H^0 \( C \, L \)$ consequently acts by a homogeneous linear matrix polynomial $M_a \( U \, V \) in
+   "End"_kappa \( E_A \) \[ U \, V \]$. These matrix polynomials commute,
+   preserve all polynomial identities among the sections, and satisfy
+$ M_u = U thin upright("id") \, wide M_v = V thin upright("id") \, wide M_z^b = \( U^b + V^b \) thin upright("id") . $
 
- Their dependence on $A$ is algebraic on a nonempty $G$-stable open subset of $"Pic"^0 \( C \)$. Under transport on this family, 
+ Their dependence on $A$ is algebraic on a nonempty $G$-stable open subset of $"Pic"^0 \( C \)$.
+   Under transport on this family,
 #[#set math.equation(numbering: n => "(5.3)")
- $ M_(g_(*) a) \( U \, V \) = \( g_(upright("coeff")) M_a \) \( chi \( g \) U \, psi \( g \) V \) . $ <eq:matrix-transport>]
+ $ M_(g_(*) a) \( U \, V \) = \( g_(upright("coeff")) M_a \) \( chi \( g \) U \, psi \( g \) V \) .
+   $ <eq:matrix-transport>]
 
- Here $g_(upright("coeff"))$ transports the endomorphism coefficients; scalar choices in identifying transported line bundles have no effect.]
-  + #emph[The action of $G$ on $"Pic"^1 \( C \)$ is free. For every character $xi : G arrow.r mu_b$, there is a continuous map $"Pic"^1 \( C \) arrow.r S^1$ equivariant for the given $G$-action and multiplication by $xi$ on $S^1$.]
+ Here $g_(upright("coeff"))$ transports the endomorphism coefficients;
+   scalar choices in identifying transported line bundles have no effect.]
+  + #emph[The action of $G$ on $"Pic"^1 \( C \)$ is free. For every character $xi : G arrow.r mu_b$,
+    there is a continuous map $"Pic"^1 \( C \) arrow.r S^1$ equivariant for the given $G$-action and
+    multiplication by $xi$ on $S^1$.]
 ] <prop:binary-curves>
 
-The three sections $u \, v \, z$ give the binary identity. The full monomial family $a_alpha$ also encodes the construction by linear and quadratic relations in Section 8, as required by the induction data of Section 3. We prove the proposition in three steps: a cover with the required sections, a free module for multiplication by those sections, and the two properties of the degree-one Picard variety.
+The three sections $u \, v \, z$ give the binary identity.
+  The full monomial family $a_alpha$ also encodes the construction by linear and quadratic relations in Section 8,
+  as required by the induction data of Section 3. We prove the proposition in three steps:
+  a cover with the required sections, a free module for multiplication by those sections,
+  and the two properties of the degree-one Picard variety.
 
 === 5.1 The cover and its sections <the-cover-and-its-sections>
 
@@ -500,30 +951,72 @@ The three sections $u \, v \, z$ give the binary identity. The full monomial fam
 ] <lem:binary-cover>
 
 #proof[
-  Inside $bb(P)^(b - 1)$, with coordinates $p_0 \, dots.h \, p_(b - 1)$, take the inverse image under coordinate-wise $b$-th powering of the line parameterized by
+  Inside $bb(P)^(b - 1)$, with coordinates $p_0 \, dots.h \, p_(b - 1)$,
+    take the inverse image under coordinate-wise $b$-th powering of the line parameterized by
   $ \[ u : z \] mapsto \[ z - u : z - zeta u : dots.h.c : z - zeta^(b - 1) u \] . $
-  Thus the preimage is defined by the $b - 2$ independent linear relations on the $p_j^b$; no equation is imposed when $b = 2$. Let $C'$ be its normalization. To establish its irreducibility, put $s = u \/ z$. On the generic fiber over the $s$-line the coordinate ratios satisfy
-  $ \( p_j \/ p_0 \)^b = frac(1 - zeta^j s, 1 - s) \, #h(2em) 1 lt.eq j < b . $
-  These $b - 1$ functions generate a free $\( bb(Z) \/ b \)$-submodule of $bb(C) \( s \)^times \/ bb(C) \( s \)^(times b)$: valuation at $s = zeta^(- j)$ detects the $j$-th exponent independently. Kummer theory gives a field extension of degree $b^(b - 1)$. This argument uses valuations equal to one and applies also when $b$ is composite. Every component of the projective preimage has dimension at least one, since there are $b - 2$ equations, and the coordinate-power map is finite. Hence every component dominates the line. The integral generic fiber therefore proves that its reduced support, and consequently $C'$, is irreducible.
-  Phase changes of the $p_j$, together with their cyclic permutation, act on this curve. The group before projectivization is $tilde(G) = mu_b^b times.r \( bb(Z) \/ b \)$. Its scalar subgroup is the diagonal $mu_b$, and the cyclic permutation already has order $b$ before taking the quotient. Thus the resulting group is the stated semidirect product $G$. Its action is faithful: a nontrivial cyclic permutation moves $s$ by a nontrivial $b$-th root, whereas a phase change fixing a general point with all coordinates nonzero must be diagonal. The invariant coordinate
+  Thus the preimage is defined by the $b - 2$ independent linear relations on the $p_j^b$;
+    no equation is imposed when $b = 2$. Let $C'$ be its normalization.
+    To establish its irreducibility, put $s = u \/ z$. On the generic fiber over the $s$-line the coordinate
+    ratios satisfy
+  $ \( p_j \/ p_0 \)^b = frac(1 - zeta^j s, 1 - s) \, wide 1 lt.eq j < b . $
+  These $b - 1$ functions generate a free $\( bb(Z) \/ b \)$-submodule of $bb(C) \( s \)^times \/
+    bb(C) \( s \)^(times b)$: valuation at $s = zeta^(- j)$ detects the $j$-th exponent independently.
+    Kummer theory gives a field extension of degree $b^(b - 1)$.
+    This argument uses valuations equal to one and applies also when $b$ is composite.
+    Every component of the projective preimage has dimension at least one, since there are $b - 2$ equations,
+    and the coordinate-power map is finite. Hence every component dominates the line.
+    The integral generic fiber therefore proves that its reduced support, and consequently $C'$, is irreducible.
+  Phase changes of the $p_j$, together with their cyclic permutation, act on this curve.
+    The group before projectivization is $tilde(G) = mu_b^b times.r \( bb(Z) \/ b \)$.
+    Its scalar subgroup is the diagonal $mu_b$, and the cyclic permutation already has order $b$ before taking the
+    quotient. Thus the resulting group is the stated semidirect product $G$. Its action is faithful:
+    a nontrivial cyclic permutation moves $s$ by a nontrivial $b$-th root,
+    whereas a phase change fixing a general point with all coordinates nonzero must be diagonal.
+    The invariant coordinate
   $ t = s^b $
   defines a degree-$b^b$ map $C' arrow.r bb(P)_t^1$. Since $\| G \| = b^b$, this is a Galois cover with group $G$.
-  The Kummer cover of the $s$-line is ramified precisely at the $b$ points $s = zeta^(- j)$, with index $b$. In particular, although several of the displayed ratios have a pole at $s = 1$, their simultaneous adjunction still has local index $b$: every unit in $bb(C) \[ \[ x \] \]$ has a $b$-th root, so all local extensions are contained in $bb(C) \( \( x^(1 \/ b) \) \)$. The map is unramified over $s = 0 \, oo$. It follows that the map to the $t$-line has exactly the branch values $0 \, 1 \, oo$, with index $b$ above each.
+  The Kummer cover of the $s$-line is ramified precisely at the $b$ points $s = zeta^(- j)$, with index $b$.
+    In particular, although several of the displayed ratios have a pole at $s = 1$,
+    their simultaneous adjunction still has local index $b$: every unit in $bb(C) \[ \[ x \] \]$ has a $b$-th
+    root, so all local extensions are contained in $bb(C) \( \( x^(1 \/ b) \) \)$.
+    The map is unramified over $s = 0 \, oo$. It follows that the map to the $t$-line has exactly the branch
+    values $0 \, 1 \, oo$, with index $b$ above each.
   Let $T_0$ be the smooth projective model of
   #[#set math.equation(numbering: n => "(5.4)")
    $ d^b = frac(t \( t - 1 \), t - 2) . $ <eq:auxiliary-cyclic-cover>]
-  The valuations of the right side at $0 \, 1 \, 2 \, oo$ are $1 \, 1 \, - 1 \, - 1$, respectively. This is a cyclic degree-$b$ cover, totally ramified at those four points and unramified elsewhere. Each nontrivial intermediate extension is ramified at $2$, whereas $C' arrow.r bb(P)_t^1$ is unramified there. The two Galois extensions are consequently linearly disjoint. Normalize their fiber product to obtain $C$. It is connected, and $C arrow.r T_0$ remains a $G$-cover.
-  This last cover is étale. Above $0 \, 1 \, oo$, both original ramification indices are $b$; in completed local coordinates, adjoining the same $b$-th root of a uniformizer removes the ramification after normalization. Above $2$, and away from the four listed points, the base change of the original map is already étale. Riemann–Hurwitz now gives
-  $ 2 g_T - 2 = - 2 b + 4 \( b - 1 \) = 2 b - 4 \, #h(2em) g \( C \) - 1 = \| G \| \( g_T - 1 \) . $
-  For $b = 2$, this construction starts with $C' = bb(P)^1$ and produces a degree-four étale $C_2 times C_2$-cover between curves of genus one.
-  Pull $cal(O) \( b \) \|_(C')$ back to $C$, and call the resulting bundle $L$. The sections $u \, z$ defined in the proposition have no common zero, since their simultaneous vanishing forces every $p_j$ to vanish. On $C'$ their pencil is the degree-$b^(b - 1)$ map to $bb(P)_s^1$; hence $deg cal(O) \( b \) \|_(C') = b^(b - 1)$. Since $C arrow.r C'$ has degree $b$, we have $deg L = b^b = e$.
-  The standard $tilde(G)$-linearization on $cal(O) \( b \)$ descends to a genuine $G$-linearization: a diagonal scalar in $mu_b$ acts trivially in degree $b$. Pullback preserves this linearization. Degree-$b$ monomials therefore define the sections $a_alpha$ and their asserted action. Phase changes fix $u \, z$, cyclic permutation fixes $z$ and multiplies $u$ by a primitive root, and $v = product_j p_j$ transforms by the product of phases. This product is invariant under cyclic permutation and trivial on the diagonal subgroup, so it defines a character of $G$. Denote the resulting transport characters of $u \, v$ by $chi \, psi$.
+  The valuations of the right side at $0 \, 1 \, 2 \, oo$ are $1 \, 1 \, - 1 \, - 1$, respectively.
+    This is a cyclic degree-$b$ cover, totally ramified at those four points and unramified elsewhere.
+    Each nontrivial intermediate extension is ramified at $2$, whereas $C' arrow.r bb(P)_t^1$ is unramified there.
+    The two Galois extensions are consequently linearly disjoint. Normalize their fiber product to obtain $C$.
+    It is connected, and $C arrow.r T_0$ remains a $G$-cover.
+  This last cover is étale. Above $0 \, 1 \, oo$, both original ramification indices are $b$;
+    in completed local coordinates, adjoining the same $b$-th root of a uniformizer removes the ramification after
+    normalization. Above $2$, and away from the four listed points,
+    the base change of the original map is already étale. Riemann–Hurwitz now gives
+  $ 2 g_T - 2 = - 2 b + 4 \( b - 1 \) = 2 b - 4 \, wide g \( C \) - 1 = \| G \| \( g_T - 1 \) . $
+  For $b = 2$, this construction starts with $C' = bb(P)^1$ and produces a degree-four étale $C_2 times
+    C_2$-cover between curves of genus one.
+  Pull $cal(O) \( b \) \|_(C')$ back to $C$, and call the resulting bundle $L$.
+    The sections $u \, z$ defined in the proposition have no common zero,
+    since their simultaneous vanishing forces every $p_j$ to vanish.
+    On $C'$ their pencil is the degree-$b^(b - 1)$ map to $bb(P)_s^1$; hence $deg cal(O) \( b \) \|_(C') =
+    b^(b - 1)$. Since $C arrow.r C'$ has degree $b$, we have $deg L = b^b = e$.
+  The standard $tilde(G)$-linearization on $cal(O) \( b \)$ descends to a genuine $G$-linearization:
+    a diagonal scalar in $mu_b$ acts trivially in degree $b$. Pullback preserves this linearization.
+    Degree-$b$ monomials therefore define the sections $a_alpha$ and their asserted action.
+    Phase changes fix $u \, z$, cyclic permutation fixes $z$ and multiplies $u$ by a primitive root, and $v =
+    product_j p_j$ transforms by the product of phases. This product is invariant under cyclic permutation and
+    trivial on the diagonal subgroup, so it defines a character of $G$.
+    Denote the resulting transport characters of $u \, v$ by $chi \, psi$.
   The equations of the curve give the first relations in (5.1), and their product gives
   $ v^b = product_(j = 0)^(b - 1) \( z - zeta^j u \) = z^b - u^b . $
-  If $u = v = 0$, this identity gives $z = 0$, which was excluded. Thus $u \, v$ define a base-point-free pencil. Its morphism $pi : C arrow.r bb(P)^1$ satisfies $L = pi^(*) cal(O) \( 1 \)$; since $deg L = e > 0$, the morphism is finite of degree $e$. ◻
+  If $u = v = 0$, this identity gives $z = 0$, which was excluded. Thus $u \, v$ define a base-point-free pencil.
+    Its morphism $pi : C arrow.r bb(P)^1$ satisfies $L = pi^(*) cal(O) \( 1 \)$; since $deg L = e > 0$,
+    the morphism is finite of degree $e$. ◻
 ]
 
-Figure 2 summarizes the normalization and its two projections. It separates the original power-cover geometry from the base change that removes its ramification.
+Figure 2 summarizes the normalization and its two projections.
+  It separates the original power-cover geometry from the base change that removes its ramification.
 
 #figure(
   [#cetz.canvas({
@@ -546,7 +1039,10 @@ Figure 2 summarizes the normalization and its two projections. It separates the
 
 === 5.2 Multiplication as linear matrix polynomials <multiplication-as-linear-matrix-polynomials>
 
-The cover supplies the required power identity among sections. We now turn those sections into linear matrix polynomials, with no choice of basis built into the construction. The use of a trivial finite pushforward to linearize multiplication is the vector-bundle description of matrix representations of power identities [35,25,15]; we give the needed argument for this curve and pencil explicitly.
+The cover supplies the required power identity among sections.
+  We now turn those sections into linear matrix polynomials, with no choice of basis built into the construction.
+  The use of a trivial finite pushforward to linearize multiplication is the vector-bundle description of matrix
+  representations of power identities [35,25,15]; we give the needed argument for this curve and pencil explicitly.
 
 #thm([Lemma 5.3.])[
   #emph[For the curve and line bundle of Lemma 14, part (iii) of Proposition 13 holds.]
@@ -555,212 +1051,402 @@ The cover supplies the required power identity among sections. We now turn those
 #proof[
   Let $g = g \( C \)$. For generic $A in "Pic"^0 \( C \)$, the line bundle $A L^(g_T - 1)$ is generic of degree
   $ e \( g_T - 1 \) = g - 1 . $
-  The effective locus in $"Pic"^(g - 1) \( C \)$ is the image of $"Sym"^(g - 1) C$, a projective variety of dimension $g - 1$. It is a proper closed subset of the $g$-dimensional Picard variety. Thus $H^0 \( C \, A L^(g_T - 1) \) = 0$, and Riemann–Roch gives $H^1 \( C \, A L^(g_T - 1) \) = 0$ as well. Here $g gt.eq 1$; when $g = 1$, the effective locus in degree zero consists only of the trivial line bundle. The complement of this locus, translated to $"Pic"^0 \( C \)$, is a nonempty $G$-stable open subset, because $L$ is linearized.
+  The effective locus in $"Pic"^(g - 1) \( C \)$ is the image of $"Sym"^(g - 1) C$,
+    a projective variety of dimension $g - 1$. It is a proper closed subset of the $g$-dimensional Picard variety.
+    Thus $H^0 \( C \, A L^(g_T - 1) \) = 0$, and Riemann–Roch gives $H^1 \( C \, A L^(g_T - 1) \) = 0$ as well.
+    Here $g gt.eq 1$; when $g = 1$, the effective locus in degree zero consists only of the trivial line bundle.
+    The complement of this locus, translated to $"Pic"^0 \( C \)$, is a nonempty $G$-stable open subset,
+    because $L$ is linearized.
   Fix $A$ in that open set, and put
   $ cal(V) = pi_(*) \( A L^(g_T) \) . $
-  This is a rank-$e$ vector bundle on $bb(P)^1$: the map $pi$ is finite, and its pushforward is torsion-free on a smooth curve. Projection formula and the preceding vanishing give $H^(*) \( bb(P)^1 \, cal(V) \( - 1 \) \) = 0$. For every geometric point $q in bb(P)^1$, the exact sequence
+  This is a rank-$e$ vector bundle on $bb(P)^1$: the map $pi$ is finite,
+    and its pushforward is torsion-free on a smooth curve. Projection formula and the preceding vanishing give
+    $H^(*) \( bb(P)^1 \, cal(V) \( - 1 \) \) = 0$. For every geometric point $q in bb(P)^1$, the exact sequence
   $ 0 arrow.r cal(V) \( - q \) arrow.r cal(V) arrow.r cal(V) \|_q arrow.r 0 $
   therefore identifies $H^0 \( bb(P)^1 \, cal(V) \)$ with $cal(V) \|_q$. It follows that the evaluation map
   $ H^0 \( bb(P)^1 \, cal(V) \) ⊗ cal(O)_(bb(P)^1) arrow.r cal(V) $
-  is an isomorphism. This also proves the assertion over the field of definition of $A$, since an isomorphism can be checked after algebraic closure. In particular $dim E_A = e$. Tensoring by $cal(O) \( j \)$, taking global sections, and using projection formula proves (5.2), with its indicated multiplication map.
+  is an isomorphism. This also proves the assertion over the field of definition of $A$,
+    since an isomorphism can be checked after algebraic closure. In particular $dim E_A = e$.
+    Tensoring by $cal(O) \( j \)$, taking global sections, and using projection formula proves (5.2),
+    with its indicated multiplication map.
   Let
   $ cal(M)_A = xor.big_(j gt.eq 0) H^0 \( C \, A L^(g_T + j) \) . $
-  Equation (5.2) identifies this graded module canonically with $E_A ⊗_kappa kappa \[ U \, V \]$. Multiplication by a section $a$ of $L$ is a homogeneous degree-one endomorphism of this free module over $kappa \[ U \, V \]$. Such an endomorphism is determined by its value on degree zero and has the form
-  $ M_a \( U \, V \) = A_a U + B_a V \, #h(2em) A_a \, B_a in "End"_kappa \( E_A \) . $
-  Multiplication of sections is commutative, so these matrix polynomials commute as elements of $"End"_kappa \( E_A \) \[ U \, V \]$. Every polynomial identity among sections acts as the zero endomorphism and remains an identity among the matrices. In particular $u \, v$ act as $U \, V$, and the identity for $M_z$ follows from (5.1). This does not assert that all the individual matrices $A_a \, B_a$ commute.
-  Choose a point of the constant curve to normalize the universal line bundle on $"Pic"^0 \( C \) times C$. On the open subset just specified, the dimensions of the section spaces are constant and the higher cohomology vanishes in every degree $g_T + j$, $j gt.eq 0$. Cohomology and base change, applied to these line bundles along the proper constant-curve projection, then makes the preceding evaluation and multiplication maps algebraic in $A$ [33] Lemma 30.22.1, Tag 07VK. The universal lines are flat over the Noetherian parameter base, as required there.
-  Finally, all multiplication maps are natural under transport. An isomorphism between a transported universal line and the universal line at the transported parameter is unique up to a scalar. It acts by the same scalar on the source and target section spaces, so the induced transport on endomorphisms is independent of that choice and composes as a group action. Transporting
+  Equation (5.2) identifies this graded module canonically with $E_A ⊗_kappa kappa \[ U \, V \]$.
+    Multiplication by a section $a$ of $L$ is a homogeneous degree-one endomorphism of this free module over
+    $kappa \[ U \, V \]$. Such an endomorphism is determined by its value on degree zero and has the form
+  $ M_a \( U \, V \) = A_a U + B_a V \, wide A_a \, B_a in "End"_kappa \( E_A \) . $
+  Multiplication of sections is commutative, so these matrix polynomials commute as elements of
+    $"End"_kappa \( E_A \) \[ U \, V \]$. Every polynomial identity among sections acts as the zero endomorphism
+    and remains an identity among the matrices. In particular $u \, v$ act as $U \, V$,
+    and the identity for $M_z$ follows from (5.1). This does not assert that all the individual matrices $A_a \,
+    B_a$ commute.
+  Choose a point of the constant curve to normalize the universal line bundle on $"Pic"^0 \( C \) times C$.
+    On the open subset just specified, the dimensions of the section spaces are constant and the higher cohomology
+    vanishes in every degree $g_T + j$, $j gt.eq 0$. Cohomology and base change,
+    applied to these line bundles along the proper constant-curve projection,
+    then makes the preceding evaluation and multiplication maps algebraic in $A$ [33] Lemma 30.22.1, Tag 07VK.
+    The universal lines are flat over the Noetherian parameter base, as required there.
+  Finally, all multiplication maps are natural under transport.
+    An isomorphism between a transported universal line and the universal line at the transported parameter is
+    unique up to a scalar. It acts by the same scalar on the source and target section spaces,
+    so the induced transport on endomorphisms is independent of that choice and composes as a group action. Transporting
   $ m_a : E_A arrow.r E_A ⊗ chevron.l u \, v chevron.r $
-  and using $g_(*) u = chi \( g \) u$, $g_(*) v = psi \( g \) v$ gives (5.3). On the generic parameter field this is semilinear transport of the coefficients. ◻
+  and using $g_(*) u = chi \( g \) u$, $g_(*) v = psi \( g \) v$ gives (5.3).
+    On the generic parameter field this is semilinear transport of the coefficients. ◻
 ]
 
 === 5.3 The degree-one Picard variety <the-degree-one-picard-variety>
 
-The multiplication construction uses $"Pic"^0 \( C \)$. The next two properties of $"Pic"^1 \( C \)$ provide, respectively, a free algebraic action for descent and continuous maps carrying its prescribed characters.
+The multiplication construction uses $"Pic"^0 \( C \)$. The next two properties of $"Pic"^1 \( C \)$ provide,
+  respectively, a free algebraic action for descent and continuous maps carrying its prescribed characters.
 
 #thm([Lemma 5.4.])[
-  #emph[If a finite group $G$ acts freely on a smooth connected projective complex curve $C$, then its induced action on $"Pic"^1 \( C \)$ is free.]
+  #emph[If a finite group $G$ acts freely on a smooth connected projective complex curve $C$,
+    then its induced action on $"Pic"^1 \( C \)$ is free.]
 ] <lem:picard-free>
 
 #proof[
-  Suppose an element $g eq.not 1$, of order $r$, fixes $\[ V \] in "Pic"^1 \( C \)$. Choose an isomorphism $g_(*) V arrow.r V$. Its $r$-fold composite is an automorphism of $V$, hence a nonzero scalar. Rescaling the chosen isomorphism by an $r$-th root of the inverse scalar gives a linearization of $V$ under $chevron.l g chevron.r$. Since this cyclic subgroup acts freely on $C$, descent along the degree-$r$ étale cover $q : C arrow.r C \/ chevron.l g chevron.r$ gives $V = q^(*) V_0$. But then $1 = deg V = r deg V_0$, a contradiction. ◻
+  Suppose an element $g eq.not 1$, of order $r$, fixes $\[ V \] in "Pic"^1 \( C \)$.
+    Choose an isomorphism $g_(*) V arrow.r V$. Its $r$-fold composite is an automorphism of $V$,
+    hence a nonzero scalar. Rescaling the chosen isomorphism by an $r$-th root of the inverse scalar gives a
+    linearization of $V$ under $chevron.l g chevron.r$. Since this cyclic subgroup acts freely on $C$,
+    descent along the degree-$r$ étale cover $q : C arrow.r C \/ chevron.l g chevron.r$ gives $V = q^(*) V_0$.
+    But then $1 = deg V = r deg V_0$, a contradiction. ◻
 ]
 
 #thm([Lemma 5.5.])[
-  #emph[Let $q : C arrow.r T$ be a connected étale $G$-cover of smooth connected projective complex curves. For every character $xi : G arrow.r mu_b$, there is a continuous map 
-$ f_xi : "Pic"^1 \( C \) arrow.r S^1 \, #h(2em) f_xi \( g_(*) A \) = xi \( g \) f_xi \( A \) . $
+  #emph[Let $q : C arrow.r T$ be a connected étale $G$-cover of smooth connected projective complex curves.
+    For every character $xi : G arrow.r mu_b$, there is a continuous map
+$ f_xi : "Pic"^1 \( C \) arrow.r S^1 \, wide f_xi \( g_(*) A \) = xi \( g \) f_xi \( A \) . $
 
 ]
 ] <lem:picard-character-maps>
 
 #proof[
-  Identify $mu_b$ with $bb(Z) \/ b$ by exponentiation. Compose the monodromy of the cover with $xi$ to obtain $macron(alpha) in H^1 \( T \; bb(Z) \/ b \)$. Since $H_1 \( T \; bb(Z) \)$ is free abelian, $macron(alpha)$ lifts to a class $alpha in H^1 \( T \; bb(Z) \)$. Represent $alpha$ by a harmonic real one-form with integral periods. The form
+  Identify $mu_b$ with $bb(Z) \/ b$ by exponentiation. Compose the monodromy of the cover with $xi$ to obtain
+    $macron(alpha) in H^1 \( T \; bb(Z) \/ b \)$. Since $H_1 \( T \; bb(Z) \)$ is free abelian,
+    $macron(alpha)$ lifts to a class $alpha in H^1 \( T \; bb(Z) \)$.
+    Represent $alpha$ by a harmonic real one-form with integral periods. The form
   $ omega = 1 / b q^(*) alpha $
-  has integral periods on $C$: the projection of a closed loop in $C$ has trivial covering monodromy, so its $alpha$-period is divisible by $b$. It is also harmonic, since $q$ is holomorphic and unramified. Integrating $omega$ modulo $bb(Z)$ and exponentiating defines a circle-valued map on $C$. For a path from $c$ to $g c$, the projected loop has character $xi \( g \)$; choosing the sign of the monodromy convention accordingly, the map satisfies
+  has integral periods on $C$: the projection of a closed loop in $C$ has trivial covering monodromy,
+    so its $alpha$-period is divisible by $b$. It is also harmonic, since $q$ is holomorphic and unramified.
+    Integrating $omega$ modulo $bb(Z)$ and exponentiating defines a circle-valued map on $C$.
+    For a path from $c$ to $g c$, the projected loop has character $xi \( g \)$;
+    choosing the sign of the monodromy convention accordingly, the map satisfies
   $ f_C \( g c \) = xi \( g \) f_C \( c \) . $
   Its differential, expressed as a real one-form after local lifting to $bb(R)$, is the $G$-invariant form $omega$.
   The Abel map
-  $ a : C arrow.r "Pic"^1 \( C \) \, #h(2em) c mapsto cal(O) \( c \) \, $
-  is equivariant. By the Jacobian description as the quotient of the dual space of holomorphic differentials by the integral period lattice, pullback by $a$ identifies translation-invariant real one-forms on $"Pic"^1 \( C \)$ with harmonic real one-forms on $C$, and induces an isomorphism on integral first cohomology; see [27] Proposition 2.2 and Theorem 2.5. Consequently $omega = a^(*) tilde(omega)$, where $tilde(omega)$ is translation-invariant with integral periods. Integrating $tilde(omega)$ gives a continuous circle-valued map $f_xi$ on $"Pic"^1 \( C \)$. Adjust its constant so that $f_xi compose a = f_C$.
-  The action on the Picard torsor is affine. The difference between the pullback of $tilde(omega)$ under $g$ and $tilde(omega)$ is translation-invariant and pulls back by $a$ to zero, since $omega$ is invariant. Injectivity of this pullback makes the difference zero. It follows that $f_xi \( g_(*) A \) \/ f_xi \( A \)$ is constant on the connected Picard variety. On the Abel image it equals $xi \( g \)$, so it has that value everywhere. ◻
+  $ a : C arrow.r "Pic"^1 \( C \) \, wide c mapsto cal(O) \( c \) \, $
+  is equivariant. By the Jacobian description as the quotient of the dual space of holomorphic differentials by
+    the integral period lattice, pullback by $a$ identifies translation-invariant real one-forms on
+    $"Pic"^1 \( C \)$ with harmonic real one-forms on $C$, and induces an isomorphism on integral first
+    cohomology; see [27] Proposition 2.2 and Theorem 2.5. Consequently $omega = a^(*) tilde(omega)$,
+    where $tilde(omega)$ is translation-invariant with integral periods.
+    Integrating $tilde(omega)$ gives a continuous circle-valued map $f_xi$ on $"Pic"^1 \( C \)$.
+    Adjust its constant so that $f_xi compose a = f_C$.
+  The action on the Picard torsor is affine. The difference between the pullback of $tilde(omega)$ under $g$ and
+    $tilde(omega)$ is translation-invariant and pulls back by $a$ to zero, since $omega$ is invariant.
+    Injectivity of this pullback makes the difference zero. It follows that $f_xi \( g_(*) A \) \/
+    f_xi \( A \)$ is constant on the connected Picard variety.
+    On the Abel image it equals $xi \( g \)$, so it has that value everywhere. ◻
 ]
 
 #proof[
-  Lemma 14 supplies parts (i) and (ii), and Lemma 15 supplies part (iii). Apply Lemmas 16 and 17 to the étale cover $C arrow.r T_0$ to obtain part (iv). ◻
+  Lemma 14 supplies parts (i) and (ii), and Lemma 15 supplies part (iii).
+    Apply Lemmas 16 and 17 to the étale cover $C arrow.r T_0$ to obtain part (iv). ◻
 ]
 
 == 6 Coherent descent and Euler characteristics <sec:descent>
 
-The matrices in Section 5 are defined over a function field and need not themselves generate a division algebra. We now combine them with the parameter complete intersection to obtain a division algebra that also contains the previous coefficient algebra. The main step in this section converts the reduced rank of an arbitrary module into an Euler characteristic. Section 7 uses that conversion to prove the required rank divisibility.
+The matrices in Section 5 are defined over a function field and need not themselves generate a division algebra.
+  We now combine them with the parameter complete intersection to obtain a division algebra that also contains the
+  previous coefficient algebra. The main step in this section converts the reduced rank of an arbitrary module
+  into an Euler characteristic. Section 7 uses that conversion to prove the required rank divisibility.
 
 #thm([Theorem 6.1.])[
-  #emph[Let $k$ be a finitely generated extension of the original field $bb(C)$, and let $Delta_0$ be a central division algebra over $k$ of degree $e_0$. Fix an integer $b gt.eq 2$, a $k$-vector space $U$ of dimension at least three, and a subspace 
-$ W subset.eq "Sym"^b \( U^or \) \, #h(2em) s = dim_k W \, $
+  #emph[Let $k$ be a finitely generated extension of the original field $bb(C)$,
+    and let $Delta_0$ be a central division algebra over $k$ of degree $e_0$.
+    Fix an integer $b gt.eq 2$, a $k$-vector space $U$ of dimension at least three, and a subspace
+$ W subset.eq "Sym"^b \( U^or \) \, wide s = dim_k W \, $
 
- such that every nonzero member of $W_(macron(k))$ has an irreducible factor of multiplicity one. Choose integers $h \, M$ in this order, with 
+ such that every nonzero member of $W_(macron(k))$ has an irreducible factor of multiplicity one.
+   Choose integers $h \, M$ in this order, with
 #[#set math.equation(numbering: n => "(6.1)")
- $ h gt.eq max #scale(x: 120%, y: 120%)[\(] { 2 } union { thin v_p \( e_0 \) s \( p^(v_p \( b \)) - 1 \) : p divides e_0 thin } #scale(x: 120%, y: 120%)[\)] \, #h(2em) M gt.eq 2 h + 4 s + 10 . $ <eq:division-parameters>]
+ $ h gt.eq max #scale(x: 120%, y: 120%)[\(] { 2 } union { thin v_p \( e_0 \) s \( p^(v_p \( b \)) - 1 \) :
+   p divides e_0 thin } #scale(x: 120%, y: 120%)[\)] \, wide M gt.eq 2 h + 4 s + 10 . $ <eq:division-parameters>]
 
- Here $v_p$ is the $p$-adic valuation, and the prime-indexed set is empty if $e_0 = 1$. Define 
-$ Y = {\( ell_1 \, dots.h \, ell_M \) in U^(xor M) : sum_(m = 1)^M w \( ell_m \) = 0 quad \( w in W \)} \, #h(2em) X = bb(P) \( Y \) . $
+ Here $v_p$ is the $p$-adic valuation, and the prime-indexed set is empty if $e_0 = 1$. Define
+$ Y = {\( ell_1 \, dots.h \, ell_M \) in U^(xor M) : sum_(m = 1)^M w \( ell_m \) = 0 quad \( w in W \)} \, wide
+  X = bb(P) \( Y \) . $
 
 ]
-  #emph[Take the curve $C$, group $G$, and linearized line bundle $L$ of Proposition 13 for this $b$. Write $e = \| G \| = b^b$ and $g_T = b - 1$, and put 
-$ B = product_(m = 2)^M "Pic"^0 \( C \) \, #h(2em) H = G^(M - 1) \, #h(2em) e_1 = \| H \| . $
+  #emph[Take the curve $C$, group $G$, and linearized line bundle $L$ of Proposition 13 for this $b$.
+    Write $e = \| G \| = b^b$ and $g_T = b - 1$, and put
+$ B = product_(m = 2)^M "Pic"^0 \( C \) \, wide H = G^(M - 1) \, wide e_1 = \| H \| . $
 
- All products and curves here are over $k$, and $H$ acts on the corresponding Picard factors by transport from the curve. Choose arbitrary characters $rho_1 \, dots.h \, rho_M : H arrow.r mu_b$, and let $H$ act on the points of the $m$-th block of $Y$ by $rho_m$. Let $R$ be an affine space with a faithful linear $H$-action. Set 
-$ K = k \( B times X times R \) \, #h(2em) F = K^H . $
+ All products and curves here are over $k$, and $H$ acts on the corresponding Picard factors by transport from the
+   curve. Choose arbitrary characters $rho_1 \, dots.h \, rho_M : H arrow.r mu_b$,
+   and let $H$ act on the points of the $m$-th block of $Y$ by $rho_m$.
+   Let $R$ be an affine space with a faithful linear $H$-action. Set
+$ K = k \( B times X times R \) \, wide F = K^H . $
 
- For the generic tuple of degree-zero line bundles $A_m$, let 
+ For the generic tuple of degree-zero line bundles $A_m$, let
 $ E = ⨂_(m = 2)^M H^0 \( C_K \, A_m ⊗ L^(g_T) \) . $
 
- Transport induces a semilinear $H$-action on $"End"_K \( E \)$. Its fixed algebra $Delta_1 = "End"_K \( E \)^H$ is central simple of degree $e_1$ over $F$, and 
+ Transport induces a semilinear $H$-action on $"End"_K \( E \)$.
+   Its fixed algebra $Delta_1 = "End"_K \( E \)^H$ is central simple of degree $e_1$ over $F$, and
 #[#set math.equation(numbering: n => "(6.2)")
  $ Delta = \( Delta_0 ⊗_k F \) ⊗_F Delta_1 $ <eq:division-algebra>]
 
- is a central division algebra of degree $e_0 e_1$. Its scalar extension to $K$ identifies with $Delta_0 ⊗_k "End"_K \( E \)$; in the corresponding descent action, $H$ fixes $Delta_0$ pointwise.]
+ is a central division algebra of degree $e_0 e_1$. Its scalar extension to $K$ identifies with $Delta_0 ⊗_k
+   "End"_K \( E \)$; in the corresponding descent action, $H$ fixes $Delta_0$ pointwise.]
 ] <thm:division>
 
-Theorem 12 applies to the stated $U \, W \, h \, M$. In particular, $X$ is geometrically integral, its singular locus has codimension greater than $h$, and its punctured smooth cone $Y^o$ is $\( M + 2 h \)$-connected after a complex embedding. Multiplication of each block by a $b$-th root of unity preserves the defining equations and linearizes $cal(O)_X \( 1 \)$. The Picard factors are geometrically integral, so $K$ is a field. The action on $R$ makes the action on $K$ faithful. The fixed-field theorem therefore gives $"Gal" \( K \/ F \) = H$.
+Theorem 12 applies to the stated $U \, W \, h \, M$. In particular, $X$ is geometrically integral,
+  its singular locus has codimension greater than $h$, and its punctured smooth cone $Y^o$ is
+  $\( M + 2 h \)$-connected after a complex embedding. Multiplication of each block by a $b$-th root of unity
+  preserves the defining equations and linearizes $cal(O)_X \( 1 \)$.
+  The Picard factors are geometrically integral, so $K$ is a field.
+  The action on $R$ makes the action on $K$ faithful. The fixed-field theorem therefore gives $"Gal" \( K \/ F \) = H$.
 
-Choose a point on the constant curve $C$, and normalize its universal line bundles along that point. The generic section spaces in the theorem have dimension $e$ by Proposition 13, so $dim_K E = e_1$. We use left transport $g_(*) = \( g^(- 1) \)^(*)$. Transport of a normalized universal line differs from the universal line at the transported parameter by a line from the parameter base. At the generic point an identification is therefore unique up to a scalar. Such a scalar disappears on endomorphisms, so transport gives an actual semilinear action on $"End"_K \( E \)$. Galois descent, applied also to multiplication and the unit, gives the asserted central simple algebra $Delta_1$ [33] Tag 0CDR. This proves all assertions of Theorem 18 except that $Delta$ is division. The algebra asserted here is over the generic field $F$. The section bundle $E$ exists on the non-effectivity open in $B$; no extension of its endomorphism algebra as an Azumaya algebra over all $B times X$ is needed.
+Choose a point on the constant curve $C$, and normalize its universal line bundles along that point.
+  The generic section spaces in the theorem have dimension $e$ by Proposition 13, so $dim_K E = e_1$.
+  We use left transport $g_(*) = \( g^(- 1) \)^(*)$. Transport of a normalized universal line differs from the
+  universal line at the transported parameter by a line from the parameter base.
+  At the generic point an identification is therefore unique up to a scalar.
+  Such a scalar disappears on endomorphisms, so transport gives an actual semilinear action on $"End"_K \( E \)$.
+  Galois descent, applied also to multiplication and the unit,
+  gives the asserted central simple algebra $Delta_1$ [33] Tag 0CDR.
+  This proves all assertions of Theorem 18 except that $Delta$ is division.
+  The algebra asserted here is over the generic field $F$. The section bundle $E$ exists on the non-effectivity
+  open in $B$; no extension of its endomorphism algebra as an Azumaya algebra over all $B times X$ is needed.
 
-If a central simple algebra has degree $d$, the dimension of each finite right module is divisible by $d$, as one sees after a splitting extension. We call the quotient its #emph[reduced rank]. To prove that the algebra is division, it suffices to show that every reduced rank is divisible by $d$: a nonzero proper right ideal would have reduced rank strictly between $0$ and $d$. Accordingly, fix a finite right $Delta$-module of reduced rank $r$. To prove $e_0 e_1 divides r$, introduce the auxiliary products over $k$
+If a central simple algebra has degree $d$, the dimension of each finite right module is divisible by $d$,
+  as one sees after a splitting extension. We call the quotient its #emph[reduced rank].
+  To prove that the algebra is division, it suffices to show that every reduced rank is divisible by $d$:
+  a nonzero proper right ideal would have reduced rank strictly between $0$ and $d$.
+  Accordingly, fix a finite right $Delta$-module of reduced rank $r$.
+  To prove $e_0 e_1 divides r$, introduce the auxiliary products over $k$
 
-$ P = product_(m = 2)^M "Pic"^1 \( C \) \, #h(2em) Z = B times P \, $
+$ P = product_(m = 2)^M "Pic"^1 \( C \) \, wide Z = B times P \, $
 
-with the corresponding transport action of $H$. These degree-one Picard factors serve two purposes. Their free action will make equivariant sheaves descend to a finite quotient, while a determinant line coupling $B$ to $P$ will turn the module’s reduced rank into an Euler characteristic. They are used only in this proof; the fields $K \, F$ and the algebra $Delta$ remain those in Theorem 18. The following proposition records the two numerical identities that the index argument will compare.
+with the corresponding transport action of $H$. These degree-one Picard factors serve two purposes.
+  Their free action will make equivariant sheaves descend to a finite quotient,
+  while a determinant line coupling $B$ to $P$ will turn the module’s reduced rank into an Euler characteristic.
+  They are used only in this proof; the fields $K \, F$ and the algebra $Delta$ remain those in Theorem 18.
+  The following proposition records the two numerical identities that the index argument will compare.
 
 #thm([Proposition 6.2.])[
-  #emph[For the data of Theorem 18 and a right $Delta$-module of reduced rank $r$, there is a class $beta$ of $H$-equivariant coherent sheaves on $Z times X$, with a commuting right $Delta_0$-action, having the following properties.]
-  #emph[After any embedding $k arrow.r.hook bb(C)$, identify $Delta_0 ⊗_k bb(C)$ with $"Mat"_(e_0) \( bb(C) \)$, choose a primitive matrix idempotent $epsilon.alt$, and put $beta' = beta epsilon.alt$. The class $beta'$ is still $H$-equivariant and is perfect on $Z times X_(upright("sm"))$. For every $x in X_(upright("sm")) \( bb(C) \)$, 
+  #emph[For the data of Theorem 18 and a right $Delta$-module of reduced rank $r$,
+    there is a class $beta$ of $H$-equivariant coherent sheaves on $Z times X$,
+    with a commuting right $Delta_0$-action, having the following properties.]
+  #emph[After any embedding $k arrow.r.hook bb(C)$, identify $Delta_0 ⊗_k bb(C)$ with $"Mat"_(e_0) \( bb(C) \)$,
+    choose a primitive matrix idempotent $epsilon.alt$, and put $beta' = beta epsilon.alt$.
+    The class $beta'$ is still $H$-equivariant and is perfect on $Z times X_(upright("sm"))$.
+    For every $x in X_(upright("sm")) \( bb(C) \)$,
 #[#set math.equation(numbering: n => "(6.3)")
- $ integral_Z "ch" #scale(x: 120%, y: 120%)[\(] beta' \|_(Z times x) #scale(x: 120%, y: 120%)[\)] "td" \( Z \) = plus.minus r . $ <eq:descent-fiber-index>]
+ $ integral_Z "ch" #scale(x: 120%, y: 120%)[\(] beta' \|_(Z times x) #scale(x: 120%, y: 120%)[\)] "td" \( Z \) =
+   plus.minus r . $ <eq:descent-fiber-index>]
 
- The sign depends only on the curve factors, not on the module or on $x$. Before making the complex base change, one has 
+ The sign depends only on the curve factors, not on the module or on $x$. Before making the complex base change, one has
 #[#set math.equation(numbering: n => "(6.4)")
- $ p \( l \) := frac(chi \( Z times X \, beta ⊗ cal(O)_X \( l \) \), e_0) med in med e_0 e_1 bb(Z) #h(2em) \( l in bb(Z) \) . $ <eq:descent-twist-divisibility>]
+ $ p \( l \) := frac(chi \( Z times X \, beta ⊗ cal(O)_X \( l \) \), e_0) med in med
+   e_0 e_1 bb(Z) wide \( l in bb(Z) \) . $ <eq:descent-twist-divisibility>]
 
  After complex base change, $p \( l \)$ is also the ordinary Euler characteristic of $beta' ⊗ cal(O)_X \( l \)$.]
 ] <prop:rank-to-euler>
 
 === 6.1 Removing the scalar ambiguity in transport <removing-the-scalar-ambiguity-in-transport>
 
-Pull the given module to $K$, with its Galois descent action, and tensor over $"End"_K \( E \)$ with its standard left module $E$. The resulting vector space $cal(F)_eta$, at the generic point of
+Pull the given module to $K$, with its Galois descent action,
+  and tensor over $"End"_K \( E \)$ with its standard left module $E$.
+  The resulting vector space $cal(F)_eta$, at the generic point of
 
 $ T = B times X times R \, $
 
-has a commuting right $Delta_0$-action and dimension $e_0 r$. Tensoring with $E$ has divided the dimension by $e_1$. Its transport has scalar weight one in each of the universal lines $A_m$. We first extend this twisted transport over $T$.
+has a commuting right $Delta_0$-action and dimension $e_0 r$.
+  Tensoring with $E$ has divided the dimension by $e_1$. Its transport has scalar weight one in each of the
+  universal lines $A_m$. We first extend this twisted transport over $T$.
 
-For $g in H$, simultaneous transport on the curve and the parameter gives two line-bundle families $g_(*) A_m \, A_m$ representing the same Picard parameter. Their Hom bundle is the pullback of a line from the base. More explicitly, if $q_m : T times C arrow.r T$ is projection for the $m$-th curve, put
+For $g in H$, simultaneous transport on the curve and the parameter gives two line-bundle families $g_(*) A_m \,
+  A_m$ representing the same Picard parameter. Their Hom bundle is the pullback of a line from the base.
+  More explicitly, if $q_m : T times C arrow.r T$ is projection for the $m$-th curve, put
 
 $ J_g = ⨂_(m = 2)^M \( q_m \)_(*) cal(H) o m \( g_(*) A_m \, A_m \) . $
 
-Each factor is a line bundle, and its pullback is identified with the corresponding Hom bundle by evaluation. Evaluation and composition give
+Each factor is a line bundle, and its pullback is identified with the corresponding Hom bundle by evaluation.
+  Evaluation and composition give
 
 #[#set math.equation(numbering: n => "(6.5)")
- $ J_g ⊗ g_(*) cal(F)_eta tilde.eq cal(F)_eta \, #h(2em) J_g ⊗ g_(*) J_(g') tilde.eq J_(g g') . $ <eq:hom-line-transport>]
+ $ J_g ⊗ g_(*) cal(F)_eta tilde.eq cal(F)_eta \, wide J_g ⊗ g_(*) J_(g') tilde.eq J_(g g') . $ <eq:hom-line-transport>]
 
-The second isomorphism has its usual associative composition law. The first is compatible with it: transport of the original module is genuine, and the only scalar choices occur in the line bundles used to define $E$. The genuine linearization of $L$ adds no further ambiguity.
+The second isomorphism has its usual associative composition law. The first is compatible with it:
+  transport of the original module is genuine, and the only scalar choices occur in the line bundles used to
+  define $E$. The genuine linearization of $L$ adds no further ambiguity.
 
 #thm([Lemma 6.3.])[
-  #emph[The generic module $cal(F)_eta$ extends to a coherent $Delta_0$-module $cal(F)$ on $T$ with compatible isomorphisms $J_g ⊗ g_(*) cal(F) tilde.eq cal(F)$.]
+  #emph[The generic module $cal(F)_eta$ extends to a coherent $Delta_0$-module $cal(F)$ on $T$ with compatible
+    isomorphisms $J_g ⊗ g_(*) cal(F) tilde.eq cal(F)$.]
 ] <lem:twisted-extension>
 
 #proof[
-  Choose finitely many rational sections spanning $cal(F)_eta$, and let $cal(F)_0$ be the coherent subsheaf of rational sections generated by them and their multiples by a $k$-basis of $Delta_0$. For each $g$, use (6.5) to view $J_g ⊗ g_(*) cal(F)_0$ as a coherent subsheaf of rational sections. Its image is coherent because $T$ is noetherian. Let $cal(F)$ be the sum of these finitely many images. Corrected transport permutes the summands by the composition law in (6.5); hence it preserves $cal(F)$. All maps commute with $Delta_0$, and their composition identities hold inside rational sections. The generic fiber is unchanged. ◻
+  Choose finitely many rational sections spanning $cal(F)_eta$,
+    and let $cal(F)_0$ be the coherent subsheaf of rational sections generated by them and their multiples by a
+    $k$-basis of $Delta_0$. For each $g$, use (6.5) to view $J_g ⊗ g_(*)
+    cal(F)_0$ as a coherent subsheaf of rational sections. Its image is coherent because $T$ is noetherian.
+    Let $cal(F)$ be the sum of these finitely many images. Corrected transport permutes the summands by the
+    composition law in (6.5); hence it preserves $cal(F)$. All maps commute with $Delta_0$,
+    and their composition identities hold inside rational sections. The generic fiber is unchanged. ◻
 ]
 
-Pull $cal(F)$ back along the auxiliary factors $P$, and let $V_m$ be their normalized universal degree-one lines. We will cancel the scalar weight of $cal(F)$ with a line bundle on $Z = B times P$. Define
+Pull $cal(F)$ back along the auxiliary factors $P$, and let $V_m$ be their normalized universal degree-one lines.
+  We will cancel the scalar weight of $cal(F)$ with a line bundle on $Z = B times P$. Define
 
 #[#set math.equation(numbering: n => "(6.6)")
- $ cal(D) = ⨂_(m = 2)^M (#scale(x: 120%, y: 120%)[\(] det R Gamma_C \( A_m ⊗ V_m \) #scale(x: 120%, y: 120%)[\)]^(- 1) ⊗ det R Gamma_C \( A_m \) ⊗ det R Gamma_C \( V_m \)) . $ <eq:determinant-correction>]
+ $ cal(D) = ⨂_(m = 2)^M
+   (#scale(x: 120%, y: 120%)[\(] det R Gamma_C \( A_m ⊗ V_m \) #scale(x: 120%, y: 120%)[\)]^(- 1) ⊗ det R
+   Gamma_C \( A_m \) ⊗ det R Gamma_C \( V_m \)) . $ <eq:determinant-correction>]
 
-Here $R Gamma_C$ means derived pushforward along the constant curve, retaining the Picard parameters. The projection is smooth and proper, and the universal lines are flat over the parameter base; their derived pushforwards are perfect and commute with base change [33] Tag 07VK. Their determinant lines use the determinant-of-cohomology formalism of Knudsen and Mumford [24]; the functorial construction and its compatibility with pullback are recalled in [33] Tags 0FJI and 0FJW. Each factor in $cal(D)$ is the inverse Deligne pairing of $A_m \, V_m$ tensored with the fixed line $det R Gamma_C \( cal(O)_C \)$ [16] Construction 7.2, Equation (7.2.1). We keep the full determinant expression when defining transport.
+Here $R Gamma_C$ means derived pushforward along the constant curve, retaining the Picard parameters.
+  The projection is smooth and proper, and the universal lines are flat over the parameter base;
+  their derived pushforwards are perfect and commute with base change [33] Tag 07VK.
+  Their determinant lines use the determinant-of-cohomology formalism of Knudsen and Mumford [24];
+  the functorial construction and its compatibility with pullback are recalled in [33] Tags 0FJI and 0FJW.
+  Each factor in $cal(D)$ is the inverse Deligne pairing of $A_m \,
+  V_m$ tensored with the fixed line $det R Gamma_C \( cal(O)_C \)$ [16] Construction 7.2, Equation (7.2.1).
+  We keep the full determinant expression when defining transport.
 
 #thm([Lemma 6.4.])[
-  #emph[The sheaf $cal(F) ⊗ cal(D)$ on $Z times X times R$ has a genuine $H$-equivariant structure commuting with $Delta_0$. Its derived restriction to $R = 0$ defines an equivariant coherent class $beta$ on $Z times X$. Nonequivariantly this class is the tensor product of $cal(D)$ with a class pulled back from $B times X$.]
+  #emph[The sheaf $cal(F) ⊗ cal(D)$ on $Z times X times R$ has a genuine $H$-equivariant structure commuting with
+    $Delta_0$. Its derived restriction to $R = 0$ defines an equivariant coherent class $beta$ on $Z times X$.
+    Nonequivariantly this class is the tensor product of $cal(D)$ with a class pulled back from $B times X$.]
 ] <lem:determinant-descent>
 
 #proof[
   Write $g_C$ for the genus of $C$. For one pair $A \, V$ of degrees zero and one,
-  $ chi \( A \) = 1 - g_C \, #h(2em) chi \( A ⊗ V \) = chi \( V \) = 2 - g_C . $
-  A scalar acting on a line inside a determinant of cohomology has exponent equal to its Euler characteristic. Thus the corresponding factor of $cal(D)$ has scalar weights
-  $ #scale(x: 120%, y: 120%)[\(] - chi \( A ⊗ V \) + chi \( A \) \, - chi \( A ⊗ V \) + chi \( V \) #scale(x: 120%, y: 120%)[\)] = \( - 1 \, 0 \) $
-  in $A \, V$. The first weight cancels the weight one of $cal(F)$, and the second leaves no dependence on identifications of $V$. Local choices of line identifications therefore give the same transport on $cal(F) ⊗ cal(D)$. To check the group law, compare the two successive transports with the composed identifications of the universal lines. Composition in $J_g ⊗ g_(*) J_h arrow.r J_(g h)$ is the associative composition from $g_(*) h_(*) A$ to $g_(*) A$ to $A$. Functoriality of determinants and the genuine transport of the original module identify the two maps for these composed choices. Any scalar change of the $A$-identification contributes opposite weights on $cal(F)$ and $cal(D)$, and a change of the $V$-identification has weight zero. Thus no scalar cocycle remains, and the maps glue to genuine equivariance.
-  The origin of the representation $R$ is $H$-fixed. Its immersion in the product has the finite equivariant Koszul resolution on the linear coordinates of $R$, even when $X$ is singular. The alternating coherent Tor class of restriction therefore defines $beta$, preserving both actions. Since $cal(F)$ does not depend on $P$, the last assertion follows. ◻
+  $ chi \( A \) = 1 - g_C \, wide chi \( A ⊗ V \) = chi \( V \) = 2 - g_C . $
+  A scalar acting on a line inside a determinant of cohomology has exponent equal to its Euler characteristic.
+    Thus the corresponding factor of $cal(D)$ has scalar weights
+  $ #scale(x: 120%, y: 120%)[\(] - chi \( A ⊗ V \) + chi \( A \) \, - chi \( A ⊗ V \) +
+    chi \( V \) #scale(x: 120%, y: 120%)[\)] = \( - 1 \, 0 \) $
+  in $A \, V$. The first weight cancels the weight one of $cal(F)$,
+    and the second leaves no dependence on identifications of $V$.
+    Local choices of line identifications therefore give the same transport on $cal(F) ⊗ cal(D)$.
+    To check the group law, compare the two successive transports with the composed identifications of the
+    universal lines. Composition in $J_g ⊗ g_(*) J_h arrow.r J_(g h)$ is the associative composition from $g_(*)
+    h_(*) A$ to $g_(*) A$ to $A$. Functoriality of determinants and the genuine transport of the original module
+    identify the two maps for these composed choices. Any scalar change of the $A$-identification contributes
+    opposite weights on $cal(F)$ and $cal(D)$, and a change of the $V$-identification has weight zero.
+    Thus no scalar cocycle remains, and the maps glue to genuine equivariance.
+  The origin of the representation $R$ is $H$-fixed. Its immersion in the product has the finite equivariant
+    Koszul resolution on the linear coordinates of $R$, even when $X$ is singular.
+    The alternating coherent Tor class of restriction therefore defines $beta$, preserving both actions.
+    Since $cal(F)$ does not depend on $P$, the last assertion follows. ◻
 ]
 
 === 6.2 Extracting the reduced rank <extracting-the-reduced-rank>
 
-Fix a complex embedding. All varieties in this paragraph are base changed along it. The action of $H$ is now $bb(C)$-linear and fixes the constant algebra $Delta_0 ⊗_k bb(C)$ pointwise. Consequently taking the image under right multiplication by $epsilon.alt$ is exact and preserves equivariance. It divides the dimension of every finite-dimensional matrix module by $e_0$. The product $B times X_(upright("sm")) times R$ is smooth and connected. On it, $cal(F)$ is perfect, and the alternating rank of a locally free resolution is constantly $e_0 r$. Derived restriction to $R = 0$ preserves this rank. Thus, for each $x in X_(upright("sm"))$, Lemma 21 gives
+Fix a complex embedding. All varieties in this paragraph are base changed along it.
+  The action of $H$ is now $bb(C)$-linear and fixes the constant algebra $Delta_0 ⊗_k bb(C)$ pointwise.
+  Consequently taking the image under right multiplication by $epsilon.alt$ is exact and preserves equivariance.
+  It divides the dimension of every finite-dimensional matrix module by $e_0$.
+  The product $B times X_(upright("sm")) times R$ is smooth and connected.
+  On it, $cal(F)$ is perfect, and the alternating rank of a locally free resolution is constantly $e_0 r$.
+  Derived restriction to $R = 0$ preserves this rank. Thus, for each $x in X_(upright("sm"))$, Lemma 21 gives
 
 #[#set math.equation(numbering: n => "(6.7)")
- $ beta' \|_(Z times x) = "pr"_B^(*) gamma_x ⊗ cal(D) \, #h(2em) gamma_x in K^0 \( B \) \, #h(2em) "rk" gamma_x = r . $ <eq:beta-fiber-factorization>]
+ $ beta' \|_(Z times x) = "pr"_B^(*) gamma_x ⊗ cal(D) \, wide gamma_x in K^0 \( B \) \, wide "rk" gamma_x =
+   r . $ <eq:beta-fiber-factorization>]
 
 This argument uses derived restriction; no flatness of $cal(F)$ over $R$ is required.
 
 #thm([Lemma 6.5.])[
-  #emph[For any class $gamma in K^0 \( B \)$, 
+  #emph[For any class $gamma in K^0 \( B \)$,
 $ integral_Z "ch" \( "pr"_B^(*) gamma ⊗ cal(D) \) "td" \( Z \) = plus.minus "rk" gamma \, $
 
  where the sign is independent of $gamma$.]
 ] <lem:mixed-picard-pairing>
 
 #proof[
-  It suffices to calculate the determinant correction for one curve. Write $a = c_1 \( A \)$, $v = c_1 \( V \)$, and let $q$ project off $C$. Grothendieck–Riemann–Roch for this smooth proper projection gives
-  $ c_1 #h(-0.16667em) (#scale(x: 120%, y: 120%)[\(] det R q_(*) \( A ⊗ V \) #scale(x: 120%, y: 120%)[\)]^(- 1) ⊗ det R q_(*) A ⊗ det R q_(*) V) = - q_(*) \( a v \) . $
-  Indeed the signed exponential sum $- e^(a + v) + e^a + e^v$ has degree-two part zero and degree-four part $- a v$; a curve has no degree-four Todd term.
-  Normalization at the chosen curve point removes pure parameter-space degree-two components from both universal classes. The class $a$ has no pure curve component because $deg A = 0$. The pure curve component of $v$ cannot contribute to $q_(*) \( a v \)$. The resulting class is therefore purely mixed between $H^1 \( "Pic"^0 \( C \) \, bb(Z) \)$ and $H^1 \( "Pic"^1 \( C \) \, bb(Z) \)$. Tensoring by $cal(O)_C \( - c_0 \)$, for the chosen curve point $c_0$, identifies the torsor $"Pic"^1 \( C \)$ with $"Pic"^0 \( C \)$; different choices change this identification by translation, which acts trivially on integral first cohomology. The universal classes identify these integral lattices with the curve’s first-cohomology lattice: pullback by an Abel map gives the mixed component of the diagonal class on $C times C$, and the Abel map induces an integral $H^1$-isomorphism. The intersection form on $H^1 \( C \, bb(Z) \)$ is unimodular. Hence the mixed class has a unimodular matrix $Lambda$. This is the cohomological Poincaré pairing; the rank extraction below is the numerical counterpart of the Fourier–Mukai calculation in [28] Theorem 2.2 and Example 2.6.
-  More explicitly, if $d = 2 g_C$ is the real dimension of either Picard factor and $b_i \, p_j$ are integral bases, a mixed class $theta = sum_(i \, j) Lambda_(i j) b_i and p_j$ satisfies
+  It suffices to calculate the determinant correction for one curve.
+    Write $a = c_1 \( A \)$, $v = c_1 \( V \)$, and let $q$ project off $C$.
+    Grothendieck–Riemann–Roch for this smooth proper projection gives
+  $ c_1 #h(-0.16667em) (#scale(x: 120%, y: 120%)[\(] det R q_(*) \( A ⊗ V \) #scale(x: 120%, y: 120%)[\)]^(- 1) ⊗
+    det R q_(*) A ⊗ det R q_(*) V) = - q_(*) \( a v \) . $
+  Indeed the signed exponential sum $- e^(a + v) + e^a + e^v$ has degree-two part zero and degree-four part $-
+    a v$; a curve has no degree-four Todd term.
+  Normalization at the chosen curve point removes pure parameter-space degree-two components from both universal
+    classes. The class $a$ has no pure curve component because $deg A = 0$.
+    The pure curve component of $v$ cannot contribute to $q_(*) \( a v \)$.
+    The resulting class is therefore purely mixed between $H^1 \( "Pic"^0 \( C \) \, bb(Z) \)$ and
+    $H^1 \( "Pic"^1 \( C \) \, bb(Z) \)$. Tensoring by $cal(O)_C \( - c_0 \)$, for the chosen curve point $c_0$,
+    identifies the torsor $"Pic"^1 \( C \)$ with $"Pic"^0 \( C \)$;
+    different choices change this identification by translation,
+    which acts trivially on integral first cohomology. The universal classes identify these integral lattices with
+    the curve’s first-cohomology lattice: pullback by an Abel map gives the mixed component of the diagonal class
+    on $C times C$, and the Abel map induces an integral $H^1$-isomorphism.
+    The intersection form on $H^1 \( C \, bb(Z) \)$ is unimodular.
+    Hence the mixed class has a unimodular matrix $Lambda$. This is the cohomological Poincaré pairing;
+    the rank extraction below is the numerical counterpart of the Fourier–Mukai calculation in [28] Theorem 2.2
+    and Example 2.6.
+  More explicitly, if $d = 2 g_C$ is the real dimension of either Picard factor and $b_i \,
+    p_j$ are integral bases, a mixed class $theta = sum_(i \, j) Lambda_(i j) b_i and p_j$ satisfies
   $ integral_("Pic"^0 \( C \) times "Pic"^1 \( C \)) frac(theta^d, d !) = plus.minus det Lambda = plus.minus 1 . $
-  The factors for distinct curves form separate blocks, so the same unit calculation holds on $Z$. Each Picard tangent bundle is trivial, giving $"td" \( Z \) = 1$. To obtain top degree on $P$ from $exp \( c_1 \( cal(D) \) \)$, one must already use top degree on $B$, because every mixed term has degree one on each side. Thus every positive-degree term of $"ch" \( gamma \)$ contributes zero. Only its rank remains. ◻
+  The factors for distinct curves form separate blocks, so the same unit calculation holds on $Z$.
+    Each Picard tangent bundle is trivial, giving $"td" \( Z \) = 1$.
+    To obtain top degree on $P$ from $exp \( c_1 \( cal(D) \) \)$, one must already use top degree on $B$,
+    because every mixed term has degree one on each side. Thus every positive-degree term of $"ch" \( gamma \)$
+    contributes zero. Only its rank remains. ◻
 ]
 
-Combining (6.7) with Lemma 22 proves (6.3). It remains to obtain the arithmetic divisibility of the twists over $k$, where $Delta_0$ is still division. We need an Euler-characteristic fact that also applies to the singular variety $X$.
+Combining (6.7) with Lemma 22 proves (6.3). It remains to obtain the arithmetic divisibility of the twists over
+  $k$, where $Delta_0$ is still division. We need an Euler-characteristic fact that also applies to the singular
+  variety $X$.
 
 #thm([Lemma 6.6.])[
-  #emph[Let $Q$ be a projective scheme over a field, and let $delta : T' arrow.r Q$ be a torsor under a constant finite group of order $a$. For every coherent-sheaf class $alpha$ on $Q$, 
+  #emph[Let $Q$ be a projective scheme over a field, and let $delta : T' arrow.r
+    Q$ be a torsor under a constant finite group of order $a$. For every coherent-sheaf class $alpha$ on $Q$,
 $ chi \( T' \, delta^(*) alpha \) = a thin chi \( Q \, alpha \) . $
 
 ]
 ] <lem:torsor-euler>
 
 #proof[
-  The vector bundle $delta_(*) cal(O)_(T')$ has rank $a$. Put $d = \[ delta_(*) cal(O)_(T') \] - a in K^0 \( Q \)$. Multiplication by $d$ lowers the dimension-of-support filtration on the coherent-sheaf group $G_0 \( Q \)$. To see this, the successive quotients of that filtration are generated by integral closed supports [33] Lemma 42.23.2, Tag 02S9; on an integral support the two bundles in $d$ have the same rank and are isomorphic on a dense open set. Localization therefore puts their difference in smaller support dimension. In particular this operator is nilpotent.
-  The torsor becomes the disjoint union of $a$ copies of $T'$ after pullback to $T'$, so $delta^(*) d = 0$. The projection formula gives, as operators on $G_0 \( Q \)$,
+  The vector bundle $delta_(*) cal(O)_(T')$ has rank $a$. Put $d = \[ delta_(*) cal(O)_(T') \] -
+    a in K^0 \( Q \)$. Multiplication by $d$ lowers the dimension-of-support filtration on the coherent-sheaf
+    group $G_0 \( Q \)$. To see this, the successive quotients of that filtration are generated by integral closed
+    supports [33] Lemma 42.23.2, Tag 02S9; on an integral support the two bundles in $d$ have the same rank and
+    are isomorphic on a dense open set. Localization therefore puts their difference in smaller support dimension.
+    In particular this operator is nilpotent.
+  The torsor becomes the disjoint union of $a$ copies of $T'$ after pullback to $T'$, so $delta^(*) d = 0$.
+    The projection formula gives, as operators on $G_0 \( Q \)$,
   $ \( a + d \) d = 0 . $
-  Over $bb(Q)$, the operator $a + d$ is invertible by a finite nilpotent expansion, hence $d$ acts by zero. Euler characteristic takes values in $bb(Z)$, so it kills torsion and $chi \( Q \, d alpha \) = 0$. Finite pushforward and the projection formula now give the claimed equality. ◻
+  Over $bb(Q)$, the operator $a + d$ is invertible by a finite nilpotent expansion, hence $d$ acts by zero.
+    Euler characteristic takes values in $bb(Z)$, so it kills torsion and $chi \( Q \, d alpha \) = 0$.
+    Finite pushforward and the projection formula now give the claimed equality. ◻
 ]
 
 #proof[
-  The construction and the first identity have been established above. By Proposition 13, $H$ acts freely on $P$, hence on $Z times X$. Its quotient is a projective scheme, and the quotient morphism is a finite étale $H$-torsor; existence of the scheme quotient and torsor follows from [33] Tag 07S7, and a product of the translates of an ample line bundle gives projectivity of the quotient. Equivariant coherent sheaves descend along this torsor, together with their commuting $Delta_0$-actions [33] Proposition 35.5.2, Tag 023R. The same holds for $beta ⊗ cal(O)_X \( l \)$, since $cal(O)_X \( 1 \)$ is linearized.
-  Each cohomology group of a descended sheaf is a finite right module over the division algebra $Delta_0 \/ k$, so its $k$-dimension is divisible by $e_0^2$. Lemma 23 multiplies its Euler characteristic by $\| H \| = e_1$ on passing upstairs. Applying this term by term to the coherent class gives
+  The construction and the first identity have been established above.
+    By Proposition 13, $H$ acts freely on $P$, hence on $Z times X$.
+    Its quotient is a projective scheme, and the quotient morphism is a finite étale $H$-torsor;
+    existence of the scheme quotient and torsor follows from [33] Tag 07S7,
+    and a product of the translates of an ample line bundle gives projectivity of the quotient.
+    Equivariant coherent sheaves descend along this torsor, together with their commuting $Delta_0$-actions [33]
+    Proposition 35.5.2, Tag 023R. The same holds for $beta ⊗ cal(O)_X \( l \)$, since $cal(O)_X \( 1 \)$ is linearized.
+  Each cohomology group of a descended sheaf is a finite right module over the division algebra $Delta_0 \/ k$,
+    so its $k$-dimension is divisible by $e_0^2$. Lemma 23 multiplies its Euler characteristic by $\| H \| =
+    e_1$ on passing upstairs. Applying this term by term to the coherent class gives
   $ chi \( Z times X \, beta ⊗ cal(O)_X \( l \) \) in e_0^2 e_1 bb(Z) \, $
-  which proves (6.4). Finally, field extension preserves coherent cohomology dimensions by flat base change [33] Tag 02KH, even for a complex embedding that does not fix the original constants. Over $bb(C)$, idempotent reduction divides these dimensions by $e_0$, proving the last assertion. ◻
+  which proves (6.4). Finally, field extension preserves coherent cohomology dimensions by flat base change [33]
+    Tag 02KH, even for a complex embedding that does not fix the original constants.
+    Over $bb(C)$, idempotent reduction divides these dimensions by $e_0$, proving the last assertion. ◻
 ]
 
-We have obtained an Euler characteristic equal to the reduced rank up to sign, together with divisibility for every algebraic twist. The geometry of $X$ prevents an immediate comparison of these two statements. The next section makes that comparison using the connectivity of $Y^o$, and completes the proof of Theorem 18.
+We have obtained an Euler characteristic equal to the reduced rank up to sign,
+  together with divisibility for every algebraic twist. The geometry of $X$ prevents an immediate comparison of
+  these two statements. The next section makes that comparison using the connectivity of $Y^o$,
+  and completes the proof of Theorem 18.
 
 == 7 The equivariant index calculation <sec:index>
 
@@ -768,48 +1454,85 @@ We complete the proof of Theorem 18. Retain its notation, and let $r$ be the re
 
 $ Delta = \( Delta_0 ⊗_k F \) ⊗_F Delta_1 . $
 
-Our objective is to prove $e_0 e_1 divides r$. Proposition 19 supplies an $H$-equivariant coherent class $beta$ on $Z times X$, and its reduction $beta'$ after a complex embedding of $k$. It also supplies the two numerical identities (6.3) and (6.4). The first recovers $r$ from an Euler characteristic on $Z$; the second gives divisibility of Euler characteristics on $Z times X$. We connect them by replacing low dimensional tests in $X$ with projective space.
+Our objective is to prove $e_0 e_1 divides r$. Proposition 19 supplies an $H$-equivariant coherent class $beta$ on
+  $Z times X$, and its reduction $beta'$ after a complex embedding of $k$.
+  It also supplies the two numerical identities (6.3) and (6.4).
+  The first recovers $r$ from an Euler characteristic on $Z$;
+  the second gives divisibility of Euler characteristics on $Z times X$.
+  We connect them by replacing low dimensional tests in $X$ with projective space.
 
 === 7.1 Equivariant maps into the smooth parameter space <equivariant-maps-into-the-smooth-parameter-space>
 
-Put $bb(T) = \( S^1 \)^M$. The point characters defining the action on the $M$ blocks of the cone give a homomorphism $rho : H arrow.r bb(T)$; write $H' = rho \( H \)$. The group $bb(T)$ need not preserve the cone, but its finite subgroup $H'$ does. The $H'$-action and scalar multiplication by $S^1$ commute on the unit cone
+Put $bb(T) = \( S^1 \)^M$. The point characters defining the action on the $M$ blocks of the cone give a
+  homomorphism $rho : H arrow.r bb(T)$; write $H' = rho \( H \)$.
+  The group $bb(T)$ need not preserve the cone, but its finite subgroup $H'$ does.
+  The $H'$-action and scalar multiplication by $S^1$ commute on the unit cone
 
 $ Y_1 = { y in Y^o : parallel y parallel = 1 } . $
 
-Here the norm is the standard Hermitian norm after the chosen complex embedding. Radial retraction from $Y^o$ onto $Y_1$ is equivariant for both actions. By Theorem 12, $Y_1$ is $\( M + 2 h \)$-connected.
+Here the norm is the standard Hermitian norm after the chosen complex embedding.
+  Radial retraction from $Y^o$ onto $Y_1$ is equivariant for both actions.
+  By Theorem 12, $Y_1$ is $\( M + 2 h \)$-connected.
 
 #thm([Lemma 7.1.])[
-  #emph[There is an $H'$-equivariant map 
+  #emph[There is an $H'$-equivariant map
 $ Phi : bb(T) times bb(P)^h \( bb(C) \) arrow.r X_(upright("sm")) \, $
 
- where $H'$ acts by translation on $bb(T)$ and trivially on $bb(P)^h \( bb(C) \)$. It has an $H' times S^1$-equivariant lift 
+ where $H'$ acts by translation on $bb(T)$ and trivially on $bb(P)^h \( bb(C) \)$.
+   It has an $H' times S^1$-equivariant lift
 $ tilde(Phi) : bb(T) times S^(2 h + 1) arrow.r Y_1 . $
 
- If $t_0 in bb(T)$ is fixed and $Phi_0 \( z \) = Phi \( t_0 \, z \)$, then $Phi$ is homotopic, as an ordinary map, to $Phi_0$ composed with projection onto $bb(P)^h \( bb(C) \)$, and 
+ If $t_0 in bb(T)$ is fixed and $Phi_0 \( z \) = Phi \( t_0 \, z \)$, then $Phi$ is homotopic, as an ordinary map,
+   to $Phi_0$ composed with projection onto $bb(P)^h \( bb(C) \)$, and
 $ Phi_0^(*) cal(O)_X \( - 1 \) tilde.eq cal(O)_(bb(P)^h) \( - 1 \) . $
 
  There is also an $H$-equivariant map $theta.alt : P arrow.r bb(T)$, for the action through $rho$.]
 ] <lem:index-equivariant-map>
 
 #proof[
-  The product of the principal bundles $bb(T) arrow.r bb(T) \/ H'$ and $S^(2 h + 1) arrow.r bb(P)^h \( bb(C) \)$ is a principal $H' times S^1$-bundle. An equivariant lift $tilde(Phi)$ is a section of its associated bundle with fiber $Y_1$. The base $\( bb(T) \/ H' \) times bb(P)^h \( bb(C) \)$ has a finite CW structure of dimension $M + 2 h$. Extend a section cell by cell: over an $a$-cell the extension obstruction is a map $S^(a - 1) arrow.r Y_1$, which is null-homotopic by the connectivity just established. The initial choice over zero-cells and extension over one-cells are allowed because $Y_1$ is nonempty and path connected. This constructs $tilde(Phi)$, and passage to the scalar-circle quotient gives $Phi$.
-  To compare $Phi$ with $Phi_0$, forget $H'$-equivariance. The lifts $tilde(Phi) \( t \, z \)$ and $tilde(Phi) \( t_0 \, z \)$ are sections of the same circle-associated bundle over $bb(T) times bb(P)^h \( bb(C) \)$. Construct a homotopy relative to its two endpoints by extending over cells of the base times $\[ 0 \, 1 \]$. This relative CW pair has dimension $M + 2 h + 1$, so the largest obstruction belongs to $pi_(M + 2 h) \( Y_1 \)$, which also vanishes. Projectivizing this homotopy proves the assertion about $Phi$. The circle-equivariant map $S^(2 h + 1) arrow.r Y_1$ obtained at $t_0$ identifies the associated tautological line bundles, giving the stated isomorphism for $Phi_0$.
-  Finally, any character of $H = G^(M - 1)$ is a product of characters of its factors. Lemma 17 realizes each factor character by an equivariant circle-valued map on the corresponding factor of $P$. Multiplying these maps realizes each coordinate of $rho$. Their product is $theta.alt$. ◻
+  The product of the principal bundles $bb(T) arrow.r bb(T) \/ H'$ and $S^(2 h + 1) arrow.r
+    bb(P)^h \( bb(C) \)$ is a principal $H' times S^1$-bundle.
+    An equivariant lift $tilde(Phi)$ is a section of its associated bundle with fiber $Y_1$.
+    The base $\( bb(T) \/ H' \) times bb(P)^h \( bb(C) \)$ has a finite CW structure of dimension $M + 2 h$.
+    Extend a section cell by cell: over an $a$-cell the extension obstruction is a map $S^(a - 1) arrow.r Y_1$,
+    which is null-homotopic by the connectivity just established.
+    The initial choice over zero-cells and extension over one-cells are allowed because $Y_1$ is nonempty and path
+    connected. This constructs $tilde(Phi)$, and passage to the scalar-circle quotient gives $Phi$.
+  To compare $Phi$ with $Phi_0$, forget $H'$-equivariance. The lifts $tilde(Phi) \( t \, z \)$ and
+    $tilde(Phi) \( t_0 \, z \)$ are sections of the same circle-associated bundle over $bb(T) times
+    bb(P)^h \( bb(C) \)$. Construct a homotopy relative to its two endpoints by extending over cells of the base
+    times $\[ 0 \, 1 \]$. This relative CW pair has dimension $M + 2 h + 1$,
+    so the largest obstruction belongs to $pi_(M + 2 h) \( Y_1 \)$, which also vanishes.
+    Projectivizing this homotopy proves the assertion about $Phi$.
+    The circle-equivariant map $S^(2 h + 1) arrow.r Y_1$ obtained at $t_0$ identifies the associated tautological
+    line bundles, giving the stated isomorphism for $Phi_0$.
+  Finally, any character of $H = G^(M - 1)$ is a product of characters of its factors.
+    Lemma 17 realizes each factor character by an equivariant circle-valued map on the corresponding factor of
+    $P$. Multiplying these maps realizes each coordinate of $rho$. Their product is $theta.alt$. ◻
 ]
 
 === 7.2 An integral family of indices <an-integral-family-of-indices>
 
 To bring $beta'$ to projective space, use the maps just constructed. Writing $z = \( a \, p \) in B times P = Z$, define
 
-$ gamma : Z times bb(P)^h \( bb(C) \) arrow.r Z times X_(upright("sm")) \, #h(2em) gamma \( z \, t \) = \( z \, Phi \( theta.alt \( p \) \, t \) \) . $
+$ gamma : Z times bb(P)^h \( bb(C) \) arrow.r Z times X_(upright("sm")) \, wide
+  gamma \( z \, t \) = \( z \, Phi \( theta.alt \( p \) \, t \) \) . $
 
-This map is $H$-equivariant, with trivial action on $bb(P)^h$. Since $H$ acts freely on $Z$, the quotient $V = Z \/ H$ is smooth projective, and $gamma$ induces a map
+This map is $H$-equivariant, with trivial action on $bb(P)^h$.
+  Since $H$ acts freely on $Z$, the quotient $V = Z \/ H$ is smooth projective, and $gamma$ induces a map
 
 $ V times bb(P)^h \( bb(C) \) arrow.r \( Z times X_(upright("sm")) \) \/ H . $
 
-The ordinary homotopy from $Phi$ to $Phi_0$ will later compare this pullback with an algebraic linear section. For descent we use $gamma$ itself, because $Phi_0$ need not be equivariant. These maps are continuous, so the pullback class need not be algebraic. We therefore need integration in topological $K$-theory that retains integer coefficients, beyond the rational Chern-character formula.
+The ordinary homotopy from $Phi$ to $Phi_0$ will later compare this pullback with an algebraic linear section.
+  For descent we use $gamma$ itself, because $Phi_0$ need not be equivariant.
+  These maps are continuous, so the pullback class need not be algebraic.
+  We therefore need integration in topological $K$-theory that retains integer coefficients,
+  beyond the rational Chern-character formula.
 
-We use $K^0 \( T \)$ for the Grothendieck group of complex topological vector bundles on a compact space $T$. The group extends to the noncompact smooth varieties below by the same vector-bundle definition; a coherent class on such a variety defines a class in this group by a finite locally free resolution. On $bb(P)^h \( bb(C) \)$, put
+We use $K^0 \( T \)$ for the Grothendieck group of complex topological vector bundles on a compact space $T$.
+  The group extends to the noncompact smooth varieties below by the same vector-bundle definition;
+  a coherent class on such a variety defines a class in this group by a finite locally free resolution.
+  On $bb(P)^h \( bb(C) \)$, put
 
 $ u = 1 - \[ cal(O)_(bb(P)^h) \( - 1 \) \] in K^0 \( bb(P)^h \( bb(C) \) \) . $
 
@@ -820,10 +1543,12 @@ The projective bundle formula gives
 
 In particular, the coefficients in this basis are integers, a fact we need in addition to the rational Chern character.
 
-The integrality statement below is a special case of the differentiable Riemann–Roch theorem of Atiyah and Hirzebruch [4] Theorem 1 and Remark (2). We give the projective-space argument with an explicit choice of Thom class.
+The integrality statement below is a special case of the differentiable Riemann–Roch theorem of Atiyah and
+  Hirzebruch [4] Theorem 1 and Remark (2). We give the projective-space argument with an explicit choice of Thom class.
 
 #thm([Lemma 7.2.])[
-  #emph[Let $V$ be a smooth complex projective variety and let $xi in K^0 \( V times bb(P)^h \( bb(C) \) \)$. There is a unique $I_V \( xi \) in K^0 \( bb(P)^h \( bb(C) \) \)$ such that 
+  #emph[Let $V$ be a smooth complex projective variety and let $xi in K^0 \( V times bb(P)^h \( bb(C) \) \)$.
+    There is a unique $I_V \( xi \) in K^0 \( bb(P)^h \( bb(C) \) \)$ such that
 #[#set math.equation(numbering: n => "(7.2)")
  $ "ch" \( I_V \( xi \) \) = integral_V "ch" \( xi \) "td" \( T_V \) . $ <eq:index-integral-pushforward>]
 
@@ -831,68 +1556,128 @@ The integrality statement below is a special case of the differentiable Riemann�
 ] <lem:index-integral-pushforward>
 
 #proof[
-  Choose a projective embedding $i : V arrow.r.hook bb(P)^a \( bb(C) \)$, with complex normal bundle $nu$. The complex $K$-theory Thom class, followed by extension from a tubular neighborhood, defines
+  Choose a projective embedding $i : V arrow.r.hook bb(P)^a \( bb(C) \)$, with complex normal bundle $nu$.
+    The complex $K$-theory Thom class, followed by extension from a tubular neighborhood, defines
   $ i_(!) : K^0 \( V times bb(P)^h \( bb(C) \) \) arrow.r K^0 \( bb(P)^a \( bb(C) \) times bb(P)^h \( bb(C) \) \) . $
-  We use the Koszul convention for this Thom class: its restriction to the zero section of $nu$ is $lambda_(- 1) \( nu^or \)$. If $x_1 \, dots.h \, x_c$ are the Chern roots of $nu$, its Chern character, divided by the ordinary cohomological Thom class, is
+  We use the Koszul convention for this Thom class: its restriction to the zero section of $nu$ is
+    $lambda_(- 1) \( nu^or \)$. If $x_1 \, dots.h \, x_c$ are the Chern roots of $nu$, its Chern character,
+    divided by the ordinary cohomological Thom class, is
   $ product_(alpha = 1)^c frac(1 - e^(- x_alpha), x_alpha) = "td" \( nu \)^(- 1) . $
-  For completeness, this identity follows on the zero section from $"ch" \( lambda_(- 1) \( nu^or \) \) = product_alpha \( 1 - e^(- x_alpha) \)$ and from the Euler class $product_alpha x_alpha$. The splitting principle verifies the identity universally for sums of line bundles, where the product of the universal Chern classes is a non-zero-divisor; the Thom isomorphism then gives the asserted identity before restriction as well. Consequently
-  $ "ch" \( i_(!) xi \) = i_(*) #scale(x: 120%, y: 120%)[\(] "ch" \( xi \) "td" \( nu \)^(- 1) #scale(x: 120%, y: 120%)[\)] . $
+  For completeness, this identity follows on the zero section from $"ch" \( lambda_(- 1) \( nu^or \) \) =
+    product_alpha \( 1 - e^(- x_alpha) \)$ and from the Euler class $product_alpha x_alpha$.
+    The splitting principle verifies the identity universally for sums of line bundles,
+    where the product of the universal Chern classes is a non-zero-divisor;
+    the Thom isomorphism then gives the asserted identity before restriction as well. Consequently
+  $ "ch" \( i_(!) xi \) = i_(*) #scale(x: 120%, y: 120%)[\(] "ch" \( xi \) "td" \( nu \)^(- 1)
+    #scale(x: 120%, y: 120%)[\)] . $
   The exact tangent-normal sequence now implies
   #[#set math.equation(numbering: n => "(7.3)")
-   $ integral_(bb(P)^a) "ch" \( i_(!) xi \) "td" \( T_(bb(P)^a) \) = integral_V "ch" \( xi \) "td" \( T_V \) . $ <eq:index-ambient-integration>]
+   $ integral_(bb(P)^a) "ch" \( i_(!) xi \) "td" \( T_(bb(P)^a) \) =
+     integral_V "ch" \( xi \) "td" \( T_V \) . $ <eq:index-ambient-integration>]
   The integral projective bundle formula identifies
-  $ K^0 \( bb(P)^a \( bb(C) \) times bb(P)^h \( bb(C) \) \) = bb(Z) \[ v \, u \] \/ \( v^(a + 1) \, u^(h + 1) \) \, #h(2em) v = 1 - \[ cal(O)_(bb(P)^a) \( - 1 \) \] . $
+  $ K^0 \( bb(P)^a \( bb(C) \) times bb(P)^h \( bb(C) \) \) =
+    bb(Z) \[ v \, u \] \/ \( v^(a + 1) \, u^(h + 1) \) \, wide v = 1 - \[ cal(O)_(bb(P)^a) \( - 1 \) \] . $
   Write $i_(!) xi = sum_(i = 0)^a sum_(j = 0)^h c_(i j) v^i u^j$, with $c_(i j) in bb(Z)$. The number
-  $ integral_(bb(P)^a) "ch" \( v^i \) "td" \( T_(bb(P)^a) \) = chi #scale(x: 120%, y: 120%)[\(] bb(P)^a \, \( 1 - \[ cal(O) \( - 1 \) \] \)^i #scale(x: 120%, y: 120%)[\)] $
-  is an integer by Hirzebruch–Riemann–Roch, applied additively to the finite sum of line-bundle classes $v^i$. Thus the left side of (7.3) is the Chern character of an integral combination of $1 \, u \, dots.h \, u^h$, which gives $I_V \( xi \)$. Uniqueness follows because the Chern character is injective on the torsion-free group in (7.1): if $H = c_1 \( cal(O) \( 1 \) \)$, then $"ch" \( u \) = 1 - e^(- H)$ has leading term $H$, so these $h + 1$ Chern characters are linearly independent over $bb(Q)$. The projective bundle and Thom constructions used here are standard complex $K$-theory, with the Koszul convention for the Thom class specified above [23] Proposition 2.24, Theorem 2.25, and pp. 113–114; for the Riemann–Roch formula see [5] §7. ◻
+  $ integral_(bb(P)^a) "ch" \( v^i \) "td" \( T_(bb(P)^a) \) =
+    chi #scale(x: 120%, y: 120%)[\(] bb(P)^a \, \( 1 - \[ cal(O) \( - 1 \) \] \)^i #scale(x: 120%, y: 120%)[\)] $
+  is an integer by Hirzebruch–Riemann–Roch, applied additively to the finite sum of line-bundle classes $v^i$.
+    Thus the left side of (7.3) is the Chern character of an integral combination of $1 \, u \, dots.h \, u^h$,
+    which gives $I_V \( xi \)$. Uniqueness follows because the Chern character is injective on the torsion-free
+    group in (7.1): if $H = c_1 \( cal(O) \( 1 \) \)$, then $"ch" \( u \) = 1 - e^(- H)$ has leading term $H$,
+    so these $h + 1$ Chern characters are linearly independent over $bb(Q)$.
+    The projective bundle and Thom constructions used here are standard complex $K$-theory,
+    with the Koszul convention for the Thom class specified above [23] Proposition 2.24, Theorem 2.25,
+    and pp. 113–114; for the Riemann–Roch formula see [5] §7. ◻
 ]
 
-For a projective variety and a virtual coherent or algebraic vector-bundle class, $chi$ will always mean the additive Euler characteristic of that class. We now apply the preceding lemma to the equivariant class from Section 6.
+For a projective variety and a virtual coherent or algebraic vector-bundle class,
+  $chi$ will always mean the additive Euler characteristic of that class.
+  We now apply the preceding lemma to the equivariant class from Section 6.
 
 #thm([Proposition 7.3.])[
-  #emph[In the setting of Theorem 18, let $r$ be the reduced rank of any finite right $Delta$-module. There is a smooth $h$-dimensional linear section $D_0 subset X_(upright("sm"))$, a complete intersection of $s$ hypersurfaces of degree $b$ in $bb(P)^(h + s) \( bb(C) \)$, and integers $q_0 \, dots.h \, q_h in e_1 bb(Z)$ such that $q_0 = plus.minus r$ and 
+  #emph[In the setting of Theorem 18, let $r$ be the reduced rank of any finite right $Delta$-module.
+    There is a smooth $h$-dimensional linear section $D_0 subset X_(upright("sm"))$,
+    a complete intersection of $s$ hypersurfaces of degree $b$ in $bb(P)^(h + s) \( bb(C) \)$,
+    and integers $q_0 \, dots.h \, q_h in e_1 bb(Z)$ such that $q_0 = plus.minus r$ and
 #[#set math.equation(numbering: n => "(7.4)")
- $ sum_(j = 0)^h q_j thin chi #h(-0.16667em) (D_0 \, \( 1 - \[ cal(O)_(D_0) \( - 1 \) \] \)^j ⊗ cal(O)_(D_0) \( l \)) in e_0 e_1 bb(Z) #h(2em) \( l in bb(Z) \) . $ <eq:index-section-divisibility>]
+ $ sum_(j = 0)^h q_j thin chi #h(-0.16667em)
+   (D_0 \, \( 1 - \[ cal(O)_(D_0) \( - 1 \) \] \)^j ⊗ cal(O)_(D_0) \( l \)) in e_0 e_1 bb(Z)
+   wide \( l in bb(Z) \) . $ <eq:index-section-divisibility>]
 
 ]
 ] <prop:index-test>
 
 #proof[
-  Pull back the topological class of $beta' \|_(Z times X_(upright("sm")))$ along $gamma$ and call the resulting class $sigma$. This pullback is permitted because the class is perfect on the smooth open product.
-  The equivariant coherent class $beta'$ descends on the free smooth quotient $\( Z times X_(upright("sm")) \) \/ H$. That quotient is smooth quasi-projective, so the descended coherent class has a topological vector-bundle class. Pulling it back along the quotient of $gamma$ gives $tau in K^0 \( V times bb(P)^h \( bb(C) \) \)$ whose pullback is $sigma$. Since $Z arrow.r V$ is an étale covering of degree $e_1$ and $T_Z$ is the pullback of $T_V$, Lemma 25 gives
+  Pull back the topological class of $beta' \|_(Z times X_(upright("sm")))$ along $gamma$ and call the resulting
+    class $sigma$. This pullback is permitted because the class is perfect on the smooth open product.
+  The equivariant coherent class $beta'$ descends on the free smooth quotient $\( Z times X_(upright("sm")) \) \/
+    H$. That quotient is smooth quasi-projective, so the descended coherent class has a topological vector-bundle
+    class. Pulling it back along the quotient of $gamma$ gives $tau in
+    K^0 \( V times bb(P)^h \( bb(C) \) \)$ whose pullback is $sigma$.
+    Since $Z arrow.r V$ is an étale covering of degree $e_1$ and $T_Z$ is the pullback of $T_V$, Lemma 25 gives
   #[#set math.equation(numbering: n => "(7.5)")
-   $ integral_Z "ch" \( sigma \) "td" \( T_Z \) = e_1 "ch" \( I_V \( tau \) \) = "ch" #h(-0.16667em) (sum_(j = 0)^h q_j u^j) \, #h(2em) q_j in e_1 bb(Z) . $ <eq:index-family>]
-  Nonequivariantly, Lemma 24 makes $gamma$ homotopic to $\( z \, t \) mapsto \( z \, Phi_0 \( t \) \)$. The equality (7.5) therefore computes the same fiber integral for this latter pullback of $beta'$. Evaluate it at any point of $bb(P)^h \( bb(C) \)$. Only $q_0$ remains on the right, whereas (6.3) gives $plus.minus r$ on the left. Thus $q_0 = plus.minus r$.
-  This already gives $e_1 divides r$. The stronger divisibility by $e_0 e_1$ is encoded in the algebraic twist indices $p \( l \)$ of (6.4). A smooth linear section of $X$ retains that divisibility and can also be compared with the projective-space test. Put $d = dim X$. Theorem 12 gives $"codim"_X \( X \\ X_(upright("sm")) \) > h$. A general linear section of codimension $d - h$ therefore misses the singular locus; Bertini gives a smooth section $D_0$. As $X$ is a complete intersection of $s$ degree-$b$ equations, $D_0$ has the description in the statement.
-  Choose $h + 1$ linear forms with no common zero on $D_0$; these exist by general position since $dim D_0 = h$. They define a morphism
-  $ f : D_0 arrow.r bb(P)^h \( bb(C) \) \, #h(2em) f^(*) cal(O)_(bb(P)^h) \( - 1 \) tilde.eq cal(O)_(D_0) \( - 1 \) . $
-  The inclusion $j : D_0 arrow.r.hook X_(upright("sm"))$ and $Phi_0 compose f$ have circle-equivariant lifts from the unit frame bundle of this same line bundle to $Y_1$. Indeed, choose the indicated line-bundle isomorphisms and normalize them by their positive fiber norms to identify the unit frame bundles. The relative section-extension argument in Lemma 24, now over $D_0 times \[ 0 \, 1 \]$, makes those lifts homotopic: the real dimension of this base is $2 h + 1$, below the available connectivity bound plus one. Thus $j$ and $Phi_0 compose f$ are homotopic.
+   $ integral_Z "ch" \( sigma \) "td" \( T_Z \) = e_1 "ch" \( I_V \( tau \) \) =
+     "ch" #h(-0.16667em) (sum_(j = 0)^h q_j u^j) \, wide q_j in e_1 bb(Z) . $ <eq:index-family>]
+  Nonequivariantly, Lemma 24 makes $gamma$ homotopic to $\( z \, t \) mapsto \( z \, Phi_0 \( t \) \)$.
+    The equality (7.5) therefore computes the same fiber integral for this latter pullback of $beta'$.
+    Evaluate it at any point of $bb(P)^h \( bb(C) \)$. Only $q_0$ remains on the right,
+    whereas (6.3) gives $plus.minus r$ on the left. Thus $q_0 = plus.minus r$.
+  This already gives $e_1 divides r$. The stronger divisibility by $e_0
+    e_1$ is encoded in the algebraic twist indices $p \( l \)$ of (6.4).
+    A smooth linear section of $X$ retains that divisibility and can also be compared with the projective-space
+    test. Put $d = dim X$. Theorem 12 gives $"codim"_X \( X \\ X_(upright("sm")) \) > h$.
+    A general linear section of codimension $d - h$ therefore misses the singular locus;
+    Bertini gives a smooth section $D_0$. As $X$ is a complete intersection of $s$ degree-$b$ equations,
+    $D_0$ has the description in the statement.
+  Choose $h + 1$ linear forms with no common zero on $D_0$; these exist by general position since $dim D_0 = h$.
+    They define a morphism
+  $ f : D_0 arrow.r bb(P)^h \( bb(C) \) \, wide f^(*) cal(O)_(bb(P)^h) \( - 1 \) tilde.eq cal(O)_(D_0) \( - 1 \) . $
+  The inclusion $j : D_0 arrow.r.hook X_(upright("sm"))$ and $Phi_0 compose
+    f$ have circle-equivariant lifts from the unit frame bundle of this same line bundle to $Y_1$.
+    Indeed, choose the indicated line-bundle isomorphisms and normalize them by their positive fiber norms to
+    identify the unit frame bundles. The relative section-extension argument in Lemma 24,
+    now over $D_0 times \[ 0 \, 1 \]$, makes those lifts homotopic:
+    the real dimension of this base is $2 h + 1$, below the available connectivity bound plus one.
+    Thus $j$ and $Phi_0 compose f$ are homotopic.
   Pulling (7.5) back by $f$ now identifies the fiber integral on $Z times D_0$ with
   #[#set math.equation(numbering: n => "(∗)")
    $ "ch" #h(-0.16667em) (sum_(j = 0)^h q_j \( 1 - \[ cal(O)_(D_0) \( - 1 \) \] \)^j) . $]
   Define
   $ p_(D_0) \( l \) = chi #h(-0.16667em) (Z times D_0 \, beta' \|_(Z times D_0) ⊗ cal(O)_(D_0) \( l \)) \, $
-  where restriction of a coherent class is derived. Hirzebruch–Riemann–Roch on the smooth projective product, followed by $\( * \)$, gives
+  where restriction of a coherent class is derived. Hirzebruch–Riemann–Roch on the smooth projective product,
+    followed by $\( * \)$, gives
   #[#set math.equation(numbering: n => "(7.6)")
-   $ p_(D_0) \( l \) = sum_(j = 0)^h q_j thin chi #h(-0.16667em) (D_0 \, \( 1 - \[ cal(O)_(D_0) \( - 1 \) \] \)^j ⊗ cal(O)_(D_0) \( l \)) . $ <eq:index-section-rr>]
+   $ p_(D_0) \( l \) = sum_(j = 0)^h q_j thin chi #h(-0.16667em)
+     (D_0 \, \( 1 - \[ cal(O)_(D_0) \( - 1 \) \] \)^j ⊗ cal(O)_(D_0) \( l \)) . $ <eq:index-section-rr>]
   It remains to retain the original divisibility when passing to this section. Recall from (6.4) the integers
   $ p \( l \) = chi \( Z times X \, beta ⊗ cal(O)_X \( l \) \) \/ e_0 in e_0 e_1 bb(Z) . $
-  The $d - h$ hyperplanes defining $D_0$ have a Koszul resolution on $X$: along $D_0$ they cut transversely in the smooth locus, and off their common zero locus the complex is exact because one of the equations is locally a unit. Tensoring this resolution derivedly with $beta$, and then passing to the complex embedding and the matrix-idempotent reduction, yields
+  The $d - h$ hyperplanes defining $D_0$ have a Koszul resolution on $X$:
+    along $D_0$ they cut transversely in the smooth locus, and off their common zero locus the complex is exact
+    because one of the equations is locally a unit. Tensoring this resolution derivedly with $beta$,
+    and then passing to the complex embedding and the matrix-idempotent reduction, yields
   #[#set math.equation(numbering: n => "(7.7)")
-   $ p_(D_0) \( l \) = sum_(a = 0)^(d - h) \( - 1 \)^a binom(d - h, a) p \( l - a \) in e_0 e_1 bb(Z) . $ <eq:index-koszul-difference>]
-  Here cohomology commutes with the field extension, and the matrix-idempotent reduction divides every cohomology dimension by $e_0$. The particular hyperplanes need only be defined after that extension: the terms on the right of (7.7) are the original integer Euler characteristics. Combining (7.6) and (7.7) proves (7.4). ◻
+   $ p_(D_0) \( l \) = sum_(a = 0)^(d - h) \( - 1 \)^a binom(d - h, a) p \( l - a \) in e_0 e_1 bb(Z) .
+     $ <eq:index-koszul-difference>]
+  Here cohomology commutes with the field extension, and the matrix-idempotent reduction divides every cohomology
+    dimension by $e_0$. The particular hyperplanes need only be defined after that extension:
+    the terms on the right of (7.7) are the original integer Euler characteristics.
+    Combining (7.6) and (7.7) proves (7.4). ◻
 ]
 
 For the integers in Proposition 26, put
 
 $ Q_(*) \( u \) = sum_(j = 0)^h \( q_j \/ e_1 \) u^j in bb(Z) \[ u \] . $
 
-Its constant coefficient is $Q_(*) \( 0 \) = plus.minus r \/ e_1$, and all its twisted Euler characteristics on $D_0$ are divisible by $e_0$. The remaining step extracts the same divisibility for $Q_(*) \( 0 \)$. The dimension $h$ was chosen precisely to allow the following finite truncation argument.
+Its constant coefficient is $Q_(*) \( 0 \) = plus.minus r \/ e_1$,
+  and all its twisted Euler characteristics on $D_0$ are divisible by $e_0$.
+  The remaining step extracts the same divisibility for $Q_(*) \( 0 \)$.
+  The dimension $h$ was chosen precisely to allow the following finite truncation argument.
 
 === 7.3 Truncated polynomial congruences <truncated-polynomial-congruences>
 
 #thm([Lemma 7.4.])[
-  #emph[Let $p$ be a prime, let $v gt.eq 1$, and let $A \, Q in bb(Z) \[ u \]$. Suppose the reduction of $A$ modulo $p$ has exact order $nu gt.eq 0$ at $u = 0$. If $h gt.eq v nu$ and 
+  #emph[Let $p$ be a prime, let $v gt.eq 1$, and let $A \, Q in bb(Z) \[ u \]$.
+    Suppose the reduction of $A$ modulo $p$ has exact order $nu gt.eq 0$ at $u = 0$. If $h gt.eq v nu$ and
 $ A \( u \) Q \( u \) = 0 med \( mod med \( p^v \, u^(h + 1) \) \) \, $
 
  then $p^v divides Q \( 0 \)$.]
@@ -900,236 +1685,505 @@ $ A \( u \) Q \( u \) = 0 med \( mod med \( p^v \, u^(h + 1) \) \) \, $
 
 #proof[
   We successively construct integer polynomials $Q_i$, for $0 lt.eq i lt.eq v$, with $Q_0 = Q$, such that
-  $ Q_i \( 0 \) = Q \( 0 \) \/ p^i \, #h(2em) A Q_i = 0 med \( mod med \( p^(v - i) \, u^(h - i nu + 1) \) \) quad \( 0 lt.eq i < v \) . $
-  Suppose $i < v$ and $Q_i$ has been constructed. Modulo $p$, write $A = u^nu B$, where $B \( 0 \) eq.not 0$. The power series $B$ is invertible over $bb(Z) \/ p$, so the displayed congruence forces every coefficient of $Q_i$ through degree
+  $ Q_i \( 0 \) = Q \( 0 \) \/ p^i \, wide A Q_i = 0 med \( mod med \( p^(v - i) \, u^(h - i nu + 1) \) \)
+    quad \( 0 lt.eq i < v \) . $
+  Suppose $i < v$ and $Q_i$ has been constructed. Modulo $p$, write $A = u^nu B$, where $B \( 0 \) eq.not 0$.
+    The power series $B$ is invertible over $bb(Z) \/ p$, so the displayed congruence forces every coefficient of
+    $Q_i$ through degree
   $ m_i = h - \( i + 1 \) nu $
-  to be divisible by $p$. This degree is nonnegative because $h gt.eq v nu$. Let $Q_(i + 1)$ be the truncation of $Q_i$ through degree $m_i$, divided by $p$. It is an integer polynomial and has the required constant coefficient. Since
+  to be divisible by $p$. This degree is nonnegative because $h gt.eq v nu$.
+    Let $Q_(i + 1)$ be the truncation of $Q_i$ through degree $m_i$, divided by $p$.
+    It is an integer polynomial and has the required constant coefficient. Since
   $ Q_i - p Q_(i + 1) in u^(m_i + 1) bb(Z) \[ u \] \, $
   restricting the old congruence to degrees at most $m_i$ gives
   $ p A Q_(i + 1) = 0 med \( mod med \( p^(v - i) \, u^(m_i + 1) \) \) . $
-  Coefficientwise division by $p$ gives the next congruence modulo $p^(v - i - 1)$. At $i = v - 1$, the construction shows directly that $Q \( 0 \) \/ p^(v - 1)$ is divisible by $p$. This proves the conclusion. The same induction includes $nu = 0$, when no degrees are lost. ◻
+  Coefficientwise division by $p$ gives the next congruence modulo $p^(v - i - 1)$.
+    At $i = v - 1$, the construction shows directly that $Q \( 0 \) \/ p^(v - 1)$ is divisible by $p$.
+    This proves the conclusion. The same induction includes $nu = 0$, when no degrees are lost. ◻
 ]
 
 #proof[
-  #emph[Completion of the proof of Theorem 18.] Use $D_0$, $q_0 \, dots.h \, q_h$, and $Q_(*)$ just constructed for the chosen module. If $e_0 = 1$, then $q_0 = plus.minus r in e_1 bb(Z)$ already gives the required divisibility, so assume $e_0 > 1$. The Hilbert series of the coordinate ring of the complete intersection $D_0$ is
+  #emph[Completion of the proof of Theorem 18.] Use $D_0$, $q_0 \, dots.h \, q_h$,
+    and $Q_(*)$ just constructed for the chosen module. If $e_0 = 1$, then $q_0 =
+    plus.minus r in e_1 bb(Z)$ already gives the required divisibility, so assume $e_0 > 1$.
+    The Hilbert series of the coordinate ring of the complete intersection $D_0$ is
   $ frac(\( 1 - t^b \)^s, \( 1 - t \)^(h + s + 1)) . $
-  Euler characteristics of sufficiently positive twists agree with Hilbert functions. Moreover, multiplication by $\( 1 - \[ cal(O) \( - 1 \) \] \)^j$ gives the same finite difference as multiplication of generating functions by $\( 1 - t \)^j$, apart from finitely many initial coefficients. The coefficients in these differences are integers. It follows from (7.6) that
+  Euler characteristics of sufficiently positive twists agree with Hilbert functions.
+    Moreover, multiplication by $\( 1 - \[ cal(O) \( - 1 \) \] \)^j$ gives the same finite difference as
+    multiplication of generating functions by $\( 1 - t \)^j$, apart from finitely many initial coefficients.
+    The coefficients in these differences are integers. It follows from (7.6) that
   #[#set math.equation(numbering: n => "(7.8)")
-   $ sum_(l gt.eq 0) frac(p_(D_0) \( l \), e_1) t^l = Q_(*) \( 1 - t \) frac(\( 1 - t^b \)^s, \( 1 - t \)^(h + s + 1)) + R \( t \) \, #h(2em) R \( t \) in bb(Z) \[ t \] . $ <eq:index-hilbert-series>]
+   $ sum_(l gt.eq 0) frac(p_(D_0) \( l \), e_1) t^l = Q_(*) \( 1 - t \)
+     frac(\( 1 - t^b \)^s, \( 1 - t \)^(h + s + 1)) + R \( t \) \, wide
+     R \( t \) in bb(Z) \[ t \] . $ <eq:index-hilbert-series>]
   By (7.7), every coefficient on the left is divisible by $e_0$.
-  Multiply (7.8) by $\( 1 - t \)^(h + s + 1)$ and reduce coefficients modulo $e_0$. The resulting right side is a polynomial that vanishes coefficientwise. We may therefore substitute $t = 1 - u$, obtaining
-  $ Q_(*) \( u \) #scale(x: 120%, y: 120%)[\(] 1 - \( 1 - u \)^b #scale(x: 120%, y: 120%)[\)]^s = 0 med \( mod med \( e_0 \, u^(h + s + 1) \) \) . $
+  Multiply (7.8) by $\( 1 - t \)^(h + s + 1)$ and reduce coefficients modulo $e_0$.
+    The resulting right side is a polynomial that vanishes coefficientwise.
+    We may therefore substitute $t = 1 - u$, obtaining
+  $ Q_(*) \( u \) #scale(x: 120%, y: 120%)[\(] 1 - \( 1 - u \)^b #scale(x: 120%, y: 120%)[\)]^s =
+    0 med \( mod med \( e_0 \, u^(h + s + 1) \) \) . $
   Define
   $ A_b \( u \) = frac(1 - \( 1 - u \)^b, u) in bb(Z) \[ u \] . $
   Cancelling the common monomial $u^s$ yields
   #[#set math.equation(numbering: n => "(7.9)")
    $ A_b \( u \)^s Q_(*) \( u \) = 0 med \( mod med \( e_0 \, u^(h + 1) \) \) . $ <eq:index-final-congruence>]
-  This is coefficientwise cancellation of a monomial, valid over $bb(Z) \/ e_0$ even when $e_0$ is composite. When $s = 0$, the factor is $1$, and the constant coefficient of (7.9) immediately gives $e_0 divides Q_(*) \( 0 \)$.
-  For the general case, fix a prime $p divides e_0$ and write $v = v_p \( e_0 \)$, $b = p^a c$, where $p divides.not c$. Over $bb(Z) \/ p$,
+  This is coefficientwise cancellation of a monomial, valid over $bb(Z) \/ e_0$ even when $e_0$ is composite.
+    When $s = 0$, the factor is $1$, and the constant coefficient of (7.9) immediately gives $e_0 divides
+    Q_(*) \( 0 \)$.
+  For the general case, fix a prime $p divides e_0$ and write $v = v_p \( e_0 \)$, $b = p^a c$,
+    where $p divides.not c$. Over $bb(Z) \/ p$,
   $ 1 - \( 1 - u \)^b = 1 - \( 1 - u^(p^a) \)^c = c thin u^(p^a) + upright("terms of higher degree") . $
-  Thus $A_b \( u \)^s$ has exact order $nu = s \( p^a - 1 \)$ modulo $p$, with nonzero leading coefficient. The choice of $h$ in Theorem 18 gives $h gt.eq v nu$. Apply Lemma 27 to (7.9), reduced modulo $p^v$, to obtain $p^v divides Q_(*) \( 0 \)$. This also covers primes not dividing $b$, for which $nu = 0$; no assumption that $b$ is a prime power has been made. Doing this for every prime divisor of $e_0$ gives
-  $ e_0 divides Q_(*) \( 0 \) \, #h(2em) e_0 e_1 divides q_0 = plus.minus r . $
-  The module was arbitrary. A nonzero proper right ideal of the central simple algebra $Delta$, whose degree is $e_0 e_1$, would have reduced rank strictly between $0$ and $e_0 e_1$. The divisibility just proved excludes such an ideal, so $Delta$ is division. ◻
+  Thus $A_b \( u \)^s$ has exact order $nu = s \( p^a - 1 \)$ modulo $p$, with nonzero leading coefficient.
+    The choice of $h$ in Theorem 18 gives $h gt.eq v nu$. Apply Lemma 27 to (7.9), reduced modulo $p^v$,
+    to obtain $p^v divides Q_(*) \( 0 \)$. This also covers primes not dividing $b$, for which $nu = 0$;
+    no assumption that $b$ is a prime power has been made. Doing this for every prime divisor of $e_0$ gives
+  $ e_0 divides Q_(*) \( 0 \) \, wide e_0 e_1 divides q_0 = plus.minus r . $
+  The module was arbitrary. A nonzero proper right ideal of the central simple algebra $Delta$,
+    whose degree is $e_0 e_1$, would have reduced rank strictly between $0$ and $e_0 e_1$.
+    The divisibility just proved excludes such an ideal, so $Delta$ is division. ◻
 ]
 
 == 8 Construction of the triangular power identities <sec:assembly>
 
-We now construct one new triangular identity while preserving the low-degree relations from Section 3. The division theorem allows all the binary addition matrices to be used in the same coefficient algebra. The remaining tasks are to make the final output invariant and to keep the formal relation algebra finite over the old one.
+We now construct one new triangular identity while preserving the low-degree relations from Section 3.
+  The division theorem allows all the binary addition matrices to be used in the same coefficient algebra.
+  The remaining tasks are to make the final output invariant and to keep the formal relation algebra finite over
+  the old one.
 
-We first record a binary addition using only linear and quadratic relations. The resulting algebra is finite over the input algebra; Lemma 10 will then preserve the condition that the characteristic set contains no curve of small degree.
+We first record a binary addition using only linear and quadratic relations.
+  The resulting algebra is finite over the input algebra; Lemma 10 will then preserve the condition that the
+  characteristic set contains no curve of small degree.
 
 #thm([Lemma 8.1.])[
-  (Finite extension from the Veronese relations).  #emph[Let $b gt.eq 2$, let $k$ contain a primitive $b$-th root of unity $zeta$, and let $A$ be a commutative $k$-algebra with elements $u \, v$. Introduce symbols $T_alpha$, indexed by $alpha in bb(Z)_(gt.eq 0)^b$ with $\| alpha \| = b$, and put 
-$ D_j = T_(b e_j) quad \( 0 lt.eq j < b \) \, #h(2em) z = 1 / b sum_(j = 0)^(b - 1) D_j \, #h(2em) u_T = - 1 / b sum_(j = 0)^(b - 1) zeta^(- j) D_j \, #h(2em) v_T = T_(\( 1 \, dots.h \, 1 \)) . $
+  (Finite extension from the Veronese relations).  #emph[Let $b gt.eq 2$,
+    let $k$ contain a primitive $b$-th root of unity $zeta$, and let $A$ be a commutative $k$-algebra with
+    elements $u \, v$. Introduce symbols $T_alpha$, indexed by $alpha in bb(Z)_(gt.eq 0)^b$ with $\| alpha \| =
+    b$, and put
+$ D_j = T_(b e_j) quad \( 0 lt.eq j < b \) \, wide z = 1 / b sum_(j = 0)^(b - 1) D_j \, wide u_T = - 1 /
+  b sum_(j = 0)^(b - 1) zeta^(- j) D_j \, wide v_T = T_(\( 1 \, dots.h \, 1 \)) . $
 
- Let $A'$ be the quotient of $A \[ T_alpha \]$ by the relations 
+ Let $A'$ be the quotient of $A \[ T_alpha \]$ by the relations
 #[#set math.equation(numbering: n => "(8.1)")
  $ T_alpha T_beta & = T_gamma T_delta &  & upright("whenever ") alpha + beta = gamma + delta \,\
-D_j & = z - zeta^j u_T &  & \( 0 lt.eq j < b \) \, #h(2em) u_T = u \, quad v_T = v . $ <eq:veronese-exchanges>]
+D_j & = z - zeta^j u_T &  & \( 0 lt.eq j < b \) \, wide u_T = u \, quad v_T = v . $ <eq:veronese-exchanges>]
 
- Then $A'$ is finite over $A$, and in $A'$ 
+ Then $A'$ is finite over $A$, and in $A'$
 #[#set math.equation(numbering: n => "(8.2)")
- $ z^b = u^b + v^b \, #h(2em) T_alpha^b = product_(j = 0)^(b - 1) D_j^(alpha_j) . $ <eq:veronese-monic>]
+ $ z^b = u^b + v^b \, wide T_alpha^b = product_(j = 0)^(b - 1) D_j^(alpha_j) . $ <eq:veronese-monic>]
 
- If $A$ is graded and $u \, v$ have degree one, these are homogeneous relations when each $T_alpha$ has degree one; the defining relations (8.1)–(8.1) have degrees two and one.]
+ If $A$ is graded and $u \, v$ have degree one, these are homogeneous relations when each $T_alpha$ has degree
+   one; the defining relations (8.1)–(8.1) have degrees two and one.]
 ] <lem:veronese-extension>
 
 #proof[
-  The pair exchanges identify any two products of the same number of symbols whose total exponent vectors agree. To see this directly, regard such a product as an allocation of exponent units among factors, each of total degree $b$. Choose the exponent vector desired in the first factor. Whenever that factor has an excess in one coordinate and a deficit in another, some other factor has a unit in the deficient coordinate. Exchange this unit for a unit in the excess coordinate. This is one relation of the form (8.1). Once the first factor has its desired vector, leave it fixed and continue with the remaining factors.
+  The pair exchanges identify any two products of the same number of symbols whose total exponent vectors agree.
+    To see this directly, regard such a product as an allocation of exponent units among factors,
+    each of total degree $b$. Choose the exponent vector desired in the first factor.
+    Whenever that factor has an excess in one coordinate and a deficit in another,
+    some other factor has a unit in the deficient coordinate.
+    Exchange this unit for a unit in the excess coordinate. This is one relation of the form (8.1).
+    Once the first factor has its desired vector, leave it fixed and continue with the remaining factors.
   Applying this observation to $T_alpha^b$ proves the second identity in (8.2). In particular,
   $ v^b = v_T^b = product_(j = 0)^(b - 1) D_j = product_(j = 0)^(b - 1) \( z - zeta^j u \) = z^b - u^b . $
-  Thus $z$ is integral over $A$. Every $D_j$ belongs to $A \[ z \]$, and the second identity in (8.2) makes every $T_alpha$ integral over $A \[ z \]$. There are finitely many symbols, so $A'$ is finite over $A$. The grading assertion follows from the displayed defining relations. ◻
+  Thus $z$ is integral over $A$. Every $D_j$ belongs to $A \[ z \]$,
+    and the second identity in (8.2) makes every $T_alpha$ integral over $A \[ z \]$.
+    There are finitely many symbols, so $A'$ is finite over $A$.
+    The grading assertion follows from the displayed defining relations. ◻
 ]
 
 #thm([Proposition 8.2.])[
-  (The induction step).  #emph[Fix $1 lt.eq i lt.eq n$. Suppose that a field $k$, a central division algebra $Delta_0$ over $k$, a formal space $U$, and a low-relation ideal $Q subset.eq "Sym"_k U$ satisfy the induction conditions of Section 3, with the triangular identities already constructed for the rows $d > i$. Then there are a finitely generated extension $F \/ k$, a central division algebra $Delta$ over $F$, and an enlarged formal space and low-relation ideal over $F$ satisfying the same conditions with the rows $d gt.eq i$ constructed. In particular, the enlarged formal space contains a form $t_i$ for which 
+  (The induction step).  #emph[Fix $1 lt.eq i lt.eq n$. Suppose that a field $k$,
+    a central division algebra $Delta_0$ over $k$, a formal space $U$,
+    and a low-relation ideal $Q subset.eq "Sym"_k U$ satisfy the induction conditions of Section 3,
+    with the triangular identities already constructed for the rows $d > i$.
+    Then there are a finitely generated extension $F \/ k$, a central division algebra $Delta$ over $F$,
+    and an enlarged formal space and low-relation ideal over $F$ satisfying the same conditions with the rows $d
+    gt.eq i$ constructed. In particular, the enlarged formal space contains a form $t_i$ for which
 #[#set math.equation(numbering: n => "(8.3)")
- $ t_i^(a_i) = c_i f_i + sum_(l < i) B_(i l) f_l + sum_(d > i) C_(i d) t_d med \( mod med Q_(upright("new")) \) \, #h(2em) c_i in F^times . $ <eq:new-triangular-row>]
+ $ t_i^(a_i) = c_i f_i + sum_(l < i) B_(i l) f_l + sum_(d > i) C_(i d) t_d med \( mod med Q_(upright("new")) \) \,
+   wide c_i in F^times . $ <eq:new-triangular-row>]
 
- All the enlarged formal forms evaluate to mutually commuting linear forms in $Delta \[ x \]$, and the new relation ideal is generated by linear forms and quadrics.]
+ All the enlarged formal forms evaluate to mutually commuting linear forms in $Delta \[ x \]$,
+   and the new relation ideal is generated by linear forms and quadrics.]
 ] <prop:induction-step>
 
 #proof[
-  Put $b = a_i$, let $e_0$ be the degree of $Delta_0$, and take $frak(j)$ and $W$ as in (3.1) and (3.2). Write $s = dim_k W$. Lemma 6 gives base-point-freeness of $frak(j)_b$, and Lemma 7 shows that every nonzero geometric member of $W$ has a factor of multiplicity one.
+  Put $b = a_i$, let $e_0$ be the degree of $Delta_0$, and take $frak(j)$ and $W$ as in (3.1) and (3.2).
+    Write $s = dim_k W$. Lemma 6 gives base-point-freeness of $frak(j)_b$,
+    and Lemma 7 shows that every nonzero geometric member of $W$ has a factor of multiplicity one.
   #emph[Parameters and the invariant sum.] Choose integers in the following order:
   #[#set math.equation(numbering: n => "(8.4)")
    $ h & gt.eq max ({ 2 } union { v_p \( e_0 \) s \( p^(v_p \( b \)) - 1 \) : p divides e_0 }) \,\
 M & gt.eq max {2 h + 4 s + 10 \, med dim_k "Sym"_k^b U} . $ <eq:assembly-h>]
-  The prime-indexed set in (8.4) is empty if $e_0 = 1$. Theorem 12 supplies the geometrically integral projective constraint variety
-  $ X = bb(P) {\( ell_1 \, dots.h \, ell_M \) in U^(xor M) : sum_(m = 1)^M w \( ell_m \) = 0 med upright("for every ") w in W} . $
-  Use the curve and its two characters $chi \, psi$ from Proposition 13. For $M - 1$ copies of the curve, indexed by $m = 2 \, dots.h \, M$, let
-  $ H = G^(M - 1) \, #h(2em) e_1 = \| H \| \, $
+  The prime-indexed set in (8.4) is empty if $e_0 = 1$. Theorem 12 supplies the geometrically integral projective
+    constraint variety
+  $ X = bb(P) {\( ell_1 \, dots.h \, ell_M \) in U^(xor M) : sum_(m = 1)^M w \( ell_m \) = 0 med
+    upright("for every ") w in W} . $
+  Use the curve and its two characters $chi \, psi$ from Proposition 13.
+    For $M - 1$ copies of the curve, indexed by $m = 2 \, dots.h \, M$, let
+  $ H = G^(M - 1) \, wide e_1 = \| H \| \, $
   and write $chi_m \, psi_m : H arrow.r mu_b$ for the corresponding characters. Define characters recursively by
   #[#set math.equation(numbering: n => "(8.5)")
-   $ lambda_M = 1 \, #h(2em) lambda_(m - 1) = lambda_m chi_m quad \( M gt.eq m gt.eq 2 \) \, #h(2em) eta_1 = lambda_1 \, quad eta_m = lambda_m psi_m quad \( m gt.eq 2 \) . $ <eq:assembly-weights>]
-  Let $H$ act on block $m$ of the constraint cone by the point character $eta_m^(- 1)$. This preserves its equations because their degree is $b$, and it gives the natural linearization of $cal(O)_X \( 1 \)$.
+   $ lambda_M = 1 \, wide lambda_(m - 1) = lambda_m chi_m quad \( M gt.eq m gt.eq 2 \) \, wide eta_1 = lambda_1 \,
+     quad eta_m = lambda_m psi_m quad \( m gt.eq 2 \) . $ <eq:assembly-weights>]
+  Let $H$ act on block $m$ of the constraint cone by the point character $eta_m^(- 1)$.
+    This preserves its equations because their degree is $b$,
+    and it gives the natural linearization of $cal(O)_X \( 1 \)$.
   As in Theorem 18, put
-  $ B = product_(m = 2)^M "Pic"^0 \( C \) \, #h(2em) K = k \( B times X times R \) \, #h(2em) F = K^H \, $
-  where $R$ is an affine space with a faithful linear $H$-action. Then $K \/ F$ is Galois with group $H$. Let $E = ⨂_(m = 2)^M E_(A_m)$, of dimension $e_1$ over $K$, and let $Delta_1$ be the descent of $"End"_K \( E \)$. Theorem 18, applied with the block characters just chosen, makes
+  $ B = product_(m = 2)^M "Pic"^0 \( C \) \, wide K = k \( B times X times R \) \, wide F = K^H \, $
+  where $R$ is an affine space with a faithful linear $H$-action. Then $K \/ F$ is Galois with group $H$.
+    Let $E = ⨂_(m = 2)^M E_(A_m)$, of dimension $e_1$ over $K$,
+    and let $Delta_1$ be the descent of $"End"_K \( E \)$. Theorem 18,
+    applied with the block characters just chosen, makes
   #[#set math.equation(numbering: n => "(8.6)")
    $ Delta = \( Delta_0 ⊗_k F \) ⊗_F Delta_1 $ <eq:assembly-division>]
-  a division algebra. Its scalar extension to $K$ is $Delta_0 ⊗_k "End"_K \( E \)$, and $H$ fixes $Delta_0$ pointwise. Notice that $e_0 \, s \, b$ were fixed before $h$, and $M$ before $e_1$; there is no restriction involving the new degree $e_1$ in (8.4).
-  The generic fiber of $cal(O)_X \( 1 \)$, pulled back to $K$, is a one-dimensional semilinear $H$-space. By Galois descent it has a nonzero invariant generator $tau$. Choose a $k$-basis of $U$. In each cone block, divide its coordinate sections by $tau$ and use the resulting coefficients to form $ell_m in U_K$. Transport of a coordinate section is pullback by $g^(- 1)$. The inverse point action $eta_m^(- 1)$ therefore gives
+  a division algebra. Its scalar extension to $K$ is $Delta_0 ⊗_k "End"_K \( E \)$,
+    and $H$ fixes $Delta_0$ pointwise. Notice that $e_0 \, s \, b$ were fixed before $h$, and $M$ before $e_1$;
+    there is no restriction involving the new degree $e_1$ in (8.4).
+  The generic fiber of $cal(O)_X \( 1 \)$, pulled back to $K$, is a one-dimensional semilinear $H$-space.
+    By Galois descent it has a nonzero invariant generator $tau$. Choose a $k$-basis of $U$.
+    In each cone block, divide its coordinate sections by $tau$ and use the resulting coefficients to form $ell_m
+    in U_K$. Transport of a coordinate section is pullback by $g^(- 1)$.
+    The inverse point action $eta_m^(- 1)$ therefore gives
   #[#set math.equation(numbering: n => "(8.7)")
    $ g ell_m = eta_m \( g \) ell_m . $ <eq:leaf-weights>]
   In particular, dividing by the invariant $tau$ does not reverse the character.
   The constraint equations say that
   $ S_b := sum_(m = 1)^M ell_m^b in \( frak(j)_K \)_b . $
-  Since every $eta_m^b = 1$, the element $S_b$ is invariant and belongs to $\( frak(j)_F \)_b$. We claim that it has a decomposition
+  Since every $eta_m^b = 1$, the element $S_b$ is invariant and belongs to $\( frak(j)_F \)_b$.
+    We claim that it has a decomposition
   #[#set math.equation(numbering: n => "(8.8)")
-   $ S_b = c_i f_i + sum_(l < i) B_(i l) f_l + sum_(d > i) C_(i d) t_d med \( mod med Q_F \) \, #h(2em) c_i in F^times . $ <eq:invariant-sum>]
+   $ S_b = c_i f_i + sum_(l < i) B_(i l) f_l + sum_(d > i) C_(i d) t_d med \( mod med Q_F \) \, wide
+     c_i in F^times . $ <eq:invariant-sum>]
   For this, let
   $ V_b = Q_b + sum_(l < i) f_l "Sym"_k^(b - a_l) U + sum_(d > i) t_d "Sym"_k^(b - 1) U . $
-  Then $frak(j)_b = V_b + k f_i$. If $f_i in V_b$, any prescribed nonzero coefficient of $f_i$ may be absorbed by changing the term in $V_b$, proving the claim.
-  Suppose instead that $f_i in.not V_b$. Pure $b$-th powers span $"Sym"^b U$ in characteristic zero. Over an algebraic closure, express $f_i$ as a linear combination of at most $dim "Sym"^b U$ such powers, absorb each scalar into a $b$-th root, and pad with zero forms. The bound (8.4) gives a nonzero cone point with $sum_m ell_m^b = f_i$. Thus the homogeneous coefficient of the class of $f_i$ in $frak(j)_b \/ V_b$ is not identically zero on $X$. Geometric integrality makes it nonzero at the generic point. Dividing all the coordinates by $tau$ only multiplies that coefficient by a nonzero scalar to the $b$-th power. Finally, the spaces $V_b$ and $frak(j)_b$ are defined over $k$. Invariant linear algebra over $F$ gives (8.8), with homogeneous multipliers of the indicated degrees.
-  #emph[The chain of binary additions over $K$.] We next enlarge the formal space over $K$, keeping the old equations. Start with $s'_1 = ell_1$. In link $m$, introduce a fresh symbol $T_(m \, alpha)$ for every degree-$b$ monomial $p^alpha$ in the curve coordinates. Each symbol has formal degree one. Evaluate it by the multiplication matrix from Proposition 13, on the $m$-th tensor factor of $E$, with substitution
+  Then $frak(j)_b = V_b + k f_i$. If $f_i in V_b$, any prescribed nonzero coefficient of $f_i$ may be absorbed by
+    changing the term in $V_b$, proving the claim.
+  Suppose instead that $f_i in.not V_b$. Pure $b$-th powers span $"Sym"^b U$ in characteristic zero.
+    Over an algebraic closure, express $f_i$ as a linear combination of at most $dim "Sym"^b U$ such powers,
+    absorb each scalar into a $b$-th root, and pad with zero forms.
+    The bound (8.4) gives a nonzero cone point with $sum_m ell_m^b = f_i$.
+    Thus the homogeneous coefficient of the class of $f_i$ in $frak(j)_b \/ V_b$ is not identically zero on $X$.
+    Geometric integrality makes it nonzero at the generic point.
+    Dividing all the coordinates by $tau$ only multiplies that coefficient by a nonzero scalar to the $b$-th
+    power. Finally, the spaces $V_b$ and $frak(j)_b$ are defined over $k$.
+    Invariant linear algebra over $F$ gives (8.8), with homogeneous multipliers of the indicated degrees.
+  #emph[The chain of binary additions over $K$.] We next enlarge the formal space over $K$,
+    keeping the old equations. Start with $s'_1 = ell_1$. In link $m$,
+    introduce a fresh symbol $T_(m \, alpha)$ for every degree-$b$ monomial $p^alpha$ in the curve coordinates.
+    Each symbol has formal degree one. Evaluate it by the multiplication matrix from Proposition 13,
+    on the $m$-th tensor factor of $E$, with substitution
   #[#set math.equation(numbering: n => "(8.9)")
-   $ U_1 = s'_(m - 1) \, #h(2em) U_2 = ell_m . $ <eq:link-substitution>]
+   $ U_1 = s'_(m - 1) \, wide U_2 = ell_m . $ <eq:link-substitution>]
   Let $s'_m$ be the formal linear combination of the diagonal symbols corresponding to $z$.
-  These substitutions preserve commutativity of the entire list. Indeed, the coefficient matrices of a new link commute coefficientwise with $Delta_0$ and with the earlier tensor factors. The two inputs in (8.9) commute with one another and with all earlier forms. The inputs therefore centralize the new coefficient algebra $"End"_K \( E_(A_m) \)$, embedded in the $m$-th tensor factor. Consequently substitution defines a $K$-algebra homomorphism
-  $ "End"_K \( E_(A_m) \) \[ U_1 \, U_2 \] & arrow.r #scale(x: 120%, y: 120%)[\(] Delta_0 ⊗_k "End"_K \( E \) #scale(x: 120%, y: 120%)[\)] \[ x_1 \, dots.h \, x_n \] \,\
-U_1 & mapsto s'_(m - 1) \, #h(2em) U_2 mapsto ell_m \, $
-  where the inputs on the right denote their evaluated forms. It preserves the polynomial commutation identities of the new multiplication matrices, and every new evaluated form commutes with every earlier one. This argument uses no coefficientwise commutativity among the matrices within a single link.
+  These substitutions preserve commutativity of the entire list.
+    Indeed, the coefficient matrices of a new link commute coefficientwise with $Delta_0$ and with the earlier
+    tensor factors. The two inputs in (8.9) commute with one another and with all earlier forms.
+    The inputs therefore centralize the new coefficient algebra $"End"_K \( E_(A_m) \)$,
+    embedded in the $m$-th tensor factor. Consequently substitution defines a $K$-algebra homomorphism
+  $ "End"_K \( E_(A_m) \) \[ U_1 \, U_2 \] & arrow.r #scale(x: 120%, y: 120%)[\(] Delta_0 ⊗_k "End"_K \( E \)
+    #scale(x: 120%, y: 120%)[\)] \[ x_1 \, dots.h \, x_n \] \,\
+U_1 & mapsto s'_(m - 1) \, wide U_2 mapsto ell_m \, $
+  where the inputs on the right denote their evaluated forms.
+    It preserves the polynomial commutation identities of the new multiplication matrices,
+    and every new evaluated form commutes with every earlier one.
+    This argument uses no coefficientwise commutativity among the matrices within a single link.
   For each link impose the pair-exchange quadrics (8.1), the diagonal relations (8.1), and the identifications
-  $ u_T = s'_(m - 1) \, #h(2em) v_T = ell_m . $
-  They are identities under evaluation because they are identities of sections on the curve. Lemma 28 shows that the resulting quotient is finite over the preceding formal relation algebra and gives
+  $ u_T = s'_(m - 1) \, wide v_T = ell_m . $
+  They are identities under evaluation because they are identities of sections on the curve.
+    Lemma 28 shows that the resulting quotient is finite over the preceding formal relation algebra and gives
   $ \( s'_m \)^b = \( s'_(m - 1) \)^b + ell_m^b . $
-  After all links, the formal quotient is finite over $"Sym"_K U_K \/ Q_K$, is defined by the old and new linear and quadratic relations, and satisfies
+  After all links, the formal quotient is finite over $"Sym"_K U_K \/ Q_K$,
+    is defined by the old and new linear and quadratic relations, and satisfies
   #[#set math.equation(numbering: n => "(8.10)")
    $ \( s'_M \)^b = sum_(m = 1)^M ell_m^b = S_b . $ <eq:telescoping-links>]
-  #emph[Equivariance and descent.] Give the new symbol space in link $m$ the degree-$b$ action on the $p$-monomials from Proposition 13, multiplied by the character $lambda_m$, and extend it semilinearly over $K$. Keep $U$ fixed. The pair-exchange relations are stable under the monomial phase and permutation action and under the common twist. The diagonal relations are stable as well. The distinguished symbols $u_T \, v_T \, z$ have respective weights
-  $ lambda_m chi_m = lambda_(m - 1) \, #h(2em) lambda_m psi_m = eta_m \, #h(2em) lambda_m . $
-  These are the weights of their prescribed inputs and output: the input identifications are stable by induction, starting from (8.7). Thus the full ideal of linear and quadratic relations is stable.
-  Evaluation is equivariant, not merely the relation ideal. For a section $a$ before the twist, write $M_a \( U_1 \, U_2 \)$ for its linear multiplication matrix. The transport identity (5.3) reads
-  $ M_(g_(*) a) \( U_1 \, U_2 \) = \( g_(upright("coeff")) M_a \) #scale(x: 120%, y: 120%)[\(] chi_m \( g \) U_1 \, psi_m \( g \) U_2 #scale(x: 120%, y: 120%)[\)] \, $
-  where $g_(upright("coeff"))$ includes the field action and transport on the corresponding endomorphism factor. Scalar choices in transporting the universal line cancel on these endomorphisms. Using the weights of the two inputs and the degree-one homogeneity of the matrix polynomial, we obtain
-  $ g #h(-0.16667em) (M_a \( s'_(m - 1) \, ell_m \)) & = \( g_(upright("coeff")) M_a \) #scale(x: 120%, y: 120%)[\(] lambda_m \( g \) chi_m \( g \) s'_(m - 1) \, lambda_m \( g \) psi_m \( g \) ell_m #scale(x: 120%, y: 120%)[\)]\
+  #emph[Equivariance and descent.] Give the new symbol space in link $m$ the degree-$b$ action on the
+    $p$-monomials from Proposition 13, multiplied by the character $lambda_m$,
+    and extend it semilinearly over $K$. Keep $U$ fixed. The pair-exchange relations are stable under the monomial
+    phase and permutation action and under the common twist. The diagonal relations are stable as well.
+    The distinguished symbols $u_T \, v_T \, z$ have respective weights
+  $ lambda_m chi_m = lambda_(m - 1) \, wide lambda_m psi_m = eta_m \, wide lambda_m . $
+  These are the weights of their prescribed inputs and output:
+    the input identifications are stable by induction, starting from (8.7).
+    Thus the full ideal of linear and quadratic relations is stable.
+  Evaluation is equivariant, not merely the relation ideal.
+    For a section $a$ before the twist, write $M_a \( U_1 \, U_2 \)$ for its linear multiplication matrix.
+    The transport identity (5.3) reads
+  $ M_(g_(*) a) \( U_1 \, U_2 \) = \( g_(upright("coeff")) M_a \) #scale(x: 120%, y: 120%)[\(] chi_m \( g \)
+    U_1 \, psi_m \( g \) U_2 #scale(x: 120%, y: 120%)[\)] \, $
+  where $g_(upright("coeff"))$ includes the field action and transport on the corresponding endomorphism factor.
+    Scalar choices in transporting the universal line cancel on these endomorphisms.
+    Using the weights of the two inputs and the degree-one homogeneity of the matrix polynomial, we obtain
+  $ g #h(-0.16667em) (M_a \( s'_(m - 1) \, ell_m \)) & = \( g_(upright("coeff")) M_a \)
+    #scale(x: 120%, y: 120%)[\(] lambda_m \( g \) chi_m \( g \) s'_(m - 1) \,
+    lambda_m \( g \) psi_m \( g \) ell_m #scale(x: 120%, y: 120%)[\)]\
  & = lambda_m \( g \) thin M_(g_(*) a) \( s'_(m - 1) \, ell_m \) . $
   This is exactly the action assigned to the twisted symbol. It proves equivariance successively through all the links.
-  Take invariant vector spaces under semilinear Galois descent. The enlarged formal space descends to an $F$-space containing $U_F$, and the full degree-one and degree-two pieces of the stable relation ideal descend to finite-dimensional spaces over $F$. Let $Q_(upright("new"))$ be the ideal generated by these descended spaces. Scalar extension commutes with the multiplication maps generating this ideal. Since the original relation ideal was generated in degrees one and two, extension to $K$ recovers exactly that ideal. Equivariant evaluation takes these invariant forms into $Delta \[ x \]$, with $Delta$ as in (8.6). They are mutually commuting.
-  The last output $s'_M$ is invariant because $lambda_M = 1$; define $t_i = s'_M$. Combining (8.8) with (8.10) proves (8.3). All earlier equations are retained, so every old triangular identity continues to hold modulo $Q_(upright("new"))$.
-  It remains to check the other induction conditions. Finiteness of the new relation algebra over the old one can be checked after the faithfully flat extension $F subset K$, where it was proved link by link. In particular it remains finite over $F \[ x \]$. Lemma 10 now preserves the geometric no-small-curve condition: the linear projection of the new characteristic set is finite and pulls back the old hyperplane bundle. The central variables still evaluate to themselves, and the formal space still contains $U_F$. Finally $K$ is finitely generated over $k$, and so is its finite-group invariant field $F$. Thus the center is still finitely generated over the original $bb(C)$, and all induction conditions have been verified. ◻
+  Take invariant vector spaces under semilinear Galois descent.
+    The enlarged formal space descends to an $F$-space containing $U_F$,
+    and the full degree-one and degree-two pieces of the stable relation ideal descend to finite-dimensional
+    spaces over $F$. Let $Q_(upright("new"))$ be the ideal generated by these descended spaces.
+    Scalar extension commutes with the multiplication maps generating this ideal.
+    Since the original relation ideal was generated in degrees one and two,
+    extension to $K$ recovers exactly that ideal. Equivariant evaluation takes these invariant forms into
+    $Delta \[ x \]$, with $Delta$ as in (8.6). They are mutually commuting.
+  The last output $s'_M$ is invariant because $lambda_M = 1$; define $t_i = s'_M$.
+    Combining (8.8) with (8.10) proves (8.3). All earlier equations are retained,
+    so every old triangular identity continues to hold modulo $Q_(upright("new"))$.
+  It remains to check the other induction conditions. Finiteness of the new relation algebra over the old one can
+    be checked after the faithfully flat extension $F subset K$, where it was proved link by link.
+    In particular it remains finite over $F \[ x \]$. Lemma 10 now preserves the geometric no-small-curve
+    condition: the linear projection of the new characteristic set is finite and pulls back the old hyperplane
+    bundle. The central variables still evaluate to themselves, and the formal space still contains $U_F$.
+    Finally $K$ is finitely generated over $k$, and so is its finite-group invariant field $F$.
+    Thus the center is still finitely generated over the original $bb(C)$,
+    and all induction conditions have been verified. ◻
 ]
 
 #proof[
-  Proposition 9 supplies the initial data with no triangular rows yet constructed. Apply Proposition 29 in the order $i = n \, n - 1 \, dots.h \, 1$. Every step retains all preceding identities as consequences of an ideal generated in degrees at most two. Thus a later, smaller value of $a_i$ does not lose an earlier power identity. After finitely many steps we have the division algebra and commuting linear forms satisfying (2.1) for all $i$. Let $A$ be the commutative graded algebra generated by all the evaluated formal forms. The center is finitely generated over $bb(C)$, all multipliers in the triangular identities belong to $A$ in the stated degrees, and all $c_i$ are nonzero. Lemma 4 gives finiteness over $k \[ x \]$ and the full ordered left-$Delta$ basis. This proves every assertion of Theorem 1. ◻
+  Proposition 9 supplies the initial data with no triangular rows yet constructed.
+    Apply Proposition 29 in the order $i = n \, n - 1 \, dots.h \, 1$.
+    Every step retains all preceding identities as consequences of an ideal generated in degrees at most two.
+    Thus a later, smaller value of $a_i$ does not lose an earlier power identity.
+    After finitely many steps we have the division algebra and commuting linear forms satisfying (2.1) for all
+    $i$. Let $A$ be the commutative graded algebra generated by all the evaluated formal forms.
+    The center is finitely generated over $bb(C)$, all multipliers in the triangular identities belong to $A$ in
+    the stated degrees, and all $c_i$ are nonzero. Lemma 4 gives finiteness over $k \[ x \]$ and the full ordered
+    left-$Delta$ basis. This proves every assertion of Theorem 1. ◻
 ]
 
 #proof[
-  Apply Theorem 1 to the regular sequence contained in $I$. Proposition 5 gives one monomial ideal $J$ containing all $x_i^(a_i)$ and having the same Hilbert function as $I$ in every degree. ◻
+  Apply Theorem 1 to the regular sequence contained in $I$.
+    Proposition 5 gives one monomial ideal $J$ containing all $x_i^(a_i)$ and having the same Hilbert function as
+    $I$ in every degree. ◻
 ]
 
 == 9 Generality and consequences <sec:consequences>
 
-The construction and monomial extraction prove Artinian EGH over $bb(C)$. We first extend that Hilbert-function conclusion to the scope of Corollary 3, and then derive two further consequences. These arguments use the EGH conclusion rather than any additional division-algebra construction.
+The construction and monomial extraction prove Artinian EGH over $bb(C)$.
+  We first extend that Hilbert-function conclusion to the scope of Corollary 3,
+  and then derive two further consequences. These arguments use the EGH conclusion rather than any additional
+  division-algebra construction.
 
 === 9.1 Regular sequences over characteristic-zero fields <subsec:generality>
 
 #proof[
-  If $I = S_F$, take $J = S_F$. Otherwise, first work over $bb(C)$. Choose a linear coordinate change for which $f_1 \, dots.h \, f_c \, x_(c + 1) \, dots.h \, x_n$ is regular. The images $overline(f)_1 \, dots.h \, overline(f)_c$ in $bb(C) \[ x_1 \, dots.h \, x_c \]$ form a full regular sequence. Corollary 2 applies to these images and, more generally, to every full regular sequence of the prescribed degrees in $c$ variables and every homogeneous ideal containing it. This universal assertion is the premise of the Artinian reduction of Caviglia–Maclagan [9] Proposition 10, which gives the desired Hilbert-function comparison for every ideal containing the original sequence in $n$ variables. The lexicographic embedding modulo $P_F$ gives the stated lex-plus-powers choice; this reduction and its lex formulation are also recalled in [8] Section 4.
-  For general $F$, choose homogeneous generators of $I$ and let $F_0 subset.eq F$ be the subfield generated over $bb(Q)$ by their coefficients and those of the $f_i$. Let $I_0 subset.eq F_0 \[ x \]$ be generated by those generators together with the $f_i$. Then $I_0 F \[ x \] = I$, and faithful flatness of $F \/ F_0$ descends regularity of the sequence to $F_0 \[ x \]$. Embed the finitely generated field $F_0$ into $bb(C)$ and apply the complex case after scalar extension. Define a monomial ideal over $F_0$, and then over $F$, using the same monomial exponents as the resulting complex ideal. Dimensions of graded pieces commute with both field extensions from $F_0$, so the Hilbert equalities descend to $F$. The same observation identifies the degreewise lex-plus-powers choice. ◻
+  If $I = S_F$, take $J = S_F$. Otherwise, first work over $bb(C)$.
+    Choose a linear coordinate change for which $f_1 \, dots.h \, f_c \, x_(c + 1) \, dots.h \, x_n$ is regular.
+    The images $overline(f)_1 \, dots.h \, overline(f)_c$ in $bb(C) \[ x_1 \, dots.h \, x_c \]$ form a full
+    regular sequence. Corollary 2 applies to these images and, more generally,
+    to every full regular sequence of the prescribed degrees in $c$ variables and every homogeneous ideal
+    containing it. This universal assertion is the premise of the Artinian reduction of Caviglia–Maclagan [9]
+    Proposition 10, which gives the desired Hilbert-function comparison for every ideal containing the original
+    sequence in $n$ variables. The lexicographic embedding modulo $P_F$ gives the stated lex-plus-powers choice;
+    this reduction and its lex formulation are also recalled in [8] Section 4.
+  For general $F$, choose homogeneous generators of $I$ and let $F_0 subset.eq
+    F$ be the subfield generated over $bb(Q)$ by their coefficients and those of the $f_i$.
+    Let $I_0 subset.eq F_0 \[ x \]$ be generated by those generators together with the $f_i$.
+    Then $I_0 F \[ x \] = I$, and faithful flatness of $F \/ F_0$ descends regularity of the sequence to
+    $F_0 \[ x \]$. Embed the finitely generated field $F_0$ into $bb(C)$ and apply the complex case after scalar
+    extension. Define a monomial ideal over $F_0$, and then over $F$,
+    using the same monomial exponents as the resulting complex ideal.
+    Dimensions of graded pieces commute with both field extensions from $F_0$,
+    so the Hilbert equalities descend to $F$. The same observation identifies the degreewise lex-plus-powers choice. ◻
 ]
 
-The companion paper proves the stronger graded Betti inequalities in this same characteristic-zero scope [30] Corollary 1.2, using the Artinian LPP reduction of Caviglia–Kummini [8] Theorem 4.1. The construction in Theorem 1 itself remains the stated construction for a full complex regular sequence.
+The companion paper proves the stronger graded Betti inequalities in this same characteristic-zero scope [30]
+  Corollary 1.2, using the Artinian LPP reduction of Caviglia–Kummini [8] Theorem 4.1.
+  The construction in Theorem 1 itself remains the stated construction for a full complex regular sequence.
 
 === 9.2 Local cohomology <local-cohomology>
 
-Caviglia–Sbarra’s conditional theorem [10] Theorem 4.4 also gives a local-cohomology comparison for the same lex-plus-powers ideal.
+Caviglia–Sbarra’s conditional theorem [10] Theorem 4.4 also gives a local-cohomology comparison for the same
+  lex-plus-powers ideal.
 
 #thm([Corollary 9.1.])[
-  (Lex-plus-powers extremality for local cohomology).  #emph[Let $F$ be a field of characteristic zero, let $S_F = F \[ x_1 \, dots.h \, x_n \]$ be standard graded, and put $frak(m) = \( x_1 \, dots.h \, x_n \)$. Let 
-$ 1 lt.eq c lt.eq n \, #h(2em) 2 lt.eq a_1 lt.eq dots.h.c lt.eq a_c \, #h(2em) P_F = \( x_1^(a_1) \, dots.h \, x_c^(a_c) \) . $
+  (Lex-plus-powers extremality for local cohomology).  #emph[Let $F$ be a field of characteristic zero, let $S_F =
+    F \[ x_1 \, dots.h \, x_n \]$ be standard graded, and put $frak(m) = \( x_1 \, dots.h \, x_n \)$. Let
+$ 1 lt.eq c lt.eq n \, wide 2 lt.eq a_1 lt.eq dots.h.c lt.eq a_c \, wide
+  P_F = \( x_1^(a_1) \, dots.h \, x_c^(a_c) \) . $
 
- Suppose that a homogeneous ideal $I subset.eq S_F$ contains a homogeneous regular sequence $f_1 \, dots.h \, f_c$ with $deg f_k = a_k$. Let $J$ be the lex-plus-powers ideal prescribed by Corollary 3 for $P_F$, the order $x_1 > dots.h.c > x_n$, and the Hilbert function of $S_F \/ I$. For this single ideal, 
-$ dim_F H_(frak(m))^i \( S_F \/ I \)_j lt.eq dim_F H_(frak(m))^i \( S_F \/ J \)_j #h(2em) \( i gt.eq 0 \, med j in bb(Z) \) . $
+ Suppose that a homogeneous ideal $I subset.eq S_F$ contains a homogeneous regular sequence $f_1 \, dots.h \,
+   f_c$ with $deg f_k = a_k$. Let $J$ be the lex-plus-powers ideal prescribed by Corollary 3 for $P_F$,
+   the order $x_1 > dots.h.c > x_n$, and the Hilbert function of $S_F \/ I$. For this single ideal,
+$ dim_F H_(frak(m))^i \( S_F \/ I \)_j lt.eq dim_F H_(frak(m))^i \( S_F \/ J \)_j
+  wide \( i gt.eq 0 \, med j in bb(Z) \) . $
 
 ]
 ] <cor:local-cohomology>
 
 #proof[
-  If $I = S_F$, both sides vanish. Otherwise, since $F$ is infinite, complete $f_1 \, dots.h \, f_c$ to a regular sequence by $n - c$ linear forms. After a linear change of coordinates, the images $overline(f)_1 \, dots.h \, overline(f)_c$ in $overline(S) = F \[ x_1 \, dots.h \, x_c \]$ form a full regular sequence of the same degrees. The list of added linear forms is empty when $c = n$.
-  Corollary 3, applied in $overline(S)$ to every homogeneous ideal containing this sequence, supplies precisely the Artinian EGH premise of Caviglia–Sbarra [10] Theorem 4.4. Their Clements–Lindström image of $I \/ \( f_1 \, dots.h \, f_c \)$ in $S_F \/ P_F$ has preimage $J$ in $S_F$. The base-independence identification used there gives local cohomology with support in $frak(m)$, and their Hilbert-series comparison is coefficientwise in the full internal $bb(Z)$-grading for every cohomological degree $i gt.eq 0$. This gives the displayed inequalities directly over $F$. ◻
+  If $I = S_F$, both sides vanish. Otherwise, since $F$ is infinite, complete $f_1 \, dots.h \,
+    f_c$ to a regular sequence by $n - c$ linear forms. After a linear change of coordinates,
+    the images $overline(f)_1 \, dots.h \, overline(f)_c$ in $overline(S) =
+    F \[ x_1 \, dots.h \, x_c \]$ form a full regular sequence of the same degrees.
+    The list of added linear forms is empty when $c = n$.
+  Corollary 3, applied in $overline(S)$ to every homogeneous ideal containing this sequence,
+    supplies precisely the Artinian EGH premise of Caviglia–Sbarra [10] Theorem 4.4.
+    Their Clements–Lindström image of $I \/ \( f_1 \, dots.h \, f_c \)$ in $S_F \/ P_F$ has preimage $J$ in $S_F$.
+    The base-independence identification used there gives local cohomology with support in $frak(m)$,
+    and their Hilbert-series comparison is coefficientwise in the full internal $bb(Z)$-grading for every
+    cohomological degree $i gt.eq 0$. This gives the displayed inequalities directly over $F$. ◻
 ]
 
-When $c < n$, this statement includes positive-dimensional quotients. When $c = n$, both quotients are Artinian: their zeroth local cohomology is the quotient itself and their higher local cohomology vanishes, so the comparison reduces to the Hilbert-function equality.
+When $c < n$, this statement includes positive-dimensional quotients. When $c = n$, both quotients are Artinian:
+  their zeroth local cohomology is the quotient itself and their higher local cohomology vanishes,
+  so the comparison reduces to the Hilbert-function equality.
 
 === 9.3 Quadratic Cayley–Bacharach <quadratic-cayleybacharach>
 
 The quadratic case also gives the following scheme-theoretic Cayley–Bacharach consequence.
 
 #thm([Corollary 9.2.])[
-  (Quadratic Cayley–Bacharach).  #emph[Let $F$ have characteristic zero, let $r gt.eq 1$, and let $Omega subset.eq bb(P)_F^r$ be a zero-dimensional scheme-theoretic complete intersection of $r$ quadrics, of degree $2^r$. For an integer $1 lt.eq k lt.eq r$ and a degree-$k$ hypersurface $X subset.eq bb(P)_F^r$, 
+  (Quadratic Cayley–Bacharach).  #emph[Let $F$ have characteristic zero, let $r gt.eq 1$,
+    and let $Omega subset.eq bb(P)_F^r$ be a zero-dimensional scheme-theoretic complete intersection of $r$
+    quadrics, of degree $2^r$. For an integer $1 lt.eq k lt.eq r$ and a degree-$k$ hypersurface $X subset.eq bb(P)_F^r$,
 $ Omega subset.eq.not X quad arrow.r.double quad deg \( Omega ∩ X \) lt.eq 2^r - 2^(r - k) . $
 
- Equivalently, if $X$ contains a closed subscheme of $Omega$ of degree strictly greater than $2^r - 2^(r - k)$, then it contains $Omega$ scheme-theoretically. Degrees here mean scheme lengths over $F$; no reducedness assumption is needed.]
+ Equivalently, if $X$ contains a closed subscheme of $Omega$ of degree strictly greater than $2^r - 2^(r - k)$,
+   then it contains $Omega$ scheme-theoretically. Degrees here mean scheme lengths over $F$;
+   no reducedness assumption is needed.]
 ] <cor:quadratic-cayley-bacharach>
 
 #proof[
-  First let $m gt.eq 0$ and let $Gamma subset.eq Omega$ fail to impose independent conditions on degree-$m$ forms, so that $H_Gamma \( m \) < deg Gamma$, where $H_Gamma \( d \) = dim_F \( S \/ I_Gamma \)_d$, $S = F \[ x_0 \, dots.h \, x_r \]$, and $I_Gamma$ is the saturated homogeneous ideal. Choose a linear form $ell$ nonvanishing on $Omega$. It is a nonzerodivisor on the homogeneous coordinate rings of both $Omega$ and $Gamma$. Thus the images of the defining quadrics form a regular sequence in $S \/ \( ell \) tilde.equiv F \[ x_1 \, dots.h \, x_r \]$, and, for $A = S \/ \( I_Gamma \, ell \)$,
-  $ deg Gamma = sum_(j gt.eq 0) dim_F A_j \, #h(2em) H_Gamma \( m \) = sum_(j = 0)^m dim_F A_j . $
-  Some $A_e$ is therefore nonzero with $e gt.eq m + 1$. Corollary 3 replaces $A$ by a quotient by a monomial ideal containing every variable square, with the same Hilbert function. A surviving degree-$e$ monomial is squarefree, and all its $2^e$ divisors survive. Consequently $deg Gamma gt.eq 2^e gt.eq 2^(m + 1)$. This proves, in characteristic zero, the numerical assertion $upright("IV")_m$ of [17] Section 3.
-  Now suppose $X$ does not contain $Omega$ and $k lt.eq r - 1$. Put $Z = Omega ∩ X$, and let $Gamma$ be residual to $Z$ in $Omega$. If $I_Z$ and $I_Omega$ are their saturated homogeneous ideals, the residual scheme is defined by $I_Gamma = \( I_Omega : I_Z \)$. Set $m = r - k - 1$. Residual duality for the complete intersection of $r$ quadrics gives
+  First let $m gt.eq 0$ and let $Gamma subset.eq Omega$ fail to impose independent conditions on degree-$m$ forms,
+    so that $H_Gamma \( m \) < deg Gamma$, where $H_Gamma \( d \) = dim_F \( S \/ I_Gamma \)_d$, $S =
+    F \[ x_0 \, dots.h \, x_r \]$, and $I_Gamma$ is the saturated homogeneous ideal.
+    Choose a linear form $ell$ nonvanishing on $Omega$. It is a nonzerodivisor on the homogeneous coordinate rings
+    of both $Omega$ and $Gamma$. Thus the images of the defining quadrics form a regular sequence in
+    $S \/ \( ell \) tilde.equiv F \[ x_1 \, dots.h \, x_r \]$, and, for $A = S \/ \( I_Gamma \, ell \)$,
+  $ deg Gamma = sum_(j gt.eq 0) dim_F A_j \, wide H_Gamma \( m \) = sum_(j = 0)^m dim_F A_j . $
+  Some $A_e$ is therefore nonzero with $e gt.eq m + 1$. Corollary 3 replaces $A$ by a quotient by a monomial ideal
+    containing every variable square, with the same Hilbert function.
+    A surviving degree-$e$ monomial is squarefree, and all its $2^e$ divisors survive.
+    Consequently $deg Gamma gt.eq 2^e gt.eq 2^(m + 1)$. This proves, in characteristic zero,
+    the numerical assertion $upright("IV")_m$ of [17] Section 3.
+  Now suppose $X$ does not contain $Omega$ and $k lt.eq r - 1$.
+    Put $Z = Omega ∩ X$, and let $Gamma$ be residual to $Z$ in $Omega$.
+    If $I_Z$ and $I_Omega$ are their saturated homogeneous ideals,
+    the residual scheme is defined by $I_Gamma = \( I_Omega : I_Z \)$. Set $m = r - k - 1$.
+    Residual duality for the complete intersection of $r$ quadrics gives
   $ deg Gamma - H_Gamma \( m \) = dim_F \( I_Z \/ I_Omega \)_k > 0 . $
-  The equality is the modern Cayley–Bacharach theorem in [17] Section 3, p. 195; its complementary degrees sum to $sum_(i = 1)^r 2 - r - 1 = r - 1$. The strict inequality holds because the defining equation of $X$ belongs to $I_Z$ but not to $I_Omega$. This theorem may be applied over an algebraic closure: flat field extension preserves lengths, Hilbert functions, residual schemes, and scheme containment. Thus $Gamma$ fails to impose independent degree-$m$ conditions. The bound just proved and the residual degree identity give
+  The equality is the modern Cayley–Bacharach theorem in [17] Section 3, p. 195;
+    its complementary degrees sum to $sum_(i = 1)^r 2 - r - 1 = r - 1$.
+    The strict inequality holds because the defining equation of $X$ belongs to $I_Z$ but not to $I_Omega$.
+    This theorem may be applied over an algebraic closure: flat field extension preserves lengths,
+    Hilbert functions, residual schemes, and scheme containment.
+    Thus $Gamma$ fails to impose independent degree-$m$ conditions.
+    The bound just proved and the residual degree identity give
   $ deg \( Omega ∩ X \) = 2^r - deg Gamma lt.eq 2^r - 2^(r - k) . $
-  For $k = r$, the same inequality merely says that a proper closed subscheme of $Omega$ has integer degree at most $2^r - 1$. ◻
+  For $k = r$, the same inequality merely says that a proper closed subscheme of $Omega$ has integer degree at
+    most $2^r - 1$. ◻
 ]
 
 #heading(level: 1)[References]
-#bibitem([1])[A.~Abedelfatah, #emph[On the Eisenbud--Green--Harris conjecture], Proc. Amer. Math. Soc. #strong[143] (2015), no.~1, 105--115. The statement numbering cited here is that of #link("https://arxiv.org/abs/1212.2653")[arXiv:1212.2653].]
-#bibitem([2])[A.~Abedelfatah, #emph[Quadratic Ideals in Six Variables and the Eisenbud--Green--Harris Conjecture], #link("https://arxiv.org/abs/2607.20035v1")[arXiv:2607.20035v1], 22 July 2026.]
-#bibitem([3])[B.~Antieau and B.~Williams, #emph[Godeaux--Serre varieties and the étale index], J. K-Theory #strong[11] (2013), no.~2, 283--295. #link("https://doi.org/10.1017/is013003003jkt220")[doi:10.1017/is013003003jkt220]. Numbered statements refer to the manuscript entitled #emph[Serre--Godeaux varieties and the étale index], #link("https://arxiv.org/abs/1205.1279v1")[arXiv:1205.1279v1], 7 May 2012.]
-#bibitem([4])[M.~F.~Atiyah and F.~Hirzebruch, #emph[Riemann--Roch theorems for differentiable manifolds], Bull. Amer. Math. Soc. #strong[65] (1959), 276--281. #link("https://doi.org/10.1090/S0002-9904-1959-10344-X")[doi:10.1090/S0002-9904-1959-10344-X].]
-#bibitem([5])[A.~Borel and J.-P.~Serre, #emph[Le théorème de Riemann--Roch], Bull. Soc. Math. France #strong[86] (1958), 97--136. #link("https://doi.org/10.24033/bsmf.1500")[doi:10.24033/bsmf.1500].]
-#bibitem([6])[G.~Caviglia and A.~De Stefani, #emph[The Eisenbud--Green--Harris conjecture for fast-growing degree sequences], Ann. Sc. Norm. Super. Pisa Cl. Sci. (5) #strong[25] (2024), no.~3, 1753--1762. #link("https://doi.org/10.2422/2036-2145.202203_025")[doi:10.2422/2036-2145.202203\_025]. Numbered statements refer to #link("https://arxiv.org/abs/2007.15467v2")[arXiv:2007.15467v2], 18 November 2020.]
-#bibitem([7])[G.~Caviglia, A.~De Stefani, and E.~Sbarra, #emph[The Eisenbud--Green--Harris conjecture], in I.~Peeva (ed.), #emph[Commutative Algebra: Expository Papers Dedicated to David Eisenbud on the Occasion of his 75th Birthday], Springer, Cham, 2021, 159--187. #link("https://doi.org/10.1007/978-3-030-89694-2_5")[doi:10.1007/978-3-030-89694-2\_5]. The numbering cited here is that of #link("https://arxiv.org/abs/2106.14759v2")[arXiv:2106.14759v2] (17 January 2022).]
-#bibitem([8])[G.~Caviglia and M.~Kummini, #emph[Poset embeddings of Hilbert functions and Betti numbers], J. Algebra #strong[410] (2014), 244--257. #link("https://doi.org/10.1016/j.jalgebra.2014.04.007")[doi:10.1016/j.jalgebra.2014.04.007]. Numbered statements refer to #link("https://arxiv.org/abs/1210.5562v2")[arXiv:1210.5562v2].]
-#bibitem([9])[G.~Caviglia and D.~Maclagan, #emph[Some cases of the Eisenbud--Green--Harris conjecture], Math. Res. Lett. #strong[15] (2008), no.~3, 427--433. #link("https://www.math.purdue.edu/~gcavigli/Articles-PDF/%5B4%5D.pdf")[Author manuscript].]
-#bibitem([10])[G.~Caviglia and E.~Sbarra, #emph[The lex-plus-powers inequality for local cohomology modules], Math. Ann. #strong[364] (2016), 225--241. #link("https://doi.org/10.1007/s00208-015-1180-5")[doi:10.1007/s00208-015-1180-5]. Numbered statements refer to the manuscript entitled #emph[The lex-plus-power inequality for local cohomology modules], #link("https://arxiv.org/pdf/1208.2187v2")[arXiv:1208.2187v2], 11 March 2013.]
-#bibitem([11])[R.-X.~Chen, #emph[Some special cases of the Eisenbud--Green--Harris conjecture], Illinois J. Math. #strong[56] (2012), no.~3, 661--675. #link("https://doi.org/10.1215/ijm/1391178543")[doi:10.1215/ijm/1391178543]. Numbered statements refer to the #link("https://pi.math.cornell.edu/~rxc/Chen-EGH.pdf")[author manuscript].]
-#bibitem([12])[K.~F.~E.~Chong, #emph[An application of liaison theory to the Eisenbud--Green--Harris conjecture], J. Algebra #strong[445] (2016), 221--231. #link("https://doi.org/10.1016/j.jalgebra.2015.09.004")[doi:10.1016/j.jalgebra.2015.09.004]. Numbered statements refer to #link("https://arxiv.org/abs/1311.0939v1")[arXiv:1311.0939v1], 5 November 2013.]
-#bibitem([13])[G.~F.~Clements and B.~Lindström, #emph[A generalization of a combinatorial theorem of Macaulay], J. Combin. Theory #strong[7] (1969), no.~3, 230--238. #link("https://doi.org/10.1016/S0021-9800(69)80016-5")[doi:10.1016/S0021-9800(69)80016-5].]
-#bibitem([14])[S.~M.~Cooper, #emph[Subsets of Complete Intersections and the EGH Conjecture], in #emph[Progress in Commutative Algebra 1: Combinatorics and Homology], De Gruyter, 2012, 167--198. #link("https://doi.org/10.1515/9783110250404.167")[doi:10.1515/9783110250404.167].]
-#bibitem([15])[E.~Coskun, R.~S.~Kulkarni, and Y.~Mustopa, #emph[On representations of Clifford algebras of ternary cubic forms], Contemp. Math. #strong[562] (2012), 91--99. #link("https://doi.org/10.1090/conm/562/11132")[doi:10.1090/conm/562/11132]. #link("https://users.math.msu.edu/users/kulkar23/clifford.pdf")[Author offprint].]
-#bibitem([16])[P.~Deligne, #emph[Le déterminant de la cohomologie], in #emph[Current Trends in Arithmetical Algebraic Geometry], Contemp. Math. #strong[67] (1987), 93--177. #link("https://doi.org/10.1090/conm/067/902592")[doi:10.1090/conm/067/902592].]
-#bibitem([17])[D.~Eisenbud, M.~Green, and J.~Harris, #emph[Some conjectures extending Castelnuovo theory], Astérisque #strong[218] (1993), 187--202. #link("https://doi.org/10.24033/ast.245")[doi:10.24033/ast.245]. The article itself is headed #emph[Higher Castelnuovo theory].]
-#bibitem([18])[D.~Eisenbud, M.~Green, and J.~Harris, #emph[Cayley--Bacharach theorems and conjectures], Bull. Amer. Math. Soc. #strong[33] (1996), no.~3, 295--324. #link("https://doi.org/10.1090/S0273-0979-96-00666-0")[doi:10.1090/S0273-0979-96-00666-0].]
-#bibitem([19])[J.~Emsalem and A.~Iarrobino, #emph[Inverse system of a symbolic power. I], J. Algebra #strong[174] (1995), 1080--1090. #link("https://doi.org/10.1006/jabr.1995.1168")[doi:10.1006/jabr.1995.1168].]
-#bibitem([20])[L.~Guerra, #emph[A universal property of the Cayley--Chow space of algebraic cycles], Rend. Sem. Mat. Univ. Padova #strong[95] (1996), 127--142. #link("https://www.numdam.org/item/RSMUP_1996__95__127_0/")[Numdam archive].]
-#bibitem([21])[H.~A.~Hamm and Lê Dũng Tráng, #emph[Lefschetz theorems on quasi-projective varieties], Bull. Soc. Math. France #strong[113] (1985), 123--142. #link("https://doi.org/10.24033/bsmf.2023")[doi:10.24033/bsmf.2023].]
-#bibitem([22])[A.~Hatcher, #emph[Algebraic Topology], Cambridge University Press, 2002. #link("https://pi.math.cornell.edu/~hatcher/AT/AT.pdf").]
-#bibitem([23])[A.~Hatcher, #emph[Vector Bundles & K-Theory], version 2.2, November 2017. #link("https://pi.math.cornell.edu/~hatcher/VBKT/VB.pdf").]
-#bibitem([24])[F.~F.~Knudsen and D.~Mumford, #emph[The projectivity of the moduli space of stable curves. I. Preliminaries on "det" and "Div"], Math. Scand. #strong[39] (1976), 19--55. #link("https://doi.org/10.7146/math.scand.a-11642")[doi:10.7146/math.scand.a-11642].]
-#bibitem([25])[R.~S.~Kulkarni, #emph[On the Clifford algebra of a binary form], Trans. Amer. Math. Soc. #strong[355] (2003), no.~8, 3181--3208. #link("https://doi.org/10.1090/S0002-9947-03-03293-8")[doi:10.1090/S0002-9947-03-03293-8].]
-#bibitem([26])[N.~Kuzmanovski, #emph[A Structural Property of Generic Initial Ideals], #link("https://arxiv.org/abs/2608.17281v1")[arXiv:2608.17281v1], 18 August 2026.]
-#bibitem([27])[J.~S.~Milne, #emph[Jacobian varieties], in #emph[Arithmetic Geometry] (Storrs, Conn., 1984), Springer, New York, 1986, Chapter~VII, 167--212. Revised author version, 12 June 2021, #link("https://www.jmilne.org/math/xnotes/JVs.pdf").]
-#bibitem([28])[S.~Mukai, #emph[Duality between $D \( X \)$ and $D \( hat(X) \)$ with its application to Picard sheaves], Nagoya Math. J. #strong[81] (1981), 153--175. #link("https://doi.org/10.1017/S002776300001922X")[doi:10.1017/S002776300001922X].]
-#bibitem([29])[T.~Ohmoto and S.~Yokura, #emph[Product formulas for the Milnor class], Bull. Polish Acad. Sci. Math. #strong[48] (2000), no.~4, 387--401. Numbered statements refer to the #link("https://www.math.sci.hokudai.ac.jp/~ohmoto/Papers/Productfinal.pdf")[author manuscript].]
-#bibitem([30])[OpenAI, #emph[The Artinian Lex-Plus-Powers Betti Theorem], OpenAI Math Release preprint #link("https://github.com/openai/math/blob/main/preprints/The-Artinian-Lex-Plus-Powers-Betti-Theorem-September-23-2026/paper.pdf")[OAI:The-Artinian-Lex-Plus-Powers-Betti-Theorem-September-23-2026], 2026.]
-#bibitem([31])[P.~Schapira, #emph[An Introduction to Sheaves on Grothendieck Topologies], author notes, version dated 01/08/2026. #link("https://webusers.imj-prg.fr/~pierre.schapira/LectNotes/SHV.pdf").]
-#bibitem([32])[O.~M.~Schnürer and W.~Soergel, #emph[Proper base change for separated locally proper maps], Rend. Sem. Mat. Univ. Padova #strong[135] (2016), 223--250. #link("https://doi.org/10.4171/RSMUP/135-13")[doi:10.4171/RSMUP/135-13].]
-#bibitem([33])[The Stacks Project Authors, #emph[The Stacks Project], #link("https://stacks.math.columbia.edu") (accessed 23 September 2026).]
-#bibitem([34])[B.~Totaro, #emph[The Chow ring of a classifying space], in W.~Raskind and C.~Weibel (eds.), #emph[Algebraic K-Theory] (Seattle, WA, 1997), Proc. Sympos. Pure Math. #strong[67], American Mathematical Society, Providence, RI, 1999, 249--281. #link("https://doi.org/10.1090/pspum/067/1743244")[doi:10.1090/pspum/067/1743244].]
-#bibitem([35])[M.~van den Bergh, #emph[Linearizations of binary and ternary forms], J. Algebra #strong[109] (1987), no.~1, 172--183. #link("https://doi.org/10.1016/0021-8693(87)90171-2")[doi:10.1016/0021-8693(87)90171-2].]
-
-
+#bibitem([1])[A.~Abedelfatah, #emph[On the Eisenbud--Green--Harris conjecture], Proc. Amer. Math. Soc.
+  #strong[143] (2015), no.~1, 105--115. The statement numbering cited here is that of
+  #link("https://arxiv.org/abs/1212.2653")[arXiv:1212.2653].]
+#bibitem([2])[A.~Abedelfatah, #emph[Quadratic Ideals in Six Variables and the Eisenbud--Green--Harris Conjecture],
+  #link("https://arxiv.org/abs/2607.20035v1")[arXiv:2607.20035v1], 22 July 2026.]
+#bibitem([3])[B.~Antieau and B.~Williams, #emph[Godeaux--Serre varieties and the étale index], J.
+  K-Theory #strong[11] (2013), no.~2, 283--295.
+  #link("https://doi.org/10.1017/is013003003jkt220")[doi:10.1017/is013003003jkt220].
+  Numbered statements refer to the manuscript entitled #emph[Serre--Godeaux varieties and the étale index],
+  #link("https://arxiv.org/abs/1205.1279v1")[arXiv:1205.1279v1], 7 May 2012.]
+#bibitem([4])[M.~F.~Atiyah and F.~Hirzebruch, #emph[Riemann--Roch theorems for differentiable manifolds], Bull.
+  Amer. Math. Soc. #strong[65] (1959), 276--281.
+  #link("https://doi.org/10.1090/S0002-9904-1959-10344-X")[doi:10.1090/S0002-9904-1959-10344-X].]
+#bibitem([5])[A.~Borel and J.-P.~Serre, #emph[Le théorème de Riemann--Roch], Bull. Soc. Math.
+  France #strong[86] (1958), 97--136. #link("https://doi.org/10.24033/bsmf.1500")[doi:10.24033/bsmf.1500].]
+#bibitem([6])[G.~Caviglia and A.~De Stefani, #emph[The Eisenbud--Green--Harris conjecture for fast-growing degree
+  sequences], Ann. Sc. Norm. Super. Pisa Cl. Sci. (5) #strong[25] (2024), no.~3, 1753--1762.
+  #link("https://doi.org/10.2422/2036-2145.202203_025")[doi:10.2422/2036-2145.202203\_025].
+  Numbered statements refer to #link("https://arxiv.org/abs/2007.15467v2")[arXiv:2007.15467v2], 18 November 2020.]
+#bibitem([7])[G.~Caviglia, A.~De Stefani, and E.~Sbarra, #emph[The Eisenbud--Green--Harris conjecture],
+  in I.~Peeva (ed.), #emph[Commutative Algebra: Expository Papers Dedicated to David Eisenbud on the Occasion of
+  his 75th Birthday], Springer, Cham, 2021, 159--187.
+  #link("https://doi.org/10.1007/978-3-030-89694-2_5")[doi:10.1007/978-3-030-89694-2\_5].
+  The numbering cited here is that of #link("https://arxiv.org/abs/2106.14759v2")[arXiv:2106.14759v2] (17 January
+  2022).]
+#bibitem([8])[G.~Caviglia and M.~Kummini, #emph[Poset embeddings of Hilbert functions and Betti numbers], J.
+  Algebra #strong[410] (2014), 244--257.
+  #link("https://doi.org/10.1016/j.jalgebra.2014.04.007")[doi:10.1016/j.jalgebra.2014.04.007].
+  Numbered statements refer to #link("https://arxiv.org/abs/1210.5562v2")[arXiv:1210.5562v2].]
+#bibitem([9])[G.~Caviglia and D.~Maclagan, #emph[Some cases of the Eisenbud--Green--Harris conjecture], Math. Res.
+  Lett. #strong[15] (2008), no.~3, 427--433.
+  #link("https://www.math.purdue.edu/~gcavigli/Articles-PDF/%5B4%5D.pdf")[Author manuscript].]
+#bibitem([10])[G.~Caviglia and E.~Sbarra, #emph[The lex-plus-powers inequality for local cohomology modules],
+  Math. Ann. #strong[364] (2016), 225--241.
+  #link("https://doi.org/10.1007/s00208-015-1180-5")[doi:10.1007/s00208-015-1180-5].
+  Numbered statements refer to the manuscript entitled #emph[The lex-plus-power inequality for local cohomology
+  modules], #link("https://arxiv.org/pdf/1208.2187v2")[arXiv:1208.2187v2], 11 March 2013.]
+#bibitem([11])[R.-X.~Chen, #emph[Some special cases of the Eisenbud--Green--Harris conjecture], Illinois J. Math.
+  #strong[56] (2012), no.~3, 661--675.
+  #link("https://doi.org/10.1215/ijm/1391178543")[doi:10.1215/ijm/1391178543].
+  Numbered statements refer to the #link("https://pi.math.cornell.edu/~rxc/Chen-EGH.pdf")[author manuscript].]
+#bibitem([12])[K.~F.~E.~Chong, #emph[An application of liaison theory to the Eisenbud--Green--Harris conjecture],
+  J. Algebra #strong[445] (2016), 221--231.
+  #link("https://doi.org/10.1016/j.jalgebra.2015.09.004")[doi:10.1016/j.jalgebra.2015.09.004].
+  Numbered statements refer to #link("https://arxiv.org/abs/1311.0939v1")[arXiv:1311.0939v1], 5 November 2013.]
+#bibitem([13])[G.~F.~Clements and B.~Lindström, #emph[A generalization of a combinatorial theorem of Macaulay], J.
+  Combin. Theory #strong[7] (1969), no.~3, 230--238.
+  #link("https://doi.org/10.1016/S0021-9800(69)80016-5")[doi:10.1016/S0021-9800(69)80016-5].]
+#bibitem([14])[S.~M.~Cooper, #emph[Subsets of Complete Intersections and the EGH Conjecture],
+  in #emph[Progress in Commutative Algebra 1: Combinatorics and Homology], De Gruyter, 2012, 167--198.
+  #link("https://doi.org/10.1515/9783110250404.167")[doi:10.1515/9783110250404.167].]
+#bibitem([15])[E.~Coskun, R.~S.~Kulkarni, and Y.~Mustopa,
+  #emph[On representations of Clifford algebras of ternary cubic forms], Contemp. Math.
+  #strong[562] (2012), 91--99. #link("https://doi.org/10.1090/conm/562/11132")[doi:10.1090/conm/562/11132].
+  #link("https://users.math.msu.edu/users/kulkar23/clifford.pdf")[Author offprint].]
+#bibitem([16])[P.~Deligne, #emph[Le déterminant de la cohomologie],
+  in #emph[Current Trends in Arithmetical Algebraic Geometry], Contemp. Math. #strong[67] (1987), 93--177.
+  #link("https://doi.org/10.1090/conm/067/902592")[doi:10.1090/conm/067/902592].]
+#bibitem([17])[D.~Eisenbud, M.~Green, and J.~Harris, #emph[Some conjectures extending Castelnuovo theory],
+  Astérisque #strong[218] (1993), 187--202. #link("https://doi.org/10.24033/ast.245")[doi:10.24033/ast.245].
+  The article itself is headed #emph[Higher Castelnuovo theory].]
+#bibitem([18])[D.~Eisenbud, M.~Green, and J.~Harris, #emph[Cayley--Bacharach theorems and conjectures], Bull.
+  Amer. Math. Soc. #strong[33] (1996), no.~3, 295--324.
+  #link("https://doi.org/10.1090/S0273-0979-96-00666-0")[doi:10.1090/S0273-0979-96-00666-0].]
+#bibitem([19])[J.~Emsalem and A.~Iarrobino, #emph[Inverse system of a symbolic power. I], J.
+  Algebra #strong[174] (1995), 1080--1090. #link("https://doi.org/10.1006/jabr.1995.1168")[doi:10.1006/jabr.1995.1168].]
+#bibitem([20])[L.~Guerra, #emph[A universal property of the Cayley--Chow space of algebraic cycles], Rend. Sem.
+  Mat. Univ. Padova #strong[95] (1996), 127--142.
+  #link("https://www.numdam.org/item/RSMUP_1996__95__127_0/")[Numdam archive].]
+#bibitem([21])[H.~A.~Hamm and Lê Dũng Tráng, #emph[Lefschetz theorems on quasi-projective varieties], Bull. Soc.
+  Math. France #strong[113] (1985), 123--142. #link("https://doi.org/10.24033/bsmf.2023")[doi:10.24033/bsmf.2023].]
+#bibitem([22])[A.~Hatcher, #emph[Algebraic Topology], Cambridge University Press, 2002.
+  #link("https://pi.math.cornell.edu/~hatcher/AT/AT.pdf").]
+#bibitem([23])[A.~Hatcher, #emph[Vector Bundles & K-Theory], version 2.2, November 2017.
+  #link("https://pi.math.cornell.edu/~hatcher/VBKT/VB.pdf").]
+#bibitem([24])[F.~F.~Knudsen and D.~Mumford, #emph[The projectivity of the moduli space of stable curves. I.
+  Preliminaries on "det" and "Div"], Math. Scand. #strong[39] (1976), 19--55.
+  #link("https://doi.org/10.7146/math.scand.a-11642")[doi:10.7146/math.scand.a-11642].]
+#bibitem([25])[R.~S.~Kulkarni, #emph[On the Clifford algebra of a binary form], Trans. Amer. Math. Soc.
+  #strong[355] (2003), no.~8, 3181--3208.
+  #link("https://doi.org/10.1090/S0002-9947-03-03293-8")[doi:10.1090/S0002-9947-03-03293-8].]
+#bibitem([26])[N.~Kuzmanovski, #emph[A Structural Property of Generic Initial Ideals],
+  #link("https://arxiv.org/abs/2608.17281v1")[arXiv:2608.17281v1], 18 August 2026.]
+#bibitem([27])[J.~S.~Milne, #emph[Jacobian varieties], in #emph[Arithmetic Geometry] (Storrs, Conn., 1984),
+  Springer, New York, 1986, Chapter~VII, 167--212. Revised author version, 12 June 2021,
+  #link("https://www.jmilne.org/math/xnotes/JVs.pdf").]
+#bibitem([28])[S.~Mukai, #emph[Duality between $D \( X \)$ and $D \( hat(X) \)$ with its application to Picard
+  sheaves], Nagoya Math. J. #strong[81] (1981), 153--175.
+  #link("https://doi.org/10.1017/S002776300001922X")[doi:10.1017/S002776300001922X].]
+#bibitem([29])[T.~Ohmoto and S.~Yokura, #emph[Product formulas for the Milnor class], Bull. Polish Acad. Sci.
+  Math. #strong[48] (2000), no.~4, 387--401. Numbered statements refer to the
+  #link("https://www.math.sci.hokudai.ac.jp/~ohmoto/Papers/Productfinal.pdf")[author manuscript].]
+#bibitem([30])[OpenAI, #emph[The Artinian Lex-Plus-Powers Betti Theorem],
+  OpenAI Math Release preprint
+  #link("https://github.com/openai/math/blob/main/preprints/The-Artinian-Lex-Plus-Powers-Betti-Theorem-September-23-2026/paper.pdf")[OAI:The-Artinian-Lex-Plus-Powers-Betti-Theorem-September-23-2026],
+  2026.]
+#bibitem([31])[P.~Schapira, #emph[An Introduction to Sheaves on Grothendieck Topologies], author notes,
+  version dated 01/08/2026. #link("https://webusers.imj-prg.fr/~pierre.schapira/LectNotes/SHV.pdf").]
+#bibitem([32])[O.~M.~Schnürer and W.~Soergel, #emph[Proper base change for separated locally proper maps], Rend.
+  Sem. Mat. Univ. Padova #strong[135] (2016), 223--250.
+  #link("https://doi.org/10.4171/RSMUP/135-13")[doi:10.4171/RSMUP/135-13].]
+#bibitem([33])[The Stacks Project Authors, #emph[The Stacks Project],
+  #link("https://stacks.math.columbia.edu") (accessed 23 September 2026).]
+#bibitem([34])[B.~Totaro, #emph[The Chow ring of a classifying space], in W.~Raskind and C.~Weibel (eds.),
+  #emph[Algebraic K-Theory] (Seattle, WA, 1997), Proc. Sympos. Pure Math.
+  #strong[67], American Mathematical Society, Providence, RI, 1999, 249--281.
+  #link("https://doi.org/10.1090/pspum/067/1743244")[doi:10.1090/pspum/067/1743244].]
+#bibitem([35])[M.~van den Bergh, #emph[Linearizations of binary and ternary forms], J.
+  Algebra #strong[109] (1987), no.~1, 172--183.
+  #link("https://doi.org/10.1016/0021-8693(87)90171-2")[doi:10.1016/0021-8693(87)90171-2].]
