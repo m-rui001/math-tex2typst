@@ -11,7 +11,7 @@
   "figures": 3,
   "tables": 0,
   "stats": {
-    "formulas": 1,
+    "formulas": 1270,
     "cetz_converted": 3
   },
   "samples": {
@@ -26,5 +26,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Harmonic-heights-and-the-Artin-K-pi-1-conjecture-September-23-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Harmonic-heights-and-the-Artin-K-pi-1-conjecture-September-23-2026.tex",
+  "final_source_verified": true
 }

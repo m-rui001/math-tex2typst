@@ -11,7 +11,7 @@
   "figures": 6,
   "tables": 6,
   "stats": {
-    "formulas": 1,
+    "formulas": 2184,
     "cetz_converted": 6
   },
   "samples": {
@@ -28,5 +28,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere-September-23-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Purely-Cosmetic-Surgery-on-Knots-in-the-Three-Sphere-September-23-2026.tex",
+  "final_source_verified": true
 }

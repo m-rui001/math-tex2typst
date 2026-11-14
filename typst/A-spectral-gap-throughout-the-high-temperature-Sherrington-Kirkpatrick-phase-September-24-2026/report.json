@@ -11,7 +11,7 @@
   "figures": 1,
   "tables": 1,
   "stats": {
-    "formulas": 1
+    "formulas": 1589
   },
   "samples": {
     "formulas": "1589"
@@ -24,5 +24,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\A-spectral-gap-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026.tex"
+  "source": "E:\\math\\_work\\flat\\A-spectral-gap-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026.tex",
+  "final_source_verified": true
 }

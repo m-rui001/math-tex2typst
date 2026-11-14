@@ -1,0 +1,31 @@
+{
+  "paper": "Symplectic-Balls-in-Symmetric-Polar-Products-September-22-2026",
+  "ok": true,
+  "typ_lines": 493,
+  "included_pdf_pages": 0,
+  "formulas": 506,
+  "math_failed": 0,
+  "labels": 52,
+  "equations": 3,
+  "theorems": 5,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 506
+  },
+  "samples": {
+    "formulas": "506"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [
+    "xurl"
+  ],
+  "macros_skipped": [],
+  "compile_ok": false,
+  "compile_err_full": "error: file not found (searched at \\\\?\\D:\\mxrlib\\math-tex2typst\\typst\\Symplectic-Balls-in-Symmetric-Polar-Products-September-22-2026\\fig\\lens-slices.pdf.png)\n    ┌─ \\\\?\\D:\\mxrlib\\math-tex2typst\\typst\\Symplectic-Balls-in-Symmetric-Polar-Products-September-22-2026\\main.typ:240:10\n    │\n240 │   [#image(\"fig/lens-slices.pdf.png\", width: 100%)],\n    │           ^^^^^^^^^^^^^^^^^^^^^^^^^\n\n",
+  "compile_errors": 1,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Symplectic-Balls-in-Symmetric-Polar-Products-September-22-2026.tex",
+  "final_source_verified": true
+}

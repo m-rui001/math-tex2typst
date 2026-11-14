@@ -11,7 +11,7 @@
   "figures": 2,
   "tables": 0,
   "stats": {
-    "formulas": 1,
+    "formulas": 3968,
     "cetz_converted": 2
   },
   "samples": {
@@ -28,5 +28,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Every-four-dimensional-Kakeya-set-has-full-Hausdorff-dimension-September-24-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Every-four-dimensional-Kakeya-set-has-full-Hausdorff-dimension-September-24-2026.tex",
+  "final_source_verified": true
 }

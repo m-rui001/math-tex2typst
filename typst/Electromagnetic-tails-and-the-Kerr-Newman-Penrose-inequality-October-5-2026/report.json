@@ -11,7 +11,7 @@
   "figures": 0,
   "tables": 0,
   "stats": {
-    "formulas": 1
+    "formulas": 416
   },
   "samples": {
     "formulas": "416"
@@ -24,5 +24,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Electromagnetic-tails-and-the-Kerr-Newman-Penrose-inequality-October-5-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Electromagnetic-tails-and-the-Kerr-Newman-Penrose-inequality-October-5-2026.tex",
+  "final_source_verified": true
 }

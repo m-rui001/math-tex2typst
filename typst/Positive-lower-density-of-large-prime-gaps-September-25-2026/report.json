@@ -11,7 +11,7 @@
   "figures": 1,
   "tables": 1,
   "stats": {
-    "formulas": 1,
+    "formulas": 493,
     "unhandled_div_class:picture": 1
   },
   "samples": {
@@ -25,5 +25,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Positive-lower-density-of-large-prime-gaps-September-25-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Positive-lower-density-of-large-prime-gaps-September-25-2026.tex",
+  "final_source_verified": true
 }

@@ -11,7 +11,7 @@
   "figures": 0,
   "tables": 0,
   "stats": {
-    "formulas": 1,
+    "formulas": 577,
     "unhandled_div_class:minipage": 372
   },
   "samples": {
@@ -33,5 +33,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\standalone-overview.tex"
+  "source": "E:\\math\\_work\\flat\\standalone-overview.tex",
+  "final_source_verified": true
 }

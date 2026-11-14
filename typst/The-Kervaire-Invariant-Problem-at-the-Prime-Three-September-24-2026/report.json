@@ -11,7 +11,7 @@
   "figures": 1,
   "tables": 9,
   "stats": {
-    "formulas": 1,
+    "formulas": 2279,
     "cetz_converted": 2,
     "unhandled_div_class:samepage": 1
   },
@@ -27,5 +27,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\The-Kervaire-Invariant-Problem-at-the-Prime-Three-September-24-2026.tex"
+  "source": "E:\\math\\_work\\flat\\The-Kervaire-Invariant-Problem-at-the-Prime-Three-September-24-2026.tex",
+  "final_source_verified": true
 }

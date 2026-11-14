@@ -11,7 +11,7 @@
   "figures": 1,
   "tables": 0,
   "stats": {
-    "formulas": 1,
+    "formulas": 396,
     "unhandled_div_class:minipagew840": 1,
     "cetz_converted": 1
   },
@@ -27,5 +27,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Strict-hot-spots-and-absence-of-interior-critical-points-on-smooth-simply-connected-planar-domains-September-24-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Strict-hot-spots-and-absence-of-interior-critical-points-on-smooth-simply-connected-planar-domains-September-24-2026.tex",
+  "final_source_verified": true
 }

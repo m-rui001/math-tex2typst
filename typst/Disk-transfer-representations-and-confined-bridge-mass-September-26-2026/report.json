@@ -11,7 +11,7 @@
   "figures": 4,
   "tables": 0,
   "stats": {
-    "formulas": 1,
+    "formulas": 2091,
     "cetz_converted": 4
   },
   "samples": {
@@ -37,5 +37,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Disk-transfer-representations-and-confined-bridge-mass-September-26-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Disk-transfer-representations-and-confined-bridge-mass-September-26-2026.tex",
+  "final_source_verified": true
 }

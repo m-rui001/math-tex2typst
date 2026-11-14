@@ -1,0 +1,29 @@
+{
+  "paper": "The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026",
+  "ok": true,
+  "typ_lines": 1886,
+  "included_pdf_pages": 0,
+  "formulas": 1741,
+  "math_failed": 0,
+  "labels": 250,
+  "equations": 24,
+  "theorems": 5,
+  "figures": 2,
+  "tables": 1,
+  "stats": {
+    "formulas": 1741
+  },
+  "samples": {
+    "formulas": "1741"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": false,
+  "compile_err_full": "error: file not found (searched at \\\\?\\D:\\mxrlib\\math-tex2typst\\typst\\The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026\\fig\\proof-map.pdf.png)\n   ┌─ \\\\?\\D:\\mxrlib\\math-tex2typst\\typst\\The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026\\main.typ:95:10\n   │\n95 │   [#image(\"fig/proof-map.pdf.png\", width: 100%)],\n   │           ^^^^^^^^^^^^^^^^^^^^^^^\n\n",
+  "compile_errors": 1,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\The-Falconer-distance-conjecture-in-all-dimensions-September-23-2026.tex",
+  "final_source_verified": true
+}

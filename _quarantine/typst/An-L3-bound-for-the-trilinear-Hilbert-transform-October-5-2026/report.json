@@ -1,0 +1,29 @@
+{
+  "paper": "An-L3-bound-for-the-trilinear-Hilbert-transform-October-5-2026",
+  "ok": true,
+  "typ_lines": 2509,
+  "included_pdf_pages": 0,
+  "formulas": 2321,
+  "math_failed": 0,
+  "labels": 176,
+  "equations": 0,
+  "theorems": 0,
+  "figures": 2,
+  "tables": 1,
+  "stats": {
+    "formulas": 2321
+  },
+  "samples": {
+    "formulas": "2321"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": false,
+  "compile_err_full": "error: file not found (searched at \\\\?\\D:\\mxrlib\\math-tex2typst\\typst\\An-L3-bound-for-the-trilinear-Hilbert-transform-October-5-2026\\fig\\depth-blocks.pdf.png)\n     ┌─ \\\\?\\D:\\mxrlib\\math-tex2typst\\typst\\An-L3-bound-for-the-trilinear-Hilbert-transform-October-5-2026\\main.typ:1638:10\n     │\n1638 │   [#image(\"fig/depth-blocks.pdf.png\", width: 95.0%)],\n     │           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n",
+  "compile_errors": 1,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\An-L3-bound-for-the-trilinear-Hilbert-transform-October-5-2026.tex",
+  "final_source_verified": true
+}

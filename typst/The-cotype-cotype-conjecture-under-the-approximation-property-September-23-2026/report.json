@@ -11,7 +11,7 @@
   "figures": 0,
   "tables": 0,
   "stats": {
-    "formulas": 1,
+    "formulas": 550,
     "unhandled_div_class:minipage": 1
   },
   "samples": {
@@ -25,5 +25,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\The-cotype-cotype-conjecture-under-the-approximation-property-September-23-2026.tex"
+  "source": "E:\\math\\_work\\flat\\The-cotype-cotype-conjecture-under-the-approximation-property-September-23-2026.tex",
+  "final_source_verified": true
 }

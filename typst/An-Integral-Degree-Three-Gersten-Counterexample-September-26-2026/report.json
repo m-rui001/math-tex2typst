@@ -11,7 +11,7 @@
   "figures": 0,
   "tables": 0,
   "stats": {
-    "formulas": 1
+    "formulas": 287
   },
   "samples": {
     "formulas": "287"
@@ -26,5 +26,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\An-Integral-Degree-Three-Gersten-Counterexample-September-26-2026.tex"
+  "source": "E:\\math\\_work\\flat\\An-Integral-Degree-Three-Gersten-Counterexample-September-26-2026.tex",
+  "final_source_verified": true
 }

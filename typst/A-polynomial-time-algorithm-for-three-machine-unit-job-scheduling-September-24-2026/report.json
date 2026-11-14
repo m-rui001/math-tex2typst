@@ -11,7 +11,7 @@
   "figures": 4,
   "tables": 1,
   "stats": {
-    "formulas": 1,
+    "formulas": 285,
     "unhandled_div_class:samepage": 1,
     "unhandled_div_class:description": 1,
     "cetz_converted": 4
@@ -28,5 +28,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\A-polynomial-time-algorithm-for-three-machine-unit-job-scheduling-September-24-2026.tex"
+  "source": "E:\\math\\_work\\flat\\A-polynomial-time-algorithm-for-three-machine-unit-job-scheduling-September-24-2026.tex",
+  "final_source_verified": true
 }

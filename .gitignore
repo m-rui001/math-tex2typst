@@ -8,6 +8,11 @@
 __pycache__/
 .pytest_cache/
 
+# 例外：main.typ 直接引用的图位图是语料的一部分，不是渲染产物。
+# 之前 *.png 把 typst/*/fig/*.png 全挡在版本库外，14 篇因此在 clone 里编译不了。
+!typst/*/fig/*.png
+!_quarantine/typst/*/fig/*.png
+
 # arXiv 原文与它的展平拷贝（量具输入，重建走 tools/inventory.py）
 preprints/
 _work/flat/

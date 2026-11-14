@@ -1,0 +1,29 @@
+{
+  "paper": "Beyond-the-Square-Root-Exponent-for-Depth-Three-Boolean-Circuits-September-23-2026",
+  "ok": true,
+  "typ_lines": 468,
+  "included_pdf_pages": 0,
+  "formulas": 435,
+  "math_failed": 0,
+  "labels": 76,
+  "equations": 50,
+  "theorems": 1,
+  "figures": 1,
+  "tables": 0,
+  "stats": {
+    "formulas": 435
+  },
+  "samples": {
+    "formulas": "435"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": false,
+  "compile_err_full": "error: file not found (searched at \\\\?\\D:\\mxrlib\\math-tex2typst\\typst\\Beyond-the-Square-Root-Exponent-for-Depth-Three-Boolean-Circuits-September-23-2026\\fig\\reverse_paths.pdf.png)\n    ┌─ \\\\?\\D:\\mxrlib\\math-tex2typst\\typst\\Beyond-the-Square-Root-Exponent-for-Depth-Three-Boolean-Circuits-September-23-2026\\main.typ:173:12\n    │\n173 │     [#image(\"fig/reverse_paths.pdf.png\", width: 100%)],\n    │             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n",
+  "compile_errors": 1,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Beyond-the-Square-Root-Exponent-for-Depth-Three-Boolean-Circuits-September-23-2026.tex",
+  "final_source_verified": true
+}

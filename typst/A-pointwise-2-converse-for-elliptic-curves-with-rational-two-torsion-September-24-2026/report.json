@@ -11,7 +11,7 @@
   "figures": 1,
   "tables": 3,
   "stats": {
-    "formulas": 1
+    "formulas": 1839
   },
   "samples": {
     "formulas": "1839"
@@ -27,5 +27,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-September-24-2026.tex"
+  "source": "E:\\math\\_work\\flat\\A-pointwise-2-converse-for-elliptic-curves-with-rational-two-torsion-September-24-2026.tex",
+  "final_source_verified": true
 }

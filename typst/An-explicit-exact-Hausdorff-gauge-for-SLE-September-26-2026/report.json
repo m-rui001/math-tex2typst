@@ -11,7 +11,7 @@
   "figures": 3,
   "tables": 0,
   "stats": {
-    "formulas": 1,
+    "formulas": 1239,
     "cetz_converted": 3
   },
   "samples": {
@@ -28,5 +28,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\An-explicit-exact-Hausdorff-gauge-for-SLE-September-26-2026.tex"
+  "source": "E:\\math\\_work\\flat\\An-explicit-exact-Hausdorff-gauge-for-SLE-September-26-2026.tex",
+  "final_source_verified": true
 }

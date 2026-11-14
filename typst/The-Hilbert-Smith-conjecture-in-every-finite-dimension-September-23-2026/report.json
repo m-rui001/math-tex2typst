@@ -11,7 +11,7 @@
   "figures": 1,
   "tables": 0,
   "stats": {
-    "formulas": 1,
+    "formulas": 1071,
     "cetz_converted": 2,
     "unhandled_div_class:samepage": 1
   },
@@ -31,5 +31,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\The-Hilbert-Smith-conjecture-in-every-finite-dimension-September-23-2026.tex"
+  "source": "E:\\math\\_work\\flat\\The-Hilbert-Smith-conjecture-in-every-finite-dimension-September-23-2026.tex",
+  "final_source_verified": true
 }

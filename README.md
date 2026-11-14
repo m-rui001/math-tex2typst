@@ -2,6 +2,9 @@
 
 这里是一台把 arXiv 数学论文的 LaTeX 转成 Typst/CeTz 的流水线，加上它的全部量具、探针和台账。
 724 篇论文，一轮全库重跑 500 秒，产物逐页对过作者自己的 pdflatex 控制页。
+**当前状态（2026-11 复核）**：库内 706 篇 `typst/`，706/706 编译通过；14 篇缺图位图隔离在
+`_quarantine/`；4 篇空壳/重复删除（`REJECTED.csv`）。前后数字与复现边界见 [`QUALITY.md`](QUALITY.md)，
+逐篇索引见 [`MANIFEST.csv`](MANIFEST.csv)。
 
 目录是 `github.com/openai/math` 的一份工作副本（Apache-2.0，原文本留在 `README.openai-math.md`
 和 `LICENSE.apache-2.0.txt`）。本仓库只发布我们自己产出的部分；上游的 Lean 形式化与 arXiv 原文
@@ -14,7 +17,7 @@
 | `tools/` | 流水线本体。`t2t/prep.py` 打标记、`convert.py` 走 pandoc AST、`mathconv.py` 管数学、`cetz.py` 把 TikZ 语义逐条翻译成 CeTz、`emit.py` 落 Typst。外面四个入口：`inventory.py` 展平语料、`batch_typst.py` 全库跑批、`summarize_typst.py` 汇总报告、`verify_typst.py` 逐篇核对 |
 | `tools/test_t2t.py` | 170 条单测。每条断言后面都写着它是拿哪把尺、在哪个源语句上量出来的，包括负结果 |
 | `.tools/` | 笔记侧修补脚本（本体侧闸门、KaTeX 检查、禁词清理那一套） |
-| `typst/` | 每篇一个目录，`main.typ` 是产物，`main.pdf` 已清、由跑批重生 |
+| `typst/` | 每篇一个目录，`main.typ` 是产物，`main.pdf` 已清、由跑批重生；当前 706 篇，全部编译通过 |
 | `_work/` | 探针与读数。`probe<轮次><腿>.py` 一支一条腿，输出 `label<...>.txt` 留在同目录；`community.md` 是三个 agent 的留言板与台账 |
 | `研究笔记/`、`被引笔记/` | 中文研究笔记：主线 1（Lean 队列素材重述）、主线 2（全库队列）、被引笔记 C 稿 |
 | `preprints/`、`lean/`、`reasoning_traces/`、`被引素材/` | 第三方与上游内容，本仓库不含 |
@@ -27,11 +30,16 @@
 前置：Python 3.13、`typst`、`pdflatex`、PyMuPDF（`import fitz`）、pandoc。
 
 ```bash
-python tools/inventory.py            # preprints 的 \input 树展平成 _work/flat/<篇>.tex
-python tools/batch_typst.py          # 全库转换 + 编译，724 篇约 500s
+python tools/inventory.py            # preprints 的 \input 树展平成 _work/flat/<篇>.tex（需要 preprints/，本仓库不含）
+python tools/batch_typst.py          # 全库转换 + 编译，724 篇约 500s（同上，需要上游源）
+python tools/verify_typst.py         # 只按库内 main.typ 重编译，重写 report.json / main.pdf（706 篇可跑）
 python tools/summarize_typst.py      # 文档数、编译失败、回退数
+python tools/corpus_audit.py         # 静态审计 + MANIFEST.csv（编码/空壳/重复/缺图/来源）
 PYTHONIOENCODING=utf-8 python -m unittest tools.test_t2t
 ```
+
+从 clone 出发可复核的是 `verify_typst.py` + `corpus_audit.py` + 单测；`inventory.py` / `batch_typst.py`
+需要 `preprints/` 与 `_work/flat/`（均被 `.gitignore` 排除），属于不可复现环节，见 `QUALITY.md`。
 
 图这一侧的验收是六组数加三联尺：
 
@@ -59,14 +67,18 @@ PYTHONIOENCODING=utf-8 python _work/probe85b_emitter_face.py 3 control<run>_rows
 
 台账的四节各自固定：§1 基线，§2 一页一条轴（律＋实测数，不写过程），§3 量具登记，§7 残留清单。
 
-## 当前读数（run153，2026-10-17 自己复量）
+## 当前读数
 
-- 文档 **724／724 编译通过**，公式回退 109，`latex_literals`／`unhandled_figure_content`／`unresolved_references` 全 0
-- 闸门 **built 918／refused 14／compile-failed 0**
-- 画布 **1,055 张**上页（932 张源图，缺 1），全原点退化 **0**
-- 残留 **0 处／0 篇**，整体引号化印上页的 LaTeX **1 段／1 篇**
+编译类数字为 2026-11 复核（`verify_typst.py` + `summarize_typst.py` + `corpus_audit.py` + 单测）；
+画布与闸门四行仍是 run153（2026-10-17）的读数，本次没有重跑，因为需要 `_work/flat/`。
+
+- 文档 **706／706 编译通过**（库内 706，另 14 篇缺图隔离）；公式回退 109，`latex_literals`／`unhandled_figure_content`／`unresolved_references` 全 0
+- 整改前同一把尺重跑是 **710／724**：14 篇引用的 27 张 `fig/*.png` 从未入库，已隔离；4 篇空壳/重复已删（`REJECTED.csv`）
+- 闸门 **built 918／refused 14／compile-failed 0**（run153，需 `_work/flat/`）
+- 画布 **1,055 张**上页（932 张源图，缺 1），全原点退化 **0**（run153）
+- 残留 **0 处／0 篇**，整体引号化印上页的 LaTeX **1 段／1 篇**（run153）
 - 单测 **170 全过**
-- 页上有互压的画布 94 → **92 张／76 篇**；接到发射器语句上的真缺陷面 on-ink **6 行／6 张／6 篇**，foreign 10 行（去重 8）／5 张／5 篇
+- 页上有互压的画布 94 → **92 张／76 篇**；接到发射器语句上的真缺陷面 on-ink **6 行／6 张／6 篇**，foreign 10 行（去重 8）／5 张／5 篇（run153）
 
 ## 许可与不含
 

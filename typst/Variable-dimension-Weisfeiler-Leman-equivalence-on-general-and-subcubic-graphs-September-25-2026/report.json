@@ -11,7 +11,7 @@
   "figures": 5,
   "tables": 2,
   "stats": {
-    "formulas": 1,
+    "formulas": 589,
     "cetz_converted": 6
   },
   "samples": {
@@ -26,5 +26,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Variable-dimension-Weisfeiler-Leman-equivalence-on-general-and-subcubic-graphs-September-25-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Variable-dimension-Weisfeiler-Leman-equivalence-on-general-and-subcubic-graphs-September-25-2026.tex",
+  "final_source_verified": true
 }

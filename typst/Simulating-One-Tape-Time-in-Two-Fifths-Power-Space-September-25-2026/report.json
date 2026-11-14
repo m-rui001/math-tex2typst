@@ -11,7 +11,7 @@
   "figures": 1,
   "tables": 0,
   "stats": {
-    "formulas": 1,
+    "formulas": 408,
     "unhandled_div_class:small": 1,
     "unhandled_div_class:tabbing": 1,
     "cetz_converted": 1
@@ -28,5 +28,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Simulating-One-Tape-Time-in-Two-Fifths-Power-Space-September-25-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Simulating-One-Tape-Time-in-Two-Fifths-Power-Space-September-25-2026.tex",
+  "final_source_verified": true
 }

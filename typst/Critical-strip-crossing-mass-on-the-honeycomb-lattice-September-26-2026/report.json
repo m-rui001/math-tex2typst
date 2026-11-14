@@ -11,7 +11,7 @@
   "figures": 5,
   "tables": 0,
   "stats": {
-    "formulas": 1,
+    "formulas": 666,
     "unhandled_div_class:minipage": 1,
     "unhandled_div_class:samepage": 1,
     "cetz_converted": 5
@@ -28,5 +28,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Critical-strip-crossing-mass-on-the-honeycomb-lattice-September-26-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Critical-strip-crossing-mass-on-the-honeycomb-lattice-September-26-2026.tex",
+  "final_source_verified": true
 }

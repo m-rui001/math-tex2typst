@@ -11,7 +11,7 @@
   "figures": 3,
   "tables": 2,
   "stats": {
-    "formulas": 1,
+    "formulas": 2492,
     "unhandled_div_class:minipage": 1,
     "cetz_converted": 3
   },
@@ -29,5 +29,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\A-counterexample-to-the-Colin-de-Verdiere-chromatic-conjecture-September-23-2026.tex"
+  "source": "E:\\math\\_work\\flat\\A-counterexample-to-the-Colin-de-Verdiere-chromatic-conjecture-September-23-2026.tex",
+  "final_source_verified": true
 }

@@ -11,7 +11,7 @@
   "figures": 4,
   "tables": 1,
   "stats": {
-    "formulas": 1,
+    "formulas": 1683,
     "unhandled_div_class:samepage": 2,
     "cetz_converted": 4
   },
@@ -32,5 +32,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Polynomial-vacuum-representations-and-bridge-mass-for-honeycomb-walks-September-26-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Polynomial-vacuum-representations-and-bridge-mass-for-honeycomb-walks-September-26-2026.tex",
+  "final_source_verified": true
 }

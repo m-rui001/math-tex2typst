@@ -11,7 +11,7 @@
   "figures": 3,
   "tables": 1,
   "stats": {
-    "formulas": 1,
+    "formulas": 1367,
     "cetz_converted": 3
   },
   "samples": {
@@ -114,5 +114,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Generic-C1-Future-Inextendibility-Near-Rotating-Subextremal-Kerr-Spacetimes-September-23-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Generic-C1-Future-Inextendibility-Near-Rotating-Subextremal-Kerr-Spacetimes-September-23-2026.tex",
+  "final_source_verified": true
 }

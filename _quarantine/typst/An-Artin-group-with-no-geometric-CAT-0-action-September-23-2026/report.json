@@ -1,0 +1,30 @@
+{
+  "paper": "An-Artin-group-with-no-geometric-CAT-0-action-September-23-2026",
+  "ok": true,
+  "typ_lines": 831,
+  "included_pdf_pages": 0,
+  "formulas": 725,
+  "math_failed": 0,
+  "labels": 87,
+  "equations": 2,
+  "theorems": 5,
+  "figures": 3,
+  "tables": 0,
+  "stats": {
+    "formulas": 725,
+    "unhandled_div_class:samepage": 1
+  },
+  "samples": {
+    "formulas": "725"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [],
+  "compile_ok": false,
+  "compile_err_full": "error: file not found (searched at \\\\?\\D:\\mxrlib\\math-tex2typst\\typst\\An-Artin-group-with-no-geometric-CAT-0-action-September-23-2026\\fig\\sectors.pdf.png)\n    ┌─ \\\\?\\D:\\mxrlib\\math-tex2typst\\typst\\An-Artin-group-with-no-geometric-CAT-0-action-September-23-2026\\main.typ:396:10\n    │\n396 │   [#image(\"fig/sectors.pdf.png\", width: 82.0%)],\n    │           ^^^^^^^^^^^^^^^^^^^^^\n\n",
+  "compile_errors": 1,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\An-Artin-group-with-no-geometric-CAT-0-action-September-23-2026.tex",
+  "final_source_verified": true
+}

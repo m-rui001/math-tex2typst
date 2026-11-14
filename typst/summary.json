@@ -1,8 +1,8 @@
 {
-  "documents": 724,
-  "compiled": 724,
-  "unique_formulas_within_documents": 761830,
-  "native_formulas_reported": 761721,
+  "documents": 706,
+  "compiled": 706,
+  "unique_formulas_within_documents": 740937,
+  "native_formulas_reported": 740828,
   "latex_formula_fallbacks": 109,
   "latex_literals_remaining": 0,
   "documents_with_formula_fallbacks": 51,

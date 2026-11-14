@@ -11,7 +11,7 @@
   "figures": 3,
   "tables": 1,
   "stats": {
-    "formulas": 1,
+    "formulas": 1101,
     "unhandled_div_class:samepage": 3,
     "cetz_converted": 2
   },
@@ -27,5 +27,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Deterministic-Polynomial-Factorization-over-Prime-Fields-October-4-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Deterministic-Polynomial-Factorization-over-Prime-Fields-October-4-2026.tex",
+  "final_source_verified": true
 }

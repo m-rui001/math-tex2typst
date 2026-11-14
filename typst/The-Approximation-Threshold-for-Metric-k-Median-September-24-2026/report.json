@@ -11,7 +11,7 @@
   "figures": 1,
   "tables": 2,
   "stats": {
-    "formulas": 1,
+    "formulas": 1070,
     "cetz_converted": 1
   },
   "samples": {
@@ -31,5 +31,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\The-Approximation-Threshold-for-Metric-k-Median-September-24-2026.tex"
+  "source": "E:\\math\\_work\\flat\\The-Approximation-Threshold-for-Metric-k-Median-September-24-2026.tex",
+  "final_source_verified": true
 }

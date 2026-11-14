@@ -11,7 +11,7 @@
   "figures": 2,
   "tables": 0,
   "stats": {
-    "formulas": 1,
+    "formulas": 1499,
     "cetz_converted": 5
   },
   "samples": {
@@ -26,5 +26,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Logarithmic-Kodaira-dimension-and-whole-fiber-variation-September-26-2026.tex",
+  "final_source_verified": true
 }

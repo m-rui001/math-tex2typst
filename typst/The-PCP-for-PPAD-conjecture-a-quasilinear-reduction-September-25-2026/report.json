@@ -11,7 +11,7 @@
   "figures": 1,
   "tables": 2,
   "stats": {
-    "formulas": 1,
+    "formulas": 2368,
     "unhandled_div_class:samepage": 1,
     "unhandled_div_class:picture": 1
   },
@@ -29,5 +29,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\The-PCP-for-PPAD-conjecture-a-quasilinear-reduction-September-25-2026.tex"
+  "source": "E:\\math\\_work\\flat\\The-PCP-for-PPAD-conjecture-a-quasilinear-reduction-September-25-2026.tex",
+  "final_source_verified": true
 }

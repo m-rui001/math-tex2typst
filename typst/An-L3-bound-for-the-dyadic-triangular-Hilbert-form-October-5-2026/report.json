@@ -11,7 +11,7 @@
   "figures": 1,
   "tables": 0,
   "stats": {
-    "formulas": 1,
+    "formulas": 236,
     "cetz_converted": 1
   },
   "samples": {
@@ -26,5 +26,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\An-L3-bound-for-the-dyadic-triangular-Hilbert-form-October-5-2026.tex"
+  "source": "E:\\math\\_work\\flat\\An-L3-bound-for-the-dyadic-triangular-Hilbert-form-October-5-2026.tex",
+  "final_source_verified": true
 }

@@ -11,7 +11,7 @@
   "figures": 1,
   "tables": 0,
   "stats": {
-    "formulas": 1,
+    "formulas": 558,
     "unhandled_div_class:samepage": 2,
     "cetz_converted": 1
   },
@@ -27,5 +27,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\L1-Embeddings-of-Graphs-of-Bounded-Treewidth-September-23-2026.tex"
+  "source": "E:\\math\\_work\\flat\\L1-Embeddings-of-Graphs-of-Bounded-Treewidth-September-23-2026.tex",
+  "final_source_verified": true
 }

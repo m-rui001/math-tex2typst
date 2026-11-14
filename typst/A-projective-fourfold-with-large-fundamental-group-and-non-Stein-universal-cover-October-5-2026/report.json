@@ -11,7 +11,7 @@
   "figures": 3,
   "tables": 0,
   "stats": {
-    "formulas": 1,
+    "formulas": 751,
     "unhandled_div_class:samepage": 1,
     "cetz_converted": 3
   },
@@ -29,5 +29,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\A-projective-fourfold-with-large-fundamental-group-and-non-Stein-universal-cover-October-5-2026.tex"
+  "source": "E:\\math\\_work\\flat\\A-projective-fourfold-with-large-fundamental-group-and-non-Stein-universal-cover-October-5-2026.tex",
+  "final_source_verified": true
 }

@@ -11,7 +11,7 @@
   "figures": 4,
   "tables": 1,
   "stats": {
-    "formulas": 1,
+    "formulas": 2873,
     "unhandled_div_class:minipagew770": 1,
     "cetz_converted": 4
   },
@@ -38,5 +38,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026.tex",
+  "final_source_verified": true
 }

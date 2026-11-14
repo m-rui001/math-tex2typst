@@ -11,7 +11,7 @@
   "figures": 1,
   "tables": 3,
   "stats": {
-    "formulas": 1,
+    "formulas": 3250,
     "cetz_converted": 1
   },
   "samples": {
@@ -30,5 +30,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Quantitative-Near-Kerr-Evolution-and-Generic-C2-Future-Inextendibility-September-23-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Quantitative-Near-Kerr-Evolution-and-Generic-C2-Future-Inextendibility-September-23-2026.tex",
+  "final_source_verified": true
 }

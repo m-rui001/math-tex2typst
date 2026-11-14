@@ -11,7 +11,7 @@
   "figures": 1,
   "tables": 2,
   "stats": {
-    "formulas": 1,
+    "formulas": 1023,
     "cetz_converted": 3,
     "cetz_split": 1
   },
@@ -30,5 +30,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Irrational-cubic-fourfolds-with-geometric-K3-categories-September-24-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Irrational-cubic-fourfolds-with-geometric-K3-categories-September-24-2026.tex",
+  "final_source_verified": true
 }

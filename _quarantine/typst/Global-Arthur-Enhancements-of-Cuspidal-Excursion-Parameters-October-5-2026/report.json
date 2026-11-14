@@ -1,0 +1,31 @@
+{
+  "paper": "Global-Arthur-Enhancements-of-Cuspidal-Excursion-Parameters-October-5-2026",
+  "ok": true,
+  "typ_lines": 1496,
+  "included_pdf_pages": 0,
+  "formulas": 1163,
+  "math_failed": 0,
+  "labels": 162,
+  "equations": 13,
+  "theorems": 6,
+  "figures": 2,
+  "tables": 0,
+  "stats": {
+    "formulas": 1163
+  },
+  "samples": {
+    "formulas": "1163"
+  },
+  "pandoc_json_warn": "",
+  "packages_unsupported": [],
+  "macros_skipped": [
+    "\\newcommandnewcommand"
+  ],
+  "compile_ok": false,
+  "compile_err_full": "error: file not found (searched at \\\\?\\D:\\mxrlib\\math-tex2typst\\typst\\Global-Arthur-Enhancements-of-Cuspidal-Excursion-Parameters-October-5-2026\\fig\\proof-architecture.pdf.png)\n    ┌─ \\\\?\\D:\\mxrlib\\math-tex2typst\\typst\\Global-Arthur-Enhancements-of-Cuspidal-Excursion-Parameters-October-5-2026\\main.typ:132:10\n    │\n132 │   [#image(\"fig/proof-architecture.pdf.png\", width: 100%)],\n    │           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n",
+  "compile_errors": 1,
+  "error_kinds": {},
+  "compile_warnings": 0,
+  "source": "E:\\math\\_work\\flat\\Global-Arthur-Enhancements-of-Cuspidal-Excursion-Parameters-October-5-2026.tex",
+  "final_source_verified": true
+}

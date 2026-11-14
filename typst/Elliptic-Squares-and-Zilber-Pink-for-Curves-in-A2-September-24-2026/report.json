@@ -11,7 +11,7 @@
   "figures": 1,
   "tables": 0,
   "stats": {
-    "formulas": 1,
+    "formulas": 1140,
     "cetz_converted": 1
   },
   "samples": {
@@ -34,5 +34,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Elliptic-Squares-and-Zilber-Pink-for-Curves-in-A2-September-24-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Elliptic-Squares-and-Zilber-Pink-for-Curves-in-A2-September-24-2026.tex",
+  "final_source_verified": true
 }

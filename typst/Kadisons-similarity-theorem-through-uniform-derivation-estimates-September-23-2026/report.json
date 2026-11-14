@@ -11,7 +11,7 @@
   "figures": 0,
   "tables": 0,
   "stats": {
-    "formulas": 1
+    "formulas": 886
   },
   "samples": {
     "formulas": "886"
@@ -39,5 +39,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Kadisons-similarity-theorem-through-uniform-derivation-estimates-September-23-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Kadisons-similarity-theorem-through-uniform-derivation-estimates-September-23-2026.tex",
+  "final_source_verified": true
 }

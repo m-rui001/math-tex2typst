@@ -11,7 +11,7 @@
   "figures": 0,
   "tables": 0,
   "stats": {
-    "formulas": 1
+    "formulas": 495
   },
   "samples": {
     "formulas": "495"
@@ -24,5 +24,6 @@
   "compile_errors": 0,
   "error_kinds": {},
   "compile_warnings": 0,
-  "source": "E:\\math\\_work\\flat\\Unbounded-Violations-of-the-Square-Root-Degree-Bound-September-26-2026.tex"
+  "source": "E:\\math\\_work\\flat\\Unbounded-Violations-of-the-Square-Root-Degree-Bound-September-26-2026.tex",
+  "final_source_verified": true
 }
